@@ -10,8 +10,16 @@ const languages: { code: Language; label: string }[] = [
   { code: "ja", label: "日本語" },
 ];
 
+// Strip locale prefix from path for comparison
+function stripLocale(pathname: string): string {
+  if (pathname.startsWith("/en/")) return pathname.slice(3);
+  if (pathname.startsWith("/ja/")) return pathname.slice(3);
+  if (pathname === "/en" || pathname === "/ja") return "/";
+  return pathname;
+}
+
 export const Layout: ParentComponent = (props) => {
-  const { locale, setLocale, t } = useI18n();
+  const { locale, setLocale, t, localePath } = useI18n();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -97,7 +105,7 @@ export const Layout: ParentComponent = (props) => {
   const selectResult = (entry: MeaningEntry) => {
     setSearchQuery("");
     setShowResults(false);
-    navigate(`/entry/${entry.id}`);
+    navigate(localePath(`/entry/${entry.id}`));
   };
 
   // Close search results when clicking outside
@@ -124,7 +132,11 @@ export const Layout: ParentComponent = (props) => {
     onCleanup(() => window.removeEventListener("keydown", handleKeydown));
   });
 
-  const isActive = (path: string) => location.pathname === path;
+  // Check if a path is active (strip locale for comparison)
+  const isActive = (basePath: string) => {
+    const currentPath = stripLocale(location.pathname);
+    return currentPath === basePath;
+  };
 
   const getPlaceholder = () => {
     if (locale() === "ko") return "검색...";
@@ -145,7 +157,7 @@ export const Layout: ParentComponent = (props) => {
         <div class="max-w-3xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
           {/* Logo */}
           <A
-            href="/"
+            href={localePath("/")}
             class="font-semibold shrink-0"
             style={{ color: "var(--text-primary)" }}
           >
@@ -234,7 +246,7 @@ export const Layout: ParentComponent = (props) => {
           <div class="flex items-center gap-1 shrink-0">
             {/* Nav Links */}
             <A
-              href="/browse"
+              href={localePath("/browse")}
               class="px-3 py-1.5 text-sm rounded-lg transition-colors"
               style={{
                 color: isActive("/browse") ? "var(--accent-primary)" : "var(--text-secondary)",

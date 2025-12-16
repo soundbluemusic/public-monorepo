@@ -1,4 +1,5 @@
-import { createSignal, createContext, useContext, ParentComponent } from "solid-js";
+import { createSignal, createContext, useContext, createMemo, ParentComponent } from "solid-js";
+import { useLocation, useNavigate } from "@solidjs/router";
 import { isServer } from "solid-js/web";
 import type { Language, TargetLanguage, UILabels } from "@/data/types";
 
@@ -8,13 +9,13 @@ interface I18nContextType {
   setLocale: (lang: Language) => void;
   t: <K extends keyof UILabels>(key: K) => string;
   isKorean: () => boolean;
+  localePath: (path: string) => string;
 }
 
 const I18nContext = createContext<I18nContextType>();
 
 const translations: Record<Language, UILabels> = {
   ko: {
-    // Common
     search: "검색",
     searchPlaceholder: "한국어 단어를 검색하세요...",
     home: "홈",
@@ -22,8 +23,6 @@ const translations: Record<Language, UILabels> = {
     about: "소개",
     noResults: "검색 결과가 없습니다",
     loading: "로딩 중...",
-
-    // Entry
     korean: "한국어",
     romanization: "로마자 표기",
     translation: "번역",
@@ -34,13 +33,9 @@ const translations: Record<Language, UILabels> = {
     difficulty: "난이도",
     category: "카테고리",
     tags: "태그",
-
-    // Difficulty
     beginner: "초급",
     intermediate: "중급",
     advanced: "고급",
-
-    // Part of speech
     noun: "명사",
     verb: "동사",
     adjective: "형용사",
@@ -51,28 +46,19 @@ const translations: Record<Language, UILabels> = {
     pronoun: "대명사",
     determiner: "관형사",
     expression: "표현",
-
-    // Actions
     copyToClipboard: "클립보드에 복사",
     copied: "복사됨!",
     listenPronunciation: "발음 듣기",
-
-    // Navigation
     backToList: "목록으로",
     viewAll: "전체 보기",
-
-    // Homepage
     heroTitle: "한국어 의미 사전",
     heroSubtitle: "한국어 학습자를 위한 다국어 의미 사전",
     featuredWords: "주요 단어",
     browseByCategory: "카테고리로 찾아보기",
-
-    // About
     aboutTitle: "Context 소개",
     aboutDescription: "한국어 학습자를 위한 의미 중심 다국어 사전입니다.",
   },
   en: {
-    // Common
     search: "Search",
     searchPlaceholder: "Search Korean words...",
     home: "Home",
@@ -80,8 +66,6 @@ const translations: Record<Language, UILabels> = {
     about: "About",
     noResults: "No results found",
     loading: "Loading...",
-
-    // Entry
     korean: "Korean",
     romanization: "Romanization",
     translation: "Translation",
@@ -92,13 +76,9 @@ const translations: Record<Language, UILabels> = {
     difficulty: "Difficulty",
     category: "Category",
     tags: "Tags",
-
-    // Difficulty
     beginner: "Beginner",
     intermediate: "Intermediate",
     advanced: "Advanced",
-
-    // Part of speech
     noun: "Noun",
     verb: "Verb",
     adjective: "Adjective",
@@ -109,28 +89,19 @@ const translations: Record<Language, UILabels> = {
     pronoun: "Pronoun",
     determiner: "Determiner",
     expression: "Expression",
-
-    // Actions
     copyToClipboard: "Copy to clipboard",
     copied: "Copied!",
     listenPronunciation: "Listen to pronunciation",
-
-    // Navigation
     backToList: "Back to list",
     viewAll: "View all",
-
-    // Homepage
     heroTitle: "Korean Meaning Dictionary",
     heroSubtitle: "Multilingual meaning dictionary for Korean learners",
     featuredWords: "Featured Words",
     browseByCategory: "Browse by Category",
-
-    // About
     aboutTitle: "About Context",
     aboutDescription: "A meaning-focused multilingual dictionary for Korean learners.",
   },
   ja: {
-    // Common
     search: "検索",
     searchPlaceholder: "韓国語の単語を検索...",
     home: "ホーム",
@@ -138,8 +109,6 @@ const translations: Record<Language, UILabels> = {
     about: "紹介",
     noResults: "検索結果がありません",
     loading: "読み込み中...",
-
-    // Entry
     korean: "韓国語",
     romanization: "ローマ字表記",
     translation: "翻訳",
@@ -150,13 +119,9 @@ const translations: Record<Language, UILabels> = {
     difficulty: "難易度",
     category: "カテゴリー",
     tags: "タグ",
-
-    // Difficulty
     beginner: "初級",
     intermediate: "中級",
     advanced: "上級",
-
-    // Part of speech
     noun: "名詞",
     verb: "動詞",
     adjective: "形容詞",
@@ -167,48 +132,58 @@ const translations: Record<Language, UILabels> = {
     pronoun: "代名詞",
     determiner: "連体詞",
     expression: "表現",
-
-    // Actions
     copyToClipboard: "クリップボードにコピー",
     copied: "コピーしました！",
     listenPronunciation: "発音を聞く",
-
-    // Navigation
     backToList: "一覧に戻る",
     viewAll: "すべて見る",
-
-    // Homepage
     heroTitle: "韓国語意味辞典",
     heroSubtitle: "韓国語学習者のための多言語意味辞典",
     featuredWords: "注目の単語",
     browseByCategory: "カテゴリーで探す",
-
-    // About
     aboutTitle: "Contextについて",
     aboutDescription: "韓国語学習者のための意味重視の多言語辞典です。",
   },
 };
 
+// Extract locale from URL pathname
+function getLocaleFromPath(pathname: string): Language {
+  if (pathname.startsWith("/en/") || pathname === "/en") return "en";
+  if (pathname.startsWith("/ja/") || pathname === "/ja") return "ja";
+  return "ko"; // Default is Korean (no prefix)
+}
+
+// Remove locale prefix from path
+function stripLocaleFromPath(pathname: string): string {
+  if (pathname.startsWith("/en/")) return pathname.slice(3) || "/";
+  if (pathname.startsWith("/ja/")) return pathname.slice(3) || "/";
+  if (pathname === "/en" || pathname === "/ja") return "/";
+  return pathname;
+}
+
 export const I18nProvider: ParentComponent = (props) => {
-  const getInitialLocale = (): Language => {
-    if (isServer) return "en";
-    const stored = localStorage.getItem("context-locale") as Language;
-    if (stored && (stored === "ko" || stored === "en" || stored === "ja")) {
-      return stored;
-    }
-    const browserLang = navigator.language.toLowerCase();
-    if (browserLang.startsWith("ko")) return "ko";
-    if (browserLang.startsWith("ja")) return "ja";
-    return "en";
-  };
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const [locale, setLocaleState] = createSignal<Language>(getInitialLocale());
+  // Derive locale from URL
+  const locale = createMemo((): Language => {
+    return getLocaleFromPath(location.pathname);
+  });
 
+  // Change locale by navigating to new URL
   const setLocale = (lang: Language) => {
-    setLocaleState(lang);
-    if (!isServer) {
-      localStorage.setItem("context-locale", lang);
+    const currentPath = stripLocaleFromPath(location.pathname);
+    let newPath: string;
+
+    if (lang === "ko") {
+      // Korean has no prefix
+      newPath = currentPath;
+    } else {
+      // English and Japanese have prefix
+      newPath = `/${lang}${currentPath === "/" ? "" : currentPath}`;
     }
+
+    navigate(newPath);
   };
 
   const targetLang = (): TargetLanguage => {
@@ -222,8 +197,18 @@ export const I18nProvider: ParentComponent = (props) => {
 
   const isKorean = () => locale() === "ko";
 
+  // Generate locale-aware path
+  const localePath = (path: string): string => {
+    const currentLocale = locale();
+    if (currentLocale === "ko") {
+      return path; // Korean has no prefix
+    }
+    // Add locale prefix for en/ja
+    return `/${currentLocale}${path === "/" ? "" : path}`;
+  };
+
   return (
-    <I18nContext.Provider value={{ locale, targetLang, setLocale, t, isKorean }}>
+    <I18nContext.Provider value={{ locale, targetLang, setLocale, t, isKorean, localePath }}>
       {props.children}
     </I18nContext.Provider>
   );
@@ -240,14 +225,12 @@ export const useI18n = () => {
 export const useLocale = () => useI18n().locale;
 export const useT = () => useI18n().t;
 
-// Language names for selector
 export const languageNames: Record<Language, { native: string; english: string }> = {
   ko: { native: "한국어", english: "Korean" },
   en: { native: "English", english: "English" },
   ja: { native: "日本語", english: "Japanese" },
 };
 
-// Flag emojis for language selector
 export const languageFlags: Record<Language, string> = {
   ko: "KR",
   en: "EN",
