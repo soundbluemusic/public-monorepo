@@ -143,19 +143,27 @@ body {
    Skeleton Loading
    ============================================ */
 .skeleton {
-  @apply bg-gray-200 dark:bg-gray-700 rounded animate-pulse;
+  @apply bg-gray-200 rounded animate-pulse;
 }
 
 .skeleton-text {
-  @apply h-4 skeleton rounded;
+  @apply h-4 bg-gray-200 rounded animate-pulse;
 }
 
 .skeleton-title {
-  @apply h-6 skeleton rounded w-3/4;
+  @apply h-6 bg-gray-200 rounded animate-pulse w-3/4;
 }
 
 .skeleton-card {
-  @apply skeleton rounded-xl p-4 space-y-3;
+  @apply bg-gray-200 rounded-xl animate-pulse p-4 space-y-3;
+}
+
+/* Dark mode skeleton styles */
+:is(.dark .skeleton),
+:is(.dark .skeleton-text),
+:is(.dark .skeleton-title),
+:is(.dark .skeleton-card) {
+  @apply bg-gray-700;
 }
 
 /* ============================================
