@@ -1,8 +1,9 @@
 import { createSignal, For, Show, createEffect, onMount } from "solid-js";
 import { useNavigate } from "@solidjs/router";
 import { categories, getCategoryColor } from "@/data/categories";
-import { vocabEntries } from "@/data/entries";
-import type { VocabEntry, Category, Subcategory } from "@/data/types";
+import { searchEntries, meaningEntries } from "@/data/entries";
+import { useI18n } from "@/i18n";
+import type { MeaningEntry, Category, TargetLanguage } from "@/data/types";
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -10,13 +11,12 @@ interface SearchModalProps {
 }
 
 interface SearchResultItem {
-  type: "category" | "subcategory" | "entry";
+  type: "category" | "entry";
   category?: Category;
-  subcategory?: Subcategory;
-  entry?: VocabEntry;
+  entry?: MeaningEntry;
 }
 
-// 디바운스 함수
+// Debounce function
 function debounce<T extends (...args: Parameters<T>) => void>(
   fn: T,
   delay: number
@@ -28,8 +28,8 @@ function debounce<T extends (...args: Parameters<T>) => void>(
   };
 }
 
-// 최근 검색어 관리
-const RECENT_SEARCHES_KEY = "recentSearches";
+// Recent searches management
+const RECENT_SEARCHES_KEY = "context-recentSearches";
 const MAX_RECENT_SEARCHES = 5;
 
 function getRecentSearches(): string[] {
@@ -56,6 +56,7 @@ function clearRecentSearches(): void {
 }
 
 export function SearchModal(props: SearchModalProps) {
+  const { locale, t } = useI18n();
   const [query, setQuery] = createSignal("");
   const [debouncedQuery, setDebouncedQuery] = createSignal("");
   const [results, setResults] = createSignal<SearchResultItem[]>([]);
@@ -65,13 +66,18 @@ export function SearchModal(props: SearchModalProps) {
   const navigate = useNavigate();
   let inputRef: HTMLInputElement | undefined;
 
-  // 디바운스된 검색어 업데이트
+  // Get target language for search
+  const getTargetLang = (): TargetLanguage => {
+    return locale() === "ko" ? "en" : (locale() as TargetLanguage);
+  };
+
+  // Debounced query update
   const updateDebouncedQuery = debounce((q: string) => {
     setDebouncedQuery(q);
     setIsSearching(false);
   }, 200);
 
-  // 입력 처리
+  // Input handler
   const handleInput = (value: string) => {
     setQuery(value);
     if (value.trim()) {
@@ -80,7 +86,7 @@ export function SearchModal(props: SearchModalProps) {
     updateDebouncedQuery(value);
   };
 
-  // 모달 열릴 때 포커스 & 최근 검색어 로드
+  // Focus on open & load recent searches
   createEffect(() => {
     if (props.isOpen) {
       setRecentSearches(getRecentSearches());
@@ -88,7 +94,7 @@ export function SearchModal(props: SearchModalProps) {
     }
   });
 
-  // 검색 실행 (디바운스된 쿼리 사용)
+  // Search execution
   createEffect(() => {
     const q = debouncedQuery().toLowerCase().trim();
     if (!q) {
@@ -98,34 +104,27 @@ export function SearchModal(props: SearchModalProps) {
 
     const items: SearchResultItem[] = [];
 
-    // 카테고리 검색
+    // Search categories
     for (const category of categories) {
       if (
-        category.name.toLowerCase().includes(q) ||
-        category.nameEn.toLowerCase().includes(q) ||
-        category.description.toLowerCase().includes(q)
+        category.name.ko.toLowerCase().includes(q) ||
+        category.name.en.toLowerCase().includes(q) ||
+        category.name.ja.toLowerCase().includes(q) ||
+        category.description[locale()].toLowerCase().includes(q)
       ) {
         items.push({ type: "category", category });
       }
-
-      // 하위 카테고리 검색
-      for (const sub of category.subcategories) {
-        if (
-          sub.name.toLowerCase().includes(q) ||
-          sub.nameEn.toLowerCase().includes(q) ||
-          sub.description.toLowerCase().includes(q)
-        ) {
-          items.push({ type: "subcategory", category, subcategory: sub });
-        }
-      }
     }
 
-    // 어휘 항목 검색
-    for (const entry of vocabEntries) {
+    // Search entries
+    const targetLang = getTargetLang();
+    for (const entry of meaningEntries) {
+      const translation = entry.translations[targetLang];
       if (
-        entry.term.toLowerCase().includes(q) ||
-        entry.definition.toLowerCase().includes(q) ||
-        entry.examples.some((ex) => ex.toLowerCase().includes(q)) ||
+        entry.korean.includes(q) ||
+        entry.romanization.toLowerCase().includes(q) ||
+        translation.word.toLowerCase().includes(q) ||
+        translation.explanation.toLowerCase().includes(q) ||
         entry.tags.some((tag) => tag.toLowerCase().includes(q))
       ) {
         const category = categories.find((c) => c.id === entry.categoryId);
@@ -139,7 +138,7 @@ export function SearchModal(props: SearchModalProps) {
     setSelectedIndex(0);
   });
 
-  // 키보드 네비게이션
+  // Keyboard navigation
   const handleKeyDown = (e: KeyboardEvent) => {
     const len = results().length;
     if (!len) return;
@@ -156,9 +155,8 @@ export function SearchModal(props: SearchModalProps) {
     }
   };
 
-  // 결과 선택
+  // Result selection
   const selectResult = (item: SearchResultItem) => {
-    // 최근 검색어에 추가
     addRecentSearch(query());
     props.onClose();
     setQuery("");
@@ -166,38 +164,61 @@ export function SearchModal(props: SearchModalProps) {
 
     if (item.type === "category" && item.category) {
       navigate(`/category/${item.category.id}`);
-    } else if (item.type === "subcategory" && item.category && item.subcategory) {
-      navigate(`/category/${item.category.id}/${item.subcategory.id}`);
-    } else if (item.type === "entry" && item.entry && item.category) {
+    } else if (item.type === "entry" && item.entry) {
       navigate(`/entry/${item.entry.id}`);
     }
   };
 
-  // 최근 검색어 클릭
+  // Recent search click
   const handleRecentClick = (term: string) => {
     setQuery(term);
     setDebouncedQuery(term);
   };
 
-  // 최근 검색어 삭제
+  // Clear recent searches
   const handleClearRecent = () => {
     clearRecentSearches();
     setRecentSearches([]);
   };
 
+  // Get localized labels
+  const getPlaceholder = () => {
+    if (locale() === "ko") return "한국어 단어 검색...";
+    if (locale() === "ja") return "韓国語の単語を検索...";
+    return "Search Korean words...";
+  };
+
+  const getNoResultsText = () => {
+    if (locale() === "ko") return "검색 결과가 없습니다";
+    if (locale() === "ja") return "検索結果がありません";
+    return "No results found";
+  };
+
+  const getRecentSearchesLabel = () => {
+    if (locale() === "ko") return "최근 검색어";
+    if (locale() === "ja") return "最近の検索";
+    return "Recent searches";
+  };
+
+  const getClearAllLabel = () => {
+    if (locale() === "ko") return "모두 삭제";
+    if (locale() === "ja") return "すべて削除";
+    return "Clear all";
+  };
+
   return (
     <Show when={props.isOpen}>
       <div class="fixed inset-0 z-50 overflow-y-auto">
-        {/* 배경 오버레이 */}
+        {/* Background overlay */}
         <div
           class="fixed inset-0 bg-black/50 backdrop-blur-sm"
           onClick={props.onClose}
         />
 
-        {/* 모달 */}
+        {/* Modal */}
         <div class="relative min-h-screen flex items-start justify-center p-4 pt-[15vh]">
           <div class="relative w-full max-w-2xl bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden animate-slide-down">
-            {/* 검색 입력 */}
+            {/* Search input */}
             <div class="flex items-center gap-3 px-4 border-b border-gray-200 dark:border-gray-700">
               <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -208,9 +229,9 @@ export function SearchModal(props: SearchModalProps) {
                 value={query()}
                 onInput={(e) => handleInput(e.currentTarget.value)}
                 onKeyDown={handleKeyDown}
-                placeholder="검색어를 입력하세요..."
+                placeholder={getPlaceholder()}
                 class="flex-1 py-4 bg-transparent text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none text-lg"
-                aria-label="검색"
+                aria-label={t("search")}
                 role="combobox"
                 aria-expanded={results().length > 0}
               />
@@ -219,25 +240,25 @@ export function SearchModal(props: SearchModalProps) {
               </kbd>
             </div>
 
-            {/* 검색 결과 */}
+            {/* Search results */}
             <div class="max-h-[60vh] overflow-y-auto">
-              {/* 로딩 인디케이터 */}
+              {/* Loading indicator */}
               <Show when={isSearching()}>
                 <div class="p-4 text-center text-gray-500 dark:text-gray-400">
                   <div class="inline-block w-5 h-5 border-2 border-gray-300 border-t-primary-500 rounded-full animate-spin" />
                 </div>
               </Show>
 
-              {/* 최근 검색어 (검색어가 없을 때만 표시) */}
+              {/* Recent searches */}
               <Show when={!query() && recentSearches().length > 0 && !isSearching()}>
                 <div class="p-4">
                   <div class="flex items-center justify-between mb-3">
-                    <span class="text-sm font-medium text-gray-500 dark:text-gray-400">최근 검색어</span>
+                    <span class="text-sm font-medium text-gray-500 dark:text-gray-400">{getRecentSearchesLabel()}</span>
                     <button
                       onClick={handleClearRecent}
                       class="text-xs text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
                     >
-                      모두 삭제
+                      {getClearAllLabel()}
                     </button>
                   </div>
                   <div class="flex flex-wrap gap-2">
@@ -263,8 +284,7 @@ export function SearchModal(props: SearchModalProps) {
                       <svg class="w-12 h-12 mx-auto mb-4 text-gray-300 dark:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
-                      <p>검색 결과가 없습니다</p>
-                      <p class="text-sm mt-1">다른 검색어를 시도해보세요</p>
+                      <p>{getNoResultsText()}</p>
                     </div>
                   </Show>
                 }
@@ -282,7 +302,7 @@ export function SearchModal(props: SearchModalProps) {
                               : "hover:bg-gray-50 dark:hover:bg-gray-700/50"
                           }`}
                         >
-                          {/* 아이콘 */}
+                          {/* Icon */}
                           <Show when={item.type === "category" && item.category}>
                             <span
                               class={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold ${getCategoryColor(item.category!.color)}`}
@@ -290,58 +310,44 @@ export function SearchModal(props: SearchModalProps) {
                               {item.category!.icon}
                             </span>
                           </Show>
-                          <Show when={item.type === "subcategory" && item.category}>
+                          <Show when={item.type === "entry" && item.category}>
                             <span
                               class={`w-8 h-8 rounded-lg flex items-center justify-center text-sm ${getCategoryColor(item.category!.color)}`}
                             >
-                              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                              </svg>
-                            </span>
-                          </Show>
-                          <Show when={item.type === "entry"}>
-                            <span class="w-8 h-8 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-500 dark:text-gray-400">
-                              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                              </svg>
+                              {item.category!.icon}
                             </span>
                           </Show>
 
-                          {/* 내용 */}
+                          {/* Content */}
                           <div class="flex-1 min-w-0">
                             <Show when={item.type === "category" && item.category}>
                               <p class="font-medium text-gray-900 dark:text-white truncate">
-                                {item.category!.name}
+                                {item.category!.name[locale()]}
                               </p>
                               <p class="text-sm text-gray-500 dark:text-gray-400 truncate">
-                                {item.category!.description}
-                              </p>
-                            </Show>
-                            <Show when={item.type === "subcategory" && item.subcategory}>
-                              <p class="font-medium text-gray-900 dark:text-white truncate">
-                                {item.subcategory!.name}
-                              </p>
-                              <p class="text-sm text-gray-500 dark:text-gray-400 truncate">
-                                {item.category!.name} &gt; {item.subcategory!.name}
+                                {item.category!.description[locale()]}
                               </p>
                             </Show>
                             <Show when={item.type === "entry" && item.entry}>
-                              <p class="font-medium text-gray-900 dark:text-white truncate">
-                                {item.entry!.term}
-                              </p>
+                              <div class="flex items-center gap-2">
+                                <p class="font-bold text-gray-900 dark:text-white">
+                                  {item.entry!.korean}
+                                </p>
+                                <span class="text-xs text-gray-400">
+                                  {item.entry!.romanization}
+                                </span>
+                              </div>
                               <p class="text-sm text-gray-500 dark:text-gray-400 truncate">
-                                {item.entry!.definition}
+                                {item.entry!.translations[getTargetLang()].word}
                               </p>
                             </Show>
                           </div>
 
-                          {/* 타입 배지 */}
+                          {/* Type badge */}
                           <span class="badge badge-gray text-xs">
                             {item.type === "category"
-                              ? "카테고리"
-                              : item.type === "subcategory"
-                              ? "하위 카테고리"
-                              : "어휘"}
+                              ? (locale() === "ko" ? "카테고리" : locale() === "ja" ? "カテゴリー" : "Category")
+                              : (locale() === "ko" ? "단어" : locale() === "ja" ? "単語" : "Word")}
                           </span>
                         </button>
                       </li>
@@ -351,22 +357,22 @@ export function SearchModal(props: SearchModalProps) {
               </Show>
             </div>
 
-            {/* 하단 힌트 */}
+            {/* Bottom hints */}
             <Show when={results().length > 0}>
               <div class="px-4 py-3 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/50">
                 <div class="flex items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
                   <span class="flex items-center gap-1">
                     <kbd class="px-1.5 py-0.5 bg-white dark:bg-gray-700 rounded border border-gray-200 dark:border-gray-600">↑</kbd>
                     <kbd class="px-1.5 py-0.5 bg-white dark:bg-gray-700 rounded border border-gray-200 dark:border-gray-600">↓</kbd>
-                    이동
+                    {locale() === "ko" ? "이동" : locale() === "ja" ? "移動" : "Navigate"}
                   </span>
                   <span class="flex items-center gap-1">
                     <kbd class="px-1.5 py-0.5 bg-white dark:bg-gray-700 rounded border border-gray-200 dark:border-gray-600">Enter</kbd>
-                    선택
+                    {locale() === "ko" ? "선택" : locale() === "ja" ? "選択" : "Select"}
                   </span>
                   <span class="flex items-center gap-1">
                     <kbd class="px-1.5 py-0.5 bg-white dark:bg-gray-700 rounded border border-gray-200 dark:border-gray-600">ESC</kbd>
-                    닫기
+                    {locale() === "ko" ? "닫기" : locale() === "ja" ? "閉じる" : "Close"}
                   </span>
                 </div>
               </div>

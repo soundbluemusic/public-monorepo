@@ -1,61 +1,165 @@
-// 어휘 항목의 기본 타입
-export interface VocabEntry {
+// Supported target languages (Korean is always the source)
+export type TargetLanguage = "en" | "ja";
+export type Language = "ko" | TargetLanguage;
+
+// Translation for a specific target language
+export interface Translation {
+  word: string;           // Translated word
+  reading?: string;       // Reading (for Japanese: hiragana/katakana)
+  explanation: string;    // Explanation in target language
+  examples?: string[];    // Example sentences in target language
+}
+
+// Meaning entry - Korean word with translations
+export interface MeaningEntry {
   id: string;
-  term: string;
-  pronunciation?: string;
-  definition: string;
-  examples: string[];
-  relatedTerms?: string[];
-  tags: string[];
+  korean: string;         // Korean word (always the source)
+  romanization: string;   // Romanization (e.g., "annyeong")
+  hanja?: string;         // Hanja if applicable
+  partOfSpeech: PartOfSpeech;
   categoryId: string;
-  subcategoryId?: string;
+  translations: {
+    en: Translation;
+    ja: Translation;
+  };
+  tags: string[];
+  difficulty: DifficultyLevel;
+  frequency?: FrequencyLevel;
   createdAt?: string;
   updatedAt?: string;
 }
 
-// 카테고리 타입
+// Part of speech
+export type PartOfSpeech =
+  | "noun"
+  | "verb"
+  | "adjective"
+  | "adverb"
+  | "particle"
+  | "interjection"
+  | "conjunction"
+  | "pronoun"
+  | "determiner"
+  | "expression";
+
+// Difficulty level
+export type DifficultyLevel = "beginner" | "intermediate" | "advanced";
+
+// Frequency level
+export type FrequencyLevel = "common" | "frequent" | "occasional" | "rare";
+
+// Category for organizing entries
 export interface Category {
   id: string;
-  name: string;
-  nameEn: string;
-  description: string;
+  name: {
+    ko: string;
+    en: string;
+    ja: string;
+  };
+  description: {
+    ko: string;
+    en: string;
+    ja: string;
+  };
   icon: string;
-  color: string;
-  order: number;
-  subcategories: Subcategory[];
-}
-
-// 하위 카테고리 타입
-export interface Subcategory {
-  id: string;
-  name: string;
-  nameEn: string;
-  description: string;
-  parentId: string;
+  color: CategoryColor;
   order: number;
 }
 
-// 검색 결과 타입
+export type CategoryColor =
+  | "red"
+  | "orange"
+  | "yellow"
+  | "green"
+  | "teal"
+  | "blue"
+  | "indigo"
+  | "purple"
+  | "pink";
+
+// Search result
 export interface SearchResult {
-  entry: VocabEntry;
+  entry: MeaningEntry;
   category: Category;
-  subcategory?: Subcategory;
   score: number;
+  matchedIn: ("korean" | "translation" | "explanation" | "tags")[];
 }
 
-// 네비게이션 아이템
+// Navigation item
 export interface NavItem {
   id: string;
-  label: string;
+  label: {
+    ko: string;
+    en: string;
+    ja: string;
+  };
   href: string;
   icon?: string;
-  children?: NavItem[];
 }
 
-// 페이지 메타데이터
+// Page metadata
 export interface PageMeta {
   title: string;
   description: string;
   keywords?: string[];
-  ogImage?: string;
+}
+
+// UI Labels type for i18n
+export interface UILabels {
+  // Common
+  search: string;
+  searchPlaceholder: string;
+  home: string;
+  browse: string;
+  about: string;
+  noResults: string;
+  loading: string;
+
+  // Entry
+  korean: string;
+  romanization: string;
+  translation: string;
+  explanation: string;
+  examples: string;
+  relatedWords: string;
+  partOfSpeech: string;
+  difficulty: string;
+  category: string;
+  tags: string;
+
+  // Difficulty labels
+  beginner: string;
+  intermediate: string;
+  advanced: string;
+
+  // Part of speech labels
+  noun: string;
+  verb: string;
+  adjective: string;
+  adverb: string;
+  particle: string;
+  interjection: string;
+  conjunction: string;
+  pronoun: string;
+  determiner: string;
+  expression: string;
+
+  // Actions
+  copyToClipboard: string;
+  copied: string;
+  listenPronunciation: string;
+
+  // Navigation
+  backToList: string;
+  viewAll: string;
+
+  // Homepage
+  heroTitle: string;
+  heroSubtitle: string;
+  featuredWords: string;
+  browseByCategory: string;
+
+  // About
+  aboutTitle: string;
+  aboutDescription: string;
 }

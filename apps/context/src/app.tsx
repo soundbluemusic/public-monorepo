@@ -2,9 +2,10 @@ import { MetaProvider } from "@solidjs/meta";
 import { Router, type RouteSectionProps } from "@solidjs/router";
 import { FileRoutes } from "@solidjs/start/router";
 import { Suspense } from "solid-js";
+import { I18nProvider } from "@/i18n";
 import "./app.css";
 
-// 로딩 스켈레톤 UI
+// Loading skeleton UI
 function LoadingFallback() {
   return (
     <div class="min-h-screen bg-gray-50 dark:bg-gray-900">
@@ -13,8 +14,8 @@ function LoadingFallback() {
         <div class="h-full px-4 flex items-center gap-4">
           <div class="skeleton w-10 h-10 rounded-xl" />
           <div class="hidden sm:block space-y-1">
-            <div class="skeleton h-5 w-32 rounded" />
-            <div class="skeleton h-3 w-24 rounded" />
+            <div class="skeleton h-5 w-24 rounded" />
+            <div class="skeleton h-3 w-32 rounded" />
           </div>
         </div>
       </div>
@@ -42,9 +43,11 @@ export default function App() {
     <Router
       root={(props: RouteSectionProps) => (
         <MetaProvider>
-          <Suspense fallback={<LoadingFallback />}>
-            {props.children}
-          </Suspense>
+          <I18nProvider>
+            <Suspense fallback={<LoadingFallback />}>
+              {props.children}
+            </Suspense>
+          </I18nProvider>
         </MetaProvider>
       )}
     >
