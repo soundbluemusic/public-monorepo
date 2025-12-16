@@ -135,6 +135,7 @@ export default function Sidebar(props: SidebarProps) {
                       : "text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
                   }`}
                   title={props.isCollapsed && !props.isMobile ? (locale() === "ko" ? item.labelKo : item.label) : undefined}
+                  aria-current={isActive(item.href) ? "page" : undefined}
                 >
                   <span class="text-base shrink-0">{item.icon}</span>
                   <Show when={!props.isCollapsed || props.isMobile}>

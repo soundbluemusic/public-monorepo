@@ -1,7 +1,14 @@
-import { createSignal, createEffect, onMount, type ParentComponent } from "solid-js";
+import { createSignal, createEffect, onMount, For, type ParentComponent } from "solid-js";
 import { A, useLocation } from "@solidjs/router";
 import { Sidebar } from "./Sidebar";
 import { SearchModal } from "./SearchModal";
+
+// 하단 네비게이션 아이템
+const bottomNavItems = [
+  { href: "/", label: "홈", icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" },
+  { href: "/browse", label: "탐색", icon: "M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" },
+  { href: "/about", label: "소개", icon: "M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
+] as const;
 
 export const Layout: ParentComponent = (props) => {
   const [sidebarOpen, setSidebarOpen] = createSignal(false);
@@ -15,21 +22,43 @@ export const Layout: ParentComponent = (props) => {
     setSidebarOpen(false);
   });
 
-  // 다크모드 초기화
+  // 다크모드 초기화 - 시스템 설정 반영
   onMount(() => {
-    const isDark = localStorage.getItem("darkMode") === "true";
+    const stored = localStorage.getItem("darkMode");
+    // 저장된 값이 있으면 사용, 없으면 시스템 설정 확인
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDark = stored ? stored === "true" : prefersDark;
+
     setDarkMode(isDark);
     if (isDark) {
       document.documentElement.classList.add("dark");
     }
+
+    // 시스템 설정 변경 감지
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+      if (!localStorage.getItem("darkMode")) {
+        setDarkMode(e.matches);
+        document.documentElement.classList.toggle("dark", e.matches);
+      }
+    });
   });
 
   const toggleDarkMode = () => {
+    // 부드러운 전환을 위한 클래스 추가
+    document.documentElement.classList.add("dark-transition");
+
     const newValue = !darkMode();
     setDarkMode(newValue);
     localStorage.setItem("darkMode", String(newValue));
     document.documentElement.classList.toggle("dark", newValue);
+
+    // 전환 완료 후 클래스 제거
+    setTimeout(() => {
+      document.documentElement.classList.remove("dark-transition");
+    }, 300);
   };
+
+  const isActive = (href: string) => location.pathname === href;
 
   // 키보드 단축키
   onMount(() => {
@@ -49,6 +78,11 @@ export const Layout: ParentComponent = (props) => {
 
   return (
     <div class="min-h-screen bg-gray-50 dark:bg-gray-900">
+      {/* Skip to content - 접근성 */}
+      <a href="#main-content" class="skip-to-content">
+        본문으로 건너뛰기
+      </a>
+
       {/* 헤더 */}
       <header class="fixed top-0 left-0 right-0 h-16 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 z-40">
         <div class="h-full px-4 flex items-center justify-between">
@@ -128,7 +162,7 @@ export const Layout: ParentComponent = (props) => {
       <Sidebar isOpen={sidebarOpen()} onClose={() => setSidebarOpen(false)} />
 
       {/* 메인 콘텐츠 */}
-      <main class="pt-16 lg:pl-72">
+      <main id="main-content" class="pt-16 pb-20 lg:pb-0 lg:pl-72">
         <div class="min-h-[calc(100vh-4rem)]">
           {props.children}
         </div>
@@ -168,6 +202,30 @@ export const Layout: ParentComponent = (props) => {
 
       {/* 검색 모달 */}
       <SearchModal isOpen={searchOpen()} onClose={() => setSearchOpen(false)} />
+
+      {/* 하단 네비게이션 (모바일) */}
+      <nav class="bottom-nav lg:hidden" aria-label="모바일 네비게이션">
+        <div class="flex items-center justify-around h-full">
+          <For each={bottomNavItems}>
+            {(item) => (
+              <A
+                href={item.href}
+                class={`flex flex-col items-center justify-center flex-1 h-full gap-1 transition-colors ${
+                  isActive(item.href)
+                    ? "text-primary-600 dark:text-primary-400"
+                    : "text-gray-500 dark:text-gray-400"
+                }`}
+                aria-current={isActive(item.href) ? "page" : undefined}
+              >
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon} />
+                </svg>
+                <span class="text-xs font-medium">{item.label}</span>
+              </A>
+            )}
+          </For>
+        </div>
+      </nav>
     </div>
   );
 };

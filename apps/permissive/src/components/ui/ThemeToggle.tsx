@@ -17,6 +17,9 @@ export default function ThemeToggle() {
   const toggleTheme = () => {
     if (isServer) return;
 
+    // 부드러운 전환을 위한 클래스 추가
+    document.documentElement.classList.add("theme-transition");
+
     const newTheme = theme() === "light" ? "dark" : "light";
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
@@ -26,6 +29,11 @@ export default function ThemeToggle() {
     } else {
       document.documentElement.classList.remove("dark");
     }
+
+    // 전환 완료 후 클래스 제거
+    setTimeout(() => {
+      document.documentElement.classList.remove("theme-transition");
+    }, 300);
   };
 
   return (

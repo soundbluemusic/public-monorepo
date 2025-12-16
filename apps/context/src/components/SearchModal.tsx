@@ -16,23 +16,81 @@ interface SearchResultItem {
   entry?: VocabEntry;
 }
 
+// 디바운스 함수
+function debounce<T extends (...args: Parameters<T>) => void>(
+  fn: T,
+  delay: number
+): (...args: Parameters<T>) => void {
+  let timeoutId: ReturnType<typeof setTimeout>;
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn(...args), delay);
+  };
+}
+
+// 최근 검색어 관리
+const RECENT_SEARCHES_KEY = "recentSearches";
+const MAX_RECENT_SEARCHES = 5;
+
+function getRecentSearches(): string[] {
+  try {
+    const stored = localStorage.getItem(RECENT_SEARCHES_KEY);
+    return stored ? JSON.parse(stored) : [];
+  } catch {
+    return [];
+  }
+}
+
+function addRecentSearch(term: string): void {
+  if (!term.trim()) return;
+  const searches = getRecentSearches().filter((s) => s !== term);
+  searches.unshift(term);
+  localStorage.setItem(
+    RECENT_SEARCHES_KEY,
+    JSON.stringify(searches.slice(0, MAX_RECENT_SEARCHES))
+  );
+}
+
+function clearRecentSearches(): void {
+  localStorage.removeItem(RECENT_SEARCHES_KEY);
+}
+
 export function SearchModal(props: SearchModalProps) {
   const [query, setQuery] = createSignal("");
+  const [debouncedQuery, setDebouncedQuery] = createSignal("");
   const [results, setResults] = createSignal<SearchResultItem[]>([]);
   const [selectedIndex, setSelectedIndex] = createSignal(0);
+  const [recentSearches, setRecentSearches] = createSignal<string[]>([]);
+  const [isSearching, setIsSearching] = createSignal(false);
   const navigate = useNavigate();
   let inputRef: HTMLInputElement | undefined;
 
-  // 모달 열릴 때 포커스
+  // 디바운스된 검색어 업데이트
+  const updateDebouncedQuery = debounce((q: string) => {
+    setDebouncedQuery(q);
+    setIsSearching(false);
+  }, 200);
+
+  // 입력 처리
+  const handleInput = (value: string) => {
+    setQuery(value);
+    if (value.trim()) {
+      setIsSearching(true);
+    }
+    updateDebouncedQuery(value);
+  };
+
+  // 모달 열릴 때 포커스 & 최근 검색어 로드
   createEffect(() => {
-    if (props.isOpen && inputRef) {
+    if (props.isOpen) {
+      setRecentSearches(getRecentSearches());
       setTimeout(() => inputRef?.focus(), 100);
     }
   });
 
-  // 검색 실행
+  // 검색 실행 (디바운스된 쿼리 사용)
   createEffect(() => {
-    const q = query().toLowerCase().trim();
+    const q = debouncedQuery().toLowerCase().trim();
     if (!q) {
       setResults([]);
       return;
@@ -100,8 +158,11 @@ export function SearchModal(props: SearchModalProps) {
 
   // 결과 선택
   const selectResult = (item: SearchResultItem) => {
+    // 최근 검색어에 추가
+    addRecentSearch(query());
     props.onClose();
     setQuery("");
+    setDebouncedQuery("");
 
     if (item.type === "category" && item.category) {
       navigate(`/category/${item.category.id}`);
@@ -110,6 +171,18 @@ export function SearchModal(props: SearchModalProps) {
     } else if (item.type === "entry" && item.entry && item.category) {
       navigate(`/entry/${item.entry.id}`);
     }
+  };
+
+  // 최근 검색어 클릭
+  const handleRecentClick = (term: string) => {
+    setQuery(term);
+    setDebouncedQuery(term);
+  };
+
+  // 최근 검색어 삭제
+  const handleClearRecent = () => {
+    clearRecentSearches();
+    setRecentSearches([]);
   };
 
   return (
@@ -133,10 +206,13 @@ export function SearchModal(props: SearchModalProps) {
                 ref={inputRef}
                 type="text"
                 value={query()}
-                onInput={(e) => setQuery(e.currentTarget.value)}
+                onInput={(e) => handleInput(e.currentTarget.value)}
                 onKeyDown={handleKeyDown}
                 placeholder="검색어를 입력하세요..."
                 class="flex-1 py-4 bg-transparent text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none text-lg"
+                aria-label="검색"
+                role="combobox"
+                aria-expanded={results().length > 0}
               />
               <kbd class="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-xs text-gray-500 dark:text-gray-400">
                 ESC
@@ -145,10 +221,44 @@ export function SearchModal(props: SearchModalProps) {
 
             {/* 검색 결과 */}
             <div class="max-h-[60vh] overflow-y-auto">
+              {/* 로딩 인디케이터 */}
+              <Show when={isSearching()}>
+                <div class="p-4 text-center text-gray-500 dark:text-gray-400">
+                  <div class="inline-block w-5 h-5 border-2 border-gray-300 border-t-primary-500 rounded-full animate-spin" />
+                </div>
+              </Show>
+
+              {/* 최근 검색어 (검색어가 없을 때만 표시) */}
+              <Show when={!query() && recentSearches().length > 0 && !isSearching()}>
+                <div class="p-4">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-sm font-medium text-gray-500 dark:text-gray-400">최근 검색어</span>
+                    <button
+                      onClick={handleClearRecent}
+                      class="text-xs text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                    >
+                      모두 삭제
+                    </button>
+                  </div>
+                  <div class="flex flex-wrap gap-2">
+                    <For each={recentSearches()}>
+                      {(term) => (
+                        <button
+                          onClick={() => handleRecentClick(term)}
+                          class="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg text-sm text-gray-700 dark:text-gray-300 transition-colors"
+                        >
+                          {term}
+                        </button>
+                      )}
+                    </For>
+                  </div>
+                </div>
+              </Show>
+
               <Show
                 when={results().length > 0}
                 fallback={
-                  <Show when={query().length > 0}>
+                  <Show when={query().length > 0 && !isSearching()}>
                     <div class="p-8 text-center text-gray-500 dark:text-gray-400">
                       <svg class="w-12 h-12 mx-auto mb-4 text-gray-300 dark:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />

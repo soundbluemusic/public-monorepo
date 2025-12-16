@@ -63,6 +63,7 @@ export default function BottomNav() {
                   ? "text-primary-600 dark:text-primary-400"
                   : "text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300"
               }`}
+              aria-current={isActive(item.href) ? "page" : undefined}
             >
               <span class={isActive(item.href) ? "scale-110" : ""}>
                 {item.icon}
