@@ -1,21 +1,40 @@
 import { Title, Meta } from "@solidjs/meta";
 import { A } from "@solidjs/router";
-import { For, createSignal, createMemo } from "solid-js";
+import { For, createSignal, createMemo, Show } from "solid-js";
 import { Layout } from "@/components/Layout";
-import { categories } from "@/data/categories";
+import { categories, getCategoryById } from "@/data/categories";
 import { meaningEntries } from "@/data/entries";
 import { useI18n } from "@/i18n";
 
 export default function BrowsePage() {
   const { locale, t, localePath } = useI18n();
   const [filter, setFilter] = createSignal<string>("all");
+  const [searchQuery, setSearchQuery] = createSignal<string>("");
 
   const filteredEntries = createMemo(() => {
     let entries = [...meaningEntries];
+
+    // Filter by category
     if (filter() !== "all") {
       entries = entries.filter((e) => e.categoryId === filter());
     }
+
+    // Filter by search query
+    const query = searchQuery().toLowerCase().trim();
+    if (query) {
+      entries = entries.filter((e) =>
+        e.korean.toLowerCase().includes(query) ||
+        e.romanization.toLowerCase().includes(query) ||
+        e.translations[locale()].word.toLowerCase().includes(query)
+      );
+    }
+
     return entries.sort((a, b) => a.korean.localeCompare(b.korean, "ko"));
+  });
+
+  const selectedCategory = createMemo(() => {
+    if (filter() === "all") return null;
+    return getCategoryById(filter());
   });
 
   return (
@@ -28,57 +47,95 @@ export default function BrowsePage() {
           {t("browse")}
         </h1>
 
-        <div class="flex flex-wrap gap-2">
-          <button
-            onClick={() => setFilter("all")}
-            class="px-3 py-1.5 text-sm rounded-full transition-colors"
+        {/* Search input */}
+        <div class="mb-4">
+          <input
+            type="text"
+            value={searchQuery()}
+            onInput={(e) => setSearchQuery(e.currentTarget.value)}
+            placeholder={locale() === "ko" ? "단어 검색..." : locale() === "ja" ? "単語を検索..." : "Search words..."}
+            class="w-full px-4 py-2.5 rounded-lg text-sm transition-colors outline-none"
             style={{
-              "background-color": filter() === "all" ? "var(--accent-primary)" : "var(--bg-tertiary)",
-              color: filter() === "all" ? "var(--bg-primary)" : "var(--text-secondary)"
+              "background-color": "var(--bg-secondary)",
+              color: "var(--text-primary)",
+              border: "1px solid var(--border-primary)"
             }}
-          >
-            {locale() === "ko" ? "전체" : locale() === "ja" ? "全て" : "All"}
-          </button>
-          <For each={categories}>
-            {(cat) => (
-              <button
-                onClick={() => setFilter(cat.id)}
-                class="px-3 py-1.5 text-sm rounded-full transition-colors"
-                style={{
-                  "background-color": filter() === cat.id ? "var(--accent-primary)" : "var(--bg-tertiary)",
-                  color: filter() === cat.id ? "var(--bg-primary)" : "var(--text-secondary)"
-                }}
-              >
-                {cat.name[locale()]}
-              </button>
-            )}
-          </For>
+          />
+        </div>
+
+        {/* Category filter - horizontal scroll */}
+        <div class="overflow-x-auto pb-2 -mx-4 px-4">
+          <div class="flex gap-2 min-w-max">
+            <button
+              onClick={() => setFilter("all")}
+              class="flex items-center gap-1.5 px-3 py-2 text-sm rounded-lg transition-all"
+              style={{
+                "background-color": filter() === "all" ? "var(--accent-primary)" : "var(--bg-tertiary)",
+                color: filter() === "all" ? "var(--bg-primary)" : "var(--text-secondary)",
+                "font-weight": filter() === "all" ? "500" : "400"
+              }}
+            >
+              <span class="text-base">📚</span>
+              <span>{locale() === "ko" ? "전체" : locale() === "ja" ? "全て" : "All"}</span>
+            </button>
+            <For each={categories}>
+              {(cat) => (
+                <button
+                  onClick={() => setFilter(cat.id)}
+                  class="flex items-center gap-1.5 px-3 py-2 text-sm rounded-lg transition-all whitespace-nowrap"
+                  style={{
+                    "background-color": filter() === cat.id ? "var(--accent-primary)" : "var(--bg-tertiary)",
+                    color: filter() === cat.id ? "var(--bg-primary)" : "var(--text-secondary)",
+                    "font-weight": filter() === cat.id ? "500" : "400"
+                  }}
+                >
+                  <span class="text-base">{cat.icon}</span>
+                  <span>{cat.name[locale()]}</span>
+                </button>
+              )}
+            </For>
+          </div>
         </div>
       </div>
 
-      <p class="text-sm mb-4" style={{ color: "var(--text-tertiary)" }}>
-        {filteredEntries().length} {locale() === "ko" ? "단어" : locale() === "ja" ? "単語" : "words"}
-      </p>
+      {/* Results header */}
+      <div class="flex items-center justify-between mb-4">
+        <p class="text-sm" style={{ color: "var(--text-tertiary)" }}>
+          {filteredEntries().length} {locale() === "ko" ? "단어" : locale() === "ja" ? "単語" : "words"}
+          <Show when={selectedCategory()}>
+            <span class="ml-2">
+              {locale() === "ko" ? "in" : locale() === "ja" ? "の" : "in"} {selectedCategory()?.icon} {selectedCategory()?.name[locale()]}
+            </span>
+          </Show>
+        </p>
+      </div>
 
+      {/* Entry list */}
       <div class="space-y-1">
         <For each={filteredEntries()}>
           {(entry) => {
             const translation = entry.translations[locale()];
+            const category = getCategoryById(entry.categoryId);
             return (
               <A
                 href={localePath(`/entry/${entry.id}`)}
-                class="flex items-baseline justify-between py-3 -mx-2 px-2 rounded transition-colors"
+                class="group flex items-center justify-between py-3 -mx-2 px-3 rounded-lg transition-colors"
                 style={{ "border-bottom": "1px solid var(--border-primary)" }}
               >
-                <div class="flex items-baseline gap-3">
-                  <span class="text-lg font-medium" style={{ color: "var(--text-primary)" }}>
-                    {entry.korean}
+                <div class="flex items-center gap-3">
+                  <span class="text-lg opacity-60 group-hover:opacity-100 transition-opacity">
+                    {category?.icon}
                   </span>
-                  <span class="text-sm" style={{ color: "var(--text-tertiary)" }}>
-                    {entry.romanization}
-                  </span>
+                  <div class="flex flex-col sm:flex-row sm:items-baseline sm:gap-3">
+                    <span class="text-lg font-medium" style={{ color: "var(--text-primary)" }}>
+                      {entry.korean}
+                    </span>
+                    <span class="text-sm" style={{ color: "var(--text-tertiary)" }}>
+                      {entry.romanization}
+                    </span>
+                  </div>
                 </div>
-                <span class="text-sm" style={{ color: "var(--text-secondary)" }}>
+                <span class="text-sm text-right" style={{ color: "var(--text-secondary)" }}>
                   {translation.word}
                 </span>
               </A>
@@ -86,6 +143,18 @@ export default function BrowsePage() {
           }}
         </For>
       </div>
+
+      {/* Empty state */}
+      <Show when={filteredEntries().length === 0}>
+        <div class="text-center py-12">
+          <p class="text-lg mb-2" style={{ color: "var(--text-secondary)" }}>
+            {locale() === "ko" ? "검색 결과가 없습니다" : locale() === "ja" ? "検索結果がありません" : "No results found"}
+          </p>
+          <p class="text-sm" style={{ color: "var(--text-tertiary)" }}>
+            {locale() === "ko" ? "다른 검색어를 시도해보세요" : locale() === "ja" ? "別の検索キーワードをお試しください" : "Try a different search term"}
+          </p>
+        </div>
+      </Show>
     </Layout>
   );
 }

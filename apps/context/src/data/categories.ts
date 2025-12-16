@@ -129,6 +129,102 @@ export const categories: Category[] = [
     color: "green",
     order: 8,
   },
+  {
+    id: "music",
+    name: {
+      ko: "음악",
+      en: "Music",
+      ja: "音楽",
+    },
+    description: {
+      ko: "악기와 음악 관련 단어",
+      en: "Musical instruments and music vocabulary",
+      ja: "楽器と音楽に関する言葉",
+    },
+    icon: "🎸",
+    color: "red",
+    order: 9,
+  },
+  {
+    id: "art",
+    name: {
+      ko: "예술",
+      en: "Art",
+      ja: "芸術",
+    },
+    description: {
+      ko: "미술과 예술 관련 단어",
+      en: "Art and creative expression vocabulary",
+      ja: "美術と芸術に関する言葉",
+    },
+    icon: "🎨",
+    color: "purple",
+    order: 10,
+  },
+  {
+    id: "sports",
+    name: {
+      ko: "스포츠",
+      en: "Sports",
+      ja: "スポーツ",
+    },
+    description: {
+      ko: "스포츠와 운동 관련 단어",
+      en: "Sports and exercise vocabulary",
+      ja: "スポーツと運動に関する言葉",
+    },
+    icon: "⚽",
+    color: "green",
+    order: 11,
+  },
+  {
+    id: "space",
+    name: {
+      ko: "우주",
+      en: "Space",
+      ja: "宇宙",
+    },
+    description: {
+      ko: "우주와 천문학 관련 단어",
+      en: "Space and astronomy vocabulary",
+      ja: "宇宙と天文学に関する言葉",
+    },
+    icon: "🚀",
+    color: "indigo",
+    order: 12,
+  },
+  {
+    id: "physics",
+    name: {
+      ko: "물리학",
+      en: "Physics",
+      ja: "物理学",
+    },
+    description: {
+      ko: "물리학과 과학 관련 단어",
+      en: "Physics and science vocabulary",
+      ja: "物理学と科学に関する言葉",
+    },
+    icon: "⚛️",
+    color: "blue",
+    order: 13,
+  },
+  {
+    id: "math",
+    name: {
+      ko: "수학",
+      en: "Mathematics",
+      ja: "数学",
+    },
+    description: {
+      ko: "수학과 계산 관련 단어",
+      en: "Mathematics and calculation vocabulary",
+      ja: "数学と計算に関する言葉",
+    },
+    icon: "📐",
+    color: "teal",
+    order: 14,
+  },
 ];
 
 // Get category color classes
