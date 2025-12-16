@@ -85,12 +85,14 @@ const libraries: Library[] = [
   { name: "nanoid", description: "Tiny, secure URL-friendly ID", descriptionKo: "작고 안전한 URL 친화적 ID", category: "Utilities", license: "MIT", github: "https://github.com/ai/nanoid", npm: "nanoid", stars: "24k" },
 ];
 
-const categories = ["All", "Frameworks", "State", "Routing", "Styling", "Build", "Data", "UI", "Animation", "Forms", "Utilities"];
+const categories = ["All", "Frameworks", "State", "Routing", "Styling", "Build", "Data", "UI", "Animation", "Forms", "Utilities"] as const;
+
+type CategoryFilter = (typeof categories)[number];
 
 export default function LibrariesPage() {
   const { locale } = useI18n();
   const [search, setSearch] = createSignal("");
-  const [category, setCategory] = createSignal("All");
+  const [category, setCategory] = createSignal<CategoryFilter>("All");
 
   const filteredLibraries = () => {
     let libs = libraries;

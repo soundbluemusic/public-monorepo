@@ -1,8 +1,15 @@
-import { For } from "solid-js";
+import { For, type JSX } from "solid-js";
 import { A, useLocation } from "@solidjs/router";
 import { useI18n } from "@/i18n";
 
-const navItems = [
+interface BottomNavItem {
+  href: string;
+  label: string;
+  labelKo: string;
+  icon: JSX.Element;
+}
+
+const navItems: readonly BottomNavItem[] = [
   {
     href: "/",
     label: "Home",
@@ -56,6 +63,7 @@ export default function BottomNav() {
                   ? "text-primary-600 dark:text-primary-400"
                   : "text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300"
               }`}
+              aria-current={isActive(item.href) ? "page" : undefined}
             >
               <span class={isActive(item.href) ? "scale-110" : ""}>
                 {item.icon}

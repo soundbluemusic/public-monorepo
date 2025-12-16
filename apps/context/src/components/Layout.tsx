@@ -1,173 +1,329 @@
-import { createSignal, createEffect, onMount, type ParentComponent } from "solid-js";
-import { A, useLocation } from "@solidjs/router";
-import { Sidebar } from "./Sidebar";
-import { SearchModal } from "./SearchModal";
+import { createSignal, createEffect, onMount, onCleanup, For, Show, type ParentComponent } from "solid-js";
+import { A, useLocation, useNavigate } from "@solidjs/router";
+import { useI18n } from "@/i18n";
+import { meaningEntries } from "@/data/entries";
+import type { Language, MeaningEntry } from "@/data/types";
+
+const languages: { code: Language; label: string }[] = [
+  { code: "ko", label: "한국어" },
+  { code: "en", label: "EN" },
+  { code: "ja", label: "日本語" },
+];
+
+// Strip locale prefix from path for comparison
+function stripLocale(pathname: string): string {
+  if (pathname.startsWith("/en/")) return pathname.slice(3);
+  if (pathname.startsWith("/ja/")) return pathname.slice(3);
+  if (pathname === "/en" || pathname === "/ja") return "/";
+  return pathname;
+}
 
 export const Layout: ParentComponent = (props) => {
-  const [sidebarOpen, setSidebarOpen] = createSignal(false);
-  const [searchOpen, setSearchOpen] = createSignal(false);
-  const [darkMode, setDarkMode] = createSignal(false);
+  const { locale, setLocale, t, localePath } = useI18n();
   const location = useLocation();
+  const navigate = useNavigate();
 
-  // 사이드바 닫기 (라우트 변경 시)
-  createEffect(() => {
-    location.pathname;
-    setSidebarOpen(false);
-  });
+  // Dark mode
+  const [darkMode, setDarkMode] = createSignal(false);
 
-  // 다크모드 초기화
+  // Search
+  const [searchQuery, setSearchQuery] = createSignal("");
+  const [searchResults, setSearchResults] = createSignal<MeaningEntry[]>([]);
+  const [showResults, setShowResults] = createSignal(false);
+  const [selectedIndex, setSelectedIndex] = createSignal(0);
+  let searchInputRef: HTMLInputElement | undefined;
+  let searchContainerRef: HTMLDivElement | undefined;
+
+  // Initialize dark mode from localStorage or system preference
   onMount(() => {
-    const isDark = localStorage.getItem("darkMode") === "true";
-    setDarkMode(isDark);
-    if (isDark) {
-      document.documentElement.classList.add("dark");
+    const stored = localStorage.getItem("context-dark-mode");
+    if (stored !== null) {
+      const isDark = stored === "true";
+      setDarkMode(isDark);
+      document.documentElement.classList.toggle("dark", isDark);
+    } else {
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setDarkMode(prefersDark);
+      document.documentElement.classList.toggle("dark", prefersDark);
     }
   });
 
   const toggleDarkMode = () => {
     const newValue = !darkMode();
     setDarkMode(newValue);
-    localStorage.setItem("darkMode", String(newValue));
+    localStorage.setItem("context-dark-mode", String(newValue));
     document.documentElement.classList.toggle("dark", newValue);
   };
 
-  // 키보드 단축키
+  // Search functionality
+  createEffect(() => {
+    const q = searchQuery().toLowerCase().trim();
+    if (!q) {
+      setSearchResults([]);
+      return;
+    }
+
+    const currentLocale = locale();
+    const matched = meaningEntries.filter((entry) => {
+      const translation = entry.translations[currentLocale];
+      return (
+        entry.korean.includes(q) ||
+        entry.romanization.toLowerCase().includes(q) ||
+        translation.word.toLowerCase().includes(q)
+      );
+    });
+
+    setSearchResults(matched.slice(0, 8));
+    setSelectedIndex(0);
+  });
+
+  const handleSearchKeyDown = (e: KeyboardEvent) => {
+    const len = searchResults().length;
+
+    if (e.key === "Escape") {
+      setShowResults(false);
+      searchInputRef?.blur();
+      return;
+    }
+
+    if (e.key === "ArrowDown" && len > 0) {
+      e.preventDefault();
+      setSelectedIndex((i) => (i + 1) % len);
+    } else if (e.key === "ArrowUp" && len > 0) {
+      e.preventDefault();
+      setSelectedIndex((i) => (i - 1 + len) % len);
+    } else if (e.key === "Enter" && len > 0) {
+      e.preventDefault();
+      selectResult(searchResults()[selectedIndex()]);
+    }
+  };
+
+  const selectResult = (entry: MeaningEntry) => {
+    setSearchQuery("");
+    setShowResults(false);
+    navigate(localePath(`/entry/${entry.id}`));
+  };
+
+  // Close search results when clicking outside
+  onMount(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (searchContainerRef && !searchContainerRef.contains(e.target as Node)) {
+        setShowResults(false);
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    onCleanup(() => document.removeEventListener("click", handleClickOutside));
+  });
+
+  // Keyboard shortcut for search
   onMount(() => {
     const handleKeydown = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key === "k") {
         e.preventDefault();
-        setSearchOpen(true);
-      }
-      if (e.key === "Escape") {
-        setSearchOpen(false);
-        setSidebarOpen(false);
+        searchInputRef?.focus();
+        setShowResults(true);
       }
     };
     window.addEventListener("keydown", handleKeydown);
-    return () => window.removeEventListener("keydown", handleKeydown);
+    onCleanup(() => window.removeEventListener("keydown", handleKeydown));
   });
 
+  // Check if a path is active (strip locale for comparison)
+  const isActive = (basePath: string) => {
+    const currentPath = stripLocale(location.pathname);
+    return currentPath === basePath;
+  };
+
+  const getPlaceholder = () => {
+    if (locale() === "ko") return "검색...";
+    if (locale() === "ja") return "検索...";
+    return "Search...";
+  };
+
   return (
-    <div class="min-h-screen bg-gray-50 dark:bg-gray-900">
-      {/* 헤더 */}
-      <header class="fixed top-0 left-0 right-0 h-16 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 z-40">
-        <div class="h-full px-4 flex items-center justify-between">
-          {/* 왼쪽: 메뉴 버튼 + 로고 */}
-          <div class="flex items-center gap-4">
-            <button
-              onClick={() => setSidebarOpen(!sidebarOpen())}
-              class="lg:hidden p-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
-              aria-label="메뉴 열기"
-            >
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    <div class="min-h-screen" style={{ "background-color": "var(--bg-primary)" }}>
+      {/* Header */}
+      <header
+        class="sticky top-0 z-40 backdrop-blur-sm"
+        style={{
+          "background-color": "color-mix(in srgb, var(--bg-primary) 80%, transparent)",
+          "border-bottom": "1px solid var(--border-primary)"
+        }}
+      >
+        <div class="max-w-3xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
+          {/* Logo */}
+          <A
+            href={localePath("/")}
+            class="font-semibold shrink-0"
+            style={{ color: "var(--text-primary)" }}
+          >
+            Context
+          </A>
+
+          {/* Search Form */}
+          <div ref={searchContainerRef} class="relative flex-1 max-w-md">
+            <div class="relative">
+              <svg
+                class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4"
+                style={{ color: "var(--text-tertiary)" }}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
-            </button>
-            <A href="/" class="flex items-center gap-3">
-              <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center text-white font-bold text-lg">
-                한
+              <input
+                ref={searchInputRef}
+                type="text"
+                value={searchQuery()}
+                onInput={(e) => {
+                  setSearchQuery(e.currentTarget.value);
+                  setShowResults(true);
+                }}
+                onFocus={() => setShowResults(true)}
+                onKeyDown={handleSearchKeyDown}
+                placeholder={getPlaceholder()}
+                class="w-full pl-9 pr-3 py-1.5 text-sm rounded-lg focus:outline-none"
+                style={{
+                  "background-color": "var(--bg-secondary)",
+                  color: "var(--text-primary)",
+                  border: "1px solid var(--border-primary)"
+                }}
+              />
+            </div>
+
+            {/* Search Results Dropdown */}
+            <Show when={showResults() && searchQuery().length > 0}>
+              <div
+                class="absolute top-full left-0 right-0 mt-1 rounded-lg shadow-lg overflow-hidden z-50"
+                style={{
+                  "background-color": "var(--bg-elevated)",
+                  border: "1px solid var(--border-primary)"
+                }}
+              >
+                <Show
+                  when={searchResults().length > 0}
+                  fallback={
+                    <div class="px-4 py-3 text-sm" style={{ color: "var(--text-tertiary)" }}>
+                      {locale() === "ko" ? "결과 없음" : locale() === "ja" ? "結果なし" : "No results"}
+                    </div>
+                  }
+                >
+                  <For each={searchResults()}>
+                    {(entry, index) => (
+                      <button
+                        onClick={() => selectResult(entry)}
+                        onMouseEnter={() => setSelectedIndex(index())}
+                        class="w-full flex items-baseline justify-between px-4 py-2 text-left text-sm"
+                        style={{
+                          "background-color": selectedIndex() === index() ? "var(--bg-tertiary)" : "transparent"
+                        }}
+                      >
+                        <div class="flex items-baseline gap-2">
+                          <span style={{ color: "var(--text-primary)" }} class="font-medium">
+                            {entry.korean}
+                          </span>
+                          <span style={{ color: "var(--text-tertiary)" }} class="text-xs">
+                            {entry.romanization}
+                          </span>
+                        </div>
+                        <span style={{ color: "var(--text-secondary)" }}>
+                          {entry.translations[locale()].word}
+                        </span>
+                      </button>
+                    )}
+                  </For>
+                </Show>
               </div>
-              <div class="hidden sm:block">
-                <h1 class="text-lg font-bold text-gray-900 dark:text-white">한국어 어휘 DB</h1>
-                <p class="text-xs text-gray-500 dark:text-gray-400">Korean Vocabulary Database</p>
-              </div>
+            </Show>
+          </div>
+
+          {/* Right Actions */}
+          <div class="flex items-center gap-1 shrink-0">
+            {/* Nav Links */}
+            <A
+              href={localePath("/browse")}
+              class="px-3 py-1.5 text-sm rounded-lg transition-colors"
+              style={{
+                color: isActive("/browse") ? "var(--accent-primary)" : "var(--text-secondary)",
+                "background-color": isActive("/browse") ? "var(--bg-tertiary)" : "transparent"
+              }}
+            >
+              {t("browse")}
             </A>
-          </div>
 
-          {/* 중앙: 검색창 */}
-          <div class="flex-1 max-w-xl mx-4 hidden md:block">
-            <button
-              onClick={() => setSearchOpen(true)}
-              class="w-full flex items-center gap-3 px-4 py-2.5 bg-gray-100 dark:bg-gray-700 rounded-xl text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+            {/* Language */}
+            <select
+              value={locale()}
+              onChange={(e) => setLocale(e.currentTarget.value as Language)}
+              class="text-sm bg-transparent border-none cursor-pointer focus:outline-none px-2 py-1.5"
+              style={{ color: "var(--text-secondary)" }}
             >
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-              <span>검색어를 입력하세요...</span>
-              <kbd class="ml-auto px-2 py-0.5 bg-white dark:bg-gray-600 rounded text-xs font-mono">⌘K</kbd>
-            </button>
-          </div>
+              <For each={languages}>
+                {(lang) => <option value={lang.code}>{lang.label}</option>}
+              </For>
+            </select>
 
-          {/* 오른쪽: 액션 버튼들 */}
-          <div class="flex items-center gap-2">
-            <button
-              onClick={() => setSearchOpen(true)}
-              class="md:hidden p-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
-              aria-label="검색"
-            >
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </button>
+            {/* Dark mode toggle */}
             <button
               onClick={toggleDarkMode}
-              class="p-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
-              aria-label="다크모드 전환"
+              class="p-2 rounded-lg transition-colors"
+              style={{ color: "var(--text-secondary)" }}
+              aria-label="Toggle dark mode"
             >
-              {darkMode() ? (
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              <Show
+                when={darkMode()}
+                fallback={
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                  </svg>
+                }
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
-              ) : (
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                </svg>
-              )}
+              </Show>
             </button>
           </div>
         </div>
       </header>
 
-      {/* 사이드바 오버레이 (모바일) */}
-      <div
-        class={`fixed inset-0 bg-black/50 z-40 lg:hidden transition-opacity ${sidebarOpen() ? "opacity-100" : "opacity-0 pointer-events-none"}`}
-        onClick={() => setSidebarOpen(false)}
-      />
-
-      {/* 사이드바 */}
-      <Sidebar isOpen={sidebarOpen()} onClose={() => setSidebarOpen(false)} />
-
-      {/* 메인 콘텐츠 */}
-      <main class="pt-16 lg:pl-72">
-        <div class="min-h-[calc(100vh-4rem)]">
-          {props.children}
-        </div>
-
-        {/* 푸터 */}
-        <footer class="border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 py-8">
-          <div class="container-custom">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-              <div class="text-center md:text-left">
-                <p class="text-sm text-gray-600 dark:text-gray-400">
-                  한국어 어휘 데이터베이스
-                </p>
-                <p class="text-xs text-gray-500 dark:text-gray-500 mt-1">
-                  한글의 모든 어휘를 체계적으로 정리한 종합 자료
-                </p>
-              </div>
-              <div class="flex items-center gap-6 text-sm text-gray-500 dark:text-gray-400">
-                <A href="/about" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-                  소개
-                </A>
-                <A href="/contribute" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-                  기여하기
-                </A>
-                <a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                >
-                  GitHub
-                </a>
-              </div>
-            </div>
-          </div>
-        </footer>
+      {/* Main */}
+      <main class="max-w-3xl mx-auto px-4 py-8">
+        {props.children}
       </main>
 
-      {/* 검색 모달 */}
-      <SearchModal isOpen={searchOpen()} onClose={() => setSearchOpen(false)} />
+      {/* Footer */}
+      <footer
+        class="mt-auto py-8"
+        style={{
+          "background-color": "var(--bg-secondary)",
+          "border-top": "1px solid var(--border-primary)"
+        }}
+      >
+        <div class="max-w-3xl mx-auto px-4">
+          <nav class="flex justify-center gap-6 mb-4 text-sm" style={{ color: "var(--text-secondary)" }}>
+            <A href={localePath("/privacy")} class="hover:underline">
+              {locale() === "ko" ? "개인정보" : locale() === "ja" ? "プライバシー" : "Privacy"}
+            </A>
+            <A href={localePath("/terms")} class="hover:underline">
+              {locale() === "ko" ? "이용약관" : locale() === "ja" ? "利用規約" : "Terms"}
+            </A>
+            <A href={localePath("/license")} class="hover:underline">
+              {locale() === "ko" ? "라이선스" : locale() === "ja" ? "ライセンス" : "License"}
+            </A>
+          </nav>
+          <p class="text-center text-sm mb-2" style={{ color: "var(--text-tertiary)" }}>
+            UI/UX based on web standards ·{" "}
+            <A href={localePath("/built-with")} class="underline" style={{ color: "var(--accent-primary)" }}>
+              Built with ❤️
+            </A>
+          </p>
+          <p class="text-center text-sm" style={{ color: "var(--text-tertiary)" }}>
+            Context by SoundBlueMusic
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };

@@ -67,12 +67,14 @@ const webApis: WebAPI[] = [
   { name: "Performance", description: "Performance measurement", descriptionKo: "성능 측정", category: "Utilities", support: "98%", mdnUrl: "https://developer.mozilla.org/en-US/docs/Web/API/Performance" },
 ];
 
-const categories = ["All", "DOM", "Network", "Storage", "Graphics", "Media", "Workers", "Device", "Utilities"];
+const categories = ["All", "DOM", "Network", "Storage", "Graphics", "Media", "Workers", "Device", "Utilities"] as const;
+
+type CategoryFilter = (typeof categories)[number];
 
 export default function WebApiPage() {
   const { locale } = useI18n();
   const [search, setSearch] = createSignal("");
-  const [category, setCategory] = createSignal("All");
+  const [category, setCategory] = createSignal<CategoryFilter>("All");
 
   const filteredApis = () => {
     let apis = webApis;
