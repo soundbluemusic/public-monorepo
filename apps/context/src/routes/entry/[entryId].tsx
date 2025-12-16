@@ -39,10 +39,10 @@ export default function EntryPage() {
         when={entry()}
         fallback={
           <div class="text-center py-16">
-            <p class="text-gray-500 dark:text-gray-400">
+            <p style={{ color: "var(--text-secondary)" }}>
               {locale() === "ko" ? "단어를 찾을 수 없습니다" : locale() === "ja" ? "単語が見つかりません" : "Word not found"}
             </p>
-            <A href="/" class="text-sm text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 mt-4 inline-block">
+            <A href="/" class="text-sm mt-4 inline-block" style={{ color: "var(--text-tertiary)" }}>
               ← {t("home")}
             </A>
           </div>
@@ -52,20 +52,20 @@ export default function EntryPage() {
         <Meta name="description" content={translation()?.explanation || ""} />
 
         {/* Back link */}
-        <A href="/" class="text-sm text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 mb-8 inline-block">
+        <A href="/" class="text-sm mb-8 inline-block" style={{ color: "var(--text-tertiary)" }}>
           ← {t("backToList")}
         </A>
 
         {/* Word header */}
         <div class="mb-8">
-          <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-1">
+          <h1 class="text-4xl font-bold mb-1" style={{ color: "var(--text-primary)" }}>
             {entry()!.korean}
           </h1>
-          <p class="text-lg text-gray-400 dark:text-gray-500">
+          <p class="text-lg" style={{ color: "var(--text-tertiary)" }}>
             {entry()!.romanization}
           </p>
           <Show when={entry()!.hanja}>
-            <p class="text-sm text-gray-400 dark:text-gray-500 mt-1">
+            <p class="text-sm mt-1" style={{ color: "var(--text-tertiary)" }}>
               {entry()!.hanja}
             </p>
           </Show>
@@ -73,19 +73,19 @@ export default function EntryPage() {
 
         {/* Translation */}
         <Show when={translation()}>
-          <div class="mb-8 pb-8 border-b border-gray-100 dark:border-gray-800">
-            <p class="text-sm text-gray-400 dark:text-gray-500 uppercase tracking-wide mb-2">
+          <div class="mb-8 pb-8" style={{ "border-bottom": "1px solid var(--border-primary)" }}>
+            <p class="text-sm uppercase tracking-wide mb-2" style={{ color: "var(--text-tertiary)" }}>
               {getTargetLang() === "en" ? "English" : "日本語"}
             </p>
-            <h2 class="text-2xl font-medium text-gray-900 dark:text-white mb-3">
+            <h2 class="text-2xl font-medium mb-3" style={{ color: "var(--text-primary)" }}>
               {translation()!.word}
             </h2>
             <Show when={translation()!.reading}>
-              <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">
+              <p class="text-sm mb-3" style={{ color: "var(--text-secondary)" }}>
                 {translation()!.reading}
               </p>
             </Show>
-            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p class="leading-relaxed" style={{ color: "var(--text-secondary)" }}>
               {translation()!.explanation}
             </p>
           </div>
@@ -93,14 +93,20 @@ export default function EntryPage() {
 
         {/* Examples */}
         <Show when={translation()?.examples && translation()!.examples!.length > 0}>
-          <div class="mb-8 pb-8 border-b border-gray-100 dark:border-gray-800">
-            <p class="text-sm text-gray-400 dark:text-gray-500 uppercase tracking-wide mb-3">
+          <div class="mb-8 pb-8" style={{ "border-bottom": "1px solid var(--border-primary)" }}>
+            <p class="text-sm uppercase tracking-wide mb-3" style={{ color: "var(--text-tertiary)" }}>
               {t("examples")}
             </p>
             <ul class="space-y-2">
               <For each={translation()!.examples}>
                 {(example) => (
-                  <li class="text-gray-600 dark:text-gray-300 pl-4 border-l-2 border-gray-200 dark:border-gray-700">
+                  <li
+                    class="pl-4"
+                    style={{
+                      color: "var(--text-secondary)",
+                      "border-left": "2px solid var(--border-primary)"
+                    }}
+                  >
                     {example}
                   </li>
                 )}
@@ -110,14 +116,14 @@ export default function EntryPage() {
         </Show>
 
         {/* Meta info */}
-        <div class="mb-8 pb-8 border-b border-gray-100 dark:border-gray-800">
-          <div class="flex flex-wrap gap-4 text-sm text-gray-500 dark:text-gray-400">
+        <div class="mb-8 pb-8" style={{ "border-bottom": "1px solid var(--border-primary)" }}>
+          <div class="flex flex-wrap gap-4 text-sm" style={{ color: "var(--text-secondary)" }}>
             <span>{t(entry()!.partOfSpeech)}</span>
             <span>•</span>
             <span>{t(entry()!.difficulty)}</span>
             <Show when={category()}>
               <span>•</span>
-              <A href={`/category/${category()!.id}`} class="hover:text-gray-900 dark:hover:text-white">
+              <A href={`/category/${category()!.id}`} style={{ color: "var(--accent-primary)" }}>
                 {category()!.name[locale()]}
               </A>
             </Show>
@@ -127,7 +133,7 @@ export default function EntryPage() {
         {/* Related words */}
         <Show when={relatedEntries().length > 0}>
           <div>
-            <p class="text-sm text-gray-400 dark:text-gray-500 uppercase tracking-wide mb-3">
+            <p class="text-sm uppercase tracking-wide mb-3" style={{ color: "var(--text-tertiary)" }}>
               {t("relatedWords")}
             </p>
             <div class="space-y-1">
@@ -135,13 +141,13 @@ export default function EntryPage() {
                 {(related) => (
                   <A
                     href={`/entry/${related.id}`}
-                    class="flex items-baseline justify-between py-2 hover:text-gray-900 dark:hover:text-white transition-colors"
+                    class="flex items-baseline justify-between py-2 transition-colors"
                   >
                     <div class="flex items-baseline gap-2">
-                      <span class="text-gray-900 dark:text-white">{related.korean}</span>
-                      <span class="text-sm text-gray-400 dark:text-gray-500">{related.romanization}</span>
+                      <span style={{ color: "var(--text-primary)" }}>{related.korean}</span>
+                      <span class="text-sm" style={{ color: "var(--text-tertiary)" }}>{related.romanization}</span>
                     </div>
-                    <span class="text-sm text-gray-500 dark:text-gray-400">
+                    <span class="text-sm" style={{ color: "var(--text-secondary)" }}>
                       {related.translations[getTargetLang()].word}
                     </span>
                   </A>

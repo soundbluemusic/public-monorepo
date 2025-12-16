@@ -24,10 +24,10 @@ export default function CategoryPage() {
         when={category()}
         fallback={
           <div class="text-center py-16">
-            <p class="text-gray-500 dark:text-gray-400">
+            <p style={{ color: "var(--text-secondary)" }}>
               {locale() === "ko" ? "카테고리를 찾을 수 없습니다" : locale() === "ja" ? "カテゴリーが見つかりません" : "Category not found"}
             </p>
-            <A href="/browse" class="text-sm text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 mt-4 inline-block">
+            <A href="/browse" class="text-sm mt-4 inline-block" style={{ color: "var(--text-tertiary)" }}>
               ← {t("browse")}
             </A>
           </div>
@@ -37,19 +37,19 @@ export default function CategoryPage() {
         <Meta name="description" content={category()!.description[locale()]} />
 
         {/* Back link */}
-        <A href="/browse" class="text-sm text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 mb-6 inline-block">
+        <A href="/browse" class="text-sm mb-6 inline-block" style={{ color: "var(--text-tertiary)" }}>
           ← {t("browse")}
         </A>
 
         {/* Header */}
         <div class="mb-6">
-          <h1 class="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
+          <h1 class="text-2xl font-semibold mb-2" style={{ color: "var(--text-primary)" }}>
             {category()!.name[locale()]}
           </h1>
-          <p class="text-gray-500 dark:text-gray-400">
+          <p style={{ color: "var(--text-secondary)" }}>
             {category()!.description[locale()]}
           </p>
-          <p class="text-sm text-gray-400 dark:text-gray-500 mt-2">
+          <p class="text-sm mt-2" style={{ color: "var(--text-tertiary)" }}>
             {entries().length} {locale() === "ko" ? "단어" : locale() === "ja" ? "単語" : "words"}
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function CategoryPage() {
         <Show
           when={entries().length > 0}
           fallback={
-            <p class="text-gray-400 dark:text-gray-500 text-center py-8">
+            <p class="text-center py-8" style={{ color: "var(--text-tertiary)" }}>
               {locale() === "ko" ? "등록된 단어가 없습니다" : locale() === "ja" ? "登録された単語がありません" : "No words available"}
             </p>
           }
@@ -70,17 +70,18 @@ export default function CategoryPage() {
                 return (
                   <A
                     href={`/entry/${entry.id}`}
-                    class="flex items-baseline justify-between py-3 border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900 -mx-2 px-2 rounded transition-colors"
+                    class="flex items-baseline justify-between py-3 -mx-2 px-2 rounded transition-colors"
+                    style={{ "border-bottom": "1px solid var(--border-primary)" }}
                   >
                     <div class="flex items-baseline gap-3">
-                      <span class="text-lg font-medium text-gray-900 dark:text-white">
+                      <span class="text-lg font-medium" style={{ color: "var(--text-primary)" }}>
                         {entry.korean}
                       </span>
-                      <span class="text-sm text-gray-400 dark:text-gray-500">
+                      <span class="text-sm" style={{ color: "var(--text-tertiary)" }}>
                         {entry.romanization}
                       </span>
                     </div>
-                    <span class="text-sm text-gray-500 dark:text-gray-400">
+                    <span class="text-sm" style={{ color: "var(--text-secondary)" }}>
                       {translation.word}
                     </span>
                   </A>

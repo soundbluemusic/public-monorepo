@@ -5,7 +5,7 @@ import { Layout } from "@/components/Layout";
 import { categories } from "@/data/categories";
 import { meaningEntries } from "@/data/entries";
 import { useI18n } from "@/i18n";
-import type { TargetLanguage, DifficultyLevel } from "@/data/types";
+import type { TargetLanguage } from "@/data/types";
 
 export default function Browse() {
   const { locale, t } = useI18n();
@@ -30,7 +30,7 @@ export default function Browse() {
 
       {/* Header */}
       <div class="mb-6">
-        <h1 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+        <h1 class="text-2xl font-semibold mb-4" style={{ color: "var(--text-primary)" }}>
           {t("browse")}
         </h1>
 
@@ -38,11 +38,11 @@ export default function Browse() {
         <div class="flex flex-wrap gap-2">
           <button
             onClick={() => setFilter("all")}
-            class={`px-3 py-1.5 text-sm rounded-full transition-colors ${
-              filter() === "all"
-                ? "bg-gray-900 dark:bg-white text-white dark:text-gray-900"
-                : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
-            }`}
+            class="px-3 py-1.5 text-sm rounded-full transition-colors"
+            style={{
+              "background-color": filter() === "all" ? "var(--accent-primary)" : "var(--bg-tertiary)",
+              color: filter() === "all" ? "var(--bg-primary)" : "var(--text-secondary)"
+            }}
           >
             {locale() === "ko" ? "전체" : locale() === "ja" ? "全て" : "All"}
           </button>
@@ -50,11 +50,11 @@ export default function Browse() {
             {(cat) => (
               <button
                 onClick={() => setFilter(cat.id)}
-                class={`px-3 py-1.5 text-sm rounded-full transition-colors ${
-                  filter() === cat.id
-                    ? "bg-gray-900 dark:bg-white text-white dark:text-gray-900"
-                    : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
-                }`}
+                class="px-3 py-1.5 text-sm rounded-full transition-colors"
+                style={{
+                  "background-color": filter() === cat.id ? "var(--accent-primary)" : "var(--bg-tertiary)",
+                  color: filter() === cat.id ? "var(--bg-primary)" : "var(--text-secondary)"
+                }}
               >
                 {cat.name[locale()]}
               </button>
@@ -64,7 +64,7 @@ export default function Browse() {
       </div>
 
       {/* Count */}
-      <p class="text-sm text-gray-400 dark:text-gray-500 mb-4">
+      <p class="text-sm mb-4" style={{ color: "var(--text-tertiary)" }}>
         {filteredEntries().length} {locale() === "ko" ? "단어" : locale() === "ja" ? "単語" : "words"}
       </p>
 
@@ -76,17 +76,18 @@ export default function Browse() {
             return (
               <A
                 href={`/entry/${entry.id}`}
-                class="flex items-baseline justify-between py-3 border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900 -mx-2 px-2 rounded transition-colors"
+                class="flex items-baseline justify-between py-3 -mx-2 px-2 rounded transition-colors"
+                style={{ "border-bottom": "1px solid var(--border-primary)" }}
               >
                 <div class="flex items-baseline gap-3">
-                  <span class="text-lg font-medium text-gray-900 dark:text-white">
+                  <span class="text-lg font-medium" style={{ color: "var(--text-primary)" }}>
                     {entry.korean}
                   </span>
-                  <span class="text-sm text-gray-400 dark:text-gray-500">
+                  <span class="text-sm" style={{ color: "var(--text-tertiary)" }}>
                     {entry.romanization}
                   </span>
                 </div>
-                <span class="text-sm text-gray-500 dark:text-gray-400">
+                <span class="text-sm" style={{ color: "var(--text-secondary)" }}>
                   {translation.word}
                 </span>
               </A>

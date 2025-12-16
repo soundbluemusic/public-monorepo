@@ -38,21 +38,22 @@ export default function About() {
       <Meta name="description" content={content.description} />
 
       <div class="mb-8">
-        <h1 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+        <h1 class="text-2xl font-semibold mb-4" style={{ color: "var(--text-primary)" }}>
           {content.title}
         </h1>
-        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+        <p class="leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
           {content.description}
         </p>
-        <p class="text-sm text-gray-400 dark:text-gray-500">
+        <p class="text-sm" style={{ color: "var(--text-tertiary)" }}>
           {content.stats}
         </p>
       </div>
 
-      <div class="pt-6 border-t border-gray-100 dark:border-gray-800">
+      <div class="pt-6" style={{ "border-top": "1px solid var(--border-primary)" }}>
         <A
           href="/browse"
-          class="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+          class="text-sm"
+          style={{ color: "var(--accent-primary)" }}
         >
           {t("browse")} →
         </A>
