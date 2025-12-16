@@ -10,13 +10,33 @@ interface SidebarProps {
   onToggleCollapse: () => void;
 }
 
-const navItems = [
+interface NavItem {
+  href: string;
+  label: string;
+  labelKo: string;
+  icon: string;
+}
+
+interface QuickLink {
+  name: string;
+  desc: string;
+  descKo: string;
+  href: string;
+  icon: string;
+}
+
+interface QuickLinksConfig {
+  webApi: readonly QuickLink[];
+  libraries: readonly QuickLink[];
+}
+
+const navItems: readonly NavItem[] = [
   { href: "/", label: "Home", labelKo: "홈", icon: "🏠" },
   { href: "/web-api", label: "Web API", labelKo: "Web API", icon: "🌐" },
   { href: "/libraries", label: "Libraries", labelKo: "Libraries", icon: "📦" },
-];
+] as const;
 
-const quickLinks = {
+const quickLinks: QuickLinksConfig = {
   webApi: [
     { name: "Fetch API", desc: "HTTP requests", descKo: "HTTP 요청", href: "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API", icon: "🌐" },
     { name: "localStorage", desc: "Persistent storage", descKo: "영구 저장소", href: "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage", icon: "💾" },
@@ -29,7 +49,7 @@ const quickLinks = {
     { name: "Vite", desc: "Build tool", descKo: "빌드 도구", href: "https://github.com/vitejs/vite", icon: "⚡" },
     { name: "Tailwind", desc: "Utility CSS", descKo: "유틸리티 CSS", href: "https://github.com/tailwindlabs/tailwindcss", icon: "🎐" },
   ],
-};
+} as const;
 
 export default function Sidebar(props: SidebarProps) {
   const { locale } = useI18n();

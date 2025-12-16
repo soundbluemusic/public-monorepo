@@ -1,8 +1,15 @@
-import { For } from "solid-js";
+import { For, type JSX } from "solid-js";
 import { A, useLocation } from "@solidjs/router";
 import { useI18n } from "@/i18n";
 
-const navItems = [
+interface BottomNavItem {
+  href: string;
+  label: string;
+  labelKo: string;
+  icon: JSX.Element;
+}
+
+const navItems: readonly BottomNavItem[] = [
   {
     href: "/",
     label: "Home",

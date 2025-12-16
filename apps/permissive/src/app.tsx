@@ -1,5 +1,5 @@
 import { MetaProvider, Title } from "@solidjs/meta";
-import { Router } from "@solidjs/router";
+import { Router, type RouteSectionProps } from "@solidjs/router";
 import { FileRoutes } from "@solidjs/start/router";
 import { Suspense } from "solid-js";
 import { I18nProvider } from "@/i18n";
@@ -10,7 +10,7 @@ export default function App() {
   return (
     <I18nProvider>
       <Router
-        root={(props) => (
+        root={(props: RouteSectionProps) => (
           <MetaProvider>
             <Title>Permissive - Free Web Dev Resources</Title>
             <Suspense fallback={<div class="min-h-screen flex items-center justify-center">Loading...</div>}>
