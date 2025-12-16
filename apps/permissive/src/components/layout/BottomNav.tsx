@@ -50,19 +50,22 @@ export default function BottomNav() {
 
   return (
     <nav
-      class="fixed bottom-0 left-0 right-0 h-bottom-nav bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 z-bottom-nav md:hidden"
-      style={{ "padding-bottom": "env(safe-area-inset-bottom, 0)" }}
+      class="fixed bottom-0 left-0 right-0 h-bottom-nav z-bottom-nav md:hidden"
+      style={{
+        "background-color": "var(--bg-elevated)",
+        "border-top": "1px solid var(--border-primary)",
+        "padding-bottom": "env(safe-area-inset-bottom, 0)"
+      }}
     >
       <div class="flex items-center justify-around h-full px-2">
         <For each={navItems}>
           {(item) => (
             <A
               href={item.href}
-              class={`flex flex-col items-center justify-center flex-1 h-full gap-0.5 transition-colors ${
-                isActive(item.href)
-                  ? "text-primary-600 dark:text-primary-400"
-                  : "text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300"
-              }`}
+              class="flex flex-col items-center justify-center flex-1 h-full gap-0.5 transition-colors"
+              style={{
+                color: isActive(item.href) ? "var(--accent-primary)" : "var(--text-tertiary)"
+              }}
               aria-current={isActive(item.href) ? "page" : undefined}
             >
               <span class={isActive(item.href) ? "scale-110" : ""}>

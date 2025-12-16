@@ -124,10 +124,13 @@ export default function WebApiPage() {
       <DocsLayout>
         {/* Header */}
         <div class="mb-8">
-          <h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">
+          <h1
+            class="text-3xl font-bold mb-2"
+            style={{ color: "var(--text-primary)" }}
+          >
             Web API
           </h1>
-          <p class="text-slate-600 dark:text-slate-400">
+          <p style={{ color: "var(--text-secondary)" }}>
             {locale() === "ko"
               ? "브라우저에 내장된 무료 API. 설치 없이 바로 사용 가능"
               : "Browser built-in APIs. Free to use, no installation required"
@@ -139,7 +142,13 @@ export default function WebApiPage() {
         <div class="flex flex-col sm:flex-row gap-4 mb-8">
           {/* Search */}
           <div class="relative flex-1">
-            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg
+              class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5"
+              style={{ color: "var(--text-tertiary)" }}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
             <input
@@ -147,7 +156,12 @@ export default function WebApiPage() {
               placeholder={locale() === "ko" ? "API 검색..." : "Search APIs..."}
               value={search()}
               onInput={(e) => setSearch(e.currentTarget.value)}
-              class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+              class="w-full pl-10 pr-4 py-2.5 rounded-xl transition-all"
+              style={{
+                "background-color": "var(--bg-elevated)",
+                border: "1px solid var(--border-primary)",
+                color: "var(--text-primary)"
+              }}
             />
           </div>
 
@@ -157,11 +171,11 @@ export default function WebApiPage() {
               {(cat) => (
                 <button
                   onClick={() => setCategory(cat)}
-                  class={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
-                    category() === cat
-                      ? "bg-primary-500 text-white"
-                      : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700"
-                  }`}
+                  class="px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
+                  style={{
+                    "background-color": category() === cat ? "var(--accent-primary)" : "var(--bg-tertiary)",
+                    color: category() === cat ? "white" : "var(--text-secondary)"
+                  }}
                 >
                   {cat === "All" ? (locale() === "ko" ? "전체" : "All") : cat}
                 </button>
@@ -171,7 +185,7 @@ export default function WebApiPage() {
         </div>
 
         {/* Results count */}
-        <div class="mb-4 text-sm text-slate-500 dark:text-slate-400">
+        <div class="mb-4 text-sm" style={{ color: "var(--text-tertiary)" }}>
           {filteredApis().length} {locale() === "ko" ? "개의 API" : "APIs"}
         </div>
 
@@ -180,7 +194,10 @@ export default function WebApiPage() {
           <For each={Object.entries(groupedApis())}>
             {([categoryName, apis]) => (
               <section>
-                <h2 class="text-lg font-semibold text-slate-800 dark:text-slate-200 mb-4 pb-2 border-b border-slate-200 dark:border-slate-700">
+                <h2
+                  class="text-lg font-semibold mb-4 pb-2"
+                  style={{ color: "var(--text-primary)", "border-bottom": "1px solid var(--border-primary)" }}
+                >
                   {categoryName}
                 </h2>
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -190,20 +207,36 @@ export default function WebApiPage() {
                         href={api.mdnUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="group p-4 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-primary-300 dark:hover:border-primary-600 hover:shadow-md transition-all bg-white dark:bg-slate-800/50"
+                        class="group p-4 rounded-xl transition-all hover:shadow-md"
+                        style={{
+                          "background-color": "var(--bg-elevated)",
+                          border: "1px solid var(--border-primary)"
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.borderColor = "var(--accent-primary)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.borderColor = "var(--border-primary)";
+                        }}
                       >
                         <div class="flex items-start justify-between mb-2">
-                          <h3 class="font-semibold text-slate-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                          <h3
+                            class="font-semibold transition-colors"
+                            style={{ color: "var(--text-primary)" }}
+                          >
                             {api.name}
                           </h3>
-                          <span class="text-xs px-2 py-0.5 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400">
+                          <span class="badge-mit">
                             {api.support}
                           </span>
                         </div>
-                        <p class="text-sm text-slate-600 dark:text-slate-400">
+                        <p class="text-sm" style={{ color: "var(--text-secondary)" }}>
                           {locale() === "ko" ? api.descriptionKo : api.description}
                         </p>
-                        <div class="mt-2 flex items-center text-xs text-primary-500 dark:text-primary-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div
+                          class="mt-2 flex items-center text-xs opacity-0 group-hover:opacity-100 transition-opacity"
+                          style={{ color: "var(--accent-primary)" }}
+                        >
                           MDN
                           <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -222,7 +255,7 @@ export default function WebApiPage() {
         <Show when={filteredApis().length === 0}>
           <div class="text-center py-12">
             <div class="text-4xl mb-4">🔍</div>
-            <p class="text-slate-500 dark:text-slate-400">
+            <p style={{ color: "var(--text-tertiary)" }}>
               {locale() === "ko" ? "검색 결과가 없습니다" : "No results found"}
             </p>
           </div>
