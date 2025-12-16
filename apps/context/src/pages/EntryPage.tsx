@@ -5,7 +5,6 @@ import { Layout } from "@/components/Layout";
 import { getCategoryById } from "@/data/categories";
 import { getEntryById, getEntriesByCategory } from "@/data/entries";
 import { useI18n } from "@/i18n";
-import type { TargetLanguage } from "@/data/types";
 
 export default function EntryPage() {
   const params = useParams();
@@ -17,14 +16,10 @@ export default function EntryPage() {
     return e ? getCategoryById(e.categoryId) : undefined;
   });
 
-  const getTargetLang = (): TargetLanguage => {
-    return locale() === "ko" ? "en" : (locale() as TargetLanguage);
-  };
-
   const translation = createMemo(() => {
     const e = entry();
     if (!e) return null;
-    return e.translations[getTargetLang()];
+    return e.translations[locale()];
   });
 
   const relatedEntries = createMemo(() => {
@@ -72,7 +67,7 @@ export default function EntryPage() {
         <Show when={translation()}>
           <div class="mb-8 pb-8" style={{ "border-bottom": "1px solid var(--border-primary)" }}>
             <p class="text-sm uppercase tracking-wide mb-2" style={{ color: "var(--text-tertiary)" }}>
-              {getTargetLang() === "en" ? "English" : "日本語"}
+              {locale() === "ko" ? "한국어" : locale() === "en" ? "English" : "日本語"}
             </p>
             <h2 class="text-2xl font-medium mb-3" style={{ color: "var(--text-primary)" }}>
               {translation()!.word}
@@ -142,7 +137,7 @@ export default function EntryPage() {
                       <span class="text-sm" style={{ color: "var(--text-tertiary)" }}>{related.romanization}</span>
                     </div>
                     <span class="text-sm" style={{ color: "var(--text-secondary)" }}>
-                      {related.translations[getTargetLang()].word}
+                      {related.translations[locale()].word}
                     </span>
                   </A>
                 )}

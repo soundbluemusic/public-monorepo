@@ -2,7 +2,7 @@ import { createSignal, createEffect, onMount, onCleanup, For, Show, type ParentC
 import { A, useLocation, useNavigate } from "@solidjs/router";
 import { useI18n } from "@/i18n";
 import { meaningEntries } from "@/data/entries";
-import type { Language, MeaningEntry, TargetLanguage } from "@/data/types";
+import type { Language, MeaningEntry } from "@/data/types";
 
 const languages: { code: Language; label: string }[] = [
   { code: "ko", label: "한국어" },
@@ -56,10 +56,6 @@ export const Layout: ParentComponent = (props) => {
   };
 
   // Search functionality
-  const getTargetLang = (): TargetLanguage => {
-    return locale() === "ko" ? "en" : (locale() as TargetLanguage);
-  };
-
   createEffect(() => {
     const q = searchQuery().toLowerCase().trim();
     if (!q) {
@@ -67,9 +63,9 @@ export const Layout: ParentComponent = (props) => {
       return;
     }
 
-    const targetLang = getTargetLang();
+    const currentLocale = locale();
     const matched = meaningEntries.filter((entry) => {
-      const translation = entry.translations[targetLang];
+      const translation = entry.translations[currentLocale];
       return (
         entry.korean.includes(q) ||
         entry.romanization.toLowerCase().includes(q) ||
@@ -232,7 +228,7 @@ export const Layout: ParentComponent = (props) => {
                           </span>
                         </div>
                         <span style={{ color: "var(--text-secondary)" }}>
-                          {entry.translations[getTargetLang()].word}
+                          {entry.translations[locale()].word}
                         </span>
                       </button>
                     )}

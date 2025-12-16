@@ -4,15 +4,10 @@ import { For } from "solid-js";
 import { Layout } from "@/components/Layout";
 import { getFeaturedEntries } from "@/data/entries";
 import { useI18n } from "@/i18n";
-import type { TargetLanguage } from "@/data/types";
 
 export default function HomePage() {
   const { locale, t, localePath } = useI18n();
   const featuredEntries = getFeaturedEntries(12);
-
-  const getTargetLang = (): TargetLanguage => {
-    return locale() === "ko" ? "en" : (locale() as TargetLanguage);
-  };
 
   const getMetaDescription = () => {
     if (locale() === "ko") return "한국어 학습자를 위한 의미 사전";
@@ -41,7 +36,7 @@ export default function HomePage() {
       <div class="space-y-1">
         <For each={featuredEntries}>
           {(entry) => {
-            const translation = entry.translations[getTargetLang()];
+            const translation = entry.translations[locale()];
             return (
               <A
                 href={localePath(`/entry/${entry.id}`)}

@@ -5,7 +5,6 @@ import { Layout } from "@/components/Layout";
 import { getCategoryById } from "@/data/categories";
 import { getEntriesByCategory } from "@/data/entries";
 import { useI18n } from "@/i18n";
-import type { TargetLanguage } from "@/data/types";
 
 export default function CategoryPage() {
   const params = useParams();
@@ -13,10 +12,6 @@ export default function CategoryPage() {
 
   const category = createMemo(() => params.categoryId ? getCategoryById(params.categoryId) : undefined);
   const entries = createMemo(() => params.categoryId ? getEntriesByCategory(params.categoryId) : []);
-
-  const getTargetLang = (): TargetLanguage => {
-    return locale() === "ko" ? "en" : (locale() as TargetLanguage);
-  };
 
   return (
     <Layout>
@@ -63,7 +58,7 @@ export default function CategoryPage() {
           <div class="space-y-1">
             <For each={entries()}>
               {(entry) => {
-                const translation = entry.translations[getTargetLang()];
+                const translation = entry.translations[locale()];
                 return (
                   <A
                     href={localePath(`/entry/${entry.id}`)}

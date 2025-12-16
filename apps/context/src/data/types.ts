@@ -1,8 +1,7 @@
-// Supported target languages (Korean is always the source)
-export type TargetLanguage = "en" | "ja";
-export type Language = "ko" | TargetLanguage;
+// Supported languages
+export type Language = "ko" | "en" | "ja";
 
-// Translation for a specific target language
+// Translation for a specific language
 export interface Translation {
   word: string;           // Translated word
   reading?: string;       // Reading (for Japanese: hiragana/katakana)
@@ -19,6 +18,7 @@ export interface MeaningEntry {
   partOfSpeech: PartOfSpeech;
   categoryId: string;
   translations: {
+    ko: Translation;      // Korean explanation (for Korean users)
     en: Translation;
     ja: Translation;
   };

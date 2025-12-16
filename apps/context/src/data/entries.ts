@@ -1,4 +1,4 @@
-import type { MeaningEntry, Language, TargetLanguage } from "./types";
+import type { MeaningEntry, Language } from "./types";
 
 export const meaningEntries: MeaningEntry[] = [
   // Greetings
@@ -12,6 +12,14 @@ export const meaningEntries: MeaningEntry[] = [
     frequency: "common",
     tags: ["casual", "informal", "daily"],
     translations: {
+      ko: {
+        word: "안녕",
+        explanation: "친구나 또래 사이에서 사용하는 반말 인사. 상황에 따라 '만나서 반가워'와 '잘 가'의 의미로 모두 쓰인다. 격식 없는 상황에서 사용한다.",
+        examples: [
+          "안녕! 오랜만이야!",
+          "안녕, 내일 봐!",
+        ],
+      },
       en: {
         word: "Hi / Bye",
         explanation: "A casual greeting used among friends and peers. Can mean both 'hello' and 'goodbye' depending on context. Used in informal situations.",
@@ -41,6 +49,14 @@ export const meaningEntries: MeaningEntry[] = [
     frequency: "common",
     tags: ["formal", "polite", "daily"],
     translations: {
+      ko: {
+        word: "안녕하세요",
+        explanation: "한국어의 기본적인 존댓말 인사. 누군가를 만나거나 대화를 시작할 때 사용한다. 대부분의 상황에 적절한 인사말이다.",
+        examples: [
+          "안녕하세요, 처음 뵙겠습니다.",
+          "안녕하세요! 잘 지내셨어요?",
+        ],
+      },
       en: {
         word: "Hello",
         explanation: "The standard polite greeting in Korean. Used when meeting someone or starting a conversation. Appropriate for most situations.",
@@ -71,6 +87,14 @@ export const meaningEntries: MeaningEntry[] = [
     frequency: "common",
     tags: ["formal", "polite", "gratitude"],
     translations: {
+      ko: {
+        word: "감사합니다",
+        explanation: "감사를 표현하는 격식체 표현. '고마워요'보다 더 격식 있는 표현으로, 직장이나 어른에게 사용한다.",
+        examples: [
+          "도와주셔서 감사합니다.",
+          "감사합니다, 좋은 하루 되세요.",
+        ],
+      },
       en: {
         word: "Thank you",
         explanation: "Formal way to express gratitude. More formal than '고마워요'. Used in professional settings and with elders.",
@@ -100,6 +124,13 @@ export const meaningEntries: MeaningEntry[] = [
     frequency: "common",
     tags: ["formal", "farewell", "polite"],
     translations: {
+      ko: {
+        word: "안녕히 가세요",
+        explanation: "떠나는 사람에게 하는 인사. 직역하면 '평안히 가세요'라는 뜻. 자신이 남고 상대가 떠날 때 사용한다. 반대 표현은 '안녕히 계세요'(평안히 계세요)이다.",
+        examples: [
+          "안녕히 가세요! 조심히 가세요.",
+        ],
+      },
       en: {
         word: "Goodbye (to someone leaving)",
         explanation: "Said to someone who is leaving while you stay. Literally means 'go peacefully'. The counterpart is '안녕히 계세요' (stay peacefully).",
@@ -129,6 +160,14 @@ export const meaningEntries: MeaningEntry[] = [
     frequency: "common",
     tags: ["emotion", "relationship"],
     translations: {
+      ko: {
+        word: "사랑",
+        explanation: "누군가나 무언가에 대한 깊은 애정. 연인 간의 사랑, 가족 간의 사랑, 취미나 활동에 대한 사랑 등 다양하게 쓰인다.",
+        examples: [
+          "사랑해요.",
+          "가족의 사랑은 소중해요.",
+        ],
+      },
       en: {
         word: "Love",
         explanation: "A deep affection for someone or something. Used for romantic love, family love, and love for things/activities.",
@@ -159,6 +198,14 @@ export const meaningEntries: MeaningEntry[] = [
     frequency: "common",
     tags: ["emotion", "positive"],
     translations: {
+      ko: {
+        word: "행복",
+        explanation: "행복하거나 만족스러운 상태. 명사 '행복' 또는 형용사 '행복하다'로 사용할 수 있다.",
+        examples: [
+          "행복하세요!",
+          "작은 것에서 행복을 찾아요.",
+        ],
+      },
       en: {
         word: "Happiness",
         explanation: "A state of being happy or content. Can be used as noun '행복' or adjective '행복하다' (to be happy).",
@@ -188,6 +235,14 @@ export const meaningEntries: MeaningEntry[] = [
     frequency: "frequent",
     tags: ["emotion", "negative"],
     translations: {
+      ko: {
+        word: "슬픔",
+        explanation: "슬프거나 불행한 감정. 형용사형은 '슬프다'이다.",
+        examples: [
+          "슬픔을 참을 수 없어요.",
+          "슬픔도 지나가요.",
+        ],
+      },
       en: {
         word: "Sadness",
         explanation: "A feeling of sorrow or unhappiness. The adjective form is '슬프다' (to be sad).",
@@ -219,6 +274,14 @@ export const meaningEntries: MeaningEntry[] = [
     frequency: "common",
     tags: ["place", "basic"],
     translations: {
+      ko: {
+        word: "집",
+        explanation: "사람이 사는 건물, 또는 '가정'의 개념. 가장 기본적이고 자주 쓰이는 단어 중 하나이다.",
+        examples: [
+          "집에 가고 싶어요.",
+          "우리 집은 서울에 있어요.",
+        ],
+      },
       en: {
         word: "House / Home",
         explanation: "A building where people live, or the concept of 'home'. One of the most basic and frequently used words.",
@@ -249,6 +312,14 @@ export const meaningEntries: MeaningEntry[] = [
     frequency: "common",
     tags: ["place", "education"],
     translations: {
+      ko: {
+        word: "학교",
+        explanation: "학생들을 교육하는 기관. 초등학교, 중학교, 고등학교, 대학교를 포함한다.",
+        examples: [
+          "학교에 다녀요.",
+          "학교 끝나고 뭐 해?",
+        ],
+      },
       en: {
         word: "School",
         explanation: "An institution for educating students. Includes elementary, middle, high school, and university.",
@@ -278,6 +349,14 @@ export const meaningEntries: MeaningEntry[] = [
     frequency: "common",
     tags: ["work", "basic"],
     translations: {
+      ko: {
+        word: "일",
+        explanation: "직업이나 업무, 또는 '일/사건'을 의미한다. 숫자 '일(一)'로도 쓰인다 (일, 이, 삼...).",
+        examples: [
+          "일이 많아요.",
+          "무슨 일이에요?",
+        ],
+      },
       en: {
         word: "Work / Job / Thing",
         explanation: "Can mean work/job, a task, or 'a thing/matter'. Also means the number 'one' (일, 이, 삼...).",
@@ -309,6 +388,14 @@ export const meaningEntries: MeaningEntry[] = [
     frequency: "common",
     tags: ["food", "basic", "staple"],
     translations: {
+      ko: {
+        word: "밥",
+        explanation: "지은 쌀, 한국의 주식. '식사' 전체를 의미하기도 한다. '밥 먹었어?'(식사했어?)는 일상적인 인사다.",
+        examples: [
+          "밥 먹었어요?",
+          "밥 먹으러 가자!",
+        ],
+      },
       en: {
         word: "Rice / Meal",
         explanation: "Cooked rice, the staple food of Korea. Also used to mean 'meal' in general. '밥 먹었어?' (Did you eat?) is a common greeting.",
@@ -338,6 +425,14 @@ export const meaningEntries: MeaningEntry[] = [
     frequency: "common",
     tags: ["food", "korean", "traditional"],
     translations: {
+      ko: {
+        word: "김치",
+        explanation: "한국 전통 발효 채소 요리. 주로 배추와 무로 만든다. 한국 음식의 기본 반찬이다.",
+        examples: [
+          "김치 좋아해요?",
+          "김치찌개 먹고 싶어요.",
+        ],
+      },
       en: {
         word: "Kimchi",
         explanation: "Traditional Korean fermented vegetable dish, usually made with napa cabbage and radish. A staple side dish in Korean cuisine.",
@@ -367,6 +462,14 @@ export const meaningEntries: MeaningEntry[] = [
     frequency: "common",
     tags: ["drink", "basic"],
     translations: {
+      ko: {
+        word: "물",
+        explanation: "가장 기본적인 음료. 식당에서 주문할 때 필수 어휘다.",
+        examples: [
+          "물 주세요.",
+          "물 마시고 싶어요.",
+        ],
+      },
       en: {
         word: "Water",
         explanation: "The most basic drink. Essential vocabulary for ordering at restaurants.",
@@ -398,6 +501,14 @@ export const meaningEntries: MeaningEntry[] = [
     frequency: "common",
     tags: ["location", "basic"],
     translations: {
+      ko: {
+        word: "여기",
+        explanation: "말하는 사람 가까이에 있는 장소를 가리킨다. 여기(이곳), 거기(그곳), 저기(저곳) 세 가지 중 하나다.",
+        examples: [
+          "여기가 어디예요?",
+          "여기 앉으세요.",
+        ],
+      },
       en: {
         word: "Here",
         explanation: "Indicates a location near the speaker. Part of the trio: 여기 (here), 거기 (there), 저기 (over there).",
@@ -427,6 +538,14 @@ export const meaningEntries: MeaningEntry[] = [
     frequency: "common",
     tags: ["question", "location"],
     translations: {
+      ko: {
+        word: "어디",
+        explanation: "장소나 위치를 묻는 의문사. 길을 묻거나 방향을 확인할 때 필수 어휘다.",
+        examples: [
+          "어디 가요?",
+          "화장실이 어디에 있어요?",
+        ],
+      },
       en: {
         word: "Where",
         explanation: "A question word asking about location or place. Essential for navigation and asking directions.",
@@ -459,6 +578,14 @@ export const meaningEntries: MeaningEntry[] = [
     frequency: "common",
     tags: ["work", "business"],
     translations: {
+      ko: {
+        word: "회사",
+        explanation: "사업 조직이나 기업. 직장에 대해 이야기할 때 사용한다.",
+        examples: [
+          "회사에 가요.",
+          "어느 회사에 다녀요?",
+        ],
+      },
       en: {
         word: "Company",
         explanation: "A business organization or corporation. Used when talking about workplace.",
@@ -489,6 +616,14 @@ export const meaningEntries: MeaningEntry[] = [
     frequency: "frequent",
     tags: ["work", "business"],
     translations: {
+      ko: {
+        word: "회의",
+        explanation: "논의를 위한 모임. 주로 비즈니스 상황에서 사용한다.",
+        examples: [
+          "회의가 있어요.",
+          "회의 끝났어요?",
+        ],
+      },
       en: {
         word: "Meeting",
         explanation: "A gathering of people for discussion, usually in a business context.",
@@ -521,6 +656,14 @@ export const meaningEntries: MeaningEntry[] = [
     frequency: "frequent",
     tags: ["culture", "emotion", "korean-concept"],
     translations: {
+      ko: {
+        word: "정",
+        explanation: "시간이 지나면서 형성되는 깊은 감정적 유대, 애착을 나타내는 한국 고유의 개념. 사랑, 배려, 연결감을 포함한다.",
+        examples: [
+          "정이 들었어요.",
+          "정이 많은 사람이에요.",
+        ],
+      },
       en: {
         word: "Jeong (emotional bond)",
         explanation: "A uniquely Korean concept describing deep emotional bonds, affection, and attachment formed over time. Difficult to translate directly - encompasses love, care, and connection.",
@@ -550,6 +693,14 @@ export const meaningEntries: MeaningEntry[] = [
     frequency: "frequent",
     tags: ["culture", "social", "korean-concept"],
     translations: {
+      ko: {
+        word: "눈치",
+        explanation: "분위기를 파악하고 암묵적인 사회적 신호를 이해하는 능력. 한국의 사회적 상호작용에서 중요한 개념이다.",
+        examples: [
+          "눈치가 빨라요.",
+          "눈치 좀 봐!",
+        ],
+      },
       en: {
         word: "Nunchi (social awareness)",
         explanation: "The art of reading the room and understanding unspoken social cues. Essential in Korean social interactions.",
@@ -581,6 +732,14 @@ export const meaningEntries: MeaningEntry[] = [
     frequency: "common",
     tags: ["number", "native-korean"],
     translations: {
+      ko: {
+        word: "하나",
+        explanation: "고유어 수사로 '일(1)'을 나타낸다. 물건을 셀 때, 나이(살과 함께), 시간에 사용한다. 한자어 일(一)과는 다르다.",
+        examples: [
+          "하나, 둘, 셋!",
+          "커피 하나 주세요.",
+        ],
+      },
       en: {
         word: "One (native Korean)",
         explanation: "The native Korean number for 'one'. Used for counting objects, age (with 살), and hours. Different from Sino-Korean 일 (il).",
@@ -610,6 +769,14 @@ export const meaningEntries: MeaningEntry[] = [
     frequency: "common",
     tags: ["time", "basic"],
     translations: {
+      ko: {
+        word: "오늘",
+        explanation: "현재의 날. 기본 시간 어휘인 어제, 오늘, 내일 중 하나다.",
+        examples: [
+          "오늘 뭐 해요?",
+          "오늘 날씨가 좋아요.",
+        ],
+      },
       en: {
         word: "Today",
         explanation: "The current day. Part of the basic time vocabulary: 어제 (yesterday), 오늘 (today), 내일 (tomorrow).",
@@ -644,13 +811,13 @@ export function getEntryById(id: string): MeaningEntry | undefined {
 // Search entries
 export function searchEntries(
   query: string,
-  targetLang: TargetLanguage
+  lang: Language
 ): MeaningEntry[] {
   const q = query.toLowerCase().trim();
   if (!q) return [];
 
   return meaningEntries.filter((e) => {
-    const translation = e.translations[targetLang];
+    const translation = e.translations[lang];
     return (
       e.korean.includes(q) ||
       e.romanization.toLowerCase().includes(q) ||

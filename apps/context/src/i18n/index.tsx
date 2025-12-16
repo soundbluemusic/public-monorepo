@@ -1,11 +1,10 @@
 import { createSignal, createContext, useContext, createMemo, ParentComponent } from "solid-js";
 import { useLocation, useNavigate } from "@solidjs/router";
 import { isServer } from "solid-js/web";
-import type { Language, TargetLanguage, UILabels } from "@/data/types";
+import type { Language, UILabels } from "@/data/types";
 
 interface I18nContextType {
   locale: () => Language;
-  targetLang: () => TargetLanguage;
   setLocale: (lang: Language) => void;
   t: <K extends keyof UILabels>(key: K) => string;
   isKorean: () => boolean;
@@ -186,11 +185,6 @@ export const I18nProvider: ParentComponent = (props) => {
     navigate(newPath);
   };
 
-  const targetLang = (): TargetLanguage => {
-    const current = locale();
-    return current === "ko" ? "en" : current;
-  };
-
   const t = <K extends keyof UILabels>(key: K): string => {
     return translations[locale()][key] || key;
   };
@@ -208,7 +202,7 @@ export const I18nProvider: ParentComponent = (props) => {
   };
 
   return (
-    <I18nContext.Provider value={{ locale, targetLang, setLocale, t, isKorean, localePath }}>
+    <I18nContext.Provider value={{ locale, setLocale, t, isKorean, localePath }}>
       {props.children}
     </I18nContext.Provider>
   );

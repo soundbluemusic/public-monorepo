@@ -5,15 +5,10 @@ import { Layout } from "@/components/Layout";
 import { categories } from "@/data/categories";
 import { meaningEntries } from "@/data/entries";
 import { useI18n } from "@/i18n";
-import type { TargetLanguage } from "@/data/types";
 
 export default function BrowsePage() {
   const { locale, t, localePath } = useI18n();
   const [filter, setFilter] = createSignal<string>("all");
-
-  const getTargetLang = (): TargetLanguage => {
-    return locale() === "ko" ? "en" : (locale() as TargetLanguage);
-  };
 
   const filteredEntries = createMemo(() => {
     let entries = [...meaningEntries];
@@ -68,7 +63,7 @@ export default function BrowsePage() {
       <div class="space-y-1">
         <For each={filteredEntries()}>
           {(entry) => {
-            const translation = entry.translations[getTargetLang()];
+            const translation = entry.translations[locale()];
             return (
               <A
                 href={localePath(`/entry/${entry.id}`)}
