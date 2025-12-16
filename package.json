@@ -1,0 +1,22 @@
+{
+  "name": "soundblue-monorepo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:context": "pnpm --filter context dev",
+    "dev:permissive": "pnpm --filter permissive dev",
+    "build:context": "pnpm --filter context build",
+    "build:permissive": "pnpm --filter permissive build",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "format": "biome format --write .",
+    "check": "biome check ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.0.0"
+}

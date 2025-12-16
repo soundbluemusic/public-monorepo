@@ -1,0 +1,41 @@
+{
+  "name": "permissive",
+  "version": "0.1.0",
+  "description": "완전 무료 웹 개발 리소스 가이드 - 로열티 프리 웹 표준 API와 MIT 라이선스 오픈소스 정리",
+  "type": "module",
+  "scripts": {
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start",
+    "data:fetch": "pnpm run data:fetch:npm && pnpm run data:fetch:github && pnpm run data:fetch:bundle",
+    "data:fetch:npm": "tsx scripts/fetch-npm-data.ts",
+    "data:fetch:github": "tsx scripts/fetch-github-data.ts",
+    "data:fetch:bundle": "tsx scripts/fetch-bundlephobia.ts",
+    "data:build": "tsx scripts/build-data.ts && tsx scripts/calc-rankings.ts",
+    "sitemap": "tsx scripts/generate-sitemap.ts",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "format": "biome format --write .",
+    "check": "biome check .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@solidjs/meta": "^0.29.4",
+    "@solidjs/router": "^0.15.3",
+    "@solidjs/start": "^1.1.0",
+    "chart.js": "^4.4.7",
+    "fuse.js": "^7.0.0",
+    "lucide-solid": "^0.469.0",
+    "solid-js": "^1.9.4",
+    "vinxi": "^0.5.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "tailwindcss": "^4.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

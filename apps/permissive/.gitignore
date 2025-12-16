@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build output
+.output/
+.vinxi/
+dist/
+
+# Generated data (fetched from APIs)
+src/data/generated/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Cache
+.cache/
