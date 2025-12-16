@@ -292,6 +292,38 @@ export const Layout: ParentComponent = (props) => {
       <main class="max-w-3xl mx-auto px-4 py-8">
         {props.children}
       </main>
+
+      {/* Footer */}
+      <footer
+        class="mt-auto py-8"
+        style={{
+          "background-color": "var(--bg-secondary)",
+          "border-top": "1px solid var(--border-primary)"
+        }}
+      >
+        <div class="max-w-3xl mx-auto px-4">
+          <nav class="flex justify-center gap-6 mb-4 text-sm" style={{ color: "var(--text-secondary)" }}>
+            <A href={localePath("/privacy")} class="hover:underline">
+              {locale() === "ko" ? "개인정보" : locale() === "ja" ? "プライバシー" : "Privacy"}
+            </A>
+            <A href={localePath("/terms")} class="hover:underline">
+              {locale() === "ko" ? "이용약관" : locale() === "ja" ? "利用規約" : "Terms"}
+            </A>
+            <A href={localePath("/license")} class="hover:underline">
+              {locale() === "ko" ? "라이선스" : locale() === "ja" ? "ライセンス" : "License"}
+            </A>
+          </nav>
+          <p class="text-center text-sm mb-2" style={{ color: "var(--text-tertiary)" }}>
+            UI/UX based on web standards ·{" "}
+            <A href={localePath("/built-with")} class="underline" style={{ color: "var(--accent-primary)" }}>
+              Built with ❤️
+            </A>
+          </p>
+          <p class="text-center text-sm" style={{ color: "var(--text-tertiary)" }}>
+            Context by SoundBlueMusic
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
