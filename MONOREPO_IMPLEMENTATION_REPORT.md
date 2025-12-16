@@ -1,200 +1,352 @@
-# 모노레포 구현 보고서
+# Context & Permissive 모노레포 통합 보고서
 
-## 1. 프로젝트 분석 요약
+## 1. 현재 상황
 
-### 1.1 Context (korean-vocab-database)
-| 항목 | 내용 |
-|------|------|
-| 목적 | 한국어 어휘 데이터베이스 |
-| 프레임워크 | SolidStart 1.0.10 |
-| Tailwind | v3.4.16 (PostCSS 방식) |
-| 렌더링 | SSR: false (Static) |
-| 특수 기능 | PWA (vite-plugin-pwa) |
-| Node 요구사항 | >=18 |
-
-**주요 의존성:**
-- @solidjs/start ^1.0.10
-- solid-js ^1.9.3
-- vite-plugin-pwa ^0.21.1
-- workbox-window ^7.3.0
-
-**디렉토리 구조:**
+### 1.1 기존 soundblue-monorepo 구조
 ```
-src/
-├── app.tsx
-├── app.css
-├── components/
-│   ├── Layout.tsx
-│   ├── SearchModal.tsx
-│   └── Sidebar.tsx
-├── data/
-│   ├── categories.ts
-│   ├── entries.ts
-│   └── types.ts
-└── routes/
-    ├── index.tsx
-    ├── browse.tsx
-    ├── about.tsx
-    ├── contribute.tsx
-    ├── entry/[entryId].tsx
-    └── category/[categoryId]/
-```
-
----
-
-### 1.2 Permissive
-| 항목 | 내용 |
-|------|------|
-| 목적 | 무료 웹 개발 리소스 가이드 |
-| 프레임워크 | SolidStart 1.1.0 |
-| Tailwind | v4.0.0 (@tailwindcss/vite) |
-| 렌더링 | Static Prerender |
-| 특수 기능 | i18n, 차트, 검색 |
-| Node 요구사항 | >=20 |
-
-**주요 의존성:**
-- @solidjs/start ^1.1.0
-- solid-js ^1.9.4
-- chart.js ^4.4.7
-- fuse.js ^7.0.0
-- lucide-solid ^0.469.0
-
-**디렉토리 구조:**
-```
-src/
-├── app.tsx
-├── components/
-│   ├── ui/
-│   └── layout/
-├── data/
-├── i18n/
-├── styles/
-│   └── global.css
-├── types/
-└── routes/
-    ├── index.tsx
-    ├── libraries.tsx
-    └── web-api/
-```
-
----
-
-## 2. 주요 차이점 분석
-
-### 2.1 Tailwind CSS 버전 충돌
-| 프로젝트 | 버전 | 설정 방식 |
-|---------|------|----------|
-| Context | v3.4.16 | PostCSS + tailwind.config.js |
-| Permissive | v4.0.0 | @tailwindcss/vite 플러그인 |
-
-**영향:** Tailwind v4는 설정 방식이 완전히 변경됨. CSS-first 접근 방식 사용.
-
-### 2.2 SolidStart 버전
-- Context: ^1.0.10
-- Permissive: ^1.1.0
-
-**권장:** 둘 다 ^1.1.0으로 통일
-
-### 2.3 Node 버전 요구사항
-- Context: >=18
-- Permissive: >=20
-
-**권장:** 모노레포 전체 >=20 적용
-
----
-
-## 3. 모노레포 구현 방안
-
-### 3.1 권장 구조
-```
-public-monorepo/
-├── package.json              # 루트 워크스페이스 설정
-├── pnpm-workspace.yaml       # pnpm 워크스페이스 정의
-├── turbo.json                # Turborepo 설정 (선택)
-├── tsconfig.base.json        # 공유 TypeScript 설정
-├── .gitignore
-├── .prettierrc
-├── eslint.config.js
-│
+soundblue-monorepo/
 ├── apps/
-│   ├── context/              # Context 앱
-│   │   ├── package.json
-│   │   ├── app.config.ts
-│   │   ├── tsconfig.json
-│   │   └── src/
-│   │
-│   └── permissive/           # Permissive 앱
-│       ├── package.json
-│       ├── app.config.ts
-│       ├── tsconfig.json
-│       └── src/
-│
-└── packages/
-    ├── ui/                   # 공유 UI 컴포넌트 (향후)
-    │   ├── package.json
-    │   └── src/
-    │
-    ├── config/               # 공유 설정
-    │   ├── tailwind/
-    │   ├── typescript/
-    │   └── eslint/
-    │
-    └── utils/                # 공유 유틸리티 (향후)
-        ├── package.json
-        └── src/
+│   ├── sound-blue/     # 메인 웹사이트
+│   ├── tools/          # 음악 도구 앱
+│   └── dialogue/       # 대화형 학습 도구
+├── packages/           # (비어있음)
+├── package.json
+├── pnpm-workspace.yaml
+└── biome.json
 ```
 
-### 3.2 루트 파일 설정
+### 1.2 기존 모노레포 기술 스택
+| 항목 | 사용 기술 |
+|------|----------|
+| 패키지 매니저 | pnpm 10.x |
+| 프레임워크 | SolidJS + SolidStart |
+| 빌드 도구 | Vinxi |
+| 스타일링 | **Tailwind CSS v4** |
+| 린터/포매터 | **Biome** |
+| 테스트 | Vitest + Playwright |
+| 배포 | Cloudflare Pages (Static) |
+| Path Alias | `@/*` → `./src/*` |
 
-#### pnpm-workspace.yaml
-```yaml
-packages:
-  - "apps/*"
-  - "packages/*"
+### 1.3 추가할 프로젝트
+
+#### Context (korean-vocab-database)
+| 항목 | 현재 | 변경 필요 |
+|------|------|----------|
+| SolidStart | ^1.0.10 | → ^1.1.0+ |
+| Tailwind | **v3 (PostCSS)** | → **v4 (Vite)** |
+| 린터 | 없음 | → Biome |
+| 테스트 | 없음 | → Vitest |
+| Path Alias | `~/*` | → `@/*` |
+| PWA | vite-plugin-pwa | 유지 |
+
+#### Permissive
+| 항목 | 현재 | 변경 필요 |
+|------|------|----------|
+| SolidStart | ^1.1.0 | 유지 |
+| Tailwind | v4 | 유지 |
+| 린터 | ESLint + Prettier | → Biome |
+| 테스트 | 없음 | → Vitest |
+| Path Alias | `~/*` | → `@/*` |
+| i18n | 자체 구현 | 유지 |
+
+---
+
+## 2. 통합 후 구조
+
+```
+soundblue-monorepo/
+├── apps/
+│   ├── sound-blue/        # 기존
+│   ├── tools/             # 기존
+│   ├── dialogue/          # 기존
+│   ├── context/           # 새로 추가 (한국어 어휘 DB)
+│   └── permissive/        # 새로 추가 (웹개발 리소스)
+├── packages/
+│   └── (향후 공유 패키지)
+├── package.json
+├── pnpm-workspace.yaml
+├── biome.json             # 루트 Biome 설정
+└── tsconfig.base.json     # 공유 TS 설정
 ```
 
-#### package.json (루트)
+---
+
+## 3. 마이그레이션 작업
+
+### 3.1 Context - Tailwind v3 → v4 마이그레이션
+
+**제거할 파일:**
+- `tailwind.config.js`
+- `postcss.config.js`
+
+**package.json 변경:**
+```diff
+  "devDependencies": {
+-   "autoprefixer": "^10.4.20",
+-   "postcss": "^8.4.49",
+-   "tailwindcss": "^3.4.16",
++   "@tailwindcss/vite": "^4.0.0",
++   "tailwindcss": "^4.0.0",
+  }
+```
+
+**app.config.ts 변경:**
+```typescript
+import { defineConfig } from '@solidjs/start/config';
+import tailwindcss from '@tailwindcss/vite';
+import { VitePWA } from 'vite-plugin-pwa';
+
+export default defineConfig({
+  server: {
+    preset: 'static',
+    prerender: {
+      crawlLinks: true,
+      routes: ['/'],
+    },
+  },
+  vite: {
+    plugins: [
+      tailwindcss(),
+      VitePWA({ /* 기존 PWA 설정 유지 */ }),
+    ],
+  },
+});
+```
+
+**app.css → global.css 변경:**
+```css
+@import "tailwindcss";
+
+@theme {
+  /* Context 커스텀 색상 */
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+
+  --color-accent-500: #d946ef;
+  --color-accent-600: #c026d3;
+
+  /* 폰트 */
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+}
+
+/* 기존 커스텀 애니메이션 */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+```
+
+### 3.2 Path Alias 변경 (`~/*` → `@/*`)
+
+**tsconfig.json (각 앱):**
+```json
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/data/*": ["./src/data/*"],
+      "@/lib/*": ["./src/lib/*"]
+    }
+  },
+  "include": ["src/**/*", "app.config.ts"]
+}
+```
+
+**코드 변경 (전체 검색/치환):**
+```bash
+# Context
+find apps/context/src -type f \( -name "*.ts" -o -name "*.tsx" \) \
+  -exec sed -i 's|from "~/|from "@/|g' {} \;
+
+# Permissive
+find apps/permissive/src -type f \( -name "*.ts" -o -name "*.tsx" \) \
+  -exec sed -i 's|from "~/|from "@/|g' {} \;
+```
+
+### 3.3 Biome 설정 적용
+
+**제거할 파일 (Permissive):**
+- `.prettierrc`
+- `eslint.config.js`
+
+**package.json에서 제거:**
+```diff
+  "devDependencies": {
+-   "eslint": "^9.17.0",
+-   "eslint-plugin-solid": "^0.14.5",
+-   "prettier": "^3.4.2",
+  }
+```
+
+**각 앱 scripts 통일:**
+```json
+{
+  "scripts": {
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "format": "biome format --write .",
+    "check": "biome check .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:run": "vitest run"
+  }
+}
+```
+
+### 3.4 테스트 설정 추가
+
+**vitest.config.ts (각 앱에 추가):**
+```typescript
+import { defineConfig } from 'vitest/config';
+import solidPlugin from 'vite-plugin-solid';
+
+export default defineConfig({
+  plugins: [solidPlugin()],
+  test: {
+    environment: 'jsdom',
+    setupFiles: ['./src/test/setup.ts'],
+    include: ['src/**/*.{test,spec}.{ts,tsx}'],
+    globals: true,
+  },
+});
+```
+
+**src/test/setup.ts:**
+```typescript
+import '@testing-library/jest-dom/vitest';
+
+// Browser API 모킹
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: (query: string) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: () => {},
+    removeListener: () => {},
+    addEventListener: () => {},
+    removeEventListener: () => {},
+    dispatchEvent: () => false,
+  }),
+});
+```
+
+---
+
+## 4. 루트 설정 파일
+
+### 4.1 package.json (루트)
 ```json
 {
   "name": "soundblue-monorepo",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "turbo dev",
-    "build": "turbo build",
-    "dev:context": "pnpm --filter @soundblue/context dev",
-    "dev:permissive": "pnpm --filter @soundblue/permissive dev",
-    "build:context": "pnpm --filter @soundblue/context build",
-    "build:permissive": "pnpm --filter @soundblue/permissive build",
-    "lint": "turbo lint",
-    "format": "prettier --write ."
+    "dev:main": "pnpm --filter sound-blue dev",
+    "dev:tools": "pnpm --filter tools dev",
+    "dev:dialogue": "pnpm --filter dialogue dev",
+    "dev:context": "pnpm --filter context dev",
+    "dev:permissive": "pnpm --filter permissive dev",
+
+    "build:context": "pnpm --filter context build",
+    "build:permissive": "pnpm --filter permissive build",
+
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "check": "biome check ."
   },
   "devDependencies": {
-    "turbo": "^2.3.0",
-    "prettier": "^3.4.2"
+    "@biomejs/biome": "^1.9.0"
   },
   "engines": {
     "node": ">=20"
   },
-  "packageManager": "pnpm@9.14.2"
+  "packageManager": "pnpm@10.25.0"
 }
 ```
 
-#### turbo.json
+### 4.2 pnpm-workspace.yaml
+```yaml
+packages:
+  - 'apps/*'
+  - 'packages/*'
+```
+
+### 4.3 tsconfig.base.json
 ```json
 {
-  "$schema": "https://turbo.build/schema.json",
-  "tasks": {
-    "build": {
-      "dependsOn": ["^build"],
-      "outputs": [".output/**", ".vinxi/**"]
-    },
-    "dev": {
-      "cache": false,
-      "persistent": true
-    },
-    "lint": {
-      "dependsOn": ["^lint"]
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "noEmit": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  }
+}
+```
+
+### 4.4 biome.json (루트)
+```json
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.0/schema.json",
+  "organizeImports": { "enabled": true },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "noUnusedImports": "error",
+        "noUnusedVariables": "warn"
+      },
+      "style": {
+        "useImportType": "error"
+      },
+      "suspicious": {
+        "noExplicitAny": "error"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "trailingCommas": "all",
+      "semicolons": "always"
     }
   }
 }
@@ -202,135 +354,122 @@ packages:
 
 ---
 
-## 4. 구현 단계
+## 5. Cloudflare Pages 설정
 
-### Phase 1: 기본 구조 설정
-1. 루트 워크스페이스 파일 생성
-2. apps/ 디렉토리 생성
-3. packages/ 디렉토리 생성
+### 5.1 프로젝트별 설정
 
-### Phase 2: 프로젝트 마이그레이션
-1. Context 프로젝트를 apps/context/로 이동
-2. Permissive 프로젝트를 apps/permissive/로 이동
-3. 각 프로젝트의 package.json 수정 (이름 변경: @soundblue/context, @soundblue/permissive)
+| 프로젝트 | Build command | Build output | Watch paths |
+|---------|---------------|--------------|-------------|
+| context | `cd apps/context && pnpm i && pnpm build` | `apps/context/.output/public` | `/apps/context/**` |
+| permissive | `cd apps/permissive && pnpm i && pnpm build` | `apps/permissive/.output/public` | `/apps/permissive/**` |
 
-### Phase 3: 의존성 통합
-1. 공통 devDependencies를 루트로 호이스팅
-2. 각 앱별 고유 의존성 유지
-3. pnpm install로 의존성 설치
+### 5.2 Build watch paths 설정 (중요!)
 
-### Phase 4: 설정 통합 (선택적)
-1. 공유 tsconfig.base.json 생성
-2. 공유 ESLint/Prettier 설정
-3. 공유 Tailwind 설정 (버전 통일 시)
+Cloudflare Dashboard → 각 프로젝트 → Settings → Build configuration
 
----
+```
+Context 프로젝트:
+  Build watch paths: /apps/context/**
 
-## 5. Tailwind 버전 통일 권장사항
-
-### 옵션 A: Tailwind v4로 통일 (권장)
-**장점:**
-- 최신 버전, 향후 지원
-- CSS-first 접근 방식으로 더 간결
-- 빌드 성능 향상
-
-**단점:**
-- Context의 tailwind.config.js 마이그레이션 필요
-- 커스텀 색상/폰트 설정 CSS로 이전 필요
-
-**마이그레이션 작업:**
-```css
-/* Context의 app.css에 추가 */
-@import "tailwindcss";
-
-@theme {
-  --color-primary-50: #eff6ff;
-  --color-primary-500: #3b82f6;
-  /* ... 기존 색상 설정 */
-
-  --font-sans: "Pretendard", system-ui, sans-serif;
-}
+Permissive 프로젝트:
+  Build watch paths: /apps/permissive/**
 ```
 
-### 옵션 B: 각 프로젝트 독립 Tailwind 유지
-**장점:**
-- 마이그레이션 불필요
-- 기존 설정 그대로 사용
-
-**단점:**
-- 스타일 일관성 유지 어려움
-- 향후 공유 컴포넌트 패키지 생성 시 복잡
+이렇게 하면 해당 폴더 변경 시에만 빌드 트리거됨.
 
 ---
 
-## 6. 예상 이슈 및 해결 방안
+## 6. 개발 서버 포트 설정
 
-### 6.1 포트 충돌
-각 앱이 동시에 개발 서버 실행 시 포트 충돌 발생 가능
+각 앱이 다른 포트를 사용하도록 설정:
 
-**해결:**
+| 앱 | 포트 |
+|----|------|
+| sound-blue | 3000 |
+| tools | 3001 |
+| dialogue | 3002 |
+| context | 3003 |
+| permissive | 3004 |
+
+**app.config.ts에 추가:**
 ```typescript
-// apps/context/app.config.ts
 export default defineConfig({
-  server: { port: 3000 }
-});
-
-// apps/permissive/app.config.ts
-export default defineConfig({
-  server: { port: 3001 }
+  vite: {
+    server: {
+      port: 3003, // context
+    },
+  },
 });
 ```
 
-### 6.2 경로 별칭 (Path Aliases)
-`~/` 경로 별칭이 각 앱에서 독립적으로 작동해야 함
+---
 
-**해결:**
-각 앱의 tsconfig.json에서 baseUrl을 해당 앱 기준으로 설정
-```json
-{
-  "extends": "../../tsconfig.base.json",
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": { "~/*": ["./src/*"] }
-  }
-}
-```
+## 7. 구현 단계 (체크리스트)
 
-### 6.3 빌드 출력 경로
-각 앱의 빌드 결과물이 독립적으로 생성되어야 함
+### Phase 1: 레포 클론 및 이동
+- [ ] Context 레포 클론
+- [ ] Permissive 레포 클론
+- [ ] `.git` 폴더 제거 (git history 분리)
+- [ ] `apps/context/`로 이동
+- [ ] `apps/permissive/`로 이동
 
-**해결:**
-SolidStart의 기본 설정으로 각 앱 디렉토리 내 .output/ 생성됨
+### Phase 2: Context 마이그레이션
+- [ ] Tailwind v3 → v4 마이그레이션
+- [ ] `tailwind.config.js` 제거
+- [ ] `postcss.config.js` 제거
+- [ ] `app.css` → Tailwind v4 CSS 변환
+- [ ] Path alias `~/` → `@/` 변경
+- [ ] package.json 의존성 업데이트
+- [ ] SolidStart 버전 업데이트
+- [ ] Biome 적용 (린트 에러 수정)
+- [ ] 테스트 설정 추가
+
+### Phase 3: Permissive 마이그레이션
+- [ ] ESLint/Prettier 제거
+- [ ] Path alias `~/` → `@/` 변경
+- [ ] Biome 적용 (린트 에러 수정)
+- [ ] 테스트 설정 추가
+
+### Phase 4: 루트 설정
+- [ ] 루트 package.json 스크립트 추가
+- [ ] tsconfig.base.json 생성 (없다면)
+- [ ] 루트 biome.json 확인
+
+### Phase 5: 검증
+- [ ] `pnpm install` 전체 실행
+- [ ] 각 앱 `pnpm dev` 정상 동작 확인
+- [ ] 각 앱 `pnpm build` 정상 동작 확인
+- [ ] `pnpm lint` 전체 실행
+- [ ] `pnpm typecheck` 전체 실행
+
+### Phase 6: Cloudflare 설정
+- [ ] Context Pages 프로젝트 생성
+- [ ] Permissive Pages 프로젝트 생성
+- [ ] Build watch paths 설정
+- [ ] 배포 테스트
 
 ---
 
-## 7. 최종 권장 사항
+## 8. 예상 소요 작업
 
-| 항목 | 권장 사항 |
-|------|----------|
-| 패키지 매니저 | pnpm (워크스페이스 지원) |
-| 빌드 도구 | Turborepo (캐싱, 병렬 빌드) |
-| Node 버전 | >=20 |
-| Tailwind | v4로 통일 (장기적) |
-| TypeScript | 공유 base 설정 사용 |
-| 린팅 | 루트 레벨 ESLint + Prettier |
+| 작업 | 난이도 | 비고 |
+|------|--------|------|
+| Context Tailwind 마이그레이션 | 중 | 커스텀 색상 변환 필요 |
+| Path alias 변경 | 하 | 검색/치환으로 가능 |
+| Biome 적용 | 하 | 자동 수정 가능 |
+| 테스트 설정 | 하 | 템플릿 복사 |
+| Cloudflare 설정 | 하 | Dashboard에서 설정 |
 
 ---
 
-## 8. 구현 체크리스트
+## 9. 주의사항
 
-- [ ] 루트 package.json 생성
-- [ ] pnpm-workspace.yaml 생성
-- [ ] turbo.json 생성
-- [ ] tsconfig.base.json 생성
-- [ ] apps/context/ 디렉토리 생성 및 마이그레이션
-- [ ] apps/permissive/ 디렉토리 생성 및 마이그레이션
-- [ ] packages/config/ 디렉토리 생성
-- [ ] 의존성 설치 및 테스트
-- [ ] 개발 서버 동시 실행 테스트
-- [ ] 빌드 테스트
-- [ ] (선택) Tailwind v4 통일
+1. **Git History**: 기존 레포의 git history는 보존하지 않음 (필요시 git subtree 사용)
+2. **PWA 설정**: Context의 PWA 설정은 그대로 유지
+3. **i18n**: Permissive의 i18n 구조 그대로 유지
+4. **데이터 스크립트**: Permissive의 `scripts/` 폴더는 그대로 유지
 
 ---
 
 *보고서 작성일: 2025-12-16*
+*기존 soundblue-monorepo 설정 기준으로 작성*
