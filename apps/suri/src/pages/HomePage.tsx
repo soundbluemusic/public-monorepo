@@ -1,15 +1,20 @@
 /**
  * @fileoverview 홈페이지 컴포넌트
  */
-import { For } from "solid-js";
+import { For, Show } from "solid-js";
 import { A } from "@solidjs/router";
 import { Title, Meta } from "@solidjs/meta";
 import { useI18n } from "@/i18n";
 import { fields } from "@/data/fields";
+import { allConcepts } from "@/data/concepts";
 import { Layout } from "@/components/layout/Layout";
+import { ConceptCard } from "@/components/concept/ConceptCard";
 
 export default function HomePage() {
   const { locale, t, localePath } = useI18n();
+
+  // 추천 개념 (처음 6개)
+  const featuredConcepts = () => allConcepts.slice(0, 6);
 
   return (
     <Layout>
@@ -31,6 +36,23 @@ export default function HomePage() {
           {t("heroSubtitle")}
         </p>
       </section>
+
+      {/* Featured Concepts */}
+      <Show when={featuredConcepts().length > 0}>
+        <section class="mb-12">
+          <h2
+            class="text-2xl font-semibold mb-6"
+            style={{ color: "var(--text-primary)" }}
+          >
+            {t("featuredConcepts")}
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <For each={featuredConcepts()}>
+              {(concept) => <ConceptCard concept={concept} />}
+            </For>
+          </div>
+        </section>
+      </Show>
 
       {/* Browse by Field */}
       <section>

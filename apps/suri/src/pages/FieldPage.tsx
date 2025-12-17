@@ -7,7 +7,9 @@ import { Title, Meta } from "@solidjs/meta";
 import { useI18n } from "@/i18n";
 import { getFieldById } from "@/data/fields";
 import { getSubfieldsByParent } from "@/data/subfields";
+import { getConceptsByField } from "@/data/concepts";
 import { Layout } from "@/components/layout/Layout";
+import { ConceptCard } from "@/components/concept/ConceptCard";
 
 export default function FieldPage() {
   const params = useParams<{ fieldId: string }>();
@@ -15,6 +17,7 @@ export default function FieldPage() {
 
   const field = () => getFieldById(params.fieldId as any);
   const subfields = () => getSubfieldsByParent(params.fieldId);
+  const concepts = () => getConceptsByField(params.fieldId);
 
   return (
     <Layout>
@@ -130,6 +133,23 @@ export default function FieldPage() {
                 </div>
               </Show>
             </section>
+
+            {/* Concepts in this field */}
+            <Show when={concepts().length > 0}>
+              <section class="mt-8">
+                <h2
+                  class="text-xl font-semibold mb-4"
+                  style={{ color: "var(--text-primary)" }}
+                >
+                  {locale() === "ko" ? "개념 목록" : locale() === "ja" ? "概念一覧" : "Concepts"}
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <For each={concepts()}>
+                    {(concept) => <ConceptCard concept={concept} />}
+                  </For>
+                </div>
+              </section>
+            </Show>
           </>
         )}
       </Show>
