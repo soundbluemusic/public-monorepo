@@ -1,4 +1,5 @@
 import Dexie, { type EntityTable } from "dexie";
+import { validateId } from "@soundblue/shared";
 
 // 즐겨찾기 라이브러리
 export interface FavoriteLibrary {
@@ -51,23 +52,6 @@ class PermissiveDatabase extends Dexie {
 const db = new PermissiveDatabase();
 
 export { db };
-
-// Input validation constants
-const MAX_ID_LENGTH = 100;
-
-// Validate ID input to prevent abuse
-function validateId(id: string, fieldName: string): void {
-  if (!id || typeof id !== "string") {
-    throw new Error(`${fieldName} is required`);
-  }
-  if (id.length > MAX_ID_LENGTH) {
-    throw new Error(`${fieldName} exceeds maximum length of ${MAX_ID_LENGTH}`);
-  }
-  // Prevent prototype pollution attempts
-  if (id === "__proto__" || id === "constructor" || id === "prototype") {
-    throw new Error(`Invalid ${fieldName}`);
-  }
-}
 
 // 라이브러리 즐겨찾기 헬퍼
 export const favoriteLibraries = {

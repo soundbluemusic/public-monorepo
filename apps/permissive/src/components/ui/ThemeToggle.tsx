@@ -49,10 +49,8 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      class="p-2 rounded-lg transition-colors"
+      class="p-2 rounded-lg hover-bg"
       style={{ color: "var(--text-secondary)" }}
-      onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "var(--bg-tertiary)"}
-      onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "transparent"}
       aria-label="Toggle theme"
     >
       {theme() === "light" ? (

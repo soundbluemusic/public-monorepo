@@ -10,16 +10,10 @@ export default function LanguageToggle() {
   return (
     <button
       onClick={toggleLanguage}
-      class="px-2.5 py-1 text-xs font-medium rounded-md transition-colors"
+      class="px-2.5 py-1 text-xs font-medium rounded-md hover-bg-border"
       style={{
         "background-color": "var(--bg-tertiary)",
         color: "var(--text-secondary)"
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.backgroundColor = "var(--border-primary)";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.backgroundColor = "var(--bg-tertiary)";
       }}
       aria-label="Toggle language"
     >

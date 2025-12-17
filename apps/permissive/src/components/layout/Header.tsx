@@ -41,10 +41,8 @@ export default function Header(props: HeaderProps) {
         {/* Mobile menu button */}
         <button
           onClick={() => props.onMenuClick()}
-          class="md:hidden p-2 -ml-2 rounded-lg transition-colors"
+          class="md:hidden p-2 -ml-2 rounded-lg hover-bg"
           style={{ color: "var(--text-secondary)" }}
-          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "var(--bg-tertiary)"}
-          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "transparent"}
           aria-label={props.isSidebarOpen ? "Close menu" : "Open menu"}
           aria-expanded={props.isSidebarOpen}
         >

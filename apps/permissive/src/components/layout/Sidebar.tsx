@@ -117,10 +117,8 @@ export default function Sidebar(props: SidebarProps) {
           <Show when={props.isMobile}>
             <button
               onClick={() => props.onClose()}
-              class="p-2 -mr-1 rounded-lg transition-colors"
+              class="p-2 -mr-1 rounded-lg hover-bg"
               style={{ color: "var(--text-secondary)" }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "var(--bg-tertiary)"}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "transparent"}
               aria-label="Close menu"
             >
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -186,9 +184,7 @@ export default function Sidebar(props: SidebarProps) {
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="flex items-center gap-3 px-3 py-2 rounded-lg transition-all group"
-                      onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "var(--bg-secondary)"}
-                      onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "transparent"}
+                      class="flex items-center gap-3 px-3 py-2 rounded-lg hover-bg-secondary group"
                     >
                       <span
                         class="w-7 h-7 flex items-center justify-center rounded-md text-sm group-hover:scale-110 transition-transform shrink-0"
@@ -240,9 +236,7 @@ export default function Sidebar(props: SidebarProps) {
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="flex items-center gap-3 px-3 py-2 rounded-lg transition-all group"
-                      onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "var(--bg-secondary)"}
-                      onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "transparent"}
+                      class="flex items-center gap-3 px-3 py-2 rounded-lg hover-bg-secondary group"
                     >
                       <span
                         class="w-7 h-7 flex items-center justify-center rounded-md text-sm group-hover:scale-110 transition-transform shrink-0"
@@ -287,10 +281,8 @@ export default function Sidebar(props: SidebarProps) {
           <Show when={!props.isMobile}>
             <button
               onClick={() => props.onToggleCollapse()}
-              class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all"
+              class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium hover-bg"
               style={{ color: "var(--text-secondary)" }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "var(--bg-tertiary)"}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "transparent"}
               title={props.isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
             >
               <svg
@@ -312,9 +304,7 @@ export default function Sidebar(props: SidebarProps) {
             href="https://github.com/soundbluemusic/Permissive"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all group"
-            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "var(--bg-secondary)"}
-            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "transparent"}
+            class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover-bg-secondary group"
             title={props.isCollapsed && !props.isMobile ? "GitHub" : undefined}
           >
             <span
