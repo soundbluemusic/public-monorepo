@@ -1,6 +1,6 @@
 import { Title, Meta } from "@solidjs/meta";
 import { A } from "@solidjs/router";
-import { For } from "solid-js";
+import { For, Show } from "solid-js";
 import { Layout } from "@/components/Layout";
 import { getFeaturedEntries } from "@/data/entries";
 import { useI18n } from "@/i18n";
@@ -47,9 +47,11 @@ export default function HomePage() {
                   <span class="text-lg font-medium" style={{ color: "var(--text-primary)" }}>
                     {entry.korean}
                   </span>
-                  <span class="text-sm" style={{ color: "var(--text-tertiary)" }}>
-                    {entry.romanization}
-                  </span>
+                  <Show when={locale() !== "ko"}>
+                    <span class="text-sm" style={{ color: "var(--text-tertiary)" }}>
+                      {entry.romanization}
+                    </span>
+                  </Show>
                 </div>
                 <span class="text-sm" style={{ color: "var(--text-secondary)" }}>
                   {translation.word}

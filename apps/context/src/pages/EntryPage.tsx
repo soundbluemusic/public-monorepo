@@ -54,13 +54,15 @@ export default function EntryPage() {
           <h1 class="text-4xl font-bold mb-1" style={{ color: "var(--text-primary)" }}>
             {entry()!.korean}
           </h1>
-          <p class="text-lg" style={{ color: "var(--text-tertiary)" }}>
-            {entry()!.romanization}
-          </p>
-          <Show when={entry()!.hanja}>
-            <p class="text-sm mt-1" style={{ color: "var(--text-tertiary)" }}>
-              {entry()!.hanja}
+          <Show when={locale() !== "ko"}>
+            <p class="text-lg" style={{ color: "var(--text-tertiary)" }}>
+              {entry()!.romanization}
             </p>
+            <Show when={entry()!.hanja}>
+              <p class="text-sm mt-1" style={{ color: "var(--text-tertiary)" }}>
+                {entry()!.hanja}
+              </p>
+            </Show>
           </Show>
         </div>
 
@@ -134,7 +136,9 @@ export default function EntryPage() {
                   >
                     <div class="flex items-baseline gap-2">
                       <span style={{ color: "var(--text-primary)" }}>{related.korean}</span>
-                      <span class="text-sm" style={{ color: "var(--text-tertiary)" }}>{related.romanization}</span>
+                      <Show when={locale() !== "ko"}>
+                        <span class="text-sm" style={{ color: "var(--text-tertiary)" }}>{related.romanization}</span>
+                      </Show>
                     </div>
                     <span class="text-sm" style={{ color: "var(--text-secondary)" }}>
                       {related.translations[locale()].word}

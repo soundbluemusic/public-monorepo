@@ -130,9 +130,11 @@ export default function BrowsePage() {
                     <span class="text-lg font-medium" style={{ color: "var(--text-primary)" }}>
                       {entry.korean}
                     </span>
-                    <span class="text-sm" style={{ color: "var(--text-tertiary)" }}>
-                      {entry.romanization}
-                    </span>
+                    <Show when={locale() !== "ko"}>
+                      <span class="text-sm" style={{ color: "var(--text-tertiary)" }}>
+                        {entry.romanization}
+                      </span>
+                    </Show>
                   </div>
                 </div>
                 <span class="text-sm text-right" style={{ color: "var(--text-secondary)" }}>

@@ -69,9 +69,11 @@ export default function CategoryPage() {
                       <span class="text-lg font-medium" style={{ color: "var(--text-primary)" }}>
                         {entry.korean}
                       </span>
-                      <span class="text-sm" style={{ color: "var(--text-tertiary)" }}>
-                        {entry.romanization}
-                      </span>
+                      <Show when={locale() !== "ko"}>
+                        <span class="text-sm" style={{ color: "var(--text-tertiary)" }}>
+                          {entry.romanization}
+                        </span>
+                      </Show>
                     </div>
                     <span class="text-sm" style={{ color: "var(--text-secondary)" }}>
                       {translation.word}
