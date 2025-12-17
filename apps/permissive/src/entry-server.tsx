@@ -12,13 +12,12 @@ export default createHandler(() => (
           <meta name="theme-color" content="#3b82f6" />
           <link rel="icon" href="/favicon.ico" />
           <link rel="manifest" href="/manifest.json" />
-          <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+          <link rel="apple-touch-icon" href="/icons/icon-192x192.svg" />
           {assets}
         </head>
         <body class="min-h-screen bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased">
           <div id="app">{children}</div>
           {scripts}
-          <script src="/register-sw.js" />
         </body>
       </html>
     )}

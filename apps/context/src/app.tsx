@@ -3,6 +3,7 @@ import { Router, type RouteSectionProps } from "@solidjs/router";
 import { FileRoutes } from "@solidjs/start/router";
 import { Suspense } from "solid-js";
 import { I18nProvider } from "@/i18n";
+import { OfflineIndicator } from "@soundblue/shared";
 import "./app.css";
 
 // Loading skeleton UI
@@ -44,6 +45,7 @@ export default function App() {
       root={(props: RouteSectionProps) => (
         <MetaProvider>
           <I18nProvider>
+            <OfflineIndicator />
             <Suspense fallback={<LoadingFallback />}>
               {props.children}
             </Suspense>
