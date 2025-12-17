@@ -83,9 +83,18 @@ const libraries: Library[] = [
   { name: "Lodash", description: "Modern JavaScript utility library", descriptionKo: "모던 자바스크립트 유틸리티", category: "Utilities", license: "MIT", github: "https://github.com/lodash/lodash", npm: "lodash", stars: "60k" },
   { name: "uuid", description: "Generate RFC-compliant UUIDs", descriptionKo: "RFC 호환 UUID 생성", category: "Utilities", license: "MIT", github: "https://github.com/uuidjs/uuid", npm: "uuid", stars: "15k" },
   { name: "nanoid", description: "Tiny, secure URL-friendly ID", descriptionKo: "작고 안전한 URL 친화적 ID", category: "Utilities", license: "MIT", github: "https://github.com/ai/nanoid", npm: "nanoid", stars: "24k" },
+
+  // Storage
+  { name: "localForage", description: "Offline storage with simple API (localStorage/IndexedDB/WebSQL)", descriptionKo: "간단한 API로 오프라인 스토리지 (localStorage/IndexedDB/WebSQL 통합)", category: "Storage", license: "Apache-2.0", github: "https://github.com/localForage/localForage", npm: "localforage", stars: "25k" },
+  { name: "Dexie.js", description: "Minimalistic IndexedDB wrapper", descriptionKo: "미니멀한 IndexedDB 래퍼", category: "Storage", license: "Apache-2.0", github: "https://github.com/dexie/Dexie.js", npm: "dexie", stars: "11k" },
+  { name: "idb", description: "IndexedDB with promises", descriptionKo: "프로미스 기반 IndexedDB", category: "Storage", license: "ISC", github: "https://github.com/jakearchibald/idb", npm: "idb", stars: "6k" },
+  { name: "idb-keyval", description: "Super simple key-val store using IndexedDB", descriptionKo: "IndexedDB 기반 초간단 키-값 저장소", category: "Storage", license: "Apache-2.0", github: "https://github.com/jakearchibald/idb-keyval", npm: "idb-keyval", stars: "2k" },
+  { name: "PouchDB", description: "Pocket-sized database, syncs with CouchDB", descriptionKo: "CouchDB와 동기화되는 포켓 사이즈 데이터베이스", category: "Storage", license: "Apache-2.0", github: "https://github.com/pouchdb/pouchdb", npm: "pouchdb", stars: "17k" },
+  { name: "RxDB", description: "Reactive database for JavaScript apps", descriptionKo: "자바스크립트 앱을 위한 반응형 데이터베이스", category: "Storage", license: "Apache-2.0", github: "https://github.com/pubkey/rxdb", npm: "rxdb", stars: "21k" },
+  { name: "LokiJS", description: "Fast in-memory database", descriptionKo: "빠른 인메모리 데이터베이스", category: "Storage", license: "MIT", github: "https://github.com/techfort/LokiJS", npm: "lokijs", stars: "7k" },
 ];
 
-const categories = ["All", "Frameworks", "State", "Routing", "Styling", "Build", "Data", "UI", "Animation", "Forms", "Utilities"] as const;
+const categories = ["All", "Frameworks", "State", "Routing", "Styling", "Build", "Data", "UI", "Animation", "Forms", "Utilities", "Storage"] as const;
 
 type CategoryFilter = (typeof categories)[number];
 
