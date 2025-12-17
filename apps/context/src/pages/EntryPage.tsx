@@ -58,11 +58,11 @@ export default function EntryPage() {
             <p class="text-lg" style={{ color: "var(--text-tertiary)" }}>
               {entry()!.romanization}
             </p>
-            <Show when={entry()!.hanja}>
-              <p class="text-sm mt-1" style={{ color: "var(--text-tertiary)" }}>
-                {entry()!.hanja}
-              </p>
-            </Show>
+          </Show>
+          <Show when={locale() === "ja" && entry()!.hanja}>
+            <p class="text-sm mt-1" style={{ color: "var(--text-tertiary)" }}>
+              {entry()!.hanja}
+            </p>
           </Show>
         </div>
 
