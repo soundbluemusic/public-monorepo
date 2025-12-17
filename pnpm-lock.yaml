@@ -113,7 +113,7 @@ importers:
         specifier: ^0.21.1
         version: 0.21.2(vite@6.4.1(@types/node@22.19.3)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1)(tsx@4.21.0))(workbox-build@7.4.0(@types/babel__core@7.20.5))(workbox-window@7.4.0)
 
-  apps/suri:
+  apps/roots:
     dependencies:
       '@solidjs/meta':
         specifier: ^0.29.4

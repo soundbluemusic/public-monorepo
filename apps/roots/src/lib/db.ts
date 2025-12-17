@@ -46,7 +46,7 @@ export interface UserSettings {
   updatedAt: Date;
 }
 
-class SuriDatabase extends Dexie {
+class RootsDatabase extends Dexie {
   favorites!: EntityTable<FavoriteConcept, "id">;
   studyRecords!: EntityTable<StudyRecord, "id">;
   learningPaths!: EntityTable<LearningPath, "id">;
@@ -54,7 +54,7 @@ class SuriDatabase extends Dexie {
   settings!: EntityTable<UserSettings, "id">;
 
   constructor() {
-    super("SuriDB");
+    super("RootsDB");
     this.version(1).stores({
       favorites: "++id, conceptId, addedAt",
       studyRecords: "++id, conceptId, studiedAt",
@@ -65,7 +65,7 @@ class SuriDatabase extends Dexie {
   }
 }
 
-const db = new SuriDatabase();
+const db = new RootsDatabase();
 
 export { db };
 

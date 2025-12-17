@@ -246,13 +246,13 @@ const translations: Record<Language, UILabels> = {
     theorems: "Famous Theorems",
 
     // Hero
-    heroTitle: "Suri - Math Documentation",
+    heroTitle: "Roots - Math Documentation",
     heroSubtitle: "Learn math concepts easily",
     featuredConcepts: "Featured Concepts",
     browseByField: "Browse by Field",
 
     // About
-    aboutTitle: "About Suri",
+    aboutTitle: "About Roots",
     aboutDescription: "Math concept documentation for learners of all levels.",
 
     // Favorites & Study
@@ -324,13 +324,13 @@ const translations: Record<Language, UILabels> = {
     theorems: "有名な定理",
 
     // Hero
-    heroTitle: "Suri - 数学ドキュメント",
+    heroTitle: "Roots - 数学ドキュメント",
     heroSubtitle: "誰でも簡単に学べる数学概念辞典",
     featuredConcepts: "注目の概念",
     browseByField: "分野別に探す",
 
     // About
-    aboutTitle: "Suriについて",
+    aboutTitle: "Rootsについて",
     aboutDescription: "あらゆるレベルの学習者のための数学概念ドキュメントです。",
 
     // Favorites & Study
