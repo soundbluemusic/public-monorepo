@@ -1,13 +1,13 @@
 {
-  "name": "Permissive - 무료 웹개발 자료",
-  "short_name": "Permissive",
-  "description": "무료로 사용 가능한 웹개발 라이브러리 및 리소스",
+  "name": "Context - 한국어 어휘 데이터베이스",
+  "short_name": "Context",
+  "description": "학습자를 위한 한국어 사전",
   "start_url": "/",
   "display": "standalone",
   "orientation": "any",
   "background_color": "#ffffff",
-  "theme_color": "#3b82f6",
-  "categories": ["developer", "productivity"],
+  "theme_color": "#3B82F6",
+  "categories": ["education", "reference"],
   "icons": [
     {
       "src": "/icons/icon-192x192.svg",

@@ -1,0 +1,28 @@
+# 보안 헤더
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# HTML - 항상 최신 확인
+/*.html
+  Cache-Control: max-age=0, must-revalidate
+
+/
+  Cache-Control: max-age=0, must-revalidate
+
+# Service Worker - 항상 최신
+/sw.js
+  Cache-Control: max-age=0, must-revalidate
+
+# Manifest
+/manifest.json
+  Cache-Control: max-age=86400, stale-while-revalidate=604800
+
+# 정적 자산 - 장기 캐시
+/assets/*
+  Cache-Control: max-age=31536000, immutable
+
+# 아이콘
+/icons/*
+  Cache-Control: max-age=31536000, immutable
