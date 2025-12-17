@@ -419,4 +419,460 @@ export const logicConcepts: MathConcept[] = [
     },
     tags: ["괴델", "불완전성", "Gödel", "incompleteness"],
   },
+
+  // ===== 11.4 집합론과 기초 =====
+  {
+    id: "set-theory-foundations",
+    name: {
+      ko: "집합론 기초",
+      en: "Set Theory Foundations",
+      ja: "集合論の基礎",
+    },
+    field: "logic",
+    subfield: "foundations",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "공리적 집합론(ZFC)은 현대 수학의 기초입니다. 집합의 존재와 연산을 공리로 규정하여 러셀의 역설 같은 모순을 피합니다.",
+        formulas: [
+          {
+            latex: "\\forall x \\forall y (\\forall z (z \\in x \\leftrightarrow z \\in y) \\to x = y)",
+            description: "외연 공리 (집합은 원소로 결정)",
+          },
+          {
+            latex: "\\forall x \\exists y \\forall z (z \\in y \\leftrightarrow z \\in x \\land \\phi(z))",
+            description: "분리 공리 (부분집합 존재)",
+          },
+          {
+            latex: "\\forall x \\exists y \\forall z (z \\in y \\leftrightarrow z \\subseteq x)",
+            description: "멱집합 공리",
+          },
+        ],
+        examples: [
+          {
+            problem: "러셀의 역설을 설명하고 ZFC가 어떻게 피하는지 설명하세요.",
+            solution:
+              "R = {x : x ∉ x}에서 R ∈ R ⟺ R ∉ R (모순). ZFC는 분리공리로 기존 집합의 부분집합만 형성 가능하게 하여 이를 방지합니다.",
+          },
+        ],
+        history: {
+          discoveredBy: "체르멜로, 프렝켈",
+          year: "1908-1922년",
+          background:
+            "체르멜로가 선택공리를 제시하고, 프렝켈이 치환공리를 추가했습니다.",
+        },
+        applications: [
+          { field: "수학기초론", description: "수학의 공리적 토대" },
+          { field: "컴퓨터 과학", description: "타입 이론" },
+          { field: "철학", description: "존재론, 무한 개념" },
+        ],
+      },
+      en: {
+        definition:
+          "Axiomatic set theory (ZFC) forms the foundation of modern mathematics. It defines set existence and operations axiomatically to avoid paradoxes like Russell's.",
+        formulas: [
+          {
+            latex: "\\forall x \\forall y (\\forall z (z \\in x \\leftrightarrow z \\in y) \\to x = y)",
+            description: "Axiom of Extensionality",
+          },
+          {
+            latex: "\\forall x \\exists y \\forall z (z \\in y \\leftrightarrow z \\in x \\land \\phi(z))",
+            description: "Axiom Schema of Separation",
+          },
+          {
+            latex: "\\forall x \\exists y \\forall z (z \\in y \\leftrightarrow z \\subseteq x)",
+            description: "Axiom of Power Set",
+          },
+        ],
+        examples: [
+          {
+            problem: "Explain Russell's paradox and how ZFC avoids it.",
+            solution:
+              "R = {x : x ∉ x} leads to R ∈ R ⟺ R ∉ R (contradiction). ZFC's Separation only allows forming subsets of existing sets, preventing this.",
+          },
+        ],
+        history: {
+          discoveredBy: "Zermelo, Fraenkel",
+          year: "1908-1922",
+          background:
+            "Zermelo introduced the Axiom of Choice; Fraenkel added Replacement.",
+        },
+        applications: [
+          { field: "Foundations", description: "Axiomatic basis of mathematics" },
+          { field: "Computer Science", description: "Type theory" },
+          { field: "Philosophy", description: "Ontology, concept of infinity" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["predicate-logic"],
+      nextTopics: ["ordinals", "cardinals"],
+      related: ["sets"],
+    },
+    tags: ["집합론", "ZFC", "공리", "set theory", "axiom"],
+  },
+  {
+    id: "boolean-algebra-logic",
+    name: {
+      ko: "불리언 대수",
+      en: "Boolean Algebra",
+      ja: "ブール代数",
+    },
+    field: "logic",
+    subfield: "propositional",
+    difficulty: 2,
+    content: {
+      ko: {
+        definition:
+          "불리언 대수는 0과 1(또는 거짓/참)에 대한 논리 연산 체계입니다. AND, OR, NOT 연산이 정의되며 디지털 회로의 기초입니다.",
+        formulas: [
+          {
+            latex: "x \\land (y \\lor z) = (x \\land y) \\lor (x \\land z)",
+            description: "분배법칙",
+          },
+          {
+            latex: "\\neg(x \\land y) = \\neg x \\lor \\neg y",
+            description: "드모르간 법칙",
+          },
+          {
+            latex: "x \\lor \\neg x = 1, \\quad x \\land \\neg x = 0",
+            description: "보원 법칙",
+          },
+        ],
+        examples: [
+          {
+            problem: "불리언 식 x ∧ (x ∨ y)를 간소화하세요.",
+            solution:
+              "x ∧ (x ∨ y) = (x ∧ x) ∨ (x ∧ y) = x ∨ (x ∧ y) = x (흡수법칙)",
+          },
+        ],
+        history: {
+          discoveredBy: "조지 불",
+          year: "1854년",
+          background:
+            "불이 '사고의 법칙'에서 논리를 대수적으로 다루는 체계를 제시했습니다.",
+        },
+        applications: [
+          { field: "디지털 회로", description: "논리 게이트 설계" },
+          { field: "프로그래밍", description: "조건문, 비트 연산" },
+          { field: "데이터베이스", description: "쿼리 조건" },
+        ],
+      },
+      en: {
+        definition:
+          "Boolean algebra is a logical operation system on 0 and 1 (false/true). Defines AND, OR, NOT operations and forms the basis of digital circuits.",
+        formulas: [
+          {
+            latex: "x \\land (y \\lor z) = (x \\land y) \\lor (x \\land z)",
+            description: "Distributive law",
+          },
+          {
+            latex: "\\neg(x \\land y) = \\neg x \\lor \\neg y",
+            description: "De Morgan's law",
+          },
+          {
+            latex: "x \\lor \\neg x = 1, \\quad x \\land \\neg x = 0",
+            description: "Complement laws",
+          },
+        ],
+        examples: [
+          {
+            problem: "Simplify the Boolean expression x ∧ (x ∨ y).",
+            solution:
+              "x ∧ (x ∨ y) = (x ∧ x) ∨ (x ∧ y) = x ∨ (x ∧ y) = x (absorption law)",
+          },
+        ],
+        history: {
+          discoveredBy: "George Boole",
+          year: "1854",
+          background:
+            "Boole presented an algebraic treatment of logic in 'Laws of Thought'.",
+        },
+        applications: [
+          { field: "Digital Circuits", description: "Logic gate design" },
+          { field: "Programming", description: "Conditionals, bit operations" },
+          { field: "Databases", description: "Query conditions" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["propositional-logic"],
+      nextTopics: ["karnaugh-maps", "circuit-design"],
+      related: ["sets"],
+    },
+    tags: ["불리언", "논리회로", "Boolean", "logic gates"],
+  },
+  {
+    id: "model-theory",
+    name: {
+      ko: "모델 이론",
+      en: "Model Theory",
+      ja: "モデル理論",
+    },
+    field: "logic",
+    subfield: "model-theory",
+    difficulty: 5,
+    content: {
+      ko: {
+        definition:
+          "모델 이론은 형식 언어와 그것이 해석되는 구조(모델) 사이의 관계를 연구합니다. 어떤 이론이 참이 되는 구조를 분석합니다.",
+        formulas: [
+          {
+            latex: "\\mathcal{M} \\models \\phi",
+            description: "모델 M이 문장 φ를 만족",
+          },
+          {
+            latex: "\\text{Th}(\\mathcal{M}) = \\{\\phi : \\mathcal{M} \\models \\phi\\}",
+            description: "구조 M의 이론",
+          },
+        ],
+        examples: [
+          {
+            problem: "실수체 (ℝ, +, ×, 0, 1, <)가 산술의 어떤 이론을 만족하는지 설명하세요.",
+            solution:
+              "실수체는 실폐체(RCF)의 모델입니다. 타르스키가 RCF의 완전성과 결정가능성을 증명했습니다.",
+          },
+        ],
+        applications: [
+          { field: "대수학", description: "대수적 구조 분류" },
+          { field: "수학기초론", description: "완전성, 범주성 연구" },
+          { field: "컴퓨터 과학", description: "형식 검증" },
+        ],
+      },
+      en: {
+        definition:
+          "Model theory studies the relationship between formal languages and structures (models) that interpret them. It analyzes structures where theories hold true.",
+        formulas: [
+          {
+            latex: "\\mathcal{M} \\models \\phi",
+            description: "Model M satisfies sentence φ",
+          },
+          {
+            latex: "\\text{Th}(\\mathcal{M}) = \\{\\phi : \\mathcal{M} \\models \\phi\\}",
+            description: "Theory of structure M",
+          },
+        ],
+        examples: [
+          {
+            problem: "Explain what theory the real field (ℝ, +, ×, 0, 1, <) satisfies.",
+            solution:
+              "Real field is a model of the theory of Real Closed Fields (RCF). Tarski proved RCF is complete and decidable.",
+          },
+        ],
+        applications: [
+          { field: "Algebra", description: "Classification of algebraic structures" },
+          { field: "Foundations", description: "Completeness, categoricity" },
+          { field: "Computer Science", description: "Formal verification" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["predicate-logic", "set-theory-foundations"],
+      nextTopics: ["ultraproducts", "types"],
+      related: ["proof-methods"],
+    },
+    tags: ["모델이론", "구조", "model theory", "structure"],
+  },
+  {
+    id: "decidability",
+    name: {
+      ko: "결정가능성",
+      en: "Decidability",
+      ja: "決定可能性",
+    },
+    field: "logic",
+    subfield: "computability",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "이론이 결정가능하다는 것은 그 이론의 임의의 문장이 참인지 거짓인지 판별하는 알고리즘이 존재한다는 것입니다. 프레스버거 산술은 결정가능하지만 페아노 산술은 결정불가능합니다.",
+        formulas: [
+          {
+            latex: "T \\text{ decidable} \\Leftrightarrow \\exists \\text{ algorithm } A: A(\\phi) = \\begin{cases} 1 & T \\vdash \\phi \\\\ 0 & T \\nvdash \\phi \\end{cases}",
+            description: "결정가능성의 정의",
+          },
+        ],
+        examples: [
+          {
+            problem: "정지 문제가 결정불가능함을 설명하세요.",
+            solution:
+              "프로그램 P와 입력 I에 대해 P(I)가 정지하는지 판별하는 알고리즘이 없습니다. 귀류법으로 증명: 그런 알고리즘 H가 존재하면 자기참조적 모순 발생.",
+          },
+        ],
+        history: {
+          discoveredBy: "앨런 튜링, 알론조 처치",
+          year: "1936년",
+          background:
+            "튜링과 처치가 독립적으로 결정불가능한 문제의 존재를 증명했습니다.",
+        },
+        applications: [
+          { field: "컴퓨터 과학", description: "계산 한계" },
+          { field: "소프트웨어 공학", description: "프로그램 검증의 한계" },
+          { field: "인공지능", description: "자동 추론의 한계" },
+        ],
+      },
+      en: {
+        definition:
+          "A theory is decidable if there's an algorithm to determine whether any sentence is true or false. Presburger arithmetic is decidable, but Peano arithmetic is undecidable.",
+        formulas: [
+          {
+            latex: "T \\text{ decidable} \\Leftrightarrow \\exists \\text{ algorithm } A: A(\\phi) = \\begin{cases} 1 & T \\vdash \\phi \\\\ 0 & T \\nvdash \\phi \\end{cases}",
+            description: "Definition of decidability",
+          },
+        ],
+        examples: [
+          {
+            problem: "Explain why the halting problem is undecidable.",
+            solution:
+              "No algorithm can determine if program P halts on input I. Proof by contradiction: if such H exists, construct self-referential paradox.",
+          },
+        ],
+        history: {
+          discoveredBy: "Alan Turing, Alonzo Church",
+          year: "1936",
+          background:
+            "Turing and Church independently proved existence of undecidable problems.",
+        },
+        applications: [
+          { field: "Computer Science", description: "Limits of computation" },
+          { field: "Software Engineering", description: "Limits of program verification" },
+          { field: "AI", description: "Limits of automated reasoning" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["predicate-logic", "godels-incompleteness"],
+      nextTopics: ["computability-theory", "complexity-theory"],
+      related: ["halting-problem"],
+    },
+    tags: ["결정가능성", "튜링", "decidability", "Turing"],
+  },
+  {
+    id: "strong-induction",
+    name: {
+      ko: "강한 귀납법",
+      en: "Strong Induction",
+      ja: "強帰納法",
+    },
+    field: "logic",
+    subfield: "proof-theory",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "강한 귀납법(완전 귀납법)에서는 n보다 작은 모든 경우가 성립한다고 가정하고 n인 경우를 증명합니다. 일반 귀납법보다 강력한 가정을 사용합니다.",
+        formulas: [
+          {
+            latex: "P(0) \\land (\\forall n \\, ((\\forall k < n \\, P(k)) \\to P(n))) \\Rightarrow \\forall n \\, P(n)",
+            description: "강한 귀납법의 원리",
+          },
+        ],
+        examples: [
+          {
+            problem: "모든 n ≥ 2인 자연수는 소수의 곱으로 나타낼 수 있음을 강한 귀납법으로 증명하세요.",
+            solution:
+              "n이 소수면 완료. 합성수면 n = ab (1 < a, b < n). 귀납 가정에 의해 a, b가 소수 곱. 따라서 n도 소수 곱.",
+          },
+        ],
+        applications: [
+          { field: "수학", description: "존재 증명" },
+          { field: "컴퓨터 과학", description: "재귀 알고리즘 분석" },
+          { field: "조합론", description: "분할 정리 증명" },
+        ],
+      },
+      en: {
+        definition:
+          "Strong induction assumes all cases less than n hold and proves case n. It uses a stronger hypothesis than simple induction.",
+        formulas: [
+          {
+            latex: "P(0) \\land (\\forall n \\, ((\\forall k < n \\, P(k)) \\to P(n))) \\Rightarrow \\forall n \\, P(n)",
+            description: "Principle of strong induction",
+          },
+        ],
+        examples: [
+          {
+            problem: "Prove every n ≥ 2 can be written as product of primes using strong induction.",
+            solution:
+              "If n is prime, done. If composite, n = ab (1 < a, b < n). By induction hypothesis, a, b are prime products. So n is too.",
+          },
+        ],
+        applications: [
+          { field: "Mathematics", description: "Existence proofs" },
+          { field: "Computer Science", description: "Recursive algorithm analysis" },
+          { field: "Combinatorics", description: "Partition theorem proofs" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["mathematical-induction"],
+      nextTopics: ["structural-induction", "transfinite-induction"],
+      related: ["well-ordering"],
+    },
+    tags: ["강한귀납법", "완전귀납법", "strong induction", "complete induction"],
+  },
+  {
+    id: "truth-tables",
+    name: {
+      ko: "진리표",
+      en: "Truth Tables",
+      ja: "真理値表",
+    },
+    field: "logic",
+    subfield: "propositional",
+    difficulty: 1,
+    content: {
+      ko: {
+        definition:
+          "진리표는 명제의 모든 가능한 진릿값 조합에 대해 복합 명제의 진릿값을 보여주는 표입니다. 논리식의 타당성, 충족가능성을 판별합니다.",
+        formulas: [
+          {
+            latex: "\\begin{array}{cc|c} p & q & p \\to q \\\\ T & T & T \\\\ T & F & F \\\\ F & T & T \\\\ F & F & T \\end{array}",
+            description: "조건문의 진리표",
+          },
+        ],
+        examples: [
+          {
+            problem: "p ∨ ¬p가 항진명제임을 진리표로 보이세요.",
+            solution:
+              "p=T일 때 T∨F=T, p=F일 때 F∨T=T. 모든 경우 참이므로 항진명제.",
+          },
+        ],
+        applications: [
+          { field: "논리학", description: "논리식 검증" },
+          { field: "회로 설계", description: "조합 회로 분석" },
+          { field: "프로그래밍", description: "조건문 분석" },
+        ],
+      },
+      en: {
+        definition:
+          "A truth table shows the truth value of compound propositions for all possible combinations of component truth values. Used to determine validity and satisfiability.",
+        formulas: [
+          {
+            latex: "\\begin{array}{cc|c} p & q & p \\to q \\\\ T & T & T \\\\ T & F & F \\\\ F & T & T \\\\ F & F & T \\end{array}",
+            description: "Truth table for implication",
+          },
+        ],
+        examples: [
+          {
+            problem: "Show p ∨ ¬p is a tautology using a truth table.",
+            solution:
+              "p=T: T∨F=T, p=F: F∨T=T. True in all cases, so it's a tautology.",
+          },
+        ],
+        applications: [
+          { field: "Logic", description: "Verifying logical formulas" },
+          { field: "Circuit Design", description: "Combinational circuit analysis" },
+          { field: "Programming", description: "Conditional statement analysis" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: [],
+      nextTopics: ["propositional-logic", "boolean-algebra-logic"],
+      related: ["tautology"],
+    },
+    tags: ["진리표", "논리", "truth table", "logic"],
+  },
 ];

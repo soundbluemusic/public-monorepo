@@ -466,4 +466,541 @@ export const topologyConcepts: MathConcept[] = [
     },
     tags: ["오일러", "위상불변량", "Euler", "characteristic"],
   },
+
+  // ===== 10.4 대수적 위상수학 (Algebraic Topology) =====
+  {
+    id: "fundamental-group",
+    name: {
+      ko: "기본군",
+      en: "Fundamental Group",
+      ja: "基本群",
+    },
+    field: "topology",
+    subfield: "algebraic-topology",
+    difficulty: 5,
+    content: {
+      ko: {
+        definition:
+          "기본군 π₁(X)은 공간 X의 기저점에서 시작하고 끝나는 루프들의 동치류로 이루어진 군입니다. 공간의 '구멍'을 대수적으로 측정합니다.",
+        formulas: [
+          {
+            latex: "\\pi_1(S^1) \\cong \\mathbb{Z}",
+            description: "원의 기본군은 정수군",
+          },
+          {
+            latex: "\\pi_1(S^n) = 0 \\text{ for } n \\geq 2",
+            description: "2차원 이상 구의 기본군은 자명",
+          },
+          {
+            latex: "\\pi_1(T^2) \\cong \\mathbb{Z} \\times \\mathbb{Z}",
+            description: "토러스의 기본군",
+          },
+        ],
+        examples: [
+          {
+            problem: "원 S¹의 기본군이 ℤ임을 직관적으로 설명하세요.",
+            solution:
+              "원을 n바퀴 감는 루프는 서로 다른 동치류를 나타냅니다. 반시계방향은 양수, 시계방향은 음수로 정수에 대응됩니다.",
+          },
+        ],
+        history: {
+          discoveredBy: "앙리 푸앵카레",
+          year: "1895년",
+          background:
+            "푸앵카레가 위상수학의 대수화를 시작하며 기본군을 도입했습니다.",
+        },
+        applications: [
+          { field: "위상수학", description: "공간 분류" },
+          { field: "물리학", description: "양자장론의 위상" },
+          { field: "로봇공학", description: "경로 계획" },
+        ],
+      },
+      en: {
+        definition:
+          "The fundamental group π₁(X) consists of equivalence classes of loops starting and ending at a base point. It measures 'holes' algebraically.",
+        formulas: [
+          {
+            latex: "\\pi_1(S^1) \\cong \\mathbb{Z}",
+            description: "Circle's fundamental group is integers",
+          },
+          {
+            latex: "\\pi_1(S^n) = 0 \\text{ for } n \\geq 2",
+            description: "Higher spheres have trivial π₁",
+          },
+        ],
+        examples: [
+          {
+            problem: "Intuitively explain why π₁(S¹) ≅ ℤ.",
+            solution:
+              "A loop wrapping n times around the circle represents a different class. Counterclockwise is positive, clockwise negative, corresponding to integers.",
+          },
+        ],
+        history: {
+          discoveredBy: "Henri Poincaré",
+          year: "1895",
+          background:
+            "Poincaré introduced the fundamental group, beginning algebraic topology.",
+        },
+        applications: [
+          { field: "Topology", description: "Space classification" },
+          { field: "Physics", description: "Topology in QFT" },
+          { field: "Robotics", description: "Path planning" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["homeomorphism", "group-theory"],
+      nextTopics: ["homology", "covering-spaces"],
+      related: ["homotopy"],
+    },
+    tags: ["기본군", "루프", "fundamental group", "homotopy"],
+  },
+  {
+    id: "metric-space",
+    name: {
+      ko: "거리공간",
+      en: "Metric Space",
+      ja: "距離空間",
+    },
+    field: "topology",
+    subfield: "general-topology",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "거리공간은 거리함수(메트릭)가 정의된 집합입니다. 위상공간의 중요한 예로, 거리에서 위상이 유도됩니다.",
+        formulas: [
+          {
+            latex: "d(x, y) \\geq 0 \\text{ (비음성)}",
+            description: "거리는 항상 0 이상",
+          },
+          {
+            latex: "d(x, y) = 0 \\Leftrightarrow x = y",
+            description: "동일성",
+          },
+          {
+            latex: "d(x, y) = d(y, x)",
+            description: "대칭성",
+          },
+          {
+            latex: "d(x, z) \\leq d(x, y) + d(y, z)",
+            description: "삼각부등식",
+          },
+        ],
+        examples: [
+          {
+            problem: "유클리드 거리가 메트릭 공리를 만족함을 확인하세요.",
+            solution:
+              "d(x,y) = √((x₁-y₁)² + ...) ≥ 0 ✓, d(x,x) = 0 ✓, 대칭 ✓, 삼각부등식은 민코프스키 부등식에서 유도 ✓",
+          },
+        ],
+        applications: [
+          { field: "해석학", description: "수렴, 완비성 정의" },
+          { field: "컴퓨터 과학", description: "최근접 이웃 탐색" },
+          { field: "기계학습", description: "거리 기반 분류" },
+        ],
+      },
+      en: {
+        definition:
+          "A metric space is a set with a distance function (metric). An important example of topological spaces where topology is induced by the metric.",
+        formulas: [
+          {
+            latex: "d(x, y) \\geq 0",
+            description: "Non-negativity",
+          },
+          {
+            latex: "d(x, y) = 0 \\Leftrightarrow x = y",
+            description: "Identity",
+          },
+          {
+            latex: "d(x, y) = d(y, x)",
+            description: "Symmetry",
+          },
+          {
+            latex: "d(x, z) \\leq d(x, y) + d(y, z)",
+            description: "Triangle inequality",
+          },
+        ],
+        examples: [
+          {
+            problem: "Verify Euclidean distance satisfies metric axioms.",
+            solution:
+              "d(x,y) = √((x₁-y₁)² + ...) ≥ 0 ✓, d(x,x) = 0 ✓, symmetric ✓, triangle inequality from Minkowski ✓",
+          },
+        ],
+        applications: [
+          { field: "Analysis", description: "Convergence, completeness" },
+          { field: "Computer Science", description: "Nearest neighbor search" },
+          { field: "Machine Learning", description: "Distance-based classification" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["real-numbers"],
+      nextTopics: ["topological-space", "completeness"],
+      related: ["normed-space"],
+    },
+    tags: ["거리공간", "메트릭", "metric space", "distance"],
+  },
+
+  // ===== 10.5 호모토피와 피복공간 =====
+  {
+    id: "homotopy",
+    name: {
+      ko: "호모토피",
+      en: "Homotopy",
+      ja: "ホモトピー",
+    },
+    field: "topology",
+    subfield: "algebraic-topology",
+    difficulty: 5,
+    content: {
+      ko: {
+        definition:
+          "두 연속함수 f, g: X → Y가 호모토픽하다는 것은 f를 g로 연속적으로 변형할 수 있다는 것입니다. 이 관계는 동치관계이며 위상적 성질을 연구하는 데 핵심적입니다.",
+        formulas: [
+          {
+            latex: "H: X \\times [0,1] \\to Y, \\quad H(x,0) = f(x), \\quad H(x,1) = g(x)",
+            description: "호모토피의 정의",
+          },
+          {
+            latex: "f \\simeq g \\text{ (f와 g는 호모토픽)}",
+            description: "호모토피 동치 표기",
+          },
+        ],
+        examples: [
+          {
+            problem: "ℝ²에서 원점을 제외한 두 루프가 호모토픽이 아님을 설명하세요.",
+            solution:
+              "원점을 한 번 감는 루프와 감지 않는 루프는 연속 변형으로 서로 변환 불가능합니다. 기본군이 다른 원소를 나타냅니다.",
+          },
+        ],
+        applications: [
+          { field: "위상수학", description: "공간 분류" },
+          { field: "로봇공학", description: "경로 동치성" },
+          { field: "물리학", description: "양자장론의 위상" },
+        ],
+      },
+      en: {
+        definition:
+          "Two continuous functions f, g: X → Y are homotopic if f can be continuously deformed into g. This equivalence relation is fundamental for studying topological properties.",
+        formulas: [
+          {
+            latex: "H: X \\times [0,1] \\to Y, \\quad H(x,0) = f(x), \\quad H(x,1) = g(x)",
+            description: "Definition of homotopy",
+          },
+          {
+            latex: "f \\simeq g \\text{ (f and g are homotopic)}",
+            description: "Homotopy equivalence notation",
+          },
+        ],
+        examples: [
+          {
+            problem: "Explain why two loops in ℝ² minus origin may not be homotopic.",
+            solution:
+              "A loop winding once around origin cannot be continuously deformed to one not winding. They represent different elements in the fundamental group.",
+          },
+        ],
+        applications: [
+          { field: "Topology", description: "Space classification" },
+          { field: "Robotics", description: "Path equivalence" },
+          { field: "Physics", description: "Topology in QFT" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["continuity-topology", "fundamental-group"],
+      nextTopics: ["homology", "homotopy-groups"],
+      related: ["path-connectedness"],
+    },
+    tags: ["호모토피", "연속변형", "homotopy", "deformation"],
+  },
+  {
+    id: "covering-space",
+    name: {
+      ko: "피복공간",
+      en: "Covering Space",
+      ja: "被覆空間",
+    },
+    field: "topology",
+    subfield: "algebraic-topology",
+    difficulty: 5,
+    content: {
+      ko: {
+        definition:
+          "피복공간은 국소적으로 저공간과 동형인 공간입니다. 피복사상 p: E → B는 각 점의 근방이 E에서 서로소 열린집합들의 합집합으로 균등하게 덮입니다.",
+        formulas: [
+          {
+            latex: "p^{-1}(U) = \\bigsqcup_{\\alpha} V_\\alpha",
+            description: "균등 피복 조건",
+          },
+          {
+            latex: "\\mathbb{R} \\xrightarrow{p} S^1, \\quad p(t) = e^{2\\pi it}",
+            description: "실수직선이 원의 보편피복",
+          },
+        ],
+        examples: [
+          {
+            problem: "ℝ이 S¹의 피복공간임을 설명하세요.",
+            solution:
+              "p(t) = e^{2πit}는 ℝ을 S¹ 위로 사상합니다. S¹의 각 점 근방은 ℝ에서 무한히 많은 구간들로 덮입니다.",
+          },
+        ],
+        applications: [
+          { field: "위상수학", description: "기본군 계산" },
+          { field: "복소해석", description: "다가함수의 리만면" },
+          { field: "물리학", description: "게이지 이론" },
+        ],
+      },
+      en: {
+        definition:
+          "A covering space is locally homeomorphic to the base space. The covering map p: E → B has each point's neighborhood evenly covered by disjoint open sets in E.",
+        formulas: [
+          {
+            latex: "p^{-1}(U) = \\bigsqcup_{\\alpha} V_\\alpha",
+            description: "Evenly covered condition",
+          },
+          {
+            latex: "\\mathbb{R} \\xrightarrow{p} S^1, \\quad p(t) = e^{2\\pi it}",
+            description: "Real line as universal cover of circle",
+          },
+        ],
+        examples: [
+          {
+            problem: "Explain why ℝ is a covering space of S¹.",
+            solution:
+              "p(t) = e^{2πit} maps ℝ onto S¹. Each neighborhood in S¹ is covered by infinitely many intervals in ℝ.",
+          },
+        ],
+        applications: [
+          { field: "Topology", description: "Fundamental group computation" },
+          { field: "Complex Analysis", description: "Riemann surfaces of multi-valued functions" },
+          { field: "Physics", description: "Gauge theory" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["fundamental-group", "homeomorphism"],
+      nextTopics: ["universal-cover", "deck-transformations"],
+      related: ["homotopy"],
+    },
+    tags: ["피복공간", "피복사상", "covering", "space"],
+  },
+  {
+    id: "homology",
+    name: {
+      ko: "호몰로지",
+      en: "Homology",
+      ja: "ホモロジー",
+    },
+    field: "topology",
+    subfield: "algebraic-topology",
+    difficulty: 5,
+    content: {
+      ko: {
+        definition:
+          "호몰로지는 공간의 '구멍'을 대수적으로 측정하는 방법입니다. n차 호몰로지 군 Hₙ(X)는 n차원 구멍(cycle)과 경계의 관계를 나타냅니다.",
+        formulas: [
+          {
+            latex: "H_n(X) = \\ker \\partial_n / \\text{im} \\partial_{n+1}",
+            description: "호몰로지 군의 정의",
+          },
+          {
+            latex: "H_0(S^n) \\cong H_n(S^n) \\cong \\mathbb{Z}, \\quad H_k(S^n) = 0 \\text{ otherwise}",
+            description: "n-구의 호몰로지",
+          },
+        ],
+        examples: [
+          {
+            problem: "토러스 T²의 호몰로지 군을 구하세요.",
+            solution:
+              "H₀(T²) = ℤ (연결), H₁(T²) = ℤ × ℤ (두 개의 독립적 루프), H₂(T²) = ℤ (방향 있는 곡면)",
+          },
+        ],
+        history: {
+          discoveredBy: "에미 뇌터",
+          year: "1920년대",
+          background:
+            "뇌터가 호몰로지를 군론의 관점에서 체계화했습니다.",
+        },
+        applications: [
+          { field: "데이터 과학", description: "위상 데이터 분석 (TDA)" },
+          { field: "물리학", description: "호몰로지 양자장론" },
+          { field: "센서 네트워크", description: "커버리지 분석" },
+        ],
+      },
+      en: {
+        definition:
+          "Homology algebraically measures 'holes' in spaces. The n-th homology group Hₙ(X) captures n-dimensional holes through cycles and boundaries.",
+        formulas: [
+          {
+            latex: "H_n(X) = \\ker \\partial_n / \\text{im} \\partial_{n+1}",
+            description: "Definition of homology group",
+          },
+          {
+            latex: "H_0(S^n) \\cong H_n(S^n) \\cong \\mathbb{Z}, \\quad H_k(S^n) = 0 \\text{ otherwise}",
+            description: "Homology of n-sphere",
+          },
+        ],
+        examples: [
+          {
+            problem: "Find the homology groups of torus T².",
+            solution:
+              "H₀(T²) = ℤ (connected), H₁(T²) = ℤ × ℤ (two independent loops), H₂(T²) = ℤ (orientable surface)",
+          },
+        ],
+        history: {
+          discoveredBy: "Emmy Noether",
+          year: "1920s",
+          background:
+            "Noether systematized homology from a group-theoretic perspective.",
+        },
+        applications: [
+          { field: "Data Science", description: "Topological Data Analysis (TDA)" },
+          { field: "Physics", description: "Homological QFT" },
+          { field: "Sensor Networks", description: "Coverage analysis" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["fundamental-group", "group-theory"],
+      nextTopics: ["cohomology", "betti-numbers"],
+      related: ["euler-characteristic"],
+    },
+    tags: ["호몰로지", "대수적위상", "homology", "algebraic topology"],
+  },
+  {
+    id: "manifold",
+    name: {
+      ko: "다양체",
+      en: "Manifold",
+      ja: "多様体",
+    },
+    field: "topology",
+    subfield: "differential-topology",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "n차원 다양체는 국소적으로 ℝⁿ과 동형인 위상공간입니다. 미분다양체는 추가로 미분 구조를 가져 미적분을 할 수 있습니다.",
+        formulas: [
+          {
+            latex: "\\phi_\\alpha: U_\\alpha \\to \\mathbb{R}^n",
+            description: "좌표 차트",
+          },
+          {
+            latex: "\\phi_\\beta \\circ \\phi_\\alpha^{-1} \\text{ is smooth}",
+            description: "전이 함수의 매끄러움",
+          },
+        ],
+        examples: [
+          {
+            problem: "2차원 구면 S²이 2차원 다양체임을 설명하세요.",
+            solution:
+              "S²의 각 점 근방을 평면의 열린집합으로 동형사상할 수 있습니다. 예: 입체사영으로 북극점을 제외한 부분을 ℝ²로 사상.",
+          },
+        ],
+        applications: [
+          { field: "물리학", description: "일반상대론의 시공간" },
+          { field: "로봇공학", description: "형상공간" },
+          { field: "기계학습", description: "다양체 학습" },
+        ],
+      },
+      en: {
+        definition:
+          "An n-dimensional manifold is locally homeomorphic to ℝⁿ. A differentiable manifold has additional smooth structure enabling calculus.",
+        formulas: [
+          {
+            latex: "\\phi_\\alpha: U_\\alpha \\to \\mathbb{R}^n",
+            description: "Coordinate chart",
+          },
+          {
+            latex: "\\phi_\\beta \\circ \\phi_\\alpha^{-1} \\text{ is smooth}",
+            description: "Smoothness of transition functions",
+          },
+        ],
+        examples: [
+          {
+            problem: "Explain why the 2-sphere S² is a 2-manifold.",
+            solution:
+              "Each neighborhood of S² can be homeomorphically mapped to an open set in the plane. E.g., stereographic projection maps S² minus north pole to ℝ².",
+          },
+        ],
+        applications: [
+          { field: "Physics", description: "Spacetime in general relativity" },
+          { field: "Robotics", description: "Configuration space" },
+          { field: "Machine Learning", description: "Manifold learning" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["topological-space", "homeomorphism"],
+      nextTopics: ["tangent-bundle", "riemannian-manifold"],
+      related: ["metric-space"],
+    },
+    tags: ["다양체", "미분다양체", "manifold", "differential"],
+  },
+  {
+    id: "path-connectedness",
+    name: {
+      ko: "경로연결성",
+      en: "Path Connectedness",
+      ja: "弧状連結性",
+    },
+    field: "topology",
+    subfield: "general-topology",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "공간이 경로연결이라는 것은 임의의 두 점을 연속 경로로 연결할 수 있다는 것입니다. 경로연결이면 연결이지만 역은 성립하지 않습니다.",
+        formulas: [
+          {
+            latex: "\\gamma: [0,1] \\to X, \\quad \\gamma(0) = x, \\quad \\gamma(1) = y",
+            description: "x에서 y로의 경로",
+          },
+        ],
+        examples: [
+          {
+            problem: "위상학자의 사인곡선이 연결이지만 경로연결이 아님을 설명하세요.",
+            solution:
+              "S = {(x, sin(1/x)) : x > 0} ∪ {(0, y) : -1 ≤ y ≤ 1}. 연결이지만 (1,sin1)에서 (0,0)으로 가는 연속 경로는 없습니다.",
+          },
+        ],
+        applications: [
+          { field: "위상수학", description: "공간 분류" },
+          { field: "네트워크", description: "연결성 분석" },
+          { field: "로봇공학", description: "경로 존재성" },
+        ],
+      },
+      en: {
+        definition:
+          "A space is path-connected if any two points can be joined by a continuous path. Path-connected implies connected, but not vice versa.",
+        formulas: [
+          {
+            latex: "\\gamma: [0,1] \\to X, \\quad \\gamma(0) = x, \\quad \\gamma(1) = y",
+            description: "Path from x to y",
+          },
+        ],
+        examples: [
+          {
+            problem: "Explain why topologist's sine curve is connected but not path-connected.",
+            solution:
+              "S = {(x, sin(1/x)) : x > 0} ∪ {(0, y) : -1 ≤ y ≤ 1}. It's connected but no continuous path from (1,sin1) to (0,0) exists.",
+          },
+        ],
+        applications: [
+          { field: "Topology", description: "Space classification" },
+          { field: "Networks", description: "Connectivity analysis" },
+          { field: "Robotics", description: "Path existence" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["connectedness", "continuity-topology"],
+      nextTopics: ["fundamental-group"],
+      related: ["simply-connected"],
+    },
+    tags: ["경로연결", "연결성", "path connected", "connected"],
+  },
 ];
