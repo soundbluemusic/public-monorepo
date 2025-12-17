@@ -1,14 +1,39 @@
+/**
+ * @fileoverview 앱 헤더 컴포넌트
+ *
+ * 모바일 메뉴 버튼, 로고, 테마/언어 토글을 포함합니다.
+ * 스크롤 시 배경이 변경되는 효과가 있습니다.
+ *
+ * @example
+ * ```tsx
+ * // DocsLayout에서 사용
+ * <Header
+ *   onMenuClick={() => setSidebarOpen((v) => !v)}
+ *   isSidebarOpen={sidebarOpen()}
+ * />
+ * ```
+ */
 import { A } from "@solidjs/router";
 import { createSignal, onMount, onCleanup } from "solid-js";
 import { isServer } from "solid-js/web";
 import ThemeToggle from "../ui/ThemeToggle";
 import LanguageToggle from "../ui/LanguageToggle";
 
+/**
+ * 헤더 Props
+ * @property onMenuClick - 모바일 메뉴 버튼 클릭 핸들러
+ * @property isSidebarOpen - 사이드바 열림 상태 (접근성용)
+ */
 interface HeaderProps {
   onMenuClick: () => void;
   isSidebarOpen: boolean;
 }
 
+/**
+ * 앱 헤더 컴포넌트
+ * @component
+ * @returns 고정 헤더 (모바일 메뉴 버튼, 로고, 테마/언어 토글 포함)
+ */
 export default function Header(props: HeaderProps) {
   const [scrolled, setScrolled] = createSignal(false);
 

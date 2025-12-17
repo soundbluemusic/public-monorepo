@@ -1,8 +1,22 @@
-// 순위 관련 타입 정의
-
+/**
+ * @fileoverview 순위 관련 타입 정의
+ *
+ * 오픈소스 라이브러리 순위 시스템을 위한 타입을 정의합니다.
+ * 8가지 기준으로 카테고리별/전체 순위를 제공합니다.
+ */
 import type { OpenSource } from "./opensource";
 
-// 순위 유형
+/**
+ * 순위 기준 유형
+ * - popular: GitHub 스타 기준 인기도
+ * - downloads: npm 주간 다운로드 기준
+ * - lightweight: 번들 크기 작은 순 (경량)
+ * - heavyweight: 번들 크기 큰 순 (중량)
+ * - performance: 벤치마크 점수 기준
+ * - growth: 최근 3개월 스타 증가율
+ * - stability: 최근 업데이트 빈도 (안정성)
+ * - dependency: 의존성 적은 순
+ */
 export type RankingType =
   | "popular"
   | "downloads"
@@ -13,7 +27,15 @@ export type RankingType =
   | "stability"
   | "dependency";
 
-// 순위 유형 정보
+/**
+ * 순위 유형 메타데이터
+ * @property type - 순위 유형 식별자
+ * @property label - 영문 레이블
+ * @property labelKo - 한글 레이블
+ * @property icon - Lucide 아이콘 이름
+ * @property description - 영문 설명
+ * @property descriptionKo - 한글 설명
+ */
 export interface RankingTypeInfo {
   type: RankingType;
   label: string;
@@ -23,6 +45,11 @@ export interface RankingTypeInfo {
   descriptionKo: string;
 }
 
+/**
+ * 순위 유형 목록
+ *
+ * UI에서 순위 필터/탭을 렌더링할 때 사용합니다.
+ */
 export const RANKING_TYPES: RankingTypeInfo[] = [
   {
     type: "popular",
@@ -90,7 +117,14 @@ export const RANKING_TYPES: RankingTypeInfo[] = [
   },
 ];
 
-// 순위 항목
+/**
+ * 개별 순위 항목
+ * @property rank - 현재 순위 (1부터 시작)
+ * @property previousRank - 이전 순위 (순위 변동 표시용, 선택)
+ * @property item - 라이브러리 데이터
+ * @property score - 정규화된 점수 (0-100)
+ * @property rawValue - 정규화 전 원본 값 (예: 스타 수, 다운로드 수)
+ */
 export interface RankingItem {
   rank: number;
   previousRank?: number;
@@ -99,7 +133,14 @@ export interface RankingItem {
   rawValue: number;
 }
 
-// 카테고리별 순위
+/**
+ * 카테고리별 순위
+ * @property categoryId - 카테고리 ID
+ * @property categoryName - 카테고리 표시명
+ * @property type - 순위 기준 유형
+ * @property items - 순위 항목 목록 (순위순 정렬)
+ * @property updatedAt - 순위 갱신 일시 (ISO 8601)
+ */
 export interface CategoryRanking {
   categoryId: string;
   categoryName: string;
@@ -108,7 +149,12 @@ export interface CategoryRanking {
   updatedAt: string;
 }
 
-// 전체 순위
+/**
+ * 전체 순위
+ * @property type - 순위 기준 유형
+ * @property items - 순위 항목 목록 (순위순 정렬)
+ * @property updatedAt - 순위 갱신 일시 (ISO 8601)
+ */
 export interface GlobalRanking {
   type: RankingType;
   items: RankingItem[];

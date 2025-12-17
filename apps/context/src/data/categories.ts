@@ -1,5 +1,27 @@
+/**
+ * @fileoverview 카테고리 데이터 및 유틸리티 함수
+ *
+ * 한국어 단어 카테고리 정의와 색상 관련 유틸리티를 제공합니다.
+ * 각 카테고리는 다국어 이름, 설명, 아이콘, 색상을 가집니다.
+ *
+ * @example
+ * ```tsx
+ * import { categories, getCategoryColor, getCategoryById } from '@/data/categories';
+ *
+ * // 전체 카테고리 렌더링
+ * <For each={categories}>
+ *   {(cat) => (
+ *     <span class={getCategoryColor(cat.color)}>{cat.name[locale()]}</span>
+ *   )}
+ * </For>
+ *
+ * // ID로 카테고리 조회
+ * const greetings = getCategoryById('greetings');
+ * ```
+ */
 import type { Category, CategoryColor } from "./types";
 
+/** 카테고리 목록 (order 기준 정렬) */
 export const categories: Category[] = [
   {
     id: "greetings",
@@ -227,7 +249,19 @@ export const categories: Category[] = [
   },
 ];
 
-// Get category color classes
+/**
+ * 카테고리 색상에 해당하는 Tailwind 클래스 반환
+ *
+ * 라이트/다크 모드 모두 지원하는 배경색과 텍스트색을 반환합니다.
+ *
+ * @param color - 카테고리 색상
+ * @returns Tailwind CSS 클래스 문자열 (예: "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400")
+ *
+ * @example
+ * ```tsx
+ * <span class={getCategoryColor('red')}>카테고리</span>
+ * ```
+ */
 export function getCategoryColor(color: CategoryColor): string {
   const colors: Record<CategoryColor, string> = {
     red: "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400",
@@ -243,7 +277,19 @@ export function getCategoryColor(color: CategoryColor): string {
   return colors[color];
 }
 
-// Get category background color for badges
+/**
+ * 카테고리 배경색 클래스 반환 (단색)
+ *
+ * 배지, 아이콘 배경 등에 사용할 단일 배경색을 반환합니다.
+ *
+ * @param color - 카테고리 색상
+ * @returns Tailwind CSS 배경색 클래스 (예: "bg-red-500")
+ *
+ * @example
+ * ```tsx
+ * <div class={`${getCategoryBgColor('blue')} p-2 rounded`}>아이콘</div>
+ * ```
+ */
 export function getCategoryBgColor(color: CategoryColor): string {
   const colors: Record<CategoryColor, string> = {
     red: "bg-red-500",
@@ -259,7 +305,20 @@ export function getCategoryBgColor(color: CategoryColor): string {
   return colors[color];
 }
 
-// Get category by ID
+/**
+ * ID로 카테고리 조회
+ *
+ * @param id - 카테고리 ID (예: 'greetings', 'emotions')
+ * @returns 카테고리 객체 또는 undefined (미발견 시)
+ *
+ * @example
+ * ```tsx
+ * const category = getCategoryById('greetings');
+ * if (category) {
+ *   console.log(category.name.ko); // '인사'
+ * }
+ * ```
+ */
 export function getCategoryById(id: string): Category | undefined {
   return categories.find((c) => c.id === id);
 }

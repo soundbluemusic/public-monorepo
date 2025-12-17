@@ -1,6 +1,34 @@
+/**
+ * @fileoverview 오프라인 상태 표시 컴포넌트
+ *
+ * 네트워크 연결 상태에 따라 UI를 표시합니다:
+ * - 오프라인: 상단 고정 경고 배너
+ * - 재연결: 우측 상단 토스트 (3초 후 자동 사라짐)
+ *
+ * @example
+ * ```tsx
+ * // 앱의 최상위 레이아웃에서 사용
+ * import { OfflineIndicator } from '@soundblue/shared';
+ *
+ * function App() {
+ *   return (
+ *     <>
+ *       <OfflineIndicator />
+ *       <Router>...</Router>
+ *     </>
+ *   );
+ * }
+ * ```
+ */
 import { Show, createSignal, createEffect } from "solid-js";
 import { useOnlineStatus } from "../hooks/use-online-status";
 
+/**
+ * 오프라인 배너 및 재연결 토스트 컴포넌트
+ *
+ * @component
+ * @returns 오프라인일 때 배너 표시, 재연결 시 토스트 표시 (온라인 상태에서는 아무것도 렌더링하지 않음)
+ */
 export function OfflineIndicator() {
   const { isOnline, wasOffline } = useOnlineStatus();
   const [showReconnected, setShowReconnected] = createSignal(false);
