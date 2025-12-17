@@ -48,20 +48,20 @@ function LoadingFallback() {
 
 export default function App() {
   return (
-    <I18nProvider>
-      <Router
-        root={(props: RouteSectionProps) => (
-          <MetaProvider>
+    <Router
+      root={(props: RouteSectionProps) => (
+        <MetaProvider>
+          <I18nProvider>
             <Title>Permissive - Free Web Dev Resources</Title>
             <OfflineIndicator />
             <Suspense fallback={<LoadingFallback />}>
               {props.children}
             </Suspense>
-          </MetaProvider>
-        )}
-      >
-        <FileRoutes />
-      </Router>
-    </I18nProvider>
+          </I18nProvider>
+        </MetaProvider>
+      )}
+    >
+      <FileRoutes />
+    </Router>
   );
 }
