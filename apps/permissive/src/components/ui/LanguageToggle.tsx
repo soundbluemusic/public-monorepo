@@ -10,7 +10,17 @@ export default function LanguageToggle() {
   return (
     <button
       onClick={toggleLanguage}
-      class="px-2 py-1 text-xs font-medium rounded-md bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+      class="px-2.5 py-1 text-xs font-medium rounded-md transition-colors"
+      style={{
+        "background-color": "var(--bg-tertiary)",
+        color: "var(--text-secondary)"
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.backgroundColor = "var(--border-primary)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.backgroundColor = "var(--bg-tertiary)";
+      }}
       aria-label="Toggle language"
     >
       {locale() === "en" ? "한국어" : "EN"}

@@ -83,9 +83,18 @@ const libraries: Library[] = [
   { name: "Lodash", description: "Modern JavaScript utility library", descriptionKo: "모던 자바스크립트 유틸리티", category: "Utilities", license: "MIT", github: "https://github.com/lodash/lodash", npm: "lodash", stars: "60k" },
   { name: "uuid", description: "Generate RFC-compliant UUIDs", descriptionKo: "RFC 호환 UUID 생성", category: "Utilities", license: "MIT", github: "https://github.com/uuidjs/uuid", npm: "uuid", stars: "15k" },
   { name: "nanoid", description: "Tiny, secure URL-friendly ID", descriptionKo: "작고 안전한 URL 친화적 ID", category: "Utilities", license: "MIT", github: "https://github.com/ai/nanoid", npm: "nanoid", stars: "24k" },
+
+  // Storage
+  { name: "localForage", description: "Offline storage with simple API (localStorage/IndexedDB/WebSQL)", descriptionKo: "간단한 API로 오프라인 스토리지 (localStorage/IndexedDB/WebSQL 통합)", category: "Storage", license: "Apache-2.0", github: "https://github.com/localForage/localForage", npm: "localforage", stars: "25k" },
+  { name: "Dexie.js", description: "Minimalistic IndexedDB wrapper", descriptionKo: "미니멀한 IndexedDB 래퍼", category: "Storage", license: "Apache-2.0", github: "https://github.com/dexie/Dexie.js", npm: "dexie", stars: "11k" },
+  { name: "idb", description: "IndexedDB with promises", descriptionKo: "프로미스 기반 IndexedDB", category: "Storage", license: "ISC", github: "https://github.com/jakearchibald/idb", npm: "idb", stars: "6k" },
+  { name: "idb-keyval", description: "Super simple key-val store using IndexedDB", descriptionKo: "IndexedDB 기반 초간단 키-값 저장소", category: "Storage", license: "Apache-2.0", github: "https://github.com/jakearchibald/idb-keyval", npm: "idb-keyval", stars: "2k" },
+  { name: "PouchDB", description: "Pocket-sized database, syncs with CouchDB", descriptionKo: "CouchDB와 동기화되는 포켓 사이즈 데이터베이스", category: "Storage", license: "Apache-2.0", github: "https://github.com/pouchdb/pouchdb", npm: "pouchdb", stars: "17k" },
+  { name: "RxDB", description: "Reactive database for JavaScript apps", descriptionKo: "자바스크립트 앱을 위한 반응형 데이터베이스", category: "Storage", license: "Apache-2.0", github: "https://github.com/pubkey/rxdb", npm: "rxdb", stars: "21k" },
+  { name: "LokiJS", description: "Fast in-memory database", descriptionKo: "빠른 인메모리 데이터베이스", category: "Storage", license: "MIT", github: "https://github.com/techfort/LokiJS", npm: "lokijs", stars: "7k" },
 ];
 
-const categories = ["All", "Frameworks", "State", "Routing", "Styling", "Build", "Data", "UI", "Animation", "Forms", "Utilities"] as const;
+const categories = ["All", "Frameworks", "State", "Routing", "Styling", "Build", "Data", "UI", "Animation", "Forms", "Utilities", "Storage"] as const;
 
 type CategoryFilter = (typeof categories)[number];
 
@@ -142,10 +151,13 @@ export default function LibrariesPage() {
       <DocsLayout>
         {/* Header */}
         <div class="mb-8">
-          <h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">
+          <h1
+            class="text-3xl font-bold mb-2"
+            style={{ color: "var(--text-primary)" }}
+          >
             Libraries
           </h1>
-          <p class="text-slate-600 dark:text-slate-400">
+          <p style={{ color: "var(--text-secondary)" }}>
             {locale() === "ko"
               ? "MIT 라이센스 오픈소스. 상업적 사용 가능"
               : "MIT licensed open source. Free for commercial use"
@@ -157,7 +169,13 @@ export default function LibrariesPage() {
         <div class="flex flex-col sm:flex-row gap-4 mb-8">
           {/* Search */}
           <div class="relative flex-1">
-            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg
+              class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5"
+              style={{ color: "var(--text-tertiary)" }}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
             <input
@@ -165,7 +183,12 @@ export default function LibrariesPage() {
               placeholder={locale() === "ko" ? "라이브러리 검색..." : "Search libraries..."}
               value={search()}
               onInput={(e) => setSearch(e.currentTarget.value)}
-              class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+              class="w-full pl-10 pr-4 py-2.5 rounded-xl transition-all"
+              style={{
+                "background-color": "var(--bg-elevated)",
+                border: "1px solid var(--border-primary)",
+                color: "var(--text-primary)"
+              }}
             />
           </div>
 
@@ -175,11 +198,11 @@ export default function LibrariesPage() {
               {(cat) => (
                 <button
                   onClick={() => setCategory(cat)}
-                  class={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
-                    category() === cat
-                      ? "bg-primary-500 text-white"
-                      : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700"
-                  }`}
+                  class="px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
+                  style={{
+                    "background-color": category() === cat ? "var(--accent-primary)" : "var(--bg-tertiary)",
+                    color: category() === cat ? "white" : "var(--text-secondary)"
+                  }}
                 >
                   {cat === "All" ? (locale() === "ko" ? "전체" : "All") : cat}
                 </button>
@@ -189,7 +212,7 @@ export default function LibrariesPage() {
         </div>
 
         {/* Results count */}
-        <div class="mb-4 text-sm text-slate-500 dark:text-slate-400">
+        <div class="mb-4 text-sm" style={{ color: "var(--text-tertiary)" }}>
           {filteredLibraries().length} {locale() === "ko" ? "개의 라이브러리" : "libraries"}
         </div>
 
@@ -198,25 +221,46 @@ export default function LibrariesPage() {
           <For each={Object.entries(groupedLibraries())}>
             {([categoryName, libs]) => (
               <section>
-                <h2 class="text-lg font-semibold text-slate-800 dark:text-slate-200 mb-4 pb-2 border-b border-slate-200 dark:border-slate-700">
+                <h2
+                  class="text-lg font-semibold mb-4 pb-2"
+                  style={{ color: "var(--text-primary)", "border-bottom": "1px solid var(--border-primary)" }}
+                >
                   {categoryName}
                 </h2>
                 <div class="grid sm:grid-cols-2 gap-3">
                   <For each={libs}>
                     {(lib) => (
-                      <div class="group p-4 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-primary-300 dark:hover:border-primary-600 hover:shadow-md transition-all bg-white dark:bg-slate-800/50">
+                      <div
+                        class="group p-4 rounded-xl transition-all hover:shadow-md"
+                        style={{
+                          "background-color": "var(--bg-elevated)",
+                          border: "1px solid var(--border-primary)"
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.borderColor = "var(--accent-primary)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.borderColor = "var(--border-primary)";
+                        }}
+                      >
                         <div class="flex items-start justify-between mb-2">
                           <div class="flex items-center gap-2">
-                            <h3 class="font-semibold text-slate-900 dark:text-white">
+                            <h3
+                              class="font-semibold"
+                              style={{ color: "var(--text-primary)" }}
+                            >
                               {lib.name}
                             </h3>
                             <Show when={lib.usedHere}>
-                              <span class="text-xs px-2 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400">
+                              <span
+                                class="text-xs px-2 py-0.5 rounded-full"
+                                style={{ "background-color": "rgba(176, 136, 48, 0.15)", color: "var(--color-warning)" }}
+                              >
                                 {locale() === "ko" ? "사용 중" : "Used here"}
                               </span>
                             </Show>
                           </div>
-                          <div class="flex items-center gap-2 text-xs text-slate-500">
+                          <div class="flex items-center gap-2 text-xs" style={{ color: "var(--text-tertiary)" }}>
                             <span class="flex items-center gap-1">
                               <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
@@ -225,18 +269,21 @@ export default function LibrariesPage() {
                             </span>
                           </div>
                         </div>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-3">
+                        <p class="text-sm mb-3" style={{ color: "var(--text-secondary)" }}>
                           {locale() === "ko" ? lib.descriptionKo : lib.description}
                         </p>
                         <div class="flex items-center gap-3 text-xs">
-                          <span class="px-2 py-0.5 rounded bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400">
+                          <span class="badge-mit">
                             {lib.license}
                           </span>
                           <a
                             href={lib.github}
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
+                            class="transition-colors"
+                            style={{ color: "var(--text-tertiary)" }}
+                            onMouseEnter={(e) => e.currentTarget.style.color = "var(--accent-primary)"}
+                            onMouseLeave={(e) => e.currentTarget.style.color = "var(--text-tertiary)"}
                           >
                             GitHub
                           </a>
@@ -245,7 +292,10 @@ export default function LibrariesPage() {
                               href={`https://www.npmjs.com/package/${lib.npm}`}
                               target="_blank"
                               rel="noopener noreferrer"
-                              class="text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
+                              class="transition-colors"
+                              style={{ color: "var(--text-tertiary)" }}
+                              onMouseEnter={(e) => e.currentTarget.style.color = "var(--accent-primary)"}
+                              onMouseLeave={(e) => e.currentTarget.style.color = "var(--text-tertiary)"}
                             >
                               npm
                             </a>
@@ -264,7 +314,7 @@ export default function LibrariesPage() {
         <Show when={filteredLibraries().length === 0}>
           <div class="text-center py-12">
             <div class="text-4xl mb-4">🔍</div>
-            <p class="text-slate-500 dark:text-slate-400">
+            <p style={{ color: "var(--text-tertiary)" }}>
               {locale() === "ko" ? "검색 결과가 없습니다" : "No results found"}
             </p>
           </div>

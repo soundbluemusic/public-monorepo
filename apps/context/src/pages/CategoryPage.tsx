@@ -4,7 +4,17 @@ import { For, Show, createMemo } from "solid-js";
 import { Layout } from "@/components/Layout";
 import { getCategoryById } from "@/data/categories";
 import { getEntriesByCategory } from "@/data/entries";
+import type { MeaningEntry, Language } from "@/data/types";
 import { useI18n } from "@/i18n";
+
+// Get pronunciation based on locale
+const getPronunciation = (entry: MeaningEntry, locale: Language): string | undefined => {
+  switch (locale) {
+    case "en": return entry.romanization;
+    case "ja": return entry.translations.ja.reading;
+    case "ko": return entry.pronunciation;
+  }
+};
 
 export default function CategoryPage() {
   const params = useParams();
@@ -59,6 +69,7 @@ export default function CategoryPage() {
             <For each={entries()}>
               {(entry) => {
                 const translation = entry.translations[locale()];
+                const pronunciation = getPronunciation(entry, locale());
                 return (
                   <A
                     href={localePath(`/entry/${entry.id}`)}
@@ -69,9 +80,11 @@ export default function CategoryPage() {
                       <span class="text-lg font-medium" style={{ color: "var(--text-primary)" }}>
                         {entry.korean}
                       </span>
-                      <span class="text-sm" style={{ color: "var(--text-tertiary)" }}>
-                        {entry.romanization}
-                      </span>
+                      <Show when={pronunciation}>
+                        <span class="text-sm" style={{ color: "var(--text-tertiary)" }}>
+                          {pronunciation}
+                        </span>
+                      </Show>
                     </div>
                     <span class="text-sm" style={{ color: "var(--text-secondary)" }}>
                       {translation.word}

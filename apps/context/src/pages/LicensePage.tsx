@@ -28,38 +28,40 @@ export default function LicensePage() {
       <div class="space-y-4 leading-relaxed" style={{ color: "var(--text-secondary)" }}>
         <p>
           {locale() === "ko"
-            ? "Context는 MIT 라이선스 하에 배포되는 오픈소스 프로젝트입니다."
+            ? "Context는 Apache License 2.0 하에 배포되는 오픈소스 프로젝트입니다."
             : locale() === "ja"
-            ? "ContextはMITライセンスの下で配布されるオープンソースプロジェクトです。"
-            : "Context is an open source project distributed under the MIT License."}
+            ? "ContextはApache License 2.0の下で配布されるオープンソースプロジェクトです。"
+            : "Context is an open source project distributed under the Apache License 2.0."}
         </p>
 
         <div
           class="p-4 rounded-lg text-sm font-mono"
           style={{ "background-color": "var(--bg-tertiary)" }}
         >
-          <p class="mb-4">MIT License</p>
+          <p class="mb-4">Apache License, Version 2.0</p>
           <p class="mb-4">Copyright (c) 2025 SoundBlueMusic</p>
           <p>
-            Permission is hereby granted, free of charge, to any person obtaining a copy
-            of this software and associated documentation files (the "Software"), to deal
-            in the Software without restriction, including without limitation the rights
-            to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-            copies of the Software, and to permit persons to whom the Software is
-            furnished to do so, subject to the following conditions:
+            Licensed under the Apache License, Version 2.0 (the "License");
+            you may not use this file except in compliance with the License.
+            You may obtain a copy of the License at
           </p>
           <p class="mt-4">
-            The above copyright notice and this permission notice shall be included in all
-            copies or substantial portions of the Software.
+            <a
+              href="http://www.apache.org/licenses/LICENSE-2.0"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline"
+              style={{ color: "var(--accent)" }}
+            >
+              http://www.apache.org/licenses/LICENSE-2.0
+            </a>
           </p>
           <p class="mt-4">
-            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-            IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-            FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-            AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-            LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-            OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-            SOFTWARE.
+            Unless required by applicable law or agreed to in writing, software
+            distributed under the License is distributed on an "AS IS" BASIS,
+            WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+            See the License for the specific language governing permissions and
+            limitations under the License.
           </p>
         </div>
       </div>

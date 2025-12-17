@@ -59,7 +59,7 @@ export default function DocsLayout(props: DocsLayoutProps) {
   const closeSidebar = () => setSidebarOpen(false);
 
   return (
-    <div class="min-h-screen bg-slate-50 dark:bg-slate-900">
+    <div class="min-h-screen" style={{ "background-color": "var(--bg-primary)" }}>
       {/* Skip to content - Accessibility */}
       <a href="#main-content" class="skip-to-content">
         Skip to content
