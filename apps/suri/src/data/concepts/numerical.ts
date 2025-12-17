@@ -363,4 +363,423 @@ export const numericalConcepts: MathConcept[] = [
     },
     tags: ["미분방정식", "오일러", "ODE", "Euler"],
   },
+
+  // ===== 14.4 고급 수치해석 =====
+  {
+    id: "runge-kutta",
+    name: {
+      ko: "룽게-쿠타 방법",
+      en: "Runge-Kutta Methods",
+      ja: "ルンゲ・クッタ法",
+    },
+    field: "numerical",
+    subfield: "ode",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "룽게-쿠타 방법은 미분방정식의 정확한 수치해를 구하는 다단계 방법입니다. RK4(4차)가 가장 널리 사용됩니다.",
+        formulas: [
+          {
+            latex: "k_1 = hf(t_n, y_n)",
+            description: "1단계",
+          },
+          {
+            latex: "k_2 = hf(t_n + h/2, y_n + k_1/2)",
+            description: "2단계",
+          },
+          {
+            latex: "k_3 = hf(t_n + h/2, y_n + k_2/2)",
+            description: "3단계",
+          },
+          {
+            latex: "k_4 = hf(t_n + h, y_n + k_3)",
+            description: "4단계",
+          },
+          {
+            latex: "y_{n+1} = y_n + \\frac{1}{6}(k_1 + 2k_2 + 2k_3 + k_4)",
+            description: "RK4 업데이트",
+          },
+        ],
+        examples: [
+          {
+            problem: "RK4와 오일러 방법의 오차를 비교하세요.",
+            solution:
+              "오일러: O(h) 지역오차, O(1) 전역오차. RK4: O(h⁵) 지역오차, O(h⁴) 전역오차. RK4가 훨씬 정확.",
+          },
+        ],
+        history: {
+          discoveredBy: "칼 룽게, 마르틴 쿠타",
+          year: "1901년",
+          background:
+            "오일러 방법을 정밀하게 개선한 방법입니다.",
+        },
+        applications: [
+          { field: "물리 시뮬레이션", description: "궤도, 진동계" },
+          { field: "컴퓨터 그래픽스", description: "물리 엔진" },
+          { field: "생물학", description: "반응 동역학" },
+        ],
+      },
+      en: {
+        definition:
+          "Runge-Kutta methods are multi-stage methods for accurate numerical ODE solutions. RK4 (4th order) is most widely used.",
+        formulas: [
+          {
+            latex: "k_1 = hf(t_n, y_n)",
+            description: "Stage 1",
+          },
+          {
+            latex: "k_2 = hf(t_n + h/2, y_n + k_1/2)",
+            description: "Stage 2",
+          },
+          {
+            latex: "k_3 = hf(t_n + h/2, y_n + k_2/2)",
+            description: "Stage 3",
+          },
+          {
+            latex: "k_4 = hf(t_n + h, y_n + k_3)",
+            description: "Stage 4",
+          },
+          {
+            latex: "y_{n+1} = y_n + \\frac{1}{6}(k_1 + 2k_2 + 2k_3 + k_4)",
+            description: "RK4 update",
+          },
+        ],
+        examples: [
+          {
+            problem: "Compare error of RK4 vs Euler method.",
+            solution:
+              "Euler: O(h) local, O(1) global error. RK4: O(h⁵) local, O(h⁴) global error. RK4 is much more accurate.",
+          },
+        ],
+        history: {
+          discoveredBy: "Carl Runge, Martin Kutta",
+          year: "1901",
+          background:
+            "A refined improvement over Euler's method.",
+        },
+        applications: [
+          { field: "Physics Simulation", description: "Orbits, oscillators" },
+          { field: "Computer Graphics", description: "Physics engines" },
+          { field: "Biology", description: "Reaction kinetics" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["numerical-ode"],
+      nextTopics: ["adaptive-rk", "stiff-methods"],
+      related: ["taylor-method"],
+    },
+    tags: ["룽게쿠타", "RK4", "Runge-Kutta", "ODE"],
+  },
+  {
+    id: "bisection-method",
+    name: {
+      ko: "이분법",
+      en: "Bisection Method",
+      ja: "二分法",
+    },
+    field: "numerical",
+    subfield: "root-finding",
+    difficulty: 2,
+    content: {
+      ko: {
+        definition:
+          "이분법은 구간을 반으로 나누어 근을 찾는 단순하고 안정적인 방법입니다. 연속함수에서 부호가 바뀌면 근이 존재합니다(중간값 정리).",
+        formulas: [
+          {
+            latex: "c = \\frac{a + b}{2}",
+            description: "중간점 계산",
+          },
+          {
+            latex: "f(a) \\cdot f(c) < 0 \\Rightarrow b = c, \\text{ else } a = c",
+            description: "구간 선택",
+          },
+        ],
+        examples: [
+          {
+            problem: "f(x) = x³ - 2에서 [1, 2] 구간으로 ∛2를 구하세요.",
+            solution:
+              "f(1) = -1 < 0, f(2) = 6 > 0. c = 1.5, f(1.5) = 1.375 > 0. 새 구간 [1, 1.5]. 반복하면 1.26...에 수렴.",
+          },
+        ],
+        applications: [
+          { field: "공학", description: "방정식 근 찾기" },
+          { field: "금융", description: "내부수익률 계산" },
+          { field: "컴퓨터 과학", description: "이진 탐색" },
+        ],
+      },
+      en: {
+        definition:
+          "Bisection method finds roots by halving intervals. Simple and reliable. Sign change in continuous function implies root (IVT).",
+        formulas: [
+          {
+            latex: "c = \\frac{a + b}{2}",
+            description: "Midpoint calculation",
+          },
+          {
+            latex: "f(a) \\cdot f(c) < 0 \\Rightarrow b = c, \\text{ else } a = c",
+            description: "Interval selection",
+          },
+        ],
+        examples: [
+          {
+            problem: "Find ∛2 using f(x) = x³ - 2 on [1, 2].",
+            solution:
+              "f(1) = -1 < 0, f(2) = 6 > 0. c = 1.5, f(1.5) = 1.375 > 0. New interval [1, 1.5]. Iterate to converge to 1.26...",
+          },
+        ],
+        applications: [
+          { field: "Engineering", description: "Equation solving" },
+          { field: "Finance", description: "IRR calculation" },
+          { field: "Computer Science", description: "Binary search" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["continuity"],
+      nextTopics: ["newton-method", "secant-method"],
+      related: ["intermediate-value-theorem"],
+    },
+    tags: ["이분법", "근찾기", "bisection", "root"],
+  },
+  {
+    id: "gauss-elimination",
+    name: {
+      ko: "가우스 소거법",
+      en: "Gaussian Elimination",
+      ja: "ガウス消去法",
+    },
+    field: "numerical",
+    subfield: "linear-systems",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "가우스 소거법은 선형 연립방정식을 행 연산으로 상삼각 형태로 변환하여 푸는 방법입니다. O(n³) 복잡도를 가집니다.",
+        formulas: [
+          {
+            latex: "Ax = b \\rightarrow Ux = c",
+            description: "상삼각행렬로 변환",
+          },
+          {
+            latex: "m_{ij} = \\frac{a_{ij}}{a_{jj}}",
+            description: "승수(multiplier)",
+          },
+        ],
+        examples: [
+          {
+            problem:
+              "2x + y = 5, x - y = 1을 가우스 소거법으로 푸세요.",
+            solution:
+              "행2 -= (1/2)×행1: 2x + y = 5, -3y/2 = -3/2. y = 1, 역대입: x = 2.",
+          },
+        ],
+        applications: [
+          { field: "공학", description: "구조 분석" },
+          { field: "컴퓨터 그래픽스", description: "변환 행렬" },
+          { field: "회로 분석", description: "키르히호프 방정식" },
+        ],
+      },
+      en: {
+        definition:
+          "Gaussian elimination solves linear systems by row operations to upper triangular form. O(n³) complexity.",
+        formulas: [
+          {
+            latex: "Ax = b \\rightarrow Ux = c",
+            description: "Transform to upper triangular",
+          },
+          {
+            latex: "m_{ij} = \\frac{a_{ij}}{a_{jj}}",
+            description: "Multiplier",
+          },
+        ],
+        examples: [
+          {
+            problem:
+              "Solve 2x + y = 5, x - y = 1 using Gaussian elimination.",
+            solution:
+              "Row2 -= (1/2)×Row1: 2x + y = 5, -3y/2 = -3/2. y = 1, back-substitute: x = 2.",
+          },
+        ],
+        applications: [
+          { field: "Engineering", description: "Structural analysis" },
+          { field: "Computer Graphics", description: "Transformation matrices" },
+          { field: "Circuit Analysis", description: "Kirchhoff equations" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["matrix", "linear-algebra"],
+      nextTopics: ["lu-decomposition", "pivoting"],
+      related: ["matrix-inverse"],
+    },
+    tags: ["가우스소거", "선형시스템", "Gaussian", "elimination"],
+  },
+  {
+    id: "least-squares",
+    name: {
+      ko: "최소자승법",
+      en: "Least Squares",
+      ja: "最小二乗法",
+    },
+    field: "numerical",
+    subfield: "approximation",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "최소자승법은 데이터 점들과의 오차 제곱합을 최소화하는 곡선/직선을 찾습니다. 회귀 분석의 기초입니다.",
+        formulas: [
+          {
+            latex: "\\min \\sum_{i=1}^{n} (y_i - f(x_i))^2",
+            description: "최소자승 목적함수",
+          },
+          {
+            latex: "A^T A \\hat{x} = A^T b",
+            description: "정규방정식",
+          },
+        ],
+        examples: [
+          {
+            problem: "점 (0,1), (1,2), (2,4)에 대한 최소자승 직선을 구하세요.",
+            solution:
+              "y = ax + b. A^TAx = A^Tb 풀이. a = 1.5, b = 0.67. 직선: y = 1.5x + 0.67",
+          },
+        ],
+        history: {
+          discoveredBy: "카를 프리드리히 가우스, 아드리앵마리 르장드르",
+          year: "1805-1809년",
+          background:
+            "천문학적 관측 데이터 피팅에 사용되었습니다.",
+        },
+        applications: [
+          { field: "통계학", description: "선형 회귀" },
+          { field: "신호 처리", description: "노이즈 필터링" },
+          { field: "기계학습", description: "모델 피팅" },
+        ],
+      },
+      en: {
+        definition:
+          "Least squares finds curves minimizing sum of squared errors to data points. Foundation of regression analysis.",
+        formulas: [
+          {
+            latex: "\\min \\sum_{i=1}^{n} (y_i - f(x_i))^2",
+            description: "Least squares objective",
+          },
+          {
+            latex: "A^T A \\hat{x} = A^T b",
+            description: "Normal equations",
+          },
+        ],
+        examples: [
+          {
+            problem: "Find least squares line for (0,1), (1,2), (2,4).",
+            solution:
+              "y = ax + b. Solve A^TAx = A^Tb. a = 1.5, b = 0.67. Line: y = 1.5x + 0.67",
+          },
+        ],
+        history: {
+          discoveredBy: "Carl Friedrich Gauss, Adrien-Marie Legendre",
+          year: "1805-1809",
+          background:
+            "Used for fitting astronomical observation data.",
+        },
+        applications: [
+          { field: "Statistics", description: "Linear regression" },
+          { field: "Signal Processing", description: "Noise filtering" },
+          { field: "Machine Learning", description: "Model fitting" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["linear-algebra", "optimization-basics"],
+      nextTopics: ["regularization", "nonlinear-ls"],
+      related: ["regression"],
+    },
+    tags: ["최소자승", "회귀", "least squares", "regression"],
+  },
+  {
+    id: "fft",
+    name: {
+      ko: "고속 푸리에 변환",
+      en: "Fast Fourier Transform",
+      ja: "高速フーリエ変換",
+    },
+    field: "numerical",
+    subfield: "transforms",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "FFT는 이산 푸리에 변환(DFT)을 O(n²)에서 O(n log n)으로 가속하는 알고리즘입니다. 분할정복 전략을 사용합니다.",
+        formulas: [
+          {
+            latex: "X_k = \\sum_{n=0}^{N-1} x_n e^{-2\\pi i kn/N}",
+            description: "DFT 정의",
+          },
+          {
+            latex: "O(N^2) \\rightarrow O(N \\log N)",
+            description: "FFT 복잡도 개선",
+          },
+        ],
+        examples: [
+          {
+            problem: "8-point DFT를 FFT로 계산하는 이점을 설명하세요.",
+            solution:
+              "직접 DFT: 64회 곱셈. FFT: 8×3 = 24회 곱셈. 약 2.7배 빠름. N이 클수록 차이 증가.",
+          },
+        ],
+        history: {
+          discoveredBy: "쿨리, 튜키",
+          year: "1965년",
+          background:
+            "가우스가 비슷한 아이디어를 가졌지만, 쿨리-튜키가 현대적 형태를 제시했습니다.",
+        },
+        applications: [
+          { field: "신호 처리", description: "주파수 분석, 필터링" },
+          { field: "이미지 처리", description: "압축, 필터링" },
+          { field: "오디오", description: "음향 분석, 이퀄라이저" },
+        ],
+      },
+      en: {
+        definition:
+          "FFT accelerates Discrete Fourier Transform from O(n²) to O(n log n) using divide-and-conquer strategy.",
+        formulas: [
+          {
+            latex: "X_k = \\sum_{n=0}^{N-1} x_n e^{-2\\pi i kn/N}",
+            description: "DFT definition",
+          },
+          {
+            latex: "O(N^2) \\rightarrow O(N \\log N)",
+            description: "FFT complexity improvement",
+          },
+        ],
+        examples: [
+          {
+            problem: "Explain benefit of FFT for 8-point DFT.",
+            solution:
+              "Direct DFT: 64 multiplications. FFT: 8×3 = 24 multiplications. About 2.7× faster. Gap grows with N.",
+          },
+        ],
+        history: {
+          discoveredBy: "Cooley, Tukey",
+          year: "1965",
+          background:
+            "Gauss had similar ideas, but Cooley-Tukey presented the modern form.",
+        },
+        applications: [
+          { field: "Signal Processing", description: "Frequency analysis, filtering" },
+          { field: "Image Processing", description: "Compression, filtering" },
+          { field: "Audio", description: "Sound analysis, equalizers" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["complex-numbers", "fourier-series"],
+      nextTopics: ["spectral-analysis", "convolution"],
+      related: ["discrete-fourier"],
+    },
+    tags: ["FFT", "푸리에변환", "fast Fourier", "transform"],
+  },
 ];

@@ -421,4 +421,421 @@ export const appliedConcepts: MathConcept[] = [
     },
     tags: ["암호학", "RSA", "cryptography", "security"],
   },
+
+  // ===== 15.4 고급 응용수학 =====
+  {
+    id: "laplace-transform",
+    name: {
+      ko: "라플라스 변환",
+      en: "Laplace Transform",
+      ja: "ラプラス変換",
+    },
+    field: "applied",
+    subfield: "transforms",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "라플라스 변환은 미분방정식을 대수방정식으로 변환하여 푸는 적분 변환입니다. 제어 이론과 신호 처리에 필수적입니다.",
+        formulas: [
+          {
+            latex: "\\mathcal{L}\\{f(t)\\} = F(s) = \\int_0^{\\infty} f(t) e^{-st} dt",
+            description: "라플라스 변환 정의",
+          },
+          {
+            latex: "\\mathcal{L}\\{f'(t)\\} = sF(s) - f(0)",
+            description: "미분의 라플라스 변환",
+          },
+          {
+            latex: "\\mathcal{L}^{-1}\\{F(s)\\} = f(t)",
+            description: "역라플라스 변환",
+          },
+        ],
+        examples: [
+          {
+            problem: "y' + 2y = e^(-t), y(0) = 1을 라플라스 변환으로 푸세요.",
+            solution:
+              "L{y} = Y. sY - 1 + 2Y = 1/(s+1). Y = (s+2)/((s+1)(s+2)) = 1/(s+1). y(t) = e^(-t)",
+          },
+        ],
+        history: {
+          discoveredBy: "피에르시몽 라플라스",
+          year: "1785년",
+          background:
+            "확률론 연구에서 처음 도입되었습니다.",
+        },
+        applications: [
+          { field: "제어 이론", description: "전달함수 분석" },
+          { field: "전기공학", description: "회로 분석" },
+          { field: "기계공학", description: "진동 분석" },
+        ],
+      },
+      en: {
+        definition:
+          "Laplace transform converts differential equations to algebraic equations. Essential in control theory and signal processing.",
+        formulas: [
+          {
+            latex: "\\mathcal{L}\\{f(t)\\} = F(s) = \\int_0^{\\infty} f(t) e^{-st} dt",
+            description: "Laplace transform definition",
+          },
+          {
+            latex: "\\mathcal{L}\\{f'(t)\\} = sF(s) - f(0)",
+            description: "Laplace transform of derivative",
+          },
+          {
+            latex: "\\mathcal{L}^{-1}\\{F(s)\\} = f(t)",
+            description: "Inverse Laplace transform",
+          },
+        ],
+        examples: [
+          {
+            problem: "Solve y' + 2y = e^(-t), y(0) = 1 using Laplace transform.",
+            solution:
+              "L{y} = Y. sY - 1 + 2Y = 1/(s+1). Y = (s+2)/((s+1)(s+2)) = 1/(s+1). y(t) = e^(-t)",
+          },
+        ],
+        history: {
+          discoveredBy: "Pierre-Simon Laplace",
+          year: "1785",
+          background:
+            "First introduced in probability theory research.",
+        },
+        applications: [
+          { field: "Control Theory", description: "Transfer function analysis" },
+          { field: "Electrical Engineering", description: "Circuit analysis" },
+          { field: "Mechanical Engineering", description: "Vibration analysis" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["integral", "complex-numbers"],
+      nextTopics: ["transfer-function", "z-transform"],
+      related: ["fourier-transform"],
+    },
+    tags: ["라플라스", "변환", "Laplace", "transform"],
+  },
+  {
+    id: "information-theory",
+    name: {
+      ko: "정보 이론",
+      en: "Information Theory",
+      ja: "情報理論",
+    },
+    field: "applied",
+    subfield: "information",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "정보 이론은 정보의 정량화, 저장, 전송을 다룹니다. 엔트로피는 불확실성의 측도이며 데이터 압축의 이론적 한계를 결정합니다.",
+        formulas: [
+          {
+            latex: "H(X) = -\\sum_{i} p_i \\log_2 p_i",
+            description: "샤논 엔트로피",
+          },
+          {
+            latex: "I(X;Y) = H(X) - H(X|Y)",
+            description: "상호 정보량",
+          },
+          {
+            latex: "C = \\max_{p(x)} I(X;Y)",
+            description: "채널 용량",
+          },
+        ],
+        examples: [
+          {
+            problem: "공정한 동전의 엔트로피를 계산하세요.",
+            solution:
+              "H = -(0.5 log₂ 0.5 + 0.5 log₂ 0.5) = -(-0.5 - 0.5) = 1 비트",
+          },
+        ],
+        history: {
+          discoveredBy: "클로드 섀넌",
+          year: "1948년",
+          background:
+            "섀넌이 '통신의 수학적 이론'에서 정보 이론을 창시했습니다.",
+        },
+        applications: [
+          { field: "통신", description: "데이터 압축, 오류 수정" },
+          { field: "기계학습", description: "결정 트리, 특징 선택" },
+          { field: "암호학", description: "완전 비밀" },
+        ],
+      },
+      en: {
+        definition:
+          "Information theory quantifies, stores, and transmits information. Entropy measures uncertainty and determines theoretical limits of data compression.",
+        formulas: [
+          {
+            latex: "H(X) = -\\sum_{i} p_i \\log_2 p_i",
+            description: "Shannon entropy",
+          },
+          {
+            latex: "I(X;Y) = H(X) - H(X|Y)",
+            description: "Mutual information",
+          },
+          {
+            latex: "C = \\max_{p(x)} I(X;Y)",
+            description: "Channel capacity",
+          },
+        ],
+        examples: [
+          {
+            problem: "Calculate entropy of a fair coin.",
+            solution:
+              "H = -(0.5 log₂ 0.5 + 0.5 log₂ 0.5) = -(-0.5 - 0.5) = 1 bit",
+          },
+        ],
+        history: {
+          discoveredBy: "Claude Shannon",
+          year: "1948",
+          background:
+            "Shannon founded information theory in 'A Mathematical Theory of Communication'.",
+        },
+        applications: [
+          { field: "Communications", description: "Data compression, error correction" },
+          { field: "Machine Learning", description: "Decision trees, feature selection" },
+          { field: "Cryptography", description: "Perfect secrecy" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["probability-basics", "logarithm"],
+      nextTopics: ["coding-theory", "channel-coding"],
+      related: ["entropy"],
+    },
+    tags: ["정보이론", "엔트로피", "information", "entropy"],
+  },
+  {
+    id: "machine-learning-math",
+    name: {
+      ko: "기계학습의 수학",
+      en: "Mathematics of Machine Learning",
+      ja: "機械学習の数学",
+    },
+    field: "applied",
+    subfield: "machine-learning",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "기계학습은 데이터에서 패턴을 학습하는 알고리즘입니다. 선형대수, 확률, 최적화, 미적분학이 핵심 수학적 기반입니다.",
+        formulas: [
+          {
+            latex: "\\hat{y} = \\sigma(w^T x + b)",
+            description: "로지스틱 회귀",
+          },
+          {
+            latex: "\\mathcal{L} = -\\sum_i [y_i \\log \\hat{y}_i + (1-y_i) \\log(1-\\hat{y}_i)]",
+            description: "교차 엔트로피 손실",
+          },
+          {
+            latex: "w := w - \\alpha \\nabla_w \\mathcal{L}",
+            description: "경사 하강법 업데이트",
+          },
+        ],
+        examples: [
+          {
+            problem: "편향-분산 트레이드오프를 설명하세요.",
+            solution:
+              "오차 = 편향² + 분산 + 노이즈. 단순 모델: 높은 편향, 낮은 분산. 복잡 모델: 낮은 편향, 높은 분산. 적절한 복잡도 필요.",
+          },
+        ],
+        applications: [
+          { field: "컴퓨터 비전", description: "이미지 분류, 객체 탐지" },
+          { field: "자연어 처리", description: "번역, 감성 분석" },
+          { field: "추천 시스템", description: "개인화 추천" },
+        ],
+      },
+      en: {
+        definition:
+          "Machine learning algorithms learn patterns from data. Linear algebra, probability, optimization, and calculus are core mathematical foundations.",
+        formulas: [
+          {
+            latex: "\\hat{y} = \\sigma(w^T x + b)",
+            description: "Logistic regression",
+          },
+          {
+            latex: "\\mathcal{L} = -\\sum_i [y_i \\log \\hat{y}_i + (1-y_i) \\log(1-\\hat{y}_i)]",
+            description: "Cross-entropy loss",
+          },
+          {
+            latex: "w := w - \\alpha \\nabla_w \\mathcal{L}",
+            description: "Gradient descent update",
+          },
+        ],
+        examples: [
+          {
+            problem: "Explain the bias-variance tradeoff.",
+            solution:
+              "Error = Bias² + Variance + Noise. Simple models: high bias, low variance. Complex models: low bias, high variance. Need appropriate complexity.",
+          },
+        ],
+        applications: [
+          { field: "Computer Vision", description: "Image classification, object detection" },
+          { field: "NLP", description: "Translation, sentiment analysis" },
+          { field: "Recommender Systems", description: "Personalized recommendations" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["linear-algebra", "probability-basics", "gradient-descent"],
+      nextTopics: ["neural-networks", "deep-learning"],
+      related: ["statistics"],
+    },
+    tags: ["기계학습", "딥러닝", "machine learning", "deep learning"],
+  },
+  {
+    id: "signal-processing",
+    name: {
+      ko: "신호 처리",
+      en: "Signal Processing",
+      ja: "信号処理",
+    },
+    field: "applied",
+    subfield: "signal",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "신호 처리는 신호를 분석, 변형, 합성하는 수학적 방법입니다. 필터링, 샘플링, 압축 등을 다룹니다.",
+        formulas: [
+          {
+            latex: "(f * g)(t) = \\int_{-\\infty}^{\\infty} f(\\tau) g(t - \\tau) d\\tau",
+            description: "컨볼루션",
+          },
+          {
+            latex: "f_s > 2 f_{\\max}",
+            description: "나이퀴스트 샘플링 정리",
+          },
+        ],
+        examples: [
+          {
+            problem: "앨리어싱 현상을 설명하세요.",
+            solution:
+              "샘플링 주파수가 신호 주파수의 2배 미만이면 고주파가 저주파로 잘못 나타납니다. 나이퀴스트 정리 위반 결과.",
+          },
+        ],
+        applications: [
+          { field: "오디오", description: "음성 압축, 이퀄라이저" },
+          { field: "이미지", description: "필터, 압축" },
+          { field: "통신", description: "변조, 복조" },
+        ],
+      },
+      en: {
+        definition:
+          "Signal processing analyzes, modifies, and synthesizes signals. Includes filtering, sampling, and compression.",
+        formulas: [
+          {
+            latex: "(f * g)(t) = \\int_{-\\infty}^{\\infty} f(\\tau) g(t - \\tau) d\\tau",
+            description: "Convolution",
+          },
+          {
+            latex: "f_s > 2 f_{\\max}",
+            description: "Nyquist sampling theorem",
+          },
+        ],
+        examples: [
+          {
+            problem: "Explain aliasing.",
+            solution:
+              "When sampling frequency is less than twice the signal frequency, high frequencies appear as low frequencies. Result of violating Nyquist theorem.",
+          },
+        ],
+        applications: [
+          { field: "Audio", description: "Voice compression, equalizers" },
+          { field: "Image", description: "Filters, compression" },
+          { field: "Communications", description: "Modulation, demodulation" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["fourier-series", "complex-analysis-basics"],
+      nextTopics: ["fft", "digital-filters"],
+      related: ["convolution"],
+    },
+    tags: ["신호처리", "필터링", "signal processing", "filter"],
+  },
+  {
+    id: "graph-theory-applied",
+    name: {
+      ko: "그래프 이론 응용",
+      en: "Applied Graph Theory",
+      ja: "応用グラフ理論",
+    },
+    field: "applied",
+    subfield: "networks",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "그래프 이론은 정점과 간선으로 이루어진 구조를 연구합니다. 네트워크, 최단 경로, 연결성 문제에 적용됩니다.",
+        formulas: [
+          {
+            latex: "\\sum_{v \\in V} \\deg(v) = 2|E|",
+            description: "차수 합 정리",
+          },
+          {
+            latex: "d(u, v) = \\min \\text{ path length}",
+            description: "최단 거리",
+          },
+        ],
+        examples: [
+          {
+            problem: "쾨니히스베르크 다리 문제를 설명하세요.",
+            solution:
+              "7개 다리를 모두 한 번씩만 건너는 경로가 있는가? 오일러: 홀수 차수 정점이 3개 이상이면 불가능. 이 그래프는 홀수 차수 4개 → 불가능.",
+          },
+        ],
+        history: {
+          discoveredBy: "레온하르트 오일러",
+          year: "1736년",
+          background:
+            "오일러가 쾨니히스베르크 다리 문제를 풀면서 그래프 이론을 창시했습니다.",
+        },
+        applications: [
+          { field: "소셜 네트워크", description: "영향력 분석, 커뮤니티 탐지" },
+          { field: "물류", description: "최단 경로, TSP" },
+          { field: "컴퓨터 네트워크", description: "라우팅, 토폴로지" },
+        ],
+      },
+      en: {
+        definition:
+          "Graph theory studies structures of vertices and edges. Applied to networks, shortest paths, and connectivity problems.",
+        formulas: [
+          {
+            latex: "\\sum_{v \\in V} \\deg(v) = 2|E|",
+            description: "Handshaking lemma",
+          },
+          {
+            latex: "d(u, v) = \\min \\text{ path length}",
+            description: "Shortest distance",
+          },
+        ],
+        examples: [
+          {
+            problem: "Explain the Königsberg bridge problem.",
+            solution:
+              "Can you cross all 7 bridges exactly once? Euler: impossible if more than 2 odd-degree vertices. This graph has 4 odd-degree → impossible.",
+          },
+        ],
+        history: {
+          discoveredBy: "Leonhard Euler",
+          year: "1736",
+          background:
+            "Euler founded graph theory by solving the Königsberg bridge problem.",
+        },
+        applications: [
+          { field: "Social Networks", description: "Influence analysis, community detection" },
+          { field: "Logistics", description: "Shortest paths, TSP" },
+          { field: "Computer Networks", description: "Routing, topology" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["sets", "combinatorics"],
+      nextTopics: ["network-flow", "graph-algorithms"],
+      related: ["euler-characteristic"],
+    },
+    tags: ["그래프", "네트워크", "graph theory", "networks"],
+  },
 ];
