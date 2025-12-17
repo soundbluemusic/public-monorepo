@@ -1,5 +1,5 @@
-import { createSignal, createContext, useContext, ParentComponent, onMount } from "solid-js";
-import { isServer } from "solid-js/web";
+import { createContext, useContext, createMemo, ParentComponent } from "solid-js";
+import { useLocation, useNavigate } from "@solidjs/router";
 
 type Language = "en" | "ko";
 
@@ -7,7 +7,9 @@ interface I18nContextType {
   locale: () => Language;
   setLocale: (lang: Language) => void;
   t: (key: string) => string;
-  isHydrated: () => boolean;
+  isKorean: () => boolean;
+  isEnglish: () => boolean;
+  localePath: (path: string) => string;
 }
 
 const I18nContext = createContext<I18nContextType>();
@@ -31,11 +33,17 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Common
     "common.all": "All",
+    "common.favorites": "Favorites",
     "common.browse": "Browse",
     "common.noResults": "No results found",
     "common.usedHere": "Used here",
     "common.apis": "APIs",
     "common.libraries": "libraries",
+    "common.support": "Support",
+    "common.license": "License",
+    "common.category": "Category",
+    "common.viewDocs": "View Docs",
+    "common.viewGithub": "GitHub",
   },
   ko: {
     // Home
@@ -55,48 +63,77 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Common
     "common.all": "전체",
+    "common.favorites": "즐겨찾기",
     "common.browse": "둘러보기",
     "common.noResults": "검색 결과가 없습니다",
     "common.usedHere": "사용 중",
     "common.apis": "개의 API",
     "common.libraries": "개의 라이브러리",
+    "common.support": "지원율",
+    "common.license": "라이센스",
+    "common.category": "카테고리",
+    "common.viewDocs": "문서 보기",
+    "common.viewGithub": "GitHub",
   },
 };
 
-export const I18nProvider: ParentComponent = (props) => {
-  // 서버/클라이언트 동일하게 "ko" 기본값 (하이드레이션 불일치 방지)
-  const [locale, setLocaleState] = createSignal<Language>("ko");
-  const [isHydrated, setIsHydrated] = createSignal(false);
+// Extract locale from URL pathname
+function getLocaleFromPath(pathname: string): Language {
+  if (pathname.startsWith("/ko/") || pathname === "/ko") return "ko";
+  return "en"; // Default is English (no prefix)
+}
 
-  // 클라이언트에서만 localStorage 값 적용
-  onMount(() => {
-    const stored = localStorage.getItem("locale");
-    if (stored === "en" || stored === "ko") {
-      setLocaleState(stored);
-    } else {
-      // 브라우저 언어 감지 (영어권이면 en으로)
-      const browserLang = navigator.language.toLowerCase();
-      if (!browserLang.startsWith("ko")) {
-        setLocaleState("en");
-        localStorage.setItem("locale", "en");
-      }
-    }
-    setIsHydrated(true);
+// Remove locale prefix from path
+function stripLocaleFromPath(pathname: string): string {
+  if (pathname.startsWith("/ko/")) return pathname.slice(3) || "/";
+  if (pathname === "/ko") return "/";
+  return pathname;
+}
+
+export const I18nProvider: ParentComponent = (props) => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // Derive locale from URL
+  const locale = createMemo((): Language => {
+    return getLocaleFromPath(location.pathname);
   });
 
+  // Change locale by navigating to new URL
   const setLocale = (lang: Language) => {
-    setLocaleState(lang);
-    if (!isServer) {
-      localStorage.setItem("locale", lang);
+    const currentPath = stripLocaleFromPath(location.pathname);
+    let newPath: string;
+
+    if (lang === "en") {
+      // English has no prefix (default)
+      newPath = currentPath;
+    } else {
+      // Korean has prefix
+      newPath = `/ko${currentPath === "/" ? "" : currentPath}`;
     }
+
+    navigate(newPath);
   };
 
   const t = (key: string): string => {
     return translations[locale()][key] || key;
   };
 
+  const isKorean = () => locale() === "ko";
+  const isEnglish = () => locale() === "en";
+
+  // Generate locale-aware path
+  const localePath = (path: string): string => {
+    const currentLocale = locale();
+    if (currentLocale === "en") {
+      return path; // English has no prefix (default)
+    }
+    // Add locale prefix for ko
+    return `/ko${path === "/" ? "" : path}`;
+  };
+
   return (
-    <I18nContext.Provider value={{ locale, setLocale, t, isHydrated }}>
+    <I18nContext.Provider value={{ locale, setLocale, t, isKorean, isEnglish, localePath }}>
       {props.children}
     </I18nContext.Provider>
   );
@@ -112,3 +149,13 @@ export const useI18n = () => {
 
 export const useLocale = () => useI18n().locale;
 export const useT = () => useI18n().t;
+
+export const languageNames: Record<Language, { native: string; english: string }> = {
+  en: { native: "English", english: "English" },
+  ko: { native: "한국어", english: "Korean" },
+};
+
+export const languageFlags: Record<Language, string> = {
+  en: "EN",
+  ko: "KR",
+};

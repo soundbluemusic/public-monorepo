@@ -147,16 +147,16 @@ const translations: Record<Language, UILabels> = {
 
 // Extract locale from URL pathname
 function getLocaleFromPath(pathname: string): Language {
-  if (pathname.startsWith("/en/") || pathname === "/en") return "en";
+  if (pathname.startsWith("/ko/") || pathname === "/ko") return "ko";
   if (pathname.startsWith("/ja/") || pathname === "/ja") return "ja";
-  return "ko"; // Default is Korean (no prefix)
+  return "en"; // Default is English (no prefix)
 }
 
 // Remove locale prefix from path
 function stripLocaleFromPath(pathname: string): string {
-  if (pathname.startsWith("/en/")) return pathname.slice(3) || "/";
+  if (pathname.startsWith("/ko/")) return pathname.slice(3) || "/";
   if (pathname.startsWith("/ja/")) return pathname.slice(3) || "/";
-  if (pathname === "/en" || pathname === "/ja") return "/";
+  if (pathname === "/ko" || pathname === "/ja") return "/";
   return pathname;
 }
 
@@ -174,11 +174,11 @@ export const I18nProvider: ParentComponent = (props) => {
     const currentPath = stripLocaleFromPath(location.pathname);
     let newPath: string;
 
-    if (lang === "ko") {
-      // Korean has no prefix
+    if (lang === "en") {
+      // English has no prefix (default)
       newPath = currentPath;
     } else {
-      // English and Japanese have prefix
+      // Korean and Japanese have prefix
       newPath = `/${lang}${currentPath === "/" ? "" : currentPath}`;
     }
 
@@ -190,14 +190,15 @@ export const I18nProvider: ParentComponent = (props) => {
   };
 
   const isKorean = () => locale() === "ko";
+  const isEnglish = () => locale() === "en";
 
   // Generate locale-aware path
   const localePath = (path: string): string => {
     const currentLocale = locale();
-    if (currentLocale === "ko") {
-      return path; // Korean has no prefix
+    if (currentLocale === "en") {
+      return path; // English has no prefix (default)
     }
-    // Add locale prefix for en/ja
+    // Add locale prefix for ko/ja
     return `/${currentLocale}${path === "/" ? "" : path}`;
   };
 

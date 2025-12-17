@@ -1,5 +1,5 @@
-# Context - Korean Meaning Dictionary
-# https://context.soundbluemusic.com
+# Permissive - Free Web Dev Tools
+# https://permissive.soundbluemusic.com
 
 # AI Crawlers
 User-agent: GPTBot
@@ -22,4 +22,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://context.soundbluemusic.com/sitemap.xml
+Sitemap: https://permissive.soundbluemusic.com/sitemap.xml

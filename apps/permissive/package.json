@@ -13,7 +13,7 @@
     "data:fetch:github": "tsx scripts/fetch-github-data.ts",
     "data:fetch:bundle": "tsx scripts/fetch-bundlephobia.ts",
     "data:build": "tsx scripts/build-data.ts && tsx scripts/calc-rankings.ts",
-    "sitemap": "tsx scripts/generate-sitemap.ts",
+    "sitemap": "tsx scripts/generate-sitemaps.ts",
     "lint": "biome lint .",
     "lint:fix": "biome lint --write .",
     "format": "biome format --write .",

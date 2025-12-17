@@ -4,7 +4,7 @@ import DocsLayout from "@/components/layout/DocsLayout";
 import { useI18n } from "@/i18n";
 
 export default function NotFound() {
-  const { locale } = useI18n();
+  const { locale, localePath } = useI18n();
   const isKo = () => locale() === "ko";
 
   return (
@@ -32,7 +32,7 @@ export default function NotFound() {
           {/* Actions */}
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <A
-              href="/"
+              href={localePath("/")}
               class="inline-flex items-center justify-center px-6 py-3 bg-primary-500 text-white font-medium rounded-xl hover:bg-primary-600 transition-colors"
             >
               <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -49,14 +49,14 @@ export default function NotFound() {
             </h2>
             <div class="flex flex-wrap gap-4 justify-center">
               <A
-                href="/web-api"
+                href={localePath("/web-api")}
                 class="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
               >
                 <span>🌐</span>
                 <span>Web API</span>
               </A>
               <A
-                href="/libraries"
+                href={localePath("/libraries")}
                 class="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
               >
                 <span>📦</span>

@@ -43,10 +43,10 @@ const navItems: readonly BottomNavItem[] = [
 ];
 
 export default function BottomNav() {
-  const { locale } = useI18n();
+  const { locale, localePath } = useI18n();
   const location = useLocation();
 
-  const isActive = (href: string) => location.pathname === href;
+  const isActive = (href: string) => location.pathname === localePath(href);
 
   return (
     <nav
@@ -61,7 +61,7 @@ export default function BottomNav() {
         <For each={navItems}>
           {(item) => (
             <A
-              href={item.href}
+              href={localePath(item.href)}
               class="flex flex-col items-center justify-center flex-1 h-full gap-0.5 transition-colors"
               style={{
                 color: isActive(item.href) ? "var(--accent-primary)" : "var(--text-tertiary)"
