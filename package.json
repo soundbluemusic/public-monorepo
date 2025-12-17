@@ -6,8 +6,10 @@
   "scripts": {
     "dev:context": "pnpm --filter context dev",
     "dev:permissive": "pnpm --filter permissive dev",
+    "dev:suri": "pnpm --filter suri dev",
     "build:context": "pnpm --filter context build",
     "build:permissive": "pnpm --filter permissive build",
+    "build:suri": "pnpm --filter suri build",
     "lint": "biome lint .",
     "lint:fix": "biome lint --write .",
     "format": "biome format --write .",
