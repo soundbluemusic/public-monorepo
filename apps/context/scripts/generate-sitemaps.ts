@@ -8,8 +8,8 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 // Import data
-import { categories } from "../src/data/categories.js";
-import { meaningEntries } from "../src/data/entries.js";
+import { categories } from "../src/data/categories";
+import { meaningEntries } from "../src/data/entries";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PUBLIC_DIR = join(__dirname, "../public");
