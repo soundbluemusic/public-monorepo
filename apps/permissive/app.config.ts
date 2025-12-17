@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     preset: "static",
     prerender: {
-      routes: ["/", "/web-api", "/libraries"],
+      routes: ["/", "/web-api", "/libraries", "/ko", "/ko/web-api", "/ko/libraries"],
     },
   },
   vite: {
