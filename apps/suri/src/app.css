@@ -1,0 +1,378 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import "tailwindcss";
+
+/* ============================================
+   Suri Math Theme - Morning Mist / Deep Lagoon
+   ============================================ */
+:root {
+  /* Background */
+  --bg-primary: #F7FAFA;
+  --bg-secondary: #EFF5F4;
+  --bg-tertiary: #E5EFEC;
+  --bg-elevated: #FFFFFF;
+
+  /* Text */
+  --text-primary: #2A3836;
+  --text-secondary: #4A5E5A;
+  --text-tertiary: #6B807A;
+
+  /* Accent (Teal) */
+  --accent-primary: #4A9E95;
+  --accent-secondary: #5DAEA2;
+  --accent-tertiary: #7EC4B8;
+  --accent-hover: #3D8880;
+  --accent-mint: #A8E8D8;
+
+  /* Border */
+  --border-primary: #D5E0DD;
+  --border-focus: #4A9E95;
+
+  /* Semantic */
+  --color-error: #C45858;
+  --color-success: #4A9070;
+  --color-warning: #B08830;
+
+  /* Math-specific colors */
+  --math-formula: #3B82F6;
+  --math-formula-bg: #EFF6FF;
+  --math-highlight: #8B5CF6;
+
+  /* Difficulty levels */
+  --difficulty-1: #22C55E;
+  --difficulty-2: #84CC16;
+  --difficulty-3: #EAB308;
+  --difficulty-4: #F97316;
+  --difficulty-5: #EF4444;
+
+  /* Field colors (18 math fields) */
+  --field-foundations: #6366F1;
+  --field-algebra: #8B5CF6;
+  --field-geometry: #EC4899;
+  --field-trigonometry: #F43F5E;
+  --field-analysis: #EF4444;
+  --field-linear-algebra: #F97316;
+  --field-probability: #F59E0B;
+  --field-discrete: #EAB308;
+  --field-number-theory: #84CC16;
+  --field-topology: #22C55E;
+  --field-logic: #10B981;
+  --field-dynamics: #14B8A6;
+  --field-optimization: #06B6D4;
+  --field-numerical: #0EA5E9;
+  --field-applied: #3B82F6;
+  --field-constants: #6366F1;
+  --field-symbols: #8B5CF6;
+  --field-theorems: #A855F7;
+}
+
+.dark {
+  /* Background */
+  --bg-primary: #0F1716;
+  --bg-secondary: #161F1E;
+  --bg-tertiary: #1E2928;
+  --bg-elevated: #253332;
+
+  /* Text */
+  --text-primary: #E5F0EE;
+  --text-secondary: #B0C5C2;
+  --text-tertiary: #8AA5A0;
+
+  /* Accent (Teal) */
+  --accent-primary: #6ECEC5;
+  --accent-secondary: #85D8D0;
+  --accent-tertiary: #9CE4DB;
+  --accent-hover: #85D8D0;
+  --accent-mint: #B0F0E5;
+
+  /* Border */
+  --border-primary: #2E3E3C;
+  --border-focus: #6ECEC5;
+
+  /* Semantic */
+  --color-error: #F0A0A0;
+  --color-success: #90C8A8;
+  --color-warning: #E8C87C;
+
+  /* Math-specific colors (dark) */
+  --math-formula: #60A5FA;
+  --math-formula-bg: #1E3A5F;
+  --math-highlight: #A78BFA;
+}
+
+@theme {
+  /* Theme colors mapped to CSS variables */
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-tertiary: var(--bg-tertiary);
+  --color-bg-elevated: var(--bg-elevated);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-accent-tertiary: var(--accent-tertiary);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-mint: var(--accent-mint);
+
+  --color-border-primary: var(--border-primary);
+  --color-border-focus: var(--border-focus);
+
+  --color-error: var(--color-error);
+  --color-success: var(--color-success);
+  --color-warning: var(--color-warning);
+
+  --color-math-formula: var(--math-formula);
+  --color-math-formula-bg: var(--math-formula-bg);
+  --color-math-highlight: var(--math-highlight);
+
+  /* Fonts */
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--border-primary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-tertiary);
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--accent-mint);
+  color: var(--text-primary);
+}
+
+.dark ::selection {
+  background-color: var(--accent-primary);
+  color: var(--bg-primary);
+}
+
+/* ============================================
+   Skeleton Loading
+   ============================================ */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--bg-tertiary) 25%,
+    var(--bg-secondary) 50%,
+    var(--bg-tertiary) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ============================================
+   Math Components
+   ============================================ */
+
+/* Formula block */
+.formula-block {
+  background-color: var(--math-formula-bg);
+  border-left: 4px solid var(--math-formula);
+  padding: 1rem 1.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  overflow-x: auto;
+}
+
+/* KaTeX overrides */
+.katex {
+  font-size: 1.1em;
+}
+
+.katex-display {
+  margin: 1rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Difficulty badges */
+.badge-difficulty {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-difficulty-1 {
+  background-color: color-mix(in srgb, var(--difficulty-1) 15%, transparent);
+  color: var(--difficulty-1);
+}
+
+.badge-difficulty-2 {
+  background-color: color-mix(in srgb, var(--difficulty-2) 15%, transparent);
+  color: var(--difficulty-2);
+}
+
+.badge-difficulty-3 {
+  background-color: color-mix(in srgb, var(--difficulty-3) 15%, transparent);
+  color: var(--difficulty-3);
+}
+
+.badge-difficulty-4 {
+  background-color: color-mix(in srgb, var(--difficulty-4) 15%, transparent);
+  color: var(--difficulty-4);
+}
+
+.badge-difficulty-5 {
+  background-color: color-mix(in srgb, var(--difficulty-5) 15%, transparent);
+  color: var(--difficulty-5);
+}
+
+/* Relation links */
+.relation-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  transition: background-color 0.2s;
+}
+
+.relation-link:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.relation-prerequisite::before {
+  content: "→";
+  color: var(--color-warning);
+}
+
+.relation-next::before {
+  content: "←";
+  color: var(--color-success);
+}
+
+.relation-related::before {
+  content: "↔";
+  color: var(--accent-primary);
+}
+
+.relation-application::before {
+  content: "⚡";
+  color: var(--math-highlight);
+}
+
+/* ============================================
+   Cards
+   ============================================ */
+.card {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: var(--accent-tertiary);
+}
+
+.card-field {
+  border-top: 3px solid var(--field-color, var(--accent-primary));
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+}
+
+.btn-secondary {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--border-primary);
+}
+
+/* ============================================
+   Accessibility
+   ============================================ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

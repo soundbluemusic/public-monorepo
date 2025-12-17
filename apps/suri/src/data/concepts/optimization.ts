@@ -1,0 +1,380 @@
+/**
+ * @fileoverview 최적화 이론 개념 데이터
+ */
+import type { MathConcept } from "../types";
+
+export const optimizationConcepts: MathConcept[] = [
+  {
+    id: "optimization-basics",
+    name: {
+      ko: "최적화 기초",
+      en: "Optimization Basics",
+      ja: "最適化の基礎",
+    },
+    field: "optimization",
+    subfield: "foundations",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "최적화는 주어진 조건 하에서 목적함수를 최대화하거나 최소화하는 변수 값을 찾는 것입니다.",
+        formulas: [
+          {
+            latex: "\\min_{x} f(x) \\quad \\text{subject to} \\quad g(x) \\leq 0, h(x) = 0",
+            description: "일반적인 최적화 문제",
+          },
+          {
+            latex: "\\nabla f(x^*) = 0",
+            description: "무제약 최적화의 필요조건",
+          },
+        ],
+        examples: [
+          {
+            problem: "f(x) = x² - 4x + 5의 최솟값을 구하세요.",
+            solution:
+              "f'(x) = 2x - 4 = 0에서 x = 2. f''(2) = 2 > 0이므로 최솟값. f(2) = 4 - 8 + 5 = 1",
+          },
+        ],
+        applications: [
+          { field: "기계학습", description: "손실함수 최소화" },
+          { field: "경제학", description: "효용 최대화" },
+          { field: "공학", description: "설계 최적화" },
+        ],
+      },
+      en: {
+        definition:
+          "Optimization is finding variable values that maximize or minimize an objective function under given constraints.",
+        formulas: [
+          {
+            latex: "\\min_{x} f(x) \\quad \\text{subject to} \\quad g(x) \\leq 0, h(x) = 0",
+            description: "General optimization problem",
+          },
+          {
+            latex: "\\nabla f(x^*) = 0",
+            description: "Necessary condition for unconstrained optimization",
+          },
+        ],
+        examples: [
+          {
+            problem: "Find the minimum of f(x) = x² - 4x + 5.",
+            solution:
+              "f'(x) = 2x - 4 = 0 gives x = 2. f''(2) = 2 > 0, so minimum. f(2) = 4 - 8 + 5 = 1",
+          },
+        ],
+        applications: [
+          { field: "Machine Learning", description: "Loss function minimization" },
+          { field: "Economics", description: "Utility maximization" },
+          { field: "Engineering", description: "Design optimization" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["derivative", "gradient"],
+      nextTopics: ["gradient-descent", "lagrange-multipliers"],
+      related: ["calculus"],
+    },
+    tags: ["최적화", "최솟값", "optimization", "minimum"],
+  },
+  {
+    id: "gradient-descent",
+    name: {
+      ko: "경사 하강법",
+      en: "Gradient Descent",
+      ja: "勾配降下法",
+    },
+    field: "optimization",
+    subfield: "algorithms",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "경사 하강법은 함수의 그래디언트(기울기) 반대 방향으로 반복적으로 이동하여 최솟값을 찾는 최적화 알고리즘입니다.",
+        formulas: [
+          {
+            latex: "x_{n+1} = x_n - \\alpha \\nabla f(x_n)",
+            description: "경사 하강법 업데이트 규칙",
+          },
+          {
+            latex: "\\alpha",
+            description: "학습률 (step size)",
+          },
+        ],
+        examples: [
+          {
+            problem: "f(x) = x²에 경사 하강법을 x₀ = 4, α = 0.5로 적용하세요.",
+            solution:
+              "f'(x) = 2x. x₁ = 4 - 0.5(8) = 0. 한 번의 반복으로 최솟값에 도달.",
+          },
+        ],
+        applications: [
+          { field: "딥러닝", description: "신경망 학습" },
+          { field: "기계학습", description: "모델 파라미터 최적화" },
+          { field: "데이터 과학", description: "회귀 분석" },
+        ],
+      },
+      en: {
+        definition:
+          "Gradient descent is an optimization algorithm that iteratively moves in the opposite direction of the gradient to find the minimum.",
+        formulas: [
+          {
+            latex: "x_{n+1} = x_n - \\alpha \\nabla f(x_n)",
+            description: "Gradient descent update rule",
+          },
+          {
+            latex: "\\alpha",
+            description: "Learning rate (step size)",
+          },
+        ],
+        examples: [
+          {
+            problem: "Apply gradient descent to f(x) = x² with x₀ = 4, α = 0.5.",
+            solution:
+              "f'(x) = 2x. x₁ = 4 - 0.5(8) = 0. Reaches minimum in one iteration.",
+          },
+        ],
+        applications: [
+          { field: "Deep Learning", description: "Neural network training" },
+          { field: "Machine Learning", description: "Model parameter optimization" },
+          { field: "Data Science", description: "Regression analysis" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["gradient", "derivative"],
+      nextTopics: ["stochastic-gd", "adam-optimizer"],
+      related: ["backpropagation"],
+    },
+    tags: ["경사하강", "기울기", "gradient descent", "optimization"],
+  },
+  {
+    id: "lagrange-multipliers",
+    name: {
+      ko: "라그랑주 승수법",
+      en: "Lagrange Multipliers",
+      ja: "ラグランジュの未定乗数法",
+    },
+    field: "optimization",
+    subfield: "constrained",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "라그랑주 승수법은 등식 제약 조건이 있는 최적화 문제를 푸는 방법입니다. 제약 조건을 새로운 변수(승수)와 결합합니다.",
+        formulas: [
+          {
+            latex: "\\mathcal{L}(x, \\lambda) = f(x) - \\lambda g(x)",
+            description: "라그랑지안",
+          },
+          {
+            latex: "\\nabla f = \\lambda \\nabla g",
+            description: "최적점에서의 조건",
+          },
+        ],
+        examples: [
+          {
+            problem: "x + y = 10 제약 하에서 xy를 최대화하세요.",
+            solution:
+              "L = xy - λ(x+y-10). ∂L/∂x = y - λ = 0, ∂L/∂y = x - λ = 0. x = y이고 x + y = 10이므로 x = y = 5. 최댓값 = 25",
+          },
+        ],
+        history: {
+          discoveredBy: "조제프루이 라그랑주",
+          year: "1788년",
+          background:
+            "라그랑주가 역학 문제를 풀면서 이 방법을 개발했습니다.",
+        },
+        applications: [
+          { field: "경제학", description: "예산 제약 하 효용 최대화" },
+          { field: "물리학", description: "역학적 제약 조건" },
+          { field: "기계학습", description: "SVM의 최적화" },
+        ],
+      },
+      en: {
+        definition:
+          "Lagrange multipliers method solves optimization problems with equality constraints by combining constraints with new variables (multipliers).",
+        formulas: [
+          {
+            latex: "\\mathcal{L}(x, \\lambda) = f(x) - \\lambda g(x)",
+            description: "Lagrangian",
+          },
+          {
+            latex: "\\nabla f = \\lambda \\nabla g",
+            description: "Condition at optimum",
+          },
+        ],
+        examples: [
+          {
+            problem: "Maximize xy subject to x + y = 10.",
+            solution:
+              "L = xy - λ(x+y-10). ∂L/∂x = y - λ = 0, ∂L/∂y = x - λ = 0. x = y and x + y = 10, so x = y = 5. Maximum = 25",
+          },
+        ],
+        history: {
+          discoveredBy: "Joseph-Louis Lagrange",
+          year: "1788",
+          background:
+            "Lagrange developed this method while solving mechanics problems.",
+        },
+        applications: [
+          { field: "Economics", description: "Utility maximization under budget" },
+          { field: "Physics", description: "Mechanical constraints" },
+          { field: "Machine Learning", description: "SVM optimization" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["gradient", "optimization-basics"],
+      nextTopics: ["kkt-conditions", "convex-optimization"],
+      related: ["multivariable-calculus"],
+    },
+    tags: ["라그랑주", "제약", "Lagrange", "constraint"],
+  },
+  {
+    id: "linear-programming",
+    name: {
+      ko: "선형 계획법",
+      en: "Linear Programming",
+      ja: "線形計画法",
+    },
+    field: "optimization",
+    subfield: "linear",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "선형 계획법은 선형 목적함수를 선형 제약조건 하에서 최적화하는 방법입니다. 심플렉스 알고리즘으로 효율적으로 풀 수 있습니다.",
+        formulas: [
+          {
+            latex: "\\max c^T x \\quad \\text{s.t.} \\quad Ax \\leq b, x \\geq 0",
+            description: "표준형 선형 계획 문제",
+          },
+        ],
+        examples: [
+          {
+            problem:
+              "max 3x + 2y, s.t. x + y ≤ 4, 2x + y ≤ 6, x,y ≥ 0을 푸세요.",
+            solution:
+              "꼭짓점 검사: (0,0)→0, (0,4)→8, (2,2)→10, (3,0)→9. 최적해: (2,2), 최댓값: 10",
+          },
+        ],
+        history: {
+          discoveredBy: "조지 단치그",
+          year: "1947년",
+          background:
+            "단치그가 심플렉스 알고리즘을 개발하여 선형 계획법을 실용적으로 만들었습니다.",
+        },
+        applications: [
+          { field: "운영 연구", description: "자원 배분, 스케줄링" },
+          { field: "물류", description: "운송 최적화" },
+          { field: "금융", description: "포트폴리오 최적화" },
+        ],
+      },
+      en: {
+        definition:
+          "Linear programming optimizes a linear objective function under linear constraints. The simplex algorithm solves it efficiently.",
+        formulas: [
+          {
+            latex: "\\max c^T x \\quad \\text{s.t.} \\quad Ax \\leq b, x \\geq 0",
+            description: "Standard form linear program",
+          },
+        ],
+        examples: [
+          {
+            problem:
+              "Solve max 3x + 2y, s.t. x + y ≤ 4, 2x + y ≤ 6, x,y ≥ 0.",
+            solution:
+              "Check vertices: (0,0)→0, (0,4)→8, (2,2)→10, (3,0)→9. Optimal: (2,2), max: 10",
+          },
+        ],
+        history: {
+          discoveredBy: "George Dantzig",
+          year: "1947",
+          background:
+            "Dantzig developed the simplex algorithm, making linear programming practical.",
+        },
+        applications: [
+          { field: "Operations Research", description: "Resource allocation, scheduling" },
+          { field: "Logistics", description: "Transportation optimization" },
+          { field: "Finance", description: "Portfolio optimization" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["linear-algebra", "inequalities"],
+      nextTopics: ["integer-programming", "duality"],
+      related: ["simplex-algorithm"],
+    },
+    tags: ["선형계획", "심플렉스", "linear programming", "LP"],
+  },
+  {
+    id: "convex-optimization",
+    name: {
+      ko: "볼록 최적화",
+      en: "Convex Optimization",
+      ja: "凸最適化",
+    },
+    field: "optimization",
+    subfield: "convex",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "볼록 최적화는 볼록 집합에서 볼록 함수를 최소화하는 문제입니다. 지역 최솟값이 전역 최솟값이 되어 효율적으로 풀 수 있습니다.",
+        formulas: [
+          {
+            latex: "f(\\theta x + (1-\\theta)y) \\leq \\theta f(x) + (1-\\theta)f(y)",
+            description: "볼록 함수의 정의",
+          },
+          {
+            latex: "\\nabla^2 f(x) \\succeq 0",
+            description: "볼록성의 이계 조건 (헤시안이 양반정치)",
+          },
+        ],
+        examples: [
+          {
+            problem: "f(x) = x²이 볼록함을 보이세요.",
+            solution:
+              "f''(x) = 2 > 0 (항상 양수), 따라서 볼록합니다. 또는: f(θa + (1-θ)b) ≤ θf(a) + (1-θ)f(b)를 직접 확인.",
+          },
+        ],
+        applications: [
+          { field: "기계학습", description: "로지스틱 회귀, SVM" },
+          { field: "신호 처리", description: "필터 설계" },
+          { field: "제어 이론", description: "LQR 제어" },
+        ],
+      },
+      en: {
+        definition:
+          "Convex optimization minimizes a convex function over a convex set. Local minima are global minima, making it efficiently solvable.",
+        formulas: [
+          {
+            latex: "f(\\theta x + (1-\\theta)y) \\leq \\theta f(x) + (1-\\theta)f(y)",
+            description: "Definition of convex function",
+          },
+          {
+            latex: "\\nabla^2 f(x) \\succeq 0",
+            description: "Second-order convexity condition (Hessian PSD)",
+          },
+        ],
+        examples: [
+          {
+            problem: "Show f(x) = x² is convex.",
+            solution:
+              "f''(x) = 2 > 0 (always positive), so convex. Or verify: f(θa + (1-θ)b) ≤ θf(a) + (1-θ)f(b).",
+          },
+        ],
+        applications: [
+          { field: "Machine Learning", description: "Logistic regression, SVM" },
+          { field: "Signal Processing", description: "Filter design" },
+          { field: "Control Theory", description: "LQR control" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["optimization-basics", "linear-algebra"],
+      nextTopics: ["interior-point-methods"],
+      related: ["linear-programming"],
+    },
+    tags: ["볼록", "최적화", "convex", "optimization"],
+  },
+];
