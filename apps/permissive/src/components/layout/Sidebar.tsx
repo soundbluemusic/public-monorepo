@@ -6,6 +6,7 @@ interface SidebarProps {
   isOpen: boolean;        // Mobile: sidebar visible
   isCollapsed: boolean;   // Desktop: sidebar collapsed (icons only)
   isMobile: boolean;
+  isReady: boolean;       // 하이드레이션 완료 여부 (transition 활성화용)
   onClose: () => void;
   onToggleCollapse: () => void;
 }
@@ -78,7 +79,7 @@ export default function Sidebar(props: SidebarProps) {
       {/* Overlay (mobile only) */}
       <Show when={props.isMobile && props.isOpen}>
         <div
-          class="fixed inset-0 z-overlay transition-opacity duration-200"
+          class={`fixed inset-0 z-overlay ${props.isReady ? "transition-opacity duration-200" : ""}`}
           style={{ "background-color": "rgba(15, 23, 22, 0.5)" }}
           onClick={() => props.onClose()}
         />
@@ -86,7 +87,7 @@ export default function Sidebar(props: SidebarProps) {
 
       {/* Sidebar */}
       <aside
-        class="fixed top-0 left-0 h-full z-sidebar flex flex-col transition-all duration-200 ease-out"
+        class={`fixed top-0 left-0 h-full z-sidebar flex flex-col ${props.isReady ? "transition-all duration-200 ease-out" : ""}`}
         style={{
           width: getSidebarWidth(),
           transform: getTransform(),

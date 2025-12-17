@@ -1,4 +1,4 @@
-import { createSignal, createContext, useContext, ParentComponent } from "solid-js";
+import { createSignal, createContext, useContext, ParentComponent, onMount } from "solid-js";
 import { isServer } from "solid-js/web";
 
 type Language = "en" | "ko";
@@ -7,6 +7,7 @@ interface I18nContextType {
   locale: () => Language;
   setLocale: (lang: Language) => void;
   t: (key: string) => string;
+  isHydrated: () => boolean;
 }
 
 const I18nContext = createContext<I18nContextType>();
@@ -63,15 +64,25 @@ const translations: Record<Language, Record<string, string>> = {
 };
 
 export const I18nProvider: ParentComponent = (props) => {
-  const getInitialLocale = (): Language => {
-    if (isServer) return "en";
-    const stored = localStorage.getItem("locale") as Language;
-    if (stored) return stored;
-    const browserLang = navigator.language.toLowerCase();
-    return browserLang.startsWith("ko") ? "ko" : "en";
-  };
+  // 서버/클라이언트 동일하게 "ko" 기본값 (하이드레이션 불일치 방지)
+  const [locale, setLocaleState] = createSignal<Language>("ko");
+  const [isHydrated, setIsHydrated] = createSignal(false);
 
-  const [locale, setLocaleState] = createSignal<Language>(getInitialLocale());
+  // 클라이언트에서만 localStorage 값 적용
+  onMount(() => {
+    const stored = localStorage.getItem("locale") as Language;
+    if (stored && (stored === "en" || stored === "ko")) {
+      setLocaleState(stored);
+    } else {
+      // 브라우저 언어 감지 (영어권이면 en으로)
+      const browserLang = navigator.language.toLowerCase();
+      if (!browserLang.startsWith("ko")) {
+        setLocaleState("en");
+        localStorage.setItem("locale", "en");
+      }
+    }
+    setIsHydrated(true);
+  });
 
   const setLocale = (lang: Language) => {
     setLocaleState(lang);
@@ -85,7 +96,7 @@ export const I18nProvider: ParentComponent = (props) => {
   };
 
   return (
-    <I18nContext.Provider value={{ locale, setLocale, t }}>
+    <I18nContext.Provider value={{ locale, setLocale, t, isHydrated }}>
       {props.children}
     </I18nContext.Provider>
   );
