@@ -19,6 +19,21 @@ export const meaningEntries: MeaningEntry[] = [
           "안녕! 오랜만이야!",
           "안녕, 내일 봐!",
         ],
+        variations: {
+          formal: [
+            "안녕하십니까, 오래간만입니다.",
+            "안녕하세요, 그동안 잘 지내셨어요?",
+          ],
+          casual: [
+            "안녕, 잘 지냈어?",
+            "안녕~ 뭐해?",
+            "야, 안녕!",
+          ],
+          short: [
+            "ㅎㅇ",
+            "안녕~",
+          ],
+        },
       },
       en: {
         word: "Hi / Bye",
@@ -27,6 +42,22 @@ export const meaningEntries: MeaningEntry[] = [
           "안녕! 오랜만이야! - Hi! Long time no see!",
           "안녕, 내일 봐! - Bye, see you tomorrow!",
         ],
+        variations: {
+          formal: [
+            "Hello, it's been a while.",
+            "Good day, how have you been?",
+          ],
+          casual: [
+            "Hey, what's up?",
+            "Hi there!",
+            "Yo, what's going on?",
+          ],
+          short: [
+            "Hi~",
+            "Hey!",
+            "Sup?",
+          ],
+        },
       },
       ja: {
         word: "やあ / じゃあね",
@@ -36,6 +67,21 @@ export const meaningEntries: MeaningEntry[] = [
           "안녕! 오랜만이야! - やあ！久しぶり！",
           "안녕, 내일 봐! - じゃあね、また明日！",
         ],
+        variations: {
+          formal: [
+            "お久しぶりでございます。",
+            "こんにちは、お元気でしたか？",
+          ],
+          casual: [
+            "やあ、元気？",
+            "おっす！何してる？",
+            "よお、久しぶり！",
+          ],
+          short: [
+            "やあ～",
+            "おす！",
+          ],
+        },
       },
     },
   },
@@ -56,6 +102,21 @@ export const meaningEntries: MeaningEntry[] = [
           "안녕하세요, 처음 뵙겠습니다.",
           "안녕하세요! 잘 지내셨어요?",
         ],
+        variations: {
+          formal: [
+            "안녕하십니까, 뵙게 되어 영광입니다.",
+            "안녕하세요, 만나 뵙게 되어 반갑습니다.",
+            "안녕하세요, 오늘 하루도 좋은 하루 되세요.",
+          ],
+          casual: [
+            "안녕, 반가워!",
+            "안녕! 잘 지내?",
+          ],
+          short: [
+            "안녕~",
+            "하이!",
+          ],
+        },
       },
       en: {
         word: "Hello",
@@ -64,6 +125,21 @@ export const meaningEntries: MeaningEntry[] = [
           "안녕하세요, 처음 뵙겠습니다. - Hello, nice to meet you.",
           "안녕하세요! 잘 지내셨어요? - Hello! How have you been?",
         ],
+        variations: {
+          formal: [
+            "Good morning/afternoon, it's a pleasure to meet you.",
+            "Hello, I'm honored to make your acquaintance.",
+            "Greetings, I hope you're doing well.",
+          ],
+          casual: [
+            "Hey! Nice to see you!",
+            "Hi! How's it going?",
+          ],
+          short: [
+            "Hey~",
+            "Hi!",
+          ],
+        },
       },
       ja: {
         word: "こんにちは",
@@ -73,6 +149,21 @@ export const meaningEntries: MeaningEntry[] = [
           "안녕하세요, 처음 뵙겠습니다. - こんにちは、初めまして。",
           "안녕하세요! 잘 지내셨어요? - こんにちは！お元気でしたか？",
         ],
+        variations: {
+          formal: [
+            "おはようございます、お会いできて光栄です。",
+            "こんにちは、お目にかかれて嬉しいです。",
+            "ご機嫌いかがでしょうか。",
+          ],
+          casual: [
+            "やあ！会えて嬉しい！",
+            "おっす！元気？",
+          ],
+          short: [
+            "ちわ～",
+            "やあ！",
+          ],
+        },
       },
     },
   },
@@ -95,6 +186,23 @@ export const meaningEntries: MeaningEntry[] = [
           "도와주셔서 감사합니다.",
           "감사합니다, 좋은 하루 되세요.",
         ],
+        variations: {
+          formal: [
+            "정말 감사드립니다.",
+            "진심으로 감사의 말씀을 드립니다.",
+            "감사합니다, 덕분에 큰 도움이 되었습니다.",
+          ],
+          casual: [
+            "고마워!",
+            "땡큐~",
+            "고마워, 정말 도움이 됐어!",
+          ],
+          short: [
+            "ㄱㅅ",
+            "감사~",
+            "땡스!",
+          ],
+        },
       },
       en: {
         word: "Thank you",
@@ -103,6 +211,23 @@ export const meaningEntries: MeaningEntry[] = [
           "도와주셔서 감사합니다. - Thank you for helping me.",
           "감사합니다, 좋은 하루 되세요. - Thank you, have a nice day.",
         ],
+        variations: {
+          formal: [
+            "I sincerely appreciate your help.",
+            "Thank you very much for your assistance.",
+            "I'm deeply grateful for your kindness.",
+          ],
+          casual: [
+            "Thanks a lot!",
+            "Thanks, you're the best!",
+            "Thank you so much!",
+          ],
+          short: [
+            "Thx!",
+            "Ty!",
+            "Thanks~",
+          ],
+        },
       },
       ja: {
         word: "ありがとうございます",
@@ -112,6 +237,23 @@ export const meaningEntries: MeaningEntry[] = [
           "도와주셔서 감사합니다. - 手伝ってくださりありがとうございます。",
           "감사합니다, 좋은 하루 되세요. - ありがとうございます、良い一日を。",
         ],
+        variations: {
+          formal: [
+            "誠にありがとうございます。",
+            "心より感謝申し上げます。",
+            "ご協力いただき、深く感謝いたします。",
+          ],
+          casual: [
+            "ありがと！",
+            "サンキュー！",
+            "ありがとね、助かったよ！",
+          ],
+          short: [
+            "あざす！",
+            "あり～",
+            "39！",
+          ],
+        },
       },
     },
   },
@@ -131,6 +273,22 @@ export const meaningEntries: MeaningEntry[] = [
         examples: [
           "안녕히 가세요! 조심히 가세요.",
         ],
+        variations: {
+          formal: [
+            "안녕히 가십시오, 좋은 하루 되세요.",
+            "조심히 돌아가세요, 다음에 또 뵙겠습니다.",
+          ],
+          casual: [
+            "잘 가!",
+            "가는 길 조심해~",
+            "나중에 봐!",
+          ],
+          short: [
+            "잘 가~",
+            "바이바이!",
+            "빠이~",
+          ],
+        },
       },
       en: {
         word: "Goodbye (to someone leaving)",
@@ -138,6 +296,22 @@ export const meaningEntries: MeaningEntry[] = [
         examples: [
           "안녕히 가세요! 조심히 가세요. - Goodbye! Be careful on your way.",
         ],
+        variations: {
+          formal: [
+            "Farewell, have a safe journey.",
+            "Goodbye, I hope to see you again soon.",
+          ],
+          casual: [
+            "See ya!",
+            "Take care on your way!",
+            "Later!",
+          ],
+          short: [
+            "Bye~",
+            "Cya!",
+            "Peace!",
+          ],
+        },
       },
       ja: {
         word: "さようなら（去る人へ）",
@@ -146,6 +320,22 @@ export const meaningEntries: MeaningEntry[] = [
         examples: [
           "안녕히 가세요! 조심히 가세요. - さようなら！気をつけて。",
         ],
+        variations: {
+          formal: [
+            "お気をつけてお帰りください。",
+            "またお会いできることを楽しみにしております。",
+          ],
+          casual: [
+            "じゃあね！",
+            "気をつけてね～",
+            "また今度！",
+          ],
+          short: [
+            "バイバイ！",
+            "じゃね～",
+            "ノシ",
+          ],
+        },
       },
     },
   },
@@ -168,6 +358,23 @@ export const meaningEntries: MeaningEntry[] = [
           "사랑해요.",
           "가족의 사랑은 소중해요.",
         ],
+        variations: {
+          formal: [
+            "당신을 진심으로 사랑합니다.",
+            "사랑하고 존경합니다.",
+            "항상 사랑하는 마음 변치 않겠습니다.",
+          ],
+          casual: [
+            "사랑해!",
+            "너무 좋아해~",
+            "나 너 진짜 좋아해.",
+          ],
+          short: [
+            "ㅅㄹㅎ",
+            "사랑행~",
+            "좋아♥",
+          ],
+        },
       },
       en: {
         word: "Love",
@@ -176,6 +383,23 @@ export const meaningEntries: MeaningEntry[] = [
           "사랑해요. - I love you.",
           "가족의 사랑은 소중해요. - Family love is precious.",
         ],
+        variations: {
+          formal: [
+            "I sincerely love you.",
+            "My love and respect for you is eternal.",
+            "You have all my love and devotion.",
+          ],
+          casual: [
+            "Love ya!",
+            "I really like you~",
+            "You mean so much to me!",
+          ],
+          short: [
+            "Luv u!",
+            "ILY",
+            "<3",
+          ],
+        },
       },
       ja: {
         word: "愛",
@@ -185,6 +409,23 @@ export const meaningEntries: MeaningEntry[] = [
           "사랑해요. - 愛しています。",
           "가족의 사랑은 소중해요. - 家族の愛は大切です。",
         ],
+        variations: {
+          formal: [
+            "心から愛しております。",
+            "あなたを深く愛しています。",
+            "永遠に愛を誓います。",
+          ],
+          casual: [
+            "好きだよ！",
+            "大好き～",
+            "めっちゃ好き！",
+          ],
+          short: [
+            "すき♥",
+            "ラブ～",
+            "好き好き！",
+          ],
+        },
       },
     },
   },
@@ -207,6 +448,23 @@ export const meaningEntries: MeaningEntry[] = [
           "행복하세요!",
           "작은 것에서 행복을 찾아요.",
         ],
+        variations: {
+          formal: [
+            "행복하시길 바랍니다.",
+            "모든 일에 행복이 함께하시길 기원합니다.",
+            "항상 행복하고 건강하시길 바랍니다.",
+          ],
+          casual: [
+            "행복해!",
+            "너무 행복해~",
+            "진짜 행복하다!",
+          ],
+          short: [
+            "행복♥",
+            "최고!",
+            "굿굿~",
+          ],
+        },
       },
       en: {
         word: "Happiness",
@@ -215,6 +473,23 @@ export const meaningEntries: MeaningEntry[] = [
           "행복하세요! - Be happy!",
           "작은 것에서 행복을 찾아요. - I find happiness in small things.",
         ],
+        variations: {
+          formal: [
+            "I wish you happiness.",
+            "May happiness be with you always.",
+            "Wishing you all the best and happiness.",
+          ],
+          casual: [
+            "So happy!",
+            "I'm so happy right now~",
+            "This makes me really happy!",
+          ],
+          short: [
+            "Happy♥",
+            "Yay!",
+            ":D",
+          ],
+        },
       },
       ja: {
         word: "幸せ",
@@ -224,6 +499,23 @@ export const meaningEntries: MeaningEntry[] = [
           "행복하세요! - 幸せでありますように！",
           "작은 것에서 행복을 찾아요. - 小さなことに幸せを見つけます。",
         ],
+        variations: {
+          formal: [
+            "ご多幸をお祈り申し上げます。",
+            "いつも幸せでいらっしゃいますように。",
+            "末永くお幸せに。",
+          ],
+          casual: [
+            "幸せ！",
+            "めっちゃ幸せ～",
+            "超ハッピー！",
+          ],
+          short: [
+            "幸せ♥",
+            "最高！",
+            "ハピ～",
+          ],
+        },
       },
     },
   },
