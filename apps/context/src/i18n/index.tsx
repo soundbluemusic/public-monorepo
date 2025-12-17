@@ -1,8 +1,49 @@
+/**
+ * @fileoverview URL 기반 로케일 라우팅 시스템 (ko, en, ja)
+ *
+ * URL 경로에 따라 언어를 결정합니다:
+ * - `/` 또는 `/browse` → 영어 (기본)
+ * - `/ko` 또는 `/ko/browse` → 한국어
+ * - `/ja` 또는 `/ja/browse` → 일본어
+ *
+ * @example
+ * ```tsx
+ * import { I18nProvider, useI18n, useT, useLocale } from '@/i18n';
+ *
+ * // Provider로 감싸기 (Router 내부)
+ * <Router>
+ *   <I18nProvider>
+ *     <App />
+ *   </I18nProvider>
+ * </Router>
+ *
+ * // 컴포넌트 내에서 사용
+ * function Component() {
+ *   const { locale, setLocale, t, localePath } = useI18n();
+ *
+ *   return (
+ *     <div>
+ *       <h1>{t('heroTitle')}</h1>
+ *       <button onClick={() => setLocale('ja')}>日本語</button>
+ *       <a href={localePath('/browse')}>둘러보기</a>
+ *     </div>
+ *   );
+ * }
+ * ```
+ */
 import { createSignal, createContext, useContext, createMemo, ParentComponent } from "solid-js";
 import { useLocation, useNavigate } from "@solidjs/router";
 import { isServer } from "solid-js/web";
 import type { Language, UILabels } from "@/data/types";
 
+/**
+ * i18n 컨텍스트 타입
+ * @property locale - 현재 로케일 반환 함수
+ * @property setLocale - 로케일 변경 (URL 네비게이션 발생)
+ * @property t - 타입 안전한 번역 함수 (UILabels 키만 허용)
+ * @property isKorean - 현재 한국어인지 여부
+ * @property localePath - 현재 로케일에 맞는 경로 생성
+ */
 interface I18nContextType {
   locale: () => Language;
   setLocale: (lang: Language) => void;
@@ -145,14 +186,34 @@ const translations: Record<Language, UILabels> = {
   },
 };
 
-// Extract locale from URL pathname
+/**
+ * URL 경로에서 로케일 추출
+ *
+ * @param pathname - URL 경로 (예: '/ko/browse', '/ja/word/hello')
+ * @returns 추출된 로케일 ('ko' | 'en' | 'ja')
+ *
+ * @example
+ * getLocaleFromPath('/ko/browse')  // 'ko'
+ * getLocaleFromPath('/ja/browse')  // 'ja'
+ * getLocaleFromPath('/browse')     // 'en'
+ */
 function getLocaleFromPath(pathname: string): Language {
   if (pathname.startsWith("/ko/") || pathname === "/ko") return "ko";
   if (pathname.startsWith("/ja/") || pathname === "/ja") return "ja";
   return "en"; // Default is English (no prefix)
 }
 
-// Remove locale prefix from path
+/**
+ * URL 경로에서 로케일 프리픽스 제거
+ *
+ * @param pathname - 로케일이 포함된 URL 경로
+ * @returns 로케일이 제거된 순수 경로
+ *
+ * @example
+ * stripLocaleFromPath('/ko/browse')  // '/browse'
+ * stripLocaleFromPath('/ja')         // '/'
+ * stripLocaleFromPath('/browse')     // '/browse'
+ */
 function stripLocaleFromPath(pathname: string): string {
   if (pathname.startsWith("/ko/")) return pathname.slice(3) || "/";
   if (pathname.startsWith("/ja/")) return pathname.slice(3) || "/";
@@ -160,25 +221,35 @@ function stripLocaleFromPath(pathname: string): string {
   return pathname;
 }
 
+/**
+ * i18n 컨텍스트 프로바이더
+ *
+ * 앱의 최상위에서 Router 내부에 배치해야 합니다.
+ *
+ * @example
+ * ```tsx
+ * <Router>
+ *   <I18nProvider>
+ *     <Routes>...</Routes>
+ *   </I18nProvider>
+ * </Router>
+ * ```
+ */
 export const I18nProvider: ParentComponent = (props) => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Derive locale from URL
   const locale = createMemo((): Language => {
     return getLocaleFromPath(location.pathname);
   });
 
-  // Change locale by navigating to new URL
   const setLocale = (lang: Language) => {
     const currentPath = stripLocaleFromPath(location.pathname);
     let newPath: string;
 
     if (lang === "en") {
-      // English has no prefix (default)
       newPath = currentPath;
     } else {
-      // Korean and Japanese have prefix
       newPath = `/${lang}${currentPath === "/" ? "" : currentPath}`;
     }
 
@@ -192,13 +263,11 @@ export const I18nProvider: ParentComponent = (props) => {
   const isKorean = () => locale() === "ko";
   const isEnglish = () => locale() === "en";
 
-  // Generate locale-aware path
   const localePath = (path: string): string => {
     const currentLocale = locale();
     if (currentLocale === "en") {
-      return path; // English has no prefix (default)
+      return path;
     }
-    // Add locale prefix for ko/ja
     return `/${currentLocale}${path === "/" ? "" : path}`;
   };
 
@@ -209,6 +278,12 @@ export const I18nProvider: ParentComponent = (props) => {
   );
 };
 
+/**
+ * i18n 컨텍스트 훅
+ *
+ * @returns I18nContextType 객체 (locale, setLocale, t, isKorean, localePath)
+ * @throws I18nProvider 외부에서 호출 시 에러
+ */
 export const useI18n = () => {
   const context = useContext(I18nContext);
   if (!context) {
@@ -217,15 +292,26 @@ export const useI18n = () => {
   return context;
 };
 
+/**
+ * 현재 로케일만 반환하는 훅
+ * @returns 현재 로케일을 반환하는 시그널 함수
+ */
 export const useLocale = () => useI18n().locale;
+
+/**
+ * 번역 함수만 반환하는 훅
+ * @returns UILabels 키를 받아 번역된 문자열을 반환하는 함수
+ */
 export const useT = () => useI18n().t;
 
+/** 언어별 표시 이름 */
 export const languageNames: Record<Language, { native: string; english: string }> = {
   ko: { native: "한국어", english: "Korean" },
   en: { native: "English", english: "English" },
   ja: { native: "日本語", english: "Japanese" },
 };
 
+/** 언어별 국가 코드 */
 export const languageFlags: Record<Language, string> = {
   ko: "KR",
   en: "EN",

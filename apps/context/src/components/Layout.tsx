@@ -1,3 +1,22 @@
+/**
+ * @fileoverview 메인 레이아웃 컴포넌트
+ *
+ * 검색, 다크모드, 언어 전환, 키보드 단축키를 포함한 앱 레이아웃입니다.
+ *
+ * ## 기능
+ * - **검색**: 실시간 필터링, 키보드 네비게이션 (↑↓, Enter, Esc)
+ * - **다크모드**: localStorage에 설정 저장, 시스템 설정 fallback
+ * - **키보드 단축키**: Cmd/Ctrl+K로 검색창 포커스
+ *
+ * @example
+ * ```tsx
+ * import { Layout } from '@/components/Layout';
+ *
+ * <Layout>
+ *   <HomePage />
+ * </Layout>
+ * ```
+ */
 import { createSignal, createEffect, onMount, onCleanup, For, Show, type ParentComponent } from "solid-js";
 import { A, useLocation, useNavigate } from "@solidjs/router";
 import { useI18n } from "@/i18n";
@@ -10,7 +29,9 @@ const languages: { code: Language; label: string }[] = [
   { code: "ja", label: "日本語" },
 ];
 
-// Strip locale prefix from path for comparison
+/**
+ * 경로에서 로케일 프리픽스 제거 (비교용)
+ */
 function stripLocale(pathname: string): string {
   if (pathname.startsWith("/en/")) return pathname.slice(3);
   if (pathname.startsWith("/ja/")) return pathname.slice(3);
@@ -18,6 +39,14 @@ function stripLocale(pathname: string): string {
   return pathname;
 }
 
+/**
+ * 메인 레이아웃 컴포넌트
+ *
+ * 헤더(검색, 네비게이션, 언어/테마 토글), 메인 콘텐츠, 푸터를 포함합니다.
+ *
+ * @component
+ * @param props.children - 메인 콘텐츠 영역에 렌더링될 자식 컴포넌트
+ */
 export const Layout: ParentComponent = (props) => {
   const { locale, setLocale, t, localePath } = useI18n();
   const location = useLocation();

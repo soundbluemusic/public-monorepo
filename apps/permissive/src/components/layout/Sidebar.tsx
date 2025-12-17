@@ -1,12 +1,40 @@
+/**
+ * @fileoverview 반응형 사이드바 컴포넌트
+ *
+ * 모바일과 데스크톱에서 다른 동작을 합니다:
+ * - 모바일: 슬라이드 오버레이 (isOpen으로 제어)
+ * - 데스크톱: 접기/펼치기 (isCollapsed로 제어)
+ *
+ * @example
+ * ```tsx
+ * <Sidebar
+ *   isOpen={sidebarOpen()}
+ *   isCollapsed={sidebarCollapsed()}
+ *   isMobile={isMobile()}
+ *   isReady={isReady()}
+ *   onClose={() => setSidebarOpen(false)}
+ *   onToggleCollapse={() => setSidebarCollapsed((v) => !v)}
+ * />
+ * ```
+ */
 import { Show, For } from "solid-js";
 import { A, useLocation } from "@solidjs/router";
 import { useI18n } from "@/i18n";
 
+/**
+ * 사이드바 Props
+ * @property isOpen - 모바일에서 사이드바 표시 여부
+ * @property isCollapsed - 데스크톱에서 접힘 상태 (아이콘만 표시)
+ * @property isMobile - 모바일 뷰포트 여부
+ * @property isReady - 하이드레이션 완료 여부 (트랜지션 활성화용)
+ * @property onClose - 사이드바 닫기 콜백 (모바일)
+ * @property onToggleCollapse - 접기/펼치기 토글 콜백 (데스크톱)
+ */
 interface SidebarProps {
-  isOpen: boolean;        // Mobile: sidebar visible
-  isCollapsed: boolean;   // Desktop: sidebar collapsed (icons only)
+  isOpen: boolean;
+  isCollapsed: boolean;
   isMobile: boolean;
-  isReady: boolean;       // 하이드레이션 완료 여부 (transition 활성화용)
+  isReady: boolean;
   onClose: () => void;
   onToggleCollapse: () => void;
 }
@@ -52,26 +80,41 @@ const quickLinks: QuickLinksConfig = {
   ],
 } as const;
 
+/**
+ * 반응형 사이드바 컴포넌트
+ * @component
+ * @returns 모바일에서는 오버레이 사이드바, 데스크톱에서는 고정 사이드바
+ */
 export default function Sidebar(props: SidebarProps) {
   const { locale, localePath } = useI18n();
   const location = useLocation();
 
   const isActive = (href: string) => location.pathname === localePath(href);
 
-  // Determine sidebar width based on state
+  /**
+   * 상태에 따른 사이드바 너비 계산
+   * - 모바일: 항상 전체 너비 (--sidebar-width)
+   * - 데스크톱 펼침: --sidebar-width
+   * - 데스크톱 접힘: --sidebar-collapsed-width
+   */
   const getSidebarWidth = () => {
     if (props.isMobile) {
-      return "var(--sidebar-width)"; // Always full width on mobile
+      return "var(--sidebar-width)";
     }
     return props.isCollapsed ? "var(--sidebar-collapsed-width)" : "var(--sidebar-width)";
   };
 
-  // Determine transform for mobile slide
+  /**
+   * 모바일 슬라이드 애니메이션용 transform 계산
+   * - 모바일 열림: translateX(0)
+   * - 모바일 닫힘: translateX(-100%)
+   * - 데스크톱: 항상 translateX(0)
+   */
   const getTransform = () => {
     if (props.isMobile) {
       return props.isOpen ? "translateX(0)" : "translateX(-100%)";
     }
-    return "translateX(0)"; // Always visible on desktop
+    return "translateX(0)";
   };
 
   return (
