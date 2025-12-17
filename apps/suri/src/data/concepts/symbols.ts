@@ -526,4 +526,336 @@ export const symbolsConcepts: MathConcept[] = [
     },
     tags: ["나블라", "벡터미분", "nabla", "del"],
   },
+
+  // ===== 17.4 추가 수학 기호 =====
+  {
+    id: "integral-symbol",
+    name: {
+      ko: "적분 기호 ∫",
+      en: "Integral Symbol (∫)",
+      ja: "積分記号 ∫",
+    },
+    field: "symbols",
+    subfield: "calculus",
+    difficulty: 2,
+    content: {
+      ko: {
+        definition:
+          "∫는 적분을 나타내는 기호로, 라틴어 'summa'(합)의 S에서 유래했습니다. 연속적인 합, 면적, 누적량을 계산합니다.",
+        formulas: [
+          {
+            latex: "\\int f(x) dx",
+            description: "부정적분",
+          },
+          {
+            latex: "\\int_a^b f(x) dx",
+            description: "정적분",
+          },
+          {
+            latex: "\\iint f(x,y) dA, \\quad \\iiint f(x,y,z) dV",
+            description: "이중/삼중 적분",
+          },
+          {
+            latex: "\\oint f(z) dz",
+            description: "폐곡선 적분",
+          },
+        ],
+        examples: [
+          {
+            problem: "∫x² dx를 계산하세요.",
+            solution: "∫x² dx = x³/3 + C",
+          },
+        ],
+        history: {
+          discoveredBy: "고트프리트 라이프니츠",
+          year: "1675년",
+          background:
+            "라이프니츠가 S를 길게 늘인 모양으로 합의 연속화를 표현했습니다.",
+        },
+        applications: [
+          { field: "물리학", description: "일, 에너지, 면적" },
+          { field: "통계학", description: "확률밀도의 누적" },
+          { field: "공학", description: "신호 적분" },
+        ],
+      },
+      en: {
+        definition:
+          "∫ represents integration, derived from Latin 'summa' (sum). Calculates continuous sums, areas, and accumulated quantities.",
+        formulas: [
+          {
+            latex: "\\int f(x) dx",
+            description: "Indefinite integral",
+          },
+          {
+            latex: "\\int_a^b f(x) dx",
+            description: "Definite integral",
+          },
+          {
+            latex: "\\iint f(x,y) dA, \\quad \\iiint f(x,y,z) dV",
+            description: "Double/triple integrals",
+          },
+          {
+            latex: "\\oint f(z) dz",
+            description: "Contour integral",
+          },
+        ],
+        examples: [
+          {
+            problem: "Calculate ∫x² dx.",
+            solution: "∫x² dx = x³/3 + C",
+          },
+        ],
+        history: {
+          discoveredBy: "Gottfried Leibniz",
+          year: "1675",
+          background:
+            "Leibniz elongated S to represent the continuous version of summation.",
+        },
+        applications: [
+          { field: "Physics", description: "Work, energy, area" },
+          { field: "Statistics", description: "Cumulative probability" },
+          { field: "Engineering", description: "Signal integration" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: [],
+      nextTopics: ["fundamental-theorem-calculus", "integration-techniques"],
+      related: ["summation-notation", "derivative"],
+    },
+    tags: ["적분", "미적분", "integral", "calculus"],
+  },
+  {
+    id: "forall-exists",
+    name: {
+      ko: "양화 기호 ∀, ∃",
+      en: "Quantifiers (∀, ∃)",
+      ja: "量化記号 ∀, ∃",
+    },
+    field: "symbols",
+    subfield: "logic",
+    difficulty: 2,
+    content: {
+      ko: {
+        definition:
+          "∀(전칭 양화사)는 '모든'을, ∃(존재 양화사)는 '존재한다'를 나타냅니다. 술어 논리의 기본 기호입니다.",
+        formulas: [
+          {
+            latex: "\\forall x \\, P(x)",
+            description: "모든 x에 대해 P(x)가 참",
+          },
+          {
+            latex: "\\exists x \\, P(x)",
+            description: "P(x)를 만족하는 x가 존재",
+          },
+          {
+            latex: "\\neg(\\forall x \\, P(x)) \\equiv \\exists x \\, \\neg P(x)",
+            description: "드모르간 유사 법칙",
+          },
+        ],
+        examples: [
+          {
+            problem: "'모든 짝수는 2의 배수이다'를 기호로 표현하세요.",
+            solution: "∀n (짝수(n) → 2|n) 또는 ∀n ∈ 짝수: 2|n",
+          },
+        ],
+        applications: [
+          { field: "수학기초론", description: "공리, 정리 표현" },
+          { field: "프로그래밍", description: "루프 불변식" },
+          { field: "형식 검증", description: "명세 작성" },
+        ],
+      },
+      en: {
+        definition:
+          "∀ (universal quantifier) means 'for all', ∃ (existential quantifier) means 'there exists'. Basic symbols of predicate logic.",
+        formulas: [
+          {
+            latex: "\\forall x \\, P(x)",
+            description: "P(x) is true for all x",
+          },
+          {
+            latex: "\\exists x \\, P(x)",
+            description: "There exists x such that P(x)",
+          },
+          {
+            latex: "\\neg(\\forall x \\, P(x)) \\equiv \\exists x \\, \\neg P(x)",
+            description: "De Morgan-like law",
+          },
+        ],
+        examples: [
+          {
+            problem: "Express 'all even numbers are multiples of 2' symbolically.",
+            solution: "∀n (even(n) → 2|n) or ∀n ∈ Evens: 2|n",
+          },
+        ],
+        applications: [
+          { field: "Foundations", description: "Expressing axioms, theorems" },
+          { field: "Programming", description: "Loop invariants" },
+          { field: "Formal Verification", description: "Specification" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: [],
+      nextTopics: ["predicate-logic"],
+      related: ["propositional-logic"],
+    },
+    tags: ["양화사", "논리", "quantifier", "logic"],
+  },
+  {
+    id: "implies-iff",
+    name: {
+      ko: "함의와 동치 ⇒, ⇔",
+      en: "Implication and Equivalence",
+      ja: "含意と同値 ⇒, ⇔",
+    },
+    field: "symbols",
+    subfield: "logic",
+    difficulty: 2,
+    content: {
+      ko: {
+        definition:
+          "⇒(함의)는 'A이면 B'를, ⇔(동치)는 'A와 B가 필요충분'임을 나타냅니다. 논리와 증명의 핵심 기호입니다.",
+        formulas: [
+          {
+            latex: "P \\Rightarrow Q",
+            description: "P이면 Q (P가 참이면 Q도 참)",
+          },
+          {
+            latex: "P \\Leftrightarrow Q",
+            description: "P와 Q가 동치 (P ⇔ Q는 (P⇒Q) ∧ (Q⇒P))",
+          },
+          {
+            latex: "P \\Rightarrow Q \\equiv \\neg P \\lor Q",
+            description: "함의의 정의",
+          },
+        ],
+        examples: [
+          {
+            problem: "'x가 짝수이면 x²도 짝수이다'의 역과 대우를 쓰세요.",
+            solution:
+              "역: x²가 짝수이면 x도 짝수 (참). 대우: x²가 홀수이면 x도 홀수 (원명제와 동치).",
+          },
+        ],
+        applications: [
+          { field: "수학", description: "정리 증명" },
+          { field: "프로그래밍", description: "조건문 논리" },
+          { field: "철학", description: "논증 분석" },
+        ],
+      },
+      en: {
+        definition:
+          "⇒ (implication) means 'if A then B', ⇔ (equivalence) means 'A if and only if B'. Core symbols for logic and proofs.",
+        formulas: [
+          {
+            latex: "P \\Rightarrow Q",
+            description: "If P then Q (P true implies Q true)",
+          },
+          {
+            latex: "P \\Leftrightarrow Q",
+            description: "P and Q are equivalent (P⇔Q means (P⇒Q)∧(Q⇒P))",
+          },
+          {
+            latex: "P \\Rightarrow Q \\equiv \\neg P \\lor Q",
+            description: "Definition of implication",
+          },
+        ],
+        examples: [
+          {
+            problem: "Write converse and contrapositive of 'if x is even, x² is even'.",
+            solution:
+              "Converse: if x² is even, x is even (true). Contrapositive: if x² is odd, x is odd (equivalent to original).",
+          },
+        ],
+        applications: [
+          { field: "Mathematics", description: "Theorem proving" },
+          { field: "Programming", description: "Conditional logic" },
+          { field: "Philosophy", description: "Argument analysis" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: [],
+      nextTopics: ["propositional-logic", "proof-methods"],
+      related: ["truth-tables"],
+    },
+    tags: ["함의", "동치", "implication", "equivalence"],
+  },
+  {
+    id: "factorial-binomial",
+    name: {
+      ko: "팩토리얼과 이항계수",
+      en: "Factorial and Binomial Coefficients",
+      ja: "階乗と二項係数",
+    },
+    field: "symbols",
+    subfield: "combinatorics",
+    difficulty: 2,
+    content: {
+      ko: {
+        definition:
+          "n!(팩토리얼)은 1부터 n까지의 곱, (n k)는 n개에서 k개를 선택하는 조합의 수입니다.",
+        formulas: [
+          {
+            latex: "n! = n \\times (n-1) \\times ... \\times 2 \\times 1",
+            description: "팩토리얼",
+          },
+          {
+            latex: "\\binom{n}{k} = \\frac{n!}{k!(n-k)!}",
+            description: "이항계수",
+          },
+          {
+            latex: "(a+b)^n = \\sum_{k=0}^{n} \\binom{n}{k} a^{n-k} b^k",
+            description: "이항정리",
+          },
+        ],
+        examples: [
+          {
+            problem: "5명 중 2명을 선택하는 경우의 수는?",
+            solution: "C(5,2) = 5!/(2!×3!) = 120/(2×6) = 10가지",
+          },
+        ],
+        applications: [
+          { field: "확률론", description: "이항분포" },
+          { field: "조합론", description: "경우의 수" },
+          { field: "알고리즘", description: "동적 프로그래밍" },
+        ],
+      },
+      en: {
+        definition:
+          "n! (factorial) is product 1 to n, (n k) (binomial coefficient) is the number of ways to choose k from n items.",
+        formulas: [
+          {
+            latex: "n! = n \\times (n-1) \\times ... \\times 2 \\times 1",
+            description: "Factorial",
+          },
+          {
+            latex: "\\binom{n}{k} = \\frac{n!}{k!(n-k)!}",
+            description: "Binomial coefficient",
+          },
+          {
+            latex: "(a+b)^n = \\sum_{k=0}^{n} \\binom{n}{k} a^{n-k} b^k",
+            description: "Binomial theorem",
+          },
+        ],
+        examples: [
+          {
+            problem: "How many ways to choose 2 from 5 people?",
+            solution: "C(5,2) = 5!/(2!×3!) = 120/(2×6) = 10 ways",
+          },
+        ],
+        applications: [
+          { field: "Probability", description: "Binomial distribution" },
+          { field: "Combinatorics", description: "Counting" },
+          { field: "Algorithms", description: "Dynamic programming" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["product-notation"],
+      nextTopics: ["binomial-theorem", "pascals-triangle"],
+      related: ["combinations"],
+    },
+    tags: ["팩토리얼", "이항계수", "factorial", "binomial"],
+  },
 ];

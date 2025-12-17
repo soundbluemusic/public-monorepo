@@ -577,4 +577,393 @@ export const theoremsConcepts: MathConcept[] = [
     },
     tags: ["뇌터", "대칭", "Noether", "symmetry"],
   },
+
+  // ===== 18.4 추가 유명 정리 =====
+  {
+    id: "pythagorean-theorem",
+    name: {
+      ko: "피타고라스 정리",
+      en: "Pythagorean Theorem",
+      ja: "ピタゴラスの定理",
+    },
+    field: "theorems",
+    subfield: "geometry",
+    difficulty: 1,
+    content: {
+      ko: {
+        definition:
+          "직각삼각형에서 빗변의 제곱은 다른 두 변의 제곱의 합과 같습니다. 기하학의 가장 기본적인 정리입니다.",
+        formulas: [
+          {
+            latex: "a^2 + b^2 = c^2",
+            description: "피타고라스 정리 (c는 빗변)",
+          },
+        ],
+        examples: [
+          {
+            problem: "두 변이 3, 4인 직각삼각형의 빗변 길이는?",
+            solution: "c² = 3² + 4² = 9 + 16 = 25, c = 5",
+          },
+        ],
+        history: {
+          discoveredBy: "피타고라스 학파",
+          year: "기원전 6세기",
+          background:
+            "바빌로니아와 이집트에서 먼저 알려졌으나, 피타고라스 학파가 증명했습니다.",
+        },
+        applications: [
+          { field: "기하학", description: "거리 계산" },
+          { field: "물리학", description: "벡터 크기" },
+          { field: "일상생활", description: "건축, 내비게이션" },
+        ],
+      },
+      en: {
+        definition:
+          "In a right triangle, the square of the hypotenuse equals the sum of squares of the other two sides. The most fundamental theorem in geometry.",
+        formulas: [
+          {
+            latex: "a^2 + b^2 = c^2",
+            description: "Pythagorean theorem (c is hypotenuse)",
+          },
+        ],
+        examples: [
+          {
+            problem: "Find hypotenuse of right triangle with sides 3 and 4.",
+            solution: "c² = 3² + 4² = 9 + 16 = 25, c = 5",
+          },
+        ],
+        history: {
+          discoveredBy: "Pythagorean school",
+          year: "6th century BCE",
+          background:
+            "Known earlier in Babylon and Egypt, but Pythagoreans proved it.",
+        },
+        applications: [
+          { field: "Geometry", description: "Distance calculation" },
+          { field: "Physics", description: "Vector magnitude" },
+          { field: "Everyday life", description: "Construction, navigation" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: [],
+      nextTopics: ["distance-formula", "law-of-cosines"],
+      related: ["fermats-last-theorem"],
+    },
+    tags: ["피타고라스", "직각삼각형", "Pythagoras", "right triangle"],
+  },
+  {
+    id: "central-limit-theorem",
+    name: {
+      ko: "중심극한정리",
+      en: "Central Limit Theorem",
+      ja: "中心極限定理",
+    },
+    field: "theorems",
+    subfield: "probability",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "중심극한정리는 독립적인 확률변수들의 합/평균이 표본 크기가 커질수록 정규분포에 가까워짐을 말합니다.",
+        formulas: [
+          {
+            latex: "\\frac{\\bar{X}_n - \\mu}{\\sigma / \\sqrt{n}} \\xrightarrow{d} N(0, 1)",
+            description: "표준화된 표본평균의 분포수렴",
+          },
+          {
+            latex: "\\bar{X}_n \\approx N\\left(\\mu, \\frac{\\sigma^2}{n}\\right)",
+            description: "표본평균의 근사 분포",
+          },
+        ],
+        examples: [
+          {
+            problem: "주사위를 100번 던졌을 때 평균이 3.2와 3.8 사이일 확률은?",
+            solution:
+              "μ = 3.5, σ² = 35/12. 표준오차 = √(35/1200) ≈ 0.17. P(3.2 < X̄ < 3.8) ≈ 0.92",
+          },
+        ],
+        history: {
+          discoveredBy: "피에르시몽 라플라스",
+          year: "1812년",
+          background:
+            "라플라스가 일반적인 형태로 증명했습니다.",
+        },
+        applications: [
+          { field: "통계학", description: "추정, 검정" },
+          { field: "품질관리", description: "공정 관리" },
+          { field: "금융", description: "포트폴리오 위험" },
+        ],
+      },
+      en: {
+        definition:
+          "The Central Limit Theorem states that sums/means of independent random variables approach normal distribution as sample size grows.",
+        formulas: [
+          {
+            latex: "\\frac{\\bar{X}_n - \\mu}{\\sigma / \\sqrt{n}} \\xrightarrow{d} N(0, 1)",
+            description: "Convergence in distribution of standardized mean",
+          },
+          {
+            latex: "\\bar{X}_n \\approx N\\left(\\mu, \\frac{\\sigma^2}{n}\\right)",
+            description: "Approximate distribution of sample mean",
+          },
+        ],
+        examples: [
+          {
+            problem: "Roll a die 100 times. Probability average is between 3.2 and 3.8?",
+            solution:
+              "μ = 3.5, σ² = 35/12. SE = √(35/1200) ≈ 0.17. P(3.2 < X̄ < 3.8) ≈ 0.92",
+          },
+        ],
+        history: {
+          discoveredBy: "Pierre-Simon Laplace",
+          year: "1812",
+          background:
+            "Laplace proved the general form.",
+        },
+        applications: [
+          { field: "Statistics", description: "Estimation, testing" },
+          { field: "Quality Control", description: "Process control" },
+          { field: "Finance", description: "Portfolio risk" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["normal-distribution", "expected-value"],
+      nextTopics: ["confidence-interval", "hypothesis-testing"],
+      related: ["law-of-large-numbers"],
+    },
+    tags: ["중심극한", "정규분포", "CLT", "normal"],
+  },
+  {
+    id: "stokes-theorem",
+    name: {
+      ko: "스토크스 정리",
+      en: "Stokes' Theorem",
+      ja: "ストークスの定理",
+    },
+    field: "theorems",
+    subfield: "calculus",
+    difficulty: 5,
+    content: {
+      ko: {
+        definition:
+          "스토크스 정리는 곡면 위의 벡터장 회전의 적분이 경계 곡선 위의 선적분과 같다는 것입니다. 그린 정리의 3차원 일반화입니다.",
+        formulas: [
+          {
+            latex: "\\oint_C \\vec{F} \\cdot d\\vec{r} = \\iint_S (\\nabla \\times \\vec{F}) \\cdot d\\vec{S}",
+            description: "스토크스 정리",
+          },
+        ],
+        examples: [
+          {
+            problem: "스토크스 정리로 닫힌 곡선 위의 선적분을 곡면 적분으로 바꾸세요.",
+            solution:
+              "C 위의 ∮F·dr = S 위의 ∬(∇×F)·dS, 여기서 S는 C를 경계로 하는 곡면.",
+          },
+        ],
+        history: {
+          discoveredBy: "조지 스토크스",
+          year: "1854년",
+          background:
+            "스토크스가 스미스 상 시험 문제로 제출했습니다.",
+        },
+        applications: [
+          { field: "전자기학", description: "앙페르 법칙, 패러데이 법칙" },
+          { field: "유체역학", description: "순환, 와도" },
+          { field: "미분기하학", description: "드람 코호몰로지" },
+        ],
+      },
+      en: {
+        definition:
+          "Stokes' theorem states that the surface integral of curl equals the line integral around the boundary. It's the 3D generalization of Green's theorem.",
+        formulas: [
+          {
+            latex: "\\oint_C \\vec{F} \\cdot d\\vec{r} = \\iint_S (\\nabla \\times \\vec{F}) \\cdot d\\vec{S}",
+            description: "Stokes' theorem",
+          },
+        ],
+        examples: [
+          {
+            problem: "Use Stokes' theorem to convert line integral to surface integral.",
+            solution:
+              "∮_C F·dr = ∬_S (∇×F)·dS, where S is any surface bounded by C.",
+          },
+        ],
+        history: {
+          discoveredBy: "George Stokes",
+          year: "1854",
+          background:
+            "Stokes posed it as a Smith's Prize exam problem.",
+        },
+        applications: [
+          { field: "Electromagnetism", description: "Ampère's law, Faraday's law" },
+          { field: "Fluid Dynamics", description: "Circulation, vorticity" },
+          { field: "Differential Geometry", description: "de Rham cohomology" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["line-integral", "surface-integral", "curl"],
+      nextTopics: ["divergence-theorem"],
+      related: ["greens-theorem"],
+    },
+    tags: ["스토크스", "벡터해석", "Stokes", "vector calculus"],
+  },
+  {
+    id: "eulers-formula",
+    name: {
+      ko: "오일러 공식",
+      en: "Euler's Formula",
+      ja: "オイラーの公式",
+    },
+    field: "theorems",
+    subfield: "complex",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "오일러 공식은 복소지수함수와 삼각함수의 관계를 나타냅니다. 수학에서 가장 아름다운 공식 중 하나입니다.",
+        formulas: [
+          {
+            latex: "e^{ix} = \\cos x + i \\sin x",
+            description: "오일러 공식",
+          },
+          {
+            latex: "e^{i\\pi} + 1 = 0",
+            description: "오일러 등식 (가장 아름다운 등식)",
+          },
+        ],
+        examples: [
+          {
+            problem: "e^(iπ/2)를 계산하세요.",
+            solution: "e^(iπ/2) = cos(π/2) + i·sin(π/2) = 0 + i = i",
+          },
+        ],
+        history: {
+          discoveredBy: "레온하르트 오일러",
+          year: "1748년",
+          background:
+            "오일러가 테일러 급수를 이용해 발견했습니다.",
+        },
+        applications: [
+          { field: "전기공학", description: "교류 회로, 페이저" },
+          { field: "양자역학", description: "파동함수" },
+          { field: "신호 처리", description: "푸리에 분석" },
+        ],
+      },
+      en: {
+        definition:
+          "Euler's formula relates complex exponential to trigonometric functions. One of the most beautiful formulas in mathematics.",
+        formulas: [
+          {
+            latex: "e^{ix} = \\cos x + i \\sin x",
+            description: "Euler's formula",
+          },
+          {
+            latex: "e^{i\\pi} + 1 = 0",
+            description: "Euler's identity (most beautiful equation)",
+          },
+        ],
+        examples: [
+          {
+            problem: "Calculate e^(iπ/2).",
+            solution: "e^(iπ/2) = cos(π/2) + i·sin(π/2) = 0 + i = i",
+          },
+        ],
+        history: {
+          discoveredBy: "Leonhard Euler",
+          year: "1748",
+          background:
+            "Euler discovered it using Taylor series.",
+        },
+        applications: [
+          { field: "Electrical Engineering", description: "AC circuits, phasors" },
+          { field: "Quantum Mechanics", description: "Wave functions" },
+          { field: "Signal Processing", description: "Fourier analysis" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["complex-numbers", "taylor-series"],
+      nextTopics: ["complex-analysis-basics"],
+      related: ["pi-constant", "e-constant"],
+    },
+    tags: ["오일러", "복소수", "Euler", "complex"],
+  },
+  {
+    id: "intermediate-value-theorem",
+    name: {
+      ko: "중간값 정리",
+      en: "Intermediate Value Theorem",
+      ja: "中間値の定理",
+    },
+    field: "theorems",
+    subfield: "calculus",
+    difficulty: 2,
+    content: {
+      ko: {
+        definition:
+          "연속함수가 두 값 사이의 모든 값을 지난다는 정리입니다. f(a)와 f(b) 사이의 모든 값이 (a,b)에서 취해집니다.",
+        formulas: [
+          {
+            latex: "f(a) < k < f(b) \\Rightarrow \\exists c \\in (a,b): f(c) = k",
+            description: "중간값 정리",
+          },
+        ],
+        examples: [
+          {
+            problem: "f(x) = x³ - x - 1이 [1, 2]에서 근을 가짐을 보이세요.",
+            solution:
+              "f(1) = -1 < 0, f(2) = 5 > 0. 연속이고 부호가 바뀌므로 근이 존재합니다.",
+          },
+        ],
+        history: {
+          discoveredBy: "베르나르트 볼차노",
+          year: "1817년",
+          background:
+            "볼차노가 엄밀하게 증명했습니다.",
+        },
+        applications: [
+          { field: "수치해석", description: "이분법의 이론적 근거" },
+          { field: "위상수학", description: "연결성 증명" },
+          { field: "경제학", description: "균형 존재 증명" },
+        ],
+      },
+      en: {
+        definition:
+          "A continuous function takes all values between any two of its values. Every value between f(a) and f(b) is attained on (a,b).",
+        formulas: [
+          {
+            latex: "f(a) < k < f(b) \\Rightarrow \\exists c \\in (a,b): f(c) = k",
+            description: "Intermediate Value Theorem",
+          },
+        ],
+        examples: [
+          {
+            problem: "Show f(x) = x³ - x - 1 has a root on [1, 2].",
+            solution:
+              "f(1) = -1 < 0, f(2) = 5 > 0. Continuous with sign change, so root exists.",
+          },
+        ],
+        history: {
+          discoveredBy: "Bernard Bolzano",
+          year: "1817",
+          background:
+            "Bolzano gave a rigorous proof.",
+        },
+        applications: [
+          { field: "Numerical Analysis", description: "Basis for bisection method" },
+          { field: "Topology", description: "Connectedness proofs" },
+          { field: "Economics", description: "Equilibrium existence proofs" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["continuity"],
+      nextTopics: ["bisection-method"],
+      related: ["mean-value-theorem"],
+    },
+    tags: ["중간값", "연속", "IVT", "continuous"],
+  },
 ];

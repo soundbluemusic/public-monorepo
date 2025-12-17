@@ -471,4 +471,352 @@ export const constantsConcepts: MathConcept[] = [
     },
     tags: ["오일러", "감마", "Euler-Mascheroni", "constant"],
   },
+
+  // ===== 16.4 추가 수학 상수 =====
+  {
+    id: "avogadro-constant",
+    name: {
+      ko: "아보가드로 수",
+      en: "Avogadro's Number",
+      ja: "アボガドロ定数",
+    },
+    field: "constants",
+    subfield: "physics",
+    difficulty: 2,
+    content: {
+      ko: {
+        definition:
+          "아보가드로 수 NA는 1몰에 포함된 입자의 수입니다. 화학에서 물질의 양을 세는 기본 단위입니다.",
+        formulas: [
+          {
+            latex: "N_A = 6.022 \\times 10^{23} \\text{ mol}^{-1}",
+            description: "아보가드로 수",
+          },
+          {
+            latex: "n = \\frac{N}{N_A}",
+            description: "물질의 양(몰)",
+          },
+        ],
+        examples: [
+          {
+            problem: "물 1몰에 포함된 분자 수는?",
+            solution: "6.022 × 10²³개의 H₂O 분자가 포함되어 있습니다.",
+          },
+        ],
+        history: {
+          discoveredBy: "아메데오 아보가드로, 장 페렝",
+          year: "1811년 (개념), 1909년 (측정)",
+          background:
+            "아보가드로가 분자 가설을 제안했고, 페렝이 정확히 측정했습니다.",
+        },
+        applications: [
+          { field: "화학", description: "몰 계산, 화학량론" },
+          { field: "물리학", description: "기체 법칙" },
+          { field: "재료 과학", description: "원자 개수 계산" },
+        ],
+      },
+      en: {
+        definition:
+          "Avogadro's number NA is the number of particles in one mole. It's the fundamental unit for counting matter in chemistry.",
+        formulas: [
+          {
+            latex: "N_A = 6.022 \\times 10^{23} \\text{ mol}^{-1}",
+            description: "Avogadro's number",
+          },
+          {
+            latex: "n = \\frac{N}{N_A}",
+            description: "Amount of substance (moles)",
+          },
+        ],
+        examples: [
+          {
+            problem: "How many molecules in 1 mole of water?",
+            solution: "6.022 × 10²³ H₂O molecules.",
+          },
+        ],
+        history: {
+          discoveredBy: "Amedeo Avogadro, Jean Perrin",
+          year: "1811 (concept), 1909 (measurement)",
+          background:
+            "Avogadro proposed the molecular hypothesis; Perrin measured it precisely.",
+        },
+        applications: [
+          { field: "Chemistry", description: "Mole calculations, stoichiometry" },
+          { field: "Physics", description: "Gas laws" },
+          { field: "Materials Science", description: "Atom counting" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: [],
+      nextTopics: ["molar-mass", "ideal-gas-law"],
+      related: ["boltzmann-constant"],
+    },
+    tags: ["아보가드로", "몰", "Avogadro", "mole"],
+  },
+  {
+    id: "catalan-constant",
+    name: {
+      ko: "카탈란 상수",
+      en: "Catalan's Constant",
+      ja: "カタランの定数",
+    },
+    field: "constants",
+    subfield: "advanced",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "카탈란 상수 G는 교대 급수에서 나타나는 상수입니다. 조합론, 쌍곡선 기하학에서 등장합니다.",
+        formulas: [
+          {
+            latex: "G = \\sum_{n=0}^{\\infty} \\frac{(-1)^n}{(2n+1)^2} = 1 - \\frac{1}{9} + \\frac{1}{25} - \\frac{1}{49} + ...",
+            description: "카탈란 상수의 정의",
+          },
+          {
+            latex: "G \\approx 0.9159655941772...",
+            description: "카탈란 상수의 값",
+          },
+        ],
+        examples: [
+          {
+            problem: "카탈란 상수가 나타나는 적분을 하나 제시하세요.",
+            solution:
+              "∫₀¹ arctan(x)/x dx = G",
+          },
+        ],
+        history: {
+          discoveredBy: "외젠 카탈란",
+          year: "1865년",
+          background:
+            "카탈란이 급수 연구 중 발견했습니다. 무리수인지 아직 미해결.",
+        },
+        applications: [
+          { field: "해석학", description: "특수 급수, 적분" },
+          { field: "조합론", description: "격자 경로 문제" },
+          { field: "물리학", description: "양자장론" },
+        ],
+      },
+      en: {
+        definition:
+          "Catalan's constant G appears in alternating series. Found in combinatorics and hyperbolic geometry.",
+        formulas: [
+          {
+            latex: "G = \\sum_{n=0}^{\\infty} \\frac{(-1)^n}{(2n+1)^2} = 1 - \\frac{1}{9} + \\frac{1}{25} - \\frac{1}{49} + ...",
+            description: "Definition of Catalan's constant",
+          },
+          {
+            latex: "G \\approx 0.9159655941772...",
+            description: "Value of Catalan's constant",
+          },
+        ],
+        examples: [
+          {
+            problem: "Give an integral involving Catalan's constant.",
+            solution:
+              "∫₀¹ arctan(x)/x dx = G",
+          },
+        ],
+        history: {
+          discoveredBy: "Eugène Catalan",
+          year: "1865",
+          background:
+            "Catalan discovered it while studying series. Whether it's irrational is still open.",
+        },
+        applications: [
+          { field: "Analysis", description: "Special series, integrals" },
+          { field: "Combinatorics", description: "Lattice path problems" },
+          { field: "Physics", description: "Quantum field theory" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["series"],
+      nextTopics: ["beta-function"],
+      related: ["pi-constant", "zeta-function"],
+    },
+    tags: ["카탈란", "상수", "Catalan", "constant"],
+  },
+  {
+    id: "planck-constant",
+    name: {
+      ko: "플랑크 상수",
+      en: "Planck Constant",
+      ja: "プランク定数",
+    },
+    field: "constants",
+    subfield: "physics",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "플랑크 상수 h는 양자역학의 기본 상수로, 에너지와 진동수의 관계를 나타냅니다. 양자 현상의 크기를 결정합니다.",
+        formulas: [
+          {
+            latex: "h = 6.626 \\times 10^{-34} \\text{ J·s}",
+            description: "플랑크 상수",
+          },
+          {
+            latex: "E = hf",
+            description: "광자 에너지",
+          },
+          {
+            latex: "\\hbar = \\frac{h}{2\\pi}",
+            description: "환산 플랑크 상수",
+          },
+        ],
+        examples: [
+          {
+            problem: "파장 500nm 빛의 광자 에너지를 구하세요.",
+            solution:
+              "f = c/λ = 3×10⁸ / 5×10⁻⁷ = 6×10¹⁴ Hz. E = hf ≈ 4×10⁻¹⁹ J ≈ 2.5 eV",
+          },
+        ],
+        history: {
+          discoveredBy: "막스 플랑크",
+          year: "1900년",
+          background:
+            "플랑크가 흑체 복사 문제를 해결하면서 양자역학의 시작을 알렸습니다.",
+        },
+        applications: [
+          { field: "양자역학", description: "불확정성 원리" },
+          { field: "분광학", description: "원자 스펙트럼" },
+          { field: "전자공학", description: "반도체, LED" },
+        ],
+      },
+      en: {
+        definition:
+          "Planck constant h is the fundamental constant of quantum mechanics, relating energy and frequency. It sets the scale of quantum phenomena.",
+        formulas: [
+          {
+            latex: "h = 6.626 \\times 10^{-34} \\text{ J·s}",
+            description: "Planck constant",
+          },
+          {
+            latex: "E = hf",
+            description: "Photon energy",
+          },
+          {
+            latex: "\\hbar = \\frac{h}{2\\pi}",
+            description: "Reduced Planck constant",
+          },
+        ],
+        examples: [
+          {
+            problem: "Find photon energy for 500nm light.",
+            solution:
+              "f = c/λ = 3×10⁸ / 5×10⁻⁷ = 6×10¹⁴ Hz. E = hf ≈ 4×10⁻¹⁹ J ≈ 2.5 eV",
+          },
+        ],
+        history: {
+          discoveredBy: "Max Planck",
+          year: "1900",
+          background:
+            "Planck introduced it to solve the black body problem, starting quantum mechanics.",
+        },
+        applications: [
+          { field: "Quantum Mechanics", description: "Uncertainty principle" },
+          { field: "Spectroscopy", description: "Atomic spectra" },
+          { field: "Electronics", description: "Semiconductors, LEDs" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["waves"],
+      nextTopics: ["quantum-mechanics", "uncertainty-principle"],
+      related: ["speed-of-light"],
+    },
+    tags: ["플랑크", "양자", "Planck", "quantum"],
+  },
+  {
+    id: "speed-of-light",
+    name: {
+      ko: "빛의 속력",
+      en: "Speed of Light",
+      ja: "光速",
+    },
+    field: "constants",
+    subfield: "physics",
+    difficulty: 2,
+    content: {
+      ko: {
+        definition:
+          "빛의 속력 c는 진공에서 전자기파의 속력입니다. 특수상대론에서 속력의 상한이며, 정확히 정의된 값입니다.",
+        formulas: [
+          {
+            latex: "c = 299,792,458 \\text{ m/s}",
+            description: "빛의 속력 (정의값)",
+          },
+          {
+            latex: "E = mc^2",
+            description: "질량-에너지 등가",
+          },
+          {
+            latex: "c = \\frac{1}{\\sqrt{\\epsilon_0 \\mu_0}}",
+            description: "전자기 상수와의 관계",
+          },
+        ],
+        examples: [
+          {
+            problem: "빛이 지구에서 달까지 가는 데 걸리는 시간은? (거리: 384,400 km)",
+            solution:
+              "t = d/c = 3.844×10⁸ / 3×10⁸ ≈ 1.28초",
+          },
+        ],
+        history: {
+          discoveredBy: "올레 뢰머 (최초 측정), 알베르트 아인슈타인 (이론적 중요성)",
+          year: "1676년, 1905년",
+          background:
+            "뢰머가 목성 위성 관측으로 유한함을 발견, 아인슈타인이 상대론에서 핵심 역할을 부여.",
+        },
+        applications: [
+          { field: "상대론", description: "시공간 구조" },
+          { field: "통신", description: "광섬유, 위성 통신" },
+          { field: "천문학", description: "거리 측정 (광년)" },
+        ],
+      },
+      en: {
+        definition:
+          "The speed of light c is the speed of electromagnetic waves in vacuum. It's the upper limit of speed in special relativity, defined exactly.",
+        formulas: [
+          {
+            latex: "c = 299,792,458 \\text{ m/s}",
+            description: "Speed of light (defined value)",
+          },
+          {
+            latex: "E = mc^2",
+            description: "Mass-energy equivalence",
+          },
+          {
+            latex: "c = \\frac{1}{\\sqrt{\\epsilon_0 \\mu_0}}",
+            description: "Relation to electromagnetic constants",
+          },
+        ],
+        examples: [
+          {
+            problem: "How long for light to reach Moon from Earth? (384,400 km)",
+            solution:
+              "t = d/c = 3.844×10⁸ / 3×10⁸ ≈ 1.28 seconds",
+          },
+        ],
+        history: {
+          discoveredBy: "Ole Rømer (first measurement), Albert Einstein (theoretical significance)",
+          year: "1676, 1905",
+          background:
+            "Rømer discovered it was finite; Einstein gave it central role in relativity.",
+        },
+        applications: [
+          { field: "Relativity", description: "Spacetime structure" },
+          { field: "Communications", description: "Fiber optics, satellite" },
+          { field: "Astronomy", description: "Distance measurement (light-years)" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: [],
+      nextTopics: ["special-relativity"],
+      related: ["planck-constant"],
+    },
+    tags: ["빛", "속력", "light", "speed"],
+  },
 ];
