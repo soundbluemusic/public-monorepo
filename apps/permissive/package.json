@@ -1,6 +1,7 @@
 {
   "name": "permissive",
   "version": "0.1.0",
+  "license": "Apache-2.0",
   "description": "완전 무료 웹 개발 리소스 가이드 - 로열티 프리 웹 표준 API와 MIT 라이선스 오픈소스 정리",
   "type": "module",
   "scripts": {
