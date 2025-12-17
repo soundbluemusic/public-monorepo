@@ -12,8 +12,8 @@ import {
 } from "solid-js";
 import { A, useLocation, useNavigate } from "@solidjs/router";
 import { useI18n, type Language } from "@/i18n";
-import { fields } from "@/data/fields";
-import type { MathFieldInfo } from "@/data/types";
+import { searchConcepts, type SearchResult } from "@/lib/search";
+import { DifficultyBadge } from "@/components/ui/DifficultyBadge";
 
 const languages: { code: Language; label: string }[] = [
   { code: "ko", label: "한국어" },
@@ -38,14 +38,11 @@ export const Layout: ParentComponent = (props) => {
 
   // Search
   const [searchQuery, setSearchQuery] = createSignal("");
-  const [searchResults, setSearchResults] = createSignal<MathFieldInfo[]>([]);
+  const [searchResults, setSearchResults] = createSignal<SearchResult[]>([]);
   const [showResults, setShowResults] = createSignal(false);
   const [selectedIndex, setSelectedIndex] = createSignal(0);
   let searchInputRef: HTMLInputElement | undefined;
   let searchContainerRef: HTMLDivElement | undefined;
-
-  // Sidebar (mobile)
-  const [sidebarOpen, setSidebarOpen] = createSignal(false);
 
   // Initialize dark mode
   onMount(() => {
@@ -68,22 +65,16 @@ export const Layout: ParentComponent = (props) => {
     document.documentElement.classList.toggle("dark", newValue);
   };
 
-  // Search functionality (simple field search for now)
+  // Search functionality with Fuse.js
   createEffect(() => {
-    const q = searchQuery().toLowerCase().trim();
-    if (!q) {
+    const q = searchQuery().trim();
+    if (q.length < 2) {
       setSearchResults([]);
       return;
     }
 
-    const currentLocale = locale();
-    const matched = fields.filter((field) => {
-      const name = field.name[currentLocale] || field.name.en;
-      const desc = field.description[currentLocale] || field.description.en;
-      return name.toLowerCase().includes(q) || desc.toLowerCase().includes(q);
-    });
-
-    setSearchResults(matched.slice(0, 8));
+    const results = searchConcepts(q, locale(), 8);
+    setSearchResults(results);
     setSelectedIndex(0);
   });
 
@@ -102,16 +93,27 @@ export const Layout: ParentComponent = (props) => {
     } else if (e.key === "ArrowUp" && len > 0) {
       e.preventDefault();
       setSelectedIndex((i) => (i - 1 + len) % len);
-    } else if (e.key === "Enter" && len > 0) {
+    } else if (e.key === "Enter") {
       e.preventDefault();
-      selectResult(searchResults()[selectedIndex()]);
+      if (len > 0) {
+        selectResult(searchResults()[selectedIndex()]);
+      } else if (searchQuery().trim().length >= 2) {
+        // 검색 결과 페이지로 이동
+        goToSearchPage();
+      }
     }
   };
 
-  const selectResult = (field: MathFieldInfo) => {
+  const selectResult = (result: SearchResult) => {
     setSearchQuery("");
     setShowResults(false);
-    navigate(localePath(`/field/${field.id}`));
+    navigate(localePath(`/concept/${result.item.id}`));
+  };
+
+  const goToSearchPage = () => {
+    const q = searchQuery().trim();
+    setShowResults(false);
+    navigate(localePath(`/search?q=${encodeURIComponent(q)}`));
   };
 
   // Close search results when clicking outside
@@ -220,28 +222,28 @@ export const Layout: ParentComponent = (props) => {
                   }
                 >
                   <For each={searchResults()}>
-                    {(field, index) => (
+                    {(result, index) => (
                       <button
-                        onClick={() => selectResult(field)}
+                        onClick={() => selectResult(result)}
                         onMouseEnter={() => setSelectedIndex(index())}
-                        class="w-full flex items-center gap-3 px-4 py-2 text-left text-sm"
+                        class="w-full flex items-center justify-between gap-3 px-4 py-2 text-left text-sm"
                         style={{
                           "background-color":
                             selectedIndex() === index() ? "var(--bg-tertiary)" : "transparent",
                         }}
                       >
-                        <span class="text-lg">{field.icon}</span>
-                        <div>
+                        <div class="flex-1 min-w-0">
                           <div style={{ color: "var(--text-primary)" }} class="font-medium">
-                            {field.name[locale()] || field.name.en}
+                            {result.item.name[locale()] || result.item.name.en}
                           </div>
                           <div
                             style={{ color: "var(--text-tertiary)" }}
                             class="text-xs line-clamp-1"
                           >
-                            {field.description[locale()] || field.description.en}
+                            {(result.item.content[locale()] || result.item.content.en).definition}
                           </div>
                         </div>
+                        <DifficultyBadge level={result.item.difficulty} showLabel={false} size="sm" />
                       </button>
                     )}
                   </For>
@@ -262,6 +264,17 @@ export const Layout: ParentComponent = (props) => {
               }}
             >
               {t("browse")}
+            </A>
+
+            <A
+              href={localePath("/favorites")}
+              class="hidden sm:block px-3 py-1.5 text-sm rounded-lg transition-colors"
+              style={{
+                color: isActive("/favorites") ? "var(--accent-primary)" : "var(--text-secondary)",
+                "background-color": isActive("/favorites") ? "var(--bg-tertiary)" : "transparent",
+              }}
+            >
+              {t("favorites")}
             </A>
 
             <A

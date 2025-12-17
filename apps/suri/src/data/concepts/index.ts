@@ -2,11 +2,17 @@
  * @fileoverview 모든 개념 데이터 통합
  */
 import type { MathConcept } from "../types";
+import { foundationsConcepts } from "./foundations";
+import { algebraConcepts } from "./algebra";
 import { geometryConcepts } from "./geometry";
+import { analysisConcepts } from "./analysis";
 
 /** 모든 개념 목록 */
 export const allConcepts: MathConcept[] = [
+  ...foundationsConcepts,
+  ...algebraConcepts,
   ...geometryConcepts,
+  ...analysisConcepts,
 ];
 
 /** ID로 개념 찾기 */

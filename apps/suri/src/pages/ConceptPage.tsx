@@ -1,7 +1,7 @@
 /**
  * @fileoverview 개념 상세 페이지
  */
-import { Show, For } from "solid-js";
+import { Show, For, createSignal, onMount } from "solid-js";
 import { A, useParams } from "@solidjs/router";
 import { Title, Meta } from "@solidjs/meta";
 import { useI18n } from "@/i18n";
@@ -13,6 +13,7 @@ import { RelationLinks } from "@/components/concept/RelationLinks";
 import { getConceptById, getConceptsByField, conceptsMap } from "@/data/concepts";
 import { getFieldById } from "@/data/fields";
 import { getSubfieldById } from "@/data/subfields";
+import { favorites } from "@/lib/db";
 
 export default function ConceptPage() {
   const params = useParams<{ conceptId: string }>();
@@ -21,6 +22,26 @@ export default function ConceptPage() {
   const concept = () => getConceptById(params.conceptId);
   const field = () => concept() && getFieldById(concept()!.field);
   const subfield = () => concept() && getSubfieldById(concept()!.subfield);
+
+  // 즐겨찾기 상태
+  const [isFavorite, setIsFavorite] = createSignal(false);
+
+  onMount(async () => {
+    const conceptId = params.conceptId;
+    const exists = await favorites.get(conceptId);
+    setIsFavorite(!!exists);
+  });
+
+  const toggleFavorite = async () => {
+    const conceptId = params.conceptId;
+    if (isFavorite()) {
+      await favorites.delete(conceptId);
+      setIsFavorite(false);
+    } else {
+      await favorites.add({ conceptId, addedAt: new Date() });
+      setIsFavorite(true);
+    }
+  };
 
   const name = () => {
     const c = concept();
@@ -89,7 +110,35 @@ export default function ConceptPage() {
                     {name()}
                   </h1>
                 </div>
-                <DifficultyBadge level={c().difficulty} size="lg" />
+                <div class="flex items-center gap-2">
+                  <button
+                    onClick={toggleFavorite}
+                    class="p-2 rounded-lg transition-all hover:scale-110"
+                    style={{
+                      "background-color": "var(--bg-secondary)",
+                      border: "1px solid var(--border-primary)",
+                    }}
+                    aria-label={isFavorite() ? "Remove from favorites" : "Add to favorites"}
+                    title={
+                      locale() === "ko"
+                        ? isFavorite()
+                          ? "즐겨찾기 해제"
+                          : "즐겨찾기 추가"
+                        : locale() === "ja"
+                        ? isFavorite()
+                          ? "お気に入りから削除"
+                          : "お気に入りに追加"
+                        : isFavorite()
+                        ? "Remove from favorites"
+                        : "Add to favorites"
+                    }
+                  >
+                    <span class="text-xl">
+                      {isFavorite() ? "❤️" : "🤍"}
+                    </span>
+                  </button>
+                  <DifficultyBadge level={c().difficulty} size="lg" />
+                </div>
               </div>
 
               {/* English name if viewing in Korean/Japanese */}
