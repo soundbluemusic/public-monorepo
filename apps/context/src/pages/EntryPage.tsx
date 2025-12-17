@@ -169,6 +169,82 @@ export default function EntryPage() {
           </div>
         </Show>
 
+        <Show when={translation()?.variations && (translation()?.variations?.formal?.length || translation()?.variations?.casual?.length || translation()?.variations?.short?.length)}>
+          <div class="mb-8 pb-8" style={{ "border-bottom": "1px solid var(--border-primary)" }}>
+            <p class="text-sm uppercase tracking-wide mb-4" style={{ color: "var(--text-tertiary)" }}>
+              {t("variations")}
+            </p>
+            <div class="space-y-4">
+              <Show when={translation()?.variations?.formal?.length}>
+                <div>
+                  <p class="text-xs font-medium mb-2" style={{ color: "var(--text-tertiary)" }}>
+                    {t("formal")}
+                  </p>
+                  <ul class="space-y-1">
+                    <For each={translation()?.variations?.formal ?? []}>
+                      {(item) => (
+                        <li
+                          class="pl-4"
+                          style={{
+                            color: "var(--text-secondary)",
+                            "border-left": "2px solid var(--accent-primary)"
+                          }}
+                        >
+                          {item}
+                        </li>
+                      )}
+                    </For>
+                  </ul>
+                </div>
+              </Show>
+              <Show when={translation()?.variations?.casual?.length}>
+                <div>
+                  <p class="text-xs font-medium mb-2" style={{ color: "var(--text-tertiary)" }}>
+                    {t("casual")}
+                  </p>
+                  <ul class="space-y-1">
+                    <For each={translation()?.variations?.casual ?? []}>
+                      {(item) => (
+                        <li
+                          class="pl-4"
+                          style={{
+                            color: "var(--text-secondary)",
+                            "border-left": "2px solid var(--accent-secondary, #10b981)"
+                          }}
+                        >
+                          {item}
+                        </li>
+                      )}
+                    </For>
+                  </ul>
+                </div>
+              </Show>
+              <Show when={translation()?.variations?.short?.length}>
+                <div>
+                  <p class="text-xs font-medium mb-2" style={{ color: "var(--text-tertiary)" }}>
+                    {t("short")}
+                  </p>
+                  <ul class="space-y-1">
+                    <For each={translation()?.variations?.short ?? []}>
+                      {(item) => (
+                        <li
+                          class="pl-4"
+                          style={{
+                            color: "var(--text-secondary)",
+                            "border-left": "2px solid var(--accent-tertiary, #f59e0b)"
+                          }}
+                        >
+                          {item}
+                        </li>
+                      )}
+                    </For>
+                  </ul>
+                </div>
+              </Show>
+            </div>
+          </div>
+        </Show>
+
         <div class="mb-8 pb-8" style={{ "border-bottom": "1px solid var(--border-primary)" }}>
           <div class="flex flex-wrap gap-4 text-sm" style={{ color: "var(--text-secondary)" }}>
             <span>{entry()?.partOfSpeech ? t(entry()!.partOfSpeech) : ""}</span>

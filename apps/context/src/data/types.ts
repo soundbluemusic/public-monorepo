@@ -36,17 +36,31 @@
 export type Language = "ko" | "en" | "ja";
 
 /**
+ * 표현 변형 (격식 수준별)
+ * @property formal - 격식체 표현 (존댓말, 공식적인 상황)
+ * @property casual - 반말 표현 (친구, 비공식적인 상황)
+ * @property short - 줄임말 표현 (축약형, 인터넷 용어 등)
+ */
+export interface Variations {
+  formal?: string[];
+  casual?: string[];
+  short?: string[];
+}
+
+/**
  * 특정 언어로의 번역 데이터
  * @property word - 번역된 단어
  * @property reading - 읽기 표기 (일본어: 히라가나/가타카나)
  * @property explanation - 해당 언어로 된 설명
  * @property examples - 해당 언어로 된 예문 목록
+ * @property variations - 격식 수준별 표현 변형
  */
 export interface Translation {
   word: string;
   reading?: string;
   explanation: string;
   examples?: string[];
+  variations?: Variations;
 }
 
 /**
@@ -238,6 +252,12 @@ export interface UILabels {
   explanation: string;
   examples: string;
   relatedWords: string;
+
+  /** 변형 표현 레이블 */
+  variations: string;
+  formal: string;
+  casual: string;
+  short: string;
   partOfSpeech: string;
   difficulty: string;
   category: string;
