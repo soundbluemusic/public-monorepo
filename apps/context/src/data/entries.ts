@@ -483,7 +483,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "水",
-        reading: "みず",
+        reading: "ムル",
         explanation: "最も基本的な飲み物。レストランで注文する時に必須の単語です。",
         examples: [
           "물 주세요. - お水ください。",
@@ -522,7 +522,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "ここ",
-        reading: "ここ",
+        reading: "ヨギ",
         explanation: "話し手の近くの場所を示します。여기（ここ）、거기（そこ）、저기（あそこ）の三つ組の一つです。",
         examples: [
           "여기가 어디예요? - ここはどこですか？",
@@ -559,7 +559,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "どこ",
-        reading: "どこ",
+        reading: "オディ",
         explanation: "場所を尋ねる疑問詞。道を尋ねたり方向を確認したりする時に必須の単語です。",
         examples: [
           "어디 가요? - どこに行きますか？",
@@ -599,7 +599,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "会社",
-        reading: "かいしゃ",
+        reading: "フェサ",
         explanation: "ビジネス組織や企業のこと。職場について話す時に使います。",
         examples: [
           "회사에 가요. - 会社に行きます。",
@@ -637,7 +637,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "会議",
-        reading: "かいぎ",
+        reading: "フェイ",
         explanation: "議論のための集まり。通常、ビジネスの文脈で使われます。",
         examples: [
           "회의가 있어요. - 会議があります。",
@@ -677,7 +677,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "情（ジョン）",
-        reading: "じょう",
+        reading: "チョン",
         explanation: "韓国特有の概念で、時間をかけて形成される深い感情的な絆、愛着を表します。直訳が難しく、愛情、思いやり、繋がりを包含します。",
         examples: [
           "정이 들었어요. - 情が湧きました。",
@@ -753,7 +753,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "一つ（固有語）",
-        reading: "ひとつ",
+        reading: "ハナ",
         explanation: "韓国固有の数詞で「一」を表します。物を数える時、年齢（살と一緒に）、時間に使います。漢数詞の일とは異なります。",
         examples: [
           "하나, 둘, 셋! - 一つ、二つ、三つ！",
@@ -790,7 +790,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "今日",
-        reading: "きょう",
+        reading: "オヌル",
         explanation: "今日のこと。基本的な時間の単語：어제（昨日）、오늘（今日）、내일（明日）の一つです。",
         examples: [
           "오늘 뭐 해요? - 今日何しますか？",
@@ -851,7 +851,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "ギター",
-        reading: "ギター",
+        reading: "キタ",
         explanation: "弦楽器の一種。アコースティックギターとエレキギターがある。",
         examples: ["기타 칠 줄 알아요? - ギター弾けますか？", "기타 소리가 좋아요. - ギターの音がいいですね。"],
       },
@@ -879,7 +879,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "歌",
-        reading: "うた",
+        reading: "ノレ",
         explanation: "メロディーに合わせて歌う歌詞のある音楽。「노래하다」は歌うという意味。",
         examples: ["이 노래 좋아해요. - この歌好きです。", "노래방 갈까요? - カラオケ行きましょうか？"],
       },
@@ -907,7 +907,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "ドラム",
-        reading: "ドラム",
+        reading: "ドゥロム",
         explanation: "打楽器の一種。バンドでリズムを担当する主要楽器。",
         examples: ["드럼 치는 것이 멋있어요. - ドラムを叩くのはかっこいいです。", "밴드에서 드럼을 쳐요. - バンドでドラムを叩いています。"],
       },
@@ -935,7 +935,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "バイオリン",
-        reading: "バイオリン",
+        reading: "バイオルリン",
         explanation: "弦楽器の一つ。オーケストラで重要な役割を果たす楽器。",
         examples: ["바이올린 소리가 슬퍼요. - バイオリンの音が悲しいです。", "바이올린 협주곡을 들었어요. - バイオリン協奏曲を聴きました。"],
       },
@@ -964,7 +964,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "音楽",
-        reading: "おんがく",
+        reading: "ウマク",
         explanation: "音で表現する芸術。クラシック、ポップ、ジャズなど様々なジャンルがある。",
         examples: ["음악 듣는 것을 좋아해요. - 音楽を聴くのが好きです。", "어떤 음악 좋아해요? - どんな音楽が好きですか？"],
       },
@@ -993,7 +993,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "歌手",
-        reading: "かしゅ",
+        reading: "カス",
         explanation: "歌を職業とする人。K-pop歌手は世界的に有名です。",
         examples: ["좋아하는 가수가 누구예요? - 好きな歌手は誰ですか？", "그 가수 콘서트에 갔어요. - その歌手のコンサートに行きました。"],
       },
@@ -1021,7 +1021,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "コンサート",
-        reading: "コンサート",
+        reading: "コンソトゥ",
         explanation: "音楽公演。歌手やバンドが観客の前でライブ演奏すること。",
         examples: ["콘서트 표를 샀어요. - コンサートのチケットを買いました。", "콘서트가 너무 좋았어요. - コンサートがとても良かったです。"],
       },
@@ -1050,7 +1050,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "楽器",
-        reading: "がっき",
+        reading: "アッキ",
         explanation: "音楽を演奏する道具。弦楽器、管楽器、打楽器などがある。",
         examples: ["어떤 악기를 연주해요? - どんな楽器を演奏しますか？", "새 악기를 배우고 싶어요. - 新しい楽器を習いたいです。"],
       },
@@ -1078,7 +1078,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "リズム",
-        reading: "リズム",
+        reading: "リドゥム",
         explanation: "音楽の拍子とパターン。音楽の基本要素の一つ。",
         examples: ["리듬에 맞춰 춤을 춰요. - リズムに合わせて踊ります。", "이 노래는 리듬이 좋아요. - この歌はリズムがいいです。"],
       },
@@ -1108,7 +1108,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "絵",
-        reading: "え",
+        reading: "クリム",
         explanation: "紙やキャンバスに描いたイメージ。絵画、スケッチ、イラストなどを含む。",
         examples: ["그림을 그리는 것을 좋아해요. - 絵を描くのが好きです。", "이 그림 누가 그렸어요? - この絵は誰が描きましたか？"],
       },
@@ -1137,7 +1137,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "彫刻",
-        reading: "ちょうこく",
+        reading: "チョガク",
         explanation: "立体的な芸術作品。石、木、金属などで作られる。",
         examples: ["박물관에서 조각을 봤어요. - 博物館で彫刻を見ました。", "이 조각은 유명해요. - この彫刻は有名です。"],
       },
@@ -1166,7 +1166,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "写真",
-        reading: "しゃしん",
+        reading: "サジン",
         explanation: "カメラで撮った画像。現代ではスマートフォンでもよく撮る。",
         examples: ["사진 찍어도 돼요? - 写真を撮ってもいいですか？", "사진이 잘 나왔어요. - 写真がよく撮れました。"],
       },
@@ -1195,7 +1195,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "美術",
-        reading: "びじゅつ",
+        reading: "ミスル",
         explanation: "視覚芸術。絵画、彫刻、デザインなどを含む幅広い分野。",
         examples: ["미술관에 가고 싶어요. - 美術館に行きたいです。", "미술 수업이 재미있어요. - 美術の授業が面白いです。"],
       },
@@ -1224,7 +1224,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "作品",
-        reading: "さくひん",
+        reading: "チャクプム",
         explanation: "芸術家が作った創作物。絵画、彫刻、映画、小説などを指す。",
         examples: ["이 작품이 마음에 들어요. - この作品が気に入りました。", "유명한 작품을 많이 봤어요. - 有名な作品をたくさん見ました。"],
       },
@@ -1253,7 +1253,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "色",
-        reading: "いろ",
+        reading: "セク",
         explanation: "赤、青、黄色などの色。美術で最も基本的な要素。",
         examples: ["무슨 색을 좋아해요? - 何色が好きですか？", "이 색이 예뻐요. - この色がきれいです。"],
       },
@@ -1281,7 +1281,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "デザイン",
-        reading: "デザイン",
+        reading: "ディジャイン",
         explanation: "物や空間の外観と機能を計画すること。グラフィック、製品、インテリアデザインなどがある。",
         examples: ["디자인이 멋있어요. - デザインがかっこいいです。", "디자인을 공부해요. - デザインを勉強しています。"],
       },
@@ -1310,7 +1310,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "展示",
-        reading: "てんじ",
+        reading: "チョンシ",
         explanation: "作品を公開的に見せるイベント。美術館やギャラリーで開かれる。",
         examples: ["전시회에 갔어요. - 展覧会に行きました。", "새 전시가 시작됐어요. - 新しい展示が始まりました。"],
       },
@@ -1339,7 +1339,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "画家",
-        reading: "がか",
+        reading: "ファガ",
         explanation: "絵を描くことを職業とする芸術家。",
         examples: ["유명한 화가의 그림이에요. - 有名な画家の絵です。", "화가가 되고 싶어요. - 画家になりたいです。"],
       },
@@ -1368,7 +1368,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "創意",
-        reading: "そうい",
+        reading: "チャンイ",
         explanation: "新しく独創的なアイデアを生み出す能力。芸術で非常に重要な要素。",
         examples: ["창의력이 필요해요. - 創造力が必要です。", "창의적인 생각이에요. - 創造的な考えですね。"],
       },
@@ -1399,7 +1399,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "サッカー",
-        reading: "サッカー",
+        reading: "チュック",
         explanation: "足でボールを蹴るスポーツ。世界で最も人気のあるスポーツの一つ。",
         examples: ["축구 경기 봤어요? - サッカーの試合見ましたか？", "축구하러 가자! - サッカーしに行こう！"],
       },
@@ -1428,7 +1428,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "野球",
-        reading: "やきゅう",
+        reading: "ヤグ",
         explanation: "バットでボールを打つスポーツ。韓国で非常に人気のあるスポーツ。",
         examples: ["야구장에 가요. - 野球場に行きましょう。", "야구 선수가 되고 싶어요. - 野球選手になりたいです。"],
       },
@@ -1457,7 +1457,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "バスケットボール",
-        reading: "バスケットボール",
+        reading: "ノング",
         explanation: "ボールをゴールに入れるスポーツ。屋内でもできる。",
         examples: ["농구 잘해요? - バスケ上手ですか？", "농구 경기를 봤어요. - バスケの試合を見ました。"],
       },
@@ -1486,7 +1486,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "水泳",
-        reading: "すいえい",
+        reading: "スヨン",
         explanation: "水の中で泳ぐ運動。全身運動として健康に良い。",
         examples: ["수영 배우고 싶어요. - 水泳を習いたいです。", "수영장에 갈까요? - プールに行きましょうか？"],
       },
@@ -1514,7 +1514,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "走ること",
-        reading: "はしること",
+        reading: "タルリギ",
         explanation: "速く走る運動。マラソン、ジョギング、短距離走などがある。",
         examples: ["아침에 달리기를 해요. - 朝走っています。", "달리기가 건강에 좋아요. - 走ることは健康に良いです。"],
       },
@@ -1543,7 +1543,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "運動",
-        reading: "うんどう",
+        reading: "ウンドン",
         explanation: "体を動かす身体活動。健康のために必須。",
         examples: ["운동을 자주 해요? - よく運動しますか？", "운동하러 헬스장에 가요. - 運動しにジムに行きます。"],
       },
@@ -1572,7 +1572,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "試合",
-        reading: "しあい",
+        reading: "キョンギ",
         explanation: "スポーツで勝負を競うこと。試合やゲームを意味する。",
         examples: ["오늘 경기 몇 시에요? - 今日の試合は何時ですか？", "경기에서 이겼어요! - 試合に勝ちました！"],
       },
@@ -1601,7 +1601,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "選手",
-        reading: "せんしゅ",
+        reading: "ソンス",
         explanation: "スポーツを職業とする人。プロまたはアマチュアの選手。",
         examples: ["좋아하는 선수가 있어요? - 好きな選手はいますか？", "그 선수 정말 잘해요. - あの選手は本当に上手です。"],
       },
@@ -1629,7 +1629,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "チーム",
-        reading: "チーム",
+        reading: "ティム",
         explanation: "一緒に競技する選手たちのグループ。スポーツではチームワークが重要。",
         examples: ["어느 팀을 응원해요? - どのチームを応援していますか？", "우리 팀이 이겼어요! - 私たちのチームが勝ちました！"],
       },
@@ -1657,7 +1657,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "オリンピック",
-        reading: "オリンピック",
+        reading: "オルリムピク",
         explanation: "4年ごとに開催される世界最大のスポーツ大会。夏季と冬季オリンピックがある。",
         examples: ["올림픽 보고 있어요? - オリンピック見ていますか？", "한국이 올림픽에서 금메달을 땄어요. - 韓国がオリンピックで金メダルを取りました。"],
       },
@@ -1687,7 +1687,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "星",
-        reading: "ほし",
+        reading: "ピョル",
         explanation: "夜空で輝く天体。太陽も星の一種。",
         examples: ["별이 예뻐요. - 星がきれいです。", "별을 보러 갈까요? - 星を見に行きましょうか？"],
       },
@@ -1715,7 +1715,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "月",
-        reading: "つき",
+        reading: "タル",
         explanation: "地球の自然衛星。夜に明るく輝く。",
         examples: ["오늘 달이 밝아요. - 今日は月が明るいです。", "보름달이 떴어요. - 満月が出ました。"],
       },
@@ -1744,7 +1744,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "太陽",
-        reading: "たいよう",
+        reading: "テヤン",
         explanation: "太陽系の中心にある恒星。地球に光と熱を提供する。",
         examples: ["태양이 뜨거워요. - 太陽が熱いです。", "태양 주위를 지구가 돌아요. - 太陽の周りを地球が回っています。"],
       },
@@ -1773,7 +1773,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "惑星",
-        reading: "わくせい",
+        reading: "ヘンソン",
         explanation: "恒星の周りを回る天体。太陽系には8つの惑星がある。",
         examples: ["지구는 행성이에요. - 地球は惑星です。", "다른 행성에 생명체가 있을까요? - 他の惑星に生命体はいるでしょうか？"],
       },
@@ -1802,7 +1802,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "銀河",
-        reading: "ぎんが",
+        reading: "ウナ",
         explanation: "無数の星が集まった巨大な天体システム。私たちの銀河は天の川と呼ばれる。",
         examples: ["은하수가 보여요. - 天の川が見えます。", "우주에는 수많은 은하가 있어요. - 宇宙には無数の銀河があります。"],
       },
@@ -1831,7 +1831,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "宇宙",
-        reading: "うちゅう",
+        reading: "ウジュ",
         explanation: "すべての物質とエネルギーが存在する無限の空間。地球の外のすべて。",
         examples: ["우주는 신비로워요. - 宇宙は神秘的です。", "우주 여행을 하고 싶어요. - 宇宙旅行をしたいです。"],
       },
@@ -1859,7 +1859,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "ロケット",
-        reading: "ロケット",
+        reading: "ロケッ",
         explanation: "宇宙に発射される宇宙船。衛星や宇宙飛行士を宇宙に送る。",
         examples: ["로켓이 발사됐어요. - ロケットが発射されました。", "로켓 발사를 봤어요. - ロケット発射を見ました。"],
       },
@@ -1888,7 +1888,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "宇宙飛行士",
-        reading: "うちゅうひこうし",
+        reading: "ウジュイン",
         explanation: "宇宙に旅する人。",
         examples: ["우주인이 되고 싶어요. - 宇宙飛行士になりたいです。", "한국 우주인이 있어요. - 韓国の宇宙飛行士がいます。"],
       },
@@ -1917,7 +1917,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "衛星",
-        reading: "えいせい",
+        reading: "ウィソン",
         explanation: "惑星の周りを回る天体。人工衛星は人が作った衛星。",
         examples: ["달은 지구의 위성이에요. - 月は地球の衛星です。", "인공위성이 지구를 돌아요. - 人工衛星が地球を回っています。"],
       },
@@ -1945,7 +1945,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "ブラックホール",
-        reading: "ブラックホール",
+        reading: "ブルレクホル",
         explanation: "重力が非常に強く、光さえ脱出できない天体。",
         examples: ["블랙홀은 무서워요. - ブラックホールは怖いです。", "블랙홀에 대해 배웠어요. - ブラックホールについて学びました。"],
       },
@@ -1976,7 +1976,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "重力",
-        reading: "じゅうりょく",
+        reading: "チュンニョク",
         explanation: "物体を地球の中心に引き寄せる力。物が落ちる理由。",
         examples: ["중력 때문에 물체가 떨어져요. - 重力のせいで物が落ちます。", "달의 중력은 지구보다 약해요. - 月の重力は地球より弱いです。"],
       },
@@ -2004,7 +2004,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "エネルギー",
-        reading: "エネルギー",
+        reading: "エノジ",
         explanation: "仕事をする能力。運動エネルギー、位置エネルギーなどがある。",
         examples: ["에너지를 절약해요. - エネルギーを節約しましょう。", "태양 에너지를 사용해요. - 太陽エネルギーを使います。"],
       },
@@ -2033,7 +2033,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "原子",
-        reading: "げんし",
+        reading: "ウォンジャ",
         explanation: "物質を構成する最小単位。陽子、中性子、電子で構成される。",
         examples: ["모든 물질은 원자로 이루어져 있어요. - すべての物質は原子でできています。", "원자는 매우 작아요. - 原子はとても小さいです。"],
       },
@@ -2061,7 +2061,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "光",
-        reading: "ひかり",
+        reading: "ピッ",
         explanation: "目で見ることを可能にするエネルギー。最も速い速度で移動する。",
         examples: ["빛이 밝아요. - 光が明るいです。", "빛의 속도는 매우 빨라요. - 光の速度はとても速いです。"],
       },
@@ -2090,7 +2090,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "波動",
-        reading: "はどう",
+        reading: "パドン",
         explanation: "エネルギーが広がる振動現象。音と光も波動です。",
         examples: ["소리는 파동으로 전달돼요. - 音は波動として伝わります。", "물결도 파동이에요. - 波も波動です。"],
       },
@@ -2118,7 +2118,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "力",
-        reading: "ちから",
+        reading: "ヒム",
         explanation: "物体の運動状態を変化させる作用。押す、引くなど。",
         examples: ["힘을 주세요. - 力を入れてください。", "중력은 힘이에요. - 重力は力です。"],
       },
@@ -2147,7 +2147,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "速度",
-        reading: "そくど",
+        reading: "ソクド",
         explanation: "物体が移動する速さ。距離を時間で割った値。",
         examples: ["속도가 빨라요. - 速度が速いです。", "속도를 줄이세요. - 速度を落としてください。"],
       },
@@ -2176,7 +2176,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "温度",
-        reading: "おんど",
+        reading: "オンド",
         explanation: "物体の冷たさや熱さの度合い。摂氏（°C）や華氏（°F）で測定する。",
         examples: ["오늘 온도가 높아요. - 今日は温度が高いです。", "온도를 측정했어요. - 温度を測りました。"],
       },
@@ -2205,7 +2205,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "電気",
-        reading: "でんき",
+        reading: "チョンギ",
         explanation: "電荷の流れ。私たちの生活に不可欠なエネルギー源。",
         examples: ["전기를 아껴 써요. - 電気を節約しましょう。", "전기가 나갔어요. - 停電しました。"],
       },
@@ -2234,7 +2234,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "磁石",
-        reading: "じしゃく",
+        reading: "チャソク",
         explanation: "鉄を引きつける物体。N極とS極がある。",
         examples: ["자석이 철을 끌어당겨요. - 磁石が鉄を引きつけます。", "냉장고에 자석을 붙였어요. - 冷蔵庫に磁石をつけました。"],
       },
@@ -2264,7 +2264,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "数字",
-        reading: "すうじ",
+        reading: "スッチャ",
         explanation: "量を表す記号。0、1、2、3...など。",
         examples: ["숫자를 세요. - 数字を数えてください。", "이 숫자가 뭐예요? - この数字は何ですか？"],
       },
@@ -2292,7 +2292,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "足し算",
-        reading: "たしざん",
+        reading: "トッセム",
         explanation: "二つの数を足す演算。プラス（+）。",
         examples: ["덧셈을 해요. - 足し算をしましょう。", "덧셈이 쉬워요. - 足し算は簡単です。"],
       },
@@ -2320,7 +2320,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "引き算",
-        reading: "ひきざん",
+        reading: "ペルセム",
         explanation: "一つの数から別の数を引く演算。マイナス（-）。",
         examples: ["뺄셈을 배워요. - 引き算を習いましょう。", "뺄셈이 어려워요? - 引き算は難しいですか？"],
       },
@@ -2348,7 +2348,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "掛け算",
-        reading: "かけざん",
+        reading: "コプセム",
         explanation: "二つの数を掛ける演算。かける（×）。",
         examples: ["곱셈 구구단을 외웠어요. - 掛け算九九を覚えました。", "곱셈을 해보세요. - 掛け算をしてみてください。"],
       },
@@ -2376,7 +2376,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "割り算",
-        reading: "わりざん",
+        reading: "ナヌッセム",
         explanation: "一つの数を別の数で割る演算。割る（÷）。",
         examples: ["나눗셈을 배우고 있어요. - 割り算を習っています。", "나눗셈이 어려워요. - 割り算は難しいです。"],
       },
@@ -2405,7 +2405,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "関数",
-        reading: "かんすう",
+        reading: "ハムス",
         explanation: "入力値を受けて出力値を出す関係。数学の重要な概念。",
         examples: ["함수를 배워요. - 関数を習いましょう。", "이것은 일차 함수예요. - これは一次関数です。"],
       },
@@ -2434,7 +2434,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "幾何学",
-        reading: "きかがく",
+        reading: "キハハク",
         explanation: "図形と空間を研究する数学分野。三角形、円などを扱う。",
         examples: ["기하학이 재미있어요. - 幾何学は面白いです。", "기하학 문제를 풀었어요. - 幾何学の問題を解きました。"],
       },
@@ -2463,7 +2463,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "方程式",
-        reading: "ほうていしき",
+        reading: "パンジョンシク",
         explanation: "未知数を含む等式。xを求めることが目標。",
         examples: ["방정식을 풀어요. - 方程式を解きましょう。", "이차 방정식을 배웠어요. - 二次方程式を習いました。"],
       },
@@ -2492,7 +2492,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "分数",
-        reading: "ぶんすう",
+        reading: "プンス",
         explanation: "全体を分けた部分を表す数。分子と分母で構成される。",
         examples: ["분수를 배워요. - 分数を習いましょう。", "이분의 일은 0.5예요. - 二分の一は0.5です。"],
       },
@@ -2521,7 +2521,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "計算",
-        reading: "けいさん",
+        reading: "ケサン",
         explanation: "数を足し、引き、掛け、割ること。数学の基本活動。",
         examples: ["계산이 빨라요. - 計算が速いですね。", "계산기로 계산해요. - 電卓で計算します。"],
       },
