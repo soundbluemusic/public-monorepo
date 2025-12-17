@@ -11,7 +11,7 @@ export default createHandler(() => (
           <meta name="theme-color" content="#3B82F6" />
           <link rel="icon" href="/favicon.ico" />
           <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-          <link rel="manifest" href="/manifest.webmanifest" />
+          <link rel="manifest" href="/manifest.json" />
           {assets}
         </head>
         <body>
