@@ -4,7 +4,7 @@ import DocsLayout from "@/components/layout/DocsLayout";
 import { useI18n } from "@/i18n";
 
 export default function Home() {
-  const { locale } = useI18n();
+  const { locale, localePath } = useI18n();
 
   return (
     <>
@@ -41,7 +41,7 @@ export default function Home() {
         <div class="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {/* Web API Card */}
           <A
-            href="/web-api"
+            href={localePath("/web-api")}
             class="group relative p-8 rounded-2xl transition-all hover:shadow-lg hover:-translate-y-1"
             style={{
               "background-color": "var(--bg-elevated)",
@@ -80,7 +80,7 @@ export default function Home() {
 
           {/* Libraries Card */}
           <A
-            href="/libraries"
+            href={localePath("/libraries")}
             class="group relative p-8 rounded-2xl transition-all hover:shadow-lg hover:-translate-y-1"
             style={{
               "background-color": "var(--bg-elevated)",

@@ -53,10 +53,10 @@ const quickLinks: QuickLinksConfig = {
 } as const;
 
 export default function Sidebar(props: SidebarProps) {
-  const { locale } = useI18n();
+  const { locale, localePath } = useI18n();
   const location = useLocation();
 
-  const isActive = (href: string) => location.pathname === href;
+  const isActive = (href: string) => location.pathname === localePath(href);
 
   // Determine sidebar width based on state
   const getSidebarWidth = () => {
@@ -102,13 +102,13 @@ export default function Sidebar(props: SidebarProps) {
           style={{ "border-bottom": "1px solid var(--border-primary)" }}
         >
           <Show when={!props.isCollapsed || props.isMobile}>
-            <A href="/" onClick={() => props.onClose()} class="flex items-center gap-2.5">
+            <A href={localePath("/")} onClick={() => props.onClose()} class="flex items-center gap-2.5">
               <span class="text-lg">✨</span>
               <span class="font-semibold" style={{ color: "var(--text-primary)" }}>Permissive</span>
             </A>
           </Show>
           <Show when={props.isCollapsed && !props.isMobile}>
-            <A href="/" class="flex items-center justify-center w-full">
+            <A href={localePath("/")} class="flex items-center justify-center w-full">
               <span class="text-lg">✨</span>
             </A>
           </Show>
@@ -135,7 +135,7 @@ export default function Sidebar(props: SidebarProps) {
             <For each={navItems}>
               {(item) => (
                 <A
-                  href={item.href}
+                  href={localePath(item.href)}
                   onClick={() => props.onClose()}
                   class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all"
                   style={{
