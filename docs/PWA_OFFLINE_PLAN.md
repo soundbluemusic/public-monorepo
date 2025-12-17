@@ -1,144 +1,140 @@
-# PWA 완벽한 오프라인 지원 계획서
+# PWA 오프라인 지원 계획서 (100% SSG 최적화)
 
-## 📋 현재 상태 분석
+## 🎯 SSG + PWA 핵심 원칙
 
-### Context 앱 (`apps/context`)
-| 항목 | 상태 | 비고 |
-|------|------|------|
-| Service Worker | ✅ Workbox (vite-plugin-pwa) | 자동 생성 |
-| Web Manifest | ✅ 자동 생성 | app.config.ts |
-| 오프라인 캐싱 | ⚠️ 부분적 | Google Fonts만 |
-| IndexedDB | ❌ 없음 | 구현 필요 |
-| 설치 가능 | ✅ 완료 | |
+**SSG의 특징:**
+- 모든 HTML 페이지가 **빌드 시점**에 생성됨
+- 서버 없음 → API 캐싱, Background Sync **불필요**
+- 모든 콘텐츠가 정적 파일 → **프리캐싱이 핵심**
 
-### Permissive 앱 (`apps/permissive`)
-| 항목 | 상태 | 비고 |
-|------|------|------|
-| Service Worker | ✅ 커스텀 | sw.js 수동 작성 |
-| Web Manifest | ✅ 수동 | manifest.json |
-| 오프라인 캐싱 | ⚠️ 기본적 | Cache-first |
-| IndexedDB | ✅ Dexie | 즐겨찾기, 설정 등 |
-| 설치 가능 | ✅ 완료 | |
+**전략:** 빌드된 모든 파일을 Service Worker 설치 시점에 캐시 → 오프라인에서 100% 동작
 
 ---
 
-## 🎯 목표
+## 📋 현재 상태
 
-**"네트워크 없이도 100% 동작하는 앱"**
-
-1. 모든 정적 자산 오프라인 접근 가능
-2. 앱 데이터 로컬 저장 및 동기화
-3. 오프라인 상태 UI 피드백
-4. Background Sync로 재연결 시 자동 동기화
+| 앱 | SW 방식 | 프리캐싱 | 문제점 |
+|----|---------|----------|--------|
+| Context | vite-plugin-pwa | ⚠️ 부분적 | globPatterns 미설정, HTML 프리캐시 안됨 |
+| Permissive | 커스텀 sw.js | ❌ 없음 | 런타임 캐싱만, 첫 방문 필요 |
 
 ---
 
 ## 🏗️ 구현 계획
 
-### Phase 1: Service Worker 강화 (기반 작업)
+### Phase 1: 프리캐싱 완성 (핵심)
 
-#### 1.1 Context 앱 - Workbox 캐싱 전략 확장
+SSG에서 가장 중요한 것은 **빌드된 모든 파일을 프리캐시**하는 것.
+
+#### 1.1 Context 앱 설정 수정
 
 **파일:** `apps/context/app.config.ts`
 
 ```typescript
-// 현재 (Google Fonts만 캐싱)
-runtimeCaching: [
-  {
-    urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
-    handler: 'CacheFirst',
-    ...
-  },
-]
-
-// 개선 후 (모든 자산 캐싱)
-runtimeCaching: [
-  // 1. 정적 자산 (CSS, JS, 이미지)
-  {
-    urlPattern: /\.(?:js|css|woff2?|png|jpg|jpeg|svg|gif|ico)$/i,
-    handler: 'CacheFirst',
-    options: {
-      cacheName: 'static-assets',
-      expiration: { maxEntries: 100, maxAgeSeconds: 30 * 24 * 60 * 60 }, // 30일
-    },
-  },
-  // 2. HTML 페이지 (Network First + 오프라인 폴백)
-  {
-    urlPattern: /\.html$/,
-    handler: 'NetworkFirst',
-    options: {
-      cacheName: 'pages',
-      networkTimeoutSeconds: 3,
-    },
-  },
-  // 3. API 데이터 (Stale While Revalidate)
-  {
-    urlPattern: /\/api\//,
-    handler: 'StaleWhileRevalidate',
-    options: {
-      cacheName: 'api-cache',
-      expiration: { maxAgeSeconds: 24 * 60 * 60 }, // 1일
-    },
-  },
-  // 4. Google Fonts (기존 유지)
-  {
-    urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
-    handler: 'CacheFirst',
-    ...
-  },
-]
-```
-
-#### 1.2 Permissive 앱 - vite-plugin-pwa 마이그레이션
-
-**이유:** 커스텀 SW보다 Workbox가 더 안정적이고 기능이 풍부함
-
-**작업:**
-1. `vite-plugin-pwa` 및 `workbox-window` 의존성 추가
-2. `app.config.ts`에 PWA 플러그인 설정 추가
-3. 기존 `sw.js`, `register-sw.js` 제거
-4. `entry-server.tsx`에서 수동 등록 코드 제거
-
-**새 설정 예시:**
-```typescript
-// apps/permissive/app.config.ts
 import { VitePWA } from "vite-plugin-pwa";
 
-export default defineConfig({
-  vite: {
-    plugins: [
-      VitePWA({
-        registerType: 'autoUpdate',
-        includeAssets: ['favicon.ico', 'icons/*.png'],
-        manifest: {
-          name: 'Permissive - 무료 웹개발 자료',
-          short_name: 'Permissive',
-          theme_color: '#3b82f6',
-          // ... 기존 manifest.json 내용 이전
+VitePWA({
+  registerType: "autoUpdate",
+
+  // ✅ SSG 핵심: 빌드된 모든 정적 파일 프리캐시
+  workbox: {
+    globPatterns: [
+      "**/*.html",           // 모든 SSG 페이지
+      "**/*.js",             // JS 번들
+      "**/*.css",            // 스타일
+      "**/*.{png,jpg,svg,ico,webp}",  // 이미지
+      "**/*.{woff,woff2}",   // 폰트
+    ],
+
+    // ✅ SSG는 navigateFallback 불필요 (모든 페이지가 프리캐시됨)
+    navigateFallback: null,
+
+    // ✅ 외부 리소스만 런타임 캐싱
+    runtimeCaching: [
+      {
+        urlPattern: /^https:\/\/fonts\.(googleapis|gstatic)\.com\/.*/i,
+        handler: "CacheFirst",
+        options: {
+          cacheName: "google-fonts",
+          expiration: { maxAgeSeconds: 60 * 60 * 24 * 365 }, // 1년
         },
-        workbox: {
-          // Dexie IndexedDB는 SW와 별개로 동작하므로 충돌 없음
-          runtimeCaching: [/* Context와 동일한 전략 */],
-          navigateFallback: '/index.html', // SPA 오프라인 폴백
-        },
-      }),
+      },
     ],
   },
-});
+
+  manifest: {
+    name: "한국어 어휘 데이터베이스",
+    short_name: "Context",
+    theme_color: "#3B82F6",
+    background_color: "#ffffff",
+    display: "standalone",
+    start_url: "/",
+    icons: [
+      { src: "/icons/icon-192x192.svg", sizes: "192x192", type: "image/svg+xml" },
+      { src: "/icons/icon-512x512.svg", sizes: "512x512", type: "image/svg+xml" },
+    ],
+  },
+})
+```
+
+#### 1.2 Permissive 앱 - vite-plugin-pwa로 전환
+
+**이유:** 커스텀 SW는 프리캐싱 구현이 복잡함. Workbox가 자동 처리.
+
+**작업:**
+1. 의존성 추가
+2. app.config.ts에 PWA 설정
+3. 기존 sw.js, register-sw.js 삭제
+4. entry-server.tsx에서 수동 등록 제거
+
+**파일:** `apps/permissive/app.config.ts`
+
+```typescript
+import { VitePWA } from "vite-plugin-pwa";
+
+VitePWA({
+  registerType: "autoUpdate",
+
+  workbox: {
+    globPatterns: ["**/*.{html,js,css,png,jpg,svg,ico,woff2}"],
+    navigateFallback: null,
+    runtimeCaching: [
+      {
+        urlPattern: /^https:\/\/fonts\.(googleapis|gstatic)\.com\/.*/i,
+        handler: "CacheFirst",
+        options: {
+          cacheName: "google-fonts",
+          expiration: { maxAgeSeconds: 60 * 60 * 24 * 365 },
+        },
+      },
+    ],
+  },
+
+  manifest: {
+    name: "Permissive - 무료 웹개발 자료",
+    short_name: "Permissive",
+    theme_color: "#3b82f6",
+    background_color: "#ffffff",
+    display: "standalone",
+    start_url: "/",
+    icons: [
+      { src: "/icons/icon-192x192.png", sizes: "192x192", type: "image/png", purpose: "any maskable" },
+      { src: "/icons/icon-512x512.png", sizes: "512x512", type: "image/png", purpose: "any maskable" },
+    ],
+  },
+})
 ```
 
 ---
 
-### Phase 2: 오프라인 데이터 저장 (IndexedDB)
+### Phase 2: 사용자 데이터 로컬 저장 (IndexedDB)
+
+SSG는 서버가 없으므로 **모든 사용자 데이터는 브라우저에 저장**.
 
 #### 2.1 Context 앱 - Dexie 도입
 
-**의존성 추가:**
-```bash
-pnpm add dexie --filter @soundblue/context
-```
-
 **새 파일:** `apps/context/src/lib/db.ts`
+
 ```typescript
 import Dexie, { type EntityTable } from "dexie";
 
@@ -151,73 +147,53 @@ interface SearchHistory {
 interface FavoriteWord {
   id?: number;
   word: string;
+  reading?: string;
   meaning: string;
   addedAt: number;
-}
-
-interface Settings {
-  key: string;
-  value: string;
 }
 
 const db = new Dexie("ContextDB") as Dexie & {
   searchHistory: EntityTable<SearchHistory, "id">;
   favoriteWords: EntityTable<FavoriteWord, "id">;
-  settings: EntityTable<Settings, "key">;
 };
 
 db.version(1).stores({
   searchHistory: "++id, query, timestamp",
   favoriteWords: "++id, word, addedAt",
-  settings: "key",
 });
 
 export { db };
-export type { SearchHistory, FavoriteWord, Settings };
 ```
 
-**활용 예시:**
-- 검색 기록 저장 → 오프라인에서도 최근 검색어 표시
-- 단어 즐겨찾기 → 네트워크 없이 학습
-- 사용자 설정 → 테마, 언어 등
+**활용:**
+- 검색 기록 → 오프라인에서도 최근 검색어 자동완성
+- 단어 즐겨찾기 → 학습 목록 오프라인 접근
 
-#### 2.2 Permissive 앱 - 기존 Dexie 확장
+#### 2.2 Permissive 앱 - 기존 Dexie 유지
 
-**현재 스키마:**
-```typescript
-// favoriteLibraries, favoriteWebApis, settings, recentViews
-```
-
-**추가할 테이블:**
-```typescript
-db.version(2).stores({
-  // 기존 유지
-  favoriteLibraries: "++id, name, addedAt",
-  favoriteWebApis: "++id, name, addedAt",
-  settings: "key",
-  recentViews: "++id, type, itemId, viewedAt",
-  // 신규 추가
-  offlinePages: "url, html, cachedAt",     // 페이지 콘텐츠 캐싱
-  pendingActions: "++id, action, data, createdAt", // 오프라인 액션 큐
-});
-```
+이미 `favoriteLibraries`, `favoriteWebApis`, `settings`, `recentViews` 구현됨.
+추가 작업 불필요.
 
 ---
 
-### Phase 3: 오프라인 상태 감지 및 UI
+### Phase 3: 오프라인 상태 UI (선택적)
 
-#### 3.1 공통 컴포넌트 생성
+SSG + 완전 프리캐싱 시 오프라인에서도 모든 기능이 동작하므로,
+배너는 **사용자 안심용**으로만 필요.
 
-**새 파일:** `packages/shared/src/hooks/useOnlineStatus.ts`
+#### 3.1 공유 훅
+
+**새 파일:** `packages/shared/src/useOnlineStatus.ts`
+
 ```typescript
 import { createSignal, onMount, onCleanup } from "solid-js";
 
 export function useOnlineStatus() {
-  const [isOnline, setIsOnline] = createSignal(
-    typeof navigator !== "undefined" ? navigator.onLine : true
-  );
+  const [isOnline, setIsOnline] = createSignal(true);
 
   onMount(() => {
+    setIsOnline(navigator.onLine);
+
     const handleOnline = () => setIsOnline(true);
     const handleOffline = () => setIsOnline(false);
 
@@ -234,182 +210,118 @@ export function useOnlineStatus() {
 }
 ```
 
-#### 3.2 오프라인 배너 컴포넌트
+#### 3.2 오프라인 표시 (앱에서 직접 구현)
 
-**새 파일:** `packages/shared/src/components/OfflineBanner.tsx`
 ```tsx
+// 예: apps/context/src/components/OfflineIndicator.tsx
 import { Show } from "solid-js";
-import { useOnlineStatus } from "../hooks/useOnlineStatus";
+import { useOnlineStatus } from "@soundblue/shared";
 
-export function OfflineBanner() {
+export function OfflineIndicator() {
   const isOnline = useOnlineStatus();
 
   return (
     <Show when={!isOnline()}>
-      <div class="fixed top-0 left-0 right-0 bg-amber-500 text-white text-center py-2 z-50">
-        ⚠️ 오프라인 모드 - 일부 기능이 제한될 수 있습니다
+      <div class="fixed bottom-4 right-4 bg-gray-800 text-white px-3 py-2 rounded-lg text-sm">
+        오프라인 모드
       </div>
     </Show>
   );
 }
 ```
 
-#### 3.3 각 앱에 적용
-
-```tsx
-// apps/context/src/app.tsx & apps/permissive/src/app.tsx
-import { OfflineBanner } from "@soundblue/shared";
-
-export default function App() {
-  return (
-    <>
-      <OfflineBanner />
-      {/* 기존 내용 */}
-    </>
-  );
-}
-```
-
 ---
 
-### Phase 4: Background Sync (선택적)
+## 📁 파일 변경 요약
 
-#### 4.1 오프라인 액션 큐잉
-
-사용자가 오프라인 상태에서 수행한 액션을 저장했다가 온라인 복귀 시 실행
-
-**예시 시나리오:**
-- 오프라인에서 단어 즐겨찾기 추가 → 온라인 복귀 시 서버 동기화 (서버가 있는 경우)
-- 현재는 100% SSG이므로 서버 동기화 불필요, IndexedDB만으로 충분
-
-#### 4.2 SW에 Background Sync 등록 (향후 서버 연동 시)
-
-```typescript
-// workbox에서 BackgroundSync 플러그인 사용
-workbox: {
-  runtimeCaching: [
-    {
-      urlPattern: /\/api\/sync/,
-      handler: 'NetworkOnly',
-      options: {
-        backgroundSync: {
-          name: 'sync-queue',
-          options: { maxRetentionTime: 24 * 60 }, // 24시간
-        },
-      },
-    },
-  ],
-}
-```
-
----
-
-### Phase 5: 프리캐싱 최적화
-
-#### 5.1 빌드 시 자동 프리캐시
-
-vite-plugin-pwa가 빌드 시 자동으로 생성하는 파일들을 프리캐시
-
-```typescript
-workbox: {
-  globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
-  // SSG로 생성된 모든 HTML 페이지 포함
-}
-```
-
-#### 5.2 중요 데이터 프리로드
-
-앱 설치 시 핵심 데이터를 미리 다운로드
-
-```typescript
-// Context 앱: 자주 사용되는 단어 데이터 프리로드
-// Permissive 앱: 라이브러리 목록 프리로드
-```
-
----
-
-## 📁 파일 변경 목록
-
-### 새로 생성할 파일
-| 파일 | 목적 |
+### 새로 생성
+| 파일 | 설명 |
 |------|------|
-| `packages/shared/src/hooks/useOnlineStatus.ts` | 온라인 상태 훅 |
-| `packages/shared/src/components/OfflineBanner.tsx` | 오프라인 알림 UI |
-| `apps/context/src/lib/db.ts` | Context IndexedDB 설정 |
+| `apps/context/src/lib/db.ts` | IndexedDB 설정 |
+| `packages/shared/src/useOnlineStatus.ts` | 온라인 상태 훅 |
 
-### 수정할 파일
-| 파일 | 변경 내용 |
-|------|----------|
-| `apps/context/app.config.ts` | 캐싱 전략 확장 |
-| `apps/permissive/app.config.ts` | vite-plugin-pwa 추가 |
-| `apps/permissive/package.json` | 의존성 추가 |
-| `apps/context/package.json` | dexie 의존성 추가 |
-| `packages/shared/package.json` | solid-js peer dependency |
-| `packages/shared/src/index.ts` | 새 컴포넌트 export |
-| `apps/*/src/app.tsx` | OfflineBanner 적용 |
+### 수정
+| 파일 | 변경 |
+|------|------|
+| `apps/context/app.config.ts` | globPatterns 추가, runtimeCaching 정리 |
+| `apps/permissive/app.config.ts` | vite-plugin-pwa 설정 추가 |
+| `apps/permissive/package.json` | vite-plugin-pwa, workbox-window 추가 |
+| `apps/context/package.json` | dexie 추가 |
+| `apps/permissive/src/entry-server.tsx` | SW 수동 등록 코드 제거 |
 
-### 삭제할 파일
+### 삭제
 | 파일 | 이유 |
 |------|------|
-| `apps/permissive/public/sw.js` | Workbox로 대체 |
+| `apps/permissive/public/sw.js` | Workbox 자동 생성으로 대체 |
 | `apps/permissive/public/register-sw.js` | 자동 등록으로 대체 |
+| `apps/permissive/public/manifest.json` | app.config.ts에서 생성 |
 
 ---
 
-## ✅ 구현 우선순위
+## ✅ 구현 순서
 
-| 순서 | 작업 | 복잡도 | 영향도 |
-|------|------|--------|--------|
-| 1 | Context 캐싱 전략 강화 | 낮음 | 높음 |
-| 2 | 공유 오프라인 상태 훅/컴포넌트 | 낮음 | 중간 |
-| 3 | Permissive → vite-plugin-pwa 마이그레이션 | 중간 | 높음 |
-| 4 | Context IndexedDB (Dexie) 도입 | 중간 | 중간 |
-| 5 | 오프라인 배너 각 앱 적용 | 낮음 | 낮음 |
-| 6 | Background Sync (선택) | 높음 | 낮음 |
+| # | 작업 | 복잡도 | 효과 |
+|---|------|--------|------|
+| 1 | Context globPatterns 설정 | 낮음 | 즉시 오프라인 가능 |
+| 2 | Permissive → vite-plugin-pwa | 중간 | 통일된 PWA 구조 |
+| 3 | Context Dexie 도입 | 낮음 | 사용자 데이터 보존 |
+| 4 | 오프라인 UI 표시 | 낮음 | UX 개선 |
 
 ---
 
-## 🧪 테스트 계획
+## 🧪 테스트 방법
 
-### 수동 테스트
-1. Chrome DevTools → Network → Offline 체크
-2. 앱이 정상 동작하는지 확인
-3. 페이지 이동, 검색, 즐겨찾기 등 주요 기능 테스트
-
-### Lighthouse PWA 감사
+### 1. 프리캐싱 확인
 ```bash
-# 각 앱 빌드 후 serve
 pnpm build --filter context
 npx serve apps/context/.output/public
-
-# Lighthouse로 PWA 점수 확인 (목표: 100점)
 ```
+- Chrome DevTools → Application → Cache Storage 확인
+- 모든 HTML, JS, CSS가 캐시되어 있는지 확인
 
-### 체크리스트
-- [ ] 오프라인에서 모든 페이지 접근 가능
-- [ ] 오프라인에서 이전에 본 데이터 표시
-- [ ] 오프라인 상태 표시 UI 동작
-- [ ] 온라인 복귀 시 UI 업데이트
-- [ ] Service Worker 업데이트 알림
+### 2. 오프라인 테스트
+- Chrome DevTools → Network → Offline 체크
+- 모든 페이지 이동 가능한지 확인
+- 새로고침해도 동작하는지 확인
 
----
-
-## 📊 예상 결과
-
-| 지표 | 현재 | 목표 |
-|------|------|------|
-| Lighthouse PWA 점수 | ~70 | 100 |
-| 오프라인 페이지 접근 | 일부 | 전체 |
-| 오프라인 데이터 접근 | Context ❌ / Permissive ✅ | 둘 다 ✅ |
-| 설치 경험 | 기본 | 완전 |
+### 3. Lighthouse PWA 점수
+- 목표: 100점
+- "Installable", "PWA Optimized" 섹션 모두 통과
 
 ---
 
-## 🚀 다음 단계
+## 📊 SSG + PWA 캐싱 전략 비교
 
-이 계획서에 동의하시면 Phase 1부터 순차적으로 구현을 시작하겠습니다.
+| 전략 | SSG에서 용도 | 사용 여부 |
+|------|-------------|----------|
+| **Precache** | 빌드된 모든 정적 파일 | ✅ 필수 |
+| CacheFirst | 외부 폰트, CDN | ✅ 외부 리소스만 |
+| NetworkFirst | 자주 변경되는 콘텐츠 | ❌ 불필요 (SSG는 빌드 시 고정) |
+| StaleWhileRevalidate | API 응답 | ❌ 불필요 (API 없음) |
+| NetworkOnly | 실시간 필수 데이터 | ❌ 불필요 |
 
-**질문:**
-1. Background Sync (Phase 4)가 현재 필요한가요? (서버 연동 계획 여부)
-2. 오프라인 배너 디자인에 대한 선호사항이 있나요?
-3. 특정 Phase를 먼저 구현하길 원하시나요?
+---
+
+## 🚫 SSG에서 불필요한 것들
+
+이전 계획서에서 제거한 항목:
+
+1. ~~Background Sync~~ → 서버 없음
+2. ~~API 캐싱~~ → API 없음
+3. ~~NetworkFirst 전략~~ → 콘텐츠가 빌드 시 고정
+4. ~~navigateFallback~~ → 모든 페이지가 프리캐시됨
+5. ~~offlinePages IndexedDB 테이블~~ → SW가 HTML 캐시
+6. ~~pendingActions 큐~~ → 동기화할 서버 없음
+
+---
+
+## 🎯 최종 목표
+
+| 상태 | 동작 |
+|------|------|
+| 온라인 (첫 방문) | SW 설치, 모든 파일 프리캐시 |
+| 온라인 (재방문) | 캐시에서 즉시 로드, 백그라운드 업데이트 확인 |
+| 오프라인 | 캐시에서 100% 동작, 모든 페이지 접근 가능 |
+| 온라인 복귀 | SW 업데이트 확인, 새 버전 있으면 다운로드 |
+
+**결과:** 첫 방문 후 네트워크 완전 차단해도 앱이 100% 동작
