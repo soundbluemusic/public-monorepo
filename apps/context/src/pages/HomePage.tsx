@@ -3,7 +3,17 @@ import { A } from "@solidjs/router";
 import { For, Show } from "solid-js";
 import { Layout } from "@/components/Layout";
 import { getFeaturedEntries } from "@/data/entries";
+import type { MeaningEntry, Language } from "@/data/types";
 import { useI18n } from "@/i18n";
+
+// Get pronunciation based on locale
+const getPronunciation = (entry: MeaningEntry, locale: Language): string | undefined => {
+  switch (locale) {
+    case "en": return entry.romanization;
+    case "ja": return entry.translations.ja.reading;
+    case "ko": return entry.pronunciation;
+  }
+};
 
 export default function HomePage() {
   const { locale, t, localePath } = useI18n();
@@ -37,6 +47,7 @@ export default function HomePage() {
         <For each={featuredEntries}>
           {(entry) => {
             const translation = entry.translations[locale()];
+            const pronunciation = getPronunciation(entry, locale());
             return (
               <A
                 href={localePath(`/entry/${entry.id}`)}
@@ -47,9 +58,9 @@ export default function HomePage() {
                   <span class="text-lg font-medium" style={{ color: "var(--text-primary)" }}>
                     {entry.korean}
                   </span>
-                  <Show when={locale() !== "ko"}>
+                  <Show when={pronunciation}>
                     <span class="text-sm" style={{ color: "var(--text-tertiary)" }}>
-                      {entry.romanization}
+                      {pronunciation}
                     </span>
                   </Show>
                 </div>

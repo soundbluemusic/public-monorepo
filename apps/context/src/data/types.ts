@@ -13,8 +13,9 @@ export interface Translation {
 export interface MeaningEntry {
   id: string;
   korean: string;         // Korean word (always the source)
-  romanization: string;   // Romanization (e.g., "annyeong")
-  hanja?: string;         // Hanja if applicable
+  romanization: string;   // Romanization for English speakers (e.g., "gamsahamnida")
+  pronunciation?: string; // Standard Korean pronunciation for Korean speakers (e.g., "[감사함니다]")
+  hanja?: string;         // Hanja for Japanese speakers
   partOfSpeech: PartOfSpeech;
   categoryId: string;
   translations: {

@@ -4,7 +4,17 @@ import { For, Show, createMemo } from "solid-js";
 import { Layout } from "@/components/Layout";
 import { getCategoryById } from "@/data/categories";
 import { getEntryById, getEntriesByCategory } from "@/data/entries";
+import type { MeaningEntry, Language } from "@/data/types";
 import { useI18n } from "@/i18n";
+
+// Get pronunciation based on locale
+const getPronunciation = (entry: MeaningEntry, locale: Language): string | undefined => {
+  switch (locale) {
+    case "en": return entry.romanization;
+    case "ja": return entry.translations.ja.reading;
+    case "ko": return entry.pronunciation;
+  }
+};
 
 export default function EntryPage() {
   const params = useParams();
@@ -20,6 +30,12 @@ export default function EntryPage() {
     const e = entry();
     if (!e) return null;
     return e.translations[locale()];
+  });
+
+  const pronunciation = createMemo(() => {
+    const e = entry();
+    if (!e) return undefined;
+    return getPronunciation(e, locale());
   });
 
   const relatedEntries = createMemo(() => {
@@ -54,9 +70,9 @@ export default function EntryPage() {
           <h1 class="text-4xl font-bold mb-1" style={{ color: "var(--text-primary)" }}>
             {entry()!.korean}
           </h1>
-          <Show when={locale() !== "ko"}>
+          <Show when={pronunciation()}>
             <p class="text-lg" style={{ color: "var(--text-tertiary)" }}>
-              {entry()!.romanization}
+              {pronunciation()}
             </p>
           </Show>
           <Show when={locale() === "ja" && entry()!.hanja}>
@@ -129,22 +145,25 @@ export default function EntryPage() {
             </p>
             <div class="space-y-1">
               <For each={relatedEntries()}>
-                {(related) => (
-                  <A
-                    href={localePath(`/entry/${related.id}`)}
-                    class="flex items-baseline justify-between py-2 transition-colors"
-                  >
-                    <div class="flex items-baseline gap-2">
-                      <span style={{ color: "var(--text-primary)" }}>{related.korean}</span>
-                      <Show when={locale() !== "ko"}>
-                        <span class="text-sm" style={{ color: "var(--text-tertiary)" }}>{related.romanization}</span>
-                      </Show>
-                    </div>
-                    <span class="text-sm" style={{ color: "var(--text-secondary)" }}>
-                      {related.translations[locale()].word}
-                    </span>
-                  </A>
-                )}
+                {(related) => {
+                  const relatedPronunciation = getPronunciation(related, locale());
+                  return (
+                    <A
+                      href={localePath(`/entry/${related.id}`)}
+                      class="flex items-baseline justify-between py-2 transition-colors"
+                    >
+                      <div class="flex items-baseline gap-2">
+                        <span style={{ color: "var(--text-primary)" }}>{related.korean}</span>
+                        <Show when={relatedPronunciation}>
+                          <span class="text-sm" style={{ color: "var(--text-tertiary)" }}>{relatedPronunciation}</span>
+                        </Show>
+                      </div>
+                      <span class="text-sm" style={{ color: "var(--text-secondary)" }}>
+                        {related.translations[locale()].word}
+                      </span>
+                    </A>
+                  );
+                }}
               </For>
             </div>
           </div>

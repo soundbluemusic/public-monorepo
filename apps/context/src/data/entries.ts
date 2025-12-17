@@ -30,7 +30,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "やあ / じゃあね",
-        reading: "やあ / じゃあね",
+        reading: "アンニョン",
         explanation: "友達同士で使うカジュアルな挨拶。文脈によって「こんにちは」と「さようなら」の両方の意味があります。",
         examples: [
           "안녕! 오랜만이야! - やあ！久しぶり！",
@@ -67,7 +67,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "こんにちは",
-        reading: "こんにちは",
+        reading: "アンニョンハセヨ",
         explanation: "韓国語の標準的な丁寧な挨拶です。誰かに会った時や会話を始める時に使います。",
         examples: [
           "안녕하세요, 처음 뵙겠습니다. - こんにちは、初めまして。",
@@ -80,6 +80,7 @@ export const meaningEntries: MeaningEntry[] = [
     id: "gomapseumnida",
     korean: "감사합니다",
     romanization: "gamsahamnida",
+    pronunciation: "[감사함니다]",
     hanja: "感謝",
     partOfSpeech: "interjection",
     categoryId: "greetings",
@@ -105,7 +106,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "ありがとうございます",
-        reading: "ありがとうございます",
+        reading: "カムサハムニダ",
         explanation: "感謝を表す丁寧な表現です。'고마워요'よりフォーマルで、ビジネスシーンや目上の人に使います。",
         examples: [
           "도와주셔서 감사합니다. - 手伝ってくださりありがとうございます。",
@@ -140,7 +141,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "さようなら（去る人へ）",
-        reading: "さようなら",
+        reading: "アンニョンヒ カセヨ",
         explanation: "自分が残り、相手が去る時に使う別れの挨拶。直訳は「安寧にお行きください」。対の表現は「안녕히 계세요」（安寧にお居てください）。",
         examples: [
           "안녕히 가세요! 조심히 가세요. - さようなら！気をつけて。",
@@ -178,7 +179,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "愛",
-        reading: "あい",
+        reading: "サラン",
         explanation: "誰かや何かへの深い愛情。恋愛、家族愛、物事への愛など幅広く使われます。",
         examples: [
           "사랑해요. - 愛しています。",
@@ -191,6 +192,7 @@ export const meaningEntries: MeaningEntry[] = [
     id: "haengbok",
     korean: "행복",
     romanization: "haengbok",
+    pronunciation: "[행복]",
     hanja: "幸福",
     partOfSpeech: "noun",
     categoryId: "emotions",
@@ -216,7 +218,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "幸せ",
-        reading: "しあわせ",
+        reading: "ヘンボク",
         explanation: "幸せな状態のこと。名詞の「행복」、形容詞の「행복하다」（幸せだ）として使えます。",
         examples: [
           "행복하세요! - 幸せでありますように！",
@@ -253,7 +255,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "悲しみ",
-        reading: "かなしみ",
+        reading: "スルプム",
         explanation: "悲しい気持ちや不幸な感情。形容詞形は「슬프다」（悲しい）です。",
         examples: [
           "슬픔을 참을 수 없어요. - 悲しみを抑えられません。",
@@ -292,7 +294,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "家",
-        reading: "いえ",
+        reading: "チプ",
         explanation: "人が住む建物、または「家庭」の概念。最も基本的でよく使われる単語の一つです。",
         examples: [
           "집에 가고 싶어요. - 家に帰りたいです。",
@@ -305,6 +307,7 @@ export const meaningEntries: MeaningEntry[] = [
     id: "hakgyo",
     korean: "학교",
     romanization: "hakgyo",
+    pronunciation: "[학꾜]",
     hanja: "學校",
     partOfSpeech: "noun",
     categoryId: "daily-life",
@@ -330,7 +333,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "学校",
-        reading: "がっこう",
+        reading: "ハッキョ",
         explanation: "学生を教育する機関。小学校、中学校、高校、大学を含みます。",
         examples: [
           "학교에 다녀요. - 学校に通っています。",
@@ -367,7 +370,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "仕事 / 事",
-        reading: "しごと / こと",
+        reading: "イル",
         explanation: "仕事や作業、または「事柄」の意味があります。数字の「一」（일, 이, 삼...）としても使われます。",
         examples: [
           "일이 많아요. - 仕事が多いです。",
@@ -406,7 +409,7 @@ export const meaningEntries: MeaningEntry[] = [
       },
       ja: {
         word: "ご飯",
-        reading: "ごはん",
+        reading: "パプ",
         explanation: "炊いた米、韓国の主食。「食事」全般を意味することもあります。「밥 먹었어?」（ご飯食べた？）は一般的な挨拶です。",
         examples: [
           "밥 먹었어요? - ご飯食べましたか？",
