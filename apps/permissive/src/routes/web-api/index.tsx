@@ -84,8 +84,9 @@ export default function WebApiPage() {
       apis = apis.filter(api => api.category === category());
     }
 
-    // Filter by search
-    const q = search().toLowerCase();
+    // Filter by search (with length limit for performance)
+    const MAX_SEARCH_LENGTH = 100;
+    const q = search().toLowerCase().slice(0, MAX_SEARCH_LENGTH);
     if (q) {
       apis = apis.filter(api =>
         api.name.toLowerCase().includes(q) ||
@@ -103,11 +104,11 @@ export default function WebApiPage() {
       return { [category()]: apis };
     }
 
-    return apis.reduce((acc, api) => {
+    return apis.reduce<Record<string, WebAPI[]>>((acc, api) => {
       if (!acc[api.category]) acc[api.category] = [];
       acc[api.category].push(api);
       return acc;
-    }, {} as Record<string, WebAPI[]>);
+    }, {});
   };
 
   return (

@@ -4,8 +4,8 @@ import { Show, For } from "solid-js";
 import DocsLayout from "@/components/layout/DocsLayout";
 import { useI18n } from "@/i18n";
 
-// API 데이터 (실제로는 별도 파일로 분리 가능)
-const webApis: Record<string, {
+// Web API detail type definition
+interface WebApiDetail {
   name: string;
   description: string;
   descriptionKo: string;
@@ -16,7 +16,10 @@ const webApis: Record<string, {
   featuresKo?: string[];
   example?: string;
   relatedApis?: string[];
-}> = {
+}
+
+// API 데이터 (실제로는 별도 파일로 분리 가능)
+const webApis: Record<string, WebApiDetail> = {
   "fetch": {
     name: "Fetch API",
     description: "Modern interface for making HTTP requests, replacing XMLHttpRequest with a cleaner, Promise-based approach.",
@@ -88,7 +91,15 @@ export default function WebApiDetailPage() {
   const { locale } = useI18n();
   const isKo = () => locale() === "ko";
 
-  const api = () => webApis[params.apiId.toLowerCase()];
+  const api = () => {
+    if (!params.apiId) return undefined;
+    const key = params.apiId.toLowerCase();
+    // Prevent prototype pollution by checking own property
+    if (!Object.prototype.hasOwnProperty.call(webApis, key)) {
+      return undefined;
+    }
+    return webApis[key];
+  };
 
   return (
     <>

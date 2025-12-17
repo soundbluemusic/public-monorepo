@@ -1,6 +1,11 @@
 import { createSignal, onMount } from "solid-js";
 import { isServer } from "solid-js/web";
 
+// Type guard for valid theme values
+function isValidTheme(value: string | null): value is "light" | "dark" {
+  return value === "light" || value === "dark";
+}
+
 export default function ThemeToggle() {
   const [theme, setTheme] = createSignal<"light" | "dark">("light");
 
@@ -8,7 +13,12 @@ export default function ThemeToggle() {
     if (isServer) return;
 
     const stored = localStorage.getItem("theme");
-    if (stored === "dark" || (!stored && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+    if (isValidTheme(stored)) {
+      setTheme(stored);
+      if (stored === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setTheme("dark");
       document.documentElement.classList.add("dark");
     }
@@ -39,10 +49,8 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      class="p-2 rounded-lg transition-colors"
+      class="p-2 rounded-lg hover-bg"
       style={{ color: "var(--text-secondary)" }}
-      onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "var(--bg-tertiary)"}
-      onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "transparent"}
       aria-label="Toggle theme"
     >
       {theme() === "light" ? (

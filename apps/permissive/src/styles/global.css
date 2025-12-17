@@ -216,6 +216,23 @@ body {
     padding-bottom: var(--bottom-nav-height);
   }
 
+  /* Hover background utilities */
+  .hover-bg {
+    transition: background-color 0.15s ease;
+  }
+
+  .hover-bg:hover {
+    background-color: var(--bg-tertiary);
+  }
+
+  .hover-bg-secondary:hover {
+    background-color: var(--bg-secondary);
+  }
+
+  .hover-bg-border:hover {
+    background-color: var(--border-primary);
+  }
+
   /* Z-index utilities */
   .z-header {
     z-index: var(--z-header);

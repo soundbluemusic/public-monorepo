@@ -70,8 +70,8 @@ export const I18nProvider: ParentComponent = (props) => {
 
   // 클라이언트에서만 localStorage 값 적용
   onMount(() => {
-    const stored = localStorage.getItem("locale") as Language;
-    if (stored && (stored === "en" || stored === "ko")) {
+    const stored = localStorage.getItem("locale");
+    if (stored === "en" || stored === "ko") {
       setLocaleState(stored);
     } else {
       // 브라우저 언어 감지 (영어권이면 en으로)

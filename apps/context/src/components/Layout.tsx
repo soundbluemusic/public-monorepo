@@ -56,8 +56,9 @@ export const Layout: ParentComponent = (props) => {
   };
 
   // Search functionality
+  const MAX_SEARCH_LENGTH = 100;
   createEffect(() => {
-    const q = searchQuery().toLowerCase().trim();
+    const q = searchQuery().toLowerCase().trim().slice(0, MAX_SEARCH_LENGTH);
     if (!q) {
       setSearchResults([]);
       return;
@@ -107,7 +108,8 @@ export const Layout: ParentComponent = (props) => {
   // Close search results when clicking outside
   onMount(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (searchContainerRef && !searchContainerRef.contains(e.target as Node)) {
+      const target = e.target;
+      if (searchContainerRef && target instanceof Node && !searchContainerRef.contains(target)) {
         setShowResults(false);
       }
     };
@@ -255,7 +257,12 @@ export const Layout: ParentComponent = (props) => {
             {/* Language */}
             <select
               value={locale()}
-              onChange={(e) => setLocale(e.currentTarget.value as Language)}
+              onChange={(e) => {
+                const value = e.currentTarget.value;
+                if (value === "ko" || value === "en" || value === "ja") {
+                  setLocale(value);
+                }
+              }}
               class="text-sm bg-transparent border-none cursor-pointer focus:outline-none px-2 py-1.5"
               style={{ color: "var(--text-secondary)" }}
             >

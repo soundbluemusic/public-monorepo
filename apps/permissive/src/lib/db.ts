@@ -1,4 +1,5 @@
 import Dexie, { type EntityTable } from "dexie";
+import { validateId } from "@soundblue/shared";
 
 // 즐겨찾기 라이브러리
 export interface FavoriteLibrary {
@@ -30,26 +31,32 @@ export interface RecentView {
   viewedAt: Date;
 }
 
-// Dexie 데이터베이스 정의
-const db = new Dexie("PermissiveDB") as Dexie & {
-  favoriteLibraries: EntityTable<FavoriteLibrary, "id">;
-  favoriteWebApis: EntityTable<FavoriteWebApi, "id">;
-  settings: EntityTable<UserSettings, "id">;
-  recentViews: EntityTable<RecentView, "id">;
-};
+// Typed Dexie database class
+class PermissiveDatabase extends Dexie {
+  favoriteLibraries!: EntityTable<FavoriteLibrary, "id">;
+  favoriteWebApis!: EntityTable<FavoriteWebApi, "id">;
+  settings!: EntityTable<UserSettings, "id">;
+  recentViews!: EntityTable<RecentView, "id">;
 
-db.version(1).stores({
-  favoriteLibraries: "++id, libraryId, addedAt",
-  favoriteWebApis: "++id, apiId, addedAt",
-  settings: "id",
-  recentViews: "++id, [type+itemId], viewedAt",
-});
+  constructor() {
+    super("PermissiveDB");
+    this.version(1).stores({
+      favoriteLibraries: "++id, libraryId, addedAt",
+      favoriteWebApis: "++id, apiId, addedAt",
+      settings: "id",
+      recentViews: "++id, [type+itemId], viewedAt",
+    });
+  }
+}
+
+const db = new PermissiveDatabase();
 
 export { db };
 
 // 라이브러리 즐겨찾기 헬퍼
 export const favoriteLibraries = {
   async add(libraryId: string) {
+    validateId(libraryId, "libraryId");
     const exists = await db.favoriteLibraries
       .where("libraryId")
       .equals(libraryId)
@@ -59,10 +66,12 @@ export const favoriteLibraries = {
   },
 
   async remove(libraryId: string) {
+    validateId(libraryId, "libraryId");
     return db.favoriteLibraries.where("libraryId").equals(libraryId).delete();
   },
 
   async toggle(libraryId: string) {
+    validateId(libraryId, "libraryId");
     const exists = await db.favoriteLibraries
       .where("libraryId")
       .equals(libraryId)
@@ -76,6 +85,7 @@ export const favoriteLibraries = {
   },
 
   async isFavorite(libraryId: string) {
+    validateId(libraryId, "libraryId");
     const exists = await db.favoriteLibraries
       .where("libraryId")
       .equals(libraryId)
@@ -95,6 +105,7 @@ export const favoriteLibraries = {
 // Web API 즐겨찾기 헬퍼
 export const favoriteWebApis = {
   async add(apiId: string) {
+    validateId(apiId, "apiId");
     const exists = await db.favoriteWebApis
       .where("apiId")
       .equals(apiId)
@@ -104,10 +115,12 @@ export const favoriteWebApis = {
   },
 
   async remove(apiId: string) {
+    validateId(apiId, "apiId");
     return db.favoriteWebApis.where("apiId").equals(apiId).delete();
   },
 
   async toggle(apiId: string) {
+    validateId(apiId, "apiId");
     const exists = await db.favoriteWebApis
       .where("apiId")
       .equals(apiId)
@@ -121,6 +134,7 @@ export const favoriteWebApis = {
   },
 
   async isFavorite(apiId: string) {
+    validateId(apiId, "apiId");
     const exists = await db.favoriteWebApis
       .where("apiId")
       .equals(apiId)
@@ -173,6 +187,7 @@ export const settings = {
 // 최근 본 항목 헬퍼
 export const recentViews = {
   async add(type: RecentView["type"], itemId: string) {
+    validateId(itemId, "itemId");
     // 기존 기록 삭제 후 새로 추가 (최신으로 업데이트)
     await db.recentViews.where({ type, itemId }).delete();
     return db.recentViews.add({ type, itemId, viewedAt: new Date() });

@@ -1,4 +1,5 @@
 import Dexie, { type EntityTable } from "dexie";
+import { validateId } from "@soundblue/shared";
 
 // 즐겨찾기 단어
 export interface FavoriteEntry {
@@ -24,34 +25,42 @@ export interface UserSettings {
   updatedAt: Date;
 }
 
-// Dexie 데이터베이스 정의
-const db = new Dexie("ContextDB") as Dexie & {
-  favorites: EntityTable<FavoriteEntry, "id">;
-  studyRecords: EntityTable<StudyRecord, "id">;
-  settings: EntityTable<UserSettings, "id">;
-};
+// Typed Dexie database class
+class ContextDatabase extends Dexie {
+  favorites!: EntityTable<FavoriteEntry, "id">;
+  studyRecords!: EntityTable<StudyRecord, "id">;
+  settings!: EntityTable<UserSettings, "id">;
 
-db.version(1).stores({
-  favorites: "++id, entryId, addedAt",
-  studyRecords: "++id, entryId, studiedAt",
-  settings: "id",
-});
+  constructor() {
+    super("ContextDB");
+    this.version(1).stores({
+      favorites: "++id, entryId, addedAt",
+      studyRecords: "++id, entryId, studiedAt",
+      settings: "id",
+    });
+  }
+}
+
+const db = new ContextDatabase();
 
 export { db };
 
 // 헬퍼 함수들
 export const favorites = {
   async add(entryId: string) {
+    validateId(entryId, "entryId");
     const exists = await db.favorites.where("entryId").equals(entryId).first();
     if (exists) return exists.id;
     return db.favorites.add({ entryId, addedAt: new Date() });
   },
 
   async remove(entryId: string) {
+    validateId(entryId, "entryId");
     return db.favorites.where("entryId").equals(entryId).delete();
   },
 
   async toggle(entryId: string) {
+    validateId(entryId, "entryId");
     const exists = await db.favorites.where("entryId").equals(entryId).first();
     if (exists) {
       await db.favorites.delete(exists.id!);
@@ -62,6 +71,7 @@ export const favorites = {
   },
 
   async isFavorite(entryId: string) {
+    validateId(entryId, "entryId");
     const exists = await db.favorites.where("entryId").equals(entryId).first();
     return !!exists;
   },
@@ -77,6 +87,7 @@ export const favorites = {
 
 export const studyRecords = {
   async add(entryId: string, correct: boolean) {
+    validateId(entryId, "entryId");
     return db.studyRecords.add({
       entryId,
       studiedAt: new Date(),
@@ -85,6 +96,7 @@ export const studyRecords = {
   },
 
   async getByEntry(entryId: string) {
+    validateId(entryId, "entryId");
     return db.studyRecords.where("entryId").equals(entryId).toArray();
   },
 
@@ -93,6 +105,7 @@ export const studyRecords = {
   },
 
   async getStats(entryId: string) {
+    validateId(entryId, "entryId");
     const records = await db.studyRecords
       .where("entryId")
       .equals(entryId)

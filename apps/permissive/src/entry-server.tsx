@@ -18,15 +18,7 @@ export default createHandler(() => (
         <body class="min-h-screen bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased">
           <div id="app">{children}</div>
           {scripts}
-          <script dangerouslySetInnerHTML={{
-            __html: `
-              if ('serviceWorker' in navigator) {
-                window.addEventListener('load', () => {
-                  navigator.serviceWorker.register('/sw.js');
-                });
-              }
-            `
-          }} />
+          <script src="/register-sw.js" />
         </body>
       </html>
     )}

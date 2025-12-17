@@ -4,8 +4,8 @@ import { Show, For } from "solid-js";
 import DocsLayout from "@/components/layout/DocsLayout";
 import { useI18n } from "@/i18n";
 
-// 라이브러리 데이터
-const libraries: Record<string, {
+// Library detail type definition
+interface LibraryDetail {
   name: string;
   description: string;
   descriptionKo: string;
@@ -18,7 +18,10 @@ const libraries: Record<string, {
   featuresKo?: string[];
   usedHere?: boolean;
   alternatives?: string[];
-}> = {
+}
+
+// 라이브러리 데이터
+const libraries: Record<string, LibraryDetail> = {
   "react": {
     name: "React",
     description: "A JavaScript library for building user interfaces with a component-based architecture.",
@@ -94,7 +97,15 @@ export default function LibraryDetailPage() {
   const { locale } = useI18n();
   const isKo = () => locale() === "ko";
 
-  const lib = () => libraries[params.libId.toLowerCase()];
+  const lib = () => {
+    if (!params.libId) return undefined;
+    const key = params.libId.toLowerCase();
+    // Prevent prototype pollution by checking own property
+    if (!Object.prototype.hasOwnProperty.call(libraries, key)) {
+      return undefined;
+    }
+    return libraries[key];
+  };
 
   return (
     <>

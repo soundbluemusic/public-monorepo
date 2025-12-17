@@ -137,8 +137,9 @@ export default function LibrariesPage() {
       libs = libs.filter(lib => lib.category === category());
     }
 
-    // Filter by search
-    const q = search().toLowerCase();
+    // Filter by search (with length limit for performance)
+    const MAX_SEARCH_LENGTH = 100;
+    const q = search().toLowerCase().slice(0, MAX_SEARCH_LENGTH);
     if (q) {
       libs = libs.filter(lib =>
         lib.name.toLowerCase().includes(q) ||
@@ -156,11 +157,11 @@ export default function LibrariesPage() {
       return { [category()]: libs };
     }
 
-    return libs.reduce((acc, lib) => {
+    return libs.reduce<Record<string, Library[]>>((acc, lib) => {
       if (!acc[lib.category]) acc[lib.category] = [];
       acc[lib.category].push(lib);
       return acc;
-    }, {} as Record<string, Library[]>);
+    }, {});
   };
 
   return (
