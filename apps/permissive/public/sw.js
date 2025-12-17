@@ -24,13 +24,26 @@ self.addEventListener("fetch", (event) => {
 
   event.respondWith(
     caches.match(event.request).then((cached) => {
-      const fetchPromise = fetch(event.request).then((response) => {
-        if (response.ok) {
-          const clone = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
-        }
-        return response;
-      });
+      const fetchPromise = fetch(event.request)
+        .then((response) => {
+          if (response.ok) {
+            const clone = response.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+          }
+          return response;
+        })
+        .catch((error) => {
+          console.error("[SW] Fetch failed:", error);
+          // Return cached version if available, otherwise return offline response
+          if (cached) {
+            return cached;
+          }
+          return new Response("Offline - Please check your connection", {
+            status: 503,
+            statusText: "Service Unavailable",
+            headers: { "Content-Type": "text/plain" }
+          });
+        });
       return cached || fetchPromise;
     })
   );

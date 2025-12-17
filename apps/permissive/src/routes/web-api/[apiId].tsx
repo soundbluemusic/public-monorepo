@@ -91,7 +91,15 @@ export default function WebApiDetailPage() {
   const { locale } = useI18n();
   const isKo = () => locale() === "ko";
 
-  const api = () => params.apiId ? webApis[params.apiId.toLowerCase()] : undefined;
+  const api = () => {
+    if (!params.apiId) return undefined;
+    const key = params.apiId.toLowerCase();
+    // Prevent prototype pollution by checking own property
+    if (!Object.prototype.hasOwnProperty.call(webApis, key)) {
+      return undefined;
+    }
+    return webApis[key];
+  };
 
   return (
     <>

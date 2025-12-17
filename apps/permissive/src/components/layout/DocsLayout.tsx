@@ -29,10 +29,10 @@ export default function DocsLayout(props: DocsLayoutProps) {
     const currentIsMobile = window.innerWidth < BREAKPOINT_MD;
     setIsMobile(currentIsMobile);
 
-    // Load collapsed state from localStorage
+    // Load collapsed state from localStorage with validation
     const saved = localStorage.getItem("sidebar-collapsed");
-    if (saved === "true") {
-      setSidebarCollapsed(true);
+    if (saved === "true" || saved === "false") {
+      setSidebarCollapsed(saved === "true");
     }
 
     // 다음 프레임에서 transition 활성화

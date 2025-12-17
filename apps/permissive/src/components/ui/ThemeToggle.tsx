@@ -1,6 +1,11 @@
 import { createSignal, onMount } from "solid-js";
 import { isServer } from "solid-js/web";
 
+// Type guard for valid theme values
+function isValidTheme(value: string | null): value is "light" | "dark" {
+  return value === "light" || value === "dark";
+}
+
 export default function ThemeToggle() {
   const [theme, setTheme] = createSignal<"light" | "dark">("light");
 
@@ -8,7 +13,12 @@ export default function ThemeToggle() {
     if (isServer) return;
 
     const stored = localStorage.getItem("theme");
-    if (stored === "dark" || (!stored && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+    if (isValidTheme(stored)) {
+      setTheme(stored);
+      if (stored === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setTheme("dark");
       document.documentElement.classList.add("dark");
     }

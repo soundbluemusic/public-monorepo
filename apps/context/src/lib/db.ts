@@ -44,19 +44,39 @@ const db = new ContextDatabase();
 
 export { db };
 
+// Input validation constants
+const MAX_ID_LENGTH = 100;
+
+// Validate ID input to prevent abuse
+function validateId(id: string, fieldName: string): void {
+  if (!id || typeof id !== "string") {
+    throw new Error(`${fieldName} is required`);
+  }
+  if (id.length > MAX_ID_LENGTH) {
+    throw new Error(`${fieldName} exceeds maximum length of ${MAX_ID_LENGTH}`);
+  }
+  // Prevent prototype pollution attempts
+  if (id === "__proto__" || id === "constructor" || id === "prototype") {
+    throw new Error(`Invalid ${fieldName}`);
+  }
+}
+
 // 헬퍼 함수들
 export const favorites = {
   async add(entryId: string) {
+    validateId(entryId, "entryId");
     const exists = await db.favorites.where("entryId").equals(entryId).first();
     if (exists) return exists.id;
     return db.favorites.add({ entryId, addedAt: new Date() });
   },
 
   async remove(entryId: string) {
+    validateId(entryId, "entryId");
     return db.favorites.where("entryId").equals(entryId).delete();
   },
 
   async toggle(entryId: string) {
+    validateId(entryId, "entryId");
     const exists = await db.favorites.where("entryId").equals(entryId).first();
     if (exists) {
       await db.favorites.delete(exists.id!);
@@ -67,6 +87,7 @@ export const favorites = {
   },
 
   async isFavorite(entryId: string) {
+    validateId(entryId, "entryId");
     const exists = await db.favorites.where("entryId").equals(entryId).first();
     return !!exists;
   },
@@ -82,6 +103,7 @@ export const favorites = {
 
 export const studyRecords = {
   async add(entryId: string, correct: boolean) {
+    validateId(entryId, "entryId");
     return db.studyRecords.add({
       entryId,
       studiedAt: new Date(),
@@ -90,6 +112,7 @@ export const studyRecords = {
   },
 
   async getByEntry(entryId: string) {
+    validateId(entryId, "entryId");
     return db.studyRecords.where("entryId").equals(entryId).toArray();
   },
 
@@ -98,6 +121,7 @@ export const studyRecords = {
   },
 
   async getStats(entryId: string) {
+    validateId(entryId, "entryId");
     const records = await db.studyRecords
       .where("entryId")
       .equals(entryId)

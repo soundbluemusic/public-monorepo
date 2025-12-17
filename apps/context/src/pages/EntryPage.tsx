@@ -75,8 +75,8 @@ export default function EntryPage() {
           </div>
         }
       >
-        <Title>{entry()!.korean} - Context</Title>
-        <Meta name="description" content={translation()?.explanation || ""} />
+        <Title>{entry()?.korean ?? "Entry"} - Context</Title>
+        <Meta name="description" content={translation()?.explanation ?? ""} />
 
         <A href={localePath("/")} class="text-sm mb-8 inline-block" style={{ color: "var(--text-tertiary)" }}>
           ← {t("backToList")}
@@ -85,7 +85,7 @@ export default function EntryPage() {
         <div class="mb-8">
           <div class="flex items-center gap-3 mb-1">
             <h1 class="text-4xl font-bold" style={{ color: "var(--text-primary)" }}>
-              {entry()!.korean}
+              {entry()?.korean}
             </h1>
             <button
               type="button"
@@ -120,9 +120,9 @@ export default function EntryPage() {
               {pronunciation()}
             </p>
           </Show>
-          <Show when={locale() === "ja" && entry()!.hanja}>
+          <Show when={locale() === "ja" && entry()?.hanja}>
             <p class="text-sm mt-1" style={{ color: "var(--text-tertiary)" }}>
-              {entry()!.hanja}
+              {entry()?.hanja}
             </p>
           </Show>
         </div>
@@ -133,26 +133,26 @@ export default function EntryPage() {
               {locale() === "ko" ? "한국어" : locale() === "en" ? "English" : "日本語"}
             </p>
             <h2 class="text-2xl font-medium mb-3" style={{ color: "var(--text-primary)" }}>
-              {translation()!.word}
+              {translation()?.word}
             </h2>
-            <Show when={translation()!.reading}>
+            <Show when={translation()?.reading}>
               <p class="text-sm mb-3" style={{ color: "var(--text-secondary)" }}>
-                {translation()!.reading}
+                {translation()?.reading}
               </p>
             </Show>
             <p class="leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-              {translation()!.explanation}
+              {translation()?.explanation}
             </p>
           </div>
         </Show>
 
-        <Show when={translation()?.examples && translation()!.examples!.length > 0}>
+        <Show when={translation()?.examples && translation()?.examples?.length && translation()!.examples.length > 0}>
           <div class="mb-8 pb-8" style={{ "border-bottom": "1px solid var(--border-primary)" }}>
             <p class="text-sm uppercase tracking-wide mb-3" style={{ color: "var(--text-tertiary)" }}>
               {t("examples")}
             </p>
             <ul class="space-y-2">
-              <For each={translation()!.examples}>
+              <For each={translation()?.examples ?? []}>
                 {(example) => (
                   <li
                     class="pl-4"
@@ -171,13 +171,13 @@ export default function EntryPage() {
 
         <div class="mb-8 pb-8" style={{ "border-bottom": "1px solid var(--border-primary)" }}>
           <div class="flex flex-wrap gap-4 text-sm" style={{ color: "var(--text-secondary)" }}>
-            <span>{t(entry()!.partOfSpeech)}</span>
+            <span>{entry()?.partOfSpeech ? t(entry()!.partOfSpeech) : ""}</span>
             <span>•</span>
-            <span>{t(entry()!.difficulty)}</span>
+            <span>{entry()?.difficulty ? t(entry()!.difficulty) : ""}</span>
             <Show when={category()}>
               <span>•</span>
-              <A href={localePath(`/category/${category()!.id}`)} style={{ color: "var(--accent-primary)" }}>
-                {category()!.name[locale()]}
+              <A href={localePath(`/category/${category()?.id ?? ""}`)} style={{ color: "var(--accent-primary)" }}>
+                {category()?.name[locale()]}
               </A>
             </Show>
           </div>

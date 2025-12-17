@@ -56,8 +56,9 @@ export const Layout: ParentComponent = (props) => {
   };
 
   // Search functionality
+  const MAX_SEARCH_LENGTH = 100;
   createEffect(() => {
-    const q = searchQuery().toLowerCase().trim();
+    const q = searchQuery().toLowerCase().trim().slice(0, MAX_SEARCH_LENGTH);
     if (!q) {
       setSearchResults([]);
       return;

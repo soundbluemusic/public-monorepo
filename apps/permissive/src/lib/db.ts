@@ -52,9 +52,27 @@ const db = new PermissiveDatabase();
 
 export { db };
 
+// Input validation constants
+const MAX_ID_LENGTH = 100;
+
+// Validate ID input to prevent abuse
+function validateId(id: string, fieldName: string): void {
+  if (!id || typeof id !== "string") {
+    throw new Error(`${fieldName} is required`);
+  }
+  if (id.length > MAX_ID_LENGTH) {
+    throw new Error(`${fieldName} exceeds maximum length of ${MAX_ID_LENGTH}`);
+  }
+  // Prevent prototype pollution attempts
+  if (id === "__proto__" || id === "constructor" || id === "prototype") {
+    throw new Error(`Invalid ${fieldName}`);
+  }
+}
+
 // 라이브러리 즐겨찾기 헬퍼
 export const favoriteLibraries = {
   async add(libraryId: string) {
+    validateId(libraryId, "libraryId");
     const exists = await db.favoriteLibraries
       .where("libraryId")
       .equals(libraryId)
@@ -64,10 +82,12 @@ export const favoriteLibraries = {
   },
 
   async remove(libraryId: string) {
+    validateId(libraryId, "libraryId");
     return db.favoriteLibraries.where("libraryId").equals(libraryId).delete();
   },
 
   async toggle(libraryId: string) {
+    validateId(libraryId, "libraryId");
     const exists = await db.favoriteLibraries
       .where("libraryId")
       .equals(libraryId)
@@ -81,6 +101,7 @@ export const favoriteLibraries = {
   },
 
   async isFavorite(libraryId: string) {
+    validateId(libraryId, "libraryId");
     const exists = await db.favoriteLibraries
       .where("libraryId")
       .equals(libraryId)
@@ -100,6 +121,7 @@ export const favoriteLibraries = {
 // Web API 즐겨찾기 헬퍼
 export const favoriteWebApis = {
   async add(apiId: string) {
+    validateId(apiId, "apiId");
     const exists = await db.favoriteWebApis
       .where("apiId")
       .equals(apiId)
@@ -109,10 +131,12 @@ export const favoriteWebApis = {
   },
 
   async remove(apiId: string) {
+    validateId(apiId, "apiId");
     return db.favoriteWebApis.where("apiId").equals(apiId).delete();
   },
 
   async toggle(apiId: string) {
+    validateId(apiId, "apiId");
     const exists = await db.favoriteWebApis
       .where("apiId")
       .equals(apiId)
@@ -126,6 +150,7 @@ export const favoriteWebApis = {
   },
 
   async isFavorite(apiId: string) {
+    validateId(apiId, "apiId");
     const exists = await db.favoriteWebApis
       .where("apiId")
       .equals(apiId)
@@ -178,6 +203,7 @@ export const settings = {
 // 최근 본 항목 헬퍼
 export const recentViews = {
   async add(type: RecentView["type"], itemId: string) {
+    validateId(itemId, "itemId");
     // 기존 기록 삭제 후 새로 추가 (최신으로 업데이트)
     await db.recentViews.where({ type, itemId }).delete();
     return db.recentViews.add({ type, itemId, viewedAt: new Date() });

@@ -97,7 +97,15 @@ export default function LibraryDetailPage() {
   const { locale } = useI18n();
   const isKo = () => locale() === "ko";
 
-  const lib = () => params.libId ? libraries[params.libId.toLowerCase()] : undefined;
+  const lib = () => {
+    if (!params.libId) return undefined;
+    const key = params.libId.toLowerCase();
+    // Prevent prototype pollution by checking own property
+    if (!Object.prototype.hasOwnProperty.call(libraries, key)) {
+      return undefined;
+    }
+    return libraries[key];
+  };
 
   return (
     <>
