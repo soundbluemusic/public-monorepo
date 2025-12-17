@@ -46,7 +46,7 @@ export const Layout: ParentComponent = (props) => {
 
   // Initialize dark mode
   onMount(() => {
-    const stored = localStorage.getItem("suri-dark-mode");
+    const stored = localStorage.getItem("roots-dark-mode");
     if (stored !== null) {
       const isDark = stored === "true";
       setDarkMode(isDark);
@@ -61,7 +61,7 @@ export const Layout: ParentComponent = (props) => {
   const toggleDarkMode = () => {
     const newValue = !darkMode();
     setDarkMode(newValue);
-    localStorage.setItem("suri-dark-mode", String(newValue));
+    localStorage.setItem("roots-dark-mode", String(newValue));
     document.documentElement.classList.toggle("dark", newValue);
   };
 
@@ -164,7 +164,7 @@ export const Layout: ParentComponent = (props) => {
             style={{ color: "var(--text-primary)" }}
           >
             <span class="text-xl">π</span>
-            <span>Suri</span>
+            <span>Roots</span>
           </A>
 
           {/* Search Form */}
@@ -364,7 +364,7 @@ export const Layout: ParentComponent = (props) => {
             </A>
           </nav>
           <p class="text-center text-sm" style={{ color: "var(--text-tertiary)" }}>
-            Suri by SoundBlueMusic
+            Roots by SoundBlueMusic
           </p>
         </div>
       </footer>
