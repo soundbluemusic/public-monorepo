@@ -156,11 +156,11 @@ export default function LibrariesPage() {
       return { [category()]: libs };
     }
 
-    return libs.reduce((acc, lib) => {
+    return libs.reduce<Record<string, Library[]>>((acc, lib) => {
       if (!acc[lib.category]) acc[lib.category] = [];
       acc[lib.category].push(lib);
       return acc;
-    }, {} as Record<string, Library[]>);
+    }, {});
   };
 
   return (

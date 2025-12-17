@@ -24,18 +24,23 @@ export interface UserSettings {
   updatedAt: Date;
 }
 
-// Dexie 데이터베이스 정의
-const db = new Dexie("ContextDB") as Dexie & {
-  favorites: EntityTable<FavoriteEntry, "id">;
-  studyRecords: EntityTable<StudyRecord, "id">;
-  settings: EntityTable<UserSettings, "id">;
-};
+// Typed Dexie database class
+class ContextDatabase extends Dexie {
+  favorites!: EntityTable<FavoriteEntry, "id">;
+  studyRecords!: EntityTable<StudyRecord, "id">;
+  settings!: EntityTable<UserSettings, "id">;
 
-db.version(1).stores({
-  favorites: "++id, entryId, addedAt",
-  studyRecords: "++id, entryId, studiedAt",
-  settings: "id",
-});
+  constructor() {
+    super("ContextDB");
+    this.version(1).stores({
+      favorites: "++id, entryId, addedAt",
+      studyRecords: "++id, entryId, studiedAt",
+      settings: "id",
+    });
+  }
+}
+
+const db = new ContextDatabase();
 
 export { db };
 

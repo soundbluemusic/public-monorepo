@@ -30,20 +30,25 @@ export interface RecentView {
   viewedAt: Date;
 }
 
-// Dexie 데이터베이스 정의
-const db = new Dexie("PermissiveDB") as Dexie & {
-  favoriteLibraries: EntityTable<FavoriteLibrary, "id">;
-  favoriteWebApis: EntityTable<FavoriteWebApi, "id">;
-  settings: EntityTable<UserSettings, "id">;
-  recentViews: EntityTable<RecentView, "id">;
-};
+// Typed Dexie database class
+class PermissiveDatabase extends Dexie {
+  favoriteLibraries!: EntityTable<FavoriteLibrary, "id">;
+  favoriteWebApis!: EntityTable<FavoriteWebApi, "id">;
+  settings!: EntityTable<UserSettings, "id">;
+  recentViews!: EntityTable<RecentView, "id">;
 
-db.version(1).stores({
-  favoriteLibraries: "++id, libraryId, addedAt",
-  favoriteWebApis: "++id, apiId, addedAt",
-  settings: "id",
-  recentViews: "++id, [type+itemId], viewedAt",
-});
+  constructor() {
+    super("PermissiveDB");
+    this.version(1).stores({
+      favoriteLibraries: "++id, libraryId, addedAt",
+      favoriteWebApis: "++id, apiId, addedAt",
+      settings: "id",
+      recentViews: "++id, [type+itemId], viewedAt",
+    });
+  }
+}
+
+const db = new PermissiveDatabase();
 
 export { db };
 

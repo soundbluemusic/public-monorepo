@@ -103,11 +103,11 @@ export default function WebApiPage() {
       return { [category()]: apis };
     }
 
-    return apis.reduce((acc, api) => {
+    return apis.reduce<Record<string, WebAPI[]>>((acc, api) => {
       if (!acc[api.category]) acc[api.category] = [];
       acc[api.category].push(api);
       return acc;
-    }, {} as Record<string, WebAPI[]>);
+    }, {});
   };
 
   return (
