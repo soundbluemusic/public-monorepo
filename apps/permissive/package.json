@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vinxi dev",
-    "build": "vinxi build",
+    "build": "vinxi build && tsx scripts/generate-sitemaps.ts",
     "start": "vinxi start",
     "data:fetch": "pnpm run data:fetch:npm && pnpm run data:fetch:github && pnpm run data:fetch:bundle",
     "data:fetch:npm": "tsx scripts/fetch-npm-data.ts",
