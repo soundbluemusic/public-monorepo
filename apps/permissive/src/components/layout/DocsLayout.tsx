@@ -17,26 +17,35 @@ export default function DocsLayout(props: DocsLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = createSignal(false);
   // Desktop sidebar collapsed state
   const [sidebarCollapsed, setSidebarCollapsed] = createSignal(false);
-  // Track if we're on mobile
-  const [isMobile, setIsMobile] = createSignal(true);
+  // Track if we're on mobile (SSR에서는 false로 시작해서 데스크톱 레이아웃으로)
+  const [isMobile, setIsMobile] = createSignal(false);
+  // 하이드레이션 완료 여부 (transition 활성화용)
+  const [isReady, setIsReady] = createSignal(false);
 
   onMount(() => {
     if (isServer) return;
 
-    // Check initial screen size
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < BREAKPOINT_MD);
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    onCleanup(() => window.removeEventListener("resize", checkMobile));
+    // 즉시 화면 크기 확인 (transition 없이)
+    const currentIsMobile = window.innerWidth < BREAKPOINT_MD;
+    setIsMobile(currentIsMobile);
 
     // Load collapsed state from localStorage
     const saved = localStorage.getItem("sidebar-collapsed");
     if (saved === "true") {
       setSidebarCollapsed(true);
     }
+
+    // 다음 프레임에서 transition 활성화
+    requestAnimationFrame(() => {
+      setIsReady(true);
+    });
+
+    // 리사이즈 이벤트
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < BREAKPOINT_MD);
+    };
+    window.addEventListener("resize", checkMobile);
+    onCleanup(() => window.removeEventListener("resize", checkMobile));
   });
 
   // Save collapsed state to localStorage
@@ -76,6 +85,7 @@ export default function DocsLayout(props: DocsLayoutProps) {
         isOpen={sidebarOpen()}
         isCollapsed={sidebarCollapsed()}
         isMobile={isMobile()}
+        isReady={isReady()}
         onClose={closeSidebar}
         onToggleCollapse={toggleSidebarCollapsed}
       />
@@ -83,7 +93,7 @@ export default function DocsLayout(props: DocsLayoutProps) {
       {/* Main Content */}
       <main
         id="main-content"
-        class="pt-header min-h-screen transition-[margin] duration-200"
+        class={`pt-header min-h-screen ${isReady() ? "transition-[margin] duration-200" : ""}`}
         style={{
           "margin-left": isMobile()
             ? "0"
