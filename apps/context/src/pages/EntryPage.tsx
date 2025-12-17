@@ -1,11 +1,12 @@
 import { Title, Meta } from "@solidjs/meta";
 import { A, useParams } from "@solidjs/router";
-import { For, Show, createMemo } from "solid-js";
+import { For, Show, createMemo, createSignal, onMount } from "solid-js";
 import { Layout } from "@/components/Layout";
 import { getCategoryById } from "@/data/categories";
 import { getEntryById, getEntriesByCategory } from "@/data/entries";
 import type { MeaningEntry, Language } from "@/data/types";
 import { useI18n } from "@/i18n";
+import { favorites } from "@/lib/db";
 
 // Get pronunciation based on locale
 const getPronunciation = (entry: MeaningEntry, locale: Language): string | undefined => {
@@ -19,8 +20,23 @@ const getPronunciation = (entry: MeaningEntry, locale: Language): string | undef
 export default function EntryPage() {
   const params = useParams();
   const { locale, t, localePath } = useI18n();
+  const [isFavorite, setIsFavorite] = createSignal(false);
 
   const entry = createMemo(() => params.entryId ? getEntryById(params.entryId) : undefined);
+
+  // 즐겨찾기 상태 확인
+  onMount(async () => {
+    if (params.entryId) {
+      const fav = await favorites.isFavorite(params.entryId);
+      setIsFavorite(fav);
+    }
+  });
+
+  const toggleFavorite = async () => {
+    if (!params.entryId) return;
+    const newState = await favorites.toggle(params.entryId);
+    setIsFavorite(newState);
+  };
   const category = createMemo(() => {
     const e = entry();
     return e ? getCategoryById(e.categoryId) : undefined;
@@ -67,9 +83,38 @@ export default function EntryPage() {
         </A>
 
         <div class="mb-8">
-          <h1 class="text-4xl font-bold mb-1" style={{ color: "var(--text-primary)" }}>
-            {entry()!.korean}
-          </h1>
+          <div class="flex items-center gap-3 mb-1">
+            <h1 class="text-4xl font-bold" style={{ color: "var(--text-primary)" }}>
+              {entry()!.korean}
+            </h1>
+            <button
+              type="button"
+              onClick={toggleFavorite}
+              class="p-2 rounded-full transition-colors"
+              style={{
+                "background-color": isFavorite() ? "rgba(239, 68, 68, 0.1)" : "var(--bg-tertiary)",
+              }}
+              title={isFavorite()
+                ? (locale() === "ko" ? "즐겨찾기 해제" : locale() === "ja" ? "お気に入り解除" : "Remove from favorites")
+                : (locale() === "ko" ? "즐겨찾기 추가" : locale() === "ja" ? "お気に入り追加" : "Add to favorites")
+              }
+            >
+              <svg
+                class="w-6 h-6"
+                fill={isFavorite() ? "currentColor" : "none"}
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                style={{ color: isFavorite() ? "#ef4444" : "var(--text-tertiary)" }}
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                />
+              </svg>
+            </button>
+          </div>
           <Show when={pronunciation()}>
             <p class="text-lg" style={{ color: "var(--text-tertiary)" }}>
               {pronunciation()}

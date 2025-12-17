@@ -1,7 +1,8 @@
 import { Title, Meta } from "@solidjs/meta";
-import { createSignal, For, Show } from "solid-js";
+import { createSignal, For, Show, onMount, createEffect } from "solid-js";
 import DocsLayout from "@/components/layout/DocsLayout";
 import { useI18n } from "@/i18n";
+import { favoriteLibraries } from "@/lib/db";
 
 interface Library {
   name: string;
@@ -94,7 +95,7 @@ const libraries: Library[] = [
   { name: "LokiJS", description: "Fast in-memory database", descriptionKo: "빠른 인메모리 데이터베이스", category: "Storage", license: "MIT", github: "https://github.com/techfort/LokiJS", npm: "lokijs", stars: "7k" },
 ];
 
-const categories = ["All", "Frameworks", "State", "Routing", "Styling", "Build", "Data", "UI", "Animation", "Forms", "Utilities", "Storage"] as const;
+const categories = ["All", "Favorites", "Frameworks", "State", "Routing", "Styling", "Build", "Data", "UI", "Animation", "Forms", "Utilities", "Storage"] as const;
 
 type CategoryFilter = (typeof categories)[number];
 
@@ -102,12 +103,37 @@ export default function LibrariesPage() {
   const { locale } = useI18n();
   const [search, setSearch] = createSignal("");
   const [category, setCategory] = createSignal<CategoryFilter>("All");
+  const [favoriteIds, setFavoriteIds] = createSignal<Set<string>>(new Set());
+
+  // 즐겨찾기 목록 로드
+  onMount(async () => {
+    const favs = await favoriteLibraries.getAll();
+    setFavoriteIds(new Set(favs.map(f => f.libraryId)));
+  });
+
+  // 즐겨찾기 토글
+  const toggleFavorite = async (libraryName: string) => {
+    const newState = await favoriteLibraries.toggle(libraryName);
+    setFavoriteIds(prev => {
+      const next = new Set(prev);
+      if (newState) {
+        next.add(libraryName);
+      } else {
+        next.delete(libraryName);
+      }
+      return next;
+    });
+  };
 
   const filteredLibraries = () => {
     let libs = libraries;
 
+    // Filter by favorites
+    if (category() === "Favorites") {
+      libs = libs.filter(lib => favoriteIds().has(lib.name));
+    }
     // Filter by category
-    if (category() !== "All") {
+    else if (category() !== "All") {
       libs = libs.filter(lib => lib.category === category());
     }
 
@@ -204,7 +230,7 @@ export default function LibrariesPage() {
                     color: category() === cat ? "white" : "var(--text-secondary)"
                   }}
                 >
-                  {cat === "All" ? (locale() === "ko" ? "전체" : "All") : cat}
+                  {cat === "All" ? (locale() === "ko" ? "전체" : "All") : cat === "Favorites" ? (locale() === "ko" ? `즐겨찾기 (${favoriteIds().size})` : `Favorites (${favoriteIds().size})`) : cat}
                 </button>
               )}
             </For>
@@ -251,6 +277,33 @@ export default function LibrariesPage() {
                             >
                               {lib.name}
                             </h3>
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                toggleFavorite(lib.name);
+                              }}
+                              class="p-1 rounded-full transition-colors opacity-60 hover:opacity-100"
+                              title={favoriteIds().has(lib.name)
+                                ? (locale() === "ko" ? "즐겨찾기 해제" : "Remove from favorites")
+                                : (locale() === "ko" ? "즐겨찾기 추가" : "Add to favorites")
+                              }
+                            >
+                              <svg
+                                class="w-4 h-4"
+                                fill={favoriteIds().has(lib.name) ? "currentColor" : "none"}
+                                stroke="currentColor"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                                style={{ color: favoriteIds().has(lib.name) ? "#ef4444" : "var(--text-tertiary)" }}
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                                />
+                              </svg>
+                            </button>
                             <Show when={lib.usedHere}>
                               <span
                                 class="text-xs px-2 py-0.5 rounded-full"
