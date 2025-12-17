@@ -6,6 +6,10 @@ node_modules/
 .vinxi/
 dist/
 
+# Generated sitemaps (built during deploy)
+public/sitemap*.xml
+public/sitemap.xsl
+
 # Generated data (fetched from APIs)
 src/data/generated/
 
