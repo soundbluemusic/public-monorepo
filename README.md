@@ -45,6 +45,8 @@
 | **Package Manager** | pnpm (workspaces) |
 | **Linting** | Biome |
 | **Build** | 100% Static (SSG) - No server required |
+| **Storage** | localStorage / IndexedDB only (No external DB) |
+| **API** | Web Standard APIs only (No vendor lock-in) |
 | **Hosting** | Cloudflare Pages (CDN) |
 | **Output** | `.output/public` |
 
