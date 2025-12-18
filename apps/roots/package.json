@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vinxi dev",
+    "prebuild": "tsx scripts/generate-search-index.ts",
     "build": "vinxi build",
     "start": "vinxi start",
     "lint": "biome lint .",
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.0",
+    "tsx": "^4.7.0",
     "@types/katex": "^0.16.7",
     "@types/node": "^22.10.2",
     "tailwindcss": "^4.0.0",

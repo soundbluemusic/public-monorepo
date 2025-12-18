@@ -1,23 +1,24 @@
 /**
  * @fileoverview 메인 레이아웃 컴포넌트
  */
+import { DifficultyBadge } from '@/components/ui/DifficultyBadge';
+import { useI18n } from '@/i18n';
+import { type SearchResult, preloadSearchIndex, searchConcepts } from '@/lib/search';
+import { A, useLocation, useNavigate } from '@solidjs/router';
+import { LanguageToggle } from '@soundblue/shared';
 import {
-  createSignal,
-  createEffect,
-  onMount,
-  onCleanup,
-  Show,
+  For,
   type ParentComponent,
-} from "solid-js";
-import { A, useLocation, useNavigate } from "@solidjs/router";
-import { useI18n } from "@/i18n";
-import { searchConcepts, type SearchResult } from "@/lib/search";
-import { DifficultyBadge } from "@/components/ui/DifficultyBadge";
-import { LanguageToggle } from "@soundblue/shared";
+  Show,
+  createEffect,
+  createSignal,
+  onCleanup,
+  onMount,
+} from 'solid-js';
 
 function stripLocale(pathname: string): string {
-  if (pathname.startsWith("/ko/")) return pathname.slice(3);
-  if (pathname === "/ko") return "/";
+  if (pathname.startsWith('/ko/')) return pathname.slice(3);
+  if (pathname === '/ko') return '/';
   return pathname;
 }
 
@@ -30,35 +31,36 @@ export const Layout: ParentComponent = (props) => {
   const [darkMode, setDarkMode] = createSignal(false);
 
   // Search
-  const [searchQuery, setSearchQuery] = createSignal("");
+  const [searchQuery, setSearchQuery] = createSignal('');
   const [searchResults, setSearchResults] = createSignal<SearchResult[]>([]);
   const [showResults, setShowResults] = createSignal(false);
   const [selectedIndex, setSelectedIndex] = createSignal(0);
+  const [isSearching, setIsSearching] = createSignal(false);
   let searchInputRef: HTMLInputElement | undefined;
   let searchContainerRef: HTMLDivElement | undefined;
 
   // Initialize dark mode
   onMount(() => {
-    const stored = localStorage.getItem("roots-dark-mode");
+    const stored = localStorage.getItem('roots-dark-mode');
     if (stored !== null) {
-      const isDark = stored === "true";
+      const isDark = stored === 'true';
       setDarkMode(isDark);
-      document.documentElement.classList.toggle("dark", isDark);
+      document.documentElement.classList.toggle('dark', isDark);
     } else {
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       setDarkMode(prefersDark);
-      document.documentElement.classList.toggle("dark", prefersDark);
+      document.documentElement.classList.toggle('dark', prefersDark);
     }
   });
 
   const toggleDarkMode = () => {
     const newValue = !darkMode();
     setDarkMode(newValue);
-    localStorage.setItem("roots-dark-mode", String(newValue));
-    document.documentElement.classList.toggle("dark", newValue);
+    localStorage.setItem('roots-dark-mode', String(newValue));
+    document.documentElement.classList.toggle('dark', newValue);
   };
 
-  // Search functionality with Fuse.js
+  // Search functionality with Fuse.js (비동기)
   createEffect(() => {
     const q = searchQuery().trim();
     if (q.length < 2) {
@@ -66,39 +68,47 @@ export const Layout: ParentComponent = (props) => {
       return;
     }
 
-    const results = searchConcepts(q, locale(), 8);
-    setSearchResults(results);
-    setSelectedIndex(0);
+    setIsSearching(true);
+    searchConcepts(q, locale(), 8).then((results) => {
+      setSearchResults(results);
+      setSelectedIndex(0);
+      setIsSearching(false);
+    });
   });
+
+  // 검색창 focus 시 인덱스 프리로드
+  const handleSearchFocus = () => {
+    preloadSearchIndex();
+    setShowResults(true);
+  };
 
   const handleSearchKeyDown = (e: KeyboardEvent) => {
     const len = searchResults().length;
 
-    if (e.key === "Escape") {
+    if (e.key === 'Escape') {
       setShowResults(false);
       searchInputRef?.blur();
       return;
     }
 
-    if (e.key === "ArrowDown" && len > 0) {
+    if (e.key === 'ArrowDown' && len > 0) {
       e.preventDefault();
       setSelectedIndex((i) => (i + 1) % len);
-    } else if (e.key === "ArrowUp" && len > 0) {
+    } else if (e.key === 'ArrowUp' && len > 0) {
       e.preventDefault();
       setSelectedIndex((i) => (i - 1 + len) % len);
-    } else if (e.key === "Enter") {
+    } else if (e.key === 'Enter') {
       e.preventDefault();
       if (len > 0) {
         selectResult(searchResults()[selectedIndex()]);
       } else if (searchQuery().trim().length >= 2) {
-        // 검색 결과 페이지로 이동
         goToSearchPage();
       }
     }
   };
 
   const selectResult = (result: SearchResult) => {
-    setSearchQuery("");
+    setSearchQuery('');
     setShowResults(false);
     navigate(localePath(`/concept/${result.item.id}`));
   };
@@ -117,44 +127,45 @@ export const Layout: ParentComponent = (props) => {
         setShowResults(false);
       }
     };
-    document.addEventListener("click", handleClickOutside);
-    onCleanup(() => document.removeEventListener("click", handleClickOutside));
+    document.addEventListener('click', handleClickOutside);
+    onCleanup(() => document.removeEventListener('click', handleClickOutside));
   });
 
   // Keyboard shortcut for search
   onMount(() => {
     const handleKeydown = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
         e.preventDefault();
         searchInputRef?.focus();
+        preloadSearchIndex();
         setShowResults(true);
       }
     };
-    window.addEventListener("keydown", handleKeydown);
-    onCleanup(() => window.removeEventListener("keydown", handleKeydown));
+    window.addEventListener('keydown', handleKeydown);
+    onCleanup(() => window.removeEventListener('keydown', handleKeydown));
   });
 
   const isActive = (basePath: string) => {
     const currentPath = stripLocale(location.pathname);
-    return currentPath === basePath || currentPath.startsWith(basePath + "/");
+    return currentPath === basePath || currentPath.startsWith(basePath + '/');
   };
 
   return (
-    <div class="min-h-screen flex flex-col" style={{ "background-color": "var(--bg-primary)" }}>
+    <div class="min-h-screen flex flex-col" style={{ 'background-color': 'var(--bg-primary)' }}>
       {/* Header */}
       <header
         class="sticky top-0 z-40 backdrop-blur-sm"
         style={{
-          "background-color": "color-mix(in srgb, var(--bg-primary) 80%, transparent)",
-          "border-bottom": "1px solid var(--border-primary)",
+          'background-color': 'color-mix(in srgb, var(--bg-primary) 80%, transparent)',
+          'border-bottom': '1px solid var(--border-primary)',
         }}
       >
         <div class="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
           {/* Logo */}
           <A
-            href={localePath("/")}
+            href={localePath('/')}
             class="font-semibold shrink-0 flex items-center gap-2"
-            style={{ color: "var(--text-primary)" }}
+            style={{ color: 'var(--text-primary)' }}
           >
             <span class="text-xl">π</span>
             <span>Roots</span>
@@ -165,7 +176,7 @@ export const Layout: ParentComponent = (props) => {
             <div class="relative">
               <svg
                 class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4"
-                style={{ color: "var(--text-tertiary)" }}
+                style={{ color: 'var(--text-tertiary)' }}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -185,14 +196,14 @@ export const Layout: ParentComponent = (props) => {
                   setSearchQuery(e.currentTarget.value);
                   setShowResults(true);
                 }}
-                onFocus={() => setShowResults(true)}
+                onFocus={handleSearchFocus}
                 onKeyDown={handleSearchKeyDown}
-                placeholder={t("searchPlaceholder")}
+                placeholder={t('searchPlaceholder')}
                 class="w-full pl-9 pr-3 py-1.5 text-sm rounded-lg focus:outline-none"
                 style={{
-                  "background-color": "var(--bg-secondary)",
-                  color: "var(--text-primary)",
-                  border: "1px solid var(--border-primary)",
+                  'background-color': 'var(--bg-secondary)',
+                  color: 'var(--text-primary)',
+                  border: '1px solid var(--border-primary)',
                 }}
               />
             </div>
@@ -202,15 +213,15 @@ export const Layout: ParentComponent = (props) => {
               <div
                 class="absolute top-full left-0 right-0 mt-1 rounded-lg shadow-lg overflow-hidden z-50"
                 style={{
-                  "background-color": "var(--bg-elevated)",
-                  border: "1px solid var(--border-primary)",
+                  'background-color': 'var(--bg-elevated)',
+                  border: '1px solid var(--border-primary)',
                 }}
               >
                 <Show
-                  when={searchResults().length > 0}
+                  when={!isSearching() && searchResults().length > 0}
                   fallback={
-                    <div class="px-4 py-3 text-sm" style={{ color: "var(--text-tertiary)" }}>
-                      {t("noResults")}
+                    <div class="px-4 py-3 text-sm" style={{ color: 'var(--text-tertiary)' }}>
+                      {isSearching() ? '...' : t('noResults')}
                     </div>
                   }
                 >
@@ -221,22 +232,26 @@ export const Layout: ParentComponent = (props) => {
                         onMouseEnter={() => setSelectedIndex(index())}
                         class="w-full flex items-center justify-between gap-3 px-4 py-2 text-left text-sm"
                         style={{
-                          "background-color":
-                            selectedIndex() === index() ? "var(--bg-tertiary)" : "transparent",
+                          'background-color':
+                            selectedIndex() === index() ? 'var(--bg-tertiary)' : 'transparent',
                         }}
                       >
                         <div class="flex-1 min-w-0">
-                          <div style={{ color: "var(--text-primary)" }} class="font-medium">
+                          <div style={{ color: 'var(--text-primary)' }} class="font-medium">
                             {result.item.name[locale()] || result.item.name.en}
                           </div>
                           <div
-                            style={{ color: "var(--text-tertiary)" }}
+                            style={{ color: 'var(--text-tertiary)' }}
                             class="text-xs line-clamp-1"
                           >
-                            {(result.item.content[locale()] || result.item.content.en).definition}
+                            {result.item.def[locale()] || result.item.def.en}
                           </div>
                         </div>
-                        <DifficultyBadge level={result.item.difficulty} showLabel={false} size="sm" />
+                        <DifficultyBadge
+                          level={result.item.difficulty as 1 | 2 | 3 | 4 | 5}
+                          showLabel={false}
+                          size="sm"
+                        />
                       </button>
                     )}
                   </For>
@@ -249,36 +264,36 @@ export const Layout: ParentComponent = (props) => {
           <div class="flex items-center gap-1 shrink-0">
             {/* Nav Links */}
             <A
-              href={localePath("/browse")}
+              href={localePath('/browse')}
               class="hidden sm:block px-3 py-1.5 text-sm rounded-lg transition-colors"
               style={{
-                color: isActive("/browse") ? "var(--accent-primary)" : "var(--text-secondary)",
-                "background-color": isActive("/browse") ? "var(--bg-tertiary)" : "transparent",
+                color: isActive('/browse') ? 'var(--accent-primary)' : 'var(--text-secondary)',
+                'background-color': isActive('/browse') ? 'var(--bg-tertiary)' : 'transparent',
               }}
             >
-              {t("browse")}
+              {t('browse')}
             </A>
 
             <A
-              href={localePath("/favorites")}
+              href={localePath('/favorites')}
               class="hidden sm:block px-3 py-1.5 text-sm rounded-lg transition-colors"
               style={{
-                color: isActive("/favorites") ? "var(--accent-primary)" : "var(--text-secondary)",
-                "background-color": isActive("/favorites") ? "var(--bg-tertiary)" : "transparent",
+                color: isActive('/favorites') ? 'var(--accent-primary)' : 'var(--text-secondary)',
+                'background-color': isActive('/favorites') ? 'var(--bg-tertiary)' : 'transparent',
               }}
             >
-              {t("favorites")}
+              {t('favorites')}
             </A>
 
             <A
-              href={localePath("/constants")}
+              href={localePath('/constants')}
               class="hidden sm:block px-3 py-1.5 text-sm rounded-lg transition-colors"
               style={{
-                color: isActive("/constants") ? "var(--accent-primary)" : "var(--text-secondary)",
-                "background-color": isActive("/constants") ? "var(--bg-tertiary)" : "transparent",
+                color: isActive('/constants') ? 'var(--accent-primary)' : 'var(--text-secondary)',
+                'background-color': isActive('/constants') ? 'var(--bg-tertiary)' : 'transparent',
               }}
             >
-              {t("constants")}
+              {t('constants')}
             </A>
 
             {/* Language */}
@@ -288,7 +303,7 @@ export const Layout: ParentComponent = (props) => {
             <button
               onClick={toggleDarkMode}
               class="p-2 rounded-lg transition-colors"
-              style={{ color: "var(--text-secondary)" }}
+              style={{ color: 'var(--text-secondary)' }}
               aria-label="Toggle dark mode"
             >
               <Show
@@ -325,26 +340,26 @@ export const Layout: ParentComponent = (props) => {
       <footer
         class="mt-auto py-8"
         style={{
-          "background-color": "var(--bg-secondary)",
-          "border-top": "1px solid var(--border-primary)",
+          'background-color': 'var(--bg-secondary)',
+          'border-top': '1px solid var(--border-primary)',
         }}
       >
         <div class="max-w-6xl mx-auto px-4">
           <nav
             class="flex justify-center gap-6 mb-4 text-sm"
-            style={{ color: "var(--text-secondary)" }}
+            style={{ color: 'var(--text-secondary)' }}
           >
-            <A href={localePath("/about")} class="hover:underline">
-              {t("about")}
+            <A href={localePath('/about')} class="hover:underline">
+              {t('about')}
             </A>
-            <A href={localePath("/privacy")} class="hover:underline">
+            <A href={localePath('/privacy')} class="hover:underline">
               Privacy
             </A>
-            <A href={localePath("/terms")} class="hover:underline">
+            <A href={localePath('/terms')} class="hover:underline">
               Terms
             </A>
           </nav>
-          <p class="text-center text-sm" style={{ color: "var(--text-tertiary)" }}>
+          <p class="text-center text-sm" style={{ color: 'var(--text-tertiary)' }}>
             Roots by SoundBlueMusic
           </p>
         </div>

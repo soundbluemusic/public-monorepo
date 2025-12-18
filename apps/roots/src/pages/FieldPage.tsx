@@ -1,16 +1,16 @@
-import { ConceptCard } from '@/components/concept/ConceptCard';
-import { Layout } from '@/components/layout/Layout';
-import { getConceptsByField } from '@/data/concepts';
-import { getFieldById } from '@/data/fields';
-import { getSubfieldsByParent } from '@/data/subfields';
-import type { MathField } from '@/data/types';
-import { useI18n } from '@/i18n';
-import { Meta, Title } from '@solidjs/meta';
-import { A, useParams } from '@solidjs/router';
 /**
  * @fileoverview 분야 상세 페이지
  */
-import { For, Show } from 'solid-js';
+import { ConceptCard } from '@/components/concept/ConceptCard';
+import { Layout } from '@/components/layout/Layout';
+import { getFieldById } from '@/data/fields';
+import { getSubfieldsByParent } from '@/data/subfields';
+import type { MathConcept, MathField } from '@/data/types';
+import { useI18n } from '@/i18n';
+import { getConceptsByField } from '@/lib/concepts';
+import { Meta, Title } from '@solidjs/meta';
+import { A, useParams } from '@solidjs/router';
+import { For, Show, createResource } from 'solid-js';
 
 export default function FieldPage() {
   const params = useParams<{ fieldId: string }>();
@@ -18,7 +18,12 @@ export default function FieldPage() {
 
   const field = () => getFieldById(params.fieldId as MathField);
   const subfields = () => getSubfieldsByParent(params.fieldId);
-  const concepts = () => getConceptsByField(params.fieldId);
+
+  // 개념 데이터 비동기 로드
+  const [concepts] = createResource(
+    () => params.fieldId,
+    (fieldId) => getConceptsByField(fieldId),
+  );
 
   return (
     <Layout>
@@ -110,13 +115,31 @@ export default function FieldPage() {
             </section>
 
             {/* Concepts in this field */}
-            <Show when={concepts().length > 0}>
+            <Show when={!concepts.loading && (concepts() ?? []).length > 0}>
               <section class="mt-8">
                 <h2 class="text-xl font-semibold mb-4" style={{ color: 'var(--text-primary)' }}>
                   {locale() === 'ko' ? '개념 목록' : locale() === 'ja' ? '概念一覧' : 'Concepts'}
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  <For each={concepts()}>{(concept) => <ConceptCard concept={concept} />}</For>
+                  <For each={concepts() ?? []}>
+                    {(concept: MathConcept) => <ConceptCard concept={concept} />}
+                  </For>
+                </div>
+              </section>
+            </Show>
+
+            {/* Loading */}
+            <Show when={concepts.loading}>
+              <section class="mt-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <For each={[1, 2, 3]}>
+                    {() => (
+                      <div
+                        class="h-32 rounded-xl animate-pulse"
+                        style={{ 'background-color': 'var(--bg-secondary)' }}
+                      />
+                    )}
+                  </For>
                 </div>
               </section>
             </Show>
