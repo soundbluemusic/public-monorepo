@@ -14,6 +14,18 @@ import { favorites } from '@/lib/db';
 import { Meta, Title } from '@solidjs/meta';
 import { A, useParams } from '@solidjs/router';
 import { For, Show, createResource, createSignal, onMount } from 'solid-js';
+import { isServer } from 'solid-js/web';
+
+function loadKatexCSS() {
+  if (isServer) return;
+  const katexId = 'katex-css';
+  if (document.getElementById(katexId)) return;
+  const link = document.createElement('link');
+  link.id = katexId;
+  link.rel = 'stylesheet';
+  link.href = 'https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css';
+  document.head.appendChild(link);
+}
 
 export default function ConceptPage() {
   const params = useParams<{ conceptId: string }>();
@@ -35,6 +47,7 @@ export default function ConceptPage() {
   const [isFavorite, setIsFavorite] = createSignal(false);
 
   onMount(async () => {
+    loadKatexCSS();
     const conceptId = params.conceptId;
     const exists = await favorites.get(conceptId);
     setIsFavorite(!!exists);

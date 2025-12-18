@@ -32,9 +32,14 @@ let indexLoadPromise: Promise<SearchIndexItem[]> | null = null;
 const searcherCache = new Map<Language, Fuse<SearchIndexItem>>();
 
 /**
- * 검색 인덱스 로드 (lazy)
+ * 검색 인덱스 로드 (lazy, 클라이언트 전용)
  */
 async function loadSearchIndex(): Promise<SearchIndexItem[]> {
+  // SSR에서는 빈 배열 반환 (fetch 불가)
+  if (typeof window === 'undefined') {
+    return [];
+  }
+
   if (searchIndex) {
     return searchIndex;
   }

@@ -12,9 +12,14 @@ let conceptsMap: Map<string, MathConcept> | null = null;
 let loadPromise: Promise<MathConcept[]> | null = null;
 
 /**
- * 개념 데이터 로드 (lazy)
+ * 개념 데이터 로드 (lazy, 클라이언트 전용)
  */
 export async function loadConcepts(): Promise<MathConcept[]> {
+  // SSR에서는 빈 배열 반환 (fetch 불가)
+  if (typeof window === 'undefined') {
+    return [];
+  }
+
   if (conceptsData) {
     return conceptsData;
   }

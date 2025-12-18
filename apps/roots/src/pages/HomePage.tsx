@@ -10,9 +10,11 @@ import type { SearchIndexItem } from '@/lib/search';
 import { Meta, Title } from '@solidjs/meta';
 import { A } from '@solidjs/router';
 import { For, Show, createResource, onMount } from 'solid-js';
+import { isServer } from 'solid-js/web';
 
 // 홈페이지용 경량 데이터 로드 (search-index.json 재사용)
 async function getFeaturedConcepts(): Promise<SearchIndexItem[]> {
+  if (isServer) return [];
   const res = await fetch('/search-index.json');
   const data: SearchIndexItem[] = await res.json();
   return data.slice(0, 12);

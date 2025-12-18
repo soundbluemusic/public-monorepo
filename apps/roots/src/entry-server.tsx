@@ -1,5 +1,5 @@
 // @refresh reload
-import { createHandler, StartServer } from "@solidjs/start/server";
+import { StartServer, createHandler } from '@solidjs/start/server';
 
 export default createHandler(() => (
   <StartServer
@@ -12,11 +12,6 @@ export default createHandler(() => (
           <link rel="icon" href="/favicon.ico" />
           <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
           <link rel="manifest" href="/manifest.json" />
-          <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
-            crossorigin="anonymous"
-          />
           {assets}
         </head>
         <body>
