@@ -292,4 +292,13 @@ export interface UILabels {
   /** 소개 페이지 레이블 */
   aboutTitle: string;
   aboutDescription: string;
+
+  /** 사이드패널 & 더보기 메뉴 레이블 */
+  menu: string;
+  more: string;
+  sitemap: string;
+  sitemapDescription: string;
+  allCategories: string;
+  allPages: string;
+  searchEngineIndex: string;
 }
