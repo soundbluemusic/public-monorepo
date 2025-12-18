@@ -37,6 +37,11 @@ import { setTheoryConcepts } from "./setTheory";
 import { operationsResearchConcepts } from "./operationsResearch";
 import { algebraicGeometryConcepts } from "./algebraicGeometry";
 import { functionalAnalysisConcepts } from "./functionalAnalysis";
+import { combinatoricsAdvancedConcepts } from "./combinatoricsAdvanced";
+import { representationTheoryConcepts } from "./representationTheory";
+import { homologicalAlgebraConcepts } from "./homologicalAlgebra";
+import { calculusVariationsConcepts } from "./calculusVariations";
+import { informationTheoryConcepts } from "./informationTheory";
 
 /** 모든 개념 목록 */
 export const allConcepts: MathConcept[] = [
@@ -75,6 +80,11 @@ export const allConcepts: MathConcept[] = [
   ...operationsResearchConcepts,
   ...algebraicGeometryConcepts,
   ...functionalAnalysisConcepts,
+  ...combinatoricsAdvancedConcepts,
+  ...representationTheoryConcepts,
+  ...homologicalAlgebraConcepts,
+  ...calculusVariationsConcepts,
+  ...informationTheoryConcepts,
 ];
 
 /** ID로 개념 찾기 */
