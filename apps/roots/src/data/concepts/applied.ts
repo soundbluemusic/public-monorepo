@@ -421,4 +421,316 @@ export const appliedConcepts: MathConcept[] = [
     },
     tags: ["암호학", "RSA", "cryptography", "security"],
   },
+  {
+    id: "laplace-transform",
+    name: {
+      ko: "라플라스 변환",
+      en: "Laplace Transform",
+      ja: "ラプラス変換",
+    },
+    field: "applied",
+    subfield: "transforms",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "시간 영역의 함수를 주파수 영역으로 변환하여 미분방정식을 대수방정식으로 바꿉니다.",
+        formulas: [
+          {
+            latex: "\\mathcal{L}\\{f(t)\\} = F(s) = \\int_0^{\\infty} f(t) e^{-st} dt",
+            description: "라플라스 변환 정의",
+          },
+          {
+            latex: "\\mathcal{L}\\{f'(t)\\} = sF(s) - f(0)",
+            description: "미분의 라플라스 변환",
+          },
+          {
+            latex: "\\mathcal{L}\\{e^{at}\\} = \\frac{1}{s-a}",
+            description: "지수함수의 변환",
+          },
+        ],
+        examples: [
+          {
+            problem: "y' + 2y = 0, y(0) = 3을 라플라스 변환으로 푸시오.",
+            solution:
+              "sY - 3 + 2Y = 0\nY(s+2) = 3\nY = 3/(s+2)\ny(t) = 3e^(-2t)",
+            difficulty: 4,
+          },
+        ],
+        applications: [
+          { field: "제어공학", description: "전달함수 분석" },
+          { field: "전자공학", description: "회로 분석" },
+          { field: "기계공학", description: "진동 분석" },
+        ],
+      },
+      en: {
+        definition:
+          "Transforms time-domain functions to frequency domain, converting differential equations to algebraic equations.",
+        formulas: [
+          {
+            latex: "\\mathcal{L}\\{f(t)\\} = F(s) = \\int_0^{\\infty} f(t) e^{-st} dt",
+            description: "Laplace transform definition",
+          },
+          {
+            latex: "\\mathcal{L}\\{f'(t)\\} = sF(s) - f(0)",
+            description: "Transform of derivative",
+          },
+          {
+            latex: "\\mathcal{L}\\{e^{at}\\} = \\frac{1}{s-a}",
+            description: "Exponential transform",
+          },
+        ],
+        examples: [
+          {
+            problem: "Solve y' + 2y = 0, y(0) = 3 using Laplace transform.",
+            solution:
+              "sY - 3 + 2Y = 0\nY(s+2) = 3\nY = 3/(s+2)\ny(t) = 3e^(-2t)",
+            difficulty: 4,
+          },
+        ],
+        applications: [
+          { field: "Control Engineering", description: "Transfer function analysis" },
+          { field: "Electronics", description: "Circuit analysis" },
+          { field: "Mechanical Engineering", description: "Vibration analysis" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["integral", "differential-equations"],
+      nextTopics: ["z-transform"],
+      related: ["fourier-transform"],
+    },
+    tags: ["라플라스", "변환", "Laplace", "transform"],
+  },
+  {
+    id: "gradient-descent",
+    name: {
+      ko: "경사하강법",
+      en: "Gradient Descent",
+      ja: "勾配降下法",
+    },
+    field: "applied",
+    subfield: "optimization",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "함수의 최솟값을 찾기 위해 기울기(그래디언트)의 반대 방향으로 반복적으로 이동하는 최적화 알고리즘입니다.",
+        formulas: [
+          {
+            latex: "x_{n+1} = x_n - \\alpha \\nabla f(x_n)",
+            description: "경사하강법 업데이트 규칙",
+          },
+          {
+            latex: "\\alpha",
+            description: "학습률 (step size)",
+          },
+        ],
+        examples: [
+          {
+            problem: "f(x) = x²를 경사하강법으로 최소화하시오 (x₀=5, α=0.1).",
+            solution:
+              "f'(x) = 2x\nx₁ = 5 - 0.1(10) = 4\nx₂ = 4 - 0.1(8) = 3.2\n... (0으로 수렴)",
+            difficulty: 3,
+          },
+        ],
+        applications: [
+          { field: "머신러닝", description: "신경망 학습" },
+          { field: "통계학", description: "최대우도추정" },
+          { field: "경제학", description: "비용 최소화" },
+        ],
+      },
+      en: {
+        definition:
+          "An optimization algorithm that iteratively moves in the opposite direction of the gradient to find the minimum.",
+        formulas: [
+          {
+            latex: "x_{n+1} = x_n - \\alpha \\nabla f(x_n)",
+            description: "Gradient descent update rule",
+          },
+          {
+            latex: "\\alpha",
+            description: "Learning rate (step size)",
+          },
+        ],
+        examples: [
+          {
+            problem: "Minimize f(x) = x² using gradient descent (x₀=5, α=0.1).",
+            solution:
+              "f'(x) = 2x\nx₁ = 5 - 0.1(10) = 4\nx₂ = 4 - 0.1(8) = 3.2\n... (converges to 0)",
+            difficulty: 3,
+          },
+        ],
+        applications: [
+          { field: "Machine Learning", description: "Neural network training" },
+          { field: "Statistics", description: "Maximum likelihood estimation" },
+          { field: "Economics", description: "Cost minimization" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["partial-derivative", "vectors-basics"],
+      nextTopics: ["stochastic-gradient-descent", "adam-optimizer"],
+      related: ["newton-method"],
+    },
+    tags: ["경사하강법", "최적화", "gradient descent", "optimization"],
+  },
+  {
+    id: "newton-method",
+    name: {
+      ko: "뉴턴-랩슨 방법",
+      en: "Newton-Raphson Method",
+      ja: "ニュートン法",
+    },
+    field: "applied",
+    subfield: "numerical",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "방정식의 근을 반복적으로 근사하는 수치적 방법입니다. 접선을 이용해 더 나은 근사값을 찾습니다.",
+        formulas: [
+          {
+            latex: "x_{n+1} = x_n - \\frac{f(x_n)}{f'(x_n)}",
+            description: "뉴턴-랩슨 반복 공식",
+          },
+        ],
+        examples: [
+          {
+            problem: "√2를 뉴턴법으로 구하시오 (x₀=1).",
+            solution:
+              "f(x) = x² - 2, f'(x) = 2x\nx₁ = 1 - (-1/2) = 1.5\nx₂ = 1.5 - 0.25/3 = 1.4167\nx₃ ≈ 1.4142...",
+            difficulty: 3,
+          },
+        ],
+        history: {
+          discoveredBy: "아이작 뉴턴, 조지프 랩슨",
+          year: "17세기",
+          background: "뉴턴이 다항식의 근을 구하기 위해 개발했습니다.",
+        },
+        applications: [
+          { field: "수치해석", description: "방정식의 근 찾기" },
+          { field: "최적화", description: "함수 최적화" },
+          { field: "컴퓨터 그래픽", description: "광선 추적" },
+        ],
+      },
+      en: {
+        definition:
+          "A numerical method to iteratively approximate roots of equations using tangent lines.",
+        formulas: [
+          {
+            latex: "x_{n+1} = x_n - \\frac{f(x_n)}{f'(x_n)}",
+            description: "Newton-Raphson iteration formula",
+          },
+        ],
+        examples: [
+          {
+            problem: "Find √2 using Newton's method (x₀=1).",
+            solution:
+              "f(x) = x² - 2, f'(x) = 2x\nx₁ = 1 - (-1/2) = 1.5\nx₂ = 1.5 - 0.25/3 = 1.4167\nx₃ ≈ 1.4142...",
+            difficulty: 3,
+          },
+        ],
+        history: {
+          discoveredBy: "Isaac Newton, Joseph Raphson",
+          year: "17th century",
+          background: "Newton developed it to find roots of polynomials.",
+        },
+        applications: [
+          { field: "Numerical Analysis", description: "Root finding" },
+          { field: "Optimization", description: "Function optimization" },
+          { field: "Computer Graphics", description: "Ray tracing" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["derivative", "limit"],
+      nextTopics: ["secant-method"],
+      related: ["bisection-method"],
+    },
+    tags: ["뉴턴법", "수치해석", "Newton", "numerical"],
+  },
+  {
+    id: "linear-programming",
+    name: {
+      ko: "선형계획법",
+      en: "Linear Programming",
+      ja: "線形計画法",
+    },
+    field: "applied",
+    subfield: "optimization",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "선형 제약조건 하에서 선형 목적함수를 최적화하는 수학적 방법입니다.",
+        formulas: [
+          {
+            latex: "\\max/\\min \\quad c^T x",
+            description: "목적함수",
+          },
+          {
+            latex: "Ax \\leq b, \\quad x \\geq 0",
+            description: "제약조건",
+          },
+        ],
+        examples: [
+          {
+            problem: "max 3x + 2y, subject to x + y ≤ 4, x ≤ 2, x, y ≥ 0",
+            solution:
+              "꼭짓점: (0,0), (2,0), (2,2), (0,4)\n목적함수값: 0, 6, 10, 8\n최적해: (2,2), 최댓값: 10",
+            difficulty: 3,
+          },
+        ],
+        history: {
+          discoveredBy: "조지 단치그",
+          year: "1947년",
+          background: "단치그가 심플렉스 알고리즘을 개발했습니다.",
+        },
+        applications: [
+          { field: "물류", description: "수송 문제, 배치 최적화" },
+          { field: "생산", description: "자원 배분" },
+          { field: "금융", description: "포트폴리오 최적화" },
+        ],
+      },
+      en: {
+        definition:
+          "A mathematical method to optimize a linear objective function subject to linear constraints.",
+        formulas: [
+          {
+            latex: "\\max/\\min \\quad c^T x",
+            description: "Objective function",
+          },
+          {
+            latex: "Ax \\leq b, \\quad x \\geq 0",
+            description: "Constraints",
+          },
+        ],
+        examples: [
+          {
+            problem: "max 3x + 2y, subject to x + y ≤ 4, x ≤ 2, x, y ≥ 0",
+            solution:
+              "Vertices: (0,0), (2,0), (2,2), (0,4)\nObjective values: 0, 6, 10, 8\nOptimal: (2,2), max = 10",
+            difficulty: 3,
+          },
+        ],
+        history: {
+          discoveredBy: "George Dantzig",
+          year: "1947",
+          background: "Dantzig developed the simplex algorithm.",
+        },
+        applications: [
+          { field: "Logistics", description: "Transportation, allocation" },
+          { field: "Manufacturing", description: "Resource allocation" },
+          { field: "Finance", description: "Portfolio optimization" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["linear-equation", "inequality"],
+      nextTopics: ["integer-programming"],
+      related: ["simplex-method"],
+    },
+    tags: ["선형계획", "최적화", "linear programming", "optimization"],
+  },
 ];

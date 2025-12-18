@@ -466,4 +466,376 @@ export const topologyConcepts: MathConcept[] = [
     },
     tags: ["오일러", "위상불변량", "Euler", "characteristic"],
   },
+  {
+    id: "metric-space",
+    name: {
+      ko: "거리공간",
+      en: "Metric Space",
+      ja: "距離空間",
+    },
+    field: "topology",
+    subfield: "general-topology",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "거리공간은 두 점 사이의 거리를 정의하는 함수(거리함수)가 주어진 집합입니다. 위상공간의 특별한 경우입니다.",
+        formulas: [
+          {
+            latex: "d(x, y) \\geq 0, \\quad d(x,y) = 0 \\Leftrightarrow x = y",
+            description: "비음수성과 항등성",
+          },
+          {
+            latex: "d(x, y) = d(y, x)",
+            description: "대칭성",
+          },
+          {
+            latex: "d(x, z) \\leq d(x, y) + d(y, z)",
+            description: "삼각 부등식",
+          },
+        ],
+        examples: [
+          {
+            problem: "ℝ²에서 유클리드 거리를 정의하세요.",
+            solution:
+              "d((x₁,y₁), (x₂,y₂)) = √((x₂-x₁)² + (y₂-y₁)²). 피타고라스 정리에 기반합니다.",
+          },
+          {
+            problem: "맨해튼 거리(택시 거리)를 정의하세요.",
+            solution:
+              "d((x₁,y₁), (x₂,y₂)) = |x₂-x₁| + |y₂-y₁|. 격자 위를 따라 이동하는 거리입니다.",
+          },
+        ],
+        applications: [
+          { field: "해석학", description: "수렴, 연속성, 완비성" },
+          { field: "기계학습", description: "클러스터링, k-NN" },
+          { field: "최적화", description: "거리 기반 알고리즘" },
+        ],
+      },
+      en: {
+        definition:
+          "A metric space is a set equipped with a distance function (metric) between points. It's a special case of topological spaces.",
+        formulas: [
+          {
+            latex: "d(x, y) \\geq 0, \\quad d(x,y) = 0 \\Leftrightarrow x = y",
+            description: "Non-negativity and identity",
+          },
+          {
+            latex: "d(x, y) = d(y, x)",
+            description: "Symmetry",
+          },
+          {
+            latex: "d(x, z) \\leq d(x, y) + d(y, z)",
+            description: "Triangle inequality",
+          },
+        ],
+        examples: [
+          {
+            problem: "Define Euclidean distance in ℝ².",
+            solution:
+              "d((x₁,y₁), (x₂,y₂)) = √((x₂-x₁)² + (y₂-y₁)²). Based on Pythagorean theorem.",
+          },
+          {
+            problem: "Define Manhattan (taxicab) distance.",
+            solution:
+              "d((x₁,y₁), (x₂,y₂)) = |x₂-x₁| + |y₂-y₁|. Distance along grid lines.",
+          },
+        ],
+        applications: [
+          { field: "Analysis", description: "Convergence, continuity, completeness" },
+          { field: "Machine Learning", description: "Clustering, k-NN" },
+          { field: "Optimization", description: "Distance-based algorithms" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["real-numbers", "functions"],
+      nextTopics: ["topological-space", "completeness"],
+      related: ["norm"],
+    },
+    tags: ["거리공간", "거리함수", "metric space", "distance"],
+  },
+  {
+    id: "manifold",
+    name: {
+      ko: "다양체",
+      en: "Manifold",
+      ja: "多様体",
+    },
+    field: "topology",
+    subfield: "differential-topology",
+    difficulty: 5,
+    content: {
+      ko: {
+        definition:
+          "다양체는 국소적으로 유클리드 공간과 닮은 위상공간입니다. 미분다양체는 부드러운 구조를 추가로 가집니다.",
+        formulas: [
+          {
+            latex: "\\forall p \\in M, \\exists U \\ni p : U \\cong \\mathbb{R}^n",
+            description: "국소 유클리드 성질",
+          },
+          {
+            latex: "\\phi_\\beta \\circ \\phi_\\alpha^{-1} : \\mathbb{R}^n \\to \\mathbb{R}^n",
+            description: "전이 함수 (미분동형)",
+          },
+        ],
+        examples: [
+          {
+            problem: "구면 S²가 2차원 다양체임을 설명하세요.",
+            solution:
+              "구면의 각 점은 작은 조각을 취하면 평면과 위상동형입니다. 남극/북극을 제외한 부분은 평면에 사영됩니다.",
+          },
+          {
+            problem: "토러스(도넛)의 차원은?",
+            solution:
+              "토러스는 2차원 다양체입니다. S¹ × S¹로 표현되며 각 점 근방이 ℝ²와 닮았습니다.",
+          },
+        ],
+        history: {
+          discoveredBy: "베른하르트 리만",
+          year: "1854년",
+          background:
+            "리만이 일반 n차원 공간의 개념을 도입하며 다양체 이론의 기초를 놓았습니다.",
+        },
+        applications: [
+          { field: "일반상대성이론", description: "시공간의 기하학" },
+          { field: "기계학습", description: "다양체 학습, 차원 축소" },
+          { field: "로봇공학", description: "구성 공간" },
+        ],
+      },
+      en: {
+        definition:
+          "A manifold is a topological space locally resembling Euclidean space. Smooth manifolds additionally have differentiable structure.",
+        formulas: [
+          {
+            latex: "\\forall p \\in M, \\exists U \\ni p : U \\cong \\mathbb{R}^n",
+            description: "Locally Euclidean property",
+          },
+          {
+            latex: "\\phi_\\beta \\circ \\phi_\\alpha^{-1} : \\mathbb{R}^n \\to \\mathbb{R}^n",
+            description: "Transition functions (diffeomorphism)",
+          },
+        ],
+        examples: [
+          {
+            problem: "Explain why sphere S² is a 2-manifold.",
+            solution:
+              "Each point on a sphere has a neighborhood homeomorphic to a plane. Parts excluding poles can be projected to plane.",
+          },
+          {
+            problem: "What is the dimension of a torus?",
+            solution:
+              "Torus is a 2-manifold. Expressed as S¹ × S¹, each point has neighborhood resembling ℝ².",
+          },
+        ],
+        history: {
+          discoveredBy: "Bernhard Riemann",
+          year: "1854",
+          background:
+            "Riemann laid foundations of manifold theory by introducing general n-dimensional spaces.",
+        },
+        applications: [
+          { field: "General Relativity", description: "Geometry of spacetime" },
+          { field: "Machine Learning", description: "Manifold learning, dimensionality reduction" },
+          { field: "Robotics", description: "Configuration spaces" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["topological-space", "differentiability"],
+      nextTopics: ["tangent-space", "riemannian-geometry"],
+      related: ["homeomorphism"],
+    },
+    tags: ["다양체", "리만", "manifold", "Riemann"],
+  },
+  {
+    id: "fundamental-group",
+    name: {
+      ko: "기본군",
+      en: "Fundamental Group",
+      ja: "基本群",
+    },
+    field: "topology",
+    subfield: "algebraic-topology",
+    difficulty: 5,
+    content: {
+      ko: {
+        definition:
+          "기본군 π₁(X)는 공간 X의 점에서 시작하고 끝나는 루프(닫힌 경로)들의 호모토피 동치류로 이루어진 군입니다.",
+        formulas: [
+          {
+            latex: "\\pi_1(X, x_0) = \\{[\\gamma] : \\gamma(0) = \\gamma(1) = x_0\\}",
+            description: "기본군의 정의",
+          },
+          {
+            latex: "\\pi_1(S^1) \\cong \\mathbb{Z}",
+            description: "원의 기본군",
+          },
+          {
+            latex: "\\pi_1(S^n) = 0 \\text{ for } n \\geq 2",
+            description: "고차원 구의 기본군",
+          },
+        ],
+        examples: [
+          {
+            problem: "평면에서 한 점을 뺀 공간의 기본군은?",
+            solution:
+              "ℝ² - {0}의 기본군은 ℤ입니다. 원점을 몇 번 감는지가 루프를 분류합니다.",
+          },
+          {
+            problem: "토러스의 기본군은?",
+            solution:
+              "π₁(T²) ≅ ℤ × ℤ. 두 개의 독립적인 루프(가로, 세로)가 있습니다.",
+          },
+        ],
+        history: {
+          discoveredBy: "앙리 푸앵카레",
+          year: "1895년",
+          background:
+            "푸앵카레가 대수적 위상수학을 창시하며 기본군 개념을 도입했습니다.",
+        },
+        applications: [
+          { field: "위상수학", description: "공간 분류" },
+          { field: "물리학", description: "양자장론, 위상적 결함" },
+          { field: "로봇공학", description: "경로 계획" },
+        ],
+      },
+      en: {
+        definition:
+          "The fundamental group π₁(X) consists of homotopy equivalence classes of loops (closed paths) starting and ending at a point in space X.",
+        formulas: [
+          {
+            latex: "\\pi_1(X, x_0) = \\{[\\gamma] : \\gamma(0) = \\gamma(1) = x_0\\}",
+            description: "Definition of fundamental group",
+          },
+          {
+            latex: "\\pi_1(S^1) \\cong \\mathbb{Z}",
+            description: "Fundamental group of circle",
+          },
+          {
+            latex: "\\pi_1(S^n) = 0 \\text{ for } n \\geq 2",
+            description: "Fundamental group of higher spheres",
+          },
+        ],
+        examples: [
+          {
+            problem: "What is the fundamental group of plane minus a point?",
+            solution:
+              "π₁(ℝ² - {0}) ≅ ℤ. Loops are classified by winding number around origin.",
+          },
+          {
+            problem: "What is the fundamental group of a torus?",
+            solution:
+              "π₁(T²) ≅ ℤ × ℤ. Two independent loops (horizontal, vertical).",
+          },
+        ],
+        history: {
+          discoveredBy: "Henri Poincaré",
+          year: "1895",
+          background:
+            "Poincaré introduced fundamental groups while founding algebraic topology.",
+        },
+        applications: [
+          { field: "Topology", description: "Space classification" },
+          { field: "Physics", description: "Quantum field theory, topological defects" },
+          { field: "Robotics", description: "Path planning" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["topological-space", "group-theory"],
+      nextTopics: ["covering-spaces", "homology"],
+      related: ["homotopy"],
+    },
+    tags: ["기본군", "푸앵카레", "fundamental group", "homotopy"],
+  },
+  {
+    id: "homotopy",
+    name: {
+      ko: "호모토피",
+      en: "Homotopy",
+      ja: "ホモトピー",
+    },
+    field: "topology",
+    subfield: "algebraic-topology",
+    difficulty: 5,
+    content: {
+      ko: {
+        definition:
+          "호모토피는 두 연속함수 사이의 연속적인 변형입니다. 호모토피 동치인 공간은 위상적으로 '같은 모양'입니다.",
+        formulas: [
+          {
+            latex: "H: X \\times [0,1] \\to Y, \\quad H(x,0) = f(x), H(x,1) = g(x)",
+            description: "호모토피의 정의",
+          },
+          {
+            latex: "f \\simeq g",
+            description: "f와 g가 호모토픽 (호모토피로 연결)",
+          },
+          {
+            latex: "X \\simeq Y \\Leftrightarrow \\exists f: X \\to Y, g: Y \\to X : g \\circ f \\simeq id_X, f \\circ g \\simeq id_Y",
+            description: "호모토피 동치",
+          },
+        ],
+        examples: [
+          {
+            problem: "원판 D²과 한 점이 호모토피 동치임을 설명하세요.",
+            solution:
+              "원판을 연속적으로 수축하여 중심 한 점으로 만들 수 있습니다. H(x,t) = (1-t)x가 호모토피입니다.",
+          },
+          {
+            problem: "커피잔과 도넛이 호모토피 동치인 이유는?",
+            solution:
+              "둘 다 하나의 구멍이 있습니다. 연속적으로 변형하여 서로 만들 수 있습니다.",
+          },
+        ],
+        applications: [
+          { field: "위상수학", description: "공간 분류, 불변량" },
+          { field: "대수기하학", description: "호모토피 대수" },
+          { field: "컴퓨터 과학", description: "호모토피 타입 이론" },
+        ],
+      },
+      en: {
+        definition:
+          "Homotopy is a continuous deformation between two continuous functions. Homotopy equivalent spaces have the 'same shape' topologically.",
+        formulas: [
+          {
+            latex: "H: X \\times [0,1] \\to Y, \\quad H(x,0) = f(x), H(x,1) = g(x)",
+            description: "Definition of homotopy",
+          },
+          {
+            latex: "f \\simeq g",
+            description: "f and g are homotopic",
+          },
+          {
+            latex: "X \\simeq Y \\Leftrightarrow \\exists f: X \\to Y, g: Y \\to X : g \\circ f \\simeq id_X, f \\circ g \\simeq id_Y",
+            description: "Homotopy equivalence",
+          },
+        ],
+        examples: [
+          {
+            problem: "Explain why disk D² is homotopy equivalent to a point.",
+            solution:
+              "Disk can be continuously shrunk to its center point. H(x,t) = (1-t)x is the homotopy.",
+          },
+          {
+            problem: "Why are coffee cup and donut homotopy equivalent?",
+            solution:
+              "Both have exactly one hole. Can be continuously deformed into each other.",
+          },
+        ],
+        applications: [
+          { field: "Topology", description: "Space classification, invariants" },
+          { field: "Algebraic Geometry", description: "Homotopy algebra" },
+          { field: "Computer Science", description: "Homotopy type theory" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["continuity-topology", "topological-space"],
+      nextTopics: ["fundamental-group", "higher-homotopy-groups"],
+      related: ["homeomorphism"],
+    },
+    tags: ["호모토피", "변형", "homotopy", "deformation"],
+  },
 ];

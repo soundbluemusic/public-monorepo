@@ -385,4 +385,388 @@ export const dynamicsConcepts: MathConcept[] = [
     },
     tags: ["분기", "주기배가", "bifurcation", "period doubling"],
   },
+  {
+    id: "ordinary-differential-equation",
+    name: {
+      ko: "상미분방정식",
+      en: "Ordinary Differential Equations",
+      ja: "常微分方程式",
+    },
+    field: "dynamics",
+    subfield: "differential-equations",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "상미분방정식(ODE)은 하나의 독립변수에 대한 미지함수와 그 도함수 사이의 관계식입니다. 물리, 공학의 기본 언어입니다.",
+        formulas: [
+          {
+            latex: "\\frac{dy}{dx} = f(x, y)",
+            description: "1차 ODE의 일반형",
+          },
+          {
+            latex: "y'' + p(x)y' + q(x)y = g(x)",
+            description: "2차 선형 ODE",
+          },
+          {
+            latex: "\\frac{d^n y}{dx^n} = F(x, y, y', ..., y^{(n-1)})",
+            description: "n차 ODE",
+          },
+        ],
+        examples: [
+          {
+            problem: "dy/dx = 2x를 풀이하세요.",
+            solution: "양변을 적분: y = ∫2x dx = x² + C",
+          },
+          {
+            problem: "y' + y = 0을 풀이하세요.",
+            solution:
+              "특성방정식: r + 1 = 0, r = -1. 일반해: y = Ce^(-x)",
+          },
+        ],
+        history: {
+          discoveredBy: "아이작 뉴턴, 라이프니츠",
+          year: "17세기",
+          background:
+            "미적분학의 발명과 함께 물리 법칙을 수학적으로 표현하기 위해 발전했습니다.",
+        },
+        applications: [
+          { field: "물리학", description: "뉴턴 역학, 전자기학" },
+          { field: "공학", description: "회로, 제어 시스템" },
+          { field: "생물학", description: "개체군 모델, 전염병" },
+        ],
+      },
+      en: {
+        definition:
+          "An ordinary differential equation (ODE) relates an unknown function of one variable to its derivatives. It's the fundamental language of physics and engineering.",
+        formulas: [
+          {
+            latex: "\\frac{dy}{dx} = f(x, y)",
+            description: "General form of first-order ODE",
+          },
+          {
+            latex: "y'' + p(x)y' + q(x)y = g(x)",
+            description: "Second-order linear ODE",
+          },
+          {
+            latex: "\\frac{d^n y}{dx^n} = F(x, y, y', ..., y^{(n-1)})",
+            description: "nth-order ODE",
+          },
+        ],
+        examples: [
+          {
+            problem: "Solve dy/dx = 2x.",
+            solution: "Integrate both sides: y = ∫2x dx = x² + C",
+          },
+          {
+            problem: "Solve y' + y = 0.",
+            solution:
+              "Characteristic equation: r + 1 = 0, r = -1. General solution: y = Ce^(-x)",
+          },
+        ],
+        history: {
+          discoveredBy: "Isaac Newton, Leibniz",
+          year: "17th century",
+          background:
+            "Developed alongside calculus to mathematically express physical laws.",
+        },
+        applications: [
+          { field: "Physics", description: "Newtonian mechanics, electromagnetism" },
+          { field: "Engineering", description: "Circuits, control systems" },
+          { field: "Biology", description: "Population models, epidemiology" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["derivative", "integration"],
+      nextTopics: ["dynamical-systems", "numerical-ode"],
+      related: ["partial-differential-equation"],
+    },
+    tags: ["미분방정식", "ODE", "differential equation", "ordinary"],
+  },
+  {
+    id: "partial-differential-equation",
+    name: {
+      ko: "편미분방정식",
+      en: "Partial Differential Equations",
+      ja: "偏微分方程式",
+    },
+    field: "dynamics",
+    subfield: "differential-equations",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "편미분방정식(PDE)은 두 개 이상의 독립변수에 대한 미지함수의 편도함수를 포함하는 방정식입니다. 파동, 열전달, 양자역학 등을 기술합니다.",
+        formulas: [
+          {
+            latex: "\\frac{\\partial^2 u}{\\partial t^2} = c^2 \\nabla^2 u",
+            description: "파동 방정식",
+          },
+          {
+            latex: "\\frac{\\partial u}{\\partial t} = \\alpha \\nabla^2 u",
+            description: "열 방정식 (확산 방정식)",
+          },
+          {
+            latex: "\\nabla^2 u = 0",
+            description: "라플라스 방정식",
+          },
+          {
+            latex: "i\\hbar \\frac{\\partial \\Psi}{\\partial t} = \\hat{H}\\Psi",
+            description: "슈뢰딩거 방정식",
+          },
+        ],
+        examples: [
+          {
+            problem: "1차원 열 방정식의 물리적 의미를 설명하세요.",
+            solution:
+              "∂u/∂t = α∂²u/∂x²는 온도 u가 시간에 따라 어떻게 변하는지를 나타냅니다. α는 열확산계수입니다.",
+          },
+        ],
+        history: {
+          discoveredBy: "다니엘 베르누이, 달랑베르",
+          year: "18세기",
+          background:
+            "현 진동과 열전도 문제를 해결하면서 PDE 이론이 발전했습니다.",
+        },
+        applications: [
+          { field: "물리학", description: "파동, 열역학, 양자역학" },
+          { field: "공학", description: "유체역학, 구조해석" },
+          { field: "금융", description: "옵션 가격 결정 (블랙-숄즈)" },
+        ],
+      },
+      en: {
+        definition:
+          "A partial differential equation (PDE) involves partial derivatives of an unknown function with respect to multiple independent variables. Describes waves, heat transfer, quantum mechanics.",
+        formulas: [
+          {
+            latex: "\\frac{\\partial^2 u}{\\partial t^2} = c^2 \\nabla^2 u",
+            description: "Wave equation",
+          },
+          {
+            latex: "\\frac{\\partial u}{\\partial t} = \\alpha \\nabla^2 u",
+            description: "Heat equation (diffusion)",
+          },
+          {
+            latex: "\\nabla^2 u = 0",
+            description: "Laplace equation",
+          },
+          {
+            latex: "i\\hbar \\frac{\\partial \\Psi}{\\partial t} = \\hat{H}\\Psi",
+            description: "Schrödinger equation",
+          },
+        ],
+        examples: [
+          {
+            problem: "Explain the physical meaning of 1D heat equation.",
+            solution:
+              "∂u/∂t = α∂²u/∂x² describes how temperature u changes over time. α is thermal diffusivity.",
+          },
+        ],
+        history: {
+          discoveredBy: "Daniel Bernoulli, d'Alembert",
+          year: "18th century",
+          background:
+            "PDE theory developed while solving string vibration and heat conduction problems.",
+        },
+        applications: [
+          { field: "Physics", description: "Waves, thermodynamics, quantum mechanics" },
+          { field: "Engineering", description: "Fluid dynamics, structural analysis" },
+          { field: "Finance", description: "Option pricing (Black-Scholes)" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["partial-derivative", "ordinary-differential-equation"],
+      nextTopics: ["fourier-series", "finite-element"],
+      related: ["laplacian"],
+    },
+    tags: ["편미분방정식", "PDE", "partial differential", "wave"],
+  },
+  {
+    id: "phase-space",
+    name: {
+      ko: "위상공간 (상공간)",
+      en: "Phase Space",
+      ja: "相空間",
+    },
+    field: "dynamics",
+    subfield: "dynamical-systems",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "위상공간(상공간)은 동역학계의 모든 가능한 상태를 좌표로 나타낸 공간입니다. 시스템의 진화를 궤적으로 시각화할 수 있습니다.",
+        formulas: [
+          {
+            latex: "(q_1, ..., q_n, p_1, ..., p_n) \\in \\mathbb{R}^{2n}",
+            description: "n 자유도 시스템의 위상공간 좌표",
+          },
+          {
+            latex: "\\dot{q}_i = \\frac{\\partial H}{\\partial p_i}, \\quad \\dot{p}_i = -\\frac{\\partial H}{\\partial q_i}",
+            description: "해밀턴 방정식",
+          },
+        ],
+        examples: [
+          {
+            problem: "단진자의 위상공간을 그리세요.",
+            solution:
+              "x축: 각도 θ, y축: 각속도 θ̇. 작은 진동은 타원 궤적, 큰 진동은 물결 모양, 회전 운동은 열린 곡선입니다.",
+          },
+          {
+            problem: "조화 진동자의 위상공간 궤적은?",
+            solution:
+              "x축: 위치 x, y축: 운동량 p. 에너지 보존으로 인해 완전한 타원 궤적을 그립니다.",
+          },
+        ],
+        history: {
+          discoveredBy: "조제프 리우빌, 윌리엄 해밀턴",
+          year: "19세기",
+          background:
+            "해석역학의 발전과 함께 시스템의 상태를 기하학적으로 분석하는 방법이 발전했습니다.",
+        },
+        applications: [
+          { field: "고전역학", description: "행성 운동, 진자 운동" },
+          { field: "통계역학", description: "앙상블 이론" },
+          { field: "제어 이론", description: "시스템 안정성 분석" },
+        ],
+      },
+      en: {
+        definition:
+          "Phase space represents all possible states of a dynamical system as coordinates. System evolution can be visualized as trajectories.",
+        formulas: [
+          {
+            latex: "(q_1, ..., q_n, p_1, ..., p_n) \\in \\mathbb{R}^{2n}",
+            description: "Phase space coordinates for n-degree system",
+          },
+          {
+            latex: "\\dot{q}_i = \\frac{\\partial H}{\\partial p_i}, \\quad \\dot{p}_i = -\\frac{\\partial H}{\\partial q_i}",
+            description: "Hamilton's equations",
+          },
+        ],
+        examples: [
+          {
+            problem: "Draw phase space for simple pendulum.",
+            solution:
+              "x-axis: angle θ, y-axis: angular velocity θ̇. Small oscillations: ellipses, large: wave-like, rotation: open curves.",
+          },
+          {
+            problem: "What is the phase space trajectory of harmonic oscillator?",
+            solution:
+              "x-axis: position x, y-axis: momentum p. Energy conservation gives perfect elliptical trajectories.",
+          },
+        ],
+        history: {
+          discoveredBy: "Joseph Liouville, William Hamilton",
+          year: "19th century",
+          background:
+            "Geometric analysis of system states developed alongside analytical mechanics.",
+        },
+        applications: [
+          { field: "Classical Mechanics", description: "Planetary motion, pendulum" },
+          { field: "Statistical Mechanics", description: "Ensemble theory" },
+          { field: "Control Theory", description: "System stability analysis" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["dynamical-systems", "derivative"],
+      nextTopics: ["attractors", "liouville-theorem"],
+      related: ["hamiltonian-mechanics"],
+    },
+    tags: ["위상공간", "상공간", "phase space", "trajectory"],
+  },
+  {
+    id: "attractors",
+    name: {
+      ko: "끌개",
+      en: "Attractors",
+      ja: "アトラクター",
+    },
+    field: "dynamics",
+    subfield: "chaos",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "끌개는 동역학계에서 궤적들이 시간이 지남에 따라 수렴하는 상태나 상태들의 집합입니다. 점, 주기궤도, 이상한 끌개 등이 있습니다.",
+        formulas: [
+          {
+            latex: "\\lim_{t \\to \\infty} d(x(t), A) = 0",
+            description: "끌개 A로의 수렴",
+          },
+          {
+            latex: "\\begin{cases} \\dot{x} = \\sigma(y-x) \\\\ \\dot{y} = x(\\rho - z) - y \\\\ \\dot{z} = xy - \\beta z \\end{cases}",
+            description: "로렌츠 방정식 (이상한 끌개)",
+          },
+        ],
+        examples: [
+          {
+            problem: "점 끌개, 한계 순환, 이상한 끌개의 차이를 설명하세요.",
+            solution:
+              "점 끌개: 정지 상태. 한계 순환: 주기적 진동. 이상한 끌개: 비주기적, 프랙탈 구조, 카오스적.",
+          },
+          {
+            problem: "로렌츠 끌개의 특징은?",
+            solution:
+              "나비 모양의 이상한 끌개. 궤적이 두 날개 사이를 예측 불가능하게 이동합니다. 프랙탈 차원 ≈ 2.06.",
+          },
+        ],
+        history: {
+          discoveredBy: "에드워드 로렌츠",
+          year: "1963년",
+          background:
+            "기상 모델에서 발견된 로렌츠 끌개는 카오스 이론의 상징이 되었습니다.",
+        },
+        applications: [
+          { field: "기상학", description: "대기 모델" },
+          { field: "신경과학", description: "뇌 활동 패턴" },
+          { field: "경제학", description: "시장 동역학" },
+        ],
+      },
+      en: {
+        definition:
+          "An attractor is a state or set of states that trajectories converge to over time in a dynamical system. Types include point, periodic orbit, and strange attractors.",
+        formulas: [
+          {
+            latex: "\\lim_{t \\to \\infty} d(x(t), A) = 0",
+            description: "Convergence to attractor A",
+          },
+          {
+            latex: "\\begin{cases} \\dot{x} = \\sigma(y-x) \\\\ \\dot{y} = x(\\rho - z) - y \\\\ \\dot{z} = xy - \\beta z \\end{cases}",
+            description: "Lorenz equations (strange attractor)",
+          },
+        ],
+        examples: [
+          {
+            problem: "Explain difference between point, limit cycle, and strange attractors.",
+            solution:
+              "Point: stationary state. Limit cycle: periodic oscillation. Strange: aperiodic, fractal structure, chaotic.",
+          },
+          {
+            problem: "What characterizes the Lorenz attractor?",
+            solution:
+              "Butterfly-shaped strange attractor. Trajectory moves unpredictably between two wings. Fractal dimension ≈ 2.06.",
+          },
+        ],
+        history: {
+          discoveredBy: "Edward Lorenz",
+          year: "1963",
+          background:
+            "Discovered in weather model, Lorenz attractor became iconic in chaos theory.",
+        },
+        applications: [
+          { field: "Meteorology", description: "Atmospheric models" },
+          { field: "Neuroscience", description: "Brain activity patterns" },
+          { field: "Economics", description: "Market dynamics" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["dynamical-systems", "phase-space"],
+      nextTopics: ["chaos-theory", "fractals"],
+      related: ["fixed-points"],
+    },
+    tags: ["끌개", "로렌츠", "attractor", "Lorenz"],
+  },
 ];

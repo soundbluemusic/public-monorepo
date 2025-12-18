@@ -526,4 +526,422 @@ export const symbolsConcepts: MathConcept[] = [
     },
     tags: ["나블라", "벡터미분", "nabla", "del"],
   },
+  {
+    id: "integral-symbol",
+    name: {
+      ko: "적분 기호 ∫",
+      en: "Integral Sign (∫)",
+      ja: "積分記号 ∫",
+    },
+    field: "symbols",
+    subfield: "calculus",
+    difficulty: 2,
+    content: {
+      ko: {
+        definition:
+          "∫는 적분을 나타내는 기호로, 라이프니츠가 'Sum(합)'의 S를 길게 늘인 형태에서 유래했습니다.",
+        formulas: [
+          {
+            latex: "\\int f(x) \\, dx",
+            description: "부정적분",
+          },
+          {
+            latex: "\\int_a^b f(x) \\, dx",
+            description: "정적분 (a에서 b까지)",
+          },
+          {
+            latex: "\\iint f(x,y) \\, dA",
+            description: "이중적분",
+          },
+          {
+            latex: "\\oint_C \\vec{F} \\cdot d\\vec{r}",
+            description: "선적분 (폐곡선)",
+          },
+        ],
+        examples: [
+          {
+            problem: "∫ x² dx를 구하세요.",
+            solution: "∫ x² dx = x³/3 + C",
+          },
+          {
+            problem: "∫₀¹ 2x dx를 구하세요.",
+            solution: "[x²]₀¹ = 1² - 0² = 1",
+          },
+        ],
+        history: {
+          discoveredBy: "고트프리트 빌헬름 라이프니츠",
+          year: "1675년",
+          background:
+            "라이프니츠가 미적분학을 체계화하면서 도입한 기호입니다.",
+        },
+        applications: [
+          { field: "물리학", description: "일, 에너지 계산" },
+          { field: "확률론", description: "연속확률분포" },
+          { field: "공학", description: "신호 처리, 제어" },
+        ],
+      },
+      en: {
+        definition:
+          "∫ is the integral sign, derived by Leibniz from an elongated S for 'Sum'.",
+        formulas: [
+          {
+            latex: "\\int f(x) \\, dx",
+            description: "Indefinite integral",
+          },
+          {
+            latex: "\\int_a^b f(x) \\, dx",
+            description: "Definite integral (from a to b)",
+          },
+          {
+            latex: "\\iint f(x,y) \\, dA",
+            description: "Double integral",
+          },
+          {
+            latex: "\\oint_C \\vec{F} \\cdot d\\vec{r}",
+            description: "Line integral (closed curve)",
+          },
+        ],
+        examples: [
+          {
+            problem: "Find ∫ x² dx.",
+            solution: "∫ x² dx = x³/3 + C",
+          },
+          {
+            problem: "Find ∫₀¹ 2x dx.",
+            solution: "[x²]₀¹ = 1² - 0² = 1",
+          },
+        ],
+        history: {
+          discoveredBy: "Gottfried Wilhelm Leibniz",
+          year: "1675",
+          background:
+            "Leibniz introduced this symbol while systematizing calculus.",
+        },
+        applications: [
+          { field: "Physics", description: "Work, energy calculations" },
+          { field: "Probability", description: "Continuous distributions" },
+          { field: "Engineering", description: "Signal processing, control" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["derivative"],
+      nextTopics: ["fundamental-theorem-calculus", "integration-techniques"],
+      related: ["summation-notation"],
+    },
+    tags: ["적분", "미적분", "integral", "calculus"],
+  },
+  {
+    id: "quantifier-symbols",
+    name: {
+      ko: "한정사 기호 ∀, ∃",
+      en: "Quantifier Symbols (∀, ∃)",
+      ja: "限量詞 ∀, ∃",
+    },
+    field: "symbols",
+    subfield: "logic",
+    difficulty: 2,
+    content: {
+      ko: {
+        definition:
+          "∀(전칭 한정사)는 '모든'을, ∃(존재 한정사)는 '존재한다'를 의미합니다. 수학적 명제를 정확하게 표현합니다.",
+        formulas: [
+          {
+            latex: "\\forall x \\in A, P(x)",
+            description: "A의 모든 x에 대해 P(x)가 참",
+          },
+          {
+            latex: "\\exists x \\in A, P(x)",
+            description: "P(x)를 만족하는 x가 A에 존재",
+          },
+          {
+            latex: "\\exists! x, P(x)",
+            description: "P(x)를 만족하는 유일한 x가 존재",
+          },
+          {
+            latex: "\\neg(\\forall x, P(x)) \\equiv \\exists x, \\neg P(x)",
+            description: "한정사의 부정",
+          },
+        ],
+        examples: [
+          {
+            problem: "∀x ∈ ℝ, x² ≥ 0 의 의미는?",
+            solution: "모든 실수 x에 대해 x의 제곱은 0 이상이다. (참)",
+          },
+          {
+            problem: "∃x ∈ ℤ, x² = 2의 의미는?",
+            solution: "제곱이 2인 정수가 존재한다. (거짓, √2는 무리수)",
+          },
+        ],
+        history: {
+          discoveredBy: "게르하르트 겐첸",
+          year: "1935년",
+          background:
+            "프레게와 피아노의 기호논리학을 바탕으로 현대적 형태가 확립되었습니다.",
+        },
+        applications: [
+          { field: "논리학", description: "명제 논리, 술어 논리" },
+          { field: "수학", description: "정리 진술, 증명" },
+          { field: "컴퓨터 과학", description: "프로그램 검증" },
+        ],
+      },
+      en: {
+        definition:
+          "∀ (universal quantifier) means 'for all', ∃ (existential quantifier) means 'there exists'. Used for precise mathematical statements.",
+        formulas: [
+          {
+            latex: "\\forall x \\in A, P(x)",
+            description: "P(x) is true for all x in A",
+          },
+          {
+            latex: "\\exists x \\in A, P(x)",
+            description: "There exists x in A such that P(x)",
+          },
+          {
+            latex: "\\exists! x, P(x)",
+            description: "There exists unique x satisfying P(x)",
+          },
+          {
+            latex: "\\neg(\\forall x, P(x)) \\equiv \\exists x, \\neg P(x)",
+            description: "Negation of quantifiers",
+          },
+        ],
+        examples: [
+          {
+            problem: "What does ∀x ∈ ℝ, x² ≥ 0 mean?",
+            solution: "For all real numbers x, x squared is non-negative. (True)",
+          },
+          {
+            problem: "What does ∃x ∈ ℤ, x² = 2 mean?",
+            solution: "There exists an integer whose square is 2. (False, √2 is irrational)",
+          },
+        ],
+        history: {
+          discoveredBy: "Gerhard Gentzen",
+          year: "1935",
+          background:
+            "Modern form established based on symbolic logic of Frege and Peano.",
+        },
+        applications: [
+          { field: "Logic", description: "Propositional and predicate logic" },
+          { field: "Mathematics", description: "Theorem statements, proofs" },
+          { field: "Computer Science", description: "Program verification" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["logic-basics"],
+      nextTopics: ["predicate-logic", "proof-methods"],
+      related: ["set-notation"],
+    },
+    tags: ["한정사", "논리", "quantifier", "forall", "exists"],
+  },
+  {
+    id: "factorial-notation",
+    name: {
+      ko: "팩토리얼 기호 n!",
+      en: "Factorial Notation (n!)",
+      ja: "階乗記号 n!",
+    },
+    field: "symbols",
+    subfield: "operations",
+    difficulty: 1,
+    content: {
+      ko: {
+        definition:
+          "n!은 n 팩토리얼로, 1부터 n까지 모든 양의 정수의 곱입니다. 순열과 조합에서 핵심적으로 사용됩니다.",
+        formulas: [
+          {
+            latex: "n! = n \\times (n-1) \\times (n-2) \\times ... \\times 2 \\times 1",
+            description: "팩토리얼의 정의",
+          },
+          {
+            latex: "0! = 1",
+            description: "0의 팩토리얼 (정의)",
+          },
+          {
+            latex: "n! = n \\times (n-1)!",
+            description: "재귀적 정의",
+          },
+          {
+            latex: "n! \\approx \\sqrt{2\\pi n} \\left(\\frac{n}{e}\\right)^n",
+            description: "스털링 근사",
+          },
+        ],
+        examples: [
+          {
+            problem: "5!를 계산하세요.",
+            solution: "5! = 5 × 4 × 3 × 2 × 1 = 120",
+          },
+          {
+            problem: "7!/5!를 계산하세요.",
+            solution: "7!/5! = 7 × 6 = 42",
+          },
+        ],
+        history: {
+          discoveredBy: "크리스티안 크람프",
+          year: "1808년",
+          background: "! 기호를 처음 사용했으며, 이후 표준이 되었습니다.",
+        },
+        applications: [
+          { field: "조합론", description: "순열, 조합" },
+          { field: "확률론", description: "이항분포, 포아송분포" },
+          { field: "컴퓨터 과학", description: "알고리즘 복잡도" },
+        ],
+      },
+      en: {
+        definition:
+          "n! (n factorial) is the product of all positive integers from 1 to n. Essential in permutations and combinations.",
+        formulas: [
+          {
+            latex: "n! = n \\times (n-1) \\times (n-2) \\times ... \\times 2 \\times 1",
+            description: "Definition of factorial",
+          },
+          {
+            latex: "0! = 1",
+            description: "Zero factorial (by definition)",
+          },
+          {
+            latex: "n! = n \\times (n-1)!",
+            description: "Recursive definition",
+          },
+          {
+            latex: "n! \\approx \\sqrt{2\\pi n} \\left(\\frac{n}{e}\\right)^n",
+            description: "Stirling's approximation",
+          },
+        ],
+        examples: [
+          {
+            problem: "Calculate 5!",
+            solution: "5! = 5 × 4 × 3 × 2 × 1 = 120",
+          },
+          {
+            problem: "Calculate 7!/5!",
+            solution: "7!/5! = 7 × 6 = 42",
+          },
+        ],
+        history: {
+          discoveredBy: "Christian Kramp",
+          year: "1808",
+          background: "First used the ! symbol, which became standard notation.",
+        },
+        applications: [
+          { field: "Combinatorics", description: "Permutations, combinations" },
+          { field: "Probability", description: "Binomial, Poisson distributions" },
+          { field: "Computer Science", description: "Algorithm complexity" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: [],
+      nextTopics: ["permutations", "combinations", "gamma-function"],
+      related: ["product-notation"],
+    },
+    tags: ["팩토리얼", "계승", "factorial", "permutation"],
+  },
+  {
+    id: "binomial-coefficient",
+    name: {
+      ko: "이항계수 (ⁿCₖ)",
+      en: "Binomial Coefficient",
+      ja: "二項係数",
+    },
+    field: "symbols",
+    subfield: "operations",
+    difficulty: 2,
+    content: {
+      ko: {
+        definition:
+          "이항계수 (n k) 또는 ⁿCₖ는 n개에서 k개를 선택하는 경우의 수입니다. 이항 전개의 계수이기도 합니다.",
+        formulas: [
+          {
+            latex: "\\binom{n}{k} = \\frac{n!}{k!(n-k)!}",
+            description: "이항계수의 정의",
+          },
+          {
+            latex: "\\binom{n}{k} = \\binom{n}{n-k}",
+            description: "대칭성",
+          },
+          {
+            latex: "\\binom{n}{k} + \\binom{n}{k+1} = \\binom{n+1}{k+1}",
+            description: "파스칼의 항등식",
+          },
+          {
+            latex: "(x+y)^n = \\sum_{k=0}^{n} \\binom{n}{k} x^{n-k} y^k",
+            description: "이항 정리",
+          },
+        ],
+        examples: [
+          {
+            problem: "10명에서 3명을 선택하는 경우의 수는?",
+            solution: "C(10,3) = 10!/(3!×7!) = 120",
+          },
+          {
+            problem: "(x+y)³을 전개하세요.",
+            solution: "x³ + 3x²y + 3xy² + y³ (계수: 1,3,3,1)",
+          },
+        ],
+        history: {
+          discoveredBy: "블레즈 파스칼",
+          year: "1654년",
+          background:
+            "파스칼의 삼각형으로 체계화했으나, 고대부터 알려진 개념입니다.",
+        },
+        applications: [
+          { field: "확률론", description: "이항분포" },
+          { field: "조합론", description: "경우의 수" },
+          { field: "통계학", description: "표본 선택" },
+        ],
+      },
+      en: {
+        definition:
+          "The binomial coefficient (n k) or ⁿCₖ is the number of ways to choose k items from n items. Also coefficients in binomial expansion.",
+        formulas: [
+          {
+            latex: "\\binom{n}{k} = \\frac{n!}{k!(n-k)!}",
+            description: "Definition of binomial coefficient",
+          },
+          {
+            latex: "\\binom{n}{k} = \\binom{n}{n-k}",
+            description: "Symmetry",
+          },
+          {
+            latex: "\\binom{n}{k} + \\binom{n}{k+1} = \\binom{n+1}{k+1}",
+            description: "Pascal's identity",
+          },
+          {
+            latex: "(x+y)^n = \\sum_{k=0}^{n} \\binom{n}{k} x^{n-k} y^k",
+            description: "Binomial theorem",
+          },
+        ],
+        examples: [
+          {
+            problem: "How many ways to choose 3 from 10 people?",
+            solution: "C(10,3) = 10!/(3!×7!) = 120",
+          },
+          {
+            problem: "Expand (x+y)³.",
+            solution: "x³ + 3x²y + 3xy² + y³ (coefficients: 1,3,3,1)",
+          },
+        ],
+        history: {
+          discoveredBy: "Blaise Pascal",
+          year: "1654",
+          background:
+            "Systematized with Pascal's triangle, but known since ancient times.",
+        },
+        applications: [
+          { field: "Probability", description: "Binomial distribution" },
+          { field: "Combinatorics", description: "Counting" },
+          { field: "Statistics", description: "Sample selection" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["factorial-notation"],
+      nextTopics: ["binomial-theorem", "pascals-triangle"],
+      related: ["combinations"],
+    },
+    tags: ["이항계수", "조합", "binomial", "choose"],
+  },
 ];
