@@ -100,6 +100,13 @@ const translations: Record<Language, UILabels> = {
     browseByCategory: "카테고리로 찾아보기",
     aboutTitle: "Context 소개",
     aboutDescription: "한국어 학습자를 위한 의미 중심 다국어 사전입니다.",
+    menu: "메뉴",
+    more: "더보기",
+    sitemap: "사이트맵",
+    sitemapDescription: "모든 페이지와 카테고리를 한눈에 확인하세요",
+    allCategories: "전체 카테고리",
+    allPages: "전체 페이지",
+    searchEngineIndex: "검색엔진 색인용",
   },
   en: {
     search: "Search",
@@ -147,6 +154,13 @@ const translations: Record<Language, UILabels> = {
     browseByCategory: "Browse by Category",
     aboutTitle: "About Context",
     aboutDescription: "A meaning-focused multilingual dictionary for Korean learners.",
+    menu: "Menu",
+    more: "More",
+    sitemap: "Sitemap",
+    sitemapDescription: "View all pages and categories at a glance",
+    allCategories: "All Categories",
+    allPages: "All Pages",
+    searchEngineIndex: "For search engines",
   },
 };
 

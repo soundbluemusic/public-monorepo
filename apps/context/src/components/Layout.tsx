@@ -17,12 +17,13 @@
  * </Layout>
  * ```
  */
-import { createSignal, createEffect, onMount, onCleanup, Show, type ParentComponent } from "solid-js";
+import { createSignal, createEffect, onMount, onCleanup, Show, For, type ParentComponent } from "solid-js";
 import { A, useLocation, useNavigate } from "@solidjs/router";
 import { useI18n } from "@/i18n";
 import { meaningEntries } from "@/data/entries";
 import type { MeaningEntry } from "@/data/types";
 import { LanguageToggle } from "@soundblue/shared";
+import { categories } from "@/data/categories";
 
 /**
  * 경로에서 로케일 프리픽스 제거 (비교용)
@@ -45,6 +46,9 @@ export const Layout: ParentComponent = (props) => {
   const { locale, setLocale, t, localePath } = useI18n();
   const location = useLocation();
   const navigate = useNavigate();
+
+  // Sidebar
+  const [sidebarOpen, setSidebarOpen] = createSignal(false);
 
   // Dark mode
   const [darkMode, setDarkMode] = createSignal(false);
@@ -175,14 +179,26 @@ export const Layout: ParentComponent = (props) => {
         }}
       >
         <div class="max-w-3xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
-          {/* Logo */}
-          <A
-            href={localePath("/")}
-            class="font-semibold shrink-0"
-            style={{ color: "var(--text-primary)" }}
-          >
-            Context
-          </A>
+          {/* Menu Button + Logo */}
+          <div class="flex items-center gap-2 shrink-0">
+            <button
+              onClick={() => setSidebarOpen(true)}
+              class="p-2 rounded-lg transition-colors hover:bg-[var(--bg-tertiary)]"
+              style={{ color: "var(--text-secondary)" }}
+              aria-label={t("menu")}
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+            <A
+              href={localePath("/")}
+              class="font-semibold"
+              style={{ color: "var(--text-primary)" }}
+            >
+              Context
+            </A>
+          </div>
 
           {/* Search Form */}
           <div ref={searchContainerRef} class="relative flex-1 max-w-md">
@@ -302,6 +318,157 @@ export const Layout: ParentComponent = (props) => {
           </div>
         </div>
       </header>
+
+      {/* Sidebar Overlay */}
+      <Show when={sidebarOpen()}>
+        <div
+          class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm transition-opacity"
+          onClick={() => setSidebarOpen(false)}
+        />
+      </Show>
+
+      {/* Sidebar */}
+      <aside
+        class="fixed top-0 left-0 z-50 h-full w-72 transform transition-transform duration-300 ease-in-out flex flex-col"
+        style={{
+          "background-color": "var(--bg-primary)",
+          "border-right": "1px solid var(--border-primary)",
+          transform: sidebarOpen() ? "translateX(0)" : "translateX(-100%)"
+        }}
+      >
+        {/* Sidebar Header */}
+        <div
+          class="h-14 flex items-center justify-between px-4 shrink-0"
+          style={{ "border-bottom": "1px solid var(--border-primary)" }}
+        >
+          <span class="font-semibold" style={{ color: "var(--text-primary)" }}>
+            {t("menu")}
+          </span>
+          <button
+            onClick={() => setSidebarOpen(false)}
+            class="p-2 rounded-lg transition-colors hover:bg-[var(--bg-tertiary)]"
+            style={{ color: "var(--text-secondary)" }}
+            aria-label="Close menu"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Sidebar Content */}
+        <nav class="flex-1 overflow-y-auto py-4">
+          {/* Main Navigation */}
+          <div class="px-3 mb-6">
+            <A
+              href={localePath("/")}
+              onClick={() => setSidebarOpen(false)}
+              class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors"
+              style={{
+                color: isActive("/") ? "var(--accent-primary)" : "var(--text-primary)",
+                "background-color": isActive("/") ? "var(--bg-tertiary)" : "transparent"
+              }}
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+              {t("home")}
+            </A>
+            <A
+              href={localePath("/browse")}
+              onClick={() => setSidebarOpen(false)}
+              class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors"
+              style={{
+                color: isActive("/browse") ? "var(--accent-primary)" : "var(--text-primary)",
+                "background-color": isActive("/browse") ? "var(--bg-tertiary)" : "transparent"
+              }}
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+              </svg>
+              {t("browse")}
+            </A>
+            <A
+              href={localePath("/about")}
+              onClick={() => setSidebarOpen(false)}
+              class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors"
+              style={{
+                color: isActive("/about") ? "var(--accent-primary)" : "var(--text-primary)",
+                "background-color": isActive("/about") ? "var(--bg-tertiary)" : "transparent"
+              }}
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              {t("about")}
+            </A>
+          </div>
+
+          {/* Categories */}
+          <div class="px-3 mb-6">
+            <div
+              class="px-3 py-2 text-xs font-medium uppercase tracking-wider"
+              style={{ color: "var(--text-tertiary)" }}
+            >
+              {t("browseByCategory")}
+            </div>
+            <div class="space-y-0.5">
+              <For each={categories.slice(0, 6)}>
+                {(category) => (
+                  <A
+                    href={localePath(`/category/${category.id}`)}
+                    onClick={() => setSidebarOpen(false)}
+                    class="flex items-center gap-3 px-3 py-2 rounded-lg transition-colors text-sm"
+                    style={{
+                      color: isActive(`/category/${category.id}`) ? "var(--accent-primary)" : "var(--text-secondary)",
+                      "background-color": isActive(`/category/${category.id}`) ? "var(--bg-tertiary)" : "transparent"
+                    }}
+                  >
+                    <span class="text-base">{category.icon}</span>
+                    {category.name[locale()]}
+                  </A>
+                )}
+              </For>
+              <A
+                href={localePath("/browse")}
+                onClick={() => setSidebarOpen(false)}
+                class="flex items-center gap-3 px-3 py-2 rounded-lg transition-colors text-sm"
+                style={{ color: "var(--accent-primary)" }}
+              >
+                <span class="text-base opacity-50">+{categories.length - 6}</span>
+                {t("viewAll")}
+              </A>
+            </div>
+          </div>
+        </nav>
+
+        {/* Sidebar Footer - More Section */}
+        <div
+          class="shrink-0 py-4 px-3"
+          style={{ "border-top": "1px solid var(--border-primary)" }}
+        >
+          <div
+            class="px-3 py-2 text-xs font-medium uppercase tracking-wider"
+            style={{ color: "var(--text-tertiary)" }}
+          >
+            {t("more")}
+          </div>
+          <A
+            href={localePath("/sitemap")}
+            onClick={() => setSidebarOpen(false)}
+            class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors"
+            style={{
+              color: isActive("/sitemap") ? "var(--accent-primary)" : "var(--text-primary)",
+              "background-color": isActive("/sitemap") ? "var(--bg-tertiary)" : "transparent"
+            }}
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
+            </svg>
+            {t("sitemap")}
+          </A>
+        </div>
+      </aside>
 
       {/* Main */}
       <main class="max-w-3xl mx-auto px-4 py-8">

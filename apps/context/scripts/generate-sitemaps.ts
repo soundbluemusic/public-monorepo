@@ -3,58 +3,55 @@
  * Generates sitemap.xml with hreflang support for en, ko
  */
 
-import { writeFileSync, mkdirSync } from "node:fs";
-import { dirname, join } from "node:path";
-import { fileURLToPath } from "node:url";
+import { writeFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 // Import data
-import { categories } from "../src/data/categories";
-import { meaningEntries } from "../src/data/entries";
+import { categories } from '../src/data/categories';
+import { meaningEntries } from '../src/data/entries';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const PUBLIC_DIR = join(__dirname, "../public");
+const PUBLIC_DIR = join(__dirname, '../public');
 
-const SITE_URL = "https://context.soundbluemusic.com";
-const LANGUAGES = ["en", "ko"] as const;
-const TODAY = new Date().toISOString().split("T")[0];
+const SITE_URL = 'https://context.soundbluemusic.com';
+const LANGUAGES = ['en', 'ko'] as const;
+const TODAY = new Date().toISOString().split('T')[0];
 
 // Static pages
 const STATIC_PAGES = [
-  { path: "/", priority: "1.0", changefreq: "weekly" },
-  { path: "/about", priority: "0.8", changefreq: "monthly" },
-  { path: "/browse", priority: "0.9", changefreq: "weekly" },
-  { path: "/built-with", priority: "0.5", changefreq: "monthly" },
-  { path: "/license", priority: "0.3", changefreq: "yearly" },
-  { path: "/privacy", priority: "0.3", changefreq: "yearly" },
-  { path: "/terms", priority: "0.3", changefreq: "yearly" },
+  { path: '/', priority: '1.0', changefreq: 'weekly' },
+  { path: '/about', priority: '0.8', changefreq: 'monthly' },
+  { path: '/browse', priority: '0.9', changefreq: 'weekly' },
+  { path: '/sitemap', priority: '0.5', changefreq: 'monthly' },
+  { path: '/built-with', priority: '0.5', changefreq: 'monthly' },
+  { path: '/license', priority: '0.3', changefreq: 'yearly' },
+  { path: '/privacy', priority: '0.3', changefreq: 'yearly' },
+  { path: '/terms', priority: '0.3', changefreq: 'yearly' },
 ];
 
 // Get URL with language prefix (en = no prefix)
 function getLocalizedUrl(path: string, lang: string): string {
-  if (lang === "en") {
+  if (lang === 'en') {
     return `${SITE_URL}${path}`;
   }
-  return `${SITE_URL}/${lang}${path === "/" ? "" : path}`;
+  return `${SITE_URL}/${lang}${path === '/' ? '' : path}`;
 }
 
 // Generate hreflang links
 function generateHreflangLinks(path: string): string {
   const links = LANGUAGES.map(
     (lang) =>
-      `    <xhtml:link rel="alternate" hreflang="${lang}" href="${getLocalizedUrl(path, lang)}" />`
-  ).join("\n");
+      `    <xhtml:link rel="alternate" hreflang="${lang}" href="${getLocalizedUrl(path, lang)}" />`,
+  ).join('\n');
 
-  return `${links}\n    <xhtml:link rel="alternate" hreflang="x-default" href="${getLocalizedUrl(path, "en")}" />`;
+  return `${links}\n    <xhtml:link rel="alternate" hreflang="x-default" href="${getLocalizedUrl(path, 'en')}" />`;
 }
 
 // Generate URL entry
-function generateUrlEntry(
-  path: string,
-  priority: string,
-  changefreq: string
-): string {
+function generateUrlEntry(path: string, priority: string, changefreq: string): string {
   return `  <url>
-    <loc>${getLocalizedUrl(path, "en")}</loc>
+    <loc>${getLocalizedUrl(path, 'en')}</loc>
     <lastmod>${TODAY}</lastmod>
 ${generateHreflangLinks(path)}
     <changefreq>${changefreq}</changefreq>
@@ -68,7 +65,7 @@ function generateSitemap(urls: string[]): string {
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${urls.join("\n")}
+${urls.join('\n')}
 </urlset>`;
 }
 
@@ -79,9 +76,9 @@ function generateSitemapIndex(sitemaps: string[]): string {
       (name) => `  <sitemap>
     <loc>${SITE_URL}/${name}</loc>
     <lastmod>${TODAY}</lastmod>
-  </sitemap>`
+  </sitemap>`,
     )
-    .join("\n");
+    .join('\n');
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
@@ -179,49 +176,48 @@ function generateXslStylesheet(): string {
 
 // Main function
 async function main() {
-  console.log("🗺️  Generating sitemaps for Context...\n");
+  console.log('🗺️  Generating sitemaps for Context...\n');
 
   // Generate static pages sitemap
   const staticUrls = STATIC_PAGES.map((page) =>
-    generateUrlEntry(page.path, page.priority, page.changefreq)
+    generateUrlEntry(page.path, page.priority, page.changefreq),
   );
   const staticSitemap = generateSitemap(staticUrls);
-  writeFileSync(join(PUBLIC_DIR, "sitemap-pages.xml"), staticSitemap);
+  writeFileSync(join(PUBLIC_DIR, 'sitemap-pages.xml'), staticSitemap);
   console.log(`✅ sitemap-pages.xml (${STATIC_PAGES.length} pages × 2 languages)`);
 
   // Generate categories sitemap
   const categoryUrls = categories.map((cat) =>
-    generateUrlEntry(`/category/${cat.id}`, "0.8", "weekly")
+    generateUrlEntry(`/category/${cat.id}`, '0.8', 'weekly'),
   );
   const categorySitemap = generateSitemap(categoryUrls);
-  writeFileSync(join(PUBLIC_DIR, "sitemap-categories.xml"), categorySitemap);
+  writeFileSync(join(PUBLIC_DIR, 'sitemap-categories.xml'), categorySitemap);
   console.log(`✅ sitemap-categories.xml (${categories.length} categories × 2 languages)`);
 
   // Generate entries sitemap
   const entryUrls = meaningEntries.map((entry) =>
-    generateUrlEntry(`/entry/${entry.id}`, "0.6", "monthly")
+    generateUrlEntry(`/entry/${entry.id}`, '0.6', 'monthly'),
   );
   const entriesSitemap = generateSitemap(entryUrls);
-  writeFileSync(join(PUBLIC_DIR, "sitemap-entries.xml"), entriesSitemap);
+  writeFileSync(join(PUBLIC_DIR, 'sitemap-entries.xml'), entriesSitemap);
   console.log(`✅ sitemap-entries.xml (${meaningEntries.length} entries × 2 languages)`);
 
   // Generate sitemap index
   const sitemapIndex = generateSitemapIndex([
-    "sitemap-pages.xml",
-    "sitemap-categories.xml",
-    "sitemap-entries.xml",
+    'sitemap-pages.xml',
+    'sitemap-categories.xml',
+    'sitemap-entries.xml',
   ]);
-  writeFileSync(join(PUBLIC_DIR, "sitemap.xml"), sitemapIndex);
-  console.log("✅ sitemap.xml (index)");
+  writeFileSync(join(PUBLIC_DIR, 'sitemap.xml'), sitemapIndex);
+  console.log('✅ sitemap.xml (index)');
 
   // Generate XSL stylesheet
   const xslStylesheet = generateXslStylesheet();
-  writeFileSync(join(PUBLIC_DIR, "sitemap.xsl"), xslStylesheet);
-  console.log("✅ sitemap.xsl (stylesheet)");
+  writeFileSync(join(PUBLIC_DIR, 'sitemap.xsl'), xslStylesheet);
+  console.log('✅ sitemap.xsl (stylesheet)');
 
   // Summary
-  const totalUrls =
-    STATIC_PAGES.length + categories.length + meaningEntries.length;
+  const totalUrls = STATIC_PAGES.length + categories.length + meaningEntries.length;
   console.log(`\n📊 Total: ${totalUrls} URLs × 2 languages = ${totalUrls * 2} hreflang entries`);
 }
 
