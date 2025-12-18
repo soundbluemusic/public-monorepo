@@ -39,7 +39,7 @@ export interface RecentView {
 export interface UserSettings {
   id: number; // 항상 1 (싱글톤)
   theme: "light" | "dark" | "system";
-  language: "ko" | "en" | "ja";
+  language: "ko" | "en";
   fontSize: "small" | "medium" | "large";
   showLatex: boolean;
   showDifficulty: boolean;

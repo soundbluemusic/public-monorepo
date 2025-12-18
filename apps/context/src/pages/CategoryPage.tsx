@@ -11,7 +11,6 @@ import { useI18n } from "@/i18n";
 const getPronunciation = (entry: MeaningEntry, locale: Language): string | undefined => {
   switch (locale) {
     case "en": return entry.romanization;
-    case "ja": return entry.translations.ja.reading;
     case "ko": return entry.pronunciation;
   }
 };
@@ -30,7 +29,7 @@ export default function CategoryPage() {
         fallback={
           <div class="text-center py-16">
             <p style={{ color: "var(--text-secondary)" }}>
-              {locale() === "ko" ? "카테고리를 찾을 수 없습니다" : locale() === "ja" ? "カテゴリーが見つかりません" : "Category not found"}
+              {locale() === "ko" ? "카테고리를 찾을 수 없습니다" : "Category not found"}
             </p>
             <A href={localePath("/browse")} class="text-sm mt-4 inline-block" style={{ color: "var(--text-tertiary)" }}>
               ← {t("browse")}
@@ -53,7 +52,7 @@ export default function CategoryPage() {
             {category()!.description[locale()]}
           </p>
           <p class="text-sm mt-2" style={{ color: "var(--text-tertiary)" }}>
-            {entries().length} {locale() === "ko" ? "단어" : locale() === "ja" ? "単語" : "words"}
+            {entries().length} {locale() === "ko" ? "단어" : "words"}
           </p>
         </div>
 
@@ -61,7 +60,7 @@ export default function CategoryPage() {
           when={entries().length > 0}
           fallback={
             <p class="text-center py-8" style={{ color: "var(--text-tertiary)" }}>
-              {locale() === "ko" ? "등록된 단어가 없습니다" : locale() === "ja" ? "登録された単語がありません" : "No words available"}
+              {locale() === "ko" ? "등록된 단어가 없습니다" : "No words available"}
             </p>
           }
         >

@@ -124,10 +124,6 @@ export default function ConceptPage() {
                         ? isFavorite()
                           ? "즐겨찾기 해제"
                           : "즐겨찾기 추가"
-                        : locale() === "ja"
-                        ? isFavorite()
-                          ? "お気に入りから削除"
-                          : "お気に入りに追加"
                         : isFavorite()
                         ? "Remove from favorites"
                         : "Add to favorites"

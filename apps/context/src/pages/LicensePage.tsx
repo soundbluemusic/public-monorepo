@@ -8,7 +8,6 @@ export default function LicensePage() {
 
   const getTitle = () => {
     if (locale() === "ko") return "라이선스";
-    if (locale() === "ja") return "ライセンス";
     return "License";
   };
 
@@ -18,7 +17,7 @@ export default function LicensePage() {
       <Meta name="description" content="License Information" />
 
       <A href={localePath("/")} class="text-sm mb-8 inline-block" style={{ color: "var(--text-tertiary)" }}>
-        ← {locale() === "ko" ? "홈으로" : locale() === "ja" ? "ホームへ" : "Back to home"}
+        ← {locale() === "ko" ? "홈으로" : "Back to home"}
       </A>
 
       <h1 class="text-2xl font-semibold mb-6" style={{ color: "var(--text-primary)" }}>
@@ -29,8 +28,6 @@ export default function LicensePage() {
         <p>
           {locale() === "ko"
             ? "Context는 Apache License 2.0 하에 배포되는 오픈소스 프로젝트입니다."
-            : locale() === "ja"
-            ? "ContextはApache License 2.0の下で配布されるオープンソースプロジェクトです。"
             : "Context is an open source project distributed under the Apache License 2.0."}
         </p>
 

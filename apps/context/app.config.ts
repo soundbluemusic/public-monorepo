@@ -9,7 +9,7 @@ export default defineConfig({
     preset: "static",
     prerender: {
       crawlLinks: true,
-      routes: ["/", "/ko", "/ja"],
+      routes: ["/", "/ko"],
     },
   },
   vite: {

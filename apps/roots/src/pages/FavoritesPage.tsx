@@ -63,15 +63,11 @@ export default function FavoritesPage() {
               <p class="text-xl mb-2">
                 {locale() === "ko"
                   ? "아직 즐겨찾기한 개념이 없습니다"
-                  : locale() === "ja"
-                  ? "お気に入りの概念がまだありません"
                   : "No favorite concepts yet"}
               </p>
               <p class="text-sm">
                 {locale() === "ko"
                   ? "개념 페이지에서 ♡ 버튼을 눌러 추가하세요"
-                  : locale() === "ja"
-                  ? "概念ページで♡ボタンを押して追加してください"
                   : "Click the ♡ button on concept pages to add favorites"}
               </p>
             </div>
