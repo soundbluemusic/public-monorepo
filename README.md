@@ -1,10 +1,11 @@
 # 🎵 Soundblue Monorepo
 
-**Two apps for learners (학습자를 위한 두 개의 앱)**
+**Three apps for learners (학습자를 위한 세 개의 앱)**
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Node](https://img.shields.io/badge/Node-%3E%3D20-green.svg)](https://nodejs.org)
 [![pnpm](https://img.shields.io/badge/pnpm-10.0.0-orange.svg)](https://pnpm.io)
+[![100% SSG](https://img.shields.io/badge/100%25-SSG-brightgreen)](https://en.wikipedia.org/wiki/Static_site_generator)
 
 ---
 
@@ -14,10 +15,17 @@
 
 <br>
 
+> **All apps are 100% Static Site Generation (SSG)**
+>
+> 모든 앱은 100% 정적 사이트 생성(SSG) 방식입니다. 서버 없이 CDN에서 바로 서빙됩니다.
+
+<br>
+
 | App | Description (설명) | Link (링크) |
 |:---:|:-------------------|:-----------:|
 | **Context** | Korean dictionary for learners<br>(학습자를 위한 한국어 사전) | [Live](https://context.soundbluemusic.com) |
 | **Permissive** | Free web dev resources<br>(무료 웹개발 자료 모음) | [Live](https://permissive.soundbluemusic.com) |
+| **Roots** | Math documentation for learners<br>(학습자를 위한 수학 문서) | [Live](https://roots.soundbluemusic.com) |
 
 <br>
 
@@ -36,7 +44,9 @@
 | **Styling** | Tailwind CSS v4 |
 | **Package Manager** | pnpm (workspaces) |
 | **Linting** | Biome |
-| **Build** | 100% Static (SSG) |
+| **Build** | 100% Static (SSG) - No server required |
+| **Hosting** | Cloudflare Pages (CDN) |
+| **Output** | `.output/public` |
 
 <br>
 
@@ -52,14 +62,17 @@
 soundblue-monorepo/
 │
 ├── apps/
-│   ├── context/       →  Korean dictionary app (한국어 사전 앱)
-│   └── permissive/    →  Web dev resources app (웹개발 자료 앱)
+│   ├── context/       →  Korean dictionary app (한국어 사전 앱)     [SSG]
+│   ├── permissive/    →  Web dev resources app (웹개발 자료 앱)     [SSG]
+│   └── roots/         →  Math documentation app (수학 문서 앱)      [SSG]
 │
 ├── packages/
 │   └── shared/        →  Shared utilities (공용 유틸리티)
 │
 └── package.json       →  Root config (루트 설정)
 ```
+
+> **Note:** All apps use `preset: "static"` in `app.config.ts`. Build output goes to `.output/public`.
 
 <br>
 
@@ -96,6 +109,9 @@ pnpm dev:context        # → http://localhost:3003
 
 # Permissive app (웹개발 자료)
 pnpm dev:permissive     # → http://localhost:3004
+
+# Roots app (수학 문서)
+pnpm dev:roots          # → http://localhost:3005
 ```
 
 <br>
@@ -112,8 +128,10 @@ pnpm dev:permissive     # → http://localhost:3004
 |:-----------------|:-------------------|
 | `pnpm dev:context` | Run Context app (Context 앱 실행) |
 | `pnpm dev:permissive` | Run Permissive app (Permissive 앱 실행) |
-| `pnpm build:context` | Build Context app (Context 앱 빌드) |
-| `pnpm build:permissive` | Build Permissive app (Permissive 앱 빌드) |
+| `pnpm dev:roots` | Run Roots app (Roots 앱 실행) |
+| `pnpm build:context` | Build Context app → `.output/public` |
+| `pnpm build:permissive` | Build Permissive app → `.output/public` |
+| `pnpm build:roots` | Build Roots app → `.output/public` |
 | `pnpm lint` | Check code (코드 검사) |
 | `pnpm format` | Format code (코드 정리) |
 

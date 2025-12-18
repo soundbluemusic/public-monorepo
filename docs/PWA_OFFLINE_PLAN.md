@@ -1,5 +1,15 @@
 # PWA 오프라인 지원 계획서 (100% SSG 최적화)
 
+> **이 문서의 모든 앱은 100% SSG (Static Site Generation) 정적 사이트입니다.**
+>
+> | 앱 | 빌드 설정 | 출력 디렉토리 |
+> |----|----------|--------------|
+> | Context | `preset: "static"` | `.output/public` |
+> | Permissive | `preset: "static"` | `.output/public` |
+> | Roots | `preset: "static"` | `.output/public` |
+
+---
+
 ## 🎯 SSG + PWA 핵심 원칙
 
 **SSG의 특징:**

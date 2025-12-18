@@ -25,14 +25,22 @@
 
 ## 2. 기술 스택 (기존과 동일)
 
+> **중요: 100% SSG (Static Site Generation) 정적 사이트**
+>
+> - `app.config.ts`에서 `preset: "static"` 설정
+> - 빌드 출력: `.output/public`
+> - 서버 없음 (No SSR, No API)
+> - Cloudflare Pages에서 CDN 호스팅
+
 ```
 Framework:     Solid.js + SolidStart 1.x
 Styling:       Tailwind CSS v4 + CSS Variables
 Language:      TypeScript 5.x
-Database:      Dexie (IndexedDB)
-Build:         Vinxi + Vite
+Database:      Dexie (IndexedDB) - 클라이언트 전용
+Build:         Vinxi + Vite → 100% SSG
 PWA:           vite-plugin-pwa + Workbox
 Shared:        @soundblue/shared 패키지
+Output:        .output/public (정적 파일만)
 ```
 
 ### 추가 라이브러리
