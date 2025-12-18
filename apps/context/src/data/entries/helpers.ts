@@ -38,7 +38,6 @@ export type EntryInput = {
   translations: {
     ko: Translation;
     en: Translation;
-    ja: Translation;
   };
   createdAt?: string;
   updatedAt?: string;
