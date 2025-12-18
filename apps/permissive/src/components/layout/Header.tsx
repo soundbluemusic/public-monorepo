@@ -17,7 +17,8 @@ import { A } from "@solidjs/router";
 import { createSignal, onMount, onCleanup } from "solid-js";
 import { isServer } from "solid-js/web";
 import ThemeToggle from "../ui/ThemeToggle";
-import LanguageToggle from "../ui/LanguageToggle";
+import { LanguageToggle } from "@soundblue/shared";
+import { useI18n } from "@/i18n";
 
 /**
  * 헤더 Props
@@ -35,6 +36,7 @@ interface HeaderProps {
  * @returns 고정 헤더 (모바일 메뉴 버튼, 로고, 테마/언어 토글 포함)
  */
 export default function Header(props: HeaderProps) {
+  const { locale, setLocale } = useI18n();
   const [scrolled, setScrolled] = createSignal(false);
 
   onMount(() => {
@@ -94,7 +96,7 @@ export default function Header(props: HeaderProps) {
 
       {/* Right: Controls */}
       <div class="flex items-center gap-1">
-        <LanguageToggle />
+        <LanguageToggle locale={locale} setLocale={setLocale} />
         <ThemeToggle />
       </div>
     </header>

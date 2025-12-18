@@ -6,19 +6,14 @@ import {
   createEffect,
   onMount,
   onCleanup,
-  For,
   Show,
   type ParentComponent,
 } from "solid-js";
 import { A, useLocation, useNavigate } from "@solidjs/router";
-import { useI18n, type Language } from "@/i18n";
+import { useI18n } from "@/i18n";
 import { searchConcepts, type SearchResult } from "@/lib/search";
 import { DifficultyBadge } from "@/components/ui/DifficultyBadge";
-
-const languages: { code: Language; label: string }[] = [
-  { code: "ko", label: "한국어" },
-  { code: "en", label: "EN" },
-];
+import { LanguageToggle } from "@soundblue/shared";
 
 function stripLocale(pathname: string): string {
   if (pathname.startsWith("/ko/")) return pathname.slice(3);
@@ -287,19 +282,7 @@ export const Layout: ParentComponent = (props) => {
             </A>
 
             {/* Language */}
-            <select
-              value={locale()}
-              onChange={(e) => {
-                const value = e.currentTarget.value;
-                if (value === "ko" || value === "en") {
-                  setLocale(value);
-                }
-              }}
-              class="text-sm bg-transparent border-none cursor-pointer focus:outline-none px-2 py-1.5"
-              style={{ color: "var(--text-secondary)" }}
-            >
-              <For each={languages}>{(lang) => <option value={lang.code}>{lang.label}</option>}</For>
-            </select>
+            <LanguageToggle locale={locale} setLocale={setLocale} />
 
             {/* Dark mode toggle */}
             <button

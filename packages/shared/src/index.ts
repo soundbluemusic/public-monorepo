@@ -21,3 +21,6 @@ export { useOnlineStatus, type UseOnlineStatusReturn } from "./hooks/use-online-
 
 // PWA components
 export { OfflineIndicator } from "./components/OfflineIndicator";
+
+// UI components
+export { LanguageToggle, type LanguageToggleProps } from "./components/LanguageToggle";
