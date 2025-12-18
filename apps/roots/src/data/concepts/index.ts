@@ -27,6 +27,11 @@ import { musicConcepts } from "./music";
 import { physicsConcepts } from "./physics";
 import { computerScienceConcepts } from "./computerScience";
 import { engineeringConcepts } from "./engineering";
+import { cryptographyConcepts } from "./cryptography";
+import { gameTheoryConcepts } from "./gameTheory";
+import { measureTheoryConcepts } from "./measureTheory";
+import { categoryTheoryConcepts } from "./categoryTheory";
+import { differentialGeometryConcepts } from "./differentialGeometry";
 
 /** 모든 개념 목록 */
 export const allConcepts: MathConcept[] = [
@@ -55,6 +60,11 @@ export const allConcepts: MathConcept[] = [
   ...physicsConcepts,
   ...computerScienceConcepts,
   ...engineeringConcepts,
+  ...cryptographyConcepts,
+  ...gameTheoryConcepts,
+  ...measureTheoryConcepts,
+  ...categoryTheoryConcepts,
+  ...differentialGeometryConcepts,
 ];
 
 /** ID로 개념 찾기 */
