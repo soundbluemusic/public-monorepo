@@ -1,9 +1,9 @@
+import { allConcepts } from '@/data/concepts';
+import type { DifficultyLevel, Language, MathConcept } from '@/data/types';
 /**
  * @fileoverview Fuse.js 기반 검색 유틸리티
  */
-import Fuse from "fuse.js";
-import { allConcepts } from "@/data/concepts";
-import type { MathConcept, Language } from "@/data/types";
+import Fuse from 'fuse.js';
 
 export interface SearchResult {
   item: MathConcept;
@@ -18,10 +18,10 @@ function createConceptSearcher(locale: Language) {
   const options: Fuse.IFuseOptions<MathConcept> = {
     keys: [
       { name: `name.${locale}`, weight: 3 },
-      { name: "name.en", weight: 2 },
+      { name: 'name.en', weight: 2 },
       { name: `content.${locale}.definition`, weight: 1.5 },
-      { name: "content.en.definition", weight: 1 },
-      { name: "tags", weight: 1 },
+      { name: 'content.en.definition', weight: 1 },
+      { name: 'tags', weight: 1 },
     ],
     threshold: 0.4,
     includeScore: true,
@@ -36,10 +36,13 @@ function createConceptSearcher(locale: Language) {
 const searcherCache = new Map<Language, Fuse<MathConcept>>();
 
 function getSearcher(locale: Language): Fuse<MathConcept> {
-  if (!searcherCache.has(locale)) {
-    searcherCache.set(locale, createConceptSearcher(locale));
+  const cached = searcherCache.get(locale);
+  if (cached) {
+    return cached;
   }
-  return searcherCache.get(locale)!;
+  const searcher = createConceptSearcher(locale);
+  searcherCache.set(locale, searcher);
+  return searcher;
 }
 
 /**
@@ -50,11 +53,7 @@ function getSearcher(locale: Language): Fuse<MathConcept> {
  * @param limit 최대 결과 수
  * @returns 검색 결과 배열
  */
-export function searchConcepts(
-  query: string,
-  locale: Language,
-  limit = 10
-): SearchResult[] {
+export function searchConcepts(query: string, locale: Language, limit = 10): SearchResult[] {
   if (!query || query.trim().length < 2) {
     return [];
   }
@@ -65,7 +64,7 @@ export function searchConcepts(
   return results.map((result) => ({
     item: result.item,
     score: result.score ?? 0,
-    matches: result.matches?.map((m) => m.key || "") || [],
+    matches: result.matches?.map((m) => m.key || '') || [],
   }));
 }
 
@@ -73,9 +72,7 @@ export function searchConcepts(
  * 태그로 개념 검색
  */
 export function searchByTag(tag: string): MathConcept[] {
-  return allConcepts.filter((c) =>
-    c.tags.some((t) => t.toLowerCase().includes(tag.toLowerCase()))
-  );
+  return allConcepts.filter((c) => c.tags.some((t) => t.toLowerCase().includes(tag.toLowerCase())));
 }
 
 /**
@@ -83,10 +80,8 @@ export function searchByTag(tag: string): MathConcept[] {
  */
 export function filterByDifficulty(
   concepts: MathConcept[],
-  minLevel: number,
-  maxLevel: number
+  minLevel: DifficultyLevel,
+  maxLevel: DifficultyLevel,
 ): MathConcept[] {
-  return concepts.filter(
-    (c) => c.difficulty >= minLevel && c.difficulty <= maxLevel
-  );
+  return concepts.filter((c) => c.difficulty >= minLevel && c.difficulty <= maxLevel);
 }
