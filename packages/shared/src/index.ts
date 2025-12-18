@@ -62,3 +62,14 @@ export {
   createSettingsHelper,
   createRecentViewsHelper,
 } from './db';
+
+// Data loader utilities (build-time only)
+export {
+  loadJsonDirectory,
+  loadJsonFile,
+  loadJsonAsMap,
+  groupJsonBy,
+  validateRequiredFields,
+  checkDuplicateIds,
+  type ValidationResult,
+} from './data';

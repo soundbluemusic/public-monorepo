@@ -1,0 +1,100 @@
+[
+  {
+    "id": "jip",
+    "korean": "집",
+    "romanization": "jip",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "basic"],
+    "translations": {
+      "ko": {
+        "word": "집",
+        "explanation": "사람이 사는 건물, 또는 '가정'의 개념. 가장 기본적이고 자주 쓰이는 단어 중 하나이다.",
+        "examples": [
+          "집에 가고 싶어요.",
+          "우리 집은 서울에 있어요.",
+          "오랜 출장을 마치고 집에 돌아왔을 때, 익숙한 냄새와 분위기가 나를 반겨주어 마음이 편안해졌다.",
+          "어린 시절 살던 집을 다시 방문하니 추억이 새록새록 떠올랐다."
+        ]
+      },
+      "en": {
+        "word": "House / Home",
+        "explanation": "A building where people live, or the concept of 'home'. One of the most basic and frequently used words.",
+        "examples": [
+          "집에 가고 싶어요. - I want to go home.",
+          "우리 집은 서울에 있어요. - My house is in Seoul.",
+          "When I returned home after a long business trip, the familiar smell and atmosphere welcomed me and put my mind at ease.",
+          "Visiting the house where I lived as a child brought back many fond memories."
+        ]
+      }
+    }
+  },
+  {
+    "id": "hakgyo",
+    "korean": "학교",
+    "romanization": "hakgyo",
+    "pronunciation": "[학꾜]",
+    "hanja": "學校",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "education"],
+    "translations": {
+      "ko": {
+        "word": "학교",
+        "explanation": "학생들을 교육하는 기관. 초등학교, 중학교, 고등학교, 대학교를 포함한다.",
+        "examples": [
+          "학교에 다녀요.",
+          "학교 끝나고 뭐 해?",
+          "매일 아침 7시에 일어나서 학교에 가는 게 힘들지만, 친구들을 만날 생각에 기분이 좋아진다.",
+          "우리 학교는 100년의 역사를 가진 전통 있는 학교로, 많은 유명 인사들이 이곳을 졸업했다."
+        ]
+      },
+      "en": {
+        "word": "School",
+        "explanation": "An institution for educating students. Includes elementary, middle, high school, and university.",
+        "examples": [
+          "학교에 다녀요. - I go to school.",
+          "학교 끝나고 뭐 해? - What are you doing after school?",
+          "Waking up at 7 AM every morning to go to school is tough, but thinking about meeting my friends cheers me up.",
+          "Our school has a 100-year history and tradition—many famous people graduated from here."
+        ]
+      }
+    }
+  },
+  {
+    "id": "il",
+    "korean": "일",
+    "romanization": "il",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "basic"],
+    "translations": {
+      "ko": {
+        "word": "일",
+        "explanation": "직업이나 업무, 또는 '일/사건'을 의미한다. 숫자 '일(一)'로도 쓰인다 (일, 이, 삼...).",
+        "examples": [
+          "일이 많아요.",
+          "무슨 일이에요?",
+          "요즘 회사에서 새로운 프로젝트 때문에 일이 너무 많아서 주말에도 출근해야 할 것 같다.",
+          "갑자기 무슨 일이 생긴 거예요? 표정이 안 좋아 보여서 걱정이 돼요."
+        ]
+      },
+      "en": {
+        "word": "Work / Job / Thing",
+        "explanation": "Can mean work/job, a task, or 'a thing/matter'. Also means the number 'one' (일, 이, 삼...).",
+        "examples": [
+          "일이 많아요. - I have a lot of work.",
+          "무슨 일이에요? - What's the matter?",
+          "These days, I have so much work because of a new project at the company that I'll probably have to come in on weekends too.",
+          "What happened all of a sudden? You don't look well and I'm worried about you."
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "bap",
+    "korean": "밥",
+    "romanization": "bap",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "basic", "staple"],
+    "translations": {
+      "ko": {
+        "word": "밥",
+        "explanation": "지은 쌀, 한국의 주식. '식사' 전체를 의미하기도 한다. '밥 먹었어?'(식사했어?)는 일상적인 인사다.",
+        "examples": [
+          "밥 먹었어요?",
+          "밥 먹으러 가자!",
+          "한국에서는 \"밥 먹었어요?\"라는 말이 단순한 질문이 아니라 상대방의 안부를 묻는 인사처럼 사용된다.",
+          "엄마가 해주신 따뜻한 집밥을 먹으면 어떤 스트레스도 사라지는 것 같다."
+        ]
+      },
+      "en": {
+        "word": "Rice / Meal",
+        "explanation": "Cooked rice, the staple food of Korea. Also used to mean 'meal' in general. '밥 먹었어?' (Did you eat?) is a common greeting.",
+        "examples": [
+          "밥 먹었어요? - Have you eaten?",
+          "밥 먹으러 가자! - Let's go eat!",
+          "In Korea, asking \"밥 먹었어요?\" (Have you eaten?) is not just a simple question but is used as a greeting to check on someone's well-being.",
+          "When I eat the warm home-cooked meal my mom makes, all my stress seems to melt away."
+        ]
+      }
+    }
+  },
+  {
+    "id": "kimchi",
+    "korean": "김치",
+    "romanization": "kimchi",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "korean", "traditional"],
+    "translations": {
+      "ko": {
+        "word": "김치",
+        "explanation": "한국 전통 발효 채소 요리. 주로 배추와 무로 만든다. 한국 음식의 기본 반찬이다.",
+        "examples": [
+          "김치 좋아해요?",
+          "김치찌개 먹고 싶어요.",
+          "할머니께서 담그신 김치는 시중에서 파는 것과는 비교할 수 없을 정도로 맛있다.",
+          "외국인 친구에게 김치를 소개했더니 처음에는 매워서 힘들어했지만, 지금은 푹 빠져서 매일 먹는다."
+        ]
+      },
+      "en": {
+        "word": "Kimchi",
+        "explanation": "Traditional Korean fermented vegetable dish, usually made with napa cabbage and radish. A staple side dish in Korean cuisine.",
+        "examples": [
+          "김치 좋아해요? - Do you like kimchi?",
+          "김치찌개 먹고 싶어요. - I want to eat kimchi stew.",
+          "The kimchi my grandmother makes is incomparably more delicious than store-bought ones.",
+          "When I introduced kimchi to my foreign friend, they struggled with the spiciness at first, but now they're hooked and eat it every day."
+        ]
+      }
+    }
+  },
+  {
+    "id": "mul",
+    "korean": "물",
+    "romanization": "mul",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["drink", "basic"],
+    "translations": {
+      "ko": {
+        "word": "물",
+        "explanation": "가장 기본적인 음료. 식당에서 주문할 때 필수 어휘다.",
+        "examples": [
+          "물 주세요.",
+          "물 마시고 싶어요.",
+          "등산을 할 때는 충분한 물을 가져가야 탈수를 예방할 수 있다.",
+          "한국 식당에서는 물을 무료로 제공하는 경우가 많아서 따로 주문하지 않아도 된다."
+        ]
+      },
+      "en": {
+        "word": "Water",
+        "explanation": "The most basic drink. Essential vocabulary for ordering at restaurants.",
+        "examples": [
+          "물 주세요. - Water, please.",
+          "물 마시고 싶어요. - I want to drink water.",
+          "When hiking, you should bring enough water to prevent dehydration.",
+          "In Korean restaurants, water is often provided for free, so you don't need to order it separately."
+        ]
+      }
+    }
+  }
+]

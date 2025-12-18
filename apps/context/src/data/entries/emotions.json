@@ -1,0 +1,120 @@
+[
+  {
+    "id": "sarang",
+    "korean": "사랑",
+    "romanization": "sarang",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["emotion", "relationship"],
+    "translations": {
+      "ko": {
+        "word": "사랑",
+        "explanation": "누군가나 무언가에 대한 깊은 애정. 연인 간의 사랑, 가족 간의 사랑, 취미나 활동에 대한 사랑 등 다양하게 쓰인다.",
+        "examples": [
+          "사랑해요.",
+          "가족의 사랑은 소중해요.",
+          "결혼식 날 신랑이 신부에게 \"당신을 만나 진정한 사랑이 무엇인지 알게 되었습니다\"라고 고백했다.",
+          "어머니의 사랑은 조건 없이 주어지는 것이라서, 자식이 어떤 실수를 해도 항상 곁에서 응원해 주신다."
+        ],
+        "variations": {
+          "formal": ["당신을 진심으로 사랑합니다.", "사랑하고 존경합니다.", "항상 사랑하는 마음 변치 않겠습니다."],
+          "casual": ["사랑해!", "너무 좋아해~", "나 너 진짜 좋아해."],
+          "short": ["ㅅㄹㅎ", "사랑행~", "좋아♥"]
+        }
+      },
+      "en": {
+        "word": "Love",
+        "explanation": "A deep affection for someone or something. Used for romantic love, family love, and love for things/activities.",
+        "examples": [
+          "사랑해요. - I love you.",
+          "가족의 사랑은 소중해요. - Family love is precious.",
+          "On their wedding day, the groom confessed to the bride, \"Meeting you taught me what true love really means.\"",
+          "A mother's love is unconditional—no matter what mistakes her children make, she always supports them."
+        ],
+        "variations": {
+          "formal": ["I sincerely love you.", "My love and respect for you is eternal.", "You have all my love and devotion."],
+          "casual": ["Love ya!", "I really like you~", "You mean so much to me!"],
+          "short": ["Luv u!", "ILY", "<3"]
+        }
+      }
+    }
+  },
+  {
+    "id": "haengbok",
+    "korean": "행복",
+    "romanization": "haengbok",
+    "pronunciation": "[행복]",
+    "hanja": "幸福",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["emotion", "positive"],
+    "translations": {
+      "ko": {
+        "word": "행복",
+        "explanation": "행복하거나 만족스러운 상태. 명사 '행복' 또는 형용사 '행복하다'로 사용할 수 있다.",
+        "examples": [
+          "행복하세요!",
+          "작은 것에서 행복을 찾아요.",
+          "퇴근 후 따뜻한 집에서 가족들과 함께 저녁을 먹는 순간이 가장 행복하다고 느낀다.",
+          "여행을 떠나기 전날 밤, 설레는 마음에 잠이 오지 않을 정도로 행복했다."
+        ],
+        "variations": {
+          "formal": ["행복하시길 바랍니다.", "모든 일에 행복이 함께하시길 기원합니다.", "항상 행복하고 건강하시길 바랍니다."],
+          "casual": ["행복해!", "너무 행복해~", "진짜 행복하다!"],
+          "short": ["행복♥", "최고!", "굿굿~"]
+        }
+      },
+      "en": {
+        "word": "Happiness",
+        "explanation": "A state of being happy or content. Can be used as noun '행복' or adjective '행복하다' (to be happy).",
+        "examples": [
+          "행복하세요! - Be happy!",
+          "작은 것에서 행복을 찾아요. - I find happiness in small things.",
+          "The moment I feel happiest is having dinner with my family in our warm home after work.",
+          "The night before the trip, I was so excited I couldn't sleep—I was filled with happiness."
+        ],
+        "variations": {
+          "formal": ["I wish you happiness.", "May happiness be with you always.", "Wishing you all the best and happiness."],
+          "casual": ["So happy!", "I'm so happy right now~", "This makes me really happy!"],
+          "short": ["Happy♥", "Yay!", ":D"]
+        }
+      }
+    }
+  },
+  {
+    "id": "seulpeum",
+    "korean": "슬픔",
+    "romanization": "seulpeum",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["emotion", "negative"],
+    "translations": {
+      "ko": {
+        "word": "슬픔",
+        "explanation": "슬프거나 불행한 감정. 형용사형은 '슬프다'이다.",
+        "examples": [
+          "슬픔을 참을 수 없어요.",
+          "슬픔도 지나가요.",
+          "오랫동안 함께한 반려견이 세상을 떠났을 때, 그 슬픔은 말로 표현할 수 없을 정도로 컸다.",
+          "실패를 경험했을 때 느끼는 슬픔은 자연스러운 감정이니, 너무 자신을 탓하지 마세요."
+        ]
+      },
+      "en": {
+        "word": "Sadness",
+        "explanation": "A feeling of sorrow or unhappiness. The adjective form is '슬프다' (to be sad).",
+        "examples": [
+          "슬픔을 참을 수 없어요. - I can't hold back my sadness.",
+          "슬픔도 지나가요. - Sadness also passes.",
+          "When my longtime companion dog passed away, the sadness was beyond words.",
+          "The sadness you feel when experiencing failure is a natural emotion, so don't be too hard on yourself."
+        ]
+      }
+    }
+  }
+]

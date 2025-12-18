@@ -4,9 +4,11 @@
   "type": "module",
   "scripts": {
     "dev": "vinxi dev",
+    "prebuild": "tsx scripts/load-entries.ts",
     "build": "vinxi build && tsx scripts/generate-sitemaps.ts",
     "start": "vinxi start",
     "sitemap": "tsx scripts/generate-sitemaps.ts",
+    "load-entries": "tsx scripts/load-entries.ts",
     "lint": "biome lint .",
     "lint:fix": "biome lint --write .",
     "format": "biome format --write .",

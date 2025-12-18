@@ -1,0 +1,155 @@
+{
+  "react": {
+    "name": "React",
+    "description": "A JavaScript library for building user interfaces with a component-based architecture.",
+    "descriptionKo": "컴포넌트 기반 아키텍처로 사용자 인터페이스를 구축하기 위한 JavaScript 라이브러리입니다.",
+    "category": "Frameworks",
+    "license": "MIT",
+    "github": "https://github.com/facebook/react",
+    "npm": "react",
+    "stars": "220k",
+    "features": [
+      "Virtual DOM",
+      "JSX syntax",
+      "Component lifecycle",
+      "Hooks API",
+      "Server-side rendering"
+    ],
+    "featuresKo": [
+      "가상 DOM",
+      "JSX 문법",
+      "컴포넌트 라이프사이클",
+      "Hooks API",
+      "서버 사이드 렌더링"
+    ],
+    "alternatives": [
+      "Vue",
+      "Solid.js",
+      "Svelte",
+      "Angular"
+    ]
+  },
+  "vue": {
+    "name": "Vue",
+    "description": "Progressive JavaScript framework for building user interfaces with an approachable learning curve.",
+    "descriptionKo": "접근하기 쉬운 학습 곡선으로 사용자 인터페이스를 구축하기 위한 프로그레시브 JavaScript 프레임워크입니다.",
+    "category": "Frameworks",
+    "license": "MIT",
+    "github": "https://github.com/vuejs/core",
+    "npm": "vue",
+    "stars": "207k",
+    "features": [
+      "Reactive data binding",
+      "Component system",
+      "Vue CLI",
+      "Vuex state management",
+      "Vue Router"
+    ],
+    "featuresKo": [
+      "반응형 데이터 바인딩",
+      "컴포넌트 시스템",
+      "Vue CLI",
+      "Vuex 상태 관리",
+      "Vue Router"
+    ],
+    "alternatives": [
+      "React",
+      "Solid.js",
+      "Svelte",
+      "Angular"
+    ]
+  },
+  "solid-js": {
+    "name": "Solid.js",
+    "description": "Simple and performant reactivity for building user interfaces with fine-grained reactivity.",
+    "descriptionKo": "세밀한 반응성으로 사용자 인터페이스를 구축하기 위한 간단하고 성능 좋은 반응형 라이브러리입니다.",
+    "category": "Frameworks",
+    "license": "MIT",
+    "github": "https://github.com/solidjs/solid",
+    "npm": "solid-js",
+    "stars": "32k",
+    "usedHere": true,
+    "features": [
+      "Fine-grained reactivity",
+      "No Virtual DOM",
+      "JSX support",
+      "Small bundle size",
+      "TypeScript first"
+    ],
+    "featuresKo": [
+      "세밀한 반응성",
+      "가상 DOM 없음",
+      "JSX 지원",
+      "작은 번들 크기",
+      "TypeScript 우선"
+    ],
+    "alternatives": [
+      "React",
+      "Vue",
+      "Svelte",
+      "Preact"
+    ]
+  },
+  "tailwindcss": {
+    "name": "Tailwind CSS",
+    "description": "Utility-first CSS framework for rapidly building custom user interfaces.",
+    "descriptionKo": "커스텀 사용자 인터페이스를 빠르게 구축하기 위한 유틸리티 우선 CSS 프레임워크입니다.",
+    "category": "Styling",
+    "license": "MIT",
+    "github": "https://github.com/tailwindlabs/tailwindcss",
+    "npm": "tailwindcss",
+    "stars": "82k",
+    "usedHere": true,
+    "features": [
+      "Utility-first",
+      "Responsive design",
+      "Dark mode",
+      "JIT compiler",
+      "Plugin system"
+    ],
+    "featuresKo": [
+      "유틸리티 우선",
+      "반응형 디자인",
+      "다크 모드",
+      "JIT 컴파일러",
+      "플러그인 시스템"
+    ],
+    "alternatives": [
+      "UnoCSS",
+      "Bootstrap",
+      "Panda CSS",
+      "styled-components"
+    ]
+  },
+  "vite": {
+    "name": "Vite",
+    "description": "Next generation frontend tooling with lightning fast HMR and optimized builds.",
+    "descriptionKo": "초고속 HMR과 최적화된 빌드를 제공하는 차세대 프론트엔드 도구입니다.",
+    "category": "Build",
+    "license": "MIT",
+    "github": "https://github.com/vitejs/vite",
+    "npm": "vite",
+    "stars": "68k",
+    "usedHere": true,
+    "features": [
+      "Instant server start",
+      "Lightning fast HMR",
+      "Optimized builds",
+      "Plugin ecosystem",
+      "TypeScript support"
+    ],
+    "featuresKo": [
+      "즉시 서버 시작",
+      "초고속 HMR",
+      "최적화된 빌드",
+      "플러그인 생태계",
+      "TypeScript 지원"
+    ],
+    "alternatives": [
+      "Webpack",
+      "Parcel",
+      "esbuild",
+      "Turbopack"
+    ]
+  }
+}

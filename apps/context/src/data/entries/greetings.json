@@ -1,0 +1,189 @@
+[
+  {
+    "id": "annyeong",
+    "korean": "안녕",
+    "romanization": "annyeong",
+    "partOfSpeech": "interjection",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["casual", "informal", "daily"],
+    "translations": {
+      "ko": {
+        "word": "안녕",
+        "explanation": "친구나 또래 사이에서 사용하는 반말 인사. 상황에 따라 '만나서 반가워'와 '잘 가'의 의미로 모두 쓰인다. 격식 없는 상황에서 사용한다.",
+        "examples": [
+          "안녕! 오랜만이야!",
+          "안녕, 내일 봐!",
+          "어제 카페에서 우연히 민수를 만났는데, 서로 눈이 마주치자마자 반갑게 '안녕!'하고 인사했어.",
+          "수업이 끝나고 친구들이 하나둘 교실을 나서면서 '안녕, 내일 봐!'라고 인사를 나눴다."
+        ],
+        "variations": {
+          "formal": ["안녕하십니까, 오래간만입니다.", "안녕하세요, 그동안 잘 지내셨어요?"],
+          "casual": ["안녕, 잘 지냈어?", "안녕~ 뭐해?", "야, 안녕!"],
+          "short": ["ㅎㅇ", "안녕~"]
+        }
+      },
+      "en": {
+        "word": "Hi / Bye",
+        "explanation": "A casual greeting used among friends and peers. Can mean both 'hello' and 'goodbye' depending on context. Used in informal situations.",
+        "examples": [
+          "안녕! 오랜만이야! - Hi! Long time no see!",
+          "안녕, 내일 봐! - Bye, see you tomorrow!",
+          "I ran into Minsu at the café yesterday, and the moment our eyes met, we happily greeted each other with '안녕!'",
+          "After class ended, friends left the classroom one by one, exchanging farewells like '안녕, 내일 봐!' (Bye, see you tomorrow!)"
+        ],
+        "variations": {
+          "formal": ["Hello, it's been a while.", "Good day, how have you been?"],
+          "casual": ["Hey, what's up?", "Hi there!", "Yo, what's going on?"],
+          "short": ["Hi~", "Hey!", "Sup?"]
+        }
+      }
+    }
+  },
+  {
+    "id": "annyeonghaseyo",
+    "korean": "안녕하세요",
+    "romanization": "annyeonghaseyo",
+    "partOfSpeech": "interjection",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["formal", "polite", "daily"],
+    "translations": {
+      "ko": {
+        "word": "안녕하세요",
+        "explanation": "한국어의 기본적인 존댓말 인사. 누군가를 만나거나 대화를 시작할 때 사용한다. 대부분의 상황에 적절한 인사말이다.",
+        "examples": [
+          "안녕하세요, 처음 뵙겠습니다.",
+          "안녕하세요! 잘 지내셨어요?",
+          "면접장에 들어서자마자 면접관들을 향해 밝은 목소리로 \"안녕하세요, 오늘 면접에 참여하게 된 김지민입니다\"라고 인사했다.",
+          "엘리베이터에서 이웃 주민을 만나면 항상 \"안녕하세요\"라고 인사하는 게 예의이다."
+        ],
+        "variations": {
+          "formal": [
+            "안녕하십니까, 뵙게 되어 영광입니다.",
+            "안녕하세요, 만나 뵙게 되어 반갑습니다.",
+            "안녕하세요, 오늘 하루도 좋은 하루 되세요."
+          ],
+          "casual": ["안녕, 반가워!", "안녕! 잘 지내?"],
+          "short": ["안녕~", "하이!"]
+        }
+      },
+      "en": {
+        "word": "Hello",
+        "explanation": "The standard polite greeting in Korean. Used when meeting someone or starting a conversation. Appropriate for most situations.",
+        "examples": [
+          "안녕하세요, 처음 뵙겠습니다. - Hello, nice to meet you.",
+          "안녕하세요! 잘 지내셨어요? - Hello! How have you been?",
+          "As soon as I entered the interview room, I greeted the interviewers brightly: \"안녕하세요, I'm Kim Jimin, here for the interview today.\"",
+          "It's polite to always greet your neighbors with \"안녕하세요\" when you meet them in the elevator."
+        ],
+        "variations": {
+          "formal": [
+            "Good morning/afternoon, it's a pleasure to meet you.",
+            "Hello, I'm honored to make your acquaintance.",
+            "Greetings, I hope you're doing well."
+          ],
+          "casual": ["Hey! Nice to see you!", "Hi! How's it going?"],
+          "short": ["Hey~", "Hi!"]
+        }
+      }
+    }
+  },
+  {
+    "id": "gomapseumnida",
+    "korean": "감사합니다",
+    "romanization": "gamsahamnida",
+    "pronunciation": "[감사함니다]",
+    "hanja": "感謝",
+    "partOfSpeech": "interjection",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["formal", "polite", "gratitude"],
+    "translations": {
+      "ko": {
+        "word": "감사합니다",
+        "explanation": "감사를 표현하는 격식체 표현. '고마워요'보다 더 격식 있는 표현으로, 직장이나 어른에게 사용한다.",
+        "examples": [
+          "도와주셔서 감사합니다.",
+          "감사합니다, 좋은 하루 되세요.",
+          "프로젝트를 성공적으로 마칠 수 있도록 밤늦게까지 도와주신 팀원들께 진심으로 감사합니다.",
+          "버스에서 자리를 양보해 주신 학생에게 할머니께서 \"정말 감사합니다, 요즘 젊은이들 참 착하네요\"라고 말씀하셨다."
+        ],
+        "variations": {
+          "formal": [
+            "정말 감사드립니다.",
+            "진심으로 감사의 말씀을 드립니다.",
+            "감사합니다, 덕분에 큰 도움이 되었습니다."
+          ],
+          "casual": ["고마워!", "땡큐~", "고마워, 정말 도움이 됐어!"],
+          "short": ["ㄱㅅ", "감사~", "땡스!"]
+        }
+      },
+      "en": {
+        "word": "Thank you",
+        "explanation": "Formal way to express gratitude. More formal than '고마워요'. Used in professional settings and with elders.",
+        "examples": [
+          "도와주셔서 감사합니다. - Thank you for helping me.",
+          "감사합니다, 좋은 하루 되세요. - Thank you, have a nice day.",
+          "I sincerely thank all the team members who worked late into the night to help us successfully complete the project.",
+          "When a student gave up their seat on the bus, the grandmother said, \"감사합니다 (Thank you), young people these days are so kind.\""
+        ],
+        "variations": {
+          "formal": [
+            "I sincerely appreciate your help.",
+            "Thank you very much for your assistance.",
+            "I'm deeply grateful for your kindness."
+          ],
+          "casual": ["Thanks a lot!", "Thanks, you're the best!", "Thank you so much!"],
+          "short": ["Thx!", "Ty!", "Thanks~"]
+        }
+      }
+    }
+  },
+  {
+    "id": "annyeonghigaseyo",
+    "korean": "안녕히 가세요",
+    "romanization": "annyeonghi gaseyo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["formal", "farewell", "polite"],
+    "translations": {
+      "ko": {
+        "word": "안녕히 가세요",
+        "explanation": "떠나는 사람에게 하는 인사. 직역하면 '평안히 가세요'라는 뜻. 자신이 남고 상대가 떠날 때 사용한다. 반대 표현은 '안녕히 계세요'(평안히 계세요)이다.",
+        "examples": [
+          "안녕히 가세요! 조심히 가세요.",
+          "손님이 가게를 나설 때 직원이 문 앞까지 배웅하며 \"안녕히 가세요, 또 오세요!\"라고 인사했다.",
+          "할머니 댁에서 하루를 보내고 떠나는 손자에게 할머니께서 대문 앞까지 나와 손을 흔들며 \"안녕히 가세요, 다음에 또 놀러 와\"라고 말씀하셨다."
+        ],
+        "variations": {
+          "formal": [
+            "안녕히 가십시오, 좋은 하루 되세요.",
+            "조심히 돌아가세요, 다음에 또 뵙겠습니다."
+          ],
+          "casual": ["잘 가!", "가는 길 조심해~", "나중에 봐!"],
+          "short": ["잘 가~", "바이바이!", "빠이~"]
+        }
+      },
+      "en": {
+        "word": "Goodbye (to someone leaving)",
+        "explanation": "Said to someone who is leaving while you stay. Literally means 'go peacefully'. The counterpart is '안녕히 계세요' (stay peacefully).",
+        "examples": [
+          "안녕히 가세요! 조심히 가세요. - Goodbye! Be careful on your way.",
+          "When the customer was leaving the store, the employee walked them to the door and said, \"안녕히 가세요, please come again!\"",
+          "After spending a day at grandma's house, grandma came out to the front gate, waving and saying, \"안녕히 가세요, come visit again soon.\""
+        ],
+        "variations": {
+          "formal": ["Farewell, have a safe journey.", "Goodbye, I hope to see you again soon."],
+          "casual": ["See ya!", "Take care on your way!", "Later!"],
+          "short": ["Bye~", "Cya!", "Peace!"]
+        }
+      }
+    }
+  }
+]

@@ -9,6 +9,7 @@
     "./constants": "./src/constants.ts",
     "./validation": "./src/validation.ts",
     "./search": "./src/search.ts",
+    "./data": "./src/data/index.ts",
     "./styles/*": "./src/styles/*"
   },
   "peerDependencies": {

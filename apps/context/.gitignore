@@ -35,3 +35,6 @@ coverage/
 
 # PWA
 dev-dist/
+
+# Generated files
+src/data/generated/
