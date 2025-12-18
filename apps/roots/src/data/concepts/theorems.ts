@@ -577,4 +577,417 @@ export const theoremsConcepts: MathConcept[] = [
     },
     tags: ["뇌터", "대칭", "Noether", "symmetry"],
   },
+  {
+    id: "pythagorean-theorem",
+    name: {
+      ko: "피타고라스 정리",
+      en: "Pythagorean Theorem",
+      ja: "ピタゴラスの定理",
+    },
+    field: "theorems",
+    subfield: "geometry",
+    difficulty: 1,
+    content: {
+      ko: {
+        definition:
+          "직각삼각형에서 빗변의 제곱은 다른 두 변의 제곱의 합과 같습니다. 수학에서 가장 유명하고 기본적인 정리입니다.",
+        formulas: [
+          {
+            latex: "a^2 + b^2 = c^2",
+            description: "피타고라스 정리 (c는 빗변)",
+          },
+          {
+            latex: "c = \\sqrt{a^2 + b^2}",
+            description: "빗변의 길이",
+          },
+        ],
+        examples: [
+          {
+            problem: "두 변이 3과 4인 직각삼각형의 빗변은?",
+            solution: "c = √(3² + 4²) = √(9 + 16) = √25 = 5",
+          },
+          {
+            problem: "빗변이 13이고 한 변이 5인 직각삼각형의 나머지 변은?",
+            solution: "b = √(13² - 5²) = √(169 - 25) = √144 = 12",
+          },
+        ],
+        history: {
+          discoveredBy: "피타고라스 (또는 그 이전)",
+          year: "기원전 6세기경",
+          background:
+            "피타고라스 학파에서 증명했으나, 바빌로니아와 인도에서 더 일찍 알려져 있었습니다.",
+        },
+        applications: [
+          { field: "건축", description: "직각 확인, 거리 계산" },
+          { field: "항법", description: "GPS, 거리 측정" },
+          { field: "컴퓨터 그래픽스", description: "벡터 거리 계산" },
+        ],
+      },
+      en: {
+        definition:
+          "In a right triangle, the square of the hypotenuse equals the sum of squares of the other two sides. Mathematics' most famous theorem.",
+        formulas: [
+          {
+            latex: "a^2 + b^2 = c^2",
+            description: "Pythagorean Theorem (c is hypotenuse)",
+          },
+          {
+            latex: "c = \\sqrt{a^2 + b^2}",
+            description: "Hypotenuse length",
+          },
+        ],
+        examples: [
+          {
+            problem: "Find the hypotenuse of a right triangle with sides 3 and 4.",
+            solution: "c = √(3² + 4²) = √(9 + 16) = √25 = 5",
+          },
+          {
+            problem: "If hypotenuse is 13 and one side is 5, find the other side.",
+            solution: "b = √(13² - 5²) = √(169 - 25) = √144 = 12",
+          },
+        ],
+        history: {
+          discoveredBy: "Pythagoras (or earlier)",
+          year: "c. 6th century BCE",
+          background:
+            "Proved by Pythagorean school, but known earlier in Babylon and India.",
+        },
+        applications: [
+          { field: "Architecture", description: "Right angle verification, distance" },
+          { field: "Navigation", description: "GPS, distance measurement" },
+          { field: "Computer Graphics", description: "Vector distance calculation" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["right-triangle", "square-root"],
+      nextTopics: ["distance-formula", "trigonometry"],
+      related: ["fermats-last-theorem"],
+    },
+    tags: ["피타고라스", "직각삼각형", "Pythagorean", "geometry"],
+  },
+  {
+    id: "central-limit-theorem",
+    name: {
+      ko: "중심극한정리",
+      en: "Central Limit Theorem",
+      ja: "中心極限定理",
+    },
+    field: "theorems",
+    subfield: "probability",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "충분히 많은 독립 확률변수의 합의 분포는 원래 분포에 관계없이 정규분포에 근사합니다.",
+        formulas: [
+          {
+            latex: "\\bar{X}_n = \\frac{1}{n}\\sum_{i=1}^{n} X_i",
+            description: "표본평균",
+          },
+          {
+            latex: "\\frac{\\bar{X}_n - \\mu}{\\sigma/\\sqrt{n}} \\xrightarrow{d} N(0,1)",
+            description: "표준화된 표본평균은 표준정규분포로 수렴",
+          },
+        ],
+        examples: [
+          {
+            problem: "동전을 100번 던져 앞면 개수의 분포는?",
+            solution:
+              "평균 50, 표준편차 5인 정규분포에 근사. P(45 ≤ X ≤ 55) ≈ 68%",
+          },
+        ],
+        history: {
+          discoveredBy: "피에르시몽 라플라스",
+          year: "1810년",
+          background:
+            "드무아브르가 이항분포에 대해 처음 발견했고, 라플라스가 일반화했습니다.",
+        },
+        applications: [
+          { field: "통계학", description: "신뢰구간, 가설검정" },
+          { field: "품질관리", description: "공정 모니터링" },
+          { field: "금융", description: "포트폴리오 분석" },
+        ],
+      },
+      en: {
+        definition:
+          "The distribution of sum of many independent random variables approaches normal distribution regardless of original distribution.",
+        formulas: [
+          {
+            latex: "\\bar{X}_n = \\frac{1}{n}\\sum_{i=1}^{n} X_i",
+            description: "Sample mean",
+          },
+          {
+            latex: "\\frac{\\bar{X}_n - \\mu}{\\sigma/\\sqrt{n}} \\xrightarrow{d} N(0,1)",
+            description: "Standardized sample mean converges to standard normal",
+          },
+        ],
+        examples: [
+          {
+            problem: "What's the distribution of heads in 100 coin flips?",
+            solution:
+              "Approximately normal with mean 50, std 5. P(45 ≤ X ≤ 55) ≈ 68%",
+          },
+        ],
+        history: {
+          discoveredBy: "Pierre-Simon Laplace",
+          year: "1810",
+          background:
+            "De Moivre first proved it for binomial; Laplace generalized it.",
+        },
+        applications: [
+          { field: "Statistics", description: "Confidence intervals, hypothesis tests" },
+          { field: "Quality Control", description: "Process monitoring" },
+          { field: "Finance", description: "Portfolio analysis" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["normal-distribution", "expected-value"],
+      nextTopics: ["confidence-intervals", "hypothesis-testing"],
+      related: ["law-of-large-numbers"],
+    },
+    tags: ["중심극한", "정규분포", "CLT", "statistics"],
+  },
+  {
+    id: "intermediate-value-theorem",
+    name: {
+      ko: "중간값 정리",
+      en: "Intermediate Value Theorem",
+      ja: "中間値の定理",
+    },
+    field: "theorems",
+    subfield: "calculus",
+    difficulty: 2,
+    content: {
+      ko: {
+        definition:
+          "연속함수 f가 [a,b]에서 정의되고 f(a)와 f(b) 사이의 값 k가 있으면, f(c) = k인 c가 (a,b)에 존재합니다.",
+        formulas: [
+          {
+            latex: "\\text{f(a) < k < f(b)이면 f(c) = k인 c ∈ (a,b) 존재}",
+            description: "중간값 정리",
+          },
+        ],
+        examples: [
+          {
+            problem: "f(x) = x³ - x - 1에서 [1,2] 사이에 근이 있음을 보이세요.",
+            solution:
+              "f(1) = -1 < 0, f(2) = 5 > 0. 연속이므로 f(c) = 0인 c ∈ (1,2) 존재.",
+          },
+        ],
+        history: {
+          discoveredBy: "베르나르트 볼차노",
+          year: "1817년",
+          background:
+            "볼차노가 처음 엄밀하게 증명했습니다. 직관적으로 당연해 보이지만 증명은 실수의 완비성을 필요로 합니다.",
+        },
+        applications: [
+          { field: "수치해석", description: "이분법 근 찾기" },
+          { field: "경제학", description: "균형점 존재 증명" },
+          { field: "물리학", description: "연속 변화 분석" },
+        ],
+      },
+      en: {
+        definition:
+          "If continuous f on [a,b] and k is between f(a) and f(b), there exists c in (a,b) with f(c) = k.",
+        formulas: [
+          {
+            latex: "\\text{If f(a) < k < f(b), then ∃c ∈ (a,b) with f(c) = k}",
+            description: "Intermediate Value Theorem",
+          },
+        ],
+        examples: [
+          {
+            problem: "Show f(x) = x³ - x - 1 has a root in [1,2].",
+            solution:
+              "f(1) = -1 < 0, f(2) = 5 > 0. By continuity, ∃c ∈ (1,2) with f(c) = 0.",
+          },
+        ],
+        history: {
+          discoveredBy: "Bernard Bolzano",
+          year: "1817",
+          background:
+            "Bolzano gave first rigorous proof. Seems obvious intuitively but requires completeness of reals.",
+        },
+        applications: [
+          { field: "Numerical Analysis", description: "Bisection method" },
+          { field: "Economics", description: "Equilibrium existence" },
+          { field: "Physics", description: "Continuous change analysis" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["continuity"],
+      nextTopics: ["bisection-method", "fixed-point-theorem"],
+      related: ["mean-value-theorem"],
+    },
+    tags: ["중간값", "연속", "IVT", "continuity"],
+  },
+  {
+    id: "stokes-theorem",
+    name: {
+      ko: "스토크스 정리",
+      en: "Stokes' Theorem",
+      ja: "ストークスの定理",
+    },
+    field: "theorems",
+    subfield: "calculus",
+    difficulty: 5,
+    content: {
+      ko: {
+        definition:
+          "스토크스 정리는 벡터장의 회전의 면적분이 경계 곡선에서의 선적분과 같음을 말합니다. 미적분학의 기본정리를 일반화한 것입니다.",
+        formulas: [
+          {
+            latex: "\\oint_C \\vec{F} \\cdot d\\vec{r} = \\iint_S (\\nabla \\times \\vec{F}) \\cdot d\\vec{S}",
+            description: "스토크스 정리",
+          },
+          {
+            latex: "\\int_a^b f'(x)dx = f(b) - f(a)",
+            description: "1차원 특수 경우 (미적분 기본정리)",
+          },
+        ],
+        examples: [
+          {
+            problem: "∮ᴄ F·dr을 스토크스 정리로 계산하는 전략은?",
+            solution:
+              "curl F를 구하고 C를 경계로 하는 곡면 S에서 면적분합니다. 곡면 선택으로 계산을 단순화할 수 있습니다.",
+          },
+        ],
+        history: {
+          discoveredBy: "조지 스토크스",
+          year: "1854년",
+          background:
+            "켈빈이 스토크스에게 보낸 편지에서 등장했고, 스토크스가 시험 문제로 출제했습니다.",
+        },
+        applications: [
+          { field: "전자기학", description: "맥스웰 방정식, 패러데이 법칙" },
+          { field: "유체역학", description: "순환, 소용돌이" },
+          { field: "미분기하학", description: "드람 코호몰로지" },
+        ],
+      },
+      en: {
+        definition:
+          "Stokes' Theorem states the surface integral of curl equals the line integral around the boundary. Generalizes the Fundamental Theorem of Calculus.",
+        formulas: [
+          {
+            latex: "\\oint_C \\vec{F} \\cdot d\\vec{r} = \\iint_S (\\nabla \\times \\vec{F}) \\cdot d\\vec{S}",
+            description: "Stokes' Theorem",
+          },
+          {
+            latex: "\\int_a^b f'(x)dx = f(b) - f(a)",
+            description: "1D special case (FTC)",
+          },
+        ],
+        examples: [
+          {
+            problem: "Strategy to compute ∮ᴄ F·dr using Stokes?",
+            solution:
+              "Compute curl F, integrate over surface S bounded by C. Surface choice can simplify calculation.",
+          },
+        ],
+        history: {
+          discoveredBy: "George Stokes",
+          year: "1854",
+          background:
+            "Appeared in Kelvin's letter to Stokes; Stokes used it as exam problem.",
+        },
+        applications: [
+          { field: "Electromagnetism", description: "Maxwell's equations, Faraday's law" },
+          { field: "Fluid Dynamics", description: "Circulation, vorticity" },
+          { field: "Differential Geometry", description: "de Rham cohomology" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["curl", "line-integral", "surface-integral"],
+      nextTopics: ["divergence-theorem", "differential-forms"],
+      related: ["greens-theorem", "fundamental-theorem-calculus"],
+    },
+    tags: ["스토크스", "벡터미적분", "Stokes", "vector calculus"],
+  },
+  {
+    id: "godel-incompleteness",
+    name: {
+      ko: "괴델의 불완전성 정리",
+      en: "Gödel's Incompleteness Theorems",
+      ja: "ゲーデルの不完全性定理",
+    },
+    field: "theorems",
+    subfield: "logic",
+    difficulty: 5,
+    content: {
+      ko: {
+        definition:
+          "산술을 포함하는 일관된 형식 체계에서는 참이지만 증명 불가능한 명제가 존재합니다. 또한 그 체계는 자신의 일관성을 증명할 수 없습니다.",
+        formulas: [
+          {
+            latex: "\\text{제1정리: 참이지만 증명 불가능한 문장 존재}",
+            description: "불완전성",
+          },
+          {
+            latex: "\\text{제2정리: 체계 내에서 자신의 일관성 증명 불가}",
+            description: "자기 참조의 한계",
+          },
+        ],
+        examples: [
+          {
+            problem: "괴델 문장 G: '이 문장은 증명될 수 없다'가 왜 참인가?",
+            solution:
+              "G가 거짓이면 증명 가능 → 모순. G가 참이면 증명 불가 → 일관성 유지. 따라서 G는 참이나 증명 불가.",
+          },
+        ],
+        history: {
+          discoveredBy: "쿠르트 괴델",
+          year: "1931년",
+          background:
+            "힐베르트의 프로그램에 대한 응답으로, 수학의 근본적 한계를 밝혔습니다.",
+        },
+        applications: [
+          { field: "논리학", description: "증명 이론의 한계" },
+          { field: "컴퓨터 과학", description: "결정 불가능성, 정지 문제" },
+          { field: "철학", description: "수학의 본질에 대한 논쟁" },
+        ],
+      },
+      en: {
+        definition:
+          "In any consistent formal system containing arithmetic, there exist true but unprovable statements. Also, the system cannot prove its own consistency.",
+        formulas: [
+          {
+            latex: "\\text{1st: There exists a true but unprovable statement}",
+            description: "Incompleteness",
+          },
+          {
+            latex: "\\text{2nd: System cannot prove its own consistency}",
+            description: "Self-reference limitation",
+          },
+        ],
+        examples: [
+          {
+            problem: "Why is Gödel sentence G: 'This statement is unprovable' true?",
+            solution:
+              "If G false, it's provable → contradiction. If G true, it's unprovable → consistent. Thus G is true but unprovable.",
+          },
+        ],
+        history: {
+          discoveredBy: "Kurt Gödel",
+          year: "1931",
+          background:
+            "Response to Hilbert's program; revealed fundamental limits of mathematics.",
+        },
+        applications: [
+          { field: "Logic", description: "Limits of proof theory" },
+          { field: "Computer Science", description: "Undecidability, halting problem" },
+          { field: "Philosophy", description: "Debates on nature of mathematics" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["formal-logic", "peano-arithmetic"],
+      nextTopics: ["halting-problem", "turing-machines"],
+      related: ["set-theory-axioms"],
+    },
+    tags: ["괴델", "불완전성", "Gödel", "incompleteness"],
+  },
 ];
