@@ -1,15 +1,15 @@
-import { defineConfig } from "@solidjs/start/config";
-import tailwindcss from "@tailwindcss/vite";
-import { VitePWA } from "vite-plugin-pwa";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath } from 'node:url';
+import { defineConfig } from '@solidjs/start/config';
+import tailwindcss from '@tailwindcss/vite';
+import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
-  ssr: false,
+  ssr: true,
   server: {
-    preset: "static",
+    preset: 'static',
     prerender: {
       crawlLinks: true,
-      routes: ["/", "/ko"],
+      routes: ['/', '/ko'],
     },
   },
   vite: {
@@ -18,26 +18,26 @@ export default defineConfig({
     },
     resolve: {
       alias: {
-        "@": fileURLToPath(new URL("./src", import.meta.url)),
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
       },
     },
     plugins: [
       tailwindcss(),
       VitePWA({
-        registerType: "autoUpdate",
-        includeAssets: ["favicon.ico", "icons/*.svg"],
+        registerType: 'autoUpdate',
+        includeAssets: ['favicon.ico', 'icons/*.svg'],
         manifest: false, // public/manifest.json 사용
         workbox: {
-          globPatterns: ["**/*.{js,css,html,ico,svg,woff2}"],
+          globPatterns: ['**/*.{js,css,html,ico,svg,woff2}'],
           cleanupOutdatedCaches: true,
           skipWaiting: true,
           clientsClaim: true,
           runtimeCaching: [
             {
               urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
-              handler: "CacheFirst",
+              handler: 'CacheFirst',
               options: {
-                cacheName: "google-fonts-stylesheets",
+                cacheName: 'google-fonts-stylesheets',
                 expiration: {
                   maxAgeSeconds: 60 * 60 * 24 * 365, // 1년
                 },
@@ -45,9 +45,9 @@ export default defineConfig({
             },
             {
               urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
-              handler: "CacheFirst",
+              handler: 'CacheFirst',
               options: {
-                cacheName: "google-fonts-webfonts",
+                cacheName: 'google-fonts-webfonts',
                 expiration: {
                   maxEntries: 30,
                   maxAgeSeconds: 60 * 60 * 24 * 365, // 1년
