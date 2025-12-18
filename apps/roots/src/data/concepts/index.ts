@@ -32,6 +32,11 @@ import { gameTheoryConcepts } from "./gameTheory";
 import { measureTheoryConcepts } from "./measureTheory";
 import { categoryTheoryConcepts } from "./categoryTheory";
 import { differentialGeometryConcepts } from "./differentialGeometry";
+import { statisticsConcepts } from "./statistics";
+import { setTheoryConcepts } from "./setTheory";
+import { operationsResearchConcepts } from "./operationsResearch";
+import { algebraicGeometryConcepts } from "./algebraicGeometry";
+import { functionalAnalysisConcepts } from "./functionalAnalysis";
 
 /** 모든 개념 목록 */
 export const allConcepts: MathConcept[] = [
@@ -65,6 +70,11 @@ export const allConcepts: MathConcept[] = [
   ...measureTheoryConcepts,
   ...categoryTheoryConcepts,
   ...differentialGeometryConcepts,
+  ...statisticsConcepts,
+  ...setTheoryConcepts,
+  ...operationsResearchConcepts,
+  ...algebraicGeometryConcepts,
+  ...functionalAnalysisConcepts,
 ];
 
 /** ID로 개념 찾기 */
