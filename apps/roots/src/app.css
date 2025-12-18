@@ -2,35 +2,35 @@
 @import "tailwindcss";
 
 /* ============================================
-   Roots Math Theme - Morning Mist / Deep Lagoon
+   Roots Math Theme - Lavender Mist
    ============================================ */
 :root {
   /* Background */
-  --bg-primary: #F7FAFA;
-  --bg-secondary: #EFF5F4;
-  --bg-tertiary: #E5EFEC;
+  --bg-primary: #F8F7FA;
+  --bg-secondary: #F1EFF5;
+  --bg-tertiary: #E8E5EF;
   --bg-elevated: #FFFFFF;
 
   /* Text */
-  --text-primary: #2A3836;
-  --text-secondary: #4A5E5A;
-  --text-tertiary: #6B807A;
+  --text-primary: #2D2A36;
+  --text-secondary: #5A5466;
+  --text-tertiary: #7A7488;
 
-  /* Accent (Teal) */
-  --accent-primary: #4A9E95;
-  --accent-secondary: #5DAEA2;
-  --accent-tertiary: #7EC4B8;
-  --accent-hover: #3D8880;
-  --accent-mint: #A8E8D8;
+  /* Accent (Violet) */
+  --accent-primary: #7C6AE8;
+  --accent-secondary: #8F80EC;
+  --accent-tertiary: #A99BF0;
+  --accent-hover: #6B58D8;
+  --accent-mint: #D4CFFA;
 
   /* Border */
-  --border-primary: #D5E0DD;
-  --border-focus: #4A9E95;
+  --border-primary: #DDD8E6;
+  --border-focus: #7C6AE8;
 
   /* Semantic */
-  --color-error: #C45858;
-  --color-success: #4A9070;
-  --color-warning: #B08830;
+  --color-error: #D85858;
+  --color-success: #58A070;
+  --color-warning: #C09830;
 
   /* Math-specific colors */
   --math-formula: #3B82F6;
@@ -67,26 +67,26 @@
 
 .dark {
   /* Background */
-  --bg-primary: #0F1716;
-  --bg-secondary: #161F1E;
-  --bg-tertiary: #1E2928;
-  --bg-elevated: #253332;
+  --bg-primary: #12111A;
+  --bg-secondary: #1A1822;
+  --bg-tertiary: #23202E;
+  --bg-elevated: #2C2838;
 
   /* Text */
-  --text-primary: #E5F0EE;
-  --text-secondary: #B0C5C2;
-  --text-tertiary: #8AA5A0;
+  --text-primary: #EEEDF2;
+  --text-secondary: #B5B0C5;
+  --text-tertiary: #908AA5;
 
-  /* Accent (Teal) */
-  --accent-primary: #6ECEC5;
-  --accent-secondary: #85D8D0;
-  --accent-tertiary: #9CE4DB;
-  --accent-hover: #85D8D0;
-  --accent-mint: #B0F0E5;
+  /* Accent (Violet) */
+  --accent-primary: #A99BF0;
+  --accent-secondary: #B8ACF4;
+  --accent-tertiary: #C7BEF8;
+  --accent-hover: #B8ACF4;
+  --accent-mint: #D4CFFA;
 
   /* Border */
-  --border-primary: #2E3E3C;
-  --border-focus: #6ECEC5;
+  --border-primary: #3A3548;
+  --border-focus: #A99BF0;
 
   /* Semantic */
   --color-error: #F0A0A0;
@@ -95,7 +95,7 @@
 
   /* Math-specific colors (dark) */
   --math-formula: #60A5FA;
-  --math-formula-bg: #1E3A5F;
+  --math-formula-bg: #1E2A5F;
   --math-highlight: #A78BFA;
 }
 

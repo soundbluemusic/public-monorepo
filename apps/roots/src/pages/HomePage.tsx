@@ -1,88 +1,73 @@
 /**
- * @fileoverview 홈페이지 컴포넌트
+ * @fileoverview 홈페이지 컴포넌트 - 미니멀 디자인
  */
 import { For, Show } from "solid-js";
 import { A } from "@solidjs/router";
 import { Title, Meta } from "@solidjs/meta";
 import { useI18n } from "@/i18n";
-import { fields } from "@/data/fields";
 import { allConcepts } from "@/data/concepts";
 import { Layout } from "@/components/layout/Layout";
-import { ConceptCard } from "@/components/concept/ConceptCard";
 
 export default function HomePage() {
   const { locale, t, localePath } = useI18n();
 
-  // 추천 개념 (처음 6개)
-  const featuredConcepts = () => allConcepts.slice(0, 6);
+  // 추천 개념 (처음 12개)
+  const featuredConcepts = () => allConcepts.slice(0, 12);
 
   return (
     <Layout>
       <Title>{t("heroTitle")}</Title>
       <Meta name="description" content={t("heroSubtitle")} />
 
-      {/* Hero Section */}
-      <section class="text-center mb-12">
-        <h1
-          class="text-4xl font-bold mb-4"
-          style={{ color: "var(--text-primary)" }}
-        >
+      {/* Header */}
+      <div class="mb-8">
+        <h1 class="text-2xl font-semibold mb-2" style={{ color: "var(--text-primary)" }}>
           {t("heroTitle")}
         </h1>
-        <p
-          class="text-lg"
-          style={{ color: "var(--text-secondary)" }}
-        >
+        <p style={{ color: "var(--text-secondary)" }}>
           {t("heroSubtitle")}
         </p>
-      </section>
+      </div>
 
-      {/* Featured Concepts */}
+      {/* Concept List */}
       <Show when={featuredConcepts().length > 0}>
-        <section class="mb-12">
-          <h2
-            class="text-2xl font-semibold mb-6"
-            style={{ color: "var(--text-primary)" }}
-          >
-            {t("featuredConcepts")}
-          </h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <For each={featuredConcepts()}>
-              {(concept) => <ConceptCard concept={concept} />}
-            </For>
-          </div>
-        </section>
-      </Show>
-
-      {/* Browse by Field */}
-      <section>
-        <h2
-          class="text-2xl font-semibold mb-6"
-          style={{ color: "var(--text-primary)" }}
-        >
-          {t("browseByField")}
-        </h2>
-
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          <For each={fields}>
-            {(field) => (
+        <div class="space-y-1">
+          <For each={featuredConcepts()}>
+            {(concept) => (
               <A
-                href={localePath(`/field/${field.id}`)}
-                class="card card-field flex flex-col items-center text-center p-4 hover:scale-[1.02] transition-transform"
-                style={{ "--field-color": field.color }}
+                href={localePath(`/concept/${concept.id}`)}
+                class="flex items-baseline justify-between py-3 -mx-2 px-2 rounded transition-colors"
+                style={{ "border-bottom": "1px solid var(--border-primary)" }}
               >
-                <span class="text-3xl mb-2">{field.icon}</span>
-                <h3
-                  class="font-medium text-sm"
-                  style={{ color: "var(--text-primary)" }}
-                >
-                  {field.name[locale()] || field.name.en}
-                </h3>
+                <div class="flex items-baseline gap-3">
+                  <span class="text-lg font-medium" style={{ color: "var(--text-primary)" }}>
+                    {concept.name[locale()] || concept.name.en}
+                  </span>
+                  <Show when={concept.formula}>
+                    <span class="text-sm font-mono" style={{ color: "var(--text-tertiary)" }}>
+                      {concept.formula}
+                    </span>
+                  </Show>
+                </div>
+                <span class="text-sm" style={{ color: "var(--text-secondary)" }}>
+                  {concept.field}
+                </span>
               </A>
             )}
           </For>
         </div>
-      </section>
+      </Show>
+
+      {/* View All Link */}
+      <div class="mt-8 text-center">
+        <A
+          href={localePath("/browse")}
+          class="text-sm transition-colors"
+          style={{ color: "var(--accent-primary)" }}
+        >
+          {t("viewAll")} →
+        </A>
+      </div>
     </Layout>
   );
 }
