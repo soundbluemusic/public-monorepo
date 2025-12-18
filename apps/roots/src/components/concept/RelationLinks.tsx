@@ -96,10 +96,10 @@ export function RelationLinks(props: RelationLinksProps) {
   };
 
   const titles = () => ({
-    prerequisites: locale() === "ko" ? "선행 개념" : locale() === "ja" ? "前提知識" : "Prerequisites",
-    nextTopics: locale() === "ko" ? "후행 개념" : locale() === "ja" ? "次のトピック" : "Next Topics",
-    related: locale() === "ko" ? "관련 개념" : locale() === "ja" ? "関連" : "Related",
-    applications: locale() === "ko" ? "응용 분야" : locale() === "ja" ? "応用分野" : "Applications",
+    prerequisites: locale() === "ko" ? "선행 개념" : "Prerequisites",
+    nextTopics: locale() === "ko" ? "후행 개념" : "Next Topics",
+    related: locale() === "ko" ? "관련 개념" : "Related",
+    applications: locale() === "ko" ? "응용 분야" : "Applications",
   });
 
   return (
@@ -116,7 +116,7 @@ export function RelationLinks(props: RelationLinksProps) {
           style={{ color: "var(--text-primary)" }}
         >
           <span>🔗</span>
-          {locale() === "ko" ? "연관 문서" : locale() === "ja" ? "関連ドキュメント" : "Related Documents"}
+          {locale() === "ko" ? "연관 문서" : "Related Documents"}
         </h3>
 
         <RelationSection

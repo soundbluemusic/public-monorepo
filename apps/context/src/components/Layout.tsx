@@ -26,16 +26,14 @@ import type { Language, MeaningEntry } from "@/data/types";
 const languages: { code: Language; label: string }[] = [
   { code: "ko", label: "한국어" },
   { code: "en", label: "EN" },
-  { code: "ja", label: "日本語" },
 ];
 
 /**
  * 경로에서 로케일 프리픽스 제거 (비교용)
  */
 function stripLocale(pathname: string): string {
-  if (pathname.startsWith("/en/")) return pathname.slice(3);
-  if (pathname.startsWith("/ja/")) return pathname.slice(3);
-  if (pathname === "/en" || pathname === "/ja") return "/";
+  if (pathname.startsWith("/ko/")) return pathname.slice(3);
+  if (pathname === "/ko") return "/";
   return pathname;
 }
 
@@ -167,7 +165,6 @@ export const Layout: ParentComponent = (props) => {
 
   const getPlaceholder = () => {
     if (locale() === "ko") return "검색...";
-    if (locale() === "ja") return "検索...";
     return "Search...";
   };
 
@@ -236,7 +233,7 @@ export const Layout: ParentComponent = (props) => {
                   when={searchResults().length > 0}
                   fallback={
                     <div class="px-4 py-3 text-sm" style={{ color: "var(--text-tertiary)" }}>
-                      {locale() === "ko" ? "결과 없음" : locale() === "ja" ? "結果なし" : "No results"}
+                      {locale() === "ko" ? "결과 없음" : "No results"}
                     </div>
                   }
                 >
@@ -288,7 +285,7 @@ export const Layout: ParentComponent = (props) => {
               value={locale()}
               onChange={(e) => {
                 const value = e.currentTarget.value;
-                if (value === "ko" || value === "en" || value === "ja") {
+                if (value === "ko" || value === "en") {
                   setLocale(value);
                 }
               }}
@@ -340,13 +337,13 @@ export const Layout: ParentComponent = (props) => {
         <div class="max-w-3xl mx-auto px-4">
           <nav class="flex justify-center gap-6 mb-4 text-sm" style={{ color: "var(--text-secondary)" }}>
             <A href={localePath("/privacy")} class="hover:underline">
-              {locale() === "ko" ? "개인정보" : locale() === "ja" ? "プライバシー" : "Privacy"}
+              {locale() === "ko" ? "개인정보" : "Privacy"}
             </A>
             <A href={localePath("/terms")} class="hover:underline">
-              {locale() === "ko" ? "이용약관" : locale() === "ja" ? "利用規約" : "Terms"}
+              {locale() === "ko" ? "이용약관" : "Terms"}
             </A>
             <A href={localePath("/license")} class="hover:underline">
-              {locale() === "ko" ? "라이선스" : locale() === "ja" ? "ライセンス" : "License"}
+              {locale() === "ko" ? "라이선스" : "License"}
             </A>
           </nav>
           <p class="text-center text-sm mb-2" style={{ color: "var(--text-tertiary)" }}>

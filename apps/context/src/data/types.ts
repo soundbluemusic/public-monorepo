@@ -2,7 +2,7 @@
  * @fileoverview Context 앱 핵심 타입 정의
  *
  * 한국어 학습 앱을 위한 데이터 구조를 정의합니다.
- * 한국어를 기준으로 영어, 일본어 번역을 제공합니다.
+ * 한국어를 기준으로 영어 번역을 제공합니다.
  *
  * @example
  * ```ts
@@ -18,7 +18,6 @@
  *   translations: {
  *     ko: { word: '안녕하세요', explanation: '만날 때 하는 인사말' },
  *     en: { word: 'Hello', explanation: 'A greeting when meeting someone' },
- *     ja: { word: 'こんにちは', reading: 'konnichiwa', explanation: '出会いの挨拶' },
  *   },
  *   tags: ['formal', 'greeting'],
  *   difficulty: 'beginner',
@@ -31,9 +30,8 @@
  * 지원 언어 코드
  * - 'ko': 한국어
  * - 'en': 영어
- * - 'ja': 일본어
  */
-export type Language = "ko" | "en" | "ja";
+export type Language = "ko" | "en";
 
 /**
  * 표현 변형 (격식 수준별)
@@ -50,7 +48,7 @@ export interface Variations {
 /**
  * 특정 언어로의 번역 데이터
  * @property word - 번역된 단어
- * @property reading - 읽기 표기 (일본어: 히라가나/가타카나)
+ * @property reading - 읽기 표기 (선택)
  * @property explanation - 해당 언어로 된 설명
  * @property examples - 해당 언어로 된 예문 목록
  * @property variations - 격식 수준별 표현 변형
@@ -75,7 +73,7 @@ export interface Translation {
  * @property hanja - 한자 표기 (일본어 사용자용)
  * @property partOfSpeech - 품사
  * @property categoryId - 소속 카테고리 ID
- * @property translations - 언어별 번역 (ko, en, ja)
+ * @property translations - 언어별 번역 (ko, en)
  * @property tags - 검색 및 분류용 태그
  * @property difficulty - 학습 난이도
  * @property frequency - 사용 빈도 (선택)
@@ -93,7 +91,6 @@ export interface MeaningEntry {
   translations: {
     ko: Translation;
     en: Translation;
-    ja: Translation;
   };
   tags: string[];
   difficulty: DifficultyLevel;
@@ -158,12 +155,10 @@ export interface Category {
   name: {
     ko: string;
     en: string;
-    ja: string;
   };
   description: {
     ko: string;
     en: string;
-    ja: string;
   };
   icon: string;
   color: CategoryColor;
@@ -211,7 +206,6 @@ export interface NavItem {
   label: {
     ko: string;
     en: string;
-    ja: string;
   };
   href: string;
   icon?: string;

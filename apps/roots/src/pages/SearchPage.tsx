@@ -53,8 +53,6 @@ export default function SearchPage() {
           <p style={{ color: "var(--text-secondary)" }}>
             {locale() === "ko"
               ? `"${query()}"에 대한 검색 결과`
-              : locale() === "ja"
-              ? `"${query()}"の検索結果`
               : `Search results for "${query()}"`}
           </p>
         </Show>
@@ -81,8 +79,6 @@ export default function SearchPage() {
                 <p class="text-sm">
                   {locale() === "ko"
                     ? "다른 검색어를 시도해보세요."
-                    : locale() === "ja"
-                    ? "別のキーワードをお試しください。"
                     : "Try a different search term."}
                 </p>
               </div>
@@ -93,8 +89,6 @@ export default function SearchPage() {
             {results().length}
             {locale() === "ko"
               ? "개의 결과"
-              : locale() === "ja"
-              ? "件の結果"
               : " results"}
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

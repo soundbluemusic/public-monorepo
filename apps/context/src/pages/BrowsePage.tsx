@@ -11,7 +11,6 @@ import { useI18n } from "@/i18n";
 const getPronunciation = (entry: MeaningEntry, locale: Language): string | undefined => {
   switch (locale) {
     case "en": return entry.romanization;
-    case "ja": return entry.translations.ja.reading;
     case "ko": return entry.pronunciation;
   }
 };
@@ -63,7 +62,7 @@ export default function BrowsePage() {
             type="text"
             value={searchQuery()}
             onInput={(e) => setSearchQuery(e.currentTarget.value)}
-            placeholder={locale() === "ko" ? "단어 검색..." : locale() === "ja" ? "単語を検索..." : "Search words..."}
+            placeholder={locale() === "ko" ? "단어 검색..." : "Search words..."}
             class="w-full px-4 py-2.5 rounded-lg text-sm transition-colors outline-none"
             style={{
               "background-color": "var(--bg-secondary)",
@@ -86,7 +85,7 @@ export default function BrowsePage() {
               }}
             >
               <span class="text-base">📚</span>
-              <span>{locale() === "ko" ? "전체" : locale() === "ja" ? "全て" : "All"}</span>
+              <span>{locale() === "ko" ? "전체" : "All"}</span>
             </button>
             <For each={categories}>
               {(cat) => (
@@ -111,10 +110,10 @@ export default function BrowsePage() {
       {/* Results header */}
       <div class="flex items-center justify-between mb-4">
         <p class="text-sm" style={{ color: "var(--text-tertiary)" }}>
-          {filteredEntries().length} {locale() === "ko" ? "단어" : locale() === "ja" ? "単語" : "words"}
+          {filteredEntries().length} {locale() === "ko" ? "단어" : "words"}
           <Show when={selectedCategory()}>
             <span class="ml-2">
-              {locale() === "ko" ? "in" : locale() === "ja" ? "の" : "in"} {selectedCategory()?.icon} {selectedCategory()?.name[locale()]}
+              in {selectedCategory()?.icon} {selectedCategory()?.name[locale()]}
             </span>
           </Show>
         </p>
@@ -161,10 +160,10 @@ export default function BrowsePage() {
       <Show when={filteredEntries().length === 0}>
         <div class="text-center py-12">
           <p class="text-lg mb-2" style={{ color: "var(--text-secondary)" }}>
-            {locale() === "ko" ? "검색 결과가 없습니다" : locale() === "ja" ? "検索結果がありません" : "No results found"}
+            {locale() === "ko" ? "검색 결과가 없습니다" : "No results found"}
           </p>
           <p class="text-sm" style={{ color: "var(--text-tertiary)" }}>
-            {locale() === "ko" ? "다른 검색어를 시도해보세요" : locale() === "ja" ? "別の検索キーワードをお試しください" : "Try a different search term"}
+            {locale() === "ko" ? "다른 검색어를 시도해보세요" : "Try a different search term"}
           </p>
         </div>
       </Show>

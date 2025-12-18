@@ -1,6 +1,6 @@
 /**
  * Sitemap Generator for Context App
- * Generates sitemap.xml with hreflang support for en, ko, ja
+ * Generates sitemap.xml with hreflang support for en, ko
  */
 
 import { writeFileSync, mkdirSync } from "node:fs";
@@ -15,7 +15,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const PUBLIC_DIR = join(__dirname, "../public");
 
 const SITE_URL = "https://context.soundbluemusic.com";
-const LANGUAGES = ["en", "ko", "ja"] as const;
+const LANGUAGES = ["en", "ko"] as const;
 const TODAY = new Date().toISOString().split("T")[0];
 
 // Static pages
@@ -121,11 +121,9 @@ function generateXslStylesheet(): string {
           .badge { display: inline-block; padding: 0.125rem 0.5rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 500; margin-right: 0.25rem; }
           .badge-en { background: #dbeafe; color: #1d4ed8; }
           .badge-ko { background: #fce7f3; color: #be185d; }
-          .badge-ja { background: #fef3c7; color: #d97706; }
           @media (prefers-color-scheme: dark) {
             .badge-en { background: #1e3a5f; color: #93c5fd; }
             .badge-ko { background: #4a1942; color: #f9a8d4; }
-            .badge-ja { background: #451a03; color: #fcd34d; }
           }
           @media (max-width: 768px) {
             body { padding: 1rem; }
@@ -189,7 +187,7 @@ async function main() {
   );
   const staticSitemap = generateSitemap(staticUrls);
   writeFileSync(join(PUBLIC_DIR, "sitemap-pages.xml"), staticSitemap);
-  console.log(`✅ sitemap-pages.xml (${STATIC_PAGES.length} pages × 3 languages)`);
+  console.log(`✅ sitemap-pages.xml (${STATIC_PAGES.length} pages × 2 languages)`);
 
   // Generate categories sitemap
   const categoryUrls = categories.map((cat) =>
@@ -197,7 +195,7 @@ async function main() {
   );
   const categorySitemap = generateSitemap(categoryUrls);
   writeFileSync(join(PUBLIC_DIR, "sitemap-categories.xml"), categorySitemap);
-  console.log(`✅ sitemap-categories.xml (${categories.length} categories × 3 languages)`);
+  console.log(`✅ sitemap-categories.xml (${categories.length} categories × 2 languages)`);
 
   // Generate entries sitemap
   const entryUrls = meaningEntries.map((entry) =>
@@ -205,7 +203,7 @@ async function main() {
   );
   const entriesSitemap = generateSitemap(entryUrls);
   writeFileSync(join(PUBLIC_DIR, "sitemap-entries.xml"), entriesSitemap);
-  console.log(`✅ sitemap-entries.xml (${meaningEntries.length} entries × 3 languages)`);
+  console.log(`✅ sitemap-entries.xml (${meaningEntries.length} entries × 2 languages)`);
 
   // Generate sitemap index
   const sitemapIndex = generateSitemapIndex([
@@ -224,7 +222,7 @@ async function main() {
   // Summary
   const totalUrls =
     STATIC_PAGES.length + categories.length + meaningEntries.length;
-  console.log(`\n📊 Total: ${totalUrls} URLs × 3 languages = ${totalUrls * 3} hreflang entries`);
+  console.log(`\n📊 Total: ${totalUrls} URLs × 2 languages = ${totalUrls * 2} hreflang entries`);
 }
 
 main().catch(console.error);

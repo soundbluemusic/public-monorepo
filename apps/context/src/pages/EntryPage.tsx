@@ -12,7 +12,6 @@ import { favorites } from "@/lib/db";
 const getPronunciation = (entry: MeaningEntry, locale: Language): string | undefined => {
   switch (locale) {
     case "en": return entry.romanization;
-    case "ja": return entry.translations.ja.reading;
     case "ko": return entry.pronunciation;
   }
 };
@@ -67,7 +66,7 @@ export default function EntryPage() {
         fallback={
           <div class="text-center py-16">
             <p style={{ color: "var(--text-secondary)" }}>
-              {locale() === "ko" ? "단어를 찾을 수 없습니다" : locale() === "ja" ? "単語が見つかりません" : "Word not found"}
+              {locale() === "ko" ? "단어를 찾을 수 없습니다" : "Word not found"}
             </p>
             <A href={localePath("/")} class="text-sm mt-4 inline-block" style={{ color: "var(--text-tertiary)" }}>
               ← {t("home")}
@@ -95,8 +94,8 @@ export default function EntryPage() {
                 "background-color": isFavorite() ? "rgba(239, 68, 68, 0.1)" : "var(--bg-tertiary)",
               }}
               title={isFavorite()
-                ? (locale() === "ko" ? "즐겨찾기 해제" : locale() === "ja" ? "お気に入り解除" : "Remove from favorites")
-                : (locale() === "ko" ? "즐겨찾기 추가" : locale() === "ja" ? "お気に入り追加" : "Add to favorites")
+                ? (locale() === "ko" ? "즐겨찾기 해제" : "Remove from favorites")
+                : (locale() === "ko" ? "즐겨찾기 추가" : "Add to favorites")
               }
             >
               <svg
@@ -120,17 +119,12 @@ export default function EntryPage() {
               {pronunciation()}
             </p>
           </Show>
-          <Show when={locale() === "ja" && entry()?.hanja}>
-            <p class="text-sm mt-1" style={{ color: "var(--text-tertiary)" }}>
-              {entry()?.hanja}
-            </p>
-          </Show>
         </div>
 
         <Show when={translation()}>
           <div class="mb-8 pb-8" style={{ "border-bottom": "1px solid var(--border-primary)" }}>
             <p class="text-sm uppercase tracking-wide mb-2" style={{ color: "var(--text-tertiary)" }}>
-              {locale() === "ko" ? "한국어" : locale() === "en" ? "English" : "日本語"}
+              {locale() === "ko" ? "한국어" : "English"}
             </p>
             <h2 class="text-2xl font-medium mb-3" style={{ color: "var(--text-primary)" }}>
               {translation()?.word}

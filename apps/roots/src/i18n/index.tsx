@@ -1,10 +1,9 @@
 /**
- * @fileoverview URL 기반 로케일 라우팅 시스템 (ko, en, ja)
+ * @fileoverview URL 기반 로케일 라우팅 시스템 (ko, en)
  *
  * URL 경로에 따라 언어를 결정합니다:
  * - `/` 또는 `/browse` → 영어 (기본)
  * - `/ko` 또는 `/ko/browse` → 한국어
- * - `/ja` 또는 `/ja/browse` → 일본어
  */
 import {
   createContext,
@@ -14,7 +13,7 @@ import {
 } from "solid-js";
 import { useLocation, useNavigate } from "@solidjs/router";
 
-export type Language = "ko" | "en" | "ja";
+export type Language = "ko" | "en";
 
 export interface UILabels {
   // Common
@@ -262,96 +261,16 @@ const translations: Record<Language, UILabels> = {
     progress: "Progress",
     recentlyViewed: "Recently Viewed",
   },
-  ja: {
-    // Common
-    search: "検索",
-    searchPlaceholder: "数学の概念を検索...",
-    home: "ホーム",
-    browse: "探す",
-    about: "紹介",
-    noResults: "検索結果がありません",
-    loading: "読み込み中...",
-
-    // Navigation
-    backToList: "一覧に戻る",
-    viewAll: "すべて見る",
-    previous: "前へ",
-    next: "次へ",
-
-    // Math specific
-    definition: "定義",
-    formula: "公式",
-    formulas: "公式集",
-    example: "例題",
-    examples: "例題集",
-    visualization: "可視化",
-    history: "歴史",
-    applications: "応用分野",
-    relatedConcepts: "関連概念",
-
-    // Difficulty
-    difficulty: "難易度",
-    elementary: "小学校",
-    middleSchool: "中学校",
-    highSchool: "高校",
-    undergraduate: "大学",
-    graduate: "大学院+",
-
-    // Relations
-    prerequisites: "前提知識",
-    nextTopics: "次のトピック",
-    related: "関連",
-    appliedIn: "応用分野",
-
-    // Math fields
-    foundations: "基礎数学",
-    algebra: "代数学",
-    geometry: "幾何学",
-    trigonometry: "三角法",
-    analysis: "解析学",
-    linearAlgebra: "線形代数",
-    probability: "確率・統計",
-    discrete: "離散数学",
-    numberTheory: "数論",
-    topology: "位相数学",
-    logic: "数理論理学",
-    dynamics: "力学系・カオス",
-    optimization: "最適化",
-    numerical: "数値解析",
-    applied: "応用数学",
-    constants: "数学定数",
-    symbols: "数学記号",
-    theorems: "有名な定理",
-
-    // Hero
-    heroTitle: "Roots - 数学ドキュメント",
-    heroSubtitle: "誰でも簡単に学べる数学概念辞典",
-    featuredConcepts: "注目の概念",
-    browseByField: "分野別に探す",
-
-    // About
-    aboutTitle: "Rootsについて",
-    aboutDescription: "あらゆるレベルの学習者のための数学概念ドキュメントです。",
-
-    // Favorites & Study
-    favorites: "お気に入り",
-    study: "学習",
-    learningPath: "学習パス",
-    progress: "進捗",
-    recentlyViewed: "最近見た文書",
-  },
 };
 
 function getLocaleFromPath(pathname: string): Language {
   if (pathname.startsWith("/ko/") || pathname === "/ko") return "ko";
-  if (pathname.startsWith("/ja/") || pathname === "/ja") return "ja";
   return "en";
 }
 
 function stripLocaleFromPath(pathname: string): string {
   if (pathname.startsWith("/ko/")) return pathname.slice(3) || "/";
-  if (pathname.startsWith("/ja/")) return pathname.slice(3) || "/";
-  if (pathname === "/ko" || pathname === "/ja") return "/";
+  if (pathname === "/ko") return "/";
   return pathname;
 }
 
@@ -411,11 +330,9 @@ export const useT = () => useI18n().t;
 export const languageNames: Record<Language, { native: string; english: string }> = {
   ko: { native: "한국어", english: "Korean" },
   en: { native: "English", english: "English" },
-  ja: { native: "日本語", english: "Japanese" },
 };
 
 export const languageFlags: Record<Language, string> = {
   ko: "KR",
   en: "EN",
-  ja: "JP",
 };

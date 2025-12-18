@@ -18,13 +18,11 @@ import { DifficultyBadge } from "@/components/ui/DifficultyBadge";
 const languages: { code: Language; label: string }[] = [
   { code: "ko", label: "한국어" },
   { code: "en", label: "EN" },
-  { code: "ja", label: "日本語" },
 ];
 
 function stripLocale(pathname: string): string {
   if (pathname.startsWith("/ko/")) return pathname.slice(3);
-  if (pathname.startsWith("/ja/")) return pathname.slice(3);
-  if (pathname === "/ko" || pathname === "/ja") return "/";
+  if (pathname === "/ko") return "/";
   return pathname;
 }
 
@@ -293,7 +291,7 @@ export const Layout: ParentComponent = (props) => {
               value={locale()}
               onChange={(e) => {
                 const value = e.currentTarget.value;
-                if (value === "ko" || value === "en" || value === "ja") {
+                if (value === "ko" || value === "en") {
                   setLocale(value);
                 }
               }}

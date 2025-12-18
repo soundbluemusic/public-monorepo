@@ -1,10 +1,9 @@
 /**
- * @fileoverview URL 기반 로케일 라우팅 시스템 (ko, en, ja)
+ * @fileoverview URL 기반 로케일 라우팅 시스템 (ko, en)
  *
  * URL 경로에 따라 언어를 결정합니다:
  * - `/` 또는 `/browse` → 영어 (기본)
  * - `/ko` 또는 `/ko/browse` → 한국어
- * - `/ja` 또는 `/ja/browse` → 일본어
  *
  * @example
  * ```tsx
@@ -24,7 +23,7 @@
  *   return (
  *     <div>
  *       <h1>{t('heroTitle')}</h1>
- *       <button onClick={() => setLocale('ja')}>日本語</button>
+ *       <button onClick={() => setLocale('ko')}>한국어</button>
  *       <a href={localePath('/browse')}>둘러보기</a>
  *     </div>
  *   );
@@ -149,69 +148,20 @@ const translations: Record<Language, UILabels> = {
     aboutTitle: "About Context",
     aboutDescription: "A meaning-focused multilingual dictionary for Korean learners.",
   },
-  ja: {
-    search: "検索",
-    searchPlaceholder: "韓国語の単語を検索...",
-    home: "ホーム",
-    browse: "探す",
-    about: "紹介",
-    noResults: "検索結果がありません",
-    loading: "読み込み中...",
-    korean: "韓国語",
-    romanization: "ローマ字表記",
-    translation: "翻訳",
-    explanation: "説明",
-    examples: "例文",
-    relatedWords: "関連単語",
-    variations: "表現バリエーション",
-    formal: "丁寧語",
-    casual: "タメ口",
-    short: "略語",
-    partOfSpeech: "品詞",
-    difficulty: "難易度",
-    category: "カテゴリー",
-    tags: "タグ",
-    beginner: "初級",
-    intermediate: "中級",
-    advanced: "上級",
-    noun: "名詞",
-    verb: "動詞",
-    adjective: "形容詞",
-    adverb: "副詞",
-    particle: "助詞",
-    interjection: "感嘆詞",
-    conjunction: "接続詞",
-    pronoun: "代名詞",
-    determiner: "連体詞",
-    expression: "表現",
-    copyToClipboard: "クリップボードにコピー",
-    copied: "コピーしました！",
-    listenPronunciation: "発音を聞く",
-    backToList: "一覧に戻る",
-    viewAll: "すべて見る",
-    heroTitle: "韓国語意味辞典",
-    heroSubtitle: "韓国語学習者のための多言語意味辞典",
-    featuredWords: "注目の単語",
-    browseByCategory: "カテゴリーで探す",
-    aboutTitle: "Contextについて",
-    aboutDescription: "韓国語学習者のための意味重視の多言語辞典です。",
-  },
 };
 
 /**
  * URL 경로에서 로케일 추출
  *
- * @param pathname - URL 경로 (예: '/ko/browse', '/ja/word/hello')
- * @returns 추출된 로케일 ('ko' | 'en' | 'ja')
+ * @param pathname - URL 경로 (예: '/ko/browse', '/word/hello')
+ * @returns 추출된 로케일 ('ko' | 'en')
  *
  * @example
  * getLocaleFromPath('/ko/browse')  // 'ko'
- * getLocaleFromPath('/ja/browse')  // 'ja'
  * getLocaleFromPath('/browse')     // 'en'
  */
 function getLocaleFromPath(pathname: string): Language {
   if (pathname.startsWith("/ko/") || pathname === "/ko") return "ko";
-  if (pathname.startsWith("/ja/") || pathname === "/ja") return "ja";
   return "en"; // Default is English (no prefix)
 }
 
@@ -223,13 +173,12 @@ function getLocaleFromPath(pathname: string): Language {
  *
  * @example
  * stripLocaleFromPath('/ko/browse')  // '/browse'
- * stripLocaleFromPath('/ja')         // '/'
+ * stripLocaleFromPath('/ko')         // '/'
  * stripLocaleFromPath('/browse')     // '/browse'
  */
 function stripLocaleFromPath(pathname: string): string {
   if (pathname.startsWith("/ko/")) return pathname.slice(3) || "/";
-  if (pathname.startsWith("/ja/")) return pathname.slice(3) || "/";
-  if (pathname === "/ko" || pathname === "/ja") return "/";
+  if (pathname === "/ko") return "/";
   return pathname;
 }
 
@@ -320,12 +269,10 @@ export const useT = () => useI18n().t;
 export const languageNames: Record<Language, { native: string; english: string }> = {
   ko: { native: "한국어", english: "Korean" },
   en: { native: "English", english: "English" },
-  ja: { native: "日本語", english: "Japanese" },
 };
 
 /** 언어별 국가 코드 */
 export const languageFlags: Record<Language, string> = {
   ko: "KR",
   en: "EN",
-  ja: "JP",
 };

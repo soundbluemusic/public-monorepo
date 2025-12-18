@@ -28,12 +28,10 @@ export const categories: Category[] = [
     name: {
       ko: "인사",
       en: "Greetings",
-      ja: "挨拶",
     },
     description: {
       ko: "일상에서 사용하는 인사말",
       en: "Everyday greetings and salutations",
-      ja: "日常で使う挨拶表現",
     },
     icon: "👋",
     color: "yellow",
@@ -44,12 +42,10 @@ export const categories: Category[] = [
     name: {
       ko: "감정",
       en: "Emotions",
-      ja: "感情",
     },
     description: {
       ko: "감정과 기분을 표현하는 단어",
       en: "Words expressing feelings and moods",
-      ja: "気持ちや感情を表す言葉",
     },
     icon: "💭",
     color: "pink",
@@ -60,12 +56,10 @@ export const categories: Category[] = [
     name: {
       ko: "일상생활",
       en: "Daily Life",
-      ja: "日常生活",
     },
     description: {
       ko: "일상생활에서 자주 쓰는 단어",
       en: "Common words used in daily activities",
-      ja: "日常生活でよく使う言葉",
     },
     icon: "🏠",
     color: "blue",
@@ -76,12 +70,10 @@ export const categories: Category[] = [
     name: {
       ko: "음식",
       en: "Food",
-      ja: "食べ物",
     },
     description: {
       ko: "음식과 식사 관련 단어",
       en: "Food and dining related vocabulary",
-      ja: "食べ物と食事に関する言葉",
     },
     icon: "🍜",
     color: "orange",
@@ -92,12 +84,10 @@ export const categories: Category[] = [
     name: {
       ko: "여행",
       en: "Travel",
-      ja: "旅行",
     },
     description: {
       ko: "여행과 이동 관련 단어",
       en: "Travel and transportation vocabulary",
-      ja: "旅行と移動に関する言葉",
     },
     icon: "✈️",
     color: "teal",
@@ -108,12 +98,10 @@ export const categories: Category[] = [
     name: {
       ko: "직장",
       en: "Work",
-      ja: "仕事",
     },
     description: {
       ko: "직장과 비즈니스 관련 단어",
       en: "Work and business related vocabulary",
-      ja: "職場とビジネスに関する言葉",
     },
     icon: "💼",
     color: "indigo",
@@ -124,12 +112,10 @@ export const categories: Category[] = [
     name: {
       ko: "문화",
       en: "Culture",
-      ja: "文化",
     },
     description: {
       ko: "한국 문화 관련 단어",
       en: "Korean culture related vocabulary",
-      ja: "韓国文化に関する言葉",
     },
     icon: "🎭",
     color: "purple",
@@ -140,12 +126,10 @@ export const categories: Category[] = [
     name: {
       ko: "숫자/시간",
       en: "Numbers & Time",
-      ja: "数字・時間",
     },
     description: {
       ko: "숫자와 시간 관련 단어",
       en: "Numbers and time related vocabulary",
-      ja: "数字と時間に関する言葉",
     },
     icon: "🔢",
     color: "green",
@@ -156,12 +140,10 @@ export const categories: Category[] = [
     name: {
       ko: "음악",
       en: "Music",
-      ja: "音楽",
     },
     description: {
       ko: "악기와 음악 관련 단어",
       en: "Musical instruments and music vocabulary",
-      ja: "楽器と音楽に関する言葉",
     },
     icon: "🎸",
     color: "red",
@@ -172,12 +154,10 @@ export const categories: Category[] = [
     name: {
       ko: "예술",
       en: "Art",
-      ja: "芸術",
     },
     description: {
       ko: "미술과 예술 관련 단어",
       en: "Art and creative expression vocabulary",
-      ja: "美術と芸術に関する言葉",
     },
     icon: "🎨",
     color: "purple",
@@ -188,12 +168,10 @@ export const categories: Category[] = [
     name: {
       ko: "스포츠",
       en: "Sports",
-      ja: "スポーツ",
     },
     description: {
       ko: "스포츠와 운동 관련 단어",
       en: "Sports and exercise vocabulary",
-      ja: "スポーツと運動に関する言葉",
     },
     icon: "⚽",
     color: "green",
@@ -204,12 +182,10 @@ export const categories: Category[] = [
     name: {
       ko: "우주",
       en: "Space",
-      ja: "宇宙",
     },
     description: {
       ko: "우주와 천문학 관련 단어",
       en: "Space and astronomy vocabulary",
-      ja: "宇宙と天文学に関する言葉",
     },
     icon: "🚀",
     color: "indigo",
@@ -220,12 +196,10 @@ export const categories: Category[] = [
     name: {
       ko: "물리학",
       en: "Physics",
-      ja: "物理学",
     },
     description: {
       ko: "물리학과 과학 관련 단어",
       en: "Physics and science vocabulary",
-      ja: "物理学と科学に関する言葉",
     },
     icon: "⚛️",
     color: "blue",
@@ -236,12 +210,10 @@ export const categories: Category[] = [
     name: {
       ko: "수학",
       en: "Mathematics",
-      ja: "数学",
     },
     description: {
       ko: "수학과 계산 관련 단어",
       en: "Mathematics and calculation vocabulary",
-      ja: "数学と計算に関する言葉",
     },
     icon: "📐",
     color: "teal",

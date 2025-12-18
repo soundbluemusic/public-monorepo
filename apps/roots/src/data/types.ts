@@ -9,18 +9,18 @@
 // ============================================
 
 /** 지원 언어 */
-export type Language = "ko" | "en" | "ja";
+export type Language = "ko" | "en";
 
 /** 난이도 (1-5) */
 export type DifficultyLevel = 1 | 2 | 3 | 4 | 5;
 
 /** 난이도 레이블 */
 export const difficultyLabels: Record<DifficultyLevel, Record<Language, string>> = {
-  1: { ko: "초등", en: "Elementary", ja: "小学校" },
-  2: { ko: "중등", en: "Middle School", ja: "中学校" },
-  3: { ko: "고등", en: "High School", ja: "高校" },
-  4: { ko: "대학", en: "Undergraduate", ja: "大学" },
-  5: { ko: "대학원+", en: "Graduate+", ja: "大学院+" },
+  1: { ko: "초등", en: "Elementary" },
+  2: { ko: "중등", en: "Middle School" },
+  3: { ko: "고등", en: "High School" },
+  4: { ko: "대학", en: "Undergraduate" },
+  5: { ko: "대학원+", en: "Graduate+" },
 };
 
 // ============================================
@@ -53,12 +53,10 @@ export interface MathFieldInfo {
   name: {
     ko: string;
     en: string;
-    ja?: string;
   };
   description: {
     ko: string;
     en: string;
-    ja?: string;
   };
   icon: string;
   color: string;
@@ -72,12 +70,10 @@ export interface MathSubfield {
   name: {
     ko: string;
     en: string;
-    ja?: string;
   };
   description: {
     ko: string;
     en: string;
-    ja?: string;
   };
   order: number;
   icon?: string;
@@ -95,7 +91,6 @@ export interface MathConcept {
   name: {
     ko: string;
     en: string;
-    ja?: string;
   };
 
   /** 분류 */
@@ -107,7 +102,6 @@ export interface MathConcept {
   content: {
     ko: ConceptContent;
     en: ConceptContent;
-    ja?: ConceptContent;
   };
 
   /** 연관 관계 */
@@ -213,7 +207,6 @@ export interface MathConstant {
   name: {
     ko: string;
     en: string;
-    ja?: string;
   };
   /** 값 */
   value: string;
@@ -222,7 +215,6 @@ export interface MathConstant {
   description: {
     ko: string;
     en: string;
-    ja?: string;
   };
   relatedConcepts: string[];
 }
@@ -240,7 +232,6 @@ export interface MathSymbol {
   name: {
     ko: string;
     en: string;
-    ja?: string;
   };
   latex: string;
   usage: string;
@@ -256,13 +247,11 @@ export interface FamousTheorem {
   name: {
     ko: string;
     en: string;
-    ja?: string;
   };
   /** 정리 내용 */
   statement: {
     ko: string;
     en: string;
-    ja?: string;
   };
   latex?: string;
   field: MathField;
