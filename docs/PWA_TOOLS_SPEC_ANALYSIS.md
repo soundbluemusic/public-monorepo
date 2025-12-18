@@ -1,26 +1,35 @@
-# Tools PWA 스펙 → Context/Permissive 적용 분석 보고서
+# Tools PWA 스펙 → Context/Permissive/Roots 적용 분석 보고서
+
+> **이 monorepo의 모든 앱은 100% SSG (Static Site Generation) 정적 사이트입니다.**
+>
+> - 빌드 설정: `preset: "static"` in `app.config.ts`
+> - 빌드 출력: `.output/public`
+> - 서버 없음 (No SSR, No API)
+
+---
 
 ## 요약
 
 **결론:** Tools 앱 스펙의 **30~40%만 필요**, 나머지는 과도한 엔지니어링
 
-Tools 앱은 WASM, AudioWorklet, SharedArrayBuffer 등 **특수 웹 기술**을 사용하는 복잡한 앱이라 저 정도 스펙이 필요합니다. 반면 Context/Permissive는 **100% 정적 콘텐츠**만 제공하는 단순한 앱입니다.
+Tools 앱은 WASM, AudioWorklet, SharedArrayBuffer 등 **특수 웹 기술**을 사용하는 복잡한 앱이라 저 정도 스펙이 필요합니다. 반면 Context/Permissive/Roots는 **100% SSG 정적 사이트**로 단순한 구조입니다.
 
 ---
 
 ## 1. 앱 특성 비교
 
-| 특성 | Tools | Context | Permissive |
-|------|-------|---------|------------|
-| **용도** | Web DAW, 리듬게임 | 한국어 사전 | 웹개발 자료 |
-| **빌드 방식** | SSG | SSG | SSG |
-| **특수 기술** | WASM, AudioWorklet, SharedArrayBuffer | 없음 | 없음 |
-| **외부 API** | 없음 | 없음 | 없음 |
-| **마이크 사용** | ✅ (Tuner) | ❌ | ❌ |
-| **대용량 파일** | ✅ (오디오, WASM) | ❌ | ❌ |
-| **실시간 처리** | ✅ | ❌ | ❌ |
+| 특성 | Tools | Context | Permissive | Roots |
+|------|-------|---------|------------|-------|
+| **용도** | Web DAW, 리듬게임 | 한국어 사전 | 웹개발 자료 | 수학 문서 |
+| **빌드 방식** | SSG | **100% SSG** | **100% SSG** | **100% SSG** |
+| **빌드 출력** | `.output/public` | `.output/public` | `.output/public` | `.output/public` |
+| **특수 기술** | WASM, AudioWorklet, SharedArrayBuffer | 없음 | 없음 | KaTeX (수식) |
+| **외부 API** | 없음 | 없음 | 없음 | 없음 |
+| **마이크 사용** | ✅ (Tuner) | ❌ | ❌ | ❌ |
+| **대용량 파일** | ✅ (오디오, WASM) | ❌ | ❌ | ❌ |
+| **실시간 처리** | ✅ | ❌ | ❌ | ❌ |
 
-**핵심 차이:** Tools는 "앱"이고, Context/Permissive는 "문서 사이트"
+**핵심 차이:** Tools는 "앱"이고, Context/Permissive/Roots는 "100% SSG 정적 문서 사이트"
 
 ---
 
@@ -167,7 +176,7 @@ X-Frame-Options: DENY
 
 ---
 
-## 7. 권장 스펙 (Context/Permissive용)
+## 7. 권장 스펙 (Context/Permissive/Roots용 - 100% SSG)
 
 ### manifest.json (최소화)
 ```json
@@ -235,18 +244,21 @@ OfflineIndicator 컴포넌트 → 15줄 (선택적)
 | 대용량 오디오 | 오디오 캐싱 전략 필요 |
 | 실시간 처리 | NetworkFirst + 타임아웃 필요 |
 
-### Context/Permissive가 단순해도 되는 이유
+### Context/Permissive/Roots가 단순해도 되는 이유
 | 특성 | 결과 |
 |------|------|
-| 100% SSG | 프리캐시만으로 완전 오프라인 |
+| **100% SSG** | 프리캐시만으로 완전 오프라인 |
+| **빌드 출력** | `.output/public` (정적 파일만) |
 | 정적 콘텐츠 | 복잡한 캐싱 전략 불필요 |
 | 특수 API 없음 | 특수 헤더 불필요 |
 | 서버 없음 | NetworkFirst, Background Sync 불필요 |
 
 ### 최종 권장사항
 
-| 구분 | Tools | Context/Permissive |
-|------|-------|-------------------|
+| 구분 | Tools | Context/Permissive/Roots |
+|------|-------|--------------------------|
+| **빌드 방식** | SSG | **100% SSG** |
+| **빌드 출력** | `.output/public` | `.output/public` |
 | manifest.json | 50줄 | 20줄 |
 | Workbox 설정 | 80줄 | 15줄 |
 | HTTP Headers | 112줄 | 10줄 |
@@ -254,4 +266,4 @@ OfflineIndicator 컴포넌트 → 15줄 (선택적)
 | UI 컴포넌트 | 1개 (50줄) | 선택적 (15줄) |
 | **총 복잡도** | **높음** | **낮음** |
 
-**한 줄 요약:** Tools 스펙의 30%만 가져오면 됨. 나머지는 WASM/AudioWorklet 때문에 필요한 것들.
+**한 줄 요약:** Tools 스펙의 30%만 가져오면 됨. Context/Permissive/Roots는 100% SSG 정적 사이트라서 단순한 설정으로 충분함.
