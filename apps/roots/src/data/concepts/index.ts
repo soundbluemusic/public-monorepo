@@ -42,6 +42,11 @@ import { representationTheoryConcepts } from "./representationTheory";
 import { homologicalAlgebraConcepts } from "./homologicalAlgebra";
 import { calculusVariationsConcepts } from "./calculusVariations";
 import { informationTheoryConcepts } from "./informationTheory";
+import { stochasticProcessesConcepts } from "./stochasticProcesses";
+import { pdeConcepts } from "./pde";
+import { numericalLinearAlgebraConcepts } from "./numericalLinearAlgebra";
+import { graphTheoryAdvancedConcepts } from "./graphTheoryAdvanced";
+import { logicAdvancedConcepts } from "./logicAdvanced";
 
 /** 모든 개념 목록 */
 export const allConcepts: MathConcept[] = [
@@ -85,6 +90,11 @@ export const allConcepts: MathConcept[] = [
   ...homologicalAlgebraConcepts,
   ...calculusVariationsConcepts,
   ...informationTheoryConcepts,
+  ...stochasticProcessesConcepts,
+  ...pdeConcepts,
+  ...numericalLinearAlgebraConcepts,
+  ...graphTheoryAdvancedConcepts,
+  ...logicAdvancedConcepts,
 ];
 
 /** ID로 개념 찾기 */
