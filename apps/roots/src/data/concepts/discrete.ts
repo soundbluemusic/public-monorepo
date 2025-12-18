@@ -518,4 +518,423 @@ export const discreteConcepts: MathConcept[] = [
     },
     tags: ["모듈러", "나머지", "modular", "congruence"],
   },
+  {
+    id: "propositional-logic",
+    name: {
+      ko: "명제 논리",
+      en: "Propositional Logic",
+      ja: "命題論理",
+    },
+    field: "discrete",
+    subfield: "logic",
+    difficulty: 2,
+    content: {
+      ko: {
+        definition:
+          "명제는 참 또는 거짓으로 판별할 수 있는 문장입니다. 논리 연산자로 복합 명제를 만듭니다.",
+        formulas: [
+          {
+            latex: "\\neg p",
+            description: "부정 (NOT)",
+          },
+          {
+            latex: "p \\land q",
+            description: "논리곱 (AND)",
+          },
+          {
+            latex: "p \\lor q",
+            description: "논리합 (OR)",
+          },
+          {
+            latex: "p \\rightarrow q",
+            description: "조건문 (IF-THEN)",
+          },
+          {
+            latex: "p \\leftrightarrow q",
+            description: "쌍조건문 (IF AND ONLY IF)",
+          },
+        ],
+        examples: [
+          {
+            problem: "p→q의 역, 이, 대우를 쓰시오.",
+            solution:
+              "역: q→p\n이: ¬p→¬q\n대우: ¬q→¬p\n(원명제와 대우는 동치)",
+            difficulty: 2,
+          },
+        ],
+        applications: [
+          { field: "프로그래밍", description: "조건문, 불리언 로직" },
+          { field: "회로 설계", description: "논리 게이트" },
+          { field: "인공지능", description: "지식 표현" },
+        ],
+      },
+      en: {
+        definition:
+          "A proposition is a statement that is either true or false. Logical operators combine propositions.",
+        formulas: [
+          {
+            latex: "\\neg p",
+            description: "Negation (NOT)",
+          },
+          {
+            latex: "p \\land q",
+            description: "Conjunction (AND)",
+          },
+          {
+            latex: "p \\lor q",
+            description: "Disjunction (OR)",
+          },
+          {
+            latex: "p \\rightarrow q",
+            description: "Conditional (IF-THEN)",
+          },
+          {
+            latex: "p \\leftrightarrow q",
+            description: "Biconditional (IF AND ONLY IF)",
+          },
+        ],
+        examples: [
+          {
+            problem: "Write the converse, inverse, and contrapositive of p→q.",
+            solution:
+              "Converse: q→p\nInverse: ¬p→¬q\nContrapositive: ¬q→¬p\n(Original and contrapositive are equivalent)",
+            difficulty: 2,
+          },
+        ],
+        applications: [
+          { field: "Programming", description: "Conditionals, Boolean logic" },
+          { field: "Circuit Design", description: "Logic gates" },
+          { field: "AI", description: "Knowledge representation" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: [],
+      nextTopics: ["boolean-algebra", "predicate-logic"],
+      related: ["truth-tables"],
+    },
+    tags: ["논리", "명제", "logic", "proposition"],
+  },
+  {
+    id: "boolean-algebra",
+    name: {
+      ko: "불 대수",
+      en: "Boolean Algebra",
+      ja: "ブール代数",
+    },
+    field: "discrete",
+    subfield: "logic",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "0과 1(또는 참과 거짓)에 대한 대수 체계로, 논리 회로와 컴퓨터 과학의 기초입니다.",
+        formulas: [
+          {
+            latex: "x + 0 = x, \\quad x \\cdot 1 = x",
+            description: "항등원",
+          },
+          {
+            latex: "x + x' = 1, \\quad x \\cdot x' = 0",
+            description: "보원",
+          },
+          {
+            latex: "(x + y)' = x' \\cdot y', \\quad (x \\cdot y)' = x' + y'",
+            description: "드모르간 법칙",
+          },
+        ],
+        examples: [
+          {
+            problem: "x + x·y를 간소화하시오.",
+            solution:
+              "x + x·y = x(1 + y) = x·1 = x (흡수 법칙)",
+            difficulty: 2,
+          },
+        ],
+        history: {
+          discoveredBy: "조지 불",
+          year: "1854년",
+          background: "불이 '사고의 법칙'에서 논리를 대수적으로 표현했습니다.",
+        },
+        applications: [
+          { field: "디지털 회로", description: "논리 게이트 설계" },
+          { field: "컴퓨터", description: "CPU, 메모리 설계" },
+          { field: "검색 엔진", description: "불리언 검색" },
+        ],
+      },
+      en: {
+        definition:
+          "An algebraic system on 0 and 1 (or true and false), fundamental to logic circuits and computer science.",
+        formulas: [
+          {
+            latex: "x + 0 = x, \\quad x \\cdot 1 = x",
+            description: "Identity laws",
+          },
+          {
+            latex: "x + x' = 1, \\quad x \\cdot x' = 0",
+            description: "Complement laws",
+          },
+          {
+            latex: "(x + y)' = x' \\cdot y', \\quad (x \\cdot y)' = x' + y'",
+            description: "De Morgan's laws",
+          },
+        ],
+        examples: [
+          {
+            problem: "Simplify x + x·y.",
+            solution:
+              "x + x·y = x(1 + y) = x·1 = x (Absorption law)",
+            difficulty: 2,
+          },
+        ],
+        history: {
+          discoveredBy: "George Boole",
+          year: "1854",
+          background: "Boole expressed logic algebraically in 'The Laws of Thought'.",
+        },
+        applications: [
+          { field: "Digital Circuits", description: "Logic gate design" },
+          { field: "Computers", description: "CPU, memory design" },
+          { field: "Search Engines", description: "Boolean search" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["propositional-logic"],
+      nextTopics: ["logic-gates"],
+      related: ["sets"],
+    },
+    tags: ["불대수", "논리", "Boolean", "algebra"],
+  },
+  {
+    id: "trees",
+    name: {
+      ko: "트리",
+      en: "Trees",
+      ja: "木",
+    },
+    field: "discrete",
+    subfield: "graph-theory",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "트리는 사이클이 없는 연결 그래프입니다. n개의 정점이 있으면 n-1개의 간선을 가집니다.",
+        formulas: [
+          {
+            latex: "|E| = |V| - 1",
+            description: "트리의 간선 수",
+          },
+          {
+            latex: "\\text{leaves} \\geq 2",
+            description: "트리는 최소 2개의 잎(리프) 노드를 가짐",
+          },
+        ],
+        examples: [
+          {
+            problem: "10개의 정점을 가진 트리의 간선 수는?",
+            solution: "|E| = 10 - 1 = 9개",
+            difficulty: 1,
+          },
+        ],
+        applications: [
+          { field: "컴퓨터 과학", description: "이진 탐색 트리, 힙" },
+          { field: "파일 시스템", description: "디렉토리 구조" },
+          { field: "네트워크", description: "최소 신장 트리" },
+        ],
+      },
+      en: {
+        definition:
+          "A tree is a connected graph with no cycles. With n vertices, it has n-1 edges.",
+        formulas: [
+          {
+            latex: "|E| = |V| - 1",
+            description: "Number of edges in a tree",
+          },
+          {
+            latex: "\\text{leaves} \\geq 2",
+            description: "A tree has at least 2 leaf nodes",
+          },
+        ],
+        examples: [
+          {
+            problem: "How many edges in a tree with 10 vertices?",
+            solution: "|E| = 10 - 1 = 9 edges",
+            difficulty: 1,
+          },
+        ],
+        applications: [
+          { field: "Computer Science", description: "Binary search trees, heaps" },
+          { field: "File Systems", description: "Directory structure" },
+          { field: "Networking", description: "Minimum spanning trees" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["graph-theory"],
+      nextTopics: ["binary-trees", "spanning-trees"],
+      related: ["forests"],
+    },
+    tags: ["트리", "그래프", "tree", "graph"],
+  },
+  {
+    id: "binomial-theorem",
+    name: {
+      ko: "이항정리",
+      en: "Binomial Theorem",
+      ja: "二項定理",
+    },
+    field: "discrete",
+    subfield: "combinatorics",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "두 항의 거듭제곱을 전개하는 공식으로, 조합을 계수로 사용합니다.",
+        formulas: [
+          {
+            latex: "(x + y)^n = \\sum_{k=0}^{n} \\binom{n}{k} x^{n-k} y^k",
+            description: "이항정리",
+          },
+          {
+            latex: "\\binom{n}{0} + \\binom{n}{1} + \\cdots + \\binom{n}{n} = 2^n",
+            description: "이항계수의 합",
+          },
+        ],
+        examples: [
+          {
+            problem: "(x + 1)⁴를 전개하시오.",
+            solution:
+              "= x⁴ + 4x³ + 6x² + 4x + 1\n(계수: 1, 4, 6, 4, 1 = 파스칼 삼각형 4행)",
+            difficulty: 2,
+          },
+        ],
+        history: {
+          discoveredBy: "아이작 뉴턴",
+          year: "17세기",
+          background: "뉴턴이 음수/분수 지수로 일반화했습니다.",
+        },
+        applications: [
+          { field: "확률론", description: "이항분포 유도" },
+          { field: "근사", description: "(1+x)ⁿ의 근사" },
+        ],
+      },
+      en: {
+        definition:
+          "A formula for expanding powers of binomials using combinations as coefficients.",
+        formulas: [
+          {
+            latex: "(x + y)^n = \\sum_{k=0}^{n} \\binom{n}{k} x^{n-k} y^k",
+            description: "Binomial theorem",
+          },
+          {
+            latex: "\\binom{n}{0} + \\binom{n}{1} + \\cdots + \\binom{n}{n} = 2^n",
+            description: "Sum of binomial coefficients",
+          },
+        ],
+        examples: [
+          {
+            problem: "Expand (x + 1)⁴.",
+            solution:
+              "= x⁴ + 4x³ + 6x² + 4x + 1\n(Coefficients: 1, 4, 6, 4, 1 = Pascal's triangle row 4)",
+            difficulty: 2,
+          },
+        ],
+        history: {
+          discoveredBy: "Isaac Newton",
+          year: "17th century",
+          background: "Newton generalized to negative/fractional exponents.",
+        },
+        applications: [
+          { field: "Probability", description: "Binomial distribution derivation" },
+          { field: "Approximation", description: "(1+x)ⁿ approximations" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["combinations"],
+      nextTopics: ["multinomial"],
+      related: ["pascal-triangle"],
+    },
+    tags: ["이항정리", "조합", "binomial", "theorem"],
+  },
+  {
+    id: "big-o-notation",
+    name: {
+      ko: "빅오 표기법",
+      en: "Big O Notation",
+      ja: "ビッグオー記法",
+    },
+    field: "discrete",
+    subfield: "algorithms",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "알고리즘의 시간/공간 복잡도를 표현하는 점근적 표기법입니다.",
+        formulas: [
+          {
+            latex: "f(n) = O(g(n))",
+            description: "f는 g의 상한 (최악의 경우)",
+          },
+          {
+            latex: "O(1) < O(\\log n) < O(n) < O(n \\log n) < O(n^2) < O(2^n)",
+            description: "일반적인 복잡도 순서",
+          },
+        ],
+        examples: [
+          {
+            problem: "버블 정렬의 시간 복잡도는?",
+            solution: "O(n²) - 중첩 반복문",
+            difficulty: 2,
+          },
+          {
+            problem: "이진 탐색의 시간 복잡도는?",
+            solution: "O(log n) - 매 단계에서 반으로 줄임",
+            difficulty: 2,
+          },
+        ],
+        applications: [
+          { field: "알고리즘 분석", description: "효율성 비교" },
+          { field: "시스템 설계", description: "확장성 평가" },
+        ],
+      },
+      en: {
+        definition:
+          "Asymptotic notation to express time/space complexity of algorithms.",
+        formulas: [
+          {
+            latex: "f(n) = O(g(n))",
+            description: "f is upper-bounded by g (worst case)",
+          },
+          {
+            latex: "O(1) < O(\\log n) < O(n) < O(n \\log n) < O(n^2) < O(2^n)",
+            description: "Common complexity ordering",
+          },
+        ],
+        examples: [
+          {
+            problem: "Time complexity of bubble sort?",
+            solution: "O(n²) - nested loops",
+            difficulty: 2,
+          },
+          {
+            problem: "Time complexity of binary search?",
+            solution: "O(log n) - halves the search space each step",
+            difficulty: 2,
+          },
+        ],
+        applications: [
+          { field: "Algorithm Analysis", description: "Efficiency comparison" },
+          { field: "System Design", description: "Scalability assessment" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["logarithm", "exponential-function"],
+      nextTopics: ["master-theorem"],
+      related: ["recurrence-relations"],
+    },
+    tags: ["빅오", "복잡도", "Big O", "complexity"],
+  },
 ];

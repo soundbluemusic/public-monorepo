@@ -599,4 +599,468 @@ export const probabilityConcepts: MathConcept[] = [
     },
     tags: ["중심극한정리", "정규분포", "central limit theorem", "CLT"],
   },
+  {
+    id: "poisson-distribution",
+    name: {
+      ko: "포아송 분포",
+      en: "Poisson Distribution",
+      ja: "ポアソン分布",
+    },
+    field: "probability",
+    subfield: "distributions",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "일정 시간이나 공간에서 드물게 발생하는 사건의 횟수를 모델링하는 분포입니다.",
+        formulas: [
+          {
+            latex: "P(X = k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}",
+            description: "포아송 분포의 확률질량함수",
+          },
+          {
+            latex: "E[X] = \\lambda, \\quad \\text{Var}(X) = \\lambda",
+            description: "기댓값과 분산 (둘 다 λ)",
+          },
+        ],
+        examples: [
+          {
+            problem: "시간당 평균 3통의 전화가 오는 콜센터에서 정확히 5통이 올 확률은?",
+            solution: "P(X=5) = (3⁵ × e⁻³) / 5! = 243 × 0.0498 / 120 ≈ 0.1008",
+            difficulty: 3,
+          },
+        ],
+        applications: [
+          { field: "보험", description: "사고 발생 빈도" },
+          { field: "통신", description: "네트워크 트래픽" },
+          { field: "생물학", description: "돌연변이 발생" },
+        ],
+      },
+      en: {
+        definition:
+          "A distribution modeling the number of rare events occurring in a fixed interval of time or space.",
+        formulas: [
+          {
+            latex: "P(X = k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}",
+            description: "Poisson PMF",
+          },
+          {
+            latex: "E[X] = \\lambda, \\quad \\text{Var}(X) = \\lambda",
+            description: "Expected value and variance (both λ)",
+          },
+        ],
+        examples: [
+          {
+            problem: "A call center averages 3 calls/hour. Find P(exactly 5 calls).",
+            solution: "P(X=5) = (3⁵ × e⁻³) / 5! = 243 × 0.0498 / 120 ≈ 0.1008",
+            difficulty: 3,
+          },
+        ],
+        applications: [
+          { field: "Insurance", description: "Accident frequency" },
+          { field: "Telecom", description: "Network traffic" },
+          { field: "Biology", description: "Mutation occurrence" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["probability-basics", "exponential-function"],
+      nextTopics: ["exponential-distribution"],
+      related: ["binomial-distribution"],
+    },
+    tags: ["포아송", "분포", "Poisson", "distribution"],
+  },
+  {
+    id: "independence",
+    name: {
+      ko: "독립 사건",
+      en: "Independent Events",
+      ja: "独立事象",
+    },
+    field: "probability",
+    subfield: "probability-theory",
+    difficulty: 2,
+    content: {
+      ko: {
+        definition:
+          "두 사건이 독립이면 한 사건의 발생이 다른 사건의 확률에 영향을 주지 않습니다.",
+        formulas: [
+          {
+            latex: "P(A \\cap B) = P(A) \\cdot P(B)",
+            description: "독립의 정의",
+          },
+          {
+            latex: "P(A|B) = P(A)",
+            description: "조건부 확률이 원래 확률과 같음",
+          },
+        ],
+        examples: [
+          {
+            problem: "동전을 두 번 던질 때, 두 결과가 독립인지 확인하세요.",
+            solution:
+              "P(첫째 앞면) = 1/2, P(둘째 앞면) = 1/2\nP(둘 다 앞면) = 1/4 = (1/2)(1/2) ✓ 독립",
+            difficulty: 1,
+          },
+        ],
+        applications: [
+          { field: "통계학", description: "독립 표본 가정" },
+          { field: "신뢰성 공학", description: "시스템 고장 확률" },
+        ],
+      },
+      en: {
+        definition:
+          "Two events are independent if the occurrence of one doesn't affect the probability of the other.",
+        formulas: [
+          {
+            latex: "P(A \\cap B) = P(A) \\cdot P(B)",
+            description: "Definition of independence",
+          },
+          {
+            latex: "P(A|B) = P(A)",
+            description: "Conditional equals unconditional probability",
+          },
+        ],
+        examples: [
+          {
+            problem: "Are two coin flips independent?",
+            solution:
+              "P(1st heads) = 1/2, P(2nd heads) = 1/2\nP(both heads) = 1/4 = (1/2)(1/2) ✓ Independent",
+            difficulty: 1,
+          },
+        ],
+        applications: [
+          { field: "Statistics", description: "Independent sample assumption" },
+          { field: "Reliability Engineering", description: "System failure probability" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["probability-basics"],
+      nextTopics: ["conditional-probability"],
+      related: ["mutually-exclusive"],
+    },
+    tags: ["독립", "사건", "independent", "events"],
+  },
+  {
+    id: "bayes-theorem",
+    name: {
+      ko: "베이즈 정리",
+      en: "Bayes' Theorem",
+      ja: "ベイズの定理",
+    },
+    field: "probability",
+    subfield: "probability-theory",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "사전 확률을 새로운 증거로 업데이트하여 사후 확률을 계산하는 정리입니다.",
+        formulas: [
+          {
+            latex: "P(A|B) = \\frac{P(B|A) \\cdot P(A)}{P(B)}",
+            description: "베이즈 정리",
+          },
+          {
+            latex: "P(B) = \\sum_i P(B|A_i) P(A_i)",
+            description: "전체 확률 법칙",
+          },
+        ],
+        examples: [
+          {
+            problem:
+              "검사 정확도 99%, 유병률 1%. 양성일 때 실제 질병일 확률은?",
+            solution:
+              "P(질병|양성) = (0.99 × 0.01) / (0.99×0.01 + 0.01×0.99)\n= 0.0099 / 0.0198 = 50%",
+            difficulty: 4,
+          },
+        ],
+        history: {
+          discoveredBy: "토마스 베이즈",
+          year: "1763년",
+          background: "베이즈 사후에 출판된 논문에서 발표되었습니다.",
+        },
+        applications: [
+          { field: "의학", description: "진단 테스트 해석" },
+          { field: "머신러닝", description: "나이브 베이즈, 베이지안 추론" },
+          { field: "스팸 필터", description: "이메일 분류" },
+        ],
+      },
+      en: {
+        definition:
+          "A theorem for updating prior probability with new evidence to compute posterior probability.",
+        formulas: [
+          {
+            latex: "P(A|B) = \\frac{P(B|A) \\cdot P(A)}{P(B)}",
+            description: "Bayes' theorem",
+          },
+          {
+            latex: "P(B) = \\sum_i P(B|A_i) P(A_i)",
+            description: "Law of total probability",
+          },
+        ],
+        examples: [
+          {
+            problem:
+              "Test accuracy 99%, disease prevalence 1%. If positive, what's P(disease)?",
+            solution:
+              "P(disease|positive) = (0.99 × 0.01) / (0.99×0.01 + 0.01×0.99)\n= 0.0099 / 0.0198 = 50%",
+            difficulty: 4,
+          },
+        ],
+        history: {
+          discoveredBy: "Thomas Bayes",
+          year: "1763",
+          background: "Published posthumously.",
+        },
+        applications: [
+          { field: "Medicine", description: "Diagnostic test interpretation" },
+          { field: "Machine Learning", description: "Naive Bayes, Bayesian inference" },
+          { field: "Spam Filtering", description: "Email classification" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["conditional-probability"],
+      nextTopics: ["bayesian-inference"],
+      related: ["total-probability"],
+    },
+    tags: ["베이즈", "정리", "Bayes", "theorem"],
+  },
+  {
+    id: "hypothesis-testing",
+    name: {
+      ko: "가설검정",
+      en: "Hypothesis Testing",
+      ja: "仮説検定",
+    },
+    field: "probability",
+    subfield: "statistics",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "표본 데이터를 사용하여 모집단에 대한 가설을 검증하는 통계적 방법입니다.",
+        formulas: [
+          {
+            latex: "H_0: \\mu = \\mu_0, \\quad H_1: \\mu \\neq \\mu_0",
+            description: "귀무가설과 대립가설",
+          },
+          {
+            latex: "Z = \\frac{\\bar{X} - \\mu_0}{\\sigma / \\sqrt{n}}",
+            description: "Z 검정통계량",
+          },
+          {
+            latex: "t = \\frac{\\bar{X} - \\mu_0}{s / \\sqrt{n}}",
+            description: "t 검정통계량",
+          },
+        ],
+        examples: [
+          {
+            problem:
+              "평균이 50이라는 주장에 대해, 표본평균 52, 표준편차 10, n=25로 검정하시오 (α=0.05).",
+            solution:
+              "Z = (52-50)/(10/5) = 1\n임계값 ±1.96. |Z| < 1.96이므로 귀무가설 채택",
+            difficulty: 4,
+          },
+        ],
+        applications: [
+          { field: "의약품", description: "임상시험 유효성 검증" },
+          { field: "품질관리", description: "공정 이상 감지" },
+          { field: "사회과학", description: "연구 결과 검증" },
+        ],
+      },
+      en: {
+        definition:
+          "A statistical method to test claims about a population using sample data.",
+        formulas: [
+          {
+            latex: "H_0: \\mu = \\mu_0, \\quad H_1: \\mu \\neq \\mu_0",
+            description: "Null and alternative hypotheses",
+          },
+          {
+            latex: "Z = \\frac{\\bar{X} - \\mu_0}{\\sigma / \\sqrt{n}}",
+            description: "Z test statistic",
+          },
+          {
+            latex: "t = \\frac{\\bar{X} - \\mu_0}{s / \\sqrt{n}}",
+            description: "t test statistic",
+          },
+        ],
+        examples: [
+          {
+            problem:
+              "Test μ=50 with sample mean 52, SD 10, n=25 (α=0.05).",
+            solution:
+              "Z = (52-50)/(10/5) = 1\nCritical ±1.96. |Z| < 1.96, fail to reject H₀",
+            difficulty: 4,
+          },
+        ],
+        applications: [
+          { field: "Pharmaceuticals", description: "Clinical trial efficacy" },
+          { field: "Quality Control", description: "Process anomaly detection" },
+          { field: "Social Science", description: "Research validation" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["normal-distribution", "central-limit-theorem"],
+      nextTopics: ["confidence-interval", "p-value"],
+      related: ["type-i-ii-errors"],
+    },
+    tags: ["가설검정", "통계", "hypothesis", "testing"],
+  },
+  {
+    id: "correlation",
+    name: {
+      ko: "상관관계",
+      en: "Correlation",
+      ja: "相関",
+    },
+    field: "probability",
+    subfield: "statistics",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "두 변수 사이의 선형 관계의 강도와 방향을 측정합니다. -1에서 1 사이의 값을 가집니다.",
+        formulas: [
+          {
+            latex: "r = \\frac{\\sum (x_i - \\bar{x})(y_i - \\bar{y})}{\\sqrt{\\sum(x_i - \\bar{x})^2 \\sum(y_i - \\bar{y})^2}}",
+            description: "피어슨 상관계수",
+          },
+          {
+            latex: "-1 \\leq r \\leq 1",
+            description: "상관계수의 범위",
+          },
+        ],
+        examples: [
+          {
+            problem: "r = 0.8의 의미를 설명하시오.",
+            solution:
+              "강한 양의 상관관계. x가 증가하면 y도 증가하는 경향이 강함.",
+            difficulty: 2,
+          },
+        ],
+        applications: [
+          { field: "금융", description: "자산 간 상관관계" },
+          { field: "사회과학", description: "변수 간 관계 분석" },
+          { field: "의학", description: "위험 요인 분석" },
+        ],
+      },
+      en: {
+        definition:
+          "Measures the strength and direction of a linear relationship between two variables. Ranges from -1 to 1.",
+        formulas: [
+          {
+            latex: "r = \\frac{\\sum (x_i - \\bar{x})(y_i - \\bar{y})}{\\sqrt{\\sum(x_i - \\bar{x})^2 \\sum(y_i - \\bar{y})^2}}",
+            description: "Pearson correlation coefficient",
+          },
+          {
+            latex: "-1 \\leq r \\leq 1",
+            description: "Correlation coefficient range",
+          },
+        ],
+        examples: [
+          {
+            problem: "Interpret r = 0.8.",
+            solution:
+              "Strong positive correlation. As x increases, y tends to increase strongly.",
+            difficulty: 2,
+          },
+        ],
+        applications: [
+          { field: "Finance", description: "Asset correlations" },
+          { field: "Social Science", description: "Variable relationship analysis" },
+          { field: "Medicine", description: "Risk factor analysis" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["variance", "expected-value"],
+      nextTopics: ["regression"],
+      related: ["covariance"],
+    },
+    tags: ["상관관계", "통계", "correlation", "statistics"],
+  },
+  {
+    id: "regression",
+    name: {
+      ko: "회귀분석",
+      en: "Regression Analysis",
+      ja: "回帰分析",
+    },
+    field: "probability",
+    subfield: "statistics",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "종속변수와 독립변수 사이의 관계를 모델링하고 예측하는 통계적 방법입니다.",
+        formulas: [
+          {
+            latex: "y = \\beta_0 + \\beta_1 x + \\epsilon",
+            description: "단순 선형 회귀 모델",
+          },
+          {
+            latex: "\\hat{\\beta}_1 = \\frac{\\sum(x_i - \\bar{x})(y_i - \\bar{y})}{\\sum(x_i - \\bar{x})^2}",
+            description: "기울기 추정",
+          },
+          {
+            latex: "R^2 = 1 - \\frac{SS_{res}}{SS_{tot}}",
+            description: "결정계수 (설명력)",
+          },
+        ],
+        examples: [
+          {
+            problem: "R² = 0.75의 의미를 설명하시오.",
+            solution:
+              "독립변수가 종속변수 변동의 75%를 설명함.",
+            difficulty: 2,
+          },
+        ],
+        applications: [
+          { field: "경제학", description: "수요 예측" },
+          { field: "마케팅", description: "매출 예측" },
+          { field: "기계학습", description: "예측 모델의 기초" },
+        ],
+      },
+      en: {
+        definition:
+          "A statistical method to model and predict the relationship between dependent and independent variables.",
+        formulas: [
+          {
+            latex: "y = \\beta_0 + \\beta_1 x + \\epsilon",
+            description: "Simple linear regression model",
+          },
+          {
+            latex: "\\hat{\\beta}_1 = \\frac{\\sum(x_i - \\bar{x})(y_i - \\bar{y})}{\\sum(x_i - \\bar{x})^2}",
+            description: "Slope estimate",
+          },
+          {
+            latex: "R^2 = 1 - \\frac{SS_{res}}{SS_{tot}}",
+            description: "Coefficient of determination",
+          },
+        ],
+        examples: [
+          {
+            problem: "Interpret R² = 0.75.",
+            solution:
+              "The independent variable explains 75% of the variation in the dependent variable.",
+            difficulty: 2,
+          },
+        ],
+        applications: [
+          { field: "Economics", description: "Demand forecasting" },
+          { field: "Marketing", description: "Sales prediction" },
+          { field: "Machine Learning", description: "Foundation of predictive models" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["correlation"],
+      nextTopics: ["multiple-regression"],
+      related: ["least-squares"],
+    },
+    tags: ["회귀", "분석", "regression", "analysis"],
+  },
 ];
