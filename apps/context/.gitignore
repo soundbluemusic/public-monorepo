@@ -6,10 +6,6 @@ node_modules/
 .vinxi/
 dist/
 
-# Generated sitemaps (built during deploy)
-public/sitemap*.xml
-public/sitemap.xsl
-
 # Environment
 .env
 .env.local
