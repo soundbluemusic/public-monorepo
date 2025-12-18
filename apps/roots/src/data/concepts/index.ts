@@ -22,6 +22,11 @@ import { symbolsConcepts } from "./symbols";
 import { theoremsConcepts } from "./theorems";
 import { abstractAlgebraConcepts } from "./abstractAlgebra";
 import { complexAnalysisConcepts } from "./complexAnalysis";
+import { financeConcepts } from "./finance";
+import { musicConcepts } from "./music";
+import { physicsConcepts } from "./physics";
+import { computerScienceConcepts } from "./computerScience";
+import { engineeringConcepts } from "./engineering";
 
 /** 모든 개념 목록 */
 export const allConcepts: MathConcept[] = [
@@ -45,6 +50,11 @@ export const allConcepts: MathConcept[] = [
   ...theoremsConcepts,
   ...abstractAlgebraConcepts,
   ...complexAnalysisConcepts,
+  ...financeConcepts,
+  ...musicConcepts,
+  ...physicsConcepts,
+  ...computerScienceConcepts,
+  ...engineeringConcepts,
 ];
 
 /** ID로 개념 찾기 */
