@@ -1,3 +1,9 @@
+import { categories } from '@/data/categories';
+import { meaningEntries } from '@/data/entries';
+import type { MeaningEntry } from '@/data/types';
+import { useI18n } from '@/i18n';
+import { A, useLocation, useNavigate } from '@solidjs/router';
+import { LanguageToggle } from '@soundblue/shared';
 /**
  * @fileoverview 메인 레이아웃 컴포넌트
  *
@@ -17,20 +23,22 @@
  * </Layout>
  * ```
  */
-import { createSignal, createEffect, onMount, onCleanup, Show, For, type ParentComponent } from "solid-js";
-import { A, useLocation, useNavigate } from "@solidjs/router";
-import { useI18n } from "@/i18n";
-import { meaningEntries } from "@/data/entries";
-import type { MeaningEntry } from "@/data/types";
-import { LanguageToggle } from "@soundblue/shared";
-import { categories } from "@/data/categories";
+import {
+  For,
+  type ParentComponent,
+  Show,
+  createEffect,
+  createSignal,
+  onCleanup,
+  onMount,
+} from 'solid-js';
 
 /**
  * 경로에서 로케일 프리픽스 제거 (비교용)
  */
 function stripLocale(pathname: string): string {
-  if (pathname.startsWith("/ko/")) return pathname.slice(3);
-  if (pathname === "/ko") return "/";
+  if (pathname.startsWith('/ko/')) return pathname.slice(3);
+  if (pathname === '/ko') return '/';
   return pathname;
 }
 
@@ -54,7 +62,7 @@ export const Layout: ParentComponent = (props) => {
   const [darkMode, setDarkMode] = createSignal(false);
 
   // Search
-  const [searchQuery, setSearchQuery] = createSignal("");
+  const [searchQuery, setSearchQuery] = createSignal('');
   const [searchResults, setSearchResults] = createSignal<MeaningEntry[]>([]);
   const [showResults, setShowResults] = createSignal(false);
   const [selectedIndex, setSelectedIndex] = createSignal(0);
@@ -63,23 +71,23 @@ export const Layout: ParentComponent = (props) => {
 
   // Initialize dark mode from localStorage or system preference
   onMount(() => {
-    const stored = localStorage.getItem("context-dark-mode");
+    const stored = localStorage.getItem('context-dark-mode');
     if (stored !== null) {
-      const isDark = stored === "true";
+      const isDark = stored === 'true';
       setDarkMode(isDark);
-      document.documentElement.classList.toggle("dark", isDark);
+      document.documentElement.classList.toggle('dark', isDark);
     } else {
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       setDarkMode(prefersDark);
-      document.documentElement.classList.toggle("dark", prefersDark);
+      document.documentElement.classList.toggle('dark', prefersDark);
     }
   });
 
   const toggleDarkMode = () => {
     const newValue = !darkMode();
     setDarkMode(newValue);
-    localStorage.setItem("context-dark-mode", String(newValue));
-    document.documentElement.classList.toggle("dark", newValue);
+    localStorage.setItem('context-dark-mode', String(newValue));
+    document.documentElement.classList.toggle('dark', newValue);
   };
 
   // Search functionality
@@ -108,26 +116,26 @@ export const Layout: ParentComponent = (props) => {
   const handleSearchKeyDown = (e: KeyboardEvent) => {
     const len = searchResults().length;
 
-    if (e.key === "Escape") {
+    if (e.key === 'Escape') {
       setShowResults(false);
       searchInputRef?.blur();
       return;
     }
 
-    if (e.key === "ArrowDown" && len > 0) {
+    if (e.key === 'ArrowDown' && len > 0) {
       e.preventDefault();
       setSelectedIndex((i) => (i + 1) % len);
-    } else if (e.key === "ArrowUp" && len > 0) {
+    } else if (e.key === 'ArrowUp' && len > 0) {
       e.preventDefault();
       setSelectedIndex((i) => (i - 1 + len) % len);
-    } else if (e.key === "Enter" && len > 0) {
+    } else if (e.key === 'Enter' && len > 0) {
       e.preventDefault();
       selectResult(searchResults()[selectedIndex()]);
     }
   };
 
   const selectResult = (entry: MeaningEntry) => {
-    setSearchQuery("");
+    setSearchQuery('');
     setShowResults(false);
     navigate(localePath(`/entry/${entry.id}`));
   };
@@ -140,21 +148,21 @@ export const Layout: ParentComponent = (props) => {
         setShowResults(false);
       }
     };
-    document.addEventListener("click", handleClickOutside);
-    onCleanup(() => document.removeEventListener("click", handleClickOutside));
+    document.addEventListener('click', handleClickOutside);
+    onCleanup(() => document.removeEventListener('click', handleClickOutside));
   });
 
   // Keyboard shortcut for search
   onMount(() => {
     const handleKeydown = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
         e.preventDefault();
         searchInputRef?.focus();
         setShowResults(true);
       }
     };
-    window.addEventListener("keydown", handleKeydown);
-    onCleanup(() => window.removeEventListener("keydown", handleKeydown));
+    window.addEventListener('keydown', handleKeydown);
+    onCleanup(() => window.removeEventListener('keydown', handleKeydown));
   });
 
   // Check if a path is active (strip locale for comparison)
@@ -164,18 +172,18 @@ export const Layout: ParentComponent = (props) => {
   };
 
   const getPlaceholder = () => {
-    if (locale() === "ko") return "검색...";
-    return "Search...";
+    if (locale() === 'ko') return '검색...';
+    return 'Search...';
   };
 
   return (
-    <div class="min-h-screen" style={{ "background-color": "var(--bg-primary)" }}>
+    <div class="min-h-screen" style={{ 'background-color': 'var(--bg-primary)' }}>
       {/* Header */}
       <header
         class="sticky top-0 z-40 backdrop-blur-sm"
         style={{
-          "background-color": "color-mix(in srgb, var(--bg-primary) 80%, transparent)",
-          "border-bottom": "1px solid var(--border-primary)"
+          'background-color': 'color-mix(in srgb, var(--bg-primary) 80%, transparent)',
+          'border-bottom': '1px solid var(--border-primary)',
         }}
       >
         <div class="max-w-3xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
@@ -183,18 +191,23 @@ export const Layout: ParentComponent = (props) => {
           <div class="flex items-center gap-2 shrink-0">
             <button
               onClick={() => setSidebarOpen(true)}
-              class="p-2 rounded-lg transition-colors hover:bg-[var(--bg-tertiary)]"
-              style={{ color: "var(--text-secondary)" }}
-              aria-label={t("menu")}
+              class="p-2 rounded-lg transition-colors hover:bg-(--bg-tertiary)"
+              style={{ color: 'var(--text-secondary)' }}
+              aria-label={t('menu')}
             >
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             </button>
             <A
-              href={localePath("/")}
+              href={localePath('/')}
               class="font-semibold"
-              style={{ color: "var(--text-primary)" }}
+              style={{ color: 'var(--text-primary)' }}
             >
               Context
             </A>
@@ -205,12 +218,17 @@ export const Layout: ParentComponent = (props) => {
             <div class="relative">
               <svg
                 class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4"
-                style={{ color: "var(--text-tertiary)" }}
+                style={{ color: 'var(--text-tertiary)' }}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
               </svg>
               <input
                 ref={searchInputRef}
@@ -225,9 +243,9 @@ export const Layout: ParentComponent = (props) => {
                 placeholder={getPlaceholder()}
                 class="w-full pl-9 pr-3 py-1.5 text-sm rounded-lg focus:outline-none"
                 style={{
-                  "background-color": "var(--bg-secondary)",
-                  color: "var(--text-primary)",
-                  border: "1px solid var(--border-primary)"
+                  'background-color': 'var(--bg-secondary)',
+                  color: 'var(--text-primary)',
+                  border: '1px solid var(--border-primary)',
                 }}
               />
             </div>
@@ -237,15 +255,15 @@ export const Layout: ParentComponent = (props) => {
               <div
                 class="absolute top-full left-0 right-0 mt-1 rounded-lg shadow-lg overflow-hidden z-50"
                 style={{
-                  "background-color": "var(--bg-elevated)",
-                  border: "1px solid var(--border-primary)"
+                  'background-color': 'var(--bg-elevated)',
+                  border: '1px solid var(--border-primary)',
                 }}
               >
                 <Show
                   when={searchResults().length > 0}
                   fallback={
-                    <div class="px-4 py-3 text-sm" style={{ color: "var(--text-tertiary)" }}>
-                      {locale() === "ko" ? "결과 없음" : "No results"}
+                    <div class="px-4 py-3 text-sm" style={{ color: 'var(--text-tertiary)' }}>
+                      {locale() === 'ko' ? '결과 없음' : 'No results'}
                     </div>
                   }
                 >
@@ -256,18 +274,19 @@ export const Layout: ParentComponent = (props) => {
                         onMouseEnter={() => setSelectedIndex(index())}
                         class="w-full flex items-baseline justify-between px-4 py-2 text-left text-sm"
                         style={{
-                          "background-color": selectedIndex() === index() ? "var(--bg-tertiary)" : "transparent"
+                          'background-color':
+                            selectedIndex() === index() ? 'var(--bg-tertiary)' : 'transparent',
                         }}
                       >
                         <div class="flex items-baseline gap-2">
-                          <span style={{ color: "var(--text-primary)" }} class="font-medium">
+                          <span style={{ color: 'var(--text-primary)' }} class="font-medium">
                             {entry.korean}
                           </span>
-                          <span style={{ color: "var(--text-tertiary)" }} class="text-xs">
+                          <span style={{ color: 'var(--text-tertiary)' }} class="text-xs">
                             {entry.romanization}
                           </span>
                         </div>
-                        <span style={{ color: "var(--text-secondary)" }}>
+                        <span style={{ color: 'var(--text-secondary)' }}>
                           {entry.translations[locale()].word}
                         </span>
                       </button>
@@ -282,14 +301,14 @@ export const Layout: ParentComponent = (props) => {
           <div class="flex items-center gap-1 shrink-0">
             {/* Nav Links */}
             <A
-              href={localePath("/browse")}
+              href={localePath('/browse')}
               class="px-3 py-1.5 text-sm rounded-lg transition-colors"
               style={{
-                color: isActive("/browse") ? "var(--accent-primary)" : "var(--text-secondary)",
-                "background-color": isActive("/browse") ? "var(--bg-tertiary)" : "transparent"
+                color: isActive('/browse') ? 'var(--accent-primary)' : 'var(--text-secondary)',
+                'background-color': isActive('/browse') ? 'var(--bg-tertiary)' : 'transparent',
               }}
             >
-              {t("browse")}
+              {t('browse')}
             </A>
 
             {/* Language */}
@@ -299,19 +318,29 @@ export const Layout: ParentComponent = (props) => {
             <button
               onClick={toggleDarkMode}
               class="p-2 rounded-lg transition-colors"
-              style={{ color: "var(--text-secondary)" }}
+              style={{ color: 'var(--text-secondary)' }}
               aria-label="Toggle dark mode"
             >
               <Show
                 when={darkMode()}
                 fallback={
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                    />
                   </svg>
                 }
               >
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                  />
                 </svg>
               </Show>
             </button>
@@ -331,27 +360,32 @@ export const Layout: ParentComponent = (props) => {
       <aside
         class="fixed top-0 left-0 z-50 h-full w-72 transform transition-transform duration-300 ease-in-out flex flex-col"
         style={{
-          "background-color": "var(--bg-primary)",
-          "border-right": "1px solid var(--border-primary)",
-          transform: sidebarOpen() ? "translateX(0)" : "translateX(-100%)"
+          'background-color': 'var(--bg-primary)',
+          'border-right': '1px solid var(--border-primary)',
+          transform: sidebarOpen() ? 'translateX(0)' : 'translateX(-100%)',
         }}
       >
         {/* Sidebar Header */}
         <div
           class="h-14 flex items-center justify-between px-4 shrink-0"
-          style={{ "border-bottom": "1px solid var(--border-primary)" }}
+          style={{ 'border-bottom': '1px solid var(--border-primary)' }}
         >
-          <span class="font-semibold" style={{ color: "var(--text-primary)" }}>
-            {t("menu")}
+          <span class="font-semibold" style={{ color: 'var(--text-primary)' }}>
+            {t('menu')}
           </span>
           <button
             onClick={() => setSidebarOpen(false)}
-            class="p-2 rounded-lg transition-colors hover:bg-[var(--bg-tertiary)]"
-            style={{ color: "var(--text-secondary)" }}
+            class="p-2 rounded-lg transition-colors hover:bg-(--bg-tertiary)"
+            style={{ color: 'var(--text-secondary)' }}
             aria-label="Close menu"
           >
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
         </div>
@@ -361,46 +395,61 @@ export const Layout: ParentComponent = (props) => {
           {/* Main Navigation */}
           <div class="px-3 mb-6">
             <A
-              href={localePath("/")}
+              href={localePath('/')}
               onClick={() => setSidebarOpen(false)}
               class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors"
               style={{
-                color: isActive("/") ? "var(--accent-primary)" : "var(--text-primary)",
-                "background-color": isActive("/") ? "var(--bg-tertiary)" : "transparent"
+                color: isActive('/') ? 'var(--accent-primary)' : 'var(--text-primary)',
+                'background-color': isActive('/') ? 'var(--bg-tertiary)' : 'transparent',
               }}
             >
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                />
               </svg>
-              {t("home")}
+              {t('home')}
             </A>
             <A
-              href={localePath("/browse")}
+              href={localePath('/browse')}
               onClick={() => setSidebarOpen(false)}
               class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors"
               style={{
-                color: isActive("/browse") ? "var(--accent-primary)" : "var(--text-primary)",
-                "background-color": isActive("/browse") ? "var(--bg-tertiary)" : "transparent"
+                color: isActive('/browse') ? 'var(--accent-primary)' : 'var(--text-primary)',
+                'background-color': isActive('/browse') ? 'var(--bg-tertiary)' : 'transparent',
               }}
             >
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M4 6h16M4 10h16M4 14h16M4 18h16"
+                />
               </svg>
-              {t("browse")}
+              {t('browse')}
             </A>
             <A
-              href={localePath("/about")}
+              href={localePath('/about')}
               onClick={() => setSidebarOpen(false)}
               class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors"
               style={{
-                color: isActive("/about") ? "var(--accent-primary)" : "var(--text-primary)",
-                "background-color": isActive("/about") ? "var(--bg-tertiary)" : "transparent"
+                color: isActive('/about') ? 'var(--accent-primary)' : 'var(--text-primary)',
+                'background-color': isActive('/about') ? 'var(--bg-tertiary)' : 'transparent',
               }}
             >
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
               </svg>
-              {t("about")}
+              {t('about')}
             </A>
           </div>
 
@@ -408,9 +457,9 @@ export const Layout: ParentComponent = (props) => {
           <div class="px-3 mb-6">
             <div
               class="px-3 py-2 text-xs font-medium uppercase tracking-wider"
-              style={{ color: "var(--text-tertiary)" }}
+              style={{ color: 'var(--text-tertiary)' }}
             >
-              {t("browseByCategory")}
+              {t('browseByCategory')}
             </div>
             <div class="space-y-0.5">
               <For each={categories.slice(0, 6)}>
@@ -420,8 +469,12 @@ export const Layout: ParentComponent = (props) => {
                     onClick={() => setSidebarOpen(false)}
                     class="flex items-center gap-3 px-3 py-2 rounded-lg transition-colors text-sm"
                     style={{
-                      color: isActive(`/category/${category.id}`) ? "var(--accent-primary)" : "var(--text-secondary)",
-                      "background-color": isActive(`/category/${category.id}`) ? "var(--bg-tertiary)" : "transparent"
+                      color: isActive(`/category/${category.id}`)
+                        ? 'var(--accent-primary)'
+                        : 'var(--text-secondary)',
+                      'background-color': isActive(`/category/${category.id}`)
+                        ? 'var(--bg-tertiary)'
+                        : 'transparent',
                     }}
                   >
                     <span class="text-base">{category.icon}</span>
@@ -430,78 +483,85 @@ export const Layout: ParentComponent = (props) => {
                 )}
               </For>
               <A
-                href={localePath("/browse")}
+                href={localePath('/browse')}
                 onClick={() => setSidebarOpen(false)}
                 class="flex items-center gap-3 px-3 py-2 rounded-lg transition-colors text-sm"
-                style={{ color: "var(--accent-primary)" }}
+                style={{ color: 'var(--accent-primary)' }}
               >
                 <span class="text-base opacity-50">+{categories.length - 6}</span>
-                {t("viewAll")}
+                {t('viewAll')}
               </A>
             </div>
           </div>
         </nav>
 
         {/* Sidebar Footer - More Section */}
-        <div
-          class="shrink-0 py-4 px-3"
-          style={{ "border-top": "1px solid var(--border-primary)" }}
-        >
+        <div class="shrink-0 py-4 px-3" style={{ 'border-top': '1px solid var(--border-primary)' }}>
           <div
             class="px-3 py-2 text-xs font-medium uppercase tracking-wider"
-            style={{ color: "var(--text-tertiary)" }}
+            style={{ color: 'var(--text-tertiary)' }}
           >
-            {t("more")}
+            {t('more')}
           </div>
           <A
-            href={localePath("/sitemap")}
+            href={localePath('/sitemap')}
             onClick={() => setSidebarOpen(false)}
             class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors"
             style={{
-              color: isActive("/sitemap") ? "var(--accent-primary)" : "var(--text-primary)",
-              "background-color": isActive("/sitemap") ? "var(--bg-tertiary)" : "transparent"
+              color: isActive('/sitemap') ? 'var(--accent-primary)' : 'var(--text-primary)',
+              'background-color': isActive('/sitemap') ? 'var(--bg-tertiary)' : 'transparent',
             }}
           >
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"
+              />
             </svg>
-            {t("sitemap")}
+            {t('sitemap')}
           </A>
         </div>
       </aside>
 
       {/* Main */}
-      <main class="max-w-3xl mx-auto px-4 py-8">
-        {props.children}
-      </main>
+      <main class="max-w-3xl mx-auto px-4 py-8">{props.children}</main>
 
       {/* Footer */}
       <footer
         class="mt-auto py-8"
         style={{
-          "background-color": "var(--bg-secondary)",
-          "border-top": "1px solid var(--border-primary)"
+          'background-color': 'var(--bg-secondary)',
+          'border-top': '1px solid var(--border-primary)',
         }}
       >
         <div class="max-w-3xl mx-auto px-4">
-          <nav class="flex justify-center gap-6 mb-4 text-sm" style={{ color: "var(--text-secondary)" }}>
-            <A href={localePath("/privacy")} class="hover:underline">
-              {locale() === "ko" ? "개인정보" : "Privacy"}
+          <nav
+            class="flex justify-center gap-6 mb-4 text-sm"
+            style={{ color: 'var(--text-secondary)' }}
+          >
+            <A href={localePath('/privacy')} class="hover:underline">
+              {locale() === 'ko' ? '개인정보' : 'Privacy'}
             </A>
-            <A href={localePath("/terms")} class="hover:underline">
-              {locale() === "ko" ? "이용약관" : "Terms"}
+            <A href={localePath('/terms')} class="hover:underline">
+              {locale() === 'ko' ? '이용약관' : 'Terms'}
             </A>
-            <A href={localePath("/license")} class="hover:underline">
-              {locale() === "ko" ? "라이선스" : "License"}
+            <A href={localePath('/license')} class="hover:underline">
+              {locale() === 'ko' ? '라이선스' : 'License'}
             </A>
           </nav>
-          <p class="text-center text-sm mb-2" style={{ color: "var(--text-tertiary)" }}>
-            UI/UX based on web standards ·{" "}
-            <A href={localePath("/built-with")} class="underline" style={{ color: "var(--accent-primary)" }}>
+          <p class="text-center text-sm mb-2" style={{ color: 'var(--text-tertiary)' }}>
+            UI/UX based on web standards ·{' '}
+            <A
+              href={localePath('/built-with')}
+              class="underline"
+              style={{ color: 'var(--accent-primary)' }}
+            >
               Built with ❤️
             </A>
           </p>
-          <p class="text-center text-sm" style={{ color: "var(--text-tertiary)" }}>
+          <p class="text-center text-sm" style={{ color: 'var(--text-tertiary)' }}>
             Context by SoundBlueMusic
           </p>
         </div>

@@ -1,3 +1,12 @@
+import type { UILabels } from '@/data/types';
+import { useLocation, useNavigate } from '@solidjs/router';
+import {
+  type Language,
+  getLocaleFromPath,
+  languageFlags,
+  languageNames,
+  stripLocaleFromPath,
+} from '@soundblue/shared';
 /**
  * @fileoverview URL 기반 로케일 라우팅 시스템 (ko, en)
  *
@@ -30,10 +39,11 @@
  * }
  * ```
  */
-import { createSignal, createContext, useContext, createMemo, ParentComponent } from "solid-js";
-import { useLocation, useNavigate } from "@solidjs/router";
-import { isServer } from "solid-js/web";
-import type { Language, UILabels } from "@/data/types";
+import { type ParentComponent, createContext, createMemo, useContext } from 'solid-js';
+
+// Re-export from shared
+export { languageNames, languageFlags };
+export type { Language };
 
 /**
  * i18n 컨텍스트 타입
@@ -55,146 +65,114 @@ const I18nContext = createContext<I18nContextType>();
 
 const translations: Record<Language, UILabels> = {
   ko: {
-    search: "검색",
-    searchPlaceholder: "한국어 단어를 검색하세요...",
-    home: "홈",
-    browse: "찾아보기",
-    about: "소개",
-    noResults: "검색 결과가 없습니다",
-    loading: "로딩 중...",
-    korean: "한국어",
-    romanization: "로마자 표기",
-    translation: "번역",
-    explanation: "설명",
-    examples: "예문",
-    relatedWords: "관련 단어",
-    variations: "표현 변형",
-    formal: "격식체",
-    casual: "반말",
-    short: "줄임말",
-    partOfSpeech: "품사",
-    difficulty: "난이도",
-    category: "카테고리",
-    tags: "태그",
-    beginner: "초급",
-    intermediate: "중급",
-    advanced: "고급",
-    noun: "명사",
-    verb: "동사",
-    adjective: "형용사",
-    adverb: "부사",
-    particle: "조사",
-    interjection: "감탄사",
-    conjunction: "접속사",
-    pronoun: "대명사",
-    determiner: "관형사",
-    expression: "표현",
-    copyToClipboard: "클립보드에 복사",
-    copied: "복사됨!",
-    listenPronunciation: "발음 듣기",
-    backToList: "목록으로",
-    viewAll: "전체 보기",
-    heroTitle: "한국어 의미 사전",
-    heroSubtitle: "한국어 학습자를 위한 다국어 의미 사전",
-    featuredWords: "주요 단어",
-    browseByCategory: "카테고리로 찾아보기",
-    aboutTitle: "Context 소개",
-    aboutDescription: "한국어 학습자를 위한 의미 중심 다국어 사전입니다.",
-    menu: "메뉴",
-    more: "더보기",
-    sitemap: "사이트맵",
-    sitemapDescription: "모든 페이지와 카테고리를 한눈에 확인하세요",
-    allCategories: "전체 카테고리",
-    allPages: "전체 페이지",
-    searchEngineIndex: "검색엔진 색인용",
+    search: '검색',
+    searchPlaceholder: '한국어 단어를 검색하세요...',
+    home: '홈',
+    browse: '찾아보기',
+    about: '소개',
+    noResults: '검색 결과가 없습니다',
+    loading: '로딩 중...',
+    korean: '한국어',
+    romanization: '로마자 표기',
+    translation: '번역',
+    explanation: '설명',
+    examples: '예문',
+    relatedWords: '관련 단어',
+    variations: '표현 변형',
+    formal: '격식체',
+    casual: '반말',
+    short: '줄임말',
+    partOfSpeech: '품사',
+    difficulty: '난이도',
+    category: '카테고리',
+    tags: '태그',
+    beginner: '초급',
+    intermediate: '중급',
+    advanced: '고급',
+    noun: '명사',
+    verb: '동사',
+    adjective: '형용사',
+    adverb: '부사',
+    particle: '조사',
+    interjection: '감탄사',
+    conjunction: '접속사',
+    pronoun: '대명사',
+    determiner: '관형사',
+    expression: '표현',
+    copyToClipboard: '클립보드에 복사',
+    copied: '복사됨!',
+    listenPronunciation: '발음 듣기',
+    backToList: '목록으로',
+    viewAll: '전체 보기',
+    heroTitle: '한국어 의미 사전',
+    heroSubtitle: '한국어 학습자를 위한 다국어 의미 사전',
+    featuredWords: '주요 단어',
+    browseByCategory: '카테고리로 찾아보기',
+    aboutTitle: 'Context 소개',
+    aboutDescription: '한국어 학습자를 위한 의미 중심 다국어 사전입니다.',
+    menu: '메뉴',
+    more: '더보기',
+    sitemap: '사이트맵',
+    sitemapDescription: '모든 페이지와 카테고리를 한눈에 확인하세요',
+    allCategories: '전체 카테고리',
+    allPages: '전체 페이지',
+    searchEngineIndex: '검색엔진 색인용',
   },
   en: {
-    search: "Search",
-    searchPlaceholder: "Search Korean words...",
-    home: "Home",
-    browse: "Browse",
-    about: "About",
-    noResults: "No results found",
-    loading: "Loading...",
-    korean: "Korean",
-    romanization: "Romanization",
-    translation: "Translation",
-    explanation: "Explanation",
-    examples: "Examples",
-    relatedWords: "Related Words",
-    variations: "Variations",
-    formal: "Formal",
-    casual: "Casual",
-    short: "Short",
-    partOfSpeech: "Part of Speech",
-    difficulty: "Difficulty",
-    category: "Category",
-    tags: "Tags",
-    beginner: "Beginner",
-    intermediate: "Intermediate",
-    advanced: "Advanced",
-    noun: "Noun",
-    verb: "Verb",
-    adjective: "Adjective",
-    adverb: "Adverb",
-    particle: "Particle",
-    interjection: "Interjection",
-    conjunction: "Conjunction",
-    pronoun: "Pronoun",
-    determiner: "Determiner",
-    expression: "Expression",
-    copyToClipboard: "Copy to clipboard",
-    copied: "Copied!",
-    listenPronunciation: "Listen to pronunciation",
-    backToList: "Back to list",
-    viewAll: "View all",
-    heroTitle: "Korean Meaning Dictionary",
-    heroSubtitle: "Multilingual meaning dictionary for Korean learners",
-    featuredWords: "Featured Words",
-    browseByCategory: "Browse by Category",
-    aboutTitle: "About Context",
-    aboutDescription: "A meaning-focused multilingual dictionary for Korean learners.",
-    menu: "Menu",
-    more: "More",
-    sitemap: "Sitemap",
-    sitemapDescription: "View all pages and categories at a glance",
-    allCategories: "All Categories",
-    allPages: "All Pages",
-    searchEngineIndex: "For search engines",
+    search: 'Search',
+    searchPlaceholder: 'Search Korean words...',
+    home: 'Home',
+    browse: 'Browse',
+    about: 'About',
+    noResults: 'No results found',
+    loading: 'Loading...',
+    korean: 'Korean',
+    romanization: 'Romanization',
+    translation: 'Translation',
+    explanation: 'Explanation',
+    examples: 'Examples',
+    relatedWords: 'Related Words',
+    variations: 'Variations',
+    formal: 'Formal',
+    casual: 'Casual',
+    short: 'Short',
+    partOfSpeech: 'Part of Speech',
+    difficulty: 'Difficulty',
+    category: 'Category',
+    tags: 'Tags',
+    beginner: 'Beginner',
+    intermediate: 'Intermediate',
+    advanced: 'Advanced',
+    noun: 'Noun',
+    verb: 'Verb',
+    adjective: 'Adjective',
+    adverb: 'Adverb',
+    particle: 'Particle',
+    interjection: 'Interjection',
+    conjunction: 'Conjunction',
+    pronoun: 'Pronoun',
+    determiner: 'Determiner',
+    expression: 'Expression',
+    copyToClipboard: 'Copy to clipboard',
+    copied: 'Copied!',
+    listenPronunciation: 'Listen to pronunciation',
+    backToList: 'Back to list',
+    viewAll: 'View all',
+    heroTitle: 'Korean Meaning Dictionary',
+    heroSubtitle: 'Multilingual meaning dictionary for Korean learners',
+    featuredWords: 'Featured Words',
+    browseByCategory: 'Browse by Category',
+    aboutTitle: 'About Context',
+    aboutDescription: 'A meaning-focused multilingual dictionary for Korean learners.',
+    menu: 'Menu',
+    more: 'More',
+    sitemap: 'Sitemap',
+    sitemapDescription: 'View all pages and categories at a glance',
+    allCategories: 'All Categories',
+    allPages: 'All Pages',
+    searchEngineIndex: 'For search engines',
   },
 };
-
-/**
- * URL 경로에서 로케일 추출
- *
- * @param pathname - URL 경로 (예: '/ko/browse', '/word/hello')
- * @returns 추출된 로케일 ('ko' | 'en')
- *
- * @example
- * getLocaleFromPath('/ko/browse')  // 'ko'
- * getLocaleFromPath('/browse')     // 'en'
- */
-function getLocaleFromPath(pathname: string): Language {
-  if (pathname.startsWith("/ko/") || pathname === "/ko") return "ko";
-  return "en"; // Default is English (no prefix)
-}
-
-/**
- * URL 경로에서 로케일 프리픽스 제거
- *
- * @param pathname - 로케일이 포함된 URL 경로
- * @returns 로케일이 제거된 순수 경로
- *
- * @example
- * stripLocaleFromPath('/ko/browse')  // '/browse'
- * stripLocaleFromPath('/ko')         // '/'
- * stripLocaleFromPath('/browse')     // '/browse'
- */
-function stripLocaleFromPath(pathname: string): string {
-  if (pathname.startsWith("/ko/")) return pathname.slice(3) || "/";
-  if (pathname === "/ko") return "/";
-  return pathname;
-}
 
 /**
  * i18n 컨텍스트 프로바이더
@@ -222,10 +200,10 @@ export const I18nProvider: ParentComponent = (props) => {
     const currentPath = stripLocaleFromPath(location.pathname);
     let newPath: string;
 
-    if (lang === "en") {
+    if (lang === 'en') {
       newPath = currentPath;
     } else {
-      newPath = `/${lang}${currentPath === "/" ? "" : currentPath}`;
+      newPath = `/${lang}${currentPath === '/' ? '' : currentPath}`;
     }
 
     navigate(newPath);
@@ -235,15 +213,15 @@ export const I18nProvider: ParentComponent = (props) => {
     return translations[locale()][key] || key;
   };
 
-  const isKorean = () => locale() === "ko";
-  const isEnglish = () => locale() === "en";
+  const isKorean = () => locale() === 'ko';
+  const isEnglish = () => locale() === 'en';
 
   const localePath = (path: string): string => {
     const currentLocale = locale();
-    if (currentLocale === "en") {
+    if (currentLocale === 'en') {
       return path;
     }
-    return `/${currentLocale}${path === "/" ? "" : path}`;
+    return `/${currentLocale}${path === '/' ? '' : path}`;
   };
 
   return (
@@ -262,7 +240,7 @@ export const I18nProvider: ParentComponent = (props) => {
 export const useI18n = () => {
   const context = useContext(I18nContext);
   if (!context) {
-    throw new Error("useI18n must be used within I18nProvider");
+    throw new Error('useI18n must be used within I18nProvider');
   }
   return context;
 };
@@ -278,15 +256,3 @@ export const useLocale = () => useI18n().locale;
  * @returns UILabels 키를 받아 번역된 문자열을 반환하는 함수
  */
 export const useT = () => useI18n().t;
-
-/** 언어별 표시 이름 */
-export const languageNames: Record<Language, { native: string; english: string }> = {
-  ko: { native: "한국어", english: "Korean" },
-  en: { native: "English", english: "English" },
-};
-
-/** 언어별 국가 코드 */
-export const languageFlags: Record<Language, string> = {
-  ko: "KR",
-  en: "EN",
-};
