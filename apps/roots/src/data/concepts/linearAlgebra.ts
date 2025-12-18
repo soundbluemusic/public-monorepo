@@ -4,95 +4,179 @@
 import type { MathConcept } from "../types";
 
 export const linearAlgebraConcepts: MathConcept[] = [
+  // ============================================
+  // 6.1 벡터 Vectors
+  // ============================================
   {
-    id: "vector-basics",
+    id: "vectors-basics",
     name: {
-      ko: "벡터의 기초",
-      en: "Vector Basics",
-      ja: "ベクトルの基礎",
+      ko: "벡터",
+      en: "Vectors",
+      ja: "ベクトル",
     },
     field: "linear-algebra",
     subfield: "vectors",
     difficulty: 2,
     content: {
       ko: {
-        definition:
-          "벡터는 크기와 방향을 가진 양으로, 좌표계에서 숫자의 순서쌍으로 표현됩니다. 물리적으로는 힘, 속도 등을 나타냅니다.",
+        definition: "크기와 방향을 모두 가진 양으로, 좌표로 표현된다.",
         formulas: [
           {
             latex: "\\vec{v} = \\begin{pmatrix} v_1 \\\\ v_2 \\\\ \\vdots \\\\ v_n \\end{pmatrix}",
-            description: "n차원 벡터의 표현",
+            description: "n차원 벡터 표기",
           },
           {
-            latex: "|\\vec{v}| = \\sqrt{v_1^2 + v_2^2 + \\cdots + v_n^2}",
-            description: "벡터의 크기(norm)",
+            latex: "|\\vec{v}| = \\sqrt{v_1^2 + v_2^2 + ... + v_n^2}",
+            description: "벡터의 크기 (노름)",
           },
           {
-            latex: "\\vec{u} + \\vec{v} = \\begin{pmatrix} u_1 + v_1 \\\\ u_2 + v_2 \\end{pmatrix}",
-            description: "벡터의 덧셈",
+            latex: "\\hat{v} = \\frac{\\vec{v}}{|\\vec{v}|}",
+            description: "단위 벡터",
           },
         ],
         examples: [
           {
-            problem: "벡터 v = (3, 4)의 크기를 구하세요.",
-            solution: "|v| = √(3² + 4²) = √(9 + 16) = √25 = 5",
+            problem: "벡터 v = (3, 4)의 크기를 구하시오.",
+            solution: "|v| = √(3² + 4²) = √25 = 5",
+            difficulty: 1,
           },
           {
-            problem: "u = (1, 2), v = (3, -1)일 때 u + v를 구하세요.",
-            solution: "u + v = (1+3, 2+(-1)) = (4, 1)",
+            problem: "벡터 v = (3, 4)의 단위 벡터를 구하시오.",
+            solution: "v̂ = (3/5, 4/5) = (0.6, 0.8)",
+            difficulty: 2,
           },
         ],
         applications: [
-          { field: "물리학", description: "힘, 속도, 가속도 표현" },
-          { field: "컴퓨터 그래픽스", description: "3D 좌표, 변환" },
-          { field: "기계학습", description: "특성 벡터, 임베딩" },
+          { field: "물리학", description: "힘, 속도, 가속도" },
+          { field: "컴퓨터 그래픽", description: "위치, 방향 표현" },
         ],
       },
       en: {
         definition:
-          "A vector is a quantity with magnitude and direction, represented as an ordered tuple of numbers in a coordinate system. Physically, it represents forces, velocities, etc.",
+          "A quantity with both magnitude and direction, represented by coordinates.",
         formulas: [
           {
             latex: "\\vec{v} = \\begin{pmatrix} v_1 \\\\ v_2 \\\\ \\vdots \\\\ v_n \\end{pmatrix}",
-            description: "n-dimensional vector representation",
+            description: "n-dimensional vector notation",
           },
           {
-            latex: "|\\vec{v}| = \\sqrt{v_1^2 + v_2^2 + \\cdots + v_n^2}",
+            latex: "|\\vec{v}| = \\sqrt{v_1^2 + v_2^2 + ... + v_n^2}",
             description: "Vector magnitude (norm)",
           },
           {
-            latex: "\\vec{u} + \\vec{v} = \\begin{pmatrix} u_1 + v_1 \\\\ u_2 + v_2 \\end{pmatrix}",
-            description: "Vector addition",
+            latex: "\\hat{v} = \\frac{\\vec{v}}{|\\vec{v}|}",
+            description: "Unit vector",
           },
         ],
         examples: [
           {
-            problem: "Find the magnitude of vector v = (3, 4).",
-            solution: "|v| = √(3² + 4²) = √(9 + 16) = √25 = 5",
+            problem: "Find the magnitude of v = (3, 4).",
+            solution: "|v| = √(3² + 4²) = √25 = 5",
+            difficulty: 1,
           },
           {
-            problem: "If u = (1, 2) and v = (3, -1), find u + v.",
-            solution: "u + v = (1+3, 2+(-1)) = (4, 1)",
+            problem: "Find the unit vector of v = (3, 4).",
+            solution: "v̂ = (3/5, 4/5) = (0.6, 0.8)",
+            difficulty: 2,
           },
         ],
         applications: [
           { field: "Physics", description: "Force, velocity, acceleration" },
-          { field: "Computer Graphics", description: "3D coordinates, transforms" },
-          { field: "Machine Learning", description: "Feature vectors, embeddings" },
+          { field: "Computer Graphics", description: "Position, direction" },
         ],
       },
     },
     relations: {
-      prerequisites: ["coordinate-system"],
-      nextTopics: ["dot-product", "cross-product", "matrix-basics"],
-      related: ["pythagorean-theorem"],
+      prerequisites: ["pythagorean-theorem"],
+      nextTopics: ["vector-operations", "dot-product"],
+      related: ["coordinate-system"],
+      applications: ["applied-physics", "applied-cs"],
     },
-    tags: ["벡터", "선형대수", "vector", "linear algebra"],
+    tags: ["linear-algebra", "vector", "fundamental"],
+  },
+  {
+    id: "vector-operations",
+    name: {
+      ko: "벡터 연산",
+      en: "Vector Operations",
+      ja: "ベクトル演算",
+    },
+    field: "linear-algebra",
+    subfield: "vectors",
+    difficulty: 2,
+    content: {
+      ko: {
+        definition: "벡터의 덧셈, 뺄셈, 스칼라 곱 등의 기본 연산이다.",
+        formulas: [
+          {
+            latex: "\\vec{u} + \\vec{v} = \\begin{pmatrix} u_1 + v_1 \\\\ u_2 + v_2 \\end{pmatrix}",
+            description: "벡터의 덧셈 (성분별)",
+          },
+          {
+            latex: "c\\vec{v} = \\begin{pmatrix} cv_1 \\\\ cv_2 \\end{pmatrix}",
+            description: "스칼라 곱",
+          },
+          {
+            latex: "\\vec{u} - \\vec{v} = \\vec{u} + (-1)\\vec{v}",
+            description: "벡터의 뺄셈",
+          },
+        ],
+        examples: [
+          {
+            problem: "u = (1, 2), v = (3, 4)일 때 u + v를 구하시오.",
+            solution: "u + v = (1+3, 2+4) = (4, 6)",
+            difficulty: 1,
+          },
+          {
+            problem: "v = (2, -3)일 때 3v를 구하시오.",
+            solution: "3v = (6, -9)",
+            difficulty: 1,
+          },
+        ],
+      },
+      en: {
+        definition:
+          "Basic operations on vectors: addition, subtraction, scalar multiplication.",
+        formulas: [
+          {
+            latex: "\\vec{u} + \\vec{v} = \\begin{pmatrix} u_1 + v_1 \\\\ u_2 + v_2 \\end{pmatrix}",
+            description: "Vector addition (component-wise)",
+          },
+          {
+            latex: "c\\vec{v} = \\begin{pmatrix} cv_1 \\\\ cv_2 \\end{pmatrix}",
+            description: "Scalar multiplication",
+          },
+          {
+            latex: "\\vec{u} - \\vec{v} = \\vec{u} + (-1)\\vec{v}",
+            description: "Vector subtraction",
+          },
+        ],
+        examples: [
+          {
+            problem: "If u = (1, 2) and v = (3, 4), find u + v.",
+            solution: "u + v = (1+3, 2+4) = (4, 6)",
+            difficulty: 1,
+          },
+          {
+            problem: "If v = (2, -3), find 3v.",
+            solution: "3v = (6, -9)",
+            difficulty: 1,
+          },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["vectors-basics"],
+      nextTopics: ["dot-product", "cross-product"],
+      related: ["linear-combination"],
+      applications: ["applied-physics", "applied-cs"],
+    },
+    tags: ["linear-algebra", "vector", "operations"],
   },
   {
     id: "dot-product",
     name: {
-      ko: "내적 (점곱)",
+      ko: "내적",
       en: "Dot Product",
       ja: "内積",
     },
@@ -102,11 +186,11 @@ export const linearAlgebraConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          "내적(점곱)은 두 벡터를 곱해 스칼라를 얻는 연산입니다. 두 벡터의 유사도나 각도를 측정하는 데 사용됩니다.",
+          "두 벡터의 대응하는 성분을 곱한 후 합한 스칼라 값이다. 두 벡터의 사이각을 구하는 데 사용된다.",
         formulas: [
           {
-            latex: "\\vec{u} \\cdot \\vec{v} = u_1v_1 + u_2v_2 + \\cdots + u_nv_n",
-            description: "내적의 대수적 정의",
+            latex: "\\vec{u} \\cdot \\vec{v} = u_1v_1 + u_2v_2 + ... + u_nv_n",
+            description: "내적의 정의 (성분 계산)",
           },
           {
             latex: "\\vec{u} \\cdot \\vec{v} = |\\vec{u}||\\vec{v}|\\cos\\theta",
@@ -119,65 +203,70 @@ export const linearAlgebraConcepts: MathConcept[] = [
         ],
         examples: [
           {
-            problem: "u = (1, 2, 3), v = (4, 5, 6)의 내적을 구하세요.",
+            problem: "u = (1, 2, 3), v = (4, 5, 6)의 내적을 구하시오.",
             solution: "u · v = 1×4 + 2×5 + 3×6 = 4 + 10 + 18 = 32",
+            difficulty: 2,
           },
           {
-            problem: "u = (1, 0), v = (0, 1)이 직교함을 보이세요.",
-            solution: "u · v = 1×0 + 0×1 = 0. 내적이 0이면 직교합니다.",
+            problem: "u = (1, 0), v = (0, 1)의 사이각을 구하시오.",
+            solution: "u · v = 0, |u| = |v| = 1\ncos θ = 0\nθ = 90°",
+            difficulty: 2,
           },
         ],
         applications: [
-          { field: "기계학습", description: "코사인 유사도 계산" },
-          { field: "물리학", description: "일(work) = 힘 · 변위" },
-          { field: "컴퓨터 비전", description: "이미지 매칭" },
+          { field: "물리학", description: "일 = 힘 · 변위" },
+          { field: "머신러닝", description: "코사인 유사도" },
+          { field: "컴퓨터 그래픽", description: "조명 계산" },
         ],
       },
       en: {
         definition:
-          "The dot product is an operation that multiplies two vectors to produce a scalar. It measures similarity or angle between vectors.",
+          "The sum of products of corresponding components, resulting in a scalar. Used to find angles between vectors.",
         formulas: [
           {
-            latex: "\\vec{u} \\cdot \\vec{v} = u_1v_1 + u_2v_2 + \\cdots + u_nv_n",
-            description: "Algebraic definition of dot product",
+            latex: "\\vec{u} \\cdot \\vec{v} = u_1v_1 + u_2v_2 + ... + u_nv_n",
+            description: "Dot product definition (component)",
           },
           {
             latex: "\\vec{u} \\cdot \\vec{v} = |\\vec{u}||\\vec{v}|\\cos\\theta",
-            description: "Geometric definition of dot product",
+            description: "Geometric definition",
           },
           {
             latex: "\\cos\\theta = \\frac{\\vec{u} \\cdot \\vec{v}}{|\\vec{u}||\\vec{v}|}",
-            description: "Angle between two vectors",
+            description: "Angle between vectors",
           },
         ],
         examples: [
           {
             problem: "Find the dot product of u = (1, 2, 3) and v = (4, 5, 6).",
             solution: "u · v = 1×4 + 2×5 + 3×6 = 4 + 10 + 18 = 32",
+            difficulty: 2,
           },
           {
-            problem: "Show that u = (1, 0) and v = (0, 1) are orthogonal.",
-            solution: "u · v = 1×0 + 0×1 = 0. Zero dot product means orthogonal.",
+            problem: "Find the angle between u = (1, 0) and v = (0, 1).",
+            solution: "u · v = 0, |u| = |v| = 1\ncos θ = 0\nθ = 90°",
+            difficulty: 2,
           },
         ],
         applications: [
+          { field: "Physics", description: "Work = Force · Displacement" },
           { field: "Machine Learning", description: "Cosine similarity" },
-          { field: "Physics", description: "Work = force · displacement" },
-          { field: "Computer Vision", description: "Image matching" },
+          { field: "Computer Graphics", description: "Lighting calculations" },
         ],
       },
     },
     relations: {
-      prerequisites: ["vector-basics"],
+      prerequisites: ["vectors-basics"],
       nextTopics: ["cross-product", "orthogonality"],
-      related: ["cosine-similarity"],
+      related: ["projection"],
+      applications: ["applied-physics", "applied-cs"],
     },
-    tags: ["내적", "점곱", "dot product", "scalar product"],
+    tags: ["linear-algebra", "vector", "dot-product"],
   },
   {
     id: "cross-product",
     name: {
-      ko: "외적 (벡터곱)",
+      ko: "외적",
       en: "Cross Product",
       ja: "外積",
     },
@@ -187,68 +276,77 @@ export const linearAlgebraConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          "외적(벡터곱)은 3차원에서 두 벡터에 수직인 새로운 벡터를 생성하는 연산입니다. 크기는 두 벡터가 이루는 평행사변형의 넓이입니다.",
+          "3차원 벡터에서 정의되며, 두 벡터에 모두 수직인 새 벡터를 생성한다.",
         formulas: [
           {
-            latex: "\\vec{u} \\times \\vec{v} = \\begin{vmatrix} \\vec{i} & \\vec{j} & \\vec{k} \\\\ u_1 & u_2 & u_3 \\\\ v_1 & v_2 & v_3 \\end{vmatrix}",
-            description: "외적의 행렬식 정의",
+            latex:
+              "\\vec{u} \\times \\vec{v} = \\begin{pmatrix} u_2v_3 - u_3v_2 \\\\ u_3v_1 - u_1v_3 \\\\ u_1v_2 - u_2v_1 \\end{pmatrix}",
+            description: "외적의 성분 공식",
           },
           {
             latex: "|\\vec{u} \\times \\vec{v}| = |\\vec{u}||\\vec{v}|\\sin\\theta",
-            description: "외적의 크기",
+            description: "외적의 크기 (평행사변형 넓이)",
           },
         ],
         examples: [
           {
-            problem: "u = (1, 0, 0), v = (0, 1, 0)의 외적을 구하세요.",
-            solution: "u × v = (0×0 - 0×1, 0×0 - 1×0, 1×1 - 0×0) = (0, 0, 1) = k",
+            problem: "u = (1, 0, 0), v = (0, 1, 0)의 외적을 구하시오.",
+            solution:
+              "u × v = (0×0 - 0×1, 0×0 - 1×0, 1×1 - 0×0)\n= (0, 0, 1)",
+            difficulty: 2,
           },
         ],
         applications: [
-          { field: "물리학", description: "토크 = r × F, 각운동량" },
-          { field: "컴퓨터 그래픽스", description: "법선 벡터 계산" },
-          { field: "전자기학", description: "로렌츠 힘" },
+          { field: "물리학", description: "토크, 각운동량" },
+          { field: "컴퓨터 그래픽", description: "법선 벡터 계산" },
         ],
       },
       en: {
         definition:
-          "The cross product creates a new vector perpendicular to two 3D vectors. Its magnitude equals the area of the parallelogram formed by the vectors.",
+          "Defined for 3D vectors, produces a vector perpendicular to both input vectors.",
         formulas: [
           {
-            latex: "\\vec{u} \\times \\vec{v} = \\begin{vmatrix} \\vec{i} & \\vec{j} & \\vec{k} \\\\ u_1 & u_2 & u_3 \\\\ v_1 & v_2 & v_3 \\end{vmatrix}",
-            description: "Cross product determinant definition",
+            latex:
+              "\\vec{u} \\times \\vec{v} = \\begin{pmatrix} u_2v_3 - u_3v_2 \\\\ u_3v_1 - u_1v_3 \\\\ u_1v_2 - u_2v_1 \\end{pmatrix}",
+            description: "Cross product component formula",
           },
           {
             latex: "|\\vec{u} \\times \\vec{v}| = |\\vec{u}||\\vec{v}|\\sin\\theta",
-            description: "Magnitude of cross product",
+            description: "Magnitude (parallelogram area)",
           },
         ],
         examples: [
           {
-            problem: "Find the cross product of u = (1, 0, 0) and v = (0, 1, 0).",
-            solution: "u × v = (0×0 - 0×1, 0×0 - 1×0, 1×1 - 0×0) = (0, 0, 1) = k",
+            problem: "Find u × v for u = (1, 0, 0) and v = (0, 1, 0).",
+            solution:
+              "u × v = (0×0 - 0×1, 0×0 - 1×0, 1×1 - 0×0)\n= (0, 0, 1)",
+            difficulty: 2,
           },
         ],
         applications: [
-          { field: "Physics", description: "Torque = r × F, angular momentum" },
+          { field: "Physics", description: "Torque, angular momentum" },
           { field: "Computer Graphics", description: "Normal vector calculation" },
-          { field: "Electromagnetism", description: "Lorentz force" },
         ],
       },
     },
     relations: {
-      prerequisites: ["vector-basics", "determinant"],
-      nextTopics: ["vector-spaces"],
-      related: ["dot-product", "triple-product"],
+      prerequisites: ["vectors-basics", "dot-product"],
+      nextTopics: [],
+      related: ["determinant"],
+      applications: ["applied-physics", "applied-cs"],
     },
-    tags: ["외적", "벡터곱", "cross product", "vector product"],
+    tags: ["linear-algebra", "vector", "cross-product"],
   },
+
+  // ============================================
+  // 6.2 행렬 Matrices
+  // ============================================
   {
-    id: "matrix-basics",
+    id: "matrices-basics",
     name: {
-      ko: "행렬의 기초",
-      en: "Matrix Basics",
-      ja: "行列の基礎",
+      ko: "행렬",
+      en: "Matrices",
+      ja: "行列",
     },
     field: "linear-algebra",
     subfield: "matrices",
@@ -256,71 +354,146 @@ export const linearAlgebraConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          "행렬은 숫자들을 직사각형 배열로 나타낸 것입니다. 선형 변환, 연립방정식, 데이터 표현 등에 사용됩니다.",
+          "수를 직사각형 배열로 나열한 것으로, 선형 변환과 연립방정식을 표현한다.",
         formulas: [
           {
-            latex: "A = \\begin{pmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \\end{pmatrix}",
-            description: "2×2 행렬",
+            latex:
+              "A = \\begin{pmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \\end{pmatrix}",
+            description: "2×2 행렬 표기",
           },
           {
-            latex: "(A + B)_{ij} = A_{ij} + B_{ij}",
-            description: "행렬의 덧셈",
-          },
-          {
-            latex: "(AB)_{ij} = \\sum_{k} A_{ik}B_{kj}",
-            description: "행렬의 곱셈",
+            latex: "A_{m \\times n}",
+            description: "m행 n열 행렬",
           },
         ],
         examples: [
           {
             problem:
-              "A = [[1, 2], [3, 4]], B = [[5, 6], [7, 8]]일 때 A + B를 구하세요.",
-            solution: "A + B = [[1+5, 2+6], [3+7, 4+8]] = [[6, 8], [10, 12]]",
+              "A = [[1, 2], [3, 4]]의 (2, 1) 성분을 구하시오.",
+            solution: "2행 1열의 성분은 3이다.",
+            difficulty: 1,
           },
         ],
         applications: [
-          { field: "컴퓨터 그래픽스", description: "회전, 스케일링, 변환" },
-          { field: "데이터 과학", description: "데이터 테이블 표현" },
-          { field: "물리학", description: "양자역학의 연산자" },
+          { field: "컴퓨터 그래픽", description: "변환 행렬" },
+          { field: "데이터 과학", description: "데이터 표현" },
         ],
       },
       en: {
         definition:
-          "A matrix is a rectangular array of numbers. It's used for linear transformations, systems of equations, and data representation.",
+          "A rectangular array of numbers, used to represent linear transformations and systems of equations.",
         formulas: [
           {
-            latex: "A = \\begin{pmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \\end{pmatrix}",
-            description: "2×2 matrix",
+            latex:
+              "A = \\begin{pmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \\end{pmatrix}",
+            description: "2×2 matrix notation",
           },
+          {
+            latex: "A_{m \\times n}",
+            description: "m rows by n columns matrix",
+          },
+        ],
+        examples: [
+          {
+            problem: "Find the (2, 1) entry of A = [[1, 2], [3, 4]].",
+            solution: "The entry in row 2, column 1 is 3.",
+            difficulty: 1,
+          },
+        ],
+        applications: [
+          { field: "Computer Graphics", description: "Transformation matrices" },
+          { field: "Data Science", description: "Data representation" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["vectors-basics"],
+      nextTopics: ["matrix-operations", "determinant"],
+      related: ["linear-transformation"],
+      applications: ["applied-cs"],
+    },
+    tags: ["linear-algebra", "matrix", "fundamental"],
+  },
+  {
+    id: "matrix-operations",
+    name: {
+      ko: "행렬 연산",
+      en: "Matrix Operations",
+      ja: "行列演算",
+    },
+    field: "linear-algebra",
+    subfield: "matrices",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition: "행렬의 덧셈, 스칼라 곱, 행렬 곱셈 등의 연산이다.",
+        formulas: [
           {
             latex: "(A + B)_{ij} = A_{ij} + B_{ij}",
-            description: "Matrix addition",
+            description: "행렬의 덧셈 (같은 크기일 때)",
           },
           {
-            latex: "(AB)_{ij} = \\sum_{k} A_{ik}B_{kj}",
-            description: "Matrix multiplication",
+            latex: "(cA)_{ij} = c \\cdot A_{ij}",
+            description: "스칼라 곱",
+          },
+          {
+            latex: "(AB)_{ij} = \\sum_{k=1}^{n} A_{ik}B_{kj}",
+            description: "행렬 곱셈 (A: m×n, B: n×p → AB: m×p)",
           },
         ],
         examples: [
           {
             problem:
-              "If A = [[1, 2], [3, 4]] and B = [[5, 6], [7, 8]], find A + B.",
-            solution: "A + B = [[1+5, 2+6], [3+7, 4+8]] = [[6, 8], [10, 12]]",
+              "A = [[1, 2], [3, 4]], B = [[5, 6], [7, 8]]일 때 AB를 구하시오.",
+            solution:
+              "AB = [[1×5+2×7, 1×6+2×8], [3×5+4×7, 3×6+4×8]]\n= [[19, 22], [43, 50]]",
+            difficulty: 3,
           },
         ],
         applications: [
-          { field: "Computer Graphics", description: "Rotation, scaling, transforms" },
-          { field: "Data Science", description: "Data table representation" },
-          { field: "Physics", description: "Quantum mechanics operators" },
+          { field: "컴퓨터 그래픽", description: "연속 변환의 합성" },
+          { field: "신경망", description: "레이어 간 연산" },
+        ],
+      },
+      en: {
+        definition:
+          "Operations on matrices: addition, scalar multiplication, matrix multiplication.",
+        formulas: [
+          {
+            latex: "(A + B)_{ij} = A_{ij} + B_{ij}",
+            description: "Matrix addition (same dimensions)",
+          },
+          {
+            latex: "(cA)_{ij} = c \\cdot A_{ij}",
+            description: "Scalar multiplication",
+          },
+          {
+            latex: "(AB)_{ij} = \\sum_{k=1}^{n} A_{ik}B_{kj}",
+            description: "Matrix multiplication (A: m×n, B: n×p → AB: m×p)",
+          },
+        ],
+        examples: [
+          {
+            problem:
+              "Find AB where A = [[1, 2], [3, 4]] and B = [[5, 6], [7, 8]].",
+            solution:
+              "AB = [[1×5+2×7, 1×6+2×8], [3×5+4×7, 3×6+4×8]]\n= [[19, 22], [43, 50]]",
+            difficulty: 3,
+          },
+        ],
+        applications: [
+          { field: "Computer Graphics", description: "Composition of transformations" },
+          { field: "Neural Networks", description: "Layer computations" },
         ],
       },
     },
     relations: {
-      prerequisites: ["vector-basics"],
-      nextTopics: ["determinant", "matrix-inverse", "eigenvalues"],
-      related: ["linear-transformation"],
+      prerequisites: ["matrices-basics"],
+      nextTopics: ["determinant", "inverse-matrix"],
+      related: ["matrix-transpose"],
+      applications: ["applied-cs"],
     },
-    tags: ["행렬", "선형대수", "matrix", "linear algebra"],
+    tags: ["linear-algebra", "matrix", "operations"],
   },
   {
     id: "determinant",
@@ -335,119 +508,276 @@ export const linearAlgebraConcepts: MathConcept[] = [
     content: {
       ko: {
         definition:
-          "행렬식은 정사각행렬에서 계산되는 스칼라 값으로, 행렬의 가역성, 부피 변화 등을 나타냅니다.",
+          "정방행렬에 대해 정의되는 스칼라 값으로, 역행렬의 존재 여부와 선형변환의 부피 변화를 나타낸다.",
         formulas: [
           {
-            latex: "\\det\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} = ad - bc",
-            description: "2×2 행렬식",
+            latex: "\\det(A) = |A| = ad - bc \\quad (2 \\times 2)",
+            description: "2×2 행렬의 행렬식",
+            variables: [
+              { symbol: "A", meaning: "[[a, b], [c, d]]" },
+            ],
           },
           {
-            latex: "\\det(AB) = \\det(A) \\cdot \\det(B)",
-            description: "행렬식의 곱셈 성질",
-          },
-          {
-            latex: "\\det(A^{-1}) = \\frac{1}{\\det(A)}",
-            description: "역행렬의 행렬식",
+            latex: "\\det(A) = \\sum_{j=1}^{n} (-1)^{1+j} a_{1j} M_{1j}",
+            description: "여인수 전개 (n×n)",
           },
         ],
         examples: [
           {
-            problem: "A = [[3, 1], [2, 4]]의 행렬식을 구하세요.",
+            problem: "A = [[3, 1], [2, 4]]의 행렬식을 구하시오.",
             solution: "det(A) = 3×4 - 1×2 = 12 - 2 = 10",
+            difficulty: 2,
+          },
+          {
+            problem:
+              "det(A) = 0일 때 A의 특성은?",
+            solution: "특이행렬(singular matrix)이며 역행렬이 존재하지 않는다.",
+            difficulty: 2,
           },
         ],
         applications: [
-          { field: "기하학", description: "넓이, 부피 계산" },
-          { field: "연립방정식", description: "크래머 공식" },
-          { field: "선형대수", description: "역행렬 존재 여부 판단" },
+          { field: "선형대수", description: "역행렬 존재 판단" },
+          { field: "기하학", description: "넓이/부피 변화율" },
         ],
       },
       en: {
         definition:
-          "The determinant is a scalar value computed from a square matrix, representing invertibility, volume change, and more.",
+          "A scalar value for square matrices, indicating invertibility and volume scaling of linear transformations.",
         formulas: [
           {
-            latex: "\\det\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} = ad - bc",
-            description: "2×2 determinant",
+            latex: "\\det(A) = |A| = ad - bc \\quad (2 \\times 2)",
+            description: "Determinant of 2×2 matrix",
+            variables: [{ symbol: "A", meaning: "[[a, b], [c, d]]" }],
           },
           {
-            latex: "\\det(AB) = \\det(A) \\cdot \\det(B)",
-            description: "Product property of determinants",
-          },
-          {
-            latex: "\\det(A^{-1}) = \\frac{1}{\\det(A)}",
-            description: "Determinant of inverse",
+            latex: "\\det(A) = \\sum_{j=1}^{n} (-1)^{1+j} a_{1j} M_{1j}",
+            description: "Cofactor expansion (n×n)",
           },
         ],
         examples: [
           {
-            problem: "Find the determinant of A = [[3, 1], [2, 4]].",
+            problem: "Find det(A) for A = [[3, 1], [2, 4]].",
             solution: "det(A) = 3×4 - 1×2 = 12 - 2 = 10",
+            difficulty: 2,
+          },
+          {
+            problem: "What does det(A) = 0 imply?",
+            solution: "A is singular and has no inverse.",
+            difficulty: 2,
           },
         ],
         applications: [
-          { field: "Geometry", description: "Area, volume calculation" },
-          { field: "Linear Systems", description: "Cramer's rule" },
-          { field: "Linear Algebra", description: "Determining invertibility" },
+          { field: "Linear Algebra", description: "Invertibility test" },
+          { field: "Geometry", description: "Area/volume scaling" },
         ],
       },
     },
     relations: {
-      prerequisites: ["matrix-basics"],
-      nextTopics: ["matrix-inverse", "eigenvalues"],
-      related: ["cross-product"],
+      prerequisites: ["matrices-basics"],
+      nextTopics: ["inverse-matrix", "eigenvalues"],
+      related: ["cramers-rule"],
+      applications: ["applied-math"],
     },
-    tags: ["행렬식", "선형대수", "determinant", "linear algebra"],
+    tags: ["linear-algebra", "matrix", "determinant"],
   },
   {
-    id: "eigenvalues",
+    id: "inverse-matrix",
+    name: {
+      ko: "역행렬",
+      en: "Inverse Matrix",
+      ja: "逆行列",
+    },
+    field: "linear-algebra",
+    subfield: "matrices",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "행렬 A에 대해 AB = BA = I를 만족하는 행렬 B를 A의 역행렬이라 한다.",
+        formulas: [
+          {
+            latex: "AA^{-1} = A^{-1}A = I",
+            description: "역행렬의 정의",
+          },
+          {
+            latex:
+              "A^{-1} = \\frac{1}{\\det(A)} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}",
+            description: "2×2 행렬의 역행렬 (det(A) ≠ 0)",
+          },
+        ],
+        examples: [
+          {
+            problem: "A = [[2, 1], [5, 3]]의 역행렬을 구하시오.",
+            solution:
+              "det(A) = 6 - 5 = 1\nA⁻¹ = [[3, -1], [-5, 2]]",
+            difficulty: 3,
+          },
+        ],
+        applications: [
+          { field: "연립방정식", description: "Ax = b → x = A⁻¹b" },
+          { field: "암호학", description: "행렬 암호화" },
+        ],
+      },
+      en: {
+        definition:
+          "Matrix B such that AB = BA = I, where I is the identity matrix.",
+        formulas: [
+          {
+            latex: "AA^{-1} = A^{-1}A = I",
+            description: "Definition of inverse",
+          },
+          {
+            latex:
+              "A^{-1} = \\frac{1}{\\det(A)} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}",
+            description: "Inverse of 2×2 matrix (det(A) ≠ 0)",
+          },
+        ],
+        examples: [
+          {
+            problem: "Find the inverse of A = [[2, 1], [5, 3]].",
+            solution: "det(A) = 6 - 5 = 1\nA⁻¹ = [[3, -1], [-5, 2]]",
+            difficulty: 3,
+          },
+        ],
+        applications: [
+          { field: "Systems of equations", description: "Ax = b → x = A⁻¹b" },
+          { field: "Cryptography", description: "Matrix encryption" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["determinant"],
+      nextTopics: ["systems-linear-equations"],
+      related: ["identity-matrix"],
+      applications: ["applied-cs"],
+    },
+    tags: ["linear-algebra", "matrix", "inverse"],
+  },
+
+  // ============================================
+  // 6.3 고급 선형대수 Advanced Linear Algebra
+  // ============================================
+  {
+    id: "systems-linear-equations",
+    name: {
+      ko: "연립일차방정식과 행렬",
+      en: "Systems of Linear Equations (Matrix Form)",
+      ja: "連立一次方程式と行列",
+    },
+    field: "linear-algebra",
+    subfield: "applications",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "연립방정식을 행렬 형태 Ax = b로 표현하고 풀 수 있다.",
+        formulas: [
+          {
+            latex: "Ax = b",
+            description: "연립방정식의 행렬 표현",
+          },
+          {
+            latex: "x = A^{-1}b",
+            description: "역행렬을 이용한 풀이 (det(A) ≠ 0)",
+          },
+        ],
+        examples: [
+          {
+            problem:
+              "x + 2y = 5, 3x + 4y = 11을 행렬로 풀어라.",
+            solution:
+              "A = [[1, 2], [3, 4]], b = [5, 11]\ndet(A) = -2\nA⁻¹ = [[-2, 1], [1.5, -0.5]]\nx = A⁻¹b = [1, 2]",
+            difficulty: 3,
+          },
+        ],
+        applications: [
+          { field: "공학", description: "회로 분석, 구조 해석" },
+          { field: "경제학", description: "투입산출 분석" },
+        ],
+      },
+      en: {
+        definition:
+          "Systems of equations can be expressed and solved in matrix form Ax = b.",
+        formulas: [
+          {
+            latex: "Ax = b",
+            description: "Matrix form of system",
+          },
+          {
+            latex: "x = A^{-1}b",
+            description: "Solution using inverse (det(A) ≠ 0)",
+          },
+        ],
+        examples: [
+          {
+            problem: "Solve x + 2y = 5, 3x + 4y = 11 using matrices.",
+            solution:
+              "A = [[1, 2], [3, 4]], b = [5, 11]\ndet(A) = -2\nA⁻¹ = [[-2, 1], [1.5, -0.5]]\nx = A⁻¹b = [1, 2]",
+            difficulty: 3,
+          },
+        ],
+        applications: [
+          { field: "Engineering", description: "Circuit analysis, structural analysis" },
+          { field: "Economics", description: "Input-output analysis" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["inverse-matrix", "system-of-equations"],
+      nextTopics: ["row-reduction"],
+      related: ["gaussian-elimination"],
+      applications: ["applied-engineering"],
+    },
+    tags: ["linear-algebra", "system", "applications"],
+  },
+  {
+    id: "eigenvalues-eigenvectors",
     name: {
       ko: "고유값과 고유벡터",
       en: "Eigenvalues and Eigenvectors",
       ja: "固有値と固有ベクトル",
     },
     field: "linear-algebra",
-    subfield: "matrices",
+    subfield: "advanced",
     difficulty: 4,
     content: {
       ko: {
         definition:
-          "고유벡터는 행렬 변환 시 방향이 변하지 않는 벡터이고, 고유값은 그 벡터가 스케일되는 비율입니다.",
+          "행렬 A에 대해 Av = λv를 만족하는 스칼라 λ를 고유값, 벡터 v를 고유벡터라 한다.",
         formulas: [
           {
-            latex: "A\\vec{v} = \\lambda\\vec{v}",
+            latex: "Av = \\lambda v",
             description: "고유값 방정식",
           },
           {
             latex: "\\det(A - \\lambda I) = 0",
-            description: "특성 방정식",
+            description: "특성방정식",
           },
         ],
         examples: [
           {
-            problem: "A = [[2, 1], [1, 2]]의 고유값을 구하세요.",
+            problem: "A = [[2, 1], [1, 2]]의 고유값을 구하시오.",
             solution:
-              "det(A - λI) = (2-λ)² - 1 = λ² - 4λ + 3 = (λ-1)(λ-3) = 0, λ = 1, 3",
+              "det(A - λI) = (2-λ)² - 1 = 0\nλ² - 4λ + 3 = 0\n(λ-1)(λ-3) = 0\nλ = 1 또는 λ = 3",
+            difficulty: 4,
           },
         ],
         history: {
-          discoveredBy: "다비드 힐베르트 등",
-          year: "19세기 말",
           background:
-            "고유값 이론은 진동 분석, 양자역학 등 다양한 분야에서 독립적으로 발전했습니다.",
+            "오일러와 라그랑주의 연구에서 시작되어 힐버트가 이론을 완성했다.",
         },
         applications: [
-          { field: "주성분 분석(PCA)", description: "차원 축소" },
-          { field: "양자역학", description: "관측 가능량의 측정값" },
-          { field: "구조공학", description: "진동 모드 분석" },
+          { field: "물리학", description: "양자역학, 진동 모드" },
+          { field: "데이터 과학", description: "PCA (주성분 분석)" },
+          { field: "페이지랭크", description: "Google 검색 알고리즘" },
         ],
       },
       en: {
         definition:
-          "An eigenvector is a vector that doesn't change direction under a matrix transformation; the eigenvalue is the scaling factor.",
+          "For matrix A, λ is an eigenvalue and v is an eigenvector if Av = λv.",
         formulas: [
           {
-            latex: "A\\vec{v} = \\lambda\\vec{v}",
+            latex: "Av = \\lambda v",
             description: "Eigenvalue equation",
           },
           {
@@ -459,43 +789,43 @@ export const linearAlgebraConcepts: MathConcept[] = [
           {
             problem: "Find the eigenvalues of A = [[2, 1], [1, 2]].",
             solution:
-              "det(A - λI) = (2-λ)² - 1 = λ² - 4λ + 3 = (λ-1)(λ-3) = 0, λ = 1, 3",
+              "det(A - λI) = (2-λ)² - 1 = 0\nλ² - 4λ + 3 = 0\n(λ-1)(λ-3) = 0\nλ = 1 or λ = 3",
+            difficulty: 4,
           },
         ],
         history: {
-          discoveredBy: "David Hilbert and others",
-          year: "Late 19th century",
           background:
-            "Eigenvalue theory developed independently in vibration analysis, quantum mechanics, etc.",
+            "Developed from work by Euler and Lagrange, formalized by Hilbert.",
         },
         applications: [
-          { field: "PCA", description: "Dimensionality reduction" },
-          { field: "Quantum Mechanics", description: "Observable measurements" },
-          { field: "Structural Engineering", description: "Vibration mode analysis" },
+          { field: "Physics", description: "Quantum mechanics, vibration modes" },
+          { field: "Data Science", description: "PCA (Principal Component Analysis)" },
+          { field: "PageRank", description: "Google search algorithm" },
         ],
       },
     },
     relations: {
-      prerequisites: ["matrix-basics", "determinant"],
-      nextTopics: ["diagonalization", "svd"],
-      related: ["spectral-theorem"],
+      prerequisites: ["determinant", "matrices-basics"],
+      nextTopics: ["diagonalization", "spectral-theorem"],
+      related: ["characteristic-polynomial"],
+      applications: ["applied-cs", "applied-physics"],
     },
-    tags: ["고유값", "고유벡터", "eigenvalue", "eigenvector"],
+    tags: ["linear-algebra", "eigenvalue", "eigenvector", "advanced"],
   },
   {
     id: "linear-transformation",
     name: {
-      ko: "선형변환",
+      ko: "선형 변환",
       en: "Linear Transformation",
       ja: "線形変換",
     },
     field: "linear-algebra",
-    subfield: "linear-maps",
+    subfield: "advanced",
     difficulty: 3,
     content: {
       ko: {
         definition:
-          "선형변환은 벡터 공간 사이의 함수로, 덧셈과 스칼라 곱을 보존합니다. 행렬로 표현할 수 있습니다.",
+          "벡터 공간 사이의 함수로, 덧셈과 스칼라 곱을 보존하는 변환이다.",
         formulas: [
           {
             latex: "T(\\vec{u} + \\vec{v}) = T(\\vec{u}) + T(\\vec{v})",
@@ -505,27 +835,28 @@ export const linearAlgebraConcepts: MathConcept[] = [
             latex: "T(c\\vec{v}) = cT(\\vec{v})",
             description: "스칼라 곱 보존",
           },
-          {
-            latex: "T(\\vec{x}) = A\\vec{x}",
-            description: "행렬 표현",
-          },
         ],
         examples: [
           {
-            problem: "회전 변환이 선형변환임을 보이세요.",
+            problem: "회전 변환 행렬을 구하시오 (반시계 방향 θ).",
             solution:
-              "2D 회전 행렬 R = [[cosθ, -sinθ], [sinθ, cosθ]]로 표현되며, Rv₁ + Rv₂ = R(v₁ + v₂)를 만족합니다.",
+              "R(θ) = [[cos θ, -sin θ], [sin θ, cos θ]]",
+            difficulty: 3,
+          },
+          {
+            problem: "스케일링 변환 (x방향 2배, y방향 3배)을 행렬로 표현하시오.",
+            solution: "S = [[2, 0], [0, 3]]",
+            difficulty: 2,
           },
         ],
         applications: [
-          { field: "컴퓨터 그래픽스", description: "회전, 반사, 투영" },
-          { field: "신호 처리", description: "푸리에 변환" },
-          { field: "기계학습", description: "신경망의 선형 층" },
+          { field: "컴퓨터 그래픽", description: "회전, 확대/축소, 이동" },
+          { field: "로봇공학", description: "좌표계 변환" },
         ],
       },
       en: {
         definition:
-          "A linear transformation is a function between vector spaces that preserves addition and scalar multiplication. It can be represented by a matrix.",
+          "A function between vector spaces that preserves addition and scalar multiplication.",
         formulas: [
           {
             latex: "T(\\vec{u} + \\vec{v}) = T(\\vec{u}) + T(\\vec{v})",
@@ -535,30 +866,185 @@ export const linearAlgebraConcepts: MathConcept[] = [
             latex: "T(c\\vec{v}) = cT(\\vec{v})",
             description: "Preserves scalar multiplication",
           },
-          {
-            latex: "T(\\vec{x}) = A\\vec{x}",
-            description: "Matrix representation",
-          },
         ],
         examples: [
           {
-            problem: "Show that rotation is a linear transformation.",
-            solution:
-              "2D rotation matrix R = [[cosθ, -sinθ], [sinθ, cosθ]] satisfies Rv₁ + Rv₂ = R(v₁ + v₂).",
+            problem: "Find the rotation matrix (counterclockwise by θ).",
+            solution: "R(θ) = [[cos θ, -sin θ], [sin θ, cos θ]]",
+            difficulty: 3,
+          },
+          {
+            problem:
+              "Express scaling (2x in x, 3x in y) as a matrix.",
+            solution: "S = [[2, 0], [0, 3]]",
+            difficulty: 2,
           },
         ],
         applications: [
-          { field: "Computer Graphics", description: "Rotation, reflection, projection" },
-          { field: "Signal Processing", description: "Fourier transform" },
-          { field: "Machine Learning", description: "Linear layers in neural networks" },
+          { field: "Computer Graphics", description: "Rotation, scaling, translation" },
+          { field: "Robotics", description: "Coordinate frame transformations" },
         ],
       },
     },
     relations: {
-      prerequisites: ["vector-basics", "matrix-basics"],
-      nextTopics: ["kernel-image", "eigenvalues"],
-      related: ["function"],
+      prerequisites: ["matrices-basics", "vectors-basics"],
+      nextTopics: ["kernel-image"],
+      related: ["isomorphism"],
+      applications: ["applied-cs"],
     },
-    tags: ["선형변환", "행렬", "linear transformation", "linear map"],
+    tags: ["linear-algebra", "transformation", "advanced"],
+  },
+  {
+    id: "vector-space",
+    name: {
+      ko: "벡터 공간",
+      en: "Vector Space",
+      ja: "ベクトル空間",
+    },
+    field: "linear-algebra",
+    subfield: "advanced",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "벡터 덧셈과 스칼라 곱이 정의되고 특정 공리를 만족하는 집합이다.",
+        formulas: [
+          {
+            latex: "\\vec{u} + \\vec{v} \\in V",
+            description: "덧셈에 대해 닫혀 있음",
+          },
+          {
+            latex: "c\\vec{v} \\in V",
+            description: "스칼라 곱에 대해 닫혀 있음",
+          },
+        ],
+        examples: [
+          {
+            problem: "ℝⁿ이 벡터 공간인지 확인하시오.",
+            solution:
+              "덧셈과 스칼라 곱에 대해 닫혀 있고, 8가지 공리를 만족하므로 벡터 공간이다.",
+            difficulty: 3,
+          },
+        ],
+        applications: [
+          { field: "함수해석", description: "함수 공간" },
+          { field: "양자역학", description: "힐버트 공간" },
+        ],
+      },
+      en: {
+        definition:
+          "A set with vector addition and scalar multiplication satisfying specific axioms.",
+        formulas: [
+          {
+            latex: "\\vec{u} + \\vec{v} \\in V",
+            description: "Closed under addition",
+          },
+          {
+            latex: "c\\vec{v} \\in V",
+            description: "Closed under scalar multiplication",
+          },
+        ],
+        examples: [
+          {
+            problem: "Verify that ℝⁿ is a vector space.",
+            solution:
+              "It's closed under addition and scalar multiplication, and satisfies all 8 axioms, so it's a vector space.",
+            difficulty: 3,
+          },
+        ],
+        applications: [
+          { field: "Functional Analysis", description: "Function spaces" },
+          { field: "Quantum Mechanics", description: "Hilbert spaces" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["vectors-basics"],
+      nextTopics: ["basis", "dimension"],
+      related: ["subspace"],
+      applications: ["applied-physics"],
+    },
+    tags: ["linear-algebra", "vector-space", "abstract", "advanced"],
+  },
+  {
+    id: "basis-dimension",
+    name: {
+      ko: "기저와 차원",
+      en: "Basis and Dimension",
+      ja: "基底と次元",
+    },
+    field: "linear-algebra",
+    subfield: "advanced",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "기저는 벡터 공간을 생성하는 선형 독립인 벡터의 집합이고, 차원은 기저의 개수이다.",
+        formulas: [
+          {
+            latex: "\\dim(V) = |\\text{basis}|",
+            description: "차원 = 기저 벡터의 개수",
+          },
+          {
+            latex: "\\dim(\\mathbb{R}^n) = n",
+            description: "ℝⁿ의 차원",
+          },
+        ],
+        examples: [
+          {
+            problem: "ℝ²의 표준 기저를 구하시오.",
+            solution: "e₁ = (1, 0), e₂ = (0, 1)\n표준 기저: {e₁, e₂}",
+            difficulty: 2,
+          },
+          {
+            problem: "(1, 2)와 (2, 4)가 ℝ²의 기저인지 확인하시오.",
+            solution: "(2, 4) = 2(1, 2)이므로 선형 종속\n따라서 기저가 아니다.",
+            difficulty: 3,
+          },
+        ],
+        applications: [
+          { field: "데이터 과학", description: "특성 공간의 차원" },
+          { field: "물리학", description: "자유도" },
+        ],
+      },
+      en: {
+        definition:
+          "A basis is a set of linearly independent vectors that span the space. Dimension is the number of basis vectors.",
+        formulas: [
+          {
+            latex: "\\dim(V) = |\\text{basis}|",
+            description: "Dimension = number of basis vectors",
+          },
+          {
+            latex: "\\dim(\\mathbb{R}^n) = n",
+            description: "Dimension of ℝⁿ",
+          },
+        ],
+        examples: [
+          {
+            problem: "Find the standard basis of ℝ².",
+            solution: "e₁ = (1, 0), e₂ = (0, 1)\nStandard basis: {e₁, e₂}",
+            difficulty: 2,
+          },
+          {
+            problem: "Check if (1, 2) and (2, 4) form a basis for ℝ².",
+            solution:
+              "(2, 4) = 2(1, 2), so linearly dependent\nNot a basis.",
+            difficulty: 3,
+          },
+        ],
+        applications: [
+          { field: "Data Science", description: "Feature space dimensions" },
+          { field: "Physics", description: "Degrees of freedom" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["vector-space"],
+      nextTopics: ["rank"],
+      related: ["linear-independence"],
+      applications: ["applied-cs", "applied-physics"],
+    },
+    tags: ["linear-algebra", "basis", "dimension", "advanced"],
   },
 ];
