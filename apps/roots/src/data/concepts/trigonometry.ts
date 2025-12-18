@@ -622,4 +622,202 @@ export const trigonometryConcepts: MathConcept[] = [
     },
     tags: ["코사인법칙", "삼각형", "law of cosines", "triangle"],
   },
+
+  // ============================================
+  // 4.3 쌍곡선 함수 Hyperbolic Functions
+  // ============================================
+  {
+    id: "hyperbolic-functions",
+    name: {
+      ko: "쌍곡선 함수",
+      en: "Hyperbolic Functions",
+      ja: "双曲線関数",
+    },
+    field: "trigonometry",
+    subfield: "hyperbolic",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "삼각함수와 유사한 형태를 가지며 쌍곡선과 관련된 함수이다. 지수함수로 정의된다.",
+        formulas: [
+          {
+            latex: "\\sinh x = \\frac{e^x - e^{-x}}{2}",
+            description: "쌍곡사인 (hyperbolic sine)",
+          },
+          {
+            latex: "\\cosh x = \\frac{e^x + e^{-x}}{2}",
+            description: "쌍곡코사인 (hyperbolic cosine)",
+          },
+          {
+            latex: "\\tanh x = \\frac{\\sinh x}{\\cosh x} = \\frac{e^x - e^{-x}}{e^x + e^{-x}}",
+            description: "쌍곡탄젠트 (hyperbolic tangent)",
+          },
+          {
+            latex: "\\cosh^2 x - \\sinh^2 x = 1",
+            description: "쌍곡선 항등식 (삼각함수와 부호 차이에 주목)",
+          },
+        ],
+        examples: [
+          {
+            problem: "sinh(0)과 cosh(0)의 값을 구하시오.",
+            solution:
+              "sinh(0) = (e⁰ - e⁰)/2 = (1 - 1)/2 = 0\ncosh(0) = (e⁰ + e⁰)/2 = (1 + 1)/2 = 1",
+            difficulty: 2,
+          },
+          {
+            problem: "cosh²(x) - sinh²(x) = 1임을 증명하시오.",
+            solution:
+              "cosh²x = [(eˣ + e⁻ˣ)/2]² = (e²ˣ + 2 + e⁻²ˣ)/4\nsinh²x = [(eˣ - e⁻ˣ)/2]² = (e²ˣ - 2 + e⁻²ˣ)/4\ncosh²x - sinh²x = (e²ˣ + 2 + e⁻²ˣ - e²ˣ + 2 - e⁻²ˣ)/4 = 4/4 = 1",
+            difficulty: 3,
+          },
+        ],
+        applications: [
+          { field: "물리학", description: "현수선(catenary) 곡선, 특수상대성이론" },
+          { field: "공학", description: "전기회로, 신호처리" },
+          { field: "딥러닝", description: "tanh 활성화 함수" },
+        ],
+      },
+      en: {
+        definition:
+          "Functions related to hyperbolas, similar in form to trigonometric functions but defined using exponentials.",
+        formulas: [
+          {
+            latex: "\\sinh x = \\frac{e^x - e^{-x}}{2}",
+            description: "Hyperbolic sine",
+          },
+          {
+            latex: "\\cosh x = \\frac{e^x + e^{-x}}{2}",
+            description: "Hyperbolic cosine",
+          },
+          {
+            latex: "\\tanh x = \\frac{\\sinh x}{\\cosh x} = \\frac{e^x - e^{-x}}{e^x + e^{-x}}",
+            description: "Hyperbolic tangent",
+          },
+          {
+            latex: "\\cosh^2 x - \\sinh^2 x = 1",
+            description: "Hyperbolic identity (note sign difference from trig)",
+          },
+        ],
+        examples: [
+          {
+            problem: "Find sinh(0) and cosh(0).",
+            solution:
+              "sinh(0) = (e⁰ - e⁰)/2 = (1 - 1)/2 = 0\ncosh(0) = (e⁰ + e⁰)/2 = (1 + 1)/2 = 1",
+            difficulty: 2,
+          },
+          {
+            problem: "Prove that cosh²(x) - sinh²(x) = 1.",
+            solution:
+              "cosh²x = [(eˣ + e⁻ˣ)/2]² = (e²ˣ + 2 + e⁻²ˣ)/4\nsinh²x = [(eˣ - e⁻ˣ)/2]² = (e²ˣ - 2 + e⁻²ˣ)/4\ncosh²x - sinh²x = (e²ˣ + 2 + e⁻²ˣ - e²ˣ + 2 - e⁻²ˣ)/4 = 4/4 = 1",
+            difficulty: 3,
+          },
+        ],
+        applications: [
+          { field: "Physics", description: "Catenary curves, special relativity" },
+          { field: "Engineering", description: "Electric circuits, signal processing" },
+          { field: "Deep Learning", description: "tanh activation function" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["exponential-function", "sine-cosine"],
+      nextTopics: ["inverse-hyperbolic"],
+      related: ["euler-formula"],
+      applications: ["applied-physics", "applied-cs"],
+    },
+    tags: ["쌍곡선함수", "sinh", "cosh", "tanh", "hyperbolic"],
+  },
+  {
+    id: "inverse-hyperbolic",
+    name: {
+      ko: "역쌍곡선 함수",
+      en: "Inverse Hyperbolic Functions",
+      ja: "逆双曲線関数",
+    },
+    field: "trigonometry",
+    subfield: "hyperbolic",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "쌍곡선 함수의 역함수로, 로그 함수로 표현할 수 있다.",
+        formulas: [
+          {
+            latex: "\\text{arsinh } x = \\ln(x + \\sqrt{x^2 + 1})",
+            description: "역쌍곡사인",
+          },
+          {
+            latex: "\\text{arcosh } x = \\ln(x + \\sqrt{x^2 - 1}) \\quad (x \\geq 1)",
+            description: "역쌍곡코사인",
+          },
+          {
+            latex: "\\text{artanh } x = \\frac{1}{2}\\ln\\frac{1+x}{1-x} \\quad (|x| < 1)",
+            description: "역쌍곡탄젠트",
+          },
+        ],
+        examples: [
+          {
+            problem: "arsinh(0)을 구하시오.",
+            solution:
+              "arsinh(0) = ln(0 + √(0 + 1)) = ln(1) = 0",
+            difficulty: 2,
+          },
+          {
+            problem: "arcosh(1)을 구하시오.",
+            solution:
+              "arcosh(1) = ln(1 + √(1 - 1)) = ln(1 + 0) = ln(1) = 0",
+            difficulty: 2,
+          },
+        ],
+        applications: [
+          { field: "적분", description: "특정 적분의 결과 표현" },
+          { field: "물리학", description: "상대론적 속도 덧셈" },
+        ],
+      },
+      en: {
+        definition:
+          "Inverse functions of hyperbolic functions, expressible in terms of logarithms.",
+        formulas: [
+          {
+            latex: "\\text{arsinh } x = \\ln(x + \\sqrt{x^2 + 1})",
+            description: "Inverse hyperbolic sine",
+          },
+          {
+            latex: "\\text{arcosh } x = \\ln(x + \\sqrt{x^2 - 1}) \\quad (x \\geq 1)",
+            description: "Inverse hyperbolic cosine",
+          },
+          {
+            latex: "\\text{artanh } x = \\frac{1}{2}\\ln\\frac{1+x}{1-x} \\quad (|x| < 1)",
+            description: "Inverse hyperbolic tangent",
+          },
+        ],
+        examples: [
+          {
+            problem: "Find arsinh(0).",
+            solution:
+              "arsinh(0) = ln(0 + √(0 + 1)) = ln(1) = 0",
+            difficulty: 2,
+          },
+          {
+            problem: "Find arcosh(1).",
+            solution:
+              "arcosh(1) = ln(1 + √(1 - 1)) = ln(1 + 0) = ln(1) = 0",
+            difficulty: 2,
+          },
+        ],
+        applications: [
+          { field: "Integration", description: "Expressing certain integral results" },
+          { field: "Physics", description: "Relativistic velocity addition" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["hyperbolic-functions", "logarithm"],
+      nextTopics: [],
+      related: ["inverse-trig"],
+      applications: ["applied-physics"],
+    },
+    tags: ["역쌍곡선함수", "arsinh", "arcosh", "artanh", "inverse hyperbolic"],
+  },
 ];
