@@ -47,6 +47,11 @@ import { pdeConcepts } from "./pde";
 import { numericalLinearAlgebraConcepts } from "./numericalLinearAlgebra";
 import { graphTheoryAdvancedConcepts } from "./graphTheoryAdvanced";
 import { logicAdvancedConcepts } from "./logicAdvanced";
+import { dynamicalSystemsAdvancedConcepts } from "./dynamicalSystemsAdvanced";
+import { tensorAnalysisConcepts } from "./tensorAnalysis";
+import { lieTheoryConcepts } from "./lieTheory";
+import { algebraicTopologyConcepts } from "./algebraicTopology";
+import { harmonicAnalysisConcepts } from "./harmonicAnalysis";
 
 /** 모든 개념 목록 */
 export const allConcepts: MathConcept[] = [
@@ -95,6 +100,11 @@ export const allConcepts: MathConcept[] = [
   ...numericalLinearAlgebraConcepts,
   ...graphTheoryAdvancedConcepts,
   ...logicAdvancedConcepts,
+  ...dynamicalSystemsAdvancedConcepts,
+  ...tensorAnalysisConcepts,
+  ...lieTheoryConcepts,
+  ...algebraicTopologyConcepts,
+  ...harmonicAnalysisConcepts,
 ];
 
 /** ID로 개념 찾기 */
