@@ -1,27 +1,33 @@
 /**
  * @fileoverview 홈페이지 컴포넌트 - 미니멀 디자인
+ *
+ * 홈페이지는 경량 search-index.json만 사용하여 빠른 로딩 제공
  */
 import { Layout } from '@/components/layout/Layout';
-import type { MathConcept } from '@/data/types';
 import { useI18n } from '@/i18n';
-import { getAllConcepts, preloadConcepts } from '@/lib/concepts';
+import { preloadSearchIndex } from '@/lib/search';
+import type { SearchIndexItem } from '@/lib/search';
 import { Meta, Title } from '@solidjs/meta';
 import { A } from '@solidjs/router';
 import { For, Show, createResource, onMount } from 'solid-js';
 
+// 홈페이지용 경량 데이터 로드 (search-index.json 재사용)
+async function getFeaturedConcepts(): Promise<SearchIndexItem[]> {
+  const res = await fetch('/search-index.json');
+  const data: SearchIndexItem[] = await res.json();
+  return data.slice(0, 12);
+}
+
 export default function HomePage() {
   const { locale, t, localePath } = useI18n();
 
-  // 개념 데이터 비동기 로드
-  const [concepts] = createResource(getAllConcepts);
+  // 경량 데이터 로드 (176KB search-index 중 12개만)
+  const [concepts] = createResource(getFeaturedConcepts);
 
-  // 프리로드
+  // 검색 인덱스 프리로드
   onMount(() => {
-    preloadConcepts();
+    preloadSearchIndex();
   });
-
-  // 추천 개념 (처음 12개)
-  const featuredConcepts = () => (concepts() ?? []).slice(0, 12);
 
   return (
     <Layout>
@@ -37,10 +43,10 @@ export default function HomePage() {
       </div>
 
       {/* Concept List */}
-      <Show when={!concepts.loading && featuredConcepts().length > 0}>
+      <Show when={!concepts.loading && (concepts() ?? []).length > 0}>
         <div class="space-y-1">
-          <For each={featuredConcepts()}>
-            {(concept: MathConcept) => (
+          <For each={concepts() ?? []}>
+            {(concept) => (
               <A
                 href={localePath(`/concept/${concept.id}`)}
                 class="flex items-baseline justify-between py-3 -mx-2 px-2 rounded transition-colors"
