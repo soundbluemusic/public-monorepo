@@ -17,16 +17,12 @@
  * </Layout>
  * ```
  */
-import { createSignal, createEffect, onMount, onCleanup, For, Show, type ParentComponent } from "solid-js";
+import { createSignal, createEffect, onMount, onCleanup, Show, type ParentComponent } from "solid-js";
 import { A, useLocation, useNavigate } from "@solidjs/router";
 import { useI18n } from "@/i18n";
 import { meaningEntries } from "@/data/entries";
-import type { Language, MeaningEntry } from "@/data/types";
-
-const languages: { code: Language; label: string }[] = [
-  { code: "ko", label: "한국어" },
-  { code: "en", label: "EN" },
-];
+import type { MeaningEntry } from "@/data/types";
+import { LanguageToggle } from "@soundblue/shared";
 
 /**
  * 경로에서 로케일 프리픽스 제거 (비교용)
@@ -281,21 +277,7 @@ export const Layout: ParentComponent = (props) => {
             </A>
 
             {/* Language */}
-            <select
-              value={locale()}
-              onChange={(e) => {
-                const value = e.currentTarget.value;
-                if (value === "ko" || value === "en") {
-                  setLocale(value);
-                }
-              }}
-              class="text-sm bg-transparent border-none cursor-pointer focus:outline-none px-2 py-1.5"
-              style={{ color: "var(--text-secondary)" }}
-            >
-              <For each={languages}>
-                {(lang) => <option value={lang.code}>{lang.label}</option>}
-              </For>
-            </select>
+            <LanguageToggle locale={locale} setLocale={setLocale} />
 
             {/* Dark mode toggle */}
             <button
