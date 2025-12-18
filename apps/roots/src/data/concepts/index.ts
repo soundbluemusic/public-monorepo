@@ -20,6 +20,8 @@ import { appliedConcepts } from "./applied";
 import { constantsConcepts } from "./constants";
 import { symbolsConcepts } from "./symbols";
 import { theoremsConcepts } from "./theorems";
+import { abstractAlgebraConcepts } from "./abstractAlgebra";
+import { complexAnalysisConcepts } from "./complexAnalysis";
 
 /** 모든 개념 목록 */
 export const allConcepts: MathConcept[] = [
@@ -41,6 +43,8 @@ export const allConcepts: MathConcept[] = [
   ...constantsConcepts,
   ...symbolsConcepts,
   ...theoremsConcepts,
+  ...abstractAlgebraConcepts,
+  ...complexAnalysisConcepts,
 ];
 
 /** ID로 개념 찾기 */

@@ -449,4 +449,372 @@ export const numberTheoryConcepts: MathConcept[] = [
     },
     tags: ["디오판토스", "정수론", "Diophantine", "integer equations"],
   },
+  {
+    id: "modular-arithmetic",
+    name: {
+      ko: "모듈러 산술",
+      en: "Modular Arithmetic",
+      ja: "剰余演算",
+    },
+    field: "number-theory",
+    subfield: "modular-theory",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "모듈러 산술은 정수를 어떤 수(법)로 나눈 나머지로 계산하는 체계입니다. 시계 산술이라고도 불립니다.",
+        formulas: [
+          {
+            latex: "a \\equiv b \\pmod{n} \\Leftrightarrow n | (a-b)",
+            description: "합동의 정의",
+          },
+          {
+            latex: "(a + b) \\mod n = ((a \\mod n) + (b \\mod n)) \\mod n",
+            description: "덧셈의 모듈러 성질",
+          },
+          {
+            latex: "(a \\cdot b) \\mod n = ((a \\mod n) \\cdot (b \\mod n)) \\mod n",
+            description: "곱셈의 모듈러 성질",
+          },
+        ],
+        examples: [
+          {
+            problem: "17 ≡ ? (mod 5)를 구하세요.",
+            solution: "17 = 5 × 3 + 2이므로 17 ≡ 2 (mod 5)",
+          },
+          {
+            problem: "2^10 mod 7을 구하세요.",
+            solution:
+              "2^3 = 8 ≡ 1 (mod 7). 2^10 = 2^9 × 2 = (2^3)^3 × 2 ≡ 1 × 2 = 2 (mod 7)",
+          },
+        ],
+        applications: [
+          { field: "암호학", description: "RSA, AES 암호화" },
+          { field: "해시 함수", description: "데이터 분산" },
+          { field: "오류 검출", description: "ISBN, 신용카드 검증" },
+        ],
+      },
+      en: {
+        definition:
+          "Modular arithmetic is a system where calculations are done with remainders after division by a modulus. Also called clock arithmetic.",
+        formulas: [
+          {
+            latex: "a \\equiv b \\pmod{n} \\Leftrightarrow n | (a-b)",
+            description: "Definition of congruence",
+          },
+          {
+            latex: "(a + b) \\mod n = ((a \\mod n) + (b \\mod n)) \\mod n",
+            description: "Addition modular property",
+          },
+          {
+            latex: "(a \\cdot b) \\mod n = ((a \\mod n) \\cdot (b \\mod n)) \\mod n",
+            description: "Multiplication modular property",
+          },
+        ],
+        examples: [
+          {
+            problem: "Find 17 ≡ ? (mod 5).",
+            solution: "17 = 5 × 3 + 2, so 17 ≡ 2 (mod 5)",
+          },
+          {
+            problem: "Find 2^10 mod 7.",
+            solution:
+              "2^3 = 8 ≡ 1 (mod 7). 2^10 = 2^9 × 2 = (2^3)^3 × 2 ≡ 1 × 2 = 2 (mod 7)",
+          },
+        ],
+        applications: [
+          { field: "Cryptography", description: "RSA, AES encryption" },
+          { field: "Hash Functions", description: "Data distribution" },
+          { field: "Error Detection", description: "ISBN, credit card verification" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["division", "integers"],
+      nextTopics: ["fermats-little-theorem", "chinese-remainder-theorem"],
+      related: ["gcd-lcm"],
+    },
+    tags: ["모듈러", "합동", "modular", "congruence"],
+  },
+  {
+    id: "chinese-remainder-theorem",
+    name: {
+      ko: "중국인의 나머지 정리",
+      en: "Chinese Remainder Theorem",
+      ja: "中国剰余定理",
+    },
+    field: "number-theory",
+    subfield: "modular-theory",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "서로소인 법들에 대한 연립 합동식은 유일한 해를 가집니다. 큰 수의 계산을 작은 계산으로 분해할 수 있게 합니다.",
+        formulas: [
+          {
+            latex: "x \\equiv a_1 \\pmod{n_1}, \\ldots, x \\equiv a_k \\pmod{n_k}",
+            description: "연립 합동식",
+          },
+          {
+            latex: "x \\equiv \\sum_{i} a_i N_i M_i \\pmod{N}",
+            description: "해의 공식 (N = n₁...nₖ, Nᵢ = N/nᵢ, MᵢNᵢ ≡ 1 mod nᵢ)",
+          },
+        ],
+        examples: [
+          {
+            problem: "x ≡ 2 (mod 3), x ≡ 3 (mod 5)를 만족하는 x를 구하세요.",
+            solution:
+              "N = 15. N₁ = 5, N₂ = 3. 5M₁ ≡ 1 (mod 3)에서 M₁ = 2. 3M₂ ≡ 1 (mod 5)에서 M₂ = 2. x = 2×5×2 + 3×3×2 = 20 + 18 = 38 ≡ 8 (mod 15)",
+          },
+        ],
+        history: {
+          discoveredBy: "손자 (중국 수학자)",
+          year: "3세기경",
+          background:
+            "손자산경에서 처음 등장했으며, 병사 수를 세는 문제로 유명합니다.",
+        },
+        applications: [
+          { field: "암호학", description: "RSA 복호화 가속" },
+          { field: "컴퓨터 대수", description: "큰 수 연산 분해" },
+          { field: "스케줄링", description: "주기적 이벤트 계산" },
+        ],
+      },
+      en: {
+        definition:
+          "A system of congruences with pairwise coprime moduli has a unique solution. It allows decomposing large computations into smaller ones.",
+        formulas: [
+          {
+            latex: "x \\equiv a_1 \\pmod{n_1}, \\ldots, x \\equiv a_k \\pmod{n_k}",
+            description: "System of congruences",
+          },
+          {
+            latex: "x \\equiv \\sum_{i} a_i N_i M_i \\pmod{N}",
+            description: "Solution formula (N = n₁...nₖ, Nᵢ = N/nᵢ, MᵢNᵢ ≡ 1 mod nᵢ)",
+          },
+        ],
+        examples: [
+          {
+            problem: "Find x where x ≡ 2 (mod 3), x ≡ 3 (mod 5).",
+            solution:
+              "N = 15. N₁ = 5, N₂ = 3. 5M₁ ≡ 1 (mod 3) gives M₁ = 2. 3M₂ ≡ 1 (mod 5) gives M₂ = 2. x = 2×5×2 + 3×3×2 = 38 ≡ 8 (mod 15)",
+          },
+        ],
+        history: {
+          discoveredBy: "Sunzi (Chinese mathematician)",
+          year: "c. 3rd century",
+          background:
+            "First appeared in Sunzi Suanjing, famous for counting soldiers problem.",
+        },
+        applications: [
+          { field: "Cryptography", description: "RSA decryption speedup" },
+          { field: "Computer Algebra", description: "Large number decomposition" },
+          { field: "Scheduling", description: "Periodic event calculation" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["modular-arithmetic", "gcd-lcm"],
+      nextTopics: ["eulers-theorem"],
+      related: ["fermats-little-theorem"],
+    },
+    tags: ["중국인나머지", "연립합동", "CRT", "Chinese remainder"],
+  },
+  {
+    id: "euler-totient",
+    name: {
+      ko: "오일러 피 함수",
+      en: "Euler's Totient Function",
+      ja: "オイラーのφ関数",
+    },
+    field: "number-theory",
+    subfield: "multiplicative-functions",
+    difficulty: 3,
+    content: {
+      ko: {
+        definition:
+          "오일러 피 함수 φ(n)은 n 이하의 양의 정수 중 n과 서로소인 것의 개수입니다. RSA 암호의 핵심입니다.",
+        formulas: [
+          {
+            latex: "\\phi(n) = |\\{k : 1 \\leq k \\leq n, \\gcd(k,n) = 1\\}|",
+            description: "오일러 피 함수의 정의",
+          },
+          {
+            latex: "\\phi(p) = p - 1",
+            description: "소수의 경우",
+          },
+          {
+            latex: "\\phi(p^k) = p^{k-1}(p-1)",
+            description: "소수 거듭제곱의 경우",
+          },
+          {
+            latex: "\\phi(mn) = \\phi(m)\\phi(n) \\text{ if } \\gcd(m,n) = 1",
+            description: "곱셈적 함수 성질",
+          },
+        ],
+        examples: [
+          {
+            problem: "φ(12)를 구하세요.",
+            solution:
+              "12와 서로소인 수: 1, 5, 7, 11 (4개). 또는 φ(12) = φ(4)φ(3) = 2 × 2 = 4",
+          },
+          {
+            problem: "φ(100)을 구하세요.",
+            solution:
+              "100 = 4 × 25 = 2² × 5². φ(100) = φ(4)φ(25) = 2 × 20 = 40",
+          },
+        ],
+        history: {
+          discoveredBy: "레온하르트 오일러",
+          year: "1763년",
+          background:
+            "오일러가 페르마의 소정리를 일반화하면서 이 함수를 도입했습니다.",
+        },
+        applications: [
+          { field: "암호학", description: "RSA의 핵심 (공개키/개인키 생성)" },
+          { field: "정수론", description: "오일러 정리, 원시근" },
+          { field: "그룹론", description: "순환군의 위수" },
+        ],
+      },
+      en: {
+        definition:
+          "Euler's totient function φ(n) counts positive integers up to n that are coprime to n. It's central to RSA cryptography.",
+        formulas: [
+          {
+            latex: "\\phi(n) = |\\{k : 1 \\leq k \\leq n, \\gcd(k,n) = 1\\}|",
+            description: "Definition of Euler's totient",
+          },
+          {
+            latex: "\\phi(p) = p - 1",
+            description: "For prime p",
+          },
+          {
+            latex: "\\phi(p^k) = p^{k-1}(p-1)",
+            description: "For prime power",
+          },
+          {
+            latex: "\\phi(mn) = \\phi(m)\\phi(n) \\text{ if } \\gcd(m,n) = 1",
+            description: "Multiplicative property",
+          },
+        ],
+        examples: [
+          {
+            problem: "Find φ(12).",
+            solution:
+              "Numbers coprime to 12: 1, 5, 7, 11 (4 numbers). Or φ(12) = φ(4)φ(3) = 2 × 2 = 4",
+          },
+          {
+            problem: "Find φ(100).",
+            solution:
+              "100 = 4 × 25 = 2² × 5². φ(100) = φ(4)φ(25) = 2 × 20 = 40",
+          },
+        ],
+        history: {
+          discoveredBy: "Leonhard Euler",
+          year: "1763",
+          background:
+            "Euler introduced this function while generalizing Fermat's little theorem.",
+        },
+        applications: [
+          { field: "Cryptography", description: "RSA key generation" },
+          { field: "Number Theory", description: "Euler's theorem, primitive roots" },
+          { field: "Group Theory", description: "Order of cyclic groups" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["gcd-lcm", "prime-numbers"],
+      nextTopics: ["eulers-theorem", "primitive-roots"],
+      related: ["fermats-little-theorem"],
+    },
+    tags: ["오일러", "피함수", "totient", "phi function"],
+  },
+  {
+    id: "quadratic-residues",
+    name: {
+      ko: "이차 잉여",
+      en: "Quadratic Residues",
+      ja: "平方剰余",
+    },
+    field: "number-theory",
+    subfield: "modular-theory",
+    difficulty: 4,
+    content: {
+      ko: {
+        definition:
+          "정수 a가 mod n에서 이차 잉여라는 것은 x² ≡ a (mod n)을 만족하는 x가 존재한다는 것입니다.",
+        formulas: [
+          {
+            latex: "\\left(\\frac{a}{p}\\right) = \\begin{cases} 1 & \\text{이차 잉여} \\\\ -1 & \\text{이차 비잉여} \\\\ 0 & p|a \\end{cases}",
+            description: "르장드르 기호",
+          },
+          {
+            latex: "\\left(\\frac{a}{p}\\right) \\equiv a^{(p-1)/2} \\pmod{p}",
+            description: "오일러 판정법",
+          },
+          {
+            latex: "\\left(\\frac{-1}{p}\\right) = (-1)^{(p-1)/2}",
+            description: "-1의 이차 잉여 조건",
+          },
+        ],
+        examples: [
+          {
+            problem: "mod 7에서 이차 잉여를 모두 찾으세요.",
+            solution:
+              "1² ≡ 1, 2² ≡ 4, 3² ≡ 2, 4² ≡ 2, 5² ≡ 4, 6² ≡ 1. 이차 잉여: {1, 2, 4}",
+          },
+          {
+            problem: "3이 mod 11에서 이차 잉여인지 판별하세요.",
+            solution:
+              "오일러 판정: 3^5 = 243 = 22×11 + 1 ≡ 1 (mod 11). 이차 잉여입니다.",
+          },
+        ],
+        applications: [
+          { field: "암호학", description: "제곱근 계산, 영지식 증명" },
+          { field: "정수론", description: "이차 상호법칙" },
+          { field: "소수 판정", description: "Solovay-Strassen 테스트" },
+        ],
+      },
+      en: {
+        definition:
+          "An integer a is a quadratic residue mod n if there exists x such that x² ≡ a (mod n).",
+        formulas: [
+          {
+            latex: "\\left(\\frac{a}{p}\\right) = \\begin{cases} 1 & \\text{QR} \\\\ -1 & \\text{QNR} \\\\ 0 & p|a \\end{cases}",
+            description: "Legendre symbol",
+          },
+          {
+            latex: "\\left(\\frac{a}{p}\\right) \\equiv a^{(p-1)/2} \\pmod{p}",
+            description: "Euler's criterion",
+          },
+          {
+            latex: "\\left(\\frac{-1}{p}\\right) = (-1)^{(p-1)/2}",
+            description: "Condition for -1 being QR",
+          },
+        ],
+        examples: [
+          {
+            problem: "Find all quadratic residues mod 7.",
+            solution:
+              "1² ≡ 1, 2² ≡ 4, 3² ≡ 2, 4² ≡ 2, 5² ≡ 4, 6² ≡ 1. QRs: {1, 2, 4}",
+          },
+          {
+            problem: "Is 3 a quadratic residue mod 11?",
+            solution:
+              "Euler's criterion: 3^5 = 243 = 22×11 + 1 ≡ 1 (mod 11). Yes, it's a QR.",
+          },
+        ],
+        applications: [
+          { field: "Cryptography", description: "Square root computation, zero-knowledge" },
+          { field: "Number Theory", description: "Quadratic reciprocity" },
+          { field: "Primality Testing", description: "Solovay-Strassen test" },
+        ],
+      },
+    },
+    relations: {
+      prerequisites: ["modular-arithmetic", "fermats-little-theorem"],
+      nextTopics: ["quadratic-reciprocity"],
+      related: ["euler-totient"],
+    },
+    tags: ["이차잉여", "르장드르", "quadratic residue", "Legendre"],
+  },
 ];
