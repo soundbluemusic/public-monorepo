@@ -32,8 +32,11 @@ export interface LanguageToggleProps {
  * @param props.setLocale - 언어 변경 함수
  */
 export function LanguageToggle(props: LanguageToggleProps) {
+  // 안전하게 locale 값 가져오기 (함수가 아닐 경우 대비)
+  const getLocale = () => (typeof props.locale === 'function' ? props.locale() : 'en');
+
   const toggleLanguage = () => {
-    props.setLocale(props.locale() === 'en' ? 'ko' : 'en');
+    props.setLocale(getLocale() === 'en' ? 'ko' : 'en');
   };
 
   return (
@@ -44,7 +47,7 @@ export function LanguageToggle(props: LanguageToggleProps) {
       style={{ color: 'var(--text-secondary)' }}
       aria-label="Toggle language"
     >
-      {props.locale() === 'en' ? '한국어' : 'EN'}
+      {getLocale() === 'en' ? '한국어' : 'EN'}
     </button>
   );
 }
