@@ -9,7 +9,6 @@ export const numberTheoryConcepts: MathConcept[] = [
     name: {
       ko: '소수',
       en: 'Prime Numbers',
-      ja: '素数',
     },
     field: 'number-theory',
     subfield: 'primes',
@@ -92,7 +91,6 @@ export const numberTheoryConcepts: MathConcept[] = [
     name: {
       ko: '최대공약수와 최소공배수',
       en: 'GCD and LCM',
-      ja: '最大公約数と最小公倍数',
     },
     field: 'number-theory',
     subfield: 'divisibility',
@@ -179,7 +177,6 @@ export const numberTheoryConcepts: MathConcept[] = [
     name: {
       ko: '페르마의 소정리',
       en: "Fermat's Little Theorem",
-      ja: 'フェルマーの小定理',
     },
     field: 'number-theory',
     subfield: 'modular-theory',
@@ -262,7 +259,6 @@ export const numberTheoryConcepts: MathConcept[] = [
     name: {
       ko: '피보나치 수열',
       en: 'Fibonacci Sequence',
-      ja: 'フィボナッチ数列',
     },
     field: 'number-theory',
     subfield: 'sequences',
@@ -349,7 +345,6 @@ export const numberTheoryConcepts: MathConcept[] = [
     name: {
       ko: '디오판토스 방정식',
       en: 'Diophantine Equations',
-      ja: 'ディオファントス方程式',
     },
     field: 'number-theory',
     subfield: 'equations',
@@ -436,7 +431,6 @@ export const numberTheoryConcepts: MathConcept[] = [
     name: {
       ko: '모듈러 산술',
       en: 'Modular Arithmetic',
-      ja: '剰余演算',
     },
     field: 'number-theory',
     subfield: 'modular-theory',
@@ -521,7 +515,6 @@ export const numberTheoryConcepts: MathConcept[] = [
     name: {
       ko: '중국인의 나머지 정리',
       en: 'Chinese Remainder Theorem',
-      ja: '中国剰余定理',
     },
     field: 'number-theory',
     subfield: 'modular-theory',
@@ -602,7 +595,6 @@ export const numberTheoryConcepts: MathConcept[] = [
     name: {
       ko: '오일러 피 함수',
       en: "Euler's Totient Function",
-      ja: 'オイラーのφ関数',
     },
     field: 'number-theory',
     subfield: 'multiplicative-functions',
@@ -706,7 +698,6 @@ export const numberTheoryConcepts: MathConcept[] = [
     name: {
       ko: '이차 잉여',
       en: 'Quadratic Residues',
-      ja: '平方剰余',
     },
     field: 'number-theory',
     subfield: 'modular-theory',

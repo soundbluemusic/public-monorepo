@@ -6,7 +6,6 @@ export const logicAdvancedConcepts: MathConcept[] = [
     name: {
       ko: '괴델의 불완전성 정리',
       en: "Gödel's Incompleteness Theorems",
-      ja: 'ゲーデルの不完全性定理',
     },
     field: 'logic',
     subfield: 'mathematical-logic',
@@ -14,7 +13,6 @@ export const logicAdvancedConcepts: MathConcept[] = [
     content: {
       ko: '충분히 강력한 형식 체계는 참이지만 증명할 수 없는 명제를 포함하며(제1정리), 자신의 무모순성을 증명할 수 없습니다(제2정리).',
       en: 'Sufficiently powerful formal systems contain true but unprovable statements (first theorem) and cannot prove their own consistency (second theorem).',
-      ja: '十分に強力な形式体系は真だが証明できない命題を含み（第一定理）、自身の無矛盾性を証明できません（第二定理）。',
     },
     latex:
       '\\text{Con}(T) \\Rightarrow \\exists \\varphi: T \\nvdash \\varphi \\land T \\nvdash \\neg\\varphi',
@@ -31,7 +29,6 @@ export const logicAdvancedConcepts: MathConcept[] = [
     name: {
       ko: '모델 이론',
       en: 'Model Theory',
-      ja: 'モデル理論',
     },
     field: 'logic',
     subfield: 'mathematical-logic',
@@ -39,7 +36,6 @@ export const logicAdvancedConcepts: MathConcept[] = [
     content: {
       ko: '형식 언어와 그것이 해석되는 수학적 구조(모델) 사이의 관계를 연구합니다. 완전성, 콤팩트성, 뢰벤하임-스콜렘 정리가 핵심입니다.',
       en: 'Studies the relationship between formal languages and mathematical structures (models) interpreting them. Completeness, compactness, and Löwenheim-Skolem are key results.',
-      ja: '形式言語とそれを解釈する数学的構造（モデル）の関係を研究します。完全性、コンパクト性、レーヴェンハイム・スコーレム定理が核心です。',
     },
     latex: 'T \\models \\varphi \\Leftrightarrow T \\vdash \\varphi \\quad \\text{(Completeness)}',
     relations: {
@@ -55,7 +51,6 @@ export const logicAdvancedConcepts: MathConcept[] = [
     name: {
       ko: '증명 이론',
       en: 'Proof Theory',
-      ja: '証明論',
     },
     field: 'logic',
     subfield: 'mathematical-logic',
@@ -63,7 +58,6 @@ export const logicAdvancedConcepts: MathConcept[] = [
     content: {
       ko: '형식적 증명 자체를 수학적 대상으로 연구합니다. 자연 연역, 시퀀트 계산, 컷 제거, 증명의 정규화가 핵심 주제입니다.',
       en: 'Studies formal proofs as mathematical objects. Natural deduction, sequent calculus, cut elimination, and proof normalization are key topics.',
-      ja: '形式的証明自体を数学的対象として研究します。自然演繹、シーケント計算、カット除去、証明の正規化が核心的な主題です。',
     },
     latex:
       '\\frac{\\Gamma \\vdash A \\quad \\Delta, A \\vdash B}{\\Gamma, \\Delta \\vdash B} \\text{ (Cut)}',
@@ -80,7 +74,6 @@ export const logicAdvancedConcepts: MathConcept[] = [
     name: {
       ko: '계산 가능성 이론',
       en: 'Computability Theory',
-      ja: '計算可能性理論',
     },
     field: 'logic',
     subfield: 'mathematical-logic',
@@ -88,7 +81,6 @@ export const logicAdvancedConcepts: MathConcept[] = [
     content: {
       ko: '알고리즘으로 계산 가능한 것의 한계를 연구합니다. 튜링 기계, 정지 문제, 결정 불가능성, 튜링 차수가 핵심 개념입니다.',
       en: 'Studies the limits of what can be computed algorithmically. Turing machines, halting problem, undecidability, and Turing degrees are key concepts.',
-      ja: 'アルゴリズムで計算可能なものの限界を研究します。チューリング機械、停止問題、決定不能性、チューリング次数が核心概念です。',
     },
     latex:
       '\\text{HALT} = \\{\\langle M, w \\rangle : M \\text{ halts on } w\\} \\text{ is undecidable}',
@@ -105,7 +97,6 @@ export const logicAdvancedConcepts: MathConcept[] = [
     name: {
       ko: '양상 논리',
       en: 'Modal Logic',
-      ja: '様相論理',
     },
     field: 'logic',
     subfield: 'mathematical-logic',
@@ -113,7 +104,6 @@ export const logicAdvancedConcepts: MathConcept[] = [
     content: {
       ko: '필연성(□)과 가능성(◇) 개념을 다루는 논리 체계입니다. 크립키 의미론에서 가능 세계를 통해 해석됩니다.',
       en: 'A logical system dealing with necessity (□) and possibility (◇). Interpreted through possible worlds in Kripke semantics.',
-      ja: '必然性(□)と可能性(◇)の概念を扱う論理体系です。クリプキ意味論で可能世界を通じて解釈されます。',
     },
     latex:
       '\\Box\\varphi \\rightarrow \\varphi \\text{ (T)}, \\quad \\Box\\varphi \\rightarrow \\Box\\Box\\varphi \\text{ (4)}',
@@ -130,7 +120,6 @@ export const logicAdvancedConcepts: MathConcept[] = [
     name: {
       ko: '타입 이론',
       en: 'Type Theory',
-      ja: '型理論',
     },
     field: 'logic',
     subfield: 'mathematical-logic',
@@ -138,7 +127,6 @@ export const logicAdvancedConcepts: MathConcept[] = [
     content: {
       ko: '수학적 대상을 타입으로 분류하는 형식 체계입니다. 커리-하워드 대응으로 증명과 프로그램이 동일시됩니다.',
       en: 'A formal system classifying mathematical objects by types. Through the Curry-Howard correspondence, proofs correspond to programs.',
-      ja: '数学的対象を型で分類する形式体系です。カリー・ハワード対応により証明とプログラムが同一視されます。',
     },
     latex: '\\frac{\\Gamma, x:A \\vdash t:B}{\\Gamma \\vdash (\\lambda x.t) : A \\rightarrow B}',
     relations: {
@@ -154,7 +142,6 @@ export const logicAdvancedConcepts: MathConcept[] = [
     name: {
       ko: '강제법',
       en: 'Forcing',
-      ja: '強制法',
     },
     field: 'logic',
     subfield: 'set-theory',
@@ -162,7 +149,6 @@ export const logicAdvancedConcepts: MathConcept[] = [
     content: {
       ko: '집합론의 독립성 증명에 사용되는 기법입니다. 코헨이 연속체 가설의 독립성을 증명하는 데 사용했습니다.',
       en: 'A technique used to prove independence results in set theory. Used by Cohen to prove the independence of the continuum hypothesis.',
-      ja: '集合論の独立性証明に使用される技法です。コーエンが連続体仮説の独立性を証明するのに使用しました。',
     },
     latex: 'p \\Vdash \\varphi \\quad \\text{(p forces } \\varphi\\text{)}',
     relations: {
@@ -178,7 +164,6 @@ export const logicAdvancedConcepts: MathConcept[] = [
     name: {
       ko: '기술집합론',
       en: 'Descriptive Set Theory',
-      ja: '記述集合論',
     },
     field: 'logic',
     subfield: 'set-theory',
@@ -186,7 +171,6 @@ export const logicAdvancedConcepts: MathConcept[] = [
     content: {
       ko: '실수 집합의 복잡도를 위계적으로 분류합니다. 보렐 집합, 해석적 집합, 사영 집합의 위계가 핵심입니다.',
       en: 'Hierarchically classifies the complexity of sets of reals. The hierarchies of Borel, analytic, and projective sets are central.',
-      ja: '実数の集合の複雑さを階層的に分類します。ボレル集合、解析的集合、射影的集合の階層が核心です。',
     },
     latex:
       '\\Sigma^0_1 \\subset \\Sigma^0_2 \\subset \\cdots \\subset \\Sigma^1_1 \\subset \\Sigma^1_2 \\subset \\cdots',

@@ -62,7 +62,7 @@ async function loadSearchIndex(): Promise<SearchIndexItem[]> {
  * Fuse 검색 인스턴스 생성
  */
 function createConceptSearcher(index: SearchIndexItem[], locale: Language): Fuse<SearchIndexItem> {
-  const options: Fuse.IFuseOptions<SearchIndexItem> = {
+  return new Fuse(index, {
     keys: [
       { name: `name.${locale}`, weight: 3 },
       { name: 'name.en', weight: 2 },
@@ -74,9 +74,7 @@ function createConceptSearcher(index: SearchIndexItem[], locale: Language): Fuse
     includeScore: true,
     includeMatches: true,
     minMatchCharLength: 2,
-  };
-
-  return new Fuse(index, options);
+  });
 }
 
 function getSearcher(index: SearchIndexItem[], locale: Language): Fuse<SearchIndexItem> {

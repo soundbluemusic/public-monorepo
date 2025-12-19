@@ -52,14 +52,11 @@ export default function Header(props: HeaderProps) {
 
   return (
     <header
-      class={`fixed top-0 left-0 right-0 z-header h-header flex items-center justify-between px-4 transition-all duration-200 ${
-        scrolled() ? 'backdrop-blur-md shadow-sm' : ''
+      class={`fixed top-0 left-0 right-0 z-header h-header flex items-center justify-between px-4 pt-[env(safe-area-inset-top,0)] transition-all duration-200 ${
+        scrolled()
+          ? 'backdrop-blur-md shadow-sm bg-elevated border-b border-primary'
+          : 'bg-primary border-b border-transparent'
       }`}
-      style={{
-        'padding-top': 'env(safe-area-inset-top, 0)',
-        'background-color': scrolled() ? 'var(--bg-elevated)' : 'var(--bg-primary)',
-        'border-bottom': `1px solid ${scrolled() ? 'var(--border-primary)' : 'transparent'}`,
-      }}
     >
       {/* Left: Menu button (mobile) + Logo */}
       <div class="flex items-center gap-3">
@@ -67,8 +64,7 @@ export default function Header(props: HeaderProps) {
         <button
           type="button"
           onClick={() => props.onMenuClick()}
-          class="md:hidden p-2 -ml-2 rounded-lg hover-bg"
-          style={{ color: 'var(--text-secondary)' }}
+          class="md:hidden p-2 -ml-2 rounded-lg hover-bg text-secondary"
           aria-label={props.isSidebarOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={props.isSidebarOpen}
         >
@@ -100,9 +96,7 @@ export default function Header(props: HeaderProps) {
         {/* Logo */}
         <A href="/" class="flex items-center gap-2.5 group">
           <span class="text-lg">✨</span>
-          <span class="font-semibold transition-colors" style={{ color: 'var(--text-primary)' }}>
-            Permissive
-          </span>
+          <span class="font-semibold transition-colors text-primary">Permissive</span>
         </A>
       </div>
 

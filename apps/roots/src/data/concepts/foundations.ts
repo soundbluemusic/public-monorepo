@@ -12,7 +12,6 @@ export const foundationsConcepts: MathConcept[] = [
     name: {
       ko: '자연수',
       en: 'Natural Numbers',
-      ja: '自然数',
     },
     field: 'foundations',
     subfield: 'arithmetic',
@@ -85,7 +84,6 @@ export const foundationsConcepts: MathConcept[] = [
     name: {
       ko: '정수',
       en: 'Integers',
-      ja: '整数',
     },
     field: 'foundations',
     subfield: 'arithmetic',
@@ -159,7 +157,6 @@ export const foundationsConcepts: MathConcept[] = [
     name: {
       ko: '유리수',
       en: 'Rational Numbers',
-      ja: '有理数',
     },
     field: 'foundations',
     subfield: 'arithmetic',
@@ -243,7 +240,6 @@ export const foundationsConcepts: MathConcept[] = [
     name: {
       ko: '무리수',
       en: 'Irrational Numbers',
-      ja: '無理数',
     },
     field: 'foundations',
     subfield: 'arithmetic',
@@ -332,7 +328,6 @@ export const foundationsConcepts: MathConcept[] = [
     name: {
       ko: '실수',
       en: 'Real Numbers',
-      ja: '実数',
     },
     field: 'foundations',
     subfield: 'arithmetic',
@@ -415,7 +410,6 @@ export const foundationsConcepts: MathConcept[] = [
     name: {
       ko: '사칙연산',
       en: 'Arithmetic Operations',
-      ja: '四則演算',
     },
     field: 'foundations',
     subfield: 'arithmetic',
@@ -510,7 +504,6 @@ export const foundationsConcepts: MathConcept[] = [
     name: {
       ko: '거듭제곱',
       en: 'Exponents',
-      ja: '累乗',
     },
     field: 'foundations',
     subfield: 'arithmetic',
@@ -626,7 +619,6 @@ export const foundationsConcepts: MathConcept[] = [
     name: {
       ko: '제곱근',
       en: 'Square Roots',
-      ja: '平方根',
     },
     field: 'foundations',
     subfield: 'arithmetic',
@@ -724,7 +716,6 @@ export const foundationsConcepts: MathConcept[] = [
     name: {
       ko: '소수',
       en: 'Prime Numbers',
-      ja: '素数',
     },
     field: 'foundations',
     subfield: 'arithmetic',
@@ -799,7 +790,6 @@ export const foundationsConcepts: MathConcept[] = [
     name: {
       ko: '최대공약수와 최소공배수',
       en: 'GCD and LCM',
-      ja: '最大公約数と最小公倍数',
     },
     field: 'foundations',
     subfield: 'arithmetic',
@@ -889,7 +879,6 @@ export const foundationsConcepts: MathConcept[] = [
     name: {
       ko: '분수',
       en: 'Fractions',
-      ja: '分数',
     },
     field: 'foundations',
     subfield: 'fractions-ratios',
@@ -999,7 +988,6 @@ export const foundationsConcepts: MathConcept[] = [
     name: {
       ko: '소수 (小數)',
       en: 'Decimals',
-      ja: '小数',
     },
     field: 'foundations',
     subfield: 'fractions-ratios',
@@ -1082,7 +1070,6 @@ export const foundationsConcepts: MathConcept[] = [
     name: {
       ko: '백분율',
       en: 'Percentages',
-      ja: '百分率',
     },
     field: 'foundations',
     subfield: 'fractions-ratios',
@@ -1172,7 +1159,6 @@ export const foundationsConcepts: MathConcept[] = [
     name: {
       ko: '비',
       en: 'Ratios',
-      ja: '比',
     },
     field: 'foundations',
     subfield: 'fractions-ratios',
@@ -1254,7 +1240,6 @@ export const foundationsConcepts: MathConcept[] = [
     name: {
       ko: '비례',
       en: 'Proportions',
-      ja: '比例',
     },
     field: 'foundations',
     subfield: 'fractions-ratios',
@@ -1346,7 +1331,6 @@ export const foundationsConcepts: MathConcept[] = [
     name: {
       ko: '이진법',
       en: 'Binary System',
-      ja: '二進法',
     },
     field: 'foundations',
     subfield: 'number-systems',
@@ -1418,7 +1402,6 @@ export const foundationsConcepts: MathConcept[] = [
     name: {
       ko: '8진법',
       en: 'Octal System',
-      ja: '八進法',
     },
     field: 'foundations',
     subfield: 'number-systems',
@@ -1488,7 +1471,6 @@ export const foundationsConcepts: MathConcept[] = [
     name: {
       ko: '16진법',
       en: 'Hexadecimal System',
-      ja: '十六進法',
     },
     field: 'foundations',
     subfield: 'number-systems',
@@ -1562,7 +1544,6 @@ export const foundationsConcepts: MathConcept[] = [
     name: {
       ko: '복소수',
       en: 'Complex Numbers',
-      ja: '複素数',
     },
     field: 'foundations',
     subfield: 'number-systems',

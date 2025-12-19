@@ -9,7 +9,6 @@ export const appliedConcepts: MathConcept[] = [
     name: {
       ko: '푸리에 급수',
       en: 'Fourier Series',
-      ja: 'フーリエ級数',
     },
     field: 'applied',
     subfield: 'fourier-analysis',
@@ -98,7 +97,6 @@ export const appliedConcepts: MathConcept[] = [
     name: {
       ko: '미분방정식',
       en: 'Differential Equations',
-      ja: '微分方程式',
     },
     field: 'applied',
     subfield: 'differential-eq',
@@ -183,7 +181,6 @@ export const appliedConcepts: MathConcept[] = [
     name: {
       ko: '복소해석학 기초',
       en: 'Complex Analysis Basics',
-      ja: '複素解析の基礎',
     },
     field: 'applied',
     subfield: 'complex-analysis',
@@ -272,7 +269,6 @@ export const appliedConcepts: MathConcept[] = [
     name: {
       ko: '게임 이론',
       en: 'Game Theory',
-      ja: 'ゲーム理論',
     },
     field: 'applied',
     subfield: 'game-theory',
@@ -345,7 +341,6 @@ export const appliedConcepts: MathConcept[] = [
     name: {
       ko: '암호학의 수학',
       en: 'Mathematics of Cryptography',
-      ja: '暗号の数学',
     },
     field: 'applied',
     subfield: 'cryptography',
@@ -414,7 +409,6 @@ export const appliedConcepts: MathConcept[] = [
     name: {
       ko: '라플라스 변환',
       en: 'Laplace Transform',
-      ja: 'ラプラス変換',
     },
     field: 'applied',
     subfield: 'transforms',
@@ -493,7 +487,6 @@ export const appliedConcepts: MathConcept[] = [
     name: {
       ko: '경사하강법',
       en: 'Gradient Descent',
-      ja: '勾配降下法',
     },
     field: 'applied',
     subfield: 'optimization',
@@ -565,7 +558,6 @@ export const appliedConcepts: MathConcept[] = [
     name: {
       ko: '뉴턴-랩슨 방법',
       en: 'Newton-Raphson Method',
-      ja: 'ニュートン法',
     },
     field: 'applied',
     subfield: 'numerical',
@@ -640,7 +632,6 @@ export const appliedConcepts: MathConcept[] = [
     name: {
       ko: '선형계획법',
       en: 'Linear Programming',
-      ja: '線形計画法',
     },
     field: 'applied',
     subfield: 'optimization',

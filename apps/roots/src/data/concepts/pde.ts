@@ -6,7 +6,6 @@ export const pdeConcepts: MathConcept[] = [
     name: {
       ko: '열 방정식',
       en: 'Heat Equation',
-      ja: '熱方程式',
     },
     field: 'partial-differential-equations',
     subfield: 'parabolic',
@@ -28,12 +27,6 @@ export const pdeConcepts: MathConcept[] = [
         examples: ['Heat conduction in rod', 'Diffusion processes', 'Brownian motion'],
         applications: ['Thermodynamics', 'Finance (Black-Scholes)', 'Image processing'],
       },
-      ja: {
-        definition: '熱の拡散を記述する放物型偏微分方程式',
-        formulas: ['∂u/∂t = α∇²u', '1D: ∂u/∂t = α ∂²u/∂x²', '基本解: u = (1/√4παt)exp(-x²/4αt)'],
-        examples: ['金属棒の熱伝導', '拡散過程', 'ブラウン運動'],
-        applications: ['熱力学', '金融 (ブラック・ショールズ)', '画像処理'],
-      },
     },
     latex: '\\frac{\\partial u}{\\partial t} = \\alpha \\nabla^2 u',
     relations: {
@@ -49,7 +42,6 @@ export const pdeConcepts: MathConcept[] = [
     name: {
       ko: '파동 방정식',
       en: 'Wave Equation',
-      ja: '波動方程式',
     },
     field: 'partial-differential-equations',
     subfield: 'hyperbolic',
@@ -75,16 +67,6 @@ export const pdeConcepts: MathConcept[] = [
         examples: ['String vibration', 'Sound waves', 'EM waves'],
         applications: ['Acoustics', 'Optics', 'Seismology'],
       },
-      ja: {
-        definition: '波の伝播を記述する双曲型偏微分方程式',
-        formulas: [
-          '∂²u/∂t² = c²∇²u',
-          'ダランベール解: u = f(x-ct) + g(x+ct)',
-          '特性線: x ± ct = const',
-        ],
-        examples: ['弦の振動', '音波', '電磁波'],
-        applications: ['音響学', '光学', '地震学'],
-      },
     },
     latex: '\\frac{\\partial^2 u}{\\partial t^2} = c^2 \\nabla^2 u',
     relations: {
@@ -100,7 +82,6 @@ export const pdeConcepts: MathConcept[] = [
     name: {
       ko: '라플라스 방정식',
       en: 'Laplace Equation',
-      ja: 'ラプラス方程式',
     },
     field: 'partial-differential-equations',
     subfield: 'elliptic',
@@ -118,12 +99,6 @@ export const pdeConcepts: MathConcept[] = [
         examples: ['Electrostatic potential', 'Steady heat conduction', 'Fluid flow'],
         applications: ['Electromagnetism', 'Fluid mechanics', 'Gravity'],
       },
-      ja: {
-        definition: '定常状態を記述する楕円型偏微分方程式。調和関数を定義',
-        formulas: ['∇²u = 0', '∂²u/∂x² + ∂²u/∂y² = 0', '平均値の性質', '最大値原理'],
-        examples: ['静電ポテンシャル', '定常熱伝導', '流体流れ'],
-        applications: ['電磁気学', '流体力学', '重力'],
-      },
     },
     latex: '\\nabla^2 u = 0',
     relations: {
@@ -139,7 +114,6 @@ export const pdeConcepts: MathConcept[] = [
     name: {
       ko: '나비에-스토크스 방정식',
       en: 'Navier-Stokes Equations',
-      ja: 'ナビエ・ストークス方程式',
     },
     field: 'partial-differential-equations',
     subfield: 'fluid',
@@ -165,16 +139,6 @@ export const pdeConcepts: MathConcept[] = [
         examples: ['Air flow', 'Ocean currents', 'Blood flow'],
         applications: ['Aerodynamics', 'Meteorology', 'Biomechanics'],
       },
-      ja: {
-        definition: '粘性流体の運動を記述する非線形偏微分方程式',
-        formulas: [
-          'ρ(∂v/∂t + v·∇v) = -∇p + μ∇²v + f',
-          '∇·v = 0 (非圧縮性)',
-          'レイノルズ数: Re = ρvL/μ',
-        ],
-        examples: ['空気の流れ', '海流', '血流'],
-        applications: ['空気力学', '気象学', '生体力学'],
-      },
     },
     latex:
       '\\rho\\left(\\frac{\\partial \\mathbf{v}}{\\partial t} + \\mathbf{v} \\cdot \\nabla\\mathbf{v}\\right) = -\\nabla p + \\mu\\nabla^2\\mathbf{v}',
@@ -191,7 +155,6 @@ export const pdeConcepts: MathConcept[] = [
     name: {
       ko: '변수 분리법',
       en: 'Separation of Variables',
-      ja: '変数分離法',
     },
     field: 'partial-differential-equations',
     subfield: 'methods',
@@ -213,12 +176,6 @@ export const pdeConcepts: MathConcept[] = [
         examples: ['Heat equation', 'Wave equation', 'Laplace equation'],
         applications: ['Physics', 'Engineering', 'Boundary value problems'],
       },
-      ja: {
-        definition: 'PDEを複数のODEに分解して解く方法',
-        formulas: ['仮定: u(x,t) = X(x)T(t)', '各変数のODEに分離', '固有値問題 + 級数解'],
-        examples: ['熱方程式', '波動方程式', 'ラプラス方程式'],
-        applications: ['物理学', '工学', '境界値問題'],
-      },
     },
     latex: 'u(x,t) = X(x)T(t)',
     relations: {
@@ -234,7 +191,6 @@ export const pdeConcepts: MathConcept[] = [
     name: {
       ko: '그린 함수',
       en: "Green's Function",
-      ja: 'グリーン関数',
     },
     field: 'partial-differential-equations',
     subfield: 'methods',
@@ -256,12 +212,6 @@ export const pdeConcepts: MathConcept[] = [
         examples: ['Poisson equation', 'Heat equation', 'Wave equation'],
         applications: ['Electromagnetism', 'Quantum mechanics', 'Acoustics'],
       },
-      ja: {
-        definition: '点ソースへの応答。線形微分方程式の解を積分で表現',
-        formulas: ['LG(x,ξ) = δ(x-ξ)', '解: u(x) = ∫G(x,ξ)f(ξ)dξ', '相反定理: G(x,ξ) = G(ξ,x)'],
-        examples: ['ポアソン方程式', '熱方程式', '波動方程式'],
-        applications: ['電磁気学', '量子力学', '音響学'],
-      },
     },
     latex: 'u(x) = \\int G(x,\\xi) f(\\xi) \\, d\\xi',
     relations: {
@@ -277,7 +227,6 @@ export const pdeConcepts: MathConcept[] = [
     name: {
       ko: '유한 차분법',
       en: 'Finite Difference Method',
-      ja: '有限差分法',
     },
     field: 'partial-differential-equations',
     subfield: 'numerical',
@@ -303,16 +252,6 @@ export const pdeConcepts: MathConcept[] = [
         examples: ['Heat equation (explicit/implicit)', 'Wave equation'],
         applications: ['CFD', 'Weather prediction', 'Finance'],
       },
-      ja: {
-        definition: '微分を差分で近似してPDEを数値的に解く方法',
-        formulas: [
-          '∂u/∂x ≈ (u_{i+1} - u_{i-1})/(2Δx)',
-          '∂²u/∂x² ≈ (u_{i+1} - 2uᵢ + u_{i-1})/(Δx)²',
-          'CFL条件: cΔt/Δx ≤ 1',
-        ],
-        examples: ['熱方程式（陽解法/陰解法）', '波動方程式'],
-        applications: ['CFD', '気象予測', '金融'],
-      },
     },
     latex:
       '\\frac{\\partial^2 u}{\\partial x^2} \\approx \\frac{u_{i+1} - 2u_i + u_{i-1}}{(\\Delta x)^2}',
@@ -329,7 +268,6 @@ export const pdeConcepts: MathConcept[] = [
     name: {
       ko: '경계 조건',
       en: 'Boundary Conditions',
-      ja: '境界条件',
     },
     field: 'partial-differential-equations',
     subfield: 'foundations',
@@ -346,16 +284,6 @@ export const pdeConcepts: MathConcept[] = [
         formulas: ['Dirichlet: u = g on ∂Ω', 'Neumann: ∂u/∂n = h on ∂Ω', 'Robin: αu + β∂u/∂n = g'],
         examples: ['Fixed end (Dirichlet)', 'Insulated (Neumann)', 'Radiating (Robin)'],
         applications: ['Physics modeling', 'Engineering', 'Numerical analysis'],
-      },
-      ja: {
-        definition: 'PDEの一意解を決定するための境界での条件',
-        formulas: [
-          'ディリクレ: u = g on ∂Ω',
-          'ノイマン: ∂u/∂n = h on ∂Ω',
-          'ロビン: αu + β∂u/∂n = g',
-        ],
-        examples: ['固定端（ディリクレ）', '断熱（ノイマン）', '放射（ロビン）'],
-        applications: ['物理モデリング', '工学', '数値解析'],
       },
     },
     latex: 'u = g \\text{ on } \\partial\\Omega',

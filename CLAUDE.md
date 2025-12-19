@@ -47,7 +47,7 @@ Ask before: removing code, changing core logic, breaking changes.
 | 1 | Test Coverage | Vitest + coverage-v8 (≥80%) | CI |
 | 2 | Visual Coverage | Playwright + pixelmatch | CI |
 | 3 | Code Health | size-limit, TypeScript strict | CI |
-| 4 | Monorepo Integrity | madge, syncpack | CI |
+| 4 | Monorepo Integrity | skott, syncpack | CI |
 
 ### II. Performance & Reach
 | # | 지표 | 도구 | 검증 시점 |
@@ -72,7 +72,7 @@ Ask before: removing code, changing core logic, breaking changes.
 ### 검증 분리
 - **pre-commit**: Biome + tsc --noEmit
 - **CI 병렬 실행**:
-  - Job 1: Vitest, madge, syncpack
+  - Job 1: Vitest, skott, syncpack
   - Job 2: Playwright (visual, a11y, mobile, responsive)
   - Job 3: Lighthouse CI
   - Job 4: broken-link-checker, size-limit

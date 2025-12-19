@@ -9,7 +9,6 @@ export const musicConcepts: MathConcept[] = [
     name: {
       ko: '주파수 비율',
       en: 'Frequency Ratio',
-      ja: '周波数比',
     },
     field: 'applied-music',
     subfield: 'acoustics',
@@ -113,7 +112,6 @@ export const musicConcepts: MathConcept[] = [
     name: {
       ko: '12평균율',
       en: '12-Tone Equal Temperament',
-      ja: '12平均律',
     },
     field: 'applied-music',
     subfield: 'tuning',
@@ -208,7 +206,6 @@ export const musicConcepts: MathConcept[] = [
     name: {
       ko: '박자',
       en: 'Time Signature',
-      ja: '拍子',
     },
     field: 'applied-music',
     subfield: 'rhythm',
@@ -301,7 +298,6 @@ export const musicConcepts: MathConcept[] = [
     name: {
       ko: '배음렬',
       en: 'Harmonic Series (Music)',
-      ja: '倍音列',
     },
     field: 'applied-music',
     subfield: 'acoustics',
@@ -398,7 +394,6 @@ export const musicConcepts: MathConcept[] = [
     name: {
       ko: '화음 이론',
       en: 'Chord Theory',
-      ja: '和音理論',
     },
     field: 'applied-music',
     subfield: 'harmony',
@@ -491,7 +486,6 @@ export const musicConcepts: MathConcept[] = [
     name: {
       ko: '데시벨 스케일',
       en: 'Decibel Scale',
-      ja: 'デシベルスケール',
     },
     field: 'applied-music',
     subfield: 'acoustics',

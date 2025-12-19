@@ -9,7 +9,6 @@ export const trigonometryConcepts: MathConcept[] = [
     name: {
       ko: '사인과 코사인',
       en: 'Sine and Cosine',
-      ja: 'サインとコサイン',
     },
     field: 'trigonometry',
     subfield: 'trig-functions',
@@ -105,7 +104,6 @@ export const trigonometryConcepts: MathConcept[] = [
     name: {
       ko: '탄젠트',
       en: 'Tangent',
-      ja: 'タンジェント',
     },
     field: 'trigonometry',
     subfield: 'trig-functions',
@@ -172,7 +170,6 @@ export const trigonometryConcepts: MathConcept[] = [
     name: {
       ko: '단위원',
       en: 'Unit Circle',
-      ja: '単位円',
     },
     field: 'trigonometry',
     subfield: 'trig-functions',
@@ -239,7 +236,6 @@ export const trigonometryConcepts: MathConcept[] = [
     name: {
       ko: '라디안',
       en: 'Radians',
-      ja: 'ラジアン',
     },
     field: 'trigonometry',
     subfield: 'trig-functions',
@@ -313,7 +309,6 @@ export const trigonometryConcepts: MathConcept[] = [
     name: {
       ko: '삼각 항등식',
       en: 'Trigonometric Identities',
-      ja: '三角関数の恒等式',
     },
     field: 'trigonometry',
     subfield: 'trig-identities',
@@ -397,7 +392,6 @@ export const trigonometryConcepts: MathConcept[] = [
     name: {
       ko: '역삼각함수',
       en: 'Inverse Trigonometric Functions',
-      ja: '逆三角関数',
     },
     field: 'trigonometry',
     subfield: 'trig-functions',
@@ -484,7 +478,6 @@ export const trigonometryConcepts: MathConcept[] = [
     name: {
       ko: '사인 법칙',
       en: 'Law of Sines',
-      ja: '正弦定理',
     },
     field: 'trigonometry',
     subfield: 'triangle-trig',
@@ -543,7 +536,6 @@ export const trigonometryConcepts: MathConcept[] = [
     name: {
       ko: '코사인 법칙',
       en: 'Law of Cosines',
-      ja: '余弦定理',
     },
     field: 'trigonometry',
     subfield: 'triangle-trig',
@@ -624,7 +616,6 @@ export const trigonometryConcepts: MathConcept[] = [
     name: {
       ko: '쌍곡선 함수',
       en: 'Hyperbolic Functions',
-      ja: '双曲線関数',
     },
     field: 'trigonometry',
     subfield: 'hyperbolic',
@@ -726,7 +717,6 @@ export const trigonometryConcepts: MathConcept[] = [
     name: {
       ko: '역쌍곡선 함수',
       en: 'Inverse Hyperbolic Functions',
-      ja: '逆双曲線関数',
     },
     field: 'trigonometry',
     subfield: 'hyperbolic',

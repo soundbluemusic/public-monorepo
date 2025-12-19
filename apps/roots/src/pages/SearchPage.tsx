@@ -1,13 +1,44 @@
-import { ConceptCard } from '@/components/concept/ConceptCard';
 import { Layout } from '@/components/layout/Layout';
-import { useI18n } from '@/i18n';
-import { type SearchResult, searchConcepts } from '@/lib/search';
-import { Meta, Title } from '@solidjs/meta';
-import { useSearchParams } from '@solidjs/router';
 /**
  * @fileoverview 검색 결과 페이지
  */
+import { DifficultyBadge } from '@/components/ui/DifficultyBadge';
+import type { DifficultyLevel } from '@/data/types';
+import { useI18n } from '@/i18n';
+import { type SearchResult, searchConcepts } from '@/lib/search';
+import { Meta, Title } from '@solidjs/meta';
+import { A, useSearchParams } from '@solidjs/router';
 import { For, Show, createEffect, createSignal } from 'solid-js';
+
+/** 검색 결과 카드 (SearchIndexItem용) */
+function SearchResultCard(props: { result: SearchResult }) {
+  const { locale, localePath } = useI18n();
+  const item = () => props.result.item;
+  const name = () => item().name[locale()] || item().name.en;
+  const def = () => item().def[locale()] || item().def.en;
+
+  return (
+    <A
+      href={localePath(`/concept/${item().id}`)}
+      class="card card-field hover:scale-[1.01] transition-transform block"
+    >
+      <div class="flex items-start justify-between gap-2 mb-2">
+        <h3 class="font-semibold" style={{ color: 'var(--text-primary)' }}>
+          {name()}
+        </h3>
+        <DifficultyBadge level={item().difficulty as DifficultyLevel} showLabel={false} size="sm" />
+      </div>
+      <p class="text-sm line-clamp-2 mb-3" style={{ color: 'var(--text-secondary)' }}>
+        {def()}
+      </p>
+      <div class="flex items-center gap-2">
+        <span class="text-xs" style={{ color: 'var(--text-tertiary)' }}>
+          {item().field}
+        </span>
+      </div>
+    </A>
+  );
+}
 
 export default function SearchPage() {
   const [searchParams] = useSearchParams();
@@ -16,19 +47,20 @@ export default function SearchPage() {
   const [results, setResults] = createSignal<SearchResult[]>([]);
   const [isSearching, setIsSearching] = createSignal(false);
 
-  const query = () => searchParams.q || '';
+  const query = () => {
+    const q = searchParams.q;
+    return typeof q === 'string' ? q : '';
+  };
 
-  // 검색 수행
+  // 검색 수행 (비동기)
   createEffect(() => {
     const q = query();
     if (q.length >= 2) {
       setIsSearching(true);
-      // 약간의 디바운스 효과
-      setTimeout(() => {
-        const searchResults = searchConcepts(q, locale(), 20);
+      searchConcepts(q, locale(), 20).then((searchResults) => {
         setResults(searchResults);
         setIsSearching(false);
-      }, 100);
+      });
     } else {
       setResults([]);
     }
@@ -82,7 +114,7 @@ export default function SearchPage() {
             {locale() === 'ko' ? '개의 결과' : ' results'}
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <For each={results()}>{(result) => <ConceptCard concept={result.item} />}</For>
+            <For each={results()}>{(result) => <SearchResultCard result={result} />}</For>
           </div>
         </Show>
       </Show>

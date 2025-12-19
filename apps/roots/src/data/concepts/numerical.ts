@@ -9,7 +9,6 @@ export const numericalConcepts: MathConcept[] = [
     name: {
       ko: '수치 오차',
       en: 'Numerical Error',
-      ja: '数値誤差',
     },
     field: 'numerical',
     subfield: 'error-analysis',
@@ -86,7 +85,6 @@ export const numericalConcepts: MathConcept[] = [
     name: {
       ko: '뉴턴-랩슨 방법',
       en: 'Newton-Raphson Method',
-      ja: 'ニュートン法',
     },
     field: 'numerical',
     subfield: 'root-finding',
@@ -157,7 +155,6 @@ export const numericalConcepts: MathConcept[] = [
     name: {
       ko: '수치 적분',
       en: 'Numerical Integration',
-      ja: '数値積分',
     },
     field: 'numerical',
     subfield: 'integration',
@@ -228,7 +225,6 @@ export const numericalConcepts: MathConcept[] = [
     name: {
       ko: '보간법',
       en: 'Interpolation',
-      ja: '補間法',
     },
     field: 'numerical',
     subfield: 'approximation',
@@ -291,7 +287,6 @@ export const numericalConcepts: MathConcept[] = [
     name: {
       ko: '미분방정식의 수치해법',
       en: 'Numerical ODE Methods',
-      ja: '常微分方程式の数値解法',
     },
     field: 'numerical',
     subfield: 'ode',
@@ -360,7 +355,6 @@ export const numericalConcepts: MathConcept[] = [
     name: {
       ko: '이분법',
       en: 'Bisection Method',
-      ja: '二分法',
     },
     field: 'numerical',
     subfield: 'root-finding',
@@ -439,7 +433,6 @@ export const numericalConcepts: MathConcept[] = [
     name: {
       ko: '룽게-쿠타 방법',
       en: 'Runge-Kutta Methods',
-      ja: 'ルンゲ・クッタ法',
     },
     field: 'numerical',
     subfield: 'ode',
@@ -545,7 +538,6 @@ export const numericalConcepts: MathConcept[] = [
     name: {
       ko: '행렬 분해',
       en: 'Matrix Factorization',
-      ja: '行列分解',
     },
     field: 'numerical',
     subfield: 'linear-systems',
@@ -635,7 +627,6 @@ export const numericalConcepts: MathConcept[] = [
     name: {
       ko: '유한 차분법',
       en: 'Finite Difference Method',
-      ja: '有限差分法',
     },
     field: 'numerical',
     subfield: 'pde',

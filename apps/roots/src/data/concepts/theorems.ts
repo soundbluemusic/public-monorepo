@@ -9,7 +9,6 @@ export const theoremsConcepts: MathConcept[] = [
     name: {
       ko: '미적분학의 기본정리',
       en: 'Fundamental Theorem of Calculus',
-      ja: '微積分学の基本定理',
     },
     field: 'theorems',
     subfield: 'calculus',
@@ -88,7 +87,6 @@ export const theoremsConcepts: MathConcept[] = [
     name: {
       ko: '대수학의 기본정리',
       en: 'Fundamental Theorem of Algebra',
-      ja: '代数学の基本定理',
     },
     field: 'theorems',
     subfield: 'algebra',
@@ -167,7 +165,6 @@ export const theoremsConcepts: MathConcept[] = [
     name: {
       ko: '페르마의 마지막 정리',
       en: "Fermat's Last Theorem",
-      ja: 'フェルマーの最終定理',
     },
     field: 'theorems',
     subfield: 'number-theory',
@@ -238,7 +235,6 @@ export const theoremsConcepts: MathConcept[] = [
     name: {
       ko: '소수 정리',
       en: 'Prime Number Theorem',
-      ja: '素数定理',
     },
     field: 'theorems',
     subfield: 'number-theory',
@@ -315,7 +311,6 @@ export const theoremsConcepts: MathConcept[] = [
     name: {
       ko: '평균값 정리',
       en: 'Mean Value Theorem',
-      ja: '平均値の定理',
     },
     field: 'theorems',
     subfield: 'calculus',
@@ -386,7 +381,6 @@ export const theoremsConcepts: MathConcept[] = [
     name: {
       ko: '베이즈 정리',
       en: "Bayes' Theorem",
-      ja: 'ベイズの定理',
     },
     field: 'theorems',
     subfield: 'probability',
@@ -468,7 +462,6 @@ export const theoremsConcepts: MathConcept[] = [
     name: {
       ko: '뇌터의 정리',
       en: "Noether's Theorem",
-      ja: 'ネーターの定理',
     },
     field: 'theorems',
     subfield: 'physics',
@@ -560,7 +553,6 @@ export const theoremsConcepts: MathConcept[] = [
     name: {
       ko: '피타고라스 정리',
       en: 'Pythagorean Theorem',
-      ja: 'ピタゴラスの定理',
     },
     field: 'theorems',
     subfield: 'geometry',
@@ -648,7 +640,6 @@ export const theoremsConcepts: MathConcept[] = [
     name: {
       ko: '중심극한정리',
       en: 'Central Limit Theorem',
-      ja: '中心極限定理',
     },
     field: 'theorems',
     subfield: 'probability',
@@ -727,7 +718,6 @@ export const theoremsConcepts: MathConcept[] = [
     name: {
       ko: '중간값 정리',
       en: 'Intermediate Value Theorem',
-      ja: '中間値の定理',
     },
     field: 'theorems',
     subfield: 'calculus',
@@ -800,7 +790,6 @@ export const theoremsConcepts: MathConcept[] = [
     name: {
       ko: '스토크스 정리',
       en: "Stokes' Theorem",
-      ja: 'ストークスの定理',
     },
     field: 'theorems',
     subfield: 'calculus',
@@ -884,7 +873,6 @@ export const theoremsConcepts: MathConcept[] = [
     name: {
       ko: '괴델의 불완전성 정리',
       en: "Gödel's Incompleteness Theorems",
-      ja: 'ゲーデルの不完全性定理',
     },
     field: 'theorems',
     subfield: 'logic',

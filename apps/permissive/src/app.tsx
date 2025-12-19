@@ -12,7 +12,7 @@ import { MetaProvider, Title } from '@solidjs/meta';
 import { type RouteSectionProps, Router } from '@solidjs/router';
 import { FileRoutes } from '@solidjs/start/router';
 import { OfflineIndicator } from '@soundblue/shared';
-import { Suspense } from 'solid-js';
+import { For, Suspense } from 'solid-js';
 
 import '~/styles/global.css';
 
@@ -49,9 +49,7 @@ function LoadingFallback() {
               <div class="skeleton h-11 flex-1 rounded-xl" />
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-8">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
-                <div class="skeleton h-32 rounded-xl" key={i} />
-              ))}
+              <For each={[1, 2, 3, 4, 5, 6]}>{() => <div class="skeleton h-32 rounded-xl" />}</For>
             </div>
           </div>
         </div>

@@ -6,7 +6,6 @@ export const algebraicGeometryConcepts: MathConcept[] = [
     name: {
       ko: '대수적 다양체',
       en: 'Algebraic Variety',
-      ja: '代数多様体',
     },
     field: 'algebraic-geometry',
     subfield: 'varieties',
@@ -33,16 +32,6 @@ export const algebraicGeometryConcepts: MathConcept[] = [
         examples: ['Circle: x² + y² = 1', 'Elliptic curve: y² = x³ + ax + b', 'Surface: xyz = 1'],
         applications: ['Cryptography', 'Number theory', 'Physics'],
       },
-      ja: {
-        definition: '多項式方程式の解集合。代数幾何学の基本的研究対象',
-        formulas: [
-          'V(I) = {x ∈ kⁿ : f(x) = 0, ∀f ∈ I}',
-          'アフィン多様体: Aⁿの部分集合',
-          '射影多様体: Pⁿの部分集合',
-        ],
-        examples: ['円: x² + y² = 1', '楕円曲線: y² = x³ + ax + b', '曲面: xyz = 1'],
-        applications: ['暗号学', '整数論', '物理学'],
-      },
     },
     latex: 'V(I) = \\{x \\in k^n : f(x) = 0, \\; \\forall f \\in I\\}',
     relations: {
@@ -58,7 +47,6 @@ export const algebraicGeometryConcepts: MathConcept[] = [
     name: {
       ko: '사영 공간',
       en: 'Projective Space',
-      ja: '射影空間',
     },
     field: 'algebraic-geometry',
     subfield: 'spaces',
@@ -81,12 +69,6 @@ export const algebraicGeometryConcepts: MathConcept[] = [
         ],
         applications: ['Algebraic geometry', 'Computer vision', 'Perspective'],
       },
-      ja: {
-        definition: 'ベクトル空間の1次元部分空間の集合。「無限遠点」を含め幾何学を完成',
-        formulas: ['Pⁿ = (kⁿ⁺¹ - {0})/~', '[x₀:x₁:...:xₙ] (斉次座標)', 'P¹ = k ∪ {∞}'],
-        examples: ['P¹ (射影直線)', 'P² (射影平面)', '無限遠点で交わる平行線'],
-        applications: ['代数幾何', 'コンピュータビジョン', '遠近法'],
-      },
     },
     latex: '\\mathbb{P}^n = (k^{n+1} - \\{0\\})/\\sim',
     relations: {
@@ -102,7 +84,6 @@ export const algebraicGeometryConcepts: MathConcept[] = [
     name: {
       ko: '스킴',
       en: 'Scheme',
-      ja: 'スキーム',
     },
     field: 'algebraic-geometry',
     subfield: 'foundations',
@@ -125,12 +106,6 @@ export const algebraicGeometryConcepts: MathConcept[] = [
         examples: ['Spec ℤ', 'Spec k[x]', 'Proj (projective scheme)'],
         applications: ['Number theory', 'Algebraic geometry', 'Homological algebra'],
       },
-      ja: {
-        definition: '局所環付き空間。代数多様体の一般化で現代代数幾何の基礎',
-        formulas: ['(X, O_X)', 'Spec A: 素イデアルの集合', '構造層: O_X (局所環の層)'],
-        examples: ['Spec ℤ', 'Spec k[x]', 'Proj (射影スキーム)'],
-        applications: ['整数論', '代数幾何', 'ホモロジー代数'],
-      },
     },
     latex: '(X, \\mathcal{O}_X)',
     relations: {
@@ -146,7 +121,6 @@ export const algebraicGeometryConcepts: MathConcept[] = [
     name: {
       ko: '층 이론',
       en: 'Sheaf Theory',
-      ja: '層理論',
     },
     field: 'algebraic-geometry',
     subfield: 'foundations',
@@ -178,17 +152,6 @@ export const algebraicGeometryConcepts: MathConcept[] = [
         ],
         applications: ['Algebraic geometry', 'Complex analysis', 'Topology'],
       },
-      ja: {
-        definition: '位相空間の開集合に代数的データを付ける構造',
-        formulas: [
-          '前層: F: Open(X)^op → C',
-          '層条件: 貼り合わせ公理',
-          '層化: 前層 → 層',
-          '層コホモロジー: Hⁿ(X, F)',
-        ],
-        examples: ['連続関数の層', '微分形式の層', '正則関数の層 O'],
-        applications: ['代数幾何', '複素解析', '位相数学'],
-      },
     },
     latex: 'H^n(X, \\mathcal{F})',
     relations: {
@@ -204,7 +167,6 @@ export const algebraicGeometryConcepts: MathConcept[] = [
     name: {
       ko: '베주 정리',
       en: "Bézout's Theorem",
-      ja: 'ベズーの定理',
     },
     field: 'algebraic-geometry',
     subfield: 'intersection',
@@ -223,12 +185,6 @@ export const algebraicGeometryConcepts: MathConcept[] = [
         examples: ['Line and conic: 2 points', 'Two conics: 4 points'],
         applications: ['Intersection theory', 'Algebraic geometry', 'Geometry'],
       },
-      ja: {
-        definition: '二つの射影曲線の交点数は次数の積（適切に数えると）',
-        formulas: ['deg(C₁) · deg(C₂) = Σ m_p', '重複度込み、複素数体上、無限遠点含む'],
-        examples: ['直線と円錐曲線: 2点', '二つの円錐曲線: 4点'],
-        applications: ['交点理論', '代数幾何', '幾何学'],
-      },
     },
     latex: '\\deg(C_1) \\cdot \\deg(C_2) = \\sum_p m_p',
     relations: {
@@ -244,7 +200,6 @@ export const algebraicGeometryConcepts: MathConcept[] = [
     name: {
       ko: '힐베르트 영점정리',
       en: 'Hilbert Nullstellensatz',
-      ja: 'ヒルベルトの零点定理',
     },
     field: 'algebraic-geometry',
     subfield: 'foundations',
@@ -271,16 +226,6 @@ export const algebraicGeometryConcepts: MathConcept[] = [
         examples: ['V(x²) = {0}, I(V(x²)) = (x)'],
         applications: ['Algebraic geometry', 'Commutative algebra', 'Number theory'],
       },
-      ja: {
-        definition: '多項式のイデアルと代数的集合の対応。代数幾何学の基礎',
-        formulas: [
-          'I(V(I)) = √I (根基)',
-          '弱い形: k代数閉体, I ≠ k[x] ⟹ V(I) ≠ ∅',
-          'I, Vの間のガロア対応',
-        ],
-        examples: ['V(x²) = {0}, I(V(x²)) = (x)'],
-        applications: ['代数幾何', '可換環論', '整数論'],
-      },
     },
     latex: 'I(V(I)) = \\sqrt{I}',
     relations: {
@@ -296,7 +241,6 @@ export const algebraicGeometryConcepts: MathConcept[] = [
     name: {
       ko: '리만-로흐 정리',
       en: 'Riemann-Roch Theorem',
-      ja: 'リーマン・ロッホの定理',
     },
     field: 'algebraic-geometry',
     subfield: 'curves',
@@ -319,12 +263,6 @@ export const algebraicGeometryConcepts: MathConcept[] = [
         examples: ['g=0: ℓ(D) = max(0, deg(D)+1)', 'g=1 elliptic curve'],
         applications: ['Curve theory', 'Cryptography', 'Coding theory'],
       },
-      ja: {
-        definition: '代数曲線上の因子の線形系の次元を計算する基本定理',
-        formulas: ['ℓ(D) - ℓ(K-D) = deg(D) - g + 1', 'g: 種数, K: 標準因子', 'ℓ(D) = dim L(D)'],
-        examples: ['g=0: ℓ(D) = max(0, deg(D)+1)', 'g=1 楕円曲線'],
-        applications: ['曲線論', '暗号学', '符号理論'],
-      },
     },
     latex: '\\ell(D) - \\ell(K-D) = \\deg(D) - g + 1',
     relations: {
@@ -340,7 +278,6 @@ export const algebraicGeometryConcepts: MathConcept[] = [
     name: {
       ko: '타원곡선 (대수기하)',
       en: 'Elliptic Curves (Algebraic Geometry)',
-      ja: '楕円曲線（代数幾何）',
     },
     field: 'algebraic-geometry',
     subfield: 'curves',
@@ -366,16 +303,6 @@ export const algebraicGeometryConcepts: MathConcept[] = [
         ],
         examples: ['y² = x³ - x', 'y² = x³ - 432'],
         applications: ['Cryptography', "Fermat's Last Theorem", 'Number theory'],
-      },
-      ja: {
-        definition: '種数1の非特異射影曲線。群構造を持ち整数論と暗号学の中心',
-        formulas: [
-          'y² = x³ + ax + b (ワイエルシュトラス)',
-          'Δ = -16(4a³ + 27b²) ≠ 0',
-          '点の加法: P + Q + R = O',
-        ],
-        examples: ['y² = x³ - x', 'y² = x³ - 432'],
-        applications: ['暗号学', 'フェルマーの最終定理', '整数論'],
       },
     },
     latex: 'y^2 = x^3 + ax + b',

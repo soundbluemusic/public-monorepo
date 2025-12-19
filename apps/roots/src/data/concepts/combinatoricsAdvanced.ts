@@ -6,7 +6,6 @@ export const combinatoricsAdvancedConcepts: MathConcept[] = [
     name: {
       ko: '생성함수',
       en: 'Generating Functions',
-      ja: '母関数',
     },
     field: 'combinatorics',
     subfield: 'enumeration',
@@ -25,12 +24,6 @@ export const combinatoricsAdvancedConcepts: MathConcept[] = [
         examples: ['Partition numbers', 'Catalan numbers', 'Stirling numbers'],
         applications: ['Solving recurrences', 'Combinatorial identities', 'Probability'],
       },
-      ja: {
-        definition: '数列を多項式や冪級数の係数としてエンコードし組合せ問題を解くツール',
-        formulas: ['OGF: G(x) = Σaₙxⁿ', 'EGF: E(x) = Σaₙxⁿ/n!', 'フィボナッチ: G(x) = x/(1-x-x²)'],
-        examples: ['分割数', 'カタラン数', 'スターリング数'],
-        applications: ['漸化式の解法', '組合せ恒等式', '確率論'],
-      },
     },
     latex: 'G(x) = \\sum_{n=0}^{\\infty} a_n x^n',
     relations: {
@@ -46,7 +39,6 @@ export const combinatoricsAdvancedConcepts: MathConcept[] = [
     name: {
       ko: '카탈란 수',
       en: 'Catalan Numbers',
-      ja: 'カタラン数',
     },
     field: 'combinatorics',
     subfield: 'enumeration',
@@ -64,12 +56,6 @@ export const combinatoricsAdvancedConcepts: MathConcept[] = [
         examples: ['Parenthesizations', 'Binary trees', 'Lattice paths', 'Polygon triangulations'],
         applications: ['Algorithms', 'Parsing', 'Geometry'],
       },
-      ja: {
-        definition: '様々な組合せ構造の数を数える数列。Cₙ = (2n)!/((n+1)!n!)',
-        formulas: ['Cₙ = C(2n,n)/(n+1)', 'Cₙ = ΣCᵢCₙ₋₁₋ᵢ', 'G(x) = (1-√(1-4x))/(2x)'],
-        examples: ['括弧の配列', '二分木', '格子経路', '凸多角形の三角形分割'],
-        applications: ['アルゴリズム', '構文解析', '幾何学'],
-      },
     },
     latex: 'C_n = \\frac{1}{n+1}\\binom{2n}{n}',
     relations: {
@@ -85,7 +71,6 @@ export const combinatoricsAdvancedConcepts: MathConcept[] = [
     name: {
       ko: '스털링 수',
       en: 'Stirling Numbers',
-      ja: 'スターリング数',
     },
     field: 'combinatorics',
     subfield: 'enumeration',
@@ -111,16 +96,6 @@ export const combinatoricsAdvancedConcepts: MathConcept[] = [
         examples: ['s(4,2) = 11', 'S(4,2) = 7', 'Bell number: Bₙ = ΣS(n,k)'],
         applications: ['Partitions', 'Polynomials', 'Probability'],
       },
-      ja: {
-        definition: '順列と集合分割を数える2種類の組合せ数',
-        formulas: [
-          '第1種 s(n,k): n個をk個の巡回に配列',
-          '第2種 S(n,k): n個をk個の部分集合に分割',
-          'S(n,k) = kS(n-1,k) + S(n-1,k-1)',
-        ],
-        examples: ['s(4,2) = 11', 'S(4,2) = 7', 'ベル数: Bₙ = ΣS(n,k)'],
-        applications: ['分割', '多項式', '確率論'],
-      },
     },
     latex: 'S(n,k) = k \\cdot S(n-1,k) + S(n-1,k-1)',
     relations: {
@@ -136,7 +111,6 @@ export const combinatoricsAdvancedConcepts: MathConcept[] = [
     name: {
       ko: '폴리아 열거 정리',
       en: 'Pólya Enumeration Theorem',
-      ja: 'ポリアの計数定理',
     },
     field: 'combinatorics',
     subfield: 'enumeration',
@@ -154,12 +128,6 @@ export const combinatoricsAdvancedConcepts: MathConcept[] = [
         examples: ['Necklace coloring', 'Polyhedra coloring', 'Graph isomorphism'],
         applications: ['Chemistry', 'Graph theory', 'Molecular structures'],
       },
-      ja: {
-        definition: '対称性を考慮して区別不能な構造の数を数える定理',
-        formulas: ['|X/G| = (1/|G|) Σ |X^g|', '巡回指標: Z(G)', '彩色数: PG(c₁,c₂,...,cₖ)'],
-        examples: ['ネックレスの彩色', '正多面体の彩色', 'グラフ同型'],
-        applications: ['化学', 'グラフ理論', '分子構造'],
-      },
     },
     latex: '|X/G| = \\frac{1}{|G|} \\sum_{g \\in G} |X^g|',
     relations: {
@@ -175,7 +143,6 @@ export const combinatoricsAdvancedConcepts: MathConcept[] = [
     name: {
       ko: '램지 이론',
       en: 'Ramsey Theory',
-      ja: 'ラムゼー理論',
     },
     field: 'combinatorics',
     subfield: 'extremal',
@@ -202,20 +169,6 @@ export const combinatoricsAdvancedConcepts: MathConcept[] = [
         examples: ['Party problem', 'Van der Waerden theorem', 'Hales-Jewett theorem'],
         applications: ['Combinatorics', 'Computer science', 'Logic'],
       },
-      ja: {
-        definition: '十分大きな構造では規則的な部分構造が必ず存在することを研究',
-        formulas: [
-          'R(r,s): 最小n where Kₙ 2色塗りにKrまたはKs単色存在',
-          'R(3,3) = 6',
-          'R(4,4) = 18',
-        ],
-        examples: [
-          'パーティー問題',
-          'ファン・デル・ヴェルデンの定理',
-          'ヘイルズ・ジュエットの定理',
-        ],
-        applications: ['組合せ論', '計算機科学', '論理学'],
-      },
     },
     latex: 'R(r,s) = \\min\\{n : K_n \\to K_r \\text{ or } K_s\\}',
     relations: {
@@ -231,7 +184,6 @@ export const combinatoricsAdvancedConcepts: MathConcept[] = [
     name: {
       ko: '분할 이론',
       en: 'Partition Theory',
-      ja: '分割理論',
     },
     field: 'combinatorics',
     subfield: 'enumeration',
@@ -259,17 +211,6 @@ export const combinatoricsAdvancedConcepts: MathConcept[] = [
         examples: ['p(5) = 7: 5=4+1=3+2=3+1+1=...', 'Young diagrams'],
         applications: ['Number theory', 'Representation theory', 'Physics'],
       },
-      ja: {
-        definition: '正の整数を正の整数の和として表す方法を研究',
-        formulas: [
-          'p(n): nの分割数',
-          'Σp(n)xⁿ = ∏1/(1-xᵏ)',
-          'オイラー恒等式',
-          'ハーディ・ラマヌジャン漸近式',
-        ],
-        examples: ['p(5) = 7: 5=4+1=3+2=3+1+1=...', 'ヤング図形'],
-        applications: ['整数論', '表現論', '物理学'],
-      },
     },
     latex: '\\sum_{n=0}^{\\infty} p(n)x^n = \\prod_{k=1}^{\\infty} \\frac{1}{1-x^k}',
     relations: {
@@ -285,7 +226,6 @@ export const combinatoricsAdvancedConcepts: MathConcept[] = [
     name: {
       ko: '뫼비우스 반전',
       en: 'Möbius Inversion',
-      ja: 'メビウス反転',
     },
     field: 'combinatorics',
     subfield: 'enumeration',
@@ -311,16 +251,6 @@ export const combinatoricsAdvancedConcepts: MathConcept[] = [
         examples: ['Euler totient function', 'Inclusion-exclusion principle'],
         applications: ['Number theory', 'Combinatorics', 'Cryptography'],
       },
-      ja: {
-        definition: 'ポセット（半順序集合）上の関数間の反転公式',
-        formulas: [
-          'g(n) = Σf(d) ⟹ f(n) = Σμ(n/d)g(d)',
-          'メビウス関数: μ(1)=1, μ(無平方)=(-1)^k',
-          'ポセット: g = f*ζ ⟹ f = g*μ',
-        ],
-        examples: ['オイラーのトーシェント関数', '包除原理'],
-        applications: ['整数論', '組合せ論', '暗号学'],
-      },
     },
     latex: 'f(n) = \\sum_{d|n} \\mu(n/d) g(d)',
     relations: {
@@ -336,7 +266,6 @@ export const combinatoricsAdvancedConcepts: MathConcept[] = [
     name: {
       ko: '확률적 방법',
       en: 'Probabilistic Method',
-      ja: '確率的方法',
     },
     field: 'combinatorics',
     subfield: 'techniques',
@@ -362,16 +291,6 @@ export const combinatoricsAdvancedConcepts: MathConcept[] = [
         ],
         examples: ['Ramsey number bounds', 'Chromatic numbers', 'Perfect matchings'],
         applications: ['Graph theory', 'Combinatorial optimization', 'Algorithms'],
-      },
-      ja: {
-        definition: '確率的議論を使って組合せ構造の存在を証明する方法',
-        formulas: [
-          'P(A) > 0 ⟹ Aの元が存在',
-          '期待値論証: E[X] > 0 ⟹ X > 0の場合が存在',
-          'ロバスの局所補題',
-        ],
-        examples: ['ラムゼー数の下界', '彩色数', '完全マッチング'],
-        applications: ['グラフ理論', '組合せ最適化', 'アルゴリズム'],
       },
     },
     latex: 'P(A) > 0 \\Rightarrow \\exists x \\in A',

@@ -216,7 +216,7 @@ export default function WebApiDetailPage() {
           </Show>
 
           {/* Related APIs */}
-          <Show when={api()?.relatedApis?.length && api()?.relatedApis.length > 0}>
+          <Show when={(api()?.relatedApis?.length ?? 0) > 0}>
             <section class="mb-8">
               <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
                 {isKo() ? '관련 API' : 'Related APIs'}

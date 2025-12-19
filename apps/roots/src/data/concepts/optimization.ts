@@ -9,7 +9,6 @@ export const optimizationConcepts: MathConcept[] = [
     name: {
       ko: '최적화 기초',
       en: 'Optimization Basics',
-      ja: '最適化の基礎',
     },
     field: 'optimization',
     subfield: 'foundations',
@@ -80,7 +79,6 @@ export const optimizationConcepts: MathConcept[] = [
     name: {
       ko: '경사 하강법',
       en: 'Gradient Descent',
-      ja: '勾配降下法',
     },
     field: 'optimization',
     subfield: 'algorithms',
@@ -149,7 +147,6 @@ export const optimizationConcepts: MathConcept[] = [
     name: {
       ko: '라그랑주 승수법',
       en: 'Lagrange Multipliers',
-      ja: 'ラグランジュの未定乗数法',
     },
     field: 'optimization',
     subfield: 'constrained',
@@ -230,7 +227,6 @@ export const optimizationConcepts: MathConcept[] = [
     name: {
       ko: '선형 계획법',
       en: 'Linear Programming',
-      ja: '線形計画法',
     },
     field: 'optimization',
     subfield: 'linear',
@@ -304,7 +300,6 @@ export const optimizationConcepts: MathConcept[] = [
     name: {
       ko: '볼록 최적화',
       en: 'Convex Optimization',
-      ja: '凸最適化',
     },
     field: 'optimization',
     subfield: 'convex',

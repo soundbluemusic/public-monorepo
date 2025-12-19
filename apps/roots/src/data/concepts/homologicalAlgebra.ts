@@ -6,7 +6,6 @@ export const homologicalAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '사슬 복합체',
       en: 'Chain Complex',
-      ja: '鎖複体',
     },
     field: 'homological-algebra',
     subfield: 'foundations',
@@ -33,16 +32,6 @@ export const homologicalAlgebraConcepts: MathConcept[] = [
         examples: ['Simplicial complex', 'Cellular complex', 'de Rham complex'],
         applications: ['Topology', 'Algebraic geometry', 'Physics'],
       },
-      ja: {
-        definition: '境界写像の合成が0であるモジュール（またはアーベル群）の列',
-        formulas: [
-          '...→ Cₙ₊₁ →^{∂ₙ₊₁} Cₙ →^{∂ₙ} Cₙ₋₁ →...',
-          '∂ₙ ∘ ∂ₙ₊₁ = 0',
-          'Hₙ(C) = ker ∂ₙ / im ∂ₙ₊₁',
-        ],
-        examples: ['単体複体', '胞体複体', 'ド・ラーム複体'],
-        applications: ['位相数学', '代数幾何', '物理学'],
-      },
     },
     latex: '\\partial_n \\circ \\partial_{n+1} = 0',
     relations: {
@@ -58,7 +47,6 @@ export const homologicalAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '완전열',
       en: 'Exact Sequence',
-      ja: '完全列',
     },
     field: 'homological-algebra',
     subfield: 'foundations',
@@ -76,12 +64,6 @@ export const homologicalAlgebraConcepts: MathConcept[] = [
         examples: ['0 → ℤ →^{×2} ℤ → ℤ/2ℤ → 0', 'Split exact sequence'],
         applications: ['Extension problems', 'Homology', 'Algebraic K-theory'],
       },
-      ja: {
-        definition: '各位置で像が次の核と等しい写像の列',
-        formulas: ['...→ A →^f B →^g C →...', 'im f = ker g', '短完全列: 0 → A → B → C → 0'],
-        examples: ['0 → ℤ →^{×2} ℤ → ℤ/2ℤ → 0', '分裂する完全列'],
-        applications: ['拡大問題', 'ホモロジー', '代数的K理論'],
-      },
     },
     latex: '\\text{im } f = \\ker g',
     relations: {
@@ -97,7 +79,6 @@ export const homologicalAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '유도 함자',
       en: 'Derived Functor',
-      ja: '導来関手',
     },
     field: 'homological-algebra',
     subfield: 'functors',
@@ -115,12 +96,6 @@ export const homologicalAlgebraConcepts: MathConcept[] = [
         examples: ['Extⁿ(A,B) = Rⁿ Hom(A,-)(B)', 'Torₙ(A,B) = Lₙ (A⊗-)(B)'],
         applications: ['Extension classification', 'Homological algebra', 'Algebraic geometry'],
       },
-      ja: {
-        definition: '完全でない関手を「修正」して得られる関手の集まり',
-        formulas: ['Lₙ F (左導来)', 'Rⁿ F (右導来)', 'Ext, Tor 関手'],
-        examples: ['Extⁿ(A,B) = Rⁿ Hom(A,-)(B)', 'Torₙ(A,B) = Lₙ (A⊗-)(B)'],
-        applications: ['拡大の分類', 'ホモロジー代数', '代数幾何'],
-      },
     },
     latex: 'R^n F, \\; L_n F',
     relations: {
@@ -136,7 +111,6 @@ export const homologicalAlgebraConcepts: MathConcept[] = [
     name: {
       ko: 'Ext 함자',
       en: 'Ext Functor',
-      ja: 'Ext関手',
     },
     field: 'homological-algebra',
     subfield: 'functors',
@@ -158,12 +132,6 @@ export const homologicalAlgebraConcepts: MathConcept[] = [
         examples: ['Ext¹(ℤ/n, ℤ) = ℤ/n', 'Ext¹(ℤ, ℤ) = 0'],
         applications: ['Extension theory', 'Cohomology', 'Representation theory'],
       },
-      ja: {
-        definition: 'Hom関手の右導来関手。モジュール拡大を分類',
-        formulas: ['Extⁿ(A,B) = Rⁿ Hom(A,-)(B)', 'Ext¹(A,B): 0→B→E→A→0 拡大', '長完全列'],
-        examples: ['Ext¹(ℤ/n, ℤ) = ℤ/n', 'Ext¹(ℤ, ℤ) = 0'],
-        applications: ['拡大理論', 'コホモロジー', '表現論'],
-      },
     },
     latex: '\\text{Ext}^n(A,B) = R^n \\text{Hom}(A,-)(B)',
     relations: {
@@ -179,7 +147,6 @@ export const homologicalAlgebraConcepts: MathConcept[] = [
     name: {
       ko: 'Tor 함자',
       en: 'Tor Functor',
-      ja: 'Tor関手',
     },
     field: 'homological-algebra',
     subfield: 'functors',
@@ -205,16 +172,6 @@ export const homologicalAlgebraConcepts: MathConcept[] = [
         examples: ['Tor₁(ℤ/m, ℤ/n) = ℤ/gcd(m,n)', 'Tor(A,B) = 0 if A or B free'],
         applications: ['Flatness', 'Algebraic geometry', 'Homology'],
       },
-      ja: {
-        definition: 'テンソル積関手の左導来関手。テンソル積の「捻れ」を測定',
-        formulas: [
-          'Torₙ(A,B) = Lₙ(A⊗-)(B)',
-          'Tor₁(A,B): テンソルの非自明な関係',
-          '平坦モジュール: Tor₁(-,F) = 0',
-        ],
-        examples: ['Tor₁(ℤ/m, ℤ/n) = ℤ/gcd(m,n)', 'Tor(A,B) = 0 if A or B free'],
-        applications: ['平坦性', '代数幾何', 'ホモロジー'],
-      },
     },
     latex: '\\text{Tor}_n(A,B) = L_n(A \\otimes -)(B)',
     relations: {
@@ -230,7 +187,6 @@ export const homologicalAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '스펙트럴 수열',
       en: 'Spectral Sequence',
-      ja: 'スペクトル系列',
     },
     field: 'homological-algebra',
     subfield: 'advanced',
@@ -252,16 +208,6 @@ export const homologicalAlgebraConcepts: MathConcept[] = [
         ],
         applications: ['Homology computation', 'Topology', 'Algebraic geometry'],
       },
-      ja: {
-        definition: 'ホモロジーを段階的に計算する代数的ツール',
-        formulas: ['Eᵣ^{p,q} ⟹ Hⁿ', 'dᵣ: Eᵣ^{p,q} → Eᵣ^{p+r,q-r+1}', 'Eᵣ₊₁ = H(Eᵣ, dᵣ)'],
-        examples: [
-          'セールのスペクトル系列',
-          'グロタンディークのスペクトル系列',
-          'ルレーのスペクトル系列',
-        ],
-        applications: ['ホモロジー計算', '位相数学', '代数幾何'],
-      },
     },
     latex: 'E_r^{p,q} \\Rightarrow H^{p+q}',
     relations: {
@@ -277,7 +223,6 @@ export const homologicalAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '사영 모듈',
       en: 'Projective Module',
-      ja: '射影加群',
     },
     field: 'homological-algebra',
     subfield: 'modules',
@@ -303,16 +248,6 @@ export const homologicalAlgebraConcepts: MathConcept[] = [
         examples: ['Free modules', 'ℤ/2 ⊕ ℤ/3 over ℤ/6'],
         applications: ['Homology', 'Algebraic K-theory', 'Representation theory'],
       },
-      ja: {
-        definition: '自由モジュールの直和因子。射影分解の基本構成要素',
-        formulas: [
-          'リフティング: P →f A →^π B → 0, ∃g: P → A with πg = f',
-          '同値: 分裂全射の定義域',
-          '同値: Hom(P,-)が完全',
-        ],
-        examples: ['自由モジュール', 'ℤ/6上のℤ/2 ⊕ ℤ/3'],
-        applications: ['ホモロジー', '代数的K理論', '表現論'],
-      },
     },
     latex: '\\text{Hom}(P, -) \\text{ is exact}',
     relations: {
@@ -328,7 +263,6 @@ export const homologicalAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '단사 모듈',
       en: 'Injective Module',
-      ja: '入射加群',
     },
     field: 'homological-algebra',
     subfield: 'modules',
@@ -355,17 +289,6 @@ export const homologicalAlgebraConcepts: MathConcept[] = [
         ],
         examples: ['ℚ/ℤ', 'Divisible groups'],
         applications: ['Homology', 'Sheaf theory', 'Algebraic geometry'],
-      },
-      ja: {
-        definition: '入射分解の基本構成要素。射影モジュールの双対',
-        formulas: [
-          '拡張: 0 → A →^ι B → C, ∃g: B → I with gι = f',
-          '同値: 分裂単射の終域',
-          '同値: Hom(-,I)が完全',
-          'ベーアの基準',
-        ],
-        examples: ['ℚ/ℤ', '可除群'],
-        applications: ['ホモロジー', '層理論', '代数幾何'],
       },
     },
     latex: '\\text{Hom}(-, I) \\text{ is exact}',

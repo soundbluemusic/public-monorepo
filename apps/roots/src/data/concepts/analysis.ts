@@ -12,7 +12,6 @@ export const analysisConcepts: MathConcept[] = [
     name: {
       ko: '극한',
       en: 'Limit',
-      ja: '極限',
     },
     field: 'analysis',
     subfield: 'limits-continuity',
@@ -114,7 +113,6 @@ export const analysisConcepts: MathConcept[] = [
     name: {
       ko: '연속성',
       en: 'Continuity',
-      ja: '連続性',
     },
     field: 'analysis',
     subfield: 'limits-continuity',
@@ -183,7 +181,6 @@ export const analysisConcepts: MathConcept[] = [
     name: {
       ko: '미분 / 도함수',
       en: 'Derivative',
-      ja: '微分 / 導関数',
     },
     field: 'analysis',
     subfield: 'differentiation',
@@ -293,7 +290,6 @@ export const analysisConcepts: MathConcept[] = [
     name: {
       ko: '연쇄 법칙',
       en: 'Chain Rule',
-      ja: '連鎖律',
     },
     field: 'analysis',
     subfield: 'differentiation',
@@ -376,7 +372,6 @@ export const analysisConcepts: MathConcept[] = [
     name: {
       ko: '삼각함수의 미분',
       en: 'Derivatives of Trigonometric Functions',
-      ja: '三角関数の微分',
     },
     field: 'analysis',
     subfield: 'differentiation',
@@ -452,7 +447,6 @@ export const analysisConcepts: MathConcept[] = [
     name: {
       ko: '지수/로그 함수의 미분',
       en: 'Derivatives of Exponential and Logarithmic Functions',
-      ja: '指数・対数関数の微分',
     },
     field: 'analysis',
     subfield: 'differentiation',
@@ -538,7 +532,6 @@ export const analysisConcepts: MathConcept[] = [
     name: {
       ko: '고계 도함수',
       en: 'Higher Order Derivatives',
-      ja: '高階導関数',
     },
     field: 'analysis',
     subfield: 'differentiation',
@@ -610,7 +603,6 @@ export const analysisConcepts: MathConcept[] = [
     name: {
       ko: '부정적분',
       en: 'Indefinite Integral',
-      ja: '不定積分',
     },
     field: 'analysis',
     subfield: 'integration',
@@ -697,7 +689,6 @@ export const analysisConcepts: MathConcept[] = [
     name: {
       ko: '정적분',
       en: 'Definite Integral',
-      ja: '定積分',
     },
     field: 'analysis',
     subfield: 'integration',
@@ -777,7 +768,6 @@ export const analysisConcepts: MathConcept[] = [
     name: {
       ko: '치환적분',
       en: 'Integration by Substitution',
-      ja: '置換積分',
     },
     field: 'analysis',
     subfield: 'integration',
@@ -839,7 +829,6 @@ export const analysisConcepts: MathConcept[] = [
     name: {
       ko: '부분적분',
       en: 'Integration by Parts',
-      ja: '部分積分',
     },
     field: 'analysis',
     subfield: 'integration',
@@ -907,7 +896,6 @@ export const analysisConcepts: MathConcept[] = [
     name: {
       ko: '테일러 급수',
       en: 'Taylor Series',
-      ja: 'テイラー級数',
     },
     field: 'analysis',
     subfield: 'series-sequences',
@@ -1009,7 +997,6 @@ export const analysisConcepts: MathConcept[] = [
     name: {
       ko: '편미분',
       en: 'Partial Derivative',
-      ja: '偏微分',
     },
     field: 'analysis',
     subfield: 'multivariable',
@@ -1094,7 +1081,6 @@ export const analysisConcepts: MathConcept[] = [
     name: {
       ko: '중적분',
       en: 'Multiple Integrals',
-      ja: '重積分',
     },
     field: 'analysis',
     subfield: 'multivariable',

@@ -6,7 +6,6 @@ export const measureTheoryConcepts: MathConcept[] = [
     name: {
       ko: '시그마 대수',
       en: 'Sigma-Algebra (σ-algebra)',
-      ja: 'σ代数',
     },
     field: 'measure-theory',
     subfield: 'foundations',
@@ -25,12 +24,6 @@ export const measureTheoryConcepts: MathConcept[] = [
         examples: ['Borel σ-algebra B(ℝ)', '{∅, Ω}', 'Power set P(Ω)'],
         applications: ['Probability', 'Integration', 'Functional analysis'],
       },
-      ja: {
-        definition: '補集合と可算和について閉じた集合族。測度を定義できる構造',
-        formulas: ['1. Ω ∈ Σ', '2. A ∈ Σ ⇒ A^c ∈ Σ', '3. A₁, A₂, ... ∈ Σ ⇒ ∪A_n ∈ Σ'],
-        examples: ['ボレルσ代数 B(ℝ)', '{∅, Ω}', '冪集合 P(Ω)'],
-        applications: ['確率論', '積分論', '関数解析'],
-      },
     },
     latex: 'A \\in \\Sigma \\Rightarrow A^c \\in \\Sigma',
     relations: {
@@ -46,7 +39,6 @@ export const measureTheoryConcepts: MathConcept[] = [
     name: {
       ko: '르베그 측도',
       en: 'Lebesgue Measure',
-      ja: 'ルベーグ測度',
     },
     field: 'measure-theory',
     subfield: 'measures',
@@ -73,16 +65,6 @@ export const measureTheoryConcepts: MathConcept[] = [
         examples: ['λ(ℚ ∩ [0,1]) = 0', 'λ(Cantor set) = 0'],
         applications: ['Integration', 'Probability', 'Fourier analysis'],
       },
-      ja: {
-        definition: 'ℝⁿにおける集合の「大きさ」を一般化した測度。リーマン積分の限界を克服',
-        formulas: [
-          '区間の測度: λ([a,b]) = b - a',
-          '可算加法性: λ(∪A_n) = Σλ(A_n) (互いに素)',
-          '外測度: λ*(A) = inf{Σℓ(I_n): A ⊆ ∪I_n}',
-        ],
-        examples: ['λ(ℚ ∩ [0,1]) = 0', 'λ(カントール集合) = 0'],
-        applications: ['積分論', '確率論', 'フーリエ解析'],
-      },
     },
     latex: '\\lambda([a,b]) = b - a',
     relations: {
@@ -98,7 +80,6 @@ export const measureTheoryConcepts: MathConcept[] = [
     name: {
       ko: '르베그 적분',
       en: 'Lebesgue Integral',
-      ja: 'ルベーグ積分',
     },
     field: 'measure-theory',
     subfield: 'integration',
@@ -125,16 +106,6 @@ export const measureTheoryConcepts: MathConcept[] = [
         examples: ['Integral of Dirichlet function', '∫_ℝ e^{-x²} dx = √π'],
         applications: ['Probability', 'Fourier analysis', 'Function spaces'],
       },
-      ja: {
-        definition: '関数の値域を分割して定義する積分。リーマン積分を一般化',
-        formulas: [
-          '単関数: ∫φ dμ = Σa_i μ(A_i)',
-          '一般: ∫f dμ = sup{∫φ dμ: φ ≤ f, φ 単関数}',
-          'MCT, DCT',
-        ],
-        examples: ['ディリクレ関数の積分', '∫_ℝ e^{-x²} dx = √π'],
-        applications: ['確率論', 'フーリエ解析', '関数空間'],
-      },
     },
     latex:
       '\\int f \\, d\\mu = \\sup\\left\\{\\int \\phi \\, d\\mu : \\phi \\leq f, \\phi \\text{ simple}\\right\\}',
@@ -151,7 +122,6 @@ export const measureTheoryConcepts: MathConcept[] = [
     name: {
       ko: '확률 측도',
       en: 'Probability Measure',
-      ja: '確率測度',
     },
     field: 'measure-theory',
     subfield: 'probability',
@@ -169,12 +139,6 @@ export const measureTheoryConcepts: MathConcept[] = [
         examples: ['Coin flip', 'Normal distribution', 'Uniform distribution'],
         applications: ['Statistics', 'Finance', 'Physics'],
       },
-      ja: {
-        definition: '全測度が1の測度。確率論の数学的基礎',
-        formulas: ['P(Ω) = 1', 'P(A) ≥ 0', 'P(∪A_n) = ΣP(A_n) (互いに素)'],
-        examples: ['コイン投げ', '正規分布', '一様分布'],
-        applications: ['統計学', '金融', '物理学'],
-      },
     },
     latex: 'P(\\Omega) = 1, \\quad P(A) \\geq 0',
     relations: {
@@ -190,7 +154,6 @@ export const measureTheoryConcepts: MathConcept[] = [
     name: {
       ko: '푸비니 정리',
       en: "Fubini's Theorem",
-      ja: 'フビニの定理',
     },
     field: 'measure-theory',
     subfield: 'integration',
@@ -215,15 +178,6 @@ export const measureTheoryConcepts: MathConcept[] = [
         examples: ['Double integral computation', 'Independent expectation decomposition'],
         applications: ['Multivariable integration', 'Probability', 'Fourier transform'],
       },
-      ja: {
-        definition: '多重積分で積分順序を交換できる条件を提示',
-        formulas: [
-          '∬f d(μ×ν) = ∫(∫f(x,y) dν(y)) dμ(x) = ∫(∫f(x,y) dμ(x)) dν(y)',
-          '条件: fが可積分または非負',
-        ],
-        examples: ['二重積分の計算', '期待値の独立分解'],
-        applications: ['多変数積分', '確率論', 'フーリエ変換'],
-      },
     },
     latex:
       '\\iint f \\, d(\\mu \\times \\nu) = \\int\\left(\\int f(x,y) \\, d\\nu(y)\\right) d\\mu(x)',
@@ -240,7 +194,6 @@ export const measureTheoryConcepts: MathConcept[] = [
     name: {
       ko: '지배 수렴 정리',
       en: 'Dominated Convergence Theorem',
-      ja: '優収束定理',
     },
     field: 'measure-theory',
     subfield: 'convergence',
@@ -262,12 +215,6 @@ export const measureTheoryConcepts: MathConcept[] = [
         examples: ['Pointwise convergent sequences', 'Differentiation under integral'],
         applications: ['Limit-integral exchange', 'Probability'],
       },
-      ja: {
-        definition: '可積分関数で支配される関数列の極限と積分を交換',
-        formulas: ['条件: |f_n| ≤ g, ∫g < ∞', '結論: lim∫f_n = ∫lim f_n', 'つまり: ∫f = lim∫f_n'],
-        examples: ['各点収束する関数列', 'パラメータ積分の微分'],
-        applications: ['極限-積分の交換', '確率論'],
-      },
     },
     latex:
       '\\lim_{n \\to \\infty} \\int f_n \\, d\\mu = \\int \\lim_{n \\to \\infty} f_n \\, d\\mu',
@@ -284,7 +231,6 @@ export const measureTheoryConcepts: MathConcept[] = [
     name: {
       ko: '라돈-니코딤 정리',
       en: 'Radon-Nikodym Theorem',
-      ja: 'ラドン・ニコディム定理',
     },
     field: 'measure-theory',
     subfield: 'measures',
@@ -303,12 +249,6 @@ export const measureTheoryConcepts: MathConcept[] = [
         examples: ['Probability density function', 'Conditional expectation'],
         applications: ['Probability', 'Statistical mechanics', 'Functional analysis'],
       },
-      ja: {
-        definition: '絶対連続な測度は別の測度に関する積分で表現可能',
-        formulas: ['ν ≪ μ ⟺ ∃f: ν(A) = ∫_A f dμ', 'f = dν/dμ (ラドン・ニコディム導関数)'],
-        examples: ['確率密度関数', '条件付き期待値'],
-        applications: ['確率論', '統計力学', '関数解析'],
-      },
     },
     latex: '\\nu(A) = \\int_A \\frac{d\\nu}{d\\mu} \\, d\\mu',
     relations: {
@@ -324,7 +264,6 @@ export const measureTheoryConcepts: MathConcept[] = [
     name: {
       ko: 'Lᵖ 공간',
       en: 'Lᵖ Spaces',
-      ja: 'Lᵖ空間',
     },
     field: 'measure-theory',
     subfield: 'function-spaces',
@@ -349,16 +288,6 @@ export const measureTheoryConcepts: MathConcept[] = [
         ],
         examples: ['L²(ℝ): square integrable', 'L^∞: essentially bounded'],
         applications: ['Fourier analysis', 'Quantum mechanics', 'PDEs'],
-      },
-      ja: {
-        definition: 'p乗可積分関数のバナッハ空間',
-        formulas: [
-          '||f||_p = (∫|f|^p dμ)^{1/p}',
-          'L^∞: ||f||_∞ = ess sup |f|',
-          'ヘルダー: ||fg||_1 ≤ ||f||_p||g||_q (1/p+1/q=1)',
-        ],
-        examples: ['L²(ℝ): 自乗可積分', 'L^∞: 本質的有界'],
-        applications: ['フーリエ解析', '量子力学', 'PDE'],
       },
     },
     latex: '\\|f\\|_p = \\left(\\int |f|^p \\, d\\mu\\right)^{1/p}',

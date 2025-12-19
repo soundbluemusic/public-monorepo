@@ -6,6 +6,9 @@ import type { Example as ExampleType } from '@/data/types';
 import { For, Show, createSignal } from 'solid-js';
 import { LaTeX } from './LaTeX';
 
+/** 문자열 또는 Example 객체 */
+type ExampleInput = string | ExampleType;
+
 interface ExampleCardProps {
   example: ExampleType;
   index: number;
@@ -70,9 +73,31 @@ export function ExampleCard(props: ExampleCardProps) {
 }
 
 /**
+ * 문자열 예제를 간단히 표시
+ */
+function SimpleExample(props: { example: string; index: number }) {
+  return (
+    <div
+      class="rounded-lg p-4"
+      style={{
+        'background-color': 'var(--bg-secondary)',
+        border: '1px solid var(--border-primary)',
+      }}
+    >
+      <span class="text-sm font-medium" style={{ color: 'var(--text-tertiary)' }}>
+        예제 {props.index + 1}
+      </span>
+      <p class="mt-2" style={{ color: 'var(--text-primary)' }}>
+        {props.example}
+      </p>
+    </div>
+  );
+}
+
+/**
  * 예제 목록 컴포넌트
  */
-export function ExampleList(props: { examples: ExampleType[]; title?: string }) {
+export function ExampleList(props: { examples?: ExampleInput[]; title?: string }) {
   return (
     <div class="space-y-4">
       <Show when={props.title}>
@@ -85,8 +110,14 @@ export function ExampleList(props: { examples: ExampleType[]; title?: string }) 
         </h3>
       </Show>
       <div class="space-y-3">
-        <For each={props.examples}>
-          {(example, index) => <ExampleCard example={example} index={index()} />}
+        <For each={props.examples ?? []}>
+          {(example, index) =>
+            typeof example === 'string' ? (
+              <SimpleExample example={example} index={index()} />
+            ) : (
+              <ExampleCard example={example} index={index()} />
+            )
+          }
         </For>
       </div>
     </div>

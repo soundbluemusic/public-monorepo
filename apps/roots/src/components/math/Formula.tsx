@@ -5,6 +5,9 @@ import type { Formula as FormulaType } from '@/data/types';
 import { For, Show } from 'solid-js';
 import { LaTeX } from './LaTeX';
 
+/** 문자열 또는 Formula 객체 */
+type FormulaInput = string | FormulaType;
+
 interface FormulaCardProps {
   formula: FormulaType;
   /** 인덱스 (여러 공식일 때 번호 표시) */
@@ -68,9 +71,22 @@ export function FormulaCard(props: FormulaCardProps) {
 }
 
 /**
+ * 문자열 공식을 간단히 표시
+ */
+function SimpleFormula(props: { formula: string }) {
+  return (
+    <div class="formula-block">
+      <div class="mb-3">
+        <LaTeX math={props.formula} display />
+      </div>
+    </div>
+  );
+}
+
+/**
  * 여러 공식을 나열하는 컴포넌트
  */
-export function FormulaList(props: { formulas: FormulaType[]; title?: string }) {
+export function FormulaList(props: { formulas: FormulaInput[]; title?: string }) {
   return (
     <div class="space-y-4">
       <Show when={props.title}>
@@ -83,7 +99,13 @@ export function FormulaList(props: { formulas: FormulaType[]; title?: string }) 
         </h3>
       </Show>
       <For each={props.formulas}>
-        {(formula, index) => <FormulaCard formula={formula} index={index()} />}
+        {(formula, index) =>
+          typeof formula === 'string' ? (
+            <SimpleFormula formula={formula} />
+          ) : (
+            <FormulaCard formula={formula} index={index()} />
+          )
+        }
       </For>
     </div>
   );

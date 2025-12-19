@@ -9,7 +9,6 @@ export const dynamicsConcepts: MathConcept[] = [
     name: {
       ko: '동역학계',
       en: 'Dynamical Systems',
-      ja: '力学系',
     },
     field: 'dynamics',
     subfield: 'dynamical-systems',
@@ -79,7 +78,6 @@ export const dynamicsConcepts: MathConcept[] = [
     name: {
       ko: '카오스 이론',
       en: 'Chaos Theory',
-      ja: 'カオス理論',
     },
     field: 'dynamics',
     subfield: 'chaos',
@@ -162,7 +160,6 @@ export const dynamicsConcepts: MathConcept[] = [
     name: {
       ko: '프랙탈',
       en: 'Fractals',
-      ja: 'フラクタル',
     },
     field: 'dynamics',
     subfield: 'fractals',
@@ -249,7 +246,6 @@ export const dynamicsConcepts: MathConcept[] = [
     name: {
       ko: '고정점과 안정성',
       en: 'Fixed Points and Stability',
-      ja: '不動点と安定性',
     },
     field: 'dynamics',
     subfield: 'dynamical-systems',
@@ -320,7 +316,6 @@ export const dynamicsConcepts: MathConcept[] = [
     name: {
       ko: '분기',
       en: 'Bifurcation',
-      ja: '分岐',
     },
     field: 'dynamics',
     subfield: 'dynamical-systems',
@@ -383,7 +378,6 @@ export const dynamicsConcepts: MathConcept[] = [
     name: {
       ko: '상미분방정식',
       en: 'Ordinary Differential Equations',
-      ja: '常微分方程式',
     },
     field: 'dynamics',
     subfield: 'differential-equations',
@@ -478,7 +472,6 @@ export const dynamicsConcepts: MathConcept[] = [
     name: {
       ko: '편미분방정식',
       en: 'Partial Differential Equations',
-      ja: '偏微分方程式',
     },
     field: 'dynamics',
     subfield: 'differential-equations',
@@ -576,7 +569,6 @@ export const dynamicsConcepts: MathConcept[] = [
     name: {
       ko: '위상공간 (상공간)',
       en: 'Phase Space',
-      ja: '相空間',
     },
     field: 'dynamics',
     subfield: 'dynamical-systems',
@@ -671,7 +663,6 @@ export const dynamicsConcepts: MathConcept[] = [
     name: {
       ko: '끌개',
       en: 'Attractors',
-      ja: 'アトラクター',
     },
     field: 'dynamics',
     subfield: 'chaos',

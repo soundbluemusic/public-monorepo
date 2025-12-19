@@ -9,7 +9,6 @@ export const constantsConcepts: MathConcept[] = [
     name: {
       ko: '원주율 π',
       en: 'Pi (π)',
-      ja: '円周率 π',
     },
     field: 'constants',
     subfield: 'fundamental',
@@ -105,7 +104,6 @@ export const constantsConcepts: MathConcept[] = [
     name: {
       ko: '자연상수 e',
       en: "Euler's Number (e)",
-      ja: 'ネイピア数 e',
     },
     field: 'constants',
     subfield: 'fundamental',
@@ -196,7 +194,6 @@ export const constantsConcepts: MathConcept[] = [
     name: {
       ko: '황금비 φ',
       en: 'Golden Ratio (φ)',
-      ja: '黄金比 φ',
     },
     field: 'constants',
     subfield: 'fundamental',
@@ -293,7 +290,6 @@ export const constantsConcepts: MathConcept[] = [
     name: {
       ko: '허수 단위 i',
       en: 'Imaginary Unit (i)',
-      ja: '虚数単位 i',
     },
     field: 'constants',
     subfield: 'fundamental',
@@ -388,7 +384,6 @@ export const constantsConcepts: MathConcept[] = [
     name: {
       ko: '오일러-마스케로니 상수 γ',
       en: 'Euler-Mascheroni Constant (γ)',
-      ja: 'オイラー・マスケローニ定数 γ',
     },
     field: 'constants',
     subfield: 'advanced',
@@ -471,7 +466,6 @@ export const constantsConcepts: MathConcept[] = [
     name: {
       ko: '아페리 상수 ζ(3)',
       en: "Apéry's Constant ζ(3)",
-      ja: 'アペリーの定数 ζ(3)',
     },
     field: 'constants',
     subfield: 'advanced',
@@ -556,7 +550,6 @@ export const constantsConcepts: MathConcept[] = [
     name: {
       ko: '카탈랑 상수 G',
       en: "Catalan's Constant (G)",
-      ja: 'カタランの定数 G',
     },
     field: 'constants',
     subfield: 'advanced',
@@ -645,7 +638,6 @@ export const constantsConcepts: MathConcept[] = [
     name: {
       ko: '√2 (피타고라스 상수)',
       en: "√2 (Pythagoras' Constant)",
-      ja: '√2 (ピタゴラス定数)',
     },
     field: 'constants',
     subfield: 'fundamental',
@@ -746,7 +738,6 @@ export const constantsConcepts: MathConcept[] = [
     name: {
       ko: '파이겐바움 상수 δ',
       en: 'Feigenbaum Constant (δ)',
-      ja: 'ファイゲンバウム定数 δ',
     },
     field: 'constants',
     subfield: 'advanced',

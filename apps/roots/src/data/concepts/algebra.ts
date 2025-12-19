@@ -12,7 +12,6 @@ export const algebraConcepts: MathConcept[] = [
     name: {
       ko: '변수',
       en: 'Variables',
-      ja: '変数',
     },
     field: 'algebra',
     subfield: 'elementary-algebra',
@@ -82,7 +81,6 @@ export const algebraConcepts: MathConcept[] = [
     name: {
       ko: '다항식',
       en: 'Polynomial',
-      ja: '多項式',
     },
     field: 'algebra',
     subfield: 'elementary-algebra',
@@ -163,7 +161,6 @@ export const algebraConcepts: MathConcept[] = [
     name: {
       ko: '일차방정식',
       en: 'Linear Equation',
-      ja: '一次方程式',
     },
     field: 'algebra',
     subfield: 'elementary-algebra',
@@ -241,7 +238,6 @@ export const algebraConcepts: MathConcept[] = [
     name: {
       ko: '인수분해',
       en: 'Factoring',
-      ja: '因数分解',
     },
     field: 'algebra',
     subfield: 'elementary-algebra',
@@ -368,7 +364,6 @@ export const algebraConcepts: MathConcept[] = [
     name: {
       ko: '이차방정식',
       en: 'Quadratic Equation',
-      ja: '二次方程式',
     },
     field: 'algebra',
     subfield: 'elementary-algebra',
@@ -482,7 +477,6 @@ export const algebraConcepts: MathConcept[] = [
     name: {
       ko: '부등식',
       en: 'Inequality',
-      ja: '不等式',
     },
     field: 'algebra',
     subfield: 'elementary-algebra',
@@ -577,7 +571,6 @@ export const algebraConcepts: MathConcept[] = [
     name: {
       ko: '연립방정식',
       en: 'System of Equations',
-      ja: '連立方程式',
     },
     field: 'algebra',
     subfield: 'elementary-algebra',
@@ -662,7 +655,6 @@ export const algebraConcepts: MathConcept[] = [
     name: {
       ko: '지수함수',
       en: 'Exponential Function',
-      ja: '指数関数',
     },
     field: 'algebra',
     subfield: 'advanced-algebra',
@@ -753,7 +745,6 @@ export const algebraConcepts: MathConcept[] = [
     name: {
       ko: '로그',
       en: 'Logarithm',
-      ja: '対数',
     },
     field: 'algebra',
     subfield: 'advanced-algebra',
@@ -869,7 +860,6 @@ export const algebraConcepts: MathConcept[] = [
     name: {
       ko: '등차수열',
       en: 'Arithmetic Sequence',
-      ja: '等差数列',
     },
     field: 'algebra',
     subfield: 'advanced-algebra',
@@ -965,7 +955,6 @@ export const algebraConcepts: MathConcept[] = [
     name: {
       ko: '등비수열',
       en: 'Geometric Sequence',
-      ja: '等比数列',
     },
     field: 'algebra',
     subfield: 'advanced-algebra',
@@ -1065,7 +1054,6 @@ export const algebraConcepts: MathConcept[] = [
     name: {
       ko: '급수',
       en: 'Series',
-      ja: '級数',
     },
     field: 'algebra',
     subfield: 'advanced-algebra',

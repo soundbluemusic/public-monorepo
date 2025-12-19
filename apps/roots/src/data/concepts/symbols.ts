@@ -9,7 +9,6 @@ export const symbolsConcepts: MathConcept[] = [
     name: {
       ko: '합의 기호 Σ',
       en: 'Summation Notation (Σ)',
-      ja: '総和記号 Σ',
     },
     field: 'symbols',
     subfield: 'operations',
@@ -94,7 +93,6 @@ export const symbolsConcepts: MathConcept[] = [
     name: {
       ko: '곱의 기호 Π',
       en: 'Product Notation (Π)',
-      ja: '総乗記号 Π',
     },
     field: 'symbols',
     subfield: 'operations',
@@ -171,7 +169,6 @@ export const symbolsConcepts: MathConcept[] = [
     name: {
       ko: '무한대 ∞',
       en: 'Infinity (∞)',
-      ja: '無限大 ∞',
     },
     field: 'symbols',
     subfield: 'special',
@@ -258,7 +255,6 @@ export const symbolsConcepts: MathConcept[] = [
     name: {
       ko: '편미분 기호 ∂',
       en: 'Partial Derivative (∂)',
-      ja: '偏微分記号 ∂',
     },
     field: 'symbols',
     subfield: 'calculus',
@@ -337,7 +333,6 @@ export const symbolsConcepts: MathConcept[] = [
     name: {
       ko: '집합 기호',
       en: 'Set Notation',
-      ja: '集合記号',
     },
     field: 'symbols',
     subfield: 'sets',
@@ -436,7 +431,6 @@ export const symbolsConcepts: MathConcept[] = [
     name: {
       ko: '나블라 연산자 ∇',
       en: 'Nabla Operator (∇)',
-      ja: 'ナブラ演算子 ∇',
     },
     field: 'symbols',
     subfield: 'calculus',
@@ -531,7 +525,6 @@ export const symbolsConcepts: MathConcept[] = [
     name: {
       ko: '적분 기호 ∫',
       en: 'Integral Sign (∫)',
-      ja: '積分記号 ∫',
     },
     field: 'symbols',
     subfield: 'calculus',
@@ -633,7 +626,6 @@ export const symbolsConcepts: MathConcept[] = [
     name: {
       ko: '한정사 기호 ∀, ∃',
       en: 'Quantifier Symbols (∀, ∃)',
-      ja: '限量詞 ∀, ∃',
     },
     field: 'symbols',
     subfield: 'logic',
@@ -736,7 +728,6 @@ export const symbolsConcepts: MathConcept[] = [
     name: {
       ko: '팩토리얼 기호 n!',
       en: 'Factorial Notation (n!)',
-      ja: '階乗記号 n!',
     },
     field: 'symbols',
     subfield: 'operations',
@@ -839,7 +830,6 @@ export const symbolsConcepts: MathConcept[] = [
     name: {
       ko: '이항계수 (ⁿCₖ)',
       en: 'Binomial Coefficient',
-      ja: '二項係数',
     },
     field: 'symbols',
     subfield: 'operations',

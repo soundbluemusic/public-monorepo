@@ -9,7 +9,6 @@ export const discreteConcepts: MathConcept[] = [
     name: {
       ko: '집합',
       en: 'Sets',
-      ja: '集合',
     },
     field: 'discrete',
     subfield: 'set-theory',
@@ -106,7 +105,6 @@ export const discreteConcepts: MathConcept[] = [
     name: {
       ko: '조합',
       en: 'Combinations',
-      ja: '組み合わせ',
     },
     field: 'discrete',
     subfield: 'combinatorics',
@@ -190,7 +188,6 @@ export const discreteConcepts: MathConcept[] = [
     name: {
       ko: '순열',
       en: 'Permutations',
-      ja: '順列',
     },
     field: 'discrete',
     subfield: 'combinatorics',
@@ -274,7 +271,6 @@ export const discreteConcepts: MathConcept[] = [
     name: {
       ko: '그래프 이론 기초',
       en: 'Graph Theory Basics',
-      ja: 'グラフ理論の基礎',
     },
     field: 'discrete',
     subfield: 'graph-theory',
@@ -355,7 +351,6 @@ export const discreteConcepts: MathConcept[] = [
     name: {
       ko: '점화식',
       en: 'Recurrence Relations',
-      ja: '漸化式',
     },
     field: 'discrete',
     subfield: 'sequences',
@@ -432,7 +427,6 @@ export const discreteConcepts: MathConcept[] = [
     name: {
       ko: '모듈러 연산',
       en: 'Modular Arithmetic',
-      ja: '合同算術',
     },
     field: 'discrete',
     subfield: 'number-theory',
@@ -517,7 +511,6 @@ export const discreteConcepts: MathConcept[] = [
     name: {
       ko: '명제 논리',
       en: 'Propositional Logic',
-      ja: '命題論理',
     },
     field: 'discrete',
     subfield: 'logic',
@@ -613,7 +606,6 @@ export const discreteConcepts: MathConcept[] = [
     name: {
       ko: '불 대수',
       en: 'Boolean Algebra',
-      ja: 'ブール代数',
     },
     field: 'discrete',
     subfield: 'logic',
@@ -702,7 +694,6 @@ export const discreteConcepts: MathConcept[] = [
     name: {
       ko: '트리',
       en: 'Trees',
-      ja: '木',
     },
     field: 'discrete',
     subfield: 'graph-theory',
@@ -773,7 +764,6 @@ export const discreteConcepts: MathConcept[] = [
     name: {
       ko: '이항정리',
       en: 'Binomial Theorem',
-      ja: '二項定理',
     },
     field: 'discrete',
     subfield: 'combinatorics',
@@ -852,7 +842,6 @@ export const discreteConcepts: MathConcept[] = [
     name: {
       ko: '빅오 표기법',
       en: 'Big O Notation',
-      ja: 'ビッグオー記法',
     },
     field: 'discrete',
     subfield: 'algorithms',

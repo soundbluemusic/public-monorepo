@@ -89,7 +89,7 @@ export function RelationLinks(props: RelationLinksProps) {
       r.prerequisites.length > 0 ||
       r.nextTopics.length > 0 ||
       r.related.length > 0 ||
-      r.applications.length > 0
+      (r.applications?.length ?? 0) > 0
     );
   };
 
@@ -144,7 +144,7 @@ export function RelationLinks(props: RelationLinksProps) {
         <RelationSection
           title={titles().applications}
           icon="⚡"
-          ids={props.relations.applications}
+          ids={props.relations.applications ?? []}
           type="application"
           getConcept={props.getConcept}
         />

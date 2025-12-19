@@ -9,7 +9,6 @@ export const computerScienceConcepts: MathConcept[] = [
     name: {
       ko: 'Big-O 표기법',
       en: 'Big-O Notation',
-      ja: 'ビッグオー記法',
     },
     field: 'applied-cs',
     subfield: 'complexity',
@@ -88,7 +87,6 @@ export const computerScienceConcepts: MathConcept[] = [
     name: {
       ko: '이진 표현',
       en: 'Binary Representation',
-      ja: '2進表現',
     },
     field: 'applied-cs',
     subfield: 'fundamentals',
@@ -173,7 +171,6 @@ export const computerScienceConcepts: MathConcept[] = [
     name: {
       ko: '컴퓨터 그래픽스 수학',
       en: 'Computer Graphics Mathematics',
-      ja: 'コンピュータグラフィックスの数学',
     },
     field: 'applied-cs',
     subfield: 'graphics',
@@ -262,7 +259,6 @@ export const computerScienceConcepts: MathConcept[] = [
     name: {
       ko: '정보 이론 기초',
       en: 'Information Theory Basics',
-      ja: '情報理論の基礎',
     },
     field: 'applied-cs',
     subfield: 'information',
@@ -358,7 +354,6 @@ export const computerScienceConcepts: MathConcept[] = [
     name: {
       ko: '머신러닝 수학',
       en: 'Machine Learning Mathematics',
-      ja: '機械学習の数学',
     },
     field: 'applied-cs',
     subfield: 'ml',
@@ -451,7 +446,6 @@ export const computerScienceConcepts: MathConcept[] = [
     name: {
       ko: '해싱의 수학',
       en: 'Mathematics of Hashing',
-      ja: 'ハッシュの数学',
     },
     field: 'applied-cs',
     subfield: 'data-structures',

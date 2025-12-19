@@ -12,7 +12,6 @@ export const linearAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '벡터',
       en: 'Vectors',
-      ja: 'ベクトル',
     },
     field: 'linear-algebra',
     subfield: 'vectors',
@@ -98,7 +97,6 @@ export const linearAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '벡터 연산',
       en: 'Vector Operations',
-      ja: 'ベクトル演算',
     },
     field: 'linear-algebra',
     subfield: 'vectors',
@@ -176,7 +174,6 @@ export const linearAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '내적',
       en: 'Dot Product',
-      ja: '内積',
     },
     field: 'linear-algebra',
     subfield: 'vectors',
@@ -266,7 +263,6 @@ export const linearAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '외적',
       en: 'Cross Product',
-      ja: '外積',
     },
     field: 'linear-algebra',
     subfield: 'vectors',
@@ -341,7 +337,6 @@ export const linearAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '행렬',
       en: 'Matrices',
-      ja: '行列',
     },
     field: 'linear-algebra',
     subfield: 'matrices',
@@ -410,7 +405,6 @@ export const linearAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '행렬 연산',
       en: 'Matrix Operations',
-      ja: '行列演算',
     },
     field: 'linear-algebra',
     subfield: 'matrices',
@@ -487,7 +481,6 @@ export const linearAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '행렬식',
       en: 'Determinant',
-      ja: '行列式',
     },
     field: 'linear-algebra',
     subfield: 'matrices',
@@ -569,7 +562,6 @@ export const linearAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '역행렬',
       en: 'Inverse Matrix',
-      ja: '逆行列',
     },
     field: 'linear-algebra',
     subfield: 'matrices',
@@ -643,7 +635,6 @@ export const linearAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '연립일차방정식과 행렬',
       en: 'Systems of Linear Equations (Matrix Form)',
-      ja: '連立一次方程式と行列',
     },
     field: 'linear-algebra',
     subfield: 'applications',
@@ -713,7 +704,6 @@ export const linearAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '고유값과 고유벡터',
       en: 'Eigenvalues and Eigenvectors',
-      ja: '固有値と固有ベクトル',
     },
     field: 'linear-algebra',
     subfield: 'advanced',
@@ -791,7 +781,6 @@ export const linearAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '선형 변환',
       en: 'Linear Transformation',
-      ja: '線形変換',
     },
     field: 'linear-algebra',
     subfield: 'advanced',
@@ -870,7 +859,6 @@ export const linearAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '벡터 공간',
       en: 'Vector Space',
-      ja: 'ベクトル空間',
     },
     field: 'linear-algebra',
     subfield: 'advanced',
@@ -940,7 +928,6 @@ export const linearAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '기저와 차원',
       en: 'Basis and Dimension',
-      ja: '基底と次元',
     },
     field: 'linear-algebra',
     subfield: 'advanced',

@@ -6,7 +6,6 @@ export const representationTheoryConcepts: MathConcept[] = [
     name: {
       ko: '군의 표현',
       en: 'Group Representation',
-      ja: '群の表現',
     },
     field: 'representation-theory',
     subfield: 'foundations',
@@ -25,12 +24,6 @@ export const representationTheoryConcepts: MathConcept[] = [
         examples: ['Cyclic group representations', 'Symmetric group Sₙ', 'Trivial representation'],
         applications: ['Quantum mechanics', 'Chemistry', 'Physics'],
       },
-      ja: {
-        definition: '群をベクトル空間の可逆線形変換の群として実現する準同型',
-        formulas: ['ρ: G → GL(V)', 'ρ(gh) = ρ(g)ρ(h)', '次元 = dim V'],
-        examples: ['巡回群の表現', '対称群 Sₙ の表現', '自明な表現'],
-        applications: ['量子力学', '化学', '物理学'],
-      },
     },
     latex: '\\rho: G \\to GL(V)',
     relations: {
@@ -46,7 +39,6 @@ export const representationTheoryConcepts: MathConcept[] = [
     name: {
       ko: '기약 표현',
       en: 'Irreducible Representation',
-      ja: '既約表現',
     },
     field: 'representation-theory',
     subfield: 'foundations',
@@ -71,15 +63,6 @@ export const representationTheoryConcepts: MathConcept[] = [
         examples: ['1-dimensional representations', 'S₃ 2-dim irreducible'],
         applications: ['Classification', 'Quantum mechanics', 'Particle physics'],
       },
-      ja: {
-        definition: '非自明な真部分表現を持たない表現。表現論の基本構成要素',
-        formulas: [
-          'マシュケの定理: 有限群、char=0なら完全可約',
-          'シューアの補題: Hom(V,W) = 0 または同型',
-        ],
-        examples: ['1次元表現', 'S₃の2次元既約表現'],
-        applications: ['分類問題', '量子力学', '素粒子物理'],
-      },
     },
     latex: 'V = V_1 \\oplus V_2 \\oplus \\cdots \\oplus V_k',
     relations: {
@@ -95,7 +78,6 @@ export const representationTheoryConcepts: MathConcept[] = [
     name: {
       ko: '지표 이론',
       en: 'Character Theory',
-      ja: '指標論',
     },
     field: 'representation-theory',
     subfield: 'characters',
@@ -118,12 +100,6 @@ export const representationTheoryConcepts: MathConcept[] = [
         examples: ['Character table of S₃', 'Characters of cyclic groups'],
         applications: ['Representation classification', 'Molecular symmetry', 'Burnside theorem'],
       },
-      ja: {
-        definition: '表現を行列のトレース（対角和）を通して研究する方法',
-        formulas: ['χ_V(g) = tr(ρ(g))', '直交性: ⟨χ_V, χ_W⟩ = δ_{V,W}', '指標表', '正則表現の分解'],
-        examples: ['S₃の指標表', '巡回群の指標'],
-        applications: ['表現の分類', '分子対称性', 'バーンサイドの定理'],
-      },
     },
     latex: '\\chi_V(g) = \\text{tr}(\\rho(g))',
     relations: {
@@ -139,7 +115,6 @@ export const representationTheoryConcepts: MathConcept[] = [
     name: {
       ko: '영 타블로',
       en: 'Young Tableaux',
-      ja: 'ヤング盤',
     },
     field: 'representation-theory',
     subfield: 'symmetric-group',
@@ -166,16 +141,6 @@ export const representationTheoryConcepts: MathConcept[] = [
         examples: ['S₅ rep for (3,2)', 'Robinson-Schensted correspondence'],
         applications: ['Symmetric group reps', 'Schur functions', 'Quantum groups'],
       },
-      ja: {
-        definition: '対称群の既約表現を記述し組合せ的に計算するツール',
-        formulas: [
-          'ヤング図形: λ = (λ₁ ≥ λ₂ ≥ ...)',
-          '標準盤: 行/列増加',
-          'フック長公式: dim = n!/∏hook',
-        ],
-        examples: ['(3,2)に対するS₅表現', 'ロビンソン・シェンステッド対応'],
-        applications: ['対称群の表現', 'シューア関数', '量子群'],
-      },
     },
     latex: '\\dim V_\\lambda = \\frac{n!}{\\prod_{\\text{boxes}} \\text{hook length}}',
     relations: {
@@ -191,7 +156,6 @@ export const representationTheoryConcepts: MathConcept[] = [
     name: {
       ko: '리 대수의 표현',
       en: 'Lie Algebra Representation',
-      ja: 'リー代数の表現',
     },
     field: 'representation-theory',
     subfield: 'lie-theory',
@@ -209,12 +173,6 @@ export const representationTheoryConcepts: MathConcept[] = [
         examples: ['Finite-dim reps of sl(2,ℂ)', 'Adjoint representation'],
         applications: ['Quantum mechanics', 'Particle physics', 'Differential geometry'],
       },
-      ja: {
-        definition: 'リー代数をベクトル空間の自己準同型として実現する準同型',
-        formulas: ['ρ: 𝔤 → gl(V)', 'ρ([X,Y]) = [ρ(X), ρ(Y)]', '最高ウェイト表現'],
-        examples: ['sl(2,ℂ)の有限次元表現', '随伴表現'],
-        applications: ['量子力学', '素粒子物理学', '微分幾何学'],
-      },
     },
     latex: '\\rho([X,Y]) = [\\rho(X), \\rho(Y)]',
     relations: {
@@ -230,7 +188,6 @@ export const representationTheoryConcepts: MathConcept[] = [
     name: {
       ko: '근계',
       en: 'Root Systems',
-      ja: '根系',
     },
     field: 'representation-theory',
     subfield: 'lie-theory',
@@ -256,16 +213,6 @@ export const representationTheoryConcepts: MathConcept[] = [
         examples: ['Aₙ (sl(n+1))', 'Bₙ, Cₙ, Dₙ', 'Exceptional: G₂, F₄, E₆, E₇, E₈'],
         applications: ['Lie algebra classification', 'Quantum groups', 'Physics'],
       },
-      ja: {
-        definition: '半単純リー代数の構造を記述する有限ベクトル集合',
-        formulas: [
-          '反射: sα(β) = β - 2⟨α,β⟩/⟨α,α⟩ α',
-          'カルタン行列: Aᵢⱼ = 2⟨αᵢ,αⱼ⟩/⟨αᵢ,αᵢ⟩',
-          'ディンキン図形',
-        ],
-        examples: ['Aₙ (sl(n+1))', 'Bₙ, Cₙ, Dₙ', '例外型: G₂, F₄, E₆, E₇, E₈'],
-        applications: ['リー代数の分類', '量子群', '物理学'],
-      },
     },
     latex:
       's_\\alpha(\\beta) = \\beta - \\frac{2\\langle\\alpha,\\beta\\rangle}{\\langle\\alpha,\\alpha\\rangle}\\alpha',
@@ -282,7 +229,6 @@ export const representationTheoryConcepts: MathConcept[] = [
     name: {
       ko: '텐서곱 표현',
       en: 'Tensor Product Representation',
-      ja: 'テンソル積表現',
     },
     field: 'representation-theory',
     subfield: 'constructions',
@@ -310,17 +256,6 @@ export const representationTheoryConcepts: MathConcept[] = [
         examples: ['SU(2) spin coupling', 'Quantum entangled states'],
         applications: ['Quantum mechanics', 'Particle physics', 'Quantum information'],
       },
-      ja: {
-        definition: '二つの表現のテンソル積から新しい表現を構成する方法',
-        formulas: [
-          'V ⊗ W',
-          'g(v ⊗ w) = gv ⊗ gw',
-          'χ_{V⊗W}(g) = χ_V(g)χ_W(g)',
-          'クレブシュ・ゴルダン分解',
-        ],
-        examples: ['SU(2)のスピン結合', '量子もつれ状態'],
-        applications: ['量子力学', '素粒子物理', '量子情報'],
-      },
     },
     latex: '\\chi_{V \\otimes W}(g) = \\chi_V(g) \\chi_W(g)',
     relations: {
@@ -336,7 +271,6 @@ export const representationTheoryConcepts: MathConcept[] = [
     name: {
       ko: '유도 표현',
       en: 'Induced Representation',
-      ja: '誘導表現',
     },
     field: 'representation-theory',
     subfield: 'constructions',
@@ -361,16 +295,6 @@ export const representationTheoryConcepts: MathConcept[] = [
         ],
         examples: ['Inducing from cyclic to symmetric', 'Regular rep = Ind_1^G 1'],
         applications: ['Representation construction', 'Mackey theory', 'Analytic number theory'],
-      },
-      ja: {
-        definition: '部分群の表現から全体の群の表現を構成する方法',
-        formulas: [
-          'Ind_H^G V = ℂ[G] ⊗_{ℂ[H]} V',
-          'フロベニウス相互律: ⟨Ind V, W⟩_G = ⟨V, Res W⟩_H',
-          'dim Ind V = [G:H] dim V',
-        ],
-        examples: ['巡回群から対称群への誘導', '正則表現 = Ind_1^G 1'],
-        applications: ['表現構成', 'マッキー理論', '解析的整数論'],
       },
     },
     latex: '\\text{Ind}_H^G V = \\mathbb{C}[G] \\otimes_{\\mathbb{C}[H]} V',

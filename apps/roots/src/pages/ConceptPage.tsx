@@ -40,8 +40,14 @@ export default function ConceptPage() {
   // 개념 맵 로드 (RelationLinks용)
   const [conceptsLoaded] = createResource(loadConcepts);
 
-  const field = () => concept() && getFieldById(concept()?.field);
-  const subfield = () => concept() && getSubfieldById(concept()?.subfield);
+  const field = () => {
+    const c = concept();
+    return c ? getFieldById(c.field) : undefined;
+  };
+  const subfield = () => {
+    const c = concept();
+    return c ? getSubfieldById(c.subfield) : undefined;
+  };
 
   // 즐겨찾기 상태
   const [isFavorite, setIsFavorite] = createSignal(false);
@@ -71,7 +77,13 @@ export default function ConceptPage() {
 
   const content = () => {
     const c = concept();
-    return c ? c.content[locale()] || c.content.en : null;
+    if (!c) return null;
+    const raw = c.content[locale()] || c.content.en;
+    // 문자열이면 정의만 있는 간단한 ConceptContent로 변환
+    if (typeof raw === 'string') {
+      return { definition: raw, examples: [] };
+    }
+    return raw;
   };
 
   const getConcept = (id: string) => getConceptByIdSync(id);
@@ -171,14 +183,14 @@ export default function ConceptPage() {
               </section>
 
               {/* 공식 Formulas */}
-              <Show when={content()?.formulas?.length && content()?.formulas.length > 0}>
+              <Show when={(content()?.formulas?.length ?? 0) > 0}>
                 <section>
                   <FormulaList formulas={content()?.formulas ?? []} title={t('formulas')} />
                 </section>
               </Show>
 
               {/* 예제 Examples */}
-              <Show when={content()?.examples && content()?.examples.length > 0}>
+              <Show when={(content()?.examples?.length ?? 0) > 0}>
                 <section>
                   <ExampleList examples={content()?.examples} title={t('examples')} />
                 </section>
@@ -209,7 +221,7 @@ export default function ConceptPage() {
               </Show>
 
               {/* 응용 분야 Applications */}
-              <Show when={content()?.applications && content()?.applications?.length > 0}>
+              <Show when={(content()?.applications?.length ?? 0) > 0}>
                 <section>
                   <h2 class="text-xl font-semibold mb-3 flex items-center gap-2 text-text-primary">
                     <span>⚡</span>
@@ -219,8 +231,14 @@ export default function ConceptPage() {
                     <For each={content()?.applications}>
                       {(app) => (
                         <div class="rounded-lg p-3 bg-bg-secondary border border-border-primary">
-                          <h4 class="font-medium mb-1 text-text-primary">{app.field}</h4>
-                          <p class="text-sm text-text-tertiary">{app.description}</p>
+                          {typeof app === 'string' ? (
+                            <p class="text-text-primary">{app}</p>
+                          ) : (
+                            <>
+                              <h4 class="font-medium mb-1 text-text-primary">{app.field}</h4>
+                              <p class="text-sm text-text-tertiary">{app.description}</p>
+                            </>
+                          )}
                         </div>
                       )}
                     </For>

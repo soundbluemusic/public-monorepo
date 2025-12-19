@@ -9,7 +9,6 @@ export const physicsConcepts: MathConcept[] = [
     name: {
       ko: '운동학',
       en: 'Kinematics',
-      ja: '運動学',
     },
     field: 'applied-physics',
     subfield: 'mechanics',
@@ -102,7 +101,6 @@ export const physicsConcepts: MathConcept[] = [
     name: {
       ko: '파동 방정식',
       en: 'Wave Equation',
-      ja: '波動方程式',
     },
     field: 'applied-physics',
     subfield: 'waves',
@@ -207,7 +205,6 @@ export const physicsConcepts: MathConcept[] = [
     name: {
       ko: '맥스웰 방정식',
       en: "Maxwell's Equations",
-      ja: 'マクスウェル方程式',
     },
     field: 'applied-physics',
     subfield: 'electromagnetism',
@@ -305,7 +302,6 @@ export const physicsConcepts: MathConcept[] = [
     name: {
       ko: '슈뢰딩거 방정식',
       en: 'Schrödinger Equation',
-      ja: 'シュレーディンガー方程式',
     },
     field: 'applied-physics',
     subfield: 'quantum',
@@ -401,7 +397,6 @@ export const physicsConcepts: MathConcept[] = [
     name: {
       ko: '특수상대성이론 수학',
       en: 'Special Relativity Mathematics',
-      ja: '特殊相対性理論の数学',
     },
     field: 'applied-physics',
     subfield: 'relativity',
@@ -512,7 +507,6 @@ export const physicsConcepts: MathConcept[] = [
     name: {
       ko: '뉴턴의 운동 법칙',
       en: "Newton's Laws of Motion",
-      ja: 'ニュートンの運動法則',
     },
     field: 'applied-physics',
     subfield: 'mechanics',

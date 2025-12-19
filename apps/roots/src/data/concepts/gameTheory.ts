@@ -6,7 +6,6 @@ export const gameTheoryConcepts: MathConcept[] = [
     name: {
       ko: '내쉬 균형',
       en: 'Nash Equilibrium',
-      ja: 'ナッシュ均衡',
     },
     field: 'game-theory',
     subfield: 'strategic-games',
@@ -30,15 +29,6 @@ export const gameTheoryConcepts: MathConcept[] = [
         examples: ["Prisoner's Dilemma: (Defect, Defect)", 'Stag Hunt Game'],
         applications: ['Economics', 'Political Science', 'Evolutionary Biology'],
       },
-      ja: {
-        definition: 'すべてのプレイヤーが戦略を変える動機がない戦略の組み合わせ',
-        formulas: [
-          '∀i: u_i(s*_i, s*_{-i}) ≥ u_i(s_i, s*_{-i})',
-          '最適反応: BR_i(s_{-i}) = argmax u_i(s_i, s_{-i})',
-        ],
-        examples: ['囚人のジレンマ: (裏切り, 裏切り)', 'シカ狩りゲーム'],
-        applications: ['経済学', '政治学', '進化生物学'],
-      },
     },
     latex: 'u_i(s^*_i, s^*_{-i}) \\geq u_i(s_i, s^*_{-i})',
     relations: {
@@ -54,7 +44,6 @@ export const gameTheoryConcepts: MathConcept[] = [
     name: {
       ko: '죄수의 딜레마',
       en: "Prisoner's Dilemma",
-      ja: '囚人のジレンマ',
     },
     field: 'game-theory',
     subfield: 'strategic-games',
@@ -79,15 +68,6 @@ export const gameTheoryConcepts: MathConcept[] = [
         examples: ['Arms race', 'Pollution', 'Price fixing'],
         applications: ['International relations', 'Business strategy', 'Social dilemmas'],
       },
-      ja: {
-        definition: '個人の合理的選択が集団全体の利益に反する結果をもたらすゲーム',
-        formulas: [
-          '利得行列: T > R > P > S',
-          '裏切りの誘惑(T) > 協力の報酬(R) > 相互裏切り(P) > カモ(S)',
-        ],
-        examples: ['軍拡競争', '環境汚染', '価格カルテル'],
-        applications: ['国際関係', '企業戦略', '社会的ジレンマ'],
-      },
     },
     latex: '\\begin{pmatrix} R,R & S,T \\\\ T,S & P,P \\end{pmatrix}',
     relations: {
@@ -103,7 +83,6 @@ export const gameTheoryConcepts: MathConcept[] = [
     name: {
       ko: '미니맥스 정리',
       en: 'Minimax Theorem',
-      ja: 'ミニマックス定理',
     },
     field: 'game-theory',
     subfield: 'zero-sum',
@@ -127,15 +106,6 @@ export const gameTheoryConcepts: MathConcept[] = [
         examples: ['Rock-Paper-Scissors', 'Chess', 'Tic-Tac-Toe'],
         applications: ['AI', 'Decision making', 'Optimization'],
       },
-      ja: {
-        definition: 'ゼロサムゲームで最適戦略は最大損失を最小化すること',
-        formulas: [
-          'max_x min_y u(x,y) = min_y max_x u(x,y)',
-          '鞍点: u(x*, y) ≤ u(x*, y*) ≤ u(x, y*)',
-        ],
-        examples: ['じゃんけん', 'チェス', '三目並べ'],
-        applications: ['人工知能', '意思決定', '最適化'],
-      },
     },
     latex: '\\max_x \\min_y u(x,y) = \\min_y \\max_x u(x,y)',
     relations: {
@@ -151,7 +121,6 @@ export const gameTheoryConcepts: MathConcept[] = [
     name: {
       ko: '파레토 효율성',
       en: 'Pareto Efficiency',
-      ja: 'パレート効率性',
     },
     field: 'game-theory',
     subfield: 'welfare',
@@ -169,12 +138,6 @@ export const gameTheoryConcepts: MathConcept[] = [
         examples: ['Resource allocation', 'Gains from trade', 'Contract negotiation'],
         applications: ['Economics', 'Public policy', 'Negotiation theory'],
       },
-      ja: {
-        definition: '誰かの状況を悪化させずには誰の状況も改善できない状態',
-        formulas: ['パレート改善: ∃ 配分 y: u_i(y) ≥ u_i(x) ∀i, 一部jで >'],
-        examples: ['資源配分', '貿易利益', '契約交渉'],
-        applications: ['経済学', '公共政策', '交渉理論'],
-      },
     },
     latex: '\\nexists y: u_i(y) \\geq u_i(x) \\; \\forall i, \\; u_j(y) > u_j(x) \\; \\exists j',
     relations: {
@@ -190,7 +153,6 @@ export const gameTheoryConcepts: MathConcept[] = [
     name: {
       ko: '혼합 전략',
       en: 'Mixed Strategy',
-      ja: '混合戦略',
     },
     field: 'game-theory',
     subfield: 'strategic-games',
@@ -208,12 +170,6 @@ export const gameTheoryConcepts: MathConcept[] = [
         examples: ['Rock-Paper-Scissors: (1/3, 1/3, 1/3)', 'Penalty kick direction'],
         applications: ['Sports strategy', 'Auctions', 'Security'],
       },
-      ja: {
-        definition: '純粋戦略に確率を割り当ててランダムに選択する戦略',
-        formulas: ['σ_i: S_i → [0,1], Σσ_i(s) = 1', '期待利得: E[u_i] = Σ σ(s)·u_i(s)'],
-        examples: ['じゃんけん: (1/3, 1/3, 1/3)', 'ペナルティキックの方向'],
-        applications: ['スポーツ戦略', 'オークション', 'セキュリティ'],
-      },
     },
     latex: '\\sigma_i: S_i \\rightarrow [0,1], \\; \\sum_{s \\in S_i} \\sigma_i(s) = 1',
     relations: {
@@ -229,7 +185,6 @@ export const gameTheoryConcepts: MathConcept[] = [
     name: {
       ko: '경매 이론',
       en: 'Auction Theory',
-      ja: 'オークション理論',
     },
     field: 'game-theory',
     subfield: 'mechanism-design',
@@ -257,17 +212,6 @@ export const gameTheoryConcepts: MathConcept[] = [
         examples: ['Google Ad auction', 'Spectrum auction', 'Art auction'],
         applications: ['Online advertising', 'Government procurement', 'Resource allocation'],
       },
-      ja: {
-        definition: 'オークションにおける戦略的行動と最適設計を研究する分野',
-        formulas: [
-          'イングリッシュ: 公開昇順',
-          'ダッチ: 公開降順',
-          '封印1価格',
-          '封印2価格 (ヴィックリー): 次点価格支払い',
-        ],
-        examples: ['Google広告オークション', '周波数オークション', '美術品オークション'],
-        applications: ['オンライン広告', '政府調達', '資源配分'],
-      },
     },
     latex: 'b^*(v) = v - \\frac{\\int_0^v F(t)^{n-1} dt}{F(v)^{n-1}}',
     relations: {
@@ -283,7 +227,6 @@ export const gameTheoryConcepts: MathConcept[] = [
     name: {
       ko: '진화 게임 이론',
       en: 'Evolutionary Game Theory',
-      ja: '進化ゲーム理論',
     },
     field: 'game-theory',
     subfield: 'evolutionary',
@@ -307,15 +250,6 @@ export const gameTheoryConcepts: MathConcept[] = [
         examples: ['Hawk-Dove game', 'Tit-for-Tat strategy', 'Sex ratio evolution'],
         applications: ['Evolutionary biology', 'Social norms', 'Cultural evolution'],
       },
-      ja: {
-        definition: '自然選択と適応をゲーム理論でモデル化する分野',
-        formulas: [
-          'レプリケーター方程式: ẋ_i = x_i(f_i - φ)',
-          'ESS: u(σ*, σ*) > u(σ, σ*) または等しければ u(σ*, σ) > u(σ, σ)',
-        ],
-        examples: ['タカ・ハトゲーム', 'しっぺ返し戦略', '性比の進化'],
-        applications: ['進化生物学', '社会規範', '文化進化'],
-      },
     },
     latex: '\\dot{x}_i = x_i(f_i - \\bar{f})',
     relations: {
@@ -331,7 +265,6 @@ export const gameTheoryConcepts: MathConcept[] = [
     name: {
       ko: '협력 게임',
       en: 'Cooperative Game',
-      ja: '協力ゲーム',
     },
     field: 'game-theory',
     subfield: 'cooperative',
@@ -356,16 +289,6 @@ export const gameTheoryConcepts: MathConcept[] = [
         ],
         examples: ['Cost sharing', 'Voting power', 'Profit division'],
         applications: ['Political science', 'Corporate mergers', 'International cooperation'],
-      },
-      ja: {
-        definition: 'プレイヤーが連合を形成して共同利益を追求するゲーム',
-        formulas: [
-          '特性関数: v: 2^N → ℝ',
-          'シャプレイ値: φ_i(v) = Σ |S|!(n-|S|-1)!/n! · [v(S∪{i}) - v(S)]',
-          'コア: C(v) = {x: Σx_i = v(N), Σ_{i∈S} x_i ≥ v(S)}',
-        ],
-        examples: ['費用分担', '投票力', '利益配分'],
-        applications: ['政治学', '企業合併', '国際協力'],
       },
     },
     latex:

@@ -9,7 +9,6 @@ export const abstractAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '군론',
       en: 'Group Theory',
-      ja: '群論',
     },
     field: 'abstract-algebra',
     subfield: 'groups',
@@ -117,7 +116,6 @@ export const abstractAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '환',
       en: 'Rings',
-      ja: '環',
     },
     field: 'abstract-algebra',
     subfield: 'rings',
@@ -206,7 +204,6 @@ export const abstractAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '체',
       en: 'Fields',
-      ja: '体',
     },
     field: 'abstract-algebra',
     subfield: 'fields',
@@ -306,7 +303,6 @@ export const abstractAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '준동형사상',
       en: 'Homomorphism',
-      ja: '準同型写像',
     },
     field: 'abstract-algebra',
     subfield: 'morphisms',
@@ -401,7 +397,6 @@ export const abstractAlgebraConcepts: MathConcept[] = [
     name: {
       ko: '동형사상',
       en: 'Isomorphism',
-      ja: '同型写像',
     },
     field: 'abstract-algebra',
     subfield: 'morphisms',

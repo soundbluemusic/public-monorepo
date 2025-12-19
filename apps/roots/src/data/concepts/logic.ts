@@ -9,7 +9,6 @@ export const logicConcepts: MathConcept[] = [
     name: {
       ko: '명제 논리',
       en: 'Propositional Logic',
-      ja: '命題論理',
     },
     field: 'logic',
     subfield: 'propositional',
@@ -103,7 +102,6 @@ export const logicConcepts: MathConcept[] = [
     name: {
       ko: '술어 논리',
       en: 'Predicate Logic',
-      ja: '述語論理',
     },
     field: 'logic',
     subfield: 'predicate',
@@ -188,7 +186,6 @@ export const logicConcepts: MathConcept[] = [
     name: {
       ko: '증명 방법',
       en: 'Proof Methods',
-      ja: '証明方法',
     },
     field: 'logic',
     subfield: 'proof-theory',
@@ -268,7 +265,6 @@ export const logicConcepts: MathConcept[] = [
     name: {
       ko: '수학적 귀납법',
       en: 'Mathematical Induction',
-      ja: '数学的帰納法',
     },
     field: 'logic',
     subfield: 'proof-theory',
@@ -345,7 +341,6 @@ export const logicConcepts: MathConcept[] = [
     name: {
       ko: '괴델의 불완전성 정리',
       en: "Gödel's Incompleteness Theorems",
-      ja: 'ゲーデルの不完全性定理',
     },
     field: 'logic',
     subfield: 'foundations',

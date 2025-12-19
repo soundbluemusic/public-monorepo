@@ -1,7 +1,7 @@
 [
   {
     "id": "natural-numbers",
-    "name": { "ko": "자연수", "en": "Natural Numbers", "ja": "自然数" },
+    "name": { "ko": "자연수", "en": "Natural Numbers" },
     "field": "foundations",
     "subfield": "arithmetic",
     "difficulty": 1,
@@ -13,7 +13,7 @@
   },
   {
     "id": "integers",
-    "name": { "ko": "정수", "en": "Integers", "ja": "整数" },
+    "name": { "ko": "정수", "en": "Integers" },
     "field": "foundations",
     "subfield": "arithmetic",
     "difficulty": 1,
@@ -25,7 +25,7 @@
   },
   {
     "id": "rational-numbers",
-    "name": { "ko": "유리수", "en": "Rational Numbers", "ja": "有理数" },
+    "name": { "ko": "유리수", "en": "Rational Numbers" },
     "field": "foundations",
     "subfield": "arithmetic",
     "difficulty": 1,
@@ -37,7 +37,7 @@
   },
   {
     "id": "irrational-numbers",
-    "name": { "ko": "무리수", "en": "Irrational Numbers", "ja": "無理数" },
+    "name": { "ko": "무리수", "en": "Irrational Numbers" },
     "field": "foundations",
     "subfield": "arithmetic",
     "difficulty": 2,
@@ -49,7 +49,7 @@
   },
   {
     "id": "real-numbers",
-    "name": { "ko": "실수", "en": "Real Numbers", "ja": "実数" },
+    "name": { "ko": "실수", "en": "Real Numbers" },
     "field": "foundations",
     "subfield": "arithmetic",
     "difficulty": 2,
@@ -61,7 +61,7 @@
   },
   {
     "id": "arithmetic-operations",
-    "name": { "ko": "사칙연산", "en": "Arithmetic Operations", "ja": "四則演算" },
+    "name": { "ko": "사칙연산", "en": "Arithmetic Operations" },
     "field": "foundations",
     "subfield": "arithmetic",
     "difficulty": 1,
@@ -73,7 +73,7 @@
   },
   {
     "id": "exponents",
-    "name": { "ko": "거듭제곱", "en": "Exponents", "ja": "累乗" },
+    "name": { "ko": "거듭제곱", "en": "Exponents" },
     "field": "foundations",
     "subfield": "arithmetic",
     "difficulty": 1,
@@ -85,7 +85,7 @@
   },
   {
     "id": "square-roots",
-    "name": { "ko": "제곱근", "en": "Square Roots", "ja": "平方根" },
+    "name": { "ko": "제곱근", "en": "Square Roots" },
     "field": "foundations",
     "subfield": "arithmetic",
     "difficulty": 1,
@@ -97,7 +97,7 @@
   },
   {
     "id": "prime-numbers",
-    "name": { "ko": "소수", "en": "Prime Numbers", "ja": "素数" },
+    "name": { "ko": "소수", "en": "Prime Numbers" },
     "field": "foundations",
     "subfield": "arithmetic",
     "difficulty": 1,
@@ -109,11 +109,7 @@
   },
   {
     "id": "gcd-lcm",
-    "name": {
-      "ko": "최대공약수와 최소공배수",
-      "en": "GCD and LCM",
-      "ja": "最大公約数と最小公倍数"
-    },
+    "name": { "ko": "최대공약수와 최소공배수", "en": "GCD and LCM" },
     "field": "foundations",
     "subfield": "arithmetic",
     "difficulty": 1,
@@ -125,7 +121,7 @@
   },
   {
     "id": "fractions",
-    "name": { "ko": "분수", "en": "Fractions", "ja": "分数" },
+    "name": { "ko": "분수", "en": "Fractions" },
     "field": "foundations",
     "subfield": "fractions-ratios",
     "difficulty": 1,
@@ -137,7 +133,7 @@
   },
   {
     "id": "decimals",
-    "name": { "ko": "소수 (小數)", "en": "Decimals", "ja": "小数" },
+    "name": { "ko": "소수 (小數)", "en": "Decimals" },
     "field": "foundations",
     "subfield": "fractions-ratios",
     "difficulty": 1,
@@ -149,7 +145,7 @@
   },
   {
     "id": "percentages",
-    "name": { "ko": "백분율", "en": "Percentages", "ja": "百分率" },
+    "name": { "ko": "백분율", "en": "Percentages" },
     "field": "foundations",
     "subfield": "fractions-ratios",
     "difficulty": 1,
@@ -161,7 +157,7 @@
   },
   {
     "id": "ratios",
-    "name": { "ko": "비", "en": "Ratios", "ja": "比" },
+    "name": { "ko": "비", "en": "Ratios" },
     "field": "foundations",
     "subfield": "fractions-ratios",
     "difficulty": 1,
@@ -173,7 +169,7 @@
   },
   {
     "id": "proportions",
-    "name": { "ko": "비례", "en": "Proportions", "ja": "比例" },
+    "name": { "ko": "비례", "en": "Proportions" },
     "field": "foundations",
     "subfield": "fractions-ratios",
     "difficulty": 1,
@@ -185,7 +181,7 @@
   },
   {
     "id": "binary",
-    "name": { "ko": "이진법", "en": "Binary System", "ja": "二進法" },
+    "name": { "ko": "이진법", "en": "Binary System" },
     "field": "foundations",
     "subfield": "number-systems",
     "difficulty": 2,
@@ -197,7 +193,7 @@
   },
   {
     "id": "octal",
-    "name": { "ko": "8진법", "en": "Octal System", "ja": "八進法" },
+    "name": { "ko": "8진법", "en": "Octal System" },
     "field": "foundations",
     "subfield": "number-systems",
     "difficulty": 2,
@@ -209,7 +205,7 @@
   },
   {
     "id": "hexadecimal",
-    "name": { "ko": "16진법", "en": "Hexadecimal System", "ja": "十六進法" },
+    "name": { "ko": "16진법", "en": "Hexadecimal System" },
     "field": "foundations",
     "subfield": "number-systems",
     "difficulty": 2,
@@ -221,7 +217,7 @@
   },
   {
     "id": "complex-numbers",
-    "name": { "ko": "복소수", "en": "Complex Numbers", "ja": "複素数" },
+    "name": { "ko": "복소수", "en": "Complex Numbers" },
     "field": "foundations",
     "subfield": "number-systems",
     "difficulty": 3,
@@ -233,7 +229,7 @@
   },
   {
     "id": "variables",
-    "name": { "ko": "변수", "en": "Variables", "ja": "変数" },
+    "name": { "ko": "변수", "en": "Variables" },
     "field": "algebra",
     "subfield": "elementary-algebra",
     "difficulty": 1,
@@ -245,7 +241,7 @@
   },
   {
     "id": "polynomial",
-    "name": { "ko": "다항식", "en": "Polynomial", "ja": "多項式" },
+    "name": { "ko": "다항식", "en": "Polynomial" },
     "field": "algebra",
     "subfield": "elementary-algebra",
     "difficulty": 2,
@@ -257,7 +253,7 @@
   },
   {
     "id": "linear-equation",
-    "name": { "ko": "일차방정식", "en": "Linear Equation", "ja": "一次方程式" },
+    "name": { "ko": "일차방정식", "en": "Linear Equation" },
     "field": "algebra",
     "subfield": "elementary-algebra",
     "difficulty": 1,
@@ -269,7 +265,7 @@
   },
   {
     "id": "factoring",
-    "name": { "ko": "인수분해", "en": "Factoring", "ja": "因数分解" },
+    "name": { "ko": "인수분해", "en": "Factoring" },
     "field": "algebra",
     "subfield": "elementary-algebra",
     "difficulty": 2,
@@ -281,7 +277,7 @@
   },
   {
     "id": "quadratic-equation",
-    "name": { "ko": "이차방정식", "en": "Quadratic Equation", "ja": "二次方程式" },
+    "name": { "ko": "이차방정식", "en": "Quadratic Equation" },
     "field": "algebra",
     "subfield": "elementary-algebra",
     "difficulty": 2,
@@ -293,7 +289,7 @@
   },
   {
     "id": "inequality",
-    "name": { "ko": "부등식", "en": "Inequality", "ja": "不等式" },
+    "name": { "ko": "부등식", "en": "Inequality" },
     "field": "algebra",
     "subfield": "elementary-algebra",
     "difficulty": 2,
@@ -305,7 +301,7 @@
   },
   {
     "id": "system-of-equations",
-    "name": { "ko": "연립방정식", "en": "System of Equations", "ja": "連立方程式" },
+    "name": { "ko": "연립방정식", "en": "System of Equations" },
     "field": "algebra",
     "subfield": "elementary-algebra",
     "difficulty": 2,
@@ -317,7 +313,7 @@
   },
   {
     "id": "exponential-function",
-    "name": { "ko": "지수함수", "en": "Exponential Function", "ja": "指数関数" },
+    "name": { "ko": "지수함수", "en": "Exponential Function" },
     "field": "algebra",
     "subfield": "advanced-algebra",
     "difficulty": 3,
@@ -329,7 +325,7 @@
   },
   {
     "id": "logarithm",
-    "name": { "ko": "로그", "en": "Logarithm", "ja": "対数" },
+    "name": { "ko": "로그", "en": "Logarithm" },
     "field": "algebra",
     "subfield": "advanced-algebra",
     "difficulty": 3,
@@ -341,7 +337,7 @@
   },
   {
     "id": "arithmetic-sequence",
-    "name": { "ko": "등차수열", "en": "Arithmetic Sequence", "ja": "等差数列" },
+    "name": { "ko": "등차수열", "en": "Arithmetic Sequence" },
     "field": "algebra",
     "subfield": "advanced-algebra",
     "difficulty": 2,
@@ -353,7 +349,7 @@
   },
   {
     "id": "geometric-sequence",
-    "name": { "ko": "등비수열", "en": "Geometric Sequence", "ja": "等比数列" },
+    "name": { "ko": "등비수열", "en": "Geometric Sequence" },
     "field": "algebra",
     "subfield": "advanced-algebra",
     "difficulty": 2,
@@ -365,7 +361,7 @@
   },
   {
     "id": "series",
-    "name": { "ko": "급수", "en": "Series", "ja": "級数" },
+    "name": { "ko": "급수", "en": "Series" },
     "field": "algebra",
     "subfield": "advanced-algebra",
     "difficulty": 3,
@@ -377,7 +373,7 @@
   },
   {
     "id": "point-line-plane",
-    "name": { "ko": "점, 선, 면", "en": "Point, Line, Plane", "ja": "点・線・面" },
+    "name": { "ko": "점, 선, 면", "en": "Point, Line, Plane" },
     "field": "geometry",
     "subfield": "plane-geometry",
     "difficulty": 1,
@@ -389,7 +385,7 @@
   },
   {
     "id": "angles",
-    "name": { "ko": "각도", "en": "Angles", "ja": "角度" },
+    "name": { "ko": "각도", "en": "Angles" },
     "field": "geometry",
     "subfield": "plane-geometry",
     "difficulty": 1,
@@ -401,7 +397,7 @@
   },
   {
     "id": "triangle-basics",
-    "name": { "ko": "삼각형", "en": "Triangle", "ja": "三角形" },
+    "name": { "ko": "삼각형", "en": "Triangle" },
     "field": "geometry",
     "subfield": "plane-geometry",
     "difficulty": 1,
@@ -413,7 +409,7 @@
   },
   {
     "id": "pythagorean-theorem",
-    "name": { "ko": "피타고라스 정리", "en": "Pythagorean Theorem", "ja": "ピタゴラスの定理" },
+    "name": { "ko": "피타고라스 정리", "en": "Pythagorean Theorem" },
     "field": "geometry",
     "subfield": "plane-geometry",
     "difficulty": 3,
@@ -425,7 +421,7 @@
   },
   {
     "id": "triangle-area",
-    "name": { "ko": "삼각형의 넓이", "en": "Area of Triangle", "ja": "三角形の面積" },
+    "name": { "ko": "삼각형의 넓이", "en": "Area of Triangle" },
     "field": "geometry",
     "subfield": "plane-geometry",
     "difficulty": 2,
@@ -437,7 +433,7 @@
   },
   {
     "id": "similar-triangles",
-    "name": { "ko": "닮은 삼각형", "en": "Similar Triangles", "ja": "相似な三角形" },
+    "name": { "ko": "닮은 삼각형", "en": "Similar Triangles" },
     "field": "geometry",
     "subfield": "plane-geometry",
     "difficulty": 2,
@@ -449,7 +445,7 @@
   },
   {
     "id": "congruent-triangles",
-    "name": { "ko": "합동 삼각형", "en": "Congruent Triangles", "ja": "合同な三角形" },
+    "name": { "ko": "합동 삼각형", "en": "Congruent Triangles" },
     "field": "geometry",
     "subfield": "plane-geometry",
     "difficulty": 2,
@@ -461,7 +457,7 @@
   },
   {
     "id": "quadrilaterals",
-    "name": { "ko": "사각형", "en": "Quadrilaterals", "ja": "四角形" },
+    "name": { "ko": "사각형", "en": "Quadrilaterals" },
     "field": "geometry",
     "subfield": "plane-geometry",
     "difficulty": 2,
@@ -473,7 +469,7 @@
   },
   {
     "id": "circle-basics",
-    "name": { "ko": "원", "en": "Circle", "ja": "円" },
+    "name": { "ko": "원", "en": "Circle" },
     "field": "geometry",
     "subfield": "plane-geometry",
     "difficulty": 2,
@@ -485,7 +481,7 @@
   },
   {
     "id": "arc-sector",
-    "name": { "ko": "호와 부채꼴", "en": "Arc and Sector", "ja": "弧と扇形" },
+    "name": { "ko": "호와 부채꼴", "en": "Arc and Sector" },
     "field": "geometry",
     "subfield": "plane-geometry",
     "difficulty": 2,
@@ -497,7 +493,7 @@
   },
   {
     "id": "distance-formula",
-    "name": { "ko": "두 점 사이의 거리", "en": "Distance Formula", "ja": "2点間の距離" },
+    "name": { "ko": "두 점 사이의 거리", "en": "Distance Formula" },
     "field": "geometry",
     "subfield": "analytic-geometry",
     "difficulty": 2,
@@ -509,7 +505,7 @@
   },
   {
     "id": "midpoint-formula",
-    "name": { "ko": "중점 공식", "en": "Midpoint Formula", "ja": "中点の公式" },
+    "name": { "ko": "중점 공식", "en": "Midpoint Formula" },
     "field": "geometry",
     "subfield": "analytic-geometry",
     "difficulty": 1,
@@ -521,7 +517,7 @@
   },
   {
     "id": "slope",
-    "name": { "ko": "기울기", "en": "Slope", "ja": "傾き" },
+    "name": { "ko": "기울기", "en": "Slope" },
     "field": "geometry",
     "subfield": "analytic-geometry",
     "difficulty": 2,
@@ -533,7 +529,7 @@
   },
   {
     "id": "conic-sections",
-    "name": { "ko": "원뿔 곡선", "en": "Conic Sections", "ja": "円錐曲線" },
+    "name": { "ko": "원뿔 곡선", "en": "Conic Sections" },
     "field": "geometry",
     "subfield": "analytic-geometry",
     "difficulty": 3,
@@ -545,7 +541,7 @@
   },
   {
     "id": "solid-geometry-basics",
-    "name": { "ko": "입체도형", "en": "Solid Figures", "ja": "立体図形" },
+    "name": { "ko": "입체도형", "en": "Solid Figures" },
     "field": "geometry",
     "subfield": "solid-geometry",
     "difficulty": 2,
@@ -557,7 +553,7 @@
   },
   {
     "id": "limit",
-    "name": { "ko": "극한", "en": "Limit", "ja": "極限" },
+    "name": { "ko": "극한", "en": "Limit" },
     "field": "analysis",
     "subfield": "limits-continuity",
     "difficulty": 3,
@@ -569,7 +565,7 @@
   },
   {
     "id": "continuity",
-    "name": { "ko": "연속성", "en": "Continuity", "ja": "連続性" },
+    "name": { "ko": "연속성", "en": "Continuity" },
     "field": "analysis",
     "subfield": "limits-continuity",
     "difficulty": 3,
@@ -581,7 +577,7 @@
   },
   {
     "id": "derivative",
-    "name": { "ko": "미분 / 도함수", "en": "Derivative", "ja": "微分 / 導関数" },
+    "name": { "ko": "미분 / 도함수", "en": "Derivative" },
     "field": "analysis",
     "subfield": "differentiation",
     "difficulty": 4,
@@ -593,7 +589,7 @@
   },
   {
     "id": "chain-rule",
-    "name": { "ko": "연쇄 법칙", "en": "Chain Rule", "ja": "連鎖律" },
+    "name": { "ko": "연쇄 법칙", "en": "Chain Rule" },
     "field": "analysis",
     "subfield": "differentiation",
     "difficulty": 4,
@@ -605,11 +601,7 @@
   },
   {
     "id": "derivatives-trig",
-    "name": {
-      "ko": "삼각함수의 미분",
-      "en": "Derivatives of Trigonometric Functions",
-      "ja": "三角関数の微分"
-    },
+    "name": { "ko": "삼각함수의 미분", "en": "Derivatives of Trigonometric Functions" },
     "field": "analysis",
     "subfield": "differentiation",
     "difficulty": 3,
@@ -623,8 +615,7 @@
     "id": "derivatives-exp-log",
     "name": {
       "ko": "지수/로그 함수의 미분",
-      "en": "Derivatives of Exponential and Logarithmic Functions",
-      "ja": "指数・対数関数の微分"
+      "en": "Derivatives of Exponential and Logarithmic Functions"
     },
     "field": "analysis",
     "subfield": "differentiation",
@@ -637,7 +628,7 @@
   },
   {
     "id": "higher-derivatives",
-    "name": { "ko": "고계 도함수", "en": "Higher Order Derivatives", "ja": "高階導関数" },
+    "name": { "ko": "고계 도함수", "en": "Higher Order Derivatives" },
     "field": "analysis",
     "subfield": "differentiation",
     "difficulty": 3,
@@ -649,7 +640,7 @@
   },
   {
     "id": "indefinite-integral",
-    "name": { "ko": "부정적분", "en": "Indefinite Integral", "ja": "不定積分" },
+    "name": { "ko": "부정적분", "en": "Indefinite Integral" },
     "field": "analysis",
     "subfield": "integration",
     "difficulty": 3,
@@ -661,7 +652,7 @@
   },
   {
     "id": "definite-integral",
-    "name": { "ko": "정적분", "en": "Definite Integral", "ja": "定積分" },
+    "name": { "ko": "정적분", "en": "Definite Integral" },
     "field": "analysis",
     "subfield": "integration",
     "difficulty": 4,
@@ -673,7 +664,7 @@
   },
   {
     "id": "integration-substitution",
-    "name": { "ko": "치환적분", "en": "Integration by Substitution", "ja": "置換積分" },
+    "name": { "ko": "치환적분", "en": "Integration by Substitution" },
     "field": "analysis",
     "subfield": "integration",
     "difficulty": 4,
@@ -685,7 +676,7 @@
   },
   {
     "id": "integration-by-parts",
-    "name": { "ko": "부분적분", "en": "Integration by Parts", "ja": "部分積分" },
+    "name": { "ko": "부분적분", "en": "Integration by Parts" },
     "field": "analysis",
     "subfield": "integration",
     "difficulty": 4,
@@ -697,7 +688,7 @@
   },
   {
     "id": "taylor-series",
-    "name": { "ko": "테일러 급수", "en": "Taylor Series", "ja": "テイラー級数" },
+    "name": { "ko": "테일러 급수", "en": "Taylor Series" },
     "field": "analysis",
     "subfield": "series-sequences",
     "difficulty": 5,
@@ -709,7 +700,7 @@
   },
   {
     "id": "partial-derivative",
-    "name": { "ko": "편미분", "en": "Partial Derivative", "ja": "偏微分" },
+    "name": { "ko": "편미분", "en": "Partial Derivative" },
     "field": "analysis",
     "subfield": "multivariable",
     "difficulty": 4,
@@ -721,7 +712,7 @@
   },
   {
     "id": "multiple-integrals",
-    "name": { "ko": "중적분", "en": "Multiple Integrals", "ja": "重積分" },
+    "name": { "ko": "중적분", "en": "Multiple Integrals" },
     "field": "analysis",
     "subfield": "multivariable",
     "difficulty": 4,
@@ -733,7 +724,7 @@
   },
   {
     "id": "sine-cosine",
-    "name": { "ko": "사인과 코사인", "en": "Sine and Cosine", "ja": "サインとコサイン" },
+    "name": { "ko": "사인과 코사인", "en": "Sine and Cosine" },
     "field": "trigonometry",
     "subfield": "trig-functions",
     "difficulty": 2,
@@ -745,7 +736,7 @@
   },
   {
     "id": "tangent",
-    "name": { "ko": "탄젠트", "en": "Tangent", "ja": "タンジェント" },
+    "name": { "ko": "탄젠트", "en": "Tangent" },
     "field": "trigonometry",
     "subfield": "trig-functions",
     "difficulty": 2,
@@ -757,7 +748,7 @@
   },
   {
     "id": "unit-circle",
-    "name": { "ko": "단위원", "en": "Unit Circle", "ja": "単位円" },
+    "name": { "ko": "단위원", "en": "Unit Circle" },
     "field": "trigonometry",
     "subfield": "trig-functions",
     "difficulty": 2,
@@ -769,7 +760,7 @@
   },
   {
     "id": "radians",
-    "name": { "ko": "라디안", "en": "Radians", "ja": "ラジアン" },
+    "name": { "ko": "라디안", "en": "Radians" },
     "field": "trigonometry",
     "subfield": "trig-functions",
     "difficulty": 2,
@@ -781,7 +772,7 @@
   },
   {
     "id": "trig-identities",
-    "name": { "ko": "삼각 항등식", "en": "Trigonometric Identities", "ja": "三角関数の恒等式" },
+    "name": { "ko": "삼각 항등식", "en": "Trigonometric Identities" },
     "field": "trigonometry",
     "subfield": "trig-identities",
     "difficulty": 3,
@@ -793,7 +784,7 @@
   },
   {
     "id": "inverse-trig",
-    "name": { "ko": "역삼각함수", "en": "Inverse Trigonometric Functions", "ja": "逆三角関数" },
+    "name": { "ko": "역삼각함수", "en": "Inverse Trigonometric Functions" },
     "field": "trigonometry",
     "subfield": "trig-functions",
     "difficulty": 3,
@@ -805,7 +796,7 @@
   },
   {
     "id": "law-of-sines",
-    "name": { "ko": "사인 법칙", "en": "Law of Sines", "ja": "正弦定理" },
+    "name": { "ko": "사인 법칙", "en": "Law of Sines" },
     "field": "trigonometry",
     "subfield": "triangle-trig",
     "difficulty": 3,
@@ -817,7 +808,7 @@
   },
   {
     "id": "law-of-cosines",
-    "name": { "ko": "코사인 법칙", "en": "Law of Cosines", "ja": "余弦定理" },
+    "name": { "ko": "코사인 법칙", "en": "Law of Cosines" },
     "field": "trigonometry",
     "subfield": "triangle-trig",
     "difficulty": 3,
@@ -829,7 +820,7 @@
   },
   {
     "id": "hyperbolic-functions",
-    "name": { "ko": "쌍곡선 함수", "en": "Hyperbolic Functions", "ja": "双曲線関数" },
+    "name": { "ko": "쌍곡선 함수", "en": "Hyperbolic Functions" },
     "field": "trigonometry",
     "subfield": "hyperbolic",
     "difficulty": 3,
@@ -841,7 +832,7 @@
   },
   {
     "id": "inverse-hyperbolic",
-    "name": { "ko": "역쌍곡선 함수", "en": "Inverse Hyperbolic Functions", "ja": "逆双曲線関数" },
+    "name": { "ko": "역쌍곡선 함수", "en": "Inverse Hyperbolic Functions" },
     "field": "trigonometry",
     "subfield": "hyperbolic",
     "difficulty": 4,
@@ -853,7 +844,7 @@
   },
   {
     "id": "vectors-basics",
-    "name": { "ko": "벡터", "en": "Vectors", "ja": "ベクトル" },
+    "name": { "ko": "벡터", "en": "Vectors" },
     "field": "linear-algebra",
     "subfield": "vectors",
     "difficulty": 2,
@@ -865,7 +856,7 @@
   },
   {
     "id": "vector-operations",
-    "name": { "ko": "벡터 연산", "en": "Vector Operations", "ja": "ベクトル演算" },
+    "name": { "ko": "벡터 연산", "en": "Vector Operations" },
     "field": "linear-algebra",
     "subfield": "vectors",
     "difficulty": 2,
@@ -877,7 +868,7 @@
   },
   {
     "id": "dot-product",
-    "name": { "ko": "내적", "en": "Dot Product", "ja": "内積" },
+    "name": { "ko": "내적", "en": "Dot Product" },
     "field": "linear-algebra",
     "subfield": "vectors",
     "difficulty": 2,
@@ -889,7 +880,7 @@
   },
   {
     "id": "cross-product",
-    "name": { "ko": "외적", "en": "Cross Product", "ja": "外積" },
+    "name": { "ko": "외적", "en": "Cross Product" },
     "field": "linear-algebra",
     "subfield": "vectors",
     "difficulty": 3,
@@ -901,7 +892,7 @@
   },
   {
     "id": "matrices-basics",
-    "name": { "ko": "행렬", "en": "Matrices", "ja": "行列" },
+    "name": { "ko": "행렬", "en": "Matrices" },
     "field": "linear-algebra",
     "subfield": "matrices",
     "difficulty": 2,
@@ -913,7 +904,7 @@
   },
   {
     "id": "matrix-operations",
-    "name": { "ko": "행렬 연산", "en": "Matrix Operations", "ja": "行列演算" },
+    "name": { "ko": "행렬 연산", "en": "Matrix Operations" },
     "field": "linear-algebra",
     "subfield": "matrices",
     "difficulty": 3,
@@ -925,7 +916,7 @@
   },
   {
     "id": "determinant",
-    "name": { "ko": "행렬식", "en": "Determinant", "ja": "行列式" },
+    "name": { "ko": "행렬식", "en": "Determinant" },
     "field": "linear-algebra",
     "subfield": "matrices",
     "difficulty": 3,
@@ -937,7 +928,7 @@
   },
   {
     "id": "inverse-matrix",
-    "name": { "ko": "역행렬", "en": "Inverse Matrix", "ja": "逆行列" },
+    "name": { "ko": "역행렬", "en": "Inverse Matrix" },
     "field": "linear-algebra",
     "subfield": "matrices",
     "difficulty": 3,
@@ -949,11 +940,7 @@
   },
   {
     "id": "systems-linear-equations",
-    "name": {
-      "ko": "연립일차방정식과 행렬",
-      "en": "Systems of Linear Equations (Matrix Form)",
-      "ja": "連立一次方程式と行列"
-    },
+    "name": { "ko": "연립일차방정식과 행렬", "en": "Systems of Linear Equations (Matrix Form)" },
     "field": "linear-algebra",
     "subfield": "applications",
     "difficulty": 3,
@@ -965,11 +952,7 @@
   },
   {
     "id": "eigenvalues-eigenvectors",
-    "name": {
-      "ko": "고유값과 고유벡터",
-      "en": "Eigenvalues and Eigenvectors",
-      "ja": "固有値と固有ベクトル"
-    },
+    "name": { "ko": "고유값과 고유벡터", "en": "Eigenvalues and Eigenvectors" },
     "field": "linear-algebra",
     "subfield": "advanced",
     "difficulty": 4,
@@ -981,7 +964,7 @@
   },
   {
     "id": "linear-transformation",
-    "name": { "ko": "선형 변환", "en": "Linear Transformation", "ja": "線形変換" },
+    "name": { "ko": "선형 변환", "en": "Linear Transformation" },
     "field": "linear-algebra",
     "subfield": "advanced",
     "difficulty": 3,
@@ -993,7 +976,7 @@
   },
   {
     "id": "vector-space",
-    "name": { "ko": "벡터 공간", "en": "Vector Space", "ja": "ベクトル空間" },
+    "name": { "ko": "벡터 공간", "en": "Vector Space" },
     "field": "linear-algebra",
     "subfield": "advanced",
     "difficulty": 4,
@@ -1005,7 +988,7 @@
   },
   {
     "id": "basis-dimension",
-    "name": { "ko": "기저와 차원", "en": "Basis and Dimension", "ja": "基底と次元" },
+    "name": { "ko": "기저와 차원", "en": "Basis and Dimension" },
     "field": "linear-algebra",
     "subfield": "advanced",
     "difficulty": 4,
@@ -1017,7 +1000,7 @@
   },
   {
     "id": "probability-basics",
-    "name": { "ko": "확률의 기초", "en": "Probability Basics", "ja": "確率の基礎" },
+    "name": { "ko": "확률의 기초", "en": "Probability Basics" },
     "field": "probability",
     "subfield": "probability-theory",
     "difficulty": 2,
@@ -1029,7 +1012,7 @@
   },
   {
     "id": "conditional-probability",
-    "name": { "ko": "조건부 확률", "en": "Conditional Probability", "ja": "条件付き確率" },
+    "name": { "ko": "조건부 확률", "en": "Conditional Probability" },
     "field": "probability",
     "subfield": "probability-theory",
     "difficulty": 3,
@@ -1041,7 +1024,7 @@
   },
   {
     "id": "expected-value",
-    "name": { "ko": "기댓값", "en": "Expected Value", "ja": "期待値" },
+    "name": { "ko": "기댓값", "en": "Expected Value" },
     "field": "probability",
     "subfield": "probability-theory",
     "difficulty": 3,
@@ -1053,11 +1036,7 @@
   },
   {
     "id": "variance",
-    "name": {
-      "ko": "분산과 표준편차",
-      "en": "Variance and Standard Deviation",
-      "ja": "分散と標準偏差"
-    },
+    "name": { "ko": "분산과 표준편차", "en": "Variance and Standard Deviation" },
     "field": "probability",
     "subfield": "statistics",
     "difficulty": 3,
@@ -1069,7 +1048,7 @@
   },
   {
     "id": "normal-distribution",
-    "name": { "ko": "정규분포", "en": "Normal Distribution", "ja": "正規分布" },
+    "name": { "ko": "정규분포", "en": "Normal Distribution" },
     "field": "probability",
     "subfield": "distributions",
     "difficulty": 3,
@@ -1081,7 +1060,7 @@
   },
   {
     "id": "binomial-distribution",
-    "name": { "ko": "이항분포", "en": "Binomial Distribution", "ja": "二項分布" },
+    "name": { "ko": "이항분포", "en": "Binomial Distribution" },
     "field": "probability",
     "subfield": "distributions",
     "difficulty": 3,
@@ -1093,7 +1072,7 @@
   },
   {
     "id": "central-limit-theorem",
-    "name": { "ko": "중심극한정리", "en": "Central Limit Theorem", "ja": "中心極限定理" },
+    "name": { "ko": "중심극한정리", "en": "Central Limit Theorem" },
     "field": "probability",
     "subfield": "statistics",
     "difficulty": 4,
@@ -1105,7 +1084,7 @@
   },
   {
     "id": "poisson-distribution",
-    "name": { "ko": "포아송 분포", "en": "Poisson Distribution", "ja": "ポアソン分布" },
+    "name": { "ko": "포아송 분포", "en": "Poisson Distribution" },
     "field": "probability",
     "subfield": "distributions",
     "difficulty": 3,
@@ -1117,7 +1096,7 @@
   },
   {
     "id": "independence",
-    "name": { "ko": "독립 사건", "en": "Independent Events", "ja": "独立事象" },
+    "name": { "ko": "독립 사건", "en": "Independent Events" },
     "field": "probability",
     "subfield": "probability-theory",
     "difficulty": 2,
@@ -1129,7 +1108,7 @@
   },
   {
     "id": "bayes-theorem",
-    "name": { "ko": "베이즈 정리", "en": "Bayes' Theorem", "ja": "ベイズの定理" },
+    "name": { "ko": "베이즈 정리", "en": "Bayes' Theorem" },
     "field": "probability",
     "subfield": "probability-theory",
     "difficulty": 4,
@@ -1141,7 +1120,7 @@
   },
   {
     "id": "hypothesis-testing",
-    "name": { "ko": "가설검정", "en": "Hypothesis Testing", "ja": "仮説検定" },
+    "name": { "ko": "가설검정", "en": "Hypothesis Testing" },
     "field": "probability",
     "subfield": "statistics",
     "difficulty": 4,
@@ -1153,7 +1132,7 @@
   },
   {
     "id": "correlation",
-    "name": { "ko": "상관관계", "en": "Correlation", "ja": "相関" },
+    "name": { "ko": "상관관계", "en": "Correlation" },
     "field": "probability",
     "subfield": "statistics",
     "difficulty": 3,
@@ -1165,7 +1144,7 @@
   },
   {
     "id": "regression",
-    "name": { "ko": "회귀분석", "en": "Regression Analysis", "ja": "回帰分析" },
+    "name": { "ko": "회귀분석", "en": "Regression Analysis" },
     "field": "probability",
     "subfield": "statistics",
     "difficulty": 4,
@@ -1177,7 +1156,7 @@
   },
   {
     "id": "sets",
-    "name": { "ko": "집합", "en": "Sets", "ja": "集合" },
+    "name": { "ko": "집합", "en": "Sets" },
     "field": "discrete",
     "subfield": "set-theory",
     "difficulty": 1,
@@ -1189,7 +1168,7 @@
   },
   {
     "id": "combinations",
-    "name": { "ko": "조합", "en": "Combinations", "ja": "組み合わせ" },
+    "name": { "ko": "조합", "en": "Combinations" },
     "field": "discrete",
     "subfield": "combinatorics",
     "difficulty": 2,
@@ -1201,7 +1180,7 @@
   },
   {
     "id": "permutations",
-    "name": { "ko": "순열", "en": "Permutations", "ja": "順列" },
+    "name": { "ko": "순열", "en": "Permutations" },
     "field": "discrete",
     "subfield": "combinatorics",
     "difficulty": 2,
@@ -1213,7 +1192,7 @@
   },
   {
     "id": "graph-theory",
-    "name": { "ko": "그래프 이론 기초", "en": "Graph Theory Basics", "ja": "グラフ理論の基礎" },
+    "name": { "ko": "그래프 이론 기초", "en": "Graph Theory Basics" },
     "field": "discrete",
     "subfield": "graph-theory",
     "difficulty": 3,
@@ -1225,7 +1204,7 @@
   },
   {
     "id": "recurrence-relations",
-    "name": { "ko": "점화식", "en": "Recurrence Relations", "ja": "漸化式" },
+    "name": { "ko": "점화식", "en": "Recurrence Relations" },
     "field": "discrete",
     "subfield": "sequences",
     "difficulty": 3,
@@ -1237,7 +1216,7 @@
   },
   {
     "id": "modular-arithmetic",
-    "name": { "ko": "모듈러 연산", "en": "Modular Arithmetic", "ja": "合同算術" },
+    "name": { "ko": "모듈러 연산", "en": "Modular Arithmetic" },
     "field": "discrete",
     "subfield": "number-theory",
     "difficulty": 3,
@@ -1249,7 +1228,7 @@
   },
   {
     "id": "propositional-logic",
-    "name": { "ko": "명제 논리", "en": "Propositional Logic", "ja": "命題論理" },
+    "name": { "ko": "명제 논리", "en": "Propositional Logic" },
     "field": "discrete",
     "subfield": "logic",
     "difficulty": 2,
@@ -1261,7 +1240,7 @@
   },
   {
     "id": "boolean-algebra",
-    "name": { "ko": "불 대수", "en": "Boolean Algebra", "ja": "ブール代数" },
+    "name": { "ko": "불 대수", "en": "Boolean Algebra" },
     "field": "discrete",
     "subfield": "logic",
     "difficulty": 3,
@@ -1273,7 +1252,7 @@
   },
   {
     "id": "trees",
-    "name": { "ko": "트리", "en": "Trees", "ja": "木" },
+    "name": { "ko": "트리", "en": "Trees" },
     "field": "discrete",
     "subfield": "graph-theory",
     "difficulty": 3,
@@ -1285,7 +1264,7 @@
   },
   {
     "id": "binomial-theorem",
-    "name": { "ko": "이항정리", "en": "Binomial Theorem", "ja": "二項定理" },
+    "name": { "ko": "이항정리", "en": "Binomial Theorem" },
     "field": "discrete",
     "subfield": "combinatorics",
     "difficulty": 3,
@@ -1297,7 +1276,7 @@
   },
   {
     "id": "big-o-notation",
-    "name": { "ko": "빅오 표기법", "en": "Big O Notation", "ja": "ビッグオー記法" },
+    "name": { "ko": "빅오 표기법", "en": "Big O Notation" },
     "field": "discrete",
     "subfield": "algorithms",
     "difficulty": 3,
@@ -1309,7 +1288,7 @@
   },
   {
     "id": "prime-numbers",
-    "name": { "ko": "소수", "en": "Prime Numbers", "ja": "素数" },
+    "name": { "ko": "소수", "en": "Prime Numbers" },
     "field": "number-theory",
     "subfield": "primes",
     "difficulty": 2,
@@ -1321,11 +1300,7 @@
   },
   {
     "id": "gcd-lcm",
-    "name": {
-      "ko": "최대공약수와 최소공배수",
-      "en": "GCD and LCM",
-      "ja": "最大公約数と最小公倍数"
-    },
+    "name": { "ko": "최대공약수와 최소공배수", "en": "GCD and LCM" },
     "field": "number-theory",
     "subfield": "divisibility",
     "difficulty": 2,
@@ -1337,11 +1312,7 @@
   },
   {
     "id": "fermats-little-theorem",
-    "name": {
-      "ko": "페르마의 소정리",
-      "en": "Fermat's Little Theorem",
-      "ja": "フェルマーの小定理"
-    },
+    "name": { "ko": "페르마의 소정리", "en": "Fermat's Little Theorem" },
     "field": "number-theory",
     "subfield": "modular-theory",
     "difficulty": 4,
@@ -1353,7 +1324,7 @@
   },
   {
     "id": "fibonacci",
-    "name": { "ko": "피보나치 수열", "en": "Fibonacci Sequence", "ja": "フィボナッチ数列" },
+    "name": { "ko": "피보나치 수열", "en": "Fibonacci Sequence" },
     "field": "number-theory",
     "subfield": "sequences",
     "difficulty": 2,
@@ -1365,11 +1336,7 @@
   },
   {
     "id": "diophantine-equations",
-    "name": {
-      "ko": "디오판토스 방정식",
-      "en": "Diophantine Equations",
-      "ja": "ディオファントス方程式"
-    },
+    "name": { "ko": "디오판토스 방정식", "en": "Diophantine Equations" },
     "field": "number-theory",
     "subfield": "equations",
     "difficulty": 4,
@@ -1381,7 +1348,7 @@
   },
   {
     "id": "modular-arithmetic",
-    "name": { "ko": "모듈러 산술", "en": "Modular Arithmetic", "ja": "剰余演算" },
+    "name": { "ko": "모듈러 산술", "en": "Modular Arithmetic" },
     "field": "number-theory",
     "subfield": "modular-theory",
     "difficulty": 3,
@@ -1393,11 +1360,7 @@
   },
   {
     "id": "chinese-remainder-theorem",
-    "name": {
-      "ko": "중국인의 나머지 정리",
-      "en": "Chinese Remainder Theorem",
-      "ja": "中国剰余定理"
-    },
+    "name": { "ko": "중국인의 나머지 정리", "en": "Chinese Remainder Theorem" },
     "field": "number-theory",
     "subfield": "modular-theory",
     "difficulty": 4,
@@ -1409,7 +1372,7 @@
   },
   {
     "id": "euler-totient",
-    "name": { "ko": "오일러 피 함수", "en": "Euler's Totient Function", "ja": "オイラーのφ関数" },
+    "name": { "ko": "오일러 피 함수", "en": "Euler's Totient Function" },
     "field": "number-theory",
     "subfield": "multiplicative-functions",
     "difficulty": 3,
@@ -1421,7 +1384,7 @@
   },
   {
     "id": "quadratic-residues",
-    "name": { "ko": "이차 잉여", "en": "Quadratic Residues", "ja": "平方剰余" },
+    "name": { "ko": "이차 잉여", "en": "Quadratic Residues" },
     "field": "number-theory",
     "subfield": "modular-theory",
     "difficulty": 4,
@@ -1433,7 +1396,7 @@
   },
   {
     "id": "topological-space",
-    "name": { "ko": "위상공간", "en": "Topological Space", "ja": "位相空間" },
+    "name": { "ko": "위상공간", "en": "Topological Space" },
     "field": "topology",
     "subfield": "general-topology",
     "difficulty": 4,
@@ -1445,7 +1408,7 @@
   },
   {
     "id": "continuity-topology",
-    "name": { "ko": "연속성 (위상적)", "en": "Continuity (Topological)", "ja": "連続性" },
+    "name": { "ko": "연속성 (위상적)", "en": "Continuity (Topological)" },
     "field": "topology",
     "subfield": "general-topology",
     "difficulty": 4,
@@ -1457,7 +1420,7 @@
   },
   {
     "id": "homeomorphism",
-    "name": { "ko": "위상동형사상", "en": "Homeomorphism", "ja": "同相写像" },
+    "name": { "ko": "위상동형사상", "en": "Homeomorphism" },
     "field": "topology",
     "subfield": "general-topology",
     "difficulty": 4,
@@ -1469,7 +1432,7 @@
   },
   {
     "id": "compactness",
-    "name": { "ko": "컴팩트성", "en": "Compactness", "ja": "コンパクト性" },
+    "name": { "ko": "컴팩트성", "en": "Compactness" },
     "field": "topology",
     "subfield": "general-topology",
     "difficulty": 4,
@@ -1481,7 +1444,7 @@
   },
   {
     "id": "connectedness",
-    "name": { "ko": "연결성", "en": "Connectedness", "ja": "連結性" },
+    "name": { "ko": "연결성", "en": "Connectedness" },
     "field": "topology",
     "subfield": "general-topology",
     "difficulty": 4,
@@ -1493,7 +1456,7 @@
   },
   {
     "id": "euler-characteristic",
-    "name": { "ko": "오일러 지표", "en": "Euler Characteristic", "ja": "オイラー標数" },
+    "name": { "ko": "오일러 지표", "en": "Euler Characteristic" },
     "field": "topology",
     "subfield": "algebraic-topology",
     "difficulty": 4,
@@ -1505,7 +1468,7 @@
   },
   {
     "id": "metric-space",
-    "name": { "ko": "거리공간", "en": "Metric Space", "ja": "距離空間" },
+    "name": { "ko": "거리공간", "en": "Metric Space" },
     "field": "topology",
     "subfield": "general-topology",
     "difficulty": 3,
@@ -1517,7 +1480,7 @@
   },
   {
     "id": "manifold",
-    "name": { "ko": "다양체", "en": "Manifold", "ja": "多様体" },
+    "name": { "ko": "다양체", "en": "Manifold" },
     "field": "topology",
     "subfield": "differential-topology",
     "difficulty": 5,
@@ -1529,7 +1492,7 @@
   },
   {
     "id": "fundamental-group",
-    "name": { "ko": "기본군", "en": "Fundamental Group", "ja": "基本群" },
+    "name": { "ko": "기본군", "en": "Fundamental Group" },
     "field": "topology",
     "subfield": "algebraic-topology",
     "difficulty": 5,
@@ -1541,7 +1504,7 @@
   },
   {
     "id": "homotopy",
-    "name": { "ko": "호모토피", "en": "Homotopy", "ja": "ホモトピー" },
+    "name": { "ko": "호모토피", "en": "Homotopy" },
     "field": "topology",
     "subfield": "algebraic-topology",
     "difficulty": 5,
@@ -1553,7 +1516,7 @@
   },
   {
     "id": "propositional-logic",
-    "name": { "ko": "명제 논리", "en": "Propositional Logic", "ja": "命題論理" },
+    "name": { "ko": "명제 논리", "en": "Propositional Logic" },
     "field": "logic",
     "subfield": "propositional",
     "difficulty": 2,
@@ -1565,7 +1528,7 @@
   },
   {
     "id": "predicate-logic",
-    "name": { "ko": "술어 논리", "en": "Predicate Logic", "ja": "述語論理" },
+    "name": { "ko": "술어 논리", "en": "Predicate Logic" },
     "field": "logic",
     "subfield": "predicate",
     "difficulty": 3,
@@ -1577,7 +1540,7 @@
   },
   {
     "id": "proof-methods",
-    "name": { "ko": "증명 방법", "en": "Proof Methods", "ja": "証明方法" },
+    "name": { "ko": "증명 방법", "en": "Proof Methods" },
     "field": "logic",
     "subfield": "proof-theory",
     "difficulty": 3,
@@ -1589,7 +1552,7 @@
   },
   {
     "id": "mathematical-induction",
-    "name": { "ko": "수학적 귀납법", "en": "Mathematical Induction", "ja": "数学的帰納法" },
+    "name": { "ko": "수학적 귀납법", "en": "Mathematical Induction" },
     "field": "logic",
     "subfield": "proof-theory",
     "difficulty": 3,
@@ -1601,11 +1564,7 @@
   },
   {
     "id": "godels-incompleteness",
-    "name": {
-      "ko": "괴델의 불완전성 정리",
-      "en": "Gödel's Incompleteness Theorems",
-      "ja": "ゲーデルの不完全性定理"
-    },
+    "name": { "ko": "괴델의 불완전성 정리", "en": "Gödel's Incompleteness Theorems" },
     "field": "logic",
     "subfield": "foundations",
     "difficulty": 5,
@@ -1617,7 +1576,7 @@
   },
   {
     "id": "dynamical-systems",
-    "name": { "ko": "동역학계", "en": "Dynamical Systems", "ja": "力学系" },
+    "name": { "ko": "동역학계", "en": "Dynamical Systems" },
     "field": "dynamics",
     "subfield": "dynamical-systems",
     "difficulty": 4,
@@ -1629,7 +1588,7 @@
   },
   {
     "id": "chaos-theory",
-    "name": { "ko": "카오스 이론", "en": "Chaos Theory", "ja": "カオス理論" },
+    "name": { "ko": "카오스 이론", "en": "Chaos Theory" },
     "field": "dynamics",
     "subfield": "chaos",
     "difficulty": 4,
@@ -1641,7 +1600,7 @@
   },
   {
     "id": "fractals",
-    "name": { "ko": "프랙탈", "en": "Fractals", "ja": "フラクタル" },
+    "name": { "ko": "프랙탈", "en": "Fractals" },
     "field": "dynamics",
     "subfield": "fractals",
     "difficulty": 3,
@@ -1653,7 +1612,7 @@
   },
   {
     "id": "fixed-points",
-    "name": { "ko": "고정점과 안정성", "en": "Fixed Points and Stability", "ja": "不動点と安定性" },
+    "name": { "ko": "고정점과 안정성", "en": "Fixed Points and Stability" },
     "field": "dynamics",
     "subfield": "dynamical-systems",
     "difficulty": 4,
@@ -1665,7 +1624,7 @@
   },
   {
     "id": "bifurcation",
-    "name": { "ko": "분기", "en": "Bifurcation", "ja": "分岐" },
+    "name": { "ko": "분기", "en": "Bifurcation" },
     "field": "dynamics",
     "subfield": "dynamical-systems",
     "difficulty": 4,
@@ -1677,7 +1636,7 @@
   },
   {
     "id": "ordinary-differential-equation",
-    "name": { "ko": "상미분방정식", "en": "Ordinary Differential Equations", "ja": "常微分方程式" },
+    "name": { "ko": "상미분방정식", "en": "Ordinary Differential Equations" },
     "field": "dynamics",
     "subfield": "differential-equations",
     "difficulty": 3,
@@ -1689,7 +1648,7 @@
   },
   {
     "id": "partial-differential-equation",
-    "name": { "ko": "편미분방정식", "en": "Partial Differential Equations", "ja": "偏微分方程式" },
+    "name": { "ko": "편미분방정식", "en": "Partial Differential Equations" },
     "field": "dynamics",
     "subfield": "differential-equations",
     "difficulty": 4,
@@ -1701,7 +1660,7 @@
   },
   {
     "id": "phase-space",
-    "name": { "ko": "위상공간 (상공간)", "en": "Phase Space", "ja": "相空間" },
+    "name": { "ko": "위상공간 (상공간)", "en": "Phase Space" },
     "field": "dynamics",
     "subfield": "dynamical-systems",
     "difficulty": 4,
@@ -1713,7 +1672,7 @@
   },
   {
     "id": "attractors",
-    "name": { "ko": "끌개", "en": "Attractors", "ja": "アトラクター" },
+    "name": { "ko": "끌개", "en": "Attractors" },
     "field": "dynamics",
     "subfield": "chaos",
     "difficulty": 4,
@@ -1725,7 +1684,7 @@
   },
   {
     "id": "optimization-basics",
-    "name": { "ko": "최적화 기초", "en": "Optimization Basics", "ja": "最適化の基礎" },
+    "name": { "ko": "최적화 기초", "en": "Optimization Basics" },
     "field": "optimization",
     "subfield": "foundations",
     "difficulty": 3,
@@ -1737,7 +1696,7 @@
   },
   {
     "id": "gradient-descent",
-    "name": { "ko": "경사 하강법", "en": "Gradient Descent", "ja": "勾配降下法" },
+    "name": { "ko": "경사 하강법", "en": "Gradient Descent" },
     "field": "optimization",
     "subfield": "algorithms",
     "difficulty": 3,
@@ -1749,11 +1708,7 @@
   },
   {
     "id": "lagrange-multipliers",
-    "name": {
-      "ko": "라그랑주 승수법",
-      "en": "Lagrange Multipliers",
-      "ja": "ラグランジュの未定乗数法"
-    },
+    "name": { "ko": "라그랑주 승수법", "en": "Lagrange Multipliers" },
     "field": "optimization",
     "subfield": "constrained",
     "difficulty": 4,
@@ -1765,7 +1720,7 @@
   },
   {
     "id": "linear-programming",
-    "name": { "ko": "선형 계획법", "en": "Linear Programming", "ja": "線形計画法" },
+    "name": { "ko": "선형 계획법", "en": "Linear Programming" },
     "field": "optimization",
     "subfield": "linear",
     "difficulty": 3,
@@ -1777,7 +1732,7 @@
   },
   {
     "id": "convex-optimization",
-    "name": { "ko": "볼록 최적화", "en": "Convex Optimization", "ja": "凸最適化" },
+    "name": { "ko": "볼록 최적화", "en": "Convex Optimization" },
     "field": "optimization",
     "subfield": "convex",
     "difficulty": 4,
@@ -1789,7 +1744,7 @@
   },
   {
     "id": "numerical-error",
-    "name": { "ko": "수치 오차", "en": "Numerical Error", "ja": "数値誤差" },
+    "name": { "ko": "수치 오차", "en": "Numerical Error" },
     "field": "numerical",
     "subfield": "error-analysis",
     "difficulty": 3,
@@ -1801,7 +1756,7 @@
   },
   {
     "id": "newton-method",
-    "name": { "ko": "뉴턴-랩슨 방법", "en": "Newton-Raphson Method", "ja": "ニュートン法" },
+    "name": { "ko": "뉴턴-랩슨 방법", "en": "Newton-Raphson Method" },
     "field": "numerical",
     "subfield": "root-finding",
     "difficulty": 3,
@@ -1813,7 +1768,7 @@
   },
   {
     "id": "numerical-integration",
-    "name": { "ko": "수치 적분", "en": "Numerical Integration", "ja": "数値積分" },
+    "name": { "ko": "수치 적분", "en": "Numerical Integration" },
     "field": "numerical",
     "subfield": "integration",
     "difficulty": 3,
@@ -1825,7 +1780,7 @@
   },
   {
     "id": "interpolation",
-    "name": { "ko": "보간법", "en": "Interpolation", "ja": "補間法" },
+    "name": { "ko": "보간법", "en": "Interpolation" },
     "field": "numerical",
     "subfield": "approximation",
     "difficulty": 3,
@@ -1837,11 +1792,7 @@
   },
   {
     "id": "numerical-ode",
-    "name": {
-      "ko": "미분방정식의 수치해법",
-      "en": "Numerical ODE Methods",
-      "ja": "常微分方程式の数値解法"
-    },
+    "name": { "ko": "미분방정식의 수치해법", "en": "Numerical ODE Methods" },
     "field": "numerical",
     "subfield": "ode",
     "difficulty": 4,
@@ -1853,7 +1804,7 @@
   },
   {
     "id": "bisection-method",
-    "name": { "ko": "이분법", "en": "Bisection Method", "ja": "二分法" },
+    "name": { "ko": "이분법", "en": "Bisection Method" },
     "field": "numerical",
     "subfield": "root-finding",
     "difficulty": 2,
@@ -1865,7 +1816,7 @@
   },
   {
     "id": "runge-kutta",
-    "name": { "ko": "룽게-쿠타 방법", "en": "Runge-Kutta Methods", "ja": "ルンゲ・クッタ法" },
+    "name": { "ko": "룽게-쿠타 방법", "en": "Runge-Kutta Methods" },
     "field": "numerical",
     "subfield": "ode",
     "difficulty": 4,
@@ -1877,7 +1828,7 @@
   },
   {
     "id": "matrix-factorization",
-    "name": { "ko": "행렬 분해", "en": "Matrix Factorization", "ja": "行列分解" },
+    "name": { "ko": "행렬 분해", "en": "Matrix Factorization" },
     "field": "numerical",
     "subfield": "linear-systems",
     "difficulty": 4,
@@ -1889,7 +1840,7 @@
   },
   {
     "id": "finite-difference",
-    "name": { "ko": "유한 차분법", "en": "Finite Difference Method", "ja": "有限差分法" },
+    "name": { "ko": "유한 차분법", "en": "Finite Difference Method" },
     "field": "numerical",
     "subfield": "pde",
     "difficulty": 4,
@@ -1901,7 +1852,7 @@
   },
   {
     "id": "fourier-series",
-    "name": { "ko": "푸리에 급수", "en": "Fourier Series", "ja": "フーリエ級数" },
+    "name": { "ko": "푸리에 급수", "en": "Fourier Series" },
     "field": "applied",
     "subfield": "fourier-analysis",
     "difficulty": 4,
@@ -1913,7 +1864,7 @@
   },
   {
     "id": "differential-equations",
-    "name": { "ko": "미분방정식", "en": "Differential Equations", "ja": "微分方程式" },
+    "name": { "ko": "미분방정식", "en": "Differential Equations" },
     "field": "applied",
     "subfield": "differential-eq",
     "difficulty": 3,
@@ -1925,7 +1876,7 @@
   },
   {
     "id": "complex-analysis-basics",
-    "name": { "ko": "복소해석학 기초", "en": "Complex Analysis Basics", "ja": "複素解析の基礎" },
+    "name": { "ko": "복소해석학 기초", "en": "Complex Analysis Basics" },
     "field": "applied",
     "subfield": "complex-analysis",
     "difficulty": 4,
@@ -1937,7 +1888,7 @@
   },
   {
     "id": "game-theory",
-    "name": { "ko": "게임 이론", "en": "Game Theory", "ja": "ゲーム理論" },
+    "name": { "ko": "게임 이론", "en": "Game Theory" },
     "field": "applied",
     "subfield": "game-theory",
     "difficulty": 3,
@@ -1949,7 +1900,7 @@
   },
   {
     "id": "cryptography-math",
-    "name": { "ko": "암호학의 수학", "en": "Mathematics of Cryptography", "ja": "暗号の数学" },
+    "name": { "ko": "암호학의 수학", "en": "Mathematics of Cryptography" },
     "field": "applied",
     "subfield": "cryptography",
     "difficulty": 4,
@@ -1961,7 +1912,7 @@
   },
   {
     "id": "laplace-transform",
-    "name": { "ko": "라플라스 변환", "en": "Laplace Transform", "ja": "ラプラス変換" },
+    "name": { "ko": "라플라스 변환", "en": "Laplace Transform" },
     "field": "applied",
     "subfield": "transforms",
     "difficulty": 4,
@@ -1973,7 +1924,7 @@
   },
   {
     "id": "gradient-descent",
-    "name": { "ko": "경사하강법", "en": "Gradient Descent", "ja": "勾配降下法" },
+    "name": { "ko": "경사하강법", "en": "Gradient Descent" },
     "field": "applied",
     "subfield": "optimization",
     "difficulty": 3,
@@ -1985,7 +1936,7 @@
   },
   {
     "id": "newton-method",
-    "name": { "ko": "뉴턴-랩슨 방법", "en": "Newton-Raphson Method", "ja": "ニュートン法" },
+    "name": { "ko": "뉴턴-랩슨 방법", "en": "Newton-Raphson Method" },
     "field": "applied",
     "subfield": "numerical",
     "difficulty": 3,
@@ -1997,7 +1948,7 @@
   },
   {
     "id": "linear-programming",
-    "name": { "ko": "선형계획법", "en": "Linear Programming", "ja": "線形計画法" },
+    "name": { "ko": "선형계획법", "en": "Linear Programming" },
     "field": "applied",
     "subfield": "optimization",
     "difficulty": 4,
@@ -2009,7 +1960,7 @@
   },
   {
     "id": "pi-constant",
-    "name": { "ko": "원주율 π", "en": "Pi (π)", "ja": "円周率 π" },
+    "name": { "ko": "원주율 π", "en": "Pi (π)" },
     "field": "constants",
     "subfield": "fundamental",
     "difficulty": 1,
@@ -2021,7 +1972,7 @@
   },
   {
     "id": "e-constant",
-    "name": { "ko": "자연상수 e", "en": "Euler's Number (e)", "ja": "ネイピア数 e" },
+    "name": { "ko": "자연상수 e", "en": "Euler's Number (e)" },
     "field": "constants",
     "subfield": "fundamental",
     "difficulty": 2,
@@ -2033,7 +1984,7 @@
   },
   {
     "id": "golden-ratio",
-    "name": { "ko": "황금비 φ", "en": "Golden Ratio (φ)", "ja": "黄金比 φ" },
+    "name": { "ko": "황금비 φ", "en": "Golden Ratio (φ)" },
     "field": "constants",
     "subfield": "fundamental",
     "difficulty": 2,
@@ -2045,7 +1996,7 @@
   },
   {
     "id": "imaginary-unit",
-    "name": { "ko": "허수 단위 i", "en": "Imaginary Unit (i)", "ja": "虚数単位 i" },
+    "name": { "ko": "허수 단위 i", "en": "Imaginary Unit (i)" },
     "field": "constants",
     "subfield": "fundamental",
     "difficulty": 3,
@@ -2057,11 +2008,7 @@
   },
   {
     "id": "euler-mascheroni",
-    "name": {
-      "ko": "오일러-마스케로니 상수 γ",
-      "en": "Euler-Mascheroni Constant (γ)",
-      "ja": "オイラー・マスケローニ定数 γ"
-    },
+    "name": { "ko": "오일러-마스케로니 상수 γ", "en": "Euler-Mascheroni Constant (γ)" },
     "field": "constants",
     "subfield": "advanced",
     "difficulty": 4,
@@ -2073,11 +2020,7 @@
   },
   {
     "id": "apery-constant",
-    "name": {
-      "ko": "아페리 상수 ζ(3)",
-      "en": "Apéry's Constant ζ(3)",
-      "ja": "アペリーの定数 ζ(3)"
-    },
+    "name": { "ko": "아페리 상수 ζ(3)", "en": "Apéry's Constant ζ(3)" },
     "field": "constants",
     "subfield": "advanced",
     "difficulty": 4,
@@ -2089,7 +2032,7 @@
   },
   {
     "id": "catalan-constant",
-    "name": { "ko": "카탈랑 상수 G", "en": "Catalan's Constant (G)", "ja": "カタランの定数 G" },
+    "name": { "ko": "카탈랑 상수 G", "en": "Catalan's Constant (G)" },
     "field": "constants",
     "subfield": "advanced",
     "difficulty": 4,
@@ -2101,11 +2044,7 @@
   },
   {
     "id": "sqrt2-constant",
-    "name": {
-      "ko": "√2 (피타고라스 상수)",
-      "en": "√2 (Pythagoras' Constant)",
-      "ja": "√2 (ピタゴラス定数)"
-    },
+    "name": { "ko": "√2 (피타고라스 상수)", "en": "√2 (Pythagoras' Constant)" },
     "field": "constants",
     "subfield": "fundamental",
     "difficulty": 1,
@@ -2117,11 +2056,7 @@
   },
   {
     "id": "feigenbaum-constant",
-    "name": {
-      "ko": "파이겐바움 상수 δ",
-      "en": "Feigenbaum Constant (δ)",
-      "ja": "ファイゲンバウム定数 δ"
-    },
+    "name": { "ko": "파이겐바움 상수 δ", "en": "Feigenbaum Constant (δ)" },
     "field": "constants",
     "subfield": "advanced",
     "difficulty": 5,
@@ -2133,7 +2068,7 @@
   },
   {
     "id": "summation-notation",
-    "name": { "ko": "합의 기호 Σ", "en": "Summation Notation (Σ)", "ja": "総和記号 Σ" },
+    "name": { "ko": "합의 기호 Σ", "en": "Summation Notation (Σ)" },
     "field": "symbols",
     "subfield": "operations",
     "difficulty": 2,
@@ -2145,7 +2080,7 @@
   },
   {
     "id": "product-notation",
-    "name": { "ko": "곱의 기호 Π", "en": "Product Notation (Π)", "ja": "総乗記号 Π" },
+    "name": { "ko": "곱의 기호 Π", "en": "Product Notation (Π)" },
     "field": "symbols",
     "subfield": "operations",
     "difficulty": 2,
@@ -2157,7 +2092,7 @@
   },
   {
     "id": "infinity-symbol",
-    "name": { "ko": "무한대 ∞", "en": "Infinity (∞)", "ja": "無限大 ∞" },
+    "name": { "ko": "무한대 ∞", "en": "Infinity (∞)" },
     "field": "symbols",
     "subfield": "special",
     "difficulty": 2,
@@ -2169,7 +2104,7 @@
   },
   {
     "id": "partial-derivative-symbol",
-    "name": { "ko": "편미분 기호 ∂", "en": "Partial Derivative (∂)", "ja": "偏微分記号 ∂" },
+    "name": { "ko": "편미분 기호 ∂", "en": "Partial Derivative (∂)" },
     "field": "symbols",
     "subfield": "calculus",
     "difficulty": 3,
@@ -2181,7 +2116,7 @@
   },
   {
     "id": "set-notation",
-    "name": { "ko": "집합 기호", "en": "Set Notation", "ja": "集合記号" },
+    "name": { "ko": "집합 기호", "en": "Set Notation" },
     "field": "symbols",
     "subfield": "sets",
     "difficulty": 1,
@@ -2193,7 +2128,7 @@
   },
   {
     "id": "nabla-operator",
-    "name": { "ko": "나블라 연산자 ∇", "en": "Nabla Operator (∇)", "ja": "ナブラ演算子 ∇" },
+    "name": { "ko": "나블라 연산자 ∇", "en": "Nabla Operator (∇)" },
     "field": "symbols",
     "subfield": "calculus",
     "difficulty": 4,
@@ -2205,7 +2140,7 @@
   },
   {
     "id": "integral-symbol",
-    "name": { "ko": "적분 기호 ∫", "en": "Integral Sign (∫)", "ja": "積分記号 ∫" },
+    "name": { "ko": "적분 기호 ∫", "en": "Integral Sign (∫)" },
     "field": "symbols",
     "subfield": "calculus",
     "difficulty": 2,
@@ -2217,7 +2152,7 @@
   },
   {
     "id": "quantifier-symbols",
-    "name": { "ko": "한정사 기호 ∀, ∃", "en": "Quantifier Symbols (∀, ∃)", "ja": "限量詞 ∀, ∃" },
+    "name": { "ko": "한정사 기호 ∀, ∃", "en": "Quantifier Symbols (∀, ∃)" },
     "field": "symbols",
     "subfield": "logic",
     "difficulty": 2,
@@ -2229,7 +2164,7 @@
   },
   {
     "id": "factorial-notation",
-    "name": { "ko": "팩토리얼 기호 n!", "en": "Factorial Notation (n!)", "ja": "階乗記号 n!" },
+    "name": { "ko": "팩토리얼 기호 n!", "en": "Factorial Notation (n!)" },
     "field": "symbols",
     "subfield": "operations",
     "difficulty": 1,
@@ -2241,7 +2176,7 @@
   },
   {
     "id": "binomial-coefficient",
-    "name": { "ko": "이항계수 (ⁿCₖ)", "en": "Binomial Coefficient", "ja": "二項係数" },
+    "name": { "ko": "이항계수 (ⁿCₖ)", "en": "Binomial Coefficient" },
     "field": "symbols",
     "subfield": "operations",
     "difficulty": 2,
@@ -2253,11 +2188,7 @@
   },
   {
     "id": "fundamental-theorem-calculus",
-    "name": {
-      "ko": "미적분학의 기본정리",
-      "en": "Fundamental Theorem of Calculus",
-      "ja": "微積分学の基本定理"
-    },
+    "name": { "ko": "미적분학의 기본정리", "en": "Fundamental Theorem of Calculus" },
     "field": "theorems",
     "subfield": "calculus",
     "difficulty": 3,
@@ -2269,11 +2200,7 @@
   },
   {
     "id": "fundamental-theorem-algebra",
-    "name": {
-      "ko": "대수학의 기본정리",
-      "en": "Fundamental Theorem of Algebra",
-      "ja": "代数学の基本定理"
-    },
+    "name": { "ko": "대수학의 기본정리", "en": "Fundamental Theorem of Algebra" },
     "field": "theorems",
     "subfield": "algebra",
     "difficulty": 4,
@@ -2285,11 +2212,7 @@
   },
   {
     "id": "fermats-last-theorem",
-    "name": {
-      "ko": "페르마의 마지막 정리",
-      "en": "Fermat's Last Theorem",
-      "ja": "フェルマーの最終定理"
-    },
+    "name": { "ko": "페르마의 마지막 정리", "en": "Fermat's Last Theorem" },
     "field": "theorems",
     "subfield": "number-theory",
     "difficulty": 5,
@@ -2301,7 +2224,7 @@
   },
   {
     "id": "prime-number-theorem",
-    "name": { "ko": "소수 정리", "en": "Prime Number Theorem", "ja": "素数定理" },
+    "name": { "ko": "소수 정리", "en": "Prime Number Theorem" },
     "field": "theorems",
     "subfield": "number-theory",
     "difficulty": 5,
@@ -2313,7 +2236,7 @@
   },
   {
     "id": "mean-value-theorem",
-    "name": { "ko": "평균값 정리", "en": "Mean Value Theorem", "ja": "平均値の定理" },
+    "name": { "ko": "평균값 정리", "en": "Mean Value Theorem" },
     "field": "theorems",
     "subfield": "calculus",
     "difficulty": 3,
@@ -2325,7 +2248,7 @@
   },
   {
     "id": "bayes-theorem",
-    "name": { "ko": "베이즈 정리", "en": "Bayes' Theorem", "ja": "ベイズの定理" },
+    "name": { "ko": "베이즈 정리", "en": "Bayes' Theorem" },
     "field": "theorems",
     "subfield": "probability",
     "difficulty": 3,
@@ -2337,7 +2260,7 @@
   },
   {
     "id": "noethers-theorem",
-    "name": { "ko": "뇌터의 정리", "en": "Noether's Theorem", "ja": "ネーターの定理" },
+    "name": { "ko": "뇌터의 정리", "en": "Noether's Theorem" },
     "field": "theorems",
     "subfield": "physics",
     "difficulty": 5,
@@ -2349,7 +2272,7 @@
   },
   {
     "id": "pythagorean-theorem",
-    "name": { "ko": "피타고라스 정리", "en": "Pythagorean Theorem", "ja": "ピタゴラスの定理" },
+    "name": { "ko": "피타고라스 정리", "en": "Pythagorean Theorem" },
     "field": "theorems",
     "subfield": "geometry",
     "difficulty": 1,
@@ -2361,7 +2284,7 @@
   },
   {
     "id": "central-limit-theorem",
-    "name": { "ko": "중심극한정리", "en": "Central Limit Theorem", "ja": "中心極限定理" },
+    "name": { "ko": "중심극한정리", "en": "Central Limit Theorem" },
     "field": "theorems",
     "subfield": "probability",
     "difficulty": 4,
@@ -2373,7 +2296,7 @@
   },
   {
     "id": "intermediate-value-theorem",
-    "name": { "ko": "중간값 정리", "en": "Intermediate Value Theorem", "ja": "中間値の定理" },
+    "name": { "ko": "중간값 정리", "en": "Intermediate Value Theorem" },
     "field": "theorems",
     "subfield": "calculus",
     "difficulty": 2,
@@ -2385,7 +2308,7 @@
   },
   {
     "id": "stokes-theorem",
-    "name": { "ko": "스토크스 정리", "en": "Stokes' Theorem", "ja": "ストークスの定理" },
+    "name": { "ko": "스토크스 정리", "en": "Stokes' Theorem" },
     "field": "theorems",
     "subfield": "calculus",
     "difficulty": 5,
@@ -2397,11 +2320,7 @@
   },
   {
     "id": "godel-incompleteness",
-    "name": {
-      "ko": "괴델의 불완전성 정리",
-      "en": "Gödel's Incompleteness Theorems",
-      "ja": "ゲーデルの不完全性定理"
-    },
+    "name": { "ko": "괴델의 불완전성 정리", "en": "Gödel's Incompleteness Theorems" },
     "field": "theorems",
     "subfield": "logic",
     "difficulty": 5,
@@ -2413,7 +2332,7 @@
   },
   {
     "id": "group-theory",
-    "name": { "ko": "군론", "en": "Group Theory", "ja": "群論" },
+    "name": { "ko": "군론", "en": "Group Theory" },
     "field": "abstract-algebra",
     "subfield": "groups",
     "difficulty": 4,
@@ -2425,7 +2344,7 @@
   },
   {
     "id": "rings",
-    "name": { "ko": "환", "en": "Rings", "ja": "環" },
+    "name": { "ko": "환", "en": "Rings" },
     "field": "abstract-algebra",
     "subfield": "rings",
     "difficulty": 4,
@@ -2437,7 +2356,7 @@
   },
   {
     "id": "fields",
-    "name": { "ko": "체", "en": "Fields", "ja": "体" },
+    "name": { "ko": "체", "en": "Fields" },
     "field": "abstract-algebra",
     "subfield": "fields",
     "difficulty": 4,
@@ -2449,7 +2368,7 @@
   },
   {
     "id": "homomorphism",
-    "name": { "ko": "준동형사상", "en": "Homomorphism", "ja": "準同型写像" },
+    "name": { "ko": "준동형사상", "en": "Homomorphism" },
     "field": "abstract-algebra",
     "subfield": "morphisms",
     "difficulty": 4,
@@ -2461,7 +2380,7 @@
   },
   {
     "id": "isomorphism",
-    "name": { "ko": "동형사상", "en": "Isomorphism", "ja": "同型写像" },
+    "name": { "ko": "동형사상", "en": "Isomorphism" },
     "field": "abstract-algebra",
     "subfield": "morphisms",
     "difficulty": 4,
@@ -2473,7 +2392,7 @@
   },
   {
     "id": "complex-functions",
-    "name": { "ko": "복소함수", "en": "Complex Functions", "ja": "複素関数" },
+    "name": { "ko": "복소함수", "en": "Complex Functions" },
     "field": "complex-analysis",
     "subfield": "functions",
     "difficulty": 4,
@@ -2485,11 +2404,7 @@
   },
   {
     "id": "cauchy-riemann",
-    "name": {
-      "ko": "코시-리만 방정식",
-      "en": "Cauchy-Riemann Equations",
-      "ja": "コーシー・リーマン方程式"
-    },
+    "name": { "ko": "코시-리만 방정식", "en": "Cauchy-Riemann Equations" },
     "field": "complex-analysis",
     "subfield": "analyticity",
     "difficulty": 4,
@@ -2501,7 +2416,7 @@
   },
   {
     "id": "analytic-functions",
-    "name": { "ko": "해석함수", "en": "Analytic Functions", "ja": "解析関数" },
+    "name": { "ko": "해석함수", "en": "Analytic Functions" },
     "field": "complex-analysis",
     "subfield": "analyticity",
     "difficulty": 4,
@@ -2513,7 +2428,7 @@
   },
   {
     "id": "residue-theorem",
-    "name": { "ko": "유수 정리", "en": "Residue Theorem", "ja": "留数定理" },
+    "name": { "ko": "유수 정리", "en": "Residue Theorem" },
     "field": "complex-analysis",
     "subfield": "integration",
     "difficulty": 5,
@@ -2525,7 +2440,7 @@
   },
   {
     "id": "conformal-mapping",
-    "name": { "ko": "등각사상", "en": "Conformal Mapping", "ja": "等角写像" },
+    "name": { "ko": "등각사상", "en": "Conformal Mapping" },
     "field": "complex-analysis",
     "subfield": "geometric",
     "difficulty": 5,
@@ -2537,7 +2452,7 @@
   },
   {
     "id": "compound-interest",
-    "name": { "ko": "복리", "en": "Compound Interest", "ja": "複利" },
+    "name": { "ko": "복리", "en": "Compound Interest" },
     "field": "applied-finance",
     "subfield": "basic-finance",
     "difficulty": 2,
@@ -2549,7 +2464,7 @@
   },
   {
     "id": "moving-average",
-    "name": { "ko": "이동평균", "en": "Moving Average", "ja": "移動平均" },
+    "name": { "ko": "이동평균", "en": "Moving Average" },
     "field": "applied-finance",
     "subfield": "technical-analysis",
     "difficulty": 2,
@@ -2561,7 +2476,7 @@
   },
   {
     "id": "bollinger-bands",
-    "name": { "ko": "볼린저 밴드", "en": "Bollinger Bands", "ja": "ボリンジャーバンド" },
+    "name": { "ko": "볼린저 밴드", "en": "Bollinger Bands" },
     "field": "applied-finance",
     "subfield": "technical-analysis",
     "difficulty": 3,
@@ -2573,11 +2488,7 @@
   },
   {
     "id": "black-scholes",
-    "name": {
-      "ko": "블랙-숄즈 모형",
-      "en": "Black-Scholes Model",
-      "ja": "ブラック・ショールズ・モデル"
-    },
+    "name": { "ko": "블랙-숄즈 모형", "en": "Black-Scholes Model" },
     "field": "applied-finance",
     "subfield": "derivatives",
     "difficulty": 5,
@@ -2589,11 +2500,7 @@
   },
   {
     "id": "fibonacci-retracement",
-    "name": {
-      "ko": "피보나치 되돌림",
-      "en": "Fibonacci Retracement",
-      "ja": "フィボナッチリトレースメント"
-    },
+    "name": { "ko": "피보나치 되돌림", "en": "Fibonacci Retracement" },
     "field": "applied-finance",
     "subfield": "technical-analysis",
     "difficulty": 2,
@@ -2605,7 +2512,7 @@
   },
   {
     "id": "ichimoku-cloud",
-    "name": { "ko": "일목균형표", "en": "Ichimoku Cloud", "ja": "一目均衡表" },
+    "name": { "ko": "일목균형표", "en": "Ichimoku Cloud" },
     "field": "applied-finance",
     "subfield": "technical-analysis",
     "difficulty": 4,
@@ -2617,7 +2524,7 @@
   },
   {
     "id": "present-value",
-    "name": { "ko": "현재가치", "en": "Present Value", "ja": "現在価値" },
+    "name": { "ko": "현재가치", "en": "Present Value" },
     "field": "applied-finance",
     "subfield": "basic-finance",
     "difficulty": 2,
@@ -2629,7 +2536,7 @@
   },
   {
     "id": "sharpe-ratio",
-    "name": { "ko": "샤프 비율", "en": "Sharpe Ratio", "ja": "シャープレシオ" },
+    "name": { "ko": "샤프 비율", "en": "Sharpe Ratio" },
     "field": "applied-finance",
     "subfield": "portfolio",
     "difficulty": 3,
@@ -2641,7 +2548,7 @@
   },
   {
     "id": "frequency-ratio",
-    "name": { "ko": "주파수 비율", "en": "Frequency Ratio", "ja": "周波数比" },
+    "name": { "ko": "주파수 비율", "en": "Frequency Ratio" },
     "field": "applied-music",
     "subfield": "acoustics",
     "difficulty": 2,
@@ -2653,7 +2560,7 @@
   },
   {
     "id": "equal-temperament",
-    "name": { "ko": "12평균율", "en": "12-Tone Equal Temperament", "ja": "12平均律" },
+    "name": { "ko": "12평균율", "en": "12-Tone Equal Temperament" },
     "field": "applied-music",
     "subfield": "tuning",
     "difficulty": 3,
@@ -2665,7 +2572,7 @@
   },
   {
     "id": "time-signature",
-    "name": { "ko": "박자", "en": "Time Signature", "ja": "拍子" },
+    "name": { "ko": "박자", "en": "Time Signature" },
     "field": "applied-music",
     "subfield": "rhythm",
     "difficulty": 1,
@@ -2677,7 +2584,7 @@
   },
   {
     "id": "harmonic-series-music",
-    "name": { "ko": "배음렬", "en": "Harmonic Series (Music)", "ja": "倍音列" },
+    "name": { "ko": "배음렬", "en": "Harmonic Series (Music)" },
     "field": "applied-music",
     "subfield": "acoustics",
     "difficulty": 3,
@@ -2689,7 +2596,7 @@
   },
   {
     "id": "chord-theory",
-    "name": { "ko": "화음 이론", "en": "Chord Theory", "ja": "和音理論" },
+    "name": { "ko": "화음 이론", "en": "Chord Theory" },
     "field": "applied-music",
     "subfield": "harmony",
     "difficulty": 3,
@@ -2701,7 +2608,7 @@
   },
   {
     "id": "decibel-scale",
-    "name": { "ko": "데시벨 스케일", "en": "Decibel Scale", "ja": "デシベルスケール" },
+    "name": { "ko": "데시벨 스케일", "en": "Decibel Scale" },
     "field": "applied-music",
     "subfield": "acoustics",
     "difficulty": 3,
@@ -2713,7 +2620,7 @@
   },
   {
     "id": "kinematics",
-    "name": { "ko": "운동학", "en": "Kinematics", "ja": "運動学" },
+    "name": { "ko": "운동학", "en": "Kinematics" },
     "field": "applied-physics",
     "subfield": "mechanics",
     "difficulty": 2,
@@ -2725,7 +2632,7 @@
   },
   {
     "id": "wave-equation",
-    "name": { "ko": "파동 방정식", "en": "Wave Equation", "ja": "波動方程式" },
+    "name": { "ko": "파동 방정식", "en": "Wave Equation" },
     "field": "applied-physics",
     "subfield": "waves",
     "difficulty": 4,
@@ -2737,7 +2644,7 @@
   },
   {
     "id": "maxwell-equations",
-    "name": { "ko": "맥스웰 방정식", "en": "Maxwell's Equations", "ja": "マクスウェル方程式" },
+    "name": { "ko": "맥스웰 방정식", "en": "Maxwell's Equations" },
     "field": "applied-physics",
     "subfield": "electromagnetism",
     "difficulty": 5,
@@ -2749,11 +2656,7 @@
   },
   {
     "id": "schrodinger-equation",
-    "name": {
-      "ko": "슈뢰딩거 방정식",
-      "en": "Schrödinger Equation",
-      "ja": "シュレーディンガー方程式"
-    },
+    "name": { "ko": "슈뢰딩거 방정식", "en": "Schrödinger Equation" },
     "field": "applied-physics",
     "subfield": "quantum",
     "difficulty": 5,
@@ -2765,11 +2668,7 @@
   },
   {
     "id": "special-relativity-math",
-    "name": {
-      "ko": "특수상대성이론 수학",
-      "en": "Special Relativity Mathematics",
-      "ja": "特殊相対性理論の数学"
-    },
+    "name": { "ko": "특수상대성이론 수학", "en": "Special Relativity Mathematics" },
     "field": "applied-physics",
     "subfield": "relativity",
     "difficulty": 5,
@@ -2781,11 +2680,7 @@
   },
   {
     "id": "newtons-laws",
-    "name": {
-      "ko": "뉴턴의 운동 법칙",
-      "en": "Newton's Laws of Motion",
-      "ja": "ニュートンの運動法則"
-    },
+    "name": { "ko": "뉴턴의 운동 법칙", "en": "Newton's Laws of Motion" },
     "field": "applied-physics",
     "subfield": "mechanics",
     "difficulty": 2,
@@ -2797,7 +2692,7 @@
   },
   {
     "id": "big-o-notation",
-    "name": { "ko": "Big-O 표기법", "en": "Big-O Notation", "ja": "ビッグオー記法" },
+    "name": { "ko": "Big-O 표기법", "en": "Big-O Notation" },
     "field": "applied-cs",
     "subfield": "complexity",
     "difficulty": 3,
@@ -2809,7 +2704,7 @@
   },
   {
     "id": "binary-representation",
-    "name": { "ko": "이진 표현", "en": "Binary Representation", "ja": "2進表現" },
+    "name": { "ko": "이진 표현", "en": "Binary Representation" },
     "field": "applied-cs",
     "subfield": "fundamentals",
     "difficulty": 2,
@@ -2821,11 +2716,7 @@
   },
   {
     "id": "computer-graphics-math",
-    "name": {
-      "ko": "컴퓨터 그래픽스 수학",
-      "en": "Computer Graphics Mathematics",
-      "ja": "コンピュータグラフィックスの数学"
-    },
+    "name": { "ko": "컴퓨터 그래픽스 수학", "en": "Computer Graphics Mathematics" },
     "field": "applied-cs",
     "subfield": "graphics",
     "difficulty": 4,
@@ -2837,7 +2728,7 @@
   },
   {
     "id": "information-theory-basics",
-    "name": { "ko": "정보 이론 기초", "en": "Information Theory Basics", "ja": "情報理論の基礎" },
+    "name": { "ko": "정보 이론 기초", "en": "Information Theory Basics" },
     "field": "applied-cs",
     "subfield": "information",
     "difficulty": 4,
@@ -2849,7 +2740,7 @@
   },
   {
     "id": "machine-learning-math",
-    "name": { "ko": "머신러닝 수학", "en": "Machine Learning Mathematics", "ja": "機械学習の数学" },
+    "name": { "ko": "머신러닝 수학", "en": "Machine Learning Mathematics" },
     "field": "applied-cs",
     "subfield": "ml",
     "difficulty": 4,
@@ -2861,7 +2752,7 @@
   },
   {
     "id": "hashing-math",
-    "name": { "ko": "해싱의 수학", "en": "Mathematics of Hashing", "ja": "ハッシュの数学" },
+    "name": { "ko": "해싱의 수학", "en": "Mathematics of Hashing" },
     "field": "applied-cs",
     "subfield": "data-structures",
     "difficulty": 3,
@@ -2873,7 +2764,7 @@
   },
   {
     "id": "signal-processing",
-    "name": { "ko": "신호 처리", "en": "Signal Processing", "ja": "信号処理" },
+    "name": { "ko": "신호 처리", "en": "Signal Processing" },
     "field": "applied-engineering",
     "subfield": "signal-systems",
     "difficulty": 4,
@@ -2885,7 +2776,7 @@
   },
   {
     "id": "control-theory",
-    "name": { "ko": "제어 이론", "en": "Control Theory", "ja": "制御理論" },
+    "name": { "ko": "제어 이론", "en": "Control Theory" },
     "field": "applied-engineering",
     "subfield": "signal-systems",
     "difficulty": 4,
@@ -2897,7 +2788,7 @@
   },
   {
     "id": "laplace-transform",
-    "name": { "ko": "라플라스 변환", "en": "Laplace Transform", "ja": "ラプラス変換" },
+    "name": { "ko": "라플라스 변환", "en": "Laplace Transform" },
     "field": "applied-engineering",
     "subfield": "signal-systems",
     "difficulty": 4,
@@ -2909,7 +2800,7 @@
   },
   {
     "id": "z-transform",
-    "name": { "ko": "Z 변환", "en": "Z-Transform", "ja": "Z変換" },
+    "name": { "ko": "Z 변환", "en": "Z-Transform" },
     "field": "applied-engineering",
     "subfield": "signal-systems",
     "difficulty": 4,
@@ -2921,7 +2812,7 @@
   },
   {
     "id": "structural-mechanics",
-    "name": { "ko": "구조 역학", "en": "Structural Mechanics", "ja": "構造力学" },
+    "name": { "ko": "구조 역학", "en": "Structural Mechanics" },
     "field": "applied-engineering",
     "subfield": "mechanics",
     "difficulty": 4,
@@ -2933,7 +2824,7 @@
   },
   {
     "id": "finite-element-method",
-    "name": { "ko": "유한 요소법", "en": "Finite Element Method", "ja": "有限要素法" },
+    "name": { "ko": "유한 요소법", "en": "Finite Element Method" },
     "field": "applied-engineering",
     "subfield": "numerical-methods",
     "difficulty": 5,
@@ -2945,7 +2836,7 @@
   },
   {
     "id": "fluid-dynamics",
-    "name": { "ko": "유체 역학", "en": "Fluid Dynamics", "ja": "流体力学" },
+    "name": { "ko": "유체 역학", "en": "Fluid Dynamics" },
     "field": "applied-engineering",
     "subfield": "mechanics",
     "difficulty": 4,
@@ -2957,7 +2848,7 @@
   },
   {
     "id": "thermodynamics-math",
-    "name": { "ko": "열역학 수학", "en": "Thermodynamics Mathematics", "ja": "熱力学の数学" },
+    "name": { "ko": "열역학 수학", "en": "Thermodynamics Mathematics" },
     "field": "applied-engineering",
     "subfield": "thermal-systems",
     "difficulty": 4,
@@ -2969,7 +2860,7 @@
   },
   {
     "id": "rsa-algorithm",
-    "name": { "ko": "RSA 알고리즘", "en": "RSA Algorithm", "ja": "RSA暗号" },
+    "name": { "ko": "RSA 알고리즘", "en": "RSA Algorithm" },
     "field": "cryptography",
     "subfield": "public-key",
     "difficulty": 4,
@@ -2981,7 +2872,7 @@
   },
   {
     "id": "elliptic-curve-crypto",
-    "name": { "ko": "타원곡선 암호", "en": "Elliptic Curve Cryptography", "ja": "楕円曲線暗号" },
+    "name": { "ko": "타원곡선 암호", "en": "Elliptic Curve Cryptography" },
     "field": "cryptography",
     "subfield": "public-key",
     "difficulty": 5,
@@ -2993,11 +2884,7 @@
   },
   {
     "id": "diffie-hellman",
-    "name": {
-      "ko": "디피-헬만 키 교환",
-      "en": "Diffie-Hellman Key Exchange",
-      "ja": "ディフィー・ヘルマン鍵交換"
-    },
+    "name": { "ko": "디피-헬만 키 교환", "en": "Diffie-Hellman Key Exchange" },
     "field": "cryptography",
     "subfield": "key-exchange",
     "difficulty": 4,
@@ -3009,7 +2896,7 @@
   },
   {
     "id": "aes-encryption",
-    "name": { "ko": "AES 암호화", "en": "AES Encryption", "ja": "AES暗号" },
+    "name": { "ko": "AES 암호화", "en": "AES Encryption" },
     "field": "cryptography",
     "subfield": "symmetric-key",
     "difficulty": 4,
@@ -3021,11 +2908,7 @@
   },
   {
     "id": "hash-function-crypto",
-    "name": {
-      "ko": "암호학적 해시 함수",
-      "en": "Cryptographic Hash Function",
-      "ja": "暗号学的ハッシュ関数"
-    },
+    "name": { "ko": "암호학적 해시 함수", "en": "Cryptographic Hash Function" },
     "field": "cryptography",
     "subfield": "hash",
     "difficulty": 3,
@@ -3037,7 +2920,7 @@
   },
   {
     "id": "digital-signature",
-    "name": { "ko": "디지털 서명", "en": "Digital Signature", "ja": "デジタル署名" },
+    "name": { "ko": "디지털 서명", "en": "Digital Signature" },
     "field": "cryptography",
     "subfield": "authentication",
     "difficulty": 4,
@@ -3049,7 +2932,7 @@
   },
   {
     "id": "zero-knowledge-proof",
-    "name": { "ko": "영지식 증명", "en": "Zero-Knowledge Proof", "ja": "ゼロ知識証明" },
+    "name": { "ko": "영지식 증명", "en": "Zero-Knowledge Proof" },
     "field": "cryptography",
     "subfield": "protocols",
     "difficulty": 5,
@@ -3061,7 +2944,7 @@
   },
   {
     "id": "modular-arithmetic",
-    "name": { "ko": "모듈러 연산", "en": "Modular Arithmetic", "ja": "モジュラ演算" },
+    "name": { "ko": "모듈러 연산", "en": "Modular Arithmetic" },
     "field": "cryptography",
     "subfield": "foundations",
     "difficulty": 2,
@@ -3073,7 +2956,7 @@
   },
   {
     "id": "nash-equilibrium",
-    "name": { "ko": "내쉬 균형", "en": "Nash Equilibrium", "ja": "ナッシュ均衡" },
+    "name": { "ko": "내쉬 균형", "en": "Nash Equilibrium" },
     "field": "game-theory",
     "subfield": "strategic-games",
     "difficulty": 4,
@@ -3085,7 +2968,7 @@
   },
   {
     "id": "prisoners-dilemma",
-    "name": { "ko": "죄수의 딜레마", "en": "Prisoner's Dilemma", "ja": "囚人のジレンマ" },
+    "name": { "ko": "죄수의 딜레마", "en": "Prisoner's Dilemma" },
     "field": "game-theory",
     "subfield": "strategic-games",
     "difficulty": 2,
@@ -3097,7 +2980,7 @@
   },
   {
     "id": "minimax-theorem",
-    "name": { "ko": "미니맥스 정리", "en": "Minimax Theorem", "ja": "ミニマックス定理" },
+    "name": { "ko": "미니맥스 정리", "en": "Minimax Theorem" },
     "field": "game-theory",
     "subfield": "zero-sum",
     "difficulty": 4,
@@ -3109,7 +2992,7 @@
   },
   {
     "id": "pareto-efficiency",
-    "name": { "ko": "파레토 효율성", "en": "Pareto Efficiency", "ja": "パレート効率性" },
+    "name": { "ko": "파레토 효율성", "en": "Pareto Efficiency" },
     "field": "game-theory",
     "subfield": "welfare",
     "difficulty": 3,
@@ -3121,7 +3004,7 @@
   },
   {
     "id": "mixed-strategy",
-    "name": { "ko": "혼합 전략", "en": "Mixed Strategy", "ja": "混合戦略" },
+    "name": { "ko": "혼합 전략", "en": "Mixed Strategy" },
     "field": "game-theory",
     "subfield": "strategic-games",
     "difficulty": 3,
@@ -3133,7 +3016,7 @@
   },
   {
     "id": "auction-theory",
-    "name": { "ko": "경매 이론", "en": "Auction Theory", "ja": "オークション理論" },
+    "name": { "ko": "경매 이론", "en": "Auction Theory" },
     "field": "game-theory",
     "subfield": "mechanism-design",
     "difficulty": 4,
@@ -3145,7 +3028,7 @@
   },
   {
     "id": "evolutionary-game",
-    "name": { "ko": "진화 게임 이론", "en": "Evolutionary Game Theory", "ja": "進化ゲーム理論" },
+    "name": { "ko": "진화 게임 이론", "en": "Evolutionary Game Theory" },
     "field": "game-theory",
     "subfield": "evolutionary",
     "difficulty": 4,
@@ -3157,7 +3040,7 @@
   },
   {
     "id": "cooperative-game",
-    "name": { "ko": "협력 게임", "en": "Cooperative Game", "ja": "協力ゲーム" },
+    "name": { "ko": "협력 게임", "en": "Cooperative Game" },
     "field": "game-theory",
     "subfield": "cooperative",
     "difficulty": 4,
@@ -3169,7 +3052,7 @@
   },
   {
     "id": "sigma-algebra",
-    "name": { "ko": "시그마 대수", "en": "Sigma-Algebra (σ-algebra)", "ja": "σ代数" },
+    "name": { "ko": "시그마 대수", "en": "Sigma-Algebra (σ-algebra)" },
     "field": "measure-theory",
     "subfield": "foundations",
     "difficulty": 4,
@@ -3181,7 +3064,7 @@
   },
   {
     "id": "lebesgue-measure",
-    "name": { "ko": "르베그 측도", "en": "Lebesgue Measure", "ja": "ルベーグ測度" },
+    "name": { "ko": "르베그 측도", "en": "Lebesgue Measure" },
     "field": "measure-theory",
     "subfield": "measures",
     "difficulty": 4,
@@ -3193,7 +3076,7 @@
   },
   {
     "id": "lebesgue-integral",
-    "name": { "ko": "르베그 적분", "en": "Lebesgue Integral", "ja": "ルベーグ積分" },
+    "name": { "ko": "르베그 적분", "en": "Lebesgue Integral" },
     "field": "measure-theory",
     "subfield": "integration",
     "difficulty": 5,
@@ -3205,7 +3088,7 @@
   },
   {
     "id": "probability-measure",
-    "name": { "ko": "확률 측도", "en": "Probability Measure", "ja": "確率測度" },
+    "name": { "ko": "확률 측도", "en": "Probability Measure" },
     "field": "measure-theory",
     "subfield": "probability",
     "difficulty": 4,
@@ -3217,7 +3100,7 @@
   },
   {
     "id": "fubini-theorem",
-    "name": { "ko": "푸비니 정리", "en": "Fubini's Theorem", "ja": "フビニの定理" },
+    "name": { "ko": "푸비니 정리", "en": "Fubini's Theorem" },
     "field": "measure-theory",
     "subfield": "integration",
     "difficulty": 5,
@@ -3229,7 +3112,7 @@
   },
   {
     "id": "dominated-convergence",
-    "name": { "ko": "지배 수렴 정리", "en": "Dominated Convergence Theorem", "ja": "優収束定理" },
+    "name": { "ko": "지배 수렴 정리", "en": "Dominated Convergence Theorem" },
     "field": "measure-theory",
     "subfield": "convergence",
     "difficulty": 5,
@@ -3241,11 +3124,7 @@
   },
   {
     "id": "radon-nikodym",
-    "name": {
-      "ko": "라돈-니코딤 정리",
-      "en": "Radon-Nikodym Theorem",
-      "ja": "ラドン・ニコディム定理"
-    },
+    "name": { "ko": "라돈-니코딤 정리", "en": "Radon-Nikodym Theorem" },
     "field": "measure-theory",
     "subfield": "measures",
     "difficulty": 5,
@@ -3257,7 +3136,7 @@
   },
   {
     "id": "lp-spaces",
-    "name": { "ko": "Lᵖ 공간", "en": "Lᵖ Spaces", "ja": "Lᵖ空間" },
+    "name": { "ko": "Lᵖ 공간", "en": "Lᵖ Spaces" },
     "field": "measure-theory",
     "subfield": "function-spaces",
     "difficulty": 5,
@@ -3269,7 +3148,7 @@
   },
   {
     "id": "category-definition",
-    "name": { "ko": "범주의 정의", "en": "Category Definition", "ja": "圏の定義" },
+    "name": { "ko": "범주의 정의", "en": "Category Definition" },
     "field": "category-theory",
     "subfield": "foundations",
     "difficulty": 4,
@@ -3281,7 +3160,7 @@
   },
   {
     "id": "functor",
-    "name": { "ko": "함자", "en": "Functor", "ja": "関手" },
+    "name": { "ko": "함자", "en": "Functor" },
     "field": "category-theory",
     "subfield": "mappings",
     "difficulty": 4,
@@ -3293,7 +3172,7 @@
   },
   {
     "id": "natural-transformation",
-    "name": { "ko": "자연 변환", "en": "Natural Transformation", "ja": "自然変換" },
+    "name": { "ko": "자연 변환", "en": "Natural Transformation" },
     "field": "category-theory",
     "subfield": "mappings",
     "difficulty": 5,
@@ -3305,7 +3184,7 @@
   },
   {
     "id": "monad-category",
-    "name": { "ko": "모나드", "en": "Monad", "ja": "モナド" },
+    "name": { "ko": "모나드", "en": "Monad" },
     "field": "category-theory",
     "subfield": "structures",
     "difficulty": 5,
@@ -3317,7 +3196,7 @@
   },
   {
     "id": "adjunction",
-    "name": { "ko": "수반", "en": "Adjunction", "ja": "随伴" },
+    "name": { "ko": "수반", "en": "Adjunction" },
     "field": "category-theory",
     "subfield": "structures",
     "difficulty": 5,
@@ -3329,7 +3208,7 @@
   },
   {
     "id": "yoneda-lemma",
-    "name": { "ko": "요네다 보조정리", "en": "Yoneda Lemma", "ja": "米田の補題" },
+    "name": { "ko": "요네다 보조정리", "en": "Yoneda Lemma" },
     "field": "category-theory",
     "subfield": "foundations",
     "difficulty": 5,
@@ -3341,7 +3220,7 @@
   },
   {
     "id": "limits-colimits",
-    "name": { "ko": "극한과 쌍대극한", "en": "Limits and Colimits", "ja": "極限と余極限" },
+    "name": { "ko": "극한과 쌍대극한", "en": "Limits and Colimits" },
     "field": "category-theory",
     "subfield": "constructions",
     "difficulty": 5,
@@ -3353,7 +3232,7 @@
   },
   {
     "id": "topos",
-    "name": { "ko": "토포스", "en": "Topos", "ja": "トポス" },
+    "name": { "ko": "토포스", "en": "Topos" },
     "field": "category-theory",
     "subfield": "advanced",
     "difficulty": 5,
@@ -3365,7 +3244,7 @@
   },
   {
     "id": "manifold",
-    "name": { "ko": "다양체", "en": "Manifold", "ja": "多様体" },
+    "name": { "ko": "다양체", "en": "Manifold" },
     "field": "differential-geometry",
     "subfield": "foundations",
     "difficulty": 4,
@@ -3377,7 +3256,7 @@
   },
   {
     "id": "tangent-space",
-    "name": { "ko": "접공간", "en": "Tangent Space", "ja": "接空間" },
+    "name": { "ko": "접공간", "en": "Tangent Space" },
     "field": "differential-geometry",
     "subfield": "foundations",
     "difficulty": 4,
@@ -3389,7 +3268,7 @@
   },
   {
     "id": "riemannian-metric",
-    "name": { "ko": "리만 계량", "en": "Riemannian Metric", "ja": "リーマン計量" },
+    "name": { "ko": "리만 계량", "en": "Riemannian Metric" },
     "field": "differential-geometry",
     "subfield": "riemannian",
     "difficulty": 5,
@@ -3401,7 +3280,7 @@
   },
   {
     "id": "geodesic",
-    "name": { "ko": "측지선", "en": "Geodesic", "ja": "測地線" },
+    "name": { "ko": "측지선", "en": "Geodesic" },
     "field": "differential-geometry",
     "subfield": "riemannian",
     "difficulty": 4,
@@ -3413,7 +3292,7 @@
   },
   {
     "id": "curvature-tensor",
-    "name": { "ko": "곡률 텐서", "en": "Curvature Tensor", "ja": "曲率テンソル" },
+    "name": { "ko": "곡률 텐서", "en": "Curvature Tensor" },
     "field": "differential-geometry",
     "subfield": "riemannian",
     "difficulty": 5,
@@ -3425,7 +3304,7 @@
   },
   {
     "id": "differential-forms",
-    "name": { "ko": "미분형식", "en": "Differential Forms", "ja": "微分形式" },
+    "name": { "ko": "미분형식", "en": "Differential Forms" },
     "field": "differential-geometry",
     "subfield": "calculus",
     "difficulty": 5,
@@ -3437,7 +3316,7 @@
   },
   {
     "id": "lie-groups",
-    "name": { "ko": "리 군", "en": "Lie Groups", "ja": "リー群" },
+    "name": { "ko": "리 군", "en": "Lie Groups" },
     "field": "differential-geometry",
     "subfield": "groups",
     "difficulty": 5,
@@ -3449,7 +3328,7 @@
   },
   {
     "id": "gaussian-curvature",
-    "name": { "ko": "가우스 곡률", "en": "Gaussian Curvature", "ja": "ガウス曲率" },
+    "name": { "ko": "가우스 곡률", "en": "Gaussian Curvature" },
     "field": "differential-geometry",
     "subfield": "surfaces",
     "difficulty": 4,
@@ -3461,7 +3340,7 @@
   },
   {
     "id": "hypothesis-testing",
-    "name": { "ko": "가설검정", "en": "Hypothesis Testing", "ja": "仮説検定" },
+    "name": { "ko": "가설검정", "en": "Hypothesis Testing" },
     "field": "statistics",
     "subfield": "inference",
     "difficulty": 3,
@@ -3473,7 +3352,7 @@
   },
   {
     "id": "confidence-interval",
-    "name": { "ko": "신뢰구간", "en": "Confidence Interval", "ja": "信頼区間" },
+    "name": { "ko": "신뢰구간", "en": "Confidence Interval" },
     "field": "statistics",
     "subfield": "inference",
     "difficulty": 3,
@@ -3485,7 +3364,7 @@
   },
   {
     "id": "regression-analysis",
-    "name": { "ko": "회귀분석", "en": "Regression Analysis", "ja": "回帰分析" },
+    "name": { "ko": "회귀분석", "en": "Regression Analysis" },
     "field": "statistics",
     "subfield": "modeling",
     "difficulty": 3,
@@ -3497,11 +3376,7 @@
   },
   {
     "id": "anova",
-    "name": {
-      "ko": "분산분석 (ANOVA)",
-      "en": "Analysis of Variance (ANOVA)",
-      "ja": "分散分析 (ANOVA)"
-    },
+    "name": { "ko": "분산분석 (ANOVA)", "en": "Analysis of Variance (ANOVA)" },
     "field": "statistics",
     "subfield": "inference",
     "difficulty": 4,
@@ -3513,7 +3388,7 @@
   },
   {
     "id": "bayesian-inference",
-    "name": { "ko": "베이지안 추론", "en": "Bayesian Inference", "ja": "ベイズ推論" },
+    "name": { "ko": "베이지안 추론", "en": "Bayesian Inference" },
     "field": "statistics",
     "subfield": "bayesian",
     "difficulty": 4,
@@ -3525,7 +3400,7 @@
   },
   {
     "id": "maximum-likelihood",
-    "name": { "ko": "최대가능도 추정", "en": "Maximum Likelihood Estimation", "ja": "最尤推定" },
+    "name": { "ko": "최대가능도 추정", "en": "Maximum Likelihood Estimation" },
     "field": "statistics",
     "subfield": "estimation",
     "difficulty": 4,
@@ -3537,7 +3412,7 @@
   },
   {
     "id": "time-series",
-    "name": { "ko": "시계열 분석", "en": "Time Series Analysis", "ja": "時系列分析" },
+    "name": { "ko": "시계열 분석", "en": "Time Series Analysis" },
     "field": "statistics",
     "subfield": "modeling",
     "difficulty": 4,
@@ -3549,7 +3424,7 @@
   },
   {
     "id": "chi-square-test",
-    "name": { "ko": "카이제곱 검정", "en": "Chi-Square Test", "ja": "カイ二乗検定" },
+    "name": { "ko": "카이제곱 검정", "en": "Chi-Square Test" },
     "field": "statistics",
     "subfield": "inference",
     "difficulty": 3,
@@ -3561,7 +3436,7 @@
   },
   {
     "id": "zfc-axioms",
-    "name": { "ko": "ZFC 공리계", "en": "ZFC Axioms", "ja": "ZFC公理系" },
+    "name": { "ko": "ZFC 공리계", "en": "ZFC Axioms" },
     "field": "set-theory",
     "subfield": "foundations",
     "difficulty": 5,
@@ -3573,7 +3448,7 @@
   },
   {
     "id": "ordinal-numbers",
-    "name": { "ko": "서수", "en": "Ordinal Numbers", "ja": "順序数" },
+    "name": { "ko": "서수", "en": "Ordinal Numbers" },
     "field": "set-theory",
     "subfield": "ordinals",
     "difficulty": 5,
@@ -3585,7 +3460,7 @@
   },
   {
     "id": "cardinal-numbers",
-    "name": { "ko": "기수", "en": "Cardinal Numbers", "ja": "基数" },
+    "name": { "ko": "기수", "en": "Cardinal Numbers" },
     "field": "set-theory",
     "subfield": "cardinals",
     "difficulty": 5,
@@ -3597,7 +3472,7 @@
   },
   {
     "id": "axiom-of-choice",
-    "name": { "ko": "선택 공리", "en": "Axiom of Choice", "ja": "選択公理" },
+    "name": { "ko": "선택 공리", "en": "Axiom of Choice" },
     "field": "set-theory",
     "subfield": "foundations",
     "difficulty": 5,
@@ -3609,7 +3484,7 @@
   },
   {
     "id": "zorns-lemma",
-    "name": { "ko": "초른의 보조정리", "en": "Zorn's Lemma", "ja": "ツォルンの補題" },
+    "name": { "ko": "초른의 보조정리", "en": "Zorn's Lemma" },
     "field": "set-theory",
     "subfield": "foundations",
     "difficulty": 5,
@@ -3621,7 +3496,7 @@
   },
   {
     "id": "continuum-hypothesis",
-    "name": { "ko": "연속체 가설", "en": "Continuum Hypothesis", "ja": "連続体仮説" },
+    "name": { "ko": "연속체 가설", "en": "Continuum Hypothesis" },
     "field": "set-theory",
     "subfield": "cardinals",
     "difficulty": 5,
@@ -3633,7 +3508,7 @@
   },
   {
     "id": "cantors-theorem",
-    "name": { "ko": "칸토어 정리", "en": "Cantor's Theorem", "ja": "カントールの定理" },
+    "name": { "ko": "칸토어 정리", "en": "Cantor's Theorem" },
     "field": "set-theory",
     "subfield": "cardinals",
     "difficulty": 4,
@@ -3645,7 +3520,7 @@
   },
   {
     "id": "well-ordering-theorem",
-    "name": { "ko": "정렬 가능 정리", "en": "Well-Ordering Theorem", "ja": "整列可能定理" },
+    "name": { "ko": "정렬 가능 정리", "en": "Well-Ordering Theorem" },
     "field": "set-theory",
     "subfield": "foundations",
     "difficulty": 5,
@@ -3657,7 +3532,7 @@
   },
   {
     "id": "linear-programming",
-    "name": { "ko": "선형 계획법", "en": "Linear Programming", "ja": "線形計画法" },
+    "name": { "ko": "선형 계획법", "en": "Linear Programming" },
     "field": "operations-research",
     "subfield": "optimization",
     "difficulty": 3,
@@ -3669,7 +3544,7 @@
   },
   {
     "id": "integer-programming",
-    "name": { "ko": "정수 계획법", "en": "Integer Programming", "ja": "整数計画法" },
+    "name": { "ko": "정수 계획법", "en": "Integer Programming" },
     "field": "operations-research",
     "subfield": "optimization",
     "difficulty": 4,
@@ -3681,7 +3556,7 @@
   },
   {
     "id": "network-flow",
-    "name": { "ko": "네트워크 흐름", "en": "Network Flow", "ja": "ネットワークフロー" },
+    "name": { "ko": "네트워크 흐름", "en": "Network Flow" },
     "field": "operations-research",
     "subfield": "networks",
     "difficulty": 3,
@@ -3693,7 +3568,7 @@
   },
   {
     "id": "queueing-theory",
-    "name": { "ko": "대기행렬 이론", "en": "Queueing Theory", "ja": "待ち行列理論" },
+    "name": { "ko": "대기행렬 이론", "en": "Queueing Theory" },
     "field": "operations-research",
     "subfield": "stochastic",
     "difficulty": 4,
@@ -3705,7 +3580,7 @@
   },
   {
     "id": "dynamic-programming-or",
-    "name": { "ko": "동적 계획법 (OR)", "en": "Dynamic Programming (OR)", "ja": "動的計画法 (OR)" },
+    "name": { "ko": "동적 계획법 (OR)", "en": "Dynamic Programming (OR)" },
     "field": "operations-research",
     "subfield": "optimization",
     "difficulty": 4,
@@ -3717,7 +3592,7 @@
   },
   {
     "id": "inventory-theory",
-    "name": { "ko": "재고 이론", "en": "Inventory Theory", "ja": "在庫理論" },
+    "name": { "ko": "재고 이론", "en": "Inventory Theory" },
     "field": "operations-research",
     "subfield": "supply-chain",
     "difficulty": 3,
@@ -3729,7 +3604,7 @@
   },
   {
     "id": "scheduling-theory",
-    "name": { "ko": "스케줄링 이론", "en": "Scheduling Theory", "ja": "スケジューリング理論" },
+    "name": { "ko": "스케줄링 이론", "en": "Scheduling Theory" },
     "field": "operations-research",
     "subfield": "scheduling",
     "difficulty": 4,
@@ -3741,11 +3616,7 @@
   },
   {
     "id": "markov-decision-process",
-    "name": {
-      "ko": "마르코프 결정 과정",
-      "en": "Markov Decision Process",
-      "ja": "マルコフ決定過程"
-    },
+    "name": { "ko": "마르코프 결정 과정", "en": "Markov Decision Process" },
     "field": "operations-research",
     "subfield": "stochastic",
     "difficulty": 5,
@@ -3757,7 +3628,7 @@
   },
   {
     "id": "algebraic-variety",
-    "name": { "ko": "대수적 다양체", "en": "Algebraic Variety", "ja": "代数多様体" },
+    "name": { "ko": "대수적 다양체", "en": "Algebraic Variety" },
     "field": "algebraic-geometry",
     "subfield": "varieties",
     "difficulty": 5,
@@ -3769,7 +3640,7 @@
   },
   {
     "id": "projective-space",
-    "name": { "ko": "사영 공간", "en": "Projective Space", "ja": "射影空間" },
+    "name": { "ko": "사영 공간", "en": "Projective Space" },
     "field": "algebraic-geometry",
     "subfield": "spaces",
     "difficulty": 4,
@@ -3781,7 +3652,7 @@
   },
   {
     "id": "scheme",
-    "name": { "ko": "스킴", "en": "Scheme", "ja": "スキーム" },
+    "name": { "ko": "스킴", "en": "Scheme" },
     "field": "algebraic-geometry",
     "subfield": "foundations",
     "difficulty": 5,
@@ -3793,7 +3664,7 @@
   },
   {
     "id": "sheaf-theory",
-    "name": { "ko": "층 이론", "en": "Sheaf Theory", "ja": "層理論" },
+    "name": { "ko": "층 이론", "en": "Sheaf Theory" },
     "field": "algebraic-geometry",
     "subfield": "foundations",
     "difficulty": 5,
@@ -3805,7 +3676,7 @@
   },
   {
     "id": "bezouts-theorem",
-    "name": { "ko": "베주 정리", "en": "Bézout's Theorem", "ja": "ベズーの定理" },
+    "name": { "ko": "베주 정리", "en": "Bézout's Theorem" },
     "field": "algebraic-geometry",
     "subfield": "intersection",
     "difficulty": 4,
@@ -3817,11 +3688,7 @@
   },
   {
     "id": "hilbert-nullstellensatz",
-    "name": {
-      "ko": "힐베르트 영점정리",
-      "en": "Hilbert Nullstellensatz",
-      "ja": "ヒルベルトの零点定理"
-    },
+    "name": { "ko": "힐베르트 영점정리", "en": "Hilbert Nullstellensatz" },
     "field": "algebraic-geometry",
     "subfield": "foundations",
     "difficulty": 5,
@@ -3833,11 +3700,7 @@
   },
   {
     "id": "riemann-roch",
-    "name": {
-      "ko": "리만-로흐 정리",
-      "en": "Riemann-Roch Theorem",
-      "ja": "リーマン・ロッホの定理"
-    },
+    "name": { "ko": "리만-로흐 정리", "en": "Riemann-Roch Theorem" },
     "field": "algebraic-geometry",
     "subfield": "curves",
     "difficulty": 5,
@@ -3849,11 +3712,7 @@
   },
   {
     "id": "elliptic-curves-ag",
-    "name": {
-      "ko": "타원곡선 (대수기하)",
-      "en": "Elliptic Curves (Algebraic Geometry)",
-      "ja": "楕円曲線（代数幾何）"
-    },
+    "name": { "ko": "타원곡선 (대수기하)", "en": "Elliptic Curves (Algebraic Geometry)" },
     "field": "algebraic-geometry",
     "subfield": "curves",
     "difficulty": 5,
@@ -3865,7 +3724,7 @@
   },
   {
     "id": "banach-space",
-    "name": { "ko": "바나흐 공간", "en": "Banach Space", "ja": "バナッハ空間" },
+    "name": { "ko": "바나흐 공간", "en": "Banach Space" },
     "field": "functional-analysis",
     "subfield": "spaces",
     "difficulty": 4,
@@ -3877,7 +3736,7 @@
   },
   {
     "id": "hilbert-space",
-    "name": { "ko": "힐베르트 공간", "en": "Hilbert Space", "ja": "ヒルベルト空間" },
+    "name": { "ko": "힐베르트 공간", "en": "Hilbert Space" },
     "field": "functional-analysis",
     "subfield": "spaces",
     "difficulty": 4,
@@ -3889,7 +3748,7 @@
   },
   {
     "id": "bounded-linear-operator",
-    "name": { "ko": "유계 선형 작용소", "en": "Bounded Linear Operator", "ja": "有界線形作用素" },
+    "name": { "ko": "유계 선형 작용소", "en": "Bounded Linear Operator" },
     "field": "functional-analysis",
     "subfield": "operators",
     "difficulty": 4,
@@ -3901,7 +3760,7 @@
   },
   {
     "id": "spectral-theorem",
-    "name": { "ko": "스펙트럼 정리", "en": "Spectral Theorem", "ja": "スペクトル定理" },
+    "name": { "ko": "스펙트럼 정리", "en": "Spectral Theorem" },
     "field": "functional-analysis",
     "subfield": "spectral-theory",
     "difficulty": 5,
@@ -3913,7 +3772,7 @@
   },
   {
     "id": "hahn-banach-theorem",
-    "name": { "ko": "한-바나흐 정리", "en": "Hahn-Banach Theorem", "ja": "ハーン・バナッハの定理" },
+    "name": { "ko": "한-바나흐 정리", "en": "Hahn-Banach Theorem" },
     "field": "functional-analysis",
     "subfield": "foundations",
     "difficulty": 5,
@@ -3925,7 +3784,7 @@
   },
   {
     "id": "open-mapping-theorem",
-    "name": { "ko": "열린 사상 정리", "en": "Open Mapping Theorem", "ja": "開写像定理" },
+    "name": { "ko": "열린 사상 정리", "en": "Open Mapping Theorem" },
     "field": "functional-analysis",
     "subfield": "foundations",
     "difficulty": 5,
@@ -3937,7 +3796,7 @@
   },
   {
     "id": "compact-operator",
-    "name": { "ko": "컴팩트 작용소", "en": "Compact Operator", "ja": "コンパクト作用素" },
+    "name": { "ko": "컴팩트 작용소", "en": "Compact Operator" },
     "field": "functional-analysis",
     "subfield": "operators",
     "difficulty": 5,
@@ -3949,7 +3808,7 @@
   },
   {
     "id": "weak-convergence",
-    "name": { "ko": "약수렴", "en": "Weak Convergence", "ja": "弱収束" },
+    "name": { "ko": "약수렴", "en": "Weak Convergence" },
     "field": "functional-analysis",
     "subfield": "convergence",
     "difficulty": 4,
@@ -3961,7 +3820,7 @@
   },
   {
     "id": "generating-functions",
-    "name": { "ko": "생성함수", "en": "Generating Functions", "ja": "母関数" },
+    "name": { "ko": "생성함수", "en": "Generating Functions" },
     "field": "combinatorics",
     "subfield": "enumeration",
     "difficulty": 4,
@@ -3973,7 +3832,7 @@
   },
   {
     "id": "catalan-numbers",
-    "name": { "ko": "카탈란 수", "en": "Catalan Numbers", "ja": "カタラン数" },
+    "name": { "ko": "카탈란 수", "en": "Catalan Numbers" },
     "field": "combinatorics",
     "subfield": "enumeration",
     "difficulty": 3,
@@ -3985,7 +3844,7 @@
   },
   {
     "id": "stirling-numbers",
-    "name": { "ko": "스털링 수", "en": "Stirling Numbers", "ja": "スターリング数" },
+    "name": { "ko": "스털링 수", "en": "Stirling Numbers" },
     "field": "combinatorics",
     "subfield": "enumeration",
     "difficulty": 4,
@@ -3997,11 +3856,7 @@
   },
   {
     "id": "polya-enumeration",
-    "name": {
-      "ko": "폴리아 열거 정리",
-      "en": "Pólya Enumeration Theorem",
-      "ja": "ポリアの計数定理"
-    },
+    "name": { "ko": "폴리아 열거 정리", "en": "Pólya Enumeration Theorem" },
     "field": "combinatorics",
     "subfield": "enumeration",
     "difficulty": 5,
@@ -4013,7 +3868,7 @@
   },
   {
     "id": "ramsey-theory",
-    "name": { "ko": "램지 이론", "en": "Ramsey Theory", "ja": "ラムゼー理論" },
+    "name": { "ko": "램지 이론", "en": "Ramsey Theory" },
     "field": "combinatorics",
     "subfield": "extremal",
     "difficulty": 5,
@@ -4025,7 +3880,7 @@
   },
   {
     "id": "partition-theory",
-    "name": { "ko": "분할 이론", "en": "Partition Theory", "ja": "分割理論" },
+    "name": { "ko": "분할 이론", "en": "Partition Theory" },
     "field": "combinatorics",
     "subfield": "enumeration",
     "difficulty": 4,
@@ -4037,7 +3892,7 @@
   },
   {
     "id": "mobius-inversion",
-    "name": { "ko": "뫼비우스 반전", "en": "Möbius Inversion", "ja": "メビウス反転" },
+    "name": { "ko": "뫼비우스 반전", "en": "Möbius Inversion" },
     "field": "combinatorics",
     "subfield": "enumeration",
     "difficulty": 4,
@@ -4049,7 +3904,7 @@
   },
   {
     "id": "probabilistic-method",
-    "name": { "ko": "확률적 방법", "en": "Probabilistic Method", "ja": "確率的方法" },
+    "name": { "ko": "확률적 방법", "en": "Probabilistic Method" },
     "field": "combinatorics",
     "subfield": "techniques",
     "difficulty": 5,
@@ -4061,7 +3916,7 @@
   },
   {
     "id": "group-representation",
-    "name": { "ko": "군의 표현", "en": "Group Representation", "ja": "群の表現" },
+    "name": { "ko": "군의 표현", "en": "Group Representation" },
     "field": "representation-theory",
     "subfield": "foundations",
     "difficulty": 4,
@@ -4073,7 +3928,7 @@
   },
   {
     "id": "irreducible-representation",
-    "name": { "ko": "기약 표현", "en": "Irreducible Representation", "ja": "既約表現" },
+    "name": { "ko": "기약 표현", "en": "Irreducible Representation" },
     "field": "representation-theory",
     "subfield": "foundations",
     "difficulty": 4,
@@ -4085,7 +3940,7 @@
   },
   {
     "id": "character-theory",
-    "name": { "ko": "지표 이론", "en": "Character Theory", "ja": "指標論" },
+    "name": { "ko": "지표 이론", "en": "Character Theory" },
     "field": "representation-theory",
     "subfield": "characters",
     "difficulty": 4,
@@ -4097,7 +3952,7 @@
   },
   {
     "id": "young-tableaux",
-    "name": { "ko": "영 타블로", "en": "Young Tableaux", "ja": "ヤング盤" },
+    "name": { "ko": "영 타블로", "en": "Young Tableaux" },
     "field": "representation-theory",
     "subfield": "symmetric-group",
     "difficulty": 5,
@@ -4109,7 +3964,7 @@
   },
   {
     "id": "lie-algebra-representation",
-    "name": { "ko": "리 대수의 표현", "en": "Lie Algebra Representation", "ja": "リー代数の表現" },
+    "name": { "ko": "리 대수의 표현", "en": "Lie Algebra Representation" },
     "field": "representation-theory",
     "subfield": "lie-theory",
     "difficulty": 5,
@@ -4121,7 +3976,7 @@
   },
   {
     "id": "root-systems",
-    "name": { "ko": "근계", "en": "Root Systems", "ja": "根系" },
+    "name": { "ko": "근계", "en": "Root Systems" },
     "field": "representation-theory",
     "subfield": "lie-theory",
     "difficulty": 5,
@@ -4133,7 +3988,7 @@
   },
   {
     "id": "tensor-product-rep",
-    "name": { "ko": "텐서곱 표현", "en": "Tensor Product Representation", "ja": "テンソル積表現" },
+    "name": { "ko": "텐서곱 표현", "en": "Tensor Product Representation" },
     "field": "representation-theory",
     "subfield": "constructions",
     "difficulty": 4,
@@ -4145,7 +4000,7 @@
   },
   {
     "id": "induced-representation",
-    "name": { "ko": "유도 표현", "en": "Induced Representation", "ja": "誘導表現" },
+    "name": { "ko": "유도 표현", "en": "Induced Representation" },
     "field": "representation-theory",
     "subfield": "constructions",
     "difficulty": 5,
@@ -4157,7 +4012,7 @@
   },
   {
     "id": "chain-complex",
-    "name": { "ko": "사슬 복합체", "en": "Chain Complex", "ja": "鎖複体" },
+    "name": { "ko": "사슬 복합체", "en": "Chain Complex" },
     "field": "homological-algebra",
     "subfield": "foundations",
     "difficulty": 4,
@@ -4169,7 +4024,7 @@
   },
   {
     "id": "exact-sequence",
-    "name": { "ko": "완전열", "en": "Exact Sequence", "ja": "完全列" },
+    "name": { "ko": "완전열", "en": "Exact Sequence" },
     "field": "homological-algebra",
     "subfield": "foundations",
     "difficulty": 4,
@@ -4181,7 +4036,7 @@
   },
   {
     "id": "derived-functor",
-    "name": { "ko": "유도 함자", "en": "Derived Functor", "ja": "導来関手" },
+    "name": { "ko": "유도 함자", "en": "Derived Functor" },
     "field": "homological-algebra",
     "subfield": "functors",
     "difficulty": 5,
@@ -4193,7 +4048,7 @@
   },
   {
     "id": "ext-functor",
-    "name": { "ko": "Ext 함자", "en": "Ext Functor", "ja": "Ext関手" },
+    "name": { "ko": "Ext 함자", "en": "Ext Functor" },
     "field": "homological-algebra",
     "subfield": "functors",
     "difficulty": 5,
@@ -4205,7 +4060,7 @@
   },
   {
     "id": "tor-functor",
-    "name": { "ko": "Tor 함자", "en": "Tor Functor", "ja": "Tor関手" },
+    "name": { "ko": "Tor 함자", "en": "Tor Functor" },
     "field": "homological-algebra",
     "subfield": "functors",
     "difficulty": 5,
@@ -4217,7 +4072,7 @@
   },
   {
     "id": "spectral-sequence",
-    "name": { "ko": "스펙트럴 수열", "en": "Spectral Sequence", "ja": "スペクトル系列" },
+    "name": { "ko": "스펙트럴 수열", "en": "Spectral Sequence" },
     "field": "homological-algebra",
     "subfield": "advanced",
     "difficulty": 5,
@@ -4229,7 +4084,7 @@
   },
   {
     "id": "projective-module",
-    "name": { "ko": "사영 모듈", "en": "Projective Module", "ja": "射影加群" },
+    "name": { "ko": "사영 모듈", "en": "Projective Module" },
     "field": "homological-algebra",
     "subfield": "modules",
     "difficulty": 4,
@@ -4241,7 +4096,7 @@
   },
   {
     "id": "injective-module",
-    "name": { "ko": "단사 모듈", "en": "Injective Module", "ja": "入射加群" },
+    "name": { "ko": "단사 모듈", "en": "Injective Module" },
     "field": "homological-algebra",
     "subfield": "modules",
     "difficulty": 4,
@@ -4253,11 +4108,7 @@
   },
   {
     "id": "euler-lagrange-equation",
-    "name": {
-      "ko": "오일러-라그랑주 방정식",
-      "en": "Euler-Lagrange Equation",
-      "ja": "オイラー・ラグランジュ方程式"
-    },
+    "name": { "ko": "오일러-라그랑주 방정식", "en": "Euler-Lagrange Equation" },
     "field": "calculus-of-variations",
     "subfield": "foundations",
     "difficulty": 4,
@@ -4269,7 +4120,7 @@
   },
   {
     "id": "hamiltons-principle",
-    "name": { "ko": "해밀턴의 원리", "en": "Hamilton's Principle", "ja": "ハミルトンの原理" },
+    "name": { "ko": "해밀턴의 원리", "en": "Hamilton's Principle" },
     "field": "calculus-of-variations",
     "subfield": "mechanics",
     "difficulty": 4,
@@ -4281,11 +4132,7 @@
   },
   {
     "id": "brachistochrone",
-    "name": {
-      "ko": "브라키스토크론 문제",
-      "en": "Brachistochrone Problem",
-      "ja": "最速降下線問題"
-    },
+    "name": { "ko": "브라키스토크론 문제", "en": "Brachistochrone Problem" },
     "field": "calculus-of-variations",
     "subfield": "classic-problems",
     "difficulty": 4,
@@ -4297,7 +4144,7 @@
   },
   {
     "id": "isoperimetric-problem",
-    "name": { "ko": "등주 문제", "en": "Isoperimetric Problem", "ja": "等周問題" },
+    "name": { "ko": "등주 문제", "en": "Isoperimetric Problem" },
     "field": "calculus-of-variations",
     "subfield": "classic-problems",
     "difficulty": 4,
@@ -4309,11 +4156,7 @@
   },
   {
     "id": "pontryagin-maximum",
-    "name": {
-      "ko": "폰트랴긴 최대 원리",
-      "en": "Pontryagin Maximum Principle",
-      "ja": "ポントリャーギン最大原理"
-    },
+    "name": { "ko": "폰트랴긴 최대 원리", "en": "Pontryagin Maximum Principle" },
     "field": "calculus-of-variations",
     "subfield": "optimal-control",
     "difficulty": 5,
@@ -4325,7 +4168,7 @@
   },
   {
     "id": "direct-methods",
-    "name": { "ko": "직접 방법", "en": "Direct Methods", "ja": "直接法" },
+    "name": { "ko": "직접 방법", "en": "Direct Methods" },
     "field": "calculus-of-variations",
     "subfield": "methods",
     "difficulty": 5,
@@ -4337,7 +4180,7 @@
   },
   {
     "id": "fermats-principle",
-    "name": { "ko": "페르마의 원리", "en": "Fermat's Principle", "ja": "フェルマーの原理" },
+    "name": { "ko": "페르마의 원리", "en": "Fermat's Principle" },
     "field": "calculus-of-variations",
     "subfield": "optics",
     "difficulty": 3,
@@ -4349,7 +4192,7 @@
   },
   {
     "id": "noethers-theorem",
-    "name": { "ko": "뇌터의 정리", "en": "Noether's Theorem", "ja": "ネーターの定理" },
+    "name": { "ko": "뇌터의 정리", "en": "Noether's Theorem" },
     "field": "calculus-of-variations",
     "subfield": "symmetry",
     "difficulty": 5,
@@ -4361,7 +4204,7 @@
   },
   {
     "id": "shannon-entropy",
-    "name": { "ko": "섀넌 엔트로피", "en": "Shannon Entropy", "ja": "シャノンエントロピー" },
+    "name": { "ko": "섀넌 엔트로피", "en": "Shannon Entropy" },
     "field": "information-theory",
     "subfield": "foundations",
     "difficulty": 3,
@@ -4373,7 +4216,7 @@
   },
   {
     "id": "mutual-information",
-    "name": { "ko": "상호 정보량", "en": "Mutual Information", "ja": "相互情報量" },
+    "name": { "ko": "상호 정보량", "en": "Mutual Information" },
     "field": "information-theory",
     "subfield": "foundations",
     "difficulty": 4,
@@ -4385,7 +4228,7 @@
   },
   {
     "id": "channel-capacity",
-    "name": { "ko": "채널 용량", "en": "Channel Capacity", "ja": "チャネル容量" },
+    "name": { "ko": "채널 용량", "en": "Channel Capacity" },
     "field": "information-theory",
     "subfield": "communication",
     "difficulty": 4,
@@ -4397,7 +4240,7 @@
   },
   {
     "id": "kl-divergence",
-    "name": { "ko": "KL 발산", "en": "KL Divergence", "ja": "KLダイバージェンス" },
+    "name": { "ko": "KL 발산", "en": "KL Divergence" },
     "field": "information-theory",
     "subfield": "divergences",
     "difficulty": 4,
@@ -4409,7 +4252,7 @@
   },
   {
     "id": "source-coding-theorem",
-    "name": { "ko": "소스 부호화 정리", "en": "Source Coding Theorem", "ja": "ソース符号化定理" },
+    "name": { "ko": "소스 부호화 정리", "en": "Source Coding Theorem" },
     "field": "information-theory",
     "subfield": "coding",
     "difficulty": 4,
@@ -4421,7 +4264,7 @@
   },
   {
     "id": "error-correcting-codes",
-    "name": { "ko": "오류 정정 부호", "en": "Error-Correcting Codes", "ja": "誤り訂正符号" },
+    "name": { "ko": "오류 정정 부호", "en": "Error-Correcting Codes" },
     "field": "information-theory",
     "subfield": "coding",
     "difficulty": 4,
@@ -4433,7 +4276,7 @@
   },
   {
     "id": "rate-distortion",
-    "name": { "ko": "율-왜곡 이론", "en": "Rate-Distortion Theory", "ja": "レート歪み理論" },
+    "name": { "ko": "율-왜곡 이론", "en": "Rate-Distortion Theory" },
     "field": "information-theory",
     "subfield": "coding",
     "difficulty": 5,
@@ -4445,7 +4288,7 @@
   },
   {
     "id": "differential-entropy",
-    "name": { "ko": "미분 엔트로피", "en": "Differential Entropy", "ja": "微分エントロピー" },
+    "name": { "ko": "미분 엔트로피", "en": "Differential Entropy" },
     "field": "information-theory",
     "subfield": "continuous",
     "difficulty": 4,
@@ -4457,7 +4300,7 @@
   },
   {
     "id": "markov-chain",
-    "name": { "ko": "마르코프 체인", "en": "Markov Chain", "ja": "マルコフ連鎖" },
+    "name": { "ko": "마르코프 체인", "en": "Markov Chain" },
     "field": "stochastic-processes",
     "subfield": "discrete",
     "difficulty": 3,
@@ -4469,7 +4312,7 @@
   },
   {
     "id": "brownian-motion",
-    "name": { "ko": "브라운 운동", "en": "Brownian Motion", "ja": "ブラウン運動" },
+    "name": { "ko": "브라운 운동", "en": "Brownian Motion" },
     "field": "stochastic-processes",
     "subfield": "continuous",
     "difficulty": 4,
@@ -4481,7 +4324,7 @@
   },
   {
     "id": "poisson-process",
-    "name": { "ko": "포아송 과정", "en": "Poisson Process", "ja": "ポアソン過程" },
+    "name": { "ko": "포아송 과정", "en": "Poisson Process" },
     "field": "stochastic-processes",
     "subfield": "counting",
     "difficulty": 3,
@@ -4493,7 +4336,7 @@
   },
   {
     "id": "ito-calculus",
-    "name": { "ko": "이토 적분", "en": "Itô Calculus", "ja": "伊藤積分" },
+    "name": { "ko": "이토 적분", "en": "Itô Calculus" },
     "field": "stochastic-processes",
     "subfield": "stochastic-calculus",
     "difficulty": 5,
@@ -4505,7 +4348,7 @@
   },
   {
     "id": "martingale",
-    "name": { "ko": "마팅게일", "en": "Martingale", "ja": "マルチンゲール" },
+    "name": { "ko": "마팅게일", "en": "Martingale" },
     "field": "stochastic-processes",
     "subfield": "theory",
     "difficulty": 4,
@@ -4517,7 +4360,7 @@
   },
   {
     "id": "ergodic-theory",
-    "name": { "ko": "에르고딕 이론", "en": "Ergodic Theory", "ja": "エルゴード理論" },
+    "name": { "ko": "에르고딕 이론", "en": "Ergodic Theory" },
     "field": "stochastic-processes",
     "subfield": "theory",
     "difficulty": 5,
@@ -4529,11 +4372,7 @@
   },
   {
     "id": "stochastic-differential-equations",
-    "name": {
-      "ko": "확률미분방정식 (SDE)",
-      "en": "Stochastic Differential Equations",
-      "ja": "確率微分方程式"
-    },
+    "name": { "ko": "확률미분방정식 (SDE)", "en": "Stochastic Differential Equations" },
     "field": "stochastic-processes",
     "subfield": "stochastic-calculus",
     "difficulty": 5,
@@ -4545,11 +4384,7 @@
   },
   {
     "id": "hidden-markov-model",
-    "name": {
-      "ko": "은닉 마르코프 모델 (HMM)",
-      "en": "Hidden Markov Model",
-      "ja": "隠れマルコフモデル"
-    },
+    "name": { "ko": "은닉 마르코프 모델 (HMM)", "en": "Hidden Markov Model" },
     "field": "stochastic-processes",
     "subfield": "models",
     "difficulty": 4,
@@ -4561,7 +4396,7 @@
   },
   {
     "id": "heat-equation",
-    "name": { "ko": "열 방정식", "en": "Heat Equation", "ja": "熱方程式" },
+    "name": { "ko": "열 방정식", "en": "Heat Equation" },
     "field": "partial-differential-equations",
     "subfield": "parabolic",
     "difficulty": 4,
@@ -4573,7 +4408,7 @@
   },
   {
     "id": "wave-equation-pde",
-    "name": { "ko": "파동 방정식", "en": "Wave Equation", "ja": "波動方程式" },
+    "name": { "ko": "파동 방정식", "en": "Wave Equation" },
     "field": "partial-differential-equations",
     "subfield": "hyperbolic",
     "difficulty": 4,
@@ -4585,7 +4420,7 @@
   },
   {
     "id": "laplace-equation",
-    "name": { "ko": "라플라스 방정식", "en": "Laplace Equation", "ja": "ラプラス方程式" },
+    "name": { "ko": "라플라스 방정식", "en": "Laplace Equation" },
     "field": "partial-differential-equations",
     "subfield": "elliptic",
     "difficulty": 4,
@@ -4597,11 +4432,7 @@
   },
   {
     "id": "navier-stokes",
-    "name": {
-      "ko": "나비에-스토크스 방정식",
-      "en": "Navier-Stokes Equations",
-      "ja": "ナビエ・ストークス方程式"
-    },
+    "name": { "ko": "나비에-스토크스 방정식", "en": "Navier-Stokes Equations" },
     "field": "partial-differential-equations",
     "subfield": "fluid",
     "difficulty": 5,
@@ -4613,7 +4444,7 @@
   },
   {
     "id": "separation-of-variables",
-    "name": { "ko": "변수 분리법", "en": "Separation of Variables", "ja": "変数分離法" },
+    "name": { "ko": "변수 분리법", "en": "Separation of Variables" },
     "field": "partial-differential-equations",
     "subfield": "methods",
     "difficulty": 3,
@@ -4625,7 +4456,7 @@
   },
   {
     "id": "greens-function",
-    "name": { "ko": "그린 함수", "en": "Green's Function", "ja": "グリーン関数" },
+    "name": { "ko": "그린 함수", "en": "Green's Function" },
     "field": "partial-differential-equations",
     "subfield": "methods",
     "difficulty": 5,
@@ -4637,7 +4468,7 @@
   },
   {
     "id": "finite-difference-method",
-    "name": { "ko": "유한 차분법", "en": "Finite Difference Method", "ja": "有限差分法" },
+    "name": { "ko": "유한 차분법", "en": "Finite Difference Method" },
     "field": "partial-differential-equations",
     "subfield": "numerical",
     "difficulty": 4,
@@ -4649,7 +4480,7 @@
   },
   {
     "id": "boundary-conditions",
-    "name": { "ko": "경계 조건", "en": "Boundary Conditions", "ja": "境界条件" },
+    "name": { "ko": "경계 조건", "en": "Boundary Conditions" },
     "field": "partial-differential-equations",
     "subfield": "foundations",
     "difficulty": 3,
@@ -4661,7 +4492,7 @@
   },
   {
     "id": "lu-decomposition",
-    "name": { "ko": "LU 분해", "en": "LU Decomposition", "ja": "LU分解" },
+    "name": { "ko": "LU 분해", "en": "LU Decomposition" },
     "field": "numerical-analysis",
     "subfield": "numerical-linear-algebra",
     "difficulty": 3,
@@ -4670,7 +4501,7 @@
   },
   {
     "id": "qr-decomposition",
-    "name": { "ko": "QR 분해", "en": "QR Decomposition", "ja": "QR分解" },
+    "name": { "ko": "QR 분해", "en": "QR Decomposition" },
     "field": "numerical-analysis",
     "subfield": "numerical-linear-algebra",
     "difficulty": 3,
@@ -4679,7 +4510,7 @@
   },
   {
     "id": "svd",
-    "name": { "ko": "특이값 분해", "en": "Singular Value Decomposition", "ja": "特異値分解" },
+    "name": { "ko": "특이값 분해", "en": "Singular Value Decomposition" },
     "field": "numerical-analysis",
     "subfield": "numerical-linear-algebra",
     "difficulty": 4,
@@ -4688,7 +4519,7 @@
   },
   {
     "id": "cholesky-decomposition",
-    "name": { "ko": "촐레스키 분해", "en": "Cholesky Decomposition", "ja": "コレスキー分解" },
+    "name": { "ko": "촐레스키 분해", "en": "Cholesky Decomposition" },
     "field": "numerical-analysis",
     "subfield": "numerical-linear-algebra",
     "difficulty": 3,
@@ -4697,7 +4528,7 @@
   },
   {
     "id": "iterative-methods",
-    "name": { "ko": "반복법", "en": "Iterative Methods", "ja": "反復法" },
+    "name": { "ko": "반복법", "en": "Iterative Methods" },
     "field": "numerical-analysis",
     "subfield": "numerical-linear-algebra",
     "difficulty": 3,
@@ -4706,7 +4537,7 @@
   },
   {
     "id": "conjugate-gradient",
-    "name": { "ko": "켤레 기울기법", "en": "Conjugate Gradient Method", "ja": "共役勾配法" },
+    "name": { "ko": "켤레 기울기법", "en": "Conjugate Gradient Method" },
     "field": "numerical-analysis",
     "subfield": "numerical-linear-algebra",
     "difficulty": 4,
@@ -4715,7 +4546,7 @@
   },
   {
     "id": "eigenvalue-algorithms",
-    "name": { "ko": "고유값 알고리즘", "en": "Eigenvalue Algorithms", "ja": "固有値アルゴリズム" },
+    "name": { "ko": "고유값 알고리즘", "en": "Eigenvalue Algorithms" },
     "field": "numerical-analysis",
     "subfield": "numerical-linear-algebra",
     "difficulty": 4,
@@ -4724,7 +4555,7 @@
   },
   {
     "id": "condition-number",
-    "name": { "ko": "조건수", "en": "Condition Number", "ja": "条件数" },
+    "name": { "ko": "조건수", "en": "Condition Number" },
     "field": "numerical-analysis",
     "subfield": "numerical-linear-algebra",
     "difficulty": 3,
@@ -4733,7 +4564,7 @@
   },
   {
     "id": "graph-coloring",
-    "name": { "ko": "그래프 색칠", "en": "Graph Coloring", "ja": "グラフ彩色" },
+    "name": { "ko": "그래프 색칠", "en": "Graph Coloring" },
     "field": "discrete-mathematics",
     "subfield": "graph-theory",
     "difficulty": 3,
@@ -4742,7 +4573,7 @@
   },
   {
     "id": "planar-graph",
-    "name": { "ko": "평면 그래프", "en": "Planar Graph", "ja": "平面グラフ" },
+    "name": { "ko": "평면 그래프", "en": "Planar Graph" },
     "field": "discrete-mathematics",
     "subfield": "graph-theory",
     "difficulty": 3,
@@ -4751,7 +4582,7 @@
   },
   {
     "id": "network-flow",
-    "name": { "ko": "네트워크 흐름", "en": "Network Flow", "ja": "ネットワークフロー" },
+    "name": { "ko": "네트워크 흐름", "en": "Network Flow" },
     "field": "discrete-mathematics",
     "subfield": "graph-theory",
     "difficulty": 4,
@@ -4760,11 +4591,7 @@
   },
   {
     "id": "spectral-graph-theory",
-    "name": {
-      "ko": "스펙트럼 그래프 이론",
-      "en": "Spectral Graph Theory",
-      "ja": "スペクトルグラフ理論"
-    },
+    "name": { "ko": "스펙트럼 그래프 이론", "en": "Spectral Graph Theory" },
     "field": "discrete-mathematics",
     "subfield": "graph-theory",
     "difficulty": 4,
@@ -4773,7 +4600,7 @@
   },
   {
     "id": "random-graphs",
-    "name": { "ko": "랜덤 그래프", "en": "Random Graphs", "ja": "ランダムグラフ" },
+    "name": { "ko": "랜덤 그래프", "en": "Random Graphs" },
     "field": "discrete-mathematics",
     "subfield": "graph-theory",
     "difficulty": 4,
@@ -4782,7 +4609,7 @@
   },
   {
     "id": "matching-theory",
-    "name": { "ko": "매칭 이론", "en": "Matching Theory", "ja": "マッチング理論" },
+    "name": { "ko": "매칭 이론", "en": "Matching Theory" },
     "field": "discrete-mathematics",
     "subfield": "graph-theory",
     "difficulty": 3,
@@ -4791,7 +4618,7 @@
   },
   {
     "id": "tree-algorithms",
-    "name": { "ko": "트리 알고리즘", "en": "Tree Algorithms", "ja": "木アルゴリズム" },
+    "name": { "ko": "트리 알고리즘", "en": "Tree Algorithms" },
     "field": "discrete-mathematics",
     "subfield": "graph-theory",
     "difficulty": 3,
@@ -4800,7 +4627,7 @@
   },
   {
     "id": "graph-isomorphism",
-    "name": { "ko": "그래프 동형", "en": "Graph Isomorphism", "ja": "グラフ同型" },
+    "name": { "ko": "그래프 동형", "en": "Graph Isomorphism" },
     "field": "discrete-mathematics",
     "subfield": "graph-theory",
     "difficulty": 4,
@@ -4809,11 +4636,7 @@
   },
   {
     "id": "godel-incompleteness",
-    "name": {
-      "ko": "괴델의 불완전성 정리",
-      "en": "Gödel's Incompleteness Theorems",
-      "ja": "ゲーデルの不完全性定理"
-    },
+    "name": { "ko": "괴델의 불완전성 정리", "en": "Gödel's Incompleteness Theorems" },
     "field": "logic",
     "subfield": "mathematical-logic",
     "difficulty": 5,
@@ -4822,7 +4645,7 @@
   },
   {
     "id": "model-theory",
-    "name": { "ko": "모델 이론", "en": "Model Theory", "ja": "モデル理論" },
+    "name": { "ko": "모델 이론", "en": "Model Theory" },
     "field": "logic",
     "subfield": "mathematical-logic",
     "difficulty": 5,
@@ -4831,7 +4654,7 @@
   },
   {
     "id": "proof-theory",
-    "name": { "ko": "증명 이론", "en": "Proof Theory", "ja": "証明論" },
+    "name": { "ko": "증명 이론", "en": "Proof Theory" },
     "field": "logic",
     "subfield": "mathematical-logic",
     "difficulty": 5,
@@ -4840,7 +4663,7 @@
   },
   {
     "id": "computability-theory",
-    "name": { "ko": "계산 가능성 이론", "en": "Computability Theory", "ja": "計算可能性理論" },
+    "name": { "ko": "계산 가능성 이론", "en": "Computability Theory" },
     "field": "logic",
     "subfield": "mathematical-logic",
     "difficulty": 4,
@@ -4849,7 +4672,7 @@
   },
   {
     "id": "modal-logic",
-    "name": { "ko": "양상 논리", "en": "Modal Logic", "ja": "様相論理" },
+    "name": { "ko": "양상 논리", "en": "Modal Logic" },
     "field": "logic",
     "subfield": "mathematical-logic",
     "difficulty": 4,
@@ -4858,7 +4681,7 @@
   },
   {
     "id": "type-theory",
-    "name": { "ko": "타입 이론", "en": "Type Theory", "ja": "型理論" },
+    "name": { "ko": "타입 이론", "en": "Type Theory" },
     "field": "logic",
     "subfield": "mathematical-logic",
     "difficulty": 5,
@@ -4867,7 +4690,7 @@
   },
   {
     "id": "forcing",
-    "name": { "ko": "강제법", "en": "Forcing", "ja": "強制法" },
+    "name": { "ko": "강제법", "en": "Forcing" },
     "field": "logic",
     "subfield": "set-theory",
     "difficulty": 5,
@@ -4876,7 +4699,7 @@
   },
   {
     "id": "descriptive-set-theory",
-    "name": { "ko": "기술집합론", "en": "Descriptive Set Theory", "ja": "記述集合論" },
+    "name": { "ko": "기술집합론", "en": "Descriptive Set Theory" },
     "field": "logic",
     "subfield": "set-theory",
     "difficulty": 5,
@@ -4885,7 +4708,7 @@
   },
   {
     "id": "bifurcation-theory",
-    "name": { "ko": "분기 이론", "en": "Bifurcation Theory", "ja": "分岐理論" },
+    "name": { "ko": "분기 이론", "en": "Bifurcation Theory" },
     "field": "analysis",
     "subfield": "dynamical-systems",
     "difficulty": 4,
@@ -4894,7 +4717,7 @@
   },
   {
     "id": "chaos-theory",
-    "name": { "ko": "카오스 이론", "en": "Chaos Theory", "ja": "カオス理論" },
+    "name": { "ko": "카오스 이론", "en": "Chaos Theory" },
     "field": "analysis",
     "subfield": "dynamical-systems",
     "difficulty": 4,
@@ -4903,7 +4726,7 @@
   },
   {
     "id": "lyapunov-exponents",
-    "name": { "ko": "랴푸노프 지수", "en": "Lyapunov Exponents", "ja": "リャプノフ指数" },
+    "name": { "ko": "랴푸노프 지수", "en": "Lyapunov Exponents" },
     "field": "analysis",
     "subfield": "dynamical-systems",
     "difficulty": 4,
@@ -4912,7 +4735,7 @@
   },
   {
     "id": "strange-attractors",
-    "name": { "ko": "이상한 끌개", "en": "Strange Attractors", "ja": "ストレンジアトラクター" },
+    "name": { "ko": "이상한 끌개", "en": "Strange Attractors" },
     "field": "analysis",
     "subfield": "dynamical-systems",
     "difficulty": 5,
@@ -4921,7 +4744,7 @@
   },
   {
     "id": "hamiltonian-dynamics",
-    "name": { "ko": "해밀턴 역학", "en": "Hamiltonian Dynamics", "ja": "ハミルトン力学" },
+    "name": { "ko": "해밀턴 역학", "en": "Hamiltonian Dynamics" },
     "field": "analysis",
     "subfield": "dynamical-systems",
     "difficulty": 4,
@@ -4930,7 +4753,7 @@
   },
   {
     "id": "ergodic-theory",
-    "name": { "ko": "에르고드 이론", "en": "Ergodic Theory", "ja": "エルゴード理論" },
+    "name": { "ko": "에르고드 이론", "en": "Ergodic Theory" },
     "field": "analysis",
     "subfield": "dynamical-systems",
     "difficulty": 5,
@@ -4939,7 +4762,7 @@
   },
   {
     "id": "center-manifold",
-    "name": { "ko": "중심 다양체", "en": "Center Manifold", "ja": "中心多様体" },
+    "name": { "ko": "중심 다양체", "en": "Center Manifold" },
     "field": "analysis",
     "subfield": "dynamical-systems",
     "difficulty": 5,
@@ -4948,7 +4771,7 @@
   },
   {
     "id": "poincare-map",
-    "name": { "ko": "푸앵카레 사상", "en": "Poincaré Map", "ja": "ポアンカレ写像" },
+    "name": { "ko": "푸앵카레 사상", "en": "Poincaré Map" },
     "field": "analysis",
     "subfield": "dynamical-systems",
     "difficulty": 4,
@@ -4957,7 +4780,7 @@
   },
   {
     "id": "tensor-definition",
-    "name": { "ko": "텐서", "en": "Tensor", "ja": "テンソル" },
+    "name": { "ko": "텐서", "en": "Tensor" },
     "field": "algebra",
     "subfield": "tensor-analysis",
     "difficulty": 4,
@@ -4966,7 +4789,7 @@
   },
   {
     "id": "tensor-product",
-    "name": { "ko": "텐서곱", "en": "Tensor Product", "ja": "テンソル積" },
+    "name": { "ko": "텐서곱", "en": "Tensor Product" },
     "field": "algebra",
     "subfield": "tensor-analysis",
     "difficulty": 4,
@@ -4975,7 +4798,7 @@
   },
   {
     "id": "covariant-contravariant",
-    "name": { "ko": "공변/반변", "en": "Covariant/Contravariant", "ja": "共変/反変" },
+    "name": { "ko": "공변/반변", "en": "Covariant/Contravariant" },
     "field": "algebra",
     "subfield": "tensor-analysis",
     "difficulty": 4,
@@ -4984,7 +4807,7 @@
   },
   {
     "id": "metric-tensor",
-    "name": { "ko": "계량 텐서", "en": "Metric Tensor", "ja": "計量テンソル" },
+    "name": { "ko": "계량 텐서", "en": "Metric Tensor" },
     "field": "geometry",
     "subfield": "tensor-analysis",
     "difficulty": 4,
@@ -4993,7 +4816,7 @@
   },
   {
     "id": "christoffel-symbols",
-    "name": { "ko": "크리스토펠 기호", "en": "Christoffel Symbols", "ja": "クリストッフェル記号" },
+    "name": { "ko": "크리스토펠 기호", "en": "Christoffel Symbols" },
     "field": "geometry",
     "subfield": "tensor-analysis",
     "difficulty": 4,
@@ -5002,7 +4825,7 @@
   },
   {
     "id": "covariant-derivative",
-    "name": { "ko": "공변 미분", "en": "Covariant Derivative", "ja": "共変微分" },
+    "name": { "ko": "공변 미분", "en": "Covariant Derivative" },
     "field": "geometry",
     "subfield": "tensor-analysis",
     "difficulty": 5,
@@ -5011,11 +4834,7 @@
   },
   {
     "id": "riemann-curvature-tensor",
-    "name": {
-      "ko": "리만 곡률 텐서",
-      "en": "Riemann Curvature Tensor",
-      "ja": "リーマン曲率テンソル"
-    },
+    "name": { "ko": "리만 곡률 텐서", "en": "Riemann Curvature Tensor" },
     "field": "geometry",
     "subfield": "tensor-analysis",
     "difficulty": 5,
@@ -5024,7 +4843,7 @@
   },
   {
     "id": "ricci-tensor",
-    "name": { "ko": "리치 텐서", "en": "Ricci Tensor", "ja": "リッチテンソル" },
+    "name": { "ko": "리치 텐서", "en": "Ricci Tensor" },
     "field": "geometry",
     "subfield": "tensor-analysis",
     "difficulty": 5,
@@ -5033,7 +4852,7 @@
   },
   {
     "id": "lie-group",
-    "name": { "ko": "리 군", "en": "Lie Group", "ja": "リー群" },
+    "name": { "ko": "리 군", "en": "Lie Group" },
     "field": "algebra",
     "subfield": "lie-theory",
     "difficulty": 5,
@@ -5042,7 +4861,7 @@
   },
   {
     "id": "lie-algebra",
-    "name": { "ko": "리 대수", "en": "Lie Algebra", "ja": "リー代数" },
+    "name": { "ko": "리 대수", "en": "Lie Algebra" },
     "field": "algebra",
     "subfield": "lie-theory",
     "difficulty": 5,
@@ -5051,7 +4870,7 @@
   },
   {
     "id": "exponential-map-lie",
-    "name": { "ko": "지수 사상", "en": "Exponential Map", "ja": "指数写像" },
+    "name": { "ko": "지수 사상", "en": "Exponential Map" },
     "field": "algebra",
     "subfield": "lie-theory",
     "difficulty": 5,
@@ -5060,7 +4879,7 @@
   },
   {
     "id": "classical-lie-groups",
-    "name": { "ko": "고전 리 군", "en": "Classical Lie Groups", "ja": "古典リー群" },
+    "name": { "ko": "고전 리 군", "en": "Classical Lie Groups" },
     "field": "algebra",
     "subfield": "lie-theory",
     "difficulty": 4,
@@ -5069,7 +4888,7 @@
   },
   {
     "id": "adjoint-representation",
-    "name": { "ko": "딸림 표현", "en": "Adjoint Representation", "ja": "随伴表現" },
+    "name": { "ko": "딸림 표현", "en": "Adjoint Representation" },
     "field": "algebra",
     "subfield": "lie-theory",
     "difficulty": 5,
@@ -5078,7 +4897,7 @@
   },
   {
     "id": "killing-form",
-    "name": { "ko": "킬링 형식", "en": "Killing Form", "ja": "キリング形式" },
+    "name": { "ko": "킬링 형식", "en": "Killing Form" },
     "field": "algebra",
     "subfield": "lie-theory",
     "difficulty": 5,
@@ -5087,7 +4906,7 @@
   },
   {
     "id": "root-system",
-    "name": { "ko": "근계", "en": "Root System", "ja": "ルート系" },
+    "name": { "ko": "근계", "en": "Root System" },
     "field": "algebra",
     "subfield": "lie-theory",
     "difficulty": 5,
@@ -5096,7 +4915,7 @@
   },
   {
     "id": "semisimple-lie-algebra",
-    "name": { "ko": "반단순 리 대수", "en": "Semisimple Lie Algebra", "ja": "半単純リー代数" },
+    "name": { "ko": "반단순 리 대수", "en": "Semisimple Lie Algebra" },
     "field": "algebra",
     "subfield": "lie-theory",
     "difficulty": 5,
@@ -5105,7 +4924,7 @@
   },
   {
     "id": "fundamental-group",
-    "name": { "ko": "기본군", "en": "Fundamental Group", "ja": "基本群" },
+    "name": { "ko": "기본군", "en": "Fundamental Group" },
     "field": "topology",
     "subfield": "algebraic-topology",
     "difficulty": 4,
@@ -5114,7 +4933,7 @@
   },
   {
     "id": "homology-group",
-    "name": { "ko": "호몰로지 군", "en": "Homology Group", "ja": "ホモロジー群" },
+    "name": { "ko": "호몰로지 군", "en": "Homology Group" },
     "field": "topology",
     "subfield": "algebraic-topology",
     "difficulty": 5,
@@ -5123,7 +4942,7 @@
   },
   {
     "id": "cohomology-group",
-    "name": { "ko": "코호몰로지 군", "en": "Cohomology Group", "ja": "コホモロジー群" },
+    "name": { "ko": "코호몰로지 군", "en": "Cohomology Group" },
     "field": "topology",
     "subfield": "algebraic-topology",
     "difficulty": 5,
@@ -5132,7 +4951,7 @@
   },
   {
     "id": "homotopy-groups",
-    "name": { "ko": "호모토피 군", "en": "Homotopy Groups", "ja": "ホモトピー群" },
+    "name": { "ko": "호모토피 군", "en": "Homotopy Groups" },
     "field": "topology",
     "subfield": "algebraic-topology",
     "difficulty": 5,
@@ -5141,7 +4960,7 @@
   },
   {
     "id": "covering-space",
-    "name": { "ko": "피복 공간", "en": "Covering Space", "ja": "被覆空間" },
+    "name": { "ko": "피복 공간", "en": "Covering Space" },
     "field": "topology",
     "subfield": "algebraic-topology",
     "difficulty": 4,
@@ -5150,7 +4969,7 @@
   },
   {
     "id": "exact-sequence",
-    "name": { "ko": "완전 열", "en": "Exact Sequence", "ja": "完全列" },
+    "name": { "ko": "완전 열", "en": "Exact Sequence" },
     "field": "topology",
     "subfield": "algebraic-topology",
     "difficulty": 4,
@@ -5159,7 +4978,7 @@
   },
   {
     "id": "cw-complex",
-    "name": { "ko": "CW 복합체", "en": "CW Complex", "ja": "CW複体" },
+    "name": { "ko": "CW 복합체", "en": "CW Complex" },
     "field": "topology",
     "subfield": "algebraic-topology",
     "difficulty": 4,
@@ -5168,7 +4987,7 @@
   },
   {
     "id": "euler-characteristic",
-    "name": { "ko": "오일러 지표", "en": "Euler Characteristic", "ja": "オイラー標数" },
+    "name": { "ko": "오일러 지표", "en": "Euler Characteristic" },
     "field": "topology",
     "subfield": "algebraic-topology",
     "difficulty": 3,
@@ -5177,11 +4996,7 @@
   },
   {
     "id": "fourier-series-advanced",
-    "name": {
-      "ko": "푸리에 급수 심화",
-      "en": "Fourier Series (Advanced)",
-      "ja": "フーリエ級数（発展）"
-    },
+    "name": { "ko": "푸리에 급수 심화", "en": "Fourier Series (Advanced)" },
     "field": "analysis",
     "subfield": "harmonic-analysis",
     "difficulty": 4,
@@ -5190,11 +5005,7 @@
   },
   {
     "id": "fourier-transform-advanced",
-    "name": {
-      "ko": "푸리에 변환 심화",
-      "en": "Fourier Transform (Advanced)",
-      "ja": "フーリエ変換（発展）"
-    },
+    "name": { "ko": "푸리에 변환 심화", "en": "Fourier Transform (Advanced)" },
     "field": "analysis",
     "subfield": "harmonic-analysis",
     "difficulty": 4,
@@ -5203,7 +5014,7 @@
   },
   {
     "id": "distribution-theory",
-    "name": { "ko": "초함수론", "en": "Distribution Theory", "ja": "超関数論" },
+    "name": { "ko": "초함수론", "en": "Distribution Theory" },
     "field": "analysis",
     "subfield": "harmonic-analysis",
     "difficulty": 5,
@@ -5212,7 +5023,7 @@
   },
   {
     "id": "wavelets",
-    "name": { "ko": "웨이블릿", "en": "Wavelets", "ja": "ウェーブレット" },
+    "name": { "ko": "웨이블릿", "en": "Wavelets" },
     "field": "analysis",
     "subfield": "harmonic-analysis",
     "difficulty": 4,
@@ -5221,7 +5032,7 @@
   },
   {
     "id": "spherical-harmonics",
-    "name": { "ko": "구면 조화 함수", "en": "Spherical Harmonics", "ja": "球面調和関数" },
+    "name": { "ko": "구면 조화 함수", "en": "Spherical Harmonics" },
     "field": "analysis",
     "subfield": "harmonic-analysis",
     "difficulty": 4,
@@ -5230,7 +5041,7 @@
   },
   {
     "id": "singular-integrals",
-    "name": { "ko": "특이 적분", "en": "Singular Integrals", "ja": "特異積分" },
+    "name": { "ko": "특이 적분", "en": "Singular Integrals" },
     "field": "analysis",
     "subfield": "harmonic-analysis",
     "difficulty": 5,
@@ -5239,11 +5050,7 @@
   },
   {
     "id": "fourier-analysis-groups",
-    "name": {
-      "ko": "군 위의 푸리에 해석",
-      "en": "Fourier Analysis on Groups",
-      "ja": "群上のフーリエ解析"
-    },
+    "name": { "ko": "군 위의 푸리에 해석", "en": "Fourier Analysis on Groups" },
     "field": "analysis",
     "subfield": "harmonic-analysis",
     "difficulty": 5,
@@ -5252,11 +5059,7 @@
   },
   {
     "id": "littlewood-paley-theory",
-    "name": {
-      "ko": "리틀우드-페일리 이론",
-      "en": "Littlewood-Paley Theory",
-      "ja": "リトルウッド・ペイリー理論"
-    },
+    "name": { "ko": "리틀우드-페일리 이론", "en": "Littlewood-Paley Theory" },
     "field": "analysis",
     "subfield": "harmonic-analysis",
     "difficulty": 5,

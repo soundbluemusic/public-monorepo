@@ -6,7 +6,6 @@ export const cryptographyConcepts: MathConcept[] = [
     name: {
       ko: 'RSA 알고리즘',
       en: 'RSA Algorithm',
-      ja: 'RSA暗号',
     },
     field: 'cryptography',
     subfield: 'public-key',
@@ -34,17 +33,6 @@ export const cryptographyConcepts: MathConcept[] = [
         examples: ['p=61, q=53 → n=3233, φ(n)=3120', 'e=17 → d=2753'],
         applications: ['HTTPS/SSL', 'Digital signatures', 'Certificates'],
       },
-      ja: {
-        definition: '大きな素数の積の因数分解が困難なことに基づく公開鍵暗号',
-        formulas: [
-          '鍵生成: n = p·q, φ(n) = (p-1)(q-1)',
-          '暗号化: c ≡ m^e (mod n)',
-          '復号: m ≡ c^d (mod n)',
-          'ed ≡ 1 (mod φ(n))',
-        ],
-        examples: ['p=61, q=53 → n=3233, φ(n)=3120', 'e=17 → d=2753'],
-        applications: ['HTTPS/SSL', 'デジタル署名', '証明書'],
-      },
     },
     latex: 'c \\equiv m^e \\pmod{n}',
     relations: {
@@ -60,7 +48,6 @@ export const cryptographyConcepts: MathConcept[] = [
     name: {
       ko: '타원곡선 암호',
       en: 'Elliptic Curve Cryptography',
-      ja: '楕円曲線暗号',
     },
     field: 'cryptography',
     subfield: 'public-key',
@@ -86,16 +73,6 @@ export const cryptographyConcepts: MathConcept[] = [
         examples: ['secp256k1 (Bitcoin)', 'Curve25519'],
         applications: ['Bitcoin', 'TLS', 'Signal protocol'],
       },
-      ja: {
-        definition: '楕円曲線上の離散対数問題に基づく暗号システム',
-        formulas: [
-          '楕円曲線: y² = x³ + ax + b',
-          '点の加算: P + Q = R',
-          'スカラー倍: kP = P + P + ... + P (k回)',
-        ],
-        examples: ['secp256k1 (ビットコイン)', 'Curve25519'],
-        applications: ['ビットコイン', 'TLS', 'Signalプロトコル'],
-      },
     },
     latex: 'y^2 = x^3 + ax + b',
     relations: {
@@ -111,7 +88,6 @@ export const cryptographyConcepts: MathConcept[] = [
     name: {
       ko: '디피-헬만 키 교환',
       en: 'Diffie-Hellman Key Exchange',
-      ja: 'ディフィー・ヘルマン鍵交換',
     },
     field: 'cryptography',
     subfield: 'key-exchange',
@@ -140,17 +116,6 @@ export const cryptographyConcepts: MathConcept[] = [
         examples: ['g=5, p=23, a=6, b=15', 'A=8, B=19, K=2'],
         applications: ['TLS/SSL', 'VPN', 'SSH'],
       },
-      ja: {
-        definition: '安全でないチャネルで二者が秘密鍵を共有できるプロトコル',
-        formulas: [
-          '公開: g, p (素数)',
-          'Aがa選択: A = g^a mod p',
-          'Bがb選択: B = g^b mod p',
-          '共有秘密: K = g^{ab} mod p',
-        ],
-        examples: ['g=5, p=23, a=6, b=15', 'A=8, B=19, K=2'],
-        applications: ['TLS/SSL', 'VPN', 'SSH'],
-      },
     },
     latex: 'K = g^{ab} \\mod p',
     relations: {
@@ -166,7 +131,6 @@ export const cryptographyConcepts: MathConcept[] = [
     name: {
       ko: 'AES 암호화',
       en: 'AES Encryption',
-      ja: 'AES暗号',
     },
     field: 'cryptography',
     subfield: 'symmetric-key',
@@ -184,12 +148,6 @@ export const cryptographyConcepts: MathConcept[] = [
         examples: ['SubBytes (S-box substitution)', 'ShiftRows, MixColumns', 'AddRoundKey'],
         applications: ['File encryption', 'Disk encryption', 'HTTPS'],
       },
-      ja: {
-        definition: '最も広く使われている対称鍵ブロック暗号 (Advanced Encryption Standard)',
-        formulas: ['ブロックサイズ: 128ビット', '鍵長: 128/192/256ビット', 'ラウンド数: 10/12/14'],
-        examples: ['SubBytes (S-box置換)', 'ShiftRows, MixColumns', 'AddRoundKey'],
-        applications: ['ファイル暗号化', 'ディスク暗号化', 'HTTPS'],
-      },
     },
     latex: 'C = E_K(P)',
     relations: {
@@ -205,7 +163,6 @@ export const cryptographyConcepts: MathConcept[] = [
     name: {
       ko: '암호학적 해시 함수',
       en: 'Cryptographic Hash Function',
-      ja: '暗号学的ハッシュ関数',
     },
     field: 'cryptography',
     subfield: 'hash',
@@ -231,16 +188,6 @@ export const cryptographyConcepts: MathConcept[] = [
         examples: ['SHA-256: 256-bit output', 'SHA-3 (Keccak)', 'BLAKE2'],
         applications: ['Password storage', 'Integrity verification', 'Digital signatures'],
       },
-      ja: {
-        definition: '任意長のデータを固定長のハッシュ値に変換する一方向関数',
-        formulas: [
-          'H: {0,1}* → {0,1}^n',
-          '衝突耐性: H(x) = H(y)となるx≠yを見つけるのが困難',
-          '原像耐性: H(x) = hとなるxを見つけるのが困難',
-        ],
-        examples: ['SHA-256: 256ビット出力', 'SHA-3 (Keccak)', 'BLAKE2'],
-        applications: ['パスワード保存', '完全性検証', 'デジタル署名'],
-      },
     },
     latex: 'H: \\{0,1\\}^* \\rightarrow \\{0,1\\}^n',
     relations: {
@@ -256,7 +203,6 @@ export const cryptographyConcepts: MathConcept[] = [
     name: {
       ko: '디지털 서명',
       en: 'Digital Signature',
-      ja: 'デジタル署名',
     },
     field: 'cryptography',
     subfield: 'authentication',
@@ -282,16 +228,6 @@ export const cryptographyConcepts: MathConcept[] = [
         examples: ['ECDSA (Bitcoin)', 'RSA-PSS', 'Ed25519'],
         applications: ['E-contracts', 'SSL certificates', 'Software distribution'],
       },
-      ja: {
-        definition: 'メッセージの真正性と完全性を保証する暗号技術',
-        formulas: [
-          '署名: σ = Sign(SK, m)',
-          '検証: Verify(PK, m, σ) → {true, false}',
-          'RSA署名: σ = H(m)^d mod n',
-        ],
-        examples: ['ECDSA (ビットコイン)', 'RSA-PSS', 'Ed25519'],
-        applications: ['電子契約', 'SSL証明書', 'ソフトウェア配布'],
-      },
     },
     latex: '\\sigma = \\text{Sign}(SK, m)',
     relations: {
@@ -307,7 +243,6 @@ export const cryptographyConcepts: MathConcept[] = [
     name: {
       ko: '영지식 증명',
       en: 'Zero-Knowledge Proof',
-      ja: 'ゼロ知識証明',
     },
     field: 'cryptography',
     subfield: 'protocols',
@@ -333,16 +268,6 @@ export const cryptographyConcepts: MathConcept[] = [
         examples: ['Graph coloring problem', 'zk-SNARKs', 'zk-STARKs'],
         applications: ['Privacy coins', 'Identity proof', 'Voting systems'],
       },
-      ja: {
-        definition: '知識を明かさずにその知識を持っていることを証明する方法',
-        formulas: [
-          '完全性: 真なら検証者は納得',
-          '健全性: 偽なら騙せない',
-          'ゼロ知識性: 秘密情報の漏洩なし',
-        ],
-        examples: ['グラフ彩色問題', 'zk-SNARKs', 'zk-STARKs'],
-        applications: ['プライバシーコイン', '身元証明', '投票システム'],
-      },
     },
     latex: '\\text{ZKP}: (P, V) \\rightarrow \\{\\text{accept}, \\text{reject}\\}',
     relations: {
@@ -358,7 +283,6 @@ export const cryptographyConcepts: MathConcept[] = [
     name: {
       ko: '모듈러 연산',
       en: 'Modular Arithmetic',
-      ja: 'モジュラ演算',
     },
     field: 'cryptography',
     subfield: 'foundations',
@@ -383,16 +307,6 @@ export const cryptographyConcepts: MathConcept[] = [
         ],
         examples: ['17 ≡ 5 (mod 12)', '7⁻¹ ≡ 3 (mod 10)'],
         applications: ['Cryptography', 'Hash functions', 'Error detection'],
-      },
-      ja: {
-        definition: '剰余演算に基づく整数演算体系（時計演算）',
-        formulas: [
-          'a ≡ b (mod n) ⟺ n | (a-b)',
-          '(a + b) mod n = ((a mod n) + (b mod n)) mod n',
-          '(a · b) mod n = ((a mod n) · (b mod n)) mod n',
-        ],
-        examples: ['17 ≡ 5 (mod 12)', '7⁻¹ ≡ 3 (mod 10)'],
-        applications: ['暗号学', 'ハッシュ関数', 'エラー検出'],
       },
     },
     latex: 'a \\equiv b \\pmod{n}',

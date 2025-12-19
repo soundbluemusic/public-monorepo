@@ -6,7 +6,6 @@ export const statisticsConcepts: MathConcept[] = [
     name: {
       ko: '가설검정',
       en: 'Hypothesis Testing',
-      ja: '仮説検定',
     },
     field: 'statistics',
     subfield: 'inference',
@@ -35,17 +34,6 @@ export const statisticsConcepts: MathConcept[] = [
         examples: ['t-test', 'χ²-test', 'F-test'],
         applications: ['Medical research', 'Quality control', 'A/B testing'],
       },
-      ja: {
-        definition: '標本データを使用して母集団についての仮説の妥当性を検証する統計的方法',
-        formulas: [
-          '帰無仮説 H₀ vs 対立仮説 H₁',
-          '検定統計量 T',
-          'p値 = P(T ≥ t | H₀)',
-          '有意水準 α (通常0.05)',
-        ],
-        examples: ['t検定', 'χ²検定', 'F検定'],
-        applications: ['医学研究', '品質管理', 'A/Bテスト'],
-      },
     },
     latex: 'p\\text{-value} = P(T \\geq t | H_0)',
     relations: {
@@ -61,7 +49,6 @@ export const statisticsConcepts: MathConcept[] = [
     name: {
       ko: '신뢰구간',
       en: 'Confidence Interval',
-      ja: '信頼区間',
     },
     field: 'statistics',
     subfield: 'inference',
@@ -89,17 +76,6 @@ export const statisticsConcepts: MathConcept[] = [
         examples: ['95% CI for μ', '99% CI for proportion'],
         applications: ['Polling', 'Medical research', 'Quality estimation'],
       },
-      ja: {
-        definition:
-          '母数が含まれると予想される値の範囲。95%信頼区間は繰り返し標本の95%が真の値を含む',
-        formulas: [
-          '平均のCI: x̄ ± z_{α/2} · σ/√n',
-          't-CI: x̄ ± t_{α/2,n-1} · s/√n',
-          '比率のCI: p̂ ± z_{α/2}√(p̂(1-p̂)/n)',
-        ],
-        examples: ['95% CI for μ', '99% CI for proportion'],
-        applications: ['世論調査', '医学研究', '品質推定'],
-      },
     },
     latex: '\\bar{x} \\pm z_{\\alpha/2} \\cdot \\frac{\\sigma}{\\sqrt{n}}',
     relations: {
@@ -115,7 +91,6 @@ export const statisticsConcepts: MathConcept[] = [
     name: {
       ko: '회귀분석',
       en: 'Regression Analysis',
-      ja: '回帰分析',
     },
     field: 'statistics',
     subfield: 'modeling',
@@ -144,17 +119,6 @@ export const statisticsConcepts: MathConcept[] = [
         examples: ['Stock prediction', 'Sales analysis', 'Medical prognosis'],
         applications: ['Economics', 'Marketing', 'Scientific research'],
       },
-      ja: {
-        definition: '変数間の関係をモデル化し予測する統計的方法',
-        formulas: [
-          '単純線形: y = β₀ + β₁x + ε',
-          '重回帰: y = β₀ + Σβᵢxᵢ + ε',
-          'OLS: min Σ(yᵢ - ŷᵢ)²',
-          'R²: 決定係数',
-        ],
-        examples: ['株価予測', '売上分析', '医療予後'],
-        applications: ['経済学', 'マーケティング', '科学研究'],
-      },
     },
     latex: 'y = \\beta_0 + \\beta_1 x + \\epsilon',
     relations: {
@@ -170,7 +134,6 @@ export const statisticsConcepts: MathConcept[] = [
     name: {
       ko: '분산분석 (ANOVA)',
       en: 'Analysis of Variance (ANOVA)',
-      ja: '分散分析 (ANOVA)',
     },
     field: 'statistics',
     subfield: 'inference',
@@ -201,16 +164,6 @@ export const statisticsConcepts: MathConcept[] = [
         ],
         applications: ['Experimental design', 'Medicine', 'Psychology'],
       },
-      ja: {
-        definition: '3群以上の平均差を検定する方法。群間/群内分散を比較',
-        formulas: [
-          'F = MS_between / MS_within',
-          'SS_total = SS_between + SS_within',
-          'df_between = k-1, df_within = N-k',
-        ],
-        examples: ['薬効比較', '教授法効果', '製品品質比較'],
-        applications: ['実験計画', '医学', '心理学'],
-      },
     },
     latex: 'F = \\frac{MS_{between}}{MS_{within}}',
     relations: {
@@ -226,7 +179,6 @@ export const statisticsConcepts: MathConcept[] = [
     name: {
       ko: '베이지안 추론',
       en: 'Bayesian Inference',
-      ja: 'ベイズ推論',
     },
     field: 'statistics',
     subfield: 'bayesian',
@@ -253,16 +205,6 @@ export const statisticsConcepts: MathConcept[] = [
         examples: ['Spam filter', 'Medical diagnosis', 'Recommendation systems'],
         applications: ['Machine learning', 'Decision making', 'A/B testing'],
       },
-      ja: {
-        definition: '事前知識とデータを組み合わせて事後確率を計算する統計的推論方法',
-        formulas: [
-          'P(θ|data) ∝ P(data|θ) · P(θ)',
-          '事後 ∝ 尤度 × 事前',
-          'ベイズファクター: BF = P(data|M₁)/P(data|M₂)',
-        ],
-        examples: ['スパムフィルター', '医療診断', 'レコメンドシステム'],
-        applications: ['機械学習', '意思決定', 'A/Bテスト'],
-      },
     },
     latex: 'P(\\theta|\\text{data}) \\propto P(\\text{data}|\\theta) \\cdot P(\\theta)',
     relations: {
@@ -278,7 +220,6 @@ export const statisticsConcepts: MathConcept[] = [
     name: {
       ko: '최대가능도 추정',
       en: 'Maximum Likelihood Estimation',
-      ja: '最尤推定',
     },
     field: 'statistics',
     subfield: 'estimation',
@@ -304,16 +245,6 @@ export const statisticsConcepts: MathConcept[] = [
         examples: ['Normal MLE: μ̂=x̄, σ̂²=s²', 'Bernoulli MLE: p̂ = x̄'],
         applications: ['Parameter estimation', 'Machine learning', 'Statistical modeling'],
       },
-      ja: {
-        definition: '観測データを最もよく説明するパラメータを見つける推定方法',
-        formulas: [
-          '尤度: L(θ) = P(data|θ) = ∏P(xᵢ|θ)',
-          '対数尤度: ℓ(θ) = Σlog P(xᵢ|θ)',
-          'MLE: θ̂ = argmax L(θ)',
-        ],
-        examples: ['正規分布 MLE: μ̂=x̄, σ̂²=s²', 'ベルヌーイ MLE: p̂ = x̄'],
-        applications: ['パラメータ推定', '機械学習', '統計モデリング'],
-      },
     },
     latex: '\\hat{\\theta} = \\arg\\max_\\theta L(\\theta)',
     relations: {
@@ -329,7 +260,6 @@ export const statisticsConcepts: MathConcept[] = [
     name: {
       ko: '시계열 분석',
       en: 'Time Series Analysis',
-      ja: '時系列分析',
     },
     field: 'statistics',
     subfield: 'modeling',
@@ -357,17 +287,6 @@ export const statisticsConcepts: MathConcept[] = [
         examples: ['Stock forecasting', 'Temperature prediction', 'Demand forecasting'],
         applications: ['Finance', 'Meteorology', 'Economics'],
       },
-      ja: {
-        definition: '時間に沿って観測されたデータのパターンを分析し予測する方法',
-        formulas: [
-          'AR(p): Xₜ = Σφᵢ Xₜ₋ᵢ + εₜ',
-          'MA(q): Xₜ = εₜ + Σθⱼ εₜ₋ⱼ',
-          'ARIMA(p,d,q)',
-          '定常性: E[Xₜ], Var[Xₜ] 一定',
-        ],
-        examples: ['株価予測', '気温予測', '需要予測'],
-        applications: ['金融', '気象学', '経済学'],
-      },
     },
     latex: 'X_t = \\sum_{i=1}^{p} \\phi_i X_{t-i} + \\epsilon_t',
     relations: {
@@ -383,7 +302,6 @@ export const statisticsConcepts: MathConcept[] = [
     name: {
       ko: '카이제곱 검정',
       en: 'Chi-Square Test',
-      ja: 'カイ二乗検定',
     },
     field: 'statistics',
     subfield: 'inference',
@@ -401,12 +319,6 @@ export const statisticsConcepts: MathConcept[] = [
         formulas: ['χ² = Σ(O-E)²/E', 'Independence: df = (r-1)(c-1)', 'Goodness-of-fit: df = k-1'],
         examples: ['Gender and preference independence', 'Dice fairness', 'Genetic ratios'],
         applications: ['Surveys', 'Quality control', 'Genetics'],
-      },
-      ja: {
-        definition: 'カテゴリカルデータの独立性または適合度を検定するノンパラメトリック法',
-        formulas: ['χ² = Σ(O-E)²/E', '独立性検定: df = (r-1)(c-1)', '適合度検定: df = k-1'],
-        examples: ['性別と好みの独立性', 'サイコロの公平性', '遺伝比率'],
-        applications: ['アンケート調査', '品質管理', '遺伝学'],
       },
     },
     latex: '\\chi^2 = \\sum \\frac{(O - E)^2}{E}',

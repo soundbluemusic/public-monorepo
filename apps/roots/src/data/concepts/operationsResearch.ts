@@ -6,7 +6,6 @@ export const operationsResearchConcepts: MathConcept[] = [
     name: {
       ko: '선형 계획법',
       en: 'Linear Programming',
-      ja: '線形計画法',
     },
     field: 'operations-research',
     subfield: 'optimization',
@@ -24,12 +23,6 @@ export const operationsResearchConcepts: MathConcept[] = [
         examples: ['Production planning', 'Transportation problem', 'Resource allocation'],
         applications: ['Manufacturing', 'Logistics', 'Finance'],
       },
-      ja: {
-        definition: '線形制約条件の下で線形目的関数を最適化する方法',
-        formulas: ['max c^T x', 's.t. Ax ≤ b', 'x ≥ 0', 'シンプレックス法'],
-        examples: ['生産計画', '輸送問題', '資源配分'],
-        applications: ['製造業', '物流', '金融'],
-      },
     },
     latex: '\\max c^T x \\quad \\text{s.t.} \\quad Ax \\leq b, \\; x \\geq 0',
     relations: {
@@ -45,7 +38,6 @@ export const operationsResearchConcepts: MathConcept[] = [
     name: {
       ko: '정수 계획법',
       en: 'Integer Programming',
-      ja: '整数計画法',
     },
     field: 'operations-research',
     subfield: 'optimization',
@@ -71,12 +63,6 @@ export const operationsResearchConcepts: MathConcept[] = [
         examples: ['Scheduling', 'Facility location', 'Vehicle routing'],
         applications: ['Airlines', 'Telecommunications', 'Supply chain'],
       },
-      ja: {
-        definition: '変数が整数値のみを取る最適化問題',
-        formulas: ['max c^T x, s.t. Ax ≤ b, x ∈ ℤⁿ', 'MIP: 一部の変数が整数', '分枝限定法'],
-        examples: ['スケジューリング', '施設配置', '配送経路'],
-        applications: ['航空', '通信', 'サプライチェーン'],
-      },
     },
     latex: '\\max c^T x \\quad \\text{s.t.} \\quad Ax \\leq b, \\; x \\in \\mathbb{Z}^n',
     relations: {
@@ -92,7 +78,6 @@ export const operationsResearchConcepts: MathConcept[] = [
     name: {
       ko: '네트워크 흐름',
       en: 'Network Flow',
-      ja: 'ネットワークフロー',
     },
     field: 'operations-research',
     subfield: 'networks',
@@ -118,16 +103,6 @@ export const operationsResearchConcepts: MathConcept[] = [
         examples: ['Traffic flow', 'Data transmission', 'Pipeline systems'],
         applications: ['Telecommunications', 'Transportation', 'Supply chain'],
       },
-      ja: {
-        definition: 'グラフにおけるフローの最適化。最大フロー、最小費用フローなど',
-        formulas: [
-          '最大フロー最小カット定理: max flow = min cut',
-          'フロー保存: Σf_in = Σf_out',
-          'フォード・ファルカーソン法',
-        ],
-        examples: ['交通フロー', 'データ伝送', 'パイプラインシステム'],
-        applications: ['通信', '輸送', 'サプライチェーン'],
-      },
     },
     latex: '\\max f \\quad \\text{s.t. flow conservation}',
     relations: {
@@ -143,7 +118,6 @@ export const operationsResearchConcepts: MathConcept[] = [
     name: {
       ko: '대기행렬 이론',
       en: 'Queueing Theory',
-      ja: '待ち行列理論',
     },
     field: 'operations-research',
     subfield: 'stochastic',
@@ -172,17 +146,6 @@ export const operationsResearchConcepts: MathConcept[] = [
         examples: ['Bank tellers', 'Call centers', 'Server queues'],
         applications: ['Service design', 'Capacity planning', 'System analysis'],
       },
-      ja: {
-        definition: '待ち行列システムの数学的分析。到着、サービス、待ち時間のモデル化',
-        formulas: [
-          'M/M/1: λ < μなら安定',
-          '利用率: ρ = λ/μ',
-          '平均待ち時間: W = L/λ (リトルの法則)',
-          'M/M/c: c台のサーバー',
-        ],
-        examples: ['銀行窓口', 'コールセンター', 'サーバーキュー'],
-        applications: ['サービス設計', '容量計画', 'システム分析'],
-      },
     },
     latex: 'W = \\frac{L}{\\lambda}',
     relations: {
@@ -198,7 +161,6 @@ export const operationsResearchConcepts: MathConcept[] = [
     name: {
       ko: '동적 계획법 (OR)',
       en: 'Dynamic Programming (OR)',
-      ja: '動的計画法 (OR)',
     },
     field: 'operations-research',
     subfield: 'optimization',
@@ -220,16 +182,6 @@ export const operationsResearchConcepts: MathConcept[] = [
         examples: ['Knapsack problem', 'Shortest path', 'Inventory management'],
         applications: ['Resource allocation', 'Investment', 'Robotics'],
       },
-      ja: {
-        definition: '複雑な問題を部分問題に分解して逐次的に最適化',
-        formulas: [
-          "ベルマン方程式: V(s) = max_a {r(s,a) + γV(s')}",
-          '最適部分構造',
-          '重複部分問題',
-        ],
-        examples: ['ナップサック問題', '最短経路', '在庫管理'],
-        applications: ['資源配分', '投資', 'ロボット工学'],
-      },
     },
     latex: "V(s) = \\max_a \\{r(s,a) + \\gamma V(s')\\}",
     relations: {
@@ -245,7 +197,6 @@ export const operationsResearchConcepts: MathConcept[] = [
     name: {
       ko: '재고 이론',
       en: 'Inventory Theory',
-      ja: '在庫理論',
     },
     field: 'operations-research',
     subfield: 'supply-chain',
@@ -268,12 +219,6 @@ export const operationsResearchConcepts: MathConcept[] = [
         examples: ['Manufacturing raw materials', 'Retail inventory', 'Warehouse management'],
         applications: ['Supply chain', 'Manufacturing', 'Retail'],
       },
-      ja: {
-        definition: '在庫保有コストと注文コストを最小化する最適な在庫政策の決定',
-        formulas: ['EOQ: Q* = √(2DK/h)', '再注文点: ROP = d × L', 'ABC分析', '(s,S)政策'],
-        examples: ['製造業の原材料', '小売在庫', '倉庫管理'],
-        applications: ['サプライチェーン', '製造', '小売'],
-      },
     },
     latex: 'Q^* = \\sqrt{\\frac{2DK}{h}}',
     relations: {
@@ -289,7 +234,6 @@ export const operationsResearchConcepts: MathConcept[] = [
     name: {
       ko: '스케줄링 이론',
       en: 'Scheduling Theory',
-      ja: 'スケジューリング理論',
     },
     field: 'operations-research',
     subfield: 'scheduling',
@@ -317,17 +261,6 @@ export const operationsResearchConcepts: MathConcept[] = [
         examples: ['Factory scheduling', 'Project management', 'CPU scheduling'],
         applications: ['Manufacturing', 'Computer systems', 'Airlines'],
       },
-      ja: {
-        definition: '作業を資源に時間的に割り当て目的関数を最適化',
-        formulas: [
-          '単一機械: 1||Σwⱼcⱼ',
-          '並列機械: P||Cmax',
-          'フローショップ: F||Cmax',
-          'ジョブショップ: J||Cmax',
-        ],
-        examples: ['工場スケジューリング', 'プロジェクト管理', 'CPUスケジューリング'],
-        applications: ['製造', 'コンピュータシステム', '航空'],
-      },
     },
     latex: '\\min C_{max} = \\max_j C_j',
     relations: {
@@ -343,7 +276,6 @@ export const operationsResearchConcepts: MathConcept[] = [
     name: {
       ko: '마르코프 결정 과정',
       en: 'Markov Decision Process',
-      ja: 'マルコフ決定過程',
     },
     field: 'operations-research',
     subfield: 'stochastic',
@@ -369,16 +301,6 @@ export const operationsResearchConcepts: MathConcept[] = [
         ],
         examples: ['Robot navigation', 'Game AI', 'Recommendation systems'],
         applications: ['Reinforcement learning', 'Robotics', 'Finance'],
-      },
-      ja: {
-        definition: '逐次的意思決定のための確率モデル。状態、行動、報酬、遷移確率',
-        formulas: [
-          '(S, A, P, R, γ)',
-          "ベルマン最適方程式: V*(s) = max_a Σ P(s'|s,a)[R + γV*(s')]",
-          '政策: π(s) → a',
-        ],
-        examples: ['ロボットナビゲーション', 'ゲームAI', 'レコメンドシステム'],
-        applications: ['強化学習', 'ロボット工学', '金融'],
       },
     },
     latex: "V^*(s) = \\max_a \\sum_{s'} P(s'|s,a)[R(s,a,s') + \\gamma V^*(s')]",

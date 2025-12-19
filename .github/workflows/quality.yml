@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  # Job 1: 빠른 검증 (Vitest, madge, syncpack)
+  # Job 1: 빠른 검증 (Vitest, skott, syncpack)
   fast-checks:
     name: Fast Checks
     runs-on: ubuntu-latest

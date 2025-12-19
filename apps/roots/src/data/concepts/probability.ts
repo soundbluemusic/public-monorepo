@@ -9,7 +9,6 @@ export const probabilityConcepts: MathConcept[] = [
     name: {
       ko: '확률의 기초',
       en: 'Probability Basics',
-      ja: '確率の基礎',
     },
     field: 'probability',
     subfield: 'probability-theory',
@@ -105,7 +104,6 @@ export const probabilityConcepts: MathConcept[] = [
     name: {
       ko: '조건부 확률',
       en: 'Conditional Probability',
-      ja: '条件付き確率',
     },
     field: 'probability',
     subfield: 'probability-theory',
@@ -181,7 +179,6 @@ export const probabilityConcepts: MathConcept[] = [
     name: {
       ko: '기댓값',
       en: 'Expected Value',
-      ja: '期待値',
     },
     field: 'probability',
     subfield: 'probability-theory',
@@ -266,7 +263,6 @@ export const probabilityConcepts: MathConcept[] = [
     name: {
       ko: '분산과 표준편차',
       en: 'Variance and Standard Deviation',
-      ja: '分散と標準偏差',
     },
     field: 'probability',
     subfield: 'statistics',
@@ -343,7 +339,6 @@ export const probabilityConcepts: MathConcept[] = [
     name: {
       ko: '정규분포',
       en: 'Normal Distribution',
-      ja: '正規分布',
     },
     field: 'probability',
     subfield: 'distributions',
@@ -423,7 +418,6 @@ export const probabilityConcepts: MathConcept[] = [
     name: {
       ko: '이항분포',
       en: 'Binomial Distribution',
-      ja: '二項分布',
     },
     field: 'probability',
     subfield: 'distributions',
@@ -499,7 +493,6 @@ export const probabilityConcepts: MathConcept[] = [
     name: {
       ko: '중심극한정리',
       en: 'Central Limit Theorem',
-      ja: '中心極限定理',
     },
     field: 'probability',
     subfield: 'statistics',
@@ -584,7 +577,6 @@ export const probabilityConcepts: MathConcept[] = [
     name: {
       ko: '포아송 분포',
       en: 'Poisson Distribution',
-      ja: 'ポアソン分布',
     },
     field: 'probability',
     subfield: 'distributions',
@@ -654,7 +646,6 @@ export const probabilityConcepts: MathConcept[] = [
     name: {
       ko: '독립 사건',
       en: 'Independent Events',
-      ja: '独立事象',
     },
     field: 'probability',
     subfield: 'probability-theory',
@@ -724,7 +715,6 @@ export const probabilityConcepts: MathConcept[] = [
     name: {
       ko: '베이즈 정리',
       en: "Bayes' Theorem",
-      ja: 'ベイズの定理',
     },
     field: 'probability',
     subfield: 'probability-theory',
@@ -806,7 +796,6 @@ export const probabilityConcepts: MathConcept[] = [
     name: {
       ko: '가설검정',
       en: 'Hypothesis Testing',
-      ja: '仮説検定',
     },
     field: 'probability',
     subfield: 'statistics',
@@ -884,7 +873,6 @@ export const probabilityConcepts: MathConcept[] = [
     name: {
       ko: '상관관계',
       en: 'Correlation',
-      ja: '相関',
     },
     field: 'probability',
     subfield: 'statistics',
@@ -957,7 +945,6 @@ export const probabilityConcepts: MathConcept[] = [
     name: {
       ko: '회귀분석',
       en: 'Regression Analysis',
-      ja: '回帰分析',
     },
     field: 'probability',
     subfield: 'statistics',

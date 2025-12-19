@@ -6,7 +6,6 @@ export const tensorAnalysisConcepts: MathConcept[] = [
     name: {
       ko: '텐서',
       en: 'Tensor',
-      ja: 'テンソル',
     },
     field: 'algebra',
     subfield: 'tensor-analysis',
@@ -14,7 +13,6 @@ export const tensorAnalysisConcepts: MathConcept[] = [
     content: {
       ko: '다중선형 사상으로 정의되는 수학적 객체입니다. (p,q)-텐서는 p개의 공변 성분과 q개의 반변 성분을 가집니다.',
       en: 'A mathematical object defined as a multilinear map. A (p,q)-tensor has p covariant and q contravariant components.',
-      ja: '多重線形写像として定義される数学的対象です。(p,q)-テンソルはp個の共変成分とq個の反変成分を持ちます。',
     },
     latex:
       'T: V^* \\times \\cdots \\times V^* \\times V \\times \\cdots \\times V \\to \\mathbb{R}',
@@ -31,7 +29,6 @@ export const tensorAnalysisConcepts: MathConcept[] = [
     name: {
       ko: '텐서곱',
       en: 'Tensor Product',
-      ja: 'テンソル積',
     },
     field: 'algebra',
     subfield: 'tensor-analysis',
@@ -39,7 +36,6 @@ export const tensorAnalysisConcepts: MathConcept[] = [
     content: {
       ko: '두 벡터 공간에서 새로운 벡터 공간을 구성하는 연산입니다. 쌍선형 사상의 보편적 성질로 특징지어집니다.',
       en: 'An operation constructing a new vector space from two vector spaces. Characterized by the universal property of bilinear maps.',
-      ja: '二つのベクトル空間から新しいベクトル空間を構成する演算です。双線形写像の普遍性で特徴づけられます。',
     },
     latex: 'V \\otimes W = \\text{span}\\{v \\otimes w : v \\in V, w \\in W\\}',
     relations: {
@@ -55,7 +51,6 @@ export const tensorAnalysisConcepts: MathConcept[] = [
     name: {
       ko: '공변/반변',
       en: 'Covariant/Contravariant',
-      ja: '共変/反変',
     },
     field: 'algebra',
     subfield: 'tensor-analysis',
@@ -63,7 +58,6 @@ export const tensorAnalysisConcepts: MathConcept[] = [
     content: {
       ko: '좌표 변환에 따른 성분의 변환 법칙입니다. 공변 성분은 기저와 같이, 반변 성분은 반대로 변환됩니다.',
       en: 'Transformation rules for components under coordinate changes. Covariant components transform like basis, contravariant oppositely.',
-      ja: '座標変換に伴う成分の変換則です。共変成分は基底と同様に、反変成分は逆に変換されます。',
     },
     latex:
       "T'^{i} = \\frac{\\partial x'^i}{\\partial x^j}T^j, \\quad T'_i = \\frac{\\partial x^j}{\\partial x'^i}T_j",
@@ -80,7 +74,6 @@ export const tensorAnalysisConcepts: MathConcept[] = [
     name: {
       ko: '계량 텐서',
       en: 'Metric Tensor',
-      ja: '計量テンソル',
     },
     field: 'geometry',
     subfield: 'tensor-analysis',
@@ -88,7 +81,6 @@ export const tensorAnalysisConcepts: MathConcept[] = [
     content: {
       ko: '다양체 위의 거리와 각도를 정의하는 대칭 (0,2)-텐서입니다. 지표를 올리고 내리는 데 사용됩니다.',
       en: 'A symmetric (0,2)-tensor defining distances and angles on a manifold. Used to raise and lower indices.',
-      ja: '多様体上の距離と角度を定義する対称(0,2)-テンソルです。添字の上げ下げに使用されます。',
     },
     latex: 'ds^2 = g_{ij}dx^i dx^j, \\quad T^i = g^{ij}T_j',
     relations: {
@@ -104,7 +96,6 @@ export const tensorAnalysisConcepts: MathConcept[] = [
     name: {
       ko: '크리스토펠 기호',
       en: 'Christoffel Symbols',
-      ja: 'クリストッフェル記号',
     },
     field: 'geometry',
     subfield: 'tensor-analysis',
@@ -112,7 +103,6 @@ export const tensorAnalysisConcepts: MathConcept[] = [
     content: {
       ko: '레비-치비타 연결의 좌표 표현입니다. 측지선 방정식과 공변 미분을 정의하는 데 사용됩니다.',
       en: 'Coordinate expression of the Levi-Civita connection. Used to define geodesic equations and covariant derivatives.',
-      ja: 'レヴィ・チヴィタ接続の座標表現です。測地線方程式と共変微分の定義に使用されます。',
     },
     latex:
       '\\Gamma^k_{ij} = \\frac{1}{2}g^{kl}\\left(\\partial_i g_{jl} + \\partial_j g_{il} - \\partial_l g_{ij}\\right)',
@@ -129,7 +119,6 @@ export const tensorAnalysisConcepts: MathConcept[] = [
     name: {
       ko: '공변 미분',
       en: 'Covariant Derivative',
-      ja: '共変微分',
     },
     field: 'geometry',
     subfield: 'tensor-analysis',
@@ -137,7 +126,6 @@ export const tensorAnalysisConcepts: MathConcept[] = [
     content: {
       ko: '곡률이 있는 공간에서 텐서장을 미분하는 방법입니다. 평행 이동과 관련되며 좌표 독립적인 미분을 제공합니다.',
       en: 'A method of differentiating tensor fields in curved spaces. Related to parallel transport, providing coordinate-independent differentiation.',
-      ja: '曲率のある空間でテンソル場を微分する方法です。平行移動に関連し、座標独立な微分を提供します。',
     },
     latex: '\\nabla_i T^j_k = \\partial_i T^j_k + \\Gamma^j_{il}T^l_k - \\Gamma^l_{ik}T^j_l',
     relations: {
@@ -153,7 +141,6 @@ export const tensorAnalysisConcepts: MathConcept[] = [
     name: {
       ko: '리만 곡률 텐서',
       en: 'Riemann Curvature Tensor',
-      ja: 'リーマン曲率テンソル',
     },
     field: 'geometry',
     subfield: 'tensor-analysis',
@@ -161,7 +148,6 @@ export const tensorAnalysisConcepts: MathConcept[] = [
     content: {
       ko: '다양체의 내재적 곡률을 측정하는 (1,3)-텐서입니다. 공변 미분의 비가환성으로 정의됩니다.',
       en: 'A (1,3)-tensor measuring intrinsic curvature of a manifold. Defined by the non-commutativity of covariant derivatives.',
-      ja: '多様体の内在的曲率を測る(1,3)-テンソルです。共変微分の非可換性で定義されます。',
     },
     latex:
       'R^\\rho_{\\sigma\\mu\\nu} = \\partial_\\mu\\Gamma^\\rho_{\\nu\\sigma} - \\partial_\\nu\\Gamma^\\rho_{\\mu\\sigma} + \\Gamma^\\rho_{\\mu\\lambda}\\Gamma^\\lambda_{\\nu\\sigma} - \\Gamma^\\rho_{\\nu\\lambda}\\Gamma^\\lambda_{\\mu\\sigma}',
@@ -178,7 +164,6 @@ export const tensorAnalysisConcepts: MathConcept[] = [
     name: {
       ko: '리치 텐서',
       en: 'Ricci Tensor',
-      ja: 'リッチテンソル',
     },
     field: 'geometry',
     subfield: 'tensor-analysis',
@@ -186,7 +171,6 @@ export const tensorAnalysisConcepts: MathConcept[] = [
     content: {
       ko: '리만 곡률 텐서의 축약으로 얻어지는 대칭 (0,2)-텐서입니다. 아인슈타인 장 방정식의 핵심 구성 요소입니다.',
       en: 'A symmetric (0,2)-tensor obtained by contracting the Riemann tensor. Central component of Einstein field equations.',
-      ja: 'リーマン曲率テンソルの縮約で得られる対称(0,2)-テンソルです。アインシュタイン場の方程式の核心要素です。',
     },
     latex: 'R_{\\mu\\nu} = R^\\rho_{\\mu\\rho\\nu}, \\quad R = g^{\\mu\\nu}R_{\\mu\\nu}',
     relations: {

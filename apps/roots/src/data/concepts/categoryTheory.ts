@@ -6,7 +6,6 @@ export const categoryTheoryConcepts: MathConcept[] = [
     name: {
       ko: '범주의 정의',
       en: 'Category Definition',
-      ja: '圏の定義',
     },
     field: 'category-theory',
     subfield: 'foundations',
@@ -38,17 +37,6 @@ export const categoryTheoryConcepts: MathConcept[] = [
         ],
         applications: ['Unifying algebra', 'Computer science', 'Physics'],
       },
-      ja: {
-        definition: '対象と射から成る数学的構造',
-        formulas: [
-          '対象: Ob(C)',
-          '射: Hom(A,B)',
-          '合成: g∘f: A→C (f:A→B, g:B→C)',
-          '恒等: id_A: A→A',
-        ],
-        examples: ['Set (集合と関数)', 'Grp (群と準同型)', 'Top (位相空間と連続写像)'],
-        applications: ['代数学の統一', '計算機科学', '物理学'],
-      },
     },
     latex: 'g \\circ f: A \\to C',
     relations: {
@@ -64,7 +52,6 @@ export const categoryTheoryConcepts: MathConcept[] = [
     name: {
       ko: '함자',
       en: 'Functor',
-      ja: '関手',
     },
     field: 'category-theory',
     subfield: 'mappings',
@@ -82,12 +69,6 @@ export const categoryTheoryConcepts: MathConcept[] = [
         examples: ['Forgetful functor', 'Free functor', 'Hom functor Hom(A,-)'],
         applications: ['Programming (map)', 'Algebraic topology', 'Functional programming'],
       },
-      ja: {
-        definition: '圏の間の構造を保存する写像',
-        formulas: ['F: C → D', 'F(f∘g) = F(f)∘F(g)', 'F(id_A) = id_{F(A)}'],
-        examples: ['忘却関手', '自由関手', 'Hom関手 Hom(A,-)'],
-        applications: ['プログラミング (map)', '代数的位相', '関数型プログラミング'],
-      },
     },
     latex: 'F(g \\circ f) = F(g) \\circ F(f)',
     relations: {
@@ -103,7 +84,6 @@ export const categoryTheoryConcepts: MathConcept[] = [
     name: {
       ko: '자연 변환',
       en: 'Natural Transformation',
-      ja: '自然変換',
     },
     field: 'category-theory',
     subfield: 'mappings',
@@ -121,12 +101,6 @@ export const categoryTheoryConcepts: MathConcept[] = [
         examples: ['Identity natural transformation', 'η: Id ⇒ List (unit)', 'det: GL_n ⇒ GL_1'],
         applications: ['Monads', 'Equivalence theory', 'Semantics'],
       },
-      ja: {
-        definition: '二つの関手の間の「自然な」射の集まり',
-        formulas: ['η: F ⇒ G', '自然性: G(f)∘η_A = η_B∘F(f)', 'すべてのf:A→Bで図式が可換'],
-        examples: ['恒等自然変換', 'η: Id ⇒ List (単位)', 'det: GL_n ⇒ GL_1'],
-        applications: ['モナド', '同値理論', '意味論'],
-      },
     },
     latex: 'G(f) \\circ \\eta_A = \\eta_B \\circ F(f)',
     relations: {
@@ -142,7 +116,6 @@ export const categoryTheoryConcepts: MathConcept[] = [
     name: {
       ko: '모나드',
       en: 'Monad',
-      ja: 'モナド',
     },
     field: 'category-theory',
     subfield: 'structures',
@@ -172,18 +145,6 @@ export const categoryTheoryConcepts: MathConcept[] = [
         examples: ['List monad', 'Maybe/Option monad', 'State monad'],
         applications: ['Functional programming', 'Effect handling', 'IO'],
       },
-      ja: {
-        definition: '自己関手と二つの自然変換からなる三つ組',
-        formulas: [
-          '(T, η, μ)',
-          'T: C → C',
-          'η: Id ⇒ T (単位)',
-          'μ: T² ⇒ T (結合)',
-          '結合律、単位律',
-        ],
-        examples: ['Listモナド', 'Maybe/Optionモナド', 'Stateモナド'],
-        applications: ['関数型プログラミング', '副作用処理', 'IO'],
-      },
     },
     latex: '\\mu \\circ T\\mu = \\mu \\circ \\mu T',
     relations: {
@@ -199,7 +160,6 @@ export const categoryTheoryConcepts: MathConcept[] = [
     name: {
       ko: '수반',
       en: 'Adjunction',
-      ja: '随伴',
     },
     field: 'category-theory',
     subfield: 'structures',
@@ -225,12 +185,6 @@ export const categoryTheoryConcepts: MathConcept[] = [
         ],
         applications: ['Universal properties', 'Free algebras', 'Limits/colimits'],
       },
-      ja: {
-        definition: '二つの関手の間の特別な関係。圏論の中心概念',
-        formulas: ['F ⊣ G', 'Hom_D(F(A), B) ≅ Hom_C(A, G(B))', '自然性: 両方の変数で自然'],
-        examples: ['自由-忘却随伴', '積-対角随伴', '極限-定数関手随伴'],
-        applications: ['普遍性質', '自由代数', '極限/余極限'],
-      },
     },
     latex: '\\text{Hom}_D(F(A), B) \\cong \\text{Hom}_C(A, G(B))',
     relations: {
@@ -246,7 +200,6 @@ export const categoryTheoryConcepts: MathConcept[] = [
     name: {
       ko: '요네다 보조정리',
       en: 'Yoneda Lemma',
-      ja: '米田の補題',
     },
     field: 'category-theory',
     subfield: 'foundations',
@@ -269,12 +222,6 @@ export const categoryTheoryConcepts: MathConcept[] = [
         examples: ['Every natural transformation determined by element', 'Inverse: η ↦ η_A(id_A)'],
         applications: ['Representability theory', 'Presheaves', 'Higher categories'],
       },
-      ja: {
-        definition: '表現可能関手と自然変換の間の同型を示す重要な補題',
-        formulas: ['Nat(Hom(A,-), F) ≅ F(A)', '米田埋め込み: C → Set^{C^op}', 'y: A ↦ Hom(-,A)'],
-        examples: ['すべての自然変換は元で決定される', '逆変換: η ↦ η_A(id_A)'],
-        applications: ['表現可能性理論', '前層', '高次圏'],
-      },
     },
     latex: '\\text{Nat}(\\text{Hom}(A,-), F) \\cong F(A)',
     relations: {
@@ -290,7 +237,6 @@ export const categoryTheoryConcepts: MathConcept[] = [
     name: {
       ko: '극한과 쌍대극한',
       en: 'Limits and Colimits',
-      ja: '極限と余極限',
     },
     field: 'category-theory',
     subfield: 'constructions',
@@ -321,16 +267,6 @@ export const categoryTheoryConcepts: MathConcept[] = [
         examples: ['Product/Coproduct', 'Equalizer/Coequalizer', 'Pullback/Pushout'],
         applications: ['Algebraic constructions', 'Homology', 'Type theory'],
       },
-      ja: {
-        definition: '圏における図式の「最良」の近似。積、等化子、引き戻しの一般化',
-        formulas: [
-          '極限: lim F = 普遍錐',
-          '余極限: colim F = 普遍余錐',
-          'Hom(X, lim F) ≅ lim Hom(X, F(-))',
-        ],
-        examples: ['積/余積', '等化子/余等化子', '引き戻し/押し出し'],
-        applications: ['代数的構成', 'ホモロジー', '型理論'],
-      },
     },
     latex: '\\text{Hom}(X, \\lim F) \\cong \\lim \\text{Hom}(X, F(-))',
     relations: {
@@ -346,7 +282,6 @@ export const categoryTheoryConcepts: MathConcept[] = [
     name: {
       ko: '토포스',
       en: 'Topos',
-      ja: 'トポス',
     },
     field: 'category-theory',
     subfield: 'advanced',
@@ -363,12 +298,6 @@ export const categoryTheoryConcepts: MathConcept[] = [
         formulas: ['Has finite limits', 'Has exponential objects', 'Has subobject classifier Ω'],
         examples: ['Set (category of sets)', 'Sh(X) (sheaves)', 'Grph (directed graphs)'],
         applications: ['Logic', 'Algebraic geometry', 'Homotopy type theory'],
-      },
-      ja: {
-        definition: 'Setと類似の性質を持つ圏。論理と幾何の統一',
-        formulas: ['有限極限が存在', '指数対象が存在', '部分対象分類子 Ω が存在'],
-        examples: ['Set (集合の圏)', 'Sh(X) (層の圏)', 'Grph (有向グラフ)'],
-        applications: ['論理学', '代数幾何学', 'ホモトピー型理論'],
       },
     },
     latex: '\\Omega: 1 \\to \\Omega',

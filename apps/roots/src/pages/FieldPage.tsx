@@ -79,7 +79,7 @@ export default function FieldPage() {
             {/* Subfields */}
             <section>
               <h2 class="text-xl font-semibold mb-4" style={{ color: 'var(--text-primary)' }}>
-                {locale() === 'ko' ? '세부 분야' : locale() === 'ja' ? '詳細分野' : 'Subfields'}
+                {locale() === 'ko' ? '세부 분야' : 'Subfields'}
               </h2>
 
               <Show
@@ -88,9 +88,7 @@ export default function FieldPage() {
                   <p style={{ color: 'var(--text-tertiary)' }}>
                     {locale() === 'ko'
                       ? '아직 세부 분야가 없습니다.'
-                      : locale() === 'ja'
-                        ? 'まだ詳細分野がありません。'
-                        : 'No subfields available yet.'}
+                      : 'No subfields available yet.'}
                   </p>
                 }
               >
@@ -118,7 +116,7 @@ export default function FieldPage() {
             <Show when={!concepts.loading && (concepts() ?? []).length > 0}>
               <section class="mt-8">
                 <h2 class="text-xl font-semibold mb-4" style={{ color: 'var(--text-primary)' }}>
-                  {locale() === 'ko' ? '개념 목록' : locale() === 'ja' ? '概念一覧' : 'Concepts'}
+                  {locale() === 'ko' ? '개념 목록' : 'Concepts'}
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                   <For each={concepts() ?? []}>

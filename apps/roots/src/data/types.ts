@@ -45,7 +45,39 @@ export type MathField =
   | 'applied'
   | 'constants'
   | 'symbols'
-  | 'theorems';
+  | 'theorems'
+  // Extended fields from data
+  | 'abstract-algebra'
+  | 'algebraic-geometry'
+  | 'algebraic-topology'
+  | 'calculus-of-variations'
+  | 'category-theory'
+  | 'combinatorics'
+  | 'complex-analysis'
+  | 'cryptography'
+  | 'differential-geometry'
+  | 'discrete-mathematics'
+  | 'functional-analysis'
+  | 'game-theory'
+  | 'graph-theory'
+  | 'harmonic-analysis'
+  | 'homological-algebra'
+  | 'information-theory'
+  | 'lie-theory'
+  | 'measure-theory'
+  | 'numerical-analysis'
+  | 'operations-research'
+  | 'partial-differential-equations'
+  | 'representation-theory'
+  | 'set-theory'
+  | 'statistics'
+  | 'stochastic-processes'
+  // Applied subfields
+  | 'applied-cs'
+  | 'applied-engineering'
+  | 'applied-finance'
+  | 'applied-music'
+  | 'applied-physics';
 
 /** 대분류 정보 */
 export interface MathFieldInfo {
@@ -98,11 +130,14 @@ export interface MathConcept {
   subfield: string;
   difficulty: DifficultyLevel;
 
-  /** 내용 (언어별) */
+  /** 내용 (언어별) - 문자열(정의만) 또는 ConceptContent 객체 */
   content: {
-    ko: ConceptContent;
-    en: ConceptContent;
+    ko: string | ConceptContent;
+    en: string | ConceptContent;
   };
+
+  /** LaTeX 표현 (선택) */
+  latex?: string;
 
   /** 연관 관계 */
   relations: ConceptRelations;
@@ -118,11 +153,11 @@ export interface ConceptContent {
   /** 정의 (한 문장 쉬운 설명) */
   definition: string;
 
-  /** 공식들 */
-  formulas?: Formula[];
+  /** 공식들 (문자열 또는 Formula 객체) */
+  formulas?: (string | Formula)[];
 
-  /** 예제들 (최소 2개) */
-  examples: Example[];
+  /** 예제들 (문자열 또는 Example 객체) */
+  examples: (string | Example)[];
 
   /** 시각화 */
   visualizations?: Visualization[];
@@ -134,8 +169,8 @@ export interface ConceptContent {
     background?: string;
   };
 
-  /** 응용 분야 */
-  applications?: Application[];
+  /** 응용 분야 (문자열 또는 Application 객체) */
+  applications?: (string | Application)[];
 }
 
 /** 수학 공식 */
@@ -192,8 +227,8 @@ export interface ConceptRelations {
   nextTopics: string[];
   /** ↔ 관련: 함께 참고할 문서 IDs */
   related: string[];
-  /** ⚡ 응용: 실제 쓰이는 분야 IDs */
-  applications: string[];
+  /** ⚡ 응용: 실제 쓰이는 분야 IDs (선택) */
+  applications?: string[];
 }
 
 // ============================================

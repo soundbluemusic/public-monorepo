@@ -6,7 +6,6 @@ export const differentialGeometryConcepts: MathConcept[] = [
     name: {
       ko: '다양체',
       en: 'Manifold',
-      ja: '多様体',
     },
     field: 'differential-geometry',
     subfield: 'foundations',
@@ -33,16 +32,6 @@ export const differentialGeometryConcepts: MathConcept[] = [
         examples: ['ℝⁿ', 'Sphere S²', 'Torus T²', 'Projective space ℝP^n'],
         applications: ['Physics', 'Robotics', 'Data analysis'],
       },
-      ja: {
-        definition: '局所的にユークリッド空間に似た位相空間。曲面の一般化',
-        formulas: [
-          '座標系: (U, φ), φ: U → ℝⁿ',
-          '座標変換: φ_β ∘ φ_α⁻¹',
-          'C^k多様体: 座標変換がk回微分可能',
-        ],
-        examples: ['ℝⁿ', '球面 S²', 'トーラス T²', '射影空間 ℝP^n'],
-        applications: ['物理学', 'ロボット工学', 'データ分析'],
-      },
     },
     latex:
       '\\phi_\\beta \\circ \\phi_\\alpha^{-1}: \\phi_\\alpha(U_\\alpha \\cap U_\\beta) \\to \\phi_\\beta(U_\\alpha \\cap U_\\beta)',
@@ -59,7 +48,6 @@ export const differentialGeometryConcepts: MathConcept[] = [
     name: {
       ko: '접공간',
       en: 'Tangent Space',
-      ja: '接空間',
     },
     field: 'differential-geometry',
     subfield: 'foundations',
@@ -81,12 +69,6 @@ export const differentialGeometryConcepts: MathConcept[] = [
         examples: ['Tangent space of plane = ℝ²', 'Tangent plane of sphere'],
         applications: ['Vector fields', 'Differential forms', 'Physics'],
       },
-      ja: {
-        definition: '多様体の一点で可能なすべての「方向」のベクトル空間',
-        formulas: ["T_p M = {γ'(0) : γ(0) = p}", '次元: dim T_p M = dim M', '基底: ∂/∂x^i |_p'],
-        examples: ['平面の接空間 = ℝ²', '球面の接平面'],
-        applications: ['ベクトル場', '微分形式', '物理学'],
-      },
     },
     latex: "T_p M = \\{\\gamma'(0) : \\gamma(0) = p\\}",
     relations: {
@@ -102,7 +84,6 @@ export const differentialGeometryConcepts: MathConcept[] = [
     name: {
       ko: '리만 계량',
       en: 'Riemannian Metric',
-      ja: 'リーマン計量',
     },
     field: 'differential-geometry',
     subfield: 'riemannian',
@@ -128,16 +109,6 @@ export const differentialGeometryConcepts: MathConcept[] = [
         examples: ['Euclidean metric: g_{ij} = δ_{ij}', 'Sphere metric: ds² = dθ² + sin²θ dφ²'],
         applications: ['General relativity', 'Geodesics', 'Curvature'],
       },
-      ja: {
-        definition: '各点で接ベクトル間の内積を与える構造',
-        formulas: [
-          'g: T_p M × T_p M → ℝ',
-          'ds² = g_{ij} dx^i dx^j',
-          '長さ: L(γ) = ∫√(g_{ij} γ̇^i γ̇^j) dt',
-        ],
-        examples: ['ユークリッド計量: g_{ij} = δ_{ij}', '球面計量: ds² = dθ² + sin²θ dφ²'],
-        applications: ['一般相対性理論', '測地線', '曲率'],
-      },
     },
     latex: 'ds^2 = g_{ij} dx^i dx^j',
     relations: {
@@ -153,7 +124,6 @@ export const differentialGeometryConcepts: MathConcept[] = [
     name: {
       ko: '측지선',
       en: 'Geodesic',
-      ja: '測地線',
     },
     field: 'differential-geometry',
     subfield: 'riemannian',
@@ -177,15 +147,6 @@ export const differentialGeometryConcepts: MathConcept[] = [
         examples: ['Straight lines on plane', 'Great circles on sphere', 'Arcs on hyperboloid'],
         applications: ['Flight paths', 'General relativity', 'Computer graphics'],
       },
-      ja: {
-        definition: '曲面や多様体上の2点間の最短経路',
-        formulas: [
-          '測地線方程式: d²x^k/dt² + Γ^k_{ij} dx^i/dt dx^j/dt = 0',
-          'クリストッフェル記号: Γ^k_{ij}',
-        ],
-        examples: ['平面の直線', '球面の大円', '双曲面の弧'],
-        applications: ['航空経路', '一般相対性理論', 'コンピュータグラフィックス'],
-      },
     },
     latex: '\\frac{d^2 x^k}{dt^2} + \\Gamma^k_{ij} \\frac{dx^i}{dt} \\frac{dx^j}{dt} = 0',
     relations: {
@@ -201,7 +162,6 @@ export const differentialGeometryConcepts: MathConcept[] = [
     name: {
       ko: '곡률 텐서',
       en: 'Curvature Tensor',
-      ja: '曲率テンソル',
     },
     field: 'differential-geometry',
     subfield: 'riemannian',
@@ -227,16 +187,6 @@ export const differentialGeometryConcepts: MathConcept[] = [
         examples: ['Plane: R = 0', 'Sphere: R = 2/r²', 'Hyperboloid: R < 0'],
         applications: ['General relativity', 'Cosmology', 'Geometry'],
       },
-      ja: {
-        definition: '多様体の曲率を測るテンソル。空間が平坦か曲がっているかを示す',
-        formulas: [
-          'リーマン曲率: R^ρ_{σμν}',
-          'リッチ曲率: R_{μν} = R^ρ_{μρν}',
-          'スカラー曲率: R = g^{μν}R_{μν}',
-        ],
-        examples: ['平面: R = 0', '球面: R = 2/r²', '双曲面: R < 0'],
-        applications: ['一般相対性理論', '宇宙論', '幾何学'],
-      },
     },
     latex:
       'R^\\rho_{\\sigma\\mu\\nu} = \\partial_\\mu \\Gamma^\\rho_{\\nu\\sigma} - \\partial_\\nu \\Gamma^\\rho_{\\mu\\sigma} + \\Gamma^\\rho_{\\mu\\lambda}\\Gamma^\\lambda_{\\nu\\sigma} - \\Gamma^\\rho_{\\nu\\lambda}\\Gamma^\\lambda_{\\mu\\sigma}',
@@ -253,7 +203,6 @@ export const differentialGeometryConcepts: MathConcept[] = [
     name: {
       ko: '미분형식',
       en: 'Differential Forms',
-      ja: '微分形式',
     },
     field: 'differential-geometry',
     subfield: 'calculus',
@@ -281,17 +230,6 @@ export const differentialGeometryConcepts: MathConcept[] = [
         examples: ['dx, dy, dz', 'x dy - y dx', 'dx ∧ dy'],
         applications: ['Stokes theorem', 'Electromagnetism', 'de Rham cohomology'],
       },
-      ja: {
-        definition: '座標に依らず積分を定義できる反対称テンソル場',
-        formulas: [
-          '0-形式: f',
-          '1-形式: ω = f_i dx^i',
-          '2-形式: ω = f_{ij} dx^i ∧ dx^j',
-          '外微分: d',
-        ],
-        examples: ['dx, dy, dz', 'x dy - y dx', 'dx ∧ dy'],
-        applications: ['ストークスの定理', '電磁気学', 'ド・ラームコホモロジー'],
-      },
     },
     latex: 'd\\omega = \\sum_i \\frac{\\partial \\omega}{\\partial x^i} dx^i \\wedge \\omega',
     relations: {
@@ -307,7 +245,6 @@ export const differentialGeometryConcepts: MathConcept[] = [
     name: {
       ko: '리 군',
       en: 'Lie Groups',
-      ja: 'リー群',
     },
     field: 'differential-geometry',
     subfield: 'groups',
@@ -330,12 +267,6 @@ export const differentialGeometryConcepts: MathConcept[] = [
         examples: ['GL(n,ℝ)', 'SO(n)', 'SU(n)', 'SL(n,ℝ)'],
         applications: ['Physics symmetry', 'Differential equations', 'Quantum mechanics'],
       },
-      ja: {
-        definition: '群であり同時に微分多様体でもある構造。連続対称性を記述',
-        formulas: ['群演算: (g,h) ↦ gh, g ↦ g⁻¹ が滑らか', 'リー代数: T_e G', '[X,Y] = XY - YX'],
-        examples: ['GL(n,ℝ)', 'SO(n)', 'SU(n)', 'SL(n,ℝ)'],
-        applications: ['物理学の対称性', '微分方程式', '量子力学'],
-      },
     },
     latex: '[X, Y] = XY - YX',
     relations: {
@@ -351,7 +282,6 @@ export const differentialGeometryConcepts: MathConcept[] = [
     name: {
       ko: '가우스 곡률',
       en: 'Gaussian Curvature',
-      ja: 'ガウス曲率',
     },
     field: 'differential-geometry',
     subfield: 'surfaces',
@@ -368,12 +298,6 @@ export const differentialGeometryConcepts: MathConcept[] = [
         formulas: ['K = κ₁ · κ₂', 'Gauss-Bonnet: ∫∫_S K dA = 2πχ(S)', 'K = (LN - M²)/(EG - F²)'],
         examples: ['Plane: K = 0', 'Sphere: K = 1/r²', 'Saddle: K < 0'],
         applications: ['Cartography', 'Surface classification', 'Topology'],
-      },
-      ja: {
-        definition: '曲面の内在的曲率。主曲率の積',
-        formulas: ['K = κ₁ · κ₂', 'ガウス・ボンネ: ∫∫_S K dA = 2πχ(S)', 'K = (LN - M²)/(EG - F²)'],
-        examples: ['平面: K = 0', '球面: K = 1/r²', '鞍点: K < 0'],
-        applications: ['地図製作', '曲面分類', 'トポロジー'],
       },
     },
     latex: 'K = \\kappa_1 \\cdot \\kappa_2',

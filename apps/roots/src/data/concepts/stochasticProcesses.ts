@@ -6,7 +6,6 @@ export const stochasticProcessesConcepts: MathConcept[] = [
     name: {
       ko: '마르코프 체인',
       en: 'Markov Chain',
-      ja: 'マルコフ連鎖',
     },
     field: 'stochastic-processes',
     subfield: 'discrete',
@@ -28,12 +27,6 @@ export const stochasticProcessesConcepts: MathConcept[] = [
         examples: ['Random walk', 'Weather model', 'PageRank'],
         applications: ['Finance', 'Genetics', 'NLP'],
       },
-      ja: {
-        definition: '未来の状態が現在の状態のみに依存する確率過程（無記憶性）',
-        formulas: ['P(Xₙ₊₁|Xₙ,...,X₀) = P(Xₙ₊₁|Xₙ)', '遷移行列: P = (pᵢⱼ)', '定常分布: πP = π'],
-        examples: ['ランダムウォーク', '天気モデル', 'ページランク'],
-        applications: ['金融', '遺伝学', '自然言語処理'],
-      },
     },
     latex: 'P(X_{n+1}|X_n) = P_{X_n, X_{n+1}}',
     relations: {
@@ -49,7 +42,6 @@ export const stochasticProcessesConcepts: MathConcept[] = [
     name: {
       ko: '브라운 운동',
       en: 'Brownian Motion',
-      ja: 'ブラウン運動',
     },
     field: 'stochastic-processes',
     subfield: 'continuous',
@@ -73,12 +65,6 @@ export const stochasticProcessesConcepts: MathConcept[] = [
         examples: ['Stock price model', 'Particle diffusion', 'Heat equation'],
         applications: ['Financial math', 'Physics', 'Biology'],
       },
-      ja: {
-        definition: '連続時間・連続状態の基本確率過程。ウィーナー過程とも呼ぶ',
-        formulas: ['W(0) = 0', 'W(t) - W(s) ~ N(0, t-s)', '独立増分', '連続経路'],
-        examples: ['株価モデル', '粒子拡散', '熱方程式'],
-        applications: ['金融数学', '物理学', '生物学'],
-      },
     },
     latex: 'W(t) - W(s) \\sim N(0, t-s)',
     relations: {
@@ -94,7 +80,6 @@ export const stochasticProcessesConcepts: MathConcept[] = [
     name: {
       ko: '포아송 과정',
       en: 'Poisson Process',
-      ja: 'ポアソン過程',
     },
     field: 'stochastic-processes',
     subfield: 'counting',
@@ -117,12 +102,6 @@ export const stochasticProcessesConcepts: MathConcept[] = [
         examples: ['Customer arrivals', 'Radioactive decay', 'Website visits'],
         applications: ['Queueing', 'Insurance', 'Telecommunications'],
       },
-      ja: {
-        definition: '事象が一定の平均率で独立に発生する計数過程',
-        formulas: ['N(0) = 0', 'P(N(t) = k) = (λt)^k e^{-λt}/k!', '独立増分', 'E[N(t)] = λt'],
-        examples: ['顧客到着', '放射性崩壊', 'ウェブサイト訪問'],
-        applications: ['待ち行列', '保険', '通信'],
-      },
     },
     latex: 'P(N(t) = k) = \\frac{(\\lambda t)^k e^{-\\lambda t}}{k!}',
     relations: {
@@ -138,7 +117,6 @@ export const stochasticProcessesConcepts: MathConcept[] = [
     name: {
       ko: '이토 적분',
       en: 'Itô Calculus',
-      ja: '伊藤積分',
     },
     field: 'stochastic-processes',
     subfield: 'stochastic-calculus',
@@ -164,16 +142,6 @@ export const stochasticProcessesConcepts: MathConcept[] = [
         examples: ['Geometric Brownian motion', 'Option pricing', 'SDEs'],
         applications: ['Financial engineering', 'Physics', 'Biology'],
       },
-      ja: {
-        definition: '確率過程に対する積分理論。確率微分方程式の基礎',
-        formulas: [
-          '∫f dW (伊藤積分)',
-          '伊藤の公式: df = (∂f/∂t + ½σ²∂²f/∂x²)dt + σ∂f/∂x dW',
-          '(dW)² = dt',
-        ],
-        examples: ['幾何ブラウン運動', 'オプション価格決定', '確率微分方程式'],
-        applications: ['金融工学', '物理学', '生物学'],
-      },
     },
     latex:
       'df = \\left(\\frac{\\partial f}{\\partial t} + \\frac{1}{2}\\sigma^2\\frac{\\partial^2 f}{\\partial x^2}\\right)dt + \\sigma\\frac{\\partial f}{\\partial x}dW',
@@ -190,7 +158,6 @@ export const stochasticProcessesConcepts: MathConcept[] = [
     name: {
       ko: '마팅게일',
       en: 'Martingale',
-      ja: 'マルチンゲール',
     },
     field: 'stochastic-processes',
     subfield: 'theory',
@@ -209,16 +176,6 @@ export const stochasticProcessesConcepts: MathConcept[] = [
         examples: ['Fair gambling', 'Brownian motion', 'Stock prices (risk-neutral)'],
         applications: ['Finance', 'Optimal stopping', 'Probability'],
       },
-      ja: {
-        definition: '条件付き期待値が現在の値と等しい確率過程（公平なゲーム）',
-        formulas: [
-          'E[Xₙ₊₁|ℱₙ] = Xₙ',
-          'サブマルチンゲール: E[Xₙ₊₁|ℱₙ] ≥ Xₙ',
-          'スーパーマルチンゲール: ≤',
-        ],
-        examples: ['公平な賭け', 'ブラウン運動', '株価（リスク中立測度）'],
-        applications: ['金融', '最適停止', '確率論'],
-      },
     },
     latex: 'E[X_{n+1}|\\mathcal{F}_n] = X_n',
     relations: {
@@ -234,7 +191,6 @@ export const stochasticProcessesConcepts: MathConcept[] = [
     name: {
       ko: '에르고딕 이론',
       en: 'Ergodic Theory',
-      ja: 'エルゴード理論',
     },
     field: 'stochastic-processes',
     subfield: 'theory',
@@ -261,16 +217,6 @@ export const stochasticProcessesConcepts: MathConcept[] = [
         examples: ['Rotation', 'Bernoulli shift', "Baker's map"],
         applications: ['Statistical mechanics', 'Number theory', 'Chaos'],
       },
-      ja: {
-        definition: '力学系の長期平均挙動の研究。時間平均 = 空間平均',
-        formulas: [
-          'lim (1/n)Σf(Tⁱx) = ∫f dμ (a.e.)',
-          'エルゴード: 不変集合が自明',
-          '混合: 相関が減衰',
-        ],
-        examples: ['回転変換', 'ベルヌーイシフト', 'パン生地変換'],
-        applications: ['統計力学', '整数論', 'カオス'],
-      },
     },
     latex: '\\lim_{n\\to\\infty} \\frac{1}{n}\\sum_{i=0}^{n-1} f(T^i x) = \\int f \\, d\\mu',
     relations: {
@@ -286,7 +232,6 @@ export const stochasticProcessesConcepts: MathConcept[] = [
     name: {
       ko: '확률미분방정식 (SDE)',
       en: 'Stochastic Differential Equations',
-      ja: '確率微分方程式',
     },
     field: 'stochastic-processes',
     subfield: 'stochastic-calculus',
@@ -312,16 +257,6 @@ export const stochasticProcessesConcepts: MathConcept[] = [
         examples: ['Stock price model', 'Interest rate model', 'Population dynamics'],
         applications: ['Finance', 'Physics', 'Biology'],
       },
-      ja: {
-        definition: 'ランダムノイズ項を含む微分方程式',
-        formulas: [
-          'dX = μ(X,t)dt + σ(X,t)dW',
-          '幾何ブラウン: dS = μS dt + σS dW',
-          '解: S(t) = S(0)exp((μ-σ²/2)t + σW(t))',
-        ],
-        examples: ['株価モデル', '金利モデル', '人口動態'],
-        applications: ['金融', '物理学', '生物学'],
-      },
     },
     latex: 'dX_t = \\mu(X_t, t)dt + \\sigma(X_t, t)dW_t',
     relations: {
@@ -337,7 +272,6 @@ export const stochasticProcessesConcepts: MathConcept[] = [
     name: {
       ko: '은닉 마르코프 모델 (HMM)',
       en: 'Hidden Markov Model',
-      ja: '隠れマルコフモデル',
     },
     field: 'stochastic-processes',
     subfield: 'models',
@@ -364,17 +298,6 @@ export const stochasticProcessesConcepts: MathConcept[] = [
         ],
         examples: ['Speech recognition', 'POS tagging', 'DNA sequence analysis'],
         applications: ['NLP', 'Bioinformatics', 'Finance'],
-      },
-      ja: {
-        definition: '観測されないマルコフ連鎖から観測値が生成されるモデル',
-        formulas: [
-          '状態遷移: P(zₜ|zₜ₋₁)',
-          '放出: P(xₜ|zₜ)',
-          '前向き後ろ向きアルゴリズム',
-          'ビタビアルゴリズム',
-        ],
-        examples: ['音声認識', '品詞タギング', 'DNA配列解析'],
-        applications: ['自然言語処理', 'バイオインフォマティクス', '金融'],
       },
     },
     latex: 'P(x_{1:T}, z_{1:T}) = P(z_1)\\prod_{t=2}^T P(z_t|z_{t-1})\\prod_{t=1}^T P(x_t|z_t)',

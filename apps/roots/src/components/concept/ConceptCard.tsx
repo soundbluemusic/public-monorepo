@@ -6,6 +6,7 @@ import { useI18n } from '@/i18n';
  * @fileoverview 개념 미리보기 카드 컴포넌트
  */
 import { A } from '@solidjs/router';
+import { For } from 'solid-js';
 
 interface ConceptCardProps {
   concept: MathConcept;
@@ -21,7 +22,8 @@ export function ConceptCard(props: ConceptCardProps) {
   const name = () => props.concept.name[locale()] || props.concept.name.en;
   const definition = () => {
     const content = props.concept.content[locale()] || props.concept.content.en;
-    return content.definition;
+    // content가 문자열이면 그대로, 객체면 definition 속성 반환
+    return typeof content === 'string' ? content : content.definition;
   };
 
   return (
@@ -60,9 +62,7 @@ export function ConceptCard(props: ConceptCardProps) {
 export function ConceptGrid(props: { concepts: MathConcept[] }) {
   return (
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {props.concepts.map((concept) => (
-        <ConceptCard key={concept.id} concept={concept} />
-      ))}
+      <For each={props.concepts}>{(concept) => <ConceptCard concept={concept} />}</For>
     </div>
   );
 }

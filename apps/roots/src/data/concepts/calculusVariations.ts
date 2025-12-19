@@ -6,7 +6,6 @@ export const calculusVariationsConcepts: MathConcept[] = [
     name: {
       ko: '오일러-라그랑주 방정식',
       en: 'Euler-Lagrange Equation',
-      ja: 'オイラー・ラグランジュ方程式',
     },
     field: 'calculus-of-variations',
     subfield: 'foundations',
@@ -29,12 +28,6 @@ export const calculusVariationsConcepts: MathConcept[] = [
         examples: ['Shortest path (geodesic)', 'Catenary', 'Brachistochrone'],
         applications: ['Classical mechanics', 'Optics', 'Optimal control'],
       },
-      ja: {
-        definition: '汎関数の極値を求めるための必要条件。変分法の基本方程式',
-        formulas: ["J[y] = ∫L(x,y,y')dx", "∂L/∂y - d/dx(∂L/∂y') = 0", '自然境界条件'],
-        examples: ['最短経路（測地線）', '懸垂線', '最速降下線'],
-        applications: ['古典力学', '光学', '最適制御'],
-      },
     },
     latex: "\\frac{\\partial L}{\\partial y} - \\frac{d}{dx}\\frac{\\partial L}{\\partial y'} = 0",
     relations: {
@@ -50,7 +43,6 @@ export const calculusVariationsConcepts: MathConcept[] = [
     name: {
       ko: '해밀턴의 원리',
       en: "Hamilton's Principle",
-      ja: 'ハミルトンの原理',
     },
     field: 'calculus-of-variations',
     subfield: 'mechanics',
@@ -69,12 +61,6 @@ export const calculusVariationsConcepts: MathConcept[] = [
         examples: ['Free particle', 'Harmonic oscillator', 'Planetary motion'],
         applications: ['Classical mechanics', 'Field theory', 'Quantum mechanics'],
       },
-      ja: {
-        definition: '物理系の実際の経路は作用を停留させる経路。古典力学の変分原理',
-        formulas: ['δS = 0', 'S = ∫L dt = ∫(T - V)dt', 'L = 運動エネルギー - 位置エネルギー'],
-        examples: ['自由粒子', '調和振動子', '惑星運動'],
-        applications: ['古典力学', '場の理論', '量子力学'],
-      },
     },
     latex: '\\delta S = \\delta \\int L \\, dt = 0',
     relations: {
@@ -90,7 +76,6 @@ export const calculusVariationsConcepts: MathConcept[] = [
     name: {
       ko: '브라키스토크론 문제',
       en: 'Brachistochrone Problem',
-      ja: '最速降下線問題',
     },
     field: 'calculus-of-variations',
     subfield: 'classic-problems',
@@ -116,16 +101,6 @@ export const calculusVariationsConcepts: MathConcept[] = [
         examples: ['Roller coaster design', 'Ski jump ramps'],
         applications: ['Physics', 'Optimization', 'Historical importance'],
       },
-      ja: {
-        definition: '重力場で二点間を最も速く移動する曲線を求める問題',
-        formulas: [
-          "T = ∫ds/v = ∫√(1+y'²)/√(2gy) dx",
-          '解: サイクロイド',
-          'x = a(θ - sinθ), y = a(1 - cosθ)',
-        ],
-        examples: ['ジェットコースター設計', 'スキージャンプ台'],
-        applications: ['物理学', '最適化', '歴史的重要性'],
-      },
     },
     latex: 'x = a(\\theta - \\sin\\theta), \\; y = a(1 - \\cos\\theta)',
     relations: {
@@ -141,7 +116,6 @@ export const calculusVariationsConcepts: MathConcept[] = [
     name: {
       ko: '등주 문제',
       en: 'Isoperimetric Problem',
-      ja: '等周問題',
     },
     field: 'calculus-of-variations',
     subfield: 'classic-problems',
@@ -163,12 +137,6 @@ export const calculusVariationsConcepts: MathConcept[] = [
         examples: ['Soap bubbles', 'Cell shapes', 'Animal territories'],
         applications: ['Biology', 'Architecture', 'Optimization'],
       },
-      ja: {
-        definition: '与えられた周長で最大面積を持つ図形を求める問題。円が解',
-        formulas: ['max A = ∬dA, subject to ∮ds = L', 'ラグランジュ乗数: δ(A - λP) = 0', '解: 円'],
-        examples: ['シャボン玉', '細胞の形', '動物の縄張り'],
-        applications: ['生物学', '建築', '最適化'],
-      },
     },
     latex: '\\frac{A}{P^2} \\leq \\frac{1}{4\\pi}',
     relations: {
@@ -184,7 +152,6 @@ export const calculusVariationsConcepts: MathConcept[] = [
     name: {
       ko: '폰트랴긴 최대 원리',
       en: 'Pontryagin Maximum Principle',
-      ja: 'ポントリャーギン最大原理',
     },
     field: 'calculus-of-variations',
     subfield: 'optimal-control',
@@ -212,17 +179,6 @@ export const calculusVariationsConcepts: MathConcept[] = [
         examples: ['Rocket trajectories', 'Economic growth models', 'Resource management'],
         applications: ['Aerospace', 'Economics', 'Robotics'],
       },
-      ja: {
-        definition: '最適制御問題の必要条件。ハミルトニアンの最大化',
-        formulas: [
-          'ẋ = f(x,u), min J = ∫L dt + Φ(x_f)',
-          'H = p·f - L',
-          '∂H/∂u = 0 または境界',
-          'ṗ = -∂H/∂x',
-        ],
-        examples: ['ロケット軌道', '経済成長モデル', '資源管理'],
-        applications: ['航空宇宙', '経済学', 'ロボット工学'],
-      },
     },
     latex: 'H(x^*, u^*, p) \\geq H(x^*, u, p)',
     relations: {
@@ -238,7 +194,6 @@ export const calculusVariationsConcepts: MathConcept[] = [
     name: {
       ko: '직접 방법',
       en: 'Direct Methods',
-      ja: '直接法',
     },
     field: 'calculus-of-variations',
     subfield: 'methods',
@@ -261,12 +216,6 @@ export const calculusVariationsConcepts: MathConcept[] = [
         examples: ['Dirichlet principle', 'Elastic energy minimization', 'PDE weak solutions'],
         applications: ['PDEs', 'Elasticity theory', 'Geometry'],
       },
-      ja: {
-        definition: '関数空間のコンパクト性と下半連続性で汎関数の極値の存在を証明',
-        formulas: ['J: X → ℝ 下半連続、強制的', 'inf J が達成される', '弱収束 + 下半連続性'],
-        examples: ['ディリクレ原理', '弾性エネルギー最小化', 'PDE弱解の存在'],
-        applications: ['偏微分方程式', '弾性理論', '幾何学'],
-      },
     },
     latex: '\\inf_X J \\text{ is attained}',
     relations: {
@@ -282,7 +231,6 @@ export const calculusVariationsConcepts: MathConcept[] = [
     name: {
       ko: '페르마의 원리',
       en: "Fermat's Principle",
-      ja: 'フェルマーの原理',
     },
     field: 'calculus-of-variations',
     subfield: 'optics',
@@ -301,12 +249,6 @@ export const calculusVariationsConcepts: MathConcept[] = [
         examples: ['Law of reflection', "Snell's law (refraction)", 'Mirages'],
         applications: ['Lens design', 'Fiber optics', 'Geometrical optics'],
       },
-      ja: {
-        definition: '光は二点間を最小時間経路で進む。光学の変分原理',
-        formulas: ['δT = δ∫ds/v = 0', 'n = c/v', '光路長: ∫n ds'],
-        examples: ['反射の法則', 'スネルの法則（屈折）', '蜃気楼'],
-        applications: ['レンズ設計', '光ファイバー', '幾何光学'],
-      },
     },
     latex: '\\delta \\int n \\, ds = 0',
     relations: {
@@ -322,7 +264,6 @@ export const calculusVariationsConcepts: MathConcept[] = [
     name: {
       ko: '뇌터의 정리',
       en: "Noether's Theorem",
-      ja: 'ネーターの定理',
     },
     field: 'calculus-of-variations',
     subfield: 'symmetry',
@@ -353,17 +294,6 @@ export const calculusVariationsConcepts: MathConcept[] = [
           'Gauge symmetry and charge conservation',
         ],
         applications: ['Particle physics', 'General relativity', 'Field theory'],
-      },
-      ja: {
-        definition: '作用の連続対称性ごとに保存量が対応。物理学の根本定理',
-        formulas: [
-          '対称性 ⟹ 保存則',
-          '時間不変 → エネルギー保存',
-          '空間不変 → 運動量保存',
-          '回転不変 → 角運動量保存',
-        ],
-        examples: ['エネルギー・運動量・角運動量保存', 'ゲージ対称性と電荷保存'],
-        applications: ['素粒子物理', '一般相対性理論', '場の理論'],
       },
     },
     latex: '\\text{Symmetry} \\Leftrightarrow \\text{Conservation Law}',

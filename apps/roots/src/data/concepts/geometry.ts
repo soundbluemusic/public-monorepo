@@ -12,7 +12,6 @@ export const geometryConcepts: MathConcept[] = [
     name: {
       ko: '점, 선, 면',
       en: 'Point, Line, Plane',
-      ja: '点・線・面',
     },
     field: 'geometry',
     subfield: 'plane-geometry',
@@ -82,7 +81,6 @@ export const geometryConcepts: MathConcept[] = [
     name: {
       ko: '각도',
       en: 'Angles',
-      ja: '角度',
     },
     field: 'geometry',
     subfield: 'plane-geometry',
@@ -178,7 +176,6 @@ export const geometryConcepts: MathConcept[] = [
     name: {
       ko: '삼각형',
       en: 'Triangle',
-      ja: '三角形',
     },
     field: 'geometry',
     subfield: 'plane-geometry',
@@ -256,7 +253,6 @@ export const geometryConcepts: MathConcept[] = [
     name: {
       ko: '피타고라스 정리',
       en: 'Pythagorean Theorem',
-      ja: 'ピタゴラスの定理',
     },
     field: 'geometry',
     subfield: 'plane-geometry',
@@ -379,7 +375,6 @@ export const geometryConcepts: MathConcept[] = [
     name: {
       ko: '삼각형의 넓이',
       en: 'Area of Triangle',
-      ja: '三角形の面積',
     },
     field: 'geometry',
     subfield: 'plane-geometry',
@@ -479,7 +474,6 @@ export const geometryConcepts: MathConcept[] = [
     name: {
       ko: '닮은 삼각형',
       en: 'Similar Triangles',
-      ja: '相似な三角形',
     },
     field: 'geometry',
     subfield: 'plane-geometry',
@@ -550,7 +544,6 @@ export const geometryConcepts: MathConcept[] = [
     name: {
       ko: '합동 삼각형',
       en: 'Congruent Triangles',
-      ja: '合同な三角形',
     },
     field: 'geometry',
     subfield: 'plane-geometry',
@@ -625,7 +618,6 @@ export const geometryConcepts: MathConcept[] = [
     name: {
       ko: '사각형',
       en: 'Quadrilaterals',
-      ja: '四角形',
     },
     field: 'geometry',
     subfield: 'plane-geometry',
@@ -727,7 +719,6 @@ export const geometryConcepts: MathConcept[] = [
     name: {
       ko: '원',
       en: 'Circle',
-      ja: '円',
     },
     field: 'geometry',
     subfield: 'plane-geometry',
@@ -822,7 +813,6 @@ export const geometryConcepts: MathConcept[] = [
     name: {
       ko: '호와 부채꼴',
       en: 'Arc and Sector',
-      ja: '弧と扇形',
     },
     field: 'geometry',
     subfield: 'plane-geometry',
@@ -915,7 +905,6 @@ export const geometryConcepts: MathConcept[] = [
     name: {
       ko: '두 점 사이의 거리',
       en: 'Distance Formula',
-      ja: '2点間の距離',
     },
     field: 'geometry',
     subfield: 'analytic-geometry',
@@ -986,7 +975,6 @@ export const geometryConcepts: MathConcept[] = [
     name: {
       ko: '중점 공식',
       en: 'Midpoint Formula',
-      ja: '中点の公式',
     },
     field: 'geometry',
     subfield: 'analytic-geometry',
@@ -1047,7 +1035,6 @@ export const geometryConcepts: MathConcept[] = [
     name: {
       ko: '기울기',
       en: 'Slope',
-      ja: '傾き',
     },
     field: 'geometry',
     subfield: 'analytic-geometry',
@@ -1135,7 +1122,6 @@ export const geometryConcepts: MathConcept[] = [
     name: {
       ko: '원뿔 곡선',
       en: 'Conic Sections',
-      ja: '円錐曲線',
     },
     field: 'geometry',
     subfield: 'analytic-geometry',
@@ -1244,7 +1230,6 @@ export const geometryConcepts: MathConcept[] = [
     name: {
       ko: '입체도형',
       en: 'Solid Figures',
-      ja: '立体図形',
     },
     field: 'geometry',
     subfield: 'solid-geometry',

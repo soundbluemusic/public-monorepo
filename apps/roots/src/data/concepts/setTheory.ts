@@ -6,7 +6,6 @@ export const setTheoryConcepts: MathConcept[] = [
     name: {
       ko: 'ZFC 공리계',
       en: 'ZFC Axioms',
-      ja: 'ZFC公理系',
     },
     field: 'set-theory',
     subfield: 'foundations',
@@ -43,21 +42,6 @@ export const setTheoryConcepts: MathConcept[] = [
         examples: ['Natural number construction', 'Existence of reals'],
         applications: ['Foundations', 'Logic', 'Study of infinity'],
       },
-      ja: {
-        definition: '現代数学の標準的基礎であるツェルメロ・フレンケル集合論と選択公理',
-        formulas: [
-          '外延公理: A=B ⟺ ∀x(x∈A ↔ x∈B)',
-          '対公理: ∀a∀b∃c(c={a,b})',
-          '和集合公理: ∀A∃B(B=∪A)',
-          '冪集合公理: ∀A∃B(B=P(A))',
-          '無限公理: 帰納的集合の存在',
-          '置換公理',
-          '正則性公理',
-          '選択公理(AC)',
-        ],
-        examples: ['自然数の構成', '実数の存在'],
-        applications: ['数学基礎論', '論理学', '無限の研究'],
-      },
     },
     latex: 'A = B \\Leftrightarrow \\forall x(x \\in A \\leftrightarrow x \\in B)',
     relations: {
@@ -73,7 +57,6 @@ export const setTheoryConcepts: MathConcept[] = [
     name: {
       ko: '서수',
       en: 'Ordinal Numbers',
-      ja: '順序数',
     },
     field: 'set-theory',
     subfield: 'ordinals',
@@ -102,17 +85,6 @@ export const setTheoryConcepts: MathConcept[] = [
         examples: ['ω+1, ω+2, ...', 'ω·2 = ω+ω', 'ω², ω^ω', 'ε₀ = ω^ω^ω^...'],
         applications: ['Transfinite induction', 'Set theory', 'Proof theory'],
       },
-      ja: {
-        definition: '整列順序の順序型を表す数。無限集合の位置概念の拡張',
-        formulas: [
-          '0 = ∅',
-          'α+1 = α ∪ {α} (後続順序数)',
-          'ω = {0,1,2,...} (最初の極限順序数)',
-          'α < β ⟺ α ∈ β',
-        ],
-        examples: ['ω+1, ω+2, ...', 'ω·2 = ω+ω', 'ω², ω^ω', 'ε₀ = ω^ω^ω^...'],
-        applications: ['超限帰納法', '集合論', '証明論'],
-      },
     },
     latex: '\\omega = \\{0, 1, 2, ...\\}',
     relations: {
@@ -128,7 +100,6 @@ export const setTheoryConcepts: MathConcept[] = [
     name: {
       ko: '기수',
       en: 'Cardinal Numbers',
-      ja: '基数',
     },
     field: 'set-theory',
     subfield: 'cardinals',
@@ -158,18 +129,6 @@ export const setTheoryConcepts: MathConcept[] = [
         examples: ['ℵ₀, ℵ₁, ℵ₂, ...', 'Continuum hypothesis: c = ℵ₁?'],
         applications: ['Infinity comparison', 'Set theory', 'Foundations'],
       },
-      ja: {
-        definition: '集合の大きさを表す数。無限集合の大きさの比較が可能',
-        formulas: [
-          '|A| = |B| ⟺ 全単射が存在',
-          '|A| ≤ |B| ⟺ 単射が存在',
-          'ℵ₀ = |ℕ| (可算無限)',
-          'c = |ℝ| = 2^ℵ₀',
-          'カントール: |A| < |P(A)|',
-        ],
-        examples: ['ℵ₀, ℵ₁, ℵ₂, ...', '連続体仮説: c = ℵ₁?'],
-        applications: ['無限の比較', '集合論', '基礎論'],
-      },
     },
     latex: '|A| < |\\mathcal{P}(A)|',
     relations: {
@@ -185,7 +144,6 @@ export const setTheoryConcepts: MathConcept[] = [
     name: {
       ko: '선택 공리',
       en: 'Axiom of Choice',
-      ja: '選択公理',
     },
     field: 'set-theory',
     subfield: 'foundations',
@@ -212,12 +170,6 @@ export const setTheoryConcepts: MathConcept[] = [
         examples: ['Sock selection problem', 'Infinite set selection'],
         applications: ['Algebra', 'Analysis', 'Topology'],
       },
-      ja: {
-        definition: '空でない集合の族に対し、各集合から一つずつ元を選ぶ関数が存在',
-        formulas: ['∀𝒜(∅∉𝒜 → ∃f:𝒜→∪𝒜, ∀A∈𝒜(f(A)∈A))', '同値: 整列可能定理', '同値: ツォルンの補題'],
-        examples: ['靴下選択問題', '無限集合の選択'],
-        applications: ['代数学', '解析学', '位相数学'],
-      },
     },
     latex:
       '\\forall \\mathcal{A}(\\emptyset \\notin \\mathcal{A} \\rightarrow \\exists f: \\mathcal{A} \\to \\bigcup\\mathcal{A})',
@@ -234,7 +186,6 @@ export const setTheoryConcepts: MathConcept[] = [
     name: {
       ko: '초른의 보조정리',
       en: "Zorn's Lemma",
-      ja: 'ツォルンの補題',
     },
     field: 'set-theory',
     subfield: 'foundations',
@@ -253,12 +204,6 @@ export const setTheoryConcepts: MathConcept[] = [
         examples: ['Existence of vector space basis', 'Maximal ideals', 'Ultrafilters'],
         applications: ['Algebra', 'Analysis', 'Functional analysis'],
       },
-      ja: {
-        definition: 'すべての鎖が上界を持つ半順序集合は極大元を持つ',
-        formulas: ['(P,≤) 半順序、すべての鎖 C⊆P に上界が存在 → 極大元が存在'],
-        examples: ['ベクトル空間の基底の存在', '極大イデアル', '超フィルター'],
-        applications: ['代数学', '解析学', '関数解析'],
-      },
     },
     latex: '\\text{Every chain has upper bound} \\Rightarrow \\exists \\text{ maximal element}',
     relations: {
@@ -274,7 +219,6 @@ export const setTheoryConcepts: MathConcept[] = [
     name: {
       ko: '연속체 가설',
       en: 'Continuum Hypothesis',
-      ja: '連続体仮説',
     },
     field: 'set-theory',
     subfield: 'cardinals',
@@ -302,17 +246,6 @@ export const setTheoryConcepts: MathConcept[] = [
         examples: ['Cardinality of subsets of reals'],
         applications: ['Set theory', 'Foundations', 'Philosophy of math'],
       },
-      ja: {
-        definition: 'ℵ₀と2^ℵ₀の間に他の基数がないという仮説。ZFCと独立',
-        formulas: [
-          'CH: 2^ℵ₀ = ℵ₁',
-          'GCH: 2^ℵα = ℵα₊₁',
-          'ゲーデル: Con(ZFC) → Con(ZFC+CH)',
-          'コーエン: Con(ZFC) → Con(ZFC+¬CH)',
-        ],
-        examples: ['実数集合の部分集合の基数'],
-        applications: ['集合論', '基礎論', '数学の哲学'],
-      },
     },
     latex: '2^{\\aleph_0} = \\aleph_1',
     relations: {
@@ -328,7 +261,6 @@ export const setTheoryConcepts: MathConcept[] = [
     name: {
       ko: '칸토어 정리',
       en: "Cantor's Theorem",
-      ja: 'カントールの定理',
     },
     field: 'set-theory',
     subfield: 'cardinals',
@@ -350,12 +282,6 @@ export const setTheoryConcepts: MathConcept[] = [
         examples: ['|ℕ| < |P(ℕ)| = |ℝ|', '|ℝ| < |P(ℝ)|'],
         applications: ['Hierarchy of infinity', 'Cardinal theory', 'Diagonal argument'],
       },
-      ja: {
-        definition: '集合の基数は常にその冪集合の基数より小さい',
-        formulas: ['|A| < |P(A)|', '証明: 対角線論法', '結果: 無限基数の無限階層'],
-        examples: ['|ℕ| < |P(ℕ)| = |ℝ|', '|ℝ| < |P(ℝ)|'],
-        applications: ['無限の階層', '基数理論', '対角線論法'],
-      },
     },
     latex: '|A| < |\\mathcal{P}(A)|',
     relations: {
@@ -371,7 +297,6 @@ export const setTheoryConcepts: MathConcept[] = [
     name: {
       ko: '정렬 가능 정리',
       en: 'Well-Ordering Theorem',
-      ja: '整列可能定理',
     },
     field: 'set-theory',
     subfield: 'foundations',
@@ -388,12 +313,6 @@ export const setTheoryConcepts: MathConcept[] = [
         formulas: ['∀A∃≤((A,≤) is well-ordered)', 'Well-order: every subset has least element'],
         examples: ['Natural ordering of ℕ', 'Well-ordering of ℝ (non-constructive)'],
         applications: ['Transfinite induction', 'Ordinal theory', 'Set theory'],
-      },
-      ja: {
-        definition: 'すべての集合は整列順序を持てる。選択公理と同値',
-        formulas: ['∀A∃≤((A,≤)が整列集合)', '整列: すべての部分集合が最小元を持つ'],
-        examples: ['ℕの自然な整列', 'ℝの整列（非構成的）'],
-        applications: ['超限帰納法', '順序数理論', '集合論'],
       },
     },
     latex: '\\forall A \\exists \\leq \\text{ such that } (A, \\leq) \\text{ is well-ordered}',

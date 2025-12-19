@@ -9,7 +9,6 @@ export const topologyConcepts: MathConcept[] = [
     name: {
       ko: '위상공간',
       en: 'Topological Space',
-      ja: '位相空間',
     },
     field: 'topology',
     subfield: 'general-topology',
@@ -98,7 +97,6 @@ export const topologyConcepts: MathConcept[] = [
     name: {
       ko: '연속성 (위상적)',
       en: 'Continuity (Topological)',
-      ja: '連続性',
     },
     field: 'topology',
     subfield: 'general-topology',
@@ -162,7 +160,6 @@ export const topologyConcepts: MathConcept[] = [
     name: {
       ko: '위상동형사상',
       en: 'Homeomorphism',
-      ja: '同相写像',
     },
     field: 'topology',
     subfield: 'general-topology',
@@ -235,7 +232,6 @@ export const topologyConcepts: MathConcept[] = [
     name: {
       ko: '컴팩트성',
       en: 'Compactness',
-      ja: 'コンパクト性',
     },
     field: 'topology',
     subfield: 'general-topology',
@@ -304,7 +300,6 @@ export const topologyConcepts: MathConcept[] = [
     name: {
       ko: '연결성',
       en: 'Connectedness',
-      ja: '連結性',
     },
     field: 'topology',
     subfield: 'general-topology',
@@ -372,7 +367,6 @@ export const topologyConcepts: MathConcept[] = [
     name: {
       ko: '오일러 지표',
       en: 'Euler Characteristic',
-      ja: 'オイラー標数',
     },
     field: 'topology',
     subfield: 'algebraic-topology',
@@ -467,7 +461,6 @@ export const topologyConcepts: MathConcept[] = [
     name: {
       ko: '거리공간',
       en: 'Metric Space',
-      ja: '距離空間',
     },
     field: 'topology',
     subfield: 'general-topology',
@@ -553,7 +546,6 @@ export const topologyConcepts: MathConcept[] = [
     name: {
       ko: '다양체',
       en: 'Manifold',
-      ja: '多様体',
     },
     field: 'topology',
     subfield: 'differential-topology',
@@ -645,7 +637,6 @@ export const topologyConcepts: MathConcept[] = [
     name: {
       ko: '기본군',
       en: 'Fundamental Group',
-      ja: '基本群',
     },
     field: 'topology',
     subfield: 'algebraic-topology',
@@ -740,7 +731,6 @@ export const topologyConcepts: MathConcept[] = [
     name: {
       ko: '호모토피',
       en: 'Homotopy',
-      ja: 'ホモトピー',
     },
     field: 'topology',
     subfield: 'algebraic-topology',

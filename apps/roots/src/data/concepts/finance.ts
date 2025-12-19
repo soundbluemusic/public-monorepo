@@ -9,7 +9,6 @@ export const financeConcepts: MathConcept[] = [
     name: {
       ko: '복리',
       en: 'Compound Interest',
-      ja: '複利',
     },
     field: 'applied-finance',
     subfield: 'basic-finance',
@@ -102,7 +101,6 @@ export const financeConcepts: MathConcept[] = [
     name: {
       ko: '이동평균',
       en: 'Moving Average',
-      ja: '移動平均',
     },
     field: 'applied-finance',
     subfield: 'technical-analysis',
@@ -179,7 +177,6 @@ export const financeConcepts: MathConcept[] = [
     name: {
       ko: '볼린저 밴드',
       en: 'Bollinger Bands',
-      ja: 'ボリンジャーバンド',
     },
     field: 'applied-finance',
     subfield: 'technical-analysis',
@@ -282,7 +279,6 @@ export const financeConcepts: MathConcept[] = [
     name: {
       ko: '블랙-숄즈 모형',
       en: 'Black-Scholes Model',
-      ja: 'ブラック・ショールズ・モデル',
     },
     field: 'applied-finance',
     subfield: 'derivatives',
@@ -383,7 +379,6 @@ export const financeConcepts: MathConcept[] = [
     name: {
       ko: '피보나치 되돌림',
       en: 'Fibonacci Retracement',
-      ja: 'フィボナッチリトレースメント',
     },
     field: 'applied-finance',
     subfield: 'technical-analysis',
@@ -468,7 +463,6 @@ export const financeConcepts: MathConcept[] = [
     name: {
       ko: '일목균형표',
       en: 'Ichimoku Cloud',
-      ja: '一目均衡表',
     },
     field: 'applied-finance',
     subfield: 'technical-analysis',
@@ -579,7 +573,6 @@ export const financeConcepts: MathConcept[] = [
     name: {
       ko: '현재가치',
       en: 'Present Value',
-      ja: '現在価値',
     },
     field: 'applied-finance',
     subfield: 'basic-finance',
@@ -664,7 +657,6 @@ export const financeConcepts: MathConcept[] = [
     name: {
       ko: '샤프 비율',
       en: 'Sharpe Ratio',
-      ja: 'シャープレシオ',
     },
     field: 'applied-finance',
     subfield: 'portfolio',

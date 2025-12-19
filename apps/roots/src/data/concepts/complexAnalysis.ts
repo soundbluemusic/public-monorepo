@@ -9,7 +9,6 @@ export const complexAnalysisConcepts: MathConcept[] = [
     name: {
       ko: '복소함수',
       en: 'Complex Functions',
-      ja: '複素関数',
     },
     field: 'complex-analysis',
     subfield: 'functions',
@@ -110,7 +109,6 @@ export const complexAnalysisConcepts: MathConcept[] = [
     name: {
       ko: '코시-리만 방정식',
       en: 'Cauchy-Riemann Equations',
-      ja: 'コーシー・リーマン方程式',
     },
     field: 'complex-analysis',
     subfield: 'analyticity',
@@ -210,7 +208,6 @@ export const complexAnalysisConcepts: MathConcept[] = [
     name: {
       ko: '해석함수',
       en: 'Analytic Functions',
-      ja: '解析関数',
     },
     field: 'complex-analysis',
     subfield: 'analyticity',
@@ -290,7 +287,6 @@ export const complexAnalysisConcepts: MathConcept[] = [
     name: {
       ko: '유수 정리',
       en: 'Residue Theorem',
-      ja: '留数定理',
     },
     field: 'complex-analysis',
     subfield: 'integration',
@@ -392,7 +388,6 @@ export const complexAnalysisConcepts: MathConcept[] = [
     name: {
       ko: '등각사상',
       en: 'Conformal Mapping',
-      ja: '等角写像',
     },
     field: 'complex-analysis',
     subfield: 'geometric',

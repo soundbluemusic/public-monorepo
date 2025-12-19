@@ -264,7 +264,7 @@ export default function LibraryDetailPage() {
           </Show>
 
           {/* Alternatives */}
-          <Show when={lib()?.alternatives?.length && lib()?.alternatives.length > 0}>
+          <Show when={(lib()?.alternatives?.length ?? 0) > 0}>
             <section class="mb-8">
               <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-4">
                 {isKo() ? '대안' : 'Alternatives'}
