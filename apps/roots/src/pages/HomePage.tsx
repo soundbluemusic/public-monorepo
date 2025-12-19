@@ -14,7 +14,19 @@ import { isServer } from 'solid-js/web';
 
 // 홈페이지용 경량 데이터 로드 (search-index.json 재사용)
 async function getFeaturedConcepts(): Promise<SearchIndexItem[]> {
-  if (isServer) return [];
+  // SSR/SSG: 파일 시스템에서 로드
+  if (isServer) {
+    try {
+      const { readFileSync } = await import('node:fs');
+      const { fileURLToPath } = await import('node:url');
+      const path = fileURLToPath(new URL('../../public/search-index.json', import.meta.url));
+      const data = JSON.parse(readFileSync(path, 'utf-8')) as SearchIndexItem[];
+      return data.slice(0, 12);
+    } catch {
+      return [];
+    }
+  }
+  // 클라이언트: fetch 사용
   const res = await fetch('/search-index.json');
   const data: SearchIndexItem[] = await res.json();
   return data.slice(0, 12);
