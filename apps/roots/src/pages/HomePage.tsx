@@ -38,10 +38,8 @@ export default function HomePage() {
 
       {/* Header */}
       <div class="mb-8">
-        <h1 class="text-2xl font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>
-          {t('heroTitle')}
-        </h1>
-        <p style={{ color: 'var(--text-secondary)' }}>{t('heroSubtitle')}</p>
+        <h1 class="text-2xl font-semibold mb-2 text-text-primary">{t('heroTitle')}</h1>
+        <p class="text-text-secondary">{t('heroSubtitle')}</p>
       </div>
 
       {/* Concept List */}
@@ -51,17 +49,14 @@ export default function HomePage() {
             {(concept) => (
               <A
                 href={localePath(`/concept/${concept.id}`)}
-                class="flex items-baseline justify-between py-3 -mx-2 px-2 rounded transition-colors"
-                style={{ 'border-bottom': '1px solid var(--border-primary)' }}
+                class="flex items-baseline justify-between py-3 -mx-2 px-2 rounded transition-colors border-b border-border-primary"
               >
                 <div class="flex items-baseline gap-3">
-                  <span class="text-lg font-medium" style={{ color: 'var(--text-primary)' }}>
+                  <span class="text-lg font-medium text-text-primary">
                     {concept.name[locale()] || concept.name.en}
                   </span>
                 </div>
-                <span class="text-sm" style={{ color: 'var(--text-secondary)' }}>
-                  {concept.field}
-                </span>
+                <span class="text-sm text-text-secondary">{concept.field}</span>
               </A>
             )}
           </For>
@@ -72,23 +67,14 @@ export default function HomePage() {
       <Show when={concepts.loading}>
         <div class="space-y-3">
           <For each={Array(6).fill(0)}>
-            {() => (
-              <div
-                class="h-12 rounded animate-pulse"
-                style={{ 'background-color': 'var(--bg-secondary)' }}
-              />
-            )}
+            {() => <div class="h-12 rounded animate-pulse bg-bg-secondary" />}
           </For>
         </div>
       </Show>
 
       {/* View All Link */}
       <div class="mt-8 text-center">
-        <A
-          href={localePath('/browse')}
-          class="text-sm transition-colors"
-          style={{ color: 'var(--accent-primary)' }}
-        >
+        <A href={localePath('/browse')} class="text-sm transition-colors text-accent-primary">
           {t('viewAll')} →
         </A>
       </div>
