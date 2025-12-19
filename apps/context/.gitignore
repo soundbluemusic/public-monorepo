@@ -38,3 +38,6 @@ dev-dist/
 
 # Generated files
 src/data/generated/
+
+# Sitemaps (generated at build time)
+public/sitemap*.xml
