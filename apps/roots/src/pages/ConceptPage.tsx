@@ -1,7 +1,7 @@
-import { RelationLinks } from '@/components/concept/RelationLinks';
 /**
  * @fileoverview 개념 상세 페이지
  */
+import { RelationLinks } from '@/components/concept/RelationLinks';
 import { Layout } from '@/components/layout/Layout';
 import { ExampleList } from '@/components/math/Example';
 import { FormulaList } from '@/components/math/Formula';
@@ -9,23 +9,11 @@ import { DifficultyBadge } from '@/components/ui/DifficultyBadge';
 import { getFieldById } from '@/data/fields';
 import { getSubfieldById } from '@/data/subfields';
 import { useI18n } from '@/i18n';
-import { getConceptById, getConceptByIdSync, loadConcepts } from '@/lib/concepts';
+import { getConceptById } from '@/lib/concepts';
 import { favorites } from '@/lib/db';
 import { Meta, Title } from '@solidjs/meta';
 import { A, useParams } from '@solidjs/router';
 import { For, Show, createResource, createSignal, onMount } from 'solid-js';
-import { isServer } from 'solid-js/web';
-
-function loadKatexCSS() {
-  if (isServer) return;
-  const katexId = 'katex-css';
-  if (document.getElementById(katexId)) return;
-  const link = document.createElement('link');
-  link.id = katexId;
-  link.rel = 'stylesheet';
-  link.href = 'https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css';
-  document.head.appendChild(link);
-}
 
 export default function ConceptPage() {
   const params = useParams<{ conceptId: string }>();
@@ -36,9 +24,6 @@ export default function ConceptPage() {
     () => params.conceptId,
     (id) => getConceptById(id),
   );
-
-  // 개념 맵 로드 (RelationLinks용)
-  const [conceptsLoaded] = createResource(loadConcepts);
 
   const field = () => {
     const c = concept();
@@ -53,7 +38,6 @@ export default function ConceptPage() {
   const [isFavorite, setIsFavorite] = createSignal(false);
 
   onMount(async () => {
-    loadKatexCSS();
     const conceptId = params.conceptId;
     const exists = await favorites.isFavorite(conceptId);
     setIsFavorite(exists);
@@ -85,8 +69,6 @@ export default function ConceptPage() {
     }
     return raw;
   };
-
-  const getConcept = (id: string) => getConceptByIdSync(id);
 
   return (
     <Layout>
@@ -247,11 +229,9 @@ export default function ConceptPage() {
               </Show>
 
               {/* 연관 문서 Relations */}
-              <Show when={conceptsLoaded()}>
-                <section>
-                  <RelationLinks relations={c().relations} getConcept={getConcept} />
-                </section>
-              </Show>
+              <section>
+                <RelationLinks relations={c().relations} />
+              </section>
 
               {/* 태그 Tags */}
               <Show when={c().tags.length > 0}>

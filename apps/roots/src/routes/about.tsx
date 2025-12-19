@@ -22,10 +22,10 @@ export default function AboutPage() {
         </h2>
         <ul class="list-disc list-inside space-y-2">
           <li>18 major math fields from foundations to applied mathematics</li>
-          <li>LaTeX formula rendering with KaTeX</li>
+          <li>Native math rendering with Unicode and MathML</li>
           <li>Difficulty levels for all concepts (Elementary to Graduate)</li>
           <li>Related concepts navigation</li>
-          <li>Multi-language support (Korean, English, Japanese)</li>
+          <li>Multi-language support (Korean, English)</li>
           <li>Dark mode support</li>
           <li>PWA - works offline</li>
         </ul>

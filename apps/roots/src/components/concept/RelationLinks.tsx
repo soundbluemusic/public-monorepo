@@ -1,15 +1,28 @@
-import type { ConceptRelations, MathConcept } from '@/data/types';
-import { useI18n } from '@/i18n';
-import { A } from '@solidjs/router';
 /**
  * @fileoverview 연관 문서 링크 컴포넌트
+ * 클라이언트 사이드에서 concept-names.json을 fetch하여 이름 표시
  */
-import { For, Show } from 'solid-js';
+import type { ConceptRelations } from '@/data/types';
+import { useI18n } from '@/i18n';
+import { A } from '@solidjs/router';
+import { For, Show, createResource } from 'solid-js';
+import { isServer } from 'solid-js/web';
+
+type ConceptNames = Record<string, { ko: string; en: string }>;
+
+// 클라이언트에서만 concept-names.json fetch
+async function loadConceptNames(): Promise<ConceptNames> {
+  if (isServer) return {};
+  try {
+    const res = await fetch('/concept-names.json');
+    return res.json();
+  } catch {
+    return {};
+  }
+}
 
 interface RelationLinksProps {
   relations: ConceptRelations;
-  /** 개념 ID로 개념 찾기 함수 */
-  getConcept: (id: string) => MathConcept | undefined;
 }
 
 interface RelationSectionProps {
@@ -17,7 +30,7 @@ interface RelationSectionProps {
   icon: string;
   ids: string[];
   type: 'prerequisite' | 'next' | 'related' | 'application';
-  getConcept: (id: string) => MathConcept | undefined;
+  names: ConceptNames;
 }
 
 function RelationSection(props: RelationSectionProps) {
@@ -45,8 +58,8 @@ function RelationSection(props: RelationSectionProps) {
         <div class="flex flex-wrap gap-2">
           <For each={props.ids}>
             {(id) => {
-              const concept = props.getConcept(id);
-              const name = concept ? concept.name[locale()] || concept.name.en : id;
+              const conceptName = props.names[id];
+              const name = conceptName ? conceptName[locale()] || conceptName.en : id;
 
               return (
                 <A
@@ -71,17 +84,13 @@ function RelationSection(props: RelationSectionProps) {
 
 /**
  * 연관 문서 링크 섹션
- *
- * @example
- * ```tsx
- * <RelationLinks
- *   relations={concept.relations}
- *   getConcept={(id) => conceptsMap.get(id)}
- * />
- * ```
+ * 클라이언트 사이드에서 이름을 로드하여 hydration 데이터 최소화
  */
 export function RelationLinks(props: RelationLinksProps) {
   const { locale } = useI18n();
+
+  // 클라이언트에서만 이름 로드
+  const [names] = createResource(loadConceptNames);
 
   const hasAnyRelations = () => {
     const r = props.relations;
@@ -117,37 +126,43 @@ export function RelationLinks(props: RelationLinksProps) {
           {locale() === 'ko' ? '연관 문서' : 'Related Documents'}
         </h3>
 
-        <RelationSection
-          title={titles().prerequisites}
-          icon="→"
-          ids={props.relations.prerequisites}
-          type="prerequisite"
-          getConcept={props.getConcept}
-        />
+        <Show when={names()} fallback={<div class="text-text-tertiary text-sm">Loading...</div>}>
+          {(loadedNames) => (
+            <>
+              <RelationSection
+                title={titles().prerequisites}
+                icon="→"
+                ids={props.relations.prerequisites}
+                type="prerequisite"
+                names={loadedNames()}
+              />
 
-        <RelationSection
-          title={titles().nextTopics}
-          icon="←"
-          ids={props.relations.nextTopics}
-          type="next"
-          getConcept={props.getConcept}
-        />
+              <RelationSection
+                title={titles().nextTopics}
+                icon="←"
+                ids={props.relations.nextTopics}
+                type="next"
+                names={loadedNames()}
+              />
 
-        <RelationSection
-          title={titles().related}
-          icon="↔"
-          ids={props.relations.related}
-          type="related"
-          getConcept={props.getConcept}
-        />
+              <RelationSection
+                title={titles().related}
+                icon="↔"
+                ids={props.relations.related}
+                type="related"
+                names={loadedNames()}
+              />
 
-        <RelationSection
-          title={titles().applications}
-          icon="⚡"
-          ids={props.relations.applications ?? []}
-          type="application"
-          getConcept={props.getConcept}
-        />
+              <RelationSection
+                title={titles().applications}
+                icon="⚡"
+                ids={props.relations.applications ?? []}
+                type="application"
+                names={loadedNames()}
+              />
+            </>
+          )}
+        </Show>
       </div>
     </Show>
   );

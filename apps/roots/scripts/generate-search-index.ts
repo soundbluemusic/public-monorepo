@@ -14,6 +14,7 @@ import { allConcepts } from '../src/data/concepts/index.js';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUTPUT_PATH = join(__dirname, '../public/search-index.json');
 const CONCEPTS_OUTPUT_PATH = join(__dirname, '../public/concepts.json');
+const CONCEPT_NAMES_PATH = join(__dirname, '../public/concept-names.json');
 
 interface SearchIndexItem {
   id: string;
@@ -55,6 +56,17 @@ function generateSearchIndex() {
   writeFileSync(CONCEPTS_OUTPUT_PATH, JSON.stringify(allConcepts), 'utf-8');
   const conceptsSizeKB = (Buffer.byteLength(JSON.stringify(allConcepts)) / 1024).toFixed(1);
   console.log(`✓ Generated concepts.json (${conceptsSizeKB} KB, ${allConcepts.length} items)`);
+
+  // 개념 이름만 담은 경량 맵 생성 (RelationLinks용)
+  const conceptNames: Record<string, { ko: string; en: string }> = {};
+  for (const concept of allConcepts) {
+    conceptNames[concept.id] = concept.name;
+  }
+  writeFileSync(CONCEPT_NAMES_PATH, JSON.stringify(conceptNames), 'utf-8');
+  const namesSizeKB = (Buffer.byteLength(JSON.stringify(conceptNames)) / 1024).toFixed(1);
+  console.log(
+    `✓ Generated concept-names.json (${namesSizeKB} KB, ${Object.keys(conceptNames).length} items)`,
+  );
 }
 
 generateSearchIndex();
