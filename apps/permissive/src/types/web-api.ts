@@ -84,7 +84,7 @@ export interface BrowserVersion {
  * - experimental: 실험적 (변경 가능, 주의 필요)
  * - deprecated: 사용 중단 예정 (대안 API 권장)
  */
-export type APIStatus = "stable" | "experimental" | "deprecated";
+export type APIStatus = 'stable' | 'experimental' | 'deprecated';
 
 /**
  * Web API 카테고리

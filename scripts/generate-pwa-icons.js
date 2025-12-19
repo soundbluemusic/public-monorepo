@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-import { Resvg } from '@resvg/resvg-js';
-import sharp from 'sharp';
 import fs from 'node:fs';
 import path from 'node:path';
+import { Resvg } from '@resvg/resvg-js';
+import sharp from 'sharp';
 
 const apps = ['context', 'permissive'];
 const sizes = [192, 512];
@@ -20,7 +20,7 @@ async function generateIcons() {
       if (fs.existsSync(svgPath)) {
         const svg = fs.readFileSync(svgPath, 'utf-8');
         const resvg = new Resvg(svg, {
-          fitTo: { mode: 'width', value: size }
+          fitTo: { mode: 'width', value: size },
         });
         const pngData = resvg.render();
         fs.writeFileSync(pngPath, pngData.asPng());
@@ -35,7 +35,7 @@ async function generateIcons() {
     if (fs.existsSync(maskableSvgPath)) {
       const svg = fs.readFileSync(maskableSvgPath, 'utf-8');
       const resvg = new Resvg(svg, {
-        fitTo: { mode: 'width', value: 512 }
+        fitTo: { mode: 'width', value: 512 },
       });
       const pngData = resvg.render();
       fs.writeFileSync(maskablePngPath, pngData.asPng());
@@ -49,7 +49,7 @@ async function generateIcons() {
     if (fs.existsSync(svg512Path)) {
       const svg = fs.readFileSync(svg512Path, 'utf-8');
       const resvg = new Resvg(svg, {
-        fitTo: { mode: 'width', value: 180 }
+        fitTo: { mode: 'width', value: 180 },
       });
       const pngData = resvg.render();
       fs.writeFileSync(appleTouchIconPath, pngData.asPng());
@@ -61,13 +61,11 @@ async function generateIcons() {
     if (fs.existsSync(svg512Path)) {
       const svg = fs.readFileSync(svg512Path, 'utf-8');
       const resvg = new Resvg(svg, {
-        fitTo: { mode: 'width', value: 32 }
+        fitTo: { mode: 'width', value: 32 },
       });
       const pngData = resvg.render();
       // Use sharp to convert PNG to ICO format (save as PNG, browsers support it)
-      await sharp(pngData.asPng())
-        .resize(32, 32)
-        .toFile(faviconPath);
+      await sharp(pngData.asPng()).resize(32, 32).toFile(faviconPath);
       console.log(`✓ Generated ${app}/public/favicon.ico`);
     }
   }

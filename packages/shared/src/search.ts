@@ -1,4 +1,4 @@
-import { LIMITS } from "./constants";
+import { LIMITS } from './constants';
 
 /**
  * Sanitizes a search query by trimming, lowercasing, and limiting length
@@ -17,13 +17,13 @@ export function sanitizeSearchQuery(query: string): string {
 export function filterBySearch<T>(
   items: T[],
   query: string,
-  getSearchableText: (item: T) => string[]
+  getSearchableText: (item: T) => string[],
 ): T[] {
   const q = sanitizeSearchQuery(query);
   if (!q) return items;
 
   return items.filter((item) =>
-    getSearchableText(item).some((text) => text.toLowerCase().includes(q))
+    getSearchableText(item).some((text) => text.toLowerCase().includes(q)),
   );
 }
 
@@ -34,7 +34,7 @@ export function filterBySearch<T>(
  */
 export function createSearchHandler(
   callback: (query: string) => void,
-  delay = 300
+  delay = 300,
 ): (query: string) => void {
   let timeoutId: ReturnType<typeof setTimeout>;
 

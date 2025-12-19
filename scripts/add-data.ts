@@ -233,13 +233,6 @@ function addContextEntryDirect(
 }
 
 async function addContextEntryInteractive(categoryId: string) {
-  const filePath = join(ROOT, `apps/context/src/data/entries/${categoryId}.json`);
-
-  let entries: ContextEntry[] = [];
-  if (existsSync(filePath)) {
-    entries = JSON.parse(readFileSync(filePath, 'utf-8'));
-  }
-
   console.log(`\n📝 Adding new entry to context/${categoryId}\n`);
 
   const id = await question('ID (영문, 예: annyeong): ');
@@ -309,14 +302,7 @@ function addLibraryDirect(id: string, entry: LibraryEntry): { success: boolean; 
 }
 
 async function addLibraryInteractive() {
-  const filePath = join(ROOT, 'apps/permissive/src/data/libraries.json');
-
-  let libraries: Record<string, LibraryEntry> = {};
-  if (existsSync(filePath)) {
-    libraries = JSON.parse(readFileSync(filePath, 'utf-8'));
-  }
-
-  console.log(`\n📦 Adding new library to permissive\n`);
+  console.log('\n📦 Adding new library to permissive\n');
 
   const id = await question('ID (영문 소문자, 예: react): ');
   const name = await question('라이브러리 이름 (예: React): ');
@@ -476,7 +462,7 @@ async function main() {
         // Non-interactive 모드
         const data = jsonData as LibraryEntry & { id?: string };
         const id = data.id || '';
-        delete data.id;
+        data.id = undefined;
         const result = addLibraryDirect(id, data as LibraryEntry);
         console.log(result.message);
         process.exit(result.success ? 0 : 1);

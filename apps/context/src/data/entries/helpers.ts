@@ -20,7 +20,13 @@
  * });
  * ```
  */
-import type { MeaningEntry, PartOfSpeech, DifficultyLevel, FrequencyLevel, Translation } from "../types";
+import type {
+  DifficultyLevel,
+  FrequencyLevel,
+  MeaningEntry,
+  PartOfSpeech,
+  Translation,
+} from '../types';
 
 /**
  * createCategory에서 사용하는 엔트리 입력 타입

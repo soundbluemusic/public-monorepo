@@ -27,7 +27,7 @@ export interface BaseRecentView {
 /**
  * 즐겨찾기 헬퍼 타입
  */
-export interface FavoritesHelper<T extends BaseFavorite, K extends keyof T> {
+export interface FavoritesHelper<T extends BaseFavorite, _K extends keyof T> {
   add: (itemId: string) => Promise<number | undefined>;
   remove: (itemId: string) => Promise<number>;
   toggle: (itemId: string) => Promise<boolean>;

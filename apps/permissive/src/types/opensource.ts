@@ -160,13 +160,13 @@ export interface OpenSource extends OpenSourceBase {
  * - 0BSD: 제로 조항 BSD (퍼블릭 도메인과 유사)
  */
 export type LicenseType =
-  | "MIT"
-  | "Apache-2.0"
-  | "BSD-2-Clause"
-  | "BSD-3-Clause"
-  | "ISC"
-  | "Unlicense"
-  | "0BSD";
+  | 'MIT'
+  | 'Apache-2.0'
+  | 'BSD-2-Clause'
+  | 'BSD-3-Clause'
+  | 'ISC'
+  | 'Unlicense'
+  | '0BSD';
 
 /**
  * 오픈소스 카테고리

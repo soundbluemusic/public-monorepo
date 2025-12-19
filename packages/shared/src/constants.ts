@@ -15,6 +15,6 @@ export const BREAKPOINTS = {
 } as const;
 
 /** Reserved JavaScript property names that should not be used as IDs */
-export const RESERVED_NAMES = ["__proto__", "constructor", "prototype"] as const;
+export const RESERVED_NAMES = ['__proto__', 'constructor', 'prototype'] as const;
 
 export type ReservedName = (typeof RESERVED_NAMES)[number];

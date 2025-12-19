@@ -1,448 +1,426 @@
 /**
  * @fileoverview 유명 정리 데이터
  */
-import type { MathConcept } from "../types";
+import type { MathConcept } from '../types';
 
 export const theoremsConcepts: MathConcept[] = [
   {
-    id: "fundamental-theorem-calculus",
+    id: 'fundamental-theorem-calculus',
     name: {
-      ko: "미적분학의 기본정리",
-      en: "Fundamental Theorem of Calculus",
-      ja: "微積分学の基本定理",
+      ko: '미적분학의 기본정리',
+      en: 'Fundamental Theorem of Calculus',
+      ja: '微積分学の基本定理',
     },
-    field: "theorems",
-    subfield: "calculus",
+    field: 'theorems',
+    subfield: 'calculus',
     difficulty: 3,
     content: {
       ko: {
         definition:
-          "미적분학의 기본정리는 미분과 적분이 서로 역연산임을 보여줍니다. 연속함수의 정적분을 원시함수로 계산할 수 있게 합니다.",
+          '미적분학의 기본정리는 미분과 적분이 서로 역연산임을 보여줍니다. 연속함수의 정적분을 원시함수로 계산할 수 있게 합니다.',
         formulas: [
           {
-            latex: "\\frac{d}{dx} \\int_a^x f(t) dt = f(x)",
-            description: "제1 기본정리",
+            latex: '\\frac{d}{dx} \\int_a^x f(t) dt = f(x)',
+            description: '제1 기본정리',
           },
           {
-            latex: "\\int_a^b f(x) dx = F(b) - F(a)",
+            latex: '\\int_a^b f(x) dx = F(b) - F(a)',
             description: "제2 기본정리 (F' = f)",
           },
         ],
         examples: [
           {
-            problem: "∫₀² 3x² dx를 기본정리로 계산하세요.",
-            solution:
-              "F(x) = x³ (F' = 3x²). ∫₀² 3x² dx = 2³ - 0³ = 8",
+            problem: '∫₀² 3x² dx를 기본정리로 계산하세요.',
+            solution: "F(x) = x³ (F' = 3x²). ∫₀² 3x² dx = 2³ - 0³ = 8",
           },
         ],
         history: {
-          discoveredBy: "뉴턴, 라이프니츠",
-          year: "1660년대",
-          background:
-            "뉴턴과 라이프니츠가 독립적으로 발견했으며, 미적분학의 핵심입니다.",
+          discoveredBy: '뉴턴, 라이프니츠',
+          year: '1660년대',
+          background: '뉴턴과 라이프니츠가 독립적으로 발견했으며, 미적분학의 핵심입니다.',
         },
         applications: [
-          { field: "물리학", description: "운동 방정식" },
-          { field: "공학", description: "면적, 부피 계산" },
-          { field: "경제학", description: "총비용, 총수입" },
+          { field: '물리학', description: '운동 방정식' },
+          { field: '공학', description: '면적, 부피 계산' },
+          { field: '경제학', description: '총비용, 총수입' },
         ],
       },
       en: {
         definition:
-          "The Fundamental Theorem of Calculus shows differentiation and integration are inverse operations. It allows computing definite integrals via antiderivatives.",
+          'The Fundamental Theorem of Calculus shows differentiation and integration are inverse operations. It allows computing definite integrals via antiderivatives.',
         formulas: [
           {
-            latex: "\\frac{d}{dx} \\int_a^x f(t) dt = f(x)",
-            description: "First Fundamental Theorem",
+            latex: '\\frac{d}{dx} \\int_a^x f(t) dt = f(x)',
+            description: 'First Fundamental Theorem',
           },
           {
-            latex: "\\int_a^b f(x) dx = F(b) - F(a)",
+            latex: '\\int_a^b f(x) dx = F(b) - F(a)',
             description: "Second Fundamental Theorem (F' = f)",
           },
         ],
         examples: [
           {
-            problem: "Calculate ∫₀² 3x² dx using the theorem.",
-            solution:
-              "F(x) = x³ (F' = 3x²). ∫₀² 3x² dx = 2³ - 0³ = 8",
+            problem: 'Calculate ∫₀² 3x² dx using the theorem.',
+            solution: "F(x) = x³ (F' = 3x²). ∫₀² 3x² dx = 2³ - 0³ = 8",
           },
         ],
         history: {
-          discoveredBy: "Newton, Leibniz",
-          year: "1660s",
-          background:
-            "Discovered independently by Newton and Leibniz; core of calculus.",
+          discoveredBy: 'Newton, Leibniz',
+          year: '1660s',
+          background: 'Discovered independently by Newton and Leibniz; core of calculus.',
         },
         applications: [
-          { field: "Physics", description: "Equations of motion" },
-          { field: "Engineering", description: "Area, volume calculation" },
-          { field: "Economics", description: "Total cost, revenue" },
+          { field: 'Physics', description: 'Equations of motion' },
+          { field: 'Engineering', description: 'Area, volume calculation' },
+          { field: 'Economics', description: 'Total cost, revenue' },
         ],
       },
     },
     relations: {
-      prerequisites: ["derivative", "integral"],
-      nextTopics: ["integration-techniques"],
-      related: ["mean-value-theorem"],
+      prerequisites: ['derivative', 'integral'],
+      nextTopics: ['integration-techniques'],
+      related: ['mean-value-theorem'],
     },
-    tags: ["미적분", "기본정리", "calculus", "fundamental theorem"],
+    tags: ['미적분', '기본정리', 'calculus', 'fundamental theorem'],
   },
   {
-    id: "fundamental-theorem-algebra",
+    id: 'fundamental-theorem-algebra',
     name: {
-      ko: "대수학의 기본정리",
-      en: "Fundamental Theorem of Algebra",
-      ja: "代数学の基本定理",
+      ko: '대수학의 기본정리',
+      en: 'Fundamental Theorem of Algebra',
+      ja: '代数学の基本定理',
     },
-    field: "theorems",
-    subfield: "algebra",
+    field: 'theorems',
+    subfield: 'algebra',
     difficulty: 4,
     content: {
       ko: {
         definition:
-          "대수학의 기본정리는 모든 n차 다항식(n≥1)은 복소수 범위에서 정확히 n개의 근(중복 포함)을 가진다는 것입니다.",
+          '대수학의 기본정리는 모든 n차 다항식(n≥1)은 복소수 범위에서 정확히 n개의 근(중복 포함)을 가진다는 것입니다.',
         formulas: [
           {
-            latex: "p(z) = a_n(z-r_1)(z-r_2)\\cdots(z-r_n)",
-            description: "n차 다항식의 인수분해",
+            latex: 'p(z) = a_n(z-r_1)(z-r_2)\\cdots(z-r_n)',
+            description: 'n차 다항식의 인수분해',
           },
         ],
         examples: [
           {
-            problem: "x² + 1 = 0의 근을 찾으세요.",
-            solution:
-              "실수에서는 근이 없지만, 복소수에서 x = ±i (i² = -1)",
+            problem: 'x² + 1 = 0의 근을 찾으세요.',
+            solution: '실수에서는 근이 없지만, 복소수에서 x = ±i (i² = -1)',
           },
           {
-            problem: "x³ - 1 = 0의 모든 근을 찾으세요.",
-            solution:
-              "x = 1 (실근), x = (-1 ± i√3)/2 (허근 2개). 총 3개의 근.",
+            problem: 'x³ - 1 = 0의 모든 근을 찾으세요.',
+            solution: 'x = 1 (실근), x = (-1 ± i√3)/2 (허근 2개). 총 3개의 근.',
           },
         ],
         history: {
-          discoveredBy: "카를 프리드리히 가우스",
-          year: "1799년",
-          background:
-            "가우스가 박사 논문에서 최초로 엄밀하게 증명했습니다.",
+          discoveredBy: '카를 프리드리히 가우스',
+          year: '1799년',
+          background: '가우스가 박사 논문에서 최초로 엄밀하게 증명했습니다.',
         },
         applications: [
-          { field: "제어 이론", description: "전달함수의 극점 분석" },
-          { field: "신호 처리", description: "필터 설계" },
-          { field: "수치해석", description: "다항식 근 찾기" },
+          { field: '제어 이론', description: '전달함수의 극점 분석' },
+          { field: '신호 처리', description: '필터 설계' },
+          { field: '수치해석', description: '다항식 근 찾기' },
         ],
       },
       en: {
         definition:
-          "The Fundamental Theorem of Algebra states every polynomial of degree n≥1 has exactly n roots (counting multiplicity) in complex numbers.",
+          'The Fundamental Theorem of Algebra states every polynomial of degree n≥1 has exactly n roots (counting multiplicity) in complex numbers.',
         formulas: [
           {
-            latex: "p(z) = a_n(z-r_1)(z-r_2)\\cdots(z-r_n)",
-            description: "Factorization of degree n polynomial",
+            latex: 'p(z) = a_n(z-r_1)(z-r_2)\\cdots(z-r_n)',
+            description: 'Factorization of degree n polynomial',
           },
         ],
         examples: [
           {
-            problem: "Find the roots of x² + 1 = 0.",
-            solution:
-              "No real roots, but in complex numbers x = ±i (i² = -1)",
+            problem: 'Find the roots of x² + 1 = 0.',
+            solution: 'No real roots, but in complex numbers x = ±i (i² = -1)',
           },
           {
-            problem: "Find all roots of x³ - 1 = 0.",
-            solution:
-              "x = 1 (real), x = (-1 ± i√3)/2 (complex). Total 3 roots.",
+            problem: 'Find all roots of x³ - 1 = 0.',
+            solution: 'x = 1 (real), x = (-1 ± i√3)/2 (complex). Total 3 roots.',
           },
         ],
         history: {
-          discoveredBy: "Carl Friedrich Gauss",
-          year: "1799",
-          background:
-            "Gauss gave the first rigorous proof in his doctoral dissertation.",
+          discoveredBy: 'Carl Friedrich Gauss',
+          year: '1799',
+          background: 'Gauss gave the first rigorous proof in his doctoral dissertation.',
         },
         applications: [
-          { field: "Control Theory", description: "Transfer function poles" },
-          { field: "Signal Processing", description: "Filter design" },
-          { field: "Numerical Analysis", description: "Polynomial root finding" },
+          { field: 'Control Theory', description: 'Transfer function poles' },
+          { field: 'Signal Processing', description: 'Filter design' },
+          { field: 'Numerical Analysis', description: 'Polynomial root finding' },
         ],
       },
     },
     relations: {
-      prerequisites: ["complex-numbers", "polynomial"],
-      nextTopics: ["galois-theory"],
-      related: ["quadratic-formula"],
+      prerequisites: ['complex-numbers', 'polynomial'],
+      nextTopics: ['galois-theory'],
+      related: ['quadratic-formula'],
     },
-    tags: ["대수학", "기본정리", "algebra", "fundamental theorem"],
+    tags: ['대수학', '기본정리', 'algebra', 'fundamental theorem'],
   },
   {
-    id: "fermats-last-theorem",
+    id: 'fermats-last-theorem',
     name: {
-      ko: "페르마의 마지막 정리",
+      ko: '페르마의 마지막 정리',
       en: "Fermat's Last Theorem",
-      ja: "フェルマーの最終定理",
+      ja: 'フェルマーの最終定理',
     },
-    field: "theorems",
-    subfield: "number-theory",
+    field: 'theorems',
+    subfield: 'number-theory',
     difficulty: 5,
     content: {
       ko: {
         definition:
-          "n ≥ 3인 정수에 대해 xⁿ + yⁿ = zⁿ을 만족하는 양의 정수 x, y, z는 존재하지 않습니다.",
+          'n ≥ 3인 정수에 대해 xⁿ + yⁿ = zⁿ을 만족하는 양의 정수 x, y, z는 존재하지 않습니다.',
         formulas: [
           {
-            latex: "x^n + y^n = z^n \\text{ has no positive integer solutions for } n \\geq 3",
-            description: "페르마의 마지막 정리",
+            latex: 'x^n + y^n = z^n \\text{ has no positive integer solutions for } n \\geq 3',
+            description: '페르마의 마지막 정리',
           },
         ],
         examples: [
           {
-            problem: "n = 2일 때는 해가 있나요?",
-            solution:
-              "예, 피타고라스 삼중수: 3² + 4² = 5², 5² + 12² = 13² 등 무한히 많습니다.",
+            problem: 'n = 2일 때는 해가 있나요?',
+            solution: '예, 피타고라스 삼중수: 3² + 4² = 5², 5² + 12² = 13² 등 무한히 많습니다.',
           },
         ],
         history: {
-          discoveredBy: "피에르 드 페르마 (추측), 앤드류 와일스 (증명)",
-          year: "1637년 (추측), 1995년 (증명)",
+          discoveredBy: '피에르 드 페르마 (추측), 앤드류 와일스 (증명)',
+          year: '1637년 (추측), 1995년 (증명)',
           background:
             "페르마가 책 여백에 '증명을 발견했다'고 썼지만, 358년 후 와일스가 증명했습니다.",
         },
         applications: [
-          { field: "수론", description: "타원곡선, 모듈러 형식" },
-          { field: "암호학", description: "타원곡선 암호" },
+          { field: '수론', description: '타원곡선, 모듈러 형식' },
+          { field: '암호학', description: '타원곡선 암호' },
         ],
       },
       en: {
         definition:
-          "For integer n ≥ 3, there are no positive integer solutions x, y, z satisfying xⁿ + yⁿ = zⁿ.",
+          'For integer n ≥ 3, there are no positive integer solutions x, y, z satisfying xⁿ + yⁿ = zⁿ.',
         formulas: [
           {
-            latex: "x^n + y^n = z^n \\text{ has no positive integer solutions for } n \\geq 3",
+            latex: 'x^n + y^n = z^n \\text{ has no positive integer solutions for } n \\geq 3',
             description: "Fermat's Last Theorem",
           },
         ],
         examples: [
           {
-            problem: "Are there solutions for n = 2?",
-            solution:
-              "Yes, Pythagorean triples: 3² + 4² = 5², 5² + 12² = 13², infinitely many.",
+            problem: 'Are there solutions for n = 2?',
+            solution: 'Yes, Pythagorean triples: 3² + 4² = 5², 5² + 12² = 13², infinitely many.',
           },
         ],
         history: {
-          discoveredBy: "Pierre de Fermat (conjecture), Andrew Wiles (proof)",
-          year: "1637 (conjecture), 1995 (proof)",
+          discoveredBy: 'Pierre de Fermat (conjecture), Andrew Wiles (proof)',
+          year: '1637 (conjecture), 1995 (proof)',
           background:
-            "Fermat wrote he had a proof in a book margin; Wiles proved it 358 years later.",
+            'Fermat wrote he had a proof in a book margin; Wiles proved it 358 years later.',
         },
         applications: [
-          { field: "Number Theory", description: "Elliptic curves, modular forms" },
-          { field: "Cryptography", description: "Elliptic curve cryptography" },
+          { field: 'Number Theory', description: 'Elliptic curves, modular forms' },
+          { field: 'Cryptography', description: 'Elliptic curve cryptography' },
         ],
       },
     },
     relations: {
-      prerequisites: ["diophantine-equations", "modular-arithmetic"],
-      nextTopics: ["elliptic-curves", "modular-forms"],
-      related: ["pythagorean-theorem"],
+      prerequisites: ['diophantine-equations', 'modular-arithmetic'],
+      nextTopics: ['elliptic-curves', 'modular-forms'],
+      related: ['pythagorean-theorem'],
     },
-    tags: ["페르마", "마지막정리", "Fermat", "last theorem"],
+    tags: ['페르마', '마지막정리', 'Fermat', 'last theorem'],
   },
   {
-    id: "prime-number-theorem",
+    id: 'prime-number-theorem',
     name: {
-      ko: "소수 정리",
-      en: "Prime Number Theorem",
-      ja: "素数定理",
+      ko: '소수 정리',
+      en: 'Prime Number Theorem',
+      ja: '素数定理',
     },
-    field: "theorems",
-    subfield: "number-theory",
+    field: 'theorems',
+    subfield: 'number-theory',
     difficulty: 5,
     content: {
       ko: {
-        definition:
-          "소수 정리는 x 이하의 소수의 개수 π(x)가 x/ln(x)에 점근한다는 것입니다.",
+        definition: '소수 정리는 x 이하의 소수의 개수 π(x)가 x/ln(x)에 점근한다는 것입니다.',
         formulas: [
           {
-            latex: "\\pi(x) \\sim \\frac{x}{\\ln x}",
-            description: "소수 정리",
+            latex: '\\pi(x) \\sim \\frac{x}{\\ln x}',
+            description: '소수 정리',
           },
           {
-            latex: "\\lim_{x \\to \\infty} \\frac{\\pi(x)}{x / \\ln x} = 1",
-            description: "정확한 점근 형태",
+            latex: '\\lim_{x \\to \\infty} \\frac{\\pi(x)}{x / \\ln x} = 1',
+            description: '정확한 점근 형태',
           },
         ],
         examples: [
           {
-            problem: "1000 이하의 소수 개수를 추정하세요.",
-            solution:
-              "π(1000) ≈ 1000/ln(1000) ≈ 1000/6.9 ≈ 145. 실제: 168개",
+            problem: '1000 이하의 소수 개수를 추정하세요.',
+            solution: 'π(1000) ≈ 1000/ln(1000) ≈ 1000/6.9 ≈ 145. 실제: 168개',
           },
         ],
         history: {
-          discoveredBy: "아다마르, 드 라 발레푸생",
-          year: "1896년",
-          background:
-            "가우스가 추측하고, 아다마르와 드 라 발레푸생이 독립적으로 증명했습니다.",
+          discoveredBy: '아다마르, 드 라 발레푸생',
+          year: '1896년',
+          background: '가우스가 추측하고, 아다마르와 드 라 발레푸생이 독립적으로 증명했습니다.',
         },
         applications: [
-          { field: "암호학", description: "큰 소수 생성" },
-          { field: "수론", description: "소수 분포 연구" },
+          { field: '암호학', description: '큰 소수 생성' },
+          { field: '수론', description: '소수 분포 연구' },
         ],
       },
       en: {
         definition:
-          "The Prime Number Theorem states that π(x), the count of primes ≤ x, is asymptotic to x/ln(x).",
+          'The Prime Number Theorem states that π(x), the count of primes ≤ x, is asymptotic to x/ln(x).',
         formulas: [
           {
-            latex: "\\pi(x) \\sim \\frac{x}{\\ln x}",
-            description: "Prime Number Theorem",
+            latex: '\\pi(x) \\sim \\frac{x}{\\ln x}',
+            description: 'Prime Number Theorem',
           },
           {
-            latex: "\\lim_{x \\to \\infty} \\frac{\\pi(x)}{x / \\ln x} = 1",
-            description: "Precise asymptotic form",
+            latex: '\\lim_{x \\to \\infty} \\frac{\\pi(x)}{x / \\ln x} = 1',
+            description: 'Precise asymptotic form',
           },
         ],
         examples: [
           {
-            problem: "Estimate the number of primes up to 1000.",
-            solution:
-              "π(1000) ≈ 1000/ln(1000) ≈ 1000/6.9 ≈ 145. Actual: 168",
+            problem: 'Estimate the number of primes up to 1000.',
+            solution: 'π(1000) ≈ 1000/ln(1000) ≈ 1000/6.9 ≈ 145. Actual: 168',
           },
         ],
         history: {
-          discoveredBy: "Hadamard, de la Vallée Poussin",
-          year: "1896",
+          discoveredBy: 'Hadamard, de la Vallée Poussin',
+          year: '1896',
           background:
-            "Conjectured by Gauss; proved independently by Hadamard and de la Vallée Poussin.",
+            'Conjectured by Gauss; proved independently by Hadamard and de la Vallée Poussin.',
         },
         applications: [
-          { field: "Cryptography", description: "Large prime generation" },
-          { field: "Number Theory", description: "Prime distribution" },
+          { field: 'Cryptography', description: 'Large prime generation' },
+          { field: 'Number Theory', description: 'Prime distribution' },
         ],
       },
     },
     relations: {
-      prerequisites: ["prime-numbers", "logarithm"],
-      nextTopics: ["riemann-hypothesis"],
-      related: ["zeta-function"],
+      prerequisites: ['prime-numbers', 'logarithm'],
+      nextTopics: ['riemann-hypothesis'],
+      related: ['zeta-function'],
     },
-    tags: ["소수", "정리", "prime", "theorem"],
+    tags: ['소수', '정리', 'prime', 'theorem'],
   },
   {
-    id: "mean-value-theorem",
+    id: 'mean-value-theorem',
     name: {
-      ko: "평균값 정리",
-      en: "Mean Value Theorem",
-      ja: "平均値の定理",
+      ko: '평균값 정리',
+      en: 'Mean Value Theorem',
+      ja: '平均値の定理',
     },
-    field: "theorems",
-    subfield: "calculus",
+    field: 'theorems',
+    subfield: 'calculus',
     difficulty: 3,
     content: {
       ko: {
         definition:
-          "평균값 정리는 [a,b]에서 연속이고 (a,b)에서 미분 가능한 함수에 대해, 접선의 기울기가 할선의 기울기와 같은 점이 존재함을 말합니다.",
+          '평균값 정리는 [a,b]에서 연속이고 (a,b)에서 미분 가능한 함수에 대해, 접선의 기울기가 할선의 기울기와 같은 점이 존재함을 말합니다.',
         formulas: [
           {
             latex: "f'(c) = \\frac{f(b) - f(a)}{b - a}",
-            description: "평균값 정리 (a < c < b인 c 존재)",
+            description: '평균값 정리 (a < c < b인 c 존재)',
           },
         ],
         examples: [
           {
-            problem: "f(x) = x² on [1, 3]에서 평균값 정리의 c를 찾으세요.",
-            solution:
-              "f'(x) = 2x, (f(3)-f(1))/(3-1) = (9-1)/2 = 4. 2c = 4이므로 c = 2.",
+            problem: 'f(x) = x² on [1, 3]에서 평균값 정리의 c를 찾으세요.',
+            solution: "f'(x) = 2x, (f(3)-f(1))/(3-1) = (9-1)/2 = 4. 2c = 4이므로 c = 2.",
           },
         ],
         history: {
-          discoveredBy: "오귀스탱 루이 코시",
-          year: "1823년",
-          background:
-            "코시가 해석학의 엄밀화 과정에서 증명했습니다.",
+          discoveredBy: '오귀스탱 루이 코시',
+          year: '1823년',
+          background: '코시가 해석학의 엄밀화 과정에서 증명했습니다.',
         },
         applications: [
-          { field: "해석학", description: "함수의 증감 판정" },
-          { field: "물리학", description: "순간 속도와 평균 속도" },
-          { field: "오차 분석", description: "테일러 전개의 나머지항" },
+          { field: '해석학', description: '함수의 증감 판정' },
+          { field: '물리학', description: '순간 속도와 평균 속도' },
+          { field: '오차 분석', description: '테일러 전개의 나머지항' },
         ],
       },
       en: {
         definition:
-          "The Mean Value Theorem states for a function continuous on [a,b] and differentiable on (a,b), there exists a point where tangent slope equals secant slope.",
+          'The Mean Value Theorem states for a function continuous on [a,b] and differentiable on (a,b), there exists a point where tangent slope equals secant slope.',
         formulas: [
           {
             latex: "f'(c) = \\frac{f(b) - f(a)}{b - a}",
-            description: "Mean Value Theorem (c exists with a < c < b)",
+            description: 'Mean Value Theorem (c exists with a < c < b)',
           },
         ],
         examples: [
           {
-            problem: "Find c for f(x) = x² on [1, 3].",
-            solution:
-              "f'(x) = 2x, (f(3)-f(1))/(3-1) = (9-1)/2 = 4. 2c = 4, so c = 2.",
+            problem: 'Find c for f(x) = x² on [1, 3].',
+            solution: "f'(x) = 2x, (f(3)-f(1))/(3-1) = (9-1)/2 = 4. 2c = 4, so c = 2.",
           },
         ],
         history: {
-          discoveredBy: "Augustin-Louis Cauchy",
-          year: "1823",
-          background:
-            "Cauchy proved it during the rigorization of analysis.",
+          discoveredBy: 'Augustin-Louis Cauchy',
+          year: '1823',
+          background: 'Cauchy proved it during the rigorization of analysis.',
         },
         applications: [
-          { field: "Analysis", description: "Determining function increase/decrease" },
-          { field: "Physics", description: "Instantaneous vs average velocity" },
-          { field: "Error Analysis", description: "Taylor expansion remainder" },
+          { field: 'Analysis', description: 'Determining function increase/decrease' },
+          { field: 'Physics', description: 'Instantaneous vs average velocity' },
+          { field: 'Error Analysis', description: 'Taylor expansion remainder' },
         ],
       },
     },
     relations: {
-      prerequisites: ["derivative", "continuity"],
-      nextTopics: ["rolles-theorem", "lhopitals-rule"],
-      related: ["intermediate-value-theorem"],
+      prerequisites: ['derivative', 'continuity'],
+      nextTopics: ['rolles-theorem', 'lhopitals-rule'],
+      related: ['intermediate-value-theorem'],
     },
-    tags: ["평균값", "미적분", "mean value", "calculus"],
+    tags: ['평균값', '미적분', 'mean value', 'calculus'],
   },
   {
-    id: "bayes-theorem",
+    id: 'bayes-theorem',
     name: {
-      ko: "베이즈 정리",
+      ko: '베이즈 정리',
       en: "Bayes' Theorem",
-      ja: "ベイズの定理",
+      ja: 'ベイズの定理',
     },
-    field: "theorems",
-    subfield: "probability",
+    field: 'theorems',
+    subfield: 'probability',
     difficulty: 3,
     content: {
       ko: {
         definition:
-          "베이즈 정리는 조건부 확률을 뒤집는 공식입니다. 새로운 증거가 주어졌을 때 믿음을 업데이트하는 데 사용됩니다.",
+          '베이즈 정리는 조건부 확률을 뒤집는 공식입니다. 새로운 증거가 주어졌을 때 믿음을 업데이트하는 데 사용됩니다.',
         formulas: [
           {
-            latex: "P(A|B) = \\frac{P(B|A) \\cdot P(A)}{P(B)}",
-            description: "베이즈 정리",
+            latex: 'P(A|B) = \\frac{P(B|A) \\cdot P(A)}{P(B)}',
+            description: '베이즈 정리',
           },
           {
-            latex: "P(B) = \\sum_i P(B|A_i)P(A_i)",
-            description: "전확률 공식",
+            latex: 'P(B) = \\sum_i P(B|A_i)P(A_i)',
+            description: '전확률 공식',
           },
         ],
         examples: [
           {
-            problem:
-              "질병 발생률 1%, 검사 정확도 99%. 양성일 때 실제 질병 확률은?",
+            problem: '질병 발생률 1%, 검사 정확도 99%. 양성일 때 실제 질병 확률은?',
             solution:
-              "P(D|+) = P(+|D)P(D) / P(+) = (0.99)(0.01) / (0.99×0.01 + 0.01×0.99) = 0.5 (50%)",
+              'P(D|+) = P(+|D)P(D) / P(+) = (0.99)(0.01) / (0.99×0.01 + 0.01×0.99) = 0.5 (50%)',
           },
         ],
         history: {
-          discoveredBy: "토머스 베이즈",
-          year: "1763년",
-          background:
-            "베이즈 사후에 발표된 논문에서 처음 등장했습니다.",
+          discoveredBy: '토머스 베이즈',
+          year: '1763년',
+          background: '베이즈 사후에 발표된 논문에서 처음 등장했습니다.',
         },
         applications: [
-          { field: "기계학습", description: "나이브 베이즈 분류기" },
-          { field: "의학", description: "진단 테스트 해석" },
-          { field: "스팸 필터", description: "베이지안 스팸 필터" },
+          { field: '기계학습', description: '나이브 베이즈 분류기' },
+          { field: '의학', description: '진단 테스트 해석' },
+          { field: '스팸 필터', description: '베이지안 스팸 필터' },
         ],
       },
       en: {
@@ -450,12 +428,12 @@ export const theoremsConcepts: MathConcept[] = [
           "Bayes' Theorem is a formula for reversing conditional probabilities. Used to update beliefs given new evidence.",
         formulas: [
           {
-            latex: "P(A|B) = \\frac{P(B|A) \\cdot P(A)}{P(B)}",
+            latex: 'P(A|B) = \\frac{P(B|A) \\cdot P(A)}{P(B)}',
             description: "Bayes' Theorem",
           },
           {
-            latex: "P(B) = \\sum_i P(B|A_i)P(A_i)",
-            description: "Law of total probability",
+            latex: 'P(B) = \\sum_i P(B|A_i)P(A_i)',
+            description: 'Law of total probability',
           },
         ],
         examples: [
@@ -463,74 +441,72 @@ export const theoremsConcepts: MathConcept[] = [
             problem:
               "Disease rate 1%, test accuracy 99%. If positive, what's actual disease probability?",
             solution:
-              "P(D|+) = P(+|D)P(D) / P(+) = (0.99)(0.01) / (0.99×0.01 + 0.01×0.99) = 0.5 (50%)",
+              'P(D|+) = P(+|D)P(D) / P(+) = (0.99)(0.01) / (0.99×0.01 + 0.01×0.99) = 0.5 (50%)',
           },
         ],
         history: {
-          discoveredBy: "Thomas Bayes",
-          year: "1763",
-          background:
-            "First appeared in a paper published posthumously.",
+          discoveredBy: 'Thomas Bayes',
+          year: '1763',
+          background: 'First appeared in a paper published posthumously.',
         },
         applications: [
-          { field: "Machine Learning", description: "Naive Bayes classifier" },
-          { field: "Medicine", description: "Diagnostic test interpretation" },
-          { field: "Spam Filtering", description: "Bayesian spam filters" },
+          { field: 'Machine Learning', description: 'Naive Bayes classifier' },
+          { field: 'Medicine', description: 'Diagnostic test interpretation' },
+          { field: 'Spam Filtering', description: 'Bayesian spam filters' },
         ],
       },
     },
     relations: {
-      prerequisites: ["conditional-probability"],
-      nextTopics: ["bayesian-inference"],
-      related: ["total-probability"],
+      prerequisites: ['conditional-probability'],
+      nextTopics: ['bayesian-inference'],
+      related: ['total-probability'],
     },
-    tags: ["베이즈", "조건부확률", "Bayes", "conditional"],
+    tags: ['베이즈', '조건부확률', 'Bayes', 'conditional'],
   },
   {
-    id: "noethers-theorem",
+    id: 'noethers-theorem',
     name: {
-      ko: "뇌터의 정리",
+      ko: '뇌터의 정리',
       en: "Noether's Theorem",
-      ja: "ネーターの定理",
+      ja: 'ネーターの定理',
     },
-    field: "theorems",
-    subfield: "physics",
+    field: 'theorems',
+    subfield: 'physics',
     difficulty: 5,
     content: {
       ko: {
-        definition:
-          "뇌터의 정리는 물리계의 연속 대칭성에 대응하는 보존량이 존재함을 말합니다.",
+        definition: '뇌터의 정리는 물리계의 연속 대칭성에 대응하는 보존량이 존재함을 말합니다.',
         formulas: [
           {
-            latex: "\\text{시간 평행이동 대칭} \\leftrightarrow \\text{에너지 보존}",
-            description: "시간 대칭과 에너지",
+            latex: '\\text{시간 평행이동 대칭} \\leftrightarrow \\text{에너지 보존}',
+            description: '시간 대칭과 에너지',
           },
           {
-            latex: "\\text{공간 평행이동 대칭} \\leftrightarrow \\text{운동량 보존}",
-            description: "공간 대칭과 운동량",
+            latex: '\\text{공간 평행이동 대칭} \\leftrightarrow \\text{운동량 보존}',
+            description: '공간 대칭과 운동량',
           },
           {
-            latex: "\\text{회전 대칭} \\leftrightarrow \\text{각운동량 보존}",
-            description: "회전 대칭과 각운동량",
+            latex: '\\text{회전 대칭} \\leftrightarrow \\text{각운동량 보존}',
+            description: '회전 대칭과 각운동량',
           },
         ],
         examples: [
           {
-            problem: "왜 에너지가 보존되는지 뇌터 정리로 설명하세요.",
+            problem: '왜 에너지가 보존되는지 뇌터 정리로 설명하세요.',
             solution:
-              "물리 법칙이 시간에 따라 변하지 않으면(시간 평행이동 대칭), 에너지가 보존됩니다.",
+              '물리 법칙이 시간에 따라 변하지 않으면(시간 평행이동 대칭), 에너지가 보존됩니다.',
           },
         ],
         history: {
-          discoveredBy: "에미 뇌터",
-          year: "1915년",
+          discoveredBy: '에미 뇌터',
+          year: '1915년',
           background:
-            "뇌터가 일반상대론 연구 중에 발견한, 물리학에서 가장 중요한 정리 중 하나입니다.",
+            '뇌터가 일반상대론 연구 중에 발견한, 물리학에서 가장 중요한 정리 중 하나입니다.',
         },
         applications: [
-          { field: "물리학", description: "보존 법칙의 기원" },
-          { field: "입자물리학", description: "게이지 대칭, 표준모형" },
-          { field: "수학", description: "불변 이론" },
+          { field: '물리학', description: '보존 법칙의 기원' },
+          { field: '입자물리학', description: '게이지 대칭, 표준모형' },
+          { field: '수학', description: '불변 이론' },
         ],
       },
       en: {
@@ -538,16 +514,18 @@ export const theoremsConcepts: MathConcept[] = [
           "Noether's Theorem states that every continuous symmetry of a physical system corresponds to a conserved quantity.",
         formulas: [
           {
-            latex: "\\text{Time translation symmetry} \\leftrightarrow \\text{Energy conservation}",
-            description: "Time symmetry and energy",
+            latex: '\\text{Time translation symmetry} \\leftrightarrow \\text{Energy conservation}',
+            description: 'Time symmetry and energy',
           },
           {
-            latex: "\\text{Space translation symmetry} \\leftrightarrow \\text{Momentum conservation}",
-            description: "Space symmetry and momentum",
+            latex:
+              '\\text{Space translation symmetry} \\leftrightarrow \\text{Momentum conservation}',
+            description: 'Space symmetry and momentum',
           },
           {
-            latex: "\\text{Rotational symmetry} \\leftrightarrow \\text{Angular momentum conservation}",
-            description: "Rotation symmetry and angular momentum",
+            latex:
+              '\\text{Rotational symmetry} \\leftrightarrow \\text{Angular momentum conservation}',
+            description: 'Rotation symmetry and angular momentum',
           },
         ],
         examples: [
@@ -558,69 +536,69 @@ export const theoremsConcepts: MathConcept[] = [
           },
         ],
         history: {
-          discoveredBy: "Emmy Noether",
-          year: "1915",
+          discoveredBy: 'Emmy Noether',
+          year: '1915',
           background:
             "Noether discovered this while working on general relativity; one of physics' most important theorems.",
         },
         applications: [
-          { field: "Physics", description: "Origin of conservation laws" },
-          { field: "Particle Physics", description: "Gauge symmetries, Standard Model" },
-          { field: "Mathematics", description: "Invariant theory" },
+          { field: 'Physics', description: 'Origin of conservation laws' },
+          { field: 'Particle Physics', description: 'Gauge symmetries, Standard Model' },
+          { field: 'Mathematics', description: 'Invariant theory' },
         ],
       },
     },
     relations: {
-      prerequisites: ["symmetry", "lagrangian-mechanics"],
-      nextTopics: ["gauge-theory"],
-      related: ["conservation-laws"],
+      prerequisites: ['symmetry', 'lagrangian-mechanics'],
+      nextTopics: ['gauge-theory'],
+      related: ['conservation-laws'],
     },
-    tags: ["뇌터", "대칭", "Noether", "symmetry"],
+    tags: ['뇌터', '대칭', 'Noether', 'symmetry'],
   },
   {
-    id: "pythagorean-theorem",
+    id: 'pythagorean-theorem',
     name: {
-      ko: "피타고라스 정리",
-      en: "Pythagorean Theorem",
-      ja: "ピタゴラスの定理",
+      ko: '피타고라스 정리',
+      en: 'Pythagorean Theorem',
+      ja: 'ピタゴラスの定理',
     },
-    field: "theorems",
-    subfield: "geometry",
+    field: 'theorems',
+    subfield: 'geometry',
     difficulty: 1,
     content: {
       ko: {
         definition:
-          "직각삼각형에서 빗변의 제곱은 다른 두 변의 제곱의 합과 같습니다. 수학에서 가장 유명하고 기본적인 정리입니다.",
+          '직각삼각형에서 빗변의 제곱은 다른 두 변의 제곱의 합과 같습니다. 수학에서 가장 유명하고 기본적인 정리입니다.',
         formulas: [
           {
-            latex: "a^2 + b^2 = c^2",
-            description: "피타고라스 정리 (c는 빗변)",
+            latex: 'a^2 + b^2 = c^2',
+            description: '피타고라스 정리 (c는 빗변)',
           },
           {
-            latex: "c = \\sqrt{a^2 + b^2}",
-            description: "빗변의 길이",
+            latex: 'c = \\sqrt{a^2 + b^2}',
+            description: '빗변의 길이',
           },
         ],
         examples: [
           {
-            problem: "두 변이 3과 4인 직각삼각형의 빗변은?",
-            solution: "c = √(3² + 4²) = √(9 + 16) = √25 = 5",
+            problem: '두 변이 3과 4인 직각삼각형의 빗변은?',
+            solution: 'c = √(3² + 4²) = √(9 + 16) = √25 = 5',
           },
           {
-            problem: "빗변이 13이고 한 변이 5인 직각삼각형의 나머지 변은?",
-            solution: "b = √(13² - 5²) = √(169 - 25) = √144 = 12",
+            problem: '빗변이 13이고 한 변이 5인 직각삼각형의 나머지 변은?',
+            solution: 'b = √(13² - 5²) = √(169 - 25) = √144 = 12',
           },
         ],
         history: {
-          discoveredBy: "피타고라스 (또는 그 이전)",
-          year: "기원전 6세기경",
+          discoveredBy: '피타고라스 (또는 그 이전)',
+          year: '기원전 6세기경',
           background:
-            "피타고라스 학파에서 증명했으나, 바빌로니아와 인도에서 더 일찍 알려져 있었습니다.",
+            '피타고라스 학파에서 증명했으나, 바빌로니아와 인도에서 더 일찍 알려져 있었습니다.',
         },
         applications: [
-          { field: "건축", description: "직각 확인, 거리 계산" },
-          { field: "항법", description: "GPS, 거리 측정" },
-          { field: "컴퓨터 그래픽스", description: "벡터 거리 계산" },
+          { field: '건축', description: '직각 확인, 거리 계산' },
+          { field: '항법', description: 'GPS, 거리 측정' },
+          { field: '컴퓨터 그래픽스', description: '벡터 거리 계산' },
         ],
       },
       en: {
@@ -628,243 +606,237 @@ export const theoremsConcepts: MathConcept[] = [
           "In a right triangle, the square of the hypotenuse equals the sum of squares of the other two sides. Mathematics' most famous theorem.",
         formulas: [
           {
-            latex: "a^2 + b^2 = c^2",
-            description: "Pythagorean Theorem (c is hypotenuse)",
+            latex: 'a^2 + b^2 = c^2',
+            description: 'Pythagorean Theorem (c is hypotenuse)',
           },
           {
-            latex: "c = \\sqrt{a^2 + b^2}",
-            description: "Hypotenuse length",
+            latex: 'c = \\sqrt{a^2 + b^2}',
+            description: 'Hypotenuse length',
           },
         ],
         examples: [
           {
-            problem: "Find the hypotenuse of a right triangle with sides 3 and 4.",
-            solution: "c = √(3² + 4²) = √(9 + 16) = √25 = 5",
+            problem: 'Find the hypotenuse of a right triangle with sides 3 and 4.',
+            solution: 'c = √(3² + 4²) = √(9 + 16) = √25 = 5',
           },
           {
-            problem: "If hypotenuse is 13 and one side is 5, find the other side.",
-            solution: "b = √(13² - 5²) = √(169 - 25) = √144 = 12",
+            problem: 'If hypotenuse is 13 and one side is 5, find the other side.',
+            solution: 'b = √(13² - 5²) = √(169 - 25) = √144 = 12',
           },
         ],
         history: {
-          discoveredBy: "Pythagoras (or earlier)",
-          year: "c. 6th century BCE",
-          background:
-            "Proved by Pythagorean school, but known earlier in Babylon and India.",
+          discoveredBy: 'Pythagoras (or earlier)',
+          year: 'c. 6th century BCE',
+          background: 'Proved by Pythagorean school, but known earlier in Babylon and India.',
         },
         applications: [
-          { field: "Architecture", description: "Right angle verification, distance" },
-          { field: "Navigation", description: "GPS, distance measurement" },
-          { field: "Computer Graphics", description: "Vector distance calculation" },
+          { field: 'Architecture', description: 'Right angle verification, distance' },
+          { field: 'Navigation', description: 'GPS, distance measurement' },
+          { field: 'Computer Graphics', description: 'Vector distance calculation' },
         ],
       },
     },
     relations: {
-      prerequisites: ["right-triangle", "square-root"],
-      nextTopics: ["distance-formula", "trigonometry"],
-      related: ["fermats-last-theorem"],
+      prerequisites: ['right-triangle', 'square-root'],
+      nextTopics: ['distance-formula', 'trigonometry'],
+      related: ['fermats-last-theorem'],
     },
-    tags: ["피타고라스", "직각삼각형", "Pythagorean", "geometry"],
+    tags: ['피타고라스', '직각삼각형', 'Pythagorean', 'geometry'],
   },
   {
-    id: "central-limit-theorem",
+    id: 'central-limit-theorem',
     name: {
-      ko: "중심극한정리",
-      en: "Central Limit Theorem",
-      ja: "中心極限定理",
+      ko: '중심극한정리',
+      en: 'Central Limit Theorem',
+      ja: '中心極限定理',
     },
-    field: "theorems",
-    subfield: "probability",
+    field: 'theorems',
+    subfield: 'probability',
     difficulty: 4,
     content: {
       ko: {
         definition:
-          "충분히 많은 독립 확률변수의 합의 분포는 원래 분포에 관계없이 정규분포에 근사합니다.",
+          '충분히 많은 독립 확률변수의 합의 분포는 원래 분포에 관계없이 정규분포에 근사합니다.',
         formulas: [
           {
-            latex: "\\bar{X}_n = \\frac{1}{n}\\sum_{i=1}^{n} X_i",
-            description: "표본평균",
+            latex: '\\bar{X}_n = \\frac{1}{n}\\sum_{i=1}^{n} X_i',
+            description: '표본평균',
           },
           {
-            latex: "\\frac{\\bar{X}_n - \\mu}{\\sigma/\\sqrt{n}} \\xrightarrow{d} N(0,1)",
-            description: "표준화된 표본평균은 표준정규분포로 수렴",
+            latex: '\\frac{\\bar{X}_n - \\mu}{\\sigma/\\sqrt{n}} \\xrightarrow{d} N(0,1)',
+            description: '표준화된 표본평균은 표준정규분포로 수렴',
           },
         ],
         examples: [
           {
-            problem: "동전을 100번 던져 앞면 개수의 분포는?",
-            solution:
-              "평균 50, 표준편차 5인 정규분포에 근사. P(45 ≤ X ≤ 55) ≈ 68%",
+            problem: '동전을 100번 던져 앞면 개수의 분포는?',
+            solution: '평균 50, 표준편차 5인 정규분포에 근사. P(45 ≤ X ≤ 55) ≈ 68%',
           },
         ],
         history: {
-          discoveredBy: "피에르시몽 라플라스",
-          year: "1810년",
-          background:
-            "드무아브르가 이항분포에 대해 처음 발견했고, 라플라스가 일반화했습니다.",
+          discoveredBy: '피에르시몽 라플라스',
+          year: '1810년',
+          background: '드무아브르가 이항분포에 대해 처음 발견했고, 라플라스가 일반화했습니다.',
         },
         applications: [
-          { field: "통계학", description: "신뢰구간, 가설검정" },
-          { field: "품질관리", description: "공정 모니터링" },
-          { field: "금융", description: "포트폴리오 분석" },
+          { field: '통계학', description: '신뢰구간, 가설검정' },
+          { field: '품질관리', description: '공정 모니터링' },
+          { field: '금융', description: '포트폴리오 분석' },
         ],
       },
       en: {
         definition:
-          "The distribution of sum of many independent random variables approaches normal distribution regardless of original distribution.",
+          'The distribution of sum of many independent random variables approaches normal distribution regardless of original distribution.',
         formulas: [
           {
-            latex: "\\bar{X}_n = \\frac{1}{n}\\sum_{i=1}^{n} X_i",
-            description: "Sample mean",
+            latex: '\\bar{X}_n = \\frac{1}{n}\\sum_{i=1}^{n} X_i',
+            description: 'Sample mean',
           },
           {
-            latex: "\\frac{\\bar{X}_n - \\mu}{\\sigma/\\sqrt{n}} \\xrightarrow{d} N(0,1)",
-            description: "Standardized sample mean converges to standard normal",
+            latex: '\\frac{\\bar{X}_n - \\mu}{\\sigma/\\sqrt{n}} \\xrightarrow{d} N(0,1)',
+            description: 'Standardized sample mean converges to standard normal',
           },
         ],
         examples: [
           {
             problem: "What's the distribution of heads in 100 coin flips?",
-            solution:
-              "Approximately normal with mean 50, std 5. P(45 ≤ X ≤ 55) ≈ 68%",
+            solution: 'Approximately normal with mean 50, std 5. P(45 ≤ X ≤ 55) ≈ 68%',
           },
         ],
         history: {
-          discoveredBy: "Pierre-Simon Laplace",
-          year: "1810",
-          background:
-            "De Moivre first proved it for binomial; Laplace generalized it.",
+          discoveredBy: 'Pierre-Simon Laplace',
+          year: '1810',
+          background: 'De Moivre first proved it for binomial; Laplace generalized it.',
         },
         applications: [
-          { field: "Statistics", description: "Confidence intervals, hypothesis tests" },
-          { field: "Quality Control", description: "Process monitoring" },
-          { field: "Finance", description: "Portfolio analysis" },
+          { field: 'Statistics', description: 'Confidence intervals, hypothesis tests' },
+          { field: 'Quality Control', description: 'Process monitoring' },
+          { field: 'Finance', description: 'Portfolio analysis' },
         ],
       },
     },
     relations: {
-      prerequisites: ["normal-distribution", "expected-value"],
-      nextTopics: ["confidence-intervals", "hypothesis-testing"],
-      related: ["law-of-large-numbers"],
+      prerequisites: ['normal-distribution', 'expected-value'],
+      nextTopics: ['confidence-intervals', 'hypothesis-testing'],
+      related: ['law-of-large-numbers'],
     },
-    tags: ["중심극한", "정규분포", "CLT", "statistics"],
+    tags: ['중심극한', '정규분포', 'CLT', 'statistics'],
   },
   {
-    id: "intermediate-value-theorem",
+    id: 'intermediate-value-theorem',
     name: {
-      ko: "중간값 정리",
-      en: "Intermediate Value Theorem",
-      ja: "中間値の定理",
+      ko: '중간값 정리',
+      en: 'Intermediate Value Theorem',
+      ja: '中間値の定理',
     },
-    field: "theorems",
-    subfield: "calculus",
+    field: 'theorems',
+    subfield: 'calculus',
     difficulty: 2,
     content: {
       ko: {
         definition:
-          "연속함수 f가 [a,b]에서 정의되고 f(a)와 f(b) 사이의 값 k가 있으면, f(c) = k인 c가 (a,b)에 존재합니다.",
+          '연속함수 f가 [a,b]에서 정의되고 f(a)와 f(b) 사이의 값 k가 있으면, f(c) = k인 c가 (a,b)에 존재합니다.',
         formulas: [
           {
-            latex: "\\text{f(a) < k < f(b)이면 f(c) = k인 c ∈ (a,b) 존재}",
-            description: "중간값 정리",
+            latex: '\\text{f(a) < k < f(b)이면 f(c) = k인 c ∈ (a,b) 존재}',
+            description: '중간값 정리',
           },
         ],
         examples: [
           {
-            problem: "f(x) = x³ - x - 1에서 [1,2] 사이에 근이 있음을 보이세요.",
-            solution:
-              "f(1) = -1 < 0, f(2) = 5 > 0. 연속이므로 f(c) = 0인 c ∈ (1,2) 존재.",
+            problem: 'f(x) = x³ - x - 1에서 [1,2] 사이에 근이 있음을 보이세요.',
+            solution: 'f(1) = -1 < 0, f(2) = 5 > 0. 연속이므로 f(c) = 0인 c ∈ (1,2) 존재.',
           },
         ],
         history: {
-          discoveredBy: "베르나르트 볼차노",
-          year: "1817년",
+          discoveredBy: '베르나르트 볼차노',
+          year: '1817년',
           background:
-            "볼차노가 처음 엄밀하게 증명했습니다. 직관적으로 당연해 보이지만 증명은 실수의 완비성을 필요로 합니다.",
+            '볼차노가 처음 엄밀하게 증명했습니다. 직관적으로 당연해 보이지만 증명은 실수의 완비성을 필요로 합니다.',
         },
         applications: [
-          { field: "수치해석", description: "이분법 근 찾기" },
-          { field: "경제학", description: "균형점 존재 증명" },
-          { field: "물리학", description: "연속 변화 분석" },
+          { field: '수치해석', description: '이분법 근 찾기' },
+          { field: '경제학', description: '균형점 존재 증명' },
+          { field: '물리학', description: '연속 변화 분석' },
         ],
       },
       en: {
         definition:
-          "If continuous f on [a,b] and k is between f(a) and f(b), there exists c in (a,b) with f(c) = k.",
+          'If continuous f on [a,b] and k is between f(a) and f(b), there exists c in (a,b) with f(c) = k.',
         formulas: [
           {
-            latex: "\\text{If f(a) < k < f(b), then ∃c ∈ (a,b) with f(c) = k}",
-            description: "Intermediate Value Theorem",
+            latex: '\\text{If f(a) < k < f(b), then ∃c ∈ (a,b) with f(c) = k}',
+            description: 'Intermediate Value Theorem',
           },
         ],
         examples: [
           {
-            problem: "Show f(x) = x³ - x - 1 has a root in [1,2].",
-            solution:
-              "f(1) = -1 < 0, f(2) = 5 > 0. By continuity, ∃c ∈ (1,2) with f(c) = 0.",
+            problem: 'Show f(x) = x³ - x - 1 has a root in [1,2].',
+            solution: 'f(1) = -1 < 0, f(2) = 5 > 0. By continuity, ∃c ∈ (1,2) with f(c) = 0.',
           },
         ],
         history: {
-          discoveredBy: "Bernard Bolzano",
-          year: "1817",
+          discoveredBy: 'Bernard Bolzano',
+          year: '1817',
           background:
-            "Bolzano gave first rigorous proof. Seems obvious intuitively but requires completeness of reals.",
+            'Bolzano gave first rigorous proof. Seems obvious intuitively but requires completeness of reals.',
         },
         applications: [
-          { field: "Numerical Analysis", description: "Bisection method" },
-          { field: "Economics", description: "Equilibrium existence" },
-          { field: "Physics", description: "Continuous change analysis" },
+          { field: 'Numerical Analysis', description: 'Bisection method' },
+          { field: 'Economics', description: 'Equilibrium existence' },
+          { field: 'Physics', description: 'Continuous change analysis' },
         ],
       },
     },
     relations: {
-      prerequisites: ["continuity"],
-      nextTopics: ["bisection-method", "fixed-point-theorem"],
-      related: ["mean-value-theorem"],
+      prerequisites: ['continuity'],
+      nextTopics: ['bisection-method', 'fixed-point-theorem'],
+      related: ['mean-value-theorem'],
     },
-    tags: ["중간값", "연속", "IVT", "continuity"],
+    tags: ['중간값', '연속', 'IVT', 'continuity'],
   },
   {
-    id: "stokes-theorem",
+    id: 'stokes-theorem',
     name: {
-      ko: "스토크스 정리",
+      ko: '스토크스 정리',
       en: "Stokes' Theorem",
-      ja: "ストークスの定理",
+      ja: 'ストークスの定理',
     },
-    field: "theorems",
-    subfield: "calculus",
+    field: 'theorems',
+    subfield: 'calculus',
     difficulty: 5,
     content: {
       ko: {
         definition:
-          "스토크스 정리는 벡터장의 회전의 면적분이 경계 곡선에서의 선적분과 같음을 말합니다. 미적분학의 기본정리를 일반화한 것입니다.",
+          '스토크스 정리는 벡터장의 회전의 면적분이 경계 곡선에서의 선적분과 같음을 말합니다. 미적분학의 기본정리를 일반화한 것입니다.',
         formulas: [
           {
-            latex: "\\oint_C \\vec{F} \\cdot d\\vec{r} = \\iint_S (\\nabla \\times \\vec{F}) \\cdot d\\vec{S}",
-            description: "스토크스 정리",
+            latex:
+              '\\oint_C \\vec{F} \\cdot d\\vec{r} = \\iint_S (\\nabla \\times \\vec{F}) \\cdot d\\vec{S}',
+            description: '스토크스 정리',
           },
           {
             latex: "\\int_a^b f'(x)dx = f(b) - f(a)",
-            description: "1차원 특수 경우 (미적분 기본정리)",
+            description: '1차원 특수 경우 (미적분 기본정리)',
           },
         ],
         examples: [
           {
-            problem: "∮ᴄ F·dr을 스토크스 정리로 계산하는 전략은?",
+            problem: '∮ᴄ F·dr을 스토크스 정리로 계산하는 전략은?',
             solution:
-              "curl F를 구하고 C를 경계로 하는 곡면 S에서 면적분합니다. 곡면 선택으로 계산을 단순화할 수 있습니다.",
+              'curl F를 구하고 C를 경계로 하는 곡면 S에서 면적분합니다. 곡면 선택으로 계산을 단순화할 수 있습니다.',
           },
         ],
         history: {
-          discoveredBy: "조지 스토크스",
-          year: "1854년",
+          discoveredBy: '조지 스토크스',
+          year: '1854년',
           background:
-            "켈빈이 스토크스에게 보낸 편지에서 등장했고, 스토크스가 시험 문제로 출제했습니다.",
+            '켈빈이 스토크스에게 보낸 편지에서 등장했고, 스토크스가 시험 문제로 출제했습니다.',
         },
         applications: [
-          { field: "전자기학", description: "맥스웰 방정식, 패러데이 법칙" },
-          { field: "유체역학", description: "순환, 소용돌이" },
-          { field: "미분기하학", description: "드람 코호몰로지" },
+          { field: '전자기학', description: '맥스웰 방정식, 패러데이 법칙' },
+          { field: '유체역학', description: '순환, 소용돌이' },
+          { field: '미분기하학', description: '드람 코호몰로지' },
         ],
       },
       en: {
@@ -872,95 +844,94 @@ export const theoremsConcepts: MathConcept[] = [
           "Stokes' Theorem states the surface integral of curl equals the line integral around the boundary. Generalizes the Fundamental Theorem of Calculus.",
         formulas: [
           {
-            latex: "\\oint_C \\vec{F} \\cdot d\\vec{r} = \\iint_S (\\nabla \\times \\vec{F}) \\cdot d\\vec{S}",
+            latex:
+              '\\oint_C \\vec{F} \\cdot d\\vec{r} = \\iint_S (\\nabla \\times \\vec{F}) \\cdot d\\vec{S}',
             description: "Stokes' Theorem",
           },
           {
             latex: "\\int_a^b f'(x)dx = f(b) - f(a)",
-            description: "1D special case (FTC)",
+            description: '1D special case (FTC)',
           },
         ],
         examples: [
           {
-            problem: "Strategy to compute ∮ᴄ F·dr using Stokes?",
+            problem: 'Strategy to compute ∮ᴄ F·dr using Stokes?',
             solution:
-              "Compute curl F, integrate over surface S bounded by C. Surface choice can simplify calculation.",
+              'Compute curl F, integrate over surface S bounded by C. Surface choice can simplify calculation.',
           },
         ],
         history: {
-          discoveredBy: "George Stokes",
-          year: "1854",
-          background:
-            "Appeared in Kelvin's letter to Stokes; Stokes used it as exam problem.",
+          discoveredBy: 'George Stokes',
+          year: '1854',
+          background: "Appeared in Kelvin's letter to Stokes; Stokes used it as exam problem.",
         },
         applications: [
-          { field: "Electromagnetism", description: "Maxwell's equations, Faraday's law" },
-          { field: "Fluid Dynamics", description: "Circulation, vorticity" },
-          { field: "Differential Geometry", description: "de Rham cohomology" },
+          { field: 'Electromagnetism', description: "Maxwell's equations, Faraday's law" },
+          { field: 'Fluid Dynamics', description: 'Circulation, vorticity' },
+          { field: 'Differential Geometry', description: 'de Rham cohomology' },
         ],
       },
     },
     relations: {
-      prerequisites: ["curl", "line-integral", "surface-integral"],
-      nextTopics: ["divergence-theorem", "differential-forms"],
-      related: ["greens-theorem", "fundamental-theorem-calculus"],
+      prerequisites: ['curl', 'line-integral', 'surface-integral'],
+      nextTopics: ['divergence-theorem', 'differential-forms'],
+      related: ['greens-theorem', 'fundamental-theorem-calculus'],
     },
-    tags: ["스토크스", "벡터미적분", "Stokes", "vector calculus"],
+    tags: ['스토크스', '벡터미적분', 'Stokes', 'vector calculus'],
   },
   {
-    id: "godel-incompleteness",
+    id: 'godel-incompleteness',
     name: {
-      ko: "괴델의 불완전성 정리",
+      ko: '괴델의 불완전성 정리',
       en: "Gödel's Incompleteness Theorems",
-      ja: "ゲーデルの不完全性定理",
+      ja: 'ゲーデルの不完全性定理',
     },
-    field: "theorems",
-    subfield: "logic",
+    field: 'theorems',
+    subfield: 'logic',
     difficulty: 5,
     content: {
       ko: {
         definition:
-          "산술을 포함하는 일관된 형식 체계에서는 참이지만 증명 불가능한 명제가 존재합니다. 또한 그 체계는 자신의 일관성을 증명할 수 없습니다.",
+          '산술을 포함하는 일관된 형식 체계에서는 참이지만 증명 불가능한 명제가 존재합니다. 또한 그 체계는 자신의 일관성을 증명할 수 없습니다.',
         formulas: [
           {
-            latex: "\\text{제1정리: 참이지만 증명 불가능한 문장 존재}",
-            description: "불완전성",
+            latex: '\\text{제1정리: 참이지만 증명 불가능한 문장 존재}',
+            description: '불완전성',
           },
           {
-            latex: "\\text{제2정리: 체계 내에서 자신의 일관성 증명 불가}",
-            description: "자기 참조의 한계",
+            latex: '\\text{제2정리: 체계 내에서 자신의 일관성 증명 불가}',
+            description: '자기 참조의 한계',
           },
         ],
         examples: [
           {
             problem: "괴델 문장 G: '이 문장은 증명될 수 없다'가 왜 참인가?",
             solution:
-              "G가 거짓이면 증명 가능 → 모순. G가 참이면 증명 불가 → 일관성 유지. 따라서 G는 참이나 증명 불가.",
+              'G가 거짓이면 증명 가능 → 모순. G가 참이면 증명 불가 → 일관성 유지. 따라서 G는 참이나 증명 불가.',
           },
         ],
         history: {
-          discoveredBy: "쿠르트 괴델",
-          year: "1931년",
-          background:
-            "힐베르트의 프로그램에 대한 응답으로, 수학의 근본적 한계를 밝혔습니다.",
+          discoveredBy: '쿠르트 괴델',
+          year: '1931년',
+          background: '힐베르트의 프로그램에 대한 응답으로, 수학의 근본적 한계를 밝혔습니다.',
         },
         applications: [
-          { field: "논리학", description: "증명 이론의 한계" },
-          { field: "컴퓨터 과학", description: "결정 불가능성, 정지 문제" },
-          { field: "철학", description: "수학의 본질에 대한 논쟁" },
+          { field: '논리학', description: '증명 이론의 한계' },
+          { field: '컴퓨터 과학', description: '결정 불가능성, 정지 문제' },
+          { field: '철학', description: '수학의 본질에 대한 논쟁' },
         ],
       },
       en: {
         definition:
-          "In any consistent formal system containing arithmetic, there exist true but unprovable statements. Also, the system cannot prove its own consistency.",
+          'In any consistent formal system containing arithmetic, there exist true but unprovable statements. Also, the system cannot prove its own consistency.',
         formulas: [
           {
-            latex: "\\text{1st: There exists a true but unprovable statement}",
-            description: "Incompleteness",
+            latex: '\\text{1st: There exists a true but unprovable statement}',
+            description: 'Incompleteness',
           },
           {
-            latex: "\\text{2nd: System cannot prove its own consistency}",
-            description: "Self-reference limitation",
+            latex: '\\text{2nd: System cannot prove its own consistency}',
+            description: 'Self-reference limitation',
           },
         ],
         examples: [
@@ -971,23 +942,22 @@ export const theoremsConcepts: MathConcept[] = [
           },
         ],
         history: {
-          discoveredBy: "Kurt Gödel",
-          year: "1931",
-          background:
-            "Response to Hilbert's program; revealed fundamental limits of mathematics.",
+          discoveredBy: 'Kurt Gödel',
+          year: '1931',
+          background: "Response to Hilbert's program; revealed fundamental limits of mathematics.",
         },
         applications: [
-          { field: "Logic", description: "Limits of proof theory" },
-          { field: "Computer Science", description: "Undecidability, halting problem" },
-          { field: "Philosophy", description: "Debates on nature of mathematics" },
+          { field: 'Logic', description: 'Limits of proof theory' },
+          { field: 'Computer Science', description: 'Undecidability, halting problem' },
+          { field: 'Philosophy', description: 'Debates on nature of mathematics' },
         ],
       },
     },
     relations: {
-      prerequisites: ["formal-logic", "peano-arithmetic"],
-      nextTopics: ["halting-problem", "turing-machines"],
-      related: ["set-theory-axioms"],
+      prerequisites: ['formal-logic', 'peano-arithmetic'],
+      nextTopics: ['halting-problem', 'turing-machines'],
+      related: ['set-theory-axioms'],
     },
-    tags: ["괴델", "불완전성", "Gödel", "incompleteness"],
+    tags: ['괴델', '불완전성', 'Gödel', 'incompleteness'],
   },
 ];

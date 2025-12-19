@@ -1,16 +1,16 @@
+import type { DifficultyLevel } from '@/data/types';
+import { difficultyLabels } from '@/data/types';
 /**
  * @fileoverview 난이도 표시 뱃지 컴포넌트
  */
-import { useI18n } from "@/i18n";
-import type { DifficultyLevel } from "@/data/types";
-import { difficultyLabels } from "@/data/types";
+import { useI18n } from '@/i18n';
 
 interface DifficultyBadgeProps {
   level: DifficultyLevel;
   /** 레이블 텍스트 표시 여부 */
   showLabel?: boolean;
   /** 크기 */
-  size?: "sm" | "md" | "lg";
+  size?: 'sm' | 'md' | 'lg';
 }
 
 /**
@@ -26,8 +26,8 @@ export function DifficultyBadge(props: DifficultyBadgeProps) {
   const { locale } = useI18n();
 
   const stars = () => {
-    const filled = "★".repeat(props.level);
-    const empty = "☆".repeat(5 - props.level);
+    const filled = '★'.repeat(props.level);
+    const empty = '☆'.repeat(5 - props.level);
     return filled + empty;
   };
 
@@ -38,21 +38,19 @@ export function DifficultyBadge(props: DifficultyBadgeProps) {
 
   const sizeClasses = () => {
     switch (props.size) {
-      case "sm":
-        return "text-xs px-1.5 py-0.5";
-      case "lg":
-        return "text-base px-3 py-1.5";
+      case 'sm':
+        return 'text-xs px-1.5 py-0.5';
+      case 'lg':
+        return 'text-base px-3 py-1.5';
       default:
-        return "text-sm px-2 py-1";
+        return 'text-sm px-2 py-1';
     }
   };
 
   return (
     <span class={`badge-difficulty badge-difficulty-${props.level} ${sizeClasses()}`}>
       <span class="tracking-tight">{stars()}</span>
-      {props.showLabel !== false && (
-        <span class="ml-1 font-medium">{label()}</span>
-      )}
+      {props.showLabel !== false && <span class="ml-1 font-medium">{label()}</span>}
     </span>
   );
 }
@@ -62,12 +60,9 @@ export function DifficultyBadge(props: DifficultyBadgeProps) {
  */
 export function DifficultyStars(props: { level: DifficultyLevel }) {
   return (
-    <span
-      class="tracking-tight"
-      style={{ color: `var(--difficulty-${props.level})` }}
-    >
-      {"★".repeat(props.level)}
-      {"☆".repeat(5 - props.level)}
+    <span class="tracking-tight" style={{ color: `var(--difficulty-${props.level})` }}>
+      {'★'.repeat(props.level)}
+      {'☆'.repeat(5 - props.level)}
     </span>
   );
 }

@@ -22,12 +22,7 @@
       "Hooks API",
       "서버 사이드 렌더링"
     ],
-    "alternatives": [
-      "Vue",
-      "Solid.js",
-      "Svelte",
-      "Angular"
-    ]
+    "alternatives": ["Vue", "Solid.js", "Svelte", "Angular"]
   },
   "vue": {
     "name": "Vue",
@@ -52,12 +47,7 @@
       "Vuex 상태 관리",
       "Vue Router"
     ],
-    "alternatives": [
-      "React",
-      "Solid.js",
-      "Svelte",
-      "Angular"
-    ]
+    "alternatives": ["React", "Solid.js", "Svelte", "Angular"]
   },
   "solid-js": {
     "name": "Solid.js",
@@ -83,12 +73,7 @@
       "작은 번들 크기",
       "TypeScript 우선"
     ],
-    "alternatives": [
-      "React",
-      "Vue",
-      "Svelte",
-      "Preact"
-    ]
+    "alternatives": ["React", "Vue", "Svelte", "Preact"]
   },
   "tailwindcss": {
     "name": "Tailwind CSS",
@@ -114,12 +99,7 @@
       "JIT 컴파일러",
       "플러그인 시스템"
     ],
-    "alternatives": [
-      "UnoCSS",
-      "Bootstrap",
-      "Panda CSS",
-      "styled-components"
-    ]
+    "alternatives": ["UnoCSS", "Bootstrap", "Panda CSS", "styled-components"]
   },
   "vite": {
     "name": "Vite",
@@ -145,11 +125,6 @@
       "플러그인 생태계",
       "TypeScript 지원"
     ],
-    "alternatives": [
-      "Webpack",
-      "Parcel",
-      "esbuild",
-      "Turbopack"
-    ]
+    "alternatives": ["Webpack", "Parcel", "esbuild", "Turbopack"]
   }
 }

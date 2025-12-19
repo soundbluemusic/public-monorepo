@@ -1,36 +1,39 @@
 @import "tailwindcss";
+/* 공통 스타일 (scrollbar, focus, selection, sr-only, reduced-motion, skeleton) */
+@import "@soundblue/shared/styles/base.css";
 
 /* Pretendard fonts with font-display: swap for non-blocking loading */
 @font-face {
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-weight: 400;
   font-display: swap;
-  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Regular.woff2') format('woff2');
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Regular.woff2")
+    format("woff2");
 }
 
 @font-face {
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-weight: 500;
   font-display: swap;
-  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Medium.woff2') format('woff2');
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Medium.woff2")
+    format("woff2");
 }
 
 @font-face {
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-weight: 600;
   font-display: swap;
-  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-SemiBold.woff2') format('woff2');
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-SemiBold.woff2")
+    format("woff2");
 }
 
 @font-face {
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-weight: 700;
   font-display: swap;
-  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Bold.woff2') format('woff2');
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Bold.woff2")
+    format("woff2");
 }
-
-/* 공통 스타일 (scrollbar, focus, selection, sr-only, reduced-motion, skeleton) */
-@import "@soundblue/shared/styles/base.css";
 
 /* Enable class-based dark mode */
 @custom-variant dark (&:where(.dark, .dark *));
@@ -53,62 +56,62 @@
   --z-bottom-nav: 50;
 
   /* Background */
-  --bg-primary: #F7FAFA;
-  --bg-secondary: #EFF5F4;
-  --bg-tertiary: #E5EFEC;
-  --bg-elevated: #FFFFFF;
+  --bg-primary: #f7fafa;
+  --bg-secondary: #eff5f4;
+  --bg-tertiary: #e5efec;
+  --bg-elevated: #ffffff;
 
   /* Text */
-  --text-primary: #2A3836;
-  --text-secondary: #4A5E5A;
-  --text-tertiary: #6B807A;
+  --text-primary: #2a3836;
+  --text-secondary: #4a5e5a;
+  --text-tertiary: #6b807a;
 
   /* Accent (Teal) */
-  --accent-primary: #4A9E95;
-  --accent-secondary: #5DAEA2;
-  --accent-tertiary: #7EC4B8;
-  --accent-hover: #3D8880;
-  --accent-mint: #A8E8D8;
+  --accent-primary: #4a9e95;
+  --accent-secondary: #5daea2;
+  --accent-tertiary: #7ec4b8;
+  --accent-hover: #3d8880;
+  --accent-mint: #a8e8d8;
 
   /* Border */
-  --border-primary: #D5E0DD;
-  --border-secondary: #E5EFEC;
-  --border-focus: #4A9E95;
+  --border-primary: #d5e0dd;
+  --border-secondary: #e5efec;
+  --border-focus: #4a9e95;
 
   /* Semantic */
-  --color-error: #C45858;
-  --color-success: #4A9070;
-  --color-warning: #B08830;
+  --color-error: #c45858;
+  --color-success: #4a9070;
+  --color-warning: #b08830;
 }
 
 .dark {
   /* Background */
-  --bg-primary: #0F1716;
-  --bg-secondary: #161F1E;
-  --bg-tertiary: #1E2928;
+  --bg-primary: #0f1716;
+  --bg-secondary: #161f1e;
+  --bg-tertiary: #1e2928;
   --bg-elevated: #253332;
 
   /* Text */
-  --text-primary: #E5F0EE;
-  --text-secondary: #B0C5C2;
-  --text-tertiary: #8AA5A0;
+  --text-primary: #e5f0ee;
+  --text-secondary: #b0c5c2;
+  --text-tertiary: #8aa5a0;
 
   /* Accent (Teal) */
-  --accent-primary: #6ECEC5;
-  --accent-secondary: #85D8D0;
-  --accent-tertiary: #9CE4DB;
-  --accent-hover: #85D8D0;
-  --accent-mint: #B0F0E5;
+  --accent-primary: #6ecec5;
+  --accent-secondary: #85d8d0;
+  --accent-tertiary: #9ce4db;
+  --accent-hover: #85d8d0;
+  --accent-mint: #b0f0e5;
 
   /* Border */
-  --border-primary: #2E3E3C;
-  --border-secondary: #1E2928;
-  --border-focus: #6ECEC5;
+  --border-primary: #2e3e3c;
+  --border-secondary: #1e2928;
+  --border-focus: #6ecec5;
 
   /* Semantic */
-  --color-error: #F0A0A0;
-  --color-success: #90C8A8;
-  --color-warning: #E8C87C;
+  --color-error: #f0a0a0;
+  --color-success: #90c8a8;
+  --color-warning: #e8c87c;
 }
 
 /* Theme configuration for Tailwind */
@@ -138,8 +141,10 @@
   --color-warning: var(--color-warning);
 
   /* Fonts */
-  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
-  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue",
+    "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, "SF Mono", Menlo,
+    Consolas, monospace;
 }
 
 /* ============================================
@@ -324,7 +329,8 @@ table {
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   text-align: left;
 }
 

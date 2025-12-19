@@ -53,8 +53,8 @@ export function createFavoritesHelper<T extends BaseFavorite & Record<K, string>
     async toggle(itemId: string) {
       validateId(itemId, idFieldName);
       const exists = await t.where(idFieldName).equals(itemId).first();
-      if (exists) {
-        await t.delete(exists.id!);
+      if (exists?.id) {
+        await t.delete(exists.id);
         return false;
       }
       await t.add({ [idFieldName]: itemId, addedAt: new Date() } as unknown as T);

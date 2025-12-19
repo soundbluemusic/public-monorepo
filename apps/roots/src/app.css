@@ -1,133 +1,135 @@
 @import "tailwindcss";
+@import "@soundblue/shared/styles/base.css";
 
 /* Pretendard 폰트 - font-display: swap으로 비동기 로드 */
 @font-face {
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-weight: 400;
   font-display: swap;
-  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Regular.woff2') format('woff2');
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Regular.woff2")
+    format("woff2");
 }
 
 @font-face {
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-weight: 500;
   font-display: swap;
-  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Medium.woff2') format('woff2');
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Medium.woff2")
+    format("woff2");
 }
 
 @font-face {
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-weight: 600;
   font-display: swap;
-  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-SemiBold.woff2') format('woff2');
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-SemiBold.woff2")
+    format("woff2");
 }
 
 @font-face {
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-weight: 700;
   font-display: swap;
-  src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Bold.woff2') format('woff2');
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Bold.woff2")
+    format("woff2");
 }
-
-/* 공통 스타일 (scrollbar, focus, selection, sr-only, reduced-motion, skeleton) */
-@import "@soundblue/shared/styles/base.css";
 
 /* ============================================
    Roots Math Theme - Lavender Mist
    ============================================ */
 :root {
   /* Background */
-  --bg-primary: #F8F7FA;
-  --bg-secondary: #F1EFF5;
-  --bg-tertiary: #E8E5EF;
-  --bg-elevated: #FFFFFF;
+  --bg-primary: #f8f7fa;
+  --bg-secondary: #f1eff5;
+  --bg-tertiary: #e8e5ef;
+  --bg-elevated: #ffffff;
 
   /* Text */
-  --text-primary: #2D2A36;
-  --text-secondary: #5A5466;
-  --text-tertiary: #7A7488;
+  --text-primary: #2d2a36;
+  --text-secondary: #5a5466;
+  --text-tertiary: #7a7488;
 
   /* Accent (Violet) */
-  --accent-primary: #7C6AE8;
-  --accent-secondary: #8F80EC;
-  --accent-tertiary: #A99BF0;
-  --accent-hover: #6B58D8;
-  --accent-mint: #D4CFFA;
+  --accent-primary: #7c6ae8;
+  --accent-secondary: #8f80ec;
+  --accent-tertiary: #a99bf0;
+  --accent-hover: #6b58d8;
+  --accent-mint: #d4cffa;
 
   /* Border */
-  --border-primary: #DDD8E6;
-  --border-focus: #7C6AE8;
+  --border-primary: #ddd8e6;
+  --border-focus: #7c6ae8;
 
   /* Semantic */
-  --color-error: #D85858;
-  --color-success: #58A070;
-  --color-warning: #C09830;
+  --color-error: #d85858;
+  --color-success: #58a070;
+  --color-warning: #c09830;
 
   /* Math-specific colors */
-  --math-formula: #3B82F6;
-  --math-formula-bg: #EFF6FF;
-  --math-highlight: #8B5CF6;
+  --math-formula: #3b82f6;
+  --math-formula-bg: #eff6ff;
+  --math-highlight: #8b5cf6;
 
   /* Difficulty levels */
-  --difficulty-1: #22C55E;
-  --difficulty-2: #84CC16;
-  --difficulty-3: #EAB308;
-  --difficulty-4: #F97316;
-  --difficulty-5: #EF4444;
+  --difficulty-1: #22c55e;
+  --difficulty-2: #84cc16;
+  --difficulty-3: #eab308;
+  --difficulty-4: #f97316;
+  --difficulty-5: #ef4444;
 
   /* Field colors (18 math fields) */
-  --field-foundations: #6366F1;
-  --field-algebra: #8B5CF6;
-  --field-geometry: #EC4899;
-  --field-trigonometry: #F43F5E;
-  --field-analysis: #EF4444;
-  --field-linear-algebra: #F97316;
-  --field-probability: #F59E0B;
-  --field-discrete: #EAB308;
-  --field-number-theory: #84CC16;
-  --field-topology: #22C55E;
-  --field-logic: #10B981;
-  --field-dynamics: #14B8A6;
-  --field-optimization: #06B6D4;
-  --field-numerical: #0EA5E9;
-  --field-applied: #3B82F6;
-  --field-constants: #6366F1;
-  --field-symbols: #8B5CF6;
-  --field-theorems: #A855F7;
+  --field-foundations: #6366f1;
+  --field-algebra: #8b5cf6;
+  --field-geometry: #ec4899;
+  --field-trigonometry: #f43f5e;
+  --field-analysis: #ef4444;
+  --field-linear-algebra: #f97316;
+  --field-probability: #f59e0b;
+  --field-discrete: #eab308;
+  --field-number-theory: #84cc16;
+  --field-topology: #22c55e;
+  --field-logic: #10b981;
+  --field-dynamics: #14b8a6;
+  --field-optimization: #06b6d4;
+  --field-numerical: #0ea5e9;
+  --field-applied: #3b82f6;
+  --field-constants: #6366f1;
+  --field-symbols: #8b5cf6;
+  --field-theorems: #a855f7;
 }
 
 .dark {
   /* Background */
-  --bg-primary: #12111A;
-  --bg-secondary: #1A1822;
-  --bg-tertiary: #23202E;
-  --bg-elevated: #2C2838;
+  --bg-primary: #12111a;
+  --bg-secondary: #1a1822;
+  --bg-tertiary: #23202e;
+  --bg-elevated: #2c2838;
 
   /* Text */
-  --text-primary: #EEEDF2;
-  --text-secondary: #B5B0C5;
-  --text-tertiary: #908AA5;
+  --text-primary: #eeedf2;
+  --text-secondary: #b5b0c5;
+  --text-tertiary: #908aa5;
 
   /* Accent (Violet) */
-  --accent-primary: #A99BF0;
-  --accent-secondary: #B8ACF4;
-  --accent-tertiary: #C7BEF8;
-  --accent-hover: #B8ACF4;
-  --accent-mint: #D4CFFA;
+  --accent-primary: #a99bf0;
+  --accent-secondary: #b8acf4;
+  --accent-tertiary: #c7bef8;
+  --accent-hover: #b8acf4;
+  --accent-mint: #d4cffa;
 
   /* Border */
-  --border-primary: #3A3548;
-  --border-focus: #A99BF0;
+  --border-primary: #3a3548;
+  --border-focus: #a99bf0;
 
   /* Semantic */
-  --color-error: #F0A0A0;
-  --color-success: #90C8A8;
-  --color-warning: #E8C87C;
+  --color-error: #f0a0a0;
+  --color-success: #90c8a8;
+  --color-warning: #e8c87c;
 
   /* Math-specific colors (dark) */
-  --math-formula: #60A5FA;
-  --math-formula-bg: #1E2A5F;
-  --math-highlight: #A78BFA;
+  --math-formula: #60a5fa;
+  --math-formula-bg: #1e2a5f;
+  --math-highlight: #a78bfa;
 }
 
 @theme {
@@ -159,7 +161,8 @@
   --color-math-highlight: var(--math-highlight);
 
   /* Fonts */
-  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue",
+    "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", monospace;
 }
 

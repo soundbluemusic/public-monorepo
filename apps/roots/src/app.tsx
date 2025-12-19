@@ -42,8 +42,8 @@ function LoadingFallback() {
             <div class="skeleton h-10 w-1/3 rounded-lg" />
             <div class="skeleton h-5 w-2/3 rounded" />
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-              {[1, 2, 3, 4, 5, 6].map(() => (
-                <div class="skeleton h-48 rounded-xl" />
+              {[1, 2, 3, 4, 5, 6].map((i) => (
+                <div key={i} class="skeleton h-48 rounded-xl" />
               ))}
             </div>
           </div>

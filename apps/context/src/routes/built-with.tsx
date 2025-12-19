@@ -1,2 +1,2 @@
-import BuiltWithPage from "@/pages/BuiltWithPage";
+import BuiltWithPage from '@/pages/BuiltWithPage';
 export default BuiltWithPage;

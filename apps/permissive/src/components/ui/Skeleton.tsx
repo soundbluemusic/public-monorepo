@@ -21,7 +21,7 @@
  * <PageSkeleton />
  * ```
  */
-import { For } from "solid-js";
+import { For } from 'solid-js';
 
 /**
  * 기본 스켈레톤 박스
@@ -31,7 +31,7 @@ import { For } from "solid-js";
  * <Skeleton class="h-10 w-32 rounded-lg" />
  */
 export function Skeleton(props: { class?: string }) {
-  return <div class={`skeleton ${props.class || ""}`} />;
+  return <div class={`skeleton ${props.class || ''}`} />;
 }
 
 /**
@@ -45,13 +45,10 @@ export function Skeleton(props: { class?: string }) {
 export function SkeletonText(props: { lines?: number; class?: string }) {
   const lines = props.lines || 3;
   return (
-    <div class={`space-y-2 ${props.class || ""}`}>
+    <div class={`space-y-2 ${props.class || ''}`}>
       <For each={Array(lines).fill(0)}>
         {(_, i) => (
-          <div
-            class="skeleton h-4"
-            style={{ width: i() === lines - 1 ? "60%" : "100%" }}
-          />
+          <div class="skeleton h-4" style={{ width: i() === lines - 1 ? '60%' : '100%' }} />
         )}
       </For>
     </div>
@@ -90,12 +87,8 @@ export function SkeletonGrid(props: { count?: number; columns?: number }) {
   const columns = props.columns || 3;
 
   return (
-    <div class={`grid gap-3 ${
-      columns === 2 ? "sm:grid-cols-2" : "sm:grid-cols-2 lg:grid-cols-3"
-    }`}>
-      <For each={Array(count).fill(0)}>
-        {() => <SkeletonCard />}
-      </For>
+    <div class={`grid gap-3 ${columns === 2 ? 'sm:grid-cols-2' : 'sm:grid-cols-2 lg:grid-cols-3'}`}>
+      <For each={Array(count).fill(0)}>{() => <SkeletonCard />}</For>
     </div>
   );
 }
@@ -123,9 +116,7 @@ export function PageSkeleton() {
       <div class="flex flex-col sm:flex-row gap-4">
         <div class="skeleton h-11 flex-1 rounded-xl" />
         <div class="flex gap-2">
-          <For each={Array(5).fill(0)}>
-            {() => <div class="skeleton h-9 w-16 rounded-lg" />}
-          </For>
+          <For each={Array(5).fill(0)}>{() => <div class="skeleton h-9 w-16 rounded-lg" />}</For>
         </div>
       </div>
 

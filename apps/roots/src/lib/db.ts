@@ -1,5 +1,5 @@
-import Dexie, { type EntityTable } from "dexie";
-import { validateId } from "@soundblue/shared";
+import { validateId } from '@soundblue/shared';
+import Dexie, { type EntityTable } from 'dexie';
 
 // 즐겨찾기 개념
 export interface FavoriteConcept {
@@ -38,29 +38,29 @@ export interface RecentView {
 // 사용자 설정
 export interface UserSettings {
   id: number; // 항상 1 (싱글톤)
-  theme: "light" | "dark" | "system";
-  language: "ko" | "en";
-  fontSize: "small" | "medium" | "large";
+  theme: 'light' | 'dark' | 'system';
+  language: 'ko' | 'en';
+  fontSize: 'small' | 'medium' | 'large';
   showLatex: boolean;
   showDifficulty: boolean;
   updatedAt: Date;
 }
 
 class RootsDatabase extends Dexie {
-  favorites!: EntityTable<FavoriteConcept, "id">;
-  studyRecords!: EntityTable<StudyRecord, "id">;
-  learningPaths!: EntityTable<LearningPath, "id">;
-  recentViews!: EntityTable<RecentView, "id">;
-  settings!: EntityTable<UserSettings, "id">;
+  favorites!: EntityTable<FavoriteConcept, 'id'>;
+  studyRecords!: EntityTable<StudyRecord, 'id'>;
+  learningPaths!: EntityTable<LearningPath, 'id'>;
+  recentViews!: EntityTable<RecentView, 'id'>;
+  settings!: EntityTable<UserSettings, 'id'>;
 
   constructor() {
-    super("RootsDB");
+    super('RootsDB');
     this.version(1).stores({
-      favorites: "++id, conceptId, addedAt",
-      studyRecords: "++id, conceptId, studiedAt",
-      learningPaths: "++id, name, createdAt",
-      recentViews: "++id, conceptId, viewedAt",
-      settings: "id",
+      favorites: '++id, conceptId, addedAt',
+      studyRecords: '++id, conceptId, studiedAt',
+      learningPaths: '++id, name, createdAt',
+      recentViews: '++id, conceptId, viewedAt',
+      settings: 'id',
     });
   }
 }
@@ -72,22 +72,22 @@ export { db };
 // 즐겨찾기 헬퍼
 export const favorites = {
   async add(conceptId: string) {
-    validateId(conceptId, "conceptId");
-    const exists = await db.favorites.where("conceptId").equals(conceptId).first();
+    validateId(conceptId, 'conceptId');
+    const exists = await db.favorites.where('conceptId').equals(conceptId).first();
     if (exists) return exists.id;
     return db.favorites.add({ conceptId, addedAt: new Date() });
   },
 
   async remove(conceptId: string) {
-    validateId(conceptId, "conceptId");
-    return db.favorites.where("conceptId").equals(conceptId).delete();
+    validateId(conceptId, 'conceptId');
+    return db.favorites.where('conceptId').equals(conceptId).delete();
   },
 
   async toggle(conceptId: string) {
-    validateId(conceptId, "conceptId");
-    const exists = await db.favorites.where("conceptId").equals(conceptId).first();
-    if (exists) {
-      await db.favorites.delete(exists.id!);
+    validateId(conceptId, 'conceptId');
+    const exists = await db.favorites.where('conceptId').equals(conceptId).first();
+    if (exists?.id) {
+      await db.favorites.delete(exists.id);
       return false;
     }
     await db.favorites.add({ conceptId, addedAt: new Date() });
@@ -95,13 +95,13 @@ export const favorites = {
   },
 
   async isFavorite(conceptId: string) {
-    validateId(conceptId, "conceptId");
-    const exists = await db.favorites.where("conceptId").equals(conceptId).first();
+    validateId(conceptId, 'conceptId');
+    const exists = await db.favorites.where('conceptId').equals(conceptId).first();
     return !!exists;
   },
 
   async getAll() {
-    return db.favorites.orderBy("addedAt").reverse().toArray();
+    return db.favorites.orderBy('addedAt').reverse().toArray();
   },
 
   async count() {
@@ -112,7 +112,7 @@ export const favorites = {
 // 학습 기록 헬퍼
 export const studyRecords = {
   async add(conceptId: string, duration: number, completed: boolean, quizScore?: number) {
-    validateId(conceptId, "conceptId");
+    validateId(conceptId, 'conceptId');
     return db.studyRecords.add({
       conceptId,
       studiedAt: new Date(),
@@ -123,22 +123,25 @@ export const studyRecords = {
   },
 
   async getByConcept(conceptId: string) {
-    validateId(conceptId, "conceptId");
-    return db.studyRecords.where("conceptId").equals(conceptId).toArray();
+    validateId(conceptId, 'conceptId');
+    return db.studyRecords.where('conceptId').equals(conceptId).toArray();
   },
 
   async getRecent(limit = 50) {
-    return db.studyRecords.orderBy("studiedAt").reverse().limit(limit).toArray();
+    return db.studyRecords.orderBy('studiedAt').reverse().limit(limit).toArray();
   },
 
   async getStats(conceptId: string) {
-    validateId(conceptId, "conceptId");
-    const records = await db.studyRecords.where("conceptId").equals(conceptId).toArray();
+    validateId(conceptId, 'conceptId');
+    const records = await db.studyRecords.where('conceptId').equals(conceptId).toArray();
     const total = records.length;
     const totalDuration = records.reduce((sum, r) => sum + r.duration, 0);
     const completedCount = records.filter((r) => r.completed).length;
-    const quizScores = records.filter((r) => r.quizScore !== undefined).map((r) => r.quizScore!);
-    const avgQuizScore = quizScores.length > 0 ? quizScores.reduce((a, b) => a + b, 0) / quizScores.length : null;
+    const quizScores = records
+      .filter((r) => r.quizScore !== undefined)
+      .map((r) => r.quizScore as number);
+    const avgQuizScore =
+      quizScores.length > 0 ? quizScores.reduce((a, b) => a + b, 0) / quizScores.length : null;
 
     return {
       total,
@@ -158,7 +161,7 @@ export const studyRecords = {
 export const learningPaths = {
   async create(name: string, conceptIds: string[]) {
     for (const id of conceptIds) {
-      validateId(id, "conceptId");
+      validateId(id, 'conceptId');
     }
     return db.learningPaths.add({
       name,
@@ -174,7 +177,7 @@ export const learningPaths = {
   },
 
   async getAll() {
-    return db.learningPaths.orderBy("updatedAt").reverse().toArray();
+    return db.learningPaths.orderBy('updatedAt').reverse().toArray();
   },
 
   async updateProgress(id: number, currentIndex: number) {
@@ -192,15 +195,15 @@ export const learningPaths = {
 // 최근 본 문서 헬퍼
 export const recentViews = {
   async add(conceptId: string) {
-    validateId(conceptId, "conceptId");
+    validateId(conceptId, 'conceptId');
     // 기존 기록 삭제 후 새로 추가 (맨 위로)
-    await db.recentViews.where("conceptId").equals(conceptId).delete();
+    await db.recentViews.where('conceptId').equals(conceptId).delete();
     await db.recentViews.add({ conceptId, viewedAt: new Date() });
 
     // 최대 100개만 유지
     const count = await db.recentViews.count();
     if (count > 100) {
-      const oldest = await db.recentViews.orderBy("viewedAt").first();
+      const oldest = await db.recentViews.orderBy('viewedAt').first();
       if (oldest?.id) {
         await db.recentViews.delete(oldest.id);
       }
@@ -208,7 +211,7 @@ export const recentViews = {
   },
 
   async getRecent(limit = 20) {
-    return db.recentViews.orderBy("viewedAt").reverse().limit(limit).toArray();
+    return db.recentViews.orderBy('viewedAt').reverse().limit(limit).toArray();
   },
 
   async clear() {
@@ -223,9 +226,9 @@ export const settings = {
     return (
       s || {
         id: 1,
-        theme: "system",
-        language: "ko",
-        fontSize: "medium",
+        theme: 'system',
+        language: 'ko',
+        fontSize: 'medium',
         showLatex: true,
         showDifficulty: true,
         updatedAt: new Date(),
@@ -233,7 +236,7 @@ export const settings = {
     );
   },
 
-  async update(updates: Partial<Omit<UserSettings, "id">>) {
+  async update(updates: Partial<Omit<UserSettings, 'id'>>) {
     const current = await this.get();
     return db.settings.put({
       ...current,
@@ -243,15 +246,15 @@ export const settings = {
     });
   },
 
-  async setTheme(theme: UserSettings["theme"]) {
+  async setTheme(theme: UserSettings['theme']) {
     return this.update({ theme });
   },
 
-  async setLanguage(language: UserSettings["language"]) {
+  async setLanguage(language: UserSettings['language']) {
     return this.update({ language });
   },
 
-  async setFontSize(fontSize: UserSettings["fontSize"]) {
+  async setFontSize(fontSize: UserSettings['fontSize']) {
     return this.update({ fontSize });
   },
 

@@ -1,8 +1,8 @@
+import katex from 'katex';
 /**
  * @fileoverview KaTeX LaTeX 렌더러 컴포넌트
  */
-import { createMemo } from "solid-js";
-import katex from "katex";
+import { createMemo } from 'solid-js';
 
 interface LaTeXProps {
   /** LaTeX 수식 문자열 */
@@ -44,8 +44,8 @@ export function LaTeX(props: LaTeXProps) {
       class={props.class}
       innerHTML={html()}
       style={{
-        display: props.display ? "block" : "inline",
-        "text-align": props.display ? "center" : "inherit",
+        display: props.display ? 'block' : 'inline',
+        'text-align': props.display ? 'center' : 'inherit',
       }}
     />
   );
@@ -56,7 +56,7 @@ export function LaTeX(props: LaTeXProps) {
  */
 export function MathBlock(props: { math: string; class?: string }) {
   return (
-    <div class={`formula-block my-4 ${props.class || ""}`}>
+    <div class={`formula-block my-4 ${props.class || ''}`}>
       <LaTeX math={props.math} display />
     </div>
   );

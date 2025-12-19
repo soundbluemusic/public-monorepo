@@ -20,7 +20,7 @@
  * }
  * ```
  */
-import { createSignal, onMount, onCleanup, type Accessor } from "solid-js";
+import { type Accessor, createSignal, onCleanup, onMount } from 'solid-js';
 
 /**
  * useOnlineStatus 훅 반환 타입
@@ -65,12 +65,12 @@ export function useOnlineStatus(): UseOnlineStatusReturn {
       setWasOffline(true);
     };
 
-    window.addEventListener("online", handleOnline);
-    window.addEventListener("offline", handleOffline);
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
 
     onCleanup(() => {
-      window.removeEventListener("online", handleOnline);
-      window.removeEventListener("offline", handleOffline);
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
     });
   });
 

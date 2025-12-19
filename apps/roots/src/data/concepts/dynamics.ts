@@ -1,44 +1,43 @@
 /**
  * @fileoverview 동역학계와 카오스 개념 데이터
  */
-import type { MathConcept } from "../types";
+import type { MathConcept } from '../types';
 
 export const dynamicsConcepts: MathConcept[] = [
   {
-    id: "dynamical-systems",
+    id: 'dynamical-systems',
     name: {
-      ko: "동역학계",
-      en: "Dynamical Systems",
-      ja: "力学系",
+      ko: '동역학계',
+      en: 'Dynamical Systems',
+      ja: '力学系',
     },
-    field: "dynamics",
-    subfield: "dynamical-systems",
+    field: 'dynamics',
+    subfield: 'dynamical-systems',
     difficulty: 4,
     content: {
       ko: {
         definition:
-          "동역학계는 시간에 따라 상태가 변화하는 시스템을 수학적으로 모델링한 것입니다. 미분방정식이나 차분방정식으로 표현됩니다.",
+          '동역학계는 시간에 따라 상태가 변화하는 시스템을 수학적으로 모델링한 것입니다. 미분방정식이나 차분방정식으로 표현됩니다.',
         formulas: [
           {
-            latex: "\\frac{dx}{dt} = f(x)",
-            description: "연속 동역학계 (자율 시스템)",
+            latex: '\\frac{dx}{dt} = f(x)',
+            description: '연속 동역학계 (자율 시스템)',
           },
           {
-            latex: "x_{n+1} = f(x_n)",
-            description: "이산 동역학계",
+            latex: 'x_{n+1} = f(x_n)',
+            description: '이산 동역학계',
           },
         ],
         examples: [
           {
-            problem: "인구 성장 모델 dP/dt = rP를 풀이하세요.",
-            solution:
-              "변수분리: dP/P = r dt, ln|P| = rt + C, P(t) = P₀e^(rt) (지수 성장)",
+            problem: '인구 성장 모델 dP/dt = rP를 풀이하세요.',
+            solution: '변수분리: dP/P = r dt, ln|P| = rt + C, P(t) = P₀e^(rt) (지수 성장)',
           },
         ],
         applications: [
-          { field: "물리학", description: "행성 운동, 진자 운동" },
-          { field: "생물학", description: "인구 동태, 생태계 모델" },
-          { field: "경제학", description: "경기 순환, 시장 동역학" },
+          { field: '물리학', description: '행성 운동, 진자 운동' },
+          { field: '생물학', description: '인구 동태, 생태계 모델' },
+          { field: '경제학', description: '경기 순환, 시장 동역학' },
         ],
       },
       en: {
@@ -46,246 +45,240 @@ export const dynamicsConcepts: MathConcept[] = [
           "A dynamical system mathematically models how states evolve over time. It's expressed through differential or difference equations.",
         formulas: [
           {
-            latex: "\\frac{dx}{dt} = f(x)",
-            description: "Continuous dynamical system (autonomous)",
+            latex: '\\frac{dx}{dt} = f(x)',
+            description: 'Continuous dynamical system (autonomous)',
           },
           {
-            latex: "x_{n+1} = f(x_n)",
-            description: "Discrete dynamical system",
+            latex: 'x_{n+1} = f(x_n)',
+            description: 'Discrete dynamical system',
           },
         ],
         examples: [
           {
-            problem: "Solve the population growth model dP/dt = rP.",
+            problem: 'Solve the population growth model dP/dt = rP.',
             solution:
-              "Separation: dP/P = r dt, ln|P| = rt + C, P(t) = P₀e^(rt) (exponential growth)",
+              'Separation: dP/P = r dt, ln|P| = rt + C, P(t) = P₀e^(rt) (exponential growth)',
           },
         ],
         applications: [
-          { field: "Physics", description: "Planetary motion, pendulum" },
-          { field: "Biology", description: "Population dynamics, ecosystem models" },
-          { field: "Economics", description: "Business cycles, market dynamics" },
+          { field: 'Physics', description: 'Planetary motion, pendulum' },
+          { field: 'Biology', description: 'Population dynamics, ecosystem models' },
+          { field: 'Economics', description: 'Business cycles, market dynamics' },
         ],
       },
     },
     relations: {
-      prerequisites: ["differential-equations", "derivative"],
-      nextTopics: ["chaos-theory", "fixed-points"],
-      related: ["phase-space"],
+      prerequisites: ['differential-equations', 'derivative'],
+      nextTopics: ['chaos-theory', 'fixed-points'],
+      related: ['phase-space'],
     },
-    tags: ["동역학", "시스템", "dynamical", "system"],
+    tags: ['동역학', '시스템', 'dynamical', 'system'],
   },
   {
-    id: "chaos-theory",
+    id: 'chaos-theory',
     name: {
-      ko: "카오스 이론",
-      en: "Chaos Theory",
-      ja: "カオス理論",
+      ko: '카오스 이론',
+      en: 'Chaos Theory',
+      ja: 'カオス理論',
     },
-    field: "dynamics",
-    subfield: "chaos",
+    field: 'dynamics',
+    subfield: 'chaos',
     difficulty: 4,
     content: {
       ko: {
         definition:
-          "카오스는 결정론적 시스템에서 나타나는 비예측적 행동입니다. 초기 조건에 극도로 민감하며(나비 효과), 장기 예측이 불가능합니다.",
+          '카오스는 결정론적 시스템에서 나타나는 비예측적 행동입니다. 초기 조건에 극도로 민감하며(나비 효과), 장기 예측이 불가능합니다.',
         formulas: [
           {
-            latex: "x_{n+1} = rx_n(1 - x_n)",
-            description: "로지스틱 맵 (카오스의 대표적 예)",
+            latex: 'x_{n+1} = rx_n(1 - x_n)',
+            description: '로지스틱 맵 (카오스의 대표적 예)',
           },
           {
             latex: "\\lambda = \\lim_{n \\to \\infty} \\frac{1}{n} \\sum_{i=0}^{n-1} \\ln|f'(x_i)|",
-            description: "리아푸노프 지수",
+            description: '리아푸노프 지수',
           },
         ],
         examples: [
           {
-            problem: "r = 4인 로지스틱 맵이 카오스적임을 설명하세요.",
+            problem: 'r = 4인 로지스틱 맵이 카오스적임을 설명하세요.',
             solution:
-              "r = 4일 때 리아푸노프 지수가 양수(λ = ln 2)이며, 초기값의 작은 차이가 지수적으로 확대됩니다.",
+              'r = 4일 때 리아푸노프 지수가 양수(λ = ln 2)이며, 초기값의 작은 차이가 지수적으로 확대됩니다.',
           },
         ],
         history: {
-          discoveredBy: "에드워드 로렌츠",
-          year: "1963년",
+          discoveredBy: '에드워드 로렌츠',
+          year: '1963년',
           background:
-            "기상학자 로렌츠가 날씨 모델에서 초기조건 민감성을 발견하며 카오스 이론이 시작되었습니다.",
+            '기상학자 로렌츠가 날씨 모델에서 초기조건 민감성을 발견하며 카오스 이론이 시작되었습니다.',
         },
         applications: [
-          { field: "기상학", description: "날씨 예측의 한계" },
-          { field: "암호학", description: "카오스 기반 암호" },
-          { field: "생태학", description: "개체군 변동" },
+          { field: '기상학', description: '날씨 예측의 한계' },
+          { field: '암호학', description: '카오스 기반 암호' },
+          { field: '생태학', description: '개체군 변동' },
         ],
       },
       en: {
         definition:
-          "Chaos is unpredictable behavior in deterministic systems. It shows extreme sensitivity to initial conditions (butterfly effect), making long-term prediction impossible.",
+          'Chaos is unpredictable behavior in deterministic systems. It shows extreme sensitivity to initial conditions (butterfly effect), making long-term prediction impossible.',
         formulas: [
           {
-            latex: "x_{n+1} = rx_n(1 - x_n)",
-            description: "Logistic map (classic chaos example)",
+            latex: 'x_{n+1} = rx_n(1 - x_n)',
+            description: 'Logistic map (classic chaos example)',
           },
           {
             latex: "\\lambda = \\lim_{n \\to \\infty} \\frac{1}{n} \\sum_{i=0}^{n-1} \\ln|f'(x_i)|",
-            description: "Lyapunov exponent",
+            description: 'Lyapunov exponent',
           },
         ],
         examples: [
           {
-            problem: "Explain why logistic map with r = 4 is chaotic.",
+            problem: 'Explain why logistic map with r = 4 is chaotic.',
             solution:
-              "At r = 4, Lyapunov exponent is positive (λ = ln 2), small differences in initial values grow exponentially.",
+              'At r = 4, Lyapunov exponent is positive (λ = ln 2), small differences in initial values grow exponentially.',
           },
         ],
         history: {
-          discoveredBy: "Edward Lorenz",
-          year: "1963",
+          discoveredBy: 'Edward Lorenz',
+          year: '1963',
           background:
-            "Meteorologist Lorenz discovered sensitivity to initial conditions in weather models, initiating chaos theory.",
+            'Meteorologist Lorenz discovered sensitivity to initial conditions in weather models, initiating chaos theory.',
         },
         applications: [
-          { field: "Meteorology", description: "Weather prediction limits" },
-          { field: "Cryptography", description: "Chaos-based encryption" },
-          { field: "Ecology", description: "Population fluctuations" },
+          { field: 'Meteorology', description: 'Weather prediction limits' },
+          { field: 'Cryptography', description: 'Chaos-based encryption' },
+          { field: 'Ecology', description: 'Population fluctuations' },
         ],
       },
     },
     relations: {
-      prerequisites: ["dynamical-systems"],
-      nextTopics: ["fractals", "strange-attractors"],
-      related: ["butterfly-effect"],
+      prerequisites: ['dynamical-systems'],
+      nextTopics: ['fractals', 'strange-attractors'],
+      related: ['butterfly-effect'],
     },
-    tags: ["카오스", "나비효과", "chaos", "butterfly effect"],
+    tags: ['카오스', '나비효과', 'chaos', 'butterfly effect'],
   },
   {
-    id: "fractals",
+    id: 'fractals',
     name: {
-      ko: "프랙탈",
-      en: "Fractals",
-      ja: "フラクタル",
+      ko: '프랙탈',
+      en: 'Fractals',
+      ja: 'フラクタル',
     },
-    field: "dynamics",
-    subfield: "fractals",
+    field: 'dynamics',
+    subfield: 'fractals',
     difficulty: 3,
     content: {
       ko: {
         definition:
-          "프랙탈은 부분이 전체와 유사한 구조(자기유사성)를 가진 기하학적 도형입니다. 비정수 차원을 가질 수 있습니다.",
+          '프랙탈은 부분이 전체와 유사한 구조(자기유사성)를 가진 기하학적 도형입니다. 비정수 차원을 가질 수 있습니다.',
         formulas: [
           {
-            latex: "D = \\frac{\\log N}{\\log s}",
-            description: "프랙탈 차원 (N: 조각 수, s: 배율)",
+            latex: 'D = \\frac{\\log N}{\\log s}',
+            description: '프랙탈 차원 (N: 조각 수, s: 배율)',
           },
           {
-            latex: "z_{n+1} = z_n^2 + c",
-            description: "만델브로 집합의 점화식",
+            latex: 'z_{n+1} = z_n^2 + c',
+            description: '만델브로 집합의 점화식',
           },
         ],
         examples: [
           {
-            problem: "시에르핀스키 삼각형의 차원을 구하세요.",
-            solution:
-              "매 단계 3조각, 배율 2. D = log(3)/log(2) ≈ 1.585",
+            problem: '시에르핀스키 삼각형의 차원을 구하세요.',
+            solution: '매 단계 3조각, 배율 2. D = log(3)/log(2) ≈ 1.585',
           },
           {
-            problem: "코흐 눈송이의 차원은?",
-            solution:
-              "매 단계 4조각, 배율 3. D = log(4)/log(3) ≈ 1.262",
+            problem: '코흐 눈송이의 차원은?',
+            solution: '매 단계 4조각, 배율 3. D = log(4)/log(3) ≈ 1.262',
           },
         ],
         history: {
-          discoveredBy: "브누아 만델브로",
-          year: "1975년",
-          background:
-            "만델브로가 '프랙탈'이라는 용어를 만들고 이 분야를 체계화했습니다.",
+          discoveredBy: '브누아 만델브로',
+          year: '1975년',
+          background: "만델브로가 '프랙탈'이라는 용어를 만들고 이 분야를 체계화했습니다.",
         },
         applications: [
-          { field: "컴퓨터 그래픽스", description: "자연 지형 생성" },
-          { field: "생물학", description: "혈관, 폐의 구조" },
-          { field: "안테나 설계", description: "프랙탈 안테나" },
+          { field: '컴퓨터 그래픽스', description: '자연 지형 생성' },
+          { field: '생물학', description: '혈관, 폐의 구조' },
+          { field: '안테나 설계', description: '프랙탈 안테나' },
         ],
       },
       en: {
         definition:
-          "Fractals are geometric shapes where parts resemble the whole (self-similarity). They can have non-integer dimensions.",
+          'Fractals are geometric shapes where parts resemble the whole (self-similarity). They can have non-integer dimensions.',
         formulas: [
           {
-            latex: "D = \\frac{\\log N}{\\log s}",
-            description: "Fractal dimension (N: pieces, s: scale)",
+            latex: 'D = \\frac{\\log N}{\\log s}',
+            description: 'Fractal dimension (N: pieces, s: scale)',
           },
           {
-            latex: "z_{n+1} = z_n^2 + c",
-            description: "Mandelbrot set iteration",
+            latex: 'z_{n+1} = z_n^2 + c',
+            description: 'Mandelbrot set iteration',
           },
         ],
         examples: [
           {
-            problem: "Find the dimension of Sierpinski triangle.",
-            solution:
-              "Each step: 3 pieces, scale 2. D = log(3)/log(2) ≈ 1.585",
+            problem: 'Find the dimension of Sierpinski triangle.',
+            solution: 'Each step: 3 pieces, scale 2. D = log(3)/log(2) ≈ 1.585',
           },
           {
-            problem: "What is the dimension of Koch snowflake?",
-            solution:
-              "Each step: 4 pieces, scale 3. D = log(4)/log(3) ≈ 1.262",
+            problem: 'What is the dimension of Koch snowflake?',
+            solution: 'Each step: 4 pieces, scale 3. D = log(4)/log(3) ≈ 1.262',
           },
         ],
         history: {
-          discoveredBy: "Benoit Mandelbrot",
-          year: "1975",
-          background:
-            "Mandelbrot coined the term 'fractal' and systematized the field.",
+          discoveredBy: 'Benoit Mandelbrot',
+          year: '1975',
+          background: "Mandelbrot coined the term 'fractal' and systematized the field.",
         },
         applications: [
-          { field: "Computer Graphics", description: "Natural terrain generation" },
-          { field: "Biology", description: "Blood vessels, lung structure" },
-          { field: "Antenna Design", description: "Fractal antennas" },
+          { field: 'Computer Graphics', description: 'Natural terrain generation' },
+          { field: 'Biology', description: 'Blood vessels, lung structure' },
+          { field: 'Antenna Design', description: 'Fractal antennas' },
         ],
       },
     },
     relations: {
-      prerequisites: ["complex-numbers", "iteration"],
-      nextTopics: ["mandelbrot-set", "julia-sets"],
-      related: ["self-similarity"],
+      prerequisites: ['complex-numbers', 'iteration'],
+      nextTopics: ['mandelbrot-set', 'julia-sets'],
+      related: ['self-similarity'],
     },
-    tags: ["프랙탈", "자기유사", "fractal", "self-similar"],
+    tags: ['프랙탈', '자기유사', 'fractal', 'self-similar'],
   },
   {
-    id: "fixed-points",
+    id: 'fixed-points',
     name: {
-      ko: "고정점과 안정성",
-      en: "Fixed Points and Stability",
-      ja: "不動点と安定性",
+      ko: '고정점과 안정성',
+      en: 'Fixed Points and Stability',
+      ja: '不動点と安定性',
     },
-    field: "dynamics",
-    subfield: "dynamical-systems",
+    field: 'dynamics',
+    subfield: 'dynamical-systems',
     difficulty: 4,
     content: {
       ko: {
         definition:
-          "고정점은 동역학계에서 시간이 지나도 변하지 않는 상태입니다. 고정점은 안정(끌개), 불안정, 또는 안장점일 수 있습니다.",
+          '고정점은 동역학계에서 시간이 지나도 변하지 않는 상태입니다. 고정점은 안정(끌개), 불안정, 또는 안장점일 수 있습니다.',
         formulas: [
           {
-            latex: "f(x^*) = x^* \\text{ (이산)}, \\quad f(x^*) = 0 \\text{ (연속)}",
-            description: "고정점의 조건",
+            latex: 'f(x^*) = x^* \\text{ (이산)}, \\quad f(x^*) = 0 \\text{ (연속)}',
+            description: '고정점의 조건',
           },
           {
             latex: "|f'(x^*)| < 1 \\text{ : 안정}, \\quad |f'(x^*)| > 1 \\text{ : 불안정}",
-            description: "이산 시스템의 안정성",
+            description: '이산 시스템의 안정성',
           },
         ],
         examples: [
           {
-            problem: "f(x) = x² - x - 1의 고정점과 안정성을 분석하세요.",
+            problem: 'f(x) = x² - x - 1의 고정점과 안정성을 분석하세요.',
             solution:
               "x = x² - x - 1에서 x² - 2x - 1 = 0, x = 1 ± √2. f'(x) = 2x - 1. |f'(1+√2)| = |1+2√2| > 1 (불안정), |f'(1-√2)| = |1-2√2| < 1 (안정)",
           },
         ],
         applications: [
-          { field: "제어 이론", description: "시스템 안정화" },
-          { field: "생태학", description: "평형 개체군" },
-          { field: "경제학", description: "시장 균형" },
+          { field: '제어 이론', description: '시스템 안정화' },
+          { field: '생태학', description: '평형 개체군' },
+          { field: '경제학', description: '시장 균형' },
         ],
       },
       en: {
@@ -293,147 +286,145 @@ export const dynamicsConcepts: MathConcept[] = [
           "A fixed point is a state that doesn't change over time in a dynamical system. Fixed points can be stable (attractors), unstable, or saddle points.",
         formulas: [
           {
-            latex: "f(x^*) = x^* \\text{ (discrete)}, \\quad f(x^*) = 0 \\text{ (continuous)}",
-            description: "Fixed point condition",
+            latex: 'f(x^*) = x^* \\text{ (discrete)}, \\quad f(x^*) = 0 \\text{ (continuous)}',
+            description: 'Fixed point condition',
           },
           {
             latex: "|f'(x^*)| < 1 \\text{ : stable}, \\quad |f'(x^*)| > 1 \\text{ : unstable}",
-            description: "Stability in discrete systems",
+            description: 'Stability in discrete systems',
           },
         ],
         examples: [
           {
-            problem: "Analyze fixed points and stability of f(x) = x² - x - 1.",
+            problem: 'Analyze fixed points and stability of f(x) = x² - x - 1.',
             solution:
               "x = x² - x - 1 gives x² - 2x - 1 = 0, x = 1 ± √2. f'(x) = 2x - 1. |f'(1+√2)| = |1+2√2| > 1 (unstable), |f'(1-√2)| = |1-2√2| < 1 (stable)",
           },
         ],
         applications: [
-          { field: "Control Theory", description: "System stabilization" },
-          { field: "Ecology", description: "Equilibrium populations" },
-          { field: "Economics", description: "Market equilibrium" },
+          { field: 'Control Theory', description: 'System stabilization' },
+          { field: 'Ecology', description: 'Equilibrium populations' },
+          { field: 'Economics', description: 'Market equilibrium' },
         ],
       },
     },
     relations: {
-      prerequisites: ["derivative", "dynamical-systems"],
-      nextTopics: ["bifurcation", "attractors"],
-      related: ["equilibrium"],
+      prerequisites: ['derivative', 'dynamical-systems'],
+      nextTopics: ['bifurcation', 'attractors'],
+      related: ['equilibrium'],
     },
-    tags: ["고정점", "안정성", "fixed point", "stability"],
+    tags: ['고정점', '안정성', 'fixed point', 'stability'],
   },
   {
-    id: "bifurcation",
+    id: 'bifurcation',
     name: {
-      ko: "분기",
-      en: "Bifurcation",
-      ja: "分岐",
+      ko: '분기',
+      en: 'Bifurcation',
+      ja: '分岐',
     },
-    field: "dynamics",
-    subfield: "dynamical-systems",
+    field: 'dynamics',
+    subfield: 'dynamical-systems',
     difficulty: 4,
     content: {
       ko: {
         definition:
-          "분기는 매개변수가 변할 때 동역학계의 질적 행동이 갑자기 변하는 현상입니다. 새로운 고정점이 생기거나 안정성이 바뀝니다.",
+          '분기는 매개변수가 변할 때 동역학계의 질적 행동이 갑자기 변하는 현상입니다. 새로운 고정점이 생기거나 안정성이 바뀝니다.',
         formulas: [
           {
-            latex: "x_{n+1} = rx_n(1-x_n)",
-            description: "로지스틱 맵 (r에 따라 분기)",
+            latex: 'x_{n+1} = rx_n(1-x_n)',
+            description: '로지스틱 맵 (r에 따라 분기)',
           },
         ],
         examples: [
           {
-            problem: "로지스틱 맵의 분기 과정을 설명하세요.",
+            problem: '로지스틱 맵의 분기 과정을 설명하세요.',
             solution:
-              "r < 1: 소멸, r = 1: 초월분기, 1 < r < 3: 하나의 안정점, r = 3: 주기배가 분기 시작, r ≈ 3.57: 카오스 시작",
+              'r < 1: 소멸, r = 1: 초월분기, 1 < r < 3: 하나의 안정점, r = 3: 주기배가 분기 시작, r ≈ 3.57: 카오스 시작',
           },
         ],
         applications: [
-          { field: "물리학", description: "상전이" },
-          { field: "생태학", description: "개체군 폭발/붕괴" },
-          { field: "공학", description: "시스템 불안정 예측" },
+          { field: '물리학', description: '상전이' },
+          { field: '생태학', description: '개체군 폭발/붕괴' },
+          { field: '공학', description: '시스템 불안정 예측' },
         ],
       },
       en: {
         definition:
-          "Bifurcation is when qualitative behavior of a dynamical system suddenly changes as a parameter varies. New fixed points may appear or stability may change.",
+          'Bifurcation is when qualitative behavior of a dynamical system suddenly changes as a parameter varies. New fixed points may appear or stability may change.',
         formulas: [
           {
-            latex: "x_{n+1} = rx_n(1-x_n)",
-            description: "Logistic map (bifurcates with r)",
+            latex: 'x_{n+1} = rx_n(1-x_n)',
+            description: 'Logistic map (bifurcates with r)',
           },
         ],
         examples: [
           {
-            problem: "Describe the bifurcation process in logistic map.",
+            problem: 'Describe the bifurcation process in logistic map.',
             solution:
-              "r < 1: extinction, r = 1: transcritical, 1 < r < 3: one stable point, r = 3: period doubling begins, r ≈ 3.57: chaos onset",
+              'r < 1: extinction, r = 1: transcritical, 1 < r < 3: one stable point, r = 3: period doubling begins, r ≈ 3.57: chaos onset',
           },
         ],
         applications: [
-          { field: "Physics", description: "Phase transitions" },
-          { field: "Ecology", description: "Population boom/crash" },
-          { field: "Engineering", description: "System instability prediction" },
+          { field: 'Physics', description: 'Phase transitions' },
+          { field: 'Ecology', description: 'Population boom/crash' },
+          { field: 'Engineering', description: 'System instability prediction' },
         ],
       },
     },
     relations: {
-      prerequisites: ["fixed-points", "dynamical-systems"],
-      nextTopics: ["chaos-theory"],
-      related: ["phase-transition"],
+      prerequisites: ['fixed-points', 'dynamical-systems'],
+      nextTopics: ['chaos-theory'],
+      related: ['phase-transition'],
     },
-    tags: ["분기", "주기배가", "bifurcation", "period doubling"],
+    tags: ['분기', '주기배가', 'bifurcation', 'period doubling'],
   },
   {
-    id: "ordinary-differential-equation",
+    id: 'ordinary-differential-equation',
     name: {
-      ko: "상미분방정식",
-      en: "Ordinary Differential Equations",
-      ja: "常微分方程式",
+      ko: '상미분방정식',
+      en: 'Ordinary Differential Equations',
+      ja: '常微分方程式',
     },
-    field: "dynamics",
-    subfield: "differential-equations",
+    field: 'dynamics',
+    subfield: 'differential-equations',
     difficulty: 3,
     content: {
       ko: {
         definition:
-          "상미분방정식(ODE)은 하나의 독립변수에 대한 미지함수와 그 도함수 사이의 관계식입니다. 물리, 공학의 기본 언어입니다.",
+          '상미분방정식(ODE)은 하나의 독립변수에 대한 미지함수와 그 도함수 사이의 관계식입니다. 물리, 공학의 기본 언어입니다.',
         formulas: [
           {
-            latex: "\\frac{dy}{dx} = f(x, y)",
-            description: "1차 ODE의 일반형",
+            latex: '\\frac{dy}{dx} = f(x, y)',
+            description: '1차 ODE의 일반형',
           },
           {
             latex: "y'' + p(x)y' + q(x)y = g(x)",
-            description: "2차 선형 ODE",
+            description: '2차 선형 ODE',
           },
           {
             latex: "\\frac{d^n y}{dx^n} = F(x, y, y', ..., y^{(n-1)})",
-            description: "n차 ODE",
+            description: 'n차 ODE',
           },
         ],
         examples: [
           {
-            problem: "dy/dx = 2x를 풀이하세요.",
-            solution: "양변을 적분: y = ∫2x dx = x² + C",
+            problem: 'dy/dx = 2x를 풀이하세요.',
+            solution: '양변을 적분: y = ∫2x dx = x² + C',
           },
           {
             problem: "y' + y = 0을 풀이하세요.",
-            solution:
-              "특성방정식: r + 1 = 0, r = -1. 일반해: y = Ce^(-x)",
+            solution: '특성방정식: r + 1 = 0, r = -1. 일반해: y = Ce^(-x)',
           },
         ],
         history: {
-          discoveredBy: "아이작 뉴턴, 라이프니츠",
-          year: "17세기",
-          background:
-            "미적분학의 발명과 함께 물리 법칙을 수학적으로 표현하기 위해 발전했습니다.",
+          discoveredBy: '아이작 뉴턴, 라이프니츠',
+          year: '17세기',
+          background: '미적분학의 발명과 함께 물리 법칙을 수학적으로 표현하기 위해 발전했습니다.',
         },
         applications: [
-          { field: "물리학", description: "뉴턴 역학, 전자기학" },
-          { field: "공학", description: "회로, 제어 시스템" },
-          { field: "생물학", description: "개체군 모델, 전염병" },
+          { field: '물리학', description: '뉴턴 역학, 전자기학' },
+          { field: '공학', description: '회로, 제어 시스템' },
+          { field: '생물학', description: '개체군 모델, 전염병' },
         ],
       },
       en: {
@@ -441,332 +432,332 @@ export const dynamicsConcepts: MathConcept[] = [
           "An ordinary differential equation (ODE) relates an unknown function of one variable to its derivatives. It's the fundamental language of physics and engineering.",
         formulas: [
           {
-            latex: "\\frac{dy}{dx} = f(x, y)",
-            description: "General form of first-order ODE",
+            latex: '\\frac{dy}{dx} = f(x, y)',
+            description: 'General form of first-order ODE',
           },
           {
             latex: "y'' + p(x)y' + q(x)y = g(x)",
-            description: "Second-order linear ODE",
+            description: 'Second-order linear ODE',
           },
           {
             latex: "\\frac{d^n y}{dx^n} = F(x, y, y', ..., y^{(n-1)})",
-            description: "nth-order ODE",
+            description: 'nth-order ODE',
           },
         ],
         examples: [
           {
-            problem: "Solve dy/dx = 2x.",
-            solution: "Integrate both sides: y = ∫2x dx = x² + C",
+            problem: 'Solve dy/dx = 2x.',
+            solution: 'Integrate both sides: y = ∫2x dx = x² + C',
           },
           {
             problem: "Solve y' + y = 0.",
-            solution:
-              "Characteristic equation: r + 1 = 0, r = -1. General solution: y = Ce^(-x)",
+            solution: 'Characteristic equation: r + 1 = 0, r = -1. General solution: y = Ce^(-x)',
           },
         ],
         history: {
-          discoveredBy: "Isaac Newton, Leibniz",
-          year: "17th century",
-          background:
-            "Developed alongside calculus to mathematically express physical laws.",
+          discoveredBy: 'Isaac Newton, Leibniz',
+          year: '17th century',
+          background: 'Developed alongside calculus to mathematically express physical laws.',
         },
         applications: [
-          { field: "Physics", description: "Newtonian mechanics, electromagnetism" },
-          { field: "Engineering", description: "Circuits, control systems" },
-          { field: "Biology", description: "Population models, epidemiology" },
+          { field: 'Physics', description: 'Newtonian mechanics, electromagnetism' },
+          { field: 'Engineering', description: 'Circuits, control systems' },
+          { field: 'Biology', description: 'Population models, epidemiology' },
         ],
       },
     },
     relations: {
-      prerequisites: ["derivative", "integration"],
-      nextTopics: ["dynamical-systems", "numerical-ode"],
-      related: ["partial-differential-equation"],
+      prerequisites: ['derivative', 'integration'],
+      nextTopics: ['dynamical-systems', 'numerical-ode'],
+      related: ['partial-differential-equation'],
     },
-    tags: ["미분방정식", "ODE", "differential equation", "ordinary"],
+    tags: ['미분방정식', 'ODE', 'differential equation', 'ordinary'],
   },
   {
-    id: "partial-differential-equation",
+    id: 'partial-differential-equation',
     name: {
-      ko: "편미분방정식",
-      en: "Partial Differential Equations",
-      ja: "偏微分方程式",
+      ko: '편미분방정식',
+      en: 'Partial Differential Equations',
+      ja: '偏微分方程式',
     },
-    field: "dynamics",
-    subfield: "differential-equations",
+    field: 'dynamics',
+    subfield: 'differential-equations',
     difficulty: 4,
     content: {
       ko: {
         definition:
-          "편미분방정식(PDE)은 두 개 이상의 독립변수에 대한 미지함수의 편도함수를 포함하는 방정식입니다. 파동, 열전달, 양자역학 등을 기술합니다.",
+          '편미분방정식(PDE)은 두 개 이상의 독립변수에 대한 미지함수의 편도함수를 포함하는 방정식입니다. 파동, 열전달, 양자역학 등을 기술합니다.',
         formulas: [
           {
-            latex: "\\frac{\\partial^2 u}{\\partial t^2} = c^2 \\nabla^2 u",
-            description: "파동 방정식",
+            latex: '\\frac{\\partial^2 u}{\\partial t^2} = c^2 \\nabla^2 u',
+            description: '파동 방정식',
           },
           {
-            latex: "\\frac{\\partial u}{\\partial t} = \\alpha \\nabla^2 u",
-            description: "열 방정식 (확산 방정식)",
+            latex: '\\frac{\\partial u}{\\partial t} = \\alpha \\nabla^2 u',
+            description: '열 방정식 (확산 방정식)',
           },
           {
-            latex: "\\nabla^2 u = 0",
-            description: "라플라스 방정식",
+            latex: '\\nabla^2 u = 0',
+            description: '라플라스 방정식',
           },
           {
-            latex: "i\\hbar \\frac{\\partial \\Psi}{\\partial t} = \\hat{H}\\Psi",
-            description: "슈뢰딩거 방정식",
+            latex: 'i\\hbar \\frac{\\partial \\Psi}{\\partial t} = \\hat{H}\\Psi',
+            description: '슈뢰딩거 방정식',
           },
         ],
         examples: [
           {
-            problem: "1차원 열 방정식의 물리적 의미를 설명하세요.",
+            problem: '1차원 열 방정식의 물리적 의미를 설명하세요.',
             solution:
-              "∂u/∂t = α∂²u/∂x²는 온도 u가 시간에 따라 어떻게 변하는지를 나타냅니다. α는 열확산계수입니다.",
+              '∂u/∂t = α∂²u/∂x²는 온도 u가 시간에 따라 어떻게 변하는지를 나타냅니다. α는 열확산계수입니다.',
           },
         ],
         history: {
-          discoveredBy: "다니엘 베르누이, 달랑베르",
-          year: "18세기",
-          background:
-            "현 진동과 열전도 문제를 해결하면서 PDE 이론이 발전했습니다.",
+          discoveredBy: '다니엘 베르누이, 달랑베르',
+          year: '18세기',
+          background: '현 진동과 열전도 문제를 해결하면서 PDE 이론이 발전했습니다.',
         },
         applications: [
-          { field: "물리학", description: "파동, 열역학, 양자역학" },
-          { field: "공학", description: "유체역학, 구조해석" },
-          { field: "금융", description: "옵션 가격 결정 (블랙-숄즈)" },
+          { field: '물리학', description: '파동, 열역학, 양자역학' },
+          { field: '공학', description: '유체역학, 구조해석' },
+          { field: '금융', description: '옵션 가격 결정 (블랙-숄즈)' },
         ],
       },
       en: {
         definition:
-          "A partial differential equation (PDE) involves partial derivatives of an unknown function with respect to multiple independent variables. Describes waves, heat transfer, quantum mechanics.",
+          'A partial differential equation (PDE) involves partial derivatives of an unknown function with respect to multiple independent variables. Describes waves, heat transfer, quantum mechanics.',
         formulas: [
           {
-            latex: "\\frac{\\partial^2 u}{\\partial t^2} = c^2 \\nabla^2 u",
-            description: "Wave equation",
+            latex: '\\frac{\\partial^2 u}{\\partial t^2} = c^2 \\nabla^2 u',
+            description: 'Wave equation',
           },
           {
-            latex: "\\frac{\\partial u}{\\partial t} = \\alpha \\nabla^2 u",
-            description: "Heat equation (diffusion)",
+            latex: '\\frac{\\partial u}{\\partial t} = \\alpha \\nabla^2 u',
+            description: 'Heat equation (diffusion)',
           },
           {
-            latex: "\\nabla^2 u = 0",
-            description: "Laplace equation",
+            latex: '\\nabla^2 u = 0',
+            description: 'Laplace equation',
           },
           {
-            latex: "i\\hbar \\frac{\\partial \\Psi}{\\partial t} = \\hat{H}\\Psi",
-            description: "Schrödinger equation",
+            latex: 'i\\hbar \\frac{\\partial \\Psi}{\\partial t} = \\hat{H}\\Psi',
+            description: 'Schrödinger equation',
           },
         ],
         examples: [
           {
-            problem: "Explain the physical meaning of 1D heat equation.",
+            problem: 'Explain the physical meaning of 1D heat equation.',
             solution:
-              "∂u/∂t = α∂²u/∂x² describes how temperature u changes over time. α is thermal diffusivity.",
+              '∂u/∂t = α∂²u/∂x² describes how temperature u changes over time. α is thermal diffusivity.',
           },
         ],
         history: {
           discoveredBy: "Daniel Bernoulli, d'Alembert",
-          year: "18th century",
+          year: '18th century',
           background:
-            "PDE theory developed while solving string vibration and heat conduction problems.",
+            'PDE theory developed while solving string vibration and heat conduction problems.',
         },
         applications: [
-          { field: "Physics", description: "Waves, thermodynamics, quantum mechanics" },
-          { field: "Engineering", description: "Fluid dynamics, structural analysis" },
-          { field: "Finance", description: "Option pricing (Black-Scholes)" },
+          { field: 'Physics', description: 'Waves, thermodynamics, quantum mechanics' },
+          { field: 'Engineering', description: 'Fluid dynamics, structural analysis' },
+          { field: 'Finance', description: 'Option pricing (Black-Scholes)' },
         ],
       },
     },
     relations: {
-      prerequisites: ["partial-derivative", "ordinary-differential-equation"],
-      nextTopics: ["fourier-series", "finite-element"],
-      related: ["laplacian"],
+      prerequisites: ['partial-derivative', 'ordinary-differential-equation'],
+      nextTopics: ['fourier-series', 'finite-element'],
+      related: ['laplacian'],
     },
-    tags: ["편미분방정식", "PDE", "partial differential", "wave"],
+    tags: ['편미분방정식', 'PDE', 'partial differential', 'wave'],
   },
   {
-    id: "phase-space",
+    id: 'phase-space',
     name: {
-      ko: "위상공간 (상공간)",
-      en: "Phase Space",
-      ja: "相空間",
+      ko: '위상공간 (상공간)',
+      en: 'Phase Space',
+      ja: '相空間',
     },
-    field: "dynamics",
-    subfield: "dynamical-systems",
+    field: 'dynamics',
+    subfield: 'dynamical-systems',
     difficulty: 4,
     content: {
       ko: {
         definition:
-          "위상공간(상공간)은 동역학계의 모든 가능한 상태를 좌표로 나타낸 공간입니다. 시스템의 진화를 궤적으로 시각화할 수 있습니다.",
+          '위상공간(상공간)은 동역학계의 모든 가능한 상태를 좌표로 나타낸 공간입니다. 시스템의 진화를 궤적으로 시각화할 수 있습니다.',
         formulas: [
           {
-            latex: "(q_1, ..., q_n, p_1, ..., p_n) \\in \\mathbb{R}^{2n}",
-            description: "n 자유도 시스템의 위상공간 좌표",
+            latex: '(q_1, ..., q_n, p_1, ..., p_n) \\in \\mathbb{R}^{2n}',
+            description: 'n 자유도 시스템의 위상공간 좌표',
           },
           {
-            latex: "\\dot{q}_i = \\frac{\\partial H}{\\partial p_i}, \\quad \\dot{p}_i = -\\frac{\\partial H}{\\partial q_i}",
-            description: "해밀턴 방정식",
+            latex:
+              '\\dot{q}_i = \\frac{\\partial H}{\\partial p_i}, \\quad \\dot{p}_i = -\\frac{\\partial H}{\\partial q_i}',
+            description: '해밀턴 방정식',
           },
         ],
         examples: [
           {
-            problem: "단진자의 위상공간을 그리세요.",
+            problem: '단진자의 위상공간을 그리세요.',
             solution:
-              "x축: 각도 θ, y축: 각속도 θ̇. 작은 진동은 타원 궤적, 큰 진동은 물결 모양, 회전 운동은 열린 곡선입니다.",
+              'x축: 각도 θ, y축: 각속도 θ̇. 작은 진동은 타원 궤적, 큰 진동은 물결 모양, 회전 운동은 열린 곡선입니다.',
           },
           {
-            problem: "조화 진동자의 위상공간 궤적은?",
+            problem: '조화 진동자의 위상공간 궤적은?',
             solution:
-              "x축: 위치 x, y축: 운동량 p. 에너지 보존으로 인해 완전한 타원 궤적을 그립니다.",
+              'x축: 위치 x, y축: 운동량 p. 에너지 보존으로 인해 완전한 타원 궤적을 그립니다.',
           },
         ],
         history: {
-          discoveredBy: "조제프 리우빌, 윌리엄 해밀턴",
-          year: "19세기",
+          discoveredBy: '조제프 리우빌, 윌리엄 해밀턴',
+          year: '19세기',
           background:
-            "해석역학의 발전과 함께 시스템의 상태를 기하학적으로 분석하는 방법이 발전했습니다.",
+            '해석역학의 발전과 함께 시스템의 상태를 기하학적으로 분석하는 방법이 발전했습니다.',
         },
         applications: [
-          { field: "고전역학", description: "행성 운동, 진자 운동" },
-          { field: "통계역학", description: "앙상블 이론" },
-          { field: "제어 이론", description: "시스템 안정성 분석" },
+          { field: '고전역학', description: '행성 운동, 진자 운동' },
+          { field: '통계역학', description: '앙상블 이론' },
+          { field: '제어 이론', description: '시스템 안정성 분석' },
         ],
       },
       en: {
         definition:
-          "Phase space represents all possible states of a dynamical system as coordinates. System evolution can be visualized as trajectories.",
+          'Phase space represents all possible states of a dynamical system as coordinates. System evolution can be visualized as trajectories.',
         formulas: [
           {
-            latex: "(q_1, ..., q_n, p_1, ..., p_n) \\in \\mathbb{R}^{2n}",
-            description: "Phase space coordinates for n-degree system",
+            latex: '(q_1, ..., q_n, p_1, ..., p_n) \\in \\mathbb{R}^{2n}',
+            description: 'Phase space coordinates for n-degree system',
           },
           {
-            latex: "\\dot{q}_i = \\frac{\\partial H}{\\partial p_i}, \\quad \\dot{p}_i = -\\frac{\\partial H}{\\partial q_i}",
+            latex:
+              '\\dot{q}_i = \\frac{\\partial H}{\\partial p_i}, \\quad \\dot{p}_i = -\\frac{\\partial H}{\\partial q_i}',
             description: "Hamilton's equations",
           },
         ],
         examples: [
           {
-            problem: "Draw phase space for simple pendulum.",
+            problem: 'Draw phase space for simple pendulum.',
             solution:
-              "x-axis: angle θ, y-axis: angular velocity θ̇. Small oscillations: ellipses, large: wave-like, rotation: open curves.",
+              'x-axis: angle θ, y-axis: angular velocity θ̇. Small oscillations: ellipses, large: wave-like, rotation: open curves.',
           },
           {
-            problem: "What is the phase space trajectory of harmonic oscillator?",
+            problem: 'What is the phase space trajectory of harmonic oscillator?',
             solution:
-              "x-axis: position x, y-axis: momentum p. Energy conservation gives perfect elliptical trajectories.",
+              'x-axis: position x, y-axis: momentum p. Energy conservation gives perfect elliptical trajectories.',
           },
         ],
         history: {
-          discoveredBy: "Joseph Liouville, William Hamilton",
-          year: "19th century",
+          discoveredBy: 'Joseph Liouville, William Hamilton',
+          year: '19th century',
           background:
-            "Geometric analysis of system states developed alongside analytical mechanics.",
+            'Geometric analysis of system states developed alongside analytical mechanics.',
         },
         applications: [
-          { field: "Classical Mechanics", description: "Planetary motion, pendulum" },
-          { field: "Statistical Mechanics", description: "Ensemble theory" },
-          { field: "Control Theory", description: "System stability analysis" },
+          { field: 'Classical Mechanics', description: 'Planetary motion, pendulum' },
+          { field: 'Statistical Mechanics', description: 'Ensemble theory' },
+          { field: 'Control Theory', description: 'System stability analysis' },
         ],
       },
     },
     relations: {
-      prerequisites: ["dynamical-systems", "derivative"],
-      nextTopics: ["attractors", "liouville-theorem"],
-      related: ["hamiltonian-mechanics"],
+      prerequisites: ['dynamical-systems', 'derivative'],
+      nextTopics: ['attractors', 'liouville-theorem'],
+      related: ['hamiltonian-mechanics'],
     },
-    tags: ["위상공간", "상공간", "phase space", "trajectory"],
+    tags: ['위상공간', '상공간', 'phase space', 'trajectory'],
   },
   {
-    id: "attractors",
+    id: 'attractors',
     name: {
-      ko: "끌개",
-      en: "Attractors",
-      ja: "アトラクター",
+      ko: '끌개',
+      en: 'Attractors',
+      ja: 'アトラクター',
     },
-    field: "dynamics",
-    subfield: "chaos",
+    field: 'dynamics',
+    subfield: 'chaos',
     difficulty: 4,
     content: {
       ko: {
         definition:
-          "끌개는 동역학계에서 궤적들이 시간이 지남에 따라 수렴하는 상태나 상태들의 집합입니다. 점, 주기궤도, 이상한 끌개 등이 있습니다.",
+          '끌개는 동역학계에서 궤적들이 시간이 지남에 따라 수렴하는 상태나 상태들의 집합입니다. 점, 주기궤도, 이상한 끌개 등이 있습니다.',
         formulas: [
           {
-            latex: "\\lim_{t \\to \\infty} d(x(t), A) = 0",
-            description: "끌개 A로의 수렴",
+            latex: '\\lim_{t \\to \\infty} d(x(t), A) = 0',
+            description: '끌개 A로의 수렴',
           },
           {
-            latex: "\\begin{cases} \\dot{x} = \\sigma(y-x) \\\\ \\dot{y} = x(\\rho - z) - y \\\\ \\dot{z} = xy - \\beta z \\end{cases}",
-            description: "로렌츠 방정식 (이상한 끌개)",
+            latex:
+              '\\begin{cases} \\dot{x} = \\sigma(y-x) \\\\ \\dot{y} = x(\\rho - z) - y \\\\ \\dot{z} = xy - \\beta z \\end{cases}',
+            description: '로렌츠 방정식 (이상한 끌개)',
           },
         ],
         examples: [
           {
-            problem: "점 끌개, 한계 순환, 이상한 끌개의 차이를 설명하세요.",
+            problem: '점 끌개, 한계 순환, 이상한 끌개의 차이를 설명하세요.',
             solution:
-              "점 끌개: 정지 상태. 한계 순환: 주기적 진동. 이상한 끌개: 비주기적, 프랙탈 구조, 카오스적.",
+              '점 끌개: 정지 상태. 한계 순환: 주기적 진동. 이상한 끌개: 비주기적, 프랙탈 구조, 카오스적.',
           },
           {
-            problem: "로렌츠 끌개의 특징은?",
+            problem: '로렌츠 끌개의 특징은?',
             solution:
-              "나비 모양의 이상한 끌개. 궤적이 두 날개 사이를 예측 불가능하게 이동합니다. 프랙탈 차원 ≈ 2.06.",
+              '나비 모양의 이상한 끌개. 궤적이 두 날개 사이를 예측 불가능하게 이동합니다. 프랙탈 차원 ≈ 2.06.',
           },
         ],
         history: {
-          discoveredBy: "에드워드 로렌츠",
-          year: "1963년",
-          background:
-            "기상 모델에서 발견된 로렌츠 끌개는 카오스 이론의 상징이 되었습니다.",
+          discoveredBy: '에드워드 로렌츠',
+          year: '1963년',
+          background: '기상 모델에서 발견된 로렌츠 끌개는 카오스 이론의 상징이 되었습니다.',
         },
         applications: [
-          { field: "기상학", description: "대기 모델" },
-          { field: "신경과학", description: "뇌 활동 패턴" },
-          { field: "경제학", description: "시장 동역학" },
+          { field: '기상학', description: '대기 모델' },
+          { field: '신경과학', description: '뇌 활동 패턴' },
+          { field: '경제학', description: '시장 동역학' },
         ],
       },
       en: {
         definition:
-          "An attractor is a state or set of states that trajectories converge to over time in a dynamical system. Types include point, periodic orbit, and strange attractors.",
+          'An attractor is a state or set of states that trajectories converge to over time in a dynamical system. Types include point, periodic orbit, and strange attractors.',
         formulas: [
           {
-            latex: "\\lim_{t \\to \\infty} d(x(t), A) = 0",
-            description: "Convergence to attractor A",
+            latex: '\\lim_{t \\to \\infty} d(x(t), A) = 0',
+            description: 'Convergence to attractor A',
           },
           {
-            latex: "\\begin{cases} \\dot{x} = \\sigma(y-x) \\\\ \\dot{y} = x(\\rho - z) - y \\\\ \\dot{z} = xy - \\beta z \\end{cases}",
-            description: "Lorenz equations (strange attractor)",
+            latex:
+              '\\begin{cases} \\dot{x} = \\sigma(y-x) \\\\ \\dot{y} = x(\\rho - z) - y \\\\ \\dot{z} = xy - \\beta z \\end{cases}',
+            description: 'Lorenz equations (strange attractor)',
           },
         ],
         examples: [
           {
-            problem: "Explain difference between point, limit cycle, and strange attractors.",
+            problem: 'Explain difference between point, limit cycle, and strange attractors.',
             solution:
-              "Point: stationary state. Limit cycle: periodic oscillation. Strange: aperiodic, fractal structure, chaotic.",
+              'Point: stationary state. Limit cycle: periodic oscillation. Strange: aperiodic, fractal structure, chaotic.',
           },
           {
-            problem: "What characterizes the Lorenz attractor?",
+            problem: 'What characterizes the Lorenz attractor?',
             solution:
-              "Butterfly-shaped strange attractor. Trajectory moves unpredictably between two wings. Fractal dimension ≈ 2.06.",
+              'Butterfly-shaped strange attractor. Trajectory moves unpredictably between two wings. Fractal dimension ≈ 2.06.',
           },
         ],
         history: {
-          discoveredBy: "Edward Lorenz",
-          year: "1963",
+          discoveredBy: 'Edward Lorenz',
+          year: '1963',
           background:
-            "Discovered in weather model, Lorenz attractor became iconic in chaos theory.",
+            'Discovered in weather model, Lorenz attractor became iconic in chaos theory.',
         },
         applications: [
-          { field: "Meteorology", description: "Atmospheric models" },
-          { field: "Neuroscience", description: "Brain activity patterns" },
-          { field: "Economics", description: "Market dynamics" },
+          { field: 'Meteorology', description: 'Atmospheric models' },
+          { field: 'Neuroscience', description: 'Brain activity patterns' },
+          { field: 'Economics', description: 'Market dynamics' },
         ],
       },
     },
     relations: {
-      prerequisites: ["dynamical-systems", "phase-space"],
-      nextTopics: ["chaos-theory", "fractals"],
-      related: ["fixed-points"],
+      prerequisites: ['dynamical-systems', 'phase-space'],
+      nextTopics: ['chaos-theory', 'fractals'],
+      related: ['fixed-points'],
     },
-    tags: ["끌개", "로렌츠", "attractor", "Lorenz"],
+    tags: ['끌개', '로렌츠', 'attractor', 'Lorenz'],
   },
 ];

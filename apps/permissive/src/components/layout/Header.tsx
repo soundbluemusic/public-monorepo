@@ -1,3 +1,4 @@
+import { useI18n } from '@/i18n';
 /**
  * @fileoverview 앱 헤더 컴포넌트
  *
@@ -13,12 +14,11 @@
  * />
  * ```
  */
-import { A } from "@solidjs/router";
-import { createSignal, onMount, onCleanup } from "solid-js";
-import { isServer } from "solid-js/web";
-import ThemeToggle from "../ui/ThemeToggle";
-import { LanguageToggle } from "@soundblue/shared";
-import { useI18n } from "@/i18n";
+import { A } from '@solidjs/router';
+import { LanguageToggle } from '@soundblue/shared';
+import { createSignal, onCleanup, onMount } from 'solid-js';
+import { isServer } from 'solid-js/web';
+import ThemeToggle from '../ui/ThemeToggle';
 
 /**
  * 헤더 Props
@@ -46,38 +46,53 @@ export default function Header(props: HeaderProps) {
       setScrolled(window.scrollY > 10);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    onCleanup(() => window.removeEventListener("scroll", handleScroll));
+    window.addEventListener('scroll', handleScroll);
+    onCleanup(() => window.removeEventListener('scroll', handleScroll));
   });
 
   return (
     <header
       class={`fixed top-0 left-0 right-0 z-header h-header flex items-center justify-between px-4 transition-all duration-200 ${
-        scrolled()
-          ? "backdrop-blur-md shadow-sm"
-          : ""
+        scrolled() ? 'backdrop-blur-md shadow-sm' : ''
       }`}
       style={{
-        "padding-top": "env(safe-area-inset-top, 0)",
-        "background-color": scrolled() ? "var(--bg-elevated)" : "var(--bg-primary)",
-        "border-bottom": `1px solid ${scrolled() ? "var(--border-primary)" : "transparent"}`
+        'padding-top': 'env(safe-area-inset-top, 0)',
+        'background-color': scrolled() ? 'var(--bg-elevated)' : 'var(--bg-primary)',
+        'border-bottom': `1px solid ${scrolled() ? 'var(--border-primary)' : 'transparent'}`,
       }}
     >
       {/* Left: Menu button (mobile) + Logo */}
       <div class="flex items-center gap-3">
         {/* Mobile menu button */}
         <button
+          type="button"
           onClick={() => props.onMenuClick()}
           class="md:hidden p-2 -ml-2 rounded-lg hover-bg"
-          style={{ color: "var(--text-secondary)" }}
-          aria-label={props.isSidebarOpen ? "Close menu" : "Open menu"}
+          style={{ color: 'var(--text-secondary)' }}
+          aria-label={props.isSidebarOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={props.isSidebarOpen}
         >
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg
+            aria-hidden="true"
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
             {props.isSidebarOpen ? (
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
             ) : (
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             )}
           </svg>
         </button>
@@ -85,10 +100,7 @@ export default function Header(props: HeaderProps) {
         {/* Logo */}
         <A href="/" class="flex items-center gap-2.5 group">
           <span class="text-lg">✨</span>
-          <span
-            class="font-semibold transition-colors"
-            style={{ color: "var(--text-primary)" }}
-          >
+          <span class="font-semibold transition-colors" style={{ color: 'var(--text-primary)' }}>
             Permissive
           </span>
         </A>

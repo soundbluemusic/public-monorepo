@@ -1,2 +1,2 @@
-import EntryPage from "@/pages/EntryPage";
+import EntryPage from '@/pages/EntryPage';
 export default EntryPage;

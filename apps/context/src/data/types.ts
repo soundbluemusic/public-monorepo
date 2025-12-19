@@ -31,7 +31,7 @@
  * - 'ko': 한국어
  * - 'en': 영어
  */
-export type Language = "ko" | "en";
+export type Language = 'ko' | 'en';
 
 /**
  * 표현 변형 (격식 수준별)
@@ -113,16 +113,16 @@ export interface MeaningEntry {
  * - expression: 표현/관용구
  */
 export type PartOfSpeech =
-  | "noun"
-  | "verb"
-  | "adjective"
-  | "adverb"
-  | "particle"
-  | "interjection"
-  | "conjunction"
-  | "pronoun"
-  | "determiner"
-  | "expression";
+  | 'noun'
+  | 'verb'
+  | 'adjective'
+  | 'adverb'
+  | 'particle'
+  | 'interjection'
+  | 'conjunction'
+  | 'pronoun'
+  | 'determiner'
+  | 'expression';
 
 /**
  * 학습 난이도
@@ -130,7 +130,7 @@ export type PartOfSpeech =
  * - intermediate: 중급 (TOPIK 3-4급)
  * - advanced: 고급 (TOPIK 5-6급)
  */
-export type DifficultyLevel = "beginner" | "intermediate" | "advanced";
+export type DifficultyLevel = 'beginner' | 'intermediate' | 'advanced';
 
 /**
  * 사용 빈도
@@ -139,7 +139,7 @@ export type DifficultyLevel = "beginner" | "intermediate" | "advanced";
  * - occasional: 가끔 사용 (특정 상황)
  * - rare: 드물게 사용 (문어체/전문 용어)
  */
-export type FrequencyLevel = "common" | "frequent" | "occasional" | "rare";
+export type FrequencyLevel = 'common' | 'frequent' | 'occasional' | 'rare';
 
 /**
  * 카테고리 (단어 분류)
@@ -170,15 +170,15 @@ export interface Category {
  * Tailwind CSS 색상 클래스와 매핑됩니다.
  */
 export type CategoryColor =
-  | "red"
-  | "orange"
-  | "yellow"
-  | "green"
-  | "teal"
-  | "blue"
-  | "indigo"
-  | "purple"
-  | "pink";
+  | 'red'
+  | 'orange'
+  | 'yellow'
+  | 'green'
+  | 'teal'
+  | 'blue'
+  | 'indigo'
+  | 'purple'
+  | 'pink';
 
 /**
  * 검색 결과 항목
@@ -191,7 +191,7 @@ export interface SearchResult {
   entry: MeaningEntry;
   category: Category;
   score: number;
-  matchedIn: ("korean" | "translation" | "explanation" | "tags")[];
+  matchedIn: ('korean' | 'translation' | 'explanation' | 'tags')[];
 }
 
 /**

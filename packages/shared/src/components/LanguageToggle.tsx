@@ -15,9 +15,9 @@
  * }
  * ```
  */
-import type { Accessor } from "solid-js";
+import type { Accessor } from 'solid-js';
 
-type Language = "ko" | "en";
+type Language = 'ko' | 'en';
 
 export interface LanguageToggleProps {
   locale: Accessor<Language>;
@@ -33,17 +33,18 @@ export interface LanguageToggleProps {
  */
 export function LanguageToggle(props: LanguageToggleProps) {
   const toggleLanguage = () => {
-    props.setLocale(props.locale() === "en" ? "ko" : "en");
+    props.setLocale(props.locale() === 'en' ? 'ko' : 'en');
   };
 
   return (
     <button
+      type="button"
       onClick={toggleLanguage}
       class="px-2 py-1.5 text-sm cursor-pointer rounded-lg transition-colors"
-      style={{ color: "var(--text-secondary)" }}
+      style={{ color: 'var(--text-secondary)' }}
       aria-label="Toggle language"
     >
-      {props.locale() === "en" ? "한국어" : "EN"}
+      {props.locale() === 'en' ? '한국어' : 'EN'}
     </button>
   );
 }

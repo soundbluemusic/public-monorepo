@@ -190,12 +190,19 @@ export const Layout: ParentComponent = (props) => {
           {/* Menu Button + Logo */}
           <div class="flex items-center gap-2 shrink-0">
             <button
+              type="button"
               onClick={() => setSidebarOpen(true)}
               class="p-2 rounded-lg transition-colors hover:bg-(--bg-tertiary)"
               style={{ color: 'var(--text-secondary)' }}
               aria-label={t('menu')}
             >
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -217,6 +224,7 @@ export const Layout: ParentComponent = (props) => {
           <div ref={searchContainerRef} class="relative flex-1 max-w-md">
             <div class="relative">
               <svg
+                aria-hidden="true"
                 class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4"
                 style={{ color: 'var(--text-tertiary)' }}
                 fill="none"
@@ -270,6 +278,7 @@ export const Layout: ParentComponent = (props) => {
                   <For each={searchResults()}>
                     {(entry, index) => (
                       <button
+                        type="button"
                         onClick={() => selectResult(entry)}
                         onMouseEnter={() => setSelectedIndex(index())}
                         class="w-full flex items-baseline justify-between px-4 py-2 text-left text-sm"
@@ -316,6 +325,7 @@ export const Layout: ParentComponent = (props) => {
 
             {/* Dark mode toggle */}
             <button
+              type="button"
               onClick={toggleDarkMode}
               class="p-2 rounded-lg transition-colors"
               style={{ color: 'var(--text-secondary)' }}
@@ -324,7 +334,13 @@ export const Layout: ParentComponent = (props) => {
               <Show
                 when={darkMode()}
                 fallback={
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg
+                    aria-hidden="true"
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
@@ -334,7 +350,13 @@ export const Layout: ParentComponent = (props) => {
                   </svg>
                 }
               >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg
+                  aria-hidden="true"
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -353,6 +375,10 @@ export const Layout: ParentComponent = (props) => {
         <div
           class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm transition-opacity"
           onClick={() => setSidebarOpen(false)}
+          onKeyDown={(e) => e.key === 'Escape' && setSidebarOpen(false)}
+          role="button"
+          tabIndex={0}
+          aria-label="Close sidebar"
         />
       </Show>
 
@@ -374,12 +400,19 @@ export const Layout: ParentComponent = (props) => {
             {t('menu')}
           </span>
           <button
+            type="button"
             onClick={() => setSidebarOpen(false)}
             class="p-2 rounded-lg transition-colors hover:bg-(--bg-tertiary)"
             style={{ color: 'var(--text-secondary)' }}
             aria-label="Close menu"
           >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg
+              aria-hidden="true"
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -403,7 +436,13 @@ export const Layout: ParentComponent = (props) => {
                 'background-color': isActive('/') ? 'var(--bg-tertiary)' : 'transparent',
               }}
             >
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -422,7 +461,13 @@ export const Layout: ParentComponent = (props) => {
                 'background-color': isActive('/browse') ? 'var(--bg-tertiary)' : 'transparent',
               }}
             >
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -441,7 +486,13 @@ export const Layout: ParentComponent = (props) => {
                 'background-color': isActive('/about') ? 'var(--bg-tertiary)' : 'transparent',
               }}
             >
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -512,7 +563,13 @@ export const Layout: ParentComponent = (props) => {
               'background-color': isActive('/sitemap') ? 'var(--bg-tertiary)' : 'transparent',
             }}
           >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg
+              aria-hidden="true"
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"

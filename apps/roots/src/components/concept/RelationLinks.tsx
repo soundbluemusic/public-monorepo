@@ -1,10 +1,10 @@
+import type { ConceptRelations, MathConcept } from '@/data/types';
+import { useI18n } from '@/i18n';
+import { A } from '@solidjs/router';
 /**
  * @fileoverview 연관 문서 링크 컴포넌트
  */
-import { Show, For } from "solid-js";
-import { A } from "@solidjs/router";
-import { useI18n } from "@/i18n";
-import type { ConceptRelations, MathConcept } from "@/data/types";
+import { For, Show } from 'solid-js';
 
 interface RelationLinksProps {
   relations: ConceptRelations;
@@ -16,7 +16,7 @@ interface RelationSectionProps {
   title: string;
   icon: string;
   ids: string[];
-  type: "prerequisite" | "next" | "related" | "application";
+  type: 'prerequisite' | 'next' | 'related' | 'application';
   getConcept: (id: string) => MathConcept | undefined;
 }
 
@@ -24,10 +24,10 @@ function RelationSection(props: RelationSectionProps) {
   const { locale, localePath } = useI18n();
 
   const typeStyles = {
-    prerequisite: { prefix: "→", color: "var(--color-warning)" },
-    next: { prefix: "←", color: "var(--color-success)" },
-    related: { prefix: "↔", color: "var(--accent-primary)" },
-    application: { prefix: "⚡", color: "var(--math-highlight)" },
+    prerequisite: { prefix: '→', color: 'var(--color-warning)' },
+    next: { prefix: '←', color: 'var(--color-success)' },
+    related: { prefix: '↔', color: 'var(--accent-primary)' },
+    application: { prefix: '⚡', color: 'var(--math-highlight)' },
   };
 
   const style = typeStyles[props.type];
@@ -37,7 +37,7 @@ function RelationSection(props: RelationSectionProps) {
       <div class="mb-4">
         <h4
           class="text-sm font-medium mb-2 flex items-center gap-2"
-          style={{ color: "var(--text-tertiary)" }}
+          style={{ color: 'var(--text-tertiary)' }}
         >
           <span>{props.icon}</span>
           {props.title}
@@ -46,17 +46,15 @@ function RelationSection(props: RelationSectionProps) {
           <For each={props.ids}>
             {(id) => {
               const concept = props.getConcept(id);
-              const name = concept
-                ? concept.name[locale()] || concept.name.en
-                : id;
+              const name = concept ? concept.name[locale()] || concept.name.en : id;
 
               return (
                 <A
                   href={localePath(`/concept/${id}`)}
                   class="relation-link"
                   style={{
-                    "background-color": "var(--bg-tertiary)",
-                    color: "var(--text-secondary)",
+                    'background-color': 'var(--bg-tertiary)',
+                    color: 'var(--text-secondary)',
                   }}
                 >
                   <span style={{ color: style.color }}>{style.prefix}</span>
@@ -96,10 +94,10 @@ export function RelationLinks(props: RelationLinksProps) {
   };
 
   const titles = () => ({
-    prerequisites: locale() === "ko" ? "선행 개념" : "Prerequisites",
-    nextTopics: locale() === "ko" ? "후행 개념" : "Next Topics",
-    related: locale() === "ko" ? "관련 개념" : "Related",
-    applications: locale() === "ko" ? "응용 분야" : "Applications",
+    prerequisites: locale() === 'ko' ? '선행 개념' : 'Prerequisites',
+    nextTopics: locale() === 'ko' ? '후행 개념' : 'Next Topics',
+    related: locale() === 'ko' ? '관련 개념' : 'Related',
+    applications: locale() === 'ko' ? '응용 분야' : 'Applications',
   });
 
   return (
@@ -107,16 +105,16 @@ export function RelationLinks(props: RelationLinksProps) {
       <div
         class="rounded-lg p-4"
         style={{
-          "background-color": "var(--bg-secondary)",
-          border: "1px solid var(--border-primary)",
+          'background-color': 'var(--bg-secondary)',
+          border: '1px solid var(--border-primary)',
         }}
       >
         <h3
           class="text-lg font-semibold mb-4 flex items-center gap-2"
-          style={{ color: "var(--text-primary)" }}
+          style={{ color: 'var(--text-primary)' }}
         >
           <span>🔗</span>
-          {locale() === "ko" ? "연관 문서" : "Related Documents"}
+          {locale() === 'ko' ? '연관 문서' : 'Related Documents'}
         </h3>
 
         <RelationSection

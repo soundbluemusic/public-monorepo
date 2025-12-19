@@ -1,3 +1,3 @@
-import ConceptPage from "@/pages/ConceptPage";
+import ConceptPage from '@/pages/ConceptPage';
 
 export default ConceptPage;

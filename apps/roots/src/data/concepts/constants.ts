@@ -1,57 +1,56 @@
 /**
  * @fileoverview 수학 상수 데이터
  */
-import type { MathConcept } from "../types";
+import type { MathConcept } from '../types';
 
 export const constantsConcepts: MathConcept[] = [
   {
-    id: "pi-constant",
+    id: 'pi-constant',
     name: {
-      ko: "원주율 π",
-      en: "Pi (π)",
-      ja: "円周率 π",
+      ko: '원주율 π',
+      en: 'Pi (π)',
+      ja: '円周率 π',
     },
-    field: "constants",
-    subfield: "fundamental",
+    field: 'constants',
+    subfield: 'fundamental',
     difficulty: 1,
     content: {
       ko: {
         definition:
-          "π(파이)는 원의 지름에 대한 둘레의 비율입니다. 무리수이며 초월수입니다. 수학에서 가장 중요한 상수 중 하나입니다.",
+          'π(파이)는 원의 지름에 대한 둘레의 비율입니다. 무리수이며 초월수입니다. 수학에서 가장 중요한 상수 중 하나입니다.',
         formulas: [
           {
-            latex: "\\pi = \\frac{C}{d} \\approx 3.14159265358979...",
-            description: "원주율의 정의",
+            latex: '\\pi = \\frac{C}{d} \\approx 3.14159265358979...',
+            description: '원주율의 정의',
           },
           {
-            latex: "A = \\pi r^2",
-            description: "원의 넓이",
+            latex: 'A = \\pi r^2',
+            description: '원의 넓이',
           },
           {
-            latex: "e^{i\\pi} + 1 = 0",
-            description: "오일러 등식",
+            latex: 'e^{i\\pi} + 1 = 0',
+            description: '오일러 등식',
           },
           {
-            latex: "\\frac{\\pi}{4} = 1 - \\frac{1}{3} + \\frac{1}{5} - \\frac{1}{7} + ...",
-            description: "라이프니츠 급수",
+            latex: '\\frac{\\pi}{4} = 1 - \\frac{1}{3} + \\frac{1}{5} - \\frac{1}{7} + ...',
+            description: '라이프니츠 급수',
           },
         ],
         examples: [
           {
-            problem: "반지름이 5인 원의 넓이와 둘레를 구하세요.",
-            solution: "넓이 = π × 5² = 25π ≈ 78.54, 둘레 = 2π × 5 = 10π ≈ 31.42",
+            problem: '반지름이 5인 원의 넓이와 둘레를 구하세요.',
+            solution: '넓이 = π × 5² = 25π ≈ 78.54, 둘레 = 2π × 5 = 10π ≈ 31.42',
           },
         ],
         history: {
-          discoveredBy: "고대 문명 (이집트, 바빌로니아)",
-          year: "기원전 2000년경",
-          background:
-            "고대부터 근사값이 알려졌으며, 아르키메데스가 체계적으로 계산했습니다.",
+          discoveredBy: '고대 문명 (이집트, 바빌로니아)',
+          year: '기원전 2000년경',
+          background: '고대부터 근사값이 알려졌으며, 아르키메데스가 체계적으로 계산했습니다.',
         },
         applications: [
-          { field: "기하학", description: "원, 구, 원기둥 계산" },
-          { field: "물리학", description: "파동, 진동, 회전" },
-          { field: "통계학", description: "정규분포" },
+          { field: '기하학', description: '원, 구, 원기둥 계산' },
+          { field: '물리학', description: '파동, 진동, 회전' },
+          { field: '통계학', description: '정규분포' },
         ],
       },
       en: {
@@ -59,285 +58,283 @@ export const constantsConcepts: MathConcept[] = [
           "π (pi) is the ratio of a circle's circumference to its diameter. It's irrational and transcendental, one of mathematics' most important constants.",
         formulas: [
           {
-            latex: "\\pi = \\frac{C}{d} \\approx 3.14159265358979...",
-            description: "Definition of pi",
+            latex: '\\pi = \\frac{C}{d} \\approx 3.14159265358979...',
+            description: 'Definition of pi',
           },
           {
-            latex: "A = \\pi r^2",
-            description: "Area of a circle",
+            latex: 'A = \\pi r^2',
+            description: 'Area of a circle',
           },
           {
-            latex: "e^{i\\pi} + 1 = 0",
+            latex: 'e^{i\\pi} + 1 = 0',
             description: "Euler's identity",
           },
           {
-            latex: "\\frac{\\pi}{4} = 1 - \\frac{1}{3} + \\frac{1}{5} - \\frac{1}{7} + ...",
-            description: "Leibniz series",
+            latex: '\\frac{\\pi}{4} = 1 - \\frac{1}{3} + \\frac{1}{5} - \\frac{1}{7} + ...',
+            description: 'Leibniz series',
           },
         ],
         examples: [
           {
-            problem: "Find the area and circumference of a circle with radius 5.",
-            solution: "Area = π × 5² = 25π ≈ 78.54, Circumference = 2π × 5 = 10π ≈ 31.42",
+            problem: 'Find the area and circumference of a circle with radius 5.',
+            solution: 'Area = π × 5² = 25π ≈ 78.54, Circumference = 2π × 5 = 10π ≈ 31.42',
           },
         ],
         history: {
-          discoveredBy: "Ancient civilizations (Egypt, Babylon)",
-          year: "c. 2000 BCE",
+          discoveredBy: 'Ancient civilizations (Egypt, Babylon)',
+          year: 'c. 2000 BCE',
           background:
-            "Approximations known since antiquity; Archimedes systematically calculated it.",
+            'Approximations known since antiquity; Archimedes systematically calculated it.',
         },
         applications: [
-          { field: "Geometry", description: "Circles, spheres, cylinders" },
-          { field: "Physics", description: "Waves, oscillations, rotation" },
-          { field: "Statistics", description: "Normal distribution" },
+          { field: 'Geometry', description: 'Circles, spheres, cylinders' },
+          { field: 'Physics', description: 'Waves, oscillations, rotation' },
+          { field: 'Statistics', description: 'Normal distribution' },
         ],
       },
     },
     relations: {
       prerequisites: [],
-      nextTopics: ["radians", "circle-area"],
-      related: ["e-constant", "euler-identity"],
+      nextTopics: ['radians', 'circle-area'],
+      related: ['e-constant', 'euler-identity'],
     },
-    tags: ["파이", "원주율", "pi", "constant"],
+    tags: ['파이', '원주율', 'pi', 'constant'],
   },
   {
-    id: "e-constant",
+    id: 'e-constant',
     name: {
-      ko: "자연상수 e",
+      ko: '자연상수 e',
       en: "Euler's Number (e)",
-      ja: "ネイピア数 e",
+      ja: 'ネイピア数 e',
     },
-    field: "constants",
-    subfield: "fundamental",
+    field: 'constants',
+    subfield: 'fundamental',
     difficulty: 2,
     content: {
       ko: {
         definition:
-          "e는 자연로그의 밑으로, 연속 복리에서 자연스럽게 나타나는 수입니다. 미적분학에서 핵심적인 역할을 합니다.",
+          'e는 자연로그의 밑으로, 연속 복리에서 자연스럽게 나타나는 수입니다. 미적분학에서 핵심적인 역할을 합니다.',
         formulas: [
           {
-            latex: "e = \\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n \\approx 2.71828...",
-            description: "e의 극한 정의",
+            latex:
+              'e = \\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n \\approx 2.71828...',
+            description: 'e의 극한 정의',
           },
           {
-            latex: "e = \\sum_{n=0}^{\\infty} \\frac{1}{n!} = 1 + 1 + \\frac{1}{2} + \\frac{1}{6} + ...",
-            description: "e의 급수 정의",
+            latex:
+              'e = \\sum_{n=0}^{\\infty} \\frac{1}{n!} = 1 + 1 + \\frac{1}{2} + \\frac{1}{6} + ...',
+            description: 'e의 급수 정의',
           },
           {
-            latex: "\\frac{d}{dx} e^x = e^x",
-            description: "자기 자신이 도함수인 성질",
+            latex: '\\frac{d}{dx} e^x = e^x',
+            description: '자기 자신이 도함수인 성질',
           },
         ],
         examples: [
           {
-            problem: "100원을 연이율 100%로 연속 복리 1년 예치하면?",
-            solution: "100 × e¹ ≈ 100 × 2.718 = 271.8원",
+            problem: '100원을 연이율 100%로 연속 복리 1년 예치하면?',
+            solution: '100 × e¹ ≈ 100 × 2.718 = 271.8원',
           },
         ],
         history: {
-          discoveredBy: "레온하르트 오일러",
-          year: "1727년",
-          background:
-            "야코프 베르누이가 복리 문제에서 발견했고, 오일러가 체계화했습니다.",
+          discoveredBy: '레온하르트 오일러',
+          year: '1727년',
+          background: '야코프 베르누이가 복리 문제에서 발견했고, 오일러가 체계화했습니다.',
         },
         applications: [
-          { field: "금융", description: "연속 복리, 성장 모델" },
-          { field: "물리학", description: "방사성 붕괴, 열역학" },
-          { field: "확률론", description: "포아송 분포" },
+          { field: '금융', description: '연속 복리, 성장 모델' },
+          { field: '물리학', description: '방사성 붕괴, 열역학' },
+          { field: '확률론', description: '포아송 분포' },
         ],
       },
       en: {
         definition:
-          "e is the base of natural logarithm, appearing naturally in continuous compound interest. It plays a central role in calculus.",
+          'e is the base of natural logarithm, appearing naturally in continuous compound interest. It plays a central role in calculus.',
         formulas: [
           {
-            latex: "e = \\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n \\approx 2.71828...",
-            description: "Limit definition of e",
+            latex:
+              'e = \\lim_{n \\to \\infty} \\left(1 + \\frac{1}{n}\\right)^n \\approx 2.71828...',
+            description: 'Limit definition of e',
           },
           {
-            latex: "e = \\sum_{n=0}^{\\infty} \\frac{1}{n!} = 1 + 1 + \\frac{1}{2} + \\frac{1}{6} + ...",
-            description: "Series definition of e",
+            latex:
+              'e = \\sum_{n=0}^{\\infty} \\frac{1}{n!} = 1 + 1 + \\frac{1}{2} + \\frac{1}{6} + ...',
+            description: 'Series definition of e',
           },
           {
-            latex: "\\frac{d}{dx} e^x = e^x",
-            description: "Self-derivative property",
+            latex: '\\frac{d}{dx} e^x = e^x',
+            description: 'Self-derivative property',
           },
         ],
         examples: [
           {
-            problem: "Deposit $100 at 100% annual rate compounded continuously for 1 year.",
-            solution: "100 × e¹ ≈ 100 × 2.718 = $271.80",
+            problem: 'Deposit $100 at 100% annual rate compounded continuously for 1 year.',
+            solution: '100 × e¹ ≈ 100 × 2.718 = $271.80',
           },
         ],
         history: {
-          discoveredBy: "Leonhard Euler",
-          year: "1727",
-          background:
-            "Jacob Bernoulli found it in compound interest; Euler systematized it.",
+          discoveredBy: 'Leonhard Euler',
+          year: '1727',
+          background: 'Jacob Bernoulli found it in compound interest; Euler systematized it.',
         },
         applications: [
-          { field: "Finance", description: "Continuous compounding, growth models" },
-          { field: "Physics", description: "Radioactive decay, thermodynamics" },
-          { field: "Probability", description: "Poisson distribution" },
+          { field: 'Finance', description: 'Continuous compounding, growth models' },
+          { field: 'Physics', description: 'Radioactive decay, thermodynamics' },
+          { field: 'Probability', description: 'Poisson distribution' },
         ],
       },
     },
     relations: {
-      prerequisites: ["limits"],
-      nextTopics: ["natural-log", "exponential-function"],
-      related: ["pi-constant", "euler-identity"],
+      prerequisites: ['limits'],
+      nextTopics: ['natural-log', 'exponential-function'],
+      related: ['pi-constant', 'euler-identity'],
     },
-    tags: ["자연상수", "오일러", "e", "Euler"],
+    tags: ['자연상수', '오일러', 'e', 'Euler'],
   },
   {
-    id: "golden-ratio",
+    id: 'golden-ratio',
     name: {
-      ko: "황금비 φ",
-      en: "Golden Ratio (φ)",
-      ja: "黄金比 φ",
+      ko: '황금비 φ',
+      en: 'Golden Ratio (φ)',
+      ja: '黄金比 φ',
     },
-    field: "constants",
-    subfield: "fundamental",
+    field: 'constants',
+    subfield: 'fundamental',
     difficulty: 2,
     content: {
       ko: {
         definition:
-          "황금비 φ(파이)는 전체 대 큰 부분의 비가 큰 부분 대 작은 부분의 비와 같을 때의 비율입니다.",
+          '황금비 φ(파이)는 전체 대 큰 부분의 비가 큰 부분 대 작은 부분의 비와 같을 때의 비율입니다.',
         formulas: [
           {
-            latex: "\\phi = \\frac{1 + \\sqrt{5}}{2} \\approx 1.6180339...",
-            description: "황금비의 값",
+            latex: '\\phi = \\frac{1 + \\sqrt{5}}{2} \\approx 1.6180339...',
+            description: '황금비의 값',
           },
           {
-            latex: "\\phi^2 = \\phi + 1",
-            description: "황금비의 성질",
+            latex: '\\phi^2 = \\phi + 1',
+            description: '황금비의 성질',
           },
           {
-            latex: "\\frac{1}{\\phi} = \\phi - 1",
-            description: "황금비의 역수",
+            latex: '\\frac{1}{\\phi} = \\phi - 1',
+            description: '황금비의 역수',
           },
           {
-            latex: "\\lim_{n \\to \\infty} \\frac{F_{n+1}}{F_n} = \\phi",
-            description: "피보나치 수열과의 관계",
+            latex: '\\lim_{n \\to \\infty} \\frac{F_{n+1}}{F_n} = \\phi',
+            description: '피보나치 수열과의 관계',
           },
         ],
         examples: [
           {
-            problem: "1:φ 비율의 직사각형에서 정사각형을 제거하면?",
-            solution:
-              "남은 직사각형도 1:φ 비율입니다. 이것이 황금 나선을 만듭니다.",
+            problem: '1:φ 비율의 직사각형에서 정사각형을 제거하면?',
+            solution: '남은 직사각형도 1:φ 비율입니다. 이것이 황금 나선을 만듭니다.',
           },
         ],
         history: {
-          discoveredBy: "고대 그리스 (피타고라스 학파)",
-          year: "기원전 6세기경",
+          discoveredBy: '고대 그리스 (피타고라스 학파)',
+          year: '기원전 6세기경',
           background:
             "유클리드가 '외중비'로 정의했고, 르네상스 시대에 '황금'이라 불리기 시작했습니다.",
         },
         applications: [
-          { field: "예술", description: "구도, 비율" },
-          { field: "건축", description: "파르테논 신전" },
-          { field: "자연", description: "해바라기, 조개껍질" },
+          { field: '예술', description: '구도, 비율' },
+          { field: '건축', description: '파르테논 신전' },
+          { field: '자연', description: '해바라기, 조개껍질' },
         ],
       },
       en: {
         definition:
-          "The golden ratio φ (phi) is when the ratio of whole to larger part equals the ratio of larger to smaller part.",
+          'The golden ratio φ (phi) is when the ratio of whole to larger part equals the ratio of larger to smaller part.',
         formulas: [
           {
-            latex: "\\phi = \\frac{1 + \\sqrt{5}}{2} \\approx 1.6180339...",
-            description: "Value of golden ratio",
+            latex: '\\phi = \\frac{1 + \\sqrt{5}}{2} \\approx 1.6180339...',
+            description: 'Value of golden ratio',
           },
           {
-            latex: "\\phi^2 = \\phi + 1",
-            description: "Golden ratio property",
+            latex: '\\phi^2 = \\phi + 1',
+            description: 'Golden ratio property',
           },
           {
-            latex: "\\frac{1}{\\phi} = \\phi - 1",
-            description: "Reciprocal of golden ratio",
+            latex: '\\frac{1}{\\phi} = \\phi - 1',
+            description: 'Reciprocal of golden ratio',
           },
           {
-            latex: "\\lim_{n \\to \\infty} \\frac{F_{n+1}}{F_n} = \\phi",
-            description: "Relation to Fibonacci",
+            latex: '\\lim_{n \\to \\infty} \\frac{F_{n+1}}{F_n} = \\phi',
+            description: 'Relation to Fibonacci',
           },
         ],
         examples: [
           {
-            problem: "Remove a square from a 1:φ rectangle. What remains?",
-            solution:
-              "The remaining rectangle is also 1:φ ratio. This creates the golden spiral.",
+            problem: 'Remove a square from a 1:φ rectangle. What remains?',
+            solution: 'The remaining rectangle is also 1:φ ratio. This creates the golden spiral.',
           },
         ],
         history: {
-          discoveredBy: "Ancient Greeks (Pythagoreans)",
-          year: "c. 6th century BCE",
+          discoveredBy: 'Ancient Greeks (Pythagoreans)',
+          year: 'c. 6th century BCE',
           background:
             "Euclid defined it as 'extreme and mean ratio'; called 'golden' since Renaissance.",
         },
         applications: [
-          { field: "Art", description: "Composition, proportions" },
-          { field: "Architecture", description: "Parthenon" },
-          { field: "Nature", description: "Sunflowers, shells" },
+          { field: 'Art', description: 'Composition, proportions' },
+          { field: 'Architecture', description: 'Parthenon' },
+          { field: 'Nature', description: 'Sunflowers, shells' },
         ],
       },
     },
     relations: {
-      prerequisites: ["quadratic-equation"],
-      nextTopics: ["fibonacci"],
-      related: ["silver-ratio"],
+      prerequisites: ['quadratic-equation'],
+      nextTopics: ['fibonacci'],
+      related: ['silver-ratio'],
     },
-    tags: ["황금비", "피보나치", "golden ratio", "phi"],
+    tags: ['황금비', '피보나치', 'golden ratio', 'phi'],
   },
   {
-    id: "imaginary-unit",
+    id: 'imaginary-unit',
     name: {
-      ko: "허수 단위 i",
-      en: "Imaginary Unit (i)",
-      ja: "虚数単位 i",
+      ko: '허수 단위 i',
+      en: 'Imaginary Unit (i)',
+      ja: '虚数単位 i',
     },
-    field: "constants",
-    subfield: "fundamental",
+    field: 'constants',
+    subfield: 'fundamental',
     difficulty: 3,
     content: {
       ko: {
         definition:
-          "i는 i² = -1을 만족하는 허수 단위입니다. 복소수의 기본이 되며, 수학과 공학에서 필수적입니다.",
+          'i는 i² = -1을 만족하는 허수 단위입니다. 복소수의 기본이 되며, 수학과 공학에서 필수적입니다.',
         formulas: [
           {
-            latex: "i = \\sqrt{-1}, \\quad i^2 = -1",
-            description: "허수 단위의 정의",
+            latex: 'i = \\sqrt{-1}, \\quad i^2 = -1',
+            description: '허수 단위의 정의',
           },
           {
-            latex: "i^0 = 1, i^1 = i, i^2 = -1, i^3 = -i, i^4 = 1",
-            description: "i의 거듭제곱 주기",
+            latex: 'i^0 = 1, i^1 = i, i^2 = -1, i^3 = -i, i^4 = 1',
+            description: 'i의 거듭제곱 주기',
           },
           {
-            latex: "z = a + bi",
-            description: "복소수의 일반형",
+            latex: 'z = a + bi',
+            description: '복소수의 일반형',
           },
         ],
         examples: [
           {
-            problem: "i^100을 계산하세요.",
-            solution: "100 = 4 × 25이므로 i^100 = (i^4)^25 = 1^25 = 1",
+            problem: 'i^100을 계산하세요.',
+            solution: '100 = 4 × 25이므로 i^100 = (i^4)^25 = 1^25 = 1',
           },
           {
-            problem: "(2 + 3i)(1 - i)를 계산하세요.",
-            solution:
-              "2 - 2i + 3i - 3i² = 2 + i + 3 = 5 + i",
+            problem: '(2 + 3i)(1 - i)를 계산하세요.',
+            solution: '2 - 2i + 3i - 3i² = 2 + i + 3 = 5 + i',
           },
         ],
         history: {
-          discoveredBy: "제롤라모 카르다노",
-          year: "1545년",
-          background:
-            "3차 방정식을 풀면서 도입되었고, 오일러와 가우스가 체계화했습니다.",
+          discoveredBy: '제롤라모 카르다노',
+          year: '1545년',
+          background: '3차 방정식을 풀면서 도입되었고, 오일러와 가우스가 체계화했습니다.',
         },
         applications: [
-          { field: "전기공학", description: "교류 회로, 임피던스" },
-          { field: "양자역학", description: "파동함수" },
-          { field: "신호 처리", description: "푸리에 변환" },
+          { field: '전기공학', description: '교류 회로, 임피던스' },
+          { field: '양자역학', description: '파동함수' },
+          { field: '신호 처리', description: '푸리에 변환' },
         ],
       },
       en: {
@@ -345,90 +342,88 @@ export const constantsConcepts: MathConcept[] = [
           "i is the imaginary unit satisfying i² = -1. It's fundamental to complex numbers and essential in math and engineering.",
         formulas: [
           {
-            latex: "i = \\sqrt{-1}, \\quad i^2 = -1",
-            description: "Definition of imaginary unit",
+            latex: 'i = \\sqrt{-1}, \\quad i^2 = -1',
+            description: 'Definition of imaginary unit',
           },
           {
-            latex: "i^0 = 1, i^1 = i, i^2 = -1, i^3 = -i, i^4 = 1",
-            description: "Powers of i cycle",
+            latex: 'i^0 = 1, i^1 = i, i^2 = -1, i^3 = -i, i^4 = 1',
+            description: 'Powers of i cycle',
           },
           {
-            latex: "z = a + bi",
-            description: "General form of complex number",
+            latex: 'z = a + bi',
+            description: 'General form of complex number',
           },
         ],
         examples: [
           {
-            problem: "Calculate i^100.",
-            solution: "100 = 4 × 25, so i^100 = (i^4)^25 = 1^25 = 1",
+            problem: 'Calculate i^100.',
+            solution: '100 = 4 × 25, so i^100 = (i^4)^25 = 1^25 = 1',
           },
           {
-            problem: "Calculate (2 + 3i)(1 - i).",
-            solution:
-              "2 - 2i + 3i - 3i² = 2 + i + 3 = 5 + i",
+            problem: 'Calculate (2 + 3i)(1 - i).',
+            solution: '2 - 2i + 3i - 3i² = 2 + i + 3 = 5 + i',
           },
         ],
         history: {
-          discoveredBy: "Gerolamo Cardano",
-          year: "1545",
-          background:
-            "Introduced while solving cubic equations; Euler and Gauss systematized it.",
+          discoveredBy: 'Gerolamo Cardano',
+          year: '1545',
+          background: 'Introduced while solving cubic equations; Euler and Gauss systematized it.',
         },
         applications: [
-          { field: "Electrical Engineering", description: "AC circuits, impedance" },
-          { field: "Quantum Mechanics", description: "Wave functions" },
-          { field: "Signal Processing", description: "Fourier transform" },
+          { field: 'Electrical Engineering', description: 'AC circuits, impedance' },
+          { field: 'Quantum Mechanics', description: 'Wave functions' },
+          { field: 'Signal Processing', description: 'Fourier transform' },
         ],
       },
     },
     relations: {
-      prerequisites: ["negative-numbers"],
-      nextTopics: ["complex-numbers", "complex-plane"],
-      related: ["euler-identity"],
+      prerequisites: ['negative-numbers'],
+      nextTopics: ['complex-numbers', 'complex-plane'],
+      related: ['euler-identity'],
     },
-    tags: ["허수", "복소수", "imaginary", "complex"],
+    tags: ['허수', '복소수', 'imaginary', 'complex'],
   },
   {
-    id: "euler-mascheroni",
+    id: 'euler-mascheroni',
     name: {
-      ko: "오일러-마스케로니 상수 γ",
-      en: "Euler-Mascheroni Constant (γ)",
-      ja: "オイラー・マスケローニ定数 γ",
+      ko: '오일러-마스케로니 상수 γ',
+      en: 'Euler-Mascheroni Constant (γ)',
+      ja: 'オイラー・マスケローニ定数 γ',
     },
-    field: "constants",
-    subfield: "advanced",
+    field: 'constants',
+    subfield: 'advanced',
     difficulty: 4,
     content: {
       ko: {
         definition:
-          "오일러-마스케로니 상수 γ는 조화급수와 자연로그의 차이의 극한입니다. 무리수인지조차 아직 증명되지 않았습니다.",
+          '오일러-마스케로니 상수 γ는 조화급수와 자연로그의 차이의 극한입니다. 무리수인지조차 아직 증명되지 않았습니다.',
         formulas: [
           {
-            latex: "\\gamma = \\lim_{n \\to \\infty} \\left( \\sum_{k=1}^{n} \\frac{1}{k} - \\ln n \\right) \\approx 0.5772...",
-            description: "오일러-마스케로니 상수의 정의",
+            latex:
+              '\\gamma = \\lim_{n \\to \\infty} \\left( \\sum_{k=1}^{n} \\frac{1}{k} - \\ln n \\right) \\approx 0.5772...',
+            description: '오일러-마스케로니 상수의 정의',
           },
           {
-            latex: "\\gamma = \\int_1^{\\infty} \\left( \\frac{1}{\\lfloor x \\rfloor} - \\frac{1}{x} \\right) dx",
-            description: "적분 표현",
+            latex:
+              '\\gamma = \\int_1^{\\infty} \\left( \\frac{1}{\\lfloor x \\rfloor} - \\frac{1}{x} \\right) dx',
+            description: '적분 표현',
           },
         ],
         examples: [
           {
-            problem: "조화급수 H_100과 ln(100)의 차이를 추정하세요.",
-            solution:
-              "H_100 ≈ 5.187, ln(100) ≈ 4.605. 차이 ≈ 0.582 ≈ γ",
+            problem: '조화급수 H_100과 ln(100)의 차이를 추정하세요.',
+            solution: 'H_100 ≈ 5.187, ln(100) ≈ 4.605. 차이 ≈ 0.582 ≈ γ',
           },
         ],
         history: {
-          discoveredBy: "레온하르트 오일러",
-          year: "1735년",
-          background:
-            "오일러가 조화급수를 연구하면서 발견했습니다.",
+          discoveredBy: '레온하르트 오일러',
+          year: '1735년',
+          background: '오일러가 조화급수를 연구하면서 발견했습니다.',
         },
         applications: [
-          { field: "수론", description: "소수 분포" },
-          { field: "해석학", description: "감마 함수" },
-          { field: "확률론", description: "극값 분포" },
+          { field: '수론', description: '소수 분포' },
+          { field: '해석학', description: '감마 함수' },
+          { field: '확률론', description: '극값 분포' },
         ],
       },
       en: {
@@ -436,81 +431,83 @@ export const constantsConcepts: MathConcept[] = [
           "The Euler-Mascheroni constant γ is the limit of the difference between harmonic series and natural log. Whether it's irrational is still unknown.",
         formulas: [
           {
-            latex: "\\gamma = \\lim_{n \\to \\infty} \\left( \\sum_{k=1}^{n} \\frac{1}{k} - \\ln n \\right) \\approx 0.5772...",
-            description: "Definition of Euler-Mascheroni constant",
+            latex:
+              '\\gamma = \\lim_{n \\to \\infty} \\left( \\sum_{k=1}^{n} \\frac{1}{k} - \\ln n \\right) \\approx 0.5772...',
+            description: 'Definition of Euler-Mascheroni constant',
           },
           {
-            latex: "\\gamma = \\int_1^{\\infty} \\left( \\frac{1}{\\lfloor x \\rfloor} - \\frac{1}{x} \\right) dx",
-            description: "Integral representation",
+            latex:
+              '\\gamma = \\int_1^{\\infty} \\left( \\frac{1}{\\lfloor x \\rfloor} - \\frac{1}{x} \\right) dx',
+            description: 'Integral representation',
           },
         ],
         examples: [
           {
-            problem: "Estimate the difference between H_100 and ln(100).",
-            solution:
-              "H_100 ≈ 5.187, ln(100) ≈ 4.605. Difference ≈ 0.582 ≈ γ",
+            problem: 'Estimate the difference between H_100 and ln(100).',
+            solution: 'H_100 ≈ 5.187, ln(100) ≈ 4.605. Difference ≈ 0.582 ≈ γ',
           },
         ],
         history: {
-          discoveredBy: "Leonhard Euler",
-          year: "1735",
-          background:
-            "Euler discovered it while studying the harmonic series.",
+          discoveredBy: 'Leonhard Euler',
+          year: '1735',
+          background: 'Euler discovered it while studying the harmonic series.',
         },
         applications: [
-          { field: "Number Theory", description: "Prime distribution" },
-          { field: "Analysis", description: "Gamma function" },
-          { field: "Probability", description: "Extreme value distributions" },
+          { field: 'Number Theory', description: 'Prime distribution' },
+          { field: 'Analysis', description: 'Gamma function' },
+          { field: 'Probability', description: 'Extreme value distributions' },
         ],
       },
     },
     relations: {
-      prerequisites: ["limits", "harmonic-series"],
-      nextTopics: ["gamma-function", "zeta-function"],
-      related: ["e-constant"],
+      prerequisites: ['limits', 'harmonic-series'],
+      nextTopics: ['gamma-function', 'zeta-function'],
+      related: ['e-constant'],
     },
-    tags: ["오일러", "감마", "Euler-Mascheroni", "constant"],
+    tags: ['오일러', '감마', 'Euler-Mascheroni', 'constant'],
   },
   {
-    id: "apery-constant",
+    id: 'apery-constant',
     name: {
-      ko: "아페리 상수 ζ(3)",
+      ko: '아페리 상수 ζ(3)',
       en: "Apéry's Constant ζ(3)",
-      ja: "アペリーの定数 ζ(3)",
+      ja: 'アペリーの定数 ζ(3)',
     },
-    field: "constants",
-    subfield: "advanced",
+    field: 'constants',
+    subfield: 'advanced',
     difficulty: 4,
     content: {
       ko: {
         definition:
-          "아페리 상수는 리만 제타 함수에서 ζ(3)의 값으로, 1978년 로제 아페리가 무리수임을 증명했습니다.",
+          '아페리 상수는 리만 제타 함수에서 ζ(3)의 값으로, 1978년 로제 아페리가 무리수임을 증명했습니다.',
         formulas: [
           {
-            latex: "\\zeta(3) = \\sum_{n=1}^{\\infty} \\frac{1}{n^3} = 1 + \\frac{1}{8} + \\frac{1}{27} + ... \\approx 1.2020569...",
-            description: "아페리 상수의 정의",
+            latex:
+              '\\zeta(3) = \\sum_{n=1}^{\\infty} \\frac{1}{n^3} = 1 + \\frac{1}{8} + \\frac{1}{27} + ... \\approx 1.2020569...',
+            description: '아페리 상수의 정의',
           },
           {
-            latex: "\\zeta(3) = \\frac{5}{2} \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{n^3 \\binom{2n}{n}}",
-            description: "아페리의 급수",
+            latex:
+              '\\zeta(3) = \\frac{5}{2} \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{n^3 \\binom{2n}{n}}',
+            description: '아페리의 급수',
           },
         ],
         examples: [
           {
-            problem: "ζ(3)의 처음 4항의 합을 구하세요.",
-            solution: "1 + 1/8 + 1/27 + 1/64 = 1 + 0.125 + 0.037 + 0.0156 ≈ 1.178",
+            problem: 'ζ(3)의 처음 4항의 합을 구하세요.',
+            solution: '1 + 1/8 + 1/27 + 1/64 = 1 + 0.125 + 0.037 + 0.0156 ≈ 1.178',
           },
         ],
         history: {
-          discoveredBy: "로제 아페리",
-          year: "1978년",
+          discoveredBy: '로제 아페리',
+          year: '1978년',
           background:
-            "200년 이상 미해결이던 ζ(3)의 무리수성을 증명하여 수학계에 충격을 주었습니다.",
+            '200년 이상 미해결이던 ζ(3)의 무리수성을 증명하여 수학계에 충격을 주었습니다.',
         },
         applications: [
-          { field: "수론", description: "제타 함수 연구" },
-          { field: "물리학", description: "양자 전기역학" },
-          { field: "통계역학", description: "보스 기체" },
+          { field: '수론', description: '제타 함수 연구' },
+          { field: '물리학', description: '양자 전기역학' },
+          { field: '통계역학', description: '보스 기체' },
         ],
       },
       en: {
@@ -518,83 +515,86 @@ export const constantsConcepts: MathConcept[] = [
           "Apéry's constant is ζ(3) from the Riemann zeta function. Roger Apéry proved its irrationality in 1978.",
         formulas: [
           {
-            latex: "\\zeta(3) = \\sum_{n=1}^{\\infty} \\frac{1}{n^3} = 1 + \\frac{1}{8} + \\frac{1}{27} + ... \\approx 1.2020569...",
+            latex:
+              '\\zeta(3) = \\sum_{n=1}^{\\infty} \\frac{1}{n^3} = 1 + \\frac{1}{8} + \\frac{1}{27} + ... \\approx 1.2020569...',
             description: "Definition of Apéry's constant",
           },
           {
-            latex: "\\zeta(3) = \\frac{5}{2} \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{n^3 \\binom{2n}{n}}",
+            latex:
+              '\\zeta(3) = \\frac{5}{2} \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}}{n^3 \\binom{2n}{n}}',
             description: "Apéry's series",
           },
         ],
         examples: [
           {
-            problem: "Find the sum of first 4 terms of ζ(3).",
-            solution: "1 + 1/8 + 1/27 + 1/64 = 1 + 0.125 + 0.037 + 0.0156 ≈ 1.178",
+            problem: 'Find the sum of first 4 terms of ζ(3).',
+            solution: '1 + 1/8 + 1/27 + 1/64 = 1 + 0.125 + 0.037 + 0.0156 ≈ 1.178',
           },
         ],
         history: {
-          discoveredBy: "Roger Apéry",
-          year: "1978",
+          discoveredBy: 'Roger Apéry',
+          year: '1978',
           background:
-            "Proved irrationality of ζ(3) after 200+ years, shocking the mathematical community.",
+            'Proved irrationality of ζ(3) after 200+ years, shocking the mathematical community.',
         },
         applications: [
-          { field: "Number Theory", description: "Zeta function research" },
-          { field: "Physics", description: "Quantum electrodynamics" },
-          { field: "Statistical Mechanics", description: "Bose gas" },
+          { field: 'Number Theory', description: 'Zeta function research' },
+          { field: 'Physics', description: 'Quantum electrodynamics' },
+          { field: 'Statistical Mechanics', description: 'Bose gas' },
         ],
       },
     },
     relations: {
-      prerequisites: ["zeta-function", "series"],
-      nextTopics: ["riemann-hypothesis"],
-      related: ["euler-mascheroni", "pi-constant"],
+      prerequisites: ['zeta-function', 'series'],
+      nextTopics: ['riemann-hypothesis'],
+      related: ['euler-mascheroni', 'pi-constant'],
     },
-    tags: ["아페리", "제타함수", "Apéry", "zeta"],
+    tags: ['아페리', '제타함수', 'Apéry', 'zeta'],
   },
   {
-    id: "catalan-constant",
+    id: 'catalan-constant',
     name: {
-      ko: "카탈랑 상수 G",
+      ko: '카탈랑 상수 G',
       en: "Catalan's Constant (G)",
-      ja: "カタランの定数 G",
+      ja: 'カタランの定数 G',
     },
-    field: "constants",
-    subfield: "advanced",
+    field: 'constants',
+    subfield: 'advanced',
     difficulty: 4,
     content: {
       ko: {
         definition:
-          "카탈랑 상수는 교대 급수로 정의되는 상수입니다. 무리수인지 여부는 아직 증명되지 않았습니다.",
+          '카탈랑 상수는 교대 급수로 정의되는 상수입니다. 무리수인지 여부는 아직 증명되지 않았습니다.',
         formulas: [
           {
-            latex: "G = \\sum_{n=0}^{\\infty} \\frac{(-1)^n}{(2n+1)^2} = 1 - \\frac{1}{9} + \\frac{1}{25} - \\frac{1}{49} + ... \\approx 0.9159655...",
-            description: "카탈랑 상수의 정의",
+            latex:
+              'G = \\sum_{n=0}^{\\infty} \\frac{(-1)^n}{(2n+1)^2} = 1 - \\frac{1}{9} + \\frac{1}{25} - \\frac{1}{49} + ... \\approx 0.9159655...',
+            description: '카탈랑 상수의 정의',
           },
           {
-            latex: "G = \\int_0^1 \\frac{\\arctan x}{x} dx",
-            description: "적분 표현",
+            latex: 'G = \\int_0^1 \\frac{\\arctan x}{x} dx',
+            description: '적분 표현',
           },
           {
-            latex: "G = \\beta(2)",
-            description: "디리클레 베타 함수 관계",
+            latex: 'G = \\beta(2)',
+            description: '디리클레 베타 함수 관계',
           },
         ],
         examples: [
           {
-            problem: "카탈랑 상수의 처음 4항을 구하세요.",
-            solution: "1 - 1/9 + 1/25 - 1/49 = 1 - 0.111 + 0.04 - 0.0204 ≈ 0.909",
+            problem: '카탈랑 상수의 처음 4항을 구하세요.',
+            solution: '1 - 1/9 + 1/25 - 1/49 = 1 - 0.111 + 0.04 - 0.0204 ≈ 0.909',
           },
         ],
         history: {
-          discoveredBy: "외젠 샤를 카탈랑",
-          year: "1865년",
-          background: "조합론과 해석학의 다양한 문제에서 자연스럽게 등장합니다.",
+          discoveredBy: '외젠 샤를 카탈랑',
+          year: '1865년',
+          background: '조합론과 해석학의 다양한 문제에서 자연스럽게 등장합니다.',
         },
         applications: [
-          { field: "조합론", description: "격자 경로 계산" },
-          { field: "물리학", description: "이징 모델" },
-          { field: "확률론", description: "랜덤 워크" },
+          { field: '조합론', description: '격자 경로 계산' },
+          { field: '물리학', description: '이징 모델' },
+          { field: '확률론', description: '랜덤 워크' },
         ],
       },
       en: {
@@ -602,223 +602,226 @@ export const constantsConcepts: MathConcept[] = [
           "Catalan's constant is defined by an alternating series. Whether it's irrational remains unproven.",
         formulas: [
           {
-            latex: "G = \\sum_{n=0}^{\\infty} \\frac{(-1)^n}{(2n+1)^2} = 1 - \\frac{1}{9} + \\frac{1}{25} - \\frac{1}{49} + ... \\approx 0.9159655...",
+            latex:
+              'G = \\sum_{n=0}^{\\infty} \\frac{(-1)^n}{(2n+1)^2} = 1 - \\frac{1}{9} + \\frac{1}{25} - \\frac{1}{49} + ... \\approx 0.9159655...',
             description: "Definition of Catalan's constant",
           },
           {
-            latex: "G = \\int_0^1 \\frac{\\arctan x}{x} dx",
-            description: "Integral representation",
+            latex: 'G = \\int_0^1 \\frac{\\arctan x}{x} dx',
+            description: 'Integral representation',
           },
           {
-            latex: "G = \\beta(2)",
-            description: "Dirichlet beta function relation",
+            latex: 'G = \\beta(2)',
+            description: 'Dirichlet beta function relation',
           },
         ],
         examples: [
           {
             problem: "Find the first 4 terms of Catalan's constant.",
-            solution: "1 - 1/9 + 1/25 - 1/49 = 1 - 0.111 + 0.04 - 0.0204 ≈ 0.909",
+            solution: '1 - 1/9 + 1/25 - 1/49 = 1 - 0.111 + 0.04 - 0.0204 ≈ 0.909',
           },
         ],
         history: {
-          discoveredBy: "Eugène Charles Catalan",
-          year: "1865",
-          background: "Appears naturally in various combinatorics and analysis problems.",
+          discoveredBy: 'Eugène Charles Catalan',
+          year: '1865',
+          background: 'Appears naturally in various combinatorics and analysis problems.',
         },
         applications: [
-          { field: "Combinatorics", description: "Lattice path counting" },
-          { field: "Physics", description: "Ising model" },
-          { field: "Probability", description: "Random walks" },
+          { field: 'Combinatorics', description: 'Lattice path counting' },
+          { field: 'Physics', description: 'Ising model' },
+          { field: 'Probability', description: 'Random walks' },
         ],
       },
     },
     relations: {
-      prerequisites: ["series", "integration"],
-      nextTopics: ["dirichlet-beta"],
-      related: ["apery-constant", "pi-constant"],
+      prerequisites: ['series', 'integration'],
+      nextTopics: ['dirichlet-beta'],
+      related: ['apery-constant', 'pi-constant'],
     },
-    tags: ["카탈랑", "교대급수", "Catalan", "constant"],
+    tags: ['카탈랑', '교대급수', 'Catalan', 'constant'],
   },
   {
-    id: "sqrt2-constant",
+    id: 'sqrt2-constant',
     name: {
-      ko: "√2 (피타고라스 상수)",
+      ko: '√2 (피타고라스 상수)',
       en: "√2 (Pythagoras' Constant)",
-      ja: "√2 (ピタゴラス定数)",
+      ja: '√2 (ピタゴラス定数)',
     },
-    field: "constants",
-    subfield: "fundamental",
+    field: 'constants',
+    subfield: 'fundamental',
     difficulty: 1,
     content: {
       ko: {
         definition:
-          "√2는 한 변이 1인 정사각형의 대각선 길이입니다. 최초로 발견된 무리수로, 피타고라스 학파에 큰 충격을 주었습니다.",
+          '√2는 한 변이 1인 정사각형의 대각선 길이입니다. 최초로 발견된 무리수로, 피타고라스 학파에 큰 충격을 주었습니다.',
         formulas: [
           {
-            latex: "\\sqrt{2} = 1.41421356237...",
-            description: "√2의 값",
+            latex: '\\sqrt{2} = 1.41421356237...',
+            description: '√2의 값',
           },
           {
-            latex: "\\sqrt{2} = 1 + \\cfrac{1}{2 + \\cfrac{1}{2 + \\cfrac{1}{2 + ...}}}",
-            description: "연분수 표현",
+            latex: '\\sqrt{2} = 1 + \\cfrac{1}{2 + \\cfrac{1}{2 + \\cfrac{1}{2 + ...}}}',
+            description: '연분수 표현',
           },
           {
-            latex: "\\left(\\frac{p}{q}\\right)^2 \\neq 2 \\text{ (모든 정수 } p, q \\text{에 대해)}",
-            description: "무리수 증명",
+            latex:
+              '\\left(\\frac{p}{q}\\right)^2 \\neq 2 \\text{ (모든 정수 } p, q \\text{에 대해)}',
+            description: '무리수 증명',
           },
         ],
         examples: [
           {
-            problem: "한 변이 5인 정사각형의 대각선 길이는?",
-            solution: "대각선 = 5√2 ≈ 5 × 1.414 = 7.07",
+            problem: '한 변이 5인 정사각형의 대각선 길이는?',
+            solution: '대각선 = 5√2 ≈ 5 × 1.414 = 7.07',
           },
           {
-            problem: "√2가 무리수임을 증명하세요.",
+            problem: '√2가 무리수임을 증명하세요.',
             solution:
-              "귀류법: p/q = √2 가정 → p² = 2q² → p는 짝수 → p=2k → 4k² = 2q² → q도 짝수. 모순.",
+              '귀류법: p/q = √2 가정 → p² = 2q² → p는 짝수 → p=2k → 4k² = 2q² → q도 짝수. 모순.',
           },
         ],
         history: {
-          discoveredBy: "피타고라스 학파 (히파수스)",
-          year: "기원전 5세기경",
+          discoveredBy: '피타고라스 학파 (히파수스)',
+          year: '기원전 5세기경',
           background:
             "최초의 무리수 발견으로, 피타고라스 학파의 '모든 수는 유리수' 신념을 깨뜨렸습니다.",
         },
         applications: [
-          { field: "기하학", description: "대각선, 정사각형" },
-          { field: "공학", description: "A4 용지 비율 (1:√2)" },
-          { field: "음악", description: "반음 비율" },
+          { field: '기하학', description: '대각선, 정사각형' },
+          { field: '공학', description: 'A4 용지 비율 (1:√2)' },
+          { field: '음악', description: '반음 비율' },
         ],
       },
       en: {
         definition:
-          "√2 is the diagonal length of a unit square. The first discovered irrational number, it shocked the Pythagorean school.",
+          '√2 is the diagonal length of a unit square. The first discovered irrational number, it shocked the Pythagorean school.',
         formulas: [
           {
-            latex: "\\sqrt{2} = 1.41421356237...",
-            description: "Value of √2",
+            latex: '\\sqrt{2} = 1.41421356237...',
+            description: 'Value of √2',
           },
           {
-            latex: "\\sqrt{2} = 1 + \\cfrac{1}{2 + \\cfrac{1}{2 + \\cfrac{1}{2 + ...}}}",
-            description: "Continued fraction",
+            latex: '\\sqrt{2} = 1 + \\cfrac{1}{2 + \\cfrac{1}{2 + \\cfrac{1}{2 + ...}}}',
+            description: 'Continued fraction',
           },
           {
-            latex: "\\left(\\frac{p}{q}\\right)^2 \\neq 2 \\text{ (for all integers } p, q \\text{)}",
-            description: "Irrationality proof",
+            latex:
+              '\\left(\\frac{p}{q}\\right)^2 \\neq 2 \\text{ (for all integers } p, q \\text{)}',
+            description: 'Irrationality proof',
           },
         ],
         examples: [
           {
-            problem: "What is the diagonal of a square with side 5?",
-            solution: "Diagonal = 5√2 ≈ 5 × 1.414 = 7.07",
+            problem: 'What is the diagonal of a square with side 5?',
+            solution: 'Diagonal = 5√2 ≈ 5 × 1.414 = 7.07',
           },
           {
-            problem: "Prove √2 is irrational.",
+            problem: 'Prove √2 is irrational.',
             solution:
-              "By contradiction: Assume p/q = √2 → p² = 2q² → p is even → p=2k → 4k² = 2q² → q is even. Contradiction.",
+              'By contradiction: Assume p/q = √2 → p² = 2q² → p is even → p=2k → 4k² = 2q² → q is even. Contradiction.',
           },
         ],
         history: {
-          discoveredBy: "Pythagorean school (Hippasus)",
-          year: "c. 5th century BCE",
+          discoveredBy: 'Pythagorean school (Hippasus)',
+          year: 'c. 5th century BCE',
           background:
-            "First irrational number discovered, shattering Pythagorean belief that all numbers are rational.",
+            'First irrational number discovered, shattering Pythagorean belief that all numbers are rational.',
         },
         applications: [
-          { field: "Geometry", description: "Diagonals, squares" },
-          { field: "Engineering", description: "A4 paper ratio (1:√2)" },
-          { field: "Music", description: "Semitone ratio" },
+          { field: 'Geometry', description: 'Diagonals, squares' },
+          { field: 'Engineering', description: 'A4 paper ratio (1:√2)' },
+          { field: 'Music', description: 'Semitone ratio' },
         ],
       },
     },
     relations: {
-      prerequisites: ["pythagorean-theorem"],
-      nextTopics: ["irrational-numbers", "golden-ratio"],
-      related: ["pi-constant", "proof-by-contradiction"],
+      prerequisites: ['pythagorean-theorem'],
+      nextTopics: ['irrational-numbers', 'golden-ratio'],
+      related: ['pi-constant', 'proof-by-contradiction'],
     },
-    tags: ["루트2", "무리수", "sqrt2", "Pythagoras"],
+    tags: ['루트2', '무리수', 'sqrt2', 'Pythagoras'],
   },
   {
-    id: "feigenbaum-constant",
+    id: 'feigenbaum-constant',
     name: {
-      ko: "파이겐바움 상수 δ",
-      en: "Feigenbaum Constant (δ)",
-      ja: "ファイゲンバウム定数 δ",
+      ko: '파이겐바움 상수 δ',
+      en: 'Feigenbaum Constant (δ)',
+      ja: 'ファイゲンバウム定数 δ',
     },
-    field: "constants",
-    subfield: "advanced",
+    field: 'constants',
+    subfield: 'advanced',
     difficulty: 5,
     content: {
       ko: {
         definition:
-          "파이겐바움 상수 δ는 카오스 이론에서 발견된 보편 상수로, 분기점 사이의 비율이 수렴하는 값입니다.",
+          '파이겐바움 상수 δ는 카오스 이론에서 발견된 보편 상수로, 분기점 사이의 비율이 수렴하는 값입니다.',
         formulas: [
           {
-            latex: "\\delta = \\lim_{n \\to \\infty} \\frac{a_{n-1} - a_{n-2}}{a_n - a_{n-1}} \\approx 4.6692016...",
-            description: "분기점 비율의 극한",
+            latex:
+              '\\delta = \\lim_{n \\to \\infty} \\frac{a_{n-1} - a_{n-2}}{a_n - a_{n-1}} \\approx 4.6692016...',
+            description: '분기점 비율의 극한',
           },
           {
-            latex: "\\alpha \\approx 2.5029...",
-            description: "두 번째 파이겐바움 상수 (스케일링)",
+            latex: '\\alpha \\approx 2.5029...',
+            description: '두 번째 파이겐바움 상수 (스케일링)',
           },
         ],
         examples: [
           {
-            problem: "로지스틱 맵 x_{n+1} = rx_n(1-x_n)에서 분기가 일어나는 r 값들의 비율은?",
-            solution:
-              "r₁ ≈ 3, r₂ ≈ 3.449, r₃ ≈ 3.544... 비율이 δ ≈ 4.669로 수렴합니다.",
+            problem: '로지스틱 맵 x_{n+1} = rx_n(1-x_n)에서 분기가 일어나는 r 값들의 비율은?',
+            solution: 'r₁ ≈ 3, r₂ ≈ 3.449, r₃ ≈ 3.544... 비율이 δ ≈ 4.669로 수렴합니다.',
           },
         ],
         history: {
-          discoveredBy: "미첼 파이겐바움",
-          year: "1975년",
-          background:
-            "카오스 이론의 핵심 발견으로, 비선형 시스템의 보편적 특성을 보여줍니다.",
+          discoveredBy: '미첼 파이겐바움',
+          year: '1975년',
+          background: '카오스 이론의 핵심 발견으로, 비선형 시스템의 보편적 특성을 보여줍니다.',
         },
         applications: [
-          { field: "카오스 이론", description: "분기 분석" },
-          { field: "물리학", description: "난류, 비선형 진동" },
-          { field: "생태학", description: "개체군 동역학" },
+          { field: '카오스 이론', description: '분기 분석' },
+          { field: '물리학', description: '난류, 비선형 진동' },
+          { field: '생태학', description: '개체군 동역학' },
         ],
       },
       en: {
         definition:
-          "The Feigenbaum constant δ is a universal constant in chaos theory, the limiting ratio between bifurcation points.",
+          'The Feigenbaum constant δ is a universal constant in chaos theory, the limiting ratio between bifurcation points.',
         formulas: [
           {
-            latex: "\\delta = \\lim_{n \\to \\infty} \\frac{a_{n-1} - a_{n-2}}{a_n - a_{n-1}} \\approx 4.6692016...",
-            description: "Limit of bifurcation ratios",
+            latex:
+              '\\delta = \\lim_{n \\to \\infty} \\frac{a_{n-1} - a_{n-2}}{a_n - a_{n-1}} \\approx 4.6692016...',
+            description: 'Limit of bifurcation ratios',
           },
           {
-            latex: "\\alpha \\approx 2.5029...",
-            description: "Second Feigenbaum constant (scaling)",
+            latex: '\\alpha \\approx 2.5029...',
+            description: 'Second Feigenbaum constant (scaling)',
           },
         ],
         examples: [
           {
-            problem: "In logistic map x_{n+1} = rx_n(1-x_n), what's the ratio of bifurcation r values?",
-            solution:
-              "r₁ ≈ 3, r₂ ≈ 3.449, r₃ ≈ 3.544... The ratio converges to δ ≈ 4.669.",
+            problem:
+              "In logistic map x_{n+1} = rx_n(1-x_n), what's the ratio of bifurcation r values?",
+            solution: 'r₁ ≈ 3, r₂ ≈ 3.449, r₃ ≈ 3.544... The ratio converges to δ ≈ 4.669.',
           },
         ],
         history: {
-          discoveredBy: "Mitchell Feigenbaum",
-          year: "1975",
+          discoveredBy: 'Mitchell Feigenbaum',
+          year: '1975',
           background:
-            "Key discovery in chaos theory, showing universal properties of nonlinear systems.",
+            'Key discovery in chaos theory, showing universal properties of nonlinear systems.',
         },
         applications: [
-          { field: "Chaos Theory", description: "Bifurcation analysis" },
-          { field: "Physics", description: "Turbulence, nonlinear oscillations" },
-          { field: "Ecology", description: "Population dynamics" },
+          { field: 'Chaos Theory', description: 'Bifurcation analysis' },
+          { field: 'Physics', description: 'Turbulence, nonlinear oscillations' },
+          { field: 'Ecology', description: 'Population dynamics' },
         ],
       },
     },
     relations: {
-      prerequisites: ["dynamical-systems", "limits"],
-      nextTopics: ["chaos-theory", "fractals"],
-      related: ["logistic-map", "bifurcation"],
+      prerequisites: ['dynamical-systems', 'limits'],
+      nextTopics: ['chaos-theory', 'fractals'],
+      related: ['logistic-map', 'bifurcation'],
     },
-    tags: ["파이겐바움", "카오스", "Feigenbaum", "chaos"],
+    tags: ['파이겐바움', '카오스', 'Feigenbaum', 'chaos'],
   },
 ];

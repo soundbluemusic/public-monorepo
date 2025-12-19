@@ -1,2 +1,2 @@
-import TermsPage from "@/pages/TermsPage";
+import TermsPage from '@/pages/TermsPage';
 export default TermsPage;

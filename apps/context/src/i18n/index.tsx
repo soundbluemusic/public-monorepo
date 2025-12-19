@@ -214,7 +214,6 @@ export const I18nProvider: ParentComponent = (props) => {
   };
 
   const isKorean = () => locale() === 'ko';
-  const isEnglish = () => locale() === 'en';
 
   const localePath = (path: string): string => {
     const currentLocale = locale();

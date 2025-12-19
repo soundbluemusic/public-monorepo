@@ -49,6 +49,7 @@ export function DarkModeToggle(props: DarkModeToggleProps) {
       {props.darkMode() ? (
         // Sun icon (현재 다크 모드 → 라이트로 전환)
         <svg
+          aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           width="20"
           height="20"
@@ -72,6 +73,7 @@ export function DarkModeToggle(props: DarkModeToggleProps) {
       ) : (
         // Moon icon (현재 라이트 모드 → 다크로 전환)
         <svg
+          aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           width="20"
           height="20"

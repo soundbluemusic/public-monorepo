@@ -1,4 +1,4 @@
-import { MathConcept } from '../types';
+import type { MathConcept } from '../types';
 
 export const cryptographyConcepts: MathConcept[] = [
   {
@@ -6,7 +6,7 @@ export const cryptographyConcepts: MathConcept[] = [
     name: {
       ko: 'RSA 알고리즘',
       en: 'RSA Algorithm',
-      ja: 'RSA暗号'
+      ja: 'RSA暗号',
     },
     field: 'cryptography',
     subfield: 'public-key',
@@ -14,38 +14,53 @@ export const cryptographyConcepts: MathConcept[] = [
     content: {
       ko: {
         definition: '큰 소수의 곱을 인수분해하기 어렵다는 점에 기반한 공개키 암호 알고리즘',
-        formulas: ['키 생성: n = p·q, φ(n) = (p-1)(q-1)', '암호화: c ≡ m^e (mod n)', '복호화: m ≡ c^d (mod n)', 'ed ≡ 1 (mod φ(n))'],
+        formulas: [
+          '키 생성: n = p·q, φ(n) = (p-1)(q-1)',
+          '암호화: c ≡ m^e (mod n)',
+          '복호화: m ≡ c^d (mod n)',
+          'ed ≡ 1 (mod φ(n))',
+        ],
         examples: ['p=61, q=53 → n=3233, φ(n)=3120', 'e=17 → d=2753'],
-        applications: ['HTTPS/SSL', '전자서명', '인증서']
+        applications: ['HTTPS/SSL', '전자서명', '인증서'],
       },
       en: {
         definition: 'Public-key cryptosystem based on difficulty of factoring large prime products',
-        formulas: ['Key generation: n = p·q, φ(n) = (p-1)(q-1)', 'Encryption: c ≡ m^e (mod n)', 'Decryption: m ≡ c^d (mod n)', 'ed ≡ 1 (mod φ(n))'],
+        formulas: [
+          'Key generation: n = p·q, φ(n) = (p-1)(q-1)',
+          'Encryption: c ≡ m^e (mod n)',
+          'Decryption: m ≡ c^d (mod n)',
+          'ed ≡ 1 (mod φ(n))',
+        ],
         examples: ['p=61, q=53 → n=3233, φ(n)=3120', 'e=17 → d=2753'],
-        applications: ['HTTPS/SSL', 'Digital signatures', 'Certificates']
+        applications: ['HTTPS/SSL', 'Digital signatures', 'Certificates'],
       },
       ja: {
         definition: '大きな素数の積の因数分解が困難なことに基づく公開鍵暗号',
-        formulas: ['鍵生成: n = p·q, φ(n) = (p-1)(q-1)', '暗号化: c ≡ m^e (mod n)', '復号: m ≡ c^d (mod n)', 'ed ≡ 1 (mod φ(n))'],
+        formulas: [
+          '鍵生成: n = p·q, φ(n) = (p-1)(q-1)',
+          '暗号化: c ≡ m^e (mod n)',
+          '復号: m ≡ c^d (mod n)',
+          'ed ≡ 1 (mod φ(n))',
+        ],
         examples: ['p=61, q=53 → n=3233, φ(n)=3120', 'e=17 → d=2753'],
-        applications: ['HTTPS/SSL', 'デジタル署名', '証明書']
-      }
+        applications: ['HTTPS/SSL', 'デジタル署名', '証明書'],
+      },
     },
     latex: 'c \\equiv m^e \\pmod{n}',
     relations: {
       prerequisites: ['modular-arithmetic', 'prime-numbers', 'eulers-totient'],
       nextTopics: ['elliptic-curve-crypto'],
       related: ['diffie-hellman'],
-      applications: ['secure-communication', 'authentication']
+      applications: ['secure-communication', 'authentication'],
     },
-    tags: ['RSA', '공개키', 'public-key', 'encryption']
+    tags: ['RSA', '공개키', 'public-key', 'encryption'],
   },
   {
     id: 'elliptic-curve-crypto',
     name: {
       ko: '타원곡선 암호',
       en: 'Elliptic Curve Cryptography',
-      ja: '楕円曲線暗号'
+      ja: '楕円曲線暗号',
     },
     field: 'cryptography',
     subfield: 'public-key',
@@ -53,38 +68,50 @@ export const cryptographyConcepts: MathConcept[] = [
     content: {
       ko: {
         definition: '타원곡선 위의 점들의 이산 로그 문제에 기반한 암호 시스템',
-        formulas: ['타원곡선: y² = x³ + ax + b', '점 덧셈: P + Q = R', '스칼라 곱: kP = P + P + ... + P (k번)'],
+        formulas: [
+          '타원곡선: y² = x³ + ax + b',
+          '점 덧셈: P + Q = R',
+          '스칼라 곱: kP = P + P + ... + P (k번)',
+        ],
         examples: ['secp256k1 (비트코인)', 'Curve25519'],
-        applications: ['비트코인', 'TLS', 'Signal 프로토콜']
+        applications: ['비트코인', 'TLS', 'Signal 프로토콜'],
       },
       en: {
         definition: 'Cryptosystem based on discrete logarithm problem on elliptic curves',
-        formulas: ['Elliptic curve: y² = x³ + ax + b', 'Point addition: P + Q = R', 'Scalar multiplication: kP = P + P + ... + P (k times)'],
+        formulas: [
+          'Elliptic curve: y² = x³ + ax + b',
+          'Point addition: P + Q = R',
+          'Scalar multiplication: kP = P + P + ... + P (k times)',
+        ],
         examples: ['secp256k1 (Bitcoin)', 'Curve25519'],
-        applications: ['Bitcoin', 'TLS', 'Signal protocol']
+        applications: ['Bitcoin', 'TLS', 'Signal protocol'],
       },
       ja: {
         definition: '楕円曲線上の離散対数問題に基づく暗号システム',
-        formulas: ['楕円曲線: y² = x³ + ax + b', '点の加算: P + Q = R', 'スカラー倍: kP = P + P + ... + P (k回)'],
+        formulas: [
+          '楕円曲線: y² = x³ + ax + b',
+          '点の加算: P + Q = R',
+          'スカラー倍: kP = P + P + ... + P (k回)',
+        ],
         examples: ['secp256k1 (ビットコイン)', 'Curve25519'],
-        applications: ['ビットコイン', 'TLS', 'Signalプロトコル']
-      }
+        applications: ['ビットコイン', 'TLS', 'Signalプロトコル'],
+      },
     },
     latex: 'y^2 = x^3 + ax + b',
     relations: {
       prerequisites: ['group-theory', 'modular-arithmetic'],
       nextTopics: ['ecdsa', 'ecdh'],
       related: ['rsa-algorithm'],
-      applications: ['cryptocurrency', 'secure-messaging']
+      applications: ['cryptocurrency', 'secure-messaging'],
     },
-    tags: ['ECC', '타원곡선', 'elliptic', 'crypto']
+    tags: ['ECC', '타원곡선', 'elliptic', 'crypto'],
   },
   {
     id: 'diffie-hellman',
     name: {
       ko: '디피-헬만 키 교환',
       en: 'Diffie-Hellman Key Exchange',
-      ja: 'ディフィー・ヘルマン鍵交換'
+      ja: 'ディフィー・ヘルマン鍵交換',
     },
     field: 'cryptography',
     subfield: 'key-exchange',
@@ -92,38 +119,54 @@ export const cryptographyConcepts: MathConcept[] = [
     content: {
       ko: {
         definition: '안전하지 않은 채널에서 두 당사자가 비밀 키를 공유할 수 있게 하는 프로토콜',
-        formulas: ['공개: g, p (소수)', 'A가 a 선택: A = g^a mod p', 'B가 b 선택: B = g^b mod p', '공유 비밀: K = g^{ab} mod p'],
+        formulas: [
+          '공개: g, p (소수)',
+          'A가 a 선택: A = g^a mod p',
+          'B가 b 선택: B = g^b mod p',
+          '공유 비밀: K = g^{ab} mod p',
+        ],
         examples: ['g=5, p=23, a=6, b=15', 'A=8, B=19, K=2'],
-        applications: ['TLS/SSL', 'VPN', 'SSH']
+        applications: ['TLS/SSL', 'VPN', 'SSH'],
       },
       en: {
-        definition: 'Protocol allowing two parties to establish a shared secret over insecure channel',
-        formulas: ['Public: g, p (prime)', 'A chooses a: A = g^a mod p', 'B chooses b: B = g^b mod p', 'Shared secret: K = g^{ab} mod p'],
+        definition:
+          'Protocol allowing two parties to establish a shared secret over insecure channel',
+        formulas: [
+          'Public: g, p (prime)',
+          'A chooses a: A = g^a mod p',
+          'B chooses b: B = g^b mod p',
+          'Shared secret: K = g^{ab} mod p',
+        ],
         examples: ['g=5, p=23, a=6, b=15', 'A=8, B=19, K=2'],
-        applications: ['TLS/SSL', 'VPN', 'SSH']
+        applications: ['TLS/SSL', 'VPN', 'SSH'],
       },
       ja: {
         definition: '安全でないチャネルで二者が秘密鍵を共有できるプロトコル',
-        formulas: ['公開: g, p (素数)', 'Aがa選択: A = g^a mod p', 'Bがb選択: B = g^b mod p', '共有秘密: K = g^{ab} mod p'],
+        formulas: [
+          '公開: g, p (素数)',
+          'Aがa選択: A = g^a mod p',
+          'Bがb選択: B = g^b mod p',
+          '共有秘密: K = g^{ab} mod p',
+        ],
         examples: ['g=5, p=23, a=6, b=15', 'A=8, B=19, K=2'],
-        applications: ['TLS/SSL', 'VPN', 'SSH']
-      }
+        applications: ['TLS/SSL', 'VPN', 'SSH'],
+      },
     },
     latex: 'K = g^{ab} \\mod p',
     relations: {
       prerequisites: ['modular-arithmetic', 'discrete-log'],
       nextTopics: ['elliptic-curve-crypto'],
       related: ['rsa-algorithm'],
-      applications: ['secure-communication']
+      applications: ['secure-communication'],
     },
-    tags: ['DH', '키교환', 'key-exchange', 'protocol']
+    tags: ['DH', '키교환', 'key-exchange', 'protocol'],
   },
   {
     id: 'aes-encryption',
     name: {
       ko: 'AES 암호화',
       en: 'AES Encryption',
-      ja: 'AES暗号'
+      ja: 'AES暗号',
     },
     field: 'cryptography',
     subfield: 'symmetric-key',
@@ -133,36 +176,36 @@ export const cryptographyConcepts: MathConcept[] = [
         definition: '가장 널리 사용되는 대칭키 블록 암호 알고리즘 (Advanced Encryption Standard)',
         formulas: ['블록 크기: 128비트', '키 길이: 128/192/256비트', '라운드 수: 10/12/14'],
         examples: ['SubBytes (S-box 치환)', 'ShiftRows, MixColumns', 'AddRoundKey'],
-        applications: ['파일 암호화', '디스크 암호화', 'HTTPS']
+        applications: ['파일 암호화', '디스크 암호화', 'HTTPS'],
       },
       en: {
         definition: 'Most widely used symmetric-key block cipher (Advanced Encryption Standard)',
         formulas: ['Block size: 128 bits', 'Key length: 128/192/256 bits', 'Rounds: 10/12/14'],
         examples: ['SubBytes (S-box substitution)', 'ShiftRows, MixColumns', 'AddRoundKey'],
-        applications: ['File encryption', 'Disk encryption', 'HTTPS']
+        applications: ['File encryption', 'Disk encryption', 'HTTPS'],
       },
       ja: {
         definition: '最も広く使われている対称鍵ブロック暗号 (Advanced Encryption Standard)',
         formulas: ['ブロックサイズ: 128ビット', '鍵長: 128/192/256ビット', 'ラウンド数: 10/12/14'],
         examples: ['SubBytes (S-box置換)', 'ShiftRows, MixColumns', 'AddRoundKey'],
-        applications: ['ファイル暗号化', 'ディスク暗号化', 'HTTPS']
-      }
+        applications: ['ファイル暗号化', 'ディスク暗号化', 'HTTPS'],
+      },
     },
     latex: 'C = E_K(P)',
     relations: {
       prerequisites: ['binary-representation', 'galois-field'],
       nextTopics: ['block-cipher-modes'],
       related: ['des-encryption'],
-      applications: ['data-security']
+      applications: ['data-security'],
     },
-    tags: ['AES', '대칭키', 'symmetric', 'block-cipher']
+    tags: ['AES', '대칭키', 'symmetric', 'block-cipher'],
   },
   {
     id: 'hash-function-crypto',
     name: {
       ko: '암호학적 해시 함수',
       en: 'Cryptographic Hash Function',
-      ja: '暗号学的ハッシュ関数'
+      ja: '暗号学的ハッシュ関数',
     },
     field: 'cryptography',
     subfield: 'hash',
@@ -170,38 +213,50 @@ export const cryptographyConcepts: MathConcept[] = [
     content: {
       ko: {
         definition: '임의 길이 데이터를 고정 길이 해시값으로 변환하는 단방향 함수',
-        formulas: ['H: {0,1}* → {0,1}^n', '충돌 저항성: H(x) = H(y)인 x≠y 찾기 어려움', '역상 저항성: H(x) = h인 x 찾기 어려움'],
+        formulas: [
+          'H: {0,1}* → {0,1}^n',
+          '충돌 저항성: H(x) = H(y)인 x≠y 찾기 어려움',
+          '역상 저항성: H(x) = h인 x 찾기 어려움',
+        ],
         examples: ['SHA-256: 256비트 출력', 'SHA-3 (Keccak)', 'BLAKE2'],
-        applications: ['비밀번호 저장', '무결성 검증', '디지털 서명']
+        applications: ['비밀번호 저장', '무결성 검증', '디지털 서명'],
       },
       en: {
         definition: 'One-way function converting arbitrary data to fixed-length hash value',
-        formulas: ['H: {0,1}* → {0,1}^n', 'Collision resistance: Hard to find x≠y with H(x) = H(y)', 'Preimage resistance: Hard to find x given H(x) = h'],
+        formulas: [
+          'H: {0,1}* → {0,1}^n',
+          'Collision resistance: Hard to find x≠y with H(x) = H(y)',
+          'Preimage resistance: Hard to find x given H(x) = h',
+        ],
         examples: ['SHA-256: 256-bit output', 'SHA-3 (Keccak)', 'BLAKE2'],
-        applications: ['Password storage', 'Integrity verification', 'Digital signatures']
+        applications: ['Password storage', 'Integrity verification', 'Digital signatures'],
       },
       ja: {
         definition: '任意長のデータを固定長のハッシュ値に変換する一方向関数',
-        formulas: ['H: {0,1}* → {0,1}^n', '衝突耐性: H(x) = H(y)となるx≠yを見つけるのが困難', '原像耐性: H(x) = hとなるxを見つけるのが困難'],
+        formulas: [
+          'H: {0,1}* → {0,1}^n',
+          '衝突耐性: H(x) = H(y)となるx≠yを見つけるのが困難',
+          '原像耐性: H(x) = hとなるxを見つけるのが困難',
+        ],
         examples: ['SHA-256: 256ビット出力', 'SHA-3 (Keccak)', 'BLAKE2'],
-        applications: ['パスワード保存', '完全性検証', 'デジタル署名']
-      }
+        applications: ['パスワード保存', '完全性検証', 'デジタル署名'],
+      },
     },
     latex: 'H: \\{0,1\\}^* \\rightarrow \\{0,1\\}^n',
     relations: {
       prerequisites: ['binary-representation'],
       nextTopics: ['digital-signature', 'merkle-tree'],
       related: ['hashing-math'],
-      applications: ['blockchain', 'authentication']
+      applications: ['blockchain', 'authentication'],
     },
-    tags: ['해시', 'SHA', 'hash', 'one-way']
+    tags: ['해시', 'SHA', 'hash', 'one-way'],
   },
   {
     id: 'digital-signature',
     name: {
       ko: '디지털 서명',
       en: 'Digital Signature',
-      ja: 'デジタル署名'
+      ja: 'デジタル署名',
     },
     field: 'cryptography',
     subfield: 'authentication',
@@ -209,38 +264,50 @@ export const cryptographyConcepts: MathConcept[] = [
     content: {
       ko: {
         definition: '메시지의 진위성과 무결성을 보장하는 암호학적 기법',
-        formulas: ['서명: σ = Sign(SK, m)', '검증: Verify(PK, m, σ) → {true, false}', 'RSA 서명: σ = H(m)^d mod n'],
+        formulas: [
+          '서명: σ = Sign(SK, m)',
+          '검증: Verify(PK, m, σ) → {true, false}',
+          'RSA 서명: σ = H(m)^d mod n',
+        ],
         examples: ['ECDSA (비트코인)', 'RSA-PSS', 'Ed25519'],
-        applications: ['전자계약', 'SSL 인증서', '소프트웨어 배포']
+        applications: ['전자계약', 'SSL 인증서', '소프트웨어 배포'],
       },
       en: {
         definition: 'Cryptographic technique ensuring message authenticity and integrity',
-        formulas: ['Sign: σ = Sign(SK, m)', 'Verify: Verify(PK, m, σ) → {true, false}', 'RSA signature: σ = H(m)^d mod n'],
+        formulas: [
+          'Sign: σ = Sign(SK, m)',
+          'Verify: Verify(PK, m, σ) → {true, false}',
+          'RSA signature: σ = H(m)^d mod n',
+        ],
         examples: ['ECDSA (Bitcoin)', 'RSA-PSS', 'Ed25519'],
-        applications: ['E-contracts', 'SSL certificates', 'Software distribution']
+        applications: ['E-contracts', 'SSL certificates', 'Software distribution'],
       },
       ja: {
         definition: 'メッセージの真正性と完全性を保証する暗号技術',
-        formulas: ['署名: σ = Sign(SK, m)', '検証: Verify(PK, m, σ) → {true, false}', 'RSA署名: σ = H(m)^d mod n'],
+        formulas: [
+          '署名: σ = Sign(SK, m)',
+          '検証: Verify(PK, m, σ) → {true, false}',
+          'RSA署名: σ = H(m)^d mod n',
+        ],
         examples: ['ECDSA (ビットコイン)', 'RSA-PSS', 'Ed25519'],
-        applications: ['電子契約', 'SSL証明書', 'ソフトウェア配布']
-      }
+        applications: ['電子契約', 'SSL証明書', 'ソフトウェア配布'],
+      },
     },
     latex: '\\sigma = \\text{Sign}(SK, m)',
     relations: {
       prerequisites: ['rsa-algorithm', 'hash-function-crypto'],
       nextTopics: ['zero-knowledge-proof'],
       related: ['elliptic-curve-crypto'],
-      applications: ['authentication', 'non-repudiation']
+      applications: ['authentication', 'non-repudiation'],
     },
-    tags: ['서명', 'signature', 'authentication', 'PKI']
+    tags: ['서명', 'signature', 'authentication', 'PKI'],
   },
   {
     id: 'zero-knowledge-proof',
     name: {
       ko: '영지식 증명',
       en: 'Zero-Knowledge Proof',
-      ja: 'ゼロ知識証明'
+      ja: 'ゼロ知識証明',
     },
     field: 'cryptography',
     subfield: 'protocols',
@@ -248,38 +315,50 @@ export const cryptographyConcepts: MathConcept[] = [
     content: {
       ko: {
         definition: '어떤 사실을 알고 있음을 증명하되, 그 사실 자체는 공개하지 않는 증명 방식',
-        formulas: ['완전성: 참이면 검증자가 납득', '건전성: 거짓이면 속일 수 없음', '영지식성: 비밀 정보 누출 없음'],
+        formulas: [
+          '완전성: 참이면 검증자가 납득',
+          '건전성: 거짓이면 속일 수 없음',
+          '영지식성: 비밀 정보 누출 없음',
+        ],
         examples: ['색칠 그래프 문제', 'zk-SNARKs', 'zk-STARKs'],
-        applications: ['프라이버시 코인', '신원 증명', '투표 시스템']
+        applications: ['프라이버시 코인', '신원 증명', '투표 시스템'],
       },
       en: {
         definition: 'Proof method demonstrating knowledge without revealing the knowledge itself',
-        formulas: ['Completeness: If true, verifier is convinced', 'Soundness: If false, cannot be deceived', 'Zero-knowledge: No secret information leaked'],
+        formulas: [
+          'Completeness: If true, verifier is convinced',
+          'Soundness: If false, cannot be deceived',
+          'Zero-knowledge: No secret information leaked',
+        ],
         examples: ['Graph coloring problem', 'zk-SNARKs', 'zk-STARKs'],
-        applications: ['Privacy coins', 'Identity proof', 'Voting systems']
+        applications: ['Privacy coins', 'Identity proof', 'Voting systems'],
       },
       ja: {
         definition: '知識を明かさずにその知識を持っていることを証明する方法',
-        formulas: ['完全性: 真なら検証者は納得', '健全性: 偽なら騙せない', 'ゼロ知識性: 秘密情報の漏洩なし'],
+        formulas: [
+          '完全性: 真なら検証者は納得',
+          '健全性: 偽なら騙せない',
+          'ゼロ知識性: 秘密情報の漏洩なし',
+        ],
         examples: ['グラフ彩色問題', 'zk-SNARKs', 'zk-STARKs'],
-        applications: ['プライバシーコイン', '身元証明', '投票システム']
-      }
+        applications: ['プライバシーコイン', '身元証明', '投票システム'],
+      },
     },
     latex: '\\text{ZKP}: (P, V) \\rightarrow \\{\\text{accept}, \\text{reject}\\}',
     relations: {
       prerequisites: ['probability', 'computational-complexity'],
       nextTopics: ['zksnark', 'zkstark'],
       related: ['digital-signature'],
-      applications: ['blockchain', 'privacy']
+      applications: ['blockchain', 'privacy'],
     },
-    tags: ['ZKP', '영지식', 'zero-knowledge', 'privacy']
+    tags: ['ZKP', '영지식', 'zero-knowledge', 'privacy'],
   },
   {
     id: 'modular-arithmetic',
     name: {
       ko: '모듈러 연산',
       en: 'Modular Arithmetic',
-      ja: 'モジュラ演算'
+      ja: 'モジュラ演算',
     },
     field: 'cryptography',
     subfield: 'foundations',
@@ -287,30 +366,42 @@ export const cryptographyConcepts: MathConcept[] = [
     content: {
       ko: {
         definition: '나머지 연산을 기반으로 한 정수 연산 체계 (시계 연산)',
-        formulas: ['a ≡ b (mod n) ⟺ n | (a-b)', '(a + b) mod n = ((a mod n) + (b mod n)) mod n', '(a · b) mod n = ((a mod n) · (b mod n)) mod n'],
+        formulas: [
+          'a ≡ b (mod n) ⟺ n | (a-b)',
+          '(a + b) mod n = ((a mod n) + (b mod n)) mod n',
+          '(a · b) mod n = ((a mod n) · (b mod n)) mod n',
+        ],
         examples: ['17 ≡ 5 (mod 12)', '7⁻¹ ≡ 3 (mod 10)'],
-        applications: ['암호학', '해시 함수', '오류 검출']
+        applications: ['암호학', '해시 함수', '오류 검출'],
       },
       en: {
         definition: 'Integer arithmetic system based on remainder operations (clock arithmetic)',
-        formulas: ['a ≡ b (mod n) ⟺ n | (a-b)', '(a + b) mod n = ((a mod n) + (b mod n)) mod n', '(a · b) mod n = ((a mod n) · (b mod n)) mod n'],
+        formulas: [
+          'a ≡ b (mod n) ⟺ n | (a-b)',
+          '(a + b) mod n = ((a mod n) + (b mod n)) mod n',
+          '(a · b) mod n = ((a mod n) · (b mod n)) mod n',
+        ],
         examples: ['17 ≡ 5 (mod 12)', '7⁻¹ ≡ 3 (mod 10)'],
-        applications: ['Cryptography', 'Hash functions', 'Error detection']
+        applications: ['Cryptography', 'Hash functions', 'Error detection'],
       },
       ja: {
         definition: '剰余演算に基づく整数演算体系（時計演算）',
-        formulas: ['a ≡ b (mod n) ⟺ n | (a-b)', '(a + b) mod n = ((a mod n) + (b mod n)) mod n', '(a · b) mod n = ((a mod n) · (b mod n)) mod n'],
+        formulas: [
+          'a ≡ b (mod n) ⟺ n | (a-b)',
+          '(a + b) mod n = ((a mod n) + (b mod n)) mod n',
+          '(a · b) mod n = ((a mod n) · (b mod n)) mod n',
+        ],
         examples: ['17 ≡ 5 (mod 12)', '7⁻¹ ≡ 3 (mod 10)'],
-        applications: ['暗号学', 'ハッシュ関数', 'エラー検出']
-      }
+        applications: ['暗号学', 'ハッシュ関数', 'エラー検出'],
+      },
     },
     latex: 'a \\equiv b \\pmod{n}',
     relations: {
       prerequisites: ['division-algorithm'],
       nextTopics: ['rsa-algorithm', 'chinese-remainder-theorem'],
       related: ['eulers-totient'],
-      applications: ['cryptography', 'computer-science']
+      applications: ['cryptography', 'computer-science'],
     },
-    tags: ['모듈러', 'mod', 'modular', 'remainder']
-  }
+    tags: ['모듈러', 'mod', 'modular', 'remainder'],
+  },
 ];

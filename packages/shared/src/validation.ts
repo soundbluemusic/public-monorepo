@@ -1,4 +1,4 @@
-import { LIMITS, RESERVED_NAMES } from "./constants";
+import { LIMITS, RESERVED_NAMES } from './constants';
 
 /**
  * Validates an ID string to prevent abuse and prototype pollution
@@ -7,13 +7,11 @@ import { LIMITS, RESERVED_NAMES } from "./constants";
  * @throws Error if validation fails
  */
 export function validateId(id: string, fieldName: string): void {
-  if (!id || typeof id !== "string") {
+  if (!id || typeof id !== 'string') {
     throw new Error(`${fieldName} is required`);
   }
   if (id.length > LIMITS.ID_LENGTH) {
-    throw new Error(
-      `${fieldName} exceeds maximum length of ${LIMITS.ID_LENGTH}`
-    );
+    throw new Error(`${fieldName} exceeds maximum length of ${LIMITS.ID_LENGTH}`);
   }
   // Prevent prototype pollution attempts
   if ((RESERVED_NAMES as readonly string[]).includes(id)) {
@@ -31,17 +29,13 @@ export function isReservedName(value: string): boolean {
 /**
  * Type guard for validating theme values
  */
-export function isValidTheme(
-  value: string | null
-): value is "light" | "dark" | "system" {
-  return value === "light" || value === "dark" || value === "system";
+export function isValidTheme(value: string | null): value is 'light' | 'dark' | 'system' {
+  return value === 'light' || value === 'dark' || value === 'system';
 }
 
 /**
  * Type guard for validating language values
  */
-export function isValidLanguage(
-  value: string | null
-): value is "ko" | "en" | "ja" {
-  return value === "ko" || value === "en" || value === "ja";
+export function isValidLanguage(value: string | null): value is 'ko' | 'en' | 'ja' {
+  return value === 'ko' || value === 'en' || value === 'ja';
 }

@@ -1,57 +1,57 @@
 /**
  * @fileoverview 모든 개념 데이터 통합
  */
-import type { MathConcept } from "../types";
-import { foundationsConcepts } from "./foundations";
-import { algebraConcepts } from "./algebra";
-import { geometryConcepts } from "./geometry";
-import { analysisConcepts } from "./analysis";
-import { trigonometryConcepts } from "./trigonometry";
-import { linearAlgebraConcepts } from "./linearAlgebra";
-import { probabilityConcepts } from "./probability";
-import { discreteConcepts } from "./discrete";
-import { numberTheoryConcepts } from "./numberTheory";
-import { topologyConcepts } from "./topology";
-import { logicConcepts } from "./logic";
-import { dynamicsConcepts } from "./dynamics";
-import { optimizationConcepts } from "./optimization";
-import { numericalConcepts } from "./numerical";
-import { appliedConcepts } from "./applied";
-import { constantsConcepts } from "./constants";
-import { symbolsConcepts } from "./symbols";
-import { theoremsConcepts } from "./theorems";
-import { abstractAlgebraConcepts } from "./abstractAlgebra";
-import { complexAnalysisConcepts } from "./complexAnalysis";
-import { financeConcepts } from "./finance";
-import { musicConcepts } from "./music";
-import { physicsConcepts } from "./physics";
-import { computerScienceConcepts } from "./computerScience";
-import { engineeringConcepts } from "./engineering";
-import { cryptographyConcepts } from "./cryptography";
-import { gameTheoryConcepts } from "./gameTheory";
-import { measureTheoryConcepts } from "./measureTheory";
-import { categoryTheoryConcepts } from "./categoryTheory";
-import { differentialGeometryConcepts } from "./differentialGeometry";
-import { statisticsConcepts } from "./statistics";
-import { setTheoryConcepts } from "./setTheory";
-import { operationsResearchConcepts } from "./operationsResearch";
-import { algebraicGeometryConcepts } from "./algebraicGeometry";
-import { functionalAnalysisConcepts } from "./functionalAnalysis";
-import { combinatoricsAdvancedConcepts } from "./combinatoricsAdvanced";
-import { representationTheoryConcepts } from "./representationTheory";
-import { homologicalAlgebraConcepts } from "./homologicalAlgebra";
-import { calculusVariationsConcepts } from "./calculusVariations";
-import { informationTheoryConcepts } from "./informationTheory";
-import { stochasticProcessesConcepts } from "./stochasticProcesses";
-import { pdeConcepts } from "./pde";
-import { numericalLinearAlgebraConcepts } from "./numericalLinearAlgebra";
-import { graphTheoryAdvancedConcepts } from "./graphTheoryAdvanced";
-import { logicAdvancedConcepts } from "./logicAdvanced";
-import { dynamicalSystemsAdvancedConcepts } from "./dynamicalSystemsAdvanced";
-import { tensorAnalysisConcepts } from "./tensorAnalysis";
-import { lieTheoryConcepts } from "./lieTheory";
-import { algebraicTopologyConcepts } from "./algebraicTopology";
-import { harmonicAnalysisConcepts } from "./harmonicAnalysis";
+import type { MathConcept } from '../types';
+import { abstractAlgebraConcepts } from './abstractAlgebra';
+import { algebraConcepts } from './algebra';
+import { algebraicGeometryConcepts } from './algebraicGeometry';
+import { algebraicTopologyConcepts } from './algebraicTopology';
+import { analysisConcepts } from './analysis';
+import { appliedConcepts } from './applied';
+import { calculusVariationsConcepts } from './calculusVariations';
+import { categoryTheoryConcepts } from './categoryTheory';
+import { combinatoricsAdvancedConcepts } from './combinatoricsAdvanced';
+import { complexAnalysisConcepts } from './complexAnalysis';
+import { computerScienceConcepts } from './computerScience';
+import { constantsConcepts } from './constants';
+import { cryptographyConcepts } from './cryptography';
+import { differentialGeometryConcepts } from './differentialGeometry';
+import { discreteConcepts } from './discrete';
+import { dynamicalSystemsAdvancedConcepts } from './dynamicalSystemsAdvanced';
+import { dynamicsConcepts } from './dynamics';
+import { engineeringConcepts } from './engineering';
+import { financeConcepts } from './finance';
+import { foundationsConcepts } from './foundations';
+import { functionalAnalysisConcepts } from './functionalAnalysis';
+import { gameTheoryConcepts } from './gameTheory';
+import { geometryConcepts } from './geometry';
+import { graphTheoryAdvancedConcepts } from './graphTheoryAdvanced';
+import { harmonicAnalysisConcepts } from './harmonicAnalysis';
+import { homologicalAlgebraConcepts } from './homologicalAlgebra';
+import { informationTheoryConcepts } from './informationTheory';
+import { lieTheoryConcepts } from './lieTheory';
+import { linearAlgebraConcepts } from './linearAlgebra';
+import { logicConcepts } from './logic';
+import { logicAdvancedConcepts } from './logicAdvanced';
+import { measureTheoryConcepts } from './measureTheory';
+import { musicConcepts } from './music';
+import { numberTheoryConcepts } from './numberTheory';
+import { numericalConcepts } from './numerical';
+import { numericalLinearAlgebraConcepts } from './numericalLinearAlgebra';
+import { operationsResearchConcepts } from './operationsResearch';
+import { optimizationConcepts } from './optimization';
+import { pdeConcepts } from './pde';
+import { physicsConcepts } from './physics';
+import { probabilityConcepts } from './probability';
+import { representationTheoryConcepts } from './representationTheory';
+import { setTheoryConcepts } from './setTheory';
+import { statisticsConcepts } from './statistics';
+import { stochasticProcessesConcepts } from './stochasticProcesses';
+import { symbolsConcepts } from './symbols';
+import { tensorAnalysisConcepts } from './tensorAnalysis';
+import { theoremsConcepts } from './theorems';
+import { topologyConcepts } from './topology';
+import { trigonometryConcepts } from './trigonometry';
 
 /** 모든 개념 목록 */
 export const allConcepts: MathConcept[] = [
@@ -133,6 +133,4 @@ export function getConceptsByDifficulty(level: number): MathConcept[] {
 }
 
 /** 개념 맵 (ID -> 개념) */
-export const conceptsMap = new Map<string, MathConcept>(
-  allConcepts.map((c) => [c.id, c])
-);
+export const conceptsMap = new Map<string, MathConcept>(allConcepts.map((c) => [c.id, c]));

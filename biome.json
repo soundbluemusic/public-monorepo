@@ -31,12 +31,6 @@
     }
   },
   "files": {
-    "ignore": [
-      "node_modules",
-      ".output",
-      ".vinxi",
-      "dist",
-      "*.min.js"
-    ]
+    "ignore": ["node_modules", ".output", ".vinxi", "dist", "*.min.js"]
   }
 }

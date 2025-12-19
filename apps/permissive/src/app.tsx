@@ -49,8 +49,8 @@ function LoadingFallback() {
               <div class="skeleton h-11 flex-1 rounded-xl" />
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-8">
-              {[1, 2, 3, 4, 5, 6].map(() => (
-                <div class="skeleton h-32 rounded-xl" />
+              {[1, 2, 3, 4, 5, 6].map((i) => (
+                <div class="skeleton h-32 rounded-xl" key={i} />
               ))}
             </div>
           </div>

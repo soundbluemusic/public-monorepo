@@ -1,18 +1,20 @@
-import { Title, Meta } from "@solidjs/meta";
-import { A, useParams } from "@solidjs/router";
-import { For, Show, createMemo, createSignal, onMount } from "solid-js";
-import { Layout } from "@/components/Layout";
-import { getCategoryById } from "@/data/categories";
-import { getEntryById, getEntriesByCategory } from "@/data/entries";
-import type { MeaningEntry, Language } from "@/data/types";
-import { useI18n } from "@/i18n";
-import { favorites } from "@/lib/db";
+import { Layout } from '@/components/Layout';
+import { getCategoryById } from '@/data/categories';
+import { getEntriesByCategory, getEntryById } from '@/data/entries';
+import type { Language, MeaningEntry } from '@/data/types';
+import { useI18n } from '@/i18n';
+import { favorites } from '@/lib/db';
+import { Meta, Title } from '@solidjs/meta';
+import { A, useParams } from '@solidjs/router';
+import { For, Show, createMemo, createSignal, onMount } from 'solid-js';
 
 // Get pronunciation based on locale
 const getPronunciation = (entry: MeaningEntry, locale: Language): string | undefined => {
   switch (locale) {
-    case "en": return entry.romanization;
-    case "ko": return entry.pronunciation;
+    case 'en':
+      return entry.romanization;
+    case 'ko':
+      return entry.pronunciation;
   }
 };
 
@@ -21,7 +23,7 @@ export default function EntryPage() {
   const { locale, t, localePath } = useI18n();
   const [isFavorite, setIsFavorite] = createSignal(false);
 
-  const entry = createMemo(() => params.entryId ? getEntryById(params.entryId) : undefined);
+  const entry = createMemo(() => (params.entryId ? getEntryById(params.entryId) : undefined));
 
   // 즐겨찾기 상태 확인
   onMount(async () => {
@@ -56,7 +58,9 @@ export default function EntryPage() {
   const relatedEntries = createMemo(() => {
     const e = entry();
     if (!e) return [];
-    return getEntriesByCategory(e.categoryId).filter((r) => r.id !== e.id).slice(0, 5);
+    return getEntriesByCategory(e.categoryId)
+      .filter((r) => r.id !== e.id)
+      .slice(0, 5);
   });
 
   return (
@@ -65,25 +69,33 @@ export default function EntryPage() {
         when={entry()}
         fallback={
           <div class="text-center py-16">
-            <p style={{ color: "var(--text-secondary)" }}>
-              {locale() === "ko" ? "단어를 찾을 수 없습니다" : "Word not found"}
+            <p style={{ color: 'var(--text-secondary)' }}>
+              {locale() === 'ko' ? '단어를 찾을 수 없습니다' : 'Word not found'}
             </p>
-            <A href={localePath("/")} class="text-sm mt-4 inline-block" style={{ color: "var(--text-tertiary)" }}>
-              ← {t("home")}
+            <A
+              href={localePath('/')}
+              class="text-sm mt-4 inline-block"
+              style={{ color: 'var(--text-tertiary)' }}
+            >
+              ← {t('home')}
             </A>
           </div>
         }
       >
-        <Title>{entry()?.korean ?? "Entry"} - Context</Title>
-        <Meta name="description" content={translation()?.explanation ?? ""} />
+        <Title>{entry()?.korean ?? 'Entry'} - Context</Title>
+        <Meta name="description" content={translation()?.explanation ?? ''} />
 
-        <A href={localePath("/")} class="text-sm mb-8 inline-block" style={{ color: "var(--text-tertiary)" }}>
-          ← {t("backToList")}
+        <A
+          href={localePath('/')}
+          class="text-sm mb-8 inline-block"
+          style={{ color: 'var(--text-tertiary)' }}
+        >
+          ← {t('backToList')}
         </A>
 
         <div class="mb-8">
           <div class="flex items-center gap-3 mb-1">
-            <h1 class="text-4xl font-bold" style={{ color: "var(--text-primary)" }}>
+            <h1 class="text-4xl font-bold" style={{ color: 'var(--text-primary)' }}>
               {entry()?.korean}
             </h1>
             <button
@@ -91,20 +103,26 @@ export default function EntryPage() {
               onClick={toggleFavorite}
               class="p-2 rounded-full transition-colors"
               style={{
-                "background-color": isFavorite() ? "rgba(239, 68, 68, 0.1)" : "var(--bg-tertiary)",
+                'background-color': isFavorite() ? 'rgba(239, 68, 68, 0.1)' : 'var(--bg-tertiary)',
               }}
-              title={isFavorite()
-                ? (locale() === "ko" ? "즐겨찾기 해제" : "Remove from favorites")
-                : (locale() === "ko" ? "즐겨찾기 추가" : "Add to favorites")
+              title={
+                isFavorite()
+                  ? locale() === 'ko'
+                    ? '즐겨찾기 해제'
+                    : 'Remove from favorites'
+                  : locale() === 'ko'
+                    ? '즐겨찾기 추가'
+                    : 'Add to favorites'
               }
             >
               <svg
+                aria-hidden="true"
                 class="w-6 h-6"
-                fill={isFavorite() ? "currentColor" : "none"}
+                fill={isFavorite() ? 'currentColor' : 'none'}
                 stroke="currentColor"
                 stroke-width="2"
                 viewBox="0 0 24 24"
-                style={{ color: isFavorite() ? "#ef4444" : "var(--text-tertiary)" }}
+                style={{ color: isFavorite() ? '#ef4444' : 'var(--text-tertiary)' }}
               >
                 <path
                   stroke-linecap="round"
@@ -115,35 +133,41 @@ export default function EntryPage() {
             </button>
           </div>
           <Show when={pronunciation()}>
-            <p class="text-lg" style={{ color: "var(--text-tertiary)" }}>
+            <p class="text-lg" style={{ color: 'var(--text-tertiary)' }}>
               {pronunciation()}
             </p>
           </Show>
         </div>
 
         <Show when={translation()}>
-          <div class="mb-8 pb-8" style={{ "border-bottom": "1px solid var(--border-primary)" }}>
-            <p class="text-sm uppercase tracking-wide mb-2" style={{ color: "var(--text-tertiary)" }}>
-              {locale() === "ko" ? "한국어" : "English"}
+          <div class="mb-8 pb-8" style={{ 'border-bottom': '1px solid var(--border-primary)' }}>
+            <p
+              class="text-sm uppercase tracking-wide mb-2"
+              style={{ color: 'var(--text-tertiary)' }}
+            >
+              {locale() === 'ko' ? '한국어' : 'English'}
             </p>
-            <h2 class="text-2xl font-medium mb-3" style={{ color: "var(--text-primary)" }}>
+            <h2 class="text-2xl font-medium mb-3" style={{ color: 'var(--text-primary)' }}>
               {translation()?.word}
             </h2>
             <Show when={translation()?.reading}>
-              <p class="text-sm mb-3" style={{ color: "var(--text-secondary)" }}>
+              <p class="text-sm mb-3" style={{ color: 'var(--text-secondary)' }}>
                 {translation()?.reading}
               </p>
             </Show>
-            <p class="leading-relaxed" style={{ color: "var(--text-secondary)" }}>
+            <p class="leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
               {translation()?.explanation}
             </p>
           </div>
         </Show>
 
-        <Show when={translation()?.examples && translation()?.examples?.length && translation()!.examples.length > 0}>
-          <div class="mb-8 pb-8" style={{ "border-bottom": "1px solid var(--border-primary)" }}>
-            <p class="text-sm uppercase tracking-wide mb-3" style={{ color: "var(--text-tertiary)" }}>
-              {t("examples")}
+        <Show when={(translation()?.examples?.length ?? 0) > 0}>
+          <div class="mb-8 pb-8" style={{ 'border-bottom': '1px solid var(--border-primary)' }}>
+            <p
+              class="text-sm uppercase tracking-wide mb-3"
+              style={{ color: 'var(--text-tertiary)' }}
+            >
+              {t('examples')}
             </p>
             <ul class="space-y-2">
               <For each={translation()?.examples ?? []}>
@@ -151,8 +175,8 @@ export default function EntryPage() {
                   <li
                     class="pl-4"
                     style={{
-                      color: "var(--text-secondary)",
-                      "border-left": "2px solid var(--border-primary)"
+                      color: 'var(--text-secondary)',
+                      'border-left': '2px solid var(--border-primary)',
                     }}
                   >
                     {example}
@@ -163,16 +187,26 @@ export default function EntryPage() {
           </div>
         </Show>
 
-        <Show when={translation()?.variations && (translation()?.variations?.formal?.length || translation()?.variations?.casual?.length || translation()?.variations?.short?.length)}>
-          <div class="mb-8 pb-8" style={{ "border-bottom": "1px solid var(--border-primary)" }}>
-            <p class="text-sm uppercase tracking-wide mb-4" style={{ color: "var(--text-tertiary)" }}>
-              {t("variations")}
+        <Show
+          when={
+            translation()?.variations &&
+            (translation()?.variations?.formal?.length ||
+              translation()?.variations?.casual?.length ||
+              translation()?.variations?.short?.length)
+          }
+        >
+          <div class="mb-8 pb-8" style={{ 'border-bottom': '1px solid var(--border-primary)' }}>
+            <p
+              class="text-sm uppercase tracking-wide mb-4"
+              style={{ color: 'var(--text-tertiary)' }}
+            >
+              {t('variations')}
             </p>
             <div class="space-y-4">
               <Show when={translation()?.variations?.formal?.length}>
                 <div>
-                  <p class="text-xs font-medium mb-2" style={{ color: "var(--text-tertiary)" }}>
-                    {t("formal")}
+                  <p class="text-xs font-medium mb-2" style={{ color: 'var(--text-tertiary)' }}>
+                    {t('formal')}
                   </p>
                   <ul class="space-y-1">
                     <For each={translation()?.variations?.formal ?? []}>
@@ -180,8 +214,8 @@ export default function EntryPage() {
                         <li
                           class="pl-4"
                           style={{
-                            color: "var(--text-secondary)",
-                            "border-left": "2px solid var(--accent-primary)"
+                            color: 'var(--text-secondary)',
+                            'border-left': '2px solid var(--accent-primary)',
                           }}
                         >
                           {item}
@@ -193,8 +227,8 @@ export default function EntryPage() {
               </Show>
               <Show when={translation()?.variations?.casual?.length}>
                 <div>
-                  <p class="text-xs font-medium mb-2" style={{ color: "var(--text-tertiary)" }}>
-                    {t("casual")}
+                  <p class="text-xs font-medium mb-2" style={{ color: 'var(--text-tertiary)' }}>
+                    {t('casual')}
                   </p>
                   <ul class="space-y-1">
                     <For each={translation()?.variations?.casual ?? []}>
@@ -202,8 +236,8 @@ export default function EntryPage() {
                         <li
                           class="pl-4"
                           style={{
-                            color: "var(--text-secondary)",
-                            "border-left": "2px solid var(--accent-secondary, #10b981)"
+                            color: 'var(--text-secondary)',
+                            'border-left': '2px solid var(--accent-secondary, #10b981)',
                           }}
                         >
                           {item}
@@ -215,8 +249,8 @@ export default function EntryPage() {
               </Show>
               <Show when={translation()?.variations?.short?.length}>
                 <div>
-                  <p class="text-xs font-medium mb-2" style={{ color: "var(--text-tertiary)" }}>
-                    {t("short")}
+                  <p class="text-xs font-medium mb-2" style={{ color: 'var(--text-tertiary)' }}>
+                    {t('short')}
                   </p>
                   <ul class="space-y-1">
                     <For each={translation()?.variations?.short ?? []}>
@@ -224,8 +258,8 @@ export default function EntryPage() {
                         <li
                           class="pl-4"
                           style={{
-                            color: "var(--text-secondary)",
-                            "border-left": "2px solid var(--accent-tertiary, #f59e0b)"
+                            color: 'var(--text-secondary)',
+                            'border-left': '2px solid var(--accent-tertiary, #f59e0b)',
                           }}
                         >
                           {item}
@@ -239,24 +273,34 @@ export default function EntryPage() {
           </div>
         </Show>
 
-        <div class="mb-8 pb-8" style={{ "border-bottom": "1px solid var(--border-primary)" }}>
-          <div class="flex flex-wrap gap-4 text-sm" style={{ color: "var(--text-secondary)" }}>
-            <span>{entry()?.partOfSpeech ? t(entry()!.partOfSpeech) : ""}</span>
-            <span>•</span>
-            <span>{entry()?.difficulty ? t(entry()!.difficulty) : ""}</span>
-            <Show when={category()}>
-              <span>•</span>
-              <A href={localePath(`/category/${category()?.id ?? ""}`)} style={{ color: "var(--accent-primary)" }}>
-                {category()?.name[locale()]}
-              </A>
-            </Show>
-          </div>
-        </div>
+        <Show when={entry()} keyed>
+          {(currentEntry) => (
+            <div class="mb-8 pb-8" style={{ 'border-bottom': '1px solid var(--border-primary)' }}>
+              <div class="flex flex-wrap gap-4 text-sm" style={{ color: 'var(--text-secondary)' }}>
+                <span>{currentEntry.partOfSpeech ? t(currentEntry.partOfSpeech) : ''}</span>
+                <span>•</span>
+                <span>{currentEntry.difficulty ? t(currentEntry.difficulty) : ''}</span>
+                <Show when={category()}>
+                  <span>•</span>
+                  <A
+                    href={localePath(`/category/${category()?.id ?? ''}`)}
+                    style={{ color: 'var(--accent-primary)' }}
+                  >
+                    {category()?.name[locale()]}
+                  </A>
+                </Show>
+              </div>
+            </div>
+          )}
+        </Show>
 
         <Show when={relatedEntries().length > 0}>
           <div>
-            <p class="text-sm uppercase tracking-wide mb-3" style={{ color: "var(--text-tertiary)" }}>
-              {t("relatedWords")}
+            <p
+              class="text-sm uppercase tracking-wide mb-3"
+              style={{ color: 'var(--text-tertiary)' }}
+            >
+              {t('relatedWords')}
             </p>
             <div class="space-y-1">
               <For each={relatedEntries()}>
@@ -268,12 +312,14 @@ export default function EntryPage() {
                       class="flex items-baseline justify-between py-2 transition-colors"
                     >
                       <div class="flex items-baseline gap-2">
-                        <span style={{ color: "var(--text-primary)" }}>{related.korean}</span>
+                        <span style={{ color: 'var(--text-primary)' }}>{related.korean}</span>
                         <Show when={relatedPronunciation}>
-                          <span class="text-sm" style={{ color: "var(--text-tertiary)" }}>{relatedPronunciation}</span>
+                          <span class="text-sm" style={{ color: 'var(--text-tertiary)' }}>
+                            {relatedPronunciation}
+                          </span>
                         </Show>
                       </div>
-                      <span class="text-sm" style={{ color: "var(--text-secondary)" }}>
+                      <span class="text-sm" style={{ color: 'var(--text-secondary)' }}>
                         {related.translations[locale()].word}
                       </span>
                     </A>

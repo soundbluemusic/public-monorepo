@@ -147,7 +147,7 @@ export const Layout: ParentComponent = (props) => {
 
   const isActive = (basePath: string) => {
     const currentPath = stripLocale(location.pathname);
-    return currentPath === basePath || currentPath.startsWith(basePath + '/');
+    return currentPath === basePath || currentPath.startsWith(`${basePath}/`);
   };
 
   return (
@@ -175,6 +175,7 @@ export const Layout: ParentComponent = (props) => {
           <div ref={searchContainerRef} class="relative flex-1 max-w-md">
             <div class="relative">
               <svg
+                aria-hidden="true"
                 class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4"
                 style={{ color: 'var(--text-tertiary)' }}
                 fill="none"
@@ -228,6 +229,7 @@ export const Layout: ParentComponent = (props) => {
                   <For each={searchResults()}>
                     {(result, index) => (
                       <button
+                        type="button"
                         onClick={() => selectResult(result)}
                         onMouseEnter={() => setSelectedIndex(index())}
                         class="w-full flex items-center justify-between gap-3 px-4 py-2 text-left text-sm"
@@ -301,6 +303,7 @@ export const Layout: ParentComponent = (props) => {
 
             {/* Dark mode toggle */}
             <button
+              type="button"
               onClick={toggleDarkMode}
               class="p-2 rounded-lg transition-colors"
               style={{ color: 'var(--text-secondary)' }}
@@ -309,7 +312,13 @@ export const Layout: ParentComponent = (props) => {
               <Show
                 when={darkMode()}
                 fallback={
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg
+                    aria-hidden="true"
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
@@ -319,7 +328,13 @@ export const Layout: ParentComponent = (props) => {
                   </svg>
                 }
               >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg
+                  aria-hidden="true"
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"

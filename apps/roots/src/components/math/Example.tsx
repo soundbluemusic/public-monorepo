@@ -1,10 +1,10 @@
+import { DifficultyStars } from '@/components/ui/DifficultyBadge';
+import type { Example as ExampleType } from '@/data/types';
 /**
  * @fileoverview 예제 컴포넌트
  */
-import { Show, For, createSignal } from "solid-js";
-import { LaTeX } from "./LaTeX";
-import { DifficultyStars } from "@/components/ui/DifficultyBadge";
-import type { Example as ExampleType } from "@/data/types";
+import { For, Show, createSignal } from 'solid-js';
+import { LaTeX } from './LaTeX';
 
 interface ExampleCardProps {
   example: ExampleType;
@@ -21,52 +21,46 @@ export function ExampleCard(props: ExampleCardProps) {
     <div
       class="rounded-lg p-4"
       style={{
-        "background-color": "var(--bg-secondary)",
-        border: "1px solid var(--border-primary)",
+        'background-color': 'var(--bg-secondary)',
+        border: '1px solid var(--border-primary)',
       }}
     >
       {/* 예제 헤더 */}
       <div class="flex items-center justify-between mb-3">
-        <span
-          class="text-sm font-medium"
-          style={{ color: "var(--text-tertiary)" }}
-        >
+        <span class="text-sm font-medium" style={{ color: 'var(--text-tertiary)' }}>
           예제 {props.index + 1}
         </span>
-        <Show when={props.example.difficulty}>
-          <DifficultyStars level={props.example.difficulty!} />
+        <Show when={props.example.difficulty} keyed>
+          {(difficulty) => <DifficultyStars level={difficulty} />}
         </Show>
       </div>
 
       {/* 문제 */}
       <div class="mb-3">
-        <p style={{ color: "var(--text-primary)" }}>{props.example.problem}</p>
-        <Show when={props.example.latex}>
-          <div class="mt-2">
-            <LaTeX math={props.example.latex!} display />
-          </div>
+        <p style={{ color: 'var(--text-primary)' }}>{props.example.problem}</p>
+        <Show when={props.example.latex} keyed>
+          {(latex) => (
+            <div class="mt-2">
+              <LaTeX math={latex} display />
+            </div>
+          )}
         </Show>
       </div>
 
       {/* 풀이 토글 버튼 */}
       <button
+        type="button"
         onClick={() => setShowSolution(!showSolution())}
         class="text-sm font-medium transition-colors"
-        style={{ color: "var(--accent-primary)" }}
+        style={{ color: 'var(--accent-primary)' }}
       >
-        {showSolution() ? "▼ 풀이 숨기기" : "▶ 풀이 보기"}
+        {showSolution() ? '▼ 풀이 숨기기' : '▶ 풀이 보기'}
       </button>
 
       {/* 풀이 */}
       <Show when={showSolution()}>
-        <div
-          class="mt-3 pt-3"
-          style={{ "border-top": "1px solid var(--border-primary)" }}
-        >
-          <p
-            class="whitespace-pre-wrap"
-            style={{ color: "var(--text-secondary)" }}
-          >
+        <div class="mt-3 pt-3" style={{ 'border-top': '1px solid var(--border-primary)' }}>
+          <p class="whitespace-pre-wrap" style={{ color: 'var(--text-secondary)' }}>
             {props.example.solution}
           </p>
         </div>
@@ -84,7 +78,7 @@ export function ExampleList(props: { examples: ExampleType[]; title?: string }) 
       <Show when={props.title}>
         <h3
           class="text-lg font-semibold flex items-center gap-2"
-          style={{ color: "var(--text-primary)" }}
+          style={{ color: 'var(--text-primary)' }}
         >
           <span>✏️</span>
           {props.title}

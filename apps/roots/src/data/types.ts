@@ -9,18 +9,18 @@
 // ============================================
 
 /** 지원 언어 */
-export type Language = "ko" | "en";
+export type Language = 'ko' | 'en';
 
 /** 난이도 (1-5) */
 export type DifficultyLevel = 1 | 2 | 3 | 4 | 5;
 
 /** 난이도 레이블 */
 export const difficultyLabels: Record<DifficultyLevel, Record<Language, string>> = {
-  1: { ko: "초등", en: "Elementary" },
-  2: { ko: "중등", en: "Middle School" },
-  3: { ko: "고등", en: "High School" },
-  4: { ko: "대학", en: "Undergraduate" },
-  5: { ko: "대학원+", en: "Graduate+" },
+  1: { ko: '초등', en: 'Elementary' },
+  2: { ko: '중등', en: 'Middle School' },
+  3: { ko: '고등', en: 'High School' },
+  4: { ko: '대학', en: 'Undergraduate' },
+  5: { ko: '대학원+', en: 'Graduate+' },
 };
 
 // ============================================
@@ -28,24 +28,24 @@ export const difficultyLabels: Record<DifficultyLevel, Record<Language, string>>
 // ============================================
 
 export type MathField =
-  | "foundations"
-  | "algebra"
-  | "geometry"
-  | "trigonometry"
-  | "analysis"
-  | "linear-algebra"
-  | "probability"
-  | "discrete"
-  | "number-theory"
-  | "topology"
-  | "logic"
-  | "dynamics"
-  | "optimization"
-  | "numerical"
-  | "applied"
-  | "constants"
-  | "symbols"
-  | "theorems";
+  | 'foundations'
+  | 'algebra'
+  | 'geometry'
+  | 'trigonometry'
+  | 'analysis'
+  | 'linear-algebra'
+  | 'probability'
+  | 'discrete'
+  | 'number-theory'
+  | 'topology'
+  | 'logic'
+  | 'dynamics'
+  | 'optimization'
+  | 'numerical'
+  | 'applied'
+  | 'constants'
+  | 'symbols'
+  | 'theorems';
 
 /** 대분류 정보 */
 export interface MathFieldInfo {
@@ -168,7 +168,7 @@ export interface Example {
 
 /** 시각화 */
 export interface Visualization {
-  type: "graph" | "diagram" | "animation" | "interactive";
+  type: 'graph' | 'diagram' | 'animation' | 'interactive';
   description: string;
   /** Chart.js 등의 데이터 */
   data?: unknown;
@@ -223,7 +223,7 @@ export interface MathConstant {
 // 수학 기호
 // ============================================
 
-export type SymbolCategory = "operation" | "set" | "logic" | "calculus" | "greek" | "relation";
+export type SymbolCategory = 'operation' | 'set' | 'logic' | 'calculus' | 'greek' | 'relation';
 
 export interface MathSymbol {
   id: string;
@@ -270,7 +270,7 @@ export interface FamousTheorem {
 export interface SearchResult {
   concept: MathConcept;
   score: number;
-  matchedIn: ("name" | "definition" | "formula" | "tags")[];
+  matchedIn: ('name' | 'definition' | 'formula' | 'tags')[];
 }
 
 // ============================================

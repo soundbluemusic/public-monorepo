@@ -1,3 +1,3 @@
-import BrowsePage from "@/pages/BrowsePage";
+import BrowsePage from '@/pages/BrowsePage';
 
 export default BrowsePage;

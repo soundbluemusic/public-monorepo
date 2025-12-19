@@ -1,3 +1,3 @@
-import FavoritesPage from "@/pages/FavoritesPage";
+import FavoritesPage from '@/pages/FavoritesPage';
 
 export default FavoritesPage;

@@ -3,77 +3,146 @@
  * Generates sitemap.xml with hreflang support for en, ko
  */
 
-import { writeFileSync } from "node:fs";
-import { dirname, join } from "node:path";
-import { fileURLToPath } from "node:url";
+import { writeFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const PUBLIC_DIR = join(__dirname, "../public");
+const PUBLIC_DIR = join(__dirname, '../public');
 
-const SITE_URL = "https://permissive.soundbluemusic.com";
-const LANGUAGES = ["en", "ko"] as const;
-const TODAY = new Date().toISOString().split("T")[0];
+const SITE_URL = 'https://permissive.soundbluemusic.com';
+const LANGUAGES = ['en', 'ko'] as const;
+const TODAY = new Date().toISOString().split('T')[0];
 
 // Static pages
 const STATIC_PAGES = [
-  { path: "/", priority: "1.0", changefreq: "weekly" },
-  { path: "/libraries", priority: "0.9", changefreq: "weekly" },
-  { path: "/web-api", priority: "0.9", changefreq: "weekly" },
+  { path: '/', priority: '1.0', changefreq: 'weekly' },
+  { path: '/libraries', priority: '0.9', changefreq: 'weekly' },
+  { path: '/web-api', priority: '0.9', changefreq: 'weekly' },
 ];
 
 // Libraries (name -> slug)
 const LIBRARIES = [
-  "react", "vue", "solid-js", "svelte", "preact", "alpine-js", "lit",
-  "zustand", "jotai", "redux-toolkit", "pinia", "valtio", "mobx",
-  "react-router", "tanstack-router", "vue-router",
-  "tailwindcss", "unocss", "styled-components", "emotion", "panda-css",
-  "vite", "esbuild", "rollup", "swc", "turbopack", "parcel",
-  "tanstack-query", "swr", "axios", "ky",
-  "radix-ui", "headless-ui", "shadcn-ui", "ark-ui",
-  "framer-motion", "gsap", "lottie", "auto-animate",
-  "react-hook-form", "formik", "zod", "yup",
-  "date-fns", "dayjs", "lodash", "uuid", "nanoid",
-  "localforage", "dexie-js", "idb", "idb-keyval", "pouchdb", "rxdb", "lokijs",
+  'react',
+  'vue',
+  'solid-js',
+  'svelte',
+  'preact',
+  'alpine-js',
+  'lit',
+  'zustand',
+  'jotai',
+  'redux-toolkit',
+  'pinia',
+  'valtio',
+  'mobx',
+  'react-router',
+  'tanstack-router',
+  'vue-router',
+  'tailwindcss',
+  'unocss',
+  'styled-components',
+  'emotion',
+  'panda-css',
+  'vite',
+  'esbuild',
+  'rollup',
+  'swc',
+  'turbopack',
+  'parcel',
+  'tanstack-query',
+  'swr',
+  'axios',
+  'ky',
+  'radix-ui',
+  'headless-ui',
+  'shadcn-ui',
+  'ark-ui',
+  'framer-motion',
+  'gsap',
+  'lottie',
+  'auto-animate',
+  'react-hook-form',
+  'formik',
+  'zod',
+  'yup',
+  'date-fns',
+  'dayjs',
+  'lodash',
+  'uuid',
+  'nanoid',
+  'localforage',
+  'dexie-js',
+  'idb',
+  'idb-keyval',
+  'pouchdb',
+  'rxdb',
+  'lokijs',
 ];
 
 // Web APIs (name -> slug)
 const WEB_APIS = [
-  "document", "element", "event", "mutation-observer", "intersection-observer", "resize-observer",
-  "fetch", "xmlhttprequest", "websocket", "server-sent-events", "beacon",
-  "localstorage", "sessionstorage", "indexeddb", "cache-api",
-  "canvas", "webgl", "webgpu", "svg",
-  "web-audio", "media-recorder", "media-stream", "speech-synthesis", "speech-recognition",
-  "web-workers", "service-workers", "shared-workers",
-  "geolocation", "clipboard", "notifications", "vibration", "battery-status",
-  "history", "url", "formdata", "crypto", "performance",
+  'document',
+  'element',
+  'event',
+  'mutation-observer',
+  'intersection-observer',
+  'resize-observer',
+  'fetch',
+  'xmlhttprequest',
+  'websocket',
+  'server-sent-events',
+  'beacon',
+  'localstorage',
+  'sessionstorage',
+  'indexeddb',
+  'cache-api',
+  'canvas',
+  'webgl',
+  'webgpu',
+  'svg',
+  'web-audio',
+  'media-recorder',
+  'media-stream',
+  'speech-synthesis',
+  'speech-recognition',
+  'web-workers',
+  'service-workers',
+  'shared-workers',
+  'geolocation',
+  'clipboard',
+  'notifications',
+  'vibration',
+  'battery-status',
+  'history',
+  'url',
+  'formdata',
+  'crypto',
+  'performance',
 ];
 
 // Get URL with language prefix (en = no prefix)
 function getLocalizedUrl(path: string, lang: string): string {
-  if (lang === "en") {
+  if (lang === 'en') {
     return `${SITE_URL}${path}`;
   }
-  return `${SITE_URL}/ko${path === "/" ? "" : path}`;
+  return `${SITE_URL}/ko${path === '/' ? '' : path}`;
 }
 
 // Generate hreflang links
 function generateHreflangLinks(path: string): string {
   const links = LANGUAGES.map(
     (lang) =>
-      `    <xhtml:link rel="alternate" hreflang="${lang}" href="${getLocalizedUrl(path, lang)}" />`
-  ).join("\n");
+      `    <xhtml:link rel="alternate" hreflang="${lang}" href="${getLocalizedUrl(path, lang)}" />`,
+  ).join('\n');
 
-  return `${links}\n    <xhtml:link rel="alternate" hreflang="x-default" href="${getLocalizedUrl(path, "en")}" />`;
+  return `${links}\n    <xhtml:link rel="alternate" hreflang="x-default" href="${getLocalizedUrl(path, 'en')}" />`;
 }
 
 // Generate URL entry
-function generateUrlEntry(
-  path: string,
-  priority: string,
-  changefreq: string
-): string {
+function generateUrlEntry(path: string, priority: string, changefreq: string): string {
   return `  <url>
-    <loc>${getLocalizedUrl(path, "en")}</loc>
+    <loc>${getLocalizedUrl(path, 'en')}</loc>
     <lastmod>${TODAY}</lastmod>
 ${generateHreflangLinks(path)}
     <changefreq>${changefreq}</changefreq>
@@ -87,7 +156,7 @@ function generateSitemap(urls: string[]): string {
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${urls.join("\n")}
+${urls.join('\n')}
 </urlset>`;
 }
 
@@ -98,9 +167,9 @@ function generateSitemapIndex(sitemaps: string[]): string {
       (name) => `  <sitemap>
     <loc>${SITE_URL}/${name}</loc>
     <lastmod>${TODAY}</lastmod>
-  </sitemap>`
+  </sitemap>`,
     )
-    .join("\n");
+    .join('\n');
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
@@ -198,45 +267,43 @@ function generateXslStylesheet(): string {
 
 // Main function
 async function main() {
-  console.log("🗺️  Generating sitemaps for Permissive...\n");
+  console.log('🗺️  Generating sitemaps for Permissive...\n');
 
   // Generate static pages sitemap
   const staticUrls = STATIC_PAGES.map((page) =>
-    generateUrlEntry(page.path, page.priority, page.changefreq)
+    generateUrlEntry(page.path, page.priority, page.changefreq),
   );
   const staticSitemap = generateSitemap(staticUrls);
-  writeFileSync(join(PUBLIC_DIR, "sitemap-pages.xml"), staticSitemap);
+  writeFileSync(join(PUBLIC_DIR, 'sitemap-pages.xml'), staticSitemap);
   console.log(`✅ sitemap-pages.xml (${STATIC_PAGES.length} pages × 2 languages)`);
 
   // Generate libraries sitemap
   const libraryUrls = LIBRARIES.map((lib) =>
-    generateUrlEntry(`/libraries/${lib}`, "0.7", "monthly")
+    generateUrlEntry(`/libraries/${lib}`, '0.7', 'monthly'),
   );
   const librarySitemap = generateSitemap(libraryUrls);
-  writeFileSync(join(PUBLIC_DIR, "sitemap-libraries.xml"), librarySitemap);
+  writeFileSync(join(PUBLIC_DIR, 'sitemap-libraries.xml'), librarySitemap);
   console.log(`✅ sitemap-libraries.xml (${LIBRARIES.length} libraries × 2 languages)`);
 
   // Generate web APIs sitemap
-  const apiUrls = WEB_APIS.map((api) =>
-    generateUrlEntry(`/web-api/${api}`, "0.7", "monthly")
-  );
+  const apiUrls = WEB_APIS.map((api) => generateUrlEntry(`/web-api/${api}`, '0.7', 'monthly'));
   const apiSitemap = generateSitemap(apiUrls);
-  writeFileSync(join(PUBLIC_DIR, "sitemap-webapi.xml"), apiSitemap);
+  writeFileSync(join(PUBLIC_DIR, 'sitemap-webapi.xml'), apiSitemap);
   console.log(`✅ sitemap-webapi.xml (${WEB_APIS.length} APIs × 2 languages)`);
 
   // Generate sitemap index
   const sitemapIndex = generateSitemapIndex([
-    "sitemap-pages.xml",
-    "sitemap-libraries.xml",
-    "sitemap-webapi.xml",
+    'sitemap-pages.xml',
+    'sitemap-libraries.xml',
+    'sitemap-webapi.xml',
   ]);
-  writeFileSync(join(PUBLIC_DIR, "sitemap.xml"), sitemapIndex);
-  console.log("✅ sitemap.xml (index)");
+  writeFileSync(join(PUBLIC_DIR, 'sitemap.xml'), sitemapIndex);
+  console.log('✅ sitemap.xml (index)');
 
   // Generate XSL stylesheet
   const xslStylesheet = generateXslStylesheet();
-  writeFileSync(join(PUBLIC_DIR, "sitemap.xsl"), xslStylesheet);
-  console.log("✅ sitemap.xsl (stylesheet)");
+  writeFileSync(join(PUBLIC_DIR, 'sitemap.xsl'), xslStylesheet);
+  console.log('✅ sitemap.xsl (stylesheet)');
 
   // Summary
   const totalUrls = STATIC_PAGES.length + LIBRARIES.length + WEB_APIS.length;

@@ -1,2 +1,2 @@
-import LicensePage from "@/pages/LicensePage";
+import LicensePage from '@/pages/LicensePage';
 export default LicensePage;

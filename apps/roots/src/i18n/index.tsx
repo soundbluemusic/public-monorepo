@@ -1,3 +1,4 @@
+import { useLocation, useNavigate } from '@solidjs/router';
 /**
  * @fileoverview URL 기반 로케일 라우팅 시스템 (ko, en)
  *
@@ -5,15 +6,9 @@
  * - `/` 또는 `/browse` → 영어 (기본)
  * - `/ko` 또는 `/ko/browse` → 한국어
  */
-import {
-  createContext,
-  useContext,
-  createMemo,
-  type ParentComponent,
-} from "solid-js";
-import { useLocation, useNavigate } from "@solidjs/router";
+import { type ParentComponent, createContext, createMemo, useContext } from 'solid-js';
 
-export type Language = "ko" | "en";
+export type Language = 'ko' | 'en';
 
 export interface UILabels {
   // Common
@@ -107,170 +102,170 @@ const I18nContext = createContext<I18nContextType>();
 const translations: Record<Language, UILabels> = {
   ko: {
     // Common
-    search: "검색",
-    searchPlaceholder: "수학 개념을 검색하세요...",
-    home: "홈",
-    browse: "찾아보기",
-    about: "소개",
-    noResults: "검색 결과가 없습니다",
-    loading: "로딩 중...",
+    search: '검색',
+    searchPlaceholder: '수학 개념을 검색하세요...',
+    home: '홈',
+    browse: '찾아보기',
+    about: '소개',
+    noResults: '검색 결과가 없습니다',
+    loading: '로딩 중...',
 
     // Navigation
-    backToList: "목록으로",
-    viewAll: "전체 보기",
-    previous: "이전",
-    next: "다음",
+    backToList: '목록으로',
+    viewAll: '전체 보기',
+    previous: '이전',
+    next: '다음',
 
     // Math specific
-    definition: "정의",
-    formula: "공식",
-    formulas: "공식들",
-    example: "예제",
-    examples: "예제들",
-    visualization: "시각화",
-    history: "역사",
-    applications: "응용 분야",
-    relatedConcepts: "연관 개념",
+    definition: '정의',
+    formula: '공식',
+    formulas: '공식들',
+    example: '예제',
+    examples: '예제들',
+    visualization: '시각화',
+    history: '역사',
+    applications: '응용 분야',
+    relatedConcepts: '연관 개념',
 
     // Difficulty
-    difficulty: "난이도",
-    elementary: "초등",
-    middleSchool: "중등",
-    highSchool: "고등",
-    undergraduate: "대학",
-    graduate: "대학원+",
+    difficulty: '난이도',
+    elementary: '초등',
+    middleSchool: '중등',
+    highSchool: '고등',
+    undergraduate: '대학',
+    graduate: '대학원+',
 
     // Relations
-    prerequisites: "선행 개념",
-    nextTopics: "후행 개념",
-    related: "관련 개념",
-    appliedIn: "응용 분야",
+    prerequisites: '선행 개념',
+    nextTopics: '후행 개념',
+    related: '관련 개념',
+    appliedIn: '응용 분야',
 
     // Math fields
-    foundations: "기초 수학",
-    algebra: "대수학",
-    geometry: "기하학",
-    trigonometry: "삼각법",
-    analysis: "해석학",
-    linearAlgebra: "선형대수",
-    probability: "확률/통계",
-    discrete: "이산수학",
-    numberTheory: "수론",
-    topology: "위상수학",
-    logic: "수리논리",
-    dynamics: "동역학/카오스",
-    optimization: "최적화",
-    numerical: "수치해석",
-    applied: "응용수학",
-    constants: "수학 상수",
-    symbols: "수학 기호",
-    theorems: "유명 정리",
+    foundations: '기초 수학',
+    algebra: '대수학',
+    geometry: '기하학',
+    trigonometry: '삼각법',
+    analysis: '해석학',
+    linearAlgebra: '선형대수',
+    probability: '확률/통계',
+    discrete: '이산수학',
+    numberTheory: '수론',
+    topology: '위상수학',
+    logic: '수리논리',
+    dynamics: '동역학/카오스',
+    optimization: '최적화',
+    numerical: '수치해석',
+    applied: '응용수학',
+    constants: '수학 상수',
+    symbols: '수학 기호',
+    theorems: '유명 정리',
 
     // Hero
-    heroTitle: "수리 - 수학 문서",
-    heroSubtitle: "누구나 쉽게 배우는 수학 개념 사전",
-    featuredConcepts: "주요 개념",
-    browseByField: "분야별 찾아보기",
+    heroTitle: '수리 - 수학 문서',
+    heroSubtitle: '누구나 쉽게 배우는 수학 개념 사전',
+    featuredConcepts: '주요 개념',
+    browseByField: '분야별 찾아보기',
 
     // About
-    aboutTitle: "수리 소개",
-    aboutDescription: "모든 수준의 학습자를 위한 수학 개념 문서입니다.",
+    aboutTitle: '수리 소개',
+    aboutDescription: '모든 수준의 학습자를 위한 수학 개념 문서입니다.',
 
     // Favorites & Study
-    favorites: "즐겨찾기",
-    study: "학습",
-    learningPath: "학습 경로",
-    progress: "진행률",
-    recentlyViewed: "최근 본 문서",
+    favorites: '즐겨찾기',
+    study: '학습',
+    learningPath: '학습 경로',
+    progress: '진행률',
+    recentlyViewed: '최근 본 문서',
   },
   en: {
     // Common
-    search: "Search",
-    searchPlaceholder: "Search math concepts...",
-    home: "Home",
-    browse: "Browse",
-    about: "About",
-    noResults: "No results found",
-    loading: "Loading...",
+    search: 'Search',
+    searchPlaceholder: 'Search math concepts...',
+    home: 'Home',
+    browse: 'Browse',
+    about: 'About',
+    noResults: 'No results found',
+    loading: 'Loading...',
 
     // Navigation
-    backToList: "Back to list",
-    viewAll: "View all",
-    previous: "Previous",
-    next: "Next",
+    backToList: 'Back to list',
+    viewAll: 'View all',
+    previous: 'Previous',
+    next: 'Next',
 
     // Math specific
-    definition: "Definition",
-    formula: "Formula",
-    formulas: "Formulas",
-    example: "Example",
-    examples: "Examples",
-    visualization: "Visualization",
-    history: "History",
-    applications: "Applications",
-    relatedConcepts: "Related Concepts",
+    definition: 'Definition',
+    formula: 'Formula',
+    formulas: 'Formulas',
+    example: 'Example',
+    examples: 'Examples',
+    visualization: 'Visualization',
+    history: 'History',
+    applications: 'Applications',
+    relatedConcepts: 'Related Concepts',
 
     // Difficulty
-    difficulty: "Difficulty",
-    elementary: "Elementary",
-    middleSchool: "Middle School",
-    highSchool: "High School",
-    undergraduate: "Undergraduate",
-    graduate: "Graduate+",
+    difficulty: 'Difficulty',
+    elementary: 'Elementary',
+    middleSchool: 'Middle School',
+    highSchool: 'High School',
+    undergraduate: 'Undergraduate',
+    graduate: 'Graduate+',
 
     // Relations
-    prerequisites: "Prerequisites",
-    nextTopics: "Next Topics",
-    related: "Related",
-    appliedIn: "Applied In",
+    prerequisites: 'Prerequisites',
+    nextTopics: 'Next Topics',
+    related: 'Related',
+    appliedIn: 'Applied In',
 
     // Math fields
-    foundations: "Foundations",
-    algebra: "Algebra",
-    geometry: "Geometry",
-    trigonometry: "Trigonometry",
-    analysis: "Analysis",
-    linearAlgebra: "Linear Algebra",
-    probability: "Probability & Statistics",
-    discrete: "Discrete Math",
-    numberTheory: "Number Theory",
-    topology: "Topology",
-    logic: "Mathematical Logic",
-    dynamics: "Dynamics & Chaos",
-    optimization: "Optimization",
-    numerical: "Numerical Analysis",
-    applied: "Applied Math",
-    constants: "Constants",
-    symbols: "Symbols",
-    theorems: "Famous Theorems",
+    foundations: 'Foundations',
+    algebra: 'Algebra',
+    geometry: 'Geometry',
+    trigonometry: 'Trigonometry',
+    analysis: 'Analysis',
+    linearAlgebra: 'Linear Algebra',
+    probability: 'Probability & Statistics',
+    discrete: 'Discrete Math',
+    numberTheory: 'Number Theory',
+    topology: 'Topology',
+    logic: 'Mathematical Logic',
+    dynamics: 'Dynamics & Chaos',
+    optimization: 'Optimization',
+    numerical: 'Numerical Analysis',
+    applied: 'Applied Math',
+    constants: 'Constants',
+    symbols: 'Symbols',
+    theorems: 'Famous Theorems',
 
     // Hero
-    heroTitle: "Roots - Math Documentation",
-    heroSubtitle: "Learn math concepts easily",
-    featuredConcepts: "Featured Concepts",
-    browseByField: "Browse by Field",
+    heroTitle: 'Roots - Math Documentation',
+    heroSubtitle: 'Learn math concepts easily',
+    featuredConcepts: 'Featured Concepts',
+    browseByField: 'Browse by Field',
 
     // About
-    aboutTitle: "About Roots",
-    aboutDescription: "Math concept documentation for learners of all levels.",
+    aboutTitle: 'About Roots',
+    aboutDescription: 'Math concept documentation for learners of all levels.',
 
     // Favorites & Study
-    favorites: "Favorites",
-    study: "Study",
-    learningPath: "Learning Path",
-    progress: "Progress",
-    recentlyViewed: "Recently Viewed",
+    favorites: 'Favorites',
+    study: 'Study',
+    learningPath: 'Learning Path',
+    progress: 'Progress',
+    recentlyViewed: 'Recently Viewed',
   },
 };
 
 function getLocaleFromPath(pathname: string): Language {
-  if (pathname.startsWith("/ko/") || pathname === "/ko") return "ko";
-  return "en";
+  if (pathname.startsWith('/ko/') || pathname === '/ko') return 'ko';
+  return 'en';
 }
 
 function stripLocaleFromPath(pathname: string): string {
-  if (pathname.startsWith("/ko/")) return pathname.slice(3) || "/";
-  if (pathname === "/ko") return "/";
+  if (pathname.startsWith('/ko/')) return pathname.slice(3) || '/';
+  if (pathname === '/ko') return '/';
   return pathname;
 }
 
@@ -286,10 +281,10 @@ export const I18nProvider: ParentComponent = (props) => {
     const currentPath = stripLocaleFromPath(location.pathname);
     let newPath: string;
 
-    if (lang === "en") {
+    if (lang === 'en') {
       newPath = currentPath;
     } else {
-      newPath = `/${lang}${currentPath === "/" ? "" : currentPath}`;
+      newPath = `/${lang}${currentPath === '/' ? '' : currentPath}`;
     }
 
     navigate(newPath);
@@ -299,14 +294,14 @@ export const I18nProvider: ParentComponent = (props) => {
     return translations[locale()][key] || key;
   };
 
-  const isKorean = () => locale() === "ko";
+  const isKorean = () => locale() === 'ko';
 
   const localePath = (path: string): string => {
     const currentLocale = locale();
-    if (currentLocale === "en") {
+    if (currentLocale === 'en') {
       return path;
     }
-    return `/${currentLocale}${path === "/" ? "" : path}`;
+    return `/${currentLocale}${path === '/' ? '' : path}`;
   };
 
   return (
@@ -319,7 +314,7 @@ export const I18nProvider: ParentComponent = (props) => {
 export const useI18n = () => {
   const context = useContext(I18nContext);
   if (!context) {
-    throw new Error("useI18n must be used within I18nProvider");
+    throw new Error('useI18n must be used within I18nProvider');
   }
   return context;
 };
@@ -328,11 +323,11 @@ export const useLocale = () => useI18n().locale;
 export const useT = () => useI18n().t;
 
 export const languageNames: Record<Language, { native: string; english: string }> = {
-  ko: { native: "한국어", english: "Korean" },
-  en: { native: "English", english: "English" },
+  ko: { native: '한국어', english: 'Korean' },
+  en: { native: 'English', english: 'English' },
 };
 
 export const languageFlags: Record<Language, string> = {
-  ko: "KR",
-  en: "EN",
+  ko: 'KR',
+  en: 'EN',
 };

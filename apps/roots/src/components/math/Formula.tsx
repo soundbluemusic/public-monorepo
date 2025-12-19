@@ -1,9 +1,9 @@
+import type { Formula as FormulaType } from '@/data/types';
 /**
  * @fileoverview 수학 공식 카드 컴포넌트
  */
-import { Show, For } from "solid-js";
-import { LaTeX } from "./LaTeX";
-import type { Formula as FormulaType } from "@/data/types";
+import { For, Show } from 'solid-js';
+import { LaTeX } from './LaTeX';
 
 interface FormulaCardProps {
   formula: FormulaType;
@@ -38,24 +38,21 @@ export function FormulaCard(props: FormulaCardProps) {
       </div>
 
       {/* 설명 */}
-      <p
-        class="text-sm mb-2"
-        style={{ color: "var(--text-secondary)" }}
-      >
+      <p class="text-sm mb-2" style={{ color: 'var(--text-secondary)' }}>
         {props.formula.description}
       </p>
 
       {/* 변수 설명 */}
       <Show when={props.formula.variables && props.formula.variables.length > 0}>
-        <ul class="text-sm space-y-1" style={{ color: "var(--text-tertiary)" }}>
+        <ul class="text-sm space-y-1" style={{ color: 'var(--text-tertiary)' }}>
           <For each={props.formula.variables}>
             {(variable) => (
               <li class="flex items-center gap-2">
                 <span
                   class="font-mono px-1.5 py-0.5 rounded"
                   style={{
-                    "background-color": "var(--bg-tertiary)",
-                    color: "var(--math-formula)",
+                    'background-color': 'var(--bg-tertiary)',
+                    color: 'var(--math-formula)',
                   }}
                 >
                   <LaTeX math={variable.symbol} />
@@ -79,7 +76,7 @@ export function FormulaList(props: { formulas: FormulaType[]; title?: string }) 
       <Show when={props.title}>
         <h3
           class="text-lg font-semibold flex items-center gap-2"
-          style={{ color: "var(--text-primary)" }}
+          style={{ color: 'var(--text-primary)' }}
         >
           <span>📐</span>
           {props.title}

@@ -40,8 +40,8 @@ export default function ConceptPage() {
   // 개념 맵 로드 (RelationLinks용)
   const [conceptsLoaded] = createResource(loadConcepts);
 
-  const field = () => concept() && getFieldById(concept()!.field);
-  const subfield = () => concept() && getSubfieldById(concept()!.subfield);
+  const field = () => concept() && getFieldById(concept()?.field);
+  const subfield = () => concept() && getSubfieldById(concept()?.subfield);
 
   // 즐겨찾기 상태
   const [isFavorite, setIsFavorite] = createSignal(false);
@@ -171,16 +171,16 @@ export default function ConceptPage() {
               </section>
 
               {/* 공식 Formulas */}
-              <Show when={content()?.formulas && content()!.formulas!.length > 0}>
+              <Show when={content()?.formulas?.length && content()?.formulas.length > 0}>
                 <section>
-                  <FormulaList formulas={content()!.formulas!} title={t('formulas')} />
+                  <FormulaList formulas={content()?.formulas ?? []} title={t('formulas')} />
                 </section>
               </Show>
 
               {/* 예제 Examples */}
-              <Show when={content()?.examples && content()!.examples.length > 0}>
+              <Show when={content()?.examples && content()?.examples.length > 0}>
                 <section>
-                  <ExampleList examples={content()!.examples} title={t('examples')} />
+                  <ExampleList examples={content()?.examples} title={t('examples')} />
                 </section>
               </Show>
 
@@ -192,31 +192,31 @@ export default function ConceptPage() {
                     {t('history')}
                   </h2>
                   <div class="rounded-lg p-4 bg-bg-secondary border border-border-primary">
-                    <Show when={content()!.history!.discoveredBy}>
+                    <Show when={content()?.history?.discoveredBy}>
                       <p class="text-text-secondary">
                         <strong class="text-text-primary">
                           {locale() === 'ko' ? '발견자' : 'Discovered by'}:
                         </strong>{' '}
-                        {content()!.history!.discoveredBy}
-                        <Show when={content()!.history!.year}> ({content()!.history!.year})</Show>
+                        {content()?.history?.discoveredBy}
+                        <Show when={content()?.history?.year}> ({content()?.history?.year})</Show>
                       </p>
                     </Show>
-                    <Show when={content()!.history!.background}>
-                      <p class="mt-2 text-text-tertiary">{content()!.history!.background}</p>
+                    <Show when={content()?.history?.background}>
+                      <p class="mt-2 text-text-tertiary">{content()?.history?.background}</p>
                     </Show>
                   </div>
                 </section>
               </Show>
 
               {/* 응용 분야 Applications */}
-              <Show when={content()?.applications && content()!.applications!.length > 0}>
+              <Show when={content()?.applications && content()?.applications?.length > 0}>
                 <section>
                   <h2 class="text-xl font-semibold mb-3 flex items-center gap-2 text-text-primary">
                     <span>⚡</span>
                     {t('applications')}
                   </h2>
                   <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <For each={content()!.applications}>
+                    <For each={content()?.applications}>
                       {(app) => (
                         <div class="rounded-lg p-3 bg-bg-secondary border border-border-primary">
                           <h4 class="font-medium mb-1 text-text-primary">{app.field}</h4>

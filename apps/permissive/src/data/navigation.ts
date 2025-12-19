@@ -5,6 +5,6 @@ export interface NavItem {
 }
 
 export const navigation: NavItem[] = [
-  { title: "Web API", titleKo: "Web API", href: "/web-api" },
-  { title: "Libraries", titleKo: "Libraries", href: "/libraries" },
+  { title: 'Web API', titleKo: 'Web API', href: '/web-api' },
+  { title: 'Libraries', titleKo: 'Libraries', href: '/libraries' },
 ];

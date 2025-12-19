@@ -24,7 +24,7 @@
  * <PageSkeleton />
  * ```
  */
-import { For } from "solid-js";
+import { For } from 'solid-js';
 
 /**
  * 기본 스켈레톤 박스
@@ -34,7 +34,7 @@ import { For } from "solid-js";
  * <Skeleton class="h-10 w-32 rounded-lg" />
  */
 export function Skeleton(props: { class?: string }) {
-  return <div class={`skeleton ${props.class || ""}`} />;
+  return <div class={`skeleton ${props.class || ''}`} />;
 }
 
 /**
@@ -48,13 +48,10 @@ export function Skeleton(props: { class?: string }) {
 export function SkeletonText(props: { lines?: number; class?: string }) {
   const lines = props.lines || 3;
   return (
-    <div class={`space-y-2 ${props.class || ""}`}>
+    <div class={`space-y-2 ${props.class || ''}`}>
       <For each={Array(lines).fill(0)}>
         {(_, i) => (
-          <div
-            class="skeleton h-4 rounded"
-            style={{ width: i() === lines - 1 ? "60%" : "100%" }}
-          />
+          <div class="skeleton h-4 rounded" style={{ width: i() === lines - 1 ? '60%' : '100%' }} />
         )}
       </For>
     </div>
@@ -132,9 +129,7 @@ export function PageSkeleton() {
 
       {/* Grid skeleton */}
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <For each={Array(6).fill(0)}>
-          {() => <SkeletonCard />}
-        </For>
+        <For each={Array(6).fill(0)}>{() => <SkeletonCard />}</For>
       </div>
     </div>
   );

@@ -1,2 +1,2 @@
-import SitemapPage from "@/pages/SitemapPage";
+import SitemapPage from '@/pages/SitemapPage';
 export default SitemapPage;

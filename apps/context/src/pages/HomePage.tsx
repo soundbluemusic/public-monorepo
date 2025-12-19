@@ -1,16 +1,18 @@
-import { Title, Meta } from "@solidjs/meta";
-import { A } from "@solidjs/router";
-import { For, Show } from "solid-js";
-import { Layout } from "@/components/Layout";
-import { getFeaturedEntries } from "@/data/entries";
-import type { MeaningEntry, Language } from "@/data/types";
-import { useI18n } from "@/i18n";
+import { Layout } from '@/components/Layout';
+import { getFeaturedEntries } from '@/data/entries';
+import type { Language, MeaningEntry } from '@/data/types';
+import { useI18n } from '@/i18n';
+import { Meta, Title } from '@solidjs/meta';
+import { A } from '@solidjs/router';
+import { For, Show } from 'solid-js';
 
 // Get pronunciation based on locale
 const getPronunciation = (entry: MeaningEntry, locale: Language): string | undefined => {
   switch (locale) {
-    case "en": return entry.romanization;
-    case "ko": return entry.pronunciation;
+    case 'en':
+      return entry.romanization;
+    case 'ko':
+      return entry.pronunciation;
   }
 };
 
@@ -19,8 +21,8 @@ export default function HomePage() {
   const featuredEntries = getFeaturedEntries(12);
 
   const getMetaDescription = () => {
-    if (locale() === "ko") return "한국어 학습자를 위한 의미 사전";
-    return "Meaning dictionary for Korean learners";
+    if (locale() === 'ko') return '한국어 학습자를 위한 의미 사전';
+    return 'Meaning dictionary for Korean learners';
   };
 
   return (
@@ -29,13 +31,13 @@ export default function HomePage() {
       <Meta name="description" content={getMetaDescription()} />
 
       <div class="mb-8">
-        <h1 class="text-2xl font-semibold mb-2" style={{ color: "var(--text-primary)" }}>
-          {locale() === "ko" ? "한국어 의미 사전" : "Korean Dictionary"}
+        <h1 class="text-2xl font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>
+          {locale() === 'ko' ? '한국어 의미 사전' : 'Korean Dictionary'}
         </h1>
-        <p style={{ color: "var(--text-secondary)" }}>
-          {locale() === "ko"
-            ? "한국어 단어의 의미를 영어로 설명합니다"
-            : "Korean words explained in English"}
+        <p style={{ color: 'var(--text-secondary)' }}>
+          {locale() === 'ko'
+            ? '한국어 단어의 의미를 영어로 설명합니다'
+            : 'Korean words explained in English'}
         </p>
       </div>
 
@@ -48,19 +50,19 @@ export default function HomePage() {
               <A
                 href={localePath(`/entry/${entry.id}`)}
                 class="flex items-baseline justify-between py-3 -mx-2 px-2 rounded transition-colors"
-                style={{ "border-bottom": "1px solid var(--border-primary)" }}
+                style={{ 'border-bottom': '1px solid var(--border-primary)' }}
               >
                 <div class="flex items-baseline gap-3">
-                  <span class="text-lg font-medium" style={{ color: "var(--text-primary)" }}>
+                  <span class="text-lg font-medium" style={{ color: 'var(--text-primary)' }}>
                     {entry.korean}
                   </span>
                   <Show when={pronunciation}>
-                    <span class="text-sm" style={{ color: "var(--text-tertiary)" }}>
+                    <span class="text-sm" style={{ color: 'var(--text-tertiary)' }}>
                       {pronunciation}
                     </span>
                   </Show>
                 </div>
-                <span class="text-sm" style={{ color: "var(--text-secondary)" }}>
+                <span class="text-sm" style={{ color: 'var(--text-secondary)' }}>
                   {translation.word}
                 </span>
               </A>
@@ -71,11 +73,11 @@ export default function HomePage() {
 
       <div class="mt-8 text-center">
         <A
-          href={localePath("/browse")}
+          href={localePath('/browse')}
           class="text-sm transition-colors"
-          style={{ color: "var(--accent-primary)" }}
+          style={{ color: 'var(--accent-primary)' }}
         >
-          {t("viewAll")} →
+          {t('viewAll')} →
         </A>
       </div>
     </Layout>
