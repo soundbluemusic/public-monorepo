@@ -250,21 +250,11 @@ export default function Sidebar(props: SidebarProps) {
                 <A
                   href={localePath(item.href)}
                   onClick={() => props.onClose()}
-                  class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all"
-                  style={{
-                    'background-color': isActive(item.href) ? 'var(--bg-tertiary)' : 'transparent',
-                    color: isActive(item.href) ? 'var(--accent-primary)' : 'var(--text-secondary)',
-                  }}
-                  onMouseEnter={(e) => {
-                    if (!isActive(item.href)) {
-                      e.currentTarget.style.backgroundColor = 'var(--bg-secondary)';
-                    }
-                  }}
-                  onMouseLeave={(e) => {
-                    if (!isActive(item.href)) {
-                      e.currentTarget.style.backgroundColor = 'transparent';
-                    }
-                  }}
+                  class={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                    isActive(item.href)
+                      ? 'bg-tertiary text-accent'
+                      : 'text-secondary hover:bg-secondary'
+                  }`}
                   title={
                     props.isCollapsed && !props.isMobile
                       ? locale() === 'ko'
