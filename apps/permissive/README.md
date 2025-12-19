@@ -69,17 +69,11 @@ That's it. 3 pages.
 ## Development (개발)
 
 ```bash
-# Install
-npm install
-
-# Dev server
-npm run dev
+# From monorepo root
+pnpm dev:permissive     # → http://localhost:3004
 
 # Build (outputs to .output/public)
-npm run build
-
-# Preview
-npx serve .output/public
+pnpm build:permissive
 ```
 
 ---

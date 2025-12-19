@@ -1,12 +1,26 @@
-import { MetaProvider } from "@solidjs/meta";
-import { Router, type RouteSectionProps } from "@solidjs/router";
-import { FileRoutes } from "@solidjs/start/router";
-import { Suspense } from "solid-js";
-import { I18nProvider } from "@/i18n";
-import { OfflineIndicator } from "@soundblue/shared";
-import "./app.css";
+import { I18nProvider } from '@/i18n';
+/**
+ * @fileoverview Context 앱 루트 컴포넌트
+ *
+ * SolidStart 앱의 최상위 컴포넌트로, 라우터 설정과 전역 프로바이더를 구성합니다.
+ * - MetaProvider: SEO 메타태그 관리
+ * - I18nProvider: 다국어(한/영) 지원
+ * - OfflineIndicator: 오프라인 상태 표시 (PWA)
+ * - Suspense: 비동기 컴포넌트 로딩 처리
+ */
+import { MetaProvider } from '@solidjs/meta';
+import { type RouteSectionProps, Router } from '@solidjs/router';
+import { FileRoutes } from '@solidjs/start/router';
+import { OfflineIndicator } from '@soundblue/shared';
+import { Suspense } from 'solid-js';
+import './app.css';
 
-// Loading skeleton UI
+/**
+ * 페이지 로딩 중 표시되는 스켈레톤 UI
+ *
+ * Suspense fallback으로 사용되며, 헤더와 콘텐츠 영역의
+ * 레이아웃을 미리 보여줍니다.
+ */
 function LoadingFallback() {
   return (
     <div class="min-h-screen bg-gray-50 dark:bg-gray-900">
@@ -39,6 +53,14 @@ function LoadingFallback() {
   );
 }
 
+/**
+ * 앱 루트 컴포넌트
+ *
+ * SolidStart의 Router를 설정하고 전역 프로바이더들을 래핑합니다.
+ * FileRoutes를 통해 파일 기반 라우팅을 사용합니다.
+ *
+ * @returns 앱 전체를 감싸는 Router 컴포넌트
+ */
 export default function App() {
   return (
     <Router
@@ -46,9 +68,7 @@ export default function App() {
         <MetaProvider>
           <I18nProvider>
             <OfflineIndicator />
-            <Suspense fallback={<LoadingFallback />}>
-              {props.children}
-            </Suspense>
+            <Suspense fallback={<LoadingFallback />}>{props.children}</Suspense>
           </I18nProvider>
         </MetaProvider>
       )}

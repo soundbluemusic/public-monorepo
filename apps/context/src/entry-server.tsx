@@ -1,5 +1,14 @@
-// @refresh reload
-import { createHandler, StartServer } from "@solidjs/start/server";
+/**
+ * @fileoverview 서버 엔트리 포인트
+ *
+ * SSG 빌드 시 HTML 문서 구조를 정의합니다.
+ * - HTML 언어 설정 (ko)
+ * - PWA 메타태그 및 매니페스트
+ * - 아이콘 및 테마 색상
+ *
+ * @refresh reload - HMR 시 전체 새로고침 활성화
+ */
+import { StartServer, createHandler } from '@solidjs/start/server';
 
 export default createHandler(() => (
   <StartServer
