@@ -37,17 +37,8 @@ import type { Language, MeaningEntry } from '../types';
 // 레거시 엔트리 (마이그레이션 완료 시 제거 예정)
 import { meaningEntries as legacyEntries } from '../entries.legacy';
 
-// JSON에서 생성된 엔트리 (빌드 시 자동 생성)
-// 파일이 없으면 빈 배열 사용 (첫 빌드 전)
-let jsonEntries: MeaningEntry[] = [];
-try {
-  // @ts-ignore - generated file may not exist yet
-  const generated = await import('../generated/entries.js');
-  jsonEntries = generated.jsonEntries ?? [];
-} catch {
-  // 첫 빌드 전이거나 생성 파일이 없는 경우
-  jsonEntries = [];
-}
+// JSON에서 생성된 엔트리 (prebuild 스크립트에서 생성됨)
+import { jsonEntries } from '../generated/entries';
 
 // JSON 엔트리의 ID 목록 (중복 제거용)
 const jsonEntryIds = new Set(jsonEntries.map((e) => e.id));

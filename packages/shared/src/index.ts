@@ -63,13 +63,6 @@ export {
   createRecentViewsHelper,
 } from './db';
 
-// Data loader utilities (build-time only)
-export {
-  loadJsonDirectory,
-  loadJsonFile,
-  loadJsonAsMap,
-  groupJsonBy,
-  validateRequiredFields,
-  checkDuplicateIds,
-  type ValidationResult,
-} from './data';
+// Data loader utilities are in a separate entry point
+// Import from '@soundblue/shared/node' for Node.js-only utilities
+// Example: import { loadJsonDirectory } from '@soundblue/shared/node'
