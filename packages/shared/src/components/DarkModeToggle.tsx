@@ -37,16 +37,19 @@ export interface DarkModeToggleProps {
  * ```
  */
 export function DarkModeToggle(props: DarkModeToggleProps) {
+  // 안전하게 darkMode 값 가져오기 (함수가 아닐 경우 대비)
+  const isDark = () => (typeof props.darkMode === 'function' ? props.darkMode() : false);
+
   return (
     <button
       type="button"
       onClick={props.onToggle}
       class={`p-2 rounded-lg transition-colors cursor-pointer hover:bg-(--bg-tertiary) ${props.class || ''}`}
       style={{ color: 'var(--text-secondary)', ...props.style }}
-      aria-label={props.darkMode() ? 'Switch to light mode' : 'Switch to dark mode'}
-      title={props.darkMode() ? 'Light mode' : 'Dark mode'}
+      aria-label={isDark() ? 'Switch to light mode' : 'Switch to dark mode'}
+      title={isDark() ? 'Light mode' : 'Dark mode'}
     >
-      {props.darkMode() ? (
+      {isDark() ? (
         // Sun icon (현재 다크 모드 → 라이트로 전환)
         <svg
           aria-hidden="true"
