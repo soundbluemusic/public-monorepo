@@ -11,9 +11,12 @@
  * export const settings = createSettingsHelper(db.settings, defaultSettings);
  * ```
  */
-import type { EntityTable } from 'dexie';
+import type { EntityTable, Table } from 'dexie';
 import { validateId } from '../validation';
 import type { BaseFavorite, BaseRecentView, BaseSettings } from './types';
+
+// Dexie EntityTable의 strict 타입 체크를 우회하기 위한 헬퍼
+type AnyTable<T> = Table<T, number>;
 
 /**
  * 즐겨찾기 헬퍼 팩토리
@@ -33,42 +36,43 @@ export function createFavoritesHelper<T extends BaseFavorite & Record<K, string>
   table: EntityTable<T, 'id'>,
   idFieldName: K,
 ) {
+  const t = table as unknown as AnyTable<T>;
   return {
     async add(itemId: string) {
       validateId(itemId, idFieldName);
-      const exists = await table.where(idFieldName).equals(itemId).first();
+      const exists = await t.where(idFieldName).equals(itemId).first();
       if (exists) return exists.id;
-      return table.add({ [idFieldName]: itemId, addedAt: new Date() } as unknown as T);
+      return t.add({ [idFieldName]: itemId, addedAt: new Date() } as unknown as T);
     },
 
     async remove(itemId: string) {
       validateId(itemId, idFieldName);
-      return table.where(idFieldName).equals(itemId).delete();
+      return t.where(idFieldName).equals(itemId).delete();
     },
 
     async toggle(itemId: string) {
       validateId(itemId, idFieldName);
-      const exists = await table.where(idFieldName).equals(itemId).first();
+      const exists = await t.where(idFieldName).equals(itemId).first();
       if (exists) {
-        await table.delete(exists.id!);
+        await t.delete(exists.id!);
         return false;
       }
-      await table.add({ [idFieldName]: itemId, addedAt: new Date() } as unknown as T);
+      await t.add({ [idFieldName]: itemId, addedAt: new Date() } as unknown as T);
       return true;
     },
 
     async isFavorite(itemId: string) {
       validateId(itemId, idFieldName);
-      const exists = await table.where(idFieldName).equals(itemId).first();
+      const exists = await t.where(idFieldName).equals(itemId).first();
       return !!exists;
     },
 
     async getAll() {
-      return table.orderBy('addedAt').reverse().toArray();
+      return t.orderBy('addedAt').reverse().toArray();
     },
 
     async count() {
-      return table.count();
+      return t.count();
     },
   };
 }
@@ -94,15 +98,16 @@ export function createSettingsHelper<T extends BaseSettings>(
   table: EntityTable<T, 'id'>,
   defaultSettings: T,
 ) {
+  const t = table as unknown as AnyTable<T>;
   const helper = {
     async get(): Promise<T> {
-      const s = await table.get(1);
+      const s = await t.get(1);
       return s || { ...defaultSettings, updatedAt: new Date() };
     },
 
     async update(updates: Partial<Omit<T, 'id'>>) {
       const current = await helper.get();
-      return table.put({
+      return t.put({
         ...current,
         ...updates,
         id: 1,
@@ -140,19 +145,23 @@ export function createRecentViewsHelper<
   T extends BaseRecentView & Record<K, string>,
   K extends string,
 >(table: EntityTable<T, 'id'>, idFieldName: K, maxItems = 100) {
+  const t = table as unknown as AnyTable<T>;
   return {
     async add(itemId: string) {
       validateId(itemId, idFieldName);
       // 기존 기록 삭제 후 새로 추가 (최신으로 업데이트)
-      await table.where(idFieldName).equals(itemId).delete();
-      const id = await table.add({ [idFieldName]: itemId, viewedAt: new Date() } as unknown as T);
+      await t.where(idFieldName).equals(itemId).delete();
+      const id = await t.add({
+        [idFieldName]: itemId,
+        viewedAt: new Date(),
+      } as unknown as T);
 
       // 최대 개수 초과 시 오래된 항목 삭제
-      const count = await table.count();
+      const count = await t.count();
       if (count > maxItems) {
-        const oldest = await table.orderBy('viewedAt').first();
-        if (oldest?.id) {
-          await table.delete(oldest.id);
+        const oldest = await t.orderBy('viewedAt').first();
+        if (oldest?.id !== undefined) {
+          await t.delete(oldest.id);
         }
       }
 
@@ -160,11 +169,11 @@ export function createRecentViewsHelper<
     },
 
     async getRecent(limit = 20) {
-      return table.orderBy('viewedAt').reverse().limit(limit).toArray();
+      return t.orderBy('viewedAt').reverse().limit(limit).toArray();
     },
 
     async clear() {
-      return table.clear();
+      return t.clear();
     },
   };
 }

@@ -34,3 +34,43 @@ Before any fix (수정 전 반드시):
 ### When Uncertain (불확실할 때)
 Ask before: removing code, changing core logic, breaking changes.
 (다음 작업 전 질문: 코드 제거, 핵심 로직 변경, 브레이킹 체인지)
+
+## Quality Metrics (The Perfect Dodecagon)
+
+> **12가지 품질 지표. 코드 작성 시 이 지표들이 저해되면 경고하고 대안 제시.**
+
+### I. Stability & Maintainability
+| # | 지표 | 도구 | 검증 시점 |
+|---|------|------|----------|
+| 1 | Test Coverage | Vitest + coverage-v8 (≥80%) | CI |
+| 2 | Visual Coverage | Playwright + pixelmatch | CI |
+| 3 | Code Health | size-limit, TypeScript strict | CI |
+| 4 | Monorepo Integrity | madge, syncpack | CI |
+
+### II. Performance & Reach
+| # | 지표 | 도구 | 검증 시점 |
+|---|------|------|----------|
+| 5 | Lighthouse Score | @lhci/cli (≥90) | CI |
+| 6 | SEO Health | 빌드 스크립트 (메타태그 검증) | Build |
+| 7 | Static Integrity | broken-link-checker | Build 후 |
+
+### III. User Experience & Adaptation
+| # | 지표 | 도구 | 검증 시점 |
+|---|------|------|----------|
+| 8 | PWA Readiness | vite-plugin-pwa | Build |
+| 9 | Mobile Optimality | Playwright (터치 타겟 ≥44px) | CI |
+| 10 | Responsive | Playwright (320px~4K) | CI |
+| 11 | Accessibility | axe-core + Playwright | CI |
+
+### IV. Security & Privacy
+| # | 지표 | 도구 | 검증 시점 |
+|---|------|------|----------|
+| 12 | Client Security | CSP 헤더 + dotenv-linter | Build + 배포 |
+
+### 검증 분리
+- **pre-commit**: Biome + tsc --noEmit
+- **CI 병렬 실행**:
+  - Job 1: Vitest, madge, syncpack
+  - Job 2: Playwright (visual, a11y, mobile, responsive)
+  - Job 3: Lighthouse CI
+  - Job 4: broken-link-checker, size-limit

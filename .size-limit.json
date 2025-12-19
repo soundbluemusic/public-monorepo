@@ -1,0 +1,17 @@
+[
+  {
+    "path": "apps/context/.output/public/**/*.js",
+    "limit": "200 KB",
+    "gzip": true
+  },
+  {
+    "path": "apps/permissive/.output/public/**/*.js",
+    "limit": "200 KB",
+    "gzip": true
+  },
+  {
+    "path": "apps/roots/.output/public/**/*.js",
+    "limit": "200 KB",
+    "gzip": true
+  }
+]
