@@ -7,6 +7,7 @@ export default defineConfig({
   ssr: true,
   server: {
     preset: 'static',
+    logLevel: 0, // 0=silent, 1=error, 2=warn, 3=info (default)
     prerender: {
       crawlLinks: true,
       routes: ['/', '/ko'],

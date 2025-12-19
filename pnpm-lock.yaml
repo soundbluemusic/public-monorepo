@@ -32,6 +32,9 @@ importers:
       broken-link-checker:
         specifier: ^0.7.8
         version: 0.7.8
+      husky:
+        specifier: ^9.1.7
+        version: 9.1.7
       madge:
         specifier: ^8.0.0
         version: 8.0.0(typescript@5.9.3)
@@ -3839,6 +3842,11 @@ packages:
 
   humanize-duration@3.33.2:
     resolution: {integrity: sha512-K7Ny/ULO1hDm2nnhvAY+SJV1skxFb61fd073SG1IWJl+D44ULrruCuTyjHKjBVVcSuTlnY99DKtgEG39CM5QOQ==}
+
+  husky@9.1.7:
+    resolution: {integrity: sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==}
+    engines: {node: '>=18'}
+    hasBin: true
 
   iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
@@ -10396,6 +10404,8 @@ snapshots:
   human-signals@5.0.0: {}
 
   humanize-duration@3.33.2: {}
+
+  husky@9.1.7: {}
 
   iconv-lite@0.4.24:
     dependencies:

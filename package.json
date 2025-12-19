@@ -11,6 +11,8 @@
     "build:context": "pnpm --filter context build",
     "build:permissive": "pnpm --filter permissive build",
     "build:roots": "pnpm --filter roots build",
+    "build:test": "pnpm typecheck && pnpm build && pnpm verify:ssg",
+    "verify:ssg": "tsx scripts/verify-ssg.ts",
     "lint": "biome lint .",
     "lint:fix": "biome lint --write .",
     "format": "biome format --write .",
@@ -24,7 +26,8 @@
     "check:size": "size-limit",
     "check:links": "blc http://localhost:3000 --recursive --exclude-external",
     "lhci": "lhci autorun",
-    "add-data": "tsx scripts/add-data.ts"
+    "add-data": "tsx scripts/add-data.ts",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.1",
@@ -35,6 +38,7 @@
     "@size-limit/preset-app": "^11.1.6",
     "@vitest/coverage-v8": "^2.1.8",
     "broken-link-checker": "^0.7.8",
+    "husky": "^9.1.7",
     "madge": "^8.0.0",
     "pixelmatch": "^6.0.0",
     "sharp": "^0.34.5",

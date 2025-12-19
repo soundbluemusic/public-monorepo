@@ -2,7 +2,7 @@
  * @fileoverview 개념 데이터 동적 로딩 유틸리티
  *
  * 빌드 시 생성된 JSON 파일에서 개념 데이터를 동적으로 로드합니다.
- * 클라이언트 번들 크기를 줄이기 위해 fetch를 사용합니다.
+ * SSG 빌드 시점에는 파일 시스템에서, 클라이언트에서는 fetch를 사용합니다.
  */
 import type { MathConcept } from '@/data/types';
 
@@ -12,14 +12,27 @@ let conceptsMap: Map<string, MathConcept> | null = null;
 let loadPromise: Promise<MathConcept[]> | null = null;
 
 /**
- * 개념 데이터 로드 (lazy, 클라이언트 전용)
+ * SSR/SSG 시점에 파일 시스템에서 개념 데이터 로드
  */
-export async function loadConcepts(): Promise<MathConcept[]> {
-  // SSR에서는 빈 배열 반환 (fetch 불가)
-  if (typeof window === 'undefined') {
+async function loadConceptsFromFS(): Promise<MathConcept[]> {
+  try {
+    const { readFileSync } = await import('node:fs');
+    const { fileURLToPath } = await import('node:url');
+    const path = fileURLToPath(new URL('../../public/concepts.json', import.meta.url));
+    const data = JSON.parse(readFileSync(path, 'utf-8')) as MathConcept[];
+    conceptsData = data;
+    conceptsMap = new Map(data.map((c) => [c.id, c]));
+    return data;
+  } catch {
+    console.warn('Failed to load concepts.json from filesystem');
     return [];
   }
+}
 
+/**
+ * 개념 데이터 로드 (SSR/SSG + 클라이언트 모두 지원)
+ */
+export async function loadConcepts(): Promise<MathConcept[]> {
   if (conceptsData) {
     return conceptsData;
   }
@@ -28,6 +41,13 @@ export async function loadConcepts(): Promise<MathConcept[]> {
     return loadPromise;
   }
 
+  // SSR/SSG 시점: 파일 시스템에서 로드
+  if (typeof window === 'undefined') {
+    loadPromise = loadConceptsFromFS();
+    return loadPromise;
+  }
+
+  // 클라이언트: fetch 사용
   loadPromise = fetch('/concepts.json')
     .then((res) => res.json())
     .then((data: MathConcept[]) => {
