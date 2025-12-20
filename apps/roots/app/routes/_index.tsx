@@ -22,16 +22,30 @@ export default function HomePage() {
 
   // 경량 데이터 로드 (search-index.json 중 12개만)
   useEffect(() => {
+    let isMounted = true;
+
     fetch('/search-index.json')
-      .then((res) => res.json())
-      .then((data: SearchIndexItem[]) => {
-        setConcepts(data.slice(0, 12));
-        setIsLoading(false);
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
       })
-      .catch(() => setIsLoading(false));
+      .then((data: SearchIndexItem[]) => {
+        if (isMounted) {
+          setConcepts(data.slice(0, 12));
+          setIsLoading(false);
+        }
+      })
+      .catch((err) => {
+        console.error('Failed to load search index:', err);
+        if (isMounted) setIsLoading(false);
+      });
 
     // 검색 인덱스 프리로드
     preloadSearchIndex();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return (
