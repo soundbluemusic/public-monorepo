@@ -1,0 +1,152 @@
+/**
+ * @fileoverview 연관 문서 링크 컴포넌트
+ * 클라이언트 사이드에서 concept-names.json을 fetch하여 이름 표시
+ */
+import type { ConceptRelations } from '@/data/types';
+import { useI18n } from '@/i18n';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router';
+
+type ConceptNames = Record<string, { ko: string; en: string }>;
+
+interface RelationLinksProps {
+  relations: ConceptRelations;
+}
+
+interface RelationSectionProps {
+  title: string;
+  icon: string;
+  ids: string[];
+  type: 'prerequisite' | 'next' | 'related' | 'application';
+  names: ConceptNames;
+}
+
+function RelationSection({ title, icon, ids, type, names }: RelationSectionProps) {
+  const { locale, localePath } = useI18n();
+
+  const typeStyles = {
+    prerequisite: { prefix: '→', color: 'var(--color-warning)' },
+    next: { prefix: '←', color: 'var(--color-success)' },
+    related: { prefix: '↔', color: 'var(--accent-primary)' },
+    application: { prefix: '⚡', color: 'var(--math-highlight)' },
+  };
+
+  const style = typeStyles[type];
+
+  if (ids.length === 0) return null;
+
+  return (
+    <div className="mb-4">
+      <h4
+        className="text-sm font-medium mb-2 flex items-center gap-2"
+        style={{ color: 'var(--text-tertiary)' }}
+      >
+        <span>{icon}</span>
+        {title}
+      </h4>
+      <div className="flex flex-wrap gap-2">
+        {ids.map((id) => {
+          const conceptName = names[id];
+          const name = conceptName ? conceptName[locale] || conceptName.en : id;
+
+          return (
+            <Link
+              key={id}
+              to={localePath(`/concept/${id}`)}
+              className="relation-link"
+              style={{
+                backgroundColor: 'var(--bg-tertiary)',
+                color: 'var(--text-secondary)',
+              }}
+            >
+              <span style={{ color: style.color }}>{style.prefix}</span>
+              <span>{name}</span>
+            </Link>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+/**
+ * 연관 문서 링크 섹션
+ * 클라이언트 사이드에서 이름을 로드하여 hydration 데이터 최소화
+ */
+export function RelationLinks({ relations }: RelationLinksProps) {
+  const { locale } = useI18n();
+  const [names, setNames] = useState<ConceptNames>({});
+
+  // 클라이언트에서만 이름 로드
+  useEffect(() => {
+    fetch('/concept-names.json')
+      .then((res) => res.json())
+      .then(setNames)
+      .catch(() => setNames({}));
+  }, []);
+
+  const hasAnyRelations =
+    relations.prerequisites.length > 0 ||
+    relations.nextTopics.length > 0 ||
+    relations.related.length > 0 ||
+    (relations.applications?.length ?? 0) > 0;
+
+  const titles = {
+    prerequisites: locale === 'ko' ? '선행 개념' : 'Prerequisites',
+    nextTopics: locale === 'ko' ? '후행 개념' : 'Next Topics',
+    related: locale === 'ko' ? '관련 개념' : 'Related',
+    applications: locale === 'ko' ? '응용 분야' : 'Applications',
+  };
+
+  if (!hasAnyRelations) return null;
+
+  return (
+    <div
+      className="rounded-lg p-4"
+      style={{
+        backgroundColor: 'var(--bg-secondary)',
+        border: '1px solid var(--border-primary)',
+      }}
+    >
+      <h3
+        className="text-lg font-semibold mb-4 flex items-center gap-2"
+        style={{ color: 'var(--text-primary)' }}
+      >
+        <span>🔗</span>
+        {locale === 'ko' ? '연관 문서' : 'Related Documents'}
+      </h3>
+
+      <RelationSection
+        title={titles.prerequisites}
+        icon="→"
+        ids={relations.prerequisites}
+        type="prerequisite"
+        names={names}
+      />
+
+      <RelationSection
+        title={titles.nextTopics}
+        icon="←"
+        ids={relations.nextTopics}
+        type="next"
+        names={names}
+      />
+
+      <RelationSection
+        title={titles.related}
+        icon="↔"
+        ids={relations.related}
+        type="related"
+        names={names}
+      />
+
+      <RelationSection
+        title={titles.applications}
+        icon="⚡"
+        ids={relations.applications ?? []}
+        type="application"
+        names={names}
+      />
+    </div>
+  );
+}

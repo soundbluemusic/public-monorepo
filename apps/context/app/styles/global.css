@@ -1,0 +1,117 @@
+/* Pretendard 폰트 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+
+@import "tailwindcss";
+@import "@soundblue/shared-react/styles/base.css";
+
+/* Enable class-based dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ============================================
+   Violet Dream Theme (Context)
+   ============================================ */
+:root {
+  /* Layout */
+  --header-height: 56px;
+
+  /* Background */
+  --bg-primary: #faf9fc;
+  --bg-secondary: #f3f1f8;
+  --bg-tertiary: #ebe8f2;
+  --bg-elevated: #ffffff;
+
+  /* Text */
+  --text-primary: #2d2640;
+  --text-secondary: #5c5470;
+  --text-tertiary: #8b82a0;
+
+  /* Accent (Violet) */
+  --accent-primary: #7c5cff;
+  --accent-secondary: #9178ff;
+  --accent-tertiary: #a694ff;
+  --accent-hover: #6b4de6;
+
+  /* Border */
+  --border-primary: #e0dce8;
+  --border-secondary: #ebe8f2;
+  --border-focus: #7c5cff;
+
+  /* Semantic */
+  --color-error: #dc4b4b;
+  --color-success: #22a06b;
+  --color-warning: #cf9f02;
+}
+
+.dark {
+  /* Background */
+  --bg-primary: #14121c;
+  --bg-secondary: #1c1926;
+  --bg-tertiary: #252230;
+  --bg-elevated: #2a2638;
+
+  /* Text */
+  --text-primary: #f0eef5;
+  --text-secondary: #b8b3c8;
+  --text-tertiary: #8b82a0;
+
+  /* Accent */
+  --accent-primary: #9b82ff;
+  --accent-secondary: #b0a0ff;
+  --accent-tertiary: #c5b8ff;
+  --accent-hover: #b0a0ff;
+
+  /* Border */
+  --border-primary: #352f45;
+  --border-secondary: #252230;
+  --border-focus: #9b82ff;
+
+  /* Semantic */
+  --color-error: #ff8080;
+  --color-success: #57d9a3;
+  --color-warning: #ffcc00;
+}
+
+/* Theme config for Tailwind */
+@theme {
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-tertiary: var(--bg-tertiary);
+  --color-bg-elevated: var(--bg-elevated);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-accent-hover: var(--accent-hover);
+
+  --color-border-primary: var(--border-primary);
+  --color-border-secondary: var(--border-secondary);
+  --color-border-focus: var(--border-focus);
+
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 1rem);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Utilities */
+@layer utilities {
+  .h-header {
+    height: var(--header-height);
+  }
+  .pt-header {
+    padding-top: var(--header-height);
+  }
+}

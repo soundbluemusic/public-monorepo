@@ -1,23 +1,24 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES2022",
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "jsx": "preserve",
-    "jsxImportSource": "solid-js",
-    "allowImportingTsExtensions": true,
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "jsx": "react-jsx",
     "strict": true,
     "noEmit": true,
-    "types": ["vinxi/types/client"],
     "isolatedModules": true,
     "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "types": ["vite/client"],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./app/*"],
+      "~/*": ["./app/*"]
     },
     "baseUrl": "."
   },
-  "include": ["src/**/*", "scripts/**/*"],
+  "include": ["app/**/*", "scripts/**/*", "vite.config.ts", "react-router.config.ts"],
   "exclude": ["node_modules"]
 }

@@ -5,9 +5,9 @@
   "description": "완전 무료 웹 개발 리소스 가이드 - 로열티 프리 웹 표준 API와 MIT 라이선스 오픈소스 정리",
   "type": "module",
   "scripts": {
-    "dev": "vinxi dev",
-    "build": "vinxi build && tsx scripts/generate-sitemaps.ts",
-    "start": "vinxi start",
+    "dev": "react-router dev",
+    "build": "react-router build && tsx scripts/generate-sitemaps.ts",
+    "start": "react-router-serve ./build/server/index.js",
     "data:fetch": "pnpm run data:fetch:npm && pnpm run data:fetch:github && pnpm run data:fetch:bundle",
     "data:fetch:npm": "tsx scripts/fetch-npm-data.ts",
     "data:fetch:github": "tsx scripts/fetch-github-data.ts",
@@ -21,22 +21,30 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@solidjs/meta": "^0.29.4",
-    "@solidjs/router": "^0.15.3",
-    "@solidjs/start": "^1.1.0",
-    "@soundblue/shared": "workspace:*",
+    "@radix-ui/react-dropdown-menu": "^2.1.4",
+    "@radix-ui/react-toggle": "^1.1.0",
+    "@radix-ui/react-tooltip": "^1.1.6",
+    "@soundblue/shared-react": "workspace:*",
     "chart.js": "^4.4.7",
     "dexie": "^4.0.10",
     "fuse.js": "^7.0.0",
-    "lucide-solid": "^0.469.0",
-    "solid-js": "^1.9.4",
-    "vinxi": "^0.5.3"
+    "lucide-react": "^0.469.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "^7.1.1",
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
+    "@react-router/dev": "^7.1.1",
+    "@react-router/node": "^7.1.1",
+    "@react-router/serve": "^7.1.1",
     "@tailwindcss/vite": "^4.0.0",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
     "tailwindcss": "^4.0.0",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
+    "vite": "^6.0.0",
     "vite-plugin-pwa": "^0.21.1"
   },
   "engines": {

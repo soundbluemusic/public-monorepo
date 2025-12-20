@@ -1,0 +1,135 @@
+/* Pretendard 폰트 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+
+@import "tailwindcss";
+@import "@soundblue/shared-react/styles/base.css";
+
+/* Enable class-based dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ============================================
+   Ocean Blue Theme (Roots)
+   ============================================ */
+:root {
+  /* Layout */
+  --header-height: 56px;
+
+  /* Background */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-tertiary: #e2e8f0;
+  --bg-elevated: #ffffff;
+
+  /* Text */
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-tertiary: #64748b;
+
+  /* Accent (Blue) */
+  --accent-primary: #3b82f6;
+  --accent-secondary: #60a5fa;
+  --accent-tertiary: #93c5fd;
+  --accent-hover: #2563eb;
+
+  /* Border */
+  --border-primary: #e2e8f0;
+  --border-secondary: #f1f5f9;
+  --border-focus: #3b82f6;
+
+  /* Semantic */
+  --color-error: #ef4444;
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+
+  /* Difficulty colors */
+  --difficulty-1: #22c55e;
+  --difficulty-2: #84cc16;
+  --difficulty-3: #eab308;
+  --difficulty-4: #f97316;
+  --difficulty-5: #ef4444;
+}
+
+.dark {
+  /* Background */
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --bg-elevated: #1e293b;
+
+  /* Text */
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-tertiary: #94a3b8;
+
+  /* Accent */
+  --accent-primary: #60a5fa;
+  --accent-secondary: #93c5fd;
+  --accent-tertiary: #bfdbfe;
+  --accent-hover: #93c5fd;
+
+  /* Border */
+  --border-primary: #334155;
+  --border-secondary: #1e293b;
+  --border-focus: #60a5fa;
+
+  /* Semantic */
+  --color-error: #f87171;
+  --color-success: #4ade80;
+  --color-warning: #fbbf24;
+}
+
+/* Theme config for Tailwind */
+@theme {
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-tertiary: var(--bg-tertiary);
+  --color-bg-elevated: var(--bg-elevated);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-accent-hover: var(--accent-hover);
+
+  --color-border-primary: var(--border-primary);
+  --color-border-secondary: var(--border-secondary);
+  --color-border-focus: var(--border-focus);
+
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 1rem);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* KaTeX overrides */
+.katex {
+  font-size: 1.1em;
+}
+
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem 0;
+}
+
+/* Utilities */
+@layer utilities {
+  .h-header {
+    height: var(--header-height);
+  }
+  .pt-header {
+    padding-top: var(--header-height);
+  }
+}

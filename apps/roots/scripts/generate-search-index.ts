@@ -9,7 +9,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 // 개념 데이터 import
-import { allConcepts } from '../src/data/concepts/index.js';
+import { allConcepts } from '../app/data/concepts/index.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUTPUT_PATH = join(__dirname, '../public/search-index.json');

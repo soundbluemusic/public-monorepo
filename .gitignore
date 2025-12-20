@@ -4,12 +4,14 @@ node_modules/
 # Build outputs
 .output/
 .vinxi/
+.react-router/
 dist/
 
 # Generated data files (regenerated on build)
 apps/roots/public/concepts.json
 apps/roots/public/concept-names.json
 apps/roots/public/search-index.json
+apps/context/app/data/generated/
 
 # Cache
 .cache/

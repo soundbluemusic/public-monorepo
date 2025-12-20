@@ -10,8 +10,8 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const ENTRIES_DIR = join(__dirname, '../src/data/entries');
-const OUTPUT_FILE = join(__dirname, '../src/data/generated/entries.ts');
+const ENTRIES_DIR = join(__dirname, '../app/data/entries');
+const OUTPUT_FILE = join(__dirname, '../app/data/generated/entries.ts');
 
 interface JsonEntry {
   id: string;
