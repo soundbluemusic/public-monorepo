@@ -38,6 +38,7 @@
       ".vinxi",
       ".react-router",
       "dist",
+      "build",
       "*.min.js",
       "apps/context/app/data/generated",
       "apps/roots/public/*.json"
