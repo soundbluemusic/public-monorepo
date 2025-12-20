@@ -5,7 +5,7 @@
 > Web Standard APIs and MIT licensed libraries at a glance. (웹표준 API와 MIT 라이센스 라이브러리를 한눈에.)
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
-[![SolidStart](https://img.shields.io/badge/SolidStart-2c4f7c?logo=solid&logoColor=white)](https://start.solidjs.com)
+[![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?logo=react-router)](https://reactrouter.com)
 [![100% SSG](https://img.shields.io/badge/100%25-SSG-brightgreen)](https://en.wikipedia.org/wiki/Static_site_generator)
 
 **[Live Site](https://permissive.soundbluemusic.com)**
@@ -30,7 +30,7 @@ No installation guides, no tutorials. Just a clean list with search & filtering.
 This is intentionally a **fully static site**. No server-side rendering, no API calls at runtime.
 
 ```
-Build time:  SolidStart + Vinxi → Static HTML/CSS/JS
+Build time:  React Router v7 → Static HTML/CSS/JS
 Runtime:     Pure static files served from CDN
 ```
 
@@ -58,8 +58,8 @@ That's it. 3 pages.
 
 | Role | Technology | License |
 |------|------------|---------|
-| Framework | [SolidStart](https://start.solidjs.com) | MIT |
-| UI | [Solid.js](https://solidjs.com) | MIT |
+| Framework | [React Router v7](https://reactrouter.com) | MIT |
+| UI | [React](https://react.dev) | MIT |
 | Styling | [Tailwind CSS v4](https://tailwindcss.com) | MIT |
 | Language | [TypeScript](https://www.typescriptlang.org) | Apache 2.0 |
 | Hosting | [Cloudflare Pages](https://pages.cloudflare.com) | - |
@@ -72,7 +72,7 @@ That's it. 3 pages.
 # From monorepo root
 pnpm dev:permissive     # → http://localhost:3004
 
-# Build (outputs to .output/public)
+# Build (outputs to build/client)
 pnpm build:permissive
 ```
 

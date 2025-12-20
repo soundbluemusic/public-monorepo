@@ -21,7 +21,7 @@
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:e2e": "playwright test",
-    "check:circular": "skott --displayMode=raw --showCircularDependencies --fileExtensions=.ts,.tsx --ignorePattern='**/.vinxi/**' --ignorePattern='**/.output/**' --ignorePattern='**/node_modules/**' --cwd=apps && skott --displayMode=raw --showCircularDependencies --fileExtensions=.ts,.tsx --ignorePattern='**/.vinxi/**' --ignorePattern='**/.output/**' --ignorePattern='**/node_modules/**' --cwd=packages",
+    "check:circular": "skott --displayMode=raw --showCircularDependencies --fileExtensions=.ts,.tsx --ignorePattern='**/build/**' --ignorePattern='**/node_modules/**' --cwd=apps && skott --displayMode=raw --showCircularDependencies --fileExtensions=.ts,.tsx --ignorePattern='**/build/**' --ignorePattern='**/node_modules/**' --cwd=packages",
     "check:versions": "syncpack list-mismatches",
     "check:size": "size-limit",
     "check:links": "blc http://localhost:3000 --recursive --exclude-external",

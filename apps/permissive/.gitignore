@@ -2,8 +2,7 @@
 node_modules/
 
 # Build output
-.output/
-.vinxi/
+build/
 dist/
 
 # Generated sitemaps (built during deploy)
