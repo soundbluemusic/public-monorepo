@@ -18,7 +18,7 @@ export default defineConfig({
     reactRouter(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'icons/*.svg'],
+      includeAssets: ['favicon.svg', 'apple-touch-icon.svg', 'icons/*.svg'],
       manifest: false,
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,svg,woff2}'],
