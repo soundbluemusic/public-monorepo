@@ -32,8 +32,8 @@ export function FormulaCard({ formula }: FormulaCardProps) {
       {/* 변수 설명 */}
       {formula.variables && formula.variables.length > 0 && (
         <ul className="text-sm space-y-1" style={{ color: 'var(--text-tertiary)' }}>
-          {formula.variables.map((variable, i) => (
-            <li key={i} className="flex items-center gap-2">
+          {formula.variables.map((variable) => (
+            <li key={variable.symbol} className="flex items-center gap-2">
               <span
                 className="font-mono px-1.5 py-0.5 rounded"
                 style={{
@@ -82,9 +82,13 @@ export function FormulaList({ formulas, title }: { formulas: FormulaInput[]; tit
       )}
       {formulas.map((formula, index) =>
         typeof formula === 'string' ? (
-          <SimpleFormula key={index} formula={formula} />
+          <SimpleFormula key={`formula-${formula.slice(0, 30)}`} formula={formula} />
         ) : (
-          <FormulaCard key={index} formula={formula} index={index} />
+          <FormulaCard
+            key={`formula-${formula.latex.slice(0, 30)}`}
+            formula={formula}
+            index={index}
+          />
         ),
       )}
     </div>

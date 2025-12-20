@@ -196,37 +196,41 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 
   const locale = useMemo(() => getLocaleFromPath(location.pathname), [location.pathname]);
 
-  const setLocale = (lang: Language) => {
-    const currentPath = stripLocaleFromPath(location.pathname);
-    let newPath: string;
+  const value = useMemo(() => {
+    const setLocale = (lang: Language) => {
+      const currentPath = stripLocaleFromPath(location.pathname);
+      let newPath: string;
 
-    if (lang === 'en') {
-      newPath = currentPath;
-    } else {
-      newPath = `/${lang}${currentPath === '/' ? '' : currentPath}`;
-    }
+      if (lang === 'en') {
+        newPath = currentPath;
+      } else {
+        newPath = `/${lang}${currentPath === '/' ? '' : currentPath}`;
+      }
 
-    navigate(newPath);
-  };
+      navigate(newPath);
+    };
 
-  const t = <K extends keyof UILabels>(key: K): string => {
-    return translations[locale][key] || key;
-  };
+    const t = <K extends keyof UILabels>(key: K): string => {
+      return translations[locale][key] || key;
+    };
 
-  const isKorean = locale === 'ko';
+    const localePath = (path: string): string => {
+      if (locale === 'en') {
+        return path;
+      }
+      return `/${locale}${path === '/' ? '' : path}`;
+    };
 
-  const localePath = (path: string): string => {
-    if (locale === 'en') {
-      return path;
-    }
-    return `/${locale}${path === '/' ? '' : path}`;
-  };
+    return {
+      locale,
+      setLocale,
+      t,
+      isKorean: locale === 'ko',
+      localePath,
+    };
+  }, [locale, location.pathname, navigate]);
 
-  return (
-    <I18nContext.Provider value={{ locale, setLocale, t, isKorean, localePath }}>
-      {children}
-    </I18nContext.Provider>
-  );
+  return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }
 
 export function useI18n() {

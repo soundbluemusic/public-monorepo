@@ -16,6 +16,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
         {/* Prevent FOUC - Apply theme before first paint */}
         <script
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for dark mode flash prevention
           dangerouslySetInnerHTML={{
             __html: `
               (function() {

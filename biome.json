@@ -13,7 +13,8 @@
         "useImportType": "error"
       },
       "suspicious": {
-        "noExplicitAny": "warn"
+        "noExplicitAny": "warn",
+        "noArrayIndexKey": "off"
       }
     }
   },
@@ -38,7 +39,8 @@
       ".react-router",
       "dist",
       "*.min.js",
-      "apps/context/app/data/generated"
+      "apps/context/app/data/generated",
+      "apps/roots/public/*.json"
     ]
   }
 }

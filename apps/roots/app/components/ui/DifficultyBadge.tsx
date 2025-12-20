@@ -38,9 +38,9 @@ export function DifficultyBadge({ level, showLabel = true, size = 'md' }: Diffic
       }}
     >
       <span className="flex gap-0.5">
-        {Array.from({ length: 5 }).map((_, i) => (
+        {[0, 1, 2, 3, 4].map((i) => (
           <span
-            key={i}
+            key={`star-${i}`}
             className={`w-1.5 h-1.5 rounded-full ${i < level ? '' : 'opacity-30'}`}
             style={{ backgroundColor: difficultyColors[level] }}
           />
@@ -57,9 +57,9 @@ export function DifficultyBadge({ level, showLabel = true, size = 'md' }: Diffic
 export function DifficultyStars({ level }: { level: DifficultyLevel }) {
   return (
     <span className="flex gap-0.5">
-      {Array.from({ length: 5 }).map((_, i) => (
+      {[0, 1, 2, 3, 4].map((i) => (
         <span
-          key={i}
+          key={`star-${i}`}
           className={`w-1.5 h-1.5 rounded-full ${i < level ? '' : 'opacity-30'}`}
           style={{ backgroundColor: difficultyColors[level] }}
         />

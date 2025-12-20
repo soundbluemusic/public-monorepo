@@ -66,8 +66,8 @@ export default function EntryPage() {
               {t('examples')}
             </h2>
             <ul className="space-y-2">
-              {translation.examples.map((example, i) => (
-                <li key={i} style={{ color: 'var(--text-secondary)' }}>
+              {translation.examples.map((example) => (
+                <li key={example} style={{ color: 'var(--text-secondary)' }}>
                   {example}
                 </li>
               ))}

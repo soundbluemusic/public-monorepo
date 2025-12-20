@@ -121,31 +121,30 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 
   const locale = useMemo(() => getLocaleFromPath(location.pathname), [location.pathname]);
 
-  const setLocale = (lang: Language) => {
-    const currentPath = stripLocaleFromPath(location.pathname);
-    const newPath = lang === 'en' ? currentPath : `/ko${currentPath === '/' ? '' : currentPath}`;
-    navigate(newPath);
-  };
+  const value = useMemo(() => {
+    const setLocale = (lang: Language) => {
+      const currentPath = stripLocaleFromPath(location.pathname);
+      const newPath = lang === 'en' ? currentPath : `/ko${currentPath === '/' ? '' : currentPath}`;
+      navigate(newPath);
+    };
 
-  const t = <K extends keyof UILabels>(key: K): string => {
-    return translations[locale][key] || key;
-  };
+    const t = <K extends keyof UILabels>(key: K): string => {
+      return translations[locale][key] || key;
+    };
 
-  const localePath = (path: string): string => {
-    return buildLocalePath(path, locale);
-  };
+    const localePath = (path: string): string => {
+      return buildLocalePath(path, locale);
+    };
 
-  const value = useMemo(
-    () => ({
+    return {
       locale,
       setLocale,
       t,
       isKorean: locale === 'ko',
       isEnglish: locale === 'en',
       localePath,
-    }),
-    [locale],
-  );
+    };
+  }, [locale, location.pathname, navigate]);
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }

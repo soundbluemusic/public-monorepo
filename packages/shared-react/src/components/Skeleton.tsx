@@ -20,7 +20,11 @@ export function SkeletonText({ lines = 3, className = '' }: SkeletonTextProps) {
   return (
     <div className={`space-y-2 ${className}`}>
       {Array.from({ length: lines }).map((_, i) => (
-        <Skeleton key={i} className="h-4" style={{ width: i === lines - 1 ? '60%' : '100%' }} />
+        <Skeleton
+          key={`line-${i}`}
+          className="h-4"
+          style={{ width: i === lines - 1 ? '60%' : '100%' }}
+        />
       ))}
     </div>
   );
@@ -51,7 +55,7 @@ export function SkeletonList({ count = 5, className = '' }: SkeletonListProps) {
   return (
     <div className={`space-y-3 ${className}`}>
       {Array.from({ length: count }).map((_, i) => (
-        <div key={i} className="flex items-center gap-3">
+        <div key={`item-${i}`} className="flex items-center gap-3">
           <Skeleton className="w-10 h-10 rounded-lg shrink-0" />
           <div className="flex-1 space-y-2">
             <Skeleton className="h-4 w-1/4" />
@@ -76,7 +80,7 @@ export function SkeletonGrid({ count = 6, columns = 3, className = '' }: Skeleto
       style={{ gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))` }}
     >
       {Array.from({ length: count }).map((_, i) => (
-        <SkeletonCard key={i} />
+        <SkeletonCard key={`card-${i}`} />
       ))}
     </div>
   );

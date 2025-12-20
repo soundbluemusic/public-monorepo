@@ -14,8 +14,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="theme-color" content="#7c5cff" />
         <Meta />
         <Links />
-        {/* biome-ignore lint/security/noDangerouslySetInnerHtml: Required for dark mode flash prevention */}
         <script
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for dark mode flash prevention
           dangerouslySetInnerHTML={{
             __html: `
               (function() {

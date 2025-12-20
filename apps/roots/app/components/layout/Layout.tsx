@@ -92,6 +92,7 @@ export function Layout({ children }: LayoutProps) {
           {/* Search Form */}
           <form onSubmit={handleSearchSubmit} className="relative flex-1 max-w-md">
             <svg
+              aria-hidden="true"
               className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4"
               style={{ color: 'var(--text-tertiary)' }}
               fill="none"

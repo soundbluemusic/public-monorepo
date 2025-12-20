@@ -79,8 +79,8 @@ export default function HomePage() {
       {/* Loading */}
       {isLoading && (
         <div className="space-y-3">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <div key={i} className="h-12 rounded animate-pulse bg-bg-secondary" />
+          {[0, 1, 2, 3, 4, 5].map((n) => (
+            <div key={`skeleton-${n}`} className="h-12 rounded animate-pulse bg-bg-secondary" />
           ))}
         </div>
       )}

@@ -193,9 +193,9 @@ export default function ConceptPage() {
               {t('applications')}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {content.applications?.map((app, i) => (
+              {content.applications?.map((app) => (
                 <div
-                  key={i}
+                  key={typeof app === 'string' ? app : app.field}
                   className="rounded-lg p-3 bg-bg-secondary border border-border-primary"
                 >
                   {typeof app === 'string' ? (

@@ -108,9 +108,17 @@ export function ExampleList({ examples, title }: { examples?: ExampleInput[]; ti
       <div className="space-y-3">
         {(examples ?? []).map((example, index) =>
           typeof example === 'string' ? (
-            <SimpleExample key={index} example={example} index={index} />
+            <SimpleExample
+              key={`example-${example.slice(0, 20)}`}
+              example={example}
+              index={index}
+            />
           ) : (
-            <ExampleCard key={index} example={example} index={index} />
+            <ExampleCard
+              key={`example-${example.problem.slice(0, 20)}`}
+              example={example}
+              index={index}
+            />
           ),
         )}
       </div>
