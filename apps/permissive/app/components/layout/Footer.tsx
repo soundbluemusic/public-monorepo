@@ -24,7 +24,7 @@ export default function Footer() {
             </a>
           </div>
           <a
-            href="https://github.com/soundbluemusic/Permissive"
+            href="https://github.com/soundbluemusic/public-monorepo"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-(--text-tertiary) hover:text-(--accent-primary) transition-colors"

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "react-router dev",
     "prebuild": "tsx scripts/generate-search-index.ts",
-    "build": "react-router build",
+    "build": "react-router build && tsx scripts/generate-sitemaps.ts",
     "start": "react-router-serve ./build/server/index.js",
     "lint": "biome lint .",
     "lint:fix": "biome lint --write .",
