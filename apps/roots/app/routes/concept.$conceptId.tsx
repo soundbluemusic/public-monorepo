@@ -21,15 +21,25 @@ export default function ConceptPage() {
 
   const [concept, setConcept] = useState<MathConcept | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [isFavorite, setIsFavorite] = useState(false);
 
   // 개념 데이터 비동기 로드
   useEffect(() => {
     if (params.conceptId) {
-      getConceptById(params.conceptId).then((data) => {
-        setConcept(data || null);
-        setIsLoading(false);
-      });
+      setIsLoading(true);
+      setError(null);
+
+      getConceptById(params.conceptId)
+        .then((data) => {
+          setConcept(data || null);
+          setIsLoading(false);
+        })
+        .catch((err) => {
+          console.error('Error loading concept:', err);
+          setError(err.message || 'Failed to load concept data');
+          setIsLoading(false);
+        });
 
       // 즐겨찾기 상태 확인
       favorites.isFavorite(params.conceptId).then(setIsFavorite);
@@ -56,6 +66,35 @@ export default function ConceptPage() {
           <div className="h-8 w-48 rounded bg-bg-secondary" />
           <div className="h-12 w-64 rounded bg-bg-secondary" />
           <div className="h-32 w-full rounded bg-bg-secondary" />
+        </div>
+      </Layout>
+    );
+  }
+
+  if (error) {
+    return (
+      <Layout>
+        <div className="text-center py-12">
+          <div className="text-6xl mb-4">⚠️</div>
+          <h1 className="text-2xl font-bold mb-4 text-text-primary">
+            {locale === 'ko' ? '데이터를 불러올 수 없습니다' : 'Failed to load data'}
+          </h1>
+          <p className="text-text-secondary mb-6">{error}</p>
+          <div className="flex gap-4 justify-center">
+            <button
+              type="button"
+              onClick={() => window.location.reload()}
+              className="px-4 py-2 rounded-lg bg-accent-primary text-white hover:bg-accent-hover transition-colors"
+            >
+              {locale === 'ko' ? '다시 시도' : 'Retry'}
+            </button>
+            <Link
+              to={localePath('/browse')}
+              className="px-4 py-2 rounded-lg border border-border-primary hover:bg-bg-secondary transition-colors"
+            >
+              {t('backToList')}
+            </Link>
+          </div>
         </div>
       </Layout>
     );

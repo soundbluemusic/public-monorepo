@@ -23,18 +23,26 @@ export async function loadConcepts(): Promise<MathConcept[]> {
     return loadPromise;
   }
 
-  // 클라이언트: fetch 사용
-  loadPromise = fetch('/concepts.json')
-    .then((res) => res.json())
-    .then((data: MathConcept[]) => {
+  // 클라이언트: fetch 사용 (timeout 추가)
+  loadPromise = Promise.race([
+    fetch('/concepts.json').then(async (res) => {
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+      }
+      const data: MathConcept[] = await res.json();
       conceptsData = data;
       conceptsMap = new Map(data.map((c) => [c.id, c]));
+      console.log(`✓ Loaded ${data.length} concepts from concepts.json`);
       return data;
-    })
-    .catch(() => {
-      console.warn('Failed to load concepts.json');
-      return [];
-    });
+    }),
+    new Promise<never>((_, reject) =>
+      setTimeout(() => reject(new Error('Timeout loading concepts.json')), 10000),
+    ),
+  ]).catch((err) => {
+    console.error('Failed to load concepts.json:', err);
+    loadPromise = null; // Reset to allow retry
+    throw err; // Re-throw to allow caller to handle
+  });
 
   return loadPromise;
 }
