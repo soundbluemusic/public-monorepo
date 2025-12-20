@@ -27,6 +27,12 @@ interface SearchIndexItem {
   def: { ko: string; en: string };
 }
 
+function getDefinition(content: string | { definition: string } | undefined): string {
+  if (!content) return '';
+  if (typeof content === 'string') return content;
+  return content.definition ?? '';
+}
+
 function generateSearchIndex() {
   console.log(`Generating search index for ${allConcepts.length} concepts...`);
 
@@ -38,8 +44,8 @@ function generateSearchIndex() {
     difficulty: concept.difficulty,
     tags: concept.tags,
     def: {
-      ko: (concept.content.ko?.definition ?? concept.content.en?.definition ?? '').slice(0, 100),
-      en: (concept.content.en?.definition ?? concept.content.ko?.definition ?? '').slice(0, 100),
+      ko: (getDefinition(concept.content.ko) || getDefinition(concept.content.en)).slice(0, 100),
+      en: (getDefinition(concept.content.en) || getDefinition(concept.content.ko)).slice(0, 100),
     },
   }));
 
