@@ -18,19 +18,19 @@ interface AppConfig {
 const apps: AppConfig[] = [
   {
     name: 'context',
-    outputDir: 'apps/context/.output/public',
-    minPages: 50, // 최소 50개 HTML 페이지
+    outputDir: 'apps/context/build/client',
+    minPages: 10, // 기본 페이지들 (동적 엔트리는 SPA로 처리)
     requiredMeta: ['title', 'description'],
   },
   {
     name: 'permissive',
-    outputDir: 'apps/permissive/.output/public',
+    outputDir: 'apps/permissive/build/client',
     minPages: 5,
     requiredMeta: ['title', 'description'],
   },
   {
     name: 'roots',
-    outputDir: 'apps/roots/.output/public',
+    outputDir: 'apps/roots/build/client',
     minPages: 3,
     requiredMeta: ['title', 'description'],
   },
