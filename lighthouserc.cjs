@@ -1,8 +1,13 @@
 module.exports = {
   ci: {
     collect: {
-      staticDistDir: './apps/context/build/client',
-      numberOfRuns: 3,
+      staticDistDir: './apps/roots/build/client',
+      url: ['http://localhost/index.html'],
+      numberOfRuns: 1,
+      chromePath: '/root/.cache/ms-playwright/chromium-1200/chrome-linux64/chrome',
+      settings: {
+        chromeFlags: '--no-sandbox --disable-dev-shm-usage --headless',
+      },
     },
     assert: {
       assertions: {

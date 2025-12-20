@@ -42,3 +42,4 @@ dev-dist/
 
 # Test
 coverage/
+.lighthouseci/
