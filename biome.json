@@ -35,6 +35,8 @@
     "ignore": [
       "node_modules",
       ".react-router",
+      ".vinxi",
+      ".output",
       "dist",
       "build",
       "*.min.js",
