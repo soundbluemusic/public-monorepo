@@ -3,21 +3,30 @@ import type { CSSProperties } from 'react';
 import { useSettingsStore } from '../stores/useSettingsStore';
 
 export interface DarkModeToggleProps {
+  isDark?: boolean;
+  onToggle?: () => void;
   className?: string;
   style?: CSSProperties;
 }
 
 /**
  * Dark mode toggle button using Radix UI Toggle
+ * Supports both controlled (isDark/onToggle) and uncontrolled (store-based) modes
  */
-export function DarkModeToggle({ className = '', style }: DarkModeToggleProps) {
+export function DarkModeToggle({
+  isDark: controlledIsDark,
+  onToggle,
+  className = '',
+  style,
+}: DarkModeToggleProps) {
   const { theme, toggleTheme } = useSettingsStore();
-  const isDark = theme === 'dark';
+  const isDark = controlledIsDark ?? theme === 'dark';
+  const handleToggle = onToggle ?? toggleTheme;
 
   return (
     <Toggle.Root
       pressed={isDark}
-      onPressedChange={toggleTheme}
+      onPressedChange={handleToggle}
       className={`p-2 rounded-lg transition-colors cursor-pointer hover:bg-[var(--bg-tertiary)] ${className}`}
       style={{ color: 'var(--text-secondary)', ...style }}
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
