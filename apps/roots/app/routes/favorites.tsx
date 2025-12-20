@@ -29,8 +29,8 @@ export default function FavoritesPage() {
         const favs = await favorites.getAll();
         const concepts = await Promise.all(favs.map((f) => getConceptById(f.conceptId)));
         setFavoriteConcepts(concepts.filter((c): c is MathConcept => c !== undefined));
-      } catch (e) {
-        console.error('Failed to load favorites:', e);
+      } catch (error: unknown) {
+        console.error('Failed to load favorites:', error);
       } finally {
         setIsLoading(false);
       }

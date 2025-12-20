@@ -1,7 +1,7 @@
 /**
  * @fileoverview 수학 18개 대분류 정의
  */
-import type { MathField, MathFieldInfo } from './types';
+import type { MathFieldInfo } from './types';
 
 export const fields: MathFieldInfo[] = [
   {
@@ -259,7 +259,7 @@ export const fields: MathFieldInfo[] = [
 ];
 
 /** ID로 분야 찾기 */
-export function getFieldById(id: MathField): MathFieldInfo | undefined {
+export function getFieldById(id: string): MathFieldInfo | undefined {
   return fields.find((f) => f.id === id);
 }
 

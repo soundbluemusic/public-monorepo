@@ -5,7 +5,7 @@ import { ConceptCard } from '@/components/concept/ConceptCard';
 import { Layout } from '@/components/layout/Layout';
 import { getFieldById } from '@/data/fields';
 import { getSubfieldsByParent } from '@/data/subfields';
-import type { MathConcept, MathField } from '@/data/types';
+import type { MathConcept } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { getConceptsByField } from '@/lib/concepts';
 import { useEffect, useState } from 'react';
@@ -15,7 +15,7 @@ export default function FieldPage() {
   const params = useParams<{ fieldId: string }>();
   const { locale, t, localePath } = useI18n();
 
-  const field = getFieldById(params.fieldId as MathField);
+  const field = getFieldById(params.fieldId ?? '');
   const subfields = getSubfieldsByParent(params.fieldId || '');
 
   const [concepts, setConcepts] = useState<MathConcept[]>([]);

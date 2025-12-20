@@ -155,8 +155,8 @@ export const studyRecords = {
     const totalDuration = records.reduce((sum, r) => sum + r.duration, 0);
     const completedCount = records.filter((r) => r.completed).length;
     const quizScores = records
-      .filter((r) => r.quizScore !== undefined)
-      .map((r) => r.quizScore as number);
+      .filter((r): r is StudyRecord & { quizScore: number } => r.quizScore !== undefined)
+      .map((r) => r.quizScore);
     const avgQuizScore =
       quizScores.length > 0 ? quizScores.reduce((a, b) => a + b, 0) / quizScores.length : null;
 

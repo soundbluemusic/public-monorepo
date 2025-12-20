@@ -15,6 +15,12 @@ interface AppConfig {
   requiredMeta: string[];
 }
 
+interface CloudflareRoutesConfig {
+  version?: number;
+  include?: string[];
+  exclude?: string[];
+}
+
 const apps: AppConfig[] = [
   {
     name: 'context',
@@ -109,10 +115,10 @@ function verify(): boolean {
     const routesPath = join(app.outputDir, '_routes.json');
     try {
       const routesContent = readFileSync(routesPath, 'utf-8');
-      const routes = JSON.parse(routesContent);
+      const routes = JSON.parse(routesContent) as CloudflareRoutesConfig;
       const routesPassed = routes.exclude?.includes('/*');
       console.log(`   ${routesPassed ? '✅' : '⚠️'} _routes.json: Functions 비활성화`);
-    } catch {
+    } catch (_error: unknown) {
       console.log('   ⚠️  _routes.json: 파일 없음 (Cloudflare Functions 오류 가능)');
     }
 
