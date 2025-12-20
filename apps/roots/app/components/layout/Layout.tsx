@@ -2,6 +2,7 @@ import { type Language, useI18n } from '@/i18n';
 import { DarkModeToggle, LanguageToggle } from '@soundblue/shared-react';
 import { type ReactNode, useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
+import { Sidebar } from './Sidebar';
 
 function stripLocale(pathname: string): string {
   if (pathname.startsWith('/ko/')) return pathname.slice(3);
@@ -162,8 +163,11 @@ export function Layout({ children }: LayoutProps) {
         </div>
       </header>
 
-      {/* Main */}
-      <main className="flex-1 max-w-6xl mx-auto px-4 py-8 w-full">{children}</main>
+      {/* Main Content with Sidebar */}
+      <div className="flex-1 flex">
+        <Sidebar />
+        <main className="flex-1 max-w-6xl mx-auto px-4 py-8 w-full lg:ml-0">{children}</main>
+      </div>
 
       {/* Footer */}
       <footer
