@@ -41,7 +41,7 @@ import { meaningEntries as legacyEntries } from '../entries.legacy';
 import { jsonEntries } from '../generated/entries';
 
 // JSON 엔트리의 ID 목록 (중복 제거용)
-const jsonEntryIds = new Set(jsonEntries.map((e) => e.id));
+const jsonEntryIds = new Set(jsonEntries.map((e: MeaningEntry) => e.id));
 
 // 모든 엔트리 합치기 (JSON 우선, 중복 시 JSON 사용)
 export const meaningEntries: MeaningEntry[] = [

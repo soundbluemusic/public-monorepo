@@ -39,7 +39,7 @@
 
 | Category (분류) | Technology (기술) |
 |:---------------:|:------------------|
-| **Framework** | Solid.js + SolidStart |
+| **Framework** | React + React Router v7 |
 | **Language** | TypeScript |
 | **Styling** | Tailwind CSS v4 |
 | **Package Manager** | pnpm (workspaces) |
@@ -48,7 +48,7 @@
 | **Storage** | localStorage / IndexedDB only (No external DB) |
 | **API** | Web Standard APIs only (No vendor lock-in) |
 | **Hosting** | Cloudflare Pages (CDN) |
-| **Output** | `.output/public` |
+| **Output** | `build/client` |
 
 <br>
 
@@ -74,7 +74,7 @@ soundblue-monorepo/
 └── package.json       →  Root config (루트 설정)
 ```
 
-> **Note:** All apps use `preset: "static"` in `app.config.ts`. Build output goes to `.output/public`.
+> **Note:** All apps use `ssr: false` in `react-router.config.ts`. Build output goes to `build/client`.
 
 <br>
 
@@ -131,9 +131,9 @@ pnpm dev:roots          # → http://localhost:3005
 | `pnpm dev:context` | Run Context app (Context 앱 실행) |
 | `pnpm dev:permissive` | Run Permissive app (Permissive 앱 실행) |
 | `pnpm dev:roots` | Run Roots app (Roots 앱 실행) |
-| `pnpm build:context` | Build Context app → `.output/public` |
-| `pnpm build:permissive` | Build Permissive app → `.output/public` |
-| `pnpm build:roots` | Build Roots app → `.output/public` |
+| `pnpm build:context` | Build Context app → `build/client` |
+| `pnpm build:permissive` | Build Permissive app → `build/client` |
+| `pnpm build:roots` | Build Roots app → `build/client` |
 | `pnpm lint` | Check code (코드 검사) |
 | `pnpm format` | Format code (코드 정리) |
 

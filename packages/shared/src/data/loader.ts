@@ -38,7 +38,7 @@ export function loadJsonDirectory<T>(dirPath: string): T[] {
       } else {
         items.push(data);
       }
-    } catch (error) {
+    } catch (error: unknown) {
       console.error(`Failed to load ${filePath}:`, error);
     }
   }
@@ -63,7 +63,7 @@ export function loadJsonFile<T>(filePath: string): T | null {
   try {
     const content = readFileSync(filePath, 'utf-8');
     return JSON.parse(content) as T;
-  } catch (error) {
+  } catch (error: unknown) {
     console.error(`Failed to load ${filePath}:`, error);
     return null;
   }

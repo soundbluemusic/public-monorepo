@@ -34,8 +34,6 @@
   "files": {
     "ignore": [
       "node_modules",
-      ".output",
-      ".vinxi",
       ".react-router",
       "dist",
       "build",

@@ -428,8 +428,8 @@ async function main() {
   if (jsonIdx !== -1 && args[jsonIdx + 1]) {
     try {
       jsonData = JSON.parse(args[jsonIdx + 1]);
-    } catch (e) {
-      console.error('❌ JSON 파싱 오류:', e);
+    } catch (error: unknown) {
+      console.error('❌ JSON 파싱 오류:', error);
       process.exit(1);
     }
   } else if (fileIdx !== -1 && args[fileIdx + 1]) {
@@ -440,8 +440,8 @@ async function main() {
     }
     try {
       jsonData = JSON.parse(readFileSync(filePath, 'utf-8'));
-    } catch (e) {
-      console.error('❌ 파일 JSON 파싱 오류:', e);
+    } catch (error: unknown) {
+      console.error('❌ 파일 JSON 파싱 오류:', error);
       process.exit(1);
     }
   }

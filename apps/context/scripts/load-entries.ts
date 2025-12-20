@@ -70,7 +70,7 @@ function loadJsonEntries(): JsonEntry[] {
       }
 
       console.log(`  ✓ ${file} (${Array.isArray(data) ? data.length : 1} entries)`);
-    } catch (error) {
+    } catch (error: unknown) {
       console.error(`  ✗ Failed to load ${filePath}:`, error);
     }
   }
