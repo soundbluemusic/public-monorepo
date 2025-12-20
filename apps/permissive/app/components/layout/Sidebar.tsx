@@ -200,8 +200,8 @@ export default function Sidebar({
                 onClick={onClose}
                 className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                   isActive(item.href)
-                    ? 'bg-[var(--bg-tertiary)] text-[var(--accent-primary)]'
-                    : 'text-[var(--text-secondary)] hover:bg-[var(--bg-secondary)]'
+                    ? 'bg-(--bg-tertiary) text-(--accent-primary)'
+                    : 'text-(--text-secondary) hover:bg-(--bg-secondary)'
                 }`}
                 title={
                   isCollapsed && !isMobile

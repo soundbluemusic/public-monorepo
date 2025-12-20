@@ -293,7 +293,7 @@ export default function LibrariesPage() {
                       href={lib.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="transition-colors hover:text-[var(--accent-primary)]"
+                      className="transition-colors hover:text-(--accent-primary)"
                       style={{ color: 'var(--text-tertiary)' }}
                     >
                       GitHub
@@ -303,7 +303,7 @@ export default function LibrariesPage() {
                         href={`https://www.npmjs.com/package/${lib.npm}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="transition-colors hover:text-[var(--accent-primary)]"
+                        className="transition-colors hover:text-(--accent-primary)"
                         style={{ color: 'var(--text-tertiary)' }}
                       >
                         npm

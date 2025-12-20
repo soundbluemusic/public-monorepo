@@ -21,5 +21,4 @@ export default {
     // Dynamic concept routes will be generated from search-index.json
     return routes;
   },
-  buildDirectory: '.output',
 } satisfies Config;

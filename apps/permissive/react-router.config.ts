@@ -8,7 +8,4 @@ export default {
   async prerender() {
     return ['/', '/ko', '/web-api', '/ko/web-api', '/libraries', '/ko/libraries'];
   },
-
-  // 빌드 출력 디렉토리
-  buildDirectory: '.output',
 } satisfies Config;

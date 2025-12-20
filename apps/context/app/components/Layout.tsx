@@ -155,7 +155,7 @@ export function Layout({ children }: LayoutProps) {
             <button
               type="button"
               onClick={() => setSidebarOpen(true)}
-              className="p-2 rounded-lg transition-colors hover:bg-[var(--bg-tertiary)]"
+              className="p-2 rounded-lg transition-colors hover:bg-(--bg-tertiary)"
               style={{ color: 'var(--text-secondary)' }}
               aria-label={t('menu')}
             >
@@ -316,7 +316,7 @@ export function Layout({ children }: LayoutProps) {
           <button
             type="button"
             onClick={() => setSidebarOpen(false)}
-            className="p-2 rounded-lg transition-colors hover:bg-[var(--bg-tertiary)]"
+            className="p-2 rounded-lg transition-colors hover:bg-(--bg-tertiary)"
             style={{ color: 'var(--text-secondary)' }}
             aria-label="Close menu"
           >

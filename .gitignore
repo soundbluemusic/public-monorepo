@@ -2,7 +2,7 @@
 node_modules/
 
 # Build outputs
-.output/
+build/
 .vinxi/
 .react-router/
 dist/

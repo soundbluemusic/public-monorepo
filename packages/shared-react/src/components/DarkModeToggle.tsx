@@ -27,7 +27,7 @@ export function DarkModeToggle({
     <Toggle.Root
       pressed={isDark}
       onPressedChange={handleToggle}
-      className={`p-2 rounded-lg transition-colors cursor-pointer hover:bg-[var(--bg-tertiary)] ${className}`}
+      className={`p-2 rounded-lg transition-colors cursor-pointer hover:bg-(--bg-tertiary) ${className}`}
       style={{ color: 'var(--text-secondary)', ...style }}
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
       title={isDark ? 'Light mode' : 'Dark mode'}

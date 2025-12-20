@@ -15,7 +15,7 @@ export function LanguageToggle({ locale, onLocaleChange }: LanguageToggleProps) 
       <DropdownMenu.Trigger asChild>
         <button
           type="button"
-          className="px-2 py-1.5 text-sm cursor-pointer rounded-lg transition-colors hover:bg-[var(--bg-tertiary)]"
+          className="px-2 py-1.5 text-sm cursor-pointer rounded-lg transition-colors hover:bg-(--bg-tertiary)"
           style={{ color: 'var(--text-secondary)' }}
           aria-label="Select language"
         >
@@ -33,14 +33,14 @@ export function LanguageToggle({ locale, onLocaleChange }: LanguageToggleProps) 
           sideOffset={5}
         >
           <DropdownMenu.Item
-            className="px-3 py-2 text-sm rounded-md cursor-pointer outline-none transition-colors hover:bg-[var(--bg-tertiary)]"
+            className="px-3 py-2 text-sm rounded-md cursor-pointer outline-none transition-colors hover:bg-(--bg-tertiary)"
             style={{ color: locale === 'en' ? 'var(--accent-primary)' : 'var(--text-primary)' }}
             onSelect={() => onLocaleChange('en')}
           >
             English
           </DropdownMenu.Item>
           <DropdownMenu.Item
-            className="px-3 py-2 text-sm rounded-md cursor-pointer outline-none transition-colors hover:bg-[var(--bg-tertiary)]"
+            className="px-3 py-2 text-sm rounded-md cursor-pointer outline-none transition-colors hover:bg-(--bg-tertiary)"
             style={{ color: locale === 'ko' ? 'var(--accent-primary)' : 'var(--text-primary)' }}
             onSelect={() => onLocaleChange('ko')}
           >

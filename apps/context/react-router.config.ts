@@ -26,5 +26,4 @@ export default {
     // Dynamic routes will be added by generate-sitemaps.ts
     return routes;
   },
-  buildDirectory: '.output',
 } satisfies Config;
