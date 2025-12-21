@@ -1,0 +1,291 @@
+[
+  {
+    "id": "linear-programming",
+    "name": { "ko": "선형 계획법", "en": "Linear Programming" },
+    "field": "operations-research",
+    "subfield": "optimization",
+    "difficulty": 3,
+    "content": {
+      "ko": {
+        "definition": "선형 목적함수를 선형 제약조건 하에서 최적화하는 방법",
+        "formulas": ["max c^T x", "s.t. Ax ≤ b", "x ≥ 0", "단체법 (Simplex Method)"],
+        "examples": ["생산 계획", "운송 문제", "자원 배분"],
+        "applications": ["제조업", "물류", "금융"]
+      },
+      "en": {
+        "definition": "Method for optimizing linear objective function subject to linear constraints",
+        "formulas": ["max c^T x", "s.t. Ax ≤ b", "x ≥ 0", "Simplex Method"],
+        "examples": ["Production planning", "Transportation problem", "Resource allocation"],
+        "applications": ["Manufacturing", "Logistics", "Finance"]
+      }
+    },
+    "latex": "\\max c^T x \\quad \\text{s.t.} \\quad Ax \\leq b, \\; x \\geq 0",
+    "relations": {
+      "prerequisites": ["linear-algebra", "optimization-basics"],
+      "nextTopics": ["integer-programming", "duality"],
+      "related": ["simplex-method"],
+      "applications": ["optimization", "resource-allocation"]
+    },
+    "tags": ["LP", "선형계획", "simplex", "optimization"]
+  },
+  {
+    "id": "integer-programming",
+    "name": { "ko": "정수 계획법", "en": "Integer Programming" },
+    "field": "operations-research",
+    "subfield": "optimization",
+    "difficulty": 4,
+    "content": {
+      "ko": {
+        "definition": "변수가 정수 값만 가질 수 있는 최적화 문제",
+        "formulas": [
+          "max c^T x, s.t. Ax ≤ b, x ∈ ℤⁿ",
+          "MIP: 일부 변수만 정수",
+          "분기한정법 (Branch & Bound)"
+        ],
+        "examples": ["스케줄링", "시설 위치 선정", "차량 경로"],
+        "applications": ["항공", "통신", "공급망"]
+      },
+      "en": {
+        "definition": "Optimization where variables can only take integer values",
+        "formulas": [
+          "max c^T x, s.t. Ax ≤ b, x ∈ ℤⁿ",
+          "MIP: some variables integer",
+          "Branch & Bound"
+        ],
+        "examples": ["Scheduling", "Facility location", "Vehicle routing"],
+        "applications": ["Airlines", "Telecommunications", "Supply chain"]
+      }
+    },
+    "latex": "\\max c^T x \\quad \\text{s.t.} \\quad Ax \\leq b, \\; x \\in \\mathbb{Z}^n",
+    "relations": {
+      "prerequisites": ["linear-programming"],
+      "nextTopics": ["cutting-planes", "column-generation"],
+      "related": ["combinatorial-optimization"],
+      "applications": ["scheduling", "logistics"]
+    },
+    "tags": ["IP", "MIP", "정수계획", "integer"]
+  },
+  {
+    "id": "network-flow",
+    "name": { "ko": "네트워크 흐름", "en": "Network Flow" },
+    "field": "operations-research",
+    "subfield": "networks",
+    "difficulty": 3,
+    "content": {
+      "ko": {
+        "definition": "그래프에서 흐름을 최적화하는 문제. 최대 흐름, 최소 비용 흐름 등",
+        "formulas": [
+          "최대흐름-최소컷 정리: max flow = min cut",
+          "흐름 보존: Σf_in = Σf_out",
+          "포드-풀커슨 알고리즘"
+        ],
+        "examples": ["교통 흐름", "데이터 전송", "배관 시스템"],
+        "applications": ["통신", "운송", "공급망"]
+      },
+      "en": {
+        "definition": "Optimization of flow in graphs. Maximum flow, minimum cost flow, etc.",
+        "formulas": [
+          "Max-flow Min-cut: max flow = min cut",
+          "Flow conservation: Σf_in = Σf_out",
+          "Ford-Fulkerson algorithm"
+        ],
+        "examples": ["Traffic flow", "Data transmission", "Pipeline systems"],
+        "applications": ["Telecommunications", "Transportation", "Supply chain"]
+      }
+    },
+    "latex": "\\max f \\quad \\text{s.t. flow conservation}",
+    "relations": {
+      "prerequisites": ["graph-theory", "linear-programming"],
+      "nextTopics": ["minimum-cost-flow", "matching"],
+      "related": ["shortest-path"],
+      "applications": ["logistics", "telecommunications"]
+    },
+    "tags": ["네트워크", "flow", "최대흐름", "max-flow"]
+  },
+  {
+    "id": "queueing-theory",
+    "name": { "ko": "대기행렬 이론", "en": "Queueing Theory" },
+    "field": "operations-research",
+    "subfield": "stochastic",
+    "difficulty": 4,
+    "content": {
+      "ko": {
+        "definition": "대기열 시스템의 수학적 분석. 도착, 서비스, 대기 시간 모델링",
+        "formulas": [
+          "M/M/1: λ < μ일 때 안정",
+          "이용률: ρ = λ/μ",
+          "평균 대기시간: W = L/λ (리틀의 법칙)",
+          "M/M/c: c개 서버"
+        ],
+        "examples": ["은행 창구", "콜센터", "서버 큐"],
+        "applications": ["서비스 설계", "용량 계획", "시스템 분석"]
+      },
+      "en": {
+        "definition": "Mathematical analysis of waiting line systems. Modeling arrivals, service, waiting times",
+        "formulas": [
+          "M/M/1: stable if λ < μ",
+          "Utilization: ρ = λ/μ",
+          "Mean wait: W = L/λ (Little's law)",
+          "M/M/c: c servers"
+        ],
+        "examples": ["Bank tellers", "Call centers", "Server queues"],
+        "applications": ["Service design", "Capacity planning", "System analysis"]
+      }
+    },
+    "latex": "W = \\frac{L}{\\lambda}",
+    "relations": {
+      "prerequisites": ["probability", "stochastic-processes"],
+      "nextTopics": ["markov-chains", "simulation"],
+      "related": ["poisson-process"],
+      "applications": ["service-engineering", "capacity-planning"]
+    },
+    "tags": ["큐잉", "queue", "대기열", "Little's law"]
+  },
+  {
+    "id": "dynamic-programming-or",
+    "name": { "ko": "동적 계획법 (OR)", "en": "Dynamic Programming (OR)" },
+    "field": "operations-research",
+    "subfield": "optimization",
+    "difficulty": 4,
+    "content": {
+      "ko": {
+        "definition": "복잡한 문제를 하위 문제로 분해하여 순차적으로 최적화",
+        "formulas": [
+          "벨만 방정식: V(s) = max_a {r(s,a) + γV(s')}",
+          "최적 부분구조",
+          "중복 부분문제"
+        ],
+        "examples": ["배낭 문제", "최단 경로", "재고 관리"],
+        "applications": ["자원 배분", "투자", "로봇공학"]
+      },
+      "en": {
+        "definition": "Decomposing complex problems into subproblems for sequential optimization",
+        "formulas": [
+          "Bellman equation: V(s) = max_a {r(s,a) + γV(s')}",
+          "Optimal substructure",
+          "Overlapping subproblems"
+        ],
+        "examples": ["Knapsack problem", "Shortest path", "Inventory management"],
+        "applications": ["Resource allocation", "Investment", "Robotics"]
+      }
+    },
+    "latex": "V(s) = \\max_a \\{r(s,a) + \\gamma V(s')\\}",
+    "relations": {
+      "prerequisites": ["optimization-basics", "recursion"],
+      "nextTopics": ["reinforcement-learning", "markov-decision-process"],
+      "related": ["bellman-equation"],
+      "applications": ["control", "ai"]
+    },
+    "tags": ["DP", "동적계획", "Bellman", "optimization"]
+  },
+  {
+    "id": "inventory-theory",
+    "name": { "ko": "재고 이론", "en": "Inventory Theory" },
+    "field": "operations-research",
+    "subfield": "supply-chain",
+    "difficulty": 3,
+    "content": {
+      "ko": {
+        "definition": "재고 보유 비용과 주문 비용을 최소화하는 최적 재고 정책 결정",
+        "formulas": ["EOQ: Q* = √(2DK/h)", "재주문점: ROP = d × L", "ABC 분석", "(s,S) 정책"],
+        "examples": ["제조업 원자재", "소매 재고", "창고 관리"],
+        "applications": ["공급망", "제조", "소매"]
+      },
+      "en": {
+        "definition": "Determining optimal inventory policies minimizing holding and ordering costs",
+        "formulas": [
+          "EOQ: Q* = √(2DK/h)",
+          "Reorder point: ROP = d × L",
+          "ABC analysis",
+          "(s,S) policy"
+        ],
+        "examples": ["Manufacturing raw materials", "Retail inventory", "Warehouse management"],
+        "applications": ["Supply chain", "Manufacturing", "Retail"]
+      }
+    },
+    "latex": "Q^* = \\sqrt{\\frac{2DK}{h}}",
+    "relations": {
+      "prerequisites": ["optimization-basics", "probability"],
+      "nextTopics": ["supply-chain-optimization"],
+      "related": ["queueing-theory"],
+      "applications": ["logistics", "manufacturing"]
+    },
+    "tags": ["재고", "inventory", "EOQ", "supply-chain"]
+  },
+  {
+    "id": "scheduling-theory",
+    "name": { "ko": "스케줄링 이론", "en": "Scheduling Theory" },
+    "field": "operations-research",
+    "subfield": "scheduling",
+    "difficulty": 4,
+    "content": {
+      "ko": {
+        "definition": "작업들을 자원에 시간적으로 배정하여 목적함수 최적화",
+        "formulas": [
+          "단일기계: 1||Σwⱼcⱼ",
+          "병렬기계: P||Cmax",
+          "흐름작업: F||Cmax",
+          "작업장: J||Cmax"
+        ],
+        "examples": ["공장 스케줄링", "프로젝트 관리", "CPU 스케줄링"],
+        "applications": ["제조", "컴퓨터 시스템", "항공"]
+      },
+      "en": {
+        "definition": "Temporal assignment of jobs to resources to optimize objective function",
+        "formulas": [
+          "Single machine: 1||Σwⱼcⱼ",
+          "Parallel: P||Cmax",
+          "Flow shop: F||Cmax",
+          "Job shop: J||Cmax"
+        ],
+        "examples": ["Factory scheduling", "Project management", "CPU scheduling"],
+        "applications": ["Manufacturing", "Computer systems", "Airlines"]
+      }
+    },
+    "latex": "\\min C_{max} = \\max_j C_j",
+    "relations": {
+      "prerequisites": ["graph-theory", "combinatorial-optimization"],
+      "nextTopics": ["constraint-programming"],
+      "related": ["integer-programming"],
+      "applications": ["manufacturing", "computing"]
+    },
+    "tags": ["스케줄링", "scheduling", "makespan", "jobs"]
+  },
+  {
+    "id": "markov-decision-process",
+    "name": { "ko": "마르코프 결정 과정", "en": "Markov Decision Process" },
+    "field": "operations-research",
+    "subfield": "stochastic",
+    "difficulty": 5,
+    "content": {
+      "ko": {
+        "definition": "순차적 의사결정을 위한 확률적 모델. 상태, 행동, 보상, 전이확률",
+        "formulas": [
+          "(S, A, P, R, γ)",
+          "벨만 최적 방정식: V*(s) = max_a Σ P(s'|s,a)[R + γV*(s')]",
+          "정책: π(s) → a"
+        ],
+        "examples": ["로봇 네비게이션", "게임 AI", "추천 시스템"],
+        "applications": ["강화학습", "로봇공학", "금융"]
+      },
+      "en": {
+        "definition": "Stochastic model for sequential decision making. States, actions, rewards, transitions",
+        "formulas": [
+          "(S, A, P, R, γ)",
+          "Bellman optimality: V*(s) = max_a Σ P(s'|s,a)[R + γV*(s')]",
+          "Policy: π(s) → a"
+        ],
+        "examples": ["Robot navigation", "Game AI", "Recommendation systems"],
+        "applications": ["Reinforcement learning", "Robotics", "Finance"]
+      }
+    },
+    "latex": "V^*(s) = \\max_a \\sum_{s'} P(s'|s,a)[R(s,a,s') + \\gamma V^*(s')]",
+    "relations": {
+      "prerequisites": ["markov-chains", "dynamic-programming-or"],
+      "nextTopics": ["reinforcement-learning", "pomdp"],
+      "related": ["bellman-equation"],
+      "applications": ["ai", "robotics", "control"]
+    },
+    "tags": ["MDP", "마르코프", "decision", "reinforcement"]
+  }
+]

@@ -1,0 +1,672 @@
+[
+  {
+    "id": "prime-numbers",
+    "name": { "ko": "소수", "en": "Prime Numbers" },
+    "field": "number-theory",
+    "subfield": "primes",
+    "difficulty": 2,
+    "content": {
+      "ko": {
+        "definition": "소수는 1과 자기 자신만을 약수로 가지는 1보다 큰 자연수입니다. 모든 자연수는 소수의 곱으로 유일하게 표현됩니다.",
+        "formulas": [
+          {
+            "latex": "\\pi(x) \\sim \\frac{x}{\\ln x}",
+            "description": "소수 계수 함수의 점근 추정 (소수 정리)"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "100 이하의 소수를 나열하세요.",
+            "solution": "2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 (25개)"
+          },
+          {
+            "problem": "91이 소수인지 판별하세요.",
+            "solution": "91 = 7 × 13이므로 소수가 아닙니다."
+          }
+        ],
+        "history": {
+          "discoveredBy": "유클리드",
+          "year": "기원전 300년경",
+          "background": "유클리드는 소수가 무한히 많음을 증명했습니다. 이것은 역사상 가장 우아한 증명 중 하나입니다."
+        },
+        "applications": [
+          { "field": "암호학", "description": "RSA 암호화의 기반" },
+          { "field": "해시 함수", "description": "충돌 방지" },
+          { "field": "난수 생성", "description": "선형 합동 생성기" }
+        ]
+      },
+      "en": {
+        "definition": "A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. Every natural number can be uniquely expressed as a product of primes.",
+        "formulas": [
+          {
+            "latex": "\\pi(x) \\sim \\frac{x}{\\ln x}",
+            "description": "Prime counting function estimate (Prime Number Theorem)"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "List all primes up to 100.",
+            "solution": "2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 (25 primes)"
+          },
+          { "problem": "Is 91 prime?", "solution": "91 = 7 × 13, so it's not prime." }
+        ],
+        "history": {
+          "discoveredBy": "Euclid",
+          "year": "c. 300 BCE",
+          "background": "Euclid proved there are infinitely many primes. This is one of the most elegant proofs in history."
+        },
+        "applications": [
+          { "field": "Cryptography", "description": "Foundation of RSA" },
+          { "field": "Hash Functions", "description": "Collision avoidance" },
+          { "field": "Random Numbers", "description": "Linear congruential generators" }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": ["division", "factors"],
+      "nextTopics": ["fundamental-theorem-arithmetic", "gcd-lcm"],
+      "related": ["composite-numbers"]
+    },
+    "tags": ["소수", "정수론", "prime", "number theory"]
+  },
+  {
+    "id": "gcd-lcm",
+    "name": { "ko": "최대공약수와 최소공배수", "en": "GCD and LCM" },
+    "field": "number-theory",
+    "subfield": "divisibility",
+    "difficulty": 2,
+    "content": {
+      "ko": {
+        "definition": "최대공약수(GCD)는 두 수의 공통 약수 중 가장 큰 것이고, 최소공배수(LCM)는 공통 배수 중 가장 작은 것입니다.",
+        "formulas": [
+          {
+            "latex": "\\gcd(a, b) \\times \\text{lcm}(a, b) = a \\times b",
+            "description": "GCD와 LCM의 관계"
+          },
+          { "latex": "\\gcd(a, b) = \\gcd(b, a \\mod b)", "description": "유클리드 호제법" }
+        ],
+        "examples": [
+          {
+            "problem": "gcd(48, 18)을 유클리드 호제법으로 구하세요.",
+            "solution": "gcd(48, 18) = gcd(18, 12) = gcd(12, 6) = gcd(6, 0) = 6"
+          },
+          {
+            "problem": "lcm(12, 18)을 구하세요.",
+            "solution": "gcd(12, 18) = 6이므로, lcm = (12 × 18) / 6 = 36"
+          }
+        ],
+        "history": {
+          "discoveredBy": "유클리드",
+          "year": "기원전 300년경",
+          "background": "유클리드의 원론에 나오는 알고리즘으로, 가장 오래된 알고리즘 중 하나입니다."
+        },
+        "applications": [
+          { "field": "분수 계산", "description": "분수의 약분과 통분" },
+          { "field": "암호학", "description": "RSA의 키 생성" },
+          { "field": "스케줄링", "description": "주기적 이벤트 동기화" }
+        ]
+      },
+      "en": {
+        "definition": "GCD (Greatest Common Divisor) is the largest common divisor of two numbers. LCM (Least Common Multiple) is the smallest common multiple.",
+        "formulas": [
+          {
+            "latex": "\\gcd(a, b) \\times \\text{lcm}(a, b) = a \\times b",
+            "description": "Relationship between GCD and LCM"
+          },
+          { "latex": "\\gcd(a, b) = \\gcd(b, a \\mod b)", "description": "Euclidean algorithm" }
+        ],
+        "examples": [
+          {
+            "problem": "Find gcd(48, 18) using Euclidean algorithm.",
+            "solution": "gcd(48, 18) = gcd(18, 12) = gcd(12, 6) = gcd(6, 0) = 6"
+          },
+          {
+            "problem": "Find lcm(12, 18).",
+            "solution": "gcd(12, 18) = 6, so lcm = (12 × 18) / 6 = 36"
+          }
+        ],
+        "history": {
+          "discoveredBy": "Euclid",
+          "year": "c. 300 BCE",
+          "background": "Algorithm from Euclid's Elements, one of the oldest algorithms known."
+        },
+        "applications": [
+          { "field": "Fraction Arithmetic", "description": "Simplifying and adding fractions" },
+          { "field": "Cryptography", "description": "RSA key generation" },
+          { "field": "Scheduling", "description": "Periodic event synchronization" }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": ["division", "prime-numbers"],
+      "nextTopics": ["modular-arithmetic", "diophantine-equations"],
+      "related": ["euclidean-algorithm"]
+    },
+    "tags": ["최대공약수", "최소공배수", "GCD", "LCM"]
+  },
+  {
+    "id": "fermats-little-theorem",
+    "name": { "ko": "페르마의 소정리", "en": "Fermat's Little Theorem" },
+    "field": "number-theory",
+    "subfield": "modular-theory",
+    "difficulty": 4,
+    "content": {
+      "ko": {
+        "definition": "p가 소수이고 a가 p로 나누어지지 않으면, a^(p-1) ≡ 1 (mod p)입니다.",
+        "formulas": [
+          { "latex": "a^{p-1} \\equiv 1 \\pmod{p}", "description": "페르마의 소정리" },
+          { "latex": "a^p \\equiv a \\pmod{p}", "description": "페르마의 소정리 (변형)" }
+        ],
+        "examples": [
+          {
+            "problem": "2^10 mod 11을 페르마의 소정리로 구하세요.",
+            "solution": "11은 소수이고 gcd(2,11)=1이므로, 2^10 ≡ 1 (mod 11)"
+          },
+          {
+            "problem": "3^100 mod 7을 구하세요.",
+            "solution": "3^6 ≡ 1 (mod 7), 100 = 6×16 + 4이므로, 3^100 ≡ 3^4 = 81 ≡ 4 (mod 7)"
+          }
+        ],
+        "history": {
+          "discoveredBy": "피에르 드 페르마",
+          "year": "1640년",
+          "background": "페르마가 메르센에게 보낸 편지에서 처음 언급했으며, 오일러가 증명했습니다."
+        },
+        "applications": [
+          { "field": "암호학", "description": "RSA 암호화, 소수 판정" },
+          { "field": "알고리즘", "description": "빠른 거듭제곱 연산" }
+        ]
+      },
+      "en": {
+        "definition": "If p is prime and a is not divisible by p, then a^(p-1) ≡ 1 (mod p).",
+        "formulas": [
+          { "latex": "a^{p-1} \\equiv 1 \\pmod{p}", "description": "Fermat's Little Theorem" },
+          { "latex": "a^p \\equiv a \\pmod{p}", "description": "Fermat's Little Theorem (variant)" }
+        ],
+        "examples": [
+          {
+            "problem": "Find 2^10 mod 11 using Fermat's Little Theorem.",
+            "solution": "11 is prime and gcd(2,11)=1, so 2^10 ≡ 1 (mod 11)"
+          },
+          {
+            "problem": "Find 3^100 mod 7.",
+            "solution": "3^6 ≡ 1 (mod 7), 100 = 6×16 + 4, so 3^100 ≡ 3^4 = 81 ≡ 4 (mod 7)"
+          }
+        ],
+        "history": {
+          "discoveredBy": "Pierre de Fermat",
+          "year": "1640",
+          "background": "First mentioned in a letter to Mersenne; proved by Euler."
+        },
+        "applications": [
+          { "field": "Cryptography", "description": "RSA, primality testing" },
+          { "field": "Algorithms", "description": "Fast exponentiation" }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": ["modular-arithmetic", "prime-numbers"],
+      "nextTopics": ["eulers-theorem", "rsa"],
+      "related": ["chinese-remainder-theorem"]
+    },
+    "tags": ["페르마", "소정리", "Fermat", "little theorem"]
+  },
+  {
+    "id": "fibonacci",
+    "name": { "ko": "피보나치 수열", "en": "Fibonacci Sequence" },
+    "field": "number-theory",
+    "subfield": "sequences",
+    "difficulty": 2,
+    "content": {
+      "ko": {
+        "definition": "피보나치 수열은 앞의 두 항의 합이 다음 항이 되는 수열입니다. F(1)=1, F(2)=1, F(n)=F(n-1)+F(n-2).",
+        "formulas": [
+          { "latex": "F_n = F_{n-1} + F_{n-2}", "description": "피보나치 점화식" },
+          {
+            "latex": "F_n = \\frac{\\phi^n - \\psi^n}{\\sqrt{5}}",
+            "description": "비네 공식 (φ = 황금비)"
+          },
+          {
+            "latex": "\\lim_{n \\to \\infty} \\frac{F_{n+1}}{F_n} = \\phi = \\frac{1+\\sqrt{5}}{2}",
+            "description": "황금비로의 수렴"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "피보나치 수열의 처음 10개 항을 나열하세요.",
+            "solution": "1, 1, 2, 3, 5, 8, 13, 21, 34, 55"
+          }
+        ],
+        "history": {
+          "discoveredBy": "레오나르도 피보나치",
+          "year": "1202년",
+          "background": "피보나치가 토끼 번식 문제를 설명하면서 이 수열을 소개했습니다."
+        },
+        "applications": [
+          { "field": "자연", "description": "해바라기 씨앗 배열, 조개껍질 나선" },
+          { "field": "금융", "description": "피보나치 되돌림" },
+          { "field": "알고리즘", "description": "피보나치 힙, 동적 프로그래밍 예제" }
+        ]
+      },
+      "en": {
+        "definition": "The Fibonacci sequence is where each term is the sum of the two preceding terms. F(1)=1, F(2)=1, F(n)=F(n-1)+F(n-2).",
+        "formulas": [
+          { "latex": "F_n = F_{n-1} + F_{n-2}", "description": "Fibonacci recurrence" },
+          {
+            "latex": "F_n = \\frac{\\phi^n - \\psi^n}{\\sqrt{5}}",
+            "description": "Binet's formula (φ = golden ratio)"
+          },
+          {
+            "latex": "\\lim_{n \\to \\infty} \\frac{F_{n+1}}{F_n} = \\phi = \\frac{1+\\sqrt{5}}{2}",
+            "description": "Convergence to golden ratio"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "List the first 10 Fibonacci numbers.",
+            "solution": "1, 1, 2, 3, 5, 8, 13, 21, 34, 55"
+          }
+        ],
+        "history": {
+          "discoveredBy": "Leonardo Fibonacci",
+          "year": "1202",
+          "background": "Fibonacci introduced this sequence while explaining rabbit breeding."
+        },
+        "applications": [
+          { "field": "Nature", "description": "Sunflower seeds, shell spirals" },
+          { "field": "Finance", "description": "Fibonacci retracement" },
+          { "field": "Algorithms", "description": "Fibonacci heap, DP example" }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": ["sequences"],
+      "nextTopics": ["golden-ratio", "recurrence-relations"],
+      "related": ["lucas-numbers"]
+    },
+    "tags": ["피보나치", "수열", "Fibonacci", "sequence"]
+  },
+  {
+    "id": "diophantine-equations",
+    "name": { "ko": "디오판토스 방정식", "en": "Diophantine Equations" },
+    "field": "number-theory",
+    "subfield": "equations",
+    "difficulty": 4,
+    "content": {
+      "ko": {
+        "definition": "디오판토스 방정식은 정수 해만을 찾는 다항 방정식입니다. 해의 존재 여부와 모든 해를 찾는 것이 주요 문제입니다.",
+        "formulas": [
+          { "latex": "ax + by = c", "description": "일차 디오판토스 방정식" },
+          { "latex": "\\gcd(a,b) | c \\text{이면 해가 존재}", "description": "해의 존재 조건" },
+          {
+            "latex": "x^n + y^n = z^n",
+            "description": "페르마의 마지막 정리 (n≥3일 때 정수해 없음)"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "3x + 5y = 1의 정수 해를 찾으세요.",
+            "solution": "확장 유클리드: 3(2) + 5(-1) = 1, 따라서 x=2, y=-1. 일반해: x=2+5t, y=-1-3t"
+          }
+        ],
+        "history": {
+          "discoveredBy": "디오판토스",
+          "year": "3세기경",
+          "background": "알렉산드리아의 디오판토스가 그의 저서 '산술'에서 이러한 문제들을 다루었습니다."
+        },
+        "applications": [
+          { "field": "암호학", "description": "RSA의 확장 유클리드 알고리즘" },
+          { "field": "조합론", "description": "동전 교환 문제" }
+        ]
+      },
+      "en": {
+        "definition": "Diophantine equations are polynomial equations seeking integer solutions. Key problems are existence and finding all solutions.",
+        "formulas": [
+          { "latex": "ax + by = c", "description": "Linear Diophantine equation" },
+          {
+            "latex": "\\gcd(a,b) | c \\text{ implies solution exists}",
+            "description": "Existence condition"
+          },
+          {
+            "latex": "x^n + y^n = z^n",
+            "description": "Fermat's Last Theorem (no integer solutions for n≥3)"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "Find integer solutions to 3x + 5y = 1.",
+            "solution": "Extended Euclidean: 3(2) + 5(-1) = 1, so x=2, y=-1. General: x=2+5t, y=-1-3t"
+          }
+        ],
+        "history": {
+          "discoveredBy": "Diophantus",
+          "year": "c. 3rd century",
+          "background": "Diophantus of Alexandria studied these problems in his work 'Arithmetica'."
+        },
+        "applications": [
+          { "field": "Cryptography", "description": "Extended Euclidean in RSA" },
+          { "field": "Combinatorics", "description": "Coin change problem" }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": ["gcd-lcm", "modular-arithmetic"],
+      "nextTopics": ["fermats-last-theorem"],
+      "related": ["linear-algebra"]
+    },
+    "tags": ["디오판토스", "정수론", "Diophantine", "integer equations"]
+  },
+  {
+    "id": "modular-arithmetic",
+    "name": { "ko": "모듈러 산술", "en": "Modular Arithmetic" },
+    "field": "number-theory",
+    "subfield": "modular-theory",
+    "difficulty": 3,
+    "content": {
+      "ko": {
+        "definition": "모듈러 산술은 정수를 어떤 수(법)로 나눈 나머지로 계산하는 체계입니다. 시계 산술이라고도 불립니다.",
+        "formulas": [
+          {
+            "latex": "a \\equiv b \\pmod{n} \\Leftrightarrow n | (a-b)",
+            "description": "합동의 정의"
+          },
+          {
+            "latex": "(a + b) \\mod n = ((a \\mod n) + (b \\mod n)) \\mod n",
+            "description": "덧셈의 모듈러 성질"
+          },
+          {
+            "latex": "(a \\cdot b) \\mod n = ((a \\mod n) \\cdot (b \\mod n)) \\mod n",
+            "description": "곱셈의 모듈러 성질"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "17 ≡ ? (mod 5)를 구하세요.",
+            "solution": "17 = 5 × 3 + 2이므로 17 ≡ 2 (mod 5)"
+          },
+          {
+            "problem": "2^10 mod 7을 구하세요.",
+            "solution": "2^3 = 8 ≡ 1 (mod 7). 2^10 = 2^9 × 2 = (2^3)^3 × 2 ≡ 1 × 2 = 2 (mod 7)"
+          }
+        ],
+        "applications": [
+          { "field": "암호학", "description": "RSA, AES 암호화" },
+          { "field": "해시 함수", "description": "데이터 분산" },
+          { "field": "오류 검출", "description": "ISBN, 신용카드 검증" }
+        ]
+      },
+      "en": {
+        "definition": "Modular arithmetic is a system where calculations are done with remainders after division by a modulus. Also called clock arithmetic.",
+        "formulas": [
+          {
+            "latex": "a \\equiv b \\pmod{n} \\Leftrightarrow n | (a-b)",
+            "description": "Definition of congruence"
+          },
+          {
+            "latex": "(a + b) \\mod n = ((a \\mod n) + (b \\mod n)) \\mod n",
+            "description": "Addition modular property"
+          },
+          {
+            "latex": "(a \\cdot b) \\mod n = ((a \\mod n) \\cdot (b \\mod n)) \\mod n",
+            "description": "Multiplication modular property"
+          }
+        ],
+        "examples": [
+          { "problem": "Find 17 ≡ ? (mod 5).", "solution": "17 = 5 × 3 + 2, so 17 ≡ 2 (mod 5)" },
+          {
+            "problem": "Find 2^10 mod 7.",
+            "solution": "2^3 = 8 ≡ 1 (mod 7). 2^10 = 2^9 × 2 = (2^3)^3 × 2 ≡ 1 × 2 = 2 (mod 7)"
+          }
+        ],
+        "applications": [
+          { "field": "Cryptography", "description": "RSA, AES encryption" },
+          { "field": "Hash Functions", "description": "Data distribution" },
+          { "field": "Error Detection", "description": "ISBN, credit card verification" }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": ["division", "integers"],
+      "nextTopics": ["fermats-little-theorem", "chinese-remainder-theorem"],
+      "related": ["gcd-lcm"]
+    },
+    "tags": ["모듈러", "합동", "modular", "congruence"]
+  },
+  {
+    "id": "chinese-remainder-theorem",
+    "name": { "ko": "중국인의 나머지 정리", "en": "Chinese Remainder Theorem" },
+    "field": "number-theory",
+    "subfield": "modular-theory",
+    "difficulty": 4,
+    "content": {
+      "ko": {
+        "definition": "서로소인 법들에 대한 연립 합동식은 유일한 해를 가집니다. 큰 수의 계산을 작은 계산으로 분해할 수 있게 합니다.",
+        "formulas": [
+          {
+            "latex": "x \\equiv a_1 \\pmod{n_1}, \\ldots, x \\equiv a_k \\pmod{n_k}",
+            "description": "연립 합동식"
+          },
+          {
+            "latex": "x \\equiv \\sum_{i} a_i N_i M_i \\pmod{N}",
+            "description": "해의 공식 (N = n₁...nₖ, Nᵢ = N/nᵢ, MᵢNᵢ ≡ 1 mod nᵢ)"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "x ≡ 2 (mod 3), x ≡ 3 (mod 5)를 만족하는 x를 구하세요.",
+            "solution": "N = 15. N₁ = 5, N₂ = 3. 5M₁ ≡ 1 (mod 3)에서 M₁ = 2. 3M₂ ≡ 1 (mod 5)에서 M₂ = 2. x = 2×5×2 + 3×3×2 = 20 + 18 = 38 ≡ 8 (mod 15)"
+          }
+        ],
+        "history": {
+          "discoveredBy": "손자 (중국 수학자)",
+          "year": "3세기경",
+          "background": "손자산경에서 처음 등장했으며, 병사 수를 세는 문제로 유명합니다."
+        },
+        "applications": [
+          { "field": "암호학", "description": "RSA 복호화 가속" },
+          { "field": "컴퓨터 대수", "description": "큰 수 연산 분해" },
+          { "field": "스케줄링", "description": "주기적 이벤트 계산" }
+        ]
+      },
+      "en": {
+        "definition": "A system of congruences with pairwise coprime moduli has a unique solution. It allows decomposing large computations into smaller ones.",
+        "formulas": [
+          {
+            "latex": "x \\equiv a_1 \\pmod{n_1}, \\ldots, x \\equiv a_k \\pmod{n_k}",
+            "description": "System of congruences"
+          },
+          {
+            "latex": "x \\equiv \\sum_{i} a_i N_i M_i \\pmod{N}",
+            "description": "Solution formula (N = n₁...nₖ, Nᵢ = N/nᵢ, MᵢNᵢ ≡ 1 mod nᵢ)"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "Find x where x ≡ 2 (mod 3), x ≡ 3 (mod 5).",
+            "solution": "N = 15. N₁ = 5, N₂ = 3. 5M₁ ≡ 1 (mod 3) gives M₁ = 2. 3M₂ ≡ 1 (mod 5) gives M₂ = 2. x = 2×5×2 + 3×3×2 = 38 ≡ 8 (mod 15)"
+          }
+        ],
+        "history": {
+          "discoveredBy": "Sunzi (Chinese mathematician)",
+          "year": "c. 3rd century",
+          "background": "First appeared in Sunzi Suanjing, famous for counting soldiers problem."
+        },
+        "applications": [
+          { "field": "Cryptography", "description": "RSA decryption speedup" },
+          { "field": "Computer Algebra", "description": "Large number decomposition" },
+          { "field": "Scheduling", "description": "Periodic event calculation" }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": ["modular-arithmetic", "gcd-lcm"],
+      "nextTopics": ["eulers-theorem"],
+      "related": ["fermats-little-theorem"]
+    },
+    "tags": ["중국인나머지", "연립합동", "CRT", "Chinese remainder"]
+  },
+  {
+    "id": "euler-totient",
+    "name": { "ko": "오일러 피 함수", "en": "Euler's Totient Function" },
+    "field": "number-theory",
+    "subfield": "multiplicative-functions",
+    "difficulty": 3,
+    "content": {
+      "ko": {
+        "definition": "오일러 피 함수 φ(n)은 n 이하의 양의 정수 중 n과 서로소인 것의 개수입니다. RSA 암호의 핵심입니다.",
+        "formulas": [
+          {
+            "latex": "\\phi(n) = |\\{k : 1 \\leq k \\leq n, \\gcd(k,n) = 1\\}|",
+            "description": "오일러 피 함수의 정의"
+          },
+          { "latex": "\\phi(p) = p - 1", "description": "소수의 경우" },
+          { "latex": "\\phi(p^k) = p^{k-1}(p-1)", "description": "소수 거듭제곱의 경우" },
+          {
+            "latex": "\\phi(mn) = \\phi(m)\\phi(n) \\text{ if } \\gcd(m,n) = 1",
+            "description": "곱셈적 함수 성질"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "φ(12)를 구하세요.",
+            "solution": "12와 서로소인 수: 1, 5, 7, 11 (4개). 또는 φ(12) = φ(4)φ(3) = 2 × 2 = 4"
+          },
+          {
+            "problem": "φ(100)을 구하세요.",
+            "solution": "100 = 4 × 25 = 2² × 5². φ(100) = φ(4)φ(25) = 2 × 20 = 40"
+          }
+        ],
+        "history": {
+          "discoveredBy": "레온하르트 오일러",
+          "year": "1763년",
+          "background": "오일러가 페르마의 소정리를 일반화하면서 이 함수를 도입했습니다."
+        },
+        "applications": [
+          { "field": "암호학", "description": "RSA의 핵심 (공개키/개인키 생성)" },
+          { "field": "정수론", "description": "오일러 정리, 원시근" },
+          { "field": "그룹론", "description": "순환군의 위수" }
+        ]
+      },
+      "en": {
+        "definition": "Euler's totient function φ(n) counts positive integers up to n that are coprime to n. It's central to RSA cryptography.",
+        "formulas": [
+          {
+            "latex": "\\phi(n) = |\\{k : 1 \\leq k \\leq n, \\gcd(k,n) = 1\\}|",
+            "description": "Definition of Euler's totient"
+          },
+          { "latex": "\\phi(p) = p - 1", "description": "For prime p" },
+          { "latex": "\\phi(p^k) = p^{k-1}(p-1)", "description": "For prime power" },
+          {
+            "latex": "\\phi(mn) = \\phi(m)\\phi(n) \\text{ if } \\gcd(m,n) = 1",
+            "description": "Multiplicative property"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "Find φ(12).",
+            "solution": "Numbers coprime to 12: 1, 5, 7, 11 (4 numbers). Or φ(12) = φ(4)φ(3) = 2 × 2 = 4"
+          },
+          {
+            "problem": "Find φ(100).",
+            "solution": "100 = 4 × 25 = 2² × 5². φ(100) = φ(4)φ(25) = 2 × 20 = 40"
+          }
+        ],
+        "history": {
+          "discoveredBy": "Leonhard Euler",
+          "year": "1763",
+          "background": "Euler introduced this function while generalizing Fermat's little theorem."
+        },
+        "applications": [
+          { "field": "Cryptography", "description": "RSA key generation" },
+          { "field": "Number Theory", "description": "Euler's theorem, primitive roots" },
+          { "field": "Group Theory", "description": "Order of cyclic groups" }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": ["gcd-lcm", "prime-numbers"],
+      "nextTopics": ["eulers-theorem", "primitive-roots"],
+      "related": ["fermats-little-theorem"]
+    },
+    "tags": ["오일러", "피함수", "totient", "phi function"]
+  },
+  {
+    "id": "quadratic-residues",
+    "name": { "ko": "이차 잉여", "en": "Quadratic Residues" },
+    "field": "number-theory",
+    "subfield": "modular-theory",
+    "difficulty": 4,
+    "content": {
+      "ko": {
+        "definition": "정수 a가 mod n에서 이차 잉여라는 것은 x² ≡ a (mod n)을 만족하는 x가 존재한다는 것입니다.",
+        "formulas": [
+          {
+            "latex": "\\left(\\frac{a}{p}\\right) = \\begin{cases} 1 & \\text{이차 잉여} \\\\ -1 & \\text{이차 비잉여} \\\\ 0 & p|a \\end{cases}",
+            "description": "르장드르 기호"
+          },
+          {
+            "latex": "\\left(\\frac{a}{p}\\right) \\equiv a^{(p-1)/2} \\pmod{p}",
+            "description": "오일러 판정법"
+          },
+          {
+            "latex": "\\left(\\frac{-1}{p}\\right) = (-1)^{(p-1)/2}",
+            "description": "-1의 이차 잉여 조건"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "mod 7에서 이차 잉여를 모두 찾으세요.",
+            "solution": "1² ≡ 1, 2² ≡ 4, 3² ≡ 2, 4² ≡ 2, 5² ≡ 4, 6² ≡ 1. 이차 잉여: {1, 2, 4}"
+          },
+          {
+            "problem": "3이 mod 11에서 이차 잉여인지 판별하세요.",
+            "solution": "오일러 판정: 3^5 = 243 = 22×11 + 1 ≡ 1 (mod 11). 이차 잉여입니다."
+          }
+        ],
+        "applications": [
+          { "field": "암호학", "description": "제곱근 계산, 영지식 증명" },
+          { "field": "정수론", "description": "이차 상호법칙" },
+          { "field": "소수 판정", "description": "Solovay-Strassen 테스트" }
+        ]
+      },
+      "en": {
+        "definition": "An integer a is a quadratic residue mod n if there exists x such that x² ≡ a (mod n).",
+        "formulas": [
+          {
+            "latex": "\\left(\\frac{a}{p}\\right) = \\begin{cases} 1 & \\text{QR} \\\\ -1 & \\text{QNR} \\\\ 0 & p|a \\end{cases}",
+            "description": "Legendre symbol"
+          },
+          {
+            "latex": "\\left(\\frac{a}{p}\\right) \\equiv a^{(p-1)/2} \\pmod{p}",
+            "description": "Euler's criterion"
+          },
+          {
+            "latex": "\\left(\\frac{-1}{p}\\right) = (-1)^{(p-1)/2}",
+            "description": "Condition for -1 being QR"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "Find all quadratic residues mod 7.",
+            "solution": "1² ≡ 1, 2² ≡ 4, 3² ≡ 2, 4² ≡ 2, 5² ≡ 4, 6² ≡ 1. QRs: {1, 2, 4}"
+          },
+          {
+            "problem": "Is 3 a quadratic residue mod 11?",
+            "solution": "Euler's criterion: 3^5 = 243 = 22×11 + 1 ≡ 1 (mod 11). Yes, it's a QR."
+          }
+        ],
+        "applications": [
+          { "field": "Cryptography", "description": "Square root computation, zero-knowledge" },
+          { "field": "Number Theory", "description": "Quadratic reciprocity" },
+          { "field": "Primality Testing", "description": "Solovay-Strassen test" }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": ["modular-arithmetic", "fermats-little-theorem"],
+      "nextTopics": ["quadratic-reciprocity"],
+      "related": ["euler-totient"]
+    },
+    "tags": ["이차잉여", "르장드르", "quadratic residue", "Legendre"]
+  }
+]
