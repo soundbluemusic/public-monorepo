@@ -1,5 +1,6 @@
 import { Layout } from '@/components/layout/Layout';
 import { useI18n } from '@/i18n';
+import type { MetaFunction } from 'react-router';
 
 const mathConstants = [
   {
@@ -40,12 +41,12 @@ const mathConstants = [
   },
 ];
 
-export function meta() {
-  return [
-    { title: 'Constants - Roots' },
-    { name: 'description', content: 'Mathematical constants' },
-  ];
-}
+export const meta: MetaFunction = ({ location }) => {
+  const locale = location.pathname.startsWith('/ko') ? 'ko' : 'en';
+  const title = locale === 'ko' ? '수학 상수 - 수리' : 'Constants - Roots';
+  const description = locale === 'ko' ? '수학 상수' : 'Mathematical constants';
+  return [{ title }, { name: 'description', content: description }];
+};
 
 export default function ConstantsPage() {
   const { locale, t } = useI18n();

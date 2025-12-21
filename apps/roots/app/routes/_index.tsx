@@ -7,12 +7,15 @@ import { preloadSearchIndex } from '@/lib/search';
 import { useEffect } from 'react';
 import { Link } from 'react-router';
 
-export function meta() {
-  return [
-    { title: 'Roots - Math Documentation' },
-    { name: 'description', content: 'Learn math concepts easily' },
-  ];
-}
+import type { MetaFunction } from 'react-router';
+
+export const meta: MetaFunction = ({ location }) => {
+  const locale = location.pathname.startsWith('/ko') ? 'ko' : 'en';
+  const title = locale === 'ko' ? '수리 - 수학 문서' : 'Roots - Math Documentation';
+  const description =
+    locale === 'ko' ? '누구나 쉽게 배우는 수학 개념 사전' : 'Learn math concepts easily';
+  return [{ title }, { name: 'description', content: description }];
+};
 
 // 대표 개념 (Featured Concepts)
 const FEATURED_CONCEPTS = [
@@ -99,7 +102,7 @@ const FEATURED_CONCEPTS = [
 ];
 
 export default function HomePage() {
-  const { locale, localePath } = useI18n();
+  const { locale, localePath, t } = useI18n();
 
   // 검색 인덱스 프리로드
   useEffect(() => {
@@ -111,11 +114,9 @@ export default function HomePage() {
       {/* Hero Section */}
       <div className="text-center mb-16 pt-8">
         <h1 className="text-5xl md:text-6xl font-bold mb-4 text-text-primary tracking-tight">
-          {locale === 'ko' ? '수리' : 'Roots'}
+          {t('logoText')}
         </h1>
-        <p className="text-xl md:text-2xl text-text-secondary font-light">
-          {locale === 'ko' ? '누구나 쉽게 배우는 수학 개념 사전' : 'Learn math concepts easily'}
-        </p>
+        <p className="text-xl md:text-2xl text-text-secondary font-light">{t('heroSubtitle')}</p>
       </div>
 
       {/* Featured Concepts Grid */}
@@ -143,7 +144,7 @@ export default function HomePage() {
           to={localePath('/browse')}
           className="inline-flex items-center gap-2 text-lg font-medium text-accent-primary hover:text-accent-hover transition-colors"
         >
-          {locale === 'ko' ? '모든 개념 탐색하기' : 'Browse all concepts'}
+          {t('browseAllConcepts')}
           <span className="text-xl">→</span>
         </Link>
       </div>

@@ -63,6 +63,56 @@ export interface UILabels {
   learningPath: string;
   progress: string;
   recentlyViewed: string;
+  // Meta tags
+  metaHomeTitle: string;
+  metaHomeDescription: string;
+  metaAboutTitle: string;
+  metaAboutDescription: string;
+  metaBrowseTitle: string;
+  metaBrowseDescription: string;
+  metaSearchTitle: string;
+  metaSearchDescription: string;
+  metaConstantsTitle: string;
+  metaConstantsDescription: string;
+  metaFavoritesTitle: string;
+  metaFavoritesDescription: string;
+  meta404Title: string;
+  meta404Description: string;
+  // Page content
+  logoText: string;
+  browseAllConcepts: string;
+  features: string;
+  searchResults: string;
+  searchResultsFor: string;
+  resultsCount: string;
+  tryDifferentSearch: string;
+  conceptNotFound: string;
+  fieldNotFound: string;
+  subfields: string;
+  noSubfields: string;
+  concepts: string;
+  mathFields: string;
+  pageNotFoundMsg: string;
+  goBackHome: string;
+  discoveredBy: string;
+  exampleNumber: string;
+  hideSolution: string;
+  showSolution: string;
+  // About features
+  feature1: string;
+  feature2: string;
+  feature3: string;
+  feature4: string;
+  feature5: string;
+  feature6: string;
+  feature7: string;
+  feature8: string;
+  // Footer & UI
+  footerText: string;
+  github: string;
+  relatedDocuments: string;
+  noFavoritesYet: string;
+  addFavoritesHint: string;
 }
 
 interface I18nContextType {
@@ -136,6 +186,56 @@ const translations: Record<Language, UILabels> = {
     learningPath: '학습 경로',
     progress: '진행률',
     recentlyViewed: '최근 본 문서',
+    // Meta tags
+    metaHomeTitle: '수리 - 수학 문서',
+    metaHomeDescription: '누구나 쉽게 배우는 수학 개념 사전',
+    metaAboutTitle: '소개 - 수리',
+    metaAboutDescription: '수리 소개 - 학습자를 위한 수학 문서',
+    metaBrowseTitle: '찾아보기 - 수리',
+    metaBrowseDescription: '분야별로 수학 개념 찾아보기',
+    metaSearchTitle: '검색 - 수리',
+    metaSearchDescription: '수학 개념 검색',
+    metaConstantsTitle: '수학 상수 - 수리',
+    metaConstantsDescription: '수학 상수',
+    metaFavoritesTitle: '즐겨찾기 - 수리',
+    metaFavoritesDescription: '즐겨찾는 수학 개념',
+    meta404Title: '404 - 수리',
+    meta404Description: '페이지를 찾을 수 없습니다',
+    // Page content
+    logoText: '수리',
+    browseAllConcepts: '모든 개념 탐색하기',
+    features: '기능',
+    searchResults: '검색 결과',
+    searchResultsFor: '에 대한 검색 결과',
+    resultsCount: '개의 결과',
+    tryDifferentSearch: '다른 검색어를 시도해보세요.',
+    conceptNotFound: '개념을 찾을 수 없습니다',
+    fieldNotFound: '분야를 찾을 수 없습니다',
+    subfields: '세부 분야',
+    noSubfields: '아직 세부 분야가 없습니다.',
+    concepts: '개념 목록',
+    mathFields: '수학 분야',
+    pageNotFoundMsg: '페이지를 찾을 수 없습니다',
+    goBackHome: '홈으로 돌아가기',
+    discoveredBy: '발견자',
+    exampleNumber: '예제',
+    hideSolution: '풀이 숨기기',
+    showSolution: '풀이 보기',
+    // About features
+    feature1: '18개의 주요 수학 분야 (기초 수학부터 응용 수학까지)',
+    feature2: 'Unicode와 MathML을 사용한 네이티브 수식 렌더링',
+    feature3: '모든 개념에 대한 난이도 표시 (초등~대학원)',
+    feature4: '연관 개념 탐색',
+    feature5: '다국어 지원 (한국어, 영어)',
+    feature6: '다크 모드 지원',
+    feature7: 'PWA - 오프라인에서도 동작',
+    feature8: '완전한 정적 사이트 생성 (SSG)',
+    // Footer & UI
+    footerText: 'Roots by SoundBlueMusic',
+    github: 'GitHub',
+    relatedDocuments: '연관 문서',
+    noFavoritesYet: '아직 즐겨찾기한 개념이 없습니다',
+    addFavoritesHint: '개념 페이지에서 ♡ 버튼을 눌러 추가하세요',
   },
   en: {
     search: 'Search',
@@ -197,6 +297,56 @@ const translations: Record<Language, UILabels> = {
     learningPath: 'Learning Path',
     progress: 'Progress',
     recentlyViewed: 'Recently Viewed',
+    // Meta tags
+    metaHomeTitle: 'Roots - Math Documentation',
+    metaHomeDescription: 'Learn math concepts easily',
+    metaAboutTitle: 'About - Roots',
+    metaAboutDescription: 'About Roots - Math documentation for learners',
+    metaBrowseTitle: 'Browse - Roots',
+    metaBrowseDescription: 'Browse math concepts by field',
+    metaSearchTitle: 'Search - Roots',
+    metaSearchDescription: 'Search math concepts',
+    metaConstantsTitle: 'Constants - Roots',
+    metaConstantsDescription: 'Mathematical constants',
+    metaFavoritesTitle: 'Favorites - Roots',
+    metaFavoritesDescription: 'Your favorite math concepts',
+    meta404Title: '404 - Roots',
+    meta404Description: 'Page not found',
+    // Page content
+    logoText: 'Roots',
+    browseAllConcepts: 'Browse all concepts',
+    features: 'Features',
+    searchResults: 'Search results',
+    searchResultsFor: 'Search results for',
+    resultsCount: ' results',
+    tryDifferentSearch: 'Try a different search term.',
+    conceptNotFound: 'Concept not found',
+    fieldNotFound: 'Field not found',
+    subfields: 'Subfields',
+    noSubfields: 'No subfields available yet.',
+    concepts: 'Concepts',
+    mathFields: 'Math Fields',
+    pageNotFoundMsg: 'Page not found',
+    goBackHome: 'Go back home',
+    discoveredBy: 'Discovered by',
+    exampleNumber: 'Example',
+    hideSolution: 'Hide solution',
+    showSolution: 'Show solution',
+    // About features
+    feature1: '18 major math fields from foundations to applied mathematics',
+    feature2: 'Native math rendering with Unicode and MathML',
+    feature3: 'Difficulty levels for all concepts (Elementary to Graduate)',
+    feature4: 'Related concepts navigation',
+    feature5: 'Multi-language support (Korean, English)',
+    feature6: 'Dark mode support',
+    feature7: 'PWA - works offline',
+    feature8: 'Full static site generation (SSG)',
+    // Footer & UI
+    footerText: 'Roots by SoundBlueMusic',
+    github: 'GitHub',
+    relatedDocuments: 'Related Documents',
+    noFavoritesYet: 'No favorite concepts yet',
+    addFavoritesHint: 'Click the ♡ button on concept pages to add favorites',
   },
 };
 

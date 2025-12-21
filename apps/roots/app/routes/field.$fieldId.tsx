@@ -35,7 +35,7 @@ export default function FieldPage() {
       <Layout>
         <div className="text-center py-12">
           <h1 className="text-2xl font-bold mb-4" style={{ color: 'var(--text-primary)' }}>
-            Field not found
+            {t('fieldNotFound')}
           </h1>
           <Link to={localePath('/browse')} className="btn btn-primary">
             {t('backToList')}
@@ -76,7 +76,7 @@ export default function FieldPage() {
       {/* Subfields */}
       <section>
         <h2 className="text-xl font-semibold mb-4" style={{ color: 'var(--text-primary)' }}>
-          {locale === 'ko' ? '세부 분야' : 'Subfields'}
+          {t('subfields')}
         </h2>
 
         {subfields.length > 0 ? (
@@ -97,9 +97,7 @@ export default function FieldPage() {
             ))}
           </div>
         ) : (
-          <p style={{ color: 'var(--text-tertiary)' }}>
-            {locale === 'ko' ? '아직 세부 분야가 없습니다.' : 'No subfields available yet.'}
-          </p>
+          <p style={{ color: 'var(--text-tertiary)' }}>{t('noSubfields')}</p>
         )}
       </section>
 
@@ -107,7 +105,7 @@ export default function FieldPage() {
       {concepts.length > 0 && (
         <section className="mt-8">
           <h2 className="text-xl font-semibold mb-4" style={{ color: 'var(--text-primary)' }}>
-            {locale === 'ko' ? '개념 목록' : 'Concepts'}
+            {t('concepts')}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {concepts.map((concept) => (

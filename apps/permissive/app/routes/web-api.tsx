@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import type { MetaFunction } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import { useI18n } from '../i18n';
 
@@ -93,12 +94,15 @@ const webApis: WebAPI[] = [
 const categories = ['All', 'DOM', 'Network', 'Storage', 'Graphics'] as const;
 type CategoryFilter = (typeof categories)[number];
 
-export function meta() {
-  return [
-    { title: 'Web API - Permissive' },
-    { name: 'description', content: 'Browser built-in Web Standard APIs' },
-  ];
-}
+export const meta: MetaFunction = ({ location }) => {
+  const isKorean = location.pathname.startsWith('/ko');
+  const title = 'Web API - Permissive';
+  const description = isKorean
+    ? '브라우저에 내장된 웹 표준 API'
+    : 'Browser built-in Web Standard APIs';
+
+  return [{ title }, { name: 'description', content: description }];
+};
 
 export default function WebApiPage() {
   const { locale } = useI18n();

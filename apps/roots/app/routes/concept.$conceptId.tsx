@@ -59,9 +59,7 @@ export default function ConceptPage() {
     return (
       <Layout>
         <div className="text-center py-12">
-          <h1 className="text-2xl font-bold mb-4 text-text-primary">
-            {locale === 'ko' ? '개념을 찾을 수 없습니다' : 'Concept not found'}
-          </h1>
+          <h1 className="text-2xl font-bold mb-4 text-text-primary">{t('conceptNotFound')}</h1>
           <Link to={localePath('/browse')} className="btn btn-primary">
             {t('backToList')}
           </Link>
@@ -165,9 +163,7 @@ export default function ConceptPage() {
             <div className="rounded-lg p-4 bg-bg-secondary border border-border-primary">
               {content.history.discoveredBy && (
                 <p className="text-text-secondary">
-                  <strong className="text-text-primary">
-                    {locale === 'ko' ? '발견자' : 'Discovered by'}:
-                  </strong>{' '}
+                  <strong className="text-text-primary">{t('discoveredBy')}:</strong>{' '}
                   {content.history.discoveredBy}
                   {content.history.year && ` (${content.history.year})`}
                 </p>

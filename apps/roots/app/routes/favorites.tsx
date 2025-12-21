@@ -8,16 +8,17 @@ import { useI18n } from '@/i18n';
 import { getConceptById } from '@/lib/concepts';
 import { favorites } from '@/lib/db';
 import { useEffect, useState } from 'react';
+import type { MetaFunction } from 'react-router';
 
-export function meta() {
-  return [
-    { title: 'Favorites - Roots' },
-    { name: 'description', content: 'Your favorite math concepts' },
-  ];
-}
+export const meta: MetaFunction = ({ location }) => {
+  const locale = location.pathname.startsWith('/ko') ? 'ko' : 'en';
+  const title = locale === 'ko' ? '즐겨찾기 - 수리' : 'Favorites - Roots';
+  const description = locale === 'ko' ? '즐겨찾는 수학 개념' : 'Your favorite math concepts';
+  return [{ title }, { name: 'description', content: description }];
+};
 
 export default function FavoritesPage() {
-  const { locale, t } = useI18n();
+  const { t } = useI18n();
 
   const [favoriteConcepts, setFavoriteConcepts] = useState<MathConcept[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -62,14 +63,8 @@ export default function FavoritesPage() {
         </div>
       ) : (
         <div className="text-center py-12" style={{ color: 'var(--text-tertiary)' }}>
-          <p className="text-xl mb-2">
-            {locale === 'ko' ? '아직 즐겨찾기한 개념이 없습니다' : 'No favorite concepts yet'}
-          </p>
-          <p className="text-sm">
-            {locale === 'ko'
-              ? '개념 페이지에서 ♡ 버튼을 눌러 추가하세요'
-              : 'Click the ♡ button on concept pages to add favorites'}
-          </p>
+          <p className="text-xl mb-2">{t('noFavoritesYet')}</p>
+          <p className="text-sm">{t('addFavoritesHint')}</p>
         </div>
       )}
     </Layout>

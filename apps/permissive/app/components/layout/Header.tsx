@@ -9,7 +9,7 @@ interface HeaderProps {
 }
 
 export default function Header({ onMenuClick, isSidebarOpen }: HeaderProps) {
-  const { locale, setLocale } = useI18n();
+  const { locale, setLocale, t } = useI18n();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -43,7 +43,7 @@ export default function Header({ onMenuClick, isSidebarOpen }: HeaderProps) {
           type="button"
           onClick={onMenuClick}
           className="md:hidden p-2 -ml-2 rounded-lg hover-bg text-[var(--text-secondary)]"
-          aria-label={isSidebarOpen ? 'Close menu' : 'Open menu'}
+          aria-label={isSidebarOpen ? t('aria.closeMenu') : t('aria.openMenu')}
           aria-expanded={isSidebarOpen}
         >
           <svg

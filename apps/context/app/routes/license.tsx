@@ -1,24 +1,22 @@
 import { Layout } from '@/components/Layout';
 import { useI18n } from '@/i18n';
+import type { MetaFunction } from 'react-router';
 
-export function meta() {
-  return [{ title: 'License - Context' }];
-}
+export const meta: MetaFunction = ({ location }) => {
+  const isKorean = location.pathname.startsWith('/ko');
+  return [{ title: isKorean ? '라이선스 - Context' : 'License - Context' }];
+};
 
 export default function LicensePage() {
-  const { locale } = useI18n();
+  const { t } = useI18n();
 
   return (
     <Layout>
       <h1 className="text-2xl font-semibold mb-6" style={{ color: 'var(--text-primary)' }}>
-        {locale === 'ko' ? '라이선스' : 'License'}
+        {t('licenseTitle')}
       </h1>
       <div className="prose" style={{ color: 'var(--text-secondary)' }}>
-        <p>
-          {locale === 'ko'
-            ? 'Context는 Apache License 2.0 하에 배포됩니다.'
-            : 'Context is distributed under the Apache License 2.0.'}
-        </p>
+        <p>{t('licenseContent')}</p>
       </div>
     </Layout>
   );

@@ -1,5 +1,6 @@
 import { DifficultyStars } from '@/components/ui/DifficultyBadge';
 import type { DifficultyLevel, Example as ExampleType } from '@/data/types';
+import { useI18n } from '@/i18n';
 import { useState } from 'react';
 /**
  * @fileoverview 예제 컴포넌트
@@ -18,6 +19,7 @@ interface ExampleCardProps {
  * 개별 예제 카드 컴포넌트
  */
 export function ExampleCard({ example, index }: ExampleCardProps) {
+  const { t } = useI18n();
   const [showSolution, setShowSolution] = useState(false);
 
   return (
@@ -31,7 +33,7 @@ export function ExampleCard({ example, index }: ExampleCardProps) {
       {/* 예제 헤더 */}
       <div className="flex items-center justify-between mb-3">
         <span className="text-sm font-medium" style={{ color: 'var(--text-tertiary)' }}>
-          예제 {index + 1}
+          {t('exampleNumber')} {index + 1}
         </span>
         {example.difficulty && <DifficultyStars level={example.difficulty as DifficultyLevel} />}
       </div>
@@ -53,7 +55,7 @@ export function ExampleCard({ example, index }: ExampleCardProps) {
         className="text-sm font-medium transition-colors"
         style={{ color: 'var(--accent-primary)' }}
       >
-        {showSolution ? '▼ 풀이 숨기기' : '▶ 풀이 보기'}
+        {showSolution ? `▼ ${t('hideSolution')}` : `▶ ${t('showSolution')}`}
       </button>
 
       {/* 풀이 */}
@@ -72,6 +74,7 @@ export function ExampleCard({ example, index }: ExampleCardProps) {
  * 문자열 예제를 간단히 표시
  */
 function SimpleExample({ example, index }: { example: string; index: number }) {
+  const { t } = useI18n();
   return (
     <div
       className="rounded-lg p-4"
@@ -81,7 +84,7 @@ function SimpleExample({ example, index }: { example: string; index: number }) {
       }}
     >
       <span className="text-sm font-medium" style={{ color: 'var(--text-tertiary)' }}>
-        예제 {index + 1}
+        {t('exampleNumber')} {index + 1}
       </span>
       <p className="mt-2" style={{ color: 'var(--text-primary)' }}>
         {example}

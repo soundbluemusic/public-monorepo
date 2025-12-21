@@ -17,9 +17,7 @@ export default function EntryPage() {
     return (
       <Layout>
         <div className="text-center py-12">
-          <p style={{ color: 'var(--text-secondary)' }}>
-            {locale === 'ko' ? '단어를 찾을 수 없습니다' : 'Entry not found'}
-          </p>
+          <p style={{ color: 'var(--text-secondary)' }}>{t('entryNotFound')}</p>
           <Link
             to={localePath('/')}
             className="mt-4 inline-block"

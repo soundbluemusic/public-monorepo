@@ -1,12 +1,14 @@
 import { Layout } from '@/components/Layout';
 import { useI18n } from '@/i18n';
+import type { MetaFunction } from 'react-router';
 
-export function meta() {
-  return [{ title: 'Built With - Context' }];
-}
+export const meta: MetaFunction = ({ location }) => {
+  const isKorean = location.pathname.startsWith('/ko');
+  return [{ title: isKorean ? '사용된 기술 - Context' : 'Built With - Context' }];
+};
 
 export default function BuiltWithPage() {
-  const { locale } = useI18n();
+  const { t } = useI18n();
 
   const tools = [
     { name: 'React', url: 'https://react.dev' },
@@ -19,12 +21,10 @@ export default function BuiltWithPage() {
   return (
     <Layout>
       <h1 className="text-2xl font-semibold mb-6" style={{ color: 'var(--text-primary)' }}>
-        {locale === 'ko' ? '사용된 기술' : 'Built With'}
+        {t('builtWithTitle')}
       </h1>
       <p className="mb-6" style={{ color: 'var(--text-secondary)' }}>
-        {locale === 'ko'
-          ? 'Context는 다음 오픈소스 기술로 제작되었습니다.'
-          : 'Context is built with the following open-source technologies.'}
+        {t('builtWithDescription')}
       </p>
       <ul className="space-y-3">
         {tools.map((tool) => (

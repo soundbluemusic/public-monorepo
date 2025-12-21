@@ -2,14 +2,24 @@ import { Layout } from '@/components/Layout';
 import { categories } from '@/data/categories';
 import { meaningEntries } from '@/data/entries';
 import { useI18n } from '@/i18n';
+import type { MetaFunction } from 'react-router';
 import { Link } from 'react-router';
 
-export function meta() {
+export const meta: MetaFunction = ({ location }) => {
+  const isKorean = location.pathname.startsWith('/ko');
+
+  if (isKorean) {
+    return [
+      { title: '찾아보기 - Context' },
+      { name: 'description', content: '카테고리별로 한국어 단어 찾아보기' },
+    ];
+  }
+
   return [
     { title: 'Browse - Context' },
     { name: 'description', content: 'Browse Korean words by category' },
   ];
-}
+};
 
 export default function BrowsePage() {
   const { locale, t, localePath } = useI18n();
@@ -20,9 +30,7 @@ export default function BrowsePage() {
         <h1 className="text-2xl font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>
           {t('browse')}
         </h1>
-        <p style={{ color: 'var(--text-secondary)' }}>
-          {locale === 'ko' ? '카테고리별로 단어를 찾아보세요' : 'Browse words by category'}
-        </p>
+        <p style={{ color: 'var(--text-secondary)' }}>{t('browseDescription')}</p>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
@@ -45,7 +53,8 @@ export default function BrowsePage() {
                     {category.name[locale]}
                   </h2>
                   <p className="text-sm" style={{ color: 'var(--text-tertiary)' }}>
-                    {count} {locale === 'ko' ? '개 단어' : 'words'}
+                    {count}
+                    {t('wordCount')}
                   </p>
                 </div>
               </div>

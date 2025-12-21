@@ -39,9 +39,14 @@ function SearchResultCard({ result }: { result: SearchResult }) {
   );
 }
 
-export function meta() {
-  return [{ title: 'Search - Roots' }, { name: 'description', content: 'Search math concepts' }];
-}
+import type { MetaFunction } from 'react-router';
+
+export const meta: MetaFunction = ({ location }) => {
+  const locale = location.pathname.startsWith('/ko') ? 'ko' : 'en';
+  const title = locale === 'ko' ? '검색 - 수리' : 'Search - Roots';
+  const description = locale === 'ko' ? '수학 개념 검색' : 'Search math concepts';
+  return [{ title }, { name: 'description', content: description }];
+};
 
 export default function SearchPage() {
   const [searchParams] = useSearchParams();
@@ -74,7 +79,7 @@ export default function SearchPage() {
         </h1>
         {query && (
           <p style={{ color: 'var(--text-secondary)' }}>
-            {locale === 'ko' ? `"${query}"에 대한 검색 결과` : `Search results for "${query}"`}
+            "{query}"{t('searchResultsFor')}
           </p>
         )}
       </div>
@@ -88,7 +93,7 @@ export default function SearchPage() {
         <>
           <div className="mb-4" style={{ color: 'var(--text-tertiary)' }}>
             {results.length}
-            {locale === 'ko' ? '개의 결과' : ' results'}
+            {t('resultsCount')}
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {results.map((result) => (
@@ -99,9 +104,7 @@ export default function SearchPage() {
       ) : query.length >= 2 ? (
         <div className="text-center py-12" style={{ color: 'var(--text-tertiary)' }}>
           <p className="text-xl mb-2">{t('noResults')}</p>
-          <p className="text-sm">
-            {locale === 'ko' ? '다른 검색어를 시도해보세요.' : 'Try a different search term.'}
-          </p>
+          <p className="text-sm">{t('tryDifferentSearch')}</p>
         </div>
       ) : null}
     </Layout>
