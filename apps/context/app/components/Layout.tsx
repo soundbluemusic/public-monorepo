@@ -1,8 +1,21 @@
 import { categories } from '@/data/categories';
 import { meaningEntries } from '@/data/entries';
 import type { MeaningEntry } from '@/data/types';
-import { type Language, useI18n } from '@/i18n';
+import { useI18n } from '@/i18n';
 import { DarkModeToggle, LanguageToggle } from '@soundblue/shared-react';
+import {
+  ArrowUp,
+  ChevronRight,
+  Github,
+  Grid3X3,
+  Home,
+  Info,
+  LayoutGrid,
+  List,
+  Menu,
+  Search,
+  X,
+} from 'lucide-react';
 import { type ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 
@@ -12,53 +25,37 @@ function stripLocale(pathname: string): string {
   return pathname;
 }
 
-interface LayoutProps {
-  children: ReactNode;
+interface BreadcrumbItem {
+  label: string;
+  path?: string;
 }
 
-export function Layout({ children }: LayoutProps) {
-  const { locale, setLocale, t, localePath } = useI18n();
+interface LayoutProps {
+  children: ReactNode;
+  breadcrumbs?: BreadcrumbItem[];
+}
+
+export function Layout({ children, breadcrumbs }: LayoutProps) {
+  const { locale, t, localePath } = useI18n();
   const location = useLocation();
   const navigate = useNavigate();
 
   // Sidebar
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  // Dark mode
-  const [darkMode, setDarkMode] = useState(false);
-
   // Search
   const [searchQuery, setSearchQuery] = useState('');
-  const [searchResults, setSearchResults] = useState<MeaningEntry[]>([]);
   const [showResults, setShowResults] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const searchContainerRef = useRef<HTMLDivElement>(null);
 
-  // Initialize dark mode
-  useEffect(() => {
-    const stored = localStorage.getItem('context-dark-mode');
-    if (stored !== null) {
-      const isDark = stored === 'true';
-      setDarkMode(isDark);
-      document.documentElement.classList.toggle('dark', isDark);
-    } else {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setDarkMode(prefersDark);
-      document.documentElement.classList.toggle('dark', prefersDark);
-    }
-  }, []);
-
-  const toggleDarkMode = () => {
-    const newValue = !darkMode;
-    setDarkMode(newValue);
-    localStorage.setItem('context-dark-mode', String(newValue));
-    document.documentElement.classList.toggle('dark', newValue);
-  };
+  // Back to top
+  const [showBackToTop, setShowBackToTop] = useState(false);
 
   // Search functionality
   const MAX_SEARCH_LENGTH = 100;
-  const filteredResults = useMemo(() => {
+  const searchResults = useMemo(() => {
     const q = searchQuery.toLowerCase().trim().slice(0, MAX_SEARCH_LENGTH);
     if (!q) return [];
 
@@ -73,11 +70,6 @@ export function Layout({ children }: LayoutProps) {
 
     return matched.slice(0, 8);
   }, [searchQuery, locale]);
-
-  useEffect(() => {
-    setSearchResults(filteredResults);
-    setSelectedIndex(0);
-  }, [filteredResults]);
 
   const handleSearchKeyDown = (e: React.KeyboardEvent) => {
     const len = searchResults.length;
@@ -130,17 +122,31 @@ export function Layout({ children }: LayoutProps) {
     return () => window.removeEventListener('keydown', handleKeydown);
   }, []);
 
+  // Back to top visibility
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 300);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const isActive = (basePath: string) => {
     const currentPath = stripLocale(location.pathname);
     return currentPath === basePath;
   };
 
-  const handleLocaleChange = (lang: Language) => {
-    setLocale(lang);
-  };
-
   return (
-    <div className="min-h-screen" style={{ backgroundColor: 'var(--bg-primary)' }}>
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: 'var(--bg-primary)' }}>
+      {/* Skip to content */}
+      <a href="#main-content" className="skip-to-content">
+        {locale === 'ko' ? '본문으로 건너뛰기' : 'Skip to content'}
+      </a>
+
       {/* Header */}
       <header
         className="sticky top-0 z-40 backdrop-blur-sm"
@@ -155,24 +161,11 @@ export function Layout({ children }: LayoutProps) {
             <button
               type="button"
               onClick={() => setSidebarOpen(true)}
-              className="p-2 rounded-lg transition-colors hover:bg-(--bg-tertiary)"
+              className="min-h-11 min-w-11 flex items-center justify-center rounded-lg transition-colors hover:bg-[var(--bg-tertiary)]"
               style={{ color: 'var(--text-secondary)' }}
               aria-label={t('menu')}
             >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
+              <Menu size={20} aria-hidden="true" />
             </button>
             <Link
               to={localePath('/')}
@@ -186,33 +179,25 @@ export function Layout({ children }: LayoutProps) {
           {/* Search Form */}
           <div ref={searchContainerRef} className="relative flex-1 max-w-md">
             <div className="relative">
-              <svg
-                className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4"
+              <Search
+                size={16}
+                className="absolute left-3 top-1/2 -translate-y-1/2"
                 style={{ color: 'var(--text-tertiary)' }}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
                 aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
+              />
               <input
                 ref={searchInputRef}
                 type="text"
                 value={searchQuery}
                 onChange={(e) => {
                   setSearchQuery(e.target.value);
+                  setSelectedIndex(0);
                   setShowResults(true);
                 }}
                 onFocus={() => setShowResults(true)}
                 onKeyDown={handleSearchKeyDown}
-                placeholder={locale === 'ko' ? '검색...' : 'Search...'}
-                className="w-full pl-9 pr-3 py-1.5 text-sm rounded-lg focus:outline-none"
+                placeholder={locale === 'ko' ? '검색... (⌘K)' : 'Search... (⌘K)'}
+                className="w-full pl-9 pr-3 py-2 text-sm rounded-lg focus:outline-none"
                 style={{
                   backgroundColor: 'var(--bg-secondary)',
                   color: 'var(--text-primary)',
@@ -237,7 +222,7 @@ export function Layout({ children }: LayoutProps) {
                       type="button"
                       onClick={() => selectResult(entry)}
                       onMouseEnter={() => setSelectedIndex(index)}
-                      className="w-full flex items-baseline justify-between px-4 py-2 text-left text-sm"
+                      className="w-full flex items-baseline justify-between px-4 py-3 text-left text-sm min-h-11"
                       style={{
                         backgroundColor:
                           selectedIndex === index ? 'var(--bg-tertiary)' : 'transparent',
@@ -265,11 +250,11 @@ export function Layout({ children }: LayoutProps) {
             )}
           </div>
 
-          {/* Right Actions */}
-          <div className="flex items-center gap-1 shrink-0">
+          {/* Right Actions - Hidden on mobile */}
+          <div className="hidden sm:flex items-center gap-1 shrink-0">
             <Link
               to={localePath('/browse')}
-              className="px-3 py-1.5 text-sm rounded-lg transition-colors"
+              className="px-3 py-2 text-sm rounded-lg transition-colors min-h-11 flex items-center"
               style={{
                 color: isActive('/browse') ? 'var(--accent-primary)' : 'var(--text-secondary)',
                 backgroundColor: isActive('/browse') ? 'var(--bg-tertiary)' : 'transparent',
@@ -278,8 +263,14 @@ export function Layout({ children }: LayoutProps) {
               {t('browse')}
             </Link>
 
-            <LanguageToggle locale={locale} onLocaleChange={handleLocaleChange} />
-            <DarkModeToggle isDark={darkMode} onToggle={toggleDarkMode} />
+            <LanguageToggle locale={locale} currentPath={stripLocale(location.pathname)} />
+            <DarkModeToggle />
+          </div>
+
+          {/* Mobile: only theme toggle */}
+          <div className="flex sm:hidden items-center gap-1 shrink-0">
+            <LanguageToggle locale={locale} currentPath={stripLocale(location.pathname)} />
+            <DarkModeToggle />
           </div>
         </div>
       </header>
@@ -316,24 +307,11 @@ export function Layout({ children }: LayoutProps) {
           <button
             type="button"
             onClick={() => setSidebarOpen(false)}
-            className="p-2 rounded-lg transition-colors hover:bg-(--bg-tertiary)"
+            className="min-h-11 min-w-11 flex items-center justify-center rounded-lg transition-colors hover:bg-[var(--bg-tertiary)]"
             style={{ color: 'var(--text-secondary)' }}
             aria-label="Close menu"
           >
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1.5"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
+            <X size={20} aria-hidden="true" />
           </button>
         </div>
 
@@ -343,76 +321,37 @@ export function Layout({ children }: LayoutProps) {
             <Link
               to={localePath('/')}
               onClick={() => setSidebarOpen(false)}
-              className="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors"
+              className="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors min-h-11"
               style={{
                 color: isActive('/') ? 'var(--accent-primary)' : 'var(--text-primary)',
                 backgroundColor: isActive('/') ? 'var(--bg-tertiary)' : 'transparent',
               }}
             >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                />
-              </svg>
+              <Home size={20} aria-hidden="true" />
               {t('home')}
             </Link>
             <Link
               to={localePath('/browse')}
               onClick={() => setSidebarOpen(false)}
-              className="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors"
+              className="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors min-h-11"
               style={{
                 color: isActive('/browse') ? 'var(--accent-primary)' : 'var(--text-primary)',
                 backgroundColor: isActive('/browse') ? 'var(--bg-tertiary)' : 'transparent',
               }}
             >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                  d="M4 6h16M4 10h16M4 14h16M4 18h16"
-                />
-              </svg>
+              <List size={20} aria-hidden="true" />
               {t('browse')}
             </Link>
             <Link
               to={localePath('/about')}
               onClick={() => setSidebarOpen(false)}
-              className="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors"
+              className="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors min-h-11"
               style={{
                 color: isActive('/about') ? 'var(--accent-primary)' : 'var(--text-primary)',
                 backgroundColor: isActive('/about') ? 'var(--bg-tertiary)' : 'transparent',
               }}
             >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
+              <Info size={20} aria-hidden="true" />
               {t('about')}
             </Link>
           </div>
@@ -431,7 +370,7 @@ export function Layout({ children }: LayoutProps) {
                   key={category.id}
                   to={localePath(`/category/${category.id}`)}
                   onClick={() => setSidebarOpen(false)}
-                  className="flex items-center gap-3 px-3 py-2 rounded-lg transition-colors text-sm"
+                  className="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors text-sm min-h-11"
                   style={{
                     color: isActive(`/category/${category.id}`)
                       ? 'var(--accent-primary)'
@@ -448,7 +387,7 @@ export function Layout({ children }: LayoutProps) {
               <Link
                 to={localePath('/browse')}
                 onClick={() => setSidebarOpen(false)}
-                className="flex items-center gap-3 px-3 py-2 rounded-lg transition-colors text-sm"
+                className="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors text-sm min-h-11"
                 style={{ color: 'var(--accent-primary)' }}
               >
                 <span className="text-base opacity-50">+{categories.length - 6}</span>
@@ -472,37 +411,111 @@ export function Layout({ children }: LayoutProps) {
           <Link
             to={localePath('/sitemap')}
             onClick={() => setSidebarOpen(false)}
-            className="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors"
+            className="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors min-h-11"
             style={{
               color: isActive('/sitemap') ? 'var(--accent-primary)' : 'var(--text-primary)',
               backgroundColor: isActive('/sitemap') ? 'var(--bg-tertiary)' : 'transparent',
             }}
           >
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1.5"
-                d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"
-              />
-            </svg>
+            <LayoutGrid size={20} aria-hidden="true" />
             {t('sitemap')}
           </Link>
         </div>
       </aside>
 
       {/* Main */}
-      <main className="max-w-3xl mx-auto px-4 py-8">{children}</main>
+      <main
+        id="main-content"
+        className="flex-1 max-w-3xl mx-auto px-4 py-8 w-full pb-bottom-nav sm:pb-8"
+      >
+        {/* Breadcrumbs */}
+        {breadcrumbs && breadcrumbs.length > 0 && (
+          <nav aria-label="Breadcrumb" className="mb-4">
+            <ol className="flex items-center gap-1 text-sm flex-wrap">
+              {breadcrumbs.map((item, index) => (
+                <li key={item.label} className="flex items-center gap-1">
+                  {index > 0 && (
+                    <ChevronRight
+                      size={14}
+                      className="text-[var(--text-tertiary)]"
+                      aria-hidden="true"
+                    />
+                  )}
+                  {item.path ? (
+                    <Link
+                      to={localePath(item.path)}
+                      className="hover:underline"
+                      style={{ color: 'var(--text-secondary)' }}
+                    >
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <span style={{ color: 'var(--text-primary)' }}>{item.label}</span>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </nav>
+        )}
+        {children}
+      </main>
 
-      {/* Footer */}
+      {/* Mobile Bottom Navigation */}
+      <nav
+        className="sm:hidden fixed bottom-0 left-0 right-0 z-40 flex items-center justify-around"
+        style={{
+          backgroundColor: 'var(--bg-elevated)',
+          borderTop: '1px solid var(--border-primary)',
+          paddingBottom: 'env(safe-area-inset-bottom, 0px)',
+          height: 'calc(64px + env(safe-area-inset-bottom, 0px))',
+        }}
+      >
+        <Link
+          to={localePath('/')}
+          className="flex flex-col items-center justify-center gap-1 flex-1 py-2 min-h-14"
+          style={{ color: isActive('/') ? 'var(--accent-primary)' : 'var(--text-secondary)' }}
+        >
+          <Home size={20} aria-hidden="true" />
+          <span className="text-xs">{t('home')}</span>
+        </Link>
+        <Link
+          to={localePath('/browse')}
+          className="flex flex-col items-center justify-center gap-1 flex-1 py-2 min-h-14"
+          style={{ color: isActive('/browse') ? 'var(--accent-primary)' : 'var(--text-secondary)' }}
+        >
+          <Grid3X3 size={20} aria-hidden="true" />
+          <span className="text-xs">{t('browse')}</span>
+        </Link>
+        <Link
+          to={localePath('/about')}
+          className="flex flex-col items-center justify-center gap-1 flex-1 py-2 min-h-14"
+          style={{ color: isActive('/about') ? 'var(--accent-primary)' : 'var(--text-secondary)' }}
+        >
+          <Info size={20} aria-hidden="true" />
+          <span className="text-xs">{t('about')}</span>
+        </Link>
+      </nav>
+
+      {/* Back to Top Button */}
+      {showBackToTop && (
+        <button
+          type="button"
+          onClick={scrollToTop}
+          className="fixed bottom-20 sm:bottom-8 right-4 z-30 min-h-11 min-w-11 flex items-center justify-center rounded-full shadow-lg transition-all"
+          style={{
+            backgroundColor: 'var(--bg-elevated)',
+            border: '1px solid var(--border-primary)',
+            color: 'var(--text-secondary)',
+          }}
+          aria-label={locale === 'ko' ? '맨 위로' : 'Back to top'}
+        >
+          <ArrowUp size={20} aria-hidden="true" />
+        </button>
+      )}
+
+      {/* Footer - Hidden on mobile (bottom nav takes its place) */}
       <footer
-        className="mt-auto py-8"
+        className="hidden sm:block mt-auto py-8"
         style={{
           backgroundColor: 'var(--bg-secondary)',
           borderTop: '1px solid var(--border-primary)',
@@ -545,9 +558,7 @@ export function Layout({ children }: LayoutProps) {
               className="flex items-center gap-1.5 hover:underline"
               style={{ color: 'var(--accent-primary)' }}
             >
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-              </svg>
+              <Github size={16} aria-hidden="true" />
               {t('footerGitHub')}
             </a>
           </div>

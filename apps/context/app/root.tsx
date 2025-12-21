@@ -20,8 +20,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
             __html: `
               (function() {
                 try {
-                  var stored = localStorage.getItem('context-dark-mode');
-                  if (stored === 'true' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                  var stored = localStorage.getItem('settings-storage');
+                  if (stored) {
+                    var parsed = JSON.parse(stored);
+                    var theme = parsed.state?.theme;
+                    if (theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                      document.documentElement.classList.add('dark');
+                    }
+                  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
                     document.documentElement.classList.add('dark');
                   }
                 } catch (e) {}

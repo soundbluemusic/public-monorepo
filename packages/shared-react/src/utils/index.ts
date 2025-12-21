@@ -1,13 +1,22 @@
-// Constants
-export { LIMITS, BREAKPOINTS, RESERVED_NAMES, type ReservedName } from './constants';
+// Re-export from @soundblue/shared (single source of truth)
+export {
+  // Constants
+  LIMITS,
+  BREAKPOINTS,
+  RESERVED_NAMES,
+  type ReservedName,
+  // Validation
+  validateId,
+  isReservedName,
+  isValidTheme,
+  isValidLanguage,
+  // Search
+  sanitizeSearchQuery,
+  filterBySearch,
+  createSearchHandler,
+} from '@soundblue/shared';
 
-// Validation
-export { validateId, isReservedName, isValidTheme, isValidLanguage } from './validation';
-
-// Search
-export { sanitizeSearchQuery, filterBySearch, createSearchHandler } from './search';
-
-// i18n
+// i18n (React-specific)
 export {
   type Language,
   type I18nContextType,

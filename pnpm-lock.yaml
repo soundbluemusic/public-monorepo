@@ -83,6 +83,9 @@ importers:
       dexie:
         specifier: ^4.0.10
         version: 4.2.1
+      lucide-react:
+        specifier: ^0.468.0
+        version: 0.468.0(react@19.2.3)
       react:
         specifier: ^19.0.0
         version: 19.2.3
@@ -296,6 +299,12 @@ importers:
       '@radix-ui/react-toggle':
         specifier: ^1.1.0
         version: 1.1.10(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@soundblue/shared':
+        specifier: workspace:*
+        version: link:../shared
+      lucide-react:
+        specifier: ^0.468.0
+        version: 0.468.0(react@19.2.3)
       react:
         specifier: ^19.0.0
         version: 19.2.3
