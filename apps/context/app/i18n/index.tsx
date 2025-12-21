@@ -127,20 +127,17 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const locale = useMemo(() => getLocaleFromPath(location.pathname), [location.pathname]);
+  // Derive locale directly from pathname (no memo to avoid caching issues)
+  const locale = getLocaleFromPath(location.pathname);
 
   const value = useMemo(() => {
     const setLocale = (lang: Language) => {
       const currentPath = stripLocaleFromPath(location.pathname);
-      let newPath: string;
+      const newPath =
+        lang === 'en' ? currentPath : `/${lang}${currentPath === '/' ? '' : currentPath}`;
 
-      if (lang === 'en') {
-        newPath = currentPath;
-      } else {
-        newPath = `/${lang}${currentPath === '/' ? '' : currentPath}`;
-      }
-
-      navigate(newPath);
+      // Navigate to new path with replace to avoid history clutter
+      navigate(newPath, { replace: false });
     };
 
     const t = (key: string): string => {
@@ -156,10 +153,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     };
 
     const localePath = (path: string): string => {
-      if (locale === 'en') {
-        return path;
-      }
-      return `/${locale}${path === '/' ? '' : path}`;
+      return locale === 'en' ? path : `/${locale}${path === '/' ? '' : path}`;
     };
 
     return {
