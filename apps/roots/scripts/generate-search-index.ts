@@ -12,9 +12,10 @@ import { fileURLToPath } from 'node:url';
 import { allConcepts } from '../app/data/concepts/index.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const OUTPUT_PATH = join(__dirname, '../public/search-index.json');
-const CONCEPTS_OUTPUT_PATH = join(__dirname, '../public/concepts.json');
-const CONCEPT_NAMES_PATH = join(__dirname, '../public/concept-names.json');
+const PUBLIC_DIR = join(__dirname, '../public');
+const OUTPUT_PATH = join(PUBLIC_DIR, 'search-index.json');
+const CONCEPTS_OUTPUT_PATH = join(PUBLIC_DIR, 'concepts.json');
+const CONCEPT_NAMES_PATH = join(PUBLIC_DIR, 'concept-names.json');
 
 interface SearchIndexItem {
   id: string;
@@ -50,7 +51,7 @@ function generateSearchIndex() {
   }));
 
   // public 디렉토리가 없으면 생성
-  mkdirSync(dirname(OUTPUT_PATH), { recursive: true });
+  mkdirSync(PUBLIC_DIR, { recursive: true });
 
   // JSON 파일 생성
   writeFileSync(OUTPUT_PATH, JSON.stringify(searchIndex), 'utf-8');
