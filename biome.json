@@ -41,7 +41,8 @@
       "build",
       "*.min.js",
       "apps/context/app/data/generated",
-      "apps/roots/public/*.json"
+      "apps/roots/public/*.json",
+      "apps/*/app/paraglide"
     ]
   }
 }

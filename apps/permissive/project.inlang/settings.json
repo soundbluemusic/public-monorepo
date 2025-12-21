@@ -1,11 +1,11 @@
 {
   "$schema": "https://inlang.com/schema/project-settings",
-  "sourceLanguageTag": "en",
-  "languageTags": ["en", "ko"],
+  "baseLocale": "en",
+  "locales": ["en", "ko"],
   "modules": [
-    "@inlang/plugin-message-format"
+    "file://../../../node_modules/.pnpm/@inlang+plugin-message-format@4.0.0/node_modules/@inlang/plugin-message-format/dist/index.js"
   ],
   "plugin.inlang.messageFormat": {
-    "pathPattern": "./messages/{languageTag}.json"
+    "pathPattern": "/home/user/public-monorepo/apps/permissive/project.inlang/messages/{locale}.json"
   }
 }
