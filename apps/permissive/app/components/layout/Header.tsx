@@ -43,7 +43,7 @@ export default function Header({ onMenuClick, isSidebarOpen }: HeaderProps) {
         <button
           type="button"
           onClick={onMenuClick}
-          className="md:hidden p-2 -ml-2 rounded-lg hover-bg text-[var(--text-secondary)]"
+          className="md:hidden min-h-11 min-w-11 flex items-center justify-center -ml-2 rounded-lg hover-bg text-[var(--text-secondary)]"
           aria-label={isSidebarOpen ? t('aria.closeMenu') : t('aria.openMenu')}
           aria-expanded={isSidebarOpen}
         >

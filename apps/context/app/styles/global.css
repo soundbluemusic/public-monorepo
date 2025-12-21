@@ -114,4 +114,42 @@ body {
   .pt-header {
     padding-top: var(--header-height);
   }
+  .pb-bottom-nav {
+    padding-bottom: calc(var(--bottom-nav-height, 64px) + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* Bottom navigation height */
+:root {
+  --bottom-nav-height: 64px;
+}
+
+/* Accessibility - Skip to content */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent-primary);
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+.skip-to-content:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* Focus visible indicators */
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
 }

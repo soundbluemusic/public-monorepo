@@ -323,6 +323,19 @@ td {
   top: 1rem;
 }
 
+/* Focus visible indicators */
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
 /* ============================================
    Dark Mode Transition
    ============================================ */
