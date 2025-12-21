@@ -35,7 +35,7 @@ This is a **fully static site**. No server-side rendering, no API calls at runti
 Build time:  React Router v7 → Static HTML/CSS/JS
 Runtime:     Pure static files served from CDN
 Storage:     localStorage / IndexedDB (favorites)
-Math:        KaTeX for LaTeX rendering
+Math:        Browser-native MathML for LaTeX rendering
 ```
 
 **Why SSG?**
@@ -83,7 +83,7 @@ pnpm build:roots
 | UI | React |
 | Styling | Tailwind CSS v4 |
 | Language | TypeScript |
-| Math Rendering | KaTeX |
+| Math Rendering | Browser-native MathML |
 | Storage | localStorage / IndexedDB |
 | Hosting | Cloudflare Pages |
 

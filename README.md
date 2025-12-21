@@ -69,7 +69,8 @@ soundblue-monorepo/
 │   └── roots/         →  Math documentation app (수학 문서 앱)      [SSG]
 │
 ├── packages/
-│   └── shared/        →  Shared utilities (공용 유틸리티)
+│   ├── shared/        →  Shared utilities (공용 유틸리티)
+│   └── shared-react/  →  Shared React components (공용 React 컴포넌트)
 │
 └── package.json       →  Root config (루트 설정)
 ```
@@ -136,6 +137,21 @@ pnpm dev:roots          # → http://localhost:3005
 | `pnpm build:roots` | Build Roots app → `build/client` |
 | `pnpm lint` | Check code (코드 검사) |
 | `pnpm format` | Format code (코드 정리) |
+
+<br>
+
+---
+
+<br>
+
+## 📚 Documentation (문서)
+
+<br>
+
+For detailed analysis and optimization plans, see:
+
+- **[Code Duplication Report](CODE_DUPLICATION_REPORT.md)** - Analysis of code duplication across the monorepo (모노레포 전체의 코드 중복 분석)
+- **[Roots Optimization Plan](apps/roots/OPTIMIZATION_PLAN.md)** - Performance optimization strategy for Roots app (Roots 앱 성능 최적화 전략)
 
 <br>
 

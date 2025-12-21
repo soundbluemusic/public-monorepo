@@ -1,7 +1,15 @@
+// Default config for roots app
+// Use APP environment variable to test different apps:
+// APP=context pnpm lhci
+// APP=permissive pnpm lhci
+// APP=roots pnpm lhci (default)
+
+const app = process.env.APP || 'roots';
+
 module.exports = {
   ci: {
     collect: {
-      staticDistDir: './apps/roots/build/client',
+      staticDistDir: `./apps/${app}/build/client`,
       url: ['http://localhost/index.html'],
       numberOfRuns: 1,
       chromePath: '/root/.cache/ms-playwright/chromium-1200/chrome-linux64/chrome',

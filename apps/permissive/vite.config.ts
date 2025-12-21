@@ -9,6 +9,9 @@ export default defineConfig({
   server: {
     port: 3004,
   },
+  preview: {
+    port: 3004,
+  },
   resolve: {
     alias: {
       '@': new URL('./app', import.meta.url).pathname,

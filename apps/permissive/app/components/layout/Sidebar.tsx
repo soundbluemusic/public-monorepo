@@ -274,7 +274,7 @@ export default function Sidebar({
 
           {/* GitHub Link */}
           <a
-            href="https://github.com/soundbluemusic/Permissive"
+            href="https://github.com/soundbluemusic/public-monorepo"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover-bg-secondary group"
