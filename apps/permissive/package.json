@@ -8,7 +8,8 @@
     "dev": "react-router dev",
     "prebuild": "npx @inlang/paraglide-js compile --project ./project.inlang --outdir ./app/paraglide",
     "build": "react-router build && tsx scripts/generate-sitemaps.ts",
-    "start": "react-router-serve ./build/server/index.js",
+    "preview": "vite preview --outDir build/client",
+    "start": "vite preview --outDir build/client",
     "data:fetch": "pnpm run data:fetch:npm && pnpm run data:fetch:github && pnpm run data:fetch:bundle",
     "data:fetch:npm": "tsx scripts/fetch-npm-data.ts",
     "data:fetch:github": "tsx scripts/fetch-github-data.ts",
@@ -29,7 +30,7 @@
     "chart.js": "^4.4.7",
     "dexie": "^4.0.10",
     "fuse.js": "^7.0.0",
-    "lucide-react": "^0.469.0",
+    "lucide-react": "^0.468.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router": "^7.11.0",
@@ -46,7 +47,7 @@
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "vite": "^6.0.0",
-    "vite-plugin-pwa": "^0.21.1"
+    "vite-plugin-pwa": "^0.21.2"
   },
   "engines": {
     "node": ">=20"

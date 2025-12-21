@@ -9,6 +9,9 @@ export default defineConfig({
   server: {
     port: 3003,
   },
+  preview: {
+    port: 3003,
+  },
   resolve: {
     alias: {
       '@': '/app',

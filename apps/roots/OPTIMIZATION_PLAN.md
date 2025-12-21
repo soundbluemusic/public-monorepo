@@ -1,5 +1,9 @@
 # Roots 앱 수학 공식 로딩 최적화 계획
 
+> **Note (2025):** This document contains the original optimization plan. Since writing this plan, the math rendering implementation has been changed from KaTeX to browser-native MathML. See `app/components/math/LaTeX.tsx` for current implementation.
+>
+> **참고 (2025):** 이 문서는 원래의 최적화 계획을 담고 있습니다. 계획 작성 이후, 수학 렌더링 구현이 KaTeX에서 브라우저 네이티브 MathML로 변경되었습니다. 현재 구현은 `app/components/math/LaTeX.tsx`를 참조하세요.
+
 ## 📊 현재 상태 분석
 
 ### 주요 병목 현상 (Critical Bottlenecks)
