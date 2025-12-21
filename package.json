@@ -32,6 +32,9 @@
   "devDependencies": {
     "@axe-core/playwright": "^4.10.1",
     "@biomejs/biome": "^1.9.0",
+    "@inlang/paraglide-js": "^2.7.0",
+    "@inlang/paraglide-vite": "^1.4.0",
+    "@inlang/plugin-message-format": "^4.0.0",
     "@lhci/cli": "^0.14.0",
     "@playwright/test": "^1.49.0",
     "@resvg/resvg-js": "^2.6.2",
@@ -39,10 +42,10 @@
     "@vitest/coverage-v8": "^2.1.8",
     "broken-link-checker": "^0.7.8",
     "husky": "^9.1.7",
-    "skott": "^0.35.6",
     "pixelmatch": "^6.0.0",
     "sharp": "^0.34.5",
     "size-limit": "^11.1.6",
+    "skott": "^0.35.6",
     "syncpack": "^13.0.0",
     "tsx": "^4.19.2",
     "vitest": "^2.1.8"

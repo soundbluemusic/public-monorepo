@@ -45,3 +45,6 @@ dev-dist/
 coverage/
 .lighthouseci/
 /apps/roots/public/concepts/index.json
+
+# Paraglide generated files
+apps/*/app/paraglide/

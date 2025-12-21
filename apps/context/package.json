@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "react-router dev",
-    "prebuild": "tsx scripts/load-entries.ts",
+    "prebuild": "npx paraglide-js compile --project ./project.inlang --outdir ./app/paraglide && tsx scripts/load-entries.ts",
     "build": "react-router build && tsx scripts/generate-sitemaps.ts",
     "start": "react-router-serve ./build/server/index.js",
     "sitemap": "tsx scripts/generate-sitemaps.ts",

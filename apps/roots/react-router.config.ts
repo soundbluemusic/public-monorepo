@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import type { Config } from '@react-router/dev/config';
 
 export default {
-  ssr: true, // SSR during build for proper data injection (still outputs static files)
+  ssr: false, // 100% SSG - no SSR, only static files
   async prerender() {
     // Import field data dynamically
     const { fields } = await import('./app/data/fields.js');

@@ -1,5 +1,4 @@
 import type { DifficultyLevel } from '@/data/types';
-import type { UILabels } from '@/i18n';
 import { useI18n } from '@/i18n';
 
 interface DifficultyBadgeProps {
@@ -16,7 +15,7 @@ const difficultyColors: Record<number, string> = {
   5: 'var(--difficulty-5)',
 };
 
-const labels: Record<number, keyof UILabels> = {
+const labels: Record<number, string> = {
   1: 'elementary',
   2: 'middleSchool',
   3: 'highSchool',

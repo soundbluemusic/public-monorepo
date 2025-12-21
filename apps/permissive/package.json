@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "react-router dev",
+    "prebuild": "npx paraglide-js compile --project ./project.inlang --outdir ./app/paraglide",
     "build": "react-router build && tsx scripts/generate-sitemaps.ts",
     "start": "react-router-serve ./build/server/index.js",
     "data:fetch": "pnpm run data:fetch:npm && pnpm run data:fetch:github && pnpm run data:fetch:bundle",
