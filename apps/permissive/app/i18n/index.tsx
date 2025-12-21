@@ -1,5 +1,5 @@
 import { type ReactNode, createContext, useContext, useEffect, useMemo } from 'react';
-import { useLocation, useNavigate } from 'react-router';
+import { useLocation } from 'react-router';
 import * as m from '~/paraglide/messages.js';
 import {
   getLocale as paraglideGetLocale,
@@ -128,7 +128,6 @@ function stripLocaleFromPath(pathname: string): string {
 
 export function I18nProvider({ children }: { children: ReactNode }) {
   const location = useLocation();
-  const navigate = useNavigate();
   const locale = getLocaleFromPath(location.pathname);
 
   // Sync Paraglide locale with URL pathname
@@ -145,8 +144,8 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       const currentPath = stripLocaleFromPath(location.pathname);
       const newPath = lang === 'en' ? currentPath : `/ko${currentPath === '/' ? '' : currentPath}`;
 
-      // Navigate using React Router (client-side)
-      navigate(newPath);
+      // Full page navigation to ensure Paraglide reinitializes with correct locale
+      window.location.href = newPath;
     };
 
     const t = (key: string): string => {
@@ -169,7 +168,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       isKorean: locale === 'ko',
       localePath,
     };
-  }, [locale, location.pathname, navigate]);
+  }, [locale, location.pathname]);
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }
