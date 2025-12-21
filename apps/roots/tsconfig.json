@@ -20,5 +20,5 @@
     "baseUrl": "."
   },
   "include": ["app/**/*", "scripts/**/*", "vite.config.ts", "react-router.config.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "app/paraglide"]
 }

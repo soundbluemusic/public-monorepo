@@ -1,3 +1,4 @@
+import { paraglide } from '@inlang/paraglide-vite';
 import { reactRouter } from '@react-router/dev/vite';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vite';
@@ -14,6 +15,10 @@ export default defineConfig({
     },
   },
   plugins: [
+    paraglide({
+      project: './project.inlang',
+      outdir: './app/paraglide',
+    }),
     tailwindcss(),
     reactRouter(),
     VitePWA({

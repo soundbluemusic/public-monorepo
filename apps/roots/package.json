@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "react-router dev",
-    "prebuild": "npx paraglide-js compile --project ./project.inlang --outdir ./app/paraglide && tsx scripts/generate-search-index.ts",
+    "prebuild": "npx @inlang/paraglide-js compile --project ./project.inlang --outdir ./app/paraglide && tsx scripts/generate-search-index.ts",
     "build": "react-router build && tsx scripts/generate-sitemaps.ts",
     "start": "react-router-serve ./build/server/index.js",
     "lint": "biome lint .",

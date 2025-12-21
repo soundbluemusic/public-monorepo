@@ -1,6 +1,5 @@
 import { type ReactNode, createContext, useContext, useEffect, useMemo } from 'react';
 import { useLocation, useNavigate } from 'react-router';
-// @ts-expect-error - Generated Paraglide messages (no type declarations)
 import * as m from '~/paraglide/messages.js';
 import {
   getLocale as paraglideGetLocale,

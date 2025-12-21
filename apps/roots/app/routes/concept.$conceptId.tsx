@@ -13,13 +13,12 @@ import { useI18n } from '@/i18n';
 import { favorites } from '@/lib/db';
 import { useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router';
-import type { Route } from './+types/concept.$conceptId';
 
 /**
  * Loader: 빌드 시 데이터 로드 (SSG용)
  * 빌드 시에는 TypeScript에서 직접 import
  */
-export async function loader({ params }: Route.LoaderArgs) {
+export async function loader({ params }: { params: { conceptId: string } }) {
   if (!params.conceptId) {
     return { concept: null };
   }

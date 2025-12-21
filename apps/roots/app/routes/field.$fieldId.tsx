@@ -8,12 +8,11 @@ import { getFieldById } from '@/data/fields';
 import { getSubfieldsByParent } from '@/data/subfields';
 import { useI18n } from '@/i18n';
 import { Link, useLoaderData, useParams } from 'react-router';
-import type { Route } from './+types/field.$fieldId';
 
 /**
  * Loader: 빌드 시 데이터 로드 (SSG용)
  */
-export async function loader({ params }: Route.LoaderArgs) {
+export async function loader({ params }: { params: { fieldId: string } }) {
   if (!params.fieldId) {
     return { concepts: [] };
   }
