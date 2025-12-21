@@ -1,39 +1,57 @@
-import * as Toggle from '@radix-ui/react-toggle';
 import { Moon, Sun } from 'lucide-react';
-import type { CSSProperties } from 'react';
-import { useSettingsStore } from '../stores/useSettingsStore';
+import { type CSSProperties, useEffect, useState } from 'react';
 
 export interface DarkModeToggleProps {
-  isDark?: boolean;
-  onToggle?: () => void;
   className?: string;
   style?: CSSProperties;
 }
 
 /**
- * Dark mode toggle button using Radix UI Toggle
- * Supports both controlled (isDark/onToggle) and uncontrolled (store-based) modes
+ * Dark mode toggle button
+ * Uses localStorage directly to avoid SSG hydration issues
  */
-export function DarkModeToggle({
-  isDark: controlledIsDark,
-  onToggle,
-  className = '',
-  style,
-}: DarkModeToggleProps) {
-  const { theme, toggleTheme } = useSettingsStore();
-  const isDark = controlledIsDark ?? theme === 'dark';
-  const handleToggle = onToggle ?? toggleTheme;
+export function DarkModeToggle({ className = '', style }: DarkModeToggleProps) {
+  const [isDark, setIsDark] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    // Check current theme from document
+    const isDarkMode = document.documentElement.classList.contains('dark');
+    setIsDark(isDarkMode);
+  }, []);
+
+  const handleToggle = () => {
+    const newIsDark = !isDark;
+    setIsDark(newIsDark);
+
+    // Apply theme to DOM
+    document.documentElement.classList.toggle('dark', newIsDark);
+
+    // Persist to localStorage
+    try {
+      const stored = localStorage.getItem('settings-storage');
+      const data = stored ? JSON.parse(stored) : { state: {} };
+      data.state = { ...data.state, theme: newIsDark ? 'dark' : 'light' };
+      localStorage.setItem('settings-storage', JSON.stringify(data));
+    } catch {
+      // Ignore storage errors
+    }
+  };
+
+  // Show moon icon as default before hydration
+  const showDark = mounted ? isDark : false;
 
   return (
-    <Toggle.Root
-      pressed={isDark}
-      onPressedChange={handleToggle}
-      className={`p-2 rounded-lg transition-all cursor-pointer hover:bg-[var(--bg-tertiary)] hover:text-[var(--text-primary)] active:scale-95 ${className}`}
+    <button
+      type="button"
+      onClick={handleToggle}
+      className={`p-2 rounded-lg transition-all cursor-pointer hover:bg-[var(--bg-tertiary)] hover:text-[var(--text-primary)] active:scale-95 min-h-11 min-w-11 flex items-center justify-center ${className}`}
       style={{ color: 'var(--text-secondary)', ...style }}
-      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-      title={isDark ? 'Light mode' : 'Dark mode'}
+      aria-label={showDark ? 'Switch to light mode' : 'Switch to dark mode'}
+      title={showDark ? 'Light mode' : 'Dark mode'}
     >
-      {isDark ? <Sun size={20} aria-hidden="true" /> : <Moon size={20} aria-hidden="true" />}
-    </Toggle.Root>
+      {showDark ? <Sun size={20} aria-hidden="true" /> : <Moon size={20} aria-hidden="true" />}
+    </button>
   );
 }
