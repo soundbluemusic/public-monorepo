@@ -53,7 +53,7 @@ Ask before: removing code, changing core logic, breaking changes.
 | # | 지표 | 도구 | 검증 시점 |
 |---|------|------|----------|
 | 5 | Lighthouse Score | @lhci/cli (≥90) | CI |
-| 6 | SEO Health | 빌드 스크립트 (메타태그 검증) | Build |
+| 6 | SEO Health | verify-ssg.ts (메타태그 검증) | Build |
 | 7 | Static Integrity | broken-link-checker | Build 후 |
 
 ### III. User Experience & Adaptation
@@ -67,7 +67,7 @@ Ask before: removing code, changing core logic, breaking changes.
 ### IV. Security & Privacy
 | # | 지표 | 도구 | 검증 시점 |
 |---|------|------|----------|
-| 12 | Client Security | CSP 헤더 + dotenv-linter | Build + 배포 |
+| 12 | Client Security | CSP 헤더 (public/_headers) | 배포 |
 
 ### 검증 분리
 - **pre-commit**: Biome + tsc --noEmit
