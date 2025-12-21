@@ -1,7 +1,11 @@
-import { type ReactNode, createContext, useContext, useMemo } from 'react';
+import { type ReactNode, createContext, useContext, useEffect, useMemo } from 'react';
 import { useLocation, useNavigate } from 'react-router';
-// @ts-expect-error - Generated Paraglide messages don't have type declarations
+// @ts-expect-error - Generated Paraglide messages (no type declarations)
 import * as m from '~/paraglide/messages.js';
+import {
+  getLocale as paraglideGetLocale,
+  setLocale as paraglideSetLocale,
+} from '~/paraglide/runtime.js';
 
 export type Language = 'ko' | 'en';
 
@@ -126,34 +130,37 @@ function stripLocaleFromPath(pathname: string): string {
 export function I18nProvider({ children }: { children: ReactNode }) {
   const location = useLocation();
   const navigate = useNavigate();
-
-  // Derive locale directly from pathname (no memo to avoid caching issues)
   const locale = getLocaleFromPath(location.pathname);
+
+  // Sync Paraglide locale with URL pathname
+  useEffect(() => {
+    const currentParaglideLocale = paraglideGetLocale();
+    if (currentParaglideLocale !== locale) {
+      // Update Paraglide's internal locale state without page reload
+      paraglideSetLocale(locale, { reload: false });
+    }
+  }, [locale]);
 
   const value = useMemo(() => {
     const setLocale = (lang: Language) => {
       const currentPath = stripLocaleFromPath(location.pathname);
-      const newPath =
-        lang === 'en' ? currentPath : `/${lang}${currentPath === '/' ? '' : currentPath}`;
+      const newPath = lang === 'en' ? currentPath : `/ko${currentPath === '/' ? '' : currentPath}`;
 
-      // Navigate to new path with replace to avoid history clutter
-      navigate(newPath, { replace: false });
+      // Navigate using React Router (client-side)
+      navigate(newPath);
     };
 
     const t = (key: string): string => {
-      // Map message keys to Paraglide message functions
-      const messageFunc = (
-        m as Record<string, (inputs?: unknown, options?: { locale?: string }) => string>
-      )[key];
+      // Call Paraglide message functions directly (they use internal locale state)
+      const messageFunc = (m as Record<string, (inputs?: unknown) => string>)[key];
       if (typeof messageFunc === 'function') {
-        return messageFunc({}, { locale });
+        return messageFunc({});
       }
-      // Fallback to key if message function not found
       return key;
     };
 
     const localePath = (path: string): string => {
-      return locale === 'en' ? path : `/${locale}${path === '/' ? '' : path}`;
+      return locale === 'en' ? path : `/ko${path === '/' ? '' : path}`;
     };
 
     return {
