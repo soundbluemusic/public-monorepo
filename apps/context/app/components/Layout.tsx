@@ -1,7 +1,7 @@
 import { categories } from '@/data/categories';
 import { meaningEntries } from '@/data/entries';
 import type { MeaningEntry } from '@/data/types';
-import { type Language, useI18n } from '@/i18n';
+import { useI18n } from '@/i18n';
 import { DarkModeToggle, LanguageToggle } from '@soundblue/shared-react';
 import {
   ArrowUp,
@@ -36,7 +36,7 @@ interface LayoutProps {
 }
 
 export function Layout({ children, breadcrumbs }: LayoutProps) {
-  const { locale, setLocale, t, localePath } = useI18n();
+  const { locale, t, localePath } = useI18n();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -138,10 +138,6 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
   const isActive = (basePath: string) => {
     const currentPath = stripLocale(location.pathname);
     return currentPath === basePath;
-  };
-
-  const handleLocaleChange = (lang: Language) => {
-    setLocale(lang);
   };
 
   return (
@@ -267,13 +263,13 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
               {t('browse')}
             </Link>
 
-            <LanguageToggle locale={locale} onLocaleChange={handleLocaleChange} />
+            <LanguageToggle locale={locale} currentPath={stripLocale(location.pathname)} />
             <DarkModeToggle />
           </div>
 
           {/* Mobile: only theme toggle */}
           <div className="flex sm:hidden items-center gap-1 shrink-0">
-            <LanguageToggle locale={locale} onLocaleChange={handleLocaleChange} />
+            <LanguageToggle locale={locale} currentPath={stripLocale(location.pathname)} />
             <DarkModeToggle />
           </div>
         </div>

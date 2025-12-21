@@ -1,8 +1,14 @@
 import { DarkModeToggle, LanguageToggle } from '@soundblue/shared-react';
 import { Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router';
+import { Link, useLocation } from 'react-router';
 import { useI18n } from '../../i18n';
+
+function stripLocale(pathname: string): string {
+  if (pathname.startsWith('/ko/')) return pathname.slice(3);
+  if (pathname === '/ko') return '/';
+  return pathname;
+}
 
 interface HeaderProps {
   onMenuClick: () => void;
@@ -10,7 +16,8 @@ interface HeaderProps {
 }
 
 export default function Header({ onMenuClick, isSidebarOpen }: HeaderProps) {
-  const { locale, setLocale, t } = useI18n();
+  const { locale, t } = useI18n();
+  const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -65,7 +72,7 @@ export default function Header({ onMenuClick, isSidebarOpen }: HeaderProps) {
 
       {/* Right: Controls */}
       <div className="flex items-center gap-1">
-        <LanguageToggle locale={locale} onLocaleChange={setLocale} />
+        <LanguageToggle locale={locale} currentPath={stripLocale(location.pathname)} />
         <DarkModeToggle />
       </div>
     </header>

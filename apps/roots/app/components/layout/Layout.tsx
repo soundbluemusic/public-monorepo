@@ -1,4 +1,4 @@
-import { type Language, useI18n } from '@/i18n';
+import { useI18n } from '@/i18n';
 import { DarkModeToggle, LanguageToggle } from '@soundblue/shared-react';
 import { ArrowUp, BookOpen, ChevronRight, Github, Heart, Search, Star } from 'lucide-react';
 import { type ReactNode, useEffect, useRef, useState } from 'react';
@@ -22,7 +22,7 @@ interface LayoutProps {
 }
 
 export function Layout({ children, breadcrumbs }: LayoutProps) {
-  const { locale, setLocale, t, localePath } = useI18n();
+  const { locale, t, localePath } = useI18n();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -64,10 +64,6 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
   const isActive = (basePath: string) => {
     const currentPath = stripLocale(location.pathname);
     return currentPath === basePath || currentPath.startsWith(`${basePath}/`);
-  };
-
-  const handleLocaleChange = (lang: Language) => {
-    setLocale(lang);
   };
 
   return (
@@ -153,7 +149,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
               {t('constants')}
             </Link>
 
-            <LanguageToggle locale={locale} onLocaleChange={handleLocaleChange} />
+            <LanguageToggle locale={locale} currentPath={stripLocale(location.pathname)} />
             <DarkModeToggle />
           </div>
         </div>
