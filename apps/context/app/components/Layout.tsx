@@ -3,6 +3,7 @@ import { meaningEntries } from '@/data/entries';
 import type { MeaningEntry } from '@/data/types';
 import { type Language, useI18n } from '@/i18n';
 import { DarkModeToggle, LanguageToggle } from '@soundblue/shared-react';
+import { Github, Home, Info, LayoutGrid, List, Menu, Search, X } from 'lucide-react';
 import { type ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 
@@ -24,41 +25,16 @@ export function Layout({ children }: LayoutProps) {
   // Sidebar
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  // Dark mode
-  const [darkMode, setDarkMode] = useState(false);
-
   // Search
   const [searchQuery, setSearchQuery] = useState('');
-  const [searchResults, setSearchResults] = useState<MeaningEntry[]>([]);
   const [showResults, setShowResults] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const searchContainerRef = useRef<HTMLDivElement>(null);
 
-  // Initialize dark mode
-  useEffect(() => {
-    const stored = localStorage.getItem('context-dark-mode');
-    if (stored !== null) {
-      const isDark = stored === 'true';
-      setDarkMode(isDark);
-      document.documentElement.classList.toggle('dark', isDark);
-    } else {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setDarkMode(prefersDark);
-      document.documentElement.classList.toggle('dark', prefersDark);
-    }
-  }, []);
-
-  const toggleDarkMode = () => {
-    const newValue = !darkMode;
-    setDarkMode(newValue);
-    localStorage.setItem('context-dark-mode', String(newValue));
-    document.documentElement.classList.toggle('dark', newValue);
-  };
-
   // Search functionality
   const MAX_SEARCH_LENGTH = 100;
-  const filteredResults = useMemo(() => {
+  const searchResults = useMemo(() => {
     const q = searchQuery.toLowerCase().trim().slice(0, MAX_SEARCH_LENGTH);
     if (!q) return [];
 
@@ -73,11 +49,6 @@ export function Layout({ children }: LayoutProps) {
 
     return matched.slice(0, 8);
   }, [searchQuery, locale]);
-
-  useEffect(() => {
-    setSearchResults(filteredResults);
-    setSelectedIndex(0);
-  }, [filteredResults]);
 
   const handleSearchKeyDown = (e: React.KeyboardEvent) => {
     const len = searchResults.length;
@@ -159,20 +130,7 @@ export function Layout({ children }: LayoutProps) {
               style={{ color: 'var(--text-secondary)' }}
               aria-label={t('menu')}
             >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
+              <Menu size={20} aria-hidden="true" />
             </button>
             <Link
               to={localePath('/')}
@@ -186,27 +144,19 @@ export function Layout({ children }: LayoutProps) {
           {/* Search Form */}
           <div ref={searchContainerRef} className="relative flex-1 max-w-md">
             <div className="relative">
-              <svg
-                className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4"
+              <Search
+                size={16}
+                className="absolute left-3 top-1/2 -translate-y-1/2"
                 style={{ color: 'var(--text-tertiary)' }}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
                 aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
+              />
               <input
                 ref={searchInputRef}
                 type="text"
                 value={searchQuery}
                 onChange={(e) => {
                   setSearchQuery(e.target.value);
+                  setSelectedIndex(0);
                   setShowResults(true);
                 }}
                 onFocus={() => setShowResults(true)}
@@ -279,7 +229,7 @@ export function Layout({ children }: LayoutProps) {
             </Link>
 
             <LanguageToggle locale={locale} onLocaleChange={handleLocaleChange} />
-            <DarkModeToggle isDark={darkMode} onToggle={toggleDarkMode} />
+            <DarkModeToggle />
           </div>
         </div>
       </header>
@@ -320,20 +270,7 @@ export function Layout({ children }: LayoutProps) {
             style={{ color: 'var(--text-secondary)' }}
             aria-label="Close menu"
           >
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1.5"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
+            <X size={20} aria-hidden="true" />
           </button>
         </div>
 
@@ -349,20 +286,7 @@ export function Layout({ children }: LayoutProps) {
                 backgroundColor: isActive('/') ? 'var(--bg-tertiary)' : 'transparent',
               }}
             >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                />
-              </svg>
+              <Home size={20} aria-hidden="true" />
               {t('home')}
             </Link>
             <Link
@@ -374,20 +298,7 @@ export function Layout({ children }: LayoutProps) {
                 backgroundColor: isActive('/browse') ? 'var(--bg-tertiary)' : 'transparent',
               }}
             >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                  d="M4 6h16M4 10h16M4 14h16M4 18h16"
-                />
-              </svg>
+              <List size={20} aria-hidden="true" />
               {t('browse')}
             </Link>
             <Link
@@ -399,20 +310,7 @@ export function Layout({ children }: LayoutProps) {
                 backgroundColor: isActive('/about') ? 'var(--bg-tertiary)' : 'transparent',
               }}
             >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
+              <Info size={20} aria-hidden="true" />
               {t('about')}
             </Link>
           </div>
@@ -478,20 +376,7 @@ export function Layout({ children }: LayoutProps) {
               backgroundColor: isActive('/sitemap') ? 'var(--bg-tertiary)' : 'transparent',
             }}
           >
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1.5"
-                d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"
-              />
-            </svg>
+            <LayoutGrid size={20} aria-hidden="true" />
             {t('sitemap')}
           </Link>
         </div>
@@ -545,9 +430,7 @@ export function Layout({ children }: LayoutProps) {
               className="flex items-center gap-1.5 hover:underline"
               style={{ color: 'var(--accent-primary)' }}
             >
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-              </svg>
+              <Github size={16} aria-hidden="true" />
               {t('footerGitHub')}
             </a>
           </div>

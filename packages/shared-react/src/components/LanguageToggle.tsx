@@ -17,17 +17,7 @@ export function LanguageToggle({ locale, onLocaleChange }: LanguageToggleProps) 
     <button
       type="button"
       onClick={handleClick}
-      className="px-2 py-1.5 text-sm rounded-lg transition-colors"
-      style={{
-        color: 'var(--text-secondary)',
-        cursor: 'pointer',
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.backgroundColor = 'var(--bg-tertiary)';
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.backgroundColor = 'transparent';
-      }}
+      className="px-2 py-1.5 text-sm rounded-lg transition-colors cursor-pointer text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]"
       aria-label={`Switch to ${locale === 'en' ? 'Korean' : 'English'}`}
       title={locale === 'en' ? '한국어로 전환' : 'Switch to English'}
     >
