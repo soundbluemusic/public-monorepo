@@ -14,7 +14,7 @@ function stripLocale(pathname: string): string {
 }
 
 export function Sidebar() {
-  const { locale, localePath } = useI18n();
+  const { locale, localePath, t } = useI18n();
   const location = useLocation();
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
@@ -72,7 +72,7 @@ export function Sidebar() {
               className="text-sm font-semibold uppercase tracking-wider"
               style={{ color: 'var(--text-tertiary)' }}
             >
-              {locale === 'ko' ? '수학 분야' : 'Math Fields'}
+              {t('mathFields')}
             </h2>
           </div>
 

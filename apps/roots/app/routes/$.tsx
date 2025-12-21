@@ -1,13 +1,17 @@
 import { Layout } from '@/components/layout/Layout';
 import { useI18n } from '@/i18n';
 import { Link } from 'react-router';
+import type { MetaFunction } from 'react-router';
 
-export function meta() {
-  return [{ title: '404 - Roots' }, { name: 'description', content: 'Page not found' }];
-}
+export const meta: MetaFunction = ({ location }) => {
+  const locale = location.pathname.startsWith('/ko') ? 'ko' : 'en';
+  const title = locale === 'ko' ? '404 - 수리' : '404 - Roots';
+  const description = locale === 'ko' ? '페이지를 찾을 수 없습니다' : 'Page not found';
+  return [{ title }, { name: 'description', content: description }];
+};
 
 export default function NotFound() {
-  const { locale, localePath } = useI18n();
+  const { t, localePath } = useI18n();
 
   return (
     <Layout>
@@ -16,7 +20,7 @@ export default function NotFound() {
           404
         </h1>
         <p className="text-xl mb-8" style={{ color: 'var(--text-secondary)' }}>
-          {locale === 'ko' ? '페이지를 찾을 수 없습니다' : 'Page not found'}
+          {t('pageNotFoundMsg')}
         </p>
         <Link
           to={localePath('/')}
@@ -26,7 +30,7 @@ export default function NotFound() {
             color: 'white',
           }}
         >
-          {locale === 'ko' ? '홈으로 돌아가기' : 'Go back home'}
+          {t('goBackHome')}
         </Link>
       </div>
     </Layout>

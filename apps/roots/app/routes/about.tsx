@@ -1,12 +1,16 @@
 import { Layout } from '@/components/layout/Layout';
 import { useI18n } from '@/i18n';
+import type { MetaFunction } from 'react-router';
 
-export function meta() {
-  return [
-    { title: 'About - Roots' },
-    { name: 'description', content: 'About Roots - Math documentation for learners' },
-  ];
-}
+export const meta: MetaFunction = ({ location }) => {
+  const locale = location.pathname.startsWith('/ko') ? 'ko' : 'en';
+  const title = locale === 'ko' ? '소개 - 수리' : 'About - Roots';
+  const description =
+    locale === 'ko'
+      ? '수리 소개 - 학습자를 위한 수학 문서'
+      : 'About Roots - Math documentation for learners';
+  return [{ title }, { name: 'description', content: description }];
+};
 
 export default function AboutPage() {
   const { t } = useI18n();
@@ -21,16 +25,17 @@ export default function AboutPage() {
         <p className="text-lg mb-4">{t('aboutDescription')}</p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4" style={{ color: 'var(--text-primary)' }}>
-          Features
+          {t('features')}
         </h2>
         <ul className="list-disc list-inside space-y-2">
-          <li>18 major math fields from foundations to applied mathematics</li>
-          <li>Native math rendering with Unicode and MathML</li>
-          <li>Difficulty levels for all concepts (Elementary to Graduate)</li>
-          <li>Related concepts navigation</li>
-          <li>Multi-language support (Korean, English)</li>
-          <li>Dark mode support</li>
-          <li>PWA - works offline</li>
+          <li>{t('feature1')}</li>
+          <li>{t('feature2')}</li>
+          <li>{t('feature3')}</li>
+          <li>{t('feature4')}</li>
+          <li>{t('feature5')}</li>
+          <li>{t('feature6')}</li>
+          <li>{t('feature7')}</li>
+          <li>{t('feature8')}</li>
         </ul>
       </div>
     </Layout>

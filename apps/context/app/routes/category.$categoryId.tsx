@@ -19,9 +19,7 @@ export default function CategoryPage() {
     return (
       <Layout>
         <div className="text-center py-12">
-          <p style={{ color: 'var(--text-secondary)' }}>
-            {locale === 'ko' ? '카테고리를 찾을 수 없습니다' : 'Category not found'}
-          </p>
+          <p style={{ color: 'var(--text-secondary)' }}>{t('categoryNotFound')}</p>
           <Link
             to={localePath('/browse')}
             className="mt-4 inline-block"
@@ -44,7 +42,8 @@ export default function CategoryPage() {
           </h1>
         </div>
         <p style={{ color: 'var(--text-secondary)' }}>
-          {entries.length} {locale === 'ko' ? '개 단어' : 'words'}
+          {entries.length}
+          {t('wordCount')}
         </p>
       </div>
 
@@ -76,7 +75,7 @@ export default function CategoryPage() {
 
       {entries.length === 0 && (
         <p className="text-center py-8" style={{ color: 'var(--text-tertiary)' }}>
-          {locale === 'ko' ? '이 카테고리에 단어가 없습니다' : 'No words in this category'}
+          {t('noCategoryWords')}
         </p>
       )}
     </Layout>

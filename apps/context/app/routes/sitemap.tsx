@@ -1,22 +1,24 @@
 import { Layout } from '@/components/Layout';
 import { categories } from '@/data/categories';
 import { useI18n } from '@/i18n';
+import type { MetaFunction } from 'react-router';
 import { Link } from 'react-router';
 
-export function meta() {
-  return [{ title: 'Sitemap - Context' }];
-}
+export const meta: MetaFunction = ({ location }) => {
+  const isKorean = location.pathname.startsWith('/ko');
+  return [{ title: isKorean ? '사이트맵 - Context' : 'Sitemap - Context' }];
+};
 
 export default function SitemapPage() {
   const { locale, t, localePath } = useI18n();
 
   const pages = [
-    { path: '/', label: locale === 'ko' ? '홈' : 'Home' },
+    { path: '/', label: t('home') },
     { path: '/browse', label: t('browse') },
     { path: '/about', label: t('about') },
-    { path: '/privacy', label: locale === 'ko' ? '개인정보' : 'Privacy' },
-    { path: '/terms', label: locale === 'ko' ? '이용약관' : 'Terms' },
-    { path: '/license', label: locale === 'ko' ? '라이선스' : 'License' },
+    { path: '/privacy', label: t('privacy') },
+    { path: '/terms', label: t('terms') },
+    { path: '/license', label: t('license') },
   ];
 
   return (

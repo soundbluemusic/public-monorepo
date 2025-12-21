@@ -6,13 +6,15 @@ import { useI18n } from '@/i18n';
  * @fileoverview 전체 분야 목록 페이지
  */
 import { Link } from 'react-router';
+import type { MetaFunction } from 'react-router';
 
-export function meta() {
-  return [
-    { title: 'Browse - Roots' },
-    { name: 'description', content: 'Browse math concepts by field' },
-  ];
-}
+export const meta: MetaFunction = ({ location }) => {
+  const locale = location.pathname.startsWith('/ko') ? 'ko' : 'en';
+  const title = locale === 'ko' ? '찾아보기 - 수리' : 'Browse - Roots';
+  const description =
+    locale === 'ko' ? '분야별로 수학 개념 찾아보기' : 'Browse math concepts by field';
+  return [{ title }, { name: 'description', content: description }];
+};
 
 export default function BrowsePage() {
   const { locale, t, localePath } = useI18n();

@@ -74,7 +74,7 @@ function RelationSection({ title, icon, ids, type, names }: RelationSectionProps
  * 클라이언트 사이드에서 이름을 로드하여 hydration 데이터 최소화
  */
 export function RelationLinks({ relations }: RelationLinksProps) {
-  const { locale } = useI18n();
+  const { t } = useI18n();
   const [names, setNames] = useState<ConceptNames>({});
 
   // 클라이언트에서만 이름 로드
@@ -91,13 +91,6 @@ export function RelationLinks({ relations }: RelationLinksProps) {
     relations.related.length > 0 ||
     (relations.applications?.length ?? 0) > 0;
 
-  const titles = {
-    prerequisites: locale === 'ko' ? '선행 개념' : 'Prerequisites',
-    nextTopics: locale === 'ko' ? '후행 개념' : 'Next Topics',
-    related: locale === 'ko' ? '관련 개념' : 'Related',
-    applications: locale === 'ko' ? '응용 분야' : 'Applications',
-  };
-
   if (!hasAnyRelations) return null;
 
   return (
@@ -113,11 +106,11 @@ export function RelationLinks({ relations }: RelationLinksProps) {
         style={{ color: 'var(--text-primary)' }}
       >
         <span>🔗</span>
-        {locale === 'ko' ? '연관 문서' : 'Related Documents'}
+        {t('relatedDocuments')}
       </h3>
 
       <RelationSection
-        title={titles.prerequisites}
+        title={t('prerequisites')}
         icon="→"
         ids={relations.prerequisites}
         type="prerequisite"
@@ -125,7 +118,7 @@ export function RelationLinks({ relations }: RelationLinksProps) {
       />
 
       <RelationSection
-        title={titles.nextTopics}
+        title={t('nextTopics')}
         icon="←"
         ids={relations.nextTopics}
         type="next"
@@ -133,7 +126,7 @@ export function RelationLinks({ relations }: RelationLinksProps) {
       />
 
       <RelationSection
-        title={titles.related}
+        title={t('related')}
         icon="↔"
         ids={relations.related}
         type="related"
@@ -141,7 +134,7 @@ export function RelationLinks({ relations }: RelationLinksProps) {
       />
 
       <RelationSection
-        title={titles.applications}
+        title={t('appliedIn')}
         icon="⚡"
         ids={relations.applications ?? []}
         type="application"

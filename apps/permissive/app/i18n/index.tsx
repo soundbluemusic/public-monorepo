@@ -39,6 +39,28 @@ interface UILabels {
   'common.category': string;
   'common.viewDocs': string;
   'common.viewGithub': string;
+
+  // Meta tags
+  'meta.homeTitle': string;
+  'meta.homeDescription': string;
+  'meta.webapiTitle': string;
+  'meta.webapiDescription': string;
+  'meta.librariesTitle': string;
+  'meta.librariesDescription': string;
+  'meta.404Title': string;
+
+  // Accessibility
+  'aria.closeMenu': string;
+  'aria.openMenu': string;
+  'aria.closeSidebar': string;
+  'aria.expandSidebar': string;
+  'aria.collapseSidebar': string;
+
+  // UI
+  'ui.permissiveBy': string;
+  'ui.github': string;
+  'ui.viewSource': string;
+  'ui.skipToContent': string;
 }
 
 interface I18nContextType {
@@ -82,6 +104,28 @@ const translations: Record<Language, UILabels> = {
     'common.category': 'Category',
     'common.viewDocs': 'View Docs',
     'common.viewGithub': 'GitHub',
+
+    // Meta tags
+    'meta.homeTitle': 'Permissive - Free Web Dev Tools',
+    'meta.homeDescription': 'Web Standard APIs and MIT licensed libraries at a glance',
+    'meta.webapiTitle': 'Web API - Permissive',
+    'meta.webapiDescription': 'Browser built-in Web Standard APIs',
+    'meta.librariesTitle': 'Libraries - Permissive',
+    'meta.librariesDescription': 'MIT licensed open source libraries',
+    'meta.404Title': '404 - Page Not Found | Permissive',
+
+    // Accessibility
+    'aria.closeMenu': 'Close menu',
+    'aria.openMenu': 'Open menu',
+    'aria.closeSidebar': 'Close sidebar',
+    'aria.expandSidebar': 'Expand sidebar',
+    'aria.collapseSidebar': 'Collapse sidebar',
+
+    // UI
+    'ui.permissiveBy': 'Permissive by',
+    'ui.github': 'GitHub',
+    'ui.viewSource': 'View source',
+    'ui.skipToContent': 'Skip to content',
   },
   ko: {
     // Home
@@ -112,6 +156,28 @@ const translations: Record<Language, UILabels> = {
     'common.category': '카테고리',
     'common.viewDocs': '문서 보기',
     'common.viewGithub': 'GitHub',
+
+    // Meta tags
+    'meta.homeTitle': 'Permissive - 무료 웹개발 도구 모음',
+    'meta.homeDescription': '웹표준 API와 MIT 라이센스 라이브러리를 한눈에 보세요',
+    'meta.webapiTitle': 'Web API - Permissive',
+    'meta.webapiDescription': '브라우저에 내장된 웹 표준 API',
+    'meta.librariesTitle': 'Libraries - Permissive',
+    'meta.librariesDescription': 'MIT 라이센스 오픈소스 라이브러리',
+    'meta.404Title': '404 - 페이지를 찾을 수 없습니다 | Permissive',
+
+    // Accessibility
+    'aria.closeMenu': '메뉴 닫기',
+    'aria.openMenu': '메뉴 열기',
+    'aria.closeSidebar': '사이드바 닫기',
+    'aria.expandSidebar': '사이드바 확장',
+    'aria.collapseSidebar': '사이드바 축소',
+
+    // UI
+    'ui.permissiveBy': 'Permissive by',
+    'ui.github': 'GitHub',
+    'ui.viewSource': '소스 보기',
+    'ui.skipToContent': '콘텐츠로 건너뛰기',
   },
 };
 

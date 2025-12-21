@@ -2,6 +2,7 @@ import { Layout } from '@/components/Layout';
 import { getFeaturedEntries } from '@/data/entries';
 import type { MeaningEntry } from '@/data/types';
 import { type Language, useI18n } from '@/i18n';
+import type { MetaFunction } from 'react-router';
 import { Link } from 'react-router';
 
 const getPronunciation = (entry: MeaningEntry, locale: Language): string | undefined => {
@@ -13,12 +14,21 @@ const getPronunciation = (entry: MeaningEntry, locale: Language): string | undef
   }
 };
 
-export function meta() {
+export const meta: MetaFunction = ({ location }) => {
+  const isKorean = location.pathname.startsWith('/ko');
+
+  if (isKorean) {
+    return [
+      { title: 'Context - 한국어 사전' },
+      { name: 'description', content: '한국어 학습자를 위한 의미 사전' },
+    ];
+  }
+
   return [
     { title: 'Context - Korean Dictionary' },
     { name: 'description', content: 'Meaning dictionary for Korean learners' },
   ];
-}
+};
 
 export default function HomePage() {
   const { locale, t, localePath } = useI18n();
@@ -28,13 +38,9 @@ export default function HomePage() {
     <Layout>
       <div className="mb-8">
         <h1 className="text-2xl font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>
-          {locale === 'ko' ? '한국어 의미 사전' : 'Korean Dictionary'}
+          {t('heroTitle')}
         </h1>
-        <p style={{ color: 'var(--text-secondary)' }}>
-          {locale === 'ko'
-            ? '한국어 단어의 의미를 영어로 설명합니다'
-            : 'Korean words explained in English'}
-        </p>
+        <p style={{ color: 'var(--text-secondary)' }}>{t('heroSubtitle')}</p>
       </div>
 
       <div className="space-y-1">

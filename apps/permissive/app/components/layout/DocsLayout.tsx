@@ -1,5 +1,6 @@
 import { useIsMobile, useSettingsStore } from '@soundblue/shared-react';
 import { type ReactNode, useEffect, useState } from 'react';
+import { useI18n } from '../../i18n';
 import BottomNav from './BottomNav';
 import Footer from './Footer';
 import Header from './Header';
@@ -10,6 +11,7 @@ interface DocsLayoutProps {
 }
 
 export default function DocsLayout({ children }: DocsLayoutProps) {
+  const { t } = useI18n();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const { sidebarCollapsed, setSidebarCollapsed } = useSettingsStore();
   const isMobile = useIsMobile();
@@ -36,7 +38,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
     <div className="min-h-screen" style={{ backgroundColor: 'var(--bg-primary)' }}>
       {/* Skip to content - Accessibility */}
       <a href="#main-content" className="skip-to-content">
-        Skip to content
+        {t('ui.skipToContent')}
       </a>
 
       {/* Header */}

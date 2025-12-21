@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import type { MetaFunction } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import { useI18n } from '../i18n';
 
@@ -119,12 +120,15 @@ const libraries: Library[] = [
 const categories = ['All', 'Frameworks', 'State', 'Styling', 'Build', 'UI'] as const;
 type CategoryFilter = (typeof categories)[number];
 
-export function meta() {
-  return [
-    { title: 'Libraries - Permissive' },
-    { name: 'description', content: 'MIT licensed open source libraries' },
-  ];
-}
+export const meta: MetaFunction = ({ location }) => {
+  const isKorean = location.pathname.startsWith('/ko');
+  const title = 'Libraries - Permissive';
+  const description = isKorean
+    ? 'MIT 라이센스 오픈소스 라이브러리'
+    : 'MIT licensed open source libraries';
+
+  return [{ title }, { name: 'description', content: description }];
+};
 
 export default function LibrariesPage() {
   const { locale } = useI18n();

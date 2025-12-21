@@ -102,7 +102,7 @@ export default function Sidebar({
   onClose,
   onToggleCollapse,
 }: SidebarProps) {
-  const { locale, localePath } = useI18n();
+  const { locale, localePath, t } = useI18n();
   const location = useLocation();
 
   const isActive = (href: string) => location.pathname === localePath(href);
@@ -128,7 +128,7 @@ export default function Sidebar({
           onKeyDown={(e) => e.key === 'Escape' && onClose()}
           role="button"
           tabIndex={0}
-          aria-label="Close sidebar"
+          aria-label={t('aria.closeSidebar')}
         />
       )}
 
@@ -169,7 +169,7 @@ export default function Sidebar({
               onClick={onClose}
               className="p-2 -mr-1 rounded-lg hover-bg"
               style={{ color: 'var(--text-secondary)' }}
-              aria-label="Close menu"
+              aria-label={t('aria.closeMenu')}
             >
               <svg
                 aria-hidden="true"
@@ -252,7 +252,7 @@ export default function Sidebar({
               onClick={onToggleCollapse}
               className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium hover-bg"
               style={{ color: 'var(--text-secondary)' }}
-              title={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+              title={isCollapsed ? t('aria.expandSidebar') : t('aria.collapseSidebar')}
             >
               <svg
                 aria-hidden="true"
@@ -278,7 +278,7 @@ export default function Sidebar({
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover-bg-secondary group"
-            title={isCollapsed && !isMobile ? 'GitHub' : undefined}
+            title={isCollapsed && !isMobile ? t('ui.github') : undefined}
           >
             <span
               className="w-7 h-7 flex items-center justify-center rounded-md shrink-0"
@@ -297,10 +297,10 @@ export default function Sidebar({
             {(!isCollapsed || isMobile) && (
               <div className="flex-1">
                 <div className="text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
-                  GitHub
+                  {t('ui.github')}
                 </div>
                 <div className="text-xs" style={{ color: 'var(--text-tertiary)' }}>
-                  View source
+                  {t('ui.viewSource')}
                 </div>
               </div>
             )}
