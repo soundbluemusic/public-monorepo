@@ -6,42 +6,38 @@ import { Layout } from '@/components/layout/Layout';
 import { ExampleList } from '@/components/math/Example';
 import { FormulaList } from '@/components/math/Formula';
 import { DifficultyBadge } from '@/components/ui/DifficultyBadge';
+import { getConceptById as getConceptByIdStatic } from '@/data/concepts/index';
 import { getFieldById } from '@/data/fields';
 import { getSubfieldById } from '@/data/subfields';
-import type { MathConcept } from '@/data/types';
 import { useI18n } from '@/i18n';
-import { getConceptById } from '@/lib/concepts';
 import { favorites } from '@/lib/db';
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router';
+import { Link, useLoaderData, useParams } from 'react-router';
+import type { Route } from './+types/concept.$conceptId';
+
+/**
+ * Loader: 빌드 시 데이터 로드 (SSG용)
+ * 빌드 시에는 TypeScript에서 직접 import
+ */
+export async function loader({ params }: Route.LoaderArgs) {
+  if (!params.conceptId) {
+    return { concept: null };
+  }
+  const concept = getConceptByIdStatic(params.conceptId);
+  return { concept: concept || null };
+}
 
 export default function ConceptPage() {
+  const loaderData = useLoaderData<typeof loader>();
+  const concept = loaderData?.concept || null;
   const params = useParams<{ conceptId: string }>();
   const { locale, t, localePath } = useI18n();
 
-  const [concept, setConcept] = useState<MathConcept | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
   const [isFavorite, setIsFavorite] = useState(false);
 
-  // 개념 데이터 비동기 로드
+  // 즐겨찾기 상태 확인 (클라이언트 전용)
   useEffect(() => {
     if (params.conceptId) {
-      setIsLoading(true);
-      setError(null);
-
-      getConceptById(params.conceptId)
-        .then((data) => {
-          setConcept(data || null);
-          setIsLoading(false);
-        })
-        .catch((err) => {
-          console.error('Error loading concept:', err);
-          setError(err.message || 'Failed to load concept data');
-          setIsLoading(false);
-        });
-
-      // 즐겨찾기 상태 확인
       favorites.isFavorite(params.conceptId).then(setIsFavorite);
     }
   }, [params.conceptId]);
@@ -58,47 +54,6 @@ export default function ConceptPage() {
       setIsFavorite(true);
     }
   };
-
-  if (isLoading) {
-    return (
-      <Layout>
-        <div className="space-y-4 animate-pulse">
-          <div className="h-8 w-48 rounded bg-bg-secondary" />
-          <div className="h-12 w-64 rounded bg-bg-secondary" />
-          <div className="h-32 w-full rounded bg-bg-secondary" />
-        </div>
-      </Layout>
-    );
-  }
-
-  if (error) {
-    return (
-      <Layout>
-        <div className="text-center py-12">
-          <div className="text-6xl mb-4">⚠️</div>
-          <h1 className="text-2xl font-bold mb-4 text-text-primary">
-            {locale === 'ko' ? '데이터를 불러올 수 없습니다' : 'Failed to load data'}
-          </h1>
-          <p className="text-text-secondary mb-6">{error}</p>
-          <div className="flex gap-4 justify-center">
-            <button
-              type="button"
-              onClick={() => window.location.reload()}
-              className="px-4 py-2 rounded-lg bg-accent-primary text-white hover:bg-accent-hover transition-colors"
-            >
-              {locale === 'ko' ? '다시 시도' : 'Retry'}
-            </button>
-            <Link
-              to={localePath('/browse')}
-              className="px-4 py-2 rounded-lg border border-border-primary hover:bg-bg-secondary transition-colors"
-            >
-              {t('backToList')}
-            </Link>
-          </div>
-        </div>
-      </Layout>
-    );
-  }
 
   if (!concept) {
     return (

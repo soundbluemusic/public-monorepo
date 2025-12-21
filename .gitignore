@@ -44,3 +44,4 @@ dev-dist/
 # Test
 coverage/
 .lighthouseci/
+/apps/roots/public/concepts/index.json

@@ -13,8 +13,9 @@ import { allConcepts } from '../app/data/concepts/index.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PUBLIC_DIR = join(__dirname, '../public');
+const CONCEPTS_DIR = join(PUBLIC_DIR, 'concepts');
 const OUTPUT_PATH = join(PUBLIC_DIR, 'search-index.json');
-const CONCEPTS_OUTPUT_PATH = join(PUBLIC_DIR, 'concepts.json');
+const CONCEPTS_INDEX_PATH = join(CONCEPTS_DIR, 'index.json');
 const CONCEPT_NAMES_PATH = join(PUBLIC_DIR, 'concept-names.json');
 
 interface SearchIndexItem {
@@ -52,6 +53,7 @@ function generateSearchIndex() {
 
   // public 디렉토리가 없으면 생성
   mkdirSync(PUBLIC_DIR, { recursive: true });
+  mkdirSync(CONCEPTS_DIR, { recursive: true });
 
   // JSON 파일 생성
   writeFileSync(OUTPUT_PATH, JSON.stringify(searchIndex), 'utf-8');
@@ -59,10 +61,52 @@ function generateSearchIndex() {
   const sizeKB = (Buffer.byteLength(JSON.stringify(searchIndex)) / 1024).toFixed(1);
   console.log(`✓ Generated search-index.json (${sizeKB} KB, ${searchIndex.length} items)`);
 
-  // 전체 개념 데이터도 JSON으로 생성 (페이지 렌더링용)
-  writeFileSync(CONCEPTS_OUTPUT_PATH, JSON.stringify(allConcepts), 'utf-8');
-  const conceptsSizeKB = (Buffer.byteLength(JSON.stringify(allConcepts)) / 1024).toFixed(1);
-  console.log(`✓ Generated concepts.json (${conceptsSizeKB} KB, ${allConcepts.length} items)`);
+  // 필드별로 개념 그룹화
+  const conceptsByField = new Map<string, typeof allConcepts>();
+  for (const concept of allConcepts) {
+    const field = concept.field;
+    if (!conceptsByField.has(field)) {
+      conceptsByField.set(field, []);
+    }
+    const fieldConcepts = conceptsByField.get(field);
+    if (fieldConcepts) {
+      fieldConcepts.push(concept);
+    }
+  }
+
+  // 각 필드를 별도 JSON 파일로 저장
+  console.log('\nGenerating field-based concept files...');
+  const fieldStats: Record<string, { count: number; sizeKB: string }> = {};
+
+  for (const [field, concepts] of conceptsByField.entries()) {
+    const fieldPath = join(CONCEPTS_DIR, `${field}.json`);
+    const fieldData = JSON.stringify(concepts);
+    writeFileSync(fieldPath, fieldData, 'utf-8');
+
+    const fieldSizeKB = (Buffer.byteLength(fieldData) / 1024).toFixed(1);
+    fieldStats[field] = { count: concepts.length, sizeKB: fieldSizeKB };
+    console.log(`  ✓ ${field}.json (${fieldSizeKB} KB, ${concepts.length} concepts)`);
+  }
+
+  // 개념 ID → 필드 매핑 생성 (빠른 필드 조회용)
+  const conceptIdToField: Record<string, string> = {};
+  for (const concept of allConcepts) {
+    conceptIdToField[concept.id] = concept.field;
+  }
+
+  // 필드 인덱스 파일 생성 (메타데이터)
+  const conceptsIndex = {
+    fields: Array.from(conceptsByField.keys()),
+    stats: fieldStats,
+    totalConcepts: allConcepts.length,
+    conceptIdToField, // 개념 ID → 필드 매핑 추가
+    generatedAt: new Date().toISOString(),
+  };
+  writeFileSync(CONCEPTS_INDEX_PATH, JSON.stringify(conceptsIndex, null, 2), 'utf-8');
+  const indexSizeKB = (Buffer.byteLength(JSON.stringify(conceptsIndex)) / 1024).toFixed(1);
+  console.log(
+    `\n✓ Generated concepts/index.json (${indexSizeKB} KB, ${conceptsByField.size} fields)`,
+  );
 
   // 개념 이름만 담은 경량 맵 생성 (RelationLinks용)
   const conceptNames: Record<string, { ko: string; en: string }> = {};

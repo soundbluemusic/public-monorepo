@@ -3,33 +3,32 @@
  */
 import { ConceptCard } from '@/components/concept/ConceptCard';
 import { Layout } from '@/components/layout/Layout';
+import { getConceptsByField as getConceptsByFieldStatic } from '@/data/concepts/index';
 import { getFieldById } from '@/data/fields';
 import { getSubfieldsByParent } from '@/data/subfields';
-import type { MathConcept } from '@/data/types';
 import { useI18n } from '@/i18n';
-import { getConceptsByField } from '@/lib/concepts';
-import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router';
+import { Link, useLoaderData, useParams } from 'react-router';
+import type { Route } from './+types/field.$fieldId';
+
+/**
+ * Loader: 빌드 시 데이터 로드 (SSG용)
+ */
+export async function loader({ params }: Route.LoaderArgs) {
+  if (!params.fieldId) {
+    return { concepts: [] };
+  }
+  const concepts = getConceptsByFieldStatic(params.fieldId);
+  return { concepts };
+}
 
 export default function FieldPage() {
+  const loaderData = useLoaderData<typeof loader>();
+  const concepts = loaderData?.concepts || [];
   const params = useParams<{ fieldId: string }>();
   const { locale, t, localePath } = useI18n();
 
   const field = getFieldById(params.fieldId ?? '');
   const subfields = getSubfieldsByParent(params.fieldId || '');
-
-  const [concepts, setConcepts] = useState<MathConcept[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  // 개념 데이터 비동기 로드
-  useEffect(() => {
-    if (params.fieldId) {
-      getConceptsByField(params.fieldId).then((data) => {
-        setConcepts(data);
-        setIsLoading(false);
-      });
-    }
-  }, [params.fieldId]);
 
   if (!field) {
     return (
@@ -105,7 +104,7 @@ export default function FieldPage() {
       </section>
 
       {/* Concepts in this field */}
-      {!isLoading && concepts.length > 0 && (
+      {concepts.length > 0 && (
         <section className="mt-8">
           <h2 className="text-xl font-semibold mb-4" style={{ color: 'var(--text-primary)' }}>
             {locale === 'ko' ? '개념 목록' : 'Concepts'}
@@ -113,21 +112,6 @@ export default function FieldPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {concepts.map((concept) => (
               <ConceptCard key={concept.id} concept={concept} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Loading */}
-      {isLoading && (
-        <section className="mt-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[1, 2, 3].map((i) => (
-              <div
-                key={i}
-                className="h-32 rounded-xl animate-pulse"
-                style={{ backgroundColor: 'var(--bg-secondary)' }}
-              />
             ))}
           </div>
         </section>
