@@ -2,9 +2,12 @@ import { LIMITS } from './constants';
 
 /**
  * Sanitizes a search query by trimming, lowercasing, and limiting length
+ * Handles null/undefined by treating them as empty strings
  */
 export function sanitizeSearchQuery(query: string): string {
-  return query.toLowerCase().trim().slice(0, LIMITS.SEARCH_LENGTH);
+  // Handle null/undefined by converting to empty string
+  const safeQuery = query ?? '';
+  return safeQuery.toLowerCase().trim().slice(0, LIMITS.SEARCH_LENGTH);
 }
 
 /**

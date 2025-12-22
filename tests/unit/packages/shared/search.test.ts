@@ -44,12 +44,12 @@ describe('sanitizeSearchQuery', () => {
   // Edge cases
   it('should handle null as empty string (type coercion)', () => {
     // @ts-expect-error Testing edge case
-    expect(sanitizeSearchQuery(null)).toBe('null');
+    expect(sanitizeSearchQuery(null)).toBe('');
   });
 
   it('should handle undefined as empty string (type coercion)', () => {
     // @ts-expect-error Testing edge case
-    expect(sanitizeSearchQuery(undefined)).toBe('undefined');
+    expect(sanitizeSearchQuery(undefined)).toBe('');
   });
 });
 

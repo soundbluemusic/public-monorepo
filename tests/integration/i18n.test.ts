@@ -15,7 +15,7 @@ const LOCALES = ['ko', 'en'];
 describe('i18n Completeness', () => {
   for (const app of APPS) {
     describe(`${app} app`, () => {
-      const messagesDir = path.join(process.cwd(), `apps/${app}/messages`);
+      const messagesDir = path.join(process.cwd(), `apps/${app}/project.inlang/messages`);
 
       it('should have messages directory', () => {
         expect(fs.existsSync(messagesDir)).toBe(true);
@@ -35,7 +35,10 @@ describe('i18n Completeness', () => {
           const messagePath = path.join(messagesDir, `${locale}.json`);
           if (fs.existsSync(messagePath)) {
             const content = fs.readFileSync(messagePath, 'utf-8');
-            translations[locale] = JSON.parse(content);
+            const parsed = JSON.parse(content);
+            // Filter out $schema key for comparison
+            const { $schema, ...rest } = parsed;
+            translations[locale] = rest;
           }
         }
 
@@ -110,11 +113,14 @@ describe('i18n Completeness', () => {
             const translations = JSON.parse(content);
 
             for (const key of Object.keys(translations)) {
-              // Keys should be camelCase or kebab-case (no spaces)
+              // Skip $schema key (JSON Schema metadata)
+              if (key === '$schema') continue;
+
+              // Keys should be camelCase, kebab-case, or dot.notation (no spaces)
               expect(
                 key,
-                `Invalid key format "${key}" in ${locale}.json (${app}). Use camelCase or kebab-case.`,
-              ).toMatch(/^[a-z][a-zA-Z0-9-_]*$/);
+                `Invalid key format "${key}" in ${locale}.json (${app}). Use camelCase, kebab-case, or dot.notation.`,
+              ).toMatch(/^[a-z][a-zA-Z0-9-_.]*$/);
             }
           }
         }

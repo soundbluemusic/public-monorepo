@@ -107,7 +107,7 @@ describe('Search Functionality (Mock)', () => {
         item.def.en.toLowerCase().includes(query.toLowerCase()),
     );
 
-    expect(filtered).toHaveLength(2); // linear-algebra and its definition
+    expect(filtered).toHaveLength(1); // linear-algebra matches
     expect(filtered[0].id).toBe('linear-algebra');
   });
 

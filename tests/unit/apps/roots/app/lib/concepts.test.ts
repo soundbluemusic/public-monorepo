@@ -98,9 +98,8 @@ describe('Concepts Loading (Mock Tests)', () => {
 
       const racePromise = Promise.race([fetchPromise, timeoutPromise]);
 
-      setTimeout(() => {
-        vi.advanceTimersByTime(10000);
-      }, 0);
+      // Advance timers to trigger the timeout
+      vi.advanceTimersByTime(10000);
 
       await expect(racePromise).rejects.toThrow('Timeout loading concepts/index.json');
 
