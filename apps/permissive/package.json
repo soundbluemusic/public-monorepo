@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "react-router dev",
-    "prebuild": "npx @inlang/paraglide-js compile --project ./project.inlang --outdir ./app/paraglide",
+    "prebuild": "pnpm exec paraglide-js compile --project ./project.inlang --outdir ./app/paraglide",
     "build": "react-router build && tsx scripts/generate-sitemaps.ts",
     "preview": "vite preview --outDir build/client",
     "start": "vite preview --outDir build/client",
