@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router';
-import { useI18n } from '../../i18n';
+import { type Language, useI18n } from '../../i18n';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -125,7 +125,7 @@ export default function Sidebar({
           className={`fixed inset-0 z-overlay ${isReady ? 'transition-opacity duration-200' : ''}`}
           style={{ backgroundColor: 'rgba(15, 23, 22, 0.5)' }}
           onClick={onClose}
-          onKeyDown={(e) => e.key === 'Escape' && onClose()}
+          onKeyDown={(e: React.KeyboardEvent) => e.key === 'Escape' && onClose()}
           role="button"
           tabIndex={0}
           aria-label={t('aria.closeSidebar')}
@@ -317,8 +317,8 @@ function QuickLinksSection({
   locale,
 }: {
   title: string;
-  links: QuickLink[];
-  locale: string;
+  links: readonly QuickLink[];
+  locale: Language;
 }) {
   return (
     <div>

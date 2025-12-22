@@ -201,12 +201,34 @@ export interface Example {
   difficulty?: DifficultyLevel;
 }
 
+/** Chart data point for visualizations */
+export interface ChartDataPoint {
+  x: number;
+  y: number;
+  label?: string;
+}
+
+/** Chart dataset configuration */
+export interface ChartDataset {
+  label: string;
+  data: ChartDataPoint[] | number[];
+  borderColor?: string;
+  backgroundColor?: string;
+  fill?: boolean;
+}
+
+/** Chart configuration data (compatible with Chart.js) */
+export interface ChartData {
+  labels?: string[];
+  datasets: ChartDataset[];
+}
+
 /** 시각화 */
 export interface Visualization {
   type: 'graph' | 'diagram' | 'animation' | 'interactive';
   description: string;
-  /** Chart.js 등의 데이터 */
-  data?: unknown;
+  /** Chart.js compatible data */
+  data?: ChartData;
   /** 외부 도구 링크 */
   externalUrl?: string;
 }

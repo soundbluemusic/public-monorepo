@@ -94,7 +94,7 @@ function question(prompt: string): Promise<string> {
   });
 }
 
-function close() {
+function close(): void {
   if (rl) {
     rl.close();
     rl = null;
@@ -352,7 +352,7 @@ async function addLibraryInteractive() {
 // 메인
 // ============================================
 
-function printHelp() {
+function printHelp(): void {
   console.log(`
 📊 데이터 추가 CLI 도구
 
@@ -403,7 +403,7 @@ function printHelp() {
 `);
 }
 
-async function main() {
+async function main(): Promise<void> {
   const args = process.argv.slice(2);
 
   // 도움말
@@ -423,7 +423,7 @@ async function main() {
   const jsonIdx = args.indexOf('--json');
   const fileIdx = args.indexOf('--file');
 
-  let jsonData: unknown = null;
+  let jsonData: ContextEntry | (LibraryEntry & { id?: string }) | null = null;
 
   if (jsonIdx !== -1 && args[jsonIdx + 1]) {
     try {

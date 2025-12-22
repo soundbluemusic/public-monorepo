@@ -1,6 +1,12 @@
 // Type declarations for generated Paraglide files
 declare module '~/paraglide/messages.js' {
-  const messages: Record<string, (inputs?: unknown) => string>;
+  /** Paraglide message function input type */
+  type MessageInputs = Record<string, string | number>;
+
+  /** Paraglide message function type */
+  type MessageFunction = (inputs?: MessageInputs) => string;
+
+  const messages: Record<string, MessageFunction>;
   export = messages;
 }
 
