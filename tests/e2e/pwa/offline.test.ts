@@ -2,7 +2,7 @@
  * @fileoverview E2E tests for PWA offline functionality
  */
 
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
 test.describe('PWA Offline Functionality', () => {
   test('should load page when online', async ({ page, context }) => {
@@ -123,7 +123,7 @@ test.describe('PWA Offline Functionality', () => {
 
       const content = await page.content();
       expect(content.length).toBeGreaterThan(0);
-    } catch (error) {
+    } catch (_error) {
       // If navigation fails offline, check if SW is controlling the page
       const isControlled = await page.evaluate(() => {
         return navigator.serviceWorker.controller !== null;
@@ -148,7 +148,10 @@ test.describe('PWA Offline Functionality', () => {
 
     try {
       // Try to visit a page that might not be cached
-      await page.goto('/ko/nonexistent-page-12345', { waitUntil: 'domcontentloaded', timeout: 10000 });
+      await page.goto('/ko/nonexistent-page-12345', {
+        waitUntil: 'domcontentloaded',
+        timeout: 10000,
+      });
 
       const content = await page.content();
 

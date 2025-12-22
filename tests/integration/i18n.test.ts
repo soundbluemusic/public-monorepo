@@ -5,9 +5,9 @@
  * and that no translation is missing or empty.
  */
 
-import { describe, expect, it } from 'vitest';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
+import { describe, expect, it } from 'vitest';
 
 const APPS = ['roots', 'context', 'permissive'];
 const LOCALES = ['ko', 'en'];

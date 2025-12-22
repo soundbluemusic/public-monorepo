@@ -3,9 +3,9 @@
  * Tests that static site generation works correctly
  */
 
-import { describe, expect, it } from 'vitest';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
+import { describe, expect, it } from 'vitest';
 
 describe('SSG Build Verification', () => {
   const buildDir = path.join(process.cwd(), 'apps/roots/build/client');

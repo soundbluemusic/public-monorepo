@@ -2,7 +2,7 @@
  * @fileoverview Unit tests for dynamic concept loading utilities
  */
 
-import { describe, expect, it, beforeEach, vi, afterEach } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 // Mock fetch globally
 const mockFetch = vi.fn();
@@ -53,7 +53,7 @@ describe('Concepts Loading (Mock Tests)', () => {
         totalConcepts: 80,
         conceptIdToField: {
           'linear-algebra': 'algebra',
-          'differentiation': 'calculus',
+          differentiation: 'calculus',
         },
         generatedAt: '2024-01-01T00:00:00.000Z',
       };
@@ -225,7 +225,7 @@ describe('Concepts Loading (Mock Tests)', () => {
         totalConcepts: 2,
         conceptIdToField: {
           'linear-algebra': 'algebra',
-          'differentiation': 'calculus',
+          differentiation: 'calculus',
         },
         generatedAt: '2024-01-01T00:00:00.000Z',
       };
@@ -239,7 +239,7 @@ describe('Concepts Loading (Mock Tests)', () => {
       const index = await response.json();
 
       expect(index.conceptIdToField['linear-algebra']).toBe('algebra');
-      expect(index.conceptIdToField['differentiation']).toBe('calculus');
+      expect(index.conceptIdToField.differentiation).toBe('calculus');
     });
 
     it('should handle missing concept ID in index', async () => {
@@ -261,7 +261,7 @@ describe('Concepts Loading (Mock Tests)', () => {
       const response = await fetch('/concepts/index.json');
       const index = await response.json();
 
-      expect(index.conceptIdToField['nonexistent']).toBeUndefined();
+      expect(index.conceptIdToField.nonexistent).toBeUndefined();
     });
   });
 

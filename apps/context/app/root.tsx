@@ -23,7 +23,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
               '@type': 'WebSite',
               name: 'Context - Korean Meaning Dictionary',
               url: 'https://context.soundbluemusic.com',
-              description: 'Korean meaning dictionary for learners - Understand Korean words and contexts easily',
+              description:
+                'Korean meaning dictionary for learners - Understand Korean words and contexts easily',
               inLanguage: ['ko', 'en'],
               potentialAction: {
                 '@type': 'SearchAction',

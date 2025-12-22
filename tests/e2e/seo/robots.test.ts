@@ -2,9 +2,9 @@
  * @fileoverview E2E tests for robots.txt AI crawler permissions
  */
 
-import { test, expect } from '@playwright/test';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
+import { expect, test } from '@playwright/test';
 
 const AI_CRAWLERS = [
   'GPTBot',          // ChatGPT

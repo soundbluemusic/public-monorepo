@@ -2,7 +2,7 @@
  * @fileoverview E2E tests for Subresource Integrity (SRI) validation
  */
 
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
 test.describe('Subresource Integrity (SRI)', () => {
   test('should have SRI hash for KaTeX CDN stylesheet', async ({ page }) => {
@@ -76,7 +76,9 @@ test.describe('Subresource Integrity (SRI)', () => {
     }
   });
 
-  test('crossorigin attribute should be "anonymous" when integrity is present', async ({ page }) => {
+  test('crossorigin attribute should be "anonymous" when integrity is present', async ({
+    page,
+  }) => {
     await page.goto('/ko');
 
     const elementsWithIntegrity = await page.$$('[integrity]');

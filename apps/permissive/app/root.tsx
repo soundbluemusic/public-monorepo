@@ -23,13 +23,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
               '@type': 'WebSite',
               name: 'Permissive - Free Web Dev Resources',
               url: 'https://permissive.soundbluemusic.com',
-              description: 'Discover free and open-source web development tools, libraries, and resources',
+              description:
+                'Discover free and open-source web development tools, libraries, and resources',
               inLanguage: ['ko', 'en'],
               potentialAction: {
                 '@type': 'SearchAction',
                 target: {
                   '@type': 'EntryPoint',
-                  urlTemplate: 'https://permissive.soundbluemusic.com/libraries?q={search_term_string}',
+                  urlTemplate:
+                    'https://permissive.soundbluemusic.com/libraries?q={search_term_string}',
                 },
                 'query-input': 'required name=search_term_string',
               },

@@ -2,8 +2,8 @@
  * @fileoverview Unit tests for i18n utilities
  */
 
-import { describe, expect, it } from 'vitest';
 import { buildLocalePath, getLocaleFromPath, stripLocaleFromPath } from '@soundblue/shared';
+import { describe, expect, it } from 'vitest';
 
 describe('getLocaleFromPath', () => {
   it('should return "ko" for Korean paths starting with /ko/', () => {

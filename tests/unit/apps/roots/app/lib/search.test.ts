@@ -2,7 +2,7 @@
  * @fileoverview Unit tests for Fuse.js search utilities
  */
 
-import { describe, expect, it, beforeEach, vi, afterEach } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 // Mock console
 const consoleSpy = {
@@ -81,7 +81,7 @@ describe('Search Index Loading', () => {
   it('should return empty array on SSR (window undefined)', () => {
     const originalWindow = global.window;
     // @ts-expect-error - testing SSR behavior
-    delete global.window;
+    global.window = undefined;
 
     // In SSR, should return empty array immediately
     expect(global.window).toBeUndefined();
@@ -321,8 +321,8 @@ describe('Edge Cases', () => {
 
   it('should handle unicode characters', () => {
     const query = '微積分'; // Chinese characters
-    const filtered = mockSearchIndex.filter((item) =>
-      item.name.ko.includes(query) || item.name.en.includes(query),
+    const filtered = mockSearchIndex.filter(
+      (item) => item.name.ko.includes(query) || item.name.en.includes(query),
     );
 
     expect(Array.isArray(filtered)).toBe(true);

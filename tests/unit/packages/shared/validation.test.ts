@@ -2,14 +2,9 @@
  * @fileoverview Unit tests for validation utilities
  */
 
-import { describe, expect, it } from 'vitest';
 import { LIMITS } from '@soundblue/shared';
-import {
-  isReservedName,
-  isValidLanguage,
-  isValidTheme,
-  validateId,
-} from '@soundblue/shared';
+import { isReservedName, isValidLanguage, isValidTheme, validateId } from '@soundblue/shared';
+import { describe, expect, it } from 'vitest';
 
 describe('validateId', () => {
   it('should pass for valid ID', () => {

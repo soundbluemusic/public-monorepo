@@ -2,9 +2,9 @@
  * @fileoverview Unit tests for useOnlineStatus hook
  */
 
-import { describe, expect, it, beforeEach, vi } from 'vitest';
-import { renderHook, act, waitFor } from '@testing-library/react';
 import { useOnlineStatus } from '@soundblue/shared-react/hooks/useOnlineStatus';
+import { act, renderHook, waitFor } from '@testing-library/react';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 describe('useOnlineStatus', () => {
   beforeEach(() => {

@@ -2,14 +2,16 @@
  * @fileoverview E2E tests for XSS (Cross-Site Scripting) prevention
  */
 
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
 test.describe('XSS Prevention', () => {
   test('should sanitize user input in search', async ({ page }) => {
     await page.goto('/ko/search');
 
     const xssPayload = '<script>alert("XSS")</script>';
-    const searchInput = page.locator('input[type="search"], input[name="q"], input[placeholder*="검색"]').first();
+    const searchInput = page
+      .locator('input[type="search"], input[name="q"], input[placeholder*="검색"]')
+      .first();
 
     if ((await searchInput.count()) > 0) {
       await searchInput.fill(xssPayload);
@@ -19,7 +21,9 @@ test.describe('XSS Prevention', () => {
 
       // Check that script did not execute
       const hasAlert = await page.evaluate(() => {
-        return typeof window.alert !== 'function' || window.alert.toString().includes('[native code]');
+        return (
+          typeof window.alert !== 'function' || window.alert.toString().includes('[native code]')
+        );
       });
 
       expect(hasAlert).toBe(true);

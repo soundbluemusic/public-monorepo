@@ -2,9 +2,9 @@
  * @fileoverview Unit tests for useMediaQuery and useIsMobile hooks
  */
 
-import { describe, expect, it, beforeEach, vi } from 'vitest';
+import { useIsMobile, useMediaQuery } from '@soundblue/shared-react/hooks/useMediaQuery';
 import { renderHook } from '@testing-library/react';
-import { useMediaQuery, useIsMobile } from '@soundblue/shared-react/hooks/useMediaQuery';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 describe('useMediaQuery', () => {
   let mockMatchMedia: ReturnType<typeof vi.fn>;
@@ -22,14 +22,16 @@ describe('useMediaQuery', () => {
             listeners.push(handler);
           }
         }),
-        removeEventListener: vi.fn((event: string, handler: (event: MediaQueryListEvent) => void) => {
-          if (event === 'change') {
-            const index = listeners.indexOf(handler);
-            if (index !== -1) {
-              listeners.splice(index, 1);
+        removeEventListener: vi.fn(
+          (event: string, handler: (event: MediaQueryListEvent) => void) => {
+            if (event === 'change') {
+              const index = listeners.indexOf(handler);
+              if (index !== -1) {
+                listeners.splice(index, 1);
+              }
             }
-          }
-        }),
+          },
+        ),
       };
       return mediaQuery as unknown as MediaQueryList;
     });
@@ -87,10 +89,9 @@ describe('useMediaQuery', () => {
   });
 
   it('should handle query changes', () => {
-    const { result, rerender } = renderHook(
-      ({ query }) => useMediaQuery(query),
-      { initialProps: { query: '(min-width: 768px)' } },
-    );
+    const { result, rerender } = renderHook(({ query }) => useMediaQuery(query), {
+      initialProps: { query: '(min-width: 768px)' },
+    });
 
     expect(mockMatchMedia).toHaveBeenCalledWith('(min-width: 768px)');
 

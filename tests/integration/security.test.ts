@@ -3,10 +3,10 @@
  * Tests for sensitive data exposure and production security
  */
 
-import { describe, expect, it } from 'vitest';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { glob } from 'glob';
+import { describe, expect, it } from 'vitest';
 
 describe('Sensitive Data Protection', () => {
   it('should not expose API keys in built JavaScript files', () => {
@@ -47,7 +47,11 @@ describe('Sensitive Data Protection', () => {
         // Allow in comments or development-only code
         const lines = content.split('\n');
         for (const line of lines) {
-          if (line.includes('process.env') && !line.trim().startsWith('//') && !line.trim().startsWith('*')) {
+          if (
+            line.includes('process.env') &&
+            !line.trim().startsWith('//') &&
+            !line.trim().startsWith('*')
+          ) {
             throw new Error(`Found process.env in production build: ${file}`);
           }
         }

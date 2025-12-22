@@ -3,8 +3,8 @@
  * Runs before all tests
  */
 
-import { afterEach } from 'vitest';
 import { cleanup } from '@testing-library/react';
+import { afterEach } from 'vitest';
 
 // Clean up after each test
 afterEach(() => {

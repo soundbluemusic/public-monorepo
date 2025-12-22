@@ -2,11 +2,13 @@
  * @fileoverview E2E tests for WCAG 2.1 AA accessibility compliance
  */
 
-import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
+import { expect, test } from '@playwright/test';
 
 test.describe('WCAG 2.1 AA Accessibility', () => {
-  test('should not have any automatically detectable accessibility issues (Korean)', async ({ page }) => {
+  test('should not have any automatically detectable accessibility issues (Korean)', async ({
+    page,
+  }) => {
     await page.goto('/ko');
 
     const accessibilityScanResults = await new AxeBuilder({ page })
@@ -16,7 +18,9 @@ test.describe('WCAG 2.1 AA Accessibility', () => {
     expect(accessibilityScanResults.violations).toEqual([]);
   });
 
-  test('should not have any automatically detectable accessibility issues (English)', async ({ page }) => {
+  test('should not have any automatically detectable accessibility issues (English)', async ({
+    page,
+  }) => {
     await page.goto('/');
 
     const accessibilityScanResults = await new AxeBuilder({ page })
@@ -164,8 +168,7 @@ test.describe('Keyboard Navigation', () => {
   test('should have visible focus indicators', async ({ page }) => {
     await page.goto('/ko');
 
-    const focusableSelector =
-      'a[href], button:not([disabled]), input:not([disabled])';
+    const focusableSelector = 'a[href], button:not([disabled]), input:not([disabled])';
 
     const focusableElements = await page.$$(focusableSelector);
 

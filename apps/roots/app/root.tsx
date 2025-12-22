@@ -30,7 +30,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
               '@type': 'WebSite',
               name: 'Roots - Math Documentation',
               url: 'https://roots.soundbluemusic.com',
-              description: 'Learn math concepts easily - From basic arithmetic to advanced calculus',
+              description:
+                'Learn math concepts easily - From basic arithmetic to advanced calculus',
               inLanguage: ['ko', 'en'],
               potentialAction: {
                 '@type': 'SearchAction',

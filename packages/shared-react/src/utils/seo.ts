@@ -3,7 +3,19 @@
  * Supports Open Graph, Twitter Cards, canonical URLs, hreflang, and Schema.org JSON-LD
  */
 
-import type { MetaDescriptor } from 'react-router';
+// Type definitions for meta and link descriptors
+export type MetaDescriptor =
+  | { charset: string }
+  | { title: string }
+  | { name: string; content: string }
+  | { property: string; content: string }
+  | { 'http-equiv': string; content: string };
+
+export type LinkDescriptor = {
+  rel: string;
+  href: string;
+  hreflang?: string;
+};
 
 /**
  * Options for generating SEO meta tags
@@ -104,7 +116,7 @@ export function generateSEOMeta({
   // Validate description length
   if (description.length < 50 || description.length > 160) {
     console.warn(
-      `SEO Warning: Description length is ${description.length}. Recommended: 50-160 characters.`
+      `SEO Warning: Description length is ${description.length}. Recommended: 50-160 characters.`,
     );
   }
 
@@ -162,14 +174,18 @@ export function generateHreflangLinks(
   pathname: string,
   baseUrl: string,
   locales: string[],
-  defaultLocale = 'ko'
+  defaultLocale = 'ko',
 ): LinkDescriptor[] {
   // Remove trailing slash
   const cleanBaseUrl = baseUrl.replace(/\/$/, '');
   const cleanPath = pathname.startsWith('/') ? pathname : `/${pathname}`;
 
   // Canonical URL (current page)
-  const currentLocale = cleanPath.startsWith('/ko') ? 'ko' : cleanPath.startsWith('/en') ? 'en' : defaultLocale;
+  const currentLocale = cleanPath.startsWith('/ko')
+    ? 'ko'
+    : cleanPath.startsWith('/en')
+      ? 'en'
+      : defaultLocale;
   const pathWithoutLocale = cleanPath.replace(/^\/(ko|en)/, '') || '/';
 
   return [
@@ -222,7 +238,7 @@ export function generateSchemaOrg(data: SchemaOrgData): string {
       ...data,
     },
     null,
-    0 // Minified
+    0, // Minified
   );
 }
 

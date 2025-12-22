@@ -2,7 +2,7 @@
  * @fileoverview E2E tests for PWA manifest.json validation
  */
 
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
 test.describe('PWA Manifest', () => {
   test('should have manifest link in head', async ({ page }) => {
@@ -45,14 +45,14 @@ test.describe('PWA Manifest', () => {
     expect(manifest.icons.length).toBeGreaterThan(0);
 
     // Should have 192x192 icon
-    const has192 = manifest.icons.some((icon: any) =>
-      icon.sizes === '192x192' || icon.sizes === 'any'
+    const has192 = manifest.icons.some(
+      (icon: any) => icon.sizes === '192x192' || icon.sizes === 'any',
     );
     expect(has192).toBe(true);
 
     // Should have 512x512 icon or any size
-    const has512 = manifest.icons.some((icon: any) =>
-      icon.sizes === '512x512' || icon.sizes === 'any'
+    const has512 = manifest.icons.some(
+      (icon: any) => icon.sizes === '512x512' || icon.sizes === 'any',
     );
     expect(has512).toBe(true);
   });

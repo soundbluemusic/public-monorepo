@@ -2,7 +2,7 @@
  * @fileoverview E2E tests for Open Graph and Twitter Card meta tags
  */
 
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
 test.describe('Open Graph Meta Tags', () => {
   test('should have all required OG tags on Korean page', async ({ page }) => {
@@ -89,7 +89,10 @@ test.describe('Twitter Card Meta Tags', () => {
     expect(twitterTitle).not.toBe('');
     expect(twitterTitle).not.toBeNull();
 
-    const twitterDescription = await page.getAttribute('meta[name="twitter:description"]', 'content');
+    const twitterDescription = await page.getAttribute(
+      'meta[name="twitter:description"]',
+      'content',
+    );
     expect(twitterDescription).not.toBe('');
     expect(twitterDescription).not.toBeNull();
 
@@ -109,7 +112,10 @@ test.describe('Twitter Card Meta Tags', () => {
     await page.goto('/ko');
 
     const ogDescription = await page.getAttribute('meta[property="og:description"]', 'content');
-    const twitterDescription = await page.getAttribute('meta[name="twitter:description"]', 'content');
+    const twitterDescription = await page.getAttribute(
+      'meta[name="twitter:description"]',
+      'content',
+    );
 
     // They should match
     expect(ogDescription).toBe(twitterDescription);
@@ -133,8 +139,8 @@ test.describe('Basic Meta Tags', () => {
     const description = await page.getAttribute('meta[name="description"]', 'content');
     expect(description).not.toBe('');
     expect(description).not.toBeNull();
-    expect(description!.length).toBeGreaterThanOrEqual(50);
-    expect(description!.length).toBeLessThanOrEqual(160);
+    expect(description?.length).toBeGreaterThanOrEqual(50);
+    expect(description?.length).toBeLessThanOrEqual(160);
   });
 
   test('should have title tag with proper length', async ({ page }) => {

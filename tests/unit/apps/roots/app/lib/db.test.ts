@@ -2,8 +2,8 @@
  * @fileoverview Unit tests for Roots app Dexie database helpers
  */
 
-import { describe, expect, it, beforeEach, vi, afterEach } from 'vitest';
 import Dexie from 'dexie';
+import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
 // Import types and create test versions
 interface FavoriteConcept {
@@ -77,7 +77,9 @@ const createFavorites = (testDb: TestRootsDatabase) => ({
     if (conceptId.length > 100) {
       throw new Error('conceptId exceeds maximum length of 100');
     }
-    if (['__proto__', 'constructor', 'prototype', 'hasOwnProperty', 'toString'].includes(conceptId)) {
+    if (
+      ['__proto__', 'constructor', 'prototype', 'hasOwnProperty', 'toString'].includes(conceptId)
+    ) {
       throw new Error('Invalid conceptId');
     }
     const exists = await testDb.favorites.where('conceptId').equals(conceptId).first();

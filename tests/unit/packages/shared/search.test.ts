@@ -2,13 +2,9 @@
  * @fileoverview Unit tests for search utilities
  */
 
-import { describe, expect, it } from 'vitest';
 import { LIMITS } from '@soundblue/shared';
-import {
-  createSearchHandler,
-  filterBySearch,
-  sanitizeSearchQuery,
-} from '@soundblue/shared';
+import { createSearchHandler, filterBySearch, sanitizeSearchQuery } from '@soundblue/shared';
+import { describe, expect, it } from 'vitest';
 
 describe('sanitizeSearchQuery', () => {
   it('should trim and lowercase the query', () => {

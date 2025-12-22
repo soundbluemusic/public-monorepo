@@ -2,9 +2,9 @@
  * @fileoverview E2E tests for sitemap.xml validation
  */
 
-import { test, expect } from '@playwright/test';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
+import { expect, test } from '@playwright/test';
 
 test.describe('Sitemap XML', () => {
   test('should exist and be accessible', async ({ page }) => {
@@ -153,7 +153,7 @@ test.describe('Sitemap Validation', () => {
     const response = await page.goto('/sitemap.xml');
     const content = await response?.text();
 
-    if (content && content.includes('<urlset')) {
+    if (content?.includes('<urlset')) {
       // Count <url> tags
       const urlMatches = content.match(/<url>/g);
       const urlCount = urlMatches ? urlMatches.length : 0;

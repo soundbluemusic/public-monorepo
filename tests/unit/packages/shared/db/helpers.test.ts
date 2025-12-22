@@ -2,13 +2,13 @@
  * @fileoverview Unit tests for DB helper factory functions
  */
 
-import { describe, expect, it, beforeEach, vi } from 'vitest';
 import {
   createFavoritesHelper,
-  createSettingsHelper,
   createRecentViewsHelper,
+  createSettingsHelper,
 } from '@soundblue/shared/db/helpers';
 import type { BaseFavorite, BaseRecentView, BaseSettings } from '@soundblue/shared/db/types';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 // Mock Dexie Table interface
 interface MockTable<T> {

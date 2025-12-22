@@ -2,7 +2,7 @@
  * @fileoverview E2E tests for security headers
  */
 
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
 test.describe('Security Headers', () => {
   test('should have X-Content-Type-Options header', async ({ page }) => {
@@ -42,7 +42,7 @@ test.describe('Security Headers', () => {
     const csp = response?.headers()['content-security-policy'];
 
     // Should allow unsafe-inline for scripts (dark mode prevention)
-    expect(csp).toContain("script-src");
+    expect(csp).toContain('script-src');
     expect(csp).toContain("'unsafe-inline'");
   });
 
@@ -51,7 +51,7 @@ test.describe('Security Headers', () => {
     const csp = response?.headers()['content-security-policy'];
 
     // Should allow unsafe-inline for styles
-    expect(csp).toContain("style-src");
+    expect(csp).toContain('style-src');
     expect(csp).toContain("'unsafe-inline'");
   });
 
@@ -59,7 +59,7 @@ test.describe('Security Headers', () => {
     const response = await page.goto('/ko');
     const csp = response?.headers()['content-security-policy'];
 
-    expect(csp).toContain("img-src");
+    expect(csp).toContain('img-src');
     expect(csp).toContain("'self'");
     expect(csp).toContain('data:');
   });
@@ -69,7 +69,7 @@ test.describe('Security Headers', () => {
     const headers = response?.headers();
 
     // Should not expose server information
-    expect(headers?.['server']).toBeUndefined();
+    expect(headers?.server).toBeUndefined();
     expect(headers?.['x-powered-by']).toBeUndefined();
   });
 });

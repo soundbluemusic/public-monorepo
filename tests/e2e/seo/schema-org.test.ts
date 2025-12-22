@@ -2,7 +2,7 @@
  * @fileoverview E2E tests for Schema.org JSON-LD structured data
  */
 
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
 test.describe('Schema.org JSON-LD', () => {
   test('should exist on roots homepage', async ({ page }) => {

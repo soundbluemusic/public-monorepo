@@ -2,7 +2,7 @@
  * @fileoverview E2E tests for Service Worker registration and functionality
  */
 
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
 test.describe('Service Worker Registration', () => {
   test('should register service worker', async ({ page }) => {
@@ -94,7 +94,7 @@ test.describe('Service Worker Caching', () => {
 
     const hasWorkboxCache = await page.evaluate(async () => {
       const cacheNames = await caches.keys();
-      return cacheNames.some(name => name.includes('workbox'));
+      return cacheNames.some((name) => name.includes('workbox'));
     });
 
     expect(hasWorkboxCache).toBe(true);
@@ -122,7 +122,7 @@ test.describe('Service Worker Scope', () => {
     await page.goto('/ko');
     await page.waitForTimeout(2000);
 
-    const isControlled = await page.evaluate(() => {
+    const _isControlled = await page.evaluate(() => {
       return navigator.serviceWorker.controller !== null;
     });
 

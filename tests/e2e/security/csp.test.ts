@@ -2,7 +2,7 @@
  * @fileoverview E2E tests for Content Security Policy (CSP) headers
  */
 
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
 test.describe('Content Security Policy (CSP)', () => {
   test('should have CSP header', async ({ page }) => {
@@ -44,9 +44,11 @@ test.describe('Content Security Policy (CSP)', () => {
     const response = await page.goto('/ko');
     const cspHeader = response?.headers()['content-security-policy'];
 
-    if (cspHeader && cspHeader.includes('script-src')) {
+    if (cspHeader?.includes('script-src')) {
       // CSP should either use nonces/hashes or strict-dynamic instead of unsafe-inline
-      const scriptSrcDirective = cspHeader.split(';').find((d) => d.trim().startsWith('script-src'));
+      const scriptSrcDirective = cspHeader
+        .split(';')
+        .find((d) => d.trim().startsWith('script-src'));
 
       if (scriptSrcDirective) {
         // If unsafe-inline is present, there should also be nonces or hashes
@@ -102,7 +104,9 @@ test.describe('Content Security Policy (CSP)', () => {
 
     if (cspHeader) {
       // Should allow CDN sources like cdn.jsdelivr.net for KaTeX
-      const scriptSrcDirective = cspHeader.split(';').find((d) => d.trim().startsWith('script-src'));
+      const scriptSrcDirective = cspHeader
+        .split(';')
+        .find((d) => d.trim().startsWith('script-src'));
 
       if (scriptSrcDirective) {
         // Should include self and trusted CDNs
@@ -120,7 +124,7 @@ test.describe('CSP Report-Only Mode', () => {
   test('should use CSP enforcement mode (not report-only)', async ({ page }) => {
     const response = await page.goto('/ko');
     const cspHeader = response?.headers()['content-security-policy'];
-    const cspReportOnlyHeader = response?.headers()['content-security-policy-report-only'];
+    const _cspReportOnlyHeader = response?.headers()['content-security-policy-report-only'];
 
     // Prefer enforcement mode over report-only
     // (report-only is useful for testing, but production should enforce)
