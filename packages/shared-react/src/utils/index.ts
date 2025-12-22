@@ -26,3 +26,16 @@ export {
   stripLocaleFromPath,
   buildLocalePath,
 } from './i18n';
+
+// SEO utilities
+export {
+  generateSEOMeta,
+  generateHreflangLinks,
+  generateSchemaOrg,
+  sanitizeSEOString,
+  type SEOMetaOptions,
+  type LinkDescriptor,
+  type SchemaOrgData,
+  type SchemaOrgWebSite,
+  type SchemaOrgArticle,
+} from './seo';

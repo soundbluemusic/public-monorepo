@@ -4,12 +4,22 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    include: ['**/*.{test,spec}.{ts,tsx}'],
-    exclude: ['node_modules', 'build', 'dist'],
+    include: ['tests/**/*.{test,spec}.{ts,tsx}', '**/*.{test,spec}.{ts,tsx}'],
+    exclude: ['node_modules', 'build', 'dist', '**/e2e/**'],
+    setupFiles: ['./tests/setup.ts'],
     coverage: {
       provider: 'v8',
-      reporter: ['text', 'json', 'html'],
-      exclude: ['node_modules/', 'build/', 'dist/', '**/*.d.ts', '**/*.config.*', '**/types/'],
+      reporter: ['text', 'json', 'html', 'lcov'],
+      exclude: [
+        'node_modules/',
+        'build/',
+        'dist/',
+        '**/*.d.ts',
+        '**/*.config.*',
+        '**/types/',
+        'tests/**',
+        '**/e2e/**',
+      ],
       thresholds: {
         global: {
           statements: 80,
@@ -18,6 +28,12 @@ export default defineConfig({
           lines: 80,
         },
       },
+    },
+  },
+  resolve: {
+    alias: {
+      '@soundblue/shared': '/packages/shared/src',
+      '@soundblue/shared-react': '/packages/shared-react/src',
     },
   },
 });

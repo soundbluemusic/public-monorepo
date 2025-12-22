@@ -16,10 +16,34 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+          integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV"
           crossOrigin="anonymous"
         />
         <Meta />
         <Links />
+        <script
+          type="application/ld+json"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for Schema.org JSON-LD
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'Roots - Math Documentation',
+              url: 'https://roots.soundbluemusic.com',
+              description:
+                'Learn math concepts easily - From basic arithmetic to advanced calculus',
+              inLanguage: ['ko', 'en'],
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: {
+                  '@type': 'EntryPoint',
+                  urlTemplate: 'https://roots.soundbluemusic.com/search?q={search_term_string}',
+                },
+                'query-input': 'required name=search_term_string',
+              },
+            }),
+          }}
+        />
         <script
           // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for dark mode flash prevention
           dangerouslySetInnerHTML={{

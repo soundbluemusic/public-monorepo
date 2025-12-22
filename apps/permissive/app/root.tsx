@@ -14,6 +14,30 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="theme-color" content="#4a9e95" />
         <Meta />
         <Links />
+        <script
+          type="application/ld+json"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for Schema.org JSON-LD
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'Permissive - Free Web Dev Resources',
+              url: 'https://permissive.soundbluemusic.com',
+              description:
+                'Discover free and open-source web development tools, libraries, and resources',
+              inLanguage: ['ko', 'en'],
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: {
+                  '@type': 'EntryPoint',
+                  urlTemplate:
+                    'https://permissive.soundbluemusic.com/libraries?q={search_term_string}',
+                },
+                'query-input': 'required name=search_term_string',
+              },
+            }),
+          }}
+        />
         {/* Prevent FOUC - Apply theme before first paint */}
         <script
           // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for dark mode flash prevention
