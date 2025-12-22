@@ -105,6 +105,9 @@ export interface UILabels {
   license: string;
 }
 
+/** Paraglide message function type */
+type MessageFunction = (inputs?: Record<string, string | number>) => string;
+
 interface I18nContextType {
   locale: Language;
   setLocale: (lang: Language) => void;
@@ -150,9 +153,9 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 
     const t = (key: string): string => {
       // Call Paraglide message functions directly (they use internal locale state)
-      const messageFunc = (m as Record<string, (inputs?: unknown) => string>)[key];
+      const messageFunc = (m as Record<string, MessageFunction>)[key];
       if (typeof messageFunc === 'function') {
-        return messageFunc({});
+        return messageFunc();
       }
       return key;
     };

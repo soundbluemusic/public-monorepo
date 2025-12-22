@@ -118,7 +118,7 @@ function verify(): boolean {
       const routes = JSON.parse(routesContent) as CloudflareRoutesConfig;
       const routesPassed = routes.exclude?.includes('/*');
       console.log(`   ${routesPassed ? '✅' : '⚠️'} _routes.json: Functions 비활성화`);
-    } catch (_error: unknown) {
+    } catch {
       console.log('   ⚠️  _routes.json: 파일 없음 (Cloudflare Functions 오류 가능)');
     }
 
