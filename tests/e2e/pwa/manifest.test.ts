@@ -44,15 +44,21 @@ test.describe('PWA Manifest', () => {
     expect(Array.isArray(manifest.icons)).toBe(true);
     expect(manifest.icons.length).toBeGreaterThan(0);
 
+    interface ManifestIcon {
+      src: string;
+      sizes: string;
+      type: string;
+    }
+
     // Should have 192x192 icon
     const has192 = manifest.icons.some(
-      (icon: any) => icon.sizes === '192x192' || icon.sizes === 'any',
+      (icon: ManifestIcon) => icon.sizes === '192x192' || icon.sizes === 'any',
     );
     expect(has192).toBe(true);
 
     // Should have 512x512 icon or any size
     const has512 = manifest.icons.some(
-      (icon: any) => icon.sizes === '512x512' || icon.sizes === 'any',
+      (icon: ManifestIcon) => icon.sizes === '512x512' || icon.sizes === 'any',
     );
     expect(has512).toBe(true);
   });

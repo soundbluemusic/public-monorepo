@@ -42,15 +42,6 @@ export interface SEOMetaOptions {
 }
 
 /**
- * Link descriptor for hreflang and canonical
- */
-export interface LinkDescriptor {
-  rel: string;
-  hreflang?: string;
-  href: string;
-}
-
-/**
  * Schema.org data types
  */
 export interface SchemaOrgWebSite {

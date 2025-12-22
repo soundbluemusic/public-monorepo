@@ -78,14 +78,14 @@ test.describe('XSS Prevention', () => {
       const elements = document.querySelectorAll('[data-*]');
       const attrs: string[] = [];
 
-      elements.forEach((el) => {
+      for (const el of elements) {
         for (let i = 0; i < el.attributes.length; i++) {
           const attr = el.attributes[i];
           if (attr.name.startsWith('data-')) {
             attrs.push(attr.value);
           }
         }
-      });
+      }
 
       return attrs;
     });

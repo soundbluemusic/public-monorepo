@@ -65,9 +65,9 @@ describe('useMediaQuery', () => {
     expect(result.current).toBe(false);
 
     // Simulate media query change
-    listeners.forEach((listener) => {
+    for (const listener of listeners) {
       listener({ matches: true } as MediaQueryListEvent);
-    });
+    }
 
     rerender();
     expect(result.current).toBe(true);
@@ -89,7 +89,7 @@ describe('useMediaQuery', () => {
   });
 
   it('should handle query changes', () => {
-    const { result, rerender } = renderHook(({ query }) => useMediaQuery(query), {
+    const { rerender } = renderHook(({ query }) => useMediaQuery(query), {
       initialProps: { query: '(min-width: 768px)' },
     });
 
@@ -106,11 +106,11 @@ describe('useMediaQuery', () => {
       '(max-width: 640px)',
     ];
 
-    queries.forEach((query) => {
+    for (const query of queries) {
       const { result } = renderHook(() => useMediaQuery(query));
       expect(mockMatchMedia).toHaveBeenCalledWith(query);
       expect(typeof result.current).toBe('boolean');
-    });
+    }
   });
 });
 
@@ -171,10 +171,10 @@ describe('useIsMobile', () => {
   it('should handle common mobile breakpoints', () => {
     const breakpoints = [320, 480, 640, 768, 1024];
 
-    breakpoints.forEach((bp) => {
+    for (const bp of breakpoints) {
       const { result } = renderHook(() => useIsMobile(bp));
       expect(mockMatchMedia).toHaveBeenCalledWith(`(max-width: ${bp - 1}px)`);
       expect(typeof result.current).toBe('boolean');
-    });
+    }
   });
 });

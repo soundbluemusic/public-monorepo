@@ -7,28 +7,36 @@ import * as path from 'node:path';
 import { expect, test } from '@playwright/test';
 
 const AI_CRAWLERS = [
-  'GPTBot',          // ChatGPT
-  'ChatGPT-User',    // ChatGPT Browse
-  'ClaudeBot',       // Claude
-  'Claude-Web',      // Claude Web
-  'PerplexityBot',   // Perplexity
+  'GPTBot', // ChatGPT
+  'ChatGPT-User', // ChatGPT Browse
+  'ClaudeBot', // Claude
+  'Claude-Web', // Claude Web
+  'PerplexityBot', // Perplexity
   'Google-Extended', // Google Bard/Gemini
-  'anthropic-ai',    // Anthropic
+  'anthropic-ai', // Anthropic
   'Applebot-Extended', // Apple Intelligence
-  'CCBot',           // Common Crawl
-  'Diffbot',         // Diffbot
-  'FacebookBot',     // Meta AI
-  'ImagesiftBot',    // ImageSift
-  'Omgilibot',       // Omgili
-  'Bytespider',      // ByteDance (TikTok)
-  'Googlebot',       // Google
-  'Bingbot',         // Bing
+  'CCBot', // Common Crawl
+  'Diffbot', // Diffbot
+  'FacebookBot', // Meta AI
+  'ImagesiftBot', // ImageSift
+  'Omgilibot', // Omgili
+  'Bytespider', // ByteDance (TikTok)
+  'Googlebot', // Google
+  'Bingbot', // Bing
 ];
 
 const APPS = [
   { name: 'roots', path: 'apps/roots/public/robots.txt', url: 'https://roots.soundbluemusic.com' },
-  { name: 'context', path: 'apps/context/public/robots.txt', url: 'https://context.soundbluemusic.com' },
-  { name: 'permissive', path: 'apps/permissive/public/robots.txt', url: 'https://permissive.soundbluemusic.com' },
+  {
+    name: 'context',
+    path: 'apps/context/public/robots.txt',
+    url: 'https://context.soundbluemusic.com',
+  },
+  {
+    name: 'permissive',
+    path: 'apps/permissive/public/robots.txt',
+    url: 'https://permissive.soundbluemusic.com',
+  },
 ];
 
 for (const app of APPS) {
@@ -86,7 +94,7 @@ for (const app of APPS) {
         if (foundCrawler && foundDisallow) {
           throw new Error(`${crawler} is blocked with Disallow: /`);
         }
-      });
+      }
     });
 
     test('should have proper format', () => {
@@ -108,7 +116,7 @@ for (const app of APPS) {
 
         // Should be valid directive
         const validDirectives = ['User-agent:', 'Allow:', 'Disallow:', 'Sitemap:', 'Crawl-delay:'];
-        const isValid = validDirectives.some(directive => trimmed.startsWith(directive));
+        const isValid = validDirectives.some((directive) => trimmed.startsWith(directive));
 
         if (!isValid) {
           throw new Error(`Invalid robots.txt directive: "${trimmed}"`);

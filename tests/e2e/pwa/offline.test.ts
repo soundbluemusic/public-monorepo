@@ -5,7 +5,7 @@
 import { expect, test } from '@playwright/test';
 
 test.describe('PWA Offline Functionality', () => {
-  test('should load page when online', async ({ page, context }) => {
+  test('should load page when online', async ({ page }) => {
     await page.goto('/ko');
     await page.waitForLoadState('networkidle');
 

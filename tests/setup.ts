@@ -12,26 +12,31 @@ afterEach(() => {
 });
 
 // Mock localStorage
-const localStorageMock = {
-  getItem: (key: string) => {
-    return localStorageMock[key] || null;
-  },
+const storageData: Record<string, string> = {};
+
+const localStorageMock: Storage = {
+  getItem: (key: string) => storageData[key] || null,
   setItem: (key: string, value: string) => {
-    localStorageMock[key] = value;
+    storageData[key] = value;
   },
   removeItem: (key: string) => {
-    delete localStorageMock[key];
+    delete storageData[key];
   },
   clear: () => {
-    Object.keys(localStorageMock).forEach((key) => {
-      if (key !== 'getItem' && key !== 'setItem' && key !== 'removeItem' && key !== 'clear') {
-        delete localStorageMock[key];
-      }
-    });
+    for (const key of Object.keys(storageData)) {
+      delete storageData[key];
+    }
+  },
+  key: (index: number) => {
+    const keys = Object.keys(storageData);
+    return keys[index] || null;
+  },
+  get length() {
+    return Object.keys(storageData).length;
   },
 };
 
-global.localStorage = localStorageMock as any;
+global.localStorage = localStorageMock;
 
 // Mock matchMedia
 Object.defineProperty(window, 'matchMedia', {
