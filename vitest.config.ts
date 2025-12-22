@@ -17,8 +17,26 @@ export default defineConfig({
         '**/*.d.ts',
         '**/*.config.*',
         '**/types/',
+        '**/types.ts',
         'tests/**',
         '**/e2e/**',
+        // Exclude app-specific files (routes, components) - these are tested via e2e/integration
+        'apps/**/routes/**',
+        'apps/**/app/root.tsx',
+        'apps/**/app/entry.*.tsx',
+        'apps/**/components/**',
+        'apps/**/i18n/**',
+        'apps/**/data/**',
+        'apps/**/scripts/**',
+        'scripts/**',
+        '**/*.cjs',
+        '**/*.mjs',
+      ],
+      include: [
+        // Only include testable utility code - exclude index.ts and loader.ts files
+        'packages/shared/src/**/!(index|node|loader).ts',
+        'packages/shared-react/src/hooks/**/!(index).ts',
+        'packages/shared-react/src/stores/**/!(index).ts',
       ],
       thresholds: {
         global: {

@@ -4,6 +4,7 @@
  */
 
 import { cleanup } from '@testing-library/react';
+import 'fake-indexeddb/auto';
 import { afterEach } from 'vitest';
 
 // Clean up after each test
