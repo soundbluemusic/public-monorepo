@@ -48,3 +48,4 @@ coverage/
 
 # Paraglide generated files
 apps/*/app/paraglide/
+coverage/
