@@ -1,0 +1,203 @@
+
+Running 18 tests using 8 workers
+
+[1A[2K[1/18] [chromium] › tests/e2e/button-interactions.spec.ts:95:5 › context - Button Interactions › back to top button should work
+[1A[2K[2/18] [chromium] › tests/e2e/button-interactions.spec.ts:11:5 › context - Button Interactions › dark mode toggle should work
+[1A[2K[3/18] [chromium] › tests/e2e/button-interactions.spec.ts:65:5 › context - Button Interactions › language toggle should work
+[1A[2K[4/18] [chromium] › tests/e2e/button-interactions.spec.ts:11:5 › permissive - Button Interactions › dark mode toggle should work
+[1A[2K[5/18] [chromium] › tests/e2e/button-interactions.spec.ts:65:5 › permissive - Button Interactions › language toggle should work
+[1A[2K[6/18] [chromium] › tests/e2e/button-interactions.spec.ts:65:5 › roots - Button Interactions › language toggle should work
+[1A[2K[7/18] [chromium] › tests/e2e/button-interactions.spec.ts:95:5 › permissive - Button Interactions › back to top button should work
+[1A[2K[8/18] [chromium] › tests/e2e/button-interactions.spec.ts:11:5 › roots - Button Interactions › dark mode toggle should work
+[1A[2K[9/18] [chromium] › tests/e2e/button-interactions.spec.ts:95:5 › roots - Button Interactions › back to top button should work
+[1A[2K[10/18] [chromium] › tests/e2e/button-interactions.spec.ts:129:3 › context - Specific Button Tests › menu button should open sidebar
+[1A[2K[11/18] [chromium] › tests/e2e/button-interactions.spec.ts:170:3 › context - Specific Button Tests › search input should work
+[1A[2K[chromium] › tests/e2e/button-interactions.spec.ts:11:5 › context - Button Interactions › dark mode toggle should work
+Initial theme (dark): [33mfalse[39m
+
+[1A[2K[chromium] › tests/e2e/button-interactions.spec.ts:11:5 › roots - Button Interactions › dark mode toggle should work
+Initial theme (dark): [33mfalse[39m
+
+[1A[2K[chromium] › tests/e2e/button-interactions.spec.ts:11:5 › permissive - Button Interactions › dark mode toggle should work
+Initial theme (dark): [33mfalse[39m
+
+[1A[2K[12/18] [chromium] › tests/e2e/button-interactions.spec.ts:187:3 › context - Specific Button Tests › navigation links should work
+[1A[2K[chromium] › tests/e2e/button-interactions.spec.ts:11:5 › context - Button Interactions › dark mode toggle should work
+New theme (dark): [33mfalse[39m
+
+[1A[2K[13/18] [chromium] › tests/e2e/button-interactions.spec.ts:204:3 › permissive - Specific Button Tests › menu button should open sidebar on mobile
+[1A[2K[chromium] › tests/e2e/button-interactions.spec.ts:11:5 › permissive - Button Interactions › dark mode toggle should work
+New theme (dark): [33mfalse[39m
+
+[1A[2K[chromium] › tests/e2e/button-interactions.spec.ts:11:5 › roots - Button Interactions › dark mode toggle should work
+New theme (dark): [33mfalse[39m
+
+[1A[2K  1) [chromium] › tests/e2e/button-interactions.spec.ts:129:3 › context - Specific Button Tests › menu button should open sidebar 
+
+    Error: locator.click: Element is outside of the viewport
+    Call log:
+    [2m  - waiting for locator('aside button[aria-label*="Close" i], aside button[aria-label*="close" i], aside button[aria-label*="닫기" i]').first()[22m
+    [2m    - locator resolved to <button type="button" aria-label="Close menu" class="min-h-11 min-w-11 flex items-center justify-center rounded-lg transition-colors hover:bg-[var(--bg-tertiary)]">…</button>[22m
+    [2m  - attempting click action[22m
+    [2m    - scrolling into view if needed[22m
+    [2m    - done scrolling[22m
+
+
+      162 |
+      163 |     // Click close button with force to bypass viewport issues
+    > 164 |     await closeButton.click({ force: true });
+          |                       ^
+      165 |
+      166 |     // Wait for sidebar to close
+      167 |     await page.waitForTimeout(500);
+        at /home/user/public-monorepo/tests/e2e/button-interactions.spec.ts:164:23
+
+    Error Context: test-results/button-interactions-contex-58d5f--button-should-open-sidebar-chromium/error-context.md
+
+
+[1A[2K  2) [chromium] › tests/e2e/button-interactions.spec.ts:11:5 › context - Button Interactions › dark mode toggle should work 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mnot[2m.[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: not [32mfalse[39m
+
+      49 |       console.log('New theme (dark):', newTheme);
+      50 |
+    > 51 |       expect(newTheme).not.toBe(initialTheme);
+         |                            ^
+      52 |
+      53 |       // Click again to toggle back
+      54 |       await darkModeButton.click();
+        at /home/user/public-monorepo/tests/e2e/button-interactions.spec.ts:51:28
+
+    Error Context: test-results/button-interactions-contex-23f47-ark-mode-toggle-should-work-chromium/error-context.md
+
+
+[1A[2K  3) [chromium] › tests/e2e/button-interactions.spec.ts:11:5 › roots - Button Interactions › dark mode toggle should work 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mnot[2m.[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: not [32mfalse[39m
+
+      49 |       console.log('New theme (dark):', newTheme);
+      50 |
+    > 51 |       expect(newTheme).not.toBe(initialTheme);
+         |                            ^
+      52 |
+      53 |       // Click again to toggle back
+      54 |       await darkModeButton.click();
+        at /home/user/public-monorepo/tests/e2e/button-interactions.spec.ts:51:28
+
+    Error Context: test-results/button-interactions-roots--b8d74-ark-mode-toggle-should-work-chromium/error-context.md
+
+
+[1A[2K  4) [chromium] › tests/e2e/button-interactions.spec.ts:11:5 › permissive - Button Interactions › dark mode toggle should work 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mnot[2m.[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: not [32mfalse[39m
+
+      49 |       console.log('New theme (dark):', newTheme);
+      50 |
+    > 51 |       expect(newTheme).not.toBe(initialTheme);
+         |                            ^
+      52 |
+      53 |       // Click again to toggle back
+      54 |       await darkModeButton.click();
+        at /home/user/public-monorepo/tests/e2e/button-interactions.spec.ts:51:28
+
+    Error Context: test-results/button-interactions-permis-c3b27-ark-mode-toggle-should-work-chromium/error-context.md
+
+
+[1A[2K[14/18] [chromium] › tests/e2e/button-interactions.spec.ts:297:3 › roots - Specific Button Tests › bottom navigation should work on mobile
+[1A[2K[15/18] [chromium] › tests/e2e/button-interactions.spec.ts:248:3 › permissive - Specific Button Tests › external links should have correct attributes
+[1A[2K[16/18] [chromium] › tests/e2e/button-interactions.spec.ts:234:3 › permissive - Specific Button Tests › navigation links should work
+[1A[2K[17/18] [chromium] › tests/e2e/button-interactions.spec.ts:262:3 › roots - Specific Button Tests › search form should work
+[1A[2K[18/18] [chromium] › tests/e2e/button-interactions.spec.ts:283:3 › roots - Specific Button Tests › navigation links should work
+[1A[2K  5) [chromium] › tests/e2e/button-interactions.spec.ts:95:5 › context - Button Interactions › back to top button should work 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('button[aria-label*="top"], button[aria-label*="위로"]')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('button[aria-label*="top"], button[aria-label*="위로"]')[22m
+
+
+      110 |
+      111 |       // Wait for button to be visible with longer timeout
+    > 112 |       await expect(backToTopButton).toBeVisible({ timeout: 5000 });
+          |                                     ^
+      113 |
+      114 |       // Click back to top
+      115 |       await backToTopButton.click({ force: true });
+        at /home/user/public-monorepo/tests/e2e/button-interactions.spec.ts:112:37
+
+    Error Context: test-results/button-interactions-contex-1dca2-k-to-top-button-should-work-chromium/error-context.md
+
+
+[1A[2K  6) [chromium] › tests/e2e/button-interactions.spec.ts:95:5 › permissive - Button Interactions › back to top button should work 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('button[aria-label*="top"], button[aria-label*="위로"]')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('button[aria-label*="top"], button[aria-label*="위로"]')[22m
+
+
+      110 |
+      111 |       // Wait for button to be visible with longer timeout
+    > 112 |       await expect(backToTopButton).toBeVisible({ timeout: 5000 });
+          |                                     ^
+      113 |
+      114 |       // Click back to top
+      115 |       await backToTopButton.click({ force: true });
+        at /home/user/public-monorepo/tests/e2e/button-interactions.spec.ts:112:37
+
+    Error Context: test-results/button-interactions-permis-f0219-k-to-top-button-should-work-chromium/error-context.md
+
+
+[1A[2K  7) [chromium] › tests/e2e/button-interactions.spec.ts:95:5 › roots - Button Interactions › back to top button should work 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('button[aria-label*="top"], button[aria-label*="위로"]')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for locator('button[aria-label*="top"], button[aria-label*="위로"]')[22m
+
+
+      110 |
+      111 |       // Wait for button to be visible with longer timeout
+    > 112 |       await expect(backToTopButton).toBeVisible({ timeout: 5000 });
+          |                                     ^
+      113 |
+      114 |       // Click back to top
+      115 |       await backToTopButton.click({ force: true });
+        at /home/user/public-monorepo/tests/e2e/button-interactions.spec.ts:112:37
+
+    Error Context: test-results/button-interactions-roots--6b4dc-k-to-top-button-should-work-chromium/error-context.md
+
+
+[1A[2K  7 failed
+    [chromium] › tests/e2e/button-interactions.spec.ts:11:5 › context - Button Interactions › dark mode toggle should work 
+    [chromium] › tests/e2e/button-interactions.spec.ts:95:5 › context - Button Interactions › back to top button should work 
+    [chromium] › tests/e2e/button-interactions.spec.ts:11:5 › permissive - Button Interactions › dark mode toggle should work 
+    [chromium] › tests/e2e/button-interactions.spec.ts:95:5 › permissive - Button Interactions › back to top button should work 
+    [chromium] › tests/e2e/button-interactions.spec.ts:11:5 › roots - Button Interactions › dark mode toggle should work 
+    [chromium] › tests/e2e/button-interactions.spec.ts:95:5 › roots - Button Interactions › back to top button should work 
+    [chromium] › tests/e2e/button-interactions.spec.ts:129:3 › context - Specific Button Tests › menu button should open sidebar 
+  11 passed (12.2s)

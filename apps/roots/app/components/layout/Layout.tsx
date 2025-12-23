@@ -92,7 +92,12 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
           </Link>
 
           {/* Search Form */}
-          <form onSubmit={handleSearchSubmit} className="relative flex-1 max-w-md">
+          <form
+            onSubmit={handleSearchSubmit}
+            action={localePath('/search')}
+            method="get"
+            className="relative flex-1 max-w-md"
+          >
             <Search
               size={16}
               className="absolute left-3 top-1/2 -translate-y-1/2"
@@ -102,6 +107,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
             <input
               ref={searchInputRef}
               type="text"
+              name="q"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={locale === 'ko' ? '검색... (⌘K)' : 'Search... (⌘K)'}
