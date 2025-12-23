@@ -133,16 +133,10 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   const location = useLocation();
   const locale = getLocaleFromPath(location.pathname);
 
-  // Sync Paraglide locale with URL pathname
-  // Set locale immediately on module load (for SSR/SSG)
-  if (typeof paraglideSetLocale === 'function') {
-    paraglideSetLocale(locale, { reload: false });
-  }
-
+  // Sync Paraglide locale with URL pathname (only in useEffect to avoid hydration mismatch)
   useEffect(() => {
     const currentParaglideLocale = paraglideGetLocale();
     if (currentParaglideLocale !== locale) {
-      // Update Paraglide's internal locale state without page reload
       paraglideSetLocale(locale, { reload: false });
     }
   }, [locale]);

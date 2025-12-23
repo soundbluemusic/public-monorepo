@@ -82,32 +82,3 @@ export default function App() {
     </I18nProvider>
   );
 }
-
-// Workaround for React Router v7 hydration bug with ssr:false
-// https://github.com/remix-run/react-router/issues/12893
-export async function clientLoader() {
-  return null;
-}
-
-export function HydrateFallback() {
-  return (
-    <div className="min-h-screen" style={{ backgroundColor: 'var(--bg-primary)' }}>
-      <div
-        className="fixed top-0 left-0 right-0 h-14 border-b"
-        style={{ backgroundColor: 'var(--bg-primary)', borderColor: 'var(--border-primary)' }}
-      >
-        <div className="max-w-6xl mx-auto px-4 h-full flex items-center gap-4">
-          <div className="skeleton w-20 h-6 rounded" />
-          <div className="flex-1 skeleton h-8 rounded-lg" />
-        </div>
-      </div>
-      <div className="pt-14 max-w-6xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[1, 2, 3, 4, 5, 6].map((i) => (
-            <div key={i} className="skeleton h-32 rounded-xl" />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}

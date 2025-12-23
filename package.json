@@ -35,7 +35,9 @@
     "lhci:roots": "APP=roots lhci autorun",
     "lhci:all": "pnpm lhci:context && pnpm lhci:permissive && pnpm lhci:roots",
     "add-data": "tsx scripts/add-data.ts",
-    "prepare": "husky"
+    "prepare": "husky",
+    "postinstall": "pnpm run prebuild:all",
+    "prebuild:all": "pnpm --filter './apps/*' prebuild"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.1",
