@@ -1,0 +1,642 @@
+[
+  {
+    "id": "hana",
+    "korean": "하나",
+    "romanization": "hana",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["number", "counting", "basic"],
+    "translations": {
+      "ko": {
+        "word": "하나",
+        "explanation": "고유어 숫자 1. 물건을 셀 때 사용한다. 한자어 '일(一)'과 대응한다.",
+        "examples": [
+          "사과 하나 주세요.",
+          "하나, 둘, 셋! 시작!",
+          "가게에 들어가서 빵 하나만 사고 나왔다.",
+          "아이들이 숨바꼭질을 하며 \"하나, 둘, 셋...\" 하고 숫자를 세고 있었다."
+        ],
+        "variations": {
+          "formal": ["한 개", "하나입니다"],
+          "casual": ["하나~", "한 개"],
+          "short": ["1개", "한 개"]
+        }
+      },
+      "en": {
+        "word": "One",
+        "explanation": "Native Korean number 1. Used for counting objects. Corresponds to Sino-Korean '일(一)'.",
+        "examples": [
+          "사과 하나 주세요. - Please give me one apple.",
+          "하나, 둘, 셋! 시작! - One, two, three! Go!",
+          "I went into the store and just bought one piece of bread.",
+          "The children were playing hide and seek, counting \"하나, 둘, 셋...\" (one, two, three...)"
+        ],
+        "variations": {
+          "formal": ["One piece", "It is one"],
+          "casual": ["One~", "One piece"],
+          "short": ["1", "One"]
+        }
+      }
+    }
+  },
+  {
+    "id": "dul",
+    "korean": "둘",
+    "romanization": "dul",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["number", "counting", "basic"],
+    "translations": {
+      "ko": {
+        "word": "둘",
+        "explanation": "고유어 숫자 2. 물건이나 사람을 셀 때 사용한다. 한자어 '이(二)'와 대응한다.",
+        "examples": [
+          "사람이 둘이에요.",
+          "우리 둘이 가자.",
+          "레스토랑에 들어가니 직원이 \"몇 분이세요?\"라고 물어서 \"둘이요\"라고 대답했다.",
+          "커피 둘 주문했는데 하나만 왔어요."
+        ],
+        "variations": {
+          "formal": ["두 개", "두 분"],
+          "casual": ["둘~", "두 개"],
+          "short": ["2개", "두 개"]
+        }
+      },
+      "en": {
+        "word": "Two",
+        "explanation": "Native Korean number 2. Used for counting objects or people. Corresponds to Sino-Korean '이(二)'.",
+        "examples": [
+          "사람이 둘이에요. - There are two people.",
+          "우리 둘이 가자. - Let's go, just the two of us.",
+          "When I entered the restaurant, the staff asked \"How many?\" and I answered \"둘이요\" (Two).",
+          "I ordered two coffees but only one came."
+        ],
+        "variations": {
+          "formal": ["Two pieces", "Two people (honorific)"],
+          "casual": ["Two~", "Two pieces"],
+          "short": ["2", "Two"]
+        }
+      }
+    }
+  },
+  {
+    "id": "set",
+    "korean": "셋",
+    "romanization": "set",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["number", "counting", "basic"],
+    "translations": {
+      "ko": {
+        "word": "셋",
+        "explanation": "고유어 숫자 3. 물건이나 사람을 셀 때 사용한다. 한자어 '삼(三)'과 대응한다.",
+        "examples": [
+          "의자가 셋 있어요.",
+          "하나, 둘, 셋!",
+          "축구팀을 만들려면 최소한 셋은 있어야 경기를 할 수 있다.",
+          "\"몇 시에 만날까?\" \"셋 어때? 3시에 카페에서 보자.\""
+        ],
+        "variations": {
+          "formal": ["세 개", "세 분"],
+          "casual": ["셋~", "세 개"],
+          "short": ["3개", "세 개"]
+        }
+      },
+      "en": {
+        "word": "Three",
+        "explanation": "Native Korean number 3. Used for counting objects or people. Corresponds to Sino-Korean '삼(三)'.",
+        "examples": [
+          "의자가 셋 있어요. - There are three chairs.",
+          "하나, 둘, 셋! - One, two, three!",
+          "To form a soccer team, you need at least three people to play a game.",
+          "\"What time should we meet?\" \"How about 셋 (three)? Let's meet at the café at 3 o'clock.\""
+        ],
+        "variations": {
+          "formal": ["Three pieces", "Three people (honorific)"],
+          "casual": ["Three~", "Three pieces"],
+          "short": ["3", "Three"]
+        }
+      }
+    }
+  },
+  {
+    "id": "oneul",
+    "korean": "오늘",
+    "romanization": "oneul",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["time", "daily", "present"],
+    "translations": {
+      "ko": {
+        "word": "오늘",
+        "explanation": "지금 현재의 날. 이 날, 현재 하루를 가리킨다.",
+        "examples": [
+          "오늘 날씨가 좋아요.",
+          "오늘 뭐 해?",
+          "오늘은 특별한 날이에요. 우리가 처음 만난 지 1년이 되는 날이거든요.",
+          "\"오늘 저녁에 시간 있어?\" \"응, 있어. 왜?\""
+        ],
+        "variations": {
+          "formal": ["오늘은", "금일", "오늘날"],
+          "casual": ["오늘~", "오늘은"],
+          "short": ["오늘", "today"]
+        }
+      },
+      "en": {
+        "word": "Today",
+        "explanation": "The present day. This day, the current 24-hour period.",
+        "examples": [
+          "오늘 날씨가 좋아요. - The weather is nice today.",
+          "오늘 뭐 해? - What are you doing today?",
+          "Today is a special day. It's been one year since we first met.",
+          "\"Do you have time tonight?\" \"Yes, I do. Why?\""
+        ],
+        "variations": {
+          "formal": ["Today (topic marker)", "This day", "Nowadays"],
+          "casual": ["Today~", "Today (with topic marker)"],
+          "short": ["Today", "2day"]
+        }
+      }
+    }
+  },
+  {
+    "id": "naeil",
+    "korean": "내일",
+    "romanization": "naeil",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["time", "daily", "future"],
+    "translations": {
+      "ko": {
+        "word": "내일",
+        "explanation": "오늘의 다음 날. 지금부터 하루 후를 가리킨다.",
+        "examples": [
+          "내일 봐요!",
+          "내일 시험이에요.",
+          "\"숙제 언제 낼 거야?\" \"내일 아침에 가져올게.\"",
+          "내일은 주말이라서 늦게까지 잘 수 있어요."
+        ],
+        "variations": {
+          "formal": ["내일은", "명일", "익일"],
+          "casual": ["내일~", "내일은"],
+          "short": ["내일", "tmr"]
+        }
+      },
+      "en": {
+        "word": "Tomorrow",
+        "explanation": "The day after today. One day from now.",
+        "examples": [
+          "내일 봐요! - See you tomorrow!",
+          "내일 시험이에요. - I have an exam tomorrow.",
+          "\"When are you submitting your homework?\" \"I'll bring it tomorrow morning.\"",
+          "Tomorrow is the weekend, so I can sleep in."
+        ],
+        "variations": {
+          "formal": ["Tomorrow (topic marker)", "The next day", "Following day"],
+          "casual": ["Tomorrow~", "Tomorrow (with topic marker)"],
+          "short": ["Tomorrow", "Tmrw"]
+        }
+      }
+    }
+  },
+  {
+    "id": "eoje",
+    "korean": "어제",
+    "romanization": "eoje",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["time", "daily", "past"],
+    "translations": {
+      "ko": {
+        "word": "어제",
+        "explanation": "오늘의 바로 전날. 지금부터 하루 전을 가리킨다.",
+        "examples": [
+          "어제 뭐 했어?",
+          "어제 영화 봤어요.",
+          "\"왜 이렇게 피곤해 보여?\" \"어제 밤늦게까지 공부했거든.\"",
+          "어제 산 옷이 벌써 세일을 하네요. 좀 아깝다."
+        ],
+        "variations": {
+          "formal": ["어제는", "전일", "작일"],
+          "casual": ["어제~", "어제는"],
+          "short": ["어제", "yday"]
+        }
+      },
+      "en": {
+        "word": "Yesterday",
+        "explanation": "The day before today. One day ago from now.",
+        "examples": [
+          "어제 뭐 했어? - What did you do yesterday?",
+          "어제 영화 봤어요. - I watched a movie yesterday.",
+          "\"Why do you look so tired?\" \"I studied until late last night.\"",
+          "The clothes I bought yesterday are already on sale. What a waste."
+        ],
+        "variations": {
+          "formal": ["Yesterday (topic marker)", "The previous day", "Day before"],
+          "casual": ["Yesterday~", "Yesterday (with topic marker)"],
+          "short": ["Yesterday", "Yday"]
+        }
+      }
+    }
+  },
+  {
+    "id": "jigeum",
+    "korean": "지금",
+    "romanization": "jigeum",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["time", "present", "moment"],
+    "translations": {
+      "ko": {
+        "word": "지금",
+        "explanation": "바로 이 순간. 현재 시점을 가리킨다.",
+        "examples": [
+          "지금 바빠요.",
+          "지금 몇 시예요?",
+          "\"언제 출발할 거야?\" \"지금 당장! 빨리 준비해.\"",
+          "지금은 공부할 시간이에요. 게임은 나중에 해요."
+        ],
+        "variations": {
+          "formal": ["지금은", "현재", "이 시각"],
+          "casual": ["지금~", "지금은"],
+          "short": ["지금", "now"]
+        }
+      },
+      "en": {
+        "word": "Now",
+        "explanation": "This very moment. The present time.",
+        "examples": [
+          "지금 바빠요. - I'm busy now.",
+          "지금 몇 시예요? - What time is it now?",
+          "\"When are we leaving?\" \"Right now! Hurry up and get ready.\"",
+          "Now is the time to study. Play games later."
+        ],
+        "variations": {
+          "formal": ["Now (topic marker)", "Present time", "At this moment"],
+          "casual": ["Now~", "Right now"],
+          "short": ["Now", "Atm"]
+        }
+      }
+    }
+  },
+  {
+    "id": "achim",
+    "korean": "아침",
+    "romanization": "achim",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["time", "daily", "morning"],
+    "translations": {
+      "ko": {
+        "word": "아침",
+        "explanation": "하루 중 해가 뜨는 시간부터 정오 전까지. 보통 6시~12시를 가리킨다. '아침 식사'의 줄임말로도 쓰인다.",
+        "examples": [
+          "아침 먹었어요?",
+          "아침에 운동해요.",
+          "\"좋은 아침이에요!\" 엄마가 커튼을 활짝 열며 말씀하셨다.",
+          "나는 아침형 인간이라서 새벽에 일어나 공부하는 게 더 잘 돼요."
+        ],
+        "variations": {
+          "formal": ["아침 시간", "조조", "오전"],
+          "casual": ["아침~", "아침에"],
+          "short": ["아침", "AM"]
+        }
+      },
+      "en": {
+        "word": "Morning",
+        "explanation": "The time from sunrise to before noon. Usually refers to 6AM-12PM. Also short for 'breakfast'.",
+        "examples": [
+          "아침 먹었어요? - Did you eat breakfast? / Have you eaten this morning?",
+          "아침에 운동해요. - I exercise in the morning.",
+          "\"Good morning!\" Mom said as she opened the curtains wide.",
+          "I'm a morning person, so I study better when I wake up at dawn."
+        ],
+        "variations": {
+          "formal": ["Morning time", "Early morning", "Ante meridiem"],
+          "casual": ["Morning~", "In the morning"],
+          "short": ["Morning", "AM"]
+        }
+      }
+    }
+  },
+  {
+    "id": "jeonyeok",
+    "korean": "저녁",
+    "romanization": "jeonyeok",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["time", "daily", "evening"],
+    "translations": {
+      "ko": {
+        "word": "저녁",
+        "explanation": "하루 중 해가 지는 시간부터 밤이 되기 전까지. 보통 6시~9시를 가리킨다. '저녁 식사'의 줄임말로도 쓰인다.",
+        "examples": [
+          "저녁 먹었어?",
+          "저녁에 만나요.",
+          "\"오늘 저녁에 뭐 먹을까?\" \"치킨 시켜 먹자!\"",
+          "저녁 7시쯤 되니까 거리에 퇴근하는 사람들로 가득 찼다."
+        ],
+        "variations": {
+          "formal": ["저녁 시간", "석식", "만찬"],
+          "casual": ["저녁~", "저녁에"],
+          "short": ["저녁", "PM"]
+        }
+      },
+      "en": {
+        "word": "Evening / Dinner",
+        "explanation": "The time from sunset to before night. Usually refers to 6PM-9PM. Also short for 'dinner'.",
+        "examples": [
+          "저녁 먹었어? - Did you eat dinner? / Have you eaten this evening?",
+          "저녁에 만나요. - Let's meet in the evening.",
+          "\"What should we eat for dinner tonight?\" \"Let's order chicken!\"",
+          "Around 7 PM, the streets filled with people leaving work."
+        ],
+        "variations": {
+          "formal": ["Evening time", "Supper", "Dinner (formal)"],
+          "casual": ["Evening~", "In the evening"],
+          "short": ["Evening", "PM"]
+        }
+      }
+    }
+  },
+  {
+    "id": "sigan",
+    "korean": "시간",
+    "romanization": "sigan",
+    "pronunciation": "[시간]",
+    "hanja": "時間",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["time", "abstract", "duration"],
+    "translations": {
+      "ko": {
+        "word": "시간",
+        "explanation": "시각과 시각 사이의 간격. '시(時)'를 세는 단위로도 쓰인다. 또한 '여유'나 '기회'의 의미로도 사용된다.",
+        "examples": [
+          "시간 있어요?",
+          "시간이 없어요.",
+          "\"지금 시간 있어? 커피 한잔 할래?\" \"미안, 오늘은 시간이 없어.\"",
+          "시험 시간은 2시간이에요."
+        ],
+        "variations": {
+          "formal": ["시간이 있으십니까?", "시각", "여유 시간"],
+          "casual": ["시간 있어?", "시간~"],
+          "short": ["시간", "time"]
+        }
+      },
+      "en": {
+        "word": "Time / Hour",
+        "explanation": "The interval between two points in time. Also used as a unit to count hours. Can mean 'free time' or 'opportunity'.",
+        "examples": [
+          "시간 있어요? - Do you have time?",
+          "시간이 없어요. - I don't have time.",
+          "\"Do you have time now? Want to grab a coffee?\" \"Sorry, I don't have time today.\"",
+          "The exam time is 2 hours."
+        ],
+        "variations": {
+          "formal": ["Do you have time? (honorific)", "Time/hour", "Free time"],
+          "casual": ["Got time?", "Time~"],
+          "short": ["Time", "Hr"]
+        }
+      }
+    }
+  },
+  {
+    "id": "wolyoil",
+    "korean": "월요일",
+    "romanization": "wolyoil",
+    "pronunciation": "[워료일]",
+    "hanja": "月曜日",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["time", "weekday", "calendar"],
+    "translations": {
+      "ko": {
+        "word": "월요일",
+        "explanation": "일주일의 첫째 날. 한 주의 시작을 알리는 날로, 많은 사람들이 출근하고 학교에 간다.",
+        "examples": [
+          "월요일이 싫어요.",
+          "다음 월요일에 만나요.",
+          "\"내일이 월요일이라니 믿기지 않아.\" 일요일 저녁이면 항상 우울해진다.",
+          "월요일 아침에는 교통이 복잡해요."
+        ],
+        "variations": {
+          "formal": ["월요일입니다", "월요"],
+          "casual": ["월요일~", "월욜"],
+          "short": ["월", "Mon"]
+        }
+      },
+      "en": {
+        "word": "Monday",
+        "explanation": "The first day of the week. The day that marks the beginning of the work/school week.",
+        "examples": [
+          "월요일이 싫어요. - I hate Mondays.",
+          "다음 월요일에 만나요. - Let's meet next Monday.",
+          "\"I can't believe tomorrow is Monday.\" I always feel blue on Sunday evenings.",
+          "Traffic is heavy on Monday mornings."
+        ],
+        "variations": {
+          "formal": ["It is Monday", "Monday"],
+          "casual": ["Monday~", "Mon"],
+          "short": ["Mon", "M"]
+        }
+      }
+    }
+  },
+  {
+    "id": "jumal",
+    "korean": "주말",
+    "romanization": "jumal",
+    "pronunciation": "[주말]",
+    "hanja": "週末",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["time", "weekend", "leisure"],
+    "translations": {
+      "ko": {
+        "word": "주말",
+        "explanation": "한 주의 끝. 보통 토요일과 일요일을 가리킨다. 많은 사람들이 쉬거나 여가 활동을 즐기는 시간이다.",
+        "examples": [
+          "주말에 뭐 해?",
+          "주말이 기다려져요.",
+          "\"이번 주말에 영화 볼래?\" \"좋아, 토요일 오후 어때?\"",
+          "주말마다 등산을 가요."
+        ],
+        "variations": {
+          "formal": ["주말입니다", "주말에", "금토일"],
+          "casual": ["주말~", "주말에"],
+          "short": ["주말", "weekend"]
+        }
+      },
+      "en": {
+        "word": "Weekend",
+        "explanation": "The end of the week. Usually refers to Saturday and Sunday. Time when many people rest or enjoy leisure activities.",
+        "examples": [
+          "주말에 뭐 해? - What are you doing this weekend?",
+          "주말이 기다려져요. - I'm looking forward to the weekend.",
+          "\"Want to watch a movie this weekend?\" \"Sure, how about Saturday afternoon?\"",
+          "I go hiking every weekend."
+        ],
+        "variations": {
+          "formal": ["It is the weekend", "On the weekend", "Fri-Sat-Sun"],
+          "casual": ["Weekend~", "On weekend"],
+          "short": ["Weekend", "Wknd"]
+        }
+      }
+    }
+  },
+  {
+    "id": "nyeon",
+    "korean": "년",
+    "romanization": "nyeon",
+    "pronunciation": "[년]",
+    "hanja": "年",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["time", "unit", "calendar"],
+    "translations": {
+      "ko": {
+        "word": "년",
+        "explanation": "시간의 단위. 12개월, 즉 365일(윤년은 366일)을 하나의 단위로 세는 말. 연도를 나타낼 때 사용한다.",
+        "examples": [
+          "2024년이에요.",
+          "몇 년이에요?",
+          "\"너 몇 년생이야?\" \"2000년생이야.\"",
+          "올해는 2024년입니다."
+        ],
+        "variations": {
+          "formal": ["년도", "연(年)"],
+          "casual": ["년~", "년생"],
+          "short": ["년", "yr"]
+        }
+      },
+      "en": {
+        "word": "Year",
+        "explanation": "A unit of time. A period of 12 months, or 365 days (366 in leap years). Used to indicate the year.",
+        "examples": [
+          "2024년이에요. - It's 2024.",
+          "몇 년이에요? - What year is it?",
+          "\"What year were you born?\" \"I was born in 2000.\"",
+          "This year is 2024."
+        ],
+        "variations": {
+          "formal": ["Year (formal)", "Annum"],
+          "casual": ["Year~", "Year born"],
+          "short": ["Yr", "Y"]
+        }
+      }
+    }
+  },
+  {
+    "id": "dal",
+    "korean": "달",
+    "romanization": "dal",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["time", "unit", "calendar", "astronomy"],
+    "translations": {
+      "ko": {
+        "word": "달",
+        "explanation": "두 가지 의미가 있다. 1) 시간의 단위로 '월(月)'을 뜻한다. 2) 밤하늘에 떠 있는 천체인 '월(月)'을 가리킨다.",
+        "examples": [
+          "한 달에 한 번 만나요.",
+          "달이 밝아요.",
+          "\"언제 만났어?\" \"한 달 전쯤?\"",
+          "보름달이 정말 아름답네요."
+        ],
+        "variations": {
+          "formal": ["월", "개월", "달"],
+          "casual": ["달~", "한 달"],
+          "short": ["달", "month"]
+        }
+      },
+      "en": {
+        "word": "Month / Moon",
+        "explanation": "Has two meanings: 1) A unit of time, meaning 'month'. 2) The celestial body in the night sky, the 'moon'.",
+        "examples": [
+          "한 달에 한 번 만나요. - We meet once a month.",
+          "달이 밝아요. - The moon is bright.",
+          "\"When did you meet?\" \"About a month ago?\"",
+          "The full moon is really beautiful."
+        ],
+        "variations": {
+          "formal": ["Month", "Months (counter)", "Moon"],
+          "casual": ["Month~", "One month"],
+          "short": ["Month", "Mo"]
+        }
+      }
+    }
+  },
+  {
+    "id": "bun",
+    "korean": "분",
+    "romanization": "bun",
+    "pronunciation": "[분]",
+    "hanja": "分",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["time", "unit", "minute"],
+    "translations": {
+      "ko": {
+        "word": "분",
+        "explanation": "시간의 단위. 1시간의 60분의 1. 60초가 1분이다. 시각을 나타낼 때 사용한다.",
+        "examples": [
+          "5분만 기다려 주세요.",
+          "몇 분이에요?",
+          "\"지금 몇 시야?\" \"3시 30분.\"",
+          "10분 후에 출발해요."
+        ],
+        "variations": {
+          "formal": ["분입니다", "분(分)"],
+          "casual": ["분~", "분만"],
+          "short": ["분", "min"]
+        }
+      },
+      "en": {
+        "word": "Minute",
+        "explanation": "A unit of time. One-sixtieth of an hour. 60 seconds make 1 minute. Used to indicate time.",
+        "examples": [
+          "5분만 기다려 주세요. - Please wait just 5 minutes.",
+          "몇 분이에요? - How many minutes?",
+          "\"What time is it now?\" \"3:30 (3 o'clock 30 minutes).\"",
+          "We'll leave in 10 minutes."
+        ],
+        "variations": {
+          "formal": ["It is ... minutes", "Minute (formal)"],
+          "casual": ["Minutes~", "Just ... minutes"],
+          "short": ["Min", "M"]
+        }
+      }
+    }
+  }
+]
