@@ -83,6 +83,12 @@ export default function App() {
   );
 }
 
+// Workaround for React Router v7 hydration bug with ssr:false
+// https://github.com/remix-run/react-router/issues/12893
+export async function clientLoader() {
+  return null;
+}
+
 export function HydrateFallback() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--bg-primary)' }}>

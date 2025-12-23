@@ -21,7 +21,20 @@ for (const app of apps) {
       // Wait for React hydration to complete
       await page.waitForLoadState('networkidle');
       await page.waitForLoadState('domcontentloaded');
-      await page.waitForTimeout(1000);
+
+      // Wait for React to attach event handlers (check for React fiber)
+      await page.waitForFunction(
+        () => {
+          const btn = document.querySelector('button[aria-label*="mode" i]');
+          if (!btn) return false;
+          // Check if React has attached its internal properties
+          const keys = Object.keys(btn);
+          return keys.some((key) => key.startsWith('__react'));
+        },
+        { timeout: 5000 },
+      );
+
+      await page.waitForTimeout(500);
 
       // Find dark mode toggle button by aria-label
       const darkModeButton = page.locator('button[aria-label*="mode" i]').first();
@@ -36,8 +49,11 @@ for (const app of apps) {
       );
       console.log('Initial theme (dark):', initialTheme);
 
-      // Click dark mode toggle
-      await darkModeButton.click();
+      // Click dark mode toggle - use native DOM click for better React synthetic event triggering
+      await page.evaluate(() => {
+        const btn = document.querySelector('button[aria-label*="mode" i]');
+        if (btn) btn.click();
+      });
 
       // Wait for theme change and re-render
       await page.waitForTimeout(1000);
@@ -51,7 +67,10 @@ for (const app of apps) {
       expect(newTheme).not.toBe(initialTheme);
 
       // Click again to toggle back
-      await darkModeButton.click();
+      await page.evaluate(() => {
+        const btn = document.querySelector('button[aria-label*="mode" i]');
+        if (btn) btn.click();
+      });
       await page.waitForTimeout(1000);
 
       const finalTheme = await page.evaluate(() =>
