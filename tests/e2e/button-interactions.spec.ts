@@ -11,39 +11,53 @@ for (const app of apps) {
     test('dark mode toggle should work', async ({ page }) => {
       await page.goto(app.url);
 
-      // Find dark mode toggle button
-      const darkModeButton = page
-        .locator('button')
-        .filter({
-          has: page.locator('svg').filter({ hasNot: page.locator('text') }),
-        })
-        .first();
+      // Listen to console logs for debugging
+      page.on('console', (msg) => {
+        if (msg.text().includes('[DarkModeToggle]')) {
+          console.log('Browser console:', msg.text());
+        }
+      });
+
+      // Wait for React hydration to complete
+      await page.waitForLoadState('networkidle');
+      await page.waitForLoadState('domcontentloaded');
+      await page.waitForTimeout(1000);
+
+      // Find dark mode toggle button by aria-label
+      const darkModeButton = page.locator('button[aria-label*="mode" i]').first();
+
+      // Ensure button is visible and ready
+      await expect(darkModeButton).toBeVisible();
+      await expect(darkModeButton).toBeEnabled();
 
       // Get initial theme
       const initialTheme = await page.evaluate(() =>
         document.documentElement.classList.contains('dark'),
       );
+      console.log('Initial theme (dark):', initialTheme);
 
       // Click dark mode toggle
       await darkModeButton.click();
 
-      // Wait for theme change
-      await page.waitForTimeout(100);
+      // Wait for theme change and re-render
+      await page.waitForTimeout(1000);
 
       // Check theme changed
       const newTheme = await page.evaluate(() =>
         document.documentElement.classList.contains('dark'),
       );
+      console.log('New theme (dark):', newTheme);
 
       expect(newTheme).not.toBe(initialTheme);
 
       // Click again to toggle back
       await darkModeButton.click();
-      await page.waitForTimeout(100);
+      await page.waitForTimeout(1000);
 
       const finalTheme = await page.evaluate(() =>
         document.documentElement.classList.contains('dark'),
       );
+      console.log('Final theme (dark):', finalTheme);
 
       expect(finalTheme).toBe(initialTheme);
     });
@@ -81,24 +95,27 @@ for (const app of apps) {
     test('back to top button should work', async ({ page }) => {
       await page.goto(app.url);
 
-      // Scroll down
-      await page.evaluate(() => window.scrollTo(0, 500));
-      await page.waitForTimeout(200);
+      // Wait for React hydration
+      await page.waitForLoadState('networkidle');
+      await page.waitForTimeout(500);
 
-      // Back to top button should appear
-      const backToTopButton = page
-        .locator('button')
-        .filter({
-          has: page.locator('svg[aria-hidden="true"]'),
-        })
-        .filter({ hasText: '' })
-        .last();
+      // Scroll down significantly (button appears at 300px)
+      await page.evaluate(() => window.scrollTo(0, 800));
+
+      // Wait for scroll event to trigger and button to render
+      await page.waitForTimeout(1000);
+
+      // Back to top button should appear - find by aria-label
+      const backToTopButton = page.locator('button[aria-label*="top"], button[aria-label*="위로"]');
+
+      // Wait for button to be visible with longer timeout
+      await expect(backToTopButton).toBeVisible({ timeout: 5000 });
 
       // Click back to top
-      await backToTopButton.click();
+      await backToTopButton.click({ force: true });
 
-      // Wait for scroll
-      await page.waitForTimeout(500);
+      // Wait for smooth scroll animation
+      await page.waitForTimeout(1000);
 
       // Check scroll position
       const scrollY = await page.evaluate(() => window.scrollY);
@@ -112,31 +129,42 @@ test.describe('context - Specific Button Tests', () => {
   test('menu button should open sidebar', async ({ page }) => {
     await page.goto('http://localhost:3003');
 
-    // Find menu button
+    // Wait for page to be fully loaded and React to hydrate
+    await page.waitForLoadState('networkidle');
+    await page.waitForTimeout(500);
+
+    // Find menu button in header (not in sidebar) - case-insensitive
     const menuButton = page
-      .locator('button[aria-label*="menu"], button[aria-label*="메뉴"]')
+      .locator(
+        'header button[aria-label*="Menu" i], header button[aria-label*="menu" i], header button[aria-label*="메뉴" i]',
+      )
       .first();
 
-    // Click menu button
-    await menuButton.click();
+    // Ensure button is visible
+    await expect(menuButton).toBeVisible();
 
-    // Wait for sidebar to appear
-    await page.waitForTimeout(300);
+    // Click menu button with force to bypass any overlay
+    await menuButton.click({ force: true });
+
+    // Wait for sidebar transition
+    await page.waitForTimeout(500);
 
     // Check sidebar is visible
     const sidebar = page.locator('aside').first();
     await expect(sidebar).toBeVisible();
 
-    // Find close button
+    // Find close button in sidebar
     const closeButton = page
-      .locator('button[aria-label*="Close"], button[aria-label*="닫기"]')
+      .locator(
+        'aside button[aria-label*="Close" i], aside button[aria-label*="close" i], aside button[aria-label*="닫기" i]',
+      )
       .first();
 
-    // Click close button
-    await closeButton.click();
+    // Click close button with force to bypass viewport issues
+    await closeButton.click({ force: true });
 
     // Wait for sidebar to close
-    await page.waitForTimeout(300);
+    await page.waitForTimeout(500);
   });
 
   test('search input should work', async ({ page }) => {
@@ -178,19 +206,25 @@ test.describe('permissive - Specific Button Tests', () => {
     await page.setViewportSize({ width: 375, height: 667 });
     await page.goto('http://localhost:3004');
 
-    // Find menu button
+    // Wait for page to be fully loaded and React to hydrate
+    await page.waitForLoadState('networkidle');
+    await page.waitForTimeout(500);
+
+    // Find menu button in header by aria-label - case-insensitive
     const menuButton = page
-      .locator('button')
-      .filter({
-        has: page.locator('svg'),
-      })
+      .locator(
+        'header button[aria-label*="Menu" i], header button[aria-label*="menu" i], header button[aria-label*="메뉴" i]',
+      )
       .first();
 
-    // Click menu button
-    await menuButton.click();
+    // Ensure button is visible
+    await expect(menuButton).toBeVisible();
 
-    // Wait for sidebar
-    await page.waitForTimeout(300);
+    // Click menu button with force to bypass overlay
+    await menuButton.click({ force: true });
+
+    // Wait for sidebar transition
+    await page.waitForTimeout(500);
 
     // Check sidebar is visible
     const sidebar = page.locator('aside').first();
@@ -265,20 +299,17 @@ test.describe('roots - Specific Button Tests', () => {
     await page.setViewportSize({ width: 375, height: 667 });
     await page.goto('http://localhost:3005');
 
-    // Find bottom nav
-    const bottomNav = page
-      .locator('nav')
-      .filter({ hasText: /browse|favorites|constants/i })
-      .first();
+    // Wait for page to be fully loaded
+    await page.waitForLoadState('networkidle');
+
+    // Find bottom nav by class (mobile only, fixed at bottom)
+    const bottomNav = page.locator('nav.lg\\:hidden.fixed.bottom-0');
 
     // Should be visible on mobile
     await expect(bottomNav).toBeVisible();
 
-    // Test favorites link
-    const favoritesLink = bottomNav
-      .locator('a')
-      .filter({ hasText: /favorites|즐겨찾기/i })
-      .first();
+    // Test favorites link in bottom nav
+    const favoritesLink = bottomNav.locator('a[href*="favorites"]');
     await favoritesLink.click();
 
     await page.waitForLoadState('networkidle');

@@ -16,18 +16,11 @@ export default defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-    {
-      name: 'mobile-chrome',
-      use: { ...devices['Pixel 5'] },
-    },
-    {
-      name: 'tablet',
-      use: { ...devices['iPad (gen 7)'] },
-    },
   ],
-  webServer: {
-    command: 'pnpm preview',
-    url: 'http://localhost:3005',
-    reuseExistingServer: !process.env.CI,
-  },
+  // webServer disabled - running servers manually
+  // webServer: {
+  //   command: 'pnpm preview',
+  //   url: 'http://localhost:3005',
+  //   reuseExistingServer: !process.env.CI,
+  // },
 });

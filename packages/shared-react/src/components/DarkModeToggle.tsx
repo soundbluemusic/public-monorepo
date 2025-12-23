@@ -22,11 +22,27 @@ export function DarkModeToggle({ className = '', style }: DarkModeToggleProps) {
   }, []);
 
   const handleToggle = () => {
-    const newIsDark = !isDark;
+    console.log('[DarkModeToggle] Button clicked');
+    // Always read from DOM to ensure correct state
+    const currentIsDark = document.documentElement.classList.contains('dark');
+    console.log('[DarkModeToggle] Current is dark:', currentIsDark);
+    const newIsDark = !currentIsDark;
+    console.log('[DarkModeToggle] New is dark:', newIsDark);
+
     setIsDark(newIsDark);
 
     // Apply theme to DOM
-    document.documentElement.classList.toggle('dark', newIsDark);
+    if (newIsDark) {
+      document.documentElement.classList.add('dark');
+      console.log('[DarkModeToggle] Added dark class');
+    } else {
+      document.documentElement.classList.remove('dark');
+      console.log('[DarkModeToggle] Removed dark class');
+    }
+
+    // Verify the change
+    const verified = document.documentElement.classList.contains('dark');
+    console.log('[DarkModeToggle] Verified dark class:', verified);
 
     // Persist to localStorage
     try {
