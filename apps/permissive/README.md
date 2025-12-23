@@ -14,12 +14,12 @@
 
 ## What is this? (이게 뭐예요?)
 
-A simple collection of free web development resources:
+A comprehensive collection of free web development resources:
 
-- **Web API** - 35+ browser built-in APIs (브라우저 내장 API)
-- **Libraries** - 50+ MIT licensed open source (MIT 라이센스 오픈소스)
+- **Libraries** - 100+ MIT/OSS licensed libraries (MIT/오픈소스 라이브러리)
+- **Web API** - 58 browser built-in APIs (브라우저 내장 API)
 
-No installation guides, no tutorials. Just a clean list with search & filtering.
+No installation guides, no tutorials. Just a clean, well-organized list with advanced search & filtering.
 
 ---
 
