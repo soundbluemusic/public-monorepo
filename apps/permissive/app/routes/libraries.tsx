@@ -1,5 +1,6 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import type { MetaFunction } from 'react-router';
+import { useSearchParams } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import { useI18n } from '../i18n';
 
@@ -1078,6 +1079,8 @@ const categories = [
 ] as const;
 type CategoryFilter = (typeof categories)[number];
 
+type SortOption = 'stars' | 'newest' | 'name';
+
 export const meta: MetaFunction = ({ location }) => {
   const isKorean = location.pathname.startsWith('/ko');
   const title = 'Libraries - Permissive';
@@ -1090,14 +1093,53 @@ export const meta: MetaFunction = ({ location }) => {
 
 export default function LibrariesPage() {
   const { locale } = useI18n();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState<CategoryFilter>('All');
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [quickFilter, setQuickFilter] = useState<'trending' | 'usedHere' | 'new' | null>(null);
+  const [sortBy, setSortBy] = useState<SortOption>('stars');
+
+  // Sync URL params on mount
+  useEffect(() => {
+    const q = searchParams.get('q');
+    const cat = searchParams.get('category');
+    const tag = searchParams.get('tag');
+    const filter = searchParams.get('filter');
+    const trending = searchParams.get('trending');
+
+    if (q) setSearch(q);
+    if (cat && categories.includes(cat as CategoryFilter)) {
+      setCategory(cat as CategoryFilter);
+    }
+    if (tag) setSelectedTag(tag);
+    if (filter === 'usedHere' || filter === 'new') setQuickFilter(filter);
+    if (trending === 'true') setQuickFilter('trending');
+  }, [searchParams]);
 
   const filteredLibraries = useMemo(() => {
     let libs = libraries;
+
+    // Quick filters
+    if (quickFilter === 'trending') {
+      libs = libs.filter((lib) => lib.trending);
+    } else if (quickFilter === 'usedHere') {
+      libs = libs.filter((lib) => lib.usedHere);
+    } else if (quickFilter === 'new') {
+      libs = libs.filter((lib) => lib.yearReleased && lib.yearReleased >= 2023);
+    }
+
+    // Category filter
     if (category !== 'All') {
       libs = libs.filter((lib) => lib.category === category);
     }
+
+    // Tag filter
+    if (selectedTag) {
+      libs = libs.filter((lib) => lib.tags?.includes(selectedTag));
+    }
+
+    // Search filter
     const q = search.toLowerCase().slice(0, 100);
     if (q) {
       libs = libs.filter(
@@ -1107,8 +1149,23 @@ export default function LibrariesPage() {
           lib.descriptionKo.includes(q),
       );
     }
-    return libs;
-  }, [search, category]);
+
+    // Sort
+    return [...libs].sort((a, b) => {
+      if (sortBy === 'stars') {
+        const aStars = Number.parseInt(a.stars.replace('k', '000'), 10);
+        const bStars = Number.parseInt(b.stars.replace('k', '000'), 10);
+        return bStars - aStars;
+      }
+      if (sortBy === 'newest') {
+        return (b.yearReleased || 0) - (a.yearReleased || 0);
+      }
+      if (sortBy === 'name') {
+        return a.name.localeCompare(b.name);
+      }
+      return 0;
+    });
+  }, [search, category, selectedTag, quickFilter, sortBy]);
 
   const groupedLibraries = useMemo(() => {
     if (category !== 'All') {
@@ -1120,6 +1177,43 @@ export default function LibrariesPage() {
       return acc;
     }, {});
   }, [filteredLibraries, category]);
+
+  const handleTagClick = (tag: string) => {
+    setSelectedTag(tag);
+    setQuickFilter(null);
+    const params = new URLSearchParams(searchParams);
+    params.set('tag', tag);
+    setSearchParams(params);
+  };
+
+  const handleQuickFilter = (filter: 'trending' | 'usedHere' | 'new') => {
+    if (quickFilter === filter) {
+      setQuickFilter(null);
+      const params = new URLSearchParams(searchParams);
+      params.delete('filter');
+      params.delete('trending');
+      setSearchParams(params);
+    } else {
+      setQuickFilter(filter);
+      setSelectedTag(null);
+      const params = new URLSearchParams(searchParams);
+      if (filter === 'trending') {
+        params.set('trending', 'true');
+      } else {
+        params.set('filter', filter);
+      }
+      params.delete('tag');
+      setSearchParams(params);
+    }
+  };
+
+  const clearFilters = () => {
+    setQuickFilter(null);
+    setSelectedTag(null);
+    setCategory('All');
+    setSearch('');
+    setSearchParams({});
+  };
 
   return (
     <DocsLayout>
@@ -1135,43 +1229,171 @@ export default function LibrariesPage() {
         </p>
       </div>
 
-      {/* Search & Filter */}
-      <div className="flex flex-col sm:flex-row gap-4 mb-8">
-        <div className="relative flex-1">
-          <svg
-            aria-hidden="true"
-            className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5"
-            style={{ color: 'var(--text-tertiary)' }}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+      {/* Quick Filters */}
+      <div className="flex flex-wrap items-center gap-3 mb-6">
+        <button
+          type="button"
+          onClick={() => handleQuickFilter('trending')}
+          className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all hover:shadow-md"
+          style={{
+            backgroundColor:
+              quickFilter === 'trending' ? 'var(--accent-primary)' : 'var(--bg-elevated)',
+            color: quickFilter === 'trending' ? 'white' : 'var(--text-primary)',
+            border: `1px solid ${quickFilter === 'trending' ? 'var(--accent-primary)' : 'var(--border-primary)'}`,
+          }}
+        >
+          <span>🔥</span>
+          {locale === 'ko' ? '2025 트렌딩' : 'Trending 2025'}
+        </button>
+        <button
+          type="button"
+          onClick={() => handleQuickFilter('usedHere')}
+          className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all hover:shadow-md"
+          style={{
+            backgroundColor:
+              quickFilter === 'usedHere' ? 'var(--accent-primary)' : 'var(--bg-elevated)',
+            color: quickFilter === 'usedHere' ? 'white' : 'var(--text-primary)',
+            border: `1px solid ${quickFilter === 'usedHere' ? 'var(--accent-primary)' : 'var(--border-primary)'}`,
+          }}
+        >
+          <span>⭐</span>
+          {locale === 'ko' ? '사용 중' : 'Used Here'}
+        </button>
+        <button
+          type="button"
+          onClick={() => handleQuickFilter('new')}
+          className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all hover:shadow-md"
+          style={{
+            backgroundColor: quickFilter === 'new' ? 'var(--accent-primary)' : 'var(--bg-elevated)',
+            color: quickFilter === 'new' ? 'white' : 'var(--text-primary)',
+            border: `1px solid ${quickFilter === 'new' ? 'var(--accent-primary)' : 'var(--border-primary)'}`,
+          }}
+        >
+          <span>📅</span>
+          {locale === 'ko' ? '새로운 (2023+)' : 'New 2023+'}
+        </button>
+        {(quickFilter || selectedTag) && (
+          <button
+            type="button"
+            onClick={clearFilters}
+            className="px-3 py-1.5 rounded-lg text-sm transition-all"
+            style={{
+              color: 'var(--text-tertiary)',
+              textDecoration: 'underline',
+            }}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-          <input
-            type="text"
-            placeholder={locale === 'ko' ? '라이브러리 검색...' : 'Search libraries...'}
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 rounded-xl transition-all"
+            {locale === 'ko' ? '필터 초기화' : 'Clear filters'}
+          </button>
+        )}
+      </div>
+
+      {/* Active Tag Filter Display */}
+      {selectedTag && (
+        <div className="mb-4">
+          <div
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg"
             style={{
               backgroundColor: 'var(--bg-elevated)',
               border: '1px solid var(--border-primary)',
-              color: 'var(--text-primary)',
             }}
-          />
+          >
+            <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>
+              {locale === 'ko' ? '태그:' : 'Tag:'}
+            </span>
+            <span className="text-sm font-medium" style={{ color: 'var(--text-primary)' }}>
+              {selectedTag}
+            </span>
+            <button
+              type="button"
+              onClick={() => {
+                setSelectedTag(null);
+                const params = new URLSearchParams(searchParams);
+                params.delete('tag');
+                setSearchParams(params);
+              }}
+              className="ml-1"
+              style={{ color: 'var(--text-tertiary)' }}
+            >
+              ×
+            </button>
+          </div>
         </div>
+      )}
+
+      {/* Search, Sort & Filter */}
+      <div className="flex flex-col gap-4 mb-8">
+        <div className="flex flex-col sm:flex-row gap-4">
+          <div className="relative flex-1">
+            <svg
+              aria-hidden="true"
+              className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5"
+              style={{ color: 'var(--text-tertiary)' }}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+            <input
+              type="text"
+              placeholder={locale === 'ko' ? '라이브러리 검색...' : 'Search libraries...'}
+              value={search}
+              onChange={(e) => {
+                setSearch(e.target.value);
+                const params = new URLSearchParams(searchParams);
+                if (e.target.value) {
+                  params.set('q', e.target.value);
+                } else {
+                  params.delete('q');
+                }
+                setSearchParams(params);
+              }}
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl transition-all"
+              style={{
+                backgroundColor: 'var(--bg-elevated)',
+                border: '1px solid var(--border-primary)',
+                color: 'var(--text-primary)',
+              }}
+            />
+          </div>
+          <div className="flex gap-2">
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value as SortOption)}
+              className="px-4 py-2.5 rounded-xl text-sm font-medium transition-all"
+              style={{
+                backgroundColor: 'var(--bg-elevated)',
+                border: '1px solid var(--border-primary)',
+                color: 'var(--text-primary)',
+              }}
+            >
+              <option value="stars">{locale === 'ko' ? '⭐ 인기순' : '⭐ Most Popular'}</option>
+              <option value="newest">{locale === 'ko' ? '📅 최신순' : '📅 Newest First'}</option>
+              <option value="name">{locale === 'ko' ? '🔤 이름순' : '🔤 Name A-Z'}</option>
+            </select>
+          </div>
+        </div>
+
         <div className="flex flex-wrap gap-2">
           {categories.map((cat) => (
             <button
               key={cat}
               type="button"
-              onClick={() => setCategory(cat)}
+              onClick={() => {
+                setCategory(cat);
+                const params = new URLSearchParams(searchParams);
+                if (cat !== 'All') {
+                  params.set('category', cat);
+                } else {
+                  params.delete('category');
+                }
+                setSearchParams(params);
+              }}
               className="px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
               style={{
                 backgroundColor: category === cat ? 'var(--accent-primary)' : 'var(--bg-tertiary)',
@@ -1263,16 +1485,19 @@ export default function LibrariesPage() {
                   {lib.tags && lib.tags.length > 0 && (
                     <div className="flex flex-wrap gap-1.5 mb-3">
                       {lib.tags.slice(0, 4).map((tag) => (
-                        <span
+                        <button
+                          type="button"
                           key={tag}
-                          className="text-xs px-2 py-0.5 rounded"
+                          onClick={() => handleTagClick(tag)}
+                          className="text-xs px-2 py-0.5 rounded cursor-pointer transition-all hover:opacity-80"
                           style={{
-                            backgroundColor: 'var(--bg-tertiary)',
-                            color: 'var(--text-tertiary)',
+                            backgroundColor:
+                              selectedTag === tag ? 'var(--accent-primary)' : 'var(--bg-tertiary)',
+                            color: selectedTag === tag ? 'white' : 'var(--text-tertiary)',
                           }}
                         >
                           {tag}
-                        </span>
+                        </button>
                       ))}
                     </div>
                   )}

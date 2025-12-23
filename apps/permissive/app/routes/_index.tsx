@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { MetaFunction } from 'react-router';
 import { Link } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
@@ -13,32 +14,233 @@ export const meta: MetaFunction = ({ location }) => {
   return [{ title }, { name: 'description', content: description }];
 };
 
+const trendingLibraries = [
+  { name: 'Bun', category: 'Runtime', emoji: '⚡' },
+  { name: 'Astro', category: 'Meta-framework', emoji: '🚀' },
+  { name: 'shadcn/ui', category: 'UI', emoji: '🎨' },
+  { name: 'TanStack Query', category: 'Data Fetching', emoji: '📡' },
+  { name: 'Vitest', category: 'Testing', emoji: '🧪' },
+  { name: 'Zod', category: 'Type Safety', emoji: '🛡️' },
+];
+
+const trendingApis = [
+  { name: 'View Transitions API', emoji: '✨' },
+  { name: 'WebGPU', emoji: '🎮' },
+  { name: 'Navigation API', emoji: '🧭' },
+  { name: 'Popover API', emoji: '💬' },
+];
+
 export default function Home() {
   const { locale, localePath } = useI18n();
+  const [searchQuery, setSearchQuery] = useState('');
 
   return (
     <DocsLayout>
-      {/* Hero */}
-      <div className="text-center py-12 sm:py-20">
+      {/* Hero Section - Enhanced */}
+      <div className="text-center py-12 sm:py-16">
+        <div
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6"
+          style={{ backgroundColor: 'rgba(255, 107, 107, 0.1)', color: '#ff6b6b' }}
+        >
+          <span className="text-xl">🔥</span>
+          <span className="text-sm font-medium">
+            {locale === 'ko' ? '2025년 최신 기술 업데이트' : '2025 Latest Tech Updated'}
+          </span>
+        </div>
+
         <h1
-          className="text-4xl sm:text-5xl font-bold mb-4"
+          className="text-4xl sm:text-6xl font-bold mb-6"
           style={{ color: 'var(--text-primary)' }}
         >
           {locale === 'ko' ? '무료 웹개발 도구 모음' : 'Free Web Dev Tools'}
         </h1>
-        <p className="text-lg max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
+
+        <p className="text-xl max-w-3xl mx-auto mb-8" style={{ color: 'var(--text-secondary)' }}>
           {locale === 'ko'
-            ? '웹표준 API와 MIT 라이센스 라이브러리를 한눈에 보세요'
-            : 'Web Standard APIs and MIT licensed libraries at a glance'}
+            ? '100개 이상의 MIT 라이브러리와 58개 웹표준 API를 한눈에'
+            : '100+ MIT licensed libraries and 58 Web Standard APIs at a glance'}
         </p>
+
+        {/* Stats */}
+        <div className="flex flex-wrap justify-center gap-8 mb-12">
+          <div className="text-center">
+            <div className="text-4xl font-bold mb-2" style={{ color: 'var(--accent-primary)' }}>
+              100+
+            </div>
+            <div className="text-sm" style={{ color: 'var(--text-tertiary)' }}>
+              {locale === 'ko' ? 'OSS 라이브러리' : 'OSS Libraries'}
+            </div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold mb-2" style={{ color: 'var(--accent-primary)' }}>
+              58
+            </div>
+            <div className="text-sm" style={{ color: 'var(--text-tertiary)' }}>
+              {locale === 'ko' ? '웹 표준 API' : 'Web APIs'}
+            </div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold mb-2" style={{ color: 'var(--accent-primary)' }}>
+              13
+            </div>
+            <div className="text-sm" style={{ color: 'var(--text-tertiary)' }}>
+              {locale === 'ko' ? '카테고리' : 'Categories'}
+            </div>
+          </div>
+        </div>
+
+        {/* Quick Search */}
+        <div className="max-w-2xl mx-auto mb-8">
+          <div className="relative">
+            <svg
+              aria-hidden="true"
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5"
+              style={{ color: 'var(--text-tertiary)' }}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+            <input
+              type="text"
+              placeholder={
+                locale === 'ko'
+                  ? 'React, Vite, View Transitions... 검색'
+                  : 'Search React, Vite, View Transitions...'
+              }
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && searchQuery.trim()) {
+                  window.location.href = `${localePath('/libraries')}?q=${encodeURIComponent(searchQuery)}`;
+                }
+              }}
+              className="w-full pl-12 pr-4 py-4 text-lg rounded-xl transition-all"
+              style={{
+                backgroundColor: 'var(--bg-elevated)',
+                border: '2px solid var(--border-primary)',
+                color: 'var(--text-primary)',
+              }}
+            />
+          </div>
+          <p className="text-sm mt-2" style={{ color: 'var(--text-tertiary)' }}>
+            {locale === 'ko' ? 'Enter를 눌러 검색' : 'Press Enter to search'}
+          </p>
+        </div>
+      </div>
+
+      {/* Trending Section */}
+      <div className="mb-16">
+        <h2
+          className="text-2xl font-bold mb-6 text-center"
+          style={{ color: 'var(--text-primary)' }}
+        >
+          <span className="mr-2">🔥</span>
+          {locale === 'ko' ? '2025년 트렌딩' : 'Trending 2025'}
+        </h2>
+
+        <div className="grid sm:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {/* Trending Libraries */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4" style={{ color: 'var(--text-secondary)' }}>
+              Libraries
+            </h3>
+            <div className="space-y-2">
+              {trendingLibraries.map((lib) => (
+                <Link
+                  key={lib.name}
+                  to={`${localePath('/libraries')}?trending=true`}
+                  className="flex items-center gap-3 p-3 rounded-lg transition-all hover:shadow-md"
+                  style={{
+                    backgroundColor: 'var(--bg-elevated)',
+                    border: '1px solid var(--border-primary)',
+                  }}
+                >
+                  <span className="text-2xl">{lib.emoji}</span>
+                  <div className="flex-1">
+                    <div className="font-medium" style={{ color: 'var(--text-primary)' }}>
+                      {lib.name}
+                    </div>
+                    <div className="text-sm" style={{ color: 'var(--text-tertiary)' }}>
+                      {lib.category}
+                    </div>
+                  </div>
+                  <svg
+                    aria-hidden="true"
+                    className="w-5 h-5"
+                    style={{ color: 'var(--text-tertiary)' }}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Trending Web APIs */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4" style={{ color: 'var(--text-secondary)' }}>
+              Web APIs
+            </h3>
+            <div className="space-y-2">
+              {trendingApis.map((api) => (
+                <Link
+                  key={api.name}
+                  to={`${localePath('/web-api')}?trending=true`}
+                  className="flex items-center gap-3 p-3 rounded-lg transition-all hover:shadow-md"
+                  style={{
+                    backgroundColor: 'var(--bg-elevated)',
+                    border: '1px solid var(--border-primary)',
+                  }}
+                >
+                  <span className="text-2xl">{api.emoji}</span>
+                  <div className="flex-1">
+                    <div className="font-medium" style={{ color: 'var(--text-primary)' }}>
+                      {api.name}
+                    </div>
+                  </div>
+                  <svg
+                    aria-hidden="true"
+                    className="w-5 h-5"
+                    style={{ color: 'var(--text-tertiary)' }}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Two Main Cards */}
-      <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto mb-16">
         {/* Web API Card */}
         <Link
           to={localePath('/web-api')}
-          className="group relative p-8 rounded-2xl transition-all hover:shadow-lg hover:-translate-y-1"
+          className="group relative p-8 rounded-2xl transition-all hover:shadow-xl hover:-translate-y-1"
           style={{
             backgroundColor: 'var(--bg-elevated)',
             border: '2px solid var(--border-primary)',
@@ -62,27 +264,37 @@ export default function Home() {
               ? '브라우저 내장 API. 설치 없이 무료로 사용'
               : 'Browser built-in APIs. Free to use, no installation'}
           </p>
-          <div
-            className="flex items-center text-sm font-medium"
-            style={{ color: 'var(--accent-primary)' }}
-          >
-            {locale === 'ko' ? '둘러보기' : 'Browse'}
-            <svg
-              className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
-              fill="none"
-              stroke="currentColor"
-              aria-hidden="true"
-              viewBox="0 0 24 24"
+          <div className="flex items-center justify-between">
+            <div className="text-3xl font-bold" style={{ color: 'var(--accent-primary)' }}>
+              58
+            </div>
+            <div
+              className="flex items-center text-sm font-medium"
+              style={{ color: 'var(--accent-primary)' }}
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-            </svg>
+              {locale === 'ko' ? '둘러보기' : 'Browse'}
+              <svg
+                className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </div>
           </div>
         </Link>
 
         {/* Libraries Card */}
         <Link
           to={localePath('/libraries')}
-          className="group relative p-8 rounded-2xl transition-all hover:shadow-lg hover:-translate-y-1"
+          className="group relative p-8 rounded-2xl transition-all hover:shadow-xl hover:-translate-y-1"
           style={{
             backgroundColor: 'var(--bg-elevated)',
             border: '2px solid var(--border-primary)',
@@ -106,22 +318,62 @@ export default function Home() {
               ? 'MIT 라이센스 오픈소스. 상업적 사용 가능'
               : 'MIT licensed open source. Free for commercial use'}
           </p>
-          <div
-            className="flex items-center text-sm font-medium"
-            style={{ color: 'var(--accent-primary)' }}
-          >
-            {locale === 'ko' ? '둘러보기' : 'Browse'}
-            <svg
-              className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
-              fill="none"
-              stroke="currentColor"
-              aria-hidden="true"
-              viewBox="0 0 24 24"
+          <div className="flex items-center justify-between">
+            <div className="text-3xl font-bold" style={{ color: 'var(--accent-primary)' }}>
+              100+
+            </div>
+            <div
+              className="flex items-center text-sm font-medium"
+              style={{ color: 'var(--accent-primary)' }}
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-            </svg>
+              {locale === 'ko' ? '둘러보기' : 'Browse'}
+              <svg
+                className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </div>
           </div>
         </Link>
+      </div>
+
+      {/* Quick Categories */}
+      <div className="text-center mb-16">
+        <h3 className="text-xl font-semibold mb-6" style={{ color: 'var(--text-primary)' }}>
+          {locale === 'ko' ? '카테고리로 탐색' : 'Browse by Category'}
+        </h3>
+        <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+          {[
+            'Meta-frameworks',
+            'Build Tools',
+            'State Management',
+            'UI Components',
+            'Testing',
+            'Animation',
+          ].map((cat) => (
+            <Link
+              key={cat}
+              to={`${localePath('/libraries')}?category=${encodeURIComponent(cat)}`}
+              className="px-4 py-2 rounded-lg text-sm font-medium transition-all hover:shadow-md"
+              style={{
+                backgroundColor: 'var(--bg-elevated)',
+                border: '1px solid var(--border-primary)',
+                color: 'var(--text-secondary)',
+              }}
+            >
+              {cat}
+            </Link>
+          ))}
+        </div>
       </div>
 
       {/* Built with section */}
@@ -132,6 +384,12 @@ export default function Home() {
             : 'This site is built with tools listed here'}
         </p>
         <div className="flex flex-wrap justify-center gap-3">
+          <span
+            className="px-3 py-1.5 rounded-full text-sm"
+            style={{ backgroundColor: 'var(--bg-tertiary)', color: 'var(--text-secondary)' }}
+          >
+            React Router v7
+          </span>
           <span
             className="px-3 py-1.5 rounded-full text-sm"
             style={{ backgroundColor: 'var(--bg-tertiary)', color: 'var(--text-secondary)' }}
@@ -149,6 +407,12 @@ export default function Home() {
             style={{ backgroundColor: 'var(--bg-tertiary)', color: 'var(--text-secondary)' }}
           >
             TypeScript
+          </span>
+          <span
+            className="px-3 py-1.5 rounded-full text-sm"
+            style={{ backgroundColor: 'var(--bg-tertiary)', color: 'var(--text-secondary)' }}
+          >
+            Vite
           </span>
         </div>
       </div>
