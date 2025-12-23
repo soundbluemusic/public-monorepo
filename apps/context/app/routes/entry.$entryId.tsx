@@ -1,6 +1,9 @@
 import { Layout } from '@/components/Layout';
 import { meaningEntries } from '@/data/entries';
 import { useI18n } from '@/i18n';
+import { favorites, studyRecords } from '@/lib/db';
+import { Bookmark, BookmarkCheck, Check } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router';
 
 export function meta() {
@@ -10,8 +13,34 @@ export function meta() {
 export default function EntryPage() {
   const { entryId } = useParams();
   const { locale, t, localePath } = useI18n();
+  const [isStudied, setIsStudied] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
 
   const entry = meaningEntries.find((e) => e.id === entryId);
+
+  // Load study and favorite status
+  useEffect(() => {
+    async function loadStatus() {
+      if (!entryId) return;
+      const studied = await studyRecords.isStudied(entryId);
+      const fav = await favorites.isFavorite(entryId);
+      setIsStudied(studied);
+      setIsFavorite(fav);
+    }
+    loadStatus();
+  }, [entryId]);
+
+  const handleMarkAsStudied = async () => {
+    if (!entryId) return;
+    await studyRecords.markAsStudied(entryId);
+    setIsStudied(true);
+  };
+
+  const handleToggleFavorite = async () => {
+    if (!entryId) return;
+    const newState = await favorites.toggle(entryId);
+    setIsFavorite(newState);
+  };
 
   if (!entry) {
     return (
@@ -36,12 +65,68 @@ export default function EntryPage() {
     <Layout>
       <article>
         <header className="mb-8">
-          <h1 className="text-3xl font-bold mb-2" style={{ color: 'var(--text-primary)' }}>
-            {entry.korean}
-          </h1>
-          <p className="text-lg" style={{ color: 'var(--text-tertiary)' }}>
-            {entry.romanization}
-          </p>
+          <div className="flex items-start justify-between gap-4 mb-4">
+            <div className="flex-1">
+              <h1 className="text-3xl font-bold mb-2" style={{ color: 'var(--text-primary)' }}>
+                {entry.korean}
+              </h1>
+              <p className="text-lg" style={{ color: 'var(--text-tertiary)' }}>
+                {entry.romanization}
+              </p>
+            </div>
+
+            {/* Action buttons */}
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={handleToggleFavorite}
+                className="p-2 rounded-lg transition-colors min-h-10 min-w-10"
+                style={{
+                  backgroundColor: isFavorite ? 'var(--accent-primary)' : 'var(--bg-elevated)',
+                  border: '1px solid var(--border-primary)',
+                  color: isFavorite ? 'white' : 'var(--text-secondary)',
+                }}
+                aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
+              >
+                {isFavorite ? <BookmarkCheck size={20} /> : <Bookmark size={20} />}
+              </button>
+            </div>
+          </div>
+
+          {/* Study status */}
+          {isStudied ? (
+            <div
+              className="flex items-center gap-2 px-4 py-2 rounded-lg"
+              style={{
+                backgroundColor: 'var(--bg-elevated)',
+                border: '1px solid var(--accent-primary)',
+              }}
+            >
+              <div
+                className="w-5 h-5 rounded-full flex items-center justify-center"
+                style={{ backgroundColor: 'var(--accent-primary)' }}
+              >
+                <Check size={14} style={{ color: 'white' }} />
+              </div>
+              <span className="text-sm" style={{ color: 'var(--text-primary)' }}>
+                {locale === 'ko' ? '✅ 학습 완료' : '✅ Studied'}
+              </span>
+            </div>
+          ) : (
+            <button
+              type="button"
+              onClick={handleMarkAsStudied}
+              className="flex items-center gap-2 px-4 py-2 rounded-lg transition-colors min-h-11"
+              style={{
+                backgroundColor: 'var(--accent-primary)',
+                color: 'white',
+                border: 'none',
+              }}
+            >
+              <Check size={18} />
+              <span>{locale === 'ko' ? '학습 완료로 표시' : 'Mark as Studied'}</span>
+            </button>
+          )}
         </header>
 
         <section className="mb-6">
@@ -64,8 +149,8 @@ export default function EntryPage() {
               {t('examples')}
             </h2>
             <ul className="space-y-2">
-              {translation.examples.map((example) => (
-                <li key={example} style={{ color: 'var(--text-secondary)' }}>
+              {translation.examples.map((example, index) => (
+                <li key={`${example}-${index}`} style={{ color: 'var(--text-secondary)' }}>
                   {example}
                 </li>
               ))}

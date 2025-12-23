@@ -42,7 +42,9 @@
       "*.min.js",
       "apps/context/app/data/generated",
       "apps/roots/public/*.json",
-      "apps/*/app/paraglide"
+      "apps/*/app/paraglide",
+      "apps/*/.inlang-plugins",
+      "apps/roots/app/routes/+types"
     ]
   }
 }

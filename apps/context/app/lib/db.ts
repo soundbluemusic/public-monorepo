@@ -132,6 +132,61 @@ export const studyRecords = {
       accuracy: total > 0 ? (correct / total) * 100 : 0,
     };
   },
+
+  /**
+   * Check if a word has been studied at least once
+   */
+  async isStudied(entryId: string): Promise<boolean> {
+    validateId(entryId, 'entryId');
+    const record = await db.studyRecords.where('entryId').equals(entryId).first();
+    return !!record;
+  },
+
+  /**
+   * Mark a word as studied (for simple progress tracking)
+   */
+  async markAsStudied(entryId: string) {
+    validateId(entryId, 'entryId');
+    const exists = await this.isStudied(entryId);
+    if (!exists) {
+      return this.add(entryId, true);
+    }
+    return null;
+  },
+
+  /**
+   * Get all studied entry IDs
+   */
+  async getStudiedEntryIds(): Promise<string[]> {
+    const records = await db.studyRecords.toArray();
+    const uniqueIds = new Set(records.map((r) => r.entryId));
+    return Array.from(uniqueIds);
+  },
+
+  /**
+   * Get category progress (studied count, total count)
+   */
+  async getCategoryProgress(categoryId: string, totalEntries: number) {
+    const allStudied = await this.getStudiedEntryIds();
+    const studiedInCategory = allStudied.filter((id) => id.startsWith(`${categoryId}-`));
+    return {
+      studied: studiedInCategory.length,
+      total: totalEntries,
+      percentage: totalEntries > 0 ? (studiedInCategory.length / totalEntries) * 100 : 0,
+    };
+  },
+
+  /**
+   * Get overall progress across all categories
+   */
+  async getOverallProgress(totalEntries: number) {
+    const studiedIds = await this.getStudiedEntryIds();
+    return {
+      studied: studiedIds.length,
+      total: totalEntries,
+      percentage: totalEntries > 0 ? (studiedIds.length / totalEntries) * 100 : 0,
+    };
+  },
 };
 
 export const settings = {

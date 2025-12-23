@@ -2,6 +2,8 @@ import { Layout } from '@/components/Layout';
 import { categories } from '@/data/categories';
 import { meaningEntries } from '@/data/entries';
 import { useI18n } from '@/i18n';
+import { studyRecords } from '@/lib/db';
+import { useEffect, useState } from 'react';
 import type { MetaFunction } from 'react-router';
 import { Link } from 'react-router';
 
@@ -23,6 +25,24 @@ export const meta: MetaFunction = ({ location }) => {
 
 export default function BrowsePage() {
   const { locale, t, localePath } = useI18n();
+  const [categoryProgress, setCategoryProgress] = useState<
+    Record<string, { studied: number; total: number; percentage: number }>
+  >({});
+
+  // Load progress data
+  useEffect(() => {
+    async function loadProgress() {
+      const catProgress: Record<string, { studied: number; total: number; percentage: number }> =
+        {};
+      for (const cat of categories) {
+        const entries = meaningEntries.filter((e) => e.categoryId === cat.id);
+        const progress = await studyRecords.getCategoryProgress(cat.id, entries.length);
+        catProgress[cat.id] = progress;
+      }
+      setCategoryProgress(catProgress);
+    }
+    loadProgress();
+  }, []);
 
   return (
     <Layout>
@@ -36,6 +56,12 @@ export default function BrowsePage() {
       <div className="grid gap-4 sm:grid-cols-2">
         {categories.map((category) => {
           const count = meaningEntries.filter((e) => e.categoryId === category.id).length;
+          const progress = categoryProgress[category.id] || {
+            studied: 0,
+            total: count,
+            percentage: 0,
+          };
+
           return (
             <Link
               key={category.id}
@@ -46,18 +72,33 @@ export default function BrowsePage() {
                 border: '1px solid var(--border-primary)',
               }}
             >
-              <div className="flex items-center gap-3 mb-2">
+              <div className="flex items-center gap-3 mb-3">
                 <span className="text-2xl">{category.icon}</span>
-                <div>
+                <div className="flex-1">
                   <h2 className="font-semibold" style={{ color: 'var(--text-primary)' }}>
                     {category.name[locale]}
                   </h2>
-                  <p className="text-sm" style={{ color: 'var(--text-tertiary)' }}>
-                    {count}
-                    {t('wordCount')}
+                  <p className="text-xs" style={{ color: 'var(--text-tertiary)' }}>
+                    {progress.studied}/{count} {locale === 'ko' ? '단어' : 'words'}
                   </p>
                 </div>
               </div>
+
+              {/* Progress bar */}
+              {progress.studied > 0 && (
+                <div
+                  className="w-full h-1.5 rounded-full overflow-hidden"
+                  style={{ backgroundColor: 'var(--bg-secondary)' }}
+                >
+                  <div
+                    className="h-full transition-all duration-300"
+                    style={{
+                      width: `${progress.percentage}%`,
+                      backgroundColor: 'var(--accent-primary)',
+                    }}
+                  />
+                </div>
+              )}
             </Link>
           );
         })}

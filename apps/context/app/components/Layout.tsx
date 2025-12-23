@@ -343,6 +343,18 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
               {t('browse')}
             </Link>
             <Link
+              to={localePath('/my-learning')}
+              onClick={() => setSidebarOpen(false)}
+              className="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors min-h-11"
+              style={{
+                color: isActive('/my-learning') ? 'var(--accent-primary)' : 'var(--text-primary)',
+                backgroundColor: isActive('/my-learning') ? 'var(--bg-tertiary)' : 'transparent',
+              }}
+            >
+              <LayoutGrid size={20} aria-hidden="true" />
+              {locale === 'ko' ? '내 학습 현황' : 'My Learning'}
+            </Link>
+            <Link
               to={localePath('/about')}
               onClick={() => setSidebarOpen(false)}
               className="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors min-h-11"
@@ -485,6 +497,16 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
         >
           <Grid3X3 size={20} aria-hidden="true" />
           <span className="text-xs">{t('browse')}</span>
+        </Link>
+        <Link
+          to={localePath('/my-learning')}
+          className="flex flex-col items-center justify-center gap-1 flex-1 py-2 min-h-14"
+          style={{
+            color: isActive('/my-learning') ? 'var(--accent-primary)' : 'var(--text-secondary)',
+          }}
+        >
+          <LayoutGrid size={20} aria-hidden="true" />
+          <span className="text-xs">{locale === 'ko' ? '학습' : 'Learn'}</span>
         </Link>
         <Link
           to={localePath('/about')}
