@@ -58,54 +58,73 @@ class ContextDatabase extends Dexie {
   }
 }
 
-const db = new ContextDatabase();
+// Lazy initialization to avoid SSG build errors
+let db: ContextDatabase;
 
-export { db };
+function getDb(): ContextDatabase {
+  if (typeof window === 'undefined') {
+    // SSG build environment - return a mock
+    throw new Error('Database is only available in browser');
+  }
+  if (!db) {
+    db = new ContextDatabase();
+  }
+  return db;
+}
+
+export { getDb as db };
 
 // 헬퍼 함수들
 export const favorites = {
   async add(entryId: string) {
     validateId(entryId, 'entryId');
-    const exists = await db.favorites.where('entryId').equals(entryId).first();
+    const database = getDb();
+    const exists = await database.favorites.where('entryId').equals(entryId).first();
     if (exists) return exists.id;
-    return db.favorites.add({ entryId, addedAt: new Date() });
+    return database.favorites.add({ entryId, addedAt: new Date() });
   },
 
   async remove(entryId: string) {
     validateId(entryId, 'entryId');
-    return db.favorites.where('entryId').equals(entryId).delete();
+    const database = getDb();
+    return database.favorites.where('entryId').equals(entryId).delete();
   },
 
   async toggle(entryId: string) {
     validateId(entryId, 'entryId');
-    const exists = await db.favorites.where('entryId').equals(entryId).first();
+    const database = getDb();
+    const exists = await database.favorites.where('entryId').equals(entryId).first();
     if (exists?.id) {
-      await db.favorites.delete(exists.id);
+      await database.favorites.delete(exists.id);
       return false;
     }
-    await db.favorites.add({ entryId, addedAt: new Date() });
+    await database.favorites.add({ entryId, addedAt: new Date() });
     return true;
   },
 
   async isFavorite(entryId: string) {
     validateId(entryId, 'entryId');
-    const exists = await db.favorites.where('entryId').equals(entryId).first();
+    const database = getDb();
+    const exists = await database.favorites.where('entryId').equals(entryId).first();
     return !!exists;
   },
 
   async getAll() {
-    return db.favorites.orderBy('addedAt').reverse().toArray();
+    const database = getDb();
+    return database.favorites.orderBy('addedAt').reverse().toArray();
   },
 
   async count() {
-    return db.favorites.count();
+    const database = getDb();
+    return database.favorites.count();
   },
 };
 
 export const studyRecords = {
   async add(entryId: string, correct: boolean) {
     validateId(entryId, 'entryId');
-    return db.studyRecords.add({
+    const database = getDb();
+    return database.studyRecords.add({
       entryId,
       studiedAt: new Date(),
       correct,
@@ -114,16 +133,19 @@ export const studyRecords = {
 
   async getByEntry(entryId: string) {
     validateId(entryId, 'entryId');
-    return db.studyRecords.where('entryId').equals(entryId).toArray();
+    const database = getDb();
+    return database.studyRecords.where('entryId').equals(entryId).toArray();
   },
 
   async getRecent(limit = 50) {
-    return db.studyRecords.orderBy('studiedAt').reverse().limit(limit).toArray();
+    const database = getDb();
+    return database.studyRecords.orderBy('studiedAt').reverse().limit(limit).toArray();
   },
 
   async getStats(entryId: string) {
     validateId(entryId, 'entryId');
-    const records = await db.studyRecords.where('entryId').equals(entryId).toArray();
+    const database = getDb();
+    const records = await database.studyRecords.where('entryId').equals(entryId).toArray();
     const total = records.length;
     const correct = records.filter((r) => r.correct).length;
     return {
@@ -138,7 +160,8 @@ export const studyRecords = {
    */
   async isStudied(entryId: string): Promise<boolean> {
     validateId(entryId, 'entryId');
-    const record = await db.studyRecords.where('entryId').equals(entryId).first();
+    const database = getDb();
+    const record = await database.studyRecords.where('entryId').equals(entryId).first();
     return !!record;
   },
 
@@ -158,7 +181,8 @@ export const studyRecords = {
    * Get all studied entry IDs
    */
   async getStudiedEntryIds(): Promise<string[]> {
-    const records = await db.studyRecords.toArray();
+    const database = getDb();
+    const records = await database.studyRecords.toArray();
     const uniqueIds = new Set(records.map((r) => r.entryId));
     return Array.from(uniqueIds);
   },
@@ -191,7 +215,8 @@ export const studyRecords = {
 
 export const settings = {
   async get(): Promise<UserSettings> {
-    const s = await db.settings.get(1);
+    const database = getDb();
+    const s = await database.settings.get(1);
     return (
       s || {
         id: 1,
@@ -204,8 +229,9 @@ export const settings = {
   },
 
   async update(updates: Partial<Omit<UserSettings, 'id'>>) {
+    const database = getDb();
     const current = await this.get();
-    return db.settings.put({
+    return database.settings.put({
       ...current,
       ...updates,
       id: 1,
