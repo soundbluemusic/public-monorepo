@@ -1,24 +1,23 @@
-var Un = Object.create;
-var Xe = Object.defineProperty;
-var Pn = Object.getOwnPropertyDescriptor;
-var vn = Object.getOwnPropertyNames;
-var Nn = Object.getPrototypeOf,
-  Sn = Object.prototype.hasOwnProperty;
-var Rn = (s, e) => () => (e || s((e = { exports: {} }).exports, e), e.exports);
-var xn = (s, e, i, u) => {
-  if ((e && typeof e == 'object') || typeof e == 'function')
-    for (let p of vn(e))
+const Un = Object.create;
+const Xe = Object.defineProperty;
+const Pn = Object.getOwnPropertyDescriptor;
+const vn = Object.getOwnPropertyNames;
+const Nn = Object.getPrototypeOf;
+const Sn = Object.prototype.hasOwnProperty;
+const Rn = (s, e) => () => (e || s((e = { exports: {} }).exports, e), e.exports);
+const xn = (s, e, i, u) => {
+  if ((e && typeof e === 'object') || typeof e === 'function')
+    for (const p of vn(e))
       !Sn.call(s, p) &&
         p !== i &&
         Xe(s, p, { get: () => e[p], enumerable: !(u = Pn(e, p)) || u.enumerable });
   return s;
 };
-var jn = (s, e, i) => (
+const jn = (s, e, i) => (
   (i = s != null ? Un(Nn(s)) : {}),
   xn(e || !s || !s.__esModule ? Xe(i, 'default', { value: s, enumerable: !0 }) : i, s)
 );
-var he = Rn((o) => {
-  'use strict';
+const he = Rn((o) => {
   Object.defineProperty(o, '__esModule', { value: !0 });
   o.Type =
     o.JsonType =
@@ -79,9 +78,9 @@ var he = Rn((o) => {
   o.PatternBooleanExact = `^${o.PatternBoolean}$`;
   o.PatternNumberExact = `^${o.PatternNumber}$`;
   o.PatternStringExact = `^${o.PatternString}$`;
-  var Ve;
-  (function (s) {
-    let e = new Map();
+  let Ve;
+  ((s) => {
+    const e = new Map();
     function i() {
       return new Map(e);
     }
@@ -107,15 +106,12 @@ var he = Rn((o) => {
     }
     s.Get = T;
   })(Ve || (o.TypeRegistry = Ve = {}));
-  var D = class extends Error {
-    constructor(e) {
-      super(e);
-    }
+  const D = class extends Error {
   };
   o.TypeBoxError = D;
-  var Ze;
-  (function (s) {
-    let e = new Map();
+  let Ze;
+  ((s) => {
+    const e = new Map();
     function i() {
       return new Map(e);
     }
@@ -141,18 +137,18 @@ var he = Rn((o) => {
     }
     s.Get = T;
   })(Ze || (o.FormatRegistry = Ze = {}));
-  var I;
-  (function (s) {
+  let I;
+  ((s) => {
     function e(m) {
       return Array.isArray(m);
     }
     s.IsArray = e;
     function i(m) {
-      return typeof m == 'bigint';
+      return typeof m === 'bigint';
     }
     s.IsBigInt = i;
     function u(m) {
-      return typeof m == 'boolean';
+      return typeof m === 'boolean';
     }
     s.IsBoolean = u;
     function p(m) {
@@ -164,15 +160,15 @@ var he = Rn((o) => {
     }
     s.IsNull = l;
     function c(m) {
-      return typeof m == 'number';
+      return typeof m === 'number';
     }
     s.IsNumber = c;
     function T(m) {
-      return typeof m == 'object' && m !== null;
+      return typeof m === 'object' && m !== null;
     }
     s.IsObject = T;
     function y(m) {
-      return typeof m == 'string';
+      return typeof m === 'string';
     }
     s.IsString = y;
     function b(m) {
@@ -184,10 +180,10 @@ var he = Rn((o) => {
     }
     s.IsUndefined = g;
   })(I || (o.ValueGuard = I = {}));
-  var ze = class extends D {};
+  const ze = class extends D {};
   o.TypeGuardUnknownTypeError = ze;
-  var a;
-  (function (s) {
+  let a;
+  ((s) => {
     function e(r) {
       try {
         return new RegExp(r), !0;
@@ -198,7 +194,7 @@ var he = Rn((o) => {
     function i(r) {
       if (!I.IsString(r)) return !1;
       for (let L = 0; L < r.length; L++) {
-        let B = r.charCodeAt(L);
+        const B = r.charCodeAt(L);
         if ((B >= 7 && B <= 13) || B === 27 || B === 127) return !1;
       }
       return !0;
@@ -409,7 +405,7 @@ var he = Rn((o) => {
         u(r.additionalProperties) &&
         I.IsObject(r.patternProperties) &&
         ((L) => {
-          let B = Object.getOwnPropertyNames(L.patternProperties);
+          const B = Object.getOwnPropertyNames(L.patternProperties);
           return (
             B.length === 1 &&
             e(B[0]) &&
@@ -562,8 +558,8 @@ var he = Rn((o) => {
     }
     s.TSchema = C;
   })(a || (o.TypeGuard = a = {}));
-  var Ge;
-  (function (s) {
+  let Ge;
+  ((s) => {
     function e(i) {
       return i[o.Kind] === 'Intersect'
         ? i.allOf.every((u) => e(u))
@@ -577,14 +573,14 @@ var he = Rn((o) => {
     }
     s.Check = e;
   })(Ge || (o.ExtendsUndefined = Ge = {}));
-  var Ue = class extends D {};
+  const Ue = class extends D {};
   o.TypeExtendsError = Ue;
-  var f;
-  (function (s) {
+  let f;
+  ((s) => {
     (s[(s.Union = 0)] = 'Union'), (s[(s.True = 1)] = 'True'), (s[(s.False = 2)] = 'False');
   })(f || (o.TypeExtendsResult = f = {}));
-  var J;
-  (function (s) {
+  let J;
+  ((s) => {
     function e(n) {
       return n === f.False ? n : f.True;
     }
@@ -607,7 +603,7 @@ var he = Rn((o) => {
                 ? l(n, t)
                 : i('StructuralRight');
     }
-    function l(n, t) {
+    function l(_n, _t) {
       return f.True;
     }
     function c(n, t) {
@@ -621,7 +617,7 @@ var he = Rn((o) => {
               ? f.True
               : f.Union;
     }
-    function T(n, t) {
+    function T(n, _t) {
       return a.TUnknown(n) ? f.False : a.TAny(n) ? f.Union : a.TNever(n) ? f.True : f.False;
     }
     function y(n, t) {
@@ -647,7 +643,7 @@ var he = Rn((o) => {
               ? f.True
               : f.False;
     }
-    function m(n, t) {
+    function m(n, _t) {
       return (a.TLiteral(n) && I.IsBoolean(n.const)) || a.TBoolean(n) ? f.True : f.False;
     }
     function U(n, t) {
@@ -698,7 +694,7 @@ var he = Rn((o) => {
                 : f.False
             : f.False;
     }
-    function N(n, t) {
+    function N(n, _t) {
       return (a.TLiteral(n) && I.IsNumber(n.const)) || a.TNumber(n) || a.TInteger(n)
         ? f.True
         : f.False;
@@ -742,15 +738,15 @@ var he = Rn((o) => {
                       ? m(n, t)
                       : f.False;
     }
-    function S(n, t) {
+    function S(_n, _t) {
       return f.False;
     }
-    function ee(n, t) {
+    function ee(_n, _t) {
       return f.True;
     }
     function ne(n) {
       let [t, x] = [n, 0];
-      for (; a.TNot(t); ) (t = t.not), (x += 1);
+      while (a.TNot(t)) (t = t.not), (x += 1);
       return x % 2 === 0 ? t : o.Type.Unknown();
     }
     function Te(n, t) {
@@ -767,7 +763,7 @@ var he = Rn((o) => {
               ? f.True
               : f.False;
     }
-    function V(n, t) {
+    function V(n, _t) {
       return a.TLiteralNumber(n) || a.TNumber(n) || a.TInteger(n) ? f.True : f.False;
     }
     function fe(n, t) {
@@ -816,7 +812,7 @@ var he = Rn((o) => {
       return z(n);
     }
     function me(n) {
-      let t = o.Type.Number();
+      const t = o.Type.Number();
       return (
         $(n, 0) || ($(n, 1) && 'length' in n.properties && e(w(n.properties.length, t)) === f.True)
       );
@@ -825,13 +821,13 @@ var he = Rn((o) => {
       return $(n, 0);
     }
     function z(n) {
-      let t = o.Type.Number();
+      const t = o.Type.Number();
       return (
         $(n, 0) || ($(n, 1) && 'length' in n.properties && e(w(n.properties.length, t)) === f.True)
       );
     }
     function Ie(n) {
-      let t = o.Type.Function([o.Type.Any()], o.Type.Any());
+      const t = o.Type.Function([o.Type.Any()], o.Type.Any());
       return (
         $(n, 0) || ($(n, 1) && 'then' in n.properties && e(w(n.properties.then, t)) === f.True)
       );
@@ -877,7 +873,7 @@ var he = Rn((o) => {
           ? E(n, t)
           : a.TObject(t)
             ? (() => {
-                for (let x of Object.getOwnPropertyNames(t.properties)) {
+                for (const x of Object.getOwnPropertyNames(t.properties)) {
                   if (!(x in n.properties) && !a.TOptional(t.properties[x])) return f.False;
                   if (a.TOptional(t.properties[x])) return f.True;
                   if (oe(n.properties[x], t.properties[x]) === f.False) return f.False;
@@ -910,7 +906,7 @@ var he = Rn((o) => {
           : i('Unable to get record value schema');
     }
     function E(n, t) {
-      let [x, M] = [q(t), W(t)];
+      const [x, M] = [q(t), W(t)];
       return a.TLiteralString(n) && a.TNumber(x) && e(w(n, M)) === f.True
         ? f.True
         : (a.TUint8Array(n) && a.TNumber(x)) ||
@@ -919,7 +915,7 @@ var he = Rn((o) => {
           ? w(n, M)
           : a.TObject(n)
             ? (() => {
-                for (let On of Object.getOwnPropertyNames(n.properties))
+                for (const On of Object.getOwnPropertyNames(n.properties))
                   if (oe(M, n.properties[On]) === f.False) return f.False;
                 return f.True;
               })()
@@ -928,7 +924,7 @@ var he = Rn((o) => {
     function Oe(n, t) {
       return u(t) ? p(n, t) : a.TObject(t) ? F(n, t) : a.TRecord(t) ? w(W(n), W(t)) : f.False;
     }
-    function se(n, t) {
+    function se(n, _t) {
       return (a.TLiteral(n) && I.IsString(n.const)) || a.TString(n) ? f.True : f.False;
     }
     function Me(n, t) {
@@ -963,7 +959,7 @@ var he = Rn((o) => {
     function r(n, t) {
       return a.TArray(t) && n.items !== void 0 && n.items.every((x) => w(x, t.items) === f.True);
     }
-    function L(n, t) {
+    function L(n, _t) {
       return a.TNever(n) ? f.True : a.TUnknown(n) ? f.False : a.TAny(n) ? f.Union : f.False;
     }
     function B(n, t) {
@@ -1011,7 +1007,7 @@ var he = Rn((o) => {
     function yn(n, t) {
       return n.anyOf.every((x) => w(x, t) === f.True) ? f.True : f.False;
     }
-    function Qe(n, t) {
+    function Qe(_n, _t) {
       return f.True;
     }
     function mn(n, t) {
@@ -1041,7 +1037,7 @@ var he = Rn((o) => {
                               ? f.True
                               : f.False;
     }
-    function gn(n, t) {
+    function gn(n, _t) {
       return a.TUndefined(n) || a.TUndefined(n) ? f.True : f.False;
     }
     function In(n, t) {
@@ -1125,8 +1121,8 @@ var he = Rn((o) => {
     }
     s.Extends = bn;
   })(J || (o.TypeExtends = J = {}));
-  var P;
-  (function (s) {
+  let P;
+  ((s) => {
     function e(y) {
       return y.map((b) => l(b));
     }
@@ -1137,8 +1133,8 @@ var he = Rn((o) => {
       return new Uint8Array(y);
     }
     function p(y) {
-      let b = Object.getOwnPropertyNames(y).reduce((m, U) => ({ ...m, [U]: l(y[U]) }), {}),
-        g = Object.getOwnPropertySymbols(y).reduce((m, U) => ({ ...m, [U]: l(y[U]) }), {});
+      const b = Object.getOwnPropertyNames(y).reduce((m, U) => ({ ...m, [U]: l(y[U]) }), {});
+      const g = Object.getOwnPropertySymbols(y).reduce((m, U) => ({ ...m, [U]: l(y[U]) }), {});
       return { ...b, ...g };
     }
     function l(y) {
@@ -1161,11 +1157,11 @@ var he = Rn((o) => {
     }
     s.Type = T;
   })(P || (o.TypeClone = P = {}));
-  var qe;
-  (function (s) {
+  let qe;
+  ((s) => {
     function e(d) {
       return d.map((O) => {
-        let { [o.Optional]: v, ...N } = P.Type(O);
+        const { [o.Optional]: v, ...N } = P.Type(O);
         return N;
       });
     }
@@ -1185,24 +1181,24 @@ var he = Rn((o) => {
       return d[o.Kind] === 'Intersect' ? p(d) : d[o.Kind] === 'Union' ? l(d) : d;
     }
     function T(d, O) {
-      let v = d.allOf.reduce((N, j) => {
-        let R = m(j, O);
+      const v = d.allOf.reduce((N, j) => {
+        const R = m(j, O);
         return R[o.Kind] === 'Never' ? N : [...N, R];
       }, []);
       return c(o.Type.Intersect(v));
     }
     function y(d, O) {
-      let v = d.anyOf.map((N) => m(N, O));
+      const v = d.anyOf.map((N) => m(N, O));
       return c(o.Type.Union(v));
     }
     function b(d, O) {
-      let v = d.properties[O];
+      const v = d.properties[O];
       return I.IsUndefined(v) ? o.Type.Never() : o.Type.Union([v]);
     }
     function g(d, O) {
-      let v = d.items;
+      const v = d.items;
       if (I.IsUndefined(v)) return o.Type.Never();
-      let N = v[O];
+      const N = v[O];
       return I.IsUndefined(N) ? o.Type.Never() : N;
     }
     function m(d, O) {
@@ -1217,19 +1213,19 @@ var he = Rn((o) => {
               : o.Type.Never();
     }
     function U(d, O, v = {}) {
-      let N = O.map((j) => m(d, j.toString()));
+      const N = O.map((j) => m(d, j.toString()));
       return c(o.Type.Union(N, v));
     }
     s.Resolve = U;
   })(qe || (o.IndexedAccessor = qe = {}));
-  var Y;
-  (function (s) {
+  let Y;
+  ((s) => {
     function e(g) {
-      let [m, U] = [g.slice(0, 1), g.slice(1)];
+      const [m, U] = [g.slice(0, 1), g.slice(1)];
       return `${m.toLowerCase()}${U}`;
     }
     function i(g) {
-      let [m, U] = [g.slice(0, 1), g.slice(1)];
+      const [m, U] = [g.slice(0, 1), g.slice(1)];
       return `${m.toUpperCase()}${U}`;
     }
     function u(g) {
@@ -1239,15 +1235,15 @@ var he = Rn((o) => {
       return g.toLowerCase();
     }
     function l(g, m) {
-      let U = X.ParseExact(g.pattern);
+      const U = X.ParseExact(g.pattern);
       if (!Z.Check(U)) return { ...g, pattern: c(g.pattern, m) };
-      let v = [...G.Generate(U)].map((R) => o.Type.Literal(R)),
-        N = T(v, m),
-        j = o.Type.Union(N);
+      const v = [...G.Generate(U)].map((R) => o.Type.Literal(R));
+      const N = T(v, m);
+      const j = o.Type.Union(N);
       return o.Type.TemplateLiteral([j]);
     }
     function c(g, m) {
-      return typeof g == 'string'
+      return typeof g === 'string'
         ? m === 'Uncapitalize'
           ? e(g)
           : m === 'Capitalize'
@@ -1261,7 +1257,7 @@ var he = Rn((o) => {
     }
     function T(g, m) {
       if (g.length === 0) return [];
-      let [U, ...d] = g;
+      const [U, ...d] = g;
       return [b(U, m), ...T(d, m)];
     }
     function y(g, m) {
@@ -1278,8 +1274,8 @@ var he = Rn((o) => {
     }
     s.Map = b;
   })(Y || (o.Intrinsic = Y = {}));
-  var Q;
-  (function (s) {
+  let Q;
+  ((s) => {
     function e(c, T) {
       return o.Type.Intersect(
         c.allOf.map((y) => p(y, T)),
@@ -1309,8 +1305,8 @@ var he = Rn((o) => {
     }
     s.Map = l;
   })(Q || (o.ObjectMap = Q = {}));
-  var Pe;
-  (function (s) {
+  let Pe;
+  ((s) => {
     function e(b) {
       return b[0] === '^' && b[b.length - 1] === '$' ? b.slice(1, b.length - 1) : b;
     }
@@ -1318,7 +1314,7 @@ var he = Rn((o) => {
       return b.allOf.reduce((m, U) => [...m, ...c(U, g)], []);
     }
     function u(b, g) {
-      let m = b.anyOf.map((U) => c(U, g));
+      const m = b.anyOf.map((U) => c(U, g));
       return [
         ...m.reduce(
           (U, d) => d.map((O) => (m.every((v) => v.includes(O)) ? U.add(O) : U))[0],
@@ -1326,7 +1322,7 @@ var he = Rn((o) => {
         ),
       ];
     }
-    function p(b, g) {
+    function p(b, _g) {
       return Object.getOwnPropertyNames(b.properties);
     }
     function l(b, g) {
@@ -1354,10 +1350,10 @@ var he = Rn((o) => {
     }
     s.ResolvePattern = y;
   })(Pe || (o.KeyResolver = Pe = {}));
-  var ve = class extends D {};
+  const ve = class extends D {};
   o.KeyArrayResolverError = ve;
-  var ae;
-  (function (s) {
+  let ae;
+  ((s) => {
     function e(i) {
       return Array.isArray(i)
         ? i
@@ -1367,7 +1363,7 @@ var he = Rn((o) => {
             ? [i.const]
             : a.TTemplateLiteral(i)
               ? (() => {
-                  let u = X.ParseExact(i.pattern);
+                  const u = X.ParseExact(i.pattern);
                   if (!Z.Check(u))
                     throw new ve('Cannot resolve keys from infinite template expression');
                   return [...G.Generate(u)];
@@ -1376,20 +1372,20 @@ var he = Rn((o) => {
     }
     s.Resolve = e;
   })(ae || (o.KeyArrayResolver = ae = {}));
-  var Je;
-  (function (s) {
+  let Je;
+  ((s) => {
     function* e(u) {
-      for (let p of u.anyOf) p[o.Kind] === 'Union' ? yield* e(p) : yield p;
+      for (const p of u.anyOf) p[o.Kind] === 'Union' ? yield* e(p) : yield p;
     }
     function i(u) {
       return o.Type.Union([...e(u)], { ...u });
     }
     s.Resolve = i;
   })(Je || (o.UnionResolver = Je = {}));
-  var Ne = class extends D {};
+  const Ne = class extends D {};
   o.TemplateLiteralPatternError = Ne;
-  var Se;
-  (function (s) {
+  let Se;
+  ((s) => {
     function e(l) {
       throw new Ne(l);
     }
@@ -1420,20 +1416,20 @@ var he = Rn((o) => {
     }
     s.Create = p;
   })(Se || (o.TemplateLiteralPattern = Se = {}));
-  var k;
-  (function (s) {
+  let k;
+  ((s) => {
     function e(i) {
-      let u = X.ParseExact(i.pattern);
+      const u = X.ParseExact(i.pattern);
       if (!Z.Check(u)) return o.Type.String();
-      let p = [...G.Generate(u)].map((l) => o.Type.Literal(l));
+      const p = [...G.Generate(u)].map((l) => o.Type.Literal(l));
       return o.Type.Union(p);
     }
     s.Resolve = e;
   })(k || (o.TemplateLiteralResolver = k = {}));
-  var ue = class extends D {};
+  const ue = class extends D {};
   o.TemplateLiteralParserError = ue;
-  var X;
-  (function (s) {
+  let X;
+  ((s) => {
     function e(d, O, v) {
       return d[O] === v && d.charCodeAt(O - 1) !== 92;
     }
@@ -1467,14 +1463,14 @@ var he = Rn((o) => {
       return !1;
     }
     function b(d) {
-      let [O, v] = [0, 0],
-        N = [];
+      let [O, v] = [0, 0];
+      const N = [];
       for (let R = 0; R < d.length; R++)
         if ((i(d, R) && (O += 1), u(d, R) && (O -= 1), p(d, R) && O === 0)) {
-          let A = d.slice(v, R);
+          const A = d.slice(v, R);
           A.length > 0 && N.push(m(A)), (v = R + 1);
         }
-      let j = d.slice(v);
+      const j = d.slice(v);
       return (
         j.length > 0 && N.push(m(j)),
         N.length === 0
@@ -1496,15 +1492,15 @@ var he = Rn((o) => {
         for (let A = R; A < j.length; A++) if (i(j, A)) return [R, A];
         return [R, j.length];
       }
-      let N = [];
+      const N = [];
       for (let j = 0; j < d.length; j++)
         if (i(d, j)) {
-          let [R, A] = O(d, j),
-            K = d.slice(R, A + 1);
+          const [R, A] = O(d, j);
+          const K = d.slice(R, A + 1);
           N.push(m(K)), (j = A);
         } else {
-          let [R, A] = v(d, j),
-            K = d.slice(R, A);
+          const [R, A] = v(d, j);
+          const K = d.slice(R, A);
           K.length > 0 && N.push(m(K)), (j = A - 1);
         }
       return N.length === 0
@@ -1522,10 +1518,10 @@ var he = Rn((o) => {
     }
     s.ParseExact = U;
   })(X || (o.TemplateLiteralParser = X = {}));
-  var Re = class extends D {};
+  const Re = class extends D {};
   o.TemplateLiteralFiniteError = Re;
-  var Z;
-  (function (s) {
+  let Z;
+  ((s) => {
     function e(c) {
       throw new Re(c);
     }
@@ -1567,19 +1563,19 @@ var he = Rn((o) => {
     }
     s.Check = l;
   })(Z || (o.TemplateLiteralFinite = Z = {}));
-  var xe = class extends D {};
+  const xe = class extends D {};
   o.TemplateLiteralGeneratorError = xe;
-  var G;
-  (function (s) {
+  let G;
+  ((s) => {
     function* e(c) {
       if (c.length === 1) return yield* c[0];
-      for (let T of c[0]) for (let y of e(c.slice(1))) yield `${T}${y}`;
+      for (const T of c[0]) for (const y of e(c.slice(1))) yield `${T}${y}`;
     }
     function* i(c) {
       return yield* e(c.expr.map((T) => [...l(T)]));
     }
     function* u(c) {
-      for (let T of c.expr) yield* l(T);
+      for (const T of c.expr) yield* l(T);
     }
     function* p(c) {
       return yield c.const;
@@ -1597,10 +1593,10 @@ var he = Rn((o) => {
     }
     s.Generate = l;
   })(G || (o.TemplateLiteralGenerator = G = {}));
-  var He;
-  (function (s) {
+  let He;
+  ((s) => {
     function* e(l) {
-      let c = l.trim().replace(/"|'/g, '');
+      const c = l.trim().replace(/"|'/g, '');
       return c === 'boolean'
         ? yield o.Type.Boolean()
         : c === 'number'
@@ -1610,20 +1606,20 @@ var he = Rn((o) => {
             : c === 'string'
               ? yield o.Type.String()
               : yield (() => {
-                  let T = c.split('|').map((y) => o.Type.Literal(y.trim()));
+                  const T = c.split('|').map((y) => o.Type.Literal(y.trim()));
                   return T.length === 0 ? o.Type.Never() : T.length === 1 ? T[0] : o.Type.Union(T);
                 })();
     }
     function* i(l) {
       if (l[1] !== '{') {
-        let c = o.Type.Literal('$'),
-          T = u(l.slice(1));
+        const c = o.Type.Literal('$');
+        const T = u(l.slice(1));
         return yield* [c, ...T];
       }
       for (let c = 2; c < l.length; c++)
         if (l[c] === '}') {
-          let T = e(l.slice(2, c)),
-            y = u(l.slice(c + 1));
+          const T = e(l.slice(2, c));
+          const y = u(l.slice(c + 1));
           return yield* [...T, ...y];
         }
       yield o.Type.Literal(l);
@@ -1631,8 +1627,8 @@ var he = Rn((o) => {
     function* u(l) {
       for (let c = 0; c < l.length; c++)
         if (l[c] === '$') {
-          let T = o.Type.Literal(l.slice(0, c)),
-            y = i(l.slice(c));
+          const T = o.Type.Literal(l.slice(0, c));
+          const y = i(l.slice(c));
           return yield* [T, ...y];
         }
       yield o.Type.Literal(l);
@@ -1642,7 +1638,7 @@ var he = Rn((o) => {
     }
     s.Parse = p;
   })(He || (o.TemplateLiteralDslParser = He = {}));
-  var je = class {
+  const je = class {
     constructor(e) {
       this.schema = e;
     }
@@ -1651,31 +1647,31 @@ var he = Rn((o) => {
     }
   };
   o.TransformDecodeBuilder = je;
-  var we = class {
+  const we = class {
     constructor(e, i) {
       (this.schema = e), (this.decode = i);
     }
     Encode(e) {
-      let i = P.Type(this.schema);
+      const i = P.Type(this.schema);
       return a.TTransform(i)
         ? (() => {
-            let l = {
+            const l = {
               Encode: (c) => i[o.Transform].Encode(e(c)),
               Decode: (c) => this.decode(i[o.Transform].Decode(c)),
             };
             return { ...i, [o.Transform]: l };
           })()
         : (() => {
-            let u = { Decode: this.decode, Encode: e };
+            const u = { Decode: this.decode, Encode: e };
             return { ...i, [o.Transform]: u };
           })();
     }
   };
   o.TransformEncodeBuilder = we;
-  var wn = 0,
-    Le = class extends D {};
+  let wn = 0;
+  const Le = class extends D {};
   o.TypeBuilderError = Le;
-  var Ae = class {
+  const Ae = class {
     Create(e) {
       return e;
     }
@@ -1684,7 +1680,7 @@ var he = Rn((o) => {
     }
     Discard(e, i) {
       return i.reduce((u, p) => {
-        let { [p]: l, ...c } = u;
+        const { [p]: l, ...c } = u;
         return c;
       }, e);
     }
@@ -1693,7 +1689,7 @@ var he = Rn((o) => {
     }
   };
   o.TypeBuilder = Ae;
-  var le = class extends Ae {
+  const le = class extends Ae {
     ReadonlyOptional(e) {
       return this.Readonly(this.Optional(e));
     }
@@ -1716,8 +1712,8 @@ var he = Rn((o) => {
       return { ...Y.Map(P.Type(e), 'Capitalize'), ...i };
     }
     Composite(e, i) {
-      let u = o.Type.Intersect(e, {}),
-        l = Pe.ResolveKeys(u, { includePatterns: !1 }).reduce(
+      const u = o.Type.Intersect(e, {});
+      const l = Pe.ResolveKeys(u, { includePatterns: !1 }).reduce(
           (c, T) => ({ ...c, [T]: o.Type.Index(u, [T]) }),
           {},
         );
@@ -1725,10 +1721,10 @@ var he = Rn((o) => {
     }
     Enum(e, i = {}) {
       if (I.IsUndefined(e)) return this.Throw('Enum undefined or empty');
-      let u = Object.getOwnPropertyNames(e)
-          .filter((c) => isNaN(c))
-          .map((c) => e[c]),
-        l = [...new Set(u)].map((c) => o.Type.Literal(c));
+      const u = Object.getOwnPropertyNames(e)
+          .filter((c) => Number.isNaN(c))
+          .map((c) => e[c]);
+      const l = [...new Set(u)].map((c) => o.Type.Literal(c));
       return this.Union(l, { ...i, [o.Hint]: 'Enum' });
     }
     Extends(e, i, u, p, l = {}) {
@@ -1748,7 +1744,7 @@ var he = Rn((o) => {
           ? this.Exclude(e, k.Resolve(i), u)
           : a.TUnion(e)
             ? (() => {
-                let p = e.anyOf.filter((l) => J.Extends(l, i) === f.False);
+                const p = e.anyOf.filter((l) => J.Extends(l, i) === f.False);
                 return p.length === 1 ? P.Type(p[0], u) : this.Union(p, u);
               })()
             : J.Extends(e, i) !== f.False
@@ -1762,7 +1758,7 @@ var he = Rn((o) => {
           ? this.Extract(e, k.Resolve(i), u)
           : a.TUnion(e)
             ? (() => {
-                let p = e.anyOf.filter((l) => J.Extends(l, i) !== f.False);
+                const p = e.anyOf.filter((l) => J.Extends(l, i) !== f.False);
                 return p.length === 1 ? P.Type(p[0], u) : this.Union(p, u);
               })()
             : J.Extends(e, i) !== f.False
@@ -1774,12 +1770,12 @@ var he = Rn((o) => {
         ? P.Type(e.items, u)
         : a.TTuple(e) && a.TNumber(i)
           ? (() => {
-              let l = (I.IsUndefined(e.items) ? [] : e.items).map((c) => P.Type(c));
+              const l = (I.IsUndefined(e.items) ? [] : e.items).map((c) => P.Type(c));
               return this.Union(l, u);
             })()
           : (() => {
-              let p = ae.Resolve(i),
-                l = P.Type(e);
+              const p = ae.Resolve(i);
+              const l = P.Type(e);
               return qe.Resolve(l, p, u);
             })();
     }
@@ -1790,9 +1786,9 @@ var he = Rn((o) => {
       if (e.length === 0) return o.Type.Never();
       if (e.length === 1) return P.Type(e[0], i);
       e.some((c) => a.TTransform(c)) && this.Throw('Cannot intersect transform types');
-      let u = e.every((c) => a.TObject(c)),
-        p = P.Rest(e),
-        l = a.TSchema(i.unevaluatedProperties)
+      const u = e.every((c) => a.TObject(c));
+      const p = P.Rest(e);
+      const l = a.TSchema(i.unevaluatedProperties)
           ? { unevaluatedProperties: P.Type(i.unevaluatedProperties) }
           : {};
       return i.unevaluatedProperties === !1 || a.TSchema(i.unevaluatedProperties) || u
@@ -1802,7 +1798,7 @@ var he = Rn((o) => {
     KeyOf(e, i = {}) {
       return a.TRecord(e)
         ? (() => {
-            let u = Object.getOwnPropertyNames(e.patternProperties)[0];
+            const u = Object.getOwnPropertyNames(e.patternProperties)[0];
             return u === o.PatternNumberExact
               ? this.Number(i)
               : u === o.PatternStringExact
@@ -1811,7 +1807,7 @@ var he = Rn((o) => {
           })()
         : a.TTuple(e)
           ? (() => {
-              let p = (I.IsUndefined(e.items) ? [] : e.items).map((l, c) =>
+              const p = (I.IsUndefined(e.items) ? [] : e.items).map((_l, c) =>
                 o.Type.Literal(c.toString()),
               );
               return this.Union(p, i);
@@ -1819,9 +1815,9 @@ var he = Rn((o) => {
           : a.TArray(e)
             ? this.Number(i)
             : (() => {
-                let u = Pe.ResolveKeys(e, { includePatterns: !1 });
+                const u = Pe.ResolveKeys(e, { includePatterns: !1 });
                 if (u.length === 0) return this.Never(i);
-                let p = u.map((l) => this.Literal(l));
+                const p = u.map((l) => this.Literal(l));
                 return this.Union(p, i);
               })();
     }
@@ -1844,13 +1840,13 @@ var he = Rn((o) => {
       return this.Create({ ...e, [o.Kind]: 'Number', type: 'number' });
     }
     Object(e, i = {}) {
-      let u = Object.getOwnPropertyNames(e),
-        p = u.filter((y) => a.TOptional(e[y])),
-        l = u.filter((y) => !p.includes(y)),
-        c = a.TSchema(i.additionalProperties)
+      const u = Object.getOwnPropertyNames(e);
+      const p = u.filter((y) => a.TOptional(e[y]));
+      const l = u.filter((y) => !p.includes(y));
+      const c = a.TSchema(i.additionalProperties)
           ? { additionalProperties: P.Type(i.additionalProperties) }
-          : {},
-        T = u.reduce((y, b) => ({ ...y, [b]: P.Type(e[b]) }), {});
+          : {};
+      const T = u.reduce((y, b) => ({ ...y, [b]: P.Type(e[b]) }), {});
       return l.length > 0
         ? this.Create({
             ...i,
@@ -1863,14 +1859,14 @@ var he = Rn((o) => {
         : this.Create({ ...i, ...c, [o.Kind]: 'Object', type: 'object', properties: T });
     }
     Omit(e, i, u = {}) {
-      let p = ae.Resolve(i);
+      const p = ae.Resolve(i);
       return Q.Map(
         this.Discard(P.Type(e), ['$id', o.Transform]),
         (l) => {
           I.IsArray(l.required) &&
             ((l.required = l.required.filter((c) => !p.includes(c))),
-            l.required.length === 0 && delete l.required);
-          for (let c of Object.getOwnPropertyNames(l.properties))
+            l.required.length === 0 && l.required = undefined);
+          for (const c of Object.getOwnPropertyNames(l.properties))
             p.includes(c) && delete l.properties[c];
           return this.Create(l);
         },
@@ -1881,7 +1877,7 @@ var he = Rn((o) => {
       return Q.Map(
         this.Discard(P.Type(e), ['$id', o.Transform]),
         (u) => {
-          let p = Object.getOwnPropertyNames(u.properties).reduce(
+          const p = Object.getOwnPropertyNames(u.properties).reduce(
             (l, c) => ({ ...l, [c]: this.Optional(u.properties[c]) }),
             {},
           );
@@ -1891,14 +1887,14 @@ var he = Rn((o) => {
       );
     }
     Pick(e, i, u = {}) {
-      let p = ae.Resolve(i);
+      const p = ae.Resolve(i);
       return Q.Map(
         this.Discard(P.Type(e), ['$id', o.Transform]),
         (l) => {
           I.IsArray(l.required) &&
             ((l.required = l.required.filter((c) => p.includes(c))),
-            l.required.length === 0 && delete l.required);
-          for (let c of Object.getOwnPropertyNames(l.properties))
+            l.required.length === 0 && l.required = undefined);
+          for (const c of Object.getOwnPropertyNames(l.properties))
             p.includes(c) || delete l.properties[c];
           return this.Create(l);
         },
@@ -1908,7 +1904,7 @@ var he = Rn((o) => {
     Record(e, i, u = {}) {
       return a.TTemplateLiteral(e)
         ? (() => {
-            let p = X.ParseExact(e.pattern);
+            const p = X.ParseExact(e.pattern);
             return Z.Check(p)
               ? this.Object(
                   [...G.Generate(p)].reduce((l, c) => ({ ...l, [c]: P.Type(i) }), {}),
@@ -1923,11 +1919,11 @@ var he = Rn((o) => {
           })()
         : a.TUnion(e)
           ? (() => {
-              let p = Je.Resolve(e);
+              const p = Je.Resolve(e);
               if (a.TUnionLiteral(p)) {
-                let l = p.anyOf.reduce((c, T) => ({ ...c, [T.const]: P.Type(i) }), {});
+                const l = p.anyOf.reduce((c, T) => ({ ...c, [T.const]: P.Type(i) }), {});
                 return this.Object(l, { ...u, [o.Hint]: 'Record' });
-              } else this.Throw('Record key of type union contains non-literal types');
+              }this.Throw('Record key of type union contains non-literal types');
             })()
           : a.TLiteral(e)
             ? I.IsString(e.const) || I.IsNumber(e.const)
@@ -1942,7 +1938,7 @@ var he = Rn((o) => {
                 })
               : a.TString(e)
                 ? (() => {
-                    let p = I.IsUndefined(e.pattern) ? o.PatternStringExact : e.pattern;
+                    const p = I.IsUndefined(e.pattern) ? o.PatternStringExact : e.pattern;
                     return this.Create({
                       ...u,
                       [o.Kind]: 'Record',
@@ -1954,7 +1950,7 @@ var he = Rn((o) => {
     }
     Recursive(e, i = {}) {
       I.IsUndefined(i.$id) && (i.$id = `T${wn++}`);
-      let u = e({ [o.Kind]: 'This', $ref: `${i.$id}` });
+      const u = e({ [o.Kind]: 'This', $ref: `${i.$id}` });
       return (u.$id = i.$id), this.Create({ ...i, [o.Hint]: 'Recursive', ...u });
     }
     Ref(e, i = {}) {
@@ -1967,7 +1963,7 @@ var he = Rn((o) => {
       return Q.Map(
         this.Discard(P.Type(e), ['$id', o.Transform]),
         (u) => {
-          let p = Object.getOwnPropertyNames(u.properties).reduce(
+          const p = Object.getOwnPropertyNames(u.properties).reduce(
             (l, c) => ({ ...l, [c]: this.Discard(u.properties[c], [o.Optional]) }),
             {},
           );
@@ -1989,16 +1985,16 @@ var he = Rn((o) => {
       return this.Create({ ...e, [o.Kind]: 'String', type: 'string' });
     }
     TemplateLiteral(e, i = {}) {
-      let u = I.IsString(e) ? Se.Create(He.Parse(e)) : Se.Create(e);
+      const u = I.IsString(e) ? Se.Create(He.Parse(e)) : Se.Create(e);
       return this.Create({ ...i, [o.Kind]: 'TemplateLiteral', type: 'string', pattern: u });
     }
     Transform(e) {
       return new je(e);
     }
     Tuple(e, i = {}) {
-      let [u, p, l] = [!1, e.length, e.length],
-        c = P.Rest(e),
-        T =
+      const [u, p, l] = [!1, e.length, e.length];
+      const c = P.Rest(e);
+      const T =
           e.length > 0
             ? {
                 ...i,
@@ -2019,10 +2015,10 @@ var he = Rn((o) => {
       return a.TTemplateLiteral(e)
         ? k.Resolve(e)
         : (() => {
-            let u = e;
+            const u = e;
             if (u.length === 0) return this.Never(i);
             if (u.length === 1) return this.Create(P.Type(u[0], i));
-            let p = P.Rest(u);
+            const p = P.Rest(u);
             return this.Create({ ...i, [o.Kind]: 'Union', anyOf: p });
           })();
     }
@@ -2037,7 +2033,7 @@ var he = Rn((o) => {
     }
   };
   o.JsonTypeBuilder = le;
-  var Fe = class extends le {
+  const Fe = class extends le {
     AsyncIterator(e, i = {}) {
       return this.Create({
         ...i,
@@ -2047,10 +2043,10 @@ var he = Rn((o) => {
       });
     }
     Awaited(e, i = {}) {
-      let u = (p) =>
+      const u = (p) =>
         p.length > 0
           ? (() => {
-              let [l, ...c] = p;
+              const [l, ...c] = p;
               return [this.Awaited(l), ...u(c)];
             })()
           : p;
@@ -2069,7 +2065,7 @@ var he = Rn((o) => {
       return this.Tuple([...e.parameters], { ...i });
     }
     Constructor(e, i, u) {
-      let [p, l] = [P.Rest(e), P.Type(i)];
+      const [p, l] = [P.Rest(e), P.Type(i)];
       return this.Create({
         ...u,
         [o.Kind]: 'Constructor',
@@ -2082,7 +2078,7 @@ var he = Rn((o) => {
       return this.Create({ ...e, [o.Kind]: 'Date', type: 'Date' });
     }
     Function(e, i, u) {
-      let [p, l] = [P.Rest(e), P.Type(i)];
+      const [p, l] = [P.Rest(e), P.Type(i)];
       return this.Create({
         ...u,
         [o.Kind]: 'Function',
@@ -2104,7 +2100,7 @@ var he = Rn((o) => {
       return this.Create({ ...i, [o.Kind]: 'Promise', type: 'Promise', item: P.Type(e) });
     }
     RegExp(e, i = {}) {
-      let u = I.IsString(e) ? e : e.source;
+      const u = I.IsString(e) ? e : e.source;
       return this.Create({ ...i, [o.Kind]: 'String', type: 'string', pattern: u });
     }
     RegEx(e, i = {}) {
@@ -2130,21 +2126,21 @@ var he = Rn((o) => {
   o.JsonType = new le();
   o.Type = new Fe();
 });
-var ce = jn(he(), 1),
-  en = ce.Type.String({
+const ce = jn(he(), 1);
+const en = ce.Type.String({
     pattern: '.*\\{languageTag|locale\\}.*\\.json$',
     examples: ['./messages/{locale}.json', './i18n/{locale}.json'],
     title: 'Path to language files',
     description:
       'Specify the pathPattern to locate resource files in your repository. It must include `{locale}` and end with `.json`.',
-  }),
-  Ln = ce.Type.Array(en, {
+  });
+const Ln = ce.Type.Array(en, {
     title: 'Paths to language files',
     description:
       'Specify multiple pathPatterns to locate resource files in your repository. Each must include `{locale}` and end with `.json`.',
-  }),
-  Ce = ce.Type.Object({ pathPattern: ce.Type.Union([en, Ln]) });
-var nn = (s) =>
+  });
+const Ce = ce.Type.Object({ pathPattern: ce.Type.Union([en, Ln]) });
+const nn = (s) =>
   s
     .map((e) => {
       switch (e.type) {
@@ -2155,9 +2151,9 @@ var nn = (s) =>
       }
     })
     .join('');
-var tn = (s) => {
-  let e = {};
-  for (let i of s.variants) {
+const tn = (s) => {
+  const e = {};
+  for (const i of s.variants) {
     if (e[i.languageTag] !== void 0)
       throw new Error(
         `The message "${s.id}" has multiple variants for the language tag "${i.languageTag}". The inlang-message-format plugin does not support multiple variants for the same language tag at the moment.`,
@@ -2166,29 +2162,29 @@ var tn = (s) => {
   }
   return e;
 };
-var rn = (s) => {
-  let e = /\{([^}]+)\}/g,
-    i,
-    u = 0,
-    p = [];
-  for (; (i = e.exec(s)) !== null; ) {
-    let c = i[1],
-      T = s.slice(u, i.index);
+const rn = (s) => {
+  const e = /\{([^}]+)\}/g;
+  let i;
+  let u = 0;
+  const p = [];
+  while ((i = e.exec(s)) !== null) {
+    const c = i[1];
+    const T = s.slice(u, i.index);
     T.length > 0 && p.push({ type: 'Text', value: T }),
       p.push({ type: 'VariableReference', name: c }),
       (u = i.index + i[0].length);
   }
-  let l = s.slice(Math.max(0, u));
+  const l = s.slice(Math.max(0, u));
   return l.length > 0 && p.push({ type: 'Text', value: l }), p;
 };
-var _e = (s) => ({
+const _e = (s) => ({
   id: s.key,
   alias: {},
   selectors: [],
   variants: [{ languageTag: s.languageTag, match: [], pattern: rn(s.value) }],
 });
-var An = 'plugin.inlang.messageFormat',
-  H = {
+const An = 'plugin.inlang.messageFormat';
+const H = {
     id: An,
     displayName: 'Inlang Message Format',
     description:
@@ -2197,15 +2193,15 @@ var An = 'plugin.inlang.messageFormat',
     settingsSchema: Ce,
     loadMessages: async ({ settings: s, nodeishFs: e }) => {
       await $n({ settings: s, nodeishFs: e });
-      let i = {};
-      for (let u of s.languageTags)
+      const i = {};
+      for (const u of s.languageTags)
         try {
-          let p = await e.readFile(
+          const p = await e.readFile(
               s['plugin.inlang.messageFormat'].pathPattern.replace('{languageTag}', u),
               { encoding: 'utf-8' },
-            ),
-            l = JSON.parse(p);
-          for (let c in l)
+            );
+          const l = JSON.parse(p);
+          for (const c in l)
             c !== '$schema' &&
               (i[c]
                 ? (i[c].variants = [
@@ -2219,13 +2215,13 @@ var An = 'plugin.inlang.messageFormat',
       return Object.values(i);
     },
     saveMessages: async ({ settings: s, nodeishFs: e, messages: i }) => {
-      let u = {};
-      for (let p of i) {
-        let l = tn(p);
-        for (let [c, T] of Object.entries(l)) u[c] === void 0 && (u[c] = {}), (u[c][p.id] = T);
+      const u = {};
+      for (const p of i) {
+        const l = tn(p);
+        for (const [c, T] of Object.entries(l)) u[c] === void 0 && (u[c] = {}), (u[c][p.id] = T);
       }
-      for (let [p, l] of Object.entries(u)) {
-        let c = s['plugin.inlang.messageFormat'].pathPattern.replace('{languageTag}', p);
+      for (const [p, l] of Object.entries(u)) {
+        const c = s['plugin.inlang.messageFormat'].pathPattern.replace('{languageTag}', p);
         await Fn({ path: c, nodeishFs: e }),
           await e.writeFile(
             s['plugin.inlang.messageFormat'].pathPattern.replace('{languageTag}', p),
@@ -2236,18 +2232,18 @@ var An = 'plugin.inlang.messageFormat',
           );
       }
     },
-  },
-  Fn = async (s) => {
+  };
+const Fn = async (s) => {
     try {
       await s.nodeishFs.mkdir(Cn(s.path), { recursive: !0 });
     } catch {}
   };
 function Cn(s) {
   if (s.length === 0) return '.';
-  let e = s.charCodeAt(0),
-    i = e === 47,
-    u = -1,
-    p = !0;
+  let e = s.charCodeAt(0);
+  const i = e === 47;
+  let u = -1;
+  let p = !0;
   for (let l = s.length - 1; l >= 1; --l)
     if (((e = s.charCodeAt(l)), e === 47)) {
       if (!p) {
@@ -2257,10 +2253,10 @@ function Cn(s) {
     } else p = !1;
   return u === -1 ? (i ? '/' : '.') : i && u === 1 ? '//' : s.slice(0, u);
 }
-var $n = async (s) => {
+const $n = async (s) => {
   if (s.settings['plugin.inlang.messageFormat'].filePath != null)
     try {
-      let e = await s.nodeishFs.readFile(s.settings['plugin.inlang.messageFormat'].filePath, {
+      const e = await s.nodeishFs.readFile(s.settings['plugin.inlang.messageFormat'].filePath, {
         encoding: 'utf-8',
       });
       await H.saveMessages?.({
@@ -2273,20 +2269,20 @@ var $n = async (s) => {
         );
     } catch {}
 };
-var on = async ({ settings: s }) => {
-  let e = [],
-    i = s[h]?.pathPattern
+const on = async ({ settings: s }) => {
+  const e = [];
+  const i = s[h]?.pathPattern
       ? Array.isArray(s[h].pathPattern)
         ? s[h].pathPattern
         : [s[h].pathPattern]
       : [];
-  for (let u of i)
-    for (let p of s.locales) e.push({ locale: p, path: u.replace(/{(locale|languageTag)}/, p) });
+  for (const u of i)
+    for (const p of s.locales) e.push({ locale: p, path: u.replace(/{(locale|languageTag)}/, p) });
   return e;
 };
 function sn(s) {
   return (
-    s && s.constructor && typeof s.constructor.isBuffer == 'function' && s.constructor.isBuffer(s)
+    s?.constructor && typeof s.constructor.isBuffer === 'function' && s.constructor.isBuffer(s)
   );
 }
 function an(s) {
@@ -2294,19 +2290,19 @@ function an(s) {
 }
 function We(s, e) {
   e = e || {};
-  let i = e.delimiter || '.',
-    u = e.maxDepth,
-    p = e.transformKey || an,
-    l = {};
+  const i = e.delimiter || '.';
+  const u = e.maxDepth;
+  const p = e.transformKey || an;
+  const l = {};
   function c(T, y, b) {
     (b = b || 1),
-      Object.keys(T).forEach(function (g) {
-        let m = T[g],
-          U = e.safe && Array.isArray(m),
-          d = Object.prototype.toString.call(m),
-          O = sn(m),
-          v = d === '[object Object]' || d === '[object Array]',
-          N = y ? y + i + p(g) : p(g);
+      Object.keys(T).forEach((g) => {
+        const m = T[g];
+        const U = e.safe && Array.isArray(m);
+        const d = Object.prototype.toString.call(m);
+        const O = sn(m);
+        const v = d === '[object Object]' || d === '[object Array]';
+        const N = y ? y + i + p(g) : p(g);
         if (!U && !O && v && Object.keys(m).length && (!e.maxDepth || b < u)) return c(m, N, b + 1);
         l[N] = m;
       });
@@ -2315,47 +2311,45 @@ function We(s, e) {
 }
 function Ye(s, e) {
   e = e || {};
-  let i = e.delimiter || '.',
-    u = e.overwrite || !1,
-    p = e.transformKey || an,
-    l = {};
+  const i = e.delimiter || '.';
+  const u = e.overwrite || !1;
+  const p = e.transformKey || an;
+  const l = {};
   if (sn(s) || Object.prototype.toString.call(s) !== '[object Object]') return s;
   function T(g) {
-    let m = Number(g);
-    return isNaN(m) || g.indexOf('.') !== -1 || e.object ? g : m;
+    const m = Number(g);
+    return Number.isNaN(m) || g.indexOf('.') !== -1 || e.object ? g : m;
   }
   function y(g, m, U) {
-    return Object.keys(U).reduce(function (d, O) {
-      return (d[g + i + O] = U[O]), d;
-    }, m);
+    return Object.keys(U).reduce((d, O) => ((d[g + i + O] = U[O]), d), m);
   }
   function b(g) {
-    let m = Object.prototype.toString.call(g),
-      U = m === '[object Array]',
-      d = m === '[object Object]';
+    const m = Object.prototype.toString.call(g);
+    const U = m === '[object Array]';
+    const d = m === '[object Object]';
     if (g) {
       if (U) return !g.length;
       if (d) return !Object.keys(g).length;
     } else return !0;
   }
   return (
-    (s = Object.keys(s).reduce(function (g, m) {
-      let U = Object.prototype.toString.call(s[m]);
+    (s = Object.keys(s).reduce((g, m) => {
+      const U = Object.prototype.toString.call(s[m]);
       return !(U === '[object Object]' || U === '[object Array]') || b(s[m])
         ? ((g[m] = s[m]), g)
         : y(m, g, We(s[m], e));
     }, {})),
-    Object.keys(s).forEach(function (g) {
-      let m = g.split(i).map(p),
-        U = T(m.shift()),
-        d = T(m[0]),
-        O = l;
-      for (; d !== void 0; ) {
+    Object.keys(s).forEach((g) => {
+      const m = g.split(i).map(p);
+      let U = T(m.shift());
+      let d = T(m[0]);
+      let O = l;
+      while (d !== void 0) {
         if (U === '__proto__') return;
-        let v = Object.prototype.toString.call(O[U]),
-          N = v === '[object Object]' || v === '[object Array]';
+        const v = Object.prototype.toString.call(O[U]);
+        const N = v === '[object Object]' || v === '[object Array]';
         if (!u && !N && typeof O[U] < 'u') return;
-        ((u && !N) || (!u && O[U] == null)) && (O[U] = typeof d == 'number' && !e.object ? [] : {}),
+        ((u && !N) || (!u && O[U] == null)) && (O[U] = typeof d === 'number' && !e.object ? [] : {}),
           (O = O[U]),
           m.length > 0 && ((U = T(m.shift())), (d = T(m[0])));
       }
@@ -2364,18 +2358,18 @@ function Ye(s, e) {
     l
   );
 }
-var ln = async ({ files: s }) => {
-  let e = [],
-    i = [],
-    u = [];
-  for (let p of s) {
-    let l = JSON.parse(new TextDecoder().decode(p.content)),
-      c = We(l, { safe: !0 });
-    for (let T in c) {
+const ln = async ({ files: s }) => {
+  const e = [];
+  const i = [];
+  const u = [];
+  for (const p of s) {
+    const l = JSON.parse(new TextDecoder().decode(p.content));
+    const c = We(l, { safe: !0 });
+    for (const T in c) {
       if (T === '$schema') continue;
-      let y = Kn(T, p.locale, c[T]);
+      const y = Kn(T, p.locale, c[T]);
       i.push(y.message), u.push(...y.variants);
-      let b = e.find((g) => g.id === y.bundle.id);
+      const b = e.find((g) => g.id === y.bundle.id);
       b === void 0
         ? e.push(y.bundle)
         : (b.declarations = $e([...b.declarations, ...y.bundle.declarations]));
@@ -2384,11 +2378,11 @@ var ln = async ({ files: s }) => {
   return { bundles: e, messages: i, variants: u };
 };
 function Kn(s, e, i) {
-  let u = En(s, e, i),
-    p = $e(u.declarations),
-    l = $e(u.selectors),
-    c = l.filter((T) => p.find((y) => y.name === T.name) === void 0);
-  for (let T of c) p.push({ type: 'input-variable', name: T.name });
+  const u = En(s, e, i);
+  const p = $e(u.declarations);
+  const l = $e(u.selectors);
+  const c = l.filter((T) => p.find((y) => y.name === T.name) === void 0);
+  for (const T of c) p.push({ type: 'input-variable', name: T.name });
   return {
     bundle: { id: s, declarations: p },
     message: { bundleId: s, selectors: l, locale: e },
@@ -2396,26 +2390,26 @@ function Kn(s, e, i) {
   };
 }
 function En(s, e, i) {
-  if (typeof i == 'string') {
-    let y = un(i);
+  if (typeof i === 'string') {
+    const y = un(i);
     return {
       variants: [{ messageBundleId: s, messageLocale: e, matches: [], pattern: y.pattern }],
       declarations: y.declarations,
       selectors: [],
     };
   }
-  let u = i[0],
-    p = [],
-    l = (u.selectors ?? []).map((y) => ({ type: 'variable-reference', name: y })),
-    c = new Set();
-  for (let y of u.declarations ?? []) c.add(Mn(y));
-  let T = new Set();
-  for (let [y, b] of Object.entries(u.match)) {
-    let g = un(b),
-      m = Bn(y);
-    for (let U of g.declarations) {
+  const u = i[0];
+  const p = [];
+  const l = (u.selectors ?? []).map((y) => ({ type: 'variable-reference', name: y }));
+  const c = new Set();
+  for (const y of u.declarations ?? []) c.add(Mn(y));
+  const T = new Set();
+  for (const [y, b] of Object.entries(u.match)) {
+    const g = un(b);
+    const m = Bn(y);
+    for (const U of g.declarations) {
       let d = !1;
-      for (let O of c)
+      for (const O of c)
         if (O.name === U.name) {
           d = !0;
           break;
@@ -2423,31 +2417,31 @@ function En(s, e, i) {
       if (d) break;
       c.add(U);
     }
-    for (let U of m.selectors) T.add(U);
+    for (const U of m.selectors) T.add(U);
     p.push({ messageBundleId: s, messageLocale: e, matches: m.matches, pattern: g.pattern });
   }
   return { variants: p, declarations: Array.from(c), selectors: $e([...l, ...Array.from(T)]) };
 }
 function un(s) {
-  let e = [],
-    i = [],
-    u = s.split(/(\{.*?\})/).filter((p) => p !== '');
-  for (let p of u)
+  const e = [];
+  const i = [];
+  const u = s.split(/(\{.*?\})/).filter((p) => p !== '');
+  for (const p of u)
     if ((p.startsWith('{') && p.endsWith('}')) === !1) e.push({ type: 'text', value: p });
     else {
-      let l = p.slice(1, -1);
+      const l = p.slice(1, -1);
       i.push({ type: 'input-variable', name: l }),
         e.push({ type: 'expression', arg: { type: 'variable-reference', name: l } });
     }
   return { declarations: i, pattern: e };
 }
 function Bn(s) {
-  let e = s.replace(' ', ''),
-    i = [],
-    u = [],
-    p = e.split(',');
-  for (let l of p) {
-    let [c, T] = l.split('=');
+  const e = s.replace(' ', '');
+  const i = [];
+  const u = [];
+  const p = e.split(',');
+  for (const l of p) {
+    const [c, T] = l.split('=');
     !c ||
       !T ||
       (T === '*'
@@ -2457,17 +2451,17 @@ function Bn(s) {
   }
   return { matches: i, selectors: u };
 }
-var $e = (s) => [...new Set(s.map((e) => JSON.stringify(e)))].map((e) => JSON.parse(e));
+const $e = (s) => [...new Set(s.map((e) => JSON.stringify(e)))].map((e) => JSON.parse(e));
 function Mn(s) {
   if (s.startsWith('input')) return { type: 'input-variable', name: s.slice(6).trim() };
   if (s.startsWith('local')) {
-    let e = s.match(/local (\w+) = (\w+): (\w+)(.*)/),
-      [, i, u, p, l] = e,
-      c = l
+    const e = s.match(/local (\w+) = (\w+): (\w+)(.*)/);
+    const [, i, u, p, l] = e;
+    const c = l
         ?.trim()
         .split(/\s+/)
         .map((T) => {
-          let [y, b] = T.split('=');
+          const [y, b] = T.split('=');
           return y && b ? { name: y, value: { type: 'literal', value: b } } : null;
         })
         .filter(Boolean);
@@ -2483,11 +2477,11 @@ function Mn(s) {
   }
   throw new Error('Unsupported declaration type');
 }
-var pn = async ({ bundles: s, messages: e, variants: i }) => {
-  let u = {};
-  for (let l of e) {
-    let c = s.find((y) => y.id === l.bundleId),
-      T = [
+const pn = async ({ bundles: s, messages: e, variants: i }) => {
+  const u = {};
+  for (const l of e) {
+    const c = s.find((y) => y.id === l.bundleId);
+    const T = [
         ...i
           .reduce(
             (y, b) => (b.messageId === l.id && y.set(JSON.stringify(b.matches), b), y),
@@ -2497,8 +2491,8 @@ var pn = async ({ bundles: s, messages: e, variants: i }) => {
       ];
     u[l.locale] = { ...u[l.locale], ...Dn(c, l, T) };
   }
-  let p = [];
-  for (let l in u)
+  const p = [];
+  for (const l in u)
     p.push({
       locale: l,
       content: new TextEncoder().encode(
@@ -2508,13 +2502,13 @@ var pn = async ({ bundles: s, messages: e, variants: i }) => {
           '	',
         ),
       ),
-      name: l + '.json',
+      name: `${l}.json`,
     });
   return p;
 };
 function Dn(s, e, i) {
-  let u = e.bundleId,
-    p = kn(s, e, i);
+  const u = e.bundleId;
+  const p = kn(s, e, i);
   return { [u]: p };
 }
 function kn(s, e, i) {
@@ -2524,15 +2518,15 @@ function kn(s, e, i) {
     s.declarations.some((p) => p.type !== 'input-variable') === !1
   )
     return cn(i[0].pattern);
-  let u = [];
-  for (let p of i) {
+  const u = [];
+  for (const p of i) {
     if (p.matches.length === 0)
-      for (let T of p.pattern)
+      for (const T of p.pattern)
         T.type === 'expression' &&
           T.arg.type === 'variable-reference' &&
           p.matches.push({ key: T.arg.name, type: 'catchall-match' });
-    let l = cn(p.pattern),
-      c = Vn(p.matches);
+    const l = cn(p.pattern);
+    const c = Vn(p.matches);
     u.push([c, l]);
   }
   return [
@@ -2548,7 +2542,7 @@ function kn(s, e, i) {
 }
 function cn(s) {
   let e = '';
-  for (let i of s)
+  for (const i of s)
     if (i.type === 'text') e += i.value;
     else if (i.arg.type === 'variable-reference') e += `{${i.arg.name}}`;
     else throw new Error('Unsupported expression type');
@@ -2571,7 +2565,7 @@ function zn(s) {
       s.value.annotation && (e += `: ${s.value.annotation.name}`),
       s.value.annotation?.options)
     )
-      for (let i of s.value?.annotation?.options ?? []) {
+      for (const i of s.value?.annotation?.options ?? []) {
         if (i.value.type !== 'literal') throw new Error('Unsupported option type');
         e += ` ${i.name}=${i.value.value}`;
       }
@@ -2579,8 +2573,8 @@ function zn(s) {
   }
   throw new Error('Unsupported declaration type');
 }
-var h = 'plugin.inlang.messageFormat',
-  Tn = {
+const h = 'plugin.inlang.messageFormat';
+const Tn = {
     key: h,
     id: H.id,
     displayName: H.displayName,
@@ -2592,5 +2586,5 @@ var h = 'plugin.inlang.messageFormat',
     importFiles: ln,
     exportFiles: pn,
   };
-var It = Tn;
+const It = Tn;
 export { It as default };
