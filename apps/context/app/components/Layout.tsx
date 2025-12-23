@@ -294,6 +294,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
           backgroundColor: 'var(--bg-primary)',
           borderRight: '1px solid var(--border-primary)',
           transform: sidebarOpen ? 'translateX(0)' : 'translateX(-100%)',
+          pointerEvents: sidebarOpen ? 'auto' : 'none',
         }}
       >
         {/* Sidebar Header */}
