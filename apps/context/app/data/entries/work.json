@@ -1,0 +1,440 @@
+[
+  {
+    "id": "hoesa",
+    "korean": "회사",
+    "romanization": "hoesa",
+    "pronunciation": "[회사]",
+    "hanja": "會社",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "business", "place"],
+    "translations": {
+      "ko": {
+        "word": "회사",
+        "explanation": "사람들이 돈을 벌기 위해 일하는 조직. 상업 활동을 하는 법인 단체.",
+        "examples": [
+          "회사에 가요.",
+          "어느 회사 다니세요?",
+          "\"회사 생활 어때?\" \"좋아, 동료들이 다 친절해.\"",
+          "우리 회사는 IT 기업이에요."
+        ],
+        "variations": {
+          "formal": ["회사입니다", "기업", "법인"],
+          "casual": ["회사~", "직장"],
+          "short": ["회사", "company"]
+        }
+      },
+      "en": {
+        "word": "Company",
+        "explanation": "An organization where people work to earn money. A corporate entity engaged in commercial activities.",
+        "examples": [
+          "회사에 가요. - I'm going to the company/work.",
+          "어느 회사 다니세요? - Which company do you work for?",
+          "\"How's work life?\" \"Good, my colleagues are all nice.\"",
+          "Our company is an IT firm."
+        ],
+        "variations": {
+          "formal": ["It is a company", "Corporation", "Enterprise"],
+          "casual": ["Company~", "Workplace"],
+          "short": ["Company", "Corp"]
+        }
+      }
+    }
+  },
+  {
+    "id": "samusil",
+    "korean": "사무실",
+    "romanization": "samusil",
+    "pronunciation": "[사무실]",
+    "hanja": "事務室",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "place", "office"],
+    "translations": {
+      "ko": {
+        "word": "사무실",
+        "explanation": "사무를 보는 방이나 공간. 회사에서 일하는 곳.",
+        "examples": [
+          "사무실에 있어요.",
+          "사무실이 넓어요.",
+          "\"어디 있어?\" \"사무실에서 일하는 중이야.\"",
+          "새 사무실로 이사했어요."
+        ],
+        "variations": {
+          "formal": ["사무실입니다", "집무실", "업무 공간"],
+          "casual": ["사무실~", "사무실에서"],
+          "short": ["사무실", "office"]
+        }
+      },
+      "en": {
+        "word": "Office",
+        "explanation": "A room or space where office work is done. The place where you work in a company.",
+        "examples": [
+          "사무실에 있어요. - I'm at the office.",
+          "사무실이 넓어요. - The office is spacious.",
+          "\"Where are you?\" \"I'm working at the office.\"",
+          "We moved to a new office."
+        ],
+        "variations": {
+          "formal": ["It is an office", "Executive office", "Workspace"],
+          "casual": ["Office~", "At the office"],
+          "short": ["Office", "Off"]
+        }
+      }
+    }
+  },
+  {
+    "id": "hoeui",
+    "korean": "회의",
+    "romanization": "hoeui",
+    "pronunciation": "[회의]",
+    "hanja": "會議",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "meeting", "business"],
+    "translations": {
+      "ko": {
+        "word": "회의",
+        "explanation": "여러 사람이 모여 의견을 나누는 것. 업무에 대해 논의하는 모임.",
+        "examples": [
+          "회의 중이에요.",
+          "회의가 길어요.",
+          "\"오후에 회의 있어?\" \"응, 2시에 팀 회의가 있어.\"",
+          "회의실이 어디예요?"
+        ],
+        "variations": {
+          "formal": ["회의입니다", "미팅", "회합"],
+          "casual": ["회의~", "회의 중"],
+          "short": ["회의", "meeting"]
+        }
+      },
+      "en": {
+        "word": "Meeting",
+        "explanation": "When multiple people gather to share opinions. A gathering to discuss work matters.",
+        "examples": [
+          "회의 중이에요. - I'm in a meeting.",
+          "회의가 길어요. - The meeting is long.",
+          "\"Do you have a meeting this afternoon?\" \"Yeah, I have a team meeting at 2.\"",
+          "Where is the meeting room?"
+        ],
+        "variations": {
+          "formal": ["It is a meeting", "Conference", "Assembly"],
+          "casual": ["Meeting~", "In a meeting"],
+          "short": ["Meeting", "Mtg"]
+        }
+      }
+    }
+  },
+  {
+    "id": "sangsa",
+    "korean": "상사",
+    "romanization": "sangsa",
+    "pronunciation": "[상사]",
+    "hanja": "上司",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "people", "hierarchy"],
+    "translations": {
+      "ko": {
+        "word": "상사",
+        "explanation": "직장에서 나보다 높은 직급에 있는 사람. 보스, 팀장, 부장 등.",
+        "examples": [
+          "상사가 엄격해요.",
+          "상사와 회의했어요.",
+          "\"상사한테 보고했어?\" \"아직 안 했어, 지금 할게.\"",
+          "우리 상사는 이해심이 많아요."
+        ],
+        "variations": {
+          "formal": ["상사님", "상급자", "관리자"],
+          "casual": ["상사~", "윗사람"],
+          "short": ["상사", "boss"]
+        }
+      },
+      "en": {
+        "word": "Boss / Superior",
+        "explanation": "A person with a higher position than you at work. Manager, team leader, director, etc.",
+        "examples": [
+          "상사가 엄격해요. - My boss is strict.",
+          "상사와 회의했어요. - I had a meeting with my boss.",
+          "\"Did you report to your boss?\" \"Not yet, I'll do it now.\"",
+          "Our boss is very understanding."
+        ],
+        "variations": {
+          "formal": ["Boss (honorific)", "Superior", "Manager"],
+          "casual": ["Boss~", "Higher-up"],
+          "short": ["Boss", "Mgr"]
+        }
+      }
+    }
+  },
+  {
+    "id": "dongryo",
+    "korean": "동료",
+    "romanization": "dongryo",
+    "pronunciation": "[동료]",
+    "hanja": "同僚",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "people", "colleague"],
+    "translations": {
+      "ko": {
+        "word": "동료",
+        "explanation": "같은 직장에서 함께 일하는 사람. 같은 팀이나 부서의 직원.",
+        "examples": [
+          "동료들이 친절해요.",
+          "동료와 점심 먹었어요.",
+          "\"새로운 동료가 왔어.\" \"어떤 사람이야?\"",
+          "동료들과 회식했어요."
+        ],
+        "variations": {
+          "formal": ["동료입니다", "직장 동료", "팀원"],
+          "casual": ["동료~", "직장 사람들"],
+          "short": ["동료", "coworker"]
+        }
+      },
+      "en": {
+        "word": "Colleague / Coworker",
+        "explanation": "A person you work with at the same workplace. An employee in the same team or department.",
+        "examples": [
+          "동료들이 친절해요. - My colleagues are kind.",
+          "동료와 점심 먹었어요. - I had lunch with a colleague.",
+          "\"A new colleague joined.\" \"What are they like?\"",
+          "I had dinner with my coworkers."
+        ],
+        "variations": {
+          "formal": ["It is a colleague", "Work colleague", "Team member"],
+          "casual": ["Colleague~", "Work people"],
+          "short": ["Colleague", "Coworker"]
+        }
+      }
+    }
+  },
+  {
+    "id": "eommu",
+    "korean": "업무",
+    "romanization": "eommu",
+    "pronunciation": "[업무]",
+    "hanja": "業務",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "task", "duty"],
+    "translations": {
+      "ko": {
+        "word": "업무",
+        "explanation": "맡아서 처리해야 할 일. 직장에서 해야 하는 일이나 책임.",
+        "examples": [
+          "업무가 많아요.",
+          "업무 시간이에요.",
+          "\"무슨 업무 하세요?\" \"마케팅 업무를 담당하고 있어요.\"",
+          "업무가 바쁠 때는 야근해요."
+        ],
+        "variations": {
+          "formal": ["업무입니다", "직무", "담당 업무"],
+          "casual": ["업무~", "일"],
+          "short": ["업무", "work"]
+        }
+      },
+      "en": {
+        "word": "Work / Task / Duty",
+        "explanation": "Work that needs to be handled. Jobs or responsibilities at the workplace.",
+        "examples": [
+          "업무가 많아요. - I have a lot of work.",
+          "업무 시간이에요. - It's working hours.",
+          "\"What kind of work do you do?\" \"I'm in charge of marketing.\"",
+          "When work is busy, I work overtime."
+        ],
+        "variations": {
+          "formal": ["It is work", "Duty", "Assigned work"],
+          "casual": ["Work~", "Job"],
+          "short": ["Work", "Task"]
+        }
+      }
+    }
+  },
+  {
+    "id": "imeil",
+    "korean": "이메일",
+    "romanization": "imeil",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "communication", "technology"],
+    "translations": {
+      "ko": {
+        "word": "이메일",
+        "explanation": "인터넷으로 주고받는 편지. 전자 우편.",
+        "examples": [
+          "이메일 보냈어요.",
+          "이메일 확인해 주세요.",
+          "\"이메일 받았어?\" \"응, 방금 확인했어.\"",
+          "중요한 내용은 이메일로 보내세요."
+        ],
+        "variations": {
+          "formal": ["이메일입니다", "전자우편", "메일"],
+          "casual": ["이메일~", "메일"],
+          "short": ["메일", "email"]
+        }
+      },
+      "en": {
+        "word": "Email",
+        "explanation": "A letter sent and received over the internet. Electronic mail.",
+        "examples": [
+          "이메일 보냈어요. - I sent an email.",
+          "이메일 확인해 주세요. - Please check your email.",
+          "\"Did you get the email?\" \"Yeah, I just checked it.\"",
+          "Please send important information via email."
+        ],
+        "variations": {
+          "formal": ["It is an email", "Electronic mail", "Mail"],
+          "casual": ["Email~", "Mail"],
+          "short": ["Email", "E-mail"]
+        }
+      }
+    }
+  },
+  {
+    "id": "jeonhwa",
+    "korean": "전화",
+    "romanization": "jeonhwa",
+    "pronunciation": "[전화]",
+    "hanja": "電話",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "communication", "daily"],
+    "translations": {
+      "ko": {
+        "word": "전화",
+        "explanation": "목소리로 대화하는 통신 수단. 전화기를 통해 먼 곳에 있는 사람과 이야기한다.",
+        "examples": [
+          "전화 왔어요.",
+          "전화 좀 할게요.",
+          "\"전화 받아!\" \"알았어, 지금 받을게.\"",
+          "전화로 예약했어요."
+        ],
+        "variations": {
+          "formal": ["전화입니다", "통화", "전화 통화"],
+          "casual": ["전화~", "전화해"],
+          "short": ["전화", "call"]
+        }
+      },
+      "en": {
+        "word": "Phone / Call",
+        "explanation": "A communication device for voice conversation. Talk to someone far away through a telephone.",
+        "examples": [
+          "전화 왔어요. - There's a phone call. / You have a call.",
+          "전화 좀 할게요. - I'll make a phone call.",
+          "\"Answer the phone!\" \"Okay, I'll answer it now.\"",
+          "I made a reservation by phone."
+        ],
+        "variations": {
+          "formal": ["It is a phone call", "Telephone conversation", "Phone call"],
+          "casual": ["Phone~", "Call me"],
+          "short": ["Phone", "Call"]
+        }
+      }
+    }
+  },
+  {
+    "id": "bogoseo",
+    "korean": "보고서",
+    "romanization": "bogoseo",
+    "pronunciation": "[보고서]",
+    "hanja": "報告書",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "document", "report"],
+    "translations": {
+      "ko": {
+        "word": "보고서",
+        "explanation": "조사하거나 연구한 내용을 정리한 문서. 업무 결과를 정리해서 제출하는 글.",
+        "examples": [
+          "보고서 작성 중이에요.",
+          "보고서 제출했어요.",
+          "\"보고서 언제까지야?\" \"금요일까지 제출해야 해.\"",
+          "월간 보고서를 만들어요."
+        ],
+        "variations": {
+          "formal": ["보고서입니다", "리포트", "결과 보고서"],
+          "casual": ["보고서~", "리포트"],
+          "short": ["보고서", "report"]
+        }
+      },
+      "en": {
+        "word": "Report",
+        "explanation": "A document organizing research or study results. A written summary of work results to be submitted.",
+        "examples": [
+          "보고서 작성 중이에요. - I'm writing a report.",
+          "보고서 제출했어요. - I submitted the report.",
+          "\"When is the report due?\" \"I have to submit it by Friday.\"",
+          "I'm creating a monthly report."
+        ],
+        "variations": {
+          "formal": ["It is a report", "Report document", "Results report"],
+          "casual": ["Report~", "Report"],
+          "short": ["Report", "Rpt"]
+        }
+      }
+    }
+  },
+  {
+    "id": "magam",
+    "korean": "마감",
+    "romanization": "magam",
+    "pronunciation": "[마감]",
+    "hanja": "馬監",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "deadline", "time"],
+    "translations": {
+      "ko": {
+        "word": "마감",
+        "explanation": "일을 끝내야 하는 기한. 제출 기한이나 완료 시한.",
+        "examples": [
+          "마감이 내일이에요.",
+          "마감 시간이 촉박해요.",
+          "\"마감이 언제야?\" \"이번 주 금요일까지야.\"",
+          "마감을 지키려면 밤샘 작업해야 해요."
+        ],
+        "variations": {
+          "formal": ["마감입니다", "기한", "제출 마감"],
+          "casual": ["마감~", "데드라인"],
+          "short": ["마감", "deadline"]
+        }
+      },
+      "en": {
+        "word": "Deadline",
+        "explanation": "The time limit by which work must be completed. Submission deadline or completion time limit.",
+        "examples": [
+          "마감이 내일이에요. - The deadline is tomorrow.",
+          "마감 시간이 촉박해요. - The deadline is tight.",
+          "\"When is the deadline?\" \"By Friday this week.\"",
+          "We need to work overnight to meet the deadline."
+        ],
+        "variations": {
+          "formal": ["It is a deadline", "Time limit", "Submission deadline"],
+          "casual": ["Deadline~", "Due date"],
+          "short": ["Deadline", "DL"]
+        }
+      }
+    }
+  }
+]

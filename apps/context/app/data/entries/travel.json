@@ -1,0 +1,652 @@
+[
+  {
+    "id": "gonghang",
+    "korean": "공항",
+    "romanization": "gonghang",
+    "pronunciation": "[공항]",
+    "hanja": "空港",
+    "partOfSpeech": "noun",
+    "categoryId": "travel",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["travel", "transportation", "place"],
+    "translations": {
+      "ko": {
+        "word": "공항",
+        "explanation": "비행기가 이착륙하는 곳. 여행을 시작하거나 끝내는 장소로, 출국/입국 수속을 한다.",
+        "examples": [
+          "공항에 몇 시에 가요?",
+          "인천공항이 크네요.",
+          "\"비행기 시간이 언제야?\" \"오전 10시인데, 공항에 2시간 전에 도착해야 해.\"",
+          "공항에서 면세점 쇼핑을 했어요."
+        ],
+        "variations": {
+          "formal": ["공항입니다", "항공 터미널"],
+          "casual": ["공항~", "공항에서"],
+          "short": ["공항", "airport"]
+        }
+      },
+      "en": {
+        "word": "Airport",
+        "explanation": "A place where airplanes take off and land. Where travelers begin or end their journey, handling departure/arrival procedures.",
+        "examples": [
+          "공항에 몇 시에 가요? - What time are you going to the airport?",
+          "인천공항이 크네요. - Incheon Airport is huge.",
+          "\"What time is your flight?\" \"It's at 10 AM, but I need to get to the airport 2 hours early.\"",
+          "I did duty-free shopping at the airport."
+        ],
+        "variations": {
+          "formal": ["It is an airport", "Air terminal"],
+          "casual": ["Airport~", "At the airport"],
+          "short": ["Airport", "AP"]
+        }
+      }
+    }
+  },
+  {
+    "id": "yeok",
+    "korean": "역",
+    "romanization": "yeok",
+    "pronunciation": "[역]",
+    "hanja": "驛",
+    "partOfSpeech": "noun",
+    "categoryId": "travel",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["travel", "transportation", "place"],
+    "translations": {
+      "ko": {
+        "word": "역",
+        "explanation": "기차나 지하철이 정차하는 곳. 사람들이 타고 내리는 장소.",
+        "examples": [
+          "서울역에서 만나요.",
+          "다음 역에서 내려요.",
+          "\"어디서 내릴 거야?\" \"강남역에서 내릴게.\"",
+          "이 역에서 2호선으로 갈아타세요."
+        ],
+        "variations": {
+          "formal": ["역입니다", "정거장"],
+          "casual": ["역~", "역에서"],
+          "short": ["역", "station"]
+        }
+      },
+      "en": {
+        "word": "Station",
+        "explanation": "A place where trains or subways stop. Where people get on and off.",
+        "examples": [
+          "서울역에서 만나요. - Let's meet at Seoul Station.",
+          "다음 역에서 내려요. - I'll get off at the next station.",
+          "\"Where are you getting off?\" \"I'll get off at Gangnam Station.\"",
+          "Transfer to Line 2 at this station."
+        ],
+        "variations": {
+          "formal": ["It is a station", "Stop/Depot"],
+          "casual": ["Station~", "At the station"],
+          "short": ["Stn", "Station"]
+        }
+      }
+    }
+  },
+  {
+    "id": "beoseu",
+    "korean": "버스",
+    "romanization": "beoseu",
+    "partOfSpeech": "noun",
+    "categoryId": "travel",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["travel", "transportation", "vehicle"],
+    "translations": {
+      "ko": {
+        "word": "버스",
+        "explanation": "많은 사람을 태우는 대중교통 수단. 정해진 노선을 따라 운행한다.",
+        "examples": [
+          "버스 타고 가요.",
+          "몇 번 버스 타요?",
+          "\"학교까지 어떻게 가?\" \"버스 타고 20분 걸려.\"",
+          "버스가 막 출발했어요."
+        ],
+        "variations": {
+          "formal": ["버스입니다", "시내버스", "고속버스"],
+          "casual": ["버스~", "버스로"],
+          "short": ["버스", "bus"]
+        }
+      },
+      "en": {
+        "word": "Bus",
+        "explanation": "Public transportation that carries many people. Operates along fixed routes.",
+        "examples": [
+          "버스 타고 가요. - I'll go by bus.",
+          "몇 번 버스 타요? - Which bus number do you take?",
+          "\"How do you get to school?\" \"It takes 20 minutes by bus.\"",
+          "The bus just left."
+        ],
+        "variations": {
+          "formal": ["It is a bus", "City bus", "Express bus"],
+          "casual": ["Bus~", "By bus"],
+          "short": ["Bus", "B"]
+        }
+      }
+    }
+  },
+  {
+    "id": "jihacheol",
+    "korean": "지하철",
+    "romanization": "jihacheol",
+    "pronunciation": "[지하철]",
+    "hanja": "地下鐵",
+    "partOfSpeech": "noun",
+    "categoryId": "travel",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["travel", "transportation", "vehicle"],
+    "translations": {
+      "ko": {
+        "word": "지하철",
+        "explanation": "땅 밑으로 다니는 기차. 도시의 주요 대중교통 수단이다.",
+        "examples": [
+          "지하철 타고 가요.",
+          "1호선 타세요.",
+          "\"회사까지 어떻게 출퇴근해?\" \"지하철로 30분 걸려.\"",
+          "지하철이 빨라요."
+        ],
+        "variations": {
+          "formal": ["지하철입니다", "전철", "도시철도"],
+          "casual": ["지하철~", "지하철로"],
+          "short": ["지철", "subway"]
+        }
+      },
+      "en": {
+        "word": "Subway / Metro",
+        "explanation": "A train that runs underground. A major public transportation system in cities.",
+        "examples": [
+          "지하철 타고 가요. - I'll go by subway.",
+          "1호선 타세요. - Take Line 1.",
+          "\"How do you commute to work?\" \"It takes 30 minutes by subway.\"",
+          "The subway is fast."
+        ],
+        "variations": {
+          "formal": ["It is a subway", "Metro", "Urban rail"],
+          "casual": ["Subway~", "By subway"],
+          "short": ["Subway", "Metro"]
+        }
+      }
+    }
+  },
+  {
+    "id": "taeksi",
+    "korean": "택시",
+    "romanization": "taeksi",
+    "partOfSpeech": "noun",
+    "categoryId": "travel",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["travel", "transportation", "vehicle"],
+    "translations": {
+      "ko": {
+        "word": "택시",
+        "explanation": "요금을 내고 원하는 곳까지 데려다 주는 자동차. 개인 교통수단으로 편리하다.",
+        "examples": [
+          "택시 타고 가요.",
+          "택시 잡아 주세요.",
+          "\"너무 늦었다, 택시 타자.\" \"응, 여기서 택시 잡을 수 있을까?\"",
+          "비 올 때는 택시가 잘 안 잡혀요."
+        ],
+        "variations": {
+          "formal": ["택시입니다", "승용차"],
+          "casual": ["택시~", "택시로"],
+          "short": ["택시", "taxi"]
+        }
+      },
+      "en": {
+        "word": "Taxi / Cab",
+        "explanation": "A car that takes you to your destination for a fee. A convenient personal transportation option.",
+        "examples": [
+          "택시 타고 가요. - I'll take a taxi.",
+          "택시 잡아 주세요. - Please hail a taxi.",
+          "\"We're too late, let's take a taxi.\" \"Okay, can we catch a taxi here?\"",
+          "It's hard to catch a taxi when it rains."
+        ],
+        "variations": {
+          "formal": ["It is a taxi", "Passenger car"],
+          "casual": ["Taxi~", "By taxi"],
+          "short": ["Taxi", "Cab"]
+        }
+      }
+    }
+  },
+  {
+    "id": "gicha",
+    "korean": "기차",
+    "romanization": "gicha",
+    "pronunciation": "[기차]",
+    "hanja": "汽車",
+    "partOfSpeech": "noun",
+    "categoryId": "travel",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["travel", "transportation", "vehicle"],
+    "translations": {
+      "ko": {
+        "word": "기차",
+        "explanation": "철로 위를 달리는 긴 차량. 장거리 이동에 사용된다.",
+        "examples": [
+          "기차 타고 부산 가요.",
+          "KTX가 빨라요.",
+          "\"기차표 예매했어?\" \"응, 오후 3시 기차야.\"",
+          "기차 여행이 좋아요."
+        ],
+        "variations": {
+          "formal": ["기차입니다", "열차", "KTX"],
+          "casual": ["기차~", "기차로"],
+          "short": ["기차", "train"]
+        }
+      },
+      "en": {
+        "word": "Train",
+        "explanation": "A long vehicle that runs on rails. Used for long-distance travel.",
+        "examples": [
+          "기차 타고 부산 가요. - I'm going to Busan by train.",
+          "KTX가 빨라요. - KTX (high-speed train) is fast.",
+          "\"Did you book train tickets?\" \"Yeah, it's the 3 PM train.\"",
+          "I love train travel."
+        ],
+        "variations": {
+          "formal": ["It is a train", "Railway train", "KTX"],
+          "casual": ["Train~", "By train"],
+          "short": ["Train", "KTX"]
+        }
+      }
+    }
+  },
+  {
+    "id": "bihaenggi",
+    "korean": "비행기",
+    "romanization": "bihaenggi",
+    "pronunciation": "[비행기]",
+    "hanja": "飛行機",
+    "partOfSpeech": "noun",
+    "categoryId": "travel",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["travel", "transportation", "vehicle"],
+    "translations": {
+      "ko": {
+        "word": "비행기",
+        "explanation": "하늘을 나는 교통수단. 먼 거리를 빠르게 이동할 때 사용한다.",
+        "examples": [
+          "비행기 타고 제주도 가요.",
+          "비행기 표 샀어요?",
+          "\"비행기가 몇 시에 출발해?\" \"아침 9시에 출발해.\"",
+          "비행기가 무서워요."
+        ],
+        "variations": {
+          "formal": ["비행기입니다", "항공기"],
+          "casual": ["비행기~", "비행기로"],
+          "short": ["비행기", "plane"]
+        }
+      },
+      "en": {
+        "word": "Airplane / Plane",
+        "explanation": "Transportation that flies in the sky. Used to travel long distances quickly.",
+        "examples": [
+          "비행기 타고 제주도 가요. - I'm going to Jeju by plane.",
+          "비행기 표 샀어요? - Did you buy plane tickets?",
+          "\"What time does the plane depart?\" \"It departs at 9 AM.\"",
+          "I'm afraid of flying."
+        ],
+        "variations": {
+          "formal": ["It is an airplane", "Aircraft"],
+          "casual": ["Plane~", "By plane"],
+          "short": ["Plane", "Flight"]
+        }
+      }
+    }
+  },
+  {
+    "id": "hotel",
+    "korean": "호텔",
+    "romanization": "hotel",
+    "partOfSpeech": "noun",
+    "categoryId": "travel",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["travel", "accommodation", "place"],
+    "translations": {
+      "ko": {
+        "word": "호텔",
+        "explanation": "여행객이 돈을 내고 묵는 숙박 시설. 방과 각종 편의 시설을 제공한다.",
+        "examples": [
+          "호텔 예약했어요?",
+          "호텔이 깨끗해요.",
+          "\"어디서 묵을 거야?\" \"명동에 있는 호텔 예약했어.\"",
+          "5성급 호텔에서 하룻밤 묵었어요."
+        ],
+        "variations": {
+          "formal": ["호텔입니다", "숙박 시설"],
+          "casual": ["호텔~", "호텔에서"],
+          "short": ["호텔", "hotel"]
+        }
+      },
+      "en": {
+        "word": "Hotel",
+        "explanation": "Accommodation where travelers pay to stay. Provides rooms and various amenities.",
+        "examples": [
+          "호텔 예약했어요? - Did you book a hotel?",
+          "호텔이 깨끗해요. - The hotel is clean.",
+          "\"Where will you stay?\" \"I booked a hotel in Myeongdong.\"",
+          "I stayed at a 5-star hotel for one night."
+        ],
+        "variations": {
+          "formal": ["It is a hotel", "Lodging facility"],
+          "casual": ["Hotel~", "At the hotel"],
+          "short": ["Hotel", "Htl"]
+        }
+      }
+    }
+  },
+  {
+    "id": "hwajangsil",
+    "korean": "화장실",
+    "romanization": "hwajangsil",
+    "pronunciation": "[화장실]",
+    "hanja": "化粧室",
+    "partOfSpeech": "noun",
+    "categoryId": "travel",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["travel", "place", "essential"],
+    "translations": {
+      "ko": {
+        "word": "화장실",
+        "explanation": "용변을 보거나 손을 씻는 곳. '화장실', '욕실', '변소' 등으로 불린다.",
+        "examples": [
+          "화장실 어디예요?",
+          "화장실 좀 가고 올게요.",
+          "\"화장실 급해!\" \"저기 오른쪽에 있어.\"",
+          "공항 화장실이 깨끗해요."
+        ],
+        "variations": {
+          "formal": ["화장실입니다", "욕실", "세면실"],
+          "casual": ["화장실~", "화장실 좀"],
+          "short": ["화실", "restroom"]
+        }
+      },
+      "en": {
+        "word": "Restroom / Bathroom",
+        "explanation": "A place to use the toilet or wash hands. Also called bathroom, toilet, or lavatory.",
+        "examples": [
+          "화장실 어디예요? - Where is the restroom?",
+          "화장실 좀 가고 올게요. - I'll go to the restroom real quick.",
+          "\"I really need to use the bathroom!\" \"It's over there on the right.\"",
+          "The airport restrooms are clean."
+        ],
+        "variations": {
+          "formal": ["It is a restroom", "Lavatory", "Washroom"],
+          "casual": ["Restroom~", "Need restroom"],
+          "short": ["Bathroom", "WC"]
+        }
+      }
+    }
+  },
+  {
+    "id": "chulgु",
+    "korean": "출구",
+    "romanization": "chulgu",
+    "pronunciation": "[출구]",
+    "hanja": "出口",
+    "partOfSpeech": "noun",
+    "categoryId": "travel",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["travel", "place", "direction"],
+    "translations": {
+      "ko": {
+        "word": "출구",
+        "explanation": "나가는 곳. 건물이나 지하철역 등에서 밖으로 나가는 문.",
+        "examples": [
+          "3번 출구로 나가세요.",
+          "출구가 어디예요?",
+          "\"어느 출구로 나갈까?\" \"2번 출구가 가까워.\"",
+          "비상 출구는 저쪽이에요."
+        ],
+        "variations": {
+          "formal": ["출구입니다", "출입구"],
+          "casual": ["출구~", "출구로"],
+          "short": ["출구", "exit"]
+        }
+      },
+      "en": {
+        "word": "Exit",
+        "explanation": "A way out. The door or gate to leave a building or subway station.",
+        "examples": [
+          "3번 출구로 나가세요. - Please use Exit 3.",
+          "출구가 어디예요? - Where is the exit?",
+          "\"Which exit should we use?\" \"Exit 2 is closer.\"",
+          "The emergency exit is over there."
+        ],
+        "variations": {
+          "formal": ["It is an exit", "Entrance/Exit"],
+          "casual": ["Exit~", "Through the exit"],
+          "short": ["Exit", "Way out"]
+        }
+      }
+    }
+  },
+  {
+    "id": "ipgu",
+    "korean": "입구",
+    "romanization": "ipgu",
+    "pronunciation": "[입구]",
+    "hanja": "入口",
+    "partOfSpeech": "noun",
+    "categoryId": "travel",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["travel", "place", "direction"],
+    "translations": {
+      "ko": {
+        "word": "입구",
+        "explanation": "들어가는 곳. 건물이나 장소로 들어가는 문.",
+        "examples": [
+          "입구가 어디예요?",
+          "정문 입구에서 만나요.",
+          "\"입구가 막혀 있어.\" \"뒷문으로 들어가자.\"",
+          "박물관 입구에 사람이 많아요."
+        ],
+        "variations": {
+          "formal": ["입구입니다", "정문", "출입구"],
+          "casual": ["입구~", "입구로"],
+          "short": ["입구", "entrance"]
+        }
+      },
+      "en": {
+        "word": "Entrance",
+        "explanation": "A way in. The door or gate to enter a building or place.",
+        "examples": [
+          "입구가 어디예요? - Where is the entrance?",
+          "정문 입구에서 만나요. - Let's meet at the main entrance.",
+          "\"The entrance is blocked.\" \"Let's go in through the back door.\"",
+          "There are many people at the museum entrance."
+        ],
+        "variations": {
+          "formal": ["It is an entrance", "Main gate", "Entry"],
+          "casual": ["Entrance~", "Through entrance"],
+          "short": ["Entrance", "Way in"]
+        }
+      }
+    }
+  },
+  {
+    "id": "eodi",
+    "korean": "어디",
+    "romanization": "eodi",
+    "partOfSpeech": "pronoun",
+    "categoryId": "travel",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["travel", "question", "direction"],
+    "translations": {
+      "ko": {
+        "word": "어디",
+        "explanation": "장소를 물을 때 쓰는 의문사. '어느 곳'이라는 의미이다.",
+        "examples": [
+          "어디 가요?",
+          "화장실이 어디예요?",
+          "\"어디서 만날까?\" \"카페 앞에서 만나자.\"",
+          "어디에서 왔어요?"
+        ],
+        "variations": {
+          "formal": ["어디입니까?", "어느 곳", "어디에"],
+          "casual": ["어디?", "어디로?"],
+          "short": ["어디", "where"]
+        }
+      },
+      "en": {
+        "word": "Where",
+        "explanation": "An interrogative used to ask about location. Means 'what place'.",
+        "examples": [
+          "어디 가요? - Where are you going?",
+          "화장실이 어디예요? - Where is the restroom?",
+          "\"Where should we meet?\" \"Let's meet in front of the café.\"",
+          "Where did you come from?"
+        ],
+        "variations": {
+          "formal": ["Where is it? (formal)", "Which place", "Where to"],
+          "casual": ["Where?", "Where to?"],
+          "short": ["Where", "Whr"]
+        }
+      }
+    }
+  },
+  {
+    "id": "eolma",
+    "korean": "얼마",
+    "romanization": "eolma",
+    "partOfSpeech": "pronoun",
+    "categoryId": "travel",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["travel", "question", "price"],
+    "translations": {
+      "ko": {
+        "word": "얼마",
+        "explanation": "수량이나 가격을 물을 때 쓰는 의문사. '얼마나'의 줄임말로도 쓰인다.",
+        "examples": [
+          "이거 얼마예요?",
+          "얼마나 걸려요?",
+          "\"택시비가 얼마 나왔어?\" \"만 원 정도.\"",
+          "여기서 공항까지 얼마나 걸려요?"
+        ],
+        "variations": {
+          "formal": ["얼마입니까?", "가격이 얼마", "얼마나"],
+          "casual": ["얼마?", "얼마예요?"],
+          "short": ["얼마", "how much"]
+        }
+      },
+      "en": {
+        "word": "How much / How many",
+        "explanation": "An interrogative used to ask about quantity or price. Can also be short for 'how much/many'.",
+        "examples": [
+          "이거 얼마예요? - How much is this?",
+          "얼마나 걸려요? - How long does it take?",
+          "\"How much was the taxi fare?\" \"About 10,000 won.\"",
+          "How long does it take from here to the airport?"
+        ],
+        "variations": {
+          "formal": ["How much is it? (formal)", "The price is how much", "How many/much"],
+          "casual": ["How much?", "How much is it?"],
+          "short": ["How much", "$$"]
+        }
+      }
+    }
+  },
+  {
+    "id": "pyo",
+    "korean": "표",
+    "romanization": "pyo",
+    "pronunciation": "[표]",
+    "hanja": "票",
+    "partOfSpeech": "noun",
+    "categoryId": "travel",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["travel", "ticket", "essential"],
+    "translations": {
+      "ko": {
+        "word": "표",
+        "explanation": "입장권이나 승차권. 무언가를 이용하거나 들어갈 때 사는 티켓.",
+        "examples": [
+          "표 샀어요?",
+          "기차표 예매했어요.",
+          "\"영화표 두 장 주세요.\" \"네, 어느 좌석으로 드릴까요?\"",
+          "표가 매진됐어요."
+        ],
+        "variations": {
+          "formal": ["표입니다", "티켓", "승차권"],
+          "casual": ["표~", "표 샀어?"],
+          "short": ["표", "ticket"]
+        }
+      },
+      "en": {
+        "word": "Ticket",
+        "explanation": "An admission or boarding pass. A ticket purchased to use something or enter somewhere.",
+        "examples": [
+          "표 샀어요? - Did you buy tickets?",
+          "기차표 예매했어요. - I reserved train tickets.",
+          "\"Two movie tickets, please.\" \"Sure, which seats would you like?\"",
+          "Tickets are sold out."
+        ],
+        "variations": {
+          "formal": ["It is a ticket", "Ticket", "Boarding pass"],
+          "casual": ["Ticket~", "Did you buy tickets?"],
+          "short": ["Ticket", "Tix"]
+        }
+      }
+    }
+  },
+  {
+    "id": "yeyak",
+    "korean": "예약",
+    "romanization": "yeyak",
+    "pronunciation": "[예약]",
+    "hanja": "豫約",
+    "partOfSpeech": "noun",
+    "categoryId": "travel",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["travel", "booking", "essential"],
+    "translations": {
+      "ko": {
+        "word": "예약",
+        "explanation": "미리 자리나 상품을 확보하는 것. 호텔, 식당, 티켓 등을 미리 신청한다.",
+        "examples": [
+          "예약했어요?",
+          "호텔 예약 좀 해 주세요.",
+          "\"레스토랑 예약 안 하면 자리 없을 거야.\" \"그럼 지금 예약할게.\"",
+          "인터넷으로 예약하면 할인돼요."
+        ],
+        "variations": {
+          "formal": ["예약입니다", "사전 예약", "예약 확정"],
+          "casual": ["예약~", "예약했어?"],
+          "short": ["예약", "reservation"]
+        }
+      },
+      "en": {
+        "word": "Reservation / Booking",
+        "explanation": "Securing a seat or product in advance. Booking hotels, restaurants, tickets, etc. ahead of time.",
+        "examples": [
+          "예약했어요? - Did you make a reservation?",
+          "호텔 예약 좀 해 주세요. - Please book a hotel.",
+          "\"If we don't reserve the restaurant, there won't be any seats.\" \"Then I'll make a reservation now.\"",
+          "You get a discount if you book online."
+        ],
+        "variations": {
+          "formal": ["It is a reservation", "Advance booking", "Confirmed reservation"],
+          "casual": ["Reservation~", "Did you book?"],
+          "short": ["Booking", "Res"]
+        }
+      }
+    }
+  }
+]
