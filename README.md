@@ -224,57 +224,54 @@ pnpm dev:roots          # → http://localhost:3005
 
 <br>
 
-### Hardcoding Prohibition (하드코딩 절대 금지)
+### Hardcoding Rules (하드코딩 규칙)
 
-> **CRITICAL:** Never use hardcoded values to pass tests or bypass errors.
+> **원칙:** 하드코딩은 금지. 단, 우수한 설계 목적일 경우에만 허용.
 >
-> **절대 금지:** 테스트 통과나 에러 회피를 위한 하드코딩 금지
+> **Principle:** Hardcoding is prohibited, except for excellent design purposes.
 
 <br>
 
-**❌ NEVER DO (절대 하지 말 것):**
+**❌ NEVER (절대 금지):**
 
 ```typescript
 // ❌ Hardcoded values to pass tests
-const EXPECTED_COUNT = 348;  // Magic number
+const EXPECTED_COUNT = 348;  // Magic number with no context
 return items.length || 348;  // Fallback to hide error
 
 // ❌ Mock data to bypass errors
 const data = testMode ? MOCK_DATA : realData;
-
-// ❌ Disabling validation
-// @ts-ignore
-// biome-ignore lint: skip validation
 ```
 
 <br>
 
-**✅ ALWAYS DO (항상 할 것):**
+**✅ ALLOWED (허용 - 우수한 설계):**
 
 ```typescript
-// ✅ Dynamic calculation
-const count = items.length;
-if (count === 0) throw new Error('No items found');
+// ✅ Named constants with clear purpose
+export const LIMITS = {
+  ID_LENGTH: 100,      // Maximum characters for entity IDs
+  SEARCH_LENGTH: 100,  // Maximum search query length
+} as const;
 
-// ✅ Proper error handling
-const data = await fetchData();
-if (!data) throw new Error('Failed to fetch data');
-
-// ✅ Type-safe validation
-function validateId(id: string): asserts id is ValidId {
-  if (!isValidId(id)) throw new Error(`Invalid ID: ${id}`);
+// ✅ CSS design tokens
+:root {
+  --header-height: 56px;  /* Standard mobile app header */
 }
+
+// ✅ Type-safe enums
+type Theme = 'light' | 'dark';
+type Language = 'en' | 'ko';
 ```
 
 <br>
 
-### Required Process (필수 프로세스)
+**⚠️ 허용 조건 (Allowed Conditions):**
 
-Before any fix (수정 전 반드시):
-
-1. **Identify root cause** - Find WHY, not just WHAT (원인 파악)
-2. **Verify fix doesn't break existing** - Run tests (기존 기능 유지 확인)
-3. **No shortcuts** - Hardcoding is never acceptable (지름길 금지)
+1. **Named clearly** - 서술적인 이름 사용
+2. **Documented** - 왜 이 값인지 주석으로 설명
+3. **Single source** - 한 곳에서만 정의
+4. **Exported** - `@soundblue/shared`에서 재사용
 
 <br>
 

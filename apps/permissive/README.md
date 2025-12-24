@@ -140,16 +140,15 @@ pnpm build:permissive
 
 ## ⛔ Code Quality (코드 품질)
 
-> **하드코딩 절대 금지 (NO HARDCODING)**
+> **하드코딩 규칙: 우수한 설계 목적일 경우에만 허용**
 
 ```typescript
-// ❌ NEVER
+// ❌ NEVER - 테스트 통과/에러 회피용
 const API_COUNT = 58;  // Magic number
 return apis.length || 58;
 
-// ✅ ALWAYS
-const apis = getWebApis();
-if (apis.length === 0) throw new Error('No APIs found');
+// ✅ ALLOWED - 우수한 설계
+export const LICENSE_TYPES = ['MIT', 'Apache-2.0', 'BSD'] as const;
 ```
 
 See [root README](../../README.md#-code-quality-rules-코드-품질-규칙) for full guidelines.

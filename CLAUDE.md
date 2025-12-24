@@ -21,26 +21,36 @@
 
 > **이 규칙들을 위반하면 즉시 중단하고 근본 원인을 파악할 것**
 
-#### 1. 하드코딩 절대 금지 (NO HARDCODING)
+#### 1. 하드코딩 규칙 (HARDCODING RULES)
+
+> **기본 원칙: 하드코딩은 금지. 단, 우수한 설계 목적일 경우에만 예외 허용.**
+
 ```
-❌ NEVER DO THIS:
+❌ 절대 금지 (NEVER ALLOWED):
 - 테스트 통과를 위한 하드코딩된 값
 - 빌드 에러 회피를 위한 임시 상수
 - "일단 동작하게" 하려는 매직 넘버
 - 특정 환경에서만 작동하는 고정값
 - 에러 메시지를 숨기기 위한 기본값
 
-✅ ALWAYS DO THIS:
-- 동적으로 계산/조회
-- 환경 변수 또는 설정 파일 사용
-- 타입 시스템으로 강제
-- 런타임 검증 추가
+✅ 허용되는 하드코딩 (ALLOWED - 우수한 설계 목적):
+- 명확한 이름의 상수 정의 (LIMITS.ID_LENGTH = 100)
+- 타입 안전성을 위한 enum/literal 값
+- 수학/물리 상수 (Math.PI, Euler's number)
+- CSS 변수로 노출된 디자인 토큰 (--header-height: 56px)
+- 프로토콜/표준 명세 기반 값 (HTTP status codes)
+
+⚠️ 허용 조건 (Required for Allowed Hardcoding):
+1. 명확하고 서술적인 이름 사용
+2. 왜 이 값인지 주석으로 설명
+3. 단일 출처(Single Source of Truth)에서 정의
+4. @soundblue/shared에서 export하여 재사용
 ```
 
-**하드코딩 감지 시 즉시 질문:**
-1. "왜 이 값이 고정되어야 하는가?"
-2. "이 값이 변경되면 어디가 깨지는가?"
-3. "이 값의 출처(source of truth)는 어디인가?"
+**하드코딩 검토 질문:**
+1. "이것이 우수한 설계의 일부인가, 아니면 지름길인가?"
+2. "이 값이 변경되면 한 곳에서만 수정하면 되는가?"
+3. "이 값의 의미가 이름과 주석으로 명확한가?"
 
 #### 2. 에러 숨기기 절대 금지 (NO ERROR HIDING)
 - Never delete/comment out code to hide errors (에러 숨기려고 코드 삭제/주석 처리 금지)

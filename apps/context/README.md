@@ -166,16 +166,15 @@ pnpm build:context
 
 ## ⛔ Code Quality (코드 품질)
 
-> **하드코딩 절대 금지 (NO HARDCODING)**
+> **하드코딩 규칙: 우수한 설계 목적일 경우에만 허용**
 
 ```typescript
-// ❌ NEVER
+// ❌ NEVER - 테스트 통과/에러 회피용
 const ENTRY_COUNT = 344;  // Magic number
 return entries.length || 344;
 
-// ✅ ALWAYS
-const entries = await loadEntries();
-if (entries.length === 0) throw new Error('No entries found');
+// ✅ ALLOWED - 우수한 설계
+export const LIMITS = { ID_LENGTH: 100 } as const;  // Named, documented
 ```
 
 See [root README](../../README.md#-code-quality-rules-코드-품질-규칙) for full guidelines.

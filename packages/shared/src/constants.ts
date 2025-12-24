@@ -2,18 +2,17 @@
  * Shared constants across all apps
  *
  * @remarks
- * ⛔ **HARDCODING PROHIBITION (하드코딩 절대 금지)**
+ * ⛔ **HARDCODING RULES (하드코딩 규칙)**
  *
- * All numeric values MUST be defined here as named constants.
- * Never use raw numbers in application code.
+ * 이 파일의 상수들은 "허용된 하드코딩"의 예시입니다.
+ * 허용 조건: 명확한 이름 + 문서화 + Single Source + Export
  *
  * @example
  * ```typescript
- * // ❌ NEVER - Magic numbers
+ * // ❌ NEVER - 익명의 매직 넘버
  * if (query.length > 100) return;
- * if (window.innerWidth < 768) setMobile(true);
  *
- * // ✅ ALWAYS - Use constants
+ * // ✅ ALLOWED - 이 파일의 상수 사용
  * import { LIMITS, BREAKPOINTS } from '@soundblue/shared';
  * if (query.length > LIMITS.SEARCH_LENGTH) return;
  * if (window.innerWidth < BREAKPOINTS.MOBILE) setMobile(true);

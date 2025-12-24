@@ -2,16 +2,17 @@
  * @soundblue/shared - Shared utilities for Soundblue monorepo
  *
  * @remarks
- * ⛔ **HARDCODING PROHIBITION (하드코딩 절대 금지)**
+ * ⛔ **HARDCODING RULES (하드코딩 규칙)**
  *
- * NEVER use magic numbers or hardcoded values. ALWAYS use exported constants.
+ * 하드코딩은 우수한 설계 목적일 경우에만 허용됩니다.
+ * Hardcoding is only allowed for excellent design purposes.
  *
  * @example
  * ```typescript
- * // ❌ NEVER
+ * // ❌ NEVER - 익명의 매직 넘버
  * if (id.length > 100) throw new Error('Too long');
  *
- * // ✅ ALWAYS
+ * // ✅ ALLOWED - 명확한 이름과 문서화
  * import { LIMITS } from '@soundblue/shared';
  * if (id.length > LIMITS.ID_LENGTH) throw new Error('Too long');
  * ```

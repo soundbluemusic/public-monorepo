@@ -2,20 +2,18 @@
  * @soundblue/shared-react - Shared React components, hooks, and stores
  *
  * @remarks
- * ⛔ **HARDCODING PROHIBITION (하드코딩 절대 금지)**
+ * ⛔ **HARDCODING RULES (하드코딩 규칙)**
  *
- * NEVER use inline magic values in components. ALWAYS use:
- * - CSS variables (`var(--header-height)`)
- * - Tailwind classes (`h-header`, `pt-header`)
- * - Shared constants from `@soundblue/shared`
+ * 하드코딩은 우수한 설계 목적일 경우에만 허용됩니다.
+ * 허용: CSS 변수, Tailwind 클래스, @soundblue/shared 상수
  *
  * @example
  * ```tsx
- * // ❌ NEVER - Hardcoded values
- * <div style={{ height: '56px', paddingTop: '56px' }}>
+ * // ❌ NEVER - 익명의 매직 넘버
+ * <div style={{ height: '56px' }}>
  * const isMobile = window.innerWidth < 768;
  *
- * // ✅ ALWAYS - CSS variables and shared constants
+ * // ✅ ALLOWED - CSS 변수와 공유 상수
  * <div className="h-header pt-header">
  * import { BREAKPOINTS } from '@soundblue/shared';
  * const isMobile = window.innerWidth < BREAKPOINTS.MOBILE;

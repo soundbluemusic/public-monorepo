@@ -163,23 +163,24 @@ import type {
 
 ## ⛔ Code Quality (코드 품질)
 
-> **하드코딩 절대 금지 (NO HARDCODING)**
+> **하드코딩 규칙: 우수한 설계 목적일 경우에만 허용**
 
 ```typescript
-// ❌ NEVER - Magic numbers
-const MAX_LENGTH = 100;  // Why 100?
+// ❌ NEVER - 익명의 매직 넘버
+const MAX_LENGTH = 100;  // Why 100? No context!
 
-// ✅ ALWAYS - Use exported constants with clear names
+// ✅ ALLOWED - 명확한 이름과 문서화된 상수
 export const LIMITS = {
   ID_LENGTH: 100,      // Maximum characters for entity IDs
   SEARCH_LENGTH: 100,  // Maximum search query length
 } as const;
 ```
 
-All constants must be:
-1. **Named clearly** - What it represents
-2. **Documented** - Why this value
-3. **Exported** - Reusable across packages
+**허용 조건 (모두 충족 시):**
+1. **Named clearly** - 서술적인 이름
+2. **Documented** - 왜 이 값인지 주석
+3. **Single source** - 이 파일에서만 정의
+4. **Exported** - 패키지 전체에서 재사용
 
 ---
 

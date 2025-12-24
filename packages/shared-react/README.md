@@ -238,20 +238,16 @@ All components are SSG-compatible with these considerations:
 
 ## ⛔ Code Quality (코드 품질)
 
-> **하드코딩 절대 금지 (NO HARDCODING)**
+> **하드코딩 규칙: 우수한 설계 목적일 경우에만 허용**
 
 ```tsx
-// ❌ NEVER - Hardcoded breakpoints
+// ❌ NEVER - 익명의 매직 넘버
 const isMobile = window.innerWidth < 768;
-
-// ✅ ALWAYS - Use shared constants
-import { BREAKPOINTS } from '@soundblue/shared';
-const isMobile = window.innerWidth < BREAKPOINTS.MOBILE;
-
-// ❌ NEVER - Inline magic values
 <div style={{ maxWidth: '980px' }}>
 
-// ✅ ALWAYS - CSS variables or Tailwind classes
+// ✅ ALLOWED - 공유 상수 또는 CSS 변수
+import { BREAKPOINTS } from '@soundblue/shared';
+const isMobile = window.innerWidth < BREAKPOINTS.MOBILE;
 <div className="max-w-[var(--content-max-width)]">
 ```
 
