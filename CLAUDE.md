@@ -84,16 +84,16 @@ Ask before: removing code, changing core logic, breaking changes.
 | # | 지표 | CI 구현 | 비고 |
 |---|------|:-------:|------|
 | 1 | Test Coverage | ✅ | `pnpm test:coverage` |
-| 2 | Visual Coverage | ⚠️ | Playwright 있음, pixelmatch 미확인 |
+| 2 | Visual Coverage | ✅ | Playwright + pixelmatch |
 | 3 | Code Health | ✅ | `pnpm check:size`, `pnpm typecheck` |
 | 4 | Monorepo Integrity | ✅ | `pnpm check:circular`, `pnpm check:versions` |
 | 5 | Lighthouse Score | ✅ | `pnpm lhci autorun` |
-| 6 | SEO Health | ❌ | verify-ssg.ts 정의됨, CI 미포함 |
+| 6 | SEO Health | ✅ | `pnpm verify:ssg` (Job 4) |
 | 7 | Static Integrity | ✅ | `pnpm check:links` |
-| 8 | PWA Readiness | ❌ | CI 미포함 |
-| 9 | Mobile Optimality | ❌ | CI 미포함 |
-| 10 | Responsive | ❌ | CI 미포함 |
-| 11 | Accessibility | ❌ | CI 미포함 |
-| 12 | Client Security | ❌ | CI 미포함 |
+| 8 | PWA Readiness | ✅ | Job 6: pwa-security |
+| 9 | Mobile Optimality | ✅ | Job 5: ux-quality |
+| 10 | Responsive | ✅ | Job 5: ux-quality |
+| 11 | Accessibility | ✅ | Job 5: ux-quality |
+| 12 | Client Security | ✅ | Job 6: pwa-security |
 
-> **TODO**: 6, 8-12번 지표 CI 추가 필요
+> **모든 12가지 품질 지표 CI 구현 완료** (2025-12-24)

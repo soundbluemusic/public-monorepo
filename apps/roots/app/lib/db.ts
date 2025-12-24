@@ -65,47 +65,76 @@ class RootsDatabase extends Dexie {
   }
 }
 
-const db = new RootsDatabase();
+// Lazy initialization to avoid SSG build errors
+let db: RootsDatabase | null = null;
 
-export { db };
+function getDb(): RootsDatabase | null {
+  // CRITICAL: Only initialize in browser environment
+  if (typeof window === 'undefined') {
+    return null; // SSG build - return null, don't throw
+  }
+  if (!db) {
+    try {
+      db = new RootsDatabase();
+    } catch (error) {
+      console.error('Failed to initialize database:', error);
+      return null;
+    }
+  }
+  return db;
+}
+
+export { getDb as db };
 
 // 즐겨찾기 헬퍼
 export const favorites = {
   async add(conceptId: string) {
     validateId(conceptId, 'conceptId');
-    const exists = await db.favorites.where('conceptId').equals(conceptId).first();
+    const database = getDb();
+    if (!database) return null; // SSG environment
+    const exists = await database.favorites.where('conceptId').equals(conceptId).first();
     if (exists) return exists.id;
-    return db.favorites.add({ conceptId, addedAt: new Date() });
+    return database.favorites.add({ conceptId, addedAt: new Date() });
   },
 
   async remove(conceptId: string) {
     validateId(conceptId, 'conceptId');
-    return db.favorites.where('conceptId').equals(conceptId).delete();
+    const database = getDb();
+    if (!database) return 0; // SSG environment
+    return database.favorites.where('conceptId').equals(conceptId).delete();
   },
 
   async toggle(conceptId: string) {
     validateId(conceptId, 'conceptId');
-    const exists = await db.favorites.where('conceptId').equals(conceptId).first();
+    const database = getDb();
+    if (!database) return false; // SSG environment
+    const exists = await database.favorites.where('conceptId').equals(conceptId).first();
     if (exists?.id) {
-      await db.favorites.delete(exists.id);
+      await database.favorites.delete(exists.id);
       return false;
     }
-    await db.favorites.add({ conceptId, addedAt: new Date() });
+    await database.favorites.add({ conceptId, addedAt: new Date() });
     return true;
   },
 
   async isFavorite(conceptId: string) {
     validateId(conceptId, 'conceptId');
-    const exists = await db.favorites.where('conceptId').equals(conceptId).first();
+    const database = getDb();
+    if (!database) return false; // SSG environment
+    const exists = await database.favorites.where('conceptId').equals(conceptId).first();
     return !!exists;
   },
 
   async getAll() {
-    return db.favorites.orderBy('addedAt').reverse().toArray();
+    const database = getDb();
+    if (!database) return []; // SSG environment
+    return database.favorites.orderBy('addedAt').reverse().toArray();
   },
 
   async count() {
-    return db.favorites.count();
+    const database = getDb();
+    if (!database) return 0; // SSG environment
+    return database.favorites.count();
   },
 };
 
@@ -113,7 +142,9 @@ export const favorites = {
 export const studyRecords = {
   async add(conceptId: string, duration: number, completed: boolean, quizScore?: number) {
     validateId(conceptId, 'conceptId');
-    return db.studyRecords.add({
+    const database = getDb();
+    if (!database) return null; // SSG environment
+    return database.studyRecords.add({
       conceptId,
       studiedAt: new Date(),
       duration,
@@ -124,16 +155,22 @@ export const studyRecords = {
 
   async getByConcept(conceptId: string) {
     validateId(conceptId, 'conceptId');
-    return db.studyRecords.where('conceptId').equals(conceptId).toArray();
+    const database = getDb();
+    if (!database) return []; // SSG environment
+    return database.studyRecords.where('conceptId').equals(conceptId).toArray();
   },
 
   async getRecent(limit = 50) {
-    return db.studyRecords.orderBy('studiedAt').reverse().limit(limit).toArray();
+    const database = getDb();
+    if (!database) return []; // SSG environment
+    return database.studyRecords.orderBy('studiedAt').reverse().limit(limit).toArray();
   },
 
   async getStats(conceptId: string) {
     validateId(conceptId, 'conceptId');
-    const records = await db.studyRecords.where('conceptId').equals(conceptId).toArray();
+    const database = getDb();
+    if (!database) return { total: 0, totalDuration: 0, completedCount: 0, avgQuizScore: null }; // SSG environment
+    const records = await database.studyRecords.where('conceptId').equals(conceptId).toArray();
     const total = records.length;
     const totalDuration = records.reduce((sum, r) => sum + r.duration, 0);
     const completedCount = records.filter((r) => r.completed).length;
@@ -152,7 +189,9 @@ export const studyRecords = {
   },
 
   async getTotalStudyTime() {
-    const records = await db.studyRecords.toArray();
+    const database = getDb();
+    if (!database) return 0; // SSG environment
+    const records = await database.studyRecords.toArray();
     return records.reduce((sum, r) => sum + r.duration, 0);
   },
 };
@@ -163,7 +202,9 @@ export const learningPaths = {
     for (const id of conceptIds) {
       validateId(id, 'conceptId');
     }
-    return db.learningPaths.add({
+    const database = getDb();
+    if (!database) return null; // SSG environment
+    return database.learningPaths.add({
       name,
       conceptIds,
       currentIndex: 0,
@@ -173,22 +214,30 @@ export const learningPaths = {
   },
 
   async get(id: number) {
-    return db.learningPaths.get(id);
+    const database = getDb();
+    if (!database) return undefined; // SSG environment
+    return database.learningPaths.get(id);
   },
 
   async getAll() {
-    return db.learningPaths.orderBy('updatedAt').reverse().toArray();
+    const database = getDb();
+    if (!database) return []; // SSG environment
+    return database.learningPaths.orderBy('updatedAt').reverse().toArray();
   },
 
   async updateProgress(id: number, currentIndex: number) {
-    return db.learningPaths.update(id, {
+    const database = getDb();
+    if (!database) return 0; // SSG environment
+    return database.learningPaths.update(id, {
       currentIndex,
       updatedAt: new Date(),
     });
   },
 
   async delete(id: number) {
-    return db.learningPaths.delete(id);
+    const database = getDb();
+    if (!database) return; // SSG environment
+    return database.learningPaths.delete(id);
   },
 };
 
@@ -196,49 +245,58 @@ export const learningPaths = {
 export const recentViews = {
   async add(conceptId: string) {
     validateId(conceptId, 'conceptId');
+    const database = getDb();
+    if (!database) return; // SSG environment
     // 기존 기록 삭제 후 새로 추가 (맨 위로)
-    await db.recentViews.where('conceptId').equals(conceptId).delete();
-    await db.recentViews.add({ conceptId, viewedAt: new Date() });
+    await database.recentViews.where('conceptId').equals(conceptId).delete();
+    await database.recentViews.add({ conceptId, viewedAt: new Date() });
 
     // 최대 100개만 유지
-    const count = await db.recentViews.count();
+    const count = await database.recentViews.count();
     if (count > 100) {
-      const oldest = await db.recentViews.orderBy('viewedAt').first();
+      const oldest = await database.recentViews.orderBy('viewedAt').first();
       if (oldest?.id) {
-        await db.recentViews.delete(oldest.id);
+        await database.recentViews.delete(oldest.id);
       }
     }
   },
 
   async getRecent(limit = 20) {
-    return db.recentViews.orderBy('viewedAt').reverse().limit(limit).toArray();
+    const database = getDb();
+    if (!database) return []; // SSG environment
+    return database.recentViews.orderBy('viewedAt').reverse().limit(limit).toArray();
   },
 
   async clear() {
-    return db.recentViews.clear();
+    const database = getDb();
+    if (!database) return; // SSG environment
+    return database.recentViews.clear();
   },
 };
 
 // 설정 헬퍼
 export const settings = {
   async get(): Promise<UserSettings> {
-    const s = await db.settings.get(1);
-    return (
-      s || {
-        id: 1,
-        theme: 'system',
-        language: 'ko',
-        fontSize: 'medium',
-        showLatex: true,
-        showDifficulty: true,
-        updatedAt: new Date(),
-      }
-    );
+    const defaultSettings: UserSettings = {
+      id: 1,
+      theme: 'system',
+      language: 'ko',
+      fontSize: 'medium',
+      showLatex: true,
+      showDifficulty: true,
+      updatedAt: new Date(),
+    };
+    const database = getDb();
+    if (!database) return defaultSettings; // SSG environment
+    const s = await database.settings.get(1);
+    return s || defaultSettings;
   },
 
   async update(updates: Partial<Omit<UserSettings, 'id'>>) {
+    const database = getDb();
+    if (!database) return 1; // SSG environment
     const current = await this.get();
-    return db.settings.put({
+    return database.settings.put({
       ...current,
       ...updates,
       id: 1,

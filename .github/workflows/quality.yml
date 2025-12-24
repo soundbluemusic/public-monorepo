@@ -131,3 +131,89 @@ jobs:
 
       - name: Check broken links
         run: pnpm check:links
+
+      - name: Verify SSG meta tags
+        run: pnpm verify:ssg
+
+  # Job 5: 접근성, 모바일, 반응형 테스트
+  ux-quality:
+    name: UX Quality Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Build all apps
+        run: pnpm build
+
+      - name: Start preview servers
+        run: |
+          pnpm preview:context &
+          pnpm preview:permissive &
+          pnpm preview:roots &
+          sleep 5
+
+      - name: Run accessibility tests
+        run: pnpm exec playwright test tests/e2e/accessibility.spec.ts
+
+      - name: Run mobile tests
+        run: pnpm exec playwright test tests/e2e/mobile.spec.ts
+
+      - name: Run responsive tests
+        run: pnpm exec playwright test tests/e2e/responsive.spec.ts
+
+  # Job 6: PWA 및 보안 검증
+  pwa-security:
+    name: PWA & Security
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Build all apps
+        run: pnpm build
+
+      - name: Start preview servers
+        run: |
+          pnpm preview:context &
+          pnpm preview:permissive &
+          pnpm preview:roots &
+          sleep 5
+
+      - name: Run PWA tests
+        run: pnpm exec playwright test tests/e2e/pwa/
+
+      - name: Run security tests
+        run: pnpm exec playwright test tests/e2e/security/
