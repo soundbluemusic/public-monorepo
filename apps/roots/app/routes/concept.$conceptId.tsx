@@ -33,24 +33,35 @@ export default function ConceptPage() {
   const { locale, t, localePath } = useI18n();
 
   const [isFavorite, setIsFavorite] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   // 즐겨찾기 상태 확인 (클라이언트 전용)
   useEffect(() => {
     if (params.conceptId) {
-      favorites.isFavorite(params.conceptId).then(setIsFavorite);
+      favorites
+        .isFavorite(params.conceptId)
+        .then(setIsFavorite)
+        .catch(() => {
+          // IndexedDB 접근 실패 시 기본값 유지
+        })
+        .finally(() => setIsLoaded(true));
     }
   }, [params.conceptId]);
 
   const toggleFavorite = async () => {
     const conceptId = params.conceptId;
-    if (!conceptId) return;
+    if (!conceptId || !isLoaded) return;
 
-    if (isFavorite) {
-      await favorites.remove(conceptId);
-      setIsFavorite(false);
-    } else {
-      await favorites.add(conceptId);
-      setIsFavorite(true);
+    try {
+      if (isFavorite) {
+        await favorites.remove(conceptId);
+        setIsFavorite(false);
+      } else {
+        await favorites.add(conceptId);
+        setIsFavorite(true);
+      }
+    } catch (err) {
+      console.error('Failed to toggle favorite:', err);
     }
   };
 
@@ -104,7 +115,8 @@ export default function ConceptPage() {
             <button
               type="button"
               onClick={toggleFavorite}
-              className="p-2 rounded-lg transition-all hover:scale-110 bg-bg-secondary border border-border-primary"
+              disabled={!isLoaded}
+              className={`p-2 rounded-lg transition-all hover:scale-110 bg-bg-secondary border border-border-primary ${!isLoaded ? 'opacity-50 cursor-wait' : ''}`}
               aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
               title={
                 locale === 'ko'
