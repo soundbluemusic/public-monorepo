@@ -93,7 +93,7 @@ export default function Home() {
       <div className="text-center py-12 sm:py-16">
         <div
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6"
-          style={{ backgroundColor: 'rgba(255, 107, 107, 0.1)', color: '#ff6b6b' }}
+          style={{ backgroundColor: 'rgba(180, 60, 60, 0.12)', color: '#b43c3c' }}
         >
           <span className="text-xl">🔥</span>
           <span className="text-sm font-medium">

@@ -31,19 +31,19 @@
   /* Text */
   --text-primary: #2a3836;
   --text-secondary: #4a5e5a;
-  --text-tertiary: #6b807a;
+  --text-tertiary: #566d68; /* Darkened for WCAG AA 4.5:1 contrast */
 
   /* Accent (Teal) */
-  --accent-primary: #4a9e95;
-  --accent-secondary: #5daea2;
-  --accent-tertiary: #7ec4b8;
-  --accent-hover: #3d8880;
+  --accent-primary: #1f6960; /* Darkened more for WCAG AA 4.5:1 contrast */
+  --accent-secondary: #2d7a72;
+  --accent-tertiary: #3d8880;
+  --accent-hover: #185850;
   --accent-mint: #a8e8d8;
 
   /* Border */
   --border-primary: #d5e0dd;
   --border-secondary: #e5efec;
-  --border-focus: #4a9e95;
+  --border-focus: #1f6960;
 
   /* Semantic */
   --color-error: #c45858;

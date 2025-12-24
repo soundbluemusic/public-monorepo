@@ -16,14 +16,19 @@ export function LanguageToggle({ locale, currentPath = '/' }: LanguageToggleProp
   const targetLocale = locale === 'en' ? 'ko' : 'en';
   const href = targetLocale === 'en' ? currentPath : `/ko${currentPath === '/' ? '' : currentPath}`;
 
+  // Use visible text in aria-label to satisfy WCAG 2.5.3 Label in Name
+  const displayText = locale === 'en' ? 'EN' : 'KR';
+  const ariaLabel =
+    locale === 'en' ? `${displayText} - Switch to Korean` : `${displayText} - Switch to English`;
+
   return (
     <a
       href={href}
       className="px-3 py-2 text-sm font-medium rounded-lg transition-all cursor-pointer text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-tertiary)] active:scale-95 inline-flex items-center justify-center min-h-11"
-      aria-label={`Switch to ${locale === 'en' ? 'Korean' : 'English'}`}
+      aria-label={ariaLabel}
       title={locale === 'en' ? '한국어로 전환' : 'Switch to English'}
     >
-      {locale === 'en' ? 'EN' : 'KR'}
+      {displayText}
     </a>
   );
 }

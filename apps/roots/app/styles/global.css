@@ -20,18 +20,18 @@
   /* Text */
   --text-primary: #0f172a;
   --text-secondary: #475569;
-  --text-tertiary: #64748b;
+  --text-tertiary: #526077; /* Darkened for WCAG AA 4.5:1 contrast */
 
   /* Accent (Blue) */
-  --accent-primary: #3b82f6;
-  --accent-secondary: #60a5fa;
-  --accent-tertiary: #93c5fd;
-  --accent-hover: #2563eb;
+  --accent-primary: #2563eb; /* Darkened for WCAG AA 4.5:1 contrast */
+  --accent-secondary: #3b82f6;
+  --accent-tertiary: #60a5fa;
+  --accent-hover: #1d4ed8;
 
   /* Border */
   --border-primary: #e2e8f0;
   --border-secondary: #f1f5f9;
-  --border-focus: #3b82f6;
+  --border-focus: #2563eb;
 
   /* Semantic */
   --color-error: #ef4444;

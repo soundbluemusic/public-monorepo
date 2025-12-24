@@ -120,23 +120,28 @@ export default function HomePage() {
       </div>
 
       {/* Featured Concepts Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-        {FEATURED_CONCEPTS.map((concept) => (
-          <Link
-            key={concept.id}
-            to={localePath(`/concept/${concept.id}`)}
-            className={`${concept.color} ${concept.hoverColor} rounded-2xl p-8 transition-all duration-200 border border-border-primary/50 hover:shadow-lg hover:scale-[1.02]`}
-          >
-            <div className="text-4xl mb-4">{concept.icon}</div>
-            <h3 className="text-xl font-semibold mb-2 text-text-primary">
-              {locale === 'ko' ? concept.nameKo : concept.nameEn}
-            </h3>
-            <p className="text-sm text-text-secondary leading-relaxed">
-              {locale === 'ko' ? concept.descKo : concept.descEn}
-            </p>
-          </Link>
-        ))}
-      </div>
+      <section aria-labelledby="featured-concepts-heading">
+        <h2 id="featured-concepts-heading" className="sr-only">
+          {locale === 'ko' ? '주요 개념' : 'Featured Concepts'}
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {FEATURED_CONCEPTS.map((concept) => (
+            <Link
+              key={concept.id}
+              to={localePath(`/concept/${concept.id}`)}
+              className={`${concept.color} ${concept.hoverColor} rounded-2xl p-8 transition-all duration-200 border border-border-primary/50 hover:shadow-lg hover:scale-[1.02]`}
+            >
+              <div className="text-4xl mb-4">{concept.icon}</div>
+              <h3 className="text-xl font-semibold mb-2 text-text-primary">
+                {locale === 'ko' ? concept.nameKo : concept.nameEn}
+              </h3>
+              <p className="text-sm text-text-secondary leading-relaxed">
+                {locale === 'ko' ? concept.descKo : concept.descEn}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
 
       {/* Browse All Link */}
       <div className="text-center py-8">
