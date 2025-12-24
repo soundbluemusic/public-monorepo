@@ -25,6 +25,8 @@ export default {
       '/ko/license',
       '/built-with',
       '/ko/built-with',
+      '/my-learning',
+      '/ko/my-learning',
     ];
 
     // Dynamic entry routes (e.g., /entry/annyeong, /ko/entry/sarang)
