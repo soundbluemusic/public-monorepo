@@ -1,15 +1,13 @@
 import { useI18n } from '@/i18n';
+import { stripLocaleFromPath } from '@soundblue/shared';
 import { DarkModeToggle, LanguageToggle } from '@soundblue/shared-react';
 import { ArrowUp, BookOpen, ChevronRight, Github, Heart, Search, Star } from 'lucide-react';
 import { type ReactNode, useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { Sidebar } from './Sidebar';
 
-function stripLocale(pathname: string): string {
-  if (pathname.startsWith('/ko/')) return pathname.slice(3);
-  if (pathname === '/ko') return '/';
-  return pathname;
-}
+// Use shared utility for locale stripping
+const stripLocale = stripLocaleFromPath;
 
 interface BreadcrumbItem {
   label: string;

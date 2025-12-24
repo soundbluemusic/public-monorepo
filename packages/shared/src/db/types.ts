@@ -13,6 +13,7 @@ export interface BaseSettings {
   id: number; // 항상 1 (싱글톤)
   theme: 'light' | 'dark' | 'system';
   language: 'ko' | 'en';
+  fontSize: 'small' | 'medium' | 'large';
   updatedAt: Date;
 }
 
@@ -44,6 +45,7 @@ export interface SettingsHelper<T extends BaseSettings> {
   update: (updates: Partial<Omit<T, 'id'>>) => Promise<number>;
   setTheme: (theme: T['theme']) => Promise<number>;
   setLanguage: (language: T['language']) => Promise<number>;
+  setFontSize: (fontSize: T['fontSize']) => Promise<number>;
 }
 
 /**

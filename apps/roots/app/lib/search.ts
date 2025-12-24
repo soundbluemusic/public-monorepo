@@ -18,7 +18,12 @@ export interface SearchIndexItem {
   def: { ko: string; en: string };
 }
 
-export interface SearchResult {
+/**
+ * Fuse.js 검색 결과 타입
+ *
+ * @note data/types.ts의 SearchResult와 구분하기 위해 별도 이름 사용
+ */
+export interface FuseSearchResult {
   item: SearchIndexItem;
   score: number;
   matches: string[];
@@ -108,7 +113,7 @@ export async function searchConcepts(
   query: string,
   locale: Language,
   limit = 10,
-): Promise<SearchResult[]> {
+): Promise<FuseSearchResult[]> {
   if (!query || query.trim().length < 2) {
     return [];
   }

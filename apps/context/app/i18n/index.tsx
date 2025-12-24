@@ -1,3 +1,5 @@
+import type { Language } from '@soundblue/shared';
+import { getLocaleFromPath, stripLocaleFromPath } from '@soundblue/shared';
 import { type ReactNode, createContext, useContext, useEffect, useMemo } from 'react';
 import { useLocation } from 'react-router';
 import * as m from '~/paraglide/messages.js';
@@ -6,7 +8,8 @@ import {
   setLocale as paraglideSetLocale,
 } from '~/paraglide/runtime.js';
 
-export type Language = 'ko' | 'en';
+// Re-export for backward compatibility
+export type { Language } from '@soundblue/shared';
 
 export interface UILabels {
   search: string;
@@ -118,16 +121,7 @@ interface I18nContextType {
 
 const I18nContext = createContext<I18nContextType | null>(null);
 
-function getLocaleFromPath(pathname: string): Language {
-  if (pathname.startsWith('/ko/') || pathname === '/ko') return 'ko';
-  return 'en';
-}
-
-function stripLocaleFromPath(pathname: string): string {
-  if (pathname.startsWith('/ko/')) return pathname.slice(3) || '/';
-  if (pathname === '/ko') return '/';
-  return pathname;
-}
+// getLocaleFromPath and stripLocaleFromPath are now imported from @soundblue/shared
 
 export function I18nProvider({ children }: { children: ReactNode }) {
   const location = useLocation();

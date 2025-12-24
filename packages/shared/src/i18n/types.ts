@@ -9,18 +9,20 @@ export type Language = 'ko' | 'en';
 
 /**
  * i18n 컨텍스트 타입
+ *
+ * 앱에서 사용하는 실제 패턴에 맞춰 속성 방식으로 정의됨
  */
 export interface I18nContextType<T extends Record<string, string>> {
-  /** 현재 로케일 반환 함수 */
-  locale: () => Language;
+  /** 현재 로케일 */
+  locale: Language;
   /** 로케일 변경 (URL 네비게이션 발생) */
   setLocale: (lang: Language) => void;
   /** 타입 안전한 번역 함수 */
   t: <K extends keyof T>(key: K) => string;
   /** 현재 한국어인지 여부 */
-  isKorean: () => boolean;
+  isKorean: boolean;
   /** 현재 영어인지 여부 */
-  isEnglish: () => boolean;
+  isEnglish: boolean;
   /** 현재 로케일에 맞는 경로 생성 */
   localePath: (path: string) => string;
 }

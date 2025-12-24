@@ -4,14 +4,29 @@
  * 수학 개념, 분야, 공식, 예제 등의 타입을 정의합니다.
  */
 
+// Import Language from shared package (Single Source of Truth)
+import type { Language } from '@soundblue/shared';
+
 // ============================================
 // 기본 타입
 // ============================================
 
-/** 지원 언어 */
-export type Language = 'ko' | 'en';
+// Re-export Language for backward compatibility
+export type { Language } from '@soundblue/shared';
 
-/** 난이도 (1-5) */
+/**
+ * 난이도 (Roots 앱 전용)
+ *
+ * 수학 개념의 학습 난이도를 학년별로 분류합니다.
+ * - 1: 초등 (Elementary)
+ * - 2: 중등 (Middle School)
+ * - 3: 고등 (High School)
+ * - 4: 대학 (Undergraduate)
+ * - 5: 대학원+ (Graduate+)
+ *
+ * @note Context 앱은 문자열 기반 난이도('beginner'|'intermediate'|'advanced')를 사용합니다.
+ *       공유 패키지에서는 이 타입을 사용하지 마세요.
+ */
 export type DifficultyLevel = 1 | 2 | 3 | 4 | 5;
 
 /** 난이도 레이블 */

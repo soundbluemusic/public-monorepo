@@ -1,22 +1,5 @@
+import { validateId } from '@soundblue/shared';
 import Dexie, { type EntityTable } from 'dexie';
-
-const MAX_ID_LENGTH = 100;
-const RESERVED_NAMES = ['__proto__', 'constructor', 'prototype', 'hasOwnProperty', 'toString'];
-
-/**
- * Validates an ID string to prevent abuse and prototype pollution
- */
-function validateId(id: string, fieldName: string): void {
-  if (!id || typeof id !== 'string') {
-    throw new Error(`${fieldName} is required`);
-  }
-  if (id.length > MAX_ID_LENGTH) {
-    throw new Error(`${fieldName} exceeds maximum length of ${MAX_ID_LENGTH}`);
-  }
-  if (RESERVED_NAMES.includes(id)) {
-    throw new Error(`Invalid ${fieldName}`);
-  }
-}
 
 // 즐겨찾기 단어
 export interface FavoriteEntry {

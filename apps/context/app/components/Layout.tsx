@@ -2,6 +2,7 @@ import { categories } from '@/data/categories';
 import { meaningEntries } from '@/data/entries';
 import type { MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
+import { stripLocaleFromPath } from '@soundblue/shared';
 import { DarkModeToggle, LanguageToggle } from '@soundblue/shared-react';
 import {
   ArrowUp,
@@ -19,11 +20,8 @@ import {
 import { type ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 
-function stripLocale(pathname: string): string {
-  if (pathname.startsWith('/ko/')) return pathname.slice(3);
-  if (pathname === '/ko') return '/';
-  return pathname;
-}
+// Use shared utility for locale stripping
+const stripLocale = stripLocaleFromPath;
 
 interface BreadcrumbItem {
   label: string;

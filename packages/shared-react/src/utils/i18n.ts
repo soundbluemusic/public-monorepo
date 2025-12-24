@@ -1,27 +1,15 @@
 /**
  * i18n utilities for URL-based locale routing
+ *
+ * Re-exports from @soundblue/shared for convenience
  */
 
-export type Language = 'ko' | 'en';
+// Re-export types and constants from shared package (Single Source of Truth)
+export type { Language, I18nContextType } from '@soundblue/shared';
+export { languageNames, languageFlags } from '@soundblue/shared';
 
-export interface I18nContextType<T extends Record<string, string>> {
-  locale: Language;
-  setLocale: (lang: Language) => void;
-  t: <K extends keyof T>(key: K) => string;
-  isKorean: boolean;
-  isEnglish: boolean;
-  localePath: (path: string) => string;
-}
-
-export const languageNames: Record<Language, { native: string; english: string }> = {
-  ko: { native: '한국어', english: 'Korean' },
-  en: { native: 'English', english: 'English' },
-};
-
-export const languageFlags: Record<Language, string> = {
-  ko: 'KR',
-  en: 'EN',
-};
+// Import Language for use in functions below
+import type { Language } from '@soundblue/shared';
 
 /**
  * Extract locale from URL path

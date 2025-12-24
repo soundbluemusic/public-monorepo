@@ -3,13 +3,11 @@
  */
 import { fields } from '@/data/fields';
 import { useI18n } from '@/i18n';
+import { stripLocaleFromPath } from '@soundblue/shared';
 import { Link, useLocation } from 'react-router';
 
-function stripLocale(pathname: string): string {
-  if (pathname.startsWith('/ko/')) return pathname.slice(3);
-  if (pathname === '/ko') return '/';
-  return pathname;
-}
+// Use shared utility for locale stripping
+const stripLocale = stripLocaleFromPath;
 
 export function Sidebar() {
   const { locale, localePath, t } = useI18n();

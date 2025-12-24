@@ -20,6 +20,7 @@
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.4",
     "@radix-ui/react-toggle": "^1.1.0",
+    "@soundblue/shared": "workspace:*",
     "@soundblue/shared-react": "workspace:*",
     "dexie": "^4.0.10",
     "lucide-react": "^0.468.0",

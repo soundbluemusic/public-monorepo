@@ -1,37 +1,5 @@
-/**
- * @fileoverview Context 앱 핵심 타입 정의
- *
- * 한국어 학습 앱을 위한 데이터 구조를 정의합니다.
- * 한국어를 기준으로 영어 번역을 제공합니다.
- *
- * @example
- * ```ts
- * import type { MeaningEntry, Translation, Category } from '@/data/types';
- *
- * const entry: MeaningEntry = {
- *   id: 'hello-1',
- *   korean: '안녕하세요',
- *   romanization: 'annyeonghaseyo',
- *   pronunciation: '[안녕하세요]',
- *   partOfSpeech: 'expression',
- *   categoryId: 'greetings',
- *   translations: {
- *     ko: { word: '안녕하세요', explanation: '만날 때 하는 인사말' },
- *     en: { word: 'Hello', explanation: 'A greeting when meeting someone' },
- *   },
- *   tags: ['formal', 'greeting'],
- *   difficulty: 'beginner',
- *   frequency: 'common',
- * };
- * ```
- */
-
-/**
- * 지원 언어 코드
- * - 'ko': 한국어
- * - 'en': 영어
- */
-export type Language = 'ko' | 'en';
+// Re-export for backward compatibility
+export type { Language } from '@soundblue/shared';
 
 /**
  * 표현 변형 (격식 수준별)
@@ -125,10 +93,15 @@ export type PartOfSpeech =
   | 'expression';
 
 /**
- * 학습 난이도
+ * 학습 난이도 (Context 앱 전용)
+ *
+ * 한국어 학습 난이도를 TOPIK 수준으로 분류합니다.
  * - beginner: 초급 (TOPIK 1-2급)
  * - intermediate: 중급 (TOPIK 3-4급)
  * - advanced: 고급 (TOPIK 5-6급)
+ *
+ * @note Roots 앱은 숫자 기반 난이도(1-5)를 사용합니다.
+ *       공유 패키지에서는 이 타입을 사용하지 마세요.
  */
 export type DifficultyLevel = 'beginner' | 'intermediate' | 'advanced';
 
@@ -181,11 +154,16 @@ export type CategoryColor =
   | 'pink';
 
 /**
- * 검색 결과 항목
+ * 검색 결과 항목 (Context 앱 전용)
+ *
+ * 한국어 사전 검색 결과를 나타냅니다.
+ *
  * @property entry - 매칭된 단어 엔트리
  * @property category - 해당 단어의 카테고리
  * @property score - 검색 관련도 점수 (높을수록 관련성 높음)
  * @property matchedIn - 검색어가 매칭된 필드 목록
+ *
+ * @note Roots 앱은 MathConcept 기반의 SearchResult를 사용합니다.
  */
 export interface SearchResult {
   entry: MeaningEntry;
