@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import type { MetaFunction } from 'react-router';
 import { Link } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
@@ -13,6 +13,44 @@ export const meta: MetaFunction = ({ location }) => {
 
   return [{ title }, { name: 'description', content: description }];
 };
+
+// 검색용 데이터
+const searchItems = [
+  { name: 'React', type: 'library' as const },
+  { name: 'Vue', type: 'library' as const },
+  { name: 'Svelte', type: 'library' as const },
+  { name: 'Next.js', type: 'library' as const },
+  { name: 'Astro', type: 'library' as const },
+  { name: 'Vite', type: 'library' as const },
+  { name: 'Tailwind CSS', type: 'library' as const },
+  { name: 'TypeScript', type: 'library' as const },
+  { name: 'Zustand', type: 'library' as const },
+  { name: 'TanStack Query', type: 'library' as const },
+  { name: 'Zod', type: 'library' as const },
+  { name: 'Vitest', type: 'library' as const },
+  { name: 'Playwright', type: 'library' as const },
+  { name: 'Framer Motion', type: 'library' as const },
+  { name: 'shadcn/ui', type: 'library' as const },
+  { name: 'Radix UI', type: 'library' as const },
+  { name: 'Bun', type: 'library' as const },
+  { name: 'Deno', type: 'library' as const },
+  { name: 'esbuild', type: 'library' as const },
+  { name: 'SWC', type: 'library' as const },
+  { name: 'View Transitions API', type: 'api' as const },
+  { name: 'WebGPU', type: 'api' as const },
+  { name: 'Navigation API', type: 'api' as const },
+  { name: 'Popover API', type: 'api' as const },
+  { name: 'Fetch API', type: 'api' as const },
+  { name: 'Web Storage', type: 'api' as const },
+  { name: 'IndexedDB', type: 'api' as const },
+  { name: 'Web Workers', type: 'api' as const },
+  { name: 'Intersection Observer', type: 'api' as const },
+  { name: 'Resize Observer', type: 'api' as const },
+  { name: 'Canvas API', type: 'api' as const },
+  { name: 'Web Audio', type: 'api' as const },
+  { name: 'Geolocation', type: 'api' as const },
+  { name: 'Clipboard API', type: 'api' as const },
+];
 
 const trendingLibraries = [
   { name: 'Bun', category: 'Runtime', emoji: '⚡' },
@@ -33,6 +71,21 @@ const trendingApis = [
 export default function Home() {
   const { locale, localePath } = useI18n();
   const [searchQuery, setSearchQuery] = useState('');
+  const [showResults, setShowResults] = useState(false);
+
+  const filteredResults = useMemo(() => {
+    if (!searchQuery.trim()) return [];
+    const query = searchQuery.toLowerCase();
+    return searchItems.filter((item) => item.name.toLowerCase().includes(query)).slice(0, 8);
+  }, [searchQuery]);
+
+  const handleResultClick = (item: (typeof searchItems)[0]) => {
+    const path =
+      item.type === 'library'
+        ? `${localePath('/libraries')}?q=${encodeURIComponent(item.name)}`
+        : `${localePath('/web-api')}?q=${encodeURIComponent(item.name)}`;
+    window.location.href = path;
+  };
 
   return (
     <DocsLayout>
@@ -94,7 +147,7 @@ export default function Home() {
           <div className="relative">
             <svg
               aria-hidden="true"
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5"
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 z-10"
               style={{ color: 'var(--text-tertiary)' }}
               fill="none"
               stroke="currentColor"
@@ -115,10 +168,18 @@ export default function Home() {
                   : 'Search React, Vite, View Transitions...'
               }
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                setShowResults(true);
+              }}
+              onFocus={() => setShowResults(true)}
+              onBlur={() => setTimeout(() => setShowResults(false), 200)}
               onKeyDown={(e) => {
                 if (e.key === 'Enter' && searchQuery.trim()) {
                   window.location.href = `${localePath('/libraries')}?q=${encodeURIComponent(searchQuery)}`;
+                }
+                if (e.key === 'Escape') {
+                  setShowResults(false);
                 }
               }}
               className="w-full pl-12 pr-4 py-4 text-lg rounded-xl transition-all"
@@ -128,9 +189,40 @@ export default function Home() {
                 color: 'var(--text-primary)',
               }}
             />
+            {/* Search Results Dropdown */}
+            {showResults && filteredResults.length > 0 && (
+              <div
+                className="absolute top-full left-0 right-0 mt-2 rounded-xl shadow-lg overflow-hidden z-50"
+                style={{
+                  backgroundColor: 'var(--bg-elevated)',
+                  border: '1px solid var(--border-primary)',
+                }}
+              >
+                {filteredResults.map((item) => (
+                  <button
+                    key={item.name}
+                    type="button"
+                    onClick={() => handleResultClick(item)}
+                    className="w-full px-4 py-3 flex items-center gap-3 text-left transition-colors hover:bg-[var(--bg-tertiary)]"
+                  >
+                    <span className="text-lg">{item.type === 'library' ? '📦' : '🌐'}</span>
+                    <span style={{ color: 'var(--text-primary)' }}>{item.name}</span>
+                    <span
+                      className="ml-auto text-xs px-2 py-0.5 rounded"
+                      style={{
+                        backgroundColor: 'var(--bg-tertiary)',
+                        color: 'var(--text-tertiary)',
+                      }}
+                    >
+                      {item.type === 'library' ? 'Library' : 'Web API'}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
           <p className="text-sm mt-2" style={{ color: 'var(--text-tertiary)' }}>
-            {locale === 'ko' ? 'Enter를 눌러 검색' : 'Press Enter to search'}
+            {locale === 'ko' ? '실시간으로 검색됩니다' : 'Search results appear as you type'}
           </p>
         </div>
       </div>
