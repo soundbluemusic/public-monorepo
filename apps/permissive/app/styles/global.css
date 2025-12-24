@@ -2,6 +2,9 @@
 /* 공통 스타일 (scrollbar, focus, selection, sr-only, reduced-motion, skeleton) */
 @import "@soundblue/shared-react/styles/base.css";
 
+/* Include shared-react components in Tailwind CSS scan */
+@source "../../../../packages/shared-react/src/**/*.tsx";
+
 /* Enable class-based dark mode */
 @custom-variant dark (&:where(.dark, .dark *));
 
