@@ -142,6 +142,7 @@ export default function Sidebar({
           backgroundColor: 'var(--bg-elevated)',
           borderRight: '1px solid var(--border-primary)',
         }}
+        data-mobile-open={isMobile && isOpen ? 'true' : undefined}
       >
         {/* Header */}
         <div

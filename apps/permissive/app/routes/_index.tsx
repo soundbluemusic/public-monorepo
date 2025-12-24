@@ -102,7 +102,7 @@ export default function Home() {
         </div>
 
         <h1
-          className="text-4xl sm:text-6xl font-bold mb-6"
+          className="text-3xl xs:text-4xl sm:text-6xl font-bold mb-6 wrap-break-word"
           style={{ color: 'var(--text-primary)' }}
         >
           {locale === 'ko' ? '무료 웹개발 도구 모음' : 'Free Web Dev Tools'}

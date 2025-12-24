@@ -120,6 +120,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-height) + 1rem);
+  overflow-x: hidden;
 }
 
 body {
@@ -128,6 +129,7 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* ============================================
@@ -365,6 +367,72 @@ html.theme-transition *::after {
   .main-content {
     margin-left: 0;
     padding-bottom: var(--bottom-nav-height);
+  }
+
+  /* Hide sidebar on mobile by default (SSG hydration fix) */
+  aside {
+    transform: translateX(-100%) !important;
+  }
+
+  /* Show sidebar when explicitly opened via JavaScript */
+  aside[data-mobile-open="true"] {
+    transform: translateX(0) !important;
+  }
+}
+
+/* Extra small screens (320px) - ensure no overflow */
+@media (max-width: 359px) {
+  /* Force all elements to respect viewport width */
+  * {
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Limit container widths */
+  [class*="max-w-"] {
+    max-width: 100% !important;
+  }
+
+  /* Force single column grid */
+  .grid,
+  [class*="grid-cols-"] {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* Smaller text */
+  h1 {
+    font-size: 1.5rem !important;
+  }
+
+  h2 {
+    font-size: 1.25rem !important;
+  }
+
+  h3 {
+    font-size: 1rem !important;
+  }
+
+  /* Prevent text overflow */
+  p,
+  span,
+  a,
+  h1,
+  h2,
+  h3,
+  div {
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  /* Cards should be full width */
+  .rounded-2xl,
+  .rounded-xl,
+  .rounded-lg {
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }
 
