@@ -1,22 +1,30 @@
 import { Layout } from '@/components/Layout';
 import { meaningEntries } from '@/data/entries';
+import type { MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { favorites, studyRecords } from '@/lib/db';
 import { Bookmark, BookmarkCheck, Check } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router';
+import { Link, useLoaderData, useParams } from 'react-router';
+
+/**
+ * Loader: 빌드 시 데이터 로드 (SSG용)
+ */
+export async function loader({ params }: { params: { entryId: string } }) {
+  const entry = meaningEntries.find((e) => e.id === params.entryId);
+  return { entry: entry || null };
+}
 
 export function meta() {
   return [{ title: 'Entry - Context' }];
 }
 
 export default function EntryPage() {
+  const { entry } = useLoaderData<{ entry: MeaningEntry | null }>();
   const { entryId } = useParams();
   const { locale, t, localePath } = useI18n();
   const [isStudied, setIsStudied] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
-
-  const entry = meaningEntries.find((e) => e.id === entryId);
 
   // Load study and favorite status
   useEffect(() => {

@@ -1,12 +1,13 @@
 import { Layout } from '@/components/Layout';
 import { categories } from '@/data/categories';
 import { meaningEntries } from '@/data/entries';
+import type { Category } from '@/data/types';
 import type { MeaningEntry } from '@/data/types';
 import { type Language, useI18n } from '@/i18n';
 import { studyRecords } from '@/lib/db';
 import { useEffect, useState } from 'react';
 import type { MetaFunction } from 'react-router';
-import { Link } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 
 const getPronunciation = (entry: MeaningEntry, locale: Language): string | undefined => {
   switch (locale) {
@@ -16,6 +17,32 @@ const getPronunciation = (entry: MeaningEntry, locale: Language): string | undef
       return entry.pronunciation;
   }
 };
+
+/**
+ * Loader: 빌드 시 데이터 로드 (SSG용)
+ */
+export async function loader() {
+  // 오늘의 단어 계산 (빌드 시점)
+  const today = new Date();
+  const dayOfYear = Math.floor(
+    (today.getTime() - new Date(today.getFullYear(), 0, 0).getTime()) / 86400000,
+  );
+  const randomIndex = dayOfYear % meaningEntries.length;
+  const dailyWord = meaningEntries[randomIndex];
+
+  // 카테고리별 엔트리 수 계산
+  const categoryCounts: Record<string, number> = {};
+  for (const cat of categories) {
+    categoryCounts[cat.id] = meaningEntries.filter((e) => e.categoryId === cat.id).length;
+  }
+
+  return {
+    dailyWord,
+    categories,
+    categoryCounts,
+    totalEntries: meaningEntries.length,
+  };
+}
 
 export const meta: MetaFunction = ({ location }) => {
   const isKorean = location.pathname.startsWith('/ko');
@@ -34,40 +61,39 @@ export const meta: MetaFunction = ({ location }) => {
 };
 
 export default function HomePage() {
+  const {
+    dailyWord,
+    categories: cats,
+    categoryCounts,
+    totalEntries,
+  } = useLoaderData<{
+    dailyWord: MeaningEntry;
+    categories: Category[];
+    categoryCounts: Record<string, number>;
+    totalEntries: number;
+  }>();
   const { locale, t, localePath } = useI18n();
   const [overallProgress, setOverallProgress] = useState({ studied: 0, total: 0, percentage: 0 });
   const [categoryProgress, setCategoryProgress] = useState<
     Record<string, { studied: number; total: number; percentage: number }>
   >({});
-  const [dailyWord, setDailyWord] = useState<MeaningEntry | null>(null);
 
-  // Load progress data
+  // Load progress data (클라이언트 전용 - IndexedDB)
   useEffect(() => {
     async function loadProgress() {
-      const overall = await studyRecords.getOverallProgress(meaningEntries.length);
+      const overall = await studyRecords.getOverallProgress(totalEntries);
       setOverallProgress(overall);
 
       const catProgress: Record<string, { studied: number; total: number; percentage: number }> =
         {};
-      for (const cat of categories) {
-        const entries = meaningEntries.filter((e) => e.categoryId === cat.id);
-        const progress = await studyRecords.getCategoryProgress(cat.id, entries.length);
+      for (const cat of cats) {
+        const progress = await studyRecords.getCategoryProgress(cat.id, categoryCounts[cat.id]);
         catProgress[cat.id] = progress;
       }
       setCategoryProgress(catProgress);
     }
     loadProgress();
-  }, []);
-
-  // Get daily word (deterministic based on date)
-  useEffect(() => {
-    const today = new Date();
-    const dayOfYear = Math.floor(
-      (today.getTime() - new Date(today.getFullYear(), 0, 0).getTime()) / 86400000,
-    );
-    const randomIndex = dayOfYear % meaningEntries.length;
-    setDailyWord(meaningEntries[randomIndex]);
-  }, []);
+  }, [cats, categoryCounts, totalEntries]);
 
   return (
     <Layout>
@@ -156,8 +182,8 @@ export default function HomePage() {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">
-          {categories.map((category) => {
-            const count = meaningEntries.filter((e) => e.categoryId === category.id).length;
+          {cats.map((category) => {
+            const count = categoryCounts[category.id];
             const progress = categoryProgress[category.id] || {
               studied: 0,
               total: count,

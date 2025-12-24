@@ -1,2 +1,2 @@
 // Korean Web API page - reuses the same component as English
-export { default, meta } from './web-api';
+export { default, loader, meta } from './web-api';

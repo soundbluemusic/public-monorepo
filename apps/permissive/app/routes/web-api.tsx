@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import type { MetaFunction } from 'react-router';
-import { useSearchParams } from 'react-router';
+import { useLoaderData, useSearchParams } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import { useI18n } from '../i18n';
 
@@ -583,6 +583,16 @@ type CategoryFilter = (typeof categories)[number];
 
 type SortOption = 'support' | 'newest' | 'name';
 
+/**
+ * Loader: 빌드 시 데이터 로드 (SSG용)
+ */
+export async function loader() {
+  return {
+    webApis,
+    categories,
+  };
+}
+
 export const meta: MetaFunction = ({ location }) => {
   const isKorean = location.pathname.startsWith('/ko');
   const title = 'Web API - Permissive';
@@ -594,6 +604,10 @@ export const meta: MetaFunction = ({ location }) => {
 };
 
 export default function WebApiPage() {
+  const { webApis: apis, categories: cats } = useLoaderData<{
+    webApis: WebAPI[];
+    categories: typeof categories;
+  }>();
   const { locale } = useI18n();
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState('');
@@ -617,26 +631,26 @@ export default function WebApiPage() {
   }, [searchParams]);
 
   const filteredApis = useMemo(() => {
-    let apis = webApis;
+    let filtered = apis;
 
     // Quick filters
     if (quickFilter === 'trending') {
-      apis = apis.filter((api) => api.trending);
+      filtered = filtered.filter((api) => api.trending);
     } else if (quickFilter === 'highSupport') {
-      apis = apis.filter((api) => Number.parseInt(api.support, 10) >= 95);
+      filtered = filtered.filter((api) => Number.parseInt(api.support, 10) >= 95);
     } else if (quickFilter === 'new') {
-      apis = apis.filter((api) => api.yearStable && api.yearStable >= 2020);
+      filtered = filtered.filter((api) => api.yearStable && api.yearStable >= 2020);
     }
 
     // Category filter
     if (category !== 'All') {
-      apis = apis.filter((api) => api.category === category);
+      filtered = filtered.filter((api) => api.category === category);
     }
 
     // Search filter
     const q = search.toLowerCase().slice(0, 100);
     if (q) {
-      apis = apis.filter(
+      filtered = filtered.filter(
         (api) =>
           api.name.toLowerCase().includes(q) ||
           api.description.toLowerCase().includes(q) ||
@@ -645,7 +659,7 @@ export default function WebApiPage() {
     }
 
     // Sort
-    return [...apis].sort((a, b) => {
+    return [...filtered].sort((a, b) => {
       if (sortBy === 'support') {
         const aSupport = Number.parseInt(a.support, 10);
         const bSupport = Number.parseInt(b.support, 10);
@@ -659,7 +673,7 @@ export default function WebApiPage() {
       }
       return 0;
     });
-  }, [search, category, quickFilter, sortBy]);
+  }, [apis, search, category, quickFilter, sortBy]);
 
   const groupedApis = useMemo(() => {
     if (category !== 'All') {
@@ -832,7 +846,7 @@ export default function WebApiPage() {
         </div>
 
         <div className="flex flex-wrap gap-2">
-          {categories.map((cat) => (
+          {cats.map((cat) => (
             <button
               key={cat}
               type="button"

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import type { MetaFunction } from 'react-router';
-import { useSearchParams } from 'react-router';
+import { useLoaderData, useSearchParams } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import { useI18n } from '../i18n';
 
@@ -1081,6 +1081,16 @@ type CategoryFilter = (typeof categories)[number];
 
 type SortOption = 'stars' | 'newest' | 'name';
 
+/**
+ * Loader: 빌드 시 데이터 로드 (SSG용)
+ */
+export async function loader() {
+  return {
+    libraries,
+    categories,
+  };
+}
+
 export const meta: MetaFunction = ({ location }) => {
   const isKorean = location.pathname.startsWith('/ko');
   const title = 'Libraries - Permissive';
@@ -1092,6 +1102,10 @@ export const meta: MetaFunction = ({ location }) => {
 };
 
 export default function LibrariesPage() {
+  const { libraries: libs, categories: cats } = useLoaderData<{
+    libraries: Library[];
+    categories: typeof categories;
+  }>();
   const { locale } = useI18n();
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState('');
@@ -1118,31 +1132,31 @@ export default function LibrariesPage() {
   }, [searchParams]);
 
   const filteredLibraries = useMemo(() => {
-    let libs = libraries;
+    let filtered = libs;
 
     // Quick filters
     if (quickFilter === 'trending') {
-      libs = libs.filter((lib) => lib.trending);
+      filtered = filtered.filter((lib) => lib.trending);
     } else if (quickFilter === 'usedHere') {
-      libs = libs.filter((lib) => lib.usedHere);
+      filtered = filtered.filter((lib) => lib.usedHere);
     } else if (quickFilter === 'new') {
-      libs = libs.filter((lib) => lib.yearReleased && lib.yearReleased >= 2023);
+      filtered = filtered.filter((lib) => lib.yearReleased && lib.yearReleased >= 2023);
     }
 
     // Category filter
     if (category !== 'All') {
-      libs = libs.filter((lib) => lib.category === category);
+      filtered = filtered.filter((lib) => lib.category === category);
     }
 
     // Tag filter
     if (selectedTag) {
-      libs = libs.filter((lib) => lib.tags?.includes(selectedTag));
+      filtered = filtered.filter((lib) => lib.tags?.includes(selectedTag));
     }
 
     // Search filter
     const q = search.toLowerCase().slice(0, 100);
     if (q) {
-      libs = libs.filter(
+      filtered = filtered.filter(
         (lib) =>
           lib.name.toLowerCase().includes(q) ||
           lib.description.toLowerCase().includes(q) ||
@@ -1151,7 +1165,7 @@ export default function LibrariesPage() {
     }
 
     // Sort
-    return [...libs].sort((a, b) => {
+    return [...filtered].sort((a, b) => {
       if (sortBy === 'stars') {
         const aStars = Number.parseInt(a.stars.replace('k', '000'), 10);
         const bStars = Number.parseInt(b.stars.replace('k', '000'), 10);
@@ -1165,7 +1179,7 @@ export default function LibrariesPage() {
       }
       return 0;
     });
-  }, [search, category, selectedTag, quickFilter, sortBy]);
+  }, [libs, search, category, selectedTag, quickFilter, sortBy]);
 
   const groupedLibraries = useMemo(() => {
     if (category !== 'All') {
@@ -1380,7 +1394,7 @@ export default function LibrariesPage() {
         </div>
 
         <div className="flex flex-wrap gap-2">
-          {categories.map((cat) => (
+          {cats.map((cat) => (
             <button
               key={cat}
               type="button"

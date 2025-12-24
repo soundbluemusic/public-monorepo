@@ -7,7 +7,18 @@ import { favorites, studyRecords } from '@/lib/db';
 import { Check, Shuffle } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import type { MetaFunction } from 'react-router';
-import { Link } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
+
+/**
+ * Loader: 빌드 시 데이터 로드 (SSG용)
+ */
+export async function loader() {
+  return {
+    entries: meaningEntries,
+    categories,
+    totalEntries: meaningEntries.length,
+  };
+}
 
 export const meta: MetaFunction = ({ location }) => {
   const isKorean = location.pathname.startsWith('/ko');
@@ -30,6 +41,15 @@ type FilterStatus = 'all' | 'studied' | 'unstudied' | 'bookmarked';
 type SortOption = 'alphabetical' | 'category' | 'recent';
 
 export default function BrowsePage() {
+  const {
+    entries,
+    categories: cats,
+    totalEntries,
+  } = useLoaderData<{
+    entries: MeaningEntry[];
+    categories: typeof categories;
+    totalEntries: number;
+  }>();
   const { locale, localePath } = useI18n();
 
   // Progress data
@@ -50,7 +70,7 @@ export default function BrowsePage() {
   useEffect(() => {
     async function loadData() {
       // Overall progress
-      const overall = await studyRecords.getOverallProgress(meaningEntries.length);
+      const overall = await studyRecords.getOverallProgress(totalEntries);
       setOverallProgress(overall);
 
       // Studied IDs
@@ -60,7 +80,7 @@ export default function BrowsePage() {
       // Today's studied count
       const today = new Date();
       today.setHours(0, 0, 0, 0);
-      const allRecords = await studyRecords.getRecent(meaningEntries.length);
+      const allRecords = await studyRecords.getRecent(totalEntries);
       const todayRecords = allRecords.filter((r) => {
         const recordDate = new Date(r.studiedAt);
         recordDate.setHours(0, 0, 0, 0);
@@ -75,11 +95,11 @@ export default function BrowsePage() {
       setBookmarkCount(favs.length);
     }
     loadData();
-  }, []);
+  }, [totalEntries]);
 
   // Filter and sort logic
   const getFilteredAndSortedEntries = (): MeaningEntry[] => {
-    let filtered = meaningEntries;
+    let filtered = entries;
 
     // Filter by category
     if (filterCategory !== 'all') {
@@ -117,8 +137,8 @@ export default function BrowsePage() {
   const filteredEntries = getFilteredAndSortedEntries();
 
   const handleRandomWord = () => {
-    const randomIndex = Math.floor(Math.random() * meaningEntries.length);
-    const randomEntry = meaningEntries[randomIndex];
+    const randomIndex = Math.floor(Math.random() * entries.length);
+    const randomEntry = entries[randomIndex];
     window.location.href = localePath(`/entry/${randomEntry.id}`);
   };
 
@@ -268,7 +288,7 @@ export default function BrowsePage() {
             }}
           >
             <option value="all">{locale === 'ko' ? '전체' : 'All'}</option>
-            {categories.map((cat) => (
+            {cats.map((cat) => (
               <option key={cat.id} value={cat.id}>
                 {cat.icon} {cat.name[locale]}
               </option>
@@ -345,7 +365,7 @@ export default function BrowsePage() {
           const translation = entry.translations[locale];
           const isStudied = studiedIds.has(entry.id);
           const isFavorite = favoriteIds.has(entry.id);
-          const category = categories.find((c) => c.id === entry.categoryId);
+          const category = cats.find((c) => c.id === entry.categoryId);
 
           return (
             <Link

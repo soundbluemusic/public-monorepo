@@ -1,23 +1,33 @@
 import { Layout } from '@/components/Layout';
 import { categories } from '@/data/categories';
 import { meaningEntries } from '@/data/entries';
+import type { Category, MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { studyRecords } from '@/lib/db';
 import { Check } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
+
+/**
+ * Loader: 빌드 시 데이터 로드 (SSG용)
+ */
+export async function loader({ params }: { params: { categoryId: string } }) {
+  const category = categories.find((c) => c.id === params.categoryId);
+  const entries = meaningEntries.filter((e) => e.categoryId === params.categoryId);
+  return { category: category || null, entries };
+}
 
 export function meta() {
   return [{ title: 'Category - Context' }];
 }
 
 export default function CategoryPage() {
-  const { categoryId } = useParams();
+  const { category, entries } = useLoaderData<{
+    category: Category | null;
+    entries: MeaningEntry[];
+  }>();
   const { locale, t, localePath } = useI18n();
   const [studiedIds, setStudiedIds] = useState<Set<string>>(new Set());
-
-  const category = categories.find((c) => c.id === categoryId);
-  const entries = meaningEntries.filter((e) => e.categoryId === categoryId);
 
   // Load studied words
   useEffect(() => {
