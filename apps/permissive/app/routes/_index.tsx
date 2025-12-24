@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import type { MetaFunction } from 'react-router';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import { useI18n } from '../i18n';
 
@@ -70,6 +70,7 @@ const trendingApis = [
 
 export default function Home() {
   const { locale, localePath } = useI18n();
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
   const [showResults, setShowResults] = useState(false);
 
@@ -84,7 +85,14 @@ export default function Home() {
       item.type === 'library'
         ? `${localePath('/libraries')}?q=${encodeURIComponent(item.name)}`
         : `${localePath('/web-api')}?q=${encodeURIComponent(item.name)}`;
-    window.location.href = path;
+    navigate(path);
+  };
+
+  const handleSearchSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`${localePath('/libraries')}?q=${encodeURIComponent(searchQuery)}`);
+    }
   };
 
   return (
@@ -144,7 +152,12 @@ export default function Home() {
 
         {/* Quick Search */}
         <div className="max-w-2xl mx-auto mb-8">
-          <div className="relative">
+          <form
+            onSubmit={handleSearchSubmit}
+            action={localePath('/libraries')}
+            method="get"
+            className="relative"
+          >
             <svg
               aria-hidden="true"
               className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 z-10"
@@ -162,6 +175,7 @@ export default function Home() {
             </svg>
             <input
               type="text"
+              name="q"
               placeholder={
                 locale === 'ko'
                   ? 'React, Vite, View Transitions... 검색'
@@ -175,9 +189,6 @@ export default function Home() {
               onFocus={() => setShowResults(true)}
               onBlur={() => setTimeout(() => setShowResults(false), 200)}
               onKeyDown={(e) => {
-                if (e.key === 'Enter' && searchQuery.trim()) {
-                  window.location.href = `${localePath('/libraries')}?q=${encodeURIComponent(searchQuery)}`;
-                }
                 if (e.key === 'Escape') {
                   setShowResults(false);
                 }
@@ -220,7 +231,7 @@ export default function Home() {
                 ))}
               </div>
             )}
-          </div>
+          </form>
           <p className="text-sm mt-2" style={{ color: 'var(--text-tertiary)' }}>
             {locale === 'ko' ? '실시간으로 검색됩니다' : 'Search results appear as you type'}
           </p>

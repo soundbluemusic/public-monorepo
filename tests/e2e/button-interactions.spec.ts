@@ -10,75 +10,35 @@ for (const app of apps) {
   test.describe(`${app.name} - Button Interactions`, () => {
     test('dark mode toggle should work', async ({ page }) => {
       await page.goto(app.url);
-
-      // Listen to console logs for debugging
-      page.on('console', (msg) => {
-        if (msg.text().includes('[DarkModeToggle]')) {
-          console.log('Browser console:', msg.text());
-        }
-      });
-
-      // Wait for React hydration to complete
       await page.waitForLoadState('networkidle');
-      await page.waitForLoadState('domcontentloaded');
-
-      // Wait for React to attach event handlers (check for React fiber)
-      await page.waitForFunction(
-        () => {
-          const btn = document.querySelector('button[aria-label*="mode" i]');
-          if (!btn) return false;
-          // Check if React has attached its internal properties
-          const keys = Object.keys(btn);
-          return keys.some((key) => key.startsWith('__react'));
-        },
-        { timeout: 5000 },
-      );
-
-      await page.waitForTimeout(500);
 
       // Find dark mode toggle button by aria-label
       const darkModeButton = page.locator('button[aria-label*="mode" i]').first();
-
-      // Ensure button is visible and ready
-      await expect(darkModeButton).toBeVisible();
-      await expect(darkModeButton).toBeEnabled();
+      await expect(darkModeButton).toBeVisible({ timeout: 5000 });
 
       // Get initial theme
-      const initialTheme = await page.evaluate(() =>
+      const initialIsDark = await page.evaluate(() =>
         document.documentElement.classList.contains('dark'),
       );
-      console.log('Initial theme (dark):', initialTheme);
 
-      // Click dark mode toggle - use native DOM click for better React synthetic event triggering
-      await page.evaluate(() => {
-        const btn = document.querySelector('button[aria-label*="mode" i]');
-        if (btn) btn.click();
-      });
-
-      // Wait for theme change and re-render
-      await page.waitForTimeout(1000);
+      // Click the button (capture phase handler in root.tsx handles it)
+      await darkModeButton.click();
+      await page.waitForTimeout(200);
 
       // Check theme changed
-      const newTheme = await page.evaluate(() =>
+      const newIsDark = await page.evaluate(() =>
         document.documentElement.classList.contains('dark'),
       );
-      console.log('New theme (dark):', newTheme);
-
-      expect(newTheme).not.toBe(initialTheme);
+      expect(newIsDark).not.toBe(initialIsDark);
 
       // Click again to toggle back
-      await page.evaluate(() => {
-        const btn = document.querySelector('button[aria-label*="mode" i]');
-        if (btn) btn.click();
-      });
-      await page.waitForTimeout(1000);
+      await darkModeButton.click();
+      await page.waitForTimeout(200);
 
-      const finalTheme = await page.evaluate(() =>
+      const finalIsDark = await page.evaluate(() =>
         document.documentElement.classList.contains('dark'),
       );
-      console.log('Final theme (dark):', finalTheme);
-
-      expect(finalTheme).toBe(initialTheme);
+      expect(finalIsDark).toBe(initialIsDark);
     });
 
     test('language toggle should work', async ({ page }) => {

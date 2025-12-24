@@ -1,5 +1,6 @@
 import { Moon, Sun } from 'lucide-react';
-import { type CSSProperties, useEffect, useState } from 'react';
+import { type CSSProperties, useCallback, useEffect, useRef, useState } from 'react';
+import { useSettingsStore } from '../stores/useSettingsStore';
 
 export interface DarkModeToggleProps {
   className?: string;
@@ -8,60 +9,69 @@ export interface DarkModeToggleProps {
 
 /**
  * Dark mode toggle button
- * Uses localStorage directly to avoid SSG hydration issues
+ * Uses useRef + native addEventListener for reliable event handling in SSG
  */
 export function DarkModeToggle({ className = '', style }: DarkModeToggleProps) {
-  const [isDark, setIsDark] = useState(false);
+  // Log on every render to check if component is being hydrated
+  if (typeof window !== 'undefined') {
+    console.log('[DarkModeToggle] Component rendering on client!');
+  }
+
   const [mounted, setMounted] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  const handleClick = useCallback(() => {
+    console.log('[DarkModeToggle] handleClick called via native listener!');
+
+    // Toggle dark class directly
+    const html = document.documentElement;
+    const willBeDark = !html.classList.contains('dark');
+
+    if (willBeDark) {
+      html.classList.add('dark');
+    } else {
+      html.classList.remove('dark');
+    }
+
+    // Update store
+    useSettingsStore.getState().setTheme(willBeDark ? 'dark' : 'light');
+    setIsDark(willBeDark);
+
+    console.log('[DarkModeToggle] Toggled to:', willBeDark ? 'dark' : 'light');
+  }, []);
 
   useEffect(() => {
     setMounted(true);
-    // Check current theme from document
-    const isDarkMode = document.documentElement.classList.contains('dark');
-    setIsDark(isDarkMode);
-  }, []);
+    setIsDark(document.documentElement.classList.contains('dark'));
 
-  const handleToggle = () => {
-    console.log('[DarkModeToggle] Button clicked');
-    // Always read from DOM to ensure correct state
-    const currentIsDark = document.documentElement.classList.contains('dark');
-    console.log('[DarkModeToggle] Current is dark:', currentIsDark);
-    const newIsDark = !currentIsDark;
-    console.log('[DarkModeToggle] New is dark:', newIsDark);
-
-    setIsDark(newIsDark);
-
-    // Apply theme to DOM
-    if (newIsDark) {
-      document.documentElement.classList.add('dark');
-      console.log('[DarkModeToggle] Added dark class');
-    } else {
-      document.documentElement.classList.remove('dark');
-      console.log('[DarkModeToggle] Removed dark class');
+    // Attach native click listener directly to button
+    const button = buttonRef.current;
+    if (button) {
+      console.log('[DarkModeToggle] Attaching native click listener');
+      button.addEventListener('click', handleClick);
     }
 
-    // Verify the change
-    const verified = document.documentElement.classList.contains('dark');
-    console.log('[DarkModeToggle] Verified dark class:', verified);
+    // Listen for class changes
+    const observer = new MutationObserver(() => {
+      setIsDark(document.documentElement.classList.contains('dark'));
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 
-    // Persist to localStorage
-    try {
-      const stored = localStorage.getItem('settings-storage');
-      const data = stored ? JSON.parse(stored) : { state: {} };
-      data.state = { ...data.state, theme: newIsDark ? 'dark' : 'light' };
-      localStorage.setItem('settings-storage', JSON.stringify(data));
-    } catch {
-      // Ignore storage errors
-    }
-  };
+    return () => {
+      if (button) {
+        button.removeEventListener('click', handleClick);
+      }
+      observer.disconnect();
+    };
+  }, [handleClick]);
 
-  // Show moon icon as default before hydration
   const showDark = mounted ? isDark : false;
 
   return (
     <button
+      ref={buttonRef}
       type="button"
-      onClick={handleToggle}
       className={`p-2 rounded-lg transition-all cursor-pointer hover:bg-[var(--bg-tertiary)] hover:text-[var(--text-primary)] active:scale-95 min-h-11 min-w-11 flex items-center justify-center ${className}`}
       style={{ color: 'var(--text-secondary)', ...style }}
       aria-label={showDark ? 'Switch to light mode' : 'Switch to dark mode'}

@@ -212,8 +212,11 @@ export const useSettingsStore = create<SettingsState>()(
       toggleTheme: () => {
         const current = get().theme;
         const next = current === 'dark' ? 'light' : 'dark';
+        console.log('[useSettingsStore] toggleTheme: current=', current, '-> next=', next);
         set({ theme: next });
+        console.log('[useSettingsStore] set() called, now applying theme');
         applyTheme(next);
+        console.log('[useSettingsStore] applyTheme() called');
       },
 
       setSidebarCollapsed: (collapsed) => set({ sidebarCollapsed: collapsed }),
@@ -251,17 +254,26 @@ export const useSettingsStore = create<SettingsState>()(
  * @internal This function is used internally by the store
  */
 function applyTheme(theme: Theme) {
-  if (typeof window === 'undefined') return;
+  console.log('[applyTheme] called with theme:', theme);
+  if (typeof window === 'undefined') {
+    console.log('[applyTheme] window is undefined, returning early');
+    return;
+  }
 
   const root = document.documentElement;
+  console.log('[applyTheme] classList before:', root.className);
   root.classList.add('theme-transition');
 
   if (theme === 'system') {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    console.log('[applyTheme] system theme, prefersDark:', prefersDark);
     root.classList.toggle('dark', prefersDark);
   } else {
+    console.log('[applyTheme] setting dark class to:', theme === 'dark');
     root.classList.toggle('dark', theme === 'dark');
   }
+
+  console.log('[applyTheme] classList after:', root.className);
 
   setTimeout(() => {
     root.classList.remove('theme-transition');

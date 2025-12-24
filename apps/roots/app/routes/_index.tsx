@@ -102,10 +102,16 @@ const FEATURED_CONCEPTS = [
 ];
 
 export default function HomePage() {
+  // Debug: check if HomePage is rendering on client
+  if (typeof window !== 'undefined') {
+    console.log('[roots/_index] HomePage rendering on client!');
+  }
+
   const { locale, localePath, t } = useI18n();
 
   // 검색 인덱스 프리로드
   useEffect(() => {
+    console.log('[roots/_index] useEffect running!');
     preloadSearchIndex();
   }, []);
 
