@@ -1,8 +1,13 @@
 import { useI18n } from '@/i18n';
 import { stripLocaleFromPath } from '@soundblue/shared';
-import { DarkModeToggle, LanguageToggle } from '@soundblue/shared-react';
-import { ArrowUp, BookOpen, ChevronRight, Github, Heart, Search, Star } from 'lucide-react';
-import { type ReactNode, useEffect, useRef, useState } from 'react';
+import {
+  DarkModeToggle,
+  LanguageToggle,
+  SearchDropdown,
+  useSearchWorker,
+} from '@soundblue/shared-react';
+import { ArrowUp, BookOpen, ChevronRight, Github, Heart, Star } from 'lucide-react';
+import { type ReactNode, useCallback, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { Sidebar } from './Sidebar';
 
@@ -24,27 +29,22 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const [searchQuery, setSearchQuery] = useState('');
-  const searchInputRef = useRef<HTMLInputElement>(null);
   const [showBackToTop, setShowBackToTop] = useState(false);
 
-  const handleSearchSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      navigate(localePath(`/search?q=${encodeURIComponent(searchQuery.trim())}`));
-    }
-  };
+  // Real-time search with Fuse.js
+  const { query, setQuery, results, isLoading } = useSearchWorker({
+    indexUrl: '/search-index.json',
+    locale,
+    debounceMs: 150,
+    maxResults: 8,
+  });
 
-  useEffect(() => {
-    const handleKeydown = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-        e.preventDefault();
-        searchInputRef.current?.focus();
-      }
-    };
-    window.addEventListener('keydown', handleKeydown);
-    return () => window.removeEventListener('keydown', handleKeydown);
-  }, []);
+  const handleSelectResult = useCallback(
+    (result: { item: { id: string } }) => {
+      navigate(localePath(`/concept/${result.item.id}`));
+    },
+    [navigate, localePath],
+  );
 
   // Back to top visibility
   useEffect(() => {
@@ -89,34 +89,16 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
             <span>Roots</span>
           </Link>
 
-          {/* Search Form */}
-          <form
-            onSubmit={handleSearchSubmit}
-            action={localePath('/search')}
-            method="get"
-            className="relative flex-1 max-w-md"
-          >
-            <Search
-              size={16}
-              className="absolute left-3 top-1/2 -translate-y-1/2"
-              style={{ color: 'var(--text-tertiary)' }}
-              aria-hidden="true"
-            />
-            <input
-              ref={searchInputRef}
-              type="text"
-              name="q"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder={locale === 'ko' ? '검색... (⌘K)' : 'Search... (⌘K)'}
-              className="w-full pl-9 pr-3 py-2 text-sm rounded-lg focus:outline-none"
-              style={{
-                backgroundColor: 'var(--bg-secondary)',
-                color: 'var(--text-primary)',
-                border: '1px solid var(--border-primary)',
-              }}
-            />
-          </form>
+          {/* Real-time Search Dropdown */}
+          <SearchDropdown
+            query={query}
+            onQueryChange={setQuery}
+            results={results}
+            isLoading={isLoading}
+            onSelect={handleSelectResult}
+            locale={locale}
+            className="flex-1 max-w-md"
+          />
 
           {/* Right Actions */}
           <div className="flex items-center gap-1 shrink-0">

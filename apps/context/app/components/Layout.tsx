@@ -1,9 +1,13 @@
 import { categories } from '@/data/categories';
-import { meaningEntries } from '@/data/entries';
-import type { MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { stripLocaleFromPath } from '@soundblue/shared';
-import { DarkModeToggle, LanguageToggle } from '@soundblue/shared-react';
+import {
+  DarkModeToggle,
+  LanguageToggle,
+  SearchDropdown,
+  type SearchResult,
+  useSearchWorker,
+} from '@soundblue/shared-react';
 import {
   ArrowUp,
   ChevronRight,
@@ -14,10 +18,9 @@ import {
   LayoutGrid,
   List,
   Menu,
-  Search,
   X,
 } from 'lucide-react';
-import { type ReactNode, useEffect, useMemo, useRef, useState } from 'react';
+import { type ReactNode, useCallback, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 
 // Use shared utility for locale stripping
@@ -41,83 +44,40 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
   // Sidebar
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  // Search
-  const [searchQuery, setSearchQuery] = useState('');
-  const [showResults, setShowResults] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const searchInputRef = useRef<HTMLInputElement>(null);
-  const searchContainerRef = useRef<HTMLDivElement>(null);
-
   // Back to top
   const [showBackToTop, setShowBackToTop] = useState(false);
 
-  // Search functionality
-  const MAX_SEARCH_LENGTH = 100;
-  const searchResults = useMemo(() => {
-    const q = searchQuery.toLowerCase().trim().slice(0, MAX_SEARCH_LENGTH);
-    if (!q) return [];
+  // Real-time search with Fuse.js
+  const { query, setQuery, results, isLoading } = useSearchWorker({
+    indexUrl: '/search-index.json',
+    locale,
+    debounceMs: 150,
+    maxResults: 8,
+  });
 
-    const matched = meaningEntries.filter((entry) => {
-      const translation = entry.translations[locale];
-      return (
-        entry.korean.includes(q) ||
-        entry.romanization.toLowerCase().includes(q) ||
-        translation.word.toLowerCase().includes(q)
-      );
-    });
+  const handleSelectResult = useCallback(
+    (result: SearchResult) => {
+      navigate(localePath(`/entry/${result.item.id}`));
+    },
+    [navigate, localePath],
+  );
 
-    return matched.slice(0, 8);
-  }, [searchQuery, locale]);
-
-  const handleSearchKeyDown = (e: React.KeyboardEvent) => {
-    const len = searchResults.length;
-
-    if (e.key === 'Escape') {
-      setShowResults(false);
-      searchInputRef.current?.blur();
-      return;
-    }
-
-    if (e.key === 'ArrowDown' && len > 0) {
-      e.preventDefault();
-      setSelectedIndex((i) => (i + 1) % len);
-    } else if (e.key === 'ArrowUp' && len > 0) {
-      e.preventDefault();
-      setSelectedIndex((i) => (i - 1 + len) % len);
-    } else if (e.key === 'Enter' && len > 0) {
-      e.preventDefault();
-      selectResult(searchResults[selectedIndex]);
-    }
-  };
-
-  const selectResult = (entry: MeaningEntry) => {
-    setSearchQuery('');
-    setShowResults(false);
-    navigate(localePath(`/entry/${entry.id}`));
-  };
-
-  // Close search results when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (searchContainerRef.current && !searchContainerRef.current.contains(e.target as Node)) {
-        setShowResults(false);
-      }
-    };
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
-  }, []);
-
-  // Keyboard shortcut for search
-  useEffect(() => {
-    const handleKeydown = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-        e.preventDefault();
-        searchInputRef.current?.focus();
-        setShowResults(true);
-      }
-    };
-    window.addEventListener('keydown', handleKeydown);
-    return () => window.removeEventListener('keydown', handleKeydown);
+  // Custom render for Context entries (shows korean + romanization)
+  const renderContextResult = useCallback((result: SearchResult, _isSelected: boolean) => {
+    const name = result.item.name;
+    return (
+      <div className="flex items-baseline justify-between w-full">
+        <div className="flex items-baseline gap-2">
+          <span style={{ color: 'var(--text-primary)' }} className="font-medium">
+            {name.ko}
+          </span>
+          <span style={{ color: 'var(--text-tertiary)' }} className="text-xs">
+            {result.item.tags?.[result.item.tags.length - 1]}
+          </span>
+        </div>
+        <span style={{ color: 'var(--text-secondary)' }}>{name.en}</span>
+      </div>
+    );
   }, []);
 
   // Back to top visibility
@@ -174,79 +134,17 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
             </Link>
           </div>
 
-          {/* Search Form */}
-          <div ref={searchContainerRef} className="relative flex-1 max-w-md">
-            <div className="relative">
-              <Search
-                size={16}
-                className="absolute left-3 top-1/2 -translate-y-1/2"
-                style={{ color: 'var(--text-tertiary)' }}
-                aria-hidden="true"
-              />
-              <input
-                ref={searchInputRef}
-                type="text"
-                value={searchQuery}
-                onChange={(e) => {
-                  setSearchQuery(e.target.value);
-                  setSelectedIndex(0);
-                  setShowResults(true);
-                }}
-                onFocus={() => setShowResults(true)}
-                onKeyDown={handleSearchKeyDown}
-                placeholder={locale === 'ko' ? '검색... (⌘K)' : 'Search... (⌘K)'}
-                className="w-full pl-9 pr-3 py-2 text-sm rounded-lg focus:outline-none"
-                style={{
-                  backgroundColor: 'var(--bg-secondary)',
-                  color: 'var(--text-primary)',
-                  border: '1px solid var(--border-primary)',
-                }}
-              />
-            </div>
-
-            {/* Search Results Dropdown */}
-            {showResults && searchQuery.length > 0 && (
-              <div
-                className="absolute top-full left-0 right-0 mt-1 rounded-lg shadow-lg overflow-hidden z-50"
-                style={{
-                  backgroundColor: 'var(--bg-elevated)',
-                  border: '1px solid var(--border-primary)',
-                }}
-              >
-                {searchResults.length > 0 ? (
-                  searchResults.map((entry, index) => (
-                    <button
-                      key={entry.id}
-                      type="button"
-                      onClick={() => selectResult(entry)}
-                      onMouseEnter={() => setSelectedIndex(index)}
-                      className="w-full flex items-baseline justify-between px-4 py-3 text-left text-sm min-h-11"
-                      style={{
-                        backgroundColor:
-                          selectedIndex === index ? 'var(--bg-tertiary)' : 'transparent',
-                      }}
-                    >
-                      <div className="flex items-baseline gap-2">
-                        <span style={{ color: 'var(--text-primary)' }} className="font-medium">
-                          {entry.korean}
-                        </span>
-                        <span style={{ color: 'var(--text-tertiary)' }} className="text-xs">
-                          {entry.romanization}
-                        </span>
-                      </div>
-                      <span style={{ color: 'var(--text-secondary)' }}>
-                        {entry.translations[locale].word}
-                      </span>
-                    </button>
-                  ))
-                ) : (
-                  <div className="px-4 py-3 text-sm" style={{ color: 'var(--text-tertiary)' }}>
-                    {locale === 'ko' ? '결과 없음' : 'No results'}
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
+          {/* Real-time Search Dropdown */}
+          <SearchDropdown
+            query={query}
+            onQueryChange={setQuery}
+            results={results}
+            isLoading={isLoading}
+            onSelect={handleSelectResult}
+            locale={locale}
+            renderResult={renderContextResult}
+            className="flex-1 max-w-md"
+          />
 
           {/* Right Actions - Hidden on mobile */}
           <div className="hidden sm:flex items-center gap-1 shrink-0">

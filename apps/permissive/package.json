@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "react-router dev",
-    "prebuild": "pnpm exec tsx scripts/generate-paraglide-messages.ts",
+    "prebuild": "pnpm exec tsx scripts/generate-paraglide-messages.ts && tsx scripts/generate-search-index.ts",
     "build": "react-router build && tsx scripts/generate-sitemaps.ts",
     "preview": "npx serve build/client -l 3004 --no-port-switching",
     "start": "npx serve build/client -l 3004 --no-port-switching",

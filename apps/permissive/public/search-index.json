@@ -1,0 +1,1906 @@
+[
+  {
+    "id": "lib-react-router",
+    "type": "library",
+    "name": {
+      "en": "React Router",
+      "ko": "React Router"
+    },
+    "description": {
+      "en": "Declarative routing for React",
+      "ko": "React를 위한 선언적 라우팅"
+    },
+    "field": "Routing",
+    "tags": ["React", "SSG", "SSR", "TypeScript"]
+  },
+  {
+    "id": "lib-tanstack-router",
+    "type": "library",
+    "name": {
+      "en": "TanStack Router",
+      "ko": "TanStack Router"
+    },
+    "description": {
+      "en": "Type-safe routing for React",
+      "ko": "React를 위한 타입 안전 라우팅"
+    },
+    "field": "Routing",
+    "tags": ["React", "TypeScript", "Type-safe"]
+  },
+  {
+    "id": "lib-wouter",
+    "type": "library",
+    "name": {
+      "en": "Wouter",
+      "ko": "Wouter"
+    },
+    "description": {
+      "en": "Minimalist routing for React",
+      "ko": "React를 위한 미니멀 라우팅"
+    },
+    "field": "Routing",
+    "tags": ["React", "Minimal"]
+  },
+  {
+    "id": "lib-next-js",
+    "type": "library",
+    "name": {
+      "en": "Next.js",
+      "ko": "Next.js"
+    },
+    "description": {
+      "en": "The React framework for production",
+      "ko": "프로덕션을 위한 React 프레임워크"
+    },
+    "field": "Meta-frameworks",
+    "tags": ["React", "SSR", "SSG", "TypeScript"]
+  },
+  {
+    "id": "lib-astro",
+    "type": "library",
+    "name": {
+      "en": "Astro",
+      "ko": "Astro"
+    },
+    "description": {
+      "en": "Build fast websites, faster",
+      "ko": "빠른 웹사이트를 더 빠르게"
+    },
+    "field": "Meta-frameworks",
+    "tags": ["SSG", "MPA", "TypeScript"]
+  },
+  {
+    "id": "lib-remix",
+    "type": "library",
+    "name": {
+      "en": "Remix",
+      "ko": "Remix"
+    },
+    "description": {
+      "en": "Full stack web framework",
+      "ko": "풀스택 웹 프레임워크"
+    },
+    "field": "Meta-frameworks",
+    "tags": ["React", "SSR", "TypeScript"]
+  },
+  {
+    "id": "lib-nuxt",
+    "type": "library",
+    "name": {
+      "en": "Nuxt",
+      "ko": "Nuxt"
+    },
+    "description": {
+      "en": "The Intuitive Vue Framework",
+      "ko": "직관적인 Vue 프레임워크"
+    },
+    "field": "Meta-frameworks",
+    "tags": ["Vue", "SSR", "SSG", "TypeScript"]
+  },
+  {
+    "id": "lib-sveltekit",
+    "type": "library",
+    "name": {
+      "en": "SvelteKit",
+      "ko": "SvelteKit"
+    },
+    "description": {
+      "en": "The fastest way to build Svelte apps",
+      "ko": "Svelte 앱을 만드는 가장 빠른 방법"
+    },
+    "field": "Meta-frameworks",
+    "tags": ["Svelte", "SSR", "SSG", "TypeScript"]
+  },
+  {
+    "id": "lib-qwik",
+    "type": "library",
+    "name": {
+      "en": "Qwik",
+      "ko": "Qwik"
+    },
+    "description": {
+      "en": "Instant-loading web apps",
+      "ko": "즉시 로딩되는 웹 앱"
+    },
+    "field": "Meta-frameworks",
+    "tags": ["Resumability", "SSR", "TypeScript"]
+  },
+  {
+    "id": "lib-gatsby",
+    "type": "library",
+    "name": {
+      "en": "Gatsby",
+      "ko": "Gatsby"
+    },
+    "description": {
+      "en": "Build blazing fast websites",
+      "ko": "매우 빠른 웹사이트 구축"
+    },
+    "field": "Meta-frameworks",
+    "tags": ["React", "SSG", "GraphQL"]
+  },
+  {
+    "id": "lib-react",
+    "type": "library",
+    "name": {
+      "en": "React",
+      "ko": "React"
+    },
+    "description": {
+      "en": "A JavaScript library for building user interfaces",
+      "ko": "사용자 인터페이스 구축을 위한 자바스크립트 라이브러리"
+    },
+    "field": "Frameworks",
+    "tags": ["UI", "Components", "TypeScript"]
+  },
+  {
+    "id": "lib-vue",
+    "type": "library",
+    "name": {
+      "en": "Vue",
+      "ko": "Vue"
+    },
+    "description": {
+      "en": "Progressive JavaScript framework",
+      "ko": "점진적 자바스크립트 프레임워크"
+    },
+    "field": "Frameworks",
+    "tags": ["UI", "Components", "TypeScript"]
+  },
+  {
+    "id": "lib-svelte",
+    "type": "library",
+    "name": {
+      "en": "Svelte",
+      "ko": "Svelte"
+    },
+    "description": {
+      "en": "Cybernetically enhanced web apps",
+      "ko": "사이버네틱하게 향상된 웹 앱"
+    },
+    "field": "Frameworks",
+    "tags": ["UI", "Compiler", "TypeScript"]
+  },
+  {
+    "id": "lib-solidjs",
+    "type": "library",
+    "name": {
+      "en": "SolidJS",
+      "ko": "SolidJS"
+    },
+    "description": {
+      "en": "Simple and performant reactivity",
+      "ko": "간단하고 성능 좋은 반응성"
+    },
+    "field": "Frameworks",
+    "tags": ["UI", "Reactive", "TypeScript"]
+  },
+  {
+    "id": "lib-preact",
+    "type": "library",
+    "name": {
+      "en": "Preact",
+      "ko": "Preact"
+    },
+    "description": {
+      "en": "Fast 3kB alternative to React",
+      "ko": "React의 빠른 3kB 대안"
+    },
+    "field": "Frameworks",
+    "tags": ["UI", "Minimal", "React-compatible"]
+  },
+  {
+    "id": "lib-alpine-js",
+    "type": "library",
+    "name": {
+      "en": "Alpine.js",
+      "ko": "Alpine.js"
+    },
+    "description": {
+      "en": "Lightweight JavaScript framework",
+      "ko": "경량 자바스크립트 프레임워크"
+    },
+    "field": "Frameworks",
+    "tags": ["Minimal", "HTML-first"]
+  },
+  {
+    "id": "lib-lit",
+    "type": "library",
+    "name": {
+      "en": "Lit",
+      "ko": "Lit"
+    },
+    "description": {
+      "en": "Simple. Fast. Web Components.",
+      "ko": "간단하고 빠른 웹 컴포넌트"
+    },
+    "field": "Frameworks",
+    "tags": ["Web Components", "TypeScript"]
+  },
+  {
+    "id": "lib-vite",
+    "type": "library",
+    "name": {
+      "en": "Vite",
+      "ko": "Vite"
+    },
+    "description": {
+      "en": "Next generation frontend tooling",
+      "ko": "차세대 프론트엔드 도구"
+    },
+    "field": "Build Tools",
+    "tags": ["Build", "Dev Server", "ESM"]
+  },
+  {
+    "id": "lib-turbopack",
+    "type": "library",
+    "name": {
+      "en": "Turbopack",
+      "ko": "Turbopack"
+    },
+    "description": {
+      "en": "Incremental bundler for web",
+      "ko": "웹을 위한 증분 번들러"
+    },
+    "field": "Build Tools",
+    "tags": ["Build", "Rust", "Fast"]
+  },
+  {
+    "id": "lib-rspack",
+    "type": "library",
+    "name": {
+      "en": "Rspack",
+      "ko": "Rspack"
+    },
+    "description": {
+      "en": "Rust-powered webpack",
+      "ko": "Rust 기반 webpack"
+    },
+    "field": "Build Tools",
+    "tags": ["Build", "Rust", "Webpack-compatible"]
+  },
+  {
+    "id": "lib-esbuild",
+    "type": "library",
+    "name": {
+      "en": "esbuild",
+      "ko": "esbuild"
+    },
+    "description": {
+      "en": "Extremely fast bundler",
+      "ko": "극도로 빠른 번들러"
+    },
+    "field": "Build Tools",
+    "tags": ["Build", "Go", "Fast"]
+  },
+  {
+    "id": "lib-webpack",
+    "type": "library",
+    "name": {
+      "en": "Webpack",
+      "ko": "Webpack"
+    },
+    "description": {
+      "en": "Module bundler",
+      "ko": "모듈 번들러"
+    },
+    "field": "Build Tools",
+    "tags": ["Build", "Classic"]
+  },
+  {
+    "id": "lib-rollup",
+    "type": "library",
+    "name": {
+      "en": "Rollup",
+      "ko": "Rollup"
+    },
+    "description": {
+      "en": "Module bundler for libraries",
+      "ko": "라이브러리를 위한 모듈 번들러"
+    },
+    "field": "Build Tools",
+    "tags": ["Build", "ESM"]
+  },
+  {
+    "id": "lib-parcel",
+    "type": "library",
+    "name": {
+      "en": "Parcel",
+      "ko": "Parcel"
+    },
+    "description": {
+      "en": "Zero config build tool",
+      "ko": "제로 설정 빌드 도구"
+    },
+    "field": "Build Tools",
+    "tags": ["Build", "Zero-config"]
+  },
+  {
+    "id": "lib-swc",
+    "type": "library",
+    "name": {
+      "en": "SWC",
+      "ko": "SWC"
+    },
+    "description": {
+      "en": "Rust-based platform for fast tools",
+      "ko": "Rust 기반 빠른 도구 플랫폼"
+    },
+    "field": "Build Tools",
+    "tags": ["Build", "Rust", "Fast"]
+  },
+  {
+    "id": "lib-biome",
+    "type": "library",
+    "name": {
+      "en": "Biome",
+      "ko": "Biome"
+    },
+    "description": {
+      "en": "Toolchain for web projects",
+      "ko": "웹 프로젝트를 위한 툴체인"
+    },
+    "field": "Build Tools",
+    "tags": ["Linter", "Formatter", "Rust"]
+  },
+  {
+    "id": "lib-bun",
+    "type": "library",
+    "name": {
+      "en": "Bun",
+      "ko": "Bun"
+    },
+    "description": {
+      "en": "All-in-one JavaScript runtime",
+      "ko": "올인원 자바스크립트 런타임"
+    },
+    "field": "Runtime",
+    "tags": ["Runtime", "Fast", "Zig"]
+  },
+  {
+    "id": "lib-deno",
+    "type": "library",
+    "name": {
+      "en": "Deno",
+      "ko": "Deno"
+    },
+    "description": {
+      "en": "Secure runtime for JavaScript",
+      "ko": "안전한 자바스크립트 런타임"
+    },
+    "field": "Runtime",
+    "tags": ["Runtime", "Secure", "Rust"]
+  },
+  {
+    "id": "lib-node-js",
+    "type": "library",
+    "name": {
+      "en": "Node.js",
+      "ko": "Node.js"
+    },
+    "description": {
+      "en": "JavaScript runtime built on V8",
+      "ko": "V8 기반 자바스크립트 런타임"
+    },
+    "field": "Runtime",
+    "tags": ["Runtime", "Classic"]
+  },
+  {
+    "id": "lib-zustand",
+    "type": "library",
+    "name": {
+      "en": "Zustand",
+      "ko": "Zustand"
+    },
+    "description": {
+      "en": "Small, fast state-management",
+      "ko": "작고 빠른 상태 관리"
+    },
+    "field": "State Management",
+    "tags": ["React", "State", "TypeScript"]
+  },
+  {
+    "id": "lib-redux-toolkit",
+    "type": "library",
+    "name": {
+      "en": "Redux Toolkit",
+      "ko": "Redux Toolkit"
+    },
+    "description": {
+      "en": "Official Redux toolset",
+      "ko": "공식 Redux 툴셋"
+    },
+    "field": "State Management",
+    "tags": ["React", "State", "TypeScript"]
+  },
+  {
+    "id": "lib-jotai",
+    "type": "library",
+    "name": {
+      "en": "Jotai",
+      "ko": "Jotai"
+    },
+    "description": {
+      "en": "Primitive and flexible state",
+      "ko": "원시적이고 유연한 상태 관리"
+    },
+    "field": "State Management",
+    "tags": ["React", "Atomic", "TypeScript"]
+  },
+  {
+    "id": "lib-recoil",
+    "type": "library",
+    "name": {
+      "en": "Recoil",
+      "ko": "Recoil"
+    },
+    "description": {
+      "en": "State management for React",
+      "ko": "React를 위한 상태 관리"
+    },
+    "field": "State Management",
+    "tags": ["React", "Atomic", "TypeScript"]
+  },
+  {
+    "id": "lib-mobx",
+    "type": "library",
+    "name": {
+      "en": "MobX",
+      "ko": "MobX"
+    },
+    "description": {
+      "en": "Simple, scalable state management",
+      "ko": "간단하고 확장 가능한 상태 관리"
+    },
+    "field": "State Management",
+    "tags": ["Observable", "TypeScript"]
+  },
+  {
+    "id": "lib-valtio",
+    "type": "library",
+    "name": {
+      "en": "Valtio",
+      "ko": "Valtio"
+    },
+    "description": {
+      "en": "Proxy-based state management",
+      "ko": "Proxy 기반 상태 관리"
+    },
+    "field": "State Management",
+    "tags": ["React", "Proxy", "TypeScript"]
+  },
+  {
+    "id": "lib-xstate",
+    "type": "library",
+    "name": {
+      "en": "XState",
+      "ko": "XState"
+    },
+    "description": {
+      "en": "State machines and statecharts",
+      "ko": "상태 머신과 상태 차트"
+    },
+    "field": "State Management",
+    "tags": ["State Machine", "TypeScript"]
+  },
+  {
+    "id": "lib-pinia",
+    "type": "library",
+    "name": {
+      "en": "Pinia",
+      "ko": "Pinia"
+    },
+    "description": {
+      "en": "Intuitive Vue Store",
+      "ko": "직관적인 Vue 스토어"
+    },
+    "field": "State Management",
+    "tags": ["Vue", "State", "TypeScript"]
+  },
+  {
+    "id": "lib-tanstack-query",
+    "type": "library",
+    "name": {
+      "en": "TanStack Query",
+      "ko": "TanStack Query"
+    },
+    "description": {
+      "en": "Powerful asynchronous state management",
+      "ko": "강력한 비동기 상태 관리"
+    },
+    "field": "Data Fetching",
+    "tags": ["React", "Data", "TypeScript"]
+  },
+  {
+    "id": "lib-swr",
+    "type": "library",
+    "name": {
+      "en": "SWR",
+      "ko": "SWR"
+    },
+    "description": {
+      "en": "React Hooks for data fetching",
+      "ko": "데이터 페칭을 위한 React Hooks"
+    },
+    "field": "Data Fetching",
+    "tags": ["React", "Hooks", "TypeScript"]
+  },
+  {
+    "id": "lib-apollo-client",
+    "type": "library",
+    "name": {
+      "en": "Apollo Client",
+      "ko": "Apollo Client"
+    },
+    "description": {
+      "en": "GraphQL client for React",
+      "ko": "React를 위한 GraphQL 클라이언트"
+    },
+    "field": "Data Fetching",
+    "tags": ["GraphQL", "React", "TypeScript"]
+  },
+  {
+    "id": "lib-trpc",
+    "type": "library",
+    "name": {
+      "en": "tRPC",
+      "ko": "tRPC"
+    },
+    "description": {
+      "en": "End-to-end typesafe APIs",
+      "ko": "엔드투엔드 타입 안전 API"
+    },
+    "field": "Data Fetching",
+    "tags": ["TypeScript", "Type-safe", "RPC"]
+  },
+  {
+    "id": "lib-axios",
+    "type": "library",
+    "name": {
+      "en": "Axios",
+      "ko": "Axios"
+    },
+    "description": {
+      "en": "Promise based HTTP client",
+      "ko": "Promise 기반 HTTP 클라이언트"
+    },
+    "field": "Data Fetching",
+    "tags": ["HTTP", "Promise"]
+  },
+  {
+    "id": "lib-typescript",
+    "type": "library",
+    "name": {
+      "en": "TypeScript",
+      "ko": "TypeScript"
+    },
+    "description": {
+      "en": "Typed superset of JavaScript",
+      "ko": "타입이 있는 자바스크립트 상위집합"
+    },
+    "field": "Type Safety",
+    "tags": ["Language", "Types"]
+  },
+  {
+    "id": "lib-zod",
+    "type": "library",
+    "name": {
+      "en": "Zod",
+      "ko": "Zod"
+    },
+    "description": {
+      "en": "TypeScript-first schema validation",
+      "ko": "TypeScript 우선 스키마 검증"
+    },
+    "field": "Type Safety",
+    "tags": ["Validation", "TypeScript"]
+  },
+  {
+    "id": "lib-valibot",
+    "type": "library",
+    "name": {
+      "en": "Valibot",
+      "ko": "Valibot"
+    },
+    "description": {
+      "en": "Modular and type safe schema library",
+      "ko": "모듈식 타입 안전 스키마 라이브러리"
+    },
+    "field": "Type Safety",
+    "tags": ["Validation", "TypeScript", "Minimal"]
+  },
+  {
+    "id": "lib-yup",
+    "type": "library",
+    "name": {
+      "en": "Yup",
+      "ko": "Yup"
+    },
+    "description": {
+      "en": "Schema validation library",
+      "ko": "스키마 검증 라이브러리"
+    },
+    "field": "Type Safety",
+    "tags": ["Validation", "Schema"]
+  },
+  {
+    "id": "lib-tailwind-css",
+    "type": "library",
+    "name": {
+      "en": "Tailwind CSS",
+      "ko": "Tailwind CSS"
+    },
+    "description": {
+      "en": "Utility-first CSS framework",
+      "ko": "유틸리티 우선 CSS 프레임워크"
+    },
+    "field": "Styling",
+    "tags": ["CSS", "Utility"]
+  },
+  {
+    "id": "lib-unocss",
+    "type": "library",
+    "name": {
+      "en": "UnoCSS",
+      "ko": "UnoCSS"
+    },
+    "description": {
+      "en": "Instant on-demand atomic CSS",
+      "ko": "즉시 온디맨드 아토믹 CSS"
+    },
+    "field": "Styling",
+    "tags": ["CSS", "Atomic", "Fast"]
+  },
+  {
+    "id": "lib-panda-css",
+    "type": "library",
+    "name": {
+      "en": "Panda CSS",
+      "ko": "Panda CSS"
+    },
+    "description": {
+      "en": "CSS-in-JS with build time generation",
+      "ko": "빌드 타임 생성 CSS-in-JS"
+    },
+    "field": "Styling",
+    "tags": ["CSS-in-JS", "TypeScript"]
+  },
+  {
+    "id": "lib-styled-components",
+    "type": "library",
+    "name": {
+      "en": "styled-components",
+      "ko": "styled-components"
+    },
+    "description": {
+      "en": "CSS-in-JS for React",
+      "ko": "React를 위한 CSS-in-JS"
+    },
+    "field": "Styling",
+    "tags": ["CSS-in-JS", "React"]
+  },
+  {
+    "id": "lib-emotion",
+    "type": "library",
+    "name": {
+      "en": "Emotion",
+      "ko": "Emotion"
+    },
+    "description": {
+      "en": "CSS-in-JS library",
+      "ko": "CSS-in-JS 라이브러리"
+    },
+    "field": "Styling",
+    "tags": ["CSS-in-JS", "React"]
+  },
+  {
+    "id": "lib-sass",
+    "type": "library",
+    "name": {
+      "en": "Sass",
+      "ko": "Sass"
+    },
+    "description": {
+      "en": "CSS with superpowers",
+      "ko": "슈퍼파워가 있는 CSS"
+    },
+    "field": "Styling",
+    "tags": ["CSS", "Preprocessor"]
+  },
+  {
+    "id": "lib-postcss",
+    "type": "library",
+    "name": {
+      "en": "PostCSS",
+      "ko": "PostCSS"
+    },
+    "description": {
+      "en": "Transform CSS with JS",
+      "ko": "JS로 CSS 변환"
+    },
+    "field": "Styling",
+    "tags": ["CSS", "Transform"]
+  },
+  {
+    "id": "lib-vanilla-extract",
+    "type": "library",
+    "name": {
+      "en": "Vanilla Extract",
+      "ko": "Vanilla Extract"
+    },
+    "description": {
+      "en": "Zero-runtime CSS-in-TypeScript",
+      "ko": "제로 런타임 CSS-in-TypeScript"
+    },
+    "field": "Styling",
+    "tags": ["CSS-in-JS", "TypeScript", "Zero-runtime"]
+  },
+  {
+    "id": "lib-stylex",
+    "type": "library",
+    "name": {
+      "en": "StyleX",
+      "ko": "StyleX"
+    },
+    "description": {
+      "en": "Meta's CSS-in-JS solution",
+      "ko": "Meta의 CSS-in-JS 솔루션"
+    },
+    "field": "Styling",
+    "tags": ["CSS-in-JS", "Meta"]
+  },
+  {
+    "id": "lib-radix-ui",
+    "type": "library",
+    "name": {
+      "en": "Radix UI",
+      "ko": "Radix UI"
+    },
+    "description": {
+      "en": "Unstyled, accessible components",
+      "ko": "스타일 없는 접근성 컴포넌트"
+    },
+    "field": "UI Components",
+    "tags": ["React", "Headless", "Accessible"]
+  },
+  {
+    "id": "lib-shadcn-ui",
+    "type": "library",
+    "name": {
+      "en": "shadcn/ui",
+      "ko": "shadcn/ui"
+    },
+    "description": {
+      "en": "Re-usable components built with Radix",
+      "ko": "Radix로 만든 재사용 컴포넌트"
+    },
+    "field": "UI Components",
+    "tags": ["React", "Tailwind", "Copy-paste"]
+  },
+  {
+    "id": "lib-react-aria",
+    "type": "library",
+    "name": {
+      "en": "React Aria",
+      "ko": "React Aria"
+    },
+    "description": {
+      "en": "Adobe's accessible UI primitives",
+      "ko": "Adobe의 접근 가능한 UI 프리미티브"
+    },
+    "field": "UI Components",
+    "tags": ["React", "Headless", "Accessible"]
+  },
+  {
+    "id": "lib-headless-ui",
+    "type": "library",
+    "name": {
+      "en": "Headless UI",
+      "ko": "Headless UI"
+    },
+    "description": {
+      "en": "Completely unstyled UI components",
+      "ko": "완전히 스타일 없는 UI 컴포넌트"
+    },
+    "field": "UI Components",
+    "tags": ["React", "Headless", "Tailwind"]
+  },
+  {
+    "id": "lib-mantine",
+    "type": "library",
+    "name": {
+      "en": "Mantine",
+      "ko": "Mantine"
+    },
+    "description": {
+      "en": "Full-featured React components",
+      "ko": "풀 기능 React 컴포넌트"
+    },
+    "field": "UI Components",
+    "tags": ["React", "TypeScript"]
+  },
+  {
+    "id": "lib-chakra-ui",
+    "type": "library",
+    "name": {
+      "en": "Chakra UI",
+      "ko": "Chakra UI"
+    },
+    "description": {
+      "en": "Modular and accessible components",
+      "ko": "모듈식이고 접근 가능한 컴포넌트"
+    },
+    "field": "UI Components",
+    "tags": ["React", "Accessible"]
+  },
+  {
+    "id": "lib-ant-design",
+    "type": "library",
+    "name": {
+      "en": "Ant Design",
+      "ko": "Ant Design"
+    },
+    "description": {
+      "en": "Enterprise UI design system",
+      "ko": "엔터프라이즈 UI 디자인 시스템"
+    },
+    "field": "UI Components",
+    "tags": ["React", "Enterprise"]
+  },
+  {
+    "id": "lib-material-ui",
+    "type": "library",
+    "name": {
+      "en": "Material-UI",
+      "ko": "Material-UI"
+    },
+    "description": {
+      "en": "React Material Design components",
+      "ko": "React Material Design 컴포넌트"
+    },
+    "field": "UI Components",
+    "tags": ["React", "Material Design"]
+  },
+  {
+    "id": "lib-daisyui",
+    "type": "library",
+    "name": {
+      "en": "daisyUI",
+      "ko": "daisyUI"
+    },
+    "description": {
+      "en": "Tailwind CSS component library",
+      "ko": "Tailwind CSS 컴포넌트 라이브러리"
+    },
+    "field": "UI Components",
+    "tags": ["Tailwind", "CSS"]
+  },
+  {
+    "id": "lib-park-ui",
+    "type": "library",
+    "name": {
+      "en": "Park UI",
+      "ko": "Park UI"
+    },
+    "description": {
+      "en": "Beautifully designed components",
+      "ko": "아름답게 디자인된 컴포넌트"
+    },
+    "field": "UI Components",
+    "tags": ["React", "Panda CSS"]
+  },
+  {
+    "id": "lib-framer-motion",
+    "type": "library",
+    "name": {
+      "en": "Framer Motion",
+      "ko": "Framer Motion"
+    },
+    "description": {
+      "en": "Production-ready motion library",
+      "ko": "프로덕션 준비된 모션 라이브러리"
+    },
+    "field": "Animation",
+    "tags": ["React", "Animation"]
+  },
+  {
+    "id": "lib-gsap",
+    "type": "library",
+    "name": {
+      "en": "GSAP",
+      "ko": "GSAP"
+    },
+    "description": {
+      "en": "Professional-grade animation",
+      "ko": "전문가급 애니메이션"
+    },
+    "field": "Animation",
+    "tags": ["Animation", "Professional"]
+  },
+  {
+    "id": "lib-react-spring",
+    "type": "library",
+    "name": {
+      "en": "React Spring",
+      "ko": "React Spring"
+    },
+    "description": {
+      "en": "Spring-physics based animation",
+      "ko": "스프링 물리 기반 애니메이션"
+    },
+    "field": "Animation",
+    "tags": ["React", "Physics"]
+  },
+  {
+    "id": "lib-auto-animate",
+    "type": "library",
+    "name": {
+      "en": "Auto Animate",
+      "ko": "Auto Animate"
+    },
+    "description": {
+      "en": "Zero-config animations",
+      "ko": "제로 설정 애니메이션"
+    },
+    "field": "Animation",
+    "tags": ["Animation", "Zero-config"]
+  },
+  {
+    "id": "lib-motion-one",
+    "type": "library",
+    "name": {
+      "en": "Motion One",
+      "ko": "Motion One"
+    },
+    "description": {
+      "en": "Smallest animation library",
+      "ko": "가장 작은 애니메이션 라이브러리"
+    },
+    "field": "Animation",
+    "tags": ["Animation", "Minimal"]
+  },
+  {
+    "id": "lib-react-hook-form",
+    "type": "library",
+    "name": {
+      "en": "React Hook Form",
+      "ko": "React Hook Form"
+    },
+    "description": {
+      "en": "Performant forms with easy validation",
+      "ko": "쉬운 검증과 성능 좋은 폼"
+    },
+    "field": "Forms",
+    "tags": ["React", "Forms", "Validation"]
+  },
+  {
+    "id": "lib-tanstack-form",
+    "type": "library",
+    "name": {
+      "en": "TanStack Form",
+      "ko": "TanStack Form"
+    },
+    "description": {
+      "en": "Powerful and type-safe form state",
+      "ko": "강력하고 타입 안전한 폼 상태"
+    },
+    "field": "Forms",
+    "tags": ["React", "Forms", "TypeScript"]
+  },
+  {
+    "id": "lib-formik",
+    "type": "library",
+    "name": {
+      "en": "Formik",
+      "ko": "Formik"
+    },
+    "description": {
+      "en": "Build forms in React",
+      "ko": "React에서 폼 만들기"
+    },
+    "field": "Forms",
+    "tags": ["React", "Forms"]
+  },
+  {
+    "id": "lib-react-final-form",
+    "type": "library",
+    "name": {
+      "en": "React Final Form",
+      "ko": "React Final Form"
+    },
+    "description": {
+      "en": "High performance subscription-based form",
+      "ko": "고성능 구독 기반 폼"
+    },
+    "field": "Forms",
+    "tags": ["React", "Forms"]
+  },
+  {
+    "id": "lib-vitest",
+    "type": "library",
+    "name": {
+      "en": "Vitest",
+      "ko": "Vitest"
+    },
+    "description": {
+      "en": "Blazing fast unit test framework",
+      "ko": "매우 빠른 유닛 테스트 프레임워크"
+    },
+    "field": "Testing",
+    "tags": ["Testing", "Vite", "Fast"]
+  },
+  {
+    "id": "lib-playwright",
+    "type": "library",
+    "name": {
+      "en": "Playwright",
+      "ko": "Playwright"
+    },
+    "description": {
+      "en": "Reliable end-to-end testing",
+      "ko": "신뢰할 수 있는 E2E 테스팅"
+    },
+    "field": "Testing",
+    "tags": ["E2E", "Testing"]
+  },
+  {
+    "id": "lib-cypress",
+    "type": "library",
+    "name": {
+      "en": "Cypress",
+      "ko": "Cypress"
+    },
+    "description": {
+      "en": "Fast, easy and reliable E2E testing",
+      "ko": "빠르고 쉽고 신뢰할 수 있는 E2E 테스팅"
+    },
+    "field": "Testing",
+    "tags": ["E2E", "Testing"]
+  },
+  {
+    "id": "lib-testing-library",
+    "type": "library",
+    "name": {
+      "en": "Testing Library",
+      "ko": "Testing Library"
+    },
+    "description": {
+      "en": "Simple testing utilities",
+      "ko": "간단한 테스팅 유틸리티"
+    },
+    "field": "Testing",
+    "tags": ["React", "Testing"]
+  },
+  {
+    "id": "lib-jest",
+    "type": "library",
+    "name": {
+      "en": "Jest",
+      "ko": "Jest"
+    },
+    "description": {
+      "en": "Delightful JavaScript testing",
+      "ko": "즐거운 자바스크립트 테스팅"
+    },
+    "field": "Testing",
+    "tags": ["Testing", "Classic"]
+  },
+  {
+    "id": "lib-storybook",
+    "type": "library",
+    "name": {
+      "en": "Storybook",
+      "ko": "Storybook"
+    },
+    "description": {
+      "en": "UI component development",
+      "ko": "UI 컴포넌트 개발 도구"
+    },
+    "field": "Testing",
+    "tags": ["UI", "Documentation"]
+  },
+  {
+    "id": "api-view-transitions-api",
+    "type": "api",
+    "name": {
+      "en": "View Transitions API",
+      "ko": "View Transitions API"
+    },
+    "description": {
+      "en": "Smooth page transitions",
+      "ko": "부드러운 페이지 전환"
+    },
+    "field": "Modern Web Platform",
+    "tags": []
+  },
+  {
+    "id": "api-webgpu",
+    "type": "api",
+    "name": {
+      "en": "WebGPU",
+      "ko": "WebGPU"
+    },
+    "description": {
+      "en": "Next-gen 3D graphics and compute",
+      "ko": "차세대 3D 그래픽 및 컴퓨팅"
+    },
+    "field": "Modern Web Platform",
+    "tags": []
+  },
+  {
+    "id": "api-navigation-api",
+    "type": "api",
+    "name": {
+      "en": "Navigation API",
+      "ko": "Navigation API"
+    },
+    "description": {
+      "en": "Control browser navigation",
+      "ko": "브라우저 네비게이션 제어"
+    },
+    "field": "Modern Web Platform",
+    "tags": []
+  },
+  {
+    "id": "api-popover-api",
+    "type": "api",
+    "name": {
+      "en": "Popover API",
+      "ko": "Popover API"
+    },
+    "description": {
+      "en": "Native popover elements",
+      "ko": "네이티브 팝오버 엘리먼트"
+    },
+    "field": "Modern Web Platform",
+    "tags": []
+  },
+  {
+    "id": "api-web-animations-api",
+    "type": "api",
+    "name": {
+      "en": "Web Animations API",
+      "ko": "Web Animations API"
+    },
+    "description": {
+      "en": "JavaScript animation control",
+      "ko": "자바스크립트 애니메이션 제어"
+    },
+    "field": "Modern Web Platform",
+    "tags": []
+  },
+  {
+    "id": "api-document",
+    "type": "api",
+    "name": {
+      "en": "Document",
+      "ko": "Document"
+    },
+    "description": {
+      "en": "Access and manipulate the DOM tree",
+      "ko": "DOM 트리 접근 및 조작"
+    },
+    "field": "DOM & Observers",
+    "tags": []
+  },
+  {
+    "id": "api-element",
+    "type": "api",
+    "name": {
+      "en": "Element",
+      "ko": "Element"
+    },
+    "description": {
+      "en": "Base class for all elements",
+      "ko": "모든 엘리먼트의 베이스 클래스"
+    },
+    "field": "DOM & Observers",
+    "tags": []
+  },
+  {
+    "id": "api-intersectionobserver",
+    "type": "api",
+    "name": {
+      "en": "IntersectionObserver",
+      "ko": "IntersectionObserver"
+    },
+    "description": {
+      "en": "Detect element visibility",
+      "ko": "엘리먼트 가시성 감지"
+    },
+    "field": "DOM & Observers",
+    "tags": []
+  },
+  {
+    "id": "api-resizeobserver",
+    "type": "api",
+    "name": {
+      "en": "ResizeObserver",
+      "ko": "ResizeObserver"
+    },
+    "description": {
+      "en": "Observe element size changes",
+      "ko": "엘리먼트 크기 변화 감지"
+    },
+    "field": "DOM & Observers",
+    "tags": []
+  },
+  {
+    "id": "api-mutationobserver",
+    "type": "api",
+    "name": {
+      "en": "MutationObserver",
+      "ko": "MutationObserver"
+    },
+    "description": {
+      "en": "Watch for DOM changes",
+      "ko": "DOM 변경 감지"
+    },
+    "field": "DOM & Observers",
+    "tags": []
+  },
+  {
+    "id": "api-performanceobserver",
+    "type": "api",
+    "name": {
+      "en": "PerformanceObserver",
+      "ko": "PerformanceObserver"
+    },
+    "description": {
+      "en": "Monitor performance metrics",
+      "ko": "성능 지표 모니터링"
+    },
+    "field": "DOM & Observers",
+    "tags": []
+  },
+  {
+    "id": "api-fetch-api",
+    "type": "api",
+    "name": {
+      "en": "Fetch API",
+      "ko": "Fetch API"
+    },
+    "description": {
+      "en": "Modern HTTP requests",
+      "ko": "모던 HTTP 요청"
+    },
+    "field": "Network & Communication",
+    "tags": []
+  },
+  {
+    "id": "api-websocket",
+    "type": "api",
+    "name": {
+      "en": "WebSocket",
+      "ko": "WebSocket"
+    },
+    "description": {
+      "en": "Real-time bidirectional communication",
+      "ko": "실시간 양방향 통신"
+    },
+    "field": "Network & Communication",
+    "tags": []
+  },
+  {
+    "id": "api-server-sent-events",
+    "type": "api",
+    "name": {
+      "en": "Server-Sent Events",
+      "ko": "Server-Sent Events"
+    },
+    "description": {
+      "en": "Server push notifications",
+      "ko": "서버 푸시 알림"
+    },
+    "field": "Network & Communication",
+    "tags": []
+  },
+  {
+    "id": "api-webrtc",
+    "type": "api",
+    "name": {
+      "en": "WebRTC",
+      "ko": "WebRTC"
+    },
+    "description": {
+      "en": "Real-time peer-to-peer communication",
+      "ko": "실시간 P2P 통신"
+    },
+    "field": "Network & Communication",
+    "tags": []
+  },
+  {
+    "id": "api-broadcast-channel-api",
+    "type": "api",
+    "name": {
+      "en": "Broadcast Channel API",
+      "ko": "Broadcast Channel API"
+    },
+    "description": {
+      "en": "Communication between browsing contexts",
+      "ko": "브라우징 컨텍스트 간 통신"
+    },
+    "field": "Network & Communication",
+    "tags": []
+  },
+  {
+    "id": "api-localstorage",
+    "type": "api",
+    "name": {
+      "en": "localStorage",
+      "ko": "localStorage"
+    },
+    "description": {
+      "en": "Persistent key-value storage",
+      "ko": "영구 키-값 저장소"
+    },
+    "field": "Storage & Data",
+    "tags": []
+  },
+  {
+    "id": "api-sessionstorage",
+    "type": "api",
+    "name": {
+      "en": "sessionStorage",
+      "ko": "sessionStorage"
+    },
+    "description": {
+      "en": "Session-scoped storage",
+      "ko": "세션 범위 저장소"
+    },
+    "field": "Storage & Data",
+    "tags": []
+  },
+  {
+    "id": "api-indexeddb",
+    "type": "api",
+    "name": {
+      "en": "IndexedDB",
+      "ko": "IndexedDB"
+    },
+    "description": {
+      "en": "Client-side database",
+      "ko": "클라이언트 사이드 데이터베이스"
+    },
+    "field": "Storage & Data",
+    "tags": []
+  },
+  {
+    "id": "api-cache-api",
+    "type": "api",
+    "name": {
+      "en": "Cache API",
+      "ko": "Cache API"
+    },
+    "description": {
+      "en": "HTTP cache management",
+      "ko": "HTTP 캐시 관리"
+    },
+    "field": "Storage & Data",
+    "tags": []
+  },
+  {
+    "id": "api-cookie-store-api",
+    "type": "api",
+    "name": {
+      "en": "Cookie Store API",
+      "ko": "Cookie Store API"
+    },
+    "description": {
+      "en": "Asynchronous cookie access",
+      "ko": "비동기 쿠키 접근"
+    },
+    "field": "Storage & Data",
+    "tags": []
+  },
+  {
+    "id": "api-canvas-2d",
+    "type": "api",
+    "name": {
+      "en": "Canvas 2D",
+      "ko": "Canvas 2D"
+    },
+    "description": {
+      "en": "2D drawing and graphics",
+      "ko": "2D 그리기 및 그래픽"
+    },
+    "field": "Graphics & Animation",
+    "tags": []
+  },
+  {
+    "id": "api-webgl",
+    "type": "api",
+    "name": {
+      "en": "WebGL",
+      "ko": "WebGL"
+    },
+    "description": {
+      "en": "3D graphics rendering",
+      "ko": "3D 그래픽 렌더링"
+    },
+    "field": "Graphics & Animation",
+    "tags": []
+  },
+  {
+    "id": "api-offscreencanvas",
+    "type": "api",
+    "name": {
+      "en": "OffscreenCanvas",
+      "ko": "OffscreenCanvas"
+    },
+    "description": {
+      "en": "Canvas rendering in workers",
+      "ko": "워커에서 캔버스 렌더링"
+    },
+    "field": "Graphics & Animation",
+    "tags": []
+  },
+  {
+    "id": "api-svg",
+    "type": "api",
+    "name": {
+      "en": "SVG",
+      "ko": "SVG"
+    },
+    "description": {
+      "en": "Scalable vector graphics",
+      "ko": "확장 가능한 벡터 그래픽"
+    },
+    "field": "Graphics & Animation",
+    "tags": []
+  },
+  {
+    "id": "api-web-audio-api",
+    "type": "api",
+    "name": {
+      "en": "Web Audio API",
+      "ko": "Web Audio API"
+    },
+    "description": {
+      "en": "Advanced audio processing",
+      "ko": "고급 오디오 처리"
+    },
+    "field": "Media & Audio",
+    "tags": []
+  },
+  {
+    "id": "api-media-devices",
+    "type": "api",
+    "name": {
+      "en": "Media Devices",
+      "ko": "Media Devices"
+    },
+    "description": {
+      "en": "Access cameras and microphones",
+      "ko": "카메라 및 마이크 접근"
+    },
+    "field": "Media & Audio",
+    "tags": []
+  },
+  {
+    "id": "api-media-source-extensions",
+    "type": "api",
+    "name": {
+      "en": "Media Source Extensions",
+      "ko": "Media Source Extensions"
+    },
+    "description": {
+      "en": "Adaptive streaming support",
+      "ko": "적응형 스트리밍 지원"
+    },
+    "field": "Media & Audio",
+    "tags": []
+  },
+  {
+    "id": "api-picture-in-picture",
+    "type": "api",
+    "name": {
+      "en": "Picture-in-Picture",
+      "ko": "Picture-in-Picture"
+    },
+    "description": {
+      "en": "Floating video window",
+      "ko": "플로팅 비디오 창"
+    },
+    "field": "Media & Audio",
+    "tags": []
+  },
+  {
+    "id": "api-screen-capture-api",
+    "type": "api",
+    "name": {
+      "en": "Screen Capture API",
+      "ko": "Screen Capture API"
+    },
+    "description": {
+      "en": "Capture screen content",
+      "ko": "화면 콘텐츠 캡처"
+    },
+    "field": "Media & Audio",
+    "tags": []
+  },
+  {
+    "id": "api-web-workers",
+    "type": "api",
+    "name": {
+      "en": "Web Workers",
+      "ko": "Web Workers"
+    },
+    "description": {
+      "en": "Background JavaScript execution",
+      "ko": "백그라운드 자바스크립트 실행"
+    },
+    "field": "Workers & Threading",
+    "tags": []
+  },
+  {
+    "id": "api-service-worker",
+    "type": "api",
+    "name": {
+      "en": "Service Worker",
+      "ko": "Service Worker"
+    },
+    "description": {
+      "en": "Offline-first web apps",
+      "ko": "오프라인 우선 웹 앱"
+    },
+    "field": "Workers & Threading",
+    "tags": []
+  },
+  {
+    "id": "api-sharedarraybuffer",
+    "type": "api",
+    "name": {
+      "en": "SharedArrayBuffer",
+      "ko": "SharedArrayBuffer"
+    },
+    "description": {
+      "en": "Shared memory for workers",
+      "ko": "워커를 위한 공유 메모리"
+    },
+    "field": "Workers & Threading",
+    "tags": []
+  },
+  {
+    "id": "api-performance-api",
+    "type": "api",
+    "name": {
+      "en": "Performance API",
+      "ko": "Performance API"
+    },
+    "description": {
+      "en": "Measure web performance",
+      "ko": "웹 성능 측정"
+    },
+    "field": "Workers & Threading",
+    "tags": []
+  },
+  {
+    "id": "api-geolocation-api",
+    "type": "api",
+    "name": {
+      "en": "Geolocation API",
+      "ko": "Geolocation API"
+    },
+    "description": {
+      "en": "Access device location",
+      "ko": "기기 위치 접근"
+    },
+    "field": "Device & Sensors",
+    "tags": []
+  },
+  {
+    "id": "api-device-orientation",
+    "type": "api",
+    "name": {
+      "en": "Device Orientation",
+      "ko": "Device Orientation"
+    },
+    "description": {
+      "en": "Detect device rotation",
+      "ko": "기기 회전 감지"
+    },
+    "field": "Device & Sensors",
+    "tags": []
+  },
+  {
+    "id": "api-battery-status-api",
+    "type": "api",
+    "name": {
+      "en": "Battery Status API",
+      "ko": "Battery Status API"
+    },
+    "description": {
+      "en": "Monitor battery level",
+      "ko": "배터리 레벨 모니터링"
+    },
+    "field": "Device & Sensors",
+    "tags": []
+  },
+  {
+    "id": "api-vibration-api",
+    "type": "api",
+    "name": {
+      "en": "Vibration API",
+      "ko": "Vibration API"
+    },
+    "description": {
+      "en": "Control device vibration",
+      "ko": "기기 진동 제어"
+    },
+    "field": "Device & Sensors",
+    "tags": []
+  },
+  {
+    "id": "api-ambient-light-sensor",
+    "type": "api",
+    "name": {
+      "en": "Ambient Light Sensor",
+      "ko": "Ambient Light Sensor"
+    },
+    "description": {
+      "en": "Detect ambient light level",
+      "ko": "주변 조도 감지"
+    },
+    "field": "Device & Sensors",
+    "tags": []
+  },
+  {
+    "id": "api-clipboard-api",
+    "type": "api",
+    "name": {
+      "en": "Clipboard API",
+      "ko": "Clipboard API"
+    },
+    "description": {
+      "en": "Access system clipboard",
+      "ko": "시스템 클립보드 접근"
+    },
+    "field": "User Interaction",
+    "tags": []
+  },
+  {
+    "id": "api-drag-and-drop-api",
+    "type": "api",
+    "name": {
+      "en": "Drag and Drop API",
+      "ko": "Drag and Drop API"
+    },
+    "description": {
+      "en": "Native drag and drop",
+      "ko": "네이티브 드래그 앤 드롭"
+    },
+    "field": "User Interaction",
+    "tags": []
+  },
+  {
+    "id": "api-fullscreen-api",
+    "type": "api",
+    "name": {
+      "en": "Fullscreen API",
+      "ko": "Fullscreen API"
+    },
+    "description": {
+      "en": "Enter fullscreen mode",
+      "ko": "전체 화면 모드 진입"
+    },
+    "field": "User Interaction",
+    "tags": []
+  },
+  {
+    "id": "api-pointer-lock-api",
+    "type": "api",
+    "name": {
+      "en": "Pointer Lock API",
+      "ko": "Pointer Lock API"
+    },
+    "description": {
+      "en": "Lock mouse cursor",
+      "ko": "마우스 커서 고정"
+    },
+    "field": "User Interaction",
+    "tags": []
+  },
+  {
+    "id": "api-web-share-api",
+    "type": "api",
+    "name": {
+      "en": "Web Share API",
+      "ko": "Web Share API"
+    },
+    "description": {
+      "en": "Native sharing",
+      "ko": "네이티브 공유"
+    },
+    "field": "User Interaction",
+    "tags": []
+  },
+  {
+    "id": "api-page-visibility-api",
+    "type": "api",
+    "name": {
+      "en": "Page Visibility API",
+      "ko": "Page Visibility API"
+    },
+    "description": {
+      "en": "Detect page visibility",
+      "ko": "페이지 가시성 감지"
+    },
+    "field": "User Interaction",
+    "tags": []
+  },
+  {
+    "id": "api-web-crypto-api",
+    "type": "api",
+    "name": {
+      "en": "Web Crypto API",
+      "ko": "Web Crypto API"
+    },
+    "description": {
+      "en": "Cryptographic operations",
+      "ko": "암호화 작업"
+    },
+    "field": "Security & Crypto",
+    "tags": []
+  },
+  {
+    "id": "api-credential-management",
+    "type": "api",
+    "name": {
+      "en": "Credential Management",
+      "ko": "Credential Management"
+    },
+    "description": {
+      "en": "Password and credential storage",
+      "ko": "비밀번호 및 자격 증명 저장"
+    },
+    "field": "Security & Crypto",
+    "tags": []
+  },
+  {
+    "id": "api-web-authentication-api",
+    "type": "api",
+    "name": {
+      "en": "Web Authentication API",
+      "ko": "Web Authentication API"
+    },
+    "description": {
+      "en": "WebAuthn for passwordless auth",
+      "ko": "비밀번호 없는 인증을 위한 WebAuthn"
+    },
+    "field": "Security & Crypto",
+    "tags": []
+  },
+  {
+    "id": "api-permissions-api",
+    "type": "api",
+    "name": {
+      "en": "Permissions API",
+      "ko": "Permissions API"
+    },
+    "description": {
+      "en": "Query permission status",
+      "ko": "권한 상태 조회"
+    },
+    "field": "Security & Crypto",
+    "tags": []
+  },
+  {
+    "id": "api-file-api",
+    "type": "api",
+    "name": {
+      "en": "File API",
+      "ko": "File API"
+    },
+    "description": {
+      "en": "Read and manipulate files",
+      "ko": "파일 읽기 및 조작"
+    },
+    "field": "File & System",
+    "tags": []
+  },
+  {
+    "id": "api-file-system-access-api",
+    "type": "api",
+    "name": {
+      "en": "File System Access API",
+      "ko": "File System Access API"
+    },
+    "description": {
+      "en": "Access local file system",
+      "ko": "로컬 파일 시스템 접근"
+    },
+    "field": "File & System",
+    "tags": []
+  },
+  {
+    "id": "api-file-and-directory-entries",
+    "type": "api",
+    "name": {
+      "en": "File and Directory Entries",
+      "ko": "File and Directory Entries"
+    },
+    "description": {
+      "en": "Navigate file system",
+      "ko": "파일 시스템 탐색"
+    },
+    "field": "File & System",
+    "tags": []
+  },
+  {
+    "id": "api-notification-api",
+    "type": "api",
+    "name": {
+      "en": "Notification API",
+      "ko": "Notification API"
+    },
+    "description": {
+      "en": "Display system notifications",
+      "ko": "시스템 알림 표시"
+    },
+    "field": "Other",
+    "tags": []
+  },
+  {
+    "id": "api-web-components",
+    "type": "api",
+    "name": {
+      "en": "Web Components",
+      "ko": "Web Components"
+    },
+    "description": {
+      "en": "Custom HTML elements",
+      "ko": "커스텀 HTML 엘리먼트"
+    },
+    "field": "Other",
+    "tags": []
+  },
+  {
+    "id": "api-history-api",
+    "type": "api",
+    "name": {
+      "en": "History API",
+      "ko": "History API"
+    },
+    "description": {
+      "en": "Browser history manipulation",
+      "ko": "브라우저 히스토리 조작"
+    },
+    "field": "Other",
+    "tags": []
+  },
+  {
+    "id": "api-url-api",
+    "type": "api",
+    "name": {
+      "en": "URL API",
+      "ko": "URL API"
+    },
+    "description": {
+      "en": "Parse and construct URLs",
+      "ko": "URL 파싱 및 생성"
+    },
+    "field": "Other",
+    "tags": []
+  }
+]

@@ -1,0 +1,2186 @@
+[
+  {
+    "id": "misul",
+    "type": "entry",
+    "name": {
+      "ko": "미술",
+      "en": "Art / Fine Arts"
+    },
+    "description": {
+      "ko": "시각적으로 아름다움을 표현하는 예술. 그림, 조각, 디자인 등을 포함한다.",
+      "en": "The art of expressing beauty visually. Includes painting, sculpture, design, etc."
+    },
+    "field": "art",
+    "tags": ["art", "visual", "creative", "misul"]
+  },
+  {
+    "id": "geurim",
+    "type": "entry",
+    "name": {
+      "ko": "그림",
+      "en": "Picture / Painting / Drawing"
+    },
+    "description": {
+      "ko": "종이나 캔버스에 그려진 이미지. 회화 작품.",
+      "en": "An image drawn on paper or canvas. A painted work."
+    },
+    "field": "art",
+    "tags": ["art", "painting", "drawing", "geurim"]
+  },
+  {
+    "id": "josak",
+    "type": "entry",
+    "name": {
+      "ko": "조각",
+      "en": "Sculpture"
+    },
+    "description": {
+      "ko": "돌, 나무, 금속 등을 깎거나 빚어 만든 입체 예술 작품.",
+      "en": "A three-dimensional art work made by carving or molding stone, wood, metal, etc."
+    },
+    "field": "art",
+    "tags": ["art", "sculpture", "3d", "josak"]
+  },
+  {
+    "id": "misulgwan",
+    "type": "entry",
+    "name": {
+      "ko": "미술관",
+      "en": "Art Museum / Gallery"
+    },
+    "description": {
+      "ko": "미술 작품을 전시하는 공간. 그림, 조각 등을 감상할 수 있다.",
+      "en": "A space where art works are exhibited. Can appreciate paintings, sculptures, etc."
+    },
+    "field": "art",
+    "tags": ["art", "place", "museum", "misulgwan"]
+  },
+  {
+    "id": "saek",
+    "type": "entry",
+    "name": {
+      "ko": "색",
+      "en": "Color"
+    },
+    "description": {
+      "ko": "빛의 파장에 따라 눈에 보이는 성질. 빨강, 파랑, 노랑 등.",
+      "en": "A property visible to the eye depending on the wavelength of light. Red, blue, yellow, etc."
+    },
+    "field": "art",
+    "tags": ["art", "color", "visual", "saek"]
+  },
+  {
+    "id": "dijain",
+    "type": "entry",
+    "name": {
+      "ko": "디자인",
+      "en": "Design"
+    },
+    "description": {
+      "ko": "제품이나 작품의 형태와 기능을 계획하는 일. 시각적 설계.",
+      "en": "The planning of form and function of products or works. Visual planning."
+    },
+    "field": "art",
+    "tags": ["art", "design", "creative", "dijain"]
+  },
+  {
+    "id": "jakga",
+    "type": "entry",
+    "name": {
+      "ko": "작가",
+      "en": "Artist / Creator"
+    },
+    "description": {
+      "ko": "예술 작품을 창작하는 사람. 화가, 조각가, 소설가 등을 포함한다.",
+      "en": "A person who creates art works. Includes painters, sculptors, novelists, etc."
+    },
+    "field": "art",
+    "tags": ["art", "people", "profession", "jakga"]
+  },
+  {
+    "id": "jeonsi",
+    "type": "entry",
+    "name": {
+      "ko": "전시",
+      "en": "Exhibition / Exhibit"
+    },
+    "description": {
+      "ko": "작품을 공개적으로 보여주는 행사. 미술관이나 갤러리에서 열린다.",
+      "en": "An event where works are publicly displayed. Held at museums or galleries."
+    },
+    "field": "art",
+    "tags": ["art", "exhibition", "event", "jeonsi"]
+  },
+  {
+    "id": "canvas",
+    "type": "entry",
+    "name": {
+      "ko": "캔버스",
+      "en": "Canvas"
+    },
+    "description": {
+      "ko": "그림을 그리는 천이나 판. 유화나 아크릴화에 사용한다.",
+      "en": "Cloth or board for painting. Used for oil or acrylic paintings."
+    },
+    "field": "art",
+    "tags": ["art", "material", "painting", "kaenbeoseu"]
+  },
+  {
+    "id": "bulut",
+    "type": "entry",
+    "name": {
+      "ko": "붓",
+      "en": "Brush"
+    },
+    "description": {
+      "ko": "그림을 그리거나 글씨를 쓰는 도구. 털이나 섬유로 만들어진다.",
+      "en": "A tool for painting or writing. Made of hair or fibers."
+    },
+    "field": "art",
+    "tags": ["art", "tool", "painting", "but"]
+  },
+  {
+    "id": "deurama",
+    "type": "entry",
+    "name": {
+      "ko": "드라마",
+      "en": "Drama / TV Series"
+    },
+    "description": {
+      "ko": "TV나 인터넷에서 방송되는 연속극. 한국 드라마는 세계적으로 인기가 많다.",
+      "en": "A series broadcast on TV or the internet. Korean dramas are popular worldwide."
+    },
+    "field": "culture",
+    "tags": ["culture", "entertainment", "tv", "deurama"]
+  },
+  {
+    "id": "yeonghwa",
+    "type": "entry",
+    "name": {
+      "ko": "영화",
+      "en": "Movie / Film"
+    },
+    "description": {
+      "ko": "극장에서 상영하는 영상 작품. 극장이나 집에서 볼 수 있다.",
+      "en": "A visual work shown in theaters. Can be watched at the cinema or at home."
+    },
+    "field": "culture",
+    "tags": ["culture", "entertainment", "cinema", "yeonghwa"]
+  },
+  {
+    "id": "chaek",
+    "type": "entry",
+    "name": {
+      "ko": "책",
+      "en": "Book"
+    },
+    "description": {
+      "ko": "종이나 전자 형태로 된 읽을거리. 지식이나 이야기를 담고 있다.",
+      "en": "Reading material in paper or electronic form. Contains knowledge or stories."
+    },
+    "field": "culture",
+    "tags": ["culture", "reading", "literature", "chaek"]
+  },
+  {
+    "id": "eumak",
+    "type": "entry",
+    "name": {
+      "ko": "음악",
+      "en": "Music"
+    },
+    "description": {
+      "ko": "소리로 만든 예술. 노래, 악기 연주 등을 포함한다.",
+      "en": "Art created with sound. Includes songs, instrumental performances, etc."
+    },
+    "field": "culture",
+    "tags": ["culture", "entertainment", "art", "eumak"]
+  },
+  {
+    "id": "gongyeon",
+    "type": "entry",
+    "name": {
+      "ko": "공연",
+      "en": "Performance / Show"
+    },
+    "description": {
+      "ko": "관객 앞에서 펼치는 무대 예술. 연극, 콘서트, 뮤지컬 등을 말한다.",
+      "en": "Stage art performed in front of an audience. Includes plays, concerts, musicals, etc."
+    },
+    "field": "culture",
+    "tags": ["culture", "performance", "entertainment", "gongyeon"]
+  },
+  {
+    "id": "jeontong",
+    "type": "entry",
+    "name": {
+      "ko": "전통",
+      "en": "Tradition"
+    },
+    "description": {
+      "ko": "옛날부터 이어져 내려오는 문화나 관습. 한 세대에서 다음 세대로 전해진다.",
+      "en": "Culture or customs passed down from the past. Handed down from one generation to the next."
+    },
+    "field": "culture",
+    "tags": ["culture", "tradition", "history", "jeontong"]
+  },
+  {
+    "id": "myeongjeol",
+    "type": "entry",
+    "name": {
+      "ko": "명절",
+      "en": "Holiday / Festival"
+    },
+    "description": {
+      "ko": "특별히 기념하는 날. 한국의 대표적인 명절은 설날과 추석이다.",
+      "en": "A day specially celebrated. Korea's major holidays are Lunar New Year and Chuseok (Korean Thanksgivi"
+    },
+    "field": "culture",
+    "tags": ["culture", "holiday", "tradition", "myeongjeol"]
+  },
+  {
+    "id": "hanbok",
+    "type": "entry",
+    "name": {
+      "ko": "한복",
+      "en": "Hanbok"
+    },
+    "description": {
+      "ko": "한국의 전통 의상. 명절이나 특별한 날에 입는다.",
+      "en": "Korean traditional clothing. Worn on holidays or special occasions."
+    },
+    "field": "culture",
+    "tags": ["culture", "clothing", "tradition", "hanbok"]
+  },
+  {
+    "id": "kimchi-culture",
+    "type": "entry",
+    "name": {
+      "ko": "김치",
+      "en": "Kimchi"
+    },
+    "description": {
+      "ko": "한국의 대표 음식이자 문화. 배추나 무를 발효시켜 만든 전통 반찬. 유네스코 무형문화유산이다.",
+      "en": "Korea's representative food and culture. A traditional side dish made by fermenting cabbage or radis"
+    },
+    "field": "culture",
+    "tags": ["culture", "food", "tradition", "gimchi"]
+  },
+  {
+    "id": "hangul",
+    "type": "entry",
+    "name": {
+      "ko": "한글",
+      "en": "Hangul"
+    },
+    "description": {
+      "ko": "한국어를 쓰는 문자 체계. 세종대왕이 창제했다. 과학적이고 배우기 쉬운 문자로 알려져 있다.",
+      "en": "The writing system for Korean language. Created by King Sejong. Known as a scientific and easy-to-le"
+    },
+    "field": "culture",
+    "tags": ["culture", "language", "writing", "hangeul"]
+  },
+  {
+    "id": "jip",
+    "type": "entry",
+    "name": {
+      "ko": "집",
+      "en": "House / Home"
+    },
+    "description": {
+      "ko": "사람이 사는 건물, 또는 '가정'의 개념. 가장 기본적이고 자주 쓰이는 단어 중 하나이다.",
+      "en": "A building where people live, or the concept of 'home'. One of the most basic and frequently used wo"
+    },
+    "field": "daily-life",
+    "tags": ["place", "basic", "jip"]
+  },
+  {
+    "id": "hakgyo",
+    "type": "entry",
+    "name": {
+      "ko": "학교",
+      "en": "School"
+    },
+    "description": {
+      "ko": "학생들을 교육하는 기관. 초등학교, 중학교, 고등학교, 대학교를 포함한다.",
+      "en": "An institution for educating students. Includes elementary, middle, high school, and university."
+    },
+    "field": "daily-life",
+    "tags": ["place", "education", "hakgyo"]
+  },
+  {
+    "id": "il",
+    "type": "entry",
+    "name": {
+      "ko": "일",
+      "en": "Work / Job / Thing"
+    },
+    "description": {
+      "ko": "직업이나 업무, 또는 '일/사건'을 의미한다. 숫자 '일(一)'로도 쓰인다 (일, 이, 삼...).",
+      "en": "Can mean work/job, a task, or 'a thing/matter'. Also means the number 'one' (일, 이, 삼...)."
+    },
+    "field": "daily-life",
+    "tags": ["work", "basic", "il"]
+  },
+  {
+    "id": "sarang",
+    "type": "entry",
+    "name": {
+      "ko": "사랑",
+      "en": "Love"
+    },
+    "description": {
+      "ko": "누군가나 무언가에 대한 깊은 애정. 연인 간의 사랑, 가족 간의 사랑, 취미나 활동에 대한 사랑 등 다양하게 쓰인다.",
+      "en": "A deep affection for someone or something. Used for romantic love, family love, and love for things/"
+    },
+    "field": "emotions",
+    "tags": ["emotion", "relationship", "sarang"]
+  },
+  {
+    "id": "haengbok",
+    "type": "entry",
+    "name": {
+      "ko": "행복",
+      "en": "Happiness"
+    },
+    "description": {
+      "ko": "행복하거나 만족스러운 상태. 명사 '행복' 또는 형용사 '행복하다'로 사용할 수 있다.",
+      "en": "A state of being happy or content. Can be used as noun '행복' or adjective '행복하다' (to be happy)."
+    },
+    "field": "emotions",
+    "tags": ["emotion", "positive", "haengbok"]
+  },
+  {
+    "id": "seulpeum",
+    "type": "entry",
+    "name": {
+      "ko": "슬픔",
+      "en": "Sadness"
+    },
+    "description": {
+      "ko": "슬프거나 불행한 감정. 형용사형은 '슬프다'이다.",
+      "en": "A feeling of sorrow or unhappiness. The adjective form is '슬프다' (to be sad)."
+    },
+    "field": "emotions",
+    "tags": ["emotion", "negative", "seulpeum"]
+  },
+  {
+    "id": "bap",
+    "type": "entry",
+    "name": {
+      "ko": "밥",
+      "en": "Rice / Meal"
+    },
+    "description": {
+      "ko": "지은 쌀, 한국의 주식. '식사' 전체를 의미하기도 한다. '밥 먹었어?'(식사했어?)는 일상적인 인사다.",
+      "en": "Cooked rice, the staple food of Korea. Also used to mean 'meal' in general. '밥 먹었어?' (Did you eat?) "
+    },
+    "field": "food",
+    "tags": ["food", "basic", "staple", "bap"]
+  },
+  {
+    "id": "kimchi",
+    "type": "entry",
+    "name": {
+      "ko": "김치",
+      "en": "Kimchi"
+    },
+    "description": {
+      "ko": "한국 전통 발효 채소 요리. 주로 배추와 무로 만든다. 한국 음식의 기본 반찬이다.",
+      "en": "Traditional Korean fermented vegetable dish, usually made with napa cabbage and radish. A staple sid"
+    },
+    "field": "food",
+    "tags": ["food", "korean", "traditional", "kimchi"]
+  },
+  {
+    "id": "mul",
+    "type": "entry",
+    "name": {
+      "ko": "물",
+      "en": "Water"
+    },
+    "description": {
+      "ko": "가장 기본적인 음료. 식당에서 주문할 때 필수 어휘다.",
+      "en": "The most basic drink. Essential vocabulary for ordering at restaurants."
+    },
+    "field": "food",
+    "tags": ["drink", "basic", "mul"]
+  },
+  {
+    "id": "annyeong",
+    "type": "entry",
+    "name": {
+      "ko": "안녕",
+      "en": "Hi / Bye"
+    },
+    "description": {
+      "ko": "친구나 또래 사이에서 사용하는 반말 인사. 상황에 따라 '만나서 반가워'와 '잘 가'의 의미로 모두 쓰인다. 격식 없는 상황에서 사용한다.",
+      "en": "A casual greeting used among friends and peers. Can mean both 'hello' and 'goodbye' depending on con"
+    },
+    "field": "greetings",
+    "tags": ["casual", "informal", "daily", "annyeong"]
+  },
+  {
+    "id": "annyeonghaseyo",
+    "type": "entry",
+    "name": {
+      "ko": "안녕하세요",
+      "en": "Hello"
+    },
+    "description": {
+      "ko": "한국어의 기본적인 존댓말 인사. 누군가를 만나거나 대화를 시작할 때 사용한다. 대부분의 상황에 적절한 인사말이다.",
+      "en": "The standard polite greeting in Korean. Used when meeting someone or starting a conversation. Approp"
+    },
+    "field": "greetings",
+    "tags": ["formal", "polite", "daily", "annyeonghaseyo"]
+  },
+  {
+    "id": "gomapseumnida",
+    "type": "entry",
+    "name": {
+      "ko": "감사합니다",
+      "en": "Thank you"
+    },
+    "description": {
+      "ko": "감사를 표현하는 격식체 표현. '고마워요'보다 더 격식 있는 표현으로, 직장이나 어른에게 사용한다.",
+      "en": "Formal way to express gratitude. More formal than '고마워요'. Used in professional settings and with eld"
+    },
+    "field": "greetings",
+    "tags": ["formal", "polite", "gratitude", "gamsahamnida"]
+  },
+  {
+    "id": "annyeonghigaseyo",
+    "type": "entry",
+    "name": {
+      "ko": "안녕히 가세요",
+      "en": "Goodbye (to someone leaving)"
+    },
+    "description": {
+      "ko": "떠나는 사람에게 하는 인사. 직역하면 '평안히 가세요'라는 뜻. 자신이 남고 상대가 떠날 때 사용한다. 반대 표현은 '안녕히 계세요'(평안히 계세요)이다.",
+      "en": "Said to someone who is leaving while you stay. Literally means 'go peacefully'. The counterpart is '"
+    },
+    "field": "greetings",
+    "tags": ["formal", "farewell", "polite", "annyeonghi gaseyo"]
+  },
+  {
+    "id": "suhak",
+    "type": "entry",
+    "name": {
+      "ko": "수학",
+      "en": "Mathematics / Math"
+    },
+    "description": {
+      "ko": "수, 양, 구조, 공간 등을 연구하는 학문. 논리와 패턴을 다룬다.",
+      "en": "The study of numbers, quantity, structure, space, etc. Deals with logic and patterns."
+    },
+    "field": "math",
+    "tags": ["math", "science", "study", "suhak"]
+  },
+  {
+    "id": "su",
+    "type": "entry",
+    "name": {
+      "ko": "수",
+      "en": "Number"
+    },
+    "description": {
+      "ko": "사물의 개수나 양을 나타내는 기호. 1, 2, 3과 같은 숫자.",
+      "en": "A symbol representing the quantity or amount of things. Numerals like 1, 2, 3."
+    },
+    "field": "math",
+    "tags": ["math", "number", "basic", "su"]
+  },
+  {
+    "id": "deotсem",
+    "type": "entry",
+    "name": {
+      "ko": "덧셈",
+      "en": "Addition"
+    },
+    "description": {
+      "ko": "두 수를 더하는 계산. + 기호를 사용한다.",
+      "en": "Calculation of adding two numbers. Uses the + symbol."
+    },
+    "field": "math",
+    "tags": ["math", "operation", "addition", "deotsem"]
+  },
+  {
+    "id": "bbaelsem",
+    "type": "entry",
+    "name": {
+      "ko": "뺄셈",
+      "en": "Subtraction"
+    },
+    "description": {
+      "ko": "한 수에서 다른 수를 빼는 계산. - 기호를 사용한다.",
+      "en": "Calculation of taking one number from another. Uses the - symbol."
+    },
+    "field": "math",
+    "tags": ["math", "operation", "subtraction", "ppaelsem"]
+  },
+  {
+    "id": "gopsem",
+    "type": "entry",
+    "name": {
+      "ko": "곱셈",
+      "en": "Multiplication"
+    },
+    "description": {
+      "ko": "한 수를 다른 수만큼 반복해서 더하는 계산. × 기호를 사용한다.",
+      "en": "Calculation of repeatedly adding one number by another number. Uses the × symbol."
+    },
+    "field": "math",
+    "tags": ["math", "operation", "multiplication", "gopsem"]
+  },
+  {
+    "id": "nanutсem",
+    "type": "entry",
+    "name": {
+      "ko": "나눗셈",
+      "en": "Division"
+    },
+    "description": {
+      "ko": "한 수를 다른 수로 나누는 계산. ÷ 기호를 사용한다.",
+      "en": "Calculation of dividing one number by another. Uses the ÷ symbol."
+    },
+    "field": "math",
+    "tags": ["math", "operation", "division", "nanutsem"]
+  },
+  {
+    "id": "bunsu",
+    "type": "entry",
+    "name": {
+      "ko": "분수",
+      "en": "Fraction"
+    },
+    "description": {
+      "ko": "전체를 여러 부분으로 나눈 것 중 일부를 나타내는 수. 1/2, 3/4 같은 형태.",
+      "en": "A number representing a part of a whole divided into several parts. Forms like 1/2, 3/4."
+    },
+    "field": "math",
+    "tags": ["math", "fraction", "number", "bunsu"]
+  },
+  {
+    "id": "doхyeong",
+    "type": "entry",
+    "name": {
+      "ko": "도형",
+      "en": "Shape / Figure / Geometric Shape"
+    },
+    "description": {
+      "ko": "점, 선, 면으로 이루어진 기하학적 형태. 삼각형, 사각형, 원 등.",
+      "en": "A geometric form made of points, lines, and surfaces. Triangles, squares, circles, etc."
+    },
+    "field": "math",
+    "tags": ["math", "geometry", "shape", "dohyeong"]
+  },
+  {
+    "id": "bangjeongsik",
+    "type": "entry",
+    "name": {
+      "ko": "방정식",
+      "en": "Equation"
+    },
+    "description": {
+      "ko": "미지수를 포함한 등식. 'x + 3 = 5'처럼 풀어야 하는 수학 문제.",
+      "en": "An equality containing unknowns. Math problems to solve like 'x + 3 = 5'."
+    },
+    "field": "math",
+    "tags": ["math", "equation", "algebra", "bangjeongsik"]
+  },
+  {
+    "id": "hwaryul",
+    "type": "entry",
+    "name": {
+      "ko": "확률",
+      "en": "Probability"
+    },
+    "description": {
+      "ko": "어떤 사건이 일어날 가능성. 0과 1 사이의 값으로 표현한다.",
+      "en": "The likelihood that an event will occur. Expressed as a value between 0 and 1."
+    },
+    "field": "math",
+    "tags": ["math", "probability", "statistics", "hwaryul"]
+  },
+  {
+    "id": "norae",
+    "type": "entry",
+    "name": {
+      "ko": "노래",
+      "en": "Song"
+    },
+    "description": {
+      "ko": "목소리로 음악을 표현하는 것. 또는 그렇게 부르는 음악 작품.",
+      "en": "Expressing music with one's voice. Or a musical work sung in such manner."
+    },
+    "field": "music",
+    "tags": ["music", "song", "performance", "norae"]
+  },
+  {
+    "id": "gasu",
+    "type": "entry",
+    "name": {
+      "ko": "가수",
+      "en": "Singer / Artist"
+    },
+    "description": {
+      "ko": "노래를 직업으로 하는 사람. 싱어, 아티스트.",
+      "en": "A person whose profession is singing. A vocalist, artist."
+    },
+    "field": "music",
+    "tags": ["music", "people", "profession", "gasu"]
+  },
+  {
+    "id": "akgi",
+    "type": "entry",
+    "name": {
+      "ko": "악기",
+      "en": "Musical Instrument"
+    },
+    "description": {
+      "ko": "음악을 연주하는 도구. 피아노, 기타, 바이올린 등.",
+      "en": "A tool for playing music. Piano, guitar, violin, etc."
+    },
+    "field": "music",
+    "tags": ["music", "instrument", "tool", "akgi"]
+  },
+  {
+    "id": "piano",
+    "type": "entry",
+    "name": {
+      "ko": "피아노",
+      "en": "Piano"
+    },
+    "description": {
+      "ko": "건반을 눌러 소리를 내는 악기. 클래식과 대중음악에 널리 쓰인다.",
+      "en": "An instrument that produces sound by pressing keys. Widely used in classical and popular music."
+    },
+    "field": "music",
+    "tags": ["music", "instrument", "keyboard", "piano"]
+  },
+  {
+    "id": "gita",
+    "type": "entry",
+    "name": {
+      "ko": "기타",
+      "en": "Guitar"
+    },
+    "description": {
+      "ko": "줄을 튕겨 소리를 내는 현악기. 통기타와 전기기타가 있다.",
+      "en": "A string instrument that produces sound by plucking strings. Acoustic and electric guitars exist."
+    },
+    "field": "music",
+    "tags": ["music", "instrument", "string", "gita"]
+  },
+  {
+    "id": "drum",
+    "type": "entry",
+    "name": {
+      "ko": "드럼",
+      "en": "Drums"
+    },
+    "description": {
+      "ko": "손이나 스틱으로 쳐서 소리를 내는 타악기. 밴드에서 리듬을 담당한다.",
+      "en": "A percussion instrument played by hitting with hands or sticks. Provides rhythm in a band."
+    },
+    "field": "music",
+    "tags": ["music", "instrument", "percussion", "deureom"]
+  },
+  {
+    "id": "concert",
+    "type": "entry",
+    "name": {
+      "ko": "콘서트",
+      "en": "Concert"
+    },
+    "description": {
+      "ko": "가수나 밴드가 관객 앞에서 노래를 부르는 공연. 음악회.",
+      "en": "A performance where singers or bands perform in front of an audience. A musical event."
+    },
+    "field": "music",
+    "tags": ["music", "performance", "event", "konseoteu"]
+  },
+  {
+    "id": "rhythm",
+    "type": "entry",
+    "name": {
+      "ko": "리듬",
+      "en": "Rhythm"
+    },
+    "description": {
+      "ko": "음악의 박자와 템포. 규칙적으로 반복되는 소리의 패턴.",
+      "en": "The beat and tempo of music. A regularly repeating pattern of sound."
+    },
+    "field": "music",
+    "tags": ["music", "theory", "beat", "rideum"]
+  },
+  {
+    "id": "melody",
+    "type": "entry",
+    "name": {
+      "ko": "멜로디",
+      "en": "Melody"
+    },
+    "description": {
+      "ko": "노래의 주된 음악적 선율. 흥얼거릴 수 있는 곡의 주제.",
+      "en": "The main musical line of a song. The theme of a piece that can be hummed."
+    },
+    "field": "music",
+    "tags": ["music", "theory", "tune", "mellodi"]
+  },
+  {
+    "id": "kpop",
+    "type": "entry",
+    "name": {
+      "ko": "케이팝",
+      "en": "K-pop"
+    },
+    "description": {
+      "ko": "한국 대중음악. K-pop. 전 세계적으로 인기가 많다.",
+      "en": "Korean popular music. K-pop. Very popular worldwide."
+    },
+    "field": "music",
+    "tags": ["music", "genre", "korea", "keipap"]
+  },
+  {
+    "id": "hana",
+    "type": "entry",
+    "name": {
+      "ko": "하나",
+      "en": "One"
+    },
+    "description": {
+      "ko": "고유어 숫자 1. 물건을 셀 때 사용한다. 한자어 '일(一)'과 대응한다.",
+      "en": "Native Korean number 1. Used for counting objects. Corresponds to Sino-Korean '일(一)'."
+    },
+    "field": "numbers",
+    "tags": ["number", "counting", "basic", "hana"]
+  },
+  {
+    "id": "dul",
+    "type": "entry",
+    "name": {
+      "ko": "둘",
+      "en": "Two"
+    },
+    "description": {
+      "ko": "고유어 숫자 2. 물건이나 사람을 셀 때 사용한다. 한자어 '이(二)'와 대응한다.",
+      "en": "Native Korean number 2. Used for counting objects or people. Corresponds to Sino-Korean '이(二)'."
+    },
+    "field": "numbers",
+    "tags": ["number", "counting", "basic", "dul"]
+  },
+  {
+    "id": "set",
+    "type": "entry",
+    "name": {
+      "ko": "셋",
+      "en": "Three"
+    },
+    "description": {
+      "ko": "고유어 숫자 3. 물건이나 사람을 셀 때 사용한다. 한자어 '삼(三)'과 대응한다.",
+      "en": "Native Korean number 3. Used for counting objects or people. Corresponds to Sino-Korean '삼(三)'."
+    },
+    "field": "numbers",
+    "tags": ["number", "counting", "basic", "set"]
+  },
+  {
+    "id": "oneul",
+    "type": "entry",
+    "name": {
+      "ko": "오늘",
+      "en": "Today"
+    },
+    "description": {
+      "ko": "지금 현재의 날. 이 날, 현재 하루를 가리킨다.",
+      "en": "The present day. This day, the current 24-hour period."
+    },
+    "field": "numbers",
+    "tags": ["time", "daily", "present", "oneul"]
+  },
+  {
+    "id": "naeil",
+    "type": "entry",
+    "name": {
+      "ko": "내일",
+      "en": "Tomorrow"
+    },
+    "description": {
+      "ko": "오늘의 다음 날. 지금부터 하루 후를 가리킨다.",
+      "en": "The day after today. One day from now."
+    },
+    "field": "numbers",
+    "tags": ["time", "daily", "future", "naeil"]
+  },
+  {
+    "id": "eoje",
+    "type": "entry",
+    "name": {
+      "ko": "어제",
+      "en": "Yesterday"
+    },
+    "description": {
+      "ko": "오늘의 바로 전날. 지금부터 하루 전을 가리킨다.",
+      "en": "The day before today. One day ago from now."
+    },
+    "field": "numbers",
+    "tags": ["time", "daily", "past", "eoje"]
+  },
+  {
+    "id": "jigeum",
+    "type": "entry",
+    "name": {
+      "ko": "지금",
+      "en": "Now"
+    },
+    "description": {
+      "ko": "바로 이 순간. 현재 시점을 가리킨다.",
+      "en": "This very moment. The present time."
+    },
+    "field": "numbers",
+    "tags": ["time", "present", "moment", "jigeum"]
+  },
+  {
+    "id": "achim",
+    "type": "entry",
+    "name": {
+      "ko": "아침",
+      "en": "Morning"
+    },
+    "description": {
+      "ko": "하루 중 해가 뜨는 시간부터 정오 전까지. 보통 6시~12시를 가리킨다. '아침 식사'의 줄임말로도 쓰인다.",
+      "en": "The time from sunrise to before noon. Usually refers to 6AM-12PM. Also short for 'breakfast'."
+    },
+    "field": "numbers",
+    "tags": ["time", "daily", "morning", "achim"]
+  },
+  {
+    "id": "jeonyeok",
+    "type": "entry",
+    "name": {
+      "ko": "저녁",
+      "en": "Evening / Dinner"
+    },
+    "description": {
+      "ko": "하루 중 해가 지는 시간부터 밤이 되기 전까지. 보통 6시~9시를 가리킨다. '저녁 식사'의 줄임말로도 쓰인다.",
+      "en": "The time from sunset to before night. Usually refers to 6PM-9PM. Also short for 'dinner'."
+    },
+    "field": "numbers",
+    "tags": ["time", "daily", "evening", "jeonyeok"]
+  },
+  {
+    "id": "sigan",
+    "type": "entry",
+    "name": {
+      "ko": "시간",
+      "en": "Time / Hour"
+    },
+    "description": {
+      "ko": "시각과 시각 사이의 간격. '시(時)'를 세는 단위로도 쓰인다. 또한 '여유'나 '기회'의 의미로도 사용된다.",
+      "en": "The interval between two points in time. Also used as a unit to count hours. Can mean 'free time' or"
+    },
+    "field": "numbers",
+    "tags": ["time", "abstract", "duration", "sigan"]
+  },
+  {
+    "id": "wolyoil",
+    "type": "entry",
+    "name": {
+      "ko": "월요일",
+      "en": "Monday"
+    },
+    "description": {
+      "ko": "일주일의 첫째 날. 한 주의 시작을 알리는 날로, 많은 사람들이 출근하고 학교에 간다.",
+      "en": "The first day of the week. The day that marks the beginning of the work/school week."
+    },
+    "field": "numbers",
+    "tags": ["time", "weekday", "calendar", "wolyoil"]
+  },
+  {
+    "id": "jumal",
+    "type": "entry",
+    "name": {
+      "ko": "주말",
+      "en": "Weekend"
+    },
+    "description": {
+      "ko": "한 주의 끝. 보통 토요일과 일요일을 가리킨다. 많은 사람들이 쉬거나 여가 활동을 즐기는 시간이다.",
+      "en": "The end of the week. Usually refers to Saturday and Sunday. Time when many people rest or enjoy leis"
+    },
+    "field": "numbers",
+    "tags": ["time", "weekend", "leisure", "jumal"]
+  },
+  {
+    "id": "nyeon",
+    "type": "entry",
+    "name": {
+      "ko": "년",
+      "en": "Year"
+    },
+    "description": {
+      "ko": "시간의 단위. 12개월, 즉 365일(윤년은 366일)을 하나의 단위로 세는 말. 연도를 나타낼 때 사용한다.",
+      "en": "A unit of time. A period of 12 months, or 365 days (366 in leap years). Used to indicate the year."
+    },
+    "field": "numbers",
+    "tags": ["time", "unit", "calendar", "nyeon"]
+  },
+  {
+    "id": "dal",
+    "type": "entry",
+    "name": {
+      "ko": "달",
+      "en": "Month / Moon"
+    },
+    "description": {
+      "ko": "두 가지 의미가 있다. 1) 시간의 단위로 '월(月)'을 뜻한다. 2) 밤하늘에 떠 있는 천체인 '월(月)'을 가리킨다.",
+      "en": "Has two meanings: 1) A unit of time, meaning 'month'. 2) The celestial body in the night sky, the 'm"
+    },
+    "field": "numbers",
+    "tags": ["time", "unit", "calendar", "astronomy", "dal"]
+  },
+  {
+    "id": "bun",
+    "type": "entry",
+    "name": {
+      "ko": "분",
+      "en": "Minute"
+    },
+    "description": {
+      "ko": "시간의 단위. 1시간의 60분의 1. 60초가 1분이다. 시각을 나타낼 때 사용한다.",
+      "en": "A unit of time. One-sixtieth of an hour. 60 seconds make 1 minute. Used to indicate time."
+    },
+    "field": "numbers",
+    "tags": ["time", "unit", "minute", "bun"]
+  },
+  {
+    "id": "mullihak",
+    "type": "entry",
+    "name": {
+      "ko": "물리학",
+      "en": "Physics"
+    },
+    "description": {
+      "ko": "물질과 에너지, 운동과 힘을 연구하는 학문. 자연 현상의 원리를 다룬다.",
+      "en": "The study of matter, energy, motion, and force. Deals with principles of natural phenomena."
+    },
+    "field": "physics",
+    "tags": ["physics", "science", "study", "mullihak"]
+  },
+  {
+    "id": "him",
+    "type": "entry",
+    "name": {
+      "ko": "힘",
+      "en": "Force / Power / Strength"
+    },
+    "description": {
+      "ko": "물체를 움직이거나 변형시키는 능력. 물리학에서는 '힘(force)'을 뜻한다.",
+      "en": "The ability to move or deform an object. In physics, refers to 'force'."
+    },
+    "field": "physics",
+    "tags": ["physics", "force", "power", "him"]
+  },
+  {
+    "id": "energia",
+    "type": "entry",
+    "name": {
+      "ko": "에너지",
+      "en": "Energy"
+    },
+    "description": {
+      "ko": "일을 할 수 있는 능력. 물리학에서 운동, 열, 빛 등의 형태로 존재한다.",
+      "en": "The ability to do work. In physics, exists in forms like motion, heat, light, etc."
+    },
+    "field": "physics",
+    "tags": ["physics", "energy", "power", "eneoji"]
+  },
+  {
+    "id": "jungnyeok",
+    "type": "entry",
+    "name": {
+      "ko": "중력",
+      "en": "Gravity"
+    },
+    "description": {
+      "ko": "물체를 지구 중심으로 끌어당기는 힘. 뉴턴이 발견한 만유인력.",
+      "en": "The force that pulls objects toward Earth's center. Newton's universal gravitation."
+    },
+    "field": "physics",
+    "tags": ["physics", "gravity", "force", "jungnyeok"]
+  },
+  {
+    "id": "sokdo",
+    "type": "entry",
+    "name": {
+      "ko": "속도",
+      "en": "Speed / Velocity"
+    },
+    "description": {
+      "ko": "물체가 움직이는 빠르기. 단위 시간에 이동한 거리.",
+      "en": "How fast an object moves. Distance traveled per unit time."
+    },
+    "field": "physics",
+    "tags": ["physics", "speed", "velocity", "sokdo"]
+  },
+  {
+    "id": "jilryang",
+    "type": "entry",
+    "name": {
+      "ko": "질량",
+      "en": "Mass"
+    },
+    "description": {
+      "ko": "물체가 가진 물질의 양. 무게와는 다른 개념.",
+      "en": "The amount of matter an object has. Different concept from weight."
+    },
+    "field": "physics",
+    "tags": ["physics", "mass", "matter", "jillyang"]
+  },
+  {
+    "id": "bich",
+    "type": "entry",
+    "name": {
+      "ko": "빛",
+      "en": "Light"
+    },
+    "description": {
+      "ko": "눈으로 볼 수 있게 하는 전자기파. 광원에서 나오는 에너지.",
+      "en": "Electromagnetic waves that make things visible. Energy from a light source."
+    },
+    "field": "physics",
+    "tags": ["physics", "light", "wave", "bit"]
+  },
+  {
+    "id": "jeon-gi",
+    "type": "entry",
+    "name": {
+      "ko": "전기",
+      "en": "Electricity"
+    },
+    "description": {
+      "ko": "전하의 흐름으로 생기는 에너지. 현대 문명의 필수 요소.",
+      "en": "Energy produced by the flow of electric charge. Essential element of modern civilization."
+    },
+    "field": "physics",
+    "tags": ["physics", "electricity", "energy", "jeongi"]
+  },
+  {
+    "id": "ondo",
+    "type": "entry",
+    "name": {
+      "ko": "온도",
+      "en": "Temperature"
+    },
+    "description": {
+      "ko": "물체의 뜨겁고 차가운 정도. 섭씨나 화씨로 측정한다.",
+      "en": "The degree of hotness or coldness of an object. Measured in Celsius or Fahrenheit."
+    },
+    "field": "physics",
+    "tags": ["physics", "temperature", "heat", "ondo"]
+  },
+  {
+    "id": "padong",
+    "type": "entry",
+    "name": {
+      "ko": "파동",
+      "en": "Wave"
+    },
+    "description": {
+      "ko": "에너지가 전달되며 진동이 퍼져 나가는 현상. 소리, 빛, 물결 등.",
+      "en": "A phenomenon where vibrations spread as energy is transmitted. Sound, light, water waves, etc."
+    },
+    "field": "physics",
+    "tags": ["physics", "wave", "motion", "padong"]
+  },
+  {
+    "id": "uju",
+    "type": "entry",
+    "name": {
+      "ko": "우주",
+      "en": "Universe / Space / Cosmos"
+    },
+    "description": {
+      "ko": "지구와 모든 천체를 포함하는 무한한 공간. 우리가 사는 모든 것.",
+      "en": "The infinite space containing Earth and all celestial bodies. Everything we exist in."
+    },
+    "field": "space",
+    "tags": ["space", "universe", "cosmos", "uju"]
+  },
+  {
+    "id": "byeol",
+    "type": "entry",
+    "name": {
+      "ko": "별",
+      "en": "Star"
+    },
+    "description": {
+      "ko": "밤하늘에 빛나는 천체. 스스로 빛을 내는 항성.",
+      "en": "A celestial body that shines in the night sky. A self-luminous stellar object."
+    },
+    "field": "space",
+    "tags": ["space", "star", "astronomy", "byeol"]
+  },
+  {
+    "id": "jigu",
+    "type": "entry",
+    "name": {
+      "ko": "지구",
+      "en": "Earth"
+    },
+    "description": {
+      "ko": "우리가 사는 행성. 태양계의 세 번째 행성.",
+      "en": "The planet we live on. The third planet in the solar system."
+    },
+    "field": "space",
+    "tags": ["space", "planet", "earth", "jigu"]
+  },
+  {
+    "id": "haengseong",
+    "type": "entry",
+    "name": {
+      "ko": "행성",
+      "en": "Planet"
+    },
+    "description": {
+      "ko": "별 주위를 도는 천체. 지구, 화성, 목성 등.",
+      "en": "A celestial body orbiting a star. Earth, Mars, Jupiter, etc."
+    },
+    "field": "space",
+    "tags": ["space", "planet", "astronomy", "haengseong"]
+  },
+  {
+    "id": "taeyang",
+    "type": "entry",
+    "name": {
+      "ko": "태양",
+      "en": "Sun"
+    },
+    "description": {
+      "ko": "태양계의 중심에 있는 별. 지구에 빛과 열을 주는 항성.",
+      "en": "The star at the center of the solar system. The star that gives Earth light and heat."
+    },
+    "field": "space",
+    "tags": ["space", "sun", "star", "taeyang"]
+  },
+  {
+    "id": "ujuseon",
+    "type": "entry",
+    "name": {
+      "ko": "우주선",
+      "en": "Spacecraft / Spaceship"
+    },
+    "description": {
+      "ko": "우주를 여행하는 탈것. 로켓, 인공위성 등.",
+      "en": "A vehicle for traveling in space. Rockets, satellites, etc."
+    },
+    "field": "space",
+    "tags": ["space", "spacecraft", "vehicle", "ujuseon"]
+  },
+  {
+    "id": "ujuin",
+    "type": "entry",
+    "name": {
+      "ko": "우주인",
+      "en": "Astronaut / Spaceman"
+    },
+    "description": {
+      "ko": "우주를 여행하는 사람. 우주 비행사. 또는 외계인을 가리키기도 한다.",
+      "en": "A person who travels in space. Astronaut. Can also refer to aliens."
+    },
+    "field": "space",
+    "tags": ["space", "astronaut", "people", "ujuin"]
+  },
+  {
+    "id": "eunha",
+    "type": "entry",
+    "name": {
+      "ko": "은하",
+      "en": "Galaxy"
+    },
+    "description": {
+      "ko": "수많은 별들이 모여 있는 거대한 천체 시스템. 우리 은하는 '은하수'라고 불린다.",
+      "en": "A massive celestial system containing countless stars. Our galaxy is called the 'Milky Way'."
+    },
+    "field": "space",
+    "tags": ["space", "galaxy", "astronomy", "eunha"]
+  },
+  {
+    "id": "heukhole",
+    "type": "entry",
+    "name": {
+      "ko": "블랙홀",
+      "en": "Black Hole"
+    },
+    "description": {
+      "ko": "중력이 너무 강해서 빛조차 빠져나올 수 없는 천체. 암흑 천체.",
+      "en": "A celestial body with gravity so strong that even light cannot escape. A dark object."
+    },
+    "field": "space",
+    "tags": ["space", "blackhole", "astronomy", "beullaekol"]
+  },
+  {
+    "id": "manwongyeong",
+    "type": "entry",
+    "name": {
+      "ko": "망원경",
+      "en": "Telescope"
+    },
+    "description": {
+      "ko": "먼 곳을 크게 보이게 하는 광학 기구. 별을 관측하는 도구.",
+      "en": "An optical instrument that makes distant objects appear larger. A tool for observing stars."
+    },
+    "field": "space",
+    "tags": ["space", "telescope", "tool", "mangwongyeong"]
+  },
+  {
+    "id": "sports",
+    "type": "entry",
+    "name": {
+      "ko": "스포츠",
+      "en": "Sports"
+    },
+    "description": {
+      "ko": "규칙에 따라 경쟁하는 신체 활동. 운동, 체육.",
+      "en": "Physical activity with competitive rules. Exercise, athletics."
+    },
+    "field": "sports",
+    "tags": ["sports", "exercise", "activity", "seupocheu"]
+  },
+  {
+    "id": "chukgu",
+    "type": "entry",
+    "name": {
+      "ko": "축구",
+      "en": "Soccer / Football"
+    },
+    "description": {
+      "ko": "발로 공을 차서 골대에 넣는 팀 스포츠. 세계에서 가장 인기 있는 운동.",
+      "en": "A team sport where you kick a ball into a goal. The world's most popular sport."
+    },
+    "field": "sports",
+    "tags": ["sports", "team", "ball", "chukgu"]
+  },
+  {
+    "id": "yagu",
+    "type": "entry",
+    "name": {
+      "ko": "야구",
+      "en": "Baseball"
+    },
+    "description": {
+      "ko": "방망이로 공을 쳐서 베이스를 도는 팀 스포츠. 한국에서 인기가 많다.",
+      "en": "A team sport where you hit a ball with a bat and run around bases. Very popular in Korea."
+    },
+    "field": "sports",
+    "tags": ["sports", "team", "ball", "yagu"]
+  },
+  {
+    "id": "nonggu",
+    "type": "entry",
+    "name": {
+      "ko": "농구",
+      "en": "Basketball"
+    },
+    "description": {
+      "ko": "공을 바구니에 넣어 득점하는 팀 스포츠. 실내외에서 즐길 수 있다.",
+      "en": "A team sport where you score by putting a ball in a basket. Can be played indoors or outdoors."
+    },
+    "field": "sports",
+    "tags": ["sports", "team", "ball", "nonggu"]
+  },
+  {
+    "id": "suyeong",
+    "type": "entry",
+    "name": {
+      "ko": "수영",
+      "en": "Swimming"
+    },
+    "description": {
+      "ko": "물속에서 헤엄치는 운동. 여름 스포츠로 인기가 많다.",
+      "en": "Exercise of moving through water. Popular summer sport."
+    },
+    "field": "sports",
+    "tags": ["sports", "water", "individual", "suyeong"]
+  },
+  {
+    "id": "daligi",
+    "type": "entry",
+    "name": {
+      "ko": "달리기",
+      "en": "Running"
+    },
+    "description": {
+      "ko": "빠르게 뛰는 운동. 육상의 기본 종목.",
+      "en": "Exercise of running fast. A basic track and field event."
+    },
+    "field": "sports",
+    "tags": ["sports", "running", "individual", "dalligi"]
+  },
+  {
+    "id": "undong",
+    "type": "entry",
+    "name": {
+      "ko": "운동",
+      "en": "Exercise / Workout"
+    },
+    "description": {
+      "ko": "몸을 움직여 건강을 지키는 활동. 스포츠 전반을 가리킨다.",
+      "en": "Activity of moving the body to maintain health. Refers to sports in general."
+    },
+    "field": "sports",
+    "tags": ["sports", "exercise", "health", "undong"]
+  },
+  {
+    "id": "team",
+    "type": "entry",
+    "name": {
+      "ko": "팀",
+      "en": "Team"
+    },
+    "description": {
+      "ko": "함께 경쟁하거나 일하는 집단. 스포츠에서 같은 편.",
+      "en": "A group that competes or works together. Same side in sports."
+    },
+    "field": "sports",
+    "tags": ["sports", "group", "team", "tim"]
+  },
+  {
+    "id": "gyeonggi",
+    "type": "entry",
+    "name": {
+      "ko": "경기",
+      "en": "Game / Match"
+    },
+    "description": {
+      "ko": "규칙에 따라 겨루는 스포츠 시합. 게임, 매치.",
+      "en": "A sports competition with rules. Game, match."
+    },
+    "field": "sports",
+    "tags": ["sports", "game", "match", "gyeonggi"]
+  },
+  {
+    "id": "seungli",
+    "type": "entry",
+    "name": {
+      "ko": "승리",
+      "en": "Victory / Win"
+    },
+    "description": {
+      "ko": "경기나 경쟁에서 이기는 것. 우승, 이김.",
+      "en": "Winning a game or competition. Triumph, winning."
+    },
+    "field": "sports",
+    "tags": ["sports", "win", "victory", "seungli"]
+  },
+  {
+    "id": "yeonseup",
+    "type": "entry",
+    "name": {
+      "ko": "연습",
+      "en": "Practice / Training"
+    },
+    "description": {
+      "ko": "실력을 늘리기 위해 반복하는 것. 훈련, 트레이닝.",
+      "en": "Repeating to improve skills. Training, drill."
+    },
+    "field": "sports",
+    "tags": ["sports", "practice", "training", "yeonseup"]
+  },
+  {
+    "id": "gonghang",
+    "type": "entry",
+    "name": {
+      "ko": "공항",
+      "en": "Airport"
+    },
+    "description": {
+      "ko": "비행기가 이착륙하는 곳. 여행을 시작하거나 끝내는 장소로, 출국/입국 수속을 한다.",
+      "en": "A place where airplanes take off and land. Where travelers begin or end their journey, handling depa"
+    },
+    "field": "travel",
+    "tags": ["travel", "transportation", "place", "gonghang"]
+  },
+  {
+    "id": "yeok",
+    "type": "entry",
+    "name": {
+      "ko": "역",
+      "en": "Station"
+    },
+    "description": {
+      "ko": "기차나 지하철이 정차하는 곳. 사람들이 타고 내리는 장소.",
+      "en": "A place where trains or subways stop. Where people get on and off."
+    },
+    "field": "travel",
+    "tags": ["travel", "transportation", "place", "yeok"]
+  },
+  {
+    "id": "beoseu",
+    "type": "entry",
+    "name": {
+      "ko": "버스",
+      "en": "Bus"
+    },
+    "description": {
+      "ko": "많은 사람을 태우는 대중교통 수단. 정해진 노선을 따라 운행한다.",
+      "en": "Public transportation that carries many people. Operates along fixed routes."
+    },
+    "field": "travel",
+    "tags": ["travel", "transportation", "vehicle", "beoseu"]
+  },
+  {
+    "id": "jihacheol",
+    "type": "entry",
+    "name": {
+      "ko": "지하철",
+      "en": "Subway / Metro"
+    },
+    "description": {
+      "ko": "땅 밑으로 다니는 기차. 도시의 주요 대중교통 수단이다.",
+      "en": "A train that runs underground. A major public transportation system in cities."
+    },
+    "field": "travel",
+    "tags": ["travel", "transportation", "vehicle", "jihacheol"]
+  },
+  {
+    "id": "taeksi",
+    "type": "entry",
+    "name": {
+      "ko": "택시",
+      "en": "Taxi / Cab"
+    },
+    "description": {
+      "ko": "요금을 내고 원하는 곳까지 데려다 주는 자동차. 개인 교통수단으로 편리하다.",
+      "en": "A car that takes you to your destination for a fee. A convenient personal transportation option."
+    },
+    "field": "travel",
+    "tags": ["travel", "transportation", "vehicle", "taeksi"]
+  },
+  {
+    "id": "gicha",
+    "type": "entry",
+    "name": {
+      "ko": "기차",
+      "en": "Train"
+    },
+    "description": {
+      "ko": "철로 위를 달리는 긴 차량. 장거리 이동에 사용된다.",
+      "en": "A long vehicle that runs on rails. Used for long-distance travel."
+    },
+    "field": "travel",
+    "tags": ["travel", "transportation", "vehicle", "gicha"]
+  },
+  {
+    "id": "bihaenggi",
+    "type": "entry",
+    "name": {
+      "ko": "비행기",
+      "en": "Airplane / Plane"
+    },
+    "description": {
+      "ko": "하늘을 나는 교통수단. 먼 거리를 빠르게 이동할 때 사용한다.",
+      "en": "Transportation that flies in the sky. Used to travel long distances quickly."
+    },
+    "field": "travel",
+    "tags": ["travel", "transportation", "vehicle", "bihaenggi"]
+  },
+  {
+    "id": "hotel",
+    "type": "entry",
+    "name": {
+      "ko": "호텔",
+      "en": "Hotel"
+    },
+    "description": {
+      "ko": "여행객이 돈을 내고 묵는 숙박 시설. 방과 각종 편의 시설을 제공한다.",
+      "en": "Accommodation where travelers pay to stay. Provides rooms and various amenities."
+    },
+    "field": "travel",
+    "tags": ["travel", "accommodation", "place", "hotel"]
+  },
+  {
+    "id": "hwajangsil",
+    "type": "entry",
+    "name": {
+      "ko": "화장실",
+      "en": "Restroom / Bathroom"
+    },
+    "description": {
+      "ko": "용변을 보거나 손을 씻는 곳. '화장실', '욕실', '변소' 등으로 불린다.",
+      "en": "A place to use the toilet or wash hands. Also called bathroom, toilet, or lavatory."
+    },
+    "field": "travel",
+    "tags": ["travel", "place", "essential", "hwajangsil"]
+  },
+  {
+    "id": "chulgु",
+    "type": "entry",
+    "name": {
+      "ko": "출구",
+      "en": "Exit"
+    },
+    "description": {
+      "ko": "나가는 곳. 건물이나 지하철역 등에서 밖으로 나가는 문.",
+      "en": "A way out. The door or gate to leave a building or subway station."
+    },
+    "field": "travel",
+    "tags": ["travel", "place", "direction", "chulgu"]
+  },
+  {
+    "id": "ipgu",
+    "type": "entry",
+    "name": {
+      "ko": "입구",
+      "en": "Entrance"
+    },
+    "description": {
+      "ko": "들어가는 곳. 건물이나 장소로 들어가는 문.",
+      "en": "A way in. The door or gate to enter a building or place."
+    },
+    "field": "travel",
+    "tags": ["travel", "place", "direction", "ipgu"]
+  },
+  {
+    "id": "eodi",
+    "type": "entry",
+    "name": {
+      "ko": "어디",
+      "en": "Where"
+    },
+    "description": {
+      "ko": "장소를 물을 때 쓰는 의문사. '어느 곳'이라는 의미이다.",
+      "en": "An interrogative used to ask about location. Means 'what place'."
+    },
+    "field": "travel",
+    "tags": ["travel", "question", "direction", "eodi"]
+  },
+  {
+    "id": "eolma",
+    "type": "entry",
+    "name": {
+      "ko": "얼마",
+      "en": "How much / How many"
+    },
+    "description": {
+      "ko": "수량이나 가격을 물을 때 쓰는 의문사. '얼마나'의 줄임말로도 쓰인다.",
+      "en": "An interrogative used to ask about quantity or price. Can also be short for 'how much/many'."
+    },
+    "field": "travel",
+    "tags": ["travel", "question", "price", "eolma"]
+  },
+  {
+    "id": "pyo",
+    "type": "entry",
+    "name": {
+      "ko": "표",
+      "en": "Ticket"
+    },
+    "description": {
+      "ko": "입장권이나 승차권. 무언가를 이용하거나 들어갈 때 사는 티켓.",
+      "en": "An admission or boarding pass. A ticket purchased to use something or enter somewhere."
+    },
+    "field": "travel",
+    "tags": ["travel", "ticket", "essential", "pyo"]
+  },
+  {
+    "id": "yeyak",
+    "type": "entry",
+    "name": {
+      "ko": "예약",
+      "en": "Reservation / Booking"
+    },
+    "description": {
+      "ko": "미리 자리나 상품을 확보하는 것. 호텔, 식당, 티켓 등을 미리 신청한다.",
+      "en": "Securing a seat or product in advance. Booking hotels, restaurants, tickets, etc. ahead of time."
+    },
+    "field": "travel",
+    "tags": ["travel", "booking", "essential", "yeyak"]
+  },
+  {
+    "id": "hoesa",
+    "type": "entry",
+    "name": {
+      "ko": "회사",
+      "en": "Company"
+    },
+    "description": {
+      "ko": "사람들이 돈을 벌기 위해 일하는 조직. 상업 활동을 하는 법인 단체.",
+      "en": "An organization where people work to earn money. A corporate entity engaged in commercial activities"
+    },
+    "field": "work",
+    "tags": ["work", "business", "place", "hoesa"]
+  },
+  {
+    "id": "samusil",
+    "type": "entry",
+    "name": {
+      "ko": "사무실",
+      "en": "Office"
+    },
+    "description": {
+      "ko": "사무를 보는 방이나 공간. 회사에서 일하는 곳.",
+      "en": "A room or space where office work is done. The place where you work in a company."
+    },
+    "field": "work",
+    "tags": ["work", "place", "office", "samusil"]
+  },
+  {
+    "id": "hoeui",
+    "type": "entry",
+    "name": {
+      "ko": "회의",
+      "en": "Meeting"
+    },
+    "description": {
+      "ko": "여러 사람이 모여 의견을 나누는 것. 업무에 대해 논의하는 모임.",
+      "en": "When multiple people gather to share opinions. A gathering to discuss work matters."
+    },
+    "field": "work",
+    "tags": ["work", "meeting", "business", "hoeui"]
+  },
+  {
+    "id": "sangsa",
+    "type": "entry",
+    "name": {
+      "ko": "상사",
+      "en": "Boss / Superior"
+    },
+    "description": {
+      "ko": "직장에서 나보다 높은 직급에 있는 사람. 보스, 팀장, 부장 등.",
+      "en": "A person with a higher position than you at work. Manager, team leader, director, etc."
+    },
+    "field": "work",
+    "tags": ["work", "people", "hierarchy", "sangsa"]
+  },
+  {
+    "id": "dongryo",
+    "type": "entry",
+    "name": {
+      "ko": "동료",
+      "en": "Colleague / Coworker"
+    },
+    "description": {
+      "ko": "같은 직장에서 함께 일하는 사람. 같은 팀이나 부서의 직원.",
+      "en": "A person you work with at the same workplace. An employee in the same team or department."
+    },
+    "field": "work",
+    "tags": ["work", "people", "colleague", "dongryo"]
+  },
+  {
+    "id": "eommu",
+    "type": "entry",
+    "name": {
+      "ko": "업무",
+      "en": "Work / Task / Duty"
+    },
+    "description": {
+      "ko": "맡아서 처리해야 할 일. 직장에서 해야 하는 일이나 책임.",
+      "en": "Work that needs to be handled. Jobs or responsibilities at the workplace."
+    },
+    "field": "work",
+    "tags": ["work", "task", "duty", "eommu"]
+  },
+  {
+    "id": "imeil",
+    "type": "entry",
+    "name": {
+      "ko": "이메일",
+      "en": "Email"
+    },
+    "description": {
+      "ko": "인터넷으로 주고받는 편지. 전자 우편.",
+      "en": "A letter sent and received over the internet. Electronic mail."
+    },
+    "field": "work",
+    "tags": ["work", "communication", "technology", "imeil"]
+  },
+  {
+    "id": "jeonhwa",
+    "type": "entry",
+    "name": {
+      "ko": "전화",
+      "en": "Phone / Call"
+    },
+    "description": {
+      "ko": "목소리로 대화하는 통신 수단. 전화기를 통해 먼 곳에 있는 사람과 이야기한다.",
+      "en": "A communication device for voice conversation. Talk to someone far away through a telephone."
+    },
+    "field": "work",
+    "tags": ["work", "communication", "daily", "jeonhwa"]
+  },
+  {
+    "id": "bogoseo",
+    "type": "entry",
+    "name": {
+      "ko": "보고서",
+      "en": "Report"
+    },
+    "description": {
+      "ko": "조사하거나 연구한 내용을 정리한 문서. 업무 결과를 정리해서 제출하는 글.",
+      "en": "A document organizing research or study results. A written summary of work results to be submitted."
+    },
+    "field": "work",
+    "tags": ["work", "document", "report", "bogoseo"]
+  },
+  {
+    "id": "magam",
+    "type": "entry",
+    "name": {
+      "ko": "마감",
+      "en": "Deadline"
+    },
+    "description": {
+      "ko": "일을 끝내야 하는 기한. 제출 기한이나 완료 시한.",
+      "en": "The time limit by which work must be completed. Submission deadline or completion time limit."
+    },
+    "field": "work",
+    "tags": ["work", "deadline", "time", "magam"]
+  },
+  {
+    "id": "yeogi",
+    "type": "entry",
+    "name": {
+      "ko": "여기",
+      "en": "Here"
+    },
+    "description": {
+      "ko": "말하는 사람 가까이에 있는 장소를 가리킨다. 여기(이곳), 거기(그곳), 저기(저곳) 세 가지 중 하나다.",
+      "en": "Indicates a location near the speaker. Part of the trio: 여기 (here), 거기 (there), 저기 (over there)."
+    },
+    "field": "travel",
+    "tags": ["location", "basic", "yeogi"]
+  },
+  {
+    "id": "hoeuii",
+    "type": "entry",
+    "name": {
+      "ko": "회의",
+      "en": "Meeting"
+    },
+    "description": {
+      "ko": "논의를 위한 모임. 주로 비즈니스 상황에서 사용한다.",
+      "en": "A gathering of people for discussion, usually in a business context."
+    },
+    "field": "work",
+    "tags": ["work", "business", "hoeui"]
+  },
+  {
+    "id": "jeong",
+    "type": "entry",
+    "name": {
+      "ko": "정",
+      "en": "Jeong (emotional bond)"
+    },
+    "description": {
+      "ko": "시간이 지나면서 형성되는 깊은 감정적 유대, 애착을 나타내는 한국 고유의 개념. 사랑, 배려, 연결감을 포함한다.",
+      "en": "A uniquely Korean concept describing deep emotional bonds, affection, and attachment formed over tim"
+    },
+    "field": "culture",
+    "tags": ["culture", "emotion", "korean-concept", "jeong"]
+  },
+  {
+    "id": "nunchi",
+    "type": "entry",
+    "name": {
+      "ko": "눈치",
+      "en": "Nunchi (social awareness)"
+    },
+    "description": {
+      "ko": "분위기를 파악하고 암묵적인 사회적 신호를 이해하는 능력. 한국의 사회적 상호작용에서 중요한 개념이다.",
+      "en": "The art of reading the room and understanding unspoken social cues. Essential in Korean social inter"
+    },
+    "field": "culture",
+    "tags": ["culture", "social", "korean-concept", "nunchi"]
+  },
+  {
+    "id": "violin",
+    "type": "entry",
+    "name": {
+      "ko": "바이올린",
+      "en": "Violin"
+    },
+    "description": {
+      "ko": "현악기 중 하나. 오케스트라에서 중요한 역할을 하는 악기.",
+      "en": "A string instrument. Plays an important role in orchestras."
+    },
+    "field": "music",
+    "tags": ["instrument", "music", "classical", "baiollin"]
+  },
+  {
+    "id": "umak",
+    "type": "entry",
+    "name": {
+      "ko": "음악",
+      "en": "Music"
+    },
+    "description": {
+      "ko": "소리로 표현하는 예술. 클래식, 팝, 재즈 등 다양한 장르가 있다.",
+      "en": "Art expressed through sound. Includes various genres like classical, pop, jazz, etc."
+    },
+    "field": "music",
+    "tags": ["music", "general", "eumak"]
+  },
+  {
+    "id": "konseuteu",
+    "type": "entry",
+    "name": {
+      "ko": "콘서트",
+      "en": "Concert"
+    },
+    "description": {
+      "ko": "음악 공연. 가수나 밴드가 관객 앞에서 라이브로 공연하는 것.",
+      "en": "A music performance. Singers or bands performing live in front of an audience."
+    },
+    "field": "music",
+    "tags": ["music", "event", "konseoteu"]
+  },
+  {
+    "id": "jogak",
+    "type": "entry",
+    "name": {
+      "ko": "조각",
+      "en": "Sculpture"
+    },
+    "description": {
+      "ko": "입체적인 예술 작품. 돌, 나무, 금속 등으로 만든다.",
+      "en": "A three-dimensional artwork. Made from stone, wood, metal, etc."
+    },
+    "field": "art",
+    "tags": ["art", "sculpture", "jogak"]
+  },
+  {
+    "id": "sajin",
+    "type": "entry",
+    "name": {
+      "ko": "사진",
+      "en": "Photo / Photograph"
+    },
+    "description": {
+      "ko": "카메라로 찍은 이미지. 현대에서는 스마트폰으로도 많이 찍는다.",
+      "en": "An image taken with a camera. Nowadays often taken with smartphones."
+    },
+    "field": "art",
+    "tags": ["art", "photography", "sajin"]
+  },
+  {
+    "id": "jakpum",
+    "type": "entry",
+    "name": {
+      "ko": "작품",
+      "en": "Artwork / Work"
+    },
+    "description": {
+      "ko": "예술가가 만든 창작물. 그림, 조각, 영화, 소설 등을 말한다.",
+      "en": "A creation made by an artist. Refers to paintings, sculptures, films, novels, etc."
+    },
+    "field": "art",
+    "tags": ["art", "work", "jakpum"]
+  },
+  {
+    "id": "hwaga",
+    "type": "entry",
+    "name": {
+      "ko": "화가",
+      "en": "Painter / Artist"
+    },
+    "description": {
+      "ko": "그림을 그리는 것을 직업으로 하는 예술가.",
+      "en": "An artist who paints professionally."
+    },
+    "field": "art",
+    "tags": ["art", "person", "hwaga"]
+  },
+  {
+    "id": "changui",
+    "type": "entry",
+    "name": {
+      "ko": "창의",
+      "en": "Creativity"
+    },
+    "description": {
+      "ko": "새롭고 독창적인 아이디어를 만들어내는 능력. 예술에서 매우 중요한 요소.",
+      "en": "The ability to create new and original ideas. A very important element in art."
+    },
+    "field": "art",
+    "tags": ["art", "creativity", "changui"]
+  },
+  {
+    "id": "seonsu",
+    "type": "entry",
+    "name": {
+      "ko": "선수",
+      "en": "Player / Athlete"
+    },
+    "description": {
+      "ko": "스포츠를 직업으로 하는 사람. 프로 또는 아마추어 선수.",
+      "en": "A person who plays sports professionally. Professional or amateur athlete."
+    },
+    "field": "sports",
+    "tags": ["sports", "person", "seonsu"]
+  },
+  {
+    "id": "tim",
+    "type": "entry",
+    "name": {
+      "ko": "팀",
+      "en": "Team"
+    },
+    "description": {
+      "ko": "함께 경기하는 선수들의 그룹. 스포츠에서 협동이 중요하다.",
+      "en": "A group of players competing together. Teamwork is important in sports."
+    },
+    "field": "sports",
+    "tags": ["sports", "team", "tim"]
+  },
+  {
+    "id": "ollimpik",
+    "type": "entry",
+    "name": {
+      "ko": "올림픽",
+      "en": "Olympics"
+    },
+    "description": {
+      "ko": "4년마다 열리는 세계 최대의 스포츠 대회. 하계와 동계 올림픽이 있다.",
+      "en": "The world's largest sports event held every four years. Summer and Winter Olympics."
+    },
+    "field": "sports",
+    "tags": ["sports", "event", "ollimpik"]
+  },
+  {
+    "id": "roket",
+    "type": "entry",
+    "name": {
+      "ko": "로켓",
+      "en": "Rocket"
+    },
+    "description": {
+      "ko": "우주로 발사되는 우주선. 위성이나 우주인을 우주로 보낸다.",
+      "en": "A spacecraft launched into space. Sends satellites and astronauts to space."
+    },
+    "field": "space",
+    "tags": ["space", "technology", "roket"]
+  },
+  {
+    "id": "wiseong",
+    "type": "entry",
+    "name": {
+      "ko": "위성",
+      "en": "Satellite"
+    },
+    "description": {
+      "ko": "행성 주위를 도는 천체. 인공위성은 사람이 만든 위성이다.",
+      "en": "A celestial body orbiting a planet. Artificial satellites are man-made."
+    },
+    "field": "space",
+    "tags": ["space", "astronomy", "wiseong"]
+  },
+  {
+    "id": "blaekol",
+    "type": "entry",
+    "name": {
+      "ko": "블랙홀",
+      "en": "Black hole"
+    },
+    "description": {
+      "ko": "중력이 매우 강해서 빛도 빠져나올 수 없는 천체.",
+      "en": "A celestial object with gravity so strong that even light cannot escape."
+    },
+    "field": "space",
+    "tags": ["space", "astronomy", "beullaekol"]
+  },
+  {
+    "id": "eneoji",
+    "type": "entry",
+    "name": {
+      "ko": "에너지",
+      "en": "Energy"
+    },
+    "description": {
+      "ko": "일을 할 수 있는 능력. 운동 에너지, 위치 에너지 등이 있다.",
+      "en": "The ability to do work. Includes kinetic energy, potential energy, etc."
+    },
+    "field": "physics",
+    "tags": ["physics", "energy", "eneoji"]
+  },
+  {
+    "id": "wonja",
+    "type": "entry",
+    "name": {
+      "ko": "원자",
+      "en": "Atom"
+    },
+    "description": {
+      "ko": "물질을 구성하는 가장 작은 단위. 양성자, 중성자, 전자로 구성된다.",
+      "en": "The smallest unit of matter. Composed of protons, neutrons, and electrons."
+    },
+    "field": "physics",
+    "tags": ["physics", "atom", "wonja"]
+  },
+  {
+    "id": "bit",
+    "type": "entry",
+    "name": {
+      "ko": "빛",
+      "en": "Light"
+    },
+    "description": {
+      "ko": "눈으로 볼 수 있게 해주는 에너지. 가장 빠른 속도로 이동한다.",
+      "en": "Energy that enables us to see. Travels at the fastest speed possible."
+    },
+    "field": "physics",
+    "tags": ["physics", "light", "bit"]
+  },
+  {
+    "id": "jeongi",
+    "type": "entry",
+    "name": {
+      "ko": "전기",
+      "en": "Electricity"
+    },
+    "description": {
+      "ko": "전하의 흐름. 우리 생활에 필수적인 에너지원.",
+      "en": "The flow of electric charge. An essential energy source for our lives."
+    },
+    "field": "physics",
+    "tags": ["physics", "electricity", "jeongi"]
+  },
+  {
+    "id": "jasuk",
+    "type": "entry",
+    "name": {
+      "ko": "자석",
+      "en": "Magnet"
+    },
+    "description": {
+      "ko": "철을 끌어당기는 물체. N극과 S극이 있다.",
+      "en": "An object that attracts iron. Has north and south poles."
+    },
+    "field": "physics",
+    "tags": ["physics", "magnet", "jaseok"]
+  },
+  {
+    "id": "sutja",
+    "type": "entry",
+    "name": {
+      "ko": "숫자",
+      "en": "Number"
+    },
+    "description": {
+      "ko": "양을 나타내는 기호. 0, 1, 2, 3... 등.",
+      "en": "Symbols representing quantity. 0, 1, 2, 3... etc."
+    },
+    "field": "math",
+    "tags": ["math", "number", "sutja"]
+  },
+  {
+    "id": "deotssem",
+    "type": "entry",
+    "name": {
+      "ko": "덧셈",
+      "en": "Addition"
+    },
+    "description": {
+      "ko": "두 수를 더하는 연산. 더하기(+).",
+      "en": "The operation of adding two numbers. Plus (+)."
+    },
+    "field": "math",
+    "tags": ["math", "operation", "deotsem"]
+  },
+  {
+    "id": "ppelssem",
+    "type": "entry",
+    "name": {
+      "ko": "뺄셈",
+      "en": "Subtraction"
+    },
+    "description": {
+      "ko": "한 수에서 다른 수를 빼는 연산. 빼기(-).",
+      "en": "The operation of subtracting one number from another. Minus (-)."
+    },
+    "field": "math",
+    "tags": ["math", "operation", "ppaelsem"]
+  },
+  {
+    "id": "gopssem",
+    "type": "entry",
+    "name": {
+      "ko": "곱셈",
+      "en": "Multiplication"
+    },
+    "description": {
+      "ko": "두 수를 곱하는 연산. 곱하기(×).",
+      "en": "The operation of multiplying two numbers. Times (×)."
+    },
+    "field": "math",
+    "tags": ["math", "operation", "gopsem"]
+  },
+  {
+    "id": "nanusem",
+    "type": "entry",
+    "name": {
+      "ko": "나눗셈",
+      "en": "Division"
+    },
+    "description": {
+      "ko": "한 수를 다른 수로 나누는 연산. 나누기(÷).",
+      "en": "The operation of dividing one number by another. Divided by (÷)."
+    },
+    "field": "math",
+    "tags": ["math", "operation", "nanutsem"]
+  },
+  {
+    "id": "hamsu",
+    "type": "entry",
+    "name": {
+      "ko": "함수",
+      "en": "Function"
+    },
+    "description": {
+      "ko": "입력값을 받아 출력값을 내는 관계. 수학의 중요한 개념.",
+      "en": "A relationship that takes input and gives output. An important math concept."
+    },
+    "field": "math",
+    "tags": ["math", "function", "hamsu"]
+  },
+  {
+    "id": "gihahak",
+    "type": "entry",
+    "name": {
+      "ko": "기하학",
+      "en": "Geometry"
+    },
+    "description": {
+      "ko": "도형과 공간을 연구하는 수학 분야. 삼각형, 원 등을 다룬다.",
+      "en": "The branch of math studying shapes and space. Deals with triangles, circles, etc."
+    },
+    "field": "math",
+    "tags": ["math", "geometry", "gihahak"]
+  },
+  {
+    "id": "bangjeongshik",
+    "type": "entry",
+    "name": {
+      "ko": "방정식",
+      "en": "Equation"
+    },
+    "description": {
+      "ko": "미지수를 포함한 등식. x를 구하는 것이 목표.",
+      "en": "An equality containing unknowns. The goal is to find x."
+    },
+    "field": "math",
+    "tags": ["math", "equation", "bangjeongsik"]
+  },
+  {
+    "id": "gyesan",
+    "type": "entry",
+    "name": {
+      "ko": "계산",
+      "en": "Calculation"
+    },
+    "description": {
+      "ko": "수를 더하고, 빼고, 곱하고, 나누는 것. 수학의 기본 활동.",
+      "en": "Adding, subtracting, multiplying, dividing numbers. Basic math activity."
+    },
+    "field": "math",
+    "tags": ["math", "calculation", "gyesan"]
+  }
+]

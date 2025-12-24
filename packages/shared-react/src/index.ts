@@ -2,13 +2,22 @@
 export { useSettingsStore } from './stores';
 
 // Hooks
-export { useOnlineStatus, useMediaQuery, useIsMobile, type UseOnlineStatusReturn } from './hooks';
+export {
+  useOnlineStatus,
+  useMediaQuery,
+  useIsMobile,
+  useSearchWorker,
+  type UseOnlineStatusReturn,
+  type SearchIndexItem,
+  type SearchResult,
+} from './hooks';
 
 // Components
 export {
   DarkModeToggle,
   LanguageToggle,
   OfflineIndicator,
+  SearchDropdown,
   Skeleton,
   SkeletonText,
   SkeletonCard,
@@ -17,6 +26,7 @@ export {
   PageSkeleton,
   type DarkModeToggleProps,
   type LanguageToggleProps,
+  type SearchDropdownProps,
 } from './components';
 
 // Utils

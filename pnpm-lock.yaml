@@ -344,6 +344,9 @@ importers:
       '@soundblue/shared':
         specifier: workspace:*
         version: link:../shared
+      fuse.js:
+        specifier: ^7.0.0
+        version: 7.1.0
       lucide-react:
         specifier: ^0.468.0
         version: 0.468.0(react@19.2.3)

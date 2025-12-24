@@ -1,8 +1,14 @@
 import { stripLocaleFromPath } from '@soundblue/shared';
-import { DarkModeToggle, LanguageToggle } from '@soundblue/shared-react';
+import {
+  DarkModeToggle,
+  LanguageToggle,
+  SearchDropdown,
+  type SearchResult,
+  useSearchWorker,
+} from '@soundblue/shared-react';
 import { Menu, X } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router';
+import { useCallback, useEffect, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { useI18n } from '../../i18n';
 
 // Use shared utility for locale stripping
@@ -16,7 +22,55 @@ interface HeaderProps {
 export default function Header({ onMenuClick, isSidebarOpen }: HeaderProps) {
   const { locale, t } = useI18n();
   const location = useLocation();
+  const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
+
+  // Real-time search with Fuse.js
+  const { query, setQuery, results, isLoading } = useSearchWorker({
+    indexUrl: '/search-index.json',
+    locale,
+    debounceMs: 150,
+    maxResults: 8,
+  });
+
+  const handleSelectResult = useCallback(
+    (result: SearchResult) => {
+      const item = result.item;
+      // Navigate based on type: library or api
+      if (item.type === 'library') {
+        navigate(`/${locale === 'ko' ? 'ko/' : ''}libraries#${item.id}`);
+      } else if (item.type === 'api') {
+        navigate(`/${locale === 'ko' ? 'ko/' : ''}web-api#${item.id}`);
+      }
+    },
+    [navigate, locale],
+  );
+
+  // Custom render for Permissive results (show type badge)
+  const renderPermissiveResult = useCallback(
+    (result: SearchResult, _isSelected: boolean) => {
+      const name = result.item.name;
+      const itemType = result.item.type;
+      return (
+        <div className="flex items-center justify-between w-full gap-2">
+          <span style={{ color: 'var(--text-primary)' }} className="font-medium truncate">
+            {locale === 'ko' ? name.ko : name.en}
+          </span>
+          <span
+            className="text-xs px-1.5 py-0.5 rounded shrink-0"
+            style={{
+              backgroundColor:
+                itemType === 'library' ? 'var(--accent-primary)' : 'var(--bg-tertiary)',
+              color: itemType === 'library' ? 'white' : 'var(--text-secondary)',
+            }}
+          >
+            {itemType === 'library' ? 'Library' : 'API'}
+          </span>
+        </div>
+      );
+    },
+    [locale],
+  );
 
   useEffect(() => {
     let ticking = false;
@@ -43,7 +97,7 @@ export default function Header({ onMenuClick, isSidebarOpen }: HeaderProps) {
       }`}
     >
       {/* Left: Menu button (mobile) + Logo */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 shrink-0">
         {/* Mobile menu button */}
         <button
           type="button"
@@ -68,8 +122,21 @@ export default function Header({ onMenuClick, isSidebarOpen }: HeaderProps) {
         </Link>
       </div>
 
+      {/* Center: Search */}
+      <div className="hidden sm:block flex-1 max-w-md mx-4">
+        <SearchDropdown
+          query={query}
+          onQueryChange={setQuery}
+          results={results}
+          isLoading={isLoading}
+          onSelect={handleSelectResult}
+          locale={locale}
+          renderResult={renderPermissiveResult}
+        />
+      </div>
+
       {/* Right: Controls */}
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-1 shrink-0">
         <LanguageToggle locale={locale} currentPath={stripLocale(location.pathname)} />
         <DarkModeToggle />
       </div>
