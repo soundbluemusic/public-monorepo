@@ -71,7 +71,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               (function() {
                 // Use capture phase (true) to intercept before React's event delegation
                 document.addEventListener('click', function(e) {
-                  var btn = e.target.closest ? e.target.closest('button[aria-label*="mode" i]') : null;
+                  var btn = e.target.closest('button[aria-label*="mode" i]');
                   if (!btn) return;
 
                   var html = document.documentElement;

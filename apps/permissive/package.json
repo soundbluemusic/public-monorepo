@@ -23,23 +23,17 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@radix-ui/react-dropdown-menu": "^2.1.4",
-    "@radix-ui/react-toggle": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.6",
     "@soundblue/shared": "workspace:*",
     "@soundblue/shared-react": "workspace:*",
-    "chart.js": "^4.4.7",
     "dexie": "^4.0.10",
-    "fuse.js": "^7.0.0",
     "lucide-react": "^0.468.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router": "^7.11.0",
-    "zustand": "^5.0.2"
+    "react-router": "^7.11.0"
   },
   "devDependencies": {
     "@react-router/dev": "^7.11.0",
-    "@react-router/node": "^7.11.0",
     "@react-router/serve": "^7.11.0",
     "@tailwindcss/vite": "^4.0.0",
     "@types/node": "^22.10.2",

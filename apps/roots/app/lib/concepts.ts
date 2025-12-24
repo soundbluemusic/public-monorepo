@@ -45,9 +45,6 @@ async function loadIndex(): Promise<ConceptsIndex> {
       }
       const data: ConceptsIndex = await res.json();
       conceptsIndex = data;
-      console.log(
-        `✓ Loaded concepts index (${data.totalConcepts} concepts, ${data.fields.length} fields)`,
-      );
       return data;
     }),
     new Promise<never>((_, reject) =>
@@ -86,7 +83,6 @@ export async function loadConceptsByField(field: string): Promise<MathConcept[]>
       }
       const data: MathConcept[] = await res.json();
       fieldCache.set(field, data);
-      console.log(`✓ Loaded ${data.length} concepts from ${field}.json`);
       return data;
     }),
     new Promise<never>((_, reject) =>
@@ -123,7 +119,6 @@ export async function loadConcepts(): Promise<MathConcept[]> {
   conceptsData = allFieldConcepts.flat();
   conceptsMap = new Map(conceptsData.map((c) => [c.id, c]));
 
-  console.log(`✓ Loaded all ${conceptsData.length} concepts from ${index.fields.length} fields`);
   return conceptsData;
 }
 
@@ -150,7 +145,6 @@ export async function getConceptById(id: string): Promise<MathConcept | undefine
   const field = index.conceptIdToField[id];
 
   if (!field) {
-    console.warn(`Concept ID "${id}" not found in index`);
     return undefined;
   }
 

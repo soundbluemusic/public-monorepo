@@ -184,7 +184,7 @@ export const studyRecords = {
     if (!database) return []; // SSG environment
     const records = await database.studyRecords.toArray();
     const uniqueIds = new Set(records.map((r) => r.entryId));
-    return Array.from(uniqueIds);
+    return [...uniqueIds];
   },
 
   /**

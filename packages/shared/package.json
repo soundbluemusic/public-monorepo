@@ -17,9 +17,11 @@
     "./db": "./src/db/index.ts",
     "./styles/*": "./src/styles/*"
   },
+  "dependencies": {
+    "dexie": "^4.0.10"
+  },
   "devDependencies": {
     "@types/node": "^22.10.2",
-    "dexie": "^4.0.10",
     "typescript": "^5.7.2"
   }
 }

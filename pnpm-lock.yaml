@@ -98,12 +98,6 @@ importers:
 
   apps/context:
     dependencies:
-      '@radix-ui/react-dropdown-menu':
-        specifier: ^2.1.4
-        version: 2.1.16(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@radix-ui/react-toggle':
-        specifier: ^1.1.0
-        version: 1.1.10(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@soundblue/shared':
         specifier: workspace:*
         version: link:../../packages/shared
@@ -125,9 +119,6 @@ importers:
       react-router:
         specifier: ^7.11.0
         version: 7.11.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      zustand:
-        specifier: ^5.0.2
-        version: 5.0.9(@types/react@19.2.7)(react@19.2.3)
     devDependencies:
       '@react-router/dev':
         specifier: ^7.11.0
@@ -168,12 +159,6 @@ importers:
 
   apps/permissive:
     dependencies:
-      '@radix-ui/react-dropdown-menu':
-        specifier: ^2.1.4
-        version: 2.1.16(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@radix-ui/react-toggle':
-        specifier: ^1.1.0
-        version: 1.1.10(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@radix-ui/react-tooltip':
         specifier: ^1.1.6
         version: 1.2.8(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -183,15 +168,9 @@ importers:
       '@soundblue/shared-react':
         specifier: workspace:*
         version: link:../../packages/shared-react
-      chart.js:
-        specifier: ^4.4.7
-        version: 4.5.1
       dexie:
         specifier: ^4.0.10
         version: 4.2.1
-      fuse.js:
-        specifier: ^7.0.0
-        version: 7.1.0
       lucide-react:
         specifier: ^0.468.0
         version: 0.468.0(react@19.2.3)
@@ -204,16 +183,10 @@ importers:
       react-router:
         specifier: ^7.11.0
         version: 7.11.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      zustand:
-        specifier: ^5.0.2
-        version: 5.0.9(@types/react@19.2.7)(react@19.2.3)
     devDependencies:
       '@react-router/dev':
         specifier: ^7.11.0
         version: 7.11.0(@react-router/serve@7.11.0(react-router@7.11.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(typescript@5.9.3))(@types/node@22.19.3)(jiti@2.6.1)(lightningcss@1.30.2)(react-router@7.11.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(terser@5.44.1)(tsx@4.21.0)(typescript@5.9.3)(vite@6.4.1(@types/node@22.19.3)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1)(tsx@4.21.0))
-      '@react-router/node':
-        specifier: ^7.11.0
-        version: 7.11.0(react-router@7.11.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(typescript@5.9.3)
       '@react-router/serve':
         specifier: ^7.11.0
         version: 7.11.0(react-router@7.11.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(typescript@5.9.3)
@@ -250,12 +223,6 @@ importers:
 
   apps/roots:
     dependencies:
-      '@radix-ui/react-dropdown-menu':
-        specifier: ^2.1.4
-        version: 2.1.16(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      '@radix-ui/react-toggle':
-        specifier: ^1.1.0
-        version: 1.1.10(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@soundblue/shared':
         specifier: workspace:*
         version: link:../../packages/shared
@@ -280,9 +247,6 @@ importers:
       react-router:
         specifier: ^7.11.0
         version: 7.11.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      zustand:
-        specifier: ^5.0.2
-        version: 5.0.9(@types/react@19.2.7)(react@19.2.3)
     devDependencies:
       '@react-router/dev':
         specifier: ^7.11.0
@@ -322,13 +286,14 @@ importers:
         version: 7.4.0
 
   packages/shared:
+    dependencies:
+      dexie:
+        specifier: ^4.0.10
+        version: 4.2.1
     devDependencies:
       '@types/node':
         specifier: ^22.10.2
         version: 22.19.3
-      dexie:
-        specifier: ^4.0.10
-        version: 4.2.1
       typescript:
         specifier: ^5.7.2
         version: 5.9.3
@@ -1763,9 +1728,6 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
-
-  '@kurkle/color@0.3.4':
-    resolution: {integrity: sha512-M5UknZPHRu3DEDWoipU6sE8PdkZ6Z/S+v4dD+Ke8IaNlpdSQah50lz1KtcFBa2vsdOnwbbnxJwVM4wty6udA5w==}
 
   '@lhci/cli@0.14.0':
     resolution: {integrity: sha512-TxOH9pFBnmmN7Jmo2Aimxx5UhE8veqXpHfFJDMWsCVxkwh7mGxcAWchGl84mK139SZbbRmerqZ72c+h2nG9/QQ==}
@@ -3604,10 +3566,6 @@ packages:
 
   chardet@0.7.0:
     resolution: {integrity: sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==}
-
-  chart.js@4.5.1:
-    resolution: {integrity: sha512-GIjfiT9dbmHRiYi6Nl2yFCq7kkwdkp1W/lp2J99rX0yo9tgJGn3lKQATztIjb5tVtevcBtIdICNWqlq5+E8/Pw==}
-    engines: {pnpm: '>=8'}
 
   check-error@2.1.1:
     resolution: {integrity: sha512-OAlb+T7V4Op9OwdkjmguYRqncdlx5JiofwOAUkmTF+jNdHwzTaTs4sRAGpzLF3oOz5xAyDGrPgeIDFQmDOTiJw==}
@@ -8546,8 +8504,6 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@kurkle/color@0.3.4': {}
-
   '@lhci/cli@0.14.0':
     dependencies:
       '@lhci/utils': 0.14.0
@@ -10597,10 +10553,6 @@ snapshots:
   char-spinner@1.0.1: {}
 
   chardet@0.7.0: {}
-
-  chart.js@4.5.1:
-    dependencies:
-      '@kurkle/color': 0.3.4
 
   check-error@2.1.1: {}
 

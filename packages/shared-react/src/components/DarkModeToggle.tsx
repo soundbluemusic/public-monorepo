@@ -12,18 +12,11 @@ export interface DarkModeToggleProps {
  * Uses useRef + native addEventListener for reliable event handling in SSG
  */
 export function DarkModeToggle({ className = '', style }: DarkModeToggleProps) {
-  // Log on every render to check if component is being hydrated
-  if (typeof window !== 'undefined') {
-    console.log('[DarkModeToggle] Component rendering on client!');
-  }
-
   const [mounted, setMounted] = useState(false);
   const [isDark, setIsDark] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   const handleClick = useCallback(() => {
-    console.log('[DarkModeToggle] handleClick called via native listener!');
-
     // Toggle dark class directly
     const html = document.documentElement;
     const willBeDark = !html.classList.contains('dark');
@@ -37,8 +30,6 @@ export function DarkModeToggle({ className = '', style }: DarkModeToggleProps) {
     // Update store
     useSettingsStore.getState().setTheme(willBeDark ? 'dark' : 'light');
     setIsDark(willBeDark);
-
-    console.log('[DarkModeToggle] Toggled to:', willBeDark ? 'dark' : 'light');
   }, []);
 
   useEffect(() => {
@@ -48,7 +39,6 @@ export function DarkModeToggle({ className = '', style }: DarkModeToggleProps) {
     // Attach native click listener directly to button
     const button = buttonRef.current;
     if (button) {
-      console.log('[DarkModeToggle] Attaching native click listener');
       button.addEventListener('click', handleClick);
     }
 
