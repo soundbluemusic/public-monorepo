@@ -164,6 +164,24 @@ pnpm build:context
 
 ---
 
+## ⛔ Code Quality (코드 품질)
+
+> **하드코딩 절대 금지 (NO HARDCODING)**
+
+```typescript
+// ❌ NEVER
+const ENTRY_COUNT = 344;  // Magic number
+return entries.length || 344;
+
+// ✅ ALWAYS
+const entries = await loadEntries();
+if (entries.length === 0) throw new Error('No entries found');
+```
+
+See [root README](../../README.md#-code-quality-rules-코드-품질-규칙) for full guidelines.
+
+---
+
 ## License (라이선스)
 
 Apache License 2.0

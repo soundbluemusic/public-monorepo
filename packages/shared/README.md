@@ -161,6 +161,28 @@ import type {
 
 ---
 
+## ⛔ Code Quality (코드 품질)
+
+> **하드코딩 절대 금지 (NO HARDCODING)**
+
+```typescript
+// ❌ NEVER - Magic numbers
+const MAX_LENGTH = 100;  // Why 100?
+
+// ✅ ALWAYS - Use exported constants with clear names
+export const LIMITS = {
+  ID_LENGTH: 100,      // Maximum characters for entity IDs
+  SEARCH_LENGTH: 100,  // Maximum search query length
+} as const;
+```
+
+All constants must be:
+1. **Named clearly** - What it represents
+2. **Documented** - Why this value
+3. **Exported** - Reusable across packages
+
+---
+
 ## License
 
 Apache License 2.0

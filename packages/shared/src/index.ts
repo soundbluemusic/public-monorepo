@@ -1,3 +1,24 @@
+/**
+ * @soundblue/shared - Shared utilities for Soundblue monorepo
+ *
+ * @remarks
+ * ⛔ **HARDCODING PROHIBITION (하드코딩 절대 금지)**
+ *
+ * NEVER use magic numbers or hardcoded values. ALWAYS use exported constants.
+ *
+ * @example
+ * ```typescript
+ * // ❌ NEVER
+ * if (id.length > 100) throw new Error('Too long');
+ *
+ * // ✅ ALWAYS
+ * import { LIMITS } from '@soundblue/shared';
+ * if (id.length > LIMITS.ID_LENGTH) throw new Error('Too long');
+ * ```
+ *
+ * @packageDocumentation
+ */
+
 // Constants
 export { LIMITS, BREAKPOINTS, RESERVED_NAMES, type ReservedName } from './constants';
 

@@ -220,6 +220,68 @@ pnpm dev:roots          # → http://localhost:3005
 
 <br>
 
+## ⛔ Code Quality Rules (코드 품질 규칙)
+
+<br>
+
+### Hardcoding Prohibition (하드코딩 절대 금지)
+
+> **CRITICAL:** Never use hardcoded values to pass tests or bypass errors.
+>
+> **절대 금지:** 테스트 통과나 에러 회피를 위한 하드코딩 금지
+
+<br>
+
+**❌ NEVER DO (절대 하지 말 것):**
+
+```typescript
+// ❌ Hardcoded values to pass tests
+const EXPECTED_COUNT = 348;  // Magic number
+return items.length || 348;  // Fallback to hide error
+
+// ❌ Mock data to bypass errors
+const data = testMode ? MOCK_DATA : realData;
+
+// ❌ Disabling validation
+// @ts-ignore
+// biome-ignore lint: skip validation
+```
+
+<br>
+
+**✅ ALWAYS DO (항상 할 것):**
+
+```typescript
+// ✅ Dynamic calculation
+const count = items.length;
+if (count === 0) throw new Error('No items found');
+
+// ✅ Proper error handling
+const data = await fetchData();
+if (!data) throw new Error('Failed to fetch data');
+
+// ✅ Type-safe validation
+function validateId(id: string): asserts id is ValidId {
+  if (!isValidId(id)) throw new Error(`Invalid ID: ${id}`);
+}
+```
+
+<br>
+
+### Required Process (필수 프로세스)
+
+Before any fix (수정 전 반드시):
+
+1. **Identify root cause** - Find WHY, not just WHAT (원인 파악)
+2. **Verify fix doesn't break existing** - Run tests (기존 기능 유지 확인)
+3. **No shortcuts** - Hardcoding is never acceptable (지름길 금지)
+
+<br>
+
+---
+
+<br>
+
 ## 📄 License (라이선스)
 
 <br>

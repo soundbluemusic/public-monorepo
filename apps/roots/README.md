@@ -155,6 +155,24 @@ pnpm build:roots
 
 ---
 
+## ⛔ Code Quality (코드 품질)
+
+> **하드코딩 절대 금지 (NO HARDCODING)**
+
+```typescript
+// ❌ NEVER
+const CONCEPT_COUNT = 52;  // Magic number
+return concepts.length || 52;
+
+// ✅ ALWAYS
+const concepts = await loadConcepts();
+if (concepts.length === 0) throw new Error('No concepts found');
+```
+
+See [root README](../../README.md#-code-quality-rules-코드-품질-규칙) for full guidelines.
+
+---
+
 ## License (라이선스)
 
 Apache License 2.0

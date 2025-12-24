@@ -138,6 +138,24 @@ pnpm build:permissive
 
 ---
 
+## ⛔ Code Quality (코드 품질)
+
+> **하드코딩 절대 금지 (NO HARDCODING)**
+
+```typescript
+// ❌ NEVER
+const API_COUNT = 58;  // Magic number
+return apis.length || 58;
+
+// ✅ ALWAYS
+const apis = getWebApis();
+if (apis.length === 0) throw new Error('No APIs found');
+```
+
+See [root README](../../README.md#-code-quality-rules-코드-품질-규칙) for full guidelines.
+
+---
+
 ## License (라이선스)
 
 Apache License 2.0

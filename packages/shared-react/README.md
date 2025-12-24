@@ -236,6 +236,29 @@ All components are SSG-compatible with these considerations:
 
 ---
 
+## ⛔ Code Quality (코드 품질)
+
+> **하드코딩 절대 금지 (NO HARDCODING)**
+
+```tsx
+// ❌ NEVER - Hardcoded breakpoints
+const isMobile = window.innerWidth < 768;
+
+// ✅ ALWAYS - Use shared constants
+import { BREAKPOINTS } from '@soundblue/shared';
+const isMobile = window.innerWidth < BREAKPOINTS.MOBILE;
+
+// ❌ NEVER - Inline magic values
+<div style={{ maxWidth: '980px' }}>
+
+// ✅ ALWAYS - CSS variables or Tailwind classes
+<div className="max-w-[var(--content-max-width)]">
+```
+
+See [root README](../../README.md#-code-quality-rules-코드-품질-규칙) for full guidelines.
+
+---
+
 ## License
 
 Apache License 2.0

@@ -17,27 +17,65 @@
 
 ## Code Quality Rules (코드 품질 규칙)
 
-### Absolute Prohibitions (절대 금지)
+### Absolute Prohibitions (절대 금지) ⛔
+
+> **이 규칙들을 위반하면 즉시 중단하고 근본 원인을 파악할 것**
+
+#### 1. 하드코딩 절대 금지 (NO HARDCODING)
+```
+❌ NEVER DO THIS:
+- 테스트 통과를 위한 하드코딩된 값
+- 빌드 에러 회피를 위한 임시 상수
+- "일단 동작하게" 하려는 매직 넘버
+- 특정 환경에서만 작동하는 고정값
+- 에러 메시지를 숨기기 위한 기본값
+
+✅ ALWAYS DO THIS:
+- 동적으로 계산/조회
+- 환경 변수 또는 설정 파일 사용
+- 타입 시스템으로 강제
+- 런타임 검증 추가
+```
+
+**하드코딩 감지 시 즉시 질문:**
+1. "왜 이 값이 고정되어야 하는가?"
+2. "이 값이 변경되면 어디가 깨지는가?"
+3. "이 값의 출처(source of truth)는 어디인가?"
+
+#### 2. 에러 숨기기 절대 금지 (NO ERROR HIDING)
 - Never delete/comment out code to hide errors (에러 숨기려고 코드 삭제/주석 처리 금지)
-- Never hardcode values or mock data to pass tests (테스트 통과용 하드코딩/목 데이터 금지)
+- Never use empty catch blocks (빈 catch 블록 금지)
+- Never ignore TypeScript errors with `@ts-ignore` without explanation
+- Never use `any` type to bypass type checking
+
+#### 3. 테스트/검증 비활성화 절대 금지 (NO DISABLING)
 - Never disable tests, validation, or security checks (테스트/검증/보안 체크 비활성화 금지)
+- Never skip pre-commit hooks
+- Never use `--no-verify` flags
+
+#### 4. 불완전한 코드 절대 금지 (NO INCOMPLETE CODE)
 - Never use `// ... existing code ...` - always provide complete code (항상 완전한 코드 제공)
+- Never leave TODO comments without creating a tracking issue
+- Never commit placeholder implementations
 
 ### Required Process (필수 프로세스)
+
 Before any fix (수정 전 반드시):
-1. Identify root cause (WHY, not just WHAT) - 근본 원인 파악
-2. Explain why naive fixes (delete/hardcode/disable) are wrong - 단순 수정이 왜 잘못인지 설명
-3. Verify existing functionality is preserved - 기존 기능 유지 확인
+1. **Identify root cause (WHY, not just WHAT)** - 근본 원인 파악
+2. **Explain why naive fixes are wrong** - 단순 수정(삭제/하드코딩/비활성화)이 왜 잘못인지 설명
+3. **Verify existing functionality is preserved** - 기존 기능 유지 확인
+4. **Check for hardcoded values** - 하드코딩된 값이 있는지 확인
 
 ### Quality Standards (품질 기준)
 - Structural solutions over superficial patches (표면적 패치보다 구조적 해결)
 - Handle edge cases explicitly (엣지 케이스 명시적 처리)
 - Follow project conventions (프로젝트 컨벤션 준수)
 - Add comments explaining WHY (WHY를 설명하는 주석)
+- **Single Source of Truth** - 모든 데이터는 하나의 출처에서만 정의
 
 ### When Uncertain (불확실할 때)
-Ask before: removing code, changing core logic, breaking changes.
-(다음 작업 전 질문: 코드 제거, 핵심 로직 변경, 브레이킹 체인지)
+Ask before: removing code, changing core logic, breaking changes, adding hardcoded values.
+(다음 작업 전 질문: 코드 제거, 핵심 로직 변경, 브레이킹 체인지, 하드코딩 추가)
 
 ## Quality Metrics (The Perfect Dodecagon)
 
