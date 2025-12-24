@@ -44,11 +44,39 @@
 | **Styling** | Tailwind CSS v4 |
 | **Package Manager** | pnpm (workspaces) |
 | **Linting** | Biome |
-| **Build** | 100% Static (SSG) - No server required |
+| **Build** | 100% Static (SSG) + Build-time Data Prerendering |
+| **i18n** | Paraglide (compile-time) + URL-based routing (`/ko/*`) |
 | **Storage** | localStorage / IndexedDB only (No external DB) |
 | **API** | Web Standard APIs only (No vendor lock-in) |
 | **Hosting** | Cloudflare Pages (CDN) |
-| **Output** | `build/client` |
+| **Output** | `build/client` (HTML + JS + `.data` files) |
+
+### SSG Build-time Data Prerendering (빌드타임 데이터 프리렌더링)
+
+React Router v7의 `prerender()` + `loader()` 패턴으로 빌드 시 데이터를 미리 추출합니다:
+
+| App | Dynamic Routes (동적 라우트) | `.data` Files | Data Source |
+|:---:|:----------------------------|:-------------:|:------------|
+| **Context** | 344 entries + 4 categories | 348개 | JSON 배열 |
+| **Roots** | 52 concepts + 18 fields | 70개 | TypeScript 모듈 |
+| **Permissive** | 7 static routes | 7개 | 배열 리터럴 |
+
+```typescript
+// react-router.config.ts 패턴
+export default {
+  ssr: false,
+  async prerender() {
+    // 빌드 시 동적 라우트 목록 생성
+    return ['/', '/ko', '/entry/hello', '/ko/entry/hello', ...];
+  },
+}
+
+// routes/entry.$entryId.tsx 패턴
+export async function loader({ params }) {
+  // 빌드 시 실행 → .data 파일로 저장
+  return { entry: getEntryById(params.entryId) };
+}
+```
 
 <br>
 
@@ -64,18 +92,29 @@
 soundblue-monorepo/
 │
 ├── apps/
-│   ├── context/       →  Korean dictionary app (한국어 사전 앱)     [SSG]
-│   ├── permissive/    →  Web dev resources app (웹개발 자료 앱)     [SSG]
-│   └── roots/         →  Math documentation app (수학 문서 앱)      [SSG]
+│   ├── context/       →  Korean dictionary (348 SSG routes)
+│   ├── permissive/    →  Web dev resources (7 SSG routes)
+│   └── roots/         →  Math documentation (70 SSG routes)
 │
 ├── packages/
-│   ├── shared/        →  Shared utilities (공용 유틸리티)
-│   └── shared-react/  →  Shared React components (공용 React 컴포넌트)
+│   ├── shared/        →  Utilities: db, i18n, search, validation
+│   └── shared-react/  →  Components, hooks, stores
 │
-└── package.json       →  Root config (루트 설정)
+└── package.json       →  Root config
 ```
 
-> **Note:** All apps use `ssr: false` in `react-router.config.ts`. Build output goes to `build/client`.
+> **Note:** All apps use `ssr: false` + `prerender()` + `loader()` in `react-router.config.ts`.
+
+### i18n Routing (다국어 라우팅)
+
+URL 경로 기반 언어 감지 (쿼리 파라미터 아님):
+
+```
+/              → English (default)
+/ko            → Korean
+/entry/hello   → English entry page
+/ko/entry/hello → Korean entry page
+```
 
 <br>
 
@@ -127,16 +166,35 @@ pnpm dev:roots          # → http://localhost:3005
 
 <br>
 
-| Command (명령어) | Description (설명) |
-|:-----------------|:-------------------|
-| `pnpm dev:context` | Run Context app (Context 앱 실행) |
-| `pnpm dev:permissive` | Run Permissive app (Permissive 앱 실행) |
-| `pnpm dev:roots` | Run Roots app (Roots 앱 실행) |
-| `pnpm build:context` | Build Context app → `build/client` |
-| `pnpm build:permissive` | Build Permissive app → `build/client` |
-| `pnpm build:roots` | Build Roots app → `build/client` |
-| `pnpm lint` | Check code (코드 검사) |
-| `pnpm format` | Format code (코드 정리) |
+### Development (개발)
+
+| Command | Description |
+|:--------|:------------|
+| `pnpm dev:context` | Run Context → http://localhost:3003 |
+| `pnpm dev:permissive` | Run Permissive → http://localhost:3004 |
+| `pnpm dev:roots` | Run Roots → http://localhost:3005 |
+
+### Build (빌드)
+
+| Command | Description |
+|:--------|:------------|
+| `pnpm build:context` | Build Context → `build/client` |
+| `pnpm build:permissive` | Build Permissive → `build/client` |
+| `pnpm build:roots` | Build Roots → `build/client` |
+| `pnpm build` | Build all apps |
+| `pnpm build:test` | Build + typecheck + verify SSG |
+
+### Quality (품질)
+
+| Command | Description |
+|:--------|:------------|
+| `pnpm lint` | Check code with Biome |
+| `pnpm format` | Format code with Biome |
+| `pnpm typecheck` | TypeScript type check |
+| `pnpm test` | Run Vitest tests |
+| `pnpm test:e2e` | Run Playwright E2E tests |
+| `pnpm verify:ssg` | Verify SSG meta tags |
+| `pnpm check:links` | Check for broken links |
 
 <br>
 
@@ -148,10 +206,13 @@ pnpm dev:roots          # → http://localhost:3005
 
 <br>
 
-For detailed analysis and optimization plans, see:
+| Document | Status | Description |
+|:---------|:------:|:------------|
+| [CODE_DUPLICATION_REPORT.md](CODE_DUPLICATION_REPORT.md) | 📋 2025-12-17 | Code duplication analysis (Phase 1 pending) |
+| [OPTIMIZATION_PLAN.md](apps/roots/OPTIMIZATION_PLAN.md) | ⚠️ Legacy | Original KaTeX plan (now using MathML) |
+| [BUTTON_TESTING_REPORT.md](BUTTON_TESTING_REPORT.md) | 🔴 2025-12-23 | E2E test results (50% pass rate) |
 
-- **[Code Duplication Report](CODE_DUPLICATION_REPORT.md)** - Analysis of code duplication across the monorepo (모노레포 전체의 코드 중복 분석)
-- **[Roots Optimization Plan](apps/roots/OPTIMIZATION_PLAN.md)** - Performance optimization strategy for Roots app (Roots 앱 성능 최적화 전략)
+> **Note:** OPTIMIZATION_PLAN.md는 레거시 문서입니다. 현재 구현은 MathML 기반입니다.
 
 <br>
 

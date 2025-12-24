@@ -1,65 +1,131 @@
 # Roots
 
 > **Math Documentation for Learners (학습자를 위한 수학 문서)**
->
-> Explore mathematical concepts from elementary to graduate level with LaTeX formulas and examples.
-> (초등부터 대학원 수준까지 LaTeX 공식과 예제로 수학 개념을 탐험하세요.)
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 [![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?logo=react-router)](https://reactrouter.com)
 [![100% SSG](https://img.shields.io/badge/100%25-SSG-brightgreen)](https://en.wikipedia.org/wiki/Static_site_generator)
+[![SSG Routes](https://img.shields.io/badge/SSG_Routes-70-blue)](react-router.config.ts)
 
 **[Live Site](https://roots.soundbluemusic.com)**
 
 ---
 
-## What is this? (이게 뭐예요?)
+## What is this? (이게 뭔가요?)
 
 A math documentation site designed for learners:
 
-- **18 Math Fields** - From foundations to advanced topics (기초부터 고급까지)
-- **LaTeX Formulas** - Beautiful math rendering (수식 렌더링)
-- **Difficulty Levels** - Elementary → Graduate+ (초등 → 대학원+)
-- **Examples** - Step-by-step solutions (단계별 풀이)
-- **Bilingual** - Korean ↔ English (한국어 ↔ 영어)
+- **52 Math Concepts** - From elementary to graduate level
+- **18 Math Fields** - Algebra, Calculus, Geometry, etc.
+- **MathML Rendering** - Browser-native LaTeX formulas
+- **Difficulty Levels** - Elementary → Graduate+
+- **Bilingual** - Korean ↔ English
 
 ---
 
 ## Architecture (아키텍처)
 
-### 100% Static Site Generation (SSG)
-
-This is a **fully static site**. No server-side rendering, no API calls at runtime.
+### 100% SSG with Build-time Data Prerendering
 
 ```
-Build time:  React Router v7 → Static HTML/CSS/JS
-Runtime:     Pure static files served from CDN
-Storage:     localStorage / IndexedDB (favorites)
-Math:        Browser-native MathML for LaTeX rendering
+react-router.config.ts
+├── ssr: false
+├── prerender() → 70 static routes generated
+│   ├── concept-names.json → 52 concept routes
+│   └── fields.ts → 18 field routes
+└── loader() functions → .data files for each route
+
+Build output (build/client/):
+├── index.html, ko/index.html
+├── concept/algebra.html, ko/concept/algebra.html (×52)
+├── field/calculus.html, ko/field/calculus.html (×18)
+└── *.data files (prerendered loader data)
 ```
 
-**Why SSG?**
-- **Fast** - Pre-rendered HTML, instant page loads
-- **Cheap** - Host anywhere (Cloudflare Pages, GitHub Pages, etc.)
-- **Simple** - No server to maintain, no database
-- **Offline** - PWA support for offline access
+### Math Rendering
+
+```
+LaTeX input → app/components/math/LaTeX.tsx → MathML output
+```
+
+Browser-native MathML (no KaTeX/MathJax bundle required).
 
 ---
 
-## Site Structure (사이트 구조)
+## Routes (라우트 구조)
+
+| Route | EN | KO | Dynamic | Description |
+|:------|:--:|:--:|:-------:|:------------|
+| `/` | ✓ | ✓ | - | Home |
+| `/browse` | ✓ | ✓ | - | Browse all concepts |
+| `/search` | ✓ | ✓ | - | Search with Fuse.js |
+| `/concept/:conceptId` | ✓ | ✓ | 52 | Concept page |
+| `/field/:fieldId` | ✓ | ✓ | 18 | Field page |
+| `/constants` | ✓ | ✓ | - | Math constants |
+| `/favorites` | ✓ | ✓ | - | Saved concepts |
+| `/about` | ✓ | ✓ | - | About |
+
+**Total:** 70 SSG routes (35 EN + 35 KO)
+
+---
+
+## Data Structure (데이터 구조)
 
 ```
-/                     Home (홈)
-/browse               Browse all concepts (전체 탐색)
-/search               Search concepts (검색)
-/field/[id]           Field page (분야 페이지)
-/concept/[id]         Concept page (개념 페이지)
-/constants            Math constants (수학 상수)
-/favorites            Saved concepts (즐겨찾기)
-/about                About page (소개)
+app/data/
+├── concepts/          # TypeScript files per concept
+│   ├── algebra.ts
+│   ├── calculus.ts
+│   ├── geometry.ts
+│   └── ... (52 concepts)
+├── fields.ts          # 18 math fields
+├── subfields.ts       # Subfields per field
+├── types.ts           # TypeScript types
+└── index.ts           # Unified export
+
+public/
+├── concept-names.json # Concept IDs for prerender()
+└── search-index.json  # Fuse.js search index
 ```
 
-Supports both Korean (`/ko/...`) and English (`/en/...`) URL prefixes.
+### Concept Schema
+
+```typescript
+interface MathConcept {
+  id: string;              // 'pythagorean-theorem'
+  name: { ko: string; en: string };
+  field: MathField;        // 'geometry'
+  subfield: string;        // 'triangles'
+  difficulty: DifficultyLevel;
+  content: {
+    ko: ConceptContent;
+    en: ConceptContent;
+  };
+  latex?: string;          // '$a^2 + b^2 = c^2$'
+  relations: ConceptRelations;
+  tags: string[];
+}
+```
+
+---
+
+## Search Algorithm
+
+```typescript
+// Fuse.js-based offline search
+// lib/search.ts
+const fuse = new Fuse(concepts, {
+  keys: [
+    { name: 'name.ko', weight: 3.0 },
+    { name: 'name.en', weight: 2.0 },
+    { name: 'tags', weight: 1.0 },
+  ],
+  threshold: 0.3,
+  minMatchCharLength: 2,
+});
+
+// Dynamic loading: search-index.json loaded on demand
+```
 
 ---
 

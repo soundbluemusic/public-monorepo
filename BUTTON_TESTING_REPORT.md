@@ -3,6 +3,24 @@
 **테스트 일자**: 2025-12-23
 **테스트 도구**: Playwright E2E Testing
 **테스트 대상**: Context, Permissive, Roots 앱
+**마지막 상태 확인**: 2025-12-24
+
+---
+
+## ⚠️ 수정 상태 (Fix Status)
+
+| 실패 항목 | 앱 | 수정 상태 | 담당 |
+|:----------|:---|:--------:|:-----|
+| Dark Mode Toggle | Context, Roots | ❌ 미수정 | SSG 하이드레이션 이슈 |
+| Theme Toggle | Permissive | ❌ 미수정 | 셀렉터 문제 |
+| Back to Top | Context, Permissive | ❌ 미수정 | viewport 밖 위치 |
+| Menu Button | Context, Permissive | ❌ 미수정 | 사이드바 오버레이 |
+| Search Form | Roots | ❌ 미수정 | navigate() 이슈 |
+| Bottom Nav | Roots | ❌ 미수정 | 셀렉터 오류 |
+
+> **우선 해결 필요**: Dark Mode Toggle (SSG 하이드레이션 문제)
+>
+> **권장 조치**: entry.client.tsx에 테마 초기화 스크립트 추가
 
 ---
 

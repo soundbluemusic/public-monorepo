@@ -1,8 +1,24 @@
 # Roots 앱 수학 공식 로딩 최적화 계획
 
-> **Note (2025):** This document contains the original optimization plan. Since writing this plan, the math rendering implementation has been changed from KaTeX to browser-native MathML. See `app/components/math/LaTeX.tsx` for current implementation.
+> ⚠️ **LEGACY DOCUMENT (레거시 문서)** - Last updated: 2025-12-24
 >
-> **참고 (2025):** 이 문서는 원래의 최적화 계획을 담고 있습니다. 계획 작성 이후, 수학 렌더링 구현이 KaTeX에서 브라우저 네이티브 MathML로 변경되었습니다. 현재 구현은 `app/components/math/LaTeX.tsx`를 참조하세요.
+> This document contains the **original optimization plan from early 2025**.
+> Several significant changes have been made since then:
+>
+> | Original Plan | Current Implementation | Status |
+> |:--------------|:-----------------------|:------:|
+> | KaTeX rendering | Browser-native MathML | ✅ Changed |
+> | Client-side data loading | Build-time `loader()` prerendering | ✅ Changed |
+> | Single large JSON | Still single JSON (not split) | ❌ Not done |
+> | Virtual scrolling | Not implemented | ❌ Not done |
+> | IndexedDB caching | Implemented for favorites/settings | ✅ Partial |
+>
+> **Current implementation:**
+> - Math rendering: `app/components/math/LaTeX.tsx` (MathML)
+> - SSG loader pattern: `routes/concept.$conceptId.tsx`, `routes/field.$fieldId.tsx`
+> - 70 static routes generated at build time (52 concepts + 18 fields × 2 languages)
+>
+> **이 문서는 2025년 초 원본 최적화 계획입니다. 이후 많은 변경이 있었습니다.**
 
 ## 📊 현재 상태 분석
 

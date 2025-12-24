@@ -1,56 +1,116 @@
 # Permissive
 
 > **Free Web Dev Tools Collection (무료 웹개발 도구 모음)**
->
-> Web Standard APIs and MIT licensed libraries at a glance. (웹표준 API와 MIT 라이센스 라이브러리를 한눈에.)
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 [![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?logo=react-router)](https://reactrouter.com)
 [![100% SSG](https://img.shields.io/badge/100%25-SSG-brightgreen)](https://en.wikipedia.org/wiki/Static_site_generator)
+[![SSG Routes](https://img.shields.io/badge/SSG_Routes-7-blue)](react-router.config.ts)
 
 **[Live Site](https://permissive.soundbluemusic.com)**
 
 ---
 
-## What is this? (이게 뭐예요?)
+## What is this? (이게 뭔가요?)
 
 A comprehensive collection of free web development resources:
 
-- **Libraries** - 100+ MIT/OSS licensed libraries (MIT/오픈소스 라이브러리)
-- **Web API** - 58 browser built-in APIs (브라우저 내장 API)
-
-No installation guides, no tutorials. Just a clean, well-organized list with advanced search & filtering.
+- **100+ Libraries** - MIT/OSS licensed libraries
+- **58 Web APIs** - Browser built-in APIs
+- **No tutorials** - Just a clean, organized list
 
 ---
 
 ## Architecture (아키텍처)
 
-### 100% Static Site Generation (SSG)
-
-This is intentionally a **fully static site**. No server-side rendering, no API calls at runtime.
+### 100% SSG with Build-time Data Prerendering
 
 ```
-Build time:  React Router v7 → Static HTML/CSS/JS
-Runtime:     Pure static files served from CDN
+react-router.config.ts
+├── ssr: false
+├── prerender() → 7 static routes (hardcoded)
+└── loader() functions → .data files for each route
+
+Build output (build/client/):
+├── index.html, ko/index.html
+├── web-api.html, ko/web-api.html
+├── libraries.html, ko/libraries.html
+└── *.data files
 ```
 
-**Why SSG?**
-- **Fast** - Pre-rendered HTML, instant page loads
-- **Cheap** - Host anywhere (Cloudflare Pages, GitHub Pages, etc.)
-- **Simple** - No server to maintain, no database
-- **Reliable** - No runtime errors, no downtime
+### Data Architecture (다른 앱과의 차이)
+
+⚠️ **Note:** Unlike Context and Roots, Permissive embeds data directly in route files:
+
+```
+Context/Roots:    data/*.json → loader() → component
+Permissive:       routes/web-api.tsx (data embedded, 31KB)
+                  routes/libraries.tsx (data embedded, 47KB)
+```
+
+This is a known architectural inconsistency. See [CODE_DUPLICATION_REPORT.md](../../CODE_DUPLICATION_REPORT.md).
 
 ---
 
-## Site Structure (사이트 구조)
+## Routes (라우트 구조)
+
+| Route | EN | KO | Description |
+|:------|:--:|:--:|:------------|
+| `/` | ✓ | ✓ | Home |
+| `/web-api` | ✓ | ✓ | Web Standard APIs (58 items) |
+| `/libraries` | ✓ | ✓ | MIT Libraries (100+ items) |
+
+**Total:** 7 SSG routes (including `/ko` variants)
+
+---
+
+## Data Structure (데이터 구조)
 
 ```
-/              Home (홈)
-/web-api       Web Standard APIs (웹표준 API)
-/libraries     MIT Licensed Libraries (MIT 라이브러리)
+app/
+├── routes/
+│   ├── web-api.tsx    # 58 Web APIs (data embedded)
+│   └── libraries.tsx  # 100+ libraries (data embedded)
+└── lib/               # Empty (no separate lib folder)
 ```
 
-That's it. 3 pages.
+### Embedded Data Schema
+
+```typescript
+// routes/web-api.tsx
+const webApis: Record<string, WebApi> = {
+  'fetch': {
+    name: 'Fetch API',
+    description: 'Modern HTTP requests',
+    descriptionKo: '최신 HTTP 요청',
+    category: 'Network',
+    mdn: 'https://developer.mozilla.org/...',
+  },
+  // ... 58 APIs
+};
+```
+
+---
+
+## Comparison with Other Apps
+
+| Feature | Context | Roots | Permissive |
+|:--------|:-------:|:-----:|:----------:|
+| SSG Routes | 348 | 70 | 7 |
+| Search | ✓ useMemo | ✓ Fuse.js | ❌ |
+| Favorites | ✓ | ✓ | ❌ |
+| Back to Top | ✓ | ✓ | ❌ |
+| Separate data folder | ✓ | ✓ | ❌ |
+| lib/ folder | ✓ | ✓ | ❌ |
+
+---
+
+## Known Issues
+
+1. **No search/filter** - Data is rendered as static list
+2. **Data embedded in routes** - Not following monorepo patterns
+3. **No lib/ folder** - Unlike other apps
+4. **No Back to Top button** - See [BUTTON_TESTING_REPORT.md](../../BUTTON_TESTING_REPORT.md)
 
 ---
 

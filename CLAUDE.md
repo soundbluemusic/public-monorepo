@@ -7,8 +7,10 @@
 > **이 규칙들은 절대 위반하지 말 것. CMS, 외부 DB, 서버 로직 제안 금지.**
 
 1. **100% SSG Only** - 모든 앱은 정적 사이트 생성만 사용. SSR/서버 로직 절대 금지.
-   - `ssr: false` + `prerender()` in `react-router.config.ts` = 빌드 시 정적 HTML 생성
-   - 빌드 출력: `build/client`, 런타임 서버 없음, CDN에서 직접 서빙
+   - `ssr: false` + `prerender()` + `loader()` in `react-router.config.ts` = 빌드 시 정적 HTML + 데이터 생성
+   - React Router v7 권장 패턴: `loader()` 함수로 빌드타임 데이터 프리렌더링 → `.data` 파일 생성
+   - 빌드 출력: `build/client` (HTML + JS + .data 파일), 런타임 서버 없음, CDN에서 직접 서빙
+   - 각 앱 SSG 라우트: Context 348개, Roots 70개, Permissive 7개
 2. **오픈소스 Only** - 모든 라이브러리/도구는 오픈소스만 사용.
 3. **웹 표준 API Only** - 브라우저 표준 API만 사용. 벤더 종속 API 금지.
 4. **로컬 스토리지 Only** - DB는 localStorage, IndexedDB만 사용. 외부 DB/CMS 절대 금지.
@@ -76,3 +78,22 @@ Ask before: removing code, changing core logic, breaking changes.
   - Job 2: Playwright (visual, a11y, mobile, responsive)
   - Job 3: Lighthouse CI
   - Job 4: broken-link-checker, size-limit
+
+### CI 구현 현황 (2025-12-24 기준)
+
+| # | 지표 | CI 구현 | 비고 |
+|---|------|:-------:|------|
+| 1 | Test Coverage | ✅ | `pnpm test:coverage` |
+| 2 | Visual Coverage | ⚠️ | Playwright 있음, pixelmatch 미확인 |
+| 3 | Code Health | ✅ | `pnpm check:size`, `pnpm typecheck` |
+| 4 | Monorepo Integrity | ✅ | `pnpm check:circular`, `pnpm check:versions` |
+| 5 | Lighthouse Score | ✅ | `pnpm lhci autorun` |
+| 6 | SEO Health | ❌ | verify-ssg.ts 정의됨, CI 미포함 |
+| 7 | Static Integrity | ✅ | `pnpm check:links` |
+| 8 | PWA Readiness | ❌ | CI 미포함 |
+| 9 | Mobile Optimality | ❌ | CI 미포함 |
+| 10 | Responsive | ❌ | CI 미포함 |
+| 11 | Accessibility | ❌ | CI 미포함 |
+| 12 | Client Security | ❌ | CI 미포함 |
+
+> **TODO**: 6, 8-12번 지표 CI 추가 필요

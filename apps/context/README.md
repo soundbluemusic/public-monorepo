@@ -1,73 +1,141 @@
 # Context
 
 > **Korean Dictionary for Learners (학습자를 위한 한국어 사전)**
->
-> Learn Korean words with translations, examples, and pronunciation guides.
-> (번역, 예문, 발음 가이드와 함께 한국어를 학습하세요.)
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 [![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?logo=react-router)](https://reactrouter.com)
 [![100% SSG](https://img.shields.io/badge/100%25-SSG-brightgreen)](https://en.wikipedia.org/wiki/Static_site_generator)
+[![SSG Routes](https://img.shields.io/badge/SSG_Routes-348-blue)](react-router.config.ts)
 
 **[Live Site](https://context.soundbluemusic.com)**
 
 ---
 
-## What is this? (이게 뭐예요?)
+## What is this? (이게 뭔가요?)
 
 A Korean dictionary designed for language learners:
 
-- **Bilingual Support** - Korean ↔ English translations (한국어 ↔ 영어 번역)
-- **Romanization** - Pronunciation guides for non-Korean speakers (로마자 표기)
-- **Categories** - Words organized by topic (주제별 분류)
-- **Difficulty Levels** - Beginner → Advanced (초급 → 고급)
-- **Examples** - Real usage examples (실제 예문)
+- **344 Word Entries** - Organized by category and difficulty
+- **Bilingual Support** - Korean ↔ English translations
+- **Romanization** - Pronunciation guides
+- **Categories** - 17 topics (greetings, food, emotions, etc.)
+- **Difficulty Levels** - Beginner → Advanced
 
 ---
 
 ## Architecture (아키텍처)
 
-### 100% Static Site Generation (SSG)
-
-This is a **fully static site**. No server-side rendering, no API calls at runtime.
+### 100% SSG with Build-time Data Prerendering
 
 ```
-Build time:  React Router v7 → Static HTML/CSS/JS
-Runtime:     Pure static files served from CDN
-Storage:     localStorage / IndexedDB (favorites, study records)
+react-router.config.ts
+├── ssr: false
+├── prerender() → 348 static routes generated
+└── loader() functions → .data files for each route
+
+Build output (build/client/):
+├── index.html, ko/index.html
+├── entry/hello.html, ko/entry/hello.html (×344)
+├── category/greetings.html (×17 categories)
+└── *.data files (prerendered loader data)
 ```
 
-**Why SSG?**
-- **Fast** - Pre-rendered HTML, instant page loads
-- **Cheap** - Host anywhere (Cloudflare Pages, GitHub Pages, etc.)
-- **Simple** - No server to maintain, no database
-- **Offline** - PWA support for offline access
+### Data Flow
+
+```
+Build time:
+  data/entries/*.json → prerender() → loader() → .data files
+
+Runtime:
+  Static HTML + .data → useLoaderData() → React component
+  IndexedDB → favorites, study records (client-only)
+```
 
 ---
 
-## Site Structure (사이트 구조)
+## Routes (라우트 구조)
+
+| Route | EN | KO | Dynamic | Description |
+|:------|:--:|:--:|:-------:|:------------|
+| `/` | ✓ | ✓ | - | Home |
+| `/browse` | ✓ | ✓ | - | Browse all entries |
+| `/entry/:entryId` | ✓ | ✓ | 344 | Word entry page |
+| `/category/:categoryId` | ✓ | ✓ | 17 | Category page |
+| `/about` | ✓ | ✓ | - | About |
+| `/my-learning` | ✓ | ✓ | - | Learning progress |
+| `/built-with` | ✓ | ✓ | - | Tech stack |
+| `/privacy` | ✓ | ✓ | - | Privacy policy |
+| `/terms` | ✓ | ✓ | - | Terms of service |
+| `/license` | ✓ | ✓ | - | License |
+
+**Total:** 348 SSG routes (174 EN + 174 KO)
+
+---
+
+## Data Structure (데이터 구조)
 
 ```
-/                     Home (홈)
-/browse               Browse all entries (전체 검색)
-/category/[id]        Category page (카테고리 페이지)
-/entry/[id]           Word entry page (단어 페이지)
-/about                About page (소개)
-/sitemap              Sitemap (사이트맵)
+app/data/
+├── entries/           # JSON files by category
+│   ├── greetings.json
+│   ├── food.json
+│   ├── emotions.json
+│   └── ... (17 categories)
+├── categories.ts      # Category definitions
+├── types.ts           # TypeScript types
+└── entries.legacy.ts  # Legacy data (migration pending)
 ```
 
-Supports both Korean (`/ko/...`) and English (`/en/...`) URL prefixes.
+### Entry Schema
+
+```typescript
+interface MeaningEntry {
+  id: string;              // 'hello'
+  korean: string;          // '안녕하세요'
+  romanization: string;    // 'an-nyeong-ha-se-yo'
+  partOfSpeech: string;    // 'noun' | 'verb' | ...
+  categoryId: string;      // 'greetings'
+  difficulty: string;      // 'beginner' | 'intermediate' | 'advanced'
+  tags: string[];
+  translations: {
+    ko: { word: string; explanation: string };
+    en: { word: string; explanation: string };
+  };
+}
+```
 
 ---
 
 ## Features (기능)
 
-- **🔍 Search** - Full-text search across all entries
-- **📱 PWA** - Install as mobile app, works offline
-- **🌙 Dark Mode** - System preference detection
-- **🌐 i18n** - Korean / English interface
-- **💾 Favorites** - Save words to IndexedDB
-- **📊 Study Records** - Track learning progress locally
+| Feature | Implementation |
+|:--------|:---------------|
+| 🔍 Search | In-memory filter with `useMemo` |
+| 📱 PWA | vite-plugin-pwa |
+| 🌙 Dark Mode | localStorage + CSS variables |
+| 🌐 i18n | URL-based (`/ko/*`) + Paraglide |
+| 💾 Favorites | IndexedDB (Dexie) |
+| 📊 Study Records | IndexedDB (Dexie) |
+
+---
+
+## Search Algorithm
+
+```typescript
+// Layout.tsx - Real-time search (no debounce)
+const searchResults = useMemo(() => {
+  const q = searchQuery.toLowerCase().trim().slice(0, 100);
+  if (!q) return [];
+
+  return meaningEntries
+    .filter(entry =>
+      entry.korean.includes(q) ||
+      entry.romanization.toLowerCase().includes(q) ||
+      entry.translations[locale].word.toLowerCase().includes(q)
+    )
+    .slice(0, 8);
+}, [searchQuery, locale]);
+```
 
 ---
 
