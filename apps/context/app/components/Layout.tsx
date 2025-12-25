@@ -18,10 +18,10 @@ import {
   LayoutGrid,
   List,
   Menu,
-  X,
 } from 'lucide-react';
 import { type ReactNode, useCallback, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
+import { Sheet } from './Sheet';
 
 // Use shared utility for locale stripping
 const stripLocale = stripLocaleFromPath;
@@ -171,48 +171,8 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
         </div>
       </header>
 
-      {/* Sidebar Overlay */}
-      {sidebarOpen && (
-        <div
-          className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm"
-          onClick={() => setSidebarOpen(false)}
-          onKeyDown={(e) => e.key === 'Escape' && setSidebarOpen(false)}
-          role="button"
-          tabIndex={0}
-          aria-label="Close sidebar"
-        />
-      )}
-
-      {/* Sidebar */}
-      <aside
-        className="fixed top-0 left-0 z-50 h-full w-72 transform transition-transform duration-300 ease-in-out flex flex-col"
-        style={{
-          backgroundColor: 'var(--bg-primary)',
-          borderRight: '1px solid var(--border-primary)',
-          transform: sidebarOpen ? 'translateX(0)' : 'translateX(-100%)',
-          pointerEvents: sidebarOpen ? 'auto' : 'none',
-        }}
-      >
-        {/* Sidebar Header */}
-        <div
-          className="h-14 flex items-center justify-between px-4 shrink-0"
-          style={{ borderBottom: '1px solid var(--border-primary)' }}
-        >
-          <span className="font-semibold" style={{ color: 'var(--text-primary)' }}>
-            {t('menu')}
-          </span>
-          <button
-            type="button"
-            onClick={() => setSidebarOpen(false)}
-            className="min-h-11 min-w-11 flex items-center justify-center rounded-lg transition-colors hover:bg-[var(--bg-tertiary)]"
-            style={{ color: 'var(--text-secondary)' }}
-            aria-label="Close menu"
-          >
-            <X size={20} aria-hidden="true" />
-          </button>
-        </div>
-
-        {/* Sidebar Content */}
+      {/* Sidebar (Radix Dialog Sheet) */}
+      <Sheet open={sidebarOpen} onOpenChange={setSidebarOpen} title={t('menu')}>
         <nav className="flex-1 overflow-y-auto py-4">
           <div className="px-3 mb-6">
             <Link
@@ -330,7 +290,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
             {t('sitemap')}
           </Link>
         </div>
-      </aside>
+      </Sheet>
 
       {/* Main */}
       <main

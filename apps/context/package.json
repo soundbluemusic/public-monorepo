@@ -18,6 +18,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.15",
     "@soundblue/shared": "workspace:*",
     "@soundblue/shared-react": "workspace:*",
     "dexie": "^4.0.10",
