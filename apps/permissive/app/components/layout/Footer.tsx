@@ -1,7 +1,8 @@
+import { Link } from 'react-router';
 import { useI18n } from '../../i18n';
 
 export default function Footer() {
-  const { t } = useI18n();
+  const { t, locale, localePath } = useI18n();
 
   return (
     <footer
@@ -11,6 +12,17 @@ export default function Footer() {
       }}
     >
       <div className="max-w-4xl mx-auto px-4 py-6">
+        {/* Footer Links */}
+        <nav className="flex justify-center gap-6 mb-4 text-sm">
+          <Link
+            to={localePath('/sitemap')}
+            className="hover:underline transition-colors"
+            style={{ color: 'var(--text-secondary)' }}
+          >
+            {locale === 'ko' ? '사이트맵' : 'Sitemap'}
+          </Link>
+        </nav>
+
         <div
           className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm"
           style={{ color: 'var(--text-tertiary)' }}

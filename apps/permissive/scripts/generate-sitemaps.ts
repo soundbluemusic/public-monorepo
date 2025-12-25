@@ -19,6 +19,7 @@ const STATIC_PAGES = [
   { path: '/', priority: '1.0', changefreq: 'weekly' },
   { path: '/libraries', priority: '0.9', changefreq: 'weekly' },
   { path: '/web-api', priority: '0.9', changefreq: 'weekly' },
+  { path: '/sitemap', priority: '0.5', changefreq: 'monthly' },
 ];
 
 // Libraries (name -> slug)

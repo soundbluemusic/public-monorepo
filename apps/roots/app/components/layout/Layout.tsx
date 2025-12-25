@@ -254,6 +254,9 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
             <Link to={localePath('/about')} className="hover:underline">
               {t('about')}
             </Link>
+            <Link to={localePath('/sitemap')} className="hover:underline">
+              {locale === 'ko' ? '사이트맵' : 'Sitemap'}
+            </Link>
           </nav>
           <div
             className="flex items-center justify-center gap-4 text-sm"

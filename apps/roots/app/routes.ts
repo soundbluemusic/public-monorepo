@@ -8,6 +8,7 @@ export default [
   route('favorites', 'routes/favorites.tsx'),
   route('constants', 'routes/constants.tsx'),
   route('about', 'routes/about.tsx'),
+  route('sitemap', 'routes/sitemap.tsx'),
   route('field/:fieldId', 'routes/field.$fieldId.tsx'),
   route('concept/:conceptId', 'routes/concept.$conceptId.tsx'),
 
@@ -18,6 +19,7 @@ export default [
   route('ko/favorites', 'routes/ko.favorites.tsx'),
   route('ko/constants', 'routes/ko.constants.tsx'),
   route('ko/about', 'routes/ko.about.tsx'),
+  route('ko/sitemap', 'routes/ko.sitemap.tsx'),
   route('ko/field/:fieldId', 'routes/ko.field.$fieldId.tsx'),
   route('ko/concept/:conceptId', 'routes/ko.concept.$conceptId.tsx'),
 

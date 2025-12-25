@@ -27,6 +27,8 @@ export default {
       '/ko/constants',
       '/about',
       '/ko/about',
+      '/sitemap',
+      '/ko/sitemap',
     ];
 
     // Dynamic concept routes (e.g., /concept/natural-numbers, /ko/concept/matrices)

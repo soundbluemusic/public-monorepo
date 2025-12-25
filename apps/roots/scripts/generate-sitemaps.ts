@@ -25,6 +25,7 @@ const STATIC_PAGES = [
   { path: '/favorites', priority: '0.8', changefreq: 'daily' },
   { path: '/constants', priority: '0.8', changefreq: 'monthly' },
   { path: '/about', priority: '0.5', changefreq: 'monthly' },
+  { path: '/sitemap', priority: '0.5', changefreq: 'monthly' },
 ];
 
 // Get URL with language prefix (en = no prefix)

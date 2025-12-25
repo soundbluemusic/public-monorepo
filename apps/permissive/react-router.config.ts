@@ -6,6 +6,15 @@ export default {
 
   // 사전 렌더링할 라우트 목록
   async prerender() {
-    return ['/', '/ko', '/web-api', '/ko/web-api', '/libraries', '/ko/libraries'];
+    return [
+      '/',
+      '/ko',
+      '/web-api',
+      '/ko/web-api',
+      '/libraries',
+      '/ko/libraries',
+      '/sitemap',
+      '/ko/sitemap',
+    ];
   },
 } satisfies Config;
