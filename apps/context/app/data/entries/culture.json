@@ -12,12 +12,12 @@
       "ko": {
         "word": "드라마",
         "explanation": "TV나 인터넷에서 방송되는 연속극. 한국 드라마는 세계적으로 인기가 많다.",
-        "examples": [
-          "드라마 봤어요?",
-          "요즘 무슨 드라마 봐요?",
-          "\"어제 방송한 드라마 봤어?\" \"응, 너무 재미있더라!\"",
-          "한국 드라마가 인기 많아요."
-        ],
+        "examples": {
+          "beginner": "드라마 봤어요?",
+          "intermediate": "요즘 무슨 드라마 봐요?",
+          "advanced": "\"어제 방송한 드라마 봤어?\" \"응, 너무 재미있더라!\"",
+          "master": "한국 드라마가 인기 많아요."
+        },
         "variations": {
           "formal": ["드라마입니다", "연속극", "TV 드라마"],
           "casual": ["드라마~", "드라 봤어?"],
@@ -27,12 +27,12 @@
       "en": {
         "word": "Drama / TV Series",
         "explanation": "A series broadcast on TV or the internet. Korean dramas are popular worldwide.",
-        "examples": [
-          "드라마 봤어요? - Did you watch the drama?",
-          "요즘 무슨 드라마 봐요? - What drama are you watching these days?",
-          "\"Did you watch the drama that aired yesterday?\" \"Yeah, it was so interesting!\"",
-          "Korean dramas are very popular."
-        ],
+        "examples": {
+          "beginner": "드라마 봤어요? - Did you watch the drama?",
+          "intermediate": "요즘 무슨 드라마 봐요? - What drama are you watching these days?",
+          "advanced": "\"Did you watch the drama that aired yesterday?\" \"Yeah, it was so interesting!\"",
+          "master": "Korean dramas are very popular."
+        },
         "variations": {
           "formal": ["It is a drama", "TV series", "Television drama"],
           "casual": ["Drama~", "Watched the drama?"],
@@ -55,12 +55,12 @@
       "ko": {
         "word": "영화",
         "explanation": "극장에서 상영하는 영상 작품. 극장이나 집에서 볼 수 있다.",
-        "examples": [
-          "영화 볼래요?",
-          "무슨 영화 좋아해요?",
-          "\"이번 주말에 영화 보러 갈래?\" \"좋아, 무슨 영화 볼까?\"",
-          "한국 영화가 재미있어요."
-        ],
+        "examples": {
+          "beginner": "영화 볼래요?",
+          "intermediate": "무슨 영화 좋아해요?",
+          "advanced": "\"이번 주말에 영화 보러 갈래?\" \"좋아, 무슨 영화 볼까?\"",
+          "master": "한국 영화가 재미있어요."
+        },
         "variations": {
           "formal": ["영화입니다", "극장판", "영상물"],
           "casual": ["영화~", "영화 볼까?"],
@@ -70,12 +70,12 @@
       "en": {
         "word": "Movie / Film",
         "explanation": "A visual work shown in theaters. Can be watched at the cinema or at home.",
-        "examples": [
-          "영화 볼래요? - Do you want to watch a movie?",
-          "무슨 영화 좋아해요? - What kind of movies do you like?",
-          "\"Want to go see a movie this weekend?\" \"Sure, which movie should we watch?\"",
-          "Korean movies are interesting."
-        ],
+        "examples": {
+          "beginner": "영화 볼래요? - Do you want to watch a movie?",
+          "intermediate": "무슨 영화 좋아해요? - What kind of movies do you like?",
+          "advanced": "\"Want to go see a movie this weekend?\" \"Sure, which movie should we watch?\"",
+          "master": "Korean movies are interesting."
+        },
         "variations": {
           "formal": ["It is a movie", "Theatrical film", "Motion picture"],
           "casual": ["Movie~", "Wanna watch a movie?"],
@@ -98,12 +98,12 @@
       "ko": {
         "word": "책",
         "explanation": "종이나 전자 형태로 된 읽을거리. 지식이나 이야기를 담고 있다.",
-        "examples": [
-          "책 읽어요.",
-          "무슨 책 읽어요?",
-          "\"요즘 무슨 책 읽어?\" \"소설 한 권 읽고 있어.\"",
-          "도서관에서 책 빌렸어요."
-        ],
+        "examples": {
+          "beginner": "책 읽어요.",
+          "intermediate": "무슨 책 읽어요?",
+          "advanced": "\"요즘 무슨 책 읽어?\" \"소설 한 권 읽고 있어.\"",
+          "master": "도서관에서 책 빌렸어요."
+        },
         "variations": {
           "formal": ["책입니다", "서적", "도서"],
           "casual": ["책~", "책 읽어?"],
@@ -113,12 +113,12 @@
       "en": {
         "word": "Book",
         "explanation": "Reading material in paper or electronic form. Contains knowledge or stories.",
-        "examples": [
-          "책 읽어요. - I read books.",
-          "무슨 책 읽어요? - What book are you reading?",
-          "\"What book are you reading these days?\" \"I'm reading a novel.\"",
-          "I borrowed a book from the library."
-        ],
+        "examples": {
+          "beginner": "책 읽어요. - I read books.",
+          "intermediate": "무슨 책 읽어요? - What book are you reading?",
+          "advanced": "\"What book are you reading these days?\" \"I'm reading a novel.\"",
+          "master": "I borrowed a book from the library."
+        },
         "variations": {
           "formal": ["It is a book", "Publication", "Literature"],
           "casual": ["Book~", "Reading a book?"],
@@ -141,12 +141,12 @@
       "ko": {
         "word": "음악",
         "explanation": "소리로 만든 예술. 노래, 악기 연주 등을 포함한다.",
-        "examples": [
-          "음악 들어요.",
-          "무슨 음악 좋아해요?",
-          "\"K-pop 좋아해?\" \"응, 한국 음악 자주 들어.\"",
-          "음악을 들으면 기분이 좋아져요."
-        ],
+        "examples": {
+          "beginner": "음악 들어요.",
+          "intermediate": "무슨 음악 좋아해요?",
+          "advanced": "\"K-pop 좋아해?\" \"응, 한국 음악 자주 들어.\"",
+          "master": "음악을 들으면 기분이 좋아져요."
+        },
         "variations": {
           "formal": ["음악입니다", "음악 작품", "악곡"],
           "casual": ["음악~", "음악 들어?"],
@@ -156,12 +156,12 @@
       "en": {
         "word": "Music",
         "explanation": "Art created with sound. Includes songs, instrumental performances, etc.",
-        "examples": [
-          "음악 들어요. - I listen to music.",
-          "무슨 음악 좋아해요? - What kind of music do you like?",
-          "\"Do you like K-pop?\" \"Yeah, I often listen to Korean music.\"",
-          "Listening to music makes me feel good."
-        ],
+        "examples": {
+          "beginner": "음악 들어요. - I listen to music.",
+          "intermediate": "무슨 음악 좋아해요? - What kind of music do you like?",
+          "advanced": "\"Do you like K-pop?\" \"Yeah, I often listen to Korean music.\"",
+          "master": "Listening to music makes me feel good."
+        },
         "variations": {
           "formal": ["It is music", "Musical work", "Composition"],
           "casual": ["Music~", "Listening to music?"],
@@ -184,12 +184,12 @@
       "ko": {
         "word": "공연",
         "explanation": "관객 앞에서 펼치는 무대 예술. 연극, 콘서트, 뮤지컬 등을 말한다.",
-        "examples": [
-          "공연 봤어요.",
-          "콘서트 공연이에요.",
-          "\"이번 주말에 뮤지컬 공연 볼 거야.\" \"어떤 작품인데?\"",
-          "공연 티켓을 예매했어요."
-        ],
+        "examples": {
+          "beginner": "공연 봤어요.",
+          "intermediate": "콘서트 공연이에요.",
+          "advanced": "\"이번 주말에 뮤지컬 공연 볼 거야.\" \"어떤 작품인데?\"",
+          "master": "공연 티켓을 예매했어요."
+        },
         "variations": {
           "formal": ["공연입니다", "무대 공연", "연주회"],
           "casual": ["공연~", "공연 봤어?"],
@@ -199,12 +199,12 @@
       "en": {
         "word": "Performance / Show",
         "explanation": "Stage art performed in front of an audience. Includes plays, concerts, musicals, etc.",
-        "examples": [
-          "공연 봤어요. - I watched a performance.",
-          "콘서트 공연이에요. - It's a concert performance.",
-          "\"I'm going to watch a musical performance this weekend.\" \"Which show?\"",
-          "I reserved performance tickets."
-        ],
+        "examples": {
+          "beginner": "공연 봤어요. - I watched a performance.",
+          "intermediate": "콘서트 공연이에요. - It's a concert performance.",
+          "advanced": "\"I'm going to watch a musical performance this weekend.\" \"Which show?\"",
+          "master": "I reserved performance tickets."
+        },
         "variations": {
           "formal": ["It is a performance", "Stage performance", "Concert"],
           "casual": ["Performance~", "Watched the show?"],
@@ -227,12 +227,12 @@
       "ko": {
         "word": "전통",
         "explanation": "옛날부터 이어져 내려오는 문화나 관습. 한 세대에서 다음 세대로 전해진다.",
-        "examples": [
-          "전통 문화예요.",
-          "전통이 중요해요.",
-          "\"한국의 전통 음식은 뭐가 있어?\" \"김치, 된장찌개, 비빔밥 같은 게 있지.\"",
-          "전통을 지키는 게 중요해요."
-        ],
+        "examples": {
+          "beginner": "전통 문화예요.",
+          "intermediate": "전통이 중요해요.",
+          "advanced": "\"한국의 전통 음식은 뭐가 있어?\" \"김치, 된장찌개, 비빔밥 같은 게 있지.\"",
+          "master": "전통을 지키는 게 중요해요."
+        },
         "variations": {
           "formal": ["전통입니다", "전통 문화", "문화유산"],
           "casual": ["전통~", "전통적인"],
@@ -242,12 +242,12 @@
       "en": {
         "word": "Tradition",
         "explanation": "Culture or customs passed down from the past. Handed down from one generation to the next.",
-        "examples": [
-          "전통 문화예요. - It's traditional culture.",
-          "전통이 중요해요. - Tradition is important.",
-          "\"What Korean traditional foods are there?\" \"There's kimchi, soybean paste stew, bibimbap, etc.\"",
-          "It's important to preserve tradition."
-        ],
+        "examples": {
+          "beginner": "전통 문화예요. - It's traditional culture.",
+          "intermediate": "전통이 중요해요. - Tradition is important.",
+          "advanced": "\"What Korean traditional foods are there?\" \"There's kimchi, soybean paste stew, bibimbap, etc.\"",
+          "master": "It's important to preserve tradition."
+        },
         "variations": {
           "formal": ["It is tradition", "Traditional culture", "Cultural heritage"],
           "casual": ["Tradition~", "Traditional"],
@@ -270,12 +270,12 @@
       "ko": {
         "word": "명절",
         "explanation": "특별히 기념하는 날. 한국의 대표적인 명절은 설날과 추석이다.",
-        "examples": [
-          "명절에 고향 가요.",
-          "명절이 다가와요.",
-          "\"명절에 뭐 해?\" \"가족들 만나서 같이 밥 먹어.\"",
-          "명절에는 교통이 복잡해요."
-        ],
+        "examples": {
+          "beginner": "명절에 고향 가요.",
+          "intermediate": "명절이 다가와요.",
+          "advanced": "\"명절에 뭐 해?\" \"가족들 만나서 같이 밥 먹어.\"",
+          "master": "명절에는 교통이 복잡해요."
+        },
         "variations": {
           "formal": ["명절입니다", "민속 명절", "전통 명절"],
           "casual": ["명절~", "명절에"],
@@ -285,12 +285,12 @@
       "en": {
         "word": "Holiday / Festival",
         "explanation": "A day specially celebrated. Korea's major holidays are Lunar New Year and Chuseok (Korean Thanksgiving).",
-        "examples": [
-          "명절에 고향 가요. - I go to my hometown during holidays.",
-          "명절이 다가와요. - The holiday is approaching.",
-          "\"What do you do on holidays?\" \"I meet my family and eat together.\"",
-          "Traffic is heavy during holidays."
-        ],
+        "examples": {
+          "beginner": "명절에 고향 가요. - I go to my hometown during holidays.",
+          "intermediate": "명절이 다가와요. - The holiday is approaching.",
+          "advanced": "\"What do you do on holidays?\" \"I meet my family and eat together.\"",
+          "master": "Traffic is heavy during holidays."
+        },
         "variations": {
           "formal": ["It is a holiday", "Folk holiday", "Traditional holiday"],
           "casual": ["Holiday~", "During holidays"],
@@ -313,12 +313,12 @@
       "ko": {
         "word": "한복",
         "explanation": "한국의 전통 의상. 명절이나 특별한 날에 입는다.",
-        "examples": [
-          "한복이 예뻐요.",
-          "한복 입었어요.",
-          "\"결혼식 때 한복 입을 거야?\" \"응, 전통 한복으로 입을 거야.\"",
-          "한복을 입고 경복궁에 갔어요."
-        ],
+        "examples": {
+          "beginner": "한복이 예뻐요.",
+          "intermediate": "한복 입었어요.",
+          "advanced": "\"결혼식 때 한복 입을 거야?\" \"응, 전통 한복으로 입을 거야.\"",
+          "master": "한복을 입고 경복궁에 갔어요."
+        },
         "variations": {
           "formal": ["한복입니다", "전통 한복", "한국 전통 의상"],
           "casual": ["한복~", "한복 입어?"],
@@ -328,12 +328,12 @@
       "en": {
         "word": "Hanbok",
         "explanation": "Korean traditional clothing. Worn on holidays or special occasions.",
-        "examples": [
-          "한복이 예뻐요. - Hanbok is beautiful.",
-          "한복 입었어요. - I wore hanbok.",
-          "\"Will you wear hanbok at the wedding?\" \"Yes, I'll wear traditional hanbok.\"",
-          "I went to Gyeongbokgung Palace wearing hanbok."
-        ],
+        "examples": {
+          "beginner": "한복이 예뻐요. - Hanbok is beautiful.",
+          "intermediate": "한복 입었어요. - I wore hanbok.",
+          "advanced": "\"Will you wear hanbok at the wedding?\" \"Yes, I'll wear traditional hanbok.\"",
+          "master": "I went to Gyeongbokgung Palace wearing hanbok."
+        },
         "variations": {
           "formal": ["It is hanbok", "Traditional hanbok", "Korean traditional dress"],
           "casual": ["Hanbok~", "Wear hanbok?"],
@@ -355,12 +355,12 @@
       "ko": {
         "word": "김치",
         "explanation": "한국의 대표 음식이자 문화. 배추나 무를 발효시켜 만든 전통 반찬. 유네스코 무형문화유산이다.",
-        "examples": [
-          "김치 좋아해요?",
-          "김치가 맛있어요.",
-          "\"김치 담그는 법 알아?\" \"응, 할머니한테 배웠어.\"",
-          "김치는 한국의 대표 음식이에요."
-        ],
+        "examples": {
+          "beginner": "김치 좋아해요?",
+          "intermediate": "김치가 맛있어요.",
+          "advanced": "\"김치 담그는 법 알아?\" \"응, 할머니한테 배웠어.\"",
+          "master": "김치는 한국의 대표 음식이에요."
+        },
         "variations": {
           "formal": ["김치입니다", "김치 문화", "전통 김치"],
           "casual": ["김치~", "김치 먹어?"],
@@ -370,12 +370,12 @@
       "en": {
         "word": "Kimchi",
         "explanation": "Korea's representative food and culture. A traditional side dish made by fermenting cabbage or radish. UNESCO Intangible Cultural Heritage.",
-        "examples": [
-          "김치 좋아해요? - Do you like kimchi?",
-          "김치가 맛있어요. - Kimchi is delicious.",
-          "\"Do you know how to make kimchi?\" \"Yes, I learned from my grandmother.\"",
-          "Kimchi is Korea's representative food."
-        ],
+        "examples": {
+          "beginner": "김치 좋아해요? - Do you like kimchi?",
+          "intermediate": "김치가 맛있어요. - Kimchi is delicious.",
+          "advanced": "\"Do you know how to make kimchi?\" \"Yes, I learned from my grandmother.\"",
+          "master": "Kimchi is Korea's representative food."
+        },
         "variations": {
           "formal": ["It is kimchi", "Kimchi culture", "Traditional kimchi"],
           "casual": ["Kimchi~", "Eat kimchi?"],
@@ -398,12 +398,12 @@
       "ko": {
         "word": "한글",
         "explanation": "한국어를 쓰는 문자 체계. 세종대왕이 창제했다. 과학적이고 배우기 쉬운 문자로 알려져 있다.",
-        "examples": [
-          "한글을 배워요.",
-          "한글이 쉬워요.",
-          "\"한글은 언제 만들어졌어?\" \"1443년에 세종대왕이 만들었어.\"",
-          "한글날은 10월 9일이에요."
-        ],
+        "examples": {
+          "beginner": "한글을 배워요.",
+          "intermediate": "한글이 쉬워요.",
+          "advanced": "\"한글은 언제 만들어졌어?\" \"1443년에 세종대왕이 만들었어.\"",
+          "master": "한글날은 10월 9일이에요."
+        },
         "variations": {
           "formal": ["한글입니다", "한국 문자", "훈민정음"],
           "casual": ["한글~", "한글로"],
@@ -413,12 +413,12 @@
       "en": {
         "word": "Hangul",
         "explanation": "The writing system for Korean language. Created by King Sejong. Known as a scientific and easy-to-learn script.",
-        "examples": [
-          "한글을 배워요. - I'm learning Hangul.",
-          "한글이 쉬워요. - Hangul is easy.",
-          "\"When was Hangul created?\" \"King Sejong created it in 1443.\"",
-          "Hangul Day is October 9th."
-        ],
+        "examples": {
+          "beginner": "한글을 배워요. - I'm learning Hangul.",
+          "intermediate": "한글이 쉬워요. - Hangul is easy.",
+          "advanced": "\"When was Hangul created?\" \"King Sejong created it in 1443.\"",
+          "master": "Hangul Day is October 9th."
+        },
         "variations": {
           "formal": ["It is Hangul", "Korean alphabet", "Hunminjeongeum"],
           "casual": ["Hangul~", "In Hangul"],

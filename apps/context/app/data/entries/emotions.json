@@ -12,12 +12,12 @@
       "ko": {
         "word": "사랑",
         "explanation": "누군가나 무언가에 대한 깊은 애정. 연인 간의 사랑, 가족 간의 사랑, 취미나 활동에 대한 사랑 등 다양하게 쓰인다.",
-        "examples": [
-          "사랑해요.",
-          "가족의 사랑은 소중해요.",
-          "결혼식 날 신랑이 신부에게 \"당신을 만나 진정한 사랑이 무엇인지 알게 되었습니다\"라고 고백했다.",
-          "어머니의 사랑은 조건 없이 주어지는 것이라서, 자식이 어떤 실수를 해도 항상 곁에서 응원해 주신다."
-        ],
+        "examples": {
+          "beginner": "사랑해요.",
+          "intermediate": "가족의 사랑은 소중해요.",
+          "advanced": "결혼식 날 신랑이 신부에게 \"당신을 만나 진정한 사랑이 무엇인지 알게 되었습니다\"라고 고백했다.",
+          "master": "어머니의 사랑은 조건 없이 주어지는 것이라서, 자식이 어떤 실수를 해도 항상 곁에서 응원해 주신다."
+        },
         "variations": {
           "formal": [
             "당신을 진심으로 사랑합니다.",
@@ -31,12 +31,12 @@
       "en": {
         "word": "Love",
         "explanation": "A deep affection for someone or something. Used for romantic love, family love, and love for things/activities.",
-        "examples": [
-          "사랑해요. - I love you.",
-          "가족의 사랑은 소중해요. - Family love is precious.",
-          "On their wedding day, the groom confessed to the bride, \"Meeting you taught me what true love really means.\"",
-          "A mother's love is unconditional—no matter what mistakes her children make, she always supports them."
-        ],
+        "examples": {
+          "beginner": "사랑해요. - I love you.",
+          "intermediate": "가족의 사랑은 소중해요. - Family love is precious.",
+          "advanced": "On their wedding day, the groom confessed to the bride, \"Meeting you taught me what true love really means.\"",
+          "master": "A mother's love is unconditional—no matter what mistakes her children make, she always supports them."
+        },
         "variations": {
           "formal": [
             "I sincerely love you.",
@@ -63,12 +63,12 @@
       "ko": {
         "word": "행복",
         "explanation": "행복하거나 만족스러운 상태. 명사 '행복' 또는 형용사 '행복하다'로 사용할 수 있다.",
-        "examples": [
-          "행복하세요!",
-          "작은 것에서 행복을 찾아요.",
-          "퇴근 후 따뜻한 집에서 가족들과 함께 저녁을 먹는 순간이 가장 행복하다고 느낀다.",
-          "여행을 떠나기 전날 밤, 설레는 마음에 잠이 오지 않을 정도로 행복했다."
-        ],
+        "examples": {
+          "beginner": "행복하세요!",
+          "intermediate": "작은 것에서 행복을 찾아요.",
+          "advanced": "퇴근 후 따뜻한 집에서 가족들과 함께 저녁을 먹는 순간이 가장 행복하다고 느낀다.",
+          "master": "여행을 떠나기 전날 밤, 설레는 마음에 잠이 오지 않을 정도로 행복했다."
+        },
         "variations": {
           "formal": [
             "행복하시길 바랍니다.",
@@ -82,12 +82,12 @@
       "en": {
         "word": "Happiness",
         "explanation": "A state of being happy or content. Can be used as noun '행복' or adjective '행복하다' (to be happy).",
-        "examples": [
-          "행복하세요! - Be happy!",
-          "작은 것에서 행복을 찾아요. - I find happiness in small things.",
-          "The moment I feel happiest is having dinner with my family in our warm home after work.",
-          "The night before the trip, I was so excited I couldn't sleep—I was filled with happiness."
-        ],
+        "examples": {
+          "beginner": "행복하세요! - Be happy!",
+          "intermediate": "작은 것에서 행복을 찾아요. - I find happiness in small things.",
+          "advanced": "The moment I feel happiest is having dinner with my family in our warm home after work.",
+          "master": "The night before the trip, I was so excited I couldn't sleep—I was filled with happiness."
+        },
         "variations": {
           "formal": [
             "I wish you happiness.",
@@ -113,22 +113,22 @@
       "ko": {
         "word": "슬픔",
         "explanation": "슬프거나 불행한 감정. 형용사형은 '슬프다'이다.",
-        "examples": [
-          "슬픔을 참을 수 없어요.",
-          "슬픔도 지나가요.",
-          "오랫동안 함께한 반려견이 세상을 떠났을 때, 그 슬픔은 말로 표현할 수 없을 정도로 컸다.",
-          "실패를 경험했을 때 느끼는 슬픔은 자연스러운 감정이니, 너무 자신을 탓하지 마세요."
-        ]
+        "examples": {
+          "beginner": "슬픔을 참을 수 없어요.",
+          "intermediate": "슬픔도 지나가요.",
+          "advanced": "오랫동안 함께한 반려견이 세상을 떠났을 때, 그 슬픔은 말로 표현할 수 없을 정도로 컸다.",
+          "master": "실패를 경험했을 때 느끼는 슬픔은 자연스러운 감정이니, 너무 자신을 탓하지 마세요."
+        }
       },
       "en": {
         "word": "Sadness",
         "explanation": "A feeling of sorrow or unhappiness. The adjective form is '슬프다' (to be sad).",
-        "examples": [
-          "슬픔을 참을 수 없어요. - I can't hold back my sadness.",
-          "슬픔도 지나가요. - Sadness also passes.",
-          "When my longtime companion dog passed away, the sadness was beyond words.",
-          "The sadness you feel when experiencing failure is a natural emotion, so don't be too hard on yourself."
-        ]
+        "examples": {
+          "beginner": "슬픔을 참을 수 없어요. - I can't hold back my sadness.",
+          "intermediate": "슬픔도 지나가요. - Sadness also passes.",
+          "advanced": "When my longtime companion dog passed away, the sadness was beyond words.",
+          "master": "The sadness you feel when experiencing failure is a natural emotion, so don't be too hard on yourself."
+        }
       }
     }
   },
@@ -145,22 +145,22 @@
       "ko": {
         "word": "기분",
         "explanation": "그때그때 느끼는 마음의 상태. '기분이 좋다/나쁘다'로 자주 사용된다.",
-        "examples": [
-          "기분이 좋아요.",
-          "오늘 기분이 어때요?",
-          "좋은 음악을 들으면 기분이 한결 나아진다.",
-          "아침에 일어났을 때 날씨가 좋으면 하루 종일 기분이 상쾌하다."
-        ]
+        "examples": {
+          "beginner": "기분이 좋아요.",
+          "intermediate": "오늘 기분이 어때요?",
+          "advanced": "좋은 음악을 들으면 기분이 한결 나아진다.",
+          "master": "아침에 일어났을 때 날씨가 좋으면 하루 종일 기분이 상쾌하다."
+        }
       },
       "en": {
         "word": "Mood / Feeling",
         "explanation": "The emotional state one feels at a given moment. Often used as '기분이 좋다/나쁘다' (to feel good/bad).",
-        "examples": [
-          "기분이 좋아요. - I feel good.",
-          "오늘 기분이 어때요? - How are you feeling today?",
-          "Listening to good music makes me feel much better.",
-          "When I wake up to good weather in the morning, I feel refreshed all day long."
-        ]
+        "examples": {
+          "beginner": "기분이 좋아요. - I feel good.",
+          "intermediate": "오늘 기분이 어때요? - How are you feeling today?",
+          "advanced": "Listening to good music makes me feel much better.",
+          "master": "When I wake up to good weather in the morning, I feel refreshed all day long."
+        }
       }
     }
   },
@@ -177,22 +177,22 @@
       "ko": {
         "word": "걱정",
         "explanation": "앞으로 일어날 일에 대해 불안해하는 마음. '걱정하다', '걱정되다'로 동사화된다.",
-        "examples": [
-          "걱정하지 마세요.",
-          "건강이 걱정돼요.",
-          "시험 결과가 나오기 전까지 걱정이 되어서 아무것도 손에 잡히지 않았다.",
-          "부모님은 항상 자녀를 걱정하시지만, 그 걱정이 사랑이라는 걸 나이가 들어서야 알게 되었다."
-        ]
+        "examples": {
+          "beginner": "걱정하지 마세요.",
+          "intermediate": "건강이 걱정돼요.",
+          "advanced": "시험 결과가 나오기 전까지 걱정이 되어서 아무것도 손에 잡히지 않았다.",
+          "master": "부모님은 항상 자녀를 걱정하시지만, 그 걱정이 사랑이라는 걸 나이가 들어서야 알게 되었다."
+        }
       },
       "en": {
         "word": "Worry / Concern",
         "explanation": "Anxiety about future events. Used as verbs '걱정하다' (to worry) and '걱정되다' (to be worried about).",
-        "examples": [
-          "걱정하지 마세요. - Don't worry.",
-          "건강이 걱정돼요. - I'm worried about my health.",
-          "Until the exam results came out, I was so worried that I couldn't focus on anything.",
-          "Parents always worry about their children, but I only realized that worry is a form of love as I got older."
-        ]
+        "examples": {
+          "beginner": "걱정하지 마세요. - Don't worry.",
+          "intermediate": "건강이 걱정돼요. - I'm worried about my health.",
+          "advanced": "Until the exam results came out, I was so worried that I couldn't focus on anything.",
+          "master": "Parents always worry about their children, but I only realized that worry is a form of love as I got older."
+        }
       }
     }
   },
@@ -209,22 +209,22 @@
       "ko": {
         "word": "화나다",
         "explanation": "분노의 감정이 생기다. '화가 나다'의 줄임말로도 쓰인다. 명사형은 '화'이다.",
-        "examples": [
-          "왜 화났어?",
-          "화나면 안 돼요.",
-          "약속 시간에 한 시간이나 늦게 와서 정말 화가 났다.",
-          "화가 날 때는 깊게 숨을 쉬고 10까지 세어보면 진정이 된다고 해요."
-        ]
+        "examples": {
+          "beginner": "왜 화났어?",
+          "intermediate": "화나면 안 돼요.",
+          "advanced": "약속 시간에 한 시간이나 늦게 와서 정말 화가 났다.",
+          "master": "화가 날 때는 깊게 숨을 쉬고 10까지 세어보면 진정이 된다고 해요."
+        }
       },
       "en": {
         "word": "To get angry",
         "explanation": "To become angry or upset. Also used as '화가 나다'. The noun form is '화' (anger).",
-        "examples": [
-          "왜 화났어? - Why are you angry?",
-          "화나면 안 돼요. - You shouldn't get angry.",
-          "I was really angry when they arrived an hour late to our appointment.",
-          "They say that when you're angry, taking deep breaths and counting to 10 helps you calm down."
-        ]
+        "examples": {
+          "beginner": "왜 화났어? - Why are you angry?",
+          "intermediate": "화나면 안 돼요. - You shouldn't get angry.",
+          "advanced": "I was really angry when they arrived an hour late to our appointment.",
+          "master": "They say that when you're angry, taking deep breaths and counting to 10 helps you calm down."
+        }
       }
     }
   },
@@ -241,22 +241,22 @@
       "ko": {
         "word": "무섭다",
         "explanation": "두려움을 느끼다. 공포 영화, 어두운 곳, 위험한 상황 등에서 느끼는 감정을 표현한다.",
-        "examples": [
-          "무서워요!",
-          "그 영화 무서워?",
-          "어렸을 때는 천둥 소리가 너무 무서워서 이불 속에 숨었던 기억이 있다.",
-          "혼자 밤길을 걸을 때 뒤에서 발소리가 들리면 무섭다."
-        ]
+        "examples": {
+          "beginner": "무서워요!",
+          "intermediate": "그 영화 무서워?",
+          "advanced": "어렸을 때는 천둥 소리가 너무 무서워서 이불 속에 숨었던 기억이 있다.",
+          "master": "혼자 밤길을 걸을 때 뒤에서 발소리가 들리면 무섭다."
+        }
       },
       "en": {
         "word": "Scary / To be scared",
         "explanation": "To feel fear. Used to express feelings about horror movies, dark places, dangerous situations, etc.",
-        "examples": [
-          "무서워요! - I'm scared!",
-          "그 영화 무서워? - Is that movie scary?",
-          "I remember hiding under the blanket as a child because I was so scared of thunder.",
-          "It's scary when you hear footsteps behind you while walking alone at night."
-        ]
+        "examples": {
+          "beginner": "무서워요! - I'm scared!",
+          "intermediate": "그 영화 무서워? - Is that movie scary?",
+          "advanced": "I remember hiding under the blanket as a child because I was so scared of thunder.",
+          "master": "It's scary when you hear footsteps behind you while walking alone at night."
+        }
       }
     }
   },
@@ -273,22 +273,22 @@
       "ko": {
         "word": "짜증나다",
         "explanation": "불쾌하거나 귀찮은 감정이 생기다. 일상에서 자주 쓰이는 표현이다.",
-        "examples": [
-          "아, 짜증나!",
-          "뭐가 그렇게 짜증나?",
-          "컴퓨터가 자꾸 멈춰서 짜증이 났다.",
-          "아침부터 비가 와서 출근길이 막혀서 짜증났는데, 커피 한 잔 마시니까 좀 나아졌어."
-        ]
+        "examples": {
+          "beginner": "아, 짜증나!",
+          "intermediate": "뭐가 그렇게 짜증나?",
+          "advanced": "컴퓨터가 자꾸 멈춰서 짜증이 났다.",
+          "master": "아침부터 비가 와서 출근길이 막혀서 짜증났는데, 커피 한 잔 마시니까 좀 나아졌어."
+        }
       },
       "en": {
         "word": "To be annoyed / frustrated",
         "explanation": "To feel annoyed or irritated. A very commonly used expression in daily life.",
-        "examples": [
-          "아, 짜증나! - Ugh, so annoying!",
-          "뭐가 그렇게 짜증나? - What's so annoying?",
-          "I got annoyed because my computer kept freezing.",
-          "I was frustrated because of the rain and traffic in the morning, but I felt better after having a cup of coffee."
-        ]
+        "examples": {
+          "beginner": "아, 짜증나! - Ugh, so annoying!",
+          "intermediate": "뭐가 그렇게 짜증나? - What's so annoying?",
+          "advanced": "I got annoyed because my computer kept freezing.",
+          "master": "I was frustrated because of the rain and traffic in the morning, but I felt better after having a cup of coffee."
+        }
       }
     }
   },
@@ -305,22 +305,22 @@
       "ko": {
         "word": "심심하다",
         "explanation": "할 일이 없어서 지루하다. 재미있는 일이 없을 때 느끼는 감정을 표현한다.",
-        "examples": [
-          "심심해요.",
-          "심심할 때 뭐 해?",
-          "주말에 집에만 있으니까 너무 심심해서 친구한테 연락했다.",
-          "요즘 할 일이 없어서 심심한데, 새로운 취미를 찾아볼까 생각 중이야."
-        ]
+        "examples": {
+          "beginner": "심심해요.",
+          "intermediate": "심심할 때 뭐 해?",
+          "advanced": "주말에 집에만 있으니까 너무 심심해서 친구한테 연락했다.",
+          "master": "요즘 할 일이 없어서 심심한데, 새로운 취미를 찾아볼까 생각 중이야."
+        }
       },
       "en": {
         "word": "Bored",
         "explanation": "To feel bored due to having nothing to do. Expresses the feeling when there's nothing interesting happening.",
-        "examples": [
-          "심심해요. - I'm bored.",
-          "심심할 때 뭐 해? - What do you do when you're bored?",
-          "I was so bored staying home all weekend that I contacted my friend.",
-          "I've been bored lately with nothing to do, so I'm thinking of finding a new hobby."
-        ]
+        "examples": {
+          "beginner": "심심해요. - I'm bored.",
+          "intermediate": "심심할 때 뭐 해? - What do you do when you're bored?",
+          "advanced": "I was so bored staying home all weekend that I contacted my friend.",
+          "master": "I've been bored lately with nothing to do, so I'm thinking of finding a new hobby."
+        }
       }
     }
   },
@@ -337,22 +337,22 @@
       "ko": {
         "word": "설레다",
         "explanation": "기대감이나 흥분으로 마음이 두근거리다. 주로 연애, 새로운 시작, 기대되는 일에 사용한다.",
-        "examples": [
-          "마음이 설레요.",
-          "첫 데이트라 설레네.",
-          "여행 전날 밤에는 항상 설레서 잠이 잘 안 온다.",
-          "좋아하는 사람에게서 연락이 오면 아직도 설레는 걸 보니 사랑인가 봐요."
-        ]
+        "examples": {
+          "beginner": "마음이 설레요.",
+          "intermediate": "첫 데이트라 설레네.",
+          "advanced": "여행 전날 밤에는 항상 설레서 잠이 잘 안 온다.",
+          "master": "좋아하는 사람에게서 연락이 오면 아직도 설레는 걸 보니 사랑인가 봐요."
+        }
       },
       "en": {
         "word": "To be excited / flutter (heart)",
         "explanation": "To have one's heart flutter with anticipation or excitement. Often used for romance, new beginnings, or exciting events.",
-        "examples": [
-          "마음이 설레요. - My heart is fluttering.",
-          "첫 데이트라 설레네. - I'm excited because it's our first date.",
-          "I always feel too excited to sleep the night before a trip.",
-          "Seeing that my heart still flutters when the person I like contacts me, I guess it must be love."
-        ]
+        "examples": {
+          "beginner": "마음이 설레요. - My heart is fluttering.",
+          "intermediate": "첫 데이트라 설레네. - I'm excited because it's our first date.",
+          "advanced": "I always feel too excited to sleep the night before a trip.",
+          "master": "Seeing that my heart still flutters when the person I like contacts me, I guess it must be love."
+        }
       }
     }
   }

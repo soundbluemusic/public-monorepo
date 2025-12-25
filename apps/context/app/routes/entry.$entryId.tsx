@@ -152,18 +152,37 @@ export default function EntryPage() {
           <p style={{ color: 'var(--text-secondary)' }}>{translation.explanation}</p>
         </section>
 
-        {translation.examples && translation.examples.length > 0 && (
+        {translation.examples && (
           <section className="mb-6">
-            <h2 className="text-lg font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>
+            <h2 className="text-lg font-semibold mb-3" style={{ color: 'var(--text-primary)' }}>
               {t('examples')}
             </h2>
-            <ul className="space-y-2">
-              {translation.examples.map((example) => (
-                <li key={example} style={{ color: 'var(--text-secondary)' }}>
-                  <LinkedExample text={example} currentEntryId={entry.id} />
-                </li>
-              ))}
-            </ul>
+            <div className="space-y-3">
+              {(['beginner', 'intermediate', 'advanced', 'master'] as const).map((level) => {
+                const example = translation.examples?.[level];
+                if (!example) return null;
+                return (
+                  <div
+                    key={level}
+                    className="rounded-lg p-3"
+                    style={{ backgroundColor: 'var(--bg-elevated)' }}
+                  >
+                    <span
+                      className="inline-block text-xs font-medium px-2 py-0.5 rounded mb-2"
+                      style={{
+                        backgroundColor: 'var(--accent-primary)',
+                        color: 'white',
+                      }}
+                    >
+                      {t(level)}
+                    </span>
+                    <div style={{ color: 'var(--text-secondary)' }}>
+                      <LinkedExample text={example} currentEntryId={entry.id} />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </section>
         )}
 

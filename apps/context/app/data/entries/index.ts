@@ -34,20 +34,11 @@
  */
 import type { Language, MeaningEntry } from '../types';
 
-// 레거시 엔트리 (마이그레이션 완료 시 제거 예정)
-import { meaningEntries as legacyEntries } from '../entries.legacy';
-
 // JSON에서 생성된 엔트리 (prebuild 스크립트에서 생성됨)
 import { jsonEntries } from '../generated/entries';
 
-// JSON 엔트리의 ID 목록 (중복 제거용)
-const jsonEntryIds = new Set(jsonEntries.map((e: MeaningEntry) => e.id));
-
-// 모든 엔트리 합치기 (JSON 우선, 중복 시 JSON 사용)
-export const meaningEntries: MeaningEntry[] = [
-  ...jsonEntries,
-  ...legacyEntries.filter((e) => !jsonEntryIds.has(e.id)),
-];
+// 모든 엔트리 (JSON에서 로드됨)
+export const meaningEntries: MeaningEntry[] = jsonEntries;
 
 /**
  * ID로 엔트리 조회

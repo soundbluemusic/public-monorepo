@@ -12,22 +12,22 @@
       "ko": {
         "word": "밥",
         "explanation": "지은 쌀, 한국의 주식. '식사' 전체를 의미하기도 한다. '밥 먹었어?'(식사했어?)는 일상적인 인사다.",
-        "examples": [
-          "밥 먹었어요?",
-          "밥 먹으러 가자!",
-          "한국에서는 \"밥 먹었어요?\"라는 말이 단순한 질문이 아니라 상대방의 안부를 묻는 인사처럼 사용된다.",
-          "엄마가 해주신 따뜻한 집밥을 먹으면 어떤 스트레스도 사라지는 것 같다."
-        ]
+        "examples": {
+          "beginner": "밥 먹었어요?",
+          "intermediate": "밥 먹으러 가자!",
+          "advanced": "한국에서는 \"밥 먹었어요?\"라는 말이 단순한 질문이 아니라 상대방의 안부를 묻는 인사처럼 사용된다.",
+          "master": "엄마가 해주신 따뜻한 집밥을 먹으면 어떤 스트레스도 사라지는 것 같다."
+        }
       },
       "en": {
         "word": "Rice / Meal",
         "explanation": "Cooked rice, the staple food of Korea. Also used to mean 'meal' in general. '밥 먹었어?' (Did you eat?) is a common greeting.",
-        "examples": [
-          "밥 먹었어요? - Have you eaten?",
-          "밥 먹으러 가자! - Let's go eat!",
-          "In Korea, asking \"밥 먹었어요?\" (Have you eaten?) is not just a simple question but is used as a greeting to check on someone's well-being.",
-          "When I eat the warm home-cooked meal my mom makes, all my stress seems to melt away."
-        ]
+        "examples": {
+          "beginner": "밥 먹었어요? - Have you eaten?",
+          "intermediate": "밥 먹으러 가자! - Let's go eat!",
+          "advanced": "In Korea, asking \"밥 먹었어요?\" (Have you eaten?) is not just a simple question but is used as a greeting to check on someone's well-being.",
+          "master": "When I eat the warm home-cooked meal my mom makes, all my stress seems to melt away."
+        }
       }
     }
   },
@@ -44,22 +44,22 @@
       "ko": {
         "word": "김치",
         "explanation": "한국 전통 발효 채소 요리. 주로 배추와 무로 만든다. 한국 음식의 기본 반찬이다.",
-        "examples": [
-          "김치 좋아해요?",
-          "김치찌개 먹고 싶어요.",
-          "할머니께서 담그신 김치는 시중에서 파는 것과는 비교할 수 없을 정도로 맛있다.",
-          "외국인 친구에게 김치를 소개했더니 처음에는 매워서 힘들어했지만, 지금은 푹 빠져서 매일 먹는다."
-        ]
+        "examples": {
+          "beginner": "김치 좋아해요?",
+          "intermediate": "김치찌개 먹고 싶어요.",
+          "advanced": "할머니께서 담그신 김치는 시중에서 파는 것과는 비교할 수 없을 정도로 맛있다.",
+          "master": "외국인 친구에게 김치를 소개했더니 처음에는 매워서 힘들어했지만, 지금은 푹 빠져서 매일 먹는다."
+        }
       },
       "en": {
         "word": "Kimchi",
         "explanation": "Traditional Korean fermented vegetable dish, usually made with napa cabbage and radish. A staple side dish in Korean cuisine.",
-        "examples": [
-          "김치 좋아해요? - Do you like kimchi?",
-          "김치찌개 먹고 싶어요. - I want to eat kimchi stew.",
-          "The kimchi my grandmother makes is incomparably more delicious than store-bought ones.",
-          "When I introduced kimchi to my foreign friend, they struggled with the spiciness at first, but now they're hooked and eat it every day."
-        ]
+        "examples": {
+          "beginner": "김치 좋아해요? - Do you like kimchi?",
+          "intermediate": "김치찌개 먹고 싶어요. - I want to eat kimchi stew.",
+          "advanced": "The kimchi my grandmother makes is incomparably more delicious than store-bought ones.",
+          "master": "When I introduced kimchi to my foreign friend, they struggled with the spiciness at first, but now they're hooked and eat it every day."
+        }
       }
     }
   },
@@ -76,22 +76,22 @@
       "ko": {
         "word": "물",
         "explanation": "가장 기본적인 음료. 식당에서 주문할 때 필수 어휘다.",
-        "examples": [
-          "물 주세요.",
-          "물 마시고 싶어요.",
-          "등산을 할 때는 충분한 물을 가져가야 탈수를 예방할 수 있다.",
-          "한국 식당에서는 물을 무료로 제공하는 경우가 많아서 따로 주문하지 않아도 된다."
-        ]
+        "examples": {
+          "beginner": "물 주세요.",
+          "intermediate": "물 마시고 싶어요.",
+          "advanced": "등산을 할 때는 충분한 물을 가져가야 탈수를 예방할 수 있다.",
+          "master": "한국 식당에서는 물을 무료로 제공하는 경우가 많아서 따로 주문하지 않아도 된다."
+        }
       },
       "en": {
         "word": "Water",
         "explanation": "The most basic drink. Essential vocabulary for ordering at restaurants.",
-        "examples": [
-          "물 주세요. - Water, please.",
-          "물 마시고 싶어요. - I want to drink water.",
-          "When hiking, you should bring enough water to prevent dehydration.",
-          "In Korean restaurants, water is often provided for free, so you don't need to order it separately."
-        ]
+        "examples": {
+          "beginner": "물 주세요. - Water, please.",
+          "intermediate": "물 마시고 싶어요. - I want to drink water.",
+          "advanced": "When hiking, you should bring enough water to prevent dehydration.",
+          "master": "In Korean restaurants, water is often provided for free, so you don't need to order it separately."
+        }
       }
     }
   },
@@ -108,22 +108,22 @@
       "ko": {
         "word": "고기",
         "explanation": "식용 동물의 살. 소고기, 돼지고기, 닭고기 등을 통틀어 이른다. 한국에서 삼겹살, 갈비 등 고기 요리가 인기 있다.",
-        "examples": [
-          "고기 먹으러 갈까?",
-          "나는 고기를 좋아해요.",
-          "한국에서는 친구들과 모이면 삼겹살 같은 고기를 구워 먹는 문화가 있다.",
-          "채식주의자여서 고기 대신 두부나 버섯으로 단백질을 섭취해요."
-        ]
+        "examples": {
+          "beginner": "고기 먹으러 갈까?",
+          "intermediate": "나는 고기를 좋아해요.",
+          "advanced": "한국에서는 친구들과 모이면 삼겹살 같은 고기를 구워 먹는 문화가 있다.",
+          "master": "채식주의자여서 고기 대신 두부나 버섯으로 단백질을 섭취해요."
+        }
       },
       "en": {
         "word": "Meat",
         "explanation": "Edible animal flesh. Includes beef, pork, chicken, etc. In Korea, grilled meat dishes like samgyeopsal and galbi are popular.",
-        "examples": [
-          "고기 먹으러 갈까? - Shall we go eat meat?",
-          "나는 고기를 좋아해요. - I like meat.",
-          "In Korea, there's a culture of grilling meat like samgyeopsal when friends get together.",
-          "Since I'm vegetarian, I get my protein from tofu or mushrooms instead of meat."
-        ]
+        "examples": {
+          "beginner": "고기 먹으러 갈까? - Shall we go eat meat?",
+          "intermediate": "나는 고기를 좋아해요. - I like meat.",
+          "advanced": "In Korea, there's a culture of grilling meat like samgyeopsal when friends get together.",
+          "master": "Since I'm vegetarian, I get my protein from tofu or mushrooms instead of meat."
+        }
       }
     }
   },
@@ -140,22 +140,22 @@
       "ko": {
         "word": "라면",
         "explanation": "한국식 인스턴트 국수. 빠르고 쉽게 만들 수 있어 야식이나 간편식으로 인기 있다.",
-        "examples": [
-          "라면 먹을래?",
-          "밤에 라면 먹으면 살쪄.",
-          "비 오는 날에는 왠지 라면이 더 맛있게 느껴진다.",
-          "한국 드라마에서 '라면 먹고 갈래?'라는 대사가 유명해져서 외국인들도 많이 알고 있다."
-        ]
+        "examples": {
+          "beginner": "라면 먹을래?",
+          "intermediate": "밤에 라면 먹으면 살쪄.",
+          "advanced": "비 오는 날에는 왠지 라면이 더 맛있게 느껴진다.",
+          "master": "한국 드라마에서 '라면 먹고 갈래?'라는 대사가 유명해져서 외국인들도 많이 알고 있다."
+        }
       },
       "en": {
         "word": "Ramen / Instant noodles",
         "explanation": "Korean-style instant noodles. Popular as a late-night snack or quick meal because it's fast and easy to make.",
-        "examples": [
-          "라면 먹을래? - Do you want to eat ramyeon?",
-          "밤에 라면 먹으면 살쪄. - You'll gain weight if you eat ramyeon at night.",
-          "On rainy days, ramyeon somehow tastes even better.",
-          "The line 'Do you want to come up for ramyeon?' from Korean dramas has become so famous that even foreigners know it."
-        ]
+        "examples": {
+          "beginner": "라면 먹을래? - Do you want to eat ramyeon?",
+          "intermediate": "밤에 라면 먹으면 살쪄. - You'll gain weight if you eat ramyeon at night.",
+          "advanced": "On rainy days, ramyeon somehow tastes even better.",
+          "master": "The line 'Do you want to come up for ramyeon?' from Korean dramas has become so famous that even foreigners know it."
+        }
       }
     }
   },
@@ -172,22 +172,22 @@
       "ko": {
         "word": "맛있다",
         "explanation": "음식의 맛이 좋다. 식사할 때 가장 많이 쓰는 표현 중 하나이다.",
-        "examples": [
-          "맛있어요!",
-          "이거 진짜 맛있다!",
-          "엄마 손맛으로 만든 요리는 항상 맛있어서 자꾸 생각나요.",
-          "맛있는 음식을 먹으면 기분이 좋아지고 스트레스도 풀린다."
-        ]
+        "examples": {
+          "beginner": "맛있어요!",
+          "intermediate": "이거 진짜 맛있다!",
+          "advanced": "엄마 손맛으로 만든 요리는 항상 맛있어서 자꾸 생각나요.",
+          "master": "맛있는 음식을 먹으면 기분이 좋아지고 스트레스도 풀린다."
+        }
       },
       "en": {
         "word": "Delicious / Tasty",
         "explanation": "When food tastes good. One of the most commonly used expressions when eating.",
-        "examples": [
-          "맛있어요! - It's delicious!",
-          "이거 진짜 맛있다! - This is really tasty!",
-          "Food made with my mom's touch is always delicious, and I keep craving it.",
-          "Eating delicious food makes me feel better and relieves stress."
-        ]
+        "examples": {
+          "beginner": "맛있어요! - It's delicious!",
+          "intermediate": "이거 진짜 맛있다! - This is really tasty!",
+          "advanced": "Food made with my mom's touch is always delicious, and I keep craving it.",
+          "master": "Eating delicious food makes me feel better and relieves stress."
+        }
       }
     }
   },
@@ -204,22 +204,22 @@
       "ko": {
         "word": "맵다",
         "explanation": "매운 맛이 나다. 한국 음식에서 자주 경험하는 맛이다.",
-        "examples": [
-          "너무 매워요!",
-          "이거 많이 매워?",
-          "한국 음식은 대부분 매워서 처음에는 적응하기 힘들었어요.",
-          "매운 음식을 먹으면 땀이 나지만 그 뒤에 오는 기분 좋은 느낌이 좋아요."
-        ]
+        "examples": {
+          "beginner": "너무 매워요!",
+          "intermediate": "이거 많이 매워?",
+          "advanced": "한국 음식은 대부분 매워서 처음에는 적응하기 힘들었어요.",
+          "master": "매운 음식을 먹으면 땀이 나지만 그 뒤에 오는 기분 좋은 느낌이 좋아요."
+        }
       },
       "en": {
         "word": "Spicy",
         "explanation": "Having a hot, pungent taste. A common flavor in Korean cuisine.",
-        "examples": [
-          "너무 매워요! - It's too spicy!",
-          "이거 많이 매워? - Is this very spicy?",
-          "Most Korean food is spicy, so it was hard to adjust at first.",
-          "When I eat spicy food, I sweat, but I like the good feeling that comes after."
-        ]
+        "examples": {
+          "beginner": "너무 매워요! - It's too spicy!",
+          "intermediate": "이거 많이 매워? - Is this very spicy?",
+          "advanced": "Most Korean food is spicy, so it was hard to adjust at first.",
+          "master": "When I eat spicy food, I sweat, but I like the good feeling that comes after."
+        }
       }
     }
   },
@@ -236,22 +236,22 @@
       "ko": {
         "word": "식당",
         "explanation": "음식을 파는 가게. 레스토랑보다 더 일반적이고 캐주얼한 느낌의 표현이다.",
-        "examples": [
-          "식당 어디로 갈까?",
-          "이 근처에 맛있는 식당 있어요?",
-          "점심시간에는 회사 근처 식당마다 사람들로 붐빈다.",
-          "한국 식당에서는 반찬을 무료로 리필해 주는 곳이 많아서 좋아요."
-        ]
+        "examples": {
+          "beginner": "식당 어디로 갈까?",
+          "intermediate": "이 근처에 맛있는 식당 있어요?",
+          "advanced": "점심시간에는 회사 근처 식당마다 사람들로 붐빈다.",
+          "master": "한국 식당에서는 반찬을 무료로 리필해 주는 곳이 많아서 좋아요."
+        }
       },
       "en": {
         "word": "Restaurant",
         "explanation": "A place that sells food. A more general and casual expression than 'restaurant'.",
-        "examples": [
-          "식당 어디로 갈까? - Which restaurant shall we go to?",
-          "이 근처에 맛있는 식당 있어요? - Are there any good restaurants nearby?",
-          "During lunch time, every restaurant near the office is crowded with people.",
-          "I like that many Korean restaurants offer free refills on side dishes."
-        ]
+        "examples": {
+          "beginner": "식당 어디로 갈까? - Which restaurant shall we go to?",
+          "intermediate": "이 근처에 맛있는 식당 있어요? - Are there any good restaurants nearby?",
+          "advanced": "During lunch time, every restaurant near the office is crowded with people.",
+          "master": "I like that many Korean restaurants offer free refills on side dishes."
+        }
       }
     }
   },
@@ -268,22 +268,22 @@
       "ko": {
         "word": "배고프다",
         "explanation": "배가 고픈 상태. 음식을 먹고 싶을 때 사용하는 표현이다.",
-        "examples": [
-          "배고파요.",
-          "너무 배고파서 아무거나 먹고 싶어.",
-          "회의가 길어져서 점심을 못 먹었더니 너무 배고프다.",
-          "다이어트 중인데 밤에 배고프면 참기가 정말 힘들어요."
-        ]
+        "examples": {
+          "beginner": "배고파요.",
+          "intermediate": "너무 배고파서 아무거나 먹고 싶어.",
+          "advanced": "회의가 길어져서 점심을 못 먹었더니 너무 배고프다.",
+          "master": "다이어트 중인데 밤에 배고프면 참기가 정말 힘들어요."
+        }
       },
       "en": {
         "word": "Hungry",
         "explanation": "The state of feeling hungry. Used when you want to eat food.",
-        "examples": [
-          "배고파요. - I'm hungry.",
-          "너무 배고파서 아무거나 먹고 싶어. - I'm so hungry I want to eat anything.",
-          "The meeting went long and I couldn't eat lunch, so I'm really hungry.",
-          "I'm on a diet, but it's really hard to resist when I'm hungry at night."
-        ]
+        "examples": {
+          "beginner": "배고파요. - I'm hungry.",
+          "intermediate": "너무 배고파서 아무거나 먹고 싶어. - I'm so hungry I want to eat anything.",
+          "advanced": "The meeting went long and I couldn't eat lunch, so I'm really hungry.",
+          "master": "I'm on a diet, but it's really hard to resist when I'm hungry at night."
+        }
       }
     }
   },
@@ -300,22 +300,22 @@
       "ko": {
         "word": "커피",
         "explanation": "커피 원두로 만든 음료. 한국에서 매우 인기 있는 음료로, 커피숍이 어디에나 있다.",
-        "examples": [
-          "커피 마실래요?",
-          "아침에 커피 한 잔 없으면 안 돼요.",
-          "한국은 커피 소비량이 세계 상위권이어서 거리마다 카페가 있다.",
-          "점심 먹고 커피 한 잔 마시면서 이야기하자."
-        ]
+        "examples": {
+          "beginner": "커피 마실래요?",
+          "intermediate": "아침에 커피 한 잔 없으면 안 돼요.",
+          "advanced": "한국은 커피 소비량이 세계 상위권이어서 거리마다 카페가 있다.",
+          "master": "점심 먹고 커피 한 잔 마시면서 이야기하자."
+        }
       },
       "en": {
         "word": "Coffee",
         "explanation": "A beverage made from coffee beans. Very popular in Korea, with coffee shops everywhere.",
-        "examples": [
-          "커피 마실래요? - Do you want to drink coffee?",
-          "아침에 커피 한 잔 없으면 안 돼요. - I can't function without a cup of coffee in the morning.",
-          "Korea's coffee consumption is among the highest in the world, so there are cafes on every street.",
-          "Let's have a cup of coffee and chat after lunch."
-        ]
+        "examples": {
+          "beginner": "커피 마실래요? - Do you want to drink coffee?",
+          "intermediate": "아침에 커피 한 잔 없으면 안 돼요. - I can't function without a cup of coffee in the morning.",
+          "advanced": "Korea's coffee consumption is among the highest in the world, so there are cafes on every street.",
+          "master": "Let's have a cup of coffee and chat after lunch."
+        }
       }
     }
   }

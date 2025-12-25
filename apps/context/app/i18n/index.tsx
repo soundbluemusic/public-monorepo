@@ -36,6 +36,7 @@ export interface UILabels {
   beginner: string;
   intermediate: string;
   advanced: string;
+  master: string;
   noun: string;
   verb: string;
   adjective: string;

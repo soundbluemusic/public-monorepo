@@ -14,18 +14,33 @@ export interface Variations {
 }
 
 /**
+ * 레벨별 예문 구조
+ * 학습 난이도에 따라 예문을 분류합니다.
+ * @property beginner - 초급 예문 (짧고 단순한 표현, 2~15자)
+ * @property intermediate - 중급 예문 (일상 대화 수준, 10~25자)
+ * @property advanced - 고급 예문 (문맥이 있는 표현, 25~45자)
+ * @property master - 마스터 예문 (복잡한 상황 설명, 40자 이상)
+ */
+export interface LeveledExamples {
+  beginner: string;
+  intermediate: string;
+  advanced: string;
+  master: string;
+}
+
+/**
  * 특정 언어로의 번역 데이터
  * @property word - 번역된 단어
  * @property reading - 읽기 표기 (선택)
  * @property explanation - 해당 언어로 된 설명
- * @property examples - 해당 언어로 된 예문 목록
+ * @property examples - 레벨별 예문 (beginner, intermediate, advanced, master)
  * @property variations - 격식 수준별 표현 변형
  */
 export interface Translation {
   word: string;
   reading?: string;
   explanation: string;
-  examples?: string[];
+  examples?: LeveledExamples;
   variations?: Variations;
 }
 
@@ -237,6 +252,7 @@ export interface UILabels {
   beginner: string;
   intermediate: string;
   advanced: string;
+  master: string;
 
   /** 품사 레이블 */
   noun: string;
