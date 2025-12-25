@@ -114,7 +114,11 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
           {/* Menu Button + Logo */}
           <div className="flex items-center gap-2 shrink-0">
             {/* CSS-only sidebar trigger using label */}
-            <label htmlFor="sidebar-toggle" className="sidebar-menu-btn" aria-label={t('menu')}>
+            <label
+              htmlFor="sidebar-toggle"
+              className="min-h-11 min-w-11 flex items-center justify-center rounded-lg cursor-pointer text-text-secondary transition-colors hover:bg-bg-tertiary"
+              aria-label={t('menu')}
+            >
               <Menu size={20} aria-hidden="true" />
             </label>
             <Link
@@ -163,21 +167,35 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
         </div>
       </header>
 
-      {/* CSS-Only Sidebar (Checkbox Hack) - Works without JavaScript */}
-      <input type="checkbox" id="sidebar-toggle" className="sr-only" tabIndex={-1} />
-      <label htmlFor="sidebar-toggle" className="sidebar-backdrop">
+      {/* CSS-Only Sidebar (Checkbox Hack with Tailwind peer) - Works without JavaScript */}
+      <input type="checkbox" id="sidebar-toggle" className="peer sr-only" tabIndex={-1} />
+
+      {/* Backdrop - hidden by default, shown when peer is checked */}
+      <label
+        htmlFor="sidebar-toggle"
+        className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm cursor-pointer
+                   opacity-0 invisible transition-all duration-200 ease-out
+                   peer-checked:opacity-100 peer-checked:visible"
+      >
         <span className="sr-only">{locale === 'ko' ? '메뉴 닫기' : 'Close menu'}</span>
       </label>
-      <aside className="sidebar-panel" aria-label={t('menu')}>
+
+      {/* Sidebar Panel - off-screen by default, slides in when peer is checked */}
+      <aside
+        className="fixed top-0 left-0 z-51 h-full w-72 flex flex-col
+                   bg-bg-primary border-r border-border-primary
+                   -translate-x-full transition-transform duration-200 ease-out
+                   peer-checked:translate-x-0"
+        aria-label={t('menu')}
+      >
         {/* Header */}
-        <div
-          className="h-14 flex items-center justify-between px-4 shrink-0"
-          style={{ borderBottom: '1px solid var(--border-primary)' }}
-        >
-          <span className="font-semibold" style={{ color: 'var(--text-primary)' }}>
-            {t('menu')}
-          </span>
-          <label htmlFor="sidebar-toggle" className="sidebar-close-btn" aria-label="Close menu">
+        <div className="h-14 flex items-center justify-between px-4 shrink-0 border-b border-border-primary">
+          <span className="font-semibold text-text-primary">{t('menu')}</span>
+          <label
+            htmlFor="sidebar-toggle"
+            className="min-h-11 min-w-11 flex items-center justify-center rounded-lg cursor-pointer text-text-secondary transition-colors hover:bg-bg-tertiary"
+            aria-label="Close menu"
+          >
             <X size={20} aria-hidden="true" />
           </label>
         </div>
@@ -270,14 +288,8 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
         </nav>
 
         {/* Sidebar Footer */}
-        <div
-          className="shrink-0 py-4 px-3"
-          style={{ borderTop: '1px solid var(--border-primary)' }}
-        >
-          <div
-            className="px-3 py-2 text-xs font-medium uppercase tracking-wider"
-            style={{ color: 'var(--text-tertiary)' }}
-          >
+        <div className="shrink-0 py-4 px-3 border-t border-border-primary">
+          <div className="px-3 py-2 text-xs font-medium uppercase tracking-wider text-text-tertiary">
             {t('more')}
           </div>
           <Link
