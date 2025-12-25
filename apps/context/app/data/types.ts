@@ -52,7 +52,9 @@ export interface Translation {
  * @property id - 고유 식별자 (예: 'hello-1', 'thanks-2')
  * @property korean - 한국어 단어 (원본)
  * @property romanization - 로마자 표기 (영어 사용자용, 예: 'gamsahamnida')
- * @property pronunciation - 표준 발음 표기 (한국어 사용자용, 예: '[감사함니다]')
+ * @property pronunciation - 발음 표기 객체
+ *   - korean: 한국어 발음 표기 (예: '[감사함니다]')
+ *   - ipa: 국제음성기호 표기 (예: '[kam.sa.ham.ni.da]')
  * @property partOfSpeech - 품사
  * @property categoryId - 소속 카테고리 ID
  * @property translations - 언어별 번역 (ko, en)
@@ -66,7 +68,10 @@ export interface MeaningEntry {
   id: string;
   korean: string;
   romanization: string;
-  pronunciation?: string;
+  pronunciation?: {
+    korean: string;
+    ipa: string;
+  };
   partOfSpeech: PartOfSpeech;
   categoryId: string;
   translations: {

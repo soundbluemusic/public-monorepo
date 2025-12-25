@@ -14,7 +14,7 @@ const getPronunciation = (entry: MeaningEntry, locale: Language): string | undef
     case 'en':
       return entry.romanization;
     case 'ko':
-      return entry.pronunciation;
+      return entry.pronunciation?.korean;
   }
 };
 

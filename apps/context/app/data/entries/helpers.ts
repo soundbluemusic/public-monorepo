@@ -35,7 +35,10 @@ import type {
 export type EntryInput = {
   korean: string;
   romanization: string;
-  pronunciation?: string;
+  pronunciation?: {
+    korean: string;
+    ipa: string;
+  };
   partOfSpeech: PartOfSpeech;
   difficulty: DifficultyLevel;
   frequency?: FrequencyLevel;
