@@ -24,7 +24,6 @@ import { type ReactNode, useCallback, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import styles from './Layout.module.scss';
 
-// Use shared utility for locale stripping
 const stripLocale = stripLocaleFromPath;
 
 interface BreadcrumbItem {
@@ -41,11 +40,8 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
   const { locale, t, localePath } = useI18n();
   const location = useLocation();
   const navigate = useNavigate();
-
-  // Back to top
   const [showBackToTop, setShowBackToTop] = useState(false);
 
-  // Real-time search with Fuse.js
   const { query, setQuery, results, isLoading } = useSearchWorker({
     indexUrl: '/search-index.json',
     locale,
@@ -60,25 +56,21 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
     [navigate, localePath],
   );
 
-  // Custom render for Context entries (shows korean + romanization)
   const renderContextResult = useCallback((result: SearchResult, _isSelected: boolean) => {
     const name = result.item.name;
     return (
-      <div className="flex items-baseline justify-between w-full">
-        <div className="flex items-baseline gap-2">
-          <span style={{ color: 'var(--text-primary)' }} className="font-medium">
-            {name.ko}
-          </span>
-          <span style={{ color: 'var(--text-tertiary)' }} className="text-xs">
+      <div className={styles.searchResult}>
+        <div className={styles.searchResultLeft}>
+          <span className={styles.searchResultKorean}>{name.ko}</span>
+          <span className={styles.searchResultTag}>
             {result.item.tags?.[result.item.tags.length - 1]}
           </span>
         </div>
-        <span style={{ color: 'var(--text-secondary)' }}>{name.en}</span>
+        <span className={styles.searchResultEnglish}>{name.en}</span>
       </div>
     );
   }, []);
 
-  // Back to top visibility
   useEffect(() => {
     const handleScroll = () => {
       setShowBackToTop(window.scrollY > 300);
@@ -97,37 +89,26 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
   };
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: 'var(--bg-primary)' }}>
+    <div className={styles.layout}>
       {/* Skip to content */}
-      <a href="#main-content" className="skip-to-content">
+      <a href="#main-content" className={styles.skipToContent}>
         {locale === 'ko' ? '본문으로 건너뛰기' : 'Skip to content'}
       </a>
 
       {/* Header */}
-      <header
-        className="sticky top-0 z-40 backdrop-blur-sm"
-        style={{
-          backgroundColor: 'color-mix(in srgb, var(--bg-primary) 80%, transparent)',
-          borderBottom: '1px solid var(--border-primary)',
-        }}
-      >
-        <div className="max-w-3xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
+      <header className={styles.header}>
+        <div className={styles.headerInner}>
           {/* Menu Button + Logo */}
-          <div className="flex items-center gap-2 shrink-0">
-            {/* CSS-only sidebar trigger using label */}
+          <div className={styles.headerLeft}>
             <label htmlFor="sidebar-toggle" className={styles.menuButton} aria-label={t('menu')}>
               <Menu size={20} aria-hidden="true" />
             </label>
-            <Link
-              to={localePath('/')}
-              className="font-semibold"
-              style={{ color: 'var(--text-primary)' }}
-            >
+            <Link to={localePath('/')} className={styles.logo}>
               Context
             </Link>
           </div>
 
-          {/* Real-time Search Dropdown */}
+          {/* Search */}
           <SearchDropdown
             query={query}
             onQueryChange={setQuery}
@@ -136,45 +117,37 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
             onSelect={handleSelectResult}
             locale={locale}
             renderResult={renderContextResult}
-            className="flex-1 max-w-md"
+            className={styles.searchWrapper}
           />
 
-          {/* Right Actions - Hidden on mobile */}
-          <div className="hidden sm:flex items-center gap-1 shrink-0">
+          {/* Right Actions - Desktop */}
+          <div className={styles.headerRightDesktop}>
             <Link
               to={localePath('/browse')}
-              className="px-3 py-2 text-sm rounded-lg transition-colors min-h-11 flex items-center"
-              style={{
-                color: isActive('/browse') ? 'var(--accent-primary)' : 'var(--text-secondary)',
-                backgroundColor: isActive('/browse') ? 'var(--bg-tertiary)' : 'transparent',
-              }}
+              className={`${styles.browseLink} ${isActive('/browse') ? styles.browseLinkActive : ''}`}
             >
               {t('browse')}
             </Link>
-
             <LanguageToggle locale={locale} currentPath={stripLocale(location.pathname)} />
             <DarkModeToggle />
           </div>
 
-          {/* Mobile: only theme toggle */}
-          <div className="flex sm:hidden items-center gap-1 shrink-0">
+          {/* Right Actions - Mobile */}
+          <div className={styles.headerRightMobile}>
             <LanguageToggle locale={locale} currentPath={stripLocale(location.pathname)} />
             <DarkModeToggle />
           </div>
         </div>
       </header>
 
-      {/* CSS-Only Sidebar (Checkbox Hack with SCSS Modules) - Works without JavaScript */}
+      {/* CSS-Only Sidebar */}
       <input type="checkbox" id="sidebar-toggle" className={styles.toggle} tabIndex={-1} />
 
-      {/* Backdrop - hidden by default, shown when checkbox is checked */}
       <label htmlFor="sidebar-toggle" className={styles.backdrop}>
-        <span className="sr-only">{locale === 'ko' ? '메뉴 닫기' : 'Close menu'}</span>
+        <span className={styles.srOnly}>{locale === 'ko' ? '메뉴 닫기' : 'Close menu'}</span>
       </label>
 
-      {/* Sidebar Panel - off-screen by default, slides in when checkbox is checked */}
       <aside className={styles.sidebar} aria-label={t('menu')}>
-        {/* Header */}
         <div className={styles.sidebarHeader}>
           <span className={styles.sidebarTitle}>{t('menu')}</span>
           <label htmlFor="sidebar-toggle" className={styles.menuButton} aria-label="Close menu">
@@ -214,10 +187,9 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
             </Link>
           </div>
 
-          {/* Categories */}
           <div className={styles.navSection}>
             <div className={styles.sectionLabel}>{t('browseByCategory')}</div>
-            <div className="space-y-0.5">
+            <div className={styles.categoryList}>
               {categories.slice(0, 6).map((category) => (
                 <Link
                   key={category.id}
@@ -239,7 +211,6 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
           </div>
         </nav>
 
-        {/* Sidebar Footer */}
         <div className={styles.sidebarFooter}>
           <div className={styles.sectionLabel}>{t('more')}</div>
           <Link
@@ -253,33 +224,21 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
       </aside>
 
       {/* Main */}
-      <main
-        id="main-content"
-        className="flex-1 max-w-3xl mx-auto px-4 py-8 w-full pb-bottom-nav sm:pb-8"
-      >
-        {/* Breadcrumbs */}
+      <main id="main-content" className={styles.main}>
         {breadcrumbs && breadcrumbs.length > 0 && (
-          <nav aria-label="Breadcrumb" className="mb-4">
-            <ol className="flex items-center gap-1 text-sm flex-wrap">
+          <nav aria-label="Breadcrumb" className={styles.breadcrumbs}>
+            <ol className={styles.breadcrumbList}>
               {breadcrumbs.map((item, index) => (
-                <li key={item.label} className="flex items-center gap-1">
+                <li key={item.label} className={styles.breadcrumbItem}>
                   {index > 0 && (
-                    <ChevronRight
-                      size={14}
-                      className="text-[var(--text-tertiary)]"
-                      aria-hidden="true"
-                    />
+                    <ChevronRight size={14} className={styles.breadcrumbIcon} aria-hidden="true" />
                   )}
                   {item.path ? (
-                    <Link
-                      to={localePath(item.path)}
-                      className="hover:underline"
-                      style={{ color: 'var(--text-secondary)' }}
-                    >
+                    <Link to={localePath(item.path)} className={styles.breadcrumbLink}>
                       {item.label}
                     </Link>
                   ) : (
-                    <span style={{ color: 'var(--text-primary)' }}>{item.label}</span>
+                    <span className={styles.breadcrumbCurrent}>{item.label}</span>
                   )}
                 </li>
               ))}
@@ -289,113 +248,77 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
         {children}
       </main>
 
-      {/* Mobile Bottom Navigation */}
-      <nav
-        className="sm:hidden fixed bottom-0 left-0 right-0 z-40 flex items-center justify-around"
-        style={{
-          backgroundColor: 'var(--bg-elevated)',
-          borderTop: '1px solid var(--border-primary)',
-          paddingBottom: 'env(safe-area-inset-bottom, 0px)',
-          height: 'calc(64px + env(safe-area-inset-bottom, 0px))',
-        }}
-      >
+      {/* Bottom Navigation (Mobile) */}
+      <nav className={styles.bottomNav}>
         <Link
           to={localePath('/')}
-          className="flex flex-col items-center justify-center gap-1 flex-1 py-2 min-h-14"
-          style={{ color: isActive('/') ? 'var(--accent-primary)' : 'var(--text-secondary)' }}
+          className={`${styles.bottomNavLink} ${isActive('/') ? styles.bottomNavLinkActive : ''}`}
         >
           <Home size={20} aria-hidden="true" />
-          <span className="text-xs">{t('home')}</span>
+          <span className={styles.bottomNavLabel}>{t('home')}</span>
         </Link>
         <Link
           to={localePath('/browse')}
-          className="flex flex-col items-center justify-center gap-1 flex-1 py-2 min-h-14"
-          style={{ color: isActive('/browse') ? 'var(--accent-primary)' : 'var(--text-secondary)' }}
+          className={`${styles.bottomNavLink} ${isActive('/browse') ? styles.bottomNavLinkActive : ''}`}
         >
           <Grid3X3 size={20} aria-hidden="true" />
-          <span className="text-xs">{t('browse')}</span>
+          <span className={styles.bottomNavLabel}>{t('browse')}</span>
         </Link>
         <Link
           to={localePath('/my-learning')}
-          className="flex flex-col items-center justify-center gap-1 flex-1 py-2 min-h-14"
-          style={{
-            color: isActive('/my-learning') ? 'var(--accent-primary)' : 'var(--text-secondary)',
-          }}
+          className={`${styles.bottomNavLink} ${isActive('/my-learning') ? styles.bottomNavLinkActive : ''}`}
         >
           <LayoutGrid size={20} aria-hidden="true" />
-          <span className="text-xs">{locale === 'ko' ? '학습' : 'Learn'}</span>
+          <span className={styles.bottomNavLabel}>{locale === 'ko' ? '학습' : 'Learn'}</span>
         </Link>
         <Link
           to={localePath('/about')}
-          className="flex flex-col items-center justify-center gap-1 flex-1 py-2 min-h-14"
-          style={{ color: isActive('/about') ? 'var(--accent-primary)' : 'var(--text-secondary)' }}
+          className={`${styles.bottomNavLink} ${isActive('/about') ? styles.bottomNavLinkActive : ''}`}
         >
           <Info size={20} aria-hidden="true" />
-          <span className="text-xs">{t('about')}</span>
+          <span className={styles.bottomNavLabel}>{t('about')}</span>
         </Link>
       </nav>
 
-      {/* Back to Top Button */}
+      {/* Back to Top */}
       {showBackToTop && (
         <button
           type="button"
           onClick={scrollToTop}
-          className="fixed bottom-20 sm:bottom-8 right-4 z-30 min-h-11 min-w-11 flex items-center justify-center rounded-full shadow-lg transition-all"
-          style={{
-            backgroundColor: 'var(--bg-elevated)',
-            border: '1px solid var(--border-primary)',
-            color: 'var(--text-secondary)',
-          }}
+          className={styles.backToTop}
           aria-label={locale === 'ko' ? '맨 위로' : 'Back to top'}
         >
           <ArrowUp size={20} aria-hidden="true" />
         </button>
       )}
 
-      {/* Footer - Hidden on mobile (bottom nav takes its place) */}
-      <footer
-        className="hidden sm:block mt-auto py-8"
-        style={{
-          backgroundColor: 'var(--bg-secondary)',
-          borderTop: '1px solid var(--border-primary)',
-        }}
-      >
-        <div className="max-w-3xl mx-auto px-4">
-          <nav
-            className="flex justify-center gap-6 mb-4 text-sm"
-            style={{ color: 'var(--text-secondary)' }}
-          >
-            <Link to={localePath('/privacy')} className="hover:underline">
+      {/* Footer */}
+      <footer className={styles.footer}>
+        <div className={styles.footerInner}>
+          <nav className={styles.footerNav}>
+            <Link to={localePath('/privacy')} className={styles.footerNavLink}>
               {t('privacy')}
             </Link>
-            <Link to={localePath('/terms')} className="hover:underline">
+            <Link to={localePath('/terms')} className={styles.footerNavLink}>
               {t('terms')}
             </Link>
-            <Link to={localePath('/license')} className="hover:underline">
+            <Link to={localePath('/license')} className={styles.footerNavLink}>
               {t('license')}
             </Link>
           </nav>
-          <p className="text-center text-sm mb-2" style={{ color: 'var(--text-tertiary)' }}>
+          <p className={styles.footerCredits}>
             {t('footerCredits')}{' '}
-            <Link
-              to={localePath('/built-with')}
-              className="underline"
-              style={{ color: 'var(--accent-primary)' }}
-            >
+            <Link to={localePath('/built-with')} className={styles.footerBuiltWithLink}>
               {t('footerBuiltWith')}
             </Link>
           </p>
-          <div
-            className="flex items-center justify-center gap-4 text-sm"
-            style={{ color: 'var(--text-tertiary)' }}
-          >
-            <p>Context by SoundBlueMusic</p>
+          <div className={styles.footerBottom}>
+            <p className={styles.footerBrand}>Context by SoundBlueMusic</p>
             <a
               href="https://github.com/soundbluemusic/public-monorepo"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 hover:underline"
-              style={{ color: 'var(--accent-primary)' }}
+              className={styles.footerGithub}
             >
               <Github size={16} aria-hidden="true" />
               {t('footerGitHub')}
