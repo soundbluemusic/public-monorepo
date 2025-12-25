@@ -1,0 +1,195 @@
+// Layout.module.scss - Sidebar styles using CSS-only checkbox hack
+// SCSS Modules provide automatic class scoping (e.g., .backdrop → Layout_backdrop_x7ks2)
+
+// ============================================
+// Variables
+// ============================================
+$sidebar-width: 18rem; // w-72 = 288px
+$transition-duration: 200ms;
+$transition-easing: ease-out;
+
+// ============================================
+// Checkbox (hidden, used as state)
+// ============================================
+.toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// ============================================
+// Backdrop
+// ============================================
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+
+  // Hidden by default
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity $transition-duration $transition-easing,
+    visibility $transition-duration $transition-easing;
+}
+
+// ============================================
+// Sidebar Panel
+// ============================================
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 51;
+  height: 100%;
+  width: $sidebar-width;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-primary);
+  border-right: 1px solid var(--border-primary);
+
+  // Off-screen by default
+  transform: translateX(-100%);
+  transition: transform $transition-duration $transition-easing;
+}
+
+// ============================================
+// Sidebar Header
+// ============================================
+.sidebarHeader {
+  height: 3.5rem; // h-14
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.sidebarTitle {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+// ============================================
+// Menu Button (shared style for open/close)
+// ============================================
+.menuButton {
+  min-height: 2.75rem; // min-h-11
+  min-width: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: background-color 150ms ease;
+
+  &:hover {
+    background-color: var(--bg-tertiary);
+  }
+}
+
+// ============================================
+// Navigation
+// ============================================
+.nav {
+  flex: 1;
+  overflow-y: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.navSection {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: background-color 150ms ease, color 150ms ease;
+  min-height: 2.75rem;
+  color: var(--text-primary);
+
+  &:hover {
+    background-color: var(--bg-tertiary);
+  }
+}
+
+.navLinkActive {
+  color: var(--accent-primary);
+  background-color: var(--bg-tertiary);
+}
+
+.navLinkSecondary {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+// ============================================
+// Section Label
+// ============================================
+.sectionLabel {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-tertiary);
+}
+
+// ============================================
+// Category Item
+// ============================================
+.categoryIcon {
+  font-size: 1rem;
+}
+
+.viewAllIcon {
+  font-size: 1rem;
+  opacity: 0.5;
+}
+
+.viewAllLink {
+  color: var(--accent-primary);
+}
+
+// ============================================
+// Sidebar Footer
+// ============================================
+.sidebarFooter {
+  flex-shrink: 0;
+  padding: 1rem 0.75rem;
+  border-top: 1px solid var(--border-primary);
+}
+
+// ============================================
+// State: When checkbox is checked
+// ============================================
+.toggle:checked {
+  // Show backdrop
+  & ~ .backdrop {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  // Slide in sidebar
+  & ~ .sidebar {
+    transform: translateX(0);
+  }
+}

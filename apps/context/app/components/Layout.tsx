@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 import { type ReactNode, useCallback, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
+import styles from './Layout.module.scss';
 
 // Use shared utility for locale stripping
 const stripLocale = stripLocaleFromPath;
@@ -114,11 +115,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
           {/* Menu Button + Logo */}
           <div className="flex items-center gap-2 shrink-0">
             {/* CSS-only sidebar trigger using label */}
-            <label
-              htmlFor="sidebar-toggle"
-              className="min-h-11 min-w-11 flex items-center justify-center rounded-lg cursor-pointer text-text-secondary transition-colors hover:bg-bg-tertiary"
-              aria-label={t('menu')}
-            >
+            <label htmlFor="sidebar-toggle" className={styles.menuButton} aria-label={t('menu')}>
               <Menu size={20} aria-hidden="true" />
             </label>
             <Link
@@ -167,81 +164,50 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
         </div>
       </header>
 
-      {/* CSS-Only Sidebar (Checkbox Hack with Tailwind peer) - Works without JavaScript */}
-      <input type="checkbox" id="sidebar-toggle" className="peer sr-only" tabIndex={-1} />
+      {/* CSS-Only Sidebar (Checkbox Hack with SCSS Modules) - Works without JavaScript */}
+      <input type="checkbox" id="sidebar-toggle" className={styles.toggle} tabIndex={-1} />
 
-      {/* Backdrop - hidden by default, shown when peer is checked */}
-      <label
-        htmlFor="sidebar-toggle"
-        className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm cursor-pointer
-                   opacity-0 invisible transition-all duration-200 ease-out
-                   peer-checked:opacity-100 peer-checked:visible"
-      >
+      {/* Backdrop - hidden by default, shown when checkbox is checked */}
+      <label htmlFor="sidebar-toggle" className={styles.backdrop}>
         <span className="sr-only">{locale === 'ko' ? '메뉴 닫기' : 'Close menu'}</span>
       </label>
 
-      {/* Sidebar Panel - off-screen by default, slides in when peer is checked */}
-      <aside
-        className="fixed top-0 left-0 z-51 h-full w-72 flex flex-col
-                   bg-bg-primary border-r border-border-primary
-                   -translate-x-full transition-transform duration-200 ease-out
-                   peer-checked:translate-x-0"
-        aria-label={t('menu')}
-      >
+      {/* Sidebar Panel - off-screen by default, slides in when checkbox is checked */}
+      <aside className={styles.sidebar} aria-label={t('menu')}>
         {/* Header */}
-        <div className="h-14 flex items-center justify-between px-4 shrink-0 border-b border-border-primary">
-          <span className="font-semibold text-text-primary">{t('menu')}</span>
-          <label
-            htmlFor="sidebar-toggle"
-            className="min-h-11 min-w-11 flex items-center justify-center rounded-lg cursor-pointer text-text-secondary transition-colors hover:bg-bg-tertiary"
-            aria-label="Close menu"
-          >
+        <div className={styles.sidebarHeader}>
+          <span className={styles.sidebarTitle}>{t('menu')}</span>
+          <label htmlFor="sidebar-toggle" className={styles.menuButton} aria-label="Close menu">
             <X size={20} aria-hidden="true" />
           </label>
         </div>
 
-        <nav className="flex-1 overflow-y-auto py-4">
-          <div className="px-3 mb-6">
+        <nav className={styles.nav}>
+          <div className={styles.navSection}>
             <Link
               to={localePath('/')}
-              className="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors min-h-11"
-              style={{
-                color: isActive('/') ? 'var(--accent-primary)' : 'var(--text-primary)',
-                backgroundColor: isActive('/') ? 'var(--bg-tertiary)' : 'transparent',
-              }}
+              className={`${styles.navLink} ${isActive('/') ? styles.navLinkActive : ''}`}
             >
               <Home size={20} aria-hidden="true" />
               {t('home')}
             </Link>
             <Link
               to={localePath('/browse')}
-              className="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors min-h-11"
-              style={{
-                color: isActive('/browse') ? 'var(--accent-primary)' : 'var(--text-primary)',
-                backgroundColor: isActive('/browse') ? 'var(--bg-tertiary)' : 'transparent',
-              }}
+              className={`${styles.navLink} ${isActive('/browse') ? styles.navLinkActive : ''}`}
             >
               <List size={20} aria-hidden="true" />
               {t('browse')}
             </Link>
             <Link
               to={localePath('/my-learning')}
-              className="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors min-h-11"
-              style={{
-                color: isActive('/my-learning') ? 'var(--accent-primary)' : 'var(--text-primary)',
-                backgroundColor: isActive('/my-learning') ? 'var(--bg-tertiary)' : 'transparent',
-              }}
+              className={`${styles.navLink} ${isActive('/my-learning') ? styles.navLinkActive : ''}`}
             >
               <LayoutGrid size={20} aria-hidden="true" />
               {locale === 'ko' ? '내 학습 현황' : 'My Learning'}
             </Link>
             <Link
               to={localePath('/about')}
-              className="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors min-h-11"
-              style={{
-                color: isActive('/about') ? 'var(--accent-primary)' : 'var(--text-primary)',
-                backgroundColor: isActive('/about') ? 'var(--bg-tertiary)' : 'transparent',
-              }}
+              className={`${styles.navLink} ${isActive('/about') ? styles.navLinkActive : ''}`}
             >
               <Info size={20} aria-hidden="true" />
               {t('about')}
@@ -249,38 +215,24 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
           </div>
 
           {/* Categories */}
-          <div className="px-3 mb-6">
-            <div
-              className="px-3 py-2 text-xs font-medium uppercase tracking-wider"
-              style={{ color: 'var(--text-tertiary)' }}
-            >
-              {t('browseByCategory')}
-            </div>
+          <div className={styles.navSection}>
+            <div className={styles.sectionLabel}>{t('browseByCategory')}</div>
             <div className="space-y-0.5">
               {categories.slice(0, 6).map((category) => (
                 <Link
                   key={category.id}
                   to={localePath(`/category/${category.id}`)}
-                  className="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors text-sm min-h-11"
-                  style={{
-                    color: isActive(`/category/${category.id}`)
-                      ? 'var(--accent-primary)'
-                      : 'var(--text-secondary)',
-                    backgroundColor: isActive(`/category/${category.id}`)
-                      ? 'var(--bg-tertiary)'
-                      : 'transparent',
-                  }}
+                  className={`${styles.navLink} ${styles.navLinkSecondary} ${isActive(`/category/${category.id}`) ? styles.navLinkActive : ''}`}
                 >
-                  <span className="text-base">{category.icon}</span>
+                  <span className={styles.categoryIcon}>{category.icon}</span>
                   {category.name[locale]}
                 </Link>
               ))}
               <Link
                 to={localePath('/browse')}
-                className="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors text-sm min-h-11"
-                style={{ color: 'var(--accent-primary)' }}
+                className={`${styles.navLink} ${styles.navLinkSecondary} ${styles.viewAllLink}`}
               >
-                <span className="text-base opacity-50">+{categories.length - 6}</span>
+                <span className={styles.viewAllIcon}>+{categories.length - 6}</span>
                 {t('viewAll')}
               </Link>
             </div>
@@ -288,17 +240,11 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
         </nav>
 
         {/* Sidebar Footer */}
-        <div className="shrink-0 py-4 px-3 border-t border-border-primary">
-          <div className="px-3 py-2 text-xs font-medium uppercase tracking-wider text-text-tertiary">
-            {t('more')}
-          </div>
+        <div className={styles.sidebarFooter}>
+          <div className={styles.sectionLabel}>{t('more')}</div>
           <Link
             to={localePath('/sitemap')}
-            className="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors min-h-11"
-            style={{
-              color: isActive('/sitemap') ? 'var(--accent-primary)' : 'var(--text-primary)',
-              backgroundColor: isActive('/sitemap') ? 'var(--bg-tertiary)' : 'transparent',
-            }}
+            className={`${styles.navLink} ${isActive('/sitemap') ? styles.navLinkActive : ''}`}
           >
             <LayoutGrid size={20} aria-hidden="true" />
             {t('sitemap')}

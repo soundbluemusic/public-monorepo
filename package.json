@@ -63,6 +63,7 @@
     "lighthouse": "^13.0.1",
     "pixelmatch": "^6.0.0",
     "rollup-plugin-visualizer": "^6.0.5",
+    "sass": "^1.97.1",
     "sharp": "^0.34.5",
     "size-limit": "^11.1.6",
     "skott": "^0.35.6",
