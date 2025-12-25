@@ -18,10 +18,10 @@ import {
   LayoutGrid,
   List,
   Menu,
+  X,
 } from 'lucide-react';
 import { type ReactNode, useCallback, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
-import { Sheet } from './Sheet';
 
 // Use shared utility for locale stripping
 const stripLocale = stripLocaleFromPath;
@@ -40,9 +40,6 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
   const { locale, t, localePath } = useI18n();
   const location = useLocation();
   const navigate = useNavigate();
-
-  // Sidebar
-  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   // Back to top
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -116,15 +113,10 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
         <div className="max-w-3xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
           {/* Menu Button + Logo */}
           <div className="flex items-center gap-2 shrink-0">
-            <button
-              type="button"
-              onClick={() => setSidebarOpen(true)}
-              className="min-h-11 min-w-11 flex items-center justify-center rounded-lg transition-colors hover:bg-[var(--bg-tertiary)]"
-              style={{ color: 'var(--text-secondary)' }}
-              aria-label={t('menu')}
-            >
+            {/* CSS-only sidebar trigger using label */}
+            <label htmlFor="sidebar-toggle" className="sidebar-menu-btn" aria-label={t('menu')}>
               <Menu size={20} aria-hidden="true" />
-            </button>
+            </label>
             <Link
               to={localePath('/')}
               className="font-semibold"
@@ -171,13 +163,29 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
         </div>
       </header>
 
-      {/* Sidebar (Radix Dialog Sheet) */}
-      <Sheet open={sidebarOpen} onOpenChange={setSidebarOpen} title={t('menu')}>
+      {/* CSS-Only Sidebar (Checkbox Hack) - Works without JavaScript */}
+      <input type="checkbox" id="sidebar-toggle" className="sr-only" tabIndex={-1} />
+      <label htmlFor="sidebar-toggle" className="sidebar-backdrop">
+        <span className="sr-only">{locale === 'ko' ? '메뉴 닫기' : 'Close menu'}</span>
+      </label>
+      <aside className="sidebar-panel" aria-label={t('menu')}>
+        {/* Header */}
+        <div
+          className="h-14 flex items-center justify-between px-4 shrink-0"
+          style={{ borderBottom: '1px solid var(--border-primary)' }}
+        >
+          <span className="font-semibold" style={{ color: 'var(--text-primary)' }}>
+            {t('menu')}
+          </span>
+          <label htmlFor="sidebar-toggle" className="sidebar-close-btn" aria-label="Close menu">
+            <X size={20} aria-hidden="true" />
+          </label>
+        </div>
+
         <nav className="flex-1 overflow-y-auto py-4">
           <div className="px-3 mb-6">
             <Link
               to={localePath('/')}
-              onClick={() => setSidebarOpen(false)}
               className="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors min-h-11"
               style={{
                 color: isActive('/') ? 'var(--accent-primary)' : 'var(--text-primary)',
@@ -189,7 +197,6 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
             </Link>
             <Link
               to={localePath('/browse')}
-              onClick={() => setSidebarOpen(false)}
               className="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors min-h-11"
               style={{
                 color: isActive('/browse') ? 'var(--accent-primary)' : 'var(--text-primary)',
@@ -201,7 +208,6 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
             </Link>
             <Link
               to={localePath('/my-learning')}
-              onClick={() => setSidebarOpen(false)}
               className="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors min-h-11"
               style={{
                 color: isActive('/my-learning') ? 'var(--accent-primary)' : 'var(--text-primary)',
@@ -213,7 +219,6 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
             </Link>
             <Link
               to={localePath('/about')}
-              onClick={() => setSidebarOpen(false)}
               className="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors min-h-11"
               style={{
                 color: isActive('/about') ? 'var(--accent-primary)' : 'var(--text-primary)',
@@ -238,7 +243,6 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
                 <Link
                   key={category.id}
                   to={localePath(`/category/${category.id}`)}
-                  onClick={() => setSidebarOpen(false)}
                   className="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors text-sm min-h-11"
                   style={{
                     color: isActive(`/category/${category.id}`)
@@ -255,7 +259,6 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
               ))}
               <Link
                 to={localePath('/browse')}
-                onClick={() => setSidebarOpen(false)}
                 className="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors text-sm min-h-11"
                 style={{ color: 'var(--accent-primary)' }}
               >
@@ -279,7 +282,6 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
           </div>
           <Link
             to={localePath('/sitemap')}
-            onClick={() => setSidebarOpen(false)}
             className="flex items-center gap-3 px-3 py-3 rounded-lg transition-colors min-h-11"
             style={{
               color: isActive('/sitemap') ? 'var(--accent-primary)' : 'var(--text-primary)',
@@ -290,7 +292,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
             {t('sitemap')}
           </Link>
         </div>
-      </Sheet>
+      </aside>
 
       {/* Main */}
       <main
