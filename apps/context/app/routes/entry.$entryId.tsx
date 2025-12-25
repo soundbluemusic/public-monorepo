@@ -1,4 +1,5 @@
 import { Layout } from '@/components/Layout';
+import { LinkedExample } from '@/components/LinkedExample';
 import { meaningEntries } from '@/data/entries';
 import type { MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
@@ -157,9 +158,9 @@ export default function EntryPage() {
               {t('examples')}
             </h2>
             <ul className="space-y-2">
-              {translation.examples.map((example, index) => (
-                <li key={`${example}-${index}`} style={{ color: 'var(--text-secondary)' }}>
-                  {example}
+              {translation.examples.map((example) => (
+                <li key={example} style={{ color: 'var(--text-secondary)' }}>
+                  <LinkedExample text={example} currentEntryId={entry.id} />
                 </li>
               ))}
             </ul>
