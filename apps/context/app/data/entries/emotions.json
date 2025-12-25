@@ -47,13 +47,20 @@
           "short": ["Luv u!", "ILY", "<3"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[사랑]",
+      "ipa": "[saɾaŋ]"
     }
   },
   {
     "id": "haengbok",
     "korean": "행복",
     "romanization": "haengbok",
-    "pronunciation": "[행복]",
+    "pronunciation": {
+      "korean": "[행복]",
+      "ipa": "[hɛŋbok]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "emotions",
     "difficulty": "beginner",
@@ -130,6 +137,10 @@
           "master": "The sadness you feel when experiencing failure is a natural emotion, so don't be too hard on yourself."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[슬픔]",
+      "ipa": "[sɯlpʰɯm]"
     }
   },
   {
@@ -162,6 +173,10 @@
           "master": "When I wake up to good weather in the morning, I feel refreshed all day long."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[기분]",
+      "ipa": "[kipun]"
     }
   },
   {
@@ -194,6 +209,10 @@
           "master": "Parents always worry about their children, but I only realized that worry is a form of love as I got older."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[걱정]",
+      "ipa": "[kʌktɕʌŋ]"
     }
   },
   {
@@ -226,6 +245,10 @@
           "master": "They say that when you're angry, taking deep breaths and counting to 10 helps you calm down."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[화나다]",
+      "ipa": "[hwanada]"
     }
   },
   {
@@ -258,6 +281,10 @@
           "master": "It's scary when you hear footsteps behind you while walking alone at night."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[무섭다]",
+      "ipa": "[musʌptːa]"
     }
   },
   {
@@ -290,6 +317,10 @@
           "master": "I was frustrated because of the rain and traffic in the morning, but I felt better after having a cup of coffee."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[짜증나다]",
+      "ipa": "[tɕːadʑɯŋnada]"
     }
   },
   {
@@ -322,6 +353,10 @@
           "master": "I've been bored lately with nothing to do, so I'm thinking of finding a new hobby."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[심심하다]",
+      "ipa": "[ɕimɕimɦada]"
     }
   },
   {
@@ -354,6 +389,10 @@
           "master": "Seeing that my heart still flutters when the person I like contacts me, I guess it must be love."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[설레다]",
+      "ipa": "[sʌlɾeda]"
     }
   },
   {
@@ -386,6 +425,10 @@
           "master": "When your child takes their first steps, there's no happier moment as a parent."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[기쁘다]",
+      "ipa": "[kipːɯda]"
     }
   },
   {
@@ -418,6 +461,10 @@
           "master": "Even among people, you can feel lonely if there's no connection of hearts."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[외롭다]",
+      "ipa": "[weɾoptːa]"
     }
   },
   {
@@ -450,6 +497,10 @@
           "master": "Sometimes I feel embarrassed thinking about things I did when I was young."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[부끄럽다]",
+      "ipa": "[pukːɯɾʌptːa]"
     }
   },
   {
@@ -482,6 +533,10 @@
           "master": "Being grateful for everyday things we took for granted can make us happier."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[고맙다]",
+      "ipa": "[komaptːa]"
     }
   },
   {
@@ -514,6 +569,10 @@
           "master": "Being stuck at home because of COVID makes me naturally say I'm so sick of it."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[지겹다]",
+      "ipa": "[tɕiɡjʌptːa]"
     }
   },
   {
@@ -546,6 +605,10 @@
           "master": "To live a life without regrets, don't put off what you want to do - just try it."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[후회]",
+      "ipa": "[huɦwe]"
     }
   },
   {
@@ -578,6 +641,10 @@
           "master": "I felt frustrated because the other person couldn't understand no matter how much I explained."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[답답하다]",
+      "ipa": "[taptapʰada]"
     }
   },
   {
@@ -610,6 +677,10 @@
           "master": "You feel relieved after finishing all the things you've been putting off."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[홀가분하다]",
+      "ipa": "[holɡabunɦada]"
     }
   },
   {
@@ -642,6 +713,10 @@
           "master": "Everyone feels anxiety before adapting to a new environment."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[불안하다]",
+      "ipa": "[pulanɦada]"
     }
   },
   {
@@ -674,6 +749,10 @@
           "master": "I couldn't hide my disbelief when my presentation I'd prepared hard for ended in just 5 minutes."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[황당하다]",
+      "ipa": "[hwaŋdaŋɦada]"
     }
   },
   {
@@ -706,6 +785,10 @@
           "master": "If depressed feelings persist, it's good to consult a professional."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[우울하다]",
+      "ipa": "[uulɦada]"
     }
   },
   {
@@ -738,6 +821,10 @@
           "master": "Healthy jealousy can motivate growth, but excessive jealousy can ruin relationships."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[질투]",
+      "ipa": "[tɕiltʰu]"
     }
   },
   {
@@ -770,6 +857,10 @@
           "master": "You feel relieved after saying everything you wanted to, but sometimes you need to be careful."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[후련하다]",
+      "ipa": "[huɾjʌnɦada]"
     }
   },
   {
@@ -802,6 +893,10 @@
           "master": "While patience is important, expressing emotions is also healthy."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[참다]",
+      "ipa": "[tɕʰamtːa]"
     }
   },
   {
@@ -834,6 +929,10 @@
           "master": "Korean sentiments include unique emotions like 'han' and 'jeong'."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[정서]",
+      "ipa": "[tɕʌŋsʌ]"
     }
   },
   {
@@ -866,6 +965,10 @@
           "master": "Even Koreans who are awkward at expressing emotions become honest when drinking."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[감정]",
+      "ipa": "[kamdʑʌŋ]"
     }
   },
   {
@@ -898,6 +1001,10 @@
           "master": "It's important to stay confident and not be disheartened no matter how tough things get."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[기적]",
+      "ipa": "[kidʑʌk]"
     }
   },
   {
@@ -930,6 +1037,10 @@
           "master": "At amusement parks, even adults get as excited as children."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[신나다]",
+      "ipa": "[ɕinnada]"
     }
   },
   {
@@ -962,6 +1073,10 @@
           "master": "The secret to happiness is being satisfied with what you have."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[만족하다]",
+      "ipa": "[mandʑokʰada]"
     }
   },
   {
@@ -994,6 +1109,10 @@
           "master": "One way to avoid disappointment is to lower expectations from the start."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[실망하다]",
+      "ipa": "[ɕilmaŋɦada]"
     }
   },
   {
@@ -1026,6 +1145,10 @@
           "master": "A person with a beautiful heart is one who can be touched by small acts of kindness."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[감동하다]",
+      "ipa": "[kamdoŋɦada]"
     }
   },
   {
@@ -1058,6 +1181,10 @@
           "master": "I thought being an adult meant hiding my upset feelings, but that was wrong."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[멈추다]",
+      "ipa": "[mʌmtɕʰuda]"
     }
   },
   {
@@ -1090,6 +1217,10 @@
           "master": "You'll be less disappointed if you wait calmly without expecting too much."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[기대하다]",
+      "ipa": "[kidɛɦada]"
     }
   },
   {
@@ -1122,6 +1253,10 @@
           "master": "Human adaptability is truly remarkable - we can survive in any environment."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[놀랍다]",
+      "ipa": "[nollaptːa]"
     }
   },
   {
@@ -1154,6 +1289,10 @@
           "master": "It feels awkward when someone who hasn't contacted you in ages suddenly asks a favor."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[거슬리다]",
+      "ipa": "[kʌsɯlida]"
     }
   },
   {
@@ -1186,6 +1325,10 @@
           "master": "As we age, friends we can be comfortable with without pretense become most precious."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[편하다]",
+      "ipa": "[pʰjʌnɦada]"
     }
   },
   {
@@ -1218,6 +1361,10 @@
           "master": "You can be happier by being grateful for what you have rather than envying others."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[부럽다]",
+      "ipa": "[puɾʌptːa]"
     }
   },
   {
@@ -1250,6 +1397,10 @@
           "master": "When times are hard, recalling happy memories warms the heart."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[추악하다]",
+      "ipa": "[tɕʰuakʰada]"
     }
   },
   {
@@ -1282,6 +1433,10 @@
           "master": "The longing for someone who left doesn't fade easily even with time."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[그리운]",
+      "ipa": "[kɯɾiun]"
     }
   },
   {
@@ -1314,6 +1469,10 @@
           "master": "Artists have eyes that find inspiration even in everyday life."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[영감]",
+      "ipa": "[jʌŋɡam]"
     }
   },
   {
@@ -1346,6 +1505,10 @@
           "master": "As the saying 'hateful jeong, lovely jeong' shows, jeong is a complex, deep emotion for Koreans."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[정직]",
+      "ipa": "[tɕʌŋdʑik]"
     }
   },
   {
@@ -1378,6 +1541,10 @@
           "master": "The emptiness felt after a long relationship ends is hard to explain."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[험하다]",
+      "ipa": "[hʌmɦada]"
     }
   },
   {
@@ -1410,6 +1577,10 @@
           "master": "True courage isn't the absence of fear, but acting despite being afraid."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[용감하다]",
+      "ipa": "[joŋɡamɦada]"
     }
   },
   {
@@ -1442,6 +1613,10 @@
           "master": "Healthy pride is necessary, but excessive pride can ruin relationships."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[잠잠하다]",
+      "ipa": "[tɕamdʑamɦada]"
     }
   },
   {
@@ -1474,6 +1649,10 @@
           "master": "Healthy confidence helps you challenge yourself without fearing failure."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[잠시]",
+      "ipa": "[tɕamɕi]"
     }
   },
   {
@@ -1506,6 +1685,10 @@
           "master": "Hope makes us believe that dawn comes even after the darkest night."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[활발하다]",
+      "ipa": "[hwalbalɦada]"
     }
   },
   {
@@ -1538,6 +1721,10 @@
           "master": "Even in despair, finding a small light helps you get back up."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[저물다]",
+      "ipa": "[tɕʌmulda]"
     }
   },
   {
@@ -1570,6 +1757,10 @@
           "master": "The closer you are, the more you feel hurt by small things."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[서운하다]",
+      "ipa": "[sʌunɦada]"
     }
   },
   {
@@ -1602,6 +1793,10 @@
           "master": "Expressing sincere gratitude makes the other person feel good too."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[감사함]",
+      "ipa": "[kamsaɦam]"
     }
   },
   {
@@ -1634,6 +1829,10 @@
           "master": "Maintaining a peaceful mind may be the hardest thing for modern people."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[편안하다]",
+      "ipa": "[pʰjʌnanɦada]"
     }
   }
 ]

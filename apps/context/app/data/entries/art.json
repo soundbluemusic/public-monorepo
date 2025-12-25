@@ -3,7 +3,10 @@
     "id": "misul",
     "korean": "미술",
     "romanization": "misul",
-    "pronunciation": "[미술]",
+    "pronunciation": {
+      "korean": "[미술]",
+      "ipa": "[misul]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "art",
     "difficulty": "beginner",
@@ -82,13 +85,20 @@
           "short": ["Picture", "Drawing"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[그림]",
+      "ipa": "[kɯɾim]"
     }
   },
   {
     "id": "josak",
     "korean": "조각",
     "romanization": "josak",
-    "pronunciation": "[조각]",
+    "pronunciation": {
+      "korean": "[조각]",
+      "ipa": "[tɕoɡak]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "art",
     "difficulty": "intermediate",
@@ -131,7 +141,10 @@
     "id": "misulgwan",
     "korean": "미술관",
     "romanization": "misulgwan",
-    "pronunciation": "[미술관]",
+    "pronunciation": {
+      "korean": "[미술관]",
+      "ipa": "[misulɡwan]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "art",
     "difficulty": "beginner",
@@ -174,7 +187,10 @@
     "id": "saek",
     "korean": "색",
     "romanization": "saek",
-    "pronunciation": "[색]",
+    "pronunciation": {
+      "korean": "[색]",
+      "ipa": "[sɛk]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "art",
     "difficulty": "beginner",
@@ -253,13 +269,20 @@
           "short": ["Design", "Dsgn"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[디자인]",
+      "ipa": "[tidʑain]"
     }
   },
   {
     "id": "jakga",
     "korean": "작가",
     "romanization": "jakga",
-    "pronunciation": "[작가]",
+    "pronunciation": {
+      "korean": "[작가]",
+      "ipa": "[tɕakːa]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "art",
     "difficulty": "intermediate",
@@ -302,7 +325,10 @@
     "id": "jeonsi",
     "korean": "전시",
     "romanization": "jeonsi",
-    "pronunciation": "[전시]",
+    "pronunciation": {
+      "korean": "[전시]",
+      "ipa": "[tɕʌnɕi]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "art",
     "difficulty": "intermediate",
@@ -381,13 +407,20 @@
           "short": ["Canvas", "Board"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[캔버스]",
+      "ipa": "[kʰɛnbʌsɯ]"
     }
   },
   {
     "id": "bulut",
     "korean": "붓",
     "romanization": "but",
-    "pronunciation": "[붇]",
+    "pronunciation": {
+      "korean": "[붓]",
+      "ipa": "[put]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "art",
     "difficulty": "beginner",

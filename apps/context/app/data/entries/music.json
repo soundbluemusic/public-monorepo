@@ -39,13 +39,20 @@
           "short": ["Song", "Tune"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[노래]",
+      "ipa": "[noɾɛ]"
     }
   },
   {
     "id": "gasu",
     "korean": "가수",
     "romanization": "gasu",
-    "pronunciation": "[가수]",
+    "pronunciation": {
+      "korean": "[가수]",
+      "ipa": "[kasu]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "music",
     "difficulty": "beginner",
@@ -88,7 +95,10 @@
     "id": "akgi",
     "korean": "악기",
     "romanization": "akgi",
-    "pronunciation": "[악기]",
+    "pronunciation": {
+      "korean": "[악기]",
+      "ipa": "[akːi]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "music",
     "difficulty": "beginner",
@@ -167,6 +177,10 @@
           "short": ["Piano", "Keys"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[피아노]",
+      "ipa": "[pʰiano]"
     }
   },
   {
@@ -209,6 +223,10 @@
           "short": ["Guitar", "Gtr"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[기타]",
+      "ipa": "[kitʰa]"
     }
   },
   {
@@ -251,6 +269,10 @@
           "short": ["Drums", "Percussion"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[드럼]",
+      "ipa": "[tɯɾʌm]"
     }
   },
   {
@@ -293,6 +315,10 @@
           "short": ["Concert", "Show"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[콘서트]",
+      "ipa": "[kʰonsʌtʰɯ]"
     }
   },
   {
@@ -335,6 +361,10 @@
           "short": ["Rhythm", "Beat"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[리듬]",
+      "ipa": "[ɾidɯm]"
     }
   },
   {
@@ -377,6 +407,10 @@
           "short": ["Melody", "Tune"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[멜로디]",
+      "ipa": "[mellodi]"
     }
   },
   {
@@ -419,6 +453,10 @@
           "short": ["K-pop", "Kpop"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[케이팝]",
+      "ipa": "[kʰeipʰap]"
     }
   }
 ]

@@ -3,7 +3,10 @@
     "id": "hoesa",
     "korean": "회사",
     "romanization": "hoesa",
-    "pronunciation": "[회사]",
+    "pronunciation": {
+      "korean": "[회사]",
+      "ipa": "[hwesa]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "work",
     "difficulty": "beginner",
@@ -46,7 +49,10 @@
     "id": "samusil",
     "korean": "사무실",
     "romanization": "samusil",
-    "pronunciation": "[사무실]",
+    "pronunciation": {
+      "korean": "[사무실]",
+      "ipa": "[samuɕil]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "work",
     "difficulty": "beginner",
@@ -89,7 +95,10 @@
     "id": "hoeui",
     "korean": "회의",
     "romanization": "hoeui",
-    "pronunciation": "[회의]",
+    "pronunciation": {
+      "korean": "[회의]",
+      "ipa": "[hweɯi]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "work",
     "difficulty": "beginner",
@@ -132,7 +141,10 @@
     "id": "sangsa",
     "korean": "상사",
     "romanization": "sangsa",
-    "pronunciation": "[상사]",
+    "pronunciation": {
+      "korean": "[상사]",
+      "ipa": "[saŋsa]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "work",
     "difficulty": "intermediate",
@@ -175,7 +187,10 @@
     "id": "dongryo",
     "korean": "동료",
     "romanization": "dongryo",
-    "pronunciation": "[동료]",
+    "pronunciation": {
+      "korean": "[동료]",
+      "ipa": "[toŋɾjo]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "work",
     "difficulty": "intermediate",
@@ -218,7 +233,10 @@
     "id": "eommu",
     "korean": "업무",
     "romanization": "eommu",
-    "pronunciation": "[업무]",
+    "pronunciation": {
+      "korean": "[업무]",
+      "ipa": "[ʌpmu]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "work",
     "difficulty": "intermediate",
@@ -297,13 +315,20 @@
           "short": ["Email", "E-mail"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[이메일]",
+      "ipa": "[imeil]"
     }
   },
   {
     "id": "jeonhwa",
     "korean": "전화",
     "romanization": "jeonhwa",
-    "pronunciation": "[전화]",
+    "pronunciation": {
+      "korean": "[전화]",
+      "ipa": "[tɕʌnɦwa]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "work",
     "difficulty": "beginner",
@@ -346,7 +371,10 @@
     "id": "bogoseo",
     "korean": "보고서",
     "romanization": "bogoseo",
-    "pronunciation": "[보고서]",
+    "pronunciation": {
+      "korean": "[보고서]",
+      "ipa": "[poɡosʌ]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "work",
     "difficulty": "intermediate",
@@ -389,7 +417,10 @@
     "id": "magam",
     "korean": "마감",
     "romanization": "magam",
-    "pronunciation": "[마감]",
+    "pronunciation": {
+      "korean": "[마감]",
+      "ipa": "[maɡam]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "work",
     "difficulty": "intermediate",
@@ -458,6 +489,10 @@
           "master": "I signed the salary contract."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[연봉]",
+      "ipa": "[jʌnboŋ]"
     }
   },
   {
@@ -490,6 +525,10 @@
           "master": "I pay living expenses with my salary."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[월급]",
+      "ipa": "[wʌlɡɯp]"
     }
   },
   {
@@ -522,6 +561,10 @@
           "master": "I work from home so I don't need to commute."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[출근]",
+      "ipa": "[tɕʰulɡɯn]"
     }
   },
   {
@@ -554,6 +597,10 @@
           "master": "Can I leave early today?"
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[퇴근]",
+      "ipa": "[twɛɡɯn]"
     }
   },
   {
@@ -586,6 +633,10 @@
           "master": "Do you get overtime pay?"
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[야근]",
+      "ipa": "[jaɡɯn]"
     }
   },
   {
@@ -618,6 +669,10 @@
           "master": "How many annual leave days do you have left?"
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[휴가]",
+      "ipa": "[hjuɡa]"
     }
   },
   {
@@ -650,6 +705,10 @@
           "master": "I passed the second interview."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[면접]",
+      "ipa": "[mjʌndʑʌp]"
     }
   },
   {
@@ -682,6 +741,10 @@
           "master": "Prepare your resume and cover letter."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[이력서]",
+      "ipa": "[iɾjʌksʌ]"
     }
   },
   {
@@ -714,6 +777,10 @@
           "master": "My dream is to work at a big company."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[취업]",
+      "ipa": "[tɕʰwiʌp]"
     }
   },
   {
@@ -746,6 +813,10 @@
           "master": "I applied for early retirement."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[퇴직]",
+      "ipa": "[twedʑik]"
     }
   },
   {
@@ -778,6 +849,10 @@
           "master": "I want to work hard and get promoted."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[승진]",
+      "ipa": "[sɯŋdʑin]"
     }
   },
   {
@@ -810,6 +885,10 @@
           "master": "I was assigned to a major project."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[프로젝트]",
+      "ipa": "[pʰɯɾodʑektʰɯ]"
     }
   },
   {
@@ -842,6 +921,10 @@
           "master": "I'm making presentation materials."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[발표]",
+      "ipa": "[palpʰjo]"
     }
   },
   {
@@ -874,6 +957,10 @@
           "master": "I'm negotiating the contract terms."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[계약]",
+      "ipa": "[kjejak]"
     }
   },
   {
@@ -906,6 +993,10 @@
           "master": "I found a new business partner."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[거래처]",
+      "ipa": "[kʌɾɛtɕʰʌ]"
     }
   },
   {
@@ -938,6 +1029,10 @@
           "master": "It's important to increase customer satisfaction."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[고객]",
+      "ipa": "[koɡɛk]"
     }
   },
   {
@@ -970,6 +1065,10 @@
           "master": "I feel responsibility as team leader."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[팀장]",
+      "ipa": "[tʰimdʑaŋ]"
     }
   },
   {
@@ -1002,6 +1101,10 @@
           "master": "My goal is to be promoted to manager."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[부장]",
+      "ipa": "[pudʑaŋ]"
     }
   },
   {
@@ -1034,6 +1137,10 @@
           "master": "I want to become a CEO someday."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[사장]",
+      "ipa": "[sadʑaŋ]"
     }
   },
   {
@@ -1066,6 +1173,10 @@
           "master": "I have many overseas business trips."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[출장]",
+      "ipa": "[tɕʰuldʑaŋ]"
     }
   },
   {
@@ -1098,6 +1209,10 @@
           "master": "Remote work increased after COVID."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[재택]",
+      "ipa": "[tɕɛtʰɛk]"
     }
   },
   {
@@ -1130,6 +1245,10 @@
           "master": "Work dinner culture is changing."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[회식]",
+      "ipa": "[hweɕik]"
     }
   },
   {
@@ -1162,6 +1281,10 @@
           "master": "Please submit reports by department."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[부서]",
+      "ipa": "[pusʌ]"
     }
   },
   {
@@ -1194,6 +1317,10 @@
           "master": "I received new employee training."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[신입]",
+      "ipa": "[ɕinip]"
     }
   },
   {
@@ -1226,6 +1353,10 @@
           "master": "Building career experience is important."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[경력]",
+      "ipa": "[kjʌŋɾjʌk]"
     }
   },
   {
@@ -1258,6 +1389,10 @@
           "master": "I got a new computer."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[컴퓨터]",
+      "ipa": "[kʰʌmpʰjutʰʌ]"
     }
   },
   {
@@ -1290,6 +1425,10 @@
           "master": "It's hard to work without internet."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[인터넷]",
+      "ipa": "[intʰʌnet]"
     }
   },
   {
@@ -1322,6 +1461,10 @@
           "master": "I saved the file to the cloud."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[파일]",
+      "ipa": "[pʰail]"
     }
   },
   {
@@ -1354,6 +1497,10 @@
           "master": "We need to replace the printer ink."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[프린터]",
+      "ipa": "[pʰɯɾintʰʌ]"
     }
   },
   {
@@ -1386,6 +1533,10 @@
           "master": "Please make double-sided copies."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[복사]",
+      "ipa": "[poksa]"
     }
   },
   {
@@ -1418,6 +1569,10 @@
           "master": "It's month-end settlement deadline."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[정산]",
+      "ipa": "[tɕʌŋsan]"
     }
   },
   {
@@ -1450,6 +1605,10 @@
           "master": "We're planning next year's budget."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[예산]",
+      "ipa": "[jesan]"
     }
   },
   {
@@ -1482,6 +1641,10 @@
           "master": "We're working to increase sales."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[매출]",
+      "ipa": "[mɛtɕʰul]"
     }
   },
   {
@@ -1514,6 +1677,10 @@
           "master": "Sales performance is good."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[영업]",
+      "ipa": "[jʌŋʌp]"
     }
   },
   {
@@ -1546,6 +1713,10 @@
           "master": "I'm in charge of digital marketing."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[마케팅]",
+      "ipa": "[makʰetʰiŋ]"
     }
   },
   {
@@ -1578,6 +1749,10 @@
           "master": "I'm in charge of new product planning."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[기획]",
+      "ipa": "[kiɦwek]"
     }
   },
   {
@@ -1610,6 +1785,10 @@
           "master": "I'm a software developer."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[개발]",
+      "ipa": "[kɛbal]"
     }
   },
   {
@@ -1642,6 +1821,10 @@
           "master": "HR announced the training schedule."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[인사부]",
+      "ipa": "[insabu]"
     }
   },
   {
@@ -1674,6 +1857,10 @@
           "master": "The presentation is in the large conference room."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[회의실]",
+      "ipa": "[hweɯiɕil]"
     }
   },
   {
@@ -1706,6 +1893,10 @@
           "master": "This company has good employee benefits."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[직원]",
+      "ipa": "[tɕiɡwʌn]"
     }
   }
 ]

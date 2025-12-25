@@ -3,7 +3,10 @@
     "id": "gonghang",
     "korean": "공항",
     "romanization": "gonghang",
-    "pronunciation": "[공항]",
+    "pronunciation": {
+      "korean": "[공항]",
+      "ipa": "[koŋhaŋ]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "travel",
     "difficulty": "beginner",
@@ -46,7 +49,10 @@
     "id": "yeok",
     "korean": "역",
     "romanization": "yeok",
-    "pronunciation": "[역]",
+    "pronunciation": {
+      "korean": "[역]",
+      "ipa": "[jʌk]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "travel",
     "difficulty": "beginner",
@@ -125,13 +131,20 @@
           "short": ["Bus", "B"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[버스]",
+      "ipa": "[pʌsɯ]"
     }
   },
   {
     "id": "jihacheol",
     "korean": "지하철",
     "romanization": "jihacheol",
-    "pronunciation": "[지하철]",
+    "pronunciation": {
+      "korean": "[지하철]",
+      "ipa": "[tɕiɦatɕʰʌl]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "travel",
     "difficulty": "beginner",
@@ -210,13 +223,20 @@
           "short": ["Taxi", "Cab"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[택시]",
+      "ipa": "[tʰɛkɕi]"
     }
   },
   {
     "id": "gicha",
     "korean": "기차",
     "romanization": "gicha",
-    "pronunciation": "[기차]",
+    "pronunciation": {
+      "korean": "[기차]",
+      "ipa": "[kitɕʰa]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "travel",
     "difficulty": "beginner",
@@ -259,7 +279,10 @@
     "id": "bihaenggi",
     "korean": "비행기",
     "romanization": "bihaenggi",
-    "pronunciation": "[비행기]",
+    "pronunciation": {
+      "korean": "[비행기]",
+      "ipa": "[piɦɛŋɡi]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "travel",
     "difficulty": "beginner",
@@ -338,13 +361,20 @@
           "short": ["Hotel", "Htl"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[호텔]",
+      "ipa": "[hotʰel]"
     }
   },
   {
     "id": "hwajangsil",
     "korean": "화장실",
     "romanization": "hwajangsil",
-    "pronunciation": "[화장실]",
+    "pronunciation": {
+      "korean": "[화장실]",
+      "ipa": "[hwadʑaŋɕil]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "travel",
     "difficulty": "beginner",
@@ -387,7 +417,10 @@
     "id": "chulgु",
     "korean": "출구",
     "romanization": "chulgu",
-    "pronunciation": "[출구]",
+    "pronunciation": {
+      "korean": "[출구]",
+      "ipa": "[tɕʰulɡu]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "travel",
     "difficulty": "beginner",
@@ -430,7 +463,10 @@
     "id": "ipgu",
     "korean": "입구",
     "romanization": "ipgu",
-    "pronunciation": "[입구]",
+    "pronunciation": {
+      "korean": "[입구]",
+      "ipa": "[ipku]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "travel",
     "difficulty": "beginner",
@@ -509,6 +545,10 @@
           "short": ["Where", "Whr"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[어디]",
+      "ipa": "[ʌdi]"
     }
   },
   {
@@ -551,13 +591,20 @@
           "short": ["How much", "$$"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[얼마]",
+      "ipa": "[ʌlma]"
     }
   },
   {
     "id": "pyo",
     "korean": "표",
     "romanization": "pyo",
-    "pronunciation": "[표]",
+    "pronunciation": {
+      "korean": "[표]",
+      "ipa": "[pʰjo]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "travel",
     "difficulty": "beginner",
@@ -600,7 +647,10 @@
     "id": "yeyak",
     "korean": "예약",
     "romanization": "yeyak",
-    "pronunciation": "[예약]",
+    "pronunciation": {
+      "korean": "[예약]",
+      "ipa": "[jejak]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "travel",
     "difficulty": "beginner",
@@ -669,6 +719,10 @@
           "master": "I learned a lot while traveling."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[여행]",
+      "ipa": "[jʌhɛŋ]"
     }
   },
   {
@@ -701,6 +755,10 @@
           "master": "I booked a tour guide."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[관광]",
+      "ipa": "[kwanɡwaŋ]"
     }
   },
   {
@@ -733,6 +791,10 @@
           "master": "Naver Maps is more convenient than paper maps."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[지도]",
+      "ipa": "[tɕido]"
     }
   },
   {
@@ -765,6 +827,10 @@
           "master": "I need to take a new passport photo."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[여권]",
+      "ipa": "[jʌɡwʌn]"
     }
   },
   {
@@ -797,6 +863,10 @@
           "master": "You can stay for 90 days visa-free."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[비자]",
+      "ipa": "[pidʑa]"
     }
   },
   {
@@ -829,6 +899,10 @@
           "master": "I lost my luggage at the airport."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[짐]",
+      "ipa": "[tɕim]"
     }
   },
   {
@@ -861,6 +935,10 @@
           "master": "The suitcase wheel broke at the airport."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[캐리어]",
+      "ipa": "[kʰɛɾiʌ]"
     }
   },
   {
@@ -893,6 +971,10 @@
           "master": "I stayed at many hostels when backpacking."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[호스텔]",
+      "ipa": "[hosɯtʰel]"
     }
   },
   {
@@ -925,6 +1007,10 @@
           "master": "The homestay lady was very kind."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[민박]",
+      "ipa": "[minbak]"
     }
   },
   {
@@ -957,6 +1043,10 @@
           "master": "For domestic flights, you can arrive 1 hour early."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[국내선]",
+      "ipa": "[kuŋnɛsʌn]"
     }
   },
   {
@@ -989,6 +1079,10 @@
           "master": "Arrive at the airport 2 hours before international flights."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[국제선]",
+      "ipa": "[kuktɕesʌn]"
     }
   },
   {
@@ -1021,6 +1115,10 @@
           "master": "You can enter with the boarding pass QR code."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[탑승]",
+      "ipa": "[tʰapsɯŋ]"
     }
   },
   {
@@ -1053,6 +1151,10 @@
           "master": "Use the restroom before departure."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[출발]",
+      "ipa": "[tɕʰulbal]"
     }
   },
   {
@@ -1085,6 +1187,10 @@
           "master": "I'll contact you when I arrive."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[도착]",
+      "ipa": "[todʑak]"
     }
   },
   {
@@ -1117,6 +1223,10 @@
           "master": "Free transfer time is 30 minutes."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[환승]",
+      "ipa": "[hwansɯŋ]"
     }
   },
   {
@@ -1149,6 +1259,10 @@
           "master": "The bus route map is complicated."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[노선]",
+      "ipa": "[nosʌn]"
     }
   },
   {
@@ -1181,6 +1295,10 @@
           "master": "Take the airport bus at this stop."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[정류장]",
+      "ipa": "[tɕʌŋɾjudʑaŋ]"
     }
   },
   {
@@ -1213,6 +1331,10 @@
           "master": "I want to travel overseas again after COVID."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[해외여행]",
+      "ipa": "[hɛwejʌhɛŋ]"
     }
   },
   {
@@ -1245,6 +1367,10 @@
           "master": "Domestic flight tickets have become cheaper."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[국내]",
+      "ipa": "[kuŋnɛ]"
     }
   },
   {
@@ -1277,6 +1403,10 @@
           "master": "Online duty-free is cheaper."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[면세점]",
+      "ipa": "[mjʌnsedʑʌm]"
     }
   },
   {
@@ -1309,6 +1439,10 @@
           "master": "Exchange money when the rate is good."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[환전]",
+      "ipa": "[hwandʑʌn]"
     }
   },
   {
@@ -1341,6 +1475,10 @@
           "master": "The exchange rate fluctuates a lot."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[환율]",
+      "ipa": "[hwanjul]"
     }
   },
   {
@@ -1373,6 +1511,10 @@
           "master": "Use the automated immigration counter."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[입국]",
+      "ipa": "[ipkuk]"
     }
   },
   {
@@ -1405,6 +1547,10 @@
           "master": "Come to the airport 3 hours before departure."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[출국]",
+      "ipa": "[tɕʰulɡuk]"
     }
   },
   {
@@ -1437,6 +1583,10 @@
           "master": "Report the lost baggage."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[수하물]",
+      "ipa": "[suɦamul]"
     }
   },
   {
@@ -1469,6 +1619,10 @@
           "master": "Carry-on liquids are limited to 100ml."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[기내용]",
+      "ipa": "[kinɛjoŋ]"
     }
   },
   {
@@ -1501,6 +1655,10 @@
           "master": "Online check-in is convenient."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[체크인]",
+      "ipa": "[tɕʰekʰɯin]"
     }
   },
   {
@@ -1533,6 +1691,10 @@
           "master": "I left quickly with express check-out."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[체크아웃]",
+      "ipa": "[tɕʰekʰɯaut]"
     }
   },
   {
@@ -1565,6 +1727,10 @@
           "master": "Look for hidden gems."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[명소]",
+      "ipa": "[mjʌŋso]"
     }
   },
   {
@@ -1597,6 +1763,10 @@
           "master": "This site is a UNESCO World Heritage."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[유적지]",
+      "ipa": "[judʑʌktɕi]"
     }
   },
   {
@@ -1629,6 +1799,10 @@
           "master": "There's a special exhibition at the museum."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[박람회]",
+      "ipa": "[pakɾamhwe]"
     }
   },
   {
@@ -1661,6 +1835,10 @@
           "master": "Local guides know better."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[기도]",
+      "ipa": "[kido]"
     }
   },
   {
@@ -1693,6 +1871,10 @@
           "master": "I posted the photo on Instagram."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[사진]",
+      "ipa": "[sadʑin]"
     }
   },
   {
@@ -1725,6 +1907,10 @@
           "master": "I backpacked through Europe in college."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[배낭]",
+      "ipa": "[pɛnaŋ]"
     }
   },
   {
@@ -1757,6 +1943,10 @@
           "master": "It's good to have a flexible itinerary."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[일정]",
+      "ipa": "[ildʑʌŋ]"
     }
   }
 ]

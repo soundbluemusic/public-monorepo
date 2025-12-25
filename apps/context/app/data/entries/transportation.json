@@ -29,6 +29,10 @@
           "master": "It's better to avoid peak traffic hours."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[교통]",
+      "ipa": "[kjotʰoŋ]"
     }
   },
   {
@@ -61,6 +65,10 @@
           "master": "You can bring your car if you use a car ferry."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[배]",
+      "ipa": "[pɛ]"
     }
   },
   {
@@ -93,6 +101,10 @@
           "master": "Car maintenance costs more than you'd think."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[자동차]",
+      "ipa": "[tɕatoŋtɕʰa]"
     }
   },
   {
@@ -125,6 +137,10 @@
           "master": "Bike-sharing services are expanding nationwide."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[자전거]",
+      "ipa": "[tɕadʑʌnɡʌ]"
     }
   },
   {
@@ -157,6 +173,10 @@
           "master": "You need to take a separate test to get a motorcycle license."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[오토바이]",
+      "ipa": "[otʰobai]"
     }
   },
   {
@@ -189,6 +209,10 @@
           "master": "You can check real-time bus arrival info at the bus stop."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[정류장]",
+      "ipa": "[tɕʌŋɾjudʑaŋ]"
     }
   },
   {
@@ -221,6 +245,10 @@
           "master": "Incheon Port is one of the largest international ports in Korea."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[항구]",
+      "ipa": "[haŋɡu]"
     }
   },
   {
@@ -253,6 +281,10 @@
           "master": "Additional charges may apply depending on the distance."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[요금]",
+      "ipa": "[joɡɯm]"
     }
   },
   {
@@ -285,6 +317,10 @@
           "master": "A postpaid transit card charges the monthly fare later."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[교통카드]",
+      "ipa": "[kjotʰoŋkʰadɯ]"
     }
   },
   {
@@ -317,6 +353,10 @@
           "master": "It's convenient to set up automatic recharging."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[충전]",
+      "ipa": "[tɕʰuŋdʑʌn]"
     }
   },
   {
@@ -349,6 +389,10 @@
           "master": "Bus-subway transfers are possible up to 5 times."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[환승]",
+      "ipa": "[hwansɯŋ]"
     }
   },
   {
@@ -381,6 +425,10 @@
           "master": "Listen carefully to announcements if there's a delay."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[출발]",
+      "ipa": "[tɕʰulbal]"
     }
   },
   {
@@ -413,6 +461,10 @@
           "master": "Go to baggage claim after arrival."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[도착]",
+      "ipa": "[todʑak]"
     }
   },
   {
@@ -445,6 +497,10 @@
           "master": "This route only operates on weekends."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[노선]",
+      "ipa": "[nosʌn]"
     }
   },
   {
@@ -477,6 +533,10 @@
           "master": "You can check real-time route maps on the app."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[노선도]",
+      "ipa": "[nosʌndo]"
     }
   },
   {
@@ -509,6 +569,10 @@
           "master": "Use a shuttle bus if the gate is far away."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[탑승]",
+      "ipa": "[tʰapsɯŋ]"
     }
   },
   {
@@ -541,6 +605,10 @@
           "master": "You need to file a lost report if your luggage doesn't come out."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[수하물]",
+      "ipa": "[suɦamul]"
     }
   },
   {
@@ -573,6 +641,10 @@
           "master": "You can't board if your carry-on exceeds size limits."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[기내짐]",
+      "ipa": "[kinɛdʑim]"
     }
   },
   {
@@ -605,6 +677,10 @@
           "master": "Service may be suspended during heavy snow."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[운행]",
+      "ipa": "[unɦɛŋ]"
     }
   },
   {
@@ -637,6 +713,10 @@
           "master": "Last train times are extended on Friday nights."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[막차]",
+      "ipa": "[maktɕʰa]"
     }
   },
   {
@@ -669,6 +749,10 @@
           "master": "First train times vary slightly by station."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[첫차]",
+      "ipa": "[tɕʰʌttɕʰa]"
     }
   },
   {
@@ -701,6 +785,10 @@
           "master": "Drowsy driving is very dangerous."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[운전]",
+      "ipa": "[undʑʌn]"
     }
   },
   {
@@ -733,6 +821,10 @@
           "master": "You can drive abroad with an international license."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[면허증]",
+      "ipa": "[mjʌnhʌdʑɯŋ]"
     }
   },
   {
@@ -765,6 +857,10 @@
           "master": "Using valet parking service is convenient."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[주차장]",
+      "ipa": "[tɕutɕʰadʑaŋ]"
     }
   },
   {
@@ -797,6 +893,10 @@
           "master": "Parallel parking is hardest for beginner drivers."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[주차]",
+      "ipa": "[tɕutɕʰa]"
     }
   },
   {
@@ -829,6 +929,10 @@
           "master": "Don't cross when the pedestrian light is flashing."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[신호등]",
+      "ipa": "[ɕinɦodɯŋ]"
     }
   },
   {
@@ -861,6 +965,10 @@
           "master": "It's dangerous to cross where there's no crosswalk."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[횡단보도]",
+      "ipa": "[hwɛŋdanbodo]"
     }
   },
   {
@@ -893,6 +1001,10 @@
           "master": "Pedestrians use the road because of illegally parked cars on the sidewalk."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[인도]",
+      "ipa": "[indo]"
     }
   },
   {
@@ -925,6 +1037,10 @@
           "master": "Regular cars get fined for using the bus-only lane."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[차도]",
+      "ipa": "[tɕʰado]"
     }
   },
   {
@@ -957,6 +1073,10 @@
           "master": "Highways are very congested during holidays."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[고속도로]",
+      "ipa": "[kosoktoɾo]"
     }
   },
   {
@@ -989,6 +1109,10 @@
           "master": "You may need to go through immigration at the stopover."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[경유]",
+      "ipa": "[kjʌŋju]"
     }
   },
   {
@@ -1021,6 +1145,10 @@
           "master": "If there's no direct route, look for the shortest stopover."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[직항]",
+      "ipa": "[tɕikʰaŋ]"
     }
   },
   {
@@ -1053,6 +1181,10 @@
           "master": "Cancellation fee policies differ by airline."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[취소]",
+      "ipa": "[tɕʰwiso]"
     }
   },
   {
@@ -1085,6 +1217,10 @@
           "master": "The boarding pass shows seat number and gate information."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[탑승권]",
+      "ipa": "[tʰapsɯŋɡwʌn]"
     }
   },
   {
@@ -1117,6 +1253,10 @@
           "master": "Check-in opens 3 hours before departure."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[체크인]",
+      "ipa": "[tɕʰekʰɯin]"
     }
   },
   {
@@ -1149,6 +1289,10 @@
           "master": "Use fast-track service if the security line is long."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[보안검사]",
+      "ipa": "[poanɡʌmsa]"
     }
   },
   {
@@ -1181,6 +1325,10 @@
           "master": "Prepare in advance as they may ask your purpose of entry."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[입국]",
+      "ipa": "[ipkuk]"
     }
   },
   {
@@ -1213,6 +1361,10 @@
           "master": "Check your passport validity before departure."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[출국]",
+      "ipa": "[tɕʰulɡuk]"
     }
   },
   {
@@ -1245,6 +1397,10 @@
           "master": "I took the local road because the toll was expensive."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[통행료]",
+      "ipa": "[tʰoŋhɛŋɾjo]"
     }
   },
   {
@@ -1277,6 +1433,10 @@
           "master": "The free transfer system for public transit works well."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[대중교통]",
+      "ipa": "[tɛdʑuŋɡjotʰoŋ]"
     }
   },
   {
@@ -1309,6 +1469,10 @@
           "master": "You can avoid traffic jams using navigation."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[교통정체]",
+      "ipa": "[kjotʰoŋdʑʌŋtɕʰe]"
     }
   },
   {
@@ -1341,6 +1505,10 @@
           "master": "Long-term rental is cheaper than short-term."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[렌트]",
+      "ipa": "[ɾentʰɯ]"
     }
   },
   {
@@ -1373,6 +1541,10 @@
           "master": "Navigation with real-time traffic info is better."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[나비]",
+      "ipa": "[nabi]"
     }
   },
   {
@@ -1405,6 +1577,10 @@
           "master": "You get a discount when transferring to a city bus."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[시내버스]",
+      "ipa": "[ɕinɛbʌsɯ]"
     }
   },
   {
@@ -1437,6 +1613,10 @@
           "master": "There are no seats on express buses during rush hour."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[광역버스]",
+      "ipa": "[kwaŋjʌkpʌsɯ]"
     }
   },
   {
@@ -1469,6 +1649,10 @@
           "master": "There are late-night airport buses too."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[공항버스]",
+      "ipa": "[koŋhaŋbʌsɯ]"
     }
   },
   {
@@ -1501,6 +1685,10 @@
           "master": "With KTX free seating, you might have to stand."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[케이티엑스]",
+      "ipa": "[kʰeitʰieksɯ]"
     }
   },
   {
@@ -1533,6 +1721,10 @@
           "master": "Metro lines continue to expand."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[전철]",
+      "ipa": "[tɕʌntɕʰʌl]"
     }
   },
   {
@@ -1565,6 +1757,10 @@
           "master": "You can install a Hi-Pass device in rental cars too."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[하이패스]",
+      "ipa": "[haipʰɛsɯ]"
     }
   },
   {
@@ -1597,6 +1793,10 @@
           "master": "App calls are safer late at night."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[우버택시]",
+      "ipa": "[ubʌtʰɛkɕi]"
     }
   }
 ]

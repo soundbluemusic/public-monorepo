@@ -3,7 +3,10 @@
     "id": "suhak",
     "korean": "수학",
     "romanization": "suhak",
-    "pronunciation": "[수학]",
+    "pronunciation": {
+      "korean": "[수학]",
+      "ipa": "[suɦak]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "math",
     "difficulty": "beginner",
@@ -46,7 +49,10 @@
     "id": "su",
     "korean": "수",
     "romanization": "su",
-    "pronunciation": "[수]",
+    "pronunciation": {
+      "korean": "[수]",
+      "ipa": "[su]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "math",
     "difficulty": "beginner",
@@ -89,7 +95,10 @@
     "id": "deotсem",
     "korean": "덧셈",
     "romanization": "deotsem",
-    "pronunciation": "[덛쎔]",
+    "pronunciation": {
+      "korean": "[덧셈]",
+      "ipa": "[tʌtːsem]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "math",
     "difficulty": "beginner",
@@ -132,7 +141,10 @@
     "id": "bbaelsem",
     "korean": "뺄셈",
     "romanization": "ppaelsem",
-    "pronunciation": "[빨쎔]",
+    "pronunciation": {
+      "korean": "[뺄셈]",
+      "ipa": "[pːɛlsem]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "math",
     "difficulty": "beginner",
@@ -175,7 +187,10 @@
     "id": "gopsem",
     "korean": "곱셈",
     "romanization": "gopsem",
-    "pronunciation": "[곱쎔]",
+    "pronunciation": {
+      "korean": "[곱셈]",
+      "ipa": "[kopsem]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "math",
     "difficulty": "beginner",
@@ -218,7 +233,10 @@
     "id": "nanutсem",
     "korean": "나눗셈",
     "romanization": "nanutsem",
-    "pronunciation": "[나눗쎔]",
+    "pronunciation": {
+      "korean": "[나눗셈]",
+      "ipa": "[nanutːsem]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "math",
     "difficulty": "beginner",
@@ -261,7 +279,10 @@
     "id": "bunsu",
     "korean": "분수",
     "romanization": "bunsu",
-    "pronunciation": "[분수]",
+    "pronunciation": {
+      "korean": "[분수]",
+      "ipa": "[punsu]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "math",
     "difficulty": "intermediate",
@@ -304,7 +325,10 @@
     "id": "doхyeong",
     "korean": "도형",
     "romanization": "dohyeong",
-    "pronunciation": "[도형]",
+    "pronunciation": {
+      "korean": "[도형]",
+      "ipa": "[tohjʌŋ]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "math",
     "difficulty": "beginner",
@@ -347,7 +371,10 @@
     "id": "bangjeongsik",
     "korean": "방정식",
     "romanization": "bangjeongsik",
-    "pronunciation": "[방정식]",
+    "pronunciation": {
+      "korean": "[방정식]",
+      "ipa": "[paŋdʑʌŋɕik]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "math",
     "difficulty": "intermediate",
@@ -390,7 +417,10 @@
     "id": "hwaryul",
     "korean": "확률",
     "romanization": "hwaryul",
-    "pronunciation": "[화률]",
+    "pronunciation": {
+      "korean": "[확률]",
+      "ipa": "[hwakɾjul]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "math",
     "difficulty": "intermediate",

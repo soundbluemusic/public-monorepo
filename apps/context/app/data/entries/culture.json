@@ -39,13 +39,20 @@
           "short": ["Drama", "Series"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[드라마]",
+      "ipa": "[tɯɾama]"
     }
   },
   {
     "id": "yeonghwa",
     "korean": "영화",
     "romanization": "yeonghwa",
-    "pronunciation": "[영화]",
+    "pronunciation": {
+      "korean": "[영화]",
+      "ipa": "[jʌŋhwa]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "culture",
     "difficulty": "beginner",
@@ -88,7 +95,10 @@
     "id": "chaek",
     "korean": "책",
     "romanization": "chaek",
-    "pronunciation": "[책]",
+    "pronunciation": {
+      "korean": "[책]",
+      "ipa": "[tɕʰɛk]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "culture",
     "difficulty": "beginner",
@@ -131,7 +141,10 @@
     "id": "eumak",
     "korean": "음악",
     "romanization": "eumak",
-    "pronunciation": "[으막]",
+    "pronunciation": {
+      "korean": "[음악]",
+      "ipa": "[ɯmak]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "culture",
     "difficulty": "beginner",
@@ -174,7 +187,10 @@
     "id": "gongyeon",
     "korean": "공연",
     "romanization": "gongyeon",
-    "pronunciation": "[공연]",
+    "pronunciation": {
+      "korean": "[공연]",
+      "ipa": "[koŋjʌn]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "culture",
     "difficulty": "intermediate",
@@ -217,7 +233,10 @@
     "id": "jeontong",
     "korean": "전통",
     "romanization": "jeontong",
-    "pronunciation": "[전통]",
+    "pronunciation": {
+      "korean": "[전통]",
+      "ipa": "[tɕʌntʰoŋ]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "culture",
     "difficulty": "intermediate",
@@ -260,7 +279,10 @@
     "id": "myeongjeol",
     "korean": "명절",
     "romanization": "myeongjeol",
-    "pronunciation": "[명절]",
+    "pronunciation": {
+      "korean": "[명절]",
+      "ipa": "[mjʌŋdʑʌl]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "culture",
     "difficulty": "intermediate",
@@ -303,7 +325,10 @@
     "id": "hanbok",
     "korean": "한복",
     "romanization": "hanbok",
-    "pronunciation": "[한복]",
+    "pronunciation": {
+      "korean": "[한복]",
+      "ipa": "[hanbok]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "culture",
     "difficulty": "beginner",
@@ -382,13 +407,20 @@
           "short": ["Kimchi", "K-food"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[김치]",
+      "ipa": "[kimtɕʰi]"
     }
   },
   {
     "id": "hangul",
     "korean": "한글",
     "romanization": "hangeul",
-    "pronunciation": "[한글]",
+    "pronunciation": {
+      "korean": "[한글]",
+      "ipa": "[hanɡɯl]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "culture",
     "difficulty": "beginner",

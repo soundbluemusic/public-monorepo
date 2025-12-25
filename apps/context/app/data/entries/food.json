@@ -29,6 +29,10 @@
           "master": "When I eat the warm home-cooked meal my mom makes, all my stress seems to melt away."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[밥]",
+      "ipa": "[pap]"
     }
   },
   {
@@ -61,6 +65,10 @@
           "master": "When I introduced kimchi to my foreign friend, they struggled with the spiciness at first, but now they're hooked and eat it every day."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[김치]",
+      "ipa": "[kimtɕʰi]"
     }
   },
   {
@@ -93,6 +101,10 @@
           "master": "In Korean restaurants, water is often provided for free, so you don't need to order it separately."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[물]",
+      "ipa": "[mul]"
     }
   },
   {
@@ -125,6 +137,10 @@
           "master": "Since I'm vegetarian, I get my protein from tofu or mushrooms instead of meat."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[고기]",
+      "ipa": "[koɡi]"
     }
   },
   {
@@ -157,6 +173,10 @@
           "master": "The line 'Do you want to come up for ramyeon?' from Korean dramas has become so famous that even foreigners know it."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[라면]",
+      "ipa": "[ɾamjʌn]"
     }
   },
   {
@@ -189,6 +209,10 @@
           "master": "Eating delicious food makes me feel better and relieves stress."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[맛있다]",
+      "ipa": "[maɕitːa]"
     }
   },
   {
@@ -221,6 +245,10 @@
           "master": "When I eat spicy food, I sweat, but I like the good feeling that comes after."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[맵다]",
+      "ipa": "[mɛptːa]"
     }
   },
   {
@@ -253,6 +281,10 @@
           "master": "I like that many Korean restaurants offer free refills on side dishes."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[식당]",
+      "ipa": "[ɕiktaŋ]"
     }
   },
   {
@@ -285,6 +317,10 @@
           "master": "I'm on a diet, but it's really hard to resist when I'm hungry at night."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[배고프다]",
+      "ipa": "[pɛɡopʰɯda]"
     }
   },
   {
@@ -317,6 +353,10 @@
           "master": "Let's have a cup of coffee and chat after lunch."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[커피]",
+      "ipa": "[kʰʌpʰi]"
     }
   },
   {
@@ -349,6 +389,10 @@
           "master": "Bibimbap can be made by using leftover side dishes, so it's easy to prepare at home."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[비빔밥]",
+      "ipa": "[pibimbap]"
     }
   },
   {
@@ -381,6 +425,10 @@
           "master": "The sweet bulgogi marinade is made with pear and soy sauce, which tenderizes the meat."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[불고기]",
+      "ipa": "[pulɡoɡi]"
     }
   },
   {
@@ -413,6 +461,10 @@
           "master": "Samgyeopsal is really delicious when wrapped in lettuce with ssamjang."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[삼겹살]",
+      "ipa": "[samɡjʌpsal]"
     }
   },
   {
@@ -445,6 +497,10 @@
           "master": "When making kimbap at home, the key is not to put too much rice."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[김밥]",
+      "ipa": "[kimbap]"
     }
   },
   {
@@ -477,6 +533,10 @@
           "master": "Mixing rice in tteokbokki sauce is really delicious."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[떡볶이]",
+      "ipa": "[tːʌkpoːkːi]"
     }
   },
   {
@@ -509,6 +569,10 @@
           "master": "Korean families make and eat stew almost every day."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[찌개]",
+      "ipa": "[tɕːiɡɛ]"
     }
   },
   {
@@ -541,6 +605,10 @@
           "master": "Japchae is essential at celebrations, and you can feel the care since it requires much effort."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[잡채]",
+      "ipa": "[tɕaptɕʰɛ]"
     }
   },
   {
@@ -573,6 +641,10 @@
           "master": "LA galbi is thinly sliced American-style and popular in Korea too."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[갈비]",
+      "ipa": "[kalbi]"
     }
   },
   {
@@ -605,6 +677,10 @@
           "master": "It's Korean food culture to finish a meat meal with naengmyeon to cleanse the palate."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[냉면]",
+      "ipa": "[nɛŋmjʌn]"
     }
   },
   {
@@ -637,6 +713,10 @@
           "master": "You should also eat the glutinous rice and jujubes inside the samgyetang."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[삼계탕]",
+      "ipa": "[samɡjetʰaŋ]"
     }
   },
   {
@@ -669,6 +749,10 @@
           "master": "Market sundae tastes even better with intestines and liver."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[순대]",
+      "ipa": "[sundɛ]"
     }
   },
   {
@@ -701,6 +785,10 @@
           "master": "When making jeon, temperature control is important - cooking slowly on low heat makes it crispy."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[전]",
+      "ipa": "[tɕʌn]"
     }
   },
   {
@@ -733,6 +821,10 @@
           "master": "When making handmade dumplings, they won't taste good if the dough is too thick."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[만두]",
+      "ipa": "[mandu]"
     }
   },
   {
@@ -765,6 +857,10 @@
           "master": "Homemade doenjang tastes completely different from factory-made."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[된장]",
+      "ipa": "[twedʑaŋ]"
     }
   },
   {
@@ -797,6 +893,10 @@
           "master": "Sunchang gochujang is famous because it's aged traditionally for a rich flavor."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[고추장]",
+      "ipa": "[kotɕʰudʑaŋ]"
     }
   },
   {
@@ -829,6 +929,10 @@
           "master": "Good cabbage should be dense and yellow inside for delicious kimchi."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[배추]",
+      "ipa": "[pɛtɕʰu]"
     }
   },
   {
@@ -861,6 +965,10 @@
           "master": "Steamed egg looks simple but requires skill to make it fluffy."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[계란]",
+      "ipa": "[kjeɾan]"
     }
   },
   {
@@ -893,6 +1001,10 @@
           "master": "Hand-pressed tofu from traditional markets has a completely different texture from factory tofu."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[두부]",
+      "ipa": "[tubu]"
     }
   },
   {
@@ -925,6 +1037,10 @@
           "master": "Side dishes packed by mom are the best gift for someone living alone."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[반찬]",
+      "ipa": "[pantɕʰan]"
     }
   },
   {
@@ -957,6 +1073,10 @@
           "master": "Korean tables always have soup because the soup culture is well-developed."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[국]",
+      "ipa": "[kuk]"
     }
   },
   {
@@ -989,6 +1109,10 @@
           "master": "Korean namul culture contains wisdom about eating various vegetables healthily."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[나물]",
+      "ipa": "[namul]"
     }
   },
   {
@@ -1021,6 +1145,10 @@
           "master": "When trying soju for the first time, it's good to start with fruit soju for beginners."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[소주]",
+      "ipa": "[sodʑu]"
     }
   },
   {
@@ -1053,6 +1181,10 @@
           "master": "The combination of chicken and beer is called 'chimaek' - a representative Korean late-night food culture."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[맥주]",
+      "ipa": "[mɛktɕu]"
     }
   },
   {
@@ -1085,6 +1217,10 @@
           "master": "The rice balls my mom made when I was young always bring back nostalgic memories."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[주먹밥]",
+      "ipa": "[tɕumʌkpap]"
     }
   },
   {
@@ -1117,6 +1253,10 @@
           "master": "In the countryside, people mix barley rice like bibimbap."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[보리밥]",
+      "ipa": "[poɾibap]"
     }
   },
   {
@@ -1149,6 +1289,10 @@
           "master": "Well-fermented kkakdugi is delicious in soup or fried rice."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[깍두기]",
+      "ipa": "[kːaktuɡi]"
     }
   },
   {
@@ -1181,6 +1325,10 @@
           "master": "Leek and scallion have different uses - leek for soups, scallion for side dishes."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[파]",
+      "ipa": "[pʰa]"
     }
   },
   {
@@ -1213,6 +1361,10 @@
           "master": "There's a saying that Koreans have good skin because they eat a lot of garlic."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[마늘]",
+      "ipa": "[manɯl]"
     }
   },
   {
@@ -1245,6 +1397,10 @@
           "master": "Adding a little salt when blanching spinach keeps the color prettier."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[시금치]",
+      "ipa": "[ɕiɡɯmtɕʰi]"
     }
   },
   {
@@ -1277,6 +1433,10 @@
           "master": "Eating pumpkin during postpartum care is said to reduce swelling."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[호박]",
+      "ipa": "[hobak]"
     }
   },
   {
@@ -1309,6 +1469,10 @@
           "master": "Adding onion juice when marinating meat makes it tender."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[양파]",
+      "ipa": "[jaŋpʰa]"
     }
   },
   {
@@ -1341,6 +1505,10 @@
           "master": "Cooking carrots in oil increases beta-carotene absorption."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[당근]",
+      "ipa": "[taŋɡɯn]"
     }
   },
   {
@@ -1373,6 +1541,10 @@
           "master": "Boiling potatoes with the skin retains more nutrients."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[감자]",
+      "ipa": "[kamdʑa]"
     }
   },
   {
@@ -1405,6 +1577,10 @@
           "master": "Eating kimchi with sweet potato is said to prevent bloating."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[고구마]",
+      "ipa": "[koɡuma]"
     }
   },
   {
@@ -1437,6 +1613,10 @@
           "master": "Ginger warms the body, so it's especially good in winter."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[생강]",
+      "ipa": "[sɛŋɡaŋ]"
     }
   },
   {
@@ -1469,6 +1649,10 @@
           "master": "Perilla seeds make a creamy broth unlike sesame, used in perilla seed soup."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[깨]",
+      "ipa": "[kːɛ]"
     }
   },
   {
@@ -1501,6 +1685,10 @@
           "master": "Freshly pressed sesame oil from a mill has a much better aroma."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[참기름]",
+      "ipa": "[tɕʰamɡiɾɯm]"
     }
   },
   {
@@ -1533,6 +1721,10 @@
           "master": "Traditionally brewed Joseon soy sauce has a deep flavor and is healthy."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[간장]",
+      "ipa": "[kandʑaŋ]"
     }
   },
   {
@@ -1565,6 +1757,10 @@
           "master": "Naturally fermented vinegar is healthy and popular these days."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[식초]",
+      "ipa": "[ɕiktɕʰo]"
     }
   },
   {
@@ -1597,6 +1793,10 @@
           "master": "In Korean cooking, sugar along with soy sauce forms the base of seasonings."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[설탕]",
+      "ipa": "[sʌltʰaŋ]"
     }
   }
 ]

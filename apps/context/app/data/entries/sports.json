@@ -39,13 +39,20 @@
           "short": ["Sports", "Sport"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[스포츠]",
+      "ipa": "[sɯpʰotɕʰɯ]"
     }
   },
   {
     "id": "chukgu",
     "korean": "축구",
     "romanization": "chukgu",
-    "pronunciation": "[축구]",
+    "pronunciation": {
+      "korean": "[축구]",
+      "ipa": "[tɕʰukːu]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "sports",
     "difficulty": "beginner",
@@ -88,7 +95,10 @@
     "id": "yagu",
     "korean": "야구",
     "romanization": "yagu",
-    "pronunciation": "[야구]",
+    "pronunciation": {
+      "korean": "[야구]",
+      "ipa": "[jaɡu]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "sports",
     "difficulty": "beginner",
@@ -131,7 +141,10 @@
     "id": "nonggu",
     "korean": "농구",
     "romanization": "nonggu",
-    "pronunciation": "[농구]",
+    "pronunciation": {
+      "korean": "[농구]",
+      "ipa": "[noŋɡu]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "sports",
     "difficulty": "beginner",
@@ -174,7 +187,10 @@
     "id": "suyeong",
     "korean": "수영",
     "romanization": "suyeong",
-    "pronunciation": "[수영]",
+    "pronunciation": {
+      "korean": "[수영]",
+      "ipa": "[sujʌŋ]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "sports",
     "difficulty": "beginner",
@@ -253,13 +269,20 @@
           "short": ["Running", "Run"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[달리기]",
+      "ipa": "[talɾiɡi]"
     }
   },
   {
     "id": "undong",
     "korean": "운동",
     "romanization": "undong",
-    "pronunciation": "[운동]",
+    "pronunciation": {
+      "korean": "[운동]",
+      "ipa": "[undoŋ]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "sports",
     "difficulty": "beginner",
@@ -338,13 +361,20 @@
           "short": ["Team", "Squad"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[팀]",
+      "ipa": "[tʰim]"
     }
   },
   {
     "id": "gyeonggi",
     "korean": "경기",
     "romanization": "gyeonggi",
-    "pronunciation": "[경기]",
+    "pronunciation": {
+      "korean": "[경기]",
+      "ipa": "[kjʌŋɡi]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "sports",
     "difficulty": "beginner",
@@ -387,7 +417,10 @@
     "id": "seungli",
     "korean": "승리",
     "romanization": "seungli",
-    "pronunciation": "[승니]",
+    "pronunciation": {
+      "korean": "[승리]",
+      "ipa": "[sɯŋɾi]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "sports",
     "difficulty": "intermediate",
@@ -430,7 +463,10 @@
     "id": "yeonseup",
     "korean": "연습",
     "romanization": "yeonseup",
-    "pronunciation": "[연습]",
+    "pronunciation": {
+      "korean": "[연습]",
+      "ipa": "[jʌnsɯp]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "sports",
     "difficulty": "beginner",

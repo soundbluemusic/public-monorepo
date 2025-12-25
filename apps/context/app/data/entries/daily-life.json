@@ -29,13 +29,20 @@
           "master": "Visiting the house where I lived as a child brought back many fond memories."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[집]",
+      "ipa": "[tɕip]"
     }
   },
   {
     "id": "hakgyo",
     "korean": "학교",
     "romanization": "hakgyo",
-    "pronunciation": "[학꾜]",
+    "pronunciation": {
+      "korean": "[학교]",
+      "ipa": "[hakːjo]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "daily-life",
     "difficulty": "beginner",
@@ -94,6 +101,10 @@
           "master": "What happened all of a sudden? You don't look well and I'm worried about you."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[일]",
+      "ipa": "[il]"
     }
   },
   {
@@ -126,6 +137,10 @@
           "master": "To save money, you need to reduce impulse buying and spend according to a plan."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[돈]",
+      "ipa": "[ton]"
     }
   },
   {
@@ -158,6 +173,10 @@
           "master": "When answering the phone, it's common to say '네, 여보세요?' (Yes, hello?)."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[네]",
+      "ipa": "[ne]"
     }
   },
   {
@@ -190,6 +209,10 @@
           "master": "I don't know what the problem is. Can you explain in more detail?"
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[뭐]",
+      "ipa": "[mwo]"
     }
   },
   {
@@ -222,6 +245,10 @@
           "master": "This is really delicious! Where did you buy it?"
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[이게]",
+      "ipa": "[iɡe]"
     }
   },
   {
@@ -254,6 +281,10 @@
           "master": "Why do you keep being late? This is the third time."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[왜]",
+      "ipa": "[wɛ]"
     }
   },
   {
@@ -286,6 +317,10 @@
           "master": "They say time is more precious than money, and I think it's true."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[시간]",
+      "ipa": "[ɕiɡan]"
     }
   },
   {
@@ -318,6 +353,10 @@
           "master": "These days, people contact each other more through KakaoTalk than phone calls."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[전화]",
+      "ipa": "[tɕʌnɦwa]"
     }
   },
   {
@@ -350,6 +389,10 @@
           "master": "When I organize my room, I feel like my mind gets organized too."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[방방]",
+      "ipa": "[paŋbaŋ]"
     }
   },
   {
@@ -382,6 +425,10 @@
           "master": "On rainy days, watching raindrops on the window makes me feel peaceful."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[창장]",
+      "ipa": "[tɕʰaŋdʑaŋ]"
     }
   },
   {
@@ -414,6 +461,10 @@
           "master": "You never know when opportunity will knock, so always be prepared."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[문]",
+      "ipa": "[mun]"
     }
   },
   {
@@ -446,6 +497,10 @@
           "master": "In Korea, many people sleep on the floor because of ondol culture."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[침]",
+      "ipa": "[tɕʰim]"
     }
   },
   {
@@ -478,6 +533,10 @@
           "master": "Korean bathroom culture surprises foreigners - bidets and free toilet paper are common."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[화장실]",
+      "ipa": "[hwadʑaŋɕil]"
     }
   },
   {
@@ -510,6 +569,10 @@
           "master": "The kitchen is said to be the heart of the home, so keeping it clean is important."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[부엌]",
+      "ipa": "[puʌk]"
     }
   },
   {
@@ -542,6 +605,10 @@
           "master": "Korean apartment living rooms usually face south, so they get plenty of sunlight."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[거실]",
+      "ipa": "[kʌɕil]"
     }
   },
   {
@@ -574,6 +641,10 @@
           "master": "Seoul apartment prices have risen so much that it's hard for young people to own homes."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[침정]",
+      "ipa": "[tɕʰimdʑʌŋ]"
     }
   },
   {
@@ -606,6 +677,10 @@
           "master": "If you lose your key, you can't get in, so keep a spare."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[열쇠]",
+      "ipa": "[jʌlswe]"
     }
   },
   {
@@ -638,6 +713,10 @@
           "master": "In emergencies, you should evacuate using stairs, not the elevator."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[계단]",
+      "ipa": "[kjedan]"
     }
   },
   {
@@ -670,6 +749,10 @@
           "master": "Korean apartments usually have elevators, so elderly people can move around easily."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[엘리베이터]",
+      "ipa": "[ellibeitʰʌ]"
     }
   },
   {
@@ -702,6 +785,10 @@
           "master": "These days, convenience stores sell even coffee and chicken, making them very handy."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[편의점]",
+      "ipa": "[pʰjʌnɯidʑʌm]"
     }
   },
   {
@@ -734,6 +821,10 @@
           "master": "Large marts are required to close twice a month, so check before going."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[마트]",
+      "ipa": "[matʰɯ]"
     }
   },
   {
@@ -766,6 +857,10 @@
           "master": "In Korea, hospital costs are relatively cheap thanks to health insurance."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[병원]",
+      "ipa": "[pjʌŋwʌn]"
     }
   },
   {
@@ -798,6 +893,10 @@
           "master": "There's usually a pharmacy near hospitals, so you can get medicine right after getting a prescription."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[약국]",
+      "ipa": "[jakːuk]"
     }
   },
   {
@@ -830,6 +929,10 @@
           "master": "Korean banks have advanced digital services, so most things can be done through apps."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[은행]",
+      "ipa": "[ɯnhɛŋ]"
     }
   },
   {
@@ -862,6 +965,10 @@
           "master": "Post office delivery is cheap, so it's good for sending heavy items."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[우체국]",
+      "ipa": "[utɕʰeɡuk]"
     }
   },
   {
@@ -894,6 +1001,10 @@
           "master": "In Korea, call 112 in emergencies and police will be dispatched."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[경찰서]",
+      "ipa": "[kjʌŋtɕʰalsʌ]"
     }
   },
   {
@@ -926,6 +1037,10 @@
           "master": "Firefighters handle not only fires but also rescue operations."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[소방서]",
+      "ipa": "[sobaŋsʌ]"
     }
   },
   {
@@ -958,6 +1073,10 @@
           "master": "Libraries now let you borrow e-books too, which is convenient."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[도서관]",
+      "ipa": "[tosʌɡwan]"
     }
   },
   {
@@ -990,6 +1109,10 @@
           "master": "In spring, parks are crowded with people viewing cherry blossoms."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[공원]",
+      "ipa": "[koŋwʌn]"
     }
   },
   {
@@ -1022,6 +1145,10 @@
           "master": "For foreigners, jjimjilbang culture is a very unique and fun experience."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[찜질방]",
+      "ipa": "[tɕːimdʑilbaŋ]"
     }
   },
   {
@@ -1054,6 +1181,10 @@
           "master": "Korea's coffee consumption is among the highest in the world, so there are many cafes."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[카페]",
+      "ipa": "[kʰapʰe]"
     }
   },
   {
@@ -1086,6 +1217,10 @@
           "master": "Coin karaoke is cheap, so you can go alone without burden."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[노래방]",
+      "ipa": "[noɾɛbaŋ]"
     }
   },
   {
@@ -1118,6 +1253,10 @@
           "master": "These days, PC bangs sell food and have good facilities, making them as nice as cafes."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[피곤하다]",
+      "ipa": "[pʰiɡonɦada]"
     }
   },
   {
@@ -1150,6 +1289,10 @@
           "master": "There are many self-service laundromats now, so you can do laundry cheaply."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[세탁]",
+      "ipa": "[setʰak]"
     }
   },
   {
@@ -1182,6 +1325,10 @@
           "master": "Korean salons offer head spas after coloring or perming, which is nice."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[미용실]",
+      "ipa": "[mijoŋɕil]"
     }
   },
   {
@@ -1214,6 +1361,10 @@
           "master": "More people than you'd think sign up for gyms but never go."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[헬스장]",
+      "ipa": "[helsɯdʑaŋ]"
     }
   },
   {
@@ -1246,6 +1397,10 @@
           "master": "Korean apartment complexes usually have pools for residents to use."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[수영]",
+      "ipa": "[sujʌŋ]"
     }
   },
   {
@@ -1278,6 +1433,10 @@
           "master": "My friend was really touched when we threw a surprise party for their birthday."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[생일]",
+      "ipa": "[sɛŋil]"
     }
   },
   {
@@ -1310,6 +1469,10 @@
           "master": "Many Koreans feel burdened because weddings are expensive."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[결혼]",
+      "ipa": "[kjʌlhon]"
     }
   },
   {
@@ -1342,6 +1505,10 @@
           "master": "In Korea, there's a custom of giving rice cakes to neighbors when moving."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[입사]",
+      "ipa": "[ipsa]"
     }
   },
   {
@@ -1374,6 +1541,10 @@
           "master": "I can't trust my friend because they keep breaking promises."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[약속]",
+      "ipa": "[jaksok]"
     }
   },
   {
@@ -1406,6 +1577,10 @@
           "master": "In Korea, besides blind dates, there are group dates, apps, and other ways to meet."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[소개팅]",
+      "ipa": "[soɡɛtʰiŋ]"
     }
   },
   {
@@ -1438,6 +1613,10 @@
           "master": "These days, company dinners are more optional and you don't have to go."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[회식]",
+      "ipa": "[hweɕik]"
     }
   },
   {
@@ -1470,6 +1649,10 @@
           "master": "The 'hurry hurry' culture is efficient but is sometimes criticized for lacking leisure."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[빨리]",
+      "ipa": "[pːalli]"
     }
   },
   {
@@ -1502,6 +1685,10 @@
           "master": "Taking a hot shower after work relieves the day's fatigue."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[샌드위치]",
+      "ipa": "[sɛndɯwitɕʰi]"
     }
   },
   {
@@ -1534,6 +1721,10 @@
           "master": "I forgot to pack my toothbrush when traveling, so I bought one at a convenience store."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[칫솔]",
+      "ipa": "[tɕʰitsol]"
     }
   },
   {
@@ -1566,6 +1757,10 @@
           "master": "Hand washing habits became more important after COVID."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[비누]",
+      "ipa": "[pinu]"
     }
   },
   {
@@ -1598,6 +1793,10 @@
           "master": "Hotels replace towels with fresh ones every day."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[소시지]",
+      "ipa": "[soɕidʑi]"
     }
   }
 ]

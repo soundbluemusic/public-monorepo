@@ -3,7 +3,10 @@
     "id": "uju",
     "korean": "우주",
     "romanization": "uju",
-    "pronunciation": "[우주]",
+    "pronunciation": {
+      "korean": "[우주]",
+      "ipa": "[udʑu]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "space",
     "difficulty": "beginner",
@@ -46,7 +49,10 @@
     "id": "byeol",
     "korean": "별",
     "romanization": "byeol",
-    "pronunciation": "[별]",
+    "pronunciation": {
+      "korean": "[별]",
+      "ipa": "[pjʌl]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "space",
     "difficulty": "beginner",
@@ -89,7 +95,10 @@
     "id": "jigu",
     "korean": "지구",
     "romanization": "jigu",
-    "pronunciation": "[지구]",
+    "pronunciation": {
+      "korean": "[지구]",
+      "ipa": "[tɕiɡu]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "space",
     "difficulty": "beginner",
@@ -132,7 +141,10 @@
     "id": "haengseong",
     "korean": "행성",
     "romanization": "haengseong",
-    "pronunciation": "[행성]",
+    "pronunciation": {
+      "korean": "[행성]",
+      "ipa": "[hɛŋsʌŋ]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "space",
     "difficulty": "intermediate",
@@ -175,7 +187,10 @@
     "id": "taeyang",
     "korean": "태양",
     "romanization": "taeyang",
-    "pronunciation": "[태양]",
+    "pronunciation": {
+      "korean": "[태양]",
+      "ipa": "[tʰɛjaŋ]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "space",
     "difficulty": "beginner",
@@ -218,7 +233,10 @@
     "id": "ujuseon",
     "korean": "우주선",
     "romanization": "ujuseon",
-    "pronunciation": "[우주선]",
+    "pronunciation": {
+      "korean": "[우주선]",
+      "ipa": "[udʑusʌn]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "space",
     "difficulty": "beginner",
@@ -261,7 +279,10 @@
     "id": "ujuin",
     "korean": "우주인",
     "romanization": "ujuin",
-    "pronunciation": "[우주인]",
+    "pronunciation": {
+      "korean": "[우주인]",
+      "ipa": "[udʑuin]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "space",
     "difficulty": "beginner",
@@ -304,7 +325,10 @@
     "id": "eunha",
     "korean": "은하",
     "romanization": "eunha",
-    "pronunciation": "[은하]",
+    "pronunciation": {
+      "korean": "[은하]",
+      "ipa": "[ɯnɦa]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "space",
     "difficulty": "intermediate",
@@ -383,13 +407,20 @@
           "short": ["Black hole", "BH"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[블랙홀]",
+      "ipa": "[pɯllɛkʰol]"
     }
   },
   {
     "id": "manwongyeong",
     "korean": "망원경",
     "romanization": "mangwongyeong",
-    "pronunciation": "[망원경]",
+    "pronunciation": {
+      "korean": "[망원경]",
+      "ipa": "[maŋwʌnɡjʌŋ]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "space",
     "difficulty": "beginner",

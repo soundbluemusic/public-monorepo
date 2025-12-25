@@ -3,7 +3,10 @@
     "id": "mullihak",
     "korean": "물리학",
     "romanization": "mullihak",
-    "pronunciation": "[물니학]",
+    "pronunciation": {
+      "korean": "[물리학]",
+      "ipa": "[mulliɦak]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "physics",
     "difficulty": "intermediate",
@@ -46,7 +49,10 @@
     "id": "him",
     "korean": "힘",
     "romanization": "him",
-    "pronunciation": "[힘]",
+    "pronunciation": {
+      "korean": "[힘]",
+      "ipa": "[him]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "physics",
     "difficulty": "beginner",
@@ -125,13 +131,20 @@
           "short": ["Energy", "Power"]
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[에너지]",
+      "ipa": "[enʌdʑi]"
     }
   },
   {
     "id": "jungnyeok",
     "korean": "중력",
     "romanization": "jungnyeok",
-    "pronunciation": "[중녁]",
+    "pronunciation": {
+      "korean": "[중력]",
+      "ipa": "[tɕuŋɾjʌk]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "physics",
     "difficulty": "intermediate",
@@ -174,7 +187,10 @@
     "id": "sokdo",
     "korean": "속도",
     "romanization": "sokdo",
-    "pronunciation": "[속또]",
+    "pronunciation": {
+      "korean": "[속도]",
+      "ipa": "[sokto]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "physics",
     "difficulty": "beginner",
@@ -217,7 +233,10 @@
     "id": "jilryang",
     "korean": "질량",
     "romanization": "jillyang",
-    "pronunciation": "[질량]",
+    "pronunciation": {
+      "korean": "[질량]",
+      "ipa": "[tɕilːjaŋ]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "physics",
     "difficulty": "intermediate",
@@ -260,7 +279,10 @@
     "id": "bich",
     "korean": "빛",
     "romanization": "bit",
-    "pronunciation": "[빋]",
+    "pronunciation": {
+      "korean": "[빛]",
+      "ipa": "[pit]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "physics",
     "difficulty": "beginner",
@@ -303,7 +325,10 @@
     "id": "jeon-gi",
     "korean": "전기",
     "romanization": "jeongi",
-    "pronunciation": "[전기]",
+    "pronunciation": {
+      "korean": "[전기]",
+      "ipa": "[tɕʌŋɡi]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "physics",
     "difficulty": "beginner",
@@ -346,7 +371,10 @@
     "id": "ondo",
     "korean": "온도",
     "romanization": "ondo",
-    "pronunciation": "[온도]",
+    "pronunciation": {
+      "korean": "[온도]",
+      "ipa": "[onto]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "physics",
     "difficulty": "beginner",
@@ -389,7 +417,10 @@
     "id": "padong",
     "korean": "파동",
     "romanization": "padong",
-    "pronunciation": "[파동]",
+    "pronunciation": {
+      "korean": "[파동]",
+      "ipa": "[pʰadoŋ]"
+    },
     "partOfSpeech": "noun",
     "categoryId": "physics",
     "difficulty": "intermediate",
