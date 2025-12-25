@@ -17,26 +17,16 @@
           "intermediate": "하나, 둘, 셋! 시작!",
           "advanced": "가게에 들어가서 빵 하나만 사고 나왔다.",
           "master": "아이들이 숨바꼭질을 하며 \"하나, 둘, 셋...\" 하고 숫자를 세고 있었다."
-        },
-        "variations": {
-          "formal": ["한 개", "하나입니다"],
-          "casual": ["하나~", "한 개"],
-          "short": ["1개", "한 개"]
         }
       },
       "en": {
         "word": "One",
         "explanation": "Native Korean number 1. Used for counting objects. Corresponds to Sino-Korean '일(一)'.",
         "examples": {
-          "beginner": "사과 하나 주세요. - Please give me one apple.",
-          "intermediate": "하나, 둘, 셋! 시작! - One, two, three! Go!",
+          "beginner": "Please give me one apple.",
+          "intermediate": "One, two, three! Go!",
           "advanced": "I went into the store and just bought one piece of bread.",
-          "master": "The children were playing hide and seek, counting \"하나, 둘, 셋...\" (one, two, three...)"
-        },
-        "variations": {
-          "formal": ["One piece", "It is one"],
-          "casual": ["One~", "One piece"],
-          "short": ["1", "One"]
+          "master": "The children were playing hide and seek, counting 'one, two, three...'"
         }
       }
     }
@@ -57,28 +47,18 @@
         "examples": {
           "beginner": "사람이 둘이에요.",
           "intermediate": "우리 둘이 가자.",
-          "advanced": "레스토랑에 들어가니 직원이 \"몇 분이세요?\"라고 물어서 \"둘이요\"라고 대답했다.",
+          "advanced": "레스토랑에 들어가니 직원이 '몇 분이세요?'라고 물어서 '둘이요'라고 대답했다.",
           "master": "커피 둘 주문했는데 하나만 왔어요."
-        },
-        "variations": {
-          "formal": ["두 개", "두 분"],
-          "casual": ["둘~", "두 개"],
-          "short": ["2개", "두 개"]
         }
       },
       "en": {
         "word": "Two",
         "explanation": "Native Korean number 2. Used for counting objects or people. Corresponds to Sino-Korean '이(二)'.",
         "examples": {
-          "beginner": "사람이 둘이에요. - There are two people.",
-          "intermediate": "우리 둘이 가자. - Let's go, just the two of us.",
-          "advanced": "When I entered the restaurant, the staff asked \"How many?\" and I answered \"둘이요\" (Two).",
+          "beginner": "There are two people.",
+          "intermediate": "Let's go, just the two of us.",
+          "advanced": "When I entered the restaurant, the staff asked 'How many?' and I answered 'Two'.",
           "master": "I ordered two coffees but only one came."
-        },
-        "variations": {
-          "formal": ["Two pieces", "Two people (honorific)"],
-          "casual": ["Two~", "Two pieces"],
-          "short": ["2", "Two"]
         }
       }
     }
@@ -100,536 +80,881 @@
           "beginner": "의자가 셋 있어요.",
           "intermediate": "하나, 둘, 셋!",
           "advanced": "축구팀을 만들려면 최소한 셋은 있어야 경기를 할 수 있다.",
-          "master": "\"몇 시에 만날까?\" \"셋 어때? 3시에 카페에서 보자.\""
-        },
-        "variations": {
-          "formal": ["세 개", "세 분"],
-          "casual": ["셋~", "세 개"],
-          "short": ["3개", "세 개"]
+          "master": "'몇 시에 만날까?' '셋 어때? 3시에 카페에서 보자.'"
         }
       },
       "en": {
         "word": "Three",
         "explanation": "Native Korean number 3. Used for counting objects or people. Corresponds to Sino-Korean '삼(三)'.",
         "examples": {
-          "beginner": "의자가 셋 있어요. - There are three chairs.",
-          "intermediate": "하나, 둘, 셋! - One, two, three!",
+          "beginner": "There are three chairs.",
+          "intermediate": "One, two, three!",
           "advanced": "To form a soccer team, you need at least three people to play a game.",
-          "master": "\"What time should we meet?\" \"How about 셋 (three)? Let's meet at the café at 3 o'clock.\""
-        },
-        "variations": {
-          "formal": ["Three pieces", "Three people (honorific)"],
-          "casual": ["Three~", "Three pieces"],
-          "short": ["3", "Three"]
+          "master": "'What time should we meet?' 'How about three? Let's meet at the café at 3 o'clock.'"
         }
       }
     }
   },
   {
-    "id": "oneul",
-    "korean": "오늘",
-    "romanization": "oneul",
+    "id": "net",
+    "korean": "넷",
+    "romanization": "net",
     "partOfSpeech": "noun",
     "categoryId": "numbers",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "daily", "present"],
+    "tags": ["number", "counting", "basic"],
     "translations": {
       "ko": {
-        "word": "오늘",
-        "explanation": "지금 현재의 날. 이 날, 현재 하루를 가리킨다.",
+        "word": "넷",
+        "explanation": "고유어 숫자 4. 물건이나 사람을 셀 때 사용한다. 한자어 '사(四)'와 대응한다.",
         "examples": {
-          "beginner": "오늘 날씨가 좋아요.",
-          "intermediate": "오늘 뭐 해?",
-          "advanced": "오늘은 특별한 날이에요. 우리가 처음 만난 지 1년이 되는 날이거든요.",
-          "master": "\"오늘 저녁에 시간 있어?\" \"응, 있어. 왜?\""
-        },
-        "variations": {
-          "formal": ["오늘은", "금일", "오늘날"],
-          "casual": ["오늘~", "오늘은"],
-          "short": ["오늘", "today"]
+          "beginner": "우리 가족은 넷이에요.",
+          "intermediate": "사과 넷 주세요.",
+          "advanced": "카드 게임을 하려면 최소 넷이 필요해요.",
+          "master": "테이블에 의자가 넷 있어서 딱 맞았다."
         }
       },
       "en": {
-        "word": "Today",
-        "explanation": "The present day. This day, the current 24-hour period.",
+        "word": "Four",
+        "explanation": "Native Korean number 4. Used for counting objects or people. Corresponds to Sino-Korean '사(四)'.",
         "examples": {
-          "beginner": "오늘 날씨가 좋아요. - The weather is nice today.",
-          "intermediate": "오늘 뭐 해? - What are you doing today?",
-          "advanced": "Today is a special day. It's been one year since we first met.",
-          "master": "\"Do you have time tonight?\" \"Yes, I do. Why?\""
-        },
-        "variations": {
-          "formal": ["Today (topic marker)", "This day", "Nowadays"],
-          "casual": ["Today~", "Today (with topic marker)"],
-          "short": ["Today", "2day"]
+          "beginner": "There are four in my family.",
+          "intermediate": "Please give me four apples.",
+          "advanced": "You need at least four people to play a card game.",
+          "master": "There were exactly four chairs at the table, so it was perfect."
         }
       }
     }
   },
   {
-    "id": "naeil",
-    "korean": "내일",
-    "romanization": "naeil",
+    "id": "daseot",
+    "korean": "다섯",
+    "romanization": "daseot",
     "partOfSpeech": "noun",
     "categoryId": "numbers",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "daily", "future"],
+    "tags": ["number", "counting", "basic"],
     "translations": {
       "ko": {
-        "word": "내일",
-        "explanation": "오늘의 다음 날. 지금부터 하루 후를 가리킨다.",
+        "word": "다섯",
+        "explanation": "고유어 숫자 5. 물건이나 사람을 셀 때 사용한다. 한자어 '오(五)'와 대응한다.",
         "examples": {
-          "beginner": "내일 봐요!",
-          "intermediate": "내일 시험이에요.",
-          "advanced": "\"숙제 언제 낼 거야?\" \"내일 아침에 가져올게.\"",
-          "master": "내일은 주말이라서 늦게까지 잘 수 있어요."
-        },
-        "variations": {
-          "formal": ["내일은", "명일", "익일"],
-          "casual": ["내일~", "내일은"],
-          "short": ["내일", "tmr"]
+          "beginner": "손가락이 다섯 개예요.",
+          "intermediate": "다섯 시에 만나요.",
+          "advanced": "일주일 중 평일은 다섯 날이에요.",
+          "master": "팀원이 다섯 명이라서 역할을 나누기 좋았다."
         }
       },
       "en": {
-        "word": "Tomorrow",
-        "explanation": "The day after today. One day from now.",
+        "word": "Five",
+        "explanation": "Native Korean number 5. Used for counting objects or people. Corresponds to Sino-Korean '오(五)'.",
         "examples": {
-          "beginner": "내일 봐요! - See you tomorrow!",
-          "intermediate": "내일 시험이에요. - I have an exam tomorrow.",
-          "advanced": "\"When are you submitting your homework?\" \"I'll bring it tomorrow morning.\"",
-          "master": "Tomorrow is the weekend, so I can sleep in."
-        },
-        "variations": {
-          "formal": ["Tomorrow (topic marker)", "The next day", "Following day"],
-          "casual": ["Tomorrow~", "Tomorrow (with topic marker)"],
-          "short": ["Tomorrow", "Tmrw"]
+          "beginner": "There are five fingers.",
+          "intermediate": "Let's meet at five o'clock.",
+          "advanced": "There are five weekdays in a week.",
+          "master": "Since there were five team members, it was easy to divide the roles."
         }
       }
     }
   },
   {
-    "id": "eoje",
-    "korean": "어제",
-    "romanization": "eoje",
+    "id": "yeoseot",
+    "korean": "여섯",
+    "romanization": "yeoseot",
     "partOfSpeech": "noun",
     "categoryId": "numbers",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "daily", "past"],
+    "tags": ["number", "counting", "basic"],
     "translations": {
       "ko": {
-        "word": "어제",
-        "explanation": "오늘의 바로 전날. 지금부터 하루 전을 가리킨다.",
+        "word": "여섯",
+        "explanation": "고유어 숫자 6. 물건이나 사람을 셀 때 사용한다. 한자어 '육(六)'과 대응한다.",
         "examples": {
-          "beginner": "어제 뭐 했어?",
-          "intermediate": "어제 영화 봤어요.",
-          "advanced": "\"왜 이렇게 피곤해 보여?\" \"어제 밤늦게까지 공부했거든.\"",
-          "master": "어제 산 옷이 벌써 세일을 하네요. 좀 아깝다."
-        },
-        "variations": {
-          "formal": ["어제는", "전일", "작일"],
-          "casual": ["어제~", "어제는"],
-          "short": ["어제", "yday"]
+          "beginner": "계란 여섯 개 주세요.",
+          "intermediate": "여섯 시에 일어나요.",
+          "advanced": "주사위를 던지면 여섯까지 나올 수 있어요.",
+          "master": "여섯 살 때부터 피아노를 배웠어요."
         }
       },
       "en": {
-        "word": "Yesterday",
-        "explanation": "The day before today. One day ago from now.",
+        "word": "Six",
+        "explanation": "Native Korean number 6. Used for counting objects or people. Corresponds to Sino-Korean '육(六)'.",
         "examples": {
-          "beginner": "어제 뭐 했어? - What did you do yesterday?",
-          "intermediate": "어제 영화 봤어요. - I watched a movie yesterday.",
-          "advanced": "\"Why do you look so tired?\" \"I studied until late last night.\"",
-          "master": "The clothes I bought yesterday are already on sale. What a waste."
-        },
-        "variations": {
-          "formal": ["Yesterday (topic marker)", "The previous day", "Day before"],
-          "casual": ["Yesterday~", "Yesterday (with topic marker)"],
-          "short": ["Yesterday", "Yday"]
+          "beginner": "Please give me six eggs.",
+          "intermediate": "I wake up at six o'clock.",
+          "advanced": "When you roll a dice, you can get up to six.",
+          "master": "I've been learning piano since I was six years old."
         }
       }
     }
   },
   {
-    "id": "jigeum",
-    "korean": "지금",
-    "romanization": "jigeum",
+    "id": "ilgop",
+    "korean": "일곱",
+    "romanization": "ilgop",
     "partOfSpeech": "noun",
     "categoryId": "numbers",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "present", "moment"],
+    "tags": ["number", "counting", "basic"],
     "translations": {
       "ko": {
-        "word": "지금",
-        "explanation": "바로 이 순간. 현재 시점을 가리킨다.",
+        "word": "일곱",
+        "explanation": "고유어 숫자 7. 물건이나 사람을 셀 때 사용한다. 한자어 '칠(七)'과 대응한다.",
         "examples": {
-          "beginner": "지금 바빠요.",
-          "intermediate": "지금 몇 시예요?",
-          "advanced": "\"언제 출발할 거야?\" \"지금 당장! 빨리 준비해.\"",
-          "master": "지금은 공부할 시간이에요. 게임은 나중에 해요."
-        },
-        "variations": {
-          "formal": ["지금은", "현재", "이 시각"],
-          "casual": ["지금~", "지금은"],
-          "short": ["지금", "now"]
+          "beginner": "일주일은 일곱 날이에요.",
+          "intermediate": "일곱 시에 저녁 먹어요.",
+          "advanced": "무지개는 일곱 가지 색깔이 있어요.",
+          "master": "백설공주 이야기에는 난쟁이가 일곱 명 나와요."
         }
       },
       "en": {
-        "word": "Now",
-        "explanation": "This very moment. The present time.",
+        "word": "Seven",
+        "explanation": "Native Korean number 7. Used for counting objects or people. Corresponds to Sino-Korean '칠(七)'.",
         "examples": {
-          "beginner": "지금 바빠요. - I'm busy now.",
-          "intermediate": "지금 몇 시예요? - What time is it now?",
-          "advanced": "\"When are we leaving?\" \"Right now! Hurry up and get ready.\"",
-          "master": "Now is the time to study. Play games later."
-        },
-        "variations": {
-          "formal": ["Now (topic marker)", "Present time", "At this moment"],
-          "casual": ["Now~", "Right now"],
-          "short": ["Now", "Atm"]
+          "beginner": "A week has seven days.",
+          "intermediate": "I eat dinner at seven o'clock.",
+          "advanced": "A rainbow has seven colors.",
+          "master": "In the Snow White story, there are seven dwarfs."
         }
       }
     }
   },
   {
-    "id": "achim",
-    "korean": "아침",
-    "romanization": "achim",
+    "id": "yeodeol",
+    "korean": "여덟",
+    "romanization": "yeodeol",
     "partOfSpeech": "noun",
     "categoryId": "numbers",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "daily", "morning"],
+    "tags": ["number", "counting", "basic"],
     "translations": {
       "ko": {
-        "word": "아침",
-        "explanation": "하루 중 해가 뜨는 시간부터 정오 전까지. 보통 6시~12시를 가리킨다. '아침 식사'의 줄임말로도 쓰인다.",
+        "word": "여덟",
+        "explanation": "고유어 숫자 8. 물건이나 사람을 셀 때 사용한다. 한자어 '팔(八)'과 대응한다.",
         "examples": {
-          "beginner": "아침 먹었어요?",
-          "intermediate": "아침에 운동해요.",
-          "advanced": "\"좋은 아침이에요!\" 엄마가 커튼을 활짝 열며 말씀하셨다.",
-          "master": "나는 아침형 인간이라서 새벽에 일어나 공부하는 게 더 잘 돼요."
-        },
-        "variations": {
-          "formal": ["아침 시간", "조조", "오전"],
-          "casual": ["아침~", "아침에"],
-          "short": ["아침", "AM"]
+          "beginner": "여덟 시에 학교 가요.",
+          "intermediate": "문어 다리는 여덟 개예요.",
+          "advanced": "우리 반 학생은 여덟 명이에요.",
+          "master": "하루에 여덟 시간은 자야 건강해요."
         }
       },
       "en": {
-        "word": "Morning",
-        "explanation": "The time from sunrise to before noon. Usually refers to 6AM-12PM. Also short for 'breakfast'.",
+        "word": "Eight",
+        "explanation": "Native Korean number 8. Used for counting objects or people. Corresponds to Sino-Korean '팔(八)'.",
         "examples": {
-          "beginner": "아침 먹었어요? - Did you eat breakfast? / Have you eaten this morning?",
-          "intermediate": "아침에 운동해요. - I exercise in the morning.",
-          "advanced": "\"Good morning!\" Mom said as she opened the curtains wide.",
-          "master": "I'm a morning person, so I study better when I wake up at dawn."
-        },
-        "variations": {
-          "formal": ["Morning time", "Early morning", "Ante meridiem"],
-          "casual": ["Morning~", "In the morning"],
-          "short": ["Morning", "AM"]
+          "beginner": "I go to school at eight o'clock.",
+          "intermediate": "An octopus has eight legs.",
+          "advanced": "There are eight students in our class.",
+          "master": "You should sleep eight hours a day to be healthy."
         }
       }
     }
   },
   {
-    "id": "jeonyeok",
-    "korean": "저녁",
-    "romanization": "jeonyeok",
+    "id": "ahop",
+    "korean": "아홉",
+    "romanization": "ahop",
     "partOfSpeech": "noun",
     "categoryId": "numbers",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "daily", "evening"],
+    "tags": ["number", "counting", "basic"],
     "translations": {
       "ko": {
-        "word": "저녁",
-        "explanation": "하루 중 해가 지는 시간부터 밤이 되기 전까지. 보통 6시~9시를 가리킨다. '저녁 식사'의 줄임말로도 쓰인다.",
+        "word": "아홉",
+        "explanation": "고유어 숫자 9. 물건이나 사람을 셀 때 사용한다. 한자어 '구(九)'와 대응한다.",
         "examples": {
-          "beginner": "저녁 먹었어?",
-          "intermediate": "저녁에 만나요.",
-          "advanced": "\"오늘 저녁에 뭐 먹을까?\" \"치킨 시켜 먹자!\"",
-          "master": "저녁 7시쯤 되니까 거리에 퇴근하는 사람들로 가득 찼다."
-        },
-        "variations": {
-          "formal": ["저녁 시간", "석식", "만찬"],
-          "casual": ["저녁~", "저녁에"],
-          "short": ["저녁", "PM"]
+          "beginner": "아홉 시에 자요.",
+          "intermediate": "고양이는 목숨이 아홉 개래요.",
+          "advanced": "아홉 살 때 처음 비행기를 탔어요.",
+          "master": "마감이 아홉 시라서 서둘러야 해요."
         }
       },
       "en": {
-        "word": "Evening / Dinner",
-        "explanation": "The time from sunset to before night. Usually refers to 6PM-9PM. Also short for 'dinner'.",
+        "word": "Nine",
+        "explanation": "Native Korean number 9. Used for counting objects or people. Corresponds to Sino-Korean '구(九)'.",
         "examples": {
-          "beginner": "저녁 먹었어? - Did you eat dinner? / Have you eaten this evening?",
-          "intermediate": "저녁에 만나요. - Let's meet in the evening.",
-          "advanced": "\"What should we eat for dinner tonight?\" \"Let's order chicken!\"",
-          "master": "Around 7 PM, the streets filled with people leaving work."
-        },
-        "variations": {
-          "formal": ["Evening time", "Supper", "Dinner (formal)"],
-          "casual": ["Evening~", "In the evening"],
-          "short": ["Evening", "PM"]
+          "beginner": "I go to sleep at nine o'clock.",
+          "intermediate": "They say cats have nine lives.",
+          "advanced": "I first rode an airplane when I was nine years old.",
+          "master": "The deadline is at nine o'clock, so I need to hurry."
         }
       }
     }
   },
   {
-    "id": "sigan",
-    "korean": "시간",
-    "romanization": "sigan",
-    "pronunciation": "[시간]",
+    "id": "yeol",
+    "korean": "열",
+    "romanization": "yeol",
     "partOfSpeech": "noun",
     "categoryId": "numbers",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "abstract", "duration"],
+    "tags": ["number", "counting", "basic"],
     "translations": {
       "ko": {
-        "word": "시간",
-        "explanation": "시각과 시각 사이의 간격. '시(時)'를 세는 단위로도 쓰인다. 또한 '여유'나 '기회'의 의미로도 사용된다.",
+        "word": "열",
+        "explanation": "고유어 숫자 10. 물건이나 사람을 셀 때 사용한다. 한자어 '십(十)'과 대응한다.",
         "examples": {
-          "beginner": "시간 있어요?",
-          "intermediate": "시간이 없어요.",
-          "advanced": "\"지금 시간 있어? 커피 한잔 할래?\" \"미안, 오늘은 시간이 없어.\"",
-          "master": "시험 시간은 2시간이에요."
-        },
-        "variations": {
-          "formal": ["시간이 있으십니까?", "시각", "여유 시간"],
-          "casual": ["시간 있어?", "시간~"],
-          "short": ["시간", "time"]
+          "beginner": "열까지 세어 봐요.",
+          "intermediate": "열 시에 문을 열어요.",
+          "advanced": "열 번 찍어 안 넘어가는 나무 없다.",
+          "master": "이 가게는 열 시부터 여섯 시까지 해요."
         }
       },
       "en": {
-        "word": "Time / Hour",
-        "explanation": "The interval between two points in time. Also used as a unit to count hours. Can mean 'free time' or 'opportunity'.",
+        "word": "Ten",
+        "explanation": "Native Korean number 10. Used for counting objects or people. Corresponds to Sino-Korean '십(十)'.",
         "examples": {
-          "beginner": "시간 있어요? - Do you have time?",
-          "intermediate": "시간이 없어요. - I don't have time.",
-          "advanced": "\"Do you have time now? Want to grab a coffee?\" \"Sorry, I don't have time today.\"",
-          "master": "The exam time is 2 hours."
-        },
-        "variations": {
-          "formal": ["Do you have time? (honorific)", "Time/hour", "Free time"],
-          "casual": ["Got time?", "Time~"],
-          "short": ["Time", "Hr"]
+          "beginner": "Try counting to ten.",
+          "intermediate": "The store opens at ten o'clock.",
+          "advanced": "No tree can withstand ten blows. (Persistence pays off)",
+          "master": "This store is open from ten to six."
         }
       }
     }
   },
   {
-    "id": "wolyoil",
-    "korean": "월요일",
-    "romanization": "wolyoil",
-    "pronunciation": "[워료일]",
+    "id": "il-one",
+    "korean": "일",
+    "romanization": "il",
     "partOfSpeech": "noun",
     "categoryId": "numbers",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "weekday", "calendar"],
+    "tags": ["number", "sino-korean", "basic"],
     "translations": {
       "ko": {
-        "word": "월요일",
-        "explanation": "일주일의 첫째 날. 한 주의 시작을 알리는 날로, 많은 사람들이 출근하고 학교에 간다.",
+        "word": "일",
+        "explanation": "한자어 숫자 1. 전화번호, 날짜, 가격 등을 말할 때 사용한다.",
         "examples": {
-          "beginner": "월요일이 싫어요.",
-          "intermediate": "다음 월요일에 만나요.",
-          "advanced": "\"내일이 월요일이라니 믿기지 않아.\" 일요일 저녁이면 항상 우울해진다.",
-          "master": "월요일 아침에는 교통이 복잡해요."
-        },
-        "variations": {
-          "formal": ["월요일입니다", "월요"],
-          "casual": ["월요일~", "월욜"],
-          "short": ["월", "Mon"]
+          "beginner": "일월은 1월이에요.",
+          "intermediate": "버스 일번을 타세요.",
+          "advanced": "일등을 하면 상품을 받아요.",
+          "master": "축구에서 일대일 상황이 생겼어요."
         }
       },
       "en": {
-        "word": "Monday",
-        "explanation": "The first day of the week. The day that marks the beginning of the work/school week.",
+        "word": "One (Sino-Korean)",
+        "explanation": "Sino-Korean number 1. Used for phone numbers, dates, prices, etc.",
         "examples": {
-          "beginner": "월요일이 싫어요. - I hate Mondays.",
-          "intermediate": "다음 월요일에 만나요. - Let's meet next Monday.",
-          "advanced": "\"I can't believe tomorrow is Monday.\" I always feel blue on Sunday evenings.",
-          "master": "Traffic is heavy on Monday mornings."
-        },
-        "variations": {
-          "formal": ["It is Monday", "Monday"],
-          "casual": ["Monday~", "Mon"],
-          "short": ["Mon", "M"]
+          "beginner": "일월 means January.",
+          "intermediate": "Take bus number one.",
+          "advanced": "If you come in first place, you get a prize.",
+          "master": "A one-on-one situation occurred in the soccer game."
         }
       }
     }
   },
   {
-    "id": "jumal",
-    "korean": "주말",
-    "romanization": "jumal",
-    "pronunciation": "[주말]",
+    "id": "i-two",
+    "korean": "이",
+    "romanization": "i",
     "partOfSpeech": "noun",
     "categoryId": "numbers",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "weekend", "leisure"],
+    "tags": ["number", "sino-korean", "basic"],
     "translations": {
       "ko": {
-        "word": "주말",
-        "explanation": "한 주의 끝. 보통 토요일과 일요일을 가리킨다. 많은 사람들이 쉬거나 여가 활동을 즐기는 시간이다.",
+        "word": "이",
+        "explanation": "한자어 숫자 2. 전화번호, 날짜, 가격 등을 말할 때 사용한다.",
         "examples": {
-          "beginner": "주말에 뭐 해?",
-          "intermediate": "주말이 기다려져요.",
-          "advanced": "\"이번 주말에 영화 볼래?\" \"좋아, 토요일 오후 어때?\"",
-          "master": "주말마다 등산을 가요."
-        },
-        "variations": {
-          "formal": ["주말입니다", "주말에", "금토일"],
-          "casual": ["주말~", "주말에"],
-          "short": ["주말", "weekend"]
+          "beginner": "이월은 2월이에요.",
+          "intermediate": "이층으로 올라가세요.",
+          "advanced": "이등을 해서 조금 아쉬웠어요.",
+          "master": "전화번호가 일이삼사로 시작해요."
         }
       },
       "en": {
-        "word": "Weekend",
-        "explanation": "The end of the week. Usually refers to Saturday and Sunday. Time when many people rest or enjoy leisure activities.",
+        "word": "Two (Sino-Korean)",
+        "explanation": "Sino-Korean number 2. Used for phone numbers, dates, prices, etc.",
         "examples": {
-          "beginner": "주말에 뭐 해? - What are you doing this weekend?",
-          "intermediate": "주말이 기다려져요. - I'm looking forward to the weekend.",
-          "advanced": "\"Want to watch a movie this weekend?\" \"Sure, how about Saturday afternoon?\"",
-          "master": "I go hiking every weekend."
-        },
-        "variations": {
-          "formal": ["It is the weekend", "On the weekend", "Fri-Sat-Sun"],
-          "casual": ["Weekend~", "On weekend"],
-          "short": ["Weekend", "Wknd"]
+          "beginner": "이월 means February.",
+          "intermediate": "Go up to the second floor.",
+          "advanced": "I was a bit disappointed to come in second place.",
+          "master": "The phone number starts with 1234."
         }
       }
     }
   },
   {
-    "id": "nyeon",
-    "korean": "년",
-    "romanization": "nyeon",
-    "pronunciation": "[년]",
+    "id": "sam",
+    "korean": "삼",
+    "romanization": "sam",
     "partOfSpeech": "noun",
     "categoryId": "numbers",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "unit", "calendar"],
+    "tags": ["number", "sino-korean", "basic"],
     "translations": {
       "ko": {
-        "word": "년",
-        "explanation": "시간의 단위. 12개월, 즉 365일(윤년은 366일)을 하나의 단위로 세는 말. 연도를 나타낼 때 사용한다.",
+        "word": "삼",
+        "explanation": "한자어 숫자 3. 전화번호, 날짜, 가격 등을 말할 때 사용한다.",
         "examples": {
-          "beginner": "2024년이에요.",
-          "intermediate": "몇 년이에요?",
-          "advanced": "\"너 몇 년생이야?\" \"2000년생이야.\"",
-          "master": "올해는 2024년입니다."
-        },
-        "variations": {
-          "formal": ["년도", "연(年)"],
-          "casual": ["년~", "년생"],
-          "short": ["년", "yr"]
+          "beginner": "삼월은 3월이에요.",
+          "intermediate": "삼일절은 3월 1일이에요.",
+          "advanced": "삼각형은 세 개의 각이 있어요.",
+          "master": "삼세번이라고, 세 번까지는 봐줄게."
         }
       },
       "en": {
-        "word": "Year",
-        "explanation": "A unit of time. A period of 12 months, or 365 days (366 in leap years). Used to indicate the year.",
+        "word": "Three (Sino-Korean)",
+        "explanation": "Sino-Korean number 3. Used for phone numbers, dates, prices, etc.",
         "examples": {
-          "beginner": "2024년이에요. - It's 2024.",
-          "intermediate": "몇 년이에요? - What year is it?",
-          "advanced": "\"What year were you born?\" \"I was born in 2000.\"",
-          "master": "This year is 2024."
-        },
-        "variations": {
-          "formal": ["Year (formal)", "Annum"],
-          "casual": ["Year~", "Year born"],
-          "short": ["Yr", "Y"]
+          "beginner": "삼월 means March.",
+          "intermediate": "Independence Movement Day is March 1st.",
+          "advanced": "A triangle has three angles.",
+          "master": "As they say 'three strikes,' I'll give you up to three chances."
         }
       }
     }
   },
   {
-    "id": "dal",
-    "korean": "달",
-    "romanization": "dal",
+    "id": "sa-four",
+    "korean": "사",
+    "romanization": "sa",
     "partOfSpeech": "noun",
     "categoryId": "numbers",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "unit", "calendar", "astronomy"],
+    "tags": ["number", "sino-korean", "basic"],
     "translations": {
       "ko": {
-        "word": "달",
-        "explanation": "두 가지 의미가 있다. 1) 시간의 단위로 '월(月)'을 뜻한다. 2) 밤하늘에 떠 있는 천체인 '월(月)'을 가리킨다.",
+        "word": "사",
+        "explanation": "한자어 숫자 4. 전화번호, 날짜, 가격 등을 말할 때 사용한다. 한국에서는 '死(죽음)'와 발음이 같아 불길하게 여기기도 한다.",
         "examples": {
-          "beginner": "한 달에 한 번 만나요.",
-          "intermediate": "달이 밝아요.",
-          "advanced": "\"언제 만났어?\" \"한 달 전쯤?\"",
-          "master": "보름달이 정말 아름답네요."
-        },
-        "variations": {
-          "formal": ["월", "개월", "달"],
-          "casual": ["달~", "한 달"],
-          "short": ["달", "month"]
+          "beginner": "사월은 4월이에요.",
+          "intermediate": "사층이 없는 건물도 있어요.",
+          "advanced": "사분의 일은 25%예요.",
+          "master": "한국에서는 4를 불길하게 여겨서 4층을 F층으로 표시하기도 해요."
         }
       },
       "en": {
-        "word": "Month / Moon",
-        "explanation": "Has two meanings: 1) A unit of time, meaning 'month'. 2) The celestial body in the night sky, the 'moon'.",
+        "word": "Four (Sino-Korean)",
+        "explanation": "Sino-Korean number 4. Used for phone numbers, dates, prices. In Korea, it's sometimes considered unlucky as it sounds like '死 (death)' in Chinese.",
         "examples": {
-          "beginner": "한 달에 한 번 만나요. - We meet once a month.",
-          "intermediate": "달이 밝아요. - The moon is bright.",
-          "advanced": "\"When did you meet?\" \"About a month ago?\"",
-          "master": "The full moon is really beautiful."
-        },
-        "variations": {
-          "formal": ["Month", "Months (counter)", "Moon"],
-          "casual": ["Month~", "One month"],
-          "short": ["Month", "Mo"]
+          "beginner": "사월 means April.",
+          "intermediate": "Some buildings don't have a 4th floor.",
+          "advanced": "One-fourth is 25%.",
+          "master": "In Korea, 4 is considered unlucky, so some buildings label the 4th floor as 'F'."
         }
       }
     }
   },
   {
-    "id": "bun",
-    "korean": "분",
-    "romanization": "bun",
-    "pronunciation": "[분]",
+    "id": "o-five",
+    "korean": "오",
+    "romanization": "o",
     "partOfSpeech": "noun",
     "categoryId": "numbers",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "unit", "minute"],
+    "tags": ["number", "sino-korean", "basic"],
     "translations": {
       "ko": {
-        "word": "분",
-        "explanation": "시간의 단위. 1시간의 60분의 1. 60초가 1분이다. 시각을 나타낼 때 사용한다.",
+        "word": "오",
+        "explanation": "한자어 숫자 5. 전화번호, 날짜, 가격 등을 말할 때 사용한다.",
         "examples": {
-          "beginner": "5분만 기다려 주세요.",
-          "intermediate": "몇 분이에요?",
-          "advanced": "\"지금 몇 시야?\" \"3시 30분.\"",
-          "master": "10분 후에 출발해요."
-        },
-        "variations": {
-          "formal": ["분입니다", "분(分)"],
-          "casual": ["분~", "분만"],
-          "short": ["분", "min"]
+          "beginner": "오월은 5월이에요.",
+          "intermediate": "오천 원이에요.",
+          "advanced": "오 분 후에 출발해요.",
+          "master": "오백 원짜리 동전이 있어요."
         }
       },
       "en": {
-        "word": "Minute",
-        "explanation": "A unit of time. One-sixtieth of an hour. 60 seconds make 1 minute. Used to indicate time.",
+        "word": "Five (Sino-Korean)",
+        "explanation": "Sino-Korean number 5. Used for phone numbers, dates, prices, etc.",
         "examples": {
-          "beginner": "5분만 기다려 주세요. - Please wait just 5 minutes.",
-          "intermediate": "몇 분이에요? - How many minutes?",
-          "advanced": "\"What time is it now?\" \"3:30 (3 o'clock 30 minutes).\"",
-          "master": "We'll leave in 10 minutes."
-        },
-        "variations": {
-          "formal": ["It is ... minutes", "Minute (formal)"],
-          "casual": ["Minutes~", "Just ... minutes"],
-          "short": ["Min", "M"]
+          "beginner": "오월 means May.",
+          "intermediate": "It's 5,000 won.",
+          "advanced": "We'll leave in five minutes.",
+          "master": "There are 500 won coins."
+        }
+      }
+    }
+  },
+  {
+    "id": "yuk",
+    "korean": "육",
+    "romanization": "yuk",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["number", "sino-korean", "basic"],
+    "translations": {
+      "ko": {
+        "word": "육",
+        "explanation": "한자어 숫자 6. 전화번호, 날짜, 가격 등을 말할 때 사용한다.",
+        "examples": {
+          "beginner": "육월은 6월이에요.",
+          "intermediate": "육천 원이에요.",
+          "advanced": "육각형은 여섯 개의 변이 있어요.",
+          "master": "전화번호에 육이 두 개 있어요."
+        }
+      },
+      "en": {
+        "word": "Six (Sino-Korean)",
+        "explanation": "Sino-Korean number 6. Used for phone numbers, dates, prices, etc.",
+        "examples": {
+          "beginner": "육월 means June.",
+          "intermediate": "It's 6,000 won.",
+          "advanced": "A hexagon has six sides.",
+          "master": "There are two 6s in the phone number."
+        }
+      }
+    }
+  },
+  {
+    "id": "chil",
+    "korean": "칠",
+    "romanization": "chil",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["number", "sino-korean", "basic"],
+    "translations": {
+      "ko": {
+        "word": "칠",
+        "explanation": "한자어 숫자 7. 전화번호, 날짜, 가격 등을 말할 때 사용한다.",
+        "examples": {
+          "beginner": "칠월은 7월이에요.",
+          "intermediate": "칠천 원이에요.",
+          "advanced": "칠석날은 견우와 직녀가 만나는 날이에요.",
+          "master": "럭키 세븐! 7은 행운의 숫자예요."
+        }
+      },
+      "en": {
+        "word": "Seven (Sino-Korean)",
+        "explanation": "Sino-Korean number 7. Used for phone numbers, dates, prices, etc.",
+        "examples": {
+          "beginner": "칠월 means July.",
+          "intermediate": "It's 7,000 won.",
+          "advanced": "Chilseok is the day when the cowherd and weaver girl meet.",
+          "master": "Lucky seven! 7 is a lucky number."
+        }
+      }
+    }
+  },
+  {
+    "id": "pal",
+    "korean": "팔",
+    "romanization": "pal",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["number", "sino-korean", "basic"],
+    "translations": {
+      "ko": {
+        "word": "팔",
+        "explanation": "한자어 숫자 8. 전화번호, 날짜, 가격 등을 말할 때 사용한다. 중국에서는 발음이 '발재(發財, 재물을 벌다)'와 비슷해서 행운의 숫자로 여긴다.",
+        "examples": {
+          "beginner": "팔월은 8월이에요.",
+          "intermediate": "팔천 원이에요.",
+          "advanced": "팔각형은 여덟 개의 변이 있어요.",
+          "master": "중국에서는 8을 가장 좋아하는 숫자로 여겨요."
+        }
+      },
+      "en": {
+        "word": "Eight (Sino-Korean)",
+        "explanation": "Sino-Korean number 8. Used for phone numbers, dates, prices. In Chinese culture, it's a lucky number as it sounds like '發財 (to prosper)'.",
+        "examples": {
+          "beginner": "팔월 means August.",
+          "intermediate": "It's 8,000 won.",
+          "advanced": "An octagon has eight sides.",
+          "master": "In China, 8 is considered the luckiest number."
+        }
+      }
+    }
+  },
+  {
+    "id": "gu-nine",
+    "korean": "구",
+    "romanization": "gu",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["number", "sino-korean", "basic"],
+    "translations": {
+      "ko": {
+        "word": "구",
+        "explanation": "한자어 숫자 9. 전화번호, 날짜, 가격 등을 말할 때 사용한다.",
+        "examples": {
+          "beginner": "구월은 9월이에요.",
+          "intermediate": "구천 원이에요.",
+          "advanced": "구구단을 외워요.",
+          "master": "구사일생으로 살아났어요."
+        }
+      },
+      "en": {
+        "word": "Nine (Sino-Korean)",
+        "explanation": "Sino-Korean number 9. Used for phone numbers, dates, prices, etc.",
+        "examples": {
+          "beginner": "구월 means September.",
+          "intermediate": "It's 9,000 won.",
+          "advanced": "Memorize the multiplication table.",
+          "master": "I barely survived (escaped death by a hair's breadth)."
+        }
+      }
+    }
+  },
+  {
+    "id": "sip",
+    "korean": "십",
+    "romanization": "sip",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["number", "sino-korean", "basic"],
+    "translations": {
+      "ko": {
+        "word": "십",
+        "explanation": "한자어 숫자 10. 전화번호, 날짜, 가격 등을 말할 때 사용한다.",
+        "examples": {
+          "beginner": "시월은 10월이에요.",
+          "intermediate": "십만 원이에요.",
+          "advanced": "십중팔구 그럴 거예요.",
+          "master": "십년이면 강산도 변한다."
+        }
+      },
+      "en": {
+        "word": "Ten (Sino-Korean)",
+        "explanation": "Sino-Korean number 10. Used for phone numbers, dates, prices, etc.",
+        "examples": {
+          "beginner": "시월 means October.",
+          "intermediate": "It's 100,000 won.",
+          "advanced": "Most likely, that's what will happen.",
+          "master": "In ten years, even mountains and rivers change."
+        }
+      }
+    }
+  },
+  {
+    "id": "baek",
+    "korean": "백",
+    "romanization": "baek",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["number", "sino-korean", "basic"],
+    "translations": {
+      "ko": {
+        "word": "백",
+        "explanation": "한자어 숫자 100. 큰 수를 셀 때 사용한다.",
+        "examples": {
+          "beginner": "백 원이에요.",
+          "intermediate": "백 점 맞았어요!",
+          "advanced": "이 책은 백 페이지예요.",
+          "master": "백전백승이란 백 번 싸워서 백 번 이긴다는 뜻이에요."
+        }
+      },
+      "en": {
+        "word": "Hundred",
+        "explanation": "Sino-Korean number 100. Used for counting large numbers.",
+        "examples": {
+          "beginner": "It's 100 won.",
+          "intermediate": "I got 100 points!",
+          "advanced": "This book is 100 pages.",
+          "master": "'Baekjeonbaekseung' means winning all 100 battles."
+        }
+      }
+    }
+  },
+  {
+    "id": "cheon",
+    "korean": "천",
+    "romanization": "cheon",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["number", "sino-korean", "basic"],
+    "translations": {
+      "ko": {
+        "word": "천",
+        "explanation": "한자어 숫자 1,000. 큰 수나 가격을 말할 때 자주 사용한다.",
+        "examples": {
+          "beginner": "천 원이에요.",
+          "intermediate": "이천 원 주세요.",
+          "advanced": "이 가방은 삼만 천 원이에요.",
+          "master": "천리 길도 한 걸음부터라는 속담이 있어요."
+        }
+      },
+      "en": {
+        "word": "Thousand",
+        "explanation": "Sino-Korean number 1,000. Often used for large numbers and prices.",
+        "examples": {
+          "beginner": "It's 1,000 won.",
+          "intermediate": "Please give me 2,000 won.",
+          "advanced": "This bag is 31,000 won.",
+          "master": "There's a proverb that says 'A journey of a thousand miles begins with a single step.'"
+        }
+      }
+    }
+  },
+  {
+    "id": "man",
+    "korean": "만",
+    "romanization": "man",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["number", "sino-korean", "basic"],
+    "translations": {
+      "ko": {
+        "word": "만",
+        "explanation": "한자어 숫자 10,000. 한국어에서는 천 다음 단위가 만이다.",
+        "examples": {
+          "beginner": "만 원이에요.",
+          "intermediate": "십만 원 빌려 줄래?",
+          "advanced": "월세가 오십만 원이에요.",
+          "master": "만사가 형통하기를 바랍니다."
+        }
+      },
+      "en": {
+        "word": "Ten thousand",
+        "explanation": "Sino-Korean number 10,000. In Korean, the unit after thousand is ten thousand.",
+        "examples": {
+          "beginner": "It's 10,000 won.",
+          "intermediate": "Can you lend me 100,000 won?",
+          "advanced": "The monthly rent is 500,000 won.",
+          "master": "I hope all things go well for you."
+        }
+      }
+    }
+  },
+  {
+    "id": "yeong",
+    "korean": "영",
+    "romanization": "yeong",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["number", "sino-korean", "basic"],
+    "translations": {
+      "ko": {
+        "word": "영",
+        "explanation": "한자어 숫자 0. 전화번호나 점수를 말할 때 사용한다. '공'이라고도 한다.",
+        "examples": {
+          "beginner": "영점 오예요.",
+          "intermediate": "전화번호가 영일이로 시작해요.",
+          "advanced": "축구 경기가 영 대 영이에요.",
+          "master": "올해 실점이 영이라서 우승했어요."
+        }
+      },
+      "en": {
+        "word": "Zero",
+        "explanation": "Sino-Korean number 0. Used in phone numbers and scores. Also called '공 (gong)'.",
+        "examples": {
+          "beginner": "It's 0.5.",
+          "intermediate": "The phone number starts with 012.",
+          "advanced": "The soccer game is 0 to 0.",
+          "master": "They won the championship with zero goals conceded this year."
+        }
+      }
+    }
+  },
+  {
+    "id": "ban",
+    "korean": "반",
+    "romanization": "ban",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["number", "fraction", "basic"],
+    "translations": {
+      "ko": {
+        "word": "반",
+        "explanation": "전체의 절반. 1/2을 뜻한다. 시간을 말할 때 '30분'을 나타내기도 한다.",
+        "examples": {
+          "beginner": "반만 주세요.",
+          "intermediate": "세 시 반이에요.",
+          "advanced": "케이크 반은 내 거야!",
+          "master": "일은 반만 했는데 벌써 지쳤어요."
+        }
+      },
+      "en": {
+        "word": "Half",
+        "explanation": "Half of a whole. Means 1/2. Also indicates '30 minutes' when telling time.",
+        "examples": {
+          "beginner": "Please give me half.",
+          "intermediate": "It's 3:30.",
+          "advanced": "Half the cake is mine!",
+          "master": "I've only done half the work but I'm already tired."
+        }
+      }
+    }
+  },
+  {
+    "id": "cheot",
+    "korean": "첫",
+    "romanization": "cheot",
+    "partOfSpeech": "determiner",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["ordinal", "first", "basic"],
+    "translations": {
+      "ko": {
+        "word": "첫",
+        "explanation": "순서에서 맨 처음. '첫 번째'의 줄임말.",
+        "examples": {
+          "beginner": "첫사랑이에요.",
+          "intermediate": "첫날은 긴장했어요.",
+          "advanced": "첫인상이 중요해요.",
+          "master": "첫 출근 날 많이 떨렸어요."
+        }
+      },
+      "en": {
+        "word": "First",
+        "explanation": "The very first in order. Short for 'first'.",
+        "examples": {
+          "beginner": "It's my first love.",
+          "intermediate": "I was nervous on the first day.",
+          "advanced": "First impressions are important.",
+          "master": "I was very nervous on my first day at work."
+        }
+      }
+    }
+  },
+  {
+    "id": "du-second",
+    "korean": "두 번째",
+    "romanization": "du beonjjae",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["ordinal", "second", "basic"],
+    "translations": {
+      "ko": {
+        "word": "두 번째",
+        "explanation": "순서에서 두 번째. 첫 번째 다음.",
+        "examples": {
+          "beginner": "두 번째 집이에요.",
+          "intermediate": "두 번째로 도착했어요.",
+          "advanced": "두 번째 시도에서 성공했어요.",
+          "master": "첫 번째 실패 후 두 번째 도전에서 합격했어요."
+        }
+      },
+      "en": {
+        "word": "Second",
+        "explanation": "Second in order. After the first.",
+        "examples": {
+          "beginner": "It's the second house.",
+          "intermediate": "I arrived second.",
+          "advanced": "I succeeded on the second attempt.",
+          "master": "After failing the first time, I passed on my second attempt."
+        }
+      }
+    }
+  },
+  {
+    "id": "majimak",
+    "korean": "마지막",
+    "romanization": "majimak",
+    "partOfSpeech": "noun",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["ordinal", "last", "basic"],
+    "translations": {
+      "ko": {
+        "word": "마지막",
+        "explanation": "순서에서 맨 끝. 더 이상 없는 것.",
+        "examples": {
+          "beginner": "이게 마지막이에요.",
+          "intermediate": "마지막 기회예요.",
+          "advanced": "마지막 버스를 놓쳤어요.",
+          "master": "마지막까지 포기하지 않고 최선을 다했어요."
+        }
+      },
+      "en": {
+        "word": "Last / Final",
+        "explanation": "The very end in order. Nothing more after.",
+        "examples": {
+          "beginner": "This is the last one.",
+          "intermediate": "It's the last chance.",
+          "advanced": "I missed the last bus.",
+          "master": "I did my best without giving up until the very end."
+        }
+      }
+    }
+  },
+  {
+    "id": "myeot",
+    "korean": "몇",
+    "romanization": "myeot",
+    "partOfSpeech": "determiner",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["question", "number", "basic"],
+    "translations": {
+      "ko": {
+        "word": "몇",
+        "explanation": "수량이나 순서를 물을 때 사용하는 말.",
+        "examples": {
+          "beginner": "몇 시예요?",
+          "intermediate": "몇 살이에요?",
+          "advanced": "오늘이 몇 월 며칠이에요?",
+          "master": "몇 번이나 설명해야 이해할 거야?"
+        }
+      },
+      "en": {
+        "word": "How many / What (number)",
+        "explanation": "A word used to ask about quantity or order.",
+        "examples": {
+          "beginner": "What time is it?",
+          "intermediate": "How old are you?",
+          "advanced": "What's today's date?",
+          "master": "How many times do I have to explain before you understand?"
+        }
+      }
+    }
+  },
+  {
+    "id": "modue",
+    "korean": "모두",
+    "romanization": "modu",
+    "partOfSpeech": "adverb",
+    "categoryId": "numbers",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["quantity", "all", "basic"],
+    "translations": {
+      "ko": {
+        "word": "모두",
+        "explanation": "전부. 다 합쳐서. 빠짐없이 전체.",
+        "examples": {
+          "beginner": "모두 왔어요?",
+          "intermediate": "모두 합해서 얼마예요?",
+          "advanced": "참석자 모두에게 선물을 드렸어요.",
+          "master": "우리 모두 힘을 합쳐서 이 문제를 해결합시다."
+        }
+      },
+      "en": {
+        "word": "All / Everyone / Everything",
+        "explanation": "The whole thing. Combined together. Without exception.",
+        "examples": {
+          "beginner": "Is everyone here?",
+          "intermediate": "How much is it in total?",
+          "advanced": "I gave gifts to all the attendees.",
+          "master": "Let's all work together to solve this problem."
         }
       }
     }

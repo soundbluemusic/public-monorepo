@@ -318,5 +318,1285 @@
         }
       }
     }
+  },
+  {
+    "id": "bibimbap",
+    "korean": "비빔밥",
+    "romanization": "bibimbap",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "korean", "traditional"],
+    "translations": {
+      "ko": {
+        "word": "비빔밥",
+        "explanation": "밥 위에 여러 나물과 고추장을 넣고 비벼 먹는 한국 전통 음식.",
+        "examples": {
+          "beginner": "비빔밥 주세요.",
+          "intermediate": "비빔밥에 계란 프라이 올려주세요.",
+          "advanced": "전주 비빔밥은 다양한 재료와 함께 돌솥에 담겨 나온다.",
+          "master": "비빔밥은 남은 반찬을 활용해 만들기도 해서 가정에서 쉽게 해먹을 수 있다."
+        }
+      },
+      "en": {
+        "word": "Bibimbap",
+        "explanation": "A traditional Korean dish of rice topped with vegetables and gochujang, mixed together before eating.",
+        "examples": {
+          "beginner": "Bibimbap, please.",
+          "intermediate": "Please add a fried egg on top of the bibimbap.",
+          "advanced": "Jeonju bibimbap is served in a hot stone pot with various ingredients.",
+          "master": "Bibimbap can be made by using leftover side dishes, so it's easy to prepare at home."
+        }
+      }
+    }
+  },
+  {
+    "id": "bulgogi",
+    "korean": "불고기",
+    "romanization": "bulgogi",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "korean", "meat"],
+    "translations": {
+      "ko": {
+        "word": "불고기",
+        "explanation": "양념에 재운 쇠고기를 구운 한국 전통 요리.",
+        "examples": {
+          "beginner": "불고기 맛있어요.",
+          "intermediate": "불고기 백반 하나 주세요.",
+          "advanced": "외국인들에게 불고기는 한국 음식 중 가장 인기 있는 메뉴 중 하나다.",
+          "master": "불고기의 달콤한 양념은 배와 간장으로 만드는데, 고기를 부드럽게 해준다."
+        }
+      },
+      "en": {
+        "word": "Bulgogi",
+        "explanation": "Traditional Korean dish of marinated and grilled beef.",
+        "examples": {
+          "beginner": "Bulgogi is delicious.",
+          "intermediate": "One bulgogi set meal, please.",
+          "advanced": "Bulgogi is one of the most popular Korean dishes among foreigners.",
+          "master": "The sweet bulgogi marinade is made with pear and soy sauce, which tenderizes the meat."
+        }
+      }
+    }
+  },
+  {
+    "id": "samgyeopsal",
+    "korean": "삼겹살",
+    "romanization": "samgyeopsal",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "korean", "meat", "pork"],
+    "translations": {
+      "ko": {
+        "word": "삼겹살",
+        "explanation": "돼지의 삼겹 부위. 한국에서 가장 인기 있는 고기 메뉴 중 하나.",
+        "examples": {
+          "beginner": "삼겹살 먹을래?",
+          "intermediate": "삼겹살에 소주 한 잔 어때요?",
+          "advanced": "한국 사람들은 스트레스 받으면 삼겹살 구워 먹으러 간다.",
+          "master": "삼겹살은 상추 쌈에 싸서 쌈장과 함께 먹으면 정말 맛있다."
+        }
+      },
+      "en": {
+        "word": "Samgyeopsal (Pork belly)",
+        "explanation": "Pork belly. One of the most popular meat dishes in Korea.",
+        "examples": {
+          "beginner": "Do you want to eat samgyeopsal?",
+          "intermediate": "How about samgyeopsal with a glass of soju?",
+          "advanced": "Koreans go eat grilled samgyeopsal when they're stressed.",
+          "master": "Samgyeopsal is really delicious when wrapped in lettuce with ssamjang."
+        }
+      }
+    }
+  },
+  {
+    "id": "kimbap",
+    "korean": "김밥",
+    "romanization": "kimbap",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "korean", "popular"],
+    "translations": {
+      "ko": {
+        "word": "김밥",
+        "explanation": "김에 밥과 여러 재료를 넣어 말아 만든 음식. 도시락이나 간식으로 인기.",
+        "examples": {
+          "beginner": "김밥 하나 주세요.",
+          "intermediate": "소풍 갈 때 김밥 싸 가자.",
+          "advanced": "김밥천국에서 참치김밥이 제일 인기가 많다.",
+          "master": "집에서 김밥을 말 때는 밥을 너무 많이 넣지 않는 게 포인트다."
+        }
+      },
+      "en": {
+        "word": "Kimbap (Korean rice roll)",
+        "explanation": "Rice and various ingredients rolled in seaweed. Popular as a lunch box or snack.",
+        "examples": {
+          "beginner": "One kimbap, please.",
+          "intermediate": "Let's pack kimbap for the picnic.",
+          "advanced": "Tuna kimbap is the most popular at Kimbap Cheonguk.",
+          "master": "When making kimbap at home, the key is not to put too much rice."
+        }
+      }
+    }
+  },
+  {
+    "id": "tteokbokki",
+    "korean": "떡볶이",
+    "romanization": "tteokbokki",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "korean", "street-food", "spicy"],
+    "translations": {
+      "ko": {
+        "word": "떡볶이",
+        "explanation": "떡을 매운 고추장 양념에 볶은 한국 대표 분식.",
+        "examples": {
+          "beginner": "떡볶이 먹고 싶어요.",
+          "intermediate": "학교 앞 떡볶이집 가자.",
+          "advanced": "떡볶이는 한국 길거리 음식의 대표 메뉴다.",
+          "master": "떡볶이 국물에 밥을 비벼 먹으면 정말 맛있어요."
+        }
+      },
+      "en": {
+        "word": "Tteokbokki (Spicy rice cakes)",
+        "explanation": "Rice cakes stir-fried in spicy gochujang sauce. A representative Korean street food.",
+        "examples": {
+          "beginner": "I want to eat tteokbokki.",
+          "intermediate": "Let's go to the tteokbokki shop in front of school.",
+          "advanced": "Tteokbokki is a representative Korean street food.",
+          "master": "Mixing rice in tteokbokki sauce is really delicious."
+        }
+      }
+    }
+  },
+  {
+    "id": "jjigae",
+    "korean": "찌개",
+    "romanization": "jjigae",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "korean", "soup"],
+    "translations": {
+      "ko": {
+        "word": "찌개",
+        "explanation": "국물이 있는 한국식 스튜. 김치찌개, 된장찌개 등이 있다.",
+        "examples": {
+          "beginner": "찌개 뜨거워요.",
+          "intermediate": "오늘 점심은 김치찌개 어때?",
+          "advanced": "추운 날에는 뜨끈한 찌개가 최고다.",
+          "master": "한국 가정에서는 거의 매일 찌개를 끓여 먹는다."
+        }
+      },
+      "en": {
+        "word": "Jjigae (Korean stew)",
+        "explanation": "Korean-style stew with broth. Includes kimchi jjigae, doenjang jjigae, etc.",
+        "examples": {
+          "beginner": "The stew is hot.",
+          "intermediate": "How about kimchi jjigae for lunch today?",
+          "advanced": "On cold days, hot stew is the best.",
+          "master": "Korean families make and eat stew almost every day."
+        }
+      }
+    }
+  },
+  {
+    "id": "japchae",
+    "korean": "잡채",
+    "romanization": "japchae",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["food", "korean", "noodles"],
+    "translations": {
+      "ko": {
+        "word": "잡채",
+        "explanation": "당면과 여러 채소를 볶아 만든 한국 전통 음식. 명절에 많이 먹는다.",
+        "examples": {
+          "beginner": "잡채 좋아해요.",
+          "intermediate": "명절에는 항상 잡채를 만들어요.",
+          "advanced": "잡채는 만들기 어려워 보이지만 재료만 준비하면 간단하다.",
+          "master": "잔치에 빠지지 않는 음식이 잡채인데, 손이 많이 가서 정성이 느껴진다."
+        }
+      },
+      "en": {
+        "word": "Japchae (Glass noodles)",
+        "explanation": "Traditional Korean dish of stir-fried glass noodles and vegetables. Often eaten during holidays.",
+        "examples": {
+          "beginner": "I like japchae.",
+          "intermediate": "We always make japchae during holidays.",
+          "advanced": "Japchae looks difficult to make but it's simple once ingredients are prepared.",
+          "master": "Japchae is essential at celebrations, and you can feel the care since it requires much effort."
+        }
+      }
+    }
+  },
+  {
+    "id": "galbi",
+    "korean": "갈비",
+    "romanization": "galbi",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "korean", "meat"],
+    "translations": {
+      "ko": {
+        "word": "갈비",
+        "explanation": "소나 돼지의 갈비뼈 부위. 양념해서 굽거나 찜으로 먹는다.",
+        "examples": {
+          "beginner": "갈비 맛있어요!",
+          "intermediate": "생일에 갈비 먹으러 가자.",
+          "advanced": "갈비찜은 명절이나 생일에 먹는 특별한 음식이다.",
+          "master": "LA갈비는 미국식으로 얇게 썰어서 한국에서도 인기가 많다."
+        }
+      },
+      "en": {
+        "word": "Galbi (Korean ribs)",
+        "explanation": "Beef or pork ribs. Marinated and grilled or braised.",
+        "examples": {
+          "beginner": "The ribs are delicious!",
+          "intermediate": "Let's go eat galbi for your birthday.",
+          "advanced": "Galbijjim is a special dish eaten during holidays or birthdays.",
+          "master": "LA galbi is thinly sliced American-style and popular in Korea too."
+        }
+      }
+    }
+  },
+  {
+    "id": "naengmyeon",
+    "korean": "냉면",
+    "romanization": "naengmyeon",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["food", "korean", "noodles", "cold"],
+    "translations": {
+      "ko": {
+        "word": "냉면",
+        "explanation": "차가운 국물이나 양념장에 먹는 면 요리. 여름에 인기가 많다.",
+        "examples": {
+          "beginner": "냉면 먹을래요?",
+          "intermediate": "여름에는 시원한 냉면이 최고야.",
+          "advanced": "평양냉면과 함흥냉면은 맛과 면이 다르다.",
+          "master": "고기를 먹은 뒤에 냉면으로 입가심하는 것이 한국의 식문화다."
+        }
+      },
+      "en": {
+        "word": "Naengmyeon (Cold noodles)",
+        "explanation": "Cold noodle dish served in chilled broth or spicy sauce. Popular in summer.",
+        "examples": {
+          "beginner": "Do you want to eat cold noodles?",
+          "intermediate": "In summer, cold naengmyeon is the best.",
+          "advanced": "Pyongyang naengmyeon and Hamheung naengmyeon differ in taste and noodles.",
+          "master": "It's Korean food culture to finish a meat meal with naengmyeon to cleanse the palate."
+        }
+      }
+    }
+  },
+  {
+    "id": "samgyetang",
+    "korean": "삼계탕",
+    "romanization": "samgyetang",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["food", "korean", "soup", "chicken"],
+    "translations": {
+      "ko": {
+        "word": "삼계탕",
+        "explanation": "인삼을 넣어 끓인 닭 요리. 여름 보양식으로 유명하다.",
+        "examples": {
+          "beginner": "삼계탕 먹어봤어요?",
+          "intermediate": "복날에는 삼계탕을 먹어요.",
+          "advanced": "삼계탕은 이열치열의 대표적인 음식이다.",
+          "master": "삼계탕 안에 들어있는 찹쌀과 대추도 꼭 먹어야 해요."
+        }
+      },
+      "en": {
+        "word": "Samgyetang (Ginseng chicken soup)",
+        "explanation": "Chicken soup with ginseng. Famous as a summer health food.",
+        "examples": {
+          "beginner": "Have you tried samgyetang?",
+          "intermediate": "We eat samgyetang on the hottest days of summer.",
+          "advanced": "Samgyetang is a representative dish of 'fight heat with heat' philosophy.",
+          "master": "You should also eat the glutinous rice and jujubes inside the samgyetang."
+        }
+      }
+    }
+  },
+  {
+    "id": "sundae",
+    "korean": "순대",
+    "romanization": "sundae",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["food", "korean", "street-food"],
+    "translations": {
+      "ko": {
+        "word": "순대",
+        "explanation": "돼지 창자에 당면과 채소를 넣어 만든 한국식 소시지.",
+        "examples": {
+          "beginner": "순대 좋아해요?",
+          "intermediate": "떡볶이에 순대 추가해주세요.",
+          "advanced": "피순대와 야채순대는 속 재료가 다르다.",
+          "master": "시장에서 파는 순대는 막창과 간도 함께 먹으면 더 맛있다."
+        }
+      },
+      "en": {
+        "word": "Sundae (Korean blood sausage)",
+        "explanation": "Korean-style sausage made with intestines filled with glass noodles and vegetables.",
+        "examples": {
+          "beginner": "Do you like sundae?",
+          "intermediate": "Please add sundae to my tteokbokki.",
+          "advanced": "Blood sundae and vegetable sundae have different fillings.",
+          "master": "Market sundae tastes even better with intestines and liver."
+        }
+      }
+    }
+  },
+  {
+    "id": "jeon",
+    "korean": "전",
+    "romanization": "jeon",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "korean", "traditional"],
+    "translations": {
+      "ko": {
+        "word": "전",
+        "explanation": "재료에 밀가루와 계란을 입혀 부친 한국 전통 음식.",
+        "examples": {
+          "beginner": "전 맛있어요.",
+          "intermediate": "비 오는 날에는 전이 먹고 싶어요.",
+          "advanced": "추석에는 동그랑땡, 녹두전 등 여러 전을 부친다.",
+          "master": "전을 부칠 때 불 조절이 중요한데, 약불에서 천천히 익혀야 바삭하다."
+        }
+      },
+      "en": {
+        "word": "Jeon (Korean pancake)",
+        "explanation": "Traditional Korean food made by coating ingredients in flour and egg, then pan-frying.",
+        "examples": {
+          "beginner": "The jeon is delicious.",
+          "intermediate": "I want to eat jeon on rainy days.",
+          "advanced": "During Chuseok, various jeon like meatballs and mung bean pancakes are made.",
+          "master": "When making jeon, temperature control is important - cooking slowly on low heat makes it crispy."
+        }
+      }
+    }
+  },
+  {
+    "id": "mandu",
+    "korean": "만두",
+    "romanization": "mandu",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "korean"],
+    "translations": {
+      "ko": {
+        "word": "만두",
+        "explanation": "밀가루 반죽에 고기와 채소 소를 넣어 만든 음식. 찌거나 굽거나 튀겨 먹는다.",
+        "examples": {
+          "beginner": "만두 좋아해요.",
+          "intermediate": "고기만두 다섯 개 주세요.",
+          "advanced": "설날에는 만둣국을 끓여 먹는다.",
+          "master": "손만두를 빚을 때는 반죽이 너무 두꺼우면 안 맛있어요."
+        }
+      },
+      "en": {
+        "word": "Mandu (Korean dumplings)",
+        "explanation": "Dumplings made with flour dough filled with meat and vegetables. Steamed, pan-fried, or deep-fried.",
+        "examples": {
+          "beginner": "I like dumplings.",
+          "intermediate": "Five meat dumplings, please.",
+          "advanced": "During Lunar New Year, we make dumpling soup.",
+          "master": "When making handmade dumplings, they won't taste good if the dough is too thick."
+        }
+      }
+    }
+  },
+  {
+    "id": "doenjang",
+    "korean": "된장",
+    "romanization": "doenjang",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["food", "korean", "fermented"],
+    "translations": {
+      "ko": {
+        "word": "된장",
+        "explanation": "콩을 발효시켜 만든 한국 전통 장. 찌개나 국에 많이 사용한다.",
+        "examples": {
+          "beginner": "된장찌개 먹을래요?",
+          "intermediate": "된장찌개에 두부 넣어주세요.",
+          "advanced": "된장은 한국의 대표적인 발효 식품으로 건강에 좋다.",
+          "master": "집에서 담근 된장은 공장 된장과 맛이 완전히 다르다."
+        }
+      },
+      "en": {
+        "word": "Doenjang (Fermented soybean paste)",
+        "explanation": "Traditional Korean fermented soybean paste. Used in stews and soups.",
+        "examples": {
+          "beginner": "Do you want to eat doenjang stew?",
+          "intermediate": "Please add tofu to the doenjang stew.",
+          "advanced": "Doenjang is Korea's representative fermented food and is healthy.",
+          "master": "Homemade doenjang tastes completely different from factory-made."
+        }
+      }
+    }
+  },
+  {
+    "id": "gochujang",
+    "korean": "고추장",
+    "romanization": "gochujang",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["food", "korean", "condiment", "spicy"],
+    "translations": {
+      "ko": {
+        "word": "고추장",
+        "explanation": "고춧가루로 만든 매운 한국 전통 장. 비빔밥, 떡볶이 등에 사용한다.",
+        "examples": {
+          "beginner": "고추장 주세요.",
+          "intermediate": "비빔밥에 고추장 더 넣어도 돼요?",
+          "advanced": "고추장은 매운맛과 단맛이 함께 있어서 한국 음식에 깊은 맛을 준다.",
+          "master": "순창 고추장이 유명한데, 전통 방식으로 오래 숙성시켜서 맛이 깊다."
+        }
+      },
+      "en": {
+        "word": "Gochujang (Red pepper paste)",
+        "explanation": "Spicy Korean traditional paste made with chili powder. Used in bibimbap, tteokbokki, etc.",
+        "examples": {
+          "beginner": "Gochujang, please.",
+          "intermediate": "Can I add more gochujang to my bibimbap?",
+          "advanced": "Gochujang has both spicy and sweet flavors, giving Korean food a deep taste.",
+          "master": "Sunchang gochujang is famous because it's aged traditionally for a rich flavor."
+        }
+      }
+    }
+  },
+  {
+    "id": "baechu",
+    "korean": "배추",
+    "romanization": "baechu",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "vegetable"],
+    "translations": {
+      "ko": {
+        "word": "배추",
+        "explanation": "김치의 주재료가 되는 채소. 김장철에 많이 사용한다.",
+        "examples": {
+          "beginner": "배추 한 포기 주세요.",
+          "intermediate": "김장할 때 배추를 소금에 절여요.",
+          "advanced": "요즘 배추값이 많이 올라서 김치 담그기 부담스럽다.",
+          "master": "좋은 배추는 속이 꽉 차고 노란색이어야 맛있는 김치가 된다."
+        }
+      },
+      "en": {
+        "word": "Napa cabbage",
+        "explanation": "Main vegetable ingredient for kimchi. Widely used during kimjang season.",
+        "examples": {
+          "beginner": "One head of napa cabbage, please.",
+          "intermediate": "When making kimchi, we salt the cabbage.",
+          "advanced": "Cabbage prices have risen so much that making kimchi is burdensome.",
+          "master": "Good cabbage should be dense and yellow inside for delicious kimchi."
+        }
+      }
+    }
+  },
+  {
+    "id": "gyeran",
+    "korean": "계란",
+    "romanization": "gyeran",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "ingredient"],
+    "translations": {
+      "ko": {
+        "word": "계란",
+        "explanation": "닭이 낳은 알. 다양한 요리에 사용되는 기본 재료.",
+        "examples": {
+          "beginner": "계란 두 개 주세요.",
+          "intermediate": "아침에 계란 프라이 해먹어요.",
+          "advanced": "한국에서는 찜질방에서 맥반석 계란을 먹는 게 유명하다.",
+          "master": "계란찜은 간단해 보이지만 부드럽게 만들려면 기술이 필요하다."
+        }
+      },
+      "en": {
+        "word": "Egg",
+        "explanation": "Chicken egg. A basic ingredient used in various dishes.",
+        "examples": {
+          "beginner": "Two eggs, please.",
+          "intermediate": "I make fried eggs for breakfast.",
+          "advanced": "In Korea, it's famous to eat baked eggs at jjimjilbang.",
+          "master": "Steamed egg looks simple but requires skill to make it fluffy."
+        }
+      }
+    }
+  },
+  {
+    "id": "dubu",
+    "korean": "두부",
+    "romanization": "dubu",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "ingredient", "vegetarian"],
+    "translations": {
+      "ko": {
+        "word": "두부",
+        "explanation": "콩으로 만든 음식. 찌개, 부침 등 다양하게 요리한다.",
+        "examples": {
+          "beginner": "두부 좋아해요.",
+          "intermediate": "순두부찌개 하나 주세요.",
+          "advanced": "두부는 단백질이 풍부해서 채식주의자에게 좋은 식품이다.",
+          "master": "재래시장에서 파는 손두부는 공장 두부와 식감이 완전히 다르다."
+        }
+      },
+      "en": {
+        "word": "Tofu",
+        "explanation": "Food made from soybeans. Cooked in various ways like stew and pan-frying.",
+        "examples": {
+          "beginner": "I like tofu.",
+          "intermediate": "One soft tofu stew, please.",
+          "advanced": "Tofu is rich in protein and good for vegetarians.",
+          "master": "Hand-pressed tofu from traditional markets has a completely different texture from factory tofu."
+        }
+      }
+    }
+  },
+  {
+    "id": "banchan",
+    "korean": "반찬",
+    "romanization": "banchan",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "korean", "side-dish"],
+    "translations": {
+      "ko": {
+        "word": "반찬",
+        "explanation": "밥과 함께 먹는 여러 가지 작은 요리. 한국 식사의 특징.",
+        "examples": {
+          "beginner": "반찬 맛있어요.",
+          "intermediate": "반찬 좀 더 주세요.",
+          "advanced": "한국 식당에서는 반찬을 무료로 리필해준다.",
+          "master": "어머니가 싸주시는 반찬은 자취하는 사람에게 최고의 선물이다."
+        }
+      },
+      "en": {
+        "word": "Banchan (Side dishes)",
+        "explanation": "Various small dishes eaten with rice. A characteristic of Korean meals.",
+        "examples": {
+          "beginner": "The side dishes are delicious.",
+          "intermediate": "More side dishes, please.",
+          "advanced": "In Korean restaurants, side dishes are refilled for free.",
+          "master": "Side dishes packed by mom are the best gift for someone living alone."
+        }
+      }
+    }
+  },
+  {
+    "id": "guk",
+    "korean": "국",
+    "romanization": "guk",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "korean", "soup"],
+    "translations": {
+      "ko": {
+        "word": "국",
+        "explanation": "한국식 맑은 국물 요리. 밥과 함께 먹는 기본 음식.",
+        "examples": {
+          "beginner": "국이 뜨거워요.",
+          "intermediate": "미역국 좋아해요.",
+          "advanced": "한국에서는 생일에 미역국을 먹는 전통이 있다.",
+          "master": "한국 밥상에는 국이 빠지지 않는데, 국물 문화가 발달해서 그렇다."
+        }
+      },
+      "en": {
+        "word": "Guk (Korean soup)",
+        "explanation": "Korean-style clear soup. A basic dish eaten with rice.",
+        "examples": {
+          "beginner": "The soup is hot.",
+          "intermediate": "I like seaweed soup.",
+          "advanced": "In Korea, there's a tradition of eating seaweed soup on birthdays.",
+          "master": "Korean tables always have soup because the soup culture is well-developed."
+        }
+      }
+    }
+  },
+  {
+    "id": "namul",
+    "korean": "나물",
+    "romanization": "namul",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["food", "korean", "vegetable"],
+    "translations": {
+      "ko": {
+        "word": "나물",
+        "explanation": "채소를 데치거나 볶아 양념한 반찬. 비빔밥에도 많이 들어간다.",
+        "examples": {
+          "beginner": "나물 맛있어요.",
+          "intermediate": "콩나물 좋아해요.",
+          "advanced": "봄에는 산에서 캔 나물이 제일 맛있다.",
+          "master": "한국의 나물 문화는 다양한 채소를 건강하게 먹는 지혜가 담겨있다."
+        }
+      },
+      "en": {
+        "word": "Namul (Seasoned vegetables)",
+        "explanation": "Side dishes of blanched or stir-fried seasoned vegetables. Also used in bibimbap.",
+        "examples": {
+          "beginner": "The namul is delicious.",
+          "intermediate": "I like bean sprouts.",
+          "advanced": "In spring, wild vegetables from the mountains taste the best.",
+          "master": "Korean namul culture contains wisdom about eating various vegetables healthily."
+        }
+      }
+    }
+  },
+  {
+    "id": "soju",
+    "korean": "소주",
+    "romanization": "soju",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["drink", "alcohol", "korean"],
+    "translations": {
+      "ko": {
+        "word": "소주",
+        "explanation": "한국의 대표적인 술. 투명하고 도수가 높다.",
+        "examples": {
+          "beginner": "소주 한 병 주세요.",
+          "intermediate": "삼겹살에는 소주가 최고야.",
+          "advanced": "소주는 한국에서 가장 많이 팔리는 술이다.",
+          "master": "소주를 처음 마실 때는 입문자용 과일 소주로 시작하는 게 좋다."
+        }
+      },
+      "en": {
+        "word": "Soju",
+        "explanation": "Korea's representative alcoholic beverage. Clear and high in alcohol content.",
+        "examples": {
+          "beginner": "One bottle of soju, please.",
+          "intermediate": "Soju goes best with samgyeopsal.",
+          "advanced": "Soju is the best-selling alcohol in Korea.",
+          "master": "When trying soju for the first time, it's good to start with fruit soju for beginners."
+        }
+      }
+    }
+  },
+  {
+    "id": "maekju",
+    "korean": "맥주",
+    "romanization": "maekju",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["drink", "alcohol"],
+    "translations": {
+      "ko": {
+        "word": "맥주",
+        "explanation": "보리로 만든 술. 치킨과 함께 먹는 것이 인기다.",
+        "examples": {
+          "beginner": "맥주 마실래요?",
+          "intermediate": "치킨에는 맥주지!",
+          "advanced": "요즘 한국에서는 수제 맥주가 인기가 많다.",
+          "master": "치킨과 맥주의 조합을 '치맥'이라고 하는데, 한국의 대표적인 야식 문화다."
+        }
+      },
+      "en": {
+        "word": "Beer",
+        "explanation": "Alcoholic beverage made from barley. Popular to drink with chicken.",
+        "examples": {
+          "beginner": "Do you want to drink beer?",
+          "intermediate": "Chicken goes with beer!",
+          "advanced": "Recently, craft beer is very popular in Korea.",
+          "master": "The combination of chicken and beer is called 'chimaek' - a representative Korean late-night food culture."
+        }
+      }
+    }
+  },
+  {
+    "id": "jumeok-bap",
+    "korean": "주먹밥",
+    "romanization": "jumeokbap",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "korean", "simple"],
+    "translations": {
+      "ko": {
+        "word": "주먹밥",
+        "explanation": "밥을 주먹으로 동글게 뭉쳐 만든 간단한 음식.",
+        "examples": {
+          "beginner": "주먹밥 만들어줘.",
+          "intermediate": "소풍 갈 때 주먹밥 싸가자.",
+          "advanced": "간단한 재료로 주먹밥을 만들면 훌륭한 도시락이 된다.",
+          "master": "어렸을 때 엄마가 만들어주신 주먹밥은 언제 먹어도 그리운 맛이다."
+        }
+      },
+      "en": {
+        "word": "Jumeokbap (Rice ball)",
+        "explanation": "Simple food made by shaping rice into balls with your fist.",
+        "examples": {
+          "beginner": "Make me a rice ball.",
+          "intermediate": "Let's pack rice balls for the picnic.",
+          "advanced": "Making rice balls with simple ingredients makes a great lunch box.",
+          "master": "The rice balls my mom made when I was young always bring back nostalgic memories."
+        }
+      }
+    }
+  },
+  {
+    "id": "boribap",
+    "korean": "보리밥",
+    "romanization": "boribap",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["food", "korean", "healthy"],
+    "translations": {
+      "ko": {
+        "word": "보리밥",
+        "explanation": "보리를 섞어 지은 밥. 건강식으로 인기가 있다.",
+        "examples": {
+          "beginner": "보리밥 먹어봤어요?",
+          "intermediate": "다이어트 중이라 보리밥 먹어요.",
+          "advanced": "보리밥은 섬유질이 많아서 소화에 좋다.",
+          "master": "시골에서는 보리밥을 비빔밥처럼 쓱쓱 비벼 먹는다."
+        }
+      },
+      "en": {
+        "word": "Barley rice",
+        "explanation": "Rice mixed with barley. Popular as a healthy food.",
+        "examples": {
+          "beginner": "Have you tried barley rice?",
+          "intermediate": "I eat barley rice because I'm on a diet.",
+          "advanced": "Barley rice is good for digestion because it's high in fiber.",
+          "master": "In the countryside, people mix barley rice like bibimbap."
+        }
+      }
+    }
+  },
+  {
+    "id": "kkakdugi",
+    "korean": "깍두기",
+    "romanization": "kkakdugi",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["food", "korean", "kimchi"],
+    "translations": {
+      "ko": {
+        "word": "깍두기",
+        "explanation": "무를 네모나게 썰어 담근 김치. 설렁탕과 잘 어울린다.",
+        "examples": {
+          "beginner": "깍두기 좋아해요.",
+          "intermediate": "설렁탕에 깍두기 넣어 먹으면 맛있어요.",
+          "advanced": "깍두기는 배추김치보다 만들기 쉬워서 처음 배울 때 좋다.",
+          "master": "잘 익은 깍두기는 국물에 넣어 먹거나 볶음밥에 넣어도 맛있다."
+        }
+      },
+      "en": {
+        "word": "Kkakdugi (Cubed radish kimchi)",
+        "explanation": "Kimchi made from cubed radish. Goes well with seolleongtang.",
+        "examples": {
+          "beginner": "I like kkakdugi.",
+          "intermediate": "It's delicious to add kkakdugi to seolleongtang.",
+          "advanced": "Kkakdugi is easier to make than cabbage kimchi, so it's good for beginners.",
+          "master": "Well-fermented kkakdugi is delicious in soup or fried rice."
+        }
+      }
+    }
+  },
+  {
+    "id": "pa",
+    "korean": "파",
+    "romanization": "pa",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "vegetable", "ingredient"],
+    "translations": {
+      "ko": {
+        "word": "파",
+        "explanation": "한국 요리에서 향신료로 많이 쓰이는 채소.",
+        "examples": {
+          "beginner": "파 넣을까요?",
+          "intermediate": "파전 먹으러 가자.",
+          "advanced": "국이나 찌개에 파를 마지막에 넣으면 향이 좋다.",
+          "master": "대파와 쪽파는 용도가 다른데, 대파는 국물 요리에, 쪽파는 무침에 많이 쓴다."
+        }
+      },
+      "en": {
+        "word": "Green onion / Scallion",
+        "explanation": "Vegetable commonly used as a seasoning in Korean cooking.",
+        "examples": {
+          "beginner": "Should I add green onion?",
+          "intermediate": "Let's go eat green onion pancake.",
+          "advanced": "Adding green onion at the end to soup or stew gives good aroma.",
+          "master": "Leek and scallion have different uses - leek for soups, scallion for side dishes."
+        }
+      }
+    }
+  },
+  {
+    "id": "maneul",
+    "korean": "마늘",
+    "romanization": "maneul",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "vegetable", "ingredient"],
+    "translations": {
+      "ko": {
+        "word": "마늘",
+        "explanation": "한국 요리에 빠지지 않는 향신료. 건강에도 좋다.",
+        "examples": {
+          "beginner": "마늘 냄새나요.",
+          "intermediate": "김치에는 마늘이 많이 들어가요.",
+          "advanced": "마늘은 한국 음식의 기본 양념으로 거의 모든 요리에 들어간다.",
+          "master": "마늘을 많이 먹어서 한국 사람은 피부가 좋다는 말이 있다."
+        }
+      },
+      "en": {
+        "word": "Garlic",
+        "explanation": "An essential seasoning in Korean cooking. Also good for health.",
+        "examples": {
+          "beginner": "It smells like garlic.",
+          "intermediate": "A lot of garlic goes into kimchi.",
+          "advanced": "Garlic is a basic seasoning in Korean food and goes into almost every dish.",
+          "master": "There's a saying that Koreans have good skin because they eat a lot of garlic."
+        }
+      }
+    }
+  },
+  {
+    "id": "sigeumchi",
+    "korean": "시금치",
+    "romanization": "sigeumchi",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "vegetable"],
+    "translations": {
+      "ko": {
+        "word": "시금치",
+        "explanation": "나물로 많이 먹는 녹색 채소. 비빔밥에도 들어간다.",
+        "examples": {
+          "beginner": "시금치 좋아해요?",
+          "intermediate": "시금치나물 해줄게요.",
+          "advanced": "시금치는 철분이 많아서 빈혈에 좋다고 해요.",
+          "master": "시금치를 데칠 때 소금을 조금 넣으면 색이 더 예쁘게 나온다."
+        }
+      },
+      "en": {
+        "word": "Spinach",
+        "explanation": "Green vegetable often eaten as namul. Also goes in bibimbap.",
+        "examples": {
+          "beginner": "Do you like spinach?",
+          "intermediate": "I'll make spinach namul for you.",
+          "advanced": "Spinach is high in iron, so it's good for anemia.",
+          "master": "Adding a little salt when blanching spinach keeps the color prettier."
+        }
+      }
+    }
+  },
+  {
+    "id": "hobak",
+    "korean": "호박",
+    "romanization": "hobak",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "vegetable"],
+    "translations": {
+      "ko": {
+        "word": "호박",
+        "explanation": "한국에서 찌개나 전으로 많이 먹는 채소.",
+        "examples": {
+          "beginner": "호박전 먹을래?",
+          "intermediate": "된장찌개에 호박 넣어줘.",
+          "advanced": "늙은 호박은 단맛이 강해서 죽으로 많이 끓인다.",
+          "master": "산후조리할 때 호박을 먹으면 붓기가 빠진다고 해요."
+        }
+      },
+      "en": {
+        "word": "Zucchini / Squash",
+        "explanation": "Vegetable often used in stews and pancakes in Korea.",
+        "examples": {
+          "beginner": "Do you want zucchini pancake?",
+          "intermediate": "Add zucchini to the doenjang stew.",
+          "advanced": "Ripe pumpkin is very sweet, so it's often made into porridge.",
+          "master": "Eating pumpkin during postpartum care is said to reduce swelling."
+        }
+      }
+    }
+  },
+  {
+    "id": "yangpa",
+    "korean": "양파",
+    "romanization": "yangpa",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "vegetable", "ingredient"],
+    "translations": {
+      "ko": {
+        "word": "양파",
+        "explanation": "단맛을 내는 채소. 볶음, 찌개 등에 많이 사용한다.",
+        "examples": {
+          "beginner": "양파 썰 때 눈물나요.",
+          "intermediate": "불고기에 양파 많이 넣어줘.",
+          "advanced": "양파를 오래 볶으면 단맛이 더 강해진다.",
+          "master": "양파즙은 고기 재울 때 넣으면 육질이 부드러워진다."
+        }
+      },
+      "en": {
+        "word": "Onion",
+        "explanation": "Vegetable that adds sweetness. Used in stir-fries, stews, etc.",
+        "examples": {
+          "beginner": "I tear up when cutting onions.",
+          "intermediate": "Add lots of onion to the bulgogi.",
+          "advanced": "Caramelizing onion for a long time makes it sweeter.",
+          "master": "Adding onion juice when marinating meat makes it tender."
+        }
+      }
+    }
+  },
+  {
+    "id": "danggeun",
+    "korean": "당근",
+    "romanization": "danggeun",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "vegetable"],
+    "translations": {
+      "ko": {
+        "word": "당근",
+        "explanation": "주황색 뿌리채소. 다양한 요리에 사용된다.",
+        "examples": {
+          "beginner": "당근 좋아해요?",
+          "intermediate": "잡채에 당근 채썰어 넣어.",
+          "advanced": "당근은 눈 건강에 좋다고 해서 어릴 때 많이 먹었다.",
+          "master": "당근을 기름에 볶으면 베타카로틴 흡수율이 높아진다."
+        }
+      },
+      "en": {
+        "word": "Carrot",
+        "explanation": "Orange root vegetable. Used in various dishes.",
+        "examples": {
+          "beginner": "Do you like carrots?",
+          "intermediate": "Julienne the carrots for the japchae.",
+          "advanced": "I ate a lot of carrots as a child because they're good for eye health.",
+          "master": "Cooking carrots in oil increases beta-carotene absorption."
+        }
+      }
+    }
+  },
+  {
+    "id": "gamja",
+    "korean": "감자",
+    "romanization": "gamja",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "vegetable"],
+    "translations": {
+      "ko": {
+        "word": "감자",
+        "explanation": "전 세계적으로 많이 먹는 구황작물. 한국에서는 감자탕, 감자전으로 많이 먹는다.",
+        "examples": {
+          "beginner": "감자 삶았어요.",
+          "intermediate": "감자탕 먹으러 갈까?",
+          "advanced": "강원도 감자가 유명한데 전분이 많아서 포슬포슬하다.",
+          "master": "감자를 껍질째 삶으면 영양분이 덜 빠져나간다."
+        }
+      },
+      "en": {
+        "word": "Potato",
+        "explanation": "A staple crop eaten worldwide. In Korea, used in gamjatang and potato pancakes.",
+        "examples": {
+          "beginner": "I boiled potatoes.",
+          "intermediate": "Shall we go eat gamjatang?",
+          "advanced": "Gangwon-do potatoes are famous for being starchy and fluffy.",
+          "master": "Boiling potatoes with the skin retains more nutrients."
+        }
+      }
+    }
+  },
+  {
+    "id": "goguma",
+    "korean": "고구마",
+    "romanization": "goguma",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "vegetable", "snack"],
+    "translations": {
+      "ko": {
+        "word": "고구마",
+        "explanation": "달콤한 맛의 뿌리채소. 겨울 간식으로 인기가 많다.",
+        "examples": {
+          "beginner": "고구마 맛있어요.",
+          "intermediate": "겨울에는 군고구마가 최고야.",
+          "advanced": "에어프라이어로 고구마를 구우면 군고구마처럼 맛있다.",
+          "master": "고구마에 김치를 같이 먹으면 속이 안 더부룩하다고 해요."
+        }
+      },
+      "en": {
+        "word": "Sweet potato",
+        "explanation": "Sweet root vegetable. Popular as a winter snack.",
+        "examples": {
+          "beginner": "Sweet potatoes are delicious.",
+          "intermediate": "In winter, roasted sweet potato is the best.",
+          "advanced": "Baking sweet potatoes in an air fryer tastes like roasted ones.",
+          "master": "Eating kimchi with sweet potato is said to prevent bloating."
+        }
+      }
+    }
+  },
+  {
+    "id": "saenggang",
+    "korean": "생강",
+    "romanization": "saenggang",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["food", "ingredient", "spice"],
+    "translations": {
+      "ko": {
+        "word": "생강",
+        "explanation": "향신료로 쓰이는 뿌리. 감기에 좋다고 알려져 있다.",
+        "examples": {
+          "beginner": "생강차 마실래요?",
+          "intermediate": "생선 요리할 때 생강 넣으면 비린내가 없어져요.",
+          "advanced": "생강청을 만들어두면 차로 마시거나 요리에 활용할 수 있다.",
+          "master": "생강은 몸을 따뜻하게 해줘서 겨울철에 특히 좋다."
+        }
+      },
+      "en": {
+        "word": "Ginger",
+        "explanation": "Root used as a spice. Known to be good for colds.",
+        "examples": {
+          "beginner": "Do you want ginger tea?",
+          "intermediate": "Adding ginger when cooking fish removes the fishy smell.",
+          "advanced": "Making ginger syrup lets you use it for tea or cooking.",
+          "master": "Ginger warms the body, so it's especially good in winter."
+        }
+      }
+    }
+  },
+  {
+    "id": "kkae",
+    "korean": "깨",
+    "romanization": "kkae",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["food", "ingredient"],
+    "translations": {
+      "ko": {
+        "word": "깨",
+        "explanation": "고소한 맛을 내는 씨앗. 나물이나 밥에 뿌려 먹는다.",
+        "examples": {
+          "beginner": "깨 뿌려줘.",
+          "intermediate": "나물에 참깨 넣으면 고소해요.",
+          "advanced": "참기름과 깨는 한국 음식에서 고소한 맛을 내는 핵심 재료다.",
+          "master": "들깨는 참깨와 다르게 뽀얀 국물을 만들어서 들깨탕에 많이 쓴다."
+        }
+      },
+      "en": {
+        "word": "Sesame seeds",
+        "explanation": "Seeds that add nutty flavor. Sprinkled on namul or rice.",
+        "examples": {
+          "beginner": "Sprinkle some sesame.",
+          "intermediate": "Adding sesame to namul makes it nutty.",
+          "advanced": "Sesame oil and seeds are key ingredients for nutty flavor in Korean food.",
+          "master": "Perilla seeds make a creamy broth unlike sesame, used in perilla seed soup."
+        }
+      }
+    }
+  },
+  {
+    "id": "chamgireum",
+    "korean": "참기름",
+    "romanization": "chamgireum",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "ingredient", "oil"],
+    "translations": {
+      "ko": {
+        "word": "참기름",
+        "explanation": "참깨로 만든 기름. 한국 음식의 고소한 맛을 내는 필수 재료.",
+        "examples": {
+          "beginner": "참기름 좀 넣어줘.",
+          "intermediate": "비빔밥에 참기름 넣으면 맛있어요.",
+          "advanced": "한국 음식에서 참기름은 마무리 양념으로 자주 쓰인다.",
+          "master": "방앗간에서 직접 짜는 참기름은 향이 훨씬 좋다."
+        }
+      },
+      "en": {
+        "word": "Sesame oil",
+        "explanation": "Oil made from sesame seeds. Essential ingredient for nutty flavor in Korean food.",
+        "examples": {
+          "beginner": "Add some sesame oil.",
+          "intermediate": "Adding sesame oil to bibimbap makes it delicious.",
+          "advanced": "In Korean cooking, sesame oil is often used as a finishing seasoning.",
+          "master": "Freshly pressed sesame oil from a mill has a much better aroma."
+        }
+      }
+    }
+  },
+  {
+    "id": "ganjang",
+    "korean": "간장",
+    "romanization": "ganjang",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "condiment"],
+    "translations": {
+      "ko": {
+        "word": "간장",
+        "explanation": "콩으로 만든 한국 전통 조미료. 요리에 간을 맞출 때 사용한다.",
+        "examples": {
+          "beginner": "간장 주세요.",
+          "intermediate": "간장에 찍어 먹으면 맛있어요.",
+          "advanced": "국간장과 진간장은 용도가 달라서 구분해서 써야 한다.",
+          "master": "전통 방식으로 담근 조선간장은 맛이 깊고 건강에도 좋다."
+        }
+      },
+      "en": {
+        "word": "Soy sauce",
+        "explanation": "Traditional Korean seasoning made from soybeans. Used to season dishes.",
+        "examples": {
+          "beginner": "Soy sauce, please.",
+          "intermediate": "It's delicious when dipped in soy sauce.",
+          "advanced": "Light soy sauce and dark soy sauce have different uses.",
+          "master": "Traditionally brewed Joseon soy sauce has a deep flavor and is healthy."
+        }
+      }
+    }
+  },
+  {
+    "id": "sikcho",
+    "korean": "식초",
+    "romanization": "sikcho",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "condiment"],
+    "translations": {
+      "ko": {
+        "word": "식초",
+        "explanation": "신맛을 내는 조미료. 냉면이나 물회에 많이 넣는다.",
+        "examples": {
+          "beginner": "식초 넣을까요?",
+          "intermediate": "냉면에 식초 많이 넣어줘.",
+          "advanced": "식초는 음식의 느끼한 맛을 잡아주는 역할을 한다.",
+          "master": "천연 발효 식초는 건강에 좋아서 요즘 많이 찾는다."
+        }
+      },
+      "en": {
+        "word": "Vinegar",
+        "explanation": "Sour seasoning. Often added to naengmyeon or raw fish.",
+        "examples": {
+          "beginner": "Should I add vinegar?",
+          "intermediate": "Add lots of vinegar to my naengmyeon.",
+          "advanced": "Vinegar helps cut the greasiness in food.",
+          "master": "Naturally fermented vinegar is healthy and popular these days."
+        }
+      }
+    }
+  },
+  {
+    "id": "seoltang",
+    "korean": "설탕",
+    "romanization": "seoltang",
+    "partOfSpeech": "noun",
+    "categoryId": "food",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["food", "ingredient", "condiment"],
+    "translations": {
+      "ko": {
+        "word": "설탕",
+        "explanation": "단맛을 내는 기본 조미료. 요리와 제과에 필수적이다.",
+        "examples": {
+          "beginner": "설탕 좀 주세요.",
+          "intermediate": "커피에 설탕 넣을까요?",
+          "advanced": "요즘은 건강을 위해 설탕 대신 꿀이나 대체당을 쓰는 사람이 많다.",
+          "master": "한국 요리에서 설탕은 간장과 함께 양념의 기본이 된다."
+        }
+      },
+      "en": {
+        "word": "Sugar",
+        "explanation": "Basic seasoning for sweetness. Essential in cooking and baking.",
+        "examples": {
+          "beginner": "Some sugar, please.",
+          "intermediate": "Should I add sugar to the coffee?",
+          "advanced": "Many people now use honey or sugar substitutes instead of sugar for health.",
+          "master": "In Korean cooking, sugar along with soy sauce forms the base of seasonings."
+        }
+      }
+    }
   }
 ]

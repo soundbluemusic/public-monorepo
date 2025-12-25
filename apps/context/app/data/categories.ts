@@ -219,6 +219,90 @@ export const categories: Category[] = [
     color: 'teal',
     order: 14,
   },
+  {
+    id: 'time-date',
+    name: {
+      ko: '시간/날짜',
+      en: 'Time & Date',
+    },
+    description: {
+      ko: '시간, 날짜, 요일 관련 단어',
+      en: 'Time, date, and day-related vocabulary',
+    },
+    icon: '🕐',
+    color: 'blue',
+    order: 15,
+  },
+  {
+    id: 'family',
+    name: {
+      ko: '가족/관계',
+      en: 'Family & Relationships',
+    },
+    description: {
+      ko: '가족, 친척, 인간관계 관련 단어',
+      en: 'Family, relatives, and relationship vocabulary',
+    },
+    icon: '👨‍👩‍👧‍👦',
+    color: 'pink',
+    order: 16,
+  },
+  {
+    id: 'verbs-basic',
+    name: {
+      ko: '기본 동사',
+      en: 'Basic Verbs',
+    },
+    description: {
+      ko: 'TOPIK 필수 기본 동사',
+      en: 'Essential basic verbs for TOPIK',
+    },
+    icon: '🏃',
+    color: 'orange',
+    order: 17,
+  },
+  {
+    id: 'adjectives-basic',
+    name: {
+      ko: '기본 형용사',
+      en: 'Basic Adjectives',
+    },
+    description: {
+      ko: 'TOPIK 필수 기본 형용사',
+      en: 'Essential basic adjectives for TOPIK',
+    },
+    icon: '✨',
+    color: 'purple',
+    order: 18,
+  },
+  {
+    id: 'shopping',
+    name: {
+      ko: '쇼핑',
+      en: 'Shopping',
+    },
+    description: {
+      ko: '쇼핑과 구매 관련 단어',
+      en: 'Shopping and purchasing vocabulary',
+    },
+    icon: '🛒',
+    color: 'pink',
+    order: 19,
+  },
+  {
+    id: 'transportation',
+    name: {
+      ko: '교통',
+      en: 'Transportation',
+    },
+    description: {
+      ko: '교통수단과 이동 관련 단어',
+      en: 'Transportation and travel vocabulary',
+    },
+    icon: '🚌',
+    color: 'blue',
+    order: 20,
+  },
 ];
 
 /**
