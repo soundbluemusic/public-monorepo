@@ -322,6 +322,104 @@
     "tags": ["work", "basic", "il"]
   },
   {
+    "id": "chingu",
+    "type": "entry",
+    "name": {
+      "ko": "친구",
+      "en": "Friend"
+    },
+    "description": {
+      "ko": "서로 친하게 지내는 사이. 한국에서는 같은 나이 또는 비슷한 나이의 사람을 친구라고 부른다.",
+      "en": "A person you are close with. In Korea, 'friend' typically refers to someone of the same or similar a"
+    },
+    "field": "daily-life",
+    "tags": ["people", "relationship", "basic", "chingu"]
+  },
+  {
+    "id": "gajok",
+    "type": "entry",
+    "name": {
+      "ko": "가족",
+      "en": "Family"
+    },
+    "description": {
+      "ko": "부모, 자녀, 형제자매 등 혈연이나 법적 관계로 맺어진 사람들. 한국 문화에서 매우 중요한 개념이다.",
+      "en": "People connected by blood or legal relationships, such as parents, children, and siblings. A very im"
+    },
+    "field": "daily-life",
+    "tags": ["people", "family", "basic", "gajok"]
+  },
+  {
+    "id": "don",
+    "type": "entry",
+    "name": {
+      "ko": "돈",
+      "en": "Money"
+    },
+    "description": {
+      "ko": "화폐, 재산. 일상생활에서 가장 자주 쓰이는 기본 단어 중 하나이다.",
+      "en": "Currency, wealth. One of the most commonly used basic words in daily life."
+    },
+    "field": "daily-life",
+    "tags": ["money", "basic", "don"]
+  },
+  {
+    "id": "ne",
+    "type": "entry",
+    "name": {
+      "ko": "네",
+      "en": "Yes / Okay"
+    },
+    "description": {
+      "ko": "긍정의 대답, 또는 상대방의 말을 듣고 있다는 반응. 전화 받을 때도 사용한다.",
+      "en": "An affirmative response, or a reaction showing you're listening. Also used when answering the phone."
+    },
+    "field": "daily-life",
+    "tags": ["response", "basic", "polite", "ne"]
+  },
+  {
+    "id": "mwo",
+    "type": "entry",
+    "name": {
+      "ko": "뭐",
+      "en": "What"
+    },
+    "description": {
+      "ko": "'무엇'의 줄임말. 일상 대화에서 매우 자주 쓰인다. '뭐해?'는 가장 흔한 인사 중 하나이다.",
+      "en": "Short form of '무엇'. Very commonly used in daily conversation. '뭐 해?' is one of the most common casua"
+    },
+    "field": "daily-life",
+    "tags": ["question", "basic", "casual", "mwo"]
+  },
+  {
+    "id": "ige",
+    "type": "entry",
+    "name": {
+      "ko": "이거",
+      "en": "This (thing)"
+    },
+    "description": {
+      "ko": "'이것'의 줄임말. 가까이 있는 것을 가리킬 때 사용한다. 일상 대화에서 매우 자주 쓰인다.",
+      "en": "Short form of '이것'. Used to point to something nearby. Very commonly used in daily conversation."
+    },
+    "field": "daily-life",
+    "tags": ["demonstrative", "basic", "casual", "igeo"]
+  },
+  {
+    "id": "wae",
+    "type": "entry",
+    "name": {
+      "ko": "왜",
+      "en": "Why"
+    },
+    "description": {
+      "ko": "이유를 물을 때 쓰는 의문사. 감정을 표현하거나 불만을 나타낼 때도 사용된다.",
+      "en": "An interrogative used to ask for reasons. Also used to express emotions or show dissatisfaction."
+    },
+    "field": "daily-life",
+    "tags": ["question", "basic", "wae"]
+  },
+  {
     "id": "sarang",
     "type": "entry",
     "name": {
@@ -364,6 +462,104 @@
     "tags": ["emotion", "negative", "seulpeum"]
   },
   {
+    "id": "gibbun",
+    "type": "entry",
+    "name": {
+      "ko": "기분",
+      "en": "Mood / Feeling"
+    },
+    "description": {
+      "ko": "그때그때 느끼는 마음의 상태. '기분이 좋다/나쁘다'로 자주 사용된다.",
+      "en": "The emotional state one feels at a given moment. Often used as '기분이 좋다/나쁘다' (to feel good/bad)."
+    },
+    "field": "emotions",
+    "tags": ["emotion", "basic", "gibun"]
+  },
+  {
+    "id": "geokjeong",
+    "type": "entry",
+    "name": {
+      "ko": "걱정",
+      "en": "Worry / Concern"
+    },
+    "description": {
+      "ko": "앞으로 일어날 일에 대해 불안해하는 마음. '걱정하다', '걱정되다'로 동사화된다.",
+      "en": "Anxiety about future events. Used as verbs '걱정하다' (to worry) and '걱정되다' (to be worried about)."
+    },
+    "field": "emotions",
+    "tags": ["emotion", "negative", "geokjeong"]
+  },
+  {
+    "id": "hwanada",
+    "type": "entry",
+    "name": {
+      "ko": "화나다",
+      "en": "To get angry"
+    },
+    "description": {
+      "ko": "분노의 감정이 생기다. '화가 나다'의 줄임말로도 쓰인다. 명사형은 '화'이다.",
+      "en": "To become angry or upset. Also used as '화가 나다'. The noun form is '화' (anger)."
+    },
+    "field": "emotions",
+    "tags": ["emotion", "negative", "hwanada"]
+  },
+  {
+    "id": "museopda",
+    "type": "entry",
+    "name": {
+      "ko": "무섭다",
+      "en": "Scary / To be scared"
+    },
+    "description": {
+      "ko": "두려움을 느끼다. 공포 영화, 어두운 곳, 위험한 상황 등에서 느끼는 감정을 표현한다.",
+      "en": "To feel fear. Used to express feelings about horror movies, dark places, dangerous situations, etc."
+    },
+    "field": "emotions",
+    "tags": ["emotion", "negative", "museopda"]
+  },
+  {
+    "id": "jjajeungnada",
+    "type": "entry",
+    "name": {
+      "ko": "짜증나다",
+      "en": "To be annoyed / frustrated"
+    },
+    "description": {
+      "ko": "불쾌하거나 귀찮은 감정이 생기다. 일상에서 자주 쓰이는 표현이다.",
+      "en": "To feel annoyed or irritated. A very commonly used expression in daily life."
+    },
+    "field": "emotions",
+    "tags": ["emotion", "negative", "casual", "jjajeungnada"]
+  },
+  {
+    "id": "simshimhada",
+    "type": "entry",
+    "name": {
+      "ko": "심심하다",
+      "en": "Bored"
+    },
+    "description": {
+      "ko": "할 일이 없어서 지루하다. 재미있는 일이 없을 때 느끼는 감정을 표현한다.",
+      "en": "To feel bored due to having nothing to do. Expresses the feeling when there's nothing interesting ha"
+    },
+    "field": "emotions",
+    "tags": ["emotion", "casual", "simshimhada"]
+  },
+  {
+    "id": "seolreda",
+    "type": "entry",
+    "name": {
+      "ko": "설레다",
+      "en": "To be excited / flutter (heart)"
+    },
+    "description": {
+      "ko": "기대감이나 흥분으로 마음이 두근거리다. 주로 연애, 새로운 시작, 기대되는 일에 사용한다.",
+      "en": "To have one's heart flutter with anticipation or excitement. Often used for romance, new beginnings,"
+    },
+    "field": "emotions",
+    "tags": ["emotion", "positive", "romance", "seolreda"]
+  },
+  {
     "id": "bap",
     "type": "entry",
     "name": {
@@ -404,6 +600,104 @@
     },
     "field": "food",
     "tags": ["drink", "basic", "mul"]
+  },
+  {
+    "id": "gogi",
+    "type": "entry",
+    "name": {
+      "ko": "고기",
+      "en": "Meat"
+    },
+    "description": {
+      "ko": "식용 동물의 살. 소고기, 돼지고기, 닭고기 등을 통틀어 이른다. 한국에서 삼겹살, 갈비 등 고기 요리가 인기 있다.",
+      "en": "Edible animal flesh. Includes beef, pork, chicken, etc. In Korea, grilled meat dishes like samgyeops"
+    },
+    "field": "food",
+    "tags": ["food", "meat", "basic", "gogi"]
+  },
+  {
+    "id": "ramyeon",
+    "type": "entry",
+    "name": {
+      "ko": "라면",
+      "en": "Ramen / Instant noodles"
+    },
+    "description": {
+      "ko": "한국식 인스턴트 국수. 빠르고 쉽게 만들 수 있어 야식이나 간편식으로 인기 있다.",
+      "en": "Korean-style instant noodles. Popular as a late-night snack or quick meal because it's fast and easy"
+    },
+    "field": "food",
+    "tags": ["food", "korean", "popular", "ramyeon"]
+  },
+  {
+    "id": "masitda",
+    "type": "entry",
+    "name": {
+      "ko": "맛있다",
+      "en": "Delicious / Tasty"
+    },
+    "description": {
+      "ko": "음식의 맛이 좋다. 식사할 때 가장 많이 쓰는 표현 중 하나이다.",
+      "en": "When food tastes good. One of the most commonly used expressions when eating."
+    },
+    "field": "food",
+    "tags": ["food", "adjective", "basic", "masitda"]
+  },
+  {
+    "id": "maepda",
+    "type": "entry",
+    "name": {
+      "ko": "맵다",
+      "en": "Spicy"
+    },
+    "description": {
+      "ko": "매운 맛이 나다. 한국 음식에서 자주 경험하는 맛이다.",
+      "en": "Having a hot, pungent taste. A common flavor in Korean cuisine."
+    },
+    "field": "food",
+    "tags": ["food", "taste", "adjective", "maepda"]
+  },
+  {
+    "id": "sikdang",
+    "type": "entry",
+    "name": {
+      "ko": "식당",
+      "en": "Restaurant"
+    },
+    "description": {
+      "ko": "음식을 파는 가게. 레스토랑보다 더 일반적이고 캐주얼한 느낌의 표현이다.",
+      "en": "A place that sells food. A more general and casual expression than 'restaurant'."
+    },
+    "field": "food",
+    "tags": ["food", "place", "basic", "sikdang"]
+  },
+  {
+    "id": "baegopeuda",
+    "type": "entry",
+    "name": {
+      "ko": "배고프다",
+      "en": "Hungry"
+    },
+    "description": {
+      "ko": "배가 고픈 상태. 음식을 먹고 싶을 때 사용하는 표현이다.",
+      "en": "The state of feeling hungry. Used when you want to eat food."
+    },
+    "field": "food",
+    "tags": ["food", "feeling", "basic", "baegopeuda"]
+  },
+  {
+    "id": "keopi",
+    "type": "entry",
+    "name": {
+      "ko": "커피",
+      "en": "Coffee"
+    },
+    "description": {
+      "ko": "커피 원두로 만든 음료. 한국에서 매우 인기 있는 음료로, 커피숍이 어디에나 있다.",
+      "en": "A beverage made from coffee beans. Very popular in Korea, with coffee shops everywhere."
+    },
+    "field": "food",
+    "tags": ["drink", "popular", "keopi"]
   },
   {
     "id": "annyeong",
@@ -460,6 +754,76 @@
     },
     "field": "greetings",
     "tags": ["formal", "farewell", "polite", "annyeonghi gaseyo"]
+  },
+  {
+    "id": "annyeonghigyeseyo",
+    "type": "entry",
+    "name": {
+      "ko": "안녕히 계세요",
+      "en": "Goodbye (when leaving)"
+    },
+    "description": {
+      "ko": "자신이 떠나고 상대가 남을 때 하는 인사. 직역하면 '평안히 계세요'라는 뜻. '안녕히 가세요'와 짝을 이루는 표현이다.",
+      "en": "Said when you're the one leaving while others stay. Literally means 'stay peacefully'. Paired with '"
+    },
+    "field": "greetings",
+    "tags": ["formal", "farewell", "polite", "annyeonghi gyeseyo"]
+  },
+  {
+    "id": "gomawo",
+    "type": "entry",
+    "name": {
+      "ko": "고마워",
+      "en": "Thanks (casual)"
+    },
+    "description": {
+      "ko": "친구나 친한 사이에서 쓰는 반말 감사 표현. '감사합니다'의 비격식 버전이다.",
+      "en": "Casual expression of gratitude used with friends or close acquaintances. Informal version of '감사합니다'"
+    },
+    "field": "greetings",
+    "tags": ["casual", "gratitude", "informal", "gomawo"]
+  },
+  {
+    "id": "mianhae",
+    "type": "entry",
+    "name": {
+      "ko": "미안해",
+      "en": "Sorry (casual)"
+    },
+    "description": {
+      "ko": "친구나 친한 사이에서 쓰는 반말 사과 표현. '죄송합니다'의 비격식 버전이다.",
+      "en": "Casual apology expression used with friends or close acquaintances. Informal version of '죄송합니다'."
+    },
+    "field": "greetings",
+    "tags": ["casual", "apology", "informal", "mianhae"]
+  },
+  {
+    "id": "joesonghamnida",
+    "type": "entry",
+    "name": {
+      "ko": "죄송합니다",
+      "en": "I'm sorry (formal)"
+    },
+    "description": {
+      "ko": "격식 있는 사과 표현. 직장에서나 어른에게 사용한다. '미안해요'보다 더 공손한 표현이다.",
+      "en": "Formal apology expression. Used in professional settings and with elders. More polite than '미안해요'."
+    },
+    "field": "greetings",
+    "tags": ["formal", "apology", "polite", "joesonghamnida"]
+  },
+  {
+    "id": "bangapseumnida",
+    "type": "entry",
+    "name": {
+      "ko": "반갑습니다",
+      "en": "Nice to meet you"
+    },
+    "description": {
+      "ko": "만나서 기쁨을 표현하는 인사. 처음 만났을 때나 오랜만에 만났을 때 사용한다.",
+      "en": "A greeting expressing pleasure at meeting someone. Used when meeting for the first time or after a l"
+    },
+    "field": "greetings",
+    "tags": ["formal", "greeting", "polite", "bangapseumnida"]
   },
   {
     "id": "suhak",

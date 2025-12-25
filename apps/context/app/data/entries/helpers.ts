@@ -36,7 +36,6 @@ export type EntryInput = {
   korean: string;
   romanization: string;
   pronunciation?: string;
-  hanja?: string;
   partOfSpeech: PartOfSpeech;
   difficulty: DifficultyLevel;
   frequency?: FrequencyLevel;

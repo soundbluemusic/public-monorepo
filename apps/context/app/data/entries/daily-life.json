@@ -36,7 +36,6 @@
     "korean": "학교",
     "romanization": "hakgyo",
     "pronunciation": "[학꾜]",
-    "hanja": "學校",
     "partOfSpeech": "noun",
     "categoryId": "daily-life",
     "difficulty": "beginner",
@@ -93,6 +92,230 @@
           "무슨 일이에요? - What's the matter?",
           "These days, I have so much work because of a new project at the company that I'll probably have to come in on weekends too.",
           "What happened all of a sudden? You don't look well and I'm worried about you."
+        ]
+      }
+    }
+  },
+  {
+    "id": "chingu",
+    "korean": "친구",
+    "romanization": "chingu",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["people", "relationship", "basic"],
+    "translations": {
+      "ko": {
+        "word": "친구",
+        "explanation": "서로 친하게 지내는 사이. 한국에서는 같은 나이 또는 비슷한 나이의 사람을 친구라고 부른다.",
+        "examples": [
+          "친구랑 영화 보러 갈 거예요.",
+          "우리는 초등학교 때부터 친구야.",
+          "오랜만에 대학 시절 친구들을 만나서 그동안 못 다 한 이야기를 밤새 나눴다.",
+          "좋은 친구는 평생의 재산이라는 말이 있듯이, 진정한 친구를 만나는 것은 큰 행운이다."
+        ]
+      },
+      "en": {
+        "word": "Friend",
+        "explanation": "A person you are close with. In Korea, 'friend' typically refers to someone of the same or similar age.",
+        "examples": [
+          "친구랑 영화 보러 갈 거예요. - I'm going to see a movie with a friend.",
+          "우리는 초등학교 때부터 친구야. - We've been friends since elementary school.",
+          "After meeting up with college friends I hadn't seen in a while, we stayed up all night catching up on everything.",
+          "As the saying goes, a good friend is a treasure for life—meeting a true friend is a great blessing."
+        ]
+      }
+    }
+  },
+  {
+    "id": "gajok",
+    "korean": "가족",
+    "romanization": "gajok",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["people", "family", "basic"],
+    "translations": {
+      "ko": {
+        "word": "가족",
+        "explanation": "부모, 자녀, 형제자매 등 혈연이나 법적 관계로 맺어진 사람들. 한국 문화에서 매우 중요한 개념이다.",
+        "examples": [
+          "가족이 몇 명이에요?",
+          "주말에 가족과 시간을 보냈어요.",
+          "설날에는 멀리 사는 가족들도 모두 모여 함께 떡국을 먹고 세배를 한다.",
+          "가족의 건강이 가장 중요해요. 돈보다 가족이 먼저예요."
+        ]
+      },
+      "en": {
+        "word": "Family",
+        "explanation": "People connected by blood or legal relationships, such as parents, children, and siblings. A very important concept in Korean culture.",
+        "examples": [
+          "가족이 몇 명이에요? - How many people are in your family?",
+          "주말에 가족과 시간을 보냈어요. - I spent time with my family on the weekend.",
+          "On Lunar New Year, even family members living far away gather together to eat tteokguk and perform sebae.",
+          "Family health is the most important. Family comes before money."
+        ]
+      }
+    }
+  },
+  {
+    "id": "don",
+    "korean": "돈",
+    "romanization": "don",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["money", "basic"],
+    "translations": {
+      "ko": {
+        "word": "돈",
+        "explanation": "화폐, 재산. 일상생활에서 가장 자주 쓰이는 기본 단어 중 하나이다.",
+        "examples": [
+          "돈이 없어요.",
+          "돈 좀 빌려줄 수 있어?",
+          "요즘 물가가 올라서 같은 돈으로 살 수 있는 게 점점 줄어들고 있다.",
+          "돈을 모으려면 충동구매를 줄이고 계획적으로 소비해야 해요."
+        ]
+      },
+      "en": {
+        "word": "Money",
+        "explanation": "Currency, wealth. One of the most commonly used basic words in daily life.",
+        "examples": [
+          "돈이 없어요. - I don't have money.",
+          "돈 좀 빌려줄 수 있어? - Can you lend me some money?",
+          "With prices rising these days, what you can buy with the same amount of money keeps decreasing.",
+          "To save money, you need to reduce impulse buying and spend according to a plan."
+        ]
+      }
+    }
+  },
+  {
+    "id": "ne",
+    "korean": "네",
+    "romanization": "ne",
+    "partOfSpeech": "interjection",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["response", "basic", "polite"],
+    "translations": {
+      "ko": {
+        "word": "네",
+        "explanation": "긍정의 대답, 또는 상대방의 말을 듣고 있다는 반응. 전화 받을 때도 사용한다.",
+        "examples": [
+          "네, 알겠습니다.",
+          "네? 다시 말씀해 주세요.",
+          "선생님이 '숙제 했니?'라고 물어보셔서 '네, 다 했습니다'라고 대답했다.",
+          "전화를 받을 때 '네, 여보세요?'라고 말하는 것이 일반적이다."
+        ]
+      },
+      "en": {
+        "word": "Yes / Okay",
+        "explanation": "An affirmative response, or a reaction showing you're listening. Also used when answering the phone.",
+        "examples": [
+          "네, 알겠습니다. - Yes, I understand.",
+          "네? 다시 말씀해 주세요. - Yes? Please say that again.",
+          "When the teacher asked, 'Did you do your homework?' I answered, 'Yes, I finished it all.'",
+          "When answering the phone, it's common to say '네, 여보세요?' (Yes, hello?)."
+        ]
+      }
+    }
+  },
+  {
+    "id": "mwo",
+    "korean": "뭐",
+    "romanization": "mwo",
+    "partOfSpeech": "pronoun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["question", "basic", "casual"],
+    "translations": {
+      "ko": {
+        "word": "뭐",
+        "explanation": "'무엇'의 줄임말. 일상 대화에서 매우 자주 쓰인다. '뭐해?'는 가장 흔한 인사 중 하나이다.",
+        "examples": [
+          "뭐 해?",
+          "점심에 뭐 먹을까?",
+          "친구한테 '뭐 해?'라고 물어봤더니 그냥 집에서 쉬고 있대.",
+          "뭐가 문제인지 모르겠어. 좀 더 자세히 설명해 줄 수 있어?"
+        ]
+      },
+      "en": {
+        "word": "What",
+        "explanation": "Short form of '무엇'. Very commonly used in daily conversation. '뭐 해?' is one of the most common casual greetings.",
+        "examples": [
+          "뭐 해? - What are you doing?",
+          "점심에 뭐 먹을까? - What should we eat for lunch?",
+          "When I asked my friend '뭐 해?', they said they were just resting at home.",
+          "I don't know what the problem is. Can you explain in more detail?"
+        ]
+      }
+    }
+  },
+  {
+    "id": "ige",
+    "korean": "이거",
+    "romanization": "igeo",
+    "partOfSpeech": "pronoun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["demonstrative", "basic", "casual"],
+    "translations": {
+      "ko": {
+        "word": "이거",
+        "explanation": "'이것'의 줄임말. 가까이 있는 것을 가리킬 때 사용한다. 일상 대화에서 매우 자주 쓰인다.",
+        "examples": [
+          "이거 뭐예요?",
+          "이거 얼마예요?",
+          "가게에서 예쁜 옷을 발견하고 '이거 입어봐도 돼요?'라고 물어봤다.",
+          "이거 진짜 맛있다! 어디서 샀어?"
+        ]
+      },
+      "en": {
+        "word": "This (thing)",
+        "explanation": "Short form of '이것'. Used to point to something nearby. Very commonly used in daily conversation.",
+        "examples": [
+          "이거 뭐예요? - What is this?",
+          "이거 얼마예요? - How much is this?",
+          "I found a pretty outfit at the store and asked, 'Can I try this on?'",
+          "This is really delicious! Where did you buy it?"
+        ]
+      }
+    }
+  },
+  {
+    "id": "wae",
+    "korean": "왜",
+    "romanization": "wae",
+    "partOfSpeech": "adverb",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["question", "basic"],
+    "translations": {
+      "ko": {
+        "word": "왜",
+        "explanation": "이유를 물을 때 쓰는 의문사. 감정을 표현하거나 불만을 나타낼 때도 사용된다.",
+        "examples": [
+          "왜요?",
+          "왜 그랬어?",
+          "친구가 갑자기 약속을 취소해서 '왜? 무슨 일 있어?'라고 물어봤다.",
+          "왜 자꾸 늦는 거야? 이번이 세 번째야."
+        ]
+      },
+      "en": {
+        "word": "Why",
+        "explanation": "An interrogative used to ask for reasons. Also used to express emotions or show dissatisfaction.",
+        "examples": [
+          "왜요? - Why?",
+          "왜 그랬어? - Why did you do that?",
+          "When my friend suddenly canceled our plans, I asked, 'Why? Is something wrong?'",
+          "Why do you keep being late? This is the third time."
         ]
       }
     }

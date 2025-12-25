@@ -18,7 +18,6 @@ interface JsonEntry {
   korean: string;
   romanization: string;
   pronunciation?: string;
-  hanja?: string;
   partOfSpeech: string;
   categoryId: string;
   difficulty: string;

@@ -96,7 +96,6 @@
     "korean": "감사합니다",
     "romanization": "gamsahamnida",
     "pronunciation": "[감사함니다]",
-    "hanja": "感謝",
     "partOfSpeech": "interjection",
     "categoryId": "greetings",
     "difficulty": "beginner",
@@ -183,6 +182,166 @@
           "casual": ["See ya!", "Take care on your way!", "Later!"],
           "short": ["Bye~", "Cya!", "Peace!"]
         }
+      }
+    }
+  },
+  {
+    "id": "annyeonghigyeseyo",
+    "korean": "안녕히 계세요",
+    "romanization": "annyeonghi gyeseyo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["formal", "farewell", "polite"],
+    "translations": {
+      "ko": {
+        "word": "안녕히 계세요",
+        "explanation": "자신이 떠나고 상대가 남을 때 하는 인사. 직역하면 '평안히 계세요'라는 뜻. '안녕히 가세요'와 짝을 이루는 표현이다.",
+        "examples": [
+          "안녕히 계세요, 다음에 또 올게요.",
+          "퇴근할 때 상사에게 '안녕히 계세요, 내일 뵙겠습니다'라고 인사했다.",
+          "친척 집을 방문했다가 돌아갈 때 어르신들께 '안녕히 계세요'라고 인사하는 게 예의다.",
+          "가게에서 나올 때 주인에게 '안녕히 계세요!'라고 말하면 좋은 인상을 줄 수 있다."
+        ]
+      },
+      "en": {
+        "word": "Goodbye (when leaving)",
+        "explanation": "Said when you're the one leaving while others stay. Literally means 'stay peacefully'. Paired with '안녕히 가세요'.",
+        "examples": [
+          "안녕히 계세요, 다음에 또 올게요. - Goodbye, I'll come again next time.",
+          "When leaving work, I said to my boss, 'Goodbye, see you tomorrow.'",
+          "It's polite to say '안녕히 계세요' to elders when leaving relatives' houses.",
+          "Saying '안녕히 계세요!' to the shop owner when leaving can make a good impression."
+        ]
+      }
+    }
+  },
+  {
+    "id": "gomawo",
+    "korean": "고마워",
+    "romanization": "gomawo",
+    "partOfSpeech": "interjection",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["casual", "gratitude", "informal"],
+    "translations": {
+      "ko": {
+        "word": "고마워",
+        "explanation": "친구나 친한 사이에서 쓰는 반말 감사 표현. '감사합니다'의 비격식 버전이다.",
+        "examples": [
+          "고마워, 정말 도움이 됐어!",
+          "선물 고마워~",
+          "힘들 때 옆에서 응원해 줘서 정말 고마워. 네가 없었으면 포기했을 거야.",
+          "친구가 갑자기 커피를 사줘서 '어, 고마워! 웬일이야?'라고 물어봤다."
+        ]
+      },
+      "en": {
+        "word": "Thanks (casual)",
+        "explanation": "Casual expression of gratitude used with friends or close acquaintances. Informal version of '감사합니다'.",
+        "examples": [
+          "고마워, 정말 도움이 됐어! - Thanks, that really helped!",
+          "선물 고마워~ - Thanks for the gift~",
+          "Thanks so much for cheering me on when times were tough. I would have given up without you.",
+          "When my friend suddenly bought me coffee, I asked, 'Oh, thanks! What's the occasion?'"
+        ]
+      }
+    }
+  },
+  {
+    "id": "mianhae",
+    "korean": "미안해",
+    "romanization": "mianhae",
+    "partOfSpeech": "interjection",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["casual", "apology", "informal"],
+    "translations": {
+      "ko": {
+        "word": "미안해",
+        "explanation": "친구나 친한 사이에서 쓰는 반말 사과 표현. '죄송합니다'의 비격식 버전이다.",
+        "examples": [
+          "미안해, 내가 잘못했어.",
+          "늦어서 미안해!",
+          "약속에 늦어서 친구한테 '미안해, 차가 많이 막혔어'라고 사과했다.",
+          "실수로 친구 물건을 떨어뜨렸을 때 바로 '미안해!'라고 말하는 게 좋다."
+        ]
+      },
+      "en": {
+        "word": "Sorry (casual)",
+        "explanation": "Casual apology expression used with friends or close acquaintances. Informal version of '죄송합니다'.",
+        "examples": [
+          "미안해, 내가 잘못했어. - Sorry, I was wrong.",
+          "늦어서 미안해! - Sorry for being late!",
+          "I apologized to my friend for being late, saying 'Sorry, there was a lot of traffic.'",
+          "When you accidentally drop your friend's things, it's good to say 'Sorry!' right away."
+        ]
+      }
+    }
+  },
+  {
+    "id": "joesonghamnida",
+    "korean": "죄송합니다",
+    "romanization": "joesonghamnida",
+    "partOfSpeech": "interjection",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["formal", "apology", "polite"],
+    "translations": {
+      "ko": {
+        "word": "죄송합니다",
+        "explanation": "격식 있는 사과 표현. 직장에서나 어른에게 사용한다. '미안해요'보다 더 공손한 표현이다.",
+        "examples": [
+          "죄송합니다, 늦었습니다.",
+          "정말 죄송합니다, 다시는 이런 일이 없도록 하겠습니다.",
+          "회의에 늦은 사원이 '죄송합니다, 지하철이 지연되었습니다'라고 사과했다.",
+          "실수를 했을 때 빨리 '죄송합니다'라고 사과하는 것이 문제를 줄이는 방법이다."
+        ]
+      },
+      "en": {
+        "word": "I'm sorry (formal)",
+        "explanation": "Formal apology expression. Used in professional settings and with elders. More polite than '미안해요'.",
+        "examples": [
+          "죄송합니다, 늦었습니다. - I'm sorry, I'm late.",
+          "정말 죄송합니다, 다시는 이런 일이 없도록 하겠습니다. - I'm truly sorry, I'll make sure this doesn't happen again.",
+          "The employee who was late to the meeting apologized, 'I'm sorry, the subway was delayed.'",
+          "Apologizing quickly with 'I'm sorry' when you make a mistake is a way to minimize problems."
+        ]
+      }
+    }
+  },
+  {
+    "id": "bangapseumnida",
+    "korean": "반갑습니다",
+    "romanization": "bangapseumnida",
+    "partOfSpeech": "interjection",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["formal", "greeting", "polite"],
+    "translations": {
+      "ko": {
+        "word": "반갑습니다",
+        "explanation": "만나서 기쁨을 표현하는 인사. 처음 만났을 때나 오랜만에 만났을 때 사용한다.",
+        "examples": [
+          "만나서 반갑습니다.",
+          "처음 뵙겠습니다, 반갑습니다.",
+          "신입 사원이 자기소개를 할 때 '안녕하세요, 이번에 입사한 김민수입니다. 반갑습니다'라고 인사했다.",
+          "오랜만에 만난 선배에게 '선배님, 반갑습니다! 어떻게 지내셨어요?'라고 인사했다."
+        ]
+      },
+      "en": {
+        "word": "Nice to meet you",
+        "explanation": "A greeting expressing pleasure at meeting someone. Used when meeting for the first time or after a long time.",
+        "examples": [
+          "만나서 반갑습니다. - Nice to meet you.",
+          "처음 뵙겠습니다, 반갑습니다. - It's our first time meeting, nice to meet you.",
+          "When introducing himself, the new employee said, 'Hello, I'm Kim Minsu, just joined the company. Nice to meet you.'",
+          "I greeted my senior whom I hadn't seen in a while, 'Senior, nice to see you! How have you been?'"
+        ]
       }
     }
   }

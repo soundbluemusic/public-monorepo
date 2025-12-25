@@ -38,7 +38,6 @@ export interface Translation {
  * @property korean - 한국어 단어 (원본)
  * @property romanization - 로마자 표기 (영어 사용자용, 예: 'gamsahamnida')
  * @property pronunciation - 표준 발음 표기 (한국어 사용자용, 예: '[감사함니다]')
- * @property hanja - 한자 표기 (일본어 사용자용)
  * @property partOfSpeech - 품사
  * @property categoryId - 소속 카테고리 ID
  * @property translations - 언어별 번역 (ko, en)
@@ -53,7 +52,6 @@ export interface MeaningEntry {
   korean: string;
   romanization: string;
   pronunciation?: string;
-  hanja?: string;
   partOfSpeech: PartOfSpeech;
   categoryId: string;
   translations: {
