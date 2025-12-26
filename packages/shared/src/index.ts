@@ -62,6 +62,21 @@ export {
   createRecentViewsHelper,
 } from './db';
 
+// Dark mode utilities for SSG apps
+export {
+  // Option A: innerHTML replacement
+  SUN_ICON_SVG,
+  MOON_ICON_SVG,
+  DARK_MODE_INIT_SCRIPT,
+  DARK_MODE_TOGGLE_SCRIPT,
+  // Option B: CSS mask-image
+  DARK_MODE_ICONS_CSS,
+  DARK_MODE_TOGGLE_SCRIPT_CSS,
+  // Option C: Dual icons with CSS toggle
+  DARK_MODE_DUAL_ICONS_CSS,
+  DARK_MODE_TOGGLE_SCRIPT_DUAL,
+} from './dark-mode';
+
 // Data loader utilities are in a separate entry point
 // Import from '@soundblue/shared/node' for Node.js-only utilities
 // Example: import { loadJsonDirectory } from '@soundblue/shared/node'
