@@ -1,7 +1,7 @@
-import { useIsMobile, useSettingsStore } from '@soundblue/shared-react';
+import { cn, useIsMobile, useSettingsStore } from '@soundblue/shared-react';
+import { ArrowUp } from 'lucide-react';
 import { type ReactNode, useEffect, useState } from 'react';
 import { useI18n } from '../../i18n';
-import styles from '../../styles/app.module.scss';
 import BottomNav from './BottomNav';
 import Footer from './Footer';
 import Header from './Header';
@@ -49,9 +49,12 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
   };
 
   return (
-    <div className={styles.container}>
+    <div className="min-h-screen bg-[var(--bg-primary)]">
       {/* Skip to content - Accessibility */}
-      <a href="#main-content" className={styles.skipToContent}>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[var(--accent-primary)] focus:text-white focus:rounded-lg"
+      >
         {t('ui.skipToContent')}
       </a>
 
@@ -71,7 +74,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
       {/* Main Content */}
       <main
         id="main-content"
-        className={`${styles.main} ${isReady ? styles.mainReady : ''}`}
+        className={cn('pt-14 min-h-screen transition-[margin] duration-200', isReady && 'ready')}
         style={{
           marginLeft: isMobile
             ? '0'
@@ -81,7 +84,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
           paddingBottom: isMobile ? 'var(--bottom-nav-height)' : '0',
         }}
       >
-        <div className={styles.contentWrapper}>{children}</div>
+        <div className="max-w-4xl mx-auto px-4 py-8">{children}</div>
 
         {/* Footer */}
         <Footer />
@@ -95,23 +98,10 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
         <button
           type="button"
           onClick={scrollToTop}
-          className={styles.backToTop}
+          className="fixed bottom-20 lg:bottom-8 right-4 z-30 min-h-11 min-w-11 flex items-center justify-center rounded-full shadow-md transition-colors bg-[var(--bg-elevated)] border border-[var(--border-primary)] text-[var(--text-secondary)] cursor-pointer hover:bg-[var(--bg-tertiary)]"
           aria-label={locale === 'ko' ? '맨 위로' : 'Back to top'}
         >
-          <svg
-            aria-hidden="true"
-            className={styles.backToTopIcon}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M5 10l7-7m0 0l7 7m-7-7v18"
-            />
-          </svg>
+          <ArrowUp size={20} aria-hidden="true" />
         </button>
       )}
     </div>

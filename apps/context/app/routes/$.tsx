@@ -1,6 +1,5 @@
 import { Layout } from '@/components/Layout';
 import { useI18n } from '@/i18n';
-import styles from '@/styles/app.module.scss';
 import type { MetaFunction } from 'react-router';
 import { Link } from 'react-router';
 
@@ -20,15 +19,14 @@ export default function NotFound() {
 
   return (
     <Layout>
-      <div className={`${styles.textCenter}`} style={{ padding: '5rem 0' }}>
-        <div className={`${styles.mb6}`} style={{ fontSize: '3.75rem' }}>
-          🔍
-        </div>
-        <h1 className={`${styles.text3xl} ${styles.fontBold} ${styles.mb4} ${styles.textPrimary}`}>
-          {t('pageNotFound')}
-        </h1>
-        <p className={`${styles.textSecondary} ${styles.mb8}`}>{t('pageNotFoundDescription')}</p>
-        <Link to={localePath('/')} className={styles.buttonPrimary}>
+      <div className="text-center py-20">
+        <div className="text-6xl mb-6">🔍</div>
+        <h1 className="text-3xl font-bold mb-4 text-[var(--text-primary)]">{t('pageNotFound')}</h1>
+        <p className="text-[var(--text-secondary)] mb-8">{t('pageNotFoundDescription')}</p>
+        <Link
+          to={localePath('/')}
+          className="min-h-11 px-6 inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors bg-[var(--accent-primary)] text-white hover:brightness-110 active:scale-[0.98]"
+        >
           {t('goHome')}
         </Link>
       </div>

@@ -1,7 +1,6 @@
 import { Layout } from '@/components/layout/Layout';
 import { useI18n } from '@/i18n';
 import type { MetaFunction } from 'react-router';
-import styles from '../styles/app.module.scss';
 
 const mathConstants = [
   {
@@ -54,16 +53,21 @@ export default function ConstantsPage() {
 
   return (
     <Layout>
-      <h1 className={styles.browseTitle}>{t('constants')}</h1>
+      <h1 className="text-2xl font-bold text-[var(--text-primary)] mb-8">{t('constants')}</h1>
 
-      <div className={styles.constantsGrid}>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {mathConstants.map((constant) => (
-          <div key={constant.symbol} className={styles.constantCard}>
-            <div className={styles.constantSymbol}>{constant.symbol}</div>
-            <h3 className={styles.constantName}>
+          <div
+            key={constant.symbol}
+            className="p-6 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)] text-center"
+          >
+            <div className="text-4xl font-serif mb-2 text-[var(--accent-primary)]">
+              {constant.symbol}
+            </div>
+            <h3 className="text-base font-medium text-[var(--text-primary)] mb-1">
               {constant.name[locale as keyof typeof constant.name] || constant.name.en}
             </h3>
-            <p className={styles.constantValue}>{constant.value}</p>
+            <p className="text-sm font-mono text-[var(--text-secondary)]">{constant.value}</p>
           </div>
         ))}
       </div>

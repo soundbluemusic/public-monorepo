@@ -6,7 +6,6 @@ import { useI18n } from '@/i18n';
  * @fileoverview 개념 미리보기 카드 컴포넌트
  */
 import { Link } from 'react-router';
-import styles from '../../styles/app.module.scss';
 
 interface ConceptCardProps {
   concept: MathConcept;
@@ -27,20 +26,25 @@ export function ConceptCard({ concept }: ConceptCardProps) {
   })();
 
   return (
-    <Link to={localePath(`/concept/${concept.id}`)} className={styles.conceptCard}>
+    <Link
+      to={localePath(`/concept/${concept.id}`)}
+      className="block p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)] no-underline transition-all hover:-translate-y-0.5 hover:shadow-md hover:border-[var(--border-focus)]"
+    >
       {/* 헤더 */}
-      <div className={styles.conceptCardHeader}>
-        <h3 className={styles.conceptCardTitle}>{name}</h3>
+      <div className="flex items-center justify-between mb-2">
+        <h3 className="font-semibold text-[var(--text-primary)] truncate">{name}</h3>
         <DifficultyBadge level={concept.difficulty} showLabel={false} size="sm" />
       </div>
 
       {/* 정의 */}
-      <p className={styles.conceptCardDescription}>{definition}</p>
+      <p className="text-sm text-[var(--text-secondary)] line-clamp-2 mb-2">{definition}</p>
 
       {/* 분야 태그 */}
-      <div className={styles.conceptCardMeta}>
+      <div className="flex items-center gap-2 text-xs">
         <span>{field?.icon}</span>
-        <span className={styles.conceptCardField}>{field?.name[locale] || field?.name.en}</span>
+        <span className="px-1 py-0.5 rounded bg-[var(--bg-tertiary)] text-[var(--text-secondary)]">
+          {field?.name[locale] || field?.name.en}
+        </span>
       </div>
     </Link>
   );
@@ -51,7 +55,7 @@ export function ConceptCard({ concept }: ConceptCardProps) {
  */
 export function ConceptGrid({ concepts }: { concepts: MathConcept[] }) {
   return (
-    <div className={styles.grid3}>
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {concepts.map((concept) => (
         <ConceptCard key={concept.id} concept={concept} />
       ))}

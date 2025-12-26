@@ -4,8 +4,8 @@
  * 메모이제이션으로 파싱 성능 최적화
  */
 
+import { cn } from '@soundblue/shared-react';
 import { useMemo } from 'react';
-import styles from '../../styles/app.module.scss';
 
 interface LaTeXProps {
   /** 수식 문자열 (간단한 LaTeX 또는 유니코드) */
@@ -336,10 +336,16 @@ export function LaTeX({ math, display, className }: LaTeXProps) {
   // useMemo로 math가 변경될 때만 재파싱 (동일 컴포넌트 재렌더링 시 캐시 활용)
   const rendered = useMemo(() => latexToMathML(math), [math]);
 
-  const modeClass = display ? styles.mathDisplay : styles.mathInline;
-
   return (
-    <span className={`${styles.mathFormula} ${modeClass} ${className || ''}`}>{rendered}</span>
+    <span
+      className={cn(
+        "font-['STIX_Two_Math','Cambria_Math',serif] text-[var(--math-formula,var(--accent-primary))]",
+        display ? 'block text-center text-[1.2em] leading-8' : 'inline',
+        className,
+      )}
+    >
+      {rendered}
+    </span>
   );
 }
 
@@ -348,7 +354,12 @@ export function LaTeX({ math, display, className }: LaTeXProps) {
  */
 export function MathBlock({ math, className }: { math: string; className?: string }) {
   return (
-    <div className={`${styles.formulaBlock} ${className || ''}`}>
+    <div
+      className={cn(
+        'my-4 p-4 rounded-lg bg-[var(--bg-secondary)] border border-[var(--border-primary)] overflow-x-auto',
+        className,
+      )}
+    >
       <LaTeX math={math} display />
     </div>
   );

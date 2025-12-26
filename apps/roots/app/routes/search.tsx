@@ -1,7 +1,7 @@
-import { Layout } from '@/components/layout/Layout';
 /**
  * @fileoverview 검색 결과 페이지
  */
+import { Layout } from '@/components/layout/Layout';
 import { DifficultyBadge } from '@/components/ui/DifficultyBadge';
 import type { DifficultyLevel } from '@/data/types';
 import { useI18n } from '@/i18n';
@@ -9,7 +9,6 @@ import { type FuseSearchResult, searchConcepts } from '@/lib/search';
 import { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router';
 import type { MetaFunction } from 'react-router';
-import styles from '../styles/app.module.scss';
 
 /** 검색 결과 카드 (SearchIndexItem용) */
 function SearchResultCard({ result }: { result: FuseSearchResult }) {
@@ -19,14 +18,17 @@ function SearchResultCard({ result }: { result: FuseSearchResult }) {
   const def = item.def[locale] || item.def.en;
 
   return (
-    <Link to={localePath(`/concept/${item.id}`)} className={styles.conceptCard}>
-      <div className={styles.conceptCardHeader}>
-        <h3 className={styles.conceptCardTitle}>{name}</h3>
+    <Link
+      to={localePath(`/concept/${item.id}`)}
+      className="block p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)] no-underline transition-all hover:-translate-y-0.5 hover:shadow-md hover:border-[var(--border-focus)]"
+    >
+      <div className="flex items-start justify-between gap-2 mb-2">
+        <h3 className="text-base font-medium text-[var(--text-primary)]">{name}</h3>
         <DifficultyBadge level={item.difficulty as DifficultyLevel} showLabel={false} size="sm" />
       </div>
-      <p className={styles.conceptCardDescription}>{def}</p>
-      <div className={styles.conceptCardMeta}>
-        <span className={styles.conceptCardField}>{item.field}</span>
+      <p className="text-sm text-[var(--text-secondary)] line-clamp-2 mb-2">{def}</p>
+      <div className="flex items-center gap-2">
+        <span className="text-xs text-[var(--text-tertiary)]">{item.field}</span>
       </div>
     </Link>
   );
@@ -64,10 +66,10 @@ export default function SearchPage() {
   return (
     <Layout>
       {/* Header */}
-      <div className={styles.browseHeader}>
-        <h1 className={styles.browseTitle}>{t('search')}</h1>
+      <div className="mb-8">
+        <h1 className="text-2xl font-bold text-[var(--text-primary)] mb-2">{t('search')}</h1>
         {query && (
-          <p className={styles.textSecondary}>
+          <p className="text-[var(--text-secondary)]">
             "{query}"{t('searchResultsFor')}
           </p>
         )}
@@ -75,25 +77,25 @@ export default function SearchPage() {
 
       {/* Results */}
       {isSearching ? (
-        <div className={styles.noResults}>
-          <div className={`${styles.skeleton} ${styles.skeletonTitle}`} />
+        <div className="text-center py-12">
+          <div className="h-6 w-48 mx-auto rounded bg-[var(--bg-tertiary)] animate-pulse" />
         </div>
       ) : results.length > 0 ? (
         <>
-          <div className={styles.searchResultsTitle}>
+          <div className="text-sm text-[var(--text-secondary)] mb-4">
             {results.length}
             {t('resultsCount')}
           </div>
-          <div className={styles.grid3}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {results.map((result) => (
               <SearchResultCard key={result.item.id} result={result} />
             ))}
           </div>
         </>
       ) : query.length >= 2 ? (
-        <div className={styles.noResults}>
-          <p className={styles.textXl}>{t('noResults')}</p>
-          <p className={styles.textSm}>{t('tryDifferentSearch')}</p>
+        <div className="text-center py-12">
+          <p className="text-xl text-[var(--text-primary)] mb-2">{t('noResults')}</p>
+          <p className="text-sm text-[var(--text-secondary)]">{t('tryDifferentSearch')}</p>
         </div>
       ) : null}
     </Layout>

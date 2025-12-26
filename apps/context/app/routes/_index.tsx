@@ -1,11 +1,9 @@
 import { Layout } from '@/components/Layout';
 import { categories } from '@/data/categories';
 import { meaningEntries } from '@/data/entries';
-import type { Category } from '@/data/types';
-import type { MeaningEntry } from '@/data/types';
+import type { Category, MeaningEntry } from '@/data/types';
 import { type Language, useI18n } from '@/i18n';
 import { studyRecords } from '@/lib/db';
-import styles from '@/styles/app.module.scss';
 import { FolderOpen, Sparkles, TrendingUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import type { MetaFunction } from 'react-router';
@@ -100,26 +98,28 @@ export default function HomePage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <div className={styles.sectionLarge}>
-        <h1 className={styles.pageTitle}>{t('heroTitle')}</h1>
-        <p className={styles.textSecondary}>{t('heroSubtitle')}</p>
+      <div className="mb-8">
+        <h1 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-2">
+          {t('heroTitle')}
+        </h1>
+        <p className="text-[var(--text-secondary)]">{t('heroSubtitle')}</p>
       </div>
 
       {/* Overall Progress */}
       {overallProgress.studied > 0 && (
-        <div className={`${styles.card} ${styles.sectionLarge}`}>
-          <div className={`${styles.flexBetween} ${styles.mb2}`}>
-            <h2 className={styles.sectionTitleSmall}>
-              <TrendingUp size={18} aria-hidden="true" style={{ marginRight: '0.5rem' }} />
+        <div className="p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)] mb-8">
+          <div className="flex items-center justify-between mb-2">
+            <h2 className="text-sm font-semibold text-[var(--text-primary)] flex items-center gap-2">
+              <TrendingUp size={18} aria-hidden="true" />
               {locale === 'ko' ? '내 학습 현황' : 'My Progress'}
             </h2>
-            <span className={`${styles.textSm} ${styles.textSecondary}`}>
+            <span className="text-sm text-[var(--text-secondary)]">
               {overallProgress.studied}/{overallProgress.total} {locale === 'ko' ? '단어' : 'words'}
             </span>
           </div>
-          <div className={styles.progressBar}>
+          <div className="w-full h-2 rounded-full overflow-hidden bg-[var(--bg-secondary)]">
             <div
-              className={styles.progressFill}
+              className="h-full bg-[var(--accent-primary)] transition-all duration-300"
               style={{ width: `${overallProgress.percentage}%` }}
             />
           </div>
@@ -128,20 +128,23 @@ export default function HomePage() {
 
       {/* Daily Word */}
       {dailyWord && (
-        <div className={styles.sectionLarge}>
-          <h2 className={styles.sectionTitle}>
-            <Sparkles size={20} aria-hidden="true" style={{ marginRight: '0.5rem' }} />
+        <div className="mb-8">
+          <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-3 flex items-center gap-2">
+            <Sparkles size={20} aria-hidden="true" />
             {locale === 'ko' ? '오늘의 단어' : 'Word of the Day'}
           </h2>
-          <Link to={localePath(`/entry/${dailyWord.id}`)} className={styles.cardAccent}>
-            <div className={styles.textCenter}>
-              <h3 className={`${styles.text3xl} ${styles.fontBold} ${styles.mb2}`}>
+          <Link
+            to={localePath(`/entry/${dailyWord.id}`)}
+            className="block p-6 rounded-xl bg-[var(--bg-elevated)] border-2 border-[var(--accent-primary)] no-underline"
+          >
+            <div className="text-center">
+              <h3 className="text-3xl font-bold mb-2 text-[var(--text-primary)]">
                 {dailyWord.korean}
               </h3>
-              <p className={`${styles.textLg} ${styles.textTertiary} ${styles.mb3}`}>
+              <p className="text-lg text-[var(--text-tertiary)] mb-3">
                 {getPronunciation(dailyWord, locale)}
               </p>
-              <p className={`${styles.textXl} ${styles.textAccent}`}>
+              <p className="text-xl text-[var(--accent-primary)]">
                 {dailyWord.translations[locale].word}
               </p>
             </div>
@@ -150,18 +153,18 @@ export default function HomePage() {
       )}
 
       {/* Categories Grid */}
-      <div className={styles.sectionLarge}>
-        <div className={`${styles.flexBetween} ${styles.mb4}`}>
-          <h2 className={styles.sectionTitle}>
-            <FolderOpen size={20} aria-hidden="true" style={{ marginRight: '0.5rem' }} />
+      <div className="mb-8">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-semibold text-[var(--text-primary)] flex items-center gap-2">
+            <FolderOpen size={20} aria-hidden="true" />
             {locale === 'ko' ? '카테고리별 학습' : 'Learn by Category'}
           </h2>
-          <Link to={localePath('/browse')} className={`${styles.textSm} ${styles.textAccent}`}>
+          <Link to={localePath('/browse')} className="text-sm text-[var(--accent-primary)]">
             {t('viewAll')} →
           </Link>
         </div>
 
-        <div className={`${styles.grid} ${styles.gridCols2}`}>
+        <div className="grid gap-4 sm:grid-cols-2">
           {cats.map((category) => {
             const count = categoryCounts[category.id];
             const progress = categoryProgress[category.id] || {
@@ -174,15 +177,15 @@ export default function HomePage() {
               <Link
                 key={category.id}
                 to={localePath(`/category/${category.id}`)}
-                className={styles.cardHover}
+                className="block p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)] no-underline cursor-pointer transition-all duration-150 hover:-translate-y-0.5 hover:shadow-md hover:border-[var(--border-focus)]"
               >
-                <div className={`${styles.flexStart} ${styles.flexGap3} ${styles.mb3}`}>
-                  <span className={styles.text2xl}>{category.icon}</span>
-                  <div className={styles.flex1}>
-                    <h3 className={`${styles.fontSemibold} ${styles.textPrimary}`}>
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-2xl">{category.icon}</span>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-[var(--text-primary)]">
                       {category.name[locale]}
                     </h3>
-                    <p className={`${styles.textXs} ${styles.textTertiary}`}>
+                    <p className="text-xs text-[var(--text-tertiary)]">
                       {progress.studied}/{count} {locale === 'ko' ? '단어' : 'words'}
                     </p>
                   </div>
@@ -190,9 +193,9 @@ export default function HomePage() {
 
                 {/* Progress bar */}
                 {progress.studied > 0 && (
-                  <div className={styles.progressBarSmall}>
+                  <div className="w-full h-1.5 rounded-full overflow-hidden bg-[var(--bg-secondary)]">
                     <div
-                      className={styles.progressFill}
+                      className="h-full bg-[var(--accent-primary)] transition-all duration-300"
                       style={{ width: `${progress.percentage}%` }}
                     />
                   </div>

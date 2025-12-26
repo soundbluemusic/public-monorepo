@@ -1,6 +1,5 @@
 import { Layout } from '@/components/Layout';
 import { useI18n } from '@/i18n';
-import styles from '@/styles/app.module.scss';
 import type { MetaFunction } from 'react-router';
 
 export const meta: MetaFunction = ({ location }) => {
@@ -14,19 +13,26 @@ export default function BuiltWithPage() {
   const tools = [
     { name: 'React', url: 'https://react.dev' },
     { name: 'React Router', url: 'https://reactrouter.com' },
-    { name: 'SCSS Modules', url: 'https://sass-lang.com' },
+    { name: 'Tailwind CSS', url: 'https://tailwindcss.com' },
     { name: 'Zustand', url: 'https://zustand-demo.pmnd.rs' },
     { name: 'Radix UI', url: 'https://radix-ui.com' },
   ];
 
   return (
     <Layout>
-      <h1 className={`${styles.pageTitle} ${styles.mb6}`}>{t('builtWithTitle')}</h1>
-      <p className={`${styles.textSecondary} ${styles.mb6}`}>{t('builtWithDescription')}</p>
-      <ul className={styles.spaceY3}>
+      <h1 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-6">
+        {t('builtWithTitle')}
+      </h1>
+      <p className="text-[var(--text-secondary)] mb-6">{t('builtWithDescription')}</p>
+      <ul className="space-y-3">
         {tools.map((tool) => (
           <li key={tool.name}>
-            <a href={tool.url} target="_blank" rel="noopener noreferrer" className={styles.link}>
+            <a
+              href={tool.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--accent-primary)] hover:underline"
+            >
               {tool.name}
             </a>
           </li>

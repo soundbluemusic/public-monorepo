@@ -3,7 +3,6 @@ import type { DifficultyLevel, Example as ExampleType } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { PencilLine } from 'lucide-react';
 import { useState } from 'react';
-import styles from '../../styles/app.module.scss';
 /**
  * @fileoverview 예제 컴포넌트
  */
@@ -25,20 +24,20 @@ export function ExampleCard({ example, index }: ExampleCardProps) {
   const [showSolution, setShowSolution] = useState(false);
 
   return (
-    <div className={styles.exampleCard}>
+    <div className="p-5 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)] mb-4">
       {/* 예제 헤더 */}
-      <div className={styles.exampleHeader}>
-        <span className={styles.exampleNumber}>
+      <div className="flex items-center justify-between mb-3">
+        <span className="text-sm font-medium text-[var(--text-tertiary)]">
           {t('exampleNumber')} {index + 1}
         </span>
         {example.difficulty && <DifficultyStars level={example.difficulty as DifficultyLevel} />}
       </div>
 
       {/* 문제 */}
-      <div className={styles.exampleProblemWrap}>
-        <p className={styles.textPrimary}>{example.problem}</p>
+      <div className="mb-3">
+        <p className="text-[var(--text-primary)]">{example.problem}</p>
         {example.latex && (
-          <div className={styles.exampleLatex}>
+          <div className="mt-2">
             <LaTeX math={example.latex} display />
           </div>
         )}
@@ -48,17 +47,15 @@ export function ExampleCard({ example, index }: ExampleCardProps) {
       <button
         type="button"
         onClick={() => setShowSolution(!showSolution)}
-        className={styles.solutionToggle}
+        className="text-sm font-medium text-[var(--accent-primary)] bg-transparent border-none cursor-pointer p-0 hover:underline"
       >
         {showSolution ? `▼ ${t('hideSolution')}` : `▶ ${t('showSolution')}`}
       </button>
 
       {/* 풀이 */}
       {showSolution && (
-        <div className={`${styles.exampleSolution} ${styles.solutionContent}`}>
-          <p className={`${styles.textSecondary} ${styles.exampleSolutionText}`}>
-            {example.solution}
-          </p>
+        <div className="mt-3 p-4 rounded-lg bg-[var(--bg-secondary)] border border-[var(--border-primary)]">
+          <p className="text-[var(--text-secondary)] whitespace-pre-wrap">{example.solution}</p>
         </div>
       )}
     </div>
@@ -71,11 +68,11 @@ export function ExampleCard({ example, index }: ExampleCardProps) {
 function SimpleExample({ example, index }: { example: string; index: number }) {
   const { t } = useI18n();
   return (
-    <div className={styles.exampleCard}>
-      <span className={styles.exampleNumber}>
+    <div className="p-5 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)] mb-4">
+      <span className="text-sm font-medium text-[var(--text-tertiary)]">
         {t('exampleNumber')} {index + 1}
       </span>
-      <p className={`${styles.textPrimary} ${styles.simpleExampleText}`}>{example}</p>
+      <p className="text-[var(--text-primary)] mt-2">{example}</p>
     </div>
   );
 }
@@ -85,14 +82,14 @@ function SimpleExample({ example, index }: { example: string; index: number }) {
  */
 export function ExampleList({ examples, title }: { examples?: ExampleInput[]; title?: string }) {
   return (
-    <div className={styles.spaceY4}>
+    <div className="space-y-4">
       {title && (
-        <h3 className={styles.sectionTitle}>
+        <h3 className="flex items-center gap-2 text-lg font-semibold text-[var(--text-primary)] mb-4">
           <PencilLine size={20} aria-hidden="true" />
           {title}
         </h3>
       )}
-      <div className={styles.spaceY3}>
+      <div className="space-y-3">
         {(examples ?? []).map((example, index) =>
           typeof example === 'string' ? (
             <SimpleExample

@@ -7,7 +7,6 @@ import { useI18n } from '@/i18n';
 import { Link2 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router';
-import styles from '../../styles/app.module.scss';
 
 type ConceptNames = Record<string, { ko: string; en: string }>;
 
@@ -24,10 +23,10 @@ interface RelationSectionProps {
 }
 
 const typeConfig: Record<RelationSectionProps['type'], { prefix: string; prefixClass: string }> = {
-  prerequisite: { prefix: '→', prefixClass: styles.relationPrefixPrerequisite },
-  next: { prefix: '←', prefixClass: styles.relationPrefixNext },
-  related: { prefix: '↔', prefixClass: styles.relationPrefixRelated },
-  application: { prefix: '◆', prefixClass: styles.relationPrefixApplication },
+  prerequisite: { prefix: '→', prefixClass: 'text-[var(--color-warning)]' },
+  next: { prefix: '←', prefixClass: 'text-[var(--color-success)]' },
+  related: { prefix: '↔', prefixClass: 'text-[var(--accent-primary)]' },
+  application: { prefix: '◆', prefixClass: 'text-[var(--accent-tertiary)]' },
 };
 
 function RelationSection({ title, icon, ids, type, names }: RelationSectionProps) {
@@ -38,18 +37,22 @@ function RelationSection({ title, icon, ids, type, names }: RelationSectionProps
   if (ids.length === 0) return null;
 
   return (
-    <div className={styles.relationSection}>
-      <h4 className={styles.relationTitle}>
+    <div className="mb-4">
+      <h4 className="text-sm font-semibold text-[var(--text-tertiary)] mb-2 uppercase tracking-wider">
         <span>{icon}</span>
         {title}
       </h4>
-      <div className={styles.relationLinks}>
+      <div className="flex flex-wrap gap-2">
         {ids.map((id) => {
           const conceptName = names[id];
           const name = conceptName ? conceptName[locale] || conceptName.en : id;
 
           return (
-            <Link key={id} to={localePath(`/concept/${id}`)} className={styles.relationLink}>
+            <Link
+              key={id}
+              to={localePath(`/concept/${id}`)}
+              className="flex items-center gap-1 px-3 py-1.5 rounded-md text-sm bg-[var(--bg-tertiary)] text-[var(--text-secondary)] no-underline transition-all hover:bg-[var(--bg-secondary)] hover:text-[var(--accent-primary)]"
+            >
               <span className={config.prefixClass}>{config.prefix}</span>
               <span>{name}</span>
             </Link>
@@ -85,8 +88,8 @@ export function RelationLinks({ relations }: RelationLinksProps) {
   if (!hasAnyRelations) return null;
 
   return (
-    <div className={styles.historyCard}>
-      <h3 className={styles.sectionTitle}>
+    <div className="p-4 rounded-lg bg-[var(--bg-secondary)] border border-[var(--border-primary)]">
+      <h3 className="flex items-center gap-2 text-lg font-semibold text-[var(--text-primary)] mb-4">
         <Link2 size={20} aria-hidden="true" />
         {t('relatedDocuments')}
       </h3>

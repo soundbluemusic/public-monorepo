@@ -41,7 +41,7 @@
 |:---------------:|:------------------|
 | **Framework** | React + React Router v7 |
 | **Language** | TypeScript |
-| **Styling** | SCSS Modules (typed-scss-modules) |
+| **Styling** | Tailwind CSS v4 |
 | **Package Manager** | pnpm (workspaces) |
 | **Linting** | Biome |
 | **Build** | 100% Static (SSG) + Build-time Data Prerendering |

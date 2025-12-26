@@ -1,13 +1,12 @@
+/**
+ * @fileoverview 전체 분야 목록 페이지
+ */
 import { Layout } from '@/components/layout/Layout';
 import { fields } from '@/data/fields';
 import { getSubfieldsByParent } from '@/data/subfields';
 import { useI18n } from '@/i18n';
-/**
- * @fileoverview 전체 분야 목록 페이지
- */
 import { Link } from 'react-router';
 import type { MetaFunction } from 'react-router';
-import styles from '../styles/app.module.scss';
 
 export const meta: MetaFunction = ({ location }) => {
   const locale = location.pathname.startsWith('/ko') ? 'ko' : 'en';
@@ -22,28 +21,36 @@ export default function BrowsePage() {
 
   return (
     <Layout>
-      <h1 className={styles.browseTitle}>{t('browseByField')}</h1>
+      <h1 className="text-2xl font-bold text-[var(--text-primary)] mb-8">{t('browseByField')}</h1>
 
-      <div className={styles.spaceY8}>
+      <div className="space-y-8">
         {fields.map((field) => {
           const subfields = getSubfieldsByParent(field.id);
           return (
-            <section key={field.id} className={styles.browseSection}>
-              <Link to={localePath(`/field/${field.id}`)} className={styles.browseSectionHeader}>
-                <span className={styles.browseSectionIcon}>{field.icon}</span>
-                <h2 className={styles.browseSectionTitle}>{field.name[locale] || field.name.en}</h2>
+            <section
+              key={field.id}
+              className="p-6 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)]"
+            >
+              <Link
+                to={localePath(`/field/${field.id}`)}
+                className="flex items-center gap-3 no-underline hover:opacity-80 transition-opacity"
+              >
+                <span className="text-3xl">{field.icon}</span>
+                <h2 className="text-xl font-semibold text-[var(--text-primary)]">
+                  {field.name[locale] || field.name.en}
+                </h2>
               </Link>
-              <p className={styles.browseSectionDesc}>
+              <p className="text-[var(--text-secondary)] mt-2 mb-4">
                 {field.description[locale] || field.description.en}
               </p>
 
               {subfields.length > 0 && (
-                <div className={styles.subfieldTags}>
+                <div className="flex flex-wrap gap-2">
                   {subfields.map((subfield) => (
                     <Link
                       key={subfield.id}
                       to={localePath(`/field/${field.id}/${subfield.id}`)}
-                      className={styles.subfieldTag}
+                      className="px-3 py-1.5 rounded-full text-sm bg-[var(--bg-tertiary)] text-[var(--text-secondary)] no-underline transition-colors hover:bg-[var(--bg-secondary)] hover:text-[var(--text-primary)]"
                     >
                       {subfield.name[locale] || subfield.name.en}
                     </Link>

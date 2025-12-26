@@ -1,6 +1,6 @@
 import type { DifficultyLevel } from '@/data/types';
 import { useI18n } from '@/i18n';
-import styles from '../../styles/app.module.scss';
+import { cn } from '@soundblue/shared-react';
 
 interface DifficultyBadgeProps {
   level: 1 | 2 | 3 | 4 | 5;
@@ -16,29 +16,30 @@ const labels: Record<number, string> = {
   5: 'graduate',
 };
 
-const levelClasses: Record<number, string> = {
-  1: styles.difficultyLevel1,
-  2: styles.difficultyLevel2,
-  3: styles.difficultyLevel3,
-  4: styles.difficultyLevel4,
-  5: styles.difficultyLevel5,
-};
-
-const sizeClasses: Record<string, string> = {
-  sm: styles.difficultyBadgeSm,
-  md: styles.difficultyBadgeMd,
+const levelColors: Record<number, string> = {
+  1: 'bg-[color-mix(in_srgb,var(--difficulty-1)_15%,transparent)] text-[var(--difficulty-1)]',
+  2: 'bg-[color-mix(in_srgb,var(--difficulty-2)_15%,transparent)] text-[var(--difficulty-2)]',
+  3: 'bg-[color-mix(in_srgb,var(--difficulty-3)_15%,transparent)] text-[var(--difficulty-3)]',
+  4: 'bg-[color-mix(in_srgb,var(--difficulty-4)_15%,transparent)] text-[var(--difficulty-4)]',
+  5: 'bg-[color-mix(in_srgb,var(--difficulty-5)_15%,transparent)] text-[var(--difficulty-5)]',
 };
 
 export function DifficultyBadge({ level, showLabel = true, size = 'md' }: DifficultyBadgeProps) {
   const { t } = useI18n();
 
   return (
-    <span className={`${styles.difficultyBadge} ${sizeClasses[size]} ${levelClasses[level]}`}>
-      <span className={styles.difficultyStars}>
+    <span
+      className={cn(
+        'inline-flex items-center gap-1 rounded-full font-medium',
+        levelColors[level],
+        size === 'sm' ? 'text-xs px-1.5 py-0.5' : 'text-sm px-2 py-1',
+      )}
+    >
+      <span className="flex items-center gap-0.5">
         {[0, 1, 2, 3, 4].map((i) => (
           <span
             key={`star-${i}`}
-            className={`${styles.difficultyDot} ${i >= level ? styles.difficultyDotInactive : ''}`}
+            className={cn('w-1.5 h-1.5 rounded-full bg-current', i >= level && 'opacity-30')}
           />
         ))}
       </span>
@@ -52,11 +53,11 @@ export function DifficultyBadge({ level, showLabel = true, size = 'md' }: Diffic
  */
 export function DifficultyStars({ level }: { level: DifficultyLevel }) {
   return (
-    <span className={styles.difficultyStars}>
+    <span className="flex items-center gap-0.5">
       {[0, 1, 2, 3, 4].map((i) => (
         <span
           key={`star-${i}`}
-          className={`${styles.difficultyDot} ${i >= level ? styles.difficultyDotInactive : ''}`}
+          className={cn('w-1.5 h-1.5 rounded-full bg-current', i >= level && 'opacity-30')}
         />
       ))}
     </span>

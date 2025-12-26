@@ -1,6 +1,5 @@
 import { Layout } from '@/components/Layout';
 import { useI18n } from '@/i18n';
-import styles from '@/styles/app.module.scss';
 import type { MetaFunction } from 'react-router';
 
 export const meta: MetaFunction = ({ location }) => {
@@ -13,8 +12,10 @@ export default function PrivacyPage() {
 
   return (
     <Layout>
-      <h1 className={`${styles.pageTitle} ${styles.mb6}`}>{t('privacyTitle')}</h1>
-      <div className={styles.textSecondary}>
+      <h1 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-6">
+        {t('privacyTitle')}
+      </h1>
+      <div className="text-[var(--text-secondary)]">
         <p>{t('privacyContent')}</p>
       </div>
     </Layout>

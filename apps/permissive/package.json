@@ -40,7 +40,6 @@
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
     "clsx": "^2.1.1",
-    "sass": "^1.83.0",
     "tailwindcss": "^4.1.18",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",

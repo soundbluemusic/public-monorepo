@@ -6,7 +6,6 @@ import { useI18n } from '@/i18n';
 import { preloadSearchIndex } from '@/lib/search';
 import { useEffect } from 'react';
 import { Link } from 'react-router';
-import styles, { type Styles } from '../styles/app.module.scss';
 
 import type { MetaFunction } from 'react-router';
 
@@ -18,18 +17,19 @@ export const meta: MetaFunction = ({ location }) => {
   return [{ title }, { name: 'description', content: description }];
 };
 
-// Featured card color class type for type-safe dynamic styles
-type FeaturedCardColorClass = Extract<
-  keyof Styles,
-  | 'featuredCardBlue'
-  | 'featuredCardPurple'
-  | 'featuredCardGreen'
-  | 'featuredCardOrange'
-  | 'featuredCardRed'
-  | 'featuredCardPink'
-  | 'featuredCardTeal'
-  | 'featuredCardIndigo'
->;
+// Featured card color classes mapping
+const featuredCardColors = {
+  blue: 'bg-blue-500/10 hover:bg-blue-500/20 border-blue-500/20',
+  purple: 'bg-purple-500/10 hover:bg-purple-500/20 border-purple-500/20',
+  green: 'bg-green-500/10 hover:bg-green-500/20 border-green-500/20',
+  orange: 'bg-orange-500/10 hover:bg-orange-500/20 border-orange-500/20',
+  red: 'bg-red-500/10 hover:bg-red-500/20 border-red-500/20',
+  pink: 'bg-pink-500/10 hover:bg-pink-500/20 border-pink-500/20',
+  teal: 'bg-teal-500/10 hover:bg-teal-500/20 border-teal-500/20',
+  indigo: 'bg-indigo-500/10 hover:bg-indigo-500/20 border-indigo-500/20',
+} as const;
+
+type FeaturedCardColor = keyof typeof featuredCardColors;
 
 // 대표 개념 (Featured Concepts)
 const FEATURED_CONCEPTS: ReadonlyArray<{
@@ -39,7 +39,7 @@ const FEATURED_CONCEPTS: ReadonlyArray<{
   nameEn: string;
   descKo: string;
   descEn: string;
-  colorClass: FeaturedCardColorClass;
+  colorClass: FeaturedCardColor;
 }> = [
   {
     id: 'pythagorean-theorem',
@@ -48,7 +48,7 @@ const FEATURED_CONCEPTS: ReadonlyArray<{
     nameEn: 'Pythagorean Theorem',
     descKo: '직각삼각형의 세 변의 관계',
     descEn: 'Relationship between sides of right triangles',
-    colorClass: 'featuredCardBlue',
+    colorClass: 'blue',
   },
   {
     id: 'derivative',
@@ -57,7 +57,7 @@ const FEATURED_CONCEPTS: ReadonlyArray<{
     nameEn: 'Derivative',
     descKo: '변화율과 접선의 기울기',
     descEn: 'Rate of change and slope of tangent',
-    colorClass: 'featuredCardPurple',
+    colorClass: 'purple',
   },
   {
     id: 'limit',
@@ -66,7 +66,7 @@ const FEATURED_CONCEPTS: ReadonlyArray<{
     nameEn: 'Limit',
     descKo: '무한히 가까워지는 값',
     descEn: 'Value approached infinitely',
-    colorClass: 'featuredCardGreen',
+    colorClass: 'green',
   },
   {
     id: 'matrices-basics',
@@ -75,7 +75,7 @@ const FEATURED_CONCEPTS: ReadonlyArray<{
     nameEn: 'Matrix',
     descKo: '수를 직사각형 배열로 나타낸 구조',
     descEn: 'Rectangular array of numbers',
-    colorClass: 'featuredCardOrange',
+    colorClass: 'orange',
   },
   {
     id: 'prime-numbers',
@@ -84,7 +84,7 @@ const FEATURED_CONCEPTS: ReadonlyArray<{
     nameEn: 'Prime Numbers',
     descKo: '1과 자기 자신만으로 나누어지는 수',
     descEn: 'Numbers divisible only by 1 and itself',
-    colorClass: 'featuredCardRed',
+    colorClass: 'red',
   },
   {
     id: 'complex-numbers',
@@ -93,7 +93,7 @@ const FEATURED_CONCEPTS: ReadonlyArray<{
     nameEn: 'Complex Numbers',
     descKo: '실수와 허수의 합',
     descEn: 'Sum of real and imaginary numbers',
-    colorClass: 'featuredCardPink',
+    colorClass: 'pink',
   },
   {
     id: 'vectors-basics',
@@ -102,7 +102,7 @@ const FEATURED_CONCEPTS: ReadonlyArray<{
     nameEn: 'Vectors',
     descKo: '크기와 방향을 가진 양',
     descEn: 'Quantity with magnitude and direction',
-    colorClass: 'featuredCardTeal',
+    colorClass: 'teal',
   },
   {
     id: 'probability-basics',
@@ -111,7 +111,7 @@ const FEATURED_CONCEPTS: ReadonlyArray<{
     nameEn: 'Probability',
     descKo: '사건이 일어날 가능성',
     descEn: 'Likelihood of an event occurring',
-    colorClass: 'featuredCardIndigo',
+    colorClass: 'indigo',
   },
 ];
 
@@ -126,28 +126,28 @@ export default function HomePage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <div className={styles.heroSection}>
-        <h1 className={styles.heroTitle}>{t('logoText')}</h1>
-        <p className={styles.heroSubtitle}>{t('heroSubtitle')}</p>
+      <div className="text-center py-12 mb-8">
+        <h1 className="text-4xl font-bold text-[var(--text-primary)] mb-3">{t('logoText')}</h1>
+        <p className="text-lg text-[var(--text-secondary)]">{t('heroSubtitle')}</p>
       </div>
 
       {/* Featured Concepts Grid */}
       <section aria-labelledby="featured-concepts-heading">
-        <h2 id="featured-concepts-heading" className={styles.srOnly}>
+        <h2 id="featured-concepts-heading" className="sr-only">
           {locale === 'ko' ? '주요 개념' : 'Featured Concepts'}
         </h2>
-        <div className={styles.featuredGrid}>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {FEATURED_CONCEPTS.map((concept) => (
             <Link
               key={concept.id}
               to={localePath(`/concept/${concept.id}`)}
-              className={`${styles.featuredCard} ${styles[concept.colorClass]}`}
+              className={`block p-4 rounded-xl border no-underline transition-all hover:-translate-y-0.5 hover:shadow-md ${featuredCardColors[concept.colorClass]}`}
             >
-              <div className={styles.featuredIcon}>{concept.icon}</div>
-              <h3 className={styles.featuredName}>
+              <div className="text-3xl mb-2">{concept.icon}</div>
+              <h3 className="text-base font-medium text-[var(--text-primary)] mb-1">
                 {locale === 'ko' ? concept.nameKo : concept.nameEn}
               </h3>
-              <p className={styles.featuredDesc}>
+              <p className="text-sm text-[var(--text-secondary)] leading-snug">
                 {locale === 'ko' ? concept.descKo : concept.descEn}
               </p>
             </Link>
@@ -156,8 +156,11 @@ export default function HomePage() {
       </section>
 
       {/* Browse All Link */}
-      <div className={styles.browseAllLink}>
-        <Link to={localePath('/browse')} className={styles.browseAllButton}>
+      <div className="text-center mt-12">
+        <Link
+          to={localePath('/browse')}
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-[var(--accent-primary)] font-medium transition-colors hover:bg-[var(--bg-tertiary)]"
+        >
           {t('browseAllConcepts')}
           <span>→</span>
         </Link>

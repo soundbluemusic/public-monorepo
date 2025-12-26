@@ -4,8 +4,8 @@
 import { fields } from '@/data/fields';
 import { useI18n } from '@/i18n';
 import { stripLocaleFromPath } from '@soundblue/shared';
+import { cn } from '@soundblue/shared-react';
 import { Link, useLocation } from 'react-router';
-import styles from '../../styles/app.module.scss';
 
 // Use shared utility for locale stripping
 const stripLocale = stripLocaleFromPath;
@@ -20,27 +20,41 @@ export function Sidebar() {
   };
 
   return (
-    <aside className={styles.sidebar}>
-      <nav className={styles.sidebarNav}>
-        <div className={styles.sidebarHeader}>
-          <h2 className={styles.sidebarTitle}>{t('mathFields')}</h2>
+    <aside className="hidden lg:block sticky top-14 left-0 h-[calc(100vh-3.5rem)] w-64 overflow-y-auto flex-shrink-0 bg-[var(--bg-primary)] border-r border-[var(--border-primary)]">
+      <nav className="p-4 flex flex-col gap-1">
+        <div className="mb-4 pb-4 border-b border-[var(--border-primary)]">
+          <h2 className="text-xs font-semibold uppercase tracking-wider text-[var(--text-tertiary)] m-0">
+            {t('mathFields')}
+          </h2>
         </div>
 
         {fields.map((field) => (
           <Link
             key={field.id}
             to={localePath(`/field/${field.id}`)}
-            className={`${styles.sidebarItem} ${isActive(field.id) ? styles.sidebarItemActive : ''}`}
+            className={cn(
+              'flex items-center gap-3 px-3 py-3 rounded-lg min-h-11 transition-all no-underline',
+              isActive(field.id)
+                ? 'bg-[var(--bg-tertiary)] text-[var(--accent-primary)] shadow-sm'
+                : 'text-[var(--text-secondary)] hover:translate-x-1',
+            )}
           >
-            <span className={styles.sidebarItemIcon}>{field.icon}</span>
-            <div className={styles.sidebarItemContent}>
+            <span className="text-xl flex-shrink-0">{field.icon}</span>
+            <div className="flex-1 min-w-0">
               <div
-                className={`${styles.sidebarItemLabel} ${isActive(field.id) ? styles.sidebarItemLabelActive : ''}`}
+                className={cn(
+                  'font-medium text-sm truncate',
+                  isActive(field.id)
+                    ? 'text-[var(--accent-primary)]'
+                    : 'text-[var(--text-primary)]',
+                )}
               >
                 {field.name[locale] || field.name.en}
               </div>
             </div>
-            {isActive(field.id) && <div className={styles.sidebarActiveIndicator} />}
+            {isActive(field.id) && (
+              <div className="w-1 h-6 rounded-full flex-shrink-0 bg-[var(--accent-primary)]" />
+            )}
           </Link>
         ))}
       </nav>

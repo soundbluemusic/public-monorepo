@@ -1,5 +1,5 @@
 import type { CSSProperties, ReactNode } from 'react';
-import styles from '../styles/components.module.scss';
+import { cn } from '../utils/cn';
 
 interface SkeletonProps {
   className?: string;
@@ -7,7 +7,9 @@ interface SkeletonProps {
 }
 
 export function Skeleton({ className = '', style }: SkeletonProps) {
-  return <div className={`${styles.skeleton} ${className}`} style={style} />;
+  return (
+    <div className={cn('animate-pulse bg-[var(--bg-tertiary)] rounded', className)} style={style} />
+  );
 }
 
 interface SkeletonTextProps {
@@ -17,11 +19,15 @@ interface SkeletonTextProps {
 
 export function SkeletonText({ lines = 3, className = '' }: SkeletonTextProps) {
   return (
-    <div className={`${styles.skeletonText} ${className}`}>
+    <div className={cn('space-y-2', className)}>
       {Array.from({ length: lines }, (_, i) => (
+        // biome-ignore lint/suspicious/noArrayIndexKey: Static skeleton placeholders never reorder
         <div
           key={`skeleton-line-${i}`}
-          className={`${styles.skeleton} ${styles.skeletonLine} ${i === lines - 1 ? styles.skeletonLineShort : ''}`}
+          className={cn(
+            'h-4 animate-pulse bg-[var(--bg-tertiary)] rounded',
+            i === lines - 1 && 'w-2/3',
+          )}
         />
       ))}
     </div>
@@ -34,11 +40,16 @@ interface SkeletonCardProps {
 
 export function SkeletonCard({ className = '' }: SkeletonCardProps) {
   return (
-    <div className={`${styles.skeletonCard} ${className}`}>
-      <div className={`${styles.skeleton} ${styles.skeletonCardHeader}`} />
-      <div className={styles.skeletonCardBody}>
-        <div className={`${styles.skeleton} ${styles.skeletonLine}`} />
-        <div className={`${styles.skeleton} ${styles.skeletonLine} ${styles.skeletonLineShort}`} />
+    <div
+      className={cn(
+        'p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)]',
+        className,
+      )}
+    >
+      <div className="h-6 w-3/4 mb-3 animate-pulse bg-[var(--bg-tertiary)] rounded" />
+      <div className="space-y-2">
+        <div className="h-4 animate-pulse bg-[var(--bg-tertiary)] rounded" />
+        <div className="h-4 w-2/3 animate-pulse bg-[var(--bg-tertiary)] rounded" />
       </div>
     </div>
   );
@@ -51,14 +62,14 @@ interface SkeletonListProps {
 
 export function SkeletonList({ count = 5, className = '' }: SkeletonListProps) {
   return (
-    <div className={`${styles.skeletonList} ${className}`}>
+    <div className={cn('space-y-3', className)}>
       {Array.from({ length: count }, (_, i) => (
         // biome-ignore lint/suspicious/noArrayIndexKey: Static skeleton placeholders never reorder
-        <div key={`skeleton-list-${i}`} className={styles.skeletonListItem}>
-          <div className={`${styles.skeleton} ${styles.skeletonAvatar}`} />
-          <div className={styles.skeletonListContent}>
-            <div className={`${styles.skeleton} ${styles.skeletonListTitle}`} />
-            <div className={`${styles.skeleton} ${styles.skeletonListDesc}`} />
+        <div key={`skeleton-list-${i}`} className="flex items-center gap-3">
+          <div className="w-10 h-10 flex-shrink-0 animate-pulse bg-[var(--bg-tertiary)] rounded-full" />
+          <div className="flex-1 space-y-2">
+            <div className="h-4 w-1/3 animate-pulse bg-[var(--bg-tertiary)] rounded" />
+            <div className="h-3 w-2/3 animate-pulse bg-[var(--bg-tertiary)] rounded" />
           </div>
         </div>
       ))}
@@ -72,21 +83,17 @@ interface SkeletonGridProps {
   className?: string;
 }
 
-const columnClasses: Record<number, string> = {
-  2: styles.skeletonGrid2,
-  3: styles.skeletonGrid3,
-  4: styles.skeletonGrid4,
-};
-
 export function SkeletonGrid({ count = 6, columns = 3, className = '' }: SkeletonGridProps) {
-  // Use predefined class for common column counts, fallback to CSS variable
-  const columnClass = columnClasses[columns];
-  const gridStyle = columnClass
-    ? undefined
-    : ({ '--skeleton-columns': columns } as React.CSSProperties);
+  const columnClasses: Record<number, string> = {
+    2: 'grid-cols-2',
+    3: 'grid-cols-3',
+    4: 'grid-cols-4',
+  };
+
+  const columnClass = columnClasses[columns] || `grid-cols-${columns}`;
 
   return (
-    <div className={`${styles.skeletonGrid} ${columnClass || ''} ${className}`} style={gridStyle}>
+    <div className={cn('grid gap-4', columnClass, className)}>
       {Array.from({ length: count }, (_, i) => (
         // biome-ignore lint/suspicious/noArrayIndexKey: Static skeleton placeholders never reorder
         <SkeletonCard key={`skeleton-grid-${i}`} />
@@ -101,9 +108,9 @@ interface PageSkeletonProps {
 
 export function PageSkeleton({ children }: PageSkeletonProps) {
   return (
-    <div className={styles.skeletonPage}>
-      <div className={`${styles.skeleton} ${styles.skeletonPageTitle}`} />
-      <div className={`${styles.skeleton} ${styles.skeletonPageSubtitle}`} />
+    <div className="space-y-6">
+      <div className="h-8 w-1/3 animate-pulse bg-[var(--bg-tertiary)] rounded" />
+      <div className="h-5 w-2/3 animate-pulse bg-[var(--bg-tertiary)] rounded" />
       {children || <SkeletonGrid count={6} columns={3} />}
     </div>
   );

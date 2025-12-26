@@ -4,7 +4,7 @@ import { meaningEntries } from '@/data/entries';
 import type { Category, MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { studyRecords } from '@/lib/db';
-import styles from '@/styles/app.module.scss';
+import { cn } from '@soundblue/shared-react';
 import { Check } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router';
@@ -42,9 +42,12 @@ export default function CategoryPage() {
   if (!category) {
     return (
       <Layout>
-        <div className={styles.emptyState}>
-          <p className={styles.textSecondary}>{t('categoryNotFound')}</p>
-          <Link to={localePath('/browse')} className={`${styles.link} ${styles.mt4}`}>
+        <div className="text-center py-12 px-4 text-[var(--text-tertiary)]">
+          <p className="text-[var(--text-secondary)]">{t('categoryNotFound')}</p>
+          <Link
+            to={localePath('/browse')}
+            className="text-[var(--accent-primary)] hover:underline mt-4 inline-block"
+          >
             {t('browse')}
           </Link>
         </div>
@@ -56,53 +59,67 @@ export default function CategoryPage() {
 
   return (
     <Layout>
-      <div className={styles.sectionLarge}>
-        <div className={`${styles.flexStart} ${styles.flexGap3} ${styles.mb2}`}>
-          <span className={styles.text3xl}>{category.icon}</span>
-          <h1 className={`${styles.text2xl} ${styles.fontSemibold} ${styles.textPrimary}`}>
+      <div className="mb-8">
+        <div className="flex items-center gap-3 mb-2">
+          <span className="text-3xl">{category.icon}</span>
+          <h1 className="text-2xl font-semibold text-[var(--text-primary)]">
             {category.name[locale]}
           </h1>
         </div>
-        <p className={styles.textSecondary}>
+        <p className="text-[var(--text-secondary)]">
           {studiedCount}/{entries.length} {locale === 'ko' ? '단어 학습함' : 'words studied'}
         </p>
 
         {/* Progress bar */}
         {studiedCount > 0 && (
-          <div className={`${styles.progressBar} ${styles.mt3}`}>
+          <div className="w-full h-2 rounded-full overflow-hidden bg-[var(--bg-secondary)] mt-3">
             <div
-              className={styles.progressFill}
+              className="h-full bg-[var(--accent-primary)] transition-all duration-300"
               style={{ width: `${(studiedCount / entries.length) * 100}%` }}
             />
           </div>
         )}
       </div>
 
-      <div className={styles.spaceY1}>
+      <div className="space-y-1">
         {entries.map((entry) => {
           const translation = entry.translations[locale];
           const isStudied = studiedIds.has(entry.id);
 
           return (
-            <Link key={entry.id} to={localePath(`/entry/${entry.id}`)} className={styles.listItem}>
-              <div className={styles.listItemContent}>
+            <Link
+              key={entry.id}
+              to={localePath(`/entry/${entry.id}`)}
+              className="flex items-center justify-between py-3 px-2 -mx-2 rounded-lg border-b border-[var(--border-primary)] transition-colors no-underline hover:bg-[var(--bg-tertiary)]"
+            >
+              <div className="flex items-center gap-3 flex-1 min-w-0">
                 {/* Checkmark */}
-                <div className={isStudied ? styles.checkMark : styles.checkPlaceholder}>
-                  {isStudied && <Check size={14} style={{ color: 'white' }} />}
+                <div
+                  className={cn(
+                    'w-5 h-5 rounded-full flex items-center justify-center shrink-0',
+                    isStudied ? 'bg-[var(--accent-primary)]' : '',
+                  )}
+                >
+                  {isStudied && <Check size={14} className="text-white" />}
                 </div>
 
                 {/* Word info */}
-                <div
-                  className={`${styles.flexStart} ${styles.flexGap3} ${styles.flex1} ${styles.minW0}`}
-                >
-                  <span className={isStudied ? styles.wordKoreanStudied : styles.wordKorean}>
+                <div className="flex items-center gap-3 flex-1 min-w-0">
+                  <span
+                    className={cn(
+                      'text-lg font-medium',
+                      isStudied
+                        ? 'text-[var(--text-secondary)] line-through opacity-70'
+                        : 'text-[var(--text-primary)]',
+                    )}
+                  >
                     {entry.korean}
                   </span>
-                  <span className={styles.wordRomanization}>{entry.romanization}</span>
+                  <span className="text-sm text-[var(--text-tertiary)]">{entry.romanization}</span>
                 </div>
               </div>
 
-              <span className={`${styles.wordTranslation} ${styles.shrink0} ${styles.ml2}`}>
+              <span className="text-sm text-[var(--text-secondary)] shrink-0 ml-2">
                 {translation.word}
               </span>
             </Link>
@@ -110,7 +127,9 @@ export default function CategoryPage() {
         })}
       </div>
 
-      {entries.length === 0 && <p className={styles.emptyState}>{t('noCategoryWords')}</p>}
+      {entries.length === 0 && (
+        <p className="text-center py-12 px-4 text-[var(--text-tertiary)]">{t('noCategoryWords')}</p>
+      )}
     </Layout>
   );
 }

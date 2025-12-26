@@ -3,7 +3,6 @@ import { categories } from '@/data/categories';
 import { meaningEntries } from '@/data/entries';
 import { useI18n } from '@/i18n';
 import { favorites, studyRecords } from '@/lib/db';
-import styles from '@/styles/app.module.scss';
 import { BookmarkCheck, Calendar, FolderOpen, TrendingUp, Trophy } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import type { MetaFunction } from 'react-router';
@@ -65,12 +64,12 @@ export default function MyLearningPage() {
   return (
     <Layout>
       {/* Header */}
-      <div className={styles.sectionLarge}>
-        <h1 className={styles.pageTitle}>
-          <TrendingUp size={24} aria-hidden="true" style={{ marginRight: '0.5rem' }} />
+      <div className="mb-8">
+        <h1 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] flex items-center gap-2">
+          <TrendingUp size={24} aria-hidden="true" />
           {locale === 'ko' ? '내 학습 현황' : 'My Learning Progress'}
         </h1>
-        <p className={styles.textSecondary}>
+        <p className="text-[var(--text-secondary)]">
           {locale === 'ko'
             ? '학습한 단어와 북마크를 확인하세요'
             : 'Track your studied words and bookmarks'}
@@ -78,61 +77,64 @@ export default function MyLearningPage() {
       </div>
 
       {/* Stats Cards */}
-      <div className={`${styles.grid} ${styles.gridCols3} ${styles.sectionLarge}`}>
+      <div className="grid gap-4 sm:grid-cols-3 mb-8">
         {/* Total Progress */}
-        <div className={styles.card}>
-          <div className={`${styles.flexStart} ${styles.flexGap2} ${styles.mb2}`}>
-            <TrendingUp size={20} style={{ color: 'var(--accent-primary)' }} />
-            <h3 className={styles.sectionTitleSmall}>
+        <div className="p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)]">
+          <div className="flex items-center gap-2 mb-2">
+            <TrendingUp size={20} className="text-[var(--accent-primary)]" />
+            <h3 className="text-sm font-semibold text-[var(--text-primary)]">
               {locale === 'ko' ? '전체 진행도' : 'Total Progress'}
             </h3>
           </div>
-          <p className={`${styles.text2xl} ${styles.fontBold} ${styles.textPrimary} ${styles.mb1}`}>
+          <p className="text-2xl font-bold text-[var(--text-primary)] mb-1">
             {studiedCount}/{totalWords}
           </p>
-          <div className={styles.progressBar}>
-            <div className={styles.progressFill} style={{ width: `${progressPercentage}%` }} />
+          <div className="w-full h-2 rounded-full overflow-hidden bg-[var(--bg-secondary)]">
+            <div
+              className="h-full bg-[var(--accent-primary)] transition-all duration-300"
+              style={{ width: `${progressPercentage}%` }}
+            />
           </div>
         </div>
 
         {/* Completed Categories */}
-        <div className={styles.card}>
-          <div className={`${styles.flexStart} ${styles.flexGap2} ${styles.mb2}`}>
-            <Trophy size={20} style={{ color: 'var(--accent-primary)' }} />
-            <h3 className={styles.sectionTitleSmall}>
+        <div className="p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)]">
+          <div className="flex items-center gap-2 mb-2">
+            <Trophy size={20} className="text-[var(--accent-primary)]" />
+            <h3 className="text-sm font-semibold text-[var(--text-primary)]">
               {locale === 'ko' ? '완료 카테고리' : 'Completed'}
             </h3>
           </div>
-          <p className={`${styles.text2xl} ${styles.fontBold} ${styles.textPrimary}`}>
+          <p className="text-2xl font-bold text-[var(--text-primary)]">
             {completedCategories}/{categories.length}
           </p>
-          <p className={`${styles.textXs} ${styles.textTertiary}`}>
+          <p className="text-xs text-[var(--text-tertiary)]">
             {locale === 'ko' ? '카테고리' : 'categories'}
           </p>
         </div>
 
         {/* Bookmarks */}
-        <div className={styles.card}>
-          <div className={`${styles.flexStart} ${styles.flexGap2} ${styles.mb2}`}>
-            <BookmarkCheck size={20} style={{ color: 'var(--accent-primary)' }} />
-            <h3 className={styles.sectionTitleSmall}>{locale === 'ko' ? '북마크' : 'Bookmarks'}</h3>
+        <div className="p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)]">
+          <div className="flex items-center gap-2 mb-2">
+            <BookmarkCheck size={20} className="text-[var(--accent-primary)]" />
+            <h3 className="text-sm font-semibold text-[var(--text-primary)]">
+              {locale === 'ko' ? '북마크' : 'Bookmarks'}
+            </h3>
           </div>
-          <p className={`${styles.text2xl} ${styles.fontBold} ${styles.textPrimary}`}>
-            {favoriteIds.length}
-          </p>
-          <p className={`${styles.textXs} ${styles.textTertiary}`}>
+          <p className="text-2xl font-bold text-[var(--text-primary)]">{favoriteIds.length}</p>
+          <p className="text-xs text-[var(--text-tertiary)]">
             {locale === 'ko' ? '저장된 단어' : 'saved words'}
           </p>
         </div>
       </div>
 
       {/* Category Progress */}
-      <div className={styles.sectionLarge}>
-        <h2 className={`${styles.sectionTitle} ${styles.mb4}`}>
-          <FolderOpen size={20} aria-hidden="true" style={{ marginRight: '0.5rem' }} />
+      <div className="mb-8">
+        <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+          <FolderOpen size={20} aria-hidden="true" />
           {locale === 'ko' ? '카테고리별 진행도' : 'Progress by Category'}
         </h2>
-        <div className={styles.spaceY3}>
+        <div className="space-y-3">
           {categories.map((category) => {
             const progress = categoryProgress[category.id] || { studied: 0, total: 0 };
             const percentage = progress.total > 0 ? (progress.studied / progress.total) * 100 : 0;
@@ -141,21 +143,24 @@ export default function MyLearningPage() {
               <Link
                 key={category.id}
                 to={localePath(`/category/${category.id}`)}
-                className={styles.cardHover}
+                className="block p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)] no-underline cursor-pointer transition-all duration-150 hover:-translate-y-0.5 hover:shadow-md hover:border-[var(--border-focus)]"
               >
-                <div className={`${styles.flexBetween} ${styles.mb2}`}>
-                  <div className={`${styles.flexStart} ${styles.flexGap2}`}>
-                    <span className={styles.textXl}>{category.icon}</span>
-                    <span className={`${styles.fontMedium} ${styles.textPrimary}`}>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">{category.icon}</span>
+                    <span className="font-medium text-[var(--text-primary)]">
                       {category.name[locale]}
                     </span>
                   </div>
-                  <span className={`${styles.textSm} ${styles.textSecondary}`}>
+                  <span className="text-sm text-[var(--text-secondary)]">
                     {progress.studied}/{progress.total}
                   </span>
                 </div>
-                <div className={styles.progressBar}>
-                  <div className={styles.progressFill} style={{ width: `${percentage}%` }} />
+                <div className="w-full h-2 rounded-full overflow-hidden bg-[var(--bg-secondary)]">
+                  <div
+                    className="h-full bg-[var(--accent-primary)] transition-all duration-300"
+                    style={{ width: `${percentage}%` }}
+                  />
                 </div>
               </Link>
             );
@@ -165,24 +170,28 @@ export default function MyLearningPage() {
 
       {/* Bookmarked Words */}
       {favoriteEntries.length > 0 && (
-        <div className={styles.sectionLarge}>
-          <h2 className={`${styles.sectionTitle} ${styles.mb4}`}>
+        <div className="mb-8">
+          <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-4">
             {locale === 'ko' ? '북마크한 단어' : 'Bookmarked Words'}
           </h2>
-          <div className={styles.spaceY1}>
+          <div className="space-y-1">
             {favoriteEntries.slice(0, 10).map((entry) => {
               const translation = entry.translations[locale];
               return (
                 <Link
                   key={entry.id}
                   to={localePath(`/entry/${entry.id}`)}
-                  className={styles.listItem}
+                  className="flex items-center justify-between py-3 px-2 -mx-2 rounded-lg border-b border-[var(--border-primary)] transition-colors no-underline hover:bg-[var(--bg-tertiary)]"
                 >
-                  <div className={`${styles.flexStart} ${styles.flexGap3}`}>
-                    <span className={styles.wordKorean}>{entry.korean}</span>
-                    <span className={styles.wordRomanization}>{entry.romanization}</span>
+                  <div className="flex items-center gap-3">
+                    <span className="text-lg font-medium text-[var(--text-primary)]">
+                      {entry.korean}
+                    </span>
+                    <span className="text-sm text-[var(--text-tertiary)]">
+                      {entry.romanization}
+                    </span>
                   </div>
-                  <span className={styles.wordTranslation}>{translation.word}</span>
+                  <span className="text-sm text-[var(--text-secondary)]">{translation.word}</span>
                 </Link>
               );
             })}
@@ -192,27 +201,29 @@ export default function MyLearningPage() {
 
       {/* Recent Studied Words */}
       {recentStudied.length > 0 && (
-        <div className={styles.sectionLarge}>
-          <h2
-            className={`${styles.sectionTitle} ${styles.flexStart} ${styles.flexGap2} ${styles.mb4}`}
-          >
+        <div className="mb-8">
+          <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-4 flex items-center gap-2">
             <Calendar size={20} />
             {locale === 'ko' ? '최근 학습한 단어' : 'Recently Studied'}
           </h2>
-          <div className={styles.spaceY1}>
+          <div className="space-y-1">
             {recentStudied.map((entry) => {
               const translation = entry.translations[locale];
               return (
                 <Link
                   key={entry.id}
                   to={localePath(`/entry/${entry.id}`)}
-                  className={styles.listItem}
+                  className="flex items-center justify-between py-3 px-2 -mx-2 rounded-lg border-b border-[var(--border-primary)] transition-colors no-underline hover:bg-[var(--bg-tertiary)]"
                 >
-                  <div className={`${styles.flexStart} ${styles.flexGap3}`}>
-                    <span className={styles.wordKorean}>{entry.korean}</span>
-                    <span className={styles.wordRomanization}>{entry.romanization}</span>
+                  <div className="flex items-center gap-3">
+                    <span className="text-lg font-medium text-[var(--text-primary)]">
+                      {entry.korean}
+                    </span>
+                    <span className="text-sm text-[var(--text-tertiary)]">
+                      {entry.romanization}
+                    </span>
                   </div>
-                  <span className={styles.wordTranslation}>{translation.word}</span>
+                  <span className="text-sm text-[var(--text-secondary)]">{translation.word}</span>
                 </Link>
               );
             })}
@@ -222,11 +233,14 @@ export default function MyLearningPage() {
 
       {/* Empty State */}
       {studiedCount === 0 && favoriteIds.length === 0 && (
-        <div className={styles.emptyState}>
-          <p className={`${styles.textLg} ${styles.mb4}`}>
+        <div className="text-center py-12 px-4 text-[var(--text-tertiary)]">
+          <p className="text-lg mb-4">
             {locale === 'ko' ? '아직 학습한 단어가 없습니다' : 'No words studied yet'}
           </p>
-          <Link to={localePath('/browse')} className={styles.buttonPrimary}>
+          <Link
+            to={localePath('/browse')}
+            className="min-h-11 px-6 inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors bg-[var(--accent-primary)] text-white hover:brightness-110 active:scale-[0.98]"
+          >
             {locale === 'ko' ? '학습 시작하기 →' : 'Start Learning →'}
           </Link>
         </div>

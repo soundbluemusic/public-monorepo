@@ -1,7 +1,8 @@
+import { cn } from '@soundblue/shared-react';
+import { Globe, Home, Package } from 'lucide-react';
 import type { ReactNode } from 'react';
 import { Link, useLocation } from 'react-router';
 import { useI18n } from '../../i18n';
-import styles from '../../styles/app.module.scss';
 
 interface BottomNavItem {
   href: string;
@@ -15,64 +16,19 @@ const navItems: readonly BottomNavItem[] = [
     href: '/',
     label: 'Home',
     labelKo: '홈',
-    icon: (
-      <svg
-        className={styles.bottomNavIcon}
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-        />
-      </svg>
-    ),
+    icon: <Home size={20} aria-hidden="true" />,
   },
   {
     href: '/web-api',
     label: 'Web API',
     labelKo: 'Web API',
-    icon: (
-      <svg
-        className={styles.bottomNavIcon}
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-        />
-      </svg>
-    ),
+    icon: <Globe size={20} aria-hidden="true" />,
   },
   {
     href: '/libraries',
     label: 'Libraries',
     labelKo: 'Libraries',
-    icon: (
-      <svg
-        className={styles.bottomNavIcon}
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-        />
-      </svg>
-    ),
+    icon: <Package size={20} aria-hidden="true" />,
   },
 ];
 
@@ -83,24 +39,21 @@ export default function BottomNav() {
   const isActive = (href: string) => location.pathname === localePath(href);
 
   return (
-    <nav className={styles.bottomNav}>
-      <div className={styles.bottomNavContainer}>
-        {navItems.map((item) => (
-          <Link
-            key={item.href}
-            to={localePath(item.href)}
-            className={`${styles.bottomNavLink} ${isActive(item.href) ? styles.bottomNavLinkActive : ''}`}
-            aria-current={isActive(item.href) ? 'page' : undefined}
-          >
-            <span className={isActive(item.href) ? styles.bottomNavIconActive : ''}>
-              {item.icon}
-            </span>
-            <span className={styles.bottomNavLabel}>
-              {locale === 'ko' ? item.labelKo : item.label}
-            </span>
-          </Link>
-        ))}
-      </div>
+    <nav className="fixed bottom-0 left-0 right-0 z-40 bg-[var(--bg-elevated)] border-t border-[var(--border-primary)] flex items-center justify-around h-16 pb-[env(safe-area-inset-bottom,0px)] lg:hidden">
+      {navItems.map((item) => (
+        <Link
+          key={item.href}
+          to={localePath(item.href)}
+          className={cn(
+            'flex flex-col items-center justify-center gap-1 min-h-11 min-w-11 px-4 py-2 no-underline transition-colors',
+            isActive(item.href) ? 'text-[var(--accent-primary)]' : 'text-[var(--text-secondary)]',
+          )}
+          aria-current={isActive(item.href) ? 'page' : undefined}
+        >
+          {item.icon}
+          <span className="text-xs">{locale === 'ko' ? item.labelKo : item.label}</span>
+        </Link>
+      ))}
     </nav>
   );
 }
