@@ -8,8 +8,9 @@
  * - ARIA accessibility (combobox pattern)
  * - Responsive design with touch targets
  * - Clear button and shortcut badge
+ *
+ * Design: Matches Sound Blue SearchBox styling
  */
-import { Search, X } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { SearchResult } from '../hooks/useSearchWorker';
 import { cn } from '../utils/cn';
@@ -43,13 +44,15 @@ export function SearchDropdown({
 }: SearchDropdownProps) {
   const [showResults, setShowResults] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [isFocused, setIsFocused] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const listboxId = useRef(`search-listbox-${Math.random().toString(36).slice(2, 9)}`).current;
 
   // Detect Mac for shortcut display
-  const isMac = typeof navigator !== 'undefined' && /Mac|iPod|iPhone|iPad/.test(navigator.platform);
-  const shortcutKey = isMac ? '⌘K' : 'Ctrl+K';
+  const isMac =
+    typeof navigator !== 'undefined' && /Mac|iPhone|iPad|iPod/.test(navigator.userAgent);
+  const shortcutKey = isMac ? '\u2318K' : 'Ctrl+K';
 
   // Reset selection when results change
   const prevResultsLengthRef = useRef(results.length);
@@ -136,7 +139,12 @@ export function SearchDropdown({
   };
 
   const handleFocus = () => {
-    setShowResults(true);
+    setIsFocused(true);
+    if (query.trim()) setShowResults(true);
+  };
+
+  const handleBlur = () => {
+    setIsFocused(false);
   };
 
   const defaultRenderResult = (result: SearchResult, _isSelected: boolean) => {
@@ -144,10 +152,10 @@ export function SearchDropdown({
     const desc = result.item.description?.[locale] || result.item.description?.en;
 
     return (
-      <div className="flex flex-col items-start gap-0.5">
-        <span className="font-medium text-(--text-primary)">{name}</span>
-        {desc && <span className="text-xs text-(--text-tertiary) line-clamp-1">{desc}</span>}
-      </div>
+      <>
+        <span className="text-sm font-medium text-(--text-primary)">{name}</span>
+        {desc && <span className="text-xs text-(--text-tertiary)">{desc}</span>}
+      </>
     );
   };
 
@@ -155,13 +163,19 @@ export function SearchDropdown({
 
   return (
     <div ref={containerRef} className={cn('relative', className)}>
-      <div className="relative">
-        {/* Search Icon */}
-        <Search
-          size={16}
-          className="absolute left-3 top-1/2 -translate-y-1/2 text-(--text-tertiary) pointer-events-none"
+      <div className="relative flex items-center">
+        {/* Search Icon (inline SVG like Sound Blue) */}
+        <svg
+          className="absolute left-2.5 w-4 h-4 text-(--text-tertiary) pointer-events-none"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
           aria-hidden="true"
-        />
+        >
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.35-4.35" />
+        </svg>
 
         {/* Input */}
         <input
@@ -170,15 +184,17 @@ export function SearchDropdown({
           value={query}
           onChange={handleInputChange}
           onFocus={handleFocus}
+          onBlur={handleBlur}
           onKeyDown={handleKeyDown}
           placeholder={placeholder[locale]}
           className={cn(
-            'w-full h-9 max-md:h-10 text-base',
-            'pl-9 pr-16',
+            'w-full h-9 max-md:h-10 text-base font-inherit',
+            'pl-8.5 pr-8',
             'bg-(--bg-tertiary) border border-(--border-primary) rounded-xl',
             'text-(--text-primary) placeholder:text-(--text-tertiary)',
-            'focus:outline-none focus:border-(--border-focus) focus:bg-(--bg-secondary)',
-            'transition-colors',
+            'outline-none transition-[border-color,background-color] duration-150',
+            'focus:border-(--border-focus) focus:bg-(--bg-secondary)',
+            '[&::-webkit-search-cancel-button]:hidden',
           )}
           // ARIA attributes for combobox pattern
           role="combobox"
@@ -189,53 +205,62 @@ export function SearchDropdown({
           aria-activedescendant={selectedIndex >= 0 ? `search-option-${selectedIndex}` : undefined}
         />
 
-        {/* Right side: Clear button or Shortcut badge */}
-        <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1">
-          {query ? (
-            // Clear button
-            <button
-              type="button"
-              onClick={handleClear}
-              className="p-1 rounded text-(--text-tertiary) hover:text-(--text-primary) hover:bg-(--bg-tertiary) transition-colors"
-              aria-label={locale === 'ko' ? '검색어 지우기' : 'Clear search'}
-            >
-              <X size={14} />
-            </button>
-          ) : (
-            // Shortcut badge (hidden on mobile)
-            <span
-              className="hidden md:inline-flex text-[0.6875rem] px-1.5 py-0.5 bg-(--bg-secondary) border border-(--border-primary) rounded text-(--text-tertiary)"
+        {/* Shortcut badge (only when not focused and no query) */}
+        {!isFocused && !query && (
+          <span
+            className="absolute right-2 flex items-center px-1.5 py-0.5 font-inherit text-[0.6875rem] font-medium text-(--text-tertiary) bg-(--bg-secondary) border border-(--border-primary) rounded pointer-events-none max-md:hidden"
+            aria-hidden="true"
+          >
+            {shortcutKey}
+          </span>
+        )}
+
+        {/* Clear button (only when there's a query) */}
+        {query && (
+          <button
+            type="button"
+            onClick={handleClear}
+            className="absolute right-1.5 flex items-center justify-center w-6 h-6 p-0 bg-transparent border-none rounded text-(--text-tertiary) cursor-pointer transition-all duration-150 hover:text-(--text-primary) active:scale-90"
+            aria-label={locale === 'ko' ? '검색어 지우기' : 'Clear search'}
+          >
+            <svg
+              className="w-3.5 h-3.5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
               aria-hidden="true"
             >
-              {shortcutKey}
-            </span>
-          )}
-        </div>
+              <path d="M18 6 6 18M6 6l12 12" />
+            </svg>
+          </button>
+        )}
       </div>
 
-      {/* Results Dropdown - uses ARIA combobox pattern (role="listbox" + role="option") */}
-      {isOpen && (
+      {/* Results Dropdown */}
+      {isOpen && results.length > 0 && (
         <div
           id={listboxId}
           tabIndex={-1}
-          className="absolute top-[calc(100%+4px)] left-0 right-0 z-[600] max-h-75 overflow-y-auto rounded-xl bg-(--bg-secondary) border border-(--border-primary) shadow-lg"
+          className="absolute top-[calc(100%+4px)] left-0 right-0 z-[600] max-h-75 overflow-y-auto bg-(--bg-secondary) border border-(--border-primary) rounded-xl shadow-lg m-0 p-1"
         >
           {isLoading ? (
-            <div className="px-4 py-3 text-sm text-(--text-tertiary)">
+            <div className="px-3 py-2.5 text-sm text-(--text-tertiary)">
               {locale === 'ko' ? '검색 중...' : 'Searching...'}
             </div>
-          ) : results.length > 0 ? (
+          ) : (
             results.map((result, index) => (
               <button
                 key={result.item.id}
                 id={`search-option-${index}`}
                 type="button"
+                tabIndex={0}
                 aria-selected={selectedIndex === index}
                 onClick={() => handleResultClick(result, index)}
                 onMouseEnter={() => setSelectedIndex(index)}
                 className={cn(
-                  'w-full px-4 py-3 text-left transition-colors cursor-pointer',
-                  selectedIndex === index ? 'bg-(--accent-primary)/10' : 'hover:bg-(--bg-tertiary)',
+                  'flex flex-col gap-0.5 w-full py-2.5 px-3 text-left rounded-lg transition-all duration-150 cursor-pointer',
+                  selectedIndex === index ? 'bg-(--bg-tertiary)' : 'hover:bg-(--bg-tertiary)',
                 )}
               >
                 {renderResult
@@ -243,11 +268,14 @@ export function SearchDropdown({
                   : defaultRenderResult(result, selectedIndex === index)}
               </button>
             ))
-          ) : (
-            <div className="px-4 py-3 text-sm text-(--text-tertiary)">
-              {locale === 'ko' ? '검색 결과 없음' : 'No results found'}
-            </div>
           )}
+        </div>
+      )}
+
+      {/* No results message */}
+      {isOpen && query.trim() && results.length === 0 && !isLoading && (
+        <div className="absolute top-[calc(100%+4px)] left-0 right-0 z-[600] bg-(--bg-secondary) border border-(--border-primary) rounded-xl shadow-lg p-4 text-center text-sm text-(--text-tertiary)">
+          {locale === 'ko' ? '검색 결과 없음' : 'No results found'}
         </div>
       )}
     </div>
