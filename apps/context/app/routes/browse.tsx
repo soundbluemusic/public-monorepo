@@ -5,7 +5,7 @@ import type { MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { favorites, studyRecords } from '@/lib/db';
 import styles from '@/styles/app.module.scss';
-import { Check, Shuffle } from 'lucide-react';
+import { Check, Shuffle, Star } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import type { MetaFunction } from 'react-router';
 import { Link, useLoaderData } from 'react-router';
@@ -207,8 +207,8 @@ export default function BrowsePage() {
       {/* Quick Access Buttons */}
       <div className={`${styles.section} ${styles.flexWrap} ${styles.flexGap2}`}>
         <button type="button" onClick={handleRandomWord} className={styles.buttonPrimary}>
-          <Shuffle size={16} />
-          <span>{locale === 'ko' ? '🎲 랜덤 단어' : '🎲 Random Word'}</span>
+          <Shuffle size={16} aria-hidden="true" />
+          <span>{locale === 'ko' ? '랜덤 단어' : 'Random Word'}</span>
         </button>
 
         <button
@@ -216,7 +216,7 @@ export default function BrowsePage() {
           onClick={handleShowBookmarksOnly}
           className={filterStatus === 'bookmarked' ? styles.buttonActive : styles.buttonSecondary}
         >
-          {locale === 'ko' ? '⭐ 북마크만' : '⭐ Bookmarks Only'}
+          {locale === 'ko' ? '북마크만' : 'Bookmarks Only'}
         </button>
 
         <button
@@ -224,7 +224,7 @@ export default function BrowsePage() {
           onClick={handleShowUnstudiedOnly}
           className={filterStatus === 'unstudied' ? styles.buttonActive : styles.buttonSecondary}
         >
-          {locale === 'ko' ? '📖 미학습만' : '📖 Unstudied Only'}
+          {locale === 'ko' ? '미학습만' : 'Unstudied Only'}
         </button>
       </div>
 
@@ -343,7 +343,7 @@ export default function BrowsePage() {
                     className={styles.textSm}
                     title={locale === 'ko' ? '북마크됨' : 'Bookmarked'}
                   >
-                    ⭐
+                    <Star size={14} aria-hidden="true" fill="currentColor" />
                   </span>
                 )}
               </div>

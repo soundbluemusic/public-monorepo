@@ -1,3 +1,17 @@
+import {
+  Atom,
+  ExternalLink,
+  Globe,
+  HardDrive,
+  Home,
+  Package,
+  Palette,
+  Plug,
+  Sparkles,
+  Wind,
+  Zap,
+} from 'lucide-react';
+import type { ReactNode } from 'react';
 import { Link, useLocation } from 'react-router';
 import { type Language, useI18n } from '../../i18n';
 import styles from '../../styles/app.module.scss';
@@ -15,7 +29,7 @@ interface NavItem {
   href: string;
   label: string;
   labelKo: string;
-  icon: string;
+  icon: ReactNode;
 }
 
 interface QuickLink {
@@ -23,13 +37,23 @@ interface QuickLink {
   desc: string;
   descKo: string;
   href: string;
-  icon: string;
+  icon: ReactNode;
 }
 
 const navItems: readonly NavItem[] = [
-  { href: '/', label: 'Home', labelKo: '홈', icon: '🏠' },
-  { href: '/web-api', label: 'Web API', labelKo: 'Web API', icon: '🌐' },
-  { href: '/libraries', label: 'Libraries', labelKo: 'Libraries', icon: '📦' },
+  { href: '/', label: 'Home', labelKo: '홈', icon: <Home size={18} aria-hidden="true" /> },
+  {
+    href: '/web-api',
+    label: 'Web API',
+    labelKo: 'Web API',
+    icon: <Globe size={18} aria-hidden="true" />,
+  },
+  {
+    href: '/libraries',
+    label: 'Libraries',
+    labelKo: 'Libraries',
+    icon: <Package size={18} aria-hidden="true" />,
+  },
 ];
 
 const quickLinks = {
@@ -39,28 +63,28 @@ const quickLinks = {
       desc: 'HTTP requests',
       descKo: 'HTTP 요청',
       href: 'https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API',
-      icon: '🌐',
+      icon: <Globe size={16} aria-hidden="true" />,
     },
     {
       name: 'localStorage',
       desc: 'Persistent storage',
       descKo: '영구 저장소',
       href: 'https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage',
-      icon: '💾',
+      icon: <HardDrive size={16} aria-hidden="true" />,
     },
     {
       name: 'WebSocket',
       desc: 'Real-time',
       descKo: '실시간 통신',
       href: 'https://developer.mozilla.org/en-US/docs/Web/API/WebSocket',
-      icon: '🔌',
+      icon: <Plug size={16} aria-hidden="true" />,
     },
     {
       name: 'Canvas',
       desc: '2D graphics',
       descKo: '2D 그래픽',
       href: 'https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API',
-      icon: '🎨',
+      icon: <Palette size={16} aria-hidden="true" />,
     },
   ],
   libraries: [
@@ -69,28 +93,28 @@ const quickLinks = {
       desc: 'UI library',
       descKo: 'UI 라이브러리',
       href: 'https://github.com/facebook/react',
-      icon: '⚛️',
+      icon: <Atom size={16} aria-hidden="true" />,
     },
     {
       name: 'Vue',
       desc: 'Progressive',
       descKo: '프로그레시브',
       href: 'https://github.com/vuejs/core',
-      icon: '💚',
+      icon: <Sparkles size={16} aria-hidden="true" />,
     },
     {
       name: 'Vite',
       desc: 'Build tool',
       descKo: '빌드 도구',
       href: 'https://github.com/vitejs/vite',
-      icon: '⚡',
+      icon: <Zap size={16} aria-hidden="true" />,
     },
     {
       name: 'Tailwind',
       desc: 'Utility CSS',
       descKo: '유틸리티 CSS',
       href: 'https://github.com/tailwindlabs/tailwindcss',
-      icon: '🎐',
+      icon: <Wind size={16} aria-hidden="true" />,
     },
   ],
 };
@@ -145,13 +169,13 @@ export default function Sidebar({
         <div className={styles.sidebarHeader}>
           {(!isCollapsed || isMobile) && (
             <Link to={localePath('/')} onClick={onClose} className={styles.logo}>
-              <span className={styles.logoEmoji}>✨</span>
+              <Sparkles size={20} aria-hidden="true" className={styles.logoEmoji} />
               <span className={styles.logoText}>Permissive</span>
             </Link>
           )}
           {isCollapsed && !isMobile && (
             <Link to={localePath('/')} className={styles.logoCollapsed}>
-              <span className={styles.logoEmoji}>✨</span>
+              <Sparkles size={20} aria-hidden="true" className={styles.logoEmoji} />
             </Link>
           )}
 
@@ -313,20 +337,7 @@ function QuickLinksSection({
                 {locale === 'ko' ? item.descKo : item.desc}
               </div>
             </div>
-            <svg
-              aria-hidden="true"
-              className={styles.quickLinkExternal}
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1.5"
-                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-              />
-            </svg>
+            <ExternalLink size={14} aria-hidden="true" className={styles.quickLinkExternal} />
           </a>
         ))}
       </div>

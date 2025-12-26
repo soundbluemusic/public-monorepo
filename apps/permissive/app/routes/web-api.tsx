@@ -1,3 +1,4 @@
+import { BarChart2, CalendarPlus, Flame } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import type { MetaFunction } from 'react-router';
 import { useLoaderData, useSearchParams } from 'react-router';
@@ -159,7 +160,7 @@ export default function WebApiPage() {
           onClick={() => handleQuickFilter('trending')}
           className={`${styles.quickFilterButton} ${quickFilter === 'trending' ? styles.quickFilterButtonActive : ''}`}
         >
-          <span>🔥</span>
+          <Flame size={16} aria-hidden="true" />
           {locale === 'ko' ? '2023+ 트렌딩' : 'Trending 2023+'}
         </button>
         <button
@@ -167,7 +168,7 @@ export default function WebApiPage() {
           onClick={() => handleQuickFilter('highSupport')}
           className={`${styles.quickFilterButton} ${quickFilter === 'highSupport' ? styles.quickFilterButtonActive : ''}`}
         >
-          <span>📊</span>
+          <BarChart2 size={16} aria-hidden="true" />
           {locale === 'ko' ? '높은 지원 (95%+)' : 'High Support (95%+)'}
         </button>
         <button
@@ -175,7 +176,7 @@ export default function WebApiPage() {
           onClick={() => handleQuickFilter('new')}
           className={`${styles.quickFilterButton} ${quickFilter === 'new' ? styles.quickFilterButtonActive : ''}`}
         >
-          <span>📅</span>
+          <CalendarPlus size={16} aria-hidden="true" />
           {locale === 'ko' ? '새로운 (2020+)' : 'New 2020+'}
         </button>
         {quickFilter && (
@@ -226,11 +227,9 @@ export default function WebApiPage() {
               onChange={(e) => setSortBy(e.target.value as SortOption)}
               className={styles.filterSelect}
             >
-              <option value="support">
-                {locale === 'ko' ? '📊 지원률순' : '📊 Most Supported'}
-              </option>
-              <option value="newest">{locale === 'ko' ? '📅 최신순' : '📅 Newest First'}</option>
-              <option value="name">{locale === 'ko' ? '🔤 이름순' : '🔤 Name A-Z'}</option>
+              <option value="support">{locale === 'ko' ? '지원률순' : 'Most Supported'}</option>
+              <option value="newest">{locale === 'ko' ? '최신순' : 'Newest First'}</option>
+              <option value="name">{locale === 'ko' ? '이름순' : 'Name A-Z'}</option>
             </select>
           </div>
         </div>
@@ -282,7 +281,7 @@ export default function WebApiPage() {
                       <h3 className={styles.apiName}>{api.name}</h3>
                       {api.trending && (
                         <span className={`${styles.libraryBadge} ${styles.libraryBadgeTrending}`}>
-                          🔥
+                          <Flame size={14} aria-hidden="true" />
                         </span>
                       )}
                     </div>

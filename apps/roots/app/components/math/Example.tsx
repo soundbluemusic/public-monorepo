@@ -1,6 +1,7 @@
 import { DifficultyStars } from '@/components/ui/DifficultyBadge';
 import type { DifficultyLevel, Example as ExampleType } from '@/data/types';
 import { useI18n } from '@/i18n';
+import { PencilLine } from 'lucide-react';
 import { useState } from 'react';
 import styles from '../../styles/app.module.scss';
 /**
@@ -87,7 +88,7 @@ export function ExampleList({ examples, title }: { examples?: ExampleInput[]; ti
     <div className={styles.spaceY4}>
       {title && (
         <h3 className={styles.sectionTitle}>
-          <span>✏️</span>
+          <PencilLine size={20} aria-hidden="true" />
           {title}
         </h3>
       )}

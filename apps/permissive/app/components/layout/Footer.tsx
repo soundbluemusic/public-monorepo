@@ -1,3 +1,4 @@
+import { Sparkles } from 'lucide-react';
 import { Link } from 'react-router';
 import { useI18n } from '../../i18n';
 import styles from '../../styles/app.module.scss';
@@ -17,7 +18,7 @@ export default function Footer() {
 
         <div className={styles.footerContent}>
           <div className={styles.footerBrand}>
-            <span>✨</span>
+            <Sparkles size={16} aria-hidden="true" />
             <span>{t('ui.permissiveBy')}</span>
             <a
               href="https://soundbluemusic.com"

@@ -1,4 +1,20 @@
-import { useMemo, useState } from 'react';
+import {
+  ChevronRight,
+  Compass,
+  Flame,
+  Gamepad2,
+  Globe,
+  MessageSquare,
+  Package,
+  Palette,
+  Radio,
+  Rocket,
+  Shield,
+  Sparkles,
+  TestTube,
+  Zap,
+} from 'lucide-react';
+import { type ReactNode, useMemo, useState } from 'react';
 import type { MetaFunction } from 'react-router';
 import { Link, useNavigate } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
@@ -53,20 +69,24 @@ const searchItems = [
   { name: 'Clipboard API', type: 'api' as const },
 ];
 
-const trendingLibraries = [
-  { name: 'Bun', category: 'Runtime', emoji: '⚡' },
-  { name: 'Astro', category: 'Meta-framework', emoji: '🚀' },
-  { name: 'shadcn/ui', category: 'UI', emoji: '🎨' },
-  { name: 'TanStack Query', category: 'Data Fetching', emoji: '📡' },
-  { name: 'Vitest', category: 'Testing', emoji: '🧪' },
-  { name: 'Zod', category: 'Type Safety', emoji: '🛡️' },
+const trendingLibraries: { name: string; category: string; icon: ReactNode }[] = [
+  { name: 'Bun', category: 'Runtime', icon: <Zap size={18} aria-hidden="true" /> },
+  { name: 'Astro', category: 'Meta-framework', icon: <Rocket size={18} aria-hidden="true" /> },
+  { name: 'shadcn/ui', category: 'UI', icon: <Palette size={18} aria-hidden="true" /> },
+  {
+    name: 'TanStack Query',
+    category: 'Data Fetching',
+    icon: <Radio size={18} aria-hidden="true" />,
+  },
+  { name: 'Vitest', category: 'Testing', icon: <TestTube size={18} aria-hidden="true" /> },
+  { name: 'Zod', category: 'Type Safety', icon: <Shield size={18} aria-hidden="true" /> },
 ];
 
-const trendingApis = [
-  { name: 'View Transitions API', emoji: '✨' },
-  { name: 'WebGPU', emoji: '🎮' },
-  { name: 'Navigation API', emoji: '🧭' },
-  { name: 'Popover API', emoji: '💬' },
+const trendingApis: { name: string; icon: ReactNode }[] = [
+  { name: 'View Transitions API', icon: <Sparkles size={18} aria-hidden="true" /> },
+  { name: 'WebGPU', icon: <Gamepad2 size={18} aria-hidden="true" /> },
+  { name: 'Navigation API', icon: <Compass size={18} aria-hidden="true" /> },
+  { name: 'Popover API', icon: <MessageSquare size={18} aria-hidden="true" /> },
 ];
 
 export default function Home() {
@@ -101,7 +121,7 @@ export default function Home() {
       {/* Hero Section - Enhanced */}
       <div className={styles.heroSection}>
         <div className={styles.heroBadge}>
-          <span className={styles.heroBadgeEmoji}>🔥</span>
+          <Flame size={16} aria-hidden="true" className={styles.heroBadgeEmoji} />
           <span className={styles.heroBadgeText}>
             {locale === 'ko' ? '2025년 최신 기술 업데이트' : '2025 Latest Tech Updated'}
           </span>
@@ -190,7 +210,11 @@ export default function Home() {
                     className={styles.searchResultItem}
                   >
                     <span className={styles.searchResultEmoji}>
-                      {item.type === 'library' ? '📦' : '🌐'}
+                      {item.type === 'library' ? (
+                        <Package size={16} aria-hidden="true" />
+                      ) : (
+                        <Globe size={16} aria-hidden="true" />
+                      )}
                     </span>
                     <span className={styles.searchResultName}>{item.name}</span>
                     <span className={styles.searchResultType}>
@@ -210,7 +234,7 @@ export default function Home() {
       {/* Trending Section */}
       <div className={styles.sectionLarge}>
         <h2 className={styles.sectionTitle}>
-          <span style={{ marginRight: '0.5rem' }}>🔥</span>
+          <Flame size={20} aria-hidden="true" style={{ marginRight: '0.5rem' }} />
           {locale === 'ko' ? '2025년 트렌딩' : 'Trending 2025'}
         </h2>
 
@@ -225,25 +249,12 @@ export default function Home() {
                   to={`${localePath('/libraries')}?trending=true`}
                   className={styles.trendingItem}
                 >
-                  <span className={styles.trendingEmoji}>{lib.emoji}</span>
+                  <span className={styles.trendingEmoji}>{lib.icon}</span>
                   <div className={styles.trendingContent}>
                     <div className={styles.trendingName}>{lib.name}</div>
                     <div className={styles.trendingCategory}>{lib.category}</div>
                   </div>
-                  <svg
-                    aria-hidden="true"
-                    className={styles.trendingArrow}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
+                  <ChevronRight size={16} aria-hidden="true" className={styles.trendingArrow} />
                 </Link>
               ))}
             </div>
@@ -259,24 +270,11 @@ export default function Home() {
                   to={`${localePath('/web-api')}?trending=true`}
                   className={styles.trendingItem}
                 >
-                  <span className={styles.trendingEmoji}>{api.emoji}</span>
+                  <span className={styles.trendingEmoji}>{api.icon}</span>
                   <div className={styles.trendingContent}>
                     <div className={styles.trendingName}>{api.name}</div>
                   </div>
-                  <svg
-                    aria-hidden="true"
-                    className={styles.trendingArrow}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
+                  <ChevronRight size={16} aria-hidden="true" className={styles.trendingArrow} />
                 </Link>
               ))}
             </div>
@@ -288,7 +286,9 @@ export default function Home() {
       <div className={styles.cardsGrid}>
         {/* Web API Card */}
         <Link to={localePath('/web-api')} className={styles.card}>
-          <div className={styles.cardEmoji}>🌐</div>
+          <div className={styles.cardEmoji}>
+            <Globe size={32} aria-hidden="true" />
+          </div>
           <h2 className={styles.cardTitle}>Web API</h2>
           <p className={styles.cardDescription}>
             {locale === 'ko'
@@ -299,27 +299,16 @@ export default function Home() {
             <div className={styles.cardNumber}>58</div>
             <div className={styles.cardLink}>
               {locale === 'ko' ? '둘러보기' : 'Browse'}
-              <svg
-                className={styles.cardLinkArrow}
-                fill="none"
-                stroke="currentColor"
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+              <ChevronRight size={16} aria-hidden="true" className={styles.cardLinkArrow} />
             </div>
           </div>
         </Link>
 
         {/* Libraries Card */}
         <Link to={localePath('/libraries')} className={styles.card}>
-          <div className={styles.cardEmoji}>📦</div>
+          <div className={styles.cardEmoji}>
+            <Package size={32} aria-hidden="true" />
+          </div>
           <h2 className={styles.cardTitle}>Libraries</h2>
           <p className={styles.cardDescription}>
             {locale === 'ko'
@@ -330,20 +319,7 @@ export default function Home() {
             <div className={styles.cardNumber}>100+</div>
             <div className={styles.cardLink}>
               {locale === 'ko' ? '둘러보기' : 'Browse'}
-              <svg
-                className={styles.cardLinkArrow}
-                fill="none"
-                stroke="currentColor"
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+              <ChevronRight size={16} aria-hidden="true" className={styles.cardLinkArrow} />
             </div>
           </div>
         </Link>

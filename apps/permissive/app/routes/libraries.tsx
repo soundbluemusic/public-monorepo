@@ -1,3 +1,4 @@
+import { CalendarPlus, Flame, Star } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import type { MetaFunction } from 'react-router';
 import { useLoaderData, useSearchParams } from 'react-router';
@@ -1249,7 +1250,7 @@ export default function LibrariesPage() {
           onClick={() => handleQuickFilter('trending')}
           className={`${styles.quickFilterButton} ${quickFilter === 'trending' ? styles.quickFilterButtonActive : ''}`}
         >
-          <span>🔥</span>
+          <Flame size={16} aria-hidden="true" />
           {locale === 'ko' ? '2025 트렌딩' : 'Trending 2025'}
         </button>
         <button
@@ -1257,7 +1258,7 @@ export default function LibrariesPage() {
           onClick={() => handleQuickFilter('usedHere')}
           className={`${styles.quickFilterButton} ${quickFilter === 'usedHere' ? styles.quickFilterButtonActive : ''}`}
         >
-          <span>⭐</span>
+          <Star size={16} aria-hidden="true" />
           {locale === 'ko' ? '사용 중' : 'Used Here'}
         </button>
         <button
@@ -1265,7 +1266,7 @@ export default function LibrariesPage() {
           onClick={() => handleQuickFilter('new')}
           className={`${styles.quickFilterButton} ${quickFilter === 'new' ? styles.quickFilterButtonActive : ''}`}
         >
-          <span>📅</span>
+          <CalendarPlus size={16} aria-hidden="true" />
           {locale === 'ko' ? '새로운 (2023+)' : 'New 2023+'}
         </button>
         {(quickFilter || selectedTag) && (
@@ -1338,9 +1339,9 @@ export default function LibrariesPage() {
               onChange={(e) => setSortBy(e.target.value as SortOption)}
               className={styles.filterSelect}
             >
-              <option value="stars">{locale === 'ko' ? '⭐ 인기순' : '⭐ Most Popular'}</option>
-              <option value="newest">{locale === 'ko' ? '📅 최신순' : '📅 Newest First'}</option>
-              <option value="name">{locale === 'ko' ? '🔤 이름순' : '🔤 Name A-Z'}</option>
+              <option value="stars">{locale === 'ko' ? '인기순' : 'Most Popular'}</option>
+              <option value="newest">{locale === 'ko' ? '최신순' : 'Newest First'}</option>
+              <option value="name">{locale === 'ko' ? '이름순' : 'Name A-Z'}</option>
             </select>
           </div>
         </div>
@@ -1386,7 +1387,8 @@ export default function LibrariesPage() {
                       <h3 className={styles.libraryName}>{lib.name}</h3>
                       {lib.trending && (
                         <span className={`${styles.libraryBadge} ${styles.libraryBadgeTrending}`}>
-                          🔥 {locale === 'ko' ? '2025 트렌드' : '2025 Trending'}
+                          <Flame size={14} aria-hidden="true" />{' '}
+                          {locale === 'ko' ? '2025 트렌드' : '2025 Trending'}
                         </span>
                       )}
                       {lib.usedHere && (

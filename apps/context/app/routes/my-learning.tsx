@@ -4,7 +4,7 @@ import { meaningEntries } from '@/data/entries';
 import { useI18n } from '@/i18n';
 import { favorites, studyRecords } from '@/lib/db';
 import styles from '@/styles/app.module.scss';
-import { BookmarkCheck, Calendar, TrendingUp, Trophy } from 'lucide-react';
+import { BookmarkCheck, Calendar, FolderOpen, TrendingUp, Trophy } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import type { MetaFunction } from 'react-router';
 import { Link } from 'react-router';
@@ -67,7 +67,8 @@ export default function MyLearningPage() {
       {/* Header */}
       <div className={styles.sectionLarge}>
         <h1 className={styles.pageTitle}>
-          {locale === 'ko' ? '📊 내 학습 현황' : '📊 My Learning Progress'}
+          <TrendingUp size={24} aria-hidden="true" style={{ marginRight: '0.5rem' }} />
+          {locale === 'ko' ? '내 학습 현황' : 'My Learning Progress'}
         </h1>
         <p className={styles.textSecondary}>
           {locale === 'ko'
@@ -128,7 +129,8 @@ export default function MyLearningPage() {
       {/* Category Progress */}
       <div className={styles.sectionLarge}>
         <h2 className={`${styles.sectionTitle} ${styles.mb4}`}>
-          {locale === 'ko' ? '📚 카테고리별 진행도' : '📚 Progress by Category'}
+          <FolderOpen size={20} aria-hidden="true" style={{ marginRight: '0.5rem' }} />
+          {locale === 'ko' ? '카테고리별 진행도' : 'Progress by Category'}
         </h2>
         <div className={styles.spaceY3}>
           {categories.map((category) => {
@@ -165,7 +167,7 @@ export default function MyLearningPage() {
       {favoriteEntries.length > 0 && (
         <div className={styles.sectionLarge}>
           <h2 className={`${styles.sectionTitle} ${styles.mb4}`}>
-            {locale === 'ko' ? '⭐ 북마크한 단어' : '⭐ Bookmarked Words'}
+            {locale === 'ko' ? '북마크한 단어' : 'Bookmarked Words'}
           </h2>
           <div className={styles.spaceY1}>
             {favoriteEntries.slice(0, 10).map((entry) => {

@@ -1,4 +1,5 @@
 import type { Formula as FormulaType } from '@/data/types';
+import { Calculator } from 'lucide-react';
 import styles from '../../styles/app.module.scss';
 /**
  * @fileoverview 수학 공식 카드 컴포넌트
@@ -64,7 +65,7 @@ export function FormulaList({ formulas, title }: { formulas: FormulaInput[]; tit
     <div className={styles.spaceY4}>
       {title && (
         <h3 className={styles.sectionTitle}>
-          <span>📐</span>
+          <Calculator size={20} aria-hidden="true" />
           {title}
         </h3>
       )}

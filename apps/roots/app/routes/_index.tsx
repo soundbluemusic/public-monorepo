@@ -43,7 +43,7 @@ const FEATURED_CONCEPTS: ReadonlyArray<{
 }> = [
   {
     id: 'pythagorean-theorem',
-    icon: '📐',
+    icon: '△',
     nameKo: '피타고라스 정리',
     nameEn: 'Pythagorean Theorem',
     descKo: '직각삼각형의 세 변의 관계',
@@ -79,7 +79,7 @@ const FEATURED_CONCEPTS: ReadonlyArray<{
   },
   {
     id: 'prime-numbers',
-    icon: '🔢',
+    icon: 'ℕ',
     nameKo: '소수',
     nameEn: 'Prime Numbers',
     descKo: '1과 자기 자신만으로 나누어지는 수',
@@ -106,7 +106,7 @@ const FEATURED_CONCEPTS: ReadonlyArray<{
   },
   {
     id: 'probability-basics',
-    icon: '🎲',
+    icon: '⁝',
     nameKo: '확률',
     nameEn: 'Probability',
     descKo: '사건이 일어날 가능성',

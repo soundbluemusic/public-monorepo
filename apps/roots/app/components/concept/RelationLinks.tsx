@@ -4,6 +4,7 @@
  */
 import type { ConceptRelations } from '@/data/types';
 import { useI18n } from '@/i18n';
+import { Link2 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router';
 import styles from '../../styles/app.module.scss';
@@ -26,7 +27,7 @@ const typeConfig: Record<RelationSectionProps['type'], { prefix: string; prefixC
   prerequisite: { prefix: '→', prefixClass: styles.relationPrefixPrerequisite },
   next: { prefix: '←', prefixClass: styles.relationPrefixNext },
   related: { prefix: '↔', prefixClass: styles.relationPrefixRelated },
-  application: { prefix: '⚡', prefixClass: styles.relationPrefixApplication },
+  application: { prefix: '◆', prefixClass: styles.relationPrefixApplication },
 };
 
 function RelationSection({ title, icon, ids, type, names }: RelationSectionProps) {
@@ -86,7 +87,7 @@ export function RelationLinks({ relations }: RelationLinksProps) {
   return (
     <div className={styles.historyCard}>
       <h3 className={styles.sectionTitle}>
-        <span>🔗</span>
+        <Link2 size={20} aria-hidden="true" />
         {t('relatedDocuments')}
       </h3>
 
@@ -116,7 +117,7 @@ export function RelationLinks({ relations }: RelationLinksProps) {
 
       <RelationSection
         title={t('appliedIn')}
-        icon="⚡"
+        icon="◆"
         ids={relations.applications ?? []}
         type="application"
         names={names}

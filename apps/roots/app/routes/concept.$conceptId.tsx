@@ -11,6 +11,7 @@ import { getFieldById } from '@/data/fields';
 import { getSubfieldById } from '@/data/subfields';
 import { useI18n } from '@/i18n';
 import { favorites } from '@/lib/db';
+import { BookOpen, Heart, History, Zap } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router';
 import styles from '../styles/app.module.scss';
@@ -132,7 +133,12 @@ export default function ConceptPage() {
                     : 'Add to favorites'
               }
             >
-              <span className={styles.favoriteBtnIcon}>{isFavorite ? '❤️' : '🤍'}</span>
+              <Heart
+                size={20}
+                aria-hidden="true"
+                className={styles.favoriteBtnIcon}
+                fill={isFavorite ? 'currentColor' : 'none'}
+              />
             </button>
             <DifficultyBadge level={concept.difficulty} size="md" />
           </div>
@@ -148,7 +154,7 @@ export default function ConceptPage() {
         {/* 정의 Definition */}
         <section>
           <h2 className={styles.sectionTitle}>
-            <span>📖</span>
+            <BookOpen size={20} aria-hidden="true" />
             {t('definition')}
           </h2>
           <p className={styles.conceptDefinition}>{content.definition}</p>
@@ -172,7 +178,7 @@ export default function ConceptPage() {
         {content.history && (
           <section>
             <h2 className={styles.sectionTitle}>
-              <span>📜</span>
+              <History size={20} aria-hidden="true" />
               {t('history')}
             </h2>
             <div className={styles.historyCard}>
@@ -194,7 +200,7 @@ export default function ConceptPage() {
         {(content.applications?.length ?? 0) > 0 && (
           <section>
             <h2 className={styles.sectionTitle}>
-              <span>⚡</span>
+              <Zap size={20} aria-hidden="true" />
               {t('applications')}
             </h2>
             <div className={styles.applicationsGrid}>

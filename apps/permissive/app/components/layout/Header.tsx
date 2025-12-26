@@ -6,7 +6,7 @@ import {
   type SearchResult,
   useSearchWorker,
 } from '@soundblue/shared-react';
-import { Menu, X } from 'lucide-react';
+import { Menu, Sparkles, X } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { useI18n } from '../../i18n';
@@ -103,7 +103,7 @@ export default function Header({ onMenuClick, isSidebarOpen }: HeaderProps) {
 
         {/* Logo */}
         <Link to="/" className={styles.logo}>
-          <span className={styles.logoEmoji}>✨</span>
+          <Sparkles size={20} aria-hidden="true" className={styles.logoEmoji} />
           <span className={styles.logoText}>Permissive</span>
         </Link>
       </div>

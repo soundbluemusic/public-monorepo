@@ -1,6 +1,8 @@
 import { Layout } from '@/components/layout/Layout';
 import { fields } from '@/data/fields';
 import { useI18n } from '@/i18n';
+import { BookOpen, FileText, Heart, Home, Info, Pi, Ruler, Search } from 'lucide-react';
+import type { ReactNode } from 'react';
 import type { MetaFunction } from 'react-router';
 import { Link } from 'react-router';
 import styles from '../styles/app.module.scss';
@@ -15,13 +17,38 @@ export const meta: MetaFunction = ({ location }) => {
   return [{ title }, { name: 'description', content: description }];
 };
 
-const pages = [
-  { path: '/', labelEn: 'Home', labelKo: '홈', icon: '🏠' },
-  { path: '/browse', labelEn: 'Browse', labelKo: '찾아보기', icon: '📚' },
-  { path: '/search', labelEn: 'Search', labelKo: '검색', icon: '🔍' },
-  { path: '/favorites', labelEn: 'Favorites', labelKo: '즐겨찾기', icon: '❤️' },
-  { path: '/constants', labelEn: 'Constants', labelKo: '수학 상수', icon: 'π' },
-  { path: '/about', labelEn: 'About', labelKo: '소개', icon: 'ℹ️' },
+const pages: { path: string; labelEn: string; labelKo: string; icon: ReactNode }[] = [
+  { path: '/', labelEn: 'Home', labelKo: '홈', icon: <Home size={18} aria-hidden="true" /> },
+  {
+    path: '/browse',
+    labelEn: 'Browse',
+    labelKo: '찾아보기',
+    icon: <BookOpen size={18} aria-hidden="true" />,
+  },
+  {
+    path: '/search',
+    labelEn: 'Search',
+    labelKo: '검색',
+    icon: <Search size={18} aria-hidden="true" />,
+  },
+  {
+    path: '/favorites',
+    labelEn: 'Favorites',
+    labelKo: '즐겨찾기',
+    icon: <Heart size={18} aria-hidden="true" />,
+  },
+  {
+    path: '/constants',
+    labelEn: 'Constants',
+    labelKo: '수학 상수',
+    icon: <Pi size={18} aria-hidden="true" />,
+  },
+  {
+    path: '/about',
+    labelEn: 'About',
+    labelKo: '소개',
+    icon: <Info size={18} aria-hidden="true" />,
+  },
 ];
 
 export default function SitemapPage() {
@@ -41,7 +68,7 @@ export default function SitemapPage() {
         {/* Pages Section */}
         <section className={styles.sitemapSection}>
           <h2 className={styles.sitemapSectionTitle}>
-            <span>📄</span>
+            <FileText size={20} aria-hidden="true" />
             {isKorean ? '모든 페이지' : 'All Pages'}
           </h2>
           <div className={styles.grid2}>
@@ -59,7 +86,7 @@ export default function SitemapPage() {
         {/* Math Fields Section */}
         <section className={styles.sitemapSection}>
           <h2 className={styles.sitemapSectionTitle}>
-            <span>📐</span>
+            <Ruler size={20} aria-hidden="true" />
             {isKorean ? '수학 분야' : 'Math Fields'}
           </h2>
           <div className={styles.grid2}>
@@ -81,7 +108,8 @@ export default function SitemapPage() {
         {/* XML Sitemap Section */}
         <section className={styles.sitemapXmlSection}>
           <h2 className={styles.sitemapXmlTitle}>
-            🔍 {isKorean ? '검색엔진용 사이트맵' : 'Search Engine Sitemap'}
+            <Search size={20} aria-hidden="true" style={{ marginRight: '0.5rem' }} />
+            {isKorean ? '검색엔진용 사이트맵' : 'Search Engine Sitemap'}
           </h2>
           <p className={styles.textSm}>
             {isKorean

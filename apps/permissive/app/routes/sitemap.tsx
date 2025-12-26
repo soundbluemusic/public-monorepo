@@ -1,3 +1,5 @@
+import { ExternalLink, FileText, Globe, Home, Package, Search } from 'lucide-react';
+import type { ReactNode } from 'react';
 import { Link } from 'react-router';
 import type { MetaFunction } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
@@ -14,10 +16,20 @@ export const meta: MetaFunction = ({ location }) => {
   return [{ title }, { name: 'description', content: description }];
 };
 
-const pages = [
-  { path: '/', labelEn: 'Home', labelKo: '홈', icon: '🏠' },
-  { path: '/web-api', labelEn: 'Web API', labelKo: 'Web API', icon: '🌐' },
-  { path: '/libraries', labelEn: 'Libraries', labelKo: 'Libraries', icon: '📦' },
+const pages: { path: string; labelEn: string; labelKo: string; icon: ReactNode }[] = [
+  { path: '/', labelEn: 'Home', labelKo: '홈', icon: <Home size={18} aria-hidden="true" /> },
+  {
+    path: '/web-api',
+    labelEn: 'Web API',
+    labelKo: 'Web API',
+    icon: <Globe size={18} aria-hidden="true" />,
+  },
+  {
+    path: '/libraries',
+    labelEn: 'Libraries',
+    labelKo: 'Libraries',
+    icon: <Package size={18} aria-hidden="true" />,
+  },
 ];
 
 export default function SitemapPage() {
@@ -37,7 +49,7 @@ export default function SitemapPage() {
         {/* Pages Section */}
         <section className={styles.sitemapSection}>
           <h2 className={styles.sitemapHeading}>
-            <span>📄</span>
+            <FileText size={20} aria-hidden="true" />
             {isKorean ? '모든 페이지' : 'All Pages'}
           </h2>
           <ul className={styles.sitemapList}>
@@ -57,7 +69,7 @@ export default function SitemapPage() {
         {/* XML Sitemap Section */}
         <section className={styles.sitemapXmlSection}>
           <h2 className={styles.sitemapXmlHeading}>
-            <span>🔍</span>
+            <Search size={20} aria-hidden="true" />
             {isKorean ? '검색엔진용 사이트맵' : 'Search Engine Sitemap'}
           </h2>
           <p className={styles.sitemapXmlDescription}>
@@ -72,20 +84,7 @@ export default function SitemapPage() {
               rel="noopener noreferrer"
               className={styles.sitemapXmlLink}
             >
-              <svg
-                className={styles.sitemapXmlIcon}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                />
-              </svg>
+              <ExternalLink size={16} aria-hidden="true" className={styles.sitemapXmlIcon} />
               sitemap.xml
             </a>
           </div>

@@ -6,6 +6,7 @@ import type { MeaningEntry } from '@/data/types';
 import { type Language, useI18n } from '@/i18n';
 import { studyRecords } from '@/lib/db';
 import styles from '@/styles/app.module.scss';
+import { FolderOpen, Sparkles, TrendingUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import type { MetaFunction } from 'react-router';
 import { Link, useLoaderData } from 'react-router';
@@ -109,7 +110,8 @@ export default function HomePage() {
         <div className={`${styles.card} ${styles.sectionLarge}`}>
           <div className={`${styles.flexBetween} ${styles.mb2}`}>
             <h2 className={styles.sectionTitleSmall}>
-              {locale === 'ko' ? '📈 내 학습 현황' : '📈 My Progress'}
+              <TrendingUp size={18} aria-hidden="true" style={{ marginRight: '0.5rem' }} />
+              {locale === 'ko' ? '내 학습 현황' : 'My Progress'}
             </h2>
             <span className={`${styles.textSm} ${styles.textSecondary}`}>
               {overallProgress.studied}/{overallProgress.total} {locale === 'ko' ? '단어' : 'words'}
@@ -128,7 +130,8 @@ export default function HomePage() {
       {dailyWord && (
         <div className={styles.sectionLarge}>
           <h2 className={styles.sectionTitle}>
-            {locale === 'ko' ? '⭐ 오늘의 단어' : '⭐ Word of the Day'}
+            <Sparkles size={20} aria-hidden="true" style={{ marginRight: '0.5rem' }} />
+            {locale === 'ko' ? '오늘의 단어' : 'Word of the Day'}
           </h2>
           <Link to={localePath(`/entry/${dailyWord.id}`)} className={styles.cardAccent}>
             <div className={styles.textCenter}>
@@ -150,7 +153,8 @@ export default function HomePage() {
       <div className={styles.sectionLarge}>
         <div className={`${styles.flexBetween} ${styles.mb4}`}>
           <h2 className={styles.sectionTitle}>
-            {locale === 'ko' ? '📚 카테고리별 학습' : '📚 Learn by Category'}
+            <FolderOpen size={20} aria-hidden="true" style={{ marginRight: '0.5rem' }} />
+            {locale === 'ko' ? '카테고리별 학습' : 'Learn by Category'}
           </h2>
           <Link to={localePath('/browse')} className={`${styles.textSm} ${styles.textAccent}`}>
             {t('viewAll')} →
