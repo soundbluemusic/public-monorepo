@@ -41,7 +41,7 @@
 |:---------------:|:------------------|
 | **Framework** | React + React Router v7 |
 | **Language** | TypeScript |
-| **Styling** | Tailwind CSS v4 |
+| **Styling** | SCSS Modules (typed-scss-modules) |
 | **Package Manager** | pnpm (workspaces) |
 | **Linting** | Biome |
 | **Build** | 100% Static (SSG) + Build-time Data Prerendering |
@@ -55,11 +55,11 @@
 
 React Router v7의 `prerender()` + `loader()` 패턴으로 빌드 시 데이터를 미리 추출합니다:
 
-| App | Dynamic Routes (동적 라우트) | `.data` Files | Data Source |
-|:---:|:----------------------------|:-------------:|:------------|
-| **Context** | 344 entries + 4 categories | 348개 | JSON 배열 |
-| **Roots** | 52 concepts + 18 fields | 70개 | TypeScript 모듈 |
-| **Permissive** | 7 static routes | 7개 | 배열 리터럴 |
+| App | Dynamic Routes (동적 라우트) | SSG Pages | Data Source |
+|:---:|:----------------------------|:---------:|:------------|
+| **Context** | 701 entries + 21 categories | 1444개 | JSON 배열 |
+| **Roots** | 414 concepts + 19 fields | 866개 | TypeScript 모듈 |
+| **Permissive** | 4 static routes | 8개 | 배열 리터럴 |
 
 ```typescript
 // react-router.config.ts 패턴
@@ -92,9 +92,9 @@ export async function loader({ params }) {
 soundblue-monorepo/
 │
 ├── apps/
-│   ├── context/       →  Korean dictionary (348 SSG routes)
-│   ├── permissive/    →  Web dev resources (7 SSG routes)
-│   └── roots/         →  Math documentation (70 SSG routes)
+│   ├── context/       →  Korean dictionary (1444 SSG routes)
+│   ├── permissive/    →  Web dev resources (8 SSG routes)
+│   └── roots/         →  Math documentation (866 SSG routes)
 │
 ├── packages/
 │   ├── shared/        →  Utilities: db, i18n, search, validation

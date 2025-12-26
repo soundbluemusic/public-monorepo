@@ -1,0 +1,7 @@
+# Sitemap files - serve directly (must come before SPA fallback)
+/sitemap.xml       /sitemap.xml       200
+/sitemap-*.xml     /sitemap-*.xml     200
+/sitemap.xsl       /sitemap.xsl       200
+
+# SPA fallback - serve index.html for client-side routing
+/*                 /index.html        200

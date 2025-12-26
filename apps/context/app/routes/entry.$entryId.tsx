@@ -99,7 +99,7 @@ export default function EntryPage() {
                 <Check size={14} style={{ color: 'white' }} />
               </div>
               <span className={`${styles.textSm} ${styles.textPrimary}`}>
-                {locale === 'ko' ? '✅ 학습 완료' : '✅ Studied'}
+                {locale === 'ko' ? '학습 완료' : 'Studied'}
               </span>
             </div>
           ) : (

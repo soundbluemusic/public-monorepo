@@ -1,11 +1,15 @@
+import { getLocaleFromPath } from '@soundblue/shared';
 import { OfflineIndicator } from '@soundblue/shared-react';
-import { Links, Meta, Outlet, Scripts, ScrollRestoration } from 'react-router';
+import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLocation } from 'react-router';
 import { I18nProvider } from './i18n';
 import './styles/global.css';
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const location = useLocation();
+  const lang = getLocaleFromPath(location.pathname);
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
