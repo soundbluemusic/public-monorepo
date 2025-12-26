@@ -39,3 +39,6 @@ export {
   type SchemaOrgWebSite,
   type SchemaOrgArticle,
 } from './seo';
+
+// Tailwind CSS utility
+export { cn } from './cn';

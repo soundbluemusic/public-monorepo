@@ -2,6 +2,22 @@
 
 프로젝트 개요, 기술 스택, 구조, 명령어: @README.md
 
+## Official Documentation References (공식 문서 참조)
+
+> 이 프로젝트에서 사용하는 핵심 기술의 공식 문서. 항상 최신 버전 참고.
+
+| Technology | Official Docs | GitHub |
+|------------|--------------|--------|
+| **Tailwind CSS v4** | [React Router Guide](https://tailwindcss.com/docs/installation/framework-guides/react-router) | [tailwindlabs/tailwindcss](https://github.com/tailwindlabs/tailwindcss) |
+| **React Router v7** | [Official Docs](https://reactrouter.com/start/framework/deploying) | [remix-run/react-router](https://github.com/remix-run/react-router) |
+| **TypeScript** | [Official Docs](https://www.typescriptlang.org/docs/) | [microsoft/TypeScript](https://github.com/microsoft/TypeScript) |
+
+### 참조 우선순위
+1. **공식 문서 > Stack Overflow > 블로그** - 항상 공식 문서 먼저
+2. **GitHub Issues/Discussions** - 최신 이슈 및 해결책 확인
+3. **Breaking changes** - 반드시 공식 마이그레이션 가이드 참조
+4. **버전 호환성** - package.json 버전과 문서 버전 일치 확인
+
 ## 절대 규칙 (CRITICAL RULES)
 
 > **이 규칙들은 절대 위반하지 말 것. CMS, 외부 DB, 서버 로직 제안 금지.**

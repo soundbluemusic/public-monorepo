@@ -1,5 +1,6 @@
 import { paraglide } from '@inlang/paraglide-vite';
 import { reactRouter } from '@react-router/dev/vite';
+import tailwindcss from '@tailwindcss/vite';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
@@ -17,15 +18,8 @@ export default defineConfig({
       '~': '/app',
     },
   },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        api: 'modern-compiler',
-        loadPaths: ['../../node_modules', '../../packages'],
-      },
-    },
-  },
   plugins: [
+    tailwindcss(),
     paraglide({
       project: './project.inlang',
       outdir: './app/paraglide',
@@ -42,11 +36,22 @@ export default defineConfig({
         clientsClaim: true,
         runtimeCaching: [
           {
-            urlPattern: /^https:\/\/cdn\.jsdelivr\.net\/.*/i,
+            urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
             handler: 'CacheFirst',
             options: {
-              cacheName: 'pretendard-font',
+              cacheName: 'google-fonts-stylesheets',
               expiration: {
+                maxAgeSeconds: 60 * 60 * 24 * 365,
+              },
+            },
+          },
+          {
+            urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'google-fonts-webfonts',
+              expiration: {
+                maxEntries: 30,
                 maxAgeSeconds: 60 * 60 * 24 * 365,
               },
             },

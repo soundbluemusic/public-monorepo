@@ -77,4 +77,6 @@ export {
   getLocaleFromPath,
   stripLocaleFromPath,
   buildLocalePath,
+  // Tailwind CSS utility
+  cn,
 } from './utils';
