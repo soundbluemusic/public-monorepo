@@ -2,6 +2,7 @@ import { Layout } from '@/components/layout/Layout';
 import { useI18n } from '@/i18n';
 import { Link } from 'react-router';
 import type { MetaFunction } from 'react-router';
+import styles from '../styles/pages.module.scss';
 
 export const meta: MetaFunction = ({ location }) => {
   const locale = location.pathname.startsWith('/ko') ? 'ko' : 'en';
@@ -15,21 +16,11 @@ export default function NotFound() {
 
   return (
     <Layout>
-      <div className="text-center py-12">
-        <h1 className="text-4xl font-bold mb-4" style={{ color: 'var(--text-primary)' }}>
-          404
-        </h1>
-        <p className="text-xl mb-8" style={{ color: 'var(--text-secondary)' }}>
-          {t('pageNotFoundMsg')}
-        </p>
-        <Link
-          to={localePath('/')}
-          className="inline-block px-6 py-3 rounded-lg font-medium transition-colors"
-          style={{
-            backgroundColor: 'var(--accent-primary)',
-            color: 'white',
-          }}
-        >
+      <div className={styles.notFoundContainer}>
+        <div className={styles.notFoundEmoji}>🔍</div>
+        <h1 className={styles.notFoundTitle}>404</h1>
+        <p className={styles.notFoundDescription}>{t('pageNotFoundMsg')}</p>
+        <Link to={localePath('/')} className={styles.notFoundButton}>
           {t('goBackHome')}
         </Link>
       </div>

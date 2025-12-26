@@ -1,4 +1,5 @@
 import type { Formula as FormulaType } from '@/data/types';
+import styles from '../../styles/pages.module.scss';
 /**
  * @fileoverview 수학 공식 카드 컴포넌트
  */
@@ -18,32 +19,32 @@ interface FormulaCardProps {
  */
 export function FormulaCard({ formula }: FormulaCardProps) {
   return (
-    <div className="formula-block">
+    <div className={styles.formulaCard}>
       {/* LaTeX 수식 */}
-      <div className="mb-3">
+      <div style={{ marginBottom: '0.75rem' }}>
         <LaTeX math={formula.latex} display />
       </div>
 
       {/* 설명 */}
-      <p className="text-sm mb-2" style={{ color: 'var(--text-secondary)' }}>
-        {formula.description}
-      </p>
+      <p className={styles.formulaCardDescription}>{formula.description}</p>
 
       {/* 변수 설명 */}
       {formula.variables && formula.variables.length > 0 && (
-        <ul className="text-sm space-y-1" style={{ color: 'var(--text-tertiary)' }}>
+        <ul className={styles.spaceY2} style={{ marginTop: '0.5rem' }}>
           {formula.variables.map((variable) => (
-            <li key={variable.symbol} className="flex items-center gap-2">
+            <li key={variable.symbol} className={styles.flexCenter}>
               <span
-                className="font-mono px-1.5 py-0.5 rounded"
                 style={{
+                  fontFamily: 'monospace',
+                  padding: '0.125rem 0.375rem',
+                  borderRadius: '0.25rem',
                   backgroundColor: 'var(--bg-tertiary)',
                   color: 'var(--math-formula)',
                 }}
               >
                 <LaTeX math={variable.symbol} />
               </span>
-              <span>{variable.meaning}</span>
+              <span className={styles.textSecondary}>{variable.meaning}</span>
             </li>
           ))}
         </ul>
@@ -57,10 +58,8 @@ export function FormulaCard({ formula }: FormulaCardProps) {
  */
 function SimpleFormula({ formula }: { formula: string }) {
   return (
-    <div className="formula-block">
-      <div className="mb-3">
-        <LaTeX math={formula} display />
-      </div>
+    <div className={styles.formulaBlock}>
+      <LaTeX math={formula} display />
     </div>
   );
 }
@@ -70,12 +69,9 @@ function SimpleFormula({ formula }: { formula: string }) {
  */
 export function FormulaList({ formulas, title }: { formulas: FormulaInput[]; title?: string }) {
   return (
-    <div className="space-y-4">
+    <div className={styles.spaceY4}>
       {title && (
-        <h3
-          className="text-lg font-semibold flex items-center gap-2"
-          style={{ color: 'var(--text-primary)' }}
-        >
+        <h3 className={styles.sectionTitle}>
           <span>📐</span>
           {title}
         </h3>

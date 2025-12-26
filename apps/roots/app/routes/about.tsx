@@ -1,6 +1,7 @@
 import { Layout } from '@/components/layout/Layout';
 import { useI18n } from '@/i18n';
 import type { MetaFunction } from 'react-router';
+import styles from '../styles/pages.module.scss';
 
 export const meta: MetaFunction = ({ location }) => {
   const locale = location.pathname.startsWith('/ko') ? 'ko' : 'en';
@@ -17,17 +18,13 @@ export default function AboutPage() {
 
   return (
     <Layout>
-      <h1 className="text-3xl font-bold mb-6" style={{ color: 'var(--text-primary)' }}>
-        {t('aboutTitle')}
-      </h1>
+      <h1 className={styles.aboutTitle}>{t('aboutTitle')}</h1>
 
-      <div className="prose" style={{ color: 'var(--text-secondary)' }}>
-        <p className="text-lg mb-4">{t('aboutDescription')}</p>
+      <div className={styles.aboutContent}>
+        <p>{t('aboutDescription')}</p>
 
-        <h2 className="text-xl font-semibold mt-8 mb-4" style={{ color: 'var(--text-primary)' }}>
-          {t('features')}
-        </h2>
-        <ul className="list-disc list-inside space-y-2">
+        <h2>{t('features')}</h2>
+        <ul>
           <li>{t('feature1')}</li>
           <li>{t('feature2')}</li>
           <li>{t('feature3')}</li>

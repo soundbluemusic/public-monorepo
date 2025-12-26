@@ -8,6 +8,7 @@ import { getFieldById } from '@/data/fields';
 import { getSubfieldsByParent } from '@/data/subfields';
 import { useI18n } from '@/i18n';
 import { Link, useLoaderData, useParams } from 'react-router';
+import styles from '../styles/pages.module.scss';
 
 /**
  * Loader: 빌드 시 데이터 로드 (SSG용)
@@ -32,11 +33,9 @@ export default function FieldPage() {
   if (!field) {
     return (
       <Layout>
-        <div className="text-center py-12">
-          <h1 className="text-2xl font-bold mb-4" style={{ color: 'var(--text-primary)' }}>
-            {t('fieldNotFound')}
-          </h1>
-          <Link to={localePath('/browse')} className="btn btn-primary">
+        <div className={styles.notFoundContainer}>
+          <h1 className={styles.notFoundTitle}>{t('fieldNotFound')}</h1>
+          <Link to={localePath('/browse')} className={styles.btnPrimary}>
             {t('backToList')}
           </Link>
         </div>
@@ -47,66 +46,60 @@ export default function FieldPage() {
   return (
     <Layout>
       {/* Breadcrumb */}
-      <nav className="text-sm mb-6" style={{ color: 'var(--text-tertiary)' }}>
-        <Link to={localePath('/')} className="hover:underline">
+      <nav className={styles.breadcrumb}>
+        <Link to={localePath('/')} className={styles.breadcrumbLink}>
           {t('home')}
         </Link>
-        <span className="mx-2">/</span>
-        <Link to={localePath('/browse')} className="hover:underline">
+        <span className={styles.breadcrumbSeparator}>/</span>
+        <Link to={localePath('/browse')} className={styles.breadcrumbLink}>
           {t('browse')}
         </Link>
-        <span className="mx-2">/</span>
-        <span style={{ color: 'var(--text-primary)' }}>{field.name[locale] || field.name.en}</span>
+        <span className={styles.breadcrumbSeparator}>/</span>
+        <span className={styles.textPrimary}>{field.name[locale] || field.name.en}</span>
       </nav>
 
       {/* Header */}
-      <header className="mb-8">
-        <div className="flex items-center gap-4 mb-4">
-          <span className="text-4xl">{field.icon}</span>
-          <h1 className="text-3xl font-bold" style={{ color: 'var(--text-primary)' }}>
-            {field.name[locale] || field.name.en}
-          </h1>
-        </div>
-        <p className="text-lg" style={{ color: 'var(--text-secondary)' }}>
+      <header className={styles.fieldHeader}>
+        <h1 className={styles.fieldTitle}>
+          <span className={styles.fieldTitleIcon}>{field.icon}</span>
+          {field.name[locale] || field.name.en}
+        </h1>
+        <p className={styles.fieldDescription}>
           {field.description[locale] || field.description.en}
         </p>
       </header>
 
       {/* Subfields */}
       <section>
-        <h2 className="text-xl font-semibold mb-4" style={{ color: 'var(--text-primary)' }}>
-          {t('subfields')}
-        </h2>
+        <h2 className={styles.sectionTitle}>{t('subfields')}</h2>
 
         {subfields.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className={styles.grid2}>
             {subfields.map((subfield) => (
               <Link
                 key={subfield.id}
                 to={localePath(`/field/${field.id}/${subfield.id}`)}
-                className="card hover:scale-[1.01] transition-transform"
+                className={styles.conceptCard}
               >
-                <h3 className="font-medium mb-2" style={{ color: 'var(--text-primary)' }}>
+                <h3 className={styles.conceptCardTitle}>
                   {subfield.name[locale] || subfield.name.en}
                 </h3>
-                <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
+                <p className={styles.conceptCardDescription}>
                   {subfield.description[locale] || subfield.description.en}
                 </p>
               </Link>
             ))}
           </div>
         ) : (
-          <p style={{ color: 'var(--text-tertiary)' }}>{t('noSubfields')}</p>
+          <p className={styles.textTertiary}>{t('noSubfields')}</p>
         )}
       </section>
 
       {/* Concepts in this field */}
       {concepts.length > 0 && (
-        <section className="mt-8">
-          <h2 className="text-xl font-semibold mb-4" style={{ color: 'var(--text-primary)' }}>
-            {t('concepts')}
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>{t('concepts')}</h2>
+          <div className={styles.grid3}>
             {concepts.map((concept) => (
               <ConceptCard key={concept.id} concept={concept} />
             ))}

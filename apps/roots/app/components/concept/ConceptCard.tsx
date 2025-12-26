@@ -6,6 +6,7 @@ import { useI18n } from '@/i18n';
  * @fileoverview 개념 미리보기 카드 컴포넌트
  */
 import { Link } from 'react-router';
+import styles from '../../styles/pages.module.scss';
 
 interface ConceptCardProps {
   concept: MathConcept;
@@ -26,30 +27,20 @@ export function ConceptCard({ concept }: ConceptCardProps) {
   })();
 
   return (
-    <Link
-      to={localePath(`/concept/${concept.id}`)}
-      className="card card-field hover:scale-[1.01] transition-transform block"
-      style={{ '--field-color': field?.color || 'var(--accent-primary)' } as React.CSSProperties}
-    >
+    <Link to={localePath(`/concept/${concept.id}`)} className={styles.conceptCard}>
       {/* 헤더 */}
-      <div className="flex items-start justify-between gap-2 mb-2">
-        <h3 className="font-semibold" style={{ color: 'var(--text-primary)' }}>
-          {name}
-        </h3>
+      <div className={styles.conceptCardHeader}>
+        <h3 className={styles.conceptCardTitle}>{name}</h3>
         <DifficultyBadge level={concept.difficulty} showLabel={false} size="sm" />
       </div>
 
       {/* 정의 */}
-      <p className="text-sm line-clamp-2 mb-3" style={{ color: 'var(--text-secondary)' }}>
-        {definition}
-      </p>
+      <p className={styles.conceptCardDescription}>{definition}</p>
 
       {/* 분야 태그 */}
-      <div className="flex items-center gap-2">
-        <span className="text-sm">{field?.icon}</span>
-        <span className="text-xs" style={{ color: 'var(--text-tertiary)' }}>
-          {field?.name[locale] || field?.name.en}
-        </span>
+      <div className={styles.conceptCardMeta}>
+        <span>{field?.icon}</span>
+        <span className={styles.conceptCardField}>{field?.name[locale] || field?.name.en}</span>
       </div>
     </Link>
   );
@@ -60,7 +51,7 @@ export function ConceptCard({ concept }: ConceptCardProps) {
  */
 export function ConceptGrid({ concepts }: { concepts: MathConcept[] }) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className={styles.grid3}>
       {concepts.map((concept) => (
         <ConceptCard key={concept.id} concept={concept} />
       ))}

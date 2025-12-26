@@ -1,5 +1,6 @@
 import type { DifficultyLevel } from '@/data/types';
 import { useI18n } from '@/i18n';
+import styles from '../../styles/pages.module.scss';
 
 interface DifficultyBadgeProps {
   level: 1 | 2 | 3 | 4 | 5;
@@ -26,22 +27,33 @@ const labels: Record<number, string> = {
 export function DifficultyBadge({ level, showLabel = true, size = 'md' }: DifficultyBadgeProps) {
   const { t } = useI18n();
 
-  const sizeClasses = size === 'sm' ? 'text-xs px-1.5 py-0.5' : 'text-sm px-2 py-1';
+  const sizeStyles = {
+    sm: { fontSize: '0.75rem', padding: '0.125rem 0.375rem' },
+    md: { fontSize: '0.875rem', padding: '0.25rem 0.5rem' },
+  };
 
   return (
     <span
-      className={`inline-flex items-center gap-1 rounded-full font-medium ${sizeClasses}`}
+      className={styles.difficultyBadge}
       style={{
         backgroundColor: `color-mix(in srgb, ${difficultyColors[level]} 15%, transparent)`,
         color: difficultyColors[level],
+        borderRadius: '9999px',
+        fontWeight: 500,
+        ...sizeStyles[size],
       }}
     >
-      <span className="flex gap-0.5">
+      <span className={styles.flexCenter} style={{ gap: '0.125rem' }}>
         {[0, 1, 2, 3, 4].map((i) => (
           <span
             key={`star-${i}`}
-            className={`w-1.5 h-1.5 rounded-full ${i < level ? '' : 'opacity-30'}`}
-            style={{ backgroundColor: difficultyColors[level] }}
+            style={{
+              width: '0.375rem',
+              height: '0.375rem',
+              borderRadius: '9999px',
+              backgroundColor: difficultyColors[level],
+              opacity: i < level ? 1 : 0.3,
+            }}
           />
         ))}
       </span>
@@ -55,12 +67,17 @@ export function DifficultyBadge({ level, showLabel = true, size = 'md' }: Diffic
  */
 export function DifficultyStars({ level }: { level: DifficultyLevel }) {
   return (
-    <span className="flex gap-0.5">
+    <span className={styles.flexCenter} style={{ gap: '0.125rem' }}>
       {[0, 1, 2, 3, 4].map((i) => (
         <span
           key={`star-${i}`}
-          className={`w-1.5 h-1.5 rounded-full ${i < level ? '' : 'opacity-30'}`}
-          style={{ backgroundColor: difficultyColors[level] }}
+          style={{
+            width: '0.375rem',
+            height: '0.375rem',
+            borderRadius: '9999px',
+            backgroundColor: difficultyColors[level],
+            opacity: i < level ? 1 : 0.3,
+          }}
         />
       ))}
     </span>

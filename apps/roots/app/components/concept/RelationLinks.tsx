@@ -6,6 +6,7 @@ import type { ConceptRelations } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router';
+import styles from '../../styles/pages.module.scss';
 
 type ConceptNames = Record<string, { ko: string; en: string }>;
 
@@ -36,29 +37,18 @@ function RelationSection({ title, icon, ids, type, names }: RelationSectionProps
   if (ids.length === 0) return null;
 
   return (
-    <div className="mb-4">
-      <h4
-        className="text-sm font-medium mb-2 flex items-center gap-2"
-        style={{ color: 'var(--text-tertiary)' }}
-      >
+    <div className={styles.relationSection}>
+      <h4 className={styles.relationTitle}>
         <span>{icon}</span>
         {title}
       </h4>
-      <div className="flex flex-wrap gap-2">
+      <div className={styles.relationLinks}>
         {ids.map((id) => {
           const conceptName = names[id];
           const name = conceptName ? conceptName[locale] || conceptName.en : id;
 
           return (
-            <Link
-              key={id}
-              to={localePath(`/concept/${id}`)}
-              className="relation-link"
-              style={{
-                backgroundColor: 'var(--bg-tertiary)',
-                color: 'var(--text-secondary)',
-              }}
-            >
+            <Link key={id} to={localePath(`/concept/${id}`)} className={styles.relationLink}>
               <span style={{ color: style.color }}>{style.prefix}</span>
               <span>{name}</span>
             </Link>
@@ -94,17 +84,8 @@ export function RelationLinks({ relations }: RelationLinksProps) {
   if (!hasAnyRelations) return null;
 
   return (
-    <div
-      className="rounded-lg p-4"
-      style={{
-        backgroundColor: 'var(--bg-secondary)',
-        border: '1px solid var(--border-primary)',
-      }}
-    >
-      <h3
-        className="text-lg font-semibold mb-4 flex items-center gap-2"
-        style={{ color: 'var(--text-primary)' }}
-      >
+    <div className={styles.historyCard}>
+      <h3 className={styles.sectionTitle}>
         <span>🔗</span>
         {t('relatedDocuments')}
       </h3>

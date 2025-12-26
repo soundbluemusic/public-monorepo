@@ -13,6 +13,7 @@ import { useI18n } from '@/i18n';
 import { favorites } from '@/lib/db';
 import { useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router';
+import styles from '../styles/pages.module.scss';
 
 /**
  * Loader: 빌드 시 데이터 로드 (SSG용)
@@ -72,9 +73,9 @@ export default function ConceptPage() {
   if (!concept) {
     return (
       <Layout>
-        <div className="text-center py-12">
-          <h1 className="text-2xl font-bold mb-4 text-text-primary">{t('conceptNotFound')}</h1>
-          <Link to={localePath('/browse')} className="btn btn-primary">
+        <div className={styles.notFoundContainer}>
+          <h1 className={styles.notFoundTitle}>{t('conceptNotFound')}</h1>
+          <Link to={localePath('/browse')} className={styles.btnPrimary}>
             {t('backToList')}
           </Link>
         </div>
@@ -92,34 +93,34 @@ export default function ConceptPage() {
   return (
     <Layout>
       {/* Breadcrumb */}
-      <nav className="text-sm mb-6 text-text-tertiary">
-        <Link to={localePath('/')} className="hover:underline">
+      <nav className={styles.breadcrumb}>
+        <Link to={localePath('/')} className={styles.breadcrumbLink}>
           {t('home')}
         </Link>
-        <span className="mx-2">/</span>
-        <Link to={localePath(`/field/${concept.field}`)} className="hover:underline">
+        <span className={styles.breadcrumbSeparator}>/</span>
+        <Link to={localePath(`/field/${concept.field}`)} className={styles.breadcrumbLink}>
           {field?.name[locale] || field?.name.en}
         </Link>
         {subfield && (
           <>
-            <span className="mx-2">/</span>
+            <span className={styles.breadcrumbSeparator}>/</span>
             <span>{subfield.name[locale] || subfield.name.en}</span>
           </>
         )}
       </nav>
 
       {/* Header */}
-      <header className="mb-8">
-        <div className="flex items-start justify-between gap-4 mb-4">
-          <div className="flex items-center gap-3">
-            <span className="text-3xl">{field?.icon}</span>
-            <h1 className="text-3xl font-bold text-text-primary">{name}</h1>
+      <header className={styles.conceptHeader}>
+        <div className={styles.conceptHeaderRow}>
+          <div className={styles.conceptTitleRow}>
+            <span className={styles.conceptTitleIcon}>{field?.icon}</span>
+            <h1 className={styles.conceptTitleText}>{name}</h1>
           </div>
-          <div className="flex items-center gap-2">
+          <div className={styles.conceptActions}>
             <button
               type="button"
               onClick={toggleFavorite}
-              className="p-2 rounded-lg transition-all hover:scale-110 bg-bg-secondary border border-border-primary"
+              className={styles.favoriteBtn}
               aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
               title={
                 locale === 'ko'
@@ -131,7 +132,7 @@ export default function ConceptPage() {
                     : 'Add to favorites'
               }
             >
-              <span className="text-xl">{isFavorite ? '❤️' : '🤍'}</span>
+              <span className={styles.favoriteBtnIcon}>{isFavorite ? '❤️' : '🤍'}</span>
             </button>
             <DifficultyBadge level={concept.difficulty} size="md" />
           </div>
@@ -139,18 +140,18 @@ export default function ConceptPage() {
 
         {/* English name if viewing in Korean */}
         {locale !== 'en' && concept.name.en !== name && (
-          <p className="text-lg mb-2 text-text-tertiary">{concept.name.en}</p>
+          <p className={styles.conceptEnName}>{concept.name.en}</p>
         )}
       </header>
 
-      <div className="space-y-8">
+      <div className={styles.conceptContent}>
         {/* 정의 Definition */}
         <section>
-          <h2 className="text-xl font-semibold mb-3 flex items-center gap-2 text-text-primary">
+          <h2 className={styles.sectionTitle}>
             <span>📖</span>
             {t('definition')}
           </h2>
-          <p className="text-lg leading-relaxed text-text-secondary">{content.definition}</p>
+          <p className={styles.conceptDefinition}>{content.definition}</p>
         </section>
 
         {/* 공식 Formulas */}
@@ -170,20 +171,20 @@ export default function ConceptPage() {
         {/* 역사 History */}
         {content.history && (
           <section>
-            <h2 className="text-xl font-semibold mb-3 flex items-center gap-2 text-text-primary">
+            <h2 className={styles.sectionTitle}>
               <span>📜</span>
               {t('history')}
             </h2>
-            <div className="rounded-lg p-4 bg-bg-secondary border border-border-primary">
+            <div className={styles.historyCard}>
               {content.history.discoveredBy && (
-                <p className="text-text-secondary">
-                  <strong className="text-text-primary">{t('discoveredBy')}:</strong>{' '}
+                <p className={styles.historyText}>
+                  <strong className={styles.historyStrong}>{t('discoveredBy')}:</strong>{' '}
                   {content.history.discoveredBy}
                   {content.history.year && ` (${content.history.year})`}
                 </p>
               )}
               {content.history.background && (
-                <p className="mt-2 text-text-tertiary">{content.history.background}</p>
+                <p className={styles.historyBackground}>{content.history.background}</p>
               )}
             </div>
           </section>
@@ -192,22 +193,22 @@ export default function ConceptPage() {
         {/* 응용 분야 Applications */}
         {(content.applications?.length ?? 0) > 0 && (
           <section>
-            <h2 className="text-xl font-semibold mb-3 flex items-center gap-2 text-text-primary">
+            <h2 className={styles.sectionTitle}>
               <span>⚡</span>
               {t('applications')}
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className={styles.applicationsGrid}>
               {content.applications?.map((app) => (
                 <div
                   key={typeof app === 'string' ? app : app.field}
-                  className="rounded-lg p-3 bg-bg-secondary border border-border-primary"
+                  className={styles.applicationCard}
                 >
                   {typeof app === 'string' ? (
-                    <p className="text-text-primary">{app}</p>
+                    <p className={styles.textPrimary}>{app}</p>
                   ) : (
                     <>
-                      <h4 className="font-medium mb-1 text-text-primary">{app.field}</h4>
-                      <p className="text-sm text-text-tertiary">{app.description}</p>
+                      <h4 className={styles.applicationField}>{app.field}</h4>
+                      <p className={styles.applicationDesc}>{app.description}</p>
                     </>
                   )}
                 </div>
@@ -224,12 +225,9 @@ export default function ConceptPage() {
         {/* 태그 Tags */}
         {concept.tags.length > 0 && (
           <section>
-            <div className="flex flex-wrap gap-2">
+            <div className={styles.tagsContainer}>
               {concept.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="px-2 py-1 text-xs rounded-full bg-bg-tertiary text-text-tertiary"
-                >
+                <span key={tag} className={styles.tag}>
                   #{tag}
                 </span>
               ))}

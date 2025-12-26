@@ -2,6 +2,7 @@ import { DifficultyStars } from '@/components/ui/DifficultyBadge';
 import type { DifficultyLevel, Example as ExampleType } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { useState } from 'react';
+import styles from '../../styles/pages.module.scss';
 /**
  * @fileoverview 예제 컴포넌트
  */
@@ -23,26 +24,20 @@ export function ExampleCard({ example, index }: ExampleCardProps) {
   const [showSolution, setShowSolution] = useState(false);
 
   return (
-    <div
-      className="rounded-lg p-4"
-      style={{
-        backgroundColor: 'var(--bg-secondary)',
-        border: '1px solid var(--border-primary)',
-      }}
-    >
+    <div className={styles.exampleCard}>
       {/* 예제 헤더 */}
-      <div className="flex items-center justify-between mb-3">
-        <span className="text-sm font-medium" style={{ color: 'var(--text-tertiary)' }}>
+      <div className={styles.exampleHeader}>
+        <span className={styles.textTertiary} style={{ fontSize: '0.875rem', fontWeight: 500 }}>
           {t('exampleNumber')} {index + 1}
         </span>
         {example.difficulty && <DifficultyStars level={example.difficulty as DifficultyLevel} />}
       </div>
 
       {/* 문제 */}
-      <div className="mb-3">
-        <p style={{ color: 'var(--text-primary)' }}>{example.problem}</p>
+      <div style={{ marginBottom: '0.75rem' }}>
+        <p className={styles.textPrimary}>{example.problem}</p>
         {example.latex && (
-          <div className="mt-2">
+          <div style={{ marginTop: '0.5rem' }}>
             <LaTeX math={example.latex} display />
           </div>
         )}
@@ -52,16 +47,16 @@ export function ExampleCard({ example, index }: ExampleCardProps) {
       <button
         type="button"
         onClick={() => setShowSolution(!showSolution)}
-        className="text-sm font-medium transition-colors"
-        style={{ color: 'var(--accent-primary)' }}
+        className={styles.textAccent}
+        style={{ fontSize: '0.875rem', fontWeight: 500 }}
       >
         {showSolution ? `▼ ${t('hideSolution')}` : `▶ ${t('showSolution')}`}
       </button>
 
       {/* 풀이 */}
       {showSolution && (
-        <div className="mt-3 pt-3" style={{ borderTop: '1px solid var(--border-primary)' }}>
-          <p className="whitespace-pre-wrap" style={{ color: 'var(--text-secondary)' }}>
+        <div className={styles.exampleSolution} style={{ marginTop: '0.75rem' }}>
+          <p className={styles.textSecondary} style={{ whiteSpace: 'pre-wrap' }}>
             {example.solution}
           </p>
         </div>
@@ -76,17 +71,11 @@ export function ExampleCard({ example, index }: ExampleCardProps) {
 function SimpleExample({ example, index }: { example: string; index: number }) {
   const { t } = useI18n();
   return (
-    <div
-      className="rounded-lg p-4"
-      style={{
-        backgroundColor: 'var(--bg-secondary)',
-        border: '1px solid var(--border-primary)',
-      }}
-    >
-      <span className="text-sm font-medium" style={{ color: 'var(--text-tertiary)' }}>
+    <div className={styles.exampleCard}>
+      <span className={styles.textTertiary} style={{ fontSize: '0.875rem', fontWeight: 500 }}>
         {t('exampleNumber')} {index + 1}
       </span>
-      <p className="mt-2" style={{ color: 'var(--text-primary)' }}>
+      <p className={styles.textPrimary} style={{ marginTop: '0.5rem' }}>
         {example}
       </p>
     </div>
@@ -98,17 +87,14 @@ function SimpleExample({ example, index }: { example: string; index: number }) {
  */
 export function ExampleList({ examples, title }: { examples?: ExampleInput[]; title?: string }) {
   return (
-    <div className="space-y-4">
+    <div className={styles.spaceY4}>
       {title && (
-        <h3
-          className="text-lg font-semibold flex items-center gap-2"
-          style={{ color: 'var(--text-primary)' }}
-        >
+        <h3 className={styles.sectionTitle}>
           <span>✏️</span>
           {title}
         </h3>
       )}
-      <div className="space-y-3">
+      <div className={styles.spaceY3}>
         {(examples ?? []).map((example, index) =>
           typeof example === 'string' ? (
             <SimpleExample
