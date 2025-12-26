@@ -1,5 +1,6 @@
 import { Layout } from '@/components/Layout';
 import { useI18n } from '@/i18n';
+import styles from '@/styles/pages.module.scss';
 import type { MetaFunction } from 'react-router';
 
 export const meta: MetaFunction = ({ location }) => {
@@ -23,14 +24,10 @@ export default function AboutPage() {
 
   return (
     <Layout>
-      <div className="max-w-2xl">
-        <h1 className="text-2xl font-semibold mb-4" style={{ color: 'var(--text-primary)' }}>
-          {t('aboutTitle')}
-        </h1>
-        <p className="mb-6" style={{ color: 'var(--text-secondary)' }}>
-          {t('aboutDescription')}
-        </p>
-        <div className="space-y-4" style={{ color: 'var(--text-secondary)' }}>
+      <div>
+        <h1 className={`${styles.pageTitle} ${styles.mb4}`}>{t('aboutTitle')}</h1>
+        <p className={`${styles.textSecondary} ${styles.mb6}`}>{t('aboutDescription')}</p>
+        <div className={`${styles.spaceY3} ${styles.textSecondary}`}>
           <p>{t('aboutContent')}</p>
           <p>{t('aboutContentExtra')}</p>
         </div>

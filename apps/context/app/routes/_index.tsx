@@ -5,6 +5,7 @@ import type { Category } from '@/data/types';
 import type { MeaningEntry } from '@/data/types';
 import { type Language, useI18n } from '@/i18n';
 import { studyRecords } from '@/lib/db';
+import styles from '@/styles/pages.module.scss';
 import { useEffect, useState } from 'react';
 import type { MetaFunction } from 'react-router';
 import { Link, useLoaderData } from 'react-router';
@@ -98,40 +99,26 @@ export default function HomePage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <div className="mb-8">
-        <h1 className="text-2xl font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>
-          {t('heroTitle')}
-        </h1>
-        <p style={{ color: 'var(--text-secondary)' }}>{t('heroSubtitle')}</p>
+      <div className={styles.sectionLarge}>
+        <h1 className={styles.pageTitle}>{t('heroTitle')}</h1>
+        <p className={styles.textSecondary}>{t('heroSubtitle')}</p>
       </div>
 
       {/* Overall Progress */}
       {overallProgress.studied > 0 && (
-        <div
-          className="mb-8 p-4 rounded-xl"
-          style={{
-            backgroundColor: 'var(--bg-elevated)',
-            border: '1px solid var(--border-primary)',
-          }}
-        >
-          <div className="flex items-center justify-between mb-2">
-            <h2 className="text-sm font-semibold" style={{ color: 'var(--text-primary)' }}>
+        <div className={`${styles.card} ${styles.sectionLarge}`}>
+          <div className={`${styles.flexBetween} ${styles.mb2}`}>
+            <h2 className={styles.sectionTitleSmall}>
               {locale === 'ko' ? '📈 내 학습 현황' : '📈 My Progress'}
             </h2>
-            <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>
+            <span className={`${styles.textSm} ${styles.textSecondary}`}>
               {overallProgress.studied}/{overallProgress.total} {locale === 'ko' ? '단어' : 'words'}
             </span>
           </div>
-          <div
-            className="w-full h-2 rounded-full overflow-hidden"
-            style={{ backgroundColor: 'var(--bg-secondary)' }}
-          >
+          <div className={styles.progressBar}>
             <div
-              className="h-full transition-all duration-300"
-              style={{
-                width: `${overallProgress.percentage}%`,
-                backgroundColor: 'var(--accent-primary)',
-              }}
+              className={styles.progressFill}
+              style={{ width: `${overallProgress.percentage}%` }}
             />
           </div>
         </div>
@@ -139,26 +126,19 @@ export default function HomePage() {
 
       {/* Daily Word */}
       {dailyWord && (
-        <div className="mb-8">
-          <h2 className="text-lg font-semibold mb-3" style={{ color: 'var(--text-primary)' }}>
+        <div className={styles.sectionLarge}>
+          <h2 className={styles.sectionTitle}>
             {locale === 'ko' ? '⭐ 오늘의 단어' : '⭐ Word of the Day'}
           </h2>
-          <Link
-            to={localePath(`/entry/${dailyWord.id}`)}
-            className="block p-6 rounded-xl transition-all hover:shadow-lg"
-            style={{
-              backgroundColor: 'var(--bg-elevated)',
-              border: '2px solid var(--accent-primary)',
-            }}
-          >
-            <div className="text-center">
-              <h3 className="text-3xl font-bold mb-2" style={{ color: 'var(--text-primary)' }}>
+          <Link to={localePath(`/entry/${dailyWord.id}`)} className={styles.cardAccent}>
+            <div className={styles.textCenter}>
+              <h3 className={`${styles.text3xl} ${styles.fontBold} ${styles.mb2}`}>
                 {dailyWord.korean}
               </h3>
-              <p className="text-lg mb-3" style={{ color: 'var(--text-tertiary)' }}>
+              <p className={`${styles.textLg} ${styles.textTertiary} ${styles.mb3}`}>
                 {getPronunciation(dailyWord, locale)}
               </p>
-              <p className="text-xl" style={{ color: 'var(--accent-primary)' }}>
+              <p className={`${styles.textXl} ${styles.textAccent}`}>
                 {dailyWord.translations[locale].word}
               </p>
             </div>
@@ -167,21 +147,17 @@ export default function HomePage() {
       )}
 
       {/* Categories Grid */}
-      <div className="mb-8">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-semibold" style={{ color: 'var(--text-primary)' }}>
+      <div className={styles.sectionLarge}>
+        <div className={`${styles.flexBetween} ${styles.mb4}`}>
+          <h2 className={styles.sectionTitle}>
             {locale === 'ko' ? '📚 카테고리별 학습' : '📚 Learn by Category'}
           </h2>
-          <Link
-            to={localePath('/browse')}
-            className="text-sm"
-            style={{ color: 'var(--accent-primary)' }}
-          >
+          <Link to={localePath('/browse')} className={`${styles.textSm} ${styles.textAccent}`}>
             {t('viewAll')} →
           </Link>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className={`${styles.grid} ${styles.gridCols2}`}>
           {cats.map((category) => {
             const count = categoryCounts[category.id];
             const progress = categoryProgress[category.id] || {
@@ -194,19 +170,15 @@ export default function HomePage() {
               <Link
                 key={category.id}
                 to={localePath(`/category/${category.id}`)}
-                className="p-4 rounded-xl transition-all hover:shadow-md"
-                style={{
-                  backgroundColor: 'var(--bg-elevated)',
-                  border: '1px solid var(--border-primary)',
-                }}
+                className={styles.cardHover}
               >
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-2xl">{category.icon}</span>
-                  <div className="flex-1">
-                    <h3 className="font-semibold" style={{ color: 'var(--text-primary)' }}>
+                <div className={`${styles.flexStart} ${styles.flexGap3} ${styles.mb3}`}>
+                  <span className={styles.text2xl}>{category.icon}</span>
+                  <div className={styles.flex1}>
+                    <h3 className={`${styles.fontSemibold} ${styles.textPrimary}`}>
                       {category.name[locale]}
                     </h3>
-                    <p className="text-xs" style={{ color: 'var(--text-tertiary)' }}>
+                    <p className={`${styles.textXs} ${styles.textTertiary}`}>
                       {progress.studied}/{count} {locale === 'ko' ? '단어' : 'words'}
                     </p>
                   </div>
@@ -214,16 +186,10 @@ export default function HomePage() {
 
                 {/* Progress bar */}
                 {progress.studied > 0 && (
-                  <div
-                    className="w-full h-1.5 rounded-full overflow-hidden"
-                    style={{ backgroundColor: 'var(--bg-secondary)' }}
-                  >
+                  <div className={styles.progressBarSmall}>
                     <div
-                      className="h-full transition-all duration-300"
-                      style={{
-                        width: `${progress.percentage}%`,
-                        backgroundColor: 'var(--accent-primary)',
-                      }}
+                      className={styles.progressFill}
+                      style={{ width: `${progress.percentage}%` }}
                     />
                   </div>
                 )}

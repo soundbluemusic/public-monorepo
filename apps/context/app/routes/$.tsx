@@ -1,5 +1,6 @@
 import { Layout } from '@/components/Layout';
 import { useI18n } from '@/i18n';
+import styles from '@/styles/pages.module.scss';
 import type { MetaFunction } from 'react-router';
 import { Link } from 'react-router';
 
@@ -19,19 +20,15 @@ export default function NotFound() {
 
   return (
     <Layout>
-      <div className="text-center py-20">
-        <div className="text-6xl mb-6">🔍</div>
-        <h1 className="text-3xl font-bold mb-4" style={{ color: 'var(--text-primary)' }}>
+      <div className={`${styles.textCenter}`} style={{ padding: '5rem 0' }}>
+        <div className={`${styles.mb6}`} style={{ fontSize: '3.75rem' }}>
+          🔍
+        </div>
+        <h1 className={`${styles.text3xl} ${styles.fontBold} ${styles.mb4} ${styles.textPrimary}`}>
           {t('pageNotFound')}
         </h1>
-        <p className="mb-8" style={{ color: 'var(--text-secondary)' }}>
-          {t('pageNotFoundDescription')}
-        </p>
-        <Link
-          to={localePath('/')}
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-colors"
-          style={{ backgroundColor: 'var(--accent-primary)', color: 'white' }}
-        >
+        <p className={`${styles.textSecondary} ${styles.mb8}`}>{t('pageNotFoundDescription')}</p>
+        <Link to={localePath('/')} className={styles.buttonPrimary}>
           {t('goHome')}
         </Link>
       </div>

@@ -4,6 +4,7 @@ import { meaningEntries } from '@/data/entries';
 import type { MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { favorites, studyRecords } from '@/lib/db';
+import styles from '@/styles/pages.module.scss';
 import { Bookmark, BookmarkCheck, Check } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router';
@@ -54,13 +55,9 @@ export default function EntryPage() {
   if (!entry) {
     return (
       <Layout>
-        <div className="text-center py-12">
-          <p style={{ color: 'var(--text-secondary)' }}>{t('entryNotFound')}</p>
-          <Link
-            to={localePath('/')}
-            className="mt-4 inline-block"
-            style={{ color: 'var(--accent-primary)' }}
-          >
+        <div className={styles.emptyState}>
+          <p className={styles.textSecondary}>{t('entryNotFound')}</p>
+          <Link to={localePath('/')} className={`${styles.link} ${styles.mt4}`}>
             {t('backToList')}
           </Link>
         </div>
@@ -73,28 +70,21 @@ export default function EntryPage() {
   return (
     <Layout>
       <article>
-        <header className="mb-8">
-          <div className="flex items-start justify-between gap-4 mb-4">
-            <div className="flex-1">
-              <h1 className="text-3xl font-bold mb-2" style={{ color: 'var(--text-primary)' }}>
+        <header className={styles.sectionLarge}>
+          <div className={`${styles.flexBetween} ${styles.flexGap4} ${styles.mb4}`}>
+            <div className={styles.flex1}>
+              <h1 className={`${styles.text3xl} ${styles.fontBold} ${styles.mb2}`}>
                 {entry.korean}
               </h1>
-              <p className="text-lg" style={{ color: 'var(--text-tertiary)' }}>
-                {entry.romanization}
-              </p>
+              <p className={`${styles.textLg} ${styles.textTertiary}`}>{entry.romanization}</p>
             </div>
 
             {/* Action buttons */}
-            <div className="flex gap-2">
+            <div className={`${styles.flexStart} ${styles.flexGap2}`}>
               <button
                 type="button"
                 onClick={handleToggleFavorite}
-                className="p-2 rounded-lg transition-colors min-h-10 min-w-10"
-                style={{
-                  backgroundColor: isFavorite ? 'var(--accent-primary)' : 'var(--bg-elevated)',
-                  border: '1px solid var(--border-primary)',
-                  color: isFavorite ? 'white' : 'var(--text-secondary)',
-                }}
+                className={isFavorite ? styles.iconButtonActive : styles.iconButton}
                 aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
               >
                 {isFavorite ? <BookmarkCheck size={20} /> : <Bookmark size={20} />}
@@ -104,79 +94,43 @@ export default function EntryPage() {
 
           {/* Study status */}
           {isStudied ? (
-            <div
-              className="flex items-center gap-2 px-4 py-2 rounded-lg"
-              style={{
-                backgroundColor: 'var(--bg-elevated)',
-                border: '1px solid var(--accent-primary)',
-              }}
-            >
-              <div
-                className="w-5 h-5 rounded-full flex items-center justify-center"
-                style={{ backgroundColor: 'var(--accent-primary)' }}
-              >
+            <div className={styles.studiedIndicator}>
+              <div className={styles.checkMark}>
                 <Check size={14} style={{ color: 'white' }} />
               </div>
-              <span className="text-sm" style={{ color: 'var(--text-primary)' }}>
+              <span className={`${styles.textSm} ${styles.textPrimary}`}>
                 {locale === 'ko' ? '✅ 학습 완료' : '✅ Studied'}
               </span>
             </div>
           ) : (
-            <button
-              type="button"
-              onClick={handleMarkAsStudied}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg transition-colors min-h-11"
-              style={{
-                backgroundColor: 'var(--accent-primary)',
-                color: 'white',
-                border: 'none',
-              }}
-            >
+            <button type="button" onClick={handleMarkAsStudied} className={styles.buttonPrimary}>
               <Check size={18} />
               <span>{locale === 'ko' ? '학습 완료로 표시' : 'Mark as Studied'}</span>
             </button>
           )}
         </header>
 
-        <section className="mb-6">
-          <h2 className="text-lg font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>
-            {t('translation')}
-          </h2>
-          <p style={{ color: 'var(--text-secondary)' }}>{translation.word}</p>
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>{t('translation')}</h2>
+          <p className={styles.textSecondary}>{translation.word}</p>
         </section>
 
-        <section className="mb-6">
-          <h2 className="text-lg font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>
-            {t('explanation')}
-          </h2>
-          <p style={{ color: 'var(--text-secondary)' }}>{translation.explanation}</p>
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>{t('explanation')}</h2>
+          <p className={styles.textSecondary}>{translation.explanation}</p>
         </section>
 
         {translation.examples && (
-          <section className="mb-6">
-            <h2 className="text-lg font-semibold mb-3" style={{ color: 'var(--text-primary)' }}>
-              {t('examples')}
-            </h2>
-            <div className="space-y-3">
+          <section className={styles.section}>
+            <h2 className={`${styles.sectionTitle} ${styles.mb3}`}>{t('examples')}</h2>
+            <div className={styles.spaceY3}>
               {(['beginner', 'intermediate', 'advanced', 'master'] as const).map((level) => {
                 const example = translation.examples?.[level];
                 if (!example) return null;
                 return (
-                  <div
-                    key={level}
-                    className="rounded-lg p-3"
-                    style={{ backgroundColor: 'var(--bg-elevated)' }}
-                  >
-                    <span
-                      className="inline-block text-xs font-medium px-2 py-0.5 rounded mb-2"
-                      style={{
-                        backgroundColor: 'var(--accent-primary)',
-                        color: 'white',
-                      }}
-                    >
-                      {t(level)}
-                    </span>
-                    <div style={{ color: 'var(--text-secondary)' }}>
+                  <div key={level} className={styles.card}>
+                    <span className={`${styles.badge} ${styles.mb2}`}>{t(level)}</span>
+                    <div className={styles.textSecondary}>
                       <LinkedExample text={example} currentEntryId={entry.id} />
                     </div>
                   </div>
@@ -186,12 +140,8 @@ export default function EntryPage() {
           </section>
         )}
 
-        <div className="mt-8">
-          <Link
-            to={localePath('/browse')}
-            className="text-sm"
-            style={{ color: 'var(--accent-primary)' }}
-          >
+        <div className={styles.mt8}>
+          <Link to={localePath('/browse')} className={styles.linkBack}>
             ← {t('backToList')}
           </Link>
         </div>

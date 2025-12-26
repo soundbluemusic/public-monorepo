@@ -1,5 +1,6 @@
 import { meaningEntries } from '@/data/entries';
 import { useI18n } from '@/i18n';
+import styles from '@/styles/pages.module.scss';
 import type { ReactNode } from 'react';
 import { Link } from 'react-router';
 
@@ -43,8 +44,8 @@ export function LinkedExample({ text, currentEntryId }: LinkedExampleProps) {
           <Link
             key={`link-${keyIndex++}`}
             to={localePath(`/entry/${expr.id}`)}
-            className="underline decoration-dotted underline-offset-4 hover:decoration-solid transition-all"
-            style={{ color: 'var(--accent-primary)' }}
+            className={styles.link}
+            style={{ textDecoration: 'underline dotted', textUnderlineOffset: '4px' }}
           >
             {expr.korean}
           </Link>,

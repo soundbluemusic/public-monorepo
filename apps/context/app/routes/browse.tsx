@@ -4,6 +4,7 @@ import { meaningEntries } from '@/data/entries';
 import type { MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { favorites, studyRecords } from '@/lib/db';
+import styles from '@/styles/pages.module.scss';
 import { Check, Shuffle } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import type { MetaFunction } from 'react-router';
@@ -155,83 +156,57 @@ export default function BrowsePage() {
   return (
     <Layout>
       {/* Header */}
-      <div className="mb-6">
-        <h1 className="text-2xl font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>
+      <div className={styles.section}>
+        <h1 className={styles.pageTitle}>
           {locale === 'ko' ? '전체 단어 찾아보기' : 'Browse All Words'}
         </h1>
-        <p style={{ color: 'var(--text-secondary)' }}>
+        <p className={styles.textSecondary}>
           {locale === 'ko' ? '모든 단어를 검색하고 필터링하세요' : 'Search and filter all words'}
         </p>
       </div>
 
       {/* Quick Stats */}
-      <div className="mb-6 grid gap-3 sm:grid-cols-3">
-        <div
-          className="p-4 rounded-xl"
-          style={{
-            backgroundColor: 'var(--bg-elevated)',
-            border: '1px solid var(--border-primary)',
-          }}
-        >
-          <div className="text-sm mb-1" style={{ color: 'var(--text-tertiary)' }}>
+      <div className={`${styles.section} ${styles.grid} ${styles.gridCols3}`}>
+        <div className={styles.card}>
+          <div className={`${styles.textSm} ${styles.textTertiary} ${styles.mb1}`}>
             {locale === 'ko' ? '전체 진행률' : 'Overall Progress'}
           </div>
-          <div className="text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>
+          <div className={`${styles.text2xl} ${styles.fontBold} ${styles.textPrimary}`}>
             {overallProgress.percentage.toFixed(0)}%
           </div>
-          <div className="text-xs" style={{ color: 'var(--text-secondary)' }}>
+          <div className={`${styles.textXs} ${styles.textSecondary}`}>
             {overallProgress.studied}/{overallProgress.total} {locale === 'ko' ? '단어' : 'words'}
           </div>
         </div>
 
-        <div
-          className="p-4 rounded-xl"
-          style={{
-            backgroundColor: 'var(--bg-elevated)',
-            border: '1px solid var(--border-primary)',
-          }}
-        >
-          <div className="text-sm mb-1" style={{ color: 'var(--text-tertiary)' }}>
+        <div className={styles.card}>
+          <div className={`${styles.textSm} ${styles.textTertiary} ${styles.mb1}`}>
             {locale === 'ko' ? '오늘 학습' : 'Today Studied'}
           </div>
-          <div className="text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>
+          <div className={`${styles.text2xl} ${styles.fontBold} ${styles.textPrimary}`}>
             {todayStudied}
           </div>
-          <div className="text-xs" style={{ color: 'var(--text-secondary)' }}>
+          <div className={`${styles.textXs} ${styles.textSecondary}`}>
             {locale === 'ko' ? '단어' : 'words'}
           </div>
         </div>
 
-        <div
-          className="p-4 rounded-xl"
-          style={{
-            backgroundColor: 'var(--bg-elevated)',
-            border: '1px solid var(--border-primary)',
-          }}
-        >
-          <div className="text-sm mb-1" style={{ color: 'var(--text-tertiary)' }}>
+        <div className={styles.card}>
+          <div className={`${styles.textSm} ${styles.textTertiary} ${styles.mb1}`}>
             {locale === 'ko' ? '북마크' : 'Bookmarks'}
           </div>
-          <div className="text-2xl font-bold" style={{ color: 'var(--text-primary)' }}>
+          <div className={`${styles.text2xl} ${styles.fontBold} ${styles.textPrimary}`}>
             {bookmarkCount}
           </div>
-          <div className="text-xs" style={{ color: 'var(--text-secondary)' }}>
+          <div className={`${styles.textXs} ${styles.textSecondary}`}>
             {locale === 'ko' ? '단어' : 'words'}
           </div>
         </div>
       </div>
 
       {/* Quick Access Buttons */}
-      <div className="mb-6 flex flex-wrap gap-2">
-        <button
-          type="button"
-          onClick={handleRandomWord}
-          className="flex items-center gap-2 px-4 py-2 rounded-lg transition-colors"
-          style={{
-            backgroundColor: 'var(--accent-primary)',
-            color: 'white',
-          }}
-        >
+      <div className={`${styles.section} ${styles.flexWrap} ${styles.flexGap2}`}>
+        <button type="button" onClick={handleRandomWord} className={styles.buttonPrimary}>
           <Shuffle size={16} />
           <span>{locale === 'ko' ? '🎲 랜덤 단어' : '🎲 Random Word'}</span>
         </button>
@@ -239,13 +214,7 @@ export default function BrowsePage() {
         <button
           type="button"
           onClick={handleShowBookmarksOnly}
-          className="px-4 py-2 rounded-lg transition-colors"
-          style={{
-            backgroundColor:
-              filterStatus === 'bookmarked' ? 'var(--accent-primary)' : 'var(--bg-elevated)',
-            color: filterStatus === 'bookmarked' ? 'white' : 'var(--text-primary)',
-            border: filterStatus === 'bookmarked' ? 'none' : '1px solid var(--border-primary)',
-          }}
+          className={filterStatus === 'bookmarked' ? styles.buttonActive : styles.buttonSecondary}
         >
           {locale === 'ko' ? '⭐ 북마크만' : '⭐ Bookmarks Only'}
         </button>
@@ -253,39 +222,24 @@ export default function BrowsePage() {
         <button
           type="button"
           onClick={handleShowUnstudiedOnly}
-          className="px-4 py-2 rounded-lg transition-colors"
-          style={{
-            backgroundColor:
-              filterStatus === 'unstudied' ? 'var(--accent-primary)' : 'var(--bg-elevated)',
-            color: filterStatus === 'unstudied' ? 'white' : 'var(--text-primary)',
-            border: filterStatus === 'unstudied' ? 'none' : '1px solid var(--border-primary)',
-          }}
+          className={filterStatus === 'unstudied' ? styles.buttonActive : styles.buttonSecondary}
         >
           {locale === 'ko' ? '📖 미학습만' : '📖 Unstudied Only'}
         </button>
       </div>
 
       {/* Filter & Sort Controls */}
-      <div className="mb-6 flex flex-wrap gap-3">
+      <div className={`${styles.section} ${styles.flexWrap} ${styles.flexGap3}`}>
         {/* Category Filter */}
-        <div className="flex-1 min-w-[200px]">
-          <label
-            htmlFor="category-filter"
-            className="block text-sm mb-1"
-            style={{ color: 'var(--text-secondary)' }}
-          >
+        <div className={styles.inputWrapper}>
+          <label htmlFor="category-filter" className={styles.label}>
             {locale === 'ko' ? '카테고리' : 'Category'}
           </label>
           <select
             id="category-filter"
             value={filterCategory}
             onChange={(e) => setFilterCategory(e.target.value as FilterCategory)}
-            className="w-full px-3 py-2 rounded-lg"
-            style={{
-              backgroundColor: 'var(--bg-elevated)',
-              color: 'var(--text-primary)',
-              border: '1px solid var(--border-primary)',
-            }}
+            className={styles.select}
           >
             <option value="all">{locale === 'ko' ? '전체' : 'All'}</option>
             {cats.map((cat) => (
@@ -297,24 +251,15 @@ export default function BrowsePage() {
         </div>
 
         {/* Status Filter */}
-        <div className="flex-1 min-w-[200px]">
-          <label
-            htmlFor="status-filter"
-            className="block text-sm mb-1"
-            style={{ color: 'var(--text-secondary)' }}
-          >
+        <div className={styles.inputWrapper}>
+          <label htmlFor="status-filter" className={styles.label}>
             {locale === 'ko' ? '학습 상태' : 'Study Status'}
           </label>
           <select
             id="status-filter"
             value={filterStatus}
             onChange={(e) => setFilterStatus(e.target.value as FilterStatus)}
-            className="w-full px-3 py-2 rounded-lg"
-            style={{
-              backgroundColor: 'var(--bg-elevated)',
-              color: 'var(--text-primary)',
-              border: '1px solid var(--border-primary)',
-            }}
+            className={styles.select}
           >
             <option value="all">{locale === 'ko' ? '전체' : 'All'}</option>
             <option value="studied">{locale === 'ko' ? '학습 완료' : 'Studied'}</option>
@@ -324,24 +269,15 @@ export default function BrowsePage() {
         </div>
 
         {/* Sort */}
-        <div className="flex-1 min-w-[200px]">
-          <label
-            htmlFor="sort-by"
-            className="block text-sm mb-1"
-            style={{ color: 'var(--text-secondary)' }}
-          >
+        <div className={styles.inputWrapper}>
+          <label htmlFor="sort-by" className={styles.label}>
             {locale === 'ko' ? '정렬' : 'Sort By'}
           </label>
           <select
             id="sort-by"
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as SortOption)}
-            className="w-full px-3 py-2 rounded-lg"
-            style={{
-              backgroundColor: 'var(--bg-elevated)',
-              color: 'var(--text-primary)',
-              border: '1px solid var(--border-primary)',
-            }}
+            className={styles.select}
           >
             <option value="alphabetical">{locale === 'ko' ? '가나다순' : 'Alphabetical'}</option>
             <option value="category">{locale === 'ko' ? '카테고리별' : 'By Category'}</option>
@@ -351,8 +287,8 @@ export default function BrowsePage() {
       </div>
 
       {/* Results Count */}
-      <div className="mb-4">
-        <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
+      <div className={styles.mb4}>
+        <p className={`${styles.textSm} ${styles.textSecondary}`}>
           {locale === 'ko'
             ? `${filteredEntries.length}개의 단어`
             : `${filteredEntries.length} words`}
@@ -360,7 +296,7 @@ export default function BrowsePage() {
       </div>
 
       {/* Word List */}
-      <div className="space-y-1">
+      <div className={styles.spaceY1}>
         {filteredEntries.map((entry) => {
           const translation = entry.translations[locale];
           const isStudied = studiedIds.has(entry.id);
@@ -368,68 +304,45 @@ export default function BrowsePage() {
           const category = cats.find((c) => c.id === entry.categoryId);
 
           return (
-            <Link
-              key={entry.id}
-              to={localePath(`/entry/${entry.id}`)}
-              className="flex items-center justify-between py-3 -mx-2 px-2 rounded transition-colors hover:bg-[var(--bg-tertiary)]"
-              style={{ borderBottom: '1px solid var(--border-primary)' }}
-            >
-              <div className="flex items-center gap-3 flex-1 min-w-0">
+            <Link key={entry.id} to={localePath(`/entry/${entry.id}`)} className={styles.listItem}>
+              <div className={styles.listItemContent}>
                 {/* Checkmark */}
-                <div className="shrink-0 w-5 h-5 flex items-center justify-center">
-                  {isStudied && (
-                    <div
-                      className="w-5 h-5 rounded-full flex items-center justify-center"
-                      style={{ backgroundColor: 'var(--accent-primary)' }}
-                    >
-                      <Check size={14} style={{ color: 'white' }} />
-                    </div>
-                  )}
+                <div className={isStudied ? styles.checkMark : styles.checkPlaceholder}>
+                  {isStudied && <Check size={14} style={{ color: 'white' }} />}
                 </div>
 
                 {/* Word info */}
-                <div className="flex items-baseline gap-3 flex-1 min-w-0">
-                  <span
-                    className="text-lg font-medium"
-                    style={{
-                      color: isStudied ? 'var(--text-secondary)' : 'var(--text-primary)',
-                      textDecoration: isStudied ? 'line-through' : 'none',
-                      opacity: isStudied ? 0.7 : 1,
-                    }}
-                  >
+                <div
+                  className={`${styles.flexStart} ${styles.flexGap3} ${styles.flex1} ${styles.minW0}`}
+                >
+                  <span className={isStudied ? styles.wordKoreanStudied : styles.wordKorean}>
                     {entry.korean}
                   </span>
-                  <span
-                    className="text-sm hidden sm:inline"
-                    style={{ color: 'var(--text-tertiary)' }}
-                  >
+                  <span className={`${styles.wordRomanization} ${styles.inlineSm}`}>
                     {entry.romanization}
                   </span>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 shrink-0">
+              <div className={styles.listItemRight}>
                 {/* Category badge (desktop only) */}
                 {category && (
-                  <span
-                    className="hidden md:inline text-xs px-2 py-1 rounded"
-                    style={{
-                      backgroundColor: 'var(--bg-secondary)',
-                      color: 'var(--text-tertiary)',
-                    }}
-                  >
+                  <span className={`${styles.badgeSecondary} ${styles.inlineMd}`}>
                     {category.icon} {category.name[locale]}
                   </span>
                 )}
 
                 {/* Translation */}
-                <span className="text-sm ml-2" style={{ color: 'var(--text-secondary)' }}>
+                <span className={`${styles.wordTranslation} ${styles.ml2}`}>
                   {translation.word}
                 </span>
 
                 {/* Bookmark indicator */}
                 {isFavorite && (
-                  <span className="text-sm" title={locale === 'ko' ? '북마크됨' : 'Bookmarked'}>
+                  <span
+                    className={styles.textSm}
+                    title={locale === 'ko' ? '북마크됨' : 'Bookmarked'}
+                  >
                     ⭐
                   </span>
                 )}
@@ -440,8 +353,8 @@ export default function BrowsePage() {
       </div>
 
       {filteredEntries.length === 0 && (
-        <div className="text-center py-12">
-          <p style={{ color: 'var(--text-tertiary)' }}>
+        <div className={styles.emptyState}>
+          <p className={styles.textTertiary}>
             {locale === 'ko' ? '단어가 없습니다' : 'No words found'}
           </p>
         </div>
