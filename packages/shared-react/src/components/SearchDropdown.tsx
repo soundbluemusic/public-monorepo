@@ -164,9 +164,9 @@ export function SearchDropdown({
   return (
     <div ref={containerRef} className={cn('relative', className)}>
       <div className="relative flex items-center">
-        {/* Search Icon (inline SVG like Sound Blue) */}
+        {/* Search Icon */}
         <svg
-          className="absolute left-2.5 w-4 h-4 text-(--text-tertiary) pointer-events-none"
+          className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-(--text-tertiary) pointer-events-none"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -188,8 +188,8 @@ export function SearchDropdown({
           onKeyDown={handleKeyDown}
           placeholder={placeholder[locale]}
           className={cn(
-            'w-full h-9 max-md:h-10 text-base font-inherit',
-            'pl-8.5 pr-8',
+            'w-full h-9 max-md:h-10 text-base',
+            'pl-9 pr-10',
             'bg-(--bg-tertiary) border border-(--border-primary) rounded-xl',
             'text-(--text-primary) placeholder:text-(--text-tertiary)',
             'outline-none transition-[border-color,background-color] duration-150',
@@ -208,7 +208,7 @@ export function SearchDropdown({
         {/* Shortcut badge (only when not focused and no query) */}
         {!isFocused && !query && (
           <span
-            className="absolute right-2 flex items-center px-1.5 py-0.5 font-inherit text-[0.6875rem] font-medium text-(--text-tertiary) bg-(--bg-secondary) border border-(--border-primary) rounded pointer-events-none max-md:hidden"
+            className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center px-1.5 py-0.5 text-[0.6875rem] font-medium text-(--text-tertiary) bg-(--bg-secondary) border border-(--border-primary) rounded pointer-events-none max-md:hidden"
             aria-hidden="true"
           >
             {shortcutKey}
@@ -220,7 +220,7 @@ export function SearchDropdown({
           <button
             type="button"
             onClick={handleClear}
-            className="absolute right-1.5 flex items-center justify-center w-6 h-6 p-0 bg-transparent border-none rounded text-(--text-tertiary) cursor-pointer transition-all duration-150 hover:text-(--text-primary) active:scale-90"
+            className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center justify-center w-6 h-6 p-0 bg-transparent border-none rounded text-(--text-tertiary) cursor-pointer transition-all duration-150 hover:text-(--text-primary) active:scale-90"
             aria-label={locale === 'ko' ? '검색어 지우기' : 'Clear search'}
           >
             <svg
