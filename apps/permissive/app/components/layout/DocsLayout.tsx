@@ -2,6 +2,7 @@ import { useIsMobile, useSettingsStore } from '@soundblue/shared-react';
 import { type ReactNode, useEffect, useState } from 'react';
 import { useI18n } from '../../i18n';
 import BottomNav from './BottomNav';
+import styles from './DocsLayout.module.scss';
 import Footer from './Footer';
 import Header from './Header';
 import Sidebar from './Sidebar';
@@ -48,9 +49,9 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
   };
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: 'var(--bg-primary)' }}>
+    <div className={styles.container}>
       {/* Skip to content - Accessibility */}
-      <a href="#main-content" className="skip-to-content">
+      <a href="#main-content" className={styles.skipToContent}>
         {t('ui.skipToContent')}
       </a>
 
@@ -70,7 +71,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
       {/* Main Content */}
       <main
         id="main-content"
-        className={`pt-header min-h-screen ${isReady ? 'transition-[margin] duration-200' : ''}`}
+        className={`${styles.main} ${isReady ? styles.mainReady : ''}`}
         style={{
           marginLeft: isMobile
             ? '0'
@@ -80,7 +81,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
           paddingBottom: isMobile ? 'var(--bottom-nav-height)' : '0',
         }}
       >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8">{children}</div>
+        <div className={styles.contentWrapper}>{children}</div>
 
         {/* Footer */}
         <Footer />
@@ -94,17 +95,12 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
         <button
           type="button"
           onClick={scrollToTop}
-          className="fixed bottom-20 md:bottom-8 right-4 z-30 min-h-11 min-w-11 flex items-center justify-center rounded-full shadow-lg transition-all"
-          style={{
-            backgroundColor: 'var(--bg-elevated)',
-            border: '1px solid var(--border-primary)',
-            color: 'var(--text-secondary)',
-          }}
+          className={styles.backToTop}
           aria-label={locale === 'ko' ? '맨 위로' : 'Back to top'}
         >
           <svg
             aria-hidden="true"
-            className="w-5 h-5"
+            className={styles.backToTopIcon}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

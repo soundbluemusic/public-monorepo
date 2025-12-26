@@ -1,0 +1,80 @@
+// DocsLayout.module.scss - Permissive docs layout styles
+
+$header-height: 3.5rem;
+$sidebar-width: 16rem;
+$sidebar-collapsed-width: 4rem;
+$bottom-nav-height: 64px;
+
+.container {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+.skipToContent {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent-primary);
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: 500;
+
+  &:focus {
+    left: 1rem;
+    top: 1rem;
+  }
+}
+
+.main {
+  padding-top: $header-height;
+  min-height: 100vh;
+}
+
+.mainReady {
+  transition: margin 200ms ease-out;
+}
+
+.contentWrapper {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+
+  @media (min-width: 640px) {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.backToTop {
+  position: fixed;
+  bottom: 5rem;
+  right: 1rem;
+  z-index: 30;
+  min-height: 2.75rem;
+  min-width: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  transition: all 150ms ease-out;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+  color: var(--text-secondary);
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    bottom: 2rem;
+  }
+
+  &:hover {
+    background-color: var(--bg-tertiary);
+  }
+}
+
+.backToTopIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
