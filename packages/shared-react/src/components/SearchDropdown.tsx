@@ -188,13 +188,14 @@ export function SearchDropdown({
           onKeyDown={handleKeyDown}
           placeholder={placeholder[locale]}
           className={cn(
-            'w-full h-9 max-md:h-10 text-base',
+            'w-full h-9 max-md:h-10 text-sm',
             'pl-9 pr-10',
-            'bg-(--bg-tertiary) border border-(--border-primary) rounded-xl',
-            'text-(--text-primary) placeholder:text-(--text-tertiary)',
-            'outline-none transition-[border-color,background-color] duration-150',
-            'focus:border-(--border-focus) focus:bg-(--bg-secondary)',
+            'rounded-xl outline-none',
+            'transition-[border-color,background-color] duration-150',
             '[&::-webkit-search-cancel-button]:hidden',
+            'text-(--text-primary) placeholder:text-(--text-tertiary)',
+            'bg-(--bg-tertiary) border border-(--border-primary)',
+            'focus:bg-(--bg-secondary) focus:border-(--border-focus)',
           )}
           // ARIA attributes for combobox pattern
           role="combobox"
@@ -208,7 +209,7 @@ export function SearchDropdown({
         {/* Shortcut badge (only when not focused and no query) */}
         {!isFocused && !query && (
           <span
-            className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center px-1.5 py-0.5 text-[0.6875rem] font-medium text-(--text-tertiary) bg-(--bg-secondary) border border-(--border-primary) rounded pointer-events-none max-md:hidden"
+            className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center px-1.5 py-0.5 text-[0.6875rem] font-medium rounded pointer-events-none max-md:hidden text-(--text-tertiary) bg-(--bg-secondary) border border-(--border-primary)"
             aria-hidden="true"
           >
             {shortcutKey}
@@ -220,7 +221,7 @@ export function SearchDropdown({
           <button
             type="button"
             onClick={handleClear}
-            className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center justify-center w-6 h-6 p-0 bg-transparent border-none rounded text-(--text-tertiary) cursor-pointer transition-all duration-150 hover:text-(--text-primary) active:scale-90"
+            className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center justify-center w-6 h-6 p-0 bg-transparent border-none rounded cursor-pointer transition-all duration-150 text-(--text-tertiary) hover:text-(--text-primary) active:scale-90"
             aria-label={locale === 'ko' ? '검색어 지우기' : 'Clear search'}
           >
             <svg
@@ -242,7 +243,7 @@ export function SearchDropdown({
         <div
           id={listboxId}
           tabIndex={-1}
-          className="absolute top-[calc(100%+4px)] left-0 right-0 z-[600] max-h-75 overflow-y-auto bg-(--bg-secondary) border border-(--border-primary) rounded-xl shadow-lg m-0 p-1"
+          className="absolute top-[calc(100%+4px)] left-0 right-0 z-[600] max-h-75 overflow-y-auto rounded-xl shadow-lg m-0 p-1 bg-(--bg-secondary) border border-(--border-primary)"
         >
           {isLoading ? (
             <div className="px-3 py-2.5 text-sm text-(--text-tertiary)">
@@ -259,7 +260,7 @@ export function SearchDropdown({
                 onClick={() => handleResultClick(result, index)}
                 onMouseEnter={() => setSelectedIndex(index)}
                 className={cn(
-                  'flex flex-col gap-0.5 w-full py-2.5 px-3 text-left rounded-lg transition-all duration-150 cursor-pointer',
+                  'flex flex-col gap-0.5 w-full py-2.5 px-3 text-left rounded-lg transition-all duration-150 cursor-pointer border-none',
                   selectedIndex === index ? 'bg-(--bg-tertiary)' : 'hover:bg-(--bg-tertiary)',
                 )}
               >
@@ -274,7 +275,7 @@ export function SearchDropdown({
 
       {/* No results message */}
       {isOpen && query.trim() && results.length === 0 && !isLoading && (
-        <div className="absolute top-[calc(100%+4px)] left-0 right-0 z-[600] bg-(--bg-secondary) border border-(--border-primary) rounded-xl shadow-lg p-4 text-center text-sm text-(--text-tertiary)">
+        <div className="absolute top-[calc(100%+4px)] left-0 right-0 z-[600] rounded-xl shadow-lg p-4 text-center text-sm bg-(--bg-secondary) border border-(--border-primary) text-(--text-tertiary)">
           {locale === 'ko' ? '검색 결과 없음' : 'No results found'}
         </div>
       )}
