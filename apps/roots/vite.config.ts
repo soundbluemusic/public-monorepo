@@ -1,6 +1,5 @@
 import { paraglide } from '@inlang/paraglide-vite';
 import { reactRouter } from '@react-router/dev/vite';
-import tailwindcss from '@tailwindcss/vite';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
@@ -23,7 +22,6 @@ export default defineConfig({
       project: './project.inlang',
       outdir: './app/paraglide',
     }),
-    tailwindcss(),
     reactRouter(),
     VitePWA({
       registerType: 'autoUpdate',

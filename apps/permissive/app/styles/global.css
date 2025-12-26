@@ -1,15 +1,7 @@
-@import "tailwindcss";
-/* 공통 스타일 (scrollbar, focus, selection, sr-only, reduced-motion, skeleton) */
 @import "@soundblue/shared-react/styles/base.css";
 
-/* Include shared-react components in Tailwind CSS scan */
-@source "../../../../packages/shared-react/src/**/*.tsx";
-
-/* Enable class-based dark mode */
-@custom-variant dark (&:where(.dark, .dark *));
-
 /* ============================================
-   Morning Mist / Deep Lagoon Theme
+   Morning Mist / Deep Lagoon Theme (Permissive)
    ============================================ */
 :root {
   /* Layout dimensions */
@@ -52,6 +44,12 @@
   --color-error: #c45858;
   --color-success: #4a9070;
   --color-warning: #b08830;
+
+  /* Fonts */
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue",
+    "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, "SF Mono", Menlo,
+    Consolas, monospace;
 }
 
 .dark {
@@ -84,39 +82,6 @@
   --color-warning: #e8c87c;
 }
 
-/* Theme configuration for Tailwind */
-@theme {
-  /* Theme colors mapped to CSS variables */
-  --color-bg-primary: var(--bg-primary);
-  --color-bg-secondary: var(--bg-secondary);
-  --color-bg-tertiary: var(--bg-tertiary);
-  --color-bg-elevated: var(--bg-elevated);
-
-  --color-text-primary: var(--text-primary);
-  --color-text-secondary: var(--text-secondary);
-  --color-text-tertiary: var(--text-tertiary);
-
-  --color-accent-primary: var(--accent-primary);
-  --color-accent-secondary: var(--accent-secondary);
-  --color-accent-tertiary: var(--accent-tertiary);
-  --color-accent-hover: var(--accent-hover);
-  --color-accent-mint: var(--accent-mint);
-
-  --color-border-primary: var(--border-primary);
-  --color-border-secondary: var(--border-secondary);
-  --color-border-focus: var(--border-focus);
-
-  --color-error: var(--color-error);
-  --color-success: var(--color-success);
-  --color-warning: var(--color-warning);
-
-  /* Fonts */
-  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue",
-    "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
-  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, "SF Mono", Menlo,
-    Consolas, monospace;
-}
-
 /* ============================================
    Base Styles
    ============================================ */
@@ -136,127 +101,142 @@ body {
 }
 
 /* ============================================
-   Component Shortcuts
+   Buttons
    ============================================ */
-@layer components {
-  /* Buttons */
-  .btn {
-    @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200;
-  }
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+}
 
-  .btn-primary {
-    @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200;
-    background-color: var(--accent-primary);
-    color: white;
-  }
+.btn-primary {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+  background-color: var(--accent-primary);
+  color: white;
+}
 
-  .btn-primary:hover {
-    background-color: var(--accent-hover);
-  }
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+}
 
-  .btn-secondary {
-    @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200;
-    background-color: var(--bg-tertiary);
-    color: var(--text-primary);
-  }
+.btn-secondary {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
 
-  .btn-secondary:hover {
-    background-color: var(--border-primary);
-  }
+.btn-secondary:hover {
+  background-color: var(--border-primary);
+}
 
-  /* Cards */
-  .card {
-    background-color: var(--bg-elevated);
-    border: 1px solid var(--border-primary);
-    @apply rounded-xl shadow-sm;
-  }
+/* ============================================
+   Cards
+   ============================================ */
+.card {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
 
-  /* Badges */
-  .badge {
-    @apply px-2.5 py-1 rounded-full text-xs font-medium;
-  }
+/* ============================================
+   Badges
+   ============================================ */
+.badge {
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
 
-  .badge-mit {
-    @apply px-2.5 py-1 rounded-full text-xs font-medium;
-    background-color: rgba(74, 144, 112, 0.15);
-    color: var(--color-success);
-  }
+.badge-mit {
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: rgba(74, 144, 112, 0.15);
+  color: var(--color-success);
+}
 
-  .badge-apache {
-    @apply px-2.5 py-1 rounded-full text-xs font-medium;
-    background-color: rgba(74, 158, 149, 0.15);
-    color: var(--accent-primary);
-  }
+.badge-apache {
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: rgba(74, 158, 149, 0.15);
+  color: var(--accent-primary);
 }
 
 /* ============================================
    Layout Utilities
    ============================================ */
-@layer utilities {
-  /* Header height utilities */
-  .h-header {
-    height: var(--header-height);
-  }
+.h-header {
+  height: var(--header-height);
+}
 
-  .pt-header {
-    padding-top: var(--header-height);
-  }
+.pt-header {
+  padding-top: var(--header-height);
+}
 
-  .top-header {
-    top: var(--header-height);
-  }
+.top-header {
+  top: var(--header-height);
+}
 
-  /* Sidebar width utilities */
-  .w-sidebar {
-    width: var(--sidebar-width);
-  }
+.w-sidebar {
+  width: var(--sidebar-width);
+}
 
-  .ml-sidebar {
-    margin-left: var(--sidebar-width);
-  }
+.ml-sidebar {
+  margin-left: var(--sidebar-width);
+}
 
-  /* Bottom nav height utilities */
-  .h-bottom-nav {
-    height: var(--bottom-nav-height);
-  }
+.h-bottom-nav {
+  height: var(--bottom-nav-height);
+}
 
-  .pb-bottom-nav {
-    padding-bottom: var(--bottom-nav-height);
-  }
+.pb-bottom-nav {
+  padding-bottom: var(--bottom-nav-height);
+}
 
-  /* Hover background utilities */
-  .hover-bg {
-    transition: background-color 0.15s ease;
-  }
+/* Hover background utilities */
+.hover-bg {
+  transition: background-color 0.15s ease;
+}
 
-  .hover-bg:hover {
-    background-color: var(--bg-tertiary);
-  }
+.hover-bg:hover {
+  background-color: var(--bg-tertiary);
+}
 
-  .hover-bg-secondary:hover {
-    background-color: var(--bg-secondary);
-  }
+.hover-bg-secondary:hover {
+  background-color: var(--bg-secondary);
+}
 
-  .hover-bg-border:hover {
-    background-color: var(--border-primary);
-  }
+.hover-bg-border:hover {
+  background-color: var(--border-primary);
+}
 
-  /* Z-index utilities */
-  .z-header {
-    z-index: var(--z-header);
-  }
+/* Z-index utilities */
+.z-header {
+  z-index: var(--z-header);
+}
 
-  .z-sidebar {
-    z-index: var(--z-sidebar);
-  }
+.z-sidebar {
+  z-index: var(--z-sidebar);
+}
 
-  .z-overlay {
-    z-index: var(--z-overlay);
-  }
+.z-overlay {
+  z-index: var(--z-overlay);
+}
 
-  .z-bottom-nav {
-    z-index: var(--z-bottom-nav);
-  }
+.z-bottom-nav {
+  z-index: var(--z-bottom-nav);
 }
 
 /* ============================================

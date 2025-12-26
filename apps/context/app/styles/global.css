@@ -1,11 +1,4 @@
-@import "tailwindcss";
 @import "@soundblue/shared-react/styles/base.css";
-
-/* Include shared-react components in Tailwind CSS scan */
-@source "../../../../packages/shared-react/src/**/*.tsx";
-
-/* Enable class-based dark mode */
-@custom-variant dark (&:where(.dark, .dark *));
 
 /* ============================================
    Violet Dream Theme (Context)
@@ -13,6 +6,7 @@
 :root {
   /* Layout */
   --header-height: 56px;
+  --bottom-nav-height: 64px;
 
   /* Background */
   --bg-primary: #faf9fc;
@@ -30,6 +24,7 @@
   --accent-secondary: #7c5cff;
   --accent-tertiary: #9178ff;
   --accent-hover: #5a3ed4;
+  --accent-mint: #c5b8ff; /* For selection highlight */
 
   /* Border */
   --border-primary: #e0dce8;
@@ -40,6 +35,9 @@
   --color-error: #dc4b4b;
   --color-success: #22a06b;
   --color-warning: #cf9f02;
+
+  /* Fonts */
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
 
 .dark {
@@ -59,6 +57,7 @@
   --accent-secondary: #b0a0ff;
   --accent-tertiary: #c5b8ff;
   --accent-hover: #b0a0ff;
+  --accent-mint: #9b82ff;
 
   /* Border */
   --border-primary: #352f45;
@@ -71,29 +70,9 @@
   --color-warning: #ffcc00;
 }
 
-/* Theme config for Tailwind */
-@theme {
-  --color-bg-primary: var(--bg-primary);
-  --color-bg-secondary: var(--bg-secondary);
-  --color-bg-tertiary: var(--bg-tertiary);
-  --color-bg-elevated: var(--bg-elevated);
-
-  --color-text-primary: var(--text-primary);
-  --color-text-secondary: var(--text-secondary);
-  --color-text-tertiary: var(--text-tertiary);
-
-  --color-accent-primary: var(--accent-primary);
-  --color-accent-secondary: var(--accent-secondary);
-  --color-accent-hover: var(--accent-hover);
-
-  --color-border-primary: var(--border-primary);
-  --color-border-secondary: var(--border-secondary);
-  --color-border-focus: var(--border-focus);
-
-  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-}
-
-/* Base styles */
+/* ============================================
+   Base Styles
+   ============================================ */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-height) + 1rem);
@@ -106,25 +85,24 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Utilities */
-@layer utilities {
-  .h-header {
-    height: var(--header-height);
-  }
-  .pt-header {
-    padding-top: var(--header-height);
-  }
-  .pb-bottom-nav {
-    padding-bottom: calc(var(--bottom-nav-height, 64px) + env(safe-area-inset-bottom, 0px));
-  }
+/* ============================================
+   Layout Utilities (used by SCSS Modules)
+   ============================================ */
+.h-header {
+  height: var(--header-height);
 }
 
-/* Bottom navigation height */
-:root {
-  --bottom-nav-height: 64px;
+.pt-header {
+  padding-top: var(--header-height);
 }
 
-/* Accessibility - Skip to content */
+.pb-bottom-nav {
+  padding-bottom: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom, 0px));
+}
+
+/* ============================================
+   Accessibility - Skip to content
+   ============================================ */
 .skip-to-content {
   position: absolute;
   left: -9999px;
@@ -141,7 +119,9 @@ body {
   top: 1rem;
 }
 
-/* Focus visible indicators */
+/* ============================================
+   Focus visible indicators
+   ============================================ */
 :focus-visible {
   outline: 2px solid var(--accent-primary);
   outline-offset: 2px;

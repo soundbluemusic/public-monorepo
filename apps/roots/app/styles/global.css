@@ -1,11 +1,4 @@
-@import "tailwindcss";
 @import "@soundblue/shared-react/styles/base.css";
-
-/* Include shared-react components in Tailwind CSS scan */
-@source "../../../../packages/shared-react/src/**/*.tsx";
-
-/* Enable class-based dark mode */
-@custom-variant dark (&:where(.dark, .dark *));
 
 /* ============================================
    Ocean Blue Theme (Roots)
@@ -13,6 +6,7 @@
 :root {
   /* Layout */
   --header-height: 56px;
+  --bottom-nav-height: 64px;
 
   /* Background */
   --bg-primary: #f8fafc;
@@ -30,6 +24,7 @@
   --accent-secondary: #3b82f6;
   --accent-tertiary: #60a5fa;
   --accent-hover: #1d4ed8;
+  --accent-mint: #93c5fd; /* For selection highlight */
 
   /* Border */
   --border-primary: #e2e8f0;
@@ -47,6 +42,12 @@
   --difficulty-3: #eab308;
   --difficulty-4: #f97316;
   --difficulty-5: #ef4444;
+
+  /* Math formula color */
+  --math-formula: #2563eb;
+
+  /* Fonts */
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
 
 .dark {
@@ -66,6 +67,7 @@
   --accent-secondary: #93c5fd;
   --accent-tertiary: #bfdbfe;
   --accent-hover: #93c5fd;
+  --accent-mint: #60a5fa;
 
   /* Border */
   --border-primary: #334155;
@@ -76,31 +78,14 @@
   --color-error: #f87171;
   --color-success: #4ade80;
   --color-warning: #fbbf24;
+
+  /* Math formula color (dark) */
+  --math-formula: #60a5fa;
 }
 
-/* Theme config for Tailwind */
-@theme {
-  --color-bg-primary: var(--bg-primary);
-  --color-bg-secondary: var(--bg-secondary);
-  --color-bg-tertiary: var(--bg-tertiary);
-  --color-bg-elevated: var(--bg-elevated);
-
-  --color-text-primary: var(--text-primary);
-  --color-text-secondary: var(--text-secondary);
-  --color-text-tertiary: var(--text-tertiary);
-
-  --color-accent-primary: var(--accent-primary);
-  --color-accent-secondary: var(--accent-secondary);
-  --color-accent-hover: var(--accent-hover);
-
-  --color-border-primary: var(--border-primary);
-  --color-border-secondary: var(--border-secondary);
-  --color-border-focus: var(--border-focus);
-
-  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-}
-
-/* Base styles */
+/* ============================================
+   Base Styles
+   ============================================ */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-height) + 1rem);
@@ -115,7 +100,9 @@ body {
   overflow-x: hidden;
 }
 
-/* Math formula styling */
+/* ============================================
+   Math formula styling
+   ============================================ */
 .formula-block {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-primary);
@@ -141,25 +128,24 @@ body {
   padding: 0.5rem 0;
 }
 
-/* Utilities */
-@layer utilities {
-  .h-header {
-    height: var(--header-height);
-  }
-  .pt-header {
-    padding-top: var(--header-height);
-  }
-  .pb-bottom-nav {
-    padding-bottom: calc(var(--bottom-nav-height, 64px) + env(safe-area-inset-bottom, 0px));
-  }
+/* ============================================
+   Layout Utilities (used by SCSS Modules)
+   ============================================ */
+.h-header {
+  height: var(--header-height);
 }
 
-/* Bottom navigation height */
-:root {
-  --bottom-nav-height: 64px;
+.pt-header {
+  padding-top: var(--header-height);
 }
 
-/* Accessibility - Skip to content */
+.pb-bottom-nav {
+  padding-bottom: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom, 0px));
+}
+
+/* ============================================
+   Accessibility - Skip to content
+   ============================================ */
 .skip-to-content {
   position: absolute;
   left: -9999px;
@@ -176,7 +162,9 @@ body {
   top: 1rem;
 }
 
-/* Focus visible indicators */
+/* ============================================
+   Focus visible indicators
+   ============================================ */
 :focus-visible {
   outline: 2px solid var(--accent-primary);
   outline-offset: 2px;
