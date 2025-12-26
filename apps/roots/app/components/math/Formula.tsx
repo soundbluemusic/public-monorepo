@@ -33,7 +33,7 @@ export function FormulaCard({ formula }: FormulaCardProps) {
         <ul className="mt-2 space-y-2">
           {formula.variables.map((variable) => (
             <li key={variable.symbol} className="flex items-center gap-2">
-              <span className="font-mono px-1.5 py-0.5 rounded bg-(--bg-tertiary) text-[var(--math-formula,var(--accent-primary))]">
+              <span className="font-mono px-1.5 py-0.5 rounded bg-(--bg-tertiary) text-(--math-formula)">
                 <LaTeX math={variable.symbol} />
               </span>
               <span className="text-(--text-secondary)">{variable.meaning}</span>

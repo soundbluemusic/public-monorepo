@@ -339,7 +339,7 @@ export function LaTeX({ math, display, className }: LaTeXProps) {
   return (
     <span
       className={cn(
-        "font-['STIX_Two_Math','Cambria_Math',serif] text-[var(--math-formula,var(--accent-primary))]",
+        "font-['STIX_Two_Math','Cambria_Math',serif] text-(--math-formula)",
         display ? 'block text-center text-[1.2em] leading-8' : 'inline',
         className,
       )}

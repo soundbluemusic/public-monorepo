@@ -21,7 +21,6 @@ export function SkeletonText({ lines = 3, className = '' }: SkeletonTextProps) {
   return (
     <div className={cn('space-y-2', className)}>
       {Array.from({ length: lines }, (_, i) => (
-        // biome-ignore lint/suspicious/noArrayIndexKey: Static skeleton placeholders never reorder
         <div
           key={`skeleton-line-${i}`}
           className={cn('h-4 animate-pulse bg-(--bg-tertiary) rounded', i === lines - 1 && 'w-2/3')}
@@ -61,7 +60,6 @@ export function SkeletonList({ count = 5, className = '' }: SkeletonListProps) {
   return (
     <div className={cn('space-y-3', className)}>
       {Array.from({ length: count }, (_, i) => (
-        // biome-ignore lint/suspicious/noArrayIndexKey: Static skeleton placeholders never reorder
         <div key={`skeleton-list-${i}`} className="flex items-center gap-3">
           <div className="w-10 h-10 flex-shrink-0 animate-pulse bg-(--bg-tertiary) rounded-full" />
           <div className="flex-1 space-y-2">
@@ -92,7 +90,6 @@ export function SkeletonGrid({ count = 6, columns = 3, className = '' }: Skeleto
   return (
     <div className={cn('grid gap-4', columnClass, className)}>
       {Array.from({ length: count }, (_, i) => (
-        // biome-ignore lint/suspicious/noArrayIndexKey: Static skeleton placeholders never reorder
         <SkeletonCard key={`skeleton-grid-${i}`} />
       ))}
     </div>
