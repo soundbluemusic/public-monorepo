@@ -65,7 +65,7 @@ export function DarkModeToggle({ className = '', style }: DarkModeToggleProps) {
       type="button"
       className={cn(
         'min-h-11 min-w-11 flex items-center justify-center rounded-lg',
-        'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] transition-colors cursor-pointer',
+        'text-(--text-secondary) hover:bg-(--bg-tertiary) transition-colors cursor-pointer',
         className,
       )}
       style={style}

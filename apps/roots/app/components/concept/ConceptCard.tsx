@@ -28,21 +28,21 @@ export function ConceptCard({ concept }: ConceptCardProps) {
   return (
     <Link
       to={localePath(`/concept/${concept.id}`)}
-      className="block p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)] no-underline transition-all hover:-translate-y-0.5 hover:shadow-md hover:border-[var(--border-focus)]"
+      className="block p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) no-underline transition-all hover:-translate-y-0.5 hover:shadow-md hover:border-(--border-focus)"
     >
       {/* 헤더 */}
       <div className="flex items-center justify-between mb-2">
-        <h3 className="font-semibold text-[var(--text-primary)] truncate">{name}</h3>
+        <h3 className="font-semibold text-(--text-primary) truncate">{name}</h3>
         <DifficultyBadge level={concept.difficulty} showLabel={false} size="sm" />
       </div>
 
       {/* 정의 */}
-      <p className="text-sm text-[var(--text-secondary)] line-clamp-2 mb-2">{definition}</p>
+      <p className="text-sm text-(--text-secondary) line-clamp-2 mb-2">{definition}</p>
 
       {/* 분야 태그 */}
       <div className="flex items-center gap-2 text-xs">
         <span>{field?.icon}</span>
-        <span className="px-1 py-0.5 rounded bg-[var(--bg-tertiary)] text-[var(--text-secondary)]">
+        <span className="px-1 py-0.5 rounded bg-(--bg-tertiary) text-(--text-secondary)">
           {field?.name[locale] || field?.name.en}
         </span>
       </div>

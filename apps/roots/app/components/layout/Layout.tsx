@@ -66,18 +66,18 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[var(--bg-primary)]">
+    <div className="min-h-screen flex flex-col bg-(--bg-primary)">
       {/* Skip to content */}
       <a href="#main-content" className="skip-to-content">
         {locale === 'ko' ? '본문으로 건너뛰기' : 'Skip to content'}
       </a>
 
       {/* Header */}
-      <header className="sticky top-0 z-30 backdrop-blur-sm bg-[var(--bg-primary)]/80 border-b border-[var(--border-primary)]">
+      <header className="sticky top-0 z-30 backdrop-blur-sm bg-(--bg-primary)/80 border-b border-(--border-primary)">
         <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
           <Link
             to={localePath('/')}
-            className="font-semibold flex-shrink-0 flex items-center gap-2 text-[var(--text-primary)] no-underline"
+            className="font-semibold flex-shrink-0 flex items-center gap-2 text-(--text-primary) no-underline"
           >
             <span className="text-xl">π</span>
             <span>Roots</span>
@@ -102,8 +102,8 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
               className={cn(
                 'hidden sm:flex min-h-11 items-center px-3 py-2 text-sm rounded-lg transition-colors no-underline',
                 isActive('/browse')
-                  ? 'text-[var(--accent-primary)] bg-[var(--bg-tertiary)]'
-                  : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]',
+                  ? 'text-(--accent-primary) bg-(--bg-tertiary)'
+                  : 'text-(--text-secondary) hover:bg-(--bg-tertiary)',
               )}
             >
               {t('browse')}
@@ -114,8 +114,8 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
               className={cn(
                 'hidden sm:flex min-h-11 items-center px-3 py-2 text-sm rounded-lg transition-colors no-underline',
                 isActive('/favorites')
-                  ? 'text-[var(--accent-primary)] bg-[var(--bg-tertiary)]'
-                  : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]',
+                  ? 'text-(--accent-primary) bg-(--bg-tertiary)'
+                  : 'text-(--text-secondary) hover:bg-(--bg-tertiary)',
               )}
             >
               {t('favorites')}
@@ -126,8 +126,8 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
               className={cn(
                 'hidden sm:flex min-h-11 items-center px-3 py-2 text-sm rounded-lg transition-colors no-underline',
                 isActive('/constants')
-                  ? 'text-[var(--accent-primary)] bg-[var(--bg-tertiary)]'
-                  : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]',
+                  ? 'text-(--accent-primary) bg-(--bg-tertiary)'
+                  : 'text-(--text-secondary) hover:bg-(--bg-tertiary)',
               )}
             >
               {t('constants')}
@@ -155,19 +155,19 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
                     {index > 0 && (
                       <ChevronRight
                         size={14}
-                        className="text-[var(--text-tertiary)]"
+                        className="text-(--text-tertiary)"
                         aria-hidden="true"
                       />
                     )}
                     {item.path ? (
                       <Link
                         to={localePath(item.path)}
-                        className="text-[var(--text-secondary)] no-underline hover:underline"
+                        className="text-(--text-secondary) no-underline hover:underline"
                       >
                         {item.label}
                       </Link>
                     ) : (
-                      <span className="text-[var(--text-primary)]">{item.label}</span>
+                      <span className="text-(--text-primary)">{item.label}</span>
                     )}
                   </li>
                 ))}
@@ -179,12 +179,12 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
       </div>
 
       {/* Mobile Bottom Navigation */}
-      <nav className="fixed bottom-0 left-0 right-0 z-40 bg-[var(--bg-elevated)] border-t border-[var(--border-primary)] flex items-center justify-around h-16 pb-[env(safe-area-inset-bottom,0px)] lg:hidden">
+      <nav className="fixed bottom-0 left-0 right-0 z-40 bg-(--bg-elevated) border-t border-(--border-primary) flex items-center justify-around h-16 pb-[env(safe-area-inset-bottom,0px)] lg:hidden">
         <Link
           to={localePath('/browse')}
           className={cn(
             'flex flex-col items-center justify-center gap-1 min-h-11 min-w-11 px-4 py-2 no-underline transition-colors',
-            isActive('/browse') ? 'text-[var(--accent-primary)]' : 'text-[var(--text-secondary)]',
+            isActive('/browse') ? 'text-(--accent-primary)' : 'text-(--text-secondary)',
           )}
         >
           <BookOpen size={20} aria-hidden="true" />
@@ -194,9 +194,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
           to={localePath('/favorites')}
           className={cn(
             'flex flex-col items-center justify-center gap-1 min-h-11 min-w-11 px-4 py-2 no-underline transition-colors',
-            isActive('/favorites')
-              ? 'text-[var(--accent-primary)]'
-              : 'text-[var(--text-secondary)]',
+            isActive('/favorites') ? 'text-(--accent-primary)' : 'text-(--text-secondary)',
           )}
         >
           <Heart size={20} aria-hidden="true" />
@@ -206,9 +204,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
           to={localePath('/constants')}
           className={cn(
             'flex flex-col items-center justify-center gap-1 min-h-11 min-w-11 px-4 py-2 no-underline transition-colors',
-            isActive('/constants')
-              ? 'text-[var(--accent-primary)]'
-              : 'text-[var(--text-secondary)]',
+            isActive('/constants') ? 'text-(--accent-primary)' : 'text-(--text-secondary)',
           )}
         >
           <Star size={20} aria-hidden="true" />
@@ -221,7 +217,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
         <button
           type="button"
           onClick={scrollToTop}
-          className="fixed bottom-20 lg:bottom-8 right-4 z-30 min-h-11 min-w-11 flex items-center justify-center rounded-full shadow-md transition-colors bg-[var(--bg-elevated)] border border-[var(--border-primary)] text-[var(--text-secondary)] cursor-pointer hover:bg-[var(--bg-tertiary)]"
+          className="fixed bottom-20 lg:bottom-8 right-4 z-30 min-h-11 min-w-11 flex items-center justify-center rounded-full shadow-md transition-colors bg-(--bg-elevated) border border-(--border-primary) text-(--text-secondary) cursor-pointer hover:bg-(--bg-tertiary)"
           aria-label={locale === 'ko' ? '맨 위로' : 'Back to top'}
         >
           <ArrowUp size={20} aria-hidden="true" />
@@ -229,9 +225,9 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
       )}
 
       {/* Footer - Hidden on mobile */}
-      <footer className="hidden lg:block mt-auto py-8 bg-[var(--bg-secondary)] border-t border-[var(--border-primary)]">
+      <footer className="hidden lg:block mt-auto py-8 bg-(--bg-secondary) border-t border-(--border-primary)">
         <div className="max-w-6xl mx-auto px-4">
-          <nav className="flex items-center justify-center gap-6 mb-4 text-sm text-[var(--text-secondary)]">
+          <nav className="flex items-center justify-center gap-6 mb-4 text-sm text-(--text-secondary)">
             <Link to={localePath('/about')} className="no-underline hover:underline text-inherit">
               {t('about')}
             </Link>
@@ -239,13 +235,13 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
               {locale === 'ko' ? '사이트맵' : 'Sitemap'}
             </Link>
           </nav>
-          <div className="flex items-center justify-center gap-4 text-sm text-[var(--text-tertiary)]">
+          <div className="flex items-center justify-center gap-4 text-sm text-(--text-tertiary)">
             <p>{t('footerText')}</p>
             <a
               href="https://github.com/soundbluemusic/public-monorepo"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-[var(--accent-primary)] no-underline hover:underline"
+              className="flex items-center gap-1.5 text-(--accent-primary) no-underline hover:underline"
             >
               <Github size={16} aria-hidden="true" />
               {t('github')}

@@ -20,15 +20,15 @@ function SearchResultCard({ result }: { result: FuseSearchResult }) {
   return (
     <Link
       to={localePath(`/concept/${item.id}`)}
-      className="block p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)] no-underline transition-all hover:-translate-y-0.5 hover:shadow-md hover:border-[var(--border-focus)]"
+      className="block p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) no-underline transition-all hover:-translate-y-0.5 hover:shadow-md hover:border-(--border-focus)"
     >
       <div className="flex items-start justify-between gap-2 mb-2">
-        <h3 className="text-base font-medium text-[var(--text-primary)]">{name}</h3>
+        <h3 className="text-base font-medium text-(--text-primary)">{name}</h3>
         <DifficultyBadge level={item.difficulty as DifficultyLevel} showLabel={false} size="sm" />
       </div>
-      <p className="text-sm text-[var(--text-secondary)] line-clamp-2 mb-2">{def}</p>
+      <p className="text-sm text-(--text-secondary) line-clamp-2 mb-2">{def}</p>
       <div className="flex items-center gap-2">
-        <span className="text-xs text-[var(--text-tertiary)]">{item.field}</span>
+        <span className="text-xs text-(--text-tertiary)">{item.field}</span>
       </div>
     </Link>
   );
@@ -67,9 +67,9 @@ export default function SearchPage() {
     <Layout>
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-[var(--text-primary)] mb-2">{t('search')}</h1>
+        <h1 className="text-2xl font-bold text-(--text-primary) mb-2">{t('search')}</h1>
         {query && (
-          <p className="text-[var(--text-secondary)]">
+          <p className="text-(--text-secondary)">
             "{query}"{t('searchResultsFor')}
           </p>
         )}
@@ -78,11 +78,11 @@ export default function SearchPage() {
       {/* Results */}
       {isSearching ? (
         <div className="text-center py-12">
-          <div className="h-6 w-48 mx-auto rounded bg-[var(--bg-tertiary)] animate-pulse" />
+          <div className="h-6 w-48 mx-auto rounded bg-(--bg-tertiary) animate-pulse" />
         </div>
       ) : results.length > 0 ? (
         <>
-          <div className="text-sm text-[var(--text-secondary)] mb-4">
+          <div className="text-sm text-(--text-secondary) mb-4">
             {results.length}
             {t('resultsCount')}
           </div>
@@ -94,8 +94,8 @@ export default function SearchPage() {
         </>
       ) : query.length >= 2 ? (
         <div className="text-center py-12">
-          <p className="text-xl text-[var(--text-primary)] mb-2">{t('noResults')}</p>
-          <p className="text-sm text-[var(--text-secondary)]">{t('tryDifferentSearch')}</p>
+          <p className="text-xl text-(--text-primary) mb-2">{t('noResults')}</p>
+          <p className="text-sm text-(--text-secondary)">{t('tryDifferentSearch')}</p>
         </div>
       ) : null}
     </Layout>

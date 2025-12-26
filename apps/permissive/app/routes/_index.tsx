@@ -126,11 +126,11 @@ export default function Home() {
           <span>{locale === 'ko' ? '2025년 최신 기술 업데이트' : '2025 Latest Tech Updated'}</span>
         </div>
 
-        <h1 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-4">
+        <h1 className="text-3xl md:text-4xl font-bold text-(--text-primary) mb-4">
           {locale === 'ko' ? '무료 웹개발 도구 모음' : 'Free Web Dev Tools'}
         </h1>
 
-        <p className="text-lg text-[var(--text-secondary)] mb-8 max-w-xl mx-auto">
+        <p className="text-lg text-(--text-secondary) mb-8 max-w-xl mx-auto">
           {locale === 'ko'
             ? '100개 이상의 MIT 라이브러리와 58개 웹표준 API를 한눈에'
             : '100+ MIT licensed libraries and 58 Web Standard APIs at a glance'}
@@ -139,20 +139,20 @@ export default function Home() {
         {/* Stats */}
         <div className="flex justify-center gap-8 md:gap-12 mb-8">
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-[var(--accent-primary)]">100+</div>
-            <div className="text-sm text-[var(--text-tertiary)]">
+            <div className="text-2xl md:text-3xl font-bold text-(--accent-primary)">100+</div>
+            <div className="text-sm text-(--text-tertiary)">
               {locale === 'ko' ? 'OSS 라이브러리' : 'OSS Libraries'}
             </div>
           </div>
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-[var(--accent-primary)]">58</div>
-            <div className="text-sm text-[var(--text-tertiary)]">
+            <div className="text-2xl md:text-3xl font-bold text-(--accent-primary)">58</div>
+            <div className="text-sm text-(--text-tertiary)">
               {locale === 'ko' ? '웹 표준 API' : 'Web APIs'}
             </div>
           </div>
           <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-[var(--accent-primary)]">13</div>
-            <div className="text-sm text-[var(--text-tertiary)]">
+            <div className="text-2xl md:text-3xl font-bold text-(--accent-primary)">13</div>
+            <div className="text-sm text-(--text-tertiary)">
               {locale === 'ko' ? '카테고리' : 'Categories'}
             </div>
           </div>
@@ -169,7 +169,7 @@ export default function Home() {
             <Search
               size={18}
               aria-hidden="true"
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--text-tertiary)]"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-(--text-tertiary)"
             />
             <input
               type="text"
@@ -191,26 +191,26 @@ export default function Home() {
                   setShowResults(false);
                 }
               }}
-              className="w-full min-h-12 pl-11 pr-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)] text-[var(--text-primary)] placeholder:text-[var(--text-tertiary)] focus:outline-none focus:border-[var(--border-focus)] transition-colors"
+              className="w-full min-h-12 pl-11 pr-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none focus:border-(--border-focus) transition-colors"
             />
             {/* Search Results Dropdown */}
             {showResults && filteredResults.length > 0 && (
-              <div className="absolute top-full left-0 right-0 mt-2 py-2 bg-[var(--bg-elevated)] border border-[var(--border-primary)] rounded-xl shadow-lg z-50">
+              <div className="absolute top-full left-0 right-0 mt-2 py-2 bg-(--bg-elevated) border border-(--border-primary) rounded-xl shadow-lg z-50">
                 {filteredResults.map((item) => (
                   <button
                     key={item.name}
                     type="button"
                     onClick={() => handleResultClick(item)}
-                    className="w-full flex items-center gap-3 px-4 py-2 text-left hover:bg-[var(--bg-tertiary)] transition-colors cursor-pointer"
+                    className="w-full flex items-center gap-3 px-4 py-2 text-left hover:bg-(--bg-tertiary) transition-colors cursor-pointer"
                   >
-                    <span className="text-[var(--text-tertiary)]">
+                    <span className="text-(--text-tertiary)">
                       {item.type === 'library' ? (
                         <Package size={16} aria-hidden="true" />
                       ) : (
                         <Globe size={16} aria-hidden="true" />
                       )}
                     </span>
-                    <span className="flex-1 text-[var(--text-primary)]">{item.name}</span>
+                    <span className="flex-1 text-(--text-primary)">{item.name}</span>
                     <span
                       className={cn(
                         'px-2 py-0.5 rounded text-xs font-medium',
@@ -226,7 +226,7 @@ export default function Home() {
               </div>
             )}
           </form>
-          <p className="text-sm text-[var(--text-tertiary)] mt-2">
+          <p className="text-sm text-(--text-tertiary) mt-2">
             {locale === 'ko' ? '실시간으로 검색됩니다' : 'Search results appear as you type'}
           </p>
         </div>
@@ -234,7 +234,7 @@ export default function Home() {
 
       {/* Trending Section */}
       <div className="py-8">
-        <h2 className="text-xl font-semibold text-[var(--text-primary)] mb-6 flex items-center gap-2">
+        <h2 className="text-xl font-semibold text-(--text-primary) mb-6 flex items-center gap-2">
           <Flame size={20} aria-hidden="true" className="text-orange-500" />
           {locale === 'ko' ? '2025년 트렌딩' : 'Trending 2025'}
         </h2>
@@ -242,7 +242,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-6">
           {/* Trending Libraries */}
           <div>
-            <h3 className="text-sm font-medium text-[var(--text-tertiary)] uppercase tracking-wider mb-3">
+            <h3 className="text-sm font-medium text-(--text-tertiary) uppercase tracking-wider mb-3">
               Libraries
             </h3>
             <div className="space-y-2">
@@ -250,17 +250,17 @@ export default function Home() {
                 <Link
                   key={lib.name}
                   to={`${localePath('/libraries')}?trending=true`}
-                  className="flex items-center gap-3 p-3 rounded-lg bg-[var(--bg-elevated)] border border-[var(--border-primary)] no-underline transition-all hover:border-[var(--border-focus)] hover:shadow-sm group"
+                  className="flex items-center gap-3 p-3 rounded-lg bg-(--bg-elevated) border border-(--border-primary) no-underline transition-all hover:border-(--border-focus) hover:shadow-sm group"
                 >
-                  <span className="text-[var(--accent-primary)]">{lib.icon}</span>
+                  <span className="text-(--accent-primary)">{lib.icon}</span>
                   <div className="flex-1 min-w-0">
-                    <div className="font-medium text-[var(--text-primary)]">{lib.name}</div>
-                    <div className="text-xs text-[var(--text-tertiary)]">{lib.category}</div>
+                    <div className="font-medium text-(--text-primary)">{lib.name}</div>
+                    <div className="text-xs text-(--text-tertiary)">{lib.category}</div>
                   </div>
                   <ChevronRight
                     size={16}
                     aria-hidden="true"
-                    className="text-[var(--text-tertiary)] opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="text-(--text-tertiary) opacity-0 group-hover:opacity-100 transition-opacity"
                   />
                 </Link>
               ))}
@@ -269,7 +269,7 @@ export default function Home() {
 
           {/* Trending Web APIs */}
           <div>
-            <h3 className="text-sm font-medium text-[var(--text-tertiary)] uppercase tracking-wider mb-3">
+            <h3 className="text-sm font-medium text-(--text-tertiary) uppercase tracking-wider mb-3">
               Web APIs
             </h3>
             <div className="space-y-2">
@@ -277,16 +277,16 @@ export default function Home() {
                 <Link
                   key={api.name}
                   to={`${localePath('/web-api')}?trending=true`}
-                  className="flex items-center gap-3 p-3 rounded-lg bg-[var(--bg-elevated)] border border-[var(--border-primary)] no-underline transition-all hover:border-[var(--border-focus)] hover:shadow-sm group"
+                  className="flex items-center gap-3 p-3 rounded-lg bg-(--bg-elevated) border border-(--border-primary) no-underline transition-all hover:border-(--border-focus) hover:shadow-sm group"
                 >
-                  <span className="text-[var(--accent-primary)]">{api.icon}</span>
+                  <span className="text-(--accent-primary)">{api.icon}</span>
                   <div className="flex-1 min-w-0">
-                    <div className="font-medium text-[var(--text-primary)]">{api.name}</div>
+                    <div className="font-medium text-(--text-primary)">{api.name}</div>
                   </div>
                   <ChevronRight
                     size={16}
                     aria-hidden="true"
-                    className="text-[var(--text-tertiary)] opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="text-(--text-tertiary) opacity-0 group-hover:opacity-100 transition-opacity"
                   />
                 </Link>
               ))}
@@ -300,20 +300,20 @@ export default function Home() {
         {/* Web API Card */}
         <Link
           to={localePath('/web-api')}
-          className="p-6 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)] no-underline transition-all hover:-translate-y-1 hover:shadow-lg hover:border-[var(--border-focus)] group"
+          className="p-6 rounded-xl bg-(--bg-elevated) border border-(--border-primary) no-underline transition-all hover:-translate-y-1 hover:shadow-lg hover:border-(--border-focus) group"
         >
           <div className="text-blue-500 mb-4">
             <Globe size={32} aria-hidden="true" />
           </div>
-          <h2 className="text-xl font-semibold text-[var(--text-primary)] mb-2">Web API</h2>
-          <p className="text-sm text-[var(--text-secondary)] mb-4">
+          <h2 className="text-xl font-semibold text-(--text-primary) mb-2">Web API</h2>
+          <p className="text-sm text-(--text-secondary) mb-4">
             {locale === 'ko'
               ? '브라우저 내장 API. 설치 없이 무료로 사용'
               : 'Browser built-in APIs. Free to use, no installation'}
           </p>
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-[var(--accent-primary)]">58</div>
-            <div className="flex items-center gap-1 text-sm text-[var(--accent-primary)] font-medium">
+            <div className="text-2xl font-bold text-(--accent-primary)">58</div>
+            <div className="flex items-center gap-1 text-sm text-(--accent-primary) font-medium">
               {locale === 'ko' ? '둘러보기' : 'Browse'}
               <ChevronRight
                 size={16}
@@ -327,20 +327,20 @@ export default function Home() {
         {/* Libraries Card */}
         <Link
           to={localePath('/libraries')}
-          className="p-6 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)] no-underline transition-all hover:-translate-y-1 hover:shadow-lg hover:border-[var(--border-focus)] group"
+          className="p-6 rounded-xl bg-(--bg-elevated) border border-(--border-primary) no-underline transition-all hover:-translate-y-1 hover:shadow-lg hover:border-(--border-focus) group"
         >
           <div className="text-purple-500 mb-4">
             <Package size={32} aria-hidden="true" />
           </div>
-          <h2 className="text-xl font-semibold text-[var(--text-primary)] mb-2">Libraries</h2>
-          <p className="text-sm text-[var(--text-secondary)] mb-4">
+          <h2 className="text-xl font-semibold text-(--text-primary) mb-2">Libraries</h2>
+          <p className="text-sm text-(--text-secondary) mb-4">
             {locale === 'ko'
               ? 'MIT 라이센스 오픈소스. 상업적 사용 가능'
               : 'MIT licensed open source. Free for commercial use'}
           </p>
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-[var(--accent-primary)]">100+</div>
-            <div className="flex items-center gap-1 text-sm text-[var(--accent-primary)] font-medium">
+            <div className="text-2xl font-bold text-(--accent-primary)">100+</div>
+            <div className="flex items-center gap-1 text-sm text-(--accent-primary) font-medium">
               {locale === 'ko' ? '둘러보기' : 'Browse'}
               <ChevronRight
                 size={16}
@@ -354,7 +354,7 @@ export default function Home() {
 
       {/* Quick Categories */}
       <div className="py-8 text-center">
-        <h3 className="text-sm font-medium text-[var(--text-tertiary)] uppercase tracking-wider mb-4">
+        <h3 className="text-sm font-medium text-(--text-tertiary) uppercase tracking-wider mb-4">
           {locale === 'ko' ? '카테고리로 탐색' : 'Browse by Category'}
         </h3>
         <div className="flex flex-wrap justify-center gap-2">
@@ -369,7 +369,7 @@ export default function Home() {
             <Link
               key={cat}
               to={`${localePath('/libraries')}?category=${encodeURIComponent(cat)}`}
-              className="px-4 py-2 rounded-full bg-[var(--bg-tertiary)] text-[var(--text-secondary)] text-sm font-medium no-underline transition-colors hover:bg-[var(--accent-primary)]/10 hover:text-[var(--accent-primary)]"
+              className="px-4 py-2 rounded-full bg-(--bg-tertiary) text-(--text-secondary) text-sm font-medium no-underline transition-colors hover:bg-(--accent-primary)/10 hover:text-(--accent-primary)"
             >
               {cat}
             </Link>
@@ -378,8 +378,8 @@ export default function Home() {
       </div>
 
       {/* Built with section */}
-      <div className="py-8 text-center border-t border-[var(--border-primary)]">
-        <p className="text-sm text-[var(--text-tertiary)] mb-3">
+      <div className="py-8 text-center border-t border-(--border-primary)">
+        <p className="text-sm text-(--text-tertiary) mb-3">
           {locale === 'ko'
             ? '이 사이트도 여기 있는 도구로 만들었어요'
             : 'This site is built with tools listed here'}
@@ -388,7 +388,7 @@ export default function Home() {
           {['React Router v7', 'React', 'Tailwind CSS', 'TypeScript', 'Vite'].map((tag) => (
             <span
               key={tag}
-              className="px-3 py-1 rounded-full bg-[var(--bg-tertiary)] text-[var(--text-secondary)] text-xs"
+              className="px-3 py-1 rounded-full bg-(--bg-tertiary) text-(--text-secondary) text-xs"
             >
               {tag}
             </span>

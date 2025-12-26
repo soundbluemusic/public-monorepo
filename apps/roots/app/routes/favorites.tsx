@@ -41,17 +41,17 @@ export default function FavoritesPage() {
 
   return (
     <Layout>
-      <h1 className="text-2xl font-bold text-[var(--text-primary)] mb-8">{t('favorites')}</h1>
+      <h1 className="text-2xl font-bold text-(--text-primary) mb-8">{t('favorites')}</h1>
 
       {isLoading ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {[1, 2, 3].map((i) => (
             <div
               key={i}
-              className="p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)]"
+              className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)"
             >
-              <div className="h-6 w-3/4 rounded bg-[var(--bg-tertiary)] animate-pulse mb-2" />
-              <div className="h-4 w-full rounded bg-[var(--bg-tertiary)] animate-pulse" />
+              <div className="h-6 w-3/4 rounded bg-(--bg-tertiary) animate-pulse mb-2" />
+              <div className="h-4 w-full rounded bg-(--bg-tertiary) animate-pulse" />
             </div>
           ))}
         </div>
@@ -64,10 +64,8 @@ export default function FavoritesPage() {
       ) : (
         <div className="text-center py-20">
           <div className="text-5xl mb-4">💝</div>
-          <p className="text-xl font-medium text-[var(--text-primary)] mb-2">
-            {t('noFavoritesYet')}
-          </p>
-          <p className="text-[var(--text-secondary)]">{t('addFavoritesHint')}</p>
+          <p className="text-xl font-medium text-(--text-primary) mb-2">{t('noFavoritesYet')}</p>
+          <p className="text-(--text-secondary)">{t('addFavoritesHint')}</p>
         </div>
       )}
     </Layout>

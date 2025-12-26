@@ -23,10 +23,10 @@ interface RelationSectionProps {
 }
 
 const typeConfig: Record<RelationSectionProps['type'], { prefix: string; prefixClass: string }> = {
-  prerequisite: { prefix: '→', prefixClass: 'text-[var(--color-warning)]' },
-  next: { prefix: '←', prefixClass: 'text-[var(--color-success)]' },
-  related: { prefix: '↔', prefixClass: 'text-[var(--accent-primary)]' },
-  application: { prefix: '◆', prefixClass: 'text-[var(--accent-tertiary)]' },
+  prerequisite: { prefix: '→', prefixClass: 'text-(--color-warning)' },
+  next: { prefix: '←', prefixClass: 'text-(--color-success)' },
+  related: { prefix: '↔', prefixClass: 'text-(--accent-primary)' },
+  application: { prefix: '◆', prefixClass: 'text-(--accent-tertiary)' },
 };
 
 function RelationSection({ title, icon, ids, type, names }: RelationSectionProps) {
@@ -38,7 +38,7 @@ function RelationSection({ title, icon, ids, type, names }: RelationSectionProps
 
   return (
     <div className="mb-4">
-      <h4 className="text-sm font-semibold text-[var(--text-tertiary)] mb-2 uppercase tracking-wider">
+      <h4 className="text-sm font-semibold text-(--text-tertiary) mb-2 uppercase tracking-wider">
         <span>{icon}</span>
         {title}
       </h4>
@@ -51,7 +51,7 @@ function RelationSection({ title, icon, ids, type, names }: RelationSectionProps
             <Link
               key={id}
               to={localePath(`/concept/${id}`)}
-              className="flex items-center gap-1 px-3 py-1.5 rounded-md text-sm bg-[var(--bg-tertiary)] text-[var(--text-secondary)] no-underline transition-all hover:bg-[var(--bg-secondary)] hover:text-[var(--accent-primary)]"
+              className="flex items-center gap-1 px-3 py-1.5 rounded-md text-sm bg-(--bg-tertiary) text-(--text-secondary) no-underline transition-all hover:bg-(--bg-secondary) hover:text-(--accent-primary)"
             >
               <span className={config.prefixClass}>{config.prefix}</span>
               <span>{name}</span>
@@ -88,8 +88,8 @@ export function RelationLinks({ relations }: RelationLinksProps) {
   if (!hasAnyRelations) return null;
 
   return (
-    <div className="p-4 rounded-lg bg-[var(--bg-secondary)] border border-[var(--border-primary)]">
-      <h3 className="flex items-center gap-2 text-lg font-semibold text-[var(--text-primary)] mb-4">
+    <div className="p-4 rounded-lg bg-(--bg-secondary) border border-(--border-primary)">
+      <h3 className="flex items-center gap-2 text-lg font-semibold text-(--text-primary) mb-4">
         <Link2 size={20} aria-hidden="true" />
         {t('relatedDocuments')}
       </h3>

@@ -157,44 +157,44 @@ export default function BrowsePage() {
     <Layout>
       {/* Header */}
       <div className="mb-6">
-        <h1 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-2">
+        <h1 className="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">
           {locale === 'ko' ? '전체 단어 찾아보기' : 'Browse All Words'}
         </h1>
-        <p className="text-[var(--text-secondary)]">
+        <p className="text-(--text-secondary)">
           {locale === 'ko' ? '모든 단어를 검색하고 필터링하세요' : 'Search and filter all words'}
         </p>
       </div>
 
       {/* Quick Stats */}
       <div className="mb-6 grid gap-4 sm:grid-cols-3">
-        <div className="p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)]">
-          <div className="text-sm text-[var(--text-tertiary)] mb-1">
+        <div className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+          <div className="text-sm text-(--text-tertiary) mb-1">
             {locale === 'ko' ? '전체 진행률' : 'Overall Progress'}
           </div>
-          <div className="text-2xl font-bold text-[var(--text-primary)]">
+          <div className="text-2xl font-bold text-(--text-primary)">
             {overallProgress.percentage.toFixed(0)}%
           </div>
-          <div className="text-xs text-[var(--text-secondary)]">
+          <div className="text-xs text-(--text-secondary)">
             {overallProgress.studied}/{overallProgress.total} {locale === 'ko' ? '단어' : 'words'}
           </div>
         </div>
 
-        <div className="p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)]">
-          <div className="text-sm text-[var(--text-tertiary)] mb-1">
+        <div className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+          <div className="text-sm text-(--text-tertiary) mb-1">
             {locale === 'ko' ? '오늘 학습' : 'Today Studied'}
           </div>
-          <div className="text-2xl font-bold text-[var(--text-primary)]">{todayStudied}</div>
-          <div className="text-xs text-[var(--text-secondary)]">
+          <div className="text-2xl font-bold text-(--text-primary)">{todayStudied}</div>
+          <div className="text-xs text-(--text-secondary)">
             {locale === 'ko' ? '단어' : 'words'}
           </div>
         </div>
 
-        <div className="p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)]">
-          <div className="text-sm text-[var(--text-tertiary)] mb-1">
+        <div className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+          <div className="text-sm text-(--text-tertiary) mb-1">
             {locale === 'ko' ? '북마크' : 'Bookmarks'}
           </div>
-          <div className="text-2xl font-bold text-[var(--text-primary)]">{bookmarkCount}</div>
-          <div className="text-xs text-[var(--text-secondary)]">
+          <div className="text-2xl font-bold text-(--text-primary)">{bookmarkCount}</div>
+          <div className="text-xs text-(--text-secondary)">
             {locale === 'ko' ? '단어' : 'words'}
           </div>
         </div>
@@ -205,7 +205,7 @@ export default function BrowsePage() {
         <button
           type="button"
           onClick={handleRandomWord}
-          className="min-h-11 px-4 inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors bg-[var(--accent-primary)] text-white hover:brightness-110 active:scale-[0.98]"
+          className="min-h-11 px-4 inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors bg-(--accent-primary) text-white hover:brightness-110 active:scale-[0.98]"
         >
           <Shuffle size={16} aria-hidden="true" />
           <span>{locale === 'ko' ? '랜덤 단어' : 'Random Word'}</span>
@@ -217,8 +217,8 @@ export default function BrowsePage() {
           className={cn(
             'min-h-11 px-4 inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors',
             filterStatus === 'bookmarked'
-              ? 'bg-[var(--accent-primary)] text-white'
-              : 'bg-[var(--bg-tertiary)] text-[var(--text-primary)] hover:bg-[var(--border-primary)]',
+              ? 'bg-(--accent-primary) text-white'
+              : 'bg-(--bg-tertiary) text-(--text-primary) hover:bg-(--border-primary)',
           )}
         >
           {locale === 'ko' ? '북마크만' : 'Bookmarks Only'}
@@ -230,8 +230,8 @@ export default function BrowsePage() {
           className={cn(
             'min-h-11 px-4 inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors',
             filterStatus === 'unstudied'
-              ? 'bg-[var(--accent-primary)] text-white'
-              : 'bg-[var(--bg-tertiary)] text-[var(--text-primary)] hover:bg-[var(--border-primary)]',
+              ? 'bg-(--accent-primary) text-white'
+              : 'bg-(--bg-tertiary) text-(--text-primary) hover:bg-(--border-primary)',
           )}
         >
           {locale === 'ko' ? '미학습만' : 'Unstudied Only'}
@@ -242,17 +242,14 @@ export default function BrowsePage() {
       <div className="mb-6 flex flex-wrap gap-3">
         {/* Category Filter */}
         <div className="flex-1 min-w-[200px]">
-          <label
-            htmlFor="category-filter"
-            className="block text-sm mb-1 text-[var(--text-secondary)]"
-          >
+          <label htmlFor="category-filter" className="block text-sm mb-1 text-(--text-secondary)">
             {locale === 'ko' ? '카테고리' : 'Category'}
           </label>
           <select
             id="category-filter"
             value={filterCategory}
             onChange={(e) => setFilterCategory(e.target.value as FilterCategory)}
-            className="w-full min-h-10 px-3 rounded-lg border border-[var(--border-primary)] bg-[var(--bg-elevated)] text-[var(--text-primary)]"
+            className="w-full min-h-10 px-3 rounded-lg border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary)"
           >
             <option value="all">{locale === 'ko' ? '전체' : 'All'}</option>
             {cats.map((cat) => (
@@ -265,17 +262,14 @@ export default function BrowsePage() {
 
         {/* Status Filter */}
         <div className="flex-1 min-w-[200px]">
-          <label
-            htmlFor="status-filter"
-            className="block text-sm mb-1 text-[var(--text-secondary)]"
-          >
+          <label htmlFor="status-filter" className="block text-sm mb-1 text-(--text-secondary)">
             {locale === 'ko' ? '학습 상태' : 'Study Status'}
           </label>
           <select
             id="status-filter"
             value={filterStatus}
             onChange={(e) => setFilterStatus(e.target.value as FilterStatus)}
-            className="w-full min-h-10 px-3 rounded-lg border border-[var(--border-primary)] bg-[var(--bg-elevated)] text-[var(--text-primary)]"
+            className="w-full min-h-10 px-3 rounded-lg border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary)"
           >
             <option value="all">{locale === 'ko' ? '전체' : 'All'}</option>
             <option value="studied">{locale === 'ko' ? '학습 완료' : 'Studied'}</option>
@@ -286,14 +280,14 @@ export default function BrowsePage() {
 
         {/* Sort */}
         <div className="flex-1 min-w-[200px]">
-          <label htmlFor="sort-by" className="block text-sm mb-1 text-[var(--text-secondary)]">
+          <label htmlFor="sort-by" className="block text-sm mb-1 text-(--text-secondary)">
             {locale === 'ko' ? '정렬' : 'Sort By'}
           </label>
           <select
             id="sort-by"
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as SortOption)}
-            className="w-full min-h-10 px-3 rounded-lg border border-[var(--border-primary)] bg-[var(--bg-elevated)] text-[var(--text-primary)]"
+            className="w-full min-h-10 px-3 rounded-lg border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary)"
           >
             <option value="alphabetical">{locale === 'ko' ? '가나다순' : 'Alphabetical'}</option>
             <option value="category">{locale === 'ko' ? '카테고리별' : 'By Category'}</option>
@@ -304,7 +298,7 @@ export default function BrowsePage() {
 
       {/* Results Count */}
       <div className="mb-4">
-        <p className="text-sm text-[var(--text-secondary)]">
+        <p className="text-sm text-(--text-secondary)">
           {locale === 'ko'
             ? `${filteredEntries.length}개의 단어`
             : `${filteredEntries.length} words`}
@@ -323,14 +317,14 @@ export default function BrowsePage() {
             <Link
               key={entry.id}
               to={localePath(`/entry/${entry.id}`)}
-              className="flex items-center justify-between py-3 px-2 -mx-2 rounded-lg border-b border-[var(--border-primary)] transition-colors no-underline hover:bg-[var(--bg-tertiary)]"
+              className="flex items-center justify-between py-3 px-2 -mx-2 rounded-lg border-b border-(--border-primary) transition-colors no-underline hover:bg-(--bg-tertiary)"
             >
               <div className="flex items-center gap-3 flex-1 min-w-0">
                 {/* Checkmark */}
                 <div
                   className={cn(
                     'w-5 h-5 rounded-full flex items-center justify-center shrink-0',
-                    isStudied ? 'bg-[var(--accent-primary)]' : '',
+                    isStudied ? 'bg-(--accent-primary)' : '',
                   )}
                 >
                   {isStudied && <Check size={14} className="text-white" />}
@@ -342,13 +336,13 @@ export default function BrowsePage() {
                     className={cn(
                       'text-lg font-medium',
                       isStudied
-                        ? 'text-[var(--text-secondary)] line-through opacity-70'
-                        : 'text-[var(--text-primary)]',
+                        ? 'text-(--text-secondary) line-through opacity-70'
+                        : 'text-(--text-primary)',
                     )}
                   >
                     {entry.korean}
                   </span>
-                  <span className="text-sm text-[var(--text-tertiary)] hidden sm:inline">
+                  <span className="text-sm text-(--text-tertiary) hidden sm:inline">
                     {entry.romanization}
                   </span>
                 </div>
@@ -357,15 +351,13 @@ export default function BrowsePage() {
               <div className="flex items-center gap-3 shrink-0">
                 {/* Category badge (desktop only) */}
                 {category && (
-                  <span className="hidden md:inline px-2.5 py-0.5 rounded-full text-xs font-medium bg-[var(--bg-secondary)] text-[var(--text-tertiary)]">
+                  <span className="hidden md:inline px-2.5 py-0.5 rounded-full text-xs font-medium bg-(--bg-secondary) text-(--text-tertiary)">
                     {category.icon} {category.name[locale]}
                   </span>
                 )}
 
                 {/* Translation */}
-                <span className="text-sm text-[var(--text-secondary)] ml-2">
-                  {translation.word}
-                </span>
+                <span className="text-sm text-(--text-secondary) ml-2">{translation.word}</span>
 
                 {/* Bookmark indicator */}
                 {isFavorite && (
@@ -380,7 +372,7 @@ export default function BrowsePage() {
       </div>
 
       {filteredEntries.length === 0 && (
-        <div className="text-center py-12 px-4 text-[var(--text-tertiary)]">
+        <div className="text-center py-12 px-4 text-(--text-tertiary)">
           <p>{locale === 'ko' ? '단어가 없습니다' : 'No words found'}</p>
         </div>
       )}

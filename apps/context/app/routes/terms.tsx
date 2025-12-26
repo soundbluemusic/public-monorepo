@@ -12,10 +12,10 @@ export default function TermsPage() {
 
   return (
     <Layout>
-      <h1 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-6">
+      <h1 className="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-6">
         {t('termsTitle')}
       </h1>
-      <div className="text-[var(--text-secondary)]">
+      <div className="text-(--text-secondary)">
         <p>{t('termsContent')}</p>
       </div>
     </Layout>

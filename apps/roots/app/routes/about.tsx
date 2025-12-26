@@ -17,14 +17,12 @@ export default function AboutPage() {
 
   return (
     <Layout>
-      <h1 className="text-3xl font-bold text-[var(--text-primary)] mb-8">{t('aboutTitle')}</h1>
+      <h1 className="text-3xl font-bold text-(--text-primary) mb-8">{t('aboutTitle')}</h1>
 
-      <div className="prose prose-lg max-w-none text-[var(--text-secondary)]">
+      <div className="prose prose-lg max-w-none text-(--text-secondary)">
         <p className="text-lg leading-relaxed mb-6">{t('aboutDescription')}</p>
 
-        <h2 className="text-xl font-semibold text-[var(--text-primary)] mt-8 mb-4">
-          {t('features')}
-        </h2>
+        <h2 className="text-xl font-semibold text-(--text-primary) mt-8 mb-4">{t('features')}</h2>
         <ul className="space-y-2 list-disc list-inside">
           <li>{t('feature1')}</li>
           <li>{t('feature2')}</li>

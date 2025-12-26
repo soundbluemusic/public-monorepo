@@ -165,7 +165,7 @@ export default function Sidebar({
       {/* Sidebar */}
       <aside
         className={cn(
-          'fixed top-14 left-0 z-50 h-[calc(100vh-3.5rem)] flex flex-col bg-[var(--bg-primary)] border-r border-[var(--border-primary)] transition-all duration-200',
+          'fixed top-14 left-0 z-50 h-[calc(100vh-3.5rem)] flex flex-col bg-(--bg-primary) border-r border-(--border-primary) transition-all duration-200',
           isReady && 'ready',
           isMobile && 'z-50',
         )}
@@ -176,21 +176,21 @@ export default function Sidebar({
         data-mobile-open={isMobile && isOpen ? 'true' : undefined}
       >
         {/* Header */}
-        <div className="flex items-center justify-between h-14 px-4 border-b border-[var(--border-primary)]">
+        <div className="flex items-center justify-between h-14 px-4 border-b border-(--border-primary)">
           {(!isCollapsed || isMobile) && (
             <Link
               to={localePath('/')}
               onClick={onClose}
-              className="flex items-center gap-2 text-[var(--text-primary)] font-semibold no-underline"
+              className="flex items-center gap-2 text-(--text-primary) font-semibold no-underline"
             >
-              <Sparkles size={20} aria-hidden="true" className="text-[var(--accent-primary)]" />
+              <Sparkles size={20} aria-hidden="true" className="text-(--accent-primary)" />
               <span>Permissive</span>
             </Link>
           )}
           {isCollapsed && !isMobile && (
             <Link
               to={localePath('/')}
-              className="flex items-center justify-center w-full text-[var(--accent-primary)]"
+              className="flex items-center justify-center w-full text-(--accent-primary)"
             >
               <Sparkles size={20} aria-hidden="true" />
             </Link>
@@ -201,7 +201,7 @@ export default function Sidebar({
             <button
               type="button"
               onClick={onClose}
-              className="min-h-11 min-w-11 flex items-center justify-center rounded-lg text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] cursor-pointer"
+              className="min-h-11 min-w-11 flex items-center justify-center rounded-lg text-(--text-secondary) hover:bg-(--bg-tertiary) cursor-pointer"
               aria-label={t('aria.closeMenu')}
             >
               <X size={20} aria-hidden="true" />
@@ -221,8 +221,8 @@ export default function Sidebar({
                 className={cn(
                   'flex items-center gap-3 min-h-11 px-3 py-2 rounded-lg no-underline transition-colors',
                   isActive(item.href)
-                    ? 'bg-[var(--accent-primary)]/10 text-[var(--accent-primary)]'
-                    : 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] hover:text-[var(--text-primary)]',
+                    ? 'bg-(--accent-primary)/10 text-(--accent-primary)'
+                    : 'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
                   isCollapsed && !isMobile && 'justify-center',
                 )}
                 title={
@@ -246,7 +246,7 @@ export default function Sidebar({
           {(!isCollapsed || isMobile) && (
             <>
               {/* Divider */}
-              <div className="my-4 border-t border-[var(--border-primary)]" />
+              <div className="my-4 border-t border-(--border-primary)" />
 
               {/* Web API Quick Links */}
               <QuickLinksSection
@@ -266,14 +266,14 @@ export default function Sidebar({
         </nav>
 
         {/* Footer - Collapse toggle (desktop) + GitHub */}
-        <div className="p-2 border-t border-[var(--border-primary)]">
+        <div className="p-2 border-t border-(--border-primary)">
           {/* Collapse Toggle Button (desktop only) */}
           {!isMobile && (
             <button
               type="button"
               onClick={onToggleCollapse}
               className={cn(
-                'w-full flex items-center gap-2 min-h-11 px-3 py-2 rounded-lg text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] transition-colors cursor-pointer',
+                'w-full flex items-center gap-2 min-h-11 px-3 py-2 rounded-lg text-(--text-secondary) hover:bg-(--bg-tertiary) transition-colors cursor-pointer',
                 isCollapsed && 'justify-center',
               )}
               title={isCollapsed ? t('aria.expandSidebar') : t('aria.collapseSidebar')}
@@ -293,7 +293,7 @@ export default function Sidebar({
             target="_blank"
             rel="noopener noreferrer"
             className={cn(
-              'flex items-center gap-3 min-h-11 px-3 py-2 rounded-lg text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] transition-colors no-underline',
+              'flex items-center gap-3 min-h-11 px-3 py-2 rounded-lg text-(--text-secondary) hover:bg-(--bg-tertiary) transition-colors no-underline',
               isCollapsed && !isMobile && 'justify-center',
             )}
             title={isCollapsed && !isMobile ? t('ui.github') : undefined}
@@ -302,7 +302,7 @@ export default function Sidebar({
             {(!isCollapsed || isMobile) && (
               <div className="flex flex-col">
                 <span className="text-sm font-medium">{t('ui.github')}</span>
-                <span className="text-xs text-[var(--text-tertiary)]">{t('ui.viewSource')}</span>
+                <span className="text-xs text-(--text-tertiary)">{t('ui.viewSource')}</span>
               </div>
             )}
           </a>
@@ -323,7 +323,7 @@ function QuickLinksSection({
 }) {
   return (
     <div className="mb-4">
-      <h3 className="px-3 py-2 text-xs font-semibold text-[var(--text-tertiary)] uppercase tracking-wider">
+      <h3 className="px-3 py-2 text-xs font-semibold text-(--text-tertiary) uppercase tracking-wider">
         {title}
       </h3>
       <div className="space-y-1">
@@ -333,19 +333,19 @@ function QuickLinksSection({
             href={item.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 min-h-11 px-3 py-2 rounded-lg text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] transition-colors no-underline group"
+            className="flex items-center gap-3 min-h-11 px-3 py-2 rounded-lg text-(--text-secondary) hover:bg-(--bg-tertiary) transition-colors no-underline group"
           >
-            <span className="flex-shrink-0 text-[var(--text-tertiary)]">{item.icon}</span>
+            <span className="flex-shrink-0 text-(--text-tertiary)">{item.icon}</span>
             <div className="flex-1 min-w-0">
-              <div className="text-sm font-medium text-[var(--text-primary)]">{item.name}</div>
-              <div className="text-xs text-[var(--text-tertiary)]">
+              <div className="text-sm font-medium text-(--text-primary)">{item.name}</div>
+              <div className="text-xs text-(--text-tertiary)">
                 {locale === 'ko' ? item.descKo : item.desc}
               </div>
             </div>
             <ExternalLink
               size={14}
               aria-hidden="true"
-              className="flex-shrink-0 text-[var(--text-tertiary)] opacity-0 group-hover:opacity-100 transition-opacity"
+              className="flex-shrink-0 text-(--text-tertiary) opacity-0 group-hover:opacity-100 transition-opacity"
             />
           </a>
         ))}

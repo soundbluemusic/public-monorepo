@@ -54,7 +54,7 @@ export default function Header({ onMenuClick, isSidebarOpen }: HeaderProps) {
       const itemType = result.item.type;
       return (
         <div className="flex items-center justify-between gap-2">
-          <span className="text-[var(--text-primary)]">{locale === 'ko' ? name.ko : name.en}</span>
+          <span className="text-(--text-primary)">{locale === 'ko' ? name.ko : name.en}</span>
           <span
             className={cn(
               'px-2 py-0.5 rounded text-xs font-medium',
@@ -90,7 +90,7 @@ export default function Header({ onMenuClick, isSidebarOpen }: HeaderProps) {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-40 h-14 flex items-center justify-between gap-4 px-4 bg-[var(--bg-primary)]/80 backdrop-blur-sm border-b border-[var(--border-primary)] transition-shadow',
+        'fixed top-0 left-0 right-0 z-40 h-14 flex items-center justify-between gap-4 px-4 bg-(--bg-primary)/80 backdrop-blur-sm border-b border-(--border-primary) transition-shadow',
         scrolled && 'shadow-sm',
       )}
     >
@@ -100,7 +100,7 @@ export default function Header({ onMenuClick, isSidebarOpen }: HeaderProps) {
         <button
           type="button"
           onClick={onMenuClick}
-          className="lg:hidden min-h-11 min-w-11 flex items-center justify-center rounded-lg text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] transition-colors cursor-pointer"
+          className="lg:hidden min-h-11 min-w-11 flex items-center justify-center rounded-lg text-(--text-secondary) hover:bg-(--bg-tertiary) transition-colors cursor-pointer"
           aria-label={isSidebarOpen ? t('aria.closeMenu') : t('aria.openMenu')}
           aria-expanded={isSidebarOpen}
         >
@@ -114,9 +114,9 @@ export default function Header({ onMenuClick, isSidebarOpen }: HeaderProps) {
         {/* Logo */}
         <Link
           to="/"
-          className="flex items-center gap-2 text-[var(--text-primary)] font-semibold no-underline"
+          className="flex items-center gap-2 text-(--text-primary) font-semibold no-underline"
         >
-          <Sparkles size={20} aria-hidden="true" className="text-[var(--accent-primary)]" />
+          <Sparkles size={20} aria-hidden="true" className="text-(--accent-primary)" />
           <span>Permissive</span>
         </Link>
       </div>

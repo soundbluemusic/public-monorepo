@@ -117,8 +117,8 @@ export function SearchDropdown({
 
     return (
       <div className="flex flex-col items-start gap-0.5">
-        <span className="font-medium text-[var(--text-primary)]">{name}</span>
-        {desc && <span className="text-xs text-[var(--text-tertiary)]">{desc}</span>}
+        <span className="font-medium text-(--text-primary)">{name}</span>
+        {desc && <span className="text-xs text-(--text-tertiary)">{desc}</span>}
       </div>
     );
   };
@@ -128,7 +128,7 @@ export function SearchDropdown({
       <div className="relative">
         <Search
           size={16}
-          className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--text-tertiary)]"
+          className="absolute left-3 top-1/2 -translate-y-1/2 text-(--text-tertiary)"
           aria-hidden="true"
         />
         <input
@@ -139,15 +139,15 @@ export function SearchDropdown({
           onFocus={() => setShowResults(true)}
           onKeyDown={handleKeyDown}
           placeholder={placeholder[locale]}
-          className="w-full min-h-11 pl-10 pr-4 rounded-lg bg-[var(--bg-elevated)] border border-[var(--border-primary)] text-[var(--text-primary)] placeholder:text-[var(--text-tertiary)] focus:outline-none focus:border-[var(--border-focus)] transition-colors"
+          className="w-full min-h-11 pl-10 pr-4 rounded-lg bg-(--bg-elevated) border border-(--border-primary) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none focus:border-(--border-focus) transition-colors"
         />
       </div>
 
       {/* Results Dropdown */}
       {showResults && query.length >= 2 && (
-        <div className="absolute top-full left-0 right-0 z-50 mt-2 max-h-80 overflow-y-auto rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)] shadow-lg">
+        <div className="absolute top-full left-0 right-0 z-50 mt-2 max-h-80 overflow-y-auto rounded-xl bg-(--bg-elevated) border border-(--border-primary) shadow-lg">
           {isLoading ? (
-            <div className="px-4 py-3 text-sm text-[var(--text-tertiary)]">
+            <div className="px-4 py-3 text-sm text-(--text-tertiary)">
               {locale === 'ko' ? '검색 중...' : 'Searching...'}
             </div>
           ) : results.length > 0 ? (
@@ -159,9 +159,7 @@ export function SearchDropdown({
                 onMouseEnter={() => setSelectedIndex(index)}
                 className={cn(
                   'w-full px-4 py-3 text-left transition-colors cursor-pointer',
-                  selectedIndex === index
-                    ? 'bg-[var(--accent-primary)]/10'
-                    : 'hover:bg-[var(--bg-tertiary)]',
+                  selectedIndex === index ? 'bg-(--accent-primary)/10' : 'hover:bg-(--bg-tertiary)',
                 )}
               >
                 {renderResult
@@ -170,7 +168,7 @@ export function SearchDropdown({
               </button>
             ))
           ) : (
-            <div className="px-4 py-3 text-sm text-[var(--text-tertiary)]">
+            <div className="px-4 py-3 text-sm text-(--text-tertiary)">
               {locale === 'ko' ? '결과 없음' : 'No results'}
             </div>
           )}

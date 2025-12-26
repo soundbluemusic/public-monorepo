@@ -43,7 +43,7 @@ export function LinkedExample({ text, currentEntryId }: LinkedExampleProps) {
           <Link
             key={`link-${keyIndex++}`}
             to={localePath(`/entry/${expr.id}`)}
-            className="text-[var(--accent-primary)] underline decoration-dotted underline-offset-4 hover:decoration-solid"
+            className="text-(--accent-primary) underline decoration-dotted underline-offset-4 hover:decoration-solid"
           >
             {expr.korean}
           </Link>,

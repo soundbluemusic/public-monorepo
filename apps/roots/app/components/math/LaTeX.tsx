@@ -356,7 +356,7 @@ export function MathBlock({ math, className }: { math: string; className?: strin
   return (
     <div
       className={cn(
-        'my-4 p-4 rounded-lg bg-[var(--bg-secondary)] border border-[var(--border-primary)] overflow-x-auto',
+        'my-4 p-4 rounded-lg bg-(--bg-secondary) border border-(--border-primary) overflow-x-auto',
         className,
       )}
     >

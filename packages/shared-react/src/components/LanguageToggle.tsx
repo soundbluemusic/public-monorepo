@@ -24,7 +24,7 @@ export function LanguageToggle({ locale, currentPath = '/' }: LanguageToggleProp
   return (
     <a
       href={href}
-      className="min-h-11 min-w-11 flex items-center justify-center rounded-lg text-sm font-medium text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] transition-colors no-underline"
+      className="min-h-11 min-w-11 flex items-center justify-center rounded-lg text-sm font-medium text-(--text-secondary) hover:bg-(--bg-tertiary) transition-colors no-underline"
       aria-label={ariaLabel}
       title={locale === 'en' ? '한국어로 전환' : 'Switch to English'}
     >

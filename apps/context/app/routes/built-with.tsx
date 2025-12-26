@@ -20,10 +20,10 @@ export default function BuiltWithPage() {
 
   return (
     <Layout>
-      <h1 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-6">
+      <h1 className="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-6">
         {t('builtWithTitle')}
       </h1>
-      <p className="text-[var(--text-secondary)] mb-6">{t('builtWithDescription')}</p>
+      <p className="text-(--text-secondary) mb-6">{t('builtWithDescription')}</p>
       <ul className="space-y-3">
         {tools.map((tool) => (
           <li key={tool.name}>
@@ -31,7 +31,7 @@ export default function BuiltWithPage() {
               href={tool.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--accent-primary)] hover:underline"
+              className="text-(--accent-primary) hover:underline"
             >
               {tool.name}
             </a>

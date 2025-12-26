@@ -1235,8 +1235,8 @@ export default function LibrariesPage() {
     <DocsLayout>
       {/* Header */}
       <div className="mb-6">
-        <h1 className="text-2xl font-bold text-[var(--text-primary)] mb-2">Libraries</h1>
-        <p className="text-[var(--text-secondary)]">
+        <h1 className="text-2xl font-bold text-(--text-primary) mb-2">Libraries</h1>
+        <p className="text-(--text-secondary)">
           {locale === 'ko'
             ? 'MIT 라이센스 오픈소스. 상업적 사용 가능'
             : 'MIT licensed open source. Free for commercial use'}
@@ -1252,7 +1252,7 @@ export default function LibrariesPage() {
             'min-h-10 px-4 inline-flex items-center gap-2 rounded-lg text-sm font-medium transition-colors cursor-pointer',
             quickFilter === 'trending'
               ? 'bg-orange-500 text-white'
-              : 'bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:bg-[var(--bg-elevated)]',
+              : 'bg-(--bg-tertiary) text-(--text-secondary) hover:bg-(--bg-elevated)',
           )}
         >
           <Flame size={16} aria-hidden="true" />
@@ -1265,7 +1265,7 @@ export default function LibrariesPage() {
             'min-h-10 px-4 inline-flex items-center gap-2 rounded-lg text-sm font-medium transition-colors cursor-pointer',
             quickFilter === 'usedHere'
               ? 'bg-purple-500 text-white'
-              : 'bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:bg-[var(--bg-elevated)]',
+              : 'bg-(--bg-tertiary) text-(--text-secondary) hover:bg-(--bg-elevated)',
           )}
         >
           <Star size={16} aria-hidden="true" />
@@ -1278,7 +1278,7 @@ export default function LibrariesPage() {
             'min-h-10 px-4 inline-flex items-center gap-2 rounded-lg text-sm font-medium transition-colors cursor-pointer',
             quickFilter === 'new'
               ? 'bg-blue-500 text-white'
-              : 'bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:bg-[var(--bg-elevated)]',
+              : 'bg-(--bg-tertiary) text-(--text-secondary) hover:bg-(--bg-elevated)',
           )}
         >
           <CalendarPlus size={16} aria-hidden="true" />
@@ -1288,7 +1288,7 @@ export default function LibrariesPage() {
           <button
             type="button"
             onClick={clearFilters}
-            className="min-h-10 px-4 inline-flex items-center gap-2 rounded-lg text-sm font-medium text-[var(--text-tertiary)] hover:text-[var(--text-primary)] transition-colors cursor-pointer"
+            className="min-h-10 px-4 inline-flex items-center gap-2 rounded-lg text-sm font-medium text-(--text-tertiary) hover:text-(--text-primary) transition-colors cursor-pointer"
           >
             {locale === 'ko' ? '필터 초기화' : 'Clear filters'}
           </button>
@@ -1298,7 +1298,7 @@ export default function LibrariesPage() {
       {/* Active Tag Filter Display */}
       {selectedTag && (
         <div className="mb-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[var(--accent-primary)]/10 text-[var(--accent-primary)]">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-(--accent-primary)/10 text-(--accent-primary)">
             <span className="text-sm">{locale === 'ko' ? '태그:' : 'Tag:'}</span>
             <span className="text-sm font-medium">{selectedTag}</span>
             <button
@@ -1324,7 +1324,7 @@ export default function LibrariesPage() {
             <Search
               size={18}
               aria-hidden="true"
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--text-tertiary)]"
+              className="absolute left-3 top-1/2 -translate-y-1/2 text-(--text-tertiary)"
             />
             <input
               type="text"
@@ -1340,13 +1340,13 @@ export default function LibrariesPage() {
                 }
                 setSearchParams(params);
               }}
-              className="w-full min-h-11 pl-10 pr-4 rounded-lg bg-[var(--bg-elevated)] border border-[var(--border-primary)] text-[var(--text-primary)] placeholder:text-[var(--text-tertiary)] focus:outline-none focus:border-[var(--border-focus)] transition-colors"
+              className="w-full min-h-11 pl-10 pr-4 rounded-lg bg-(--bg-elevated) border border-(--border-primary) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none focus:border-(--border-focus) transition-colors"
             />
           </div>
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as SortOption)}
-            className="min-h-11 px-4 rounded-lg bg-[var(--bg-elevated)] border border-[var(--border-primary)] text-[var(--text-primary)] focus:outline-none focus:border-[var(--border-focus)] transition-colors cursor-pointer"
+            className="min-h-11 px-4 rounded-lg bg-(--bg-elevated) border border-(--border-primary) text-(--text-primary) focus:outline-none focus:border-(--border-focus) transition-colors cursor-pointer"
           >
             <option value="stars">{locale === 'ko' ? '인기순' : 'Most Popular'}</option>
             <option value="newest">{locale === 'ko' ? '최신순' : 'Newest First'}</option>
@@ -1372,8 +1372,8 @@ export default function LibrariesPage() {
               className={cn(
                 'px-3 py-1.5 rounded-full text-sm font-medium transition-colors cursor-pointer',
                 category === cat
-                  ? 'bg-[var(--accent-primary)] text-white'
-                  : 'bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:bg-[var(--bg-elevated)]',
+                  ? 'bg-(--accent-primary) text-white'
+                  : 'bg-(--bg-tertiary) text-(--text-secondary) hover:bg-(--bg-elevated)',
               )}
             >
               {cat === 'All' ? (locale === 'ko' ? '전체' : 'All') : cat}
@@ -1383,7 +1383,7 @@ export default function LibrariesPage() {
       </div>
 
       {/* Results count */}
-      <div className="text-sm text-[var(--text-tertiary)] mb-4">
+      <div className="text-sm text-(--text-tertiary) mb-4">
         {filteredLibraries.length} {locale === 'ko' ? '개의 라이브러리' : 'libraries'}
       </div>
 
@@ -1391,18 +1391,16 @@ export default function LibrariesPage() {
       <div className="space-y-8">
         {Object.entries(groupedLibraries).map(([categoryName, categoryLibs]) => (
           <section key={categoryName}>
-            <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-4">
-              {categoryName}
-            </h2>
+            <h2 className="text-lg font-semibold text-(--text-primary) mb-4">{categoryName}</h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {categoryLibs.map((lib) => (
                 <div
                   key={lib.name}
-                  className="p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)]"
+                  className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)"
                 >
                   <div className="flex items-start justify-between gap-2 mb-2">
                     <div className="flex items-center flex-wrap gap-2">
-                      <h3 className="font-medium text-[var(--text-primary)]">{lib.name}</h3>
+                      <h3 className="font-medium text-(--text-primary)">{lib.name}</h3>
                       {lib.trending && (
                         <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-orange-500/10 text-orange-500">
                           <Flame size={12} aria-hidden="true" />
@@ -1415,12 +1413,12 @@ export default function LibrariesPage() {
                         </span>
                       )}
                     </div>
-                    <div className="flex items-center gap-1 text-sm text-[var(--text-tertiary)]">
+                    <div className="flex items-center gap-1 text-sm text-(--text-tertiary)">
                       <Star size={14} aria-hidden="true" className="fill-current" />
                       {lib.stars}
                     </div>
                   </div>
-                  <p className="text-sm text-[var(--text-secondary)] mb-3">
+                  <p className="text-sm text-(--text-secondary) mb-3">
                     {locale === 'ko' ? lib.descriptionKo : lib.description}
                   </p>
                   {lib.tags && lib.tags.length > 0 && (
@@ -1433,8 +1431,8 @@ export default function LibrariesPage() {
                           className={cn(
                             'px-2 py-0.5 rounded text-xs transition-colors cursor-pointer',
                             selectedTag === tag
-                              ? 'bg-[var(--accent-primary)] text-white'
-                              : 'bg-[var(--bg-tertiary)] text-[var(--text-tertiary)] hover:text-[var(--text-primary)]',
+                              ? 'bg-(--accent-primary) text-white'
+                              : 'bg-(--bg-tertiary) text-(--text-tertiary) hover:text-(--text-primary)',
                           )}
                         >
                           {tag}
@@ -1447,13 +1445,13 @@ export default function LibrariesPage() {
                       {lib.license}
                     </span>
                     {lib.yearReleased && (
-                      <span className="text-[var(--text-tertiary)]">Since {lib.yearReleased}</span>
+                      <span className="text-(--text-tertiary)">Since {lib.yearReleased}</span>
                     )}
                     <a
                       href={lib.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[var(--accent-primary)] hover:underline"
+                      className="text-(--accent-primary) hover:underline"
                     >
                       GitHub
                     </a>
@@ -1462,7 +1460,7 @@ export default function LibrariesPage() {
                         href={`https://www.npmjs.com/package/${lib.npm}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[var(--accent-primary)] hover:underline"
+                        className="text-(--accent-primary) hover:underline"
                       >
                         npm
                       </a>
@@ -1479,7 +1477,7 @@ export default function LibrariesPage() {
       {filteredLibraries.length === 0 && (
         <div className="text-center py-16">
           <div className="text-5xl mb-4">🔍</div>
-          <p className="text-[var(--text-secondary)]">
+          <p className="text-(--text-secondary)">
             {locale === 'ko' ? '검색 결과가 없습니다' : 'No results found'}
           </p>
         </div>

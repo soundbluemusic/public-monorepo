@@ -55,11 +55,11 @@ export default function EntryPage() {
   if (!entry) {
     return (
       <Layout>
-        <div className="text-center py-12 px-4 text-[var(--text-tertiary)]">
-          <p className="text-[var(--text-secondary)]">{t('entryNotFound')}</p>
+        <div className="text-center py-12 px-4 text-(--text-tertiary)">
+          <p className="text-(--text-secondary)">{t('entryNotFound')}</p>
           <Link
             to={localePath('/')}
-            className="text-[var(--accent-primary)] hover:underline mt-4 inline-block"
+            className="text-(--accent-primary) hover:underline mt-4 inline-block"
           >
             {t('backToList')}
           </Link>
@@ -76,8 +76,8 @@ export default function EntryPage() {
         <header className="mb-8">
           <div className="flex items-center justify-between gap-4 mb-4">
             <div className="flex-1">
-              <h1 className="text-3xl font-bold mb-2 text-[var(--text-primary)]">{entry.korean}</h1>
-              <p className="text-lg text-[var(--text-tertiary)]">{entry.romanization}</p>
+              <h1 className="text-3xl font-bold mb-2 text-(--text-primary)">{entry.korean}</h1>
+              <p className="text-lg text-(--text-tertiary)">{entry.romanization}</p>
             </div>
 
             {/* Action buttons */}
@@ -88,8 +88,8 @@ export default function EntryPage() {
                 className={cn(
                   'min-h-10 min-w-10 flex items-center justify-center rounded-lg transition-colors border',
                   isFavorite
-                    ? 'bg-[var(--accent-primary)] text-white border-[var(--accent-primary)]'
-                    : 'bg-[var(--bg-elevated)] text-[var(--text-secondary)] border-[var(--border-primary)] hover:bg-[var(--bg-tertiary)]',
+                    ? 'bg-(--accent-primary) text-white border-(--accent-primary)'
+                    : 'bg-(--bg-elevated) text-(--text-secondary) border-(--border-primary) hover:bg-(--bg-tertiary)',
                 )}
                 aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
               >
@@ -100,11 +100,11 @@ export default function EntryPage() {
 
           {/* Study status */}
           {isStudied ? (
-            <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--bg-elevated)] border border-[var(--accent-primary)]">
-              <div className="w-5 h-5 rounded-full flex items-center justify-center bg-[var(--accent-primary)]">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-(--bg-elevated) border border-(--accent-primary)">
+              <div className="w-5 h-5 rounded-full flex items-center justify-center bg-(--accent-primary)">
                 <Check size={14} className="text-white" />
               </div>
-              <span className="text-sm text-[var(--text-primary)]">
+              <span className="text-sm text-(--text-primary)">
                 {locale === 'ko' ? '학습 완료' : 'Studied'}
               </span>
             </div>
@@ -112,7 +112,7 @@ export default function EntryPage() {
             <button
               type="button"
               onClick={handleMarkAsStudied}
-              className="min-h-11 px-4 inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors bg-[var(--accent-primary)] text-white hover:brightness-110 active:scale-[0.98]"
+              className="min-h-11 px-4 inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors bg-(--accent-primary) text-white hover:brightness-110 active:scale-[0.98]"
             >
               <Check size={18} />
               <span>{locale === 'ko' ? '학습 완료로 표시' : 'Mark as Studied'}</span>
@@ -121,24 +121,18 @@ export default function EntryPage() {
         </header>
 
         <section className="mb-6">
-          <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-2">
-            {t('translation')}
-          </h2>
-          <p className="text-[var(--text-secondary)]">{translation.word}</p>
+          <h2 className="text-lg font-semibold text-(--text-primary) mb-2">{t('translation')}</h2>
+          <p className="text-(--text-secondary)">{translation.word}</p>
         </section>
 
         <section className="mb-6">
-          <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-2">
-            {t('explanation')}
-          </h2>
-          <p className="text-[var(--text-secondary)]">{translation.explanation}</p>
+          <h2 className="text-lg font-semibold text-(--text-primary) mb-2">{t('explanation')}</h2>
+          <p className="text-(--text-secondary)">{translation.explanation}</p>
         </section>
 
         {translation.examples && (
           <section className="mb-6">
-            <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-3">
-              {t('examples')}
-            </h2>
+            <h2 className="text-lg font-semibold text-(--text-primary) mb-3">{t('examples')}</h2>
             <div className="space-y-3">
               {(['beginner', 'intermediate', 'advanced', 'master'] as const).map((level) => {
                 const example = translation.examples?.[level];
@@ -146,12 +140,12 @@ export default function EntryPage() {
                 return (
                   <div
                     key={level}
-                    className="p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)]"
+                    className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)"
                   >
-                    <span className="inline-block px-2.5 py-0.5 rounded-full text-xs font-medium bg-[var(--accent-primary)] text-white mb-2">
+                    <span className="inline-block px-2.5 py-0.5 rounded-full text-xs font-medium bg-(--accent-primary) text-white mb-2">
                       {t(level)}
                     </span>
-                    <div className="text-[var(--text-secondary)]">
+                    <div className="text-(--text-secondary)">
                       <LinkedExample text={example} currentEntryId={entry.id} />
                     </div>
                   </div>
@@ -164,7 +158,7 @@ export default function EntryPage() {
         <div className="mt-8">
           <Link
             to={localePath('/browse')}
-            className="inline-block text-sm text-[var(--accent-primary)] hover:underline"
+            className="inline-block text-sm text-(--accent-primary) hover:underline"
           >
             ← {t('backToList')}
           </Link>

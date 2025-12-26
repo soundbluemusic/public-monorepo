@@ -127,8 +127,8 @@ export default function HomePage() {
     <Layout>
       {/* Hero Section */}
       <div className="text-center py-12 mb-8">
-        <h1 className="text-4xl font-bold text-[var(--text-primary)] mb-3">{t('logoText')}</h1>
-        <p className="text-lg text-[var(--text-secondary)]">{t('heroSubtitle')}</p>
+        <h1 className="text-4xl font-bold text-(--text-primary) mb-3">{t('logoText')}</h1>
+        <p className="text-lg text-(--text-secondary)">{t('heroSubtitle')}</p>
       </div>
 
       {/* Featured Concepts Grid */}
@@ -144,10 +144,10 @@ export default function HomePage() {
               className={`block p-4 rounded-xl border no-underline transition-all hover:-translate-y-0.5 hover:shadow-md ${featuredCardColors[concept.colorClass]}`}
             >
               <div className="text-3xl mb-2">{concept.icon}</div>
-              <h3 className="text-base font-medium text-[var(--text-primary)] mb-1">
+              <h3 className="text-base font-medium text-(--text-primary) mb-1">
                 {locale === 'ko' ? concept.nameKo : concept.nameEn}
               </h3>
-              <p className="text-sm text-[var(--text-secondary)] leading-snug">
+              <p className="text-sm text-(--text-secondary) leading-snug">
                 {locale === 'ko' ? concept.descKo : concept.descEn}
               </p>
             </Link>
@@ -159,7 +159,7 @@ export default function HomePage() {
       <div className="text-center mt-12">
         <Link
           to={localePath('/browse')}
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-[var(--accent-primary)] font-medium transition-colors hover:bg-[var(--bg-tertiary)]"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-(--accent-primary) font-medium transition-colors hover:bg-(--bg-tertiary)"
         >
           {t('browseAllConcepts')}
           <span>→</span>

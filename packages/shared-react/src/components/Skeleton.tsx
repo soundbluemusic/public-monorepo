@@ -8,7 +8,7 @@ interface SkeletonProps {
 
 export function Skeleton({ className = '', style }: SkeletonProps) {
   return (
-    <div className={cn('animate-pulse bg-[var(--bg-tertiary)] rounded', className)} style={style} />
+    <div className={cn('animate-pulse bg-(--bg-tertiary) rounded', className)} style={style} />
   );
 }
 
@@ -24,10 +24,7 @@ export function SkeletonText({ lines = 3, className = '' }: SkeletonTextProps) {
         // biome-ignore lint/suspicious/noArrayIndexKey: Static skeleton placeholders never reorder
         <div
           key={`skeleton-line-${i}`}
-          className={cn(
-            'h-4 animate-pulse bg-[var(--bg-tertiary)] rounded',
-            i === lines - 1 && 'w-2/3',
-          )}
+          className={cn('h-4 animate-pulse bg-(--bg-tertiary) rounded', i === lines - 1 && 'w-2/3')}
         />
       ))}
     </div>
@@ -42,14 +39,14 @@ export function SkeletonCard({ className = '' }: SkeletonCardProps) {
   return (
     <div
       className={cn(
-        'p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)]',
+        'p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)',
         className,
       )}
     >
-      <div className="h-6 w-3/4 mb-3 animate-pulse bg-[var(--bg-tertiary)] rounded" />
+      <div className="h-6 w-3/4 mb-3 animate-pulse bg-(--bg-tertiary) rounded" />
       <div className="space-y-2">
-        <div className="h-4 animate-pulse bg-[var(--bg-tertiary)] rounded" />
-        <div className="h-4 w-2/3 animate-pulse bg-[var(--bg-tertiary)] rounded" />
+        <div className="h-4 animate-pulse bg-(--bg-tertiary) rounded" />
+        <div className="h-4 w-2/3 animate-pulse bg-(--bg-tertiary) rounded" />
       </div>
     </div>
   );
@@ -66,10 +63,10 @@ export function SkeletonList({ count = 5, className = '' }: SkeletonListProps) {
       {Array.from({ length: count }, (_, i) => (
         // biome-ignore lint/suspicious/noArrayIndexKey: Static skeleton placeholders never reorder
         <div key={`skeleton-list-${i}`} className="flex items-center gap-3">
-          <div className="w-10 h-10 flex-shrink-0 animate-pulse bg-[var(--bg-tertiary)] rounded-full" />
+          <div className="w-10 h-10 flex-shrink-0 animate-pulse bg-(--bg-tertiary) rounded-full" />
           <div className="flex-1 space-y-2">
-            <div className="h-4 w-1/3 animate-pulse bg-[var(--bg-tertiary)] rounded" />
-            <div className="h-3 w-2/3 animate-pulse bg-[var(--bg-tertiary)] rounded" />
+            <div className="h-4 w-1/3 animate-pulse bg-(--bg-tertiary) rounded" />
+            <div className="h-3 w-2/3 animate-pulse bg-(--bg-tertiary) rounded" />
           </div>
         </div>
       ))}
@@ -109,8 +106,8 @@ interface PageSkeletonProps {
 export function PageSkeleton({ children }: PageSkeletonProps) {
   return (
     <div className="space-y-6">
-      <div className="h-8 w-1/3 animate-pulse bg-[var(--bg-tertiary)] rounded" />
-      <div className="h-5 w-2/3 animate-pulse bg-[var(--bg-tertiary)] rounded" />
+      <div className="h-8 w-1/3 animate-pulse bg-(--bg-tertiary) rounded" />
+      <div className="h-5 w-2/3 animate-pulse bg-(--bg-tertiary) rounded" />
       {children || <SkeletonGrid count={6} columns={3} />}
     </div>
   );

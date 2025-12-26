@@ -24,11 +24,11 @@ export default function AboutPage() {
   return (
     <Layout>
       <div>
-        <h1 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-4">
+        <h1 className="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-4">
           {t('aboutTitle')}
         </h1>
-        <p className="text-[var(--text-secondary)] mb-6">{t('aboutDescription')}</p>
-        <div className="space-y-3 text-[var(--text-secondary)]">
+        <p className="text-(--text-secondary) mb-6">{t('aboutDescription')}</p>
+        <div className="space-y-3 text-(--text-secondary)">
           <p>{t('aboutContent')}</p>
           <p>{t('aboutContentExtra')}</p>
         </div>

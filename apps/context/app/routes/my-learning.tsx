@@ -65,11 +65,11 @@ export default function MyLearningPage() {
     <Layout>
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] flex items-center gap-2">
+        <h1 className="text-2xl sm:text-3xl font-bold text-(--text-primary) flex items-center gap-2">
           <TrendingUp size={24} aria-hidden="true" />
           {locale === 'ko' ? '내 학습 현황' : 'My Learning Progress'}
         </h1>
-        <p className="text-[var(--text-secondary)]">
+        <p className="text-(--text-secondary)">
           {locale === 'ko'
             ? '학습한 단어와 북마크를 확인하세요'
             : 'Track your studied words and bookmarks'}
@@ -79,50 +79,50 @@ export default function MyLearningPage() {
       {/* Stats Cards */}
       <div className="grid gap-4 sm:grid-cols-3 mb-8">
         {/* Total Progress */}
-        <div className="p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)]">
+        <div className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
           <div className="flex items-center gap-2 mb-2">
-            <TrendingUp size={20} className="text-[var(--accent-primary)]" />
-            <h3 className="text-sm font-semibold text-[var(--text-primary)]">
+            <TrendingUp size={20} className="text-(--accent-primary)" />
+            <h3 className="text-sm font-semibold text-(--text-primary)">
               {locale === 'ko' ? '전체 진행도' : 'Total Progress'}
             </h3>
           </div>
-          <p className="text-2xl font-bold text-[var(--text-primary)] mb-1">
+          <p className="text-2xl font-bold text-(--text-primary) mb-1">
             {studiedCount}/{totalWords}
           </p>
-          <div className="w-full h-2 rounded-full overflow-hidden bg-[var(--bg-secondary)]">
+          <div className="w-full h-2 rounded-full overflow-hidden bg-(--bg-secondary)">
             <div
-              className="h-full bg-[var(--accent-primary)] transition-all duration-300"
+              className="h-full bg-(--accent-primary) transition-all duration-300"
               style={{ width: `${progressPercentage}%` }}
             />
           </div>
         </div>
 
         {/* Completed Categories */}
-        <div className="p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)]">
+        <div className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
           <div className="flex items-center gap-2 mb-2">
-            <Trophy size={20} className="text-[var(--accent-primary)]" />
-            <h3 className="text-sm font-semibold text-[var(--text-primary)]">
+            <Trophy size={20} className="text-(--accent-primary)" />
+            <h3 className="text-sm font-semibold text-(--text-primary)">
               {locale === 'ko' ? '완료 카테고리' : 'Completed'}
             </h3>
           </div>
-          <p className="text-2xl font-bold text-[var(--text-primary)]">
+          <p className="text-2xl font-bold text-(--text-primary)">
             {completedCategories}/{categories.length}
           </p>
-          <p className="text-xs text-[var(--text-tertiary)]">
+          <p className="text-xs text-(--text-tertiary)">
             {locale === 'ko' ? '카테고리' : 'categories'}
           </p>
         </div>
 
         {/* Bookmarks */}
-        <div className="p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)]">
+        <div className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
           <div className="flex items-center gap-2 mb-2">
-            <BookmarkCheck size={20} className="text-[var(--accent-primary)]" />
-            <h3 className="text-sm font-semibold text-[var(--text-primary)]">
+            <BookmarkCheck size={20} className="text-(--accent-primary)" />
+            <h3 className="text-sm font-semibold text-(--text-primary)">
               {locale === 'ko' ? '북마크' : 'Bookmarks'}
             </h3>
           </div>
-          <p className="text-2xl font-bold text-[var(--text-primary)]">{favoriteIds.length}</p>
-          <p className="text-xs text-[var(--text-tertiary)]">
+          <p className="text-2xl font-bold text-(--text-primary)">{favoriteIds.length}</p>
+          <p className="text-xs text-(--text-tertiary)">
             {locale === 'ko' ? '저장된 단어' : 'saved words'}
           </p>
         </div>
@@ -130,7 +130,7 @@ export default function MyLearningPage() {
 
       {/* Category Progress */}
       <div className="mb-8">
-        <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+        <h2 className="text-lg font-semibold text-(--text-primary) mb-4 flex items-center gap-2">
           <FolderOpen size={20} aria-hidden="true" />
           {locale === 'ko' ? '카테고리별 진행도' : 'Progress by Category'}
         </h2>
@@ -143,22 +143,22 @@ export default function MyLearningPage() {
               <Link
                 key={category.id}
                 to={localePath(`/category/${category.id}`)}
-                className="block p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)] no-underline cursor-pointer transition-all duration-150 hover:-translate-y-0.5 hover:shadow-md hover:border-[var(--border-focus)]"
+                className="block p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) no-underline cursor-pointer transition-all duration-150 hover:-translate-y-0.5 hover:shadow-md hover:border-(--border-focus)"
               >
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center gap-2">
                     <span className="text-xl">{category.icon}</span>
-                    <span className="font-medium text-[var(--text-primary)]">
+                    <span className="font-medium text-(--text-primary)">
                       {category.name[locale]}
                     </span>
                   </div>
-                  <span className="text-sm text-[var(--text-secondary)]">
+                  <span className="text-sm text-(--text-secondary)">
                     {progress.studied}/{progress.total}
                   </span>
                 </div>
-                <div className="w-full h-2 rounded-full overflow-hidden bg-[var(--bg-secondary)]">
+                <div className="w-full h-2 rounded-full overflow-hidden bg-(--bg-secondary)">
                   <div
-                    className="h-full bg-[var(--accent-primary)] transition-all duration-300"
+                    className="h-full bg-(--accent-primary) transition-all duration-300"
                     style={{ width: `${percentage}%` }}
                   />
                 </div>
@@ -171,7 +171,7 @@ export default function MyLearningPage() {
       {/* Bookmarked Words */}
       {favoriteEntries.length > 0 && (
         <div className="mb-8">
-          <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-4">
+          <h2 className="text-lg font-semibold text-(--text-primary) mb-4">
             {locale === 'ko' ? '북마크한 단어' : 'Bookmarked Words'}
           </h2>
           <div className="space-y-1">
@@ -181,17 +181,15 @@ export default function MyLearningPage() {
                 <Link
                   key={entry.id}
                   to={localePath(`/entry/${entry.id}`)}
-                  className="flex items-center justify-between py-3 px-2 -mx-2 rounded-lg border-b border-[var(--border-primary)] transition-colors no-underline hover:bg-[var(--bg-tertiary)]"
+                  className="flex items-center justify-between py-3 px-2 -mx-2 rounded-lg border-b border-(--border-primary) transition-colors no-underline hover:bg-(--bg-tertiary)"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="text-lg font-medium text-[var(--text-primary)]">
+                    <span className="text-lg font-medium text-(--text-primary)">
                       {entry.korean}
                     </span>
-                    <span className="text-sm text-[var(--text-tertiary)]">
-                      {entry.romanization}
-                    </span>
+                    <span className="text-sm text-(--text-tertiary)">{entry.romanization}</span>
                   </div>
-                  <span className="text-sm text-[var(--text-secondary)]">{translation.word}</span>
+                  <span className="text-sm text-(--text-secondary)">{translation.word}</span>
                 </Link>
               );
             })}
@@ -202,7 +200,7 @@ export default function MyLearningPage() {
       {/* Recent Studied Words */}
       {recentStudied.length > 0 && (
         <div className="mb-8">
-          <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-4 flex items-center gap-2">
+          <h2 className="text-lg font-semibold text-(--text-primary) mb-4 flex items-center gap-2">
             <Calendar size={20} />
             {locale === 'ko' ? '최근 학습한 단어' : 'Recently Studied'}
           </h2>
@@ -213,17 +211,15 @@ export default function MyLearningPage() {
                 <Link
                   key={entry.id}
                   to={localePath(`/entry/${entry.id}`)}
-                  className="flex items-center justify-between py-3 px-2 -mx-2 rounded-lg border-b border-[var(--border-primary)] transition-colors no-underline hover:bg-[var(--bg-tertiary)]"
+                  className="flex items-center justify-between py-3 px-2 -mx-2 rounded-lg border-b border-(--border-primary) transition-colors no-underline hover:bg-(--bg-tertiary)"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="text-lg font-medium text-[var(--text-primary)]">
+                    <span className="text-lg font-medium text-(--text-primary)">
                       {entry.korean}
                     </span>
-                    <span className="text-sm text-[var(--text-tertiary)]">
-                      {entry.romanization}
-                    </span>
+                    <span className="text-sm text-(--text-tertiary)">{entry.romanization}</span>
                   </div>
-                  <span className="text-sm text-[var(--text-secondary)]">{translation.word}</span>
+                  <span className="text-sm text-(--text-secondary)">{translation.word}</span>
                 </Link>
               );
             })}
@@ -233,13 +229,13 @@ export default function MyLearningPage() {
 
       {/* Empty State */}
       {studiedCount === 0 && favoriteIds.length === 0 && (
-        <div className="text-center py-12 px-4 text-[var(--text-tertiary)]">
+        <div className="text-center py-12 px-4 text-(--text-tertiary)">
           <p className="text-lg mb-4">
             {locale === 'ko' ? '아직 학습한 단어가 없습니다' : 'No words studied yet'}
           </p>
           <Link
             to={localePath('/browse')}
-            className="min-h-11 px-6 inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors bg-[var(--accent-primary)] text-white hover:brightness-110 active:scale-[0.98]"
+            className="min-h-11 px-6 inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors bg-(--accent-primary) text-white hover:brightness-110 active:scale-[0.98]"
           >
             {locale === 'ko' ? '학습 시작하기 →' : 'Start Learning →'}
           </Link>

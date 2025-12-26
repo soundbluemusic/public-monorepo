@@ -24,10 +24,10 @@ export function ExampleCard({ example, index }: ExampleCardProps) {
   const [showSolution, setShowSolution] = useState(false);
 
   return (
-    <div className="p-5 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)] mb-4">
+    <div className="p-5 rounded-xl bg-(--bg-elevated) border border-(--border-primary) mb-4">
       {/* 예제 헤더 */}
       <div className="flex items-center justify-between mb-3">
-        <span className="text-sm font-medium text-[var(--text-tertiary)]">
+        <span className="text-sm font-medium text-(--text-tertiary)">
           {t('exampleNumber')} {index + 1}
         </span>
         {example.difficulty && <DifficultyStars level={example.difficulty as DifficultyLevel} />}
@@ -35,7 +35,7 @@ export function ExampleCard({ example, index }: ExampleCardProps) {
 
       {/* 문제 */}
       <div className="mb-3">
-        <p className="text-[var(--text-primary)]">{example.problem}</p>
+        <p className="text-(--text-primary)">{example.problem}</p>
         {example.latex && (
           <div className="mt-2">
             <LaTeX math={example.latex} display />
@@ -47,15 +47,15 @@ export function ExampleCard({ example, index }: ExampleCardProps) {
       <button
         type="button"
         onClick={() => setShowSolution(!showSolution)}
-        className="text-sm font-medium text-[var(--accent-primary)] bg-transparent border-none cursor-pointer p-0 hover:underline"
+        className="text-sm font-medium text-(--accent-primary) bg-transparent border-none cursor-pointer p-0 hover:underline"
       >
         {showSolution ? `▼ ${t('hideSolution')}` : `▶ ${t('showSolution')}`}
       </button>
 
       {/* 풀이 */}
       {showSolution && (
-        <div className="mt-3 p-4 rounded-lg bg-[var(--bg-secondary)] border border-[var(--border-primary)]">
-          <p className="text-[var(--text-secondary)] whitespace-pre-wrap">{example.solution}</p>
+        <div className="mt-3 p-4 rounded-lg bg-(--bg-secondary) border border-(--border-primary)">
+          <p className="text-(--text-secondary) whitespace-pre-wrap">{example.solution}</p>
         </div>
       )}
     </div>
@@ -68,11 +68,11 @@ export function ExampleCard({ example, index }: ExampleCardProps) {
 function SimpleExample({ example, index }: { example: string; index: number }) {
   const { t } = useI18n();
   return (
-    <div className="p-5 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)] mb-4">
-      <span className="text-sm font-medium text-[var(--text-tertiary)]">
+    <div className="p-5 rounded-xl bg-(--bg-elevated) border border-(--border-primary) mb-4">
+      <span className="text-sm font-medium text-(--text-tertiary)">
         {t('exampleNumber')} {index + 1}
       </span>
-      <p className="text-[var(--text-primary)] mt-2">{example}</p>
+      <p className="text-(--text-primary) mt-2">{example}</p>
     </div>
   );
 }
@@ -84,7 +84,7 @@ export function ExampleList({ examples, title }: { examples?: ExampleInput[]; ti
   return (
     <div className="space-y-4">
       {title && (
-        <h3 className="flex items-center gap-2 text-lg font-semibold text-[var(--text-primary)] mb-4">
+        <h3 className="flex items-center gap-2 text-lg font-semibold text-(--text-primary) mb-4">
           <PencilLine size={20} aria-hidden="true" />
           {title}
         </h3>

@@ -145,8 +145,8 @@ export default function WebApiPage() {
     <DocsLayout>
       {/* Header */}
       <div className="mb-6">
-        <h1 className="text-2xl font-bold text-[var(--text-primary)] mb-2">Web API</h1>
-        <p className="text-[var(--text-secondary)]">
+        <h1 className="text-2xl font-bold text-(--text-primary) mb-2">Web API</h1>
+        <p className="text-(--text-secondary)">
           {locale === 'ko'
             ? '브라우저에 내장된 무료 API. 설치 없이 바로 사용 가능'
             : 'Browser built-in APIs. Free to use, no installation required'}
@@ -162,7 +162,7 @@ export default function WebApiPage() {
             'min-h-10 px-4 inline-flex items-center gap-2 rounded-lg text-sm font-medium transition-colors cursor-pointer',
             quickFilter === 'trending'
               ? 'bg-orange-500 text-white'
-              : 'bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:bg-[var(--bg-elevated)]',
+              : 'bg-(--bg-tertiary) text-(--text-secondary) hover:bg-(--bg-elevated)',
           )}
         >
           <Flame size={16} aria-hidden="true" />
@@ -175,7 +175,7 @@ export default function WebApiPage() {
             'min-h-10 px-4 inline-flex items-center gap-2 rounded-lg text-sm font-medium transition-colors cursor-pointer',
             quickFilter === 'highSupport'
               ? 'bg-green-500 text-white'
-              : 'bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:bg-[var(--bg-elevated)]',
+              : 'bg-(--bg-tertiary) text-(--text-secondary) hover:bg-(--bg-elevated)',
           )}
         >
           <BarChart2 size={16} aria-hidden="true" />
@@ -188,7 +188,7 @@ export default function WebApiPage() {
             'min-h-10 px-4 inline-flex items-center gap-2 rounded-lg text-sm font-medium transition-colors cursor-pointer',
             quickFilter === 'new'
               ? 'bg-blue-500 text-white'
-              : 'bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:bg-[var(--bg-elevated)]',
+              : 'bg-(--bg-tertiary) text-(--text-secondary) hover:bg-(--bg-elevated)',
           )}
         >
           <CalendarPlus size={16} aria-hidden="true" />
@@ -198,7 +198,7 @@ export default function WebApiPage() {
           <button
             type="button"
             onClick={clearFilters}
-            className="min-h-10 px-4 inline-flex items-center gap-2 rounded-lg text-sm font-medium text-[var(--text-tertiary)] hover:text-[var(--text-primary)] transition-colors cursor-pointer"
+            className="min-h-10 px-4 inline-flex items-center gap-2 rounded-lg text-sm font-medium text-(--text-tertiary) hover:text-(--text-primary) transition-colors cursor-pointer"
           >
             {locale === 'ko' ? '필터 초기화' : 'Clear filters'}
           </button>
@@ -212,7 +212,7 @@ export default function WebApiPage() {
             <Search
               size={18}
               aria-hidden="true"
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--text-tertiary)]"
+              className="absolute left-3 top-1/2 -translate-y-1/2 text-(--text-tertiary)"
             />
             <input
               type="text"
@@ -228,13 +228,13 @@ export default function WebApiPage() {
                 }
                 setSearchParams(params);
               }}
-              className="w-full min-h-11 pl-10 pr-4 rounded-lg bg-[var(--bg-elevated)] border border-[var(--border-primary)] text-[var(--text-primary)] placeholder:text-[var(--text-tertiary)] focus:outline-none focus:border-[var(--border-focus)] transition-colors"
+              className="w-full min-h-11 pl-10 pr-4 rounded-lg bg-(--bg-elevated) border border-(--border-primary) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none focus:border-(--border-focus) transition-colors"
             />
           </div>
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as SortOption)}
-            className="min-h-11 px-4 rounded-lg bg-[var(--bg-elevated)] border border-[var(--border-primary)] text-[var(--text-primary)] focus:outline-none focus:border-[var(--border-focus)] transition-colors cursor-pointer"
+            className="min-h-11 px-4 rounded-lg bg-(--bg-elevated) border border-(--border-primary) text-(--text-primary) focus:outline-none focus:border-(--border-focus) transition-colors cursor-pointer"
           >
             <option value="support">{locale === 'ko' ? '지원률순' : 'Most Supported'}</option>
             <option value="newest">{locale === 'ko' ? '최신순' : 'Newest First'}</option>
@@ -260,8 +260,8 @@ export default function WebApiPage() {
               className={cn(
                 'px-3 py-1.5 rounded-full text-sm font-medium transition-colors cursor-pointer',
                 category === cat
-                  ? 'bg-[var(--accent-primary)] text-white'
-                  : 'bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:bg-[var(--bg-elevated)]',
+                  ? 'bg-(--accent-primary) text-white'
+                  : 'bg-(--bg-tertiary) text-(--text-secondary) hover:bg-(--bg-elevated)',
               )}
             >
               {cat === 'All' ? (locale === 'ko' ? '전체' : 'All') : cat}
@@ -271,7 +271,7 @@ export default function WebApiPage() {
       </div>
 
       {/* Results count */}
-      <div className="text-sm text-[var(--text-tertiary)] mb-4">
+      <div className="text-sm text-(--text-tertiary) mb-4">
         {filteredApis.length} {locale === 'ko' ? '개의 API' : 'APIs'}
       </div>
 
@@ -279,9 +279,7 @@ export default function WebApiPage() {
       <div className="space-y-8">
         {Object.entries(groupedApis).map(([categoryName, categoryApis]) => (
           <section key={categoryName}>
-            <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-4">
-              {categoryName}
-            </h2>
+            <h2 className="text-lg font-semibold text-(--text-primary) mb-4">{categoryName}</h2>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {categoryApis.map((api) => (
                 <a
@@ -289,11 +287,11 @@ export default function WebApiPage() {
                   href={api.mdnUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)] no-underline transition-all hover:border-[var(--border-focus)] hover:shadow-sm group"
+                  className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) no-underline transition-all hover:border-(--border-focus) hover:shadow-sm group"
                 >
                   <div className="flex items-start justify-between gap-2 mb-2">
                     <div className="flex items-center gap-2">
-                      <h3 className="font-medium text-[var(--text-primary)]">{api.name}</h3>
+                      <h3 className="font-medium text-(--text-primary)">{api.name}</h3>
                       {api.trending && (
                         <span className="p-1 rounded bg-orange-500/10 text-orange-500">
                           <Flame size={14} aria-hidden="true" />
@@ -304,11 +302,11 @@ export default function WebApiPage() {
                       {api.support}
                     </span>
                   </div>
-                  <p className="text-sm text-[var(--text-secondary)] mb-2 line-clamp-2">
+                  <p className="text-sm text-(--text-secondary) mb-2 line-clamp-2">
                     {locale === 'ko' ? api.descriptionKo : api.description}
                   </p>
                   {api.yearStable && (
-                    <p className="text-xs text-[var(--text-tertiary)]">Since {api.yearStable}</p>
+                    <p className="text-xs text-(--text-tertiary)">Since {api.yearStable}</p>
                   )}
                 </a>
               ))}
@@ -321,7 +319,7 @@ export default function WebApiPage() {
       {filteredApis.length === 0 && (
         <div className="text-center py-16">
           <div className="text-5xl mb-4">🔍</div>
-          <p className="text-[var(--text-secondary)]">
+          <p className="text-(--text-secondary)">
             {locale === 'ko' ? '검색 결과가 없습니다' : 'No results found'}
           </p>
         </div>

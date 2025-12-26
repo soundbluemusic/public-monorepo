@@ -20,10 +20,10 @@ export function Sidebar() {
   };
 
   return (
-    <aside className="hidden lg:block sticky top-14 left-0 h-[calc(100vh-3.5rem)] w-64 overflow-y-auto flex-shrink-0 bg-[var(--bg-primary)] border-r border-[var(--border-primary)]">
+    <aside className="hidden lg:block sticky top-14 left-0 h-[calc(100vh-3.5rem)] w-64 overflow-y-auto flex-shrink-0 bg-(--bg-primary) border-r border-(--border-primary)">
       <nav className="p-4 flex flex-col gap-1">
-        <div className="mb-4 pb-4 border-b border-[var(--border-primary)]">
-          <h2 className="text-xs font-semibold uppercase tracking-wider text-[var(--text-tertiary)] m-0">
+        <div className="mb-4 pb-4 border-b border-(--border-primary)">
+          <h2 className="text-xs font-semibold uppercase tracking-wider text-(--text-tertiary) m-0">
             {t('mathFields')}
           </h2>
         </div>
@@ -35,8 +35,8 @@ export function Sidebar() {
             className={cn(
               'flex items-center gap-3 px-3 py-3 rounded-lg min-h-11 transition-all no-underline',
               isActive(field.id)
-                ? 'bg-[var(--bg-tertiary)] text-[var(--accent-primary)] shadow-sm'
-                : 'text-[var(--text-secondary)] hover:translate-x-1',
+                ? 'bg-(--bg-tertiary) text-(--accent-primary) shadow-sm'
+                : 'text-(--text-secondary) hover:translate-x-1',
             )}
           >
             <span className="text-xl flex-shrink-0">{field.icon}</span>
@@ -44,16 +44,14 @@ export function Sidebar() {
               <div
                 className={cn(
                   'font-medium text-sm truncate',
-                  isActive(field.id)
-                    ? 'text-[var(--accent-primary)]'
-                    : 'text-[var(--text-primary)]',
+                  isActive(field.id) ? 'text-(--accent-primary)' : 'text-(--text-primary)',
                 )}
               >
                 {field.name[locale] || field.name.en}
               </div>
             </div>
             {isActive(field.id) && (
-              <div className="w-1 h-6 rounded-full flex-shrink-0 bg-[var(--accent-primary)]" />
+              <div className="w-1 h-6 rounded-full flex-shrink-0 bg-(--accent-primary)" />
             )}
           </Link>
         ))}

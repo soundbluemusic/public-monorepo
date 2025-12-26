@@ -23,19 +23,14 @@ export default function SitemapPage() {
 
   return (
     <Layout>
-      <h1 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)] mb-6">
-        {t('sitemap')}
-      </h1>
+      <h1 className="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-6">{t('sitemap')}</h1>
 
       <section className="mb-8">
-        <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-4">{t('allPages')}</h2>
+        <h2 className="text-lg font-semibold text-(--text-primary) mb-4">{t('allPages')}</h2>
         <ul className="space-y-3">
           {pages.map((page) => (
             <li key={page.path}>
-              <Link
-                to={localePath(page.path)}
-                className="text-[var(--accent-primary)] hover:underline"
-              >
+              <Link to={localePath(page.path)} className="text-(--accent-primary) hover:underline">
                 {page.label}
               </Link>
             </li>
@@ -44,15 +39,13 @@ export default function SitemapPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-semibold text-[var(--text-primary)] mb-4">
-          {t('allCategories')}
-        </h2>
+        <h2 className="text-lg font-semibold text-(--text-primary) mb-4">{t('allCategories')}</h2>
         <ul className="space-y-3">
           {categories.map((category) => (
             <li key={category.id}>
               <Link
                 to={localePath(`/category/${category.id}`)}
-                className="flex items-center gap-2 text-[var(--accent-primary)] hover:underline"
+                className="flex items-center gap-2 text-(--accent-primary) hover:underline"
               >
                 <span>{category.icon}</span>
                 {category.name[locale]}

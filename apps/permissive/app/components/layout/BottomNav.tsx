@@ -39,14 +39,14 @@ export default function BottomNav() {
   const isActive = (href: string) => location.pathname === localePath(href);
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-40 bg-[var(--bg-elevated)] border-t border-[var(--border-primary)] flex items-center justify-around h-16 pb-[env(safe-area-inset-bottom,0px)] lg:hidden">
+    <nav className="fixed bottom-0 left-0 right-0 z-40 bg-(--bg-elevated) border-t border-(--border-primary) flex items-center justify-around h-16 pb-[env(safe-area-inset-bottom,0px)] lg:hidden">
       {navItems.map((item) => (
         <Link
           key={item.href}
           to={localePath(item.href)}
           className={cn(
             'flex flex-col items-center justify-center gap-1 min-h-11 min-w-11 px-4 py-2 no-underline transition-colors',
-            isActive(item.href) ? 'text-[var(--accent-primary)]' : 'text-[var(--text-secondary)]',
+            isActive(item.href) ? 'text-(--accent-primary)' : 'text-(--text-secondary)',
           )}
           aria-current={isActive(item.href) ? 'page' : undefined}
         >

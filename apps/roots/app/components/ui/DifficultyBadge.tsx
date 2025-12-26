@@ -17,11 +17,11 @@ const labels: Record<number, string> = {
 };
 
 const levelColors: Record<number, string> = {
-  1: 'bg-[color-mix(in_srgb,var(--difficulty-1)_15%,transparent)] text-[var(--difficulty-1)]',
-  2: 'bg-[color-mix(in_srgb,var(--difficulty-2)_15%,transparent)] text-[var(--difficulty-2)]',
-  3: 'bg-[color-mix(in_srgb,var(--difficulty-3)_15%,transparent)] text-[var(--difficulty-3)]',
-  4: 'bg-[color-mix(in_srgb,var(--difficulty-4)_15%,transparent)] text-[var(--difficulty-4)]',
-  5: 'bg-[color-mix(in_srgb,var(--difficulty-5)_15%,transparent)] text-[var(--difficulty-5)]',
+  1: 'bg-[color-mix(in_srgb,var(--difficulty-1)_15%,transparent)] text-(--difficulty-1)',
+  2: 'bg-[color-mix(in_srgb,var(--difficulty-2)_15%,transparent)] text-(--difficulty-2)',
+  3: 'bg-[color-mix(in_srgb,var(--difficulty-3)_15%,transparent)] text-(--difficulty-3)',
+  4: 'bg-[color-mix(in_srgb,var(--difficulty-4)_15%,transparent)] text-(--difficulty-4)',
+  5: 'bg-[color-mix(in_srgb,var(--difficulty-5)_15%,transparent)] text-(--difficulty-5)',
 };
 
 export function DifficultyBadge({ level, showLabel = true, size = 'md' }: DifficultyBadgeProps) {

@@ -53,21 +53,21 @@ export default function ConstantsPage() {
 
   return (
     <Layout>
-      <h1 className="text-2xl font-bold text-[var(--text-primary)] mb-8">{t('constants')}</h1>
+      <h1 className="text-2xl font-bold text-(--text-primary) mb-8">{t('constants')}</h1>
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {mathConstants.map((constant) => (
           <div
             key={constant.symbol}
-            className="p-6 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-primary)] text-center"
+            className="p-6 rounded-xl bg-(--bg-elevated) border border-(--border-primary) text-center"
           >
-            <div className="text-4xl font-serif mb-2 text-[var(--accent-primary)]">
+            <div className="text-4xl font-serif mb-2 text-(--accent-primary)">
               {constant.symbol}
             </div>
-            <h3 className="text-base font-medium text-[var(--text-primary)] mb-1">
+            <h3 className="text-base font-medium text-(--text-primary) mb-1">
               {constant.name[locale as keyof typeof constant.name] || constant.name.en}
             </h3>
-            <p className="text-sm font-mono text-[var(--text-secondary)]">{constant.value}</p>
+            <p className="text-sm font-mono text-(--text-secondary)">{constant.value}</p>
           </div>
         ))}
       </div>

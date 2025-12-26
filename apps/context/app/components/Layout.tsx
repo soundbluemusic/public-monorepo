@@ -62,12 +62,12 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
     return (
       <div className="flex items-center justify-between w-full">
         <div className="flex items-baseline gap-2">
-          <span className="font-medium text-[var(--text-primary)]">{name.ko}</span>
-          <span className="text-xs text-[var(--text-tertiary)]">
+          <span className="font-medium text-(--text-primary)">{name.ko}</span>
+          <span className="text-xs text-(--text-tertiary)">
             {result.item.tags?.[result.item.tags.length - 1]}
           </span>
         </div>
-        <span className="text-[var(--text-secondary)]">{name.en}</span>
+        <span className="text-(--text-secondary)">{name.en}</span>
       </div>
     );
   }, []);
@@ -92,29 +92,26 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
   const closeSidebar = () => setSidebarOpen(false);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[var(--bg-primary)]">
+    <div className="min-h-screen flex flex-col bg-(--bg-primary)">
       {/* Skip to content */}
       <a href="#main-content" className="skip-to-content">
         {locale === 'ko' ? '본문으로 건너뛰기' : 'Skip to content'}
       </a>
 
       {/* Header */}
-      <header className="sticky top-0 z-30 backdrop-blur-sm bg-[var(--bg-primary)]/80 border-b border-[var(--border-primary)]">
+      <header className="sticky top-0 z-30 backdrop-blur-sm bg-(--bg-primary)/80 border-b border-(--border-primary)">
         <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
           {/* Menu Button + Logo */}
           <div className="flex items-center gap-2 shrink-0">
             <button
               type="button"
               onClick={() => setSidebarOpen(true)}
-              className="min-h-11 min-w-11 flex items-center justify-center rounded-lg transition-colors hover:bg-[var(--bg-tertiary)]"
+              className="min-h-11 min-w-11 flex items-center justify-center rounded-lg transition-colors hover:bg-(--bg-tertiary)"
               aria-label={t('menu')}
             >
               <Menu size={20} aria-hidden="true" />
             </button>
-            <Link
-              to={localePath('/')}
-              className="font-semibold text-[var(--text-primary)] no-underline"
-            >
+            <Link to={localePath('/')} className="font-semibold text-(--text-primary) no-underline">
               Context
             </Link>
           </div>
@@ -137,8 +134,8 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
               to={localePath('/browse')}
               className={cn(
                 'px-3 py-2 text-sm rounded-lg transition-colors min-h-11 flex items-center justify-center',
-                'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)]',
-                isActive('/browse') && 'text-[var(--accent-primary)] bg-[var(--bg-tertiary)]',
+                'text-(--text-secondary) hover:bg-(--bg-tertiary)',
+                isActive('/browse') && 'text-(--accent-primary) bg-(--bg-tertiary)',
               )}
             >
               {t('browse')}
@@ -170,18 +167,18 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
       {/* Sidebar */}
       <aside
         className={cn(
-          'fixed top-0 left-0 z-50 h-full w-72 bg-[var(--bg-elevated)] border-r border-[var(--border-primary)]',
+          'fixed top-0 left-0 z-50 h-full w-72 bg-(--bg-elevated) border-r border-(--border-primary)',
           'flex flex-col transform transition-transform duration-200',
           sidebarOpen ? 'translate-x-0' : '-translate-x-full',
         )}
         aria-label={t('menu')}
       >
-        <div className="h-14 flex items-center justify-between px-4 shrink-0 border-b border-[var(--border-primary)]">
-          <span className="font-semibold text-[var(--text-primary)]">{t('menu')}</span>
+        <div className="h-14 flex items-center justify-between px-4 shrink-0 border-b border-(--border-primary)">
+          <span className="font-semibold text-(--text-primary)">{t('menu')}</span>
           <button
             type="button"
             onClick={closeSidebar}
-            className="min-h-11 min-w-11 flex items-center justify-center rounded-lg transition-colors hover:bg-[var(--bg-tertiary)]"
+            className="min-h-11 min-w-11 flex items-center justify-center rounded-lg transition-colors hover:bg-(--bg-tertiary)"
             aria-label="Close menu"
           >
             <X size={20} aria-hidden="true" />
@@ -195,8 +192,8 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
               onClick={closeSidebar}
               className={cn(
                 'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
-                'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] hover:text-[var(--text-primary)]',
-                isActive('/') && 'bg-[var(--bg-tertiary)] text-[var(--accent-primary)]',
+                'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
+                isActive('/') && 'bg-(--bg-tertiary) text-(--accent-primary)',
               )}
             >
               <Home size={20} aria-hidden="true" />
@@ -207,8 +204,8 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
               onClick={closeSidebar}
               className={cn(
                 'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
-                'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] hover:text-[var(--text-primary)]',
-                isActive('/browse') && 'bg-[var(--bg-tertiary)] text-[var(--accent-primary)]',
+                'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
+                isActive('/browse') && 'bg-(--bg-tertiary) text-(--accent-primary)',
               )}
             >
               <List size={20} aria-hidden="true" />
@@ -219,8 +216,8 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
               onClick={closeSidebar}
               className={cn(
                 'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
-                'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] hover:text-[var(--text-primary)]',
-                isActive('/my-learning') && 'bg-[var(--bg-tertiary)] text-[var(--accent-primary)]',
+                'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
+                isActive('/my-learning') && 'bg-(--bg-tertiary) text-(--accent-primary)',
               )}
             >
               <LayoutGrid size={20} aria-hidden="true" />
@@ -231,8 +228,8 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
               onClick={closeSidebar}
               className={cn(
                 'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
-                'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] hover:text-[var(--text-primary)]',
-                isActive('/about') && 'bg-[var(--bg-tertiary)] text-[var(--accent-primary)]',
+                'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
+                isActive('/about') && 'bg-(--bg-tertiary) text-(--accent-primary)',
               )}
             >
               <Info size={20} aria-hidden="true" />
@@ -241,7 +238,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
           </div>
 
           <div className="px-3 mb-6">
-            <div className="px-3 py-2 text-xs font-medium uppercase tracking-wider text-[var(--text-tertiary)]">
+            <div className="px-3 py-2 text-xs font-medium uppercase tracking-wider text-(--text-tertiary)">
               {t('browseByCategory')}
             </div>
             <div className="flex flex-col gap-0.5">
@@ -252,9 +249,9 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
                   onClick={closeSidebar}
                   className={cn(
                     'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11 text-sm',
-                    'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] hover:text-[var(--text-primary)]',
+                    'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
                     isActive(`/category/${category.id}`) &&
-                      'bg-[var(--bg-tertiary)] text-[var(--accent-primary)]',
+                      'bg-(--bg-tertiary) text-(--accent-primary)',
                   )}
                 >
                   <span className="text-base">{category.icon}</span>
@@ -264,7 +261,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
               <Link
                 to={localePath('/browse')}
                 onClick={closeSidebar}
-                className="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11 text-sm text-[var(--accent-primary)] hover:bg-[var(--bg-tertiary)]"
+                className="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11 text-sm text-(--accent-primary) hover:bg-(--bg-tertiary)"
               >
                 <span className="text-base opacity-50">+{categories.length - 6}</span>
                 {t('viewAll')}
@@ -273,8 +270,8 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
           </div>
         </nav>
 
-        <div className="shrink-0 p-4 border-t border-[var(--border-primary)]">
-          <div className="px-3 py-2 text-xs font-medium uppercase tracking-wider text-[var(--text-tertiary)]">
+        <div className="shrink-0 p-4 border-t border-(--border-primary)">
+          <div className="px-3 py-2 text-xs font-medium uppercase tracking-wider text-(--text-tertiary)">
             {t('more')}
           </div>
           <Link
@@ -282,8 +279,8 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
             onClick={closeSidebar}
             className={cn(
               'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
-              'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] hover:text-[var(--text-primary)]',
-              isActive('/sitemap') && 'bg-[var(--bg-tertiary)] text-[var(--accent-primary)]',
+              'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
+              isActive('/sitemap') && 'bg-(--bg-tertiary) text-(--accent-primary)',
             )}
           >
             <LayoutGrid size={20} aria-hidden="true" />
@@ -300,21 +297,17 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
               {breadcrumbs.map((item, index) => (
                 <li key={item.label} className="flex items-center gap-1">
                   {index > 0 && (
-                    <ChevronRight
-                      size={14}
-                      className="text-[var(--text-tertiary)]"
-                      aria-hidden="true"
-                    />
+                    <ChevronRight size={14} className="text-(--text-tertiary)" aria-hidden="true" />
                   )}
                   {item.path ? (
                     <Link
                       to={localePath(item.path)}
-                      className="text-[var(--text-secondary)] no-underline hover:underline"
+                      className="text-(--text-secondary) no-underline hover:underline"
                     >
                       {item.label}
                     </Link>
                   ) : (
-                    <span className="text-[var(--text-primary)]">{item.label}</span>
+                    <span className="text-(--text-primary)">{item.label}</span>
                   )}
                 </li>
               ))}
@@ -325,12 +318,12 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
       </main>
 
       {/* Bottom Navigation (Mobile) */}
-      <nav className="fixed bottom-0 left-0 right-0 z-30 sm:hidden bg-[var(--bg-elevated)] border-t border-[var(--border-primary)] flex items-center justify-around h-16 pb-[env(safe-area-inset-bottom)]">
+      <nav className="fixed bottom-0 left-0 right-0 z-30 sm:hidden bg-(--bg-elevated) border-t border-(--border-primary) flex items-center justify-around h-16 pb-[env(safe-area-inset-bottom)]">
         <Link
           to={localePath('/')}
           className={cn(
             'flex flex-col items-center justify-center gap-1 min-h-11 min-w-11 px-3 py-2 rounded-lg transition-colors',
-            isActive('/') ? 'text-[var(--accent-primary)]' : 'text-[var(--text-secondary)]',
+            isActive('/') ? 'text-(--accent-primary)' : 'text-(--text-secondary)',
           )}
         >
           <Home size={20} aria-hidden="true" />
@@ -340,7 +333,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
           to={localePath('/browse')}
           className={cn(
             'flex flex-col items-center justify-center gap-1 min-h-11 min-w-11 px-3 py-2 rounded-lg transition-colors',
-            isActive('/browse') ? 'text-[var(--accent-primary)]' : 'text-[var(--text-secondary)]',
+            isActive('/browse') ? 'text-(--accent-primary)' : 'text-(--text-secondary)',
           )}
         >
           <Grid3X3 size={20} aria-hidden="true" />
@@ -350,9 +343,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
           to={localePath('/my-learning')}
           className={cn(
             'flex flex-col items-center justify-center gap-1 min-h-11 min-w-11 px-3 py-2 rounded-lg transition-colors',
-            isActive('/my-learning')
-              ? 'text-[var(--accent-primary)]'
-              : 'text-[var(--text-secondary)]',
+            isActive('/my-learning') ? 'text-(--accent-primary)' : 'text-(--text-secondary)',
           )}
         >
           <LayoutGrid size={20} aria-hidden="true" />
@@ -362,7 +353,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
           to={localePath('/about')}
           className={cn(
             'flex flex-col items-center justify-center gap-1 min-h-11 min-w-11 px-3 py-2 rounded-lg transition-colors',
-            isActive('/about') ? 'text-[var(--accent-primary)]' : 'text-[var(--text-secondary)]',
+            isActive('/about') ? 'text-(--accent-primary)' : 'text-(--text-secondary)',
           )}
         >
           <Info size={20} aria-hidden="true" />
@@ -375,7 +366,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
         <button
           type="button"
           onClick={scrollToTop}
-          className="fixed bottom-20 sm:bottom-8 right-4 z-20 min-h-11 min-w-11 flex items-center justify-center rounded-full shadow-md bg-[var(--bg-elevated)] border border-[var(--border-primary)] text-[var(--text-secondary)] cursor-pointer transition-all hover:bg-[var(--bg-tertiary)] focus:outline-2 focus:outline-[var(--accent-primary)] focus:outline-offset-2"
+          className="fixed bottom-20 sm:bottom-8 right-4 z-20 min-h-11 min-w-11 flex items-center justify-center rounded-full shadow-md bg-(--bg-elevated) border border-(--border-primary) text-(--text-secondary) cursor-pointer transition-all hover:bg-(--bg-tertiary) focus:outline-2 focus:outline-(--accent-primary) focus:outline-offset-2"
           aria-label={locale === 'ko' ? '맨 위로' : 'Back to top'}
         >
           <ArrowUp size={20} aria-hidden="true" />
@@ -383,44 +374,41 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
       )}
 
       {/* Footer */}
-      <footer className="hidden sm:block mt-auto py-8 bg-[var(--bg-secondary)] border-t border-[var(--border-primary)]">
+      <footer className="hidden sm:block mt-auto py-8 bg-(--bg-secondary) border-t border-(--border-primary)">
         <div className="max-w-4xl mx-auto px-4">
-          <nav className="flex items-center justify-center gap-6 mb-4 text-sm text-[var(--text-secondary)]">
+          <nav className="flex items-center justify-center gap-6 mb-4 text-sm text-(--text-secondary)">
             <Link
               to={localePath('/privacy')}
-              className="hover:text-[var(--text-primary)] hover:underline"
+              className="hover:text-(--text-primary) hover:underline"
             >
               {t('privacy')}
             </Link>
-            <Link
-              to={localePath('/terms')}
-              className="hover:text-[var(--text-primary)] hover:underline"
-            >
+            <Link to={localePath('/terms')} className="hover:text-(--text-primary) hover:underline">
               {t('terms')}
             </Link>
             <Link
               to={localePath('/license')}
-              className="hover:text-[var(--text-primary)] hover:underline"
+              className="hover:text-(--text-primary) hover:underline"
             >
               {t('license')}
             </Link>
           </nav>
-          <p className="text-center text-sm mb-2 text-[var(--text-tertiary)]">
+          <p className="text-center text-sm mb-2 text-(--text-tertiary)">
             {t('footerCredits')}{' '}
             <Link
               to={localePath('/built-with')}
-              className="text-[var(--accent-primary)] hover:underline"
+              className="text-(--accent-primary) hover:underline"
             >
               {t('footerBuiltWith')}
             </Link>
           </p>
-          <div className="flex items-center justify-center gap-4 text-sm text-[var(--text-tertiary)]">
+          <div className="flex items-center justify-center gap-4 text-sm text-(--text-tertiary)">
             <p className="m-0">Context by SoundBlueMusic</p>
             <a
               href="https://github.com/soundbluemusic/public-monorepo"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-[var(--accent-primary)] hover:underline"
+              className="flex items-center gap-1.5 text-(--accent-primary) hover:underline"
             >
               <Github size={16} aria-hidden="true" />
               {t('footerGitHub')}

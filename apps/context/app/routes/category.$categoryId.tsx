@@ -42,11 +42,11 @@ export default function CategoryPage() {
   if (!category) {
     return (
       <Layout>
-        <div className="text-center py-12 px-4 text-[var(--text-tertiary)]">
-          <p className="text-[var(--text-secondary)]">{t('categoryNotFound')}</p>
+        <div className="text-center py-12 px-4 text-(--text-tertiary)">
+          <p className="text-(--text-secondary)">{t('categoryNotFound')}</p>
           <Link
             to={localePath('/browse')}
-            className="text-[var(--accent-primary)] hover:underline mt-4 inline-block"
+            className="text-(--accent-primary) hover:underline mt-4 inline-block"
           >
             {t('browse')}
           </Link>
@@ -62,19 +62,17 @@ export default function CategoryPage() {
       <div className="mb-8">
         <div className="flex items-center gap-3 mb-2">
           <span className="text-3xl">{category.icon}</span>
-          <h1 className="text-2xl font-semibold text-[var(--text-primary)]">
-            {category.name[locale]}
-          </h1>
+          <h1 className="text-2xl font-semibold text-(--text-primary)">{category.name[locale]}</h1>
         </div>
-        <p className="text-[var(--text-secondary)]">
+        <p className="text-(--text-secondary)">
           {studiedCount}/{entries.length} {locale === 'ko' ? '단어 학습함' : 'words studied'}
         </p>
 
         {/* Progress bar */}
         {studiedCount > 0 && (
-          <div className="w-full h-2 rounded-full overflow-hidden bg-[var(--bg-secondary)] mt-3">
+          <div className="w-full h-2 rounded-full overflow-hidden bg-(--bg-secondary) mt-3">
             <div
-              className="h-full bg-[var(--accent-primary)] transition-all duration-300"
+              className="h-full bg-(--accent-primary) transition-all duration-300"
               style={{ width: `${(studiedCount / entries.length) * 100}%` }}
             />
           </div>
@@ -90,14 +88,14 @@ export default function CategoryPage() {
             <Link
               key={entry.id}
               to={localePath(`/entry/${entry.id}`)}
-              className="flex items-center justify-between py-3 px-2 -mx-2 rounded-lg border-b border-[var(--border-primary)] transition-colors no-underline hover:bg-[var(--bg-tertiary)]"
+              className="flex items-center justify-between py-3 px-2 -mx-2 rounded-lg border-b border-(--border-primary) transition-colors no-underline hover:bg-(--bg-tertiary)"
             >
               <div className="flex items-center gap-3 flex-1 min-w-0">
                 {/* Checkmark */}
                 <div
                   className={cn(
                     'w-5 h-5 rounded-full flex items-center justify-center shrink-0',
-                    isStudied ? 'bg-[var(--accent-primary)]' : '',
+                    isStudied ? 'bg-(--accent-primary)' : '',
                   )}
                 >
                   {isStudied && <Check size={14} className="text-white" />}
@@ -109,17 +107,17 @@ export default function CategoryPage() {
                     className={cn(
                       'text-lg font-medium',
                       isStudied
-                        ? 'text-[var(--text-secondary)] line-through opacity-70'
-                        : 'text-[var(--text-primary)]',
+                        ? 'text-(--text-secondary) line-through opacity-70'
+                        : 'text-(--text-primary)',
                     )}
                   >
                     {entry.korean}
                   </span>
-                  <span className="text-sm text-[var(--text-tertiary)]">{entry.romanization}</span>
+                  <span className="text-sm text-(--text-tertiary)">{entry.romanization}</span>
                 </div>
               </div>
 
-              <span className="text-sm text-[var(--text-secondary)] shrink-0 ml-2">
+              <span className="text-sm text-(--text-secondary) shrink-0 ml-2">
                 {translation.word}
               </span>
             </Link>
@@ -128,7 +126,7 @@ export default function CategoryPage() {
       </div>
 
       {entries.length === 0 && (
-        <p className="text-center py-12 px-4 text-[var(--text-tertiary)]">{t('noCategoryWords')}</p>
+        <p className="text-center py-12 px-4 text-(--text-tertiary)">{t('noCategoryWords')}</p>
       )}
     </Layout>
   );
