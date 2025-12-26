@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useOnlineStatus } from '../hooks/useOnlineStatus';
+import styles from '../styles/components.module.scss';
 
 /**
  * Offline banner and reconnection toast component
@@ -20,10 +21,10 @@ export function OfflineIndicator() {
     <>
       {/* Offline banner */}
       {!isOnline && (
-        <div className="fixed top-0 left-0 right-0 z-[9999] bg-amber-500 text-amber-950 text-center py-2 px-4 text-sm font-medium flex items-center justify-center gap-2">
+        <div className={styles.offlineBanner}>
           <svg
             aria-hidden="true"
-            className="w-4 h-4"
+            className={styles.offlineIcon}
             fill="none"
             stroke="currentColor"
             strokeWidth="2"
@@ -41,10 +42,10 @@ export function OfflineIndicator() {
 
       {/* Reconnection toast */}
       {showReconnected && (
-        <div className="fixed top-4 right-4 z-[9999] bg-emerald-500 text-white px-4 py-2 rounded-lg shadow-lg text-sm font-medium flex items-center gap-2">
+        <div className={styles.reconnectedToast}>
           <svg
             aria-hidden="true"
-            className="w-4 h-4"
+            className={styles.offlineIcon}
             fill="none"
             stroke="currentColor"
             strokeWidth="2"

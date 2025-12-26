@@ -6,6 +6,7 @@
 import { Search } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { SearchResult } from '../hooks/useSearchWorker';
+import styles from '../styles/components.module.scss';
 
 export interface SearchDropdownProps {
   query: string;
@@ -115,28 +116,17 @@ export function SearchDropdown({
     const desc = result.item.description?.[locale] || result.item.description?.en;
 
     return (
-      <div className="flex flex-col gap-0.5">
-        <span style={{ color: 'var(--text-primary)' }} className="font-medium">
-          {name}
-        </span>
-        {desc && (
-          <span style={{ color: 'var(--text-tertiary)' }} className="text-xs line-clamp-1">
-            {desc}
-          </span>
-        )}
+      <div className={styles.searchResultContent}>
+        <span className={styles.searchResultName}>{name}</span>
+        {desc && <span className={styles.searchResultField}>{desc}</span>}
       </div>
     );
   };
 
   return (
-    <div ref={containerRef} className={`relative ${className}`}>
-      <div className="relative">
-        <Search
-          size={16}
-          className="absolute left-3 top-1/2 -translate-y-1/2"
-          style={{ color: 'var(--text-tertiary)' }}
-          aria-hidden="true"
-        />
+    <div ref={containerRef} className={`${styles.searchContainer} ${className}`}>
+      <div style={{ position: 'relative' }}>
+        <Search size={16} className={styles.searchIcon} aria-hidden="true" />
         <input
           ref={inputRef}
           type="text"
@@ -145,26 +135,15 @@ export function SearchDropdown({
           onFocus={() => setShowResults(true)}
           onKeyDown={handleKeyDown}
           placeholder={placeholder[locale]}
-          className="w-full pl-9 pr-3 py-2 text-sm rounded-lg focus:outline-none"
-          style={{
-            backgroundColor: 'var(--bg-secondary)',
-            color: 'var(--text-primary)',
-            border: '1px solid var(--border-primary)',
-          }}
+          className={styles.searchInput}
         />
       </div>
 
       {/* Results Dropdown */}
       {showResults && query.length >= 2 && (
-        <div
-          className="absolute top-full left-0 right-0 mt-1 rounded-lg shadow-lg overflow-hidden z-50"
-          style={{
-            backgroundColor: 'var(--bg-elevated)',
-            border: '1px solid var(--border-primary)',
-          }}
-        >
+        <div className={styles.searchDropdown}>
           {isLoading ? (
-            <div className="px-4 py-3 text-sm" style={{ color: 'var(--text-tertiary)' }}>
+            <div className={styles.searchLoading}>
               {locale === 'ko' ? '검색 중...' : 'Searching...'}
             </div>
           ) : results.length > 0 ? (
@@ -174,10 +153,7 @@ export function SearchDropdown({
                 type="button"
                 onClick={() => handleResultClick(result, index)}
                 onMouseEnter={() => setSelectedIndex(index)}
-                className="w-full px-4 py-3 text-left text-sm min-h-11"
-                style={{
-                  backgroundColor: selectedIndex === index ? 'var(--bg-tertiary)' : 'transparent',
-                }}
+                className={`${styles.searchResultButton} ${selectedIndex === index ? styles.searchResultButtonSelected : ''}`}
               >
                 {renderResult
                   ? renderResult(result, selectedIndex === index, locale)
@@ -185,7 +161,7 @@ export function SearchDropdown({
               </button>
             ))
           ) : (
-            <div className="px-4 py-3 text-sm" style={{ color: 'var(--text-tertiary)' }}>
+            <div className={styles.searchNoResults}>
               {locale === 'ko' ? '결과 없음' : 'No results'}
             </div>
           )}

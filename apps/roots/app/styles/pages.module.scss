@@ -1,0 +1,993 @@
+// pages.module.scss - Roots page styles
+
+// ============================================
+// Home Page
+// ============================================
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.heroSection {
+  text-align: center;
+  padding: 3rem 0;
+
+  @media (min-width: 640px) {
+    padding: 4rem 0;
+  }
+}
+
+.heroTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+
+  @media (min-width: 640px) {
+    font-size: 3rem;
+  }
+}
+
+.heroSubtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroStats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.heroStat {
+  text-align: center;
+}
+
+.heroStatValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+}
+
+.heroStatLabel {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+}
+
+// ============================================
+// Section Styles
+// ============================================
+.section {
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sectionSubtitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-tertiary);
+  margin-bottom: 0.75rem;
+}
+
+// ============================================
+// Grid Layouts
+// ============================================
+.grid2 {
+  display: grid;
+  gap: 1rem;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.grid3 {
+  display: grid;
+  gap: 1rem;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid4 {
+  display: grid;
+  gap: 1rem;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// ============================================
+// Cards
+// ============================================
+.card {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+  transition: all 150ms ease-out;
+}
+
+.cardClickable {
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+
+  &:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.cardEmoji {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.cardDescription {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+.cardTag {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+}
+
+// ============================================
+// Field Card
+// ============================================
+.fieldCard {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+  transition: all 150ms ease-out;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  &:hover {
+    border-color: var(--accent-primary);
+    background-color: var(--bg-secondary);
+  }
+}
+
+.fieldCardIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.fieldCardContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.fieldCardName {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.fieldCardCount {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+// ============================================
+// Concept Card
+// ============================================
+.conceptCard {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+  transition: all 150ms ease-out;
+  text-decoration: none;
+  display: block;
+
+  &:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.conceptCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.conceptCardTitle {
+  font-weight: 600;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.conceptCardDescription {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.conceptCardMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.conceptCardField {
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+}
+
+// ============================================
+// Difficulty Badge
+// ============================================
+.difficultyBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.125rem;
+}
+
+.difficultyStar {
+  font-size: 0.75rem;
+}
+
+.difficultyStarFilled {
+  color: var(--difficulty-3);
+}
+
+.difficultyStarEmpty {
+  opacity: 0.3;
+}
+
+// ============================================
+// Browse Page
+// ============================================
+.browseHeader {
+  margin-bottom: 2rem;
+}
+
+.browseTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.browseSubtitle {
+  color: var(--text-secondary);
+}
+
+.browseFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filterButton {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid var(--border-primary);
+  background-color: var(--bg-elevated);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 150ms ease-out;
+
+  &:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+  }
+}
+
+.filterButtonActive {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: white;
+
+  &:hover {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+    color: white;
+  }
+}
+
+// ============================================
+// Search Page
+// ============================================
+.searchContainer {
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.searchHeader {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.searchTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.searchInputWrapper {
+  position: relative;
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-tertiary);
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 3rem;
+  font-size: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-primary);
+  background-color: var(--bg-elevated);
+  color: var(--text-primary);
+  transition: all 150ms ease-out;
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-primary) 20%, transparent);
+  }
+
+  &::placeholder {
+    color: var(--text-tertiary);
+  }
+}
+
+.searchResults {
+  margin-top: 2rem;
+}
+
+.searchResultsTitle {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+  margin-bottom: 1rem;
+}
+
+.searchResultsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.noResults {
+  text-align: center;
+  padding: 3rem 0;
+  color: var(--text-tertiary);
+}
+
+// ============================================
+// Favorites Page
+// ============================================
+.favoritesEmpty {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.favoritesEmptyIcon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.favoritesEmptyTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.favoritesEmptyDescription {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.favoritesEmptyButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  background-color: var(--accent-primary);
+  color: white;
+  text-decoration: none;
+  transition: background-color 150ms ease-out;
+
+  &:hover {
+    background-color: var(--accent-hover);
+  }
+}
+
+// ============================================
+// Constants Page
+// ============================================
+.constantsGrid {
+  display: grid;
+  gap: 1rem;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.constantCard {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+}
+
+.constantSymbol {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  margin-bottom: 0.5rem;
+  font-family: "Times New Roman", serif;
+}
+
+.constantName {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.constantValue {
+  font-family: monospace;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  word-break: break-all;
+}
+
+// ============================================
+// About Page
+// ============================================
+.aboutContainer {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.aboutTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.aboutContent {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+// ============================================
+// Sitemap Page
+// ============================================
+.sitemapContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sitemapSection {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+}
+
+.sitemapSectionTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sitemapLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sitemapLink {
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-size: 0.875rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.sitemapXmlSection {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg-tertiary);
+}
+
+.sitemapXmlTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.sitemapXmlLink {
+  font-family: monospace;
+  font-size: 0.875rem;
+  color: var(--accent-primary);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// ============================================
+// 404 Page
+// ============================================
+.notFoundContainer {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.notFoundEmoji {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.notFoundTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.notFoundDescription {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.notFoundButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  background-color: var(--accent-primary);
+  color: white;
+  text-decoration: none;
+  transition: background-color 150ms ease-out;
+
+  &:hover {
+    background-color: var(--accent-hover);
+  }
+}
+
+// ============================================
+// Concept Detail Page
+// ============================================
+.conceptHeader {
+  margin-bottom: 2rem;
+}
+
+.conceptTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+
+  @media (min-width: 640px) {
+    font-size: 2.5rem;
+  }
+}
+
+.conceptMeta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.conceptFieldTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.875rem;
+
+  &:hover {
+    background-color: var(--bg-secondary);
+  }
+}
+
+.conceptDescription {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.conceptSection {
+  margin-bottom: 2rem;
+}
+
+.conceptSectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+// ============================================
+// Formula Styles
+// ============================================
+.formulaBlock {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.formulaCard {
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+  margin-bottom: 1rem;
+}
+
+.formulaCardTitle {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.formulaCardContent {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.formulaCardDescription {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+// ============================================
+// Example Styles
+// ============================================
+.exampleCard {
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+  margin-bottom: 1rem;
+}
+
+.exampleHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.exampleTitle {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.exampleToggle {
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid var(--border-primary);
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 150ms ease-out;
+
+  &:hover {
+    background-color: var(--bg-tertiary);
+  }
+}
+
+.exampleProblem {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.exampleSolution {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+}
+
+.exampleSolutionTitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-tertiary);
+  margin-bottom: 0.5rem;
+}
+
+// ============================================
+// Relation Links
+// ============================================
+.relationSection {
+  margin-bottom: 1rem;
+}
+
+.relationTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.relationLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.relationLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 150ms ease-out;
+
+  &:hover {
+    background-color: var(--bg-secondary);
+    color: var(--accent-primary);
+  }
+}
+
+// ============================================
+// Favorite Button
+// ============================================
+.favoriteButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid var(--border-primary);
+  background-color: var(--bg-elevated);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 150ms ease-out;
+
+  &:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+  }
+}
+
+.favoriteButtonActive {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: white;
+
+  &:hover {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+    color: white;
+  }
+}
+
+// ============================================
+// Field Detail Page
+// ============================================
+.fieldHeader {
+  margin-bottom: 2rem;
+}
+
+.fieldTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.fieldTitleIcon {
+  font-size: 2.5rem;
+}
+
+.fieldDescription {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.fieldStats {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+}
+
+// ============================================
+// Loading States
+// ============================================
+.skeleton {
+  animation: skeleton-pulse 2s ease-in-out infinite;
+  background-color: var(--bg-tertiary);
+  border-radius: 0.375rem;
+}
+
+@keyframes skeleton-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.skeletonCard {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+}
+
+.skeletonTitle {
+  height: 1.5rem;
+  width: 60%;
+  margin-bottom: 0.5rem;
+}
+
+.skeletonText {
+  height: 1rem;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.skeletonTextShort {
+  width: 40%;
+}

@@ -1,6 +1,7 @@
 import { Moon, Sun } from 'lucide-react';
 import { type CSSProperties, useCallback, useEffect, useRef, useState } from 'react';
 import { useSettingsStore } from '../stores/useSettingsStore';
+import styles from '../styles/components.module.scss';
 
 export interface DarkModeToggleProps {
   className?: string;
@@ -62,8 +63,8 @@ export function DarkModeToggle({ className = '', style }: DarkModeToggleProps) {
     <button
       ref={buttonRef}
       type="button"
-      className={`p-2 rounded-lg transition-all cursor-pointer hover:bg-[var(--bg-tertiary)] hover:text-[var(--text-primary)] active:scale-95 min-h-11 min-w-11 flex items-center justify-center ${className}`}
-      style={{ color: 'var(--text-secondary)', ...style }}
+      className={`${styles.darkModeToggle} ${className}`}
+      style={style}
       aria-label={showDark ? 'Switch to light mode' : 'Switch to dark mode'}
       title={showDark ? 'Light mode' : 'Dark mode'}
     >

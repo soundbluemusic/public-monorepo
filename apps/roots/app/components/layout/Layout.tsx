@@ -9,6 +9,7 @@ import {
 import { ArrowUp, BookOpen, ChevronRight, Github, Heart, Star } from 'lucide-react';
 import { type ReactNode, useCallback, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
+import styles from '../../styles/layout.module.scss';
 import { Sidebar } from './Sidebar';
 
 // Use shared utility for locale stripping
@@ -65,72 +66,51 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
   };
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: 'var(--bg-primary)' }}>
+    <div className={styles.container}>
       {/* Skip to content */}
-      <a href="#main-content" className="skip-to-content">
+      <a href="#main-content" className={styles.skipToContent}>
         {locale === 'ko' ? '본문으로 건너뛰기' : 'Skip to content'}
       </a>
 
       {/* Header */}
-      <header
-        className="sticky top-0 z-40 backdrop-blur-sm"
-        style={{
-          backgroundColor: 'color-mix(in srgb, var(--bg-primary) 80%, transparent)',
-          borderBottom: '1px solid var(--border-primary)',
-        }}
-      >
-        <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
-          <Link
-            to={localePath('/')}
-            className="font-semibold shrink-0 flex items-center gap-2"
-            style={{ color: 'var(--text-primary)' }}
-          >
-            <span className="text-xl">π</span>
+      <header className={styles.header}>
+        <div className={styles.headerInner}>
+          <Link to={localePath('/')} className={styles.logo}>
+            <span className={styles.logoIcon}>π</span>
             <span>Roots</span>
           </Link>
 
           {/* Real-time Search Dropdown */}
-          <SearchDropdown
-            query={query}
-            onQueryChange={setQuery}
-            results={results}
-            isLoading={isLoading}
-            onSelect={handleSelectResult}
-            locale={locale}
-            className="flex-1 max-w-md"
-          />
+          <div className={styles.searchWrapper}>
+            <SearchDropdown
+              query={query}
+              onQueryChange={setQuery}
+              results={results}
+              isLoading={isLoading}
+              onSelect={handleSelectResult}
+              locale={locale}
+            />
+          </div>
 
           {/* Right Actions */}
-          <div className="flex items-center gap-1 shrink-0">
+          <div className={styles.rightActions}>
             <Link
               to={localePath('/browse')}
-              className="hidden sm:flex px-3 py-2 text-sm rounded-lg transition-colors min-h-11 items-center"
-              style={{
-                color: isActive('/browse') ? 'var(--accent-primary)' : 'var(--text-secondary)',
-                backgroundColor: isActive('/browse') ? 'var(--bg-tertiary)' : 'transparent',
-              }}
+              className={`${styles.navLink} ${isActive('/browse') ? styles.navLinkActive : ''}`}
             >
               {t('browse')}
             </Link>
 
             <Link
               to={localePath('/favorites')}
-              className="hidden sm:flex px-3 py-2 text-sm rounded-lg transition-colors min-h-11 items-center"
-              style={{
-                color: isActive('/favorites') ? 'var(--accent-primary)' : 'var(--text-secondary)',
-                backgroundColor: isActive('/favorites') ? 'var(--bg-tertiary)' : 'transparent',
-              }}
+              className={`${styles.navLink} ${isActive('/favorites') ? styles.navLinkActive : ''}`}
             >
               {t('favorites')}
             </Link>
 
             <Link
               to={localePath('/constants')}
-              className="hidden sm:flex px-3 py-2 text-sm rounded-lg transition-colors min-h-11 items-center"
-              style={{
-                color: isActive('/constants') ? 'var(--accent-primary)' : 'var(--text-secondary)',
-                backgroundColor: isActive('/constants') ? 'var(--bg-tertiary)' : 'transparent',
-              }}
+              className={`${styles.navLink} ${isActive('/constants') ? styles.navLinkActive : ''}`}
             >
               {t('constants')}
             </Link>
@@ -142,35 +122,28 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
       </header>
 
       {/* Main Content with Sidebar */}
-      <div className="flex-1 flex">
+      <div className={styles.mainWrapper}>
         <Sidebar />
-        <main
-          id="main-content"
-          className="flex-1 max-w-6xl mx-auto px-4 py-8 w-full lg:ml-0 pb-20 lg:pb-8"
-        >
+        <main id="main-content" className={styles.main}>
           {/* Breadcrumbs */}
           {breadcrumbs && breadcrumbs.length > 0 && (
-            <nav aria-label="Breadcrumb" className="mb-4">
-              <ol className="flex items-center gap-1 text-sm flex-wrap">
+            <nav aria-label="Breadcrumb" className={styles.breadcrumbs}>
+              <ol className={styles.breadcrumbList}>
                 {breadcrumbs.map((item, index) => (
-                  <li key={item.label} className="flex items-center gap-1">
+                  <li key={item.label} className={styles.breadcrumbItem}>
                     {index > 0 && (
                       <ChevronRight
                         size={14}
-                        className="text-[var(--text-tertiary)]"
+                        className={styles.breadcrumbIcon}
                         aria-hidden="true"
                       />
                     )}
                     {item.path ? (
-                      <Link
-                        to={localePath(item.path)}
-                        className="hover:underline"
-                        style={{ color: 'var(--text-secondary)' }}
-                      >
+                      <Link to={localePath(item.path)} className={styles.breadcrumbLink}>
                         {item.label}
                       </Link>
                     ) : (
-                      <span style={{ color: 'var(--text-primary)' }}>{item.label}</span>
+                      <span className={styles.breadcrumbCurrent}>{item.label}</span>
                     )}
                   </li>
                 ))}
@@ -182,42 +155,27 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
       </div>
 
       {/* Mobile Bottom Navigation */}
-      <nav
-        className="lg:hidden fixed bottom-0 left-0 right-0 z-40 flex items-center justify-around"
-        style={{
-          backgroundColor: 'var(--bg-elevated)',
-          borderTop: '1px solid var(--border-primary)',
-          paddingBottom: 'env(safe-area-inset-bottom, 0px)',
-          height: 'calc(64px + env(safe-area-inset-bottom, 0px))',
-        }}
-      >
+      <nav className={styles.bottomNav}>
         <Link
           to={localePath('/browse')}
-          className="flex flex-col items-center justify-center gap-1 flex-1 py-2 min-h-14"
-          style={{ color: isActive('/browse') ? 'var(--accent-primary)' : 'var(--text-secondary)' }}
+          className={`${styles.bottomNavItem} ${isActive('/browse') ? styles.bottomNavItemActive : ''}`}
         >
           <BookOpen size={20} aria-hidden="true" />
-          <span className="text-xs">{t('browse')}</span>
+          <span className={styles.bottomNavLabel}>{t('browse')}</span>
         </Link>
         <Link
           to={localePath('/favorites')}
-          className="flex flex-col items-center justify-center gap-1 flex-1 py-2 min-h-14"
-          style={{
-            color: isActive('/favorites') ? 'var(--accent-primary)' : 'var(--text-secondary)',
-          }}
+          className={`${styles.bottomNavItem} ${isActive('/favorites') ? styles.bottomNavItemActive : ''}`}
         >
           <Heart size={20} aria-hidden="true" />
-          <span className="text-xs">{t('favorites')}</span>
+          <span className={styles.bottomNavLabel}>{t('favorites')}</span>
         </Link>
         <Link
           to={localePath('/constants')}
-          className="flex flex-col items-center justify-center gap-1 flex-1 py-2 min-h-14"
-          style={{
-            color: isActive('/constants') ? 'var(--accent-primary)' : 'var(--text-secondary)',
-          }}
+          className={`${styles.bottomNavItem} ${isActive('/constants') ? styles.bottomNavItemActive : ''}`}
         >
           <Star size={20} aria-hidden="true" />
-          <span className="text-xs">{t('constants')}</span>
+          <span className={styles.bottomNavLabel}>{t('constants')}</span>
         </Link>
       </nav>
 
@@ -226,12 +184,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
         <button
           type="button"
           onClick={scrollToTop}
-          className="fixed bottom-20 lg:bottom-8 right-4 z-30 min-h-11 min-w-11 flex items-center justify-center rounded-full shadow-lg transition-all"
-          style={{
-            backgroundColor: 'var(--bg-elevated)',
-            border: '1px solid var(--border-primary)',
-            color: 'var(--text-secondary)',
-          }}
+          className={styles.backToTop}
           aria-label={locale === 'ko' ? '맨 위로' : 'Back to top'}
         >
           <ArrowUp size={20} aria-hidden="true" />
@@ -239,36 +192,23 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
       )}
 
       {/* Footer - Hidden on mobile */}
-      <footer
-        className="hidden lg:block mt-auto py-8"
-        style={{
-          backgroundColor: 'var(--bg-secondary)',
-          borderTop: '1px solid var(--border-primary)',
-        }}
-      >
-        <div className="max-w-6xl mx-auto px-4">
-          <nav
-            className="flex justify-center gap-6 mb-4 text-sm"
-            style={{ color: 'var(--text-secondary)' }}
-          >
-            <Link to={localePath('/about')} className="hover:underline">
+      <footer className={styles.footer}>
+        <div className={styles.footerInner}>
+          <nav className={styles.footerNav}>
+            <Link to={localePath('/about')} className={styles.footerNavLink}>
               {t('about')}
             </Link>
-            <Link to={localePath('/sitemap')} className="hover:underline">
+            <Link to={localePath('/sitemap')} className={styles.footerNavLink}>
               {locale === 'ko' ? '사이트맵' : 'Sitemap'}
             </Link>
           </nav>
-          <div
-            className="flex items-center justify-center gap-4 text-sm"
-            style={{ color: 'var(--text-tertiary)' }}
-          >
+          <div className={styles.footerContent}>
             <p>{t('footerText')}</p>
             <a
               href="https://github.com/soundbluemusic/public-monorepo"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 hover:underline"
-              style={{ color: 'var(--accent-primary)' }}
+              className={styles.footerGithub}
             >
               <Github size={16} aria-hidden="true" />
               {t('github')}

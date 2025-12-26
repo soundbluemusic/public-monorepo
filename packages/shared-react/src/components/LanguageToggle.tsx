@@ -1,3 +1,4 @@
+import styles from '../styles/components.module.scss';
 import type { Language } from '../utils/i18n';
 
 export interface LanguageToggleProps {
@@ -24,7 +25,7 @@ export function LanguageToggle({ locale, currentPath = '/' }: LanguageToggleProp
   return (
     <a
       href={href}
-      className="px-3 py-2 text-sm font-medium rounded-lg transition-all cursor-pointer text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-tertiary)] active:scale-95 inline-flex items-center justify-center min-h-11"
+      className={styles.languageToggle}
       aria-label={ariaLabel}
       title={locale === 'en' ? '한국어로 전환' : 'Switch to English'}
     >
