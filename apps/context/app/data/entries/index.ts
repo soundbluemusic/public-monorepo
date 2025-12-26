@@ -40,18 +40,35 @@ import { jsonEntries } from '../generated/entries';
 // 모든 엔트리 (JSON에서 로드됨)
 export const meaningEntries: MeaningEntry[] = jsonEntries;
 
-/**
- * ID로 엔트리 조회
- */
-export function getEntryById(id: string): MeaningEntry | undefined {
-  return meaningEntries.find((e) => e.id === id);
+// ============================================================================
+// Pre-computed Maps for O(1) lookup (빌드 시 1회 계산, 조회 시 O(1))
+// ============================================================================
+
+/** ID → Entry 맵 (O(1) 조회용) */
+export const entriesById = new Map<string, MeaningEntry>(
+  meaningEntries.map((e) => [e.id, e]),
+);
+
+/** CategoryID → Entry[] 맵 (O(1) 조회용) */
+export const entriesByCategory = new Map<string, MeaningEntry[]>();
+for (const entry of meaningEntries) {
+  const list = entriesByCategory.get(entry.categoryId) || [];
+  list.push(entry);
+  entriesByCategory.set(entry.categoryId, list);
 }
 
 /**
- * 카테고리 ID로 엔트리 필터링
+ * ID로 엔트리 조회 (O(1))
+ */
+export function getEntryById(id: string): MeaningEntry | undefined {
+  return entriesById.get(id);
+}
+
+/**
+ * 카테고리 ID로 엔트리 필터링 (O(1))
  */
 export function getEntriesByCategory(categoryId: string): MeaningEntry[] {
-  return meaningEntries.filter((e) => e.categoryId === categoryId);
+  return entriesByCategory.get(categoryId) || [];
 }
 
 /**

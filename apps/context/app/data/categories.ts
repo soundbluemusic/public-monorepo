@@ -361,8 +361,17 @@ export function getCategoryBgColor(color: CategoryColor): string {
   return colors[color];
 }
 
+// ============================================================================
+// Pre-computed Map for O(1) lookup
+// ============================================================================
+
+/** ID → Category 맵 (O(1) 조회용) */
+export const categoriesById = new Map<string, Category>(
+  categories.map((c) => [c.id, c]),
+);
+
 /**
- * ID로 카테고리 조회
+ * ID로 카테고리 조회 (O(1))
  *
  * @param id - 카테고리 ID (예: 'greetings', 'emotions')
  * @returns 카테고리 객체 또는 undefined (미발견 시)
@@ -376,5 +385,5 @@ export function getCategoryBgColor(color: CategoryColor): string {
  * ```
  */
 export function getCategoryById(id: string): Category | undefined {
-  return categories.find((c) => c.id === id);
+  return categoriesById.get(id);
 }

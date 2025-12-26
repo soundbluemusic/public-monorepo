@@ -1,6 +1,6 @@
 import { Layout } from '@/components/Layout';
-import { categories } from '@/data/categories';
-import { meaningEntries } from '@/data/entries';
+import { categories, getCategoryById } from '@/data/categories';
+import { getEntriesByCategory } from '@/data/entries';
 import type { Category, MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { studyRecords } from '@/lib/db';
@@ -10,11 +10,11 @@ import { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router';
 
 /**
- * Loader: 빌드 시 데이터 로드 (SSG용)
+ * Loader: 빌드 시 데이터 로드 (SSG용) - O(1) Map 조회
  */
 export async function loader({ params }: { params: { categoryId: string } }) {
-  const category = categories.find((c) => c.id === params.categoryId);
-  const entries = meaningEntries.filter((e) => e.categoryId === params.categoryId);
+  const category = getCategoryById(params.categoryId);
+  const entries = getEntriesByCategory(params.categoryId);
   return { category: category || null, entries };
 }
 

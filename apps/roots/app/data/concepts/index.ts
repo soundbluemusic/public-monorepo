@@ -107,30 +107,57 @@ export const allConcepts: MathConcept[] = [
   ...harmonicAnalysisConcepts,
 ];
 
-/** ID로 개념 찾기 */
+// ============================================================================
+// Pre-computed Maps for O(1) lookup (빌드 시 1회 계산)
+// ============================================================================
+
+/** ID → Concept 맵 (O(1) 조회용) */
+export const conceptsById = new Map<string, MathConcept>(
+  allConcepts.map((c) => [c.id, c]),
+);
+
+/** Field → Concept[] 맵 (O(1) 조회용) */
+export const conceptsByField = new Map<string, MathConcept[]>();
+for (const concept of allConcepts) {
+  const list = conceptsByField.get(concept.field) || [];
+  list.push(concept);
+  conceptsByField.set(concept.field, list);
+}
+
+/** Subfield → Concept[] 맵 (O(1) 조회용) */
+export const conceptsBySubfield = new Map<string, MathConcept[]>();
+for (const concept of allConcepts) {
+  if (concept.subfield) {
+    const list = conceptsBySubfield.get(concept.subfield) || [];
+    list.push(concept);
+    conceptsBySubfield.set(concept.subfield, list);
+  }
+}
+
+/** ID로 개념 찾기 (O(1)) */
 export function getConceptById(id: string): MathConcept | undefined {
-  return allConcepts.find((c) => c.id === id);
+  return conceptsById.get(id);
 }
 
-/** 분야로 개념 필터링 */
+/** 분야로 개념 필터링 (O(1)) */
 export function getConceptsByField(field: string): MathConcept[] {
-  return allConcepts.filter((c) => c.field === field);
+  return conceptsByField.get(field) || [];
 }
 
-/** 소분야로 개념 필터링 */
+/** 소분야로 개념 필터링 (O(1)) */
 export function getConceptsBySubfield(subfield: string): MathConcept[] {
-  return allConcepts.filter((c) => c.subfield === subfield);
+  return conceptsBySubfield.get(subfield) || [];
 }
 
-/** 태그로 개념 검색 */
+/** 태그로 개념 검색 (O(n) - 태그는 배열이라 Map 불가) */
 export function getConceptsByTag(tag: string): MathConcept[] {
   return allConcepts.filter((c) => c.tags.includes(tag));
 }
 
-/** 난이도로 개념 필터링 */
+/** 난이도로 개념 필터링 (O(n) - 자주 사용되지 않음) */
 export function getConceptsByDifficulty(level: number): MathConcept[] {
   return allConcepts.filter((c) => c.difficulty === level);
 }
 
-/** 개념 맵 (ID -> 개념) */
-export const conceptsMap = new Map<string, MathConcept>(allConcepts.map((c) => [c.id, c]));
+/** @deprecated Use conceptsById instead */
+export const conceptsMap = conceptsById;

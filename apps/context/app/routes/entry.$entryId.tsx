@@ -1,6 +1,6 @@
 import { Layout } from '@/components/Layout';
 import { LinkedExample } from '@/components/LinkedExample';
-import { meaningEntries } from '@/data/entries';
+import { getEntryById } from '@/data/entries';
 import type { MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { favorites, studyRecords } from '@/lib/db';
@@ -10,10 +10,10 @@ import { useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router';
 
 /**
- * Loader: 빌드 시 데이터 로드 (SSG용)
+ * Loader: 빌드 시 데이터 로드 (SSG용) - O(1) Map 조회
  */
 export async function loader({ params }: { params: { entryId: string } }) {
-  const entry = meaningEntries.find((e) => e.id === params.entryId);
+  const entry = getEntryById(params.entryId);
   return { entry: entry || null };
 }
 
