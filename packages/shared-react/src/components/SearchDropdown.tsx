@@ -139,7 +139,7 @@ export function SearchDropdown({
           onFocus={() => setShowResults(true)}
           onKeyDown={handleKeyDown}
           placeholder={placeholder[locale]}
-          className="w-full min-h-11 pl-10 pr-4 rounded-lg bg-(--bg-elevated) border border-(--border-primary) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none focus:border-(--border-focus) transition-colors"
+          className="w-full h-11 py-2 pl-10 pr-4 rounded-lg bg-(--bg-elevated) border border-(--border-primary) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none focus:border-(--border-focus) transition-colors"
         />
       </div>
 
