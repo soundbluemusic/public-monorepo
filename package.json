@@ -4,9 +4,9 @@
   "license": "Apache-2.0",
   "type": "module",
   "scripts": {
-    "dev:context": "pnpm --filter context dev",
-    "dev:permissive": "pnpm --filter permissive dev",
-    "dev:roots": "pnpm --filter roots dev",
+    "dev:context": "pnpm scss:types && pnpm --filter context dev",
+    "dev:permissive": "pnpm scss:types && pnpm --filter permissive dev",
+    "dev:roots": "pnpm scss:types && pnpm --filter roots dev",
     "build": "pnpm --filter './apps/*' build",
     "build:context": "pnpm --filter context build",
     "build:permissive": "pnpm --filter permissive build",
