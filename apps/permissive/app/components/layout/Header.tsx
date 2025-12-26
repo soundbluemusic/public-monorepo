@@ -10,6 +10,7 @@ import { Menu, X } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { useI18n } from '../../i18n';
+import styles from './Header.module.scss';
 
 // Use shared utility for locale stripping
 const stripLocale = stripLocaleFromPath;
@@ -52,17 +53,10 @@ export default function Header({ onMenuClick, isSidebarOpen }: HeaderProps) {
       const name = result.item.name;
       const itemType = result.item.type;
       return (
-        <div className="flex items-center justify-between w-full gap-2">
-          <span style={{ color: 'var(--text-primary)' }} className="font-medium truncate">
-            {locale === 'ko' ? name.ko : name.en}
-          </span>
+        <div className={styles.searchResultRow}>
+          <span className={styles.searchResultName}>{locale === 'ko' ? name.ko : name.en}</span>
           <span
-            className="text-xs px-1.5 py-0.5 rounded shrink-0"
-            style={{
-              backgroundColor:
-                itemType === 'library' ? 'var(--accent-primary)' : 'var(--bg-tertiary)',
-              color: itemType === 'library' ? 'white' : 'var(--text-secondary)',
-            }}
+            className={`${styles.searchResultBadge} ${itemType === 'library' ? styles.searchResultBadgeLibrary : styles.searchResultBadgeApi}`}
           >
             {itemType === 'library' ? 'Library' : 'API'}
           </span>
@@ -89,20 +83,14 @@ export default function Header({ onMenuClick, isSidebarOpen }: HeaderProps) {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-header h-header flex items-center justify-between px-4 pt-[env(safe-area-inset-top,0)] transition-all duration-200 ${
-        scrolled
-          ? 'backdrop-blur-md shadow-sm bg-[var(--bg-elevated)] border-b border-[var(--border-primary)]'
-          : 'bg-[var(--bg-primary)] border-b border-transparent'
-      }`}
-    >
+    <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ''}`}>
       {/* Left: Menu button (mobile) + Logo */}
-      <div className="flex items-center gap-3 shrink-0">
+      <div className={styles.leftSection}>
         {/* Mobile menu button */}
         <button
           type="button"
           onClick={onMenuClick}
-          className="md:hidden min-h-11 min-w-11 flex items-center justify-center -ml-2 rounded-lg hover-bg text-[var(--text-secondary)]"
+          className={styles.menuButton}
           aria-label={isSidebarOpen ? t('aria.closeMenu') : t('aria.openMenu')}
           aria-expanded={isSidebarOpen}
         >
@@ -114,16 +102,14 @@ export default function Header({ onMenuClick, isSidebarOpen }: HeaderProps) {
         </button>
 
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2.5 group">
-          <span className="text-lg">✨</span>
-          <span className="font-semibold transition-colors text-[var(--text-primary)]">
-            Permissive
-          </span>
+        <Link to="/" className={styles.logo}>
+          <span className={styles.logoEmoji}>✨</span>
+          <span className={styles.logoText}>Permissive</span>
         </Link>
       </div>
 
       {/* Center: Search */}
-      <div className="hidden sm:block flex-1 max-w-md mx-4">
+      <div className={styles.centerSection}>
         <SearchDropdown
           query={query}
           onQueryChange={setQuery}
@@ -136,7 +122,7 @@ export default function Header({ onMenuClick, isSidebarOpen }: HeaderProps) {
       </div>
 
       {/* Right: Controls */}
-      <div className="flex items-center gap-1 shrink-0">
+      <div className={styles.rightSection}>
         <LanguageToggle locale={locale} currentPath={stripLocale(location.pathname)} />
         <DarkModeToggle />
       </div>

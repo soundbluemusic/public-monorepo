@@ -2,6 +2,7 @@ import { Link } from 'react-router';
 import type { MetaFunction } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import { useI18n } from '../i18n';
+import styles from '../styles/pages.module.scss';
 
 export const meta: MetaFunction = ({ location }) => {
   const isKorean = location.pathname.startsWith('/ko');
@@ -25,38 +26,26 @@ export default function SitemapPage() {
 
   return (
     <DocsLayout>
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-3xl font-bold mb-2" style={{ color: 'var(--text-primary)' }}>
-          {isKorean ? '사이트맵' : 'Sitemap'}
-        </h1>
-        <p className="mb-8" style={{ color: 'var(--text-secondary)' }}>
+      <div className={styles.sitemapContainer}>
+        <h1 className={styles.pageTitle}>{isKorean ? '사이트맵' : 'Sitemap'}</h1>
+        <p className={`${styles.pageSubtitle} ${styles.mb8}`}>
           {isKorean
             ? 'Permissive 사이트의 모든 페이지를 한눈에 보세요.'
             : 'View all pages on Permissive at a glance.'}
         </p>
 
         {/* Pages Section */}
-        <section className="mb-10">
-          <h2
-            className="text-xl font-semibold mb-4 flex items-center gap-2"
-            style={{ color: 'var(--text-primary)' }}
-          >
+        <section className={styles.sitemapSection}>
+          <h2 className={styles.sitemapHeading}>
             <span>📄</span>
             {isKorean ? '모든 페이지' : 'All Pages'}
           </h2>
-          <ul className="space-y-2">
+          <ul className={styles.sitemapList}>
             {pages.map((page) => (
               <li key={page.path}>
-                <Link
-                  to={localePath(page.path)}
-                  className="flex items-center gap-3 p-3 rounded-lg transition-colors hover:bg-[var(--bg-tertiary)]"
-                  style={{
-                    backgroundColor: 'var(--bg-elevated)',
-                    border: '1px solid var(--border-primary)',
-                  }}
-                >
-                  <span className="text-xl">{page.icon}</span>
-                  <span style={{ color: 'var(--text-primary)' }}>
+                <Link to={localePath(page.path)} className={styles.sitemapLink}>
+                  <span className={styles.sitemapLinkEmoji}>{page.icon}</span>
+                  <span className={styles.sitemapLinkText}>
                     {isKorean ? page.labelKo : page.labelEn}
                   </span>
                 </Link>
@@ -66,38 +55,25 @@ export default function SitemapPage() {
         </section>
 
         {/* XML Sitemap Section */}
-        <section
-          className="p-6 rounded-xl"
-          style={{
-            backgroundColor: 'var(--bg-elevated)',
-            border: '1px solid var(--border-primary)',
-          }}
-        >
-          <h2
-            className="text-lg font-semibold mb-3 flex items-center gap-2"
-            style={{ color: 'var(--text-primary)' }}
-          >
+        <section className={styles.sitemapXmlSection}>
+          <h2 className={styles.sitemapXmlHeading}>
             <span>🔍</span>
             {isKorean ? '검색엔진용 사이트맵' : 'Search Engine Sitemap'}
           </h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--text-secondary)' }}>
+          <p className={styles.sitemapXmlDescription}>
             {isKorean
               ? 'XML 형식의 사이트맵을 직접 확인할 수 있습니다.'
               : 'View the XML sitemap directly.'}
           </p>
-          <div className="flex flex-wrap gap-3">
+          <div className={styles.flexWrap}>
             <a
               href="/sitemap.xml"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-              style={{
-                backgroundColor: 'var(--accent-primary)',
-                color: 'white',
-              }}
+              className={styles.sitemapXmlLink}
             >
               <svg
-                className="w-4 h-4"
+                className={styles.sitemapXmlIcon}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

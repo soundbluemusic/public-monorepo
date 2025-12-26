@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { Link, useLocation } from 'react-router';
 import { useI18n } from '../../i18n';
+import styles from './BottomNav.module.scss';
 
 interface BottomNavItem {
   href: string;
@@ -16,7 +17,7 @@ const navItems: readonly BottomNavItem[] = [
     labelKo: '홈',
     icon: (
       <svg
-        className="w-5 h-5"
+        className={styles.icon}
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -37,7 +38,7 @@ const navItems: readonly BottomNavItem[] = [
     labelKo: 'Web API',
     icon: (
       <svg
-        className="w-5 h-5"
+        className={styles.icon}
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -58,7 +59,7 @@ const navItems: readonly BottomNavItem[] = [
     labelKo: 'Libraries',
     icon: (
       <svg
-        className="w-5 h-5"
+        className={styles.icon}
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -82,29 +83,17 @@ export default function BottomNav() {
   const isActive = (href: string) => location.pathname === localePath(href);
 
   return (
-    <nav
-      className="fixed bottom-0 left-0 right-0 h-bottom-nav z-bottom-nav md:hidden"
-      style={{
-        backgroundColor: 'var(--bg-elevated)',
-        borderTop: '1px solid var(--border-primary)',
-        paddingBottom: 'env(safe-area-inset-bottom, 0)',
-      }}
-    >
-      <div className="flex items-center justify-around h-full px-2">
+    <nav className={styles.nav}>
+      <div className={styles.container}>
         {navItems.map((item) => (
           <Link
             key={item.href}
             to={localePath(item.href)}
-            className="flex flex-col items-center justify-center flex-1 h-full gap-0.5 transition-colors"
-            style={{
-              color: isActive(item.href) ? 'var(--accent-primary)' : 'var(--text-tertiary)',
-            }}
+            className={`${styles.link} ${isActive(item.href) ? styles.linkActive : ''}`}
             aria-current={isActive(item.href) ? 'page' : undefined}
           >
-            <span className={isActive(item.href) ? 'scale-110' : ''}>{item.icon}</span>
-            <span className="text-xs font-medium">
-              {locale === 'ko' ? item.labelKo : item.label}
-            </span>
+            <span className={isActive(item.href) ? styles.iconActive : ''}>{item.icon}</span>
+            <span className={styles.label}>{locale === 'ko' ? item.labelKo : item.label}</span>
           </Link>
         ))}
       </div>

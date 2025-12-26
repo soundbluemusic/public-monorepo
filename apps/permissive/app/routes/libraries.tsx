@@ -3,6 +3,7 @@ import type { MetaFunction } from 'react-router';
 import { useLoaderData, useSearchParams } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import { useI18n } from '../i18n';
+import styles from '../styles/pages.module.scss';
 
 interface Library {
   name: string;
@@ -1232,11 +1233,9 @@ export default function LibrariesPage() {
   return (
     <DocsLayout>
       {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2" style={{ color: 'var(--text-primary)' }}>
-          Libraries
-        </h1>
-        <p style={{ color: 'var(--text-secondary)' }}>
+      <div className={styles.pageHeader}>
+        <h1 className={styles.pageTitle}>Libraries</h1>
+        <p className={styles.pageSubtitle}>
           {locale === 'ko'
             ? 'MIT 라이센스 오픈소스. 상업적 사용 가능'
             : 'MIT licensed open source. Free for commercial use'}
@@ -1244,17 +1243,11 @@ export default function LibrariesPage() {
       </div>
 
       {/* Quick Filters */}
-      <div className="flex flex-wrap items-center gap-3 mb-6">
+      <div className={styles.quickFilters}>
         <button
           type="button"
           onClick={() => handleQuickFilter('trending')}
-          className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all hover:shadow-md"
-          style={{
-            backgroundColor:
-              quickFilter === 'trending' ? 'var(--accent-primary)' : 'var(--bg-elevated)',
-            color: quickFilter === 'trending' ? 'white' : 'var(--text-primary)',
-            border: `1px solid ${quickFilter === 'trending' ? 'var(--accent-primary)' : 'var(--border-primary)'}`,
-          }}
+          className={`${styles.quickFilterButton} ${quickFilter === 'trending' ? styles.quickFilterButtonActive : ''}`}
         >
           <span>🔥</span>
           {locale === 'ko' ? '2025 트렌딩' : 'Trending 2025'}
@@ -1262,13 +1255,7 @@ export default function LibrariesPage() {
         <button
           type="button"
           onClick={() => handleQuickFilter('usedHere')}
-          className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all hover:shadow-md"
-          style={{
-            backgroundColor:
-              quickFilter === 'usedHere' ? 'var(--accent-primary)' : 'var(--bg-elevated)',
-            color: quickFilter === 'usedHere' ? 'white' : 'var(--text-primary)',
-            border: `1px solid ${quickFilter === 'usedHere' ? 'var(--accent-primary)' : 'var(--border-primary)'}`,
-          }}
+          className={`${styles.quickFilterButton} ${quickFilter === 'usedHere' ? styles.quickFilterButtonActive : ''}`}
         >
           <span>⭐</span>
           {locale === 'ko' ? '사용 중' : 'Used Here'}
@@ -1276,26 +1263,13 @@ export default function LibrariesPage() {
         <button
           type="button"
           onClick={() => handleQuickFilter('new')}
-          className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all hover:shadow-md"
-          style={{
-            backgroundColor: quickFilter === 'new' ? 'var(--accent-primary)' : 'var(--bg-elevated)',
-            color: quickFilter === 'new' ? 'white' : 'var(--text-primary)',
-            border: `1px solid ${quickFilter === 'new' ? 'var(--accent-primary)' : 'var(--border-primary)'}`,
-          }}
+          className={`${styles.quickFilterButton} ${quickFilter === 'new' ? styles.quickFilterButtonActive : ''}`}
         >
           <span>📅</span>
           {locale === 'ko' ? '새로운 (2023+)' : 'New 2023+'}
         </button>
         {(quickFilter || selectedTag) && (
-          <button
-            type="button"
-            onClick={clearFilters}
-            className="px-3 py-1.5 rounded-lg text-sm transition-all"
-            style={{
-              color: 'var(--text-tertiary)',
-              textDecoration: 'underline',
-            }}
-          >
+          <button type="button" onClick={clearFilters} className={styles.clearFiltersButton}>
             {locale === 'ko' ? '필터 초기화' : 'Clear filters'}
           </button>
         )}
@@ -1303,20 +1277,10 @@ export default function LibrariesPage() {
 
       {/* Active Tag Filter Display */}
       {selectedTag && (
-        <div className="mb-4">
-          <div
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg"
-            style={{
-              backgroundColor: 'var(--bg-elevated)',
-              border: '1px solid var(--border-primary)',
-            }}
-          >
-            <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>
-              {locale === 'ko' ? '태그:' : 'Tag:'}
-            </span>
-            <span className="text-sm font-medium" style={{ color: 'var(--text-primary)' }}>
-              {selectedTag}
-            </span>
+        <div className={styles.activeTagContainer}>
+          <div className={styles.activeTag}>
+            <span className={styles.activeTagLabel}>{locale === 'ko' ? '태그:' : 'Tag:'}</span>
+            <span className={styles.activeTagValue}>{selectedTag}</span>
             <button
               type="button"
               onClick={() => {
@@ -1325,8 +1289,7 @@ export default function LibrariesPage() {
                 params.delete('tag');
                 setSearchParams(params);
               }}
-              className="ml-1"
-              style={{ color: 'var(--text-tertiary)' }}
+              className={styles.activeTagClose}
             >
               ×
             </button>
@@ -1335,13 +1298,12 @@ export default function LibrariesPage() {
       )}
 
       {/* Search, Sort & Filter */}
-      <div className="flex flex-col gap-4 mb-8">
-        <div className="flex flex-col sm:flex-row gap-4">
-          <div className="relative flex-1">
+      <div className={styles.filterControls}>
+        <div className={styles.filterRow}>
+          <div className={styles.searchInputWrapper}>
             <svg
               aria-hidden="true"
-              className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5"
-              style={{ color: 'var(--text-tertiary)' }}
+              className={styles.searchIcon}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -1367,24 +1329,14 @@ export default function LibrariesPage() {
                 }
                 setSearchParams(params);
               }}
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl transition-all"
-              style={{
-                backgroundColor: 'var(--bg-elevated)',
-                border: '1px solid var(--border-primary)',
-                color: 'var(--text-primary)',
-              }}
+              className={styles.filterInput}
             />
           </div>
-          <div className="flex gap-2">
+          <div className={styles.gap2}>
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as SortOption)}
-              className="px-4 py-2.5 rounded-xl text-sm font-medium transition-all"
-              style={{
-                backgroundColor: 'var(--bg-elevated)',
-                border: '1px solid var(--border-primary)',
-                color: 'var(--text-primary)',
-              }}
+              className={styles.filterSelect}
             >
               <option value="stars">{locale === 'ko' ? '⭐ 인기순' : '⭐ Most Popular'}</option>
               <option value="newest">{locale === 'ko' ? '📅 최신순' : '📅 Newest First'}</option>
@@ -1393,7 +1345,7 @@ export default function LibrariesPage() {
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-2">
+        <div className={styles.categoryFilters}>
           {cats.map((cat) => (
             <button
               key={cat}
@@ -1408,11 +1360,7 @@ export default function LibrariesPage() {
                 }
                 setSearchParams(params);
               }}
-              className="px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
-              style={{
-                backgroundColor: category === cat ? 'var(--accent-primary)' : 'var(--bg-tertiary)',
-                color: category === cat ? 'white' : 'var(--text-secondary)',
-              }}
+              className={`${styles.categoryButton} ${category === cat ? styles.categoryButtonActive : ''}`}
             >
               {cat === 'All' ? (locale === 'ko' ? '전체' : 'All') : cat}
             </button>
@@ -1421,113 +1369,71 @@ export default function LibrariesPage() {
       </div>
 
       {/* Results count */}
-      <div className="mb-4 text-sm" style={{ color: 'var(--text-tertiary)' }}>
+      <div className={styles.resultsCount}>
         {filteredLibraries.length} {locale === 'ko' ? '개의 라이브러리' : 'libraries'}
       </div>
 
       {/* Library List */}
-      <div className="space-y-8">
+      <div className={styles.libraryList}>
         {Object.entries(groupedLibraries).map(([categoryName, libs]) => (
-          <section key={categoryName}>
-            <h2
-              className="text-lg font-semibold mb-4 pb-2"
-              style={{
-                color: 'var(--text-primary)',
-                borderBottom: '1px solid var(--border-primary)',
-              }}
-            >
-              {categoryName}
-            </h2>
-            <div className="grid sm:grid-cols-2 gap-3">
+          <section key={categoryName} className={styles.libraryCategorySection}>
+            <h2>{categoryName}</h2>
+            <div className={styles.libraryGrid}>
               {libs.map((lib) => (
-                <div
-                  key={lib.name}
-                  className="group p-4 rounded-xl transition-all hover:shadow-md"
-                  style={{
-                    backgroundColor: 'var(--bg-elevated)',
-                    border: '1px solid var(--border-primary)',
-                  }}
-                >
-                  <div className="flex items-start justify-between mb-2">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <h3 className="font-semibold" style={{ color: 'var(--text-primary)' }}>
-                        {lib.name}
-                      </h3>
+                <div key={lib.name} className={styles.libraryCard}>
+                  <div className={styles.libraryHeader}>
+                    <div className={styles.libraryTitleRow}>
+                      <h3 className={styles.libraryName}>{lib.name}</h3>
                       {lib.trending && (
-                        <span
-                          className="text-xs px-2 py-0.5 rounded-full"
-                          style={{
-                            backgroundColor: 'rgba(255, 107, 107, 0.15)',
-                            color: '#ff6b6b',
-                          }}
-                        >
+                        <span className={`${styles.libraryBadge} ${styles.libraryBadgeTrending}`}>
                           🔥 {locale === 'ko' ? '2025 트렌드' : '2025 Trending'}
                         </span>
                       )}
                       {lib.usedHere && (
-                        <span
-                          className="text-xs px-2 py-0.5 rounded-full"
-                          style={{
-                            backgroundColor: 'rgba(176, 136, 48, 0.15)',
-                            color: 'var(--color-warning)',
-                          }}
-                        >
+                        <span className={`${styles.libraryBadge} ${styles.libraryBadgeUsed}`}>
                           {locale === 'ko' ? '사용 중' : 'Used here'}
                         </span>
                       )}
                     </div>
-                    <div
-                      className="flex items-center gap-2 text-xs"
-                      style={{ color: 'var(--text-tertiary)' }}
-                    >
-                      <span className="flex items-center gap-1">
-                        <svg
-                          className="w-3.5 h-3.5"
-                          fill="currentColor"
-                          aria-hidden="true"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                        </svg>
-                        {lib.stars}
-                      </span>
+                    <div className={styles.libraryStars}>
+                      <svg
+                        className={styles.libraryStarsIcon}
+                        fill="currentColor"
+                        aria-hidden="true"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                      </svg>
+                      {lib.stars}
                     </div>
                   </div>
-                  <p className="text-sm mb-3" style={{ color: 'var(--text-secondary)' }}>
+                  <p className={styles.libraryDescription}>
                     {locale === 'ko' ? lib.descriptionKo : lib.description}
                   </p>
                   {lib.tags && lib.tags.length > 0 && (
-                    <div className="flex flex-wrap gap-1.5 mb-3">
+                    <div className={styles.libraryTags}>
                       {lib.tags.slice(0, 4).map((tag) => (
                         <button
                           type="button"
                           key={tag}
                           onClick={() => handleTagClick(tag)}
-                          className="text-xs px-2 py-0.5 rounded cursor-pointer transition-all hover:opacity-80"
-                          style={{
-                            backgroundColor:
-                              selectedTag === tag ? 'var(--accent-primary)' : 'var(--bg-tertiary)',
-                            color: selectedTag === tag ? 'white' : 'var(--text-tertiary)',
-                          }}
+                          className={`${styles.libraryTag} ${selectedTag === tag ? styles.libraryTagActive : ''}`}
                         >
                           {tag}
                         </button>
                       ))}
                     </div>
                   )}
-                  <div className="flex items-center gap-3 text-xs flex-wrap">
-                    <span className="badge-mit">{lib.license}</span>
+                  <div className={styles.libraryMeta}>
+                    <span className={styles.licenseBadge}>{lib.license}</span>
                     {lib.yearReleased && (
-                      <span style={{ color: 'var(--text-tertiary)' }}>
-                        Since {lib.yearReleased}
-                      </span>
+                      <span className={styles.textTertiary}>Since {lib.yearReleased}</span>
                     )}
                     <a
                       href={lib.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="transition-colors hover:text-(--accent-primary)"
-                      style={{ color: 'var(--text-tertiary)' }}
+                      className={styles.libraryMetaLink}
                     >
                       GitHub
                     </a>
@@ -1536,8 +1442,7 @@ export default function LibrariesPage() {
                         href={`https://www.npmjs.com/package/${lib.npm}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="transition-colors hover:text-(--accent-primary)"
-                        style={{ color: 'var(--text-tertiary)' }}
+                        className={styles.libraryMetaLink}
                       >
                         npm
                       </a>
@@ -1552,9 +1457,9 @@ export default function LibrariesPage() {
 
       {/* Empty state */}
       {filteredLibraries.length === 0 && (
-        <div className="text-center py-12">
-          <div className="text-4xl mb-4">🔍</div>
-          <p style={{ color: 'var(--text-tertiary)' }}>
+        <div className={styles.emptyState}>
+          <div className={styles.emptyStateEmoji}>🔍</div>
+          <p className={styles.emptyStateText}>
             {locale === 'ko' ? '검색 결과가 없습니다' : 'No results found'}
           </p>
         </div>

@@ -897,3 +897,206 @@
 .spaceY2 > * + * {
   margin-top: 0.5rem;
 }
+
+// ============================================
+// API Grid (for web-api.tsx)
+// ============================================
+.apiGrid {
+  display: grid;
+  gap: 0.75rem;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.apiCard {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  transition: box-shadow 150ms ease-out;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+  text-decoration: none;
+  display: block;
+
+  &:hover {
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.apiHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.apiTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.apiName {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.apiDescription {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.apiYear {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+// ============================================
+// Sitemap Page
+// ============================================
+.sitemapContainer {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.sitemapSection {
+  margin-bottom: 2.5rem;
+}
+
+.sitemapHeading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+}
+
+.sitemapList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sitemapLink {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+  text-decoration: none;
+  transition: background-color 150ms ease-out;
+
+  &:hover {
+    background-color: var(--bg-tertiary);
+  }
+}
+
+.sitemapLinkEmoji {
+  font-size: 1.25rem;
+}
+
+.sitemapLinkText {
+  color: var(--text-primary);
+}
+
+.sitemapXmlSection {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+}
+
+.sitemapXmlHeading {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+}
+
+.sitemapXmlDescription {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.sitemapXmlLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: var(--accent-primary);
+  color: white;
+  text-decoration: none;
+  transition: opacity 150ms ease-out;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.sitemapXmlIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+// ============================================
+// 404 Page
+// ============================================
+.notFoundContainer {
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.notFoundEmoji {
+  font-size: 3.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.notFoundTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.notFoundDescription {
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+}
+
+.notFoundButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  background-color: var(--accent-primary);
+  color: white;
+  text-decoration: none;
+  transition: opacity 150ms ease-out;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

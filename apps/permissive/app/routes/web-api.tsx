@@ -4,6 +4,7 @@ import { useLoaderData, useSearchParams } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import { type WebAPI, webApiCategories, webApis } from '../data/web-apis';
 import { useI18n } from '../i18n';
+import styles from '../styles/pages.module.scss';
 
 const categories = webApiCategories;
 type CategoryFilter = (typeof categories)[number];
@@ -142,11 +143,9 @@ export default function WebApiPage() {
   return (
     <DocsLayout>
       {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2" style={{ color: 'var(--text-primary)' }}>
-          Web API
-        </h1>
-        <p style={{ color: 'var(--text-secondary)' }}>
+      <div className={styles.pageHeader}>
+        <h1 className={styles.pageTitle}>Web API</h1>
+        <p className={styles.pageSubtitle}>
           {locale === 'ko'
             ? '브라우저에 내장된 무료 API. 설치 없이 바로 사용 가능'
             : 'Browser built-in APIs. Free to use, no installation required'}
@@ -154,17 +153,11 @@ export default function WebApiPage() {
       </div>
 
       {/* Quick Filters */}
-      <div className="flex flex-wrap items-center gap-3 mb-6">
+      <div className={styles.quickFilters}>
         <button
           type="button"
           onClick={() => handleQuickFilter('trending')}
-          className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all hover:shadow-md"
-          style={{
-            backgroundColor:
-              quickFilter === 'trending' ? 'var(--accent-primary)' : 'var(--bg-elevated)',
-            color: quickFilter === 'trending' ? 'white' : 'var(--text-primary)',
-            border: `1px solid ${quickFilter === 'trending' ? 'var(--accent-primary)' : 'var(--border-primary)'}`,
-          }}
+          className={`${styles.quickFilterButton} ${quickFilter === 'trending' ? styles.quickFilterButtonActive : ''}`}
         >
           <span>🔥</span>
           {locale === 'ko' ? '2023+ 트렌딩' : 'Trending 2023+'}
@@ -172,13 +165,7 @@ export default function WebApiPage() {
         <button
           type="button"
           onClick={() => handleQuickFilter('highSupport')}
-          className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all hover:shadow-md"
-          style={{
-            backgroundColor:
-              quickFilter === 'highSupport' ? 'var(--accent-primary)' : 'var(--bg-elevated)',
-            color: quickFilter === 'highSupport' ? 'white' : 'var(--text-primary)',
-            border: `1px solid ${quickFilter === 'highSupport' ? 'var(--accent-primary)' : 'var(--border-primary)'}`,
-          }}
+          className={`${styles.quickFilterButton} ${quickFilter === 'highSupport' ? styles.quickFilterButtonActive : ''}`}
         >
           <span>📊</span>
           {locale === 'ko' ? '높은 지원 (95%+)' : 'High Support (95%+)'}
@@ -186,39 +173,25 @@ export default function WebApiPage() {
         <button
           type="button"
           onClick={() => handleQuickFilter('new')}
-          className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all hover:shadow-md"
-          style={{
-            backgroundColor: quickFilter === 'new' ? 'var(--accent-primary)' : 'var(--bg-elevated)',
-            color: quickFilter === 'new' ? 'white' : 'var(--text-primary)',
-            border: `1px solid ${quickFilter === 'new' ? 'var(--accent-primary)' : 'var(--border-primary)'}`,
-          }}
+          className={`${styles.quickFilterButton} ${quickFilter === 'new' ? styles.quickFilterButtonActive : ''}`}
         >
           <span>📅</span>
           {locale === 'ko' ? '새로운 (2020+)' : 'New 2020+'}
         </button>
         {quickFilter && (
-          <button
-            type="button"
-            onClick={clearFilters}
-            className="px-3 py-1.5 rounded-lg text-sm transition-all"
-            style={{
-              color: 'var(--text-tertiary)',
-              textDecoration: 'underline',
-            }}
-          >
+          <button type="button" onClick={clearFilters} className={styles.clearFiltersButton}>
             {locale === 'ko' ? '필터 초기화' : 'Clear filters'}
           </button>
         )}
       </div>
 
       {/* Search, Sort & Filter */}
-      <div className="flex flex-col gap-4 mb-8">
-        <div className="flex flex-col sm:flex-row gap-4">
-          <div className="relative flex-1">
+      <div className={styles.filterControls}>
+        <div className={styles.filterRow}>
+          <div className={styles.searchInputWrapper}>
             <svg
               aria-hidden="true"
-              className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5"
-              style={{ color: 'var(--text-tertiary)' }}
+              className={styles.searchIcon}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -244,24 +217,14 @@ export default function WebApiPage() {
                 }
                 setSearchParams(params);
               }}
-              className="w-full pl-10 pr-4 py-2.5 rounded-xl transition-all"
-              style={{
-                backgroundColor: 'var(--bg-elevated)',
-                border: '1px solid var(--border-primary)',
-                color: 'var(--text-primary)',
-              }}
+              className={styles.filterInput}
             />
           </div>
-          <div className="flex gap-2">
+          <div className={styles.gap2}>
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as SortOption)}
-              className="px-4 py-2.5 rounded-xl text-sm font-medium transition-all"
-              style={{
-                backgroundColor: 'var(--bg-elevated)',
-                border: '1px solid var(--border-primary)',
-                color: 'var(--text-primary)',
-              }}
+              className={styles.filterSelect}
             >
               <option value="support">
                 {locale === 'ko' ? '📊 지원률순' : '📊 Most Supported'}
@@ -272,7 +235,7 @@ export default function WebApiPage() {
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-2">
+        <div className={styles.categoryFilters}>
           {cats.map((cat) => (
             <button
               key={cat}
@@ -287,11 +250,7 @@ export default function WebApiPage() {
                 }
                 setSearchParams(params);
               }}
-              className="px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
-              style={{
-                backgroundColor: category === cat ? 'var(--accent-primary)' : 'var(--bg-tertiary)',
-                color: category === cat ? 'white' : 'var(--text-secondary)',
-              }}
+              className={`${styles.categoryButton} ${category === cat ? styles.categoryButtonActive : ''}`}
             >
               {cat === 'All' ? (locale === 'ko' ? '전체' : 'All') : cat}
             </button>
@@ -300,63 +259,39 @@ export default function WebApiPage() {
       </div>
 
       {/* Results count */}
-      <div className="mb-4 text-sm" style={{ color: 'var(--text-tertiary)' }}>
+      <div className={styles.resultsCount}>
         {filteredApis.length} {locale === 'ko' ? '개의 API' : 'APIs'}
       </div>
 
       {/* API List */}
-      <div className="space-y-8">
+      <div className={styles.libraryList}>
         {Object.entries(groupedApis).map(([categoryName, categoryApis]) => (
-          <section key={categoryName}>
-            <h2
-              className="text-lg font-semibold mb-4 pb-2"
-              style={{
-                color: 'var(--text-primary)',
-                borderBottom: '1px solid var(--border-primary)',
-              }}
-            >
-              {categoryName}
-            </h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <section key={categoryName} className={styles.libraryCategorySection}>
+            <h2>{categoryName}</h2>
+            <div className={styles.apiGrid}>
               {categoryApis.map((api) => (
                 <a
                   key={api.name}
                   href={api.mdnUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group p-4 rounded-xl transition-all hover:shadow-md"
-                  style={{
-                    backgroundColor: 'var(--bg-elevated)',
-                    border: '1px solid var(--border-primary)',
-                  }}
+                  className={styles.apiCard}
                 >
-                  <div className="flex items-start justify-between mb-2">
-                    <div className="flex items-center gap-2 flex-wrap flex-1">
-                      <h3 className="font-semibold" style={{ color: 'var(--text-primary)' }}>
-                        {api.name}
-                      </h3>
+                  <div className={styles.apiHeader}>
+                    <div className={styles.apiTitleRow}>
+                      <h3 className={styles.apiName}>{api.name}</h3>
                       {api.trending && (
-                        <span
-                          className="text-xs px-2 py-0.5 rounded-full"
-                          style={{
-                            backgroundColor: 'rgba(255, 107, 107, 0.15)',
-                            color: '#ff6b6b',
-                          }}
-                        >
+                        <span className={`${styles.libraryBadge} ${styles.libraryBadgeTrending}`}>
                           🔥
                         </span>
                       )}
                     </div>
-                    <span className="badge-mit">{api.support}</span>
+                    <span className={styles.licenseBadge}>{api.support}</span>
                   </div>
-                  <p className="text-sm mb-2" style={{ color: 'var(--text-secondary)' }}>
+                  <p className={styles.apiDescription}>
                     {locale === 'ko' ? api.descriptionKo : api.description}
                   </p>
-                  {api.yearStable && (
-                    <p className="text-xs" style={{ color: 'var(--text-tertiary)' }}>
-                      Since {api.yearStable}
-                    </p>
-                  )}
+                  {api.yearStable && <p className={styles.apiYear}>Since {api.yearStable}</p>}
                 </a>
               ))}
             </div>
@@ -366,9 +301,9 @@ export default function WebApiPage() {
 
       {/* Empty state */}
       {filteredApis.length === 0 && (
-        <div className="text-center py-12">
-          <div className="text-4xl mb-4">🔍</div>
-          <p style={{ color: 'var(--text-tertiary)' }}>
+        <div className={styles.emptyState}>
+          <div className={styles.emptyStateEmoji}>🔍</div>
+          <p className={styles.emptyStateText}>
             {locale === 'ko' ? '검색 결과가 없습니다' : 'No results found'}
           </p>
         </div>
