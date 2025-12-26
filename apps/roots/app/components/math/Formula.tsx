@@ -1,5 +1,5 @@
 import type { Formula as FormulaType } from '@/data/types';
-import styles from '../../styles/pages.module.scss';
+import styles from '../../styles/app.module.scss';
 /**
  * @fileoverview 수학 공식 카드 컴포넌트
  */
@@ -21,7 +21,7 @@ export function FormulaCard({ formula }: FormulaCardProps) {
   return (
     <div className={styles.formulaCard}>
       {/* LaTeX 수식 */}
-      <div style={{ marginBottom: '0.75rem' }}>
+      <div className={styles.formulaLatex}>
         <LaTeX math={formula.latex} display />
       </div>
 
@@ -30,18 +30,10 @@ export function FormulaCard({ formula }: FormulaCardProps) {
 
       {/* 변수 설명 */}
       {formula.variables && formula.variables.length > 0 && (
-        <ul className={styles.spaceY2} style={{ marginTop: '0.5rem' }}>
+        <ul className={`${styles.spaceY2} ${styles.variableList}`}>
           {formula.variables.map((variable) => (
             <li key={variable.symbol} className={styles.flexCenter}>
-              <span
-                style={{
-                  fontFamily: 'monospace',
-                  padding: '0.125rem 0.375rem',
-                  borderRadius: '0.25rem',
-                  backgroundColor: 'var(--bg-tertiary)',
-                  color: 'var(--math-formula)',
-                }}
-              >
+              <span className={styles.variableSymbol}>
                 <LaTeX math={variable.symbol} />
               </span>
               <span className={styles.textSecondary}>{variable.meaning}</span>

@@ -5,7 +5,7 @@ import type { Category } from '@/data/types';
 import type { MeaningEntry } from '@/data/types';
 import { type Language, useI18n } from '@/i18n';
 import { studyRecords } from '@/lib/db';
-import styles from '@/styles/pages.module.scss';
+import styles from '@/styles/app.module.scss';
 import { useEffect, useState } from 'react';
 import type { MetaFunction } from 'react-router';
 import { Link, useLoaderData } from 'react-router';

@@ -9,7 +9,7 @@ import { getConceptById } from '@/lib/concepts';
 import { favorites } from '@/lib/db';
 import { useEffect, useState } from 'react';
 import type { MetaFunction } from 'react-router';
-import styles from '../styles/pages.module.scss';
+import styles from '../styles/app.module.scss';
 
 export const meta: MetaFunction = ({ location }) => {
   const locale = location.pathname.startsWith('/ko') ? 'ko' : 'en';

@@ -2,7 +2,7 @@ import { DifficultyStars } from '@/components/ui/DifficultyBadge';
 import type { DifficultyLevel, Example as ExampleType } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { useState } from 'react';
-import styles from '../../styles/pages.module.scss';
+import styles from '../../styles/app.module.scss';
 /**
  * @fileoverview 예제 컴포넌트
  */
@@ -27,17 +27,17 @@ export function ExampleCard({ example, index }: ExampleCardProps) {
     <div className={styles.exampleCard}>
       {/* 예제 헤더 */}
       <div className={styles.exampleHeader}>
-        <span className={styles.textTertiary} style={{ fontSize: '0.875rem', fontWeight: 500 }}>
+        <span className={styles.exampleNumber}>
           {t('exampleNumber')} {index + 1}
         </span>
         {example.difficulty && <DifficultyStars level={example.difficulty as DifficultyLevel} />}
       </div>
 
       {/* 문제 */}
-      <div style={{ marginBottom: '0.75rem' }}>
+      <div className={styles.exampleProblemWrap}>
         <p className={styles.textPrimary}>{example.problem}</p>
         {example.latex && (
-          <div style={{ marginTop: '0.5rem' }}>
+          <div className={styles.exampleLatex}>
             <LaTeX math={example.latex} display />
           </div>
         )}
@@ -47,16 +47,15 @@ export function ExampleCard({ example, index }: ExampleCardProps) {
       <button
         type="button"
         onClick={() => setShowSolution(!showSolution)}
-        className={styles.textAccent}
-        style={{ fontSize: '0.875rem', fontWeight: 500 }}
+        className={styles.solutionToggle}
       >
         {showSolution ? `▼ ${t('hideSolution')}` : `▶ ${t('showSolution')}`}
       </button>
 
       {/* 풀이 */}
       {showSolution && (
-        <div className={styles.exampleSolution} style={{ marginTop: '0.75rem' }}>
-          <p className={styles.textSecondary} style={{ whiteSpace: 'pre-wrap' }}>
+        <div className={`${styles.exampleSolution} ${styles.solutionContent}`}>
+          <p className={`${styles.textSecondary} ${styles.exampleSolutionText}`}>
             {example.solution}
           </p>
         </div>
@@ -72,12 +71,10 @@ function SimpleExample({ example, index }: { example: string; index: number }) {
   const { t } = useI18n();
   return (
     <div className={styles.exampleCard}>
-      <span className={styles.textTertiary} style={{ fontSize: '0.875rem', fontWeight: 500 }}>
+      <span className={styles.exampleNumber}>
         {t('exampleNumber')} {index + 1}
       </span>
-      <p className={styles.textPrimary} style={{ marginTop: '0.5rem' }}>
-        {example}
-      </p>
+      <p className={`${styles.textPrimary} ${styles.simpleExampleText}`}>{example}</p>
     </div>
   );
 }

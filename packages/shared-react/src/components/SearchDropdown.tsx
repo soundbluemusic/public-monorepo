@@ -125,7 +125,7 @@ export function SearchDropdown({
 
   return (
     <div ref={containerRef} className={`${styles.searchContainer} ${className}`}>
-      <div style={{ position: 'relative' }}>
+      <div className={styles.searchInputWrapper}>
         <Search size={16} className={styles.searchIcon} aria-hidden="true" />
         <input
           ref={inputRef}

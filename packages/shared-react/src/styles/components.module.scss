@@ -22,6 +22,11 @@
     color: var(--text-primary);
   }
 
+  &:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+  }
+
   &:active {
     transform: scale(0.95);
   }
@@ -51,6 +56,11 @@
     background-color: var(--bg-tertiary);
   }
 
+  &:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+  }
+
   &:active {
     transform: scale(0.95);
   }
@@ -65,8 +75,8 @@
   left: 0;
   right: 0;
   z-index: 9999;
-  background-color: #f59e0b;
-  color: #78350f;
+  background-color: var(--color-warning);
+  color: var(--bg-primary);
   text-align: center;
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
@@ -87,7 +97,7 @@
   top: 1rem;
   right: 1rem;
   z-index: 9999;
-  background-color: #22c55e;
+  background-color: var(--color-success);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
@@ -105,6 +115,10 @@
 .searchContainer {
   position: relative;
   width: 100%;
+}
+
+.searchInputWrapper {
+  position: relative;
 }
 
 .searchIcon {
@@ -297,6 +311,21 @@
 .skeletonGrid {
   display: grid;
   gap: 1rem;
+  // Default: use CSS variable for dynamic columns
+  grid-template-columns: repeat(var(--skeleton-columns, 3), minmax(0, 1fr));
+}
+
+// Common column variants
+.skeletonGrid2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.skeletonGrid3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.skeletonGrid4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .skeletonPage {

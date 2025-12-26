@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { Link, useLocation } from 'react-router';
 import { useI18n } from '../../i18n';
-import styles from './BottomNav.module.scss';
+import styles from '../../styles/app.module.scss';
 
 interface BottomNavItem {
   href: string;
@@ -17,7 +17,7 @@ const navItems: readonly BottomNavItem[] = [
     labelKo: '홈',
     icon: (
       <svg
-        className={styles.icon}
+        className={styles.bottomNavIcon}
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -38,7 +38,7 @@ const navItems: readonly BottomNavItem[] = [
     labelKo: 'Web API',
     icon: (
       <svg
-        className={styles.icon}
+        className={styles.bottomNavIcon}
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -59,7 +59,7 @@ const navItems: readonly BottomNavItem[] = [
     labelKo: 'Libraries',
     icon: (
       <svg
-        className={styles.icon}
+        className={styles.bottomNavIcon}
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -83,17 +83,21 @@ export default function BottomNav() {
   const isActive = (href: string) => location.pathname === localePath(href);
 
   return (
-    <nav className={styles.nav}>
-      <div className={styles.container}>
+    <nav className={styles.bottomNav}>
+      <div className={styles.bottomNavContainer}>
         {navItems.map((item) => (
           <Link
             key={item.href}
             to={localePath(item.href)}
-            className={`${styles.link} ${isActive(item.href) ? styles.linkActive : ''}`}
+            className={`${styles.bottomNavLink} ${isActive(item.href) ? styles.bottomNavLinkActive : ''}`}
             aria-current={isActive(item.href) ? 'page' : undefined}
           >
-            <span className={isActive(item.href) ? styles.iconActive : ''}>{item.icon}</span>
-            <span className={styles.label}>{locale === 'ko' ? item.labelKo : item.label}</span>
+            <span className={isActive(item.href) ? styles.bottomNavIconActive : ''}>
+              {item.icon}
+            </span>
+            <span className={styles.bottomNavLabel}>
+              {locale === 'ko' ? item.labelKo : item.label}
+            </span>
           </Link>
         ))}
       </div>

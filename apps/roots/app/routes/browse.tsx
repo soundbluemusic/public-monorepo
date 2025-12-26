@@ -7,7 +7,7 @@ import { useI18n } from '@/i18n';
  */
 import { Link } from 'react-router';
 import type { MetaFunction } from 'react-router';
-import styles from '../styles/pages.module.scss';
+import styles from '../styles/app.module.scss';
 
 export const meta: MetaFunction = ({ location }) => {
   const locale = location.pathname.startsWith('/ko') ? 'ko' : 'en';

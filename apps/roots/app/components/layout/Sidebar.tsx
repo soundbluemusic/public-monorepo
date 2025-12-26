@@ -5,7 +5,7 @@ import { fields } from '@/data/fields';
 import { useI18n } from '@/i18n';
 import { stripLocaleFromPath } from '@soundblue/shared';
 import { Link, useLocation } from 'react-router';
-import styles from '../../styles/layout.module.scss';
+import styles from '../../styles/app.module.scss';
 
 // Use shared utility for locale stripping
 const stripLocale = stripLocaleFromPath;

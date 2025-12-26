@@ -6,7 +6,7 @@ import { useI18n } from '@/i18n';
 import { preloadSearchIndex } from '@/lib/search';
 import { useEffect } from 'react';
 import { Link } from 'react-router';
-import styles from '../styles/pages.module.scss';
+import styles, { type Styles } from '../styles/app.module.scss';
 
 import type { MetaFunction } from 'react-router';
 
@@ -18,8 +18,29 @@ export const meta: MetaFunction = ({ location }) => {
   return [{ title }, { name: 'description', content: description }];
 };
 
+// Featured card color class type for type-safe dynamic styles
+type FeaturedCardColorClass = Extract<
+  keyof Styles,
+  | 'featuredCardBlue'
+  | 'featuredCardPurple'
+  | 'featuredCardGreen'
+  | 'featuredCardOrange'
+  | 'featuredCardRed'
+  | 'featuredCardPink'
+  | 'featuredCardTeal'
+  | 'featuredCardIndigo'
+>;
+
 // 대표 개념 (Featured Concepts)
-const FEATURED_CONCEPTS = [
+const FEATURED_CONCEPTS: ReadonlyArray<{
+  id: string;
+  icon: string;
+  nameKo: string;
+  nameEn: string;
+  descKo: string;
+  descEn: string;
+  colorClass: FeaturedCardColorClass;
+}> = [
   {
     id: 'pythagorean-theorem',
     icon: '📐',

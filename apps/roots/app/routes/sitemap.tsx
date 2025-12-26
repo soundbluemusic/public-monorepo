@@ -3,7 +3,7 @@ import { fields } from '@/data/fields';
 import { useI18n } from '@/i18n';
 import type { MetaFunction } from 'react-router';
 import { Link } from 'react-router';
-import styles from '../styles/pages.module.scss';
+import styles from '../styles/app.module.scss';
 
 export const meta: MetaFunction = ({ location }) => {
   const isKorean = location.pathname.startsWith('/ko');

@@ -1,29 +1,29 @@
 import { Link } from 'react-router';
 import { useI18n } from '../../i18n';
-import styles from './Footer.module.scss';
+import styles from '../../styles/app.module.scss';
 
 export default function Footer() {
   const { t, locale, localePath } = useI18n();
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.container}>
+      <div className={styles.footerContainer}>
         {/* Footer Links */}
-        <nav className={styles.nav}>
-          <Link to={localePath('/sitemap')} className={styles.navLink}>
+        <nav className={styles.footerNav}>
+          <Link to={localePath('/sitemap')} className={styles.footerNavLink}>
             {locale === 'ko' ? '사이트맵' : 'Sitemap'}
           </Link>
         </nav>
 
-        <div className={styles.content}>
-          <div className={styles.brand}>
+        <div className={styles.footerContent}>
+          <div className={styles.footerBrand}>
             <span>✨</span>
             <span>{t('ui.permissiveBy')}</span>
             <a
               href="https://soundbluemusic.com"
               target="_blank"
               rel="noopener noreferrer"
-              className={styles.brandLink}
+              className={styles.footerBrandLink}
             >
               soundbluemusic
             </a>
@@ -32,10 +32,10 @@ export default function Footer() {
             href="https://github.com/soundbluemusic/public-monorepo"
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.githubLink}
+            className={styles.footerGithubLink}
           >
             <svg
-              className={styles.githubIcon}
+              className={styles.footerGithubIcon}
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"

@@ -9,7 +9,7 @@ import {
 import { ArrowUp, BookOpen, ChevronRight, Github, Heart, Star } from 'lucide-react';
 import { type ReactNode, useCallback, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
-import styles from '../../styles/layout.module.scss';
+import styles from '../../styles/app.module.scss';
 import { Sidebar } from './Sidebar';
 
 // Use shared utility for locale stripping

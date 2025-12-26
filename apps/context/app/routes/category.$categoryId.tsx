@@ -4,7 +4,7 @@ import { meaningEntries } from '@/data/entries';
 import type { Category, MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { studyRecords } from '@/lib/db';
-import styles from '@/styles/pages.module.scss';
+import styles from '@/styles/app.module.scss';
 import { Check } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router';

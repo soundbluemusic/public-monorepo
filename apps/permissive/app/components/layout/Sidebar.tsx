@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router';
 import { type Language, useI18n } from '../../i18n';
-import styles from './Sidebar.module.scss';
+import styles from '../../styles/app.module.scss';
 
 interface SidebarProps {
   isOpen: boolean;

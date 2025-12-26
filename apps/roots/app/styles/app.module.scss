@@ -1,0 +1,1610 @@
+// app.module.scss - Roots App Unified Styles
+// Jony Ive: "하나의 파일에 모든 것이 있으면, 모든 것이 어디 있는지 알 수 있습니다."
+// layout.module.scss + pages.module.scss → 하나의 파일
+
+@use "../../../../packages/shared/src/styles/scss" as *;
+@use "../../../../packages/shared-react/src/styles/tokens.module.scss" as tokens;
+
+// ============================================
+// LAYOUT SECTION
+// ============================================
+
+// Layout Container
+.container {
+  min-height: 100vh;
+  @include flex-column;
+  background-color: var(--bg-primary);
+}
+
+// Skip to Content
+.skipToContent {
+  position: absolute;
+  left: -9999px;
+  z-index: $z-max;
+  padding: $spacing-3 $spacing-6;
+  background: var(--accent-primary);
+  color: white;
+  border-radius: $radius-lg;
+  font-weight: $font-weight-medium;
+  text-decoration: none;
+
+  &:focus {
+    left: $spacing-4;
+    top: $spacing-4;
+  }
+}
+
+// Header
+.header {
+  @include tokens.sticky-header;
+}
+
+.headerInner {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 $spacing-4;
+  height: $header-height;
+  @include flex-between;
+  gap: $spacing-4;
+}
+
+.logo {
+  font-weight: $font-weight-semibold;
+  flex-shrink: 0;
+  @include flex-start;
+  gap: $spacing-2;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.logoIcon {
+  font-size: $font-size-xl;
+}
+
+.searchWrapper {
+  flex: 1;
+  max-width: 28rem;
+}
+
+.rightActions {
+  @include flex-start;
+  gap: $spacing-1;
+  flex-shrink: 0;
+}
+
+.navLink {
+  display: none;
+  padding: $spacing-2 $spacing-3;
+  font-size: $font-size-sm;
+  border-radius: $radius-lg;
+  @include transition-all;
+  @include touch-target;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-secondary);
+  background-color: transparent;
+
+  @include sm {
+    display: flex;
+  }
+
+  &:hover {
+    background-color: var(--bg-tertiary);
+  }
+}
+
+.navLinkActive {
+  color: var(--accent-primary);
+  background-color: var(--bg-tertiary);
+}
+
+// Main Content Area
+.mainWrapper {
+  flex: 1;
+  display: flex;
+}
+
+.main {
+  flex: 1;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: $spacing-8 $spacing-4;
+  width: 100%;
+  padding-bottom: 5rem;
+
+  @include lg {
+    margin-left: 0;
+    padding-bottom: $spacing-8;
+  }
+}
+
+// Breadcrumbs
+.breadcrumbs {
+  margin-bottom: $spacing-4;
+}
+
+.breadcrumbList {
+  @include flex-start;
+  gap: $spacing-1;
+  font-size: $font-size-sm;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumbItem {
+  @include flex-start;
+  gap: $spacing-1;
+}
+
+.breadcrumbIcon {
+  color: var(--text-tertiary);
+}
+
+.breadcrumbLink {
+  color: var(--text-secondary);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.breadcrumbCurrent {
+  color: var(--text-primary);
+}
+
+// Sidebar
+.sidebar {
+  display: none;
+  position: sticky;
+  top: $header-height;
+  left: 0;
+  height: calc(100vh - #{$header-height});
+  width: 16rem;
+  overflow-y: auto;
+  flex-shrink: 0;
+  background-color: var(--bg-primary);
+  border-right: 1px solid var(--border-primary);
+
+  @include lg {
+    display: block;
+    width: $sidebar-width;
+  }
+}
+
+.sidebarNav {
+  padding: $spacing-4;
+  @include flex-column;
+  gap: $spacing-1;
+}
+
+.sidebarHeader {
+  margin-bottom: $spacing-4;
+  padding-bottom: $spacing-4;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.sidebarTitle {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-tertiary);
+  margin: 0;
+}
+
+.sidebarItem {
+  @include flex-start;
+  gap: $spacing-3;
+  padding: $spacing-3;
+  border-radius: $radius-lg;
+  @include transition-all;
+  @include touch-target;
+  text-decoration: none;
+  color: var(--text-secondary);
+  background-color: transparent;
+
+  &:hover {
+    transform: translateX($spacing-1);
+  }
+}
+
+.sidebarItemActive {
+  background-color: var(--bg-tertiary);
+  color: var(--accent-primary);
+  box-shadow: $shadow-sm;
+
+  &:hover {
+    transform: none;
+  }
+}
+
+.sidebarItemIcon {
+  font-size: $font-size-xl;
+  flex-shrink: 0;
+}
+
+.sidebarItemContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.sidebarItemLabel {
+  font-weight: $font-weight-medium;
+  font-size: $font-size-sm;
+  @include truncate;
+  color: var(--text-primary);
+}
+
+.sidebarItemLabelActive {
+  color: var(--accent-primary);
+}
+
+.sidebarActiveIndicator {
+  width: $spacing-1;
+  height: $spacing-6;
+  border-radius: $radius-full;
+  flex-shrink: 0;
+  background-color: var(--accent-primary);
+}
+
+// Bottom Navigation (Mobile)
+.bottomNav {
+  @include tokens.bottom-nav;
+  @include flex-center;
+  justify-content: space-around;
+  height: calc($bottom-nav-height + env(safe-area-inset-bottom, 0px));
+
+  @include lg {
+    display: none;
+  }
+}
+
+.bottomNavItem {
+  @include tokens.bottom-nav-link;
+}
+
+.bottomNavItemActive {
+  color: var(--accent-primary);
+}
+
+.bottomNavLabel {
+  font-size: $font-size-xs;
+}
+
+// Back to Top Button
+.backToTop {
+  position: fixed;
+  bottom: 5rem;
+  right: $spacing-4;
+  z-index: $z-sticky;
+  @include touch-target;
+  @include flex-center;
+  border-radius: $radius-full;
+  box-shadow: $shadow-md;
+  @include transition-all;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+  color: var(--text-secondary);
+  cursor: pointer;
+
+  @include lg {
+    bottom: $spacing-8;
+  }
+
+  &:hover {
+    background-color: var(--bg-tertiary);
+  }
+}
+
+// Footer
+.footer {
+  display: none;
+  margin-top: auto;
+  padding: $spacing-8 0;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-primary);
+
+  @include lg {
+    display: block;
+  }
+}
+
+.footerInner {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 $spacing-4;
+}
+
+.footerNav {
+  @include flex-center;
+  gap: $spacing-6;
+  margin-bottom: $spacing-4;
+  font-size: $font-size-sm;
+  color: var(--text-secondary);
+}
+
+.footerNavLink {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.footerContent {
+  @include flex-center;
+  gap: $spacing-4;
+  font-size: $font-size-sm;
+  color: var(--text-tertiary);
+}
+
+.footerGithub {
+  @include flex-start;
+  gap: $spacing-1-5;
+  @include link;
+}
+
+// ============================================
+// PAGES SECTION
+// ============================================
+
+// Home Page
+.homeContainer {
+  @include flex-column;
+  gap: $spacing-8;
+}
+
+.heroSection {
+  @include tokens.hero-section;
+}
+
+.heroTitle {
+  @include tokens.hero-title;
+}
+
+.heroSubtitle {
+  @include tokens.hero-subtitle;
+  margin-bottom: $spacing-8;
+}
+
+.heroStats {
+  @include flex-center;
+  gap: $spacing-8;
+  flex-wrap: wrap;
+}
+
+.heroStat {
+  text-align: center;
+}
+
+.heroStatValue {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  color: var(--accent-primary);
+}
+
+.heroStatLabel {
+  font-size: $font-size-sm;
+  color: var(--text-tertiary);
+}
+
+// Section Styles
+.section {
+  margin-bottom: $spacing-8;
+}
+
+.sectionTitle {
+  @include tokens.section-title;
+}
+
+.sectionSubtitle {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-tertiary);
+  margin-bottom: $spacing-3;
+}
+
+// Grid Layouts
+.grid2 {
+  @include tokens.grid-2;
+}
+
+.grid3 {
+  @include tokens.grid-3;
+}
+
+.grid4 {
+  display: grid;
+  gap: $spacing-4;
+
+  @include sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// Cards
+.card {
+  @include tokens.card-base;
+  padding: $spacing-6;
+}
+
+.cardClickable {
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+
+  &:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+.cardHeader {
+  @include flex-start;
+  align-items: flex-start;
+  gap: $spacing-3;
+  margin-bottom: $spacing-3;
+}
+
+.cardEmoji {
+  font-size: $font-size-2xl;
+  flex-shrink: 0;
+}
+
+.cardTitle {
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.cardDescription {
+  font-size: $font-size-sm;
+  color: var(--text-secondary);
+  margin: 0;
+  @include line-clamp(2);
+}
+
+.cardMeta {
+  @include flex-start;
+  gap: $spacing-2;
+  margin-top: $spacing-3;
+  font-size: $font-size-xs;
+  color: var(--text-tertiary);
+}
+
+.cardTag {
+  padding: $spacing-1 $spacing-2;
+  border-radius: $radius-default;
+  font-size: $font-size-xs;
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+}
+
+// Field Card
+.fieldCard {
+  @include tokens.card-base;
+  padding: $spacing-4;
+  text-decoration: none;
+  @include flex-start;
+  gap: $spacing-3;
+
+  &:hover {
+    border-color: var(--accent-primary);
+    background-color: var(--bg-secondary);
+  }
+}
+
+.fieldCardIcon {
+  font-size: $font-size-2xl;
+  flex-shrink: 0;
+}
+
+.fieldCardContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.fieldCardName {
+  font-weight: $font-weight-semibold;
+  color: var(--text-primary);
+  margin-bottom: $spacing-1;
+}
+
+.fieldCardCount {
+  font-size: $font-size-xs;
+  color: var(--text-tertiary);
+}
+
+// Concept Card
+.conceptCard {
+  @include tokens.card-link;
+  padding: $spacing-4;
+}
+
+.conceptCardHeader {
+  @include flex-between;
+  margin-bottom: $spacing-2;
+}
+
+.conceptCardTitle {
+  font-weight: $font-weight-semibold;
+  color: var(--text-primary);
+  @include truncate;
+}
+
+.conceptCardDescription {
+  font-size: $font-size-sm;
+  color: var(--text-secondary);
+  @include line-clamp(2);
+  margin-bottom: $spacing-2;
+}
+
+.conceptCardMeta {
+  @include flex-start;
+  gap: $spacing-2;
+  font-size: $font-size-xs;
+}
+
+.conceptCardField {
+  padding: $spacing-0-5 $spacing-1-5;
+  border-radius: $radius-default;
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+}
+
+// Math / LaTeX
+.mathFormula {
+  font-family: 'STIX Two Math', 'Cambria Math', serif;
+  color: var(--math-formula, var(--accent-primary));
+}
+
+.mathInline {
+  display: inline;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: inherit;
+}
+
+.mathDisplay {
+  display: block;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 2;
+}
+
+.formulaBlock {
+  margin: $spacing-4 0;
+  padding: $spacing-4;
+  border-radius: $radius-lg;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  overflow-x: auto;
+}
+
+// Difficulty Badge
+.difficultyBadge {
+  @include badge;
+  gap: $spacing-1;
+}
+
+.difficultyBadgeSm {
+  font-size: $font-size-xs;
+  padding: $spacing-0-5 $spacing-1-5;
+}
+
+.difficultyBadgeMd {
+  font-size: $font-size-sm;
+  padding: $spacing-1 $spacing-2;
+}
+
+// Difficulty level colors
+.difficultyLevel1 {
+  background-color: color-mix(in srgb, var(--difficulty-1) 15%, transparent);
+  color: var(--difficulty-1);
+}
+
+.difficultyLevel2 {
+  background-color: color-mix(in srgb, var(--difficulty-2) 15%, transparent);
+  color: var(--difficulty-2);
+}
+
+.difficultyLevel3 {
+  background-color: color-mix(in srgb, var(--difficulty-3) 15%, transparent);
+  color: var(--difficulty-3);
+}
+
+.difficultyLevel4 {
+  background-color: color-mix(in srgb, var(--difficulty-4) 15%, transparent);
+  color: var(--difficulty-4);
+}
+
+.difficultyLevel5 {
+  background-color: color-mix(in srgb, var(--difficulty-5) 15%, transparent);
+  color: var(--difficulty-5);
+}
+
+.difficultyStars {
+  @include flex-start;
+  gap: $spacing-0-5;
+}
+
+.difficultyDot {
+  width: $spacing-1-5;
+  height: $spacing-1-5;
+  border-radius: $radius-full;
+  background-color: currentColor;
+}
+
+.difficultyDotInactive {
+  opacity: 0.3;
+}
+
+// Browse Page
+.browseHeader {
+  margin-bottom: $spacing-8;
+}
+
+.browseTitle {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  color: var(--text-primary);
+  margin-bottom: $spacing-2;
+}
+
+.browseSubtitle {
+  color: var(--text-secondary);
+}
+
+.browseFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-2;
+  margin-bottom: $spacing-6;
+}
+
+.filterButton {
+  padding: $spacing-2 $spacing-4;
+  border-radius: $radius-full;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  border: 1px solid var(--border-primary);
+  background-color: var(--bg-elevated);
+  color: var(--text-secondary);
+  cursor: pointer;
+  @include transition-all;
+
+  &:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+  }
+}
+
+.filterButtonActive {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: white;
+
+  &:hover {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+    color: white;
+  }
+}
+
+// Search Page
+.searchContainer {
+  max-width: $content-max-width-md;
+  margin: 0 auto;
+}
+
+.searchHeader {
+  margin-bottom: $spacing-8;
+  text-align: center;
+}
+
+.searchTitle {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  color: var(--text-primary);
+  margin-bottom: $spacing-4;
+}
+
+.searchInputWrapper {
+  position: relative;
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+.searchIcon {
+  position: absolute;
+  left: $spacing-4;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-tertiary);
+}
+
+.searchInput {
+  @include input-base;
+  padding: $spacing-3 $spacing-4 $spacing-3 $spacing-12;
+  font-size: $font-size-base;
+}
+
+.searchResults {
+  margin-top: $spacing-8;
+}
+
+.searchResultsTitle {
+  font-size: $font-size-sm;
+  color: var(--text-tertiary);
+  margin-bottom: $spacing-4;
+}
+
+.searchResultsList {
+  @include flex-column;
+  gap: $spacing-3;
+}
+
+.noResults {
+  text-align: center;
+  padding: $spacing-12 0;
+  color: var(--text-tertiary);
+}
+
+// Favorites Page
+.favoritesEmpty {
+  text-align: center;
+  padding: $spacing-16 0;
+}
+
+.favoritesEmptyIcon {
+  font-size: 4rem;
+  margin-bottom: $spacing-4;
+}
+
+.favoritesEmptyTitle {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  color: var(--text-primary);
+  margin-bottom: $spacing-2;
+}
+
+.favoritesEmptyDescription {
+  color: var(--text-secondary);
+  margin-bottom: $spacing-6;
+}
+
+.favoritesEmptyButton {
+  @include button-primary;
+  text-decoration: none;
+}
+
+// Constants Page
+.constantsGrid {
+  @include tokens.grid-3;
+}
+
+.constantCard {
+  @include tokens.card-base;
+  padding: $spacing-6;
+}
+
+.constantSymbol {
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  color: var(--accent-primary);
+  margin-bottom: $spacing-2;
+  font-family: "Times New Roman", serif;
+}
+
+.constantName {
+  font-weight: $font-weight-semibold;
+  color: var(--text-primary);
+  margin-bottom: $spacing-1;
+}
+
+.constantValue {
+  font-family: $font-mono;
+  font-size: $font-size-sm;
+  color: var(--text-secondary);
+  word-break: break-all;
+}
+
+// About Page
+.aboutContainer {
+  max-width: $content-max-width-lg;
+  margin: 0 auto;
+}
+
+.aboutTitle {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  color: var(--text-primary);
+  margin-bottom: $spacing-6;
+}
+
+.aboutContent {
+  font-size: $font-size-base;
+  line-height: $line-height-relaxed;
+  color: var(--text-secondary);
+
+  p {
+    margin-bottom: $spacing-4;
+  }
+
+  h2 {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-semibold;
+    color: var(--text-primary);
+    margin-top: $spacing-8;
+    margin-bottom: $spacing-4;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: $spacing-6;
+    margin-bottom: $spacing-4;
+  }
+}
+
+// Sitemap Page
+.sitemapContainer {
+  @include flex-column;
+  gap: $spacing-8;
+}
+
+.sitemapSection {
+  @include tokens.card-base;
+  padding: $spacing-6;
+}
+
+.sitemapSectionTitle {
+  @include tokens.section-title;
+}
+
+.sitemapLinks {
+  @include flex-column;
+  gap: $spacing-2;
+}
+
+.sitemapLink {
+  @include link;
+  font-size: $font-size-sm;
+}
+
+.sitemapXmlSection {
+  padding: $spacing-4;
+  border-radius: $radius-lg;
+  background-color: var(--bg-tertiary);
+}
+
+.sitemapXmlTitle {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  color: var(--text-primary);
+  margin-bottom: $spacing-2;
+}
+
+.sitemapXmlLink {
+  font-family: $font-mono;
+  font-size: $font-size-sm;
+  @include link;
+}
+
+// 404 Page
+.notFoundContainer {
+  text-align: center;
+  padding: $spacing-16 0;
+}
+
+.notFoundEmoji {
+  font-size: 4rem;
+  margin-bottom: $spacing-4;
+}
+
+.notFoundTitle {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  color: var(--text-primary);
+  margin-bottom: $spacing-2;
+}
+
+.notFoundDescription {
+  color: var(--text-secondary);
+  margin-bottom: $spacing-6;
+}
+
+.notFoundButton {
+  @include button-primary;
+  text-decoration: none;
+}
+
+// Concept Detail Page
+.conceptHeader {
+  margin-bottom: $spacing-8;
+}
+
+.conceptTitle {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  color: var(--text-primary);
+  margin-bottom: $spacing-2;
+
+  @include sm {
+    font-size: $font-size-4xl;
+  }
+}
+
+.conceptMeta {
+  @include flex-start;
+  flex-wrap: wrap;
+  gap: $spacing-3;
+  font-size: $font-size-sm;
+  color: var(--text-secondary);
+}
+
+.conceptFieldTag {
+  @include badge;
+  padding: $spacing-1 $spacing-3;
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--bg-secondary);
+  }
+}
+
+.conceptDescription {
+  font-size: $font-size-lg;
+  line-height: $line-height-relaxed;
+  color: var(--text-secondary);
+  margin-bottom: $spacing-8;
+}
+
+.conceptSection {
+  margin-bottom: $spacing-8;
+}
+
+.conceptSectionTitle {
+  @include tokens.section-title;
+}
+
+// Formula Card
+.formulaCard {
+  @include tokens.card-base;
+  padding: $spacing-5;
+  margin-bottom: $spacing-4;
+}
+
+.formulaCardTitle {
+  font-weight: $font-weight-semibold;
+  color: var(--text-primary);
+  margin-bottom: $spacing-2;
+}
+
+.formulaCardContent {
+  font-size: $font-size-lg;
+  margin-bottom: $spacing-2;
+}
+
+.formulaCardDescription {
+  font-size: $font-size-sm;
+  color: var(--text-secondary);
+}
+
+// Example Card
+.exampleCard {
+  @include tokens.card-base;
+  padding: $spacing-5;
+  margin-bottom: $spacing-4;
+}
+
+.exampleHeader {
+  @include flex-between;
+  margin-bottom: $spacing-3;
+}
+
+.exampleTitle {
+  font-weight: $font-weight-semibold;
+  color: var(--text-primary);
+}
+
+.exampleToggle {
+  padding: $spacing-1-5 $spacing-3;
+  border-radius: $radius-md;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  border: 1px solid var(--border-primary);
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  @include transition-all;
+
+  &:hover {
+    background-color: var(--bg-tertiary);
+  }
+}
+
+.exampleProblem {
+  font-size: $font-size-base;
+  color: var(--text-primary);
+  margin-bottom: $spacing-4;
+}
+
+.exampleSolution {
+  padding: $spacing-4;
+  border-radius: $radius-lg;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+}
+
+.exampleNumber {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: var(--text-tertiary);
+}
+
+.exampleProblemWrap {
+  margin-bottom: $spacing-3;
+}
+
+.exampleLatex {
+  margin-top: $spacing-2;
+}
+
+.exampleSolutionText {
+  white-space: pre-wrap;
+}
+
+.solutionToggle {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: var(--accent-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.solutionContent {
+  margin-top: $spacing-3;
+}
+
+.simpleExampleText {
+  margin-top: $spacing-2;
+}
+
+.variableSymbol {
+  font-family: $font-mono;
+  padding: $spacing-0-5 $spacing-1-5;
+  border-radius: $radius-default;
+  background-color: var(--bg-tertiary);
+  color: var(--math-formula, var(--accent-primary));
+}
+
+.variableList {
+  margin-top: $spacing-2;
+}
+
+.formulaLatex {
+  margin-bottom: $spacing-3;
+}
+
+.exampleSolutionTitle {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-tertiary);
+  margin-bottom: $spacing-2;
+}
+
+// Relation Links
+.relationSection {
+  margin-bottom: $spacing-4;
+}
+
+.relationTitle {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  color: var(--text-tertiary);
+  margin-bottom: $spacing-2;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.relationLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-2;
+}
+
+.relationLink {
+  @include flex-start;
+  gap: $spacing-1;
+  padding: $spacing-1-5 $spacing-3;
+  border-radius: $radius-md;
+  font-size: $font-size-sm;
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  text-decoration: none;
+  @include transition-all;
+
+  &:hover {
+    background-color: var(--bg-secondary);
+    color: var(--accent-primary);
+  }
+}
+
+.relationPrefixPrerequisite {
+  color: var(--color-warning);
+}
+
+.relationPrefixNext {
+  color: var(--color-success);
+}
+
+.relationPrefixRelated {
+  color: var(--accent-primary);
+}
+
+.relationPrefixApplication {
+  color: var(--math-highlight, var(--accent-tertiary));
+}
+
+// Favorite Button
+.favoriteButton {
+  @include button-secondary;
+  font-size: $font-size-sm;
+}
+
+.favoriteButtonActive {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: white;
+
+  &:hover:not(:disabled) {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+    color: white;
+  }
+}
+
+// Field Detail Page
+.fieldHeader {
+  margin-bottom: $spacing-8;
+}
+
+.fieldTitle {
+  @include flex-start;
+  gap: $spacing-3;
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  color: var(--text-primary);
+  margin-bottom: $spacing-2;
+}
+
+.fieldTitleIcon {
+  font-size: $font-size-4xl;
+}
+
+.fieldDescription {
+  font-size: $font-size-lg;
+  color: var(--text-secondary);
+  margin-bottom: $spacing-4;
+}
+
+.fieldStats {
+  @include flex-start;
+  gap: $spacing-6;
+  font-size: $font-size-sm;
+  color: var(--text-tertiary);
+}
+
+// Loading States
+.skeleton {
+  animation: skeleton-pulse 2s ease-in-out infinite;
+  background-color: var(--bg-tertiary);
+  border-radius: $radius-md;
+}
+
+@keyframes skeleton-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.skeletonCard {
+  @include tokens.card-base;
+  padding: $spacing-4;
+}
+
+.skeletonTitle {
+  height: $spacing-6;
+  width: 60%;
+  margin-bottom: $spacing-2;
+}
+
+.skeletonText {
+  height: $spacing-4;
+  width: 100%;
+  margin-bottom: $spacing-1;
+}
+
+.skeletonTextShort {
+  width: 40%;
+}
+
+// Featured Concepts Grid (Home Page)
+.featuredGrid {
+  display: grid;
+  gap: $spacing-6;
+  margin-bottom: $spacing-16;
+
+  @include sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.featuredCard {
+  padding: $spacing-8;
+  border-radius: $radius-2xl;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+  text-decoration: none;
+  display: block;
+  transition: all 200ms ease-out;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: $shadow-xl;
+  }
+}
+
+.featuredCardBlue {
+  background-color: color-mix(in srgb, var(--featured-blue) 8%, var(--bg-elevated));
+  &:hover {
+    background-color: color-mix(in srgb, var(--featured-blue) 15%, var(--bg-elevated));
+  }
+}
+
+.featuredCardPurple {
+  background-color: color-mix(in srgb, var(--featured-purple) 8%, var(--bg-elevated));
+  &:hover {
+    background-color: color-mix(in srgb, var(--featured-purple) 15%, var(--bg-elevated));
+  }
+}
+
+.featuredCardGreen {
+  background-color: color-mix(in srgb, var(--featured-green) 8%, var(--bg-elevated));
+  &:hover {
+    background-color: color-mix(in srgb, var(--featured-green) 15%, var(--bg-elevated));
+  }
+}
+
+.featuredCardOrange {
+  background-color: color-mix(in srgb, var(--featured-orange) 8%, var(--bg-elevated));
+  &:hover {
+    background-color: color-mix(in srgb, var(--featured-orange) 15%, var(--bg-elevated));
+  }
+}
+
+.featuredCardRed {
+  background-color: color-mix(in srgb, var(--featured-red) 8%, var(--bg-elevated));
+  &:hover {
+    background-color: color-mix(in srgb, var(--featured-red) 15%, var(--bg-elevated));
+  }
+}
+
+.featuredCardPink {
+  background-color: color-mix(in srgb, var(--featured-pink) 8%, var(--bg-elevated));
+  &:hover {
+    background-color: color-mix(in srgb, var(--featured-pink) 15%, var(--bg-elevated));
+  }
+}
+
+.featuredCardTeal {
+  background-color: color-mix(in srgb, var(--featured-teal) 8%, var(--bg-elevated));
+  &:hover {
+    background-color: color-mix(in srgb, var(--featured-teal) 15%, var(--bg-elevated));
+  }
+}
+
+.featuredCardIndigo {
+  background-color: color-mix(in srgb, var(--featured-indigo) 8%, var(--bg-elevated));
+  &:hover {
+    background-color: color-mix(in srgb, var(--featured-indigo) 15%, var(--bg-elevated));
+  }
+}
+
+.featuredIcon {
+  font-size: $font-size-4xl;
+  margin-bottom: $spacing-4;
+}
+
+.featuredName {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  color: var(--text-primary);
+  margin-bottom: $spacing-2;
+}
+
+.featuredDesc {
+  font-size: $font-size-sm;
+  color: var(--text-secondary);
+  line-height: $line-height-normal;
+}
+
+.browseAllLink {
+  text-align: center;
+  padding: $spacing-8 0;
+}
+
+.browseAllButton {
+  @include flex-center;
+  gap: $spacing-2;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  @include link;
+}
+
+// Browse Page Field Sections
+.browseSection {
+  margin-bottom: $spacing-8;
+}
+
+.browseSectionHeader {
+  @include flex-start;
+  gap: $spacing-3;
+  margin-bottom: $spacing-4;
+}
+
+.browseSectionIcon {
+  font-size: $font-size-2xl;
+}
+
+.browseSectionTitle {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  color: var(--text-primary);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.browseSectionDesc {
+  font-size: $font-size-sm;
+  color: var(--text-secondary);
+  margin-bottom: $spacing-4;
+}
+
+.subfieldTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-2;
+}
+
+.subfieldTag {
+  padding: $spacing-1-5 $spacing-3;
+  font-size: $font-size-sm;
+  border-radius: $radius-lg;
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  text-decoration: none;
+  @include transition-all;
+
+  &:hover {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+  }
+}
+
+// Concept Detail Page Extended
+.breadcrumb {
+  font-size: $font-size-sm;
+  color: var(--text-tertiary);
+  margin-bottom: $spacing-6;
+}
+
+.breadcrumbSeparator {
+  margin: 0 $spacing-2;
+}
+
+.conceptHeaderRow {
+  @include flex-between;
+  align-items: flex-start;
+  gap: $spacing-4;
+  margin-bottom: $spacing-4;
+}
+
+.conceptTitleRow {
+  @include flex-start;
+  gap: $spacing-3;
+}
+
+.conceptTitleIcon {
+  font-size: $font-size-3xl;
+}
+
+.conceptTitleText {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  color: var(--text-primary);
+}
+
+.conceptActions {
+  @include flex-start;
+  gap: $spacing-2;
+}
+
+.favoriteBtn {
+  padding: $spacing-2;
+  border-radius: $radius-lg;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  cursor: pointer;
+  @include transition-all;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.favoriteBtnIcon {
+  font-size: $font-size-xl;
+}
+
+.conceptEnName {
+  font-size: $font-size-lg;
+  color: var(--text-tertiary);
+  margin-bottom: $spacing-2;
+}
+
+.conceptContent {
+  @include flex-column;
+  gap: $spacing-8;
+}
+
+.conceptDefinition {
+  font-size: $font-size-lg;
+  line-height: $line-height-relaxed;
+  color: var(--text-secondary);
+}
+
+.historyCard {
+  padding: $spacing-4;
+  border-radius: $radius-lg;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+}
+
+.historyText {
+  color: var(--text-secondary);
+}
+
+.historyStrong {
+  color: var(--text-primary);
+  font-weight: $font-weight-semibold;
+}
+
+.historyBackground {
+  margin-top: $spacing-2;
+  color: var(--text-tertiary);
+}
+
+.applicationsGrid {
+  display: grid;
+  gap: $spacing-3;
+
+  @include sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.applicationCard {
+  padding: $spacing-3;
+  border-radius: $radius-lg;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+}
+
+.applicationField {
+  font-weight: $font-weight-medium;
+  color: var(--text-primary);
+  margin-bottom: $spacing-1;
+}
+
+.applicationDesc {
+  font-size: $font-size-sm;
+  color: var(--text-tertiary);
+}
+
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-2;
+}
+
+.tag {
+  padding: $spacing-1 $spacing-2;
+  font-size: $font-size-xs;
+  border-radius: $radius-full;
+  background-color: var(--bg-tertiary);
+  color: var(--text-tertiary);
+}
+
+// Space utility classes
+.spaceY2 > * + * { margin-top: $spacing-2; }
+.spaceY3 > * + * { margin-top: $spacing-3; }
+.spaceY4 > * + * { margin-top: $spacing-4; }
+.spaceY8 > * + * { margin-top: $spacing-8; }
+
+// Flex utilities
+.flexCenter {
+  @include flex-center;
+  gap: $spacing-2;
+}
+
+.flexBetween {
+  @include flex-between;
+}
+
+.flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-2;
+}
+
+// Text utilities
+.textCenter { text-align: center; }
+.textPrimary { color: var(--text-primary); }
+.textSecondary { color: var(--text-secondary); }
+.textTertiary { color: var(--text-tertiary); }
+.textAccent { color: var(--accent-primary); }
+.fontSemibold { font-weight: $font-weight-semibold; }
+.fontBold { font-weight: $font-weight-bold; }
+.textSm { font-size: $font-size-sm; }
+.textLg { font-size: $font-size-lg; }
+.textXl { font-size: $font-size-xl; }
+.text2xl { font-size: $font-size-2xl; }
+.text3xl { font-size: $font-size-3xl; }
+
+// Screen reader only
+.srOnly {
+  @include sr-only;
+}
+
+// Button styles
+.btnPrimary {
+  @include button-primary;
+  text-decoration: none;
+}

@@ -6,7 +6,7 @@ import type { ConceptRelations } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router';
-import styles from '../../styles/pages.module.scss';
+import styles from '../../styles/app.module.scss';
 
 type ConceptNames = Record<string, { ko: string; en: string }>;
 
@@ -22,17 +22,17 @@ interface RelationSectionProps {
   names: ConceptNames;
 }
 
+const typeConfig: Record<RelationSectionProps['type'], { prefix: string; prefixClass: string }> = {
+  prerequisite: { prefix: '→', prefixClass: styles.relationPrefixPrerequisite },
+  next: { prefix: '←', prefixClass: styles.relationPrefixNext },
+  related: { prefix: '↔', prefixClass: styles.relationPrefixRelated },
+  application: { prefix: '⚡', prefixClass: styles.relationPrefixApplication },
+};
+
 function RelationSection({ title, icon, ids, type, names }: RelationSectionProps) {
   const { locale, localePath } = useI18n();
 
-  const typeStyles = {
-    prerequisite: { prefix: '→', color: 'var(--color-warning)' },
-    next: { prefix: '←', color: 'var(--color-success)' },
-    related: { prefix: '↔', color: 'var(--accent-primary)' },
-    application: { prefix: '⚡', color: 'var(--math-highlight)' },
-  };
-
-  const style = typeStyles[type];
+  const config = typeConfig[type];
 
   if (ids.length === 0) return null;
 
@@ -49,7 +49,7 @@ function RelationSection({ title, icon, ids, type, names }: RelationSectionProps
 
           return (
             <Link key={id} to={localePath(`/concept/${id}`)} className={styles.relationLink}>
-              <span style={{ color: style.color }}>{style.prefix}</span>
+              <span className={config.prefixClass}>{config.prefix}</span>
               <span>{name}</span>
             </Link>
           );

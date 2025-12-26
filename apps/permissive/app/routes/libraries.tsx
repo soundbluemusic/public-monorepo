@@ -3,7 +3,7 @@ import type { MetaFunction } from 'react-router';
 import { useLoaderData, useSearchParams } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import { useI18n } from '../i18n';
-import styles from '../styles/pages.module.scss';
+import styles from '../styles/app.module.scss';
 
 interface Library {
   name: string;

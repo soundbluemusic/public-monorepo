@@ -46,6 +46,16 @@
   /* Math formula color */
   --math-formula: #2563eb;
 
+  /* Featured card colors (field themes) */
+  --featured-blue: #3b82f6;
+  --featured-purple: #8b5cf6;
+  --featured-green: #22c55e;
+  --featured-orange: #f97316;
+  --featured-red: #ef4444;
+  --featured-pink: #ec4899;
+  --featured-teal: #14b8a6;
+  --featured-indigo: #6366f1;
+
   /* Fonts */
   --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }

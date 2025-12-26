@@ -4,7 +4,7 @@ import { useLoaderData, useSearchParams } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import { type WebAPI, webApiCategories, webApis } from '../data/web-apis';
 import { useI18n } from '../i18n';
-import styles from '../styles/pages.module.scss';
+import styles from '../styles/app.module.scss';
 
 const categories = webApiCategories;
 type CategoryFilter = (typeof categories)[number];

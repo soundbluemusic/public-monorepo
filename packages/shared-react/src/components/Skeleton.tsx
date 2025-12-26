@@ -19,7 +19,6 @@ export function SkeletonText({ lines = 3, className = '' }: SkeletonTextProps) {
   return (
     <div className={`${styles.skeletonText} ${className}`}>
       {Array.from({ length: lines }, (_, i) => (
-        // biome-ignore lint/suspicious/noArrayIndexKey: Static skeleton placeholders never reorder
         <div
           key={`skeleton-line-${i}`}
           className={`${styles.skeleton} ${styles.skeletonLine} ${i === lines - 1 ? styles.skeletonLineShort : ''}`}
@@ -73,12 +72,21 @@ interface SkeletonGridProps {
   className?: string;
 }
 
+const columnClasses: Record<number, string> = {
+  2: styles.skeletonGrid2,
+  3: styles.skeletonGrid3,
+  4: styles.skeletonGrid4,
+};
+
 export function SkeletonGrid({ count = 6, columns = 3, className = '' }: SkeletonGridProps) {
+  // Use predefined class for common column counts, fallback to CSS variable
+  const columnClass = columnClasses[columns];
+  const gridStyle = columnClass
+    ? undefined
+    : ({ '--skeleton-columns': columns } as React.CSSProperties);
+
   return (
-    <div
-      className={`${styles.skeletonGrid} ${className}`}
-      style={{ gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))` }}
-    >
+    <div className={`${styles.skeletonGrid} ${columnClass || ''} ${className}`} style={gridStyle}>
       {Array.from({ length: count }, (_, i) => (
         // biome-ignore lint/suspicious/noArrayIndexKey: Static skeleton placeholders never reorder
         <SkeletonCard key={`skeleton-grid-${i}`} />

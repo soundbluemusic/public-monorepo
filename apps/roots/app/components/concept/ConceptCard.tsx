@@ -6,7 +6,7 @@ import { useI18n } from '@/i18n';
  * @fileoverview 개념 미리보기 카드 컴포넌트
  */
 import { Link } from 'react-router';
-import styles from '../../styles/pages.module.scss';
+import styles from '../../styles/app.module.scss';
 
 interface ConceptCardProps {
   concept: MathConcept;

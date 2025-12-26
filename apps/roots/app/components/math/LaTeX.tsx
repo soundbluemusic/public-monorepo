@@ -5,6 +5,7 @@
  */
 
 import { useMemo } from 'react';
+import styles from '../../styles/app.module.scss';
 
 interface LaTeXProps {
   /** 수식 문자열 (간단한 LaTeX 또는 유니코드) */
@@ -335,19 +336,10 @@ export function LaTeX({ math, display, className }: LaTeXProps) {
   // useMemo로 math가 변경될 때만 재파싱 (동일 컴포넌트 재렌더링 시 캐시 활용)
   const rendered = useMemo(() => latexToMathML(math), [math]);
 
+  const modeClass = display ? styles.mathDisplay : styles.mathInline;
+
   return (
-    <span
-      className={`math-formula ${className || ''}`}
-      style={{
-        display: display ? 'block' : 'inline',
-        textAlign: display ? 'center' : 'inherit',
-        fontFamily: 'STIX Two Math, Cambria Math, serif',
-        fontSize: display ? '1.2em' : 'inherit',
-        lineHeight: display ? '2' : 'inherit',
-      }}
-    >
-      {rendered}
-    </span>
+    <span className={`${styles.mathFormula} ${modeClass} ${className || ''}`}>{rendered}</span>
   );
 }
 
@@ -356,7 +348,7 @@ export function LaTeX({ math, display, className }: LaTeXProps) {
  */
 export function MathBlock({ math, className }: { math: string; className?: string }) {
   return (
-    <div className={`formula-block my-4 ${className || ''}`}>
+    <div className={`${styles.formulaBlock} ${className || ''}`}>
       <LaTeX math={math} display />
     </div>
   );

@@ -37,7 +37,9 @@
     "add-data": "tsx scripts/add-data.ts",
     "prepare": "husky",
     "postinstall": "pnpm run prebuild:all",
-    "prebuild:all": "pnpm --filter './apps/*' prebuild"
+    "prebuild:all": "pnpm scss:types && pnpm --filter './apps/*' prebuild",
+    "scss:types": "typed-scss-modules \"apps/**/app/**/*.module.scss\" \"packages/**/*.module.scss\" --exportType default",
+    "scss:types:watch": "typed-scss-modules \"apps/**/app/**/*.module.scss\" \"packages/**/*.module.scss\" --exportType default --watch"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.1",
@@ -69,6 +71,7 @@
     "skott": "^0.35.6",
     "syncpack": "^13.0.0",
     "tsx": "^4.19.2",
+    "typed-scss-modules": "^8.1.1",
     "vitest": "^2.1.8"
   },
   "engines": {

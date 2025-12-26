@@ -1,0 +1,802 @@
+// app.module.scss - Context App Unified Styles
+// Jony Ive: "11개 파일이 있다는 것은 11번 결정을 미뤘다는 뜻입니다."
+// Layout.module.scss + pages.module.scss → 하나의 파일
+
+@use "../../../../packages/shared/src/styles/scss" as *;
+@use "../../../../packages/shared-react/src/styles/tokens.module.scss" as tokens;
+
+// ============================================
+// LAYOUT SECTION
+// ============================================
+
+// Layout Container
+.layout {
+  min-height: 100vh;
+  @include flex-column;
+  background-color: var(--bg-primary);
+}
+
+// Skip to Content (Accessibility)
+.skipToContent {
+  position: absolute;
+  left: -9999px;
+  z-index: $z-max;
+  padding: $spacing-3 $spacing-6;
+  background: var(--accent-primary);
+  color: white;
+  border-radius: $radius-lg;
+  font-weight: $font-weight-medium;
+
+  &:focus {
+    left: $spacing-4;
+    top: $spacing-4;
+  }
+}
+
+// Header
+.header {
+  @include tokens.sticky-header;
+}
+
+.headerInner {
+  max-width: $content-max-width-lg;
+  margin: 0 auto;
+  padding: 0 $spacing-4;
+  height: $header-height;
+  @include flex-between;
+  gap: $spacing-4;
+}
+
+.headerLeft {
+  @include flex-start;
+  gap: $spacing-2;
+  flex-shrink: 0;
+}
+
+.logo {
+  font-weight: $font-weight-semibold;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.searchWrapper {
+  flex: 1;
+  max-width: 28rem;
+}
+
+.headerRight {
+  @include flex-start;
+  gap: $spacing-1;
+  flex-shrink: 0;
+}
+
+.headerRightDesktop {
+  display: none;
+
+  @include sm {
+    @include flex-start;
+    gap: $spacing-1;
+  }
+}
+
+.headerRightMobile {
+  @include flex-start;
+  gap: $spacing-1;
+
+  @include sm {
+    display: none;
+  }
+}
+
+.browseLink {
+  padding: $spacing-2 $spacing-3;
+  font-size: $font-size-sm;
+  border-radius: $radius-lg;
+  @include transition-colors;
+  @include touch-target;
+  @include flex-center;
+  color: var(--text-secondary);
+
+  &:hover {
+    background-color: var(--bg-tertiary);
+  }
+}
+
+.browseLinkActive {
+  color: var(--accent-primary);
+  background-color: var(--bg-tertiary);
+}
+
+// Hidden Checkbox for Sidebar Toggle
+.toggle {
+  @include sr-only;
+}
+
+// Backdrop
+.backdrop {
+  @include overlay;
+  z-index: $z-overlay;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $transition-slow $easing-out,
+              visibility $transition-slow $easing-out;
+}
+
+// Sidebar Panel
+.sidebar {
+  @include tokens.sidebar-panel;
+  @include flex-column;
+}
+
+.sidebarHeader {
+  height: $header-height;
+  @include flex-between;
+  padding: 0 $spacing-4;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.sidebarTitle {
+  font-weight: $font-weight-semibold;
+  color: var(--text-primary);
+}
+
+// Menu Button
+.menuButton {
+  @include tokens.interactive-element;
+}
+
+// Navigation
+.nav {
+  flex: 1;
+  overflow-y: auto;
+  padding: $spacing-4 0;
+}
+
+.navSection {
+  padding: 0 $spacing-3;
+  margin-bottom: $spacing-6;
+}
+
+.navLink {
+  @include tokens.nav-link;
+}
+
+.navLinkActive {
+  @include tokens.nav-link-active;
+}
+
+.navLinkSecondary {
+  color: var(--text-secondary);
+  font-size: $font-size-sm;
+}
+
+.sectionLabel {
+  padding: $spacing-2 $spacing-3;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-tertiary);
+}
+
+.categoryList {
+  @include flex-column;
+  gap: $spacing-0-5;
+}
+
+.categoryIcon {
+  font-size: $font-size-base;
+}
+
+.viewAllIcon {
+  font-size: $font-size-base;
+  opacity: 0.5;
+}
+
+.viewAllLink {
+  color: var(--accent-primary);
+}
+
+.sidebarFooter {
+  flex-shrink: 0;
+  padding: $spacing-4 $spacing-3;
+  border-top: 1px solid var(--border-primary);
+}
+
+// State: When checkbox is checked
+.toggle:checked {
+  & ~ .backdrop {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  & ~ .sidebar {
+    transform: translateX(0);
+  }
+}
+
+// Main Content
+.main {
+  @include tokens.main-content;
+}
+
+// Breadcrumbs
+.breadcrumbs {
+  margin-bottom: $spacing-4;
+}
+
+.breadcrumbList {
+  @include flex-start;
+  gap: $spacing-1;
+  font-size: $font-size-sm;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumbItem {
+  @include flex-start;
+  gap: $spacing-1;
+}
+
+.breadcrumbIcon {
+  color: var(--text-tertiary);
+}
+
+.breadcrumbLink {
+  color: var(--text-secondary);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.breadcrumbCurrent {
+  color: var(--text-primary);
+}
+
+// Bottom Navigation (Mobile)
+.bottomNav {
+  @include tokens.bottom-nav;
+  @include flex-center;
+  justify-content: space-around;
+  height: calc($bottom-nav-height + env(safe-area-inset-bottom, 0px));
+}
+
+.bottomNavLink {
+  @include tokens.bottom-nav-link;
+}
+
+.bottomNavLinkActive {
+  color: var(--accent-primary);
+}
+
+.bottomNavLabel {
+  font-size: $font-size-xs;
+}
+
+// Back to Top Button
+.backToTop {
+  position: fixed;
+  bottom: 5rem;
+  right: $spacing-4;
+  z-index: $z-sticky;
+  @include touch-target;
+  @include flex-center;
+  border-radius: $radius-full;
+  box-shadow: $shadow-md;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-primary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  @include transition-all;
+
+  @include sm {
+    bottom: $spacing-8;
+  }
+
+  &:hover {
+    background-color: var(--bg-tertiary);
+  }
+
+  @include focus-visible;
+}
+
+// Footer
+.footer {
+  display: none;
+  margin-top: auto;
+  padding: $spacing-8 0;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-primary);
+
+  @include sm {
+    display: block;
+  }
+}
+
+.footerInner {
+  max-width: $content-max-width-lg;
+  margin: 0 auto;
+  padding: 0 $spacing-4;
+}
+
+.footerNav {
+  @include flex-center;
+  gap: $spacing-6;
+  margin-bottom: $spacing-4;
+  font-size: $font-size-sm;
+  color: var(--text-secondary);
+}
+
+.footerNavLink {
+  @include link-subtle;
+}
+
+.footerCredits {
+  text-align: center;
+  font-size: $font-size-sm;
+  margin-bottom: $spacing-2;
+  color: var(--text-tertiary);
+}
+
+.footerBuiltWithLink {
+  @include link;
+}
+
+.footerBottom {
+  @include flex-center;
+  gap: $spacing-4;
+  font-size: $font-size-sm;
+  color: var(--text-tertiary);
+}
+
+.footerBrand {
+  margin: 0;
+}
+
+.footerGithub {
+  @include flex-start;
+  gap: $spacing-1-5;
+  @include link;
+}
+
+// Search Result (custom render)
+.searchResult {
+  @include flex-between;
+  width: 100%;
+}
+
+.searchResultLeft {
+  display: flex;
+  align-items: baseline;
+  gap: $spacing-2;
+}
+
+.searchResultKorean {
+  font-weight: $font-weight-medium;
+  color: var(--text-primary);
+}
+
+.searchResultTag {
+  font-size: $font-size-xs;
+  color: var(--text-tertiary);
+}
+
+.searchResultEnglish {
+  color: var(--text-secondary);
+}
+
+// Screen Reader Only
+.srOnly {
+  @include sr-only;
+}
+
+// ============================================
+// PAGES SECTION
+// ============================================
+
+// Section & Container
+.section {
+  margin-bottom: $spacing-6;
+}
+
+.sectionLarge {
+  margin-bottom: $spacing-8;
+}
+
+// Typography
+.pageTitle {
+  @include tokens.page-title;
+}
+
+.pageSubtitle {
+  @include tokens.page-subtitle;
+}
+
+.sectionTitle {
+  @include tokens.section-title;
+}
+
+.sectionTitleSmall {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  color: var(--text-primary);
+}
+
+.textPrimary {
+  color: var(--text-primary);
+}
+
+.textSecondary {
+  color: var(--text-secondary);
+}
+
+.textTertiary {
+  color: var(--text-tertiary);
+}
+
+.textAccent {
+  color: var(--accent-primary);
+}
+
+// Cards
+.card {
+  @include tokens.card-base;
+}
+
+.cardLarge {
+  @include tokens.card-base;
+  padding: $spacing-6;
+}
+
+.cardAccent {
+  @include tokens.card-base;
+  padding: $spacing-6;
+  border: 2px solid var(--accent-primary);
+}
+
+.cardHover {
+  @include tokens.card-interactive;
+}
+
+// Flexbox Utilities
+.flexCenter {
+  @include flex-center;
+}
+
+.flexBetween {
+  @include flex-between;
+}
+
+.flexStart {
+  @include flex-start;
+}
+
+.flexColumn {
+  @include flex-column;
+}
+
+.flexGap1 {
+  gap: $spacing-1;
+}
+
+.flexGap2 {
+  gap: $spacing-2;
+}
+
+.flexGap3 {
+  gap: $spacing-3;
+}
+
+.flexGap4 {
+  gap: $spacing-4;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.shrink0 {
+  flex-shrink: 0;
+}
+
+.minW0 {
+  min-width: 0;
+}
+
+// Grid
+.grid {
+  display: grid;
+  gap: $spacing-4;
+}
+
+.gridCols2 {
+  @include sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.gridCols3 {
+  @include sm {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// Progress Bar
+.progressBar {
+  width: 100%;
+  height: $spacing-2;
+  border-radius: $radius-full;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+}
+
+.progressBarSmall {
+  width: 100%;
+  height: $spacing-1-5;
+  border-radius: $radius-full;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+}
+
+.progressFill {
+  height: 100%;
+  background-color: var(--accent-primary);
+  transition: width $transition-slower $easing-out;
+}
+
+// Buttons
+.buttonPrimary {
+  @include button-primary;
+}
+
+.buttonSecondary {
+  @include button-secondary;
+}
+
+.buttonGhost {
+  @include button-ghost;
+}
+
+.buttonActive {
+  background-color: var(--accent-primary);
+  color: white;
+  border: none;
+}
+
+.iconButton {
+  @include button-base;
+  padding: $spacing-2;
+  background-color: var(--bg-elevated);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-primary);
+  min-height: 2.5rem;
+  min-width: 2.5rem;
+
+  &:hover:not(:disabled) {
+    background-color: var(--bg-tertiary);
+  }
+}
+
+.iconButtonActive {
+  background-color: var(--accent-primary);
+  color: white;
+  border-color: var(--accent-primary);
+}
+
+// Form Elements
+.select {
+  @include input-base;
+  min-height: 2.5rem;
+}
+
+.label {
+  display: block;
+  font-size: $font-size-sm;
+  margin-bottom: $spacing-1;
+  color: var(--text-secondary);
+}
+
+.inputWrapper {
+  flex: 1;
+  min-width: 200px;
+}
+
+// Tags & Badges
+.badge {
+  @include badge;
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+.badgeSecondary {
+  @include badge;
+  background-color: var(--bg-secondary);
+  color: var(--text-tertiary);
+}
+
+.tag {
+  display: inline-block;
+  font-size: $font-size-xs;
+  padding: $spacing-1 $spacing-2;
+  border-radius: $radius-full;
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+}
+
+// List Items
+.listItem {
+  @include flex-between;
+  padding: $spacing-3 $spacing-2;
+  margin: 0 (-$spacing-2);
+  border-radius: $radius-default;
+  border-bottom: 1px solid var(--border-primary);
+  @include transition-colors;
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--bg-tertiary);
+  }
+}
+
+.listItemContent {
+  @include flex-start;
+  gap: $spacing-3;
+  flex: 1;
+  min-width: 0;
+}
+
+.listItemRight {
+  @include flex-start;
+  gap: $spacing-3;
+  flex-shrink: 0;
+}
+
+// Check Mark
+.checkMark {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: $radius-full;
+  @include flex-center;
+  background-color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.checkPlaceholder {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+// Status Indicators
+.studiedIndicator {
+  @include flex-start;
+  gap: $spacing-2;
+  padding: $spacing-2 $spacing-4;
+  border-radius: $radius-lg;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--accent-primary);
+}
+
+// Empty State
+.emptyState {
+  text-align: center;
+  padding: $spacing-12 $spacing-4;
+  color: var(--text-tertiary);
+}
+
+// Links
+.link {
+  @include link;
+}
+
+.linkedExpression {
+  color: var(--accent-primary);
+  text-decoration: underline dotted;
+  text-underline-offset: 4px;
+
+  &:hover {
+    text-decoration: underline solid;
+  }
+}
+
+.linkBack {
+  display: inline-block;
+  font-size: $font-size-sm;
+  @include link;
+}
+
+// Spacing Utilities
+.mb1 { margin-bottom: $spacing-1; }
+.mb2 { margin-bottom: $spacing-2; }
+.mb3 { margin-bottom: $spacing-3; }
+.mb4 { margin-bottom: $spacing-4; }
+.mb6 { margin-bottom: $spacing-6; }
+.mb8 { margin-bottom: $spacing-8; }
+.mt3 { margin-top: $spacing-3; }
+.mt4 { margin-top: $spacing-4; }
+.mt8 { margin-top: $spacing-8; }
+.ml2 { margin-left: $spacing-2; }
+
+.spaceY1 > * + * { margin-top: $spacing-1; }
+.spaceY3 > * + * { margin-top: $spacing-3; }
+
+.py12 {
+  padding-top: $spacing-12;
+  padding-bottom: $spacing-12;
+}
+
+// Text Utilities
+.textCenter { text-align: center; }
+.textXs { font-size: $font-size-xs; }
+.textSm { font-size: $font-size-sm; }
+.textLg { font-size: $font-size-lg; }
+.textXl { font-size: $font-size-xl; }
+.text2xl { font-size: $font-size-2xl; }
+.text3xl { font-size: $font-size-3xl; }
+.fontMedium { font-weight: $font-weight-medium; }
+.fontSemibold { font-weight: $font-weight-semibold; }
+.fontBold { font-weight: $font-weight-bold; }
+
+// Visibility
+.hiddenSm {
+  @include mobile-only {
+    display: none;
+  }
+}
+
+.inlineSm {
+  display: none;
+  @include sm { display: inline; }
+}
+
+.hiddenMd {
+  @include media-down(md) {
+    display: none;
+  }
+}
+
+.inlineMd {
+  display: none;
+  @include md { display: inline; }
+}
+
+// Word-specific styles
+.wordKorean {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  color: var(--text-primary);
+}
+
+.wordKoreanStudied {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  color: var(--text-secondary);
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.wordRomanization {
+  font-size: $font-size-sm;
+  color: var(--text-tertiary);
+}
+
+.wordTranslation {
+  font-size: $font-size-sm;
+  color: var(--text-secondary);
+}
+
+// Flex Wrap
+.flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.alignBaseline {
+  align-items: baseline;
+}

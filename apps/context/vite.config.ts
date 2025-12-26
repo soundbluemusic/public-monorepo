@@ -17,6 +17,14 @@ export default defineConfig({
       '~': '/app',
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler',
+        loadPaths: ['../../node_modules', '../../packages'],
+      },
+    },
+  },
   plugins: [
     paraglide({
       project: './project.inlang',

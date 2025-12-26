@@ -3,7 +3,7 @@ import { categories } from '@/data/categories';
 import { meaningEntries } from '@/data/entries';
 import { useI18n } from '@/i18n';
 import { favorites, studyRecords } from '@/lib/db';
-import styles from '@/styles/pages.module.scss';
+import styles from '@/styles/app.module.scss';
 import { BookmarkCheck, Calendar, TrendingUp, Trophy } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import type { MetaFunction } from 'react-router';

@@ -10,7 +10,7 @@ import { Menu, X } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { useI18n } from '../../i18n';
-import styles from './Header.module.scss';
+import styles from '../../styles/app.module.scss';
 
 // Use shared utility for locale stripping
 const stripLocale = stripLocaleFromPath;

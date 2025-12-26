@@ -1,8 +1,8 @@
 import { useIsMobile, useSettingsStore } from '@soundblue/shared-react';
 import { type ReactNode, useEffect, useState } from 'react';
 import { useI18n } from '../../i18n';
+import styles from '../../styles/app.module.scss';
 import BottomNav from './BottomNav';
-import styles from './DocsLayout.module.scss';
 import Footer from './Footer';
 import Header from './Header';
 import Sidebar from './Sidebar';

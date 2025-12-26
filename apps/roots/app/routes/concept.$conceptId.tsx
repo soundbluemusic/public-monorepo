@@ -13,7 +13,7 @@ import { useI18n } from '@/i18n';
 import { favorites } from '@/lib/db';
 import { useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router';
-import styles from '../styles/pages.module.scss';
+import styles from '../styles/app.module.scss';
 
 /**
  * Loader: 빌드 시 데이터 로드 (SSG용)

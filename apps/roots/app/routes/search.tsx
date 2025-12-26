@@ -9,7 +9,7 @@ import { type FuseSearchResult, searchConcepts } from '@/lib/search';
 import { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router';
 import type { MetaFunction } from 'react-router';
-import styles from '../styles/pages.module.scss';
+import styles from '../styles/app.module.scss';
 
 /** 검색 결과 카드 (SearchIndexItem용) */
 function SearchResultCard({ result }: { result: FuseSearchResult }) {

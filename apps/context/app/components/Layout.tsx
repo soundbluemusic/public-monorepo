@@ -1,5 +1,6 @@
 import { categories } from '@/data/categories';
 import { useI18n } from '@/i18n';
+import styles from '@/styles/app.module.scss';
 import { stripLocaleFromPath } from '@soundblue/shared';
 import {
   DarkModeToggle,
@@ -22,7 +23,6 @@ import {
 } from 'lucide-react';
 import { type ReactNode, useCallback, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
-import styles from './Layout.module.scss';
 
 const stripLocale = stripLocaleFromPath;
 
