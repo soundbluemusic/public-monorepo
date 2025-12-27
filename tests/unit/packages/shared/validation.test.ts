@@ -3,10 +3,10 @@
  */
 
 import {
+  LIMITS,
   isReservedName,
   isValidLanguage,
   isValidTheme,
-  LIMITS,
   validateId,
 } from '@soundblue/shared';
 import { describe, expect, it } from 'vitest';

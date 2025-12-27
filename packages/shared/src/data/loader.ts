@@ -5,7 +5,7 @@
  * 빌드 타임에 사용되며, 런타임에는 이미 로드된 데이터를 사용합니다.
  */
 
-import { existsSync, readdirSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 /**

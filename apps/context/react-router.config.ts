@@ -6,6 +6,7 @@ export default {
     // Import data dynamically
     const { meaningEntries } = await import('./app/data/entries/index.js');
     const { categories } = await import('./app/data/categories.js');
+    const { getCategoriesWithConversations } = await import('./app/data/conversations.js');
 
     // Base routes
     const baseRoutes = [
@@ -27,6 +28,8 @@ export default {
       '/ko/built-with',
       '/my-learning',
       '/ko/my-learning',
+      '/conversations',
+      '/ko/conversations',
     ];
 
     // Dynamic entry routes (e.g., /entry/annyeong, /ko/entry/sarang)
@@ -41,6 +44,13 @@ export default {
       `/ko/category/${category.id}`,
     ]);
 
-    return [...baseRoutes, ...entryRoutes, ...categoryRoutes];
+    // Dynamic conversation routes (e.g., /conversations/greetings, /ko/conversations/food)
+    const conversationCategoryIds = getCategoriesWithConversations();
+    const conversationRoutes = conversationCategoryIds.flatMap((categoryId) => [
+      `/conversations/${categoryId}`,
+      `/ko/conversations/${categoryId}`,
+    ]);
+
+    return [...baseRoutes, ...entryRoutes, ...categoryRoutes, ...conversationRoutes];
   },
 } satisfies Config;

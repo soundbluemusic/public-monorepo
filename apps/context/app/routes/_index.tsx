@@ -1,14 +1,14 @@
-import { cn, type SearchResult, useSearchWorker } from '@soundblue/shared-react';
-import { BookOpen, FolderOpen, Search, Sparkles, TrendingUp } from 'lucide-react';
-import { useCallback, useEffect, useRef, useState } from 'react';
-import type { MetaFunction } from 'react-router';
-import { Link, useLoaderData, useNavigate } from 'react-router';
-import { Layout } from '@/components/Layout';
+import { Layout } from '@/components/layout';
 import { categories } from '@/data/categories';
 import { meaningEntries } from '@/data/entries';
 import type { Category, MeaningEntry } from '@/data/types';
 import { type Language, useI18n } from '@/i18n';
 import { studyRecords } from '@/lib/db';
+import { type SearchResult, cn, useSearchWorker } from '@soundblue/shared-react';
+import { BookOpen, FolderOpen, Search, Sparkles, TrendingUp } from 'lucide-react';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import type { MetaFunction } from 'react-router';
+import { Link, useLoaderData, useNavigate } from 'react-router';
 
 const getPronunciation = (entry: MeaningEntry, locale: Language): string | undefined => {
   switch (locale) {
@@ -107,8 +107,9 @@ export default function HomePage() {
 
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (selectedIndex >= 0 && results[selectedIndex]) {
-      handleResultClick(results[selectedIndex]);
+    const selectedResult = results[selectedIndex];
+    if (selectedIndex >= 0 && selectedResult) {
+      handleResultClick(selectedResult);
     } else if (query.trim()) {
       navigate(`${localePath('/browse')}?q=${encodeURIComponent(query)}`);
       setShowResults(false);

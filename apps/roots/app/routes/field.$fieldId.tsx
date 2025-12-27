@@ -2,13 +2,13 @@
  * @fileoverview 분야 상세 페이지
  */
 
-import { Link, useLoaderData, useParams } from 'react-router';
 import { ConceptCard } from '@/components/concept/ConceptCard';
 import { Layout } from '@/components/layout/Layout';
 import { getConceptsByField as getConceptsByFieldStatic } from '@/data/concepts/index';
 import { getFieldById } from '@/data/fields';
 import { getSubfieldsByParent } from '@/data/subfields';
 import { useI18n } from '@/i18n';
+import { Link, useLoaderData, useParams } from 'react-router';
 
 /**
  * Loader: 빌드 시 데이터 로드 (SSG용)

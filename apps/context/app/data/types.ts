@@ -299,3 +299,40 @@ export interface UILabels {
   allPages: string;
   searchEngineIndex: string;
 }
+
+// ============================================================================
+// 대화 예시 (Conversations)
+// ============================================================================
+
+/**
+ * 대화 한 줄 (화자와 텍스트)
+ * @property speaker - 화자 ("A" 또는 "B")
+ * @property ko - 한국어 텍스트
+ * @property en - 영어 텍스트
+ */
+export interface DialogueLine {
+  speaker: 'A' | 'B';
+  ko: string;
+  en: string;
+}
+
+/**
+ * 대화 예시 (카테고리별 실생활 대화)
+ *
+ * 각 카테고리의 어휘가 실제로 어떻게 사용되는지 보여주는 대화 예시입니다.
+ * 대화 내 사전에 있는 단어는 자동으로 딥링크로 표시됩니다.
+ *
+ * @property id - 고유 식별자 (예: "greetings-morning-1")
+ * @property categoryId - 소속 카테고리 ID
+ * @property title - 다국어 대화 제목 (상황 설명)
+ * @property dialogue - 대화 내용 배열
+ */
+export interface Conversation {
+  id: string;
+  categoryId: string;
+  title: {
+    ko: string;
+    en: string;
+  };
+  dialogue: DialogueLine[];
+}

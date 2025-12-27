@@ -5,7 +5,7 @@
  * - 최소 페이지 수 확인
  */
 
-import { readdirSync, readFileSync, statSync } from 'node:fs';
+import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
 interface AppConfig {

@@ -1,5 +1,5 @@
-import { Calculator } from 'lucide-react';
 import type { Formula as FormulaType } from '@/data/types';
+import { Calculator } from 'lucide-react';
 /**
  * @fileoverview 수학 공식 카드 컴포넌트
  */

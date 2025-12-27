@@ -1,6 +1,6 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.3.10/schema.json",
-  "assist": { "actions": { "source": { "organizeImports": "on" } } },
+  "$schema": "https://biomejs.dev/schemas/2.0.0/schema.json",
+  "organizeImports": { "enabled": true },
   "linter": {
     "enabled": true,
     "rules": {
@@ -16,12 +16,8 @@
         "noExplicitAny": "error",
         "noArrayIndexKey": "warn"
       },
-      "complexity": {
-        "noImportantStyles": "off"
-      },
       "a11y": {
-        "useSemanticElements": "warn",
-        "useAriaPropsSupportedByRole": "warn"
+        "useSemanticElements": "warn"
       }
     }
   },
@@ -47,24 +43,24 @@
     }
   },
   "files": {
-    "includes": [
-      "**",
-      "!**/node_modules",
-      "!**/.react-router",
-      "!**/.vinxi",
-      "!**/.output",
-      "!**/dist",
-      "!**/build",
-      "!**/*.min.js",
-      "!**/apps/context/app/data/generated",
-      "!**/apps/roots/public/**/*.json",
-      "!**/apps/*/public/search-index.json",
-      "!**/apps/*/public/*.xml",
-      "!**/apps/*/public/*.xsl",
-      "!**/apps/*/app/paraglide",
-      "!**/apps/*/.inlang-plugins",
-      "!**/apps/roots/app/routes/+types",
-      "!**/packages/shared/src/styles/tailwind.css"
+    "include": ["**"],
+    "ignore": [
+      "**/node_modules",
+      "**/.react-router",
+      "**/.vinxi",
+      "**/.output",
+      "**/dist",
+      "**/build",
+      "**/*.min.js",
+      "**/apps/context/app/data/generated",
+      "**/apps/roots/public/**/*.json",
+      "**/apps/*/public/search-index.json",
+      "**/apps/*/public/*.xml",
+      "**/apps/*/public/*.xsl",
+      "**/apps/*/app/paraglide",
+      "**/apps/*/.inlang-plugins",
+      "**/apps/roots/app/routes/+types",
+      "**/packages/shared/src/styles/tailwind.css"
     ]
   }
 }

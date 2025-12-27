@@ -1,13 +1,13 @@
-import { cn } from '@soundblue/shared-react';
-import { Bookmark, BookmarkCheck, Check } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import { Link, useLoaderData, useParams } from 'react-router';
-import { Layout } from '@/components/Layout';
 import { LinkedExample } from '@/components/LinkedExample';
+import { Layout } from '@/components/layout';
 import { getEntryById } from '@/data/entries';
 import type { MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { favorites, studyRecords } from '@/lib/db';
+import { cn } from '@soundblue/shared-react';
+import { Bookmark, BookmarkCheck, Check } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Link, useLoaderData, useParams } from 'react-router';
 
 /**
  * Loader: 빌드 시 데이터 로드 (SSG용) - O(1) Map 조회

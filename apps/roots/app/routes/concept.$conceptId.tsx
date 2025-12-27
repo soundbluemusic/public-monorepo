@@ -2,9 +2,6 @@
  * @fileoverview 개념 상세 페이지
  */
 
-import { BookOpen, Heart, History, Zap } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import { Link, useLoaderData, useParams } from 'react-router';
 import { RelationLinks } from '@/components/concept/RelationLinks';
 import { Layout } from '@/components/layout/Layout';
 import { ExampleList } from '@/components/math/Example';
@@ -15,6 +12,9 @@ import { getFieldById } from '@/data/fields';
 import { getSubfieldById } from '@/data/subfields';
 import { useI18n } from '@/i18n';
 import { favorites } from '@/lib/db';
+import { BookOpen, Heart, History, Zap } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Link, useLoaderData, useParams } from 'react-router';
 
 /**
  * Loader: 빌드 시 데이터 로드 (SSG용)

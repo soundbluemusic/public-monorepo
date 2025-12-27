@@ -1,5 +1,5 @@
 import { stripLocaleFromPath } from '@soundblue/shared';
-import { cn, DarkModeToggle, LanguageToggle } from '@soundblue/shared-react';
+import { DarkModeToggle, LanguageToggle, cn } from '@soundblue/shared-react';
 import { Menu, Sparkles, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router';

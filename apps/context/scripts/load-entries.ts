@@ -5,7 +5,7 @@
  * 이 스크립트는 src/data/entries/*.json 파일을 읽어서
  * src/data/generated/entries.ts 파일을 생성합니다.
  */
-import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 

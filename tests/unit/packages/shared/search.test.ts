@@ -3,9 +3,9 @@
  */
 
 import {
+  LIMITS,
   createSearchHandler,
   filterBySearch,
-  LIMITS,
   sanitizeSearchQuery,
 } from '@soundblue/shared';
 import { describe, expect, it } from 'vitest';

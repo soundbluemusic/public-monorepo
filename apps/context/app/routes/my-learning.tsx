@@ -1,12 +1,12 @@
-import { BookmarkCheck, Calendar, FolderOpen, TrendingUp, Trophy } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import type { MetaFunction } from 'react-router';
-import { Link } from 'react-router';
-import { Layout } from '@/components/Layout';
+import { Layout } from '@/components/layout';
 import { categories } from '@/data/categories';
 import { meaningEntries } from '@/data/entries';
 import { useI18n } from '@/i18n';
 import { favorites, studyRecords } from '@/lib/db';
+import { BookmarkCheck, Calendar, FolderOpen, TrendingUp, Trophy } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import type { MetaFunction } from 'react-router';
+import { Link } from 'react-router';
 
 export const meta: MetaFunction = ({ location }) => {
   const isKorean = location.pathname.startsWith('/ko');

@@ -8,6 +8,7 @@
   /* Layout */
   --header-height: 56px;
   --bottom-nav-height: 64px;
+  --sidebar-width: 18rem; /* 288px */
 
   /* Background */
   --bg-primary: #faf9fc;

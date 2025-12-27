@@ -2,14 +2,14 @@
  * @fileoverview 즐겨찾기 페이지
  */
 
-import { useEffect, useState } from 'react';
-import type { MetaFunction } from 'react-router';
 import { ConceptCard } from '@/components/concept/ConceptCard';
 import { Layout } from '@/components/layout/Layout';
 import type { MathConcept } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { getConceptById } from '@/lib/concepts';
 import { favorites } from '@/lib/db';
+import { useEffect, useState } from 'react';
+import type { MetaFunction } from 'react-router';
 
 export const meta: MetaFunction = ({ location }) => {
   const locale = location.pathname.startsWith('/ko') ? 'ko' : 'en';

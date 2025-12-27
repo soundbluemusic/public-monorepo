@@ -1,8 +1,8 @@
-import { PencilLine } from 'lucide-react';
-import { useState } from 'react';
 import { DifficultyStars } from '@/components/ui/DifficultyBadge';
 import type { DifficultyLevel, Example as ExampleType } from '@/data/types';
 import { useI18n } from '@/i18n';
+import { PencilLine } from 'lucide-react';
+import { useState } from 'react';
 /**
  * @fileoverview 예제 컴포넌트
  */

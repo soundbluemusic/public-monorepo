@@ -4,7 +4,7 @@
 
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { createDynamicUrls, generateSitemaps, type StaticPage } from '@soundblue/shared/sitemap';
+import { type StaticPage, createDynamicUrls, generateSitemaps } from '@soundblue/shared/sitemap';
 import { categories } from '../app/data/categories';
 import { meaningEntries } from '../app/data/entries';
 

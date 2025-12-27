@@ -1,6 +1,6 @@
-import { cn } from '@soundblue/shared-react';
 import type { DifficultyLevel } from '@/data/types';
 import { useI18n } from '@/i18n';
+import { cn } from '@soundblue/shared-react';
 
 interface DifficultyBadgeProps {
   level: 1 | 2 | 3 | 4 | 5;

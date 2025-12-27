@@ -2,11 +2,11 @@
  * @fileoverview 사이드바 컴포넌트 - 수학 분야 카테고리 네비게이션
  */
 
+import { fields } from '@/data/fields';
+import { useI18n } from '@/i18n';
 import { stripLocaleFromPath } from '@soundblue/shared';
 import { cn } from '@soundblue/shared-react';
 import { Link, useLocation } from 'react-router';
-import { fields } from '@/data/fields';
-import { useI18n } from '@/i18n';
 
 // Use shared utility for locale stripping
 const stripLocale = stripLocaleFromPath;

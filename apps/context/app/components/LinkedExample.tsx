@@ -1,7 +1,7 @@
-import type { ReactNode } from 'react';
-import { Link } from 'react-router';
 import { meaningEntries } from '@/data/entries';
 import { useI18n } from '@/i18n';
+import type { ReactNode } from 'react';
+import { Link } from 'react-router';
 
 /**
  * Korean expressions sorted by length (longest first) to prevent partial matching

@@ -1,4 +1,4 @@
-import { index, type RouteConfig, route } from '@react-router/dev/routes';
+import { type RouteConfig, index, route } from '@react-router/dev/routes';
 
 export default [
   // English routes
@@ -12,6 +12,8 @@ export default [
   route('built-with', 'routes/built-with.tsx'),
   route('entry/:entryId', 'routes/entry.$entryId.tsx'),
   route('category/:categoryId', 'routes/category.$categoryId.tsx'),
+  route('conversations', 'routes/conversations._index.tsx'),
+  route('conversations/:categoryId', 'routes/conversations.$categoryId.tsx'),
 
   // Korean routes
   route('ko', 'routes/ko._index.tsx'),
@@ -24,6 +26,8 @@ export default [
   route('ko/built-with', 'routes/ko.built-with.tsx'),
   route('ko/entry/:entryId', 'routes/ko.entry.$entryId.tsx'),
   route('ko/category/:categoryId', 'routes/ko.category.$categoryId.tsx'),
+  route('ko/conversations', 'routes/ko.conversations._index.tsx'),
+  route('ko/conversations/:categoryId', 'routes/ko.conversations.$categoryId.tsx'),
 
   // 404 catch-all
   route('*', 'routes/$.tsx'),

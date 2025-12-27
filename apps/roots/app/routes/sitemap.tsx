@@ -1,10 +1,10 @@
+import { Layout } from '@/components/layout/Layout';
+import { fields } from '@/data/fields';
+import { useI18n } from '@/i18n';
 import { BookOpen, FileText, Heart, Home, Info, Pi, Ruler, Search } from 'lucide-react';
 import type { ReactNode } from 'react';
 import type { MetaFunction } from 'react-router';
 import { Link } from 'react-router';
-import { Layout } from '@/components/layout/Layout';
-import { fields } from '@/data/fields';
-import { useI18n } from '@/i18n';
 
 export const meta: MetaFunction = ({ location }) => {
   const isKorean = location.pathname.startsWith('/ko');
