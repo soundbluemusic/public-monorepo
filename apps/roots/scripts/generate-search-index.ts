@@ -38,86 +38,82 @@ function getDefinition(content: string | { definition: string } | undefined): st
 function generateSearchIndex() {
   console.log(`Generating search index for ${allConcepts.length} concepts...`);
 
-  const searchIndex: SearchIndexItem[] = allConcepts.map((concept) => ({
-    id: concept.id,
-    name: concept.name,
-    field: concept.field,
-    subfield: concept.subfield,
-    difficulty: concept.difficulty,
-    tags: concept.tags,
-    def: {
-      ko: (getDefinition(concept.content.ko) || getDefinition(concept.content.en)).slice(0, 100),
-      en: (getDefinition(concept.content.en) || getDefinition(concept.content.ko)).slice(0, 100),
-    },
-  }));
+  // ============================================================================
+  // Single pass: Build all data structures at once (O(n) instead of O(4n))
+  // ============================================================================
+  const searchIndex: SearchIndexItem[] = [];
+  const conceptsByField = new Map<string, typeof allConcepts>();
+  const conceptIdToField: Record<string, string> = {};
+  const conceptNames: Record<string, { ko: string; en: string }> = {};
 
-  // public 디렉토리가 없으면 생성
+  for (const concept of allConcepts) {
+    // Build search index item
+    searchIndex.push({
+      id: concept.id,
+      name: concept.name,
+      field: concept.field,
+      subfield: concept.subfield,
+      difficulty: concept.difficulty,
+      tags: concept.tags,
+      def: {
+        ko: (getDefinition(concept.content.ko) || getDefinition(concept.content.en)).slice(0, 100),
+        en: (getDefinition(concept.content.en) || getDefinition(concept.content.ko)).slice(0, 100),
+      },
+    });
+
+    // Group by field
+    const fieldList = conceptsByField.get(concept.field) || [];
+    fieldList.push(concept);
+    conceptsByField.set(concept.field, fieldList);
+
+    // ID → field mapping
+    conceptIdToField[concept.id] = concept.field;
+
+    // ID → name mapping
+    conceptNames[concept.id] = concept.name;
+  }
+
+  // ============================================================================
+  // Write files (cache JSON strings to avoid duplicate stringify)
+  // ============================================================================
   mkdirSync(PUBLIC_DIR, { recursive: true });
   mkdirSync(CONCEPTS_DIR, { recursive: true });
 
-  // JSON 파일 생성
-  writeFileSync(OUTPUT_PATH, JSON.stringify(searchIndex), 'utf-8');
+  // Search index
+  const searchIndexJson = JSON.stringify(searchIndex);
+  writeFileSync(OUTPUT_PATH, searchIndexJson, 'utf-8');
+  console.log(`✓ Generated search-index.json (${(Buffer.byteLength(searchIndexJson) / 1024).toFixed(1)} KB, ${searchIndex.length} items)`);
 
-  const sizeKB = (Buffer.byteLength(JSON.stringify(searchIndex)) / 1024).toFixed(1);
-  console.log(`✓ Generated search-index.json (${sizeKB} KB, ${searchIndex.length} items)`);
-
-  // 필드별로 개념 그룹화
-  const conceptsByField = new Map<string, typeof allConcepts>();
-  for (const concept of allConcepts) {
-    const field = concept.field;
-    if (!conceptsByField.has(field)) {
-      conceptsByField.set(field, []);
-    }
-    const fieldConcepts = conceptsByField.get(field);
-    if (fieldConcepts) {
-      fieldConcepts.push(concept);
-    }
-  }
-
-  // 각 필드를 별도 JSON 파일로 저장
+  // Field-based files
   console.log('\nGenerating field-based concept files...');
   const fieldStats: Record<string, { count: number; sizeKB: string }> = {};
 
   for (const [field, concepts] of conceptsByField.entries()) {
     const fieldPath = join(CONCEPTS_DIR, `${field}.json`);
-    const fieldData = JSON.stringify(concepts);
-    writeFileSync(fieldPath, fieldData, 'utf-8');
+    const fieldJson = JSON.stringify(concepts);
+    writeFileSync(fieldPath, fieldJson, 'utf-8');
 
-    const fieldSizeKB = (Buffer.byteLength(fieldData) / 1024).toFixed(1);
+    const fieldSizeKB = (Buffer.byteLength(fieldJson) / 1024).toFixed(1);
     fieldStats[field] = { count: concepts.length, sizeKB: fieldSizeKB };
     console.log(`  ✓ ${field}.json (${fieldSizeKB} KB, ${concepts.length} concepts)`);
   }
 
-  // 개념 ID → 필드 매핑 생성 (빠른 필드 조회용)
-  const conceptIdToField: Record<string, string> = {};
-  for (const concept of allConcepts) {
-    conceptIdToField[concept.id] = concept.field;
-  }
-
-  // 필드 인덱스 파일 생성 (메타데이터)
+  // Concepts index
   const conceptsIndex = {
     fields: Array.from(conceptsByField.keys()),
     stats: fieldStats,
     totalConcepts: allConcepts.length,
-    conceptIdToField, // 개념 ID → 필드 매핑 추가
+    conceptIdToField,
     generatedAt: new Date().toISOString(),
   };
-  writeFileSync(CONCEPTS_INDEX_PATH, JSON.stringify(conceptsIndex, null, 2), 'utf-8');
-  const indexSizeKB = (Buffer.byteLength(JSON.stringify(conceptsIndex)) / 1024).toFixed(1);
-  console.log(
-    `\n✓ Generated concepts/index.json (${indexSizeKB} KB, ${conceptsByField.size} fields)`,
-  );
+  const conceptsIndexJson = JSON.stringify(conceptsIndex, null, 2);
+  writeFileSync(CONCEPTS_INDEX_PATH, conceptsIndexJson, 'utf-8');
+  console.log(`\n✓ Generated concepts/index.json (${(Buffer.byteLength(conceptsIndexJson) / 1024).toFixed(1)} KB, ${conceptsByField.size} fields)`);
 
-  // 개념 이름만 담은 경량 맵 생성 (RelationLinks용)
-  const conceptNames: Record<string, { ko: string; en: string }> = {};
-  for (const concept of allConcepts) {
-    conceptNames[concept.id] = concept.name;
-  }
-  writeFileSync(CONCEPT_NAMES_PATH, JSON.stringify(conceptNames), 'utf-8');
-  const namesSizeKB = (Buffer.byteLength(JSON.stringify(conceptNames)) / 1024).toFixed(1);
-  console.log(
-    `✓ Generated concept-names.json (${namesSizeKB} KB, ${Object.keys(conceptNames).length} items)`,
-  );
+  // Concept names
+  const conceptNamesJson = JSON.stringify(conceptNames);
+  writeFileSync(CONCEPT_NAMES_PATH, conceptNamesJson, 'utf-8');
+  console.log(`✓ Generated concept-names.json (${(Buffer.byteLength(conceptNamesJson) / 1024).toFixed(1)} KB, ${Object.keys(conceptNames).length} items)`);
 }
 
 generateSearchIndex();
