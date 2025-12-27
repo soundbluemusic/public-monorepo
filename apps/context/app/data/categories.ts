@@ -303,6 +303,20 @@ export const categories: Category[] = [
     color: 'blue',
     order: 20,
   },
+  {
+    id: 'coding',
+    name: {
+      ko: '코딩/개발',
+      en: 'Coding & Development',
+    },
+    description: {
+      ko: '웹 개발, TypeScript, React, PWA 관련 용어 (RRv7 + SSG + Tailwind v4)',
+      en: 'Web development, TypeScript, React, PWA terminology (RRv7 + SSG + Tailwind v4)',
+    },
+    icon: '⌘',
+    color: 'indigo',
+    order: 21,
+  },
 ];
 
 /**
