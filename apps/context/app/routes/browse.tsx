@@ -6,7 +6,7 @@ import { useI18n } from '@/i18n';
 import { favorites, studyRecords } from '@/lib/db';
 import { cn } from '@soundblue/shared-react';
 import { Check, Shuffle, Star } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import type { MetaFunction } from 'react-router';
 import { Link, useLoaderData } from 'react-router';
 
@@ -98,8 +98,8 @@ export default function BrowsePage() {
     loadData();
   }, [totalEntries]);
 
-  // Filter and sort logic
-  const getFilteredAndSortedEntries = (): MeaningEntry[] => {
+  // Filter and sort logic with useMemo for proper reactivity
+  const filteredEntries = useMemo(() => {
     let filtered = entries;
 
     // Filter by category
@@ -128,14 +128,11 @@ export default function BrowsePage() {
         return a.categoryId.localeCompare(b.categoryId);
       });
     } else if (sortBy === 'recent') {
-      // Most recently added first (reverse order)
       sorted.reverse();
     }
 
     return sorted;
-  };
-
-  const filteredEntries = getFilteredAndSortedEntries();
+  }, [entries, filterCategory, filterStatus, sortBy, studiedIds, favoriteIds]);
 
   const handleRandomWord = () => {
     if (entries.length === 0) return;
@@ -309,7 +306,7 @@ export default function BrowsePage() {
       </div>
 
       {/* Word List */}
-      <div className="space-y-1">
+      <div className="space-y-1" key={`${filterCategory}-${filterStatus}-${sortBy}`}>
         {filteredEntries.map((entry) => {
           const translation = entry.translations[locale];
           const isStudied = studiedIds.has(entry.id);
