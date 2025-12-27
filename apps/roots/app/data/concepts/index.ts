@@ -112,9 +112,7 @@ export const allConcepts: MathConcept[] = [
 // ============================================================================
 
 /** ID → Concept 맵 (O(1) 조회용) */
-export const conceptsById = new Map<string, MathConcept>(
-  allConcepts.map((c) => [c.id, c]),
-);
+export const conceptsById = new Map<string, MathConcept>(allConcepts.map((c) => [c.id, c]));
 
 /** Field → Concept[] 맵 (O(1) 조회용) */
 export const conceptsByField = new Map<string, MathConcept[]>();

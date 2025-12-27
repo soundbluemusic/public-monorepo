@@ -1,7 +1,7 @@
 import { FileText, Globe, Home, Package, Search } from 'lucide-react';
 import type { ReactNode } from 'react';
-import { Link } from 'react-router';
 import type { MetaFunction } from 'react-router';
+import { Link } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import { useI18n } from '../i18n';
 

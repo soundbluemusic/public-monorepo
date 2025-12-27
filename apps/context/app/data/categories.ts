@@ -366,9 +366,7 @@ export function getCategoryBgColor(color: CategoryColor): string {
 // ============================================================================
 
 /** ID → Category 맵 (O(1) 조회용) */
-export const categoriesById = new Map<string, Category>(
-  categories.map((c) => [c.id, c]),
-);
+export const categoriesById = new Map<string, Category>(categories.map((c) => [c.id, c]));
 
 /**
  * ID로 카테고리 조회 (O(1))

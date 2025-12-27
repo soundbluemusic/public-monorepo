@@ -1,13 +1,13 @@
-import { Layout } from '@/components/Layout';
-import { categories, getCategoryById } from '@/data/categories';
-import { getEntriesByCategory } from '@/data/entries';
-import type { Category, MeaningEntry } from '@/data/types';
-import { useI18n } from '@/i18n';
-import { studyRecords } from '@/lib/db';
 import { cn } from '@soundblue/shared-react';
 import { Check } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router';
+import { Layout } from '@/components/Layout';
+import { getCategoryById } from '@/data/categories';
+import { getEntriesByCategory } from '@/data/entries';
+import type { Category, MeaningEntry } from '@/data/types';
+import { useI18n } from '@/i18n';
+import { studyRecords } from '@/lib/db';
 
 /**
  * Loader: 빌드 시 데이터 로드 (SSG용) - O(1) Map 조회

@@ -9,15 +9,14 @@
  * ```
  */
 
+// Helpers
+export { createFavoritesHelper, createRecentViewsHelper, createSettingsHelper } from './helpers';
 // Types
 export type {
   BaseFavorite,
-  BaseSettings,
   BaseRecentView,
+  BaseSettings,
   FavoritesHelper,
-  SettingsHelper,
   RecentViewsHelper,
+  SettingsHelper,
 } from './types';
-
-// Helpers
-export { createFavoritesHelper, createSettingsHelper, createRecentViewsHelper } from './helpers';

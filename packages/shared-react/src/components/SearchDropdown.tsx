@@ -112,9 +112,12 @@ export function SearchDropdown({
         setSelectedIndex((i) => (i - 1 + len) % len);
       } else if (e.key === 'Enter' && selectedIndex >= 0 && len > 0) {
         e.preventDefault();
-        onSelect(results[selectedIndex]);
-        setShowResults(false);
-        onQueryChange('');
+        const selectedResult = results[selectedIndex];
+        if (selectedResult) {
+          onSelect(selectedResult);
+          setShowResults(false);
+          onQueryChange('');
+        }
       }
     },
     [results, selectedIndex, onSelect, onQueryChange],

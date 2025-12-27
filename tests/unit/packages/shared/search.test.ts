@@ -2,8 +2,12 @@
  * @fileoverview Unit tests for search utilities
  */
 
-import { LIMITS } from '@soundblue/shared';
-import { createSearchHandler, filterBySearch, sanitizeSearchQuery } from '@soundblue/shared';
+import {
+  createSearchHandler,
+  filterBySearch,
+  LIMITS,
+  sanitizeSearchQuery,
+} from '@soundblue/shared';
 import { describe, expect, it } from 'vitest';
 
 describe('sanitizeSearchQuery', () => {

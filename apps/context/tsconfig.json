@@ -10,8 +10,10 @@
     "isolatedModules": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
+    "verbatimModuleSyntax": true,
     "resolveJsonModule": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitReturns": true,
     "types": ["vite/client"],
     "paths": {
       "@/*": ["./app/*"],

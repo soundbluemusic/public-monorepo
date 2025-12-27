@@ -229,11 +229,11 @@ function latexToMathML(latex: string): string {
   // 위첨자 ^{...} → 유니코드 위첨자 (간단한 경우만)
   result = result.replace(/\^(\d)/g, (_, d) => {
     const superscripts = '⁰¹²³⁴⁵⁶⁷⁸⁹';
-    return superscripts[Number.parseInt(d)] || `^${d}`;
+    return superscripts[Number.parseInt(d, 10)] || `^${d}`;
   });
   result = result.replace(/\^\{(\d+)\}/g, (_, digits) => {
     const superscripts = '⁰¹²³⁴⁵⁶⁷⁸⁹';
-    return [...digits].map((d: string) => superscripts[Number.parseInt(d)] || d).join('');
+    return [...digits].map((d: string) => superscripts[Number.parseInt(d, 10)] || d).join('');
   });
   result = result.replace(/\^\{([a-z])\}/g, (_, c) => {
     const map: Record<string, string> = { n: 'ⁿ', i: 'ⁱ' };
@@ -250,11 +250,11 @@ function latexToMathML(latex: string): string {
   // 아래첨자 _{...} → 유니코드 아래첨자 (간단한 경우만)
   result = result.replace(/_(\d)/g, (_, d) => {
     const subscripts = '₀₁₂₃₄₅₆₇₈₉';
-    return subscripts[Number.parseInt(d)] || `_${d}`;
+    return subscripts[Number.parseInt(d, 10)] || `_${d}`;
   });
   result = result.replace(/_\{(\d+)\}/g, (_, digits) => {
     const subscripts = '₀₁₂₃₄₅₆₇₈₉';
-    return [...digits].map((d: string) => subscripts[Number.parseInt(d)] || d).join('');
+    return [...digits].map((d: string) => subscripts[Number.parseInt(d, 10)] || d).join('');
   });
   result = result.replace(/_\{([a-z])\}/g, (_, c) => {
     const map: Record<string, string> = {
@@ -306,7 +306,7 @@ function latexToMathML(latex: string): string {
   // 루트 \sqrt{x} → √x, \sqrt[n]{x} → ⁿ√x
   result = result.replace(/\\sqrt\[(\d+)\]\{([^}]*)\}/g, (_, n, x) => {
     const superscripts = '⁰¹²³⁴⁵⁶⁷⁸⁹';
-    const sup = [...n].map((d: string) => superscripts[Number.parseInt(d)] || d).join('');
+    const sup = [...n].map((d: string) => superscripts[Number.parseInt(d, 10)] || d).join('');
     return `${sup}√(${x})`;
   });
   result = result.replace(/\\sqrt\{([^}]*)\}/g, '√($1)');

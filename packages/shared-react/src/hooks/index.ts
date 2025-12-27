@@ -1,7 +1,7 @@
-export { useOnlineStatus, type UseOnlineStatusReturn } from './useOnlineStatus';
-export { useMediaQuery, useIsMobile } from './useMediaQuery';
+export { useIsMobile, useMediaQuery } from './useMediaQuery';
+export { type UseOnlineStatusReturn, useOnlineStatus } from './useOnlineStatus';
 export {
-  useSearchWorker,
   type SearchIndexItem,
   type SearchResult,
+  useSearchWorker,
 } from './useSearchWorker';

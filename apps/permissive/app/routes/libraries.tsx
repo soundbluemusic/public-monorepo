@@ -4,12 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import type { MetaFunction } from 'react-router';
 import { useLoaderData, useSearchParams } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
-import {
-  type CategoryFilter,
-  type Library,
-  categories,
-  libraries,
-} from '../data/libraries';
+import { type CategoryFilter, categories, type Library, libraries } from '../data/libraries';
 import { useI18n } from '../i18n';
 
 type SortOption = 'stars' | 'newest' | 'name';
@@ -119,8 +114,9 @@ export default function LibrariesPage() {
       return { [category]: filteredLibraries };
     }
     return filteredLibraries.reduce<Record<string, Library[]>>((acc, lib) => {
-      if (!acc[lib.category]) acc[lib.category] = [];
-      acc[lib.category].push(lib);
+      const arr = acc[lib.category] ?? [];
+      arr.push(lib);
+      acc[lib.category] = arr;
       return acc;
     }, {});
   }, [filteredLibraries, category]);

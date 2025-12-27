@@ -1,6 +1,6 @@
+import { cn } from '@soundblue/shared-react';
 import type { DifficultyLevel } from '@/data/types';
 import { useI18n } from '@/i18n';
-import { cn } from '@soundblue/shared-react';
 
 interface DifficultyBadgeProps {
   level: 1 | 2 | 3 | 4 | 5;
@@ -8,7 +8,7 @@ interface DifficultyBadgeProps {
   size?: 'sm' | 'md';
 }
 
-const labels: Record<number, string> = {
+const labels: Record<1 | 2 | 3 | 4 | 5, string> = {
   1: 'elementary',
   2: 'middleSchool',
   3: 'highSchool',

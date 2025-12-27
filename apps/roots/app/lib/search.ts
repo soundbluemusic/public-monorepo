@@ -4,8 +4,9 @@
  * 검색 인덱스를 빌드 시 생성된 JSON에서 동적으로 로드합니다.
  * Layout.tsx 번들에 전체 개념 데이터가 포함되지 않도록 합니다.
  */
-import type { DifficultyLevel, Language } from '@/data/types';
+
 import Fuse from 'fuse.js';
+import type { DifficultyLevel, Language } from '@/data/types';
 
 /** 검색 인덱스 아이템 (경량) */
 export interface SearchIndexItem {

@@ -21,61 +21,57 @@
  */
 
 // Constants
-export { LIMITS, BREAKPOINTS, RESERVED_NAMES, type ReservedName } from './constants';
-
-// Validation utilities
+export { BREAKPOINTS, LIMITS, RESERVED_NAMES, type ReservedName } from './constants';
+// Dark mode utilities for SSG apps
 export {
-  validateId,
-  isReservedName,
-  isValidTheme,
-  isValidLanguage,
-} from './validation';
-
-// Search utilities
-export {
-  sanitizeSearchQuery,
-  filterBySearch,
-  createSearchHandler,
-} from './search';
-
-// i18n utilities
-export {
-  type Language,
-  type I18nContextType,
-  languageNames,
-  languageFlags,
-  getLocaleFromPath,
-  stripLocaleFromPath,
-  buildLocalePath,
-} from './i18n';
-
+  // Option C: Dual icons with CSS toggle
+  DARK_MODE_DUAL_ICONS_CSS,
+  // Option B: CSS mask-image
+  DARK_MODE_ICONS_CSS,
+  DARK_MODE_INIT_SCRIPT,
+  DARK_MODE_TOGGLE_SCRIPT,
+  DARK_MODE_TOGGLE_SCRIPT_CSS,
+  DARK_MODE_TOGGLE_SCRIPT_DUAL,
+  MOON_ICON_SVG,
+  // Option A: innerHTML replacement
+  SUN_ICON_SVG,
+} from './dark-mode';
 // DB helpers
 export {
   type BaseFavorite,
-  type BaseSettings,
   type BaseRecentView,
-  type FavoritesHelper,
-  type SettingsHelper,
-  type RecentViewsHelper,
+  type BaseSettings,
   createFavoritesHelper,
-  createSettingsHelper,
   createRecentViewsHelper,
+  createSettingsHelper,
+  type FavoritesHelper,
+  type RecentViewsHelper,
+  type SettingsHelper,
 } from './db';
 
-// Dark mode utilities for SSG apps
+// i18n utilities
 export {
-  // Option A: innerHTML replacement
-  SUN_ICON_SVG,
-  MOON_ICON_SVG,
-  DARK_MODE_INIT_SCRIPT,
-  DARK_MODE_TOGGLE_SCRIPT,
-  // Option B: CSS mask-image
-  DARK_MODE_ICONS_CSS,
-  DARK_MODE_TOGGLE_SCRIPT_CSS,
-  // Option C: Dual icons with CSS toggle
-  DARK_MODE_DUAL_ICONS_CSS,
-  DARK_MODE_TOGGLE_SCRIPT_DUAL,
-} from './dark-mode';
+  buildLocalePath,
+  getLocaleFromPath,
+  type I18nContextType,
+  type Language,
+  languageFlags,
+  languageNames,
+  stripLocaleFromPath,
+} from './i18n';
+// Search utilities
+export {
+  createSearchHandler,
+  filterBySearch,
+  sanitizeSearchQuery,
+} from './search';
+// Validation utilities
+export {
+  isReservedName,
+  isValidLanguage,
+  isValidTheme,
+  validateId,
+} from './validation';
 
 // Data loader utilities are in a separate entry point
 // Import from '@soundblue/shared/node' for Node.js-only utilities

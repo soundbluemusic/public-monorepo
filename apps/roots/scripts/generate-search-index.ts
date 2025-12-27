@@ -82,7 +82,9 @@ function generateSearchIndex() {
   // Search index
   const searchIndexJson = JSON.stringify(searchIndex);
   writeFileSync(OUTPUT_PATH, searchIndexJson, 'utf-8');
-  console.log(`✓ Generated search-index.json (${(Buffer.byteLength(searchIndexJson) / 1024).toFixed(1)} KB, ${searchIndex.length} items)`);
+  console.log(
+    `✓ Generated search-index.json (${(Buffer.byteLength(searchIndexJson) / 1024).toFixed(1)} KB, ${searchIndex.length} items)`,
+  );
 
   // Field-based files
   console.log('\nGenerating field-based concept files...');
@@ -108,12 +110,16 @@ function generateSearchIndex() {
   };
   const conceptsIndexJson = JSON.stringify(conceptsIndex, null, 2);
   writeFileSync(CONCEPTS_INDEX_PATH, conceptsIndexJson, 'utf-8');
-  console.log(`\n✓ Generated concepts/index.json (${(Buffer.byteLength(conceptsIndexJson) / 1024).toFixed(1)} KB, ${conceptsByField.size} fields)`);
+  console.log(
+    `\n✓ Generated concepts/index.json (${(Buffer.byteLength(conceptsIndexJson) / 1024).toFixed(1)} KB, ${conceptsByField.size} fields)`,
+  );
 
   // Concept names
   const conceptNamesJson = JSON.stringify(conceptNames);
   writeFileSync(CONCEPT_NAMES_PATH, conceptNamesJson, 'utf-8');
-  console.log(`✓ Generated concept-names.json (${(Buffer.byteLength(conceptNamesJson) / 1024).toFixed(1)} KB, ${Object.keys(conceptNames).length} items)`);
+  console.log(
+    `✓ Generated concept-names.json (${(Buffer.byteLength(conceptNamesJson) / 1024).toFixed(1)} KB, ${Object.keys(conceptNames).length} items)`,
+  );
 }
 
 generateSearchIndex();

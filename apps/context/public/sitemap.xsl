@@ -65,7 +65,7 @@
                       <td>
                         <xsl:for-each select="xhtml:link[@rel='alternate']">
                           <xsl:if test="@hreflang != 'x-default'">
-                            <span class="badge badge-{@hreflang}"><xsl:value-of select="translate(@hreflang, 'enkoj', 'ENKOJ')"/></span>
+                            <span class="badge badge-{@hreflang}"><xsl:value-of select="translate(@hreflang, 'enko', 'ENKO')"/></span>
                           </xsl:if>
                         </xsl:for-each>
                       </td>

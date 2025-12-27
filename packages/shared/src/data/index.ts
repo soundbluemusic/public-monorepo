@@ -3,11 +3,11 @@
  */
 
 export {
+  checkDuplicateIds,
+  groupJsonBy,
+  loadJsonAsMap,
   loadJsonDirectory,
   loadJsonFile,
-  loadJsonAsMap,
-  groupJsonBy,
-  validateRequiredFields,
-  checkDuplicateIds,
   type ValidationResult,
+  validateRequiredFields,
 } from './loader';

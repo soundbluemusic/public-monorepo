@@ -11,7 +11,12 @@
       "ko": "React를 위한 선언적 라우팅"
     },
     "field": "Routing",
-    "tags": ["React", "SSG", "SSR", "TypeScript"]
+    "tags": [
+      "React",
+      "SSG",
+      "SSR",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-tanstack-router",
@@ -25,7 +30,11 @@
       "ko": "React를 위한 타입 안전 라우팅"
     },
     "field": "Routing",
-    "tags": ["React", "TypeScript", "Type-safe"]
+    "tags": [
+      "React",
+      "TypeScript",
+      "Type-safe"
+    ]
   },
   {
     "id": "lib-wouter",
@@ -39,7 +48,10 @@
       "ko": "React를 위한 미니멀 라우팅"
     },
     "field": "Routing",
-    "tags": ["React", "Minimal"]
+    "tags": [
+      "React",
+      "Minimal"
+    ]
   },
   {
     "id": "lib-next-js",
@@ -53,7 +65,12 @@
       "ko": "프로덕션을 위한 React 프레임워크"
     },
     "field": "Meta-frameworks",
-    "tags": ["React", "SSR", "SSG", "TypeScript"]
+    "tags": [
+      "React",
+      "SSR",
+      "SSG",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-astro",
@@ -67,7 +84,11 @@
       "ko": "빠른 웹사이트를 더 빠르게"
     },
     "field": "Meta-frameworks",
-    "tags": ["SSG", "MPA", "TypeScript"]
+    "tags": [
+      "SSG",
+      "MPA",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-remix",
@@ -81,7 +102,11 @@
       "ko": "풀스택 웹 프레임워크"
     },
     "field": "Meta-frameworks",
-    "tags": ["React", "SSR", "TypeScript"]
+    "tags": [
+      "React",
+      "SSR",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-nuxt",
@@ -95,7 +120,12 @@
       "ko": "직관적인 Vue 프레임워크"
     },
     "field": "Meta-frameworks",
-    "tags": ["Vue", "SSR", "SSG", "TypeScript"]
+    "tags": [
+      "Vue",
+      "SSR",
+      "SSG",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-sveltekit",
@@ -109,7 +139,12 @@
       "ko": "Svelte 앱을 만드는 가장 빠른 방법"
     },
     "field": "Meta-frameworks",
-    "tags": ["Svelte", "SSR", "SSG", "TypeScript"]
+    "tags": [
+      "Svelte",
+      "SSR",
+      "SSG",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-qwik",
@@ -123,7 +158,11 @@
       "ko": "즉시 로딩되는 웹 앱"
     },
     "field": "Meta-frameworks",
-    "tags": ["Resumability", "SSR", "TypeScript"]
+    "tags": [
+      "Resumability",
+      "SSR",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-gatsby",
@@ -137,7 +176,11 @@
       "ko": "매우 빠른 웹사이트 구축"
     },
     "field": "Meta-frameworks",
-    "tags": ["React", "SSG", "GraphQL"]
+    "tags": [
+      "React",
+      "SSG",
+      "GraphQL"
+    ]
   },
   {
     "id": "lib-react",
@@ -151,7 +194,11 @@
       "ko": "사용자 인터페이스 구축을 위한 자바스크립트 라이브러리"
     },
     "field": "Frameworks",
-    "tags": ["UI", "Components", "TypeScript"]
+    "tags": [
+      "UI",
+      "Components",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-vue",
@@ -165,7 +212,11 @@
       "ko": "점진적 자바스크립트 프레임워크"
     },
     "field": "Frameworks",
-    "tags": ["UI", "Components", "TypeScript"]
+    "tags": [
+      "UI",
+      "Components",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-svelte",
@@ -179,7 +230,11 @@
       "ko": "사이버네틱하게 향상된 웹 앱"
     },
     "field": "Frameworks",
-    "tags": ["UI", "Compiler", "TypeScript"]
+    "tags": [
+      "UI",
+      "Compiler",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-solidjs",
@@ -193,7 +248,11 @@
       "ko": "간단하고 성능 좋은 반응성"
     },
     "field": "Frameworks",
-    "tags": ["UI", "Reactive", "TypeScript"]
+    "tags": [
+      "UI",
+      "Reactive",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-preact",
@@ -207,7 +266,11 @@
       "ko": "React의 빠른 3kB 대안"
     },
     "field": "Frameworks",
-    "tags": ["UI", "Minimal", "React-compatible"]
+    "tags": [
+      "UI",
+      "Minimal",
+      "React-compatible"
+    ]
   },
   {
     "id": "lib-alpine-js",
@@ -221,7 +284,10 @@
       "ko": "경량 자바스크립트 프레임워크"
     },
     "field": "Frameworks",
-    "tags": ["Minimal", "HTML-first"]
+    "tags": [
+      "Minimal",
+      "HTML-first"
+    ]
   },
   {
     "id": "lib-lit",
@@ -235,7 +301,10 @@
       "ko": "간단하고 빠른 웹 컴포넌트"
     },
     "field": "Frameworks",
-    "tags": ["Web Components", "TypeScript"]
+    "tags": [
+      "Web Components",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-vite",
@@ -249,7 +318,11 @@
       "ko": "차세대 프론트엔드 도구"
     },
     "field": "Build Tools",
-    "tags": ["Build", "Dev Server", "ESM"]
+    "tags": [
+      "Build",
+      "Dev Server",
+      "ESM"
+    ]
   },
   {
     "id": "lib-turbopack",
@@ -263,7 +336,11 @@
       "ko": "웹을 위한 증분 번들러"
     },
     "field": "Build Tools",
-    "tags": ["Build", "Rust", "Fast"]
+    "tags": [
+      "Build",
+      "Rust",
+      "Fast"
+    ]
   },
   {
     "id": "lib-rspack",
@@ -277,7 +354,11 @@
       "ko": "Rust 기반 webpack"
     },
     "field": "Build Tools",
-    "tags": ["Build", "Rust", "Webpack-compatible"]
+    "tags": [
+      "Build",
+      "Rust",
+      "Webpack-compatible"
+    ]
   },
   {
     "id": "lib-esbuild",
@@ -291,7 +372,11 @@
       "ko": "극도로 빠른 번들러"
     },
     "field": "Build Tools",
-    "tags": ["Build", "Go", "Fast"]
+    "tags": [
+      "Build",
+      "Go",
+      "Fast"
+    ]
   },
   {
     "id": "lib-webpack",
@@ -305,7 +390,10 @@
       "ko": "모듈 번들러"
     },
     "field": "Build Tools",
-    "tags": ["Build", "Classic"]
+    "tags": [
+      "Build",
+      "Classic"
+    ]
   },
   {
     "id": "lib-rollup",
@@ -319,7 +407,10 @@
       "ko": "라이브러리를 위한 모듈 번들러"
     },
     "field": "Build Tools",
-    "tags": ["Build", "ESM"]
+    "tags": [
+      "Build",
+      "ESM"
+    ]
   },
   {
     "id": "lib-parcel",
@@ -333,7 +424,10 @@
       "ko": "제로 설정 빌드 도구"
     },
     "field": "Build Tools",
-    "tags": ["Build", "Zero-config"]
+    "tags": [
+      "Build",
+      "Zero-config"
+    ]
   },
   {
     "id": "lib-swc",
@@ -347,7 +441,11 @@
       "ko": "Rust 기반 빠른 도구 플랫폼"
     },
     "field": "Build Tools",
-    "tags": ["Build", "Rust", "Fast"]
+    "tags": [
+      "Build",
+      "Rust",
+      "Fast"
+    ]
   },
   {
     "id": "lib-biome",
@@ -361,7 +459,11 @@
       "ko": "웹 프로젝트를 위한 툴체인"
     },
     "field": "Build Tools",
-    "tags": ["Linter", "Formatter", "Rust"]
+    "tags": [
+      "Linter",
+      "Formatter",
+      "Rust"
+    ]
   },
   {
     "id": "lib-bun",
@@ -375,7 +477,11 @@
       "ko": "올인원 자바스크립트 런타임"
     },
     "field": "Runtime",
-    "tags": ["Runtime", "Fast", "Zig"]
+    "tags": [
+      "Runtime",
+      "Fast",
+      "Zig"
+    ]
   },
   {
     "id": "lib-deno",
@@ -389,7 +495,11 @@
       "ko": "안전한 자바스크립트 런타임"
     },
     "field": "Runtime",
-    "tags": ["Runtime", "Secure", "Rust"]
+    "tags": [
+      "Runtime",
+      "Secure",
+      "Rust"
+    ]
   },
   {
     "id": "lib-node-js",
@@ -403,7 +513,10 @@
       "ko": "V8 기반 자바스크립트 런타임"
     },
     "field": "Runtime",
-    "tags": ["Runtime", "Classic"]
+    "tags": [
+      "Runtime",
+      "Classic"
+    ]
   },
   {
     "id": "lib-zustand",
@@ -417,7 +530,11 @@
       "ko": "작고 빠른 상태 관리"
     },
     "field": "State Management",
-    "tags": ["React", "State", "TypeScript"]
+    "tags": [
+      "React",
+      "State",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-redux-toolkit",
@@ -431,7 +548,11 @@
       "ko": "공식 Redux 툴셋"
     },
     "field": "State Management",
-    "tags": ["React", "State", "TypeScript"]
+    "tags": [
+      "React",
+      "State",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-jotai",
@@ -445,7 +566,11 @@
       "ko": "원시적이고 유연한 상태 관리"
     },
     "field": "State Management",
-    "tags": ["React", "Atomic", "TypeScript"]
+    "tags": [
+      "React",
+      "Atomic",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-recoil",
@@ -459,7 +584,11 @@
       "ko": "React를 위한 상태 관리"
     },
     "field": "State Management",
-    "tags": ["React", "Atomic", "TypeScript"]
+    "tags": [
+      "React",
+      "Atomic",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-mobx",
@@ -473,7 +602,10 @@
       "ko": "간단하고 확장 가능한 상태 관리"
     },
     "field": "State Management",
-    "tags": ["Observable", "TypeScript"]
+    "tags": [
+      "Observable",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-valtio",
@@ -487,7 +619,11 @@
       "ko": "Proxy 기반 상태 관리"
     },
     "field": "State Management",
-    "tags": ["React", "Proxy", "TypeScript"]
+    "tags": [
+      "React",
+      "Proxy",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-xstate",
@@ -501,7 +637,10 @@
       "ko": "상태 머신과 상태 차트"
     },
     "field": "State Management",
-    "tags": ["State Machine", "TypeScript"]
+    "tags": [
+      "State Machine",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-pinia",
@@ -515,7 +654,11 @@
       "ko": "직관적인 Vue 스토어"
     },
     "field": "State Management",
-    "tags": ["Vue", "State", "TypeScript"]
+    "tags": [
+      "Vue",
+      "State",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-tanstack-query",
@@ -529,7 +672,11 @@
       "ko": "강력한 비동기 상태 관리"
     },
     "field": "Data Fetching",
-    "tags": ["React", "Data", "TypeScript"]
+    "tags": [
+      "React",
+      "Data",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-swr",
@@ -543,7 +690,11 @@
       "ko": "데이터 페칭을 위한 React Hooks"
     },
     "field": "Data Fetching",
-    "tags": ["React", "Hooks", "TypeScript"]
+    "tags": [
+      "React",
+      "Hooks",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-apollo-client",
@@ -557,7 +708,11 @@
       "ko": "React를 위한 GraphQL 클라이언트"
     },
     "field": "Data Fetching",
-    "tags": ["GraphQL", "React", "TypeScript"]
+    "tags": [
+      "GraphQL",
+      "React",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-trpc",
@@ -571,7 +726,11 @@
       "ko": "엔드투엔드 타입 안전 API"
     },
     "field": "Data Fetching",
-    "tags": ["TypeScript", "Type-safe", "RPC"]
+    "tags": [
+      "TypeScript",
+      "Type-safe",
+      "RPC"
+    ]
   },
   {
     "id": "lib-axios",
@@ -585,7 +744,10 @@
       "ko": "Promise 기반 HTTP 클라이언트"
     },
     "field": "Data Fetching",
-    "tags": ["HTTP", "Promise"]
+    "tags": [
+      "HTTP",
+      "Promise"
+    ]
   },
   {
     "id": "lib-typescript",
@@ -599,7 +761,10 @@
       "ko": "타입이 있는 자바스크립트 상위집합"
     },
     "field": "Type Safety",
-    "tags": ["Language", "Types"]
+    "tags": [
+      "Language",
+      "Types"
+    ]
   },
   {
     "id": "lib-zod",
@@ -613,7 +778,10 @@
       "ko": "TypeScript 우선 스키마 검증"
     },
     "field": "Type Safety",
-    "tags": ["Validation", "TypeScript"]
+    "tags": [
+      "Validation",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-valibot",
@@ -627,7 +795,11 @@
       "ko": "모듈식 타입 안전 스키마 라이브러리"
     },
     "field": "Type Safety",
-    "tags": ["Validation", "TypeScript", "Minimal"]
+    "tags": [
+      "Validation",
+      "TypeScript",
+      "Minimal"
+    ]
   },
   {
     "id": "lib-yup",
@@ -641,7 +813,10 @@
       "ko": "스키마 검증 라이브러리"
     },
     "field": "Type Safety",
-    "tags": ["Validation", "Schema"]
+    "tags": [
+      "Validation",
+      "Schema"
+    ]
   },
   {
     "id": "lib-tailwind-css",
@@ -655,7 +830,10 @@
       "ko": "유틸리티 우선 CSS 프레임워크"
     },
     "field": "Styling",
-    "tags": ["CSS", "Utility"]
+    "tags": [
+      "CSS",
+      "Utility"
+    ]
   },
   {
     "id": "lib-unocss",
@@ -669,7 +847,11 @@
       "ko": "즉시 온디맨드 아토믹 CSS"
     },
     "field": "Styling",
-    "tags": ["CSS", "Atomic", "Fast"]
+    "tags": [
+      "CSS",
+      "Atomic",
+      "Fast"
+    ]
   },
   {
     "id": "lib-panda-css",
@@ -683,7 +865,10 @@
       "ko": "빌드 타임 생성 CSS-in-JS"
     },
     "field": "Styling",
-    "tags": ["CSS-in-JS", "TypeScript"]
+    "tags": [
+      "CSS-in-JS",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-styled-components",
@@ -697,7 +882,10 @@
       "ko": "React를 위한 CSS-in-JS"
     },
     "field": "Styling",
-    "tags": ["CSS-in-JS", "React"]
+    "tags": [
+      "CSS-in-JS",
+      "React"
+    ]
   },
   {
     "id": "lib-emotion",
@@ -711,7 +899,10 @@
       "ko": "CSS-in-JS 라이브러리"
     },
     "field": "Styling",
-    "tags": ["CSS-in-JS", "React"]
+    "tags": [
+      "CSS-in-JS",
+      "React"
+    ]
   },
   {
     "id": "lib-sass",
@@ -725,7 +916,10 @@
       "ko": "슈퍼파워가 있는 CSS"
     },
     "field": "Styling",
-    "tags": ["CSS", "Preprocessor"]
+    "tags": [
+      "CSS",
+      "Preprocessor"
+    ]
   },
   {
     "id": "lib-postcss",
@@ -739,7 +933,10 @@
       "ko": "JS로 CSS 변환"
     },
     "field": "Styling",
-    "tags": ["CSS", "Transform"]
+    "tags": [
+      "CSS",
+      "Transform"
+    ]
   },
   {
     "id": "lib-vanilla-extract",
@@ -753,7 +950,11 @@
       "ko": "제로 런타임 CSS-in-TypeScript"
     },
     "field": "Styling",
-    "tags": ["CSS-in-JS", "TypeScript", "Zero-runtime"]
+    "tags": [
+      "CSS-in-JS",
+      "TypeScript",
+      "Zero-runtime"
+    ]
   },
   {
     "id": "lib-stylex",
@@ -767,7 +968,10 @@
       "ko": "Meta의 CSS-in-JS 솔루션"
     },
     "field": "Styling",
-    "tags": ["CSS-in-JS", "Meta"]
+    "tags": [
+      "CSS-in-JS",
+      "Meta"
+    ]
   },
   {
     "id": "lib-radix-ui",
@@ -781,7 +985,11 @@
       "ko": "스타일 없는 접근성 컴포넌트"
     },
     "field": "UI Components",
-    "tags": ["React", "Headless", "Accessible"]
+    "tags": [
+      "React",
+      "Headless",
+      "Accessible"
+    ]
   },
   {
     "id": "lib-shadcn-ui",
@@ -795,7 +1003,11 @@
       "ko": "Radix로 만든 재사용 컴포넌트"
     },
     "field": "UI Components",
-    "tags": ["React", "Tailwind", "Copy-paste"]
+    "tags": [
+      "React",
+      "Tailwind",
+      "Copy-paste"
+    ]
   },
   {
     "id": "lib-react-aria",
@@ -809,7 +1021,11 @@
       "ko": "Adobe의 접근 가능한 UI 프리미티브"
     },
     "field": "UI Components",
-    "tags": ["React", "Headless", "Accessible"]
+    "tags": [
+      "React",
+      "Headless",
+      "Accessible"
+    ]
   },
   {
     "id": "lib-headless-ui",
@@ -823,7 +1039,11 @@
       "ko": "완전히 스타일 없는 UI 컴포넌트"
     },
     "field": "UI Components",
-    "tags": ["React", "Headless", "Tailwind"]
+    "tags": [
+      "React",
+      "Headless",
+      "Tailwind"
+    ]
   },
   {
     "id": "lib-mantine",
@@ -837,7 +1057,10 @@
       "ko": "풀 기능 React 컴포넌트"
     },
     "field": "UI Components",
-    "tags": ["React", "TypeScript"]
+    "tags": [
+      "React",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-chakra-ui",
@@ -851,7 +1074,10 @@
       "ko": "모듈식이고 접근 가능한 컴포넌트"
     },
     "field": "UI Components",
-    "tags": ["React", "Accessible"]
+    "tags": [
+      "React",
+      "Accessible"
+    ]
   },
   {
     "id": "lib-ant-design",
@@ -865,7 +1091,10 @@
       "ko": "엔터프라이즈 UI 디자인 시스템"
     },
     "field": "UI Components",
-    "tags": ["React", "Enterprise"]
+    "tags": [
+      "React",
+      "Enterprise"
+    ]
   },
   {
     "id": "lib-material-ui",
@@ -879,7 +1108,10 @@
       "ko": "React Material Design 컴포넌트"
     },
     "field": "UI Components",
-    "tags": ["React", "Material Design"]
+    "tags": [
+      "React",
+      "Material Design"
+    ]
   },
   {
     "id": "lib-daisyui",
@@ -893,7 +1125,10 @@
       "ko": "Tailwind CSS 컴포넌트 라이브러리"
     },
     "field": "UI Components",
-    "tags": ["Tailwind", "CSS"]
+    "tags": [
+      "Tailwind",
+      "CSS"
+    ]
   },
   {
     "id": "lib-park-ui",
@@ -907,7 +1142,10 @@
       "ko": "아름답게 디자인된 컴포넌트"
     },
     "field": "UI Components",
-    "tags": ["React", "Panda CSS"]
+    "tags": [
+      "React",
+      "Panda CSS"
+    ]
   },
   {
     "id": "lib-framer-motion",
@@ -921,7 +1159,10 @@
       "ko": "프로덕션 준비된 모션 라이브러리"
     },
     "field": "Animation",
-    "tags": ["React", "Animation"]
+    "tags": [
+      "React",
+      "Animation"
+    ]
   },
   {
     "id": "lib-gsap",
@@ -935,7 +1176,10 @@
       "ko": "전문가급 애니메이션"
     },
     "field": "Animation",
-    "tags": ["Animation", "Professional"]
+    "tags": [
+      "Animation",
+      "Professional"
+    ]
   },
   {
     "id": "lib-react-spring",
@@ -949,7 +1193,10 @@
       "ko": "스프링 물리 기반 애니메이션"
     },
     "field": "Animation",
-    "tags": ["React", "Physics"]
+    "tags": [
+      "React",
+      "Physics"
+    ]
   },
   {
     "id": "lib-auto-animate",
@@ -963,7 +1210,10 @@
       "ko": "제로 설정 애니메이션"
     },
     "field": "Animation",
-    "tags": ["Animation", "Zero-config"]
+    "tags": [
+      "Animation",
+      "Zero-config"
+    ]
   },
   {
     "id": "lib-motion-one",
@@ -977,7 +1227,10 @@
       "ko": "가장 작은 애니메이션 라이브러리"
     },
     "field": "Animation",
-    "tags": ["Animation", "Minimal"]
+    "tags": [
+      "Animation",
+      "Minimal"
+    ]
   },
   {
     "id": "lib-react-hook-form",
@@ -991,7 +1244,11 @@
       "ko": "쉬운 검증과 성능 좋은 폼"
     },
     "field": "Forms",
-    "tags": ["React", "Forms", "Validation"]
+    "tags": [
+      "React",
+      "Forms",
+      "Validation"
+    ]
   },
   {
     "id": "lib-tanstack-form",
@@ -1005,7 +1262,11 @@
       "ko": "강력하고 타입 안전한 폼 상태"
     },
     "field": "Forms",
-    "tags": ["React", "Forms", "TypeScript"]
+    "tags": [
+      "React",
+      "Forms",
+      "TypeScript"
+    ]
   },
   {
     "id": "lib-formik",
@@ -1019,7 +1280,10 @@
       "ko": "React에서 폼 만들기"
     },
     "field": "Forms",
-    "tags": ["React", "Forms"]
+    "tags": [
+      "React",
+      "Forms"
+    ]
   },
   {
     "id": "lib-react-final-form",
@@ -1033,7 +1297,10 @@
       "ko": "고성능 구독 기반 폼"
     },
     "field": "Forms",
-    "tags": ["React", "Forms"]
+    "tags": [
+      "React",
+      "Forms"
+    ]
   },
   {
     "id": "lib-vitest",
@@ -1047,7 +1314,11 @@
       "ko": "매우 빠른 유닛 테스트 프레임워크"
     },
     "field": "Testing",
-    "tags": ["Testing", "Vite", "Fast"]
+    "tags": [
+      "Testing",
+      "Vite",
+      "Fast"
+    ]
   },
   {
     "id": "lib-playwright",
@@ -1061,7 +1332,10 @@
       "ko": "신뢰할 수 있는 E2E 테스팅"
     },
     "field": "Testing",
-    "tags": ["E2E", "Testing"]
+    "tags": [
+      "E2E",
+      "Testing"
+    ]
   },
   {
     "id": "lib-cypress",
@@ -1075,7 +1349,10 @@
       "ko": "빠르고 쉽고 신뢰할 수 있는 E2E 테스팅"
     },
     "field": "Testing",
-    "tags": ["E2E", "Testing"]
+    "tags": [
+      "E2E",
+      "Testing"
+    ]
   },
   {
     "id": "lib-testing-library",
@@ -1089,7 +1366,10 @@
       "ko": "간단한 테스팅 유틸리티"
     },
     "field": "Testing",
-    "tags": ["React", "Testing"]
+    "tags": [
+      "React",
+      "Testing"
+    ]
   },
   {
     "id": "lib-jest",
@@ -1103,7 +1383,10 @@
       "ko": "즐거운 자바스크립트 테스팅"
     },
     "field": "Testing",
-    "tags": ["Testing", "Classic"]
+    "tags": [
+      "Testing",
+      "Classic"
+    ]
   },
   {
     "id": "lib-storybook",
@@ -1117,7 +1400,10 @@
       "ko": "UI 컴포넌트 개발 도구"
     },
     "field": "Testing",
-    "tags": ["UI", "Documentation"]
+    "tags": [
+      "UI",
+      "Documentation"
+    ]
   },
   {
     "id": "api-view-transitions-api",
