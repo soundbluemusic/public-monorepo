@@ -173,7 +173,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 onClick={onClose}
                 className="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11 text-sm text-(--accent-primary) hover:bg-(--bg-tertiary)"
               >
-                <span className="text-base opacity-50">+{categories.length - 6}</span>
+                <span className="text-base text-(--text-secondary)">+{categories.length - 6}</span>
                 {t('viewAll')}
               </Link>
             </div>

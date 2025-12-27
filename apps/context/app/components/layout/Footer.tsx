@@ -21,7 +21,10 @@ export function Footer() {
         </nav>
         <p className="text-center text-sm mb-2 text-(--text-tertiary)">
           {t('footerCredits')}{' '}
-          <Link to={localePath('/built-with')} className="text-(--accent-primary) hover:underline">
+          <Link
+            to={localePath('/built-with')}
+            className="text-(--accent-primary) underline decoration-1 underline-offset-2 hover:decoration-2"
+          >
             {t('footerBuiltWith')}
           </Link>
         </p>
