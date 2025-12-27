@@ -1,10 +1,10 @@
-import { categories } from '@/data/categories';
-import { useI18n } from '@/i18n';
 import { stripLocaleFromPath } from '@soundblue/shared';
 import { cn } from '@soundblue/shared-react';
 import { Home, Info, LayoutGrid, List, MessageCircle, X } from 'lucide-react';
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router';
+import { categories } from '@/data/categories';
+import { useI18n } from '@/i18n';
 
 const stripLocale = stripLocaleFromPath;
 

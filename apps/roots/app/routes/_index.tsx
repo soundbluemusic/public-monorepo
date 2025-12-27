@@ -2,14 +2,14 @@
  * @fileoverview 홈페이지 컴포넌트 - Apple 스타일 미니멀 디자인
  */
 
-import { Layout } from '@/components/layout/Layout';
-import { useI18n } from '@/i18n';
-import { preloadSearchIndex } from '@/lib/search';
-import { type SearchResult, cn, useSearchWorker } from '@soundblue/shared-react';
+import { cn, type SearchResult, useSearchWorker } from '@soundblue/shared-react';
 import { BookOpen, Search } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { MetaFunction } from 'react-router';
 import { Link, useNavigate } from 'react-router';
+import { Layout } from '@/components/layout/Layout';
+import { useI18n } from '@/i18n';
+import { preloadSearchIndex } from '@/lib/search';
 
 export const meta: MetaFunction = ({ location }) => {
   const locale = location.pathname.startsWith('/ko') ? 'ko' : 'en';

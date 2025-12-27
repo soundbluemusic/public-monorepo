@@ -245,6 +245,7 @@ export function SearchDropdown({
       {isOpen && results.length > 0 && (
         <div
           id={listboxId}
+          role="listbox"
           tabIndex={-1}
           className="absolute top-[calc(100%+4px)] left-0 right-0 z-[600] max-h-75 overflow-y-auto rounded-xl shadow-lg m-0 p-1 bg-(--bg-secondary) border border-(--border-primary)"
         >
@@ -258,6 +259,7 @@ export function SearchDropdown({
                 key={result.item.id}
                 id={`search-option-${index}`}
                 type="button"
+                role="option"
                 tabIndex={0}
                 aria-selected={selectedIndex === index}
                 onClick={() => handleResultClick(result, index)}

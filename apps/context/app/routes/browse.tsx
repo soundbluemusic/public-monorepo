@@ -1,14 +1,14 @@
+import { cn } from '@soundblue/shared-react';
+import { Check, Shuffle, Star } from 'lucide-react';
+import { useEffect, useMemo, useState } from 'react';
+import type { MetaFunction } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 import { Layout } from '@/components/layout';
 import { categories } from '@/data/categories';
 import { meaningEntries } from '@/data/entries';
 import type { MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { favorites, studyRecords } from '@/lib/db';
-import { cn } from '@soundblue/shared-react';
-import { Check, Shuffle, Star } from 'lucide-react';
-import { useEffect, useMemo, useState } from 'react';
-import type { MetaFunction } from 'react-router';
-import { Link, useLoaderData } from 'react-router';
 
 /**
  * Loader: 빌드 시 데이터 로드 (SSG용)

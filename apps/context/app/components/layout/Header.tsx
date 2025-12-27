@@ -1,9 +1,9 @@
-import { useI18n } from '@/i18n';
 import { stripLocaleFromPath } from '@soundblue/shared';
-import { DarkModeToggle, LanguageToggle, cn } from '@soundblue/shared-react';
+import { cn, DarkModeToggle, LanguageToggle } from '@soundblue/shared-react';
 import { Menu } from 'lucide-react';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
+import { useI18n } from '@/i18n';
 
 const stripLocale = stripLocaleFromPath;
 

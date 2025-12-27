@@ -1,13 +1,13 @@
+import { FolderOpen, Sparkles, TrendingUp } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import type { MetaFunction } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 import { Layout } from '@/components/layout';
 import { categories } from '@/data/categories';
 import { meaningEntries } from '@/data/entries';
 import type { Category, MeaningEntry } from '@/data/types';
 import { type Language, useI18n } from '@/i18n';
 import { studyRecords } from '@/lib/db';
-import { FolderOpen, Sparkles, TrendingUp } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import type { MetaFunction } from 'react-router';
-import { Link, useLoaderData } from 'react-router';
 
 const getPronunciation = (entry: MeaningEntry, locale: Language): string | undefined => {
   switch (locale) {

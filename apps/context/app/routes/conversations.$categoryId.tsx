@@ -1,12 +1,12 @@
+import { cn } from '@soundblue/shared-react';
+import { ArrowLeft, MessageCircle } from 'lucide-react';
+import { Link, useLoaderData } from 'react-router';
 import { LinkedExample } from '@/components/LinkedExample';
 import { Layout } from '@/components/layout';
 import { getCategoryById } from '@/data/categories';
 import { getConversationsByCategory } from '@/data/conversations';
 import type { Category, Conversation } from '@/data/types';
 import { useI18n } from '@/i18n';
-import { cn } from '@soundblue/shared-react';
-import { ArrowLeft, MessageCircle } from 'lucide-react';
-import { Link, useLoaderData } from 'react-router';
 
 /**
  * Loader: 빌드 시 카테고리별 대화 로드 (SSG용)

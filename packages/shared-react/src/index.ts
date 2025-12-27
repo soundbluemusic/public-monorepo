@@ -24,30 +24,56 @@
 
 // Components
 export {
+  canShare,
+  copyToClipboard,
   DarkModeToggle,
   type DarkModeToggleProps,
+  ErrorBoundary,
+  type ErrorBoundaryProps,
+  ErrorFallbackUI,
   LanguageToggle,
   type LanguageToggleProps,
+  LazyLoad,
+  type LazyLoadProps,
+  LazyLoadSkeleton,
+  LoadingSpinner,
+  lazyWithSuspense,
   OfflineIndicator,
   PageSkeleton,
+  preloadComponent,
+  RouteErrorFallback,
   SearchDropdown,
   type SearchDropdownProps,
+  ShareButton,
+  type ShareButtonProps,
+  type ShareData,
   Skeleton,
   SkeletonCard,
   SkeletonGrid,
   SkeletonList,
   SkeletonText,
+  share,
+  supportsWebShare,
+  usePreloadOnVisible,
+  useWebShare,
+  ViewTransitionButton,
+  type ViewTransitionButtonProps,
+  ViewTransitionLink,
+  type ViewTransitionLinkProps,
 } from './components';
 
 // Hooks
 export {
   type SearchIndexItem,
   type SearchResult,
+  startViewTransition,
+  supportsViewTransitions,
   type UseOnlineStatusReturn,
   useIsMobile,
   useMediaQuery,
   useOnlineStatus,
   useSearchWorker,
+  useViewTransition,
 } from './hooks';
 // Stores
 export { useSettingsStore } from './stores';
@@ -56,9 +82,13 @@ export { useSettingsStore } from './stores';
 export {
   BREAKPOINTS,
   buildLocalePath,
+  // Preload hints
+  COMMON_PRECONNECTS,
   // Tailwind CSS utility
   cn,
+  createNavigationPreloads,
   createSearchHandler,
+  dnsPrefetch,
   filterBySearch,
   getLocaleFromPath,
   type I18nContextType,
@@ -71,6 +101,15 @@ export {
   LIMITS,
   languageFlags,
   languageNames,
+  modulePreload,
+  type PreloadLinkDescriptor,
+  preconnect,
+  prefetchLink,
+  preloadFont,
+  preloadImage,
+  preloadLink,
+  preloadScript,
+  preloadStyle,
   RESERVED_NAMES,
   type ReservedName,
   // Search

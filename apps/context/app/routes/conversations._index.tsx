@@ -1,10 +1,10 @@
+import { MessageCircle } from 'lucide-react';
+import { Link, useLoaderData } from 'react-router';
 import { Layout } from '@/components/layout';
 import { getCategoryById } from '@/data/categories';
 import { getCategoriesWithConversations, getConversationsByCategory } from '@/data/conversations';
 import type { Category } from '@/data/types';
 import { useI18n } from '@/i18n';
-import { MessageCircle } from 'lucide-react';
-import { Link, useLoaderData } from 'react-router';
 
 /**
  * Loader: 빌드 시 대화가 있는 카테고리 목록 로드 (SSG용)

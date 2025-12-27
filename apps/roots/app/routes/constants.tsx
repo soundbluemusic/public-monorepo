@@ -1,6 +1,6 @@
+import type { MetaFunction } from 'react-router';
 import { Layout } from '@/components/layout/Layout';
 import { useI18n } from '@/i18n';
-import type { MetaFunction } from 'react-router';
 
 const mathConstants = [
   {

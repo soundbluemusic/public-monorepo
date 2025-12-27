@@ -1,8 +1,8 @@
-import { useI18n } from '@/i18n';
 import { stripLocaleFromPath } from '@soundblue/shared';
 import { cn } from '@soundblue/shared-react';
 import { Grid3X3, Home, Info, LayoutGrid, MessageCircle } from 'lucide-react';
 import { Link, useLocation } from 'react-router';
+import { useI18n } from '@/i18n';
 
 const stripLocale = stripLocaleFromPath;
 

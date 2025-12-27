@@ -1,4 +1,4 @@
-import { type SearchResult, cn, useSearchWorker } from '@soundblue/shared-react';
+import { cn, type SearchResult, useSearchWorker } from '@soundblue/shared-react';
 import {
   ChevronRight,
   Compass,

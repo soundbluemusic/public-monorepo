@@ -1,6 +1,6 @@
 import type { Language } from '@soundblue/shared';
 import { getLocaleFromPath, stripLocaleFromPath } from '@soundblue/shared';
-import { type ReactNode, createContext, useContext, useEffect, useMemo } from 'react';
+import { createContext, type ReactNode, useContext, useEffect, useMemo } from 'react';
 import { useLocation } from 'react-router';
 import * as m from '~/paraglide/messages.js';
 import {

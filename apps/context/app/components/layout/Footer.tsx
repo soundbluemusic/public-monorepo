@@ -1,6 +1,6 @@
-import { useI18n } from '@/i18n';
 import { Github } from 'lucide-react';
 import { Link } from 'react-router';
+import { useI18n } from '@/i18n';
 
 export function Footer() {
   const { t, localePath } = useI18n();

@@ -2,14 +2,14 @@
  * @fileoverview 검색 결과 페이지
  */
 
+import { useEffect, useState } from 'react';
+import type { MetaFunction } from 'react-router';
+import { Link, useSearchParams } from 'react-router';
 import { Layout } from '@/components/layout/Layout';
 import { DifficultyBadge } from '@/components/ui/DifficultyBadge';
 import type { DifficultyLevel } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { type FuseSearchResult, searchConcepts } from '@/lib/search';
-import { useEffect, useState } from 'react';
-import type { MetaFunction } from 'react-router';
-import { Link, useSearchParams } from 'react-router';
 
 /** 검색 결과 카드 (SearchIndexItem용) */
 function SearchResultCard({ result }: { result: FuseSearchResult }) {
