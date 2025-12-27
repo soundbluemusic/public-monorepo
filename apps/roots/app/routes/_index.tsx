@@ -4,8 +4,10 @@
 import { Layout } from '@/components/layout/Layout';
 import { useI18n } from '@/i18n';
 import { preloadSearchIndex } from '@/lib/search';
-import { useEffect } from 'react';
-import { Link } from 'react-router';
+import { type SearchResult, cn, useSearchWorker } from '@soundblue/shared-react';
+import { BookOpen, Search } from 'lucide-react';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { Link, useNavigate } from 'react-router';
 
 import type { MetaFunction } from 'react-router';
 
@@ -117,6 +119,59 @@ const FEATURED_CONCEPTS: ReadonlyArray<{
 
 export default function HomePage() {
   const { locale, localePath, t } = useI18n();
+  const navigate = useNavigate();
+
+  // Search state
+  const [showResults, setShowResults] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  // Real-time search with Fuse.js
+  const { query, setQuery, results, isLoading } = useSearchWorker({
+    indexUrl: '/search-index.json',
+    locale,
+    debounceMs: 150,
+    maxResults: 8,
+  });
+
+  const handleResultClick = useCallback(
+    (result: SearchResult) => {
+      const item = result.item;
+      navigate(localePath(`/concept/${item.id}`));
+      setShowResults(false);
+      setQuery('');
+    },
+    [navigate, localePath, setQuery],
+  );
+
+  const handleSearchSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (selectedIndex >= 0 && results[selectedIndex]) {
+      handleResultClick(results[selectedIndex]);
+    } else if (query.trim()) {
+      navigate(`${localePath('/browse')}?q=${encodeURIComponent(query)}`);
+      setShowResults(false);
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (!showResults || results.length === 0) return;
+
+    switch (e.key) {
+      case 'ArrowDown':
+        e.preventDefault();
+        setSelectedIndex((prev) => (prev < results.length - 1 ? prev + 1 : prev));
+        break;
+      case 'ArrowUp':
+        e.preventDefault();
+        setSelectedIndex((prev) => (prev > 0 ? prev - 1 : -1));
+        break;
+      case 'Escape':
+        setShowResults(false);
+        setSelectedIndex(-1);
+        break;
+    }
+  };
 
   // 검색 인덱스 프리로드
   useEffect(() => {
@@ -128,7 +183,90 @@ export default function HomePage() {
       {/* Hero Section */}
       <div className="text-center py-12 mb-8">
         <h1 className="text-4xl font-bold text-(--text-primary) mb-3">{t('logoText')}</h1>
-        <p className="text-lg text-(--text-secondary)">{t('heroSubtitle')}</p>
+        <p className="text-lg text-(--text-secondary) mb-8">{t('heroSubtitle')}</p>
+
+        {/* Quick Search */}
+        <div className="max-w-md mx-auto">
+          <form onSubmit={handleSearchSubmit} className="relative">
+            <Search
+              size={18}
+              aria-hidden="true"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-(--text-tertiary)"
+            />
+            <input
+              ref={inputRef}
+              type="text"
+              placeholder={
+                locale === 'ko'
+                  ? '개념 검색... (예: 미분, 행렬)'
+                  : 'Search concepts... (e.g., derivative, matrix)'
+              }
+              value={query}
+              onChange={(e) => {
+                setQuery(e.target.value);
+                setShowResults(true);
+                setSelectedIndex(-1);
+              }}
+              onFocus={() => setShowResults(true)}
+              onBlur={() => setTimeout(() => setShowResults(false), 200)}
+              onKeyDown={handleKeyDown}
+              className="w-full min-h-12 pl-11 pr-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none focus:border-(--border-focus) transition-colors"
+              aria-expanded={showResults && results.length > 0}
+              aria-haspopup="listbox"
+              aria-controls="search-results"
+              role="combobox"
+              autoComplete="off"
+            />
+            {/* Loading indicator */}
+            {isLoading && query.trim() && (
+              <div className="absolute right-4 top-1/2 -translate-y-1/2">
+                <div className="w-4 h-4 border-2 border-(--text-tertiary) border-t-transparent rounded-full animate-spin" />
+              </div>
+            )}
+            {/* Search Results Dropdown */}
+            {showResults && results.length > 0 && (
+              <ul
+                id="search-results"
+                role="listbox"
+                className="absolute top-full left-0 right-0 mt-2 py-2 bg-(--bg-elevated) border border-(--border-primary) rounded-xl shadow-lg z-50 max-h-80 overflow-y-auto text-left"
+              >
+                {results.map((result, index) => {
+                  const item = result.item;
+                  const name = locale === 'ko' ? item.name.ko : item.name.en;
+                  const isSelected = index === selectedIndex;
+                  return (
+                    <li key={item.id} role="option" aria-selected={isSelected}>
+                      <button
+                        type="button"
+                        onClick={() => handleResultClick(result)}
+                        className={cn(
+                          'w-full flex items-center gap-3 px-4 py-2.5 text-left transition-colors cursor-pointer',
+                          isSelected ? 'bg-(--bg-tertiary)' : 'hover:bg-(--bg-tertiary)',
+                        )}
+                      >
+                        <span className="text-(--text-tertiary)">
+                          <BookOpen size={16} aria-hidden="true" />
+                        </span>
+                        <span className="flex-1 text-(--text-primary) font-medium">{name}</span>
+                        {item.field && (
+                          <span className="px-2 py-0.5 rounded text-xs font-medium bg-(--accent-primary)/10 text-(--accent-primary)">
+                            {item.field}
+                          </span>
+                        )}
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+            {/* No results message */}
+            {showResults && query.trim() && !isLoading && results.length === 0 && (
+              <div className="absolute top-full left-0 right-0 mt-2 py-4 px-4 bg-(--bg-elevated) border border-(--border-primary) rounded-xl shadow-lg z-50 text-center text-(--text-tertiary)">
+                {locale === 'ko' ? '검색 결과가 없습니다' : 'No results found'}
+              </div>
+            )}
+          </form>
+        </div>
       </div>
 
       {/* Featured Concepts Grid */}
