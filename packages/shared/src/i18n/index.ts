@@ -17,8 +17,8 @@
  */
 
 // Types
-export type { Language, I18nContextType } from './types';
-export { languageNames, languageFlags } from './types';
+export type { I18nContextType, Language } from './types';
+export { languageFlags, languageNames } from './types';
 
 // Utilities
-export { getLocaleFromPath, stripLocaleFromPath, buildLocalePath } from './utils';
+export { buildLocalePath, getLocaleFromPath, stripLocaleFromPath } from './utils';

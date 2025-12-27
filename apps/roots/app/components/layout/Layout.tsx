@@ -1,15 +1,15 @@
-import { useI18n } from '@/i18n';
 import { stripLocaleFromPath } from '@soundblue/shared';
 import {
+  cn,
   DarkModeToggle,
   LanguageToggle,
   SearchDropdown,
-  cn,
   useSearchWorker,
 } from '@soundblue/shared-react';
 import { ArrowUp, BookOpen, ChevronRight, Github, Heart, Star } from 'lucide-react';
 import { type ReactNode, useCallback, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
+import { useI18n } from '@/i18n';
 import { Sidebar } from './Sidebar';
 
 // Use shared utility for locale stripping

@@ -1,4 +1,4 @@
-import { type SearchResult, cn, useSearchWorker } from '@soundblue/shared-react';
+import { cn, type SearchResult, useSearchWorker } from '@soundblue/shared-react';
 import {
   ChevronRight,
   Compass,
@@ -193,7 +193,6 @@ export default function Home() {
             {showResults && results.length > 0 && (
               <ul
                 id="search-results"
-                role="listbox"
                 className="absolute top-full left-0 right-0 mt-2 py-2 bg-(--bg-elevated) border border-(--border-primary) rounded-xl shadow-lg z-50 max-h-80 overflow-y-auto"
               >
                 {results.map((result, index) => {
@@ -201,11 +200,7 @@ export default function Home() {
                   const name = locale === 'ko' ? item.name.ko : item.name.en;
                   const isSelected = index === selectedIndex;
                   return (
-                    <li
-                      key={item.id}
-                      role="option"
-                      aria-selected={isSelected}
-                    >
+                    <li key={item.id} aria-selected={isSelected}>
                       <button
                         type="button"
                         onClick={() => handleResultClick(result)}

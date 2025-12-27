@@ -1,14 +1,14 @@
+import { cn, type SearchResult, useSearchWorker } from '@soundblue/shared-react';
+import { BookOpen, FolderOpen, Search, Sparkles, TrendingUp } from 'lucide-react';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import type { MetaFunction } from 'react-router';
+import { Link, useLoaderData, useNavigate } from 'react-router';
 import { Layout } from '@/components/Layout';
 import { categories } from '@/data/categories';
 import { meaningEntries } from '@/data/entries';
 import type { Category, MeaningEntry } from '@/data/types';
 import { type Language, useI18n } from '@/i18n';
 import { studyRecords } from '@/lib/db';
-import { type SearchResult, cn, useSearchWorker } from '@soundblue/shared-react';
-import { BookOpen, FolderOpen, Search, Sparkles, TrendingUp } from 'lucide-react';
-import { useCallback, useRef, useState, useEffect } from 'react';
-import type { MetaFunction } from 'react-router';
-import { Link, useLoaderData, useNavigate } from 'react-router';
 
 const getPronunciation = (entry: MeaningEntry, locale: Language): string | undefined => {
   switch (locale) {
@@ -141,7 +141,8 @@ export default function HomePage() {
       const catProgress: Record<string, { studied: number; total: number; percentage: number }> =
         {};
       for (const cat of cats) {
-        const progress = await studyRecords.getCategoryProgress(cat.id, categoryCounts[cat.id]);
+        const count = categoryCounts[cat.id] ?? 0;
+        const progress = await studyRecords.getCategoryProgress(cat.id, count);
         catProgress[cat.id] = progress;
       }
       setCategoryProgress(catProgress);
@@ -200,7 +201,6 @@ export default function HomePage() {
             {showResults && results.length > 0 && (
               <ul
                 id="search-results"
-                role="listbox"
                 className="absolute top-full left-0 right-0 mt-2 py-2 bg-(--bg-elevated) border border-(--border-primary) rounded-xl shadow-lg z-50 max-h-80 overflow-y-auto"
               >
                 {results.map((result, index) => {
@@ -208,7 +208,7 @@ export default function HomePage() {
                   const name = locale === 'ko' ? item.name.ko : item.name.en;
                   const isSelected = index === selectedIndex;
                   return (
-                    <li key={item.id} role="option" aria-selected={isSelected}>
+                    <li key={item.id} aria-selected={isSelected}>
                       <button
                         type="button"
                         onClick={() => handleResultClick(result)}

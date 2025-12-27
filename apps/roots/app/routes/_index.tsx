@@ -1,15 +1,15 @@
 /**
  * @fileoverview 홈페이지 컴포넌트 - Apple 스타일 미니멀 디자인
  */
+
+import { cn, type SearchResult, useSearchWorker } from '@soundblue/shared-react';
+import { BookOpen, Search } from 'lucide-react';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import type { MetaFunction } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { Layout } from '@/components/layout/Layout';
 import { useI18n } from '@/i18n';
 import { preloadSearchIndex } from '@/lib/search';
-import { type SearchResult, cn, useSearchWorker } from '@soundblue/shared-react';
-import { BookOpen, Search } from 'lucide-react';
-import { useCallback, useEffect, useRef, useState } from 'react';
-import { Link, useNavigate } from 'react-router';
-
-import type { MetaFunction } from 'react-router';
 
 export const meta: MetaFunction = ({ location }) => {
   const locale = location.pathname.startsWith('/ko') ? 'ko' : 'en';
@@ -227,7 +227,6 @@ export default function HomePage() {
             {showResults && results.length > 0 && (
               <ul
                 id="search-results"
-                role="listbox"
                 className="absolute top-full left-0 right-0 mt-2 py-2 bg-(--bg-elevated) border border-(--border-primary) rounded-xl shadow-lg z-50 max-h-80 overflow-y-auto text-left"
               >
                 {results.map((result, index) => {
@@ -235,7 +234,7 @@ export default function HomePage() {
                   const name = locale === 'ko' ? item.name.ko : item.name.en;
                   const isSelected = index === selectedIndex;
                   return (
-                    <li key={item.id} role="option" aria-selected={isSelected}>
+                    <li key={item.id} aria-selected={isSelected}>
                       <button
                         type="button"
                         onClick={() => handleResultClick(result)}

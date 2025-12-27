@@ -1,4 +1,8 @@
-import { DARK_MODE_INIT_SCRIPT, DARK_MODE_TOGGLE_SCRIPT, getLocaleFromPath } from '@soundblue/shared';
+import {
+  DARK_MODE_INIT_SCRIPT,
+  DARK_MODE_TOGGLE_SCRIPT,
+  getLocaleFromPath,
+} from '@soundblue/shared';
 import { OfflineIndicator } from '@soundblue/shared-react';
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLocation } from 'react-router';
 import { I18nProvider } from './i18n';

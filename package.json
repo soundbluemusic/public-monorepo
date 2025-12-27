@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.1",
-    "@biomejs/biome": "^1.9.0",
+    "@biomejs/biome": "^2.0.0",
     "@inlang/paraglide-js": "^2.7.0",
     "@inlang/paraglide-vite": "^1.4.0",
     "@inlang/plugin-message-format": "^4.0.0",
@@ -68,10 +68,11 @@
     "skott": "^0.35.6",
     "syncpack": "^13.0.0",
     "tsx": "^4.19.2",
+    "turbo": "^2.3.0",
     "vitest": "^2.1.8"
   },
   "engines": {
     "node": ">=20"
   },
-  "packageManager": "pnpm@10.0.0"
+  "packageManager": "pnpm@10.11.0"
 }

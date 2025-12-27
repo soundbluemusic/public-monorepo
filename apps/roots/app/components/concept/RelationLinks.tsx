@@ -2,11 +2,12 @@
  * @fileoverview 연관 문서 링크 컴포넌트
  * 클라이언트 사이드에서 concept-names.json을 fetch하여 이름 표시
  */
-import type { ConceptRelations } from '@/data/types';
-import { useI18n } from '@/i18n';
+
 import { Link2 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router';
+import type { ConceptRelations } from '@/data/types';
+import { useI18n } from '@/i18n';
 
 type ConceptNames = Record<string, { ko: string; en: string }>;
 

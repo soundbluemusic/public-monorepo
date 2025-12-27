@@ -109,8 +109,9 @@ export default function WebApiPage() {
       return { [category]: filteredApis };
     }
     return filteredApis.reduce<Record<string, WebAPI[]>>((acc, api) => {
-      if (!acc[api.category]) acc[api.category] = [];
-      acc[api.category].push(api);
+      const arr = acc[api.category] ?? [];
+      arr.push(api);
+      acc[api.category] = arr;
       return acc;
     }, {});
   }, [filteredApis, category]);

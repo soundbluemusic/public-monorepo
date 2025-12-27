@@ -11,6 +11,20 @@ import { writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 // ============================================================================
+// Helpers
+// ============================================================================
+
+/**
+ * Get today's date in ISO format (YYYY-MM-DD)
+ * Safe accessor for noUncheckedIndexedAccess
+ */
+function getTodayISODate(): string {
+  const isoString = new Date().toISOString();
+  const dateOnly = isoString.slice(0, 10); // "YYYY-MM-DD" is always first 10 chars
+  return dateOnly;
+}
+
+// ============================================================================
 // Types
 // ============================================================================
 
@@ -45,7 +59,12 @@ export interface SitemapEntry {
 /**
  * Get URL with language prefix (default language = no prefix)
  */
-export function getLocalizedUrl(siteUrl: string, path: string, lang: string, defaultLang = 'en'): string {
+export function getLocalizedUrl(
+  siteUrl: string,
+  path: string,
+  lang: string,
+  defaultLang = 'en',
+): string {
   if (lang === defaultLang) {
     return `${siteUrl}${path}`;
   }
@@ -225,7 +244,7 @@ export function generateSitemaps(
   dynamicSitemaps: SitemapEntry[],
 ): void {
   const { siteUrl, languages, appName, appSubtitle, outputDir } = config;
-  const today = new Date().toISOString().split('T')[0];
+  const today = getTodayISODate();
 
   console.log(`🗺️  Generating sitemaps for ${appName}...\n`);
 
@@ -261,7 +280,9 @@ export function generateSitemaps(
 
   // Summary
   const totalUrls = staticPages.length + dynamicSitemaps.reduce((sum, s) => sum + s.urls.length, 0);
-  console.log(`\n📊 Total: ${totalUrls} URLs × ${languages.length} languages = ${totalUrls * languages.length} hreflang entries`);
+  console.log(
+    `\n📊 Total: ${totalUrls} URLs × ${languages.length} languages = ${totalUrls * languages.length} hreflang entries`,
+  );
 }
 
 /**
@@ -275,7 +296,7 @@ export function createDynamicUrls(
   changefreq: string,
   languages: readonly string[],
 ): string[] {
-  const today = new Date().toISOString().split('T')[0];
+  const today = getTodayISODate();
   return ids.map((id) =>
     generateUrlEntry(siteUrl, `${pathPrefix}/${id}`, priority, changefreq, languages, today),
   );

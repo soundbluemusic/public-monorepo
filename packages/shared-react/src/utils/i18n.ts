@@ -5,8 +5,8 @@
  */
 
 // Re-export types and constants from shared package (Single Source of Truth)
-export type { Language, I18nContextType } from '@soundblue/shared';
-export { languageNames, languageFlags } from '@soundblue/shared';
+export type { I18nContextType, Language } from '@soundblue/shared';
+export { languageFlags, languageNames } from '@soundblue/shared';
 
 // Import Language for use in functions below
 import type { Language } from '@soundblue/shared';

@@ -1,12 +1,13 @@
 /**
  * @fileoverview 전체 분야 목록 페이지
  */
+
+import type { MetaFunction } from 'react-router';
+import { Link } from 'react-router';
 import { Layout } from '@/components/layout/Layout';
 import { fields } from '@/data/fields';
 import { getSubfieldsByParent } from '@/data/subfields';
 import { useI18n } from '@/i18n';
-import { Link } from 'react-router';
-import type { MetaFunction } from 'react-router';
 
 export const meta: MetaFunction = ({ location }) => {
   const locale = location.pathname.startsWith('/ko') ? 'ko' : 'en';

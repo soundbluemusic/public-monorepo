@@ -32,10 +32,10 @@
  * import { meaningEntries, getEntryById } from '@/data/entries';
  * ```
  */
-import type { Language, MeaningEntry } from '../types';
 
 // JSON에서 생성된 엔트리 (prebuild 스크립트에서 생성됨)
 import { jsonEntries } from '../generated/entries';
+import type { Language, MeaningEntry } from '../types';
 
 // 모든 엔트리 (JSON에서 로드됨)
 export const meaningEntries: MeaningEntry[] = jsonEntries;
@@ -45,9 +45,7 @@ export const meaningEntries: MeaningEntry[] = jsonEntries;
 // ============================================================================
 
 /** ID → Entry 맵 (O(1) 조회용) */
-export const entriesById = new Map<string, MeaningEntry>(
-  meaningEntries.map((e) => [e.id, e]),
-);
+export const entriesById = new Map<string, MeaningEntry>(meaningEntries.map((e) => [e.id, e]));
 
 /** CategoryID → Entry[] 맵 (O(1) 조회용) */
 export const entriesByCategory = new Map<string, MeaningEntry[]>();
@@ -106,6 +104,6 @@ export function getEntriesByDifficulty(difficulty: MeaningEntry['difficulty']): 
   return meaningEntries.filter((e) => e.difficulty === difficulty);
 }
 
+export type { EntryInput, EntryMap } from './helpers';
 // Re-export helper for new entries
 export { createCategory } from './helpers';
-export type { EntryInput, EntryMap } from './helpers';

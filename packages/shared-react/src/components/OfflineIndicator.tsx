@@ -14,6 +14,7 @@ export function OfflineIndicator() {
       const timer = setTimeout(() => setShowReconnected(false), 3000);
       return () => clearTimeout(timer);
     }
+    return; // Explicit return for noImplicitReturns
   }, [isOnline, wasOffline]);
 
   return (

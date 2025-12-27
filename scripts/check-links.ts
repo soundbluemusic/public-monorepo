@@ -4,8 +4,8 @@
  * - 빌드된 정적 사이트의 preview 서버를 사용하여 검증
  */
 
-import { spawn } from 'node:child_process';
 import type { ChildProcess } from 'node:child_process';
+import { spawn } from 'node:child_process';
 
 interface AppConfig {
   name: string;
