@@ -367,16 +367,18 @@ html.theme-transition *::after {
   /* Hide sidebar on mobile by default (SSG hydration fix) */
   aside {
     transform: translateX(-100%) !important;
+    visibility: hidden !important;
   }
 
   /* Show sidebar when explicitly opened via JavaScript */
   aside[data-mobile-open="true"] {
     transform: translateX(0) !important;
+    visibility: visible !important;
   }
 }
 
 /* Extra small screens (320px) - ensure no overflow */
-@media (max-width: 359px) {
+@media (max-width: 320px) {
   /* Force all elements to respect viewport width */
   * {
     max-width: 100vw !important;

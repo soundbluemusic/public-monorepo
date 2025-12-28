@@ -135,3 +135,22 @@ input:focus-visible {
   outline: 2px solid var(--accent-primary);
   outline-offset: 2px;
 }
+
+/* ============================================
+   Mobile Responsive - Minimum font size
+   ============================================ */
+@media (max-width: 640px) {
+  p,
+  span,
+  a,
+  li {
+    font-size: max(12px, 1em);
+  }
+}
+
+/* ============================================
+   Prevent horizontal overflow
+   ============================================ */
+main {
+  overflow-x: hidden;
+}
