@@ -1,15 +1,15 @@
-import { useI18n } from '@/i18n';
 import { stripLocaleFromPath } from '@soundblue/shared';
 import {
+  cn,
   DarkModeToggle,
   LanguageToggle,
   SearchDropdown,
-  cn,
   useSearchWorker,
 } from '@soundblue/shared-react';
 import { ArrowUp, BookOpen, ChevronRight, Github, Heart, Star } from 'lucide-react';
 import { type ReactNode, useCallback, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
+import { useI18n } from '@/i18n';
 import { Sidebar } from './Sidebar';
 
 // Use shared utility for locale stripping
@@ -179,7 +179,10 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
       </div>
 
       {/* Mobile Bottom Navigation */}
-      <nav className="fixed bottom-0 left-0 right-0 z-40 bg-(--bg-elevated) border-t border-(--border-primary) flex items-center justify-around h-16 pb-[env(safe-area-inset-bottom,0px)] lg:hidden">
+      <nav
+        aria-label="Mobile navigation"
+        className="fixed bottom-0 left-0 right-0 z-40 bg-(--bg-elevated) border-t border-(--border-primary) flex items-center justify-around h-16 pb-[env(safe-area-inset-bottom,0px)] lg:hidden"
+      >
         <Link
           to={localePath('/browse')}
           className={cn(
@@ -227,7 +230,10 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
       {/* Footer - Hidden on mobile */}
       <footer className="hidden lg:block mt-auto py-8 bg-(--bg-secondary) border-t border-(--border-primary)">
         <div className="max-w-6xl mx-auto px-4">
-          <nav className="flex items-center justify-center gap-6 mb-4 text-sm text-(--text-secondary)">
+          <nav
+            aria-label="Footer links"
+            className="flex items-center justify-center gap-6 mb-4 text-sm text-(--text-secondary)"
+          >
             <Link to={localePath('/about')} className="no-underline hover:underline text-inherit">
               {t('about')}
             </Link>

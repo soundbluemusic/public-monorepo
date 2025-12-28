@@ -2,11 +2,11 @@
  * @fileoverview 사이드바 컴포넌트 - 수학 분야 카테고리 네비게이션
  */
 
-import { fields } from '@/data/fields';
-import { useI18n } from '@/i18n';
 import { stripLocaleFromPath } from '@soundblue/shared';
 import { cn } from '@soundblue/shared-react';
 import { Link, useLocation } from 'react-router';
+import { fields } from '@/data/fields';
+import { useI18n } from '@/i18n';
 
 // Use shared utility for locale stripping
 const stripLocale = stripLocaleFromPath;
@@ -22,7 +22,7 @@ export function Sidebar() {
 
   return (
     <aside className="hidden lg:block sticky top-14 left-0 h-[calc(100vh-3.5rem)] w-64 overflow-y-auto flex-shrink-0 bg-(--bg-primary) border-r border-(--border-primary)">
-      <nav className="p-4 flex flex-col gap-1">
+      <nav aria-label="Math fields" className="p-4 flex flex-col gap-1">
         <div className="mb-4 pb-4 border-b border-(--border-primary)">
           <h2 className="text-xs font-semibold uppercase tracking-wider text-(--text-tertiary) m-0">
             {t('mathFields')}

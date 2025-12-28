@@ -53,6 +53,21 @@
 }
 
 /* ============================================
+   Typography - Text Wrapping
+   ============================================ */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+/* ============================================
    Accessibility
    ============================================ */
 .sr-only {
@@ -102,5 +117,65 @@
   }
   100% {
     background-position: -200% 0;
+  }
+}
+
+/* ============================================
+   View Transitions API
+   ============================================ */
+@supports (view-transition-name: none) {
+  /* Root view transition - cross-fade */
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 200ms;
+    animation-timing-function: ease-out;
+  }
+
+  /* Slide animation for page content */
+  ::view-transition-old(page-content) {
+    animation: slide-out-left 200ms ease-out both;
+  }
+
+  ::view-transition-new(page-content) {
+    animation: slide-in-right 200ms ease-out both;
+  }
+
+  /* Shared element transitions - cards */
+  ::view-transition-old(entry-card),
+  ::view-transition-new(entry-card) {
+    animation-duration: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes slide-out-left {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+/* Reduce motion - disable view transitions */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root),
+  ::view-transition-old(page-content),
+  ::view-transition-new(page-content) {
+    animation: none !important;
   }
 }

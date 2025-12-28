@@ -12,7 +12,7 @@ module.exports = {
       staticDistDir: `./apps/${app}/build/client`,
       url: ['http://localhost/index.html'],
       numberOfRuns: 1,
-      chromePath: '/root/.cache/ms-playwright/chromium-1200/chrome-linux64/chrome',
+      chromePath: '/root/.cache/ms-playwright/chromium-1194/chrome-linux/chrome',
       settings: {
         chromeFlags: '--no-sandbox --disable-dev-shm-usage --headless',
       },

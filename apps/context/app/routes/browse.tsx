@@ -1,14 +1,14 @@
+import { cn } from '@soundblue/shared-react';
+import { Check, Shuffle, Star } from 'lucide-react';
+import { useEffect, useMemo, useState } from 'react';
+import type { MetaFunction } from 'react-router';
+import { Link, useLoaderData, useSearchParams } from 'react-router';
 import { Layout } from '@/components/layout';
 import { categories } from '@/data/categories';
 import { meaningEntries } from '@/data/entries';
 import type { MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { favorites, studyRecords } from '@/lib/db';
-import { cn } from '@soundblue/shared-react';
-import { Check, Shuffle, Star } from 'lucide-react';
-import { useEffect, useMemo, useState } from 'react';
-import type { MetaFunction } from 'react-router';
-import { Link, useLoaderData } from 'react-router';
 
 /**
  * Loader: 빌드 시 데이터 로드 (SSG용)
@@ -58,10 +58,41 @@ export default function BrowsePage() {
   const [todayStudied, setTodayStudied] = useState(0);
   const [bookmarkCount, setBookmarkCount] = useState(0);
 
+  // URL params for filter persistence
+  const [searchParams, setSearchParams] = useSearchParams();
+
   // Filter & Sort state
   const [filterCategory, setFilterCategory] = useState<FilterCategory>('all');
   const [filterStatus, setFilterStatus] = useState<FilterStatus>('all');
   const [sortBy, setSortBy] = useState<SortOption>('alphabetical');
+
+  // Sync URL params to state on mount/URL change
+  useEffect(() => {
+    const categoryParam = searchParams.get('category');
+    const statusParam = searchParams.get('status');
+    const sortParam = searchParams.get('sort');
+
+    if (categoryParam) {
+      const isValidCategory = categoryParam === 'all' || cats.some((c) => c.id === categoryParam);
+      if (isValidCategory) {
+        setFilterCategory(categoryParam as FilterCategory);
+      }
+    }
+
+    if (statusParam) {
+      const validStatuses = ['all', 'studied', 'unstudied', 'bookmarked'];
+      if (validStatuses.includes(statusParam)) {
+        setFilterStatus(statusParam as FilterStatus);
+      }
+    }
+
+    if (sortParam) {
+      const validSorts = ['alphabetical', 'category', 'recent'];
+      if (validSorts.includes(sortParam)) {
+        setSortBy(sortParam as SortOption);
+      }
+    }
+  }, [searchParams, cats]);
 
   // Data state
   const [studiedIds, setStudiedIds] = useState<Set<string>>(new Set());
@@ -143,14 +174,29 @@ export default function BrowsePage() {
     }
   };
 
+  // URL update helper
+  const updateUrlParams = (updates: Record<string, string | null>) => {
+    const params = new URLSearchParams(searchParams);
+    for (const [key, value] of Object.entries(updates)) {
+      if (value === null || value === 'all') {
+        params.delete(key);
+      } else {
+        params.set(key, value);
+      }
+    }
+    setSearchParams(params);
+  };
+
   const handleShowBookmarksOnly = () => {
     setFilterStatus('bookmarked');
     setFilterCategory('all');
+    updateUrlParams({ status: 'bookmarked', category: null });
   };
 
   const handleShowUnstudiedOnly = () => {
     setFilterStatus('unstudied');
     setFilterCategory('all');
+    updateUrlParams({ status: 'unstudied', category: null });
   };
 
   return (
@@ -239,16 +285,20 @@ export default function BrowsePage() {
       </div>
 
       {/* Filter & Sort Controls */}
-      <div className="mb-6 flex flex-wrap gap-3">
+      <div className="mb-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {/* Category Filter */}
-        <div className="flex-1 min-w-[200px]">
+        <div>
           <label htmlFor="category-filter" className="block text-sm mb-1 text-(--text-secondary)">
             {locale === 'ko' ? '카테고리' : 'Category'}
           </label>
           <select
             id="category-filter"
             value={filterCategory}
-            onChange={(e) => setFilterCategory(e.target.value as FilterCategory)}
+            onChange={(e) => {
+              const value = e.target.value as FilterCategory;
+              setFilterCategory(value);
+              updateUrlParams({ category: value });
+            }}
             className="w-full min-h-10 px-3 rounded-lg border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary)"
           >
             <option value="all">{locale === 'ko' ? '전체' : 'All'}</option>
@@ -261,14 +311,18 @@ export default function BrowsePage() {
         </div>
 
         {/* Status Filter */}
-        <div className="flex-1 min-w-[200px]">
+        <div>
           <label htmlFor="status-filter" className="block text-sm mb-1 text-(--text-secondary)">
             {locale === 'ko' ? '학습 상태' : 'Study Status'}
           </label>
           <select
             id="status-filter"
             value={filterStatus}
-            onChange={(e) => setFilterStatus(e.target.value as FilterStatus)}
+            onChange={(e) => {
+              const value = e.target.value as FilterStatus;
+              setFilterStatus(value);
+              updateUrlParams({ status: value });
+            }}
             className="w-full min-h-10 px-3 rounded-lg border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary)"
           >
             <option value="all">{locale === 'ko' ? '전체' : 'All'}</option>
@@ -279,14 +333,18 @@ export default function BrowsePage() {
         </div>
 
         {/* Sort */}
-        <div className="flex-1 min-w-[200px]">
+        <div className="sm:col-span-2 lg:col-span-1">
           <label htmlFor="sort-by" className="block text-sm mb-1 text-(--text-secondary)">
             {locale === 'ko' ? '정렬' : 'Sort By'}
           </label>
           <select
             id="sort-by"
             value={sortBy}
-            onChange={(e) => setSortBy(e.target.value as SortOption)}
+            onChange={(e) => {
+              const value = e.target.value as SortOption;
+              setSortBy(value);
+              updateUrlParams({ sort: value === 'alphabetical' ? null : value });
+            }}
             className="w-full min-h-10 px-3 rounded-lg border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary)"
           >
             <option value="alphabetical">{locale === 'ko' ? '가나다순' : 'Alphabetical'}</option>

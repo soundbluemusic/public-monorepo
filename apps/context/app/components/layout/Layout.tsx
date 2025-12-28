@@ -1,8 +1,8 @@
-import { useI18n } from '@/i18n';
 import { cn } from '@soundblue/shared-react';
 import { ArrowUp, ChevronRight } from 'lucide-react';
 import { type ReactNode, useEffect, useState } from 'react';
 import { Link } from 'react-router';
+import { useI18n } from '@/i18n';
 import { BottomNav } from '../navigation/BottomNav';
 import { Sidebar } from '../navigation/Sidebar';
 import { Footer } from './Footer';

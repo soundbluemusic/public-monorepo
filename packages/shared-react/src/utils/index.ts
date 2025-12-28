@@ -27,6 +27,21 @@ export {
   languageNames,
   stripLocaleFromPath,
 } from './i18n';
+// Preload hints
+export {
+  COMMON_PRECONNECTS,
+  createNavigationPreloads,
+  dnsPrefetch,
+  modulePreload,
+  type PreloadLinkDescriptor,
+  preconnect,
+  prefetchLink,
+  preloadFont,
+  preloadImage,
+  preloadLink,
+  preloadScript,
+  preloadStyle,
+} from './preload';
 // SEO utilities
 export {
   generateHreflangLinks,

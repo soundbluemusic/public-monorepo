@@ -1,10 +1,21 @@
 /**
  * @fileoverview E2E tests for security headers
+ *
+ * NOTE: These tests only pass against production builds served by Cloudflare.
+ * Dev server (Vite) does not serve _headers file. Skip in dev mode.
  */
 
 import { expect, test } from '@playwright/test';
 
+// Security headers are ONLY served by Cloudflare CDN via _headers file
+// Dev servers and CI preview servers do not process _headers
+const isCloudflareDeployment = process.env.PRODUCTION_TEST === 'true';
+
 test.describe('Security Headers', () => {
+  test.skip(
+    () => !isCloudflareDeployment,
+    'Security headers only available in Cloudflare deployment',
+  );
   test('should have X-Content-Type-Options header', async ({ page }) => {
     const response = await page.goto('/ko');
     const headers = response?.headers();

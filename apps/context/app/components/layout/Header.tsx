@@ -1,9 +1,9 @@
-import { useI18n } from '@/i18n';
 import { stripLocaleFromPath } from '@soundblue/shared';
-import { DarkModeToggle, LanguageToggle, cn } from '@soundblue/shared-react';
+import { cn, DarkModeToggle, LanguageToggle, useSearchWorker } from '@soundblue/shared-react';
 import { Menu } from 'lucide-react';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
+import { useI18n } from '@/i18n';
 
 const stripLocale = stripLocaleFromPath;
 
@@ -11,51 +11,38 @@ interface HeaderProps {
   onMenuClick: () => void;
 }
 
-interface SearchItem {
-  id: string;
-  name: { ko: string; en: string };
-  field?: string;
-}
-
 export function Header({ onMenuClick }: HeaderProps) {
   const { locale, t, localePath } = useI18n();
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Search state
-  const [query, setQuery] = useState('');
+  // Fuzzy search with debouncing via useSearchWorker
+  const {
+    query,
+    setQuery,
+    results: searchResults,
+  } = useSearchWorker({
+    indexUrl: '/search-index.json',
+    locale,
+    debounceMs: 150,
+    maxResults: 8,
+  });
+
+  // Map search results to simple format for rendering
+  const results = searchResults.map((r) => ({
+    id: r.item.id,
+    name: r.item.name,
+  }));
+
+  // UI state
   const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [isFocused, setIsFocused] = useState(false);
-  const [searchIndex, setSearchIndex] = useState<SearchItem[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const isMac =
     typeof navigator !== 'undefined' && /Mac|iPhone|iPad|iPod/.test(navigator.userAgent);
-
-  // Load search index on mount
-  useEffect(() => {
-    fetch('/search-index.json')
-      .then((res) => res.json())
-      .then((data) => setSearchIndex(data))
-      .catch(() => {});
-  }, []);
-
-  // Filter results based on query
-  const results = useMemo(() => {
-    const q = query.toLowerCase().trim();
-    if (!q) return [];
-    return searchIndex
-      .filter((item) => {
-        return (
-          item.name.ko.toLowerCase().includes(q) ||
-          item.name.en.toLowerCase().includes(q) ||
-          item.id.toLowerCase().includes(q)
-        );
-      })
-      .slice(0, 8);
-  }, [query, searchIndex]);
 
   // Global keyboard shortcuts
   const handleGlobalKeyDown = useCallback((e: KeyboardEvent) => {

@@ -1,10 +1,10 @@
-import { categories } from '@/data/categories';
-import { useI18n } from '@/i18n';
 import { stripLocaleFromPath } from '@soundblue/shared';
 import { cn } from '@soundblue/shared-react';
 import { Home, Info, LayoutGrid, List, MessageCircle, X } from 'lucide-react';
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router';
+import { categories } from '@/data/categories';
+import { useI18n } from '@/i18n';
 
 const stripLocale = stripLocaleFromPath;
 
@@ -49,7 +49,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     <>
       {/* Backdrop (mobile only) */}
       {isOpen && (
-        // biome-ignore lint/a11y/useKeyWithClickEvents: Escape key handled via document listener
         <div
           className="md:hidden fixed inset-0 z-40 bg-black/50 transition-opacity"
           onClick={onClose}
@@ -81,7 +80,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           </button>
         </div>
 
-        <nav className="flex-1 overflow-y-auto py-4">
+        <nav aria-label="Main navigation" className="flex-1 overflow-y-auto py-4">
           {/* Main navigation */}
           <div className="px-3 mb-6">
             <Link

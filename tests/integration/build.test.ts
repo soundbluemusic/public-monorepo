@@ -82,7 +82,8 @@ describe.skipIf(!hasBuild)('SSG Build Verification', () => {
 
     if (fs.existsSync(indexPath)) {
       const content = fs.readFileSync(indexPath, 'utf-8');
-      expect(content).toContain('charset="utf-8"');
+      // React renders charSet (camelCase) but browsers interpret both
+      expect(content.toLowerCase()).toContain('charset="utf-8"');
     }
   });
 

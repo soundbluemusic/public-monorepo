@@ -3,7 +3,7 @@ import {
   DARK_MODE_TOGGLE_SCRIPT,
   getLocaleFromPath,
 } from '@soundblue/shared';
-import { OfflineIndicator } from '@soundblue/shared-react';
+import { ErrorBoundary, OfflineIndicator } from '@soundblue/shared-react';
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLocation } from 'react-router';
 import { I18nProvider } from './i18n';
 import './styles/global.css';
@@ -17,6 +17,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="color-scheme" content="light dark" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#4a9e95" />
@@ -68,8 +69,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   return (
     <I18nProvider>
-      <OfflineIndicator />
-      <Outlet />
+      <ErrorBoundary>
+        <OfflineIndicator />
+        <Outlet />
+      </ErrorBoundary>
     </I18nProvider>
   );
 }

@@ -5,3 +5,8 @@ export {
   type SearchResult,
   useSearchWorker,
 } from './useSearchWorker';
+export {
+  startViewTransition,
+  supportsViewTransitions,
+  useViewTransition,
+} from './useViewTransition';

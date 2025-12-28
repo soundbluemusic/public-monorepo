@@ -1,7 +1,32 @@
 export { DarkModeToggle, type DarkModeToggleProps } from './DarkModeToggle';
+export {
+  ErrorBoundary,
+  type ErrorBoundaryProps,
+  ErrorFallbackUI,
+  RouteErrorFallback,
+} from './ErrorBoundary';
 export { LanguageToggle, type LanguageToggleProps } from './LanguageToggle';
+export {
+  LazyLoad,
+  type LazyLoadProps,
+  LazyLoadSkeleton,
+  LoadingSpinner,
+  lazyWithSuspense,
+  preloadComponent,
+  usePreloadOnVisible,
+} from './LazyLoad';
 export { OfflineIndicator } from './OfflineIndicator';
 export { SearchDropdown, type SearchDropdownProps } from './SearchDropdown';
+export {
+  canShare,
+  copyToClipboard,
+  ShareButton,
+  type ShareButtonProps,
+  type ShareData,
+  share,
+  supportsWebShare,
+  useWebShare,
+} from './ShareButton';
 export {
   PageSkeleton,
   Skeleton,
@@ -10,3 +35,9 @@ export {
   SkeletonList,
   SkeletonText,
 } from './Skeleton';
+export {
+  ViewTransitionButton,
+  type ViewTransitionButtonProps,
+  ViewTransitionLink,
+  type ViewTransitionLinkProps,
+} from './ViewTransitionLink';
