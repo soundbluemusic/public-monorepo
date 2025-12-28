@@ -1,3 +1,4 @@
+import { LIMITS } from '@soundblue/shared';
 import { cn } from '@soundblue/shared-react';
 import { CalendarPlus, Flame, Search, Star } from 'lucide-react';
 import { useMemo, useState } from 'react';
@@ -82,7 +83,7 @@ export default function LibrariesPage() {
     }
 
     // Search filter
-    const q = search.toLowerCase().slice(0, 100);
+    const q = search.toLowerCase().slice(0, LIMITS.SEARCH_LENGTH);
     if (q) {
       filtered = filtered.filter(
         (lib) =>
@@ -350,7 +351,7 @@ export default function LibrariesPage() {
                   </p>
                   {lib.tags && lib.tags.length > 0 && (
                     <div className="flex flex-wrap gap-1 mb-3">
-                      {lib.tags.slice(0, 4).map((tag) => (
+                      {lib.tags.slice(0, LIMITS.TAGS_PREVIEW).map((tag) => (
                         <button
                           type="button"
                           key={tag}

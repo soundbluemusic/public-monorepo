@@ -1,3 +1,4 @@
+import { LIMITS } from '@soundblue/shared';
 import { BookmarkCheck, Calendar, FolderOpen, TrendingUp, Trophy } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import type { MetaFunction } from 'react-router';
@@ -77,7 +78,9 @@ export default function MyLearningPage() {
   }, [entries, cats]);
 
   const favoriteEntries = entries.filter((e) => favoriteIds.includes(e.id));
-  const recentStudied = entries.filter((e) => studiedIds.includes(e.id)).slice(0, 10);
+  const recentStudied = entries
+    .filter((e) => studiedIds.includes(e.id))
+    .slice(0, LIMITS.RECENT_ITEMS_DISPLAY);
   const totalWords = totalEntries;
   const studiedCount = studiedIds.length;
   const progressPercentage = totalWords > 0 ? (studiedCount / totalWords) * 100 : 0;
@@ -201,7 +204,7 @@ export default function MyLearningPage() {
             {locale === 'ko' ? '북마크한 단어' : 'Bookmarked Words'}
           </h2>
           <div className="space-y-1">
-            {favoriteEntries.slice(0, 10).map((entry) => {
+            {favoriteEntries.slice(0, LIMITS.RECENT_ITEMS_DISPLAY).map((entry) => {
               const translation = entry.translations[locale];
               return (
                 <Link

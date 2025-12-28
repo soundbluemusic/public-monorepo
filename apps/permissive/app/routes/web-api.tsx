@@ -1,3 +1,4 @@
+import { LIMITS } from '@soundblue/shared';
 import { cn } from '@soundblue/shared-react';
 import { BarChart2, CalendarPlus, Flame, Search } from 'lucide-react';
 import { useMemo, useState } from 'react';
@@ -78,7 +79,7 @@ export default function WebApiPage() {
     }
 
     // Search filter
-    const q = search.toLowerCase().slice(0, 100);
+    const q = search.toLowerCase().slice(0, LIMITS.SEARCH_LENGTH);
     if (q) {
       filtered = filtered.filter(
         (api) =>

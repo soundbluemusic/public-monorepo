@@ -2,6 +2,7 @@
  * @fileoverview 홈페이지 컴포넌트 - Apple 스타일 미니멀 디자인
  */
 
+import { LIMITS } from '@soundblue/shared';
 import { cn, type SearchResult, useSearchWorker } from '@soundblue/shared-react';
 import { BookOpen, Search } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
@@ -133,7 +134,7 @@ export default function HomePage() {
     indexUrl: '/search-index.json',
     locale,
     debounceMs: 150,
-    maxResults: 8,
+    maxResults: LIMITS.SEARCH_MAX_RESULTS,
   });
 
   const handleResultClick = useCallback(

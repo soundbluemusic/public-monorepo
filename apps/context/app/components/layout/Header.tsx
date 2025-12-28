@@ -1,4 +1,4 @@
-import { stripLocaleFromPath } from '@soundblue/shared';
+import { LIMITS, stripLocaleFromPath } from '@soundblue/shared';
 import { cn, DarkModeToggle, LanguageToggle, useSearchWorker } from '@soundblue/shared-react';
 import { Menu } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
@@ -25,7 +25,7 @@ export function Header({ onMenuClick }: HeaderProps) {
     indexUrl: '/search-index.json',
     locale,
     debounceMs: 150,
-    maxResults: 8,
+    maxResults: LIMITS.SEARCH_MAX_RESULTS,
   });
 
   // Map search results to simple format for rendering
