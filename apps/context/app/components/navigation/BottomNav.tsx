@@ -31,7 +31,7 @@ export function BottomNav() {
         )}
       >
         <Home size={20} aria-hidden="true" />
-        <span className="text-xs">{t('home')}</span>
+        <span className="text-[12px]">{t('home')}</span>
       </Link>
       <Link
         to={localePath('/browse')}
@@ -41,7 +41,7 @@ export function BottomNav() {
         )}
       >
         <Grid3X3 size={20} aria-hidden="true" />
-        <span className="text-xs">{t('browse')}</span>
+        <span className="text-[12px]">{t('browse')}</span>
       </Link>
       <Link
         to={localePath('/conversations')}
@@ -51,7 +51,7 @@ export function BottomNav() {
         )}
       >
         <MessageCircle size={20} aria-hidden="true" />
-        <span className="text-xs">{locale === 'ko' ? '대화' : 'Talk'}</span>
+        <span className="text-[12px]">{locale === 'ko' ? '대화' : 'Talk'}</span>
       </Link>
       <Link
         to={localePath('/my-learning')}
@@ -61,7 +61,7 @@ export function BottomNav() {
         )}
       >
         <LayoutGrid size={20} aria-hidden="true" />
-        <span className="text-xs">{locale === 'ko' ? '학습' : 'Learn'}</span>
+        <span className="text-[12px]">{locale === 'ko' ? '학습' : 'Learn'}</span>
       </Link>
       <Link
         to={localePath('/about')}
@@ -71,7 +71,7 @@ export function BottomNav() {
         )}
       >
         <Info size={20} aria-hidden="true" />
-        <span className="text-xs">{t('about')}</span>
+        <span className="text-[12px]">{t('about')}</span>
       </Link>
     </nav>
   );

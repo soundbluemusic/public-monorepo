@@ -135,9 +135,11 @@ export default function Home() {
     <DocsLayout>
       {/* Hero Section */}
       <div className="text-center py-12 md:py-16">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300 text-sm font-medium mb-6">
-          <Flame size={16} aria-hidden="true" />
-          <span>{locale === 'ko' ? '2025년 최신 기술 업데이트' : '2025 Latest Tech Updated'}</span>
+        <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300 text-xs sm:text-sm font-medium mb-6 max-w-full">
+          <Flame size={16} aria-hidden="true" className="flex-shrink-0" />
+          <span className="truncate">
+            {locale === 'ko' ? '2025년 최신 기술 업데이트' : '2025 Latest Tech Updated'}
+          </span>
         </div>
 
         <h1 className="text-3xl md:text-4xl font-bold text-(--text-primary) mb-4">
@@ -151,7 +153,7 @@ export default function Home() {
         </p>
 
         {/* Stats */}
-        <div className="flex justify-center gap-8 md:gap-12 mb-8">
+        <div className="flex justify-center gap-4 sm:gap-8 md:gap-12 mb-8">
           <div className="text-center">
             <div className="text-2xl md:text-3xl font-bold text-(--accent-primary)">100+</div>
             <div className="text-sm text-(--text-tertiary)">
@@ -326,7 +328,7 @@ export default function Home() {
                 >
                   <span className="text-(--accent-primary)">{api.icon}</span>
                   <div className="flex-1 min-w-0">
-                    <div className="font-medium text-(--text-primary)">{api.name}</div>
+                    <div className="font-medium text-(--text-primary) truncate">{api.name}</div>
                   </div>
                   <ChevronRight
                     size={16}

@@ -168,11 +168,13 @@ export default function Sidebar({
           'fixed top-14 left-0 z-50 h-[calc(100vh-3.5rem)] flex flex-col bg-(--bg-primary) border-r border-(--border-primary) transition-all duration-200',
           isReady && 'ready',
           isMobile && 'z-50',
+          isMobile && !isOpen && 'invisible',
         )}
         style={{
           width: getSidebarWidth(),
           transform: getTransform(),
         }}
+        aria-hidden={isMobile && !isOpen}
         data-mobile-open={isMobile && isOpen ? 'true' : undefined}
       >
         {/* Header */}

@@ -285,9 +285,9 @@ export default function BrowsePage() {
       </div>
 
       {/* Filter & Sort Controls */}
-      <div className="mb-6 flex flex-wrap gap-3">
+      <div className="mb-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {/* Category Filter */}
-        <div className="flex-1 min-w-[200px]">
+        <div>
           <label htmlFor="category-filter" className="block text-sm mb-1 text-(--text-secondary)">
             {locale === 'ko' ? '카테고리' : 'Category'}
           </label>
@@ -311,7 +311,7 @@ export default function BrowsePage() {
         </div>
 
         {/* Status Filter */}
-        <div className="flex-1 min-w-[200px]">
+        <div>
           <label htmlFor="status-filter" className="block text-sm mb-1 text-(--text-secondary)">
             {locale === 'ko' ? '학습 상태' : 'Study Status'}
           </label>
@@ -333,7 +333,7 @@ export default function BrowsePage() {
         </div>
 
         {/* Sort */}
-        <div className="flex-1 min-w-[200px]">
+        <div className="sm:col-span-2 lg:col-span-1">
           <label htmlFor="sort-by" className="block text-sm mb-1 text-(--text-secondary)">
             {locale === 'ko' ? '정렬' : 'Sort By'}
           </label>
