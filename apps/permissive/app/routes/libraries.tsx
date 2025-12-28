@@ -374,6 +374,16 @@ export default function LibrariesPage() {
                     {lib.yearReleased && (
                       <span className="text-(--text-tertiary)">Since {lib.yearReleased}</span>
                     )}
+                    {lib.website && (
+                      <a
+                        href={lib.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-(--accent-primary) hover:underline font-medium"
+                      >
+                        Website
+                      </a>
+                    )}
                     <a
                       href={lib.github}
                       target="_blank"
