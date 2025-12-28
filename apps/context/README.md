@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 [![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?logo=react-router)](https://reactrouter.com)
 [![100% SSG](https://img.shields.io/badge/100%25-SSG-brightgreen)](https://en.wikipedia.org/wiki/Static_site_generator)
-[![SSG Routes](https://img.shields.io/badge/SSG_Routes-348-blue)](react-router.config.ts)
+[![SSG Routes](https://img.shields.io/badge/SSG_Routes-1578-blue)](react-router.config.ts)
 
 **[Live Site](https://context.soundbluemusic.com)**
 
@@ -15,10 +15,10 @@
 
 A Korean dictionary designed for language learners:
 
-- **344 Word Entries** - Organized by category and difficulty
+- **751 Word Entries** - Organized by category and difficulty
 - **Bilingual Support** - Korean ↔ English translations
 - **Romanization** - Pronunciation guides
-- **Categories** - 17 topics (greetings, food, emotions, etc.)
+- **Categories** - 21 topics + 7 conversation categories
 - **Difficulty Levels** - Beginner → Advanced
 
 ---
@@ -30,13 +30,14 @@ A Korean dictionary designed for language learners:
 ```
 react-router.config.ts
 ├── ssr: false
-├── prerender() → 348 static routes generated
+├── prerender() → 1578 static routes generated
 └── loader() functions → .data files for each route
 
 Build output (build/client/):
 ├── index.html, ko/index.html
-├── entry/hello.html, ko/entry/hello.html (×344)
-├── category/greetings.html (×17 categories)
+├── entry/hello.html, ko/entry/hello.html (×751)
+├── category/greetings.html (×21 categories)
+├── conversation/greeting.html (×7 conversations)
 └── *.data files (prerendered loader data)
 ```
 
@@ -59,8 +60,9 @@ Runtime:
 |:------|:--:|:--:|:-------:|:------------|
 | `/` | ✓ | ✓ | - | Home |
 | `/browse` | ✓ | ✓ | - | Browse all entries |
-| `/entry/:entryId` | ✓ | ✓ | 344 | Word entry page |
-| `/category/:categoryId` | ✓ | ✓ | 17 | Category page |
+| `/entry/:entryId` | ✓ | ✓ | 751 | Word entry page |
+| `/category/:categoryId` | ✓ | ✓ | 21 | Category page |
+| `/conversation/:conversationId` | ✓ | ✓ | 7 | Conversation page |
 | `/about` | ✓ | ✓ | - | About |
 | `/my-learning` | ✓ | ✓ | - | Learning progress |
 | `/built-with` | ✓ | ✓ | - | Tech stack |
@@ -68,7 +70,7 @@ Runtime:
 | `/terms` | ✓ | ✓ | - | Terms of service |
 | `/license` | ✓ | ✓ | - | License |
 
-**Total:** 348 SSG routes (174 EN + 174 KO)
+**Total:** 1578 SSG routes (789 EN + 789 KO)
 
 ---
 
@@ -80,7 +82,7 @@ app/data/
 │   ├── greetings.json
 │   ├── food.json
 │   ├── emotions.json
-│   └── ... (17 categories)
+│   └── ... (21 categories)
 ├── categories.ts      # Category definitions
 ├── types.ts           # TypeScript types
 └── entries.legacy.ts  # Legacy data (migration pending)
@@ -170,8 +172,8 @@ pnpm build:context
 
 ```typescript
 // ❌ NEVER - 테스트 통과/에러 회피용
-const ENTRY_COUNT = 344;  // Magic number
-return entries.length || 344;
+const ENTRY_COUNT = 751;  // Magic number
+return entries.length || 751;
 
 // ✅ ALLOWED - 우수한 설계
 export const LIMITS = { ID_LENGTH: 100 } as const;  // Named, documented
