@@ -75,9 +75,12 @@ import { useEffect, useState } from 'react';
  * @see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
  */
 export function useMediaQuery(query: string): boolean {
+  // Start with false for SSR, update after mount to avoid hydration mismatch
   const [matches, setMatches] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const mediaQuery = window.matchMedia(query);
     setMatches(mediaQuery.matches);
 
@@ -89,7 +92,8 @@ export function useMediaQuery(query: string): boolean {
     return () => mediaQuery.removeEventListener('change', handler);
   }, [query]);
 
-  return matches;
+  // Return false during SSR/initial render to match server output
+  return mounted ? matches : false;
 }
 
 /**
