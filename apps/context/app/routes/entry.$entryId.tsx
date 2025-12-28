@@ -4,15 +4,16 @@ import { useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router';
 import { LinkedExample } from '@/components/LinkedExample';
 import { Layout } from '@/components/layout';
-import { getEntryById } from '@/data/entries';
 import type { MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { favorites, studyRecords } from '@/lib/db';
 
 /**
  * Loader: 빌드 시 데이터 로드 (SSG용) - O(1) Map 조회
+ * 동적 import로 번들 크기 최적화 - 빌드 시에만 데이터 로드
  */
 export async function loader({ params }: { params: { entryId: string } }) {
+  const { getEntryById } = await import('@/data/entries');
   const entry = getEntryById(params.entryId);
   return { entry: entry || null };
 }

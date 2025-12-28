@@ -4,15 +4,16 @@ import { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router';
 import { Layout } from '@/components/layout';
 import { getCategoryById } from '@/data/categories';
-import { getEntriesByCategory } from '@/data/entries';
 import type { Category, MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { studyRecords } from '@/lib/db';
 
 /**
  * Loader: 빌드 시 데이터 로드 (SSG용) - O(1) Map 조회
+ * 동적 import로 번들 크기 최적화 - 빌드 시에만 데이터 로드
  */
 export async function loader({ params }: { params: { categoryId: string } }) {
+  const { getEntriesByCategory } = await import('@/data/entries');
   const category = getCategoryById(params.categoryId);
   const entries = getEntriesByCategory(params.categoryId);
   return { category: category || null, entries };

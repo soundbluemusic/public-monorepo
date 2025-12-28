@@ -5,15 +5,16 @@ import type { MetaFunction } from 'react-router';
 import { Link, useLoaderData, useSearchParams } from 'react-router';
 import { Layout } from '@/components/layout';
 import { categories } from '@/data/categories';
-import { meaningEntries } from '@/data/entries';
 import type { MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { favorites, studyRecords } from '@/lib/db';
 
 /**
  * Loader: 빌드 시 데이터 로드 (SSG용)
+ * 동적 import로 번들 크기 최적화 - 빌드 시에만 데이터 로드
  */
 export async function loader() {
+  const { meaningEntries } = await import('@/data/entries');
   return {
     entries: meaningEntries,
     categories,
