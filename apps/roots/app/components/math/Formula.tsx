@@ -70,13 +70,9 @@ export function FormulaList({ formulas, title }: { formulas: FormulaInput[]; tit
       )}
       {formulas.map((formula, index) =>
         typeof formula === 'string' ? (
-          <SimpleFormula key={`formula-${formula.slice(0, 30)}`} formula={formula} />
+          <SimpleFormula key={`formula-str-${index}`} formula={formula} />
         ) : (
-          <FormulaCard
-            key={`formula-${formula.latex.slice(0, 30)}`}
-            formula={formula}
-            index={index}
-          />
+          <FormulaCard key={`formula-obj-${index}`} formula={formula} index={index} />
         ),
       )}
     </div>

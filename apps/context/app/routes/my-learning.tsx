@@ -63,9 +63,12 @@ export default function MyLearningPage() {
       setFavoriteIds(favs.map((f) => f.entryId));
 
       const catProgress: Record<string, { studied: number; total: number }> = {};
+      // 카테고리별 엔트리 ID Set 생성 (O(1) 조회용)
+      const studiedSet = new Set(studied);
       for (const cat of cats) {
         const catEntries = entries.filter((e) => e.categoryId === cat.id);
-        const studiedInCat = studied.filter((id) => id.startsWith(`${cat.id}-`)).length;
+        // 카테고리 엔트리 중 학습된 것 카운트 (ID 패턴 가정 제거)
+        const studiedInCat = catEntries.filter((e) => studiedSet.has(e.id)).length;
         catProgress[cat.id] = { studied: studiedInCat, total: catEntries.length };
       }
       setCategoryProgress(catProgress);
