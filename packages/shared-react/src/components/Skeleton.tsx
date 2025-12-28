@@ -262,7 +262,7 @@ export function SkeletonList({ count = 5, className = '' }: SkeletonListProps) {
     <div className={cn('space-y-3', className)}>
       {Array.from({ length: count }, (_, i) => (
         <div key={`skeleton-list-${i}`} className="flex items-center gap-3">
-          <div className="w-10 h-10 flex-shrink-0 animate-pulse bg-(--bg-tertiary) rounded-full" />
+          <div className="w-10 h-10 shrink-0 animate-pulse bg-(--bg-tertiary) rounded-full" />
           <div className="flex-1 space-y-2">
             <div className="h-4 w-1/3 animate-pulse bg-(--bg-tertiary) rounded" />
             <div className="h-3 w-2/3 animate-pulse bg-(--bg-tertiary) rounded" />

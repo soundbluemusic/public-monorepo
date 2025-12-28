@@ -267,13 +267,13 @@ export default function LibrariesPage() {
                 }
                 setSearchParams(params);
               }}
-              className="w-full min-h-11 pl-10 pr-4 rounded-lg bg-(--bg-elevated) border border-(--border-primary) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none focus:border-(--border-focus) transition-colors"
+              className="w-full min-h-11 pl-10 pr-4 rounded-lg bg-(--bg-elevated) border border-(--border-primary) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-hidden focus:border-(--border-focus) transition-colors"
             />
           </div>
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as SortOption)}
-            className="min-h-11 px-4 rounded-lg bg-(--bg-elevated) border border-(--border-primary) text-(--text-primary) focus:outline-none focus:border-(--border-focus) transition-colors cursor-pointer"
+            className="min-h-11 px-4 rounded-lg bg-(--bg-elevated) border border-(--border-primary) text-(--text-primary) focus:outline-hidden focus:border-(--border-focus) transition-colors cursor-pointer"
           >
             <option value="stars">{locale === 'ko' ? '인기순' : 'Most Popular'}</option>
             <option value="newest">{locale === 'ko' ? '최신순' : 'Newest First'}</option>
@@ -373,6 +373,16 @@ export default function LibrariesPage() {
                     </span>
                     {lib.yearReleased && (
                       <span className="text-(--text-tertiary)">Since {lib.yearReleased}</span>
+                    )}
+                    {lib.website && (
+                      <a
+                        href={lib.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-(--accent-primary) hover:underline font-medium"
+                      >
+                        Website
+                      </a>
                     )}
                     <a
                       href={lib.github}

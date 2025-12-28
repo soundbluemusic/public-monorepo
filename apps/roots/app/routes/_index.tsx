@@ -230,7 +230,7 @@ export default function HomePage() {
               }}
               onFocus={() => setShowResults(true)}
               onKeyDown={handleKeyDown}
-              className="w-full min-h-12 pl-11 pr-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none focus:border-(--border-focus) transition-colors [&::-webkit-search-cancel-button]:hidden"
+              className="w-full min-h-12 pl-11 pr-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-hidden focus:border-(--border-focus) transition-colors [&::-webkit-search-cancel-button]:hidden"
               aria-expanded={showResults && results.length > 0}
               aria-haspopup="listbox"
               aria-controls={listboxId}

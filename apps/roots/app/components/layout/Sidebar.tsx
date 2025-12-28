@@ -21,7 +21,7 @@ export function Sidebar() {
   };
 
   return (
-    <aside className="hidden lg:block sticky top-14 left-0 h-[calc(100vh-3.5rem)] w-64 overflow-y-auto flex-shrink-0 bg-(--bg-primary) border-r border-(--border-primary)">
+    <aside className="hidden lg:block sticky top-14 left-0 h-[calc(100vh-3.5rem)] w-64 overflow-y-auto shrink-0 bg-(--bg-primary) border-r border-(--border-primary)">
       <nav aria-label="Math fields" className="p-4 flex flex-col gap-1">
         <div className="mb-4 pb-4 border-b border-(--border-primary)">
           <h2 className="text-xs font-semibold uppercase tracking-wider text-(--text-tertiary) m-0">
@@ -40,7 +40,7 @@ export function Sidebar() {
                 : 'text-(--text-secondary) hover:translate-x-1',
             )}
           >
-            <span className="text-xl flex-shrink-0">{field.icon}</span>
+            <span className="text-xl shrink-0">{field.icon}</span>
             <div className="flex-1 min-w-0">
               <div
                 className={cn(
@@ -52,7 +52,7 @@ export function Sidebar() {
               </div>
             </div>
             {isActive(field.id) && (
-              <div className="w-1 h-6 rounded-full flex-shrink-0 bg-(--accent-primary)" />
+              <div className="w-1 h-6 rounded-full shrink-0 bg-(--accent-primary)" />
             )}
           </Link>
         ))}

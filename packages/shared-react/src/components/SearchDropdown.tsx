@@ -193,7 +193,7 @@ export function SearchDropdown({
           className={cn(
             'w-full h-9 max-md:h-10 text-sm',
             'pl-9 pr-10',
-            'rounded-xl outline-none',
+            'rounded-xl outline-hidden',
             'transition-[border-color,background-color] duration-150',
             '[&::-webkit-search-cancel-button]:hidden',
             'text-(--text-primary) placeholder:text-(--text-tertiary)',
