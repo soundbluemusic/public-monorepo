@@ -319,18 +319,26 @@ test.describe('Cross-App Responsive Checks', () => {
       await page.goto(app.url);
 
       // 텍스트가 화면 밖으로 나가지 않는지 확인
-      const hasOverflow = await page.evaluate(() => {
+      const overflowElements = await page.evaluate(() => {
         const elements = document.querySelectorAll('p, h1, h2, h3, span, a');
+        const results: { tag: string; text: string; right: number }[] = [];
         for (const el of elements) {
           const rect = el.getBoundingClientRect();
           if (rect.right > window.innerWidth + 5) {
-            return true;
+            results.push({
+              tag: el.tagName,
+              text: el.textContent?.slice(0, 50) || '',
+              right: Math.round(rect.right),
+            });
           }
         }
-        return false;
+        return results;
       });
 
-      expect(hasOverflow).toBe(false);
+      expect(
+        overflowElements,
+        `Found ${overflowElements.length} overflowing elements:\n${overflowElements.map((e) => `${e.tag}: "${e.text}" (right: ${e.right}px)`).join('\n')}`,
+      ).toHaveLength(0);
     });
 
     test(`${app.name} - Font sizes are readable on mobile`, async ({ page }) => {

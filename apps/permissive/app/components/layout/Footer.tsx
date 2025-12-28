@@ -18,7 +18,7 @@ export default function Footer() {
           </Link>
         </nav>
 
-        <div className="flex items-center justify-center gap-4 text-sm text-(--text-tertiary)">
+        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-(--text-tertiary)">
           <div className="flex items-center gap-1.5">
             <Sparkles size={16} aria-hidden="true" />
             <span>{t('ui.permissiveBy')}</span>
