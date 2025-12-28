@@ -1,5 +1,5 @@
 import { LIMITS } from '@soundblue/shared';
-import { cn } from '@soundblue/shared-react';
+import { cn, useAutoAnimate } from '@soundblue/shared-react';
 import { BarChart2, CalendarPlus, Flame, Search } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import type { MetaFunction } from 'react-router';
@@ -144,6 +144,10 @@ export default function WebApiPage() {
     setSearchParams({});
   };
 
+  // Auto-animate for API grid
+  const [apiGridRef] = useAutoAnimate<HTMLDivElement>();
+  const [quickFiltersRef] = useAutoAnimate<HTMLDivElement>();
+
   return (
     <DocsLayout>
       {/* Header */}
@@ -156,8 +160,8 @@ export default function WebApiPage() {
         </p>
       </div>
 
-      {/* Quick Filters */}
-      <div className="flex flex-wrap gap-2 mb-4">
+      {/* Quick Filters - with auto-animate */}
+      <div ref={quickFiltersRef} className="flex flex-wrap gap-2 mb-4">
         <button
           type="button"
           onClick={() => handleQuickFilter('trending')}
@@ -278,8 +282,8 @@ export default function WebApiPage() {
         {filteredApis.length} {locale === 'ko' ? '개의 API' : 'APIs'}
       </div>
 
-      {/* API List */}
-      <div className="space-y-8">
+      {/* API List - with auto-animate */}
+      <div ref={apiGridRef} className="space-y-8">
         {Object.entries(groupedApis).map(([categoryName, categoryApis]) => (
           <section key={categoryName}>
             <h2 className="text-lg font-semibold text-(--text-primary) mb-4">{categoryName}</h2>

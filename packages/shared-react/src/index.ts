@@ -62,6 +62,24 @@ export {
   type ViewTransitionLinkProps,
 } from './components';
 
+// UI Components (shadcn/ui style)
+export {
+  Button,
+  type ButtonProps,
+  buttonVariants,
+} from './components/ui/button';
+export {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from './components/ui/dialog';
+export { Input, type InputProps } from './components/ui/input';
+export { Label } from './components/ui/label';
+export { FadeIn, Pressable, ScaleIn, SlideUp, Stagger } from './components/ui/motion';
+export { VirtualList, type VirtualListProps } from './components/ui/virtual-list';
+
 // Hooks
 export {
   type SearchIndexItem,
@@ -75,6 +93,7 @@ export {
   useSearchWorker,
   useViewTransition,
 } from './hooks';
+export { useAutoAnimate } from './hooks/useAutoAnimate';
 // Stores
 export { useSettingsStore } from './stores';
 

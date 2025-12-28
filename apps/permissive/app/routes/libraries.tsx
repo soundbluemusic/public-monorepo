@@ -1,5 +1,5 @@
 import { LIMITS } from '@soundblue/shared';
-import { cn } from '@soundblue/shared-react';
+import { cn, FadeIn, useAutoAnimate } from '@soundblue/shared-react';
 import { CalendarPlus, Flame, Search, Star } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import type { MetaFunction } from 'react-router';
@@ -159,20 +159,26 @@ export default function LibrariesPage() {
     setSearchParams({});
   };
 
+  // Auto-animate for library grid
+  const [libraryGridRef] = useAutoAnimate<HTMLDivElement>();
+  const [quickFiltersRef] = useAutoAnimate<HTMLDivElement>();
+
   return (
     <DocsLayout>
-      {/* Header */}
-      <div className="mb-6">
-        <h1 className="text-2xl font-bold text-(--text-primary) mb-2">Libraries</h1>
-        <p className="text-(--text-secondary)">
-          {locale === 'ko'
-            ? 'MIT 라이센스 오픈소스. 상업적 사용 가능'
-            : 'MIT licensed open source. Free for commercial use'}
-        </p>
-      </div>
+      {/* Header - with fade in animation */}
+      <FadeIn>
+        <div className="mb-6">
+          <h1 className="text-2xl font-bold text-(--text-primary) mb-2">Libraries</h1>
+          <p className="text-(--text-secondary)">
+            {locale === 'ko'
+              ? 'MIT 라이센스 오픈소스. 상업적 사용 가능'
+              : 'MIT licensed open source. Free for commercial use'}
+          </p>
+        </div>
+      </FadeIn>
 
-      {/* Quick Filters */}
-      <div className="flex flex-wrap gap-2 mb-4">
+      {/* Quick Filters - with auto-animate */}
+      <div ref={quickFiltersRef} className="flex flex-wrap gap-2 mb-4">
         <button
           type="button"
           onClick={() => handleQuickFilter('trending')}
@@ -315,8 +321,8 @@ export default function LibrariesPage() {
         {filteredLibraries.length} {locale === 'ko' ? '개의 라이브러리' : 'libraries'}
       </div>
 
-      {/* Library List */}
-      <div className="space-y-8">
+      {/* Library List - with auto-animate */}
+      <div ref={libraryGridRef} className="space-y-8">
         {Object.entries(groupedLibraries).map(([categoryName, categoryLibs]) => (
           <section key={categoryName}>
             <h2 className="text-lg font-semibold text-(--text-primary) mb-4">{categoryName}</h2>

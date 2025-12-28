@@ -1,6 +1,6 @@
-import { cn } from '@soundblue/shared-react';
+import { cn, useAutoAnimate, VirtualList } from '@soundblue/shared-react';
 import { Check } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router';
 import { Layout } from '@/components/layout';
 import { getCategoryById } from '@/data/categories';
@@ -58,9 +58,12 @@ export default function CategoryPage() {
 
   const studiedCount = entries.filter((e) => studiedIds.has(e.id)).length;
 
+  // Auto-animate for header section
+  const [headerRef] = useAutoAnimate<HTMLDivElement>();
+
   return (
     <Layout>
-      <div className="mb-8">
+      <div ref={headerRef} className="mb-8">
         <div className="flex items-center gap-3 mb-2">
           <span className="text-3xl">{category.icon}</span>
           <h1 className="text-2xl font-semibold text-(--text-primary)">{category.name[locale]}</h1>
@@ -80,51 +83,58 @@ export default function CategoryPage() {
         )}
       </div>
 
-      <div className="space-y-1">
-        {entries.map((entry) => {
-          const translation = entry.translations[locale];
-          const isStudied = studiedIds.has(entry.id);
+      {/* VirtualList for category entries */}
+      <VirtualList
+        items={entries}
+        estimateSize={52}
+        className="h-150"
+        overscan={5}
+        renderItem={useCallback(
+          (entry: MeaningEntry) => {
+            const translation = entry.translations[locale];
+            const isStudied = studiedIds.has(entry.id);
 
-          return (
-            <Link
-              key={entry.id}
-              to={localePath(`/entry/${entry.id}`)}
-              className="flex items-center justify-between py-3 px-2 -mx-2 rounded-lg border-b border-(--border-primary) transition-colors no-underline hover:bg-(--bg-tertiary)"
-            >
-              <div className="flex items-center gap-3 flex-1 min-w-0">
-                {/* Checkmark */}
-                <div
-                  className={cn(
-                    'w-5 h-5 rounded-full flex items-center justify-center shrink-0',
-                    isStudied ? 'bg-(--accent-primary)' : '',
-                  )}
-                >
-                  {isStudied && <Check size={14} className="text-white" />}
-                </div>
-
-                {/* Word info */}
+            return (
+              <Link
+                to={localePath(`/entry/${entry.id}`)}
+                className="flex items-center justify-between py-3 px-2 rounded-lg border-b border-(--border-primary) transition-colors no-underline hover:bg-(--bg-tertiary)"
+              >
                 <div className="flex items-center gap-3 flex-1 min-w-0">
-                  <span
+                  {/* Checkmark */}
+                  <div
                     className={cn(
-                      'text-lg font-medium',
-                      isStudied
-                        ? 'text-(--text-secondary) line-through opacity-70'
-                        : 'text-(--text-primary)',
+                      'w-5 h-5 rounded-full flex items-center justify-center shrink-0',
+                      isStudied ? 'bg-(--accent-primary)' : '',
                     )}
                   >
-                    {entry.korean}
-                  </span>
-                  <span className="text-sm text-(--text-tertiary)">{entry.romanization}</span>
-                </div>
-              </div>
+                    {isStudied && <Check size={14} className="text-white" />}
+                  </div>
 
-              <span className="text-sm text-(--text-secondary) shrink-0 ml-2">
-                {translation.word}
-              </span>
-            </Link>
-          );
-        })}
-      </div>
+                  {/* Word info */}
+                  <div className="flex items-center gap-3 flex-1 min-w-0">
+                    <span
+                      className={cn(
+                        'text-lg font-medium',
+                        isStudied
+                          ? 'text-(--text-secondary) line-through opacity-70'
+                          : 'text-(--text-primary)',
+                      )}
+                    >
+                      {entry.korean}
+                    </span>
+                    <span className="text-sm text-(--text-tertiary)">{entry.romanization}</span>
+                  </div>
+                </div>
+
+                <span className="text-sm text-(--text-secondary) shrink-0 ml-2">
+                  {translation.word}
+                </span>
+              </Link>
+            );
+          },
+          [locale, studiedIds, localePath],
+        )}
+      />
 
       {entries.length === 0 && (
         <p className="text-center py-12 px-4 text-(--text-tertiary)">{t('noCategoryWords')}</p>

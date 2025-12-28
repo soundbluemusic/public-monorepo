@@ -3,7 +3,7 @@
  */
 
 import { LIMITS } from '@soundblue/shared';
-import { cn, type SearchResult, useSearchWorker } from '@soundblue/shared-react';
+import { cn, type SearchResult, useAutoAnimate, useSearchWorker } from '@soundblue/shared-react';
 import { BookOpen, Search } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { MetaFunction } from 'react-router';
@@ -200,6 +200,9 @@ export default function HomePage() {
     preloadSearchIndex();
   }, []);
 
+  // Auto-animate for featured concepts grid
+  const [featuredGridRef] = useAutoAnimate<HTMLDivElement>();
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -305,7 +308,7 @@ export default function HomePage() {
         <h2 id="featured-concepts-heading" className="sr-only">
           {locale === 'ko' ? '주요 개념' : 'Featured Concepts'}
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div ref={featuredGridRef} className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {FEATURED_CONCEPTS.map((concept) => (
             <Link
               key={concept.id}

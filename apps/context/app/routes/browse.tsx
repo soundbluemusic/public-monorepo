@@ -1,6 +1,6 @@
-import { cn } from '@soundblue/shared-react';
+import { cn, useAutoAnimate, VirtualList } from '@soundblue/shared-react';
 import { Check, Shuffle, Star } from 'lucide-react';
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import type { MetaFunction } from 'react-router';
 import { Link, useLoaderData, useSearchParams } from 'react-router';
 import { Layout } from '@/components/layout';
@@ -200,6 +200,9 @@ export default function BrowsePage() {
     updateUrlParams({ status: 'unstudied', category: null });
   };
 
+  // Auto-animate for stats grid
+  const [statsRef] = useAutoAnimate<HTMLDivElement>();
+
   return (
     <Layout>
       {/* Header */}
@@ -212,8 +215,8 @@ export default function BrowsePage() {
         </p>
       </div>
 
-      {/* Quick Stats */}
-      <div className="mb-6 grid gap-4 sm:grid-cols-3">
+      {/* Quick Stats - with auto-animate */}
+      <div ref={statsRef} className="mb-6 grid gap-4 sm:grid-cols-3">
         <div className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
           <div className="text-sm text-(--text-tertiary) mb-1">
             {locale === 'ko' ? '전체 진행률' : 'Overall Progress'}
@@ -364,71 +367,78 @@ export default function BrowsePage() {
         </p>
       </div>
 
-      {/* Word List */}
-      <div className="space-y-1" key={`${filterCategory}-${filterStatus}-${sortBy}`}>
-        {filteredEntries.map((entry) => {
-          const translation = entry.translations[locale];
-          const isStudied = studiedIds.has(entry.id);
-          const isFavorite = favoriteIds.has(entry.id);
-          const category = cats.find((c) => c.id === entry.categoryId);
+      {/* Word List - VirtualList for 751+ items */}
+      <VirtualList
+        key={`${filterCategory}-${filterStatus}-${sortBy}`}
+        items={filteredEntries}
+        estimateSize={52}
+        className="h-150"
+        overscan={5}
+        renderItem={useCallback(
+          (entry: MeaningEntry) => {
+            const translation = entry.translations[locale];
+            const isStudied = studiedIds.has(entry.id);
+            const isFavorite = favoriteIds.has(entry.id);
+            const category = cats.find((c) => c.id === entry.categoryId);
 
-          return (
-            <Link
-              key={entry.id}
-              to={localePath(`/entry/${entry.id}`)}
-              className="flex items-center justify-between py-3 px-2 -mx-2 rounded-lg border-b border-(--border-primary) transition-colors no-underline hover:bg-(--bg-tertiary)"
-            >
-              <div className="flex items-center gap-3 flex-1 min-w-0">
-                {/* Checkmark */}
-                <div
-                  className={cn(
-                    'w-5 h-5 rounded-full flex items-center justify-center shrink-0',
-                    isStudied ? 'bg-(--accent-primary)' : '',
-                  )}
-                >
-                  {isStudied && <Check size={14} className="text-white" />}
-                </div>
-
-                {/* Word info */}
+            return (
+              <Link
+                to={localePath(`/entry/${entry.id}`)}
+                className="flex items-center justify-between py-3 px-2 rounded-lg border-b border-(--border-primary) transition-colors no-underline hover:bg-(--bg-tertiary)"
+              >
                 <div className="flex items-center gap-3 flex-1 min-w-0">
-                  <span
+                  {/* Checkmark */}
+                  <div
                     className={cn(
-                      'text-lg font-medium',
-                      isStudied
-                        ? 'text-(--text-secondary) line-through opacity-70'
-                        : 'text-(--text-primary)',
+                      'w-5 h-5 rounded-full flex items-center justify-center shrink-0',
+                      isStudied ? 'bg-(--accent-primary)' : '',
                     )}
                   >
-                    {entry.korean}
-                  </span>
-                  <span className="text-sm text-(--text-tertiary) hidden sm:inline">
-                    {entry.romanization}
-                  </span>
+                    {isStudied && <Check size={14} className="text-white" />}
+                  </div>
+
+                  {/* Word info */}
+                  <div className="flex items-center gap-3 flex-1 min-w-0">
+                    <span
+                      className={cn(
+                        'text-lg font-medium',
+                        isStudied
+                          ? 'text-(--text-secondary) line-through opacity-70'
+                          : 'text-(--text-primary)',
+                      )}
+                    >
+                      {entry.korean}
+                    </span>
+                    <span className="text-sm text-(--text-tertiary) hidden sm:inline">
+                      {entry.romanization}
+                    </span>
+                  </div>
                 </div>
-              </div>
 
-              <div className="flex items-center gap-3 shrink-0">
-                {/* Category badge (desktop only) */}
-                {category && (
-                  <span className="hidden md:inline px-2.5 py-0.5 rounded-full text-xs font-medium bg-(--bg-secondary) text-(--text-tertiary)">
-                    {category.icon} {category.name[locale]}
-                  </span>
-                )}
+                <div className="flex items-center gap-3 shrink-0">
+                  {/* Category badge (desktop only) */}
+                  {category && (
+                    <span className="hidden md:inline px-2.5 py-0.5 rounded-full text-xs font-medium bg-(--bg-secondary) text-(--text-tertiary)">
+                      {category.icon} {category.name[locale]}
+                    </span>
+                  )}
 
-                {/* Translation */}
-                <span className="text-sm text-(--text-secondary) ml-2">{translation.word}</span>
+                  {/* Translation */}
+                  <span className="text-sm text-(--text-secondary) ml-2">{translation.word}</span>
 
-                {/* Bookmark indicator */}
-                {isFavorite && (
-                  <span className="text-sm" title={locale === 'ko' ? '북마크됨' : 'Bookmarked'}>
-                    <Star size={14} aria-hidden="true" fill="currentColor" />
-                  </span>
-                )}
-              </div>
-            </Link>
-          );
-        })}
-      </div>
+                  {/* Bookmark indicator */}
+                  {isFavorite && (
+                    <span className="text-sm" title={locale === 'ko' ? '북마크됨' : 'Bookmarked'}>
+                      <Star size={14} aria-hidden="true" fill="currentColor" />
+                    </span>
+                  )}
+                </div>
+              </Link>
+            );
+          },
+          [locale, studiedIds, favoriteIds, cats, localePath],
+        )}
+      />
 
       {filteredEntries.length === 0 && (
         <div className="text-center py-12 px-4 text-(--text-tertiary)">

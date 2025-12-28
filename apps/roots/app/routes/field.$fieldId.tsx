@@ -2,6 +2,7 @@
  * @fileoverview 분야 상세 페이지
  */
 
+import { useAutoAnimate } from '@soundblue/shared-react';
 import { Link, useLoaderData, useParams } from 'react-router';
 import { ConceptCard } from '@/components/concept/ConceptCard';
 import { Layout } from '@/components/layout/Layout';
@@ -29,6 +30,10 @@ export default function FieldPage() {
 
   const field = getFieldById(params.fieldId ?? '');
   const subfields = getSubfieldsByParent(params.fieldId || '');
+
+  // Auto-animate for subfields and concepts grids
+  const [subfieldsRef] = useAutoAnimate<HTMLDivElement>();
+  const [conceptsRef] = useAutoAnimate<HTMLDivElement>();
 
   if (!field) {
     return (
@@ -83,7 +88,7 @@ export default function FieldPage() {
         <h2 className="text-xl font-semibold text-(--text-primary) mb-4">{t('subfields')}</h2>
 
         {subfields.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div ref={subfieldsRef} className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {subfields.map((subfield) => (
               <Link
                 key={subfield.id}
@@ -108,7 +113,7 @@ export default function FieldPage() {
       {concepts.length > 0 && (
         <section className="mt-8">
           <h2 className="text-xl font-semibold text-(--text-primary) mb-4">{t('concepts')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div ref={conceptsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {concepts.map((concept) => (
               <ConceptCard key={concept.id} concept={concept} />
             ))}

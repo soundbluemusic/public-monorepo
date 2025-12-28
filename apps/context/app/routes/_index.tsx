@@ -1,3 +1,4 @@
+import { FadeIn, useAutoAnimate } from '@soundblue/shared-react';
 import { FolderOpen, Sparkles, TrendingUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import type { MetaFunction } from 'react-router';
@@ -98,15 +99,20 @@ export default function HomePage() {
     loadProgress();
   }, [cats, categoryCounts, totalEntries]);
 
+  // Auto-animate for categories grid
+  const [categoriesRef] = useAutoAnimate<HTMLDivElement>();
+
   return (
     <Layout>
-      {/* Hero Section */}
-      <div className="mb-8">
-        <h1 className="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">
-          {t('heroTitle')}
-        </h1>
-        <p className="text-(--text-secondary)">{t('heroSubtitle')}</p>
-      </div>
+      {/* Hero Section - with fade in animation */}
+      <FadeIn>
+        <div className="mb-8">
+          <h1 className="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">
+            {t('heroTitle')}
+          </h1>
+          <p className="text-(--text-secondary)">{t('heroSubtitle')}</p>
+        </div>
+      </FadeIn>
 
       {/* Overall Progress */}
       {overallProgress.studied > 0 && (
@@ -165,7 +171,7 @@ export default function HomePage() {
           </Link>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div ref={categoriesRef} className="grid gap-4 sm:grid-cols-2">
           {cats.map((category) => {
             const count = categoryCounts[category.id];
             const progress = categoryProgress[category.id] || {
