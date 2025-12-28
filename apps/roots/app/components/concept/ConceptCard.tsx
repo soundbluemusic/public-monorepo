@@ -1,6 +1,7 @@
 /**
  * @fileoverview 개념 미리보기 카드 컴포넌트
  */
+import { memo, useMemo } from 'react';
 import { Link } from 'react-router';
 import { DifficultyBadge } from '@/components/ui/DifficultyBadge';
 import { getFieldById } from '@/data/fields';
@@ -13,11 +14,13 @@ interface ConceptCardProps {
 
 /**
  * 개념을 카드 형태로 미리보기
+ * memo로 감싸서 불필요한 리렌더링 방지
  */
-export function ConceptCard({ concept }: ConceptCardProps) {
+export const ConceptCard = memo(function ConceptCard({ concept }: ConceptCardProps) {
   const { locale, localePath } = useI18n();
 
-  const field = getFieldById(concept.field);
+  // getFieldById 결과를 memoize
+  const field = useMemo(() => getFieldById(concept.field), [concept.field]);
   const name = concept.name[locale] || concept.name.en;
   const definition = (() => {
     const content = concept.content[locale] || concept.content.en;
@@ -48,7 +51,7 @@ export function ConceptCard({ concept }: ConceptCardProps) {
       </div>
     </Link>
   );
-}
+});
 
 /**
  * 개념 카드 그리드

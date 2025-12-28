@@ -1,12 +1,26 @@
+import { LIMITS } from '@soundblue/shared';
 import { BookmarkCheck, Calendar, FolderOpen, TrendingUp, Trophy } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import type { MetaFunction } from 'react-router';
-import { Link } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 import { Layout } from '@/components/layout';
 import { categories } from '@/data/categories';
-import { meaningEntries } from '@/data/entries';
+import type { MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { favorites, studyRecords } from '@/lib/db';
+
+/**
+ * Loader: 빌드 시 데이터 로드 (SSG용)
+ * 동적 import로 번들 크기 최적화 - 빌드 시에만 데이터 로드
+ */
+export async function loader() {
+  const { meaningEntries } = await import('@/data/entries');
+  return {
+    entries: meaningEntries,
+    categories,
+    totalEntries: meaningEntries.length,
+  };
+}
 
 export const meta: MetaFunction = ({ location }) => {
   const isKorean = location.pathname.startsWith('/ko');
@@ -25,6 +39,15 @@ export const meta: MetaFunction = ({ location }) => {
 };
 
 export default function MyLearningPage() {
+  const {
+    entries,
+    categories: cats,
+    totalEntries,
+  } = useLoaderData<{
+    entries: MeaningEntry[];
+    categories: typeof categories;
+    totalEntries: number;
+  }>();
   const { locale, localePath } = useI18n();
   const [studiedIds, setStudiedIds] = useState<string[]>([]);
   const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
@@ -41,25 +64,31 @@ export default function MyLearningPage() {
       setFavoriteIds(favs.map((f) => f.entryId));
 
       const catProgress: Record<string, { studied: number; total: number }> = {};
-      for (const cat of categories) {
-        const entries = meaningEntries.filter((e) => e.categoryId === cat.id);
-        const studiedInCat = studied.filter((id) => id.startsWith(`${cat.id}-`)).length;
-        catProgress[cat.id] = { studied: studiedInCat, total: entries.length };
+      // 카테고리별 엔트리 ID Set 생성 (O(1) 조회용)
+      const studiedSet = new Set(studied);
+      for (const cat of cats) {
+        const catEntries = entries.filter((e) => e.categoryId === cat.id);
+        // 카테고리 엔트리 중 학습된 것 카운트 (ID 패턴 가정 제거)
+        const studiedInCat = catEntries.filter((e) => studiedSet.has(e.id)).length;
+        catProgress[cat.id] = { studied: studiedInCat, total: catEntries.length };
       }
       setCategoryProgress(catProgress);
     }
     loadData();
-  }, []);
+  }, [entries, cats]);
 
-  const favoriteEntries = meaningEntries.filter((e) => favoriteIds.includes(e.id));
-  const recentStudied = meaningEntries.filter((e) => studiedIds.includes(e.id)).slice(0, 10);
-  const totalWords = meaningEntries.length;
+  const favoriteEntries = entries.filter((e) => favoriteIds.includes(e.id));
+  const recentStudied = entries
+    .filter((e) => studiedIds.includes(e.id))
+    .slice(0, LIMITS.RECENT_ITEMS_DISPLAY);
+  const totalWords = totalEntries;
   const studiedCount = studiedIds.length;
   const progressPercentage = totalWords > 0 ? (studiedCount / totalWords) * 100 : 0;
 
   const completedCategories = Object.values(categoryProgress).filter(
     (p) => p.studied > 0 && p.studied === p.total,
   ).length;
+  const totalCategories = cats.length;
 
   return (
     <Layout>
@@ -106,7 +135,7 @@ export default function MyLearningPage() {
             </h3>
           </div>
           <p className="text-2xl font-bold text-(--text-primary)">
-            {completedCategories}/{categories.length}
+            {completedCategories}/{totalCategories}
           </p>
           <p className="text-xs text-(--text-tertiary)">
             {locale === 'ko' ? '카테고리' : 'categories'}
@@ -135,7 +164,7 @@ export default function MyLearningPage() {
           {locale === 'ko' ? '카테고리별 진행도' : 'Progress by Category'}
         </h2>
         <div className="space-y-3">
-          {categories.map((category) => {
+          {cats.map((category) => {
             const progress = categoryProgress[category.id] || { studied: 0, total: 0 };
             const percentage = progress.total > 0 ? (progress.studied / progress.total) * 100 : 0;
 
@@ -175,7 +204,7 @@ export default function MyLearningPage() {
             {locale === 'ko' ? '북마크한 단어' : 'Bookmarked Words'}
           </h2>
           <div className="space-y-1">
-            {favoriteEntries.slice(0, 10).map((entry) => {
+            {favoriteEntries.slice(0, LIMITS.RECENT_ITEMS_DISPLAY).map((entry) => {
               const translation = entry.translations[locale];
               return (
                 <Link

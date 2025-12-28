@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 [![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?logo=react-router)](https://reactrouter.com)
 [![100% SSG](https://img.shields.io/badge/100%25-SSG-brightgreen)](https://en.wikipedia.org/wiki/Static_site_generator)
-[![SSG Routes](https://img.shields.io/badge/SSG_Routes-7-blue)](react-router.config.ts)
+[![SSG Routes](https://img.shields.io/badge/SSG_Routes-8-blue)](react-router.config.ts)
 
 **[Live Site](https://permissive.soundbluemusic.com)**
 
@@ -28,7 +28,7 @@ A comprehensive collection of free web development resources:
 ```
 react-router.config.ts
 ├── ssr: false
-├── prerender() → 7 static routes (hardcoded)
+├── prerender() → 8 static routes (hardcoded)
 └── loader() functions → .data files for each route
 
 Build output (build/client/):
@@ -60,7 +60,7 @@ This is a known architectural inconsistency. See [CODE_DUPLICATION_REPORT.md](..
 | `/web-api` | ✓ | ✓ | Web Standard APIs (58 items) |
 | `/libraries` | ✓ | ✓ | MIT Libraries (100+ items) |
 
-**Total:** 7 SSG routes (including `/ko` variants)
+**Total:** 8 SSG routes (including `/ko` variants)
 
 ---
 
@@ -96,7 +96,7 @@ const webApis: Record<string, WebApi> = {
 
 | Feature | Context | Roots | Permissive |
 |:--------|:-------:|:-----:|:----------:|
-| SSG Routes | 348 | 70 | 7 |
+| SSG Routes | 1578 | 878 | 8 |
 | Search | ✓ useMemo | ✓ Fuse.js | ❌ |
 | Favorites | ✓ | ✓ | ❌ |
 | Back to Top | ✓ | ✓ | ❌ |

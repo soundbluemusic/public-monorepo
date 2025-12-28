@@ -23,9 +23,17 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  // 스크롤 이벤트 throttling (requestAnimationFrame 사용)
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setShowBackToTop(window.scrollY > 300);
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          setShowBackToTop(window.scrollY > 300);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);

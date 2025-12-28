@@ -4,7 +4,6 @@ import type { MetaFunction } from 'react-router';
 import { Link, useLoaderData } from 'react-router';
 import { Layout } from '@/components/layout';
 import { categories } from '@/data/categories';
-import { meaningEntries } from '@/data/entries';
 import type { Category, MeaningEntry } from '@/data/types';
 import { type Language, useI18n } from '@/i18n';
 import { studyRecords } from '@/lib/db';
@@ -20,8 +19,11 @@ const getPronunciation = (entry: MeaningEntry, locale: Language): string | undef
 
 /**
  * Loader: 빌드 시 데이터 로드 (SSG용)
+ * 동적 import로 번들 크기 최적화 - 빌드 시에만 데이터 로드
  */
 export async function loader() {
+  const { meaningEntries } = await import('@/data/entries');
+
   // 오늘의 단어 계산 (빌드 시점)
   const today = new Date();
   const dayOfYear = Math.floor(

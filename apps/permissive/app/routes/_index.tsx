@@ -1,3 +1,4 @@
+import { LIMITS } from '@soundblue/shared';
 import { cn, type SearchResult, useSearchWorker } from '@soundblue/shared-react';
 import {
   ChevronRight,
@@ -66,7 +67,7 @@ export default function Home() {
     indexUrl: '/search-index.json',
     locale,
     debounceMs: 150,
-    maxResults: 8,
+    maxResults: LIMITS.SEARCH_MAX_RESULTS,
   });
 
   const handleResultClick = useCallback(

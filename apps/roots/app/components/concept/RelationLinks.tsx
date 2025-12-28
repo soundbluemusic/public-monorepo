@@ -1,18 +1,19 @@
 /**
  * @fileoverview 연관 문서 링크 컴포넌트
- * 클라이언트 사이드에서 concept-names.json을 fetch하여 이름 표시
+ * 빌드 시 loader에서 전달받은 concept names 사용 (SSG 최적화)
  */
 
 import { Link2 } from 'lucide-react';
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router';
 import type { ConceptRelations } from '@/data/types';
 import { useI18n } from '@/i18n';
 
-type ConceptNames = Record<string, { ko: string; en: string }>;
+export type ConceptNames = Record<string, { ko: string; en: string }>;
 
 interface RelationLinksProps {
   relations: ConceptRelations;
+  /** Concept names loaded at build time from loader */
+  names: ConceptNames;
 }
 
 interface RelationSectionProps {
@@ -66,19 +67,10 @@ function RelationSection({ title, icon, ids, type, names }: RelationSectionProps
 
 /**
  * 연관 문서 링크 섹션
- * 클라이언트 사이드에서 이름을 로드하여 hydration 데이터 최소화
+ * 빌드 시 loader에서 전달받은 names 사용 (SSG 최적화)
  */
-export function RelationLinks({ relations }: RelationLinksProps) {
+export function RelationLinks({ relations, names }: RelationLinksProps) {
   const { t } = useI18n();
-  const [names, setNames] = useState<ConceptNames>({});
-
-  // 클라이언트에서만 이름 로드
-  useEffect(() => {
-    fetch('/concept-names.json')
-      .then((res) => res.json())
-      .then(setNames)
-      .catch(() => setNames({}));
-  }, []);
 
   const hasAnyRelations =
     relations.prerequisites.length > 0 ||

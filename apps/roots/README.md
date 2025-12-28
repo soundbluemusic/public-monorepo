@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 [![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?logo=react-router)](https://reactrouter.com)
 [![100% SSG](https://img.shields.io/badge/100%25-SSG-brightgreen)](https://en.wikipedia.org/wiki/Static_site_generator)
-[![SSG Routes](https://img.shields.io/badge/SSG_Routes-70-blue)](react-router.config.ts)
+[![SSG Routes](https://img.shields.io/badge/SSG_Routes-878-blue)](react-router.config.ts)
 
 **[Live Site](https://roots.soundbluemusic.com)**
 
@@ -15,7 +15,7 @@
 
 A math documentation site designed for learners:
 
-- **52 Math Concepts** - From elementary to graduate level
+- **414 Math Concepts** - From elementary to graduate level
 - **18 Math Fields** - Algebra, Calculus, Geometry, etc.
 - **MathML Rendering** - Browser-native LaTeX formulas
 - **Difficulty Levels** - Elementary → Graduate+
@@ -30,14 +30,14 @@ A math documentation site designed for learners:
 ```
 react-router.config.ts
 ├── ssr: false
-├── prerender() → 70 static routes generated
-│   ├── concept-names.json → 52 concept routes
+├── prerender() → 878 static routes generated
+│   ├── concept-names.json → 414 concept routes
 │   └── fields.ts → 18 field routes
 └── loader() functions → .data files for each route
 
 Build output (build/client/):
 ├── index.html, ko/index.html
-├── concept/algebra.html, ko/concept/algebra.html (×52)
+├── concept/algebra.html, ko/concept/algebra.html (×414)
 ├── field/calculus.html, ko/field/calculus.html (×18)
 └── *.data files (prerendered loader data)
 ```
@@ -59,13 +59,13 @@ Browser-native MathML (no KaTeX/MathJax bundle required).
 | `/` | ✓ | ✓ | - | Home |
 | `/browse` | ✓ | ✓ | - | Browse all concepts |
 | `/search` | ✓ | ✓ | - | Search with Fuse.js |
-| `/concept/:conceptId` | ✓ | ✓ | 52 | Concept page |
+| `/concept/:conceptId` | ✓ | ✓ | 414 | Concept page |
 | `/field/:fieldId` | ✓ | ✓ | 18 | Field page |
 | `/constants` | ✓ | ✓ | - | Math constants |
 | `/favorites` | ✓ | ✓ | - | Saved concepts |
 | `/about` | ✓ | ✓ | - | About |
 
-**Total:** 70 SSG routes (35 EN + 35 KO)
+**Total:** 878 SSG routes (439 EN + 439 KO)
 
 ---
 
@@ -77,7 +77,7 @@ app/data/
 │   ├── algebra.ts
 │   ├── calculus.ts
 │   ├── geometry.ts
-│   └── ... (52 concepts)
+│   └── ... (414 concepts)
 ├── fields.ts          # 18 math fields
 ├── subfields.ts       # Subfields per field
 ├── types.ts           # TypeScript types
@@ -161,8 +161,8 @@ pnpm build:roots
 
 ```typescript
 // ❌ NEVER - 테스트 통과/에러 회피용
-const CONCEPT_COUNT = 52;  // Magic number
-return concepts.length || 52;
+const CONCEPT_COUNT = 414;  // Magic number
+return concepts.length || 414;
 
 // ✅ ALLOWED - 우수한 설계
 export const DIFFICULTY_LEVELS = ['elementary', 'middle', 'high'] as const;

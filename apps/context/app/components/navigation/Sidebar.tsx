@@ -1,4 +1,4 @@
-import { stripLocaleFromPath } from '@soundblue/shared';
+import { LIMITS, stripLocaleFromPath } from '@soundblue/shared';
 import { cn } from '@soundblue/shared-react';
 import { Home, Info, LayoutGrid, List, MessageCircle, X } from 'lucide-react';
 import { useEffect } from 'react';
@@ -151,7 +151,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
               {t('browseByCategory')}
             </div>
             <div className="flex flex-col gap-0.5">
-              {categories.slice(0, 6).map((category) => (
+              {categories.slice(0, LIMITS.SIDEBAR_CATEGORIES_PREVIEW).map((category) => (
                 <Link
                   key={category.id}
                   to={localePath(`/category/${category.id}`)}

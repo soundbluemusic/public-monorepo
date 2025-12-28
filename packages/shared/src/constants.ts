@@ -24,6 +24,14 @@ export const LIMITS = {
   ID_LENGTH: 100,
   /** Maximum length for search queries */
   SEARCH_LENGTH: 100,
+  /** Maximum search results to display */
+  SEARCH_MAX_RESULTS: 8,
+  /** Number of recent items to display in lists */
+  RECENT_ITEMS_DISPLAY: 10,
+  /** Number of categories to show in sidebar preview */
+  SIDEBAR_CATEGORIES_PREVIEW: 6,
+  /** Number of tags to show in preview */
+  TAGS_PREVIEW: 4,
 } as const;
 
 export const BREAKPOINTS = {

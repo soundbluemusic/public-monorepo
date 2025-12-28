@@ -1,4 +1,4 @@
-import { stripLocaleFromPath } from '@soundblue/shared';
+import { LIMITS, stripLocaleFromPath } from '@soundblue/shared';
 import {
   cn,
   DarkModeToggle,
@@ -37,7 +37,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
     indexUrl: '/search-index.json',
     locale,
     debounceMs: 150,
-    maxResults: 8,
+    maxResults: LIMITS.SEARCH_MAX_RESULTS,
   });
 
   const handleSelectResult = useCallback(

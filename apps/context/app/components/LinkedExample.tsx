@@ -1,15 +1,7 @@
 import type { ReactNode } from 'react';
 import { Link } from 'react-router';
-import { meaningEntries } from '@/data/entries';
+import { koreanExpressions } from '@/data/generated/korean-expressions';
 import { useI18n } from '@/i18n';
-
-/**
- * Korean expressions sorted by length (longest first) to prevent partial matching
- * e.g., "캔버스" should match before "버스"
- */
-const koreanExpressions = meaningEntries
-  .map((entry) => ({ korean: entry.korean, id: entry.id }))
-  .sort((a, b) => b.korean.length - a.korean.length);
 
 interface LinkedExampleProps {
   text: string;

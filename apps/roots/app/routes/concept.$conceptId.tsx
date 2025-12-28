@@ -5,7 +5,7 @@
 import { BookOpen, Heart, History, Zap } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router';
-import { RelationLinks } from '@/components/concept/RelationLinks';
+import { type ConceptNames, RelationLinks } from '@/components/concept/RelationLinks';
 import { Layout } from '@/components/layout/Layout';
 import { ExampleList } from '@/components/math/Example';
 import { FormulaList } from '@/components/math/Formula';
@@ -19,18 +19,32 @@ import { favorites } from '@/lib/db';
 /**
  * Loader: 빌드 시 데이터 로드 (SSG용)
  * 빌드 시에는 TypeScript에서 직접 import
+ * conceptNames도 빌드 시 로드하여 RelationLinks에 전달 (런타임 fetch 제거)
  */
 export async function loader({ params }: { params: { conceptId: string } }) {
   if (!params.conceptId) {
-    return { concept: null };
+    return { concept: null, conceptNames: {} as ConceptNames };
   }
   const concept = getConceptByIdStatic(params.conceptId);
-  return { concept: concept || null };
+
+  // 빌드 시 concept-names.json 로드 (런타임 fetch 제거)
+  const { readFileSync } = await import('node:fs');
+  const { join } = await import('node:path');
+  let conceptNames: ConceptNames = {};
+  try {
+    const conceptNamesPath = join(process.cwd(), 'public', 'concept-names.json');
+    conceptNames = JSON.parse(readFileSync(conceptNamesPath, 'utf-8'));
+  } catch {
+    // 빌드 시 파일이 없을 수 있음 (초기 빌드)
+  }
+
+  return { concept: concept || null, conceptNames };
 }
 
 export default function ConceptPage() {
   const loaderData = useLoaderData<typeof loader>();
   const concept = loaderData?.concept || null;
+  const conceptNames = loaderData?.conceptNames || {};
   const params = useParams<{ conceptId: string }>();
   const { locale, t, localePath } = useI18n();
 
@@ -236,7 +250,7 @@ export default function ConceptPage() {
 
         {/* 연관 문서 Relations */}
         <section>
-          <RelationLinks relations={concept.relations} />
+          <RelationLinks relations={concept.relations} names={conceptNames} />
         </section>
 
         {/* 태그 Tags */}

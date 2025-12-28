@@ -57,8 +57,8 @@ React Router v7의 `prerender()` + `loader()` 패턴으로 빌드 시 데이터�
 
 | App | Dynamic Routes (동적 라우트) | SSG Pages | Data Source |
 |:---:|:----------------------------|:---------:|:------------|
-| **Context** | 701 entries + 21 categories | 1444개 | JSON 배열 |
-| **Roots** | 414 concepts + 19 fields | 866개 | TypeScript 모듈 |
+| **Context** | 751 entries + 21 categories + 7 conversations | 1578개 | JSON 배열 |
+| **Roots** | 414 concepts + 18 fields | 878개 | TypeScript 모듈 |
 | **Permissive** | 4 static routes | 8개 | 배열 리터럴 |
 
 ```typescript
@@ -92,9 +92,9 @@ export async function loader({ params }) {
 soundblue-monorepo/
 │
 ├── apps/
-│   ├── context/       →  Korean dictionary (1444 SSG routes)
+│   ├── context/       →  Korean dictionary (1578 SSG routes)
 │   ├── permissive/    →  Web dev resources (8 SSG routes)
-│   └── roots/         →  Math documentation (866 SSG routes)
+│   └── roots/         →  Math documentation (878 SSG routes)
 │
 ├── packages/
 │   ├── shared/        →  Utilities: db, i18n, search, validation
