@@ -6,6 +6,11 @@ const apps = [
   { name: 'roots', url: 'http://localhost:3005' },
 ];
 
+const locales = [
+  { name: 'en', path: '' },
+  { name: 'ko', path: '/ko' },
+];
+
 const viewports = [
   { name: 'mobile-small', width: 320, height: 568 },
   { name: 'mobile', width: 375, height: 667 },
@@ -17,23 +22,25 @@ const viewports = [
 ];
 
 for (const app of apps) {
-  test.describe(`${app.name} - Responsive`, () => {
-    for (const viewport of viewports) {
-      test(`should render correctly at ${viewport.name} (${viewport.width}x${viewport.height})`, async ({
-        page,
-      }) => {
-        await page.setViewportSize({ width: viewport.width, height: viewport.height });
-        await page.goto(app.url);
+  for (const locale of locales) {
+    test.describe(`${app.name} (${locale.name}) - Responsive`, () => {
+      for (const viewport of viewports) {
+        test(`should render correctly at ${viewport.name} (${viewport.width}x${viewport.height})`, async ({
+          page,
+        }) => {
+          await page.setViewportSize({ width: viewport.width, height: viewport.height });
+          await page.goto(`${app.url}${locale.path}`);
 
-        const scrollWidth = await page.evaluate(() => document.documentElement.scrollWidth);
-        const clientWidth = await page.evaluate(() => document.documentElement.clientWidth);
-        expect(scrollWidth).toBeLessThanOrEqual(clientWidth + 1);
+          const scrollWidth = await page.evaluate(() => document.documentElement.scrollWidth);
+          const clientWidth = await page.evaluate(() => document.documentElement.clientWidth);
+          expect(scrollWidth).toBeLessThanOrEqual(clientWidth + 1);
 
-        await expect(page).toHaveScreenshot(`${app.name}-${viewport.name}.png`, {
-          fullPage: true,
-          maxDiffPixelRatio: 0.05,
+          await expect(page).toHaveScreenshot(`${app.name}-${locale.name}-${viewport.name}.png`, {
+            fullPage: true,
+            maxDiffPixelRatio: 0.05,
+          });
         });
-      });
-    }
-  });
+      }
+    });
+  }
 }
