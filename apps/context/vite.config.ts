@@ -18,6 +18,15 @@ export default defineConfig({
       '~': '/app',
     },
   },
+  build: {
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+  },
   plugins: [
     tailwindcss(),
     paraglide({

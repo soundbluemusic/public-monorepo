@@ -12,6 +12,7 @@ import { fileURLToPath } from 'node:url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ENTRIES_DIR = join(__dirname, '../app/data/entries');
 const OUTPUT_FILE = join(__dirname, '../app/data/generated/entries.ts');
+const EXPRESSIONS_FILE = join(__dirname, '../app/data/generated/korean-expressions.ts');
 
 interface JsonEntry {
   id: string;
@@ -134,6 +135,42 @@ export const jsonEntriesCount = ${entries.length};
 `;
 }
 
+/**
+ * LinkedExample 컴포넌트용 경량 데이터 파일 생성
+ * 전체 엔트리(~700KB) 대신 id와 korean만 포함 (~15KB)
+ */
+function generateKoreanExpressionsFile(entries: JsonEntry[]): string {
+  // 길이순 정렬 (긴 것부터) - 부분 매칭 방지
+  const expressions = entries
+    .map((e) => ({ id: e.id, korean: e.korean }))
+    .sort((a, b) => b.korean.length - a.korean.length);
+
+  return `/**
+ * @fileoverview LinkedExample 컴포넌트용 경량 한국어 표현 데이터
+ *
+ * 이 파일은 scripts/load-entries.ts에 의해 자동 생성됩니다.
+ * 직접 수정하지 마세요.
+ *
+ * @remarks
+ * 전체 엔트리 데이터(~700KB) 대신 딥링크에 필요한 최소 데이터만 포함합니다.
+ * 길이순 정렬되어 있어 긴 표현이 먼저 매칭됩니다 (예: "캔버스" > "버스")
+ *
+ * @generated
+ * @date ${new Date().toISOString()}
+ */
+
+export interface KoreanExpression {
+  id: string;
+  korean: string;
+}
+
+/**
+ * 한국어 표현 목록 (길이순 정렬, 긴 것부터)
+ */
+export const koreanExpressions: KoreanExpression[] = ${JSON.stringify(expressions)};
+`;
+}
+
 async function main() {
   console.log('📦 Loading JSON entries...\n');
 
@@ -183,8 +220,14 @@ export const jsonEntriesCount = 0;
   const tsContent = generateTypeScriptFile(entries);
   writeFileSync(OUTPUT_FILE, tsContent);
 
+  // LinkedExample용 경량 파일 생성
+  const expressionsContent = generateKoreanExpressionsFile(entries);
+  writeFileSync(EXPRESSIONS_FILE, expressionsContent);
+
   console.log(`✅ Generated ${OUTPUT_FILE}`);
-  console.log(`   ${entries.length} entries from JSON files\n`);
+  console.log(`   ${entries.length} entries from JSON files`);
+  console.log(`✅ Generated ${EXPRESSIONS_FILE}`);
+  console.log(`   ${entries.length} lightweight expressions for LinkedExample\n`);
 }
 
 main().catch((error) => {
