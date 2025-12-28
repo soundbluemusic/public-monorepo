@@ -80,7 +80,7 @@ export default function ConceptPage() {
         await favorites.add(conceptId);
         setIsFavorite(true);
       }
-    } catch (err) {
+    } catch (err: unknown) {
       console.error('Failed to toggle favorite:', err);
     }
   };

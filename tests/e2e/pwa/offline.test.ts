@@ -157,7 +157,7 @@ test.describe('PWA Offline Functionality', () => {
 
       // Should either show offline page or cached content
       expect(content.length).toBeGreaterThan(0);
-    } catch (error) {
+    } catch (error: unknown) {
       // Expected if no offline fallback
       expect(error).toBeDefined();
     } finally {

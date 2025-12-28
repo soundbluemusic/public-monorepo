@@ -76,7 +76,7 @@ function getDb(): RootsDatabase | null {
   if (!db) {
     try {
       db = new RootsDatabase();
-    } catch (error) {
+    } catch (error: unknown) {
       console.error('Failed to initialize database:', error);
       return null;
     }
