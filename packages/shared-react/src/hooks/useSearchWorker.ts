@@ -91,7 +91,7 @@ export function useSearchWorker({
 
         setIsReady(true);
         setIsLoading(false);
-      } catch (err) {
+      } catch (err: unknown) {
         if (cancelled) return;
         setError(err instanceof Error ? err.message : 'Failed to load search index');
         setIsLoading(false);

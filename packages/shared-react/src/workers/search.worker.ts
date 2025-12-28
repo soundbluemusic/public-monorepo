@@ -67,7 +67,7 @@ self.onmessage = (event: MessageEvent<SearchMessage>) => {
     } else if (type === 'search' && !fuse) {
       self.postMessage({ type: 'error', error: 'Search index not initialized' } as SearchResponse);
     }
-  } catch (error) {
+  } catch (error: unknown) {
     self.postMessage({
       type: 'error',
       error: error instanceof Error ? error.message : 'Unknown error',

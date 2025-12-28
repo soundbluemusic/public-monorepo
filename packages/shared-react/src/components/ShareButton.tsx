@@ -136,7 +136,7 @@ export function ShareButton({
         // Reset copied state after 2 seconds
         setTimeout(() => setCopied(false), 2000);
       }
-    } catch (error) {
+    } catch (error: unknown) {
       // User cancelled sharing - not an error
       if (error instanceof Error && error.name === 'AbortError') {
         return;

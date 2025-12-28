@@ -133,7 +133,7 @@ async function checkApp(app: AppConfig): Promise<LinkCheckResult> {
     console.log(`   ❌ 깨진 링크 발견: ${brokenLinks}개`);
     console.log(output);
     return { app: app.name, success: false, brokenLinks, output };
-  } catch (error) {
+  } catch (error: unknown) {
     console.log(`   ❌ 오류 발생: ${error instanceof Error ? error.message : String(error)}`);
     return {
       app: app.name,

@@ -52,7 +52,7 @@ function getDb(): ContextDatabase | null {
   if (!db) {
     try {
       db = new ContextDatabase();
-    } catch (error) {
+    } catch (error: unknown) {
       console.error('Failed to initialize database:', error);
       return null;
     }
