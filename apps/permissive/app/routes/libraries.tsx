@@ -1,6 +1,6 @@
 import { cn } from '@soundblue/shared-react';
 import { CalendarPlus, Flame, Search, Star } from 'lucide-react';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import type { MetaFunction } from 'react-router';
 import { useLoaderData, useSearchParams } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
@@ -36,28 +36,28 @@ export default function LibrariesPage() {
   }>();
   const { locale } = useI18n();
   const [searchParams, setSearchParams] = useSearchParams();
-  const [search, setSearch] = useState('');
-  const [category, setCategory] = useState<CategoryFilter>('All');
-  const [selectedTag, setSelectedTag] = useState<string | null>(null);
-  const [quickFilter, setQuickFilter] = useState<'trending' | 'usedHere' | 'new' | null>(null);
+
+  // Initialize state from URL params (one-way: URL → State on mount only)
+  const initialParams = {
+    q: searchParams.get('q') || '',
+    category: (searchParams.get('category') as CategoryFilter) || 'All',
+    tag: searchParams.get('tag'),
+    filter: searchParams.get('filter'),
+    trending: searchParams.get('trending'),
+  };
+
+  const [search, setSearch] = useState(initialParams.q);
+  const [category, setCategory] = useState<CategoryFilter>(
+    categories.includes(initialParams.category) ? initialParams.category : 'All',
+  );
+  const [selectedTag, setSelectedTag] = useState<string | null>(initialParams.tag);
+  const [quickFilter, setQuickFilter] = useState<'trending' | 'usedHere' | 'new' | null>(() => {
+    if (initialParams.trending === 'true') return 'trending';
+    if (initialParams.filter === 'usedHere' || initialParams.filter === 'new')
+      return initialParams.filter;
+    return null;
+  });
   const [sortBy, setSortBy] = useState<SortOption>('stars');
-
-  // Sync URL params on mount
-  useEffect(() => {
-    const q = searchParams.get('q');
-    const cat = searchParams.get('category');
-    const tag = searchParams.get('tag');
-    const filter = searchParams.get('filter');
-    const trending = searchParams.get('trending');
-
-    if (q) setSearch(q);
-    if (cat && categories.includes(cat as CategoryFilter)) {
-      setCategory(cat as CategoryFilter);
-    }
-    if (tag) setSelectedTag(tag);
-    if (filter === 'usedHere' || filter === 'new') setQuickFilter(filter);
-    if (trending === 'true') setQuickFilter('trending');
-  }, [searchParams]);
 
   const filteredLibraries = useMemo(() => {
     let filtered = libs;

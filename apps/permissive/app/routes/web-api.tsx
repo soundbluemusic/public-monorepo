@@ -1,6 +1,6 @@
 import { cn } from '@soundblue/shared-react';
 import { BarChart2, CalendarPlus, Flame, Search } from 'lucide-react';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import type { MetaFunction } from 'react-router';
 import { useLoaderData, useSearchParams } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
@@ -39,25 +39,26 @@ export default function WebApiPage() {
   }>();
   const { locale } = useI18n();
   const [searchParams, setSearchParams] = useSearchParams();
-  const [search, setSearch] = useState('');
-  const [category, setCategory] = useState<CategoryFilter>('All');
-  const [quickFilter, setQuickFilter] = useState<'trending' | 'highSupport' | 'new' | null>(null);
+
+  // Initialize state from URL params (one-way: URL → State on mount only)
+  const initialParams = {
+    q: searchParams.get('q') || '',
+    category: (searchParams.get('category') as CategoryFilter) || 'All',
+    filter: searchParams.get('filter'),
+    trending: searchParams.get('trending'),
+  };
+
+  const [search, setSearch] = useState(initialParams.q);
+  const [category, setCategory] = useState<CategoryFilter>(
+    categories.includes(initialParams.category) ? initialParams.category : 'All',
+  );
+  const [quickFilter, setQuickFilter] = useState<'trending' | 'highSupport' | 'new' | null>(() => {
+    if (initialParams.trending === 'true') return 'trending';
+    if (initialParams.filter === 'highSupport' || initialParams.filter === 'new')
+      return initialParams.filter;
+    return null;
+  });
   const [sortBy, setSortBy] = useState<SortOption>('support');
-
-  // Sync URL params on mount
-  useEffect(() => {
-    const q = searchParams.get('q');
-    const cat = searchParams.get('category');
-    const filter = searchParams.get('filter');
-    const trending = searchParams.get('trending');
-
-    if (q) setSearch(q);
-    if (cat && categories.includes(cat as CategoryFilter)) {
-      setCategory(cat as CategoryFilter);
-    }
-    if (filter === 'highSupport' || filter === 'new') setQuickFilter(filter);
-    if (trending === 'true') setQuickFilter('trending');
-  }, [searchParams]);
 
   const filteredApis = useMemo(() => {
     let filtered = apis;
