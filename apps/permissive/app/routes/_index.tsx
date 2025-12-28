@@ -136,7 +136,7 @@ export default function Home() {
       {/* Hero Section */}
       <div className="text-center py-12 md:py-16">
         <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300 text-xs sm:text-sm font-medium mb-6 max-w-full">
-          <Flame size={16} aria-hidden="true" className="flex-shrink-0" />
+          <Flame size={16} aria-hidden="true" className="shrink-0" />
           <span className="truncate">
             {locale === 'ko' ? '2025년 최신 기술 업데이트' : '2025 Latest Tech Updated'}
           </span>
@@ -198,7 +198,7 @@ export default function Home() {
               }}
               onFocus={() => setShowResults(true)}
               onKeyDown={handleKeyDown}
-              className="w-full min-h-12 pl-11 pr-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-none focus:border-(--border-focus) transition-colors [&::-webkit-search-cancel-button]:hidden"
+              className="w-full min-h-12 pl-11 pr-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) text-(--text-primary) placeholder:text-(--text-tertiary) focus:outline-hidden focus:border-(--border-focus) transition-colors [&::-webkit-search-cancel-button]:hidden"
               aria-expanded={showResults && results.length > 0}
               aria-haspopup="listbox"
               aria-controls={listboxId}

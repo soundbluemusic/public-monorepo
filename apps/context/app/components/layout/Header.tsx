@@ -156,7 +156,7 @@ export function Header({ onMenuClick }: HeaderProps) {
             <input
               ref={inputRef}
               type="search"
-              className="w-full h-9 max-md:h-10 pl-8.5 pr-8 text-sm font-inherit text-(--text-primary) bg-(--bg-tertiary) border border-(--border-primary) rounded-xl outline-none transition-[border-color,background-color] duration-150 placeholder:text-(--text-tertiary) focus:border-(--border-focus) focus:bg-(--bg-secondary) [&::-webkit-search-cancel-button]:hidden"
+              className="w-full h-9 max-md:h-10 pl-8.5 pr-8 text-sm font-inherit text-(--text-primary) bg-(--bg-tertiary) border border-(--border-primary) rounded-xl outline-hidden transition-[border-color,background-color] duration-150 placeholder:text-(--text-tertiary) focus:border-(--border-focus) focus:bg-(--bg-secondary) [&::-webkit-search-cancel-button]:hidden"
               placeholder={locale === 'ko' ? '검색...' : 'Search...'}
               value={query}
               onChange={(e) => {

@@ -236,7 +236,7 @@ export default function Sidebar({
                 }
                 aria-current={isActive(item.href) ? 'page' : undefined}
               >
-                <span className="flex-shrink-0">{item.icon}</span>
+                <span className="shrink-0">{item.icon}</span>
                 {(!isCollapsed || isMobile) && (
                   <span>{locale === 'ko' ? item.labelKo : item.label}</span>
                 )}
@@ -337,7 +337,7 @@ function QuickLinksSection({
             rel="noopener noreferrer"
             className="flex items-center gap-3 min-h-11 px-3 py-2 rounded-lg text-(--text-secondary) hover:bg-(--bg-tertiary) transition-colors no-underline group"
           >
-            <span className="flex-shrink-0 text-(--text-tertiary)">{item.icon}</span>
+            <span className="shrink-0 text-(--text-tertiary)">{item.icon}</span>
             <div className="flex-1 min-w-0">
               <div className="text-sm font-medium text-(--text-primary)">{item.name}</div>
               <div className="text-xs text-(--text-tertiary)">
@@ -347,7 +347,7 @@ function QuickLinksSection({
             <ExternalLink
               size={14}
               aria-hidden="true"
-              className="flex-shrink-0 text-(--text-tertiary) opacity-0 group-hover:opacity-100 transition-opacity"
+              className="shrink-0 text-(--text-tertiary) opacity-0 group-hover:opacity-100 transition-opacity"
             />
           </a>
         ))}

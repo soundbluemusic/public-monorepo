@@ -77,7 +77,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
         <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
           <Link
             to={localePath('/')}
-            className="font-semibold flex-shrink-0 flex items-center gap-2 text-(--text-primary) no-underline"
+            className="font-semibold shrink-0 flex items-center gap-2 text-(--text-primary) no-underline"
           >
             <span className="text-xl">π</span>
             <span>Roots</span>
@@ -96,7 +96,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
           </div>
 
           {/* Right Actions */}
-          <div className="flex items-center gap-1 flex-shrink-0">
+          <div className="flex items-center gap-1 shrink-0">
             <Link
               to={localePath('/browse')}
               className={cn(
