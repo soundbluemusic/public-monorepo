@@ -1,10 +1,17 @@
 /**
  * @fileoverview E2E tests for Content Security Policy (CSP) headers
+ *
+ * NOTE: CSP headers are served by Cloudflare via _headers file, not by dev server.
  */
 
 import { expect, test } from '@playwright/test';
 
+// CSP headers are ONLY served by Cloudflare CDN via _headers file
+// Dev servers and CI preview servers do not process _headers
+const isCloudflareDeployment = process.env.PRODUCTION_TEST === 'true';
+
 test.describe('Content Security Policy (CSP)', () => {
+  test.skip(() => !isCloudflareDeployment, 'CSP headers only available in Cloudflare deployment');
   test('should have CSP header', async ({ page }) => {
     const response = await page.goto('/ko');
     const cspHeader = response?.headers()['content-security-policy'];
@@ -121,6 +128,7 @@ test.describe('Content Security Policy (CSP)', () => {
 });
 
 test.describe('CSP Report-Only Mode', () => {
+  test.skip(() => !isCloudflareDeployment, 'CSP headers only available in Cloudflare deployment');
   test('should use CSP enforcement mode (not report-only)', async ({ page }) => {
     const response = await page.goto('/ko');
     const cspHeader = response?.headers()['content-security-policy'];
@@ -135,6 +143,7 @@ test.describe('CSP Report-Only Mode', () => {
 });
 
 test.describe('CSP Violation Handling', () => {
+  test.skip(() => !isCloudflareDeployment, 'CSP headers only available in Cloudflare deployment');
   test('should not trigger CSP violations on page load', async ({ page }) => {
     const violations: string[] = [];
 

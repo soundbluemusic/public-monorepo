@@ -39,7 +39,10 @@ export default function BottomNav() {
   const isActive = (href: string) => location.pathname === localePath(href);
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-40 bg-(--bg-elevated) border-t border-(--border-primary) flex items-center justify-around h-16 pb-[env(safe-area-inset-bottom,0px)] lg:hidden">
+    <nav
+      aria-label="Mobile navigation"
+      className="fixed bottom-0 left-0 right-0 z-40 bg-(--bg-elevated) border-t border-(--border-primary) flex items-center justify-around h-16 pb-[env(safe-area-inset-bottom,0px)] lg:hidden"
+    >
       {navItems.map((item) => (
         <Link
           key={item.href}

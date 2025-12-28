@@ -212,7 +212,7 @@ export default function Sidebar({
         </div>
 
         {/* Navigation */}
-        <nav className="flex-1 overflow-y-auto p-2">
+        <nav aria-label="Main navigation" className="flex-1 overflow-y-auto p-2">
           {/* Main Navigation */}
           <div className="space-y-1">
             {navItems.map((item) => (

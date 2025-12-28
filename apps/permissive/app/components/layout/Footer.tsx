@@ -9,7 +9,10 @@ export default function Footer() {
     <footer className="py-8 mt-auto bg-(--bg-secondary) border-t border-(--border-primary)">
       <div className="max-w-4xl mx-auto px-4">
         {/* Footer Links */}
-        <nav className="flex items-center justify-center gap-6 mb-4 text-sm text-(--text-secondary)">
+        <nav
+          aria-label="Footer links"
+          className="flex items-center justify-center gap-6 mb-4 text-sm text-(--text-secondary)"
+        >
           <Link to={localePath('/sitemap')} className="no-underline hover:underline text-inherit">
             {locale === 'ko' ? '사이트맵' : 'Sitemap'}
           </Link>

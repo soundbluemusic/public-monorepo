@@ -8,7 +8,10 @@ export function Footer() {
   return (
     <footer className="hidden md:block mt-auto py-8 bg-(--bg-secondary) border-t border-(--border-primary)">
       <div className="max-w-4xl mx-auto px-4">
-        <nav className="flex items-center justify-center gap-6 mb-4 text-sm text-(--text-secondary)">
+        <nav
+          aria-label="Footer links"
+          className="flex items-center justify-center gap-6 mb-4 text-sm text-(--text-secondary)"
+        >
           <Link to={localePath('/privacy')} className="hover:text-(--text-primary) hover:underline">
             {t('privacy')}
           </Link>
