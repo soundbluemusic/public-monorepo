@@ -17,6 +17,8 @@ apps/context/app/data/generated/
 # Cache
 .cache/
 *.tsbuildinfo
+node-compile-cache/
+tsx-0/
 
 # Environment
 .env
