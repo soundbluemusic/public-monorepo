@@ -135,7 +135,7 @@ export default function Home() {
     <DocsLayout>
       {/* Hero Section */}
       <div className="text-center py-12 md:py-16">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 text-orange-500 text-sm font-medium mb-6">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300 text-sm font-medium mb-6">
           <Flame size={16} aria-hidden="true" />
           <span>{locale === 'ko' ? '2025년 최신 기술 업데이트' : '2025 Latest Tech Updated'}</span>
         </div>
