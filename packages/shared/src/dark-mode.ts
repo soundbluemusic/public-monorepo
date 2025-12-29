@@ -48,7 +48,7 @@ export const DARK_MODE_INIT_SCRIPT = `(function() {
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.documentElement.classList.add('dark');
     }
-  } catch (e: unknown) {
+  } catch (e) {
     console.error('[Theme] Failed to load theme preference:', e);
   }
 })();`;
@@ -83,7 +83,7 @@ export const DARK_MODE_TOGGLE_SCRIPT = `(function() {
       var newState = currentStored ? JSON.parse(currentStored) : { state: { theme: 'light' }, version: 0 };
       newState.state.theme = newTheme;
       localStorage.setItem('settings-storage', JSON.stringify(newState));
-    } catch(err: unknown) {
+    } catch(err) {
       console.error('[Theme] Failed to save theme preference:', err);
     }
 
@@ -165,7 +165,7 @@ export const DARK_MODE_TOGGLE_SCRIPT_CSS = `(function() {
       var newState = currentStored ? JSON.parse(currentStored) : { state: { theme: 'light' }, version: 0 };
       newState.state.theme = newTheme;
       localStorage.setItem('settings-storage', JSON.stringify(newState));
-    } catch(err: unknown) {
+    } catch(err) {
       console.error('[Theme] Failed to save theme preference:', err);
     }
 
@@ -230,7 +230,7 @@ export const DARK_MODE_TOGGLE_SCRIPT_DUAL = `(function() {
       var newState = currentStored ? JSON.parse(currentStored) : { state: { theme: 'light' }, version: 0 };
       newState.state.theme = newTheme;
       localStorage.setItem('settings-storage', JSON.stringify(newState));
-    } catch(err: unknown) {
+    } catch(err) {
       console.error('[Theme] Failed to save theme preference:', err);
     }
 
