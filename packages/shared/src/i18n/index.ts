@@ -21,4 +21,9 @@ export type { I18nContextType, Language } from './types';
 export { languageFlags, languageNames } from './types';
 
 // Utilities
-export { buildLocalePath, getLocaleFromPath, stripLocaleFromPath } from './utils';
+export {
+  buildLocalePath,
+  generateI18nRoutes,
+  getLocaleFromPath,
+  stripLocaleFromPath,
+} from './utils';

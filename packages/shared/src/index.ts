@@ -52,6 +52,7 @@ export {
 // i18n utilities
 export {
   buildLocalePath,
+  generateI18nRoutes,
   getLocaleFromPath,
   type I18nContextType,
   type Language,

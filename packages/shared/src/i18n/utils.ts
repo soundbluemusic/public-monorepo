@@ -66,3 +66,33 @@ export function buildLocalePath(path: string, locale: Language): string {
   }
   return `/ko${path === '/' ? '' : path}`;
 }
+
+/**
+ * 아이템 배열에서 i18n prerender 라우트 생성
+ *
+ * 각 아이템에 대해 영어(기본)와 한국어(/ko) 라우트를 생성합니다.
+ * react-router.config.ts의 prerender() 함수에서 사용하기 위한 유틸리티입니다.
+ *
+ * @param items - 라우트를 생성할 아이템 배열
+ * @param getPath - 아이템에서 경로를 추출하는 함수 (슬래시로 시작해야 함)
+ * @returns 영어 + 한국어 라우트 배열
+ *
+ * @example
+ * ```ts
+ * // 객체 배열에서 라우트 생성
+ * const categories = [{ id: 'food' }, { id: 'travel' }];
+ * generateI18nRoutes(categories, (c) => `/category/${c.id}`);
+ * // → ['/category/food', '/ko/category/food', '/category/travel', '/ko/category/travel']
+ *
+ * // 문자열 배열에서 라우트 생성
+ * const conceptIds = ['algebra', 'geometry'];
+ * generateI18nRoutes(conceptIds, (id) => `/concept/${id}`);
+ * // → ['/concept/algebra', '/ko/concept/algebra', '/concept/geometry', '/ko/concept/geometry']
+ * ```
+ */
+export function generateI18nRoutes<T>(items: readonly T[], getPath: (item: T) => string): string[] {
+  return items.flatMap((item) => {
+    const path = getPath(item);
+    return [path, `/ko${path}`];
+  });
+}

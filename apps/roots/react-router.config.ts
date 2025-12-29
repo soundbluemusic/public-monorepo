@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import type { Config } from '@react-router/dev/config';
+import { generateI18nRoutes } from '@soundblue/shared';
 
 export default {
   ssr: false, // 100% SSG - no SSR, only static files
@@ -32,13 +33,10 @@ export default {
     ];
 
     // Dynamic concept routes (e.g., /concept/natural-numbers, /ko/concept/matrices)
-    const conceptRoutes = conceptIds.flatMap((conceptId) => [
-      `/concept/${conceptId}`,
-      `/ko/concept/${conceptId}`,
-    ]);
+    const conceptRoutes = generateI18nRoutes(conceptIds, (conceptId) => `/concept/${conceptId}`);
 
     // Dynamic field routes (e.g., /field/algebra, /ko/field/geometry)
-    const fieldRoutes = fields.flatMap((field) => [`/field/${field.id}`, `/ko/field/${field.id}`]);
+    const fieldRoutes = generateI18nRoutes(fields, (field) => `/field/${field.id}`);
 
     return [...baseRoutes, ...conceptRoutes, ...fieldRoutes];
   },
