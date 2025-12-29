@@ -3,6 +3,7 @@
  * Runs before all tests
  */
 
+import '@testing-library/jest-dom';
 import { cleanup } from '@testing-library/react';
 import 'fake-indexeddb/auto';
 import { afterEach } from 'vitest';

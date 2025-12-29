@@ -20,6 +20,8 @@ export interface ProgressBarProps {
   className?: string;
   /** 애니메이션 비활성화 */
   noAnimation?: boolean;
+  /** 접근성 라벨 (aria-label) */
+  label?: string;
 }
 
 /**
@@ -55,6 +57,7 @@ export function ProgressBar({
   size = 'md',
   className,
   noAnimation = false,
+  label = 'Progress',
 }: ProgressBarProps) {
   const percentage = max > 0 ? Math.min(100, (value / max) * 100) : 0;
 
@@ -69,6 +72,7 @@ export function ProgressBar({
       aria-valuenow={value}
       aria-valuemin={0}
       aria-valuemax={max}
+      aria-label={label}
     >
       <div
         className={cn(
