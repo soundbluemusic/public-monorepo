@@ -23,6 +23,7 @@ export { languageFlags, languageNames } from './types';
 // Utilities
 export {
   buildLocalePath,
+  extractStaticRoutes,
   generateI18nRoutes,
   getLocaleFromPath,
   stripLocaleFromPath,
