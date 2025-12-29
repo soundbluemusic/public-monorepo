@@ -3,7 +3,7 @@ import {
   DARK_MODE_TOGGLE_SCRIPT,
   getLocaleFromPath,
 } from '@soundblue/shared';
-import { ErrorBoundary, OfflineIndicator } from '@soundblue/shared-react';
+import { ErrorBoundary, OfflineIndicator, ToastContainer } from '@soundblue/shared-react';
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLocation } from 'react-router';
 import { I18nProvider } from './i18n';
 import './styles/global.css';
@@ -70,6 +70,7 @@ export default function App() {
       <ErrorBoundary>
         <OfflineIndicator />
         <Outlet />
+        <ToastContainer />
       </ErrorBoundary>
     </I18nProvider>
   );

@@ -3,6 +3,7 @@
  */
 
 import { metaFactory } from '@soundblue/shared';
+import { toast } from '@soundblue/shared-react';
 import { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router';
 import { Layout } from '@/components/layout/Layout';
@@ -53,10 +54,18 @@ export default function SearchPage() {
   useEffect(() => {
     if (query.length >= 2) {
       setIsSearching(true);
-      searchConcepts(query, locale, 20).then((searchResults) => {
-        setResults(searchResults);
-        setIsSearching(false);
-      });
+      searchConcepts(query, locale, 20)
+        .then((searchResults) => {
+          setResults(searchResults);
+          setIsSearching(false);
+        })
+        .catch(() => {
+          setIsSearching(false);
+          toast({
+            message: locale === 'ko' ? '검색 중 오류가 발생했습니다' : 'Search failed',
+            type: 'error',
+          });
+        });
     } else {
       setResults([]);
     }

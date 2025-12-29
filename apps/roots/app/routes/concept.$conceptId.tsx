@@ -2,6 +2,7 @@
  * @fileoverview 개념 상세 페이지
  */
 
+import { toast } from '@soundblue/shared-react';
 import { BookOpen, Heart, History, Zap } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router';
@@ -76,12 +77,23 @@ export default function ConceptPage() {
       if (isFavorite) {
         await favorites.remove(conceptId);
         setIsFavorite(false);
+        toast({
+          message: locale === 'ko' ? '즐겨찾기에서 제거되었습니다' : 'Removed from favorites',
+          type: 'success',
+        });
       } else {
         await favorites.add(conceptId);
         setIsFavorite(true);
+        toast({
+          message: locale === 'ko' ? '즐겨찾기에 추가되었습니다' : 'Added to favorites',
+          type: 'success',
+        });
       }
-    } catch (err: unknown) {
-      console.error('Failed to toggle favorite:', err);
+    } catch {
+      toast({
+        message: locale === 'ko' ? '저장에 실패했습니다' : 'Failed to save',
+        type: 'error',
+      });
     }
   };
 

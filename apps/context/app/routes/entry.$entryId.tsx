@@ -1,4 +1,4 @@
-import { cn, Skeleton } from '@soundblue/shared-react';
+import { cn, Skeleton, toast } from '@soundblue/shared-react';
 import { Bookmark, BookmarkCheck, Check } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router';
@@ -49,14 +49,42 @@ export default function EntryPage() {
 
   const handleMarkAsStudied = async () => {
     if (!entryId) return;
-    await studyRecords.markAsStudied(entryId);
-    setIsStudied(true);
+    try {
+      await studyRecords.markAsStudied(entryId);
+      setIsStudied(true);
+      toast({
+        message: locale === 'ko' ? '학습 완료로 표시되었습니다' : 'Marked as studied',
+        type: 'success',
+      });
+    } catch {
+      toast({
+        message: locale === 'ko' ? '저장에 실패했습니다' : 'Failed to save',
+        type: 'error',
+      });
+    }
   };
 
   const handleToggleFavorite = async () => {
     if (!entryId) return;
-    const newState = await favorites.toggle(entryId);
-    setIsFavorite(newState);
+    try {
+      const newState = await favorites.toggle(entryId);
+      setIsFavorite(newState);
+      toast({
+        message: newState
+          ? locale === 'ko'
+            ? '즐겨찾기에 추가되었습니다'
+            : 'Added to favorites'
+          : locale === 'ko'
+            ? '즐겨찾기에서 제거되었습니다'
+            : 'Removed from favorites',
+        type: 'success',
+      });
+    } catch {
+      toast({
+        message: locale === 'ko' ? '저장에 실패했습니다' : 'Failed to save',
+        type: 'error',
+      });
+    }
   };
 
   // 로딩 상태

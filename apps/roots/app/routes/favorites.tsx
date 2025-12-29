@@ -4,6 +4,7 @@
 
 import { metaFactory } from '@soundblue/shared';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router';
 import { ConceptCard } from '@/components/concept/ConceptCard';
 import { Layout } from '@/components/layout/Layout';
 import type { MathConcept } from '@/data/types';
@@ -17,7 +18,7 @@ export const meta = metaFactory({
 });
 
 export default function FavoritesPage() {
-  const { t } = useI18n();
+  const { t, localePath } = useI18n();
 
   const [favoriteConcepts, setFavoriteConcepts] = useState<MathConcept[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -64,7 +65,14 @@ export default function FavoritesPage() {
         <div className="text-center py-20">
           <div className="text-5xl mb-4">💝</div>
           <p className="text-xl font-medium text-(--text-primary) mb-2">{t('noFavoritesYet')}</p>
-          <p className="text-(--text-secondary)">{t('addFavoritesHint')}</p>
+          <p className="text-(--text-secondary) mb-6">{t('addFavoritesHint')}</p>
+          <Link
+            to={localePath('/browse')}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-(--accent-primary) text-white font-medium transition-colors hover:brightness-110 active:scale-[0.98]"
+          >
+            {t('browseAllConcepts')}
+            <span>→</span>
+          </Link>
         </div>
       )}
     </Layout>
