@@ -35,7 +35,7 @@
  * ```
  */
 import { useVirtualizer } from '@tanstack/react-virtual';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 import { cn } from '../../utils/cn';
 
@@ -65,6 +65,16 @@ export function VirtualList<T>({
     overscan,
     gap,
   });
+
+  // items 변경 시 virtualizer 상태 동기화 및 스크롤 초기화
+  // biome-ignore lint/correctness/useExhaustiveDependencies: items.length 변경 감지 의도적
+  useEffect(() => {
+    virtualizer.measure();
+    // 필터 변경 시 스크롤을 맨 위로 초기화
+    if (parentRef.current) {
+      parentRef.current.scrollTop = 0;
+    }
+  }, [items.length, virtualizer]);
 
   const virtualItems = virtualizer.getVirtualItems();
 

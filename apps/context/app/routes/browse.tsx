@@ -46,9 +46,10 @@ export default function BrowsePage() {
   const { locale, localePath } = useI18n();
 
   // Study data from custom hook
-  const { studiedIds, favoriteIds, overallProgress, todayStudied, bookmarkCount } = useStudyData({
-    totalEntries,
-  });
+  const { studiedIds, favoriteIds, overallProgress, todayStudied, bookmarkCount, isLoading } =
+    useStudyData({
+      totalEntries,
+    });
 
   // URL params for filter persistence
   const [searchParams, setSearchParams] = useSearchParams();
@@ -95,13 +96,15 @@ export default function BrowsePage() {
       filtered = filtered.filter((e) => e.categoryId === filterCategory);
     }
 
-    // Filter by status
-    if (filterStatus === 'studied') {
-      filtered = filtered.filter((e) => studiedIds.has(e.id));
-    } else if (filterStatus === 'unstudied') {
-      filtered = filtered.filter((e) => !studiedIds.has(e.id));
-    } else if (filterStatus === 'bookmarked') {
-      filtered = filtered.filter((e) => favoriteIds.has(e.id));
+    // Filter by status (로딩 완료 후에만 학습 상태 필터 적용)
+    if (!isLoading) {
+      if (filterStatus === 'studied') {
+        filtered = filtered.filter((e) => studiedIds.has(e.id));
+      } else if (filterStatus === 'unstudied') {
+        filtered = filtered.filter((e) => !studiedIds.has(e.id));
+      } else if (filterStatus === 'bookmarked') {
+        filtered = filtered.filter((e) => favoriteIds.has(e.id));
+      }
     }
 
     // Sort
@@ -120,7 +123,7 @@ export default function BrowsePage() {
     }
 
     return sorted;
-  }, [entries, filterCategory, filterStatus, sortBy, studiedIds, favoriteIds]);
+  }, [entries, filterCategory, filterStatus, sortBy, studiedIds, favoriteIds, isLoading]);
 
   const handleRandomWord = () => {
     if (entries.length === 0) return;
