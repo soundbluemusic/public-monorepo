@@ -226,10 +226,9 @@ export const useSettingsStore = create<SettingsState>()(
         theme: state.theme,
         sidebarCollapsed: state.sidebarCollapsed,
       }),
-      onRehydrateStorage: () => (state) => {
-        if (state?.theme) {
-          applyTheme(state.theme);
-        }
+      onRehydrateStorage: () => (_state) => {
+        // Theme is already applied by DARK_MODE_INIT_SCRIPT in <head>
+        // Don't re-apply here to prevent flickering
       },
     },
   ),
@@ -269,29 +268,16 @@ function applyTheme(theme: Theme) {
 }
 
 /**
- * Immediate theme initialization on first load.
+ * Theme initialization is handled by DARK_MODE_INIT_SCRIPT in root.tsx <head>.
  *
- * This block runs synchronously when the module loads to prevent flash of
- * incorrect theme (FOIT). It reads directly from localStorage before React
- * hydration to ensure the correct theme is applied immediately.
+ * Previous implementation had module-level applyTheme() call here, which caused
+ * flickering because theme was applied multiple times:
+ * 1. DARK_MODE_INIT_SCRIPT in <head> (correct, prevents FOUC)
+ * 2. This module-level code (redundant, caused flicker)
+ * 3. onRehydrateStorage callback (redundant, caused flicker)
  *
- * **Why not wait for Zustand's rehydration?**
- * Zustand's persist middleware rehydrates asynchronously, which would cause
- * a brief flash of the wrong theme. By reading localStorage directly here,
- * we can apply the theme before the first paint.
+ * Now we only rely on DARK_MODE_INIT_SCRIPT for initial theme application.
+ * User-initiated theme changes still use applyTheme() via setTheme/toggleTheme.
  *
  * @internal
  */
-if (typeof window !== 'undefined') {
-  const stored = localStorage.getItem('settings-storage');
-  if (stored) {
-    try {
-      const parsed = JSON.parse(stored);
-      if (parsed.state?.theme) {
-        applyTheme(parsed.state.theme);
-      }
-    } catch {
-      // Ignore parse errors - will use default theme
-    }
-  }
-}

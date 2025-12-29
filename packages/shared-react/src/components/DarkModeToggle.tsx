@@ -1,6 +1,5 @@
 import { Moon, Sun } from 'lucide-react';
-import { type CSSProperties, useCallback, useEffect, useRef, useState } from 'react';
-import { useSettingsStore } from '../stores/useSettingsStore';
+import { type CSSProperties, useEffect, useState } from 'react';
 import { cn } from '../utils/cn';
 
 export interface DarkModeToggleProps {
@@ -10,58 +9,39 @@ export interface DarkModeToggleProps {
 
 /**
  * Dark mode toggle button
- * Uses useRef + native addEventListener for reliable event handling in SSG
+ *
+ * Click handling is done by DARK_MODE_TOGGLE_SCRIPT (inlined in root.tsx <body>)
+ * which uses event delegation to intercept clicks before React.
+ *
+ * This component only:
+ * 1. Renders the button with correct aria-label
+ * 2. Observes classList changes to update icon display
+ *
+ * The script handles: classList toggle, localStorage update, innerHTML replacement
  */
 export function DarkModeToggle({ className = '', style }: DarkModeToggleProps) {
   const [mounted, setMounted] = useState(false);
   const [isDark, setIsDark] = useState(false);
-  const buttonRef = useRef<HTMLButtonElement>(null);
-
-  const handleClick = useCallback(() => {
-    // Toggle dark class directly
-    const html = document.documentElement;
-    const willBeDark = !html.classList.contains('dark');
-
-    if (willBeDark) {
-      html.classList.add('dark');
-    } else {
-      html.classList.remove('dark');
-    }
-
-    // Update store
-    useSettingsStore.getState().setTheme(willBeDark ? 'dark' : 'light');
-    setIsDark(willBeDark);
-  }, []);
 
   useEffect(() => {
     setMounted(true);
     setIsDark(document.documentElement.classList.contains('dark'));
 
-    // Attach native click listener directly to button
-    const button = buttonRef.current;
-    if (button) {
-      button.addEventListener('click', handleClick);
-    }
-
-    // Listen for class changes
+    // Listen for class changes (triggered by DARK_MODE_TOGGLE_SCRIPT)
     const observer = new MutationObserver(() => {
       setIsDark(document.documentElement.classList.contains('dark'));
     });
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 
     return () => {
-      if (button) {
-        button.removeEventListener('click', handleClick);
-      }
       observer.disconnect();
     };
-  }, [handleClick]);
+  }, []);
 
   const showDark = mounted ? isDark : false;
 
   return (
     <button
-      ref={buttonRef}
       type="button"
       className={cn(
         'min-h-11 min-w-11 flex items-center justify-center rounded-lg',
