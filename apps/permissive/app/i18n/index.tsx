@@ -1,15 +1,20 @@
 import type { Language } from '@soundblue/shared';
 import { getLocaleFromPath, stripLocaleFromPath } from '@soundblue/shared';
-import { createContext, type ReactNode, useContext, useEffect, useMemo } from 'react';
+import { createContext, type ReactNode, useContext, useMemo } from 'react';
 import { useLocation } from 'react-router';
-import * as m from '~/paraglide/messages.js';
-import {
-  getLocale as paraglideGetLocale,
-  setLocale as paraglideSetLocale,
-} from '~/paraglide/runtime.js';
+
+// Import translation JSON files directly (Vite will bundle these at build time)
+import enMessages from '../../project.inlang/messages/en.json';
+import koMessages from '../../project.inlang/messages/ko.json';
 
 // Re-export for backward compatibility
 export type { Language } from '@soundblue/shared';
+
+// Message dictionaries by locale
+const messages: Record<Language, Record<string, string>> = {
+  en: enMessages as Record<string, string>,
+  ko: koMessages as Record<string, string>,
+};
 
 export interface UILabels {
   search: string;
@@ -108,9 +113,6 @@ export interface UILabels {
   license: string;
 }
 
-/** Paraglide message function type */
-type MessageFunction = (inputs?: Record<string, string | number>) => string;
-
 interface I18nContextType {
   locale: Language;
   setLocale: (lang: Language) => void;
@@ -127,30 +129,28 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   const location = useLocation();
   const locale = getLocaleFromPath(location.pathname);
 
-  // Sync Paraglide locale with URL pathname
-  useEffect(() => {
-    const currentParaglideLocale = paraglideGetLocale();
-    if (currentParaglideLocale !== locale) {
-      // Update Paraglide's internal locale state without page reload
-      paraglideSetLocale(locale, { reload: false });
-    }
-  }, [locale]);
-
   const value = useMemo(() => {
     const setLocale = (lang: Language) => {
       const currentPath = stripLocaleFromPath(location.pathname);
       const newPath = lang === 'en' ? currentPath : `/ko${currentPath === '/' ? '' : currentPath}`;
 
-      // Full page navigation to ensure Paraglide reinitializes with correct locale
+      // Full page navigation for locale switch
       window.location.href = newPath;
     };
 
     const t = (key: string): string => {
-      // Call Paraglide message functions directly (they use internal locale state)
-      const messageFunc = (m as Record<string, MessageFunction>)[key];
-      if (typeof messageFunc === 'function') {
-        return messageFunc();
+      // Look up translation from JSON messages
+      const dict = messages[locale];
+      const translation = dict[key];
+      if (translation !== undefined) {
+        return translation;
       }
+      // Fallback to English if key not found in current locale
+      const fallback = messages.en[key];
+      if (fallback !== undefined) {
+        return fallback;
+      }
+      // Return key if not found anywhere
       return key;
     };
 

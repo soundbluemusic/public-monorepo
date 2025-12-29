@@ -32,6 +32,7 @@ export default defineConfig({
     paraglide({
       project: './project.inlang',
       outdir: './app/paraglide',
+      outputStructure: 'message-modules',
     }),
     reactRouter(),
     VitePWA({
