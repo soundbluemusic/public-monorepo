@@ -120,11 +120,7 @@ export default function HomePage() {
             <input
               ref={inputRef}
               type="search"
-              placeholder={
-                locale === 'ko'
-                  ? '개념 검색... (예: 미분, 행렬)'
-                  : 'Search concepts... (e.g., derivative, matrix)'
-              }
+              placeholder={t('searchConceptsPlaceholder')}
               value={query}
               onChange={(e) => {
                 setQuery(e.target.value);
@@ -195,7 +191,7 @@ export default function HomePage() {
             {/* No results message */}
             {showResults && query.trim() && !isLoading && results.length === 0 && (
               <div className="absolute top-full left-0 right-0 mt-2 py-4 px-4 bg-(--bg-elevated) border border-(--border-primary) rounded-xl shadow-lg z-50 text-center text-(--text-tertiary)">
-                {locale === 'ko' ? '검색 결과가 없습니다' : 'No results found'}
+                {t('noResults')}
               </div>
             )}
           </form>
@@ -205,7 +201,7 @@ export default function HomePage() {
       {/* Featured Concepts Grid */}
       <section aria-labelledby="featured-concepts-heading">
         <h2 id="featured-concepts-heading" className="sr-only">
-          {locale === 'ko' ? '주요 개념' : 'Featured Concepts'}
+          {t('featuredConcepts')}
         </h2>
         <div ref={featuredGridRef} className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {FEATURED_CONCEPTS.map((concept) => (

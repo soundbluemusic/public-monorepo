@@ -160,7 +160,7 @@ export function Header({ onMenuClick }: HeaderProps) {
               ref={inputRef}
               type="search"
               className="w-full h-9 max-md:h-10 pl-8.5 pr-8 text-sm font-inherit text-(--text-primary) bg-(--bg-tertiary) border border-(--border-primary) rounded-xl outline-hidden transition-[border-color,background-color] duration-150 placeholder:text-(--text-tertiary) focus:border-(--border-focus) focus:bg-(--bg-secondary) [&::-webkit-search-cancel-button]:hidden"
-              placeholder={locale === 'ko' ? '검색...' : 'Search...'}
+              placeholder={t('searchShort')}
               value={query}
               onChange={(e) => {
                 setQuery(e.target.value);
@@ -173,7 +173,7 @@ export function Header({ onMenuClick }: HeaderProps) {
               }}
               onBlur={() => setIsFocused(false)}
               onKeyDown={handleKeyDown}
-              aria-label={locale === 'ko' ? '검색' : 'Search'}
+              aria-label={t('search')}
             />
             {!isFocused && !query && (
               <span className="absolute right-2 flex items-center px-1.5 py-0.5 font-inherit text-[0.6875rem] font-medium text-(--text-tertiary) bg-(--bg-secondary) border border-(--border-primary) rounded pointer-events-none max-md:hidden">
@@ -185,7 +185,7 @@ export function Header({ onMenuClick }: HeaderProps) {
                 type="button"
                 className="absolute right-1.5 flex items-center justify-center w-6 h-6 p-0 bg-transparent border-none rounded text-(--text-tertiary) cursor-pointer transition-all duration-150 hover:text-(--text-primary) active:scale-90"
                 onClick={handleClear}
-                aria-label={locale === 'ko' ? '지우기' : 'Clear'}
+                aria-label={t('clear')}
               >
                 <svg
                   className="w-3.5 h-3.5"
@@ -230,7 +230,7 @@ export function Header({ onMenuClick }: HeaderProps) {
 
           {isOpen && query.trim() && results.length === 0 && (
             <div className="absolute top-[calc(100%+4px)] left-0 right-0 z-600 bg-(--bg-secondary) border border-(--border-primary) rounded-xl shadow-lg p-4 text-center text-sm text-(--text-tertiary)">
-              {locale === 'ko' ? '검색 결과 없음' : 'No results found'}
+              {t('noResults')}
             </div>
           )}
         </div>
@@ -258,7 +258,7 @@ export function Header({ onMenuClick }: HeaderProps) {
               isActive('/conversations') && 'text-(--accent-primary) bg-(--bg-tertiary)',
             )}
           >
-            {locale === 'ko' ? '대화' : 'Conversations'}
+            {t('conversations')}
           </Link>
           <LanguageToggle locale={locale} currentPath={stripLocale(location.pathname)} />
           <DarkModeToggle />

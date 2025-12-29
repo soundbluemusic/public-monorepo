@@ -104,5 +104,9 @@
   "github": "GitHub",
   "relatedDocuments": "연관 문서",
   "noFavoritesYet": "아직 즐겨찾기한 개념이 없습니다",
-  "addFavoritesHint": "개념 페이지에서 ♡ 버튼을 눌러 추가하세요"
+  "addFavoritesHint": "개념 페이지에서 ♡ 버튼을 눌러 추가하세요",
+  "skipToContent": "본문으로 건너뛰기",
+  "backToTop": "맨 위로",
+  "sitemap": "사이트맵",
+  "searchConceptsPlaceholder": "개념 검색... (예: 미분, 행렬)"
 }

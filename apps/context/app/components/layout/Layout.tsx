@@ -19,7 +19,7 @@ interface LayoutProps {
 }
 
 export function Layout({ children, breadcrumbs }: LayoutProps) {
-  const { locale, localePath } = useI18n();
+  const { t, localePath } = useI18n();
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -47,7 +47,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
     <div className="min-h-screen flex flex-col bg-(--bg-primary)">
       {/* Skip to content */}
       <a href="#main-content" className="skip-to-content">
-        {locale === 'ko' ? '본문으로 건너뛰기' : 'Skip to content'}
+        {t('skipToContent')}
       </a>
 
       {/* Header */}
@@ -102,7 +102,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
           type="button"
           onClick={scrollToTop}
           className="fixed bottom-20 md:bottom-8 right-4 z-20 min-h-11 min-w-11 flex items-center justify-center rounded-full shadow-md bg-(--bg-elevated) border border-(--border-primary) text-(--text-secondary) cursor-pointer transition-all hover:bg-(--bg-tertiary) focus:outline-2 focus:outline-(--accent-primary) focus:outline-offset-2"
-          aria-label={locale === 'ko' ? '맨 위로' : 'Back to top'}
+          aria-label={t('backToTop')}
         >
           <ArrowUp size={20} aria-hidden="true" />
         </button>

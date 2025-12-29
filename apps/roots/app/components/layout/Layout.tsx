@@ -69,7 +69,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
     <div className="min-h-screen flex flex-col bg-(--bg-primary)">
       {/* Skip to content */}
       <a href="#main-content" className="skip-to-content">
-        {locale === 'ko' ? '본문으로 건너뛰기' : 'Skip to content'}
+        {t('skipToContent')}
       </a>
 
       {/* Header */}
@@ -221,7 +221,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
           type="button"
           onClick={scrollToTop}
           className="fixed bottom-20 lg:bottom-8 right-4 z-30 min-h-11 min-w-11 flex items-center justify-center rounded-full shadow-md transition-colors bg-(--bg-elevated) border border-(--border-primary) text-(--text-secondary) cursor-pointer hover:bg-(--bg-tertiary)"
-          aria-label={locale === 'ko' ? '맨 위로' : 'Back to top'}
+          aria-label={t('backToTop')}
         >
           <ArrowUp size={20} aria-hidden="true" />
         </button>
@@ -238,7 +238,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
               {t('about')}
             </Link>
             <Link to={localePath('/sitemap')} className="no-underline hover:underline text-inherit">
-              {locale === 'ko' ? '사이트맵' : 'Sitemap'}
+              {t('sitemap')}
             </Link>
           </nav>
           <div className="flex items-center justify-center gap-4 text-sm text-(--text-tertiary)">

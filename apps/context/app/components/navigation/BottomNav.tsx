@@ -7,7 +7,7 @@ import { useI18n } from '@/i18n';
 const stripLocale = stripLocaleFromPath;
 
 export function BottomNav() {
-  const { locale, t, localePath } = useI18n();
+  const { t, localePath } = useI18n();
   const location = useLocation();
 
   const isActive = (basePath: string) => {
@@ -51,7 +51,7 @@ export function BottomNav() {
         )}
       >
         <MessageCircle size={20} aria-hidden="true" />
-        <span className="text-[12px]">{locale === 'ko' ? '대화' : 'Talk'}</span>
+        <span className="text-[12px]">{t('talk')}</span>
       </Link>
       <Link
         to={localePath('/my-learning')}
@@ -61,7 +61,7 @@ export function BottomNav() {
         )}
       >
         <LayoutGrid size={20} aria-hidden="true" />
-        <span className="text-[12px]">{locale === 'ko' ? '학습' : 'Learn'}</span>
+        <span className="text-[12px]">{t('learn')}</span>
       </Link>
       <Link
         to={localePath('/about')}

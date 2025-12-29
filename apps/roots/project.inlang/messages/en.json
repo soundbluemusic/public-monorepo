@@ -104,5 +104,9 @@
   "github": "GitHub",
   "relatedDocuments": "Related Documents",
   "noFavoritesYet": "No favorite concepts yet",
-  "addFavoritesHint": "Click the ♡ button on concept pages to add favorites"
+  "addFavoritesHint": "Click the ♡ button on concept pages to add favorites",
+  "skipToContent": "Skip to content",
+  "backToTop": "Back to top",
+  "sitemap": "Sitemap",
+  "searchConceptsPlaceholder": "Search concepts... (e.g., derivative, matrix)"
 }

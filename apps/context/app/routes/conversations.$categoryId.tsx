@@ -26,20 +26,18 @@ export default function ConversationsCategoryPage() {
     category: Category | null;
     conversations: Conversation[];
   }>();
-  const { locale, localePath } = useI18n();
+  const { locale, t, localePath } = useI18n();
 
   if (!category) {
     return (
       <Layout>
         <div className="text-center py-12 px-4 text-(--text-tertiary)">
-          <p className="text-(--text-secondary)">
-            {locale === 'ko' ? '카테고리를 찾을 수 없습니다.' : 'Category not found.'}
-          </p>
+          <p className="text-(--text-secondary)">{t('categoryNotFoundMsg')}</p>
           <Link
             to={localePath('/conversations')}
             className="text-(--accent-primary) hover:underline mt-4 inline-block"
           >
-            {locale === 'ko' ? '대화 목록으로' : 'Back to Conversations'}
+            {t('backToConversations')}
           </Link>
         </div>
       </Layout>
@@ -55,7 +53,7 @@ export default function ConversationsCategoryPage() {
           className="inline-flex items-center gap-1 text-sm text-(--text-tertiary) hover:text-(--text-secondary) mb-4"
         >
           <ArrowLeft size={16} />
-          {locale === 'ko' ? '대화 목록' : 'All Conversations'}
+          {t('allConversations')}
         </Link>
 
         <div className="flex items-center gap-3 mb-2">
@@ -63,7 +61,7 @@ export default function ConversationsCategoryPage() {
           <h1 className="text-2xl font-semibold text-(--text-primary)">{category.name[locale]}</h1>
         </div>
         <p className="text-(--text-secondary)">
-          {conversations.length} {locale === 'ko' ? '개 대화' : 'conversations'}
+          {conversations.length} {t('conversationCount')}
         </p>
       </div>
 
@@ -122,9 +120,7 @@ export default function ConversationsCategoryPage() {
 
       {conversations.length === 0 && (
         <p className="text-center py-12 px-4 text-(--text-tertiary)">
-          {locale === 'ko'
-            ? '이 카테고리에 대화가 아직 없습니다.'
-            : 'No conversations in this category yet.'}
+          {t('noCategoryConversations')}
         </p>
       )}
     </Layout>

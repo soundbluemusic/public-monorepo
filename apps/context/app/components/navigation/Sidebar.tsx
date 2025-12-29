@@ -74,7 +74,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             type="button"
             onClick={onClose}
             className="min-h-11 min-w-11 flex items-center justify-center rounded-lg transition-colors hover:bg-(--bg-tertiary)"
-            aria-label="Close menu"
+            aria-label={t('closeMenu')}
           >
             <X size={20} aria-hidden="true" />
           </button>
@@ -117,7 +117,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
               )}
             >
               <MessageCircle size={20} aria-hidden="true" />
-              {locale === 'ko' ? '대화 예시' : 'Conversations'}
+              {t('conversationExamples')}
             </Link>
             <Link
               to={localePath('/my-learning')}
@@ -129,7 +129,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
               )}
             >
               <LayoutGrid size={20} aria-hidden="true" />
-              {locale === 'ko' ? '내 학습 현황' : 'My Learning'}
+              {t('myLearning')}
             </Link>
             <Link
               to={localePath('/about')}
