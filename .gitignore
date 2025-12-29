@@ -12,7 +12,11 @@ dist/
 apps/roots/public/concepts.json
 apps/roots/public/concept-names.json
 apps/roots/public/search-index.json
+apps/roots/public/concepts/
 apps/context/app/data/generated/
+apps/context/public/data/by-category/
+apps/context/public/data/chunks/
+apps/context/public/data/trie.bin
 
 # Cache
 .cache/
@@ -46,7 +50,6 @@ dev-dist/
 # Test
 coverage/
 .lighthouseci/
-/apps/roots/public/concepts/index.json
 
 # Paraglide generated files
 apps/*/app/paraglide/
