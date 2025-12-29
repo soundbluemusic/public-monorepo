@@ -1,0 +1,2212 @@
+[
+  {
+    "id": "natural-numbers",
+    "name": {
+      "ko": "자연수",
+      "en": "Natural Numbers"
+    },
+    "field": "foundations",
+    "subfield": "arithmetic",
+    "difficulty": 1,
+    "content": {
+      "ko": {
+        "definition": "1, 2, 3, 4, ... 처럼 물건을 셀 때 사용하는 양의 정수이다.",
+        "formulas": [
+          {
+            "latex": "\\mathbb{N} = \\{1, 2, 3, 4, 5, ...\\}",
+            "description": "자연수의 집합 표기"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "다음 중 자연수를 모두 고르시오: -3, 0, 5, 2.5, 100",
+            "solution": "5와 100이 자연수입니다.\n-3은 음수, 0은 자연수가 아님, 2.5는 소수입니다.",
+            "difficulty": 1
+          },
+          {
+            "problem": "1부터 10까지 자연수의 합을 구하시오.",
+            "solution": "1+2+3+4+5+6+7+8+9+10 = 55\n\n또는 공식 사용: n(n+1)/2 = 10×11/2 = 55",
+            "latex": "\\sum_{k=1}^{10} k = \\frac{10 \\times 11}{2} = 55",
+            "difficulty": 2
+          }
+        ],
+        "applications": [
+          {
+            "field": "일상생활",
+            "description": "물건 개수 세기"
+          },
+          {
+            "field": "컴퓨터",
+            "description": "배열 인덱스, 반복 횟수"
+          }
+        ]
+      },
+      "en": {
+        "definition": "Positive integers used for counting: 1, 2, 3, 4, ...",
+        "formulas": [
+          {
+            "latex": "\\mathbb{N} = \\{1, 2, 3, 4, 5, ...\\}",
+            "description": "Set notation for natural numbers"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "Select all natural numbers: -3, 0, 5, 2.5, 100",
+            "solution": "5 and 100 are natural numbers.\n-3 is negative, 0 is not a natural number, 2.5 is decimal.",
+            "difficulty": 1
+          },
+          {
+            "problem": "Find the sum of natural numbers from 1 to 10.",
+            "solution": "1+2+3+4+5+6+7+8+9+10 = 55\n\nOr using formula: n(n+1)/2 = 10×11/2 = 55",
+            "latex": "\\sum_{k=1}^{10} k = \\frac{10 \\times 11}{2} = 55",
+            "difficulty": 2
+          }
+        ],
+        "applications": [
+          {
+            "field": "Daily life",
+            "description": "Counting objects"
+          },
+          {
+            "field": "Computing",
+            "description": "Array indices, loop counts"
+          }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": [],
+      "nextTopics": [
+        "integers",
+        "arithmetic-operations"
+      ],
+      "related": [
+        "whole-numbers",
+        "counting"
+      ],
+      "applications": [
+        "applied-daily-life"
+      ]
+    },
+    "tags": [
+      "number",
+      "fundamental",
+      "counting",
+      "elementary"
+    ]
+  },
+  {
+    "id": "integers",
+    "name": {
+      "ko": "정수",
+      "en": "Integers"
+    },
+    "field": "foundations",
+    "subfield": "arithmetic",
+    "difficulty": 1,
+    "content": {
+      "ko": {
+        "definition": "양의 정수, 0, 음의 정수를 모두 포함하는 수의 집합이다.",
+        "formulas": [
+          {
+            "latex": "\\mathbb{Z} = \\{..., -3, -2, -1, 0, 1, 2, 3, ...\\}",
+            "description": "정수의 집합 표기"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "다음 중 정수를 모두 고르시오: -5, 0, 3.14, 7, -2.5",
+            "solution": "-5, 0, 7이 정수입니다.\n3.14와 -2.5는 소수점이 있으므로 정수가 아닙니다.",
+            "difficulty": 1
+          },
+          {
+            "problem": "(-3) + 7 - (-2)를 계산하시오.",
+            "solution": "(-3) + 7 - (-2) = -3 + 7 + 2 = 6\n\n음수를 빼면 더하는 것과 같습니다.",
+            "difficulty": 1
+          }
+        ],
+        "applications": [
+          {
+            "field": "온도",
+            "description": "영하 온도 표현 (예: -10°C)"
+          },
+          {
+            "field": "금융",
+            "description": "손실, 부채 표현"
+          },
+          {
+            "field": "고도",
+            "description": "해수면 아래 깊이"
+          }
+        ]
+      },
+      "en": {
+        "definition": "The set of numbers including positive integers, zero, and negative integers.",
+        "formulas": [
+          {
+            "latex": "\\mathbb{Z} = \\{..., -3, -2, -1, 0, 1, 2, 3, ...\\}",
+            "description": "Set notation for integers"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "Select all integers: -5, 0, 3.14, 7, -2.5",
+            "solution": "-5, 0, and 7 are integers.\n3.14 and -2.5 have decimal points, so they are not integers.",
+            "difficulty": 1
+          },
+          {
+            "problem": "Calculate (-3) + 7 - (-2).",
+            "solution": "(-3) + 7 - (-2) = -3 + 7 + 2 = 6\n\nSubtracting a negative is the same as adding.",
+            "difficulty": 1
+          }
+        ],
+        "applications": [
+          {
+            "field": "Temperature",
+            "description": "Below zero temperatures (e.g., -10°C)"
+          },
+          {
+            "field": "Finance",
+            "description": "Losses, debts"
+          },
+          {
+            "field": "Elevation",
+            "description": "Depths below sea level"
+          }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": [
+        "natural-numbers"
+      ],
+      "nextTopics": [
+        "rational-numbers",
+        "arithmetic-operations"
+      ],
+      "related": [
+        "number-line"
+      ],
+      "applications": [
+        "applied-daily-life",
+        "applied-finance"
+      ]
+    },
+    "tags": [
+      "number",
+      "fundamental",
+      "integer",
+      "elementary"
+    ]
+  },
+  {
+    "id": "rational-numbers",
+    "name": {
+      "ko": "유리수",
+      "en": "Rational Numbers"
+    },
+    "field": "foundations",
+    "subfield": "arithmetic",
+    "difficulty": 1,
+    "content": {
+      "ko": {
+        "definition": "두 정수의 비율(분수)로 나타낼 수 있는 수이다.",
+        "formulas": [
+          {
+            "latex": "\\mathbb{Q} = \\left\\{ \\frac{a}{b} \\mid a, b \\in \\mathbb{Z}, b \\neq 0 \\right\\}",
+            "description": "유리수의 집합 표기",
+            "variables": [
+              {
+                "symbol": "a",
+                "meaning": "분자 (정수)"
+              },
+              {
+                "symbol": "b",
+                "meaning": "분모 (0이 아닌 정수)"
+              }
+            ]
+          }
+        ],
+        "examples": [
+          {
+            "problem": "다음 중 유리수를 고르시오: 1/2, √2, 0.333..., π",
+            "solution": "1/2와 0.333...(=1/3)이 유리수입니다.\n√2와 π는 분수로 나타낼 수 없는 무리수입니다.",
+            "difficulty": 1
+          },
+          {
+            "problem": "0.75를 기약분수로 나타내시오.",
+            "solution": "0.75 = 75/100 = 3/4\n\n75와 100을 25로 나누어 약분합니다.",
+            "latex": "0.75 = \\frac{75}{100} = \\frac{3}{4}",
+            "difficulty": 1
+          }
+        ],
+        "applications": [
+          {
+            "field": "측정",
+            "description": "정확한 비율 표현"
+          },
+          {
+            "field": "요리",
+            "description": "레시피 재료 비율"
+          }
+        ]
+      },
+      "en": {
+        "definition": "A number that can be expressed as a ratio (fraction) of two integers.",
+        "formulas": [
+          {
+            "latex": "\\mathbb{Q} = \\left\\{ \\frac{a}{b} \\mid a, b \\in \\mathbb{Z}, b \\neq 0 \\right\\}",
+            "description": "Set notation for rational numbers",
+            "variables": [
+              {
+                "symbol": "a",
+                "meaning": "Numerator (integer)"
+              },
+              {
+                "symbol": "b",
+                "meaning": "Denominator (non-zero integer)"
+              }
+            ]
+          }
+        ],
+        "examples": [
+          {
+            "problem": "Select the rational numbers: 1/2, √2, 0.333..., π",
+            "solution": "1/2 and 0.333...(=1/3) are rational.\n√2 and π cannot be expressed as fractions, so they are irrational.",
+            "difficulty": 1
+          },
+          {
+            "problem": "Express 0.75 as a fraction in lowest terms.",
+            "solution": "0.75 = 75/100 = 3/4\n\nDivide both 75 and 100 by 25 to simplify.",
+            "latex": "0.75 = \\frac{75}{100} = \\frac{3}{4}",
+            "difficulty": 1
+          }
+        ],
+        "applications": [
+          {
+            "field": "Measurement",
+            "description": "Exact ratio expression"
+          },
+          {
+            "field": "Cooking",
+            "description": "Recipe ingredient ratios"
+          }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": [
+        "integers",
+        "fractions"
+      ],
+      "nextTopics": [
+        "irrational-numbers",
+        "real-numbers"
+      ],
+      "related": [
+        "decimals"
+      ],
+      "applications": [
+        "applied-daily-life"
+      ]
+    },
+    "tags": [
+      "number",
+      "fundamental",
+      "rational",
+      "elementary"
+    ]
+  },
+  {
+    "id": "irrational-numbers",
+    "name": {
+      "ko": "무리수",
+      "en": "Irrational Numbers"
+    },
+    "field": "foundations",
+    "subfield": "arithmetic",
+    "difficulty": 2,
+    "content": {
+      "ko": {
+        "definition": "분수로 나타낼 수 없는 수로, 소수점 이하가 무한히 계속되며 반복되지 않는다.",
+        "formulas": [
+          {
+            "latex": "\\sqrt{2} = 1.41421356...",
+            "description": "루트 2 (무한 비순환 소수)"
+          },
+          {
+            "latex": "\\pi = 3.14159265...",
+            "description": "원주율 파이"
+          },
+          {
+            "latex": "e = 2.71828182...",
+            "description": "자연상수 e"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "√2가 무리수임을 설명하시오.",
+            "solution": "√2를 a/b (기약분수)로 나타낼 수 있다고 가정하면,\n2 = a²/b² → a² = 2b²\na²이 짝수이므로 a도 짝수, a = 2k라 하면\n4k² = 2b² → b² = 2k²\nb도 짝수가 되어 기약분수 가정에 모순.\n따라서 √2는 무리수이다.",
+            "difficulty": 3
+          },
+          {
+            "problem": "다음 중 무리수를 고르시오: √4, √5, 0.25, π/2",
+            "solution": "√5와 π/2가 무리수입니다.\n√4 = 2 (정수), 0.25 = 1/4 (유리수)",
+            "difficulty": 1
+          }
+        ],
+        "applications": [
+          {
+            "field": "기하학",
+            "description": "대각선 길이, 원의 둘레"
+          },
+          {
+            "field": "물리학",
+            "description": "자연상수 e를 이용한 성장/붕괴"
+          }
+        ]
+      },
+      "en": {
+        "definition": "A number that cannot be expressed as a fraction, with infinite non-repeating decimal expansion.",
+        "formulas": [
+          {
+            "latex": "\\sqrt{2} = 1.41421356...",
+            "description": "Square root of 2 (infinite non-repeating decimal)"
+          },
+          {
+            "latex": "\\pi = 3.14159265...",
+            "description": "Pi"
+          },
+          {
+            "latex": "e = 2.71828182...",
+            "description": "Euler's number e"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "Explain why √2 is irrational.",
+            "solution": "Assume √2 = a/b (in lowest terms).\nThen 2 = a²/b² → a² = 2b²\nSince a² is even, a is even. Let a = 2k.\n4k² = 2b² → b² = 2k²\nSo b is also even, contradicting lowest terms.\nTherefore √2 is irrational.",
+            "difficulty": 3
+          },
+          {
+            "problem": "Select the irrational numbers: √4, √5, 0.25, π/2",
+            "solution": "√5 and π/2 are irrational.\n√4 = 2 (integer), 0.25 = 1/4 (rational)",
+            "difficulty": 1
+          }
+        ],
+        "applications": [
+          {
+            "field": "Geometry",
+            "description": "Diagonal lengths, circle circumference"
+          },
+          {
+            "field": "Physics",
+            "description": "Growth/decay using Euler's number e"
+          }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": [
+        "rational-numbers",
+        "square-roots"
+      ],
+      "nextTopics": [
+        "real-numbers"
+      ],
+      "related": [
+        "pi",
+        "euler-number"
+      ],
+      "applications": [
+        "applied-physics"
+      ]
+    },
+    "tags": [
+      "number",
+      "fundamental",
+      "irrational",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "real-numbers",
+    "name": {
+      "ko": "실수",
+      "en": "Real Numbers"
+    },
+    "field": "foundations",
+    "subfield": "arithmetic",
+    "difficulty": 2,
+    "content": {
+      "ko": {
+        "definition": "유리수와 무리수를 모두 포함하는 수의 집합으로, 수직선 위의 모든 점에 대응한다.",
+        "formulas": [
+          {
+            "latex": "\\mathbb{R} = \\mathbb{Q} \\cup \\mathbb{I}",
+            "description": "실수 = 유리수 ∪ 무리수"
+          },
+          {
+            "latex": "\\mathbb{N} \\subset \\mathbb{Z} \\subset \\mathbb{Q} \\subset \\mathbb{R}",
+            "description": "수 체계의 포함 관계"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "수직선에서 √2의 위치를 설명하시오.",
+            "solution": "√2 ≈ 1.414이므로 1과 2 사이에 위치합니다.\n정확히는 한 변이 1인 정사각형의 대각선 길이입니다.",
+            "difficulty": 1
+          },
+          {
+            "problem": "다음 수를 분류하시오: -3, 0.5, √3, π, 7",
+            "solution": "자연수: 7\n정수: -3, 7\n유리수: -3, 0.5, 7\n무리수: √3, π\n실수: 모두 실수",
+            "difficulty": 2
+          }
+        ],
+        "applications": [
+          {
+            "field": "물리학",
+            "description": "연속적인 물리량 측정"
+          },
+          {
+            "field": "공학",
+            "description": "정밀한 계산과 측정"
+          }
+        ]
+      },
+      "en": {
+        "definition": "The set of all rational and irrational numbers, corresponding to every point on the number line.",
+        "formulas": [
+          {
+            "latex": "\\mathbb{R} = \\mathbb{Q} \\cup \\mathbb{I}",
+            "description": "Real numbers = Rational ∪ Irrational"
+          },
+          {
+            "latex": "\\mathbb{N} \\subset \\mathbb{Z} \\subset \\mathbb{Q} \\subset \\mathbb{R}",
+            "description": "Number system hierarchy"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "Describe the position of √2 on the number line.",
+            "solution": "√2 ≈ 1.414, so it lies between 1 and 2.\nIt's exactly the diagonal length of a unit square.",
+            "difficulty": 1
+          },
+          {
+            "problem": "Classify the following numbers: -3, 0.5, √3, π, 7",
+            "solution": "Natural: 7\nInteger: -3, 7\nRational: -3, 0.5, 7\nIrrational: √3, π\nReal: all of them",
+            "difficulty": 2
+          }
+        ],
+        "applications": [
+          {
+            "field": "Physics",
+            "description": "Continuous physical measurements"
+          },
+          {
+            "field": "Engineering",
+            "description": "Precise calculations and measurements"
+          }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": [
+        "rational-numbers",
+        "irrational-numbers"
+      ],
+      "nextTopics": [
+        "complex-numbers"
+      ],
+      "related": [
+        "number-line",
+        "intervals"
+      ],
+      "applications": [
+        "applied-physics",
+        "applied-engineering"
+      ]
+    },
+    "tags": [
+      "number",
+      "fundamental",
+      "real",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "arithmetic-operations",
+    "name": {
+      "ko": "사칙연산",
+      "en": "Arithmetic Operations"
+    },
+    "field": "foundations",
+    "subfield": "arithmetic",
+    "difficulty": 1,
+    "content": {
+      "ko": {
+        "definition": "덧셈, 뺄셈, 곱셈, 나눗셈의 네 가지 기본 연산이다.",
+        "formulas": [
+          {
+            "latex": "a + b",
+            "description": "덧셈 (합)"
+          },
+          {
+            "latex": "a - b",
+            "description": "뺄셈 (차)"
+          },
+          {
+            "latex": "a \\times b = a \\cdot b = ab",
+            "description": "곱셈 (곱)"
+          },
+          {
+            "latex": "a \\div b = \\frac{a}{b}",
+            "description": "나눗셈 (몫)"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "3 + 4 × 2 - 6 ÷ 3을 계산하시오.",
+            "solution": "연산 순서: 곱셈/나눗셈 먼저, 덧셈/뺄셈 나중\n= 3 + 8 - 2\n= 9",
+            "difficulty": 1
+          },
+          {
+            "problem": "(12 + 8) ÷ 4 × 3을 계산하시오.",
+            "solution": "괄호 먼저: 12 + 8 = 20\n왼쪽에서 오른쪽으로: 20 ÷ 4 = 5\n5 × 3 = 15",
+            "difficulty": 1
+          }
+        ],
+        "applications": [
+          {
+            "field": "일상생활",
+            "description": "쇼핑 계산, 거스름돈"
+          },
+          {
+            "field": "프로그래밍",
+            "description": "기본 연산자 (+, -, *, /)"
+          }
+        ]
+      },
+      "en": {
+        "definition": "The four basic operations: addition, subtraction, multiplication, and division.",
+        "formulas": [
+          {
+            "latex": "a + b",
+            "description": "Addition (sum)"
+          },
+          {
+            "latex": "a - b",
+            "description": "Subtraction (difference)"
+          },
+          {
+            "latex": "a \\times b = a \\cdot b = ab",
+            "description": "Multiplication (product)"
+          },
+          {
+            "latex": "a \\div b = \\frac{a}{b}",
+            "description": "Division (quotient)"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "Calculate 3 + 4 × 2 - 6 ÷ 3.",
+            "solution": "Order of operations: multiplication/division first\n= 3 + 8 - 2\n= 9",
+            "difficulty": 1
+          },
+          {
+            "problem": "Calculate (12 + 8) ÷ 4 × 3.",
+            "solution": "Parentheses first: 12 + 8 = 20\nLeft to right: 20 ÷ 4 = 5\n5 × 3 = 15",
+            "difficulty": 1
+          }
+        ],
+        "applications": [
+          {
+            "field": "Daily life",
+            "description": "Shopping calculations, change"
+          },
+          {
+            "field": "Programming",
+            "description": "Basic operators (+, -, *, /)"
+          }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": [
+        "natural-numbers"
+      ],
+      "nextTopics": [
+        "exponents",
+        "fractions"
+      ],
+      "related": [
+        "order-of-operations"
+      ],
+      "applications": [
+        "applied-daily-life",
+        "applied-cs"
+      ]
+    },
+    "tags": [
+      "operation",
+      "fundamental",
+      "arithmetic",
+      "elementary"
+    ]
+  },
+  {
+    "id": "exponents",
+    "name": {
+      "ko": "거듭제곱",
+      "en": "Exponents"
+    },
+    "field": "foundations",
+    "subfield": "arithmetic",
+    "difficulty": 1,
+    "content": {
+      "ko": {
+        "definition": "같은 수를 여러 번 곱하는 것을 간단히 나타낸 것이다.",
+        "formulas": [
+          {
+            "latex": "a^n = \\underbrace{a \\times a \\times ... \\times a}_{n\\text{번}}",
+            "description": "거듭제곱의 정의",
+            "variables": [
+              {
+                "symbol": "a",
+                "meaning": "밑 (base)"
+              },
+              {
+                "symbol": "n",
+                "meaning": "지수 (exponent)"
+              }
+            ]
+          },
+          {
+            "latex": "a^m \\times a^n = a^{m+n}",
+            "description": "지수법칙: 곱셈"
+          },
+          {
+            "latex": "\\frac{a^m}{a^n} = a^{m-n}",
+            "description": "지수법칙: 나눗셈"
+          },
+          {
+            "latex": "(a^m)^n = a^{mn}",
+            "description": "지수법칙: 거듭제곱의 거듭제곱"
+          },
+          {
+            "latex": "a^0 = 1 \\quad (a \\neq 0)",
+            "description": "0승은 1"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "2³ × 2⁴를 계산하시오.",
+            "solution": "지수법칙 적용: 2³ × 2⁴ = 2³⁺⁴ = 2⁷ = 128",
+            "latex": "2^3 \\times 2^4 = 2^{3+4} = 2^7 = 128",
+            "difficulty": 1
+          },
+          {
+            "problem": "(3²)³을 계산하시오.",
+            "solution": "(3²)³ = 3²ˣ³ = 3⁶ = 729",
+            "latex": "(3^2)^3 = 3^{2 \\times 3} = 3^6 = 729",
+            "difficulty": 1
+          }
+        ],
+        "applications": [
+          {
+            "field": "과학",
+            "description": "큰 수 표기 (예: 10⁹ = 10억)"
+          },
+          {
+            "field": "컴퓨터",
+            "description": "2의 거듭제곱 (메모리 크기)"
+          },
+          {
+            "field": "금융",
+            "description": "복리 계산"
+          }
+        ]
+      },
+      "en": {
+        "definition": "A shorthand notation for multiplying a number by itself multiple times.",
+        "formulas": [
+          {
+            "latex": "a^n = \\underbrace{a \\times a \\times ... \\times a}_{n\\text{ times}}",
+            "description": "Definition of exponent",
+            "variables": [
+              {
+                "symbol": "a",
+                "meaning": "Base"
+              },
+              {
+                "symbol": "n",
+                "meaning": "Exponent"
+              }
+            ]
+          },
+          {
+            "latex": "a^m \\times a^n = a^{m+n}",
+            "description": "Exponent rule: multiplication"
+          },
+          {
+            "latex": "\\frac{a^m}{a^n} = a^{m-n}",
+            "description": "Exponent rule: division"
+          },
+          {
+            "latex": "(a^m)^n = a^{mn}",
+            "description": "Exponent rule: power of a power"
+          },
+          {
+            "latex": "a^0 = 1 \\quad (a \\neq 0)",
+            "description": "Zero exponent equals 1"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "Calculate 2³ × 2⁴.",
+            "solution": "Using exponent rule: 2³ × 2⁴ = 2³⁺⁴ = 2⁷ = 128",
+            "latex": "2^3 \\times 2^4 = 2^{3+4} = 2^7 = 128",
+            "difficulty": 1
+          },
+          {
+            "problem": "Calculate (3²)³.",
+            "solution": "(3²)³ = 3²ˣ³ = 3⁶ = 729",
+            "latex": "(3^2)^3 = 3^{2 \\times 3} = 3^6 = 729",
+            "difficulty": 1
+          }
+        ],
+        "applications": [
+          {
+            "field": "Science",
+            "description": "Large number notation (e.g., 10⁹ = billion)"
+          },
+          {
+            "field": "Computing",
+            "description": "Powers of 2 (memory sizes)"
+          },
+          {
+            "field": "Finance",
+            "description": "Compound interest"
+          }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": [
+        "arithmetic-operations"
+      ],
+      "nextTopics": [
+        "square-roots",
+        "logarithms"
+      ],
+      "related": [
+        "scientific-notation"
+      ],
+      "applications": [
+        "applied-finance",
+        "applied-cs"
+      ]
+    },
+    "tags": [
+      "operation",
+      "fundamental",
+      "exponent",
+      "elementary"
+    ]
+  },
+  {
+    "id": "square-roots",
+    "name": {
+      "ko": "제곱근",
+      "en": "Square Roots"
+    },
+    "field": "foundations",
+    "subfield": "arithmetic",
+    "difficulty": 1,
+    "content": {
+      "ko": {
+        "definition": "제곱하여 어떤 수가 되는 수를 그 수의 제곱근이라 한다.",
+        "formulas": [
+          {
+            "latex": "\\sqrt{a} = b \\iff b^2 = a \\quad (b \\geq 0)",
+            "description": "제곱근의 정의"
+          },
+          {
+            "latex": "\\sqrt{ab} = \\sqrt{a} \\cdot \\sqrt{b}",
+            "description": "제곱근의 곱셈"
+          },
+          {
+            "latex": "\\sqrt{\\frac{a}{b}} = \\frac{\\sqrt{a}}{\\sqrt{b}}",
+            "description": "제곱근의 나눗셈"
+          },
+          {
+            "latex": "\\sqrt{a^2} = |a|",
+            "description": "제곱근과 제곱의 관계"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "√50을 간단히 하시오.",
+            "solution": "√50 = √(25 × 2) = √25 × √2 = 5√2",
+            "latex": "\\sqrt{50} = \\sqrt{25 \\times 2} = 5\\sqrt{2}",
+            "difficulty": 1
+          },
+          {
+            "problem": "√12 + √27을 간단히 하시오.",
+            "solution": "√12 = 2√3, √27 = 3√3\n따라서 2√3 + 3√3 = 5√3",
+            "latex": "\\sqrt{12} + \\sqrt{27} = 2\\sqrt{3} + 3\\sqrt{3} = 5\\sqrt{3}",
+            "difficulty": 2
+          }
+        ],
+        "applications": [
+          {
+            "field": "기하학",
+            "description": "피타고라스 정리에서 빗변 계산"
+          },
+          {
+            "field": "물리학",
+            "description": "거리, 속도 계산"
+          }
+        ]
+      },
+      "en": {
+        "definition": "A number that, when squared, gives the original number.",
+        "formulas": [
+          {
+            "latex": "\\sqrt{a} = b \\iff b^2 = a \\quad (b \\geq 0)",
+            "description": "Definition of square root"
+          },
+          {
+            "latex": "\\sqrt{ab} = \\sqrt{a} \\cdot \\sqrt{b}",
+            "description": "Product rule for square roots"
+          },
+          {
+            "latex": "\\sqrt{\\frac{a}{b}} = \\frac{\\sqrt{a}}{\\sqrt{b}}",
+            "description": "Quotient rule for square roots"
+          },
+          {
+            "latex": "\\sqrt{a^2} = |a|",
+            "description": "Square root of a square"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "Simplify √50.",
+            "solution": "√50 = √(25 × 2) = √25 × √2 = 5√2",
+            "latex": "\\sqrt{50} = \\sqrt{25 \\times 2} = 5\\sqrt{2}",
+            "difficulty": 1
+          },
+          {
+            "problem": "Simplify √12 + √27.",
+            "solution": "√12 = 2√3, √27 = 3√3\nSo 2√3 + 3√3 = 5√3",
+            "latex": "\\sqrt{12} + \\sqrt{27} = 2\\sqrt{3} + 3\\sqrt{3} = 5\\sqrt{3}",
+            "difficulty": 2
+          }
+        ],
+        "applications": [
+          {
+            "field": "Geometry",
+            "description": "Pythagorean theorem calculations"
+          },
+          {
+            "field": "Physics",
+            "description": "Distance, velocity calculations"
+          }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": [
+        "exponents"
+      ],
+      "nextTopics": [
+        "irrational-numbers",
+        "nth-roots"
+      ],
+      "related": [
+        "pythagorean-theorem"
+      ],
+      "applications": [
+        "applied-physics"
+      ]
+    },
+    "tags": [
+      "operation",
+      "fundamental",
+      "root",
+      "elementary"
+    ]
+  },
+  {
+    "id": "prime-numbers",
+    "name": {
+      "ko": "소수",
+      "en": "Prime Numbers"
+    },
+    "field": "foundations",
+    "subfield": "arithmetic",
+    "difficulty": 1,
+    "content": {
+      "ko": {
+        "definition": "1과 자기 자신만을 약수로 가지는 1보다 큰 자연수이다.",
+        "formulas": [
+          {
+            "latex": "\\text{소수} = \\{2, 3, 5, 7, 11, 13, 17, 19, 23, ...\\}",
+            "description": "처음 몇 개의 소수"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "1부터 20까지의 소수를 모두 구하시오.",
+            "solution": "2, 3, 5, 7, 11, 13, 17, 19\n\n1은 소수가 아니고, 4, 6, 8, ... 등은 합성수입니다.",
+            "difficulty": 1
+          },
+          {
+            "problem": "84를 소인수분해하시오.",
+            "solution": "84 = 2 × 42 = 2 × 2 × 21 = 2 × 2 × 3 × 7\n= 2² × 3 × 7",
+            "latex": "84 = 2^2 \\times 3 \\times 7",
+            "difficulty": 1
+          }
+        ],
+        "applications": [
+          {
+            "field": "암호학",
+            "description": "RSA 암호화 알고리즘"
+          },
+          {
+            "field": "컴퓨터과학",
+            "description": "해시 함수, 난수 생성"
+          }
+        ]
+      },
+      "en": {
+        "definition": "A natural number greater than 1 that has no positive divisors other than 1 and itself.",
+        "formulas": [
+          {
+            "latex": "\\text{Primes} = \\{2, 3, 5, 7, 11, 13, 17, 19, 23, ...\\}",
+            "description": "First several prime numbers"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "Find all prime numbers from 1 to 20.",
+            "solution": "2, 3, 5, 7, 11, 13, 17, 19\n\n1 is not prime, and 4, 6, 8, ... are composite.",
+            "difficulty": 1
+          },
+          {
+            "problem": "Find the prime factorization of 84.",
+            "solution": "84 = 2 × 42 = 2 × 2 × 21 = 2 × 2 × 3 × 7\n= 2² × 3 × 7",
+            "latex": "84 = 2^2 \\times 3 \\times 7",
+            "difficulty": 1
+          }
+        ],
+        "applications": [
+          {
+            "field": "Cryptography",
+            "description": "RSA encryption algorithm"
+          },
+          {
+            "field": "Computer Science",
+            "description": "Hash functions, random number generation"
+          }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": [
+        "natural-numbers"
+      ],
+      "nextTopics": [
+        "gcd-lcm",
+        "prime-factorization"
+      ],
+      "related": [
+        "divisibility"
+      ],
+      "applications": [
+        "applied-cs",
+        "cryptographic-number-theory"
+      ]
+    },
+    "tags": [
+      "number",
+      "fundamental",
+      "prime",
+      "elementary"
+    ]
+  },
+  {
+    "id": "gcd-lcm",
+    "name": {
+      "ko": "최대공약수와 최소공배수",
+      "en": "GCD and LCM"
+    },
+    "field": "foundations",
+    "subfield": "arithmetic",
+    "difficulty": 1,
+    "content": {
+      "ko": {
+        "definition": "최대공약수(GCD)는 두 수의 공통 약수 중 가장 큰 수이고, 최소공배수(LCM)는 공통 배수 중 가장 작은 수이다.",
+        "formulas": [
+          {
+            "latex": "\\gcd(a, b) \\times \\text{lcm}(a, b) = a \\times b",
+            "description": "GCD와 LCM의 관계"
+          },
+          {
+            "latex": "\\gcd(a, b) = \\gcd(b, a \\mod b)",
+            "description": "유클리드 호제법"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "GCD(24, 36)과 LCM(24, 36)을 구하시오.",
+            "solution": "24 = 2³ × 3, 36 = 2² × 3²\nGCD = 2² × 3 = 12 (공통된 소인수의 최소 지수)\nLCM = 2³ × 3² = 72 (모든 소인수의 최대 지수)\n\n검산: 12 × 72 = 864 = 24 × 36 ✓",
+            "difficulty": 1
+          },
+          {
+            "problem": "유클리드 호제법으로 GCD(48, 18)을 구하시오.",
+            "solution": "48 = 18 × 2 + 12\n18 = 12 × 1 + 6\n12 = 6 × 2 + 0\n\n나머지가 0이 되면 그 때의 나누는 수가 GCD\nGCD(48, 18) = 6",
+            "difficulty": 2
+          }
+        ],
+        "applications": [
+          {
+            "field": "분수",
+            "description": "약분, 통분"
+          },
+          {
+            "field": "스케줄링",
+            "description": "주기적 이벤트 동기화"
+          },
+          {
+            "field": "암호학",
+            "description": "RSA 키 생성"
+          }
+        ]
+      },
+      "en": {
+        "definition": "GCD (Greatest Common Divisor) is the largest number that divides both numbers. LCM (Least Common Multiple) is the smallest number divisible by both.",
+        "formulas": [
+          {
+            "latex": "\\gcd(a, b) \\times \\text{lcm}(a, b) = a \\times b",
+            "description": "Relationship between GCD and LCM"
+          },
+          {
+            "latex": "\\gcd(a, b) = \\gcd(b, a \\mod b)",
+            "description": "Euclidean algorithm"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "Find GCD(24, 36) and LCM(24, 36).",
+            "solution": "24 = 2³ × 3, 36 = 2² × 3²\nGCD = 2² × 3 = 12 (min exponents of common factors)\nLCM = 2³ × 3² = 72 (max exponents of all factors)\n\nCheck: 12 × 72 = 864 = 24 × 36 ✓",
+            "difficulty": 1
+          },
+          {
+            "problem": "Find GCD(48, 18) using Euclidean algorithm.",
+            "solution": "48 = 18 × 2 + 12\n18 = 12 × 1 + 6\n12 = 6 × 2 + 0\n\nWhen remainder is 0, the divisor is the GCD.\nGCD(48, 18) = 6",
+            "difficulty": 2
+          }
+        ],
+        "applications": [
+          {
+            "field": "Fractions",
+            "description": "Simplifying, finding common denominators"
+          },
+          {
+            "field": "Scheduling",
+            "description": "Synchronizing periodic events"
+          },
+          {
+            "field": "Cryptography",
+            "description": "RSA key generation"
+          }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": [
+        "prime-numbers"
+      ],
+      "nextTopics": [
+        "modular-arithmetic"
+      ],
+      "related": [
+        "divisibility",
+        "fractions"
+      ],
+      "applications": [
+        "applied-cs",
+        "cryptographic-number-theory"
+      ]
+    },
+    "tags": [
+      "number",
+      "fundamental",
+      "gcd",
+      "lcm",
+      "elementary"
+    ]
+  },
+  {
+    "id": "fractions",
+    "name": {
+      "ko": "분수",
+      "en": "Fractions"
+    },
+    "field": "foundations",
+    "subfield": "fractions-ratios",
+    "difficulty": 1,
+    "content": {
+      "ko": {
+        "definition": "전체를 똑같이 나눈 것 중 일부를 나타내는 수이다.",
+        "formulas": [
+          {
+            "latex": "\\frac{a}{b}",
+            "description": "분수의 기본 형태",
+            "variables": [
+              {
+                "symbol": "a",
+                "meaning": "분자 (나눈 것 중 취한 부분)"
+              },
+              {
+                "symbol": "b",
+                "meaning": "분모 (전체를 나눈 수, b≠0)"
+              }
+            ]
+          },
+          {
+            "latex": "\\frac{a}{b} + \\frac{c}{d} = \\frac{ad + bc}{bd}",
+            "description": "분수의 덧셈"
+          },
+          {
+            "latex": "\\frac{a}{b} \\times \\frac{c}{d} = \\frac{ac}{bd}",
+            "description": "분수의 곱셈"
+          },
+          {
+            "latex": "\\frac{a}{b} \\div \\frac{c}{d} = \\frac{a}{b} \\times \\frac{d}{c} = \\frac{ad}{bc}",
+            "description": "분수의 나눗셈"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "1/2 + 1/3을 계산하시오.",
+            "solution": "통분: 1/2 = 3/6, 1/3 = 2/6\n따라서 3/6 + 2/6 = 5/6",
+            "latex": "\\frac{1}{2} + \\frac{1}{3} = \\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}",
+            "difficulty": 1
+          },
+          {
+            "problem": "2/3 ÷ 4/5를 계산하시오.",
+            "solution": "나눗셈은 역수를 곱합니다.\n2/3 × 5/4 = 10/12 = 5/6",
+            "latex": "\\frac{2}{3} \\div \\frac{4}{5} = \\frac{2}{3} \\times \\frac{5}{4} = \\frac{10}{12} = \\frac{5}{6}",
+            "difficulty": 1
+          }
+        ],
+        "applications": [
+          {
+            "field": "요리",
+            "description": "재료 비율 계산"
+          },
+          {
+            "field": "음악",
+            "description": "박자와 음표 길이"
+          }
+        ]
+      },
+      "en": {
+        "definition": "A number representing part of a whole divided into equal parts.",
+        "formulas": [
+          {
+            "latex": "\\frac{a}{b}",
+            "description": "Basic fraction form",
+            "variables": [
+              {
+                "symbol": "a",
+                "meaning": "Numerator (parts taken)"
+              },
+              {
+                "symbol": "b",
+                "meaning": "Denominator (total parts, b≠0)"
+              }
+            ]
+          },
+          {
+            "latex": "\\frac{a}{b} + \\frac{c}{d} = \\frac{ad + bc}{bd}",
+            "description": "Fraction addition"
+          },
+          {
+            "latex": "\\frac{a}{b} \\times \\frac{c}{d} = \\frac{ac}{bd}",
+            "description": "Fraction multiplication"
+          },
+          {
+            "latex": "\\frac{a}{b} \\div \\frac{c}{d} = \\frac{a}{b} \\times \\frac{d}{c} = \\frac{ad}{bc}",
+            "description": "Fraction division"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "Calculate 1/2 + 1/3.",
+            "solution": "Common denominator: 1/2 = 3/6, 1/3 = 2/6\nSo 3/6 + 2/6 = 5/6",
+            "latex": "\\frac{1}{2} + \\frac{1}{3} = \\frac{3}{6} + \\frac{2}{6} = \\frac{5}{6}",
+            "difficulty": 1
+          },
+          {
+            "problem": "Calculate 2/3 ÷ 4/5.",
+            "solution": "Division means multiply by reciprocal.\n2/3 × 5/4 = 10/12 = 5/6",
+            "latex": "\\frac{2}{3} \\div \\frac{4}{5} = \\frac{2}{3} \\times \\frac{5}{4} = \\frac{10}{12} = \\frac{5}{6}",
+            "difficulty": 1
+          }
+        ],
+        "applications": [
+          {
+            "field": "Cooking",
+            "description": "Recipe proportions"
+          },
+          {
+            "field": "Music",
+            "description": "Time signatures and note durations"
+          }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": [
+        "natural-numbers",
+        "arithmetic-operations"
+      ],
+      "nextTopics": [
+        "decimals",
+        "ratios",
+        "percentages"
+      ],
+      "related": [
+        "gcd-lcm"
+      ],
+      "applications": [
+        "applied-daily-life",
+        "applied-music"
+      ]
+    },
+    "tags": [
+      "number",
+      "fundamental",
+      "fraction",
+      "elementary"
+    ]
+  },
+  {
+    "id": "decimals",
+    "name": {
+      "ko": "소수 (小數)",
+      "en": "Decimals"
+    },
+    "field": "foundations",
+    "subfield": "fractions-ratios",
+    "difficulty": 1,
+    "content": {
+      "ko": {
+        "definition": "소수점을 사용하여 1보다 작은 부분을 10의 거듭제곱 분의 1로 나타낸 수이다.",
+        "formulas": [
+          {
+            "latex": "0.abc = \\frac{a}{10} + \\frac{b}{100} + \\frac{c}{1000}",
+            "description": "소수의 자릿값"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "3/8을 소수로 나타내시오.",
+            "solution": "3 ÷ 8 = 0.375",
+            "difficulty": 1
+          },
+          {
+            "problem": "0.125를 기약분수로 나타내시오.",
+            "solution": "0.125 = 125/1000 = 1/8\n\n125와 1000을 125로 나눕니다.",
+            "latex": "0.125 = \\frac{125}{1000} = \\frac{1}{8}",
+            "difficulty": 1
+          },
+          {
+            "problem": "순환소수 0.333...을 분수로 나타내시오.",
+            "solution": "x = 0.333...\n10x = 3.333...\n10x - x = 3\n9x = 3\nx = 1/3",
+            "difficulty": 2
+          }
+        ],
+        "applications": [
+          {
+            "field": "화폐",
+            "description": "금액 표시"
+          },
+          {
+            "field": "측정",
+            "description": "정밀한 길이, 무게"
+          }
+        ]
+      },
+      "en": {
+        "definition": "A number written using a decimal point to represent fractional parts as powers of ten.",
+        "formulas": [
+          {
+            "latex": "0.abc = \\frac{a}{10} + \\frac{b}{100} + \\frac{c}{1000}",
+            "description": "Decimal place values"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "Convert 3/8 to a decimal.",
+            "solution": "3 ÷ 8 = 0.375",
+            "difficulty": 1
+          },
+          {
+            "problem": "Convert 0.125 to a fraction in lowest terms.",
+            "solution": "0.125 = 125/1000 = 1/8\n\nDivide both by 125.",
+            "latex": "0.125 = \\frac{125}{1000} = \\frac{1}{8}",
+            "difficulty": 1
+          },
+          {
+            "problem": "Convert repeating decimal 0.333... to a fraction.",
+            "solution": "Let x = 0.333...\n10x = 3.333...\n10x - x = 3\n9x = 3\nx = 1/3",
+            "difficulty": 2
+          }
+        ],
+        "applications": [
+          {
+            "field": "Currency",
+            "description": "Money amounts"
+          },
+          {
+            "field": "Measurement",
+            "description": "Precise lengths, weights"
+          }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": [
+        "fractions"
+      ],
+      "nextTopics": [
+        "percentages"
+      ],
+      "related": [
+        "rational-numbers"
+      ],
+      "applications": [
+        "applied-daily-life",
+        "applied-finance"
+      ]
+    },
+    "tags": [
+      "number",
+      "fundamental",
+      "decimal",
+      "elementary"
+    ]
+  },
+  {
+    "id": "percentages",
+    "name": {
+      "ko": "백분율",
+      "en": "Percentages"
+    },
+    "field": "foundations",
+    "subfield": "fractions-ratios",
+    "difficulty": 1,
+    "content": {
+      "ko": {
+        "definition": "전체를 100으로 볼 때 차지하는 비율을 나타낸 것이다.",
+        "formulas": [
+          {
+            "latex": "p\\% = \\frac{p}{100}",
+            "description": "백분율을 분수로"
+          },
+          {
+            "latex": "\\text{백분율} = \\frac{\\text{부분}}{\\text{전체}} \\times 100\\%",
+            "description": "백분율 계산"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "80명 중 20명이 합격했다면 합격률은?",
+            "solution": "합격률 = (20/80) × 100% = 25%",
+            "difficulty": 1
+          },
+          {
+            "problem": "원래 가격 50,000원에서 20% 할인하면?",
+            "solution": "할인액 = 50,000 × 0.20 = 10,000원\n할인가 = 50,000 - 10,000 = 40,000원",
+            "difficulty": 1
+          },
+          {
+            "problem": "가격이 80,000원에서 100,000원으로 오르면 인상률은?",
+            "solution": "인상액 = 100,000 - 80,000 = 20,000원\n인상률 = (20,000/80,000) × 100% = 25%",
+            "difficulty": 2
+          }
+        ],
+        "applications": [
+          {
+            "field": "금융",
+            "description": "이자율, 수익률, 세율"
+          },
+          {
+            "field": "통계",
+            "description": "설문조사 결과"
+          },
+          {
+            "field": "쇼핑",
+            "description": "할인율 계산"
+          }
+        ]
+      },
+      "en": {
+        "definition": "A ratio expressed as a fraction of 100.",
+        "formulas": [
+          {
+            "latex": "p\\% = \\frac{p}{100}",
+            "description": "Percentage to fraction"
+          },
+          {
+            "latex": "\\text{Percentage} = \\frac{\\text{Part}}{\\text{Whole}} \\times 100\\%",
+            "description": "Percentage calculation"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "If 20 out of 80 people passed, what is the pass rate?",
+            "solution": "Pass rate = (20/80) × 100% = 25%",
+            "difficulty": 1
+          },
+          {
+            "problem": "What is the price after a 20% discount on $50?",
+            "solution": "Discount = 50 × 0.20 = $10\nFinal price = 50 - 10 = $40",
+            "difficulty": 1
+          },
+          {
+            "problem": "If price increases from $80 to $100, what is the percent increase?",
+            "solution": "Increase = 100 - 80 = $20\nPercent increase = (20/80) × 100% = 25%",
+            "difficulty": 2
+          }
+        ],
+        "applications": [
+          {
+            "field": "Finance",
+            "description": "Interest rates, returns, taxes"
+          },
+          {
+            "field": "Statistics",
+            "description": "Survey results"
+          },
+          {
+            "field": "Shopping",
+            "description": "Discount calculations"
+          }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": [
+        "fractions",
+        "decimals"
+      ],
+      "nextTopics": [
+        "ratios",
+        "proportions"
+      ],
+      "related": [
+        "statistics-basics"
+      ],
+      "applications": [
+        "applied-finance",
+        "applied-daily-life"
+      ]
+    },
+    "tags": [
+      "number",
+      "fundamental",
+      "percentage",
+      "elementary"
+    ]
+  },
+  {
+    "id": "ratios",
+    "name": {
+      "ko": "비",
+      "en": "Ratios"
+    },
+    "field": "foundations",
+    "subfield": "fractions-ratios",
+    "difficulty": 1,
+    "content": {
+      "ko": {
+        "definition": "두 수의 상대적인 크기를 비교하는 것으로, a:b 또는 a/b로 나타낸다.",
+        "formulas": [
+          {
+            "latex": "a : b = \\frac{a}{b}",
+            "description": "비의 표기"
+          },
+          {
+            "latex": "a : b = ka : kb \\quad (k \\neq 0)",
+            "description": "비의 성질 (같은 수를 곱해도 같다)"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "12:18을 가장 간단한 정수의 비로 나타내시오.",
+            "solution": "GCD(12, 18) = 6\n12:18 = 2:3",
+            "difficulty": 1
+          },
+          {
+            "problem": "A와 B가 2:3으로 72,000원을 나누면 각자 얼마?",
+            "solution": "전체 비 = 2 + 3 = 5\nA = 72,000 × (2/5) = 28,800원\nB = 72,000 × (3/5) = 43,200원",
+            "difficulty": 1
+          }
+        ],
+        "applications": [
+          {
+            "field": "요리",
+            "description": "재료 배합 비율"
+          },
+          {
+            "field": "지도",
+            "description": "축척 (예: 1:50,000)"
+          },
+          {
+            "field": "금융",
+            "description": "투자 비율"
+          }
+        ]
+      },
+      "en": {
+        "definition": "A comparison of the relative sizes of two numbers, written as a:b or a/b.",
+        "formulas": [
+          {
+            "latex": "a : b = \\frac{a}{b}",
+            "description": "Ratio notation"
+          },
+          {
+            "latex": "a : b = ka : kb \\quad (k \\neq 0)",
+            "description": "Property of ratios (multiplying both by same number)"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "Simplify the ratio 12:18.",
+            "solution": "GCD(12, 18) = 6\n12:18 = 2:3",
+            "difficulty": 1
+          },
+          {
+            "problem": "A and B share $72,000 in ratio 2:3. How much does each get?",
+            "solution": "Total parts = 2 + 3 = 5\nA = 72,000 × (2/5) = $28,800\nB = 72,000 × (3/5) = $43,200",
+            "difficulty": 1
+          }
+        ],
+        "applications": [
+          {
+            "field": "Cooking",
+            "description": "Ingredient proportions"
+          },
+          {
+            "field": "Maps",
+            "description": "Scale (e.g., 1:50,000)"
+          },
+          {
+            "field": "Finance",
+            "description": "Investment allocation"
+          }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": [
+        "fractions",
+        "gcd-lcm"
+      ],
+      "nextTopics": [
+        "proportions"
+      ],
+      "related": [
+        "percentages"
+      ],
+      "applications": [
+        "applied-daily-life",
+        "applied-art"
+      ]
+    },
+    "tags": [
+      "number",
+      "fundamental",
+      "ratio",
+      "elementary"
+    ]
+  },
+  {
+    "id": "proportions",
+    "name": {
+      "ko": "비례",
+      "en": "Proportions"
+    },
+    "field": "foundations",
+    "subfield": "fractions-ratios",
+    "difficulty": 1,
+    "content": {
+      "ko": {
+        "definition": "두 비가 같다는 것을 나타내는 등식이다.",
+        "formulas": [
+          {
+            "latex": "a : b = c : d \\iff \\frac{a}{b} = \\frac{c}{d} \\iff ad = bc",
+            "description": "비례식과 내항외항의 곱"
+          },
+          {
+            "latex": "y = kx",
+            "description": "정비례 (k는 비례상수)"
+          },
+          {
+            "latex": "y = \\frac{k}{x}",
+            "description": "반비례"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "3:5 = x:20에서 x를 구하시오.",
+            "solution": "내항의 곱 = 외항의 곱\n5x = 3 × 20 = 60\nx = 12",
+            "difficulty": 1
+          },
+          {
+            "problem": "4시간에 120km를 간다면 6시간에는 얼마나 갈 수 있는가?",
+            "solution": "4:120 = 6:x\n4x = 120 × 6 = 720\nx = 180km",
+            "difficulty": 1
+          }
+        ],
+        "applications": [
+          {
+            "field": "물리학",
+            "description": "속도, 힘, 압력 관계"
+          },
+          {
+            "field": "요리",
+            "description": "레시피 인원수 조정"
+          },
+          {
+            "field": "건축",
+            "description": "설계도 비율"
+          }
+        ]
+      },
+      "en": {
+        "definition": "An equation stating that two ratios are equal.",
+        "formulas": [
+          {
+            "latex": "a : b = c : d \\iff \\frac{a}{b} = \\frac{c}{d} \\iff ad = bc",
+            "description": "Proportion and cross multiplication"
+          },
+          {
+            "latex": "y = kx",
+            "description": "Direct proportion (k is constant of proportionality)"
+          },
+          {
+            "latex": "y = \\frac{k}{x}",
+            "description": "Inverse proportion"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "Find x in 3:5 = x:20.",
+            "solution": "Cross multiply:\n5x = 3 × 20 = 60\nx = 12",
+            "difficulty": 1
+          },
+          {
+            "problem": "If you travel 120km in 4 hours, how far in 6 hours?",
+            "solution": "4:120 = 6:x\n4x = 120 × 6 = 720\nx = 180km",
+            "difficulty": 1
+          }
+        ],
+        "applications": [
+          {
+            "field": "Physics",
+            "description": "Speed, force, pressure relationships"
+          },
+          {
+            "field": "Cooking",
+            "description": "Scaling recipes"
+          },
+          {
+            "field": "Architecture",
+            "description": "Blueprint scaling"
+          }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": [
+        "ratios"
+      ],
+      "nextTopics": [
+        "linear-equations",
+        "similar-triangles"
+      ],
+      "related": [
+        "percentages"
+      ],
+      "applications": [
+        "applied-physics",
+        "applied-daily-life"
+      ]
+    },
+    "tags": [
+      "number",
+      "fundamental",
+      "proportion",
+      "elementary"
+    ]
+  },
+  {
+    "id": "binary",
+    "name": {
+      "ko": "이진법",
+      "en": "Binary System"
+    },
+    "field": "foundations",
+    "subfield": "number-systems",
+    "difficulty": 2,
+    "content": {
+      "ko": {
+        "definition": "0과 1 두 숫자만 사용하여 수를 나타내는 방법이다.",
+        "formulas": [
+          {
+            "latex": "(a_na_{n-1}...a_1a_0)_2 = \\sum_{i=0}^{n} a_i \\cdot 2^i",
+            "description": "이진수를 십진수로 변환"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "이진수 1011₂를 십진수로 변환하시오.",
+            "solution": "1011₂ = 1×2³ + 0×2² + 1×2¹ + 1×2⁰\n= 8 + 0 + 2 + 1 = 11",
+            "difficulty": 1
+          },
+          {
+            "problem": "십진수 25를 이진수로 변환하시오.",
+            "solution": "25 ÷ 2 = 12 ... 1\n12 ÷ 2 = 6 ... 0\n6 ÷ 2 = 3 ... 0\n3 ÷ 2 = 1 ... 1\n1 ÷ 2 = 0 ... 1\n\n아래에서 위로 읽으면: 11001₂",
+            "difficulty": 1
+          }
+        ],
+        "applications": [
+          {
+            "field": "컴퓨터",
+            "description": "모든 디지털 데이터의 기본"
+          },
+          {
+            "field": "전자공학",
+            "description": "논리회로, 스위치"
+          }
+        ]
+      },
+      "en": {
+        "definition": "A number system using only two digits: 0 and 1.",
+        "formulas": [
+          {
+            "latex": "(a_na_{n-1}...a_1a_0)_2 = \\sum_{i=0}^{n} a_i \\cdot 2^i",
+            "description": "Binary to decimal conversion"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "Convert binary 1011₂ to decimal.",
+            "solution": "1011₂ = 1×2³ + 0×2² + 1×2¹ + 1×2⁰\n= 8 + 0 + 2 + 1 = 11",
+            "difficulty": 1
+          },
+          {
+            "problem": "Convert decimal 25 to binary.",
+            "solution": "25 ÷ 2 = 12 r 1\n12 ÷ 2 = 6 r 0\n6 ÷ 2 = 3 r 0\n3 ÷ 2 = 1 r 1\n1 ÷ 2 = 0 r 1\n\nRead bottom-up: 11001₂",
+            "difficulty": 1
+          }
+        ],
+        "applications": [
+          {
+            "field": "Computing",
+            "description": "Foundation of all digital data"
+          },
+          {
+            "field": "Electronics",
+            "description": "Logic circuits, switches"
+          }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": [
+        "exponents",
+        "arithmetic-operations"
+      ],
+      "nextTopics": [
+        "octal",
+        "hexadecimal"
+      ],
+      "related": [
+        "boolean-algebra"
+      ],
+      "applications": [
+        "applied-cs"
+      ]
+    },
+    "tags": [
+      "number-system",
+      "binary",
+      "computing",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "octal",
+    "name": {
+      "ko": "8진법",
+      "en": "Octal System"
+    },
+    "field": "foundations",
+    "subfield": "number-systems",
+    "difficulty": 2,
+    "content": {
+      "ko": {
+        "definition": "0부터 7까지 8개의 숫자를 사용하여 수를 나타내는 방법이다.",
+        "formulas": [
+          {
+            "latex": "(a_na_{n-1}...a_1a_0)_8 = \\sum_{i=0}^{n} a_i \\cdot 8^i",
+            "description": "8진수를 십진수로 변환"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "8진수 752₈을 십진수로 변환하시오.",
+            "solution": "752₈ = 7×8² + 5×8¹ + 2×8⁰\n= 7×64 + 5×8 + 2×1\n= 448 + 40 + 2 = 490",
+            "difficulty": 1
+          },
+          {
+            "problem": "이진수 110101₂를 8진수로 변환하시오.",
+            "solution": "3자리씩 묶음: 110 101\n110₂ = 6, 101₂ = 5\n따라서 65₈",
+            "difficulty": 2
+          }
+        ],
+        "applications": [
+          {
+            "field": "유닉스/리눅스",
+            "description": "파일 권한 (예: chmod 755)"
+          },
+          {
+            "field": "컴퓨터과학",
+            "description": "이진수의 간략한 표현"
+          }
+        ]
+      },
+      "en": {
+        "definition": "A number system using digits 0 through 7.",
+        "formulas": [
+          {
+            "latex": "(a_na_{n-1}...a_1a_0)_8 = \\sum_{i=0}^{n} a_i \\cdot 8^i",
+            "description": "Octal to decimal conversion"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "Convert octal 752₈ to decimal.",
+            "solution": "752₈ = 7×8² + 5×8¹ + 2×8⁰\n= 7×64 + 5×8 + 2×1\n= 448 + 40 + 2 = 490",
+            "difficulty": 1
+          },
+          {
+            "problem": "Convert binary 110101₂ to octal.",
+            "solution": "Group in threes: 110 101\n110₂ = 6, 101₂ = 5\nAnswer: 65₈",
+            "difficulty": 2
+          }
+        ],
+        "applications": [
+          {
+            "field": "Unix/Linux",
+            "description": "File permissions (e.g., chmod 755)"
+          },
+          {
+            "field": "Computer Science",
+            "description": "Compact binary representation"
+          }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": [
+        "binary"
+      ],
+      "nextTopics": [
+        "hexadecimal"
+      ],
+      "related": [
+        "exponents"
+      ],
+      "applications": [
+        "applied-cs"
+      ]
+    },
+    "tags": [
+      "number-system",
+      "octal",
+      "computing",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "hexadecimal",
+    "name": {
+      "ko": "16진법",
+      "en": "Hexadecimal System"
+    },
+    "field": "foundations",
+    "subfield": "number-systems",
+    "difficulty": 2,
+    "content": {
+      "ko": {
+        "definition": "0-9와 A-F(10-15)를 사용하여 16개의 숫자로 수를 나타내는 방법이다.",
+        "formulas": [
+          {
+            "latex": "(a_na_{n-1}...a_1a_0)_{16} = \\sum_{i=0}^{n} a_i \\cdot 16^i",
+            "description": "16진수를 십진수로 변환"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "16진수 2F₁₆를 십진수로 변환하시오.",
+            "solution": "2F₁₆ = 2×16¹ + F×16⁰\n= 2×16 + 15×1\n= 32 + 15 = 47",
+            "difficulty": 1
+          },
+          {
+            "problem": "색상 코드 #FF5733에서 RGB 값을 구하시오.",
+            "solution": "R = FF₁₆ = 255\nG = 57₁₆ = 5×16 + 7 = 87\nB = 33₁₆ = 3×16 + 3 = 51\n\nRGB(255, 87, 51)",
+            "difficulty": 2
+          }
+        ],
+        "applications": [
+          {
+            "field": "웹/그래픽",
+            "description": "색상 코드 (#RRGGBB)"
+          },
+          {
+            "field": "프로그래밍",
+            "description": "메모리 주소, 바이너리 데이터"
+          },
+          {
+            "field": "네트워크",
+            "description": "MAC 주소, IPv6"
+          }
+        ]
+      },
+      "en": {
+        "definition": "A number system using 16 symbols: 0-9 and A-F (representing 10-15).",
+        "formulas": [
+          {
+            "latex": "(a_na_{n-1}...a_1a_0)_{16} = \\sum_{i=0}^{n} a_i \\cdot 16^i",
+            "description": "Hexadecimal to decimal conversion"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "Convert hexadecimal 2F₁₆ to decimal.",
+            "solution": "2F₁₆ = 2×16¹ + F×16⁰\n= 2×16 + 15×1\n= 32 + 15 = 47",
+            "difficulty": 1
+          },
+          {
+            "problem": "Find RGB values from color code #FF5733.",
+            "solution": "R = FF₁₆ = 255\nG = 57₁₆ = 5×16 + 7 = 87\nB = 33₁₆ = 3×16 + 3 = 51\n\nRGB(255, 87, 51)",
+            "difficulty": 2
+          }
+        ],
+        "applications": [
+          {
+            "field": "Web/Graphics",
+            "description": "Color codes (#RRGGBB)"
+          },
+          {
+            "field": "Programming",
+            "description": "Memory addresses, binary data"
+          },
+          {
+            "field": "Networking",
+            "description": "MAC addresses, IPv6"
+          }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": [
+        "binary",
+        "octal"
+      ],
+      "nextTopics": [
+        "color-theory"
+      ],
+      "related": [
+        "exponents"
+      ],
+      "applications": [
+        "applied-cs",
+        "applied-art"
+      ]
+    },
+    "tags": [
+      "number-system",
+      "hexadecimal",
+      "computing",
+      "intermediate"
+    ]
+  },
+  {
+    "id": "complex-numbers",
+    "name": {
+      "ko": "복소수",
+      "en": "Complex Numbers"
+    },
+    "field": "foundations",
+    "subfield": "number-systems",
+    "difficulty": 3,
+    "content": {
+      "ko": {
+        "definition": "실수와 허수를 결합한 수로, a + bi 형태로 나타낸다 (i² = -1).",
+        "formulas": [
+          {
+            "latex": "z = a + bi",
+            "description": "복소수의 표준형",
+            "variables": [
+              {
+                "symbol": "a",
+                "meaning": "실수부 (Real part)"
+              },
+              {
+                "symbol": "b",
+                "meaning": "허수부 (Imaginary part)"
+              },
+              {
+                "symbol": "i",
+                "meaning": "허수 단위 (i² = -1)"
+              }
+            ]
+          },
+          {
+            "latex": "|z| = \\sqrt{a^2 + b^2}",
+            "description": "복소수의 절댓값 (크기)"
+          },
+          {
+            "latex": "\\bar{z} = a - bi",
+            "description": "켤레복소수"
+          },
+          {
+            "latex": "(a+bi)(c+di) = (ac-bd) + (ad+bc)i",
+            "description": "복소수의 곱셈"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "(3 + 2i) + (1 - 4i)를 계산하시오.",
+            "solution": "실수부끼리, 허수부끼리 더합니다.\n(3+1) + (2-4)i = 4 - 2i",
+            "difficulty": 1
+          },
+          {
+            "problem": "(2 + 3i)(1 - 2i)를 계산하시오.",
+            "solution": "= 2×1 + 2×(-2i) + 3i×1 + 3i×(-2i)\n= 2 - 4i + 3i - 6i²\n= 2 - i - 6(-1)\n= 2 - i + 6 = 8 - i",
+            "difficulty": 2
+          }
+        ],
+        "applications": [
+          {
+            "field": "전자공학",
+            "description": "교류 회로 분석"
+          },
+          {
+            "field": "물리학",
+            "description": "양자역학, 파동"
+          },
+          {
+            "field": "컴퓨터 그래픽",
+            "description": "2D 회전, 프랙탈"
+          }
+        ]
+      },
+      "en": {
+        "definition": "A number combining real and imaginary parts, written as a + bi where i² = -1.",
+        "formulas": [
+          {
+            "latex": "z = a + bi",
+            "description": "Standard form of complex number",
+            "variables": [
+              {
+                "symbol": "a",
+                "meaning": "Real part"
+              },
+              {
+                "symbol": "b",
+                "meaning": "Imaginary part"
+              },
+              {
+                "symbol": "i",
+                "meaning": "Imaginary unit (i² = -1)"
+              }
+            ]
+          },
+          {
+            "latex": "|z| = \\sqrt{a^2 + b^2}",
+            "description": "Absolute value (modulus)"
+          },
+          {
+            "latex": "\\bar{z} = a - bi",
+            "description": "Complex conjugate"
+          },
+          {
+            "latex": "(a+bi)(c+di) = (ac-bd) + (ad+bc)i",
+            "description": "Complex multiplication"
+          }
+        ],
+        "examples": [
+          {
+            "problem": "Calculate (3 + 2i) + (1 - 4i).",
+            "solution": "Add real parts and imaginary parts separately.\n(3+1) + (2-4)i = 4 - 2i",
+            "difficulty": 1
+          },
+          {
+            "problem": "Calculate (2 + 3i)(1 - 2i).",
+            "solution": "= 2×1 + 2×(-2i) + 3i×1 + 3i×(-2i)\n= 2 - 4i + 3i - 6i²\n= 2 - i - 6(-1)\n= 2 - i + 6 = 8 - i",
+            "difficulty": 2
+          }
+        ],
+        "applications": [
+          {
+            "field": "Electrical Engineering",
+            "description": "AC circuit analysis"
+          },
+          {
+            "field": "Physics",
+            "description": "Quantum mechanics, waves"
+          },
+          {
+            "field": "Computer Graphics",
+            "description": "2D rotation, fractals"
+          }
+        ]
+      }
+    },
+    "relations": {
+      "prerequisites": [
+        "real-numbers",
+        "square-roots"
+      ],
+      "nextTopics": [
+        "complex-analysis",
+        "polar-form"
+      ],
+      "related": [
+        "imaginary-unit",
+        "euler-formula"
+      ],
+      "applications": [
+        "applied-physics",
+        "applied-engineering",
+        "applied-cs"
+      ]
+    },
+    "tags": [
+      "number",
+      "complex",
+      "imaginary",
+      "advanced"
+    ]
+  }
+]

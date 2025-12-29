@@ -97,8 +97,17 @@ soundblue-monorepo/
 │   └── roots/         →  Math documentation (878 SSG routes)
 │
 ├── packages/
-│   ├── shared/        →  Utilities: db, i18n, search, validation
+│   ├── core/          →  Utils, validation, types (Layer 0)
+│   ├── data/          →  Zod schemas, loaders (Layer 1)
+│   ├── search/        →  MiniSearch wrapper, workers (Layer 2)
+│   ├── i18n/          →  i18n core, routing, meta (Layer 2)
+│   ├── shared/        →  Legacy utils (→ core로 마이그레이션 예정)
 │   └── shared-react/  →  Components, hooks, stores
+│
+├── data/              →  Centralized JSON data (SSoT)
+│   ├── context/       →  751 Korean dictionary entries
+│   ├── roots/         →  438 math concepts (50 fields)
+│   └── permissive/    →  80 libraries, 56 Web APIs
 │
 └── package.json       →  Root config
 ```

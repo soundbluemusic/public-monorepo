@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "hada",
+    "korean": "하다",
+    "romanization": "hada",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "basic", "essential"],
+    "translations": {
+      "ko": {
+        "word": "하다",
+        "explanation": "가장 많이 쓰이는 동사. 어떤 행동을 함. 다른 명사와 결합하여 동사를 만든다.",
+        "examples": {
+          "beginner": "뭐 해요?",
+          "intermediate": "운동을 해요.",
+          "advanced": "매일 아침 운동을 하는 것이 건강에 좋아요.",
+          "master": "성공하려면 꾸준히 노력해야 한다."
+        }
+      },
+      "en": {
+        "word": "to do",
+        "explanation": "The most commonly used verb. To do an action. Combines with nouns to form verbs.",
+        "examples": {
+          "beginner": "What are you doing?",
+          "intermediate": "I exercise.",
+          "advanced": "Exercising every morning is good for your health.",
+          "master": "To succeed, you must make continuous effort."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[하다]",
+      "ipa": "[hada]"
+    }
+  },
+  {
+    "id": "gada",
+    "korean": "가다",
+    "romanization": "gada",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "movement", "basic"],
+    "translations": {
+      "ko": {
+        "word": "가다",
+        "explanation": "한 장소에서 다른 장소로 이동하다.",
+        "examples": {
+          "beginner": "학교에 가요.",
+          "intermediate": "버스로 회사에 가요.",
+          "advanced": "이번 주말에 부산에 가려고 해요.",
+          "master": "시간이 빨리 가는 것 같아요. 벌써 12월이에요."
+        }
+      },
+      "en": {
+        "word": "to go",
+        "explanation": "To move from one place to another.",
+        "examples": {
+          "beginner": "I go to school.",
+          "intermediate": "I go to work by bus.",
+          "advanced": "I'm planning to go to Busan this weekend.",
+          "master": "Time seems to go by fast. It's already December."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[가다]",
+      "ipa": "[kada]"
+    }
+  },
+  {
+    "id": "oda",
+    "korean": "오다",
+    "romanization": "oda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "movement", "basic"],
+    "translations": {
+      "ko": {
+        "word": "오다",
+        "explanation": "다른 장소에서 이곳으로 이동하다.",
+        "examples": {
+          "beginner": "친구가 와요.",
+          "intermediate": "비가 와요.",
+          "advanced": "저녁에 집에 일찍 와 주세요.",
+          "master": "드디어 봄이 왔어요. 꽃이 피기 시작했어요."
+        }
+      },
+      "en": {
+        "word": "to come",
+        "explanation": "To move from another place to here.",
+        "examples": {
+          "beginner": "My friend is coming.",
+          "intermediate": "It's raining.",
+          "advanced": "Please come home early in the evening.",
+          "master": "Spring has finally come. Flowers are starting to bloom."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[오다]",
+      "ipa": "[oda]"
+    }
+  },
+  {
+    "id": "meokda",
+    "korean": "먹다",
+    "romanization": "meokda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "eating", "basic"],
+    "translations": {
+      "ko": {
+        "word": "먹다",
+        "explanation": "음식을 입으로 씹어서 삼키다.",
+        "examples": {
+          "beginner": "밥을 먹어요.",
+          "intermediate": "점심 먹었어요?",
+          "advanced": "건강을 위해 채소를 많이 먹으려고 노력해요.",
+          "master": "맛있는 음식을 먹는 것이 인생의 작은 행복 중 하나예요."
+        }
+      },
+      "en": {
+        "word": "to eat",
+        "explanation": "To chew and swallow food with the mouth.",
+        "examples": {
+          "beginner": "I eat rice.",
+          "intermediate": "Did you eat lunch?",
+          "advanced": "I try to eat a lot of vegetables for my health.",
+          "master": "Eating delicious food is one of life's small pleasures."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[먹다]",
+      "ipa": "[mʌktːa]"
+    }
+  },
+  {
+    "id": "masida",
+    "korean": "마시다",
+    "romanization": "masida",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "drinking", "basic"],
+    "translations": {
+      "ko": {
+        "word": "마시다",
+        "explanation": "액체를 입으로 삼키다.",
+        "examples": {
+          "beginner": "물을 마셔요.",
+          "intermediate": "커피를 마시고 싶어요.",
+          "advanced": "하루에 물을 2리터 이상 마시는 것이 좋아요.",
+          "master": "친구와 함께 커피를 마시면서 이야기하는 시간이 좋아요."
+        }
+      },
+      "en": {
+        "word": "to drink",
+        "explanation": "To swallow liquid through the mouth.",
+        "examples": {
+          "beginner": "I drink water.",
+          "intermediate": "I want to drink coffee.",
+          "advanced": "It's good to drink more than 2 liters of water a day.",
+          "master": "I like spending time drinking coffee and talking with friends."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[마시다]",
+      "ipa": "[maɕida]"
+    }
+  },
+  {
+    "id": "boda",
+    "korean": "보다",
+    "romanization": "boda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "seeing", "basic"],
+    "translations": {
+      "ko": {
+        "word": "보다",
+        "explanation": "눈으로 대상을 인식하다. 영화, TV 등을 시청하다.",
+        "examples": {
+          "beginner": "영화를 봐요.",
+          "intermediate": "TV를 보고 있어요.",
+          "advanced": "책을 많이 보면 지식이 늘어요.",
+          "master": "문제를 다른 관점에서 보면 해결책이 보일 거예요."
+        }
+      },
+      "en": {
+        "word": "to see / to watch / to look",
+        "explanation": "To perceive with the eyes. To watch movies, TV, etc.",
+        "examples": {
+          "beginner": "I watch a movie.",
+          "intermediate": "I'm watching TV.",
+          "advanced": "If you read many books, your knowledge will increase.",
+          "master": "If you look at the problem from a different perspective, you'll find a solution."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[보다]",
+      "ipa": "[poda]"
+    }
+  },
+  {
+    "id": "deudda",
+    "korean": "듣다",
+    "romanization": "deutda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "hearing", "basic"],
+    "translations": {
+      "ko": {
+        "word": "듣다",
+        "explanation": "귀로 소리를 인식하다. 수업을 받다.",
+        "examples": {
+          "beginner": "음악을 들어요.",
+          "intermediate": "한국어 수업을 들어요.",
+          "advanced": "다른 사람의 이야기를 잘 들으면 배울 것이 많아요.",
+          "master": "그 소식을 들었을 때 정말 놀랐어요."
+        }
+      },
+      "en": {
+        "word": "to listen / to hear",
+        "explanation": "To perceive sound with the ears. To take classes.",
+        "examples": {
+          "beginner": "I listen to music.",
+          "intermediate": "I take Korean class.",
+          "advanced": "If you listen well to others' stories, there's a lot to learn.",
+          "master": "I was really surprised when I heard that news."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[듣다]",
+      "ipa": "[tɯtːa]"
+    }
+  },
+  {
+    "id": "malhada",
+    "korean": "말하다",
+    "romanization": "malhada",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "speaking", "basic"],
+    "translations": {
+      "ko": {
+        "word": "말하다",
+        "explanation": "입으로 소리를 내어 의사를 표현하다.",
+        "examples": {
+          "beginner": "한국어로 말해요.",
+          "intermediate": "천천히 말해 주세요.",
+          "advanced": "솔직하게 말하면 기분이 좋아질 거예요.",
+          "master": "말보다 행동이 더 중요하다는 것을 깨달았어요."
+        }
+      },
+      "en": {
+        "word": "to speak / to say / to talk",
+        "explanation": "To express meaning by making sounds with the mouth.",
+        "examples": {
+          "beginner": "I speak in Korean.",
+          "intermediate": "Please speak slowly.",
+          "advanced": "If you speak honestly, you'll feel better.",
+          "master": "I realized that actions are more important than words."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[말하다]",
+      "ipa": "[malɦada]"
+    }
+  },
+  {
+    "id": "ikda",
+    "korean": "읽다",
+    "romanization": "ikda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "reading", "basic"],
+    "translations": {
+      "ko": {
+        "word": "읽다",
+        "explanation": "글자를 보고 의미를 이해하다.",
+        "examples": {
+          "beginner": "책을 읽어요.",
+          "intermediate": "신문을 읽고 있어요.",
+          "advanced": "매일 30분씩 책을 읽으면 지식이 쌓여요.",
+          "master": "그의 표정을 읽기가 어려워서 무슨 생각인지 모르겠어요."
+        }
+      },
+      "en": {
+        "word": "to read",
+        "explanation": "To look at written text and understand its meaning.",
+        "examples": {
+          "beginner": "I read a book.",
+          "intermediate": "I'm reading the newspaper.",
+          "advanced": "If you read for 30 minutes every day, knowledge accumulates.",
+          "master": "It's hard to read his expression, so I don't know what he's thinking."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[읽다]",
+      "ipa": "[iktːa]"
+    }
+  },
+  {
+    "id": "sseuda",
+    "korean": "쓰다",
+    "romanization": "sseuda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "writing", "basic"],
+    "translations": {
+      "ko": {
+        "word": "쓰다",
+        "explanation": "글자를 적다. 또는 무언가를 사용하다.",
+        "examples": {
+          "beginner": "편지를 써요.",
+          "intermediate": "연필로 이름을 써 주세요.",
+          "advanced": "일기를 매일 쓰면 한국어 실력이 늘어요.",
+          "master": "작가가 되려면 꾸준히 글을 써야 해요."
+        }
+      },
+      "en": {
+        "word": "to write / to use",
+        "explanation": "To put down letters. Or to use something.",
+        "examples": {
+          "beginner": "I write a letter.",
+          "intermediate": "Please write your name with a pencil.",
+          "advanced": "If you write a diary every day, your Korean skills improve.",
+          "master": "To become a writer, you must write consistently."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[쓰다]",
+      "ipa": "[sːɯda]"
+    }
+  },
+  {
+    "id": "alda",
+    "korean": "알다",
+    "romanization": "alda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "knowing", "basic"],
+    "translations": {
+      "ko": {
+        "word": "알다",
+        "explanation": "정보나 사실을 인식하다. 이해하다.",
+        "examples": {
+          "beginner": "알아요.",
+          "intermediate": "그 사람을 알아요?",
+          "advanced": "알면 알수록 더 많이 배우고 싶어져요.",
+          "master": "세상을 알면 알수록 겸손해지는 것 같아요."
+        }
+      },
+      "en": {
+        "word": "to know",
+        "explanation": "To recognize information or facts. To understand.",
+        "examples": {
+          "beginner": "I know.",
+          "intermediate": "Do you know that person?",
+          "advanced": "The more I know, the more I want to learn.",
+          "master": "The more I know about the world, the more humble I become."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[알다]",
+      "ipa": "[alda]"
+    }
+  },
+  {
+    "id": "moreuda",
+    "korean": "모르다",
+    "romanization": "moreuda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "not knowing", "basic"],
+    "translations": {
+      "ko": {
+        "word": "모르다",
+        "explanation": "정보나 사실을 알지 못하다.",
+        "examples": {
+          "beginner": "몰라요.",
+          "intermediate": "길을 몰라서 물어봤어요.",
+          "advanced": "모르는 것이 있으면 부끄러워하지 말고 물어보세요.",
+          "master": "모른다고 인정하는 것이 배움의 시작이에요."
+        }
+      },
+      "en": {
+        "word": "to not know",
+        "explanation": "To not know information or facts.",
+        "examples": {
+          "beginner": "I don't know.",
+          "intermediate": "I didn't know the way, so I asked.",
+          "advanced": "If there's something you don't know, don't be embarrassed to ask.",
+          "master": "Admitting you don't know is the beginning of learning."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[모르다]",
+      "ipa": "[moɾɯda]"
+    }
+  },
+  {
+    "id": "itda-exist",
+    "korean": "있다",
+    "romanization": "itda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "existence", "essential"],
+    "translations": {
+      "ko": {
+        "word": "있다",
+        "explanation": "존재하다. 어떤 장소에 위치하다. 소유하다.",
+        "examples": {
+          "beginner": "시간 있어요?",
+          "intermediate": "방에 있어요.",
+          "advanced": "여기에 좋은 레스토랑이 있어요.",
+          "master": "인생에는 항상 희망이 있어요."
+        }
+      },
+      "en": {
+        "word": "to exist / to have / to be (at)",
+        "explanation": "To exist. To be located at a place. To possess.",
+        "examples": {
+          "beginner": "Do you have time?",
+          "intermediate": "I'm in the room.",
+          "advanced": "There's a good restaurant here.",
+          "master": "There is always hope in life."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[있다]",
+      "ipa": "[itːa]"
+    }
+  },
+  {
+    "id": "eopda",
+    "korean": "없다",
+    "romanization": "eopda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "non-existence", "essential"],
+    "translations": {
+      "ko": {
+        "word": "없다",
+        "explanation": "존재하지 않다. 소유하지 않다.",
+        "examples": {
+          "beginner": "돈이 없어요.",
+          "intermediate": "시간이 없어서 못 가요.",
+          "advanced": "불가능한 일은 없어요. 노력하면 할 수 있어요.",
+          "master": "문제없어요. 제가 도와드릴게요."
+        }
+      },
+      "en": {
+        "word": "to not exist / to not have",
+        "explanation": "To not exist. To not possess.",
+        "examples": {
+          "beginner": "I don't have money.",
+          "intermediate": "I can't go because I don't have time.",
+          "advanced": "Nothing is impossible. If you try, you can do it.",
+          "master": "No problem. I'll help you."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[없다]",
+      "ipa": "[ʌptːa]"
+    }
+  },
+  {
+    "id": "jada",
+    "korean": "자다",
+    "romanization": "jada",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "sleep", "basic"],
+    "translations": {
+      "ko": {
+        "word": "자다",
+        "explanation": "잠을 자다. 눈을 감고 휴식하다.",
+        "examples": {
+          "beginner": "잘 자요.",
+          "intermediate": "어젯밤에 늦게 잤어요.",
+          "advanced": "하루에 7시간 이상 자는 것이 건강에 좋아요.",
+          "master": "걱정이 많아서 요즘 잠을 잘 못 자요."
+        }
+      },
+      "en": {
+        "word": "to sleep",
+        "explanation": "To sleep. To rest with eyes closed.",
+        "examples": {
+          "beginner": "Sleep well.",
+          "intermediate": "I slept late last night.",
+          "advanced": "Sleeping more than 7 hours a day is good for health.",
+          "master": "I have many worries, so I can't sleep well these days."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[자다]",
+      "ipa": "[tɕada]"
+    }
+  },
+  {
+    "id": "ireonada",
+    "korean": "일어나다",
+    "romanization": "ireonada",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "waking", "basic"],
+    "translations": {
+      "ko": {
+        "word": "일어나다",
+        "explanation": "잠에서 깨다. 또는 앉거나 누운 상태에서 서다.",
+        "examples": {
+          "beginner": "아침에 일어나요.",
+          "intermediate": "몇 시에 일어나요?",
+          "advanced": "아침에 일찍 일어나는 것이 힘들어요.",
+          "master": "실패해도 다시 일어나는 것이 중요해요."
+        }
+      },
+      "en": {
+        "word": "to wake up / to get up",
+        "explanation": "To wake from sleep. Or to stand up from sitting or lying down.",
+        "examples": {
+          "beginner": "I wake up in the morning.",
+          "intermediate": "What time do you wake up?",
+          "advanced": "It's hard to wake up early in the morning.",
+          "master": "It's important to get back up even if you fail."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[일어나다]",
+      "ipa": "[iɾʌnada]"
+    }
+  },
+  {
+    "id": "sada",
+    "korean": "사다",
+    "romanization": "sada",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "shopping", "basic"],
+    "translations": {
+      "ko": {
+        "word": "사다",
+        "explanation": "돈을 주고 물건을 얻다.",
+        "examples": {
+          "beginner": "과일을 사요.",
+          "intermediate": "새 옷을 샀어요.",
+          "advanced": "온라인에서 물건을 사면 편해요.",
+          "master": "시간은 돈으로 살 수 없어요."
+        }
+      },
+      "en": {
+        "word": "to buy",
+        "explanation": "To give money and get goods.",
+        "examples": {
+          "beginner": "I buy fruit.",
+          "intermediate": "I bought new clothes.",
+          "advanced": "It's convenient to buy things online.",
+          "master": "Time cannot be bought with money."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[사다]",
+      "ipa": "[sada]"
+    }
+  },
+  {
+    "id": "palda",
+    "korean": "팔다",
+    "romanization": "palda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "selling", "basic"],
+    "translations": {
+      "ko": {
+        "word": "팔다",
+        "explanation": "물건을 돈을 받고 넘기다.",
+        "examples": {
+          "beginner": "이거 팔아요?",
+          "intermediate": "옷을 싸게 팔아요.",
+          "advanced": "중고품을 온라인에서 팔았어요.",
+          "master": "좋은 제품을 만들면 잘 팔릴 거예요."
+        }
+      },
+      "en": {
+        "word": "to sell",
+        "explanation": "To give goods in exchange for money.",
+        "examples": {
+          "beginner": "Do you sell this?",
+          "intermediate": "They sell clothes cheaply.",
+          "advanced": "I sold used items online.",
+          "master": "If you make a good product, it will sell well."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[팔다]",
+      "ipa": "[pʰalda]"
+    }
+  },
+  {
+    "id": "jueda",
+    "korean": "주다",
+    "romanization": "juda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "giving", "basic"],
+    "translations": {
+      "ko": {
+        "word": "주다",
+        "explanation": "물건이나 것을 다른 사람에게 전달하다.",
+        "examples": {
+          "beginner": "물 좀 주세요.",
+          "intermediate": "선물을 줬어요.",
+          "advanced": "도움을 주면 기분이 좋아요.",
+          "master": "주는 것이 받는 것보다 행복하다는 말이 있어요."
+        }
+      },
+      "en": {
+        "word": "to give",
+        "explanation": "To pass things or items to another person.",
+        "examples": {
+          "beginner": "Please give me some water.",
+          "intermediate": "I gave a present.",
+          "advanced": "It feels good to give help.",
+          "master": "There's a saying that giving is happier than receiving."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[주다]",
+      "ipa": "[tɕuda]"
+    }
+  },
+  {
+    "id": "batda",
+    "korean": "받다",
+    "romanization": "batda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "receiving", "basic"],
+    "translations": {
+      "ko": {
+        "word": "받다",
+        "explanation": "다른 사람이 주는 것을 가지다.",
+        "examples": {
+          "beginner": "선물을 받았어요.",
+          "intermediate": "월급을 받았어요.",
+          "advanced": "좋은 평가를 받아서 기뻐요.",
+          "master": "스트레스를 많이 받으면 건강에 안 좋아요."
+        }
+      },
+      "en": {
+        "word": "to receive / to get",
+        "explanation": "To have what another person gives.",
+        "examples": {
+          "beginner": "I received a present.",
+          "intermediate": "I received my salary.",
+          "advanced": "I'm happy that I received good reviews.",
+          "master": "If you receive a lot of stress, it's bad for your health."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[받다]",
+      "ipa": "[patːa]"
+    }
+  },
+  {
+    "id": "manada",
+    "korean": "만나다",
+    "romanization": "mannada",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "meeting", "basic"],
+    "translations": {
+      "ko": {
+        "word": "만나다",
+        "explanation": "다른 사람과 같은 장소에서 보다.",
+        "examples": {
+          "beginner": "친구를 만나요.",
+          "intermediate": "오래만에 만났어요.",
+          "advanced": "좋은 사람을 만나면 인생이 바뀔 수 있어요.",
+          "master": "인연이 있으면 언젠가 다시 만날 거예요."
+        }
+      },
+      "en": {
+        "word": "to meet",
+        "explanation": "To see another person at the same place.",
+        "examples": {
+          "beginner": "I meet my friend.",
+          "intermediate": "We met after a long time.",
+          "advanced": "If you meet good people, your life can change.",
+          "master": "If we're meant to be, we'll meet again someday."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[만나다]",
+      "ipa": "[mannada]"
+    }
+  },
+  {
+    "id": "gidarida",
+    "korean": "기다리다",
+    "romanization": "gidarida",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "waiting", "basic"],
+    "translations": {
+      "ko": {
+        "word": "기다리다",
+        "explanation": "어떤 일이 일어나거나 사람이 올 때까지 머무르다.",
+        "examples": {
+          "beginner": "잠깐 기다려요.",
+          "intermediate": "버스를 기다리고 있어요.",
+          "advanced": "좋은 기회를 기다리는 것도 실력이에요.",
+          "master": "기다리는 시간도 인생의 일부예요."
+        }
+      },
+      "en": {
+        "word": "to wait",
+        "explanation": "To stay until something happens or someone comes.",
+        "examples": {
+          "beginner": "Wait a moment.",
+          "intermediate": "I'm waiting for the bus.",
+          "advanced": "Waiting for a good opportunity is also a skill.",
+          "master": "The time spent waiting is also part of life."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[기다리다]",
+      "ipa": "[kidarida]"
+    }
+  },
+  {
+    "id": "doeda",
+    "korean": "되다",
+    "romanization": "doeda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "becoming", "essential"],
+    "translations": {
+      "ko": {
+        "word": "되다",
+        "explanation": "어떤 상태나 상황으로 변하다. 가능하다.",
+        "examples": {
+          "beginner": "의사가 되고 싶어요.",
+          "intermediate": "준비가 됐어요.",
+          "advanced": "연습하면 잘할 수 있게 돼요.",
+          "master": "노력하면 뭐든지 될 수 있어요."
+        }
+      },
+      "en": {
+        "word": "to become / to be possible",
+        "explanation": "To change into a state or situation. To be possible.",
+        "examples": {
+          "beginner": "I want to become a doctor.",
+          "intermediate": "I'm ready.",
+          "advanced": "If you practice, you can become good at it.",
+          "master": "If you try, you can become anything."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[되다]",
+      "ipa": "[tweda]"
+    }
+  },
+  {
+    "id": "salda",
+    "korean": "살다",
+    "romanization": "salda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "living", "basic"],
+    "translations": {
+      "ko": {
+        "word": "살다",
+        "explanation": "생명이 있다. 어떤 장소에 거주하다.",
+        "examples": {
+          "beginner": "서울에 살아요.",
+          "intermediate": "어디에 살아요?",
+          "advanced": "행복하게 사는 것이 가장 중요해요.",
+          "master": "하루하루를 최선을 다해 살고 싶어요."
+        }
+      },
+      "en": {
+        "word": "to live",
+        "explanation": "To be alive. To reside in a place.",
+        "examples": {
+          "beginner": "I live in Seoul.",
+          "intermediate": "Where do you live?",
+          "advanced": "Living happily is the most important thing.",
+          "master": "I want to live each day to the fullest."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[살다]",
+      "ipa": "[salda]"
+    }
+  },
+  {
+    "id": "ilhada",
+    "korean": "일하다",
+    "romanization": "ilhada",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "working", "basic"],
+    "translations": {
+      "ko": {
+        "word": "일하다",
+        "explanation": "직업이나 업무를 수행하다.",
+        "examples": {
+          "beginner": "회사에서 일해요.",
+          "intermediate": "오늘 많이 일했어요.",
+          "advanced": "열심히 일하면 성공할 수 있어요.",
+          "master": "일과 삶의 균형을 맞추는 것이 중요해요."
+        }
+      },
+      "en": {
+        "word": "to work",
+        "explanation": "To perform a job or duties.",
+        "examples": {
+          "beginner": "I work at a company.",
+          "intermediate": "I worked a lot today.",
+          "advanced": "If you work hard, you can succeed.",
+          "master": "It's important to balance work and life."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[일하다]",
+      "ipa": "[ilɦada]"
+    }
+  },
+  {
+    "id": "baewda",
+    "korean": "배우다",
+    "romanization": "baeuda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "learning", "basic"],
+    "translations": {
+      "ko": {
+        "word": "배우다",
+        "explanation": "새로운 지식이나 기술을 얻다.",
+        "examples": {
+          "beginner": "한국어를 배워요.",
+          "intermediate": "요리를 배우고 싶어요.",
+          "advanced": "실수에서 많이 배울 수 있어요.",
+          "master": "평생 배우는 자세가 중요해요."
+        }
+      },
+      "en": {
+        "word": "to learn",
+        "explanation": "To acquire new knowledge or skills.",
+        "examples": {
+          "beginner": "I learn Korean.",
+          "intermediate": "I want to learn cooking.",
+          "advanced": "You can learn a lot from mistakes.",
+          "master": "It's important to have a lifelong learning attitude."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[배우다]",
+      "ipa": "[pɛuda]"
+    }
+  },
+  {
+    "id": "gareuchida",
+    "korean": "가르치다",
+    "romanization": "gareuchida",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "teaching", "basic"],
+    "translations": {
+      "ko": {
+        "word": "가르치다",
+        "explanation": "다른 사람에게 지식이나 기술을 전달하다.",
+        "examples": {
+          "beginner": "영어를 가르쳐요.",
+          "intermediate": "수학을 가르치는 일을 해요.",
+          "advanced": "학생들을 가르치는 것이 보람 있어요.",
+          "master": "가르치면서 배우는 것도 많아요."
+        }
+      },
+      "en": {
+        "word": "to teach",
+        "explanation": "To transfer knowledge or skills to another person.",
+        "examples": {
+          "beginner": "I teach English.",
+          "intermediate": "I work teaching math.",
+          "advanced": "Teaching students is rewarding.",
+          "master": "You learn a lot while teaching."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[가르치다]",
+      "ipa": "[kaɾɯtɕʰida]"
+    }
+  },
+  {
+    "id": "saenggakhada",
+    "korean": "생각하다",
+    "romanization": "saenggakhada",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "thinking", "basic"],
+    "translations": {
+      "ko": {
+        "word": "생각하다",
+        "explanation": "머리로 판단하거나 떠올리다.",
+        "examples": {
+          "beginner": "뭘 생각해요?",
+          "intermediate": "좋은 생각이 났어요.",
+          "advanced": "긍정적으로 생각하면 결과도 좋아요.",
+          "master": "생각이 바뀌면 행동도 바뀌어요."
+        }
+      },
+      "en": {
+        "word": "to think",
+        "explanation": "To judge or recall with the mind.",
+        "examples": {
+          "beginner": "What are you thinking?",
+          "intermediate": "I had a good idea.",
+          "advanced": "If you think positively, the results will be good too.",
+          "master": "When your thinking changes, your actions change too."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[생각하다]",
+      "ipa": "[sɛŋɡakʰada]"
+    }
+  },
+  {
+    "id": "neukida",
+    "korean": "느끼다",
+    "romanization": "neukkida",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "feeling", "basic"],
+    "translations": {
+      "ko": {
+        "word": "느끼다",
+        "explanation": "감각이나 감정을 인식하다.",
+        "examples": {
+          "beginner": "행복을 느껴요.",
+          "intermediate": "피곤함을 느껴요.",
+          "advanced": "음악을 들으면 감동을 느껴요.",
+          "master": "자연 속에서 평화를 느낄 수 있어요."
+        }
+      },
+      "en": {
+        "word": "to feel",
+        "explanation": "To perceive a sensation or emotion.",
+        "examples": {
+          "beginner": "I feel happiness.",
+          "intermediate": "I feel tired.",
+          "advanced": "When I listen to music, I feel moved.",
+          "master": "You can feel peace in nature."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[느끼다]",
+      "ipa": "[nɯkːida]"
+    }
+  },
+  {
+    "id": "johahada",
+    "korean": "좋아하다",
+    "romanization": "joahada",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "liking", "basic"],
+    "translations": {
+      "ko": {
+        "word": "좋아하다",
+        "explanation": "마음에 들어서 호감을 가지다.",
+        "examples": {
+          "beginner": "음악을 좋아해요.",
+          "intermediate": "뭘 좋아해요?",
+          "advanced": "좋아하는 일을 하면 행복해요.",
+          "master": "좋아하는 것을 직업으로 만드는 것이 꿈이에요."
+        }
+      },
+      "en": {
+        "word": "to like",
+        "explanation": "To have affection because something pleases you.",
+        "examples": {
+          "beginner": "I like music.",
+          "intermediate": "What do you like?",
+          "advanced": "If you do what you like, you're happy.",
+          "master": "My dream is to make what I like into a career."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[좋아하다]",
+      "ipa": "[tɕoaɦada]"
+    }
+  },
+  {
+    "id": "sirheohada",
+    "korean": "싫어하다",
+    "romanization": "sireohada",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "disliking", "basic"],
+    "translations": {
+      "ko": {
+        "word": "싫어하다",
+        "explanation": "마음에 들지 않아서 거부감을 가지다.",
+        "examples": {
+          "beginner": "채소를 싫어해요.",
+          "intermediate": "왜 싫어해요?",
+          "advanced": "싫어하는 것도 경험해 보면 좋아질 수 있어요.",
+          "master": "편견 없이 사람을 만나면 싫어하던 것도 좋아질 수 있어요."
+        }
+      },
+      "en": {
+        "word": "to dislike / to hate",
+        "explanation": "To have aversion because something doesn't please you.",
+        "examples": {
+          "beginner": "I dislike vegetables.",
+          "intermediate": "Why do you dislike it?",
+          "advanced": "If you try things you dislike, you might come to like them.",
+          "master": "If you meet people without prejudice, you might come to like what you disliked."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[싫어하다]",
+      "ipa": "[ɕilʌɦada]"
+    }
+  },
+  {
+    "id": "pillyohada",
+    "korean": "필요하다",
+    "romanization": "piryohada",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "needing", "basic"],
+    "translations": {
+      "ko": {
+        "word": "필요하다",
+        "explanation": "꼭 있어야 하다. 요구되다.",
+        "examples": {
+          "beginner": "도움이 필요해요.",
+          "intermediate": "뭐가 필요해요?",
+          "advanced": "성공하려면 노력이 필요해요.",
+          "master": "필요한 것과 원하는 것을 구분하는 것이 중요해요."
+        }
+      },
+      "en": {
+        "word": "to need / to be necessary",
+        "explanation": "To have to exist. To be required.",
+        "examples": {
+          "beginner": "I need help.",
+          "intermediate": "What do you need?",
+          "advanced": "Effort is necessary to succeed.",
+          "master": "It's important to distinguish between what you need and what you want."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[필요하다]",
+      "ipa": "[pʰiljoɦada]"
+    }
+  },
+  {
+    "id": "wonhada",
+    "korean": "원하다",
+    "romanization": "wonhada",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "wanting", "basic"],
+    "translations": {
+      "ko": {
+        "word": "원하다",
+        "explanation": "바라고 얻으려고 하다.",
+        "examples": {
+          "beginner": "뭘 원해요?",
+          "intermediate": "성공을 원해요.",
+          "advanced": "진심으로 원하면 이루어질 거예요.",
+          "master": "원하는 것을 얻기 위해서는 그만큼 노력해야 해요."
+        }
+      },
+      "en": {
+        "word": "to want",
+        "explanation": "To wish for and try to obtain.",
+        "examples": {
+          "beginner": "What do you want?",
+          "intermediate": "I want success.",
+          "advanced": "If you sincerely want it, it will come true.",
+          "master": "To get what you want, you need to put in that much effort."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[원하다]",
+      "ipa": "[wʌnɦada]"
+    }
+  },
+  {
+    "id": "deopda",
+    "korean": "덥다",
+    "romanization": "deopda",
+    "partOfSpeech": "adjective",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["weather", "hot", "basic"],
+    "translations": {
+      "ko": {
+        "word": "덥다",
+        "explanation": "온도가 높아서 불쾌하다.",
+        "examples": {
+          "beginner": "오늘 더워요.",
+          "intermediate": "여름은 너무 더워요.",
+          "advanced": "더운 날에는 시원한 음료가 최고예요.",
+          "master": "지구 온난화 때문에 점점 더 더워지고 있어요."
+        }
+      },
+      "en": {
+        "word": "to be hot",
+        "explanation": "To be uncomfortable because of high temperature.",
+        "examples": {
+          "beginner": "It's hot today.",
+          "intermediate": "Summer is too hot.",
+          "advanced": "Cold drinks are the best on hot days.",
+          "master": "It's getting hotter because of global warming."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[덥다]",
+      "ipa": "[tʌptːa]"
+    }
+  },
+  {
+    "id": "chupda",
+    "korean": "춥다",
+    "romanization": "chupda",
+    "partOfSpeech": "adjective",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["weather", "cold", "basic"],
+    "translations": {
+      "ko": {
+        "word": "춥다",
+        "explanation": "온도가 낮아서 몸이 떨린다.",
+        "examples": {
+          "beginner": "오늘 추워요.",
+          "intermediate": "겨울은 정말 추워요.",
+          "advanced": "추울 때는 따뜻한 국물 요리가 좋아요.",
+          "master": "한국의 겨울은 춥지만 눈이 와서 예뻐요."
+        }
+      },
+      "en": {
+        "word": "to be cold",
+        "explanation": "To shiver because of low temperature.",
+        "examples": {
+          "beginner": "It's cold today.",
+          "intermediate": "Winter is really cold.",
+          "advanced": "Warm soup dishes are good when it's cold.",
+          "master": "Korean winters are cold, but beautiful when it snows."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[춥다]",
+      "ipa": "[tɕʰuptːa]"
+    }
+  },
+  {
+    "id": "dolda",
+    "korean": "돌다",
+    "romanization": "dolda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["verb", "turning", "movement"],
+    "translations": {
+      "ko": {
+        "word": "돌다",
+        "explanation": "원을 그리며 움직이다. 방향을 바꾸다.",
+        "examples": {
+          "beginner": "오른쪽으로 돌아요.",
+          "intermediate": "바퀴가 돌아요.",
+          "advanced": "지구가 태양 주위를 돌아요.",
+          "master": "세상이 어떻게 돌아가는지 이해하기 어려워요."
+        }
+      },
+      "en": {
+        "word": "to turn / to spin / to go around",
+        "explanation": "To move in a circle. To change direction.",
+        "examples": {
+          "beginner": "Turn right.",
+          "intermediate": "The wheel is spinning.",
+          "advanced": "The Earth goes around the sun.",
+          "master": "It's hard to understand how the world works."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[돌다]",
+      "ipa": "[tolda]"
+    }
+  },
+  {
+    "id": "dollyoda",
+    "korean": "돌아오다",
+    "romanization": "doraoda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "returning", "movement"],
+    "translations": {
+      "ko": {
+        "word": "돌아오다",
+        "explanation": "원래 있던 곳으로 다시 오다.",
+        "examples": {
+          "beginner": "집에 돌아와요.",
+          "intermediate": "언제 돌아올 거예요?",
+          "advanced": "여행에서 돌아오니까 일상이 그리웠어요.",
+          "master": "잃어버린 것은 돌아오지 않으니 소중히 여기세요."
+        }
+      },
+      "en": {
+        "word": "to come back / to return",
+        "explanation": "To come back to where one was before.",
+        "examples": {
+          "beginner": "I come back home.",
+          "intermediate": "When will you come back?",
+          "advanced": "When I came back from the trip, I missed daily life.",
+          "master": "What is lost won't come back, so cherish it."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[돌리다]",
+      "ipa": "[tollida]"
+    }
+  },
+  {
+    "id": "naeryeoda",
+    "korean": "내리다",
+    "romanization": "naerida",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "descending", "movement"],
+    "translations": {
+      "ko": {
+        "word": "내리다",
+        "explanation": "위에서 아래로 이동하다. 교통수단에서 나오다.",
+        "examples": {
+          "beginner": "버스에서 내려요.",
+          "intermediate": "다음 역에서 내릴 거예요.",
+          "advanced": "비가 내리고 있어서 우산이 필요해요.",
+          "master": "산에서 내려올 때 무릎이 아팠어요."
+        }
+      },
+      "en": {
+        "word": "to go down / to get off / to fall (rain/snow)",
+        "explanation": "To move from above to below. To get out of a vehicle.",
+        "examples": {
+          "beginner": "I get off the bus.",
+          "intermediate": "I'll get off at the next stop.",
+          "advanced": "It's raining, so I need an umbrella.",
+          "master": "My knees hurt when I came down from the mountain."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[내리다]",
+      "ipa": "[nɛɾida]"
+    }
+  },
+  {
+    "id": "oreuda",
+    "korean": "오르다",
+    "romanization": "oreuda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "ascending", "movement"],
+    "translations": {
+      "ko": {
+        "word": "오르다",
+        "explanation": "아래에서 위로 이동하다. 가격이나 수준이 높아지다.",
+        "examples": {
+          "beginner": "산에 올라요.",
+          "intermediate": "계단을 올라가요.",
+          "advanced": "물가가 많이 올랐어요.",
+          "master": "노력하면 언젠가 정상에 오를 수 있어요."
+        }
+      },
+      "en": {
+        "word": "to climb / to go up / to rise",
+        "explanation": "To move from below to above. For prices or levels to increase.",
+        "examples": {
+          "beginner": "I climb the mountain.",
+          "intermediate": "I go up the stairs.",
+          "advanced": "Prices have risen a lot.",
+          "master": "If you try, you can reach the top someday."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[오르다]",
+      "ipa": "[oɾɯda]"
+    }
+  },
+  {
+    "id": "taeda",
+    "korean": "타다",
+    "romanization": "tada",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "riding", "transportation"],
+    "translations": {
+      "ko": {
+        "word": "타다",
+        "explanation": "교통수단에 몸을 싣다. 불에 타다.",
+        "examples": {
+          "beginner": "버스를 타요.",
+          "intermediate": "지하철을 타고 가요.",
+          "advanced": "자전거를 타면 건강에 좋아요.",
+          "master": "새로운 것에 도전하면 열정이 타오를 거예요."
+        }
+      },
+      "en": {
+        "word": "to ride / to take (transportation) / to burn",
+        "explanation": "To get on a means of transportation. To burn in fire.",
+        "examples": {
+          "beginner": "I take the bus.",
+          "intermediate": "I go by subway.",
+          "advanced": "Riding a bicycle is good for your health.",
+          "master": "If you challenge new things, your passion will burn."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[태우다]",
+      "ipa": "[tʰɛuda]"
+    }
+  },
+  {
+    "id": "geodda",
+    "korean": "걷다",
+    "romanization": "geotda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "walking", "movement"],
+    "translations": {
+      "ko": {
+        "word": "걷다",
+        "explanation": "발을 움직여 이동하다.",
+        "examples": {
+          "beginner": "천천히 걸어요.",
+          "intermediate": "공원에서 걸어요.",
+          "advanced": "걷기 운동이 건강에 좋아요.",
+          "master": "인생은 마라톤처럼 천천히 걸어가는 거예요."
+        }
+      },
+      "en": {
+        "word": "to walk",
+        "explanation": "To move by moving the feet.",
+        "examples": {
+          "beginner": "Walk slowly.",
+          "intermediate": "I walk in the park.",
+          "advanced": "Walking exercise is good for health.",
+          "master": "Life is like a marathon—you walk slowly."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[걷다]",
+      "ipa": "[kʌtːa]"
+    }
+  },
+  {
+    "id": "dallida",
+    "korean": "달리다",
+    "romanization": "dallida",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "running", "movement"],
+    "translations": {
+      "ko": {
+        "word": "달리다",
+        "explanation": "빠르게 뛰어가다.",
+        "examples": {
+          "beginner": "빨리 달려요.",
+          "intermediate": "아침에 달리기를 해요.",
+          "advanced": "꿈을 향해 달려가고 있어요.",
+          "master": "멈추지 않고 달리면 언젠가 목표에 도달해요."
+        }
+      },
+      "en": {
+        "word": "to run",
+        "explanation": "To move quickly by running.",
+        "examples": {
+          "beginner": "Run fast.",
+          "intermediate": "I jog in the morning.",
+          "advanced": "I'm running toward my dream.",
+          "master": "If you keep running without stopping, you'll reach your goal someday."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[달리다]",
+      "ipa": "[tallida]"
+    }
+  },
+  {
+    "id": "antta",
+    "korean": "앉다",
+    "romanization": "antta",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "sitting", "position"],
+    "translations": {
+      "ko": {
+        "word": "앉다",
+        "explanation": "의자나 바닥에 엉덩이를 대고 자세를 취하다.",
+        "examples": {
+          "beginner": "여기 앉으세요.",
+          "intermediate": "의자에 앉아요.",
+          "advanced": "오래 앉아 있으면 건강에 안 좋아요.",
+          "master": "바쁜 하루 끝에 편하게 앉을 때 가장 행복해요."
+        }
+      },
+      "en": {
+        "word": "to sit",
+        "explanation": "To take a position with buttocks on a chair or floor.",
+        "examples": {
+          "beginner": "Please sit here.",
+          "intermediate": "I sit on a chair.",
+          "advanced": "Sitting for a long time is bad for health.",
+          "master": "I'm happiest when I sit comfortably after a busy day."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[앉다]",
+      "ipa": "[antːa]"
+    }
+  },
+  {
+    "id": "seoda",
+    "korean": "서다",
+    "romanization": "seoda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "standing", "position"],
+    "translations": {
+      "ko": {
+        "word": "서다",
+        "explanation": "두 발로 몸을 지탱하고 있다. 멈추다.",
+        "examples": {
+          "beginner": "여기 서세요.",
+          "intermediate": "줄을 서세요.",
+          "advanced": "오래 서 있으면 다리가 아파요.",
+          "master": "세상 앞에 당당히 서고 싶어요."
+        }
+      },
+      "en": {
+        "word": "to stand / to stop",
+        "explanation": "To support the body on two feet. To stop.",
+        "examples": {
+          "beginner": "Stand here.",
+          "intermediate": "Please stand in line.",
+          "advanced": "If you stand for a long time, your legs hurt.",
+          "master": "I want to stand proudly before the world."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[서다]",
+      "ipa": "[sʌda]"
+    }
+  },
+  {
+    "id": "nupda",
+    "korean": "눕다",
+    "romanization": "nupda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "lying down", "position"],
+    "translations": {
+      "ko": {
+        "word": "눕다",
+        "explanation": "몸을 수평으로 대고 있다.",
+        "examples": {
+          "beginner": "침대에 누워요.",
+          "intermediate": "피곤해서 잠깐 누웠어요.",
+          "advanced": "눕자마자 바로 잠들었어요.",
+          "master": "하늘을 보며 잔디밭에 누워 있으니 마음이 편해져요."
+        }
+      },
+      "en": {
+        "word": "to lie down",
+        "explanation": "To be in a horizontal position.",
+        "examples": {
+          "beginner": "I lie on the bed.",
+          "intermediate": "I was tired, so I lay down for a bit.",
+          "advanced": "I fell asleep as soon as I lay down.",
+          "master": "Lying on the grass looking at the sky puts my mind at ease."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[눕다]",
+      "ipa": "[nuptːa]"
+    }
+  },
+  {
+    "id": "yeolda",
+    "korean": "열다",
+    "romanization": "yeolda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "opening", "action"],
+    "translations": {
+      "ko": {
+        "word": "열다",
+        "explanation": "닫혀 있는 것을 움직여 안이 보이게 하다.",
+        "examples": {
+          "beginner": "문을 열어요.",
+          "intermediate": "창문을 열어 주세요.",
+          "advanced": "마음을 열면 친구를 사귈 수 있어요.",
+          "master": "새로운 기회의 문이 열릴 거예요."
+        }
+      },
+      "en": {
+        "word": "to open",
+        "explanation": "To move something closed so the inside is visible.",
+        "examples": {
+          "beginner": "I open the door.",
+          "intermediate": "Please open the window.",
+          "advanced": "If you open your heart, you can make friends.",
+          "master": "A door to new opportunities will open."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[열다]",
+      "ipa": "[jʌlda]"
+    }
+  },
+  {
+    "id": "datda",
+    "korean": "닫다",
+    "romanization": "datda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "closing", "action"],
+    "translations": {
+      "ko": {
+        "word": "닫다",
+        "explanation": "열려 있는 것을 움직여 안이 안 보이게 하다.",
+        "examples": {
+          "beginner": "문을 닫아요.",
+          "intermediate": "창문을 닫아 주세요.",
+          "advanced": "가게가 10시에 닫아요.",
+          "master": "한 문이 닫히면 다른 문이 열린다고 해요."
+        }
+      },
+      "en": {
+        "word": "to close",
+        "explanation": "To move something open so the inside is not visible.",
+        "examples": {
+          "beginner": "I close the door.",
+          "intermediate": "Please close the window.",
+          "advanced": "The store closes at 10.",
+          "master": "They say when one door closes, another opens."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[닫다]",
+      "ipa": "[tattːa]"
+    }
+  },
+  {
+    "id": "chajda",
+    "korean": "찾다",
+    "romanization": "chatda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "finding", "searching"],
+    "translations": {
+      "ko": {
+        "word": "찾다",
+        "explanation": "잃어버린 것이나 필요한 것을 발견하다.",
+        "examples": {
+          "beginner": "지갑을 찾아요.",
+          "intermediate": "뭘 찾고 있어요?",
+          "advanced": "인터넷에서 정보를 찾았어요.",
+          "master": "진정한 행복을 찾는 것이 인생의 목표예요."
+        }
+      },
+      "en": {
+        "word": "to find / to look for",
+        "explanation": "To discover something lost or needed.",
+        "examples": {
+          "beginner": "I'm looking for my wallet.",
+          "intermediate": "What are you looking for?",
+          "advanced": "I found information on the internet.",
+          "master": "Finding true happiness is the goal of life."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[찾다]",
+      "ipa": "[tɕʰattːa]"
+    }
+  },
+  {
+    "id": "jungha",
+    "korean": "전화하다",
+    "romanization": "jeonhwahada",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "calling", "communication"],
+    "translations": {
+      "ko": {
+        "word": "전화하다",
+        "explanation": "전화기로 다른 사람과 이야기하다.",
+        "examples": {
+          "beginner": "엄마한테 전화해요.",
+          "intermediate": "나중에 전화할게요.",
+          "advanced": "바빠서 전화를 못 받았어요.",
+          "master": "요즘은 전화보다 메시지를 더 많이 보내요."
+        }
+      },
+      "en": {
+        "word": "to call (by phone)",
+        "explanation": "To talk to another person using a phone.",
+        "examples": {
+          "beginner": "I call my mom.",
+          "intermediate": "I'll call you later.",
+          "advanced": "I was busy, so I couldn't answer the phone.",
+          "master": "These days, I send messages more than I call."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[정하다]",
+      "ipa": "[tɕʌŋɦada]"
+    }
+  },
+  {
+    "id": "bonaeda",
+    "korean": "보내다",
+    "romanization": "bonaeda",
+    "partOfSpeech": "verb",
+    "categoryId": "verbs-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["verb", "sending", "communication"],
+    "translations": {
+      "ko": {
+        "word": "보내다",
+        "explanation": "물건이나 메시지를 다른 곳으로 전달하다.",
+        "examples": {
+          "beginner": "메시지를 보내요.",
+          "intermediate": "선물을 보냈어요.",
+          "advanced": "이메일을 보내는 것을 깜빡했어요.",
+          "master": "시간을 의미 있게 보내는 것이 중요해요."
+        }
+      },
+      "en": {
+        "word": "to send / to spend (time)",
+        "explanation": "To deliver things or messages to another place.",
+        "examples": {
+          "beginner": "I send a message.",
+          "intermediate": "I sent a gift.",
+          "advanced": "I forgot to send the email.",
+          "master": "It's important to spend time meaningfully."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[보내다]",
+      "ipa": "[ponɛda]"
+    }
+  }
+]

@@ -20,6 +20,9 @@
     "./styles/*": "./src/styles/*"
   },
   "dependencies": {
+    "@soundblue/core": "workspace:*",
+    "@soundblue/i18n": "workspace:*",
+    "@soundblue/search": "workspace:*",
     "dexie": "^4.0.10"
   },
   "devDependencies": {

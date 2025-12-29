@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "gajok",
+    "korean": "가족",
+    "romanization": "gajok",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "basic", "people"],
+    "translations": {
+      "ko": {
+        "word": "가족",
+        "explanation": "부모와 자녀 등으로 이루어진 집단. 함께 사는 사람들.",
+        "examples": {
+          "beginner": "가족이 몇 명이에요?",
+          "intermediate": "가족과 함께 저녁을 먹어요.",
+          "advanced": "가족은 가장 소중한 존재라고 생각해요.",
+          "master": "가족의 의미는 시대에 따라 변화하지만, 서로를 아끼는 마음은 변하지 않는다."
+        }
+      },
+      "en": {
+        "word": "family",
+        "explanation": "A group consisting of parents and children. People who live together.",
+        "examples": {
+          "beginner": "How many people are in your family?",
+          "intermediate": "I eat dinner with my family.",
+          "advanced": "I think family is the most precious thing.",
+          "master": "The meaning of family changes with the times, but the love for each other remains unchanged."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[가족]",
+      "ipa": "[kadʑok]"
+    }
+  },
+  {
+    "id": "eomma",
+    "korean": "엄마",
+    "romanization": "eomma",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "parents", "basic"],
+    "translations": {
+      "ko": {
+        "word": "엄마",
+        "explanation": "자기를 낳아 준 여자. 어머니의 낮춤말.",
+        "examples": {
+          "beginner": "엄마, 사랑해요.",
+          "intermediate": "엄마가 요리를 잘해요.",
+          "advanced": "엄마의 생일 선물로 뭘 사드릴까 고민 중이에요.",
+          "master": "엄마가 되고 나서야 부모님의 마음을 조금은 이해할 수 있게 되었다."
+        }
+      },
+      "en": {
+        "word": "mom / mother",
+        "explanation": "The woman who gave birth to you. Informal word for mother.",
+        "examples": {
+          "beginner": "Mom, I love you.",
+          "intermediate": "Mom is a good cook.",
+          "advanced": "I'm thinking about what to buy for mom's birthday present.",
+          "master": "Only after becoming a mom myself could I begin to understand my parents' hearts."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[엄마]",
+      "ipa": "[ʌmːa]"
+    }
+  },
+  {
+    "id": "appa",
+    "korean": "아빠",
+    "romanization": "appa",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "parents", "basic"],
+    "translations": {
+      "ko": {
+        "word": "아빠",
+        "explanation": "자기 아버지를 친근하게 부르는 말.",
+        "examples": {
+          "beginner": "아빠, 안녕하세요!",
+          "intermediate": "아빠가 회사에서 일해요.",
+          "advanced": "아빠와 함께 야구 경기를 보러 갔어요.",
+          "master": "아빠의 어깨가 예전보다 좁아 보이는 것을 보고 마음이 아팠다."
+        }
+      },
+      "en": {
+        "word": "dad / father",
+        "explanation": "An affectionate way to call one's father.",
+        "examples": {
+          "beginner": "Dad, hello!",
+          "intermediate": "Dad works at a company.",
+          "advanced": "I went to watch a baseball game with dad.",
+          "master": "Seeing dad's shoulders look smaller than before made my heart ache."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아빠]",
+      "ipa": "[apːa]"
+    }
+  },
+  {
+    "id": "eomeoni",
+    "korean": "어머니",
+    "romanization": "eomeoni",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "parents", "formal"],
+    "translations": {
+      "ko": {
+        "word": "어머니",
+        "explanation": "자기를 낳아 준 여자. 엄마의 높임말.",
+        "examples": {
+          "beginner": "어머니 안녕하세요.",
+          "intermediate": "어머니께 전화드렸어요.",
+          "advanced": "어머니의 건강이 좋아지셔서 다행이에요.",
+          "master": "어머니의 손맛을 따라가려면 아직 멀었다는 것을 요리할 때마다 느낀다."
+        }
+      },
+      "en": {
+        "word": "mother",
+        "explanation": "The woman who gave birth to you. Formal/polite word for mom.",
+        "examples": {
+          "beginner": "Hello, mother.",
+          "intermediate": "I called mother.",
+          "advanced": "I'm glad that mother's health has improved.",
+          "master": "Every time I cook, I realize I still have a long way to go to match mother's touch."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[어머니]",
+      "ipa": "[ʌmʌni]"
+    }
+  },
+  {
+    "id": "abeoji",
+    "korean": "아버지",
+    "romanization": "abeoji",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "parents", "formal"],
+    "translations": {
+      "ko": {
+        "word": "아버지",
+        "explanation": "자기를 낳아 준 남자. 아빠의 높임말.",
+        "examples": {
+          "beginner": "아버지 안녕하세요.",
+          "intermediate": "아버지는 회사원이세요.",
+          "advanced": "아버지께서 은퇴하신 후로 취미 생활을 즐기고 계세요.",
+          "master": "아버지의 조언이 어렸을 때는 잔소리처럼 느껴졌는데, 지금은 소중한 가르침이었음을 안다."
+        }
+      },
+      "en": {
+        "word": "father",
+        "explanation": "The man who fathered you. Formal/polite word for dad.",
+        "examples": {
+          "beginner": "Hello, father.",
+          "intermediate": "Father is a company employee.",
+          "advanced": "Since father retired, he's been enjoying his hobbies.",
+          "master": "When I was young, father's advice felt like nagging, but now I know it was precious guidance."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아버지]",
+      "ipa": "[abʌdʑi]"
+    }
+  },
+  {
+    "id": "bumo",
+    "korean": "부모",
+    "romanization": "bumo",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "parents", "basic"],
+    "translations": {
+      "ko": {
+        "word": "부모",
+        "explanation": "아버지와 어머니. 부모님.",
+        "examples": {
+          "beginner": "부모님을 사랑해요.",
+          "intermediate": "부모님이 서울에 사세요.",
+          "advanced": "부모님의 결혼기념일에 함께 외식을 했어요.",
+          "master": "부모가 되어 보니 내 부모님의 희생이 얼마나 컸는지 비로소 알게 되었다."
+        }
+      },
+      "en": {
+        "word": "parents",
+        "explanation": "Father and mother.",
+        "examples": {
+          "beginner": "I love my parents.",
+          "intermediate": "My parents live in Seoul.",
+          "advanced": "We went out to eat together for my parents' anniversary.",
+          "master": "Only after becoming a parent myself did I finally realize how great my parents' sacrifices were."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[부모]",
+      "ipa": "[pumo]"
+    }
+  },
+  {
+    "id": "hyeong",
+    "korean": "형",
+    "romanization": "hyeong",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "siblings", "male"],
+    "translations": {
+      "ko": {
+        "word": "형",
+        "explanation": "남자가 형제 중 자기보다 나이가 많은 남자를 이르는 말.",
+        "examples": {
+          "beginner": "형이 있어요.",
+          "intermediate": "형은 대학생이에요.",
+          "advanced": "형이 외국에서 일하고 있어서 자주 못 만나요.",
+          "master": "어렸을 때는 형이 싫었는데, 어른이 되고 나니 가장 의지가 되는 사람이 됐다."
+        }
+      },
+      "en": {
+        "word": "older brother (for males)",
+        "explanation": "Term used by males to address their older brother.",
+        "examples": {
+          "beginner": "I have an older brother.",
+          "intermediate": "My older brother is a college student.",
+          "advanced": "My older brother works abroad, so we don't meet often.",
+          "master": "When I was young, I didn't like my brother, but after growing up, he became my most reliable person."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[형]",
+      "ipa": "[hjʌŋ]"
+    }
+  },
+  {
+    "id": "nuna",
+    "korean": "누나",
+    "romanization": "nuna",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "siblings", "male"],
+    "translations": {
+      "ko": {
+        "word": "누나",
+        "explanation": "남자가 형제 중 자기보다 나이가 많은 여자를 이르는 말.",
+        "examples": {
+          "beginner": "누나가 있어요.",
+          "intermediate": "누나가 결혼했어요.",
+          "advanced": "누나가 맛있는 음식을 만들어 줬어요.",
+          "master": "어렸을 때 누나가 항상 숙제를 도와줬던 것이 지금도 고마운 기억으로 남아있다."
+        }
+      },
+      "en": {
+        "word": "older sister (for males)",
+        "explanation": "Term used by males to address their older sister.",
+        "examples": {
+          "beginner": "I have an older sister.",
+          "intermediate": "My older sister got married.",
+          "advanced": "My older sister made me delicious food.",
+          "master": "The memories of my sister always helping with my homework when I was young still remain as grateful memories."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[누나]",
+      "ipa": "[nuna]"
+    }
+  },
+  {
+    "id": "oppa",
+    "korean": "오빠",
+    "romanization": "oppa",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "siblings", "female"],
+    "translations": {
+      "ko": {
+        "word": "오빠",
+        "explanation": "여자가 형제 중 자기보다 나이가 많은 남자를 이르는 말.",
+        "examples": {
+          "beginner": "오빠가 있어요.",
+          "intermediate": "오빠가 군대에 갔어요.",
+          "advanced": "오빠가 운전을 가르쳐 줬어요.",
+          "master": "오빠라는 호칭은 가족뿐만 아니라 친한 선배에게도 사용할 수 있다."
+        }
+      },
+      "en": {
+        "word": "older brother (for females)",
+        "explanation": "Term used by females to address their older brother.",
+        "examples": {
+          "beginner": "I have an older brother.",
+          "intermediate": "My older brother went to the military.",
+          "advanced": "My older brother taught me how to drive.",
+          "master": "The term 'oppa' can be used not only for family but also for close seniors."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[오빠]",
+      "ipa": "[opːa]"
+    }
+  },
+  {
+    "id": "eonni",
+    "korean": "언니",
+    "romanization": "eonni",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "siblings", "female"],
+    "translations": {
+      "ko": {
+        "word": "언니",
+        "explanation": "여자가 형제 중 자기보다 나이가 많은 여자를 이르는 말.",
+        "examples": {
+          "beginner": "언니가 예뻐요.",
+          "intermediate": "언니와 함께 쇼핑을 해요.",
+          "advanced": "언니가 취직해서 독립했어요.",
+          "master": "언니는 내게 패션 조언을 해주는 가장 믿을 만한 사람이다."
+        }
+      },
+      "en": {
+        "word": "older sister (for females)",
+        "explanation": "Term used by females to address their older sister.",
+        "examples": {
+          "beginner": "My older sister is pretty.",
+          "intermediate": "I go shopping with my older sister.",
+          "advanced": "My older sister got a job and became independent.",
+          "master": "My older sister is the most reliable person for fashion advice."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[언니]",
+      "ipa": "[ʌnni]"
+    }
+  },
+  {
+    "id": "dongsaeng",
+    "korean": "동생",
+    "romanization": "dongsaeng",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "siblings", "basic"],
+    "translations": {
+      "ko": {
+        "word": "동생",
+        "explanation": "나이가 어린 형제나 자매. 남동생과 여동생을 모두 포함.",
+        "examples": {
+          "beginner": "동생이 있어요?",
+          "intermediate": "동생은 고등학생이에요.",
+          "advanced": "동생이 시험을 잘 봐서 기쁘게 축하해 줬어요.",
+          "master": "동생을 돌봐 온 경험이 나중에 부모가 되었을 때 큰 도움이 됐다."
+        }
+      },
+      "en": {
+        "word": "younger sibling",
+        "explanation": "A younger brother or sister. Includes both younger brothers and sisters.",
+        "examples": {
+          "beginner": "Do you have a younger sibling?",
+          "intermediate": "My younger sibling is a high school student.",
+          "advanced": "My younger sibling did well on the exam, so I happily congratulated them.",
+          "master": "The experience of taking care of my younger sibling was a great help when I became a parent."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[동생]",
+      "ipa": "[toŋsɛŋ]"
+    }
+  },
+  {
+    "id": "namdongsaeng",
+    "korean": "남동생",
+    "romanization": "namdongsaeng",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "siblings", "male"],
+    "translations": {
+      "ko": {
+        "word": "남동생",
+        "explanation": "나이가 어린 남자 형제.",
+        "examples": {
+          "beginner": "남동생이 있어요.",
+          "intermediate": "남동생은 축구를 좋아해요.",
+          "advanced": "남동생이 올해 대학에 입학했어요.",
+          "master": "남동생이 어느새 나보다 키가 훨씬 커져서 놀랐다."
+        }
+      },
+      "en": {
+        "word": "younger brother",
+        "explanation": "A male sibling who is younger.",
+        "examples": {
+          "beginner": "I have a younger brother.",
+          "intermediate": "My younger brother likes soccer.",
+          "advanced": "My younger brother entered university this year.",
+          "master": "I was surprised that my younger brother has grown much taller than me before I knew it."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[남동생]",
+      "ipa": "[namtoŋsɛŋ]"
+    }
+  },
+  {
+    "id": "yeodongsaeng",
+    "korean": "여동생",
+    "romanization": "yeodongsaeng",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "siblings", "female"],
+    "translations": {
+      "ko": {
+        "word": "여동생",
+        "explanation": "나이가 어린 여자 형제.",
+        "examples": {
+          "beginner": "여동생이 귀여워요.",
+          "intermediate": "여동생은 피아노를 쳐요.",
+          "advanced": "여동생의 결혼식 준비를 도와주고 있어요.",
+          "master": "여동생과 어렸을 때는 자주 싸웠지만, 지금은 가장 친한 친구가 됐다."
+        }
+      },
+      "en": {
+        "word": "younger sister",
+        "explanation": "A female sibling who is younger.",
+        "examples": {
+          "beginner": "My younger sister is cute.",
+          "intermediate": "My younger sister plays the piano.",
+          "advanced": "I'm helping with my younger sister's wedding preparations.",
+          "master": "My younger sister and I used to fight a lot when we were young, but now we've become best friends."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[여동생]",
+      "ipa": "[jʌdoŋsɛŋ]"
+    }
+  },
+  {
+    "id": "halmeoni",
+    "korean": "할머니",
+    "romanization": "halmeoni",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "grandparents", "basic"],
+    "translations": {
+      "ko": {
+        "word": "할머니",
+        "explanation": "아버지나 어머니의 어머니. 조모.",
+        "examples": {
+          "beginner": "할머니 사랑해요.",
+          "intermediate": "할머니 댁에 갔어요.",
+          "advanced": "할머니가 맛있는 음식을 많이 만들어 주셨어요.",
+          "master": "할머니의 옛날 이야기를 들으면 역사책에서는 배울 수 없는 것들을 배울 수 있다."
+        }
+      },
+      "en": {
+        "word": "grandmother",
+        "explanation": "The mother of one's father or mother.",
+        "examples": {
+          "beginner": "I love you, grandmother.",
+          "intermediate": "I went to grandmother's house.",
+          "advanced": "Grandmother made lots of delicious food.",
+          "master": "Listening to grandmother's old stories teaches things you can't learn from history books."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[할머니]",
+      "ipa": "[halmʌni]"
+    }
+  },
+  {
+    "id": "harabeoji",
+    "korean": "할아버지",
+    "romanization": "harabeoji",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "grandparents", "basic"],
+    "translations": {
+      "ko": {
+        "word": "할아버지",
+        "explanation": "아버지나 어머니의 아버지. 조부.",
+        "examples": {
+          "beginner": "할아버지가 계세요.",
+          "intermediate": "할아버지가 공원에서 산책하세요.",
+          "advanced": "할아버지께서 건강하게 지내셔서 다행이에요.",
+          "master": "할아버지가 젊었을 때 겪은 전쟁 이야기를 들으면 마음이 숙연해진다."
+        }
+      },
+      "en": {
+        "word": "grandfather",
+        "explanation": "The father of one's father or mother.",
+        "examples": {
+          "beginner": "I have a grandfather.",
+          "intermediate": "Grandfather takes walks in the park.",
+          "advanced": "I'm glad that grandfather is healthy.",
+          "master": "Hearing grandfather's stories about the war he experienced when he was young makes my heart solemn."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[할아버지]",
+      "ipa": "[haɾabʌdʑi]"
+    }
+  },
+  {
+    "id": "jejo",
+    "korean": "조부모",
+    "romanization": "jobumo",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["family", "grandparents", "formal"],
+    "translations": {
+      "ko": {
+        "word": "조부모",
+        "explanation": "할아버지와 할머니. 조부와 조모.",
+        "examples": {
+          "beginner": "조부모님이 계세요.",
+          "intermediate": "조부모님 댁이 시골에 있어요.",
+          "advanced": "명절에는 조부모님을 뵙기 위해 고향에 가요.",
+          "master": "조부모님이 건강하게 오래 사셔서 4대가 함께 모이는 것이 가능했다."
+        }
+      },
+      "en": {
+        "word": "grandparents",
+        "explanation": "Grandfather and grandmother.",
+        "examples": {
+          "beginner": "I have grandparents.",
+          "intermediate": "My grandparents' house is in the countryside.",
+          "advanced": "During holidays, I go to my hometown to see my grandparents.",
+          "master": "Because my grandparents lived long and healthy, it was possible for four generations to gather together."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[제조]",
+      "ipa": "[tɕedʑo]"
+    }
+  },
+  {
+    "id": "adul",
+    "korean": "아들",
+    "romanization": "adeul",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "children", "male"],
+    "translations": {
+      "ko": {
+        "word": "아들",
+        "explanation": "부모와의 관계에서 남자인 자식.",
+        "examples": {
+          "beginner": "아들이 있어요.",
+          "intermediate": "아들이 학교에 가요.",
+          "advanced": "아들이 취직해서 부모님이 정말 기뻐하세요.",
+          "master": "아들을 키우면서 내 아버지의 마음을 조금이나마 이해하게 되었다."
+        }
+      },
+      "en": {
+        "word": "son",
+        "explanation": "A male child in relation to their parents.",
+        "examples": {
+          "beginner": "I have a son.",
+          "intermediate": "My son goes to school.",
+          "advanced": "My son got a job, and my parents are very happy.",
+          "master": "While raising my son, I came to understand my father's heart a little."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아들]",
+      "ipa": "[adɯl]"
+    }
+  },
+  {
+    "id": "ttal",
+    "korean": "딸",
+    "romanization": "ttal",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "children", "female"],
+    "translations": {
+      "ko": {
+        "word": "딸",
+        "explanation": "부모와의 관계에서 여자인 자식.",
+        "examples": {
+          "beginner": "딸이 있어요.",
+          "intermediate": "딸이 아주 귀여워요.",
+          "advanced": "딸이 외국으로 유학을 가서 보고 싶어요.",
+          "master": "딸을 시집 보내는 아버지의 마음은 말로 표현할 수 없을 정도로 복잡하다."
+        }
+      },
+      "en": {
+        "word": "daughter",
+        "explanation": "A female child in relation to their parents.",
+        "examples": {
+          "beginner": "I have a daughter.",
+          "intermediate": "My daughter is very cute.",
+          "advanced": "My daughter went abroad to study, so I miss her.",
+          "master": "The heart of a father sending his daughter off to be married is too complex to express in words."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[딸]",
+      "ipa": "[tːal]"
+    }
+  },
+  {
+    "id": "janyeo",
+    "korean": "자녀",
+    "romanization": "janyeo",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["family", "children", "formal"],
+    "translations": {
+      "ko": {
+        "word": "자녀",
+        "explanation": "아들과 딸. 자식.",
+        "examples": {
+          "beginner": "자녀가 있어요?",
+          "intermediate": "자녀 교육이 중요해요.",
+          "advanced": "자녀를 위해 열심히 저축하고 있어요.",
+          "master": "부모는 자녀의 행복을 위해서라면 무엇이든 희생할 준비가 되어 있다."
+        }
+      },
+      "en": {
+        "word": "children (sons and daughters)",
+        "explanation": "Sons and daughters. Offspring.",
+        "examples": {
+          "beginner": "Do you have children?",
+          "intermediate": "Children's education is important.",
+          "advanced": "I'm saving hard for my children.",
+          "master": "Parents are ready to sacrifice anything for their children's happiness."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[자녀]",
+      "ipa": "[tɕanjʌ]"
+    }
+  },
+  {
+    "id": "sonnyeo",
+    "korean": "손녀",
+    "romanization": "sonnyeo",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["family", "grandchildren", "female"],
+    "translations": {
+      "ko": {
+        "word": "손녀",
+        "explanation": "아들이나 딸의 딸. 손녀딸.",
+        "examples": {
+          "beginner": "손녀가 있어요.",
+          "intermediate": "손녀가 할머니를 닮았어요.",
+          "advanced": "할머니가 손녀에게 옛날이야기를 들려주세요.",
+          "master": "손녀가 태어났을 때 할아버지가 기뻐서 눈물을 흘리셨다."
+        }
+      },
+      "en": {
+        "word": "granddaughter",
+        "explanation": "The daughter of one's son or daughter.",
+        "examples": {
+          "beginner": "I have a granddaughter.",
+          "intermediate": "My granddaughter looks like grandmother.",
+          "advanced": "Grandmother tells old stories to her granddaughter.",
+          "master": "When his granddaughter was born, grandfather shed tears of joy."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[손녀]",
+      "ipa": "[sonnjʌ]"
+    }
+  },
+  {
+    "id": "sonja",
+    "korean": "손자",
+    "romanization": "sonja",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["family", "grandchildren", "male"],
+    "translations": {
+      "ko": {
+        "word": "손자",
+        "explanation": "아들이나 딸의 아들.",
+        "examples": {
+          "beginner": "손자가 있어요.",
+          "intermediate": "손자가 할아버지를 따라해요.",
+          "advanced": "할아버지가 손자에게 바둑을 가르쳐 주세요.",
+          "master": "손자가 할아버지의 이름을 부르며 뛰어오는 모습이 가장 행복한 순간이다."
+        }
+      },
+      "en": {
+        "word": "grandson",
+        "explanation": "The son of one's son or daughter.",
+        "examples": {
+          "beginner": "I have a grandson.",
+          "intermediate": "My grandson imitates grandfather.",
+          "advanced": "Grandfather teaches his grandson Go (the board game).",
+          "master": "The happiest moment is when my grandson calls my name and comes running."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[손자]",
+      "ipa": "[sondʑa]"
+    }
+  },
+  {
+    "id": "samchon",
+    "korean": "삼촌",
+    "romanization": "samchon",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "relatives", "male"],
+    "translations": {
+      "ko": {
+        "word": "삼촌",
+        "explanation": "아버지의 남자 형제. 또는 부모의 남자 형제를 친근하게 부르는 말.",
+        "examples": {
+          "beginner": "삼촌이 있어요.",
+          "intermediate": "삼촌이 선물을 주셨어요.",
+          "advanced": "삼촌은 외국에서 일하고 계세요.",
+          "master": "어렸을 때 삼촌이 놀아주던 기억이 지금도 따뜻하게 남아있다."
+        }
+      },
+      "en": {
+        "word": "uncle",
+        "explanation": "Father's brother. Or an affectionate term for a parent's brother.",
+        "examples": {
+          "beginner": "I have an uncle.",
+          "intermediate": "Uncle gave me a present.",
+          "advanced": "My uncle works abroad.",
+          "master": "The memories of my uncle playing with me when I was young still remain warm."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[삼촌]",
+      "ipa": "[samtɕʰon]"
+    }
+  },
+  {
+    "id": "imo",
+    "korean": "이모",
+    "romanization": "imo",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "relatives", "female"],
+    "translations": {
+      "ko": {
+        "word": "이모",
+        "explanation": "어머니의 여자 형제.",
+        "examples": {
+          "beginner": "이모가 있어요.",
+          "intermediate": "이모 집에 놀러 갔어요.",
+          "advanced": "이모가 요리를 정말 잘하세요.",
+          "master": "이모는 엄마처럼 따뜻하게 대해 주셔서 친정에 가는 것 같은 편안함이 있다."
+        }
+      },
+      "en": {
+        "word": "aunt (mother's side)",
+        "explanation": "Mother's sister.",
+        "examples": {
+          "beginner": "I have an aunt.",
+          "intermediate": "I visited my aunt's house.",
+          "advanced": "My aunt cooks really well.",
+          "master": "My aunt treats me as warmly as my mother, so there's a comfort like going to my maternal home."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[이모]",
+      "ipa": "[imo]"
+    }
+  },
+  {
+    "id": "gomo",
+    "korean": "고모",
+    "romanization": "gomo",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["family", "relatives", "female"],
+    "translations": {
+      "ko": {
+        "word": "고모",
+        "explanation": "아버지의 여자 형제.",
+        "examples": {
+          "beginner": "고모가 있어요.",
+          "intermediate": "고모가 결혼하셨어요.",
+          "advanced": "고모네 집에서 명절을 보냈어요.",
+          "master": "고모는 아버지와 닮아서 그런지 아버지처럼 편안하게 느껴진다."
+        }
+      },
+      "en": {
+        "word": "aunt (father's side)",
+        "explanation": "Father's sister.",
+        "examples": {
+          "beginner": "I have an aunt.",
+          "intermediate": "My aunt got married.",
+          "advanced": "We spent the holiday at my aunt's house.",
+          "master": "My aunt feels as comfortable as my father, maybe because she resembles him."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[고모]",
+      "ipa": "[komo]"
+    }
+  },
+  {
+    "id": "oemo",
+    "korean": "외삼촌",
+    "romanization": "oesamchon",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["family", "relatives", "male"],
+    "translations": {
+      "ko": {
+        "word": "외삼촌",
+        "explanation": "어머니의 남자 형제.",
+        "examples": {
+          "beginner": "외삼촌이 있어요.",
+          "intermediate": "외삼촌이 의사예요.",
+          "advanced": "외삼촌은 항상 재미있는 이야기를 해 주세요.",
+          "master": "외삼촌은 어머니와 매우 닮아서 외삼촌을 보면 어머니가 떠오른다."
+        }
+      },
+      "en": {
+        "word": "uncle (mother's side)",
+        "explanation": "Mother's brother.",
+        "examples": {
+          "beginner": "I have an uncle.",
+          "intermediate": "My uncle is a doctor.",
+          "advanced": "My uncle always tells interesting stories.",
+          "master": "My uncle looks so much like my mother that I think of her when I see him."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[외모]",
+      "ipa": "[wemo]"
+    }
+  },
+  {
+    "id": "sachon",
+    "korean": "사촌",
+    "romanization": "sachon",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "relatives", "basic"],
+    "translations": {
+      "ko": {
+        "word": "사촌",
+        "explanation": "삼촌, 고모, 이모, 외삼촌의 자녀. 부모의 형제자매의 자녀.",
+        "examples": {
+          "beginner": "사촌이 있어요.",
+          "intermediate": "사촌들과 함께 놀았어요.",
+          "advanced": "명절에 사촌들이 다 모여서 즐거웠어요.",
+          "master": "어렸을 때 사촌들과 함께 보낸 여름 방학의 추억이 가장 소중하다."
+        }
+      },
+      "en": {
+        "word": "cousin",
+        "explanation": "Children of one's uncles and aunts.",
+        "examples": {
+          "beginner": "I have cousins.",
+          "intermediate": "I played with my cousins.",
+          "advanced": "It was fun because all the cousins gathered during the holiday.",
+          "master": "The memories of summer vacations spent with cousins when I was young are the most precious."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[사촌]",
+      "ipa": "[satɕʰon]"
+    }
+  },
+  {
+    "id": "joka",
+    "korean": "조카",
+    "romanization": "joka",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["family", "relatives", "basic"],
+    "translations": {
+      "ko": {
+        "word": "조카",
+        "explanation": "형제자매의 자녀.",
+        "examples": {
+          "beginner": "조카가 있어요.",
+          "intermediate": "조카가 정말 귀여워요.",
+          "advanced": "조카의 돌잔치에 갔어요.",
+          "master": "조카들이 자라는 것을 보면 시간이 정말 빨리 간다는 것을 실감한다."
+        }
+      },
+      "en": {
+        "word": "nephew / niece",
+        "explanation": "The child of one's brother or sister.",
+        "examples": {
+          "beginner": "I have a nephew/niece.",
+          "intermediate": "My nephew/niece is really cute.",
+          "advanced": "I went to my nephew/niece's first birthday party.",
+          "master": "Watching my nieces and nephews grow up makes me realize how fast time passes."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[조카]",
+      "ipa": "[tɕokʰa]"
+    }
+  },
+  {
+    "id": "nampyeon",
+    "korean": "남편",
+    "romanization": "nampyeon",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "marriage", "male"],
+    "translations": {
+      "ko": {
+        "word": "남편",
+        "explanation": "결혼한 여자에게 있어서 그 짝이 되는 남자.",
+        "examples": {
+          "beginner": "남편이 있어요.",
+          "intermediate": "남편이 요리를 해요.",
+          "advanced": "남편과 함께 결혼 10주년 기념 여행을 갔어요.",
+          "master": "좋은 남편이 되려면 상대방의 말에 귀 기울이는 것이 가장 중요하다."
+        }
+      },
+      "en": {
+        "word": "husband",
+        "explanation": "The male partner in a marriage to a woman.",
+        "examples": {
+          "beginner": "I have a husband.",
+          "intermediate": "My husband cooks.",
+          "advanced": "I went on a trip with my husband for our 10th wedding anniversary.",
+          "master": "To be a good husband, the most important thing is to listen to your partner."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[남편]",
+      "ipa": "[nampʰjʌn]"
+    }
+  },
+  {
+    "id": "anae",
+    "korean": "아내",
+    "romanization": "anae",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "marriage", "female"],
+    "translations": {
+      "ko": {
+        "word": "아내",
+        "explanation": "결혼한 남자에게 있어서 그 짝이 되는 여자.",
+        "examples": {
+          "beginner": "아내가 있어요.",
+          "intermediate": "아내가 선생님이에요.",
+          "advanced": "아내와 함께 주말마다 등산을 해요.",
+          "master": "아내의 지지와 응원이 있었기에 지금의 성공이 가능했다."
+        }
+      },
+      "en": {
+        "word": "wife",
+        "explanation": "The female partner in a marriage to a man.",
+        "examples": {
+          "beginner": "I have a wife.",
+          "intermediate": "My wife is a teacher.",
+          "advanced": "I go hiking with my wife every weekend.",
+          "master": "My current success was possible because of my wife's support and encouragement."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아내]",
+      "ipa": "[anɛ]"
+    }
+  },
+  {
+    "id": "bubu",
+    "korean": "부부",
+    "romanization": "bubu",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["family", "marriage", "basic"],
+    "translations": {
+      "ko": {
+        "word": "부부",
+        "explanation": "남편과 아내. 결혼한 두 사람.",
+        "examples": {
+          "beginner": "부부가 행복해요.",
+          "intermediate": "그 부부는 아주 사이가 좋아요.",
+          "advanced": "부부 사이에는 서로 존중하는 것이 중요해요.",
+          "master": "부부의 관계는 매일의 작은 배려와 이해로 더욱 깊어진다."
+        }
+      },
+      "en": {
+        "word": "married couple",
+        "explanation": "Husband and wife. Two married people.",
+        "examples": {
+          "beginner": "The couple is happy.",
+          "intermediate": "That couple gets along very well.",
+          "advanced": "It's important for couples to respect each other.",
+          "master": "A couple's relationship deepens through daily small considerations and understanding."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[부부]",
+      "ipa": "[pubu]"
+    }
+  },
+  {
+    "id": "sibumo",
+    "korean": "시부모",
+    "romanization": "sibumo",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["family", "in-laws", "formal"],
+    "translations": {
+      "ko": {
+        "word": "시부모",
+        "explanation": "남편의 부모. 시아버지와 시어머니.",
+        "examples": {
+          "beginner": "시부모님이 계세요.",
+          "intermediate": "시부모님과 함께 살아요.",
+          "advanced": "명절에 시부모님 댁에 갔어요.",
+          "master": "시부모님과의 관계는 한국 문화에서 중요한 가족 관계 중 하나이다."
+        }
+      },
+      "en": {
+        "word": "parents-in-law (husband's parents)",
+        "explanation": "The husband's parents. Father-in-law and mother-in-law.",
+        "examples": {
+          "beginner": "I have parents-in-law.",
+          "intermediate": "I live with my parents-in-law.",
+          "advanced": "I visited my parents-in-law's house during the holiday.",
+          "master": "The relationship with in-laws is one of the important family relationships in Korean culture."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[시부모]",
+      "ipa": "[ɕipumo]"
+    }
+  },
+  {
+    "id": "jangmo",
+    "korean": "장모",
+    "romanization": "jangmo",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["family", "in-laws", "female"],
+    "translations": {
+      "ko": {
+        "word": "장모",
+        "explanation": "아내의 어머니.",
+        "examples": {
+          "beginner": "장모님이 계세요.",
+          "intermediate": "장모님이 요리를 잘하세요.",
+          "advanced": "장모님께 생일 선물을 드렸어요.",
+          "master": "장모님은 저를 친아들처럼 대해 주셔서 항상 감사하다."
+        }
+      },
+      "en": {
+        "word": "mother-in-law (wife's mother)",
+        "explanation": "The wife's mother.",
+        "examples": {
+          "beginner": "I have a mother-in-law.",
+          "intermediate": "My mother-in-law cooks well.",
+          "advanced": "I gave a birthday present to my mother-in-law.",
+          "master": "I'm always grateful that my mother-in-law treats me like her own son."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[장모]",
+      "ipa": "[tɕaŋmo]"
+    }
+  },
+  {
+    "id": "jangin",
+    "korean": "장인",
+    "romanization": "jangin",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["family", "in-laws", "male"],
+    "translations": {
+      "ko": {
+        "word": "장인",
+        "explanation": "아내의 아버지.",
+        "examples": {
+          "beginner": "장인어른이 계세요.",
+          "intermediate": "장인어른과 낚시를 갔어요.",
+          "advanced": "장인어른의 조언을 항상 감사히 듣고 있어요.",
+          "master": "장인어른과의 관계가 좋으면 결혼 생활이 더욱 원활해진다."
+        }
+      },
+      "en": {
+        "word": "father-in-law (wife's father)",
+        "explanation": "The wife's father.",
+        "examples": {
+          "beginner": "I have a father-in-law.",
+          "intermediate": "I went fishing with my father-in-law.",
+          "advanced": "I always gratefully listen to my father-in-law's advice.",
+          "master": "When you have a good relationship with your father-in-law, married life becomes smoother."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[장인]",
+      "ipa": "[tɕaŋin]"
+    }
+  },
+  {
+    "id": "myeoneuri",
+    "korean": "며느리",
+    "romanization": "myeoneuri",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["family", "in-laws", "female"],
+    "translations": {
+      "ko": {
+        "word": "며느리",
+        "explanation": "아들의 아내.",
+        "examples": {
+          "beginner": "며느리가 있어요.",
+          "intermediate": "며느리가 착해요.",
+          "advanced": "며느리가 손자를 데리고 왔어요.",
+          "master": "며느리를 친딸처럼 대하면 가족 간의 화목이 유지된다."
+        }
+      },
+      "en": {
+        "word": "daughter-in-law",
+        "explanation": "The son's wife.",
+        "examples": {
+          "beginner": "I have a daughter-in-law.",
+          "intermediate": "My daughter-in-law is kind.",
+          "advanced": "My daughter-in-law brought my grandson.",
+          "master": "Treating your daughter-in-law like your own daughter maintains family harmony."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[며느리]",
+      "ipa": "[mjʌnɯɾi]"
+    }
+  },
+  {
+    "id": "sawi",
+    "korean": "사위",
+    "romanization": "sawi",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["family", "in-laws", "male"],
+    "translations": {
+      "ko": {
+        "word": "사위",
+        "explanation": "딸의 남편.",
+        "examples": {
+          "beginner": "사위가 있어요.",
+          "intermediate": "사위가 운동을 좋아해요.",
+          "advanced": "사위가 명절에 선물을 가져왔어요.",
+          "master": "한국에는 '사위 사랑은 장모'라는 속담이 있을 정도로 장모와 사위의 관계는 특별하다."
+        }
+      },
+      "en": {
+        "word": "son-in-law",
+        "explanation": "The daughter's husband.",
+        "examples": {
+          "beginner": "I have a son-in-law.",
+          "intermediate": "My son-in-law likes sports.",
+          "advanced": "My son-in-law brought presents during the holiday.",
+          "master": "In Korea, there's even a saying 'The mother-in-law loves the son-in-law,' showing the special relationship between them."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[사위]",
+      "ipa": "[sawi]"
+    }
+  },
+  {
+    "id": "chinchek",
+    "korean": "친척",
+    "romanization": "chincheok",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "relatives", "basic"],
+    "translations": {
+      "ko": {
+        "word": "친척",
+        "explanation": "가까운 혈연관계에 있는 사람들.",
+        "examples": {
+          "beginner": "친척이 많아요.",
+          "intermediate": "명절에 친척들이 모여요.",
+          "advanced": "친척 어른들께 세배를 했어요.",
+          "master": "친척 관계는 멀어지기 쉽지만, 명절은 그 관계를 유지하는 좋은 기회가 된다."
+        }
+      },
+      "en": {
+        "word": "relatives",
+        "explanation": "People who are related by blood.",
+        "examples": {
+          "beginner": "I have many relatives.",
+          "intermediate": "Relatives gather during holidays.",
+          "advanced": "I bowed to my elder relatives during the holiday.",
+          "master": "Relative relationships can easily drift apart, but holidays are good opportunities to maintain those ties."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[친척]",
+      "ipa": "[tɕʰintɕʰʌk]"
+    }
+  },
+  {
+    "id": "gyeolhon",
+    "korean": "결혼",
+    "romanization": "gyeolhon",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "marriage", "event"],
+    "translations": {
+      "ko": {
+        "word": "결혼",
+        "explanation": "남녀가 부부가 되는 일.",
+        "examples": {
+          "beginner": "결혼했어요?",
+          "intermediate": "결혼 준비를 하고 있어요.",
+          "advanced": "결혼식을 내년 봄에 하기로 했어요.",
+          "master": "결혼은 두 사람의 시작이자 두 가족의 만남이기도 하다."
+        }
+      },
+      "en": {
+        "word": "marriage / wedding",
+        "explanation": "The act of a man and woman becoming husband and wife.",
+        "examples": {
+          "beginner": "Are you married?",
+          "intermediate": "I'm preparing for the wedding.",
+          "advanced": "We decided to have the wedding next spring.",
+          "master": "Marriage is the beginning of two people and also the meeting of two families."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[결혼]",
+      "ipa": "[kjʌlhon]"
+    }
+  },
+  {
+    "id": "ihon",
+    "korean": "이혼",
+    "romanization": "ihon",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["family", "marriage", "legal"],
+    "translations": {
+      "ko": {
+        "word": "이혼",
+        "explanation": "결혼한 부부가 법적으로 헤어지는 것.",
+        "examples": {
+          "beginner": "이혼했어요.",
+          "intermediate": "이혼율이 높아지고 있어요.",
+          "advanced": "이혼 후에도 아이들을 함께 양육하기로 했어요.",
+          "master": "이혼은 끝이 아니라 새로운 시작이 될 수도 있다."
+        }
+      },
+      "en": {
+        "word": "divorce",
+        "explanation": "The legal separation of a married couple.",
+        "examples": {
+          "beginner": "They got divorced.",
+          "intermediate": "The divorce rate is increasing.",
+          "advanced": "We decided to co-parent even after the divorce.",
+          "master": "Divorce is not the end; it can also be a new beginning."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[이혼]",
+      "ipa": "[ihon]"
+    }
+  },
+  {
+    "id": "chingu",
+    "korean": "친구",
+    "romanization": "chingu",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["relationship", "friends", "basic"],
+    "translations": {
+      "ko": {
+        "word": "친구",
+        "explanation": "가깝게 오래 사귄 사람. 또는 나이가 같은 사람.",
+        "examples": {
+          "beginner": "친구가 있어요.",
+          "intermediate": "친구와 영화를 봤어요.",
+          "advanced": "오랜 친구를 만나서 옛날 이야기를 많이 했어요.",
+          "master": "진정한 친구는 어려울 때 곁에 있어주는 사람이라고 생각해요."
+        }
+      },
+      "en": {
+        "word": "friend",
+        "explanation": "A person you've known closely for a long time. Or someone of the same age.",
+        "examples": {
+          "beginner": "I have a friend.",
+          "intermediate": "I watched a movie with a friend.",
+          "advanced": "I met an old friend and talked a lot about old times.",
+          "master": "I think a true friend is someone who stays by your side during difficult times."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[친구]",
+      "ipa": "[tɕʰiŋɡu]"
+    }
+  },
+  {
+    "id": "yeonin",
+    "korean": "연인",
+    "romanization": "yeonin",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["relationship", "romance", "basic"],
+    "translations": {
+      "ko": {
+        "word": "연인",
+        "explanation": "사랑하는 사이에 있는 두 사람.",
+        "examples": {
+          "beginner": "연인이 있어요?",
+          "intermediate": "연인과 데이트했어요.",
+          "advanced": "연인 사이에는 서로를 이해하려는 노력이 필요해요.",
+          "master": "연인 관계에서 가장 중요한 것은 솔직한 대화라고 생각한다."
+        }
+      },
+      "en": {
+        "word": "lover / romantic partner",
+        "explanation": "Two people in a romantic relationship.",
+        "examples": {
+          "beginner": "Do you have a romantic partner?",
+          "intermediate": "I went on a date with my partner.",
+          "advanced": "Couples need to make efforts to understand each other.",
+          "master": "I think the most important thing in a romantic relationship is honest communication."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[연인]",
+      "ipa": "[jʌnin]"
+    }
+  },
+  {
+    "id": "namjachingu",
+    "korean": "남자친구",
+    "romanization": "namjachingu",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["relationship", "romance", "male"],
+    "translations": {
+      "ko": {
+        "word": "남자친구",
+        "explanation": "여자가 사귀고 있는 남자.",
+        "examples": {
+          "beginner": "남자친구가 있어요?",
+          "intermediate": "남자친구가 꽃을 줬어요.",
+          "advanced": "남자친구와 3년째 사귀고 있어요.",
+          "master": "좋은 남자친구의 조건은 사람마다 다르지만, 서로 존중하는 것이 기본이다."
+        }
+      },
+      "en": {
+        "word": "boyfriend",
+        "explanation": "A man that a woman is dating.",
+        "examples": {
+          "beginner": "Do you have a boyfriend?",
+          "intermediate": "My boyfriend gave me flowers.",
+          "advanced": "I've been dating my boyfriend for 3 years.",
+          "master": "The qualities of a good boyfriend differ for everyone, but mutual respect is fundamental."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[남자친구]",
+      "ipa": "[namdʑatɕʰiŋɡu]"
+    }
+  },
+  {
+    "id": "yeojachingu",
+    "korean": "여자친구",
+    "romanization": "yeojachingu",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["relationship", "romance", "female"],
+    "translations": {
+      "ko": {
+        "word": "여자친구",
+        "explanation": "남자가 사귀고 있는 여자.",
+        "examples": {
+          "beginner": "여자친구가 있어요?",
+          "intermediate": "여자친구 생일이에요.",
+          "advanced": "여자친구에게 프러포즈하려고 반지를 샀어요.",
+          "master": "여자친구와의 관계를 유지하려면 작은 것에도 감사하는 마음이 중요하다."
+        }
+      },
+      "en": {
+        "word": "girlfriend",
+        "explanation": "A woman that a man is dating.",
+        "examples": {
+          "beginner": "Do you have a girlfriend?",
+          "intermediate": "It's my girlfriend's birthday.",
+          "advanced": "I bought a ring to propose to my girlfriend.",
+          "master": "To maintain a relationship with your girlfriend, being grateful for small things is important."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[여자친구]",
+      "ipa": "[jʌdʑatɕʰiŋɡu]"
+    }
+  },
+  {
+    "id": "seonbae",
+    "korean": "선배",
+    "romanization": "seonbae",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["relationship", "hierarchy", "senior"],
+    "translations": {
+      "ko": {
+        "word": "선배",
+        "explanation": "같은 학교나 직장에서 먼저 들어온 사람.",
+        "examples": {
+          "beginner": "선배님, 안녕하세요.",
+          "intermediate": "선배가 도와줬어요.",
+          "advanced": "회사 선배에게 업무에 대해 많이 배웠어요.",
+          "master": "좋은 선배는 후배에게 지식뿐만 아니라 태도도 가르친다."
+        }
+      },
+      "en": {
+        "word": "senior (school/work)",
+        "explanation": "Someone who entered the same school or workplace earlier.",
+        "examples": {
+          "beginner": "Hello, senior.",
+          "intermediate": "A senior helped me.",
+          "advanced": "I learned a lot about work from my company senior.",
+          "master": "A good senior teaches juniors not only knowledge but also attitude."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[선배]",
+      "ipa": "[sʌnbɛ]"
+    }
+  },
+  {
+    "id": "hubae",
+    "korean": "후배",
+    "romanization": "hubae",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["relationship", "hierarchy", "junior"],
+    "translations": {
+      "ko": {
+        "word": "후배",
+        "explanation": "같은 학교나 직장에서 나중에 들어온 사람.",
+        "examples": {
+          "beginner": "후배가 있어요.",
+          "intermediate": "후배에게 조언해 줬어요.",
+          "advanced": "회사 후배들과 함께 회식을 했어요.",
+          "master": "후배를 잘 이끌어 주는 것도 선배의 중요한 역할이다."
+        }
+      },
+      "en": {
+        "word": "junior (school/work)",
+        "explanation": "Someone who entered the same school or workplace later.",
+        "examples": {
+          "beginner": "I have juniors.",
+          "intermediate": "I gave advice to a junior.",
+          "advanced": "I had a dinner gathering with my company juniors.",
+          "master": "Guiding juniors well is also an important role of seniors."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[후배]",
+      "ipa": "[hubɛ]"
+    }
+  },
+  {
+    "id": "dongchanghoe",
+    "korean": "동창회",
+    "romanization": "dongchanghoe",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["relationship", "school", "reunion"],
+    "translations": {
+      "ko": {
+        "word": "동창회",
+        "explanation": "같은 학교를 졸업한 사람들의 모임.",
+        "examples": {
+          "beginner": "동창회에 갔어요.",
+          "intermediate": "고등학교 동창회가 있어요.",
+          "advanced": "오랜만에 동창회에서 친구들을 만났어요.",
+          "master": "동창회에 가면 학창 시절의 추억이 새록새록 떠오른다."
+        }
+      },
+      "en": {
+        "word": "alumni reunion",
+        "explanation": "A gathering of people who graduated from the same school.",
+        "examples": {
+          "beginner": "I went to a reunion.",
+          "intermediate": "There's a high school reunion.",
+          "advanced": "I met friends at the reunion after a long time.",
+          "master": "Going to a reunion brings back vivid memories of school days."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[동창회]",
+      "ipa": "[toŋtɕʰaŋhwe]"
+    }
+  },
+  {
+    "id": "iwut",
+    "korean": "이웃",
+    "romanization": "iut",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["relationship", "neighbor", "community"],
+    "translations": {
+      "ko": {
+        "word": "이웃",
+        "explanation": "가까이 사는 사람.",
+        "examples": {
+          "beginner": "이웃이 친절해요.",
+          "intermediate": "이웃에게 인사했어요.",
+          "advanced": "이웃 사촌이라는 말처럼 가까운 이웃은 가족 같아요.",
+          "master": "요즘은 이웃 간의 교류가 줄어들어 서로 얼굴을 모르는 경우도 많다."
+        }
+      },
+      "en": {
+        "word": "neighbor",
+        "explanation": "A person who lives nearby.",
+        "examples": {
+          "beginner": "My neighbor is kind.",
+          "intermediate": "I greeted my neighbor.",
+          "advanced": "Close neighbors are like family, as the saying goes.",
+          "master": "These days, interactions between neighbors have decreased, and often people don't even know each other's faces."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[이웃]",
+      "ipa": "[iut]"
+    }
+  },
+  {
+    "id": "dolbom",
+    "korean": "돌봄",
+    "romanization": "dolbom",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["family", "care", "support"],
+    "translations": {
+      "ko": {
+        "word": "돌봄",
+        "explanation": "관심을 가지고 보살피는 것.",
+        "examples": {
+          "beginner": "아이 돌봄이 필요해요.",
+          "intermediate": "부모님 돌봄이 중요해요.",
+          "advanced": "노인 돌봄 서비스를 이용하고 있어요.",
+          "master": "가족 돌봄은 사랑의 표현이자 책임이다."
+        }
+      },
+      "en": {
+        "word": "care / caregiving",
+        "explanation": "Taking care of someone with concern.",
+        "examples": {
+          "beginner": "Childcare is needed.",
+          "intermediate": "Caring for parents is important.",
+          "advanced": "We're using elderly care services.",
+          "master": "Family caregiving is an expression of love and responsibility."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[돌봄]",
+      "ipa": "[tolbom]"
+    }
+  },
+  {
+    "id": "hyeongjega",
+    "korean": "형제자매",
+    "romanization": "hyeongjejamae",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "siblings", "basic"],
+    "translations": {
+      "ko": {
+        "word": "형제자매",
+        "explanation": "같은 부모에게서 태어난 사람들. 형, 오빠, 누나, 언니, 동생.",
+        "examples": {
+          "beginner": "형제자매가 있어요?",
+          "intermediate": "형제자매가 셋이에요.",
+          "advanced": "형제자매 사이가 좋으면 부모님도 기뻐하세요.",
+          "master": "어릴 때는 형제자매와 자주 싸웠지만, 커서는 가장 든든한 지원군이 된다."
+        }
+      },
+      "en": {
+        "word": "siblings (brothers and sisters)",
+        "explanation": "People born from the same parents.",
+        "examples": {
+          "beginner": "Do you have siblings?",
+          "intermediate": "I have three siblings.",
+          "advanced": "When siblings get along, parents are happy too.",
+          "master": "Although I used to fight often with my siblings when young, they become the strongest supporters when we grow up."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[형제자매]",
+      "ipa": "[hjʌŋdʑedʑamɛ]"
+    }
+  },
+  {
+    "id": "oettoyi",
+    "korean": "외동",
+    "romanization": "oedong",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["family", "only child", "basic"],
+    "translations": {
+      "ko": {
+        "word": "외동",
+        "explanation": "형제자매가 없는 자녀. 외동딸, 외동아들.",
+        "examples": {
+          "beginner": "저는 외동이에요.",
+          "intermediate": "외동으로 자라서 형제가 부러워요.",
+          "advanced": "외동은 부모님의 사랑을 독차지할 수 있지만, 형제가 없어서 외로울 때도 있어요.",
+          "master": "요즘 한국에서는 출산율이 낮아서 외동이 점점 많아지고 있다."
+        }
+      },
+      "en": {
+        "word": "only child",
+        "explanation": "A child with no siblings. Only daughter, only son.",
+        "examples": {
+          "beginner": "I'm an only child.",
+          "intermediate": "I grew up as an only child, so I envy people with siblings.",
+          "advanced": "An only child can monopolize parents' love, but sometimes feels lonely without siblings.",
+          "master": "These days in Korea, the birth rate is low, so there are more and more only children."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[외동이]",
+      "ipa": "[wetːoŋi]"
+    }
+  },
+  {
+    "id": "ssangdungi",
+    "korean": "쌍둥이",
+    "romanization": "ssangdungi",
+    "partOfSpeech": "noun",
+    "categoryId": "family",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["family", "twins", "basic"],
+    "translations": {
+      "ko": {
+        "word": "쌍둥이",
+        "explanation": "같은 때에 태어난 형제나 자매. 일란성 쌍둥이와 이란성 쌍둥이가 있다.",
+        "examples": {
+          "beginner": "쌍둥이예요?",
+          "intermediate": "쌍둥이 형제가 있어요.",
+          "advanced": "쌍둥이는 닮아서 구분하기 어려울 때가 있어요.",
+          "master": "일란성 쌍둥이는 외모는 똑같지만 성격이 다른 경우가 많다고 한다."
+        }
+      },
+      "en": {
+        "word": "twins",
+        "explanation": "Siblings born at the same time. There are identical twins and fraternal twins.",
+        "examples": {
+          "beginner": "Are you twins?",
+          "intermediate": "I have twin brothers.",
+          "advanced": "Twins look alike, so it's sometimes hard to tell them apart.",
+          "master": "They say identical twins may look the same, but often have different personalities."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[쌍둥이]",
+      "ipa": "[sːaŋduŋi]"
+    }
+  }
+]

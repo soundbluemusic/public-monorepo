@@ -1,0 +1,462 @@
+[
+  {
+    "id": "misul",
+    "korean": "미술",
+    "romanization": "misul",
+    "pronunciation": {
+      "korean": "[미술]",
+      "ipa": "[misul]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "art",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["art", "visual", "creative"],
+    "translations": {
+      "ko": {
+        "word": "미술",
+        "explanation": "시각적으로 아름다움을 표현하는 예술. 그림, 조각, 디자인 등을 포함한다.",
+        "examples": {
+          "beginner": "미술 좋아해요.",
+          "intermediate": "미술 시간이에요.",
+          "advanced": "\"미술관 갈래?\" \"좋아, 어느 미술관 갈까?\"",
+          "master": "미술 작품을 감상했어요."
+        },
+        "variations": {
+          "formal": ["미술입니다", "예술", "조형예술"],
+          "casual": ["미술~", "미술 해?"],
+          "short": ["미술", "art"]
+        }
+      },
+      "en": {
+        "word": "Art / Fine Arts",
+        "explanation": "The art of expressing beauty visually. Includes painting, sculpture, design, etc.",
+        "examples": {
+          "beginner": "미술 좋아해요. - I like art.",
+          "intermediate": "미술 시간이에요. - It's art class time.",
+          "advanced": "\"Want to go to an art museum?\" \"Sure, which museum should we go to?\"",
+          "master": "I appreciated art works."
+        },
+        "variations": {
+          "formal": ["It is art", "Fine arts", "Visual arts"],
+          "casual": ["Art~", "Do art?"],
+          "short": ["Art", "Arts"]
+        }
+      }
+    }
+  },
+  {
+    "id": "geurim",
+    "korean": "그림",
+    "romanization": "geurim",
+    "partOfSpeech": "noun",
+    "categoryId": "art",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["art", "painting", "drawing"],
+    "translations": {
+      "ko": {
+        "word": "그림",
+        "explanation": "종이나 캔버스에 그려진 이미지. 회화 작품.",
+        "examples": {
+          "beginner": "그림 그려요.",
+          "intermediate": "그림이 예뻐요.",
+          "advanced": "\"그림 잘 그리네!\" \"고마워, 취미로 배우고 있어.\"",
+          "master": "벽에 그림을 걸었어요."
+        },
+        "variations": {
+          "formal": ["그림입니다", "회화", "도화"],
+          "casual": ["그림~", "그림 그려?"],
+          "short": ["그림", "picture"]
+        }
+      },
+      "en": {
+        "word": "Picture / Painting / Drawing",
+        "explanation": "An image drawn on paper or canvas. A painted work.",
+        "examples": {
+          "beginner": "그림 그려요. - I'm drawing/painting.",
+          "intermediate": "그림이 예뻐요. - The picture is pretty.",
+          "advanced": "\"You draw well!\" \"Thanks, I'm learning it as a hobby.\"",
+          "master": "I hung a picture on the wall."
+        },
+        "variations": {
+          "formal": ["It is a picture", "Painting", "Drawing"],
+          "casual": ["Picture~", "Drawing?"],
+          "short": ["Picture", "Drawing"]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[그림]",
+      "ipa": "[kɯɾim]"
+    }
+  },
+  {
+    "id": "josak",
+    "korean": "조각",
+    "romanization": "josak",
+    "pronunciation": {
+      "korean": "[조각]",
+      "ipa": "[tɕoɡak]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "art",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["art", "sculpture", "3d"],
+    "translations": {
+      "ko": {
+        "word": "조각",
+        "explanation": "돌, 나무, 금속 등을 깎거나 빚어 만든 입체 예술 작품.",
+        "examples": {
+          "beginner": "조각 작품이에요.",
+          "intermediate": "조각상이 멋있어요.",
+          "advanced": "\"저 조각품 뭐야?\" \"유명한 예술가의 작품이래.\"",
+          "master": "공원에 조각이 많아요."
+        },
+        "variations": {
+          "formal": ["조각입니다", "조각품", "조형물"],
+          "casual": ["조각~", "조각 작품"],
+          "short": ["조각", "sculpture"]
+        }
+      },
+      "en": {
+        "word": "Sculpture",
+        "explanation": "A three-dimensional art work made by carving or molding stone, wood, metal, etc.",
+        "examples": {
+          "beginner": "조각 작품이에요. - It's a sculpture.",
+          "intermediate": "조각상이 멋있어요. - The statue is cool.",
+          "advanced": "\"What's that sculpture?\" \"It's a work by a famous artist.\"",
+          "master": "There are many sculptures in the park."
+        },
+        "variations": {
+          "formal": ["It is a sculpture", "Sculptural work", "Statue"],
+          "casual": ["Sculpture~", "Sculpture piece"],
+          "short": ["Sculpture", "Statue"]
+        }
+      }
+    }
+  },
+  {
+    "id": "misulgwan",
+    "korean": "미술관",
+    "romanization": "misulgwan",
+    "pronunciation": {
+      "korean": "[미술관]",
+      "ipa": "[misulɡwan]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "art",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["art", "place", "museum"],
+    "translations": {
+      "ko": {
+        "word": "미술관",
+        "explanation": "미술 작품을 전시하는 공간. 그림, 조각 등을 감상할 수 있다.",
+        "examples": {
+          "beginner": "미술관 갔어요.",
+          "intermediate": "미술관이 크네요.",
+          "advanced": "\"주말에 미술관 갈래?\" \"좋아, 어느 전시 볼 거야?\"",
+          "master": "국립미술관이 유명해요."
+        },
+        "variations": {
+          "formal": ["미술관입니다", "갤러리", "전시관"],
+          "casual": ["미술관~", "미술관 가?"],
+          "short": ["미술관", "museum"]
+        }
+      },
+      "en": {
+        "word": "Art Museum / Gallery",
+        "explanation": "A space where art works are exhibited. Can appreciate paintings, sculptures, etc.",
+        "examples": {
+          "beginner": "미술관 갔어요. - I went to the art museum.",
+          "intermediate": "미술관이 크네요. - The museum is big.",
+          "advanced": "\"Want to go to the museum this weekend?\" \"Sure, which exhibition will we see?\"",
+          "master": "The National Museum is famous."
+        },
+        "variations": {
+          "formal": ["It is an art museum", "Gallery", "Exhibition hall"],
+          "casual": ["Museum~", "Going to museum?"],
+          "short": ["Museum", "Gallery"]
+        }
+      }
+    }
+  },
+  {
+    "id": "saek",
+    "korean": "색",
+    "romanization": "saek",
+    "pronunciation": {
+      "korean": "[색]",
+      "ipa": "[sɛk]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "art",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["art", "color", "visual"],
+    "translations": {
+      "ko": {
+        "word": "색",
+        "explanation": "빛의 파장에 따라 눈에 보이는 성질. 빨강, 파랑, 노랑 등.",
+        "examples": {
+          "beginner": "무슨 색 좋아해요?",
+          "intermediate": "색이 예뻐요.",
+          "advanced": "\"이 그림 색깔 좋지?\" \"응, 색 조합이 멋있어.\"",
+          "master": "밝은 색을 좋아해요."
+        },
+        "variations": {
+          "formal": ["색입니다", "색깔", "색채"],
+          "casual": ["색~", "색 좋아?"],
+          "short": ["색", "color"]
+        }
+      },
+      "en": {
+        "word": "Color",
+        "explanation": "A property visible to the eye depending on the wavelength of light. Red, blue, yellow, etc.",
+        "examples": {
+          "beginner": "무슨 색 좋아해요? - What color do you like?",
+          "intermediate": "색이 예뻐요. - The color is pretty.",
+          "advanced": "\"The colors in this painting are nice, right?\" \"Yeah, the color combination is great.\"",
+          "master": "I like bright colors."
+        },
+        "variations": {
+          "formal": ["It is a color", "Hue", "Tint"],
+          "casual": ["Color~", "Like the color?"],
+          "short": ["Color", "Clr"]
+        }
+      }
+    }
+  },
+  {
+    "id": "dijain",
+    "korean": "디자인",
+    "romanization": "dijain",
+    "partOfSpeech": "noun",
+    "categoryId": "art",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["art", "design", "creative"],
+    "translations": {
+      "ko": {
+        "word": "디자인",
+        "explanation": "제품이나 작품의 형태와 기능을 계획하는 일. 시각적 설계.",
+        "examples": {
+          "beginner": "디자인이 좋아요.",
+          "intermediate": "디자인 공부해요.",
+          "advanced": "\"이 로고 디자인 어때?\" \"깔끔하고 예뻐.\"",
+          "master": "그래픽 디자인을 배우고 있어요."
+        },
+        "variations": {
+          "formal": ["디자인입니다", "설계", "도안"],
+          "casual": ["디자인~", "디자인 좋아?"],
+          "short": ["디자인", "design"]
+        }
+      },
+      "en": {
+        "word": "Design",
+        "explanation": "The planning of form and function of products or works. Visual planning.",
+        "examples": {
+          "beginner": "디자인이 좋아요. - The design is good.",
+          "intermediate": "디자인 공부해요. - I study design.",
+          "advanced": "\"How's this logo design?\" \"It's clean and pretty.\"",
+          "master": "I'm learning graphic design."
+        },
+        "variations": {
+          "formal": ["It is a design", "Plan", "Blueprint"],
+          "casual": ["Design~", "Like the design?"],
+          "short": ["Design", "Dsgn"]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[디자인]",
+      "ipa": "[tidʑain]"
+    }
+  },
+  {
+    "id": "jakga",
+    "korean": "작가",
+    "romanization": "jakga",
+    "pronunciation": {
+      "korean": "[작가]",
+      "ipa": "[tɕakːa]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "art",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["art", "people", "profession"],
+    "translations": {
+      "ko": {
+        "word": "작가",
+        "explanation": "예술 작품을 창작하는 사람. 화가, 조각가, 소설가 등을 포함한다.",
+        "examples": {
+          "beginner": "유명한 작가예요.",
+          "intermediate": "작가가 되고 싶어요.",
+          "advanced": "\"좋아하는 작가 있어?\" \"응, 김환기 작가 좋아해.\"",
+          "master": "이 작품의 작가는 누구예요?"
+        },
+        "variations": {
+          "formal": ["작가입니다", "예술가", "창작자"],
+          "casual": ["작가~", "작가 좋아해?"],
+          "short": ["작가", "artist"]
+        }
+      },
+      "en": {
+        "word": "Artist / Creator",
+        "explanation": "A person who creates art works. Includes painters, sculptors, novelists, etc.",
+        "examples": {
+          "beginner": "유명한 작가예요. - They're a famous artist.",
+          "intermediate": "작가가 되고 싶어요. - I want to become an artist.",
+          "advanced": "\"Do you have a favorite artist?\" \"Yeah, I like Kim Whanki.\"",
+          "master": "Who is the artist of this work?"
+        },
+        "variations": {
+          "formal": ["It is an artist", "Creator", "Artisan"],
+          "casual": ["Artist~", "Like the artist?"],
+          "short": ["Artist", "Creator"]
+        }
+      }
+    }
+  },
+  {
+    "id": "jeonsi",
+    "korean": "전시",
+    "romanization": "jeonsi",
+    "pronunciation": {
+      "korean": "[전시]",
+      "ipa": "[tɕʌnɕi]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "art",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["art", "exhibition", "event"],
+    "translations": {
+      "ko": {
+        "word": "전시",
+        "explanation": "작품을 공개적으로 보여주는 행사. 미술관이나 갤러리에서 열린다.",
+        "examples": {
+          "beginner": "전시 봤어요.",
+          "intermediate": "전시회 열려요.",
+          "advanced": "\"이번 전시 언제까지야?\" \"다음 달까지 한대.\"",
+          "master": "사진 전시를 관람했어요."
+        },
+        "variations": {
+          "formal": ["전시입니다", "전시회", "박람회"],
+          "casual": ["전시~", "전시 봤어?"],
+          "short": ["전시", "exhibition"]
+        }
+      },
+      "en": {
+        "word": "Exhibition / Exhibit",
+        "explanation": "An event where works are publicly displayed. Held at museums or galleries.",
+        "examples": {
+          "beginner": "전시 봤어요. - I saw the exhibition.",
+          "intermediate": "전시회 열려요. - An exhibition is being held.",
+          "advanced": "\"When does this exhibition end?\" \"It runs until next month.\"",
+          "master": "I visited a photography exhibition."
+        },
+        "variations": {
+          "formal": ["It is an exhibition", "Exhibit", "Exposition"],
+          "casual": ["Exhibition~", "Saw the exhibit?"],
+          "short": ["Exhibition", "Exhibit"]
+        }
+      }
+    }
+  },
+  {
+    "id": "canvas",
+    "korean": "캔버스",
+    "romanization": "kaenbeoseu",
+    "partOfSpeech": "noun",
+    "categoryId": "art",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["art", "material", "painting"],
+    "translations": {
+      "ko": {
+        "word": "캔버스",
+        "explanation": "그림을 그리는 천이나 판. 유화나 아크릴화에 사용한다.",
+        "examples": {
+          "beginner": "캔버스에 그려요.",
+          "intermediate": "캔버스를 샀어요.",
+          "advanced": "\"캔버스 크기가 어떻게 돼?\" \"50cm x 70cm야.\"",
+          "master": "흰 캔버스가 필요해요."
+        },
+        "variations": {
+          "formal": ["캔버스입니다", "화폭", "화판"],
+          "casual": ["캔버스~", "캔버스에"],
+          "short": ["캔버스", "canvas"]
+        }
+      },
+      "en": {
+        "word": "Canvas",
+        "explanation": "Cloth or board for painting. Used for oil or acrylic paintings.",
+        "examples": {
+          "beginner": "캔버스에 그려요. - I paint on canvas.",
+          "intermediate": "캔버스를 샀어요. - I bought a canvas.",
+          "advanced": "\"How big is the canvas?\" \"It's 50cm x 70cm.\"",
+          "master": "I need a white canvas."
+        },
+        "variations": {
+          "formal": ["It is a canvas", "Painting surface", "Art board"],
+          "casual": ["Canvas~", "On canvas"],
+          "short": ["Canvas", "Board"]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[캔버스]",
+      "ipa": "[kʰɛnbʌsɯ]"
+    }
+  },
+  {
+    "id": "bulut",
+    "korean": "붓",
+    "romanization": "but",
+    "pronunciation": {
+      "korean": "[붓]",
+      "ipa": "[put]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "art",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["art", "tool", "painting"],
+    "translations": {
+      "ko": {
+        "word": "붓",
+        "explanation": "그림을 그리거나 글씨를 쓰는 도구. 털이나 섬유로 만들어진다.",
+        "examples": {
+          "beginner": "붓으로 그려요.",
+          "intermediate": "붓이 필요해요.",
+          "advanced": "\"붓 어디 있어?\" \"책상 서랍에 있을 거야.\"",
+          "master": "수채화 붓을 샀어요."
+        },
+        "variations": {
+          "formal": ["붓입니다", "화필", "필"],
+          "casual": ["붓~", "붓으로"],
+          "short": ["붓", "brush"]
+        }
+      },
+      "en": {
+        "word": "Brush",
+        "explanation": "A tool for painting or writing. Made of hair or fibers.",
+        "examples": {
+          "beginner": "붓으로 그려요. - I paint with a brush.",
+          "intermediate": "붓이 필요해요. - I need a brush.",
+          "advanced": "\"Where's the brush?\" \"It should be in the desk drawer.\"",
+          "master": "I bought watercolor brushes."
+        },
+        "variations": {
+          "formal": ["It is a brush", "Paintbrush", "Writing brush"],
+          "casual": ["Brush~", "With a brush"],
+          "short": ["Brush", "Br"]
+        }
+      }
+    }
+  }
+]

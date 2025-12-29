@@ -1,0 +1,308 @@
+[
+  {
+    "id": "godel-incompleteness",
+    "name": {
+      "ko": "괴델의 불완전성 정리",
+      "en": "Gödel's Incompleteness Theorems"
+    },
+    "field": "logic",
+    "subfield": "mathematical-logic",
+    "difficulty": 5,
+    "content": {
+      "ko": "충분히 강력한 형식 체계는 참이지만 증명할 수 없는 명제를 포함하며(제1정리), 자신의 무모순성을 증명할 수 없습니다(제2정리).",
+      "en": "Sufficiently powerful formal systems contain true but unprovable statements (first theorem) and cannot prove their own consistency (second theorem)."
+    },
+    "latex": "\\text{Con}(T) \\Rightarrow \\exists \\varphi: T \\nvdash \\varphi \\land T \\nvdash \\neg\\varphi",
+    "relations": {
+      "prerequisites": [
+        "first-order-logic",
+        "peano-arithmetic"
+      ],
+      "nextTopics": [
+        "proof-theory",
+        "recursion-theory"
+      ],
+      "related": [
+        "halting-problem",
+        "undecidability"
+      ],
+      "applications": [
+        "foundations-of-mathematics",
+        "philosophy-of-math"
+      ]
+    },
+    "tags": [
+      "logic",
+      "foundations",
+      "incompleteness"
+    ]
+  },
+  {
+    "id": "model-theory",
+    "name": {
+      "ko": "모델 이론",
+      "en": "Model Theory"
+    },
+    "field": "logic",
+    "subfield": "mathematical-logic",
+    "difficulty": 5,
+    "content": {
+      "ko": "형식 언어와 그것이 해석되는 수학적 구조(모델) 사이의 관계를 연구합니다. 완전성, 콤팩트성, 뢰벤하임-스콜렘 정리가 핵심입니다.",
+      "en": "Studies the relationship between formal languages and mathematical structures (models) interpreting them. Completeness, compactness, and Löwenheim-Skolem are key results."
+    },
+    "latex": "T \\models \\varphi \\Leftrightarrow T \\vdash \\varphi \\quad \\text{(Completeness)}",
+    "relations": {
+      "prerequisites": [
+        "first-order-logic",
+        "set-theory"
+      ],
+      "nextTopics": [
+        "stability-theory",
+        "categoricity"
+      ],
+      "related": [
+        "universal-algebra",
+        "ultraproducts"
+      ],
+      "applications": [
+        "algebraic-geometry",
+        "number-theory"
+      ]
+    },
+    "tags": [
+      "logic",
+      "model-theory",
+      "semantics"
+    ]
+  },
+  {
+    "id": "proof-theory",
+    "name": {
+      "ko": "증명 이론",
+      "en": "Proof Theory"
+    },
+    "field": "logic",
+    "subfield": "mathematical-logic",
+    "difficulty": 5,
+    "content": {
+      "ko": "형식적 증명 자체를 수학적 대상으로 연구합니다. 자연 연역, 시퀀트 계산, 컷 제거, 증명의 정규화가 핵심 주제입니다.",
+      "en": "Studies formal proofs as mathematical objects. Natural deduction, sequent calculus, cut elimination, and proof normalization are key topics."
+    },
+    "latex": "\\frac{\\Gamma \\vdash A \\quad \\Delta, A \\vdash B}{\\Gamma, \\Delta \\vdash B} \\text{ (Cut)}",
+    "relations": {
+      "prerequisites": [
+        "first-order-logic",
+        "formal-systems"
+      ],
+      "nextTopics": [
+        "ordinal-analysis",
+        "reverse-mathematics"
+      ],
+      "related": [
+        "type-theory",
+        "constructive-mathematics"
+      ],
+      "applications": [
+        "automated-theorem-proving",
+        "program-verification"
+      ]
+    },
+    "tags": [
+      "logic",
+      "proof-theory",
+      "formal-methods"
+    ]
+  },
+  {
+    "id": "computability-theory",
+    "name": {
+      "ko": "계산 가능성 이론",
+      "en": "Computability Theory"
+    },
+    "field": "logic",
+    "subfield": "mathematical-logic",
+    "difficulty": 4,
+    "content": {
+      "ko": "알고리즘으로 계산 가능한 것의 한계를 연구합니다. 튜링 기계, 정지 문제, 결정 불가능성, 튜링 차수가 핵심 개념입니다.",
+      "en": "Studies the limits of what can be computed algorithmically. Turing machines, halting problem, undecidability, and Turing degrees are key concepts."
+    },
+    "latex": "\\text{HALT} = \\{\\langle M, w \\rangle : M \\text{ halts on } w\\} \\text{ is undecidable}",
+    "relations": {
+      "prerequisites": [
+        "turing-machine",
+        "formal-languages"
+      ],
+      "nextTopics": [
+        "complexity-theory",
+        "oracle-computation"
+      ],
+      "related": [
+        "godel-incompleteness",
+        "church-turing-thesis"
+      ],
+      "applications": [
+        "theoretical-computer-science",
+        "ai-limits"
+      ]
+    },
+    "tags": [
+      "logic",
+      "computability",
+      "turing"
+    ]
+  },
+  {
+    "id": "modal-logic",
+    "name": {
+      "ko": "양상 논리",
+      "en": "Modal Logic"
+    },
+    "field": "logic",
+    "subfield": "mathematical-logic",
+    "difficulty": 4,
+    "content": {
+      "ko": "필연성(□)과 가능성(◇) 개념을 다루는 논리 체계입니다. 크립키 의미론에서 가능 세계를 통해 해석됩니다.",
+      "en": "A logical system dealing with necessity (□) and possibility (◇). Interpreted through possible worlds in Kripke semantics."
+    },
+    "latex": "\\Box\\varphi \\rightarrow \\varphi \\text{ (T)}, \\quad \\Box\\varphi \\rightarrow \\Box\\Box\\varphi \\text{ (4)}",
+    "relations": {
+      "prerequisites": [
+        "propositional-logic",
+        "first-order-logic"
+      ],
+      "nextTopics": [
+        "temporal-logic",
+        "epistemic-logic"
+      ],
+      "related": [
+        "kripke-frames",
+        "intuitionistic-logic"
+      ],
+      "applications": [
+        "program-verification",
+        "philosophy",
+        "linguistics"
+      ]
+    },
+    "tags": [
+      "logic",
+      "modal",
+      "possible-worlds"
+    ]
+  },
+  {
+    "id": "type-theory",
+    "name": {
+      "ko": "타입 이론",
+      "en": "Type Theory"
+    },
+    "field": "logic",
+    "subfield": "mathematical-logic",
+    "difficulty": 5,
+    "content": {
+      "ko": "수학적 대상을 타입으로 분류하는 형식 체계입니다. 커리-하워드 대응으로 증명과 프로그램이 동일시됩니다.",
+      "en": "A formal system classifying mathematical objects by types. Through the Curry-Howard correspondence, proofs correspond to programs."
+    },
+    "latex": "\\frac{\\Gamma, x:A \\vdash t:B}{\\Gamma \\vdash (\\lambda x.t) : A \\rightarrow B}",
+    "relations": {
+      "prerequisites": [
+        "lambda-calculus",
+        "first-order-logic"
+      ],
+      "nextTopics": [
+        "homotopy-type-theory",
+        "dependent-types"
+      ],
+      "related": [
+        "constructive-mathematics",
+        "category-theory"
+      ],
+      "applications": [
+        "proof-assistants",
+        "programming-languages"
+      ]
+    },
+    "tags": [
+      "logic",
+      "type-theory",
+      "curry-howard"
+    ]
+  },
+  {
+    "id": "forcing",
+    "name": {
+      "ko": "강제법",
+      "en": "Forcing"
+    },
+    "field": "logic",
+    "subfield": "set-theory",
+    "difficulty": 5,
+    "content": {
+      "ko": "집합론의 독립성 증명에 사용되는 기법입니다. 코헨이 연속체 가설의 독립성을 증명하는 데 사용했습니다.",
+      "en": "A technique used to prove independence results in set theory. Used by Cohen to prove the independence of the continuum hypothesis."
+    },
+    "latex": "p \\Vdash \\varphi \\quad \\text{(p forces } \\varphi\\text{)}",
+    "relations": {
+      "prerequisites": [
+        "set-theory",
+        "model-theory"
+      ],
+      "nextTopics": [
+        "iterated-forcing",
+        "proper-forcing"
+      ],
+      "related": [
+        "continuum-hypothesis",
+        "independence-proofs"
+      ],
+      "applications": [
+        "foundations-of-mathematics",
+        "infinite-combinatorics"
+      ]
+    },
+    "tags": [
+      "logic",
+      "set-theory",
+      "forcing"
+    ]
+  },
+  {
+    "id": "descriptive-set-theory",
+    "name": {
+      "ko": "기술집합론",
+      "en": "Descriptive Set Theory"
+    },
+    "field": "logic",
+    "subfield": "set-theory",
+    "difficulty": 5,
+    "content": {
+      "ko": "실수 집합의 복잡도를 위계적으로 분류합니다. 보렐 집합, 해석적 집합, 사영 집합의 위계가 핵심입니다.",
+      "en": "Hierarchically classifies the complexity of sets of reals. The hierarchies of Borel, analytic, and projective sets are central."
+    },
+    "latex": "\\Sigma^0_1 \\subset \\Sigma^0_2 \\subset \\cdots \\subset \\Sigma^1_1 \\subset \\Sigma^1_2 \\subset \\cdots",
+    "relations": {
+      "prerequisites": [
+        "set-theory",
+        "topology",
+        "measure-theory"
+      ],
+      "nextTopics": [
+        "determinacy",
+        "large-cardinals"
+      ],
+      "related": [
+        "computability-theory",
+        "polish-spaces"
+      ],
+      "applications": [
+        "analysis",
+        "dynamical-systems"
+      ]
+    },
+    "tags": [
+      "logic",
+      "set-theory",
+      "analysis"
+    ]
+  }
+]

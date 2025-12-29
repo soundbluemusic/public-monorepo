@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "jota",
+    "korean": "좋다",
+    "romanization": "jota",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "positive", "essential"],
+    "translations": {
+      "ko": {
+        "word": "좋다",
+        "explanation": "마음에 들다. 훌륭하다. 편안하다.",
+        "examples": {
+          "beginner": "날씨가 좋아요.",
+          "intermediate": "이 음식이 좋아요.",
+          "advanced": "요즘 건강이 좋아서 기분도 좋아요.",
+          "master": "좋은 사람을 만나면 인생이 풍요로워져요."
+        }
+      },
+      "en": {
+        "word": "good / nice",
+        "explanation": "Pleasing. Excellent. Comfortable.",
+        "examples": {
+          "beginner": "The weather is good.",
+          "intermediate": "This food is good.",
+          "advanced": "My health is good these days, so I feel good too.",
+          "master": "If you meet good people, life becomes richer."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[조타]",
+      "ipa": "[tɕotʰa]"
+    }
+  },
+  {
+    "id": "nappeuda",
+    "korean": "나쁘다",
+    "romanization": "nappeuda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "negative", "essential"],
+    "translations": {
+      "ko": {
+        "word": "나쁘다",
+        "explanation": "좋지 않다. 해롭다. 잘못되다.",
+        "examples": {
+          "beginner": "날씨가 나빠요.",
+          "intermediate": "담배는 건강에 나빠요.",
+          "advanced": "나쁜 습관을 고치는 것이 쉽지 않아요.",
+          "master": "나쁜 일도 결국 좋은 일로 바뀔 수 있어요."
+        }
+      },
+      "en": {
+        "word": "bad",
+        "explanation": "Not good. Harmful. Wrong.",
+        "examples": {
+          "beginner": "The weather is bad.",
+          "intermediate": "Smoking is bad for health.",
+          "advanced": "It's not easy to fix bad habits.",
+          "master": "Bad things can eventually turn into good things."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[나쁘다]",
+      "ipa": "[napɯda]"
+    }
+  },
+  {
+    "id": "keuda",
+    "korean": "크다",
+    "romanization": "keuda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "size", "essential"],
+    "translations": {
+      "ko": {
+        "word": "크다",
+        "explanation": "크기가 일반적인 것보다 위이다. 소리가 높다.",
+        "examples": {
+          "beginner": "집이 커요.",
+          "intermediate": "목소리가 커요.",
+          "advanced": "꿈을 크게 가지면 이룰 수 있어요.",
+          "master": "작은 노력이 모여 큰 성공을 만들어요."
+        }
+      },
+      "en": {
+        "word": "big / large / loud",
+        "explanation": "Size is above average. Sound is high.",
+        "examples": {
+          "beginner": "The house is big.",
+          "intermediate": "The voice is loud.",
+          "advanced": "If you dream big, you can achieve it.",
+          "master": "Small efforts gather to create big success."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[크다]",
+      "ipa": "[kʰɯda]"
+    }
+  },
+  {
+    "id": "jakda",
+    "korean": "작다",
+    "romanization": "jakda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "size", "essential"],
+    "translations": {
+      "ko": {
+        "word": "작다",
+        "explanation": "크기가 일반적인 것보다 아래이다.",
+        "examples": {
+          "beginner": "방이 작아요.",
+          "intermediate": "글씨가 너무 작아요.",
+          "advanced": "작은 것에서 행복을 찾을 수 있어요.",
+          "master": "작은 친절이 큰 변화를 만들 수 있어요."
+        }
+      },
+      "en": {
+        "word": "small / little",
+        "explanation": "Size is below average.",
+        "examples": {
+          "beginner": "The room is small.",
+          "intermediate": "The letters are too small.",
+          "advanced": "You can find happiness in small things.",
+          "master": "Small kindnesses can create big changes."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[작따]",
+      "ipa": "[tɕaktːa]"
+    }
+  },
+  {
+    "id": "manta",
+    "korean": "많다",
+    "romanization": "manta",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "quantity", "essential"],
+    "translations": {
+      "ko": {
+        "word": "많다",
+        "explanation": "수량이나 정도가 크다.",
+        "examples": {
+          "beginner": "사람이 많아요.",
+          "intermediate": "일이 많아서 바빠요.",
+          "advanced": "경험이 많으면 문제 해결이 쉬워요.",
+          "master": "많이 가진 사람이 아니라 많이 나누는 사람이 행복해요."
+        }
+      },
+      "en": {
+        "word": "many / much / a lot",
+        "explanation": "Quantity or degree is large.",
+        "examples": {
+          "beginner": "There are many people.",
+          "intermediate": "I'm busy because I have a lot of work.",
+          "advanced": "If you have a lot of experience, problem-solving becomes easier.",
+          "master": "It's not those who have much who are happy, but those who share much."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[만타]",
+      "ipa": "[mantʰa]"
+    }
+  },
+  {
+    "id": "jeokda",
+    "korean": "적다",
+    "romanization": "jeokda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "quantity", "essential"],
+    "translations": {
+      "ko": {
+        "word": "적다",
+        "explanation": "수량이나 정도가 작다.",
+        "examples": {
+          "beginner": "돈이 적어요.",
+          "intermediate": "시간이 적어서 못 갔어요.",
+          "advanced": "인원이 적으면 더 친해질 수 있어요.",
+          "master": "적게 가지고도 풍요롭게 살 수 있어요."
+        }
+      },
+      "en": {
+        "word": "few / little",
+        "explanation": "Quantity or degree is small.",
+        "examples": {
+          "beginner": "Money is little.",
+          "intermediate": "I couldn't go because time was short.",
+          "advanced": "If there are fewer people, you can become closer.",
+          "master": "You can live richly even with little."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[적따]",
+      "ipa": "[tɕʌktːa]"
+    }
+  },
+  {
+    "id": "gilda",
+    "korean": "길다",
+    "romanization": "gilda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "length", "essential"],
+    "translations": {
+      "ko": {
+        "word": "길다",
+        "explanation": "한쪽 끝에서 다른 쪽 끝까지의 거리가 멀다.",
+        "examples": {
+          "beginner": "머리가 길어요.",
+          "intermediate": "줄이 길어서 오래 기다렸어요.",
+          "advanced": "인생은 길고 기회는 많아요.",
+          "master": "긴 시간이 지나면 모든 것이 추억이 돼요."
+        }
+      },
+      "en": {
+        "word": "long",
+        "explanation": "The distance from one end to the other is far.",
+        "examples": {
+          "beginner": "My hair is long.",
+          "intermediate": "I waited a long time because the line was long.",
+          "advanced": "Life is long and opportunities are many.",
+          "master": "After a long time, everything becomes a memory."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[길다]",
+      "ipa": "[kilda]"
+    }
+  },
+  {
+    "id": "jjalbda",
+    "korean": "짧다",
+    "romanization": "jjalpda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "length", "essential"],
+    "translations": {
+      "ko": {
+        "word": "짧다",
+        "explanation": "한쪽 끝에서 다른 쪽 끝까지의 거리가 가깝다.",
+        "examples": {
+          "beginner": "다리가 짧아요.",
+          "intermediate": "시간이 짧아서 아쉬워요.",
+          "advanced": "짧은 문장이 이해하기 쉬워요.",
+          "master": "인생은 짧으니까 하고 싶은 일을 하세요."
+        }
+      },
+      "en": {
+        "word": "short",
+        "explanation": "The distance from one end to the other is close.",
+        "examples": {
+          "beginner": "My legs are short.",
+          "intermediate": "It's a shame because time is short.",
+          "advanced": "Short sentences are easy to understand.",
+          "master": "Life is short, so do what you want to do."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[짤따]",
+      "ipa": "[tɕaltːa]"
+    }
+  },
+  {
+    "id": "nopda",
+    "korean": "높다",
+    "romanization": "nopda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "height", "essential"],
+    "translations": {
+      "ko": {
+        "word": "높다",
+        "explanation": "아래에서 위까지의 거리가 멀다. 수준이나 정도가 위이다.",
+        "examples": {
+          "beginner": "산이 높아요.",
+          "intermediate": "건물이 높아서 무서워요.",
+          "advanced": "목표를 높게 세우면 더 많이 성장해요.",
+          "master": "높은 곳에 오르면 넓은 세상이 보여요."
+        }
+      },
+      "en": {
+        "word": "high / tall",
+        "explanation": "The distance from bottom to top is far. Level or degree is high.",
+        "examples": {
+          "beginner": "The mountain is high.",
+          "intermediate": "The building is so tall that it's scary.",
+          "advanced": "If you set high goals, you grow more.",
+          "master": "When you climb high, you see a wider world."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[놉따]",
+      "ipa": "[noptːa]"
+    }
+  },
+  {
+    "id": "natchda",
+    "korean": "낮다",
+    "romanization": "natda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "height", "essential"],
+    "translations": {
+      "ko": {
+        "word": "낮다",
+        "explanation": "아래에서 위까지의 거리가 가깝다. 수준이나 정도가 아래이다.",
+        "examples": {
+          "beginner": "목소리가 낮아요.",
+          "intermediate": "천장이 낮아요.",
+          "advanced": "낮은 자세로 배우면 빨리 성장해요.",
+          "master": "겸손하게 자세를 낮추면 더 많이 배울 수 있어요."
+        }
+      },
+      "en": {
+        "word": "low / short (height)",
+        "explanation": "The distance from bottom to top is close. Level or degree is low.",
+        "examples": {
+          "beginner": "The voice is low.",
+          "intermediate": "The ceiling is low.",
+          "advanced": "If you learn with a humble attitude, you grow fast.",
+          "master": "If you humbly lower yourself, you can learn more."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[낟따]",
+      "ipa": "[nattːa]"
+    }
+  },
+  {
+    "id": "ppareuda",
+    "korean": "빠르다",
+    "romanization": "ppareuda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "speed", "essential"],
+    "translations": {
+      "ko": {
+        "word": "빠르다",
+        "explanation": "속도가 높다. 시간이 적게 걸린다.",
+        "examples": {
+          "beginner": "차가 빨라요.",
+          "intermediate": "시간이 빨리 가요.",
+          "advanced": "한국어 실력이 빠르게 늘고 있어요.",
+          "master": "빠른 결정이 항상 좋은 것은 아니에요."
+        }
+      },
+      "en": {
+        "word": "fast / quick",
+        "explanation": "Speed is high. Takes little time.",
+        "examples": {
+          "beginner": "The car is fast.",
+          "intermediate": "Time goes by quickly.",
+          "advanced": "My Korean skills are improving quickly.",
+          "master": "Fast decisions are not always good ones."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[빠르다]",
+      "ipa": "[pːaɾɯda]"
+    }
+  },
+  {
+    "id": "neurida",
+    "korean": "느리다",
+    "romanization": "neurida",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "speed", "essential"],
+    "translations": {
+      "ko": {
+        "word": "느리다",
+        "explanation": "속도가 낮다. 시간이 많이 걸린다.",
+        "examples": {
+          "beginner": "거북이가 느려요.",
+          "intermediate": "인터넷이 느려요.",
+          "advanced": "천천히 느리게 사는 것도 좋아요.",
+          "master": "느려도 꾸준히 하면 결국 성공해요."
+        }
+      },
+      "en": {
+        "word": "slow",
+        "explanation": "Speed is low. Takes a lot of time.",
+        "examples": {
+          "beginner": "The turtle is slow.",
+          "intermediate": "The internet is slow.",
+          "advanced": "It's also good to live slowly.",
+          "master": "Even if you're slow, if you're consistent, you'll eventually succeed."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[느리다]",
+      "ipa": "[nɯɾida]"
+    }
+  },
+  {
+    "id": "mweobda",
+    "korean": "무겁다",
+    "romanization": "mugeopda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "weight", "essential"],
+    "translations": {
+      "ko": {
+        "word": "무겁다",
+        "explanation": "무게가 많이 나간다.",
+        "examples": {
+          "beginner": "가방이 무거워요.",
+          "intermediate": "이 박스는 너무 무거워요.",
+          "advanced": "책임감이 무겁게 느껴져요.",
+          "master": "마음이 무거울 때는 이야기를 나누면 좋아요."
+        }
+      },
+      "en": {
+        "word": "heavy",
+        "explanation": "Weight is high.",
+        "examples": {
+          "beginner": "The bag is heavy.",
+          "intermediate": "This box is too heavy.",
+          "advanced": "The responsibility feels heavy.",
+          "master": "When your heart feels heavy, it's good to talk about it."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[무겁다]",
+      "ipa": "[muɡʌptːa]"
+    }
+  },
+  {
+    "id": "gabyeopda",
+    "korean": "가볍다",
+    "romanization": "gabyeopda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "weight", "essential"],
+    "translations": {
+      "ko": {
+        "word": "가볍다",
+        "explanation": "무게가 적게 나간다.",
+        "examples": {
+          "beginner": "노트북이 가벼워요.",
+          "intermediate": "가벼운 옷을 입으세요.",
+          "advanced": "가벼운 산책으로 기분 전환을 해요.",
+          "master": "가벼운 농담이 분위기를 좋게 만들어요."
+        }
+      },
+      "en": {
+        "word": "light",
+        "explanation": "Weight is low.",
+        "examples": {
+          "beginner": "The laptop is light.",
+          "intermediate": "Wear light clothes.",
+          "advanced": "I change my mood with a light walk.",
+          "master": "Light jokes make the atmosphere better."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[가볍따]",
+      "ipa": "[kabjʌptːa]"
+    }
+  },
+  {
+    "id": "yeoppuda",
+    "korean": "예쁘다",
+    "romanization": "yeppeuda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "appearance", "essential"],
+    "translations": {
+      "ko": {
+        "word": "예쁘다",
+        "explanation": "보기에 아름답다. 귀엽다.",
+        "examples": {
+          "beginner": "꽃이 예뻐요.",
+          "intermediate": "오늘 옷이 예뻐요.",
+          "advanced": "예쁜 마음을 가진 사람이 진짜 예쁜 사람이에요.",
+          "master": "나이가 들어도 예쁘게 늙고 싶어요."
+        }
+      },
+      "en": {
+        "word": "pretty / beautiful",
+        "explanation": "Beautiful to look at. Cute.",
+        "examples": {
+          "beginner": "The flower is pretty.",
+          "intermediate": "Your clothes are pretty today.",
+          "advanced": "A person with a pretty heart is truly pretty.",
+          "master": "Even as I age, I want to grow old beautifully."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[예쁘다]",
+      "ipa": "[jepːɯda]"
+    }
+  },
+  {
+    "id": "jalmitda",
+    "korean": "잘생기다",
+    "romanization": "jalsaengida",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "appearance", "male"],
+    "translations": {
+      "ko": {
+        "word": "잘생기다",
+        "explanation": "남자의 외모가 좋다.",
+        "examples": {
+          "beginner": "배우가 잘생겼어요.",
+          "intermediate": "동생이 잘생겼어요.",
+          "advanced": "잘생긴 것보다 성격이 좋은 게 더 중요해요.",
+          "master": "잘생긴 외모보다 매력 있는 성격이 오래가요."
+        }
+      },
+      "en": {
+        "word": "handsome / good-looking",
+        "explanation": "A man's appearance is good.",
+        "examples": {
+          "beginner": "The actor is handsome.",
+          "intermediate": "My younger brother is handsome.",
+          "advanced": "Having a good personality is more important than being handsome.",
+          "master": "An attractive personality lasts longer than a handsome face."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[잘맞다]",
+      "ipa": "[tɕalmattːa]"
+    }
+  },
+  {
+    "id": "dweppuda",
+    "korean": "뜨겁다",
+    "romanization": "tteugeoupda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "temperature", "essential"],
+    "translations": {
+      "ko": {
+        "word": "뜨겁다",
+        "explanation": "온도가 매우 높다.",
+        "examples": {
+          "beginner": "물이 뜨거워요.",
+          "intermediate": "커피가 너무 뜨거워요.",
+          "advanced": "뜨거운 열정으로 일하면 성공해요.",
+          "master": "뜨거운 관심과 사랑이 관계를 유지해요."
+        }
+      },
+      "en": {
+        "word": "hot (to touch)",
+        "explanation": "Temperature is very high.",
+        "examples": {
+          "beginner": "The water is hot.",
+          "intermediate": "The coffee is too hot.",
+          "advanced": "If you work with hot passion, you succeed.",
+          "master": "Hot interest and love maintain relationships."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[뜨겁다]",
+      "ipa": "[tːɯɡʌptːa]"
+    }
+  },
+  {
+    "id": "chagapda",
+    "korean": "차갑다",
+    "romanization": "chagapda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "temperature", "essential"],
+    "translations": {
+      "ko": {
+        "word": "차갑다",
+        "explanation": "온도가 매우 낮다.",
+        "examples": {
+          "beginner": "물이 차가워요.",
+          "intermediate": "날씨가 차가워요.",
+          "advanced": "차가운 태도는 사람을 멀어지게 해요.",
+          "master": "처음에는 차가워 보였지만 알고 보니 따뜻한 사람이었어요."
+        }
+      },
+      "en": {
+        "word": "cold (to touch)",
+        "explanation": "Temperature is very low.",
+        "examples": {
+          "beginner": "The water is cold.",
+          "intermediate": "The weather is cold.",
+          "advanced": "A cold attitude pushes people away.",
+          "master": "They seemed cold at first, but turned out to be a warm person."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[차갑다]",
+      "ipa": "[tɕʰaɡaptːa]"
+    }
+  },
+  {
+    "id": "ttatteudata",
+    "korean": "따뜻하다",
+    "romanization": "ttatteutada",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "temperature", "essential"],
+    "translations": {
+      "ko": {
+        "word": "따뜻하다",
+        "explanation": "적당히 온도가 높다. 마음이 포근하다.",
+        "examples": {
+          "beginner": "날씨가 따뜻해요.",
+          "intermediate": "따뜻한 차를 마셔요.",
+          "advanced": "따뜻한 말 한마디가 힘이 돼요.",
+          "master": "따뜻한 마음을 가진 사람 곁에 있으면 행복해요."
+        }
+      },
+      "en": {
+        "word": "warm",
+        "explanation": "Moderately high temperature. Heart is cozy.",
+        "examples": {
+          "beginner": "The weather is warm.",
+          "intermediate": "I drink warm tea.",
+          "advanced": "One warm word gives strength.",
+          "master": "Being next to someone with a warm heart makes you happy."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[따뜻하다]",
+      "ipa": "[tːatːɯtʰada]"
+    }
+  },
+  {
+    "id": "siweonnda",
+    "korean": "시원하다",
+    "romanization": "siweonhada",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "temperature", "refreshing"],
+    "translations": {
+      "ko": {
+        "word": "시원하다",
+        "explanation": "적당히 온도가 낮아 상쾌하다. 막힌 것이 뚫려 후련하다.",
+        "examples": {
+          "beginner": "바람이 시원해요.",
+          "intermediate": "시원한 물을 마셔요.",
+          "advanced": "에어컨을 틀어서 시원해요.",
+          "master": "문제가 해결되니까 마음이 시원해요."
+        }
+      },
+      "en": {
+        "word": "cool / refreshing",
+        "explanation": "Pleasantly cool temperature. Relief from something blocked.",
+        "examples": {
+          "beginner": "The wind is cool.",
+          "intermediate": "I drink cool water.",
+          "advanced": "It's cool because the air conditioner is on.",
+          "master": "Now that the problem is solved, I feel relieved."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[시원하다]",
+      "ipa": "[ɕiwʌnɦada]"
+    }
+  },
+  {
+    "id": "masissda",
+    "korean": "맛있다",
+    "romanization": "masissda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "taste", "essential"],
+    "translations": {
+      "ko": {
+        "word": "맛있다",
+        "explanation": "음식의 맛이 좋다.",
+        "examples": {
+          "beginner": "이 음식이 맛있어요.",
+          "intermediate": "엄마가 만든 음식이 제일 맛있어요.",
+          "advanced": "맛있는 음식을 먹으면 기분이 좋아져요.",
+          "master": "맛있게 요리하는 비결은 사랑이에요."
+        }
+      },
+      "en": {
+        "word": "delicious / tasty",
+        "explanation": "The taste of food is good.",
+        "examples": {
+          "beginner": "This food is delicious.",
+          "intermediate": "Food made by mom is the most delicious.",
+          "advanced": "When you eat delicious food, your mood improves.",
+          "master": "The secret to cooking delicious food is love."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[맛있다]",
+      "ipa": "[maɕitːa]"
+    }
+  },
+  {
+    "id": "maseopda",
+    "korean": "맛없다",
+    "romanization": "maseopda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "taste", "essential"],
+    "translations": {
+      "ko": {
+        "word": "맛없다",
+        "explanation": "음식의 맛이 좋지 않다.",
+        "examples": {
+          "beginner": "이 음식은 맛없어요.",
+          "intermediate": "너무 짜서 맛없어요.",
+          "advanced": "맛없는 음식도 배고프면 맛있게 느껴져요.",
+          "master": "맛없다고 말하기 전에 요리한 사람의 마음을 생각해요."
+        }
+      },
+      "en": {
+        "word": "not delicious / tasteless",
+        "explanation": "The taste of food is not good.",
+        "examples": {
+          "beginner": "This food is not delicious.",
+          "intermediate": "It's too salty, so it's not tasty.",
+          "advanced": "Even tasteless food tastes good when you're hungry.",
+          "master": "Before saying it's not tasty, think about the heart of the person who cooked it."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[맛없다]",
+      "ipa": "[madʌptːa]"
+    }
+  },
+  {
+    "id": "jjaeda",
+    "korean": "짜다",
+    "romanization": "jjada",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "taste", "salty"],
+    "translations": {
+      "ko": {
+        "word": "짜다",
+        "explanation": "소금 맛이 강하다.",
+        "examples": {
+          "beginner": "국이 짜요.",
+          "intermediate": "음식이 조금 짜요.",
+          "advanced": "짠 음식을 많이 먹으면 건강에 안 좋아요.",
+          "master": "한국 음식이 처음에는 짜게 느껴질 수 있어요."
+        }
+      },
+      "en": {
+        "word": "salty",
+        "explanation": "The taste of salt is strong.",
+        "examples": {
+          "beginner": "The soup is salty.",
+          "intermediate": "The food is a bit salty.",
+          "advanced": "Eating a lot of salty food is bad for health.",
+          "master": "Korean food might taste salty at first."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[짜다]",
+      "ipa": "[tɕːada]"
+    }
+  },
+  {
+    "id": "dalda",
+    "korean": "달다",
+    "romanization": "dalda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "taste", "sweet"],
+    "translations": {
+      "ko": {
+        "word": "달다",
+        "explanation": "설탕 맛이 강하다.",
+        "examples": {
+          "beginner": "케이크가 달아요.",
+          "intermediate": "이 음료가 너무 달아요.",
+          "advanced": "단 음식을 좋아하지만 건강을 위해 줄이고 있어요.",
+          "master": "달콤한 말보다 진심 어린 말이 더 중요해요."
+        }
+      },
+      "en": {
+        "word": "sweet",
+        "explanation": "The taste of sugar is strong.",
+        "examples": {
+          "beginner": "The cake is sweet.",
+          "intermediate": "This drink is too sweet.",
+          "advanced": "I like sweet food, but I'm reducing it for health.",
+          "master": "Sincere words are more important than sweet words."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[달다]",
+      "ipa": "[talda]"
+    }
+  },
+  {
+    "id": "maepda-adj",
+    "korean": "맵다",
+    "romanization": "maepda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "taste", "spicy"],
+    "translations": {
+      "ko": {
+        "word": "맵다",
+        "explanation": "고추 맛이 강하다. 혀가 아프다.",
+        "examples": {
+          "beginner": "김치가 매워요.",
+          "intermediate": "이 음식이 너무 매워요.",
+          "advanced": "한국 음식은 매운 것이 많아요.",
+          "master": "매운 음식을 먹으면 스트레스가 풀려요."
+        }
+      },
+      "en": {
+        "word": "spicy",
+        "explanation": "The taste of chili is strong. The tongue hurts.",
+        "examples": {
+          "beginner": "Kimchi is spicy.",
+          "intermediate": "This food is too spicy.",
+          "advanced": "Korean food has a lot of spicy dishes.",
+          "master": "Eating spicy food relieves stress."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[맵다]",
+      "ipa": "[mɛptːa]"
+    }
+  },
+  {
+    "id": "sida",
+    "korean": "시다",
+    "romanization": "sida",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "taste", "sour"],
+    "translations": {
+      "ko": {
+        "word": "시다",
+        "explanation": "식초나 레몬 같은 맛이다.",
+        "examples": {
+          "beginner": "레몬이 셔요.",
+          "intermediate": "이 사과가 셔요.",
+          "advanced": "새콤한 맛이 입맛을 돋워요.",
+          "master": "인생은 시고 달고 다양한 맛이 있어요."
+        }
+      },
+      "en": {
+        "word": "sour",
+        "explanation": "A taste like vinegar or lemon.",
+        "examples": {
+          "beginner": "Lemon is sour.",
+          "intermediate": "This apple is sour.",
+          "advanced": "A sour taste stimulates the appetite.",
+          "master": "Life has various tastes—sour and sweet."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[시다]",
+      "ipa": "[ɕida]"
+    }
+  },
+  {
+    "id": "sseuda-bitter",
+    "korean": "쓰다",
+    "romanization": "sseuda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "taste", "bitter"],
+    "translations": {
+      "ko": {
+        "word": "쓰다",
+        "explanation": "약이나 쓴 차 같은 맛이다.",
+        "examples": {
+          "beginner": "약이 써요.",
+          "intermediate": "커피가 조금 써요.",
+          "advanced": "쓴 약이 병을 낫게 해요.",
+          "master": "쓴 경험이 나중에 달콤한 결과를 가져와요."
+        }
+      },
+      "en": {
+        "word": "bitter",
+        "explanation": "A taste like medicine or bitter tea.",
+        "examples": {
+          "beginner": "The medicine is bitter.",
+          "intermediate": "Coffee is a bit bitter.",
+          "advanced": "Bitter medicine cures the illness.",
+          "master": "Bitter experiences bring sweet results later."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[쓰다]",
+      "ipa": "[sːɯda]"
+    }
+  },
+  {
+    "id": "eoryeopda",
+    "korean": "어렵다",
+    "romanization": "eoryeopda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "difficulty", "essential"],
+    "translations": {
+      "ko": {
+        "word": "어렵다",
+        "explanation": "하기가 쉽지 않다. 이해하기 힘들다.",
+        "examples": {
+          "beginner": "한국어가 어려워요.",
+          "intermediate": "이 문제가 너무 어려워요.",
+          "advanced": "어려운 상황에서도 포기하지 마세요.",
+          "master": "어려운 시기를 함께 이겨낸 친구가 진정한 친구예요."
+        }
+      },
+      "en": {
+        "word": "difficult / hard",
+        "explanation": "Not easy to do. Hard to understand.",
+        "examples": {
+          "beginner": "Korean is difficult.",
+          "intermediate": "This problem is too difficult.",
+          "advanced": "Don't give up even in difficult situations.",
+          "master": "A friend who overcame difficult times together is a true friend."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[어렵따]",
+      "ipa": "[ʌɾjʌptːa]"
+    }
+  },
+  {
+    "id": "swipda",
+    "korean": "쉽다",
+    "romanization": "swipda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "difficulty", "essential"],
+    "translations": {
+      "ko": {
+        "word": "쉽다",
+        "explanation": "하기가 어렵지 않다. 이해하기 간단하다.",
+        "examples": {
+          "beginner": "이거 쉬워요.",
+          "intermediate": "요리가 생각보다 쉬워요.",
+          "advanced": "쉬운 일을 꾸준히 하면 어려운 일도 쉬워져요.",
+          "master": "쉽게 얻은 것은 쉽게 잃어버리기도 해요."
+        }
+      },
+      "en": {
+        "word": "easy",
+        "explanation": "Not difficult to do. Simple to understand.",
+        "examples": {
+          "beginner": "This is easy.",
+          "intermediate": "Cooking is easier than I thought.",
+          "advanced": "If you do easy things consistently, difficult things become easy too.",
+          "master": "What is easily obtained is also easily lost."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[쉽따]",
+      "ipa": "[ɕwiptːa]"
+    }
+  },
+  {
+    "id": "jaemiitda",
+    "korean": "재미있다",
+    "romanization": "jaemiitda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "interest", "essential"],
+    "translations": {
+      "ko": {
+        "word": "재미있다",
+        "explanation": "즐겁고 흥미롭다.",
+        "examples": {
+          "beginner": "영화가 재미있어요.",
+          "intermediate": "이 책이 정말 재미있어요.",
+          "advanced": "일이 재미있으면 시간이 빨리 가요.",
+          "master": "재미있게 사는 것이 성공의 비결이에요."
+        }
+      },
+      "en": {
+        "word": "interesting / fun",
+        "explanation": "Enjoyable and interesting.",
+        "examples": {
+          "beginner": "The movie is interesting.",
+          "intermediate": "This book is really interesting.",
+          "advanced": "When work is fun, time passes quickly.",
+          "master": "Living interestingly is the secret to success."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[재미있다]",
+      "ipa": "[tɕɛmiitːa]"
+    }
+  },
+  {
+    "id": "jaemieopda",
+    "korean": "재미없다",
+    "romanization": "jaemieopda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "interest", "essential"],
+    "translations": {
+      "ko": {
+        "word": "재미없다",
+        "explanation": "즐겁지 않고 지루하다.",
+        "examples": {
+          "beginner": "이 영화 재미없어요.",
+          "intermediate": "수업이 재미없었어요.",
+          "advanced": "재미없는 일도 의미를 찾으면 달라져요.",
+          "master": "재미없다고 생각하면 모든 것이 재미없어져요."
+        }
+      },
+      "en": {
+        "word": "boring / not fun",
+        "explanation": "Not enjoyable and dull.",
+        "examples": {
+          "beginner": "This movie is boring.",
+          "intermediate": "The class was boring.",
+          "advanced": "Even boring work changes when you find meaning in it.",
+          "master": "If you think it's boring, everything becomes boring."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[재미없다]",
+      "ipa": "[tɕɛmiʌptːa]"
+    }
+  },
+  {
+    "id": "bappuda",
+    "korean": "바쁘다",
+    "romanization": "bappeuda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "time", "essential"],
+    "translations": {
+      "ko": {
+        "word": "바쁘다",
+        "explanation": "할 일이 많아서 시간이 없다.",
+        "examples": {
+          "beginner": "요즘 바빠요.",
+          "intermediate": "너무 바빠서 못 만났어요.",
+          "advanced": "바쁜 중에도 건강을 챙기세요.",
+          "master": "바쁘게 사는 것과 의미 있게 사는 것은 달라요."
+        }
+      },
+      "en": {
+        "word": "busy",
+        "explanation": "Having many things to do and no time.",
+        "examples": {
+          "beginner": "I'm busy these days.",
+          "intermediate": "I couldn't meet because I was too busy.",
+          "advanced": "Take care of your health even when you're busy.",
+          "master": "Living busily and living meaningfully are different things."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[바쁘다]",
+      "ipa": "[papːɯda]"
+    }
+  },
+  {
+    "id": "hangahada",
+    "korean": "한가하다",
+    "romanization": "hangahada",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["adjective", "time", "leisure"],
+    "translations": {
+      "ko": {
+        "word": "한가하다",
+        "explanation": "할 일이 없어서 여유롭다.",
+        "examples": {
+          "beginner": "오늘 한가해요.",
+          "intermediate": "주말은 보통 한가해요.",
+          "advanced": "한가할 때 책을 읽어요.",
+          "master": "한가한 시간을 잘 활용하면 자기 발전이 돼요."
+        }
+      },
+      "en": {
+        "word": "free / not busy / leisurely",
+        "explanation": "Having nothing to do and being relaxed.",
+        "examples": {
+          "beginner": "I'm free today.",
+          "intermediate": "Weekends are usually free.",
+          "advanced": "I read books when I'm free.",
+          "master": "Using your free time well leads to self-development."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[한가하다]",
+      "ipa": "[hanɡaɦada]"
+    }
+  },
+  {
+    "id": "pigonhada",
+    "korean": "피곤하다",
+    "romanization": "pigonhada",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "condition", "essential"],
+    "translations": {
+      "ko": {
+        "word": "피곤하다",
+        "explanation": "몸과 마음이 지쳐 있다.",
+        "examples": {
+          "beginner": "오늘 피곤해요.",
+          "intermediate": "일이 많아서 피곤해요.",
+          "advanced": "피곤할 때는 충분히 쉬어야 해요.",
+          "master": "피곤한 몸보다 피곤한 마음이 더 힘들어요."
+        }
+      },
+      "en": {
+        "word": "tired",
+        "explanation": "Body and mind are exhausted.",
+        "examples": {
+          "beginner": "I'm tired today.",
+          "intermediate": "I'm tired because I have a lot of work.",
+          "advanced": "When you're tired, you should rest enough.",
+          "master": "A tired mind is harder than a tired body."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[피곤하다]",
+      "ipa": "[pʰiɡonɦada]"
+    }
+  },
+  {
+    "id": "geonganghada",
+    "korean": "건강하다",
+    "romanization": "geonganghada",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "health", "essential"],
+    "translations": {
+      "ko": {
+        "word": "건강하다",
+        "explanation": "몸 상태가 좋다. 병이 없다.",
+        "examples": {
+          "beginner": "건강하세요.",
+          "intermediate": "할머니가 건강하세요.",
+          "advanced": "건강해야 행복하게 살 수 있어요.",
+          "master": "건강은 잃어보면 그 소중함을 알게 돼요."
+        }
+      },
+      "en": {
+        "word": "healthy",
+        "explanation": "The body's condition is good. No illness.",
+        "examples": {
+          "beginner": "Be healthy.",
+          "intermediate": "Grandmother is healthy.",
+          "advanced": "You can live happily when you're healthy.",
+          "master": "You realize the value of health when you lose it."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[건강하다]",
+      "ipa": "[kʌnɡaŋɦada]"
+    }
+  },
+  {
+    "id": "apheuda",
+    "korean": "아프다",
+    "romanization": "apeuda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "health", "essential"],
+    "translations": {
+      "ko": {
+        "word": "아프다",
+        "explanation": "몸의 어느 부분이 고통스럽다. 마음이 슬프다.",
+        "examples": {
+          "beginner": "머리가 아파요.",
+          "intermediate": "어디가 아파요?",
+          "advanced": "아프면 일하지 말고 쉬세요.",
+          "master": "사랑하는 사람이 아프면 마음이 더 아파요."
+        }
+      },
+      "en": {
+        "word": "sick / hurt / painful",
+        "explanation": "Some part of the body is in pain. The heart is sad.",
+        "examples": {
+          "beginner": "My head hurts.",
+          "intermediate": "Where does it hurt?",
+          "advanced": "If you're sick, don't work and rest.",
+          "master": "When someone you love is sick, your heart hurts more."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아프다]",
+      "ipa": "[apʰɯda]"
+    }
+  },
+  {
+    "id": "haengbokhada",
+    "korean": "행복하다",
+    "romanization": "haengbokhada",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "emotion", "essential"],
+    "translations": {
+      "ko": {
+        "word": "행복하다",
+        "explanation": "기쁘고 만족스럽다.",
+        "examples": {
+          "beginner": "저는 행복해요.",
+          "intermediate": "가족과 함께 있어서 행복해요.",
+          "advanced": "작은 것에서 행복을 찾을 수 있어요.",
+          "master": "행복은 목적지가 아니라 여행이에요."
+        }
+      },
+      "en": {
+        "word": "happy",
+        "explanation": "Joyful and satisfied.",
+        "examples": {
+          "beginner": "I am happy.",
+          "intermediate": "I'm happy because I'm with family.",
+          "advanced": "You can find happiness in small things.",
+          "master": "Happiness is not a destination but a journey."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[행복하다]",
+      "ipa": "[hɛŋbokʰada]"
+    }
+  },
+  {
+    "id": "seulpeuda",
+    "korean": "슬프다",
+    "romanization": "seulpeuda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "emotion", "essential"],
+    "translations": {
+      "ko": {
+        "word": "슬프다",
+        "explanation": "마음이 아프고 울고 싶다.",
+        "examples": {
+          "beginner": "영화가 슬퍼요.",
+          "intermediate": "이별이 슬퍼요.",
+          "advanced": "슬플 때 울어도 괜찮아요.",
+          "master": "슬픔을 나누면 반이 되고, 기쁨을 나누면 배가 돼요."
+        }
+      },
+      "en": {
+        "word": "sad",
+        "explanation": "The heart hurts and wants to cry.",
+        "examples": {
+          "beginner": "The movie is sad.",
+          "intermediate": "Parting is sad.",
+          "advanced": "It's okay to cry when you're sad.",
+          "master": "When you share sadness, it halves; when you share joy, it doubles."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[슬프다]",
+      "ipa": "[sɯlpʰɯda]"
+    }
+  },
+  {
+    "id": "gippeuda",
+    "korean": "기쁘다",
+    "romanization": "gippeuda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "emotion", "essential"],
+    "translations": {
+      "ko": {
+        "word": "기쁘다",
+        "explanation": "마음이 즐겁고 좋다.",
+        "examples": {
+          "beginner": "만나서 기뻐요.",
+          "intermediate": "시험에 붙어서 기뻐요.",
+          "advanced": "기쁜 소식을 들으면 하루가 행복해요.",
+          "master": "기쁜 일이 있으면 주변 사람들과 나누세요."
+        }
+      },
+      "en": {
+        "word": "glad / delighted",
+        "explanation": "The heart is joyful and good.",
+        "examples": {
+          "beginner": "Nice to meet you.",
+          "intermediate": "I'm glad I passed the exam.",
+          "advanced": "When you hear good news, the whole day is happy.",
+          "master": "When you have something to be glad about, share it with people around you."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[기쁘다]",
+      "ipa": "[kipːɯda]"
+    }
+  },
+  {
+    "id": "hwanada-adj",
+    "korean": "화나다",
+    "romanization": "hwanada",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "emotion", "essential"],
+    "translations": {
+      "ko": {
+        "word": "화나다",
+        "explanation": "마음이 불쾌하고 짜증이 난다.",
+        "examples": {
+          "beginner": "화났어요?",
+          "intermediate": "거짓말을 들으면 화가 나요.",
+          "advanced": "화가 날 때는 잠깐 쉬고 생각해요.",
+          "master": "화를 내는 것보다 감정을 표현하는 방법을 배우세요."
+        }
+      },
+      "en": {
+        "word": "angry / upset",
+        "explanation": "The heart is displeased and irritated.",
+        "examples": {
+          "beginner": "Are you angry?",
+          "intermediate": "I get angry when I hear lies.",
+          "advanced": "When you're angry, take a break and think.",
+          "master": "Learn how to express emotions rather than getting angry."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[화나다]",
+      "ipa": "[hwanada]"
+    }
+  },
+  {
+    "id": "museongda",
+    "korean": "무섭다",
+    "romanization": "museopda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "emotion", "essential"],
+    "translations": {
+      "ko": {
+        "word": "무섭다",
+        "explanation": "두렵고 겁이 난다.",
+        "examples": {
+          "beginner": "공포 영화가 무서워요.",
+          "intermediate": "혼자 있으면 무서워요.",
+          "advanced": "무서운 것에 도전하면 성장해요.",
+          "master": "무서움을 이기면 용기가 생겨요."
+        }
+      },
+      "en": {
+        "word": "scary / frightening / afraid",
+        "explanation": "Fearful and scared.",
+        "examples": {
+          "beginner": "Horror movies are scary.",
+          "intermediate": "It's scary being alone.",
+          "advanced": "If you challenge scary things, you grow.",
+          "master": "When you overcome fear, courage is born."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[무섭다]",
+      "ipa": "[musʌptːa]"
+    }
+  },
+  {
+    "id": "oeroepda",
+    "korean": "외롭다",
+    "romanization": "oeropda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "emotion", "essential"],
+    "translations": {
+      "ko": {
+        "word": "외롭다",
+        "explanation": "혼자라서 쓸쓸하다.",
+        "examples": {
+          "beginner": "외로워요.",
+          "intermediate": "혼자 사니까 가끔 외로워요.",
+          "advanced": "외로울 때 친구에게 연락하세요.",
+          "master": "외로움은 누구나 느끼는 자연스러운 감정이에요."
+        }
+      },
+      "en": {
+        "word": "lonely",
+        "explanation": "Feeling desolate because of being alone.",
+        "examples": {
+          "beginner": "I'm lonely.",
+          "intermediate": "Living alone, I sometimes feel lonely.",
+          "advanced": "Contact friends when you feel lonely.",
+          "master": "Loneliness is a natural emotion that everyone feels."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[외롭다]",
+      "ipa": "[weɾoptːa]"
+    }
+  },
+  {
+    "id": "chingcheolhada",
+    "korean": "친절하다",
+    "romanization": "chincheolhada",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "personality", "essential"],
+    "translations": {
+      "ko": {
+        "word": "친절하다",
+        "explanation": "다른 사람에게 따뜻하고 도움을 주다.",
+        "examples": {
+          "beginner": "그 사람이 친절해요.",
+          "intermediate": "가게 주인이 친절했어요.",
+          "advanced": "친절한 사람 주변에는 친구가 많아요.",
+          "master": "친절은 돈이 들지 않지만 가치가 있어요."
+        }
+      },
+      "en": {
+        "word": "kind / friendly",
+        "explanation": "Being warm and helpful to others.",
+        "examples": {
+          "beginner": "That person is kind.",
+          "intermediate": "The store owner was kind.",
+          "advanced": "Kind people have many friends around them.",
+          "master": "Kindness costs nothing but has value."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[친절하다]",
+      "ipa": "[tɕʰintɕʌlɦada]"
+    }
+  },
+  {
+    "id": "jeongjikhada",
+    "korean": "정직하다",
+    "romanization": "jeongjjikada",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["adjective", "personality", "virtue"],
+    "translations": {
+      "ko": {
+        "word": "정직하다",
+        "explanation": "거짓말을 하지 않고 진실하다.",
+        "examples": {
+          "beginner": "정직한 사람이에요.",
+          "intermediate": "정직하게 말해 주세요.",
+          "advanced": "정직함은 신뢰의 기초예요.",
+          "master": "정직하게 사는 것이 장기적으로 가장 현명해요."
+        }
+      },
+      "en": {
+        "word": "honest",
+        "explanation": "Not telling lies and being truthful.",
+        "examples": {
+          "beginner": "They are an honest person.",
+          "intermediate": "Please tell me honestly.",
+          "advanced": "Honesty is the foundation of trust.",
+          "master": "Living honestly is the wisest in the long run."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[정직하다]",
+      "ipa": "[tɕʌŋdʑikʰada]"
+    }
+  },
+  {
+    "id": "bujirunhada",
+    "korean": "부지런하다",
+    "romanization": "bujirunhada",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["adjective", "personality", "virtue"],
+    "translations": {
+      "ko": {
+        "word": "부지런하다",
+        "explanation": "열심히 일하고 게으르지 않다.",
+        "examples": {
+          "beginner": "부지런한 사람이에요.",
+          "intermediate": "부지런히 일하면 성공해요.",
+          "advanced": "부지런한 사람은 시간을 잘 활용해요.",
+          "master": "부지런함은 타고나는 것이 아니라 습관이에요."
+        }
+      },
+      "en": {
+        "word": "diligent / hardworking",
+        "explanation": "Working hard and not being lazy.",
+        "examples": {
+          "beginner": "They are a diligent person.",
+          "intermediate": "If you work diligently, you succeed.",
+          "advanced": "Diligent people make good use of time.",
+          "master": "Diligence is not inborn but a habit."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[부지런하다]",
+      "ipa": "[pudʑiɾʌnɦada]"
+    }
+  },
+  {
+    "id": "georeueda",
+    "korean": "게으르다",
+    "romanization": "geeureuda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["adjective", "personality", "negative"],
+    "translations": {
+      "ko": {
+        "word": "게으르다",
+        "explanation": "일하기 싫어하고 움직이지 않다.",
+        "examples": {
+          "beginner": "조금 게을러요.",
+          "intermediate": "게으르면 성공하기 어려워요.",
+          "advanced": "게으른 습관을 고치고 싶어요.",
+          "master": "게으름은 작은 결심부터 고칠 수 있어요."
+        }
+      },
+      "en": {
+        "word": "lazy",
+        "explanation": "Not wanting to work and not moving.",
+        "examples": {
+          "beginner": "I'm a bit lazy.",
+          "intermediate": "If you're lazy, it's hard to succeed.",
+          "advanced": "I want to fix my lazy habits.",
+          "master": "Laziness can be fixed starting with small resolutions."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[게으르다]",
+      "ipa": "[keɯɾɯda]"
+    }
+  },
+  {
+    "id": "joyongida",
+    "korean": "조용하다",
+    "romanization": "joyonghada",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "sound", "essential"],
+    "translations": {
+      "ko": {
+        "word": "조용하다",
+        "explanation": "소리가 없거나 작다.",
+        "examples": {
+          "beginner": "여기가 조용해요.",
+          "intermediate": "도서관은 조용해요.",
+          "advanced": "조용한 곳에서 일하면 집중이 잘 돼요.",
+          "master": "조용한 사람이 깊은 생각을 가지고 있을 수 있어요."
+        }
+      },
+      "en": {
+        "word": "quiet",
+        "explanation": "There is no sound or the sound is small.",
+        "examples": {
+          "beginner": "It's quiet here.",
+          "intermediate": "The library is quiet.",
+          "advanced": "Working in a quiet place helps concentration.",
+          "master": "A quiet person may have deep thoughts."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[조용하다]",
+      "ipa": "[tɕojoŋɦada]"
+    }
+  },
+  {
+    "id": "sikeureoda",
+    "korean": "시끄럽다",
+    "romanization": "sikkeureoupda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "sound", "essential"],
+    "translations": {
+      "ko": {
+        "word": "시끄럽다",
+        "explanation": "소리가 크고 불쾌하다.",
+        "examples": {
+          "beginner": "밖이 시끄러워요.",
+          "intermediate": "공사 소리가 시끄러워요.",
+          "advanced": "시끄러운 환경에서는 집중하기 어려워요.",
+          "master": "세상이 시끄러울수록 마음의 평화가 중요해요."
+        }
+      },
+      "en": {
+        "word": "noisy / loud",
+        "explanation": "The sound is loud and unpleasant.",
+        "examples": {
+          "beginner": "It's noisy outside.",
+          "intermediate": "The construction noise is loud.",
+          "advanced": "It's hard to concentrate in a noisy environment.",
+          "master": "The noisier the world, the more important inner peace becomes."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[시끄럽다]",
+      "ipa": "[ɕikːɯɾʌptːa]"
+    }
+  },
+  {
+    "id": "kkaekkeuthada",
+    "korean": "깨끗하다",
+    "romanization": "kkaekkeuthada",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "cleanliness", "essential"],
+    "translations": {
+      "ko": {
+        "word": "깨끗하다",
+        "explanation": "더러운 것이 없다. 깔끔하다.",
+        "examples": {
+          "beginner": "방이 깨끗해요.",
+          "intermediate": "손을 깨끗하게 씻어요.",
+          "advanced": "깨끗한 환경이 건강에 좋아요.",
+          "master": "마음을 깨끗하게 유지하는 것이 중요해요."
+        }
+      },
+      "en": {
+        "word": "clean",
+        "explanation": "There is nothing dirty. Neat.",
+        "examples": {
+          "beginner": "The room is clean.",
+          "intermediate": "Wash your hands clean.",
+          "advanced": "A clean environment is good for health.",
+          "master": "It's important to keep your mind clean."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[깨끗하다]",
+      "ipa": "[kːɛkːɯtʰada]"
+    }
+  },
+  {
+    "id": "deoreopda",
+    "korean": "더럽다",
+    "romanization": "deoreopda",
+    "partOfSpeech": "adjective",
+    "categoryId": "adjectives-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["adjective", "cleanliness", "essential"],
+    "translations": {
+      "ko": {
+        "word": "더럽다",
+        "explanation": "깨끗하지 않고 지저분하다.",
+        "examples": {
+          "beginner": "옷이 더러워요.",
+          "intermediate": "방이 너무 더러워요.",
+          "advanced": "더러운 것을 만지면 손을 씻으세요.",
+          "master": "겉은 깨끗해도 마음이 더러우면 안 돼요."
+        }
+      },
+      "en": {
+        "word": "dirty",
+        "explanation": "Not clean and messy.",
+        "examples": {
+          "beginner": "The clothes are dirty.",
+          "intermediate": "The room is too dirty.",
+          "advanced": "If you touch something dirty, wash your hands.",
+          "master": "It's not okay if the outside is clean but the heart is dirty."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[더럽다]",
+      "ipa": "[tʌɾʌptːa]"
+    }
+  }
+]

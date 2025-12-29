@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "mul-thing",
+    "korean": "물건",
+    "romanization": "mulgeon",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "item", "basic"],
+    "translations": {
+      "ko": {
+        "word": "물건",
+        "explanation": "손으로 만질 수 있는 것. 상품.",
+        "examples": {
+          "beginner": "이 물건 얼마예요?",
+          "intermediate": "물건을 많이 샀어요.",
+          "advanced": "좋은 물건을 싸게 사면 기분이 좋아요.",
+          "master": "물건을 살 때는 필요한 것인지 먼저 생각해야 해요."
+        }
+      },
+      "en": {
+        "word": "thing / item / goods",
+        "explanation": "Something you can touch with hands. Products.",
+        "examples": {
+          "beginner": "How much is this item?",
+          "intermediate": "I bought many things.",
+          "advanced": "I feel good when I buy good things cheaply.",
+          "master": "When buying things, you should first think if it's necessary."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[물건]",
+      "ipa": "[mulɡʌn]"
+    }
+  },
+  {
+    "id": "gagyeok",
+    "korean": "가격",
+    "romanization": "gagyeok",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "price", "basic"],
+    "translations": {
+      "ko": {
+        "word": "가격",
+        "explanation": "물건을 사고팔 때의 돈 액수.",
+        "examples": {
+          "beginner": "가격이 얼마예요?",
+          "intermediate": "가격이 비싸요.",
+          "advanced": "온라인과 오프라인 가격이 다를 수 있어요.",
+          "master": "가격 대비 품질이 좋은 제품을 찾고 있어요."
+        }
+      },
+      "en": {
+        "word": "price",
+        "explanation": "The amount of money when buying and selling things.",
+        "examples": {
+          "beginner": "What's the price?",
+          "intermediate": "The price is expensive.",
+          "advanced": "Online and offline prices can be different.",
+          "master": "I'm looking for products with good quality for the price."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[가격]",
+      "ipa": "[kaɡjʌk]"
+    }
+  },
+  {
+    "id": "bissada",
+    "korean": "비싸다",
+    "romanization": "bissada",
+    "partOfSpeech": "adjective",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "price", "expensive"],
+    "translations": {
+      "ko": {
+        "word": "비싸다",
+        "explanation": "가격이 높다.",
+        "examples": {
+          "beginner": "이거 너무 비싸요.",
+          "intermediate": "왜 이렇게 비싸요?",
+          "advanced": "비싼 것이 항상 좋은 것은 아니에요.",
+          "master": "비싸지만 오래 쓸 수 있으면 가치가 있어요."
+        }
+      },
+      "en": {
+        "word": "expensive",
+        "explanation": "The price is high.",
+        "examples": {
+          "beginner": "This is too expensive.",
+          "intermediate": "Why is it so expensive?",
+          "advanced": "Expensive things are not always good.",
+          "master": "If it's expensive but lasts long, it has value."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[비싸다]",
+      "ipa": "[pisːada]"
+    }
+  },
+  {
+    "id": "ssada",
+    "korean": "싸다",
+    "romanization": "ssada",
+    "partOfSpeech": "adjective",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "price", "cheap"],
+    "translations": {
+      "ko": {
+        "word": "싸다",
+        "explanation": "가격이 낮다.",
+        "examples": {
+          "beginner": "이거 싸요.",
+          "intermediate": "여기가 더 싸요.",
+          "advanced": "싸게 사려고 여러 가게를 돌아다녔어요.",
+          "master": "싼 것만 찾다 보면 품질을 놓칠 수 있어요."
+        }
+      },
+      "en": {
+        "word": "cheap / inexpensive",
+        "explanation": "The price is low.",
+        "examples": {
+          "beginner": "This is cheap.",
+          "intermediate": "It's cheaper here.",
+          "advanced": "I went around several stores to buy it cheap.",
+          "master": "If you only look for cheap things, you might miss quality."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[싸다]",
+      "ipa": "[sːada]"
+    }
+  },
+  {
+    "id": "halinhada",
+    "korean": "할인",
+    "romanization": "halin",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "discount", "basic"],
+    "translations": {
+      "ko": {
+        "word": "할인",
+        "explanation": "가격을 낮추어 주는 것.",
+        "examples": {
+          "beginner": "할인해 주세요.",
+          "intermediate": "10% 할인이에요.",
+          "advanced": "할인 기간에 쇼핑하면 돈을 절약할 수 있어요.",
+          "master": "할인에 속아서 필요 없는 것을 사지 않도록 조심하세요."
+        }
+      },
+      "en": {
+        "word": "discount",
+        "explanation": "Lowering the price.",
+        "examples": {
+          "beginner": "Please give me a discount.",
+          "intermediate": "It's a 10% discount.",
+          "advanced": "Shopping during discount periods can save money.",
+          "master": "Be careful not to buy unnecessary things because of discounts."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[할인하다]",
+      "ipa": "[haɾinɦada]"
+    }
+  },
+  {
+    "id": "gyesan",
+    "korean": "계산",
+    "romanization": "gyesan",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "payment", "basic"],
+    "translations": {
+      "ko": {
+        "word": "계산",
+        "explanation": "물건 값을 치르는 것. 또는 수를 세는 것.",
+        "examples": {
+          "beginner": "계산해 주세요.",
+          "intermediate": "계산은 어디서 해요?",
+          "advanced": "카드로 계산할게요.",
+          "master": "계산할 때 영수증을 꼭 확인하세요."
+        }
+      },
+      "en": {
+        "word": "payment / calculation",
+        "explanation": "Paying for goods. Or counting numbers.",
+        "examples": {
+          "beginner": "Please ring this up.",
+          "intermediate": "Where do I pay?",
+          "advanced": "I'll pay by card.",
+          "master": "Always check the receipt when paying."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[계산]",
+      "ipa": "[kjesan]"
+    }
+  },
+  {
+    "id": "yeongsujeung",
+    "korean": "영수증",
+    "romanization": "yeongsujeung",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "receipt", "basic"],
+    "translations": {
+      "ko": {
+        "word": "영수증",
+        "explanation": "물건을 산 증거로 받는 종이.",
+        "examples": {
+          "beginner": "영수증 주세요.",
+          "intermediate": "영수증 필요하세요?",
+          "advanced": "환불할 때 영수증이 필요해요.",
+          "master": "경비 처리를 위해 영수증을 잘 보관하세요."
+        }
+      },
+      "en": {
+        "word": "receipt",
+        "explanation": "Paper received as proof of purchase.",
+        "examples": {
+          "beginner": "Please give me the receipt.",
+          "intermediate": "Do you need a receipt?",
+          "advanced": "You need the receipt for refunds.",
+          "master": "Keep receipts well for expense reports."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[영수증]",
+      "ipa": "[jʌŋsudʑɯŋ]"
+    }
+  },
+  {
+    "id": "hyeongeum",
+    "korean": "현금",
+    "romanization": "hyeongeum",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "payment", "cash"],
+    "translations": {
+      "ko": {
+        "word": "현금",
+        "explanation": "지폐와 동전. 카드가 아닌 돈.",
+        "examples": {
+          "beginner": "현금으로 할게요.",
+          "intermediate": "현금만 받아요?",
+          "advanced": "현금으로 내면 할인해 주는 곳도 있어요.",
+          "master": "요즘은 현금보다 카드나 휴대폰 결제가 더 편해요."
+        }
+      },
+      "en": {
+        "word": "cash",
+        "explanation": "Bills and coins. Money that is not card.",
+        "examples": {
+          "beginner": "I'll pay in cash.",
+          "intermediate": "Do you only accept cash?",
+          "advanced": "Some places give discounts for cash payment.",
+          "master": "These days, card or mobile payment is more convenient than cash."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[현금]",
+      "ipa": "[hjʌŋɡɯm]"
+    }
+  },
+  {
+    "id": "kadeu",
+    "korean": "카드",
+    "romanization": "kadeu",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "payment", "card"],
+    "translations": {
+      "ko": {
+        "word": "카드",
+        "explanation": "신용카드 또는 체크카드.",
+        "examples": {
+          "beginner": "카드로 해도 돼요?",
+          "intermediate": "카드 결제 되나요?",
+          "advanced": "이 카드는 해외에서도 사용할 수 있어요.",
+          "master": "카드 사용 내역을 정기적으로 확인하세요."
+        }
+      },
+      "en": {
+        "word": "card",
+        "explanation": "Credit card or debit card.",
+        "examples": {
+          "beginner": "Can I pay by card?",
+          "intermediate": "Do you accept card payment?",
+          "advanced": "This card can be used abroad too.",
+          "master": "Check your card usage regularly."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[카드]",
+      "ipa": "[kʰadɯ]"
+    }
+  },
+  {
+    "id": "geosileum",
+    "korean": "거스름돈",
+    "romanization": "geoseureumdon",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["shopping", "payment", "change"],
+    "translations": {
+      "ko": {
+        "word": "거스름돈",
+        "explanation": "물건 값을 내고 남는 돈.",
+        "examples": {
+          "beginner": "거스름돈이에요.",
+          "intermediate": "거스름돈 받으세요.",
+          "advanced": "거스름돈을 잘못 받았어요.",
+          "master": "거스름돈이 맞는지 꼭 확인하세요."
+        }
+      },
+      "en": {
+        "word": "change (money)",
+        "explanation": "Money left over after paying for goods.",
+        "examples": {
+          "beginner": "Here's your change.",
+          "intermediate": "Here's your change.",
+          "advanced": "I received the wrong change.",
+          "master": "Always check if the change is correct."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[거스름돈]",
+      "ipa": "[kʌsɯɾɯmton]"
+    }
+  },
+  {
+    "id": "sangjeom",
+    "korean": "상점",
+    "romanization": "sangjeom",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "store", "basic"],
+    "translations": {
+      "ko": {
+        "word": "상점",
+        "explanation": "물건을 파는 가게.",
+        "examples": {
+          "beginner": "이 상점이 좋아요.",
+          "intermediate": "근처에 상점이 있어요?",
+          "advanced": "이 상점은 문을 늦게 닫아요.",
+          "master": "온라인 상점과 오프라인 상점의 가격이 다를 수 있어요."
+        }
+      },
+      "en": {
+        "word": "store / shop",
+        "explanation": "A place that sells goods.",
+        "examples": {
+          "beginner": "This store is good.",
+          "intermediate": "Is there a store nearby?",
+          "advanced": "This store closes late.",
+          "master": "Prices at online stores and offline stores can be different."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[상점]",
+      "ipa": "[saŋdʑʌm]"
+    }
+  },
+  {
+    "id": "mawet",
+    "korean": "마트",
+    "romanization": "mateu",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "supermarket", "basic"],
+    "translations": {
+      "ko": {
+        "word": "마트",
+        "explanation": "생활용품과 식품 등을 파는 큰 가게.",
+        "examples": {
+          "beginner": "마트에 가요.",
+          "intermediate": "마트에서 장을 봐요.",
+          "advanced": "대형 마트보다 동네 마트가 가까워서 자주 가요.",
+          "master": "마트에서 충동 구매를 피하려면 쇼핑 리스트를 만드세요."
+        }
+      },
+      "en": {
+        "word": "mart / supermarket",
+        "explanation": "A large store selling daily necessities and food.",
+        "examples": {
+          "beginner": "I go to the mart.",
+          "intermediate": "I do grocery shopping at the mart.",
+          "advanced": "I go to the neighborhood mart often because it's closer than large marts.",
+          "master": "Make a shopping list to avoid impulse buying at the mart."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[마트]",
+      "ipa": "[matʰɯ]"
+    }
+  },
+  {
+    "id": "baekwajeom",
+    "korean": "백화점",
+    "romanization": "baekwajeom",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "department store", "basic"],
+    "translations": {
+      "ko": {
+        "word": "백화점",
+        "explanation": "여러 종류의 물건을 파는 큰 건물.",
+        "examples": {
+          "beginner": "백화점에 갔어요.",
+          "intermediate": "백화점에서 세일 해요.",
+          "advanced": "백화점은 비싸지만 품질이 좋아요.",
+          "master": "백화점 세일 기간에는 사람이 정말 많아요."
+        }
+      },
+      "en": {
+        "word": "department store",
+        "explanation": "A large building selling various kinds of goods.",
+        "examples": {
+          "beginner": "I went to the department store.",
+          "intermediate": "There's a sale at the department store.",
+          "advanced": "Department stores are expensive but have good quality.",
+          "master": "There are really many people during department store sales."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[백화점]",
+      "ipa": "[pɛkʰwadʑʌm]"
+    }
+  },
+  {
+    "id": "pyeoneuijeom",
+    "korean": "편의점",
+    "romanization": "pyeonuijeom",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "convenience store", "basic"],
+    "translations": {
+      "ko": {
+        "word": "편의점",
+        "explanation": "24시간 운영하는 작은 가게.",
+        "examples": {
+          "beginner": "편의점에서 물을 샀어요.",
+          "intermediate": "편의점이 가까워서 편해요.",
+          "advanced": "한국 편의점은 다양한 음식이 있어요.",
+          "master": "편의점 도시락이 점점 맛있어지고 있어요."
+        }
+      },
+      "en": {
+        "word": "convenience store",
+        "explanation": "A small store operating 24 hours.",
+        "examples": {
+          "beginner": "I bought water at the convenience store.",
+          "intermediate": "It's convenient because the convenience store is close.",
+          "advanced": "Korean convenience stores have various foods.",
+          "master": "Convenience store lunchboxes are getting tastier."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[편의점]",
+      "ipa": "[pʰjʌnɯidʑʌm]"
+    }
+  },
+  {
+    "id": "sijang",
+    "korean": "시장",
+    "romanization": "sijang",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "market", "basic"],
+    "translations": {
+      "ko": {
+        "word": "시장",
+        "explanation": "여러 가게가 모여 물건을 파는 곳.",
+        "examples": {
+          "beginner": "시장에 갔어요.",
+          "intermediate": "전통 시장이 재미있어요.",
+          "advanced": "시장에서 흥정하면 더 싸게 살 수 있어요.",
+          "master": "시장의 분위기와 사람 사는 냄새가 좋아요."
+        }
+      },
+      "en": {
+        "word": "market",
+        "explanation": "A place where many stores gather to sell goods.",
+        "examples": {
+          "beginner": "I went to the market.",
+          "intermediate": "Traditional markets are interesting.",
+          "advanced": "If you bargain at the market, you can buy cheaper.",
+          "master": "I like the atmosphere and the feeling of people living in the market."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[시장]",
+      "ipa": "[ɕidʑaŋ]"
+    }
+  },
+  {
+    "id": "onlain",
+    "korean": "온라인",
+    "romanization": "onlain",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "online", "modern"],
+    "translations": {
+      "ko": {
+        "word": "온라인",
+        "explanation": "인터넷을 통한 것.",
+        "examples": {
+          "beginner": "온라인으로 샀어요.",
+          "intermediate": "온라인 쇼핑이 편해요.",
+          "advanced": "온라인으로 주문하면 집까지 배달해 줘요.",
+          "master": "온라인 쇼핑은 편하지만 직접 보고 사는 것도 중요해요."
+        }
+      },
+      "en": {
+        "word": "online",
+        "explanation": "Through the internet.",
+        "examples": {
+          "beginner": "I bought it online.",
+          "intermediate": "Online shopping is convenient.",
+          "advanced": "If you order online, they deliver to your home.",
+          "master": "Online shopping is convenient, but seeing in person is also important."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[온라인]",
+      "ipa": "[onɾain]"
+    }
+  },
+  {
+    "id": "baedal",
+    "korean": "배달",
+    "romanization": "baedal",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "delivery", "basic"],
+    "translations": {
+      "ko": {
+        "word": "배달",
+        "explanation": "물건이나 음식을 가져다 주는 것.",
+        "examples": {
+          "beginner": "배달해 주세요.",
+          "intermediate": "배달이 빨라요.",
+          "advanced": "배달 앱으로 음식을 주문했어요.",
+          "master": "한국의 배달 문화는 정말 발달해 있어요."
+        }
+      },
+      "en": {
+        "word": "delivery",
+        "explanation": "Bringing goods or food.",
+        "examples": {
+          "beginner": "Please deliver it.",
+          "intermediate": "Delivery is fast.",
+          "advanced": "I ordered food through a delivery app.",
+          "master": "Korea's delivery culture is really developed."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[배달]",
+      "ipa": "[pɛdal]"
+    }
+  },
+  {
+    "id": "jumun",
+    "korean": "주문",
+    "romanization": "jumun",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "order", "basic"],
+    "translations": {
+      "ko": {
+        "word": "주문",
+        "explanation": "물건이나 음식을 사겠다고 요청하는 것.",
+        "examples": {
+          "beginner": "주문할게요.",
+          "intermediate": "주문하셨어요?",
+          "advanced": "온라인으로 주문하면 다음 날 와요.",
+          "master": "주문이 잘못 되면 고객 센터에 연락하세요."
+        }
+      },
+      "en": {
+        "word": "order",
+        "explanation": "Requesting to buy goods or food.",
+        "examples": {
+          "beginner": "I'll order.",
+          "intermediate": "Did you order?",
+          "advanced": "If you order online, it comes the next day.",
+          "master": "If the order is wrong, contact customer service."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[주문]",
+      "ipa": "[tɕumun]"
+    }
+  },
+  {
+    "id": "hwanbul",
+    "korean": "환불",
+    "romanization": "hwanbul",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["shopping", "refund", "return"],
+    "translations": {
+      "ko": {
+        "word": "환불",
+        "explanation": "산 물건을 돌려주고 돈을 돌려받는 것.",
+        "examples": {
+          "beginner": "환불해 주세요.",
+          "intermediate": "환불이 가능해요?",
+          "advanced": "영수증이 있으면 환불할 수 있어요.",
+          "master": "환불 정책을 미리 확인하고 구매하세요."
+        }
+      },
+      "en": {
+        "word": "refund",
+        "explanation": "Returning purchased goods and getting money back.",
+        "examples": {
+          "beginner": "Please refund this.",
+          "intermediate": "Is a refund possible?",
+          "advanced": "You can get a refund if you have the receipt.",
+          "master": "Check the refund policy before purchasing."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[환불]",
+      "ipa": "[hwanbul]"
+    }
+  },
+  {
+    "id": "gyohwan",
+    "korean": "교환",
+    "romanization": "gyohwan",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["shopping", "exchange", "return"],
+    "translations": {
+      "ko": {
+        "word": "교환",
+        "explanation": "산 물건을 다른 것으로 바꾸는 것.",
+        "examples": {
+          "beginner": "교환해 주세요.",
+          "intermediate": "사이즈 교환이 돼요?",
+          "advanced": "불량품은 무조건 교환해 줘요.",
+          "master": "교환할 때 상품 상태를 잘 확인하세요."
+        }
+      },
+      "en": {
+        "word": "exchange",
+        "explanation": "Changing purchased goods for something else.",
+        "examples": {
+          "beginner": "Please exchange this.",
+          "intermediate": "Can I exchange for a different size?",
+          "advanced": "They always exchange defective products.",
+          "master": "Check the product condition well when exchanging."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[교환]",
+      "ipa": "[kjoɦwan]"
+    }
+  },
+  {
+    "id": "saizeu",
+    "korean": "사이즈",
+    "romanization": "saijeu",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "size", "clothing"],
+    "translations": {
+      "ko": {
+        "word": "사이즈",
+        "explanation": "옷이나 신발의 크기.",
+        "examples": {
+          "beginner": "사이즈가 뭐예요?",
+          "intermediate": "이 사이즈 있어요?",
+          "advanced": "온라인으로 사면 사이즈가 안 맞을 수 있어요.",
+          "master": "브랜드마다 사이즈가 다르니까 꼭 입어보세요."
+        }
+      },
+      "en": {
+        "word": "size",
+        "explanation": "The size of clothes or shoes.",
+        "examples": {
+          "beginner": "What size is it?",
+          "intermediate": "Do you have this size?",
+          "advanced": "When buying online, the size might not fit.",
+          "master": "Sizes differ by brand, so be sure to try it on."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[사이즈]",
+      "ipa": "[saidzɯ]"
+    }
+  },
+  {
+    "id": "saek-shopping",
+    "korean": "색",
+    "romanization": "saek",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "color", "basic"],
+    "translations": {
+      "ko": {
+        "word": "색",
+        "explanation": "빨강, 파랑 등의 빛깔.",
+        "examples": {
+          "beginner": "무슨 색이에요?",
+          "intermediate": "다른 색 있어요?",
+          "advanced": "이 색이 저한테 잘 어울려요.",
+          "master": "색상에 따라 분위기가 완전히 달라져요."
+        }
+      },
+      "en": {
+        "word": "color",
+        "explanation": "Hues like red, blue, etc.",
+        "examples": {
+          "beginner": "What color is it?",
+          "intermediate": "Do you have other colors?",
+          "advanced": "This color suits me well.",
+          "master": "The atmosphere changes completely depending on the color."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[색]",
+      "ipa": "[sɛk]"
+    }
+  },
+  {
+    "id": "ibeo",
+    "korean": "입어 보다",
+    "romanization": "ibeo boda",
+    "partOfSpeech": "verb",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "trying on", "clothing"],
+    "translations": {
+      "ko": {
+        "word": "입어 보다",
+        "explanation": "옷을 사기 전에 미리 입어서 확인하다.",
+        "examples": {
+          "beginner": "입어 봐도 돼요?",
+          "intermediate": "이 옷 입어 볼게요.",
+          "advanced": "입어 보니까 생각보다 예뻐요.",
+          "master": "입어 보고 사야 후회하지 않아요."
+        }
+      },
+      "en": {
+        "word": "to try on",
+        "explanation": "To wear clothes to check before buying.",
+        "examples": {
+          "beginner": "Can I try this on?",
+          "intermediate": "I'll try on these clothes.",
+          "advanced": "It's prettier than I thought when I tried it on.",
+          "master": "You won't regret it if you try before buying."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[입어보다]",
+      "ipa": "[ibʌboda]"
+    }
+  },
+  {
+    "id": "talleusil",
+    "korean": "탈의실",
+    "romanization": "tareuisil",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["shopping", "fitting room", "clothing"],
+    "translations": {
+      "ko": {
+        "word": "탈의실",
+        "explanation": "옷을 갈아입는 방.",
+        "examples": {
+          "beginner": "탈의실 어디예요?",
+          "intermediate": "탈의실에서 입어 보세요.",
+          "advanced": "탈의실이 비어 있으면 들어가세요.",
+          "master": "탈의실에 거울이 있어서 확인하기 편해요."
+        }
+      },
+      "en": {
+        "word": "fitting room / changing room",
+        "explanation": "A room for changing clothes.",
+        "examples": {
+          "beginner": "Where is the fitting room?",
+          "intermediate": "Try it on in the fitting room.",
+          "advanced": "Go in if the fitting room is empty.",
+          "master": "It's easy to check because there's a mirror in the fitting room."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[탈의실]",
+      "ipa": "[tʰaɾɯiɕil]"
+    }
+  },
+  {
+    "id": "jangbagu",
+    "korean": "장바구니",
+    "romanization": "jangbaguni",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "cart", "basic"],
+    "translations": {
+      "ko": {
+        "word": "장바구니",
+        "explanation": "쇼핑할 때 물건을 담는 바구니. 온라인에서는 구매할 물건 목록.",
+        "examples": {
+          "beginner": "장바구니 주세요.",
+          "intermediate": "장바구니에 담았어요.",
+          "advanced": "온라인 장바구니에 물건이 많아요.",
+          "master": "장바구니에 담아 두고 세일 때 사면 좋아요."
+        }
+      },
+      "en": {
+        "word": "shopping cart / basket",
+        "explanation": "A basket for putting items when shopping. Online, it's the list of items to buy.",
+        "examples": {
+          "beginner": "Please give me a shopping basket.",
+          "intermediate": "I put it in the cart.",
+          "advanced": "There are many items in my online shopping cart.",
+          "master": "It's good to put items in the cart and buy during sales."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[장바구니]",
+      "ipa": "[tɕaŋbaɡuni]"
+    }
+  },
+  {
+    "id": "pojang",
+    "korean": "포장",
+    "romanization": "pojang",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "wrapping", "gift"],
+    "translations": {
+      "ko": {
+        "word": "포장",
+        "explanation": "물건을 싸거나 꾸미는 것.",
+        "examples": {
+          "beginner": "포장해 주세요.",
+          "intermediate": "선물용으로 포장해 주세요.",
+          "advanced": "예쁘게 포장하면 선물 받는 사람이 기뻐해요.",
+          "master": "과대 포장은 환경에 좋지 않아요."
+        }
+      },
+      "en": {
+        "word": "wrapping / packaging",
+        "explanation": "Wrapping or decorating items.",
+        "examples": {
+          "beginner": "Please wrap it.",
+          "intermediate": "Please wrap it as a gift.",
+          "advanced": "If you wrap it nicely, the recipient will be happy.",
+          "master": "Excessive packaging is not good for the environment."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[포장]",
+      "ipa": "[pʰodʑaŋ]"
+    }
+  },
+  {
+    "id": "seonmul",
+    "korean": "선물",
+    "romanization": "seonmul",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "gift", "basic"],
+    "translations": {
+      "ko": {
+        "word": "선물",
+        "explanation": "다른 사람에게 주는 물건.",
+        "examples": {
+          "beginner": "선물 감사해요.",
+          "intermediate": "생일 선물을 샀어요.",
+          "advanced": "선물은 마음이 중요해요.",
+          "master": "받는 사람의 취향을 생각하며 선물을 고르세요."
+        }
+      },
+      "en": {
+        "word": "gift / present",
+        "explanation": "An item given to another person.",
+        "examples": {
+          "beginner": "Thank you for the gift.",
+          "intermediate": "I bought a birthday present.",
+          "advanced": "The heart behind the gift is important.",
+          "master": "Choose a gift thinking about the recipient's taste."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[선물]",
+      "ipa": "[sʌnmul]"
+    }
+  },
+  {
+    "id": "sangpum",
+    "korean": "상품",
+    "romanization": "sangpum",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "product", "basic"],
+    "translations": {
+      "ko": {
+        "word": "상품",
+        "explanation": "팔기 위해 만든 물건.",
+        "examples": {
+          "beginner": "이 상품 좋아요.",
+          "intermediate": "신상품이 나왔어요.",
+          "advanced": "상품 후기를 읽고 구매하세요.",
+          "master": "상품의 품질과 가격을 비교해서 사세요."
+        }
+      },
+      "en": {
+        "word": "product / goods",
+        "explanation": "Items made for selling.",
+        "examples": {
+          "beginner": "This product is good.",
+          "intermediate": "A new product came out.",
+          "advanced": "Read product reviews before buying.",
+          "master": "Compare product quality and price before buying."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[상품]",
+      "ipa": "[saŋpʰum]"
+    }
+  },
+  {
+    "id": "jeungum",
+    "korean": "품질",
+    "romanization": "pumjil",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["shopping", "quality", "evaluation"],
+    "translations": {
+      "ko": {
+        "word": "품질",
+        "explanation": "물건이 얼마나 좋은지의 정도.",
+        "examples": {
+          "beginner": "품질이 좋아요.",
+          "intermediate": "품질이 나빠요.",
+          "advanced": "가격보다 품질을 더 중요하게 생각해요.",
+          "master": "품질 관리가 잘 된 제품은 오래 써요."
+        }
+      },
+      "en": {
+        "word": "quality",
+        "explanation": "The degree of how good an item is.",
+        "examples": {
+          "beginner": "The quality is good.",
+          "intermediate": "The quality is bad.",
+          "advanced": "I think quality is more important than price.",
+          "master": "Products with good quality control last long."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[정품]",
+      "ipa": "[tɕʌŋpʰum]"
+    }
+  },
+  {
+    "id": "gokaek",
+    "korean": "고객",
+    "romanization": "gogaek",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["shopping", "customer", "service"],
+    "translations": {
+      "ko": {
+        "word": "고객",
+        "explanation": "물건을 사는 사람. 손님.",
+        "examples": {
+          "beginner": "고객 센터예요.",
+          "intermediate": "고객님, 무엇을 도와드릴까요?",
+          "advanced": "고객 만족이 가장 중요해요.",
+          "master": "충성 고객을 만드는 것이 사업 성공의 비결이에요."
+        }
+      },
+      "en": {
+        "word": "customer / client",
+        "explanation": "A person who buys goods. A guest.",
+        "examples": {
+          "beginner": "It's the customer center.",
+          "intermediate": "Customer, how can I help you?",
+          "advanced": "Customer satisfaction is most important.",
+          "master": "Creating loyal customers is the secret to business success."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[고객]",
+      "ipa": "[koɡɛk]"
+    }
+  },
+  {
+    "id": "jeongweon",
+    "korean": "점원",
+    "romanization": "jeomwon",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "staff", "service"],
+    "translations": {
+      "ko": {
+        "word": "점원",
+        "explanation": "가게에서 일하는 사람.",
+        "examples": {
+          "beginner": "점원이 친절해요.",
+          "intermediate": "점원에게 물어보세요.",
+          "advanced": "점원이 상품에 대해 자세히 설명해 줬어요.",
+          "master": "친절한 점원이 있으면 다시 그 가게에 가게 돼요."
+        }
+      },
+      "en": {
+        "word": "store clerk / salesperson",
+        "explanation": "A person who works at a store.",
+        "examples": {
+          "beginner": "The clerk is kind.",
+          "intermediate": "Ask the clerk.",
+          "advanced": "The clerk explained the product in detail.",
+          "master": "If there's a kind clerk, you'll go back to that store."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[점원]",
+      "ipa": "[tɕʌmwʌn]"
+    }
+  },
+  {
+    "id": "seobiseu",
+    "korean": "서비스",
+    "romanization": "seobiseu",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "service", "free"],
+    "translations": {
+      "ko": {
+        "word": "서비스",
+        "explanation": "고객을 위한 도움. 또는 무료로 주는 것.",
+        "examples": {
+          "beginner": "서비스가 좋아요.",
+          "intermediate": "이건 서비스예요.",
+          "advanced": "서비스로 음료를 주셨어요.",
+          "master": "좋은 서비스는 고객을 다시 오게 만들어요."
+        }
+      },
+      "en": {
+        "word": "service / free item",
+        "explanation": "Help for customers. Or something given for free.",
+        "examples": {
+          "beginner": "The service is good.",
+          "intermediate": "This is on the house.",
+          "advanced": "They gave a drink as a service.",
+          "master": "Good service makes customers come back."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[서비스]",
+      "ipa": "[sʌbisɯ]"
+    }
+  },
+  {
+    "id": "seil",
+    "korean": "세일",
+    "romanization": "seil",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "sale", "discount"],
+    "translations": {
+      "ko": {
+        "word": "세일",
+        "explanation": "물건을 할인해서 파는 것.",
+        "examples": {
+          "beginner": "세일 해요?",
+          "intermediate": "세일 기간이에요.",
+          "advanced": "세일 때 필요한 것만 사세요.",
+          "master": "블랙 프라이데이 세일은 정말 할인이 많아요."
+        }
+      },
+      "en": {
+        "word": "sale",
+        "explanation": "Selling goods at a discount.",
+        "examples": {
+          "beginner": "Is there a sale?",
+          "intermediate": "It's a sale period.",
+          "advanced": "Only buy what you need during sales.",
+          "master": "Black Friday sales have really big discounts."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[세일]",
+      "ipa": "[seil]"
+    }
+  },
+  {
+    "id": "inggi",
+    "korean": "인기",
+    "romanization": "ingi",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "popularity", "trend"],
+    "translations": {
+      "ko": {
+        "word": "인기",
+        "explanation": "많은 사람들이 좋아하고 관심을 갖는 것.",
+        "examples": {
+          "beginner": "이거 인기 많아요.",
+          "intermediate": "인기 상품이에요.",
+          "advanced": "이 브랜드가 요즘 인기가 많아요.",
+          "master": "인기 있는 제품이 항상 나한테 맞는 것은 아니에요."
+        }
+      },
+      "en": {
+        "word": "popularity",
+        "explanation": "Something that many people like and are interested in.",
+        "examples": {
+          "beginner": "This is very popular.",
+          "intermediate": "It's a popular product.",
+          "advanced": "This brand is very popular these days.",
+          "master": "Popular products are not always right for me."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[인기]",
+      "ipa": "[iŋɡi]"
+    }
+  },
+  {
+    "id": "brandu",
+    "korean": "브랜드",
+    "romanization": "beulaendeu",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "brand", "modern"],
+    "translations": {
+      "ko": {
+        "word": "브랜드",
+        "explanation": "제품을 만드는 회사의 이름.",
+        "examples": {
+          "beginner": "어떤 브랜드예요?",
+          "intermediate": "좋아하는 브랜드가 있어요?",
+          "advanced": "브랜드보다 품질을 보고 사요.",
+          "master": "브랜드 가치는 신뢰에서 나와요."
+        }
+      },
+      "en": {
+        "word": "brand",
+        "explanation": "The name of a company that makes products.",
+        "examples": {
+          "beginner": "What brand is it?",
+          "intermediate": "Do you have a favorite brand?",
+          "advanced": "I buy based on quality rather than brand.",
+          "master": "Brand value comes from trust."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[브랜드]",
+      "ipa": "[pɯɾɛndɯ]"
+    }
+  },
+  {
+    "id": "maejin",
+    "korean": "품절",
+    "romanization": "pumjeol",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["shopping", "sold out", "stock"],
+    "translations": {
+      "ko": {
+        "word": "품절",
+        "explanation": "물건이 다 팔려서 없는 것.",
+        "examples": {
+          "beginner": "품절이에요.",
+          "intermediate": "인기가 많아서 품절됐어요.",
+          "advanced": "원하는 사이즈가 품절이라 아쉬워요.",
+          "master": "인기 상품은 빨리 품절되니까 서두르세요."
+        }
+      },
+      "en": {
+        "word": "sold out",
+        "explanation": "Items are all sold and none left.",
+        "examples": {
+          "beginner": "It's sold out.",
+          "intermediate": "It's sold out because it's popular.",
+          "advanced": "I'm disappointed the size I want is sold out.",
+          "master": "Hurry because popular items sell out quickly."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[매진]",
+      "ipa": "[mɛdʑin]"
+    }
+  },
+  {
+    "id": "jaego",
+    "korean": "재고",
+    "romanization": "jaego",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["shopping", "stock", "inventory"],
+    "translations": {
+      "ko": {
+        "word": "재고",
+        "explanation": "아직 팔리지 않고 남아 있는 물건.",
+        "examples": {
+          "beginner": "재고 있어요?",
+          "intermediate": "재고가 없어요.",
+          "advanced": "재고를 확인해 드릴게요.",
+          "master": "재고 관리가 잘 되면 손실이 줄어요."
+        }
+      },
+      "en": {
+        "word": "stock / inventory",
+        "explanation": "Items that remain unsold.",
+        "examples": {
+          "beginner": "Do you have stock?",
+          "intermediate": "There's no stock.",
+          "advanced": "I'll check the stock for you.",
+          "master": "Good inventory management reduces losses."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[재고]",
+      "ipa": "[tɕɛɡo]"
+    }
+  },
+  {
+    "id": "mulgap",
+    "korean": "물가",
+    "romanization": "mulga",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["shopping", "prices", "economy"],
+    "translations": {
+      "ko": {
+        "word": "물가",
+        "explanation": "전반적인 물건의 가격 수준.",
+        "examples": {
+          "beginner": "물가가 비싸요.",
+          "intermediate": "요즘 물가가 많이 올랐어요.",
+          "advanced": "물가 상승 때문에 생활비가 늘었어요.",
+          "master": "물가 안정은 경제의 중요한 목표예요."
+        }
+      },
+      "en": {
+        "word": "prices (general) / cost of living",
+        "explanation": "The general price level of goods.",
+        "examples": {
+          "beginner": "Prices are high.",
+          "intermediate": "Prices have risen a lot recently.",
+          "advanced": "Living expenses increased due to rising prices.",
+          "master": "Price stability is an important economic goal."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[물가]",
+      "ipa": "[mulɡa]"
+    }
+  },
+  {
+    "id": "guipun",
+    "korean": "쿠폰",
+    "romanization": "kupon",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "coupon", "discount"],
+    "translations": {
+      "ko": {
+        "word": "쿠폰",
+        "explanation": "할인이나 서비스를 받을 수 있는 종이나 코드.",
+        "examples": {
+          "beginner": "쿠폰 있어요.",
+          "intermediate": "쿠폰 사용할게요.",
+          "advanced": "앱에서 쿠폰을 받을 수 있어요.",
+          "master": "쿠폰을 잘 활용하면 돈을 많이 절약할 수 있어요."
+        }
+      },
+      "en": {
+        "word": "coupon",
+        "explanation": "Paper or code to receive discounts or services.",
+        "examples": {
+          "beginner": "I have a coupon.",
+          "intermediate": "I'll use a coupon.",
+          "advanced": "You can get coupons from the app.",
+          "master": "Using coupons well can save a lot of money."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[쿠폰]",
+      "ipa": "[kʰupʰon]"
+    }
+  },
+  {
+    "id": "poinneu",
+    "korean": "포인트",
+    "romanization": "pointeu",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "points", "reward"],
+    "translations": {
+      "ko": {
+        "word": "포인트",
+        "explanation": "구매할 때 쌓이는 점수. 나중에 현금처럼 사용 가능.",
+        "examples": {
+          "beginner": "포인트 적립할게요.",
+          "intermediate": "포인트로 결제할 수 있어요?",
+          "advanced": "포인트가 많이 쌓였어요.",
+          "master": "포인트 적립은 작은 절약의 시작이에요."
+        }
+      },
+      "en": {
+        "word": "points",
+        "explanation": "Points accumulated when purchasing. Can be used like cash later.",
+        "examples": {
+          "beginner": "I'll earn points.",
+          "intermediate": "Can I pay with points?",
+          "advanced": "I've accumulated a lot of points.",
+          "master": "Point accumulation is the start of small savings."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[포인트]",
+      "ipa": "[pʰointʰɯ]"
+    }
+  },
+  {
+    "id": "meombuseup",
+    "korean": "멤버십",
+    "romanization": "membeosip",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["shopping", "membership", "loyalty"],
+    "translations": {
+      "ko": {
+        "word": "멤버십",
+        "explanation": "특정 그룹의 회원이 되는 것. 특별 혜택을 받을 수 있음.",
+        "examples": {
+          "beginner": "멤버십 있어요?",
+          "intermediate": "멤버십 할인이 있어요.",
+          "advanced": "멤버십에 가입하면 혜택이 많아요.",
+          "master": "멤버십 연회비와 혜택을 비교해서 결정하세요."
+        }
+      },
+      "en": {
+        "word": "membership",
+        "explanation": "Becoming a member of a specific group. Can receive special benefits.",
+        "examples": {
+          "beginner": "Do you have a membership?",
+          "intermediate": "There's a membership discount.",
+          "advanced": "There are many benefits if you join the membership.",
+          "master": "Decide by comparing membership annual fees and benefits."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[멤버십]",
+      "ipa": "[membʌɕip]"
+    }
+  },
+  {
+    "id": "bidgyo",
+    "korean": "비교",
+    "romanization": "bigyo",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["shopping", "comparison", "decision"],
+    "translations": {
+      "ko": {
+        "word": "비교",
+        "explanation": "둘 이상의 것을 견주어 보는 것.",
+        "examples": {
+          "beginner": "비교해 보세요.",
+          "intermediate": "가격을 비교했어요.",
+          "advanced": "여러 사이트를 비교해서 가장 싼 곳에서 샀어요.",
+          "master": "비교 쇼핑을 하면 현명한 소비가 가능해요."
+        }
+      },
+      "en": {
+        "word": "comparison",
+        "explanation": "Looking at two or more things together.",
+        "examples": {
+          "beginner": "Please compare.",
+          "intermediate": "I compared the prices.",
+          "advanced": "I compared several sites and bought from the cheapest one.",
+          "master": "Comparison shopping enables smart consumption."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[비교]",
+      "ipa": "[piɡjo]"
+    }
+  },
+  {
+    "id": "hugi",
+    "korean": "후기",
+    "romanization": "hugi",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["shopping", "review", "feedback"],
+    "translations": {
+      "ko": {
+        "word": "후기",
+        "explanation": "제품을 사용한 후의 평가나 의견.",
+        "examples": {
+          "beginner": "후기를 봤어요.",
+          "intermediate": "후기가 좋아서 샀어요.",
+          "advanced": "온라인 쇼핑할 때 후기를 꼭 확인해요.",
+          "master": "솔직한 후기가 다른 소비자에게 도움이 돼요."
+        }
+      },
+      "en": {
+        "word": "review",
+        "explanation": "Evaluation or opinion after using a product.",
+        "examples": {
+          "beginner": "I saw the reviews.",
+          "intermediate": "I bought it because the reviews were good.",
+          "advanced": "I always check reviews when shopping online.",
+          "master": "Honest reviews help other consumers."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[후기]",
+      "ipa": "[huɡi]"
+    }
+  },
+  {
+    "id": "byeoljeom",
+    "korean": "별점",
+    "romanization": "byeoljeom",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["shopping", "rating", "feedback"],
+    "translations": {
+      "ko": {
+        "word": "별점",
+        "explanation": "별 개수로 표시하는 평가 점수.",
+        "examples": {
+          "beginner": "별점이 높아요.",
+          "intermediate": "별점 5점 만점이에요.",
+          "advanced": "별점을 보고 구매를 결정했어요.",
+          "master": "별점만 믿지 말고 후기 내용도 읽어 보세요."
+        }
+      },
+      "en": {
+        "word": "star rating",
+        "explanation": "Rating score displayed by number of stars.",
+        "examples": {
+          "beginner": "The star rating is high.",
+          "intermediate": "It's a 5-star rating out of 5.",
+          "advanced": "I decided to buy based on the star rating.",
+          "master": "Don't just trust star ratings, read the review content too."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[별점]",
+      "ipa": "[pjʌldʑʌm]"
+    }
+  },
+  {
+    "id": "chungdong",
+    "korean": "충동구매",
+    "romanization": "chungdonggumae",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["shopping", "impulse", "behavior"],
+    "translations": {
+      "ko": {
+        "word": "충동구매",
+        "explanation": "계획 없이 갑자기 사는 것.",
+        "examples": {
+          "beginner": "충동구매했어요.",
+          "intermediate": "충동구매를 하면 후회해요.",
+          "advanced": "충동구매를 줄이기 위해 쇼핑 리스트를 써요.",
+          "master": "충동구매는 잠깐의 만족 후 후회를 가져와요."
+        }
+      },
+      "en": {
+        "word": "impulse buying",
+        "explanation": "Buying suddenly without planning.",
+        "examples": {
+          "beginner": "I made an impulse purchase.",
+          "intermediate": "You'll regret impulse buying.",
+          "advanced": "I write a shopping list to reduce impulse buying.",
+          "master": "Impulse buying brings regret after momentary satisfaction."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[충동]",
+      "ipa": "[tɕʰuŋdoŋ]"
+    }
+  },
+  {
+    "id": "jeoryak",
+    "korean": "절약",
+    "romanization": "jeoryak",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["shopping", "saving", "money"],
+    "translations": {
+      "ko": {
+        "word": "절약",
+        "explanation": "돈이나 자원을 아껴 쓰는 것.",
+        "examples": {
+          "beginner": "절약해요.",
+          "intermediate": "돈을 절약하고 있어요.",
+          "advanced": "작은 것부터 절약하면 큰 돈이 모여요.",
+          "master": "절약은 부자가 되는 첫 번째 습관이에요."
+        }
+      },
+      "en": {
+        "word": "saving / economizing",
+        "explanation": "Using money or resources sparingly.",
+        "examples": {
+          "beginner": "I save.",
+          "intermediate": "I'm saving money.",
+          "advanced": "If you save from small things, big money accumulates.",
+          "master": "Saving is the first habit to become rich."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[저렴]",
+      "ipa": "[tɕʌɾjʌm]"
+    }
+  },
+  {
+    "id": "maejang",
+    "korean": "매장",
+    "romanization": "maejang",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["shopping", "store", "place"],
+    "translations": {
+      "ko": {
+        "word": "매장",
+        "explanation": "물건을 파는 가게나 상점.",
+        "examples": {
+          "beginner": "매장에 가요.",
+          "intermediate": "이 매장은 언제 문을 열어요?",
+          "advanced": "온라인보다 매장에서 직접 보고 사는 게 좋아요.",
+          "master": "요즘 오프라인 매장들이 체험형으로 바뀌고 있어요."
+        }
+      },
+      "en": {
+        "word": "store / shop",
+        "explanation": "A store or shop that sells items.",
+        "examples": {
+          "beginner": "I go to the store.",
+          "intermediate": "When does this store open?",
+          "advanced": "I prefer seeing things in person at the store rather than online.",
+          "master": "Offline stores are changing to experience-based formats these days."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[매장]",
+      "ipa": "[mɛdʑaŋ]"
+    }
+  },
+  {
+    "id": "haengsabum",
+    "korean": "행사품",
+    "romanization": "haengsabum",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["shopping", "sale", "promotion"],
+    "translations": {
+      "ko": {
+        "word": "행사품",
+        "explanation": "세일이나 이벤트로 할인하는 상품.",
+        "examples": {
+          "beginner": "행사품이에요.",
+          "intermediate": "이번 주 행사품은 뭐예요?",
+          "advanced": "행사품은 수량이 한정되어 있어요.",
+          "master": "행사품이라고 다 좋은 건 아니니까 잘 비교해 보세요."
+        }
+      },
+      "en": {
+        "word": "sale item / promotional product",
+        "explanation": "Products discounted through sales or events.",
+        "examples": {
+          "beginner": "It's a sale item.",
+          "intermediate": "What are the sale items this week?",
+          "advanced": "Sale items have limited quantities.",
+          "master": "Not all promotional items are good deals, so compare carefully."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[행사품]",
+      "ipa": "[hɛŋsapʰum]"
+    }
+  },
+  {
+    "id": "jeongga",
+    "korean": "정가",
+    "romanization": "jeongga",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["shopping", "price", "original"],
+    "translations": {
+      "ko": {
+        "word": "정가",
+        "explanation": "정해진 원래 가격.",
+        "examples": {
+          "beginner": "정가예요.",
+          "intermediate": "정가가 얼마예요?",
+          "advanced": "정가보다 30% 할인된 가격이에요.",
+          "master": "정가 대비 할인율을 확인하는 습관을 기르세요."
+        }
+      },
+      "en": {
+        "word": "regular price / list price",
+        "explanation": "The set original price.",
+        "examples": {
+          "beginner": "It's the regular price.",
+          "intermediate": "What's the regular price?",
+          "advanced": "It's 30% off from the regular price.",
+          "master": "Develop the habit of checking the discount rate compared to the regular price."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[정가]",
+      "ipa": "[tɕʌŋɡa]"
+    }
+  },
+  {
+    "id": "pyosigage",
+    "korean": "표시 가격",
+    "romanization": "pyosi gagyek",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["shopping", "price", "display"],
+    "translations": {
+      "ko": {
+        "word": "표시 가격",
+        "explanation": "상품에 표시된 가격.",
+        "examples": {
+          "beginner": "표시 가격이에요.",
+          "intermediate": "표시 가격이 할인된 가격이에요.",
+          "advanced": "표시 가격과 계산 금액이 다르면 말씀하세요.",
+          "master": "표시 가격이 없는 상품은 직원에게 문의하세요."
+        }
+      },
+      "en": {
+        "word": "displayed price / marked price",
+        "explanation": "The price shown on a product.",
+        "examples": {
+          "beginner": "It's the displayed price.",
+          "intermediate": "The displayed price is the discounted price.",
+          "advanced": "Let us know if the displayed price differs from the charged amount.",
+          "master": "Ask a staff member about products without displayed prices."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[표시가격]",
+      "ipa": "[pʰjoɕiɡaɡjʌk]"
+    }
+  }
+]

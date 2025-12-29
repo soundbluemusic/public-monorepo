@@ -1,0 +1,1861 @@
+[
+  {
+    "id": "annyeong",
+    "korean": "안녕",
+    "romanization": "annyeong",
+    "partOfSpeech": "interjection",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["casual", "informal", "daily"],
+    "translations": {
+      "ko": {
+        "word": "안녕",
+        "explanation": "친구나 또래 사이에서 사용하는 반말 인사. 상황에 따라 '만나서 반가워'와 '잘 가'의 의미로 모두 쓰인다. 격식 없는 상황에서 사용한다.",
+        "examples": {
+          "beginner": "안녕! 오랜만이야!",
+          "intermediate": "안녕, 내일 봐!",
+          "advanced": "어제 카페에서 우연히 민수를 만났는데, 서로 눈이 마주치자마자 반갑게 '안녕!'하고 인사했어.",
+          "master": "수업이 끝나고 친구들이 하나둘 교실을 나서면서 '안녕, 내일 봐!'라고 인사를 나눴다."
+        },
+        "variations": {
+          "formal": ["안녕하십니까, 오래간만입니다.", "안녕하세요, 그동안 잘 지내셨어요?"],
+          "casual": ["안녕, 잘 지냈어?", "안녕~ 뭐해?", "야, 안녕!"],
+          "short": ["ㅎㅇ", "안녕~"]
+        }
+      },
+      "en": {
+        "word": "Hi / Bye",
+        "explanation": "A casual greeting used among friends and peers. Can mean both 'hello' and 'goodbye' depending on context. Used in informal situations.",
+        "examples": {
+          "beginner": "안녕! 오랜만이야! - Hi! Long time no see!",
+          "intermediate": "안녕, 내일 봐! - Bye, see you tomorrow!",
+          "advanced": "I ran into Minsu at the café yesterday, and the moment our eyes met, we happily greeted each other with '안녕!'",
+          "master": "After class ended, friends left the classroom one by one, exchanging farewells like '안녕, 내일 봐!' (Bye, see you tomorrow!)"
+        },
+        "variations": {
+          "formal": ["Hello, it's been a while.", "Good day, how have you been?"],
+          "casual": ["Hey, what's up?", "Hi there!", "Yo, what's going on?"],
+          "short": ["Hi~", "Hey!", "Sup?"]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[안녕]",
+      "ipa": "[annjʌŋ]"
+    }
+  },
+  {
+    "id": "annyeonghaseyo",
+    "korean": "안녕하세요",
+    "romanization": "annyeonghaseyo",
+    "partOfSpeech": "interjection",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["formal", "polite", "daily"],
+    "translations": {
+      "ko": {
+        "word": "안녕하세요",
+        "explanation": "한국어의 기본적인 존댓말 인사. 누군가를 만나거나 대화를 시작할 때 사용한다. 대부분의 상황에 적절한 인사말이다.",
+        "examples": {
+          "beginner": "안녕하세요, 처음 뵙겠습니다.",
+          "intermediate": "안녕하세요! 잘 지내셨어요?",
+          "advanced": "면접장에 들어서자마자 면접관들을 향해 밝은 목소리로 \"안녕하세요, 오늘 면접에 참여하게 된 김지민입니다\"라고 인사했다.",
+          "master": "엘리베이터에서 이웃 주민을 만나면 항상 \"안녕하세요\"라고 인사하는 게 예의이다."
+        },
+        "variations": {
+          "formal": [
+            "안녕하십니까, 뵙게 되어 영광입니다.",
+            "안녕하세요, 만나 뵙게 되어 반갑습니다.",
+            "안녕하세요, 오늘 하루도 좋은 하루 되세요."
+          ],
+          "casual": ["안녕, 반가워!", "안녕! 잘 지내?"],
+          "short": ["안녕~", "하이!"]
+        }
+      },
+      "en": {
+        "word": "Hello",
+        "explanation": "The standard polite greeting in Korean. Used when meeting someone or starting a conversation. Appropriate for most situations.",
+        "examples": {
+          "beginner": "안녕하세요, 처음 뵙겠습니다. - Hello, nice to meet you.",
+          "intermediate": "안녕하세요! 잘 지내셨어요? - Hello! How have you been?",
+          "advanced": "As soon as I entered the interview room, I greeted the interviewers brightly: \"안녕하세요, I'm Kim Jimin, here for the interview today.\"",
+          "master": "It's polite to always greet your neighbors with \"안녕하세요\" when you meet them in the elevator."
+        },
+        "variations": {
+          "formal": [
+            "Good morning/afternoon, it's a pleasure to meet you.",
+            "Hello, I'm honored to make your acquaintance.",
+            "Greetings, I hope you're doing well."
+          ],
+          "casual": ["Hey! Nice to see you!", "Hi! How's it going?"],
+          "short": ["Hey~", "Hi!"]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[안녕하세요]",
+      "ipa": "[annjʌŋɦaseyo]"
+    }
+  },
+  {
+    "id": "gomapseumnida",
+    "korean": "감사합니다",
+    "romanization": "gamsahamnida",
+    "pronunciation": {
+      "korean": "[감사함니다]",
+      "ipa": "[kamsaɦamnida]"
+    },
+    "partOfSpeech": "interjection",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["formal", "polite", "gratitude"],
+    "translations": {
+      "ko": {
+        "word": "감사합니다",
+        "explanation": "감사를 표현하는 격식체 표현. '고마워요'보다 더 격식 있는 표현으로, 직장이나 어른에게 사용한다.",
+        "examples": {
+          "beginner": "도와주셔서 감사합니다.",
+          "intermediate": "감사합니다, 좋은 하루 되세요.",
+          "advanced": "프로젝트를 성공적으로 마칠 수 있도록 밤늦게까지 도와주신 팀원들께 진심으로 감사합니다.",
+          "master": "버스에서 자리를 양보해 주신 학생에게 할머니께서 \"정말 감사합니다, 요즘 젊은이들 참 착하네요\"라고 말씀하셨다."
+        },
+        "variations": {
+          "formal": [
+            "정말 감사드립니다.",
+            "진심으로 감사의 말씀을 드립니다.",
+            "감사합니다, 덕분에 큰 도움이 되었습니다."
+          ],
+          "casual": ["고마워!", "땡큐~", "고마워, 정말 도움이 됐어!"],
+          "short": ["ㄱㅅ", "감사~", "땡스!"]
+        }
+      },
+      "en": {
+        "word": "Thank you",
+        "explanation": "Formal way to express gratitude. More formal than '고마워요'. Used in professional settings and with elders.",
+        "examples": {
+          "beginner": "도와주셔서 감사합니다. - Thank you for helping me.",
+          "intermediate": "감사합니다, 좋은 하루 되세요. - Thank you, have a nice day.",
+          "advanced": "I sincerely thank all the team members who worked late into the night to help us successfully complete the project.",
+          "master": "When a student gave up their seat on the bus, the grandmother said, \"감사합니다 (Thank you), young people these days are so kind.\""
+        },
+        "variations": {
+          "formal": [
+            "I sincerely appreciate your help.",
+            "Thank you very much for your assistance.",
+            "I'm deeply grateful for your kindness."
+          ],
+          "casual": ["Thanks a lot!", "Thanks, you're the best!", "Thank you so much!"],
+          "short": ["Thx!", "Ty!", "Thanks~"]
+        }
+      }
+    }
+  },
+  {
+    "id": "annyeonghigaseyo",
+    "korean": "안녕히 가세요",
+    "romanization": "annyeonghi gaseyo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["formal", "farewell", "polite"],
+    "translations": {
+      "ko": {
+        "word": "안녕히 가세요",
+        "explanation": "떠나는 사람에게 하는 인사. 직역하면 '평안히 가세요'라는 뜻. 자신이 남고 상대가 떠날 때 사용한다. 반대 표현은 '안녕히 계세요'(평안히 계세요)이다.",
+        "examples": {
+          "beginner": "안녕히 가세요!",
+          "intermediate": "안녕히 가세요, 조심히 가세요.",
+          "advanced": "손님이 가게를 나설 때 직원이 문 앞까지 배웅하며 \"안녕히 가세요, 또 오세요!\"라고 인사했다.",
+          "master": "할머니 댁에서 하루를 보내고 떠나는 손자에게 할머니께서 대문 앞까지 나와 손을 흔들며 \"안녕히 가세요, 다음에 또 놀러 와\"라고 말씀하셨다."
+        },
+        "variations": {
+          "formal": [
+            "안녕히 가십시오, 좋은 하루 되세요.",
+            "조심히 돌아가세요, 다음에 또 뵙겠습니다."
+          ],
+          "casual": ["잘 가!", "가는 길 조심해~", "나중에 봐!"],
+          "short": ["잘 가~", "바이바이!", "빠이~"]
+        }
+      },
+      "en": {
+        "word": "Goodbye (to someone leaving)",
+        "explanation": "Said to someone who is leaving while you stay. Literally means 'go peacefully'. The counterpart is '안녕히 계세요' (stay peacefully).",
+        "examples": {
+          "beginner": "안녕히 가세요! - Goodbye!",
+          "intermediate": "안녕히 가세요, 조심히 가세요. - Goodbye, be careful on your way.",
+          "advanced": "When the customer was leaving the store, the employee walked them to the door and said, \"안녕히 가세요, please come again!\"",
+          "master": "After spending a day at grandma's house, grandma came out to the front gate, waving and saying, \"안녕히 가세요, come visit again soon.\""
+        },
+        "variations": {
+          "formal": ["Farewell, have a safe journey.", "Goodbye, I hope to see you again soon."],
+          "casual": ["See ya!", "Take care on your way!", "Later!"],
+          "short": ["Bye~", "Cya!", "Peace!"]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[안녕히가세요]",
+      "ipa": "[annjʌŋɦiɡaseyo]"
+    }
+  },
+  {
+    "id": "annyeonghigyeseyo",
+    "korean": "안녕히 계세요",
+    "romanization": "annyeonghi gyeseyo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["formal", "farewell", "polite"],
+    "translations": {
+      "ko": {
+        "word": "안녕히 계세요",
+        "explanation": "자신이 떠나고 상대가 남을 때 하는 인사. 직역하면 '평안히 계세요'라는 뜻. '안녕히 가세요'와 짝을 이루는 표현이다.",
+        "examples": {
+          "beginner": "안녕히 계세요, 다음에 또 올게요.",
+          "intermediate": "퇴근할 때 상사에게 '안녕히 계세요, 내일 뵙겠습니다'라고 인사했다.",
+          "advanced": "친척 집을 방문했다가 돌아갈 때 어르신들께 '안녕히 계세요'라고 인사하는 게 예의다.",
+          "master": "가게에서 나올 때 주인에게 '안녕히 계세요!'라고 말하면 좋은 인상을 줄 수 있다."
+        }
+      },
+      "en": {
+        "word": "Goodbye (when leaving)",
+        "explanation": "Said when you're the one leaving while others stay. Literally means 'stay peacefully'. Paired with '안녕히 가세요'.",
+        "examples": {
+          "beginner": "안녕히 계세요, 다음에 또 올게요. - Goodbye, I'll come again next time.",
+          "intermediate": "When leaving work, I said to my boss, 'Goodbye, see you tomorrow.'",
+          "advanced": "It's polite to say '안녕히 계세요' to elders when leaving relatives' houses.",
+          "master": "Saying '안녕히 계세요!' to the shop owner when leaving can make a good impression."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[안녕히계세요]",
+      "ipa": "[annjʌŋɦiɡjeseyo]"
+    }
+  },
+  {
+    "id": "gomawo",
+    "korean": "고마워",
+    "romanization": "gomawo",
+    "partOfSpeech": "interjection",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["casual", "gratitude", "informal"],
+    "translations": {
+      "ko": {
+        "word": "고마워",
+        "explanation": "친구나 친한 사이에서 쓰는 반말 감사 표현. '감사합니다'의 비격식 버전이다.",
+        "examples": {
+          "beginner": "고마워, 정말 도움이 됐어!",
+          "intermediate": "선물 고마워~",
+          "advanced": "힘들 때 옆에서 응원해 줘서 정말 고마워. 네가 없었으면 포기했을 거야.",
+          "master": "친구가 갑자기 커피를 사줘서 '어, 고마워! 웬일이야?'라고 물어봤다."
+        }
+      },
+      "en": {
+        "word": "Thanks (casual)",
+        "explanation": "Casual expression of gratitude used with friends or close acquaintances. Informal version of '감사합니다'.",
+        "examples": {
+          "beginner": "고마워, 정말 도움이 됐어! - Thanks, that really helped!",
+          "intermediate": "선물 고마워~ - Thanks for the gift~",
+          "advanced": "Thanks so much for cheering me on when times were tough. I would have given up without you.",
+          "master": "When my friend suddenly bought me coffee, I asked, 'Oh, thanks! What's the occasion?'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[고마워]",
+      "ipa": "[komawo]"
+    }
+  },
+  {
+    "id": "mianhae",
+    "korean": "미안해",
+    "romanization": "mianhae",
+    "partOfSpeech": "interjection",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["casual", "apology", "informal"],
+    "translations": {
+      "ko": {
+        "word": "미안해",
+        "explanation": "친구나 친한 사이에서 쓰는 반말 사과 표현. '죄송합니다'의 비격식 버전이다.",
+        "examples": {
+          "beginner": "미안해, 내가 잘못했어.",
+          "intermediate": "늦어서 미안해!",
+          "advanced": "약속에 늦어서 친구한테 '미안해, 차가 많이 막혔어'라고 사과했다.",
+          "master": "실수로 친구 물건을 떨어뜨렸을 때 바로 '미안해!'라고 말하는 게 좋다."
+        }
+      },
+      "en": {
+        "word": "Sorry (casual)",
+        "explanation": "Casual apology expression used with friends or close acquaintances. Informal version of '죄송합니다'.",
+        "examples": {
+          "beginner": "미안해, 내가 잘못했어. - Sorry, I was wrong.",
+          "intermediate": "늦어서 미안해! - Sorry for being late!",
+          "advanced": "I apologized to my friend for being late, saying 'Sorry, there was a lot of traffic.'",
+          "master": "When you accidentally drop your friend's things, it's good to say 'Sorry!' right away."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[미안해]",
+      "ipa": "[mianɦɛ]"
+    }
+  },
+  {
+    "id": "joesonghamnida",
+    "korean": "죄송합니다",
+    "romanization": "joesonghamnida",
+    "partOfSpeech": "interjection",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["formal", "apology", "polite"],
+    "translations": {
+      "ko": {
+        "word": "죄송합니다",
+        "explanation": "격식 있는 사과 표현. 직장에서나 어른에게 사용한다. '미안해요'보다 더 공손한 표현이다.",
+        "examples": {
+          "beginner": "죄송합니다, 늦었습니다.",
+          "intermediate": "정말 죄송합니다, 다시는 이런 일이 없도록 하겠습니다.",
+          "advanced": "회의에 늦은 사원이 '죄송합니다, 지하철이 지연되었습니다'라고 사과했다.",
+          "master": "실수를 했을 때 빨리 '죄송합니다'라고 사과하는 것이 문제를 줄이는 방법이다."
+        }
+      },
+      "en": {
+        "word": "I'm sorry (formal)",
+        "explanation": "Formal apology expression. Used in professional settings and with elders. More polite than '미안해요'.",
+        "examples": {
+          "beginner": "죄송합니다, 늦었습니다. - I'm sorry, I'm late.",
+          "intermediate": "정말 죄송합니다, 다시는 이런 일이 없도록 하겠습니다. - I'm truly sorry, I'll make sure this doesn't happen again.",
+          "advanced": "The employee who was late to the meeting apologized, 'I'm sorry, the subway was delayed.'",
+          "master": "Apologizing quickly with 'I'm sorry' when you make a mistake is a way to minimize problems."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[죄송함니다]",
+      "ipa": "[tɕwesoŋɦamnida]"
+    }
+  },
+  {
+    "id": "bangapseumnida",
+    "korean": "반갑습니다",
+    "romanization": "bangapseumnida",
+    "partOfSpeech": "interjection",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["formal", "greeting", "polite"],
+    "translations": {
+      "ko": {
+        "word": "반갑습니다",
+        "explanation": "만나서 기쁨을 표현하는 인사. 처음 만났을 때나 오랜만에 만났을 때 사용한다.",
+        "examples": {
+          "beginner": "만나서 반갑습니다.",
+          "intermediate": "처음 뵙겠습니다, 반갑습니다.",
+          "advanced": "신입 사원이 자기소개를 할 때 '안녕하세요, 이번에 입사한 김민수입니다. 반갑습니다'라고 인사했다.",
+          "master": "오랜만에 만난 선배에게 '선배님, 반갑습니다! 어떻게 지내셨어요?'라고 인사했다."
+        }
+      },
+      "en": {
+        "word": "Nice to meet you",
+        "explanation": "A greeting expressing pleasure at meeting someone. Used when meeting for the first time or after a long time.",
+        "examples": {
+          "beginner": "만나서 반갑습니다. - Nice to meet you.",
+          "intermediate": "처음 뵙겠습니다, 반갑습니다. - It's our first time meeting, nice to meet you.",
+          "advanced": "When introducing himself, the new employee said, 'Hello, I'm Kim Minsu, just joined the company. Nice to meet you.'",
+          "master": "I greeted my senior whom I hadn't seen in a while, 'Senior, nice to see you! How have you been?'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[반갑씀니다]",
+      "ipa": "[paŋɡapsɯmnida]"
+    }
+  },
+  {
+    "id": "jal-jinaesseosseoyo",
+    "korean": "잘 지내셨어요?",
+    "romanization": "jal jinaesseosseoyo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["greeting", "polite", "inquiry"],
+    "translations": {
+      "ko": {
+        "word": "잘 지내셨어요?",
+        "explanation": "상대방의 안부를 묻는 인사말.",
+        "examples": {
+          "beginner": "잘 지내셨어요?",
+          "intermediate": "오랜만이에요, 잘 지내셨어요?",
+          "advanced": "선배님, 그동안 잘 지내셨어요? 건강하시죠?",
+          "master": "몇 년 만에 만난 친척에게 반갑게 잘 지내셨어요? 라고 인사했다."
+        }
+      },
+      "en": {
+        "word": "How have you been?",
+        "explanation": "A greeting asking about someone's well-being.",
+        "examples": {
+          "beginner": "How have you been?",
+          "intermediate": "Long time no see, how have you been?",
+          "advanced": "Senior, how have you been? Are you healthy?",
+          "master": "I greeted a relative I met after several years with a warm 'How have you been?'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[잘지내썼어요]",
+      "ipa": "[tɕaldʑinɛsʌsʌjo]"
+    }
+  },
+  {
+    "id": "jal-jinaeyo",
+    "korean": "잘 지내요",
+    "romanization": "jal jinaeyo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["greeting", "response", "polite"],
+    "translations": {
+      "ko": {
+        "word": "잘 지내요",
+        "explanation": "잘 지내고 있다는 응답.",
+        "examples": {
+          "beginner": "네, 잘 지내요.",
+          "intermediate": "덕분에 잘 지내요.",
+          "advanced": "그동안 잘 지내요. 직장도 잘 다니고 있어요.",
+          "master": "여러 가지로 바쁘지만 잘 지내요. 감사합니다."
+        }
+      },
+      "en": {
+        "word": "I'm doing well",
+        "explanation": "A response saying that one is doing well.",
+        "examples": {
+          "beginner": "Yes, I'm doing well.",
+          "intermediate": "Thanks to you, I'm doing well.",
+          "advanced": "I'm doing well. Work is going great too.",
+          "master": "I'm busy with many things, but I'm doing well. Thank you."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[잘지내요]",
+      "ipa": "[tɕaldʑinɛjo]"
+    }
+  },
+  {
+    "id": "oraenmanieyo",
+    "korean": "오랜만이에요",
+    "romanization": "oraenmanieyo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["greeting", "reunion", "polite"],
+    "translations": {
+      "ko": {
+        "word": "오랜만이에요",
+        "explanation": "오랜 시간 만에 만났을 때 하는 인사.",
+        "examples": {
+          "beginner": "오랜만이에요!",
+          "intermediate": "정말 오랜만이에요, 어떻게 지냈어요?",
+          "advanced": "5년 만에 친구를 만나서 오랜만이에요! 라고 반갑게 인사했다.",
+          "master": "해외에 있다가 돌아온 친구에게 오랜만이에요! 많이 보고 싶었어요 라고 했다."
+        }
+      },
+      "en": {
+        "word": "Long time no see",
+        "explanation": "A greeting said when meeting after a long time.",
+        "examples": {
+          "beginner": "Long time no see!",
+          "intermediate": "It's really been a while, how have you been?",
+          "advanced": "I met my friend after 5 years and greeted them with 'Long time no see!'",
+          "master": "I said to my friend who returned from abroad, 'Long time no see! I missed you so much.'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[오랜마니에요]",
+      "ipa": "[oɾɛnmaniejo]"
+    }
+  },
+  {
+    "id": "cheoeum-boepgessseumnida",
+    "korean": "처음 뵙겠습니다",
+    "romanization": "cheoeum boepgessseumnida",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["formal", "greeting", "first meeting"],
+    "translations": {
+      "ko": {
+        "word": "처음 뵙겠습니다",
+        "explanation": "처음 만나는 사람에게 하는 격식 있는 인사.",
+        "examples": {
+          "beginner": "처음 뵙겠습니다.",
+          "intermediate": "안녕하세요, 처음 뵙겠습니다. 김민수입니다.",
+          "advanced": "면접에서 처음 뵙겠습니다, 오늘 면접 기회를 주셔서 감사합니다 라고 인사했다.",
+          "master": "비즈니스 미팅에서 처음 만나는 파트너에게 처음 뵙겠습니다 라고 정중히 인사했다."
+        }
+      },
+      "en": {
+        "word": "Nice to meet you (formal, first time)",
+        "explanation": "A formal greeting when meeting someone for the first time.",
+        "examples": {
+          "beginner": "Nice to meet you.",
+          "intermediate": "Hello, nice to meet you. I'm Kim Minsu.",
+          "advanced": "At the interview, I said 'Nice to meet you, thank you for giving me this interview opportunity.'",
+          "master": "I politely greeted a new business partner with 'Nice to meet you' at the meeting."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[처음뵙겠씀니다]",
+      "ipa": "[tɕʰʌɯmbwepketsɯmnida]"
+    }
+  },
+  {
+    "id": "joheun-achim",
+    "korean": "좋은 아침",
+    "romanization": "joheun achim",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["morning", "greeting", "daily"],
+    "translations": {
+      "ko": {
+        "word": "좋은 아침",
+        "explanation": "아침에 하는 인사말. 영어 'Good morning'에서 온 표현.",
+        "examples": {
+          "beginner": "좋은 아침이에요!",
+          "intermediate": "좋은 아침! 오늘 하루도 화이팅!",
+          "advanced": "출근해서 동료들에게 좋은 아침! 이라고 밝게 인사했다.",
+          "master": "매일 아침 일어나면 가족들에게 좋은 아침! 이라고 인사하는 습관이 있다."
+        }
+      },
+      "en": {
+        "word": "Good morning",
+        "explanation": "A morning greeting. Derived from the English 'Good morning'.",
+        "examples": {
+          "beginner": "Good morning!",
+          "intermediate": "Good morning! Have a great day!",
+          "advanced": "I brightly greeted my colleagues with 'Good morning!' when I arrived at work.",
+          "master": "I have a habit of saying 'Good morning!' to my family every morning."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[조은아침]",
+      "ipa": "[tɕoɯnatɕʰim]"
+    }
+  },
+  {
+    "id": "annyeonghi-jumuseyo",
+    "korean": "안녕히 주무세요",
+    "romanization": "annyeonghi jumuseyo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["night", "farewell", "polite"],
+    "translations": {
+      "ko": {
+        "word": "안녕히 주무세요",
+        "explanation": "밤에 헤어질 때 하는 인사. 잘 자라는 존댓말.",
+        "examples": {
+          "beginner": "안녕히 주무세요.",
+          "intermediate": "오늘 수고하셨어요, 안녕히 주무세요.",
+          "advanced": "부모님께 안녕히 주무세요 라고 인사하고 방으로 들어갔다.",
+          "master": "어르신께 전화를 끊기 전에 안녕히 주무세요 라고 인사드렸다."
+        }
+      },
+      "en": {
+        "word": "Good night (formal)",
+        "explanation": "A polite farewell at night. The polite way of saying sleep well.",
+        "examples": {
+          "beginner": "Good night.",
+          "intermediate": "You worked hard today, good night.",
+          "advanced": "I said 'Good night' to my parents and went to my room.",
+          "master": "I said 'Good night' to the elder before hanging up the phone."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[안녕히주무세요]",
+      "ipa": "[annjʌŋɦidʑumuseyo]"
+    }
+  },
+  {
+    "id": "jal-ja",
+    "korean": "잘 자",
+    "romanization": "jal ja",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["night", "casual", "informal"],
+    "translations": {
+      "ko": {
+        "word": "잘 자",
+        "explanation": "친구에게 하는 반말 인사. 잠자리에 들기 전에 사용.",
+        "examples": {
+          "beginner": "잘 자!",
+          "intermediate": "오늘도 수고했어, 잘 자~",
+          "advanced": "전화를 끊으면서 친구에게 잘 자, 내일 봐! 라고 했다.",
+          "master": "메시지로 좋은 꿈 꿔, 잘 자! 라고 보냈다."
+        }
+      },
+      "en": {
+        "word": "Good night (casual)",
+        "explanation": "Casual farewell to friends. Used before going to bed.",
+        "examples": {
+          "beginner": "Good night!",
+          "intermediate": "You did well today, good night~",
+          "advanced": "While hanging up, I said to my friend, 'Good night, see you tomorrow!'",
+          "master": "I sent a message saying 'Sweet dreams, good night!'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[잘자]",
+      "ipa": "[tɕaldʑa]"
+    }
+  },
+  {
+    "id": "sillyehamnida",
+    "korean": "실례합니다",
+    "romanization": "sillyehamnida",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["polite", "excuse", "formal"],
+    "translations": {
+      "ko": {
+        "word": "실례합니다",
+        "explanation": "남에게 불편을 끼칠 때 하는 공손한 표현.",
+        "examples": {
+          "beginner": "실례합니다, 지나가도 될까요?",
+          "intermediate": "실례합니다, 잠시 시간 되시나요?",
+          "advanced": "길을 물어볼 때 실례합니다, 이 근처에 은행이 어디 있나요? 라고 물었다.",
+          "master": "회의 중에 들어갈 때 실례합니다 라고 말하고 조용히 들어갔다."
+        }
+      },
+      "en": {
+        "word": "Excuse me",
+        "explanation": "A polite expression when causing inconvenience to others.",
+        "examples": {
+          "beginner": "Excuse me, may I pass through?",
+          "intermediate": "Excuse me, do you have a moment?",
+          "advanced": "When asking for directions, I asked 'Excuse me, where is the bank nearby?'",
+          "master": "When entering during a meeting, I said 'Excuse me' and quietly entered."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[실례함니다]",
+      "ipa": "[ɕilʎeɦamnida]"
+    }
+  },
+  {
+    "id": "jamsimanyo",
+    "korean": "잠시만요",
+    "romanization": "jamsimanyo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["request", "wait", "polite"],
+    "translations": {
+      "ko": {
+        "word": "잠시만요",
+        "explanation": "잠깐 기다려 달라고 요청할 때 사용.",
+        "examples": {
+          "beginner": "잠시만요!",
+          "intermediate": "잠시만요, 지금 확인해 볼게요.",
+          "advanced": "전화를 받으면서 잠시만요, 다른 분이 전화 중이에요 라고 말했다.",
+          "master": "가게에서 물건을 찾을 때 잠시만요, 금방 가져올게요 라고 했다."
+        }
+      },
+      "en": {
+        "word": "Just a moment",
+        "explanation": "Used when asking someone to wait briefly.",
+        "examples": {
+          "beginner": "Just a moment!",
+          "intermediate": "Just a moment, let me check.",
+          "advanced": "While answering the phone, I said 'Just a moment, someone else is on the line.'",
+          "master": "At the store, when looking for items, I said 'Just a moment, I'll bring it right away.'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[잠시만요]",
+      "ipa": "[tɕamɕimanjo]"
+    }
+  },
+  {
+    "id": "yeoboseyo",
+    "korean": "여보세요",
+    "romanization": "yeoboseyo",
+    "partOfSpeech": "interjection",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["phone", "greeting", "call"],
+    "translations": {
+      "ko": {
+        "word": "여보세요",
+        "explanation": "전화를 받을 때 하는 인사.",
+        "examples": {
+          "beginner": "여보세요?",
+          "intermediate": "여보세요, 누구세요?",
+          "advanced": "모르는 번호로 전화가 와서 여보세요? 라고 받았다.",
+          "master": "회사 전화를 받을 때 여보세요, OO 회사입니다 라고 말한다."
+        }
+      },
+      "en": {
+        "word": "Hello (on the phone)",
+        "explanation": "A greeting when answering the phone.",
+        "examples": {
+          "beginner": "Hello?",
+          "intermediate": "Hello, who is this?",
+          "advanced": "When I got a call from an unknown number, I answered 'Hello?'",
+          "master": "When answering the company phone, you say 'Hello, this is OO company.'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[여보세요]",
+      "ipa": "[jʌboseyo]"
+    }
+  },
+  {
+    "id": "sugohaseoyo",
+    "korean": "수고하세요",
+    "romanization": "sugohaseoyo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "farewell", "encouragement"],
+    "translations": {
+      "ko": {
+        "word": "수고하세요",
+        "explanation": "일하는 사람에게 하는 인사. 격려의 의미.",
+        "examples": {
+          "beginner": "수고하세요!",
+          "intermediate": "오늘도 수고하세요.",
+          "advanced": "편의점 직원에게 물건을 사고 수고하세요! 라고 인사했다.",
+          "master": "택배 기사님이 물건을 전해주실 때 감사합니다, 수고하세요! 라고 말한다."
+        }
+      },
+      "en": {
+        "word": "Keep up the good work",
+        "explanation": "A greeting to people who are working. Has an encouraging meaning.",
+        "examples": {
+          "beginner": "Keep up the good work!",
+          "intermediate": "Keep up the good work today too.",
+          "advanced": "After buying something at the convenience store, I said 'Keep up the good work!' to the staff.",
+          "master": "When the delivery person hands over a package, you say 'Thank you, keep up the good work!'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[수고하세요]",
+      "ipa": "[suɡoɦaseyo]"
+    }
+  },
+  {
+    "id": "sugohasseosseoyo",
+    "korean": "수고하셨어요",
+    "romanization": "sugohasseosseoyo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "appreciation", "polite"],
+    "translations": {
+      "ko": {
+        "word": "수고하셨어요",
+        "explanation": "일을 마친 사람에게 하는 인사. 노고에 감사하는 표현.",
+        "examples": {
+          "beginner": "수고하셨어요!",
+          "intermediate": "오늘 정말 수고하셨어요.",
+          "advanced": "퇴근할 때 동료들에게 수고하셨어요! 라고 인사했다.",
+          "master": "회의가 끝나고 발표자에게 수고하셨어요, 발표 잘 들었습니다 라고 말했다."
+        }
+      },
+      "en": {
+        "word": "You worked hard / Good job",
+        "explanation": "A greeting to someone who has finished work. Expressing gratitude for their effort.",
+        "examples": {
+          "beginner": "You worked hard!",
+          "intermediate": "You really worked hard today.",
+          "advanced": "When leaving work, I said 'You worked hard!' to my colleagues.",
+          "master": "After the meeting, I told the presenter 'You worked hard, I enjoyed the presentation.'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[수고하셨어요]",
+      "ipa": "[suɡoɦaɕʌsʌjo]"
+    }
+  },
+  {
+    "id": "gamsahaeyo",
+    "korean": "감사해요",
+    "romanization": "gamsahaeyo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["gratitude", "polite", "semi-formal"],
+    "translations": {
+      "ko": {
+        "word": "감사해요",
+        "explanation": "감사를 표현하는 반존댓말. 감사합니다보다 조금 친근한 느낌.",
+        "examples": {
+          "beginner": "감사해요!",
+          "intermediate": "도와주셔서 감사해요.",
+          "advanced": "선생님이 책을 빌려주셔서 감사해요 라고 말했다.",
+          "master": "친한 선배에게 조언해 주셔서 감사해요 라고 인사했다."
+        }
+      },
+      "en": {
+        "word": "Thank you (semi-formal)",
+        "explanation": "Expressing gratitude in a semi-formal way. Slightly more friendly than 감사합니다.",
+        "examples": {
+          "beginner": "Thank you!",
+          "intermediate": "Thank you for helping.",
+          "advanced": "I said 'Thank you for lending me the book' to the teacher.",
+          "master": "I thanked my close senior by saying 'Thank you for the advice.'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[감사해요]",
+      "ipa": "[kamsaɦɛjo]"
+    }
+  },
+  {
+    "id": "cheonmaneyo",
+    "korean": "천만에요",
+    "romanization": "cheonmaneyo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["response", "polite", "humble"],
+    "translations": {
+      "ko": {
+        "word": "천만에요",
+        "explanation": "감사에 대한 응답. 영어의 'You're welcome'에 해당.",
+        "examples": {
+          "beginner": "천만에요.",
+          "intermediate": "아니에요, 천만에요.",
+          "advanced": "감사합니다라고 하자 천만에요, 별 말씀을요 라고 대답했다.",
+          "master": "도움을 주고 나서 상대가 감사하자 천만에요, 언제든지요 라고 했다."
+        }
+      },
+      "en": {
+        "word": "You're welcome",
+        "explanation": "A response to thanks. Equivalent to English 'You're welcome'.",
+        "examples": {
+          "beginner": "You're welcome.",
+          "intermediate": "No, you're welcome.",
+          "advanced": "When they said 'Thank you', I replied 'You're welcome, don't mention it.'",
+          "master": "After helping, when they thanked me, I said 'You're welcome, anytime.'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[천만에요]",
+      "ipa": "[tɕʰʌnmanejo]"
+    }
+  },
+  {
+    "id": "anieyo",
+    "korean": "아니에요",
+    "romanization": "anieyo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["response", "humble", "polite"],
+    "translations": {
+      "ko": {
+        "word": "아니에요",
+        "explanation": "겸손하게 감사나 칭찬에 응답하는 표현. '별 말씀을요'와 비슷.",
+        "examples": {
+          "beginner": "아니에요~",
+          "intermediate": "아니에요, 당연한 거예요.",
+          "advanced": "발표 잘했다는 칭찬에 아니에요, 아직 부족해요 라고 겸손하게 대답했다.",
+          "master": "도움을 줬을 때 감사하다고 하면 아니에요, 제가 당연히 해야 할 일이에요 라고 한다."
+        }
+      },
+      "en": {
+        "word": "Not at all / It's nothing",
+        "explanation": "A humble response to thanks or compliments. Similar to 'Don't mention it'.",
+        "examples": {
+          "beginner": "Not at all~",
+          "intermediate": "Not at all, it's nothing.",
+          "advanced": "When complimented on my presentation, I humbly replied 'Not at all, I still have much to learn.'",
+          "master": "When thanked for helping, you say 'Not at all, it's what I should do.'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아니에요]",
+      "ipa": "[aniejo]"
+    }
+  },
+  {
+    "id": "gwaenchanayo",
+    "korean": "괜찮아요",
+    "romanization": "gwaenchanayo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["response", "reassurance", "polite"],
+    "translations": {
+      "ko": {
+        "word": "괜찮아요",
+        "explanation": "사과에 대한 응답 또는 상태가 좋다는 표현.",
+        "examples": {
+          "beginner": "괜찮아요.",
+          "intermediate": "아니에요, 괜찮아요.",
+          "advanced": "친구가 실수로 커피를 쏟았을 때 괜찮아요, 조심해요 라고 말했다.",
+          "master": "몸이 안 좋냐는 질문에 괜찮아요, 좀 피곤할 뿐이에요 라고 대답했다."
+        }
+      },
+      "en": {
+        "word": "It's okay / I'm fine",
+        "explanation": "A response to an apology or saying that one's condition is good.",
+        "examples": {
+          "beginner": "It's okay.",
+          "intermediate": "No, it's okay.",
+          "advanced": "When my friend accidentally spilled coffee, I said 'It's okay, be careful.'",
+          "master": "When asked if I was unwell, I replied 'I'm fine, just a bit tired.'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[괜찮아요]",
+      "ipa": "[kwɛntɕʰanajo]"
+    }
+  },
+  {
+    "id": "mwo-haeyo",
+    "korean": "뭐 해요?",
+    "romanization": "mwo haeyo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["casual", "inquiry", "conversation"],
+    "translations": {
+      "ko": {
+        "word": "뭐 해요?",
+        "explanation": "상대가 무엇을 하고 있는지 물어보는 표현. 대화 시작에 많이 씀.",
+        "examples": {
+          "beginner": "지금 뭐 해요?",
+          "intermediate": "오늘 저녁에 뭐 해요?",
+          "advanced": "친구에게 전화해서 지금 뭐 해? 바쁘면 나중에 전화할게 라고 물었다.",
+          "master": "메시지로 뭐 해? 심심한데 나올래? 라고 보냈다."
+        }
+      },
+      "en": {
+        "word": "What are you doing?",
+        "explanation": "Asking what someone is doing. Often used to start a conversation.",
+        "examples": {
+          "beginner": "What are you doing now?",
+          "intermediate": "What are you doing tonight?",
+          "advanced": "I called my friend and asked 'What are you doing? I'll call back if you're busy.'",
+          "master": "I sent a message saying 'What are you doing? I'm bored, want to hang out?'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[뭐해요]",
+      "ipa": "[mwohɛjo]"
+    }
+  },
+  {
+    "id": "bap-meogeoyo",
+    "korean": "밥 먹었어요?",
+    "romanization": "bap meogeosseoyo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["korean culture", "greeting", "care"],
+    "translations": {
+      "ko": {
+        "word": "밥 먹었어요?",
+        "explanation": "한국식 인사. 상대를 걱정하고 챙기는 의미가 담겨 있음.",
+        "examples": {
+          "beginner": "밥 먹었어요?",
+          "intermediate": "점심 먹었어요? 안 먹었으면 같이 먹어요.",
+          "advanced": "한국에서는 밥 먹었어요?가 일종의 인사말로 쓰인다.",
+          "master": "어르신들이 밥 먹었어?라고 물어보시면 잘 챙겨 먹고 있어요라고 대답한다."
+        }
+      },
+      "en": {
+        "word": "Have you eaten?",
+        "explanation": "A Korean-style greeting. Contains a meaning of caring for the other person.",
+        "examples": {
+          "beginner": "Have you eaten?",
+          "intermediate": "Have you had lunch? Let's eat together if you haven't.",
+          "advanced": "In Korea, 'Have you eaten?' is used as a kind of greeting.",
+          "master": "When elders ask 'Have you eaten?', you reply 'Yes, I'm eating well.'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[밥먹었어요]",
+      "ipa": "[pammʌɡʌsʌjo]"
+    }
+  },
+  {
+    "id": "eodiga-ayo",
+    "korean": "어디 가요?",
+    "romanization": "eodi gayo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["casual", "greeting", "korean culture"],
+    "translations": {
+      "ko": {
+        "word": "어디 가요?",
+        "explanation": "어디로 가는지 묻는 인사. 한국에서 가벼운 인사로 씀.",
+        "examples": {
+          "beginner": "어디 가요?",
+          "intermediate": "어디 가세요? 날씨 좋네요!",
+          "advanced": "이웃을 마주쳤을 때 어디 가세요?라고 가볍게 인사했다.",
+          "master": "한국에서 어디 가요?는 진짜 목적지를 묻기보다는 인사의 의미가 크다."
+        }
+      },
+      "en": {
+        "word": "Where are you going?",
+        "explanation": "Asking where someone is going. Used as a casual greeting in Korea.",
+        "examples": {
+          "beginner": "Where are you going?",
+          "intermediate": "Where are you going? Nice weather!",
+          "advanced": "When I ran into my neighbor, I greeted them with 'Where are you going?'",
+          "master": "In Korea, 'Where are you going?' is more of a greeting than an actual question."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[어디가요]",
+      "ipa": "[ʌdiɡajo]"
+    }
+  },
+  {
+    "id": "josimhaseyo",
+    "korean": "조심하세요",
+    "romanization": "josimhaseyo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["care", "farewell", "polite"],
+    "translations": {
+      "ko": {
+        "word": "조심하세요",
+        "explanation": "상대에게 조심하라고 당부하는 인사말.",
+        "examples": {
+          "beginner": "조심하세요!",
+          "intermediate": "비가 오니까 조심하세요.",
+          "advanced": "밤늦게 돌아가는 친구에게 조심해서 가, 도착하면 연락해 라고 말했다.",
+          "master": "어르신이 나가실 때 조심하세요, 건강하세요! 라고 인사드린다."
+        }
+      },
+      "en": {
+        "word": "Be careful / Take care",
+        "explanation": "Telling someone to be careful. A caring farewell.",
+        "examples": {
+          "beginner": "Be careful!",
+          "intermediate": "It's raining, so be careful.",
+          "advanced": "To my friend leaving late at night, I said 'Be careful, let me know when you arrive.'",
+          "master": "When elders are leaving, you say 'Take care, stay healthy!'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[조심하세요]",
+      "ipa": "[tɕoɕimɦaseyo]"
+    }
+  },
+  {
+    "id": "geunyang",
+    "korean": "그냥",
+    "romanization": "geunyang",
+    "partOfSpeech": "adverb",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["casual", "response", "filler"],
+    "translations": {
+      "ko": {
+        "word": "그냥",
+        "explanation": "특별한 이유 없이. 대화에서 자주 사용되는 표현.",
+        "examples": {
+          "beginner": "그냥요.",
+          "intermediate": "그냥 전화했어.",
+          "advanced": "왜 왔냐고 물어보니까 그냥, 보고 싶어서 라고 대답했다.",
+          "master": "왜 그랬어?라는 질문에 그냥, 별 이유 없어라고 말할 때 쓴다."
+        }
+      },
+      "en": {
+        "word": "Just / For no particular reason",
+        "explanation": "Without any particular reason. A commonly used filler in conversation.",
+        "examples": {
+          "beginner": "Just because.",
+          "intermediate": "I just called.",
+          "advanced": "When asked why I came, I said 'Just because, I missed you.'",
+          "master": "When asked 'Why did you do that?', you can say 'Just because, no particular reason.'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[그냥]",
+      "ipa": "[kɯnjaŋ]"
+    }
+  },
+  {
+    "id": "ne-yes",
+    "korean": "네",
+    "romanization": "ne",
+    "partOfSpeech": "interjection",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["response", "affirmation", "polite"],
+    "translations": {
+      "ko": {
+        "word": "네",
+        "explanation": "긍정의 대답. 상대의 말을 듣고 있다는 표시로도 씀.",
+        "examples": {
+          "beginner": "네, 알겠어요.",
+          "intermediate": "네, 그렇게 할게요.",
+          "advanced": "선생님 말씀에 네, 이해했습니다 라고 대답했다.",
+          "master": "전화 통화에서 상대 말에 네, 네 하면서 듣고 있다는 것을 표시한다."
+        }
+      },
+      "en": {
+        "word": "Yes",
+        "explanation": "An affirmative response. Also used to show you're listening.",
+        "examples": {
+          "beginner": "Yes, I understand.",
+          "intermediate": "Yes, I'll do that.",
+          "advanced": "I replied to the teacher 'Yes, I understood.'",
+          "master": "During phone calls, you say '네, 네' to show you're listening."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[네]",
+      "ipa": "[ne]"
+    }
+  },
+  {
+    "id": "aniyo",
+    "korean": "아니요",
+    "romanization": "aniyo",
+    "partOfSpeech": "interjection",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["response", "negation", "polite"],
+    "translations": {
+      "ko": {
+        "word": "아니요",
+        "explanation": "부정의 대답. 공손한 거절에도 사용됨.",
+        "examples": {
+          "beginner": "아니요.",
+          "intermediate": "아니요, 괜찮아요.",
+          "advanced": "커피 드릴까요?라는 질문에 아니요, 괜찮아요 라고 대답했다.",
+          "master": "도움이 필요하세요?라고 물었을 때 아니요, 혼자 할 수 있어요 라고 정중히 거절했다."
+        }
+      },
+      "en": {
+        "word": "No",
+        "explanation": "A negative response. Also used for polite refusal.",
+        "examples": {
+          "beginner": "No.",
+          "intermediate": "No, it's okay.",
+          "advanced": "When asked 'Would you like some coffee?', I replied 'No, I'm fine.'",
+          "master": "When asked 'Do you need help?', I politely declined saying 'No, I can do it myself.'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아니요]",
+      "ipa": "[anijo]"
+    }
+  },
+  {
+    "id": "eung",
+    "korean": "응",
+    "romanization": "eung",
+    "partOfSpeech": "interjection",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["casual", "affirmation", "informal"],
+    "translations": {
+      "ko": {
+        "word": "응",
+        "explanation": "반말로 하는 긍정 대답. 친구나 아랫사람에게 사용.",
+        "examples": {
+          "beginner": "응!",
+          "intermediate": "응, 알겠어.",
+          "advanced": "친구가 내일 만날래?라고 물어서 응, 좋아 라고 대답했다.",
+          "master": "카톡에서 친구에게 응~, ㅇㅇ 등으로 짧게 대답할 수 있다."
+        }
+      },
+      "en": {
+        "word": "Yeah (casual yes)",
+        "explanation": "Casual affirmative response. Used with friends or younger people.",
+        "examples": {
+          "beginner": "Yeah!",
+          "intermediate": "Yeah, got it.",
+          "advanced": "When my friend asked 'Want to meet tomorrow?', I replied 'Yeah, sure.'",
+          "master": "On chat, you can reply briefly to friends with '응~' or 'ㅇㅇ'."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[응]",
+      "ipa": "[ɯŋ]"
+    }
+  },
+  {
+    "id": "aniya",
+    "korean": "아니야",
+    "romanization": "aniya",
+    "partOfSpeech": "interjection",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["casual", "negation", "informal"],
+    "translations": {
+      "ko": {
+        "word": "아니야",
+        "explanation": "반말로 하는 부정 대답. 친구나 아랫사람에게 사용.",
+        "examples": {
+          "beginner": "아니야.",
+          "intermediate": "아니야, 그게 아니라...",
+          "advanced": "친구가 화났어?라고 물어서 아니야, 괜찮아 라고 대답했다.",
+          "master": "오해를 풀 때 아니야, 내 말은 그게 아니었어 라고 설명한다."
+        }
+      },
+      "en": {
+        "word": "No / Nope (casual)",
+        "explanation": "Casual negative response. Used with friends or younger people.",
+        "examples": {
+          "beginner": "No.",
+          "intermediate": "No, that's not it...",
+          "advanced": "When my friend asked 'Are you upset?', I replied 'No, I'm fine.'",
+          "master": "When clearing up misunderstandings, you say 'No, that's not what I meant.'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아니야]",
+      "ipa": "[anija]"
+    }
+  },
+  {
+    "id": "jeongmal",
+    "korean": "정말",
+    "romanization": "jeongmal",
+    "partOfSpeech": "adverb",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["emphasis", "reaction", "expression"],
+    "translations": {
+      "ko": {
+        "word": "정말",
+        "explanation": "진짜, 정말로의 의미. 감탄이나 강조에 사용.",
+        "examples": {
+          "beginner": "정말요?",
+          "intermediate": "정말 감사해요.",
+          "advanced": "친구의 좋은 소식에 정말? 축하해! 라고 반응했다.",
+          "master": "시험에 합격했다는 소식에 정말이야? 와, 대단하다! 라고 말했다."
+        }
+      },
+      "en": {
+        "word": "Really / Truly",
+        "explanation": "Meaning 'really' or 'truly'. Used for exclamation or emphasis.",
+        "examples": {
+          "beginner": "Really?",
+          "intermediate": "Thank you so much.",
+          "advanced": "I reacted to my friend's good news with 'Really? Congratulations!'",
+          "master": "When hearing about passing the exam, I said 'Really? Wow, that's amazing!'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[정말]",
+      "ipa": "[tɕʌŋmal]"
+    }
+  },
+  {
+    "id": "jinjja",
+    "korean": "진짜",
+    "romanization": "jinjja",
+    "partOfSpeech": "adverb",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["casual", "emphasis", "reaction"],
+    "translations": {
+      "ko": {
+        "word": "진짜",
+        "explanation": "정말의 구어체. 놀람, 강조, 확인에 자주 사용.",
+        "examples": {
+          "beginner": "진짜?",
+          "intermediate": "진짜 맛있어!",
+          "advanced": "친구가 연예인을 봤다고 해서 진짜? 부럽다! 라고 반응했다.",
+          "master": "일이 잘 안 풀릴 때 진짜 왜 이러지? 라고 혼잣말한다."
+        }
+      },
+      "en": {
+        "word": "For real / Seriously",
+        "explanation": "Colloquial form of 정말. Often used for surprise, emphasis, or confirmation.",
+        "examples": {
+          "beginner": "For real?",
+          "intermediate": "It's really delicious!",
+          "advanced": "When my friend said they saw a celebrity, I reacted 'For real? I'm jealous!'",
+          "master": "When things aren't going well, you might mutter 'Seriously, why is this happening?'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[진짜]",
+      "ipa": "[tɕindʑa]"
+    }
+  },
+  {
+    "id": "gamsadrrimnida",
+    "korean": "감사드립니다",
+    "romanization": "gamsadeurimnida",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["formal", "gratitude", "humble"],
+    "translations": {
+      "ko": {
+        "word": "감사드립니다",
+        "explanation": "감사합니다보다 더 격식 있는 감사 표현.",
+        "examples": {
+          "beginner": "감사드립니다.",
+          "intermediate": "도움에 깊이 감사드립니다.",
+          "advanced": "상을 받을 때 이런 영광을 주셔서 감사드립니다 라고 말한다.",
+          "master": "공식 석상에서 여러분의 참석에 감사드립니다 라고 인사한다."
+        }
+      },
+      "en": {
+        "word": "I express my gratitude (very formal)",
+        "explanation": "More formal expression of gratitude than 감사합니다.",
+        "examples": {
+          "beginner": "I express my gratitude.",
+          "intermediate": "I deeply appreciate your help.",
+          "advanced": "When receiving an award, you say 'I'm grateful for this honor.'",
+          "master": "At formal events, you say 'Thank you for your attendance.'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[감사드림니다]",
+      "ipa": "[kamsadɯɾimnida]"
+    }
+  },
+  {
+    "id": "hwaitingp",
+    "korean": "화이팅",
+    "romanization": "hwaiting",
+    "partOfSpeech": "interjection",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["encouragement", "cheer", "korean culture"],
+    "translations": {
+      "ko": {
+        "word": "화이팅",
+        "explanation": "격려와 응원의 표현. 영어 'Fighting'에서 유래.",
+        "examples": {
+          "beginner": "화이팅!",
+          "intermediate": "시험 화이팅!",
+          "advanced": "친구가 면접 보러 간다고 해서 화이팅! 넌 잘 할 수 있어! 라고 응원했다.",
+          "master": "힘든 일이 있을 때 서로 화이팅! 이라고 격려하며 힘을 낸다."
+        }
+      },
+      "en": {
+        "word": "Fighting! / You can do it!",
+        "explanation": "Expression of encouragement and support. Derived from English 'Fighting'.",
+        "examples": {
+          "beginner": "Fighting!",
+          "intermediate": "Good luck on the exam!",
+          "advanced": "When my friend went for an interview, I cheered 'Fighting! You can do it!'",
+          "master": "When going through tough times, we encourage each other with 'Fighting!'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[화이팅]",
+      "ipa": "[hwajitiŋ]"
+    }
+  },
+  {
+    "id": "himnaeyeo",
+    "korean": "힘내요",
+    "romanization": "himnaeyeo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["encouragement", "support", "polite"],
+    "translations": {
+      "ko": {
+        "word": "힘내요",
+        "explanation": "힘들어하는 사람에게 하는 격려의 말.",
+        "examples": {
+          "beginner": "힘내요!",
+          "intermediate": "조금만 더 힘내요.",
+          "advanced": "힘들어하는 친구에게 힘내, 내가 옆에 있을게 라고 말했다.",
+          "master": "어려운 시기를 보내는 사람에게 힘내세요, 좋은 일이 있을 거예요 라고 위로한다."
+        }
+      },
+      "en": {
+        "word": "Cheer up / Hang in there",
+        "explanation": "Words of encouragement to someone who is struggling.",
+        "examples": {
+          "beginner": "Cheer up!",
+          "intermediate": "Hang in there a little more.",
+          "advanced": "To my struggling friend, I said 'Cheer up, I'll be by your side.'",
+          "master": "To someone going through a difficult time, you comfort them with 'Hang in there, good things will come.'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[힘내요]",
+      "ipa": "[himnɛjo]"
+    }
+  },
+  {
+    "id": "geokjeongmayo",
+    "korean": "걱정마요",
+    "romanization": "geokjeongmayo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["reassurance", "comfort", "polite"],
+    "translations": {
+      "ko": {
+        "word": "걱정마요",
+        "explanation": "걱정하는 사람을 안심시키는 말.",
+        "examples": {
+          "beginner": "걱정마요.",
+          "intermediate": "걱정마요, 다 잘 될 거예요.",
+          "advanced": "시험을 걱정하는 친구에게 걱정마, 열심히 준비했잖아 라고 말했다.",
+          "master": "실수해서 걱정하는 사람에게 걱정마세요, 큰 문제 아니에요 라고 안심시켰다."
+        }
+      },
+      "en": {
+        "word": "Don't worry",
+        "explanation": "Words to reassure someone who is worried.",
+        "examples": {
+          "beginner": "Don't worry.",
+          "intermediate": "Don't worry, everything will be fine.",
+          "advanced": "To my friend worried about the exam, I said 'Don't worry, you prepared well.'",
+          "master": "To someone worried about a mistake, I reassured them 'Don't worry, it's not a big deal.'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[걱정마요]",
+      "ipa": "[kʌktɕʌŋmajo]"
+    }
+  },
+  {
+    "id": "dasi-boepgesseumnida",
+    "korean": "다시 뵙겠습니다",
+    "romanization": "dasi boepgesseumnida",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["formal", "farewell", "business"],
+    "translations": {
+      "ko": {
+        "word": "다시 뵙겠습니다",
+        "explanation": "또 만나고 싶다는 공식적인 인사.",
+        "examples": {
+          "beginner": "다시 뵙겠습니다.",
+          "intermediate": "오늘 감사했습니다, 다시 뵙겠습니다.",
+          "advanced": "비즈니스 미팅 후에 좋은 말씀 감사합니다, 다시 뵙겠습니다 라고 인사했다.",
+          "master": "면접이 끝나고 기회를 주셔서 감사합니다, 다시 뵙겠습니다 라고 말했다."
+        }
+      },
+      "en": {
+        "word": "I hope to see you again (formal)",
+        "explanation": "A formal way to say you hope to meet again.",
+        "examples": {
+          "beginner": "I hope to see you again.",
+          "intermediate": "Thank you for today, I hope to see you again.",
+          "advanced": "After a business meeting, I said 'Thank you for your words, I hope to see you again.'",
+          "master": "After the interview, I said 'Thank you for the opportunity, I hope to see you again.'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[다시뵙겠씀니다]",
+      "ipa": "[taɕibwepketsɯmnida]"
+    }
+  },
+  {
+    "id": "naeilbwa",
+    "korean": "내일 봐",
+    "romanization": "naeil bwa",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["casual", "farewell", "informal"],
+    "translations": {
+      "ko": {
+        "word": "내일 봐",
+        "explanation": "친구에게 하는 반말 작별 인사.",
+        "examples": {
+          "beginner": "내일 봐!",
+          "intermediate": "그럼 내일 봐~",
+          "advanced": "수업이 끝나고 친구들과 헤어질 때 내일 봐! 라고 인사했다.",
+          "master": "전화를 끊으면서 그럼 내일 학교에서 봐 라고 말했다."
+        }
+      },
+      "en": {
+        "word": "See you tomorrow (casual)",
+        "explanation": "Casual farewell to friends.",
+        "examples": {
+          "beginner": "See you tomorrow!",
+          "intermediate": "Well then, see you tomorrow~",
+          "advanced": "After class, I said 'See you tomorrow!' when parting with friends.",
+          "master": "While hanging up, I said 'Then see you at school tomorrow.'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[내일봐]",
+      "ipa": "[nɛilbwa]"
+    }
+  },
+  {
+    "id": "ddo-bwayo",
+    "korean": "또 봐요",
+    "romanization": "ddo bwayo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["farewell", "polite", "casual"],
+    "translations": {
+      "ko": {
+        "word": "또 봐요",
+        "explanation": "다시 만나자는 가벼운 인사.",
+        "examples": {
+          "beginner": "또 봐요!",
+          "intermediate": "그럼 또 봐요~",
+          "advanced": "친구랑 헤어질 때 또 봐, 연락해 라고 말했다.",
+          "master": "가게를 나오면서 주인에게 감사합니다, 또 올게요 라고 인사했다."
+        }
+      },
+      "en": {
+        "word": "See you again",
+        "explanation": "A light farewell meaning to meet again.",
+        "examples": {
+          "beginner": "See you again!",
+          "intermediate": "Well then, see you again~",
+          "advanced": "When parting with my friend, I said 'See you, keep in touch.'",
+          "master": "Leaving the store, I said to the owner 'Thank you, I'll come again.'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[또봐요]",
+      "ipa": "[tobwajo]"
+    }
+  },
+  {
+    "id": "mannaseo-bangawoyo",
+    "korean": "만나서 반가워요",
+    "romanization": "mannaseo bangawoyo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["greeting", "first meeting", "polite"],
+    "translations": {
+      "ko": {
+        "word": "만나서 반가워요",
+        "explanation": "처음 만난 사람에게 하는 반존댓말 인사.",
+        "examples": {
+          "beginner": "만나서 반가워요!",
+          "intermediate": "안녕하세요, 만나서 반가워요.",
+          "advanced": "소개팅에서 처음 만난 상대에게 만나서 반가워요 라고 인사했다.",
+          "master": "친구의 친구를 소개받았을 때 많이 들었어요, 만나서 반가워요 라고 말한다."
+        }
+      },
+      "en": {
+        "word": "Nice to meet you (semi-formal)",
+        "explanation": "Semi-formal greeting to someone you're meeting for the first time.",
+        "examples": {
+          "beginner": "Nice to meet you!",
+          "intermediate": "Hello, nice to meet you.",
+          "advanced": "On a blind date, I greeted the person with 'Nice to meet you.'",
+          "master": "When introduced to a friend's friend, you say 'I've heard a lot about you, nice to meet you.'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[만나서반가워요]",
+      "ipa": "[mannasʌpaŋɡawojo]"
+    }
+  },
+  {
+    "id": "byeorilieyo",
+    "korean": "별일 없어요?",
+    "romanization": "byeoril eopseoyo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["greeting", "inquiry", "polite"],
+    "translations": {
+      "ko": {
+        "word": "별일 없어요?",
+        "explanation": "특별한 일 없이 잘 지내는지 묻는 인사.",
+        "examples": {
+          "beginner": "별일 없어요?",
+          "intermediate": "요즘 별일 없어요?",
+          "advanced": "오랜만에 연락한 친구에게 별일 없어? 잘 지내? 라고 물었다.",
+          "master": "안부 전화에서 별일 없으시죠? 건강하시죠? 라고 물어본다."
+        }
+      },
+      "en": {
+        "word": "Is everything okay? / Anything new?",
+        "explanation": "Asking if someone is doing well without any special events.",
+        "examples": {
+          "beginner": "Is everything okay?",
+          "intermediate": "Anything new lately?",
+          "advanced": "I asked a friend I hadn't contacted in a while, 'Anything new? How are you?'",
+          "master": "During a check-in call, you ask 'Everything okay? Are you healthy?'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[별일없어요]",
+      "ipa": "[pjʌɾilʌpsʌjo]"
+    }
+  },
+  {
+    "id": "yeogiyo",
+    "korean": "여기요",
+    "romanization": "yeogiyo",
+    "partOfSpeech": "interjection",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["attention", "service", "restaurant"],
+    "translations": {
+      "ko": {
+        "word": "여기요",
+        "explanation": "주목을 끌거나 직원을 부를 때 사용.",
+        "examples": {
+          "beginner": "여기요!",
+          "intermediate": "여기요, 주문할게요.",
+          "advanced": "식당에서 직원을 부를 때 여기요! 라고 손을 들어 불렀다.",
+          "master": "카페에서 여기요, 계산해 주세요 라고 말할 때 사용한다."
+        }
+      },
+      "en": {
+        "word": "Excuse me / Over here",
+        "explanation": "Used to get attention or call staff.",
+        "examples": {
+          "beginner": "Excuse me!",
+          "intermediate": "Excuse me, I'd like to order.",
+          "advanced": "At the restaurant, I raised my hand and called 'Excuse me!' to get the staff's attention.",
+          "master": "At a café, you say 'Excuse me, I'd like to pay' when ready to pay."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[여기요]",
+      "ipa": "[jʌɡijo]"
+    }
+  },
+  {
+    "id": "jeogiyo",
+    "korean": "저기요",
+    "romanization": "jeogiyo",
+    "partOfSpeech": "interjection",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["attention", "polite", "stranger"],
+    "translations": {
+      "ko": {
+        "word": "저기요",
+        "explanation": "모르는 사람에게 말을 걸 때 사용하는 표현.",
+        "examples": {
+          "beginner": "저기요.",
+          "intermediate": "저기요, 잠시만요.",
+          "advanced": "길에서 지나가는 사람에게 저기요, 이 근처에 편의점 있나요? 라고 물었다.",
+          "master": "버스에서 저기요, 이 가방 떨어뜨리셨어요 라고 알려줬다."
+        }
+      },
+      "en": {
+        "word": "Excuse me (to stranger)",
+        "explanation": "Expression used when speaking to a stranger.",
+        "examples": {
+          "beginner": "Excuse me.",
+          "intermediate": "Excuse me, just a moment.",
+          "advanced": "On the street, I asked a passerby 'Excuse me, is there a convenience store nearby?'",
+          "master": "On the bus, I told someone 'Excuse me, you dropped this bag.'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[저기요]",
+      "ipa": "[tɕʌɡijo]"
+    }
+  },
+  {
+    "id": "jal-meokgesseumnida",
+    "korean": "잘 먹겠습니다",
+    "romanization": "jal meokgesseumnida",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["meal", "gratitude", "korean culture"],
+    "translations": {
+      "ko": {
+        "word": "잘 먹겠습니다",
+        "explanation": "음식을 먹기 전에 하는 인사. 감사의 의미를 담고 있음.",
+        "examples": {
+          "beginner": "잘 먹겠습니다!",
+          "intermediate": "맛있게 잘 먹겠습니다.",
+          "advanced": "대접받을 때 잘 먹겠습니다 라고 인사하고 식사를 시작한다.",
+          "master": "한국에서는 식사 전에 잘 먹겠습니다 라고 말하는 것이 예의다."
+        }
+      },
+      "en": {
+        "word": "I will eat well (Thanks for the food)",
+        "explanation": "A greeting before eating. Contains a meaning of gratitude.",
+        "examples": {
+          "beginner": "Thanks for the food!",
+          "intermediate": "I'll enjoy this meal.",
+          "advanced": "When being treated to a meal, you say 'Thanks for the food' before starting to eat.",
+          "master": "In Korea, it's polite to say 'Thanks for the food' before meals."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[잘먹겠씀니다]",
+      "ipa": "[tɕalmʌkketsɯmnida]"
+    }
+  },
+  {
+    "id": "jal-meogeotsseumnida",
+    "korean": "잘 먹었습니다",
+    "romanization": "jal meogeotsseumnida",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["meal", "gratitude", "korean culture"],
+    "translations": {
+      "ko": {
+        "word": "잘 먹었습니다",
+        "explanation": "음식을 다 먹은 후 하는 인사. 감사의 의미를 담고 있음.",
+        "examples": {
+          "beginner": "잘 먹었습니다!",
+          "intermediate": "정말 맛있었어요, 잘 먹었습니다.",
+          "advanced": "식사를 마친 후 잘 먹었습니다, 감사합니다 라고 인사했다.",
+          "master": "누가 밥을 사줬을 때 잘 먹었습니다 라고 감사를 표현한다."
+        }
+      },
+      "en": {
+        "word": "I ate well (Thanks for the meal)",
+        "explanation": "A greeting after finishing a meal. Contains a meaning of gratitude.",
+        "examples": {
+          "beginner": "I ate well!",
+          "intermediate": "It was really delicious, thanks for the meal.",
+          "advanced": "After finishing the meal, I said 'I ate well, thank you.'",
+          "master": "When someone treats you to a meal, you express gratitude with 'Thanks for the meal.'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[잘먹었씀니다]",
+      "ipa": "[tɕalmʌɡʌsɯmnida]"
+    }
+  },
+  {
+    "id": "josimhaeseo-gayo",
+    "korean": "조심해서 가요",
+    "romanization": "josimhaeseo gayo",
+    "partOfSpeech": "expression",
+    "categoryId": "greetings",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["farewell", "care", "polite"],
+    "translations": {
+      "ko": {
+        "word": "조심해서 가요",
+        "explanation": "떠나는 사람에게 안전하게 가라고 당부하는 인사.",
+        "examples": {
+          "beginner": "조심해서 가요!",
+          "intermediate": "늦었으니까 조심해서 가요.",
+          "advanced": "손님이 돌아갈 때 조심해서 가세요, 또 오세요 라고 인사했다.",
+          "master": "비 오는 날 친구에게 조심해서 가, 미끄러워 라고 당부했다."
+        }
+      },
+      "en": {
+        "word": "Get home safely / Be careful on your way",
+        "explanation": "Telling someone leaving to go safely.",
+        "examples": {
+          "beginner": "Get home safely!",
+          "intermediate": "It's late, so be careful on your way.",
+          "advanced": "When a guest was leaving, I said 'Be careful, come again.'",
+          "master": "On a rainy day, I told my friend 'Be careful, it's slippery.'"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[조심해서가요]",
+      "ipa": "[tɕoɕimhɛsʌɡajo]"
+    }
+  }
+]

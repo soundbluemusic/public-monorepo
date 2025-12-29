@@ -1,0 +1,462 @@
+[
+  {
+    "id": "suhak",
+    "korean": "수학",
+    "romanization": "suhak",
+    "pronunciation": {
+      "korean": "[수학]",
+      "ipa": "[suɦak]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "math",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["math", "science", "study"],
+    "translations": {
+      "ko": {
+        "word": "수학",
+        "explanation": "수, 양, 구조, 공간 등을 연구하는 학문. 논리와 패턴을 다룬다.",
+        "examples": {
+          "beginner": "수학 공부해요.",
+          "intermediate": "수학이 어려워요.",
+          "advanced": "\"수학 좋아해?\" \"응, 문제 푸는 게 재미있어.\"",
+          "master": "수학 시험을 봤어요."
+        },
+        "variations": {
+          "formal": ["수학입니다", "산수", "수리"],
+          "casual": ["수학~", "수학 해?"],
+          "short": ["수학", "math"]
+        }
+      },
+      "en": {
+        "word": "Mathematics / Math",
+        "explanation": "The study of numbers, quantity, structure, space, etc. Deals with logic and patterns.",
+        "examples": {
+          "beginner": "수학 공부해요. - I study math.",
+          "intermediate": "수학이 어려워요. - Math is difficult.",
+          "advanced": "\"Do you like math?\" \"Yeah, solving problems is fun.\"",
+          "master": "I took a math test."
+        },
+        "variations": {
+          "formal": ["It is mathematics", "Arithmetic", "Mathematical science"],
+          "casual": ["Math~", "Do math?"],
+          "short": ["Math", "Maths"]
+        }
+      }
+    }
+  },
+  {
+    "id": "su",
+    "korean": "수",
+    "romanization": "su",
+    "pronunciation": {
+      "korean": "[수]",
+      "ipa": "[su]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "math",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["math", "number", "basic"],
+    "translations": {
+      "ko": {
+        "word": "수",
+        "explanation": "사물의 개수나 양을 나타내는 기호. 1, 2, 3과 같은 숫자.",
+        "examples": {
+          "beginner": "수를 세요.",
+          "intermediate": "수가 많아요.",
+          "advanced": "\"이 수는 짝수야, 홀수야?\" \"짝수야, 2로 나누어떨어지거든.\"",
+          "master": "큰 수를 계산했어요."
+        },
+        "variations": {
+          "formal": ["수입니다", "숫자", "번호"],
+          "casual": ["수~", "수로"],
+          "short": ["수", "number"]
+        }
+      },
+      "en": {
+        "word": "Number",
+        "explanation": "A symbol representing the quantity or amount of things. Numerals like 1, 2, 3.",
+        "examples": {
+          "beginner": "수를 세요. - Count the numbers.",
+          "intermediate": "수가 많아요. - There are many numbers.",
+          "advanced": "\"Is this number even or odd?\" \"It's even, it's divisible by 2.\"",
+          "master": "I calculated large numbers."
+        },
+        "variations": {
+          "formal": ["It is a number", "Numeral", "Digit"],
+          "casual": ["Number~", "By number"],
+          "short": ["Number", "Num"]
+        }
+      }
+    }
+  },
+  {
+    "id": "deotсem",
+    "korean": "덧셈",
+    "romanization": "deotsem",
+    "pronunciation": {
+      "korean": "[덧셈]",
+      "ipa": "[tʌtːsem]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "math",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["math", "operation", "addition"],
+    "translations": {
+      "ko": {
+        "word": "덧셈",
+        "explanation": "두 수를 더하는 계산. + 기호를 사용한다.",
+        "examples": {
+          "beginner": "덧셈을 해요.",
+          "intermediate": "덧셈이 쉬워요.",
+          "advanced": "\"2 더하기 3은 얼마야?\" \"5야.\"",
+          "master": "덧셈 문제를 풀었어요."
+        },
+        "variations": {
+          "formal": ["덧셈입니다", "가산", "합산"],
+          "casual": ["덧셈~", "더하기"],
+          "short": ["덧셈", "addition"]
+        }
+      },
+      "en": {
+        "word": "Addition",
+        "explanation": "Calculation of adding two numbers. Uses the + symbol.",
+        "examples": {
+          "beginner": "덧셈을 해요. - I do addition.",
+          "intermediate": "덧셈이 쉬워요. - Addition is easy.",
+          "advanced": "\"What's 2 plus 3?\" \"5.\"",
+          "master": "I solved addition problems."
+        },
+        "variations": {
+          "formal": ["It is addition", "Summation", "Plus"],
+          "casual": ["Addition~", "Plus"],
+          "short": ["Addition", "Add"]
+        }
+      }
+    }
+  },
+  {
+    "id": "bbaelsem",
+    "korean": "뺄셈",
+    "romanization": "ppaelsem",
+    "pronunciation": {
+      "korean": "[뺄셈]",
+      "ipa": "[pːɛlsem]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "math",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["math", "operation", "subtraction"],
+    "translations": {
+      "ko": {
+        "word": "뺄셈",
+        "explanation": "한 수에서 다른 수를 빼는 계산. - 기호를 사용한다.",
+        "examples": {
+          "beginner": "뺄셈을 해요.",
+          "intermediate": "뺄셈이 어려워요.",
+          "advanced": "\"5 빼기 2는?\" \"3이야.\"",
+          "master": "뺄셈 연습을 했어요."
+        },
+        "variations": {
+          "formal": ["뺄셈입니다", "감산", "차"],
+          "casual": ["뺄셈~", "빼기"],
+          "short": ["뺄셈", "subtraction"]
+        }
+      },
+      "en": {
+        "word": "Subtraction",
+        "explanation": "Calculation of taking one number from another. Uses the - symbol.",
+        "examples": {
+          "beginner": "뺄셈을 해요. - I do subtraction.",
+          "intermediate": "뺄셈이 어려워요. - Subtraction is difficult.",
+          "advanced": "\"What's 5 minus 2?\" \"It's 3.\"",
+          "master": "I practiced subtraction."
+        },
+        "variations": {
+          "formal": ["It is subtraction", "Minus", "Difference"],
+          "casual": ["Subtraction~", "Minus"],
+          "short": ["Subtraction", "Sub"]
+        }
+      }
+    }
+  },
+  {
+    "id": "gopsem",
+    "korean": "곱셈",
+    "romanization": "gopsem",
+    "pronunciation": {
+      "korean": "[곱셈]",
+      "ipa": "[kopsem]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "math",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["math", "operation", "multiplication"],
+    "translations": {
+      "ko": {
+        "word": "곱셈",
+        "explanation": "한 수를 다른 수만큼 반복해서 더하는 계산. × 기호를 사용한다.",
+        "examples": {
+          "beginner": "곱셈을 해요.",
+          "intermediate": "곱셈구구를 외워요.",
+          "advanced": "\"3 곱하기 4는?\" \"12야.\"",
+          "master": "곱셈 공식을 배웠어요."
+        },
+        "variations": {
+          "formal": ["곱셈입니다", "승산", "적"],
+          "casual": ["곱셈~", "곱하기"],
+          "short": ["곱셈", "multiplication"]
+        }
+      },
+      "en": {
+        "word": "Multiplication",
+        "explanation": "Calculation of repeatedly adding one number by another number. Uses the × symbol.",
+        "examples": {
+          "beginner": "곱셈을 해요. - I do multiplication.",
+          "intermediate": "곱셈구구를 외워요. - I memorize multiplication tables.",
+          "advanced": "\"What's 3 times 4?\" \"12.\"",
+          "master": "I learned multiplication formulas."
+        },
+        "variations": {
+          "formal": ["It is multiplication", "Times", "Product"],
+          "casual": ["Multiplication~", "Times"],
+          "short": ["Multiplication", "Mult"]
+        }
+      }
+    }
+  },
+  {
+    "id": "nanutсem",
+    "korean": "나눗셈",
+    "romanization": "nanutsem",
+    "pronunciation": {
+      "korean": "[나눗셈]",
+      "ipa": "[nanutːsem]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "math",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["math", "operation", "division"],
+    "translations": {
+      "ko": {
+        "word": "나눗셈",
+        "explanation": "한 수를 다른 수로 나누는 계산. ÷ 기호를 사용한다.",
+        "examples": {
+          "beginner": "나눗셈을 해요.",
+          "intermediate": "나눗셈이 복잡해요.",
+          "advanced": "\"10 나누기 2는?\" \"5야.\"",
+          "master": "나눗셈 문제를 풀었어요."
+        },
+        "variations": {
+          "formal": ["나눗셈입니다", "제산", "몫"],
+          "casual": ["나눗셈~", "나누기"],
+          "short": ["나눗셈", "division"]
+        }
+      },
+      "en": {
+        "word": "Division",
+        "explanation": "Calculation of dividing one number by another. Uses the ÷ symbol.",
+        "examples": {
+          "beginner": "나눗셈을 해요. - I do division.",
+          "intermediate": "나눗셈이 복잡해요. - Division is complex.",
+          "advanced": "\"What's 10 divided by 2?\" \"5.\"",
+          "master": "I solved division problems."
+        },
+        "variations": {
+          "formal": ["It is division", "Quotient", "Divide"],
+          "casual": ["Division~", "Divided by"],
+          "short": ["Division", "Div"]
+        }
+      }
+    }
+  },
+  {
+    "id": "bunsu",
+    "korean": "분수",
+    "romanization": "bunsu",
+    "pronunciation": {
+      "korean": "[분수]",
+      "ipa": "[punsu]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "math",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["math", "fraction", "number"],
+    "translations": {
+      "ko": {
+        "word": "분수",
+        "explanation": "전체를 여러 부분으로 나눈 것 중 일부를 나타내는 수. 1/2, 3/4 같은 형태.",
+        "examples": {
+          "beginner": "분수를 계산해요.",
+          "intermediate": "분수가 어려워요.",
+          "advanced": "\"1/2 더하기 1/4는?\" \"3/4야.\"",
+          "master": "분수를 배웠어요."
+        },
+        "variations": {
+          "formal": ["분수입니다", "유리수", "비율"],
+          "casual": ["분수~", "분수로"],
+          "short": ["분수", "fraction"]
+        }
+      },
+      "en": {
+        "word": "Fraction",
+        "explanation": "A number representing a part of a whole divided into several parts. Forms like 1/2, 3/4.",
+        "examples": {
+          "beginner": "분수를 계산해요. - I calculate fractions.",
+          "intermediate": "분수가 어려워요. - Fractions are difficult.",
+          "advanced": "\"What's 1/2 plus 1/4?\" \"3/4.\"",
+          "master": "I learned fractions."
+        },
+        "variations": {
+          "formal": ["It is a fraction", "Rational number", "Ratio"],
+          "casual": ["Fraction~", "In fractions"],
+          "short": ["Fraction", "Frac"]
+        }
+      }
+    }
+  },
+  {
+    "id": "doхyeong",
+    "korean": "도형",
+    "romanization": "dohyeong",
+    "pronunciation": {
+      "korean": "[도형]",
+      "ipa": "[tohjʌŋ]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "math",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["math", "geometry", "shape"],
+    "translations": {
+      "ko": {
+        "word": "도형",
+        "explanation": "점, 선, 면으로 이루어진 기하학적 형태. 삼각형, 사각형, 원 등.",
+        "examples": {
+          "beginner": "도형을 그려요.",
+          "intermediate": "도형이 많아요.",
+          "advanced": "\"이 도형은 뭐야?\" \"삼각형이야.\"",
+          "master": "도형의 넓이를 구했어요."
+        },
+        "variations": {
+          "formal": ["도형입니다", "기하 도형", "형상"],
+          "casual": ["도형~", "도형으로"],
+          "short": ["도형", "shape"]
+        }
+      },
+      "en": {
+        "word": "Shape / Figure / Geometric Shape",
+        "explanation": "A geometric form made of points, lines, and surfaces. Triangles, squares, circles, etc.",
+        "examples": {
+          "beginner": "도형을 그려요. - I draw shapes.",
+          "intermediate": "도형이 많아요. - There are many shapes.",
+          "advanced": "\"What shape is this?\" \"It's a triangle.\"",
+          "master": "I found the area of the shape."
+        },
+        "variations": {
+          "formal": ["It is a shape", "Geometric figure", "Form"],
+          "casual": ["Shape~", "As a shape"],
+          "short": ["Shape", "Figure"]
+        }
+      }
+    }
+  },
+  {
+    "id": "bangjeongsik",
+    "korean": "방정식",
+    "romanization": "bangjeongsik",
+    "pronunciation": {
+      "korean": "[방정식]",
+      "ipa": "[paŋdʑʌŋɕik]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "math",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["math", "equation", "algebra"],
+    "translations": {
+      "ko": {
+        "word": "방정식",
+        "explanation": "미지수를 포함한 등식. 'x + 3 = 5'처럼 풀어야 하는 수학 문제.",
+        "examples": {
+          "beginner": "방정식을 풀어요.",
+          "intermediate": "방정식이 복잡해요.",
+          "advanced": "\"이 방정식 풀 수 있어?\" \"응, x는 2야.\"",
+          "master": "2차 방정식을 배웠어요."
+        },
+        "variations": {
+          "formal": ["방정식입니다", "등식", "수식"],
+          "casual": ["방정식~", "방정식으로"],
+          "short": ["방정식", "equation"]
+        }
+      },
+      "en": {
+        "word": "Equation",
+        "explanation": "An equality containing unknowns. Math problems to solve like 'x + 3 = 5'.",
+        "examples": {
+          "beginner": "방정식을 풀어요. - I solve equations.",
+          "intermediate": "방정식이 복잡해요. - The equation is complex.",
+          "advanced": "\"Can you solve this equation?\" \"Yeah, x is 2.\"",
+          "master": "I learned quadratic equations."
+        },
+        "variations": {
+          "formal": ["It is an equation", "Equality", "Mathematical expression"],
+          "casual": ["Equation~", "With equation"],
+          "short": ["Equation", "Eq"]
+        }
+      }
+    }
+  },
+  {
+    "id": "hwaryul",
+    "korean": "확률",
+    "romanization": "hwaryul",
+    "pronunciation": {
+      "korean": "[확률]",
+      "ipa": "[hwakɾjul]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "math",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["math", "probability", "statistics"],
+    "translations": {
+      "ko": {
+        "word": "확률",
+        "explanation": "어떤 사건이 일어날 가능성. 0과 1 사이의 값으로 표현한다.",
+        "examples": {
+          "beginner": "확률을 계산해요.",
+          "intermediate": "확률이 높아요.",
+          "advanced": "\"동전을 던졌을 때 앞면이 나올 확률은?\" \"50%야, 1/2이지.\"",
+          "master": "확률과 통계를 공부해요."
+        },
+        "variations": {
+          "formal": ["확률입니다", "개연성", "가능성"],
+          "casual": ["확률~", "확률로"],
+          "short": ["확률", "probability"]
+        }
+      },
+      "en": {
+        "word": "Probability",
+        "explanation": "The likelihood that an event will occur. Expressed as a value between 0 and 1.",
+        "examples": {
+          "beginner": "확률을 계산해요. - I calculate probability.",
+          "intermediate": "확률이 높아요. - The probability is high.",
+          "advanced": "\"What's the probability of getting heads when flipping a coin?\" \"50%, it's 1/2.\"",
+          "master": "I study probability and statistics."
+        },
+        "variations": {
+          "formal": ["It is probability", "Likelihood", "Chance"],
+          "casual": ["Probability~", "By probability"],
+          "short": ["Probability", "Prob"]
+        }
+      }
+    }
+  }
+]

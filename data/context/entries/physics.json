@@ -1,0 +1,462 @@
+[
+  {
+    "id": "mullihak",
+    "korean": "물리학",
+    "romanization": "mullihak",
+    "pronunciation": {
+      "korean": "[물리학]",
+      "ipa": "[mulliɦak]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "physics",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["physics", "science", "study"],
+    "translations": {
+      "ko": {
+        "word": "물리학",
+        "explanation": "물질과 에너지, 운동과 힘을 연구하는 학문. 자연 현상의 원리를 다룬다.",
+        "examples": {
+          "beginner": "물리학을 공부해요.",
+          "intermediate": "물리학이 어려워요.",
+          "advanced": "\"물리학이 재미있어?\" \"응, 자연의 법칙을 이해하는 게 신기해.\"",
+          "master": "물리학 시험이 있어요."
+        },
+        "variations": {
+          "formal": ["물리학입니다", "물리", "자연과학"],
+          "casual": ["물리학~", "물리"],
+          "short": ["물리학", "physics"]
+        }
+      },
+      "en": {
+        "word": "Physics",
+        "explanation": "The study of matter, energy, motion, and force. Deals with principles of natural phenomena.",
+        "examples": {
+          "beginner": "물리학을 공부해요. - I study physics.",
+          "intermediate": "물리학이 어려워요. - Physics is difficult.",
+          "advanced": "\"Is physics interesting?\" \"Yeah, it's amazing to understand the laws of nature.\"",
+          "master": "I have a physics exam."
+        },
+        "variations": {
+          "formal": ["It is physics", "Physical science", "Natural science"],
+          "casual": ["Physics~", "Physics"],
+          "short": ["Physics", "Phys"]
+        }
+      }
+    }
+  },
+  {
+    "id": "him",
+    "korean": "힘",
+    "romanization": "him",
+    "pronunciation": {
+      "korean": "[힘]",
+      "ipa": "[him]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "physics",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["physics", "force", "power"],
+    "translations": {
+      "ko": {
+        "word": "힘",
+        "explanation": "물체를 움직이거나 변형시키는 능력. 물리학에서는 '힘(force)'을 뜻한다.",
+        "examples": {
+          "beginner": "힘이 세요.",
+          "intermediate": "힘을 주세요.",
+          "advanced": "\"중력은 힘이야.\" \"맞아, 우리를 땅으로 당기는 힘이지.\"",
+          "master": "힘의 방향이 중요해요."
+        },
+        "variations": {
+          "formal": ["힘입니다", "역(力)", "에너지"],
+          "casual": ["힘~", "힘으로"],
+          "short": ["힘", "force"]
+        }
+      },
+      "en": {
+        "word": "Force / Power / Strength",
+        "explanation": "The ability to move or deform an object. In physics, refers to 'force'.",
+        "examples": {
+          "beginner": "힘이 세요. - The force is strong.",
+          "intermediate": "힘을 주세요. - Apply force.",
+          "advanced": "\"Gravity is a force.\" \"Right, it's the force that pulls us to the ground.\"",
+          "master": "The direction of force is important."
+        },
+        "variations": {
+          "formal": ["It is force", "Force (formal)", "Energy"],
+          "casual": ["Force~", "With force"],
+          "short": ["Force", "Power"]
+        }
+      }
+    }
+  },
+  {
+    "id": "energia",
+    "korean": "에너지",
+    "romanization": "eneoji",
+    "partOfSpeech": "noun",
+    "categoryId": "physics",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["physics", "energy", "power"],
+    "translations": {
+      "ko": {
+        "word": "에너지",
+        "explanation": "일을 할 수 있는 능력. 물리학에서 운동, 열, 빛 등의 형태로 존재한다.",
+        "examples": {
+          "beginner": "에너지가 필요해요.",
+          "intermediate": "태양 에너지를 사용해요.",
+          "advanced": "\"에너지는 보존돼.\" \"맞아, 사라지지 않고 형태만 바뀌지.\"",
+          "master": "전기 에너지를 절약해요."
+        },
+        "variations": {
+          "formal": ["에너지입니다", "활력", "동력"],
+          "casual": ["에너지~", "에너지로"],
+          "short": ["에너지", "energy"]
+        }
+      },
+      "en": {
+        "word": "Energy",
+        "explanation": "The ability to do work. In physics, exists in forms like motion, heat, light, etc.",
+        "examples": {
+          "beginner": "에너지가 필요해요. - We need energy.",
+          "intermediate": "태양 에너지를 사용해요. - We use solar energy.",
+          "advanced": "\"Energy is conserved.\" \"Right, it doesn't disappear, just changes form.\"",
+          "master": "Save electrical energy."
+        },
+        "variations": {
+          "formal": ["It is energy", "Vitality", "Power"],
+          "casual": ["Energy~", "With energy"],
+          "short": ["Energy", "Power"]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[에너지]",
+      "ipa": "[enʌdʑi]"
+    }
+  },
+  {
+    "id": "jungnyeok",
+    "korean": "중력",
+    "romanization": "jungnyeok",
+    "pronunciation": {
+      "korean": "[중력]",
+      "ipa": "[tɕuŋɾjʌk]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "physics",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["physics", "gravity", "force"],
+    "translations": {
+      "ko": {
+        "word": "중력",
+        "explanation": "물체를 지구 중심으로 끌어당기는 힘. 뉴턴이 발견한 만유인력.",
+        "examples": {
+          "beginner": "중력이 작용해요.",
+          "intermediate": "중력 때문에 떨어져요.",
+          "advanced": "\"달의 중력은 지구보다 약해.\" \"그래서 달에서는 가벼운 거구나.\"",
+          "master": "중력을 연구해요."
+        },
+        "variations": {
+          "formal": ["중력입니다", "만유인력", "인력"],
+          "casual": ["중력~", "중력으로"],
+          "short": ["중력", "gravity"]
+        }
+      },
+      "en": {
+        "word": "Gravity",
+        "explanation": "The force that pulls objects toward Earth's center. Newton's universal gravitation.",
+        "examples": {
+          "beginner": "중력이 작용해요. - Gravity is acting.",
+          "intermediate": "중력 때문에 떨어져요. - It falls because of gravity.",
+          "advanced": "\"The moon's gravity is weaker than Earth's.\" \"That's why things are lighter on the moon.\"",
+          "master": "I study gravity."
+        },
+        "variations": {
+          "formal": ["It is gravity", "Universal gravitation", "Gravitational force"],
+          "casual": ["Gravity~", "By gravity"],
+          "short": ["Gravity", "G-force"]
+        }
+      }
+    }
+  },
+  {
+    "id": "sokdo",
+    "korean": "속도",
+    "romanization": "sokdo",
+    "pronunciation": {
+      "korean": "[속도]",
+      "ipa": "[sokto]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "physics",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["physics", "speed", "velocity"],
+    "translations": {
+      "ko": {
+        "word": "속도",
+        "explanation": "물체가 움직이는 빠르기. 단위 시간에 이동한 거리.",
+        "examples": {
+          "beginner": "속도가 빨라요.",
+          "intermediate": "속도를 줄이세요.",
+          "advanced": "\"빛의 속도는 얼마야?\" \"초당 30만 킬로미터야.\"",
+          "master": "자동차 속도를 측정했어요."
+        },
+        "variations": {
+          "formal": ["속도입니다", "속력", "신속도"],
+          "casual": ["속도~", "속도로"],
+          "short": ["속도", "speed"]
+        }
+      },
+      "en": {
+        "word": "Speed / Velocity",
+        "explanation": "How fast an object moves. Distance traveled per unit time.",
+        "examples": {
+          "beginner": "속도가 빨라요. - The speed is fast.",
+          "intermediate": "속도를 줄이세요. - Reduce speed.",
+          "advanced": "\"What's the speed of light?\" \"300,000 kilometers per second.\"",
+          "master": "I measured the car's speed."
+        },
+        "variations": {
+          "formal": ["It is speed", "Velocity", "Rapidity"],
+          "casual": ["Speed~", "At speed"],
+          "short": ["Speed", "Velocity"]
+        }
+      }
+    }
+  },
+  {
+    "id": "jilryang",
+    "korean": "질량",
+    "romanization": "jillyang",
+    "pronunciation": {
+      "korean": "[질량]",
+      "ipa": "[tɕilːjaŋ]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "physics",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["physics", "mass", "matter"],
+    "translations": {
+      "ko": {
+        "word": "질량",
+        "explanation": "물체가 가진 물질의 양. 무게와는 다른 개념.",
+        "examples": {
+          "beginner": "질량이 커요.",
+          "intermediate": "질량을 측정했어요.",
+          "advanced": "\"질량과 무게가 달라?\" \"응, 질량은 일정하지만 무게는 중력에 따라 달라져.\"",
+          "master": "질량 보존 법칙이 중요해요."
+        },
+        "variations": {
+          "formal": ["질량입니다", "물질량", "중량"],
+          "casual": ["질량~", "질량으로"],
+          "short": ["질량", "mass"]
+        }
+      },
+      "en": {
+        "word": "Mass",
+        "explanation": "The amount of matter an object has. Different concept from weight.",
+        "examples": {
+          "beginner": "질량이 커요. - The mass is large.",
+          "intermediate": "질량을 측정했어요. - I measured the mass.",
+          "advanced": "\"Are mass and weight different?\" \"Yes, mass is constant but weight changes with gravity.\"",
+          "master": "The law of conservation of mass is important."
+        },
+        "variations": {
+          "formal": ["It is mass", "Matter amount", "Weight"],
+          "casual": ["Mass~", "By mass"],
+          "short": ["Mass", "M"]
+        }
+      }
+    }
+  },
+  {
+    "id": "bich",
+    "korean": "빛",
+    "romanization": "bit",
+    "pronunciation": {
+      "korean": "[빛]",
+      "ipa": "[pit]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "physics",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["physics", "light", "wave"],
+    "translations": {
+      "ko": {
+        "word": "빛",
+        "explanation": "눈으로 볼 수 있게 하는 전자기파. 광원에서 나오는 에너지.",
+        "examples": {
+          "beginner": "빛이 밝아요.",
+          "intermediate": "빛의 속도가 빨라요.",
+          "advanced": "\"빛은 파동이야, 입자야?\" \"둘 다야, 이중성을 가지고 있어.\"",
+          "master": "빛이 반사돼요."
+        },
+        "variations": {
+          "formal": ["빛입니다", "광(光)", "광선"],
+          "casual": ["빛~", "빛으로"],
+          "short": ["빛", "light"]
+        }
+      },
+      "en": {
+        "word": "Light",
+        "explanation": "Electromagnetic waves that make things visible. Energy from a light source.",
+        "examples": {
+          "beginner": "빛이 밝아요. - The light is bright.",
+          "intermediate": "빛의 속도가 빨라요. - The speed of light is fast.",
+          "advanced": "\"Is light a wave or particle?\" \"Both, it has dual nature.\"",
+          "master": "Light reflects."
+        },
+        "variations": {
+          "formal": ["It is light", "Luminosity", "Ray"],
+          "casual": ["Light~", "By light"],
+          "short": ["Light", "Ray"]
+        }
+      }
+    }
+  },
+  {
+    "id": "jeon-gi",
+    "korean": "전기",
+    "romanization": "jeongi",
+    "pronunciation": {
+      "korean": "[전기]",
+      "ipa": "[tɕʌŋɡi]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "physics",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["physics", "electricity", "energy"],
+    "translations": {
+      "ko": {
+        "word": "전기",
+        "explanation": "전하의 흐름으로 생기는 에너지. 현대 문명의 필수 요소.",
+        "examples": {
+          "beginner": "전기가 나갔어요.",
+          "intermediate": "전기를 절약해요.",
+          "advanced": "\"전기는 어떻게 만들어져?\" \"발전소에서 다양한 방법으로 생산해.\"",
+          "master": "전기 요금을 냈어요."
+        },
+        "variations": {
+          "formal": ["전기입니다", "전력", "전류"],
+          "casual": ["전기~", "전기로"],
+          "short": ["전기", "electricity"]
+        }
+      },
+      "en": {
+        "word": "Electricity",
+        "explanation": "Energy produced by the flow of electric charge. Essential element of modern civilization.",
+        "examples": {
+          "beginner": "전기가 나갔어요. - The electricity went out.",
+          "intermediate": "전기를 절약해요. - Save electricity.",
+          "advanced": "\"How is electricity made?\" \"It's produced in power plants through various methods.\"",
+          "master": "I paid the electricity bill."
+        },
+        "variations": {
+          "formal": ["It is electricity", "Electric power", "Current"],
+          "casual": ["Electricity~", "By electricity"],
+          "short": ["Electricity", "Power"]
+        }
+      }
+    }
+  },
+  {
+    "id": "ondo",
+    "korean": "온도",
+    "romanization": "ondo",
+    "pronunciation": {
+      "korean": "[온도]",
+      "ipa": "[onto]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "physics",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["physics", "temperature", "heat"],
+    "translations": {
+      "ko": {
+        "word": "온도",
+        "explanation": "물체의 뜨겁고 차가운 정도. 섭씨나 화씨로 측정한다.",
+        "examples": {
+          "beginner": "온도가 높아요.",
+          "intermediate": "온도를 재요.",
+          "advanced": "\"지금 온도가 몇 도야?\" \"25도야, 딱 좋네.\"",
+          "master": "온도가 올라갔어요."
+        },
+        "variations": {
+          "formal": ["온도입니다", "기온", "체온"],
+          "casual": ["온도~", "온도로"],
+          "short": ["온도", "temperature"]
+        }
+      },
+      "en": {
+        "word": "Temperature",
+        "explanation": "The degree of hotness or coldness of an object. Measured in Celsius or Fahrenheit.",
+        "examples": {
+          "beginner": "온도가 높아요. - The temperature is high.",
+          "intermediate": "온도를 재요. - Measure the temperature.",
+          "advanced": "\"What's the temperature now?\" \"It's 25 degrees, perfect.\"",
+          "master": "The temperature went up."
+        },
+        "variations": {
+          "formal": ["It is temperature", "Air temperature", "Body temperature"],
+          "casual": ["Temperature~", "At temperature"],
+          "short": ["Temp", "Temperature"]
+        }
+      }
+    }
+  },
+  {
+    "id": "padong",
+    "korean": "파동",
+    "romanization": "padong",
+    "pronunciation": {
+      "korean": "[파동]",
+      "ipa": "[pʰadoŋ]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "physics",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["physics", "wave", "motion"],
+    "translations": {
+      "ko": {
+        "word": "파동",
+        "explanation": "에너지가 전달되며 진동이 퍼져 나가는 현상. 소리, 빛, 물결 등.",
+        "examples": {
+          "beginner": "파동이 전파돼요.",
+          "intermediate": "파동을 연구해요.",
+          "advanced": "\"소리는 파동이야?\" \"응, 공기를 통해 전달되는 파동이지.\"",
+          "master": "전자기 파동을 배웠어요."
+        },
+        "variations": {
+          "formal": ["파동입니다", "파(波)", "물결"],
+          "casual": ["파동~", "파동으로"],
+          "short": ["파동", "wave"]
+        }
+      },
+      "en": {
+        "word": "Wave",
+        "explanation": "A phenomenon where vibrations spread as energy is transmitted. Sound, light, water waves, etc.",
+        "examples": {
+          "beginner": "파동이 전파돼요. - Waves propagate.",
+          "intermediate": "파동을 연구해요. - I study waves.",
+          "advanced": "\"Is sound a wave?\" \"Yes, it's a wave transmitted through air.\"",
+          "master": "I learned about electromagnetic waves."
+        },
+        "variations": {
+          "formal": ["It is a wave", "Wave motion", "Undulation"],
+          "casual": ["Wave~", "By waves"],
+          "short": ["Wave", "Waves"]
+        }
+      }
+    }
+  }
+]

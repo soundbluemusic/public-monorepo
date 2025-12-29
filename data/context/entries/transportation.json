@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "gyotong",
+    "korean": "교통",
+    "romanization": "gyotong",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "traffic", "basic"],
+    "translations": {
+      "ko": {
+        "word": "교통",
+        "explanation": "사람이나 물건이 이동하는 수단이나 시스템.",
+        "examples": {
+          "beginner": "교통이 편해요.",
+          "intermediate": "서울은 교통이 좋아요.",
+          "advanced": "대중교통을 이용하면 환경에 좋아요.",
+          "master": "교통 체증이 심한 시간대를 피하는 게 좋아요."
+        }
+      },
+      "en": {
+        "word": "transportation / traffic",
+        "explanation": "Means or system for moving people or goods.",
+        "examples": {
+          "beginner": "Transportation is convenient.",
+          "intermediate": "Seoul has good transportation.",
+          "advanced": "Using public transportation is good for the environment.",
+          "master": "It's better to avoid peak traffic hours."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[교통]",
+      "ipa": "[kjotʰoŋ]"
+    }
+  },
+  {
+    "id": "bae-transport",
+    "korean": "배",
+    "romanization": "bae",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "ship", "boat"],
+    "translations": {
+      "ko": {
+        "word": "배",
+        "explanation": "물 위를 다니는 교통수단.",
+        "examples": {
+          "beginner": "배를 타요.",
+          "intermediate": "제주도에 배로 갈 수 있어요.",
+          "advanced": "배 멀미가 있어서 비행기를 탔어요.",
+          "master": "카페리를 이용하면 차도 함께 실을 수 있어요."
+        }
+      },
+      "en": {
+        "word": "ship / boat",
+        "explanation": "A vehicle that travels on water.",
+        "examples": {
+          "beginner": "I take a boat.",
+          "intermediate": "You can go to Jeju Island by ship.",
+          "advanced": "I took a plane because I get seasick.",
+          "master": "You can bring your car if you use a car ferry."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[배]",
+      "ipa": "[pɛ]"
+    }
+  },
+  {
+    "id": "jadongcha",
+    "korean": "자동차",
+    "romanization": "jadongcha",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "car", "automobile"],
+    "translations": {
+      "ko": {
+        "word": "자동차",
+        "explanation": "엔진으로 움직이는 네 바퀴 달린 차.",
+        "examples": {
+          "beginner": "자동차가 있어요.",
+          "intermediate": "자동차로 출근해요.",
+          "advanced": "전기 자동차가 점점 많아지고 있어요.",
+          "master": "자동차 유지비가 생각보다 많이 들어요."
+        }
+      },
+      "en": {
+        "word": "car / automobile",
+        "explanation": "A four-wheeled vehicle powered by an engine.",
+        "examples": {
+          "beginner": "I have a car.",
+          "intermediate": "I commute by car.",
+          "advanced": "Electric cars are becoming more common.",
+          "master": "Car maintenance costs more than you'd think."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[자동차]",
+      "ipa": "[tɕatoŋtɕʰa]"
+    }
+  },
+  {
+    "id": "jajeongeo",
+    "korean": "자전거",
+    "romanization": "jajeongeo",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "bicycle", "bike"],
+    "translations": {
+      "ko": {
+        "word": "자전거",
+        "explanation": "페달을 밟아 바퀴를 굴리는 두 바퀴 탈것.",
+        "examples": {
+          "beginner": "자전거를 타요.",
+          "intermediate": "자전거 도로가 있어요?",
+          "advanced": "자전거 출퇴근은 건강에 좋아요.",
+          "master": "공유 자전거 서비스가 전국적으로 확대되고 있어요."
+        }
+      },
+      "en": {
+        "word": "bicycle / bike",
+        "explanation": "A two-wheeled vehicle powered by pedaling.",
+        "examples": {
+          "beginner": "I ride a bicycle.",
+          "intermediate": "Is there a bike lane?",
+          "advanced": "Commuting by bicycle is good for your health.",
+          "master": "Bike-sharing services are expanding nationwide."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[자전거]",
+      "ipa": "[tɕadʑʌnɡʌ]"
+    }
+  },
+  {
+    "id": "otobi",
+    "korean": "오토바이",
+    "romanization": "otobi",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "motorcycle", "motorbike"],
+    "translations": {
+      "ko": {
+        "word": "오토바이",
+        "explanation": "엔진이 달린 두 바퀴 탈것.",
+        "examples": {
+          "beginner": "오토바이를 타요.",
+          "intermediate": "오토바이 헬멧을 써야 해요.",
+          "advanced": "배달 오토바이가 많아요.",
+          "master": "오토바이 면허를 따려면 별도 시험을 봐야 해요."
+        }
+      },
+      "en": {
+        "word": "motorcycle / motorbike",
+        "explanation": "A two-wheeled vehicle with an engine.",
+        "examples": {
+          "beginner": "I ride a motorcycle.",
+          "intermediate": "You must wear a motorcycle helmet.",
+          "advanced": "There are many delivery motorcycles.",
+          "master": "You need to take a separate test to get a motorcycle license."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[오토바이]",
+      "ipa": "[otʰobai]"
+    }
+  },
+  {
+    "id": "jeongryujang",
+    "korean": "정류장",
+    "romanization": "jeongryujang",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "stop", "bus stop"],
+    "translations": {
+      "ko": {
+        "word": "정류장",
+        "explanation": "버스가 서는 곳.",
+        "examples": {
+          "beginner": "정류장이에요.",
+          "intermediate": "버스 정류장이 어디예요?",
+          "advanced": "다음 정류장에서 내릴게요.",
+          "master": "실시간 버스 도착 정보를 정류장에서 확인할 수 있어요."
+        }
+      },
+      "en": {
+        "word": "bus stop",
+        "explanation": "A place where buses stop.",
+        "examples": {
+          "beginner": "It's a bus stop.",
+          "intermediate": "Where is the bus stop?",
+          "advanced": "I'll get off at the next stop.",
+          "master": "You can check real-time bus arrival info at the bus stop."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[정류장]",
+      "ipa": "[tɕʌŋɾjudʑaŋ]"
+    }
+  },
+  {
+    "id": "hanggu",
+    "korean": "항구",
+    "romanization": "hanggu",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["transportation", "port", "harbor"],
+    "translations": {
+      "ko": {
+        "word": "항구",
+        "explanation": "배가 드나드는 곳.",
+        "examples": {
+          "beginner": "항구예요.",
+          "intermediate": "부산 항구가 유명해요.",
+          "advanced": "항구에서 배를 타고 일본에 갈 수 있어요.",
+          "master": "인천항은 한국에서 가장 큰 국제 항구 중 하나예요."
+        }
+      },
+      "en": {
+        "word": "port / harbor",
+        "explanation": "A place where ships come and go.",
+        "examples": {
+          "beginner": "It's a port.",
+          "intermediate": "Busan port is famous.",
+          "advanced": "You can take a ship to Japan from the port.",
+          "master": "Incheon Port is one of the largest international ports in Korea."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[항구]",
+      "ipa": "[haŋɡu]"
+    }
+  },
+  {
+    "id": "yogeum",
+    "korean": "요금",
+    "romanization": "yogeum",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "fare", "cost"],
+    "translations": {
+      "ko": {
+        "word": "요금",
+        "explanation": "교통수단을 이용하는 데 내는 돈.",
+        "examples": {
+          "beginner": "요금이 얼마예요?",
+          "intermediate": "버스 요금은 현금으로 낼 수 있어요.",
+          "advanced": "교통카드로 요금을 내면 할인돼요.",
+          "master": "거리에 따라 추가 요금이 붙을 수 있어요."
+        }
+      },
+      "en": {
+        "word": "fare / fee",
+        "explanation": "Money paid to use transportation.",
+        "examples": {
+          "beginner": "How much is the fare?",
+          "intermediate": "You can pay the bus fare in cash.",
+          "advanced": "You get a discount if you pay with a transit card.",
+          "master": "Additional charges may apply depending on the distance."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[요금]",
+      "ipa": "[joɡɯm]"
+    }
+  },
+  {
+    "id": "gyotongkadeu",
+    "korean": "교통카드",
+    "romanization": "gyotong kadeu",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "card", "transit"],
+    "translations": {
+      "ko": {
+        "word": "교통카드",
+        "explanation": "버스나 지하철 요금을 낼 때 쓰는 카드.",
+        "examples": {
+          "beginner": "교통카드 있어요?",
+          "intermediate": "교통카드를 충전해야 해요.",
+          "advanced": "교통카드로 환승하면 요금이 저렴해요.",
+          "master": "후불 교통카드는 한 달 치 요금을 나중에 결제해요."
+        }
+      },
+      "en": {
+        "word": "transit card / transportation card",
+        "explanation": "A card used to pay bus or subway fares.",
+        "examples": {
+          "beginner": "Do you have a transit card?",
+          "intermediate": "I need to recharge my transit card.",
+          "advanced": "Transferring with a transit card saves money.",
+          "master": "A postpaid transit card charges the monthly fare later."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[교통카드]",
+      "ipa": "[kjotʰoŋkʰadɯ]"
+    }
+  },
+  {
+    "id": "chungjeong",
+    "korean": "충전",
+    "romanization": "chungjeong",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "recharge", "top-up"],
+    "translations": {
+      "ko": {
+        "word": "충전",
+        "explanation": "교통카드에 돈을 넣는 것.",
+        "examples": {
+          "beginner": "충전해 주세요.",
+          "intermediate": "만 원 충전할게요.",
+          "advanced": "편의점에서도 충전할 수 있어요.",
+          "master": "자동 충전 설정을 해 두면 편해요."
+        }
+      },
+      "en": {
+        "word": "recharge / top-up",
+        "explanation": "Adding money to a transit card.",
+        "examples": {
+          "beginner": "Please recharge it.",
+          "intermediate": "I'll charge 10,000 won.",
+          "advanced": "You can recharge at convenience stores too.",
+          "master": "It's convenient to set up automatic recharging."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[충전]",
+      "ipa": "[tɕʰuŋdʑʌn]"
+    }
+  },
+  {
+    "id": "hwanseung",
+    "korean": "환승",
+    "romanization": "hwanseung",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["transportation", "transfer", "change"],
+    "translations": {
+      "ko": {
+        "word": "환승",
+        "explanation": "한 교통수단에서 다른 교통수단으로 갈아타는 것.",
+        "examples": {
+          "beginner": "환승해요.",
+          "intermediate": "여기서 환승해야 해요.",
+          "advanced": "환승 시간이 30분 이내여야 할인돼요.",
+          "master": "버스-지하철 환승은 최대 5회까지 가능해요."
+        }
+      },
+      "en": {
+        "word": "transfer",
+        "explanation": "Changing from one mode of transport to another.",
+        "examples": {
+          "beginner": "I transfer.",
+          "intermediate": "You need to transfer here.",
+          "advanced": "You get a discount if you transfer within 30 minutes.",
+          "master": "Bus-subway transfers are possible up to 5 times."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[환승]",
+      "ipa": "[hwansɯŋ]"
+    }
+  },
+  {
+    "id": "chulbal",
+    "korean": "출발",
+    "romanization": "chulbal",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "departure", "start"],
+    "translations": {
+      "ko": {
+        "word": "출발",
+        "explanation": "떠나기 시작함.",
+        "examples": {
+          "beginner": "출발해요.",
+          "intermediate": "출발 시간이 언제예요?",
+          "advanced": "출발 10분 전에 탑승구로 가세요.",
+          "master": "출발이 지연되면 안내 방송을 잘 들으세요."
+        }
+      },
+      "en": {
+        "word": "departure",
+        "explanation": "Starting to leave.",
+        "examples": {
+          "beginner": "We're departing.",
+          "intermediate": "What time is the departure?",
+          "advanced": "Go to the boarding gate 10 minutes before departure.",
+          "master": "Listen carefully to announcements if there's a delay."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[출발]",
+      "ipa": "[tɕʰulbal]"
+    }
+  },
+  {
+    "id": "dochak",
+    "korean": "도착",
+    "romanization": "dochak",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "arrival", "basic"],
+    "translations": {
+      "ko": {
+        "word": "도착",
+        "explanation": "목적지에 다다름.",
+        "examples": {
+          "beginner": "도착했어요.",
+          "intermediate": "도착 시간을 알려 주세요.",
+          "advanced": "예정보다 30분 일찍 도착했어요.",
+          "master": "도착 후 수하물 찾는 곳으로 가세요."
+        }
+      },
+      "en": {
+        "word": "arrival",
+        "explanation": "Reaching the destination.",
+        "examples": {
+          "beginner": "I arrived.",
+          "intermediate": "Please tell me the arrival time.",
+          "advanced": "We arrived 30 minutes earlier than scheduled.",
+          "master": "Go to baggage claim after arrival."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[도착]",
+      "ipa": "[todʑak]"
+    }
+  },
+  {
+    "id": "noson",
+    "korean": "노선",
+    "romanization": "noson",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["transportation", "route", "line"],
+    "translations": {
+      "ko": {
+        "word": "노선",
+        "explanation": "버스나 지하철이 다니는 길.",
+        "examples": {
+          "beginner": "이 노선이에요.",
+          "intermediate": "이 노선은 어디까지 가요?",
+          "advanced": "2호선 노선도를 보세요.",
+          "master": "이 노선은 주말에만 운행해요."
+        }
+      },
+      "en": {
+        "word": "route / line",
+        "explanation": "The path a bus or subway follows.",
+        "examples": {
+          "beginner": "It's this route.",
+          "intermediate": "How far does this route go?",
+          "advanced": "Look at the Line 2 route map.",
+          "master": "This route only operates on weekends."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[노선]",
+      "ipa": "[nosʌn]"
+    }
+  },
+  {
+    "id": "nosondo",
+    "korean": "노선도",
+    "romanization": "nosondo",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["transportation", "map", "route map"],
+    "translations": {
+      "ko": {
+        "word": "노선도",
+        "explanation": "버스나 지하철의 경로를 보여주는 지도.",
+        "examples": {
+          "beginner": "노선도 있어요?",
+          "intermediate": "지하철 노선도를 주세요.",
+          "advanced": "노선도를 보면 환승역을 알 수 있어요.",
+          "master": "앱에서 실시간 노선도를 확인할 수 있어요."
+        }
+      },
+      "en": {
+        "word": "route map",
+        "explanation": "A map showing bus or subway routes.",
+        "examples": {
+          "beginner": "Is there a route map?",
+          "intermediate": "Please give me a subway map.",
+          "advanced": "You can find transfer stations on the route map.",
+          "master": "You can check real-time route maps on the app."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[노선도]",
+      "ipa": "[nosʌndo]"
+    }
+  },
+  {
+    "id": "tapseongeong",
+    "korean": "탑승구",
+    "romanization": "tapseongeong",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["transportation", "gate", "boarding"],
+    "translations": {
+      "ko": {
+        "word": "탑승구",
+        "explanation": "비행기에 타는 곳.",
+        "examples": {
+          "beginner": "탑승구가 어디예요?",
+          "intermediate": "탑승구가 바뀌었어요.",
+          "advanced": "탑승구 앞에서 기다리세요.",
+          "master": "탑승구가 멀면 셔틀 버스를 이용해요."
+        }
+      },
+      "en": {
+        "word": "boarding gate",
+        "explanation": "The place where you board an airplane.",
+        "examples": {
+          "beginner": "Where is the boarding gate?",
+          "intermediate": "The gate has changed.",
+          "advanced": "Please wait in front of the gate.",
+          "master": "Use a shuttle bus if the gate is far away."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[탑승]",
+      "ipa": "[tʰapsɯŋ]"
+    }
+  },
+  {
+    "id": "suhamul",
+    "korean": "수하물",
+    "romanization": "suhamul",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["transportation", "luggage", "baggage"],
+    "translations": {
+      "ko": {
+        "word": "수하물",
+        "explanation": "여행할 때 들고 다니는 짐.",
+        "examples": {
+          "beginner": "수하물이에요.",
+          "intermediate": "수하물을 맡겼어요.",
+          "advanced": "수하물 무게 제한이 23kg이에요.",
+          "master": "수하물이 안 나오면 분실 신고를 해야 해요."
+        }
+      },
+      "en": {
+        "word": "luggage / baggage",
+        "explanation": "Bags carried when traveling.",
+        "examples": {
+          "beginner": "It's luggage.",
+          "intermediate": "I checked my luggage.",
+          "advanced": "The luggage weight limit is 23kg.",
+          "master": "You need to file a lost report if your luggage doesn't come out."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[수하물]",
+      "ipa": "[suɦamul]"
+    }
+  },
+  {
+    "id": "kinaejim",
+    "korean": "기내 짐",
+    "romanization": "ginae jim",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["transportation", "carry-on", "cabin"],
+    "translations": {
+      "ko": {
+        "word": "기내 짐",
+        "explanation": "비행기 안에 가지고 타는 작은 짐.",
+        "examples": {
+          "beginner": "기내 짐이에요.",
+          "intermediate": "기내 짐은 작아야 해요.",
+          "advanced": "기내 짐은 좌석 위 선반에 넣으세요.",
+          "master": "기내 짐 크기가 규정을 초과하면 탑승할 수 없어요."
+        }
+      },
+      "en": {
+        "word": "carry-on / cabin luggage",
+        "explanation": "Small bags taken into the airplane cabin.",
+        "examples": {
+          "beginner": "It's carry-on luggage.",
+          "intermediate": "Carry-on luggage must be small.",
+          "advanced": "Put your carry-on in the overhead bin.",
+          "master": "You can't board if your carry-on exceeds size limits."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[기내짐]",
+      "ipa": "[kinɛdʑim]"
+    }
+  },
+  {
+    "id": "unhaeng",
+    "korean": "운행",
+    "romanization": "unhaeng",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["transportation", "operation", "service"],
+    "translations": {
+      "ko": {
+        "word": "운행",
+        "explanation": "교통수단이 정해진 길을 다니는 것.",
+        "examples": {
+          "beginner": "운행해요?",
+          "intermediate": "막차 운행 시간이 언제예요?",
+          "advanced": "주말에는 운행 간격이 길어져요.",
+          "master": "눈이 많이 오면 운행이 중단될 수 있어요."
+        }
+      },
+      "en": {
+        "word": "operation / service",
+        "explanation": "Transportation running on scheduled routes.",
+        "examples": {
+          "beginner": "Is it operating?",
+          "intermediate": "What time is the last train?",
+          "advanced": "Service intervals are longer on weekends.",
+          "master": "Service may be suspended during heavy snow."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[운행]",
+      "ipa": "[unɦɛŋ]"
+    }
+  },
+  {
+    "id": "makcha",
+    "korean": "막차",
+    "romanization": "makcha",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "last", "train"],
+    "translations": {
+      "ko": {
+        "word": "막차",
+        "explanation": "그날 마지막으로 운행하는 버스나 지하철.",
+        "examples": {
+          "beginner": "막차 탈게요.",
+          "intermediate": "막차가 몇 시예요?",
+          "advanced": "막차를 놓치면 택시를 타야 해요.",
+          "master": "금요일 밤에는 막차 시간이 연장돼요."
+        }
+      },
+      "en": {
+        "word": "last train / last bus",
+        "explanation": "The last bus or subway of the day.",
+        "examples": {
+          "beginner": "I'll take the last train.",
+          "intermediate": "What time is the last train?",
+          "advanced": "If you miss the last train, you need to take a taxi.",
+          "master": "Last train times are extended on Friday nights."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[막차]",
+      "ipa": "[maktɕʰa]"
+    }
+  },
+  {
+    "id": "cheotcha",
+    "korean": "첫차",
+    "romanization": "cheotcha",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "first", "train"],
+    "translations": {
+      "ko": {
+        "word": "첫차",
+        "explanation": "그날 처음으로 운행하는 버스나 지하철.",
+        "examples": {
+          "beginner": "첫차를 타요.",
+          "intermediate": "첫차가 몇 시예요?",
+          "advanced": "새벽에 출발하려면 첫차를 타야 해요.",
+          "master": "첫차 시간은 역마다 조금씩 달라요."
+        }
+      },
+      "en": {
+        "word": "first train / first bus",
+        "explanation": "The first bus or subway of the day.",
+        "examples": {
+          "beginner": "I take the first train.",
+          "intermediate": "What time is the first train?",
+          "advanced": "You need to catch the first train to leave early morning.",
+          "master": "First train times vary slightly by station."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[첫차]",
+      "ipa": "[tɕʰʌttɕʰa]"
+    }
+  },
+  {
+    "id": "unjeon",
+    "korean": "운전",
+    "romanization": "unjeon",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "driving", "basic"],
+    "translations": {
+      "ko": {
+        "word": "운전",
+        "explanation": "자동차 등을 조종하여 움직이게 하는 것.",
+        "examples": {
+          "beginner": "운전해요.",
+          "intermediate": "운전을 배우고 있어요.",
+          "advanced": "장거리 운전은 피곤해요.",
+          "master": "졸음운전은 매우 위험해요."
+        }
+      },
+      "en": {
+        "word": "driving",
+        "explanation": "Operating and controlling a vehicle.",
+        "examples": {
+          "beginner": "I drive.",
+          "intermediate": "I'm learning to drive.",
+          "advanced": "Long-distance driving is tiring.",
+          "master": "Drowsy driving is very dangerous."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[운전]",
+      "ipa": "[undʑʌn]"
+    }
+  },
+  {
+    "id": "myeonheojeung",
+    "korean": "면허증",
+    "romanization": "myeonheojeung",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["transportation", "license", "document"],
+    "translations": {
+      "ko": {
+        "word": "면허증",
+        "explanation": "자동차를 운전할 수 있는 자격을 증명하는 증서.",
+        "examples": {
+          "beginner": "면허증 있어요?",
+          "intermediate": "운전 면허증을 땄어요.",
+          "advanced": "면허증은 항상 가지고 다녀야 해요.",
+          "master": "국제 면허증이 있으면 외국에서도 운전할 수 있어요."
+        }
+      },
+      "en": {
+        "word": "driver's license",
+        "explanation": "A document certifying permission to drive.",
+        "examples": {
+          "beginner": "Do you have a license?",
+          "intermediate": "I got my driver's license.",
+          "advanced": "You should always carry your license.",
+          "master": "You can drive abroad with an international license."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[면허증]",
+      "ipa": "[mjʌnhʌdʑɯŋ]"
+    }
+  },
+  {
+    "id": "juchajang",
+    "korean": "주차장",
+    "romanization": "juchajang",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "parking", "lot"],
+    "translations": {
+      "ko": {
+        "word": "주차장",
+        "explanation": "차를 세워 두는 곳.",
+        "examples": {
+          "beginner": "주차장이 어디예요?",
+          "intermediate": "지하 주차장에 세웠어요.",
+          "advanced": "주차장이 가득 차서 빈자리가 없어요.",
+          "master": "발렛 주차 서비스를 이용하면 편해요."
+        }
+      },
+      "en": {
+        "word": "parking lot",
+        "explanation": "A place to park cars.",
+        "examples": {
+          "beginner": "Where is the parking lot?",
+          "intermediate": "I parked in the underground parking lot.",
+          "advanced": "The parking lot is full with no empty spaces.",
+          "master": "Using valet parking service is convenient."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[주차장]",
+      "ipa": "[tɕutɕʰadʑaŋ]"
+    }
+  },
+  {
+    "id": "jucha",
+    "korean": "주차",
+    "romanization": "jucha",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "parking", "car"],
+    "translations": {
+      "ko": {
+        "word": "주차",
+        "explanation": "차를 한 곳에 세워 두는 것.",
+        "examples": {
+          "beginner": "주차해요.",
+          "intermediate": "여기 주차해도 돼요?",
+          "advanced": "불법 주차하면 벌금을 내야 해요.",
+          "master": "평행 주차가 초보 운전자에게 제일 어려워요."
+        }
+      },
+      "en": {
+        "word": "parking",
+        "explanation": "Stopping and leaving a car in a place.",
+        "examples": {
+          "beginner": "I park.",
+          "intermediate": "Can I park here?",
+          "advanced": "You have to pay a fine for illegal parking.",
+          "master": "Parallel parking is hardest for beginner drivers."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[주차]",
+      "ipa": "[tɕutɕʰa]"
+    }
+  },
+  {
+    "id": "shinhodeung",
+    "korean": "신호등",
+    "romanization": "shinhodeung",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "traffic light", "signal"],
+    "translations": {
+      "ko": {
+        "word": "신호등",
+        "explanation": "교통을 조절하는 빨강, 노랑, 초록 불.",
+        "examples": {
+          "beginner": "신호등이에요.",
+          "intermediate": "신호등이 파란불이에요.",
+          "advanced": "신호등을 잘 보고 건너세요.",
+          "master": "보행자 신호등이 깜빡일 때는 건너지 마세요."
+        }
+      },
+      "en": {
+        "word": "traffic light",
+        "explanation": "Red, yellow, and green lights controlling traffic.",
+        "examples": {
+          "beginner": "It's a traffic light.",
+          "intermediate": "The traffic light is green.",
+          "advanced": "Watch the traffic light carefully before crossing.",
+          "master": "Don't cross when the pedestrian light is flashing."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[신호등]",
+      "ipa": "[ɕinɦodɯŋ]"
+    }
+  },
+  {
+    "id": "hoengdanbodo",
+    "korean": "횡단보도",
+    "romanization": "hoengdanbodo",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["transportation", "crosswalk", "pedestrian"],
+    "translations": {
+      "ko": {
+        "word": "횡단보도",
+        "explanation": "사람들이 길을 건널 수 있게 표시한 곳.",
+        "examples": {
+          "beginner": "횡단보도예요.",
+          "intermediate": "횡단보도에서 건너세요.",
+          "advanced": "횡단보도 앞에서 항상 멈춰야 해요.",
+          "master": "횡단보도가 없는 곳에서 건너면 위험해요."
+        }
+      },
+      "en": {
+        "word": "crosswalk / pedestrian crossing",
+        "explanation": "A marked place for people to cross the street.",
+        "examples": {
+          "beginner": "It's a crosswalk.",
+          "intermediate": "Cross at the crosswalk.",
+          "advanced": "You must always stop at crosswalks.",
+          "master": "It's dangerous to cross where there's no crosswalk."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[횡단보도]",
+      "ipa": "[hwɛŋdanbodo]"
+    }
+  },
+  {
+    "id": "indo-transport",
+    "korean": "인도",
+    "romanization": "indo",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "sidewalk", "pedestrian"],
+    "translations": {
+      "ko": {
+        "word": "인도",
+        "explanation": "사람이 걸어 다니는 길.",
+        "examples": {
+          "beginner": "인도로 가세요.",
+          "intermediate": "자전거는 인도로 다니면 안 돼요.",
+          "advanced": "인도가 좁아서 걷기 불편해요.",
+          "master": "인도에 불법 주차된 차 때문에 보행자가 차도로 다녀요."
+        }
+      },
+      "en": {
+        "word": "sidewalk / pavement",
+        "explanation": "A path for people to walk on.",
+        "examples": {
+          "beginner": "Go on the sidewalk.",
+          "intermediate": "Bicycles shouldn't ride on the sidewalk.",
+          "advanced": "The sidewalk is narrow, making it hard to walk.",
+          "master": "Pedestrians use the road because of illegally parked cars on the sidewalk."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[인도]",
+      "ipa": "[indo]"
+    }
+  },
+  {
+    "id": "chado",
+    "korean": "차도",
+    "romanization": "chado",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "road", "street"],
+    "translations": {
+      "ko": {
+        "word": "차도",
+        "explanation": "자동차가 다니는 길.",
+        "examples": {
+          "beginner": "차도예요.",
+          "intermediate": "차도에서 걷지 마세요.",
+          "advanced": "차도와 인도가 분리되어 있어요.",
+          "master": "버스 전용 차도를 일반 차가 이용하면 벌금이에요."
+        }
+      },
+      "en": {
+        "word": "road / roadway",
+        "explanation": "A path for cars to drive on.",
+        "examples": {
+          "beginner": "It's the road.",
+          "intermediate": "Don't walk on the road.",
+          "advanced": "The road and sidewalk are separated.",
+          "master": "Regular cars get fined for using the bus-only lane."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[차도]",
+      "ipa": "[tɕʰado]"
+    }
+  },
+  {
+    "id": "gosokdoro",
+    "korean": "고속도로",
+    "romanization": "gosokdoro",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["transportation", "highway", "expressway"],
+    "translations": {
+      "ko": {
+        "word": "고속도로",
+        "explanation": "차가 빠르게 달릴 수 있는 도로.",
+        "examples": {
+          "beginner": "고속도로예요.",
+          "intermediate": "고속도로로 가면 빨라요.",
+          "advanced": "고속도로 통행료를 내야 해요.",
+          "master": "명절에는 고속도로가 매우 막혀요."
+        }
+      },
+      "en": {
+        "word": "highway / expressway",
+        "explanation": "A road where cars can travel fast.",
+        "examples": {
+          "beginner": "It's the highway.",
+          "intermediate": "It's faster to take the highway.",
+          "advanced": "You have to pay a highway toll.",
+          "master": "Highways are very congested during holidays."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[고속도로]",
+      "ipa": "[kosoktoɾo]"
+    }
+  },
+  {
+    "id": "gyeongyu",
+    "korean": "경유",
+    "romanization": "gyeongyu",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["transportation", "via", "stopover"],
+    "translations": {
+      "ko": {
+        "word": "경유",
+        "explanation": "어떤 곳을 거쳐서 가는 것.",
+        "examples": {
+          "beginner": "경유해요.",
+          "intermediate": "도쿄 경유로 미국에 가요.",
+          "advanced": "경유 비행은 직항보다 시간이 더 걸려요.",
+          "master": "경유지에서 입국 심사를 받아야 할 수도 있어요."
+        }
+      },
+      "en": {
+        "word": "via / stopover",
+        "explanation": "Going through a place on the way.",
+        "examples": {
+          "beginner": "I'm going via.",
+          "intermediate": "I'm going to America via Tokyo.",
+          "advanced": "Flights with stopovers take longer than direct flights.",
+          "master": "You may need to go through immigration at the stopover."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[경유]",
+      "ipa": "[kjʌŋju]"
+    }
+  },
+  {
+    "id": "jikhang",
+    "korean": "직항",
+    "romanization": "jikhang",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["transportation", "direct", "flight"],
+    "translations": {
+      "ko": {
+        "word": "직항",
+        "explanation": "중간에 서지 않고 바로 가는 비행.",
+        "examples": {
+          "beginner": "직항이에요?",
+          "intermediate": "서울에서 LA까지 직항이 있어요.",
+          "advanced": "직항편이 경유편보다 비싸요.",
+          "master": "직항 노선이 없으면 가장 짧은 경유지를 찾아보세요."
+        }
+      },
+      "en": {
+        "word": "direct flight",
+        "explanation": "A flight that goes straight without stopping.",
+        "examples": {
+          "beginner": "Is it direct?",
+          "intermediate": "There's a direct flight from Seoul to LA.",
+          "advanced": "Direct flights are more expensive than connecting flights.",
+          "master": "If there's no direct route, look for the shortest stopover."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[직항]",
+      "ipa": "[tɕikʰaŋ]"
+    }
+  },
+  {
+    "id": "chwisobi",
+    "korean": "취소비",
+    "romanization": "chwisobi",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["transportation", "cancellation", "fee"],
+    "translations": {
+      "ko": {
+        "word": "취소비",
+        "explanation": "예약을 취소할 때 내는 비용.",
+        "examples": {
+          "beginner": "취소비 있어요?",
+          "intermediate": "취소비가 얼마예요?",
+          "advanced": "출발 전날 취소하면 취소비가 50%예요.",
+          "master": "항공사마다 취소비 정책이 달라요."
+        }
+      },
+      "en": {
+        "word": "cancellation fee",
+        "explanation": "The cost of canceling a reservation.",
+        "examples": {
+          "beginner": "Is there a cancellation fee?",
+          "intermediate": "How much is the cancellation fee?",
+          "advanced": "The cancellation fee is 50% if you cancel the day before.",
+          "master": "Cancellation fee policies differ by airline."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[취소]",
+      "ipa": "[tɕʰwiso]"
+    }
+  },
+  {
+    "id": "tabseunggweon",
+    "korean": "탑승권",
+    "romanization": "tapseunggwon",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["transportation", "boarding pass", "ticket"],
+    "translations": {
+      "ko": {
+        "word": "탑승권",
+        "explanation": "비행기에 탈 수 있는 증표.",
+        "examples": {
+          "beginner": "탑승권이에요.",
+          "intermediate": "탑승권을 보여 주세요.",
+          "advanced": "모바일 탑승권이 편해요.",
+          "master": "탑승권에 좌석 번호와 탑승구 정보가 있어요."
+        }
+      },
+      "en": {
+        "word": "boarding pass",
+        "explanation": "A pass that allows boarding an airplane.",
+        "examples": {
+          "beginner": "It's the boarding pass.",
+          "intermediate": "Please show your boarding pass.",
+          "advanced": "Mobile boarding passes are convenient.",
+          "master": "The boarding pass shows seat number and gate information."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[탑승권]",
+      "ipa": "[tʰapsɯŋɡwʌn]"
+    }
+  },
+  {
+    "id": "chekin",
+    "korean": "체크인",
+    "romanization": "chekin",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "check-in", "airport"],
+    "translations": {
+      "ko": {
+        "word": "체크인",
+        "explanation": "비행기를 타기 전에 수속하는 것.",
+        "examples": {
+          "beginner": "체크인해요.",
+          "intermediate": "온라인 체크인을 했어요.",
+          "advanced": "체크인 카운터가 어디예요?",
+          "master": "체크인은 출발 3시간 전부터 가능해요."
+        }
+      },
+      "en": {
+        "word": "check-in",
+        "explanation": "Processing procedures before boarding a plane.",
+        "examples": {
+          "beginner": "I check in.",
+          "intermediate": "I did online check-in.",
+          "advanced": "Where is the check-in counter?",
+          "master": "Check-in opens 3 hours before departure."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[체크인]",
+      "ipa": "[tɕʰekʰɯin]"
+    }
+  },
+  {
+    "id": "boangeomsa",
+    "korean": "보안 검사",
+    "romanization": "boan geomsa",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["transportation", "security", "check"],
+    "translations": {
+      "ko": {
+        "word": "보안 검사",
+        "explanation": "공항에서 위험물 소지 여부를 확인하는 것.",
+        "examples": {
+          "beginner": "보안 검사예요.",
+          "intermediate": "보안 검사대를 통과해야 해요.",
+          "advanced": "액체류는 보안 검사에서 제한이 있어요.",
+          "master": "보안 검사 줄이 길면 빠른 탑승 서비스를 이용하세요."
+        }
+      },
+      "en": {
+        "word": "security check / screening",
+        "explanation": "Checking for dangerous items at the airport.",
+        "examples": {
+          "beginner": "It's security check.",
+          "intermediate": "You need to pass through security.",
+          "advanced": "Liquids have restrictions at security.",
+          "master": "Use fast-track service if the security line is long."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[보안검사]",
+      "ipa": "[poanɡʌmsa]"
+    }
+  },
+  {
+    "id": "ipguk",
+    "korean": "입국",
+    "romanization": "ipguk",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["transportation", "immigration", "entry"],
+    "translations": {
+      "ko": {
+        "word": "입국",
+        "explanation": "다른 나라에 들어가는 것.",
+        "examples": {
+          "beginner": "입국해요.",
+          "intermediate": "입국 심사를 받아요.",
+          "advanced": "입국 카드를 작성해야 해요.",
+          "master": "입국 목적을 물어볼 수 있으니 미리 준비하세요."
+        }
+      },
+      "en": {
+        "word": "entry / immigration",
+        "explanation": "Entering another country.",
+        "examples": {
+          "beginner": "I enter the country.",
+          "intermediate": "I go through immigration.",
+          "advanced": "You need to fill out an arrival card.",
+          "master": "Prepare in advance as they may ask your purpose of entry."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[입국]",
+      "ipa": "[ipkuk]"
+    }
+  },
+  {
+    "id": "chulguk",
+    "korean": "출국",
+    "romanization": "chulguk",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["transportation", "departure", "exit"],
+    "translations": {
+      "ko": {
+        "word": "출국",
+        "explanation": "자기 나라를 떠나 다른 나라로 가는 것.",
+        "examples": {
+          "beginner": "출국해요.",
+          "intermediate": "출국 수속을 했어요.",
+          "advanced": "출국장에서 가족과 헤어졌어요.",
+          "master": "출국 전에 여권 유효기간을 확인하세요."
+        }
+      },
+      "en": {
+        "word": "departure / exit",
+        "explanation": "Leaving your country to go to another.",
+        "examples": {
+          "beginner": "I depart.",
+          "intermediate": "I completed departure procedures.",
+          "advanced": "I said goodbye to my family at the departure hall.",
+          "master": "Check your passport validity before departure."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[출국]",
+      "ipa": "[tɕʰulɡuk]"
+    }
+  },
+  {
+    "id": "tonghaengnyo",
+    "korean": "통행료",
+    "romanization": "tonghaengnyo",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["transportation", "toll", "fee"],
+    "translations": {
+      "ko": {
+        "word": "통행료",
+        "explanation": "도로나 다리를 이용할 때 내는 비용.",
+        "examples": {
+          "beginner": "통행료예요.",
+          "intermediate": "통행료가 얼마예요?",
+          "advanced": "하이패스로 통행료를 내면 빨라요.",
+          "master": "통행료가 비싸서 국도로 갔어요."
+        }
+      },
+      "en": {
+        "word": "toll",
+        "explanation": "A fee paid to use roads or bridges.",
+        "examples": {
+          "beginner": "It's a toll.",
+          "intermediate": "How much is the toll?",
+          "advanced": "Paying tolls with Hi-Pass is faster.",
+          "master": "I took the local road because the toll was expensive."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[통행료]",
+      "ipa": "[tʰoŋhɛŋɾjo]"
+    }
+  },
+  {
+    "id": "daeunggyotong",
+    "korean": "대중교통",
+    "romanization": "daejung gyotong",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "public", "transit"],
+    "translations": {
+      "ko": {
+        "word": "대중교통",
+        "explanation": "많은 사람이 함께 이용하는 교통수단.",
+        "examples": {
+          "beginner": "대중교통을 타요.",
+          "intermediate": "서울은 대중교통이 편해요.",
+          "advanced": "대중교통을 이용하면 환경에 좋아요.",
+          "master": "대중교통 무료 환승 제도가 잘 되어 있어요."
+        }
+      },
+      "en": {
+        "word": "public transportation",
+        "explanation": "Transportation used by many people together.",
+        "examples": {
+          "beginner": "I take public transportation.",
+          "intermediate": "Seoul has convenient public transportation.",
+          "advanced": "Using public transportation is good for the environment.",
+          "master": "The free transfer system for public transit works well."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[대중교통]",
+      "ipa": "[tɛdʑuŋɡjotʰoŋ]"
+    }
+  },
+  {
+    "id": "gyotongjeongi",
+    "korean": "교통 정체",
+    "romanization": "gyotong jeongche",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["transportation", "traffic jam", "congestion"],
+    "translations": {
+      "ko": {
+        "word": "교통 정체",
+        "explanation": "차가 막혀서 움직이지 못하는 상태.",
+        "examples": {
+          "beginner": "교통 정체예요.",
+          "intermediate": "교통 정체가 심해요.",
+          "advanced": "출퇴근 시간에는 교통 정체가 있어요.",
+          "master": "내비게이션으로 교통 정체를 피할 수 있어요."
+        }
+      },
+      "en": {
+        "word": "traffic jam / congestion",
+        "explanation": "A state where vehicles can't move due to heavy traffic.",
+        "examples": {
+          "beginner": "There's a traffic jam.",
+          "intermediate": "The traffic jam is severe.",
+          "advanced": "There's traffic congestion during rush hour.",
+          "master": "You can avoid traffic jams using navigation."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[교통정체]",
+      "ipa": "[kjotʰoŋdʑʌŋtɕʰe]"
+    }
+  },
+  {
+    "id": "renteu",
+    "korean": "렌트",
+    "romanization": "renteu",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "rental", "car"],
+    "translations": {
+      "ko": {
+        "word": "렌트",
+        "explanation": "차나 물건을 빌리는 것.",
+        "examples": {
+          "beginner": "차를 렌트해요.",
+          "intermediate": "렌트카를 예약했어요.",
+          "advanced": "제주도에서 렌트카가 필요해요.",
+          "master": "장기 렌트가 단기보다 싸요."
+        }
+      },
+      "en": {
+        "word": "rent / rental",
+        "explanation": "Borrowing a car or item for payment.",
+        "examples": {
+          "beginner": "I rent a car.",
+          "intermediate": "I reserved a rental car.",
+          "advanced": "You need a rental car in Jeju.",
+          "master": "Long-term rental is cheaper than short-term."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[렌트]",
+      "ipa": "[ɾentʰɯ]"
+    }
+  },
+  {
+    "id": "nabi",
+    "korean": "내비게이션",
+    "romanization": "naebigeiswon",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "navigation", "GPS"],
+    "translations": {
+      "ko": {
+        "word": "내비게이션",
+        "explanation": "목적지까지 길을 안내하는 장치.",
+        "examples": {
+          "beginner": "내비 켜요.",
+          "intermediate": "내비게이션을 설정했어요.",
+          "advanced": "내비게이션 덕분에 길을 쉽게 찾았어요.",
+          "master": "실시간 교통 정보가 반영되는 내비가 좋아요."
+        }
+      },
+      "en": {
+        "word": "navigation / GPS",
+        "explanation": "A device that guides you to your destination.",
+        "examples": {
+          "beginner": "Turn on the GPS.",
+          "intermediate": "I set the navigation.",
+          "advanced": "I found the way easily thanks to navigation.",
+          "master": "Navigation with real-time traffic info is better."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[나비]",
+      "ipa": "[nabi]"
+    }
+  },
+  {
+    "id": "sinaebeosu",
+    "korean": "시내버스",
+    "romanization": "sinae beoseu",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "city bus", "local"],
+    "translations": {
+      "ko": {
+        "word": "시내버스",
+        "explanation": "도시 안을 다니는 버스.",
+        "examples": {
+          "beginner": "시내버스 타요.",
+          "intermediate": "시내버스 요금이 싸요.",
+          "advanced": "시내버스는 정류장이 많아요.",
+          "master": "시내버스로 환승하면 할인돼요."
+        }
+      },
+      "en": {
+        "word": "city bus / local bus",
+        "explanation": "A bus that travels within a city.",
+        "examples": {
+          "beginner": "I take the city bus.",
+          "intermediate": "City bus fare is cheap.",
+          "advanced": "City buses have many stops.",
+          "master": "You get a discount when transferring to a city bus."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[시내버스]",
+      "ipa": "[ɕinɛbʌsɯ]"
+    }
+  },
+  {
+    "id": "gwangyeokbeosu",
+    "korean": "광역버스",
+    "romanization": "gwangyeok beoseu",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["transportation", "express bus", "intercity"],
+    "translations": {
+      "ko": {
+        "word": "광역버스",
+        "explanation": "도시와 도시를 연결하는 버스.",
+        "examples": {
+          "beginner": "광역버스 타요.",
+          "intermediate": "광역버스가 시내버스보다 빨라요.",
+          "advanced": "광역버스는 정류장이 적어요.",
+          "master": "출퇴근 시간 광역버스는 자리가 없어요."
+        }
+      },
+      "en": {
+        "word": "express bus / intercity bus",
+        "explanation": "A bus connecting different cities.",
+        "examples": {
+          "beginner": "I take the express bus.",
+          "intermediate": "Express buses are faster than city buses.",
+          "advanced": "Express buses have fewer stops.",
+          "master": "There are no seats on express buses during rush hour."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[광역버스]",
+      "ipa": "[kwaŋjʌkpʌsɯ]"
+    }
+  },
+  {
+    "id": "gonghaangbeosu",
+    "korean": "공항버스",
+    "romanization": "gonghang beoseu",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "airport bus", "limousine"],
+    "translations": {
+      "ko": {
+        "word": "공항버스",
+        "explanation": "공항을 오가는 버스.",
+        "examples": {
+          "beginner": "공항버스 타요.",
+          "intermediate": "공항버스가 편해요.",
+          "advanced": "공항버스는 짐을 실을 수 있어요.",
+          "master": "심야 공항버스도 있어요."
+        }
+      },
+      "en": {
+        "word": "airport bus / limousine bus",
+        "explanation": "A bus that goes to and from the airport.",
+        "examples": {
+          "beginner": "I take the airport bus.",
+          "intermediate": "The airport bus is convenient.",
+          "advanced": "You can load luggage on the airport bus.",
+          "master": "There are late-night airport buses too."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[공항버스]",
+      "ipa": "[koŋhaŋbʌsɯ]"
+    }
+  },
+  {
+    "id": "KTX",
+    "korean": "KTX",
+    "romanization": "KTX",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "high-speed train", "Korea"],
+    "translations": {
+      "ko": {
+        "word": "KTX",
+        "explanation": "한국의 고속 열차.",
+        "examples": {
+          "beginner": "KTX 타요.",
+          "intermediate": "서울에서 부산까지 KTX로 2시간 반이에요.",
+          "advanced": "KTX 표를 미리 예매하면 싸요.",
+          "master": "KTX 자유석은 입석으로 서서 가야 할 수도 있어요."
+        }
+      },
+      "en": {
+        "word": "KTX (Korea Train Express)",
+        "explanation": "Korea's high-speed train.",
+        "examples": {
+          "beginner": "I take the KTX.",
+          "intermediate": "It takes 2.5 hours from Seoul to Busan by KTX.",
+          "advanced": "KTX tickets are cheaper if you book in advance.",
+          "master": "With KTX free seating, you might have to stand."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[케이티엑스]",
+      "ipa": "[kʰeitʰieksɯ]"
+    }
+  },
+  {
+    "id": "jeoncheo",
+    "korean": "전철",
+    "romanization": "jeoncheol",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "metro", "electric train"],
+    "translations": {
+      "ko": {
+        "word": "전철",
+        "explanation": "전기로 움직이는 열차.",
+        "examples": {
+          "beginner": "전철 타요.",
+          "intermediate": "전철과 지하철은 같아요.",
+          "advanced": "수도권 전철은 서울과 경기도를 연결해요.",
+          "master": "전철 노선이 계속 확대되고 있어요."
+        }
+      },
+      "en": {
+        "word": "electric train / metro",
+        "explanation": "A train powered by electricity.",
+        "examples": {
+          "beginner": "I take the metro.",
+          "intermediate": "Metro and subway are the same.",
+          "advanced": "The metropolitan metro connects Seoul and Gyeonggi.",
+          "master": "Metro lines continue to expand."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[전철]",
+      "ipa": "[tɕʌntɕʰʌl]"
+    }
+  },
+  {
+    "id": "haipaseu",
+    "korean": "하이패스",
+    "romanization": "haipaseu",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "intermediate",
+    "frequency": "frequent",
+    "tags": ["transportation", "toll", "highway"],
+    "translations": {
+      "ko": {
+        "word": "하이패스",
+        "explanation": "고속도로 통행료를 자동으로 결제하는 시스템.",
+        "examples": {
+          "beginner": "하이패스 있어요?",
+          "intermediate": "하이패스 차로로 가세요.",
+          "advanced": "하이패스가 있으면 톨게이트에서 멈추지 않아도 돼요.",
+          "master": "하이패스 단말기를 렌트카에도 설치할 수 있어요."
+        }
+      },
+      "en": {
+        "word": "Hi-Pass",
+        "explanation": "An automatic toll payment system for highways.",
+        "examples": {
+          "beginner": "Do you have Hi-Pass?",
+          "intermediate": "Go through the Hi-Pass lane.",
+          "advanced": "With Hi-Pass, you don't need to stop at the toll gate.",
+          "master": "You can install a Hi-Pass device in rental cars too."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[하이패스]",
+      "ipa": "[haipʰɛsɯ]"
+    }
+  },
+  {
+    "id": "eubeotaeksi",
+    "korean": "우버/택시 앱",
+    "romanization": "ubeo/taeksi aep",
+    "partOfSpeech": "noun",
+    "categoryId": "transportation",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["transportation", "app", "ride-sharing"],
+    "translations": {
+      "ko": {
+        "word": "우버/택시 앱",
+        "explanation": "스마트폰으로 택시를 부르는 앱.",
+        "examples": {
+          "beginner": "앱으로 택시 불러요.",
+          "intermediate": "카카오택시로 택시를 불렀어요.",
+          "advanced": "앱으로 택시를 부르면 기사님 정보를 미리 볼 수 있어요.",
+          "master": "심야에는 앱 호출이 더 안전해요."
+        }
+      },
+      "en": {
+        "word": "ride-hailing app / taxi app",
+        "explanation": "An app to call taxis using a smartphone.",
+        "examples": {
+          "beginner": "I call a taxi by app.",
+          "intermediate": "I called a taxi through KakaoTaxi.",
+          "advanced": "When you call a taxi through the app, you can see driver info in advance.",
+          "master": "App calls are safer late at night."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[우버택시]",
+      "ipa": "[ubʌtʰɛkɕi]"
+    }
+  }
+]

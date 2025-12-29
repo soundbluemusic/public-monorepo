@@ -1,0 +1,508 @@
+[
+  {
+    "id": "sports",
+    "korean": "스포츠",
+    "romanization": "seupocheu",
+    "partOfSpeech": "noun",
+    "categoryId": "sports",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["sports", "exercise", "activity"],
+    "translations": {
+      "ko": {
+        "word": "스포츠",
+        "explanation": "규칙에 따라 경쟁하는 신체 활동. 운동, 체육.",
+        "examples": {
+          "beginner": "스포츠 좋아해요?",
+          "intermediate": "무슨 스포츠 해요?",
+          "advanced": "\"주말에 스포츠 해?\" \"응, 축구 좀 해.\"",
+          "master": "스포츠는 건강에 좋아요."
+        },
+        "variations": {
+          "formal": ["스포츠입니다", "운동", "체육"],
+          "casual": ["스포츠~", "스포츠 해?"],
+          "short": ["스포츠", "sports"]
+        }
+      },
+      "en": {
+        "word": "Sports",
+        "explanation": "Physical activity with competitive rules. Exercise, athletics.",
+        "examples": {
+          "beginner": "스포츠 좋아해요? - Do you like sports?",
+          "intermediate": "무슨 스포츠 해요? - What sports do you do?",
+          "advanced": "\"Do you play sports on weekends?\" \"Yeah, I play some soccer.\"",
+          "master": "Sports are good for health."
+        },
+        "variations": {
+          "formal": ["It is sports", "Exercise", "Athletics"],
+          "casual": ["Sports~", "Play sports?"],
+          "short": ["Sports", "Sport"]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[스포츠]",
+      "ipa": "[sɯpʰotɕʰɯ]"
+    }
+  },
+  {
+    "id": "chukgu",
+    "korean": "축구",
+    "romanization": "chukgu",
+    "pronunciation": {
+      "korean": "[축구]",
+      "ipa": "[tɕʰukːu]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "sports",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["sports", "team", "ball"],
+    "translations": {
+      "ko": {
+        "word": "축구",
+        "explanation": "발로 공을 차서 골대에 넣는 팀 스포츠. 세계에서 가장 인기 있는 운동.",
+        "examples": {
+          "beginner": "축구 해요.",
+          "intermediate": "축구 좋아해요?",
+          "advanced": "\"주말에 축구 할래?\" \"좋아, 몇 시에 모여?\"",
+          "master": "축구 경기를 봤어요."
+        },
+        "variations": {
+          "formal": ["축구입니다", "풋볼", "구기 종목"],
+          "casual": ["축구~", "축구 해?"],
+          "short": ["축구", "soccer"]
+        }
+      },
+      "en": {
+        "word": "Soccer / Football",
+        "explanation": "A team sport where you kick a ball into a goal. The world's most popular sport.",
+        "examples": {
+          "beginner": "축구 해요. - I play soccer.",
+          "intermediate": "축구 좋아해요? - Do you like soccer?",
+          "advanced": "\"Want to play soccer this weekend?\" \"Sure, what time should we meet?\"",
+          "master": "I watched a soccer game."
+        },
+        "variations": {
+          "formal": ["It is soccer", "Football", "Ball sport"],
+          "casual": ["Soccer~", "Play soccer?"],
+          "short": ["Soccer", "Football"]
+        }
+      }
+    }
+  },
+  {
+    "id": "yagu",
+    "korean": "야구",
+    "romanization": "yagu",
+    "pronunciation": {
+      "korean": "[야구]",
+      "ipa": "[jaɡu]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "sports",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["sports", "team", "ball"],
+    "translations": {
+      "ko": {
+        "word": "야구",
+        "explanation": "방망이로 공을 쳐서 베이스를 도는 팀 스포츠. 한국에서 인기가 많다.",
+        "examples": {
+          "beginner": "야구 봤어요?",
+          "intermediate": "야구 경기 재미있어요.",
+          "advanced": "\"야구 좋아해?\" \"응, 두산 베어스 팬이야.\"",
+          "master": "야구장에 갔어요."
+        },
+        "variations": {
+          "formal": ["야구입니다", "베이스볼", "구기"],
+          "casual": ["야구~", "야구 봐?"],
+          "short": ["야구", "baseball"]
+        }
+      },
+      "en": {
+        "word": "Baseball",
+        "explanation": "A team sport where you hit a ball with a bat and run around bases. Very popular in Korea.",
+        "examples": {
+          "beginner": "야구 봤어요? - Did you watch baseball?",
+          "intermediate": "야구 경기 재미있어요. - Baseball games are fun.",
+          "advanced": "\"Do you like baseball?\" \"Yeah, I'm a Doosan Bears fan.\"",
+          "master": "I went to the baseball stadium."
+        },
+        "variations": {
+          "formal": ["It is baseball", "Baseball", "Ball game"],
+          "casual": ["Baseball~", "Watch baseball?"],
+          "short": ["Baseball", "Ball"]
+        }
+      }
+    }
+  },
+  {
+    "id": "nonggu",
+    "korean": "농구",
+    "romanization": "nonggu",
+    "pronunciation": {
+      "korean": "[농구]",
+      "ipa": "[noŋɡu]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "sports",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["sports", "team", "ball"],
+    "translations": {
+      "ko": {
+        "word": "농구",
+        "explanation": "공을 바구니에 넣어 득점하는 팀 스포츠. 실내외에서 즐길 수 있다.",
+        "examples": {
+          "beginner": "농구 해요.",
+          "intermediate": "농구 잘해요?",
+          "advanced": "\"방과 후에 농구 할래?\" \"좋아, 체육관에서 만나자.\"",
+          "master": "농구 경기를 관람했어요."
+        },
+        "variations": {
+          "formal": ["농구입니다", "바스켓볼", "구기"],
+          "casual": ["농구~", "농구 해?"],
+          "short": ["농구", "basketball"]
+        }
+      },
+      "en": {
+        "word": "Basketball",
+        "explanation": "A team sport where you score by putting a ball in a basket. Can be played indoors or outdoors.",
+        "examples": {
+          "beginner": "농구 해요. - I play basketball.",
+          "intermediate": "농구 잘해요? - Are you good at basketball?",
+          "advanced": "\"Want to play basketball after school?\" \"Sure, let's meet at the gym.\"",
+          "master": "I watched a basketball game."
+        },
+        "variations": {
+          "formal": ["It is basketball", "Basketball", "Ball sport"],
+          "casual": ["Basketball~", "Play basketball?"],
+          "short": ["Basketball", "Hoops"]
+        }
+      }
+    }
+  },
+  {
+    "id": "suyeong",
+    "korean": "수영",
+    "romanization": "suyeong",
+    "pronunciation": {
+      "korean": "[수영]",
+      "ipa": "[sujʌŋ]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "sports",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["sports", "water", "individual"],
+    "translations": {
+      "ko": {
+        "word": "수영",
+        "explanation": "물속에서 헤엄치는 운동. 여름 스포츠로 인기가 많다.",
+        "examples": {
+          "beginner": "수영 해요.",
+          "intermediate": "수영 배우고 있어요.",
+          "advanced": "\"수영 할 줄 알아?\" \"응, 자유형 할 수 있어.\"",
+          "master": "수영장에서 수영했어요."
+        },
+        "variations": {
+          "formal": ["수영입니다", "유영", "수상 운동"],
+          "casual": ["수영~", "수영 해?"],
+          "short": ["수영", "swimming"]
+        }
+      },
+      "en": {
+        "word": "Swimming",
+        "explanation": "Exercise of moving through water. Popular summer sport.",
+        "examples": {
+          "beginner": "수영 해요. - I swim.",
+          "intermediate": "수영 배우고 있어요. - I'm learning to swim.",
+          "advanced": "\"Can you swim?\" \"Yeah, I can do freestyle.\"",
+          "master": "I swam at the pool."
+        },
+        "variations": {
+          "formal": ["It is swimming", "Swimming", "Aquatic sport"],
+          "casual": ["Swimming~", "Swim?"],
+          "short": ["Swimming", "Swim"]
+        }
+      }
+    }
+  },
+  {
+    "id": "daligi",
+    "korean": "달리기",
+    "romanization": "dalligi",
+    "partOfSpeech": "noun",
+    "categoryId": "sports",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["sports", "running", "individual"],
+    "translations": {
+      "ko": {
+        "word": "달리기",
+        "explanation": "빠르게 뛰는 운동. 육상의 기본 종목.",
+        "examples": {
+          "beginner": "달리기 해요.",
+          "intermediate": "아침에 달리기해요.",
+          "advanced": "\"매일 달리기 해?\" \"응, 건강을 위해서.\"",
+          "master": "공원에서 달리기했어요."
+        },
+        "variations": {
+          "formal": ["달리기입니다", "주행", "육상"],
+          "casual": ["달리기~", "달리기 해?"],
+          "short": ["달리기", "running"]
+        }
+      },
+      "en": {
+        "word": "Running",
+        "explanation": "Exercise of running fast. A basic track and field event.",
+        "examples": {
+          "beginner": "달리기 해요. - I run.",
+          "intermediate": "아침에 달리기해요. - I run in the morning.",
+          "advanced": "\"Do you run every day?\" \"Yeah, for my health.\"",
+          "master": "I ran in the park."
+        },
+        "variations": {
+          "formal": ["It is running", "Racing", "Track"],
+          "casual": ["Running~", "Run?"],
+          "short": ["Running", "Run"]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[달리기]",
+      "ipa": "[talɾiɡi]"
+    }
+  },
+  {
+    "id": "undong",
+    "korean": "운동",
+    "romanization": "undong",
+    "pronunciation": {
+      "korean": "[운동]",
+      "ipa": "[undoŋ]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "sports",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["sports", "exercise", "health"],
+    "translations": {
+      "ko": {
+        "word": "운동",
+        "explanation": "몸을 움직여 건강을 지키는 활동. 스포츠 전반을 가리킨다.",
+        "examples": {
+          "beginner": "운동해요.",
+          "intermediate": "운동 좋아해요?",
+          "advanced": "\"매일 운동해?\" \"응, 헬스장 다녀.\"",
+          "master": "운동하면 건강해져요."
+        },
+        "variations": {
+          "formal": ["운동입니다", "체육", "신체 활동"],
+          "casual": ["운동~", "운동 해?"],
+          "short": ["운동", "exercise"]
+        }
+      },
+      "en": {
+        "word": "Exercise / Workout",
+        "explanation": "Activity of moving the body to maintain health. Refers to sports in general.",
+        "examples": {
+          "beginner": "운동해요. - I exercise.",
+          "intermediate": "운동 좋아해요? - Do you like exercise?",
+          "advanced": "\"Do you exercise every day?\" \"Yeah, I go to the gym.\"",
+          "master": "Exercise makes you healthy."
+        },
+        "variations": {
+          "formal": ["It is exercise", "Physical education", "Physical activity"],
+          "casual": ["Exercise~", "Exercise?"],
+          "short": ["Exercise", "Workout"]
+        }
+      }
+    }
+  },
+  {
+    "id": "team",
+    "korean": "팀",
+    "romanization": "tim",
+    "partOfSpeech": "noun",
+    "categoryId": "sports",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["sports", "group", "team"],
+    "translations": {
+      "ko": {
+        "word": "팀",
+        "explanation": "함께 경쟁하거나 일하는 집단. 스포츠에서 같은 편.",
+        "examples": {
+          "beginner": "우리 팀이에요.",
+          "intermediate": "어느 팀 응원해요?",
+          "advanced": "\"무슨 팀 좋아해?\" \"토트넘 팬이야.\"",
+          "master": "팀워크가 중요해요."
+        },
+        "variations": {
+          "formal": ["팀입니다", "조", "단체"],
+          "casual": ["팀~", "우리 팀"],
+          "short": ["팀", "team"]
+        }
+      },
+      "en": {
+        "word": "Team",
+        "explanation": "A group that competes or works together. Same side in sports.",
+        "examples": {
+          "beginner": "우리 팀이에요. - It's our team.",
+          "intermediate": "어느 팀 응원해요? - Which team do you support?",
+          "advanced": "\"What team do you like?\" \"I'm a Tottenham fan.\"",
+          "master": "Teamwork is important."
+        },
+        "variations": {
+          "formal": ["It is a team", "Group", "Unit"],
+          "casual": ["Team~", "Our team"],
+          "short": ["Team", "Squad"]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[팀]",
+      "ipa": "[tʰim]"
+    }
+  },
+  {
+    "id": "gyeonggi",
+    "korean": "경기",
+    "romanization": "gyeonggi",
+    "pronunciation": {
+      "korean": "[경기]",
+      "ipa": "[kjʌŋɡi]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "sports",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["sports", "game", "match"],
+    "translations": {
+      "ko": {
+        "word": "경기",
+        "explanation": "규칙에 따라 겨루는 스포츠 시합. 게임, 매치.",
+        "examples": {
+          "beginner": "경기 봤어요?",
+          "intermediate": "경기가 재미있어요.",
+          "advanced": "\"오늘 경기 언제 시작해?\" \"저녁 7시야.\"",
+          "master": "경기 결과가 어떻게 됐어요?"
+        },
+        "variations": {
+          "formal": ["경기입니다", "시합", "게임"],
+          "casual": ["경기~", "경기 봐?"],
+          "short": ["경기", "game"]
+        }
+      },
+      "en": {
+        "word": "Game / Match",
+        "explanation": "A sports competition with rules. Game, match.",
+        "examples": {
+          "beginner": "경기 봤어요? - Did you watch the game?",
+          "intermediate": "경기가 재미있어요. - The game is fun.",
+          "advanced": "\"When does the game start today?\" \"At 7 PM.\"",
+          "master": "How did the game turn out?"
+        },
+        "variations": {
+          "formal": ["It is a game", "Match", "Competition"],
+          "casual": ["Game~", "Watch the game?"],
+          "short": ["Game", "Match"]
+        }
+      }
+    }
+  },
+  {
+    "id": "seungli",
+    "korean": "승리",
+    "romanization": "seungli",
+    "pronunciation": {
+      "korean": "[승리]",
+      "ipa": "[sɯŋɾi]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "sports",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["sports", "win", "victory"],
+    "translations": {
+      "ko": {
+        "word": "승리",
+        "explanation": "경기나 경쟁에서 이기는 것. 우승, 이김.",
+        "examples": {
+          "beginner": "승리했어요!",
+          "intermediate": "승리를 축하해요.",
+          "advanced": "\"오늘 경기 승리했어?\" \"응, 3대 1로 이겼어!\"",
+          "master": "팀의 승리를 위해 열심히 했어요."
+        },
+        "variations": {
+          "formal": ["승리입니다", "우승", "이김"],
+          "casual": ["승리~", "이겼어!"],
+          "short": ["승리", "win"]
+        }
+      },
+      "en": {
+        "word": "Victory / Win",
+        "explanation": "Winning a game or competition. Triumph, winning.",
+        "examples": {
+          "beginner": "승리했어요! - We won!",
+          "intermediate": "승리를 축하해요. - Congratulations on the victory.",
+          "advanced": "\"Did you win today's game?\" \"Yeah, we won 3-1!\"",
+          "master": "I worked hard for the team's victory."
+        },
+        "variations": {
+          "formal": ["It is a victory", "Championship", "Win"],
+          "casual": ["Victory~", "We won!"],
+          "short": ["Win", "Victory"]
+        }
+      }
+    }
+  },
+  {
+    "id": "yeonseup",
+    "korean": "연습",
+    "romanization": "yeonseup",
+    "pronunciation": {
+      "korean": "[연습]",
+      "ipa": "[jʌnsɯp]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "sports",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["sports", "practice", "training"],
+    "translations": {
+      "ko": {
+        "word": "연습",
+        "explanation": "실력을 늘리기 위해 반복하는 것. 훈련, 트레이닝.",
+        "examples": {
+          "beginner": "연습해요.",
+          "intermediate": "매일 연습했어요.",
+          "advanced": "\"오늘 연습 있어?\" \"응, 오후 4시부터.\"",
+          "master": "열심히 연습하면 잘할 수 있어요."
+        },
+        "variations": {
+          "formal": ["연습입니다", "훈련", "수련"],
+          "casual": ["연습~", "연습 해?"],
+          "short": ["연습", "practice"]
+        }
+      },
+      "en": {
+        "word": "Practice / Training",
+        "explanation": "Repeating to improve skills. Training, drill.",
+        "examples": {
+          "beginner": "연습해요. - I practice.",
+          "intermediate": "매일 연습했어요. - I practiced every day.",
+          "advanced": "\"Do you have practice today?\" \"Yeah, from 4 PM.\"",
+          "master": "If you practice hard, you can do well."
+        },
+        "variations": {
+          "formal": ["It is practice", "Training", "Drill"],
+          "casual": ["Practice~", "Practice?"],
+          "short": ["Practice", "Training"]
+        }
+      }
+    }
+  }
+]

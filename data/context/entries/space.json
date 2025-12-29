@@ -1,0 +1,462 @@
+[
+  {
+    "id": "uju",
+    "korean": "우주",
+    "romanization": "uju",
+    "pronunciation": {
+      "korean": "[우주]",
+      "ipa": "[udʑu]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "space",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["space", "universe", "cosmos"],
+    "translations": {
+      "ko": {
+        "word": "우주",
+        "explanation": "지구와 모든 천체를 포함하는 무한한 공간. 우리가 사는 모든 것.",
+        "examples": {
+          "beginner": "우주가 넓어요.",
+          "intermediate": "우주에 관심 있어요.",
+          "advanced": "\"우주에 생명체가 있을까?\" \"있을 것 같아.\"",
+          "master": "우주를 탐험하고 싶어요."
+        },
+        "variations": {
+          "formal": ["우주입니다", "대우주", "우주 공간"],
+          "casual": ["우주~", "우주에"],
+          "short": ["우주", "space"]
+        }
+      },
+      "en": {
+        "word": "Universe / Space / Cosmos",
+        "explanation": "The infinite space containing Earth and all celestial bodies. Everything we exist in.",
+        "examples": {
+          "beginner": "우주가 넓어요. - The universe is vast.",
+          "intermediate": "우주에 관심 있어요. - I'm interested in space.",
+          "advanced": "\"Do you think there's life in the universe?\" \"I think so.\"",
+          "master": "I want to explore space."
+        },
+        "variations": {
+          "formal": ["It is the universe", "Outer space", "Cosmic space"],
+          "casual": ["Universe~", "In space"],
+          "short": ["Space", "Universe"]
+        }
+      }
+    }
+  },
+  {
+    "id": "byeol",
+    "korean": "별",
+    "romanization": "byeol",
+    "pronunciation": {
+      "korean": "[별]",
+      "ipa": "[pjʌl]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "space",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["space", "star", "astronomy"],
+    "translations": {
+      "ko": {
+        "word": "별",
+        "explanation": "밤하늘에 빛나는 천체. 스스로 빛을 내는 항성.",
+        "examples": {
+          "beginner": "별이 많아요.",
+          "intermediate": "별이 반짝여요.",
+          "advanced": "\"별 보러 갈래?\" \"좋아, 어디로 갈까?\"",
+          "master": "밤하늘의 별이 아름다워요."
+        },
+        "variations": {
+          "formal": ["별입니다", "항성", "성(星)"],
+          "casual": ["별~", "별 봐"],
+          "short": ["별", "star"]
+        }
+      },
+      "en": {
+        "word": "Star",
+        "explanation": "A celestial body that shines in the night sky. A self-luminous stellar object.",
+        "examples": {
+          "beginner": "별이 많아요. - There are many stars.",
+          "intermediate": "별이 반짝여요. - The stars are twinkling.",
+          "advanced": "\"Want to go stargazing?\" \"Sure, where should we go?\"",
+          "master": "The stars in the night sky are beautiful."
+        },
+        "variations": {
+          "formal": ["It is a star", "Stellar object", "Star (formal)"],
+          "casual": ["Star~", "Look at stars"],
+          "short": ["Star", "Stars"]
+        }
+      }
+    }
+  },
+  {
+    "id": "jigu",
+    "korean": "지구",
+    "romanization": "jigu",
+    "pronunciation": {
+      "korean": "[지구]",
+      "ipa": "[tɕiɡu]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "space",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["space", "planet", "earth"],
+    "translations": {
+      "ko": {
+        "word": "지구",
+        "explanation": "우리가 사는 행성. 태양계의 세 번째 행성.",
+        "examples": {
+          "beginner": "지구가 동그래요.",
+          "intermediate": "지구를 보호해야 해요.",
+          "advanced": "\"지구 온난화가 심각해.\" \"응, 환경을 지켜야 해.\"",
+          "master": "지구는 아름다운 행성이에요."
+        },
+        "variations": {
+          "formal": ["지구입니다", "지구촌", "행성 지구"],
+          "casual": ["지구~", "지구에서"],
+          "short": ["지구", "Earth"]
+        }
+      },
+      "en": {
+        "word": "Earth",
+        "explanation": "The planet we live on. The third planet in the solar system.",
+        "examples": {
+          "beginner": "지구가 동그래요. - Earth is round.",
+          "intermediate": "지구를 보호해야 해요. - We must protect Earth.",
+          "advanced": "\"Global warming is serious.\" \"Yeah, we need to protect the environment.\"",
+          "master": "Earth is a beautiful planet."
+        },
+        "variations": {
+          "formal": ["It is Earth", "The globe", "Planet Earth"],
+          "casual": ["Earth~", "On Earth"],
+          "short": ["Earth", "Globe"]
+        }
+      }
+    }
+  },
+  {
+    "id": "haengseong",
+    "korean": "행성",
+    "romanization": "haengseong",
+    "pronunciation": {
+      "korean": "[행성]",
+      "ipa": "[hɛŋsʌŋ]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "space",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["space", "planet", "astronomy"],
+    "translations": {
+      "ko": {
+        "word": "행성",
+        "explanation": "별 주위를 도는 천체. 지구, 화성, 목성 등.",
+        "examples": {
+          "beginner": "행성을 연구해요.",
+          "intermediate": "태양계에는 8개의 행성이 있어요.",
+          "advanced": "\"제일 좋아하는 행성이 뭐야?\" \"토성이 멋있어.\"",
+          "master": "새로운 행성을 발견했어요."
+        },
+        "variations": {
+          "formal": ["행성입니다", "유성", "혹성"],
+          "casual": ["행성~", "행성들"],
+          "short": ["행성", "planet"]
+        }
+      },
+      "en": {
+        "word": "Planet",
+        "explanation": "A celestial body orbiting a star. Earth, Mars, Jupiter, etc.",
+        "examples": {
+          "beginner": "행성을 연구해요. - I study planets.",
+          "intermediate": "태양계에는 8개의 행성이 있어요. - There are 8 planets in the solar system.",
+          "advanced": "\"What's your favorite planet?\" \"Saturn is cool.\"",
+          "master": "They discovered a new planet."
+        },
+        "variations": {
+          "formal": ["It is a planet", "Wandering star", "Planetary body"],
+          "casual": ["Planet~", "Planets"],
+          "short": ["Planet", "World"]
+        }
+      }
+    }
+  },
+  {
+    "id": "taeyang",
+    "korean": "태양",
+    "romanization": "taeyang",
+    "pronunciation": {
+      "korean": "[태양]",
+      "ipa": "[tʰɛjaŋ]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "space",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["space", "sun", "star"],
+    "translations": {
+      "ko": {
+        "word": "태양",
+        "explanation": "태양계의 중심에 있는 별. 지구에 빛과 열을 주는 항성.",
+        "examples": {
+          "beginner": "태양이 밝아요.",
+          "intermediate": "태양이 떠올랐어요.",
+          "advanced": "\"태양은 몇 살이야?\" \"약 46억 년 됐대.\"",
+          "master": "태양 에너지를 사용해요."
+        },
+        "variations": {
+          "formal": ["태양입니다", "해", "일(日)"],
+          "casual": ["태양~", "해"],
+          "short": ["태양", "sun"]
+        }
+      },
+      "en": {
+        "word": "Sun",
+        "explanation": "The star at the center of the solar system. The star that gives Earth light and heat.",
+        "examples": {
+          "beginner": "태양이 밝아요. - The sun is bright.",
+          "intermediate": "태양이 떠올랐어요. - The sun has risen.",
+          "advanced": "\"How old is the sun?\" \"It's about 4.6 billion years old.\"",
+          "master": "We use solar energy."
+        },
+        "variations": {
+          "formal": ["It is the sun", "Solar orb", "Sol"],
+          "casual": ["Sun~", "The sun"],
+          "short": ["Sun", "Sol"]
+        }
+      }
+    }
+  },
+  {
+    "id": "ujuseon",
+    "korean": "우주선",
+    "romanization": "ujuseon",
+    "pronunciation": {
+      "korean": "[우주선]",
+      "ipa": "[udʑusʌn]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "space",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["space", "spacecraft", "vehicle"],
+    "translations": {
+      "ko": {
+        "word": "우주선",
+        "explanation": "우주를 여행하는 탈것. 로켓, 인공위성 등.",
+        "examples": {
+          "beginner": "우주선이 발사됐어요.",
+          "intermediate": "우주선을 타고 싶어요.",
+          "advanced": "\"우주선 타 본 적 있어?\" \"없어, 하지만 타 보고 싶어.\"",
+          "master": "우주선이 달에 착륙했어요."
+        },
+        "variations": {
+          "formal": ["우주선입니다", "우주 비행체", "로켓"],
+          "casual": ["우주선~", "우주선 타고"],
+          "short": ["우주선", "spacecraft"]
+        }
+      },
+      "en": {
+        "word": "Spacecraft / Spaceship",
+        "explanation": "A vehicle for traveling in space. Rockets, satellites, etc.",
+        "examples": {
+          "beginner": "우주선이 발사됐어요. - The spacecraft was launched.",
+          "intermediate": "우주선을 타고 싶어요. - I want to ride a spaceship.",
+          "advanced": "\"Have you ever been on a spaceship?\" \"No, but I want to try.\"",
+          "master": "The spacecraft landed on the moon."
+        },
+        "variations": {
+          "formal": ["It is a spacecraft", "Space vehicle", "Rocket"],
+          "casual": ["Spaceship~", "On a spaceship"],
+          "short": ["Spacecraft", "Ship"]
+        }
+      }
+    }
+  },
+  {
+    "id": "ujuin",
+    "korean": "우주인",
+    "romanization": "ujuin",
+    "pronunciation": {
+      "korean": "[우주인]",
+      "ipa": "[udʑuin]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "space",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["space", "astronaut", "people"],
+    "translations": {
+      "ko": {
+        "word": "우주인",
+        "explanation": "우주를 여행하는 사람. 우주 비행사. 또는 외계인을 가리키기도 한다.",
+        "examples": {
+          "beginner": "우주인이 되고 싶어요.",
+          "intermediate": "우주인이 우주 정거장에 있어요.",
+          "advanced": "\"우주인이 꿈이야?\" \"응, 우주를 탐험하고 싶어.\"",
+          "master": "우주인처럼 훈련했어요."
+        },
+        "variations": {
+          "formal": ["우주인입니다", "우주 비행사", "항공사"],
+          "casual": ["우주인~", "우주인처럼"],
+          "short": ["우주인", "astronaut"]
+        }
+      },
+      "en": {
+        "word": "Astronaut / Spaceman",
+        "explanation": "A person who travels in space. Astronaut. Can also refer to aliens.",
+        "examples": {
+          "beginner": "우주인이 되고 싶어요. - I want to become an astronaut.",
+          "intermediate": "우주인이 우주 정거장에 있어요. - Astronauts are on the space station.",
+          "advanced": "\"Is astronaut your dream?\" \"Yeah, I want to explore space.\"",
+          "master": "I trained like an astronaut."
+        },
+        "variations": {
+          "formal": ["It is an astronaut", "Space traveler", "Cosmonaut"],
+          "casual": ["Astronaut~", "Like an astronaut"],
+          "short": ["Astronaut", "Spaceman"]
+        }
+      }
+    }
+  },
+  {
+    "id": "eunha",
+    "korean": "은하",
+    "romanization": "eunha",
+    "pronunciation": {
+      "korean": "[은하]",
+      "ipa": "[ɯnɦa]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "space",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["space", "galaxy", "astronomy"],
+    "translations": {
+      "ko": {
+        "word": "은하",
+        "explanation": "수많은 별들이 모여 있는 거대한 천체 시스템. 우리 은하는 '은하수'라고 불린다.",
+        "examples": {
+          "beginner": "은하가 아름다워요.",
+          "intermediate": "은하를 관측했어요.",
+          "advanced": "\"은하가 몇 개나 있을까?\" \"수천억 개 이상이래.\"",
+          "master": "안드로메다 은하가 유명해요."
+        },
+        "variations": {
+          "formal": ["은하입니다", "은하계", "성운"],
+          "casual": ["은하~", "은하수"],
+          "short": ["은하", "galaxy"]
+        }
+      },
+      "en": {
+        "word": "Galaxy",
+        "explanation": "A massive celestial system containing countless stars. Our galaxy is called the 'Milky Way'.",
+        "examples": {
+          "beginner": "은하가 아름다워요. - The galaxy is beautiful.",
+          "intermediate": "은하를 관측했어요. - I observed galaxies.",
+          "advanced": "\"How many galaxies are there?\" \"Hundreds of billions or more.\"",
+          "master": "The Andromeda Galaxy is famous."
+        },
+        "variations": {
+          "formal": ["It is a galaxy", "Galactic system", "Nebula"],
+          "casual": ["Galaxy~", "Milky Way"],
+          "short": ["Galaxy", "Gal"]
+        }
+      }
+    }
+  },
+  {
+    "id": "heukhole",
+    "korean": "블랙홀",
+    "romanization": "beullaekol",
+    "partOfSpeech": "noun",
+    "categoryId": "space",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["space", "blackhole", "astronomy"],
+    "translations": {
+      "ko": {
+        "word": "블랙홀",
+        "explanation": "중력이 너무 강해서 빛조차 빠져나올 수 없는 천체. 암흑 천체.",
+        "examples": {
+          "beginner": "블랙홀이 신비로워요.",
+          "intermediate": "블랙홀을 연구해요.",
+          "advanced": "\"블랙홀에 들어가면 어떻게 돼?\" \"아무도 몰라, 나올 수 없으니까.\"",
+          "master": "블랙홀 사진을 찍었어요."
+        },
+        "variations": {
+          "formal": ["블랙홀입니다", "암흑 천체", "중력 구멍"],
+          "casual": ["블랙홀~", "블랙홀처럼"],
+          "short": ["블랙홀", "black hole"]
+        }
+      },
+      "en": {
+        "word": "Black Hole",
+        "explanation": "A celestial body with gravity so strong that even light cannot escape. A dark object.",
+        "examples": {
+          "beginner": "블랙홀이 신비로워요. - Black holes are mysterious.",
+          "intermediate": "블랙홀을 연구해요. - I study black holes.",
+          "advanced": "\"What happens if you enter a black hole?\" \"Nobody knows, you can't come out.\"",
+          "master": "They photographed a black hole."
+        },
+        "variations": {
+          "formal": ["It is a black hole", "Dark celestial body", "Gravity well"],
+          "casual": ["Black hole~", "Like a black hole"],
+          "short": ["Black hole", "BH"]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[블랙홀]",
+      "ipa": "[pɯllɛkʰol]"
+    }
+  },
+  {
+    "id": "manwongyeong",
+    "korean": "망원경",
+    "romanization": "mangwongyeong",
+    "pronunciation": {
+      "korean": "[망원경]",
+      "ipa": "[maŋwʌnɡjʌŋ]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "space",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["space", "telescope", "tool"],
+    "translations": {
+      "ko": {
+        "word": "망원경",
+        "explanation": "먼 곳을 크게 보이게 하는 광학 기구. 별을 관측하는 도구.",
+        "examples": {
+          "beginner": "망원경으로 별을 봐요.",
+          "intermediate": "망원경이 있어요?",
+          "advanced": "\"망원경으로 뭐 볼 수 있어?\" \"달, 행성, 별들을 볼 수 있어.\"",
+          "master": "천체 망원경을 샀어요."
+        },
+        "variations": {
+          "formal": ["망원경입니다", "천체 망원경", "관측 기구"],
+          "casual": ["망원경~", "망원경으로"],
+          "short": ["망원경", "telescope"]
+        }
+      },
+      "en": {
+        "word": "Telescope",
+        "explanation": "An optical instrument that makes distant objects appear larger. A tool for observing stars.",
+        "examples": {
+          "beginner": "망원경으로 별을 봐요. - I look at stars with a telescope.",
+          "intermediate": "망원경이 있어요? - Do you have a telescope?",
+          "advanced": "\"What can you see with a telescope?\" \"You can see the moon, planets, and stars.\"",
+          "master": "I bought an astronomical telescope."
+        },
+        "variations": {
+          "formal": ["It is a telescope", "Astronomical telescope", "Observation device"],
+          "casual": ["Telescope~", "With telescope"],
+          "short": ["Telescope", "Scope"]
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,462 @@
+[
+  {
+    "id": "norae",
+    "korean": "노래",
+    "romanization": "norae",
+    "partOfSpeech": "noun",
+    "categoryId": "music",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["music", "song", "performance"],
+    "translations": {
+      "ko": {
+        "word": "노래",
+        "explanation": "목소리로 음악을 표현하는 것. 또는 그렇게 부르는 음악 작품.",
+        "examples": {
+          "beginner": "노래 잘해요.",
+          "intermediate": "노래 불러요.",
+          "advanced": "\"좋아하는 노래가 뭐야?\" \"K-pop 노래 좋아해.\"",
+          "master": "노래방에서 노래 불렀어요."
+        },
+        "variations": {
+          "formal": ["노래입니다", "가곡", "성악"],
+          "casual": ["노래~", "노래 불러?"],
+          "short": ["노래", "song"]
+        }
+      },
+      "en": {
+        "word": "Song",
+        "explanation": "Expressing music with one's voice. Or a musical work sung in such manner.",
+        "examples": {
+          "beginner": "노래 잘해요. - You sing well.",
+          "intermediate": "노래 불러요. - I'm singing a song.",
+          "advanced": "\"What's your favorite song?\" \"I like K-pop songs.\"",
+          "master": "I sang at the karaoke."
+        },
+        "variations": {
+          "formal": ["It is a song", "Art song", "Vocal music"],
+          "casual": ["Song~", "Singing?"],
+          "short": ["Song", "Tune"]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[노래]",
+      "ipa": "[noɾɛ]"
+    }
+  },
+  {
+    "id": "gasu",
+    "korean": "가수",
+    "romanization": "gasu",
+    "pronunciation": {
+      "korean": "[가수]",
+      "ipa": "[kasu]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "music",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["music", "people", "profession"],
+    "translations": {
+      "ko": {
+        "word": "가수",
+        "explanation": "노래를 직업으로 하는 사람. 싱어, 아티스트.",
+        "examples": {
+          "beginner": "가수가 되고 싶어요.",
+          "intermediate": "좋아하는 가수가 있어요?",
+          "advanced": "\"누가 제일 좋아하는 가수야?\" \"BTS 좋아해.\"",
+          "master": "그 가수의 콘서트에 갔어요."
+        },
+        "variations": {
+          "formal": ["가수입니다", "성악가", "아티스트"],
+          "casual": ["가수~", "가수 좋아해?"],
+          "short": ["가수", "singer"]
+        }
+      },
+      "en": {
+        "word": "Singer / Artist",
+        "explanation": "A person whose profession is singing. A vocalist, artist.",
+        "examples": {
+          "beginner": "가수가 되고 싶어요. - I want to become a singer.",
+          "intermediate": "좋아하는 가수가 있어요? - Do you have a favorite singer?",
+          "advanced": "\"Who's your favorite singer?\" \"I like BTS.\"",
+          "master": "I went to that singer's concert."
+        },
+        "variations": {
+          "formal": ["It is a singer", "Vocalist", "Artist"],
+          "casual": ["Singer~", "Like the singer?"],
+          "short": ["Singer", "Artist"]
+        }
+      }
+    }
+  },
+  {
+    "id": "akgi",
+    "korean": "악기",
+    "romanization": "akgi",
+    "pronunciation": {
+      "korean": "[악기]",
+      "ipa": "[akːi]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "music",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["music", "instrument", "tool"],
+    "translations": {
+      "ko": {
+        "word": "악기",
+        "explanation": "음악을 연주하는 도구. 피아노, 기타, 바이올린 등.",
+        "examples": {
+          "beginner": "악기 배워요.",
+          "intermediate": "무슨 악기 연주해요?",
+          "advanced": "\"악기 다룰 줄 알아?\" \"응, 기타 좀 쳐.\"",
+          "master": "악기를 연주하고 싶어요."
+        },
+        "variations": {
+          "formal": ["악기입니다", "음악 기구", "연주 악기"],
+          "casual": ["악기~", "악기 쳐?"],
+          "short": ["악기", "instrument"]
+        }
+      },
+      "en": {
+        "word": "Musical Instrument",
+        "explanation": "A tool for playing music. Piano, guitar, violin, etc.",
+        "examples": {
+          "beginner": "악기 배워요. - I'm learning an instrument.",
+          "intermediate": "무슨 악기 연주해요? - What instrument do you play?",
+          "advanced": "\"Can you play an instrument?\" \"Yeah, I play some guitar.\"",
+          "master": "I want to play an instrument."
+        },
+        "variations": {
+          "formal": ["It is an instrument", "Musical device", "Performance instrument"],
+          "casual": ["Instrument~", "Play an instrument?"],
+          "short": ["Instrument", "Inst"]
+        }
+      }
+    }
+  },
+  {
+    "id": "piano",
+    "korean": "피아노",
+    "romanization": "piano",
+    "partOfSpeech": "noun",
+    "categoryId": "music",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["music", "instrument", "keyboard"],
+    "translations": {
+      "ko": {
+        "word": "피아노",
+        "explanation": "건반을 눌러 소리를 내는 악기. 클래식과 대중음악에 널리 쓰인다.",
+        "examples": {
+          "beginner": "피아노 쳐요.",
+          "intermediate": "피아노 배우고 싶어요.",
+          "advanced": "\"피아노 칠 줄 알아?\" \"응, 어렸을 때부터 배웠어.\"",
+          "master": "피아노 연주를 들었어요."
+        },
+        "variations": {
+          "formal": ["피아노입니다", "양금", "건반악기"],
+          "casual": ["피아노~", "피아노 쳐?"],
+          "short": ["피아노", "piano"]
+        }
+      },
+      "en": {
+        "word": "Piano",
+        "explanation": "An instrument that produces sound by pressing keys. Widely used in classical and popular music.",
+        "examples": {
+          "beginner": "피아노 쳐요. - I play the piano.",
+          "intermediate": "피아노 배우고 싶어요. - I want to learn piano.",
+          "advanced": "\"Can you play the piano?\" \"Yes, I've learned since I was young.\"",
+          "master": "I listened to a piano performance."
+        },
+        "variations": {
+          "formal": ["It is a piano", "Pianoforte", "Keyboard instrument"],
+          "casual": ["Piano~", "Play piano?"],
+          "short": ["Piano", "Keys"]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[피아노]",
+      "ipa": "[pʰiano]"
+    }
+  },
+  {
+    "id": "gita",
+    "korean": "기타",
+    "romanization": "gita",
+    "partOfSpeech": "noun",
+    "categoryId": "music",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["music", "instrument", "string"],
+    "translations": {
+      "ko": {
+        "word": "기타",
+        "explanation": "줄을 튕겨 소리를 내는 현악기. 통기타와 전기기타가 있다.",
+        "examples": {
+          "beginner": "기타 쳐요.",
+          "intermediate": "기타 배우고 있어요.",
+          "advanced": "\"기타 칠 줄 알아?\" \"응, 독학으로 배웠어.\"",
+          "master": "기타로 노래 반주해요."
+        },
+        "variations": {
+          "formal": ["기타입니다", "현악기", "육현금"],
+          "casual": ["기타~", "기타 쳐?"],
+          "short": ["기타", "guitar"]
+        }
+      },
+      "en": {
+        "word": "Guitar",
+        "explanation": "A string instrument that produces sound by plucking strings. Acoustic and electric guitars exist.",
+        "examples": {
+          "beginner": "기타 쳐요. - I play the guitar.",
+          "intermediate": "기타 배우고 있어요. - I'm learning guitar.",
+          "advanced": "\"Can you play guitar?\" \"Yeah, I taught myself.\"",
+          "master": "I accompany songs with guitar."
+        },
+        "variations": {
+          "formal": ["It is a guitar", "String instrument", "Six-string"],
+          "casual": ["Guitar~", "Play guitar?"],
+          "short": ["Guitar", "Gtr"]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[기타]",
+      "ipa": "[kitʰa]"
+    }
+  },
+  {
+    "id": "drum",
+    "korean": "드럼",
+    "romanization": "deureom",
+    "partOfSpeech": "noun",
+    "categoryId": "music",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["music", "instrument", "percussion"],
+    "translations": {
+      "ko": {
+        "word": "드럼",
+        "explanation": "손이나 스틱으로 쳐서 소리를 내는 타악기. 밴드에서 리듬을 담당한다.",
+        "examples": {
+          "beginner": "드럼 쳐요.",
+          "intermediate": "드럼 소리가 좋아요.",
+          "advanced": "\"드럼 치는 거 어려워?\" \"처음엔 어렵지만 연습하면 재미있어.\"",
+          "master": "드럼 연주가 멋있어요."
+        },
+        "variations": {
+          "formal": ["드럼입니다", "타악기", "북"],
+          "casual": ["드럼~", "드럼 쳐?"],
+          "short": ["드럼", "drums"]
+        }
+      },
+      "en": {
+        "word": "Drums",
+        "explanation": "A percussion instrument played by hitting with hands or sticks. Provides rhythm in a band.",
+        "examples": {
+          "beginner": "드럼 쳐요. - I play the drums.",
+          "intermediate": "드럼 소리가 좋아요. - The drum sound is great.",
+          "advanced": "\"Is playing drums hard?\" \"It's difficult at first, but fun with practice.\"",
+          "master": "The drum performance is cool."
+        },
+        "variations": {
+          "formal": ["It is drums", "Percussion", "Drum set"],
+          "casual": ["Drums~", "Play drums?"],
+          "short": ["Drums", "Percussion"]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[드럼]",
+      "ipa": "[tɯɾʌm]"
+    }
+  },
+  {
+    "id": "concert",
+    "korean": "콘서트",
+    "romanization": "konseoteu",
+    "partOfSpeech": "noun",
+    "categoryId": "music",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["music", "performance", "event"],
+    "translations": {
+      "ko": {
+        "word": "콘서트",
+        "explanation": "가수나 밴드가 관객 앞에서 노래를 부르는 공연. 음악회.",
+        "examples": {
+          "beginner": "콘서트 갔어요.",
+          "intermediate": "콘서트 티켓 샀어요?",
+          "advanced": "\"이번 주말에 콘서트 가?\" \"응, BTS 콘서트야.\"",
+          "master": "콘서트가 너무 재미있었어요."
+        },
+        "variations": {
+          "formal": ["콘서트입니다", "음악회", "공연"],
+          "casual": ["콘서트~", "콘서트 가?"],
+          "short": ["콘서트", "concert"]
+        }
+      },
+      "en": {
+        "word": "Concert",
+        "explanation": "A performance where singers or bands perform in front of an audience. A musical event.",
+        "examples": {
+          "beginner": "콘서트 갔어요. - I went to a concert.",
+          "intermediate": "콘서트 티켓 샀어요? - Did you buy concert tickets?",
+          "advanced": "\"Are you going to the concert this weekend?\" \"Yeah, it's a BTS concert.\"",
+          "master": "The concert was so fun."
+        },
+        "variations": {
+          "formal": ["It is a concert", "Musical performance", "Show"],
+          "casual": ["Concert~", "Going to concert?"],
+          "short": ["Concert", "Show"]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[콘서트]",
+      "ipa": "[kʰonsʌtʰɯ]"
+    }
+  },
+  {
+    "id": "rhythm",
+    "korean": "리듬",
+    "romanization": "rideum",
+    "partOfSpeech": "noun",
+    "categoryId": "music",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["music", "theory", "beat"],
+    "translations": {
+      "ko": {
+        "word": "리듬",
+        "explanation": "음악의 박자와 템포. 규칙적으로 반복되는 소리의 패턴.",
+        "examples": {
+          "beginner": "리듬이 좋아요.",
+          "intermediate": "리듬을 타요.",
+          "advanced": "\"리듬감이 좋네!\" \"춤추는 거 좋아해서 그런가 봐.\"",
+          "master": "리듬에 맞춰 박수 쳐요."
+        },
+        "variations": {
+          "formal": ["리듬입니다", "박자", "율동"],
+          "casual": ["리듬~", "리듬 타?"],
+          "short": ["리듬", "rhythm"]
+        }
+      },
+      "en": {
+        "word": "Rhythm",
+        "explanation": "The beat and tempo of music. A regularly repeating pattern of sound.",
+        "examples": {
+          "beginner": "리듬이 좋아요. - The rhythm is good.",
+          "intermediate": "리듬을 타요. - I'm following the rhythm.",
+          "advanced": "\"You have good rhythm!\" \"Maybe it's because I like dancing.\"",
+          "master": "Clap to the rhythm."
+        },
+        "variations": {
+          "formal": ["It is rhythm", "Beat", "Tempo"],
+          "casual": ["Rhythm~", "Feeling the rhythm?"],
+          "short": ["Rhythm", "Beat"]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[리듬]",
+      "ipa": "[ɾidɯm]"
+    }
+  },
+  {
+    "id": "melody",
+    "korean": "멜로디",
+    "romanization": "mellodi",
+    "partOfSpeech": "noun",
+    "categoryId": "music",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["music", "theory", "tune"],
+    "translations": {
+      "ko": {
+        "word": "멜로디",
+        "explanation": "노래의 주된 음악적 선율. 흥얼거릴 수 있는 곡의 주제.",
+        "examples": {
+          "beginner": "멜로디가 아름다워요.",
+          "intermediate": "멜로디를 기억해요.",
+          "advanced": "\"이 노래 멜로디 좋지?\" \"응, 계속 귀에 맴돌아.\"",
+          "master": "멜로디가 중독적이에요."
+        },
+        "variations": {
+          "formal": ["멜로디입니다", "선율", "가락"],
+          "casual": ["멜로디~", "멜로디 좋아?"],
+          "short": ["멜로디", "melody"]
+        }
+      },
+      "en": {
+        "word": "Melody",
+        "explanation": "The main musical line of a song. The theme of a piece that can be hummed.",
+        "examples": {
+          "beginner": "멜로디가 아름다워요. - The melody is beautiful.",
+          "intermediate": "멜로디를 기억해요. - I remember the melody.",
+          "advanced": "\"This song's melody is good, right?\" \"Yeah, it keeps ringing in my ears.\"",
+          "master": "The melody is addictive."
+        },
+        "variations": {
+          "formal": ["It is a melody", "Musical line", "Tune"],
+          "casual": ["Melody~", "Like the melody?"],
+          "short": ["Melody", "Tune"]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[멜로디]",
+      "ipa": "[mellodi]"
+    }
+  },
+  {
+    "id": "kpop",
+    "korean": "케이팝",
+    "romanization": "keipap",
+    "partOfSpeech": "noun",
+    "categoryId": "music",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["music", "genre", "korea"],
+    "translations": {
+      "ko": {
+        "word": "케이팝",
+        "explanation": "한국 대중음악. K-pop. 전 세계적으로 인기가 많다.",
+        "examples": {
+          "beginner": "케이팝 좋아해요.",
+          "intermediate": "케이팝 들어요.",
+          "advanced": "\"케이팝 중에 뭐 좋아해?\" \"BTS, 블랙핑크 같은 거 들어.\"",
+          "master": "케이팝이 세계적으로 유명해요."
+        },
+        "variations": {
+          "formal": ["케이팝입니다", "한국 대중음악", "K-pop"],
+          "casual": ["케이팝~", "케이팝 들어?"],
+          "short": ["케이팝", "K-pop"]
+        }
+      },
+      "en": {
+        "word": "K-pop",
+        "explanation": "Korean popular music. K-pop. Very popular worldwide.",
+        "examples": {
+          "beginner": "케이팝 좋아해요. - I like K-pop.",
+          "intermediate": "케이팝 들어요. - I listen to K-pop.",
+          "advanced": "\"What K-pop do you like?\" \"I listen to BTS, BLACKPINK, stuff like that.\"",
+          "master": "K-pop is famous worldwide."
+        },
+        "variations": {
+          "formal": ["It is K-pop", "Korean popular music", "K-pop"],
+          "casual": ["K-pop~", "Listen to K-pop?"],
+          "short": ["K-pop", "Kpop"]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[케이팝]",
+      "ipa": "[kʰeipʰap]"
+    }
+  }
+]

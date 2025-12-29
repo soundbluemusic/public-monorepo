@@ -1,0 +1,1902 @@
+[
+  {
+    "id": "hoesa",
+    "korean": "회사",
+    "romanization": "hoesa",
+    "pronunciation": {
+      "korean": "[회사]",
+      "ipa": "[hwesa]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "business", "place"],
+    "translations": {
+      "ko": {
+        "word": "회사",
+        "explanation": "사람들이 돈을 벌기 위해 일하는 조직. 상업 활동을 하는 법인 단체.",
+        "examples": {
+          "beginner": "회사에 가요.",
+          "intermediate": "어느 회사 다니세요?",
+          "advanced": "\"회사 생활 어때?\" \"좋아, 동료들이 다 친절해.\"",
+          "master": "우리 회사는 IT 기업이에요."
+        },
+        "variations": {
+          "formal": ["회사입니다", "기업", "법인"],
+          "casual": ["회사~", "직장"],
+          "short": ["회사", "company"]
+        }
+      },
+      "en": {
+        "word": "Company",
+        "explanation": "An organization where people work to earn money. A corporate entity engaged in commercial activities.",
+        "examples": {
+          "beginner": "회사에 가요. - I'm going to the company/work.",
+          "intermediate": "어느 회사 다니세요? - Which company do you work for?",
+          "advanced": "\"How's work life?\" \"Good, my colleagues are all nice.\"",
+          "master": "Our company is an IT firm."
+        },
+        "variations": {
+          "formal": ["It is a company", "Corporation", "Enterprise"],
+          "casual": ["Company~", "Workplace"],
+          "short": ["Company", "Corp"]
+        }
+      }
+    }
+  },
+  {
+    "id": "samusil",
+    "korean": "사무실",
+    "romanization": "samusil",
+    "pronunciation": {
+      "korean": "[사무실]",
+      "ipa": "[samuɕil]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "place", "office"],
+    "translations": {
+      "ko": {
+        "word": "사무실",
+        "explanation": "사무를 보는 방이나 공간. 회사에서 일하는 곳.",
+        "examples": {
+          "beginner": "사무실에 있어요.",
+          "intermediate": "사무실이 넓어요.",
+          "advanced": "\"어디 있어?\" \"사무실에서 일하는 중이야.\"",
+          "master": "새 사무실로 이사했어요."
+        },
+        "variations": {
+          "formal": ["사무실입니다", "집무실", "업무 공간"],
+          "casual": ["사무실~", "사무실에서"],
+          "short": ["사무실", "office"]
+        }
+      },
+      "en": {
+        "word": "Office",
+        "explanation": "A room or space where office work is done. The place where you work in a company.",
+        "examples": {
+          "beginner": "사무실에 있어요. - I'm at the office.",
+          "intermediate": "사무실이 넓어요. - The office is spacious.",
+          "advanced": "\"Where are you?\" \"I'm working at the office.\"",
+          "master": "We moved to a new office."
+        },
+        "variations": {
+          "formal": ["It is an office", "Executive office", "Workspace"],
+          "casual": ["Office~", "At the office"],
+          "short": ["Office", "Off"]
+        }
+      }
+    }
+  },
+  {
+    "id": "hoeui",
+    "korean": "회의",
+    "romanization": "hoeui",
+    "pronunciation": {
+      "korean": "[회의]",
+      "ipa": "[hweɯi]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "meeting", "business"],
+    "translations": {
+      "ko": {
+        "word": "회의",
+        "explanation": "여러 사람이 모여 의견을 나누는 것. 업무에 대해 논의하는 모임.",
+        "examples": {
+          "beginner": "회의 중이에요.",
+          "intermediate": "회의가 길어요.",
+          "advanced": "\"오후에 회의 있어?\" \"응, 2시에 팀 회의가 있어.\"",
+          "master": "회의실이 어디예요?"
+        },
+        "variations": {
+          "formal": ["회의입니다", "미팅", "회합"],
+          "casual": ["회의~", "회의 중"],
+          "short": ["회의", "meeting"]
+        }
+      },
+      "en": {
+        "word": "Meeting",
+        "explanation": "When multiple people gather to share opinions. A gathering to discuss work matters.",
+        "examples": {
+          "beginner": "회의 중이에요. - I'm in a meeting.",
+          "intermediate": "회의가 길어요. - The meeting is long.",
+          "advanced": "\"Do you have a meeting this afternoon?\" \"Yeah, I have a team meeting at 2.\"",
+          "master": "Where is the meeting room?"
+        },
+        "variations": {
+          "formal": ["It is a meeting", "Conference", "Assembly"],
+          "casual": ["Meeting~", "In a meeting"],
+          "short": ["Meeting", "Mtg"]
+        }
+      }
+    }
+  },
+  {
+    "id": "sangsa",
+    "korean": "상사",
+    "romanization": "sangsa",
+    "pronunciation": {
+      "korean": "[상사]",
+      "ipa": "[saŋsa]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "people", "hierarchy"],
+    "translations": {
+      "ko": {
+        "word": "상사",
+        "explanation": "직장에서 나보다 높은 직급에 있는 사람. 보스, 팀장, 부장 등.",
+        "examples": {
+          "beginner": "상사가 엄격해요.",
+          "intermediate": "상사와 회의했어요.",
+          "advanced": "\"상사한테 보고했어?\" \"아직 안 했어, 지금 할게.\"",
+          "master": "우리 상사는 이해심이 많아요."
+        },
+        "variations": {
+          "formal": ["상사님", "상급자", "관리자"],
+          "casual": ["상사~", "윗사람"],
+          "short": ["상사", "boss"]
+        }
+      },
+      "en": {
+        "word": "Boss / Superior",
+        "explanation": "A person with a higher position than you at work. Manager, team leader, director, etc.",
+        "examples": {
+          "beginner": "상사가 엄격해요. - My boss is strict.",
+          "intermediate": "상사와 회의했어요. - I had a meeting with my boss.",
+          "advanced": "\"Did you report to your boss?\" \"Not yet, I'll do it now.\"",
+          "master": "Our boss is very understanding."
+        },
+        "variations": {
+          "formal": ["Boss (honorific)", "Superior", "Manager"],
+          "casual": ["Boss~", "Higher-up"],
+          "short": ["Boss", "Mgr"]
+        }
+      }
+    }
+  },
+  {
+    "id": "dongryo",
+    "korean": "동료",
+    "romanization": "dongryo",
+    "pronunciation": {
+      "korean": "[동료]",
+      "ipa": "[toŋɾjo]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "people", "colleague"],
+    "translations": {
+      "ko": {
+        "word": "동료",
+        "explanation": "같은 직장에서 함께 일하는 사람. 같은 팀이나 부서의 직원.",
+        "examples": {
+          "beginner": "동료들이 친절해요.",
+          "intermediate": "동료와 점심 먹었어요.",
+          "advanced": "\"새로운 동료가 왔어.\" \"어떤 사람이야?\"",
+          "master": "동료들과 회식했어요."
+        },
+        "variations": {
+          "formal": ["동료입니다", "직장 동료", "팀원"],
+          "casual": ["동료~", "직장 사람들"],
+          "short": ["동료", "coworker"]
+        }
+      },
+      "en": {
+        "word": "Colleague / Coworker",
+        "explanation": "A person you work with at the same workplace. An employee in the same team or department.",
+        "examples": {
+          "beginner": "동료들이 친절해요. - My colleagues are kind.",
+          "intermediate": "동료와 점심 먹었어요. - I had lunch with a colleague.",
+          "advanced": "\"A new colleague joined.\" \"What are they like?\"",
+          "master": "I had dinner with my coworkers."
+        },
+        "variations": {
+          "formal": ["It is a colleague", "Work colleague", "Team member"],
+          "casual": ["Colleague~", "Work people"],
+          "short": ["Colleague", "Coworker"]
+        }
+      }
+    }
+  },
+  {
+    "id": "eommu",
+    "korean": "업무",
+    "romanization": "eommu",
+    "pronunciation": {
+      "korean": "[업무]",
+      "ipa": "[ʌpmu]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "task", "duty"],
+    "translations": {
+      "ko": {
+        "word": "업무",
+        "explanation": "맡아서 처리해야 할 일. 직장에서 해야 하는 일이나 책임.",
+        "examples": {
+          "beginner": "업무가 많아요.",
+          "intermediate": "업무 시간이에요.",
+          "advanced": "\"무슨 업무 하세요?\" \"마케팅 업무를 담당하고 있어요.\"",
+          "master": "업무가 바쁠 때는 야근해요."
+        },
+        "variations": {
+          "formal": ["업무입니다", "직무", "담당 업무"],
+          "casual": ["업무~", "일"],
+          "short": ["업무", "work"]
+        }
+      },
+      "en": {
+        "word": "Work / Task / Duty",
+        "explanation": "Work that needs to be handled. Jobs or responsibilities at the workplace.",
+        "examples": {
+          "beginner": "업무가 많아요. - I have a lot of work.",
+          "intermediate": "업무 시간이에요. - It's working hours.",
+          "advanced": "\"What kind of work do you do?\" \"I'm in charge of marketing.\"",
+          "master": "When work is busy, I work overtime."
+        },
+        "variations": {
+          "formal": ["It is work", "Duty", "Assigned work"],
+          "casual": ["Work~", "Job"],
+          "short": ["Work", "Task"]
+        }
+      }
+    }
+  },
+  {
+    "id": "imeil",
+    "korean": "이메일",
+    "romanization": "imeil",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "communication", "technology"],
+    "translations": {
+      "ko": {
+        "word": "이메일",
+        "explanation": "인터넷으로 주고받는 편지. 전자 우편.",
+        "examples": {
+          "beginner": "이메일 보냈어요.",
+          "intermediate": "이메일 확인해 주세요.",
+          "advanced": "\"이메일 받았어?\" \"응, 방금 확인했어.\"",
+          "master": "중요한 내용은 이메일로 보내세요."
+        },
+        "variations": {
+          "formal": ["이메일입니다", "전자우편", "메일"],
+          "casual": ["이메일~", "메일"],
+          "short": ["메일", "email"]
+        }
+      },
+      "en": {
+        "word": "Email",
+        "explanation": "A letter sent and received over the internet. Electronic mail.",
+        "examples": {
+          "beginner": "이메일 보냈어요. - I sent an email.",
+          "intermediate": "이메일 확인해 주세요. - Please check your email.",
+          "advanced": "\"Did you get the email?\" \"Yeah, I just checked it.\"",
+          "master": "Please send important information via email."
+        },
+        "variations": {
+          "formal": ["It is an email", "Electronic mail", "Mail"],
+          "casual": ["Email~", "Mail"],
+          "short": ["Email", "E-mail"]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[이메일]",
+      "ipa": "[imeil]"
+    }
+  },
+  {
+    "id": "jeonhwa",
+    "korean": "전화",
+    "romanization": "jeonhwa",
+    "pronunciation": {
+      "korean": "[전화]",
+      "ipa": "[tɕʌnɦwa]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "communication", "daily"],
+    "translations": {
+      "ko": {
+        "word": "전화",
+        "explanation": "목소리로 대화하는 통신 수단. 전화기를 통해 먼 곳에 있는 사람과 이야기한다.",
+        "examples": {
+          "beginner": "전화 왔어요.",
+          "intermediate": "전화 좀 할게요.",
+          "advanced": "\"전화 받아!\" \"알았어, 지금 받을게.\"",
+          "master": "전화로 예약했어요."
+        },
+        "variations": {
+          "formal": ["전화입니다", "통화", "전화 통화"],
+          "casual": ["전화~", "전화해"],
+          "short": ["전화", "call"]
+        }
+      },
+      "en": {
+        "word": "Phone / Call",
+        "explanation": "A communication device for voice conversation. Talk to someone far away through a telephone.",
+        "examples": {
+          "beginner": "전화 왔어요. - There's a phone call. / You have a call.",
+          "intermediate": "전화 좀 할게요. - I'll make a phone call.",
+          "advanced": "\"Answer the phone!\" \"Okay, I'll answer it now.\"",
+          "master": "I made a reservation by phone."
+        },
+        "variations": {
+          "formal": ["It is a phone call", "Telephone conversation", "Phone call"],
+          "casual": ["Phone~", "Call me"],
+          "short": ["Phone", "Call"]
+        }
+      }
+    }
+  },
+  {
+    "id": "bogoseo",
+    "korean": "보고서",
+    "romanization": "bogoseo",
+    "pronunciation": {
+      "korean": "[보고서]",
+      "ipa": "[poɡosʌ]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "document", "report"],
+    "translations": {
+      "ko": {
+        "word": "보고서",
+        "explanation": "조사하거나 연구한 내용을 정리한 문서. 업무 결과를 정리해서 제출하는 글.",
+        "examples": {
+          "beginner": "보고서 작성 중이에요.",
+          "intermediate": "보고서 제출했어요.",
+          "advanced": "\"보고서 언제까지야?\" \"금요일까지 제출해야 해.\"",
+          "master": "월간 보고서를 만들어요."
+        },
+        "variations": {
+          "formal": ["보고서입니다", "리포트", "결과 보고서"],
+          "casual": ["보고서~", "리포트"],
+          "short": ["보고서", "report"]
+        }
+      },
+      "en": {
+        "word": "Report",
+        "explanation": "A document organizing research or study results. A written summary of work results to be submitted.",
+        "examples": {
+          "beginner": "보고서 작성 중이에요. - I'm writing a report.",
+          "intermediate": "보고서 제출했어요. - I submitted the report.",
+          "advanced": "\"When is the report due?\" \"I have to submit it by Friday.\"",
+          "master": "I'm creating a monthly report."
+        },
+        "variations": {
+          "formal": ["It is a report", "Report document", "Results report"],
+          "casual": ["Report~", "Report"],
+          "short": ["Report", "Rpt"]
+        }
+      }
+    }
+  },
+  {
+    "id": "magam",
+    "korean": "마감",
+    "romanization": "magam",
+    "pronunciation": {
+      "korean": "[마감]",
+      "ipa": "[maɡam]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "deadline", "time"],
+    "translations": {
+      "ko": {
+        "word": "마감",
+        "explanation": "일을 끝내야 하는 기한. 제출 기한이나 완료 시한.",
+        "examples": {
+          "beginner": "마감이 내일이에요.",
+          "intermediate": "마감 시간이 촉박해요.",
+          "advanced": "\"마감이 언제야?\" \"이번 주 금요일까지야.\"",
+          "master": "마감을 지키려면 밤샘 작업해야 해요."
+        },
+        "variations": {
+          "formal": ["마감입니다", "기한", "제출 마감"],
+          "casual": ["마감~", "데드라인"],
+          "short": ["마감", "deadline"]
+        }
+      },
+      "en": {
+        "word": "Deadline",
+        "explanation": "The time limit by which work must be completed. Submission deadline or completion time limit.",
+        "examples": {
+          "beginner": "마감이 내일이에요. - The deadline is tomorrow.",
+          "intermediate": "마감 시간이 촉박해요. - The deadline is tight.",
+          "advanced": "\"When is the deadline?\" \"By Friday this week.\"",
+          "master": "We need to work overnight to meet the deadline."
+        },
+        "variations": {
+          "formal": ["It is a deadline", "Time limit", "Submission deadline"],
+          "casual": ["Deadline~", "Due date"],
+          "short": ["Deadline", "DL"]
+        }
+      }
+    }
+  },
+  {
+    "id": "yeonbong",
+    "korean": "연봉",
+    "romanization": "yeonbong",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "salary", "money"],
+    "translations": {
+      "ko": {
+        "word": "연봉",
+        "explanation": "1년 동안 받는 급여. 연간 총 임금.",
+        "examples": {
+          "beginner": "연봉이 얼마예요?",
+          "intermediate": "연봉 협상을 했어요.",
+          "advanced": "\"연봉 올랐어?\" \"응, 5% 인상됐어.\"",
+          "master": "연봉 계약서에 사인했어요."
+        }
+      },
+      "en": {
+        "word": "Annual salary",
+        "explanation": "Salary received over one year. Total annual wages.",
+        "examples": {
+          "beginner": "What's your annual salary?",
+          "intermediate": "I negotiated my salary.",
+          "advanced": "\"Did you get a raise?\" \"Yes, a 5% increase.\"",
+          "master": "I signed the salary contract."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[연봉]",
+      "ipa": "[jʌnboŋ]"
+    }
+  },
+  {
+    "id": "wolgeup",
+    "korean": "월급",
+    "romanization": "wolgeup",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "salary", "money"],
+    "translations": {
+      "ko": {
+        "word": "월급",
+        "explanation": "한 달에 한 번 받는 급여. 매달 지급되는 임금.",
+        "examples": {
+          "beginner": "월급 받았어요.",
+          "intermediate": "월급날이 언제예요?",
+          "advanced": "\"월급 들어왔어?\" \"아직 안 들어왔어.\"",
+          "master": "월급으로 생활비를 내요."
+        }
+      },
+      "en": {
+        "word": "Monthly salary",
+        "explanation": "Salary received once a month. Wages paid every month.",
+        "examples": {
+          "beginner": "I got my salary.",
+          "intermediate": "When is payday?",
+          "advanced": "\"Did your salary come in?\" \"Not yet.\"",
+          "master": "I pay living expenses with my salary."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[월급]",
+      "ipa": "[wʌlɡɯp]"
+    }
+  },
+  {
+    "id": "chulgeun",
+    "korean": "출근",
+    "romanization": "chulgeun",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "commute"],
+    "translations": {
+      "ko": {
+        "word": "출근",
+        "explanation": "직장에 가는 것. 아침에 회사에 도착하는 것.",
+        "examples": {
+          "beginner": "출근했어요.",
+          "intermediate": "몇 시에 출근해요?",
+          "advanced": "\"출근 시간이 몇 시야?\" \"9시야.\"",
+          "master": "재택근무라 출근 안 해도 돼요."
+        }
+      },
+      "en": {
+        "word": "Going to work",
+        "explanation": "Going to the workplace. Arriving at the company in the morning.",
+        "examples": {
+          "beginner": "I went to work.",
+          "intermediate": "What time do you go to work?",
+          "advanced": "\"What time do you start work?\" \"9 o'clock.\"",
+          "master": "I work from home so I don't need to commute."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[출근]",
+      "ipa": "[tɕʰulɡɯn]"
+    }
+  },
+  {
+    "id": "toegeun",
+    "korean": "퇴근",
+    "romanization": "toegeun",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "commute"],
+    "translations": {
+      "ko": {
+        "word": "퇴근",
+        "explanation": "일을 끝내고 집에 가는 것. 회사를 떠나는 것.",
+        "examples": {
+          "beginner": "퇴근했어요.",
+          "intermediate": "몇 시에 퇴근해요?",
+          "advanced": "\"퇴근 뭐 해?\" \"집에 가서 쉴 거야.\"",
+          "master": "오늘 일찍 퇴근해도 돼요?"
+        }
+      },
+      "en": {
+        "word": "Getting off work",
+        "explanation": "Finishing work and going home. Leaving the company.",
+        "examples": {
+          "beginner": "I got off work.",
+          "intermediate": "What time do you get off work?",
+          "advanced": "\"What are you doing after work?\" \"Going home to rest.\"",
+          "master": "Can I leave early today?"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[퇴근]",
+      "ipa": "[twɛɡɯn]"
+    }
+  },
+  {
+    "id": "yageun",
+    "korean": "야근",
+    "romanization": "yageun",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "overtime"],
+    "translations": {
+      "ko": {
+        "word": "야근",
+        "explanation": "밤늦게까지 일하는 것. 정규 퇴근 시간 이후에 일하는 것.",
+        "examples": {
+          "beginner": "오늘 야근해요.",
+          "intermediate": "야근이 많아요.",
+          "advanced": "\"또 야근이야?\" \"응, 일이 많아서.\"",
+          "master": "야근 수당 받아요?"
+        }
+      },
+      "en": {
+        "word": "Overtime / Working late",
+        "explanation": "Working until late at night. Working after regular hours.",
+        "examples": {
+          "beginner": "I'm working overtime today.",
+          "intermediate": "I work a lot of overtime.",
+          "advanced": "\"Working late again?\" \"Yeah, too much work.\"",
+          "master": "Do you get overtime pay?"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[야근]",
+      "ipa": "[jaɡɯn]"
+    }
+  },
+  {
+    "id": "hyuga",
+    "korean": "휴가",
+    "romanization": "hyuga",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "vacation"],
+    "translations": {
+      "ko": {
+        "word": "휴가",
+        "explanation": "일을 쉬는 기간. 회사에서 허락한 쉬는 날.",
+        "examples": {
+          "beginner": "휴가 갈 거예요.",
+          "intermediate": "휴가 신청했어요.",
+          "advanced": "\"휴가 언제야?\" \"다음 주 월요일부터야.\"",
+          "master": "연차 휴가 며칠 남았어요?"
+        }
+      },
+      "en": {
+        "word": "Vacation / Leave",
+        "explanation": "A period of rest from work. Days off allowed by the company.",
+        "examples": {
+          "beginner": "I'm going on vacation.",
+          "intermediate": "I applied for leave.",
+          "advanced": "\"When's your vacation?\" \"Starting next Monday.\"",
+          "master": "How many annual leave days do you have left?"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[휴가]",
+      "ipa": "[hjuɡa]"
+    }
+  },
+  {
+    "id": "myeonjeop",
+    "korean": "면접",
+    "romanization": "myeonjeop",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "interview", "hiring"],
+    "translations": {
+      "ko": {
+        "word": "면접",
+        "explanation": "직접 만나서 질문을 받는 것. 취업할 때 회사에서 인터뷰하는 것.",
+        "examples": {
+          "beginner": "면접 봤어요.",
+          "intermediate": "면접 준비 중이에요.",
+          "advanced": "\"면접 어땠어?\" \"긴장했는데 잘 본 것 같아.\"",
+          "master": "2차 면접에 합격했어요."
+        }
+      },
+      "en": {
+        "word": "Interview",
+        "explanation": "Meeting in person to answer questions. Being interviewed by a company when job hunting.",
+        "examples": {
+          "beginner": "I had an interview.",
+          "intermediate": "I'm preparing for an interview.",
+          "advanced": "\"How was the interview?\" \"I was nervous but I think it went well.\"",
+          "master": "I passed the second interview."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[면접]",
+      "ipa": "[mjʌndʑʌp]"
+    }
+  },
+  {
+    "id": "iryeokseo",
+    "korean": "이력서",
+    "romanization": "iryeokseo",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "document", "hiring"],
+    "translations": {
+      "ko": {
+        "word": "이력서",
+        "explanation": "자신의 경력과 학력을 쓴 문서. 취업할 때 제출하는 서류.",
+        "examples": {
+          "beginner": "이력서 썼어요.",
+          "intermediate": "이력서 보내세요.",
+          "advanced": "\"이력서 어디 제출해?\" \"이메일로 보내면 돼.\"",
+          "master": "이력서와 자기소개서를 준비하세요."
+        }
+      },
+      "en": {
+        "word": "Resume / CV",
+        "explanation": "A document listing your experience and education. Submitted when job hunting.",
+        "examples": {
+          "beginner": "I wrote my resume.",
+          "intermediate": "Please send your resume.",
+          "advanced": "\"Where do I submit my resume?\" \"You can email it.\"",
+          "master": "Prepare your resume and cover letter."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[이력서]",
+      "ipa": "[iɾjʌksʌ]"
+    }
+  },
+  {
+    "id": "chwieop",
+    "korean": "취업",
+    "romanization": "chwieop",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "employment"],
+    "translations": {
+      "ko": {
+        "word": "취업",
+        "explanation": "직장을 구해서 일을 시작하는 것. 회사에 들어가는 것.",
+        "examples": {
+          "beginner": "취업했어요.",
+          "intermediate": "취업 준비 중이에요.",
+          "advanced": "\"취업 언제 할 거야?\" \"열심히 준비 중이야.\"",
+          "master": "대기업 취업이 꿈이에요."
+        }
+      },
+      "en": {
+        "word": "Getting a job / Employment",
+        "explanation": "Finding a job and starting work. Joining a company.",
+        "examples": {
+          "beginner": "I got a job.",
+          "intermediate": "I'm preparing to get a job.",
+          "advanced": "\"When will you get a job?\" \"I'm working hard on it.\"",
+          "master": "My dream is to work at a big company."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[취업]",
+      "ipa": "[tɕʰwiʌp]"
+    }
+  },
+  {
+    "id": "toejik",
+    "korean": "퇴직",
+    "romanization": "toejik",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "resignation"],
+    "translations": {
+      "ko": {
+        "word": "퇴직",
+        "explanation": "회사를 그만두는 것. 직장을 떠나는 것.",
+        "examples": {
+          "beginner": "퇴직했어요.",
+          "intermediate": "퇴직금 받았어요.",
+          "advanced": "\"왜 퇴직해?\" \"새로운 일을 하고 싶어서.\"",
+          "master": "명예퇴직을 신청했어요."
+        }
+      },
+      "en": {
+        "word": "Resignation / Retirement",
+        "explanation": "Quitting a company. Leaving a job.",
+        "examples": {
+          "beginner": "I resigned.",
+          "intermediate": "I received severance pay.",
+          "advanced": "\"Why are you resigning?\" \"I want to try something new.\"",
+          "master": "I applied for early retirement."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[퇴직]",
+      "ipa": "[twedʑik]"
+    }
+  },
+  {
+    "id": "seunggin",
+    "korean": "승진",
+    "romanization": "seungjin",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "promotion"],
+    "translations": {
+      "ko": {
+        "word": "승진",
+        "explanation": "직급이 올라가는 것. 더 높은 직책으로 오르는 것.",
+        "examples": {
+          "beginner": "승진했어요!",
+          "intermediate": "승진 축하해요.",
+          "advanced": "\"승진했다며?\" \"응, 이제 팀장이야.\"",
+          "master": "열심히 일해서 승진하고 싶어요."
+        }
+      },
+      "en": {
+        "word": "Promotion",
+        "explanation": "Moving up in rank. Rising to a higher position.",
+        "examples": {
+          "beginner": "I got promoted!",
+          "intermediate": "Congratulations on your promotion.",
+          "advanced": "\"I heard you got promoted?\" \"Yes, I'm a team leader now.\"",
+          "master": "I want to work hard and get promoted."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[승진]",
+      "ipa": "[sɯŋdʑin]"
+    }
+  },
+  {
+    "id": "peurrojekteu",
+    "korean": "프로젝트",
+    "romanization": "peurojekteu",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "project"],
+    "translations": {
+      "ko": {
+        "word": "프로젝트",
+        "explanation": "계획적으로 진행하는 일. 팀이 함께 하는 업무.",
+        "examples": {
+          "beginner": "새 프로젝트 시작했어요.",
+          "intermediate": "프로젝트가 끝났어요.",
+          "advanced": "\"이번 프로젝트 어때?\" \"재미있어, 근데 어려워.\"",
+          "master": "대형 프로젝트를 맡게 됐어요."
+        }
+      },
+      "en": {
+        "word": "Project",
+        "explanation": "A planned task. Work done together as a team.",
+        "examples": {
+          "beginner": "I started a new project.",
+          "intermediate": "The project is finished.",
+          "advanced": "\"How's this project?\" \"Fun, but difficult.\"",
+          "master": "I was assigned to a major project."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[프로젝트]",
+      "ipa": "[pʰɯɾodʑektʰɯ]"
+    }
+  },
+  {
+    "id": "palpio",
+    "korean": "발표",
+    "romanization": "balpyo",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "presentation"],
+    "translations": {
+      "ko": {
+        "word": "발표",
+        "explanation": "사람들 앞에서 설명하는 것. 프레젠테이션.",
+        "examples": {
+          "beginner": "발표 준비했어요.",
+          "intermediate": "발표 잘 했어요.",
+          "advanced": "\"발표 언제야?\" \"내일 오전이야.\"",
+          "master": "발표 자료 만드는 중이에요."
+        }
+      },
+      "en": {
+        "word": "Presentation",
+        "explanation": "Explaining in front of people. A presentation.",
+        "examples": {
+          "beginner": "I prepared a presentation.",
+          "intermediate": "You did well on the presentation.",
+          "advanced": "\"When's the presentation?\" \"Tomorrow morning.\"",
+          "master": "I'm making presentation materials."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[발표]",
+      "ipa": "[palpʰjo]"
+    }
+  },
+  {
+    "id": "gyeyak",
+    "korean": "계약",
+    "romanization": "gyeyak",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "contract"],
+    "translations": {
+      "ko": {
+        "word": "계약",
+        "explanation": "약속을 문서로 정하는 것. 서로 지켜야 할 내용을 적은 것.",
+        "examples": {
+          "beginner": "계약 했어요.",
+          "intermediate": "계약서 읽어 보세요.",
+          "advanced": "\"계약 기간이 얼마야?\" \"1년이야.\"",
+          "master": "계약 조건을 협상 중이에요."
+        }
+      },
+      "en": {
+        "word": "Contract",
+        "explanation": "Making a promise official through a document. Writing terms both parties must follow.",
+        "examples": {
+          "beginner": "I signed a contract.",
+          "intermediate": "Please read the contract.",
+          "advanced": "\"How long is the contract?\" \"One year.\"",
+          "master": "I'm negotiating the contract terms."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[계약]",
+      "ipa": "[kjejak]"
+    }
+  },
+  {
+    "id": "geolaecheo",
+    "korean": "거래처",
+    "romanization": "georaecheo",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "business"],
+    "translations": {
+      "ko": {
+        "word": "거래처",
+        "explanation": "사업상 거래하는 회사. 파트너 회사.",
+        "examples": {
+          "beginner": "거래처에 갔어요.",
+          "intermediate": "거래처와 미팅해요.",
+          "advanced": "\"거래처 담당자 연락처 알아?\" \"네, 보내 드릴게요.\"",
+          "master": "새 거래처를 발굴했어요."
+        }
+      },
+      "en": {
+        "word": "Client / Business partner",
+        "explanation": "A company you do business with. Partner company.",
+        "examples": {
+          "beginner": "I went to the client.",
+          "intermediate": "I'm meeting with a client.",
+          "advanced": "\"Do you have the client's contact?\" \"Yes, I'll send it.\"",
+          "master": "I found a new business partner."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[거래처]",
+      "ipa": "[kʌɾɛtɕʰʌ]"
+    }
+  },
+  {
+    "id": "gogaek-work",
+    "korean": "고객",
+    "romanization": "gogaek",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "customer"],
+    "translations": {
+      "ko": {
+        "word": "고객",
+        "explanation": "물건이나 서비스를 사는 사람. 손님.",
+        "examples": {
+          "beginner": "고객이 많아요.",
+          "intermediate": "고객 상담 중이에요.",
+          "advanced": "\"고객 불만이 있어.\" \"무슨 문제야?\"",
+          "master": "고객 만족도를 높이는 게 중요해요."
+        }
+      },
+      "en": {
+        "word": "Customer / Client",
+        "explanation": "A person who buys goods or services. A customer.",
+        "examples": {
+          "beginner": "There are many customers.",
+          "intermediate": "I'm consulting with a customer.",
+          "advanced": "\"There's a customer complaint.\" \"What's the problem?\"",
+          "master": "It's important to increase customer satisfaction."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[고객]",
+      "ipa": "[koɡɛk]"
+    }
+  },
+  {
+    "id": "timjang",
+    "korean": "팀장",
+    "romanization": "timjang",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "position"],
+    "translations": {
+      "ko": {
+        "word": "팀장",
+        "explanation": "팀을 이끄는 사람. 팀의 리더.",
+        "examples": {
+          "beginner": "팀장님이 부르셨어요.",
+          "intermediate": "팀장이 됐어요.",
+          "advanced": "\"팀장님 어디 있어?\" \"회의 중이에요.\"",
+          "master": "팀장으로서 책임감을 느껴요."
+        }
+      },
+      "en": {
+        "word": "Team leader",
+        "explanation": "The person who leads a team. The team's leader.",
+        "examples": {
+          "beginner": "The team leader called for me.",
+          "intermediate": "I became team leader.",
+          "advanced": "\"Where's the team leader?\" \"In a meeting.\"",
+          "master": "I feel responsibility as team leader."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[팀장]",
+      "ipa": "[tʰimdʑaŋ]"
+    }
+  },
+  {
+    "id": "bujang",
+    "korean": "부장",
+    "romanization": "bujang",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "position"],
+    "translations": {
+      "ko": {
+        "word": "부장",
+        "explanation": "부서를 관리하는 직급. 팀장보다 높은 직위.",
+        "examples": {
+          "beginner": "부장님 오셨어요.",
+          "intermediate": "부장에게 보고했어요.",
+          "advanced": "\"부장님 승인 받았어?\" \"네, 받았어요.\"",
+          "master": "부장 승진을 목표로 해요."
+        }
+      },
+      "en": {
+        "word": "Department manager",
+        "explanation": "A position that manages a department. Higher than team leader.",
+        "examples": {
+          "beginner": "The manager is here.",
+          "intermediate": "I reported to the manager.",
+          "advanced": "\"Did you get the manager's approval?\" \"Yes, I did.\"",
+          "master": "My goal is to be promoted to manager."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[부장]",
+      "ipa": "[pudʑaŋ]"
+    }
+  },
+  {
+    "id": "sajang",
+    "korean": "사장",
+    "romanization": "sajang",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "position"],
+    "translations": {
+      "ko": {
+        "word": "사장",
+        "explanation": "회사의 대표. 회사를 이끄는 최고 책임자.",
+        "examples": {
+          "beginner": "사장님이 말씀하셨어요.",
+          "intermediate": "사장님 만나러 가요.",
+          "advanced": "\"사장님 오늘 출장 가셨어.\" \"아, 그래요?\"",
+          "master": "언젠가 사장이 되고 싶어요."
+        }
+      },
+      "en": {
+        "word": "CEO / President",
+        "explanation": "The representative of a company. The head of the company.",
+        "examples": {
+          "beginner": "The CEO said it.",
+          "intermediate": "I'm going to meet the president.",
+          "advanced": "\"The CEO is on a business trip today.\" \"Oh, really?\"",
+          "master": "I want to become a CEO someday."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[사장]",
+      "ipa": "[sadʑaŋ]"
+    }
+  },
+  {
+    "id": "chuljiang",
+    "korean": "출장",
+    "romanization": "chuljang",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "travel"],
+    "translations": {
+      "ko": {
+        "word": "출장",
+        "explanation": "업무를 위해 다른 곳에 가는 것. 회사 일로 여행하는 것.",
+        "examples": {
+          "beginner": "출장 갔어요.",
+          "intermediate": "출장비를 받았어요.",
+          "advanced": "\"출장 어디로 가?\" \"부산으로 가.\"",
+          "master": "해외 출장이 많아요."
+        }
+      },
+      "en": {
+        "word": "Business trip",
+        "explanation": "Going somewhere for work. Traveling for company business.",
+        "examples": {
+          "beginner": "I went on a business trip.",
+          "intermediate": "I received travel expenses.",
+          "advanced": "\"Where's your business trip?\" \"To Busan.\"",
+          "master": "I have many overseas business trips."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[출장]",
+      "ipa": "[tɕʰuldʑaŋ]"
+    }
+  },
+  {
+    "id": "jaetaek",
+    "korean": "재택",
+    "romanization": "jaetaek",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "remote"],
+    "translations": {
+      "ko": {
+        "word": "재택",
+        "explanation": "집에서 일하는 것. 원격 근무.",
+        "examples": {
+          "beginner": "재택근무해요.",
+          "intermediate": "오늘 재택이에요.",
+          "advanced": "\"재택 가능해요?\" \"네, 주 2일 가능해요.\"",
+          "master": "코로나 이후로 재택이 많아졌어요."
+        }
+      },
+      "en": {
+        "word": "Working from home / Remote",
+        "explanation": "Working from home. Remote work.",
+        "examples": {
+          "beginner": "I work from home.",
+          "intermediate": "I'm working remotely today.",
+          "advanced": "\"Can I work from home?\" \"Yes, 2 days a week.\"",
+          "master": "Remote work increased after COVID."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[재택]",
+      "ipa": "[tɕɛtʰɛk]"
+    }
+  },
+  {
+    "id": "hoesik",
+    "korean": "회식",
+    "romanization": "hoesik",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "social"],
+    "translations": {
+      "ko": {
+        "word": "회식",
+        "explanation": "회사 사람들끼리 함께 하는 식사. 직장 회식.",
+        "examples": {
+          "beginner": "오늘 회식해요.",
+          "intermediate": "회식 장소가 어디예요?",
+          "advanced": "\"회식 참석해?\" \"응, 갈 거야.\"",
+          "master": "회식 문화가 바뀌고 있어요."
+        }
+      },
+      "en": {
+        "word": "Company dinner / Work dinner",
+        "explanation": "A meal together with coworkers. Office dinner gathering.",
+        "examples": {
+          "beginner": "We have a work dinner today.",
+          "intermediate": "Where's the dinner?",
+          "advanced": "\"Are you going to the work dinner?\" \"Yes, I'll go.\"",
+          "master": "Work dinner culture is changing."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[회식]",
+      "ipa": "[hweɕik]"
+    }
+  },
+  {
+    "id": "buseo",
+    "korean": "부서",
+    "romanization": "buseo",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "department"],
+    "translations": {
+      "ko": {
+        "word": "부서",
+        "explanation": "회사를 나눈 단위. 마케팅부, 영업부 등.",
+        "examples": {
+          "beginner": "어느 부서예요?",
+          "intermediate": "부서가 바뀌었어요.",
+          "advanced": "\"부서 이동하고 싶어?\" \"응, 다른 일 해 보고 싶어.\"",
+          "master": "각 부서별로 보고서를 제출하세요."
+        }
+      },
+      "en": {
+        "word": "Department",
+        "explanation": "A division of a company. Marketing, sales, etc.",
+        "examples": {
+          "beginner": "Which department are you in?",
+          "intermediate": "My department changed.",
+          "advanced": "\"Do you want to change departments?\" \"Yes, I want to try different work.\"",
+          "master": "Please submit reports by department."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[부서]",
+      "ipa": "[pusʌ]"
+    }
+  },
+  {
+    "id": "sinip",
+    "korean": "신입",
+    "romanization": "sinip",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "new"],
+    "translations": {
+      "ko": {
+        "word": "신입",
+        "explanation": "새로 들어온 사람. 새로운 직원.",
+        "examples": {
+          "beginner": "신입이에요.",
+          "intermediate": "신입 사원이 왔어요.",
+          "advanced": "\"신입인데 일 잘해.\" \"열정이 있네.\"",
+          "master": "신입 교육을 받았어요."
+        }
+      },
+      "en": {
+        "word": "New employee / Newcomer",
+        "explanation": "A person who just joined. A new staff member.",
+        "examples": {
+          "beginner": "I'm a new employee.",
+          "intermediate": "A new employee joined.",
+          "advanced": "\"The newcomer works well.\" \"They're enthusiastic.\"",
+          "master": "I received new employee training."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[신입]",
+      "ipa": "[ɕinip]"
+    }
+  },
+  {
+    "id": "gyeonglyeok",
+    "korean": "경력",
+    "romanization": "gyeongnyeok",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "experience"],
+    "translations": {
+      "ko": {
+        "word": "경력",
+        "explanation": "일한 경험. 직장 생활의 이력.",
+        "examples": {
+          "beginner": "경력이 있어요.",
+          "intermediate": "5년 경력이에요.",
+          "advanced": "\"경력직으로 지원했어.\" \"어떤 경력이야?\"",
+          "master": "경력을 쌓는 게 중요해요."
+        }
+      },
+      "en": {
+        "word": "Career / Experience",
+        "explanation": "Work experience. History of work life.",
+        "examples": {
+          "beginner": "I have experience.",
+          "intermediate": "I have 5 years of experience.",
+          "advanced": "\"I applied as an experienced hire.\" \"What's your experience?\"",
+          "master": "Building career experience is important."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[경력]",
+      "ipa": "[kjʌŋɾjʌk]"
+    }
+  },
+  {
+    "id": "kompyuteo",
+    "korean": "컴퓨터",
+    "romanization": "keompyuteo",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "technology"],
+    "translations": {
+      "ko": {
+        "word": "컴퓨터",
+        "explanation": "전자 계산기. 업무용 기기.",
+        "examples": {
+          "beginner": "컴퓨터 켰어요.",
+          "intermediate": "컴퓨터가 느려요.",
+          "advanced": "\"컴퓨터 고장났어?\" \"응, AS 요청했어.\"",
+          "master": "새 컴퓨터로 바꿨어요."
+        }
+      },
+      "en": {
+        "word": "Computer",
+        "explanation": "An electronic device. Work equipment.",
+        "examples": {
+          "beginner": "I turned on the computer.",
+          "intermediate": "The computer is slow.",
+          "advanced": "\"Is the computer broken?\" \"Yes, I requested service.\"",
+          "master": "I got a new computer."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[컴퓨터]",
+      "ipa": "[kʰʌmpʰjutʰʌ]"
+    }
+  },
+  {
+    "id": "inteones",
+    "korean": "인터넷",
+    "romanization": "inteonet",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "technology"],
+    "translations": {
+      "ko": {
+        "word": "인터넷",
+        "explanation": "전 세계를 연결하는 통신망. 업무에 필수적인 도구.",
+        "examples": {
+          "beginner": "인터넷 연결했어요.",
+          "intermediate": "인터넷이 안 돼요.",
+          "advanced": "\"인터넷 속도가 느려.\" \"와이파이 확인해 봐.\"",
+          "master": "인터넷 없이 일하기 어려워요."
+        }
+      },
+      "en": {
+        "word": "Internet",
+        "explanation": "A global communication network. Essential tool for work.",
+        "examples": {
+          "beginner": "I connected to the internet.",
+          "intermediate": "The internet isn't working.",
+          "advanced": "\"The internet is slow.\" \"Check the WiFi.\"",
+          "master": "It's hard to work without internet."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[인터넷]",
+      "ipa": "[intʰʌnet]"
+    }
+  },
+  {
+    "id": "peil",
+    "korean": "파일",
+    "romanization": "pail",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "document"],
+    "translations": {
+      "ko": {
+        "word": "파일",
+        "explanation": "컴퓨터에 저장된 문서. 디지털 문서.",
+        "examples": {
+          "beginner": "파일 보냈어요.",
+          "intermediate": "파일을 열어 주세요.",
+          "advanced": "\"파일 어디 있어?\" \"폴더에 있어.\"",
+          "master": "파일을 클라우드에 저장했어요."
+        }
+      },
+      "en": {
+        "word": "File",
+        "explanation": "A document stored on a computer. Digital document.",
+        "examples": {
+          "beginner": "I sent the file.",
+          "intermediate": "Please open the file.",
+          "advanced": "\"Where's the file?\" \"In the folder.\"",
+          "master": "I saved the file to the cloud."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[파일]",
+      "ipa": "[pʰail]"
+    }
+  },
+  {
+    "id": "pilringteo",
+    "korean": "프린터",
+    "romanization": "peurinteo",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "equipment"],
+    "translations": {
+      "ko": {
+        "word": "프린터",
+        "explanation": "문서를 인쇄하는 기기. 출력 장치.",
+        "examples": {
+          "beginner": "프린터 어디 있어요?",
+          "intermediate": "프린터가 안 돼요.",
+          "advanced": "\"프린터에 용지 없어.\" \"내가 넣을게.\"",
+          "master": "프린터 잉크 교체해야 해요."
+        }
+      },
+      "en": {
+        "word": "Printer",
+        "explanation": "A device that prints documents. Output device.",
+        "examples": {
+          "beginner": "Where is the printer?",
+          "intermediate": "The printer isn't working.",
+          "advanced": "\"The printer is out of paper.\" \"I'll add some.\"",
+          "master": "We need to replace the printer ink."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[프린터]",
+      "ipa": "[pʰɯɾintʰʌ]"
+    }
+  },
+  {
+    "id": "boksa",
+    "korean": "복사",
+    "romanization": "boksa",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "task"],
+    "translations": {
+      "ko": {
+        "word": "복사",
+        "explanation": "문서를 똑같이 만드는 것. 복사기로 사본을 만드는 것.",
+        "examples": {
+          "beginner": "복사 해 주세요.",
+          "intermediate": "복사기가 어디예요?",
+          "advanced": "\"이거 복사 좀 해 줄래?\" \"몇 부요?\"",
+          "master": "양면 복사로 해 주세요."
+        }
+      },
+      "en": {
+        "word": "Copy / Photocopy",
+        "explanation": "Making an identical document. Making copies with a copier.",
+        "examples": {
+          "beginner": "Please make a copy.",
+          "intermediate": "Where's the copier?",
+          "advanced": "\"Can you copy this?\" \"How many copies?\"",
+          "master": "Please make double-sided copies."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[복사]",
+      "ipa": "[poksa]"
+    }
+  },
+  {
+    "id": "jeongsan",
+    "korean": "정산",
+    "romanization": "jeongsan",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "accounting"],
+    "translations": {
+      "ko": {
+        "word": "정산",
+        "explanation": "금액을 계산해서 정리하는 것. 비용을 처리하는 것.",
+        "examples": {
+          "beginner": "정산했어요.",
+          "intermediate": "경비 정산 해 주세요.",
+          "advanced": "\"출장비 정산 언제까지야?\" \"이번 주까지야.\"",
+          "master": "월말 정산 마감이에요."
+        }
+      },
+      "en": {
+        "word": "Settlement / Expense report",
+        "explanation": "Calculating and organizing amounts. Processing expenses.",
+        "examples": {
+          "beginner": "I settled it.",
+          "intermediate": "Please process the expenses.",
+          "advanced": "\"When is the travel expense due?\" \"By this week.\"",
+          "master": "It's month-end settlement deadline."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[정산]",
+      "ipa": "[tɕʌŋsan]"
+    }
+  },
+  {
+    "id": "yesan",
+    "korean": "예산",
+    "romanization": "yesan",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "budget"],
+    "translations": {
+      "ko": {
+        "word": "예산",
+        "explanation": "미리 정한 돈. 사업이나 프로젝트에 쓸 돈.",
+        "examples": {
+          "beginner": "예산이 없어요.",
+          "intermediate": "예산 내에서 하세요.",
+          "advanced": "\"예산이 부족해.\" \"추가 요청해 볼까?\"",
+          "master": "내년 예산을 세우고 있어요."
+        }
+      },
+      "en": {
+        "word": "Budget",
+        "explanation": "Pre-determined money. Money for business or projects.",
+        "examples": {
+          "beginner": "There's no budget.",
+          "intermediate": "Stay within the budget.",
+          "advanced": "\"The budget is short.\" \"Should we request more?\"",
+          "master": "We're planning next year's budget."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[예산]",
+      "ipa": "[jesan]"
+    }
+  },
+  {
+    "id": "maechul",
+    "korean": "매출",
+    "romanization": "maechul",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "sales"],
+    "translations": {
+      "ko": {
+        "word": "매출",
+        "explanation": "물건을 팔아서 얻은 돈. 판매 수익.",
+        "examples": {
+          "beginner": "매출이 좋아요.",
+          "intermediate": "이번 달 매출이 늘었어요.",
+          "advanced": "\"매출 목표 달성했어?\" \"거의 다 됐어.\"",
+          "master": "매출 증가를 위해 노력 중이에요."
+        }
+      },
+      "en": {
+        "word": "Sales / Revenue",
+        "explanation": "Money earned from selling. Sales revenue.",
+        "examples": {
+          "beginner": "Sales are good.",
+          "intermediate": "This month's sales increased.",
+          "advanced": "\"Did you meet the sales target?\" \"Almost there.\"",
+          "master": "We're working to increase sales."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[매출]",
+      "ipa": "[mɛtɕʰul]"
+    }
+  },
+  {
+    "id": "yeongeobi",
+    "korean": "영업",
+    "romanization": "yeongieop",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "sales"],
+    "translations": {
+      "ko": {
+        "word": "영업",
+        "explanation": "물건이나 서비스를 파는 활동. 고객을 만나 거래하는 것.",
+        "examples": {
+          "beginner": "영업 중이에요.",
+          "intermediate": "영업팀에 있어요.",
+          "advanced": "\"영업 잘 돼?\" \"요즘 좀 힘들어.\"",
+          "master": "영업 실적이 좋아요."
+        }
+      },
+      "en": {
+        "word": "Sales / Business",
+        "explanation": "Activity of selling goods or services. Meeting customers and making deals.",
+        "examples": {
+          "beginner": "We're open for business.",
+          "intermediate": "I'm in the sales team.",
+          "advanced": "\"How's sales going?\" \"It's been tough lately.\"",
+          "master": "Sales performance is good."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[영업]",
+      "ipa": "[jʌŋʌp]"
+    }
+  },
+  {
+    "id": "maketeng",
+    "korean": "마케팅",
+    "romanization": "maketing",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "marketing"],
+    "translations": {
+      "ko": {
+        "word": "마케팅",
+        "explanation": "상품이나 서비스를 홍보하는 활동. 광고하고 판매 촉진하는 것.",
+        "examples": {
+          "beginner": "마케팅팀이에요.",
+          "intermediate": "마케팅 전략을 세웠어요.",
+          "advanced": "\"마케팅 캠페인 어때?\" \"효과 있을 것 같아.\"",
+          "master": "디지털 마케팅을 담당해요."
+        }
+      },
+      "en": {
+        "word": "Marketing",
+        "explanation": "Activity of promoting products or services. Advertising and sales promotion.",
+        "examples": {
+          "beginner": "I'm in the marketing team.",
+          "intermediate": "We developed a marketing strategy.",
+          "advanced": "\"How's the marketing campaign?\" \"I think it'll be effective.\"",
+          "master": "I'm in charge of digital marketing."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[마케팅]",
+      "ipa": "[makʰetʰiŋ]"
+    }
+  },
+  {
+    "id": "giboeok",
+    "korean": "기획",
+    "romanization": "gihoek",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "planning"],
+    "translations": {
+      "ko": {
+        "word": "기획",
+        "explanation": "새로운 일을 계획하고 준비하는 것. 아이디어를 구체화하는 과정.",
+        "examples": {
+          "beginner": "기획 중이에요.",
+          "intermediate": "기획서를 작성했어요.",
+          "advanced": "\"이번 기획 어때?\" \"좋은 것 같아.\"",
+          "master": "신제품 기획을 담당하고 있어요."
+        }
+      },
+      "en": {
+        "word": "Planning",
+        "explanation": "Planning and preparing new work. Process of making ideas concrete.",
+        "examples": {
+          "beginner": "I'm planning.",
+          "intermediate": "I wrote a proposal.",
+          "advanced": "\"How's this plan?\" \"Looks good.\"",
+          "master": "I'm in charge of new product planning."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[기획]",
+      "ipa": "[kiɦwek]"
+    }
+  },
+  {
+    "id": "gaebal",
+    "korean": "개발",
+    "romanization": "gaebal",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "development"],
+    "translations": {
+      "ko": {
+        "word": "개발",
+        "explanation": "새로운 것을 만드는 것. 프로그램이나 제품을 만드는 활동.",
+        "examples": {
+          "beginner": "개발팀이에요.",
+          "intermediate": "앱 개발 중이에요.",
+          "advanced": "\"개발 완료됐어?\" \"아직 테스트 중이야.\"",
+          "master": "소프트웨어 개발자예요."
+        }
+      },
+      "en": {
+        "word": "Development",
+        "explanation": "Creating something new. Activity of making programs or products.",
+        "examples": {
+          "beginner": "I'm in the development team.",
+          "intermediate": "I'm developing an app.",
+          "advanced": "\"Is development finished?\" \"Still testing.\"",
+          "master": "I'm a software developer."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[개발]",
+      "ipa": "[kɛbal]"
+    }
+  },
+  {
+    "id": "insabu",
+    "korean": "인사부",
+    "romanization": "insabu",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "department"],
+    "translations": {
+      "ko": {
+        "word": "인사부",
+        "explanation": "직원 채용과 관리를 담당하는 부서. HR 부서.",
+        "examples": {
+          "beginner": "인사부에 연락하세요.",
+          "intermediate": "인사부에서 연락 왔어요.",
+          "advanced": "\"인사부 담당자 알아?\" \"네, 소개해 드릴게요.\"",
+          "master": "인사부에서 교육 일정을 공지했어요."
+        }
+      },
+      "en": {
+        "word": "HR department",
+        "explanation": "Department responsible for hiring and managing employees. Human Resources.",
+        "examples": {
+          "beginner": "Please contact HR.",
+          "intermediate": "I got a call from HR.",
+          "advanced": "\"Do you know the HR person?\" \"Yes, I'll introduce you.\"",
+          "master": "HR announced the training schedule."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[인사부]",
+      "ipa": "[insabu]"
+    }
+  },
+  {
+    "id": "hoeugisil",
+    "korean": "회의실",
+    "romanization": "hoeuisil",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "place"],
+    "translations": {
+      "ko": {
+        "word": "회의실",
+        "explanation": "회의를 하는 방. 업무 논의를 하는 공간.",
+        "examples": {
+          "beginner": "회의실 어디예요?",
+          "intermediate": "회의실 예약했어요.",
+          "advanced": "\"회의실 비어 있어?\" \"지금 사용 중이에요.\"",
+          "master": "대회의실에서 발표해요."
+        }
+      },
+      "en": {
+        "word": "Meeting room / Conference room",
+        "explanation": "A room for meetings. Space for discussing work.",
+        "examples": {
+          "beginner": "Where is the meeting room?",
+          "intermediate": "I booked the meeting room.",
+          "advanced": "\"Is the meeting room free?\" \"It's in use now.\"",
+          "master": "The presentation is in the large conference room."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[회의실]",
+      "ipa": "[hweɯiɕil]"
+    }
+  },
+  {
+    "id": "jikwon",
+    "korean": "직원",
+    "romanization": "jigwon",
+    "partOfSpeech": "noun",
+    "categoryId": "work",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "people"],
+    "translations": {
+      "ko": {
+        "word": "직원",
+        "explanation": "회사에서 일하는 사람. 직장인.",
+        "examples": {
+          "beginner": "직원이에요.",
+          "intermediate": "직원들이 친절해요.",
+          "advanced": "\"직원이 몇 명이야?\" \"50명 정도야.\"",
+          "master": "직원 복지가 좋은 회사예요."
+        }
+      },
+      "en": {
+        "word": "Employee / Staff",
+        "explanation": "A person who works at a company. Office worker.",
+        "examples": {
+          "beginner": "I'm an employee.",
+          "intermediate": "The staff are kind.",
+          "advanced": "\"How many employees?\" \"About 50.\"",
+          "master": "This company has good employee benefits."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[직원]",
+      "ipa": "[tɕiɡwʌn]"
+    }
+  }
+]

@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "jip",
+    "korean": "집",
+    "romanization": "jip",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "basic"],
+    "translations": {
+      "ko": {
+        "word": "집",
+        "explanation": "사람이 사는 건물, 또는 '가정'의 개념. 가장 기본적이고 자주 쓰이는 단어 중 하나이다.",
+        "examples": {
+          "beginner": "집에 가고 싶어요.",
+          "intermediate": "우리 집은 서울에 있어요.",
+          "advanced": "오랜 출장을 마치고 집에 돌아왔을 때, 익숙한 냄새와 분위기가 나를 반겨주어 마음이 편안해졌다.",
+          "master": "어린 시절 살던 집을 다시 방문하니 추억이 새록새록 떠올랐다."
+        }
+      },
+      "en": {
+        "word": "House / Home",
+        "explanation": "A building where people live, or the concept of 'home'. One of the most basic and frequently used words.",
+        "examples": {
+          "beginner": "집에 가고 싶어요. - I want to go home.",
+          "intermediate": "우리 집은 서울에 있어요. - My house is in Seoul.",
+          "advanced": "When I returned home after a long business trip, the familiar smell and atmosphere welcomed me and put my mind at ease.",
+          "master": "Visiting the house where I lived as a child brought back many fond memories."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[집]",
+      "ipa": "[tɕip]"
+    }
+  },
+  {
+    "id": "hakgyo",
+    "korean": "학교",
+    "romanization": "hakgyo",
+    "pronunciation": {
+      "korean": "[학교]",
+      "ipa": "[hakːjo]"
+    },
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "education"],
+    "translations": {
+      "ko": {
+        "word": "학교",
+        "explanation": "학생들을 교육하는 기관. 초등학교, 중학교, 고등학교, 대학교를 포함한다.",
+        "examples": {
+          "beginner": "학교에 다녀요.",
+          "intermediate": "학교 끝나고 뭐 해?",
+          "advanced": "매일 아침 7시에 일어나서 학교에 가는 게 힘들지만, 친구들을 만날 생각에 기분이 좋아진다.",
+          "master": "우리 학교는 100년의 역사를 가진 전통 있는 학교로, 많은 유명 인사들이 이곳을 졸업했다."
+        }
+      },
+      "en": {
+        "word": "School",
+        "explanation": "An institution for educating students. Includes elementary, middle, high school, and university.",
+        "examples": {
+          "beginner": "학교에 다녀요. - I go to school.",
+          "intermediate": "학교 끝나고 뭐 해? - What are you doing after school?",
+          "advanced": "Waking up at 7 AM every morning to go to school is tough, but thinking about meeting my friends cheers me up.",
+          "master": "Our school has a 100-year history and tradition—many famous people graduated from here."
+        }
+      }
+    }
+  },
+  {
+    "id": "il",
+    "korean": "일",
+    "romanization": "il",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["work", "basic"],
+    "translations": {
+      "ko": {
+        "word": "일",
+        "explanation": "직업이나 업무, 또는 '일/사건'을 의미한다. 숫자 '일(一)'로도 쓰인다 (일, 이, 삼...).",
+        "examples": {
+          "beginner": "일이 많아요.",
+          "intermediate": "무슨 일이에요?",
+          "advanced": "요즘 회사에서 새로운 프로젝트 때문에 일이 너무 많아서 주말에도 출근해야 할 것 같다.",
+          "master": "갑자기 무슨 일이 생긴 거예요? 표정이 안 좋아 보여서 걱정이 돼요."
+        }
+      },
+      "en": {
+        "word": "Work / Job / Thing",
+        "explanation": "Can mean work/job, a task, or 'a thing/matter'. Also means the number 'one' (일, 이, 삼...).",
+        "examples": {
+          "beginner": "일이 많아요. - I have a lot of work.",
+          "intermediate": "무슨 일이에요? - What's the matter?",
+          "advanced": "These days, I have so much work because of a new project at the company that I'll probably have to come in on weekends too.",
+          "master": "What happened all of a sudden? You don't look well and I'm worried about you."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[일]",
+      "ipa": "[il]"
+    }
+  },
+  {
+    "id": "don",
+    "korean": "돈",
+    "romanization": "don",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["money", "basic"],
+    "translations": {
+      "ko": {
+        "word": "돈",
+        "explanation": "화폐, 재산. 일상생활에서 가장 자주 쓰이는 기본 단어 중 하나이다.",
+        "examples": {
+          "beginner": "돈이 없어요.",
+          "intermediate": "돈 좀 빌려줄 수 있어?",
+          "advanced": "요즘 물가가 올라서 같은 돈으로 살 수 있는 게 점점 줄어들고 있다.",
+          "master": "돈을 모으려면 충동구매를 줄이고 계획적으로 소비해야 해요."
+        }
+      },
+      "en": {
+        "word": "Money",
+        "explanation": "Currency, wealth. One of the most commonly used basic words in daily life.",
+        "examples": {
+          "beginner": "돈이 없어요. - I don't have money.",
+          "intermediate": "돈 좀 빌려줄 수 있어? - Can you lend me some money?",
+          "advanced": "With prices rising these days, what you can buy with the same amount of money keeps decreasing.",
+          "master": "To save money, you need to reduce impulse buying and spend according to a plan."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[돈]",
+      "ipa": "[ton]"
+    }
+  },
+  {
+    "id": "ne",
+    "korean": "네",
+    "romanization": "ne",
+    "partOfSpeech": "interjection",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["response", "basic", "polite"],
+    "translations": {
+      "ko": {
+        "word": "네",
+        "explanation": "긍정의 대답, 또는 상대방의 말을 듣고 있다는 반응. 전화 받을 때도 사용한다.",
+        "examples": {
+          "beginner": "네, 알겠습니다.",
+          "intermediate": "네? 다시 말씀해 주세요.",
+          "advanced": "선생님이 '숙제 했니?'라고 물어보셔서 '네, 다 했습니다'라고 대답했다.",
+          "master": "전화를 받을 때 '네, 여보세요?'라고 말하는 것이 일반적이다."
+        }
+      },
+      "en": {
+        "word": "Yes / Okay",
+        "explanation": "An affirmative response, or a reaction showing you're listening. Also used when answering the phone.",
+        "examples": {
+          "beginner": "네, 알겠습니다. - Yes, I understand.",
+          "intermediate": "네? 다시 말씀해 주세요. - Yes? Please say that again.",
+          "advanced": "When the teacher asked, 'Did you do your homework?' I answered, 'Yes, I finished it all.'",
+          "master": "When answering the phone, it's common to say '네, 여보세요?' (Yes, hello?)."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[네]",
+      "ipa": "[ne]"
+    }
+  },
+  {
+    "id": "mwo",
+    "korean": "뭐",
+    "romanization": "mwo",
+    "partOfSpeech": "pronoun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["question", "basic", "casual"],
+    "translations": {
+      "ko": {
+        "word": "뭐",
+        "explanation": "'무엇'의 줄임말. 일상 대화에서 매우 자주 쓰인다. '뭐해?'는 가장 흔한 인사 중 하나이다.",
+        "examples": {
+          "beginner": "뭐 해?",
+          "intermediate": "점심에 뭐 먹을까?",
+          "advanced": "친구한테 '뭐 해?'라고 물어봤더니 그냥 집에서 쉬고 있대.",
+          "master": "뭐가 문제인지 모르겠어. 좀 더 자세히 설명해 줄 수 있어?"
+        }
+      },
+      "en": {
+        "word": "What",
+        "explanation": "Short form of '무엇'. Very commonly used in daily conversation. '뭐 해?' is one of the most common casual greetings.",
+        "examples": {
+          "beginner": "뭐 해? - What are you doing?",
+          "intermediate": "점심에 뭐 먹을까? - What should we eat for lunch?",
+          "advanced": "When I asked my friend '뭐 해?', they said they were just resting at home.",
+          "master": "I don't know what the problem is. Can you explain in more detail?"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[뭐]",
+      "ipa": "[mwo]"
+    }
+  },
+  {
+    "id": "ige",
+    "korean": "이거",
+    "romanization": "igeo",
+    "partOfSpeech": "pronoun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["demonstrative", "basic", "casual"],
+    "translations": {
+      "ko": {
+        "word": "이거",
+        "explanation": "'이것'의 줄임말. 가까이 있는 것을 가리킬 때 사용한다. 일상 대화에서 매우 자주 쓰인다.",
+        "examples": {
+          "beginner": "이거 뭐예요?",
+          "intermediate": "이거 얼마예요?",
+          "advanced": "가게에서 예쁜 옷을 발견하고 '이거 입어봐도 돼요?'라고 물어봤다.",
+          "master": "이거 진짜 맛있다! 어디서 샀어?"
+        }
+      },
+      "en": {
+        "word": "This (thing)",
+        "explanation": "Short form of '이것'. Used to point to something nearby. Very commonly used in daily conversation.",
+        "examples": {
+          "beginner": "이거 뭐예요? - What is this?",
+          "intermediate": "이거 얼마예요? - How much is this?",
+          "advanced": "I found a pretty outfit at the store and asked, 'Can I try this on?'",
+          "master": "This is really delicious! Where did you buy it?"
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[이게]",
+      "ipa": "[iɡe]"
+    }
+  },
+  {
+    "id": "wae",
+    "korean": "왜",
+    "romanization": "wae",
+    "partOfSpeech": "adverb",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["question", "basic"],
+    "translations": {
+      "ko": {
+        "word": "왜",
+        "explanation": "이유를 물을 때 쓰는 의문사. 감정을 표현하거나 불만을 나타낼 때도 사용된다.",
+        "examples": {
+          "beginner": "왜요?",
+          "intermediate": "왜 그랬어?",
+          "advanced": "친구가 갑자기 약속을 취소해서 '왜? 무슨 일 있어?'라고 물어봤다.",
+          "master": "왜 자꾸 늦는 거야? 이번이 세 번째야."
+        }
+      },
+      "en": {
+        "word": "Why",
+        "explanation": "An interrogative used to ask for reasons. Also used to express emotions or show dissatisfaction.",
+        "examples": {
+          "beginner": "왜요? - Why?",
+          "intermediate": "왜 그랬어? - Why did you do that?",
+          "advanced": "When my friend suddenly canceled our plans, I asked, 'Why? Is something wrong?'",
+          "master": "Why do you keep being late? This is the third time."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[왜]",
+      "ipa": "[wɛ]"
+    }
+  },
+  {
+    "id": "sigan",
+    "korean": "시간",
+    "romanization": "sigan",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["time", "basic"],
+    "translations": {
+      "ko": {
+        "word": "시간",
+        "explanation": "때, 또는 시간의 단위. 일상에서 매우 자주 사용되는 기본 어휘.",
+        "examples": {
+          "beginner": "시간이 없어요.",
+          "intermediate": "몇 시간 걸려요?",
+          "advanced": "요즘 시간 가는 줄 모르겠어요. 벌써 12월이네요.",
+          "master": "시간은 돈보다 소중하다는 말이 있는데, 정말 그런 것 같아요."
+        }
+      },
+      "en": {
+        "word": "Time / Hour",
+        "explanation": "Time, or a unit of time. Basic vocabulary very frequently used in daily life.",
+        "examples": {
+          "beginner": "I don't have time.",
+          "intermediate": "How many hours does it take?",
+          "advanced": "Time flies these days. It's already December.",
+          "master": "They say time is more precious than money, and I think it's true."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[시간]",
+      "ipa": "[ɕiɡan]"
+    }
+  },
+  {
+    "id": "jeonhwa-call",
+    "korean": "전화",
+    "romanization": "jeonhwa",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["communication", "basic"],
+    "translations": {
+      "ko": {
+        "word": "전화",
+        "explanation": "음성으로 통화하는 기기 또는 행위. 핸드폰을 '휴대전화'라고도 한다.",
+        "examples": {
+          "beginner": "전화 받으세요.",
+          "intermediate": "전화번호가 뭐예요?",
+          "advanced": "회의 중이라 전화를 못 받았는데, 나중에 다시 걸어주세요.",
+          "master": "요즘은 전화보다 카톡으로 연락하는 경우가 더 많아요."
+        }
+      },
+      "en": {
+        "word": "Phone / Phone call",
+        "explanation": "A device for voice communication or the act of calling. Mobile phones are also called '휴대전화'.",
+        "examples": {
+          "beginner": "Please answer the phone.",
+          "intermediate": "What's your phone number?",
+          "advanced": "I couldn't answer the phone because I was in a meeting. Please call back later.",
+          "master": "These days, people contact each other more through KakaoTalk than phone calls."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[전화]",
+      "ipa": "[tɕʌnɦwa]"
+    }
+  },
+  {
+    "id": "bangbang",
+    "korean": "방",
+    "romanization": "bang",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "home"],
+    "translations": {
+      "ko": {
+        "word": "방",
+        "explanation": "집 안의 공간. 침실, 거실 등을 포함한다.",
+        "examples": {
+          "beginner": "제 방이에요.",
+          "intermediate": "방 청소 좀 해.",
+          "advanced": "원룸에 살아서 방이 하나밖에 없어요.",
+          "master": "방을 정리하면 마음도 정리되는 것 같아요."
+        }
+      },
+      "en": {
+        "word": "Room",
+        "explanation": "A space inside a house. Includes bedroom, living room, etc.",
+        "examples": {
+          "beginner": "This is my room.",
+          "intermediate": "Clean your room.",
+          "advanced": "I live in a studio, so I only have one room.",
+          "master": "When I organize my room, I feel like my mind gets organized too."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[방방]",
+      "ipa": "[paŋbaŋ]"
+    }
+  },
+  {
+    "id": "changjang",
+    "korean": "창문",
+    "romanization": "changmun",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["home", "object"],
+    "translations": {
+      "ko": {
+        "word": "창문",
+        "explanation": "빛과 공기가 들어오도록 만든 구멍. 유리로 되어 있다.",
+        "examples": {
+          "beginner": "창문 열어주세요.",
+          "intermediate": "창문으로 바람이 들어와요.",
+          "advanced": "환기를 위해 아침마다 창문을 열어요.",
+          "master": "비가 오는 날 창문에 빗방울이 맺히는 걸 보면 마음이 편해져요."
+        }
+      },
+      "en": {
+        "word": "Window",
+        "explanation": "An opening made for light and air. Usually made of glass.",
+        "examples": {
+          "beginner": "Please open the window.",
+          "intermediate": "Wind comes in through the window.",
+          "advanced": "I open the window every morning for ventilation.",
+          "master": "On rainy days, watching raindrops on the window makes me feel peaceful."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[창장]",
+      "ipa": "[tɕʰaŋdʑaŋ]"
+    }
+  },
+  {
+    "id": "mun",
+    "korean": "문",
+    "romanization": "mun",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["home", "object"],
+    "translations": {
+      "ko": {
+        "word": "문",
+        "explanation": "드나드는 통로를 막거나 열 수 있게 만든 것.",
+        "examples": {
+          "beginner": "문 닫아주세요.",
+          "intermediate": "문이 잠겨 있어요.",
+          "advanced": "나가면서 문 꼭 잠그고 가세요.",
+          "master": "기회의 문은 언제 열릴지 모르니까 항상 준비해야 해요."
+        }
+      },
+      "en": {
+        "word": "Door",
+        "explanation": "Something that can open or close a passageway.",
+        "examples": {
+          "beginner": "Please close the door.",
+          "intermediate": "The door is locked.",
+          "advanced": "Make sure to lock the door when you leave.",
+          "master": "You never know when opportunity will knock, so always be prepared."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[문]",
+      "ipa": "[mun]"
+    }
+  },
+  {
+    "id": "chim",
+    "korean": "침대",
+    "romanization": "chimdae",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["home", "furniture"],
+    "translations": {
+      "ko": {
+        "word": "침대",
+        "explanation": "잠을 자는 가구. 서양식 침대와 한국 전통의 온돌 문화가 있다.",
+        "examples": {
+          "beginner": "침대가 편해요.",
+          "intermediate": "침대에서 일어나기 싫어요.",
+          "advanced": "좋은 침대를 사면 수면의 질이 달라진다고 해요.",
+          "master": "한국에서는 온돌 문화 때문에 바닥에서 자는 사람도 많아요."
+        }
+      },
+      "en": {
+        "word": "Bed",
+        "explanation": "Furniture for sleeping. Both Western-style beds and Korean ondol floor culture exist.",
+        "examples": {
+          "beginner": "The bed is comfortable.",
+          "intermediate": "I don't want to get out of bed.",
+          "advanced": "They say buying a good bed improves sleep quality.",
+          "master": "In Korea, many people sleep on the floor because of ondol culture."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[침]",
+      "ipa": "[tɕʰim]"
+    }
+  },
+  {
+    "id": "hwajangshil",
+    "korean": "화장실",
+    "romanization": "hwajangshil",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "basic"],
+    "translations": {
+      "ko": {
+        "word": "화장실",
+        "explanation": "용변을 보는 장소. '화장'은 원래 '변장'의 완곡한 표현이었다.",
+        "examples": {
+          "beginner": "화장실 어디예요?",
+          "intermediate": "화장실 좀 갔다 올게요.",
+          "advanced": "공중 화장실을 찾기 힘들 때는 지하철역이나 편의점을 이용해요.",
+          "master": "한국의 화장실 문화는 비데, 휴지 무료 제공 등 외국인에게 놀라운 점이 많다."
+        }
+      },
+      "en": {
+        "word": "Bathroom / Restroom",
+        "explanation": "A place to relieve oneself. The term '화장' was originally a euphemism.",
+        "examples": {
+          "beginner": "Where is the bathroom?",
+          "intermediate": "I'll just go to the restroom.",
+          "advanced": "When I can't find a public restroom, I use subway stations or convenience stores.",
+          "master": "Korean bathroom culture surprises foreigners - bidets and free toilet paper are common."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[화장실]",
+      "ipa": "[hwadʑaŋɕil]"
+    }
+  },
+  {
+    "id": "bueak",
+    "korean": "부엌",
+    "romanization": "bueok",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "home"],
+    "translations": {
+      "ko": {
+        "word": "부엌",
+        "explanation": "음식을 만드는 공간. '주방'이라고도 한다.",
+        "examples": {
+          "beginner": "부엌에 있어요.",
+          "intermediate": "부엌에서 요리해요.",
+          "advanced": "요즘 오픈형 부엌이 인기가 많아서 거실과 연결된 경우가 많아요.",
+          "master": "부엌은 가정의 중심이라고 해서 깨끗하게 유지하는 게 중요해요."
+        }
+      },
+      "en": {
+        "word": "Kitchen",
+        "explanation": "A space for preparing food. Also called '주방'.",
+        "examples": {
+          "beginner": "I'm in the kitchen.",
+          "intermediate": "I cook in the kitchen.",
+          "advanced": "Open kitchens are popular these days, often connected to the living room.",
+          "master": "The kitchen is said to be the heart of the home, so keeping it clean is important."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[부엌]",
+      "ipa": "[puʌk]"
+    }
+  },
+  {
+    "id": "georashi",
+    "korean": "거실",
+    "romanization": "geosil",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "home"],
+    "translations": {
+      "ko": {
+        "word": "거실",
+        "explanation": "가족이 함께 시간을 보내는 집의 중심 공간.",
+        "examples": {
+          "beginner": "거실에서 TV 봐요.",
+          "intermediate": "거실 소파가 편해요.",
+          "advanced": "주말에는 가족들이 거실에 모여 함께 시간을 보내요.",
+          "master": "한국 아파트의 거실은 보통 남향이어서 햇빛이 잘 들어와요."
+        }
+      },
+      "en": {
+        "word": "Living room",
+        "explanation": "The central space in a home where family spends time together.",
+        "examples": {
+          "beginner": "I watch TV in the living room.",
+          "intermediate": "The living room sofa is comfortable.",
+          "advanced": "On weekends, family gathers in the living room to spend time together.",
+          "master": "Korean apartment living rooms usually face south, so they get plenty of sunlight."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[거실]",
+      "ipa": "[kʌɕil]"
+    }
+  },
+  {
+    "id": "chiemjeong",
+    "korean": "아파트",
+    "romanization": "apateu",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "housing"],
+    "translations": {
+      "ko": {
+        "word": "아파트",
+        "explanation": "공동 주택의 한 형태. 한국에서 가장 흔한 주거 형태.",
+        "examples": {
+          "beginner": "아파트에 살아요.",
+          "intermediate": "몇 층 아파트에 살아요?",
+          "advanced": "한국에서는 아파트가 가장 인기 있는 주거 형태예요.",
+          "master": "서울 아파트 가격이 너무 올라서 젊은 세대가 내 집 마련하기 힘들어요."
+        }
+      },
+      "en": {
+        "word": "Apartment",
+        "explanation": "A form of housing. The most common housing type in Korea.",
+        "examples": {
+          "beginner": "I live in an apartment.",
+          "intermediate": "What floor apartment do you live on?",
+          "advanced": "In Korea, apartments are the most popular housing type.",
+          "master": "Seoul apartment prices have risen so much that it's hard for young people to own homes."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[침정]",
+      "ipa": "[tɕʰimdʑʌŋ]"
+    }
+  },
+  {
+    "id": "yeolsoi",
+    "korean": "열쇠",
+    "romanization": "yeolsoe",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["object", "home"],
+    "translations": {
+      "ko": {
+        "word": "열쇠",
+        "explanation": "잠금장치를 열거나 잠그는 도구.",
+        "examples": {
+          "beginner": "열쇠 있어요?",
+          "intermediate": "열쇠를 잃어버렸어요.",
+          "advanced": "요즘은 열쇠 대신 디지털 도어록을 많이 사용해요.",
+          "master": "열쇠를 잃어버리면 집에 못 들어가니까 여분의 열쇠를 만들어 두세요."
+        }
+      },
+      "en": {
+        "word": "Key",
+        "explanation": "A tool to lock or unlock.",
+        "examples": {
+          "beginner": "Do you have the key?",
+          "intermediate": "I lost my key.",
+          "advanced": "These days, digital door locks are used more often than keys.",
+          "master": "If you lose your key, you can't get in, so keep a spare."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[열쇠]",
+      "ipa": "[jʌlswe]"
+    }
+  },
+  {
+    "id": "gyedan",
+    "korean": "계단",
+    "romanization": "gyedan",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "movement"],
+    "translations": {
+      "ko": {
+        "word": "계단",
+        "explanation": "높낮이가 다른 곳을 오르내리기 위한 시설.",
+        "examples": {
+          "beginner": "계단으로 갈게요.",
+          "intermediate": "계단이 너무 많아요.",
+          "advanced": "건강을 위해 엘리베이터 대신 계단을 이용해요.",
+          "master": "비상시에는 엘리베이터가 아닌 계단으로 대피해야 해요."
+        }
+      },
+      "en": {
+        "word": "Stairs",
+        "explanation": "A structure for moving between different levels.",
+        "examples": {
+          "beginner": "I'll take the stairs.",
+          "intermediate": "There are too many stairs.",
+          "advanced": "For health, I use stairs instead of the elevator.",
+          "master": "In emergencies, you should evacuate using stairs, not the elevator."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[계단]",
+      "ipa": "[kjedan]"
+    }
+  },
+  {
+    "id": "ellbeit",
+    "korean": "엘리베이터",
+    "romanization": "ellibeiteo",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "convenience"],
+    "translations": {
+      "ko": {
+        "word": "엘리베이터",
+        "explanation": "층간 이동을 위한 기계식 운반 장치. '승강기'라고도 한다.",
+        "examples": {
+          "beginner": "엘리베이터 어디예요?",
+          "intermediate": "엘리베이터가 고장 났어요.",
+          "advanced": "출퇴근 시간에는 엘리베이터가 너무 붐벼서 기다려야 해요.",
+          "master": "한국 아파트에는 보통 엘리베이터가 있어서 노인분들도 편하게 이동할 수 있어요."
+        }
+      },
+      "en": {
+        "word": "Elevator",
+        "explanation": "A mechanical device for moving between floors. Also called '승강기'.",
+        "examples": {
+          "beginner": "Where is the elevator?",
+          "intermediate": "The elevator is broken.",
+          "advanced": "During rush hour, the elevator is so crowded you have to wait.",
+          "master": "Korean apartments usually have elevators, so elderly people can move around easily."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[엘리베이터]",
+      "ipa": "[ellibeitʰʌ]"
+    }
+  },
+  {
+    "id": "pyunijeom",
+    "korean": "편의점",
+    "romanization": "pyeonuijeom",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "shopping"],
+    "translations": {
+      "ko": {
+        "word": "편의점",
+        "explanation": "24시간 운영되는 작은 상점. 음식, 생활용품 등을 판다.",
+        "examples": {
+          "beginner": "편의점 가요.",
+          "intermediate": "편의점에서 도시락 샀어요.",
+          "advanced": "한국 편의점은 종류가 다양하고 24시간 해서 정말 편해요.",
+          "master": "요즘 편의점에서 커피, 치킨까지 다 팔아서 정말 편리해요."
+        }
+      },
+      "en": {
+        "word": "Convenience store",
+        "explanation": "A small store open 24 hours. Sells food, daily necessities, etc.",
+        "examples": {
+          "beginner": "I'm going to the convenience store.",
+          "intermediate": "I bought a lunch box at the convenience store.",
+          "advanced": "Korean convenience stores are diverse and open 24 hours, so they're really convenient.",
+          "master": "These days, convenience stores sell even coffee and chicken, making them very handy."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[편의점]",
+      "ipa": "[pʰjʌnɯidʑʌm]"
+    }
+  },
+  {
+    "id": "maet",
+    "korean": "마트",
+    "romanization": "mateu",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "shopping"],
+    "translations": {
+      "ko": {
+        "word": "마트",
+        "explanation": "다양한 상품을 파는 대형 매장. '슈퍼마켓'의 줄임말.",
+        "examples": {
+          "beginner": "마트에 가요.",
+          "intermediate": "마트에서 장 봤어요.",
+          "advanced": "주말에 마트가 너무 붐벼서 평일에 장을 보는 게 좋아요.",
+          "master": "대형 마트는 한 달에 두 번 의무 휴업을 해야 해서 가기 전에 확인해야 해요."
+        }
+      },
+      "en": {
+        "word": "Mart / Supermarket",
+        "explanation": "A large store selling various products. Short for 'supermarket'.",
+        "examples": {
+          "beginner": "I'm going to the mart.",
+          "intermediate": "I did grocery shopping at the mart.",
+          "advanced": "The mart is so crowded on weekends that it's better to shop on weekdays.",
+          "master": "Large marts are required to close twice a month, so check before going."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[마트]",
+      "ipa": "[matʰɯ]"
+    }
+  },
+  {
+    "id": "byungwon",
+    "korean": "병원",
+    "romanization": "byeongwon",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "health"],
+    "translations": {
+      "ko": {
+        "word": "병원",
+        "explanation": "아픈 사람을 치료하는 곳.",
+        "examples": {
+          "beginner": "병원에 가야 해요.",
+          "intermediate": "어느 병원에 다니세요?",
+          "advanced": "감기 걸려서 동네 병원에 갔다 왔어요.",
+          "master": "한국에서는 건강보험 덕분에 병원비가 상대적으로 저렴해요."
+        }
+      },
+      "en": {
+        "word": "Hospital / Clinic",
+        "explanation": "A place where sick people are treated.",
+        "examples": {
+          "beginner": "I need to go to the hospital.",
+          "intermediate": "Which hospital do you go to?",
+          "advanced": "I caught a cold and went to the neighborhood clinic.",
+          "master": "In Korea, hospital costs are relatively cheap thanks to health insurance."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[병원]",
+      "ipa": "[pjʌŋwʌn]"
+    }
+  },
+  {
+    "id": "yakguk",
+    "korean": "약국",
+    "romanization": "yakguk",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "health"],
+    "translations": {
+      "ko": {
+        "word": "약국",
+        "explanation": "약을 파는 곳. 처방전 없이 살 수 있는 약도 있다.",
+        "examples": {
+          "beginner": "약국 어디예요?",
+          "intermediate": "약국에서 두통약 샀어요.",
+          "advanced": "한국에서는 감기약 정도는 약국에서 처방전 없이 살 수 있어요.",
+          "master": "병원 근처에는 보통 약국이 있어서 처방전 받고 바로 약을 살 수 있어요."
+        }
+      },
+      "en": {
+        "word": "Pharmacy",
+        "explanation": "A place that sells medicine. Some medicines can be bought without prescription.",
+        "examples": {
+          "beginner": "Where is the pharmacy?",
+          "intermediate": "I bought headache medicine at the pharmacy.",
+          "advanced": "In Korea, you can buy cold medicine at the pharmacy without a prescription.",
+          "master": "There's usually a pharmacy near hospitals, so you can get medicine right after getting a prescription."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[약국]",
+      "ipa": "[jakːuk]"
+    }
+  },
+  {
+    "id": "eunhaeng",
+    "korean": "은행",
+    "romanization": "eunhaeng",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "money"],
+    "translations": {
+      "ko": {
+        "word": "은행",
+        "explanation": "돈을 맡기거나 빌리는 금융 기관.",
+        "examples": {
+          "beginner": "은행에 가요.",
+          "intermediate": "은행 계좌 만들었어요.",
+          "advanced": "요즘은 은행에 가지 않고 모바일로 거래를 많이 해요.",
+          "master": "한국의 은행들은 디지털 서비스가 발달해서 대부분 앱으로 처리할 수 있어요."
+        }
+      },
+      "en": {
+        "word": "Bank",
+        "explanation": "A financial institution for depositing or borrowing money.",
+        "examples": {
+          "beginner": "I'm going to the bank.",
+          "intermediate": "I opened a bank account.",
+          "advanced": "These days, I do most banking on mobile instead of going to the bank.",
+          "master": "Korean banks have advanced digital services, so most things can be done through apps."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[은행]",
+      "ipa": "[ɯnhɛŋ]"
+    }
+  },
+  {
+    "id": "uchekuk",
+    "korean": "우체국",
+    "romanization": "ucheguk",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "service"],
+    "translations": {
+      "ko": {
+        "word": "우체국",
+        "explanation": "우편물을 보내거나 받는 곳. 택배 서비스도 제공.",
+        "examples": {
+          "beginner": "우체국 어디예요?",
+          "intermediate": "우체국에서 소포 보냈어요.",
+          "advanced": "요즘은 우체국보다 택배 회사를 더 많이 이용해요.",
+          "master": "우체국 택배는 가격이 저렴해서 무거운 물건 보낼 때 좋아요."
+        }
+      },
+      "en": {
+        "word": "Post office",
+        "explanation": "A place to send or receive mail. Also provides delivery services.",
+        "examples": {
+          "beginner": "Where is the post office?",
+          "intermediate": "I sent a package at the post office.",
+          "advanced": "These days, people use delivery companies more than the post office.",
+          "master": "Post office delivery is cheap, so it's good for sending heavy items."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[우체국]",
+      "ipa": "[utɕʰeɡuk]"
+    }
+  },
+  {
+    "id": "gyeongchalso",
+    "korean": "경찰서",
+    "romanization": "gyeongchalso",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["place", "safety"],
+    "translations": {
+      "ko": {
+        "word": "경찰서",
+        "explanation": "범죄를 수사하고 질서를 유지하는 기관.",
+        "examples": {
+          "beginner": "경찰서 어디예요?",
+          "intermediate": "지갑을 잃어버려서 경찰서에 신고했어요.",
+          "advanced": "외국인 등록은 가까운 경찰서 출입국관리사무소에서 할 수 있어요.",
+          "master": "한국에서 긴급 상황이 생기면 112에 전화하면 경찰이 출동해요."
+        }
+      },
+      "en": {
+        "word": "Police station",
+        "explanation": "An agency that investigates crimes and maintains order.",
+        "examples": {
+          "beginner": "Where is the police station?",
+          "intermediate": "I lost my wallet and reported it to the police.",
+          "advanced": "Foreigner registration can be done at immigration offices in police stations.",
+          "master": "In Korea, call 112 in emergencies and police will be dispatched."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[경찰서]",
+      "ipa": "[kjʌŋtɕʰalsʌ]"
+    }
+  },
+  {
+    "id": "sojubang",
+    "korean": "소방서",
+    "romanization": "sobangso",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["place", "safety"],
+    "translations": {
+      "ko": {
+        "word": "소방서",
+        "explanation": "화재 진압과 구급 활동을 하는 기관.",
+        "examples": {
+          "beginner": "소방서 번호가 뭐예요?",
+          "intermediate": "119는 소방서 번호예요.",
+          "advanced": "한국에서 화재나 응급 상황이 생기면 119에 전화하세요.",
+          "master": "소방관들은 화재뿐만 아니라 구조 활동도 담당해요."
+        }
+      },
+      "en": {
+        "word": "Fire station",
+        "explanation": "An agency for firefighting and emergency services.",
+        "examples": {
+          "beginner": "What's the fire station number?",
+          "intermediate": "119 is the fire station number.",
+          "advanced": "In Korea, call 119 for fires or medical emergencies.",
+          "master": "Firefighters handle not only fires but also rescue operations."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[소방서]",
+      "ipa": "[sobaŋsʌ]"
+    }
+  },
+  {
+    "id": "dosogwan",
+    "korean": "도서관",
+    "romanization": "doseogwan",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "education"],
+    "translations": {
+      "ko": {
+        "word": "도서관",
+        "explanation": "책을 읽거나 빌릴 수 있는 곳.",
+        "examples": {
+          "beginner": "도서관에서 공부해요.",
+          "intermediate": "도서관에서 책 빌렸어요.",
+          "advanced": "시험 기간에는 도서관이 항상 자리가 없어요.",
+          "master": "요즘 도서관에서 전자책도 빌릴 수 있어서 편해요."
+        }
+      },
+      "en": {
+        "word": "Library",
+        "explanation": "A place to read or borrow books.",
+        "examples": {
+          "beginner": "I study at the library.",
+          "intermediate": "I borrowed a book from the library.",
+          "advanced": "During exam periods, the library is always full.",
+          "master": "Libraries now let you borrow e-books too, which is convenient."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[도서관]",
+      "ipa": "[tosʌɡwan]"
+    }
+  },
+  {
+    "id": "gongwon",
+    "korean": "공원",
+    "romanization": "gongwon",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "nature"],
+    "translations": {
+      "ko": {
+        "word": "공원",
+        "explanation": "사람들이 쉬고 운동할 수 있게 만든 야외 공간.",
+        "examples": {
+          "beginner": "공원에서 산책해요.",
+          "intermediate": "주말에 공원에서 피크닉해요.",
+          "advanced": "한강 공원은 서울 시민들의 대표적인 휴식 장소예요.",
+          "master": "봄에는 공원에서 벚꽃 구경하는 사람들로 붐벼요."
+        }
+      },
+      "en": {
+        "word": "Park",
+        "explanation": "An outdoor space where people can rest and exercise.",
+        "examples": {
+          "beginner": "I walk in the park.",
+          "intermediate": "I have a picnic in the park on weekends.",
+          "advanced": "Han River Park is a representative resting place for Seoul citizens.",
+          "master": "In spring, parks are crowded with people viewing cherry blossoms."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[공원]",
+      "ipa": "[koŋwʌn]"
+    }
+  },
+  {
+    "id": "jimjilbang",
+    "korean": "찜질방",
+    "romanization": "jjimjilbang",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["place", "korean-culture"],
+    "translations": {
+      "ko": {
+        "word": "찜질방",
+        "explanation": "한국식 사우나와 휴식 공간. 밤새 잠도 잘 수 있다.",
+        "examples": {
+          "beginner": "찜질방 가요.",
+          "intermediate": "찜질방에서 계란 먹어요.",
+          "advanced": "종점을 놓쳤을 때 찜질방에서 자고 아침에 집에 갔어요.",
+          "master": "외국인들에게 찜질방 문화는 매우 신기하고 재미있는 경험이에요."
+        }
+      },
+      "en": {
+        "word": "Jjimjilbang (Korean spa)",
+        "explanation": "A Korean-style sauna and relaxation space. You can stay overnight.",
+        "examples": {
+          "beginner": "Let's go to the jjimjilbang.",
+          "intermediate": "I eat eggs at the jjimjilbang.",
+          "advanced": "When I missed the last train, I slept at the jjimjilbang and went home in the morning.",
+          "master": "For foreigners, jjimjilbang culture is a very unique and fun experience."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[찜질방]",
+      "ipa": "[tɕːimdʑilbaŋ]"
+    }
+  },
+  {
+    "id": "kaopae",
+    "korean": "카페",
+    "romanization": "kape",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "food"],
+    "translations": {
+      "ko": {
+        "word": "카페",
+        "explanation": "커피 등 음료를 파는 곳. 공부나 만남 장소로도 이용된다.",
+        "examples": {
+          "beginner": "카페에서 만나요.",
+          "intermediate": "이 근처에 예쁜 카페 있어요?",
+          "advanced": "요즘 카페에서 공부하는 '카공족'이 많아요.",
+          "master": "한국은 커피 소비량이 세계 최고 수준이어서 카페가 정말 많아요."
+        }
+      },
+      "en": {
+        "word": "Cafe",
+        "explanation": "A place selling coffee and drinks. Also used for studying or meeting.",
+        "examples": {
+          "beginner": "Let's meet at the cafe.",
+          "intermediate": "Is there a nice cafe nearby?",
+          "advanced": "These days, there are many 'cafe studiers' who study at cafes.",
+          "master": "Korea's coffee consumption is among the highest in the world, so there are many cafes."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[카페]",
+      "ipa": "[kʰapʰe]"
+    }
+  },
+  {
+    "id": "noraeban",
+    "korean": "노래방",
+    "romanization": "noraebang",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "entertainment"],
+    "translations": {
+      "ko": {
+        "word": "노래방",
+        "explanation": "노래를 부를 수 있는 공간. 한국의 대표적인 놀이 문화.",
+        "examples": {
+          "beginner": "노래방 갈래요?",
+          "intermediate": "노래방에서 신나게 놀았어요.",
+          "advanced": "회식 후에 노래방 가는 것이 한국 직장인 문화예요.",
+          "master": "코인 노래방은 가격이 저렴해서 혼자서도 부담 없이 갈 수 있어요."
+        }
+      },
+      "en": {
+        "word": "Noraebang (Karaoke)",
+        "explanation": "A space for singing. Representative Korean entertainment culture.",
+        "examples": {
+          "beginner": "Do you want to go to karaoke?",
+          "intermediate": "We had a blast at the noraebang.",
+          "advanced": "Going to noraebang after company dinners is Korean office culture.",
+          "master": "Coin karaoke is cheap, so you can go alone without burden."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[노래방]",
+      "ipa": "[noɾɛbaŋ]"
+    }
+  },
+  {
+    "id": "pichinhada",
+    "korean": "PC방",
+    "romanization": "pisibang",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "entertainment"],
+    "translations": {
+      "ko": {
+        "word": "PC방",
+        "explanation": "컴퓨터 게임을 할 수 있는 곳. 인터넷 카페라고도 한다.",
+        "examples": {
+          "beginner": "PC방 가자.",
+          "intermediate": "PC방에서 게임했어요.",
+          "advanced": "한국 PC방 문화는 e스포츠 발전에 큰 영향을 미쳤어요.",
+          "master": "요즘 PC방은 음식도 팔고 시설도 좋아져서 카페처럼 쾌적해요."
+        }
+      },
+      "en": {
+        "word": "PC bang (Internet cafe)",
+        "explanation": "A place to play computer games. Also called internet cafe.",
+        "examples": {
+          "beginner": "Let's go to the PC bang.",
+          "intermediate": "I played games at the PC bang.",
+          "advanced": "Korean PC bang culture greatly influenced esports development.",
+          "master": "These days, PC bangs sell food and have good facilities, making them as nice as cafes."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[피곤하다]",
+      "ipa": "[pʰiɡonɦada]"
+    }
+  },
+  {
+    "id": "senyeong",
+    "korean": "세탁소",
+    "romanization": "setakso",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["place", "service"],
+    "translations": {
+      "ko": {
+        "word": "세탁소",
+        "explanation": "옷을 세탁하거나 다림질해주는 가게.",
+        "examples": {
+          "beginner": "세탁소에 맡겼어요.",
+          "intermediate": "코트 세탁소에 맡겨야 해요.",
+          "advanced": "드라이클리닝은 세탁소에서 해야 옷이 상하지 않아요.",
+          "master": "요즘 셀프 빨래방도 많아서 저렴하게 빨래할 수 있어요."
+        }
+      },
+      "en": {
+        "word": "Laundry / Dry cleaner",
+        "explanation": "A store that washes or irons clothes.",
+        "examples": {
+          "beginner": "I left it at the laundry.",
+          "intermediate": "I need to take my coat to the dry cleaner.",
+          "advanced": "Dry cleaning at a laundry keeps clothes from getting damaged.",
+          "master": "There are many self-service laundromats now, so you can do laundry cheaply."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[세탁]",
+      "ipa": "[setʰak]"
+    }
+  },
+  {
+    "id": "miyongsal",
+    "korean": "미용실",
+    "romanization": "miyongsil",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "service"],
+    "translations": {
+      "ko": {
+        "word": "미용실",
+        "explanation": "머리카락을 자르거나 스타일링하는 곳.",
+        "examples": {
+          "beginner": "미용실 가요.",
+          "intermediate": "미용실에서 머리 잘랐어요.",
+          "advanced": "미용실 예약 안 하면 오래 기다려야 할 수도 있어요.",
+          "master": "한국 미용실에서는 염색이나 펌 후 헤드 스파를 해줘서 좋아요."
+        }
+      },
+      "en": {
+        "word": "Hair salon",
+        "explanation": "A place to cut or style hair.",
+        "examples": {
+          "beginner": "I'm going to the hair salon.",
+          "intermediate": "I got my hair cut at the salon.",
+          "advanced": "You might have to wait long if you don't make a reservation.",
+          "master": "Korean salons offer head spas after coloring or perming, which is nice."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[미용실]",
+      "ipa": "[mijoŋɕil]"
+    }
+  },
+  {
+    "id": "healsujang",
+    "korean": "헬스장",
+    "romanization": "helsujang",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "health"],
+    "translations": {
+      "ko": {
+        "word": "헬스장",
+        "explanation": "운동 기구가 있는 체육 시설. 피트니스 센터.",
+        "examples": {
+          "beginner": "헬스장 다녀요.",
+          "intermediate": "헬스장 등록했어요.",
+          "advanced": "새해 결심으로 헬스장 등록하는 사람이 많아요.",
+          "master": "헬스장에 등록만 하고 안 가는 사람이 생각보다 많아요."
+        }
+      },
+      "en": {
+        "word": "Gym / Fitness center",
+        "explanation": "A facility with exercise equipment. Fitness center.",
+        "examples": {
+          "beginner": "I go to the gym.",
+          "intermediate": "I signed up for the gym.",
+          "advanced": "Many people sign up for gyms as New Year's resolutions.",
+          "master": "More people than you'd think sign up for gyms but never go."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[헬스장]",
+      "ipa": "[helsɯdʑaŋ]"
+    }
+  },
+  {
+    "id": "suuyoung",
+    "korean": "수영장",
+    "romanization": "suyeongjang",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["place", "sports"],
+    "translations": {
+      "ko": {
+        "word": "수영장",
+        "explanation": "수영할 수 있게 만든 시설.",
+        "examples": {
+          "beginner": "수영장 가요.",
+          "intermediate": "수영장에서 수영 배워요.",
+          "advanced": "여름에는 워터파크나 수영장이 사람들로 가득 차요.",
+          "master": "한국 아파트 단지에는 보통 수영장이 있어서 주민들이 이용할 수 있어요."
+        }
+      },
+      "en": {
+        "word": "Swimming pool",
+        "explanation": "A facility built for swimming.",
+        "examples": {
+          "beginner": "I'm going to the pool.",
+          "intermediate": "I'm learning to swim at the pool.",
+          "advanced": "In summer, water parks and pools are packed with people.",
+          "master": "Korean apartment complexes usually have pools for residents to use."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[수영]",
+      "ipa": "[sujʌŋ]"
+    }
+  },
+  {
+    "id": "sengil",
+    "korean": "생일",
+    "romanization": "saengil",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["event", "celebration"],
+    "translations": {
+      "ko": {
+        "word": "생일",
+        "explanation": "태어난 날을 기념하는 날.",
+        "examples": {
+          "beginner": "생일 축하해요!",
+          "intermediate": "생일이 언제예요?",
+          "advanced": "한국에서는 생일에 미역국을 먹는 전통이 있어요.",
+          "master": "친구 생일에 깜짝 파티를 해줬더니 정말 감동했어요."
+        }
+      },
+      "en": {
+        "word": "Birthday",
+        "explanation": "A day celebrating one's birth.",
+        "examples": {
+          "beginner": "Happy birthday!",
+          "intermediate": "When is your birthday?",
+          "advanced": "In Korea, there's a tradition of eating seaweed soup on birthdays.",
+          "master": "My friend was really touched when we threw a surprise party for their birthday."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[생일]",
+      "ipa": "[sɛŋil]"
+    }
+  },
+  {
+    "id": "kyeolhon",
+    "korean": "결혼",
+    "romanization": "gyeolhon",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["event", "life"],
+    "translations": {
+      "ko": {
+        "word": "결혼",
+        "explanation": "법적으로 부부가 되는 것.",
+        "examples": {
+          "beginner": "결혼했어요?",
+          "intermediate": "결혼식에 초대받았어요.",
+          "advanced": "요즘 젊은 세대는 결혼을 늦게 하거나 안 하는 경우도 많아요.",
+          "master": "한국에서는 결혼 비용이 많이 들어서 부담을 느끼는 사람이 많아요."
+        }
+      },
+      "en": {
+        "word": "Marriage / Wedding",
+        "explanation": "Becoming legally married.",
+        "examples": {
+          "beginner": "Are you married?",
+          "intermediate": "I was invited to a wedding.",
+          "advanced": "Many young people these days marry late or not at all.",
+          "master": "Many Koreans feel burdened because weddings are expensive."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[결혼]",
+      "ipa": "[kjʌlhon]"
+    }
+  },
+  {
+    "id": "ipsa",
+    "korean": "이사",
+    "romanization": "isa",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["life", "housing"],
+    "translations": {
+      "ko": {
+        "word": "이사",
+        "explanation": "살던 곳을 옮기는 것.",
+        "examples": {
+          "beginner": "이사했어요.",
+          "intermediate": "다음 달에 이사해요.",
+          "advanced": "이사할 때 정리해야 할 물건이 정말 많아요.",
+          "master": "한국에서 이사할 때 떡을 돌리는 풍습이 있어요."
+        }
+      },
+      "en": {
+        "word": "Moving (house)",
+        "explanation": "Relocating to a new residence.",
+        "examples": {
+          "beginner": "I moved.",
+          "intermediate": "I'm moving next month.",
+          "advanced": "There's so much to organize when moving.",
+          "master": "In Korea, there's a custom of giving rice cakes to neighbors when moving."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[입사]",
+      "ipa": "[ipsa]"
+    }
+  },
+  {
+    "id": "yaksok",
+    "korean": "약속",
+    "romanization": "yaksok",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["social", "basic"],
+    "translations": {
+      "ko": {
+        "word": "약속",
+        "explanation": "미래에 할 일을 정하는 것. 또는 지키기로 한 말.",
+        "examples": {
+          "beginner": "약속 있어요.",
+          "intermediate": "오늘 저녁에 약속 있어요?",
+          "advanced": "약속을 지키는 것은 신뢰의 기본이에요.",
+          "master": "친구가 자꾸 약속을 어겨서 믿음이 안 가요."
+        }
+      },
+      "en": {
+        "word": "Promise / Appointment",
+        "explanation": "Agreeing to do something in the future. Or words promised to be kept.",
+        "examples": {
+          "beginner": "I have an appointment.",
+          "intermediate": "Do you have plans tonight?",
+          "advanced": "Keeping promises is the foundation of trust.",
+          "master": "I can't trust my friend because they keep breaking promises."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[약속]",
+      "ipa": "[jaksok]"
+    }
+  },
+  {
+    "id": "sogaeting",
+    "korean": "소개팅",
+    "romanization": "sogaeting",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["social", "dating"],
+    "translations": {
+      "ko": {
+        "word": "소개팅",
+        "explanation": "지인의 소개로 처음 만나는 데이트.",
+        "examples": {
+          "beginner": "소개팅 했어요?",
+          "intermediate": "친구가 소개팅 주선해줬어요.",
+          "advanced": "소개팅에서 첫인상이 중요해서 신경 많이 써요.",
+          "master": "한국에서는 소개팅 외에도 미팅, 앱 등 다양한 만남 방법이 있어요."
+        }
+      },
+      "en": {
+        "word": "Blind date",
+        "explanation": "A first meeting set up by an acquaintance.",
+        "examples": {
+          "beginner": "Did you go on a blind date?",
+          "intermediate": "My friend set up a blind date for me.",
+          "advanced": "First impressions are important on blind dates, so I put in effort.",
+          "master": "In Korea, besides blind dates, there are group dates, apps, and other ways to meet."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[소개팅]",
+      "ipa": "[soɡɛtʰiŋ]"
+    }
+  },
+  {
+    "id": "hoeshik",
+    "korean": "회식",
+    "romanization": "hoesik",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["work", "social"],
+    "translations": {
+      "ko": {
+        "word": "회식",
+        "explanation": "직장에서 동료들과 함께 하는 식사 모임.",
+        "examples": {
+          "beginner": "오늘 회식이에요.",
+          "intermediate": "회식 때 삼겹살 먹었어요.",
+          "advanced": "코로나 이후로 회식 문화가 많이 바뀌었어요.",
+          "master": "요즘은 회식 참여가 자유로워져서 안 가도 되는 분위기예요."
+        }
+      },
+      "en": {
+        "word": "Company dinner / Team dinner",
+        "explanation": "A meal gathering with coworkers at work.",
+        "examples": {
+          "beginner": "We have a company dinner today.",
+          "intermediate": "We had samgyeopsal at the company dinner.",
+          "advanced": "Company dinner culture has changed a lot since COVID.",
+          "master": "These days, company dinners are more optional and you don't have to go."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[회식]",
+      "ipa": "[hweɕik]"
+    }
+  },
+  {
+    "id": "bballi",
+    "korean": "빨리빨리",
+    "romanization": "bballippalli",
+    "partOfSpeech": "adverb",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["korean-culture", "expression"],
+    "translations": {
+      "ko": {
+        "word": "빨리빨리",
+        "explanation": "빨리의 강조형. 한국 문화의 특징으로 자주 언급된다.",
+        "examples": {
+          "beginner": "빨리빨리 해요!",
+          "intermediate": "한국은 빨리빨리 문화가 있어요.",
+          "advanced": "빨리빨리 문화 덕분에 한국은 빠른 경제 성장을 이뤘어요.",
+          "master": "빨리빨리 문화는 효율적이지만 가끔 여유가 없다는 비판도 받아요."
+        }
+      },
+      "en": {
+        "word": "Hurry hurry / Quickly",
+        "explanation": "Emphasized form of 'quickly'. Often mentioned as a characteristic of Korean culture.",
+        "examples": {
+          "beginner": "Hurry up!",
+          "intermediate": "Korea has a 'hurry hurry' culture.",
+          "advanced": "Thanks to the 'hurry hurry' culture, Korea achieved rapid economic growth.",
+          "master": "The 'hurry hurry' culture is efficient but is sometimes criticized for lacking leisure."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[빨리]",
+      "ipa": "[pːalli]"
+    }
+  },
+  {
+    "id": "saenwichi",
+    "korean": "샤워",
+    "romanization": "syawo",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["daily-routine", "hygiene"],
+    "translations": {
+      "ko": {
+        "word": "샤워",
+        "explanation": "물로 몸을 씻는 것.",
+        "examples": {
+          "beginner": "샤워했어요.",
+          "intermediate": "아침에 샤워해요.",
+          "advanced": "한국에서는 아침보다 저녁에 샤워하는 사람이 더 많아요.",
+          "master": "퇴근 후 뜨거운 물로 샤워하면 하루의 피로가 풀려요."
+        }
+      },
+      "en": {
+        "word": "Shower",
+        "explanation": "Washing the body with water.",
+        "examples": {
+          "beginner": "I took a shower.",
+          "intermediate": "I shower in the morning.",
+          "advanced": "In Korea, more people shower in the evening than in the morning.",
+          "master": "Taking a hot shower after work relieves the day's fatigue."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[샌드위치]",
+      "ipa": "[sɛndɯwitɕʰi]"
+    }
+  },
+  {
+    "id": "chiksol",
+    "korean": "칫솔",
+    "romanization": "chitsol",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["daily-routine", "hygiene"],
+    "translations": {
+      "ko": {
+        "word": "칫솔",
+        "explanation": "이를 닦는 도구.",
+        "examples": {
+          "beginner": "칫솔 어디 있어요?",
+          "intermediate": "새 칫솔 샀어요.",
+          "advanced": "칫솔은 3개월마다 바꾸는 게 좋아요.",
+          "master": "여행 갈 때 칫솔 안 챙겨서 편의점에서 샀어요."
+        }
+      },
+      "en": {
+        "word": "Toothbrush",
+        "explanation": "A tool for brushing teeth.",
+        "examples": {
+          "beginner": "Where is the toothbrush?",
+          "intermediate": "I bought a new toothbrush.",
+          "advanced": "It's good to change toothbrushes every 3 months.",
+          "master": "I forgot to pack my toothbrush when traveling, so I bought one at a convenience store."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[칫솔]",
+      "ipa": "[tɕʰitsol]"
+    }
+  },
+  {
+    "id": "bienu",
+    "korean": "비누",
+    "romanization": "binu",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["daily-routine", "hygiene"],
+    "translations": {
+      "ko": {
+        "word": "비누",
+        "explanation": "손이나 몸을 씻을 때 쓰는 세정제.",
+        "examples": {
+          "beginner": "비누로 손 씻어요.",
+          "intermediate": "비누가 미끄러워요.",
+          "advanced": "요즘은 비누보다 핸드워시를 많이 써요.",
+          "master": "코로나 이후로 손 씻는 습관이 더 중요해졌어요."
+        }
+      },
+      "en": {
+        "word": "Soap",
+        "explanation": "A cleansing agent for washing hands or body.",
+        "examples": {
+          "beginner": "I wash my hands with soap.",
+          "intermediate": "The soap is slippery.",
+          "advanced": "These days, people use hand wash more than bar soap.",
+          "master": "Hand washing habits became more important after COVID."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[비누]",
+      "ipa": "[pinu]"
+    }
+  },
+  {
+    "id": "sosoji",
+    "korean": "수건",
+    "romanization": "sugeon",
+    "partOfSpeech": "noun",
+    "categoryId": "daily-life",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["daily-routine", "object"],
+    "translations": {
+      "ko": {
+        "word": "수건",
+        "explanation": "물기를 닦는 천.",
+        "examples": {
+          "beginner": "수건 주세요.",
+          "intermediate": "수건이 젖었어요.",
+          "advanced": "목욕 후에 부드러운 수건으로 물기를 닦아요.",
+          "master": "호텔에서 수건은 매일 새것으로 교체해줘요."
+        }
+      },
+      "en": {
+        "word": "Towel",
+        "explanation": "Cloth for drying water.",
+        "examples": {
+          "beginner": "Please give me a towel.",
+          "intermediate": "The towel is wet.",
+          "advanced": "After bathing, I dry off with a soft towel.",
+          "master": "Hotels replace towels with fresh ones every day."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[소시지]",
+      "ipa": "[soɕidʑi]"
+    }
+  }
+]

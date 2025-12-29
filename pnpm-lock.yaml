@@ -381,8 +381,81 @@ importers:
         specifier: ^7.3.0
         version: 7.4.0
 
+  packages/core:
+    dependencies:
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      tailwind-merge:
+        specifier: ^3.4.0
+        version: 3.4.0
+    devDependencies:
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+
+  packages/data:
+    dependencies:
+      zod:
+        specifier: ^4.2.1
+        version: 4.2.1
+    devDependencies:
+      '@types/node':
+        specifier: ^22.10.2
+        version: 22.19.3
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+
+  packages/i18n:
+    dependencies:
+      '@soundblue/core':
+        specifier: workspace:*
+        version: link:../core
+      react:
+        specifier: ^19.2.3
+        version: 19.2.3
+      react-router:
+        specifier: ^7.11.0
+        version: 7.11.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+    devDependencies:
+      '@types/react':
+        specifier: ^19.0.2
+        version: 19.2.7
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+
+  packages/search:
+    dependencies:
+      '@soundblue/core':
+        specifier: workspace:*
+        version: link:../core
+      minisearch:
+        specifier: ^7.2.0
+        version: 7.2.0
+      react:
+        specifier: ^19.2.3
+        version: 19.2.3
+    devDependencies:
+      '@types/react':
+        specifier: ^19.0.2
+        version: 19.2.7
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+
   packages/shared:
     dependencies:
+      '@soundblue/core':
+        specifier: workspace:*
+        version: link:../core
+      '@soundblue/i18n':
+        specifier: workspace:*
+        version: link:../i18n
+      '@soundblue/search':
+        specifier: workspace:*
+        version: link:../search
       dexie:
         specifier: ^4.0.10
         version: 4.2.1
