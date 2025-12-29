@@ -9,10 +9,10 @@ import { Layout } from '@/components/layout/Layout';
 import { DifficultyBadge } from '@/components/ui/DifficultyBadge';
 import type { DifficultyLevel } from '@/data/types';
 import { useI18n } from '@/i18n';
-import { type FuseSearchResult, searchConcepts } from '@/lib/search';
+import { type MiniSearchResult, searchConcepts } from '@/lib/search';
 
 /** 검색 결과 카드 (SearchIndexItem용) */
-function SearchResultCard({ result }: { result: FuseSearchResult }) {
+function SearchResultCard({ result }: { result: MiniSearchResult }) {
   const { locale, localePath } = useI18n();
   const item = result.item;
   const name = item.name[locale] || item.name.en;
@@ -44,7 +44,7 @@ export default function SearchPage() {
   const [searchParams] = useSearchParams();
   const { locale, t } = useI18n();
 
-  const [results, setResults] = useState<FuseSearchResult[]>([]);
+  const [results, setResults] = useState<MiniSearchResult[]>([]);
   const [isSearching, setIsSearching] = useState(false);
 
   const query = searchParams.get('q') || '';

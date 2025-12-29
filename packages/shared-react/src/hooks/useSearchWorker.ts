@@ -1,12 +1,13 @@
 /**
  * useSearchWorker Hook
- * Client-side fuzzy search with Fuse.js
+ * Client-side full-text search with MiniSearch
  * Provides debounced search with loading states
  *
- * Note: For SSG apps with small datasets (<500 items), a synchronous approach
+ * Note: For SSG apps with small datasets (<1000 items), a synchronous approach
  * is more reliable than Web Workers and still provides excellent performance.
+ * MiniSearch offers O(log n) indexed search vs Fuse.js O(n) linear scan.
  */
-import Fuse from 'fuse.js';
+import MiniSearch from 'minisearch';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 export interface SearchIndexItem {
@@ -51,7 +52,7 @@ export function useSearchWorker({
   const [isReady, setIsReady] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const fuseRef = useRef<Fuse<SearchIndexItem> | null>(null);
+  const miniSearchRef = useRef<MiniSearch<SearchIndexItem> | null>(null);
   const debounceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const indexRef = useRef<SearchIndexItem[] | null>(null);
 
@@ -75,19 +76,51 @@ export function useSearchWorker({
         if (cancelled) return;
 
         indexRef.current = index;
-        fuseRef.current = new Fuse(index, {
-          keys: [
-            { name: `name.${locale}`, weight: 3 },
-            { name: 'name.en', weight: 2 },
-            { name: `description.${locale}`, weight: 1.5 },
-            { name: 'description.en', weight: 1 },
-            { name: 'field', weight: 1 },
-            { name: 'tags', weight: 0.5 },
+
+        // Create MiniSearch instance with locale-aware fields
+        miniSearchRef.current = new MiniSearch<SearchIndexItem>({
+          fields: [
+            `name.${locale}`,
+            'name.en',
+            `description.${locale}`,
+            'description.en',
+            'field',
+            'tags',
           ],
-          threshold: 0.4,
-          includeScore: true,
-          minMatchCharLength: 2,
+          storeFields: ['id', 'type', 'name', 'description', 'field', 'tags'],
+          extractField: (document, fieldName) => {
+            // Handle nested fields like name.ko, description.en
+            const parts = fieldName.split('.');
+            let value: unknown = document;
+            for (const part of parts) {
+              if (value && typeof value === 'object' && part in value) {
+                value = (value as Record<string, unknown>)[part];
+              } else {
+                return undefined;
+              }
+            }
+            // Handle arrays (tags)
+            if (Array.isArray(value)) {
+              return value.join(' ');
+            }
+            return typeof value === 'string' ? value : undefined;
+          },
+          searchOptions: {
+            boost: {
+              [`name.${locale}`]: 3,
+              'name.en': 2,
+              [`description.${locale}`]: 1.5,
+              'description.en': 1,
+              field: 1,
+              tags: 0.5,
+            },
+            fuzzy: 0.2,
+            prefix: true,
+          },
         });
+
+        // Index all documents
+        miniSearchRef.current.addAll(index);
 
         setIsReady(true);
         setIsLoading(false);
@@ -111,18 +144,36 @@ export function useSearchWorker({
   // Perform search
   const performSearch = useCallback(
     (searchQuery: string) => {
-      if (!fuseRef.current || !searchQuery.trim() || searchQuery.length < 2) {
+      if (
+        !miniSearchRef.current ||
+        !indexRef.current ||
+        !searchQuery.trim() ||
+        searchQuery.length < 2
+      ) {
         setResults([]);
         return;
       }
 
-      const searchResults = fuseRef.current.search(searchQuery, { limit: maxResults });
-      setResults(
-        searchResults.map((result) => ({
-          item: result.item,
+      const searchResults = miniSearchRef.current.search(searchQuery).slice(0, maxResults);
+
+      // Map MiniSearch results back to SearchResult format
+      const mappedResults: SearchResult[] = searchResults.map((result) => {
+        // Find original item from index
+        const originalItem = indexRef.current?.find((item) => item.id === result.id);
+        return {
+          item: originalItem || {
+            id: result.id as string,
+            type: (result.type as SearchIndexItem['type']) || 'entry',
+            name: (result.name as { en: string; ko: string }) || { en: '', ko: '' },
+            description: result.description as { en: string; ko: string } | undefined,
+            field: result.field as string | undefined,
+            tags: result.tags as string[] | undefined,
+          },
           score: result.score,
-        })),
-      );
+        };
+      });
+
+      setResults(mappedResults);
     },
     [maxResults],
   );

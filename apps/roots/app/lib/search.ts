@@ -1,11 +1,14 @@
 /**
- * @fileoverview Fuse.js 기반 검색 유틸리티 (동적 로딩)
+ * @fileoverview MiniSearch 기반 검색 유틸리티 (동적 로딩)
  *
  * 검색 인덱스를 빌드 시 생성된 JSON에서 동적으로 로드합니다.
  * Layout.tsx 번들에 전체 개념 데이터가 포함되지 않도록 합니다.
+ *
+ * MiniSearch는 사전 인덱싱을 통해 O(log n) 검색을 제공합니다.
+ * Fuse.js의 O(n) 선형 검색 대비 대용량 데이터에서 훨씬 빠릅니다.
  */
 
-import Fuse from 'fuse.js';
+import MiniSearch from 'minisearch';
 import type { DifficultyLevel, Language } from '@/data/types';
 
 /** 검색 인덱스 아이템 (경량) */
@@ -20,11 +23,11 @@ export interface SearchIndexItem {
 }
 
 /**
- * Fuse.js 검색 결과 타입
+ * MiniSearch 검색 결과 타입
  *
  * @note data/types.ts의 SearchResult와 구분하기 위해 별도 이름 사용
  */
-export interface FuseSearchResult {
+export interface MiniSearchResult {
   item: SearchIndexItem;
   score: number;
   matches: string[];
@@ -34,8 +37,8 @@ export interface FuseSearchResult {
 let searchIndex: SearchIndexItem[] | null = null;
 let indexLoadPromise: Promise<SearchIndexItem[]> | null = null;
 
-// Fuse 인스턴스 캐시
-const searcherCache = new Map<Language, Fuse<SearchIndexItem>>();
+// MiniSearch 인스턴스 캐시
+const searcherCache = new Map<Language, MiniSearch<SearchIndexItem>>();
 
 /**
  * 검색 인덱스 로드 (lazy, 클라이언트 전용)
@@ -65,25 +68,50 @@ async function loadSearchIndex(): Promise<SearchIndexItem[]> {
 }
 
 /**
- * Fuse 검색 인스턴스 생성
+ * MiniSearch 검색 인스턴스 생성
  */
-function createConceptSearcher(index: SearchIndexItem[], locale: Language): Fuse<SearchIndexItem> {
-  return new Fuse(index, {
-    keys: [
-      { name: `name.${locale}`, weight: 3 },
-      { name: 'name.en', weight: 2 },
-      { name: `def.${locale}`, weight: 1.5 },
-      { name: 'def.en', weight: 1 },
-      { name: 'tags', weight: 1 },
-    ],
-    threshold: 0.4,
-    includeScore: true,
-    includeMatches: true,
-    minMatchCharLength: 2,
+function createConceptSearcher(
+  index: SearchIndexItem[],
+  locale: Language,
+): MiniSearch<SearchIndexItem> {
+  const instance = new MiniSearch<SearchIndexItem>({
+    fields: [`name.${locale}`, 'name.en', `def.${locale}`, 'def.en', 'tags'],
+    storeFields: ['id', 'name', 'field', 'subfield', 'difficulty', 'tags', 'def'],
+    extractField: (document, fieldName) => {
+      // Handle nested fields like name.ko, def.en
+      const parts = fieldName.split('.');
+      let value: unknown = document;
+      for (const part of parts) {
+        if (value && typeof value === 'object' && part in value) {
+          value = (value as Record<string, unknown>)[part];
+        } else {
+          return undefined;
+        }
+      }
+      // Handle arrays (tags)
+      if (Array.isArray(value)) {
+        return value.join(' ');
+      }
+      return typeof value === 'string' ? value : undefined;
+    },
+    searchOptions: {
+      boost: {
+        [`name.${locale}`]: 3,
+        'name.en': 2,
+        [`def.${locale}`]: 1.5,
+        'def.en': 1,
+        tags: 1,
+      },
+      fuzzy: 0.2,
+      prefix: true,
+    },
   });
+
+  instance.addAll(index);
+  return instance;
 }
 
-function getSearcher(index: SearchIndexItem[], locale: Language): Fuse<SearchIndexItem> {
+function getSearcher(index: SearchIndexItem[], locale: Language): MiniSearch<SearchIndexItem> {
   const cached = searcherCache.get(locale);
   if (cached) {
     return cached;
@@ -114,20 +142,31 @@ export async function searchConcepts(
   query: string,
   locale: Language,
   limit = 10,
-): Promise<FuseSearchResult[]> {
+): Promise<MiniSearchResult[]> {
   if (!query || query.trim().length < 2) {
     return [];
   }
 
   const index = await loadSearchIndex();
   const searcher = getSearcher(index, locale);
-  const results = searcher.search(query.trim(), { limit });
+  const results = searcher.search(query.trim()).slice(0, limit);
 
-  return results.map((result) => ({
-    item: result.item,
-    score: result.score ?? 0,
-    matches: result.matches?.map((m) => m.key || '') || [],
-  }));
+  return results.map((result) => {
+    const originalItem = index.find((item) => item.id === result.id);
+    return {
+      item: originalItem || {
+        id: result.id as string,
+        name: (result.name as { ko: string; en: string }) || { ko: '', en: '' },
+        field: (result.field as string) || '',
+        subfield: (result.subfield as string) || '',
+        difficulty: (result.difficulty as number) || 1,
+        tags: (result.tags as string[]) || [],
+        def: (result.def as { ko: string; en: string }) || { ko: '', en: '' },
+      },
+      score: result.score ?? 0,
+      matches: result.match ? Object.keys(result.match) : [],
+    };
+  });
 }
 
 /**

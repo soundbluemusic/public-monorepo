@@ -1,5 +1,5 @@
 /**
- * @fileoverview Unit tests for Fuse.js search utilities
+ * @fileoverview Unit tests for MiniSearch search utilities
  */
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
