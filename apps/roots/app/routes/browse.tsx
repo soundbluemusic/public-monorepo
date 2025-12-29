@@ -2,20 +2,17 @@
  * @fileoverview 전체 분야 목록 페이지
  */
 
-import type { MetaFunction } from 'react-router';
+import { metaFactory } from '@soundblue/shared';
 import { Link } from 'react-router';
 import { Layout } from '@/components/layout/Layout';
 import { fields } from '@/data/fields';
 import { getSubfieldsByParent } from '@/data/subfields';
 import { useI18n } from '@/i18n';
 
-export const meta: MetaFunction = ({ location }) => {
-  const locale = location.pathname.startsWith('/ko') ? 'ko' : 'en';
-  const title = locale === 'ko' ? '찾아보기 - 수리' : 'Browse - Roots';
-  const description =
-    locale === 'ko' ? '분야별로 수학 개념 찾아보기' : 'Browse math concepts by field';
-  return [{ title }, { name: 'description', content: description }];
-};
+export const meta = metaFactory({
+  ko: { title: '찾아보기 - 수리', description: '분야별로 수학 개념 찾아보기' },
+  en: { title: 'Browse - Roots', description: 'Browse math concepts by field' },
+});
 
 export default function BrowsePage() {
   const { locale, t, localePath } = useI18n();

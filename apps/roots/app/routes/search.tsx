@@ -2,8 +2,8 @@
  * @fileoverview 검색 결과 페이지
  */
 
+import { metaFactory } from '@soundblue/shared';
 import { useEffect, useState } from 'react';
-import type { MetaFunction } from 'react-router';
 import { Link, useSearchParams } from 'react-router';
 import { Layout } from '@/components/layout/Layout';
 import { DifficultyBadge } from '@/components/ui/DifficultyBadge';
@@ -35,12 +35,10 @@ function SearchResultCard({ result }: { result: FuseSearchResult }) {
   );
 }
 
-export const meta: MetaFunction = ({ location }) => {
-  const locale = location.pathname.startsWith('/ko') ? 'ko' : 'en';
-  const title = locale === 'ko' ? '검색 - 수리' : 'Search - Roots';
-  const description = locale === 'ko' ? '수학 개념 검색' : 'Search math concepts';
-  return [{ title }, { name: 'description', content: description }];
-};
+export const meta = metaFactory({
+  ko: { title: '검색 - 수리', description: '수학 개념 검색' },
+  en: { title: 'Search - Roots', description: 'Search math concepts' },
+});
 
 export default function SearchPage() {
   const [searchParams] = useSearchParams();

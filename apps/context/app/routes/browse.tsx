@@ -1,13 +1,15 @@
-import { cn, useAutoAnimate, VirtualList } from '@soundblue/shared-react';
-import { Check, Shuffle, Star } from 'lucide-react';
+import { metaFactory } from '@soundblue/shared';
+import { cn, EntryListItem, useAutoAnimate, VirtualList } from '@soundblue/shared-react';
+import { Shuffle } from 'lucide-react';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import type { MetaFunction } from 'react-router';
-import { Link, useLoaderData, useSearchParams } from 'react-router';
+import { useLoaderData, useSearchParams } from 'react-router';
 import { Layout } from '@/components/layout';
+import { Select } from '@/components/Select';
+import { StatsCard } from '@/components/StatsCard';
 import { categories } from '@/data/categories';
 import type { MeaningEntry } from '@/data/types';
+import { useStudyData } from '@/hooks';
 import { useI18n } from '@/i18n';
-import { favorites, studyRecords } from '@/lib/db';
 
 /**
  * Loader: 빌드 시 데이터 로드 (SSG용)
@@ -22,21 +24,10 @@ export async function loader() {
   };
 }
 
-export const meta: MetaFunction = ({ location }) => {
-  const isKorean = location.pathname.startsWith('/ko');
-
-  if (isKorean) {
-    return [
-      { title: '찾아보기 - Context' },
-      { name: 'description', content: '모든 한국어 단어 찾아보기 및 필터링' },
-    ];
-  }
-
-  return [
-    { title: 'Browse - Context' },
-    { name: 'description', content: 'Browse and filter all Korean words' },
-  ];
-};
+export const meta = metaFactory({
+  ko: { title: '찾아보기 - Context', description: '모든 한국어 단어 찾아보기 및 필터링' },
+  en: { title: 'Browse - Context', description: 'Browse and filter all Korean words' },
+});
 
 type FilterCategory = 'all' | string;
 type FilterStatus = 'all' | 'studied' | 'unstudied' | 'bookmarked';
@@ -54,10 +45,10 @@ export default function BrowsePage() {
   }>();
   const { locale, localePath } = useI18n();
 
-  // Progress data
-  const [overallProgress, setOverallProgress] = useState({ studied: 0, total: 0, percentage: 0 });
-  const [todayStudied, setTodayStudied] = useState(0);
-  const [bookmarkCount, setBookmarkCount] = useState(0);
+  // Study data from custom hook
+  const { studiedIds, favoriteIds, overallProgress, todayStudied, bookmarkCount } = useStudyData({
+    totalEntries,
+  });
 
   // URL params for filter persistence
   const [searchParams, setSearchParams] = useSearchParams();
@@ -94,41 +85,6 @@ export default function BrowsePage() {
       }
     }
   }, [searchParams, cats]);
-
-  // Data state
-  const [studiedIds, setStudiedIds] = useState<Set<string>>(new Set());
-  const [favoriteIds, setFavoriteIds] = useState<Set<string>>(new Set());
-
-  // Load progress and favorites
-  useEffect(() => {
-    async function loadData() {
-      // Overall progress
-      const overall = await studyRecords.getOverallProgress(totalEntries);
-      setOverallProgress(overall);
-
-      // Studied IDs
-      const ids = await studyRecords.getStudiedEntryIds();
-      setStudiedIds(new Set(ids));
-
-      // Today's studied count
-      const today = new Date();
-      today.setHours(0, 0, 0, 0);
-      const allRecords = await studyRecords.getRecent(totalEntries);
-      const todayRecords = allRecords.filter((r) => {
-        const recordDate = new Date(r.studiedAt);
-        recordDate.setHours(0, 0, 0, 0);
-        return recordDate.getTime() === today.getTime();
-      });
-      const uniqueTodayIds = new Set(todayRecords.map((r) => r.entryId));
-      setTodayStudied(uniqueTodayIds.size);
-
-      // Favorites
-      const favs = await favorites.getAll();
-      setFavoriteIds(new Set(favs.map((f) => f.entryId)));
-      setBookmarkCount(favs.length);
-    }
-    loadData();
-  }, [totalEntries]);
 
   // Filter and sort logic with useMemo for proper reactivity
   const filteredEntries = useMemo(() => {
@@ -217,37 +173,21 @@ export default function BrowsePage() {
 
       {/* Quick Stats - with auto-animate */}
       <div ref={statsRef} className="mb-6 grid gap-4 sm:grid-cols-3">
-        <div className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
-          <div className="text-sm text-(--text-tertiary) mb-1">
-            {locale === 'ko' ? '전체 진행률' : 'Overall Progress'}
-          </div>
-          <div className="text-2xl font-bold text-(--text-primary)">
-            {overallProgress.percentage.toFixed(0)}%
-          </div>
-          <div className="text-xs text-(--text-secondary)">
-            {overallProgress.studied}/{overallProgress.total} {locale === 'ko' ? '단어' : 'words'}
-          </div>
-        </div>
-
-        <div className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
-          <div className="text-sm text-(--text-tertiary) mb-1">
-            {locale === 'ko' ? '오늘 학습' : 'Today Studied'}
-          </div>
-          <div className="text-2xl font-bold text-(--text-primary)">{todayStudied}</div>
-          <div className="text-xs text-(--text-secondary)">
-            {locale === 'ko' ? '단어' : 'words'}
-          </div>
-        </div>
-
-        <div className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
-          <div className="text-sm text-(--text-tertiary) mb-1">
-            {locale === 'ko' ? '북마크' : 'Bookmarks'}
-          </div>
-          <div className="text-2xl font-bold text-(--text-primary)">{bookmarkCount}</div>
-          <div className="text-xs text-(--text-secondary)">
-            {locale === 'ko' ? '단어' : 'words'}
-          </div>
-        </div>
+        <StatsCard
+          label={locale === 'ko' ? '전체 진행률' : 'Overall Progress'}
+          value={`${overallProgress.percentage.toFixed(0)}%`}
+          subtitle={`${overallProgress.studied}/${overallProgress.total} ${locale === 'ko' ? '단어' : 'words'}`}
+        />
+        <StatsCard
+          label={locale === 'ko' ? '오늘 학습' : 'Today Studied'}
+          value={todayStudied}
+          subtitle={locale === 'ko' ? '단어' : 'words'}
+        />
+        <StatsCard
+          label={locale === 'ko' ? '북마크' : 'Bookmarks'}
+          value={bookmarkCount}
+          subtitle={locale === 'ko' ? '단어' : 'words'}
+        />
       </div>
 
       {/* Quick Access Buttons */}
@@ -291,71 +231,56 @@ export default function BrowsePage() {
       {/* Filter & Sort Controls */}
       <div className="mb-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {/* Category Filter */}
-        <div>
-          <label htmlFor="category-filter" className="block text-sm mb-1 text-(--text-secondary)">
-            {locale === 'ko' ? '카테고리' : 'Category'}
-          </label>
-          <select
-            id="category-filter"
-            value={filterCategory}
-            onChange={(e) => {
-              const value = e.target.value as FilterCategory;
-              setFilterCategory(value);
-              updateUrlParams({ category: value });
-            }}
-            className="w-full min-h-10 px-3 rounded-lg border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary)"
-          >
-            <option value="all">{locale === 'ko' ? '전체' : 'All'}</option>
-            {cats.map((cat) => (
-              <option key={cat.id} value={cat.id}>
-                {cat.icon} {cat.name[locale]}
-              </option>
-            ))}
-          </select>
-        </div>
+        <Select
+          id="category-filter"
+          label={locale === 'ko' ? '카테고리' : 'Category'}
+          value={filterCategory}
+          options={[
+            { value: 'all', label: locale === 'ko' ? '전체' : 'All' },
+            ...cats.map((cat) => ({
+              value: cat.id,
+              label: `${cat.icon} ${cat.name[locale]}`,
+            })),
+          ]}
+          onChange={(value) => {
+            setFilterCategory(value as FilterCategory);
+            updateUrlParams({ category: value });
+          }}
+        />
 
         {/* Status Filter */}
-        <div>
-          <label htmlFor="status-filter" className="block text-sm mb-1 text-(--text-secondary)">
-            {locale === 'ko' ? '학습 상태' : 'Study Status'}
-          </label>
-          <select
-            id="status-filter"
-            value={filterStatus}
-            onChange={(e) => {
-              const value = e.target.value as FilterStatus;
-              setFilterStatus(value);
-              updateUrlParams({ status: value });
-            }}
-            className="w-full min-h-10 px-3 rounded-lg border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary)"
-          >
-            <option value="all">{locale === 'ko' ? '전체' : 'All'}</option>
-            <option value="studied">{locale === 'ko' ? '학습 완료' : 'Studied'}</option>
-            <option value="unstudied">{locale === 'ko' ? '미학습' : 'Unstudied'}</option>
-            <option value="bookmarked">{locale === 'ko' ? '북마크' : 'Bookmarked'}</option>
-          </select>
-        </div>
+        <Select
+          id="status-filter"
+          label={locale === 'ko' ? '학습 상태' : 'Study Status'}
+          value={filterStatus}
+          options={[
+            { value: 'all', label: locale === 'ko' ? '전체' : 'All' },
+            { value: 'studied', label: locale === 'ko' ? '학습 완료' : 'Studied' },
+            { value: 'unstudied', label: locale === 'ko' ? '미학습' : 'Unstudied' },
+            { value: 'bookmarked', label: locale === 'ko' ? '북마크' : 'Bookmarked' },
+          ]}
+          onChange={(value) => {
+            setFilterStatus(value as FilterStatus);
+            updateUrlParams({ status: value });
+          }}
+        />
 
         {/* Sort */}
-        <div className="sm:col-span-2 lg:col-span-1">
-          <label htmlFor="sort-by" className="block text-sm mb-1 text-(--text-secondary)">
-            {locale === 'ko' ? '정렬' : 'Sort By'}
-          </label>
-          <select
-            id="sort-by"
-            value={sortBy}
-            onChange={(e) => {
-              const value = e.target.value as SortOption;
-              setSortBy(value);
-              updateUrlParams({ sort: value === 'alphabetical' ? null : value });
-            }}
-            className="w-full min-h-10 px-3 rounded-lg border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary)"
-          >
-            <option value="alphabetical">{locale === 'ko' ? '가나다순' : 'Alphabetical'}</option>
-            <option value="category">{locale === 'ko' ? '카테고리별' : 'By Category'}</option>
-            <option value="recent">{locale === 'ko' ? '최근 추가' : 'Recently Added'}</option>
-          </select>
-        </div>
+        <Select
+          id="sort-by"
+          label={locale === 'ko' ? '정렬' : 'Sort By'}
+          value={sortBy}
+          options={[
+            { value: 'alphabetical', label: locale === 'ko' ? '가나다순' : 'Alphabetical' },
+            { value: 'category', label: locale === 'ko' ? '카테고리별' : 'By Category' },
+            { value: 'recent', label: locale === 'ko' ? '최근 추가' : 'Recently Added' },
+          ]}
+          onChange={(value) => {
+            setSortBy(value as SortOption);
+            updateUrlParams({ sort: value === 'alphabetical' ? null : value });
+          }}
+          className="sm:col-span-2 lg:col-span-1"
+        />
       </div>
 
       {/* Results Count */}
@@ -382,58 +307,17 @@ export default function BrowsePage() {
             const category = cats.find((c) => c.id === entry.categoryId);
 
             return (
-              <Link
-                to={localePath(`/entry/${entry.id}`)}
-                className="flex items-center justify-between py-3 px-2 rounded-lg border-b border-(--border-primary) transition-colors no-underline hover:bg-(--bg-tertiary)"
-              >
-                <div className="flex items-center gap-3 flex-1 min-w-0">
-                  {/* Checkmark */}
-                  <div
-                    className={cn(
-                      'w-5 h-5 rounded-full flex items-center justify-center shrink-0',
-                      isStudied ? 'bg-(--accent-primary)' : '',
-                    )}
-                  >
-                    {isStudied && <Check size={14} className="text-white" />}
-                  </div>
-
-                  {/* Word info */}
-                  <div className="flex items-center gap-3 flex-1 min-w-0">
-                    <span
-                      className={cn(
-                        'text-lg font-medium',
-                        isStudied
-                          ? 'text-(--text-secondary) line-through opacity-70'
-                          : 'text-(--text-primary)',
-                      )}
-                    >
-                      {entry.korean}
-                    </span>
-                    <span className="text-sm text-(--text-tertiary) hidden sm:inline">
-                      {entry.romanization}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3 shrink-0">
-                  {/* Category badge (desktop only) */}
-                  {category && (
-                    <span className="hidden md:inline px-2.5 py-0.5 rounded-full text-xs font-medium bg-(--bg-secondary) text-(--text-tertiary)">
-                      {category.icon} {category.name[locale]}
-                    </span>
-                  )}
-
-                  {/* Translation */}
-                  <span className="text-sm text-(--text-secondary) ml-2">{translation.word}</span>
-
-                  {/* Bookmark indicator */}
-                  {isFavorite && (
-                    <span className="text-sm" title={locale === 'ko' ? '북마크됨' : 'Bookmarked'}>
-                      <Star size={14} aria-hidden="true" fill="currentColor" />
-                    </span>
-                  )}
-                </div>
-              </Link>
+              <EntryListItem
+                entryId={entry.id}
+                korean={entry.korean}
+                romanization={entry.romanization}
+                translation={translation.word}
+                isStudied={isStudied}
+                isFavorite={isFavorite}
+                category={category}
+                locale={locale}
+                localePath={localePath}
+              />
             );
           },
           [locale, studiedIds, favoriteIds, cats, localePath],

@@ -1,11 +1,11 @@
-import type { MetaFunction } from 'react-router';
+import { metaFactory } from '@soundblue/shared';
 import { Layout } from '@/components/layout';
 import { useI18n } from '@/i18n';
 
-export const meta: MetaFunction = ({ location }) => {
-  const isKorean = location.pathname.startsWith('/ko');
-  return [{ title: isKorean ? '라이선스 - Context' : 'License - Context' }];
-};
+export const meta = metaFactory({
+  ko: { title: '라이선스 - Context' },
+  en: { title: 'License - Context' },
+});
 
 export default function LicensePage() {
   const { t } = useI18n();

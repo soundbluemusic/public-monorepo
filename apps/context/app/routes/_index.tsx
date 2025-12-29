@@ -1,13 +1,12 @@
-import { FadeIn, useAutoAnimate } from '@soundblue/shared-react';
+import { metaFactory } from '@soundblue/shared';
+import { FadeIn, ProgressBar, useAutoAnimate } from '@soundblue/shared-react';
 import { FolderOpen, Sparkles, TrendingUp } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import type { MetaFunction } from 'react-router';
 import { Link, useLoaderData } from 'react-router';
 import { Layout } from '@/components/layout';
 import { categories } from '@/data/categories';
 import type { Category, MeaningEntry } from '@/data/types';
+import { useStudyData } from '@/hooks';
 import { type Language, useI18n } from '@/i18n';
-import { studyRecords } from '@/lib/db';
 
 const getPronunciation = (entry: MeaningEntry, locale: Language): string | undefined => {
   switch (locale) {
@@ -47,21 +46,13 @@ export async function loader() {
   };
 }
 
-export const meta: MetaFunction = ({ location }) => {
-  const isKorean = location.pathname.startsWith('/ko');
-
-  if (isKorean) {
-    return [
-      { title: 'Context - 한국어 사전' },
-      { name: 'description', content: '한국어 학습자를 위한 의미 사전' },
-    ];
-  }
-
-  return [
-    { title: 'Context - Korean Dictionary' },
-    { name: 'description', content: 'Meaning dictionary for Korean learners' },
-  ];
-};
+export const meta = metaFactory({
+  ko: { title: 'Context - 한국어 사전', description: '한국어 학습자를 위한 의미 사전' },
+  en: {
+    title: 'Context - Korean Dictionary',
+    description: 'Meaning dictionary for Korean learners',
+  },
+});
 
 export default function HomePage() {
   const {
@@ -76,28 +67,13 @@ export default function HomePage() {
     totalEntries: number;
   }>();
   const { locale, t, localePath } = useI18n();
-  const [overallProgress, setOverallProgress] = useState({ studied: 0, total: 0, percentage: 0 });
-  const [categoryProgress, setCategoryProgress] = useState<
-    Record<string, { studied: number; total: number; percentage: number }>
-  >({});
 
-  // Load progress data (클라이언트 전용 - IndexedDB)
-  useEffect(() => {
-    async function loadProgress() {
-      const overall = await studyRecords.getOverallProgress(totalEntries);
-      setOverallProgress(overall);
-
-      const catProgress: Record<string, { studied: number; total: number; percentage: number }> =
-        {};
-      for (const cat of cats) {
-        const count = categoryCounts[cat.id] ?? 0;
-        const progress = await studyRecords.getCategoryProgress(cat.id, count);
-        catProgress[cat.id] = progress;
-      }
-      setCategoryProgress(catProgress);
-    }
-    loadProgress();
-  }, [cats, categoryCounts, totalEntries]);
+  // Study data from custom hook
+  const { overallProgress, categoryProgress } = useStudyData({
+    totalEntries,
+    categories: cats,
+    categoryCounts,
+  });
 
   // Auto-animate for categories grid
   const [categoriesRef] = useAutoAnimate<HTMLDivElement>();
@@ -126,12 +102,7 @@ export default function HomePage() {
               {overallProgress.studied}/{overallProgress.total} {locale === 'ko' ? '단어' : 'words'}
             </span>
           </div>
-          <div className="w-full h-2 rounded-full overflow-hidden bg-(--bg-secondary)">
-            <div
-              className="h-full bg-(--accent-primary) transition-all duration-300"
-              style={{ width: `${overallProgress.percentage}%` }}
-            />
-          </div>
+          <ProgressBar value={overallProgress.percentage} />
         </div>
       )}
 
@@ -197,14 +168,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Progress bar */}
-                {progress.studied > 0 && (
-                  <div className="w-full h-1.5 rounded-full overflow-hidden bg-(--bg-secondary)">
-                    <div
-                      className="h-full bg-(--accent-primary) transition-all duration-300"
-                      style={{ width: `${progress.percentage}%` }}
-                    />
-                  </div>
-                )}
+                {progress.studied > 0 && <ProgressBar value={progress.percentage} size="sm" />}
               </Link>
             );
           })}

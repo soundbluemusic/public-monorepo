@@ -208,11 +208,9 @@ pnpm dev:roots          # → http://localhost:3005
 
 | Document | Status | Description |
 |:---------|:------:|:------------|
-| [CODE_DUPLICATION_REPORT.md](CODE_DUPLICATION_REPORT.md) | 📋 2025-12-17 | Code duplication analysis (Phase 1 pending) |
-| [OPTIMIZATION_PLAN.md](apps/roots/OPTIMIZATION_PLAN.md) | ⚠️ Legacy | Original KaTeX plan (now using MathML) |
-| [BUTTON_TESTING_REPORT.md](BUTTON_TESTING_REPORT.md) | 🔴 2025-12-23 | E2E test results (50% pass rate) |
-
-> **Note:** OPTIMIZATION_PLAN.md는 레거시 문서입니다. 현재 구현은 MathML 기반입니다.
+| [CODE_DUPLICATION_REPORT.md](CODE_DUPLICATION_REPORT.md) | ✅ Complete | Code duplication resolved |
+| [BUTTON_TESTING_REPORT.md](BUTTON_TESTING_REPORT.md) | ✅ 100% pass | E2E test results |
+| [DESIGN_PRINCIPLES_REPORT.md](DESIGN_PRINCIPLES_REPORT.md) | ✅ 9.5/10 | Design analysis |
 
 <br>
 

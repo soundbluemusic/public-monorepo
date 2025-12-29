@@ -1,8 +1,7 @@
-import { LIMITS } from '@soundblue/shared';
+import { LIMITS, metaFactory } from '@soundblue/shared';
 import { cn, useAutoAnimate } from '@soundblue/shared-react';
 import { BarChart2, CalendarPlus, Flame, Search } from 'lucide-react';
 import { useMemo, useState } from 'react';
-import type { MetaFunction } from 'react-router';
 import { useLoaderData, useSearchParams } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import { type WebAPI, webApiCategories, webApis } from '../data/web-apis';
@@ -23,15 +22,10 @@ export async function loader() {
   };
 }
 
-export const meta: MetaFunction = ({ location }) => {
-  const isKorean = location.pathname.startsWith('/ko');
-  const title = 'Web API - Permissive';
-  const description = isKorean
-    ? '브라우저에 내장된 웹 표준 API'
-    : 'Browser built-in Web Standard APIs';
-
-  return [{ title }, { name: 'description', content: description }];
-};
+export const meta = metaFactory({
+  ko: { title: 'Web API - Permissive', description: '브라우저에 내장된 웹 표준 API' },
+  en: { title: 'Web API - Permissive', description: 'Browser built-in Web Standard APIs' },
+});
 
 export default function WebApiPage() {
   const { webApis: apis, categories: cats } = useLoaderData<{

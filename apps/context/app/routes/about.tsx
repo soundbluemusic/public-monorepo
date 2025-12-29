@@ -1,22 +1,11 @@
-import type { MetaFunction } from 'react-router';
+import { metaFactory } from '@soundblue/shared';
 import { Layout } from '@/components/layout';
 import { useI18n } from '@/i18n';
 
-export const meta: MetaFunction = ({ location }) => {
-  const isKorean = location.pathname.startsWith('/ko');
-
-  if (isKorean) {
-    return [
-      { title: '소개 - Context' },
-      { name: 'description', content: 'Context 한국어 사전 소개' },
-    ];
-  }
-
-  return [
-    { title: 'About - Context' },
-    { name: 'description', content: 'About Context Korean Dictionary' },
-  ];
-};
+export const meta = metaFactory({
+  ko: { title: '소개 - Context', description: 'Context 한국어 사전 소개' },
+  en: { title: 'About - Context', description: 'About Context Korean Dictionary' },
+});
 
 export default function AboutPage() {
   const { t } = useI18n();

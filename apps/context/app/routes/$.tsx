@@ -1,18 +1,12 @@
-import type { MetaFunction } from 'react-router';
+import { metaFactory } from '@soundblue/shared';
 import { Link } from 'react-router';
 import { Layout } from '@/components/layout';
 import { useI18n } from '@/i18n';
 
-export const meta: MetaFunction = ({ location }) => {
-  const isKorean = location.pathname.startsWith('/ko');
-  return [
-    {
-      title: isKorean
-        ? '404 - 페이지를 찾을 수 없습니다 | Context'
-        : '404 - Page Not Found | Context',
-    },
-  ];
-};
+export const meta = metaFactory({
+  ko: { title: '404 - 페이지를 찾을 수 없습니다 | Context' },
+  en: { title: '404 - Page Not Found | Context' },
+});
 
 export default function NotFound() {
   const { t, localePath } = useI18n();

@@ -1,4 +1,4 @@
-import { LIMITS } from '@soundblue/shared';
+import { LIMITS, metaFactory } from '@soundblue/shared';
 import { cn, type SearchResult, useSearchWorker } from '@soundblue/shared-react';
 import {
   ChevronRight,
@@ -18,20 +18,20 @@ import {
   Zap,
 } from 'lucide-react';
 import { type ReactNode, useCallback, useEffect, useRef, useState } from 'react';
-import type { MetaFunction } from 'react-router';
 import { Link, useNavigate } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import { useI18n } from '../i18n';
 
-export const meta: MetaFunction = ({ location }) => {
-  const isKorean = location.pathname.startsWith('/ko');
-  const title = isKorean ? 'Permissive - 무료 웹개발 도구 모음' : 'Permissive - Free Web Dev Tools';
-  const description = isKorean
-    ? '웹표준 API와 MIT 라이센스 라이브러리를 한눈에 보세요'
-    : 'Web Standard APIs and MIT licensed libraries at a glance';
-
-  return [{ title }, { name: 'description', content: description }];
-};
+export const meta = metaFactory({
+  ko: {
+    title: 'Permissive - 무료 웹개발 도구 모음',
+    description: '웹표준 API와 MIT 라이센스 라이브러리를 한눈에 보세요',
+  },
+  en: {
+    title: 'Permissive - Free Web Dev Tools',
+    description: 'Web Standard APIs and MIT licensed libraries at a glance',
+  },
+});
 
 const trendingLibraries: { name: string; category: string; icon: ReactNode }[] = [
   { name: 'Bun', category: 'Runtime', icon: <Zap size={18} aria-hidden="true" /> },

@@ -1,20 +1,18 @@
+import { metaFactory } from '@soundblue/shared';
 import { BookOpen, FileText, Heart, Home, Info, Pi, Ruler, Search } from 'lucide-react';
 import type { ReactNode } from 'react';
-import type { MetaFunction } from 'react-router';
 import { Link } from 'react-router';
 import { Layout } from '@/components/layout/Layout';
 import { fields } from '@/data/fields';
 import { useI18n } from '@/i18n';
 
-export const meta: MetaFunction = ({ location }) => {
-  const isKorean = location.pathname.startsWith('/ko');
-  const title = isKorean ? '사이트맵 - Roots' : 'Sitemap - Roots';
-  const description = isKorean
-    ? 'Roots 사이트의 모든 페이지와 수학 분야 목록'
-    : 'Complete list of all pages and math fields on Roots';
-
-  return [{ title }, { name: 'description', content: description }];
-};
+export const meta = metaFactory({
+  ko: { title: '사이트맵 - Roots', description: 'Roots 사이트의 모든 페이지와 수학 분야 목록' },
+  en: {
+    title: 'Sitemap - Roots',
+    description: 'Complete list of all pages and math fields on Roots',
+  },
+});
 
 const pages: { path: string; labelEn: string; labelKo: string; icon: ReactNode }[] = [
   { path: '/', labelEn: 'Home', labelKo: '홈', icon: <Home size={18} aria-hidden="true" /> },

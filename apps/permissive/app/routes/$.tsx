@@ -1,16 +1,12 @@
-import type { MetaFunction } from 'react-router';
+import { metaFactory } from '@soundblue/shared';
 import { Link } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import { useI18n } from '../i18n';
 
-export const meta: MetaFunction = ({ location }) => {
-  const isKorean = location.pathname.startsWith('/ko');
-  const title = isKorean
-    ? '404 - 페이지를 찾을 수 없습니다 | Permissive'
-    : '404 - Page Not Found | Permissive';
-
-  return [{ title }];
-};
+export const meta = metaFactory({
+  ko: { title: '404 - 페이지를 찾을 수 없습니다 | Permissive' },
+  en: { title: '404 - Page Not Found | Permissive' },
+});
 
 export default function NotFound() {
   const { locale, localePath } = useI18n();

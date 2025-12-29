@@ -28,6 +28,9 @@ export {
   copyToClipboard,
   DarkModeToggle,
   type DarkModeToggleProps,
+  type EntryCategory,
+  EntryListItem,
+  type EntryListItemProps,
   ErrorBoundary,
   type ErrorBoundaryProps,
   ErrorFallbackUI,
@@ -78,6 +81,7 @@ export {
 export { Input, type InputProps } from './components/ui/input';
 export { Label } from './components/ui/label';
 export { FadeIn, Pressable, ScaleIn, SlideUp, Stagger } from './components/ui/motion';
+export { ProgressBar, type ProgressBarProps } from './components/ui/progress-bar';
 export { VirtualList, type VirtualListProps } from './components/ui/virtual-list';
 
 // Hooks

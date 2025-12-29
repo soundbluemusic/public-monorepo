@@ -1,16 +1,11 @@
-import type { MetaFunction } from 'react-router';
+import { metaFactory } from '@soundblue/shared';
 import { Layout } from '@/components/layout/Layout';
 import { useI18n } from '@/i18n';
 
-export const meta: MetaFunction = ({ location }) => {
-  const locale = location.pathname.startsWith('/ko') ? 'ko' : 'en';
-  const title = locale === 'ko' ? '소개 - 수리' : 'About - Roots';
-  const description =
-    locale === 'ko'
-      ? '수리 소개 - 학습자를 위한 수학 문서'
-      : 'About Roots - Math documentation for learners';
-  return [{ title }, { name: 'description', content: description }];
-};
+export const meta = metaFactory({
+  ko: { title: '소개 - 수리', description: '수리 소개 - 학습자를 위한 수학 문서' },
+  en: { title: 'About - Roots', description: 'About Roots - Math documentation for learners' },
+});
 
 export default function AboutPage() {
   const { t } = useI18n();

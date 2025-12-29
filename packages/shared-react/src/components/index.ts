@@ -1,5 +1,10 @@
 export { DarkModeToggle, type DarkModeToggleProps } from './DarkModeToggle';
 export {
+  type EntryCategory,
+  EntryListItem,
+  type EntryListItemProps,
+} from './EntryListItem';
+export {
   ErrorBoundary,
   type ErrorBoundaryProps,
   ErrorFallbackUI,

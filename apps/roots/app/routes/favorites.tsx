@@ -2,8 +2,8 @@
  * @fileoverview 즐겨찾기 페이지
  */
 
+import { metaFactory } from '@soundblue/shared';
 import { useEffect, useState } from 'react';
-import type { MetaFunction } from 'react-router';
 import { ConceptCard } from '@/components/concept/ConceptCard';
 import { Layout } from '@/components/layout/Layout';
 import type { MathConcept } from '@/data/types';
@@ -11,12 +11,10 @@ import { useI18n } from '@/i18n';
 import { getConceptById } from '@/lib/concepts';
 import { favorites } from '@/lib/db';
 
-export const meta: MetaFunction = ({ location }) => {
-  const locale = location.pathname.startsWith('/ko') ? 'ko' : 'en';
-  const title = locale === 'ko' ? '즐겨찾기 - 수리' : 'Favorites - Roots';
-  const description = locale === 'ko' ? '즐겨찾는 수학 개념' : 'Your favorite math concepts';
-  return [{ title }, { name: 'description', content: description }];
-};
+export const meta = metaFactory({
+  ko: { title: '즐겨찾기 - 수리', description: '즐겨찾는 수학 개념' },
+  en: { title: 'Favorites - Roots', description: 'Your favorite math concepts' },
+});
 
 export default function FavoritesPage() {
   const { t } = useI18n();

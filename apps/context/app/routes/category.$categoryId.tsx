@@ -1,12 +1,11 @@
-import { cn, useAutoAnimate, VirtualList } from '@soundblue/shared-react';
-import { Check } from 'lucide-react';
-import { useCallback, useEffect, useState } from 'react';
+import { EntryListItem, ProgressBar, useAutoAnimate, VirtualList } from '@soundblue/shared-react';
+import { useMemo } from 'react';
 import { Link, useLoaderData } from 'react-router';
 import { Layout } from '@/components/layout';
 import { getCategoryById } from '@/data/categories';
 import type { Category, MeaningEntry } from '@/data/types';
+import { useStudyData } from '@/hooks';
 import { useI18n } from '@/i18n';
-import { studyRecords } from '@/lib/db';
 
 /**
  * Loader: 빌드 시 데이터 로드 (SSG용) - O(1) Map 조회
@@ -29,17 +28,35 @@ export default function CategoryPage() {
     entries: MeaningEntry[];
   }>();
   const { locale, t, localePath } = useI18n();
-  const [studiedIds, setStudiedIds] = useState<Set<string>>(new Set());
 
-  // Load studied words
-  useEffect(() => {
-    async function loadStudied() {
-      const ids = await studyRecords.getStudiedEntryIds();
-      setStudiedIds(new Set(ids));
-    }
-    loadStudied();
-  }, []);
+  // Study data from custom hook
+  const { studiedIds } = useStudyData({ totalEntries: entries.length });
 
+  // Auto-animate for header section - must be before early return
+  const [headerRef] = useAutoAnimate<HTMLDivElement>();
+
+  // Memoized render function - must be before early return
+  const renderItem = useMemo(
+    () => (entry: MeaningEntry) => {
+      const translation = entry.translations[locale];
+      const isStudied = studiedIds.has(entry.id);
+
+      return (
+        <EntryListItem
+          entryId={entry.id}
+          korean={entry.korean}
+          romanization={entry.romanization}
+          translation={translation.word}
+          isStudied={isStudied}
+          locale={locale}
+          localePath={localePath}
+        />
+      );
+    },
+    [locale, studiedIds, localePath],
+  );
+
+  // Early return for missing category - after all hooks
   if (!category) {
     return (
       <Layout>
@@ -58,9 +75,6 @@ export default function CategoryPage() {
 
   const studiedCount = entries.filter((e) => studiedIds.has(e.id)).length;
 
-  // Auto-animate for header section
-  const [headerRef] = useAutoAnimate<HTMLDivElement>();
-
   return (
     <Layout>
       <div ref={headerRef} className="mb-8">
@@ -74,12 +88,7 @@ export default function CategoryPage() {
 
         {/* Progress bar */}
         {studiedCount > 0 && (
-          <div className="w-full h-2 rounded-full overflow-hidden bg-(--bg-secondary) mt-3">
-            <div
-              className="h-full bg-(--accent-primary) transition-all duration-300"
-              style={{ width: `${(studiedCount / entries.length) * 100}%` }}
-            />
-          </div>
+          <ProgressBar value={studiedCount} max={entries.length} className="mt-3" />
         )}
       </div>
 
@@ -89,51 +98,7 @@ export default function CategoryPage() {
         estimateSize={52}
         className="h-150"
         overscan={5}
-        renderItem={useCallback(
-          (entry: MeaningEntry) => {
-            const translation = entry.translations[locale];
-            const isStudied = studiedIds.has(entry.id);
-
-            return (
-              <Link
-                to={localePath(`/entry/${entry.id}`)}
-                className="flex items-center justify-between py-3 px-2 rounded-lg border-b border-(--border-primary) transition-colors no-underline hover:bg-(--bg-tertiary)"
-              >
-                <div className="flex items-center gap-3 flex-1 min-w-0">
-                  {/* Checkmark */}
-                  <div
-                    className={cn(
-                      'w-5 h-5 rounded-full flex items-center justify-center shrink-0',
-                      isStudied ? 'bg-(--accent-primary)' : '',
-                    )}
-                  >
-                    {isStudied && <Check size={14} className="text-white" />}
-                  </div>
-
-                  {/* Word info */}
-                  <div className="flex items-center gap-3 flex-1 min-w-0">
-                    <span
-                      className={cn(
-                        'text-lg font-medium',
-                        isStudied
-                          ? 'text-(--text-secondary) line-through opacity-70'
-                          : 'text-(--text-primary)',
-                      )}
-                    >
-                      {entry.korean}
-                    </span>
-                    <span className="text-sm text-(--text-tertiary)">{entry.romanization}</span>
-                  </div>
-                </div>
-
-                <span className="text-sm text-(--text-secondary) shrink-0 ml-2">
-                  {translation.word}
-                </span>
-              </Link>
-            );
-          },
-          [locale, studiedIds, localePath],
-        )}
+        renderItem={renderItem}
       />
 
       {entries.length === 0 && (

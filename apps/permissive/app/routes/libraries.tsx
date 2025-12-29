@@ -1,8 +1,7 @@
-import { LIMITS } from '@soundblue/shared';
+import { LIMITS, metaFactory } from '@soundblue/shared';
 import { cn, FadeIn, useAutoAnimate } from '@soundblue/shared-react';
 import { CalendarPlus, Flame, Search, Star } from 'lucide-react';
 import { useMemo, useState } from 'react';
-import type { MetaFunction } from 'react-router';
 import { useLoaderData, useSearchParams } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import { type CategoryFilter, categories, type Library, libraries } from '../data/libraries';
@@ -20,15 +19,10 @@ export async function loader() {
   };
 }
 
-export const meta: MetaFunction = ({ location }) => {
-  const isKorean = location.pathname.startsWith('/ko');
-  const title = 'Libraries - Permissive';
-  const description = isKorean
-    ? 'MIT 라이센스 오픈소스 라이브러리'
-    : 'MIT licensed open source libraries';
-
-  return [{ title }, { name: 'description', content: description }];
-};
+export const meta = metaFactory({
+  ko: { title: 'Libraries - Permissive', description: 'MIT 라이센스 오픈소스 라이브러리' },
+  en: { title: 'Libraries - Permissive', description: 'MIT licensed open source libraries' },
+});
 
 export default function LibrariesPage() {
   const { libraries: libs, categories: cats } = useLoaderData<{

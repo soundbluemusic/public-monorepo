@@ -65,6 +65,13 @@ export {
   filterBySearch,
   sanitizeSearchQuery,
 } from './search';
+// Meta utilities for React Router
+export {
+  dynamicMetaFactory,
+  type LocalizedMeta,
+  type MetaData,
+  metaFactory,
+} from './utils/meta';
 // Validation utilities
 export {
   isReservedName,
