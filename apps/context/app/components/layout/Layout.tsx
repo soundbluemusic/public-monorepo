@@ -62,8 +62,8 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
         className={cn(
           'flex-1 w-full px-4 py-6 pb-20 md:pb-6',
           'pt-(--header-height)',
-          // Desktop: offset for fixed sidebar
-          'md:pl-[calc(18rem+1rem)] md:pr-4',
+          // Desktop: offset for fixed sidebar (18rem sidebar + 1rem gap = 19rem = 76 in Tailwind)
+          'md:pl-76 md:pr-4',
           'max-w-[calc(48rem+18rem+2rem)] mx-auto',
         )}
       >
