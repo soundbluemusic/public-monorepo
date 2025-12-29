@@ -19,11 +19,14 @@ import { useI18n } from '@/i18n';
  * - 경량 LightEntry: ~100KB (gzip ~35KB) - 약 85% 절감
  *
  * Pre-sorted arrays와 index maps를 로드하여 런타임 정렬 제거
+ *
+ * 100만개+ 확장성:
+ * - entriesByCategory 제거 (turbo-stream 직렬화 문제 + 메모리 비효율)
+ * - 카테고리별 데이터는 /data/by-category/{categoryId}.json에서 동적 fetch
  */
 export async function loader() {
   const {
     lightEntries,
-    lightEntriesByCategory,
     lightEntriesSortedAlphabetically,
     lightEntriesSortedByCategory,
     lightEntriesSortedRecent,
@@ -33,7 +36,6 @@ export async function loader() {
   } = await import('@/data/entries');
   return {
     entries: lightEntries,
-    entriesByCategory: Object.fromEntries(lightEntriesByCategory),
     sortedArrays: {
       alphabetical: lightEntriesSortedAlphabetically,
       category: lightEntriesSortedByCategory,
@@ -61,7 +63,6 @@ type SortOption = 'alphabetical' | 'category' | 'recent';
 // Loader 반환 타입 (경량 버전 사용)
 interface LoaderData {
   entries: LightEntry[];
-  entriesByCategory: Record<string, LightEntry[]>;
   sortedArrays: {
     alphabetical: LightEntry[];
     category: LightEntry[];
@@ -79,13 +80,16 @@ interface LoaderData {
 export default function BrowsePage() {
   const {
     entries,
-    entriesByCategory,
     sortedArrays,
     sortIndices,
     categories: cats,
     totalEntries,
   } = useLoaderData<LoaderData>();
   const { locale, localePath } = useI18n();
+
+  // 카테고리별 동적 로드 상태 (100만개+ 확장성)
+  const [categoryEntries, setCategoryEntries] = useState<LightEntry[] | null>(null);
+  const [isLoadingCategory, setIsLoadingCategory] = useState(false);
 
   // Study data from custom hook
   const { studiedIds, favoriteIds, overallProgress, todayStudied, bookmarkCount, isLoading } =
@@ -129,22 +133,48 @@ export default function BrowsePage() {
     }
   }, [searchParams, cats]);
 
+  // 카테고리 변경 시 해당 청크 동적 로드 (100만개+ 확장성)
+  useEffect(() => {
+    if (filterCategory === 'all') {
+      setCategoryEntries(null);
+      setIsLoadingCategory(false);
+      return;
+    }
+
+    setIsLoadingCategory(true);
+    fetch(`/data/by-category/${filterCategory}.json`)
+      .then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
+      .then((data: LightEntry[]) => {
+        setCategoryEntries(data);
+        setIsLoadingCategory(false);
+      })
+      .catch(() => {
+        setCategoryEntries([]);
+        setIsLoadingCategory(false);
+      });
+  }, [filterCategory]);
+
   /**
    * 최적화된 필터링 + 정렬 로직
    *
-   * 기존: O(n) 필터 × 3 + O(n log n) 정렬 = ~O(n log n) 매번
-   * 개선: O(1) 카테고리 조회 + O(n) 필터 1회 + O(n) 인덱스 정렬
-   *
-   * 10,000개 항목 기준:
-   * - 기존: ~130,000 비교 (정렬만)
-   * - 개선: ~10,000 비교 (인덱스 조회)
+   * 100만개+ 확장성:
+   * - 카테고리 필터: 동적 fetch된 categoryEntries 사용
+   * - 전체: pre-sorted 배열 사용
+   * - 학습 상태: O(n) 필터 1회 (Set.has O(1))
+   * - 정렬: 인덱스 맵으로 O(n) (비교 기반 O(n log n) 대신)
    */
   const filteredEntries = useMemo(() => {
-    // 1. 카테고리 필터: O(1) Map 조회 또는 pre-sorted 배열 사용
+    // 1. 카테고리 필터: 동적 로드된 데이터 또는 pre-sorted 배열
     let baseArray: LightEntry[];
     if (filterCategory !== 'all') {
-      // O(1) 카테고리별 사전 그룹화된 배열 조회
-      baseArray = entriesByCategory[filterCategory] || [];
+      // 동적 fetch된 카테고리 데이터 사용
+      if (isLoadingCategory || categoryEntries === null) {
+        return []; // 로딩 중이거나 아직 데이터 없음
+      }
+      baseArray = categoryEntries;
     } else {
       // 정렬 옵션에 맞는 pre-sorted 배열 선택 (이미 정렬됨)
       baseArray = sortedArrays[sortBy];
@@ -180,7 +210,8 @@ export default function BrowsePage() {
     filterCategory,
     filterStatus,
     sortBy,
-    entriesByCategory,
+    categoryEntries,
+    isLoadingCategory,
     sortedArrays,
     sortIndices,
     studiedIds,
@@ -224,6 +255,32 @@ export default function BrowsePage() {
 
   // Auto-animate for stats grid
   const [statsRef] = useAutoAnimate<HTMLDivElement>();
+
+  // renderItem 콜백 (useCallback은 최상위에서 호출해야 함)
+  const renderEntryItem = useCallback(
+    (entry: LightEntry) => {
+      // LightEntry에서 직접 word 접근 (경량 버전)
+      const translation = entry.word[locale];
+      const isStudied = studiedIds.has(entry.id);
+      const isFavorite = favoriteIds.has(entry.id);
+      const category = cats.find((c) => c.id === entry.categoryId);
+
+      return (
+        <EntryListItem
+          entryId={entry.id}
+          korean={entry.korean}
+          romanization={entry.romanization}
+          translation={translation}
+          isStudied={isStudied}
+          isFavorite={isFavorite}
+          category={category}
+          locale={locale}
+          localePath={localePath}
+        />
+      );
+    },
+    [locale, studiedIds, favoriteIds, cats, localePath],
+  );
 
   return (
     <Layout>
@@ -352,46 +409,33 @@ export default function BrowsePage() {
       {/* Results Count */}
       <div className="mb-4">
         <p className="text-sm text-(--text-secondary)">
-          {locale === 'ko'
-            ? `${filteredEntries.length}개의 단어`
-            : `${filteredEntries.length} words`}
+          {isLoadingCategory
+            ? locale === 'ko'
+              ? '로딩 중...'
+              : 'Loading...'
+            : locale === 'ko'
+              ? `${filteredEntries.length}개의 단어`
+              : `${filteredEntries.length} words`}
         </p>
       </div>
 
       {/* Word List - VirtualList for 751+ items */}
-      <VirtualList
-        key={`${filterCategory}-${filterStatus}-${sortBy}`}
-        items={filteredEntries}
-        estimateSize={52}
-        className="h-150"
-        overscan={5}
-        renderItem={useCallback(
-          (entry: LightEntry) => {
-            // LightEntry에서 직접 word 접근 (경량 버전)
-            const translation = entry.word[locale];
-            const isStudied = studiedIds.has(entry.id);
-            const isFavorite = favoriteIds.has(entry.id);
-            const category = cats.find((c) => c.id === entry.categoryId);
+      {isLoadingCategory ? (
+        <div className="h-150 flex items-center justify-center text-(--text-tertiary)">
+          <p>{locale === 'ko' ? '카테고리 로딩 중...' : 'Loading category...'}</p>
+        </div>
+      ) : (
+        <VirtualList
+          key={`${filterCategory}-${filterStatus}-${sortBy}`}
+          items={filteredEntries}
+          estimateSize={52}
+          className="h-150"
+          overscan={5}
+          renderItem={renderEntryItem}
+        />
+      )}
 
-            return (
-              <EntryListItem
-                entryId={entry.id}
-                korean={entry.korean}
-                romanization={entry.romanization}
-                translation={translation}
-                isStudied={isStudied}
-                isFavorite={isFavorite}
-                category={category}
-                locale={locale}
-                localePath={localePath}
-              />
-            );
-          },
-          [locale, studiedIds, favoriteIds, cats, localePath],
-        )}
-      />
-
-      {filteredEntries.length === 0 && (
+      {!isLoadingCategory && filteredEntries.length === 0 && (
         <div className="text-center py-12 px-4 text-(--text-tertiary)">
           <p>{locale === 'ko' ? '단어가 없습니다' : 'No words found'}</p>
         </div>

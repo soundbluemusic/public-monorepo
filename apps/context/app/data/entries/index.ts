@@ -91,13 +91,9 @@ export const recentIndex = new Map<string, number>(entriesSortedRecent.map((e, i
 // 경량 버전 (LightEntry) - browse 페이지 최적화용
 // ============================================================================
 
-/** 경량 버전 카테고리별 그룹 */
-export const lightEntriesByCategory = new Map<string, LightEntry[]>();
-for (const entry of lightEntries) {
-  const list = lightEntriesByCategory.get(entry.categoryId) || [];
-  list.push(entry);
-  lightEntriesByCategory.set(entry.categoryId, list);
-}
+// NOTE: lightEntriesByCategory 제거됨 (100만개+ 확장성)
+// 카테고리별 데이터는 /public/data/by-category/{categoryId}.json에서 동적 fetch
+// 참고: scripts/load-entries.ts의 generateCategoryChunks()
 
 /** 경량 버전 정렬 배열 */
 export const lightEntriesSortedAlphabetically: LightEntry[] = [...lightEntries].sort((a, b) =>

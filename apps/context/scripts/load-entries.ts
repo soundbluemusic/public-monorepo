@@ -19,6 +19,7 @@ const ENTRIES_DIR = join(__dirname, '../app/data/entries');
 const OUTPUT_FILE = join(__dirname, '../app/data/generated/entries.ts');
 const EXPRESSIONS_FILE = join(__dirname, '../app/data/generated/korean-expressions.ts');
 const CHUNKS_DIR = join(__dirname, '../public/data/chunks');
+const CATEGORY_CHUNKS_DIR = join(__dirname, '../public/data/by-category');
 const TRIE_FILE = join(__dirname, '../public/data/trie.bin');
 const INDEX_FILE = join(__dirname, '../app/data/generated/entry-index.ts');
 
@@ -507,6 +508,59 @@ export function getChunkUrl(choseong: string): string {
 }
 
 /**
+ * 카테고리별 JSON 청크 파일 생성
+ * 100만개+ 확장성 지원 - 카테고리 선택 시 동적 fetch
+ */
+function generateCategoryChunks(entries: JsonEntry[]): void {
+  // 카테고리 청크 디렉토리 생성
+  if (!existsSync(CATEGORY_CHUNKS_DIR)) {
+    mkdirSync(CATEGORY_CHUNKS_DIR, { recursive: true });
+  }
+
+  console.log('\n📦 Generating JSON chunks by category...');
+
+  // 카테고리별 그룹화
+  const byCategory = new Map<string, LightEntry[]>();
+  for (const entry of entries) {
+    const list = byCategory.get(entry.categoryId) || [];
+    list.push({
+      id: entry.id,
+      korean: entry.korean,
+      romanization: entry.romanization,
+      categoryId: entry.categoryId,
+      word: {
+        ko: entry.translations.ko.word,
+        en: entry.translations.en.word,
+      },
+    });
+    byCategory.set(entry.categoryId, list);
+  }
+
+  // 각 카테고리 JSON 파일 생성
+  for (const [categoryId, catEntries] of byCategory) {
+    const filename = `${categoryId}.json`;
+    const filepath = join(CATEGORY_CHUNKS_DIR, filename);
+    writeFileSync(filepath, JSON.stringify(catEntries));
+    console.log(`   ✓ by-category/${filename} (${catEntries.length} entries)`);
+  }
+
+  // 메타 정보 저장
+  const meta = {
+    totalEntries: entries.length,
+    categories: Array.from(byCategory.entries()).map(([id, entries]) => ({
+      id,
+      count: entries.length,
+      file: `${id}.json`,
+    })),
+    generatedAt: new Date().toISOString(),
+  };
+  writeFileSync(join(CATEGORY_CHUNKS_DIR, 'meta.json'), JSON.stringify(meta, null, 2));
+
+  console.log(`   ✓ meta.json`);
+  console.log(`✅ Generated ${byCategory.size} category chunk files`);
+}
+
+/**
  * Binary Trie 생성 (JSON 대비 ~83% 용량 절감)
  */
 function generateBinaryTrie(entries: JsonEntry[]): void {
@@ -679,6 +733,7 @@ export const jsonEntriesCount = 0;
 
   // 100만개+ 확장성: 청크 및 Binary Trie 생성
   generateChunks(entries);
+  generateCategoryChunks(entries);
   generateBinaryTrie(entries);
 
   console.log('\n🎉 All files generated successfully!\n');
