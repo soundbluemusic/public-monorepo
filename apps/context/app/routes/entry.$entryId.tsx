@@ -1,31 +1,37 @@
-import { cn } from '@soundblue/shared-react';
+import { cn, Skeleton } from '@soundblue/shared-react';
 import { Bookmark, BookmarkCheck, Check } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { Link, useLoaderData, useParams } from 'react-router';
+import { Link, useParams } from 'react-router';
 import { LinkedExample } from '@/components/LinkedExample';
 import { Layout } from '@/components/layout';
-import type { MeaningEntry } from '@/data/types';
+import { useEntryLoader } from '@/hooks/useEntryLoader';
 import { useI18n } from '@/i18n';
 import { favorites, studyRecords } from '@/lib/db';
 
 /**
- * Loader: 빌드 시 데이터 로드 (SSG용) - O(1) Map 조회
- * 동적 import로 번들 크기 최적화 - 빌드 시에만 데이터 로드
+ * Entry 페이지 (100만개+ 확장성)
+ *
+ * ## SPA 모드 (hybrid)
+ * - SSG 프리렌더 없음 → loader 없음
+ * - 클라이언트에서 청크 파일 동적 fetch
+ * - useEntryLoader 훅 사용
+ *
+ * ## Full SSG 모드 (SSG_MODE=full)
+ * - react-router.config.ts에서 모든 entry 경로 프리렌더
+ * - 이 경우 별도 loader 파일 사용 권장
  */
-export async function loader({ params }: { params: { entryId: string } }) {
-  const { getEntryById } = await import('@/data/entries');
-  const entry = getEntryById(params.entryId);
-  return { entry: entry || null };
-}
 
 export function meta() {
   return [{ title: 'Entry - Context' }];
 }
 
 export default function EntryPage() {
-  const { entry } = useLoaderData<{ entry: MeaningEntry | null }>();
   const { entryId } = useParams();
   const { locale, t, localePath } = useI18n();
+
+  // 동적 로딩 훅 (청크에서 fetch)
+  const { entry, isLoading, error } = useEntryLoader(entryId);
+
   const [isStudied, setIsStudied] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
 
@@ -53,11 +59,34 @@ export default function EntryPage() {
     setIsFavorite(newState);
   };
 
-  if (!entry) {
+  // 로딩 상태
+  if (isLoading) {
+    return (
+      <Layout>
+        <div className="animate-pulse">
+          <div className="mb-8">
+            <Skeleton className="h-10 w-48 mb-2" />
+            <Skeleton className="h-6 w-32" />
+          </div>
+          <div className="mb-6">
+            <Skeleton className="h-6 w-24 mb-2" />
+            <Skeleton className="h-4 w-64" />
+          </div>
+          <div className="mb-6">
+            <Skeleton className="h-6 w-24 mb-2" />
+            <Skeleton className="h-20 w-full" />
+          </div>
+        </div>
+      </Layout>
+    );
+  }
+
+  // 에러 또는 없는 엔트리
+  if (error || !entry) {
     return (
       <Layout>
         <div className="text-center py-12 px-4 text-(--text-tertiary)">
-          <p className="text-(--text-secondary)">{t('entryNotFound')}</p>
+          <p className="text-(--text-secondary)">{error ? error.message : t('entryNotFound')}</p>
           <Link
             to={localePath('/')}
             className="text-(--accent-primary) hover:underline mt-4 inline-block"

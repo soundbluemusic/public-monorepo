@@ -34,8 +34,11 @@
  */
 
 // JSON에서 생성된 엔트리 (prebuild 스크립트에서 생성됨)
-import { jsonEntries } from '../generated/entries';
+import { jsonEntries, type LightEntry, lightEntries } from '../generated/entries';
 import type { Language, MeaningEntry } from '../types';
+
+// Re-export 경량 버전
+export { lightEntries, type LightEntry };
 
 // 모든 엔트리 (JSON에서 로드됨)
 export const meaningEntries: MeaningEntry[] = jsonEntries;
@@ -54,6 +57,59 @@ for (const entry of meaningEntries) {
   list.push(entry);
   entriesByCategory.set(entry.categoryId, list);
 }
+
+// ============================================================================
+// Pre-sorted arrays for O(1) access (빌드 시 1회 정렬)
+// ============================================================================
+
+/** 가나다순 정렬 (사전 계산) */
+export const entriesSortedAlphabetically: MeaningEntry[] = [...meaningEntries].sort((a, b) =>
+  a.korean.localeCompare(b.korean, 'ko'),
+);
+
+/** 카테고리순 정렬 (사전 계산) */
+export const entriesSortedByCategory: MeaningEntry[] = [...meaningEntries].sort((a, b) => {
+  if (a.categoryId === b.categoryId) {
+    return a.korean.localeCompare(b.korean, 'ko');
+  }
+  return a.categoryId.localeCompare(b.categoryId);
+});
+
+/** 최근순 (역순) */
+export const entriesSortedRecent: MeaningEntry[] = [...meaningEntries].reverse();
+
+/** ID → 정렬 인덱스 (필터링 후 정렬 유지용) */
+export const alphabeticalIndex = new Map<string, number>(
+  entriesSortedAlphabetically.map((e, i) => [e.id, i]),
+);
+export const categoryIndex = new Map<string, number>(
+  entriesSortedByCategory.map((e, i) => [e.id, i]),
+);
+export const recentIndex = new Map<string, number>(entriesSortedRecent.map((e, i) => [e.id, i]));
+
+// ============================================================================
+// 경량 버전 (LightEntry) - browse 페이지 최적화용
+// ============================================================================
+
+/** 경량 버전 카테고리별 그룹 */
+export const lightEntriesByCategory = new Map<string, LightEntry[]>();
+for (const entry of lightEntries) {
+  const list = lightEntriesByCategory.get(entry.categoryId) || [];
+  list.push(entry);
+  lightEntriesByCategory.set(entry.categoryId, list);
+}
+
+/** 경량 버전 정렬 배열 */
+export const lightEntriesSortedAlphabetically: LightEntry[] = [...lightEntries].sort((a, b) =>
+  a.korean.localeCompare(b.korean, 'ko'),
+);
+export const lightEntriesSortedByCategory: LightEntry[] = [...lightEntries].sort((a, b) => {
+  if (a.categoryId === b.categoryId) {
+    return a.korean.localeCompare(b.korean, 'ko');
+  }
+  return a.categoryId.localeCompare(b.categoryId);
+});
+export const lightEntriesSortedRecent: LightEntry[] = [...lightEntries].reverse();
 
 /**
  * ID로 엔트리 조회 (O(1))

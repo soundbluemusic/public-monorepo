@@ -1,1 +1,1 @@
-export { default, loader, meta } from './entry.$entryId';
+export { default, meta } from './entry.$entryId';
