@@ -1,4 +1,4 @@
-import { paraglide } from '@inlang/paraglide-vite';
+import { paraglideVitePlugin as paraglide } from '@inlang/paraglide-js';
 import { reactRouter } from '@react-router/dev/vite';
 import tailwindcss from '@tailwindcss/vite';
 import { visualizer } from 'rollup-plugin-visualizer';
