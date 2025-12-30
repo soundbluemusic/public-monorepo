@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 [![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?logo=react-router)](https://reactrouter.com)
 [![100% SSG](https://img.shields.io/badge/100%25-SSG-brightgreen)](https://en.wikipedia.org/wiki/Static_site_generator)
-[![SSG Routes](https://img.shields.io/badge/SSG_Routes-8-blue)](react-router.config.ts)
+[![SSG Routes](https://img.shields.io/badge/SSG_Routes-184-blue)](react-router.config.ts)
 
 **[Live Site](https://permissive.soundbluemusic.com)**
 
@@ -15,9 +15,9 @@
 
 A comprehensive collection of free web development resources:
 
-- **100+ Libraries** - MIT/OSS licensed libraries
-- **58 Web APIs** - Browser built-in APIs
-- **No tutorials** - Just a clean, organized list
+- **88 Libraries** - MIT/OSS licensed libraries with detail pages
+- **56 Web APIs** - Browser built-in APIs
+- **Search** - MiniSearch-based instant search
 
 ---
 
@@ -28,67 +28,53 @@ A comprehensive collection of free web development resources:
 ```
 react-router.config.ts
 ├── ssr: false
-├── prerender() → 8 static routes (hardcoded)
+├── prerender() → 184 static routes generated
+│   ├── Static routes from routes.ts (extractStaticRoutes)
+│   └── Library detail routes from data (88 × 2 langs)
 └── loader() functions → .data files for each route
 
 Build output (build/client/):
 ├── index.html, ko/index.html
-├── web-api.html, ko/web-api.html
-├── libraries.html, ko/libraries.html
+├── libraries/index.html, ko/libraries/index.html
+├── library/{slug}/index.html (88 libraries × 2 langs)
 └── *.data files
 ```
 
-### Data Architecture (다른 앱과의 차이)
-
-⚠️ **Note:** Unlike Context and Roots, Permissive embeds data directly in route files:
+### Data Architecture
 
 ```
-Context/Roots:    data/*.json → loader() → component
-Permissive:       routes/web-api.tsx (data embedded, 31KB)
-                  routes/libraries.tsx (data embedded, 47KB)
-```
+data/permissive/          # Centralized JSON (SSoT)
+├── libraries.json        # 88 libraries
+└── web-apis.json         # 56 Web APIs
 
-This is a known architectural inconsistency. See [CODE_DUPLICATION_REPORT.md](../../CODE_DUPLICATION_REPORT.md).
+app/data/
+├── libraries.ts          # TypeScript wrapper with types
+└── web-apis.ts           # TypeScript wrapper with types
+```
 
 ---
 
 ## Routes (라우트 구조)
 
-| Route | EN | KO | Description |
-|:------|:--:|:--:|:------------|
-| `/` | ✓ | ✓ | Home |
-| `/web-api` | ✓ | ✓ | Web Standard APIs (58 items) |
-| `/libraries` | ✓ | ✓ | MIT Libraries (100+ items) |
+| Route | EN | KO | Dynamic | Description |
+|:------|:--:|:--:|:-------:|:------------|
+| `/` | ✓ | ✓ | - | Home with search |
+| `/libraries` | ✓ | ✓ | - | Libraries list |
+| `/library/:slug` | ✓ | ✓ | 88 | Library detail page |
+| `/sitemap` | ✓ | ✓ | - | Sitemap |
 
-**Total:** 8 SSG routes (including `/ko` variants)
+**Total:** 184 SSG routes (92 EN + 92 KO)
 
 ---
 
-## Data Structure (데이터 구조)
+## Features (기능)
 
-```
-app/
-├── routes/
-│   ├── web-api.tsx    # 58 Web APIs (data embedded)
-│   └── libraries.tsx  # 100+ libraries (data embedded)
-└── lib/               # Empty (no separate lib folder)
-```
-
-### Embedded Data Schema
-
-```typescript
-// routes/web-api.tsx
-const webApis: Record<string, WebApi> = {
-  'fetch': {
-    name: 'Fetch API',
-    description: 'Modern HTTP requests',
-    descriptionKo: '최신 HTTP 요청',
-    category: 'Network',
-    mdn: 'https://developer.mozilla.org/...',
-  },
-  // ... 58 APIs
-};
-```
+| Feature | Implementation |
+|:--------|:---------------|
+| 🔍 Search | MiniSearch (useSearchWorker) |
+| 📱 PWA | vite-plugin-pwa |
+| 🌙 Dark Mode | localStorage + CSS variables |
+| 🌐 i18n | URL-based (`/ko/*`) + Paraglide |
 
 ---
 
@@ -96,21 +82,10 @@ const webApis: Record<string, WebApi> = {
 
 | Feature | Context | Roots | Permissive |
 |:--------|:-------:|:-----:|:----------:|
-| SSG Routes | 1578 | 878 | 8 |
-| Search | ✓ useMemo | ✓ Fuse.js | ❌ |
+| SSG Routes | 2012 | 976 | 184 |
+| Search | ✓ MiniSearch | ✓ MiniSearch | ✓ MiniSearch |
 | Favorites | ✓ | ✓ | ❌ |
-| Back to Top | ✓ | ✓ | ❌ |
-| Separate data folder | ✓ | ✓ | ❌ |
-| lib/ folder | ✓ | ✓ | ❌ |
-
----
-
-## Known Issues
-
-1. **No search/filter** - Data is rendered as static list
-2. **Data embedded in routes** - Not following monorepo patterns
-3. **No lib/ folder** - Unlike other apps
-4. **No Back to Top button** - See [BUTTON_TESTING_REPORT.md](../../BUTTON_TESTING_REPORT.md)
+| Detail pages | ✓ | ✓ | ✓ |
 
 ---
 
@@ -144,8 +119,8 @@ pnpm build:permissive
 
 ```typescript
 // ❌ NEVER - 테스트 통과/에러 회피용
-const API_COUNT = 58;  // Magic number
-return apis.length || 58;
+const API_COUNT = 56;  // Magic number
+return apis.length || 56;
 
 // ✅ ALLOWED - 우수한 설계
 export const LICENSE_TYPES = ['MIT', 'Apache-2.0', 'BSD'] as const;

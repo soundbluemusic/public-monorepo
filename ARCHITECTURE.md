@@ -191,57 +191,6 @@ import { cn, preloadImage } from '@soundblue/ui/utils';
 
 ---
 
-### Legacy Packages (레거시 패키지)
-
-#### @soundblue/shared (Deprecated)
-`@soundblue/core`, `@soundblue/i18n`, `@soundblue/seo`로 마이그레이션 중.
-
-현재 역할:
-- 빌드 스크립트용 paraglide-generator
-- 사이트맵 생성 유틸리티
-- Tailwind CSS 설정
-
-#### @soundblue/shared-react (Deprecated)
-`@soundblue/ui`, `@soundblue/features`, `@soundblue/pwa`로 마이그레이션 중.
-
----
-
-## Migration Guide (마이그레이션 가이드)
-
-### Before → After
-
-```typescript
-// ❌ Old imports (deprecated)
-import { cn, useAutoAnimate } from '@soundblue/shared-react';
-import { metaFactory, LIMITS } from '@soundblue/shared';
-
-// ✅ New imports
-import { cn } from '@soundblue/ui/utils';
-import { useAutoAnimate } from '@soundblue/ui/hooks';
-import { metaFactory } from '@soundblue/seo/meta';
-import { LIMITS } from '@soundblue/core/validation';
-```
-
-### Module Migration Table
-
-| Old Import | New Import |
-|------------|------------|
-| `@soundblue/shared-react` → `cn` | `@soundblue/ui/utils` |
-| `@soundblue/shared-react` → `useAutoAnimate` | `@soundblue/ui/hooks` |
-| `@soundblue/shared-react` → `useSearchWorker` | `@soundblue/search/react` |
-| `@soundblue/shared-react` → `DarkModeToggle` | `@soundblue/ui/components` |
-| `@soundblue/shared-react` → `LanguageToggle` | `@soundblue/ui/components` |
-| `@soundblue/shared-react` → `Toast` | `@soundblue/ui/feedback` |
-| `@soundblue/shared-react` → `OfflineIndicator` | `@soundblue/pwa/react` |
-| `@soundblue/shared-react` → `useSettingsStore` | `@soundblue/features/settings` |
-| `@soundblue/shared` → `LIMITS` | `@soundblue/core/validation` |
-| `@soundblue/shared` → `metaFactory` | `@soundblue/seo/meta` |
-| `@soundblue/shared` → `stripLocaleFromPath` | `@soundblue/i18n` |
-| `@soundblue/shared` → `extractStaticRoutes` | `@soundblue/i18n` |
-| `@soundblue/shared-react/styles/base.css` | `@soundblue/ui/styles/base.css` |
-
----
-
 ## Environment Tags (환경 태그)
 
 각 모듈은 실행 환경을 명시합니다:
@@ -293,10 +242,10 @@ apps/permissive ──────┘    @soundblue/pwa
 
 ## Version History (변경 이력)
 
-### v2.0.0 (2024-12-30)
-- 패키지 6개 → 12개 모듈화
+### v2.0.0 (2025-12-31)
+- 패키지 6개 → 10개 모듈화
 - 레이어 시스템 도입 (Layer 0-3)
-- shared, shared-react 레거시로 전환
+- shared, shared-react 삭제 완료
 - 새 패키지: config, platform, seo, pwa, features, ui
 
 ### v1.0.0 (Initial)

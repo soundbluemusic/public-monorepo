@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Node](https://img.shields.io/badge/Node-%3E%3D20-green.svg)](https://nodejs.org)
-[![pnpm](https://img.shields.io/badge/pnpm-10.0.0-orange.svg)](https://pnpm.io)
+[![pnpm](https://img.shields.io/badge/pnpm-10.11.0-orange.svg)](https://pnpm.io)
 [![100% SSG](https://img.shields.io/badge/100%25-SSG-brightgreen)](https://en.wikipedia.org/wiki/Static_site_generator)
 
 ---
@@ -57,8 +57,8 @@ React Router v7의 `prerender()` + `loader()` 패턴으로 빌드 시 데이터�
 
 | App | Dynamic Routes (동적 라우트) | SSG Pages | Data Source |
 |:---:|:----------------------------|:---------:|:------------|
-| **Context** | 751 entries + 21 categories + 7 conversations | 1578개 | JSON 배열 |
-| **Roots** | 414 concepts + 18 fields | 878개 | TypeScript 모듈 |
+| **Context** | 978 entries + 21 categories + 7 conversations | 2012개 | JSON 배열 |
+| **Roots** | 438 concepts + 50 fields | 976개 | TypeScript 모듈 |
 | **Permissive** | 4 static routes | 8개 | 배열 리터럴 |
 
 ```typescript
@@ -96,7 +96,7 @@ public-monorepo/
 │   ├── permissive/    →  Web dev resources (8 SSG routes)
 │   └── roots/         →  Math documentation (878 SSG routes)
 │
-├── packages/          →  12 modular packages (Layer 0-3)
+├── packages/          →  10 modular packages (Layer 0-3)
 │   ├── core/          →  [L0] Pure functions, validation, types
 │   ├── config/        →  [L0] Vite, Tailwind configurations
 │   ├── data/          →  [L1] Zod schemas, data loaders
@@ -106,14 +106,12 @@ public-monorepo/
 │   ├── seo/           →  [L2] Meta factory, sitemap generator
 │   ├── pwa/           →  [L2] Service worker, offline indicator
 │   ├── features/      →  [L3] Business logic hooks (settings, toast)
-│   ├── ui/            →  [L3] React components, animations
-│   ├── shared/        →  [Legacy] Re-exports → being deprecated
-│   └── shared-react/  →  [Legacy] Re-exports → being deprecated
+│   └── ui/            →  [L3] React components, animations
 │
 ├── data/              →  Centralized JSON data (SSoT)
-│   ├── context/       →  751 Korean dictionary entries
+│   ├── context/       →  978 Korean dictionary entries
 │   ├── roots/         →  438 math concepts (50 fields)
-│   └── permissive/    →  80 libraries, 56 Web APIs
+│   └── permissive/    →  88 libraries, 56 Web APIs
 │
 └── package.json       →  Root config
 ```
@@ -225,10 +223,7 @@ pnpm dev:roots          # → http://localhost:3005
 
 | Document | Status | Description |
 |:---------|:------:|:------------|
-| [ARCHITECTURE.md](ARCHITECTURE.md) | ✅ v2.0 | Package layer design (12 packages) |
-| [CODE_DUPLICATION_REPORT.md](CODE_DUPLICATION_REPORT.md) | ✅ Complete | Code duplication resolved |
-| [BUTTON_TESTING_REPORT.md](BUTTON_TESTING_REPORT.md) | ✅ 100% pass | E2E test results |
-| [DESIGN_PRINCIPLES_REPORT.md](DESIGN_PRINCIPLES_REPORT.md) | ✅ 9.5/10 | Design analysis |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | ✅ v2.0 | Package layer design (10 packages) |
 
 <br>
 

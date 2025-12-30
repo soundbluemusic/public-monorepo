@@ -60,7 +60,7 @@
 1. 명확하고 서술적인 이름 사용
 2. 왜 이 값인지 주석으로 설명
 3. 단일 출처(Single Source of Truth)에서 정의
-4. @soundblue/shared에서 export하여 재사용
+4. @soundblue/core에서 export하여 재사용
 ```
 
 **하드코딩 검토 질문:**

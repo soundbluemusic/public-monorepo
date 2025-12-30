@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 [![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?logo=react-router)](https://reactrouter.com)
 [![100% SSG](https://img.shields.io/badge/100%25-SSG-brightgreen)](https://en.wikipedia.org/wiki/Static_site_generator)
-[![SSG Routes](https://img.shields.io/badge/SSG_Routes-1578-blue)](react-router.config.ts)
+[![SSG Routes](https://img.shields.io/badge/SSG_Routes-2012-blue)](react-router.config.ts)
 
 **[Live Site](https://context.soundbluemusic.com)**
 
@@ -15,7 +15,7 @@
 
 A Korean dictionary designed for language learners:
 
-- **751 Word Entries** - Organized by category and difficulty
+- **978 Word Entries** - Organized by category and difficulty
 - **Bilingual Support** - Korean ↔ English translations
 - **Romanization** - Pronunciation guides
 - **Categories** - 21 topics + 7 conversation categories
@@ -30,22 +30,41 @@ A Korean dictionary designed for language learners:
 ```
 react-router.config.ts
 ├── ssr: false
-├── prerender() → 1578 static routes generated
+├── prerender() → 2012 static routes generated
+│   ├── entries → 978 × 2 langs
+│   ├── categories → 21 × 2 langs
+│   └── conversations → 7 × 2 langs
 └── loader() functions → .data files for each route
 
 Build output (build/client/):
 ├── index.html, ko/index.html
-├── entry/hello.html, ko/entry/hello.html (×751)
-├── category/greetings.html (×21 categories)
-├── conversation/greeting.html (×7 conversations)
+├── entry/{id}.html, ko/entry/{id}.html (×978)
+├── category/{id}.html, ko/category/{id}.html (×21)
+├── conversation/{id}.html, ko/conversation/{id}.html (×7)
 └── *.data files (prerendered loader data)
+```
+
+### Data Architecture
+
+```
+data/context/             # Centralized JSON (SSoT)
+├── entries/              # 22 category files
+│   ├── greetings.json
+│   ├── food.json
+│   └── ... (978 entries total)
+└── conversations/        # 7 conversation files
+
+app/data/
+├── entries.ts            # TypeScript loader
+├── categories.ts         # Category definitions
+└── types.ts              # TypeScript types
 ```
 
 ### Data Flow
 
 ```
 Build time:
-  data/entries/*.json → prerender() → loader() → .data files
+  data/context/*.json → prerender() → loader() → .data files
 
 Runtime:
   Static HTML + .data → useLoaderData() → React component
@@ -60,7 +79,7 @@ Runtime:
 |:------|:--:|:--:|:-------:|:------------|
 | `/` | ✓ | ✓ | - | Home |
 | `/browse` | ✓ | ✓ | - | Browse all entries |
-| `/entry/:entryId` | ✓ | ✓ | 751 | Word entry page |
+| `/entry/:entryId` | ✓ | ✓ | 978 | Word entry page |
 | `/category/:categoryId` | ✓ | ✓ | 21 | Category page |
 | `/conversation/:conversationId` | ✓ | ✓ | 7 | Conversation page |
 | `/about` | ✓ | ✓ | - | About |
@@ -70,41 +89,7 @@ Runtime:
 | `/terms` | ✓ | ✓ | - | Terms of service |
 | `/license` | ✓ | ✓ | - | License |
 
-**Total:** 1578 SSG routes (789 EN + 789 KO)
-
----
-
-## Data Structure (데이터 구조)
-
-```
-app/data/
-├── entries/           # JSON files by category
-│   ├── greetings.json
-│   ├── food.json
-│   ├── emotions.json
-│   └── ... (21 categories)
-├── categories.ts      # Category definitions
-├── types.ts           # TypeScript types
-└── entries.legacy.ts  # Legacy data (migration pending)
-```
-
-### Entry Schema
-
-```typescript
-interface MeaningEntry {
-  id: string;              // 'hello'
-  korean: string;          // '안녕하세요'
-  romanization: string;    // 'an-nyeong-ha-se-yo'
-  partOfSpeech: string;    // 'noun' | 'verb' | ...
-  categoryId: string;      // 'greetings'
-  difficulty: string;      // 'beginner' | 'intermediate' | 'advanced'
-  tags: string[];
-  translations: {
-    ko: { word: string; explanation: string };
-    en: { word: string; explanation: string };
-  };
-}
-```
+**Total:** 2012 SSG routes (1006 EN + 1006 KO)
 
 ---
 
@@ -112,7 +97,7 @@ interface MeaningEntry {
 
 | Feature | Implementation |
 |:--------|:---------------|
-| 🔍 Search | In-memory filter with `useMemo` |
+| 🔍 Search | MiniSearch (useSearchWorker) |
 | 📱 PWA | vite-plugin-pwa |
 | 🌙 Dark Mode | localStorage + CSS variables |
 | 🌐 i18n | URL-based (`/ko/*`) + Paraglide |
@@ -124,19 +109,15 @@ interface MeaningEntry {
 ## Search Algorithm
 
 ```typescript
-// Layout.tsx - Real-time search (no debounce)
-const searchResults = useMemo(() => {
-  const q = searchQuery.toLowerCase().trim().slice(0, 100);
-  if (!q) return [];
+// MiniSearch-based fuzzy search with Web Worker
+// Uses @soundblue/search package
+import { useSearchWorker } from '@soundblue/search/react';
 
-  return meaningEntries
-    .filter(entry =>
-      entry.korean.includes(q) ||
-      entry.romanization.toLowerCase().includes(q) ||
-      entry.translations[locale].word.toLowerCase().includes(q)
-    )
-    .slice(0, 8);
-}, [searchQuery, locale]);
+const { query, setQuery, results, isReady } = useSearchWorker({
+  indexUrl: '/search-index.json',
+  locale,
+  debounceMs: 150,
+});
 ```
 
 ---
@@ -161,6 +142,7 @@ pnpm build:context
 | UI | React |
 | Styling | Tailwind CSS v4 |
 | Language | TypeScript |
+| Search | MiniSearch (via @soundblue/search) |
 | Storage | localStorage / IndexedDB |
 | Hosting | Cloudflare Pages |
 
@@ -172,8 +154,8 @@ pnpm build:context
 
 ```typescript
 // ❌ NEVER - 테스트 통과/에러 회피용
-const ENTRY_COUNT = 751;  // Magic number
-return entries.length || 751;
+const ENTRY_COUNT = 978;  // Magic number
+return entries.length || 978;
 
 // ✅ ALLOWED - 우수한 설계
 export const LIMITS = { ID_LENGTH: 100 } as const;  // Named, documented
