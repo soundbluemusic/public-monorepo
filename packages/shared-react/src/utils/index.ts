@@ -1,3 +1,25 @@
+/**
+ * @fileoverview Utils exports
+ * @environment universal
+ */
+
+// Re-export from seo/meta
+export {
+  generateHreflangLinks,
+  generateSEOMeta,
+  type LinkDescriptor,
+  type SEOMetaOptions,
+  sanitizeSEOString,
+} from '@soundblue/seo/meta';
+
+// Re-export from seo/structured-data
+export {
+  type ArticleSchema,
+  generateArticleSchema,
+  generateWebsiteSchema,
+  type WebsiteSchema,
+} from '@soundblue/seo/structured-data';
+
 // Re-export from @soundblue/shared (single source of truth)
 export {
   BREAKPOINTS,
@@ -15,21 +37,11 @@ export {
   // Validation
   validateId,
 } from '@soundblue/shared';
-// Tailwind CSS utility
-export { cn } from './cn';
-// i18n (React-specific)
-export {
-  buildLocalePath,
-  getLocaleFromPath,
-  type I18nContextType,
-  type Language,
-  languageFlags,
-  languageNames,
-  stripLocaleFromPath,
-} from './i18n';
-// Preload hints
+
+// Re-export from ui
 export {
   COMMON_PRECONNECTS,
+  cn,
   createNavigationPreloads,
   dnsPrefetch,
   modulePreload,
@@ -41,16 +53,15 @@ export {
   preloadLink,
   preloadScript,
   preloadStyle,
-} from './preload';
-// SEO utilities
+} from '@soundblue/ui/utils';
+
+// Local exports (i18n - React-specific)
 export {
-  generateHreflangLinks,
-  generateSchemaOrg,
-  generateSEOMeta,
-  type LinkDescriptor,
-  type SchemaOrgArticle,
-  type SchemaOrgData,
-  type SchemaOrgWebSite,
-  type SEOMetaOptions,
-  sanitizeSEOString,
-} from './seo';
+  buildLocalePath,
+  getLocaleFromPath,
+  type I18nContextType,
+  type Language,
+  languageFlags,
+  languageNames,
+  stripLocaleFromPath,
+} from './i18n';

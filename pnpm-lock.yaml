@@ -381,6 +381,12 @@ importers:
         specifier: ^7.3.0
         version: 7.4.0
 
+  packages/config:
+    devDependencies:
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+
   packages/core:
     dependencies:
       clsx:
@@ -407,6 +413,22 @@ importers:
         specifier: ^5.7.2
         version: 5.9.3
 
+  packages/features:
+    dependencies:
+      react:
+        specifier: ^19.2.3
+        version: 19.2.3
+      zustand:
+        specifier: ^5.0.2
+        version: 5.0.9(@types/react@19.2.7)(immer@11.1.0)(react@19.2.3)
+    devDependencies:
+      '@types/react':
+        specifier: ^19.0.2
+        version: 19.2.7
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+
   packages/i18n:
     dependencies:
       '@soundblue/core':
@@ -419,6 +441,32 @@ importers:
         specifier: ^7.11.0
         version: 7.11.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
     devDependencies:
+      '@types/react':
+        specifier: ^19.0.2
+        version: 19.2.7
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+
+  packages/platform:
+    dependencies:
+      dexie:
+        specifier: ^4.0.10
+        version: 4.2.1
+    devDependencies:
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+
+  packages/pwa:
+    dependencies:
+      react:
+        specifier: ^19.2.3
+        version: 19.2.3
+    devDependencies:
+      '@types/node':
+        specifier: ^22.10.2
+        version: 22.19.3
       '@types/react':
         specifier: ^19.0.2
         version: 19.2.7
@@ -445,6 +493,15 @@ importers:
         specifier: ^5.7.2
         version: 5.9.3
 
+  packages/seo:
+    devDependencies:
+      '@types/node':
+        specifier: ^22.15.21
+        version: 22.19.3
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+
   packages/shared:
     dependencies:
       '@soundblue/core':
@@ -456,6 +513,9 @@ importers:
       '@soundblue/search':
         specifier: workspace:*
         version: link:../search
+      '@soundblue/seo':
+        specifier: workspace:*
+        version: link:../seo
       dexie:
         specifier: ^4.0.10
         version: 4.2.1
@@ -475,18 +535,24 @@ importers:
       '@formkit/auto-animate':
         specifier: ^0.9.0
         version: 0.9.0
+      '@soundblue/features':
+        specifier: workspace:*
+        version: link:../features
+      '@soundblue/pwa':
+        specifier: workspace:*
+        version: link:../pwa
+      '@soundblue/seo':
+        specifier: workspace:*
+        version: link:../seo
       '@soundblue/shared':
         specifier: workspace:*
         version: link:../shared
-      '@tanstack/react-virtual':
-        specifier: ^3.13.13
-        version: 3.13.13(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@soundblue/ui':
+        specifier: workspace:*
+        version: link:../ui
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
-      framer-motion:
-        specifier: ^12.23.26
-        version: 12.23.26(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       immer:
         specifier: ^11.1.0
         version: 11.1.0
@@ -514,6 +580,40 @@ importers:
       zustand:
         specifier: ^5.0.2
         version: 5.0.9(@types/react@19.2.7)(immer@11.1.0)(react@19.2.3)
+    devDependencies:
+      '@types/react':
+        specifier: ^19.0.2
+        version: 19.2.7
+      '@types/react-dom':
+        specifier: ^19.0.2
+        version: 19.2.3(@types/react@19.2.7)
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+
+  packages/ui:
+    dependencies:
+      '@soundblue/features':
+        specifier: workspace:*
+        version: link:../features
+      '@tanstack/react-virtual':
+        specifier: ^3.13.13
+        version: 3.13.13(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      framer-motion:
+        specifier: ^12.23.26
+        version: 12.23.26(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      react:
+        specifier: ^19.2.3
+        version: 19.2.3
+      react-dom:
+        specifier: ^19.2.3
+        version: 19.2.3(react@19.2.3)
+      tailwind-merge:
+        specifier: ^3.4.0
+        version: 3.4.0
     devDependencies:
       '@types/react':
         specifier: ^19.0.2

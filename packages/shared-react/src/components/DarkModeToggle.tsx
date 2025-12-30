@@ -1,6 +1,6 @@
+import { cn } from '@soundblue/ui/utils';
 import { Moon, Sun } from 'lucide-react';
 import { type CSSProperties, useEffect, useState } from 'react';
-import { cn } from '../utils/cn';
 
 export interface DarkModeToggleProps {
   className?: string;

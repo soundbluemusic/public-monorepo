@@ -1,13 +1,10 @@
 /**
- * UI Components (shadcn/ui style)
- *
- * Radix UI + Tailwind + class-variance-authority 기반 컴포넌트
- * WCAG 2.1 접근성 준수
+ * @fileoverview UI Components (re-exports from @soundblue/ui)
+ * @environment client-only
  */
 
 // Animation Components (Framer Motion)
-export { FadeIn } from './motion';
-
+export { FadeIn } from '@soundblue/ui/animation';
+export { useVirtualizer, VirtualList, type VirtualListProps } from '@soundblue/ui/patterns';
 // Performance Components
-export { ProgressBar, type ProgressBarProps } from './progress-bar';
-export { useVirtualizer, VirtualList, type VirtualListProps } from './virtual-list';
+export { ProgressBar, type ProgressBarProps } from '@soundblue/ui/primitives';

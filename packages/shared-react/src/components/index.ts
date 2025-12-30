@@ -1,27 +1,47 @@
+/**
+ * @fileoverview Components exports
+ * @environment client-only
+ */
+
+// Re-export from pwa
+export { OfflineIndicator } from '@soundblue/pwa/react';
+// Re-export from ui
+export {
+  ErrorBoundary,
+  type ErrorBoundaryProps,
+  ErrorFallbackUI,
+  RouteErrorFallback,
+  type Toast,
+  ToastContainer,
+} from '@soundblue/ui/feedback';
+export {
+  LazyLoad,
+  type LazyLoadProps,
+  LazyLoadSkeleton,
+  lazyWithSuspense,
+  preloadComponent,
+  SearchDropdown,
+  type SearchDropdownProps,
+  usePreloadOnVisible,
+} from '@soundblue/ui/patterns';
+export {
+  LoadingSpinner,
+  PageSkeleton,
+  Skeleton,
+  SkeletonCard,
+  SkeletonGrid,
+  SkeletonList,
+  SkeletonText,
+} from '@soundblue/ui/primitives';
+
+// Local exports (app-specific components)
 export { DarkModeToggle, type DarkModeToggleProps } from './DarkModeToggle';
 export {
   type EntryCategory,
   EntryListItem,
   type EntryListItemProps,
 } from './EntryListItem';
-export {
-  ErrorBoundary,
-  type ErrorBoundaryProps,
-  ErrorFallbackUI,
-  RouteErrorFallback,
-} from './ErrorBoundary';
 export { LanguageToggle, type LanguageToggleProps } from './LanguageToggle';
-export {
-  LazyLoad,
-  type LazyLoadProps,
-  LazyLoadSkeleton,
-  LoadingSpinner,
-  lazyWithSuspense,
-  preloadComponent,
-  usePreloadOnVisible,
-} from './LazyLoad';
-export { OfflineIndicator } from './OfflineIndicator';
-export { SearchDropdown, type SearchDropdownProps } from './SearchDropdown';
 export {
   canShare,
   copyToClipboard,
@@ -32,15 +52,6 @@ export {
   supportsWebShare,
   useWebShare,
 } from './ShareButton';
-export {
-  PageSkeleton,
-  Skeleton,
-  SkeletonCard,
-  SkeletonGrid,
-  SkeletonList,
-  SkeletonText,
-} from './Skeleton';
-export { type Toast, ToastContainer } from './Toast';
 export {
   ViewTransitionButton,
   type ViewTransitionButtonProps,

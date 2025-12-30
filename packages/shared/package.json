@@ -23,6 +23,7 @@
     "@soundblue/core": "workspace:*",
     "@soundblue/i18n": "workspace:*",
     "@soundblue/search": "workspace:*",
+    "@soundblue/seo": "workspace:*",
     "dexie": "^4.0.10"
   },
   "devDependencies": {
