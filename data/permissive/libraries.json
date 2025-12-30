@@ -1384,5 +1384,152 @@
       "UI",
       "Documentation"
     ]
+  },
+  {
+    "name": "Paraglide",
+    "description": "Compile-time i18n with type safety",
+    "descriptionKo": "타입 안전 컴파일타임 국제화",
+    "category": "i18n",
+    "license": "Apache-2.0",
+    "github": "https://github.com/opral/inlang-paraglide-js",
+    "website": "https://inlang.com/m/gerre34r/library-inlang-paraglideJs",
+    "npm": "@inlang/paraglide-js",
+    "stars": "3k",
+    "usedHere": true,
+    "trending": true,
+    "yearReleased": 2023,
+    "tags": [
+      "i18n",
+      "TypeScript",
+      "Compile-time"
+    ]
+  },
+  {
+    "name": "Lucide",
+    "description": "Beautiful & consistent icons",
+    "descriptionKo": "아름답고 일관된 아이콘",
+    "category": "Icons",
+    "license": "ISC",
+    "github": "https://github.com/lucide-icons/lucide",
+    "website": "https://lucide.dev",
+    "npm": "lucide-react",
+    "stars": "12k",
+    "usedHere": true,
+    "trending": true,
+    "yearReleased": 2020,
+    "tags": [
+      "Icons",
+      "React",
+      "SVG"
+    ]
+  },
+  {
+    "name": "pnpm",
+    "description": "Fast, disk space efficient package manager",
+    "descriptionKo": "빠르고 디스크 효율적인 패키지 매니저",
+    "category": "Package Manager",
+    "license": "MIT",
+    "github": "https://github.com/pnpm/pnpm",
+    "website": "https://pnpm.io",
+    "npm": "pnpm",
+    "stars": "30k",
+    "usedHere": true,
+    "trending": true,
+    "yearReleased": 2016,
+    "tags": [
+      "Package Manager",
+      "Monorepo",
+      "Fast"
+    ]
+  },
+  {
+    "name": "date-fns",
+    "description": "Modern JavaScript date utility library",
+    "descriptionKo": "모던 자바스크립트 날짜 유틸리티",
+    "category": "Utilities",
+    "license": "MIT",
+    "github": "https://github.com/date-fns/date-fns",
+    "website": "https://date-fns.org",
+    "npm": "date-fns",
+    "stars": "35k",
+    "trending": true,
+    "yearReleased": 2014,
+    "tags": [
+      "Date",
+      "TypeScript",
+      "Tree-shakable"
+    ]
+  },
+  {
+    "name": "Prisma",
+    "description": "Next-generation TypeScript ORM",
+    "descriptionKo": "차세대 TypeScript ORM",
+    "category": "ORM",
+    "license": "Apache-2.0",
+    "github": "https://github.com/prisma/prisma",
+    "website": "https://www.prisma.io",
+    "npm": "@prisma/client",
+    "stars": "40k",
+    "trending": true,
+    "yearReleased": 2019,
+    "tags": [
+      "ORM",
+      "TypeScript",
+      "Database"
+    ]
+  },
+  {
+    "name": "Drizzle",
+    "description": "TypeScript ORM with SQL-like syntax",
+    "descriptionKo": "SQL 문법의 TypeScript ORM",
+    "category": "ORM",
+    "license": "Apache-2.0",
+    "github": "https://github.com/drizzle-team/drizzle-orm",
+    "website": "https://orm.drizzle.team",
+    "npm": "drizzle-orm",
+    "stars": "26k",
+    "trending": true,
+    "yearReleased": 2022,
+    "tags": [
+      "ORM",
+      "TypeScript",
+      "SQL"
+    ]
+  },
+  {
+    "name": "TanStack Table",
+    "description": "Headless UI for building tables",
+    "descriptionKo": "테이블 구축을 위한 Headless UI",
+    "category": "Data Display",
+    "license": "MIT",
+    "github": "https://github.com/TanStack/table",
+    "website": "https://tanstack.com/table",
+    "npm": "@tanstack/react-table",
+    "stars": "25k",
+    "trending": true,
+    "yearReleased": 2015,
+    "tags": [
+      "React",
+      "Headless",
+      "TypeScript"
+    ]
+  },
+  {
+    "name": "Hono",
+    "description": "Ultrafast web framework for the Edge",
+    "descriptionKo": "Edge를 위한 초고속 웹 프레임워크",
+    "category": "Server",
+    "license": "MIT",
+    "github": "https://github.com/honojs/hono",
+    "website": "https://hono.dev",
+    "npm": "hono",
+    "stars": "21k",
+    "trending": true,
+    "yearReleased": 2021,
+    "tags": [
+      "Edge",
+      "TypeScript",
+      "Fast"
+    ]
   }
 ]
