@@ -12,11 +12,21 @@
   --bottom-nav-height: 56px;
   --content-max-width: 980px;
 
-  /* Z-index layers */
+  /* Z-index layers (정리된 레이어 시스템)
+     10: 기본 요소 (카드 호버 등)
+     20: 드롭다운, 팝오버
+     30: 헤더 (고정)
+     40: 사이드바, 오버레이
+     50: 모달, 바텀내비
+     60: 토스트, 알림
+  */
+  --z-dropdown: 20;
   --z-header: 30;
   --z-sidebar: 40;
   --z-overlay: 40;
   --z-bottom-nav: 50;
+  --z-modal: 50;
+  --z-toast: 60;
 
   /* Background */
   --bg-primary: #f7fafa;
@@ -232,6 +242,10 @@ body {
 }
 
 /* Z-index utilities */
+.z-dropdown {
+  z-index: var(--z-dropdown);
+}
+
 .z-header {
   z-index: var(--z-header);
 }
@@ -246,6 +260,14 @@ body {
 
 .z-bottom-nav {
   z-index: var(--z-bottom-nav);
+}
+
+.z-modal {
+  z-index: var(--z-modal);
+}
+
+.z-toast {
+  z-index: var(--z-toast);
 }
 
 /* ============================================
@@ -438,5 +460,60 @@ html.theme-transition *::after {
   .main-content {
     margin-left: var(--sidebar-width);
     padding-bottom: 0;
+  }
+}
+
+/* ============================================
+   Scrollbar Utilities
+   ============================================ */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* ============================================
+   Form Elements - Mobile Optimization
+   ============================================ */
+
+/* Select 요소 - iOS/Android 스타일 통일 */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%234a5e5a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem;
+}
+
+.dark select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23b0c5c2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+/* 터치 타겟 강화 (모바일) */
+@media (max-width: 767px) {
+  input[type="text"],
+  input[type="search"],
+  input[type="email"],
+  input[type="password"],
+  select,
+  textarea {
+    font-size: 16px; /* iOS 자동 확대 방지 */
+  }
+}
+
+/* ============================================
+   Sidebar Collapsed State (Desktop only)
+   data-sidebar-collapsed 속성으로 CSS 제어
+   ============================================ */
+@media (min-width: 1024px) {
+  /* Main content margin when sidebar is collapsed */
+  main[data-sidebar-collapsed="true"] {
+    margin-left: var(--sidebar-collapsed-width) !important;
   }
 }

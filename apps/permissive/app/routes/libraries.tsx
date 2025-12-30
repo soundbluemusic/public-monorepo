@@ -285,31 +285,36 @@ export default function LibrariesPage() {
           </select>
         </div>
 
-        <div className="flex flex-wrap gap-2">
-          {cats.map((cat) => (
-            <button
-              key={cat}
-              type="button"
-              onClick={() => {
-                setCategory(cat);
-                const params = new URLSearchParams(searchParams);
-                if (cat !== 'All') {
-                  params.set('category', cat);
-                } else {
-                  params.delete('category');
-                }
-                setSearchParams(params);
-              }}
-              className={cn(
-                'px-3 py-1.5 rounded-full text-sm font-medium transition-colors cursor-pointer',
-                category === cat
-                  ? 'bg-(--accent-primary) text-white'
-                  : 'bg-(--bg-tertiary) text-(--text-secondary) hover:bg-(--bg-elevated)',
-              )}
-            >
-              {cat === 'All' ? (locale === 'ko' ? '전체' : 'All') : cat}
-            </button>
-          ))}
+        {/* 카테고리 필터 - 모바일에서 가로 스크롤 */}
+        <div className="relative">
+          {/* 스크롤 fade 인디케이터 (오른쪽) */}
+          <div className="absolute right-0 top-0 bottom-0 w-8 bg-linear-to-l from-(--bg-primary) to-transparent pointer-events-none z-10 sm:hidden" />
+          <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-none sm:flex-wrap sm:overflow-visible sm:pb-0">
+            {cats.map((cat) => (
+              <button
+                key={cat}
+                type="button"
+                onClick={() => {
+                  setCategory(cat);
+                  const params = new URLSearchParams(searchParams);
+                  if (cat !== 'All') {
+                    params.set('category', cat);
+                  } else {
+                    params.delete('category');
+                  }
+                  setSearchParams(params);
+                }}
+                className={cn(
+                  'px-3 py-1.5 rounded-full text-sm font-medium transition-colors cursor-pointer whitespace-nowrap shrink-0 sm:shrink',
+                  category === cat
+                    ? 'bg-(--accent-primary) text-white'
+                    : 'bg-(--bg-tertiary) text-(--text-secondary) hover:bg-(--bg-elevated)',
+                )}
+              >
+                {cat === 'All' ? (locale === 'ko' ? '전체' : 'All') : cat}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -327,40 +332,47 @@ export default function LibrariesPage() {
               {categoryLibs.map((lib) => (
                 <div
                   key={lib.name}
-                  className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)"
+                  className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) overflow-hidden"
                 >
                   <div className="flex items-start justify-between gap-2 mb-2">
-                    <div className="flex items-center flex-wrap gap-2">
-                      <h3 className="font-medium text-(--text-primary)">{lib.name}</h3>
+                    <div className="flex items-center flex-wrap gap-2 min-w-0">
+                      <h3 className="font-medium text-(--text-primary) truncate max-w-[150px] sm:max-w-none">
+                        {lib.name}
+                      </h3>
                       {lib.trending && (
-                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-orange-500/10 text-orange-500">
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-orange-500/10 text-orange-500 shrink-0">
                           <Flame size={12} aria-hidden="true" />
-                          {locale === 'ko' ? '트렌드' : 'Trending'}
+                          <span className="hidden sm:inline">
+                            {locale === 'ko' ? '트렌드' : 'Trending'}
+                          </span>
                         </span>
                       )}
                       {lib.usedHere && (
-                        <span className="px-2 py-0.5 rounded text-xs font-medium bg-purple-500/10 text-purple-500">
-                          {locale === 'ko' ? '사용 중' : 'Used here'}
+                        <span className="px-2 py-0.5 rounded text-xs font-medium bg-purple-500/10 text-purple-500 shrink-0">
+                          <span className="hidden sm:inline">
+                            {locale === 'ko' ? '사용 중' : 'Used here'}
+                          </span>
+                          <span className="sm:hidden">✓</span>
                         </span>
                       )}
                     </div>
-                    <div className="flex items-center gap-1 text-sm text-(--text-tertiary)">
+                    <div className="flex items-center gap-1 text-sm text-(--text-tertiary) shrink-0">
                       <Star size={14} aria-hidden="true" className="fill-current" />
                       {lib.stars}
                     </div>
                   </div>
-                  <p className="text-sm text-(--text-secondary) mb-3">
+                  <p className="text-sm text-(--text-secondary) mb-3 line-clamp-2">
                     {locale === 'ko' ? lib.descriptionKo : lib.description}
                   </p>
                   {lib.tags && lib.tags.length > 0 && (
-                    <div className="flex flex-wrap gap-1 mb-3">
+                    <div className="flex gap-1 mb-3 overflow-x-auto scrollbar-none pb-1">
                       {lib.tags.slice(0, LIMITS.TAGS_PREVIEW).map((tag) => (
                         <button
                           type="button"
                           key={tag}
                           onClick={() => handleTagClick(tag)}
                           className={cn(
-                            'px-2 py-0.5 rounded text-xs transition-colors cursor-pointer',
+                            'px-2 py-0.5 rounded text-xs transition-colors cursor-pointer whitespace-nowrap shrink-0',
                             selectedTag === tag
                               ? 'bg-(--accent-primary) text-white'
                               : 'bg-(--bg-tertiary) text-(--text-tertiary) hover:text-(--text-primary)',
@@ -371,7 +383,7 @@ export default function LibrariesPage() {
                       ))}
                     </div>
                   )}
-                  <div className="flex items-center flex-wrap gap-2 text-xs">
+                  <div className="flex items-center flex-wrap gap-x-2 gap-y-1 text-xs">
                     <span className="px-2 py-0.5 rounded bg-green-500/10 text-green-600 font-medium">
                       {lib.license}
                     </span>

@@ -135,24 +135,15 @@ export default function Sidebar({
 
   const isActive = (href: string) => location.pathname === localePath(href);
 
-  const getSidebarWidth = () => {
-    if (isMobile) return 'var(--sidebar-width)';
-    return isCollapsed ? 'var(--sidebar-collapsed-width)' : 'var(--sidebar-width)';
-  };
-
-  const getTransform = () => {
-    if (isMobile) return isOpen ? 'translateX(0)' : 'translateX(-100%)';
-    return 'translateX(0)';
-  };
-
   return (
     <>
-      {/* Overlay (mobile only) */}
-      {isMobile && isOpen && (
+      {/* Overlay (mobile only) - CSS로 lg에서 숨김 */}
+      {isOpen && (
         <button
           type="button"
           className={cn(
             'fixed inset-0 z-40 bg-black/50 transition-opacity cursor-pointer',
+            'lg:hidden', // 데스크톱에서 숨김
             isReady ? 'opacity-100' : 'opacity-0',
           )}
           onClick={onClose}
@@ -161,53 +152,57 @@ export default function Sidebar({
         />
       )}
 
-      {/* Sidebar */}
+      {/* Sidebar - CSS 미디어 쿼리로 반응형 처리 */}
       <aside
         className={cn(
-          'fixed top-14 left-0 z-50 h-[calc(100vh-3.5rem)] flex flex-col bg-(--bg-primary) border-r border-(--border-primary) transition-all duration-200',
+          'fixed top-14 left-0 z-50 h-[calc(100vh-3.5rem)] flex flex-col',
+          'bg-(--bg-primary) border-r border-(--border-primary) transition-all duration-200',
+          // 모바일: 전체 너비, 숨김 (CSS로 처리)
+          'w-(--sidebar-width)',
+          // 데스크톱: collapsed 상태에 따른 너비
+          !isCollapsed && 'lg:w-(--sidebar-width)',
+          isCollapsed && 'lg:w-(--sidebar-collapsed-width)',
           isReady && 'ready',
-          isMobile && 'z-50',
-          isMobile && !isOpen && 'invisible',
         )}
-        style={{
-          width: getSidebarWidth(),
-          transform: getTransform(),
-        }}
+        data-mobile-open={isOpen ? 'true' : undefined}
+        data-collapsed={isCollapsed ? 'true' : undefined}
         aria-hidden={isMobile && !isOpen}
-        data-mobile-open={isMobile && isOpen ? 'true' : undefined}
       >
         {/* Header */}
         <div className="flex items-center justify-between h-14 px-4 border-b border-(--border-primary)">
-          {(!isCollapsed || isMobile) && (
+          {/* 전체 로고 - 모바일 항상 표시, 데스크톱은 collapsed 아닐 때만 */}
+          <Link
+            to={localePath('/')}
+            onClick={onClose}
+            className={cn(
+              'flex items-center gap-2 text-(--text-primary) font-semibold no-underline',
+              // 데스크톱에서 collapsed면 숨김
+              isCollapsed && 'lg:hidden',
+            )}
+          >
+            <Sparkles size={20} aria-hidden="true" className="text-(--accent-primary)" />
+            <span>Permissive</span>
+          </Link>
+
+          {/* 아이콘만 로고 - 데스크톱 collapsed 상태에서만 */}
+          {isCollapsed && (
             <Link
               to={localePath('/')}
-              onClick={onClose}
-              className="flex items-center gap-2 text-(--text-primary) font-semibold no-underline"
-            >
-              <Sparkles size={20} aria-hidden="true" className="text-(--accent-primary)" />
-              <span>Permissive</span>
-            </Link>
-          )}
-          {isCollapsed && !isMobile && (
-            <Link
-              to={localePath('/')}
-              className="flex items-center justify-center w-full text-(--accent-primary)"
+              className="hidden lg:flex items-center justify-center w-full text-(--accent-primary)"
             >
               <Sparkles size={20} aria-hidden="true" />
             </Link>
           )}
 
-          {/* Close button (mobile) */}
-          {isMobile && (
-            <button
-              type="button"
-              onClick={onClose}
-              className="min-h-11 min-w-11 flex items-center justify-center rounded-lg text-(--text-secondary) hover:bg-(--bg-tertiary) cursor-pointer"
-              aria-label={t('aria.closeMenu')}
-            >
-              <X size={20} aria-hidden="true" />
-            </button>
-          )}
+          {/* Close button (mobile only - CSS로 숨김) */}
+          <button
+            type="button"
+            onClick={onClose}
+            className="min-h-11 min-w-11 flex items-center justify-center rounded-lg text-(--text-secondary) hover:bg-(--bg-tertiary) cursor-pointer lg:hidden"
+            aria-label={t('aria.closeMenu')}
+          >
+            <X size={20} aria-hidden="true" />
+          </button>
         </div>
 
         {/* Navigation */}
@@ -224,69 +219,63 @@ export default function Sidebar({
                   isActive(item.href)
                     ? 'bg-(--accent-primary)/10 text-(--accent-primary)'
                     : 'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
-                  isCollapsed && !isMobile && 'justify-center',
+                  // 데스크톱에서 collapsed면 중앙 정렬
+                  isCollapsed && 'lg:justify-center',
                 )}
-                title={
-                  isCollapsed && !isMobile
-                    ? locale === 'ko'
-                      ? item.labelKo
-                      : item.label
-                    : undefined
-                }
+                title={isCollapsed ? (locale === 'ko' ? item.labelKo : item.label) : undefined}
                 aria-current={isActive(item.href) ? 'page' : undefined}
               >
                 <span className="shrink-0">{item.icon}</span>
-                {(!isCollapsed || isMobile) && (
-                  <span>{locale === 'ko' ? item.labelKo : item.label}</span>
-                )}
+                {/* 텍스트 - 모바일 항상 표시, 데스크톱은 collapsed 아닐 때만 */}
+                <span className={cn(isCollapsed && 'lg:hidden')}>
+                  {locale === 'ko' ? item.labelKo : item.label}
+                </span>
               </Link>
             ))}
           </div>
 
-          {/* Quick Links - hidden when collapsed */}
-          {(!isCollapsed || isMobile) && (
-            <>
-              {/* Divider */}
-              <div className="my-4 border-t border-(--border-primary)" />
+          {/* Quick Links - 데스크톱 collapsed 상태에서 숨김 (CSS) */}
+          <div className={cn(isCollapsed && 'lg:hidden')}>
+            {/* Divider */}
+            <div className="my-4 border-t border-(--border-primary)" />
 
-              {/* Web API Quick Links */}
-              <QuickLinksSection
-                title={locale === 'ko' ? '인기 Web API' : 'Popular Web API'}
-                links={quickLinks.webApi}
-                locale={locale}
-              />
+            {/* Web API Quick Links */}
+            <QuickLinksSection
+              title={locale === 'ko' ? '인기 Web API' : 'Popular Web API'}
+              links={quickLinks.webApi}
+              locale={locale}
+            />
 
-              {/* Libraries Quick Links */}
-              <QuickLinksSection
-                title={locale === 'ko' ? '인기 Libraries' : 'Popular Libraries'}
-                links={quickLinks.libraries}
-                locale={locale}
-              />
-            </>
-          )}
+            {/* Libraries Quick Links */}
+            <QuickLinksSection
+              title={locale === 'ko' ? '인기 Libraries' : 'Popular Libraries'}
+              links={quickLinks.libraries}
+              locale={locale}
+            />
+          </div>
         </nav>
 
         {/* Footer - Collapse toggle (desktop) + GitHub */}
         <div className="p-2 border-t border-(--border-primary)">
-          {/* Collapse Toggle Button (desktop only) */}
-          {!isMobile && (
-            <button
-              type="button"
-              onClick={onToggleCollapse}
-              className={cn(
-                'w-full flex items-center gap-2 min-h-11 px-3 py-2 rounded-lg text-(--text-secondary) hover:bg-(--bg-tertiary) transition-colors cursor-pointer',
-                isCollapsed && 'justify-center',
-              )}
-              title={isCollapsed ? t('aria.expandSidebar') : t('aria.collapseSidebar')}
-            >
-              <ChevronLeft
-                size={18}
-                aria-hidden="true"
-                className={cn('transition-transform', isCollapsed && 'rotate-180')}
-              />
-              {!isCollapsed && <span>{locale === 'ko' ? '접기' : 'Collapse'}</span>}
-            </button>
-          )}
+          {/* Collapse Toggle Button (desktop only - CSS로 숨김) */}
+          <button
+            type="button"
+            onClick={onToggleCollapse}
+            className={cn(
+              'hidden lg:flex w-full items-center gap-2 min-h-11 px-3 py-2 rounded-lg text-(--text-secondary) hover:bg-(--bg-tertiary) transition-colors cursor-pointer',
+              isCollapsed && 'justify-center',
+            )}
+            title={isCollapsed ? t('aria.expandSidebar') : t('aria.collapseSidebar')}
+          >
+            <ChevronLeft
+              size={18}
+              aria-hidden="true"
+              className={cn('transition-transform', isCollapsed && 'rotate-180')}
+            />
+            <span className={cn(isCollapsed && 'lg:hidden')}>
+              {locale === 'ko' ? '접기' : 'Collapse'}
+            </span>
+          </button>
 
           {/* GitHub Link */}
           <a
@@ -295,17 +284,15 @@ export default function Sidebar({
             rel="noopener noreferrer"
             className={cn(
               'flex items-center gap-3 min-h-11 px-3 py-2 rounded-lg text-(--text-secondary) hover:bg-(--bg-tertiary) transition-colors no-underline',
-              isCollapsed && !isMobile && 'justify-center',
+              isCollapsed && 'lg:justify-center',
             )}
-            title={isCollapsed && !isMobile ? t('ui.github') : undefined}
+            title={isCollapsed ? t('ui.github') : undefined}
           >
             <Github size={18} aria-hidden="true" />
-            {(!isCollapsed || isMobile) && (
-              <div className="flex flex-col">
-                <span className="text-sm font-medium">{t('ui.github')}</span>
-                <span className="text-xs text-(--text-tertiary)">{t('ui.viewSource')}</span>
-              </div>
-            )}
+            <div className={cn('flex flex-col', isCollapsed && 'lg:hidden')}>
+              <span className="text-sm font-medium">{t('ui.github')}</span>
+              <span className="text-xs text-(--text-tertiary)">{t('ui.viewSource')}</span>
+            </div>
           </a>
         </div>
       </aside>

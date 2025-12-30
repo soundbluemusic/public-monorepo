@@ -76,15 +76,15 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
       {/* Main Content */}
       <main
         id="main-content"
-        className={cn('pt-14 min-h-screen transition-[margin] duration-200', isReady && 'ready')}
-        style={{
-          marginLeft: isMobile
-            ? '0'
-            : sidebarCollapsed
-              ? 'var(--sidebar-collapsed-width)'
-              : 'var(--sidebar-width)',
-          paddingBottom: isMobile ? 'var(--bottom-nav-height)' : '0',
-        }}
+        data-sidebar-collapsed={sidebarCollapsed ? 'true' : undefined}
+        className={cn(
+          'pt-14 min-h-screen transition-[margin] duration-200',
+          // 모바일: marginLeft 0, paddingBottom for BottomNav
+          // 데스크톱 (lg): marginLeft sidebar width, paddingBottom 0
+          'ml-0 lg:ml-(--sidebar-width)',
+          'pb-(--bottom-nav-height) lg:pb-0',
+          isReady && 'ready',
+        )}
       >
         <div className="max-w-4xl mx-auto px-4 py-8">{children}</div>
 
