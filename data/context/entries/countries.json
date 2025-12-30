@@ -2168,5 +2168,565 @@
     "pronunciation": {
       "korean": "[프랑스]"
     }
+  },
+  {
+    "id": "germany",
+    "korean": "독일",
+    "romanization": "dogil",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["europe", "country"],
+    "translations": {
+      "ko": {
+        "word": "독일",
+        "explanation": "유럽에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 독일에 살고 있습니다.",
+          "intermediate": "당신은 독일에 가보셨나요?",
+          "advanced": "독일은 유럽에 위치해 있습니다.",
+          "master": "독일의 수도는 베를린입니다."
+        }
+      },
+      "en": {
+        "word": "Germany",
+        "explanation": "A country located in Europe.",
+        "examples": {
+          "beginner": "I live in Germany.",
+          "intermediate": "Have you ever been to Germany?",
+          "advanced": "Germany is located in Europe.",
+          "master": "The capital of Germany is Berlin."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[독일]"
+    }
+  },
+  {
+    "id": "greece",
+    "korean": "그리스",
+    "romanization": "geuriseu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["europe", "country"],
+    "translations": {
+      "ko": {
+        "word": "그리스",
+        "explanation": "유럽에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 그리스에 살고 있습니다.",
+          "intermediate": "당신은 그리스에 가보셨나요?",
+          "advanced": "그리스는 유럽에 위치해 있습니다.",
+          "master": "그리스의 수도는 아테네입니다."
+        }
+      },
+      "en": {
+        "word": "Greece",
+        "explanation": "A country located in Europe.",
+        "examples": {
+          "beginner": "I live in Greece.",
+          "intermediate": "Have you ever been to Greece?",
+          "advanced": "Greece is located in Europe.",
+          "master": "The capital of Greece is Athens."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[그리스]"
+    }
+  },
+  {
+    "id": "hungary",
+    "korean": "헝가리",
+    "romanization": "heonggari",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["europe", "country"],
+    "translations": {
+      "ko": {
+        "word": "헝가리",
+        "explanation": "유럽에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 헝가리에 살고 있습니다.",
+          "intermediate": "당신은 헝가리에 가보셨나요?",
+          "advanced": "헝가리는 유럽에 위치해 있습니다.",
+          "master": "헝가리의 수도는 부다페스트입니다."
+        }
+      },
+      "en": {
+        "word": "Hungary",
+        "explanation": "A country located in Europe.",
+        "examples": {
+          "beginner": "I live in Hungary.",
+          "intermediate": "Have you ever been to Hungary?",
+          "advanced": "Hungary is located in Europe.",
+          "master": "The capital of Hungary is Budapest."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[헝가리]"
+    }
+  },
+  {
+    "id": "iceland",
+    "korean": "아이슬란드",
+    "romanization": "aiseulandeu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["europe", "country"],
+    "translations": {
+      "ko": {
+        "word": "아이슬란드",
+        "explanation": "유럽에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 아이슬란드에 살고 있습니다.",
+          "intermediate": "당신은 아이슬란드에 가보셨나요?",
+          "advanced": "아이슬란드는 유럽에 위치해 있습니다.",
+          "master": "아이슬란드의 수도는 레이캬비크입니다."
+        }
+      },
+      "en": {
+        "word": "Iceland",
+        "explanation": "A country located in Europe.",
+        "examples": {
+          "beginner": "I live in Iceland.",
+          "intermediate": "Have you ever been to Iceland?",
+          "advanced": "Iceland is located in Europe.",
+          "master": "The capital of Iceland is Reykjavik."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아이슬란드]"
+    }
+  },
+  {
+    "id": "ireland",
+    "korean": "아일랜드",
+    "romanization": "aillandeu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["europe", "country"],
+    "translations": {
+      "ko": {
+        "word": "아일랜드",
+        "explanation": "유럽에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 아일랜드에 살고 있습니다.",
+          "intermediate": "당신은 아일랜드에 가보셨나요?",
+          "advanced": "아일랜드는 유럽에 위치해 있습니다.",
+          "master": "아일랜드의 수도는 더블린입니다."
+        }
+      },
+      "en": {
+        "word": "Ireland",
+        "explanation": "A country located in Europe.",
+        "examples": {
+          "beginner": "I live in Ireland.",
+          "intermediate": "Have you ever been to Ireland?",
+          "advanced": "Ireland is located in Europe.",
+          "master": "The capital of Ireland is Dublin."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아일랜드]"
+    }
+  },
+  {
+    "id": "italy",
+    "korean": "이탈리아",
+    "romanization": "itallia",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["europe", "country"],
+    "translations": {
+      "ko": {
+        "word": "이탈리아",
+        "explanation": "유럽에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 이탈리아에 살고 있습니다.",
+          "intermediate": "당신은 이탈리아에 가보셨나요?",
+          "advanced": "이탈리아는 유럽에 위치해 있습니다.",
+          "master": "이탈리아의 수도는 로마입니다."
+        }
+      },
+      "en": {
+        "word": "Italy",
+        "explanation": "A country located in Europe.",
+        "examples": {
+          "beginner": "I live in Italy.",
+          "intermediate": "Have you ever been to Italy?",
+          "advanced": "Italy is located in Europe.",
+          "master": "The capital of Italy is Rome."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[이탈리아]"
+    }
+  },
+  {
+    "id": "kosovo",
+    "korean": "코소보",
+    "romanization": "kosobo",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["europe", "country"],
+    "translations": {
+      "ko": {
+        "word": "코소보",
+        "explanation": "유럽에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 코소보에 살고 있습니다.",
+          "intermediate": "당신은 코소보에 가보셨나요?",
+          "advanced": "코소보는 유럽에 위치해 있습니다.",
+          "master": "코소보의 수도는 프리슈티나입니다."
+        }
+      },
+      "en": {
+        "word": "Kosovo",
+        "explanation": "A country located in Europe.",
+        "examples": {
+          "beginner": "I live in Kosovo.",
+          "intermediate": "Have you ever been to Kosovo?",
+          "advanced": "Kosovo is located in Europe.",
+          "master": "The capital of Kosovo is Pristina."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[코소보]"
+    }
+  },
+  {
+    "id": "latvia",
+    "korean": "라트비아",
+    "romanization": "rateubia",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["europe", "country"],
+    "translations": {
+      "ko": {
+        "word": "라트비아",
+        "explanation": "유럽에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 라트비아에 살고 있습니다.",
+          "intermediate": "당신은 라트비아에 가보셨나요?",
+          "advanced": "라트비아는 유럽에 위치해 있습니다.",
+          "master": "라트비아의 수도는 리가입니다."
+        }
+      },
+      "en": {
+        "word": "Latvia",
+        "explanation": "A country located in Europe.",
+        "examples": {
+          "beginner": "I live in Latvia.",
+          "intermediate": "Have you ever been to Latvia?",
+          "advanced": "Latvia is located in Europe.",
+          "master": "The capital of Latvia is Riga."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[라트비아]"
+    }
+  },
+  {
+    "id": "liechtenstein",
+    "korean": "리히텐슈타인",
+    "romanization": "rihitensyutain",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["europe", "country"],
+    "translations": {
+      "ko": {
+        "word": "리히텐슈타인",
+        "explanation": "유럽에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 리히텐슈타인에 살고 있습니다.",
+          "intermediate": "당신은 리히텐슈타인에 가보셨나요?",
+          "advanced": "리히텐슈타인은 유럽에 위치해 있습니다.",
+          "master": "리히텐슈타인의 수도는 파두츠입니다."
+        }
+      },
+      "en": {
+        "word": "Liechtenstein",
+        "explanation": "A country located in Europe.",
+        "examples": {
+          "beginner": "I live in Liechtenstein.",
+          "intermediate": "Have you ever been to Liechtenstein?",
+          "advanced": "Liechtenstein is located in Europe.",
+          "master": "The capital of Liechtenstein is Vaduz."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[리히텐슈타인]"
+    }
+  },
+  {
+    "id": "lithuania",
+    "korean": "리투아니아",
+    "romanization": "rituania",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["europe", "country"],
+    "translations": {
+      "ko": {
+        "word": "리투아니아",
+        "explanation": "유럽에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 리투아니아에 살고 있습니다.",
+          "intermediate": "당신은 리투아니아에 가보셨나요?",
+          "advanced": "리투아니아는 유럽에 위치해 있습니다.",
+          "master": "리투아니아의 수도는 빌뉴스입니다."
+        }
+      },
+      "en": {
+        "word": "Lithuania",
+        "explanation": "A country located in Europe.",
+        "examples": {
+          "beginner": "I live in Lithuania.",
+          "intermediate": "Have you ever been to Lithuania?",
+          "advanced": "Lithuania is located in Europe.",
+          "master": "The capital of Lithuania is Vilnius."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[리투아니아]"
+    }
+  },
+  {
+    "id": "luxembourg",
+    "korean": "룩셈부르크",
+    "romanization": "ruksembureuker",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["europe", "country"],
+    "translations": {
+      "ko": {
+        "word": "룩셈부르크",
+        "explanation": "유럽에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 룩셈부르크에 살고 있습니다.",
+          "intermediate": "당신은 룩셈부르크에 가보셨나요?",
+          "advanced": "룩셈부르크는 유럽에 위치해 있습니다.",
+          "master": "룩셈부르크의 수도는 룩셈부르크시입니다."
+        }
+      },
+      "en": {
+        "word": "Luxembourg",
+        "explanation": "A country located in Europe.",
+        "examples": {
+          "beginner": "I live in Luxembourg.",
+          "intermediate": "Have you ever been to Luxembourg?",
+          "advanced": "Luxembourg is located in Europe.",
+          "master": "The capital of Luxembourg is Luxembourg City."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[룩셈부르크]"
+    }
+  },
+  {
+    "id": "malta",
+    "korean": "몰타",
+    "romanization": "molta",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["europe", "country"],
+    "translations": {
+      "ko": {
+        "word": "몰타",
+        "explanation": "유럽에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 몰타에 살고 있습니다.",
+          "intermediate": "당신은 몰타에 가보셨나요?",
+          "advanced": "몰타는 유럽에 위치해 있습니다.",
+          "master": "몰타의 수도는 발레타입니다."
+        }
+      },
+      "en": {
+        "word": "Malta",
+        "explanation": "A country located in Europe.",
+        "examples": {
+          "beginner": "I live in Malta.",
+          "intermediate": "Have you ever been to Malta?",
+          "advanced": "Malta is located in Europe.",
+          "master": "The capital of Malta is Valletta."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[몰타]"
+    }
+  },
+  {
+    "id": "moldova",
+    "korean": "몰도바",
+    "romanization": "moldoba",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["europe", "country"],
+    "translations": {
+      "ko": {
+        "word": "몰도바",
+        "explanation": "유럽에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 몰도바에 살고 있습니다.",
+          "intermediate": "당신은 몰도바에 가보셨나요?",
+          "advanced": "몰도바는 유럽에 위치해 있습니다.",
+          "master": "몰도바의 수도는 키시너우입니다."
+        }
+      },
+      "en": {
+        "word": "Moldova",
+        "explanation": "A country located in Europe.",
+        "examples": {
+          "beginner": "I live in Moldova.",
+          "intermediate": "Have you ever been to Moldova?",
+          "advanced": "Moldova is located in Europe.",
+          "master": "The capital of Moldova is Chișinău."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[몰도바]"
+    }
+  },
+  {
+    "id": "monaco",
+    "korean": "모나코",
+    "romanization": "monako",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["europe", "country"],
+    "translations": {
+      "ko": {
+        "word": "모나코",
+        "explanation": "유럽에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 모나코에 살고 있습니다.",
+          "intermediate": "당신은 모나코에 가보셨나요?",
+          "advanced": "모나코는 유럽에 위치해 있습니다.",
+          "master": "모나코의 수도는 모나코입니다."
+        }
+      },
+      "en": {
+        "word": "Monaco",
+        "explanation": "A country located in Europe.",
+        "examples": {
+          "beginner": "I live in Monaco.",
+          "intermediate": "Have you ever been to Monaco?",
+          "advanced": "Monaco is located in Europe.",
+          "master": "The capital of Monaco is Monaco."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[모나코]"
+    }
+  },
+  {
+    "id": "montenegro",
+    "korean": "몬테네그로",
+    "romanization": "montenegero",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["europe", "country"],
+    "translations": {
+      "ko": {
+        "word": "몬테네그로",
+        "explanation": "유럽에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 몬테네그로에 살고 있습니다.",
+          "intermediate": "당신은 몬테네그로에 가보셨나요?",
+          "advanced": "몬테네그로는 유럽에 위치해 있습니다.",
+          "master": "몬테네그로의 수도는 포드고리차입니다."
+        }
+      },
+      "en": {
+        "word": "Montenegro",
+        "explanation": "A country located in Europe.",
+        "examples": {
+          "beginner": "I live in Montenegro.",
+          "intermediate": "Have you ever been to Montenegro?",
+          "advanced": "Montenegro is located in Europe.",
+          "master": "The capital of Montenegro is Podgorica."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[몬테네그로]"
+    }
+  },
+  {
+    "id": "netherlands",
+    "korean": "네덜란드",
+    "romanization": "nedeollandeu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["europe", "country"],
+    "translations": {
+      "ko": {
+        "word": "네덜란드",
+        "explanation": "유럽에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 네덜란드에 살고 있습니다.",
+          "intermediate": "당신은 네덜란드에 가보셨나요?",
+          "advanced": "네덜란드는 유럽에 위치해 있습니다.",
+          "master": "네덜란드의 수도는 암스테르담입니다."
+        }
+      },
+      "en": {
+        "word": "Netherlands",
+        "explanation": "A country located in Europe.",
+        "examples": {
+          "beginner": "I live in the Netherlands.",
+          "intermediate": "Have you ever been to the Netherlands?",
+          "advanced": "The Netherlands is located in Europe.",
+          "master": "The capital of the Netherlands is Amsterdam."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[네덜란드]"
+    }
   }
 ]
