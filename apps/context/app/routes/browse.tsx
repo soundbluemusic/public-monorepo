@@ -1,9 +1,8 @@
 import { metaFactory } from '@soundblue/i18n';
 import { useAutoAnimate } from '@soundblue/ui/hooks';
-import { VirtualList } from '@soundblue/ui/patterns';
 import { cn } from '@soundblue/ui/utils';
-import { Shuffle } from 'lucide-react';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { ChevronLeft, ChevronRight, Shuffle } from 'lucide-react';
+import { useEffect, useMemo, useState } from 'react';
 import { useLoaderData, useSearchParams } from 'react-router';
 import { EntryListItem } from '@/components/entry/EntryListItem';
 import { Layout } from '@/components/layout';
@@ -63,6 +62,44 @@ type FilterCategory = 'all' | string;
 type FilterStatus = 'all' | 'studied' | 'unstudied' | 'bookmarked';
 type SortOption = 'alphabetical' | 'category' | 'recent';
 
+/** 페이지당 항목 수 */
+const PAGE_SIZE = 50;
+
+/**
+ * 페이지 번호 배열 생성 (1, 2, ..., 5, 6, 7, ..., 19, 20 형태)
+ */
+function generatePageNumbers(current: number, total: number): (number | '...')[] {
+  if (total <= 7) {
+    return Array.from({ length: total }, (_, i) => i + 1);
+  }
+
+  const pages: (number | '...')[] = [];
+
+  // 항상 첫 페이지 포함
+  pages.push(1);
+
+  if (current > 3) {
+    pages.push('...');
+  }
+
+  // 현재 페이지 주변
+  const start = Math.max(2, current - 1);
+  const end = Math.min(total - 1, current + 1);
+
+  for (let i = start; i <= end; i++) {
+    pages.push(i);
+  }
+
+  if (current < total - 2) {
+    pages.push('...');
+  }
+
+  // 항상 마지막 페이지 포함
+  pages.push(total);
+
+  return pages;
+}
+
 // Loader 반환 타입 (경량 버전 사용)
 interface LoaderData {
   entries: LightEntry[];
@@ -108,11 +145,15 @@ export default function BrowsePage() {
   const [filterStatus, setFilterStatus] = useState<FilterStatus>('all');
   const [sortBy, setSortBy] = useState<SortOption>('alphabetical');
 
+  // Pagination state
+  const [currentPage, setCurrentPage] = useState(1);
+
   // Sync URL params to state on mount/URL change
   useEffect(() => {
     const categoryParam = searchParams.get('category');
     const statusParam = searchParams.get('status');
     const sortParam = searchParams.get('sort');
+    const pageParam = searchParams.get('page');
 
     if (categoryParam) {
       const isValidCategory = categoryParam === 'all' || cats.some((c) => c.id === categoryParam);
@@ -132,6 +173,13 @@ export default function BrowsePage() {
       const validSorts = ['alphabetical', 'category', 'recent'];
       if (validSorts.includes(sortParam)) {
         setSortBy(sortParam as SortOption);
+      }
+    }
+
+    if (pageParam) {
+      const page = Number.parseInt(pageParam, 10);
+      if (!Number.isNaN(page) && page >= 1) {
+        setCurrentPage(page);
       }
     }
   }, [searchParams, cats]);
@@ -222,6 +270,23 @@ export default function BrowsePage() {
     isLoading,
   ]);
 
+  // 페이지네이션 계산
+  const totalPages = Math.ceil(filteredEntries.length / PAGE_SIZE);
+  const paginatedEntries = useMemo(() => {
+    const start = (currentPage - 1) * PAGE_SIZE;
+    return filteredEntries.slice(start, start + PAGE_SIZE);
+  }, [filteredEntries, currentPage]);
+
+  // 필터 변경 시 페이지 리셋 (searchParams/setSearchParams는 의도적으로 제외)
+  // biome-ignore lint/correctness/useExhaustiveDependencies: 필터 변경에만 반응해야 함
+  useEffect(() => {
+    setCurrentPage(1);
+    // URL에서 page 파라미터 제거
+    const params = new URLSearchParams(searchParams);
+    params.delete('page');
+    setSearchParams(params, { replace: true });
+  }, [filterCategory, filterStatus, sortBy]);
+
   const handleRandomWord = () => {
     if (entries.length === 0) return;
     const randomIndex = Math.floor(Math.random() * entries.length);
@@ -258,32 +323,21 @@ export default function BrowsePage() {
 
   // Auto-animate for stats grid
   const [statsRef] = useAutoAnimate<HTMLDivElement>();
+  const [listRef] = useAutoAnimate<HTMLDivElement>();
 
-  // renderItem 콜백 (useCallback은 최상위에서 호출해야 함)
-  const renderEntryItem = useCallback(
-    (entry: LightEntry) => {
-      // LightEntry에서 직접 word 접근 (경량 버전)
-      const translation = entry.word[locale];
-      const isStudied = studiedIds.has(entry.id);
-      const isFavorite = favoriteIds.has(entry.id);
-      const category = cats.find((c) => c.id === entry.categoryId);
-
-      return (
-        <EntryListItem
-          entryId={entry.id}
-          korean={entry.korean}
-          romanization={entry.romanization}
-          translation={translation}
-          isStudied={isStudied}
-          isFavorite={isFavorite}
-          category={category}
-          locale={locale}
-          localePath={localePath}
-        />
-      );
-    },
-    [locale, studiedIds, favoriteIds, cats, localePath],
-  );
+  // 페이지 변경 핸들러
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    const params = new URLSearchParams(searchParams);
+    if (page === 1) {
+      params.delete('page');
+    } else {
+      params.set('page', String(page));
+    }
+    setSearchParams(params);
+    // 리스트 상단으로 스크롤
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <Layout>
@@ -409,8 +463,8 @@ export default function BrowsePage() {
         />
       </div>
 
-      {/* Results Count */}
-      <div className="mb-4">
+      {/* Results Count & Pagination Info */}
+      <div className="mb-4 flex items-center justify-between">
         <p className="text-sm text-(--text-secondary)">
           {isLoadingCategory
             ? locale === 'ko'
@@ -420,28 +474,110 @@ export default function BrowsePage() {
               ? `${filteredEntries.length}개의 단어`
               : `${filteredEntries.length} words`}
         </p>
+        {totalPages > 1 && (
+          <p className="text-sm text-(--text-tertiary)">
+            {locale === 'ko'
+              ? `${currentPage} / ${totalPages} 페이지`
+              : `Page ${currentPage} of ${totalPages}`}
+          </p>
+        )}
       </div>
 
-      {/* Word List - VirtualList for 751+ items */}
+      {/* Word List - Paginated */}
       {isLoadingCategory ? (
-        <div className="h-150 flex items-center justify-center text-(--text-tertiary)">
+        <div className="min-h-96 flex items-center justify-center text-(--text-tertiary)">
           <p>{locale === 'ko' ? '카테고리 로딩 중...' : 'Loading category...'}</p>
         </div>
-      ) : (
-        <VirtualList
-          key={`${filterCategory}-${filterStatus}-${sortBy}`}
-          items={filteredEntries}
-          estimateSize={52}
-          className="h-150"
-          overscan={5}
-          renderItem={renderEntryItem}
-        />
-      )}
-
-      {!isLoadingCategory && filteredEntries.length === 0 && (
+      ) : filteredEntries.length === 0 ? (
         <div className="text-center py-12 px-4 text-(--text-tertiary)">
           <p>{locale === 'ko' ? '단어가 없습니다' : 'No words found'}</p>
         </div>
+      ) : (
+        <>
+          <div ref={listRef} className="flex flex-col gap-1">
+            {paginatedEntries.map((entry) => {
+              const translation = entry.word[locale];
+              const isStudied = studiedIds.has(entry.id);
+              const isFavorite = favoriteIds.has(entry.id);
+              const category = cats.find((c) => c.id === entry.categoryId);
+
+              return (
+                <EntryListItem
+                  key={entry.id}
+                  entryId={entry.id}
+                  korean={entry.korean}
+                  romanization={entry.romanization}
+                  translation={translation}
+                  isStudied={isStudied}
+                  isFavorite={isFavorite}
+                  category={category}
+                  locale={locale}
+                  localePath={localePath}
+                />
+              );
+            })}
+          </div>
+
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <div className="mt-6 flex items-center justify-center gap-2">
+              <button
+                type="button"
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+                className={cn(
+                  'min-h-10 min-w-10 flex items-center justify-center rounded-lg transition-colors',
+                  currentPage === 1
+                    ? 'text-(--text-tertiary) cursor-not-allowed'
+                    : 'text-(--text-primary) hover:bg-(--bg-tertiary)',
+                )}
+                aria-label={locale === 'ko' ? '이전 페이지' : 'Previous page'}
+              >
+                <ChevronLeft size={20} />
+              </button>
+
+              {/* Page numbers */}
+              <div className="flex items-center gap-1">
+                {generatePageNumbers(currentPage, totalPages).map((page, idx) =>
+                  page === '...' ? (
+                    <span key={`ellipsis-${idx}`} className="px-2 text-(--text-tertiary)">
+                      ...
+                    </span>
+                  ) : (
+                    <button
+                      key={page}
+                      type="button"
+                      onClick={() => handlePageChange(page as number)}
+                      className={cn(
+                        'min-h-10 min-w-10 flex items-center justify-center rounded-lg font-medium transition-colors',
+                        currentPage === page
+                          ? 'bg-(--accent-primary) text-white'
+                          : 'text-(--text-primary) hover:bg-(--bg-tertiary)',
+                      )}
+                    >
+                      {page}
+                    </button>
+                  ),
+                )}
+              </div>
+
+              <button
+                type="button"
+                onClick={() => handlePageChange(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className={cn(
+                  'min-h-10 min-w-10 flex items-center justify-center rounded-lg transition-colors',
+                  currentPage === totalPages
+                    ? 'text-(--text-tertiary) cursor-not-allowed'
+                    : 'text-(--text-primary) hover:bg-(--bg-tertiary)',
+                )}
+                aria-label={locale === 'ko' ? '다음 페이지' : 'Next page'}
+              >
+                <ChevronRight size={20} />
+              </button>
+            </div>
+          )}
+        </>
       )}
     </Layout>
   );
