@@ -7418,5 +7418,390 @@
     "pronunciation": {
       "korean": "[토켈라우]"
     }
+  },
+  {
+    "id": "aruba",
+    "korean": "아루바",
+    "romanization": "aruba",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["caribbean", "territory"],
+    "translations": {
+      "ko": {
+        "word": "아루바",
+        "explanation": "카리브해에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 아루바에 살고 있습니다.",
+          "intermediate": "당신은 아루바에 가보셨나요?",
+          "advanced": "아루바는 카리브해에 위치해 있습니다.",
+          "master": "아루바에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Aruba",
+        "explanation": "A region located in the Caribbean.",
+        "examples": {
+          "beginner": "I live in Aruba.",
+          "intermediate": "Have you ever been to Aruba?",
+          "advanced": "Aruba is located in the Caribbean.",
+          "master": "I have a friend from Aruba."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아루바]"
+    }
+  },
+  {
+    "id": "bermuda",
+    "korean": "버뮤다",
+    "romanization": "beomyuda",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["atlantic", "territory"],
+    "translations": {
+      "ko": {
+        "word": "버뮤다",
+        "explanation": "대서양에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 버뮤다에 살고 있습니다.",
+          "intermediate": "당신은 버뮤다에 가보셨나요?",
+          "advanced": "버뮤다는 대서양에 위치해 있습니다.",
+          "master": "버뮤다에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Bermuda",
+        "explanation": "A region located in the Atlantic Ocean.",
+        "examples": {
+          "beginner": "I live in Bermuda.",
+          "intermediate": "Have you ever been to Bermuda?",
+          "advanced": "Bermuda is located in the Atlantic Ocean.",
+          "master": "I have a friend from Bermuda."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[버뮤다]"
+    }
+  },
+  {
+    "id": "british-virgin-islands",
+    "korean": "영국령 버진아일랜드",
+    "romanization": "yeonggungnyeong beojin aillaendeu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["caribbean", "territory"],
+    "translations": {
+      "ko": {
+        "word": "영국령 버진아일랜드",
+        "explanation": "카리브해에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 영국령 버진아일랜드에 살고 있습니다.",
+          "intermediate": "당신은 영국령 버진아일랜드에 가보셨나요?",
+          "advanced": "영국령 버진아일랜드는 카리브해에 위치해 있습니다.",
+          "master": "영국령 버진아일랜드에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "British Virgin Islands",
+        "explanation": "A region located in the Caribbean.",
+        "examples": {
+          "beginner": "I live in the British Virgin Islands.",
+          "intermediate": "Have you ever been to the British Virgin Islands?",
+          "advanced": "The British Virgin Islands is located in the Caribbean.",
+          "master": "I have a friend from the British Virgin Islands."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[영국령 버진아일랜드]"
+    }
+  },
+  {
+    "id": "cayman-islands",
+    "korean": "케이맨 제도",
+    "romanization": "keimen jedo",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["caribbean", "territory"],
+    "translations": {
+      "ko": {
+        "word": "케이맨 제도",
+        "explanation": "카리브해에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 케이맨 제도에 살고 있습니다.",
+          "intermediate": "당신은 케이맨 제도에 가보셨나요?",
+          "advanced": "케이맨 제도는 카리브해에 위치해 있습니다.",
+          "master": "케이맨 제도에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Cayman Islands",
+        "explanation": "A region located in the Caribbean.",
+        "examples": {
+          "beginner": "I live in the Cayman Islands.",
+          "intermediate": "Have you ever been to the Cayman Islands?",
+          "advanced": "The Cayman Islands is located in the Caribbean.",
+          "master": "I have a friend from the Cayman Islands."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[케이맨 제도]"
+    }
+  },
+  {
+    "id": "curacao",
+    "korean": "퀴라소",
+    "romanization": "kwiraso",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["caribbean", "territory"],
+    "translations": {
+      "ko": {
+        "word": "퀴라소",
+        "explanation": "카리브해에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 퀴라소에 살고 있습니다.",
+          "intermediate": "당신은 퀴라소에 가보셨나요?",
+          "advanced": "퀴라소는 카리브해에 위치해 있습니다.",
+          "master": "퀴라소에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Curaçao",
+        "explanation": "A region located in the Caribbean.",
+        "examples": {
+          "beginner": "I live in Curaçao.",
+          "intermediate": "Have you ever been to Curaçao?",
+          "advanced": "Curaçao is located in the Caribbean.",
+          "master": "I have a friend from Curaçao."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[퀴라소]"
+    }
+  },
+  {
+    "id": "guadeloupe",
+    "korean": "과들루프",
+    "romanization": "gwadeullupeu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["caribbean", "territory"],
+    "translations": {
+      "ko": {
+        "word": "과들루프",
+        "explanation": "카리브해에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 과들루프에 살고 있습니다.",
+          "intermediate": "당신은 과들루프에 가보셨나요?",
+          "advanced": "과들루프는 카리브해에 위치해 있습니다.",
+          "master": "과들루프에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Guadeloupe",
+        "explanation": "A region located in the Caribbean.",
+        "examples": {
+          "beginner": "I live in Guadeloupe.",
+          "intermediate": "Have you ever been to Guadeloupe?",
+          "advanced": "Guadeloupe is located in the Caribbean.",
+          "master": "I have a friend from Guadeloupe."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[과들루프]"
+    }
+  },
+  {
+    "id": "martinique",
+    "korean": "마르티니크",
+    "romanization": "mareutinikeu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["caribbean", "territory"],
+    "translations": {
+      "ko": {
+        "word": "마르티니크",
+        "explanation": "카리브해에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 마르티니크에 살고 있습니다.",
+          "intermediate": "당신은 마르티니크에 가보셨나요?",
+          "advanced": "마르티니크는 카리브해에 위치해 있습니다.",
+          "master": "마르티니크에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Martinique",
+        "explanation": "A region located in the Caribbean.",
+        "examples": {
+          "beginner": "I live in Martinique.",
+          "intermediate": "Have you ever been to Martinique?",
+          "advanced": "Martinique is located in the Caribbean.",
+          "master": "I have a friend from Martinique."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[마르티니크]"
+    }
+  },
+  {
+    "id": "puerto-rico",
+    "korean": "푸에르토리코",
+    "romanization": "puereutoriko",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["caribbean", "territory"],
+    "translations": {
+      "ko": {
+        "word": "푸에르토리코",
+        "explanation": "카리브해에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 푸에르토리코에 살고 있습니다.",
+          "intermediate": "당신은 푸에르토리코에 가보셨나요?",
+          "advanced": "푸에르토리코는 카리브해에 위치해 있습니다.",
+          "master": "푸에르토리코에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Puerto Rico",
+        "explanation": "A region located in the Caribbean.",
+        "examples": {
+          "beginner": "I live in Puerto Rico.",
+          "intermediate": "Have you ever been to Puerto Rico?",
+          "advanced": "Puerto Rico is located in the Caribbean.",
+          "master": "I have a friend from Puerto Rico."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[푸에르토리코]"
+    }
+  },
+  {
+    "id": "sint-maarten",
+    "korean": "신트마르턴",
+    "romanization": "sinteumareuten",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["caribbean", "territory"],
+    "translations": {
+      "ko": {
+        "word": "신트마르턴",
+        "explanation": "카리브해에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 신트마르턴에 살고 있습니다.",
+          "intermediate": "당신은 신트마르턴에 가보셨나요?",
+          "advanced": "신트마르턴은 카리브해에 위치해 있습니다.",
+          "master": "신트마르턴에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Sint Maarten",
+        "explanation": "A region located in the Caribbean.",
+        "examples": {
+          "beginner": "I live in Sint Maarten.",
+          "intermediate": "Have you ever been to Sint Maarten?",
+          "advanced": "Sint Maarten is located in the Caribbean.",
+          "master": "I have a friend from Sint Maarten."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[신트마르턴]"
+    }
+  },
+  {
+    "id": "turks-and-caicos-islands",
+    "korean": "터크스 케이커스 제도",
+    "romanization": "teokeuseu keikeoseu jedo",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["caribbean", "territory"],
+    "translations": {
+      "ko": {
+        "word": "터크스 케이커스 제도",
+        "explanation": "카리브해에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 터크스 케이커스 제도에 살고 있습니다.",
+          "intermediate": "당신은 터크스 케이커스 제도에 가보셨나요?",
+          "advanced": "터크스 케이커스 제도는 카리브해에 위치해 있습니다.",
+          "master": "터크스 케이커스 제도에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Turks and Caicos Islands",
+        "explanation": "A region located in the Caribbean.",
+        "examples": {
+          "beginner": "I live in the Turks and Caicos Islands.",
+          "intermediate": "Have you ever been to the Turks and Caicos Islands?",
+          "advanced": "The Turks and Caicos Islands is located in the Caribbean.",
+          "master": "I have a friend from the Turks and Caicos Islands."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[터크스 케이커스 제도]"
+    }
+  },
+  {
+    "id": "us-virgin-islands",
+    "korean": "미국령 버진아일랜드",
+    "romanization": "migungnyeong beojin aillaendeu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["caribbean", "territory"],
+    "translations": {
+      "ko": {
+        "word": "미국령 버진아일랜드",
+        "explanation": "카리브해에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 미국령 버진아일랜드에 살고 있습니다.",
+          "intermediate": "당신은 미국령 버진아일랜드에 가보셨나요?",
+          "advanced": "미국령 버진아일랜드는 카리브해에 위치해 있습니다.",
+          "master": "미국령 버진아일랜드에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "U.S. Virgin Islands",
+        "explanation": "A region located in the Caribbean.",
+        "examples": {
+          "beginner": "I live in the U.S. Virgin Islands.",
+          "intermediate": "Have you ever been to the U.S. Virgin Islands?",
+          "advanced": "The U.S. Virgin Islands is located in the Caribbean.",
+          "master": "I have a friend from the U.S. Virgin Islands."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[미국령 버진아일랜드]"
+    }
   }
 ]
