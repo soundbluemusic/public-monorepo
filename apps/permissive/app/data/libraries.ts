@@ -1152,3 +1152,21 @@ export const categories = [
 ] as const;
 
 export type CategoryFilter = (typeof categories)[number];
+
+// Slug utilities for URL-friendly library identifiers
+export function getLibrarySlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+export function getLibraryBySlug(slug: string): Library | undefined {
+  return libraries.find((lib) => getLibrarySlug(lib.name) === slug);
+}
+
+export function getRelatedLibraries(library: Library, limit = 3): Library[] {
+  return libraries
+    .filter((lib) => lib.name !== library.name && lib.category === library.category)
+    .slice(0, limit);
+}

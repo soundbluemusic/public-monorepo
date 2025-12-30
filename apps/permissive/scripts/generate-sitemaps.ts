@@ -5,6 +5,7 @@
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createDynamicUrls, generateSitemaps, type StaticPage } from '@soundblue/seo/sitemap';
+import { getLibrarySlug, libraries } from '../app/data/libraries.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -23,63 +24,8 @@ const STATIC_PAGES: StaticPage[] = [
   { path: '/sitemap', priority: '0.5', changefreq: 'monthly' },
 ];
 
-const LIBRARIES = [
-  'react',
-  'vue',
-  'solid-js',
-  'svelte',
-  'preact',
-  'alpine-js',
-  'lit',
-  'zustand',
-  'jotai',
-  'redux-toolkit',
-  'pinia',
-  'valtio',
-  'mobx',
-  'react-router',
-  'tanstack-router',
-  'vue-router',
-  'tailwindcss',
-  'unocss',
-  'styled-components',
-  'emotion',
-  'panda-css',
-  'vite',
-  'esbuild',
-  'rollup',
-  'swc',
-  'turbopack',
-  'parcel',
-  'tanstack-query',
-  'swr',
-  'axios',
-  'ky',
-  'radix-ui',
-  'headless-ui',
-  'shadcn-ui',
-  'ark-ui',
-  'framer-motion',
-  'gsap',
-  'lottie',
-  'auto-animate',
-  'react-hook-form',
-  'formik',
-  'zod',
-  'yup',
-  'date-fns',
-  'dayjs',
-  'lodash',
-  'uuid',
-  'nanoid',
-  'localforage',
-  'dexie-js',
-  'idb',
-  'idb-keyval',
-  'pouchdb',
-  'rxdb',
-  'lokijs',
-];
+// Generate library slugs from actual data (Single Source of Truth)
+const LIBRARY_SLUGS = libraries.map((lib) => getLibrarySlug(lib.name));
 
 const WEB_APIS = [
   'document',
@@ -126,8 +72,8 @@ generateSitemaps(CONFIG, STATIC_PAGES, [
     name: 'libraries',
     urls: createDynamicUrls(
       CONFIG.siteUrl,
-      '/libraries',
-      LIBRARIES,
+      '/library',
+      LIBRARY_SLUGS,
       '0.7',
       'monthly',
       CONFIG.languages,
