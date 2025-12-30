@@ -1,4 +1,4 @@
-import { validateId } from '@soundblue/shared';
+import { validateId } from '@soundblue/core/validation';
 import Dexie, { type EntityTable } from 'dexie';
 
 // 즐겨찾기 개념

@@ -1,4 +1,6 @@
-import { EntryListItem, ProgressBar, useAutoAnimate, VirtualList } from '@soundblue/shared-react';
+import { EntryListItem, useAutoAnimate } from '@soundblue/shared-react';
+import { VirtualList } from '@soundblue/ui/patterns';
+import { ProgressBar } from '@soundblue/ui/primitives';
 import { useMemo } from 'react';
 import { Link, useLoaderData } from 'react-router';
 import { Layout } from '@/components/layout';

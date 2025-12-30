@@ -1,4 +1,4 @@
-import { cn } from '@soundblue/shared-react';
+import { cn } from '@soundblue/ui/utils';
 import { ArrowUp, ChevronRight } from 'lucide-react';
 import { type ReactNode, useEffect, useState } from 'react';
 import { Link } from 'react-router';

@@ -1,4 +1,6 @@
-import { cn, Skeleton, toast } from '@soundblue/shared-react';
+import { toast } from '@soundblue/features/toast';
+import { Skeleton } from '@soundblue/ui/primitives';
+import { cn } from '@soundblue/ui/utils';
 import { Bookmark, BookmarkCheck, Check } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router';

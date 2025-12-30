@@ -1,5 +1,5 @@
-import { stripLocaleFromPath } from '@soundblue/shared';
-import { cn } from '@soundblue/shared-react';
+import { stripLocaleFromPath } from '@soundblue/i18n';
+import { cn } from '@soundblue/ui/utils';
 import { Grid3X3, Home, Info, LayoutGrid, MessageCircle } from 'lucide-react';
 import { Link, useLocation } from 'react-router';
 import { useI18n } from '@/i18n';

@@ -2,8 +2,10 @@
  * @fileoverview 홈페이지 컴포넌트 - Apple 스타일 미니멀 디자인
  */
 
-import { LIMITS, metaFactory } from '@soundblue/shared';
-import { cn, type SearchResult, useAutoAnimate, useSearchWorker } from '@soundblue/shared-react';
+import { LIMITS } from '@soundblue/core/validation';
+import { metaFactory } from '@soundblue/i18n';
+import { type SearchResult, useAutoAnimate, useSearchWorker } from '@soundblue/shared-react';
+import { cn } from '@soundblue/ui/utils';
 import { BookOpen, Search } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router';

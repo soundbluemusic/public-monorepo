@@ -2,7 +2,7 @@
  * @fileoverview 즐겨찾기 페이지
  */
 
-import { metaFactory } from '@soundblue/shared';
+import { metaFactory } from '@soundblue/i18n';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router';
 import { ConceptCard } from '@/components/concept/ConceptCard';

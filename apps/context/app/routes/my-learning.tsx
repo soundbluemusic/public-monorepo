@@ -1,4 +1,4 @@
-import { LIMITS } from '@soundblue/shared';
+import { LIMITS } from '@soundblue/core/validation';
 import { BookmarkCheck, Calendar, FolderOpen, TrendingUp, Trophy } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import type { MetaFunction } from 'react-router';

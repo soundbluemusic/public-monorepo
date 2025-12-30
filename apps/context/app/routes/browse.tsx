@@ -1,5 +1,7 @@
-import { metaFactory } from '@soundblue/shared';
-import { cn, EntryListItem, useAutoAnimate, VirtualList } from '@soundblue/shared-react';
+import { metaFactory } from '@soundblue/i18n';
+import { EntryListItem, useAutoAnimate } from '@soundblue/shared-react';
+import { VirtualList } from '@soundblue/ui/patterns';
+import { cn } from '@soundblue/ui/utils';
 import { Shuffle } from 'lucide-react';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useLoaderData, useSearchParams } from 'react-router';

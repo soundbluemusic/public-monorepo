@@ -18,8 +18,14 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@soundblue/core": "workspace:*",
+    "@soundblue/features": "workspace:*",
+    "@soundblue/i18n": "workspace:*",
+    "@soundblue/pwa": "workspace:*",
+    "@soundblue/seo": "workspace:*",
     "@soundblue/shared": "workspace:*",
     "@soundblue/shared-react": "workspace:*",
+    "@soundblue/ui": "workspace:*",
     "dexie": "^4.0.10",
     "lucide-react": "^0.468.0",
     "react": "^19.2.3",

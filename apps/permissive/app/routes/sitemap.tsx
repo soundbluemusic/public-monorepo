@@ -1,4 +1,4 @@
-import { metaFactory } from '@soundblue/shared';
+import { metaFactory } from '@soundblue/seo/meta';
 import { FileText, Globe, Home, Package, Search } from 'lucide-react';
 import type { ReactNode } from 'react';
 import { Link } from 'react-router';

@@ -4,15 +4,15 @@
  * 수학 개념, 분야, 공식, 예제 등의 타입을 정의합니다.
  */
 
-// Import Language from shared package (Single Source of Truth)
-import type { Language } from '@soundblue/shared';
+// Import Language from i18n package (Single Source of Truth)
+import type { Language } from '@soundblue/i18n';
 
 // ============================================
 // 기본 타입
 // ============================================
 
 // Re-export Language for backward compatibility
-export type { Language } from '@soundblue/shared';
+export type { Language } from '@soundblue/i18n';
 
 /**
  * 난이도 (Roots 앱 전용)

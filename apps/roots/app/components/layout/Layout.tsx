@@ -1,11 +1,8 @@
-import { LIMITS, stripLocaleFromPath } from '@soundblue/shared';
-import {
-  cn,
-  DarkModeToggle,
-  LanguageToggle,
-  SearchDropdown,
-  useSearchWorker,
-} from '@soundblue/shared-react';
+import { LIMITS } from '@soundblue/core/validation';
+import { stripLocaleFromPath } from '@soundblue/i18n';
+import { DarkModeToggle, LanguageToggle, useSearchWorker } from '@soundblue/shared-react';
+import { SearchDropdown } from '@soundblue/ui/patterns';
+import { cn } from '@soundblue/ui/utils';
 import { ArrowUp, BookOpen, ChevronRight, Github, Heart, Star } from 'lucide-react';
 import { type ReactNode, useCallback, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';

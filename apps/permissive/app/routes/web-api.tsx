@@ -1,5 +1,7 @@
-import { LIMITS, metaFactory } from '@soundblue/shared';
-import { cn, useAutoAnimate } from '@soundblue/shared-react';
+import { metaFactory } from '@soundblue/seo/meta';
+import { LIMITS } from '@soundblue/shared';
+import { useAutoAnimate } from '@soundblue/shared-react';
+import { cn } from '@soundblue/ui/utils';
 import { BarChart2, CalendarPlus, Flame, Search } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { useLoaderData, useSearchParams } from 'react-router';

@@ -1,4 +1,4 @@
-import { cn } from '@soundblue/shared-react';
+import { cn } from '@soundblue/ui/utils';
 import type { DifficultyLevel } from '@/data/types';
 import { useI18n } from '@/i18n';
 

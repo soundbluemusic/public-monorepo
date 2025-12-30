@@ -1,5 +1,5 @@
 // Re-export for backward compatibility
-export type { Language } from '@soundblue/shared';
+export type { Language } from '@soundblue/i18n';
 
 /**
  * 표현 변형 (격식 수준별)

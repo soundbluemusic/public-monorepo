@@ -1,5 +1,8 @@
-import { LIMITS, metaFactory } from '@soundblue/shared';
-import { cn, FadeIn, useAutoAnimate } from '@soundblue/shared-react';
+import { metaFactory } from '@soundblue/seo/meta';
+import { LIMITS } from '@soundblue/shared';
+import { useAutoAnimate } from '@soundblue/shared-react';
+import { FadeIn } from '@soundblue/ui/animation';
+import { cn } from '@soundblue/ui/utils';
 import { CalendarPlus, Flame, Search, Star } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { useLoaderData, useSearchParams } from 'react-router';

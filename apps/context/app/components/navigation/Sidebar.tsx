@@ -1,5 +1,6 @@
-import { LIMITS, stripLocaleFromPath } from '@soundblue/shared';
-import { cn } from '@soundblue/shared-react';
+import { LIMITS } from '@soundblue/core/validation';
+import { stripLocaleFromPath } from '@soundblue/i18n';
+import { cn } from '@soundblue/ui/utils';
 import { Home, Info, LayoutGrid, List, MessageCircle, X } from 'lucide-react';
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router';

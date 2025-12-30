@@ -1,9 +1,7 @@
-import {
-  DARK_MODE_INIT_SCRIPT,
-  DARK_MODE_TOGGLE_SCRIPT,
-  getLocaleFromPath,
-} from '@soundblue/shared';
-import { ErrorBoundary, OfflineIndicator, ToastContainer } from '@soundblue/shared-react';
+import { getLocaleFromPath } from '@soundblue/i18n';
+import { OfflineIndicator } from '@soundblue/pwa/react';
+import { DARK_MODE_INIT_SCRIPT, DARK_MODE_TOGGLE_SCRIPT } from '@soundblue/shared';
+import { ErrorBoundary, ToastContainer } from '@soundblue/ui/feedback';
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLocation } from 'react-router';
 import { I18nProvider } from './i18n';
 import './styles/global.css';

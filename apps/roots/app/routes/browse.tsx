@@ -2,7 +2,7 @@
  * @fileoverview 전체 분야 목록 페이지
  */
 
-import { metaFactory } from '@soundblue/shared';
+import { metaFactory } from '@soundblue/i18n';
 import { Link } from 'react-router';
 import { Layout } from '@/components/layout/Layout';
 import { fields } from '@/data/fields';

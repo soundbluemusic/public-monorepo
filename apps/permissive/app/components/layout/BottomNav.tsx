@@ -1,4 +1,4 @@
-import { cn } from '@soundblue/shared-react';
+import { cn } from '@soundblue/ui/utils';
 import { Globe, Home, Package } from 'lucide-react';
 import type { ReactNode } from 'react';
 import { Link, useLocation } from 'react-router';

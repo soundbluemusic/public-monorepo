@@ -2,7 +2,7 @@
  * @fileoverview 개념 상세 페이지
  */
 
-import { toast } from '@soundblue/shared-react';
+import { toast } from '@soundblue/features/toast';
 import { BookOpen, Heart, History, Zap } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router';

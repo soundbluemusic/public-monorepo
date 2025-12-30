@@ -1,4 +1,4 @@
-import { metaFactory } from '@soundblue/shared';
+import { metaFactory } from '@soundblue/i18n';
 import { Link } from 'react-router';
 import { Layout } from '@/components/layout/Layout';
 import { useI18n } from '@/i18n';

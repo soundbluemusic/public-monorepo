@@ -1,5 +1,7 @@
-import { LIMITS, metaFactory } from '@soundblue/shared';
-import { cn, type SearchResult, useSearchWorker } from '@soundblue/shared-react';
+import { metaFactory } from '@soundblue/seo/meta';
+import { LIMITS } from '@soundblue/shared';
+import { type SearchResult, useSearchWorker } from '@soundblue/shared-react';
+import { cn } from '@soundblue/ui/utils';
 import {
   ChevronRight,
   Compass,

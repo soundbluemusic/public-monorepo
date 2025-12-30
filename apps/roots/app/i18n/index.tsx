@@ -1,5 +1,5 @@
-import type { Language } from '@soundblue/shared';
-import { getLocaleFromPath, stripLocaleFromPath } from '@soundblue/shared';
+import type { Language } from '@soundblue/i18n';
+import { getLocaleFromPath, stripLocaleFromPath } from '@soundblue/i18n';
 import { createContext, type ReactNode, useContext, useMemo } from 'react';
 import { useLocation } from 'react-router';
 
@@ -8,7 +8,7 @@ import enMessages from '../../project.inlang/messages/en.json';
 import koMessages from '../../project.inlang/messages/ko.json';
 
 // Re-export for backward compatibility
-export type { Language } from '@soundblue/shared';
+export type { Language } from '@soundblue/i18n';
 
 // Message dictionaries by locale
 const messages: Record<Language, Record<string, string>> = {

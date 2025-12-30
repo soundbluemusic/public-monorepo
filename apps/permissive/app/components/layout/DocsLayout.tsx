@@ -1,4 +1,6 @@
-import { cn, useIsMobile, useSettingsStore } from '@soundblue/shared-react';
+import { useIsMobile } from '@soundblue/features/media';
+import { useSettingsStore } from '@soundblue/features/settings';
+import { cn } from '@soundblue/ui/utils';
 import { ArrowUp } from 'lucide-react';
 import { type ReactNode, useEffect, useState } from 'react';
 import { useI18n } from '../../i18n';

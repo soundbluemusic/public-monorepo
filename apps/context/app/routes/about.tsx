@@ -1,4 +1,4 @@
-import { metaFactory } from '@soundblue/shared';
+import { metaFactory } from '@soundblue/i18n';
 import { Layout } from '@/components/layout';
 import { useI18n } from '@/i18n';
 

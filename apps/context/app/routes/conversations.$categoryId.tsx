@@ -1,4 +1,4 @@
-import { cn } from '@soundblue/shared-react';
+import { cn } from '@soundblue/ui/utils';
 import { ArrowLeft, MessageCircle } from 'lucide-react';
 import { Link, useLoaderData } from 'react-router';
 import { LinkedExample } from '@/components/LinkedExample';

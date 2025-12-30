@@ -1,4 +1,4 @@
-import { cn } from '@soundblue/shared-react';
+import { cn } from '@soundblue/ui/utils';
 import {
   Atom,
   ChevronLeft,

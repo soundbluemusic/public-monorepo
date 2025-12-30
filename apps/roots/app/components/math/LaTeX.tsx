@@ -4,7 +4,7 @@
  * 메모이제이션으로 파싱 성능 최적화
  */
 
-import { cn } from '@soundblue/shared-react';
+import { cn } from '@soundblue/ui/utils';
 import { useMemo } from 'react';
 
 interface LaTeXProps {

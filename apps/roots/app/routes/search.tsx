@@ -2,8 +2,8 @@
  * @fileoverview 검색 결과 페이지
  */
 
-import { metaFactory } from '@soundblue/shared';
-import { toast } from '@soundblue/shared-react';
+import { toast } from '@soundblue/features/toast';
+import { metaFactory } from '@soundblue/i18n';
 import { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router';
 import { Layout } from '@/components/layout/Layout';
