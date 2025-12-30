@@ -112,11 +112,26 @@ export function useStudyData({
 
         // 카테고리별 진행률 (옵션으로 제공된 경우만)
         if (categories && categoryCounts) {
+          // 엔트리 데이터를 로드하여 실제 categoryId 매핑
+          const { entriesById } = await import('@/data/entries');
+          const studiedSet = new Set(ids);
+
           const catProgress: Record<string, ProgressData> = {};
           for (const cat of categories) {
             const count = categoryCounts[cat.id] ?? 0;
-            const progress = await studyRecords.getCategoryProgress(cat.id, count);
-            catProgress[cat.id] = progress;
+            // 학습된 ID 중 해당 카테고리에 속하는 것만 카운트
+            let studiedInCategory = 0;
+            for (const studiedId of studiedSet) {
+              const entry = entriesById.get(studiedId);
+              if (entry?.categoryId === cat.id) {
+                studiedInCategory++;
+              }
+            }
+            catProgress[cat.id] = {
+              studied: studiedInCategory,
+              total: count,
+              percentage: count > 0 ? (studiedInCategory / count) * 100 : 0,
+            };
           }
           setCategoryProgress(catProgress);
         }

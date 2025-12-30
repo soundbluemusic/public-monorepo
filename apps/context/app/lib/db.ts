@@ -189,14 +189,17 @@ export const studyRecords = {
 
   /**
    * Get category progress (studied count, total count)
+   * @deprecated Use useStudyData hook instead for accurate category progress.
+   * This function cannot accurately determine category without entry data.
    */
-  async getCategoryProgress(categoryId: string, totalEntries: number) {
-    const allStudied = await this.getStudiedEntryIds();
-    const studiedInCategory = allStudied.filter((id) => id.startsWith(`${categoryId}-`));
+  async getCategoryProgress(_categoryId: string, totalEntries: number) {
+    // NOTE: This function is deprecated because we cannot determine
+    // entry's category from just the entryId (entry IDs don't contain categoryId).
+    // Use useStudyData hook which loads entries data for accurate calculation.
     return {
-      studied: studiedInCategory.length,
+      studied: 0,
       total: totalEntries,
-      percentage: totalEntries > 0 ? (studiedInCategory.length / totalEntries) * 100 : 0,
+      percentage: 0,
     };
   },
 
