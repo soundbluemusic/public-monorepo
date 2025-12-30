@@ -1,8 +1,19 @@
-# Sitemap files - serve directly (must come before SPA fallback)
+# Sitemap files - serve directly
 /sitemap.xml       /sitemap.xml       200
 /sitemap-*.xml     /sitemap-*.xml     200
 /sitemap.xsl       /sitemap.xsl       200
 
-# SPA fallback - serve __spa-fallback.html for client-side routing
+# Static assets - let Cloudflare serve directly
+/assets/*          /assets/:splat     200
+/data/*            /data/:splat       200
+/*.js              /:splat.js         200
+/*.css             /:splat.css        200
+/*.ico             /:splat.ico        200
+/*.json            /:splat.json       200
+/*.png             /:splat.png        200
+/*.svg             /:splat.svg        200
+/*.woff2           /:splat.woff2      200
+
+# SPA fallback - only for routes that don't match static files
 # This allows React Router to handle dynamic routes like /entry/:id
-/*                 /__spa-fallback.html   200
+/*                 /index.html        200

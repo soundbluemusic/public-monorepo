@@ -15,8 +15,10 @@ import routes from './app/routes.js';
  * - 카테고리, 대화 등은 개수가 적으므로 SSG 유지
  */
 
-// 환경 변수로 SSG 모드 제어 (기본: hybrid)
-const SSG_MODE = process.env.SSG_MODE || 'hybrid';
+// 환경 변수로 SSG 모드 제어 (기본: full)
+// full: 모든 entry 페이지를 SSG로 생성 (751개 × 2 언어 = 1502개)
+// hybrid: entry 페이지는 SPA fallback 사용 (대용량 데이터용)
+const SSG_MODE = process.env.SSG_MODE || 'full';
 
 export default {
   ssr: false,
