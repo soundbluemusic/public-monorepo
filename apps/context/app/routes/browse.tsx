@@ -520,7 +520,7 @@ export default function BrowsePage() {
 
           {/* Pagination Controls */}
           {totalPages > 1 && (
-            <div className="mt-6 flex items-center justify-center gap-2">
+            <div className="mt-6 mb-20 md:mb-0 flex items-center justify-center gap-2">
               <button
                 type="button"
                 onClick={() => handlePageChange(currentPage - 1)}

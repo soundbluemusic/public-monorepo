@@ -89,7 +89,7 @@ export async function loader({ params }) {
 <br>
 
 ```
-soundblue-monorepo/
+public-monorepo/
 │
 ├── apps/
 │   ├── context/       →  Korean dictionary (1578 SSG routes)
