@@ -96,13 +96,19 @@ soundblue-monorepo/
 │   ├── permissive/    →  Web dev resources (8 SSG routes)
 │   └── roots/         →  Math documentation (878 SSG routes)
 │
-├── packages/
-│   ├── core/          →  Utils, validation, types (Layer 0)
-│   ├── data/          →  Zod schemas, loaders (Layer 1)
-│   ├── search/        →  MiniSearch wrapper, workers (Layer 2)
-│   ├── i18n/          →  i18n core, routing, meta (Layer 2)
-│   ├── shared/        →  Legacy utils (→ core로 마이그레이션 예정)
-│   └── shared-react/  →  Components, hooks, stores
+├── packages/          →  12 modular packages (Layer 0-3)
+│   ├── core/          →  [L0] Pure functions, validation, types
+│   ├── config/        →  [L0] Vite, Tailwind configurations
+│   ├── data/          →  [L1] Zod schemas, data loaders
+│   ├── platform/      →  [L1] Browser APIs, environment detection
+│   ├── i18n/          →  [L2] i18n routing, meta, Paraglide
+│   ├── search/        →  [L2] MiniSearch wrapper, workers
+│   ├── seo/           →  [L2] Meta factory, sitemap generator
+│   ├── pwa/           →  [L2] Service worker, offline indicator
+│   ├── features/      →  [L3] Business logic hooks (settings, toast)
+│   ├── ui/            →  [L3] React components, animations
+│   ├── shared/        →  [Legacy] Re-exports → being deprecated
+│   └── shared-react/  →  [Legacy] Re-exports → being deprecated
 │
 ├── data/              →  Centralized JSON data (SSoT)
 │   ├── context/       →  751 Korean dictionary entries
@@ -113,6 +119,8 @@ soundblue-monorepo/
 ```
 
 > **Note:** All apps use `ssr: false` + `prerender()` + `loader()` in `react-router.config.ts`.
+>
+> **Architecture:** See [ARCHITECTURE.md](ARCHITECTURE.md) for detailed package layer design.
 
 ### i18n Routing (다국어 라우팅)
 
@@ -217,6 +225,7 @@ pnpm dev:roots          # → http://localhost:3005
 
 | Document | Status | Description |
 |:---------|:------:|:------------|
+| [ARCHITECTURE.md](ARCHITECTURE.md) | ✅ v2.0 | Package layer design (12 packages) |
 | [CODE_DUPLICATION_REPORT.md](CODE_DUPLICATION_REPORT.md) | ✅ Complete | Code duplication resolved |
 | [BUTTON_TESTING_REPORT.md](BUTTON_TESTING_REPORT.md) | ✅ 100% pass | E2E test results |
 | [DESIGN_PRINCIPLES_REPORT.md](DESIGN_PRINCIPLES_REPORT.md) | ✅ 9.5/10 | Design analysis |
