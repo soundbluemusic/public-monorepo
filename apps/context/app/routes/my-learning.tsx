@@ -1,26 +1,21 @@
 import { LIMITS } from '@soundblue/core/validation';
+import { Skeleton } from '@soundblue/ui/primitives';
 import { BookmarkCheck, Calendar, FolderOpen, TrendingUp, Trophy } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import type { MetaFunction } from 'react-router';
-import { Link, useLoaderData } from 'react-router';
+import { Link } from 'react-router';
 import { Layout } from '@/components/layout';
-import { categories } from '@/data/categories';
+import type { categories } from '@/data/categories';
 import type { MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { favorites, studyRecords } from '@/lib/db';
 
 /**
- * Loader: 빌드 시 데이터 로드 (SSG용)
- * 동적 import로 번들 크기 최적화 - 빌드 시에만 데이터 로드
+ * My Learning 페이지
+ *
+ * 클라이언트 전용 페이지 - SSG prerender 시 데이터 로드하지 않음
+ * 모든 데이터는 클라이언트에서 동적으로 로드
  */
-export async function loader() {
-  const { meaningEntries } = await import('@/data/entries');
-  return {
-    entries: meaningEntries,
-    categories,
-    totalEntries: meaningEntries.length,
-  };
-}
 
 export const meta: MetaFunction = ({ location }) => {
   const isKorean = location.pathname.startsWith('/ko');
@@ -39,24 +34,29 @@ export const meta: MetaFunction = ({ location }) => {
 };
 
 export default function MyLearningPage() {
-  const {
-    entries,
-    categories: cats,
-    totalEntries,
-  } = useLoaderData<{
-    entries: MeaningEntry[];
-    categories: typeof categories;
-    totalEntries: number;
-  }>();
   const { locale, t, localePath } = useI18n();
+  const [entries, setEntries] = useState<MeaningEntry[]>([]);
+  const [cats, setCats] = useState<typeof categories>([]);
+  const [totalEntries, setTotalEntries] = useState(0);
   const [studiedIds, setStudiedIds] = useState<string[]>([]);
   const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
   const [categoryProgress, setCategoryProgress] = useState<
     Record<string, { studied: number; total: number }>
   >({});
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function loadData() {
+      // 클라이언트에서 데이터 로드
+      const [{ meaningEntries }, { categories: loadedCategories }] = await Promise.all([
+        import('@/data/entries'),
+        import('@/data/categories'),
+      ]);
+
+      setEntries(meaningEntries);
+      setCats(loadedCategories);
+      setTotalEntries(meaningEntries.length);
+
       const studied = await studyRecords.getStudiedEntryIds();
       setStudiedIds(studied);
 
@@ -64,18 +64,17 @@ export default function MyLearningPage() {
       setFavoriteIds(favs.map((f) => f.entryId));
 
       const catProgress: Record<string, { studied: number; total: number }> = {};
-      // 카테고리별 엔트리 ID Set 생성 (O(1) 조회용)
       const studiedSet = new Set(studied);
-      for (const cat of cats) {
-        const catEntries = entries.filter((e) => e.categoryId === cat.id);
-        // 카테고리 엔트리 중 학습된 것 카운트 (ID 패턴 가정 제거)
+      for (const cat of loadedCategories) {
+        const catEntries = meaningEntries.filter((e) => e.categoryId === cat.id);
         const studiedInCat = catEntries.filter((e) => studiedSet.has(e.id)).length;
         catProgress[cat.id] = { studied: studiedInCat, total: catEntries.length };
       }
       setCategoryProgress(catProgress);
+      setIsLoading(false);
     }
     loadData();
-  }, [entries, cats]);
+  }, []);
 
   const favoriteEntries = entries.filter((e) => favoriteIds.includes(e.id));
   const recentStudied = entries
@@ -89,6 +88,30 @@ export default function MyLearningPage() {
     (p) => p.studied > 0 && p.studied === p.total,
   ).length;
   const totalCategories = cats.length;
+
+  // 로딩 상태
+  if (isLoading) {
+    return (
+      <Layout>
+        <div className="animate-pulse">
+          <div className="mb-8">
+            <Skeleton className="h-10 w-64 mb-2" />
+            <Skeleton className="h-5 w-48" />
+          </div>
+          <div className="grid gap-4 sm:grid-cols-3 mb-8">
+            {[1, 2, 3].map((i) => (
+              <Skeleton key={i} className="h-28 rounded-xl" />
+            ))}
+          </div>
+          <div className="space-y-3">
+            {[1, 2, 3, 4, 5].map((i) => (
+              <Skeleton key={i} className="h-20 rounded-xl" />
+            ))}
+          </div>
+        </div>
+      </Layout>
+    );
+  }
 
   return (
     <Layout>
