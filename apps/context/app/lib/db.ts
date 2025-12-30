@@ -43,17 +43,37 @@ class ContextDatabase extends Dexie {
 
 // Lazy initialization to avoid SSG build errors
 let db: ContextDatabase | null = null;
+let dbInitAttempted = false;
+let dbInitError: Error | null = null;
 
 function getDb(): ContextDatabase | null {
   // CRITICAL: Only initialize in browser environment
   if (typeof window === 'undefined') {
     return null; // SSG build - return null, don't throw
   }
+
+  // Prevent repeated init attempts if already failed
+  if (dbInitAttempted && !db) {
+    if (dbInitError) {
+      console.warn('[DB] Database initialization previously failed:', dbInitError.message);
+    }
+    return null;
+  }
+
   if (!db) {
+    dbInitAttempted = true;
     try {
+      // Check if IndexedDB is available
+      if (!window.indexedDB) {
+        dbInitError = new Error('IndexedDB is not available in this browser');
+        console.error('[DB]', dbInitError.message);
+        return null;
+      }
       db = new ContextDatabase();
+      console.log('[DB] Database initialized successfully');
     } catch (error: unknown) {
-      console.error('Failed to initialize database:', error);
+      dbInitError = error instanceof Error ? error : new Error(String(error));
+      console.error('[DB] Failed to initialize database:', dbInitError.message);
       return null;
     }
   }
@@ -62,12 +82,20 @@ function getDb(): ContextDatabase | null {
 
 export { getDb as db };
 
+// Database unavailable error for runtime operations
+class DatabaseUnavailableError extends Error {
+  constructor() {
+    super('Database is not available');
+    this.name = 'DatabaseUnavailableError';
+  }
+}
+
 // 헬퍼 함수들
 export const favorites = {
   async add(entryId: string) {
     validateId(entryId, 'entryId');
     const database = getDb();
-    if (!database) return null; // SSG environment
+    if (!database) throw new DatabaseUnavailableError();
     const exists = await database.favorites.where('entryId').equals(entryId).first();
     if (exists) return exists.id;
     return database.favorites.add({ entryId, addedAt: new Date() });
@@ -76,14 +104,14 @@ export const favorites = {
   async remove(entryId: string) {
     validateId(entryId, 'entryId');
     const database = getDb();
-    if (!database) return 0; // SSG environment
+    if (!database) throw new DatabaseUnavailableError();
     return database.favorites.where('entryId').equals(entryId).delete();
   },
 
   async toggle(entryId: string) {
     validateId(entryId, 'entryId');
     const database = getDb();
-    if (!database) return false; // SSG environment
+    if (!database) throw new DatabaseUnavailableError();
     const exists = await database.favorites.where('entryId').equals(entryId).first();
     if (exists?.id) {
       await database.favorites.delete(exists.id);
@@ -96,20 +124,20 @@ export const favorites = {
   async isFavorite(entryId: string) {
     validateId(entryId, 'entryId');
     const database = getDb();
-    if (!database) return false; // SSG environment
+    if (!database) return false; // Read-only: safe to return false
     const exists = await database.favorites.where('entryId').equals(entryId).first();
     return !!exists;
   },
 
   async getAll() {
     const database = getDb();
-    if (!database) return []; // SSG environment
+    if (!database) return []; // Read-only: safe to return empty
     return database.favorites.orderBy('addedAt').reverse().toArray();
   },
 
   async count() {
     const database = getDb();
-    if (!database) return 0; // SSG environment
+    if (!database) return 0; // Read-only: safe to return 0
     return database.favorites.count();
   },
 };
@@ -118,7 +146,7 @@ export const studyRecords = {
   async add(entryId: string, correct: boolean) {
     validateId(entryId, 'entryId');
     const database = getDb();
-    if (!database) return null; // SSG environment
+    if (!database) throw new DatabaseUnavailableError();
     return database.studyRecords.add({
       entryId,
       studiedAt: new Date(),
@@ -129,20 +157,20 @@ export const studyRecords = {
   async getByEntry(entryId: string) {
     validateId(entryId, 'entryId');
     const database = getDb();
-    if (!database) return []; // SSG environment
+    if (!database) return []; // Read-only: safe to return empty
     return database.studyRecords.where('entryId').equals(entryId).toArray();
   },
 
   async getRecent(limit = 50) {
     const database = getDb();
-    if (!database) return []; // SSG environment
+    if (!database) return []; // Read-only: safe to return empty
     return database.studyRecords.orderBy('studiedAt').reverse().limit(limit).toArray();
   },
 
   async getStats(entryId: string) {
     validateId(entryId, 'entryId');
     const database = getDb();
-    if (!database) return { total: 0, correct: 0, accuracy: 0 }; // SSG environment
+    if (!database) return { total: 0, correct: 0, accuracy: 0 }; // Read-only: safe to return defaults
     const records = await database.studyRecords.where('entryId').equals(entryId).toArray();
     const total = records.length;
     const correct = records.filter((r) => r.correct).length;
@@ -159,7 +187,7 @@ export const studyRecords = {
   async isStudied(entryId: string): Promise<boolean> {
     validateId(entryId, 'entryId');
     const database = getDb();
-    if (!database) return false; // SSG environment
+    if (!database) return false; // Read-only: safe to return false
     const record = await database.studyRecords.where('entryId').equals(entryId).first();
     return !!record;
   },
@@ -169,6 +197,8 @@ export const studyRecords = {
    */
   async markAsStudied(entryId: string) {
     validateId(entryId, 'entryId');
+    const database = getDb();
+    if (!database) throw new DatabaseUnavailableError();
     const exists = await this.isStudied(entryId);
     if (!exists) {
       return this.add(entryId, true);
@@ -181,7 +211,7 @@ export const studyRecords = {
    */
   async getStudiedEntryIds(): Promise<string[]> {
     const database = getDb();
-    if (!database) return []; // SSG environment
+    if (!database) return []; // Read-only: safe to return empty
     const records = await database.studyRecords.toArray();
     const uniqueIds = new Set(records.map((r) => r.entryId));
     return [...uniqueIds];
@@ -226,14 +256,14 @@ export const settings = {
       fontSize: 'medium' as const,
       updatedAt: new Date(),
     };
-    if (!database) return defaultSettings; // SSG environment
+    if (!database) return defaultSettings; // Read-only: safe to return defaults
     const s = await database.settings.get(1);
     return s || defaultSettings;
   },
 
   async update(updates: Partial<Omit<UserSettings, 'id'>>) {
     const database = getDb();
-    if (!database) return 1; // SSG environment
+    if (!database) throw new DatabaseUnavailableError();
     const current = await this.get();
     return database.settings.put({
       ...current,
