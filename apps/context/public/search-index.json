@@ -2090,6 +2090,4092 @@
     ]
   },
   {
+    "id": "afghanistan",
+    "type": "entry",
+    "name": {
+      "ko": "아프가니스탄",
+      "en": "Afghanistan"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "apeuganiseutan"
+    ]
+  },
+  {
+    "id": "armenia",
+    "type": "entry",
+    "name": {
+      "ko": "아르메니아",
+      "en": "Armenia"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "areumenia"
+    ]
+  },
+  {
+    "id": "azerbaijan",
+    "type": "entry",
+    "name": {
+      "ko": "아제르바이잔",
+      "en": "Azerbaijan"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "ajereubaijan"
+    ]
+  },
+  {
+    "id": "bahrain",
+    "type": "entry",
+    "name": {
+      "ko": "바레인",
+      "en": "Bahrain"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "barein"
+    ]
+  },
+  {
+    "id": "bangladesh",
+    "type": "entry",
+    "name": {
+      "ko": "방글라데시",
+      "en": "Bangladesh"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "banggeulladesi"
+    ]
+  },
+  {
+    "id": "bhutan",
+    "type": "entry",
+    "name": {
+      "ko": "부탄",
+      "en": "Bhutan"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "butan"
+    ]
+  },
+  {
+    "id": "brunei",
+    "type": "entry",
+    "name": {
+      "ko": "브루나이",
+      "en": "Brunei"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "beurunai"
+    ]
+  },
+  {
+    "id": "cambodia",
+    "type": "entry",
+    "name": {
+      "ko": "캄보디아",
+      "en": "Cambodia"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "kambodia"
+    ]
+  },
+  {
+    "id": "china",
+    "type": "entry",
+    "name": {
+      "ko": "중국",
+      "en": "China"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "jungguk"
+    ]
+  },
+  {
+    "id": "cyprus",
+    "type": "entry",
+    "name": {
+      "ko": "키프로스",
+      "en": "Cyprus"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "kipeuroseu"
+    ]
+  },
+  {
+    "id": "georgia",
+    "type": "entry",
+    "name": {
+      "ko": "조지아",
+      "en": "Georgia"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "jojia"
+    ]
+  },
+  {
+    "id": "india",
+    "type": "entry",
+    "name": {
+      "ko": "인도",
+      "en": "India"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "indo"
+    ]
+  },
+  {
+    "id": "indonesia",
+    "type": "entry",
+    "name": {
+      "ko": "인도네시아",
+      "en": "Indonesia"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "indonesia"
+    ]
+  },
+  {
+    "id": "iran",
+    "type": "entry",
+    "name": {
+      "ko": "이란",
+      "en": "Iran"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "iran"
+    ]
+  },
+  {
+    "id": "iraq",
+    "type": "entry",
+    "name": {
+      "ko": "이라크",
+      "en": "Iraq"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "irakeu"
+    ]
+  },
+  {
+    "id": "israel",
+    "type": "entry",
+    "name": {
+      "ko": "이스라엘",
+      "en": "Israel"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "iseurael"
+    ]
+  },
+  {
+    "id": "japan",
+    "type": "entry",
+    "name": {
+      "ko": "일본",
+      "en": "Japan"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "ilbon"
+    ]
+  },
+  {
+    "id": "jordan",
+    "type": "entry",
+    "name": {
+      "ko": "요르단",
+      "en": "Jordan"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "yoreudan"
+    ]
+  },
+  {
+    "id": "kazakhstan",
+    "type": "entry",
+    "name": {
+      "ko": "카자흐스탄",
+      "en": "Kazakhstan"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "kajaheuseutan"
+    ]
+  },
+  {
+    "id": "kuwait",
+    "type": "entry",
+    "name": {
+      "ko": "쿠웨이트",
+      "en": "Kuwait"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "kuweiteu"
+    ]
+  },
+  {
+    "id": "kyrgyzstan",
+    "type": "entry",
+    "name": {
+      "ko": "키르기스스탄",
+      "en": "Kyrgyzstan"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "kireugiseuseutan"
+    ]
+  },
+  {
+    "id": "laos",
+    "type": "entry",
+    "name": {
+      "ko": "라오스",
+      "en": "Laos"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "raoseu"
+    ]
+  },
+  {
+    "id": "lebanon",
+    "type": "entry",
+    "name": {
+      "ko": "레바논",
+      "en": "Lebanon"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "rebanon"
+    ]
+  },
+  {
+    "id": "malaysia",
+    "type": "entry",
+    "name": {
+      "ko": "말레이시아",
+      "en": "Malaysia"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "malleisia"
+    ]
+  },
+  {
+    "id": "maldives",
+    "type": "entry",
+    "name": {
+      "ko": "몰디브",
+      "en": "Maldives"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "moldibeu"
+    ]
+  },
+  {
+    "id": "mongolia",
+    "type": "entry",
+    "name": {
+      "ko": "몽골",
+      "en": "Mongolia"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "monggol"
+    ]
+  },
+  {
+    "id": "myanmar",
+    "type": "entry",
+    "name": {
+      "ko": "미얀마",
+      "en": "Myanmar"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "miyanma"
+    ]
+  },
+  {
+    "id": "nepal",
+    "type": "entry",
+    "name": {
+      "ko": "네팔",
+      "en": "Nepal"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "nepal"
+    ]
+  },
+  {
+    "id": "north-korea",
+    "type": "entry",
+    "name": {
+      "ko": "북한",
+      "en": "North Korea"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "bukhan"
+    ]
+  },
+  {
+    "id": "oman",
+    "type": "entry",
+    "name": {
+      "ko": "오만",
+      "en": "Oman"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "oman"
+    ]
+  },
+  {
+    "id": "pakistan",
+    "type": "entry",
+    "name": {
+      "ko": "파키스탄",
+      "en": "Pakistan"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "pakiseutan"
+    ]
+  },
+  {
+    "id": "palestine",
+    "type": "entry",
+    "name": {
+      "ko": "팔레스타인",
+      "en": "Palestine"
+    },
+    "description": {
+      "ko": "아시아에 위치한 지역입니다.",
+      "en": "A region located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "palleseutain"
+    ]
+  },
+  {
+    "id": "philippines",
+    "type": "entry",
+    "name": {
+      "ko": "필리핀",
+      "en": "Philippines"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "pillipin"
+    ]
+  },
+  {
+    "id": "qatar",
+    "type": "entry",
+    "name": {
+      "ko": "카타르",
+      "en": "Qatar"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "katareu"
+    ]
+  },
+  {
+    "id": "saudi-arabia",
+    "type": "entry",
+    "name": {
+      "ko": "사우디아라비아",
+      "en": "Saudi Arabia"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "saudiarabia"
+    ]
+  },
+  {
+    "id": "singapore",
+    "type": "entry",
+    "name": {
+      "ko": "싱가포르",
+      "en": "Singapore"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "singgaporeu"
+    ]
+  },
+  {
+    "id": "south-korea",
+    "type": "entry",
+    "name": {
+      "ko": "대한민국",
+      "en": "South Korea"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "daehanminguk"
+    ]
+  },
+  {
+    "id": "sri-lanka",
+    "type": "entry",
+    "name": {
+      "ko": "스리랑카",
+      "en": "Sri Lanka"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "seurilangka"
+    ]
+  },
+  {
+    "id": "syria",
+    "type": "entry",
+    "name": {
+      "ko": "시리아",
+      "en": "Syria"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "siria"
+    ]
+  },
+  {
+    "id": "taiwan",
+    "type": "entry",
+    "name": {
+      "ko": "대만",
+      "en": "Taiwan"
+    },
+    "description": {
+      "ko": "아시아에 위치한 지역입니다.",
+      "en": "A region located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "daeman"
+    ]
+  },
+  {
+    "id": "tajikistan",
+    "type": "entry",
+    "name": {
+      "ko": "타지키스탄",
+      "en": "Tajikistan"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "tajikiseutan"
+    ]
+  },
+  {
+    "id": "thailand",
+    "type": "entry",
+    "name": {
+      "ko": "태국",
+      "en": "Thailand"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "taeguk"
+    ]
+  },
+  {
+    "id": "timor-leste",
+    "type": "entry",
+    "name": {
+      "ko": "동티모르",
+      "en": "Timor-Leste"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "dongtimor"
+    ]
+  },
+  {
+    "id": "turkiye",
+    "type": "entry",
+    "name": {
+      "ko": "튀르키예",
+      "en": "Türkiye"
+    },
+    "description": {
+      "ko": "아시아와 유럽에 걸쳐 위치한 국가입니다.",
+      "en": "A country located in Asia and Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "twirekiye"
+    ]
+  },
+  {
+    "id": "turkmenistan",
+    "type": "entry",
+    "name": {
+      "ko": "투르크메니스탄",
+      "en": "Turkmenistan"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "tureukeumeniseutan"
+    ]
+  },
+  {
+    "id": "united-arab-emirates",
+    "type": "entry",
+    "name": {
+      "ko": "아랍에미리트",
+      "en": "United Arab Emirates"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "arabemiriteu"
+    ]
+  },
+  {
+    "id": "uzbekistan",
+    "type": "entry",
+    "name": {
+      "ko": "우즈베키스탄",
+      "en": "Uzbekistan"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "ujeubekiseutan"
+    ]
+  },
+  {
+    "id": "vietnam",
+    "type": "entry",
+    "name": {
+      "ko": "베트남",
+      "en": "Vietnam"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "beteunam"
+    ]
+  },
+  {
+    "id": "yemen",
+    "type": "entry",
+    "name": {
+      "ko": "예멘",
+      "en": "Yemen"
+    },
+    "description": {
+      "ko": "아시아에 위치한 국가입니다.",
+      "en": "A country located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "country",
+      "yemen"
+    ]
+  },
+  {
+    "id": "albania",
+    "type": "entry",
+    "name": {
+      "ko": "알바니아",
+      "en": "Albania"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "albania"
+    ]
+  },
+  {
+    "id": "andorra",
+    "type": "entry",
+    "name": {
+      "ko": "안도라",
+      "en": "Andorra"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "andora"
+    ]
+  },
+  {
+    "id": "austria",
+    "type": "entry",
+    "name": {
+      "ko": "오스트리아",
+      "en": "Austria"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "oseuteuria"
+    ]
+  },
+  {
+    "id": "belarus",
+    "type": "entry",
+    "name": {
+      "ko": "벨라루스",
+      "en": "Belarus"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "bellaruseu"
+    ]
+  },
+  {
+    "id": "belgium",
+    "type": "entry",
+    "name": {
+      "ko": "벨기에",
+      "en": "Belgium"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "belgie"
+    ]
+  },
+  {
+    "id": "bosnia-and-herzegovina",
+    "type": "entry",
+    "name": {
+      "ko": "보스니아 헤르체고비나",
+      "en": "Bosnia and Herzegovina"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "boseunia hereuchegobina"
+    ]
+  },
+  {
+    "id": "bulgaria",
+    "type": "entry",
+    "name": {
+      "ko": "불가리아",
+      "en": "Bulgaria"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "bulgaria"
+    ]
+  },
+  {
+    "id": "croatia",
+    "type": "entry",
+    "name": {
+      "ko": "크로아티아",
+      "en": "Croatia"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "keuroatia"
+    ]
+  },
+  {
+    "id": "czechia",
+    "type": "entry",
+    "name": {
+      "ko": "체코",
+      "en": "Czechia"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "cheko"
+    ]
+  },
+  {
+    "id": "denmark",
+    "type": "entry",
+    "name": {
+      "ko": "덴마크",
+      "en": "Denmark"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "denmarkeu"
+    ]
+  },
+  {
+    "id": "estonia",
+    "type": "entry",
+    "name": {
+      "ko": "에스토니아",
+      "en": "Estonia"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "eseutonia"
+    ]
+  },
+  {
+    "id": "finland",
+    "type": "entry",
+    "name": {
+      "ko": "핀란드",
+      "en": "Finland"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "pinlandeu"
+    ]
+  },
+  {
+    "id": "france",
+    "type": "entry",
+    "name": {
+      "ko": "프랑스",
+      "en": "France"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "peurangseu"
+    ]
+  },
+  {
+    "id": "germany",
+    "type": "entry",
+    "name": {
+      "ko": "독일",
+      "en": "Germany"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "dogil"
+    ]
+  },
+  {
+    "id": "greece",
+    "type": "entry",
+    "name": {
+      "ko": "그리스",
+      "en": "Greece"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "geuriseu"
+    ]
+  },
+  {
+    "id": "hungary",
+    "type": "entry",
+    "name": {
+      "ko": "헝가리",
+      "en": "Hungary"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "heonggari"
+    ]
+  },
+  {
+    "id": "iceland",
+    "type": "entry",
+    "name": {
+      "ko": "아이슬란드",
+      "en": "Iceland"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "aiseulandeu"
+    ]
+  },
+  {
+    "id": "ireland",
+    "type": "entry",
+    "name": {
+      "ko": "아일랜드",
+      "en": "Ireland"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "aillandeu"
+    ]
+  },
+  {
+    "id": "italy",
+    "type": "entry",
+    "name": {
+      "ko": "이탈리아",
+      "en": "Italy"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "itallia"
+    ]
+  },
+  {
+    "id": "kosovo",
+    "type": "entry",
+    "name": {
+      "ko": "코소보",
+      "en": "Kosovo"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "kosobo"
+    ]
+  },
+  {
+    "id": "latvia",
+    "type": "entry",
+    "name": {
+      "ko": "라트비아",
+      "en": "Latvia"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "rateubia"
+    ]
+  },
+  {
+    "id": "liechtenstein",
+    "type": "entry",
+    "name": {
+      "ko": "리히텐슈타인",
+      "en": "Liechtenstein"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "rihitensyutain"
+    ]
+  },
+  {
+    "id": "lithuania",
+    "type": "entry",
+    "name": {
+      "ko": "리투아니아",
+      "en": "Lithuania"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "rituania"
+    ]
+  },
+  {
+    "id": "luxembourg",
+    "type": "entry",
+    "name": {
+      "ko": "룩셈부르크",
+      "en": "Luxembourg"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "ruksembureuker"
+    ]
+  },
+  {
+    "id": "malta",
+    "type": "entry",
+    "name": {
+      "ko": "몰타",
+      "en": "Malta"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "molta"
+    ]
+  },
+  {
+    "id": "moldova",
+    "type": "entry",
+    "name": {
+      "ko": "몰도바",
+      "en": "Moldova"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "moldoba"
+    ]
+  },
+  {
+    "id": "monaco",
+    "type": "entry",
+    "name": {
+      "ko": "모나코",
+      "en": "Monaco"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "monako"
+    ]
+  },
+  {
+    "id": "montenegro",
+    "type": "entry",
+    "name": {
+      "ko": "몬테네그로",
+      "en": "Montenegro"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "montenegero"
+    ]
+  },
+  {
+    "id": "netherlands",
+    "type": "entry",
+    "name": {
+      "ko": "네덜란드",
+      "en": "Netherlands"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "nedeollandeu"
+    ]
+  },
+  {
+    "id": "north-macedonia",
+    "type": "entry",
+    "name": {
+      "ko": "북마케도니아",
+      "en": "North Macedonia"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "bukmakedonia"
+    ]
+  },
+  {
+    "id": "norway",
+    "type": "entry",
+    "name": {
+      "ko": "노르웨이",
+      "en": "Norway"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "noreuwei"
+    ]
+  },
+  {
+    "id": "poland",
+    "type": "entry",
+    "name": {
+      "ko": "폴란드",
+      "en": "Poland"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "pollandeu"
+    ]
+  },
+  {
+    "id": "portugal",
+    "type": "entry",
+    "name": {
+      "ko": "포르투갈",
+      "en": "Portugal"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "poreutugal"
+    ]
+  },
+  {
+    "id": "romania",
+    "type": "entry",
+    "name": {
+      "ko": "루마니아",
+      "en": "Romania"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "rumania"
+    ]
+  },
+  {
+    "id": "russia",
+    "type": "entry",
+    "name": {
+      "ko": "러시아",
+      "en": "Russia"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "reosia"
+    ]
+  },
+  {
+    "id": "san-marino",
+    "type": "entry",
+    "name": {
+      "ko": "산마리노",
+      "en": "San Marino"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "sanmarino"
+    ]
+  },
+  {
+    "id": "serbia",
+    "type": "entry",
+    "name": {
+      "ko": "세르비아",
+      "en": "Serbia"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "sereubia"
+    ]
+  },
+  {
+    "id": "slovakia",
+    "type": "entry",
+    "name": {
+      "ko": "슬로바키아",
+      "en": "Slovakia"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "seullobakia"
+    ]
+  },
+  {
+    "id": "slovenia",
+    "type": "entry",
+    "name": {
+      "ko": "슬로베니아",
+      "en": "Slovenia"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "seullobenia"
+    ]
+  },
+  {
+    "id": "spain",
+    "type": "entry",
+    "name": {
+      "ko": "스페인",
+      "en": "Spain"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "seupein"
+    ]
+  },
+  {
+    "id": "sweden",
+    "type": "entry",
+    "name": {
+      "ko": "스웨덴",
+      "en": "Sweden"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "seuweden"
+    ]
+  },
+  {
+    "id": "switzerland",
+    "type": "entry",
+    "name": {
+      "ko": "스위스",
+      "en": "Switzerland"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "seuwiseu"
+    ]
+  },
+  {
+    "id": "ukraine",
+    "type": "entry",
+    "name": {
+      "ko": "우크라이나",
+      "en": "Ukraine"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "ukeuraina"
+    ]
+  },
+  {
+    "id": "united-kingdom",
+    "type": "entry",
+    "name": {
+      "ko": "영국",
+      "en": "United Kingdom"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "yeongguk"
+    ]
+  },
+  {
+    "id": "vatican-city",
+    "type": "entry",
+    "name": {
+      "ko": "바티칸 시국",
+      "en": "Vatican City"
+    },
+    "description": {
+      "ko": "유럽에 위치한 국가입니다.",
+      "en": "A country located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "country",
+      "batikan siguk"
+    ]
+  },
+  {
+    "id": "algeria",
+    "type": "entry",
+    "name": {
+      "ko": "알제리",
+      "en": "Algeria"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "aljeri"
+    ]
+  },
+  {
+    "id": "angola",
+    "type": "entry",
+    "name": {
+      "ko": "앙골라",
+      "en": "Angola"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "anggolla"
+    ]
+  },
+  {
+    "id": "benin",
+    "type": "entry",
+    "name": {
+      "ko": "베냉",
+      "en": "Benin"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "benaeng"
+    ]
+  },
+  {
+    "id": "botswana",
+    "type": "entry",
+    "name": {
+      "ko": "보츠와나",
+      "en": "Botswana"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "bocheuwana"
+    ]
+  },
+  {
+    "id": "burkina-faso",
+    "type": "entry",
+    "name": {
+      "ko": "부르키나파소",
+      "en": "Burkina Faso"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "bureukinapaso"
+    ]
+  },
+  {
+    "id": "burundi",
+    "type": "entry",
+    "name": {
+      "ko": "부룬디",
+      "en": "Burundi"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "burundi"
+    ]
+  },
+  {
+    "id": "cabo-verde",
+    "type": "entry",
+    "name": {
+      "ko": "카보베르데",
+      "en": "Cabo Verde"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "kabobereude"
+    ]
+  },
+  {
+    "id": "cameroon",
+    "type": "entry",
+    "name": {
+      "ko": "카메룬",
+      "en": "Cameroon"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "kamerun"
+    ]
+  },
+  {
+    "id": "central-african-republic",
+    "type": "entry",
+    "name": {
+      "ko": "중앙아프리카공화국",
+      "en": "Central African Republic"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "jungangapeurikagonghwaguk"
+    ]
+  },
+  {
+    "id": "chad",
+    "type": "entry",
+    "name": {
+      "ko": "차드",
+      "en": "Chad"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "chadeu"
+    ]
+  },
+  {
+    "id": "comoros",
+    "type": "entry",
+    "name": {
+      "ko": "코모로",
+      "en": "Comoros"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "komoro"
+    ]
+  },
+  {
+    "id": "dr-congo",
+    "type": "entry",
+    "name": {
+      "ko": "콩고민주공화국",
+      "en": "Democratic Republic of the Congo"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "konggominjugonghwaguk"
+    ]
+  },
+  {
+    "id": "republic-of-congo",
+    "type": "entry",
+    "name": {
+      "ko": "콩고공화국",
+      "en": "Republic of the Congo"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "konggogonghwaguk"
+    ]
+  },
+  {
+    "id": "cote-divoire",
+    "type": "entry",
+    "name": {
+      "ko": "코트디부아르",
+      "en": "Côte d'Ivoire"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "koteudibualeu"
+    ]
+  },
+  {
+    "id": "djibouti",
+    "type": "entry",
+    "name": {
+      "ko": "지부티",
+      "en": "Djibouti"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "jibuti"
+    ]
+  },
+  {
+    "id": "egypt",
+    "type": "entry",
+    "name": {
+      "ko": "이집트",
+      "en": "Egypt"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "ijipteu"
+    ]
+  },
+  {
+    "id": "equatorial-guinea",
+    "type": "entry",
+    "name": {
+      "ko": "적도기니",
+      "en": "Equatorial Guinea"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "jeokdogini"
+    ]
+  },
+  {
+    "id": "eritrea",
+    "type": "entry",
+    "name": {
+      "ko": "에리트레아",
+      "en": "Eritrea"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "eriteuria"
+    ]
+  },
+  {
+    "id": "eswatini",
+    "type": "entry",
+    "name": {
+      "ko": "에스와티니",
+      "en": "Eswatini"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "eseuwatini"
+    ]
+  },
+  {
+    "id": "ethiopia",
+    "type": "entry",
+    "name": {
+      "ko": "에티오피아",
+      "en": "Ethiopia"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "etiopia"
+    ]
+  },
+  {
+    "id": "gabon",
+    "type": "entry",
+    "name": {
+      "ko": "가봉",
+      "en": "Gabon"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "gabong"
+    ]
+  },
+  {
+    "id": "gambia",
+    "type": "entry",
+    "name": {
+      "ko": "감비아",
+      "en": "Gambia"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "gambia"
+    ]
+  },
+  {
+    "id": "ghana",
+    "type": "entry",
+    "name": {
+      "ko": "가나",
+      "en": "Ghana"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "gana"
+    ]
+  },
+  {
+    "id": "guinea",
+    "type": "entry",
+    "name": {
+      "ko": "기니",
+      "en": "Guinea"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "gini"
+    ]
+  },
+  {
+    "id": "guinea-bissau",
+    "type": "entry",
+    "name": {
+      "ko": "기니비사우",
+      "en": "Guinea-Bissau"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "ginibisau"
+    ]
+  },
+  {
+    "id": "kenya",
+    "type": "entry",
+    "name": {
+      "ko": "케냐",
+      "en": "Kenya"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "kenya"
+    ]
+  },
+  {
+    "id": "lesotho",
+    "type": "entry",
+    "name": {
+      "ko": "레소토",
+      "en": "Lesotho"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "resoto"
+    ]
+  },
+  {
+    "id": "liberia",
+    "type": "entry",
+    "name": {
+      "ko": "라이베리아",
+      "en": "Liberia"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "raiberia"
+    ]
+  },
+  {
+    "id": "libya",
+    "type": "entry",
+    "name": {
+      "ko": "리비아",
+      "en": "Libya"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "ribia"
+    ]
+  },
+  {
+    "id": "madagascar",
+    "type": "entry",
+    "name": {
+      "ko": "마다가스카르",
+      "en": "Madagascar"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "madagaseukareu"
+    ]
+  },
+  {
+    "id": "malawi",
+    "type": "entry",
+    "name": {
+      "ko": "말라위",
+      "en": "Malawi"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "mallawi"
+    ]
+  },
+  {
+    "id": "mali",
+    "type": "entry",
+    "name": {
+      "ko": "말리",
+      "en": "Mali"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "malli"
+    ]
+  },
+  {
+    "id": "mauritania",
+    "type": "entry",
+    "name": {
+      "ko": "모리타니",
+      "en": "Mauritania"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "moritani"
+    ]
+  },
+  {
+    "id": "mauritius",
+    "type": "entry",
+    "name": {
+      "ko": "모리셔스",
+      "en": "Mauritius"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "morisyeoseu"
+    ]
+  },
+  {
+    "id": "morocco",
+    "type": "entry",
+    "name": {
+      "ko": "모로코",
+      "en": "Morocco"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "moroko"
+    ]
+  },
+  {
+    "id": "mozambique",
+    "type": "entry",
+    "name": {
+      "ko": "모잠비크",
+      "en": "Mozambique"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "mojambikeu"
+    ]
+  },
+  {
+    "id": "namibia",
+    "type": "entry",
+    "name": {
+      "ko": "나미비아",
+      "en": "Namibia"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "namibia"
+    ]
+  },
+  {
+    "id": "niger",
+    "type": "entry",
+    "name": {
+      "ko": "니제르",
+      "en": "Niger"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "nijereu"
+    ]
+  },
+  {
+    "id": "nigeria",
+    "type": "entry",
+    "name": {
+      "ko": "나이지리아",
+      "en": "Nigeria"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "naijiria"
+    ]
+  },
+  {
+    "id": "rwanda",
+    "type": "entry",
+    "name": {
+      "ko": "르완다",
+      "en": "Rwanda"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "reuwanda"
+    ]
+  },
+  {
+    "id": "sao-tome-and-principe",
+    "type": "entry",
+    "name": {
+      "ko": "상투메프린시페",
+      "en": "São Tomé and Príncipe"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "sangtumepeurinsipe"
+    ]
+  },
+  {
+    "id": "senegal",
+    "type": "entry",
+    "name": {
+      "ko": "세네갈",
+      "en": "Senegal"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "senegal"
+    ]
+  },
+  {
+    "id": "seychelles",
+    "type": "entry",
+    "name": {
+      "ko": "세이셸",
+      "en": "Seychelles"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "seisyel"
+    ]
+  },
+  {
+    "id": "sierra-leone",
+    "type": "entry",
+    "name": {
+      "ko": "시에라리온",
+      "en": "Sierra Leone"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "sierarion"
+    ]
+  },
+  {
+    "id": "somalia",
+    "type": "entry",
+    "name": {
+      "ko": "소말리아",
+      "en": "Somalia"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "somallia"
+    ]
+  },
+  {
+    "id": "south-africa",
+    "type": "entry",
+    "name": {
+      "ko": "남아프리카공화국",
+      "en": "South Africa"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "namapeurikagonghwaguk"
+    ]
+  },
+  {
+    "id": "south-sudan",
+    "type": "entry",
+    "name": {
+      "ko": "남수단",
+      "en": "South Sudan"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "namsudan"
+    ]
+  },
+  {
+    "id": "sudan",
+    "type": "entry",
+    "name": {
+      "ko": "수단",
+      "en": "Sudan"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "sudan"
+    ]
+  },
+  {
+    "id": "tanzania",
+    "type": "entry",
+    "name": {
+      "ko": "탄자니아",
+      "en": "Tanzania"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "tanjania"
+    ]
+  },
+  {
+    "id": "togo",
+    "type": "entry",
+    "name": {
+      "ko": "토고",
+      "en": "Togo"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "togo"
+    ]
+  },
+  {
+    "id": "tunisia",
+    "type": "entry",
+    "name": {
+      "ko": "튀니지",
+      "en": "Tunisia"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "twiniji"
+    ]
+  },
+  {
+    "id": "uganda",
+    "type": "entry",
+    "name": {
+      "ko": "우간다",
+      "en": "Uganda"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "uganda"
+    ]
+  },
+  {
+    "id": "zambia",
+    "type": "entry",
+    "name": {
+      "ko": "잠비아",
+      "en": "Zambia"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "jambia"
+    ]
+  },
+  {
+    "id": "zimbabwe",
+    "type": "entry",
+    "name": {
+      "ko": "짐바브웨",
+      "en": "Zimbabwe"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 국가입니다.",
+      "en": "A country located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "country",
+      "jimbabeuwe"
+    ]
+  },
+  {
+    "id": "antigua-and-barbuda",
+    "type": "entry",
+    "name": {
+      "ko": "앤티가 바부다",
+      "en": "Antigua and Barbuda"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 국가입니다.",
+      "en": "A country located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "country",
+      "aentiga babuda"
+    ]
+  },
+  {
+    "id": "bahamas",
+    "type": "entry",
+    "name": {
+      "ko": "바하마",
+      "en": "The Bahamas"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 국가입니다.",
+      "en": "A country located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "country",
+      "bahama"
+    ]
+  },
+  {
+    "id": "barbados",
+    "type": "entry",
+    "name": {
+      "ko": "바베이도스",
+      "en": "Barbados"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 국가입니다.",
+      "en": "A country located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "country",
+      "babeidoseu"
+    ]
+  },
+  {
+    "id": "belize",
+    "type": "entry",
+    "name": {
+      "ko": "벨리즈",
+      "en": "Belize"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 국가입니다.",
+      "en": "A country located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "country",
+      "bellijeu"
+    ]
+  },
+  {
+    "id": "canada",
+    "type": "entry",
+    "name": {
+      "ko": "캐나다",
+      "en": "Canada"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 국가입니다.",
+      "en": "A country located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "country",
+      "kaenada"
+    ]
+  },
+  {
+    "id": "costa-rica",
+    "type": "entry",
+    "name": {
+      "ko": "코스타리카",
+      "en": "Costa Rica"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 국가입니다.",
+      "en": "A country located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "country",
+      "koseutarika"
+    ]
+  },
+  {
+    "id": "cuba",
+    "type": "entry",
+    "name": {
+      "ko": "쿠바",
+      "en": "Cuba"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 국가입니다.",
+      "en": "A country located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "country",
+      "kuba"
+    ]
+  },
+  {
+    "id": "dominica",
+    "type": "entry",
+    "name": {
+      "ko": "도미니카 연방",
+      "en": "Dominica"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 국가입니다.",
+      "en": "A country located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "country",
+      "dominika yeonbang"
+    ]
+  },
+  {
+    "id": "dominican-republic",
+    "type": "entry",
+    "name": {
+      "ko": "도미니카 공화국",
+      "en": "Dominican Republic"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 국가입니다.",
+      "en": "A country located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "country",
+      "dominika gonghwaguk"
+    ]
+  },
+  {
+    "id": "el-salvador",
+    "type": "entry",
+    "name": {
+      "ko": "엘살바도르",
+      "en": "El Salvador"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 국가입니다.",
+      "en": "A country located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "country",
+      "elsalbadoreu"
+    ]
+  },
+  {
+    "id": "grenada",
+    "type": "entry",
+    "name": {
+      "ko": "그레나다",
+      "en": "Grenada"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 국가입니다.",
+      "en": "A country located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "country",
+      "geurenada"
+    ]
+  },
+  {
+    "id": "guatemala",
+    "type": "entry",
+    "name": {
+      "ko": "과테말라",
+      "en": "Guatemala"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 국가입니다.",
+      "en": "A country located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "country",
+      "gwatemalla"
+    ]
+  },
+  {
+    "id": "haiti",
+    "type": "entry",
+    "name": {
+      "ko": "아이티",
+      "en": "Haiti"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 국가입니다.",
+      "en": "A country located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "country",
+      "aiti"
+    ]
+  },
+  {
+    "id": "honduras",
+    "type": "entry",
+    "name": {
+      "ko": "온두라스",
+      "en": "Honduras"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 국가입니다.",
+      "en": "A country located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "country",
+      "onduras"
+    ]
+  },
+  {
+    "id": "jamaica",
+    "type": "entry",
+    "name": {
+      "ko": "자메이카",
+      "en": "Jamaica"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 국가입니다.",
+      "en": "A country located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "country",
+      "jameika"
+    ]
+  },
+  {
+    "id": "mexico",
+    "type": "entry",
+    "name": {
+      "ko": "멕시코",
+      "en": "Mexico"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 국가입니다.",
+      "en": "A country located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "country",
+      "meksiko"
+    ]
+  },
+  {
+    "id": "nicaragua",
+    "type": "entry",
+    "name": {
+      "ko": "니카라과",
+      "en": "Nicaragua"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 국가입니다.",
+      "en": "A country located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "country",
+      "nikaragwa"
+    ]
+  },
+  {
+    "id": "panama",
+    "type": "entry",
+    "name": {
+      "ko": "파나마",
+      "en": "Panama"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 국가입니다.",
+      "en": "A country located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "country",
+      "panama"
+    ]
+  },
+  {
+    "id": "saint-kitts-and-nevis",
+    "type": "entry",
+    "name": {
+      "ko": "세인트키츠 네비스",
+      "en": "Saint Kitts and Nevis"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 국가입니다.",
+      "en": "A country located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "country",
+      "seinteu kicheu nebiseu"
+    ]
+  },
+  {
+    "id": "saint-lucia",
+    "type": "entry",
+    "name": {
+      "ko": "세인트루시아",
+      "en": "Saint Lucia"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 국가입니다.",
+      "en": "A country located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "country",
+      "seinteu lusia"
+    ]
+  },
+  {
+    "id": "saint-vincent-and-the-grenadines",
+    "type": "entry",
+    "name": {
+      "ko": "세인트빈센트 그레나딘",
+      "en": "Saint Vincent and the Grenadines"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 국가입니다.",
+      "en": "A country located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "country",
+      "seinteu binsenteu geurenadin"
+    ]
+  },
+  {
+    "id": "trinidad-and-tobago",
+    "type": "entry",
+    "name": {
+      "ko": "트리니다드 토바고",
+      "en": "Trinidad and Tobago"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 국가입니다.",
+      "en": "A country located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "country",
+      "teurinidadeu tobago"
+    ]
+  },
+  {
+    "id": "united-states",
+    "type": "entry",
+    "name": {
+      "ko": "미국",
+      "en": "United States"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 국가입니다.",
+      "en": "A country located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "country",
+      "miguk"
+    ]
+  },
+  {
+    "id": "argentina",
+    "type": "entry",
+    "name": {
+      "ko": "아르헨티나",
+      "en": "Argentina"
+    },
+    "description": {
+      "ko": "남아메리카에 위치한 국가입니다.",
+      "en": "A country located in South America."
+    },
+    "field": "countries",
+    "tags": [
+      "south-america",
+      "country",
+      "areuhenntina"
+    ]
+  },
+  {
+    "id": "bolivia",
+    "type": "entry",
+    "name": {
+      "ko": "볼리비아",
+      "en": "Bolivia"
+    },
+    "description": {
+      "ko": "남아메리카에 위치한 국가입니다.",
+      "en": "A country located in South America."
+    },
+    "field": "countries",
+    "tags": [
+      "south-america",
+      "country",
+      "bollibia"
+    ]
+  },
+  {
+    "id": "brazil",
+    "type": "entry",
+    "name": {
+      "ko": "브라질",
+      "en": "Brazil"
+    },
+    "description": {
+      "ko": "남아메리카에 위치한 국가입니다.",
+      "en": "A country located in South America."
+    },
+    "field": "countries",
+    "tags": [
+      "south-america",
+      "country",
+      "beurajil"
+    ]
+  },
+  {
+    "id": "chile",
+    "type": "entry",
+    "name": {
+      "ko": "칠레",
+      "en": "Chile"
+    },
+    "description": {
+      "ko": "남아메리카에 위치한 국가입니다.",
+      "en": "A country located in South America."
+    },
+    "field": "countries",
+    "tags": [
+      "south-america",
+      "country",
+      "chille"
+    ]
+  },
+  {
+    "id": "colombia",
+    "type": "entry",
+    "name": {
+      "ko": "콜롬비아",
+      "en": "Colombia"
+    },
+    "description": {
+      "ko": "남아메리카에 위치한 국가입니다.",
+      "en": "A country located in South America."
+    },
+    "field": "countries",
+    "tags": [
+      "south-america",
+      "country",
+      "kollombia"
+    ]
+  },
+  {
+    "id": "ecuador",
+    "type": "entry",
+    "name": {
+      "ko": "에콰도르",
+      "en": "Ecuador"
+    },
+    "description": {
+      "ko": "남아메리카에 위치한 국가입니다.",
+      "en": "A country located in South America."
+    },
+    "field": "countries",
+    "tags": [
+      "south-america",
+      "country",
+      "ekwadoreu"
+    ]
+  },
+  {
+    "id": "guyana",
+    "type": "entry",
+    "name": {
+      "ko": "가이아나",
+      "en": "Guyana"
+    },
+    "description": {
+      "ko": "남아메리카에 위치한 국가입니다.",
+      "en": "A country located in South America."
+    },
+    "field": "countries",
+    "tags": [
+      "south-america",
+      "country",
+      "gaiana"
+    ]
+  },
+  {
+    "id": "paraguay",
+    "type": "entry",
+    "name": {
+      "ko": "파라과이",
+      "en": "Paraguay"
+    },
+    "description": {
+      "ko": "남아메리카에 위치한 국가입니다.",
+      "en": "A country located in South America."
+    },
+    "field": "countries",
+    "tags": [
+      "south-america",
+      "country",
+      "paragwai"
+    ]
+  },
+  {
+    "id": "peru",
+    "type": "entry",
+    "name": {
+      "ko": "페루",
+      "en": "Peru"
+    },
+    "description": {
+      "ko": "남아메리카에 위치한 국가입니다.",
+      "en": "A country located in South America."
+    },
+    "field": "countries",
+    "tags": [
+      "south-america",
+      "country",
+      "peru"
+    ]
+  },
+  {
+    "id": "suriname",
+    "type": "entry",
+    "name": {
+      "ko": "수리남",
+      "en": "Suriname"
+    },
+    "description": {
+      "ko": "남아메리카에 위치한 국가입니다.",
+      "en": "A country located in South America."
+    },
+    "field": "countries",
+    "tags": [
+      "south-america",
+      "country",
+      "surinam"
+    ]
+  },
+  {
+    "id": "uruguay",
+    "type": "entry",
+    "name": {
+      "ko": "우루과이",
+      "en": "Uruguay"
+    },
+    "description": {
+      "ko": "남아메리카에 위치한 국가입니다.",
+      "en": "A country located in South America."
+    },
+    "field": "countries",
+    "tags": [
+      "south-america",
+      "country",
+      "uruguai"
+    ]
+  },
+  {
+    "id": "venezuela",
+    "type": "entry",
+    "name": {
+      "ko": "베네수엘라",
+      "en": "Venezuela"
+    },
+    "description": {
+      "ko": "남아메리카에 위치한 국가입니다.",
+      "en": "A country located in South America."
+    },
+    "field": "countries",
+    "tags": [
+      "south-america",
+      "country",
+      "benesuelra"
+    ]
+  },
+  {
+    "id": "australia",
+    "type": "entry",
+    "name": {
+      "ko": "호주",
+      "en": "Australia"
+    },
+    "description": {
+      "ko": "오세아니아에 위치한 국가입니다.",
+      "en": "A country located in Oceania."
+    },
+    "field": "countries",
+    "tags": [
+      "oceania",
+      "country",
+      "hoju"
+    ]
+  },
+  {
+    "id": "fiji",
+    "type": "entry",
+    "name": {
+      "ko": "피지",
+      "en": "Fiji"
+    },
+    "description": {
+      "ko": "오세아니아에 위치한 국가입니다.",
+      "en": "A country located in Oceania."
+    },
+    "field": "countries",
+    "tags": [
+      "oceania",
+      "country",
+      "piji"
+    ]
+  },
+  {
+    "id": "kiribati",
+    "type": "entry",
+    "name": {
+      "ko": "키리바시",
+      "en": "Kiribati"
+    },
+    "description": {
+      "ko": "오세아니아에 위치한 국가입니다.",
+      "en": "A country located in Oceania."
+    },
+    "field": "countries",
+    "tags": [
+      "oceania",
+      "country",
+      "kiribasi"
+    ]
+  },
+  {
+    "id": "marshall-islands",
+    "type": "entry",
+    "name": {
+      "ko": "마셜 제도",
+      "en": "Marshall Islands"
+    },
+    "description": {
+      "ko": "오세아니아에 위치한 국가입니다.",
+      "en": "A country located in Oceania."
+    },
+    "field": "countries",
+    "tags": [
+      "oceania",
+      "country",
+      "masyeol jedo"
+    ]
+  },
+  {
+    "id": "micronesia",
+    "type": "entry",
+    "name": {
+      "ko": "미크로네시아",
+      "en": "Micronesia"
+    },
+    "description": {
+      "ko": "오세아니아에 위치한 국가입니다.",
+      "en": "A country located in Oceania."
+    },
+    "field": "countries",
+    "tags": [
+      "oceania",
+      "country",
+      "mikeuronesia"
+    ]
+  },
+  {
+    "id": "nauru",
+    "type": "entry",
+    "name": {
+      "ko": "나우루",
+      "en": "Nauru"
+    },
+    "description": {
+      "ko": "오세아니아에 위치한 국가입니다.",
+      "en": "A country located in Oceania."
+    },
+    "field": "countries",
+    "tags": [
+      "oceania",
+      "country",
+      "nauru"
+    ]
+  },
+  {
+    "id": "new-zealand",
+    "type": "entry",
+    "name": {
+      "ko": "뉴질랜드",
+      "en": "New Zealand"
+    },
+    "description": {
+      "ko": "오세아니아에 위치한 국가입니다.",
+      "en": "A country located in Oceania."
+    },
+    "field": "countries",
+    "tags": [
+      "oceania",
+      "country",
+      "nyujillaendeu"
+    ]
+  },
+  {
+    "id": "palau",
+    "type": "entry",
+    "name": {
+      "ko": "팔라우",
+      "en": "Palau"
+    },
+    "description": {
+      "ko": "오세아니아에 위치한 국가입니다.",
+      "en": "A country located in Oceania."
+    },
+    "field": "countries",
+    "tags": [
+      "oceania",
+      "country",
+      "pallau"
+    ]
+  },
+  {
+    "id": "papua-new-guinea",
+    "type": "entry",
+    "name": {
+      "ko": "파푸아뉴기니",
+      "en": "Papua New Guinea"
+    },
+    "description": {
+      "ko": "오세아니아에 위치한 국가입니다.",
+      "en": "A country located in Oceania."
+    },
+    "field": "countries",
+    "tags": [
+      "oceania",
+      "country",
+      "papuanyugini"
+    ]
+  },
+  {
+    "id": "samoa",
+    "type": "entry",
+    "name": {
+      "ko": "사모아",
+      "en": "Samoa"
+    },
+    "description": {
+      "ko": "오세아니아에 위치한 국가입니다.",
+      "en": "A country located in Oceania."
+    },
+    "field": "countries",
+    "tags": [
+      "oceania",
+      "country",
+      "samoa"
+    ]
+  },
+  {
+    "id": "solomon-islands",
+    "type": "entry",
+    "name": {
+      "ko": "솔로몬 제도",
+      "en": "Solomon Islands"
+    },
+    "description": {
+      "ko": "오세아니아에 위치한 국가입니다.",
+      "en": "A country located in Oceania."
+    },
+    "field": "countries",
+    "tags": [
+      "oceania",
+      "country",
+      "sollomon jedo"
+    ]
+  },
+  {
+    "id": "tonga",
+    "type": "entry",
+    "name": {
+      "ko": "통가",
+      "en": "Tonga"
+    },
+    "description": {
+      "ko": "오세아니아에 위치한 국가입니다.",
+      "en": "A country located in Oceania."
+    },
+    "field": "countries",
+    "tags": [
+      "oceania",
+      "country",
+      "tongga"
+    ]
+  },
+  {
+    "id": "tuvalu",
+    "type": "entry",
+    "name": {
+      "ko": "투발루",
+      "en": "Tuvalu"
+    },
+    "description": {
+      "ko": "오세아니아에 위치한 국가입니다.",
+      "en": "A country located in Oceania."
+    },
+    "field": "countries",
+    "tags": [
+      "oceania",
+      "country",
+      "tuballu"
+    ]
+  },
+  {
+    "id": "vanuatu",
+    "type": "entry",
+    "name": {
+      "ko": "바누아투",
+      "en": "Vanuatu"
+    },
+    "description": {
+      "ko": "오세아니아에 위치한 국가입니다.",
+      "en": "A country located in Oceania."
+    },
+    "field": "countries",
+    "tags": [
+      "oceania",
+      "country",
+      "banuatu"
+    ]
+  },
+  {
+    "id": "hong-kong",
+    "type": "entry",
+    "name": {
+      "ko": "홍콩",
+      "en": "Hong Kong"
+    },
+    "description": {
+      "ko": "아시아에 위치한 지역입니다.",
+      "en": "A region located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "territory",
+      "hongkong"
+    ]
+  },
+  {
+    "id": "macau",
+    "type": "entry",
+    "name": {
+      "ko": "마카오",
+      "en": "Macau"
+    },
+    "description": {
+      "ko": "아시아에 위치한 지역입니다.",
+      "en": "A region located in Asia."
+    },
+    "field": "countries",
+    "tags": [
+      "asia",
+      "territory",
+      "makao"
+    ]
+  },
+  {
+    "id": "faroe-islands",
+    "type": "entry",
+    "name": {
+      "ko": "페로 제도",
+      "en": "Faroe Islands"
+    },
+    "description": {
+      "ko": "유럽에 위치한 지역입니다.",
+      "en": "A region located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "territory",
+      "pero jedo"
+    ]
+  },
+  {
+    "id": "gibraltar",
+    "type": "entry",
+    "name": {
+      "ko": "지브롤터",
+      "en": "Gibraltar"
+    },
+    "description": {
+      "ko": "유럽에 위치한 지역입니다.",
+      "en": "A region located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "territory",
+      "jibeuroroteo"
+    ]
+  },
+  {
+    "id": "greenland",
+    "type": "entry",
+    "name": {
+      "ko": "그린란드",
+      "en": "Greenland"
+    },
+    "description": {
+      "ko": "북아메리카에 위치한 지역입니다.",
+      "en": "A region located in North America."
+    },
+    "field": "countries",
+    "tags": [
+      "north-america",
+      "territory",
+      "geurillandeu"
+    ]
+  },
+  {
+    "id": "aland-islands",
+    "type": "entry",
+    "name": {
+      "ko": "올란드 제도",
+      "en": "Åland Islands"
+    },
+    "description": {
+      "ko": "유럽에 위치한 지역입니다.",
+      "en": "A region located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "territory",
+      "ollandeu jedo"
+    ]
+  },
+  {
+    "id": "isle-of-man",
+    "type": "entry",
+    "name": {
+      "ko": "맨 섬",
+      "en": "Isle of Man"
+    },
+    "description": {
+      "ko": "유럽에 위치한 지역입니다.",
+      "en": "A region located in Europe."
+    },
+    "field": "countries",
+    "tags": [
+      "europe",
+      "territory",
+      "maen seom"
+    ]
+  },
+  {
+    "id": "american-samoa",
+    "type": "entry",
+    "name": {
+      "ko": "아메리칸 사모아",
+      "en": "American Samoa"
+    },
+    "description": {
+      "ko": "오세아니아에 위치한 지역입니다.",
+      "en": "A region located in Oceania."
+    },
+    "field": "countries",
+    "tags": [
+      "oceania",
+      "territory",
+      "amerikeon samoa"
+    ]
+  },
+  {
+    "id": "cook-islands",
+    "type": "entry",
+    "name": {
+      "ko": "쿡 제도",
+      "en": "Cook Islands"
+    },
+    "description": {
+      "ko": "오세아니아에 위치한 지역입니다.",
+      "en": "A region located in Oceania."
+    },
+    "field": "countries",
+    "tags": [
+      "oceania",
+      "territory",
+      "kuk jedo"
+    ]
+  },
+  {
+    "id": "french-polynesia",
+    "type": "entry",
+    "name": {
+      "ko": "프랑스령 폴리네시아",
+      "en": "French Polynesia"
+    },
+    "description": {
+      "ko": "오세아니아에 위치한 지역입니다.",
+      "en": "A region located in Oceania."
+    },
+    "field": "countries",
+    "tags": [
+      "oceania",
+      "territory",
+      "peurangseuryeong pollinesia"
+    ]
+  },
+  {
+    "id": "guam",
+    "type": "entry",
+    "name": {
+      "ko": "괌",
+      "en": "Guam"
+    },
+    "description": {
+      "ko": "오세아니아에 위치한 지역입니다.",
+      "en": "A region located in Oceania."
+    },
+    "field": "countries",
+    "tags": [
+      "oceania",
+      "territory",
+      "gwam"
+    ]
+  },
+  {
+    "id": "new-caledonia",
+    "type": "entry",
+    "name": {
+      "ko": "뉴칼레도니아",
+      "en": "New Caledonia"
+    },
+    "description": {
+      "ko": "오세아니아에 위치한 지역입니다.",
+      "en": "A region located in Oceania."
+    },
+    "field": "countries",
+    "tags": [
+      "oceania",
+      "territory",
+      "nyukalledonia"
+    ]
+  },
+  {
+    "id": "niue",
+    "type": "entry",
+    "name": {
+      "ko": "니우에",
+      "en": "Niue"
+    },
+    "description": {
+      "ko": "오세아니아에 위치한 지역입니다.",
+      "en": "A region located in Oceania."
+    },
+    "field": "countries",
+    "tags": [
+      "oceania",
+      "territory",
+      "niue"
+    ]
+  },
+  {
+    "id": "northern-mariana-islands",
+    "type": "entry",
+    "name": {
+      "ko": "북마리아나 제도",
+      "en": "Northern Mariana Islands"
+    },
+    "description": {
+      "ko": "오세아니아에 위치한 지역입니다.",
+      "en": "A region located in Oceania."
+    },
+    "field": "countries",
+    "tags": [
+      "oceania",
+      "territory",
+      "bungmariana jedo"
+    ]
+  },
+  {
+    "id": "tokelau",
+    "type": "entry",
+    "name": {
+      "ko": "토켈라우",
+      "en": "Tokelau"
+    },
+    "description": {
+      "ko": "오세아니아에 위치한 지역입니다.",
+      "en": "A region located in Oceania."
+    },
+    "field": "countries",
+    "tags": [
+      "oceania",
+      "territory",
+      "tokellau"
+    ]
+  },
+  {
+    "id": "aruba",
+    "type": "entry",
+    "name": {
+      "ko": "아루바",
+      "en": "Aruba"
+    },
+    "description": {
+      "ko": "카리브해에 위치한 지역입니다.",
+      "en": "A region located in the Caribbean."
+    },
+    "field": "countries",
+    "tags": [
+      "caribbean",
+      "territory",
+      "aruba"
+    ]
+  },
+  {
+    "id": "bermuda",
+    "type": "entry",
+    "name": {
+      "ko": "버뮤다",
+      "en": "Bermuda"
+    },
+    "description": {
+      "ko": "대서양에 위치한 지역입니다.",
+      "en": "A region located in the Atlantic Ocean."
+    },
+    "field": "countries",
+    "tags": [
+      "atlantic",
+      "territory",
+      "beomyuda"
+    ]
+  },
+  {
+    "id": "british-virgin-islands",
+    "type": "entry",
+    "name": {
+      "ko": "영국령 버진아일랜드",
+      "en": "British Virgin Islands"
+    },
+    "description": {
+      "ko": "카리브해에 위치한 지역입니다.",
+      "en": "A region located in the Caribbean."
+    },
+    "field": "countries",
+    "tags": [
+      "caribbean",
+      "territory",
+      "yeonggungnyeong beojin aillaendeu"
+    ]
+  },
+  {
+    "id": "cayman-islands",
+    "type": "entry",
+    "name": {
+      "ko": "케이맨 제도",
+      "en": "Cayman Islands"
+    },
+    "description": {
+      "ko": "카리브해에 위치한 지역입니다.",
+      "en": "A region located in the Caribbean."
+    },
+    "field": "countries",
+    "tags": [
+      "caribbean",
+      "territory",
+      "keimen jedo"
+    ]
+  },
+  {
+    "id": "curacao",
+    "type": "entry",
+    "name": {
+      "ko": "퀴라소",
+      "en": "Curaçao"
+    },
+    "description": {
+      "ko": "카리브해에 위치한 지역입니다.",
+      "en": "A region located in the Caribbean."
+    },
+    "field": "countries",
+    "tags": [
+      "caribbean",
+      "territory",
+      "kwiraso"
+    ]
+  },
+  {
+    "id": "guadeloupe",
+    "type": "entry",
+    "name": {
+      "ko": "과들루프",
+      "en": "Guadeloupe"
+    },
+    "description": {
+      "ko": "카리브해에 위치한 지역입니다.",
+      "en": "A region located in the Caribbean."
+    },
+    "field": "countries",
+    "tags": [
+      "caribbean",
+      "territory",
+      "gwadeullupeu"
+    ]
+  },
+  {
+    "id": "martinique",
+    "type": "entry",
+    "name": {
+      "ko": "마르티니크",
+      "en": "Martinique"
+    },
+    "description": {
+      "ko": "카리브해에 위치한 지역입니다.",
+      "en": "A region located in the Caribbean."
+    },
+    "field": "countries",
+    "tags": [
+      "caribbean",
+      "territory",
+      "mareutinikeu"
+    ]
+  },
+  {
+    "id": "puerto-rico",
+    "type": "entry",
+    "name": {
+      "ko": "푸에르토리코",
+      "en": "Puerto Rico"
+    },
+    "description": {
+      "ko": "카리브해에 위치한 지역입니다.",
+      "en": "A region located in the Caribbean."
+    },
+    "field": "countries",
+    "tags": [
+      "caribbean",
+      "territory",
+      "puereutoriko"
+    ]
+  },
+  {
+    "id": "sint-maarten",
+    "type": "entry",
+    "name": {
+      "ko": "신트마르턴",
+      "en": "Sint Maarten"
+    },
+    "description": {
+      "ko": "카리브해에 위치한 지역입니다.",
+      "en": "A region located in the Caribbean."
+    },
+    "field": "countries",
+    "tags": [
+      "caribbean",
+      "territory",
+      "sinteumareuten"
+    ]
+  },
+  {
+    "id": "turks-and-caicos-islands",
+    "type": "entry",
+    "name": {
+      "ko": "터크스 케이커스 제도",
+      "en": "Turks and Caicos Islands"
+    },
+    "description": {
+      "ko": "카리브해에 위치한 지역입니다.",
+      "en": "A region located in the Caribbean."
+    },
+    "field": "countries",
+    "tags": [
+      "caribbean",
+      "territory",
+      "teokeuseu keikeoseu jedo"
+    ]
+  },
+  {
+    "id": "us-virgin-islands",
+    "type": "entry",
+    "name": {
+      "ko": "미국령 버진아일랜드",
+      "en": "U.S. Virgin Islands"
+    },
+    "description": {
+      "ko": "카리브해에 위치한 지역입니다.",
+      "en": "A region located in the Caribbean."
+    },
+    "field": "countries",
+    "tags": [
+      "caribbean",
+      "territory",
+      "migungnyeong beojin aillaendeu"
+    ]
+  },
+  {
+    "id": "mayotte",
+    "type": "entry",
+    "name": {
+      "ko": "마요트",
+      "en": "Mayotte"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 지역입니다.",
+      "en": "A region located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "territory",
+      "mayoteu"
+    ]
+  },
+  {
+    "id": "reunion",
+    "type": "entry",
+    "name": {
+      "ko": "레위니옹",
+      "en": "Réunion"
+    },
+    "description": {
+      "ko": "아프리카에 위치한 지역입니다.",
+      "en": "A region located in Africa."
+    },
+    "field": "countries",
+    "tags": [
+      "africa",
+      "territory",
+      "rewiniong"
+    ]
+  },
+  {
+    "id": "falkland-islands",
+    "type": "entry",
+    "name": {
+      "ko": "포클랜드 제도",
+      "en": "Falkland Islands"
+    },
+    "description": {
+      "ko": "남대서양에 위치한 지역입니다.",
+      "en": "A region located in the South Atlantic."
+    },
+    "field": "countries",
+    "tags": [
+      "south-atlantic",
+      "territory",
+      "pokeullaendeu jedo"
+    ]
+  },
+  {
+    "id": "saint-helena",
+    "type": "entry",
+    "name": {
+      "ko": "세인트헬레나",
+      "en": "Saint Helena"
+    },
+    "description": {
+      "ko": "남대서양에 위치한 지역입니다.",
+      "en": "A region located in the South Atlantic."
+    },
+    "field": "countries",
+    "tags": [
+      "south-atlantic",
+      "territory",
+      "seinteu hellena"
+    ]
+  },
+  {
     "id": "deurama",
     "type": "entry",
     "name": {
