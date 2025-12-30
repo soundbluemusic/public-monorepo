@@ -6893,5 +6893,250 @@
     "pronunciation": {
       "korean": "[바누아투]"
     }
+  },
+  {
+    "id": "hong-kong",
+    "korean": "홍콩",
+    "romanization": "hongkong",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["asia", "territory"],
+    "translations": {
+      "ko": {
+        "word": "홍콩",
+        "explanation": "아시아에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 홍콩에 살고 있습니다.",
+          "intermediate": "당신은 홍콩에 가보셨나요?",
+          "advanced": "홍콩은 아시아에 위치해 있습니다.",
+          "master": "홍콩에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Hong Kong",
+        "explanation": "A region located in Asia.",
+        "examples": {
+          "beginner": "I live in Hong Kong.",
+          "intermediate": "Have you ever been to Hong Kong?",
+          "advanced": "Hong Kong is located in Asia.",
+          "master": "I have a friend from Hong Kong."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[홍콩]"
+    }
+  },
+  {
+    "id": "macau",
+    "korean": "마카오",
+    "romanization": "makao",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "territory"],
+    "translations": {
+      "ko": {
+        "word": "마카오",
+        "explanation": "아시아에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 마카오에 살고 있습니다.",
+          "intermediate": "당신은 마카오에 가보셨나요?",
+          "advanced": "마카오는 아시아에 위치해 있습니다.",
+          "master": "마카오에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Macau",
+        "explanation": "A region located in Asia.",
+        "examples": {
+          "beginner": "I live in Macau.",
+          "intermediate": "Have you ever been to Macau?",
+          "advanced": "Macau is located in Asia.",
+          "master": "I have a friend from Macau."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[마카오]"
+    }
+  },
+  {
+    "id": "faroe-islands",
+    "korean": "페로 제도",
+    "romanization": "pero jedo",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["europe", "territory"],
+    "translations": {
+      "ko": {
+        "word": "페로 제도",
+        "explanation": "유럽에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 페로 제도에 살고 있습니다.",
+          "intermediate": "당신은 페로 제도에 가보셨나요?",
+          "advanced": "페로 제도는 유럽에 위치해 있습니다.",
+          "master": "페로 제도에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Faroe Islands",
+        "explanation": "A region located in Europe.",
+        "examples": {
+          "beginner": "I live in the Faroe Islands.",
+          "intermediate": "Have you ever been to the Faroe Islands?",
+          "advanced": "The Faroe Islands is located in Europe.",
+          "master": "I have a friend from the Faroe Islands."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[페로 제도]"
+    }
+  },
+  {
+    "id": "gibraltar",
+    "korean": "지브롤터",
+    "romanization": "jibeuroroteo",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["europe", "territory"],
+    "translations": {
+      "ko": {
+        "word": "지브롤터",
+        "explanation": "유럽에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 지브롤터에 살고 있습니다.",
+          "intermediate": "당신은 지브롤터에 가보셨나요?",
+          "advanced": "지브롤터는 유럽에 위치해 있습니다.",
+          "master": "지브롤터에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Gibraltar",
+        "explanation": "A region located in Europe.",
+        "examples": {
+          "beginner": "I live in Gibraltar.",
+          "intermediate": "Have you ever been to Gibraltar?",
+          "advanced": "Gibraltar is located in Europe.",
+          "master": "I have a friend from Gibraltar."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[지브롤터]"
+    }
+  },
+  {
+    "id": "greenland",
+    "korean": "그린란드",
+    "romanization": "geurillandeu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["north-america", "territory"],
+    "translations": {
+      "ko": {
+        "word": "그린란드",
+        "explanation": "북아메리카에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 그린란드에 살고 있습니다.",
+          "intermediate": "당신은 그린란드에 가보셨나요?",
+          "advanced": "그린란드는 북아메리카에 위치해 있습니다.",
+          "master": "그린란드에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Greenland",
+        "explanation": "A region located in North America.",
+        "examples": {
+          "beginner": "I live in Greenland.",
+          "intermediate": "Have you ever been to Greenland?",
+          "advanced": "Greenland is located in North America.",
+          "master": "I have a friend from Greenland."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[그린란드]"
+    }
+  },
+  {
+    "id": "aland-islands",
+    "korean": "올란드 제도",
+    "romanization": "ollandeu jedo",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["europe", "territory"],
+    "translations": {
+      "ko": {
+        "word": "올란드 제도",
+        "explanation": "유럽에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 올란드 제도에 살고 있습니다.",
+          "intermediate": "당신은 올란드 제도에 가보셨나요?",
+          "advanced": "올란드 제도는 유럽에 위치해 있습니다.",
+          "master": "올란드 제도에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Åland Islands",
+        "explanation": "A region located in Europe.",
+        "examples": {
+          "beginner": "I live in the Åland Islands.",
+          "intermediate": "Have you ever been to the Åland Islands?",
+          "advanced": "The Åland Islands is located in Europe.",
+          "master": "I have a friend from the Åland Islands."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[올란드 제도]"
+    }
+  },
+  {
+    "id": "isle-of-man",
+    "korean": "맨 섬",
+    "romanization": "maen seom",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["europe", "territory"],
+    "translations": {
+      "ko": {
+        "word": "맨 섬",
+        "explanation": "유럽에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 맨 섬에 살고 있습니다.",
+          "intermediate": "당신은 맨 섬에 가보셨나요?",
+          "advanced": "맨 섬은 유럽에 위치해 있습니다.",
+          "master": "맨 섬에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Isle of Man",
+        "explanation": "A region located in Europe.",
+        "examples": {
+          "beginner": "I live in the Isle of Man.",
+          "intermediate": "Have you ever been to the Isle of Man?",
+          "advanced": "The Isle of Man is located in Europe.",
+          "master": "I have a friend from the Isle of Man."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[맨 섬]"
+    }
   }
 ]
