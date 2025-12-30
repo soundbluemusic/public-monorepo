@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@radix-ui/react-tooltip": "^1.1.6",
+    "@soundblue/config": "workspace:*",
     "@soundblue/core": "workspace:*",
     "@soundblue/features": "workspace:*",
     "@soundblue/i18n": "workspace:*",

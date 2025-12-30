@@ -85,49 +85,19 @@ export {
   VirtualList,
   type VirtualListProps,
 } from '@soundblue/ui';
-
+export { useAutoAnimate } from '@soundblue/ui/hooks';
 // ============================================================================
-// App-specific components (remain in this package)
+// App-specific components (re-exports from ui/components)
 // ============================================================================
-export {
-  canShare,
-  copyToClipboard,
-  DarkModeToggle,
-  type DarkModeToggleProps,
-  type EntryCategory,
-  EntryListItem,
-  type EntryListItemProps,
-  LanguageToggle,
-  type LanguageToggleProps,
-  ShareButton,
-  type ShareButtonProps,
-  type ShareData,
-  share,
-  supportsWebShare,
-  useWebShare,
-  ViewTransitionButton,
-  type ViewTransitionButtonProps,
-  ViewTransitionLink,
-  type ViewTransitionLinkProps,
-} from './components';
-
+export { DarkModeToggle, LanguageToggle } from './components';
 // ============================================================================
-// App-specific hooks (remain in this package)
+// App-specific hooks (re-exports from search, ui)
 // ============================================================================
 export {
   type SearchIndexItem,
   type SearchResult,
-  startViewTransition,
-  supportsViewTransitions,
   useSearchWorker,
-  useViewTransition,
 } from './hooks';
-export { useAutoAnimate } from './hooks/useAutoAnimate';
-
-// ============================================================================
-// App-specific stores (remain in this package)
-// ============================================================================
-export { createImmerStore } from './stores';
 
 // ============================================================================
 // Utils (remain in this package - re-exported from @soundblue/shared)

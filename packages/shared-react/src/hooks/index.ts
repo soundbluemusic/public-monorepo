@@ -1,10 +1,13 @@
 /**
- * @fileoverview Hooks exports
+ * @fileoverview Hooks exports (re-exports from new packages)
+ * @deprecated Use @soundblue/ui, @soundblue/features, @soundblue/search, @soundblue/pwa directly
  * @environment client-only
  */
 
+// Re-export from features/media
 export { useIsMobile, useMediaQuery } from '@soundblue/features/media';
-// Re-export from features
+
+// Re-export from features/toast
 export {
   clearToasts,
   removeToast,
@@ -17,16 +20,11 @@ export {
 
 // Re-export from pwa
 export { type UseOnlineStatusReturn, useOnlineStatus } from '@soundblue/pwa/react';
-
-// Local exports (app-specific hooks)
-export { useAutoAnimate } from './useAutoAnimate';
+// Re-export from search/react
 export {
   type SearchIndexItem,
   type SearchResult,
   useSearchWorker,
-} from './useSearchWorker';
-export {
-  startViewTransition,
-  supportsViewTransitions,
-  useViewTransition,
-} from './useViewTransition';
+} from '@soundblue/search/react';
+// Re-export from ui/hooks
+export { useAutoAnimate } from '@soundblue/ui/hooks';

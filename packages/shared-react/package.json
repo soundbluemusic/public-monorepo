@@ -26,6 +26,7 @@
     "@formkit/auto-animate": "^0.9.0",
     "@soundblue/features": "workspace:*",
     "@soundblue/pwa": "workspace:*",
+    "@soundblue/search": "workspace:*",
     "@soundblue/seo": "workspace:*",
     "@soundblue/shared": "workspace:*",
     "@soundblue/ui": "workspace:*",

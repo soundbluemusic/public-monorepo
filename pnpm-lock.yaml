@@ -185,6 +185,9 @@ importers:
 
   apps/context:
     dependencies:
+      '@soundblue/config':
+        specifier: workspace:*
+        version: link:../../packages/config
       '@soundblue/core':
         specifier: workspace:*
         version: link:../../packages/core
@@ -270,6 +273,9 @@ importers:
       '@radix-ui/react-tooltip':
         specifier: ^1.1.6
         version: 1.2.8(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@soundblue/config':
+        specifier: workspace:*
+        version: link:../../packages/config
       '@soundblue/core':
         specifier: workspace:*
         version: link:../../packages/core
@@ -352,6 +358,9 @@ importers:
 
   apps/roots:
     dependencies:
+      '@soundblue/config':
+        specifier: workspace:*
+        version: link:../../packages/config
       '@soundblue/core':
         specifier: workspace:*
         version: link:../../packages/core
@@ -437,6 +446,9 @@ importers:
 
   packages/config:
     devDependencies:
+      tailwindcss:
+        specifier: ^4.1.18
+        version: 4.1.18
       typescript:
         specifier: ^5.7.2
         version: 5.9.3
@@ -577,9 +589,6 @@ importers:
       '@types/node':
         specifier: ^22.10.2
         version: 22.19.3
-      tailwindcss:
-        specifier: ^4.1.18
-        version: 4.1.18
       typescript:
         specifier: ^5.7.2
         version: 5.9.3
@@ -595,6 +604,9 @@ importers:
       '@soundblue/pwa':
         specifier: workspace:*
         version: link:../pwa
+      '@soundblue/search':
+        specifier: workspace:*
+        version: link:../search
       '@soundblue/seo':
         specifier: workspace:*
         version: link:../seo

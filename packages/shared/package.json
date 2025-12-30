@@ -15,9 +15,7 @@
     "./validation": "./src/validation.ts",
     "./search": "./src/search.ts",
     "./db": "./src/db/index.ts",
-    "./sitemap": "./src/sitemap.ts",
-    "./paraglide-generator": "./src/paraglide-generator.ts",
-    "./styles/*": "./src/styles/*"
+    "./paraglide-generator": "./src/paraglide-generator.ts"
   },
   "dependencies": {
     "@soundblue/core": "workspace:*",
@@ -28,7 +26,6 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
-    "tailwindcss": "^4.1.18",
     "typescript": "^5.7.2"
   }
 }

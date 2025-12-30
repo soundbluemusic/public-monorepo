@@ -1,11 +1,14 @@
 /**
- * @fileoverview Components exports
+ * @fileoverview Components exports (re-exports from new packages)
+ * @deprecated Use @soundblue/ui, @soundblue/pwa directly
  * @environment client-only
  */
 
 // Re-export from pwa
 export { OfflineIndicator } from '@soundblue/pwa/react';
-// Re-export from ui
+// Re-export from ui/components
+export { DarkModeToggle, LanguageToggle } from '@soundblue/ui/components';
+// Re-export from ui/feedback
 export {
   ErrorBoundary,
   type ErrorBoundaryProps,
@@ -14,6 +17,7 @@ export {
   type Toast,
   ToastContainer,
 } from '@soundblue/ui/feedback';
+// Re-export from ui/patterns
 export {
   LazyLoad,
   type LazyLoadProps,
@@ -24,6 +28,7 @@ export {
   type SearchDropdownProps,
   usePreloadOnVisible,
 } from '@soundblue/ui/patterns';
+// Re-export from ui/primitives
 export {
   LoadingSpinner,
   PageSkeleton,
@@ -33,28 +38,3 @@ export {
   SkeletonList,
   SkeletonText,
 } from '@soundblue/ui/primitives';
-
-// Local exports (app-specific components)
-export { DarkModeToggle, type DarkModeToggleProps } from './DarkModeToggle';
-export {
-  type EntryCategory,
-  EntryListItem,
-  type EntryListItemProps,
-} from './EntryListItem';
-export { LanguageToggle, type LanguageToggleProps } from './LanguageToggle';
-export {
-  canShare,
-  copyToClipboard,
-  ShareButton,
-  type ShareButtonProps,
-  type ShareData,
-  share,
-  supportsWebShare,
-  useWebShare,
-} from './ShareButton';
-export {
-  ViewTransitionButton,
-  type ViewTransitionButtonProps,
-  ViewTransitionLink,
-  type ViewTransitionLinkProps,
-} from './ViewTransitionLink';

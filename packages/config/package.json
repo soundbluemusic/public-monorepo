@@ -9,12 +9,14 @@
     ".": "./src/index.ts",
     "./tailwind": "./src/tailwind.ts",
     "./vite": "./src/vite.ts",
-    "./biome": "./src/biome.ts"
+    "./biome": "./src/biome.ts",
+    "./styles/tailwind.css": "./src/styles/tailwind.css"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "tailwindcss": "^4.1.18",
     "typescript": "^5.7.2"
   }
 }

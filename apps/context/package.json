@@ -18,6 +18,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@soundblue/config": "workspace:*",
     "@soundblue/core": "workspace:*",
     "@soundblue/features": "workspace:*",
     "@soundblue/i18n": "workspace:*",
