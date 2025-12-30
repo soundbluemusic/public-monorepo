@@ -1,0 +1,1717 @@
+[
+  {
+    "id": "afghanistan",
+    "korean": "아프가니스탄",
+    "romanization": "apeuganiseutan",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "아프가니스탄",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 아프가니스탄에 살고 있습니다.",
+          "intermediate": "당신은 아프가니스탄에 가보셨나요?",
+          "advanced": "아프가니스탄은 아시아에 위치해 있습니다.",
+          "master": "아프가니스탄의 수도는 카불입니다."
+        }
+      },
+      "en": {
+        "word": "Afghanistan",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Afghanistan.",
+          "intermediate": "Have you ever been to Afghanistan?",
+          "advanced": "Afghanistan is located in Asia.",
+          "master": "The capital of Afghanistan is Kabul."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아프가니스탄]"
+    }
+  },
+  {
+    "id": "armenia",
+    "korean": "아르메니아",
+    "romanization": "areumenia",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "아르메니아",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 아르메니아에 살고 있습니다.",
+          "intermediate": "당신은 아르메니아에 가보셨나요?",
+          "advanced": "아르메니아는 아시아에 위치해 있습니다.",
+          "master": "아르메니아의 수도는 예레반입니다."
+        }
+      },
+      "en": {
+        "word": "Armenia",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Armenia.",
+          "intermediate": "Have you ever been to Armenia?",
+          "advanced": "Armenia is located in Asia.",
+          "master": "The capital of Armenia is Yerevan."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아르메니아]"
+    }
+  },
+  {
+    "id": "azerbaijan",
+    "korean": "아제르바이잔",
+    "romanization": "ajereubaijan",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "아제르바이잔",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 아제르바이잔에 살고 있습니다.",
+          "intermediate": "당신은 아제르바이잔에 가보셨나요?",
+          "advanced": "아제르바이잔은 아시아에 위치해 있습니다.",
+          "master": "아제르바이잔의 수도는 바쿠입니다."
+        }
+      },
+      "en": {
+        "word": "Azerbaijan",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Azerbaijan.",
+          "intermediate": "Have you ever been to Azerbaijan?",
+          "advanced": "Azerbaijan is located in Asia.",
+          "master": "The capital of Azerbaijan is Baku."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아제르바이잔]"
+    }
+  },
+  {
+    "id": "bahrain",
+    "korean": "바레인",
+    "romanization": "barein",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "바레인",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 바레인에 살고 있습니다.",
+          "intermediate": "당신은 바레인에 가보셨나요?",
+          "advanced": "바레인은 아시아에 위치해 있습니다.",
+          "master": "바레인의 수도는 마나마입니다."
+        }
+      },
+      "en": {
+        "word": "Bahrain",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Bahrain.",
+          "intermediate": "Have you ever been to Bahrain?",
+          "advanced": "Bahrain is located in Asia.",
+          "master": "The capital of Bahrain is Manama."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[바레인]"
+    }
+  },
+  {
+    "id": "bangladesh",
+    "korean": "방글라데시",
+    "romanization": "banggeulladesi",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "방글라데시",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 방글라데시에 살고 있습니다.",
+          "intermediate": "당신은 방글라데시에 가보셨나요?",
+          "advanced": "방글라데시는 아시아에 위치해 있습니다.",
+          "master": "방글라데시의 수도는 다카입니다."
+        }
+      },
+      "en": {
+        "word": "Bangladesh",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Bangladesh.",
+          "intermediate": "Have you ever been to Bangladesh?",
+          "advanced": "Bangladesh is located in Asia.",
+          "master": "The capital of Bangladesh is Dhaka."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[방글라데시]"
+    }
+  },
+  {
+    "id": "bhutan",
+    "korean": "부탄",
+    "romanization": "butan",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "부탄",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 부탄에 살고 있습니다.",
+          "intermediate": "당신은 부탄에 가보셨나요?",
+          "advanced": "부탄은 아시아에 위치해 있습니다.",
+          "master": "부탄의 수도는 팀푸입니다."
+        }
+      },
+      "en": {
+        "word": "Bhutan",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Bhutan.",
+          "intermediate": "Have you ever been to Bhutan?",
+          "advanced": "Bhutan is located in Asia.",
+          "master": "The capital of Bhutan is Thimphu."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[부탄]"
+    }
+  },
+  {
+    "id": "brunei",
+    "korean": "브루나이",
+    "romanization": "beurunai",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "브루나이",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 브루나이에 살고 있습니다.",
+          "intermediate": "당신은 브루나이에 가보셨나요?",
+          "advanced": "브루나이는 아시아에 위치해 있습니다.",
+          "master": "브루나이의 수도는 반다르스리브가완입니다."
+        }
+      },
+      "en": {
+        "word": "Brunei",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Brunei.",
+          "intermediate": "Have you ever been to Brunei?",
+          "advanced": "Brunei is located in Asia.",
+          "master": "The capital of Brunei is Bandar Seri Begawan."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[브루나이]"
+    }
+  },
+  {
+    "id": "cambodia",
+    "korean": "캄보디아",
+    "romanization": "kambodia",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "캄보디아",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 캄보디아에 살고 있습니다.",
+          "intermediate": "당신은 캄보디아에 가보셨나요?",
+          "advanced": "캄보디아는 아시아에 위치해 있습니다.",
+          "master": "캄보디아의 수도는 프놈펜입니다."
+        }
+      },
+      "en": {
+        "word": "Cambodia",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Cambodia.",
+          "intermediate": "Have you ever been to Cambodia?",
+          "advanced": "Cambodia is located in Asia.",
+          "master": "The capital of Cambodia is Phnom Penh."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[캄보디아]"
+    }
+  },
+  {
+    "id": "china",
+    "korean": "중국",
+    "romanization": "jungguk",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "중국",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 중국에 살고 있습니다.",
+          "intermediate": "당신은 중국에 가보셨나요?",
+          "advanced": "중국은 아시아에 위치해 있습니다.",
+          "master": "중국의 수도는 베이징입니다."
+        }
+      },
+      "en": {
+        "word": "China",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in China.",
+          "intermediate": "Have you ever been to China?",
+          "advanced": "China is located in Asia.",
+          "master": "The capital of China is Beijing."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[중국]"
+    }
+  },
+  {
+    "id": "cyprus",
+    "korean": "키프로스",
+    "romanization": "kipeuroseu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "키프로스",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 키프로스에 살고 있습니다.",
+          "intermediate": "당신은 키프로스에 가보셨나요?",
+          "advanced": "키프로스는 아시아에 위치해 있습니다.",
+          "master": "키프로스의 수도는 니코시아입니다."
+        }
+      },
+      "en": {
+        "word": "Cyprus",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Cyprus.",
+          "intermediate": "Have you ever been to Cyprus?",
+          "advanced": "Cyprus is located in Asia.",
+          "master": "The capital of Cyprus is Nicosia."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[키프로스]"
+    }
+  },
+  {
+    "id": "georgia",
+    "korean": "조지아",
+    "romanization": "jojia",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "조지아",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 조지아에 살고 있습니다.",
+          "intermediate": "당신은 조지아에 가보셨나요?",
+          "advanced": "조지아는 아시아에 위치해 있습니다.",
+          "master": "조지아의 수도는 트빌리시입니다."
+        }
+      },
+      "en": {
+        "word": "Georgia",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Georgia.",
+          "intermediate": "Have you ever been to Georgia?",
+          "advanced": "Georgia is located in Asia.",
+          "master": "The capital of Georgia is Tbilisi."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[조지아]"
+    }
+  },
+  {
+    "id": "india",
+    "korean": "인도",
+    "romanization": "indo",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "인도",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 인도에 살고 있습니다.",
+          "intermediate": "당신은 인도에 가보셨나요?",
+          "advanced": "인도는 아시아에 위치해 있습니다.",
+          "master": "인도의 수도는 뉴델리입니다."
+        }
+      },
+      "en": {
+        "word": "India",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in India.",
+          "intermediate": "Have you ever been to India?",
+          "advanced": "India is located in Asia.",
+          "master": "The capital of India is New Delhi."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[인도]"
+    }
+  },
+  {
+    "id": "indonesia",
+    "korean": "인도네시아",
+    "romanization": "indonesia",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "인도네시아",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 인도네시아에 살고 있습니다.",
+          "intermediate": "당신은 인도네시아에 가보셨나요?",
+          "advanced": "인도네시아는 아시아에 위치해 있습니다.",
+          "master": "인도네시아의 수도는 자카르타입니다."
+        }
+      },
+      "en": {
+        "word": "Indonesia",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Indonesia.",
+          "intermediate": "Have you ever been to Indonesia?",
+          "advanced": "Indonesia is located in Asia.",
+          "master": "The capital of Indonesia is Jakarta."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[인도네시아]"
+    }
+  },
+  {
+    "id": "iran",
+    "korean": "이란",
+    "romanization": "iran",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "이란",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 이란에 살고 있습니다.",
+          "intermediate": "당신은 이란에 가보셨나요?",
+          "advanced": "이란은 아시아에 위치해 있습니다.",
+          "master": "이란의 수도는 테헤란입니다."
+        }
+      },
+      "en": {
+        "word": "Iran",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Iran.",
+          "intermediate": "Have you ever been to Iran?",
+          "advanced": "Iran is located in Asia.",
+          "master": "The capital of Iran is Tehran."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[이란]"
+    }
+  },
+  {
+    "id": "iraq",
+    "korean": "이라크",
+    "romanization": "irakeu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "이라크",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 이라크에 살고 있습니다.",
+          "intermediate": "당신은 이라크에 가보셨나요?",
+          "advanced": "이라크는 아시아에 위치해 있습니다.",
+          "master": "이라크의 수도는 바그다드입니다."
+        }
+      },
+      "en": {
+        "word": "Iraq",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Iraq.",
+          "intermediate": "Have you ever been to Iraq?",
+          "advanced": "Iraq is located in Asia.",
+          "master": "The capital of Iraq is Baghdad."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[이라크]"
+    }
+  },
+  {
+    "id": "israel",
+    "korean": "이스라엘",
+    "romanization": "iseurael",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "이스라엘",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 이스라엘에 살고 있습니다.",
+          "intermediate": "당신은 이스라엘에 가보셨나요?",
+          "advanced": "이스라엘은 아시아에 위치해 있습니다.",
+          "master": "이스라엘의 수도는 예루살렘입니다."
+        }
+      },
+      "en": {
+        "word": "Israel",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Israel.",
+          "intermediate": "Have you ever been to Israel?",
+          "advanced": "Israel is located in Asia.",
+          "master": "The capital of Israel is Jerusalem."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[이스라엘]"
+    }
+  },
+  {
+    "id": "japan",
+    "korean": "일본",
+    "romanization": "ilbon",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "일본",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 일본에 살고 있습니다.",
+          "intermediate": "당신은 일본에 가보셨나요?",
+          "advanced": "일본은 아시아에 위치해 있습니다.",
+          "master": "일본의 수도는 도쿄입니다."
+        }
+      },
+      "en": {
+        "word": "Japan",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Japan.",
+          "intermediate": "Have you ever been to Japan?",
+          "advanced": "Japan is located in Asia.",
+          "master": "The capital of Japan is Tokyo."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[일본]"
+    }
+  },
+  {
+    "id": "jordan",
+    "korean": "요르단",
+    "romanization": "yoreudan",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "요르단",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 요르단에 살고 있습니다.",
+          "intermediate": "당신은 요르단에 가보셨나요?",
+          "advanced": "요르단은 아시아에 위치해 있습니다.",
+          "master": "요르단의 수도는 암만입니다."
+        }
+      },
+      "en": {
+        "word": "Jordan",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Jordan.",
+          "intermediate": "Have you ever been to Jordan?",
+          "advanced": "Jordan is located in Asia.",
+          "master": "The capital of Jordan is Amman."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[요르단]"
+    }
+  },
+  {
+    "id": "kazakhstan",
+    "korean": "카자흐스탄",
+    "romanization": "kajaheuseutan",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "카자흐스탄",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 카자흐스탄에 살고 있습니다.",
+          "intermediate": "당신은 카자흐스탄에 가보셨나요?",
+          "advanced": "카자흐스탄은 아시아에 위치해 있습니다.",
+          "master": "카자흐스탄의 수도는 아스타나입니다."
+        }
+      },
+      "en": {
+        "word": "Kazakhstan",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Kazakhstan.",
+          "intermediate": "Have you ever been to Kazakhstan?",
+          "advanced": "Kazakhstan is located in Asia.",
+          "master": "The capital of Kazakhstan is Astana."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[카자흐스탄]"
+    }
+  },
+  {
+    "id": "kuwait",
+    "korean": "쿠웨이트",
+    "romanization": "kuweiteu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "쿠웨이트",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 쿠웨이트에 살고 있습니다.",
+          "intermediate": "당신은 쿠웨이트에 가보셨나요?",
+          "advanced": "쿠웨이트는 아시아에 위치해 있습니다.",
+          "master": "쿠웨이트의 수도는 쿠웨이트시티입니다."
+        }
+      },
+      "en": {
+        "word": "Kuwait",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Kuwait.",
+          "intermediate": "Have you ever been to Kuwait?",
+          "advanced": "Kuwait is located in Asia.",
+          "master": "The capital of Kuwait is Kuwait City."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[쿠웨이트]"
+    }
+  },
+  {
+    "id": "kyrgyzstan",
+    "korean": "키르기스스탄",
+    "romanization": "kireugiseuseutan",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "키르기스스탄",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 키르기스스탄에 살고 있습니다.",
+          "intermediate": "당신은 키르기스스탄에 가보셨나요?",
+          "advanced": "키르기스스탄은 아시아에 위치해 있습니다.",
+          "master": "키르기스스탄의 수도는 비슈케크입니다."
+        }
+      },
+      "en": {
+        "word": "Kyrgyzstan",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Kyrgyzstan.",
+          "intermediate": "Have you ever been to Kyrgyzstan?",
+          "advanced": "Kyrgyzstan is located in Asia.",
+          "master": "The capital of Kyrgyzstan is Bishkek."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[키르기스스탄]"
+    }
+  },
+  {
+    "id": "laos",
+    "korean": "라오스",
+    "romanization": "raoseu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "라오스",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 라오스에 살고 있습니다.",
+          "intermediate": "당신은 라오스에 가보셨나요?",
+          "advanced": "라오스는 아시아에 위치해 있습니다.",
+          "master": "라오스의 수도는 비엔티안입니다."
+        }
+      },
+      "en": {
+        "word": "Laos",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Laos.",
+          "intermediate": "Have you ever been to Laos?",
+          "advanced": "Laos is located in Asia.",
+          "master": "The capital of Laos is Vientiane."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[라오스]"
+    }
+  },
+  {
+    "id": "lebanon",
+    "korean": "레바논",
+    "romanization": "rebanon",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "레바논",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 레바논에 살고 있습니다.",
+          "intermediate": "당신은 레바논에 가보셨나요?",
+          "advanced": "레바논은 아시아에 위치해 있습니다.",
+          "master": "레바논의 수도는 베이루트입니다."
+        }
+      },
+      "en": {
+        "word": "Lebanon",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Lebanon.",
+          "intermediate": "Have you ever been to Lebanon?",
+          "advanced": "Lebanon is located in Asia.",
+          "master": "The capital of Lebanon is Beirut."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[레바논]"
+    }
+  },
+  {
+    "id": "malaysia",
+    "korean": "말레이시아",
+    "romanization": "malleisia",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "말레이시아",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 말레이시아에 살고 있습니다.",
+          "intermediate": "당신은 말레이시아에 가보셨나요?",
+          "advanced": "말레이시아는 아시아에 위치해 있습니다.",
+          "master": "말레이시아의 수도는 쿠알라룸푸르입니다."
+        }
+      },
+      "en": {
+        "word": "Malaysia",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Malaysia.",
+          "intermediate": "Have you ever been to Malaysia?",
+          "advanced": "Malaysia is located in Asia.",
+          "master": "The capital of Malaysia is Kuala Lumpur."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[말레이시아]"
+    }
+  },
+  {
+    "id": "maldives",
+    "korean": "몰디브",
+    "romanization": "moldibeu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "몰디브",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 몰디브에 살고 있습니다.",
+          "intermediate": "당신은 몰디브에 가보셨나요?",
+          "advanced": "몰디브는 아시아에 위치해 있습니다.",
+          "master": "몰디브의 수도는 말레입니다."
+        }
+      },
+      "en": {
+        "word": "Maldives",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in the Maldives.",
+          "intermediate": "Have you ever been to the Maldives?",
+          "advanced": "The Maldives is located in Asia.",
+          "master": "The capital of the Maldives is Malé."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[몰디브]"
+    }
+  },
+  {
+    "id": "mongolia",
+    "korean": "몽골",
+    "romanization": "monggol",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "몽골",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 몽골에 살고 있습니다.",
+          "intermediate": "당신은 몽골에 가보셨나요?",
+          "advanced": "몽골은 아시아에 위치해 있습니다.",
+          "master": "몽골의 수도는 울란바토르입니다."
+        }
+      },
+      "en": {
+        "word": "Mongolia",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Mongolia.",
+          "intermediate": "Have you ever been to Mongolia?",
+          "advanced": "Mongolia is located in Asia.",
+          "master": "The capital of Mongolia is Ulaanbaatar."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[몽골]"
+    }
+  },
+  {
+    "id": "myanmar",
+    "korean": "미얀마",
+    "romanization": "miyanma",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "미얀마",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 미얀마에 살고 있습니다.",
+          "intermediate": "당신은 미얀마에 가보셨나요?",
+          "advanced": "미얀마는 아시아에 위치해 있습니다.",
+          "master": "미얀마의 수도는 네피도입니다."
+        }
+      },
+      "en": {
+        "word": "Myanmar",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Myanmar.",
+          "intermediate": "Have you ever been to Myanmar?",
+          "advanced": "Myanmar is located in Asia.",
+          "master": "The capital of Myanmar is Naypyidaw."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[미얀마]"
+    }
+  },
+  {
+    "id": "nepal",
+    "korean": "네팔",
+    "romanization": "nepal",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "네팔",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 네팔에 살고 있습니다.",
+          "intermediate": "당신은 네팔에 가보셨나요?",
+          "advanced": "네팔은 아시아에 위치해 있습니다.",
+          "master": "네팔의 수도는 카트만두입니다."
+        }
+      },
+      "en": {
+        "word": "Nepal",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Nepal.",
+          "intermediate": "Have you ever been to Nepal?",
+          "advanced": "Nepal is located in Asia.",
+          "master": "The capital of Nepal is Kathmandu."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[네팔]"
+    }
+  },
+  {
+    "id": "north-korea",
+    "korean": "북한",
+    "romanization": "bukhan",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "북한",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "북한은 아시아에 있습니다.",
+          "intermediate": "북한은 한반도 북부에 위치해 있습니다.",
+          "advanced": "북한의 수도는 평양입니다.",
+          "master": "북한에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "North Korea",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "North Korea is in Asia.",
+          "intermediate": "North Korea is located in the northern part of the Korean Peninsula.",
+          "advanced": "The capital of North Korea is Pyongyang.",
+          "master": "I have a friend from North Korea."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[북한]"
+    }
+  },
+  {
+    "id": "oman",
+    "korean": "오만",
+    "romanization": "oman",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "오만",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 오만에 살고 있습니다.",
+          "intermediate": "당신은 오만에 가보셨나요?",
+          "advanced": "오만은 아시아에 위치해 있습니다.",
+          "master": "오만의 수도는 무스카트입니다."
+        }
+      },
+      "en": {
+        "word": "Oman",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Oman.",
+          "intermediate": "Have you ever been to Oman?",
+          "advanced": "Oman is located in Asia.",
+          "master": "The capital of Oman is Muscat."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[오만]"
+    }
+  },
+  {
+    "id": "pakistan",
+    "korean": "파키스탄",
+    "romanization": "pakiseutan",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "파키스탄",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 파키스탄에 살고 있습니다.",
+          "intermediate": "당신은 파키스탄에 가보셨나요?",
+          "advanced": "파키스탄은 아시아에 위치해 있습니다.",
+          "master": "파키스탄의 수도는 이슬라마바드입니다."
+        }
+      },
+      "en": {
+        "word": "Pakistan",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Pakistan.",
+          "intermediate": "Have you ever been to Pakistan?",
+          "advanced": "Pakistan is located in Asia.",
+          "master": "The capital of Pakistan is Islamabad."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[파키스탄]"
+    }
+  },
+  {
+    "id": "palestine",
+    "korean": "팔레스타인",
+    "romanization": "palleseutain",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "팔레스타인",
+        "explanation": "아시아에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 팔레스타인에 살고 있습니다.",
+          "intermediate": "당신은 팔레스타인에 가보셨나요?",
+          "advanced": "팔레스타인은 아시아에 위치해 있습니다.",
+          "master": "팔레스타인에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Palestine",
+        "explanation": "A region located in Asia.",
+        "examples": {
+          "beginner": "I live in Palestine.",
+          "intermediate": "Have you ever been to Palestine?",
+          "advanced": "Palestine is located in Asia.",
+          "master": "I have a friend from Palestine."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[팔레스타인]"
+    }
+  },
+  {
+    "id": "philippines",
+    "korean": "필리핀",
+    "romanization": "pillipin",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "필리핀",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 필리핀에 살고 있습니다.",
+          "intermediate": "당신은 필리핀에 가보셨나요?",
+          "advanced": "필리핀은 아시아에 위치해 있습니다.",
+          "master": "필리핀의 수도는 마닐라입니다."
+        }
+      },
+      "en": {
+        "word": "Philippines",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in the Philippines.",
+          "intermediate": "Have you ever been to the Philippines?",
+          "advanced": "The Philippines is located in Asia.",
+          "master": "The capital of the Philippines is Manila."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[필리핀]"
+    }
+  },
+  {
+    "id": "qatar",
+    "korean": "카타르",
+    "romanization": "katareu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "카타르",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 카타르에 살고 있습니다.",
+          "intermediate": "당신은 카타르에 가보셨나요?",
+          "advanced": "카타르는 아시아에 위치해 있습니다.",
+          "master": "카타르의 수도는 도하입니다."
+        }
+      },
+      "en": {
+        "word": "Qatar",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Qatar.",
+          "intermediate": "Have you ever been to Qatar?",
+          "advanced": "Qatar is located in Asia.",
+          "master": "The capital of Qatar is Doha."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[카타르]"
+    }
+  },
+  {
+    "id": "saudi-arabia",
+    "korean": "사우디아라비아",
+    "romanization": "saudiarabia",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "사우디아라비아",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 사우디아라비아에 살고 있습니다.",
+          "intermediate": "당신은 사우디아라비아에 가보셨나요?",
+          "advanced": "사우디아라비아는 아시아에 위치해 있습니다.",
+          "master": "사우디아라비아의 수도는 리야드입니다."
+        }
+      },
+      "en": {
+        "word": "Saudi Arabia",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Saudi Arabia.",
+          "intermediate": "Have you ever been to Saudi Arabia?",
+          "advanced": "Saudi Arabia is located in Asia.",
+          "master": "The capital of Saudi Arabia is Riyadh."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[사우디아라비아]"
+    }
+  },
+  {
+    "id": "singapore",
+    "korean": "싱가포르",
+    "romanization": "singgaporeu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "싱가포르",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 싱가포르에 살고 있습니다.",
+          "intermediate": "당신은 싱가포르에 가보셨나요?",
+          "advanced": "싱가포르는 아시아에 위치해 있습니다.",
+          "master": "싱가포르의 수도는 싱가포르입니다."
+        }
+      },
+      "en": {
+        "word": "Singapore",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Singapore.",
+          "intermediate": "Have you ever been to Singapore?",
+          "advanced": "Singapore is located in Asia.",
+          "master": "The capital of Singapore is Singapore."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[싱가포르]"
+    }
+  },
+  {
+    "id": "south-korea",
+    "korean": "대한민국",
+    "romanization": "daehanminguk",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "대한민국",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 대한민국에 살고 있습니다.",
+          "intermediate": "당신은 대한민국에 가보셨나요?",
+          "advanced": "대한민국은 아시아에 위치해 있습니다.",
+          "master": "대한민국의 수도는 서울입니다."
+        }
+      },
+      "en": {
+        "word": "South Korea",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in South Korea.",
+          "intermediate": "Have you ever been to South Korea?",
+          "advanced": "South Korea is located in Asia.",
+          "master": "The capital of South Korea is Seoul."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[대한민국]"
+    }
+  },
+  {
+    "id": "sri-lanka",
+    "korean": "스리랑카",
+    "romanization": "seurilangka",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "스리랑카",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 스리랑카에 살고 있습니다.",
+          "intermediate": "당신은 스리랑카에 가보셨나요?",
+          "advanced": "스리랑카는 아시아에 위치해 있습니다.",
+          "master": "스리랑카의 수도는 스리자야와르데네푸라코테입니다."
+        }
+      },
+      "en": {
+        "word": "Sri Lanka",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Sri Lanka.",
+          "intermediate": "Have you ever been to Sri Lanka?",
+          "advanced": "Sri Lanka is located in Asia.",
+          "master": "The capital of Sri Lanka is Sri Jayawardenepura Kotte."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[스리랑카]"
+    }
+  },
+  {
+    "id": "syria",
+    "korean": "시리아",
+    "romanization": "siria",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "시리아",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 시리아에 살고 있습니다.",
+          "intermediate": "당신은 시리아에 가보셨나요?",
+          "advanced": "시리아는 아시아에 위치해 있습니다.",
+          "master": "시리아의 수도는 다마스쿠스입니다."
+        }
+      },
+      "en": {
+        "word": "Syria",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Syria.",
+          "intermediate": "Have you ever been to Syria?",
+          "advanced": "Syria is located in Asia.",
+          "master": "The capital of Syria is Damascus."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[시리아]"
+    }
+  },
+  {
+    "id": "taiwan",
+    "korean": "대만",
+    "romanization": "daeman",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "대만",
+        "explanation": "아시아에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 대만에 살고 있습니다.",
+          "intermediate": "당신은 대만에 가보셨나요?",
+          "advanced": "대만은 아시아에 위치해 있습니다.",
+          "master": "대만의 수도는 타이베이입니다."
+        }
+      },
+      "en": {
+        "word": "Taiwan",
+        "explanation": "A region located in Asia.",
+        "examples": {
+          "beginner": "I live in Taiwan.",
+          "intermediate": "Have you ever been to Taiwan?",
+          "advanced": "Taiwan is located in Asia.",
+          "master": "The capital of Taiwan is Taipei."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[대만]"
+    }
+  },
+  {
+    "id": "tajikistan",
+    "korean": "타지키스탄",
+    "romanization": "tajikiseutan",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "타지키스탄",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 타지키스탄에 살고 있습니다.",
+          "intermediate": "당신은 타지키스탄에 가보셨나요?",
+          "advanced": "타지키스탄은 아시아에 위치해 있습니다.",
+          "master": "타지키스탄의 수도는 두샨베입니다."
+        }
+      },
+      "en": {
+        "word": "Tajikistan",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Tajikistan.",
+          "intermediate": "Have you ever been to Tajikistan?",
+          "advanced": "Tajikistan is located in Asia.",
+          "master": "The capital of Tajikistan is Dushanbe."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[타지키스탄]"
+    }
+  },
+  {
+    "id": "thailand",
+    "korean": "태국",
+    "romanization": "taeguk",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "태국",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 태국에 살고 있습니다.",
+          "intermediate": "당신은 태국에 가보셨나요?",
+          "advanced": "태국은 아시아에 위치해 있습니다.",
+          "master": "태국의 수도는 방콕입니다."
+        }
+      },
+      "en": {
+        "word": "Thailand",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Thailand.",
+          "intermediate": "Have you ever been to Thailand?",
+          "advanced": "Thailand is located in Asia.",
+          "master": "The capital of Thailand is Bangkok."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[태국]"
+    }
+  },
+  {
+    "id": "timor-leste",
+    "korean": "동티모르",
+    "romanization": "dongtimor",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "동티모르",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 동티모르에 살고 있습니다.",
+          "intermediate": "당신은 동티모르에 가보셨나요?",
+          "advanced": "동티모르는 아시아에 위치해 있습니다.",
+          "master": "동티모르의 수도는 딜리입니다."
+        }
+      },
+      "en": {
+        "word": "Timor-Leste",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Timor-Leste.",
+          "intermediate": "Have you ever been to Timor-Leste?",
+          "advanced": "Timor-Leste is located in Asia.",
+          "master": "The capital of Timor-Leste is Dili."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[동티모르]"
+    }
+  },
+  {
+    "id": "turkiye",
+    "korean": "튀르키예",
+    "romanization": "twirekiye",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "튀르키예",
+        "explanation": "아시아와 유럽에 걸쳐 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 튀르키예에 살고 있습니다.",
+          "intermediate": "당신은 튀르키예에 가보셨나요?",
+          "advanced": "튀르키예는 아시아와 유럽에 위치해 있습니다.",
+          "master": "튀르키예의 수도는 앙카라입니다."
+        }
+      },
+      "en": {
+        "word": "Türkiye",
+        "explanation": "A country located in Asia and Europe.",
+        "examples": {
+          "beginner": "I live in Türkiye.",
+          "intermediate": "Have you ever been to Türkiye?",
+          "advanced": "Türkiye is located in Asia and Europe.",
+          "master": "The capital of Türkiye is Ankara."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[튀르키예]"
+    }
+  },
+  {
+    "id": "turkmenistan",
+    "korean": "투르크메니스탄",
+    "romanization": "tureukeumeniseutan",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "투르크메니스탄",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 투르크메니스탄에 살고 있습니다.",
+          "intermediate": "당신은 투르크메니스탄에 가보셨나요?",
+          "advanced": "투르크메니스탄은 아시아에 위치해 있습니다.",
+          "master": "투르크메니스탄의 수도는 아시가바트입니다."
+        }
+      },
+      "en": {
+        "word": "Turkmenistan",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Turkmenistan.",
+          "intermediate": "Have you ever been to Turkmenistan?",
+          "advanced": "Turkmenistan is located in Asia.",
+          "master": "The capital of Turkmenistan is Ashgabat."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[투르크메니스탄]"
+    }
+  },
+  {
+    "id": "united-arab-emirates",
+    "korean": "아랍에미리트",
+    "romanization": "arabemiriteu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "아랍에미리트",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 아랍에미리트에 살고 있습니다.",
+          "intermediate": "당신은 아랍에미리트에 가보셨나요?",
+          "advanced": "아랍에미리트는 아시아에 위치해 있습니다.",
+          "master": "아랍에미리트의 수도는 아부다비입니다."
+        }
+      },
+      "en": {
+        "word": "United Arab Emirates",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in the United Arab Emirates.",
+          "intermediate": "Have you ever been to the United Arab Emirates?",
+          "advanced": "The United Arab Emirates is located in Asia.",
+          "master": "The capital of the United Arab Emirates is Abu Dhabi."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아랍에미리트]"
+    }
+  },
+  {
+    "id": "uzbekistan",
+    "korean": "우즈베키스탄",
+    "romanization": "ujeubekiseutan",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "우즈베키스탄",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 우즈베키스탄에 살고 있습니다.",
+          "intermediate": "당신은 우즈베키스탄에 가보셨나요?",
+          "advanced": "우즈베키스탄은 아시아에 위치해 있습니다.",
+          "master": "우즈베키스탄의 수도는 타슈켄트입니다."
+        }
+      },
+      "en": {
+        "word": "Uzbekistan",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Uzbekistan.",
+          "intermediate": "Have you ever been to Uzbekistan?",
+          "advanced": "Uzbekistan is located in Asia.",
+          "master": "The capital of Uzbekistan is Tashkent."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[우즈베키스탄]"
+    }
+  },
+  {
+    "id": "vietnam",
+    "korean": "베트남",
+    "romanization": "beteunam",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "베트남",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 베트남에 살고 있습니다.",
+          "intermediate": "당신은 베트남에 가보셨나요?",
+          "advanced": "베트남은 아시아에 위치해 있습니다.",
+          "master": "베트남의 수도는 하노이입니다."
+        }
+      },
+      "en": {
+        "word": "Vietnam",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Vietnam.",
+          "intermediate": "Have you ever been to Vietnam?",
+          "advanced": "Vietnam is located in Asia.",
+          "master": "The capital of Vietnam is Hanoi."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[베트남]"
+    }
+  },
+  {
+    "id": "yemen",
+    "korean": "예멘",
+    "romanization": "yemen",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["asia", "country"],
+    "translations": {
+      "ko": {
+        "word": "예멘",
+        "explanation": "아시아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 예멘에 살고 있습니다.",
+          "intermediate": "당신은 예멘에 가보셨나요?",
+          "advanced": "예멘은 아시아에 위치해 있습니다.",
+          "master": "예멘의 수도는 사나입니다."
+        }
+      },
+      "en": {
+        "word": "Yemen",
+        "explanation": "A country located in Asia.",
+        "examples": {
+          "beginner": "I live in Yemen.",
+          "intermediate": "Have you ever been to Yemen?",
+          "advanced": "Yemen is located in Asia.",
+          "master": "The capital of Yemen is Sana'a."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[예멘]"
+    }
+  }
+]

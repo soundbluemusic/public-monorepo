@@ -317,6 +317,20 @@ export const categories: Category[] = [
     color: 'indigo',
     order: 21,
   },
+  {
+    id: 'countries',
+    name: {
+      ko: '국가',
+      en: 'Countries',
+    },
+    description: {
+      ko: '전 세계 국가와 지역의 이름',
+      en: 'Names of countries and regions around the world',
+    },
+    icon: '◯',
+    color: 'teal',
+    order: 22,
+  },
 ];
 
 /**
