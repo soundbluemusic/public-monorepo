@@ -3,7 +3,7 @@
  * Paraglide Message Generator for Permissive App
  */
 import { join } from 'node:path';
-import { generateParaglideMessages } from '@soundblue/shared/paraglide-generator';
+import { generateParaglideMessages } from '@soundblue/i18n/codegen';
 
 generateParaglideMessages({
   messagesDir: join(process.cwd(), 'project.inlang/messages'),

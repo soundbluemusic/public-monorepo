@@ -206,9 +206,6 @@ importers:
       '@soundblue/seo':
         specifier: workspace:*
         version: link:../../packages/seo
-      '@soundblue/shared':
-        specifier: workspace:*
-        version: link:../../packages/shared
       '@soundblue/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -294,9 +291,6 @@ importers:
       '@soundblue/seo':
         specifier: workspace:*
         version: link:../../packages/seo
-      '@soundblue/shared':
-        specifier: workspace:*
-        version: link:../../packages/shared
       '@soundblue/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -379,9 +373,6 @@ importers:
       '@soundblue/seo':
         specifier: workspace:*
         version: link:../../packages/seo
-      '@soundblue/shared':
-        specifier: workspace:*
-        version: link:../../packages/shared
       '@soundblue/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -589,70 +580,6 @@ importers:
       '@types/node':
         specifier: ^22.10.2
         version: 22.19.3
-      typescript:
-        specifier: ^5.7.2
-        version: 5.9.3
-
-  packages/shared-react:
-    dependencies:
-      '@formkit/auto-animate':
-        specifier: ^0.9.0
-        version: 0.9.0
-      '@soundblue/features':
-        specifier: workspace:*
-        version: link:../features
-      '@soundblue/pwa':
-        specifier: workspace:*
-        version: link:../pwa
-      '@soundblue/search':
-        specifier: workspace:*
-        version: link:../search
-      '@soundblue/seo':
-        specifier: workspace:*
-        version: link:../seo
-      '@soundblue/shared':
-        specifier: workspace:*
-        version: link:../shared
-      '@soundblue/ui':
-        specifier: workspace:*
-        version: link:../ui
-      clsx:
-        specifier: ^2.1.1
-        version: 2.1.1
-      immer:
-        specifier: ^11.1.0
-        version: 11.1.0
-      lucide-react:
-        specifier: ^0.468.0
-        version: 0.468.0(react@19.2.3)
-      minisearch:
-        specifier: ^7.2.0
-        version: 7.2.0
-      nanoid:
-        specifier: ^5.1.6
-        version: 5.1.6
-      react:
-        specifier: ^19.2.3
-        version: 19.2.3
-      react-dom:
-        specifier: ^19.2.3
-        version: 19.2.3(react@19.2.3)
-      react-router:
-        specifier: ^7.11.0
-        version: 7.11.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      tailwind-merge:
-        specifier: ^3.4.0
-        version: 3.4.0
-      zustand:
-        specifier: ^5.0.2
-        version: 5.0.9(@types/react@19.2.7)(immer@11.1.0)(react@19.2.3)
-    devDependencies:
-      '@types/react':
-        specifier: ^19.0.2
-        version: 19.2.7
-      '@types/react-dom':
-        specifier: ^19.0.2
-        version: 19.2.3(@types/react@19.2.7)
       typescript:
         specifier: ^5.7.2
         version: 5.9.3

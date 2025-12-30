@@ -23,7 +23,6 @@
     "@soundblue/pwa": "workspace:*",
     "@soundblue/search": "workspace:*",
     "@soundblue/seo": "workspace:*",
-    "@soundblue/shared": "workspace:*",
     "@soundblue/ui": "workspace:*",
     "dexie": "^4.0.10",
     "lucide-react": "^0.468.0",

@@ -13,7 +13,8 @@
     "./core": "./src/core/index.ts",
     "./utils": "./src/utils/index.ts",
     "./react": "./src/react/index.ts",
-    "./meta": "./src/meta/index.ts"
+    "./meta": "./src/meta/index.ts",
+    "./codegen": "./src/codegen/index.ts"
   },
   "dependencies": {
     "@soundblue/core": "workspace:*"
