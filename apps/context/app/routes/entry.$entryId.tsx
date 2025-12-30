@@ -1,38 +1,42 @@
 import { toast } from '@soundblue/features/toast';
-import { Skeleton } from '@soundblue/ui/primitives';
 import { cn } from '@soundblue/ui/utils';
 import { Bookmark, BookmarkCheck, Check } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 import { LinkedExample } from '@/components/LinkedExample';
 import { Layout } from '@/components/layout';
-import { useEntryLoader } from '@/hooks/useEntryLoader';
+import type { MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { favorites, studyRecords } from '@/lib/db';
 
 /**
- * Entry 페이지 (100만개+ 확장성)
+ * Entry 페이지 (Full SSG 모드)
  *
- * ## SPA 모드 (hybrid)
- * - SSG 프리렌더 없음 → loader 없음
- * - 클라이언트에서 청크 파일 동적 fetch
- * - useEntryLoader 훅 사용
+ * ## SSG 빌드 시
+ * - loader에서 entryId로 데이터 조회
+ * - 빌드 시 모든 entry 페이지에 대해 .data 파일 생성
  *
- * ## Full SSG 모드 (SSG_MODE=full)
- * - react-router.config.ts에서 모든 entry 경로 프리렌더
- * - 이 경우 별도 loader 파일 사용 권장
+ * ## 런타임
+ * - useLoaderData로 프리렌더된 데이터 사용
+ * - 추가 fetch 불필요
  */
+
+/**
+ * Loader: SSG 빌드 시 데이터 로드
+ */
+export async function loader({ params }: { params: { entryId: string } }) {
+  const { getEntryById } = await import('@/data/entries');
+  const entry = getEntryById(params.entryId);
+  return { entry: entry || null };
+}
 
 export function meta() {
   return [{ title: 'Entry - Context' }];
 }
 
 export default function EntryPage() {
-  const { entryId } = useParams();
+  const { entry } = useLoaderData<{ entry: MeaningEntry | null }>();
   const { locale, t, localePath } = useI18n();
-
-  // 동적 로딩 훅 (청크에서 fetch)
-  const { entry, isLoading, error } = useEntryLoader(entryId);
 
   const [isStudied, setIsStudied] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
@@ -40,19 +44,19 @@ export default function EntryPage() {
   // Load study and favorite status
   useEffect(() => {
     async function loadStatus() {
-      if (!entryId) return;
-      const studied = await studyRecords.isStudied(entryId);
-      const fav = await favorites.isFavorite(entryId);
+      if (!entry?.id) return;
+      const studied = await studyRecords.isStudied(entry.id);
+      const fav = await favorites.isFavorite(entry.id);
       setIsStudied(studied);
       setIsFavorite(fav);
     }
     loadStatus();
-  }, [entryId]);
+  }, [entry?.id]);
 
   const handleMarkAsStudied = async () => {
-    if (!entryId) return;
+    if (!entry?.id) return;
     try {
-      await studyRecords.markAsStudied(entryId);
+      await studyRecords.markAsStudied(entry.id);
       setIsStudied(true);
       toast({
         message: locale === 'ko' ? '학습 완료로 표시되었습니다' : 'Marked as studied',
@@ -67,9 +71,9 @@ export default function EntryPage() {
   };
 
   const handleToggleFavorite = async () => {
-    if (!entryId) return;
+    if (!entry?.id) return;
     try {
-      const newState = await favorites.toggle(entryId);
+      const newState = await favorites.toggle(entry.id);
       setIsFavorite(newState);
       toast({
         message: newState
@@ -89,34 +93,12 @@ export default function EntryPage() {
     }
   };
 
-  // 로딩 상태
-  if (isLoading) {
-    return (
-      <Layout>
-        <div className="animate-pulse">
-          <div className="mb-8">
-            <Skeleton className="h-10 w-48 mb-2" />
-            <Skeleton className="h-6 w-32" />
-          </div>
-          <div className="mb-6">
-            <Skeleton className="h-6 w-24 mb-2" />
-            <Skeleton className="h-4 w-64" />
-          </div>
-          <div className="mb-6">
-            <Skeleton className="h-6 w-24 mb-2" />
-            <Skeleton className="h-20 w-full" />
-          </div>
-        </div>
-      </Layout>
-    );
-  }
-
   // 에러 또는 없는 엔트리
-  if (error || !entry) {
+  if (!entry) {
     return (
       <Layout>
         <div className="text-center py-12 px-4 text-(--text-tertiary)">
-          <p className="text-(--text-secondary)">{error ? error.message : t('entryNotFound')}</p>
+          <p className="text-(--text-secondary)">{t('entryNotFound')}</p>
           <Link
             to={localePath('/')}
             className="text-(--accent-primary) hover:underline mt-4 inline-block"
