@@ -7803,5 +7803,145 @@
     "pronunciation": {
       "korean": "[미국령 버진아일랜드]"
     }
+  },
+  {
+    "id": "mayotte",
+    "korean": "마요트",
+    "romanization": "mayoteu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["africa", "territory"],
+    "translations": {
+      "ko": {
+        "word": "마요트",
+        "explanation": "아프리카에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 마요트에 살고 있습니다.",
+          "intermediate": "당신은 마요트에 가보셨나요?",
+          "advanced": "마요트는 아프리카에 위치해 있습니다.",
+          "master": "마요트에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Mayotte",
+        "explanation": "A region located in Africa.",
+        "examples": {
+          "beginner": "I live in Mayotte.",
+          "intermediate": "Have you ever been to Mayotte?",
+          "advanced": "Mayotte is located in Africa.",
+          "master": "I have a friend from Mayotte."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[마요트]"
+    }
+  },
+  {
+    "id": "reunion",
+    "korean": "레위니옹",
+    "romanization": "rewiniong",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["africa", "territory"],
+    "translations": {
+      "ko": {
+        "word": "레위니옹",
+        "explanation": "아프리카에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 레위니옹에 살고 있습니다.",
+          "intermediate": "당신은 레위니옹에 가보셨나요?",
+          "advanced": "레위니옹은 아프리카에 위치해 있습니다.",
+          "master": "레위니옹에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Réunion",
+        "explanation": "A region located in Africa.",
+        "examples": {
+          "beginner": "I live in Réunion.",
+          "intermediate": "Have you ever been to Réunion?",
+          "advanced": "Réunion is located in Africa.",
+          "master": "I have a friend from Réunion."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[레위니옹]"
+    }
+  },
+  {
+    "id": "falkland-islands",
+    "korean": "포클랜드 제도",
+    "romanization": "pokeullaendeu jedo",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["south-atlantic", "territory"],
+    "translations": {
+      "ko": {
+        "word": "포클랜드 제도",
+        "explanation": "남대서양에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 포클랜드 제도에 살고 있습니다.",
+          "intermediate": "당신은 포클랜드 제도에 가보셨나요?",
+          "advanced": "포클랜드 제도는 남대서양에 위치해 있습니다.",
+          "master": "포클랜드 제도에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Falkland Islands",
+        "explanation": "A region located in the South Atlantic.",
+        "examples": {
+          "beginner": "I live in the Falkland Islands.",
+          "intermediate": "Have you ever been to the Falkland Islands?",
+          "advanced": "The Falkland Islands is located in the South Atlantic.",
+          "master": "I have a friend from the Falkland Islands."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[포클랜드 제도]"
+    }
+  },
+  {
+    "id": "saint-helena",
+    "korean": "세인트헬레나",
+    "romanization": "seinteu hellena",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["south-atlantic", "territory"],
+    "translations": {
+      "ko": {
+        "word": "세인트헬레나",
+        "explanation": "남대서양에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 세인트헬레나에 살고 있습니다.",
+          "intermediate": "당신은 세인트헬레나에 가보셨나요?",
+          "advanced": "세인트헬레나는 남대서양에 위치해 있습니다.",
+          "master": "세인트헬레나에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Saint Helena",
+        "explanation": "A region located in the South Atlantic.",
+        "examples": {
+          "beginner": "I live in Saint Helena.",
+          "intermediate": "Have you ever been to Saint Helena?",
+          "advanced": "Saint Helena is located in the South Atlantic.",
+          "master": "I have a friend from Saint Helena."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[세인트헬레나]"
+    }
   }
 ]
