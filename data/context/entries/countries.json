@@ -5983,5 +5983,425 @@
     "pronunciation": {
       "korean": "[미국]"
     }
+  },
+  {
+    "id": "argentina",
+    "korean": "아르헨티나",
+    "romanization": "areuhenntina",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["south-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "아르헨티나",
+        "explanation": "남아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 아르헨티나에 살고 있습니다.",
+          "intermediate": "당신은 아르헨티나에 가보셨나요?",
+          "advanced": "아르헨티나는 남아메리카에 위치해 있습니다.",
+          "master": "아르헨티나의 수도는 부에노스아이레스입니다."
+        }
+      },
+      "en": {
+        "word": "Argentina",
+        "explanation": "A country located in South America.",
+        "examples": {
+          "beginner": "I live in Argentina.",
+          "intermediate": "Have you ever been to Argentina?",
+          "advanced": "Argentina is located in South America.",
+          "master": "The capital of Argentina is Buenos Aires."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아르헨티나]"
+    }
+  },
+  {
+    "id": "bolivia",
+    "korean": "볼리비아",
+    "romanization": "bollibia",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["south-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "볼리비아",
+        "explanation": "남아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 볼리비아에 살고 있습니다.",
+          "intermediate": "당신은 볼리비아에 가보셨나요?",
+          "advanced": "볼리비아는 남아메리카에 위치해 있습니다.",
+          "master": "볼리비아의 수도는 라파스입니다."
+        }
+      },
+      "en": {
+        "word": "Bolivia",
+        "explanation": "A country located in South America.",
+        "examples": {
+          "beginner": "I live in Bolivia.",
+          "intermediate": "Have you ever been to Bolivia?",
+          "advanced": "Bolivia is located in South America.",
+          "master": "The capital of Bolivia is La Paz."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[볼리비아]"
+    }
+  },
+  {
+    "id": "brazil",
+    "korean": "브라질",
+    "romanization": "beurajil",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["south-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "브라질",
+        "explanation": "남아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 브라질에 살고 있습니다.",
+          "intermediate": "당신은 브라질에 가보셨나요?",
+          "advanced": "브라질은 남아메리카에 위치해 있습니다.",
+          "master": "브라질의 수도는 브라질리아입니다."
+        }
+      },
+      "en": {
+        "word": "Brazil",
+        "explanation": "A country located in South America.",
+        "examples": {
+          "beginner": "I live in Brazil.",
+          "intermediate": "Have you ever been to Brazil?",
+          "advanced": "Brazil is located in South America.",
+          "master": "The capital of Brazil is Brasília."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[브라질]"
+    }
+  },
+  {
+    "id": "chile",
+    "korean": "칠레",
+    "romanization": "chille",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["south-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "칠레",
+        "explanation": "남아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 칠레에 살고 있습니다.",
+          "intermediate": "당신은 칠레에 가보셨나요?",
+          "advanced": "칠레는 남아메리카에 위치해 있습니다.",
+          "master": "칠레의 수도는 산티아고입니다."
+        }
+      },
+      "en": {
+        "word": "Chile",
+        "explanation": "A country located in South America.",
+        "examples": {
+          "beginner": "I live in Chile.",
+          "intermediate": "Have you ever been to Chile?",
+          "advanced": "Chile is located in South America.",
+          "master": "The capital of Chile is Santiago."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[칠레]"
+    }
+  },
+  {
+    "id": "colombia",
+    "korean": "콜롬비아",
+    "romanization": "kollombia",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["south-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "콜롬비아",
+        "explanation": "남아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 콜롬비아에 살고 있습니다.",
+          "intermediate": "당신은 콜롬비아에 가보셨나요?",
+          "advanced": "콜롬비아는 남아메리카에 위치해 있습니다.",
+          "master": "콜롬비아의 수도는 보고타입니다."
+        }
+      },
+      "en": {
+        "word": "Colombia",
+        "explanation": "A country located in South America.",
+        "examples": {
+          "beginner": "I live in Colombia.",
+          "intermediate": "Have you ever been to Colombia?",
+          "advanced": "Colombia is located in South America.",
+          "master": "The capital of Colombia is Bogotá."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[콜롬비아]"
+    }
+  },
+  {
+    "id": "ecuador",
+    "korean": "에콰도르",
+    "romanization": "ekwadoreu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["south-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "에콰도르",
+        "explanation": "남아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 에콰도르에 살고 있습니다.",
+          "intermediate": "당신은 에콰도르에 가보셨나요?",
+          "advanced": "에콰도르는 남아메리카에 위치해 있습니다.",
+          "master": "에콰도르의 수도는 키토입니다."
+        }
+      },
+      "en": {
+        "word": "Ecuador",
+        "explanation": "A country located in South America.",
+        "examples": {
+          "beginner": "I live in Ecuador.",
+          "intermediate": "Have you ever been to Ecuador?",
+          "advanced": "Ecuador is located in South America.",
+          "master": "The capital of Ecuador is Quito."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[에콰도르]"
+    }
+  },
+  {
+    "id": "guyana",
+    "korean": "가이아나",
+    "romanization": "gaiana",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["south-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "가이아나",
+        "explanation": "남아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 가이아나에 살고 있습니다.",
+          "intermediate": "당신은 가이아나에 가보셨나요?",
+          "advanced": "가이아나는 남아메리카에 위치해 있습니다.",
+          "master": "가이아나의 수도는 조지타운입니다."
+        }
+      },
+      "en": {
+        "word": "Guyana",
+        "explanation": "A country located in South America.",
+        "examples": {
+          "beginner": "I live in Guyana.",
+          "intermediate": "Have you ever been to Guyana?",
+          "advanced": "Guyana is located in South America.",
+          "master": "The capital of Guyana is Georgetown."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[가이아나]"
+    }
+  },
+  {
+    "id": "paraguay",
+    "korean": "파라과이",
+    "romanization": "paragwai",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["south-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "파라과이",
+        "explanation": "남아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 파라과이에 살고 있습니다.",
+          "intermediate": "당신은 파라과이에 가보셨나요?",
+          "advanced": "파라과이는 남아메리카에 위치해 있습니다.",
+          "master": "파라과이의 수도는 아순시온입니다."
+        }
+      },
+      "en": {
+        "word": "Paraguay",
+        "explanation": "A country located in South America.",
+        "examples": {
+          "beginner": "I live in Paraguay.",
+          "intermediate": "Have you ever been to Paraguay?",
+          "advanced": "Paraguay is located in South America.",
+          "master": "The capital of Paraguay is Asunción."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[파라과이]"
+    }
+  },
+  {
+    "id": "peru",
+    "korean": "페루",
+    "romanization": "peru",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["south-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "페루",
+        "explanation": "남아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 페루에 살고 있습니다.",
+          "intermediate": "당신은 페루에 가보셨나요?",
+          "advanced": "페루는 남아메리카에 위치해 있습니다.",
+          "master": "페루의 수도는 리마입니다."
+        }
+      },
+      "en": {
+        "word": "Peru",
+        "explanation": "A country located in South America.",
+        "examples": {
+          "beginner": "I live in Peru.",
+          "intermediate": "Have you ever been to Peru?",
+          "advanced": "Peru is located in South America.",
+          "master": "The capital of Peru is Lima."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[페루]"
+    }
+  },
+  {
+    "id": "suriname",
+    "korean": "수리남",
+    "romanization": "surinam",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["south-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "수리남",
+        "explanation": "남아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 수리남에 살고 있습니다.",
+          "intermediate": "당신은 수리남에 가보셨나요?",
+          "advanced": "수리남은 남아메리카에 위치해 있습니다.",
+          "master": "수리남의 수도는 파라마리보입니다."
+        }
+      },
+      "en": {
+        "word": "Suriname",
+        "explanation": "A country located in South America.",
+        "examples": {
+          "beginner": "I live in Suriname.",
+          "intermediate": "Have you ever been to Suriname?",
+          "advanced": "Suriname is located in South America.",
+          "master": "The capital of Suriname is Paramaribo."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[수리남]"
+    }
+  },
+  {
+    "id": "uruguay",
+    "korean": "우루과이",
+    "romanization": "uruguai",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["south-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "우루과이",
+        "explanation": "남아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 우루과이에 살고 있습니다.",
+          "intermediate": "당신은 우루과이에 가보셨나요?",
+          "advanced": "우루과이는 남아메리카에 위치해 있습니다.",
+          "master": "우루과이의 수도는 몬테비데오입니다."
+        }
+      },
+      "en": {
+        "word": "Uruguay",
+        "explanation": "A country located in South America.",
+        "examples": {
+          "beginner": "I live in Uruguay.",
+          "intermediate": "Have you ever been to Uruguay?",
+          "advanced": "Uruguay is located in South America.",
+          "master": "The capital of Uruguay is Montevideo."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[우루과이]"
+    }
+  },
+  {
+    "id": "venezuela",
+    "korean": "베네수엘라",
+    "romanization": "benesuelra",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["south-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "베네수엘라",
+        "explanation": "남아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 베네수엘라에 살고 있습니다.",
+          "intermediate": "당신은 베네수엘라에 가보셨나요?",
+          "advanced": "베네수엘라는 남아메리카에 위치해 있습니다.",
+          "master": "베네수엘라의 수도는 카라카스입니다."
+        }
+      },
+      "en": {
+        "word": "Venezuela",
+        "explanation": "A country located in South America.",
+        "examples": {
+          "beginner": "I live in Venezuela.",
+          "intermediate": "Have you ever been to Venezuela?",
+          "advanced": "Venezuela is located in South America.",
+          "master": "The capital of Venezuela is Caracas."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[베네수엘라]"
+    }
   }
 ]
