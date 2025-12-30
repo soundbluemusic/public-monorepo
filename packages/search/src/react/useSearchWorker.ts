@@ -201,6 +201,13 @@ export function useSearchWorker({
     [debounceMs, performSearch],
   );
 
+  // Re-search when index becomes ready (handles case where user typed before index loaded)
+  useEffect(() => {
+    if (isReady && query.trim() && query.length >= 2) {
+      performSearch(query);
+    }
+  }, [isReady, query, performSearch]);
+
   return {
     query,
     setQuery,

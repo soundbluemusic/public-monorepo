@@ -24,6 +24,7 @@ export function Header({ onMenuClick }: HeaderProps) {
     query,
     setQuery,
     results: searchResults,
+    isReady,
   } = useSearchWorker({
     indexUrl: '/search-index.json',
     locale,
@@ -231,7 +232,7 @@ export function Header({ onMenuClick }: HeaderProps) {
             </div>
           )}
 
-          {isOpen && query.trim() && results.length === 0 && (
+          {isOpen && query.trim() && query.length >= 2 && isReady && results.length === 0 && (
             <div className="absolute top-[calc(100%+4px)] left-0 right-0 z-600 bg-(--bg-secondary) border border-(--border-primary) rounded-xl shadow-lg p-4 text-center text-sm text-(--text-tertiary)">
               {t('noResults')}
             </div>

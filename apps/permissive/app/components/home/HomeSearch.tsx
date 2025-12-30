@@ -18,7 +18,7 @@ export function HomeSearch({ locale, localePath }: HomeSearchProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const listboxId = 'homepage-search-listbox';
 
-  const { query, setQuery, results, isLoading } = useSearchWorker({
+  const { query, setQuery, results, isLoading, isReady } = useSearchWorker({
     indexUrl: '/search-index.json',
     locale,
     debounceMs: 150,
@@ -28,10 +28,12 @@ export function HomeSearch({ locale, localePath }: HomeSearchProps) {
   const handleResultClick = useCallback(
     (result: SearchResult) => {
       const item = result.item;
+      // Remove 'lib-' or 'api-' prefix from id for correct routing
+      const slug = item.id.replace(/^(lib-|api-)/, '');
       const path =
         item.type === 'library'
-          ? `${localePath('/library')}/${item.id}`
-          : `${localePath('/web-api')}#${item.id}`;
+          ? `${localePath('/library')}/${slug}`
+          : `${localePath('/web-api')}#${slug}`;
       navigate(path);
       setShowResults(false);
       setQuery('');
@@ -119,7 +121,7 @@ export function HomeSearch({ locale, localePath }: HomeSearchProps) {
           aria-autocomplete="list"
           autoComplete="off"
         />
-        {isLoading && query.trim() && (
+        {(isLoading || (!isReady && query.trim())) && (
           <div className="absolute right-4 top-1/2 -translate-y-1/2">
             <div className="w-4 h-4 border-2 border-(--text-tertiary) border-t-transparent rounded-full animate-spin" />
           </div>
@@ -191,11 +193,16 @@ export function HomeSearch({ locale, localePath }: HomeSearchProps) {
             })}
           </div>
         )}
-        {showResults && query.trim() && !isLoading && results.length === 0 && (
-          <div className="absolute top-full left-0 right-0 mt-2 py-4 px-4 bg-(--bg-elevated) border border-(--border-primary) rounded-xl shadow-lg z-50 text-center text-(--text-tertiary)">
-            {locale === 'ko' ? '검색 결과가 없습니다' : 'No results found'}
-          </div>
-        )}
+        {showResults &&
+          query.trim() &&
+          query.length >= 2 &&
+          !isLoading &&
+          isReady &&
+          results.length === 0 && (
+            <div className="absolute top-full left-0 right-0 mt-2 py-4 px-4 bg-(--bg-elevated) border border-(--border-primary) rounded-xl shadow-lg z-50 text-center text-(--text-tertiary)">
+              {locale === 'ko' ? '검색 결과가 없습니다' : 'No results found'}
+            </div>
+          )}
       </form>
       <p className="text-sm text-(--text-tertiary) mt-2">
         {locale === 'ko' ? '실시간으로 검색됩니다' : 'Search results appear as you type'}
