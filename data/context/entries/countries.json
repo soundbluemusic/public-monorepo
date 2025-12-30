@@ -3848,5 +3848,670 @@
     "pronunciation": {
       "korean": "[이집트]"
     }
+  },
+  {
+    "id": "equatorial-guinea",
+    "korean": "적도기니",
+    "romanization": "jeokdogini",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["africa", "country"],
+    "translations": {
+      "ko": {
+        "word": "적도기니",
+        "explanation": "아프리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 적도기니에 살고 있습니다.",
+          "intermediate": "당신은 적도기니에 가보셨나요?",
+          "advanced": "적도기니는 아프리카에 위치해 있습니다.",
+          "master": "적도기니의 수도는 말라보입니다."
+        }
+      },
+      "en": {
+        "word": "Equatorial Guinea",
+        "explanation": "A country located in Africa.",
+        "examples": {
+          "beginner": "I live in Equatorial Guinea.",
+          "intermediate": "Have you ever been to Equatorial Guinea?",
+          "advanced": "Equatorial Guinea is located in Africa.",
+          "master": "The capital of Equatorial Guinea is Malabo."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[적도기니]"
+    }
+  },
+  {
+    "id": "eritrea",
+    "korean": "에리트레아",
+    "romanization": "eriteuria",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["africa", "country"],
+    "translations": {
+      "ko": {
+        "word": "에리트레아",
+        "explanation": "아프리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 에리트레아에 살고 있습니다.",
+          "intermediate": "당신은 에리트레아에 가보셨나요?",
+          "advanced": "에리트레아는 아프리카에 위치해 있습니다.",
+          "master": "에리트레아의 수도는 아스마라입니다."
+        }
+      },
+      "en": {
+        "word": "Eritrea",
+        "explanation": "A country located in Africa.",
+        "examples": {
+          "beginner": "I live in Eritrea.",
+          "intermediate": "Have you ever been to Eritrea?",
+          "advanced": "Eritrea is located in Africa.",
+          "master": "The capital of Eritrea is Asmara."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[에리트레아]"
+    }
+  },
+  {
+    "id": "eswatini",
+    "korean": "에스와티니",
+    "romanization": "eseuwatini",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["africa", "country"],
+    "translations": {
+      "ko": {
+        "word": "에스와티니",
+        "explanation": "아프리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 에스와티니에 살고 있습니다.",
+          "intermediate": "당신은 에스와티니에 가보셨나요?",
+          "advanced": "에스와티니는 아프리카에 위치해 있습니다.",
+          "master": "에스와티니의 수도는 음바바네입니다."
+        }
+      },
+      "en": {
+        "word": "Eswatini",
+        "explanation": "A country located in Africa.",
+        "examples": {
+          "beginner": "I live in Eswatini.",
+          "intermediate": "Have you ever been to Eswatini?",
+          "advanced": "Eswatini is located in Africa.",
+          "master": "The capital of Eswatini is Mbabane."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[에스와티니]"
+    }
+  },
+  {
+    "id": "ethiopia",
+    "korean": "에티오피아",
+    "romanization": "etiopia",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["africa", "country"],
+    "translations": {
+      "ko": {
+        "word": "에티오피아",
+        "explanation": "아프리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 에티오피아에 살고 있습니다.",
+          "intermediate": "당신은 에티오피아에 가보셨나요?",
+          "advanced": "에티오피아는 아프리카에 위치해 있습니다.",
+          "master": "에티오피아의 수도는 아디스아바바입니다."
+        }
+      },
+      "en": {
+        "word": "Ethiopia",
+        "explanation": "A country located in Africa.",
+        "examples": {
+          "beginner": "I live in Ethiopia.",
+          "intermediate": "Have you ever been to Ethiopia?",
+          "advanced": "Ethiopia is located in Africa.",
+          "master": "The capital of Ethiopia is Addis Ababa."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[에티오피아]"
+    }
+  },
+  {
+    "id": "gabon",
+    "korean": "가봉",
+    "romanization": "gabong",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["africa", "country"],
+    "translations": {
+      "ko": {
+        "word": "가봉",
+        "explanation": "아프리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 가봉에 살고 있습니다.",
+          "intermediate": "당신은 가봉에 가보셨나요?",
+          "advanced": "가봉은 아프리카에 위치해 있습니다.",
+          "master": "가봉의 수도는 리브르빌입니다."
+        }
+      },
+      "en": {
+        "word": "Gabon",
+        "explanation": "A country located in Africa.",
+        "examples": {
+          "beginner": "I live in Gabon.",
+          "intermediate": "Have you ever been to Gabon?",
+          "advanced": "Gabon is located in Africa.",
+          "master": "The capital of Gabon is Libreville."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[가봉]"
+    }
+  },
+  {
+    "id": "gambia",
+    "korean": "감비아",
+    "romanization": "gambia",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["africa", "country"],
+    "translations": {
+      "ko": {
+        "word": "감비아",
+        "explanation": "아프리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 감비아에 살고 있습니다.",
+          "intermediate": "당신은 감비아에 가보셨나요?",
+          "advanced": "감비아는 아프리카에 위치해 있습니다.",
+          "master": "감비아의 수도는 반줄입니다."
+        }
+      },
+      "en": {
+        "word": "Gambia",
+        "explanation": "A country located in Africa.",
+        "examples": {
+          "beginner": "I live in Gambia.",
+          "intermediate": "Have you ever been to Gambia?",
+          "advanced": "Gambia is located in Africa.",
+          "master": "The capital of Gambia is Banjul."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[감비아]"
+    }
+  },
+  {
+    "id": "ghana",
+    "korean": "가나",
+    "romanization": "gana",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["africa", "country"],
+    "translations": {
+      "ko": {
+        "word": "가나",
+        "explanation": "아프리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 가나에 살고 있습니다.",
+          "intermediate": "당신은 가나에 가보셨나요?",
+          "advanced": "가나는 아프리카에 위치해 있습니다.",
+          "master": "가나의 수도는 아크라입니다."
+        }
+      },
+      "en": {
+        "word": "Ghana",
+        "explanation": "A country located in Africa.",
+        "examples": {
+          "beginner": "I live in Ghana.",
+          "intermediate": "Have you ever been to Ghana?",
+          "advanced": "Ghana is located in Africa.",
+          "master": "The capital of Ghana is Accra."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[가나]"
+    }
+  },
+  {
+    "id": "guinea",
+    "korean": "기니",
+    "romanization": "gini",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["africa", "country"],
+    "translations": {
+      "ko": {
+        "word": "기니",
+        "explanation": "아프리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 기니에 살고 있습니다.",
+          "intermediate": "당신은 기니에 가보셨나요?",
+          "advanced": "기니는 아프리카에 위치해 있습니다.",
+          "master": "기니의 수도는 코나크리입니다."
+        }
+      },
+      "en": {
+        "word": "Guinea",
+        "explanation": "A country located in Africa.",
+        "examples": {
+          "beginner": "I live in Guinea.",
+          "intermediate": "Have you ever been to Guinea?",
+          "advanced": "Guinea is located in Africa.",
+          "master": "The capital of Guinea is Conakry."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[기니]"
+    }
+  },
+  {
+    "id": "guinea-bissau",
+    "korean": "기니비사우",
+    "romanization": "ginibisau",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["africa", "country"],
+    "translations": {
+      "ko": {
+        "word": "기니비사우",
+        "explanation": "아프리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 기니비사우에 살고 있습니다.",
+          "intermediate": "당신은 기니비사우에 가보셨나요?",
+          "advanced": "기니비사우는 아프리카에 위치해 있습니다.",
+          "master": "기니비사우의 수도는 비사우입니다."
+        }
+      },
+      "en": {
+        "word": "Guinea-Bissau",
+        "explanation": "A country located in Africa.",
+        "examples": {
+          "beginner": "I live in Guinea-Bissau.",
+          "intermediate": "Have you ever been to Guinea-Bissau?",
+          "advanced": "Guinea-Bissau is located in Africa.",
+          "master": "The capital of Guinea-Bissau is Bissau."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[기니비사우]"
+    }
+  },
+  {
+    "id": "kenya",
+    "korean": "케냐",
+    "romanization": "kenya",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["africa", "country"],
+    "translations": {
+      "ko": {
+        "word": "케냐",
+        "explanation": "아프리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 케냐에 살고 있습니다.",
+          "intermediate": "당신은 케냐에 가보셨나요?",
+          "advanced": "케냐는 아프리카에 위치해 있습니다.",
+          "master": "케냐의 수도는 나이로비입니다."
+        }
+      },
+      "en": {
+        "word": "Kenya",
+        "explanation": "A country located in Africa.",
+        "examples": {
+          "beginner": "I live in Kenya.",
+          "intermediate": "Have you ever been to Kenya?",
+          "advanced": "Kenya is located in Africa.",
+          "master": "The capital of Kenya is Nairobi."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[케냐]"
+    }
+  },
+  {
+    "id": "lesotho",
+    "korean": "레소토",
+    "romanization": "resoto",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["africa", "country"],
+    "translations": {
+      "ko": {
+        "word": "레소토",
+        "explanation": "아프리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 레소토에 살고 있습니다.",
+          "intermediate": "당신은 레소토에 가보셨나요?",
+          "advanced": "레소토는 아프리카에 위치해 있습니다.",
+          "master": "레소토의 수도는 마세루입니다."
+        }
+      },
+      "en": {
+        "word": "Lesotho",
+        "explanation": "A country located in Africa.",
+        "examples": {
+          "beginner": "I live in Lesotho.",
+          "intermediate": "Have you ever been to Lesotho?",
+          "advanced": "Lesotho is located in Africa.",
+          "master": "The capital of Lesotho is Maseru."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[레소토]"
+    }
+  },
+  {
+    "id": "liberia",
+    "korean": "라이베리아",
+    "romanization": "raiberia",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["africa", "country"],
+    "translations": {
+      "ko": {
+        "word": "라이베리아",
+        "explanation": "아프리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 라이베리아에 살고 있습니다.",
+          "intermediate": "당신은 라이베리아에 가보셨나요?",
+          "advanced": "라이베리아는 아프리카에 위치해 있습니다.",
+          "master": "라이베리아의 수도는 몬로비아입니다."
+        }
+      },
+      "en": {
+        "word": "Liberia",
+        "explanation": "A country located in Africa.",
+        "examples": {
+          "beginner": "I live in Liberia.",
+          "intermediate": "Have you ever been to Liberia?",
+          "advanced": "Liberia is located in Africa.",
+          "master": "The capital of Liberia is Monrovia."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[라이베리아]"
+    }
+  },
+  {
+    "id": "libya",
+    "korean": "리비아",
+    "romanization": "ribia",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["africa", "country"],
+    "translations": {
+      "ko": {
+        "word": "리비아",
+        "explanation": "아프리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 리비아에 살고 있습니다.",
+          "intermediate": "당신은 리비아에 가보셨나요?",
+          "advanced": "리비아는 아프리카에 위치해 있습니다.",
+          "master": "리비아의 수도는 트리폴리입니다."
+        }
+      },
+      "en": {
+        "word": "Libya",
+        "explanation": "A country located in Africa.",
+        "examples": {
+          "beginner": "I live in Libya.",
+          "intermediate": "Have you ever been to Libya?",
+          "advanced": "Libya is located in Africa.",
+          "master": "The capital of Libya is Tripoli."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[리비아]"
+    }
+  },
+  {
+    "id": "madagascar",
+    "korean": "마다가스카르",
+    "romanization": "madagaseukareu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["africa", "country"],
+    "translations": {
+      "ko": {
+        "word": "마다가스카르",
+        "explanation": "아프리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 마다가스카르에 살고 있습니다.",
+          "intermediate": "당신은 마다가스카르에 가보셨나요?",
+          "advanced": "마다가스카르는 아프리카에 위치해 있습니다.",
+          "master": "마다가스카르의 수도는 안타나나리보입니다."
+        }
+      },
+      "en": {
+        "word": "Madagascar",
+        "explanation": "A country located in Africa.",
+        "examples": {
+          "beginner": "I live in Madagascar.",
+          "intermediate": "Have you ever been to Madagascar?",
+          "advanced": "Madagascar is located in Africa.",
+          "master": "The capital of Madagascar is Antananarivo."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[마다가스카르]"
+    }
+  },
+  {
+    "id": "malawi",
+    "korean": "말라위",
+    "romanization": "mallawi",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["africa", "country"],
+    "translations": {
+      "ko": {
+        "word": "말라위",
+        "explanation": "아프리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 말라위에 살고 있습니다.",
+          "intermediate": "당신은 말라위에 가보셨나요?",
+          "advanced": "말라위는 아프리카에 위치해 있습니다.",
+          "master": "말라위의 수도는 릴롱궤입니다."
+        }
+      },
+      "en": {
+        "word": "Malawi",
+        "explanation": "A country located in Africa.",
+        "examples": {
+          "beginner": "I live in Malawi.",
+          "intermediate": "Have you ever been to Malawi?",
+          "advanced": "Malawi is located in Africa.",
+          "master": "The capital of Malawi is Lilongwe."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[말라위]"
+    }
+  },
+  {
+    "id": "mali",
+    "korean": "말리",
+    "romanization": "malli",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["africa", "country"],
+    "translations": {
+      "ko": {
+        "word": "말리",
+        "explanation": "아프리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 말리에 살고 있습니다.",
+          "intermediate": "당신은 말리에 가보셨나요?",
+          "advanced": "말리는 아프리카에 위치해 있습니다.",
+          "master": "말리의 수도는 바마코입니다."
+        }
+      },
+      "en": {
+        "word": "Mali",
+        "explanation": "A country located in Africa.",
+        "examples": {
+          "beginner": "I live in Mali.",
+          "intermediate": "Have you ever been to Mali?",
+          "advanced": "Mali is located in Africa.",
+          "master": "The capital of Mali is Bamako."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[말리]"
+    }
+  },
+  {
+    "id": "mauritania",
+    "korean": "모리타니",
+    "romanization": "moritani",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["africa", "country"],
+    "translations": {
+      "ko": {
+        "word": "모리타니",
+        "explanation": "아프리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 모리타니에 살고 있습니다.",
+          "intermediate": "당신은 모리타니에 가보셨나요?",
+          "advanced": "모리타니는 아프리카에 위치해 있습니다.",
+          "master": "모리타니의 수도는 누악쇼트입니다."
+        }
+      },
+      "en": {
+        "word": "Mauritania",
+        "explanation": "A country located in Africa.",
+        "examples": {
+          "beginner": "I live in Mauritania.",
+          "intermediate": "Have you ever been to Mauritania?",
+          "advanced": "Mauritania is located in Africa.",
+          "master": "The capital of Mauritania is Nouakchott."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[모리타니]"
+    }
+  },
+  {
+    "id": "mauritius",
+    "korean": "모리셔스",
+    "romanization": "morisyeoseu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["africa", "country"],
+    "translations": {
+      "ko": {
+        "word": "모리셔스",
+        "explanation": "아프리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 모리셔스에 살고 있습니다.",
+          "intermediate": "당신은 모리셔스에 가보셨나요?",
+          "advanced": "모리셔스는 아프리카에 위치해 있습니다.",
+          "master": "모리셔스의 수도는 포트루이스입니다."
+        }
+      },
+      "en": {
+        "word": "Mauritius",
+        "explanation": "A country located in Africa.",
+        "examples": {
+          "beginner": "I live in Mauritius.",
+          "intermediate": "Have you ever been to Mauritius?",
+          "advanced": "Mauritius is located in Africa.",
+          "master": "The capital of Mauritius is Port Louis."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[모리셔스]"
+    }
+  },
+  {
+    "id": "morocco",
+    "korean": "모로코",
+    "romanization": "moroko",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["africa", "country"],
+    "translations": {
+      "ko": {
+        "word": "모로코",
+        "explanation": "아프리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 모로코에 살고 있습니다.",
+          "intermediate": "당신은 모로코에 가보셨나요?",
+          "advanced": "모로코는 아프리카에 위치해 있습니다.",
+          "master": "모로코의 수도는 라바트입니다."
+        }
+      },
+      "en": {
+        "word": "Morocco",
+        "explanation": "A country located in Africa.",
+        "examples": {
+          "beginner": "I live in Morocco.",
+          "intermediate": "Have you ever been to Morocco?",
+          "advanced": "Morocco is located in Africa.",
+          "master": "The capital of Morocco is Rabat."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[모로코]"
+    }
   }
 ]
