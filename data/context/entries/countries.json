@@ -6,8 +6,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "country"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "아프가니스탄",
@@ -29,9 +32,6 @@
           "master": "The capital of Afghanistan is Kabul."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[아프가니스탄]"
     }
   },
   {
@@ -41,8 +41,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "country"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "아르메니아",
@@ -64,9 +67,6 @@
           "master": "The capital of Armenia is Yerevan."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[아르메니아]"
     }
   },
   {
@@ -76,8 +76,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "country"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "아제르바이잔",
@@ -99,9 +102,6 @@
           "master": "The capital of Azerbaijan is Baku."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[아제르바이잔]"
     }
   },
   {
@@ -111,8 +111,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "country"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "바레인",
@@ -134,9 +137,6 @@
           "master": "The capital of Bahrain is Manama."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[바레인]"
     }
   },
   {
@@ -146,8 +146,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "country"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "방글라데시",
@@ -169,9 +172,6 @@
           "master": "The capital of Bangladesh is Dhaka."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[방글라데시]"
     }
   },
   {
@@ -181,8 +181,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "country"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "부탄",
@@ -204,9 +207,6 @@
           "master": "The capital of Bhutan is Thimphu."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[부탄]"
     }
   },
   {
@@ -216,8 +216,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "country"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "브루나이",
@@ -239,9 +242,6 @@
           "master": "The capital of Brunei is Bandar Seri Begawan."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[브루나이]"
     }
   },
   {
@@ -252,7 +252,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "캄보디아",
@@ -274,9 +277,6 @@
           "master": "The capital of Cambodia is Phnom Penh."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[캄보디아]"
     }
   },
   {
@@ -287,7 +287,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "중국",
@@ -309,9 +312,6 @@
           "master": "The capital of China is Beijing."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[중국]"
     }
   },
   {
@@ -321,8 +321,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "country"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "키프로스",
@@ -344,9 +347,6 @@
           "master": "The capital of Cyprus is Nicosia."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[키프로스]"
     }
   },
   {
@@ -356,8 +356,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "country"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "조지아",
@@ -379,9 +382,6 @@
           "master": "The capital of Georgia is Tbilisi."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[조지아]"
     }
   },
   {
@@ -392,7 +392,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "인도",
@@ -414,9 +417,6 @@
           "master": "The capital of India is New Delhi."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[인도]"
     }
   },
   {
@@ -427,7 +427,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "인도네시아",
@@ -449,9 +452,6 @@
           "master": "The capital of Indonesia is Jakarta."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[인도네시아]"
     }
   },
   {
@@ -462,7 +462,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "이란",
@@ -484,9 +487,6 @@
           "master": "The capital of Iran is Tehran."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[이란]"
     }
   },
   {
@@ -497,7 +497,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "이라크",
@@ -519,9 +522,6 @@
           "master": "The capital of Iraq is Baghdad."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[이라크]"
     }
   },
   {
@@ -532,7 +532,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "이스라엘",
@@ -554,9 +557,6 @@
           "master": "The capital of Israel is Jerusalem."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[이스라엘]"
     }
   },
   {
@@ -567,7 +567,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "일본",
@@ -589,9 +592,6 @@
           "master": "The capital of Japan is Tokyo."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[일본]"
     }
   },
   {
@@ -601,8 +601,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "country"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "요르단",
@@ -624,9 +627,6 @@
           "master": "The capital of Jordan is Amman."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[요르단]"
     }
   },
   {
@@ -636,8 +636,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "country"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "카자흐스탄",
@@ -659,9 +662,6 @@
           "master": "The capital of Kazakhstan is Astana."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[카자흐스탄]"
     }
   },
   {
@@ -671,8 +671,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "country"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "쿠웨이트",
@@ -694,9 +697,6 @@
           "master": "The capital of Kuwait is Kuwait City."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[쿠웨이트]"
     }
   },
   {
@@ -707,7 +707,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "키르기스스탄",
@@ -729,9 +732,6 @@
           "master": "The capital of Kyrgyzstan is Bishkek."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[키르기스스탄]"
     }
   },
   {
@@ -741,8 +741,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "country"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "라오스",
@@ -764,9 +767,6 @@
           "master": "The capital of Laos is Vientiane."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[라오스]"
     }
   },
   {
@@ -776,8 +776,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "country"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "레바논",
@@ -799,9 +802,6 @@
           "master": "The capital of Lebanon is Beirut."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[레바논]"
     }
   },
   {
@@ -812,7 +812,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "말레이시아",
@@ -834,9 +837,6 @@
           "master": "The capital of Malaysia is Kuala Lumpur."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[말레이시아]"
     }
   },
   {
@@ -846,8 +846,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "country"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "몰디브",
@@ -869,9 +872,6 @@
           "master": "The capital of the Maldives is Malé."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[몰디브]"
     }
   },
   {
@@ -882,7 +882,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "몽골",
@@ -904,9 +907,6 @@
           "master": "The capital of Mongolia is Ulaanbaatar."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[몽골]"
     }
   },
   {
@@ -916,8 +916,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "country"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "미얀마",
@@ -939,9 +942,6 @@
           "master": "The capital of Myanmar is Naypyidaw."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[미얀마]"
     }
   },
   {
@@ -952,7 +952,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "네팔",
@@ -974,9 +977,6 @@
           "master": "The capital of Nepal is Kathmandu."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[네팔]"
     }
   },
   {
@@ -987,7 +987,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "북한",
@@ -1009,9 +1012,6 @@
           "master": "I have a friend from North Korea."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[북한]"
     }
   },
   {
@@ -1021,8 +1021,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "country"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "오만",
@@ -1044,9 +1047,6 @@
           "master": "The capital of Oman is Muscat."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[오만]"
     }
   },
   {
@@ -1057,7 +1057,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "파키스탄",
@@ -1079,9 +1082,6 @@
           "master": "The capital of Pakistan is Islamabad."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[파키스탄]"
     }
   },
   {
@@ -1091,8 +1091,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "country"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "팔레스타인",
@@ -1114,9 +1117,6 @@
           "master": "I have a friend from Palestine."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[팔레스타인]"
     }
   },
   {
@@ -1127,7 +1127,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "필리핀",
@@ -1149,9 +1152,6 @@
           "master": "The capital of the Philippines is Manila."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[필리핀]"
     }
   },
   {
@@ -1161,8 +1161,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "country"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "카타르",
@@ -1184,9 +1187,6 @@
           "master": "The capital of Qatar is Doha."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[카타르]"
     }
   },
   {
@@ -1197,7 +1197,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "사우디아라비아",
@@ -1219,9 +1222,6 @@
           "master": "The capital of Saudi Arabia is Riyadh."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[사우디아라비아]"
     }
   },
   {
@@ -1232,7 +1232,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "싱가포르",
@@ -1254,9 +1257,6 @@
           "master": "The capital of Singapore is Singapore."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[싱가포르]"
     }
   },
   {
@@ -1267,7 +1267,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "대한민국",
@@ -1289,9 +1292,6 @@
           "master": "The capital of South Korea is Seoul."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[대한민국]"
     }
   },
   {
@@ -1301,8 +1301,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "country"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "스리랑카",
@@ -1324,9 +1327,6 @@
           "master": "The capital of Sri Lanka is Sri Jayawardenepura Kotte."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[스리랑카]"
     }
   },
   {
@@ -1336,8 +1336,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "country"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "시리아",
@@ -1359,9 +1362,6 @@
           "master": "The capital of Syria is Damascus."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[시리아]"
     }
   },
   {
@@ -1372,7 +1372,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "대만",
@@ -1394,9 +1397,6 @@
           "master": "The capital of Taiwan is Taipei."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[대만]"
     }
   },
   {
@@ -1407,7 +1407,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "타지키스탄",
@@ -1429,9 +1432,6 @@
           "master": "The capital of Tajikistan is Dushanbe."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[타지키스탄]"
     }
   },
   {
@@ -1442,7 +1442,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "태국",
@@ -1464,9 +1467,6 @@
           "master": "The capital of Thailand is Bangkok."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[태국]"
     }
   },
   {
@@ -1477,7 +1477,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "동티모르",
@@ -1499,9 +1502,6 @@
           "master": "The capital of Timor-Leste is Dili."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[동티모르]"
     }
   },
   {
@@ -1512,7 +1512,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "튀르키예",
@@ -1534,9 +1537,6 @@
           "master": "The capital of Türkiye is Ankara."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[튀르키예]"
     }
   },
   {
@@ -1547,7 +1547,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "투르크메니스탄",
@@ -1569,9 +1572,6 @@
           "master": "The capital of Turkmenistan is Ashgabat."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[투르크메니스탄]"
     }
   },
   {
@@ -1582,7 +1582,10 @@
     "categoryId": "countries",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "아랍에미리트",
@@ -1604,9 +1607,6 @@
           "master": "The capital of the United Arab Emirates is Abu Dhabi."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[아랍에미리트]"
     }
   },
   {
@@ -1616,8 +1616,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "country"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "우즈베키스탄",
@@ -1639,9 +1642,6 @@
           "master": "The capital of Uzbekistan is Tashkent."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[우즈베키스탄]"
     }
   },
   {
@@ -1652,7 +1652,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["asia", "country"],
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "베트남",
@@ -1674,9 +1677,6 @@
           "master": "The capital of Vietnam is Hanoi."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[베트남]"
     }
   },
   {
@@ -1686,8 +1686,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "country"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "예멘",
@@ -1709,9 +1712,6 @@
           "master": "The capital of Yemen is Sana'a."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[예멘]"
     }
   },
   {
@@ -1721,8 +1721,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["europe", "country"],
+    "frequency": "rare",
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "알바니아",
@@ -1744,9 +1747,6 @@
           "master": "The capital of Albania is Tirana."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[알바니아]"
     }
   },
   {
@@ -1757,7 +1757,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "안도라",
@@ -1779,9 +1782,6 @@
           "master": "The capital of Andorra is Andorra la Vella."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[안도라]"
     }
   },
   {
@@ -1792,7 +1792,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "오스트리아",
@@ -1814,9 +1817,6 @@
           "master": "The capital of Austria is Vienna."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[오스트리아]"
     }
   },
   {
@@ -1826,8 +1826,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["europe", "country"],
+    "frequency": "rare",
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "벨라루스",
@@ -1849,9 +1852,6 @@
           "master": "The capital of Belarus is Minsk."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[벨라루스]"
     }
   },
   {
@@ -1862,7 +1862,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "벨기에",
@@ -1884,9 +1887,6 @@
           "master": "The capital of Belgium is Brussels."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[벨기에]"
     }
   },
   {
@@ -1897,7 +1897,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "보스니아 헤르체고비나",
@@ -1919,9 +1922,6 @@
           "master": "The capital of Bosnia and Herzegovina is Sarajevo."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[보스니아 헤르체고비나]"
     }
   },
   {
@@ -1931,8 +1931,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["europe", "country"],
+    "frequency": "rare",
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "불가리아",
@@ -1954,9 +1957,6 @@
           "master": "The capital of Bulgaria is Sofia."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[불가리아]"
     }
   },
   {
@@ -1966,8 +1966,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["europe", "country"],
+    "frequency": "rare",
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "크로아티아",
@@ -1989,9 +1992,6 @@
           "master": "The capital of Croatia is Zagreb."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[크로아티아]"
     }
   },
   {
@@ -2002,7 +2002,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "체코",
@@ -2024,9 +2027,6 @@
           "master": "The capital of Czechia is Prague."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[체코]"
     }
   },
   {
@@ -2037,7 +2037,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "덴마크",
@@ -2059,9 +2062,6 @@
           "master": "The capital of Denmark is Copenhagen."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[덴마크]"
     }
   },
   {
@@ -2071,8 +2071,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["europe", "country"],
+    "frequency": "rare",
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "에스토니아",
@@ -2094,9 +2097,6 @@
           "master": "The capital of Estonia is Tallinn."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[에스토니아]"
     }
   },
   {
@@ -2107,7 +2107,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "핀란드",
@@ -2129,9 +2132,6 @@
           "master": "The capital of Finland is Helsinki."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[핀란드]"
     }
   },
   {
@@ -2142,7 +2142,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "프랑스",
@@ -2164,9 +2167,6 @@
           "master": "The capital of France is Paris."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[프랑스]"
     }
   },
   {
@@ -2177,7 +2177,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "독일",
@@ -2199,9 +2202,6 @@
           "master": "The capital of Germany is Berlin."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[독일]"
     }
   },
   {
@@ -2212,7 +2212,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "그리스",
@@ -2234,9 +2237,6 @@
           "master": "The capital of Greece is Athens."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[그리스]"
     }
   },
   {
@@ -2246,8 +2246,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["europe", "country"],
+    "frequency": "rare",
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "헝가리",
@@ -2269,9 +2272,6 @@
           "master": "The capital of Hungary is Budapest."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[헝가리]"
     }
   },
   {
@@ -2281,8 +2281,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["europe", "country"],
+    "frequency": "rare",
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "아이슬란드",
@@ -2304,9 +2307,6 @@
           "master": "The capital of Iceland is Reykjavik."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[아이슬란드]"
     }
   },
   {
@@ -2317,7 +2317,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "아일랜드",
@@ -2339,9 +2342,6 @@
           "master": "The capital of Ireland is Dublin."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[아일랜드]"
     }
   },
   {
@@ -2352,7 +2352,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "이탈리아",
@@ -2374,9 +2377,6 @@
           "master": "The capital of Italy is Rome."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[이탈리아]"
     }
   },
   {
@@ -2387,7 +2387,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "코소보",
@@ -2409,9 +2412,6 @@
           "master": "The capital of Kosovo is Pristina."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[코소보]"
     }
   },
   {
@@ -2421,8 +2421,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["europe", "country"],
+    "frequency": "rare",
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "라트비아",
@@ -2444,9 +2447,6 @@
           "master": "The capital of Latvia is Riga."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[라트비아]"
     }
   },
   {
@@ -2457,7 +2457,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "리히텐슈타인",
@@ -2479,9 +2482,6 @@
           "master": "The capital of Liechtenstein is Vaduz."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[리히텐슈타인]"
     }
   },
   {
@@ -2491,8 +2491,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["europe", "country"],
+    "frequency": "rare",
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "리투아니아",
@@ -2514,9 +2517,6 @@
           "master": "The capital of Lithuania is Vilnius."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[리투아니아]"
     }
   },
   {
@@ -2526,8 +2526,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["europe", "country"],
+    "frequency": "rare",
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "룩셈부르크",
@@ -2549,9 +2552,6 @@
           "master": "The capital of Luxembourg is Luxembourg City."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[룩셈부르크]"
     }
   },
   {
@@ -2561,8 +2561,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["europe", "country"],
+    "frequency": "rare",
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "몰타",
@@ -2584,9 +2587,6 @@
           "master": "The capital of Malta is Valletta."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[몰타]"
     }
   },
   {
@@ -2596,8 +2596,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["europe", "country"],
+    "frequency": "rare",
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "몰도바",
@@ -2619,9 +2622,6 @@
           "master": "The capital of Moldova is Chișinău."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[몰도바]"
     }
   },
   {
@@ -2631,8 +2631,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["europe", "country"],
+    "frequency": "rare",
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "모나코",
@@ -2654,9 +2657,6 @@
           "master": "The capital of Monaco is Monaco."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[모나코]"
     }
   },
   {
@@ -2666,8 +2666,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["europe", "country"],
+    "frequency": "rare",
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "몬테네그로",
@@ -2689,9 +2692,6 @@
           "master": "The capital of Montenegro is Podgorica."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[몬테네그로]"
     }
   },
   {
@@ -2702,7 +2702,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "네덜란드",
@@ -2724,9 +2727,6 @@
           "master": "The capital of the Netherlands is Amsterdam."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[네덜란드]"
     }
   },
   {
@@ -2737,7 +2737,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "북마케도니아",
@@ -2759,9 +2762,6 @@
           "master": "The capital of North Macedonia is Skopje."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[북마케도니아]"
     }
   },
   {
@@ -2772,7 +2772,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "노르웨이",
@@ -2794,9 +2797,6 @@
           "master": "The capital of Norway is Oslo."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[노르웨이]"
     }
   },
   {
@@ -2807,7 +2807,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "폴란드",
@@ -2829,9 +2832,6 @@
           "master": "The capital of Poland is Warsaw."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[폴란드]"
     }
   },
   {
@@ -2842,7 +2842,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "포르투갈",
@@ -2864,9 +2867,6 @@
           "master": "The capital of Portugal is Lisbon."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[포르투갈]"
     }
   },
   {
@@ -2876,8 +2876,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["europe", "country"],
+    "frequency": "rare",
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "루마니아",
@@ -2899,9 +2902,6 @@
           "master": "The capital of Romania is Bucharest."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[루마니아]"
     }
   },
   {
@@ -2912,7 +2912,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "러시아",
@@ -2934,9 +2937,6 @@
           "master": "The capital of Russia is Moscow."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[러시아]"
     }
   },
   {
@@ -2947,7 +2947,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "산마리노",
@@ -2969,9 +2972,6 @@
           "master": "The capital of San Marino is San Marino City."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[산마리노]"
     }
   },
   {
@@ -2981,8 +2981,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["europe", "country"],
+    "frequency": "rare",
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "세르비아",
@@ -3004,9 +3007,6 @@
           "master": "The capital of Serbia is Belgrade."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[세르비아]"
     }
   },
   {
@@ -3016,8 +3016,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["europe", "country"],
+    "frequency": "rare",
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "슬로바키아",
@@ -3039,9 +3042,6 @@
           "master": "The capital of Slovakia is Bratislava."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[슬로바키아]"
     }
   },
   {
@@ -3051,8 +3051,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["europe", "country"],
+    "frequency": "rare",
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "슬로베니아",
@@ -3074,9 +3077,6 @@
           "master": "The capital of Slovenia is Ljubljana."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[슬로베니아]"
     }
   },
   {
@@ -3087,7 +3087,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "스페인",
@@ -3109,9 +3112,6 @@
           "master": "The capital of Spain is Madrid."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[스페인]"
     }
   },
   {
@@ -3122,7 +3122,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "스웨덴",
@@ -3144,9 +3147,6 @@
           "master": "The capital of Sweden is Stockholm."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[스웨덴]"
     }
   },
   {
@@ -3157,7 +3157,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "스위스",
@@ -3179,9 +3182,6 @@
           "master": "The capital of Switzerland is Bern."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[스위스]"
     }
   },
   {
@@ -3192,7 +3192,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "우크라이나",
@@ -3214,9 +3217,6 @@
           "master": "The capital of Ukraine is Kyiv."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[우크라이나]"
     }
   },
   {
@@ -3227,7 +3227,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["europe", "country"],
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "영국",
@@ -3249,9 +3252,6 @@
           "master": "The capital of the United Kingdom is London."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[영국]"
     }
   },
   {
@@ -3261,8 +3261,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["europe", "country"],
+    "frequency": "rare",
+    "tags": [
+      "europe",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "바티칸 시국",
@@ -3284,9 +3287,6 @@
           "master": "The capital of Vatican City is Vatican City."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[바티칸 시국]"
     }
   },
   {
@@ -3296,8 +3296,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["africa", "country"],
+    "frequency": "rare",
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "알제리",
@@ -3319,9 +3322,6 @@
           "master": "The capital of Algeria is Algiers."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[알제리]"
     }
   },
   {
@@ -3331,8 +3331,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["africa", "country"],
+    "frequency": "rare",
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "앙골라",
@@ -3354,9 +3357,6 @@
           "master": "The capital of Angola is Luanda."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[앙골라]"
     }
   },
   {
@@ -3367,7 +3367,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "베냉",
@@ -3389,9 +3392,6 @@
           "master": "The capital of Benin is Porto-Novo."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[베냉]"
     }
   },
   {
@@ -3402,7 +3402,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "보츠와나",
@@ -3424,9 +3427,6 @@
           "master": "The capital of Botswana is Gaborone."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[보츠와나]"
     }
   },
   {
@@ -3437,7 +3437,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "부르키나파소",
@@ -3459,9 +3462,6 @@
           "master": "The capital of Burkina Faso is Ouagadougou."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[부르키나파소]"
     }
   },
   {
@@ -3472,7 +3472,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "부룬디",
@@ -3494,9 +3497,6 @@
           "master": "The capital of Burundi is Gitega."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[부룬디]"
     }
   },
   {
@@ -3507,7 +3507,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "카보베르데",
@@ -3529,9 +3532,6 @@
           "master": "The capital of Cabo Verde is Praia."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[카보베르데]"
     }
   },
   {
@@ -3541,8 +3541,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["africa", "country"],
+    "frequency": "rare",
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "카메룬",
@@ -3564,9 +3567,6 @@
           "master": "The capital of Cameroon is Yaoundé."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[카메룬]"
     }
   },
   {
@@ -3577,7 +3577,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "중앙아프리카공화국",
@@ -3599,9 +3602,6 @@
           "master": "The capital of the Central African Republic is Bangui."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[중앙아프리카공화국]"
     }
   },
   {
@@ -3612,7 +3612,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "차드",
@@ -3634,9 +3637,6 @@
           "master": "The capital of Chad is N'Djamena."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[차드]"
     }
   },
   {
@@ -3647,7 +3647,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "코모로",
@@ -3669,9 +3672,6 @@
           "master": "The capital of Comoros is Moroni."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[코모로]"
     }
   },
   {
@@ -3682,7 +3682,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "콩고민주공화국",
@@ -3704,9 +3707,6 @@
           "master": "The capital of the Democratic Republic of the Congo is Kinshasa."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[콩고민주공화국]"
     }
   },
   {
@@ -3717,7 +3717,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "콩고공화국",
@@ -3739,9 +3742,6 @@
           "master": "The capital of the Republic of the Congo is Brazzaville."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[콩고공화국]"
     }
   },
   {
@@ -3751,8 +3751,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["africa", "country"],
+    "frequency": "rare",
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "코트디부아르",
@@ -3774,9 +3777,6 @@
           "master": "The capital of Côte d'Ivoire is Yamoussoukro."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[코트디부아르]"
     }
   },
   {
@@ -3787,7 +3787,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "지부티",
@@ -3809,9 +3812,6 @@
           "master": "The capital of Djibouti is Djibouti City."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[지부티]"
     }
   },
   {
@@ -3822,7 +3822,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "이집트",
@@ -3844,9 +3847,6 @@
           "master": "The capital of Egypt is Cairo."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[이집트]"
     }
   },
   {
@@ -3857,7 +3857,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "적도기니",
@@ -3879,9 +3882,6 @@
           "master": "The capital of Equatorial Guinea is Malabo."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[적도기니]"
     }
   },
   {
@@ -3892,7 +3892,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "에리트레아",
@@ -3914,9 +3917,6 @@
           "master": "The capital of Eritrea is Asmara."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[에리트레아]"
     }
   },
   {
@@ -3927,7 +3927,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "에스와티니",
@@ -3949,9 +3952,6 @@
           "master": "The capital of Eswatini is Mbabane."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[에스와티니]"
     }
   },
   {
@@ -3961,8 +3961,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["africa", "country"],
+    "frequency": "rare",
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "에티오피아",
@@ -3984,9 +3987,6 @@
           "master": "The capital of Ethiopia is Addis Ababa."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[에티오피아]"
     }
   },
   {
@@ -3997,7 +3997,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "가봉",
@@ -4019,9 +4022,6 @@
           "master": "The capital of Gabon is Libreville."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[가봉]"
     }
   },
   {
@@ -4032,7 +4032,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "감비아",
@@ -4054,9 +4057,6 @@
           "master": "The capital of Gambia is Banjul."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[감비아]"
     }
   },
   {
@@ -4066,8 +4066,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["africa", "country"],
+    "frequency": "rare",
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "가나",
@@ -4089,9 +4092,6 @@
           "master": "The capital of Ghana is Accra."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[가나]"
     }
   },
   {
@@ -4101,8 +4101,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["africa", "country"],
+    "frequency": "rare",
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "기니",
@@ -4124,9 +4127,6 @@
           "master": "The capital of Guinea is Conakry."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[기니]"
     }
   },
   {
@@ -4137,7 +4137,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "기니비사우",
@@ -4159,9 +4162,6 @@
           "master": "The capital of Guinea-Bissau is Bissau."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[기니비사우]"
     }
   },
   {
@@ -4172,7 +4172,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "케냐",
@@ -4194,9 +4197,6 @@
           "master": "The capital of Kenya is Nairobi."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[케냐]"
     }
   },
   {
@@ -4207,7 +4207,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "레소토",
@@ -4229,9 +4232,6 @@
           "master": "The capital of Lesotho is Maseru."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[레소토]"
     }
   },
   {
@@ -4242,7 +4242,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "라이베리아",
@@ -4264,9 +4267,6 @@
           "master": "The capital of Liberia is Monrovia."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[라이베리아]"
     }
   },
   {
@@ -4276,8 +4276,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["africa", "country"],
+    "frequency": "rare",
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "리비아",
@@ -4299,9 +4302,6 @@
           "master": "The capital of Libya is Tripoli."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[리비아]"
     }
   },
   {
@@ -4311,8 +4311,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["africa", "country"],
+    "frequency": "rare",
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "마다가스카르",
@@ -4334,9 +4337,6 @@
           "master": "The capital of Madagascar is Antananarivo."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[마다가스카르]"
     }
   },
   {
@@ -4347,7 +4347,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "말라위",
@@ -4369,9 +4372,6 @@
           "master": "The capital of Malawi is Lilongwe."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[말라위]"
     }
   },
   {
@@ -4381,8 +4381,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["africa", "country"],
+    "frequency": "rare",
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "말리",
@@ -4404,9 +4407,6 @@
           "master": "The capital of Mali is Bamako."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[말리]"
     }
   },
   {
@@ -4417,7 +4417,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "모리타니",
@@ -4439,9 +4442,6 @@
           "master": "The capital of Mauritania is Nouakchott."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[모리타니]"
     }
   },
   {
@@ -4451,8 +4451,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["africa", "country"],
+    "frequency": "rare",
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "모리셔스",
@@ -4474,9 +4477,6 @@
           "master": "The capital of Mauritius is Port Louis."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[모리셔스]"
     }
   },
   {
@@ -4487,7 +4487,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "모로코",
@@ -4509,9 +4512,6 @@
           "master": "The capital of Morocco is Rabat."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[모로코]"
     }
   },
   {
@@ -4522,7 +4522,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "모잠비크",
@@ -4544,9 +4547,6 @@
           "master": "The capital of Mozambique is Maputo."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[모잠비크]"
     }
   },
   {
@@ -4556,8 +4556,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["africa", "country"],
+    "frequency": "rare",
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "나미비아",
@@ -4579,9 +4582,6 @@
           "master": "The capital of Namibia is Windhoek."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[나미비아]"
     }
   },
   {
@@ -4592,7 +4592,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "니제르",
@@ -4614,9 +4617,6 @@
           "master": "The capital of Niger is Niamey."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[니제르]"
     }
   },
   {
@@ -4627,7 +4627,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "나이지리아",
@@ -4649,9 +4652,6 @@
           "master": "The capital of Nigeria is Abuja."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[나이지리아]"
     }
   },
   {
@@ -4661,8 +4661,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["africa", "country"],
+    "frequency": "rare",
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "르완다",
@@ -4684,9 +4687,6 @@
           "master": "The capital of Rwanda is Kigali."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[르완다]"
     }
   },
   {
@@ -4697,7 +4697,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "상투메프린시페",
@@ -4719,9 +4722,6 @@
           "master": "The capital of São Tomé and Príncipe is São Tomé."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[상투메프린시페]"
     }
   },
   {
@@ -4731,8 +4731,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["africa", "country"],
+    "frequency": "rare",
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "세네갈",
@@ -4754,9 +4757,6 @@
           "master": "The capital of Senegal is Dakar."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[세네갈]"
     }
   },
   {
@@ -4766,8 +4766,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["africa", "country"],
+    "frequency": "rare",
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "세이셸",
@@ -4789,9 +4792,6 @@
           "master": "The capital of Seychelles is Victoria."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[세이셸]"
     }
   },
   {
@@ -4802,7 +4802,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "시에라리온",
@@ -4824,9 +4827,6 @@
           "master": "The capital of Sierra Leone is Freetown."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[시에라리온]"
     }
   },
   {
@@ -4836,8 +4836,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["africa", "country"],
+    "frequency": "rare",
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "소말리아",
@@ -4859,9 +4862,6 @@
           "master": "The capital of Somalia is Mogadishu."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[소말리아]"
     }
   },
   {
@@ -4872,7 +4872,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "남아프리카공화국",
@@ -4894,9 +4897,6 @@
           "master": "The capital of South Africa is Pretoria."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[남아프리카공화국]"
     }
   },
   {
@@ -4906,8 +4906,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["africa", "country"],
+    "frequency": "rare",
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "남수단",
@@ -4929,9 +4932,6 @@
           "master": "The capital of South Sudan is Juba."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[남수단]"
     }
   },
   {
@@ -4941,8 +4941,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["africa", "country"],
+    "frequency": "rare",
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "수단",
@@ -4964,9 +4967,6 @@
           "master": "The capital of Sudan is Khartoum."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[수단]"
     }
   },
   {
@@ -4976,8 +4976,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["africa", "country"],
+    "frequency": "rare",
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "탄자니아",
@@ -4999,9 +5002,6 @@
           "master": "The capital of Tanzania is Dodoma."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[탄자니아]"
     }
   },
   {
@@ -5012,7 +5012,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "country"],
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "토고",
@@ -5034,9 +5037,6 @@
           "master": "The capital of Togo is Lomé."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[토고]"
     }
   },
   {
@@ -5046,8 +5046,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["africa", "country"],
+    "frequency": "rare",
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "튀니지",
@@ -5069,9 +5072,6 @@
           "master": "The capital of Tunisia is Tunis."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[튀니지]"
     }
   },
   {
@@ -5081,8 +5081,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["africa", "country"],
+    "frequency": "rare",
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "우간다",
@@ -5104,9 +5107,6 @@
           "master": "The capital of Uganda is Kampala."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[우간다]"
     }
   },
   {
@@ -5116,8 +5116,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["africa", "country"],
+    "frequency": "rare",
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "잠비아",
@@ -5139,9 +5142,6 @@
           "master": "The capital of Zambia is Lusaka."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[잠비아]"
     }
   },
   {
@@ -5151,8 +5151,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["africa", "country"],
+    "frequency": "rare",
+    "tags": [
+      "africa",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "짐바브웨",
@@ -5174,9 +5177,6 @@
           "master": "The capital of Zimbabwe is Harare."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[짐바브웨]"
     }
   },
   {
@@ -5187,7 +5187,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["north-america", "country"],
+    "tags": [
+      "north-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "앤티가 바부다",
@@ -5209,9 +5212,6 @@
           "master": "The capital of Antigua and Barbuda is St. John's."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[앤티가 바부다]"
     }
   },
   {
@@ -5221,8 +5221,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["north-america", "country"],
+    "frequency": "rare",
+    "tags": [
+      "north-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "바하마",
@@ -5244,9 +5247,6 @@
           "master": "The capital of the Bahamas is Nassau."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[바하마]"
     }
   },
   {
@@ -5256,8 +5256,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["north-america", "country"],
+    "frequency": "rare",
+    "tags": [
+      "north-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "바베이도스",
@@ -5279,9 +5282,6 @@
           "master": "The capital of Barbados is Bridgetown."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[바베이도스]"
     }
   },
   {
@@ -5291,8 +5291,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["north-america", "country"],
+    "frequency": "rare",
+    "tags": [
+      "north-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "벨리즈",
@@ -5314,9 +5317,6 @@
           "master": "The capital of Belize is Belmopan."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[벨리즈]"
     }
   },
   {
@@ -5327,7 +5327,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["north-america", "country"],
+    "tags": [
+      "north-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "캐나다",
@@ -5349,9 +5352,6 @@
           "master": "The capital of Canada is Ottawa."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[캐나다]"
     }
   },
   {
@@ -5361,8 +5361,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["north-america", "country"],
+    "frequency": "rare",
+    "tags": [
+      "north-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "코스타리카",
@@ -5384,9 +5387,6 @@
           "master": "The capital of Costa Rica is San José."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[코스타리카]"
     }
   },
   {
@@ -5397,7 +5397,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["north-america", "country"],
+    "tags": [
+      "north-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "쿠바",
@@ -5419,9 +5422,6 @@
           "master": "The capital of Cuba is Havana."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[쿠바]"
     }
   },
   {
@@ -5432,7 +5432,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["north-america", "country"],
+    "tags": [
+      "north-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "도미니카 연방",
@@ -5454,9 +5457,6 @@
           "master": "The capital of Dominica is Roseau."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[도미니카 연방]"
     }
   },
   {
@@ -5466,8 +5466,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["north-america", "country"],
+    "frequency": "rare",
+    "tags": [
+      "north-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "도미니카 공화국",
@@ -5489,9 +5492,6 @@
           "master": "The capital of the Dominican Republic is Santo Domingo."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[도미니카 공화국]"
     }
   },
   {
@@ -5501,8 +5501,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["north-america", "country"],
+    "frequency": "rare",
+    "tags": [
+      "north-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "엘살바도르",
@@ -5524,9 +5527,6 @@
           "master": "The capital of El Salvador is San Salvador."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[엘살바도르]"
     }
   },
   {
@@ -5537,7 +5537,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["north-america", "country"],
+    "tags": [
+      "north-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "그레나다",
@@ -5559,9 +5562,6 @@
           "master": "The capital of Grenada is St. George's."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[그레나다]"
     }
   },
   {
@@ -5571,8 +5571,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["north-america", "country"],
+    "frequency": "rare",
+    "tags": [
+      "north-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "과테말라",
@@ -5594,9 +5597,6 @@
           "master": "The capital of Guatemala is Guatemala City."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[과테말라]"
     }
   },
   {
@@ -5606,8 +5606,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["north-america", "country"],
+    "frequency": "rare",
+    "tags": [
+      "north-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "아이티",
@@ -5629,9 +5632,6 @@
           "master": "The capital of Haiti is Port-au-Prince."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[아이티]"
     }
   },
   {
@@ -5641,8 +5641,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["north-america", "country"],
+    "frequency": "rare",
+    "tags": [
+      "north-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "온두라스",
@@ -5664,9 +5667,6 @@
           "master": "The capital of Honduras is Tegucigalpa."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[온두라스]"
     }
   },
   {
@@ -5677,7 +5677,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["north-america", "country"],
+    "tags": [
+      "north-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "자메이카",
@@ -5699,9 +5702,6 @@
           "master": "The capital of Jamaica is Kingston."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[자메이카]"
     }
   },
   {
@@ -5712,7 +5712,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["north-america", "country"],
+    "tags": [
+      "north-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "멕시코",
@@ -5734,9 +5737,6 @@
           "master": "The capital of Mexico is Mexico City."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[멕시코]"
     }
   },
   {
@@ -5746,8 +5746,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["north-america", "country"],
+    "frequency": "rare",
+    "tags": [
+      "north-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "니카라과",
@@ -5769,9 +5772,6 @@
           "master": "The capital of Nicaragua is Managua."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[니카라과]"
     }
   },
   {
@@ -5782,7 +5782,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["north-america", "country"],
+    "tags": [
+      "north-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "파나마",
@@ -5804,9 +5807,6 @@
           "master": "The capital of Panama is Panama City."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[파나마]"
     }
   },
   {
@@ -5817,7 +5817,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["north-america", "country"],
+    "tags": [
+      "north-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "세인트키츠 네비스",
@@ -5839,9 +5842,6 @@
           "master": "The capital of Saint Kitts and Nevis is Basseterre."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[세인트키츠 네비스]"
     }
   },
   {
@@ -5852,7 +5852,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["north-america", "country"],
+    "tags": [
+      "north-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "세인트루시아",
@@ -5874,9 +5877,6 @@
           "master": "The capital of Saint Lucia is Castries."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[세인트루시아]"
     }
   },
   {
@@ -5887,7 +5887,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["north-america", "country"],
+    "tags": [
+      "north-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "세인트빈센트 그레나딘",
@@ -5909,9 +5912,6 @@
           "master": "The capital of Saint Vincent and the Grenadines is Kingstown."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[세인트빈센트 그레나딘]"
     }
   },
   {
@@ -5921,8 +5921,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["north-america", "country"],
+    "frequency": "rare",
+    "tags": [
+      "north-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "트리니다드 토바고",
@@ -5944,9 +5947,6 @@
           "master": "The capital of Trinidad and Tobago is Port of Spain."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[트리니다드 토바고]"
     }
   },
   {
@@ -5957,7 +5957,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["north-america", "country"],
+    "tags": [
+      "north-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "미국",
@@ -5979,9 +5982,6 @@
           "master": "The capital of the United States is Washington, D.C."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[미국]"
     }
   },
   {
@@ -5992,7 +5992,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["south-america", "country"],
+    "tags": [
+      "south-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "아르헨티나",
@@ -6014,9 +6017,6 @@
           "master": "The capital of Argentina is Buenos Aires."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[아르헨티나]"
     }
   },
   {
@@ -6026,8 +6026,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["south-america", "country"],
+    "frequency": "rare",
+    "tags": [
+      "south-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "볼리비아",
@@ -6049,9 +6052,6 @@
           "master": "The capital of Bolivia is La Paz."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[볼리비아]"
     }
   },
   {
@@ -6062,7 +6062,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["south-america", "country"],
+    "tags": [
+      "south-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "브라질",
@@ -6084,9 +6087,6 @@
           "master": "The capital of Brazil is Brasília."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[브라질]"
     }
   },
   {
@@ -6097,7 +6097,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["south-america", "country"],
+    "tags": [
+      "south-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "칠레",
@@ -6119,9 +6122,6 @@
           "master": "The capital of Chile is Santiago."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[칠레]"
     }
   },
   {
@@ -6132,7 +6132,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["south-america", "country"],
+    "tags": [
+      "south-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "콜롬비아",
@@ -6154,9 +6157,6 @@
           "master": "The capital of Colombia is Bogotá."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[콜롬비아]"
     }
   },
   {
@@ -6166,8 +6166,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["south-america", "country"],
+    "frequency": "rare",
+    "tags": [
+      "south-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "에콰도르",
@@ -6189,9 +6192,6 @@
           "master": "The capital of Ecuador is Quito."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[에콰도르]"
     }
   },
   {
@@ -6202,7 +6202,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["south-america", "country"],
+    "tags": [
+      "south-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "가이아나",
@@ -6224,9 +6227,6 @@
           "master": "The capital of Guyana is Georgetown."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[가이아나]"
     }
   },
   {
@@ -6236,8 +6236,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["south-america", "country"],
+    "frequency": "rare",
+    "tags": [
+      "south-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "파라과이",
@@ -6259,9 +6262,6 @@
           "master": "The capital of Paraguay is Asunción."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[파라과이]"
     }
   },
   {
@@ -6272,7 +6272,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["south-america", "country"],
+    "tags": [
+      "south-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "페루",
@@ -6294,9 +6297,6 @@
           "master": "The capital of Peru is Lima."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[페루]"
     }
   },
   {
@@ -6307,7 +6307,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["south-america", "country"],
+    "tags": [
+      "south-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "수리남",
@@ -6329,9 +6332,6 @@
           "master": "The capital of Suriname is Paramaribo."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[수리남]"
     }
   },
   {
@@ -6341,8 +6341,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["south-america", "country"],
+    "frequency": "rare",
+    "tags": [
+      "south-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "우루과이",
@@ -6364,9 +6367,6 @@
           "master": "The capital of Uruguay is Montevideo."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[우루과이]"
     }
   },
   {
@@ -6377,7 +6377,10 @@
     "categoryId": "countries",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": ["south-america", "country"],
+    "tags": [
+      "south-america",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "베네수엘라",
@@ -6399,9 +6402,6 @@
           "master": "The capital of Venezuela is Caracas."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[베네수엘라]"
     }
   },
   {
@@ -6412,7 +6412,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["oceania", "country"],
+    "tags": [
+      "oceania",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "호주",
@@ -6434,9 +6437,6 @@
           "master": "The capital of Australia is Canberra."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[호주]"
     }
   },
   {
@@ -6446,8 +6446,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["oceania", "country"],
+    "frequency": "rare",
+    "tags": [
+      "oceania",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "피지",
@@ -6469,9 +6472,6 @@
           "master": "The capital of Fiji is Suva."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[피지]"
     }
   },
   {
@@ -6482,7 +6482,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["oceania", "country"],
+    "tags": [
+      "oceania",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "키리바시",
@@ -6504,9 +6507,6 @@
           "master": "The capital of Kiribati is Tarawa."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[키리바시]"
     }
   },
   {
@@ -6517,7 +6517,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["oceania", "country"],
+    "tags": [
+      "oceania",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "마셜 제도",
@@ -6539,9 +6542,6 @@
           "master": "The capital of the Marshall Islands is Majuro."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[마셜 제도]"
     }
   },
   {
@@ -6552,7 +6552,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["oceania", "country"],
+    "tags": [
+      "oceania",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "미크로네시아",
@@ -6574,9 +6577,6 @@
           "master": "The capital of Micronesia is Palikir."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[미크로네시아]"
     }
   },
   {
@@ -6587,7 +6587,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["oceania", "country"],
+    "tags": [
+      "oceania",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "나우루",
@@ -6609,9 +6612,6 @@
           "master": "The capital of Nauru is Yaren."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[나우루]"
     }
   },
   {
@@ -6622,7 +6622,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["oceania", "country"],
+    "tags": [
+      "oceania",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "뉴질랜드",
@@ -6644,9 +6647,6 @@
           "master": "The capital of New Zealand is Wellington."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[뉴질랜드]"
     }
   },
   {
@@ -6657,7 +6657,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["oceania", "country"],
+    "tags": [
+      "oceania",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "팔라우",
@@ -6679,9 +6682,6 @@
           "master": "The capital of Palau is Ngerulmud."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[팔라우]"
     }
   },
   {
@@ -6691,8 +6691,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["oceania", "country"],
+    "frequency": "rare",
+    "tags": [
+      "oceania",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "파푸아뉴기니",
@@ -6714,9 +6717,6 @@
           "master": "The capital of Papua New Guinea is Port Moresby."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[파푸아뉴기니]"
     }
   },
   {
@@ -6727,7 +6727,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["oceania", "country"],
+    "tags": [
+      "oceania",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "사모아",
@@ -6749,9 +6752,6 @@
           "master": "The capital of Samoa is Apia."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[사모아]"
     }
   },
   {
@@ -6762,7 +6762,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["oceania", "country"],
+    "tags": [
+      "oceania",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "솔로몬 제도",
@@ -6784,9 +6787,6 @@
           "master": "The capital of the Solomon Islands is Honiara."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[솔로몬 제도]"
     }
   },
   {
@@ -6797,7 +6797,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["oceania", "country"],
+    "tags": [
+      "oceania",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "통가",
@@ -6819,9 +6822,6 @@
           "master": "The capital of Tonga is Nukuʻalofa."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[통가]"
     }
   },
   {
@@ -6832,7 +6832,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["oceania", "country"],
+    "tags": [
+      "oceania",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "투발루",
@@ -6854,9 +6857,6 @@
           "master": "The capital of Tuvalu is Funafuti."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[투발루]"
     }
   },
   {
@@ -6867,7 +6867,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["oceania", "country"],
+    "tags": [
+      "oceania",
+      "country"
+    ],
     "translations": {
       "ko": {
         "word": "바누아투",
@@ -6889,9 +6892,6 @@
           "master": "The capital of Vanuatu is Port Vila."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[바누아투]"
     }
   },
   {
@@ -6902,7 +6902,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["asia", "territory"],
+    "tags": [
+      "asia",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "홍콩",
@@ -6924,9 +6927,6 @@
           "master": "I have a friend from Hong Kong."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[홍콩]"
     }
   },
   {
@@ -6936,8 +6936,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["asia", "territory"],
+    "frequency": "rare",
+    "tags": [
+      "asia",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "마카오",
@@ -6959,9 +6962,6 @@
           "master": "I have a friend from Macau."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[마카오]"
     }
   },
   {
@@ -6972,7 +6972,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["europe", "territory"],
+    "tags": [
+      "europe",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "페로 제도",
@@ -6994,9 +6997,6 @@
           "master": "I have a friend from the Faroe Islands."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[페로 제도]"
     }
   },
   {
@@ -7006,8 +7006,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["europe", "territory"],
+    "frequency": "rare",
+    "tags": [
+      "europe",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "지브롤터",
@@ -7029,9 +7032,6 @@
           "master": "I have a friend from Gibraltar."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[지브롤터]"
     }
   },
   {
@@ -7042,7 +7042,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["north-america", "territory"],
+    "tags": [
+      "north-america",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "그린란드",
@@ -7064,9 +7067,6 @@
           "master": "I have a friend from Greenland."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[그린란드]"
     }
   },
   {
@@ -7077,7 +7077,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["europe", "territory"],
+    "tags": [
+      "europe",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "올란드 제도",
@@ -7099,9 +7102,6 @@
           "master": "I have a friend from the Åland Islands."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[올란드 제도]"
     }
   },
   {
@@ -7112,7 +7112,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["europe", "territory"],
+    "tags": [
+      "europe",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "맨 섬",
@@ -7134,9 +7137,6 @@
           "master": "I have a friend from the Isle of Man."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[맨 섬]"
     }
   },
   {
@@ -7147,7 +7147,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["oceania", "territory"],
+    "tags": [
+      "oceania",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "아메리칸 사모아",
@@ -7169,9 +7172,6 @@
           "master": "I have a friend from American Samoa."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[아메리칸 사모아]"
     }
   },
   {
@@ -7182,7 +7182,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["oceania", "territory"],
+    "tags": [
+      "oceania",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "쿡 제도",
@@ -7204,9 +7207,6 @@
           "master": "I have a friend from the Cook Islands."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[쿡 제도]"
     }
   },
   {
@@ -7216,8 +7216,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["oceania", "territory"],
+    "frequency": "rare",
+    "tags": [
+      "oceania",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "프랑스령 폴리네시아",
@@ -7239,9 +7242,6 @@
           "master": "I have a friend from French Polynesia."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[프랑스령 폴리네시아]"
     }
   },
   {
@@ -7252,7 +7252,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["oceania", "territory"],
+    "tags": [
+      "oceania",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "괌",
@@ -7274,9 +7277,6 @@
           "master": "I have a friend from Guam."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[괌]"
     }
   },
   {
@@ -7286,8 +7286,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["oceania", "territory"],
+    "frequency": "rare",
+    "tags": [
+      "oceania",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "뉴칼레도니아",
@@ -7309,9 +7312,6 @@
           "master": "I have a friend from New Caledonia."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[뉴칼레도니아]"
     }
   },
   {
@@ -7322,7 +7322,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["oceania", "territory"],
+    "tags": [
+      "oceania",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "니우에",
@@ -7344,9 +7347,6 @@
           "master": "I have a friend from Niue."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[니우에]"
     }
   },
   {
@@ -7357,7 +7357,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["oceania", "territory"],
+    "tags": [
+      "oceania",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "북마리아나 제도",
@@ -7379,9 +7382,6 @@
           "master": "I have a friend from the Northern Mariana Islands."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[북마리아나 제도]"
     }
   },
   {
@@ -7392,7 +7392,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["oceania", "territory"],
+    "tags": [
+      "oceania",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "토켈라우",
@@ -7414,9 +7417,6 @@
           "master": "I have a friend from Tokelau."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[토켈라우]"
     }
   },
   {
@@ -7426,8 +7426,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["caribbean", "territory"],
+    "frequency": "rare",
+    "tags": [
+      "caribbean",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "아루바",
@@ -7449,9 +7452,6 @@
           "master": "I have a friend from Aruba."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[아루바]"
     }
   },
   {
@@ -7461,8 +7461,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["atlantic", "territory"],
+    "frequency": "rare",
+    "tags": [
+      "atlantic",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "버뮤다",
@@ -7484,9 +7487,6 @@
           "master": "I have a friend from Bermuda."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[버뮤다]"
     }
   },
   {
@@ -7497,7 +7497,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["caribbean", "territory"],
+    "tags": [
+      "caribbean",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "영국령 버진아일랜드",
@@ -7519,9 +7522,6 @@
           "master": "I have a friend from the British Virgin Islands."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[영국령 버진아일랜드]"
     }
   },
   {
@@ -7531,8 +7531,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["caribbean", "territory"],
+    "frequency": "rare",
+    "tags": [
+      "caribbean",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "케이맨 제도",
@@ -7554,9 +7557,6 @@
           "master": "I have a friend from the Cayman Islands."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[케이맨 제도]"
     }
   },
   {
@@ -7567,7 +7567,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["caribbean", "territory"],
+    "tags": [
+      "caribbean",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "퀴라소",
@@ -7589,9 +7592,6 @@
           "master": "I have a friend from Curaçao."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[퀴라소]"
     }
   },
   {
@@ -7602,7 +7602,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["caribbean", "territory"],
+    "tags": [
+      "caribbean",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "과들루프",
@@ -7624,9 +7627,6 @@
           "master": "I have a friend from Guadeloupe."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[과들루프]"
     }
   },
   {
@@ -7637,7 +7637,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["caribbean", "territory"],
+    "tags": [
+      "caribbean",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "마르티니크",
@@ -7659,9 +7662,6 @@
           "master": "I have a friend from Martinique."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[마르티니크]"
     }
   },
   {
@@ -7672,7 +7672,10 @@
     "categoryId": "countries",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["caribbean", "territory"],
+    "tags": [
+      "caribbean",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "푸에르토리코",
@@ -7694,9 +7697,6 @@
           "master": "I have a friend from Puerto Rico."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[푸에르토리코]"
     }
   },
   {
@@ -7707,7 +7707,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["caribbean", "territory"],
+    "tags": [
+      "caribbean",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "신트마르턴",
@@ -7729,9 +7732,6 @@
           "master": "I have a friend from Sint Maarten."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[신트마르턴]"
     }
   },
   {
@@ -7742,7 +7742,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["caribbean", "territory"],
+    "tags": [
+      "caribbean",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "터크스 케이커스 제도",
@@ -7764,9 +7767,6 @@
           "master": "I have a friend from the Turks and Caicos Islands."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[터크스 케이커스 제도]"
     }
   },
   {
@@ -7777,7 +7777,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["caribbean", "territory"],
+    "tags": [
+      "caribbean",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "미국령 버진아일랜드",
@@ -7799,9 +7802,6 @@
           "master": "I have a friend from the U.S. Virgin Islands."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[미국령 버진아일랜드]"
     }
   },
   {
@@ -7812,7 +7812,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "territory"],
+    "tags": [
+      "africa",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "마요트",
@@ -7834,9 +7837,6 @@
           "master": "I have a friend from Mayotte."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[마요트]"
     }
   },
   {
@@ -7847,7 +7847,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["africa", "territory"],
+    "tags": [
+      "africa",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "레위니옹",
@@ -7869,9 +7872,6 @@
           "master": "I have a friend from Réunion."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[레위니옹]"
     }
   },
   {
@@ -7881,8 +7881,11 @@
     "partOfSpeech": "noun",
     "categoryId": "countries",
     "difficulty": "intermediate",
-    "frequency": "uncommon",
-    "tags": ["south-atlantic", "territory"],
+    "frequency": "rare",
+    "tags": [
+      "south-atlantic",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "포클랜드 제도",
@@ -7904,9 +7907,6 @@
           "master": "I have a friend from the Falkland Islands."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[포클랜드 제도]"
     }
   },
   {
@@ -7917,7 +7917,10 @@
     "categoryId": "countries",
     "difficulty": "advanced",
     "frequency": "rare",
-    "tags": ["south-atlantic", "territory"],
+    "tags": [
+      "south-atlantic",
+      "territory"
+    ],
     "translations": {
       "ko": {
         "word": "세인트헬레나",
@@ -7939,9 +7942,6 @@
           "master": "I have a friend from Saint Helena."
         }
       }
-    },
-    "pronunciation": {
-      "korean": "[세인트헬레나]"
     }
   }
 ]
