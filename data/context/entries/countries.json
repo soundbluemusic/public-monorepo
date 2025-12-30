@@ -6403,5 +6403,495 @@
     "pronunciation": {
       "korean": "[베네수엘라]"
     }
+  },
+  {
+    "id": "australia",
+    "korean": "호주",
+    "romanization": "hoju",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["oceania", "country"],
+    "translations": {
+      "ko": {
+        "word": "호주",
+        "explanation": "오세아니아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 호주에 살고 있습니다.",
+          "intermediate": "당신은 호주에 가보셨나요?",
+          "advanced": "호주는 오세아니아에 위치해 있습니다.",
+          "master": "호주의 수도는 캔버라입니다."
+        }
+      },
+      "en": {
+        "word": "Australia",
+        "explanation": "A country located in Oceania.",
+        "examples": {
+          "beginner": "I live in Australia.",
+          "intermediate": "Have you ever been to Australia?",
+          "advanced": "Australia is located in Oceania.",
+          "master": "The capital of Australia is Canberra."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[호주]"
+    }
+  },
+  {
+    "id": "fiji",
+    "korean": "피지",
+    "romanization": "piji",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["oceania", "country"],
+    "translations": {
+      "ko": {
+        "word": "피지",
+        "explanation": "오세아니아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 피지에 살고 있습니다.",
+          "intermediate": "당신은 피지에 가보셨나요?",
+          "advanced": "피지는 오세아니아에 위치해 있습니다.",
+          "master": "피지의 수도는 수바입니다."
+        }
+      },
+      "en": {
+        "word": "Fiji",
+        "explanation": "A country located in Oceania.",
+        "examples": {
+          "beginner": "I live in Fiji.",
+          "intermediate": "Have you ever been to Fiji?",
+          "advanced": "Fiji is located in Oceania.",
+          "master": "The capital of Fiji is Suva."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[피지]"
+    }
+  },
+  {
+    "id": "kiribati",
+    "korean": "키리바시",
+    "romanization": "kiribasi",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["oceania", "country"],
+    "translations": {
+      "ko": {
+        "word": "키리바시",
+        "explanation": "오세아니아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 키리바시에 살고 있습니다.",
+          "intermediate": "당신은 키리바시에 가보셨나요?",
+          "advanced": "키리바시는 오세아니아에 위치해 있습니다.",
+          "master": "키리바시의 수도는 타라와입니다."
+        }
+      },
+      "en": {
+        "word": "Kiribati",
+        "explanation": "A country located in Oceania.",
+        "examples": {
+          "beginner": "I live in Kiribati.",
+          "intermediate": "Have you ever been to Kiribati?",
+          "advanced": "Kiribati is located in Oceania.",
+          "master": "The capital of Kiribati is Tarawa."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[키리바시]"
+    }
+  },
+  {
+    "id": "marshall-islands",
+    "korean": "마셜 제도",
+    "romanization": "masyeol jedo",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["oceania", "country"],
+    "translations": {
+      "ko": {
+        "word": "마셜 제도",
+        "explanation": "오세아니아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 마셜 제도에 살고 있습니다.",
+          "intermediate": "당신은 마셜 제도에 가보셨나요?",
+          "advanced": "마셜 제도는 오세아니아에 위치해 있습니다.",
+          "master": "마셜 제도의 수도는 마주로입니다."
+        }
+      },
+      "en": {
+        "word": "Marshall Islands",
+        "explanation": "A country located in Oceania.",
+        "examples": {
+          "beginner": "I live in the Marshall Islands.",
+          "intermediate": "Have you ever been to the Marshall Islands?",
+          "advanced": "The Marshall Islands is located in Oceania.",
+          "master": "The capital of the Marshall Islands is Majuro."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[마셜 제도]"
+    }
+  },
+  {
+    "id": "micronesia",
+    "korean": "미크로네시아",
+    "romanization": "mikeuronesia",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["oceania", "country"],
+    "translations": {
+      "ko": {
+        "word": "미크로네시아",
+        "explanation": "오세아니아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 미크로네시아에 살고 있습니다.",
+          "intermediate": "당신은 미크로네시아에 가보셨나요?",
+          "advanced": "미크로네시아는 오세아니아에 위치해 있습니다.",
+          "master": "미크로네시아의 수도는 팔리키르입니다."
+        }
+      },
+      "en": {
+        "word": "Micronesia",
+        "explanation": "A country located in Oceania.",
+        "examples": {
+          "beginner": "I live in Micronesia.",
+          "intermediate": "Have you ever been to Micronesia?",
+          "advanced": "Micronesia is located in Oceania.",
+          "master": "The capital of Micronesia is Palikir."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[미크로네시아]"
+    }
+  },
+  {
+    "id": "nauru",
+    "korean": "나우루",
+    "romanization": "nauru",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["oceania", "country"],
+    "translations": {
+      "ko": {
+        "word": "나우루",
+        "explanation": "오세아니아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 나우루에 살고 있습니다.",
+          "intermediate": "당신은 나우루에 가보셨나요?",
+          "advanced": "나우루는 오세아니아에 위치해 있습니다.",
+          "master": "나우루의 수도는 야렌입니다."
+        }
+      },
+      "en": {
+        "word": "Nauru",
+        "explanation": "A country located in Oceania.",
+        "examples": {
+          "beginner": "I live in Nauru.",
+          "intermediate": "Have you ever been to Nauru?",
+          "advanced": "Nauru is located in Oceania.",
+          "master": "The capital of Nauru is Yaren."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[나우루]"
+    }
+  },
+  {
+    "id": "new-zealand",
+    "korean": "뉴질랜드",
+    "romanization": "nyujillaendeu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["oceania", "country"],
+    "translations": {
+      "ko": {
+        "word": "뉴질랜드",
+        "explanation": "오세아니아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 뉴질랜드에 살고 있습니다.",
+          "intermediate": "당신은 뉴질랜드에 가보셨나요?",
+          "advanced": "뉴질랜드는 오세아니아에 위치해 있습니다.",
+          "master": "뉴질랜드의 수도는 웰링턴입니다."
+        }
+      },
+      "en": {
+        "word": "New Zealand",
+        "explanation": "A country located in Oceania.",
+        "examples": {
+          "beginner": "I live in New Zealand.",
+          "intermediate": "Have you ever been to New Zealand?",
+          "advanced": "New Zealand is located in Oceania.",
+          "master": "The capital of New Zealand is Wellington."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[뉴질랜드]"
+    }
+  },
+  {
+    "id": "palau",
+    "korean": "팔라우",
+    "romanization": "pallau",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["oceania", "country"],
+    "translations": {
+      "ko": {
+        "word": "팔라우",
+        "explanation": "오세아니아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 팔라우에 살고 있습니다.",
+          "intermediate": "당신은 팔라우에 가보셨나요?",
+          "advanced": "팔라우는 오세아니아에 위치해 있습니다.",
+          "master": "팔라우의 수도는 응에룰무드입니다."
+        }
+      },
+      "en": {
+        "word": "Palau",
+        "explanation": "A country located in Oceania.",
+        "examples": {
+          "beginner": "I live in Palau.",
+          "intermediate": "Have you ever been to Palau?",
+          "advanced": "Palau is located in Oceania.",
+          "master": "The capital of Palau is Ngerulmud."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[팔라우]"
+    }
+  },
+  {
+    "id": "papua-new-guinea",
+    "korean": "파푸아뉴기니",
+    "romanization": "papuanyugini",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["oceania", "country"],
+    "translations": {
+      "ko": {
+        "word": "파푸아뉴기니",
+        "explanation": "오세아니아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 파푸아뉴기니에 살고 있습니다.",
+          "intermediate": "당신은 파푸아뉴기니에 가보셨나요?",
+          "advanced": "파푸아뉴기니는 오세아니아에 위치해 있습니다.",
+          "master": "파푸아뉴기니의 수도는 포트모르즈비입니다."
+        }
+      },
+      "en": {
+        "word": "Papua New Guinea",
+        "explanation": "A country located in Oceania.",
+        "examples": {
+          "beginner": "I live in Papua New Guinea.",
+          "intermediate": "Have you ever been to Papua New Guinea?",
+          "advanced": "Papua New Guinea is located in Oceania.",
+          "master": "The capital of Papua New Guinea is Port Moresby."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[파푸아뉴기니]"
+    }
+  },
+  {
+    "id": "samoa",
+    "korean": "사모아",
+    "romanization": "samoa",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["oceania", "country"],
+    "translations": {
+      "ko": {
+        "word": "사모아",
+        "explanation": "오세아니아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 사모아에 살고 있습니다.",
+          "intermediate": "당신은 사모아에 가보셨나요?",
+          "advanced": "사모아는 오세아니아에 위치해 있습니다.",
+          "master": "사모아의 수도는 아피아입니다."
+        }
+      },
+      "en": {
+        "word": "Samoa",
+        "explanation": "A country located in Oceania.",
+        "examples": {
+          "beginner": "I live in Samoa.",
+          "intermediate": "Have you ever been to Samoa?",
+          "advanced": "Samoa is located in Oceania.",
+          "master": "The capital of Samoa is Apia."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[사모아]"
+    }
+  },
+  {
+    "id": "solomon-islands",
+    "korean": "솔로몬 제도",
+    "romanization": "sollomon jedo",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["oceania", "country"],
+    "translations": {
+      "ko": {
+        "word": "솔로몬 제도",
+        "explanation": "오세아니아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 솔로몬 제도에 살고 있습니다.",
+          "intermediate": "당신은 솔로몬 제도에 가보셨나요?",
+          "advanced": "솔로몬 제도는 오세아니아에 위치해 있습니다.",
+          "master": "솔로몬 제도의 수도는 호니아라입니다."
+        }
+      },
+      "en": {
+        "word": "Solomon Islands",
+        "explanation": "A country located in Oceania.",
+        "examples": {
+          "beginner": "I live in the Solomon Islands.",
+          "intermediate": "Have you ever been to the Solomon Islands?",
+          "advanced": "The Solomon Islands is located in Oceania.",
+          "master": "The capital of the Solomon Islands is Honiara."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[솔로몬 제도]"
+    }
+  },
+  {
+    "id": "tonga",
+    "korean": "통가",
+    "romanization": "tongga",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["oceania", "country"],
+    "translations": {
+      "ko": {
+        "word": "통가",
+        "explanation": "오세아니아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 통가에 살고 있습니다.",
+          "intermediate": "당신은 통가에 가보셨나요?",
+          "advanced": "통가는 오세아니아에 위치해 있습니다.",
+          "master": "통가의 수도는 누쿠알로파입니다."
+        }
+      },
+      "en": {
+        "word": "Tonga",
+        "explanation": "A country located in Oceania.",
+        "examples": {
+          "beginner": "I live in Tonga.",
+          "intermediate": "Have you ever been to Tonga?",
+          "advanced": "Tonga is located in Oceania.",
+          "master": "The capital of Tonga is Nukuʻalofa."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[통가]"
+    }
+  },
+  {
+    "id": "tuvalu",
+    "korean": "투발루",
+    "romanization": "tuballu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["oceania", "country"],
+    "translations": {
+      "ko": {
+        "word": "투발루",
+        "explanation": "오세아니아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 투발루에 살고 있습니다.",
+          "intermediate": "당신은 투발루에 가보셨나요?",
+          "advanced": "투발루는 오세아니아에 위치해 있습니다.",
+          "master": "투발루의 수도는 푸나푸티입니다."
+        }
+      },
+      "en": {
+        "word": "Tuvalu",
+        "explanation": "A country located in Oceania.",
+        "examples": {
+          "beginner": "I live in Tuvalu.",
+          "intermediate": "Have you ever been to Tuvalu?",
+          "advanced": "Tuvalu is located in Oceania.",
+          "master": "The capital of Tuvalu is Funafuti."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[투발루]"
+    }
+  },
+  {
+    "id": "vanuatu",
+    "korean": "바누아투",
+    "romanization": "banuatu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["oceania", "country"],
+    "translations": {
+      "ko": {
+        "word": "바누아투",
+        "explanation": "오세아니아에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 바누아투에 살고 있습니다.",
+          "intermediate": "당신은 바누아투에 가보셨나요?",
+          "advanced": "바누아투는 오세아니아에 위치해 있습니다.",
+          "master": "바누아투의 수도는 포트빌라입니다."
+        }
+      },
+      "en": {
+        "word": "Vanuatu",
+        "explanation": "A country located in Oceania.",
+        "examples": {
+          "beginner": "I live in Vanuatu.",
+          "intermediate": "Have you ever been to Vanuatu?",
+          "advanced": "Vanuatu is located in Oceania.",
+          "master": "The capital of Vanuatu is Port Vila."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[바누아투]"
+    }
   }
 ]
