@@ -1,8 +1,8 @@
 [
   {
-    "name": "React Router",
-    "description": "Declarative routing for React",
-    "descriptionKo": "React를 위한 선언적 라우팅",
+    "name": "React Router v7",
+    "description": "Full-stack React framework with SSG/SSR",
+    "descriptionKo": "SSG/SSR 지원 풀스택 React 프레임워크",
     "category": "Routing",
     "license": "MIT",
     "github": "https://github.com/remix-run/react-router",
@@ -11,12 +11,13 @@
     "stars": "53k",
     "usedHere": true,
     "trending": true,
-    "yearReleased": 2014,
+    "yearReleased": 2024,
     "tags": [
       "React",
       "SSG",
       "SSR",
-      "TypeScript"
+      "TypeScript",
+      "Framework"
     ]
   },
   {
@@ -177,7 +178,8 @@
     "tags": [
       "React",
       "SSG",
-      "GraphQL"
+      "GraphQL",
+      "Legacy"
     ]
   },
   {
@@ -386,7 +388,7 @@
     "yearReleased": 2012,
     "tags": [
       "Build",
-      "Classic"
+      "Legacy"
     ]
   },
   {
@@ -577,7 +579,8 @@
     "tags": [
       "React",
       "Atomic",
-      "TypeScript"
+      "TypeScript",
+      "Legacy"
     ]
   },
   {
@@ -868,7 +871,8 @@
     "yearReleased": 2016,
     "tags": [
       "CSS-in-JS",
-      "React"
+      "React",
+      "Legacy"
     ]
   },
   {
@@ -884,7 +888,8 @@
     "yearReleased": 2017,
     "tags": [
       "CSS-in-JS",
-      "React"
+      "React",
+      "Legacy"
     ]
   },
   {
@@ -900,7 +905,8 @@
     "yearReleased": 2006,
     "tags": [
       "CSS",
-      "Preprocessor"
+      "Preprocessor",
+      "Legacy"
     ]
   },
   {
@@ -1257,7 +1263,8 @@
     "yearReleased": 2017,
     "tags": [
       "React",
-      "Forms"
+      "Forms",
+      "Legacy"
     ]
   },
   {
@@ -1273,7 +1280,8 @@
     "yearReleased": 2017,
     "tags": [
       "React",
-      "Forms"
+      "Forms",
+      "Legacy"
     ]
   },
   {
