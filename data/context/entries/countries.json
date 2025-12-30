@@ -5178,5 +5178,460 @@
     "pronunciation": {
       "korean": "[짐바브웨]"
     }
+  },
+  {
+    "id": "antigua-and-barbuda",
+    "korean": "앤티가 바부다",
+    "romanization": "aentiga babuda",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["north-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "앤티가 바부다",
+        "explanation": "북아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 앤티가 바부다에 살고 있습니다.",
+          "intermediate": "당신은 앤티가 바부다에 가보셨나요?",
+          "advanced": "앤티가 바부다는 북아메리카에 위치해 있습니다.",
+          "master": "앤티가 바부다의 수도는 세인트존스입니다."
+        }
+      },
+      "en": {
+        "word": "Antigua and Barbuda",
+        "explanation": "A country located in North America.",
+        "examples": {
+          "beginner": "I live in Antigua and Barbuda.",
+          "intermediate": "Have you ever been to Antigua and Barbuda?",
+          "advanced": "Antigua and Barbuda is located in North America.",
+          "master": "The capital of Antigua and Barbuda is St. John's."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[앤티가 바부다]"
+    }
+  },
+  {
+    "id": "bahamas",
+    "korean": "바하마",
+    "romanization": "bahama",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["north-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "바하마",
+        "explanation": "북아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 바하마에 살고 있습니다.",
+          "intermediate": "당신은 바하마에 가보셨나요?",
+          "advanced": "바하마는 북아메리카에 위치해 있습니다.",
+          "master": "바하마의 수도는 나소입니다."
+        }
+      },
+      "en": {
+        "word": "The Bahamas",
+        "explanation": "A country located in North America.",
+        "examples": {
+          "beginner": "I live in the Bahamas.",
+          "intermediate": "Have you ever been to the Bahamas?",
+          "advanced": "The Bahamas is located in North America.",
+          "master": "The capital of the Bahamas is Nassau."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[바하마]"
+    }
+  },
+  {
+    "id": "barbados",
+    "korean": "바베이도스",
+    "romanization": "babeidoseu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["north-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "바베이도스",
+        "explanation": "북아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 바베이도스에 살고 있습니다.",
+          "intermediate": "당신은 바베이도스에 가보셨나요?",
+          "advanced": "바베이도스는 북아메리카에 위치해 있습니다.",
+          "master": "바베이도스의 수도는 브리지타운입니다."
+        }
+      },
+      "en": {
+        "word": "Barbados",
+        "explanation": "A country located in North America.",
+        "examples": {
+          "beginner": "I live in Barbados.",
+          "intermediate": "Have you ever been to Barbados?",
+          "advanced": "Barbados is located in North America.",
+          "master": "The capital of Barbados is Bridgetown."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[바베이도스]"
+    }
+  },
+  {
+    "id": "belize",
+    "korean": "벨리즈",
+    "romanization": "bellijeu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["north-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "벨리즈",
+        "explanation": "북아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 벨리즈에 살고 있습니다.",
+          "intermediate": "당신은 벨리즈에 가보셨나요?",
+          "advanced": "벨리즈는 북아메리카에 위치해 있습니다.",
+          "master": "벨리즈의 수도는 벨모판입니다."
+        }
+      },
+      "en": {
+        "word": "Belize",
+        "explanation": "A country located in North America.",
+        "examples": {
+          "beginner": "I live in Belize.",
+          "intermediate": "Have you ever been to Belize?",
+          "advanced": "Belize is located in North America.",
+          "master": "The capital of Belize is Belmopan."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[벨리즈]"
+    }
+  },
+  {
+    "id": "canada",
+    "korean": "캐나다",
+    "romanization": "kaenada",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["north-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "캐나다",
+        "explanation": "북아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 캐나다에 살고 있습니다.",
+          "intermediate": "당신은 캐나다에 가보셨나요?",
+          "advanced": "캐나다는 북아메리카에 위치해 있습니다.",
+          "master": "캐나다의 수도는 오타와입니다."
+        }
+      },
+      "en": {
+        "word": "Canada",
+        "explanation": "A country located in North America.",
+        "examples": {
+          "beginner": "I live in Canada.",
+          "intermediate": "Have you ever been to Canada?",
+          "advanced": "Canada is located in North America.",
+          "master": "The capital of Canada is Ottawa."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[캐나다]"
+    }
+  },
+  {
+    "id": "costa-rica",
+    "korean": "코스타리카",
+    "romanization": "koseutarika",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["north-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "코스타리카",
+        "explanation": "북아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 코스타리카에 살고 있습니다.",
+          "intermediate": "당신은 코스타리카에 가보셨나요?",
+          "advanced": "코스타리카는 북아메리카에 위치해 있습니다.",
+          "master": "코스타리카의 수도는 산호세입니다."
+        }
+      },
+      "en": {
+        "word": "Costa Rica",
+        "explanation": "A country located in North America.",
+        "examples": {
+          "beginner": "I live in Costa Rica.",
+          "intermediate": "Have you ever been to Costa Rica?",
+          "advanced": "Costa Rica is located in North America.",
+          "master": "The capital of Costa Rica is San José."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[코스타리카]"
+    }
+  },
+  {
+    "id": "cuba",
+    "korean": "쿠바",
+    "romanization": "kuba",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["north-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "쿠바",
+        "explanation": "북아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 쿠바에 살고 있습니다.",
+          "intermediate": "당신은 쿠바에 가보셨나요?",
+          "advanced": "쿠바는 북아메리카에 위치해 있습니다.",
+          "master": "쿠바의 수도는 아바나입니다."
+        }
+      },
+      "en": {
+        "word": "Cuba",
+        "explanation": "A country located in North America.",
+        "examples": {
+          "beginner": "I live in Cuba.",
+          "intermediate": "Have you ever been to Cuba?",
+          "advanced": "Cuba is located in North America.",
+          "master": "The capital of Cuba is Havana."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[쿠바]"
+    }
+  },
+  {
+    "id": "dominica",
+    "korean": "도미니카 연방",
+    "romanization": "dominika yeonbang",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["north-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "도미니카 연방",
+        "explanation": "북아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 도미니카 연방에 살고 있습니다.",
+          "intermediate": "당신은 도미니카 연방에 가보셨나요?",
+          "advanced": "도미니카 연방은 북아메리카에 위치해 있습니다.",
+          "master": "도미니카 연방의 수도는 로조입니다."
+        }
+      },
+      "en": {
+        "word": "Dominica",
+        "explanation": "A country located in North America.",
+        "examples": {
+          "beginner": "I live in Dominica.",
+          "intermediate": "Have you ever been to Dominica?",
+          "advanced": "Dominica is located in North America.",
+          "master": "The capital of Dominica is Roseau."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[도미니카 연방]"
+    }
+  },
+  {
+    "id": "dominican-republic",
+    "korean": "도미니카 공화국",
+    "romanization": "dominika gonghwaguk",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["north-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "도미니카 공화국",
+        "explanation": "북아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 도미니카 공화국에 살고 있습니다.",
+          "intermediate": "당신은 도미니카 공화국에 가보셨나요?",
+          "advanced": "도미니카 공화국은 북아메리카에 위치해 있습니다.",
+          "master": "도미니카 공화국의 수도는 산토도밍고입니다."
+        }
+      },
+      "en": {
+        "word": "Dominican Republic",
+        "explanation": "A country located in North America.",
+        "examples": {
+          "beginner": "I live in the Dominican Republic.",
+          "intermediate": "Have you ever been to the Dominican Republic?",
+          "advanced": "The Dominican Republic is located in North America.",
+          "master": "The capital of the Dominican Republic is Santo Domingo."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[도미니카 공화국]"
+    }
+  },
+  {
+    "id": "el-salvador",
+    "korean": "엘살바도르",
+    "romanization": "elsalbadoreu",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["north-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "엘살바도르",
+        "explanation": "북아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 엘살바도르에 살고 있습니다.",
+          "intermediate": "당신은 엘살바도르에 가보셨나요?",
+          "advanced": "엘살바도르는 북아메리카에 위치해 있습니다.",
+          "master": "엘살바도르의 수도는 산살바도르입니다."
+        }
+      },
+      "en": {
+        "word": "El Salvador",
+        "explanation": "A country located in North America.",
+        "examples": {
+          "beginner": "I live in El Salvador.",
+          "intermediate": "Have you ever been to El Salvador?",
+          "advanced": "El Salvador is located in North America.",
+          "master": "The capital of El Salvador is San Salvador."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[엘살바도르]"
+    }
+  },
+  {
+    "id": "grenada",
+    "korean": "그레나다",
+    "romanization": "geurenada",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["north-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "그레나다",
+        "explanation": "북아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 그레나다에 살고 있습니다.",
+          "intermediate": "당신은 그레나다에 가보셨나요?",
+          "advanced": "그레나다는 북아메리카에 위치해 있습니다.",
+          "master": "그레나다의 수도는 세인트조지스입니다."
+        }
+      },
+      "en": {
+        "word": "Grenada",
+        "explanation": "A country located in North America.",
+        "examples": {
+          "beginner": "I live in Grenada.",
+          "intermediate": "Have you ever been to Grenada?",
+          "advanced": "Grenada is located in North America.",
+          "master": "The capital of Grenada is St. George's."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[그레나다]"
+    }
+  },
+  {
+    "id": "guatemala",
+    "korean": "과테말라",
+    "romanization": "gwatemalla",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["north-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "과테말라",
+        "explanation": "북아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 과테말라에 살고 있습니다.",
+          "intermediate": "당신은 과테말라에 가보셨나요?",
+          "advanced": "과테말라는 북아메리카에 위치해 있습니다.",
+          "master": "과테말라의 수도는 과테말라시티입니다."
+        }
+      },
+      "en": {
+        "word": "Guatemala",
+        "explanation": "A country located in North America.",
+        "examples": {
+          "beginner": "I live in Guatemala.",
+          "intermediate": "Have you ever been to Guatemala?",
+          "advanced": "Guatemala is located in North America.",
+          "master": "The capital of Guatemala is Guatemala City."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[과테말라]"
+    }
+  },
+  {
+    "id": "haiti",
+    "korean": "아이티",
+    "romanization": "aiti",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["north-america", "country"],
+    "translations": {
+      "ko": {
+        "word": "아이티",
+        "explanation": "북아메리카에 위치한 국가입니다.",
+        "examples": {
+          "beginner": "저는 아이티에 살고 있습니다.",
+          "intermediate": "당신은 아이티에 가보셨나요?",
+          "advanced": "아이티는 북아메리카에 위치해 있습니다.",
+          "master": "아이티의 수도는 포르토프랭스입니다."
+        }
+      },
+      "en": {
+        "word": "Haiti",
+        "explanation": "A country located in North America.",
+        "examples": {
+          "beginner": "I live in Haiti.",
+          "intermediate": "Have you ever been to Haiti?",
+          "advanced": "Haiti is located in North America.",
+          "master": "The capital of Haiti is Port-au-Prince."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아이티]"
+    }
   }
 ]
