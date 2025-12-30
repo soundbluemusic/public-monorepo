@@ -1,14 +1,16 @@
 import { LIMITS } from '@soundblue/core/validation';
-import { Skeleton } from '@soundblue/ui/primitives';
-import { BookmarkCheck, Calendar, FolderOpen, TrendingUp, Trophy } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { TrendingUp } from 'lucide-react';
 import type { MetaFunction } from 'react-router';
 import { Link } from 'react-router';
 import { Layout } from '@/components/layout';
-import type { categories } from '@/data/categories';
-import type { MeaningEntry } from '@/data/types';
+import {
+  CategoryProgressList,
+  EntryList,
+  LoadingState,
+  StatsCards,
+  useMyLearningData,
+} from '@/components/my-learning';
 import { useI18n } from '@/i18n';
-import { favorites, studyRecords } from '@/lib/db';
 
 /**
  * My Learning 페이지
@@ -35,53 +37,16 @@ export const meta: MetaFunction = ({ location }) => {
 
 export default function MyLearningPage() {
   const { locale, t, localePath } = useI18n();
-  const [entries, setEntries] = useState<MeaningEntry[]>([]);
-  const [cats, setCats] = useState<typeof categories>([]);
-  const [totalEntries, setTotalEntries] = useState(0);
-  const [studiedIds, setStudiedIds] = useState<string[]>([]);
-  const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
-  const [categoryProgress, setCategoryProgress] = useState<
-    Record<string, { studied: number; total: number }>
-  >({});
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    async function loadData() {
-      try {
-        // 클라이언트에서 데이터 로드
-        const [{ meaningEntries }, { categories: loadedCategories }] = await Promise.all([
-          import('@/data/entries'),
-          import('@/data/categories'),
-        ]);
-
-        setEntries(meaningEntries);
-        setCats(loadedCategories);
-        setTotalEntries(meaningEntries.length);
-
-        const studied = await studyRecords.getStudiedEntryIds();
-        setStudiedIds(studied);
-
-        const favs = await favorites.getAll();
-        setFavoriteIds(favs.map((f) => f.entryId));
-
-        const catProgress: Record<string, { studied: number; total: number }> = {};
-        const studiedSet = new Set(studied);
-        for (const cat of loadedCategories) {
-          const catEntries = meaningEntries.filter((e) => e.categoryId === cat.id);
-          const studiedInCat = catEntries.filter((e) => studiedSet.has(e.id)).length;
-          catProgress[cat.id] = { studied: studiedInCat, total: catEntries.length };
-        }
-        setCategoryProgress(catProgress);
-      } catch (err) {
-        console.error('Failed to load my-learning data:', err);
-        setError(err instanceof Error ? err.message : 'Failed to load data');
-      } finally {
-        setIsLoading(false);
-      }
-    }
-    loadData();
-  }, []);
+  const {
+    entries,
+    cats,
+    totalEntries,
+    studiedIds,
+    favoriteIds,
+    categoryProgress,
+    isLoading,
+    error,
+  } = useMyLearningData();
 
   const favoriteEntries = entries.filter((e) => favoriteIds.includes(e.id));
   const recentStudied = entries
@@ -100,22 +65,7 @@ export default function MyLearningPage() {
   if (isLoading) {
     return (
       <Layout>
-        <div className="animate-pulse">
-          <div className="mb-8">
-            <Skeleton className="h-10 w-64 mb-2" />
-            <Skeleton className="h-5 w-48" />
-          </div>
-          <div className="grid gap-4 sm:grid-cols-3 mb-8">
-            {[1, 2, 3].map((i) => (
-              <Skeleton key={i} className="h-28 rounded-xl" />
-            ))}
-          </div>
-          <div className="space-y-3">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <Skeleton key={i} className="h-20 rounded-xl" />
-            ))}
-          </div>
-        </div>
+        <LoadingState />
       </Layout>
     );
   }
@@ -149,148 +99,38 @@ export default function MyLearningPage() {
         <p className="text-(--text-secondary)">{t('trackProgressAndBookmarks')}</p>
       </div>
 
-      {/* Stats Cards */}
-      <div className="grid gap-4 sm:grid-cols-3 mb-8">
-        {/* Total Progress */}
-        <div className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
-          <div className="flex items-center gap-2 mb-2">
-            <TrendingUp size={20} className="text-(--accent-primary)" />
-            <h3 className="text-sm font-semibold text-(--text-primary)">{t('totalProgress')}</h3>
-          </div>
-          <p className="text-2xl font-bold text-(--text-primary) mb-1">
-            {studiedCount}/{totalWords}
-          </p>
-          <div className="w-full h-2 rounded-full overflow-hidden bg-(--bg-secondary)">
-            <div
-              className="h-full bg-(--accent-primary) transition-all duration-300"
-              style={{ width: `${progressPercentage}%` }}
-            />
-          </div>
-        </div>
+      <StatsCards
+        studiedCount={studiedCount}
+        totalWords={totalWords}
+        progressPercentage={progressPercentage}
+        completedCategories={completedCategories}
+        totalCategories={totalCategories}
+        favoriteCount={favoriteIds.length}
+        t={t}
+      />
 
-        {/* Completed Categories */}
-        <div className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
-          <div className="flex items-center gap-2 mb-2">
-            <Trophy size={20} className="text-(--accent-primary)" />
-            <h3 className="text-sm font-semibold text-(--text-primary)">
-              {t('completedCategories')}
-            </h3>
-          </div>
-          <p className="text-2xl font-bold text-(--text-primary)">
-            {completedCategories}/{totalCategories}
-          </p>
-          <p className="text-xs text-(--text-tertiary)">{t('categoriesLabel')}</p>
-        </div>
+      <CategoryProgressList
+        cats={cats}
+        categoryProgress={categoryProgress}
+        locale={locale}
+        localePath={localePath}
+        t={t}
+      />
 
-        {/* Bookmarks */}
-        <div className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
-          <div className="flex items-center gap-2 mb-2">
-            <BookmarkCheck size={20} className="text-(--accent-primary)" />
-            <h3 className="text-sm font-semibold text-(--text-primary)">{t('bookmarks')}</h3>
-          </div>
-          <p className="text-2xl font-bold text-(--text-primary)">{favoriteIds.length}</p>
-          <p className="text-xs text-(--text-tertiary)">{t('savedWords')}</p>
-        </div>
-      </div>
+      <EntryList
+        entries={favoriteEntries.slice(0, LIMITS.RECENT_ITEMS_DISPLAY)}
+        locale={locale}
+        localePath={localePath}
+        title={t('bookmarkedWords')}
+      />
 
-      {/* Category Progress */}
-      <div className="mb-8">
-        <h2 className="text-lg font-semibold text-(--text-primary) mb-4 flex items-center gap-2">
-          <FolderOpen size={20} aria-hidden="true" />
-          {t('progressByCategory')}
-        </h2>
-        <div className="space-y-3">
-          {cats.map((category) => {
-            const progress = categoryProgress[category.id] || { studied: 0, total: 0 };
-            const percentage = progress.total > 0 ? (progress.studied / progress.total) * 100 : 0;
-
-            return (
-              <Link
-                key={category.id}
-                to={localePath(`/category/${category.id}`)}
-                className="block p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) no-underline cursor-pointer transition-all duration-150 hover:-translate-y-0.5 hover:shadow-md hover:border-(--border-focus)"
-              >
-                <div className="flex items-center justify-between mb-2">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl">{category.icon}</span>
-                    <span className="font-medium text-(--text-primary)">
-                      {category.name[locale]}
-                    </span>
-                  </div>
-                  <span className="text-sm text-(--text-secondary)">
-                    {progress.studied}/{progress.total}
-                  </span>
-                </div>
-                <div className="w-full h-2 rounded-full overflow-hidden bg-(--bg-secondary)">
-                  <div
-                    className="h-full bg-(--accent-primary) transition-all duration-300"
-                    style={{ width: `${percentage}%` }}
-                  />
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Bookmarked Words */}
-      {favoriteEntries.length > 0 && (
-        <div className="mb-8">
-          <h2 className="text-lg font-semibold text-(--text-primary) mb-4">
-            {t('bookmarkedWords')}
-          </h2>
-          <div className="space-y-1">
-            {favoriteEntries.slice(0, LIMITS.RECENT_ITEMS_DISPLAY).map((entry) => {
-              const translation = entry.translations[locale];
-              return (
-                <Link
-                  key={entry.id}
-                  to={localePath(`/entry/${entry.id}`)}
-                  className="flex items-center justify-between py-3 px-2 -mx-2 rounded-lg border-b border-(--border-primary) transition-colors no-underline hover:bg-(--bg-tertiary)"
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="text-lg font-medium text-(--text-primary)">
-                      {entry.korean}
-                    </span>
-                    <span className="text-sm text-(--text-tertiary)">{entry.romanization}</span>
-                  </div>
-                  <span className="text-sm text-(--text-secondary)">{translation.word}</span>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      )}
-
-      {/* Recent Studied Words */}
-      {recentStudied.length > 0 && (
-        <div className="mb-8">
-          <h2 className="text-lg font-semibold text-(--text-primary) mb-4 flex items-center gap-2">
-            <Calendar size={20} />
-            {t('recentlyStudied')}
-          </h2>
-          <div className="space-y-1">
-            {recentStudied.map((entry) => {
-              const translation = entry.translations[locale];
-              return (
-                <Link
-                  key={entry.id}
-                  to={localePath(`/entry/${entry.id}`)}
-                  className="flex items-center justify-between py-3 px-2 -mx-2 rounded-lg border-b border-(--border-primary) transition-colors no-underline hover:bg-(--bg-tertiary)"
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="text-lg font-medium text-(--text-primary)">
-                      {entry.korean}
-                    </span>
-                    <span className="text-sm text-(--text-tertiary)">{entry.romanization}</span>
-                  </div>
-                  <span className="text-sm text-(--text-secondary)">{translation.word}</span>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      )}
+      <EntryList
+        entries={recentStudied}
+        locale={locale}
+        localePath={localePath}
+        title={t('recentlyStudied')}
+        showIcon
+      />
 
       {/* Empty State */}
       {studiedCount === 0 && favoriteIds.length === 0 && (

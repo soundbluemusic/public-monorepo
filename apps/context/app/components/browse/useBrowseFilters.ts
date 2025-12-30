@@ -1,0 +1,220 @@
+import { useEffect, useMemo, useState } from 'react';
+import { useSearchParams } from 'react-router';
+import type { categories } from '@/data/categories';
+import type { LightEntry } from '@/data/entries';
+
+export type FilterCategory = 'all' | string;
+export type FilterStatus = 'all' | 'studied' | 'unstudied' | 'bookmarked';
+export type SortOption = 'alphabetical' | 'category' | 'recent';
+
+/** 페이지당 항목 수 */
+export const PAGE_SIZE = 50;
+
+interface UseBrowseFiltersOptions {
+  categories: typeof categories;
+  sortedArrays: {
+    alphabetical: LightEntry[];
+    category: LightEntry[];
+    recent: LightEntry[];
+  };
+  sortIndices: {
+    alphabetical: Record<string, number>;
+    category: Record<string, number>;
+    recent: Record<string, number>;
+  };
+  studiedIds: Set<string>;
+  favoriteIds: Set<string>;
+  isLoading: boolean;
+}
+
+export function useBrowseFilters({
+  categories: cats,
+  sortedArrays,
+  sortIndices,
+  studiedIds,
+  favoriteIds,
+  isLoading,
+}: UseBrowseFiltersOptions) {
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  // Filter & Sort state
+  const [filterCategory, setFilterCategory] = useState<FilterCategory>('all');
+  const [filterStatus, setFilterStatus] = useState<FilterStatus>('all');
+  const [sortBy, setSortBy] = useState<SortOption>('alphabetical');
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // 카테고리별 동적 로드 상태
+  const [categoryEntries, setCategoryEntries] = useState<LightEntry[] | null>(null);
+  const [isLoadingCategory, setIsLoadingCategory] = useState(false);
+
+  // Sync URL params to state
+  useEffect(() => {
+    const categoryParam = searchParams.get('category');
+    const statusParam = searchParams.get('status');
+    const sortParam = searchParams.get('sort');
+    const pageParam = searchParams.get('page');
+
+    if (categoryParam) {
+      const isValidCategory = categoryParam === 'all' || cats.some((c) => c.id === categoryParam);
+      if (isValidCategory) {
+        setFilterCategory(categoryParam as FilterCategory);
+      }
+    }
+
+    if (statusParam) {
+      const validStatuses = ['all', 'studied', 'unstudied', 'bookmarked'];
+      if (validStatuses.includes(statusParam)) {
+        setFilterStatus(statusParam as FilterStatus);
+      }
+    }
+
+    if (sortParam) {
+      const validSorts = ['alphabetical', 'category', 'recent'];
+      if (validSorts.includes(sortParam)) {
+        setSortBy(sortParam as SortOption);
+      }
+    }
+
+    if (pageParam) {
+      const page = Number.parseInt(pageParam, 10);
+      if (!Number.isNaN(page) && page >= 1) {
+        setCurrentPage(page);
+      }
+    }
+  }, [searchParams, cats]);
+
+  // 카테고리 변경 시 동적 로드
+  useEffect(() => {
+    if (filterCategory === 'all') {
+      setCategoryEntries(null);
+      setIsLoadingCategory(false);
+      return;
+    }
+
+    setIsLoadingCategory(true);
+    fetch(`/data/by-category/${filterCategory}.json`)
+      .then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
+      .then((data: LightEntry[]) => {
+        setCategoryEntries(data);
+        setIsLoadingCategory(false);
+      })
+      .catch(() => {
+        setCategoryEntries([]);
+        setIsLoadingCategory(false);
+      });
+  }, [filterCategory]);
+
+  // 필터 변경 시 페이지 리셋
+  // biome-ignore lint/correctness/useExhaustiveDependencies: 필터 변경에만 반응해야 함
+  useEffect(() => {
+    setCurrentPage(1);
+    const params = new URLSearchParams(searchParams);
+    params.delete('page');
+    setSearchParams(params, { replace: true });
+  }, [filterCategory, filterStatus, sortBy]);
+
+  // URL update helper
+  const updateUrlParams = (updates: Record<string, string | null>) => {
+    const params = new URLSearchParams(searchParams);
+    for (const [key, value] of Object.entries(updates)) {
+      if (value === null || value === 'all') {
+        params.delete(key);
+      } else {
+        params.set(key, value);
+      }
+    }
+    setSearchParams(params);
+  };
+
+  // 최적화된 필터링 + 정렬 로직
+  const filteredEntries = useMemo(() => {
+    let baseArray: LightEntry[];
+    if (filterCategory !== 'all') {
+      if (isLoadingCategory || categoryEntries === null) {
+        return [];
+      }
+      baseArray = categoryEntries;
+    } else {
+      baseArray = sortedArrays[sortBy];
+    }
+
+    let filtered: LightEntry[];
+    if (isLoading || filterStatus === 'all') {
+      filtered = baseArray;
+    } else if (filterStatus === 'studied') {
+      filtered = baseArray.filter((e) => studiedIds.has(e.id));
+    } else if (filterStatus === 'unstudied') {
+      filtered = baseArray.filter((e) => !studiedIds.has(e.id));
+    } else {
+      filtered = baseArray.filter((e) => favoriteIds.has(e.id));
+    }
+
+    if (filterCategory !== 'all' || filterStatus !== 'all') {
+      const indexMap = sortIndices[sortBy];
+      return [...filtered].sort((a, b) => {
+        const idxA = indexMap[a.id] ?? Number.MAX_SAFE_INTEGER;
+        const idxB = indexMap[b.id] ?? Number.MAX_SAFE_INTEGER;
+        return idxA - idxB;
+      });
+    }
+
+    return filtered;
+  }, [
+    filterCategory,
+    filterStatus,
+    sortBy,
+    categoryEntries,
+    isLoadingCategory,
+    sortedArrays,
+    sortIndices,
+    studiedIds,
+    favoriteIds,
+    isLoading,
+  ]);
+
+  // 페이지네이션 계산
+  const totalPages = Math.ceil(filteredEntries.length / PAGE_SIZE);
+  const paginatedEntries = useMemo(() => {
+    const start = (currentPage - 1) * PAGE_SIZE;
+    return filteredEntries.slice(start, start + PAGE_SIZE);
+  }, [filteredEntries, currentPage]);
+
+  // 페이지 변경 핸들러
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    const params = new URLSearchParams(searchParams);
+    if (page === 1) {
+      params.delete('page');
+    } else {
+      params.set('page', String(page));
+    }
+    setSearchParams(params);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return {
+    // State
+    filterCategory,
+    filterStatus,
+    sortBy,
+    currentPage,
+    isLoadingCategory,
+
+    // Setters
+    setFilterCategory,
+    setFilterStatus,
+    setSortBy,
+
+    // Computed
+    filteredEntries,
+    paginatedEntries,
+    totalPages,
+
+    // Actions
+    updateUrlParams,
+    handlePageChange,
+  };
+}
