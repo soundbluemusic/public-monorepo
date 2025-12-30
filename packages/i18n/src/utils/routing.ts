@@ -73,3 +73,81 @@ export function generateLocalizedPaths(basePaths: string[]): string[] {
 export function getLanguageFromParams(params: { lang?: string }): Language {
   return params.lang === 'ko' ? 'ko' : DEFAULT_LANGUAGE;
 }
+
+/**
+ * RouteConfig 타입 정의 (React Router v7)
+ * @see https://reactrouter.com/start/framework/routing
+ */
+interface RouteConfigEntry {
+  path?: string;
+  index?: boolean;
+  file?: string;
+  children?: RouteConfigEntry[];
+}
+
+/**
+ * routes.ts에서 정적 라우트를 자동 추출하여 prerender 경로 생성
+ *
+ * 동적 라우트(`:param` 포함)는 제외하고 정적 라우트만 추출합니다.
+ * 동적 라우트는 별도로 데이터 기반 generateI18nRoutes()로 생성해야 합니다.
+ *
+ * @param routes - routes.ts에서 export한 RouteConfig 배열
+ * @returns 정적 prerender 경로 배열 (영어 + 한국어)
+ *
+ * @example
+ * ```ts
+ * // routes.ts
+ * export default [
+ *   index('routes/_index.tsx'),
+ *   route('browse', 'routes/browse.tsx'),
+ *   route('entry/:entryId', 'routes/entry.$entryId.tsx'), // 동적 → 제외
+ * ];
+ *
+ * // react-router.config.ts
+ * import routes from './app/routes';
+ * const staticRoutes = extractStaticRoutes(routes);
+ * // → ['/', '/ko', '/browse', '/ko/browse']
+ * ```
+ */
+export function extractStaticRoutes(routes: RouteConfigEntry[], parentPath = ''): string[] {
+  const result: string[] = [];
+
+  for (const route of routes) {
+    // catch-all 라우트 (*) 제외
+    if (route.path === '*') continue;
+
+    // 현재 라우트 경로 계산
+    let currentPath: string;
+    if (route.index) {
+      currentPath = parentPath || '/';
+    } else if (route.path) {
+      currentPath = parentPath ? `${parentPath}/${route.path}` : `/${route.path}`;
+    } else {
+      currentPath = parentPath;
+    }
+
+    // 동적 라우트 (`:param` 포함) 제외
+    if (currentPath.includes(':')) continue;
+
+    // 정적 라우트 추가 (영어 경로)
+    // /ko로 시작하는 라우트는 이미 한국어 라우트이므로 그대로 추가
+    if (currentPath.startsWith('/ko')) {
+      result.push(currentPath);
+    } else {
+      // 영어 라우트 + 한국어 라우트 쌍 추가
+      result.push(currentPath);
+      const koPath = currentPath === '/' ? '/ko' : `/ko${currentPath}`;
+      // 중복 방지: /ko 라우트가 routes.ts에 이미 정의되어 있으면 추가 안함
+      if (!routes.some((r) => r.path === `ko${currentPath === '/' ? '' : currentPath}`)) {
+        result.push(koPath);
+      }
+    }
+
+    // 중첩 라우트 재귀 처리
+    if (route.children) {
+      result.push(...extractStaticRoutes(route.children, currentPath));
+    }
+  }
+
+  return [...new Set(result)]; // 중복 제거
+}

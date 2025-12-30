@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import type { Config } from '@react-router/dev/config';
-import { extractStaticRoutes, generateI18nRoutes } from '@soundblue/shared';
+import { extractStaticRoutes, generateI18nRoutes } from '@soundblue/i18n';
 import routes from './app/routes.js';
 
 /**

@@ -1,8 +1,9 @@
-import { EntryListItem, useAutoAnimate } from '@soundblue/shared-react';
+import { useAutoAnimate } from '@soundblue/ui/hooks';
 import { VirtualList } from '@soundblue/ui/patterns';
 import { ProgressBar } from '@soundblue/ui/primitives';
 import { useMemo } from 'react';
 import { Link, useLoaderData } from 'react-router';
+import { EntryListItem } from '@/components/entry/EntryListItem';
 import { Layout } from '@/components/layout';
 import { getCategoryById } from '@/data/categories';
 import type { Category, MeaningEntry } from '@/data/types';

@@ -155,6 +155,7 @@ export const ToastContainer = memo(function ToastContainer() {
         'flex flex-col gap-2 w-full max-w-sm px-4',
         'lg:bottom-6',
       )}
+      role="region"
       aria-label="알림"
     >
       {toasts.map((toast) => (

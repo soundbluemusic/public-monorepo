@@ -2,7 +2,7 @@
  * @fileoverview 분야 상세 페이지
  */
 
-import { useAutoAnimate } from '@soundblue/shared-react';
+import { useAutoAnimate } from '@soundblue/ui/hooks';
 import { Link, useLoaderData, useParams } from 'react-router';
 import { ConceptCard } from '@/components/concept/ConceptCard';
 import { Layout } from '@/components/layout/Layout';

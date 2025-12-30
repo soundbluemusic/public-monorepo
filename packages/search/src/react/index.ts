@@ -5,3 +5,4 @@
  */
 
 export { useSearch } from './useSearch';
+export { type SearchIndexItem, type SearchResult, useSearchWorker } from './useSearchWorker';

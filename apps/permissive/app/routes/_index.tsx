@@ -1,6 +1,6 @@
 import { LIMITS } from '@soundblue/core/validation';
+import { type SearchResult, useSearchWorker } from '@soundblue/search/react';
 import { metaFactory } from '@soundblue/seo/meta';
-import { type SearchResult, useSearchWorker } from '@soundblue/shared-react';
 import { cn } from '@soundblue/ui/utils';
 import {
   ChevronRight,

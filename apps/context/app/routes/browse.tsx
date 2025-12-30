@@ -1,10 +1,11 @@
 import { metaFactory } from '@soundblue/i18n';
-import { EntryListItem, useAutoAnimate } from '@soundblue/shared-react';
+import { useAutoAnimate } from '@soundblue/ui/hooks';
 import { VirtualList } from '@soundblue/ui/patterns';
 import { cn } from '@soundblue/ui/utils';
 import { Shuffle } from 'lucide-react';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useLoaderData, useSearchParams } from 'react-router';
+import { EntryListItem } from '@/components/entry/EntryListItem';
 import { Layout } from '@/components/layout';
 import { Select } from '@/components/Select';
 import { StatsCard } from '@/components/StatsCard';

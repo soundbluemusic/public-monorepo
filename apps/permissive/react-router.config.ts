@@ -1,5 +1,5 @@
 import type { Config } from '@react-router/dev/config';
-import { extractStaticRoutes } from '@soundblue/shared';
+import { extractStaticRoutes } from '@soundblue/i18n';
 import routes from './app/routes.js';
 
 /**

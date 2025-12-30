@@ -1,6 +1,7 @@
 import { LIMITS } from '@soundblue/core/validation';
 import { stripLocaleFromPath } from '@soundblue/i18n';
-import { DarkModeToggle, LanguageToggle, useSearchWorker } from '@soundblue/shared-react';
+import { useSearchWorker } from '@soundblue/search/react';
+import { DarkModeToggle, LanguageToggle } from '@soundblue/ui/components';
 import { SearchDropdown } from '@soundblue/ui/patterns';
 import { cn } from '@soundblue/ui/utils';
 import { ArrowUp, BookOpen, ChevronRight, Github, Heart, Star } from 'lucide-react';

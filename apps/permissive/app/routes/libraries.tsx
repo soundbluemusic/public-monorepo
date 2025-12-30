@@ -1,7 +1,7 @@
 import { LIMITS } from '@soundblue/core/validation';
 import { metaFactory } from '@soundblue/seo/meta';
-import { useAutoAnimate } from '@soundblue/shared-react';
 import { FadeIn } from '@soundblue/ui/animation';
+import { useAutoAnimate } from '@soundblue/ui/hooks';
 import { cn } from '@soundblue/ui/utils';
 import { CalendarPlus, Flame, Search, Star } from 'lucide-react';
 import { useMemo, useState } from 'react';

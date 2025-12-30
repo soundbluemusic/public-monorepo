@@ -11,7 +11,10 @@
     "./patterns": "./src/patterns/index.ts",
     "./feedback": "./src/feedback/index.ts",
     "./animation": "./src/animation/index.ts",
-    "./utils": "./src/utils/index.ts"
+    "./utils": "./src/utils/index.ts",
+    "./hooks": "./src/hooks/index.ts",
+    "./components": "./src/components/index.ts",
+    "./styles/base.css": "./src/styles/base.css"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
@@ -21,10 +24,12 @@
     "react-dom": "^19.2.3"
   },
   "dependencies": {
+    "@formkit/auto-animate": "^0.8.2",
     "@soundblue/features": "workspace:*",
     "@tanstack/react-virtual": "^3.13.13",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.26",
+    "lucide-react": "^0.468.0",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {

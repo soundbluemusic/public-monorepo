@@ -9,5 +9,5 @@ export * from './adapters';
 // Core
 export * from './core';
 
-// React (optional peer dependency)
-export * from './react';
+// Note: React exports are available via '@soundblue/search/react'
+// to avoid naming conflicts with core SearchResult type

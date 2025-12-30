@@ -1,6 +1,6 @@
 import { metaFactory } from '@soundblue/i18n';
-import { useAutoAnimate } from '@soundblue/shared-react';
 import { FadeIn } from '@soundblue/ui/animation';
+import { useAutoAnimate } from '@soundblue/ui/hooks';
 import { ProgressBar } from '@soundblue/ui/primitives';
 import { FolderOpen, Sparkles, TrendingUp } from 'lucide-react';
 import { Link, useLoaderData } from 'react-router';
