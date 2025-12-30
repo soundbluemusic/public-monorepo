@@ -3,5 +3,6 @@
 /sitemap-*.xml     /sitemap-*.xml     200
 /sitemap.xsl       /sitemap.xsl       200
 
-# SPA fallback - serve index.html for client-side routing
-/*                 /index.html        200
+# SPA fallback - serve __spa-fallback.html for client-side routing
+# This allows React Router to handle dynamic routes like /entry/:id
+/*                 /__spa-fallback.html   200
