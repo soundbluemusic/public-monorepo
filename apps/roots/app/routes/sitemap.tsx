@@ -1,5 +1,15 @@
 import { metaFactory } from '@soundblue/i18n';
-import { BookOpen, FileText, Heart, Home, Info, Pi, Ruler, Search } from 'lucide-react';
+import {
+  BookOpen,
+  ExternalLink,
+  FileText,
+  Heart,
+  Home,
+  Info,
+  Pi,
+  Ruler,
+  Search,
+} from 'lucide-react';
 import type { ReactNode } from 'react';
 import { Link } from 'react-router';
 import { Layout } from '@/components/layout/Layout';
@@ -116,17 +126,33 @@ export default function SitemapPage() {
           </h2>
           <p className="text-sm text-(--text-secondary) mb-4">
             {isKorean
-              ? 'XML 형식의 사이트맵을 직접 확인할 수 있습니다.'
-              : 'View the XML sitemap directly.'}
+              ? '검색엔진이 사이트를 색인하는 데 사용하는 XML 사이트맵입니다.'
+              : 'XML sitemaps used by search engines to index this site.'}
           </p>
-          <a
-            href="/sitemap.xml"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="min-h-11 px-6 inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors bg-(--accent-primary) text-white hover:brightness-110 active:scale-[0.98]"
-          >
-            sitemap.xml
-          </a>
+          <ul className="space-y-3">
+            {[
+              { path: '/sitemap.xml', labelEn: 'Sitemap Index', labelKo: '사이트맵 인덱스' },
+              { path: '/sitemap-pages.xml', labelEn: 'Pages Sitemap', labelKo: '페이지 사이트맵' },
+              { path: '/sitemap-fields.xml', labelEn: 'Fields Sitemap', labelKo: '분야 사이트맵' },
+              {
+                path: '/sitemap-concepts.xml',
+                labelEn: 'Concepts Sitemap',
+                labelKo: '개념 사이트맵',
+              },
+            ].map((sitemap) => (
+              <li key={sitemap.path}>
+                <a
+                  href={sitemap.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-(--accent-primary) hover:underline"
+                >
+                  {isKorean ? sitemap.labelKo : sitemap.labelEn}
+                  <ExternalLink size={14} className="opacity-60" />
+                </a>
+              </li>
+            ))}
+          </ul>
         </section>
       </div>
     </Layout>
