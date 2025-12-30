@@ -75,9 +75,10 @@ export default function Home() {
   const handleResultClick = useCallback(
     (result: SearchResult) => {
       const item = result.item;
+      // Navigate to library detail page for better UX
       const path =
         item.type === 'library'
-          ? `${localePath('/libraries')}#${item.id}`
+          ? `${localePath('/library')}/${item.id}`
           : `${localePath('/web-api')}#${item.id}`;
       navigate(path);
       setShowResults(false);
@@ -218,6 +219,20 @@ export default function Home() {
                 <div className="w-4 h-4 border-2 border-(--text-tertiary) border-t-transparent rounded-full animate-spin" />
               </div>
             )}
+            {/* Screen reader announcement for search results */}
+            <div aria-live="polite" aria-atomic="true" className="sr-only">
+              {showResults &&
+                !isLoading &&
+                results.length > 0 &&
+                (locale === 'ko'
+                  ? `${results.length}개의 검색 결과`
+                  : `${results.length} search results`)}
+              {showResults &&
+                !isLoading &&
+                query.trim() &&
+                results.length === 0 &&
+                (locale === 'ko' ? '검색 결과가 없습니다' : 'No results found')}
+            </div>
             {/* Search Results Dropdown */}
             {showResults && results.length > 0 && (
               <div
@@ -230,19 +245,23 @@ export default function Home() {
                   const name = locale === 'ko' ? item.name.ko : item.name.en;
                   const isSelected = index === selectedIndex;
                   return (
-                    <div
+                    <button
+                      type="button"
                       key={item.id}
                       id={`search-option-${index}`}
                       role="option"
-                      tabIndex={-1}
+                      tabIndex={isSelected ? 0 : -1}
                       aria-selected={isSelected}
                       onMouseEnter={() => setSelectedIndex(index)}
                       onClick={() => handleResultClick(result)}
                       onKeyDown={(e) => {
-                        if (e.key === 'Enter') handleResultClick(result);
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          handleResultClick(result);
+                        }
                       }}
                       className={cn(
-                        'flex items-center gap-3 px-4 py-2.5 text-left transition-colors cursor-pointer',
+                        'flex items-center gap-3 px-4 py-2.5 text-left transition-colors cursor-pointer w-full',
                         isSelected ? 'bg-(--bg-tertiary)' : 'hover:bg-(--bg-tertiary)',
                       )}
                     >
@@ -258,13 +277,13 @@ export default function Home() {
                         className={cn(
                           'px-2 py-0.5 rounded text-xs font-medium',
                           item.type === 'library'
-                            ? 'bg-purple-500/10 text-purple-500'
-                            : 'bg-blue-500/10 text-blue-500',
+                            ? 'bg-(--accent-primary)/10 text-(--accent-primary)'
+                            : 'bg-blue-500/10 text-blue-500 dark:bg-blue-400/10 dark:text-blue-400',
                         )}
                       >
                         {item.type === 'library' ? 'Library' : 'API'}
                       </span>
-                    </div>
+                    </button>
                   );
                 })}
               </div>

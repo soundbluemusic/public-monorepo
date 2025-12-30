@@ -149,15 +149,14 @@ export default function Sidebar({
     <>
       {/* Overlay (mobile only) */}
       {isMobile && isOpen && (
-        <div
+        <button
+          type="button"
           className={cn(
-            'fixed inset-0 z-40 bg-black/50 transition-opacity',
+            'fixed inset-0 z-40 bg-black/50 transition-opacity cursor-pointer',
             isReady ? 'opacity-100' : 'opacity-0',
           )}
           onClick={onClose}
           onKeyDown={(e: React.KeyboardEvent) => e.key === 'Escape' && onClose()}
-          role="button"
-          tabIndex={0}
           aria-label={t('aria.closeSidebar')}
         />
       )}

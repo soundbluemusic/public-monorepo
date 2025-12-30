@@ -54,7 +54,9 @@ export default function BottomNav() {
           aria-current={isActive(item.href) ? 'page' : undefined}
         >
           {item.icon}
-          <span className="text-xs">{locale === 'ko' ? item.labelKo : item.label}</span>
+          <span className="text-[11px] sm:text-xs font-medium">
+            {locale === 'ko' ? item.labelKo : item.label}
+          </span>
         </Link>
       ))}
     </nav>

@@ -147,7 +147,6 @@ export default function LibraryDetailPage() {
             >
               <Github size={18} aria-hidden="true" />
               GitHub
-              <ExternalLink size={14} aria-hidden="true" className="opacity-50" />
             </a>
             {lib.website && (
               <a
@@ -158,7 +157,6 @@ export default function LibraryDetailPage() {
               >
                 <ExternalLink size={18} aria-hidden="true" />
                 Website
-                <ExternalLink size={14} aria-hidden="true" className="opacity-50" />
               </a>
             )}
             {lib.npm && (
@@ -170,7 +168,6 @@ export default function LibraryDetailPage() {
               >
                 <Package size={18} aria-hidden="true" />
                 npm
-                <ExternalLink size={14} aria-hidden="true" className="opacity-50" />
               </a>
             )}
           </div>
