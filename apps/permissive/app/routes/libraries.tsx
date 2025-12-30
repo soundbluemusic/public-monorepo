@@ -1,5 +1,5 @@
+import { LIMITS } from '@soundblue/core/validation';
 import { metaFactory } from '@soundblue/seo/meta';
-import { LIMITS } from '@soundblue/shared';
 import { useAutoAnimate } from '@soundblue/shared-react';
 import { FadeIn } from '@soundblue/ui/animation';
 import { cn } from '@soundblue/ui/utils';
