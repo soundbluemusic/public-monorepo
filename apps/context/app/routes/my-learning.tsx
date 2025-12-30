@@ -44,34 +44,41 @@ export default function MyLearningPage() {
     Record<string, { studied: number; total: number }>
   >({});
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     async function loadData() {
-      // 클라이언트에서 데이터 로드
-      const [{ meaningEntries }, { categories: loadedCategories }] = await Promise.all([
-        import('@/data/entries'),
-        import('@/data/categories'),
-      ]);
+      try {
+        // 클라이언트에서 데이터 로드
+        const [{ meaningEntries }, { categories: loadedCategories }] = await Promise.all([
+          import('@/data/entries'),
+          import('@/data/categories'),
+        ]);
 
-      setEntries(meaningEntries);
-      setCats(loadedCategories);
-      setTotalEntries(meaningEntries.length);
+        setEntries(meaningEntries);
+        setCats(loadedCategories);
+        setTotalEntries(meaningEntries.length);
 
-      const studied = await studyRecords.getStudiedEntryIds();
-      setStudiedIds(studied);
+        const studied = await studyRecords.getStudiedEntryIds();
+        setStudiedIds(studied);
 
-      const favs = await favorites.getAll();
-      setFavoriteIds(favs.map((f) => f.entryId));
+        const favs = await favorites.getAll();
+        setFavoriteIds(favs.map((f) => f.entryId));
 
-      const catProgress: Record<string, { studied: number; total: number }> = {};
-      const studiedSet = new Set(studied);
-      for (const cat of loadedCategories) {
-        const catEntries = meaningEntries.filter((e) => e.categoryId === cat.id);
-        const studiedInCat = catEntries.filter((e) => studiedSet.has(e.id)).length;
-        catProgress[cat.id] = { studied: studiedInCat, total: catEntries.length };
+        const catProgress: Record<string, { studied: number; total: number }> = {};
+        const studiedSet = new Set(studied);
+        for (const cat of loadedCategories) {
+          const catEntries = meaningEntries.filter((e) => e.categoryId === cat.id);
+          const studiedInCat = catEntries.filter((e) => studiedSet.has(e.id)).length;
+          catProgress[cat.id] = { studied: studiedInCat, total: catEntries.length };
+        }
+        setCategoryProgress(catProgress);
+      } catch (err) {
+        console.error('Failed to load my-learning data:', err);
+        setError(err instanceof Error ? err.message : 'Failed to load data');
+      } finally {
+        setIsLoading(false);
       }
-      setCategoryProgress(catProgress);
-      setIsLoading(false);
     }
     loadData();
   }, []);
@@ -108,6 +115,24 @@ export default function MyLearningPage() {
               <Skeleton key={i} className="h-20 rounded-xl" />
             ))}
           </div>
+        </div>
+      </Layout>
+    );
+  }
+
+  // 에러 상태
+  if (error) {
+    return (
+      <Layout>
+        <div className="text-center py-12 px-4">
+          <p className="text-(--text-secondary) mb-4">{error}</p>
+          <button
+            type="button"
+            onClick={() => window.location.reload()}
+            className="min-h-11 px-6 inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors bg-(--accent-primary) text-white hover:brightness-110"
+          >
+            {locale === 'ko' ? '다시 시도' : 'Try Again'}
+          </button>
         </div>
       </Layout>
     );
