@@ -620,6 +620,85 @@ export const conversations: Conversation[] = [
       { speaker: 'B', ko: '네, 휴가 신청서 내세요.', en: 'Okay, submit your vacation request.' },
     ],
   },
+
+  // ============================================================================
+  // 국가 (Countries)
+  // ============================================================================
+  {
+    id: 'countries-travel-1',
+    categoryId: 'countries',
+    title: { ko: '여행 계획', en: 'Travel Plans' },
+    dialogue: [
+      {
+        speaker: 'A',
+        ko: '다음 휴가에 어디로 가고 싶으세요?',
+        en: 'Where would you like to go for your next vacation?',
+      },
+      { speaker: 'B', ko: '저는 일본에 가고 싶어요.', en: 'I would like to go to Japan.' },
+      { speaker: 'A', ko: '일본에 가보셨나요?', en: 'Have you ever been to Japan?' },
+      { speaker: 'B', ko: '아니요, 아직이요. 당신은요?', en: 'No, not yet. How about you?' },
+    ],
+  },
+  {
+    id: 'countries-origin-1',
+    categoryId: 'countries',
+    title: { ko: '출신 소개', en: 'Introducing Origin' },
+    dialogue: [
+      { speaker: 'A', ko: '어디에서 오셨어요?', en: 'Where are you from?' },
+      { speaker: 'B', ko: '저는 대한민국에서 왔어요.', en: 'I am from South Korea.' },
+      {
+        speaker: 'A',
+        ko: '아, 그렇군요! 저도 아시아에서 왔어요.',
+        en: 'Oh, I see! I am also from Asia.',
+      },
+      { speaker: 'B', ko: '어느 나라요?', en: 'Which country?' },
+    ],
+  },
+  {
+    id: 'countries-location-1',
+    categoryId: 'countries',
+    title: { ko: '위치 설명', en: 'Explaining Locations' },
+    dialogue: [
+      { speaker: 'A', ko: '호주는 어디에 위치해 있어요?', en: 'Where is Australia located?' },
+      {
+        speaker: 'B',
+        ko: '호주는 오세아니아에 위치해 있습니다.',
+        en: 'Australia is located in Oceania.',
+      },
+      { speaker: 'A', ko: '호주의 수도는 어디예요?', en: 'What is the capital of Australia?' },
+      {
+        speaker: 'B',
+        ko: '호주의 수도는 캔버라입니다.',
+        en: 'The capital of Australia is Canberra.',
+      },
+    ],
+  },
+  {
+    id: 'countries-capital-1',
+    categoryId: 'countries',
+    title: { ko: '수도 대화', en: 'Talking About Capitals' },
+    dialogue: [
+      { speaker: 'A', ko: '프랑스의 수도가 어디예요?', en: 'What is the capital of France?' },
+      { speaker: 'B', ko: '프랑스의 수도는 파리입니다.', en: 'The capital of France is Paris.' },
+      { speaker: 'A', ko: '파리에 가보셨나요?', en: 'Have you ever been to Paris?' },
+      { speaker: 'B', ko: '네, 작년에 갔었어요.', en: 'Yes, I went there last year.' },
+    ],
+  },
+  {
+    id: 'countries-friend-1',
+    categoryId: 'countries',
+    title: { ko: '친구 소개', en: 'Introducing Friends' },
+    dialogue: [
+      { speaker: 'A', ko: '캐나다에서 온 친구가 있어요.', en: 'I have a friend from Canada.' },
+      {
+        speaker: 'B',
+        ko: '그렇군요! 캐나다는 북아메리카에 있죠?',
+        en: 'I see! Canada is in North America, right?',
+      },
+      { speaker: 'A', ko: '네, 맞아요.', en: 'Yes, that is right.' },
+      { speaker: 'B', ko: '캐나다에 가보고 싶어요.', en: 'I want to visit Canada.' },
+    ],
+  },
 ];
 
 // ============================================================================
