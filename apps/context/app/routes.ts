@@ -4,6 +4,7 @@ export default [
   // English routes
   index('routes/_index.tsx'),
   route('browse', 'routes/browse.tsx'),
+  route('my-learning', 'routes/my-learning.tsx'),
   route('about', 'routes/about.tsx'),
   route('sitemap', 'routes/sitemap.tsx'),
   route('privacy', 'routes/privacy.tsx'),
@@ -18,6 +19,7 @@ export default [
   // Korean routes
   route('ko', 'routes/ko._index.tsx'),
   route('ko/browse', 'routes/ko.browse.tsx'),
+  route('ko/my-learning', 'routes/ko.my-learning.tsx'),
   route('ko/about', 'routes/ko.about.tsx'),
   route('ko/sitemap', 'routes/ko.sitemap.tsx'),
   route('ko/privacy', 'routes/ko.privacy.tsx'),
