@@ -1,4 +1,4 @@
-# 🎵 Soundblue Monorepo
+# 🎵 Public Monorepo
 
 **Three apps for learners (학습자를 위한 세 개의 앱)**
 
