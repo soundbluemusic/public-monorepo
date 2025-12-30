@@ -7138,5 +7138,285 @@
     "pronunciation": {
       "korean": "[맨 섬]"
     }
+  },
+  {
+    "id": "american-samoa",
+    "korean": "아메리칸 사모아",
+    "romanization": "amerikeon samoa",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["oceania", "territory"],
+    "translations": {
+      "ko": {
+        "word": "아메리칸 사모아",
+        "explanation": "오세아니아에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 아메리칸 사모아에 살고 있습니다.",
+          "intermediate": "당신은 아메리칸 사모아에 가보셨나요?",
+          "advanced": "아메리칸 사모아는 오세아니아에 위치해 있습니다.",
+          "master": "아메리칸 사모아에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "American Samoa",
+        "explanation": "A region located in Oceania.",
+        "examples": {
+          "beginner": "I live in American Samoa.",
+          "intermediate": "Have you ever been to American Samoa?",
+          "advanced": "American Samoa is located in Oceania.",
+          "master": "I have a friend from American Samoa."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아메리칸 사모아]"
+    }
+  },
+  {
+    "id": "cook-islands",
+    "korean": "쿡 제도",
+    "romanization": "kuk jedo",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["oceania", "territory"],
+    "translations": {
+      "ko": {
+        "word": "쿡 제도",
+        "explanation": "오세아니아에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 쿡 제도에 살고 있습니다.",
+          "intermediate": "당신은 쿡 제도에 가보셨나요?",
+          "advanced": "쿡 제도는 오세아니아에 위치해 있습니다.",
+          "master": "쿡 제도에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Cook Islands",
+        "explanation": "A region located in Oceania.",
+        "examples": {
+          "beginner": "I live in the Cook Islands.",
+          "intermediate": "Have you ever been to the Cook Islands?",
+          "advanced": "The Cook Islands is located in Oceania.",
+          "master": "I have a friend from the Cook Islands."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[쿡 제도]"
+    }
+  },
+  {
+    "id": "french-polynesia",
+    "korean": "프랑스령 폴리네시아",
+    "romanization": "peurangseuryeong pollinesia",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["oceania", "territory"],
+    "translations": {
+      "ko": {
+        "word": "프랑스령 폴리네시아",
+        "explanation": "오세아니아에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 프랑스령 폴리네시아에 살고 있습니다.",
+          "intermediate": "당신은 프랑스령 폴리네시아에 가보셨나요?",
+          "advanced": "프랑스령 폴리네시아는 오세아니아에 위치해 있습니다.",
+          "master": "프랑스령 폴리네시아에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "French Polynesia",
+        "explanation": "A region located in Oceania.",
+        "examples": {
+          "beginner": "I live in French Polynesia.",
+          "intermediate": "Have you ever been to French Polynesia?",
+          "advanced": "French Polynesia is located in Oceania.",
+          "master": "I have a friend from French Polynesia."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[프랑스령 폴리네시아]"
+    }
+  },
+  {
+    "id": "guam",
+    "korean": "괌",
+    "romanization": "gwam",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["oceania", "territory"],
+    "translations": {
+      "ko": {
+        "word": "괌",
+        "explanation": "오세아니아에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 괌에 살고 있습니다.",
+          "intermediate": "당신은 괌에 가보셨나요?",
+          "advanced": "괌은 오세아니아에 위치해 있습니다.",
+          "master": "괌에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Guam",
+        "explanation": "A region located in Oceania.",
+        "examples": {
+          "beginner": "I live in Guam.",
+          "intermediate": "Have you ever been to Guam?",
+          "advanced": "Guam is located in Oceania.",
+          "master": "I have a friend from Guam."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[괌]"
+    }
+  },
+  {
+    "id": "new-caledonia",
+    "korean": "뉴칼레도니아",
+    "romanization": "nyukalledonia",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": ["oceania", "territory"],
+    "translations": {
+      "ko": {
+        "word": "뉴칼레도니아",
+        "explanation": "오세아니아에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 뉴칼레도니아에 살고 있습니다.",
+          "intermediate": "당신은 뉴칼레도니아에 가보셨나요?",
+          "advanced": "뉴칼레도니아는 오세아니아에 위치해 있습니다.",
+          "master": "뉴칼레도니아에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "New Caledonia",
+        "explanation": "A region located in Oceania.",
+        "examples": {
+          "beginner": "I live in New Caledonia.",
+          "intermediate": "Have you ever been to New Caledonia?",
+          "advanced": "New Caledonia is located in Oceania.",
+          "master": "I have a friend from New Caledonia."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[뉴칼레도니아]"
+    }
+  },
+  {
+    "id": "niue",
+    "korean": "니우에",
+    "romanization": "niue",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["oceania", "territory"],
+    "translations": {
+      "ko": {
+        "word": "니우에",
+        "explanation": "오세아니아에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 니우에에 살고 있습니다.",
+          "intermediate": "당신은 니우에에 가보셨나요?",
+          "advanced": "니우에는 오세아니아에 위치해 있습니다.",
+          "master": "니우에에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Niue",
+        "explanation": "A region located in Oceania.",
+        "examples": {
+          "beginner": "I live in Niue.",
+          "intermediate": "Have you ever been to Niue?",
+          "advanced": "Niue is located in Oceania.",
+          "master": "I have a friend from Niue."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[니우에]"
+    }
+  },
+  {
+    "id": "northern-mariana-islands",
+    "korean": "북마리아나 제도",
+    "romanization": "bungmariana jedo",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["oceania", "territory"],
+    "translations": {
+      "ko": {
+        "word": "북마리아나 제도",
+        "explanation": "오세아니아에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 북마리아나 제도에 살고 있습니다.",
+          "intermediate": "당신은 북마리아나 제도에 가보셨나요?",
+          "advanced": "북마리아나 제도는 오세아니아에 위치해 있습니다.",
+          "master": "북마리아나 제도에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Northern Mariana Islands",
+        "explanation": "A region located in Oceania.",
+        "examples": {
+          "beginner": "I live in the Northern Mariana Islands.",
+          "intermediate": "Have you ever been to the Northern Mariana Islands?",
+          "advanced": "The Northern Mariana Islands is located in Oceania.",
+          "master": "I have a friend from the Northern Mariana Islands."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[북마리아나 제도]"
+    }
+  },
+  {
+    "id": "tokelau",
+    "korean": "토켈라우",
+    "romanization": "tokellau",
+    "partOfSpeech": "noun",
+    "categoryId": "countries",
+    "difficulty": "advanced",
+    "frequency": "rare",
+    "tags": ["oceania", "territory"],
+    "translations": {
+      "ko": {
+        "word": "토켈라우",
+        "explanation": "오세아니아에 위치한 지역입니다.",
+        "examples": {
+          "beginner": "저는 토켈라우에 살고 있습니다.",
+          "intermediate": "당신은 토켈라우에 가보셨나요?",
+          "advanced": "토켈라우는 오세아니아에 위치해 있습니다.",
+          "master": "토켈라우에서 온 친구가 있습니다."
+        }
+      },
+      "en": {
+        "word": "Tokelau",
+        "explanation": "A region located in Oceania.",
+        "examples": {
+          "beginner": "I live in Tokelau.",
+          "intermediate": "Have you ever been to Tokelau?",
+          "advanced": "Tokelau is located in Oceania.",
+          "master": "I have a friend from Tokelau."
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[토켈라우]"
+    }
   }
 ]
