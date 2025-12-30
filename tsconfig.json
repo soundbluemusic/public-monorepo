@@ -21,8 +21,16 @@
     { "path": "./apps/context" },
     { "path": "./apps/permissive" },
     { "path": "./apps/roots" },
-    { "path": "./packages/shared" },
-    { "path": "./packages/shared-react" }
+    { "path": "./packages/core" },
+    { "path": "./packages/config" },
+    { "path": "./packages/data" },
+    { "path": "./packages/platform" },
+    { "path": "./packages/i18n" },
+    { "path": "./packages/search" },
+    { "path": "./packages/seo" },
+    { "path": "./packages/pwa" },
+    { "path": "./packages/features" },
+    { "path": "./packages/ui" }
   ],
   "files": []
 }

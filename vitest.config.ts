@@ -1,13 +1,28 @@
+import path from 'node:path';
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   esbuild: {
     jsx: 'automatic',
   },
+  resolve: {
+    alias: {
+      '@soundblue/core': path.resolve(__dirname, 'packages/core/src'),
+      '@soundblue/config': path.resolve(__dirname, 'packages/config/src'),
+      '@soundblue/data': path.resolve(__dirname, 'packages/data/src'),
+      '@soundblue/platform': path.resolve(__dirname, 'packages/platform/src'),
+      '@soundblue/i18n': path.resolve(__dirname, 'packages/i18n/src'),
+      '@soundblue/search': path.resolve(__dirname, 'packages/search/src'),
+      '@soundblue/seo': path.resolve(__dirname, 'packages/seo/src'),
+      '@soundblue/pwa': path.resolve(__dirname, 'packages/pwa/src'),
+      '@soundblue/features': path.resolve(__dirname, 'packages/features/src'),
+      '@soundblue/ui': path.resolve(__dirname, 'packages/ui/src'),
+    },
+  },
   test: {
     globals: true,
     environment: 'jsdom',
-    include: ['tests/**/*.{test,spec}.{ts,tsx}', '**/*.{test,spec}.{ts,tsx}'],
+    include: ['tests/**/*.{test,spec}.{ts,tsx}'],
     exclude: ['node_modules', 'build', 'dist', '**/e2e/**'],
     setupFiles: ['./tests/setup.ts'],
     coverage: {
@@ -23,7 +38,6 @@ export default defineConfig({
         '**/types.ts',
         'tests/**',
         '**/e2e/**',
-        // Exclude app-specific files (routes, components) - these are tested via e2e/integration
         'apps/**/routes/**',
         'apps/**/app/root.tsx',
         'apps/**/app/entry.*.tsx',
@@ -36,10 +50,12 @@ export default defineConfig({
         '**/*.mjs',
       ],
       include: [
-        // Only include testable utility code - exclude index.ts and loader.ts files
-        'packages/shared/src/**/!(index|node|loader).ts',
-        'packages/shared-react/src/hooks/**/!(index).ts',
-        'packages/shared-react/src/stores/**/!(index).ts',
+        'packages/core/src/**/!(index).ts',
+        'packages/platform/src/**/!(index).ts',
+        'packages/i18n/src/**/!(index).ts',
+        'packages/search/src/**/!(index).ts',
+        'packages/seo/src/**/!(index).ts',
+        'packages/features/src/**/!(index).ts',
       ],
       thresholds: {
         global: {
@@ -49,12 +65,6 @@ export default defineConfig({
           lines: 80,
         },
       },
-    },
-  },
-  resolve: {
-    alias: {
-      '@soundblue/shared': '/packages/shared/src',
-      '@soundblue/shared-react': '/packages/shared-react/src',
     },
   },
 });

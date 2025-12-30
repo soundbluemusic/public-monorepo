@@ -10,12 +10,14 @@
     "./storage": {
       "browser": "./src/storage/index.browser.ts",
       "default": "./src/storage/index.noop.ts"
-    }
+    },
+    "./db": "./src/db/index.ts"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@soundblue/core": "workspace:*",
     "dexie": "^4.0.10"
   },
   "devDependencies": {
