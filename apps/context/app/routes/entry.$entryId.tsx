@@ -114,7 +114,7 @@ export default function EntryPage() {
 
   return (
     <Layout>
-      <article>
+      <article className="pt-6">
         <header className="mb-8">
           <div className="flex items-center justify-between gap-4 mb-4">
             <div className="flex-1">
