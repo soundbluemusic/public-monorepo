@@ -36,7 +36,10 @@ export function BrowseFilters({
             label: `${cat.icon} ${cat.name[locale]}`,
           })),
         ]}
-        onChange={(value) => onCategoryChange(value as FilterCategory)}
+        onChange={(value) => {
+          console.log('[DEBUG] Category changed to:', value);
+          onCategoryChange(value as FilterCategory);
+        }}
       />
 
       <Select
