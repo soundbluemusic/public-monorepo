@@ -37,11 +37,11 @@ export function FamilySites({ currentAppId, variant, locale = 'en' }: FamilySite
 
   if (variant === 'footer') {
     return (
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col items-center gap-2">
         <span className="text-xs font-medium text-(--text-tertiary) uppercase tracking-wider">
           {title}
         </span>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
           {otherApps.map((app) => {
             const Icon = getIcon(app.icon);
             return (
