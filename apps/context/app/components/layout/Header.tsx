@@ -12,9 +12,10 @@ const stripLocale = stripLocaleFromPath;
 
 interface HeaderProps {
   onMenuClick: () => void;
+  sidebarCollapsed?: boolean;
 }
 
-export function Header({ onMenuClick }: HeaderProps) {
+export function Header({ onMenuClick, sidebarCollapsed = false }: HeaderProps) {
   const { locale, t, localePath } = useI18n();
   const location = useLocation();
   const navigate = useNavigate();
@@ -124,7 +125,14 @@ export function Header({ onMenuClick }: HeaderProps) {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-40 h-(--header-height) backdrop-blur-sm bg-(--bg-primary)/80 border-b border-(--border-primary)">
-      <div className="h-full px-4 flex items-center gap-4 md:pl-[calc(var(--sidebar-width)+1rem)]">
+      <div
+        className={cn(
+          'h-full px-4 flex items-center gap-4 transition-[padding] duration-200',
+          sidebarCollapsed
+            ? 'md:pl-[calc(var(--sidebar-collapsed-width)+1rem)]'
+            : 'md:pl-[calc(var(--sidebar-width)+1rem)]',
+        )}
+      >
         {/* Menu Button (mobile only) */}
         <button
           type="button"

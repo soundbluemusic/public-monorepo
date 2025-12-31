@@ -53,7 +53,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
       </a>
 
       {/* Header */}
-      <Header onMenuClick={() => setSidebarOpen(true)} />
+      <Header onMenuClick={() => setSidebarOpen(true)} sidebarCollapsed={sidebarCollapsed} />
 
       {/* Sidebar */}
       <Sidebar
@@ -70,8 +70,9 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
         className={cn(
           'flex-1 w-full px-4 py-6 pb-20 md:pb-6',
           'pt-(--header-height)',
-          // Desktop: offset for fixed sidebar (18rem sidebar + 1rem gap = 19rem = 76 in Tailwind)
-          'md:pl-76 md:pr-4',
+          // Desktop: offset for fixed sidebar (collapsed: 56px + 1rem, expanded: 18rem + 1rem)
+          sidebarCollapsed ? 'md:pl-[calc(var(--sidebar-collapsed-width)+1rem)]' : 'md:pl-76',
+          'md:pr-4',
           'max-w-[calc(48rem+18rem+2rem)] mx-auto',
           'transition-[padding] duration-200',
         )}
