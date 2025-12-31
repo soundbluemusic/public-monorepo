@@ -46,6 +46,25 @@ export interface ManifestConfig {
   id?: string;
 }
 
+/** Web App Manifest JSON structure */
+export interface WebAppManifest {
+  name: string;
+  short_name: string;
+  description: string;
+  start_url: string;
+  display: 'standalone' | 'fullscreen' | 'minimal-ui' | 'browser';
+  background_color: string;
+  theme_color: string;
+  icons: ManifestIcon[];
+  shortcuts?: ManifestShortcut[];
+  categories?: string[];
+  lang?: string;
+  dir?: 'ltr' | 'rtl' | 'auto';
+  orientation?: 'any' | 'natural' | 'landscape' | 'portrait';
+  scope?: string;
+  id?: string;
+}
+
 // ============================================================================
 // Core Functions
 // ============================================================================
@@ -53,8 +72,8 @@ export interface ManifestConfig {
 /**
  * Generate manifest JSON content
  */
-export function generateManifestContent(config: ManifestConfig): object {
-  const manifest: Record<string, unknown> = {
+export function generateManifestContent(config: ManifestConfig): WebAppManifest {
+  const manifest: WebAppManifest = {
     name: config.name,
     short_name: config.short_name,
     description: config.description,

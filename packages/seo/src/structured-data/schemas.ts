@@ -52,14 +52,85 @@ export interface FAQItem {
 }
 
 // ============================================================================
+// JSON-LD Schema Types
+// ============================================================================
+
+/** Base JSON-LD schema with context and type */
+export interface JsonLdSchema {
+  '@context': 'https://schema.org';
+  '@type': string;
+  [key: string]: unknown;
+}
+
+/** WebSite JSON-LD schema */
+export interface WebSiteJsonLd extends JsonLdSchema {
+  '@type': 'WebSite';
+  name: string;
+  url: string;
+  description?: string;
+  inLanguage?: string | string[];
+  potentialAction?: {
+    '@type': 'SearchAction';
+    target: string;
+    'query-input': string;
+  };
+}
+
+/** Organization JSON-LD schema */
+export interface OrganizationJsonLd extends JsonLdSchema {
+  '@type': 'Organization';
+  name: string;
+  url: string;
+  logo?: string;
+  sameAs?: string[];
+}
+
+/** BreadcrumbList JSON-LD schema */
+export interface BreadcrumbListJsonLd extends JsonLdSchema {
+  '@type': 'BreadcrumbList';
+  itemListElement: Array<{
+    '@type': 'ListItem';
+    position: number;
+    name: string;
+    item: string;
+  }>;
+}
+
+/** Article JSON-LD schema */
+export interface ArticleJsonLd extends JsonLdSchema {
+  '@type': 'Article';
+  headline: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified?: string;
+  author?: { '@type': 'Person' | 'Organization'; name: string; url?: string };
+  image?: string;
+  inLanguage?: string;
+}
+
+/** FAQPage JSON-LD schema */
+export interface FAQPageJsonLd extends JsonLdSchema {
+  '@type': 'FAQPage';
+  mainEntity: Array<{
+    '@type': 'Question';
+    name: string;
+    acceptedAnswer: {
+      '@type': 'Answer';
+      text: string;
+    };
+  }>;
+}
+
+// ============================================================================
 // Core Functions
 // ============================================================================
 
 /**
  * Generate Website schema
  */
-export function generateWebsiteSchema(config: WebsiteSchema): object {
-  const schema: Record<string, unknown> = {
+export function generateWebsiteSchema(config: WebsiteSchema): WebSiteJsonLd {
+  const schema: WebSiteJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: config.name,
@@ -88,8 +159,8 @@ export function generateWebsiteSchema(config: WebsiteSchema): object {
 /**
  * Generate Organization schema
  */
-export function generateOrganizationSchema(config: OrganizationSchema): object {
-  const schema: Record<string, unknown> = {
+export function generateOrganizationSchema(config: OrganizationSchema): OrganizationJsonLd {
+  const schema: OrganizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: config.name,
@@ -110,12 +181,12 @@ export function generateOrganizationSchema(config: OrganizationSchema): object {
 /**
  * Generate BreadcrumbList schema
  */
-export function generateBreadcrumbSchema(items: BreadcrumbItem[]): object {
+export function generateBreadcrumbSchema(items: BreadcrumbItem[]): BreadcrumbListJsonLd {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: items.map((item, index) => ({
-      '@type': 'ListItem',
+      '@type': 'ListItem' as const,
       position: index + 1,
       name: item.name,
       item: item.url,
@@ -126,8 +197,8 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]): object {
 /**
  * Generate Article schema
  */
-export function generateArticleSchema(config: ArticleSchema): object {
-  const schema: Record<string, unknown> = {
+export function generateArticleSchema(config: ArticleSchema): ArticleJsonLd {
+  const schema: ArticleJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: config.headline,
@@ -143,8 +214,8 @@ export function generateArticleSchema(config: ArticleSchema): object {
   if (config.author) {
     schema.author =
       typeof config.author === 'string'
-        ? { '@type': 'Person', name: config.author }
-        : { '@type': 'Organization', ...config.author };
+        ? { '@type': 'Person' as const, name: config.author }
+        : { '@type': 'Organization' as const, name: config.author.name, url: config.author.url };
   }
 
   if (config.image) {
@@ -161,15 +232,15 @@ export function generateArticleSchema(config: ArticleSchema): object {
 /**
  * Generate FAQPage schema
  */
-export function generateFAQSchema(items: FAQItem[]): object {
+export function generateFAQSchema(items: FAQItem[]): FAQPageJsonLd {
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: items.map((item) => ({
-      '@type': 'Question',
+      '@type': 'Question' as const,
       name: item.question,
       acceptedAnswer: {
-        '@type': 'Answer',
+        '@type': 'Answer' as const,
         text: item.answer,
       },
     })),
@@ -179,13 +250,13 @@ export function generateFAQSchema(items: FAQItem[]): object {
 /**
  * Serialize schema to JSON-LD script tag content
  */
-export function serializeSchema(schema: object): string {
+export function serializeSchema(schema: JsonLdSchema): string {
   return JSON.stringify(schema, null, 0);
 }
 
 /**
  * Generate JSON-LD script tag HTML
  */
-export function generateJsonLdScript(schema: object): string {
+export function generateJsonLdScript(schema: JsonLdSchema): string {
   return `<script type="application/ld+json">${serializeSchema(schema)}</script>`;
 }

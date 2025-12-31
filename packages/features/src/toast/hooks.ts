@@ -103,6 +103,18 @@ function getServerSnapshot(): Toast[] {
   return [];
 }
 
+/** useToast 훅 반환 타입 */
+export interface UseToastReturn {
+  /** Toast 추가 함수 */
+  toast: (options: ToastOptions) => string;
+  /** 현재 표시 중인 Toast 목록 */
+  toasts: Toast[];
+  /** 특정 Toast 제거 */
+  removeToast: (id: string) => void;
+  /** 모든 Toast 제거 */
+  clearToasts: () => void;
+}
+
 /**
  * Toast 알림 훅
  *
@@ -117,21 +129,17 @@ function getServerSnapshot(): Toast[] {
  * toast({ message: '저장에 실패했습니다', type: 'error' });
  * ```
  */
-export function useToast() {
+export function useToast(): UseToastReturn {
   const toasts = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
-  const toast = useCallback((options: ToastOptions) => {
+  const toast = useCallback((options: ToastOptions): string => {
     return addToast(options);
   }, []);
 
   return {
-    /** Toast 추가 함수 */
     toast,
-    /** 현재 표시 중인 Toast 목록 */
     toasts,
-    /** 특정 Toast 제거 */
     removeToast,
-    /** 모든 Toast 제거 */
     clearToasts,
   };
 }
