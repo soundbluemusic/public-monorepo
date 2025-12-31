@@ -2,7 +2,18 @@ import { LIMITS } from '@soundblue/core/validation';
 import { stripLocaleFromPath } from '@soundblue/i18n';
 import { FamilySites } from '@soundblue/ui/components';
 import { cn } from '@soundblue/ui/utils';
-import { Bookmark, Code2, Home, Info, LayoutGrid, List, MessageCircle, X } from 'lucide-react';
+import {
+  Bookmark,
+  Code2,
+  Home,
+  Info,
+  LayoutGrid,
+  List,
+  MessageCircle,
+  PanelLeftClose,
+  PanelLeftOpen,
+  X,
+} from 'lucide-react';
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router';
 import { categories } from '@/data/categories';
@@ -12,10 +23,12 @@ const stripLocale = stripLocaleFromPath;
 
 interface SidebarProps {
   isOpen: boolean;
+  isCollapsed: boolean;
   onClose: () => void;
+  onToggleCollapse: () => void;
 }
 
-export function Sidebar({ isOpen, onClose }: SidebarProps) {
+export function Sidebar({ isOpen, isCollapsed, onClose, onToggleCollapse }: SidebarProps) {
   const { locale, t, localePath } = useI18n();
   const location = useLocation();
 
@@ -47,6 +60,14 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     return currentPath === basePath;
   };
 
+  const collapseLabel = isCollapsed
+    ? locale === 'ko'
+      ? '사이드바 펼치기'
+      : 'Expand sidebar'
+    : locale === 'ko'
+      ? '사이드바 접기'
+      : 'Collapse sidebar';
+
   return (
     <>
       {/* Backdrop (mobile only) */}
@@ -61,12 +82,16 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       {/* Sidebar */}
       <aside
         className={cn(
-          'fixed top-0 left-0 z-50 h-full w-72 bg-(--bg-elevated) border-r border-(--border-primary)',
-          'flex flex-col transform transition-transform duration-200',
-          // Mobile: slide in/out based on isOpen
+          'fixed top-0 left-0 z-50 h-full bg-(--bg-elevated) border-r border-(--border-primary)',
+          'flex flex-col transform transition-all duration-200',
+          // Mobile: slide in/out based on isOpen, always full width
           'md:translate-x-0 md:top-(--header-height) md:h-[calc(100vh-var(--header-height))]',
           isOpen ? 'translate-x-0' : '-translate-x-full',
+          // Desktop: width based on collapsed state
+          'w-72 md:w-(--sidebar-width)',
+          isCollapsed && 'md:w-(--sidebar-collapsed-width)',
         )}
+        data-collapsed={isCollapsed ? 'true' : undefined}
         aria-label={t('menu')}
       >
         {/* Header (mobile only) */}
@@ -92,10 +117,12 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
                 'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
                 isActive('/') && 'bg-(--bg-tertiary) text-(--accent-primary)',
+                isCollapsed && 'md:justify-center md:px-0',
               )}
+              title={isCollapsed ? t('home') : undefined}
             >
-              <Home size={20} aria-hidden="true" />
-              {t('home')}
+              <Home size={20} aria-hidden="true" className="shrink-0" />
+              <span className={cn(isCollapsed && 'md:hidden')}>{t('home')}</span>
             </Link>
             <Link
               to={localePath('/browse')}
@@ -104,10 +131,12 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
                 'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
                 isActive('/browse') && 'bg-(--bg-tertiary) text-(--accent-primary)',
+                isCollapsed && 'md:justify-center md:px-0',
               )}
+              title={isCollapsed ? t('browse') : undefined}
             >
-              <List size={20} aria-hidden="true" />
-              {t('browse')}
+              <List size={20} aria-hidden="true" className="shrink-0" />
+              <span className={cn(isCollapsed && 'md:hidden')}>{t('browse')}</span>
             </Link>
             <Link
               to={localePath('/conversations')}
@@ -116,10 +145,12 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
                 'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
                 isActive('/conversations') && 'bg-(--bg-tertiary) text-(--accent-primary)',
+                isCollapsed && 'md:justify-center md:px-0',
               )}
+              title={isCollapsed ? t('conversationExamples') : undefined}
             >
-              <MessageCircle size={20} aria-hidden="true" />
-              {t('conversationExamples')}
+              <MessageCircle size={20} aria-hidden="true" className="shrink-0" />
+              <span className={cn(isCollapsed && 'md:hidden')}>{t('conversationExamples')}</span>
             </Link>
             <Link
               to={localePath('/my-learning')}
@@ -128,10 +159,12 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
                 'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
                 isActive('/my-learning') && 'bg-(--bg-tertiary) text-(--accent-primary)',
+                isCollapsed && 'md:justify-center md:px-0',
               )}
+              title={isCollapsed ? t('myLearning') : undefined}
             >
-              <LayoutGrid size={20} aria-hidden="true" />
-              {t('myLearning')}
+              <LayoutGrid size={20} aria-hidden="true" className="shrink-0" />
+              <span className={cn(isCollapsed && 'md:hidden')}>{t('myLearning')}</span>
             </Link>
             <Link
               to={localePath('/bookmarks')}
@@ -140,10 +173,12 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
                 'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
                 isActive('/bookmarks') && 'bg-(--bg-tertiary) text-(--accent-primary)',
+                isCollapsed && 'md:justify-center md:px-0',
               )}
+              title={isCollapsed ? t('bookmarks') : undefined}
             >
-              <Bookmark size={20} aria-hidden="true" />
-              {t('bookmarks')}
+              <Bookmark size={20} aria-hidden="true" className="shrink-0" />
+              <span className={cn(isCollapsed && 'md:hidden')}>{t('bookmarks')}</span>
             </Link>
             <Link
               to={localePath('/about')}
@@ -152,15 +187,17 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
                 'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
                 isActive('/about') && 'bg-(--bg-tertiary) text-(--accent-primary)',
+                isCollapsed && 'md:justify-center md:px-0',
               )}
+              title={isCollapsed ? t('about') : undefined}
             >
-              <Info size={20} aria-hidden="true" />
-              {t('about')}
+              <Info size={20} aria-hidden="true" className="shrink-0" />
+              <span className={cn(isCollapsed && 'md:hidden')}>{t('about')}</span>
             </Link>
           </div>
 
-          {/* Categories */}
-          <div className="px-3 mb-6">
+          {/* Categories - hidden when collapsed */}
+          <div className={cn('px-3 mb-6', isCollapsed && 'md:hidden')}>
             <div className="px-3 py-2 text-xs font-medium uppercase tracking-wider text-(--text-tertiary)">
               {t('browseByCategory')}
             </div>
@@ -195,37 +232,62 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
         {/* Footer */}
         <div className="shrink-0 p-4 border-t border-(--border-primary)">
-          <div className="px-3 py-2 text-xs font-medium uppercase tracking-wider text-(--text-tertiary)">
-            {t('more')}
-          </div>
-          <Link
-            to={localePath('/built-with')}
-            onClick={onClose}
+          {/* Collapse Toggle Button (desktop only) */}
+          <button
+            type="button"
+            onClick={onToggleCollapse}
             className={cn(
-              'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
-              'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
-              isActive('/built-with') && 'bg-(--bg-tertiary) text-(--accent-primary)',
+              'hidden md:flex w-full items-center gap-2 min-h-11 px-3 py-2 rounded-lg',
+              'text-(--text-secondary) hover:bg-(--bg-tertiary) transition-colors cursor-pointer',
+              isCollapsed && 'justify-center',
             )}
+            title={collapseLabel}
+            aria-label={collapseLabel}
           >
-            <Code2 size={20} aria-hidden="true" />
-            {t('builtWithTitle')}
-          </Link>
-          <Link
-            to={localePath('/sitemap')}
-            onClick={onClose}
-            className={cn(
-              'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
-              'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
-              isActive('/sitemap') && 'bg-(--bg-tertiary) text-(--accent-primary)',
+            {isCollapsed ? (
+              <PanelLeftOpen size={18} aria-hidden="true" />
+            ) : (
+              <PanelLeftClose size={18} aria-hidden="true" />
             )}
-          >
-            <LayoutGrid size={20} aria-hidden="true" />
-            {t('sitemap')}
-          </Link>
+            <span className={cn(isCollapsed && 'md:hidden')}>
+              {locale === 'ko' ? '접기' : 'Collapse'}
+            </span>
+          </button>
 
-          {/* More from Us */}
-          <div className="mt-4">
-            <FamilySites currentAppId="context" variant="sidebar" locale={locale} />
+          {/* More section - hidden when collapsed */}
+          <div className={cn(isCollapsed && 'md:hidden')}>
+            <div className="px-3 py-2 text-xs font-medium uppercase tracking-wider text-(--text-tertiary)">
+              {t('more')}
+            </div>
+            <Link
+              to={localePath('/built-with')}
+              onClick={onClose}
+              className={cn(
+                'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
+                'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
+                isActive('/built-with') && 'bg-(--bg-tertiary) text-(--accent-primary)',
+              )}
+            >
+              <Code2 size={20} aria-hidden="true" />
+              {t('builtWithTitle')}
+            </Link>
+            <Link
+              to={localePath('/sitemap')}
+              onClick={onClose}
+              className={cn(
+                'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
+                'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
+                isActive('/sitemap') && 'bg-(--bg-tertiary) text-(--accent-primary)',
+              )}
+            >
+              <LayoutGrid size={20} aria-hidden="true" />
+              {t('sitemap')}
+            </Link>
+
+            {/* More from Us */}
+            <div className="mt-4">
+              <FamilySites currentAppId="context" variant="sidebar" locale={locale} />
+            </div>
           </div>
         </div>
       </aside>

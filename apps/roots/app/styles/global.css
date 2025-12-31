@@ -8,6 +8,8 @@
   /* Layout */
   --header-height: 56px;
   --bottom-nav-height: 64px;
+  --sidebar-width: 256px;
+  --sidebar-collapsed-width: 56px;
 
   /* Background */
   --bg-primary: #f8fafc;
@@ -186,4 +188,29 @@ a:focus-visible,
 input:focus-visible {
   outline: 2px solid var(--accent-primary);
   outline-offset: 2px;
+}
+
+/* ============================================
+   Sidebar Responsive Layout
+   ============================================ */
+
+/* Mobile: Hide sidebar by default (SSG hydration fix) */
+@media (max-width: 1023px) {
+  aside[aria-label="Math fields"] {
+    transform: translateX(-100%) !important;
+    visibility: hidden !important;
+  }
+
+  /* Show sidebar when explicitly opened via JavaScript */
+  aside[aria-label="Math fields"].translate-x-0 {
+    transform: translateX(0) !important;
+    visibility: visible !important;
+  }
+}
+
+/* Desktop: Sidebar collapsed state margin adjustment */
+@media (min-width: 1024px) {
+  main[data-sidebar-collapsed="true"] {
+    margin-left: var(--sidebar-collapsed-width) !important;
+  }
 }

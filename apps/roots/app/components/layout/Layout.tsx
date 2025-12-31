@@ -1,10 +1,11 @@
 import { LIMITS } from '@soundblue/core/validation';
+import { useSettingsStore } from '@soundblue/features/settings';
 import { stripLocaleFromPath } from '@soundblue/i18n';
 import { useSearchWorker } from '@soundblue/search/react';
 import { DarkModeToggle, FamilySites, LanguageToggle } from '@soundblue/ui/components';
 import { SearchDropdown } from '@soundblue/ui/patterns';
 import { cn } from '@soundblue/ui/utils';
-import { ArrowUp, BookOpen, ChevronRight, Github, Heart, Star } from 'lucide-react';
+import { ArrowUp, BookOpen, ChevronRight, Github, Heart, Menu, Star } from 'lucide-react';
 import { type ReactNode, useCallback, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { useI18n } from '@/i18n';
@@ -29,6 +30,8 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
   const navigate = useNavigate();
 
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const { sidebarCollapsed, toggleSidebarCollapse } = useSettingsStore();
 
   // Real-time search with Fuse.js
   const { query, setQuery, results, isLoading } = useSearchWorker({
@@ -71,15 +74,28 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
       </a>
 
       {/* Header */}
-      <header className="sticky top-0 z-40 backdrop-blur-sm bg-(--bg-primary)/80 border-b border-(--border-primary)">
-        <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
-          <Link
-            to={localePath('/')}
-            className="font-semibold shrink-0 flex items-center gap-2 text-(--text-primary) no-underline"
-          >
-            <span className="text-xl">π</span>
-            <span>Roots</span>
-          </Link>
+      <header className="fixed top-0 left-0 right-0 z-40 h-(--header-height) backdrop-blur-sm bg-(--bg-primary)/80 border-b border-(--border-primary)">
+        <div className="max-w-6xl mx-auto px-4 h-full flex items-center justify-between gap-4">
+          {/* Left: Menu button (mobile) + Logo */}
+          <div className="flex items-center gap-2">
+            {/* Mobile menu button */}
+            <button
+              type="button"
+              onClick={() => setSidebarOpen(true)}
+              className="lg:hidden min-h-11 min-w-11 flex items-center justify-center rounded-lg text-(--text-secondary) hover:bg-(--bg-tertiary) transition-colors cursor-pointer"
+              aria-label={locale === 'ko' ? '메뉴 열기' : 'Open menu'}
+            >
+              <Menu size={20} aria-hidden="true" />
+            </button>
+
+            <Link
+              to={localePath('/')}
+              className="font-semibold shrink-0 flex items-center gap-2 text-(--text-primary) no-underline"
+            >
+              <span className="text-xl">π</span>
+              <span>Roots</span>
+            </Link>
+          </div>
 
           {/* Real-time Search Dropdown */}
           <div className="flex-1 max-w-md">
@@ -137,13 +153,27 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
         </div>
       </header>
 
-      {/* Main Content with Sidebar */}
-      <div className="flex-1 flex">
-        <Sidebar />
-        <main
-          id="main-content"
-          className="flex-1 max-w-6xl mx-auto px-4 py-8 w-full pb-20 lg:ml-0 lg:pb-8"
-        >
+      {/* Sidebar */}
+      <Sidebar
+        isOpen={sidebarOpen}
+        isCollapsed={sidebarCollapsed}
+        onClose={() => setSidebarOpen(false)}
+        onToggleCollapse={toggleSidebarCollapse}
+      />
+
+      {/* Main Content */}
+      <main
+        id="main-content"
+        data-sidebar-collapsed={sidebarCollapsed ? 'true' : undefined}
+        className={cn(
+          'flex-1 w-full px-4 py-8 pb-20 lg:pb-8',
+          'pt-(--header-height)',
+          // Desktop: offset for fixed sidebar
+          'lg:ml-(--sidebar-width)',
+          'transition-[margin] duration-200',
+        )}
+      >
+        <div className="max-w-4xl mx-auto">
           {/* Breadcrumbs */}
           {breadcrumbs && breadcrumbs.length > 0 && (
             <nav aria-label="Breadcrumb" className="mb-4">
@@ -173,8 +203,8 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
             </nav>
           )}
           {children}
-        </main>
-      </div>
+        </div>
+      </main>
 
       {/* Mobile Bottom Navigation */}
       <nav

@@ -16,7 +16,7 @@ interface DocsLayoutProps {
 export default function DocsLayout({ children }: DocsLayoutProps) {
   const { t, locale } = useI18n();
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const { sidebarCollapsed, setSidebarCollapsed } = useSettingsStore();
+  const { sidebarCollapsed, toggleSidebarCollapse } = useSettingsStore();
   const isMobile = useIsMobile();
   const [isReady, setIsReady] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -44,7 +44,6 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
   }, []);
 
   const toggleSidebarOpen = () => setSidebarOpen(!sidebarOpen);
-  const toggleSidebarCollapsed = () => setSidebarCollapsed(!sidebarCollapsed);
   const closeSidebar = () => setSidebarOpen(false);
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -70,7 +69,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
         isMobile={isMobile}
         isReady={isReady}
         onClose={closeSidebar}
-        onToggleCollapse={toggleSidebarCollapsed}
+        onToggleCollapse={toggleSidebarCollapse}
       />
 
       {/* Main Content */}

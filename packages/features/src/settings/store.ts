@@ -23,16 +23,22 @@ type Theme = 'light' | 'dark' | 'system';
 interface SettingsState {
   /** Current theme setting. @default 'system' */
   theme: Theme;
-  /** Whether the sidebar is in collapsed (icon-only) mode. @default false */
+  /** Whether the sidebar is in collapsed (icon-only) mode on desktop. @default false */
   sidebarCollapsed: boolean;
+  /** Whether the mobile sidebar overlay is open. @default false */
+  sidebarOpen: boolean;
   /** Sets the theme and immediately applies it to the DOM. */
   setTheme: (theme: Theme) => void;
   /** Toggles between light and dark themes. */
   toggleTheme: () => void;
-  /** Sets the sidebar collapsed state. */
+  /** Sets the sidebar collapsed state (desktop). */
   setSidebarCollapsed: (collapsed: boolean) => void;
-  /** Toggles the sidebar between collapsed and expanded states. */
-  toggleSidebar: () => void;
+  /** Toggles the sidebar between collapsed and expanded states (desktop). */
+  toggleSidebarCollapse: () => void;
+  /** Sets the mobile sidebar open state. */
+  setSidebarOpen: (open: boolean) => void;
+  /** Toggles the mobile sidebar overlay. */
+  toggleSidebarOpen: () => void;
 }
 
 /**
@@ -61,6 +67,7 @@ export const useSettingsStore = create<SettingsState>()(
     (set, get) => ({
       theme: 'system',
       sidebarCollapsed: false,
+      sidebarOpen: false,
 
       setTheme: (theme) => {
         set({ theme });
@@ -76,13 +83,18 @@ export const useSettingsStore = create<SettingsState>()(
 
       setSidebarCollapsed: (collapsed) => set({ sidebarCollapsed: collapsed }),
 
-      toggleSidebar: () => set((state) => ({ sidebarCollapsed: !state.sidebarCollapsed })),
+      toggleSidebarCollapse: () => set((state) => ({ sidebarCollapsed: !state.sidebarCollapsed })),
+
+      setSidebarOpen: (open) => set({ sidebarOpen: open }),
+
+      toggleSidebarOpen: () => set((state) => ({ sidebarOpen: !state.sidebarOpen })),
     }),
     {
       name: 'settings-storage',
       partialize: (state) => ({
         theme: state.theme,
         sidebarCollapsed: state.sidebarCollapsed,
+        // sidebarOpen is not persisted (mobile overlay should start closed)
       }),
       onRehydrateStorage: () => (_state) => {
         // Theme is already applied by DARK_MODE_INIT_SCRIPT in <head>

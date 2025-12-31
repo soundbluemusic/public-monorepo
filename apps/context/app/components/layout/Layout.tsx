@@ -1,3 +1,4 @@
+import { useSettingsStore } from '@soundblue/features/settings';
 import { cn } from '@soundblue/ui/utils';
 import { ArrowUp, ChevronRight } from 'lucide-react';
 import { type ReactNode, useEffect, useState } from 'react';
@@ -22,6 +23,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
   const { t, localePath } = useI18n();
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const { sidebarCollapsed, toggleSidebarCollapse } = useSettingsStore();
 
   // 스크롤 이벤트 throttling (requestAnimationFrame 사용)
   useEffect(() => {
@@ -54,17 +56,24 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
       <Header onMenuClick={() => setSidebarOpen(true)} />
 
       {/* Sidebar */}
-      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <Sidebar
+        isOpen={sidebarOpen}
+        isCollapsed={sidebarCollapsed}
+        onClose={() => setSidebarOpen(false)}
+        onToggleCollapse={toggleSidebarCollapse}
+      />
 
       {/* Main Content */}
       <main
         id="main-content"
+        data-sidebar-collapsed={sidebarCollapsed ? 'true' : undefined}
         className={cn(
           'flex-1 w-full px-4 py-6 pb-20 md:pb-6',
           'pt-(--header-height)',
           // Desktop: offset for fixed sidebar (18rem sidebar + 1rem gap = 19rem = 76 in Tailwind)
           'md:pl-76 md:pr-4',
           'max-w-[calc(48rem+18rem+2rem)] mx-auto',
+          'transition-[padding] duration-200',
         )}
       >
         {breadcrumbs && breadcrumbs.length > 0 && (
