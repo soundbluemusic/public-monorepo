@@ -48,6 +48,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
           // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for dark mode flash prevention
           dangerouslySetInnerHTML={{ __html: DARK_MODE_INIT_SCRIPT }}
         />
+        <script
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: Debug script to verify JS execution
+          dangerouslySetInnerHTML={{
+            __html: 'console.log("[DEBUG] Inline script executed - JS is working");',
+          }}
+        />
       </head>
       <body>
         {children}

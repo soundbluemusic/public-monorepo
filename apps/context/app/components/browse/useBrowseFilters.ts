@@ -85,6 +85,7 @@ export function useBrowseFilters({
 
   // 카테고리 변경 시 동적 로드
   useEffect(() => {
+    console.log('[DEBUG] filterCategory changed to:', filterCategory);
     if (filterCategory === 'all') {
       setCategoryEntries(null);
       setIsLoadingCategory(false);
@@ -92,16 +93,19 @@ export function useBrowseFilters({
     }
 
     setIsLoadingCategory(true);
+    console.log('[DEBUG] Fetching category JSON:', `/data/by-category/${filterCategory}.json`);
     fetch(`/data/by-category/${filterCategory}.json`)
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json();
       })
       .then((data: LightEntry[]) => {
+        console.log('[DEBUG] Category data loaded:', data.length, 'entries');
         setCategoryEntries(data);
         setIsLoadingCategory(false);
       })
-      .catch(() => {
+      .catch((err) => {
+        console.error('[DEBUG] Category fetch error:', err);
         setCategoryEntries([]);
         setIsLoadingCategory(false);
       });

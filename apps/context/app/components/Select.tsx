@@ -42,6 +42,14 @@ interface SelectProps {
  * ```
  */
 export function Select({ id, label, value, options, onChange, className = '' }: SelectProps) {
+  // Debug: Log when component renders with React
+  console.log(`[SELECT ${id}] React render, value=${value}`);
+
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    console.log(`[SELECT ${id}] onChange fired: ${e.target.value}`);
+    onChange(e.target.value);
+  };
+
   return (
     <div className={className}>
       <label htmlFor={id} className="block text-sm mb-1 text-(--text-secondary)">
@@ -50,7 +58,7 @@ export function Select({ id, label, value, options, onChange, className = '' }: 
       <select
         id={id}
         value={value}
-        onChange={(e) => onChange(e.target.value)}
+        onChange={handleChange}
         className="w-full min-h-10 px-3 rounded-lg border border-(--border-primary) bg-(--bg-elevated) text-(--text-primary)"
       >
         {options.map((option) => (
