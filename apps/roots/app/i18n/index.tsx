@@ -116,7 +116,7 @@ export interface UILabels {
 interface I18nContextType {
   locale: Language;
   setLocale: (lang: Language) => void;
-  t: (key: string) => string;
+  t: (key: string, params?: Record<string, string | number>) => string;
   isKorean: boolean;
   localePath: (path: string) => string;
 }
@@ -138,20 +138,25 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       window.location.href = newPath;
     };
 
-    const t = (key: string): string => {
+    const t = (key: string, params?: Record<string, string | number>): string => {
       // Look up translation from JSON messages
       const dict = messages[locale];
-      const translation = dict[key];
-      if (translation !== undefined) {
-        return translation;
+      let translation = dict[key];
+      if (translation === undefined) {
+        // Fallback to English if key not found in current locale
+        translation = messages.en[key];
       }
-      // Fallback to English if key not found in current locale
-      const fallback = messages.en[key];
-      if (fallback !== undefined) {
-        return fallback;
+      if (translation === undefined) {
+        // Return key if not found anywhere
+        return key;
       }
-      // Return key if not found anywhere
-      return key;
+      // Replace template variables: {key} → value
+      if (params) {
+        for (const [k, v] of Object.entries(params)) {
+          translation = translation.replace(new RegExp(`\\{${k}\\}`, 'g'), String(v));
+        }
+      }
+      return translation;
     };
 
     const localePath = (path: string): string => {
