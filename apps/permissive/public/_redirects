@@ -1,9 +1,15 @@
-# Sitemap files - explicit listing (wildcard patterns don't work reliably)
+# Cloudflare Pages - Redirects Configuration
+# 100% SSG - 모든 페이지가 미리 생성되므로 SPA fallback 불필요
+# https://developers.cloudflare.com/pages/configuration/redirects/
+
+# SEO 파일 - 명시적 서빙
 /sitemap.xml            /sitemap.xml            200
 /sitemap-pages.xml      /sitemap-pages.xml      200
 /sitemap-libraries.xml  /sitemap-libraries.xml  200
 /sitemap-webapi.xml     /sitemap-webapi.xml     200
 /sitemap.xsl            /sitemap.xsl            200
+/robots.txt             /robots.txt             200
 
-# SPA fallback - serve index.html for client-side routing
-/*                      /index.html             200
+# 정적 자산 - Splat 매칭
+/assets/*          /assets/:splat     200
+/icons/*           /icons/:splat      200
