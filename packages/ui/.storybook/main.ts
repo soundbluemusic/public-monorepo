@@ -5,7 +5,7 @@ const config: StorybookConfig = {
   framework: '@storybook/react-vite',
   addons: ['@storybook/addon-a11y'],
   viteFinal: async (config) => {
-    // Tailwind CSS v4 support
+    // Tailwind CSS v4 via @tailwindcss/postcss
     config.css = {
       ...config.css,
       postcss: {

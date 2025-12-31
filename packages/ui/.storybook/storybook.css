@@ -1,36 +1,89 @@
-@import "tailwindcss";
+@import "../../config/src/styles/tailwind.css";
+@import "../src/styles/base.css";
 
-/* CSS 변수 (다크 테마 기본) */
+/* ============================================
+   Storybook Default Theme (Neutral)
+   Context는 Violet, Roots는 Emerald, Permissive는 Cyan
+   Storybook은 중립적인 테마 사용
+   ============================================ */
 :root {
+  /* Layout */
+  --header-height: 56px;
+  --bottom-nav-height: 64px;
+  --sidebar-width: 18rem;
+
+  /* Background (Neutral Light) */
+  --bg-primary: #fafafa;
+  --bg-secondary: #f5f5f5;
+  --bg-tertiary: #e5e5e5;
+  --bg-elevated: #ffffff;
+
+  /* Text */
+  --text-primary: #171717;
+  --text-secondary: #525252;
+  --text-tertiary: #737373;
+
+  /* Accent (Blue - Neutral) */
+  --accent-primary: #3b82f6;
+  --accent-secondary: #60a5fa;
+  --accent-tertiary: #93c5fd;
+  --accent-hover: #2563eb;
+  --accent-mint: #bfdbfe;
+
+  /* Border */
+  --border-primary: #e5e5e5;
+  --border-secondary: #d4d4d4;
+  --border-focus: #3b82f6;
+
+  /* Semantic */
+  --color-error: #dc4b4b;
+  --color-success: #22a06b;
+  --color-warning: #cf9f02;
+
+  /* Fonts */
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+.dark {
+  /* Background */
   --bg-primary: #0a0a0a;
   --bg-secondary: #141414;
   --bg-tertiary: #1f1f1f;
   --bg-elevated: #262626;
+
+  /* Text */
   --text-primary: #fafafa;
   --text-secondary: #a3a3a3;
   --text-tertiary: #737373;
+
+  /* Accent */
+  --accent-primary: #60a5fa;
+  --accent-secondary: #93c5fd;
+  --accent-tertiary: #bfdbfe;
+  --accent-hover: #3b82f6;
+  --accent-mint: #60a5fa;
+
+  /* Border */
   --border-primary: #262626;
   --border-secondary: #404040;
-  --accent-primary: #3b82f6;
-  --accent-mint: #34d399;
+  --border-focus: #60a5fa;
+
+  /* Semantic */
+  --color-error: #ff8080;
+  --color-success: #57d9a3;
+  --color-warning: #ffcc00;
 }
 
-/* 라이트 테마 */
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg-primary: #ffffff;
-    --bg-secondary: #f5f5f5;
-    --bg-tertiary: #e5e5e5;
-    --bg-elevated: #ffffff;
-    --text-primary: #171717;
-    --text-secondary: #525252;
-    --text-tertiary: #a3a3a3;
-    --border-primary: #e5e5e5;
-    --border-secondary: #d4d4d4;
-  }
+/* ============================================
+   Base Styles
+   ============================================ */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
 }
