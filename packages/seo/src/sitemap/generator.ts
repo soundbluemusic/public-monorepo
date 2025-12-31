@@ -92,7 +92,32 @@ export function generateHreflangLinks(
 }
 
 /**
- * Generate a single URL entry for sitemap
+ * Generate URL entries for all languages (each language gets its own <url> entry)
+ */
+export function generateUrlEntries(
+  siteUrl: string,
+  path: string,
+  priority: string,
+  changefreq: string,
+  languages: readonly string[],
+  today: string,
+  defaultLang = 'en',
+): string[] {
+  return languages.map((lang) => {
+    const locUrl = getLocalizedUrl(siteUrl, path, lang, defaultLang);
+    return `  <url>
+    <loc>${locUrl}</loc>
+    <lastmod>${today}</lastmod>
+${generateHreflangLinks(siteUrl, path, languages, defaultLang)}
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`;
+  });
+}
+
+/**
+ * @deprecated Use generateUrlEntries instead
+ * Generate a single URL entry for sitemap (only default language)
  */
 export function generateUrlEntry(
   siteUrl: string,
@@ -102,13 +127,8 @@ export function generateUrlEntry(
   languages: readonly string[],
   today: string,
 ): string {
-  return `  <url>
-    <loc>${getLocalizedUrl(siteUrl, path, 'en')}</loc>
-    <lastmod>${today}</lastmod>
-${generateHreflangLinks(siteUrl, path, languages)}
-    <changefreq>${changefreq}</changefreq>
-    <priority>${priority}</priority>
-  </url>`;
+  // For backward compatibility, return joined entries
+  return generateUrlEntries(siteUrl, path, priority, changefreq, languages, today).join('\n');
 }
 
 /**
@@ -269,14 +289,16 @@ export function generateSitemaps(
 
   const sitemapFiles: string[] = [];
 
-  // Generate static pages sitemap
-  const staticUrls = staticPages.map((page) =>
-    generateUrlEntry(siteUrl, page.path, page.priority, page.changefreq, languages, today),
+  // Generate static pages sitemap (each page × each language = separate URL entry)
+  const staticUrls = staticPages.flatMap((page) =>
+    generateUrlEntries(siteUrl, page.path, page.priority, page.changefreq, languages, today),
   );
   const staticSitemap = generateSitemap(staticUrls);
   writeToDirectories('sitemap-pages.xml', staticSitemap, outputDir, buildOutputDir);
   sitemapFiles.push('sitemap-pages.xml');
-  console.log(`✅ sitemap-pages.xml (${staticPages.length} pages × ${languages.length} languages)`);
+  console.log(
+    `✅ sitemap-pages.xml (${staticPages.length} pages × ${languages.length} languages = ${staticUrls.length} URLs)`,
+  );
 
   // Generate dynamic sitemaps
   for (const entry of dynamicSitemaps) {
@@ -305,7 +327,7 @@ export function generateSitemaps(
 }
 
 /**
- * Helper to create URL entries for dynamic routes
+ * Helper to create URL entries for dynamic routes (each ID × each language = separate URL)
  */
 export function createDynamicUrls(
   siteUrl: string,
@@ -316,7 +338,7 @@ export function createDynamicUrls(
   languages: readonly string[],
 ): string[] {
   const today = getTodayISODate();
-  return ids.map((id) =>
-    generateUrlEntry(siteUrl, `${pathPrefix}/${id}`, priority, changefreq, languages, today),
+  return ids.flatMap((id) =>
+    generateUrlEntries(siteUrl, `${pathPrefix}/${id}`, priority, changefreq, languages, today),
   );
 }
