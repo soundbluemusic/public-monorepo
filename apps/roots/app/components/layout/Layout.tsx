@@ -71,7 +71,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
       </a>
 
       {/* Header */}
-      <header className="sticky top-0 z-30 backdrop-blur-sm bg-(--bg-primary)/80 border-b border-(--border-primary)">
+      <header className="sticky top-0 z-40 backdrop-blur-sm bg-(--bg-primary)/80 border-b border-(--border-primary)">
         <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
           <Link
             to={localePath('/')}
@@ -218,7 +218,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
         <button
           type="button"
           onClick={scrollToTop}
-          className="fixed bottom-20 lg:bottom-8 right-4 z-30 min-h-11 min-w-11 flex items-center justify-center rounded-full shadow-md transition-colors bg-(--bg-elevated) border border-(--border-primary) text-(--text-secondary) cursor-pointer hover:bg-(--bg-tertiary)"
+          className="fixed bottom-20 lg:bottom-8 right-4 z-20 min-h-11 min-w-11 flex items-center justify-center rounded-full shadow-md transition-colors bg-(--bg-elevated) border border-(--border-primary) text-(--text-secondary) cursor-pointer hover:bg-(--bg-tertiary)"
           aria-label={t('backToTop')}
         >
           <ArrowUp size={20} aria-hidden="true" />

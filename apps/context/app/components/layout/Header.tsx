@@ -206,7 +206,7 @@ export function Header({ onMenuClick }: HeaderProps) {
           </div>
 
           {isOpen && results.length > 0 && (
-            <div className="absolute top-[calc(100%+4px)] left-0 right-0 z-600 max-h-75 overflow-y-auto bg-(--bg-secondary) border border-(--border-primary) rounded-xl shadow-lg m-0 p-1">
+            <div className="absolute top-[calc(100%+4px)] left-0 right-0 z-50 max-h-75 overflow-y-auto bg-(--bg-secondary) border border-(--border-primary) rounded-xl shadow-lg m-0 p-1">
               {results.map((result, index) => (
                 <Link
                   key={result.id}
@@ -233,7 +233,7 @@ export function Header({ onMenuClick }: HeaderProps) {
           )}
 
           {isOpen && query.trim() && query.length >= 2 && isReady && results.length === 0 && (
-            <div className="absolute top-[calc(100%+4px)] left-0 right-0 z-600 bg-(--bg-secondary) border border-(--border-primary) rounded-xl shadow-lg p-4 text-center text-sm text-(--text-tertiary)">
+            <div className="absolute top-[calc(100%+4px)] left-0 right-0 z-50 bg-(--bg-secondary) border border-(--border-primary) rounded-xl shadow-lg p-4 text-center text-sm text-(--text-tertiary)">
               {t('noResults')}
             </div>
           )}
