@@ -10,21 +10,6 @@ const config: StorybookConfig = {
   ],
   framework: '@storybook/react-vite',
   addons: ['@storybook/addon-a11y'],
-  managerHead: (head) => `
-    ${head}
-    <style>
-      /* Custom branding for public-monorepo by soundbluemusic */
-      :root {
-        --sb-color-primary: #3b82f6;
-        --sb-color-secondary: #60a5fa;
-      }
-    </style>
-    <script>
-      // Set brand title
-      window.STORYBOOK_BRAND_TITLE = 'public-monorepo by soundbluemusic';
-      window.STORYBOOK_BRAND_URL = 'https://github.com/soundbluemusic/public-monorepo';
-    </script>
-  `,
   viteFinal: async (config) => {
     // Tailwind CSS v4 via @tailwindcss/postcss
     config.css = {
