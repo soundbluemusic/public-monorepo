@@ -1,23 +1,33 @@
 import { getOpenSourceGrouped } from '@soundblue/core';
-import type { MetaFunction } from 'react-router';
-import { Layout } from '@/components/layout';
-import { useI18n } from '@/i18n';
+import { metaFactory } from '@soundblue/seo/meta';
+import DocsLayout from '../components/layout/DocsLayout';
+import { useI18n } from '../i18n';
 
-export const meta: MetaFunction = ({ location }) => {
-  const isKorean = location.pathname.startsWith('/ko');
-  return [{ title: isKorean ? '사용된 기술 - Context' : 'Built With - Context' }];
-};
+export const meta = metaFactory({
+  ko: {
+    title: '사용된 기술 - Permissive',
+    description: '이 사이트를 만드는 데 사용된 오픈소스 프로젝트 목록',
+  },
+  en: {
+    title: 'Built With - Permissive',
+    description: 'Open source projects used to build this site',
+  },
+});
 
 export default function BuiltWithPage() {
-  const { t, locale } = useI18n();
+  const { locale } = useI18n();
   const groups = getOpenSourceGrouped();
 
   return (
-    <Layout>
+    <DocsLayout>
       <h1 className="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-4">
-        {t('builtWithTitle')}
+        {locale === 'ko' ? '사용된 기술' : 'Built With'}
       </h1>
-      <p className="text-(--text-secondary) mb-8">{t('builtWithDescription')}</p>
+      <p className="text-(--text-secondary) mb-8">
+        {locale === 'ko'
+          ? '이 사이트는 다음 오픈소스 프로젝트들로 만들어졌습니다.'
+          : 'This site is built with the following open source projects.'}
+      </p>
 
       <div className="space-y-8">
         {groups.map((group) => (
@@ -55,6 +65,6 @@ export default function BuiltWithPage() {
           ? `총 ${groups.reduce((sum, g) => sum + g.projects.length, 0)}개의 오픈소스 프로젝트 사용`
           : `Using ${groups.reduce((sum, g) => sum + g.projects.length, 0)} open source projects`}
       </p>
-    </Layout>
+    </DocsLayout>
   );
 }

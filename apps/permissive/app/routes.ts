@@ -6,6 +6,7 @@ export default [
   route('web-api', 'routes/web-api.tsx'),
   route('libraries', 'routes/libraries.tsx'),
   route('library/:slug', 'routes/library.$slug.tsx'),
+  route('built-with', 'routes/built-with.tsx'),
   route('sitemap', 'routes/sitemap.tsx'),
 
   // Korean routes
@@ -13,6 +14,7 @@ export default [
   route('ko/web-api', 'routes/ko.web-api.tsx'),
   route('ko/libraries', 'routes/ko.libraries.tsx'),
   route('ko/library/:slug', 'routes/ko.library.$slug.tsx'),
+  route('ko/built-with', 'routes/ko.built-with.tsx'),
   route('ko/sitemap', 'routes/ko.sitemap.tsx'),
 
   // 404 catch-all

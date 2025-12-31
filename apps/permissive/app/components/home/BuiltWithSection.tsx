@@ -1,10 +1,17 @@
+import { OPEN_SOURCE_PROJECTS } from '@soundblue/core';
+import { Link } from 'react-router';
+
 interface BuiltWithSectionProps {
   locale: 'en' | 'ko';
 }
 
-const tools = ['React Router v7', 'React', 'Tailwind CSS', 'TypeScript', 'Vite'];
+// 홈페이지에 표시할 주요 도구 (카테고리: framework, build, styling)
+const FEATURED_TOOLS = ['React', 'React Router', 'TypeScript', 'Vite', 'Tailwind CSS'];
 
 export function BuiltWithSection({ locale }: BuiltWithSectionProps) {
+  const featuredProjects = OPEN_SOURCE_PROJECTS.filter((p) => FEATURED_TOOLS.includes(p.name));
+  const totalCount = OPEN_SOURCE_PROJECTS.length;
+
   return (
     <div className="py-8 text-center border-t border-(--border-primary)">
       <p className="text-sm text-(--text-tertiary) mb-3">
@@ -12,16 +19,27 @@ export function BuiltWithSection({ locale }: BuiltWithSectionProps) {
           ? '이 사이트도 여기 있는 도구로 만들었어요'
           : 'This site is built with tools listed here'}
       </p>
-      <div className="flex flex-wrap justify-center gap-2">
-        {tools.map((tag) => (
-          <span
-            key={tag}
-            className="px-3 py-1 rounded-full bg-(--bg-tertiary) text-(--text-secondary) text-xs"
+      <div className="flex flex-wrap justify-center gap-2 mb-4">
+        {featuredProjects.map((project) => (
+          <a
+            key={project.name}
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-3 py-1 rounded-full bg-(--bg-tertiary) text-(--text-secondary) text-xs hover:bg-(--accent-primary) hover:text-white transition-colors"
           >
-            {tag}
-          </span>
+            {project.name}
+          </a>
         ))}
       </div>
+      <Link
+        to={locale === 'ko' ? '/ko/built-with' : '/built-with'}
+        className="text-sm text-(--accent-primary) hover:underline"
+      >
+        {locale === 'ko'
+          ? `+${totalCount - featuredProjects.length}개 더 보기`
+          : `+${totalCount - featuredProjects.length} more`}
+      </Link>
     </div>
   );
 }
