@@ -14,6 +14,12 @@ export default function Footer() {
           aria-label="Footer links"
           className="flex items-center justify-center gap-6 mb-4 text-sm text-(--text-secondary)"
         >
+          <Link
+            to={localePath('/built-with')}
+            className="no-underline hover:underline text-inherit"
+          >
+            {locale === 'ko' ? '사용된 기술' : 'Built With'}
+          </Link>
           <Link to={localePath('/sitemap')} className="no-underline hover:underline text-inherit">
             {locale === 'ko' ? '사이트맵' : 'Sitemap'}
           </Link>

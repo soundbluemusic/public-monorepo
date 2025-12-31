@@ -2,7 +2,7 @@ import { LIMITS } from '@soundblue/core/validation';
 import { stripLocaleFromPath } from '@soundblue/i18n';
 import { FamilySites } from '@soundblue/ui/components';
 import { cn } from '@soundblue/ui/utils';
-import { Bookmark, Home, Info, LayoutGrid, List, MessageCircle, X } from 'lucide-react';
+import { Bookmark, Code2, Home, Info, LayoutGrid, List, MessageCircle, X } from 'lucide-react';
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router';
 import { categories } from '@/data/categories';
@@ -198,6 +198,18 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           <div className="px-3 py-2 text-xs font-medium uppercase tracking-wider text-(--text-tertiary)">
             {t('more')}
           </div>
+          <Link
+            to={localePath('/built-with')}
+            onClick={onClose}
+            className={cn(
+              'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
+              'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
+              isActive('/built-with') && 'bg-(--bg-tertiary) text-(--accent-primary)',
+            )}
+          >
+            <Code2 size={20} aria-hidden="true" />
+            {t('builtWithTitle')}
+          </Link>
           <Link
             to={localePath('/sitemap')}
             onClick={onClose}
