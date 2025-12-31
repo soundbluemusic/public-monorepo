@@ -1,2 +1,9 @@
+# Sitemap files - explicit listing (wildcard patterns don't work reliably)
+/sitemap.xml            /sitemap.xml            200
+/sitemap-pages.xml      /sitemap-pages.xml      200
+/sitemap-libraries.xml  /sitemap-libraries.xml  200
+/sitemap-webapi.xml     /sitemap-webapi.xml     200
+/sitemap.xsl            /sitemap.xsl            200
+
 # SPA fallback - serve index.html for client-side routing
-/* /index.html 200
+/*                      /index.html             200

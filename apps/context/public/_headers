@@ -5,6 +5,27 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' cloudflareinsights.com *.cloudflareinsights.com
 
+# Sitemap XML files - explicit MIME type
+/sitemap.xml
+  Content-Type: application/xml; charset=utf-8
+  Cache-Control: max-age=3600, stale-while-revalidate=86400
+
+/sitemap-pages.xml
+  Content-Type: application/xml; charset=utf-8
+  Cache-Control: max-age=3600, stale-while-revalidate=86400
+
+/sitemap-categories.xml
+  Content-Type: application/xml; charset=utf-8
+  Cache-Control: max-age=3600, stale-while-revalidate=86400
+
+/sitemap-entries.xml
+  Content-Type: application/xml; charset=utf-8
+  Cache-Control: max-age=3600, stale-while-revalidate=86400
+
+/sitemap.xsl
+  Content-Type: application/xslt+xml; charset=utf-8
+  Cache-Control: max-age=86400
+
 # HTML - 항상 최신 확인
 /*.html
   Cache-Control: max-age=0, must-revalidate
