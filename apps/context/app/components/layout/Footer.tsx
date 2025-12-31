@@ -1,9 +1,10 @@
+import { FamilySites } from '@soundblue/ui/components';
 import { Github } from 'lucide-react';
 import { Link } from 'react-router';
 import { useI18n } from '@/i18n';
 
 export function Footer() {
-  const { t, localePath } = useI18n();
+  const { locale, t, localePath } = useI18n();
 
   return (
     <footer className="hidden md:block mt-auto py-8 bg-(--bg-secondary) border-t border-(--border-primary)">
@@ -22,6 +23,12 @@ export function Footer() {
             {t('license')}
           </Link>
         </nav>
+
+        {/* More from Us */}
+        <div className="flex justify-center mb-4">
+          <FamilySites currentAppId="context" variant="footer" locale={locale} />
+        </div>
+
         <p className="text-center text-sm mb-2 text-(--text-tertiary)">
           {t('footerCredits')}{' '}
           <Link

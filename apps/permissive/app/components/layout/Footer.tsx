@@ -1,3 +1,4 @@
+import { FamilySites } from '@soundblue/ui/components';
 import { Github, Sparkles } from 'lucide-react';
 import { Link } from 'react-router';
 import { useI18n } from '../../i18n';
@@ -17,6 +18,11 @@ export default function Footer() {
             {locale === 'ko' ? '사이트맵' : 'Sitemap'}
           </Link>
         </nav>
+
+        {/* More from Us */}
+        <div className="flex justify-center mb-4">
+          <FamilySites currentAppId="permissive" variant="footer" locale={locale} />
+        </div>
 
         <div className="flex items-center justify-center gap-4 text-sm text-(--text-tertiary)">
           <div className="flex items-center gap-1.5">

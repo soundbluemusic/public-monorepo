@@ -3,6 +3,7 @@
  */
 
 import { stripLocaleFromPath } from '@soundblue/i18n';
+import { FamilySites } from '@soundblue/ui/components';
 import { cn } from '@soundblue/ui/utils';
 import { Link, useLocation } from 'react-router';
 import { fields } from '@/data/fields';
@@ -56,6 +57,11 @@ export function Sidebar() {
             )}
           </Link>
         ))}
+
+        {/* More from Us */}
+        <div className="mt-6 pt-4 border-t border-(--border-primary)">
+          <FamilySites currentAppId="roots" variant="sidebar" locale={locale} />
+        </div>
       </nav>
     </aside>
   );

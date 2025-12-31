@@ -1,7 +1,7 @@
 import { LIMITS } from '@soundblue/core/validation';
 import { stripLocaleFromPath } from '@soundblue/i18n';
 import { useSearchWorker } from '@soundblue/search/react';
-import { DarkModeToggle, LanguageToggle } from '@soundblue/ui/components';
+import { DarkModeToggle, FamilySites, LanguageToggle } from '@soundblue/ui/components';
 import { SearchDropdown } from '@soundblue/ui/patterns';
 import { cn } from '@soundblue/ui/utils';
 import { ArrowUp, BookOpen, ChevronRight, Github, Heart, Star } from 'lucide-react';
@@ -239,6 +239,12 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
               {t('sitemap')}
             </Link>
           </nav>
+
+          {/* More from Us */}
+          <div className="flex justify-center mb-4">
+            <FamilySites currentAppId="roots" variant="footer" locale={locale} />
+          </div>
+
           <div className="flex items-center justify-center gap-4 text-sm text-(--text-tertiary)">
             <p>{t('footerText')}</p>
             <a

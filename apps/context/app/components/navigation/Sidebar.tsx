@@ -1,5 +1,6 @@
 import { LIMITS } from '@soundblue/core/validation';
 import { stripLocaleFromPath } from '@soundblue/i18n';
+import { FamilySites } from '@soundblue/ui/components';
 import { cn } from '@soundblue/ui/utils';
 import { Home, Info, LayoutGrid, List, MessageCircle, X } from 'lucide-react';
 import { useEffect } from 'react';
@@ -197,6 +198,11 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             <LayoutGrid size={20} aria-hidden="true" />
             {t('sitemap')}
           </Link>
+
+          {/* More from Us */}
+          <div className="mt-4">
+            <FamilySites currentAppId="context" variant="sidebar" locale={locale} />
+          </div>
         </div>
       </aside>
     </>

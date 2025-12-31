@@ -1,3 +1,4 @@
+import { FamilySites } from '@soundblue/ui/components';
 import { cn } from '@soundblue/ui/utils';
 import { useLocation } from 'react-router';
 import { useI18n } from '../../i18n';
@@ -90,6 +91,10 @@ export default function Sidebar({
               links={quickLinks.libraries}
               locale={locale}
             />
+
+            {/* More from Us */}
+            <div className="my-4 border-t border-(--border-primary)" />
+            <FamilySites currentAppId="permissive" variant="sidebar" locale={locale} />
           </div>
         </nav>
 

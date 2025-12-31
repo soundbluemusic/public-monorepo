@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@formkit/auto-animate": "^0.8.2",
+    "@soundblue/core": "workspace:*",
     "@soundblue/features": "workspace:*",
     "@tanstack/react-virtual": "^3.13.13",
     "clsx": "^2.1.1",
