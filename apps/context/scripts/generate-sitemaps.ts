@@ -16,6 +16,7 @@ const CONFIG = {
   appName: 'Context',
   appSubtitle: 'Context - Korean Meaning Dictionary',
   outputDir: join(__dirname, '../public'),
+  buildOutputDir: join(__dirname, '../build/client'),
 };
 
 const STATIC_PAGES: StaticPage[] = [

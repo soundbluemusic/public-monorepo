@@ -6,7 +6,7 @@
  * Uses Node.js fs - only runs at build time, never in browser.
  */
 
-import { writeFileSync } from 'node:fs';
+import { existsSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 // ============================================================================
@@ -36,8 +36,10 @@ export interface SitemapConfig {
   appName: string;
   /** App subtitle for XSL stylesheet */
   appSubtitle: string;
-  /** Output directory for generated files */
+  /** Output directory for generated files (public/) */
   outputDir: string;
+  /** Build output directory (build/client/) - if exists, files are written here too */
+  buildOutputDir?: string;
 }
 
 export interface StaticPage {
@@ -235,6 +237,24 @@ export function generateXslStylesheet(appName: string, appSubtitle: string): str
 // ============================================================================
 
 /**
+ * Write file to output directory and optionally to build directory
+ */
+function writeToDirectories(
+  filename: string,
+  content: string,
+  outputDir: string,
+  buildOutputDir?: string,
+): void {
+  // Always write to public/
+  writeFileSync(join(outputDir, filename), content, 'utf-8');
+
+  // Also write to build/client/ if it exists
+  if (buildOutputDir && existsSync(buildOutputDir)) {
+    writeFileSync(join(buildOutputDir, filename), content, 'utf-8');
+  }
+}
+
+/**
  * Generate all sitemap files for an app
  */
 export function generateSitemaps(
@@ -242,7 +262,7 @@ export function generateSitemaps(
   staticPages: StaticPage[],
   dynamicSitemaps: SitemapEntry[],
 ): void {
-  const { siteUrl, languages, appName, appSubtitle, outputDir } = config;
+  const { siteUrl, languages, appName, appSubtitle, outputDir, buildOutputDir } = config;
   const today = getTodayISODate();
 
   console.log(`🗺️  Generating sitemaps for ${appName}...\n`);
@@ -254,7 +274,7 @@ export function generateSitemaps(
     generateUrlEntry(siteUrl, page.path, page.priority, page.changefreq, languages, today),
   );
   const staticSitemap = generateSitemap(staticUrls);
-  writeFileSync(join(outputDir, 'sitemap-pages.xml'), staticSitemap);
+  writeToDirectories('sitemap-pages.xml', staticSitemap, outputDir, buildOutputDir);
   sitemapFiles.push('sitemap-pages.xml');
   console.log(`✅ sitemap-pages.xml (${staticPages.length} pages × ${languages.length} languages)`);
 
@@ -262,19 +282,19 @@ export function generateSitemaps(
   for (const entry of dynamicSitemaps) {
     const sitemap = generateSitemap(entry.urls);
     const filename = `sitemap-${entry.name}.xml`;
-    writeFileSync(join(outputDir, filename), sitemap);
+    writeToDirectories(filename, sitemap, outputDir, buildOutputDir);
     sitemapFiles.push(filename);
     console.log(`✅ ${filename} (${entry.urls.length} URLs × ${languages.length} languages)`);
   }
 
   // Generate sitemap index
   const sitemapIndex = generateSitemapIndex(siteUrl, sitemapFiles, today);
-  writeFileSync(join(outputDir, 'sitemap.xml'), sitemapIndex);
+  writeToDirectories('sitemap.xml', sitemapIndex, outputDir, buildOutputDir);
   console.log('✅ sitemap.xml (index)');
 
   // Generate XSL stylesheet
   const xslStylesheet = generateXslStylesheet(appName, appSubtitle);
-  writeFileSync(join(outputDir, 'sitemap.xsl'), xslStylesheet);
+  writeToDirectories('sitemap.xsl', xslStylesheet, outputDir, buildOutputDir);
   console.log('✅ sitemap.xsl (stylesheet)');
 
   // Summary

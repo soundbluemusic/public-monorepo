@@ -15,6 +15,7 @@ const CONFIG = {
   appName: 'Permissive',
   appSubtitle: 'Permissive - Free Web Dev Tools',
   outputDir: join(__dirname, '../public'),
+  buildOutputDir: join(__dirname, '../build/client'),
 };
 
 const STATIC_PAGES: StaticPage[] = [
