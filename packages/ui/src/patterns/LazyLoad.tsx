@@ -47,10 +47,13 @@ export function preloadComponent<T extends ComponentType<unknown>>(
   factory();
 }
 
+/** Callback ref type for observing elements */
+export type ObserverRefCallback = (element: HTMLElement | null) => void;
+
 /** Hook to preload a component when it comes into view */
 export function usePreloadOnVisible<T extends ComponentType<unknown>>(
   factory: () => Promise<{ default: T }>,
-) {
+): ObserverRefCallback | null {
   if (typeof IntersectionObserver === 'undefined') {
     return null;
   }
@@ -68,7 +71,7 @@ export function usePreloadOnVisible<T extends ComponentType<unknown>>(
     { rootMargin: '200px' },
   );
 
-  return (element: HTMLElement | null) => {
+  return (element: HTMLElement | null): void => {
     if (element) {
       observer.observe(element);
     }

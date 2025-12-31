@@ -34,11 +34,12 @@ export interface RecentViewItem {
 }
 
 /**
- * Settings structure
+ * Base settings structure - extend this for app-specific settings
  */
 export interface SettingsData {
   theme: 'light' | 'dark' | 'system';
-  [key: string]: unknown;
+  language?: 'en' | 'ko';
+  fontSize?: 'small' | 'medium' | 'large';
 }
 
 /**

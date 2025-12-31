@@ -30,19 +30,15 @@ export interface SearchResult<T = SearchableItem> {
   item?: T;
 }
 
-/** Worker 메시지 타입 */
-export type WorkerMessageType =
-  | 'INIT'
-  | 'SEARCH'
-  | 'SUGGEST'
-  | 'READY'
-  | 'RESULTS'
-  | 'SUGGESTIONS'
-  | 'ERROR';
-
-/** Worker 메시지 */
-export interface WorkerMessage {
-  type: WorkerMessageType;
-  payload?: unknown;
-  error?: string;
-}
+/** Worker 메시지 - Discriminated Union으로 타입 안전성 보장 */
+export type WorkerMessage =
+  | {
+      type: 'INIT';
+      payload: { config: SearchConfig; data: Array<{ id: string; [key: string]: unknown }> };
+    }
+  | { type: 'SEARCH'; payload: { query: string; limit?: number } }
+  | { type: 'SUGGEST'; payload: { query: string; limit?: number } }
+  | { type: 'READY' }
+  | { type: 'RESULTS'; payload: SearchResult[] }
+  | { type: 'SUGGESTIONS'; payload: string[] }
+  | { type: 'ERROR'; error: string };
