@@ -263,12 +263,12 @@ describe('useSettingsStore', () => {
     });
   });
 
-  describe('toggleSidebar', () => {
+  describe('toggleSidebarCollapse', () => {
     it('should toggle sidebar from expanded to collapsed', () => {
       const { result } = renderHook(() => useSettingsStore());
 
       act(() => {
-        result.current.toggleSidebar();
+        result.current.toggleSidebarCollapse();
       });
 
       expect(result.current.sidebarCollapsed).toBe(true);
@@ -282,7 +282,7 @@ describe('useSettingsStore', () => {
       });
 
       act(() => {
-        result.current.toggleSidebar();
+        result.current.toggleSidebarCollapse();
       });
 
       expect(result.current.sidebarCollapsed).toBe(false);
@@ -292,17 +292,17 @@ describe('useSettingsStore', () => {
       const { result } = renderHook(() => useSettingsStore());
 
       act(() => {
-        result.current.toggleSidebar(); // false -> true
+        result.current.toggleSidebarCollapse(); // false -> true
       });
       expect(result.current.sidebarCollapsed).toBe(true);
 
       act(() => {
-        result.current.toggleSidebar(); // true -> false
+        result.current.toggleSidebarCollapse(); // true -> false
       });
       expect(result.current.sidebarCollapsed).toBe(false);
 
       act(() => {
-        result.current.toggleSidebar(); // false -> true
+        result.current.toggleSidebarCollapse(); // false -> true
       });
       expect(result.current.sidebarCollapsed).toBe(true);
     });
@@ -457,9 +457,9 @@ describe('useSettingsStore', () => {
       const { result } = renderHook(() => useSettingsStore());
 
       act(() => {
-        result.current.toggleSidebar();
-        result.current.toggleSidebar();
-        result.current.toggleSidebar();
+        result.current.toggleSidebarCollapse();
+        result.current.toggleSidebarCollapse();
+        result.current.toggleSidebarCollapse();
       });
 
       expect(result.current.sidebarCollapsed).toBe(true); // toggled 3 times from false

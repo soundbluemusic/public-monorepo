@@ -241,7 +241,7 @@ importers:
         specifier: ^4.1.18
         version: 4.1.18(vite@6.4.1(@types/node@22.19.3)(jiti@2.6.1)(lightningcss@1.30.2)(sass@1.97.1)(terser@5.44.1)(tsx@4.21.0))
       '@types/node':
-        specifier: ^22.10.2
+        specifier: ^22.15.21
         version: 22.19.3
       '@types/react':
         specifier: ^19.0.2
@@ -262,7 +262,7 @@ importers:
         specifier: ^5.7.2
         version: 5.9.3
       vite:
-        specifier: ^6.0.0
+        specifier: ^6.4.1
         version: 6.4.1(@types/node@22.19.3)(jiti@2.6.1)(lightningcss@1.30.2)(sass@1.97.1)(terser@5.44.1)(tsx@4.21.0)
       vite-plugin-pwa:
         specifier: ^1.2.0
@@ -326,7 +326,7 @@ importers:
         specifier: ^4.1.18
         version: 4.1.18(vite@6.4.1(@types/node@22.19.3)(jiti@2.6.1)(lightningcss@1.30.2)(sass@1.97.1)(terser@5.44.1)(tsx@4.21.0))
       '@types/node':
-        specifier: ^22.10.2
+        specifier: ^22.15.21
         version: 22.19.3
       '@types/react':
         specifier: ^19.0.2
@@ -347,7 +347,7 @@ importers:
         specifier: ^5.7.2
         version: 5.9.3
       vite:
-        specifier: ^6.0.0
+        specifier: ^6.4.1
         version: 6.4.1(@types/node@22.19.3)(jiti@2.6.1)(lightningcss@1.30.2)(sass@1.97.1)(terser@5.44.1)(tsx@4.21.0)
       vite-plugin-pwa:
         specifier: ^1.2.0
@@ -414,7 +414,7 @@ importers:
         specifier: ^7.4.3
         version: 7.4.3
       '@types/node':
-        specifier: ^22.10.2
+        specifier: ^22.15.21
         version: 22.19.3
       '@types/react':
         specifier: ^19.0.2
@@ -438,7 +438,7 @@ importers:
         specifier: ^5.7.2
         version: 5.9.3
       vite:
-        specifier: ^6.0.0
+        specifier: ^6.4.1
         version: 6.4.1(@types/node@22.19.3)(jiti@2.6.1)(lightningcss@1.30.2)(sass@1.97.1)(terser@5.44.1)(tsx@4.21.0)
       vite-plugin-pwa:
         specifier: ^1.2.0
@@ -476,7 +476,7 @@ importers:
         version: 4.2.1
     devDependencies:
       '@types/node':
-        specifier: ^22.10.2
+        specifier: ^22.15.21
         version: 22.19.3
       typescript:
         specifier: ^5.7.2
@@ -537,7 +537,7 @@ importers:
         version: 19.2.3
     devDependencies:
       '@types/node':
-        specifier: ^22.10.2
+        specifier: ^22.15.21
         version: 22.19.3
       '@types/react':
         specifier: ^19.0.2
@@ -577,8 +577,8 @@ importers:
   packages/ui:
     dependencies:
       '@formkit/auto-animate':
-        specifier: ^0.8.2
-        version: 0.8.4
+        specifier: ^0.9.0
+        version: 0.9.0
       '@soundblue/core':
         specifier: workspace:*
         version: link:../core
@@ -1761,9 +1761,6 @@ packages:
 
   '@formatjs/intl-localematcher@0.6.2':
     resolution: {integrity: sha512-XOMO2Hupl0wdd172Y06h6kLpBz6Dv+J4okPLl4LPtzbr8f66WbIoy4ev98EBuZ6ZK4h5ydTN6XneT4QVpD7cdA==}
-
-  '@formkit/auto-animate@0.8.4':
-    resolution: {integrity: sha512-DHHC01EJ1p70Q0z/ZFRBIY8NDnmfKccQoyoM84Tgb6omLMat6jivCdf272Y8k3nf4Lzdin/Y4R9q8uFtU0GbnA==}
 
   '@formkit/auto-animate@0.9.0':
     resolution: {integrity: sha512-VhP4zEAacXS3dfTpJpJ88QdLqMTcabMg0jwpOSxZ/VzfQVfl3GkZSCZThhGC5uhq/TxPHPzW0dzr4H9Bb1OgKA==}
@@ -8536,8 +8533,6 @@ snapshots:
   '@formatjs/intl-localematcher@0.6.2':
     dependencies:
       tslib: 2.8.1
-
-  '@formkit/auto-animate@0.8.4': {}
 
   '@formkit/auto-animate@0.9.0': {}
 

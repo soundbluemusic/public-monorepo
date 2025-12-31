@@ -90,10 +90,9 @@ export default function FieldPage() {
         {subfields.length > 0 ? (
           <div ref={subfieldsRef} className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {subfields.map((subfield) => (
-              <Link
+              <div
                 key={subfield.id}
-                to={localePath(`/field/${field.id}/${subfield.id}`)}
-                className="block p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) no-underline transition-all hover:-translate-y-0.5 hover:shadow-md hover:border-(--border-focus)"
+                className="block p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)"
               >
                 <h3 className="text-base font-medium text-(--text-primary) mb-1">
                   {subfield.name[locale] || subfield.name.en}
@@ -101,7 +100,7 @@ export default function FieldPage() {
                 <p className="text-sm text-(--text-secondary)">
                   {subfield.description[locale] || subfield.description.en}
                 </p>
-              </Link>
+              </div>
             ))}
           </div>
         ) : (

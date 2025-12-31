@@ -113,8 +113,12 @@ export default function ConceptPage() {
     );
   }
 
-  const field = getFieldById(concept.field);
+  // concept.field may be a subfield ID, so try to get parent field
   const subfield = getSubfieldById(concept.subfield);
+  const directField = getFieldById(concept.field);
+  // If concept.field is actually a subfield ID, get the parent field
+  const subfieldAsField = getSubfieldById(concept.field);
+  const field = directField || (subfieldAsField ? getFieldById(subfieldAsField.parentField) : null);
   const name = concept.name[locale] || concept.name.en;
   const rawContent = concept.content[locale] || concept.content.en;
   const content =
@@ -131,12 +135,14 @@ export default function ConceptPage() {
           {t('home')}
         </Link>
         <span className="text-(--text-tertiary)">/</span>
-        <Link
-          to={localePath(`/field/${concept.field}`)}
-          className="text-(--text-secondary) no-underline hover:text-(--text-primary)"
-        >
-          {field?.name[locale] || field?.name.en}
-        </Link>
+        {field && (
+          <Link
+            to={localePath(`/field/${field.id}`)}
+            className="text-(--text-secondary) no-underline hover:text-(--text-primary)"
+          >
+            {field.name[locale] || field.name.en}
+          </Link>
+        )}
         {subfield && (
           <>
             <span className="text-(--text-tertiary)">/</span>

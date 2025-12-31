@@ -107,13 +107,12 @@ export default function BrowsePage() {
                 {subfields.length > 0 && (
                   <div className="flex flex-wrap gap-2">
                     {subfields.map((subfield) => (
-                      <Link
+                      <span
                         key={subfield.id}
-                        to={localePath(`/field/${field.id}/${subfield.id}`)}
-                        className="px-3 py-1.5 rounded-full text-sm bg-(--bg-tertiary) text-(--text-secondary) no-underline transition-colors hover:bg-(--bg-secondary) hover:text-(--text-primary)"
+                        className="px-3 py-1.5 rounded-full text-sm bg-(--bg-tertiary) text-(--text-secondary)"
                       >
                         {subfield.name[locale] || subfield.name.en}
-                      </Link>
+                      </span>
                     ))}
                   </div>
                 )}

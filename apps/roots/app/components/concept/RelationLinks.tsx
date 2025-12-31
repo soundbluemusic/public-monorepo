@@ -36,7 +36,10 @@ function RelationSection({ title, icon, ids, type, names }: RelationSectionProps
 
   const config = typeConfig[type];
 
-  if (ids.length === 0) return null;
+  // Filter to only include concepts that exist in the names dictionary
+  const validIds = ids.filter((id) => names[id]);
+
+  if (validIds.length === 0) return null;
 
   return (
     <div className="mb-4">
@@ -45,9 +48,10 @@ function RelationSection({ title, icon, ids, type, names }: RelationSectionProps
         {title}
       </h4>
       <div className="flex flex-wrap gap-2">
-        {ids.map((id) => {
-          const conceptName = names[id];
-          const name = conceptName ? conceptName[locale] || conceptName.en : id;
+        {validIds.map((id) => {
+          // conceptName is guaranteed to exist because validIds filters for it
+          const conceptName = names[id]!;
+          const name = conceptName[locale] || conceptName.en;
 
           return (
             <Link
