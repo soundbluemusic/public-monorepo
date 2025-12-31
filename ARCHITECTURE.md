@@ -44,8 +44,8 @@ Layer 0 (Foundation)    ┌─────────────────�
 
 ```typescript
 // Exports
-import { LIMITS, validateId, sanitizeInput } from '@soundblue/core/validation';
-import { chunk, groupBy, unique } from '@soundblue/core/utils';
+import { LIMITS, validateId, isValidLanguage } from '@soundblue/core/validation';
+import { chunkArray, debounce, throttle, cn } from '@soundblue/core/utils';
 import type { Language, Theme } from '@soundblue/core/types';
 ```
 
@@ -74,16 +74,16 @@ Zod 스키마, 데이터 로더, 타입 정의.
 ```typescript
 // Exports
 import { EntrySchema, ConceptSchema } from '@soundblue/data/schemas';
-import { loadEntries, loadConcepts } from '@soundblue/data/loaders';
+import { createDataLoader, loadJson, loadJsonDirectory } from '@soundblue/data/loaders';
 ```
 
 #### @soundblue/platform
-브라우저 API 래퍼, 환경 감지.
+브라우저 IndexedDB 스토리지 (Dexie.js 기반).
 
 ```typescript
 // Exports
-import { isBrowser, isServer } from '@soundblue/platform/env';
-import { storage, indexedDB } from '@soundblue/platform/storage';
+import { storage } from '@soundblue/platform/storage';
+import type { FavoriteItem, RecentViewItem, SettingsData } from '@soundblue/platform';
 ```
 
 ---
@@ -109,17 +109,17 @@ MiniSearch 래퍼, 검색 워커.
 
 ```typescript
 // Core (non-React)
-import { createSearchEngine, SearchResult } from '@soundblue/search';
+import { SearchEngine, type SearchResult, type SearchConfig } from '@soundblue/search';
 
 // React hooks
-import { useSearchWorker, type SearchResult } from '@soundblue/search/react';
+import { useSearch, useSearchWorker } from '@soundblue/search/react';
 ```
 
 | Export Path | Description |
 |-------------|-------------|
-| `/` | Core search engine (non-React) |
-| `/react` | React hooks & components |
-| `/adapters` | MiniSearch adapter |
+| `/` | Core search engine (SearchEngine class) |
+| `/react` | React hooks (useSearch, useSearchWorker) |
+| `/worker` | Web Worker 유틸리티 |
 
 #### @soundblue/seo
 메타 태그 팩토리, 사이트맵 생성기.
@@ -162,14 +162,14 @@ React UI 컴포넌트, 애니메이션, 유틸리티.
 // Components
 import { DarkModeToggle, LanguageToggle } from '@soundblue/ui/components';
 import { SearchDropdown, VirtualList } from '@soundblue/ui/patterns';
-import { Toast, ErrorBoundary } from '@soundblue/ui/feedback';
+import { ToastContainer, ErrorBoundary } from '@soundblue/ui/feedback';
 import { Skeleton, ProgressBar } from '@soundblue/ui/primitives';
 
 // Hooks
 import { useAutoAnimate } from '@soundblue/ui/hooks';
 
 // Animation
-import { FadeIn, SlideIn } from '@soundblue/ui/animation';
+import { FadeIn, SlideUp, ScaleIn } from '@soundblue/ui/animation';
 
 // Utils
 import { cn, preloadImage } from '@soundblue/ui/utils';

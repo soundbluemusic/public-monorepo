@@ -92,9 +92,9 @@ export async function loader({ params }) {
 public-monorepo/
 │
 ├── apps/
-│   ├── context/       →  Korean dictionary (1578 SSG routes)
+│   ├── context/       →  Korean dictionary (2012 SSG routes)
 │   ├── permissive/    →  Web dev resources (8 SSG routes)
-│   └── roots/         →  Math documentation (878 SSG routes)
+│   └── roots/         →  Math documentation (976 SSG routes)
 │
 ├── packages/          →  10 modular packages (Layer 0-3)
 │   ├── core/          →  [L0] Pure functions, validation, types

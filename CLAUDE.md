@@ -8,7 +8,7 @@
 
 | Technology | Official Docs | GitHub |
 |------------|--------------|--------|
-| **Tailwind CSS v4** | [React Router Guide](https://tailwindcss.com/docs/installation/framework-guides/react-router) | [tailwindlabs/tailwindcss](https://github.com/tailwindlabs/tailwindcss) |
+| **Tailwind CSS v4** | [Installation Guide](https://tailwindcss.com/docs/installation/framework-guides/react-router) | [tailwindlabs/tailwindcss](https://github.com/tailwindlabs/tailwindcss) |
 | **React Router v7** | [Official Docs](https://reactrouter.com/start/framework/deploying) | [remix-run/react-router](https://github.com/remix-run/react-router) |
 | **TypeScript** | [Official Docs](https://www.typescriptlang.org/docs/) | [microsoft/TypeScript](https://github.com/microsoft/TypeScript) |
 
@@ -26,7 +26,7 @@
    - `ssr: false` + `prerender()` + `loader()` in `react-router.config.ts` = 빌드 시 정적 HTML + 데이터 생성
    - React Router v7 권장 패턴: `loader()` 함수로 빌드타임 데이터 프리렌더링 → `.data` 파일 생성
    - 빌드 출력: `build/client` (HTML + JS + .data 파일), 런타임 서버 없음, CDN에서 직접 서빙
-   - 각 앱 SSG 라우트: Context 1578개, Roots 878개, Permissive 8개
+   - 각 앱 SSG 라우트: Context 2012개, Roots 976개, Permissive 8개
 2. **오픈소스 Only** - 모든 라이브러리/도구는 오픈소스만 사용.
 3. **웹 표준 API Only** - 브라우저 표준 API만 사용. 벤더 종속 API 금지.
 4. **로컬 스토리지 Only** - DB는 localStorage, IndexedDB만 사용. 외부 DB/CMS 절대 금지.
