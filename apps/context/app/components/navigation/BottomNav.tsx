@@ -1,6 +1,6 @@
 import { stripLocaleFromPath } from '@soundblue/i18n';
 import { cn } from '@soundblue/ui/utils';
-import { Grid3X3, Home, Info, LayoutGrid, MessageCircle } from 'lucide-react';
+import { Bookmark, Grid3X3, Home, Info, MessageCircle } from 'lucide-react';
 import { Link, useLocation } from 'react-router';
 import { useI18n } from '@/i18n';
 
@@ -54,14 +54,14 @@ export function BottomNav() {
         <span className="text-[12px]">{t('talk')}</span>
       </Link>
       <Link
-        to={localePath('/my-learning')}
+        to={localePath('/bookmarks')}
         className={cn(
           'flex flex-col items-center justify-center gap-1 min-h-11 min-w-11 px-3 py-2 rounded-lg transition-colors',
-          isActive('/my-learning') ? 'text-(--accent-primary)' : 'text-(--text-secondary)',
+          isActive('/bookmarks') ? 'text-(--accent-primary)' : 'text-(--text-secondary)',
         )}
       >
-        <LayoutGrid size={20} aria-hidden="true" />
-        <span className="text-[12px]">{t('learn')}</span>
+        <Bookmark size={20} aria-hidden="true" />
+        <span className="text-[12px]">{t('bookmarks')}</span>
       </Link>
       <Link
         to={localePath('/about')}

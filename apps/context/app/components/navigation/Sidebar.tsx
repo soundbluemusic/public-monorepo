@@ -2,7 +2,7 @@ import { LIMITS } from '@soundblue/core/validation';
 import { stripLocaleFromPath } from '@soundblue/i18n';
 import { FamilySites } from '@soundblue/ui/components';
 import { cn } from '@soundblue/ui/utils';
-import { Home, Info, LayoutGrid, List, MessageCircle, X } from 'lucide-react';
+import { Bookmark, Home, Info, LayoutGrid, List, MessageCircle, X } from 'lucide-react';
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router';
 import { categories } from '@/data/categories';
@@ -132,6 +132,18 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             >
               <LayoutGrid size={20} aria-hidden="true" />
               {t('myLearning')}
+            </Link>
+            <Link
+              to={localePath('/bookmarks')}
+              onClick={onClose}
+              className={cn(
+                'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
+                'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
+                isActive('/bookmarks') && 'bg-(--bg-tertiary) text-(--accent-primary)',
+              )}
+            >
+              <Bookmark size={20} aria-hidden="true" />
+              {t('bookmarks')}
             </Link>
             <Link
               to={localePath('/about')}
