@@ -1,21 +1,23 @@
 import { cn } from '@soundblue/ui/utils';
 import { Shuffle } from 'lucide-react';
+import { memo } from 'react';
 import type { FilterStatus } from './useBrowseFilters';
 
 interface QuickActionsProps {
-  locale: 'en' | 'ko';
   filterStatus: FilterStatus;
   onRandomWord: () => void;
   onShowBookmarks: () => void;
   onShowUnstudied: () => void;
+  /** i18n translation function */
+  t: (key: string) => string;
 }
 
-export function QuickActions({
-  locale,
+export const QuickActions = memo(function QuickActions({
   filterStatus,
   onRandomWord,
   onShowBookmarks,
   onShowUnstudied,
+  t,
 }: QuickActionsProps) {
   return (
     <div className="mb-6 flex flex-wrap gap-2">
@@ -25,7 +27,7 @@ export function QuickActions({
         className="min-h-11 px-4 inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors bg-(--accent-primary) text-white hover:brightness-110 active:scale-[0.98]"
       >
         <Shuffle size={16} aria-hidden="true" />
-        <span>{locale === 'ko' ? '랜덤 단어' : 'Random Word'}</span>
+        <span>{t('randomWord')}</span>
       </button>
 
       <button
@@ -38,7 +40,7 @@ export function QuickActions({
             : 'bg-(--bg-tertiary) text-(--text-primary) hover:bg-(--border-primary)',
         )}
       >
-        {locale === 'ko' ? '북마크만' : 'Bookmarks Only'}
+        {t('bookmarksOnly')}
       </button>
 
       <button
@@ -51,8 +53,8 @@ export function QuickActions({
             : 'bg-(--bg-tertiary) text-(--text-primary) hover:bg-(--border-primary)',
         )}
       >
-        {locale === 'ko' ? '미학습만' : 'Unstudied Only'}
+        {t('unstudiedOnly')}
       </button>
     </div>
   );
-}
+});

@@ -3,6 +3,7 @@ export {
   preloadChunk,
   useEntryLoader,
 } from './useEntryLoader';
+export { useIsActiveRoute } from './useIsActiveRoute';
 export {
   type ProgressData,
   type UseStudyDataOptions,

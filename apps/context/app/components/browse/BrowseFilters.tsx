@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Select } from '@/components/Select';
 import type { categories } from '@/data/categories';
 import type { FilterCategory, FilterStatus, SortOption } from './useBrowseFilters';
@@ -11,9 +12,11 @@ interface BrowseFiltersProps {
   onCategoryChange: (value: FilterCategory) => void;
   onStatusChange: (value: FilterStatus) => void;
   onSortChange: (value: SortOption) => void;
+  /** i18n translation function */
+  t: (key: string) => string;
 }
 
-export function BrowseFilters({
+export const BrowseFilters = memo(function BrowseFilters({
   locale,
   categories: cats,
   filterCategory,
@@ -22,15 +25,16 @@ export function BrowseFilters({
   onCategoryChange,
   onStatusChange,
   onSortChange,
+  t,
 }: BrowseFiltersProps) {
   return (
     <div className="mb-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
       <Select
         id="category-filter"
-        label={locale === 'ko' ? '카테고리' : 'Category'}
+        label={t('filterCategory')}
         value={filterCategory}
         options={[
-          { value: 'all', label: locale === 'ko' ? '전체' : 'All' },
+          { value: 'all', label: t('filterAll') },
           ...cats.map((cat) => ({
             value: cat.id,
             label: `${cat.icon} ${cat.name[locale]}`,
@@ -41,29 +45,29 @@ export function BrowseFilters({
 
       <Select
         id="status-filter"
-        label={locale === 'ko' ? '학습 상태' : 'Study Status'}
+        label={t('filterStatus')}
         value={filterStatus}
         options={[
-          { value: 'all', label: locale === 'ko' ? '전체' : 'All' },
-          { value: 'studied', label: locale === 'ko' ? '학습 완료' : 'Studied' },
-          { value: 'unstudied', label: locale === 'ko' ? '미학습' : 'Unstudied' },
-          { value: 'bookmarked', label: locale === 'ko' ? '북마크' : 'Bookmarked' },
+          { value: 'all', label: t('filterAll') },
+          { value: 'studied', label: t('filterStudied') },
+          { value: 'unstudied', label: t('filterUnstudied') },
+          { value: 'bookmarked', label: t('filterBookmarked') },
         ]}
         onChange={(value) => onStatusChange(value as FilterStatus)}
       />
 
       <Select
         id="sort-by"
-        label={locale === 'ko' ? '정렬' : 'Sort By'}
+        label={t('filterSort')}
         value={sortBy}
         options={[
-          { value: 'alphabetical', label: locale === 'ko' ? '가나다순' : 'Alphabetical' },
-          { value: 'category', label: locale === 'ko' ? '카테고리별' : 'By Category' },
-          { value: 'recent', label: locale === 'ko' ? '최근 추가' : 'Recently Added' },
+          { value: 'alphabetical', label: t('sortAlphabetical') },
+          { value: 'category', label: t('sortCategory') },
+          { value: 'recent', label: t('sortRecent') },
         ]}
         onChange={(value) => onSortChange(value as SortOption)}
         className="sm:col-span-2 lg:col-span-1"
       />
     </div>
   );
-}
+});

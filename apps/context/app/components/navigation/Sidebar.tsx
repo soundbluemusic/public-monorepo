@@ -1,5 +1,4 @@
 import { LIMITS } from '@soundblue/core/validation';
-import { stripLocaleFromPath } from '@soundblue/i18n';
 import { FamilySites } from '@soundblue/ui/components';
 import { cn } from '@soundblue/ui/utils';
 import {
@@ -11,16 +10,12 @@ import {
   LayoutGrid,
   List,
   MessageCircle,
-  PanelLeftClose,
-  PanelLeftOpen,
-  X,
 } from 'lucide-react';
-import { useEffect } from 'react';
-import { Link, useLocation } from 'react-router';
+import { Link } from 'react-router';
 import { categories } from '@/data/categories';
+import { useIsActiveRoute } from '@/hooks';
 import { useI18n } from '@/i18n';
-
-const stripLocale = stripLocaleFromPath;
+import { CategoryLink, CollapseButton, NavLink, SidebarHeader, useSidebarEffects } from './sidebar';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -29,45 +24,28 @@ interface SidebarProps {
   onToggleCollapse: () => void;
 }
 
+/** 메인 네비게이션 링크 설정 */
+const NAV_ITEMS = [
+  { path: '/', icon: Home, labelKey: 'home' },
+  { path: '/browse', icon: List, labelKey: 'browse' },
+  { path: '/conversations', icon: MessageCircle, labelKey: 'conversationExamples' },
+  { path: '/my-learning', icon: LayoutGrid, labelKey: 'myLearning' },
+  { path: '/bookmarks', icon: Bookmark, labelKey: 'bookmarks' },
+  { path: '/about', icon: Info, labelKey: 'about' },
+  { path: '/download', icon: Download, labelKey: 'download' },
+] as const;
+
+/** More 섹션 링크 설정 */
+const MORE_ITEMS = [
+  { path: '/built-with', icon: Code2, labelKey: 'builtWithTitle' },
+  { path: '/sitemap', icon: LayoutGrid, labelKey: 'sitemap' },
+] as const;
+
 export function Sidebar({ isOpen, isCollapsed, onClose, onToggleCollapse }: SidebarProps) {
   const { locale, t, localePath } = useI18n();
-  const location = useLocation();
+  const { isActive } = useIsActiveRoute();
 
-  // Escape key handling
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && isOpen) {
-        onClose();
-      }
-    };
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, onClose]);
-
-  // Prevent body scroll when sidebar is open (mobile)
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isOpen]);
-
-  const isActive = (basePath: string) => {
-    const currentPath = stripLocale(location.pathname);
-    return currentPath === basePath;
-  };
-
-  const collapseLabel = isCollapsed
-    ? locale === 'ko'
-      ? '사이드바 펼치기'
-      : 'Expand sidebar'
-    : locale === 'ko'
-      ? '사이드바 접기'
-      : 'Collapse sidebar';
+  useSidebarEffects({ isOpen, onClose });
 
   return (
     <>
@@ -85,10 +63,8 @@ export function Sidebar({ isOpen, isCollapsed, onClose, onToggleCollapse }: Side
         className={cn(
           'fixed top-0 left-0 z-50 h-full bg-(--bg-elevated) border-r border-(--border-primary)',
           'flex flex-col transform transition-all duration-200',
-          // Mobile: slide in/out based on isOpen, always full width
           'md:translate-x-0 md:top-(--header-height) md:h-[calc(100vh-var(--header-height))]',
           isOpen ? 'translate-x-0' : '-translate-x-full',
-          // Desktop: width based on collapsed state
           'w-72 md:w-(--sidebar-width)',
           isCollapsed && 'md:w-(--sidebar-collapsed-width)',
         )}
@@ -96,119 +72,22 @@ export function Sidebar({ isOpen, isCollapsed, onClose, onToggleCollapse }: Side
         aria-label={t('menu')}
       >
         {/* Header (mobile only) */}
-        <div className="md:hidden h-14 flex items-center justify-between px-4 shrink-0 border-b border-(--border-primary)">
-          <span className="font-semibold text-(--text-primary)">{t('menu')}</span>
-          <button
-            type="button"
-            onClick={onClose}
-            className="min-h-11 min-w-11 flex items-center justify-center rounded-lg transition-colors hover:bg-(--bg-tertiary)"
-            aria-label={t('closeMenu')}
-          >
-            <X size={20} aria-hidden="true" />
-          </button>
-        </div>
+        <SidebarHeader menuLabel={t('menu')} closeLabel={t('closeMenu')} onClose={onClose} />
 
         <nav aria-label="Main navigation" className="flex-1 overflow-y-auto py-4">
           {/* Main navigation */}
           <div className="px-3 mb-6">
-            <Link
-              to={localePath('/')}
-              onClick={onClose}
-              className={cn(
-                'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
-                'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
-                isActive('/') && 'bg-(--bg-tertiary) text-(--accent-primary)',
-                isCollapsed && 'md:justify-center md:px-0',
-              )}
-              title={isCollapsed ? t('home') : undefined}
-            >
-              <Home size={20} aria-hidden="true" className="shrink-0" />
-              <span className={cn(isCollapsed && 'md:hidden')}>{t('home')}</span>
-            </Link>
-            <Link
-              to={localePath('/browse')}
-              onClick={onClose}
-              className={cn(
-                'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
-                'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
-                isActive('/browse') && 'bg-(--bg-tertiary) text-(--accent-primary)',
-                isCollapsed && 'md:justify-center md:px-0',
-              )}
-              title={isCollapsed ? t('browse') : undefined}
-            >
-              <List size={20} aria-hidden="true" className="shrink-0" />
-              <span className={cn(isCollapsed && 'md:hidden')}>{t('browse')}</span>
-            </Link>
-            <Link
-              to={localePath('/conversations')}
-              onClick={onClose}
-              className={cn(
-                'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
-                'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
-                isActive('/conversations') && 'bg-(--bg-tertiary) text-(--accent-primary)',
-                isCollapsed && 'md:justify-center md:px-0',
-              )}
-              title={isCollapsed ? t('conversationExamples') : undefined}
-            >
-              <MessageCircle size={20} aria-hidden="true" className="shrink-0" />
-              <span className={cn(isCollapsed && 'md:hidden')}>{t('conversationExamples')}</span>
-            </Link>
-            <Link
-              to={localePath('/my-learning')}
-              onClick={onClose}
-              className={cn(
-                'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
-                'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
-                isActive('/my-learning') && 'bg-(--bg-tertiary) text-(--accent-primary)',
-                isCollapsed && 'md:justify-center md:px-0',
-              )}
-              title={isCollapsed ? t('myLearning') : undefined}
-            >
-              <LayoutGrid size={20} aria-hidden="true" className="shrink-0" />
-              <span className={cn(isCollapsed && 'md:hidden')}>{t('myLearning')}</span>
-            </Link>
-            <Link
-              to={localePath('/bookmarks')}
-              onClick={onClose}
-              className={cn(
-                'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
-                'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
-                isActive('/bookmarks') && 'bg-(--bg-tertiary) text-(--accent-primary)',
-                isCollapsed && 'md:justify-center md:px-0',
-              )}
-              title={isCollapsed ? t('bookmarks') : undefined}
-            >
-              <Bookmark size={20} aria-hidden="true" className="shrink-0" />
-              <span className={cn(isCollapsed && 'md:hidden')}>{t('bookmarks')}</span>
-            </Link>
-            <Link
-              to={localePath('/about')}
-              onClick={onClose}
-              className={cn(
-                'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
-                'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
-                isActive('/about') && 'bg-(--bg-tertiary) text-(--accent-primary)',
-                isCollapsed && 'md:justify-center md:px-0',
-              )}
-              title={isCollapsed ? t('about') : undefined}
-            >
-              <Info size={20} aria-hidden="true" className="shrink-0" />
-              <span className={cn(isCollapsed && 'md:hidden')}>{t('about')}</span>
-            </Link>
-            <Link
-              to={localePath('/download')}
-              onClick={onClose}
-              className={cn(
-                'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
-                'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
-                isActive('/download') && 'bg-(--bg-tertiary) text-(--accent-primary)',
-                isCollapsed && 'md:justify-center md:px-0',
-              )}
-              title={isCollapsed ? t('download') : undefined}
-            >
-              <Download size={20} aria-hidden="true" className="shrink-0" />
-              <span className={cn(isCollapsed && 'md:hidden')}>{t('download')}</span>
-            </Link>
+            {NAV_ITEMS.map((item) => (
+              <NavLink
+                key={item.path}
+                to={localePath(item.path)}
+                icon={item.icon}
+                label={t(item.labelKey)}
+                isActive={isActive(item.path)}
+                isCollapsed={isCollapsed}
+                onClick={onClose}
+              />
+            ))}
           </div>
 
           {/* Categories - hidden when collapsed */}
@@ -218,20 +97,14 @@ export function Sidebar({ isOpen, isCollapsed, onClose, onToggleCollapse }: Side
             </div>
             <div className="flex flex-col gap-0.5">
               {categories.slice(0, LIMITS.SIDEBAR_CATEGORIES_PREVIEW).map((category) => (
-                <Link
+                <CategoryLink
                   key={category.id}
                   to={localePath(`/category/${category.id}`)}
+                  icon={category.icon}
+                  label={category.name[locale]}
+                  isActive={isActive(`/category/${category.id}`)}
                   onClick={onClose}
-                  className={cn(
-                    'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11 text-sm',
-                    'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
-                    isActive(`/category/${category.id}`) &&
-                      'bg-(--bg-tertiary) text-(--accent-primary)',
-                  )}
-                >
-                  <span className="text-base">{category.icon}</span>
-                  {category.name[locale]}
-                </Link>
+                />
               ))}
               <Link
                 to={localePath('/browse')}
@@ -248,62 +121,29 @@ export function Sidebar({ isOpen, isCollapsed, onClose, onToggleCollapse }: Side
         {/* Footer */}
         <div className="shrink-0 p-4 border-t border-(--border-primary)">
           {/* Collapse Toggle Button (desktop only) */}
-          <button
-            type="button"
-            onClick={onToggleCollapse}
-            className={cn(
-              'hidden md:flex w-full items-center gap-2 min-h-11 px-3 py-2 rounded-lg',
-              'text-(--text-secondary) hover:bg-(--bg-tertiary) transition-colors cursor-pointer',
-              isCollapsed && 'justify-center',
-            )}
-            title={collapseLabel}
-            aria-label={collapseLabel}
-          >
-            {isCollapsed ? (
-              <PanelLeftOpen size={18} aria-hidden="true" />
-            ) : (
-              <PanelLeftClose size={18} aria-hidden="true" />
-            )}
-            <span className={cn(isCollapsed && 'md:hidden')}>
-              {isCollapsed
-                ? locale === 'ko'
-                  ? '펼치기'
-                  : 'Expand'
-                : locale === 'ko'
-                  ? '접기'
-                  : 'Collapse'}
-            </span>
-          </button>
+          <CollapseButton
+            isCollapsed={isCollapsed}
+            expandLabel={t('expandSidebar')}
+            collapseLabel={t('collapseSidebar')}
+            onToggle={onToggleCollapse}
+          />
 
           {/* More section - hidden when collapsed */}
           <div className={cn(isCollapsed && 'md:hidden')}>
             <div className="px-3 py-2 text-xs font-medium uppercase tracking-wider text-(--text-tertiary)">
               {t('more')}
             </div>
-            <Link
-              to={localePath('/built-with')}
-              onClick={onClose}
-              className={cn(
-                'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
-                'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
-                isActive('/built-with') && 'bg-(--bg-tertiary) text-(--accent-primary)',
-              )}
-            >
-              <Code2 size={20} aria-hidden="true" />
-              {t('builtWithTitle')}
-            </Link>
-            <Link
-              to={localePath('/sitemap')}
-              onClick={onClose}
-              className={cn(
-                'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
-                'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
-                isActive('/sitemap') && 'bg-(--bg-tertiary) text-(--accent-primary)',
-              )}
-            >
-              <LayoutGrid size={20} aria-hidden="true" />
-              {t('sitemap')}
-            </Link>
+            {MORE_ITEMS.map((item) => (
+              <NavLink
+                key={item.path}
+                to={localePath(item.path)}
+                icon={item.icon}
+                label={t(item.labelKey)}
+                isActive={isActive(item.path)}
+                isCollapsed={false}
+                onClick={onClose}
+              />
+            ))}
 
             {/* More from Us */}
             <div className="mt-4">

@@ -1,22 +1,12 @@
-import { stripLocaleFromPath } from '@soundblue/i18n';
 import { cn } from '@soundblue/ui/utils';
 import { Bookmark, Grid3X3, Home, Info, MessageCircle } from 'lucide-react';
-import { Link, useLocation } from 'react-router';
+import { Link } from 'react-router';
+import { useIsActiveRoute } from '@/hooks';
 import { useI18n } from '@/i18n';
-
-const stripLocale = stripLocaleFromPath;
 
 export function BottomNav() {
   const { t, localePath } = useI18n();
-  const location = useLocation();
-
-  const isActive = (basePath: string) => {
-    const currentPath = stripLocale(location.pathname);
-    if (basePath === '/') {
-      return currentPath === '/';
-    }
-    return currentPath.startsWith(basePath);
-  };
+  const { isActive } = useIsActiveRoute();
 
   return (
     <nav

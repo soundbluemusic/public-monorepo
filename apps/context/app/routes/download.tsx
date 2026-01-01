@@ -1,6 +1,6 @@
 import { metaFactory } from '@soundblue/i18n';
 import { cn } from '@soundblue/ui/utils';
-import { ChevronDown, ChevronUp, Download, Eye, FileJson, FileText, FileType } from 'lucide-react';
+import { ChevronUp, Download, Eye, FileJson, FileText, FileType } from 'lucide-react';
 import { useCallback, useMemo, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import { Layout } from '@/components/layout';
@@ -42,6 +42,7 @@ function toJSON(entries: MeaningEntry[]): string {
 
 /**
  * TXT 형식으로 변환 (간단한 탭 구분)
+ * 헤더는 데이터 형식이므로 하드코딩 유지 (i18n 불필요)
  */
 function toTXT(entries: MeaningEntry[], locale: 'en' | 'ko'): string {
   const header =
@@ -133,10 +134,12 @@ function FormatPreview({
   format,
   entries,
   locale,
+  t,
 }: {
   format: ExportFormat;
   entries: MeaningEntry[];
   locale: 'en' | 'ko';
+  t: (key: string) => string;
 }) {
   const sampleEntries = entries.slice(0, PREVIEW_COUNT);
 
@@ -158,9 +161,7 @@ function FormatPreview({
       <div className="flex items-center gap-2 px-3 py-2 border-b border-(--border-secondary) bg-(--bg-secondary)">
         <Eye size={14} className="text-(--text-tertiary)" />
         <span className="text-xs font-medium text-(--text-tertiary)">
-          {locale === 'ko'
-            ? `미리보기 (${PREVIEW_COUNT}개 샘플)`
-            : `Preview (${PREVIEW_COUNT} samples)`}
+          {t('downloadPreviewSamples').replace('{count}', String(PREVIEW_COUNT))}
         </span>
       </div>
       <pre className="p-3 text-xs overflow-x-auto max-h-64 overflow-y-auto text-(--text-secondary) font-mono whitespace-pre">
@@ -168,9 +169,7 @@ function FormatPreview({
       </pre>
       <div className="px-3 py-2 border-t border-(--border-secondary) bg-(--bg-secondary)">
         <p className="text-xs text-(--text-tertiary)">
-          {locale === 'ko'
-            ? `... 외 ${entries.length - PREVIEW_COUNT}개 더`
-            : `... and ${entries.length - PREVIEW_COUNT} more`}
+          {t('downloadAndMore').replace('{count}', String(entries.length - PREVIEW_COUNT))}
         </p>
       </div>
     </div>
@@ -225,39 +224,11 @@ export default function DownloadPage() {
     [entries, locale],
   );
 
-  const formats: { format: ExportFormat; label: string; description: string }[] = [
-    {
-      format: 'json',
-      label: 'JSON',
-      description:
-        locale === 'ko'
-          ? '개발자용. 전체 데이터 포함 (예문, 관련어 등)'
-          : 'For developers. Full data including examples and related words',
-    },
-    {
-      format: 'csv',
-      label: 'CSV',
-      description:
-        locale === 'ko'
-          ? '엑셀/스프레드시트용. 표 형식으로 열기'
-          : 'For Excel/Spreadsheet. Opens as table format',
-    },
-    {
-      format: 'txt',
-      label: 'TXT',
-      description:
-        locale === 'ko'
-          ? '텍스트 파일. 탭으로 구분된 간단한 형식'
-          : 'Text file. Simple tab-separated format',
-    },
-    {
-      format: 'md',
-      label: 'Markdown',
-      description:
-        locale === 'ko'
-          ? '마크다운 테이블. 문서나 노트 앱에서 사용'
-          : 'Markdown table. Use in docs or note apps',
-    },
+  const formats: { format: ExportFormat; label: string; descriptionKey: string }[] = [
+    { format: 'json', label: 'JSON', descriptionKey: 'downloadForDevFull' },
+    { format: 'csv', label: 'CSV', descriptionKey: 'downloadForExcel' },
+    { format: 'txt', label: 'TXT', descriptionKey: 'downloadTabSeparated' },
+    { format: 'md', label: 'Markdown', descriptionKey: 'downloadMarkdownTable' },
   ];
 
   return (
@@ -279,11 +250,9 @@ export default function DownloadPage() {
             </div>
             <div>
               <p className="text-lg font-semibold text-(--text-primary)">
-                {totalCount.toLocaleString()} {locale === 'ko' ? '개 단어' : 'words'}
+                {totalCount.toLocaleString()} {t('words')}
               </p>
-              <p className="text-sm text-(--text-tertiary)">
-                {locale === 'ko' ? '모든 어휘 매핑 포함' : 'All vocabulary mappings included'}
-              </p>
+              <p className="text-sm text-(--text-tertiary)">{t('downloadAllMappings')}</p>
             </div>
           </div>
         </div>
@@ -291,10 +260,10 @@ export default function DownloadPage() {
         {/* Format Selection */}
         <div className="space-y-3">
           <h2 className="text-lg font-semibold text-(--text-primary) mb-4">
-            {locale === 'ko' ? '다운로드 형식 선택' : 'Select Download Format'}
+            {t('downloadSelectFormat')}
           </h2>
 
-          {formats.map(({ format, label, description }) => {
+          {formats.map(({ format, label, descriptionKey }) => {
             const { icon: Icon } = FORMAT_INFO[format];
             const isDownloading = downloading === format;
             const isExpanded = expandedFormat === format;
@@ -320,7 +289,7 @@ export default function DownloadPage() {
                         .{FORMAT_INFO[format].extension}
                       </span>
                     </div>
-                    <p className="text-sm text-(--text-secondary) mt-1">{description}</p>
+                    <p className="text-sm text-(--text-secondary) mt-1">{t(descriptionKey)}</p>
 
                     {/* 액션 버튼들 */}
                     <div className="flex items-center gap-2 mt-3">
@@ -338,12 +307,12 @@ export default function DownloadPage() {
                         {isExpanded ? (
                           <>
                             <ChevronUp size={14} />
-                            {locale === 'ko' ? '미리보기 닫기' : 'Hide Preview'}
+                            {t('downloadHidePreview')}
                           </>
                         ) : (
                           <>
                             <Eye size={14} />
-                            {locale === 'ko' ? '미리보기' : 'Preview'}
+                            {t('downloadPreview')}
                           </>
                         )}
                       </button>
@@ -360,12 +329,12 @@ export default function DownloadPage() {
                         {isDownloading ? (
                           <>
                             <div className="w-3 h-3 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                            {locale === 'ko' ? '다운로드 중...' : 'Downloading...'}
+                            {t('downloading')}
                           </>
                         ) : (
                           <>
                             <Download size={14} />
-                            {locale === 'ko' ? '다운로드' : 'Download'}
+                            {t('download')}
                           </>
                         )}
                       </button>
@@ -376,7 +345,7 @@ export default function DownloadPage() {
                 {/* 미리보기 패널 */}
                 {isExpanded && (
                   <div className="px-4 pb-4">
-                    <FormatPreview format={format} entries={entries} locale={locale} />
+                    <FormatPreview format={format} entries={entries} locale={locale} t={t} />
                   </div>
                 )}
               </div>
@@ -386,11 +355,7 @@ export default function DownloadPage() {
 
         {/* License Note */}
         <div className="mt-8 p-4 bg-(--bg-tertiary) rounded-xl text-sm text-(--text-secondary)">
-          <p>
-            {locale === 'ko'
-              ? '📜 모든 데이터는 Apache License 2.0 하에 제공됩니다. 상업적 사용 가능.'
-              : '📜 All data is provided under Apache License 2.0. Commercial use allowed.'}
-          </p>
+          <p>📜 {t('downloadLicenseNote')}</p>
         </div>
       </div>
     </Layout>

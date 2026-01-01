@@ -77,7 +77,7 @@ export default function BrowsePage() {
     categories: cats,
     totalEntries,
   } = useLoaderData<LoaderData>();
-  const { locale, localePath } = useI18n();
+  const { locale, localePath, t } = useI18n();
 
   const { studiedIds, favoriteIds, overallProgress, todayStudied, bookmarkCount, isLoading } =
     useStudyData({ totalEntries });
@@ -155,26 +155,24 @@ export default function BrowsePage() {
       {/* Header */}
       <div className="mb-6">
         <h1 className="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">
-          {locale === 'ko' ? '전체 단어 찾아보기' : 'Browse All Words'}
+          {t('browseAllWords')}
         </h1>
-        <p className="text-(--text-secondary)">
-          {locale === 'ko' ? '모든 단어를 검색하고 필터링하세요' : 'Search and filter all words'}
-        </p>
+        <p className="text-(--text-secondary)">{t('browseSearchAndFilter')}</p>
       </div>
 
       <BrowseStats
-        locale={locale}
         overallProgress={overallProgress}
         todayStudied={todayStudied}
         bookmarkCount={bookmarkCount}
+        t={t}
       />
 
       <QuickActions
-        locale={locale}
         filterStatus={filterStatus}
         onRandomWord={handleRandomWord}
         onShowBookmarks={handleShowBookmarks}
         onShowUnstudied={handleShowUnstudied}
+        t={t}
       />
 
       <BrowseFilters
@@ -186,24 +184,21 @@ export default function BrowsePage() {
         onCategoryChange={handleCategoryChange}
         onStatusChange={handleStatusChange}
         onSortChange={handleSortChange}
+        t={t}
       />
 
       {/* Results Count */}
       <div className="mb-4 flex items-center justify-between">
         <p className="text-sm text-(--text-secondary)">
           {isLoadingCategory
-            ? locale === 'ko'
-              ? '로딩 중...'
-              : 'Loading...'
-            : locale === 'ko'
-              ? `${filteredEntries.length}개의 단어`
-              : `${filteredEntries.length} words`}
+            ? t('loading')
+            : t('browseWordCount').replace('{count}', String(filteredEntries.length))}
         </p>
         {totalPages > 1 && (
           <p className="text-sm text-(--text-tertiary)">
-            {locale === 'ko'
-              ? `${currentPage} / ${totalPages} 페이지`
-              : `Page ${currentPage} of ${totalPages}`}
+            {t('browsePageOf')
+              .replace('{current}', String(currentPage))
+              .replace('{total}', String(totalPages))}
           </p>
         )}
       </div>
@@ -211,11 +206,11 @@ export default function BrowsePage() {
       {/* Word List */}
       {isLoadingCategory ? (
         <div className="min-h-96 flex items-center justify-center text-(--text-tertiary)">
-          <p>{locale === 'ko' ? '카테고리 로딩 중...' : 'Loading category...'}</p>
+          <p>{t('browseLoadingCategory')}</p>
         </div>
       ) : filteredEntries.length === 0 ? (
         <div className="text-center py-12 px-4 text-(--text-tertiary)">
-          <p>{locale === 'ko' ? '단어가 없습니다' : 'No words found'}</p>
+          <p>{t('browseNoWords')}</p>
         </div>
       ) : (
         <>
@@ -226,12 +221,13 @@ export default function BrowsePage() {
             categories={cats}
             studiedIds={studiedIds}
             favoriteIds={favoriteIds}
+            bookmarkedLabel={t('bookmarked')}
           />
           <Pagination
-            locale={locale}
             currentPage={currentPage}
             totalPages={totalPages}
             onPageChange={handlePageChange}
+            t={t}
           />
         </>
       )}

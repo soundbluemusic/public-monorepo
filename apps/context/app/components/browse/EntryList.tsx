@@ -11,6 +11,8 @@ interface EntryListProps {
   categories: typeof categories;
   studiedIds: Set<string>;
   favoriteIds: Set<string>;
+  /** 번역된 '북마크됨' 라벨 */
+  bookmarkedLabel?: string;
 }
 
 export function EntryList({
@@ -20,6 +22,7 @@ export function EntryList({
   categories: cats,
   studiedIds,
   favoriteIds,
+  bookmarkedLabel,
 }: EntryListProps) {
   const [listRef] = useAutoAnimate<HTMLDivElement>();
 
@@ -46,6 +49,7 @@ export function EntryList({
             category={category}
             locale={locale}
             localePath={localePath}
+            bookmarkedLabel={bookmarkedLabel}
           />
         );
       })}

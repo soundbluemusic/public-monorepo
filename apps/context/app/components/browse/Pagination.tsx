@@ -3,10 +3,11 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { memo, useMemo } from 'react';
 
 interface PaginationProps {
-  locale: 'en' | 'ko';
   currentPage: number;
   totalPages: number;
   onPageChange: (page: number) => void;
+  /** i18n translation function */
+  t: (key: string) => string;
 }
 
 /**
@@ -40,10 +41,10 @@ function generatePageNumbers(current: number, total: number): (number | '...')[]
 }
 
 export const Pagination = memo(function Pagination({
-  locale,
   currentPage,
   totalPages,
   onPageChange,
+  t,
 }: PaginationProps) {
   const pageNumbers = useMemo(
     () => generatePageNumbers(currentPage, totalPages),
@@ -64,7 +65,7 @@ export const Pagination = memo(function Pagination({
             ? 'text-(--text-tertiary) cursor-not-allowed'
             : 'text-(--text-primary) hover:bg-(--bg-tertiary)',
         )}
-        aria-label={locale === 'ko' ? '이전 페이지' : 'Previous page'}
+        aria-label={t('previousPage')}
       >
         <ChevronLeft size={20} />
       </button>
@@ -104,7 +105,7 @@ export const Pagination = memo(function Pagination({
             ? 'text-(--text-tertiary) cursor-not-allowed'
             : 'text-(--text-primary) hover:bg-(--bg-tertiary)',
         )}
-        aria-label={locale === 'ko' ? '다음 페이지' : 'Next page'}
+        aria-label={t('nextPage')}
       >
         <ChevronRight size={20} />
       </button>

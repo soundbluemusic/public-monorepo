@@ -43,6 +43,8 @@ export interface EntryListItemProps {
   locale: 'ko' | 'en';
   /** locale 기반 경로 생성 함수 */
   localePath: (path: string) => string;
+  /** 번역된 '북마크됨' 라벨 (선택) */
+  bookmarkedLabel?: string;
 }
 
 /**
@@ -71,6 +73,7 @@ export const EntryListItem = memo(function EntryListItem({
   category,
   locale,
   localePath,
+  bookmarkedLabel = 'Bookmarked',
 }: EntryListItemProps) {
   return (
     <Link
@@ -117,7 +120,7 @@ export const EntryListItem = memo(function EntryListItem({
 
         {/* Bookmark indicator */}
         {isFavorite && (
-          <span className="text-sm" title={locale === 'ko' ? '북마크됨' : 'Bookmarked'}>
+          <span className="text-sm" title={bookmarkedLabel}>
             <Star size={14} aria-hidden="true" fill="currentColor" />
           </span>
         )}
