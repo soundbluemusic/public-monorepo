@@ -183,9 +183,7 @@ export default function DownloadPage() {
   const [downloading, setDownloading] = useState<ExportFormat | null>(null);
   const [expandedFormat, setExpandedFormat] = useState<ExportFormat | null>(null);
 
-  const togglePreview = useCallback((format: ExportFormat, e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
+  const togglePreview = useCallback((format: ExportFormat) => {
     setExpandedFormat((prev) => (prev === format ? null : format));
   }, []);
 
@@ -328,7 +326,7 @@ export default function DownloadPage() {
                     <div className="flex items-center gap-2 mt-3">
                       <button
                         type="button"
-                        onClick={(e) => togglePreview(format, e)}
+                        onClick={() => togglePreview(format)}
                         className={cn(
                           'inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg transition-colors',
                           'border border-(--border-primary)',

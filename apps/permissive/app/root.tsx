@@ -1,17 +1,16 @@
-import { getLocaleFromPath } from '@soundblue/i18n';
 import { OfflineIndicator } from '@soundblue/pwa/react';
 import { ErrorBoundary, ToastContainer } from '@soundblue/ui/feedback';
-import { DARK_MODE_INIT_SCRIPT, DARK_MODE_TOGGLE_SCRIPT } from '@soundblue/ui/utils';
-import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLocation } from 'react-router';
+import { Links, Meta, Outlet, Scripts, ScrollRestoration } from 'react-router';
 import { I18nProvider } from './i18n';
 import './styles/global.css';
 
+/**
+ * Layout - Pure HTML structure only, no hooks
+ * Follows soundblue-monorepo pattern for proper SSG hydration
+ */
 export function Layout({ children }: { children: React.ReactNode }) {
-  const location = useLocation();
-  const lang = getLocaleFromPath(location.pathname);
-
   return (
-    <html lang={lang} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -45,26 +44,38 @@ export function Layout({ children }: { children: React.ReactNode }) {
             }),
           }}
         />
-        {/* Prevent FOUC - Apply theme before first paint */}
+        {/* Inline dark mode init - prevents flash of wrong theme */}
         <script
           // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for dark mode flash prevention
-          dangerouslySetInnerHTML={{ __html: DARK_MODE_INIT_SCRIPT }}
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var theme = localStorage.getItem('permissive-theme');
+                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
         />
       </head>
       <body>
         {children}
         <ScrollRestoration />
         <Scripts />
-        <script
-          // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for dark mode toggle - must be at body end
-          dangerouslySetInnerHTML={{ __html: DARK_MODE_TOGGLE_SCRIPT }}
-        />
       </body>
     </html>
   );
 }
 
-export default function App() {
+/**
+ * AppContent - Interactive wrapper with hooks
+ * Hooks are allowed here since it's rendered after hydration
+ */
+function AppContent() {
   return (
     <I18nProvider>
       <ErrorBoundary>
@@ -74,4 +85,8 @@ export default function App() {
       </ErrorBoundary>
     </I18nProvider>
   );
+}
+
+export default function App() {
+  return <AppContent />;
 }
