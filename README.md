@@ -18,6 +18,8 @@
 > **All apps are 100% Static Site Generation (SSG)**
 >
 > 모든 앱은 100% 정적 사이트 생성(SSG) 방식입니다. 서버 없이 CDN에서 바로 서빙됩니다.
+>
+> ⛔ **SSG 모드 변경 절대 금지** - SPA, SSR, ISR 등 다른 렌더링 모드로 전환하지 마세요.
 
 <br>
 
@@ -231,7 +233,48 @@ pnpm dev:roots          # → http://localhost:3005
 
 <br>
 
-## ⛔ Code Quality Rules (코드 품질 규칙)
+## ⛔ Critical Rules (절대 규칙)
+
+<br>
+
+### SSG Mode Only (SSG 모드 전용)
+
+> **이 프로젝트는 100% SSG 전용입니다. 다른 렌더링 모드로 전환 절대 금지.**
+>
+> **This project is 100% SSG only. Never switch to other rendering modes.**
+
+<br>
+
+**❌ NEVER (절대 금지):**
+
+| Mode | Description | Why Prohibited |
+|:-----|:------------|:---------------|
+| **SPA** | Client-side routing only | SEO 불가, 초기 로딩 느림 |
+| **SSR** | Server-side rendering | 서버 비용, 복잡성 증가 |
+| **ISR** | Incremental Static Regeneration | 서버 필요, Cloudflare 미지원 |
+| **Edge/Serverless** | Edge Functions | 서버 비용, 벤더 종속 |
+
+<br>
+
+**✅ ONLY ALLOWED (유일하게 허용):**
+
+```typescript
+// react-router.config.ts - 필수 설정
+export default {
+  ssr: false,  // ← 절대 true로 변경 금지
+  async prerender() {
+    return ['/', '/ko', ...allRoutes];  // ← 모든 라우트 사전 생성
+  },
+}
+```
+
+<br>
+
+---
+
+<br>
+
+## 📋 Code Quality Rules (코드 품질 규칙)
 
 <br>
 

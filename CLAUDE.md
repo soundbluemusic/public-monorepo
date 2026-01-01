@@ -142,6 +142,32 @@ export const storage: StorageFactory = {
 3. **웹 표준 API Only** - 브라우저 표준 API만 사용. 벤더 종속 API 금지.
 4. **로컬 스토리지 Only** - DB는 localStorage, IndexedDB만 사용. 외부 DB/CMS 절대 금지.
 
+### ⛔ SSG 모드 변경 절대 금지 (NEVER CHANGE SSG MODE)
+
+> **이 프로젝트는 100% SSG 전용입니다. 다른 렌더링 모드로 전환 절대 금지.**
+
+```
+❌ 절대 금지 (NEVER ALLOWED):
+- SPA 모드 활성화 (클라이언트 사이드 라우팅만 사용)
+- SSR 모드 활성화 (서버 사이드 렌더링)
+- ISR 모드 활성화 (증분 정적 재생성)
+- Edge Functions / Serverless Functions 사용
+- react-router.config.ts에서 ssr: true 설정
+- prerender() 함수 제거 또는 빈 배열 반환
+- 런타임 서버 의존 코드 추가
+
+✅ 유일하게 허용되는 모드:
+- SSG (Static Site Generation) - 빌드 시 모든 페이지 사전 생성
+- ssr: false + prerender() + loader() 패턴 필수
+```
+
+**왜 SSG만 사용하는가:**
+1. **서버 비용 제로** - CDN에서 정적 파일만 서빙
+2. **무한 확장성** - 트래픽 증가에도 서버 부하 없음
+3. **최고의 성능** - 사전 생성된 HTML 즉시 전달
+4. **보안** - 서버 로직 없음 = 서버 취약점 없음
+5. **단순성** - 배포가 파일 업로드만으로 완료
+
 ### SSG Build Pattern (SSG 빌드 패턴)
 
 ```typescript
