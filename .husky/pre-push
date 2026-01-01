@@ -1,1 +1,4 @@
+# Cloudflare Pages와 동일한 빌드를 보장하기 위해 캐시 삭제
+rm -rf .turbo node_modules/.cache
+
 pnpm build:test
