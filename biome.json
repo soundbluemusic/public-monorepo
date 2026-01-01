@@ -45,6 +45,7 @@
   "files": {
     "includes": [
       "**",
+      "!**/.turbo",
       "!**/node_modules",
       "!**/.react-router",
       "!**/.vinxi",

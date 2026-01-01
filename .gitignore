@@ -20,6 +20,7 @@ apps/context/public/data/trie.bin
 
 # Cache
 .cache/
+.turbo/
 *.tsbuildinfo
 node-compile-cache/
 tsx-0/
