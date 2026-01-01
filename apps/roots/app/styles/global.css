@@ -208,9 +208,4 @@ input:focus-visible {
   }
 }
 
-/* Desktop: Sidebar collapsed state margin adjustment */
-@media (min-width: 1024px) {
-  main[data-sidebar-collapsed="true"] {
-    margin-left: var(--sidebar-collapsed-width) !important;
-  }
-}
+/* Desktop: Sidebar collapsed state handled via Tailwind classes (no CSS override needed) */

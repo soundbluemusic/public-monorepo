@@ -83,30 +83,36 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
 
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-40 h-(--header-height) backdrop-blur-sm bg-(--bg-primary)/80 border-b border-(--border-primary)">
-        <div className="max-w-6xl mx-auto px-4 h-full flex items-center justify-between gap-4">
-          {/* Left: Menu button (mobile) + Logo */}
-          <div className="flex items-center gap-2">
-            {/* Mobile menu button */}
-            <button
-              type="button"
-              onClick={() => setSidebarOpen(true)}
-              className="lg:hidden min-h-11 min-w-11 flex items-center justify-center rounded-lg text-(--text-secondary) hover:bg-(--bg-tertiary) transition-colors cursor-pointer"
-              aria-label={locale === 'ko' ? '메뉴 열기' : 'Open menu'}
-            >
-              <Menu size={20} aria-hidden="true" />
-            </button>
+        <div
+          className={cn(
+            'h-full px-4 flex items-center gap-4 transition-[padding] duration-200',
+            // Desktop: offset for fixed sidebar
+            sidebarCollapsed
+              ? 'lg:pl-[calc(var(--sidebar-collapsed-width)+1rem)]'
+              : 'lg:pl-[calc(var(--sidebar-width)+1rem)]',
+          )}
+        >
+          {/* Mobile menu button */}
+          <button
+            type="button"
+            onClick={() => setSidebarOpen(true)}
+            className="lg:hidden min-h-11 min-w-11 flex items-center justify-center rounded-lg text-(--text-secondary) hover:bg-(--bg-tertiary) transition-colors cursor-pointer"
+            aria-label={locale === 'ko' ? '메뉴 열기' : 'Open menu'}
+          >
+            <Menu size={20} aria-hidden="true" />
+          </button>
 
-            <Link
-              to={localePath('/')}
-              className="font-semibold shrink-0 flex items-center gap-2 text-(--text-primary) no-underline"
-            >
-              <span className="text-xl">π</span>
-              <span>Roots</span>
-            </Link>
-          </div>
+          {/* Logo */}
+          <Link
+            to={localePath('/')}
+            className="font-semibold shrink-0 flex items-center gap-2 text-(--text-primary) no-underline"
+          >
+            <span className="text-xl">π</span>
+            <span>Roots</span>
+          </Link>
 
           {/* Real-time Search Dropdown */}
-          <div className="flex-1 max-w-md">
+          <div className="relative flex-1 max-w-80 max-lg:max-w-60 max-md:max-w-40">
             <SearchDropdown
               query={query}
               onQueryChange={setQuery}
@@ -117,12 +123,15 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
             />
           </div>
 
-          {/* Right Actions */}
-          <div className="flex items-center gap-1 shrink-0">
+          {/* Spacer */}
+          <div className="flex-1" />
+
+          {/* Right Actions - Desktop */}
+          <div className="hidden sm:flex items-center gap-1">
             <Link
               to={localePath('/browse')}
               className={cn(
-                'hidden sm:flex min-h-11 items-center px-3 py-2 text-sm rounded-lg transition-colors no-underline',
+                'min-h-11 flex items-center px-3 py-2 text-sm rounded-lg transition-colors no-underline',
                 isActive('/browse')
                   ? 'text-(--accent-primary) bg-(--bg-tertiary)'
                   : 'text-(--text-secondary) hover:bg-(--bg-tertiary)',
@@ -134,7 +143,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
             <Link
               to={localePath('/favorites')}
               className={cn(
-                'hidden sm:flex min-h-11 items-center px-3 py-2 text-sm rounded-lg transition-colors no-underline',
+                'min-h-11 flex items-center px-3 py-2 text-sm rounded-lg transition-colors no-underline',
                 isActive('/favorites')
                   ? 'text-(--accent-primary) bg-(--bg-tertiary)'
                   : 'text-(--text-secondary) hover:bg-(--bg-tertiary)',
@@ -146,7 +155,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
             <Link
               to={localePath('/constants')}
               className={cn(
-                'hidden sm:flex min-h-11 items-center px-3 py-2 text-sm rounded-lg transition-colors no-underline',
+                'min-h-11 flex items-center px-3 py-2 text-sm rounded-lg transition-colors no-underline',
                 isActive('/constants')
                   ? 'text-(--accent-primary) bg-(--bg-tertiary)'
                   : 'text-(--text-secondary) hover:bg-(--bg-tertiary)',
@@ -155,6 +164,12 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
               {t('constants')}
             </Link>
 
+            <LanguageToggle locale={locale} currentPath={stripLocale(location.pathname)} />
+            <DarkModeToggle />
+          </div>
+
+          {/* Right Actions - Mobile */}
+          <div className="flex sm:hidden items-center gap-1">
             <LanguageToggle locale={locale} currentPath={stripLocale(location.pathname)} />
             <DarkModeToggle />
           </div>
@@ -176,12 +191,15 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
         className={cn(
           'flex-1 w-full px-4 py-8 pb-20 lg:pb-8',
           'pt-(--header-height)',
-          // Desktop: offset for fixed sidebar
-          'lg:ml-(--sidebar-width)',
-          'transition-[margin] duration-200',
+          // Desktop: offset for fixed sidebar (collapsed: 56px + 1rem, expanded: 256px + 1rem)
+          sidebarCollapsed
+            ? 'lg:pl-[calc(var(--sidebar-collapsed-width)+1rem)]'
+            : 'lg:pl-[calc(var(--sidebar-width)+1rem)]',
+          'lg:pr-4',
+          'transition-[padding] duration-200',
         )}
       >
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl">
           {/* Breadcrumbs */}
           {breadcrumbs && breadcrumbs.length > 0 && (
             <nav aria-label="Breadcrumb" className="mb-4">
@@ -264,8 +282,15 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
       )}
 
       {/* Footer - Hidden on mobile */}
-      <footer className="hidden lg:block mt-auto py-8 bg-(--bg-secondary) border-t border-(--border-primary)">
-        <div className="max-w-6xl mx-auto px-4">
+      <footer
+        className={cn(
+          'hidden lg:block mt-auto py-8 bg-(--bg-secondary) border-t border-(--border-primary)',
+          'transition-[padding] duration-200',
+          // Desktop: offset for fixed sidebar (same as main content)
+          sidebarCollapsed ? 'lg:pl-(--sidebar-collapsed-width)' : 'lg:pl-(--sidebar-width)',
+        )}
+      >
+        <div className="max-w-4xl mx-auto px-4">
           <nav
             aria-label="Footer links"
             className="flex items-center justify-center gap-6 mb-4 text-sm text-(--text-secondary)"
