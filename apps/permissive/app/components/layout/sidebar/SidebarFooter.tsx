@@ -28,7 +28,13 @@ export function SidebarFooter({ locale, isCollapsed, t, onToggleCollapse }: Side
           className={cn('transition-transform', isCollapsed && 'rotate-180')}
         />
         <span className={cn(isCollapsed && 'lg:hidden')}>
-          {locale === 'ko' ? '접기' : 'Collapse'}
+          {isCollapsed
+            ? locale === 'ko'
+              ? '펼치기'
+              : 'Expand'
+            : locale === 'ko'
+              ? '접기'
+              : 'Collapse'}
         </span>
       </button>
 

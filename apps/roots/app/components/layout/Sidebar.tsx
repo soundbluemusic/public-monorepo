@@ -182,7 +182,13 @@ export function Sidebar({ isOpen, isCollapsed, onClose, onToggleCollapse }: Side
               <PanelLeftClose size={18} aria-hidden="true" />
             )}
             <span className={cn(isCollapsed && 'lg:hidden')}>
-              {locale === 'ko' ? '접기' : 'Collapse'}
+              {isCollapsed
+                ? locale === 'ko'
+                  ? '펼치기'
+                  : 'Expand'
+                : locale === 'ko'
+                  ? '접기'
+                  : 'Collapse'}
             </span>
           </button>
         </div>
