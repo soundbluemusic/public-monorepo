@@ -223,6 +223,79 @@ All routes are duplicated for each language at build time (SSG).
 
 ---
 
+## 🔍 SEO
+
+### Features
+
+| Feature | Implementation |
+|:--------|:---------------|
+| **Pre-rendered HTML** | 모든 페이지 빌드 시 완전한 HTML 생성 |
+| **Meta Tags** | 동적 title, description, og:image |
+| **Sitemap** | 자동 생성 (`/sitemap.xml`, `/sitemap-*.xml`) |
+| **Robots.txt** | 검색 엔진 크롤링 허용 |
+| **Canonical URLs** | 중복 콘텐츠 방지 |
+| **Structured Data** | JSON-LD 스키마 (향후) |
+
+### Meta Tag Pattern
+
+```typescript
+// routes/entry.$entryId.tsx
+export function meta({ data }: Route.MetaArgs) {
+  return [
+    { title: `${data.entry.title} | Context` },
+    { name: 'description', content: data.entry.description },
+    { property: 'og:title', content: data.entry.title },
+    { property: 'og:type', content: 'article' },
+  ];
+}
+```
+
+### Verification
+
+```bash
+pnpm verify:ssg    # 모든 페이지 meta tag 검증
+pnpm check:links   # 깨진 링크 검사
+```
+
+---
+
+## 📱 PWA
+
+### Features
+
+| Feature | Description |
+|:--------|:------------|
+| **Installable** | 홈 화면에 앱 추가 가능 |
+| **Offline Support** | Service Worker로 오프라인 접근 |
+| **App Manifest** | 앱 이름, 아이콘, 테마 색상 정의 |
+| **Offline Indicator** | 오프라인 상태 UI 표시 |
+
+### Service Worker Strategy
+
+```
+┌─────────────────────────────────────────────────────┐
+│  Cache Strategy: Stale-While-Revalidate            │
+│                                                     │
+│  1. 캐시에서 즉시 응답 (빠른 로딩)                   │
+│  2. 백그라운드에서 네트워크 요청                     │
+│  3. 새 버전 있으면 캐시 업데이트                     │
+└─────────────────────────────────────────────────────┘
+```
+
+### Manifest
+
+```json
+{
+  "name": "Context - Korean Dictionary",
+  "short_name": "Context",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#3b82f6"
+}
+```
+
+---
+
 ## 🚀 Quick Start
 
 ### Prerequisites
