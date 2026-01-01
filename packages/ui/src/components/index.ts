@@ -2,10 +2,23 @@
  * @fileoverview UI Components
  * @environment universal
  */
-export { DarkModeToggle, type DarkModeToggleProps } from './DarkModeToggle';
+
 export {
-  FamilySites,
-  type FamilySitesProps,
-  type FamilySitesVariant,
-} from './FamilySites';
+  Accordion,
+  type AccordionContentProps,
+  type AccordionItemProps,
+  type AccordionProps,
+  type AccordionTriggerProps,
+} from './Accordion';
+// Simple Components
+export { DarkModeToggle, type DarkModeToggleProps } from './DarkModeToggle';
+export { FamilySites, type FamilySitesProps, type FamilySitesVariant } from './FamilySites';
 export { type Language, LanguageToggle, type LanguageToggleProps } from './LanguageToggle';
+// Compound Components
+export {
+  Tabs,
+  type TabsContentProps,
+  type TabsListProps,
+  type TabsProps,
+  type TabsTriggerProps,
+} from './Tabs';

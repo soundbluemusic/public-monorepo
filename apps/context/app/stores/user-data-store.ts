@@ -183,13 +183,49 @@ export const useUserDataStore = create<UserDataState & UserDataActions>()(
 );
 
 // ========================================
-// Selector Hooks (for convenience)
+// Selector Hooks (Performance Optimization)
 // ========================================
+// 각 selector hook은 해당 상태만 구독하여 불필요한 리렌더 방지
 
 /**
- * Hook to check hydration status
- * Use this to prevent rendering loading state on SSG pages
+ * Hydration 상태 확인
+ * SSG 페이지에서 로딩 상태 렌더링 방지용
  */
-export function useIsHydrated() {
-  return useUserDataStore((state) => state.isHydrated);
-}
+export const useIsHydrated = () => useUserDataStore((s) => s.isHydrated);
+
+/**
+ * 즐겨찾기 목록 (배열)
+ */
+export const useFavorites = () => useUserDataStore((s) => s.favorites);
+
+/**
+ * 학습 기록 목록 (배열)
+ */
+export const useStudyRecords = () => useUserDataStore((s) => s.studyRecords);
+
+/**
+ * 즐겨찾기 액션들만 구독
+ */
+export const useFavoriteActions = () =>
+  useUserDataStore((s) => ({
+    addFavorite: s.addFavorite,
+    removeFavorite: s.removeFavorite,
+    toggleFavorite: s.toggleFavorite,
+    isFavorite: s.isFavorite,
+  }));
+
+/**
+ * 학습 액션들만 구독
+ */
+export const useStudyActions = () =>
+  useUserDataStore((s) => ({
+    markAsStudied: s.markAsStudied,
+    isStudied: s.isStudied,
+    getStudiedIds: s.getStudiedIds,
+    getTodayStudiedCount: s.getTodayStudiedCount,
+  }));
+
+/**
+ * 진행률 계산 함수만 구독
+ */
+export const useProgressCalculator = () => useUserDataStore((s) => s.getOverallProgress);

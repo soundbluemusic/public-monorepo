@@ -16,4 +16,10 @@ export {
   type SearchResult,
   type SearchResultItem,
 } from './SearchDropdown';
-export { useVirtualizer, VirtualList, type VirtualListProps } from './VirtualList';
+export {
+  useVirtualizer,
+  VirtualGrid,
+  type VirtualGridProps,
+  VirtualList,
+  type VirtualListProps,
+} from './VirtualList';

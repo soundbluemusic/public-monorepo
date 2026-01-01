@@ -16,6 +16,18 @@ export default defineConfig({
   use: {
     trace: 'on-first-retry',
   },
+
+  /* Visual snapshot settings */
+  expect: {
+    toHaveScreenshot: {
+      maxDiffPixelRatio: 0.02, // 2% 픽셀 차이 허용
+      threshold: 0.2, // 색상 차이 임계값
+    },
+  },
+  /* Snapshot output */
+  snapshotDir: './tests/e2e/__snapshots__',
+  snapshotPathTemplate: '{snapshotDir}/{testFileDir}/{testFileName}-snapshots/{arg}{ext}',
+
   projects: [
     {
       name: 'context',
@@ -23,7 +35,8 @@ export default defineConfig({
         ...devices['Desktop Chrome'],
         baseURL: `http://localhost:${APP_PORTS.context}`,
       },
-      testMatch: /context|button-interactions|accessibility|responsive|mobile|seo|pwa|security/,
+      testMatch:
+        /context|button-interactions|accessibility|responsive|mobile|seo|pwa|security|visual/,
     },
     {
       name: 'permissive',
@@ -31,7 +44,8 @@ export default defineConfig({
         ...devices['Desktop Chrome'],
         baseURL: `http://localhost:${APP_PORTS.permissive}`,
       },
-      testMatch: /permissive|button-interactions|accessibility|responsive|mobile|seo|pwa|security/,
+      testMatch:
+        /permissive|button-interactions|accessibility|responsive|mobile|seo|pwa|security|visual/,
     },
     {
       name: 'roots',
@@ -39,7 +53,8 @@ export default defineConfig({
         ...devices['Desktop Chrome'],
         baseURL: `http://localhost:${APP_PORTS.roots}`,
       },
-      testMatch: /roots|button-interactions|accessibility|responsive|mobile|seo|pwa|security/,
+      testMatch:
+        /roots|button-interactions|accessibility|responsive|mobile|seo|pwa|security|visual/,
     },
   ],
 });

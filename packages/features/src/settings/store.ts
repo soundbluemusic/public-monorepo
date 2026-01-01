@@ -124,3 +124,33 @@ function applyTheme(theme: Theme) {
 }
 
 export type { Theme, SettingsState };
+
+// ========================================
+// Selector Hooks (Performance Optimization)
+// ========================================
+// 각 selector hook은 해당 상태만 구독하여 불필요한 리렌더 방지
+
+/** 현재 테마만 구독 */
+export const useTheme = () => useSettingsStore((s) => s.theme);
+
+/** 테마 액션들만 구독 */
+export const useThemeActions = () =>
+  useSettingsStore((s) => ({
+    setTheme: s.setTheme,
+    toggleTheme: s.toggleTheme,
+  }));
+
+/** 사이드바 접힘 상태만 구독 (데스크톱) */
+export const useSidebarCollapsed = () => useSettingsStore((s) => s.sidebarCollapsed);
+
+/** 사이드바 열림 상태만 구독 (모바일) */
+export const useSidebarOpen = () => useSettingsStore((s) => s.sidebarOpen);
+
+/** 사이드바 액션들만 구독 */
+export const useSidebarActions = () =>
+  useSettingsStore((s) => ({
+    setSidebarCollapsed: s.setSidebarCollapsed,
+    toggleSidebarCollapse: s.toggleSidebarCollapse,
+    setSidebarOpen: s.setSidebarOpen,
+    toggleSidebarOpen: s.toggleSidebarOpen,
+  }));
