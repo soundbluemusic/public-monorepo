@@ -122,5 +122,8 @@
   "savedWords": "저장된 단어",
   "metaMyLearningTitle": "내 학습 현황 - Context",
   "metaMyLearningDescription": "학습 진행도와 북마크한 단어 확인",
-  "noCategoryConversations": "이 카테고리에 대화가 아직 없습니다."
+  "noCategoryConversations": "이 카테고리에 대화가 아직 없습니다.",
+  "downloadTitle": "어휘 다운로드",
+  "downloadDescription": "모든 한국어 어휘 매핑을 원하는 형식으로 다운로드하세요",
+  "download": "다운로드"
 }

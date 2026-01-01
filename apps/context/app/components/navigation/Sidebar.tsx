@@ -5,6 +5,7 @@ import { cn } from '@soundblue/ui/utils';
 import {
   Bookmark,
   Code2,
+  Download,
   Home,
   Info,
   LayoutGrid,
@@ -193,6 +194,20 @@ export function Sidebar({ isOpen, isCollapsed, onClose, onToggleCollapse }: Side
             >
               <Info size={20} aria-hidden="true" className="shrink-0" />
               <span className={cn(isCollapsed && 'md:hidden')}>{t('about')}</span>
+            </Link>
+            <Link
+              to={localePath('/download')}
+              onClick={onClose}
+              className={cn(
+                'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
+                'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
+                isActive('/download') && 'bg-(--bg-tertiary) text-(--accent-primary)',
+                isCollapsed && 'md:justify-center md:px-0',
+              )}
+              title={isCollapsed ? t('download') : undefined}
+            >
+              <Download size={20} aria-hidden="true" className="shrink-0" />
+              <span className={cn(isCollapsed && 'md:hidden')}>{t('download')}</span>
             </Link>
           </div>
 

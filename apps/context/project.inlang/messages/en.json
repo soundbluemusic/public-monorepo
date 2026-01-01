@@ -122,5 +122,8 @@
   "savedWords": "saved words",
   "metaMyLearningTitle": "My Learning - Context",
   "metaMyLearningDescription": "Track your learning progress and bookmarks",
-  "noCategoryConversations": "No conversations in this category yet."
+  "noCategoryConversations": "No conversations in this category yet.",
+  "downloadTitle": "Download Vocabulary",
+  "downloadDescription": "Download all Korean vocabulary mappings in your preferred format",
+  "download": "Download"
 }
