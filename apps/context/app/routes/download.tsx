@@ -1,13 +1,16 @@
 import { metaFactory } from '@soundblue/i18n';
 import { cn } from '@soundblue/ui/utils';
-import { Download, FileJson, FileText, FileType } from 'lucide-react';
-import { useCallback, useState } from 'react';
+import { ChevronDown, ChevronUp, Download, Eye, FileJson, FileText, FileType } from 'lucide-react';
+import { useCallback, useMemo, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import { Layout } from '@/components/layout';
 import type { MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 
 type ExportFormat = 'json' | 'txt' | 'md' | 'csv';
+
+/** 미리보기용 샘플 개수 */
+const PREVIEW_COUNT = 3;
 
 interface LoaderData {
   entries: MeaningEntry[];
@@ -123,10 +126,66 @@ const FORMAT_INFO: Record<
   csv: { icon: FileText, extension: 'csv', mimeType: 'text/csv' },
 };
 
+/**
+ * 미리보기 컴포넌트
+ */
+function FormatPreview({
+  format,
+  entries,
+  locale,
+}: {
+  format: ExportFormat;
+  entries: MeaningEntry[];
+  locale: 'en' | 'ko';
+}) {
+  const sampleEntries = entries.slice(0, PREVIEW_COUNT);
+
+  const previewContent = useMemo(() => {
+    switch (format) {
+      case 'json':
+        return JSON.stringify(sampleEntries, null, 2);
+      case 'txt':
+        return toTXT(sampleEntries, locale);
+      case 'md':
+        return toMarkdown(sampleEntries, locale);
+      case 'csv':
+        return toCSV(sampleEntries, locale);
+    }
+  }, [format, sampleEntries, locale]);
+
+  return (
+    <div className="mt-3 rounded-lg bg-(--bg-tertiary) border border-(--border-secondary) overflow-hidden">
+      <div className="flex items-center gap-2 px-3 py-2 border-b border-(--border-secondary) bg-(--bg-secondary)">
+        <Eye size={14} className="text-(--text-tertiary)" />
+        <span className="text-xs font-medium text-(--text-tertiary)">
+          {locale === 'ko'
+            ? `미리보기 (${PREVIEW_COUNT}개 샘플)`
+            : `Preview (${PREVIEW_COUNT} samples)`}
+        </span>
+      </div>
+      <pre className="p-3 text-xs overflow-x-auto max-h-64 overflow-y-auto text-(--text-secondary) font-mono whitespace-pre">
+        {previewContent}
+      </pre>
+      <div className="px-3 py-2 border-t border-(--border-secondary) bg-(--bg-secondary)">
+        <p className="text-xs text-(--text-tertiary)">
+          {locale === 'ko'
+            ? `... 외 ${entries.length - PREVIEW_COUNT}개 더`
+            : `... and ${entries.length - PREVIEW_COUNT} more`}
+        </p>
+      </div>
+    </div>
+  );
+}
+
 export default function DownloadPage() {
   const { entries, totalCount } = useLoaderData<LoaderData>();
   const { locale, t } = useI18n();
   const [downloading, setDownloading] = useState<ExportFormat | null>(null);
+  const [expandedFormat, setExpandedFormat] = useState<ExportFormat | null>(null);
+
+  const togglePreview = useCallback((format: ExportFormat) => {
+    setExpandedFormat((prev) => (prev === format ? null : format));
+  }, []);
 
   const handleDownload = useCallback(
     (format: ExportFormat) => {
@@ -238,42 +297,89 @@ export default function DownloadPage() {
           {formats.map(({ format, label, description }) => {
             const { icon: Icon } = FORMAT_INFO[format];
             const isDownloading = downloading === format;
+            const isExpanded = expandedFormat === format;
 
             return (
-              <button
+              <div
                 key={format}
-                type="button"
-                onClick={() => handleDownload(format)}
-                disabled={isDownloading}
                 className={cn(
-                  'w-full p-4 flex items-start gap-4 rounded-xl border transition-all',
+                  'rounded-xl border transition-all',
                   'bg-(--bg-primary) border-(--border-primary)',
-                  'hover:border-(--accent-primary) hover:bg-(--bg-secondary)',
-                  'focus:outline-none focus:ring-2 focus:ring-(--accent-primary) focus:ring-offset-2',
-                  'disabled:opacity-50 disabled:cursor-not-allowed',
-                  'text-left cursor-pointer',
+                  isExpanded && 'border-(--accent-primary)',
                 )}
               >
-                <div className="p-2 bg-(--bg-tertiary) rounded-lg shrink-0">
-                  <Icon size={24} className="text-(--text-secondary)" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2">
-                    <span className="font-medium text-(--text-primary)">{label}</span>
-                    <span className="text-xs px-2 py-0.5 bg-(--bg-tertiary) rounded text-(--text-tertiary)">
-                      .{FORMAT_INFO[format].extension}
-                    </span>
+                {/* 카드 헤더 */}
+                <div className="p-4 flex items-start gap-4">
+                  <div className="p-2 bg-(--bg-tertiary) rounded-lg shrink-0">
+                    <Icon size={24} className="text-(--text-secondary)" />
                   </div>
-                  <p className="text-sm text-(--text-secondary) mt-1">{description}</p>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2">
+                      <span className="font-medium text-(--text-primary)">{label}</span>
+                      <span className="text-xs px-2 py-0.5 bg-(--bg-tertiary) rounded text-(--text-tertiary)">
+                        .{FORMAT_INFO[format].extension}
+                      </span>
+                    </div>
+                    <p className="text-sm text-(--text-secondary) mt-1">{description}</p>
+
+                    {/* 액션 버튼들 */}
+                    <div className="flex items-center gap-2 mt-3">
+                      <button
+                        type="button"
+                        onClick={() => togglePreview(format)}
+                        className={cn(
+                          'inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg transition-colors',
+                          'border border-(--border-primary)',
+                          isExpanded
+                            ? 'bg-(--accent-primary)/10 text-(--accent-primary) border-(--accent-primary)'
+                            : 'text-(--text-secondary) hover:bg-(--bg-tertiary)',
+                        )}
+                      >
+                        {isExpanded ? (
+                          <>
+                            <ChevronUp size={14} />
+                            {locale === 'ko' ? '미리보기 닫기' : 'Hide Preview'}
+                          </>
+                        ) : (
+                          <>
+                            <Eye size={14} />
+                            {locale === 'ko' ? '미리보기' : 'Preview'}
+                          </>
+                        )}
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => handleDownload(format)}
+                        disabled={isDownloading}
+                        className={cn(
+                          'inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg transition-colors',
+                          'bg-(--accent-primary) text-white hover:bg-(--accent-primary)/90',
+                          'disabled:opacity-50 disabled:cursor-not-allowed',
+                        )}
+                      >
+                        {isDownloading ? (
+                          <>
+                            <div className="w-3 h-3 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                            {locale === 'ko' ? '다운로드 중...' : 'Downloading...'}
+                          </>
+                        ) : (
+                          <>
+                            <Download size={14} />
+                            {locale === 'ko' ? '다운로드' : 'Download'}
+                          </>
+                        )}
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                <div className="shrink-0 self-center">
-                  {isDownloading ? (
-                    <div className="w-5 h-5 border-2 border-(--accent-primary) border-t-transparent rounded-full animate-spin" />
-                  ) : (
-                    <Download size={20} className="text-(--text-tertiary)" />
-                  )}
-                </div>
-              </button>
+
+                {/* 미리보기 패널 */}
+                {isExpanded && (
+                  <div className="px-4 pb-4">
+                    <FormatPreview format={format} entries={entries} locale={locale} />
+                  </div>
+                )}
+              </div>
             );
           })}
         </div>
