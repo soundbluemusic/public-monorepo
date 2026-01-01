@@ -1,6 +1,5 @@
 import { paraglideVitePlugin as paraglide } from '@inlang/paraglide-js';
 import { reactRouter } from '@react-router/dev/vite';
-import { appPorts, productionBuildSettings } from '@soundblue/config/vite';
 import tailwindcss from '@tailwindcss/vite';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig } from 'vite';
@@ -8,10 +7,10 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
   server: {
-    port: appPorts.context,
+    port: 3003,
   },
   preview: {
-    port: appPorts.context,
+    port: 3003,
   },
   resolve: {
     alias: {
@@ -19,7 +18,15 @@ export default defineConfig({
       '~': '/app',
     },
   },
-  build: productionBuildSettings,
+  build: {
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+  },
   plugins: [
     tailwindcss(),
     paraglide({
