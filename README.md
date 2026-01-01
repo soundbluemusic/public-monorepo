@@ -253,6 +253,7 @@ pnpm dev:roots          # → http://localhost:3005
 | **SSR** | Server-side rendering | 서버 비용, 복잡성 증가 |
 | **ISR** | Incremental Static Regeneration | 서버 필요, Cloudflare 미지원 |
 | **Edge/Serverless** | Edge Functions | 서버 비용, 벤더 종속 |
+| **빈 HTML** | Empty `<div id="root">` only | SEO 불가, 검색엔진 크롤링 실패 |
 
 <br>
 

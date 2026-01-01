@@ -155,11 +155,18 @@ export const storage: StorageFactory = {
 - react-router.config.ts에서 ssr: true 설정
 - prerender() 함수 제거 또는 빈 배열 반환
 - 런타임 서버 의존 코드 추가
+- 빈 HTML 서빙 (SEO 불가능)
 
 ✅ 유일하게 허용되는 모드:
 - SSG (Static Site Generation) - 빌드 시 모든 페이지 사전 생성
 - ssr: false + prerender() + loader() 패턴 필수
+- 모든 HTML은 완전한 콘텐츠를 포함해야 함 (SEO 필수)
 ```
+
+**SEO 원칙:**
+- 모든 페이지는 빌드 시 완전한 HTML로 생성되어야 함
+- 빈 `<div id="root"></div>`만 있는 HTML 금지
+- 검색 엔진이 JavaScript 없이도 콘텐츠를 읽을 수 있어야 함
 
 **왜 SSG만 사용하는가:**
 1. **서버 비용 제로** - CDN에서 정적 파일만 서빙
