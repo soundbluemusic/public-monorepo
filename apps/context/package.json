@@ -26,7 +26,7 @@
     "@soundblue/search": "workspace:*",
     "@soundblue/seo": "workspace:*",
     "@soundblue/ui": "workspace:*",
-    "dexie": "^4.0.10",
+    "zustand": "^5.0.5",
     "lucide-react": "^0.468.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",

@@ -1,13 +1,12 @@
 import { toast } from '@soundblue/features/toast';
 import { cn } from '@soundblue/ui/utils';
 import { Bookmark, BookmarkCheck, Check } from 'lucide-react';
-import { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router';
 import { LinkedExample } from '@/components/LinkedExample';
 import { Layout } from '@/components/layout';
 import type { MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
-import { favorites, studyRecords } from '@/lib/db';
+import { useUserDataStore } from '@/stores/user-data-store';
 
 /**
  * Entry 페이지 (Full SSG 모드)
@@ -38,59 +37,34 @@ export default function EntryPage() {
   const { entry } = useLoaderData<{ entry: MeaningEntry | null }>();
   const { locale, t, localePath } = useI18n();
 
-  const [isStudied, setIsStudied] = useState(false);
-  const [isFavorite, setIsFavorite] = useState(false);
+  // Zustand store - sync state (no useEffect needed)
+  const isFavorite = useUserDataStore((state) => (entry?.id ? state.isFavorite(entry.id) : false));
+  const isStudied = useUserDataStore((state) => (entry?.id ? state.isStudied(entry.id) : false));
+  const toggleFavorite = useUserDataStore((state) => state.toggleFavorite);
+  const markAsStudied = useUserDataStore((state) => state.markAsStudied);
 
-  // Load study and favorite status
-  useEffect(() => {
-    async function loadStatus() {
-      if (!entry?.id) return;
-      const studied = await studyRecords.isStudied(entry.id);
-      const fav = await favorites.isFavorite(entry.id);
-      setIsStudied(studied);
-      setIsFavorite(fav);
-    }
-    loadStatus();
-  }, [entry?.id]);
-
-  const handleMarkAsStudied = async () => {
+  const handleMarkAsStudied = () => {
     if (!entry?.id) return;
-    try {
-      await studyRecords.markAsStudied(entry.id);
-      setIsStudied(true);
-      toast({
-        message: locale === 'ko' ? '학습 완료로 표시되었습니다' : 'Marked as studied',
-        type: 'success',
-      });
-    } catch {
-      toast({
-        message: locale === 'ko' ? '저장에 실패했습니다' : 'Failed to save',
-        type: 'error',
-      });
-    }
+    markAsStudied(entry.id);
+    toast({
+      message: locale === 'ko' ? '학습 완료로 표시되었습니다' : 'Marked as studied',
+      type: 'success',
+    });
   };
 
-  const handleToggleFavorite = async () => {
+  const handleToggleFavorite = () => {
     if (!entry?.id) return;
-    try {
-      const newState = await favorites.toggle(entry.id);
-      setIsFavorite(newState);
-      toast({
-        message: newState
-          ? locale === 'ko'
-            ? '즐겨찾기에 추가되었습니다'
-            : 'Added to favorites'
-          : locale === 'ko'
-            ? '즐겨찾기에서 제거되었습니다'
-            : 'Removed from favorites',
-        type: 'success',
-      });
-    } catch {
-      toast({
-        message: locale === 'ko' ? '저장에 실패했습니다' : 'Failed to save',
-        type: 'error',
-      });
-    }
+    const newState = toggleFavorite(entry.id);
+    toast({
+      message: newState
+        ? locale === 'ko'
+          ? '즐겨찾기에 추가되었습니다'
+          : 'Added to favorites'
+        : locale === 'ko'
+          ? '즐겨찾기에서 제거되었습니다'
+          : 'Removed from favorites',
+      type: 'success',
+    });
   };
 
   // 에러 또는 없는 엔트리

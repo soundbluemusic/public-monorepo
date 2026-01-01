@@ -1,12 +1,12 @@
 import { Bookmark, Search, Trash2 } from 'lucide-react';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import type { MetaFunction } from 'react-router';
 import { Link } from 'react-router';
 import { Layout } from '@/components/layout';
 import { entriesById } from '@/data/entries';
 import type { MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
-import { favorites } from '@/lib/db';
+import { useIsHydrated, useUserDataStore } from '@/stores/user-data-store';
 
 export const meta: MetaFunction = ({ location }) => {
   const isKorean = location.pathname.startsWith('/ko');
@@ -26,41 +26,22 @@ export const meta: MetaFunction = ({ location }) => {
 
 export default function BookmarksPage() {
   const { locale, t, localePath } = useI18n();
-  const [bookmarkedEntries, setBookmarkedEntries] = useState<MeaningEntry[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const isHydrated = useIsHydrated();
+  const favorites = useUserDataStore((state) => state.favorites);
+  const removeFavorite = useUserDataStore((state) => state.removeFavorite);
   const [searchQuery, setSearchQuery] = useState('');
 
-  // 북마크 데이터 로드
-  useEffect(() => {
-    async function loadBookmarks() {
-      try {
-        const favs = await favorites.getAll();
-        const entries: MeaningEntry[] = [];
-        for (const fav of favs) {
-          const entry = entriesById.get(fav.entryId);
-          if (entry) {
-            entries.push(entry);
-          }
-        }
-        setBookmarkedEntries(entries);
-      } catch (error) {
-        console.error('Failed to load bookmarks:', error);
-      } finally {
-        setIsLoading(false);
+  // Convert favorites to entries
+  const bookmarkedEntries = useMemo(() => {
+    const entries: MeaningEntry[] = [];
+    for (const fav of favorites) {
+      const entry = entriesById.get(fav.entryId);
+      if (entry) {
+        entries.push(entry);
       }
     }
-    loadBookmarks();
-  }, []);
-
-  // 북마크 제거
-  const handleRemoveBookmark = useCallback(async (entryId: string) => {
-    try {
-      await favorites.remove(entryId);
-      setBookmarkedEntries((prev) => prev.filter((e) => e.id !== entryId));
-    } catch (error) {
-      console.error('Failed to remove bookmark:', error);
-    }
-  }, []);
+    return entries;
+  }, [favorites]);
 
   // 검색 필터링
   const filteredEntries = useMemo(() => {
@@ -77,7 +58,8 @@ export default function BookmarksPage() {
     });
   }, [bookmarkedEntries, searchQuery, locale]);
 
-  if (isLoading) {
+  // Show loading only before hydration
+  if (!isHydrated) {
     return (
       <Layout>
         <div className="flex items-center justify-center py-12">
@@ -176,7 +158,7 @@ export default function BookmarksPage() {
                 </Link>
                 <button
                   type="button"
-                  onClick={() => handleRemoveBookmark(entry.id)}
+                  onClick={() => removeFavorite(entry.id)}
                   className="min-h-9 min-w-9 flex items-center justify-center rounded-lg text-(--text-tertiary) hover:text-red-500 hover:bg-red-500/10 transition-colors opacity-0 group-hover:opacity-100 focus:opacity-100"
                   aria-label={locale === 'ko' ? '북마크 제거' : 'Remove bookmark'}
                 >

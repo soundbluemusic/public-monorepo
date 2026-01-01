@@ -1,15 +1,17 @@
 /**
  * @fileoverview 학습 데이터 로딩을 위한 커스텀 훅
  *
- * Context 앱의 여러 페이지에서 중복되던 학습 데이터 로딩 로직을 통합합니다.
+ * Zustand store (useUserDataStore)를 기반으로 학습 데이터를 제공합니다.
+ * SSG 호환: isHydrated 상태를 통해 로딩 상태를 관리합니다.
+ *
  * - _index.tsx: overallProgress, categoryProgress
  * - browse.tsx: studiedIds, favoriteIds, overallProgress, todayStudied
  * - category.$categoryId.tsx: studiedIds
  */
 
-import { useEffect, useState } from 'react';
+import { useMemo } from 'react';
 import type { Category } from '@/data/types';
-import { favorites, studyRecords } from '@/lib/db';
+import { useIsHydrated, useUserDataStore } from '@/stores/user-data-store';
 
 /** 진행률 데이터 구조 */
 export interface ProgressData {
@@ -44,6 +46,8 @@ export interface UseStudyDataOptions {
   categories?: Category[];
   /** 카테고리별 엔트리 수 (선택적) */
   categoryCounts?: Record<string, number>;
+  /** 엔트리 ID -> 카테고리 ID 매핑 (카테고리별 진행률 계산용, 선택적) */
+  entryCategoryMap?: Map<string, string>;
 }
 
 /**
@@ -62,6 +66,7 @@ export interface UseStudyDataOptions {
  *   totalEntries: 751,
  *   categories,
  *   categoryCounts,
+ *   entryCategoryMap,
  * });
  * ```
  */
@@ -69,91 +74,61 @@ export function useStudyData({
   totalEntries,
   categories,
   categoryCounts,
+  entryCategoryMap,
 }: UseStudyDataOptions): UseStudyDataResult {
-  const [isLoading, setIsLoading] = useState(true);
-  const [studiedIds, setStudiedIds] = useState<Set<string>>(new Set());
-  const [favoriteIds, setFavoriteIds] = useState<Set<string>>(new Set());
-  const [overallProgress, setOverallProgress] = useState<ProgressData>({
-    studied: 0,
-    total: totalEntries,
-    percentage: 0,
-  });
-  const [todayStudied, setTodayStudied] = useState(0);
-  const [bookmarkCount, setBookmarkCount] = useState(0);
-  const [categoryProgress, setCategoryProgress] = useState<Record<string, ProgressData>>({});
+  const isHydrated = useIsHydrated();
 
-  useEffect(() => {
-    async function loadData() {
-      try {
-        // 학습 완료 ID 목록
-        const ids = await studyRecords.getStudiedEntryIds();
-        setStudiedIds(new Set(ids));
+  // Zustand store에서 직접 데이터 가져오기
+  const studiedIds = useUserDataStore((state) => state.getStudiedIds());
+  const favoriteIds = useUserDataStore((state) => state.getFavoriteIds());
+  const favorites = useUserDataStore((state) => state.favorites);
+  const todayStudied = useUserDataStore((state) => state.getTodayStudiedCount());
 
-        // 전체 진행률
-        const overall = await studyRecords.getOverallProgress(totalEntries);
-        setOverallProgress(overall);
+  // 전체 진행률 계산
+  const overallProgress = useMemo<ProgressData>(() => {
+    const studied = studiedIds.size;
+    return {
+      studied,
+      total: totalEntries,
+      percentage: totalEntries > 0 ? (studied / totalEntries) * 100 : 0,
+    };
+  }, [studiedIds.size, totalEntries]);
 
-        // 오늘 학습한 단어 수
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
-        const allRecords = await studyRecords.getRecent(totalEntries);
-        const todayRecords = allRecords.filter((r) => {
-          const recordDate = new Date(r.studiedAt);
-          recordDate.setHours(0, 0, 0, 0);
-          return recordDate.getTime() === today.getTime();
-        });
-        const uniqueTodayIds = new Set(todayRecords.map((r) => r.entryId));
-        setTodayStudied(uniqueTodayIds.size);
+  // 카테고리별 진행률 계산
+  const categoryProgress = useMemo<Record<string, ProgressData>>(() => {
+    if (!categories || !categoryCounts || !entryCategoryMap) {
+      return {};
+    }
 
-        // 즐겨찾기
-        const favs = await favorites.getAll();
-        setFavoriteIds(new Set(favs.map((f) => f.entryId)));
-        setBookmarkCount(favs.length);
-
-        // 카테고리별 진행률 (옵션으로 제공된 경우만)
-        if (categories && categoryCounts) {
-          // 엔트리 데이터를 로드하여 실제 categoryId 매핑
-          const { entriesById } = await import('@/data/entries');
-          const studiedSet = new Set(ids);
-
-          // 단일 패스로 카테고리별 학습 수 집계 (O(n) instead of O(n*m))
-          const studiedByCategory: Record<string, number> = {};
-          for (const studiedId of studiedSet) {
-            const entry = entriesById.get(studiedId);
-            if (entry) {
-              studiedByCategory[entry.categoryId] = (studiedByCategory[entry.categoryId] ?? 0) + 1;
-            }
-          }
-
-          const catProgress: Record<string, ProgressData> = {};
-          for (const cat of categories) {
-            const count = categoryCounts[cat.id] ?? 0;
-            const studiedInCategory = studiedByCategory[cat.id] ?? 0;
-            catProgress[cat.id] = {
-              studied: studiedInCategory,
-              total: count,
-              percentage: count > 0 ? (studiedInCategory / count) * 100 : 0,
-            };
-          }
-          setCategoryProgress(catProgress);
-        }
-      } catch (error: unknown) {
-        console.error('Failed to load study data:', error);
-      } finally {
-        setIsLoading(false);
+    // 단일 패스로 카테고리별 학습 수 집계 (O(n))
+    const studiedByCategory: Record<string, number> = {};
+    for (const studiedId of studiedIds) {
+      const categoryId = entryCategoryMap.get(studiedId);
+      if (categoryId) {
+        studiedByCategory[categoryId] = (studiedByCategory[categoryId] ?? 0) + 1;
       }
     }
 
-    loadData();
-  }, [totalEntries, categories, categoryCounts]);
+    const catProgress: Record<string, ProgressData> = {};
+    for (const cat of categories) {
+      const count = categoryCounts[cat.id] ?? 0;
+      const studiedInCategory = studiedByCategory[cat.id] ?? 0;
+      catProgress[cat.id] = {
+        studied: studiedInCategory,
+        total: count,
+        percentage: count > 0 ? (studiedInCategory / count) * 100 : 0,
+      };
+    }
+    return catProgress;
+  }, [categories, categoryCounts, entryCategoryMap, studiedIds]);
 
   return {
     studiedIds,
     favoriteIds,
     overallProgress,
     todayStudied,
-    bookmarkCount,
+    bookmarkCount: favorites.length,
     categoryProgress,
-    isLoading,
+    isLoading: !isHydrated,
   };
 }

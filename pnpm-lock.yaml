@@ -215,9 +215,6 @@ importers:
       '@soundblue/ui':
         specifier: workspace:*
         version: link:../../packages/ui
-      dexie:
-        specifier: ^4.0.10
-        version: 4.2.1
       lucide-react:
         specifier: ^0.468.0
         version: 0.468.0(react@19.2.3)
@@ -230,6 +227,9 @@ importers:
       react-router:
         specifier: ^7.11.0
         version: 7.11.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      zustand:
+        specifier: ^5.0.5
+        version: 5.0.9(@types/react@19.2.7)(immer@11.1.0)(react@19.2.3)(use-sync-external-store@1.6.0(react@19.2.3))
     devDependencies:
       '@react-router/dev':
         specifier: ^7.11.0
