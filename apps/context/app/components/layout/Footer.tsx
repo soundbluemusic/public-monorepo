@@ -1,13 +1,23 @@
+import { useSettingsStore } from '@soundblue/features/settings';
 import { FamilySites } from '@soundblue/ui/components';
+import { cn } from '@soundblue/ui/utils';
 import { Github } from 'lucide-react';
 import { Link } from 'react-router';
 import { useI18n } from '@/i18n';
 
 export function Footer() {
   const { locale, t, localePath } = useI18n();
+  const { sidebarCollapsed } = useSettingsStore();
 
   return (
-    <footer className="hidden md:block mt-auto py-8 bg-(--bg-secondary) border-t border-(--border-primary)">
+    <footer
+      className={cn(
+        'hidden md:block mt-auto py-8 bg-(--bg-secondary) border-t border-(--border-primary)',
+        'transition-[padding] duration-200',
+        // Desktop: offset for fixed sidebar (same as main content)
+        sidebarCollapsed ? 'md:pl-(--sidebar-collapsed-width)' : 'md:pl-(--sidebar-width)',
+      )}
+    >
       <div className="max-w-4xl mx-auto px-4">
         <nav
           aria-label="Footer links"
