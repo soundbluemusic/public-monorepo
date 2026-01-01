@@ -1,6 +1,7 @@
 import { LIMITS } from '@soundblue/core/validation';
 import { cn } from '@soundblue/ui/utils';
 import { Flame, Star } from 'lucide-react';
+import { memo } from 'react';
 import type { Library } from '../../data/libraries';
 
 interface LibraryCardProps {
@@ -10,7 +11,12 @@ interface LibraryCardProps {
   onTagClick: (tag: string) => void;
 }
 
-export function LibraryCard({ library: lib, locale, selectedTag, onTagClick }: LibraryCardProps) {
+export const LibraryCard = memo(function LibraryCard({
+  library: lib,
+  locale,
+  selectedTag,
+  onTagClick,
+}: LibraryCardProps) {
   return (
     <div className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) overflow-hidden">
       <div className="flex items-start justify-between gap-2 mb-2">
@@ -96,4 +102,4 @@ export function LibraryCard({ library: lib, locale, selectedTag, onTagClick }: L
       </div>
     </div>
   );
-}
+});

@@ -3,6 +3,7 @@
  *
  * browse.tsx에서 중복되던 통계 카드 UI를 추출한 재사용 가능한 컴포넌트입니다.
  */
+import { memo } from 'react';
 
 interface StatsCardProps {
   /** 카드 제목 (라벨) */
@@ -25,7 +26,7 @@ interface StatsCardProps {
  * />
  * ```
  */
-export function StatsCard({ label, value, subtitle }: StatsCardProps) {
+export const StatsCard = memo(function StatsCard({ label, value, subtitle }: StatsCardProps) {
   return (
     <div className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
       <div className="text-sm text-(--text-tertiary) mb-1">{label}</div>
@@ -33,4 +34,4 @@ export function StatsCard({ label, value, subtitle }: StatsCardProps) {
       {subtitle && <div className="text-xs text-(--text-secondary)">{subtitle}</div>}
     </div>
   );
-}
+});

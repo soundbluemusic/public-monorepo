@@ -6,10 +6,11 @@ interface BuiltWithSectionProps {
 }
 
 // 홈페이지에 표시할 주요 도구 (카테고리: framework, build, styling)
-const FEATURED_TOOLS = ['React', 'React Router', 'TypeScript', 'Vite', 'Tailwind CSS'];
+// Set으로 O(1) lookup 성능 확보
+const FEATURED_TOOLS = new Set(['React', 'React Router', 'TypeScript', 'Vite', 'Tailwind CSS']);
 
 export function BuiltWithSection({ locale }: BuiltWithSectionProps) {
-  const featuredProjects = OPEN_SOURCE_PROJECTS.filter((p) => FEATURED_TOOLS.includes(p.name));
+  const featuredProjects = OPEN_SOURCE_PROJECTS.filter((p) => FEATURED_TOOLS.has(p.name));
   const totalCount = OPEN_SOURCE_PROJECTS.length;
 
   return (

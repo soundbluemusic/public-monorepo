@@ -1,5 +1,6 @@
 import { cn } from '@soundblue/ui/utils';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { memo, useMemo } from 'react';
 
 interface PaginationProps {
   locale: 'en' | 'ko';
@@ -38,7 +39,17 @@ function generatePageNumbers(current: number, total: number): (number | '...')[]
   return pages;
 }
 
-export function Pagination({ locale, currentPage, totalPages, onPageChange }: PaginationProps) {
+export const Pagination = memo(function Pagination({
+  locale,
+  currentPage,
+  totalPages,
+  onPageChange,
+}: PaginationProps) {
+  const pageNumbers = useMemo(
+    () => generatePageNumbers(currentPage, totalPages),
+    [currentPage, totalPages],
+  );
+
   if (totalPages <= 1) return null;
 
   return (
@@ -59,7 +70,7 @@ export function Pagination({ locale, currentPage, totalPages, onPageChange }: Pa
       </button>
 
       <div className="flex items-center gap-1">
-        {generatePageNumbers(currentPage, totalPages).map((page, idx) =>
+        {pageNumbers.map((page, idx) =>
           page === '...' ? (
             // biome-ignore lint/suspicious/noArrayIndexKey: ellipsis position is stable based on pagination algorithm
             <span key={`ellipsis-${idx}`} className="px-2 text-(--text-tertiary)">
@@ -99,4 +110,4 @@ export function Pagination({ locale, currentPage, totalPages, onPageChange }: Pa
       </button>
     </div>
   );
-}
+});

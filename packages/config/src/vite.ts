@@ -25,6 +25,20 @@ export const buildOptimizations = {
 } as const;
 
 /**
+ * Production build settings (terser minification)
+ * Removes console.log and debugger statements in production
+ */
+export const productionBuildSettings = {
+  minify: 'terser' as const,
+  terserOptions: {
+    compress: {
+      drop_console: true,
+      drop_debugger: true,
+    },
+  },
+};
+
+/**
  * Common dev server settings
  */
 export const devServerDefaults = {

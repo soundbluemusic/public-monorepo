@@ -1,4 +1,5 @@
 import { Flame } from 'lucide-react';
+import { memo } from 'react';
 import type { WebAPI } from '../../data/web-apis';
 
 interface ApiCardProps {
@@ -6,7 +7,7 @@ interface ApiCardProps {
   locale: 'en' | 'ko';
 }
 
-export function ApiCard({ api, locale }: ApiCardProps) {
+export const ApiCard = memo(function ApiCard({ api, locale }: ApiCardProps) {
   return (
     <a
       href={api.mdnUrl}
@@ -33,4 +34,4 @@ export function ApiCard({ api, locale }: ApiCardProps) {
       {api.yearStable && <p className="text-xs text-(--text-tertiary)">Since {api.yearStable}</p>}
     </a>
   );
-}
+});

@@ -10,10 +10,7 @@ import { persist } from 'zustand/middleware';
 
 /**
  * Available theme options for the application.
- *
- * - `'light'`: Forces light mode regardless of system preference
- * - `'dark'`: Forces dark mode regardless of system preference
- * - `'system'`: Follows the user's operating system preference (default)
+ * Matches @soundblue/core Theme type for compatibility.
  */
 type Theme = 'light' | 'dark' | 'system';
 

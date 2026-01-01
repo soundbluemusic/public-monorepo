@@ -59,13 +59,16 @@ export function SearchDropdown<T extends SearchResultItem = SearchResultItem>({
     typeof navigator !== 'undefined' && /Mac|iPhone|iPad|iPod/.test(navigator.userAgent);
   const shortcutKey = isMac ? '\u2318K' : 'Ctrl+K';
 
+  // 결과 길이 변경 시 선택 인덱스 초기화 (useEffect로 이동하여 렌더링 중 상태 업데이트 방지)
   const prevResultsLengthRef = useRef(results.length);
-  if (prevResultsLengthRef.current !== results.length) {
-    prevResultsLengthRef.current = results.length;
-    if (selectedIndex !== -1) {
-      setSelectedIndex(-1);
+  useEffect(() => {
+    if (prevResultsLengthRef.current !== results.length) {
+      prevResultsLengthRef.current = results.length;
+      if (selectedIndex !== -1) {
+        setSelectedIndex(-1);
+      }
     }
-  }
+  }, [results.length, selectedIndex]);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -123,32 +126,38 @@ export function SearchDropdown<T extends SearchResultItem = SearchResultItem>({
     [results, selectedIndex, onSelect, onQueryChange],
   );
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    onQueryChange(e.target.value);
-    setShowResults(true);
-    setSelectedIndex(-1);
-  };
+  const handleInputChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      onQueryChange(e.target.value);
+      setShowResults(true);
+      setSelectedIndex(-1);
+    },
+    [onQueryChange],
+  );
 
-  const handleClear = () => {
+  const handleClear = useCallback(() => {
     onQueryChange('');
     inputRef.current?.focus();
-  };
+  }, [onQueryChange]);
 
-  const handleResultClick = (result: SearchResult<T>, index: number) => {
-    setSelectedIndex(index);
-    onSelect(result);
-    setShowResults(false);
-    onQueryChange('');
-  };
+  const handleResultClick = useCallback(
+    (result: SearchResult<T>, index: number) => {
+      setSelectedIndex(index);
+      onSelect(result);
+      setShowResults(false);
+      onQueryChange('');
+    },
+    [onSelect, onQueryChange],
+  );
 
-  const handleFocus = () => {
+  const handleFocus = useCallback(() => {
     setIsFocused(true);
     if (query.trim()) setShowResults(true);
-  };
+  }, [query]);
 
-  const handleBlur = () => {
+  const handleBlur = useCallback(() => {
     setIsFocused(false);
-  };
+  }, []);
 
   const defaultRenderResult = (result: SearchResult<T>, _isSelected: boolean) => {
     const name = result.item.name[locale] || result.item.name.en;

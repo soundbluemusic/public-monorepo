@@ -34,13 +34,21 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
     }
   }, [isMobile, sidebarOpen]);
 
-  // Back to top visibility
+  // Back to top visibility with RAF throttling
   useEffect(() => {
+    let rafId: number | null = null;
     const handleScroll = () => {
-      setShowBackToTop(window.scrollY > 300);
+      if (rafId !== null) return;
+      rafId = requestAnimationFrame(() => {
+        setShowBackToTop(window.scrollY > 300);
+        rafId = null;
+      });
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (rafId !== null) cancelAnimationFrame(rafId);
+    };
   }, []);
 
   const toggleSidebarOpen = () => setSidebarOpen(!sidebarOpen);

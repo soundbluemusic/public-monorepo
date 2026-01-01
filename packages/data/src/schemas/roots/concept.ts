@@ -4,6 +4,11 @@
  * 수학 개념 문서의 Zod 스키마 정의
  */
 import { z } from 'zod';
+import { LocalizedTextSchema } from '../common';
+
+export type { LocalizedText } from '../common';
+// Re-export for backward compatibility
+export { LocalizedTextSchema } from '../common';
 
 // ============================================
 // 기본 타입
@@ -26,15 +31,6 @@ export const DifficultyLevelSchema = z.union([
   z.literal(4),
   z.literal(5),
 ]);
-
-// ============================================
-// 다국어 텍스트
-// ============================================
-
-export const LocalizedTextSchema = z.object({
-  ko: z.string().min(1),
-  en: z.string().min(1),
-});
 
 // ============================================
 // 수학 분야 (18개 대분류 + 확장)
@@ -221,7 +217,6 @@ export const MathConceptSchema = z.object({
 
 export type Language = z.infer<typeof LanguageSchema>;
 export type DifficultyLevel = z.infer<typeof DifficultyLevelSchema>;
-export type LocalizedText = z.infer<typeof LocalizedTextSchema>;
 export type MathField = z.infer<typeof MathFieldSchema>;
 export type Variable = z.infer<typeof VariableSchema>;
 export type Formula = z.infer<typeof FormulaSchema>;

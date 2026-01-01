@@ -4,15 +4,11 @@
  * 카테고리 및 대화 스키마 정의
  */
 import { z } from 'zod';
+import { LocalizedTextSchema } from '../common';
 
-// ============================================
-// 다국어 텍스트
-// ============================================
-
-export const LocalizedTextSchema = z.object({
-  ko: z.string().min(1),
-  en: z.string().min(1),
-});
+export type { LocalizedText } from '../common';
+// Re-export for backward compatibility
+export { LocalizedTextSchema } from '../common';
 
 // ============================================
 // 카테고리
@@ -51,7 +47,6 @@ export const ConversationSchema = z.object({
 // 타입 추론
 // ============================================
 
-export type LocalizedText = z.infer<typeof LocalizedTextSchema>;
 export type Category = z.infer<typeof CategorySchema>;
 export type DialogueLine = z.infer<typeof DialogueLineSchema>;
 export type Conversation = z.infer<typeof ConversationSchema>;

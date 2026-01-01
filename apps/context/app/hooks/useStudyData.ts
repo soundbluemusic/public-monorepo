@@ -116,17 +116,19 @@ export function useStudyData({
           const { entriesById } = await import('@/data/entries');
           const studiedSet = new Set(ids);
 
+          // 단일 패스로 카테고리별 학습 수 집계 (O(n) instead of O(n*m))
+          const studiedByCategory: Record<string, number> = {};
+          for (const studiedId of studiedSet) {
+            const entry = entriesById.get(studiedId);
+            if (entry) {
+              studiedByCategory[entry.categoryId] = (studiedByCategory[entry.categoryId] ?? 0) + 1;
+            }
+          }
+
           const catProgress: Record<string, ProgressData> = {};
           for (const cat of categories) {
             const count = categoryCounts[cat.id] ?? 0;
-            // 학습된 ID 중 해당 카테고리에 속하는 것만 카운트
-            let studiedInCategory = 0;
-            for (const studiedId of studiedSet) {
-              const entry = entriesById.get(studiedId);
-              if (entry?.categoryId === cat.id) {
-                studiedInCategory++;
-              }
-            }
+            const studiedInCategory = studiedByCategory[cat.id] ?? 0;
             catProgress[cat.id] = {
               studied: studiedInCategory,
               total: count,

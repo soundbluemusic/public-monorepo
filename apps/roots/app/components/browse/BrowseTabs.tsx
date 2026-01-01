@@ -3,6 +3,7 @@
  */
 import { cn } from '@soundblue/ui/utils';
 import { GitGraph, Grid3X3, LayoutList } from 'lucide-react';
+import { memo, useMemo } from 'react';
 import { useI18n } from '@/i18n';
 import type { ViewMode } from './useBrowseFilters';
 
@@ -11,14 +12,20 @@ interface BrowseTabsProps {
   onViewModeChange: (mode: ViewMode) => void;
 }
 
-export function BrowseTabs({ viewMode, onViewModeChange }: BrowseTabsProps) {
+export const BrowseTabs = memo(function BrowseTabs({
+  viewMode,
+  onViewModeChange,
+}: BrowseTabsProps) {
   const { t } = useI18n();
 
-  const tabs: { mode: ViewMode; label: string; icon: typeof Grid3X3 }[] = [
-    { mode: 'fields', label: t('browseByField'), icon: Grid3X3 },
-    { mode: 'concepts', label: t('allConcepts'), icon: LayoutList },
-    { mode: 'graph', label: t('relationGraph'), icon: GitGraph },
-  ];
+  const tabs = useMemo(
+    () => [
+      { mode: 'fields' as ViewMode, label: t('browseByField'), icon: Grid3X3 },
+      { mode: 'concepts' as ViewMode, label: t('allConcepts'), icon: LayoutList },
+      { mode: 'graph' as ViewMode, label: t('relationGraph'), icon: GitGraph },
+    ],
+    [t],
+  );
 
   return (
     <div className="flex gap-2 mb-6" role="tablist" aria-label={t('browseViewMode')}>
@@ -43,4 +50,4 @@ export function BrowseTabs({ viewMode, onViewModeChange }: BrowseTabsProps) {
       ))}
     </div>
   );
-}
+});

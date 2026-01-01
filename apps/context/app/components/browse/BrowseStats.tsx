@@ -1,4 +1,5 @@
 import { useAutoAnimate } from '@soundblue/ui/hooks';
+import { memo } from 'react';
 import { StatsCard } from '@/components/StatsCard';
 
 interface BrowseStatsProps {
@@ -8,7 +9,7 @@ interface BrowseStatsProps {
   bookmarkCount: number;
 }
 
-export function BrowseStats({
+export const BrowseStats = memo(function BrowseStats({
   locale,
   overallProgress,
   todayStudied,
@@ -35,4 +36,4 @@ export function BrowseStats({
       />
     </div>
   );
-}
+});

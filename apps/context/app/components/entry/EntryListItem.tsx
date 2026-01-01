@@ -7,6 +7,7 @@
 
 import { cn } from '@soundblue/ui/utils';
 import { Check, Star } from 'lucide-react';
+import { memo } from 'react';
 import { Link } from 'react-router';
 
 /**
@@ -60,7 +61,7 @@ export interface EntryListItemProps {
  * />
  * ```
  */
-export function EntryListItem({
+export const EntryListItem = memo(function EntryListItem({
   entryId,
   korean,
   romanization,
@@ -123,4 +124,4 @@ export function EntryListItem({
       </div>
     </Link>
   );
-}
+});

@@ -3,6 +3,7 @@
  */
 import { cn } from '@soundblue/ui/utils';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { memo, useMemo } from 'react';
 import { useI18n } from '@/i18n';
 
 interface PaginationProps {
@@ -41,8 +42,17 @@ function generatePageNumbers(current: number, total: number): (number | '...')[]
   return pages;
 }
 
-export function Pagination({ currentPage, totalPages, onPageChange }: PaginationProps) {
+export const Pagination = memo(function Pagination({
+  currentPage,
+  totalPages,
+  onPageChange,
+}: PaginationProps) {
   const { locale } = useI18n();
+
+  const pageNumbers = useMemo(
+    () => generatePageNumbers(currentPage, totalPages),
+    [currentPage, totalPages],
+  );
 
   if (totalPages <= 1) return null;
 
@@ -67,7 +77,7 @@ export function Pagination({ currentPage, totalPages, onPageChange }: Pagination
       </button>
 
       <div className="flex items-center gap-1">
-        {generatePageNumbers(currentPage, totalPages).map((page, idx) => {
+        {pageNumbers.map((page, idx) => {
           // 고유 키 생성: 숫자는 그대로, ellipsis는 위치 기반 (앞/뒤)
           const key = page === '...' ? `ellipsis-${idx < 3 ? 'start' : 'end'}` : `page-${page}`;
           return page === '...' ? (
@@ -109,4 +119,4 @@ export function Pagination({ currentPage, totalPages, onPageChange }: Pagination
       </button>
     </nav>
   );
-}
+});

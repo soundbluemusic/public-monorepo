@@ -1,11 +1,14 @@
 import { metaFactory } from '@soundblue/i18n';
+import { useCallback } from 'react';
 import { useLoaderData } from 'react-router';
 import {
   BrowseFilters,
   BrowseStats,
   EntryList,
+  type FilterStatus,
   Pagination,
   QuickActions,
+  type SortOption,
   useBrowseFilters,
 } from '@/components/browse';
 import { Layout } from '@/components/layout';
@@ -102,26 +105,50 @@ export default function BrowsePage() {
     isLoading,
   });
 
-  const handleRandomWord = () => {
+  const handleRandomWord = useCallback(() => {
     if (entries.length === 0) return;
     const randomIndex = Math.floor(Math.random() * entries.length);
     const randomEntry = entries[randomIndex];
     if (randomEntry) {
       window.location.href = localePath(`/entry/${randomEntry.id}`);
     }
-  };
+  }, [entries, localePath]);
 
-  const handleShowBookmarks = () => {
+  const handleShowBookmarks = useCallback(() => {
     setFilterStatus('bookmarked');
     setFilterCategory('all');
     updateUrlParams({ status: 'bookmarked', category: null });
-  };
+  }, [setFilterStatus, setFilterCategory, updateUrlParams]);
 
-  const handleShowUnstudied = () => {
+  const handleShowUnstudied = useCallback(() => {
     setFilterStatus('unstudied');
     setFilterCategory('all');
     updateUrlParams({ status: 'unstudied', category: null });
-  };
+  }, [setFilterStatus, setFilterCategory, updateUrlParams]);
+
+  const handleCategoryChange = useCallback(
+    (value: string) => {
+      setFilterCategory(value);
+      updateUrlParams({ category: value });
+    },
+    [setFilterCategory, updateUrlParams],
+  );
+
+  const handleStatusChange = useCallback(
+    (value: string) => {
+      setFilterStatus(value as FilterStatus);
+      updateUrlParams({ status: value });
+    },
+    [setFilterStatus, updateUrlParams],
+  );
+
+  const handleSortChange = useCallback(
+    (value: string) => {
+      setSortBy(value as SortOption);
+      updateUrlParams({ sort: value === 'alphabetical' ? null : value });
+    },
+    [setSortBy, updateUrlParams],
+  );
 
   return (
     <Layout>
@@ -156,18 +183,9 @@ export default function BrowsePage() {
         filterCategory={filterCategory}
         filterStatus={filterStatus}
         sortBy={sortBy}
-        onCategoryChange={(value) => {
-          setFilterCategory(value);
-          updateUrlParams({ category: value });
-        }}
-        onStatusChange={(value) => {
-          setFilterStatus(value);
-          updateUrlParams({ status: value });
-        }}
-        onSortChange={(value) => {
-          setSortBy(value);
-          updateUrlParams({ sort: value === 'alphabetical' ? null : value });
-        }}
+        onCategoryChange={handleCategoryChange}
+        onStatusChange={handleStatusChange}
+        onSortChange={handleSortChange}
       />
 
       {/* Results Count */}

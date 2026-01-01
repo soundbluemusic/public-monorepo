@@ -1,4 +1,5 @@
 import { cn } from '@soundblue/ui/utils';
+import { memo } from 'react';
 import type { DifficultyLevel } from '@/data/types';
 import { useI18n } from '@/i18n';
 
@@ -24,7 +25,34 @@ const levelColors: Record<number, string> = {
   5: 'bg-[color-mix(in_srgb,var(--difficulty-5)_15%,transparent)] text-(--difficulty-5)',
 };
 
-export function DifficultyBadge({ level, showLabel = true, size = 'md' }: DifficultyBadgeProps) {
+// Pre-computed star indices to avoid array recreation
+const STAR_INDICES = [0, 1, 2, 3, 4] as const;
+
+/**
+ * 난이도 별표 컴포넌트 (공통 추출)
+ */
+export const DifficultyStars = memo(function DifficultyStars({
+  level,
+}: {
+  level: DifficultyLevel;
+}) {
+  return (
+    <span className="flex items-center gap-0.5">
+      {STAR_INDICES.map((i) => (
+        <span
+          key={i}
+          className={cn('w-1.5 h-1.5 rounded-full bg-current', i >= level && 'opacity-30')}
+        />
+      ))}
+    </span>
+  );
+});
+
+export const DifficultyBadge = memo(function DifficultyBadge({
+  level,
+  showLabel = true,
+  size = 'md',
+}: DifficultyBadgeProps) {
   const { t } = useI18n();
 
   return (
@@ -35,31 +63,8 @@ export function DifficultyBadge({ level, showLabel = true, size = 'md' }: Diffic
         size === 'sm' ? 'text-xs px-1.5 py-0.5' : 'text-sm px-2 py-1',
       )}
     >
-      <span className="flex items-center gap-0.5">
-        {[0, 1, 2, 3, 4].map((i) => (
-          <span
-            key={`star-${i}`}
-            className={cn('w-1.5 h-1.5 rounded-full bg-current', i >= level && 'opacity-30')}
-          />
-        ))}
-      </span>
+      <DifficultyStars level={level} />
       {showLabel && <span>{t(labels[level])}</span>}
     </span>
   );
-}
-
-/**
- * 난이도 별표 컴포넌트 (예제 카드용)
- */
-export function DifficultyStars({ level }: { level: DifficultyLevel }) {
-  return (
-    <span className="flex items-center gap-0.5">
-      {[0, 1, 2, 3, 4].map((i) => (
-        <span
-          key={`star-${i}`}
-          className={cn('w-1.5 h-1.5 rounded-full bg-current', i >= level && 'opacity-30')}
-        />
-      ))}
-    </span>
-  );
-}
+});

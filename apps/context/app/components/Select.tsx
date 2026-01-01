@@ -42,11 +42,7 @@ interface SelectProps {
  * ```
  */
 export function Select({ id, label, value, options, onChange, className = '' }: SelectProps) {
-  // Debug: Log when component renders with React
-  console.log(`[SELECT ${id}] React render, value=${value}`);
-
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    console.log(`[SELECT ${id}] onChange fired: ${e.target.value}`);
     onChange(e.target.value);
   };
 

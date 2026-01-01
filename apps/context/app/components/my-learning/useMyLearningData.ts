@@ -34,12 +34,24 @@ export function useMyLearningData() {
         const favs = await favorites.getAll();
         setFavoriteIds(favs.map((f) => f.entryId));
 
+        // 단일 패스로 카테고리별 진행 상황 계산 (O(n) instead of O(n*m))
         const catProgress: Record<string, { studied: number; total: number }> = {};
         const studiedSet = new Set(studied);
+
+        // 카테고리별 초기화
         for (const cat of loadedCategories) {
-          const catEntries = meaningEntries.filter((e) => e.categoryId === cat.id);
-          const studiedInCat = catEntries.filter((e) => studiedSet.has(e.id)).length;
-          catProgress[cat.id] = { studied: studiedInCat, total: catEntries.length };
+          catProgress[cat.id] = { studied: 0, total: 0 };
+        }
+
+        // 단일 패스로 집계
+        for (const entry of meaningEntries) {
+          const progress = catProgress[entry.categoryId];
+          if (progress) {
+            progress.total++;
+            if (studiedSet.has(entry.id)) {
+              progress.studied++;
+            }
+          }
         }
         setCategoryProgress(catProgress);
       } catch (err) {

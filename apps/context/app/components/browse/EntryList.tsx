@@ -1,4 +1,5 @@
 import { useAutoAnimate } from '@soundblue/ui/hooks';
+import { useMemo } from 'react';
 import { EntryListItem } from '@/components/entry/EntryListItem';
 import type { categories } from '@/data/categories';
 import type { LightEntry } from '@/data/entries';
@@ -22,13 +23,16 @@ export function EntryList({
 }: EntryListProps) {
   const [listRef] = useAutoAnimate<HTMLDivElement>();
 
+  // O(n) Map 생성으로 O(n*m) find() 반복 제거
+  const categoryMap = useMemo(() => new Map(cats.map((c) => [c.id, c])), [cats]);
+
   return (
     <div ref={listRef} className="flex flex-col gap-1">
       {entries.map((entry) => {
         const translation = entry.word[locale];
         const isStudied = studiedIds.has(entry.id);
         const isFavorite = favoriteIds.has(entry.id);
-        const category = cats.find((c) => c.id === entry.categoryId);
+        const category = categoryMap.get(entry.categoryId);
 
         return (
           <EntryListItem

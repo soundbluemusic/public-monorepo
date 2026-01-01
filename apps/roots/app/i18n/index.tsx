@@ -7,6 +7,17 @@ import { useLocation } from 'react-router';
 import enMessages from '../../project.inlang/messages/en.json';
 import koMessages from '../../project.inlang/messages/ko.json';
 
+// 정규식 캐시: 매번 new RegExp 생성 방지
+const paramRegexCache = new Map<string, RegExp>();
+function getParamRegex(key: string): RegExp {
+  let regex = paramRegexCache.get(key);
+  if (!regex) {
+    regex = new RegExp(`\\{${key}\\}`, 'g');
+    paramRegexCache.set(key, regex);
+  }
+  return regex;
+}
+
 // Re-export for backward compatibility
 export type { Language } from '@soundblue/i18n';
 
@@ -153,7 +164,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       // Replace template variables: {key} → value
       if (params) {
         for (const [k, v] of Object.entries(params)) {
-          translation = translation.replace(new RegExp(`\\{${k}\\}`, 'g'), String(v));
+          translation = translation.replace(getParamRegex(k), String(v));
         }
       }
       return translation;
