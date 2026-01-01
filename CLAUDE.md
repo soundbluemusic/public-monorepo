@@ -225,6 +225,83 @@ export async function loader({ params }: Route.LoaderArgs) {
 - Never leave TODO comments without creating a tracking issue
 - Never commit placeholder implementations
 
+### Problem Resolution Guide (문제 해결 가이드)
+
+> **금지만 있고 대안이 없으면 막다른 길. 아래 해결책을 사용할 것.**
+
+#### any 타입을 써야 할 것 같을 때
+```typescript
+// ❌ 금지
+function process(data: any) { ... }
+
+// ✅ 대안 1: unknown + 타입 가드
+function process(data: unknown) {
+  if (isValidData(data)) { ... }
+}
+
+// ✅ 대안 2: 제네릭
+function process<T extends BaseType>(data: T) { ... }
+
+// ✅ 대안 3: Zod 스키마 추론
+const DataSchema = z.object({ ... });
+type Data = z.infer<typeof DataSchema>;
+```
+
+#### @ts-ignore를 써야 할 것 같을 때
+```typescript
+// ❌ 금지
+// @ts-ignore
+const value = obj.unknownProp;
+
+// ✅ 대안 1: 타입 단언 (근거 있을 때)
+const value = (obj as KnownType).prop;
+
+// ✅ 대안 2: 옵셔널 체이닝
+const value = obj?.prop ?? defaultValue;
+
+// ✅ 대안 3: in 연산자 타입 가드
+if ('prop' in obj) { const value = obj.prop; }
+```
+
+#### 복잡한 외부 라이브러리 타입
+```typescript
+// ❌ 금지
+const result: any = externalLib.doSomething();
+
+// ✅ 대안 1: ReturnType 추론
+type Result = ReturnType<typeof externalLib.doSomething>;
+
+// ✅ 대안 2: 래퍼 함수 + 명시적 타입
+function wrappedDoSomething(): ExpectedType {
+  return externalLib.doSomething() as ExpectedType;
+}
+
+// ✅ 대안 3: 타입 선언 파일 작성 (.d.ts)
+declare module 'external-lib' {
+  export function doSomething(): ExpectedType;
+}
+```
+
+#### 빈 catch 블록이 필요할 것 같을 때
+```typescript
+// ❌ 금지
+try { risky(); } catch {}
+
+// ✅ 대안 1: 에러 로깅
+try { risky(); } catch (e) {
+  console.error('Operation failed:', e);
+}
+
+// ✅ 대안 2: 조용한 실패가 의도적일 때 명시
+try { risky(); } catch {
+  // 의도적 무시: 이 작업은 실패해도 UX에 영향 없음
+}
+
+// ✅ 대안 3: Result 패턴
+const result = safeRisky(); // { ok: true, value } | { ok: false, error }
+if (!result.ok) { /* 처리 */ }
+```
+
 ### Required Process (필수 프로세스)
 
 Before any fix (수정 전 반드시):
@@ -528,3 +605,38 @@ When writing code, if any of the 12 metrics is compromised (코드 작성 시 12
 1. **Warn immediately** (즉시 경고)
 2. **Suggest alternatives** (대안 제시)
 3. **Do not proceed without user confirmation** (사용자 확인 없이 진행 금지)
+
+### Priority Resolution (지표 충돌 시 우선순위)
+
+> **12가지 지표가 충돌할 때 아래 순서로 판단**
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  1️⃣ Accessibility (접근성)           ← 최우선, 법적 요구사항      │
+│  2️⃣ Security (보안)                  ← 데이터 보호 필수          │
+│  3️⃣ Functionality (기능 정확성)       ← 올바르게 작동해야 함       │
+│  4️⃣ Performance (성능)               ← 사용자 경험 직결          │
+│  5️⃣ SEO / Static Integrity           ← 검색 노출 영향           │
+│  6️⃣ Code Health / Test Coverage      ← 유지보수성               │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+#### 충돌 시나리오 및 판단
+
+| 충돌 상황 | 우선 | 판단 근거 |
+|----------|------|----------|
+| 성능 vs 접근성 | 접근성 | 법적 요구사항, 100ms 차이보다 접근성 |
+| 번들 크기 vs 코드 가독성 | 가독성 | 50KB 미만 차이면 가독성 우선 |
+| 테스트 커버리지 vs 배포 속도 | 커버리지 | 커버리지 80% 미만이면 배포 보류 |
+| Lighthouse vs 기능 | 기능 | 기능이 깨지면 점수 무의미 |
+| SEO vs 보안 | 보안 | 민감 정보 노출 방지 우선 |
+
+#### 예외: 사용자 명시적 요청
+
+사용자가 명시적으로 우선순위를 지정하면 그에 따름:
+```
+"성능 최우선으로 해줘" → 성능 > 접근성 (이 경우만)
+"일단 빠르게 배포해야 해" → 기능 > 테스트 (이 경우만)
+```
+
+단, 보안 저해는 사용자 요청이 있어도 경고 필수.
