@@ -1,14 +1,125 @@
 # Project Overview
 
 프로젝트 개요, 기술 스택, 구조, 명령어: @README.md
+상세 아키텍처 문서: @ARCHITECTURE.md
 
-## Official Documentation References (공식 문서 참조)
+## Package Architecture (패키지 아키텍처)
 
-> 이 프로젝트에서 사용하는 핵심 기술의 공식 문서. 항상 최신 버전 참고.
+### Layer Diagram (레이어 다이어그램)
 
-| Technology | Official Docs | GitHub |
-|------------|--------------|--------|
-| **Tailwind CSS v4** | [Installation Guide](https://tailwindcss.com/docs/installation/framework-guides/react-router) | [tailwindlabs/tailwindcss](https://github.com/tailwindlabs/tailwindcss) |
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  Layer 3: Apps + UI                                             │
+│  ┌───────────────────────────────────────────────────────────┐  │
+│  │ apps/context    apps/roots    apps/permissive             │  │
+│  │ @soundblue/ui   @soundblue/features                       │  │
+│  └───────────────────────────────────────────────────────────┘  │
+│                              │                                   │
+│                              ▼                                   │
+│  Layer 2: Domain                                                │
+│  ┌───────────────────────────────────────────────────────────┐  │
+│  │ @soundblue/i18n   @soundblue/search                       │  │
+│  │ @soundblue/seo    @soundblue/pwa                          │  │
+│  └───────────────────────────────────────────────────────────┘  │
+│                              │                                   │
+│                              ▼                                   │
+│  Layer 1: Data                                                  │
+│  ┌───────────────────────────────────────────────────────────┐  │
+│  │ @soundblue/data   @soundblue/platform                     │  │
+│  └───────────────────────────────────────────────────────────┘  │
+│                              │                                   │
+│                              ▼                                   │
+│  Layer 0: Foundation                                            │
+│  ┌───────────────────────────────────────────────────────────┐  │
+│  │ @soundblue/core   @soundblue/config                       │  │
+│  └───────────────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Layer Rules (레이어 규칙)
+
+| Rule | Description |
+|------|-------------|
+| **하위만 의존** | Layer N → Layer N-1 이하만 import 가능 |
+| **순환 금지** | 같은 레이어 간 상호 의존 금지 |
+| **앱 코드 분리** | 앱 특화 코드는 apps/ 내부에만 |
+
+### Package Categories (패키지 분류)
+
+| Layer | Packages | Rules |
+|-------|----------|-------|
+| `L0: Foundation` | core, config | 브라우저 API 금지, 순수 TypeScript |
+| `L1: Data` | data, platform | Zod 스키마, 이중 구현 필수 |
+| `L2: Domain` | i18n, search, seo, pwa | 도메인 로직, React 선택적 |
+| `L3: Apps + UI` | apps/*, ui, features | React 컴포넌트, 훅 |
+
+### Import Rules (Import 규칙)
+
+```typescript
+// ✅ 올바른 import (하위 레이어 → 상위 레이어)
+import { LIMITS, validateId } from '@soundblue/core/validation';        // L0
+import { cn, debounce } from '@soundblue/core/utils';                   // L0
+import { storage } from '@soundblue/platform/storage';                  // L1
+import { EntrySchema } from '@soundblue/data/schemas';                  // L1
+import { getLocaleFromPath } from '@soundblue/i18n';                    // L2
+import { useSearch } from '@soundblue/search/react';                    // L2
+import { DarkModeToggle } from '@soundblue/ui/components';              // L3
+import { useSettingsStore } from '@soundblue/features/settings';        // L3
+
+// ❌ 금지된 import (레이어 역방향)
+// core/에서 platform/ import 금지 (L0 → L1)
+// platform/에서 ui/ import 금지 (L1 → L3)
+// i18n/에서 features/ import 금지 (L2 → L3)
+
+// ❌ 금지된 import (순환 의존)
+// @soundblue/data에서 @soundblue/platform import 금지 (같은 L1)
+```
+
+### Dual Implementation Pattern (이중 구현 패턴)
+
+`platform/` 패키지는 SSG 호환을 위해 반드시 이중 구현 필요:
+
+```typescript
+// package.json exports 설정
+{
+  "exports": {
+    "./storage": {
+      "browser": "./src/storage/index.browser.ts",  // 브라우저 런타임
+      "default": "./src/storage/index.noop.ts"      // SSG 빌드 시
+    }
+  }
+}
+```
+
+| File | Purpose | Environment |
+|------|---------|-------------|
+| `*.browser.ts` | 실제 구현 (IndexedDB, DOM API) | 브라우저 런타임 |
+| `*.noop.ts` | 빈 구현 (undefined/[] 반환) | SSG 빌드 시 |
+
+```typescript
+// ✅ index.browser.ts - 실제 구현
+export const storage: StorageFactory = {
+  createFavoritesStorage: (dbName) => new FavoritesDB(dbName),
+  // ... IndexedDB 사용
+};
+
+// ✅ index.noop.ts - SSG용 빈 구현
+export const storage: StorageFactory = {
+  createFavoritesStorage: () => ({
+    get: async () => undefined,
+    set: async () => {},
+    getAll: async () => [],
+  }),
+};
+```
+
+## 📚 Official References (공식 참고 문서)
+
+> **항상 최신 공식 문서를 참고하여 코드 품질을 유지하고 향상시킬 것.**
+
+| Technology | Official Docs | GitHub Repository |
+|------------|---------------|-------------------|
+| **Tailwind CSS v4** | [React Router Guide](https://tailwindcss.com/docs/installation/framework-guides/react-router) | [tailwindlabs/tailwindcss](https://github.com/tailwindlabs/tailwindcss) |
 | **React Router v7** | [Official Docs](https://reactrouter.com/start/framework/deploying) | [remix-run/react-router](https://github.com/remix-run/react-router) |
 | **TypeScript** | [Official Docs](https://www.typescriptlang.org/docs/) | [microsoft/TypeScript](https://github.com/microsoft/TypeScript) |
 
@@ -23,13 +134,43 @@
 > **이 규칙들은 절대 위반하지 말 것. CMS, 외부 DB, 서버 로직 제안 금지.**
 
 1. **100% SSG Only** - 모든 앱은 정적 사이트 생성만 사용. SSR/서버 로직 절대 금지.
-   - `ssr: false` + `prerender()` + `loader()` in `react-router.config.ts` = 빌드 시 정적 HTML + 데이터 생성
-   - React Router v7 권장 패턴: `loader()` 함수로 빌드타임 데이터 프리렌더링 → `.data` 파일 생성
-   - 빌드 출력: `build/client` (HTML + JS + .data 파일), 런타임 서버 없음, CDN에서 직접 서빙
+   - `ssr: false` + `prerender()` + `loader()` in `react-router.config.ts`
+   - 빌드 출력: `build/client` (HTML + JS + .data 파일)
+   - 런타임 서버 없음, CDN에서 직접 서빙
    - 각 앱 SSG 라우트: Context 2012개, Roots 976개, Permissive 8개
 2. **오픈소스 Only** - 모든 라이브러리/도구는 오픈소스만 사용.
 3. **웹 표준 API Only** - 브라우저 표준 API만 사용. 벤더 종속 API 금지.
 4. **로컬 스토리지 Only** - DB는 localStorage, IndexedDB만 사용. 외부 DB/CMS 절대 금지.
+
+### SSG Build Pattern (SSG 빌드 패턴)
+
+```typescript
+// react-router.config.ts - 필수 패턴
+import type { Config } from '@react-router/dev/config';
+import { extractStaticRoutes, generateI18nRoutes } from '@soundblue/i18n';
+
+export default {
+  ssr: false,  // ← 필수: SSR 비활성화
+  async prerender() {
+    // 정적 라우트: routes.ts에서 자동 추출
+    const staticRoutes = extractStaticRoutes(routes);
+
+    // 동적 라우트: 데이터 기반 생성
+    const { entries } = await import('./app/data/entries/index.js');
+    const entryRoutes = generateI18nRoutes(entries, (e) => `/entry/${e.id}`);
+
+    return [...staticRoutes, ...entryRoutes];
+  },
+} satisfies Config;
+
+// routes/entry.$entryId.tsx - loader 패턴
+export async function loader({ params }: Route.LoaderArgs) {
+  // 빌드 시 실행 → .data 파일로 저장
+  const entry = getEntryById(params.entryId);
+  if (!entry) throw new Response('Not Found', { status: 404 });
+  return { entry };
+}
+```
 
 ## Code Quality Rules (코드 품질 규칙)
 
@@ -103,6 +244,225 @@ Before any fix (수정 전 반드시):
 Ask before: removing code, changing core logic, breaking changes, adding hardcoded values.
 (다음 작업 전 질문: 코드 제거, 핵심 로직 변경, 브레이킹 체인지, 하드코딩 추가)
 
+## Response Rules (응답 규칙)
+
+> **AI 응답 시 반드시 준수할 규칙**
+
+| Rule | Description |
+|------|-------------|
+| **확인 전 단정 금지** | Don't assert before verifying - 추측하지 말고 코드를 확인 |
+| **추측 명시** | Mark assumptions as assumptions - "~인 것 같습니다" 대신 확인 |
+| **출처 명시** | Cite sources - 파일 경로, 라인 번호 포함 |
+| **완전한 코드** | Always provide complete code - `// ...` 금지 |
+
+```typescript
+// ❌ 나쁜 응답
+"이 함수는 아마 에러를 던질 것 같습니다."
+
+// ✅ 좋은 응답
+"packages/core/src/validation.ts:42 확인 결과,
+validateId()는 빈 문자열에 대해 ValidationError를 던집니다."
+```
+
+## File-Specific Rules (파일별 규칙)
+
+### Allowed Actions (허용)
+
+| File/Directory | Allowed Actions |
+|----------------|-----------------|
+| `packages/core/src/` | 순수 함수, 타입 정의, 상수 정의 |
+| `packages/data/src/schemas/` | Zod 스키마 정의 및 수정 |
+| `packages/ui/src/components/` | React 컴포넌트 추가/수정 |
+| `data/**/*.json` | 데이터 추가 (스키마 준수) |
+| `apps/*/app/routes/` | 라우트 컴포넌트 추가/수정 |
+| `apps/*/app/components/` | 앱 전용 컴포넌트 |
+
+### Prohibited Actions (금지)
+
+| File/Directory | Prohibited Actions |
+|----------------|-------------------|
+| `packages/core/` | 브라우저 API 사용 (window, document, DOM) |
+| `packages/*/package.json` | 버전 직접 수정 (syncpack 사용) |
+| `react-router.config.ts` | `ssr: true` 설정 |
+| `data/**/*.json` | 스키마 미준수 데이터 추가 |
+| `*.browser.ts` | SSG 빌드 시점에 실행되는 코드 |
+| `*.noop.ts` | 실제 로직 구현 (빈 구현만) |
+
+### Data Directory Rules (데이터 디렉토리 규칙)
+
+```
+data/
+├── context/           # Context 앱 데이터
+│   └── entries/       # 978개 한국어 단어 (JSON)
+│       ├── greetings.json
+│       ├── food.json
+│       └── ...
+├── roots/             # Roots 앱 데이터
+│   └── concepts/      # 438개 수학 개념 (JSON)
+│       ├── algebra.json
+│       ├── geometry.json
+│       └── ...
+└── permissive/        # Permissive 앱 데이터
+    ├── libraries.json # 88개 라이브러리
+    └── web-apis.json  # 56개 Web API
+```
+
+| Rule | Description |
+|------|-------------|
+| **SSoT** | 각 도메인 데이터는 data/ 디렉토리에서만 정의 |
+| **스키마 검증** | 모든 JSON은 @soundblue/data의 Zod 스키마 준수 |
+| **ID 규칙** | kebab-case, 100자 이내, 영문+숫자+하이픈만 |
+| **i18n** | 다국어 필드는 `{ en: string, ko: string }` 형태 |
+
+## i18n Rules (다국어 규칙)
+
+### URL-based Routing (URL 기반 라우팅)
+
+```
+/              → English (default)
+/ko            → Korean
+/entry/hello   → English entry page
+/ko/entry/hello → Korean entry page
+```
+
+### Route File Convention (라우트 파일 규칙)
+
+```
+apps/context/app/routes/
+├── _index.tsx           # / (English)
+├── ko._index.tsx        # /ko (Korean)
+├── entry.$entryId.tsx   # /entry/:id (English)
+├── ko.entry.$entryId.tsx # /ko/entry/:id (Korean)
+└── ...
+```
+
+| Rule | Description |
+|------|-------------|
+| **ko. 접두어** | 한국어 라우트는 `ko.` 접두어 필수 |
+| **동일 컴포넌트** | 영어/한국어 라우트는 같은 컴포넌트 재사용 |
+| **loader 공유** | 데이터 로딩 로직은 공유 함수로 분리 |
+
+### i18n in Components (컴포넌트 내 다국어)
+
+```typescript
+// ✅ 올바른 패턴 - Paraglide 사용
+import * as m from '@/paraglide/messages';
+
+function WelcomeMessage() {
+  return <h1>{m.welcome()}</h1>;  // 컴파일 타임 번역
+}
+
+// ✅ 올바른 패턴 - 데이터 기반
+function EntryTitle({ entry }: { entry: Entry }) {
+  const locale = useLocale();
+  return <h1>{entry.title[locale]}</h1>;  // { en: 'Hello', ko: '안녕' }
+}
+
+// ❌ 금지 - 하드코딩된 번역
+function BadExample() {
+  const locale = useLocale();
+  return <h1>{locale === 'ko' ? '안녕하세요' : 'Hello'}</h1>;
+}
+```
+
+## Component Writing Rules (컴포넌트 작성 규칙)
+
+### Location Rules (위치 규칙)
+
+| Component Type | Location | Example |
+|----------------|----------|---------|
+| **공통 UI** | `packages/ui/src/components/` | Button, Modal, Card |
+| **공통 패턴** | `packages/ui/src/patterns/` | SearchDropdown, VirtualList |
+| **앱 전용** | `apps/*/app/components/` | EntryCard, ConceptGraph |
+| **라우트 전용** | `apps/*/app/routes/*.tsx` | 페이지 컴포넌트 |
+
+### Component Structure (컴포넌트 구조)
+
+```typescript
+/**
+ * @description 컴포넌트 설명
+ * @example
+ * <MyComponent title="Hello" onClick={handleClick} />
+ */
+interface MyComponentProps {
+  /** 제목 텍스트 */
+  title: string;
+  /** 클릭 핸들러 */
+  onClick?: () => void;
+  /** 추가 클래스 */
+  className?: string;
+}
+
+export function MyComponent({ title, onClick, className }: MyComponentProps) {
+  return (
+    <div className={cn('base-styles', className)} onClick={onClick}>
+      {title}
+    </div>
+  );
+}
+```
+
+### Component Rules (컴포넌트 규칙)
+
+| Rule | Description |
+|------|-------------|
+| **Props 타입** | interface로 정의, JSDoc 주석 필수 |
+| **cn() 사용** | className 병합은 항상 cn() 사용 |
+| **forwardRef** | DOM 접근 필요 시 forwardRef 사용 |
+| **에러 경계** | 데이터 의존 컴포넌트는 ErrorBoundary로 감싸기 |
+
+## Performance Optimization Rules (성능 최적화 규칙)
+
+### Bundle Size (번들 크기)
+
+```typescript
+// ✅ 트리 쉐이킹 가능한 import
+import { debounce } from '@soundblue/core/utils';
+
+// ❌ 전체 패키지 import 금지
+import * as utils from '@soundblue/core/utils';
+```
+
+### Lazy Loading (지연 로딩)
+
+```typescript
+// ✅ 큰 컴포넌트는 lazy import
+const ConceptGraph = lazy(() => import('./components/ConceptGraph'));
+
+// ✅ 조건부 렌더링과 함께
+{showGraph && (
+  <Suspense fallback={<Skeleton />}>
+    <ConceptGraph data={data} />
+  </Suspense>
+)}
+```
+
+### Image Optimization (이미지 최적화)
+
+| Rule | Description |
+|------|-------------|
+| **WebP/AVIF** | 이미지는 WebP 또는 AVIF 포맷 사용 |
+| **Lazy loading** | `loading="lazy"` 속성 필수 |
+| **width/height** | CLS 방지를 위해 크기 명시 |
+| **srcset** | 반응형 이미지는 srcset 사용 |
+
+### Virtualization (가상화)
+
+```typescript
+// ✅ 긴 리스트는 가상화 필수
+import { VirtualList } from '@soundblue/ui/patterns';
+
+function LongList({ items }: { items: Item[] }) {
+  return (
+    <VirtualList
+      items={items}
+      itemHeight={64}
+      renderItem={(item) => <ListItem item={item} />}
+    />
+  );
+}
+```
+
 ## Quality Metrics (The Perfect Dodecagon)
 
 > **12가지 품질 지표. 코드 작성 시 이 지표들이 저해되면 경고하고 대안 제시.**
@@ -161,3 +521,10 @@ Ask before: removing code, changing core logic, breaking changes, adding hardcod
 | 12 | Client Security | ✅ | Job 6: pwa-security |
 
 > **모든 12가지 품질 지표 CI 구현 완료** (2025-12-24)
+
+### Action Rule (행동 규칙)
+
+When writing code, if any of the 12 metrics is compromised (코드 작성 시 12가지 지표 중 하나라도 저해되면):
+1. **Warn immediately** (즉시 경고)
+2. **Suggest alternatives** (대안 제시)
+3. **Do not proceed without user confirmation** (사용자 확인 없이 진행 금지)
