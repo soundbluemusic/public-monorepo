@@ -140,7 +140,7 @@ export function Sidebar({ isOpen, isCollapsed, onClose, onToggleCollapse }: Side
                 icon={item.icon}
                 label={t(item.labelKey)}
                 isActive={isActive(item.path)}
-                isCollapsed={false}
+                isCollapsed={isCollapsed}
                 onClick={onClose}
               />
             ))}
