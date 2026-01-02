@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import type { categories } from '@/data/categories';
 import type { MeaningEntry } from '@/data/types';
-import { useIsHydrated, useUserDataStore } from '@/stores/user-data-store';
+import { useFavorites, useIsHydrated, useStudyRecords } from '@/stores/user-data-store';
 
 export function useMyLearningData() {
   const [entries, setEntries] = useState<MeaningEntry[]>([]);
@@ -13,10 +13,14 @@ export function useMyLearningData() {
   const [dataLoaded, setDataLoaded] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Zustand store에서 직접 데이터 가져오기
+  // Zustand store에서 원시 배열 데이터 가져오기 (안정적인 참조)
   const isHydrated = useIsHydrated();
-  const studiedIds = useUserDataStore((state) => state.getStudiedIds());
-  const favoriteIds = useUserDataStore((state) => state.getFavoriteIds());
+  const favorites = useFavorites();
+  const studyRecords = useStudyRecords();
+
+  // 배열에서 Set으로 변환 (메모이제이션으로 무한 루프 방지)
+  const studiedIds = useMemo(() => new Set(studyRecords.map((r) => r.entryId)), [studyRecords]);
+  const favoriteIds = useMemo(() => new Set(favorites.map((f) => f.entryId)), [favorites]);
 
   // 엔트리 데이터 로드 (한 번만)
   useEffect(() => {
