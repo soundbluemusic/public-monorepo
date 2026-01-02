@@ -3,6 +3,9 @@
  * @environment universal
  */
 
+// Confirm Dialog
+export { ConfirmDialog, type ConfirmDialogProps, type ConfirmDialogVariant } from './ConfirmDialog';
+
 // Error Boundary (React Class Component)
 // Route Error UI (React Router용)
 // Legacy alias

@@ -1,49 +1,121 @@
-# 보안 헤더
+# Cloudflare Pages - Security Headers Configuration
+# Roots App (roots.soundbluemusic.com)
+# https://developers.cloudflare.com/pages/configuration/headers/
+
+# =============================================================================
+# GLOBAL SECURITY HEADERS
+# =============================================================================
 /*
+  # XSS Protection
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  # Referrer Policy
   Referrer-Policy: strict-origin-when-cross-origin
+  # Permissions Policy
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+  # Content Security Policy
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests
 
-# Sitemap XML files - explicit MIME type
-/sitemap.xml
-  Content-Type: application/xml; charset=utf-8
-  Cache-Control: max-age=3600, stale-while-revalidate=86400
-
-/sitemap-pages.xml
-  Content-Type: application/xml; charset=utf-8
-  Cache-Control: max-age=3600, stale-while-revalidate=86400
-
-/sitemap-concepts.xml
-  Content-Type: application/xml; charset=utf-8
-  Cache-Control: max-age=3600, stale-while-revalidate=86400
-
-/sitemap-fields.xml
-  Content-Type: application/xml; charset=utf-8
-  Cache-Control: max-age=3600, stale-while-revalidate=86400
-
-/sitemap.xsl
-  Content-Type: application/xslt+xml; charset=utf-8
-  Cache-Control: max-age=86400
-
-# HTML - 항상 최신 확인
+# =============================================================================
+# HTML - Always Revalidate (SPA updates)
+# =============================================================================
 /*.html
-  Cache-Control: max-age=0, must-revalidate
+  Cache-Control: public, max-age=0, must-revalidate
 
 /
-  Cache-Control: max-age=0, must-revalidate
+  Cache-Control: public, max-age=0, must-revalidate
 
-# Service Worker - 항상 최신
-/sw.js
-  Cache-Control: max-age=0, must-revalidate
-
-# Manifest
-/manifest.json
-  Cache-Control: max-age=86400, stale-while-revalidate=604800
-
-# 정적 자산 - 장기 캐시
+# =============================================================================
+# React Router Static Assets - Long-term caching
+# =============================================================================
 /assets/*
-  Cache-Control: max-age=31536000, immutable
+  Cache-Control: public, max-age=31536000, immutable
 
-# 아이콘
+# =============================================================================
+# Images - Long-term caching
+# =============================================================================
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+/*.gif
+  Cache-Control: public, max-age=31536000, immutable
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+/*.avif
+  Cache-Control: public, max-age=31536000, immutable
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+/*.ico
+  Cache-Control: public, max-age=31536000, immutable
+
+# =============================================================================
+# Fonts - Long-term caching
+# =============================================================================
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+/*.ttf
+  Cache-Control: public, max-age=31536000, immutable
+
+# =============================================================================
+# PWA Files
+# =============================================================================
+/manifest.json
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+  Content-Type: application/manifest+json
+
+/sw.js
+  Cache-Control: public, max-age=0, must-revalidate
+  Content-Type: application/javascript; charset=utf-8
+
+/workbox-*.js
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: application/javascript; charset=utf-8
+
+# =============================================================================
+# Icons Directory - Long-term caching
+# =============================================================================
 /icons/*
-  Cache-Control: max-age=31536000, immutable
+  Cache-Control: public, max-age=31536000, immutable
+
+# =============================================================================
+# SEO Files
+# =============================================================================
+/robots.txt
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+  Content-Type: text/plain; charset=utf-8
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Content-Type: application/xml; charset=utf-8
+
+/sitemap-pages.xml
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Content-Type: application/xml; charset=utf-8
+
+/sitemap-concepts.xml
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Content-Type: application/xml; charset=utf-8
+
+/sitemap-fields.xml
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Content-Type: application/xml; charset=utf-8
+
+/sitemap.xsl
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+  Content-Type: application/xslt+xml; charset=utf-8
+
+/og-image.png
+  Cache-Control: public, max-age=604800, stale-while-revalidate=2592000
+
+# =============================================================================
+# JSON Data Files
+# =============================================================================
+/*.json
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Content-Type: application/json; charset=utf-8
