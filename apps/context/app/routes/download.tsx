@@ -297,7 +297,7 @@ export default function DownloadPage() {
                         type="button"
                         onClick={() => togglePreview(format)}
                         className={cn(
-                          'inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg transition-colors',
+                          'inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg transition-colors cursor-pointer',
                           'border border-(--border-primary)',
                           isExpanded
                             ? 'bg-(--accent-primary)/10 text-(--accent-primary) border-(--accent-primary)'
@@ -321,7 +321,7 @@ export default function DownloadPage() {
                         onClick={() => handleDownload(format)}
                         disabled={isDownloading}
                         className={cn(
-                          'inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg transition-colors',
+                          'inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg transition-colors cursor-pointer',
                           'bg-(--accent-primary) text-white hover:bg-(--accent-primary)/90',
                           'disabled:opacity-50 disabled:cursor-not-allowed',
                         )}
