@@ -201,7 +201,7 @@ const TabsContent = forwardRef<HTMLDivElement, TabsContentProps>(
         id={`${baseId}-content-${value}`}
         aria-labelledby={`${baseId}-trigger-${value}`}
         hidden={!isSelected}
-        tabIndex={0}
+        tabIndex={-1}
         className={cn(
           'mt-2 rounded-lg',
           'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--accent-primary)',

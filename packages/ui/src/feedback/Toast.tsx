@@ -56,7 +56,6 @@ const ToastIcon = memo(function ToastIcon({ type }: { type: Toast['type'] }) {
           />
         </svg>
       );
-    case 'info':
     default:
       return (
         <svg

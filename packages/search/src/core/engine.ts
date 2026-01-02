@@ -62,6 +62,8 @@ import type { SearchableItem, SearchConfig, SearchResult } from './types';
 export class SearchEngine<T extends SearchableItem> {
   private index: MiniSearch<T>;
   private config: SearchConfig;
+  /** Item storage for retrieving full items by ID */
+  private items: Map<string, T> = new Map();
 
   /**
    * SearchEngine 인스턴스를 생성합니다.
@@ -113,6 +115,10 @@ export class SearchEngine<T extends SearchableItem> {
    */
   addAll(items: T[]): void {
     this.index.addAll(items);
+    // Store items for retrieval by ID
+    for (const item of items) {
+      this.items.set(String(item.id), item);
+    }
   }
 
   /**
@@ -130,6 +136,7 @@ export class SearchEngine<T extends SearchableItem> {
    */
   add(item: T): void {
     this.index.add(item);
+    this.items.set(String(item.id), item);
   }
 
   /**
@@ -201,12 +208,16 @@ export class SearchEngine<T extends SearchableItem> {
     const limited = limit ? results.slice(0, limit) : results;
 
     return limited.map(
-      (r: { id: string | number; score: number; match: Record<string, string[]> }) => ({
-        id: String(r.id),
-        score: r.score,
-        match: r.match,
-        item: r as unknown as T,
-      }),
+      (r: { id: string | number; score: number; match: Record<string, string[]> }) => {
+        const id = String(r.id);
+        return {
+          id,
+          score: r.score,
+          match: r.match,
+          // Retrieve original item from storage (type-safe)
+          item: this.items.get(id),
+        };
+      },
     );
   }
 
@@ -244,6 +255,7 @@ export class SearchEngine<T extends SearchableItem> {
    */
   clear(): void {
     this.index.removeAll();
+    this.items.clear();
   }
 
   /**

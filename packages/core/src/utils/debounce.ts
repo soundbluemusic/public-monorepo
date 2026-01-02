@@ -16,13 +16,21 @@
  * ```
  */
 
-export function debounce<T extends (...args: Parameters<T>) => void>(
-  fn: T,
+/**
+ * Creates a debounced version of a function
+ *
+ * @typeParam Args - Tuple type of function arguments
+ * @param fn - Function to debounce
+ * @param delay - Delay in milliseconds
+ * @returns Debounced function
+ */
+export function debounce<Args extends unknown[]>(
+  fn: (...args: Args) => void,
   delay: number,
-): (...args: Parameters<T>) => void {
+): (...args: Args) => void {
   let timeoutId: ReturnType<typeof setTimeout> | null = null;
 
-  return (...args: Parameters<T>) => {
+  return (...args: Args) => {
     if (timeoutId) {
       clearTimeout(timeoutId);
     }
@@ -34,19 +42,24 @@ export function debounce<T extends (...args: Parameters<T>) => void>(
 }
 
 /**
- * Debounce with cancel capability
+ * Creates a debounced function with cancel capability
+ *
+ * @typeParam Args - Tuple type of function arguments
+ * @param fn - Function to debounce
+ * @param delay - Delay in milliseconds
+ * @returns Object with debounced call method and cancel method
  */
-export function debounceWithCancel<T extends (...args: Parameters<T>) => void>(
-  fn: T,
+export function debounceWithCancel<Args extends unknown[]>(
+  fn: (...args: Args) => void,
   delay: number,
 ): {
-  call: (...args: Parameters<T>) => void;
+  call: (...args: Args) => void;
   cancel: () => void;
 } {
   let timeoutId: ReturnType<typeof setTimeout> | null = null;
 
   return {
-    call: (...args: Parameters<T>) => {
+    call: (...args: Args) => {
       if (timeoutId) {
         clearTimeout(timeoutId);
       }
