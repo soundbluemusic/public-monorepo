@@ -88,6 +88,186 @@ export const DARK_MODE_TOGGLE_SCRIPT = `(function() {
 })();`;
 
 // ============================================================================
+// Sidebar Collapse Script
+// ============================================================================
+
+/**
+ * SVG icon for panel left close (sidebar expanded indicator)
+ * Matches lucide-react PanelLeftClose icon
+ */
+export const PANEL_LEFT_CLOSE_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M9 3v18"></path><path d="m16 15-3-3 3-3"></path></svg>`;
+
+/**
+ * SVG icon for panel left open (sidebar collapsed indicator)
+ * Matches lucide-react PanelLeftOpen icon
+ */
+export const PANEL_LEFT_OPEN_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M9 3v18"></path><path d="m14 9 3 3-3 3"></path></svg>`;
+
+/**
+ * Script to handle sidebar collapse button clicks.
+ * Should be placed at end of <body>.
+ *
+ * Uses event delegation with capture phase to intercept clicks
+ * before React's event system. Updates DOM, localStorage, and
+ * dispatches a custom event for React components to listen to.
+ */
+export const SIDEBAR_COLLAPSE_SCRIPT = `(function() {
+  var panelCloseIcon = '${PANEL_LEFT_CLOSE_SVG}';
+  var panelOpenIcon = '${PANEL_LEFT_OPEN_SVG}';
+
+  document.addEventListener('click', function(e) {
+    var btn = e.target.closest('button[aria-label*="sidebar" i]');
+    if (!btn) return;
+
+    var html = document.documentElement;
+    var sidebar = document.querySelector('aside[aria-label]');
+    if (!sidebar) return;
+
+    var isCurrentlyCollapsed = html.classList.contains('sidebar-collapsed');
+    var willBeCollapsed = !isCurrentlyCollapsed;
+
+    // Update html class (for global CSS)
+    if (willBeCollapsed) {
+      html.classList.add('sidebar-collapsed');
+      sidebar.setAttribute('data-collapsed', 'true');
+    } else {
+      html.classList.remove('sidebar-collapsed');
+      sidebar.removeAttribute('data-collapsed');
+    }
+
+    // Update localStorage
+    try {
+      var currentStored = localStorage.getItem('settings-storage');
+      var newState = currentStored ? JSON.parse(currentStored) : { state: { sidebarCollapsed: false }, version: 0 };
+      newState.state.sidebarCollapsed = willBeCollapsed;
+      localStorage.setItem('settings-storage', JSON.stringify(newState));
+    } catch(err) {
+      console.error('[Sidebar] Failed to save sidebar preference:', err);
+    }
+
+    // Update button icon
+    var svg = btn.querySelector('svg');
+    if (svg) {
+      svg.outerHTML = willBeCollapsed ? panelOpenIcon : panelCloseIcon;
+    }
+
+    // Update button label
+    var expandLabel = btn.getAttribute('data-expand-label') || 'Expand sidebar';
+    var collapseLabel = btn.getAttribute('data-collapse-label') || 'Collapse sidebar';
+    var newLabel = willBeCollapsed ? expandLabel : collapseLabel;
+    btn.setAttribute('aria-label', newLabel);
+    btn.setAttribute('title', newLabel);
+
+    // Update button text
+    var span = btn.querySelector('span');
+    if (span) {
+      span.textContent = willBeCollapsed ? expandLabel.split(' ')[0] : collapseLabel.split(' ')[0];
+    }
+
+    // Dispatch custom event for React components to sync
+    window.dispatchEvent(new CustomEvent('sidebar-collapse-change', {
+      detail: { collapsed: willBeCollapsed }
+    }));
+  }, true);
+})();`;
+
+// ============================================================================
+// Mobile Sidebar Toggle Script
+// ============================================================================
+
+/**
+ * Script to handle mobile sidebar toggle button clicks.
+ * Should be placed at end of <body>.
+ *
+ * Uses event delegation with capture phase to intercept clicks
+ * before React's event system. Toggles the sidebar visibility
+ * by adding/removing translate-x-0 class.
+ */
+export const MOBILE_SIDEBAR_TOGGLE_SCRIPT = `(function() {
+  document.addEventListener('click', function(e) {
+    // Check for menu button click (aria-label contains "Menu" or "메뉴")
+    var menuBtn = e.target.closest('button[aria-label*="Menu" i], button[aria-label*="menu" i], button[aria-label*="메뉴"]');
+
+    // Check for backdrop click to close
+    var backdrop = e.target.closest('.fixed.bg-black\\\\/50, [data-sidebar-backdrop]');
+
+    // Check for sidebar close button
+    var closeBtn = e.target.closest('aside button[aria-label*="close" i], aside button[aria-label*="닫기"]');
+
+    var sidebar = document.querySelector('aside[aria-label], aside[data-mobile-open]');
+    if (!sidebar) return;
+
+    if (menuBtn) {
+      // Check which pattern this sidebar uses
+      var usesTranslate = sidebar.classList.contains('translate-x-0') || sidebar.classList.contains('-translate-x-full');
+      var usesDataAttr = sidebar.hasAttribute('data-mobile-open');
+      var willBeOpen = false;
+
+      if (usesTranslate) {
+        // Pattern A: translate-x classes (Context app)
+        var isOpen = sidebar.classList.contains('translate-x-0');
+        willBeOpen = !isOpen;
+        if (isOpen) {
+          sidebar.classList.remove('translate-x-0');
+          sidebar.classList.add('-translate-x-full');
+        } else {
+          sidebar.classList.add('translate-x-0');
+          sidebar.classList.remove('-translate-x-full');
+        }
+      } else if (usesDataAttr || true) {
+        // Pattern B: data-mobile-open attribute (Permissive app)
+        var isOpen = sidebar.getAttribute('data-mobile-open') === 'true';
+        willBeOpen = !isOpen;
+        sidebar.setAttribute('data-mobile-open', willBeOpen ? 'true' : 'false');
+        sidebar.setAttribute('aria-hidden', willBeOpen ? 'false' : 'true');
+      }
+
+      // Show/hide backdrop for Pattern A
+      if (usesTranslate) {
+        var existingBackdrop = document.querySelector('[data-sidebar-backdrop]');
+        if (willBeOpen) {
+          if (!existingBackdrop) {
+            var newBackdrop = document.createElement('div');
+            newBackdrop.setAttribute('data-sidebar-backdrop', '');
+            newBackdrop.className = 'fixed inset-0 bg-black/50 z-40 md:hidden';
+            document.body.appendChild(newBackdrop);
+          }
+        } else if (existingBackdrop) {
+          existingBackdrop.remove();
+        }
+      }
+
+      // Dispatch custom event for React components to sync
+      window.dispatchEvent(new CustomEvent('mobile-sidebar-toggle', {
+        detail: { isOpen: willBeOpen }
+      }));
+      return;
+    }
+
+    if (backdrop || closeBtn) {
+      // Close sidebar - handle both patterns
+      if (sidebar.classList.contains('translate-x-0')) {
+        sidebar.classList.remove('translate-x-0');
+        sidebar.classList.add('-translate-x-full');
+      }
+      if (sidebar.hasAttribute('data-mobile-open')) {
+        sidebar.setAttribute('data-mobile-open', 'false');
+        sidebar.setAttribute('aria-hidden', 'true');
+      }
+
+      // Remove backdrop
+      var backdropEl = document.querySelector('[data-sidebar-backdrop]');
+      if (backdropEl) backdropEl.remove();
+
+      // Dispatch custom event
+      window.dispatchEvent(new CustomEvent('mobile-sidebar-toggle', {
+        detail: { isOpen: false }
+      }));
+    }
+  }, true);
+})();`;
+
+// ============================================================================
 // Option B: CSS mask-image approach
 // ============================================================================
 

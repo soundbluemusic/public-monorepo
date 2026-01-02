@@ -4,6 +4,26 @@
  * This module provides factory functions that create type-safe helper objects
  * for common database patterns: favorites, settings, and recent views.
  *
+ * ## Type Assertion Notes
+ *
+ * This module uses `as unknown as T` assertions in several places. These are
+ * necessary due to TypeScript limitations:
+ *
+ * 1. **EntityTable vs Table casting**: Dexie's EntityTable and Table types
+ *    have different signatures. We cast to Table<T, number> for consistent API.
+ *
+ * 2. **Computed property keys**: TypeScript cannot verify that an object
+ *    constructed with `{ [dynamicKey]: value }` satisfies a generic type `T`
+ *    that includes `Record<K, string>`, even though the constraint guarantees it.
+ *
+ * 3. **Auto-generated fields**: Dexie auto-generates `id` on insert, so we
+ *    construct objects without `id`. TypeScript can't know Dexie will add it.
+ *
+ * These assertions are safe because:
+ * - The generic constraints guarantee the required fields exist
+ * - Runtime validation (validateId) ensures data integrity
+ * - Dexie handles auto-increment IDs transparently
+ *
  * @module @soundblue/platform/db/helpers
  */
 import { validateId } from '@soundblue/core/validation';
@@ -11,7 +31,11 @@ import type { EntityTable, Table } from 'dexie';
 import type { BaseFavorite, BaseRecentView, BaseSettings } from './types';
 
 /**
- * Internal type for Dexie table operations
+ * Internal type for Dexie table operations.
+ *
+ * Dexie's EntityTable uses branded 'id' for primary key, while Table uses
+ * the actual key type. We use Table<T, number> for consistent auto-increment handling.
+ *
  * @internal
  */
 type AnyTable<T> = Table<T, number>;

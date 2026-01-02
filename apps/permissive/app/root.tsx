@@ -1,5 +1,10 @@
 import { OfflineIndicator } from '@soundblue/pwa/react';
 import { ErrorBoundary, ToastContainer } from '@soundblue/ui/feedback';
+import {
+  DARK_MODE_INIT_SCRIPT,
+  DARK_MODE_TOGGLE_SCRIPT,
+  MOBILE_SIDEBAR_TOGGLE_SCRIPT,
+} from '@soundblue/ui/utils';
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from 'react-router';
 import { I18nProvider } from './i18n';
 import './styles/global.css';
@@ -47,25 +52,23 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {/* Inline dark mode init - prevents flash of wrong theme */}
         <script
           // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for dark mode flash prevention
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  var theme = localStorage.getItem('permissive-theme');
-                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                    document.documentElement.classList.add('dark');
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                  }
-                } catch (e) {}
-              })();
-            `,
-          }}
+          dangerouslySetInnerHTML={{ __html: DARK_MODE_INIT_SCRIPT }}
         />
       </head>
       <body>
         {children}
         <ScrollRestoration />
         <Scripts />
+        {/* Dark mode toggle script - handles clicks via event delegation */}
+        <script
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for dark mode toggle
+          dangerouslySetInnerHTML={{ __html: DARK_MODE_TOGGLE_SCRIPT }}
+        />
+        {/* Mobile sidebar toggle script - handles mobile menu button clicks */}
+        <script
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for mobile sidebar toggle
+          dangerouslySetInnerHTML={{ __html: MOBILE_SIDEBAR_TOGGLE_SCRIPT }}
+        />
       </body>
     </html>
   );

@@ -3,7 +3,7 @@
  * @environment universal
  */
 
-import { type AppId, type FamilyApp, getOtherApps } from '@soundblue/core';
+import { type AppId, getOtherApps } from '@soundblue/core';
 import { BookOpen, Code, type LucideIcon, PiSquare } from 'lucide-react';
 
 export type FamilySitesVariant = 'footer' | 'sidebar';

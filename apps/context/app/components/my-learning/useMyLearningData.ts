@@ -31,7 +31,7 @@ export function useMyLearningData() {
         setCats(loadedCategories);
         setTotalEntries(meaningEntries.length);
         setDataLoaded(true);
-      } catch (err) {
+      } catch (err: unknown) {
         console.error('Failed to load my-learning data:', err);
         setError(err instanceof Error ? err.message : 'Failed to load data');
       }

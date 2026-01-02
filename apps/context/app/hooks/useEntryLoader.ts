@@ -155,7 +155,7 @@ export function useEntryLoader(
         }
 
         setEntry(foundEntry);
-      } catch (err) {
+      } catch (err: unknown) {
         if (cancelled) return;
         setError(err instanceof Error ? err : new Error(String(err)));
         setEntry(null);

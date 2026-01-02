@@ -160,7 +160,9 @@ li {
 }
 
 dialog[open] {
-  animation: dialog-fade-in 150ms ease-out, dialog-zoom-in 150ms ease-out;
+  animation:
+    dialog-fade-in 150ms ease-out,
+    dialog-zoom-in 150ms ease-out;
 }
 
 dialog::backdrop {

@@ -63,7 +63,8 @@
       "!**/apps/**/*/app/paraglide",
       "!**/apps/**/*/.inlang-plugins",
       "!**/apps/roots/app/routes/+types",
-      "!**/packages/shared/src/styles/tailwind.css"
+      "!**/packages/shared/src/styles/tailwind.css",
+      "!**/packages/config/src/styles/tailwind.css"
     ]
   }
 }

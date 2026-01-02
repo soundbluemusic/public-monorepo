@@ -62,6 +62,7 @@ export default function Sidebar({
         )}
         data-mobile-open={isOpen ? 'true' : undefined}
         data-collapsed={isCollapsed ? 'true' : undefined}
+        aria-label={t('aria.sidebar')}
         aria-hidden={isMobile && !isOpen}
       >
         <SidebarHeader localePath={localePath} isCollapsed={isCollapsed} t={t} onClose={onClose} />

@@ -89,7 +89,7 @@ async function convertFile(fileName: string): Promise<number> {
     console.log(`  ✓ ${fileName}.ts → ${fileName}.json (${concepts.length} concepts)`);
 
     return concepts.length;
-  } catch (error) {
+  } catch (error: unknown) {
     console.error(`  ✗ Failed to convert ${fileName}:`, error);
     return 0;
   }

@@ -27,6 +27,19 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
     });
   }, []);
 
+  // Sync sidebar state with inline script's custom event
+  useEffect(() => {
+    const handleMobileSidebarToggle = (e: CustomEvent<{ isOpen: boolean }>) => {
+      setSidebarOpen(e.detail.isOpen);
+    };
+    window.addEventListener('mobile-sidebar-toggle', handleMobileSidebarToggle as EventListener);
+    return () =>
+      window.removeEventListener(
+        'mobile-sidebar-toggle',
+        handleMobileSidebarToggle as EventListener,
+      );
+  }, []);
+
   // Close mobile sidebar when switching to desktop
   useEffect(() => {
     if (!isMobile && sidebarOpen) {
