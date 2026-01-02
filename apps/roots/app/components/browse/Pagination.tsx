@@ -66,7 +66,7 @@ export const Pagination = memo(function Pagination({
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
         className={cn(
-          'min-h-10 min-w-10 flex items-center justify-center rounded-lg transition-colors',
+          'min-h-11 min-w-11 flex items-center justify-center rounded-lg transition-colors',
           currentPage === 1
             ? 'text-(--text-tertiary) cursor-not-allowed'
             : 'text-(--text-primary) hover:bg-(--bg-tertiary)',
@@ -91,9 +91,9 @@ export const Pagination = memo(function Pagination({
               onClick={() => onPageChange(page as number)}
               aria-current={currentPage === page ? 'page' : undefined}
               className={cn(
-                'min-h-10 min-w-10 flex items-center justify-center rounded-lg font-medium transition-colors',
+                'min-h-11 min-w-11 flex items-center justify-center rounded-lg font-medium transition-colors',
                 currentPage === page
-                  ? 'bg-(--accent-primary) text-white'
+                  ? 'bg-(--accent-bg) text-white'
                   : 'text-(--text-primary) hover:bg-(--bg-tertiary)',
               )}
             >
@@ -108,7 +108,7 @@ export const Pagination = memo(function Pagination({
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
         className={cn(
-          'min-h-10 min-w-10 flex items-center justify-center rounded-lg transition-colors',
+          'min-h-11 min-w-11 flex items-center justify-center rounded-lg transition-colors',
           currentPage === totalPages
             ? 'text-(--text-tertiary) cursor-not-allowed'
             : 'text-(--text-primary) hover:bg-(--bg-tertiary)',

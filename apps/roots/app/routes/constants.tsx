@@ -62,9 +62,9 @@ export default function ConstantsPage() {
             <div className="text-4xl font-serif mb-2 text-(--accent-primary)">
               {constant.symbol}
             </div>
-            <h3 className="text-base font-medium text-(--text-primary) mb-1">
+            <h2 className="text-base font-medium text-(--text-primary) mb-1">
               {constant.name[locale as keyof typeof constant.name] || constant.name.en}
-            </h3>
+            </h2>
             <p className="text-sm font-mono text-(--text-secondary)">{constant.value}</p>
           </div>
         ))}

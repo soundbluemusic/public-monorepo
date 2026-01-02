@@ -40,7 +40,7 @@ export const BrowseTabs = memo(function BrowseTabs({
           className={cn(
             'flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-colors min-h-11',
             viewMode === mode
-              ? 'bg-(--accent-primary) text-white'
+              ? 'bg-(--accent-bg) text-white'
               : 'bg-(--bg-tertiary) text-(--text-secondary) hover:bg-(--bg-secondary) hover:text-(--text-primary)',
           )}
         >

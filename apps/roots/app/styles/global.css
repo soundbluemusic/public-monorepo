@@ -28,6 +28,7 @@
   --accent-tertiary: #60a5fa;
   --accent-hover: #1d4ed8;
   --accent-mint: #93c5fd; /* For selection highlight */
+  --accent-bg: #2563eb; /* Background color for buttons with white text - WCAG AA 4.5:1 */
 
   /* Border */
   --border-primary: #e2e8f0;
@@ -81,6 +82,7 @@
   --accent-tertiary: #bfdbfe;
   --accent-hover: #93c5fd;
   --accent-mint: #60a5fa;
+  --accent-bg: #2563eb; /* Background color for buttons with white text - WCAG AA 4.5:1 */
 
   /* Border */
   --border-primary: #334155;

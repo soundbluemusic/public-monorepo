@@ -25,7 +25,7 @@ function SearchResultCard({ result }: { result: MiniSearchResult }) {
       className="block p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) no-underline transition-all hover:-translate-y-0.5 hover:shadow-md hover:border-(--border-focus)"
     >
       <div className="flex items-start justify-between gap-2 mb-2">
-        <h3 className="text-base font-medium text-(--text-primary)">{name}</h3>
+        <h2 className="text-base font-medium text-(--text-primary)">{name}</h2>
         <DifficultyBadge level={item.difficulty as DifficultyLevel} showLabel={false} size="sm" />
       </div>
       <p className="text-sm text-(--text-secondary) line-clamp-2 mb-2">{def}</p>

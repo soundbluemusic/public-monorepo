@@ -19,7 +19,7 @@ export default function NotFound() {
         <p className="text-lg text-(--text-secondary) mb-8">{t('pageNotFoundMsg')}</p>
         <Link
           to={localePath('/')}
-          className="min-h-11 px-6 inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors bg-(--accent-primary) text-white hover:brightness-110 active:scale-[0.98]"
+          className="min-h-11 px-6 inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors bg-(--accent-bg) text-white hover:brightness-110 active:scale-[0.98]"
         >
           {t('goBackHome')}
         </Link>

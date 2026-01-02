@@ -104,7 +104,7 @@ export default function ConceptPage() {
           <h1 className="text-2xl font-bold text-(--text-primary) mb-4">{t('conceptNotFound')}</h1>
           <Link
             to={localePath('/browse')}
-            className="min-h-11 px-6 inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors bg-(--accent-primary) text-white hover:brightness-110 active:scale-[0.98]"
+            className="min-h-11 px-6 inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors bg-(--accent-bg) text-white hover:brightness-110 active:scale-[0.98]"
           >
             {t('backToList')}
           </Link>

@@ -8,7 +8,7 @@
 
 import { metaFactory } from '@soundblue/i18n';
 import { useAutoAnimate } from '@soundblue/ui/hooks';
-import { useMemo, useState } from 'react';
+import { lazy, Suspense, useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import {
   BrowseTabs,
@@ -17,9 +17,14 @@ import {
   Pagination,
   useBrowseFilters,
 } from '@/components/browse';
-import { ConceptGraph } from '@/components/graph';
 import { Layout } from '@/components/layout/Layout';
 import { buildConceptGraph, type GraphNode } from '@/data/algorithms';
+
+// Lazy load ConceptGraph (D3.js ~500KB) - only loaded when graph tab is active
+const ConceptGraph = lazy(() =>
+  import('@/components/graph').then((m) => ({ default: m.ConceptGraph })),
+);
+
 import { allConcepts, lightConcepts } from '@/data/concepts';
 import { fields } from '@/data/fields';
 import { getSubfieldsByParent } from '@/data/subfields';
@@ -168,14 +173,25 @@ export default function BrowsePage() {
 
           {/* 그래프 시각화 */}
           <div className="rounded-lg overflow-hidden border border-(--border-primary)">
-            <ConceptGraph
-              data={graphData}
-              width={typeof window !== 'undefined' ? Math.min(window.innerWidth - 48, 1200) : 800}
-              height={600}
-              onNodeClick={handleNodeClick}
-              onNodeHover={setHoveredNode}
-              highlightedNodeId={hoveredNode?.id}
-            />
+            <Suspense
+              fallback={
+                <div className="flex items-center justify-center h-150 bg-(--bg-secondary)">
+                  <div className="text-center">
+                    <div className="w-8 h-8 border-4 border-(--accent-primary) border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+                    <p className="text-(--text-secondary)">{t('loading')}</p>
+                  </div>
+                </div>
+              }
+            >
+              <ConceptGraph
+                data={graphData}
+                width={typeof window !== 'undefined' ? Math.min(window.innerWidth - 48, 1200) : 800}
+                height={600}
+                onNodeClick={handleNodeClick}
+                onNodeHover={setHoveredNode}
+                highlightedNodeId={hoveredNode?.id}
+              />
+            </Suspense>
           </div>
 
           {/* 선택된 노드 정보 */}

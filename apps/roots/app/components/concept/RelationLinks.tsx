@@ -57,7 +57,7 @@ function RelationSection({ title, icon, ids, type, names }: RelationSectionProps
             <Link
               key={id}
               to={localePath(`/concept/${id}`)}
-              className="flex items-center gap-1 px-3 py-1.5 rounded-md text-sm bg-(--bg-tertiary) text-(--text-secondary) no-underline transition-all hover:bg-(--bg-secondary) hover:text-(--accent-primary)"
+              className="flex items-center gap-1 px-3 py-2.5 min-h-11 rounded-md text-sm bg-(--bg-tertiary) text-(--text-secondary) no-underline transition-all hover:bg-(--bg-secondary) hover:text-(--accent-primary)"
             >
               <span className={config.prefixClass}>{config.prefix}</span>
               <span>{name}</span>

@@ -52,9 +52,9 @@ export function ConceptFilters({
                 type="button"
                 onClick={() => onToggleDifficulty(level)}
                 className={cn(
-                  'px-3 py-1.5 rounded-lg text-sm font-medium transition-colors min-h-9',
+                  'px-4 py-2 rounded-lg text-sm font-medium transition-colors min-h-11',
                   isActive
-                    ? 'bg-(--accent-primary) text-white'
+                    ? 'bg-(--accent-bg) text-white'
                     : 'bg-(--bg-tertiary) text-(--text-secondary) hover:bg-(--bg-secondary)',
                 )}
               >
@@ -119,7 +119,7 @@ export function ConceptFilters({
           <button
             type="button"
             onClick={onReset}
-            className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-sm font-medium text-(--text-secondary) hover:bg-(--bg-tertiary) transition-colors"
+            className="flex items-center gap-1 px-4 py-2 min-h-11 rounded-lg text-sm font-medium text-(--text-secondary) hover:bg-(--bg-tertiary) transition-colors"
           >
             <X size={14} aria-hidden="true" />
             {t('resetFilters')}

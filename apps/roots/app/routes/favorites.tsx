@@ -68,7 +68,7 @@ export default function FavoritesPage() {
           <p className="text-(--text-secondary) mb-6">{t('addFavoritesHint')}</p>
           <Link
             to={localePath('/browse')}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-(--accent-primary) text-white font-medium transition-colors hover:brightness-110 active:scale-[0.98]"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-(--accent-bg) text-white font-medium transition-colors hover:brightness-110 active:scale-[0.98]"
           >
             {t('browseAllConcepts')}
             <span>→</span>
