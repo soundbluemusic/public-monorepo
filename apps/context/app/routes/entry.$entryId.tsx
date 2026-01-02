@@ -37,9 +37,15 @@ export default function EntryPage() {
   const { entry } = useLoaderData<{ entry: MeaningEntry | null }>();
   const { locale, t, localePath } = useI18n();
 
-  // Zustand store - sync state (no useEffect needed)
-  const isFavorite = useUserDataStore((state) => (entry?.id ? state.isFavorite(entry.id) : false));
-  const isStudied = useUserDataStore((state) => (entry?.id ? state.isStudied(entry.id) : false));
+  // Zustand store - 직접 state 속성 참조로 상태 변경 감지 보장
+  // ❌ state.isFavorite(id) 사용 금지 - get() 내부 호출로 Zustand 상태 추적 실패
+  // ✅ state.favorites를 직접 참조해야 Zustand가 변경을 감지함
+  const isFavorite = useUserDataStore((state) =>
+    entry?.id ? state.favorites.some((f) => f.entryId === entry.id) : false,
+  );
+  const isStudied = useUserDataStore((state) =>
+    entry?.id ? state.studyRecords.some((r) => r.entryId === entry.id) : false,
+  );
   const toggleFavorite = useUserDataStore((state) => state.toggleFavorite);
   const markAsStudied = useUserDataStore((state) => state.markAsStudied);
 

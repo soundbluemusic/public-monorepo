@@ -78,11 +78,38 @@ export function useStudyData({
 }: UseStudyDataOptions): UseStudyDataResult {
   const isHydrated = useIsHydrated();
 
-  // Zustand store에서 직접 데이터 가져오기
-  const studiedIds = useUserDataStore((state) => state.getStudiedIds());
-  const favoriteIds = useUserDataStore((state) => state.getFavoriteIds());
+  // Zustand store에서 직접 state 속성 참조
+  // ❌ state.getStudiedIds() 사용 금지 - get() 내부 호출로 Zustand 상태 추적 실패
+  // ✅ state.studyRecords/favorites를 직접 참조해야 Zustand가 변경을 감지함
+  const studyRecords = useUserDataStore((state) => state.studyRecords);
   const favorites = useUserDataStore((state) => state.favorites);
-  const todayStudied = useUserDataStore((state) => state.getTodayStudiedCount());
+
+  // 파생 상태 계산 (useMemo로 성능 최적화)
+  const studiedIds = useMemo(() => {
+    const ids = new Set<string>();
+    for (const r of studyRecords) {
+      ids.add(r.entryId);
+    }
+    return ids;
+  }, [studyRecords]);
+
+  const favoriteIds = useMemo(() => {
+    return new Set(favorites.map((f) => f.entryId));
+  }, [favorites]);
+
+  const todayStudied = useMemo(() => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const todayTimestamp = today.getTime();
+
+    const todayIds = new Set<string>();
+    for (const r of studyRecords) {
+      if (r.studiedAt >= todayTimestamp) {
+        todayIds.add(r.entryId);
+      }
+    }
+    return todayIds.size;
+  }, [studyRecords]);
 
   // 전체 진행률 계산
   const overallProgress = useMemo<ProgressData>(() => {
