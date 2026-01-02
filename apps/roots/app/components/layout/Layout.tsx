@@ -112,7 +112,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
           </Link>
 
           {/* Real-time Search Dropdown */}
-          <div className="relative flex-1 max-w-80 max-lg:max-w-60 max-md:max-w-40">
+          <div className="relative flex-1 max-w-80 max-lg:max-w-64 max-sm:max-w-48">
             <SearchDropdown
               query={query}
               onQueryChange={setQuery}

@@ -47,7 +47,7 @@ export function ExampleCard({ example, index }: ExampleCardProps) {
       <button
         type="button"
         onClick={() => setShowSolution(!showSolution)}
-        className="text-sm font-medium text-(--accent-primary) bg-transparent border-none cursor-pointer p-0 hover:underline"
+        className="min-h-11 inline-flex items-center text-sm font-medium text-(--accent-primary) bg-transparent border-none cursor-pointer px-0 hover:underline"
       >
         {showSolution ? `▼ ${t('hideSolution')}` : `▶ ${t('showSolution')}`}
       </button>

@@ -40,7 +40,7 @@ export const LightConceptCard = memo(function LightConceptCard({ concept }: Ligh
       {/* 분야 태그 */}
       <div className="flex items-center gap-2 text-xs">
         <span>{field?.icon}</span>
-        <span className="px-1 py-0.5 rounded bg-(--bg-tertiary) text-(--text-secondary)">
+        <span className="px-2 py-1 rounded bg-(--bg-tertiary) text-(--text-secondary)">
           {field?.name[locale] || field?.name.en}
         </span>
       </div>

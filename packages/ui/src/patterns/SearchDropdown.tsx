@@ -177,7 +177,7 @@ export function SearchDropdown<T extends SearchResultItem = SearchResultItem>({
     <div ref={containerRef} className={cn('relative', className)}>
       <div className="relative flex items-center">
         <svg
-          className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-(--text-tertiary) pointer-events-none"
+          className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-(--text-tertiary) pointer-events-none"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -198,13 +198,13 @@ export function SearchDropdown<T extends SearchResultItem = SearchResultItem>({
           onKeyDown={handleKeyDown}
           placeholder={placeholder[locale]}
           className={cn(
-            'w-full h-9 max-md:h-10 text-sm',
-            'pl-9 pr-10',
+            'w-full min-h-11 text-sm',
+            'pl-10 pr-9',
             'rounded-xl outline-hidden',
-            'transition-[border-color,background-color] duration-150',
+            'transition-colors duration-150',
             '[&::-webkit-search-cancel-button]:hidden',
             'text-(--text-primary) placeholder:text-(--text-tertiary)',
-            'bg-(--bg-tertiary) border border-(--border-primary)',
+            'bg-(--bg-elevated) border border-(--border-primary)',
             'focus:bg-(--bg-secondary) focus:border-(--border-focus)',
           )}
           role="combobox"
