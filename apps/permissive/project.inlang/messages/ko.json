@@ -33,6 +33,7 @@
   "aria.closeSidebar": "사이드바 닫기",
   "aria.expandSidebar": "사이드바 확장",
   "aria.collapseSidebar": "사이드바 축소",
+  "aria.sidebar": "사이드바 내비게이션",
   "ui.permissiveBy": "Permissive by",
   "ui.github": "GitHub",
   "ui.viewSource": "소스 보기",

@@ -48,6 +48,7 @@ export default function Header({ onMenuClick, isSidebarOpen }: HeaderProps) {
         <button
           type="button"
           onClick={onMenuClick}
+          data-mobile-menu
           className="lg:hidden min-h-11 min-w-11 flex items-center justify-center rounded-lg text-(--text-secondary) hover:bg-(--bg-tertiary) transition-colors cursor-pointer"
           aria-label={isSidebarOpen ? t('aria.closeMenu') : t('aria.openMenu')}
           aria-expanded={isSidebarOpen}

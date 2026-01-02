@@ -174,8 +174,24 @@ main {
   }
 }
 
-/* Desktop: Sidebar collapsed state margin adjustment */
+/* Desktop: Sidebar collapsed state - width adjustment */
 @media (min-width: 768px) {
+  /* Sidebar collapsed via JS event delegation */
+  html.sidebar-collapsed aside[aria-label] {
+    width: var(--sidebar-collapsed-width) !important;
+  }
+
+  /* Main content padding when sidebar collapsed */
+  html.sidebar-collapsed main#main-content {
+    padding-left: calc(var(--sidebar-collapsed-width) + 1rem) !important;
+  }
+
+  /* Header padding when sidebar collapsed */
+  html.sidebar-collapsed header > div {
+    padding-left: calc(var(--sidebar-collapsed-width) + 1rem) !important;
+  }
+
+  /* Legacy: React-based sidebar collapse (backup) */
   main[data-sidebar-collapsed="true"] {
     padding-left: calc(var(--sidebar-collapsed-width) + 1rem) !important;
   }

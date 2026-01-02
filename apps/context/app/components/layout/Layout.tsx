@@ -25,6 +25,19 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const { sidebarCollapsed, toggleSidebarCollapse } = useSettingsStore();
 
+  // Sync sidebar state with inline script's custom event
+  useEffect(() => {
+    const handleMobileSidebarToggle = (e: CustomEvent<{ isOpen: boolean }>) => {
+      setSidebarOpen(e.detail.isOpen);
+    };
+    window.addEventListener('mobile-sidebar-toggle', handleMobileSidebarToggle as EventListener);
+    return () =>
+      window.removeEventListener(
+        'mobile-sidebar-toggle',
+        handleMobileSidebarToggle as EventListener,
+      );
+  }, []);
+
   // 스크롤 이벤트 throttling (requestAnimationFrame 사용)
   useEffect(() => {
     let ticking = false;

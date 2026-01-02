@@ -33,6 +33,7 @@
   "aria.closeSidebar": "Close sidebar",
   "aria.expandSidebar": "Expand sidebar",
   "aria.collapseSidebar": "Collapse sidebar",
+  "aria.sidebar": "Sidebar navigation",
   "ui.permissiveBy": "Permissive by",
   "ui.github": "GitHub",
   "ui.viewSource": "View source",
