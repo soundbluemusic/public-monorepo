@@ -17,6 +17,7 @@ export {
   SIDEBAR_COLLAPSE_SCRIPT,
   SUN_ICON_SVG,
 } from './dark-mode';
+export { DOWNLOAD_PAGE_SCRIPT } from './download-handler';
 export {
   COMMON_PRECONNECTS,
   createNavigationPreloads,
