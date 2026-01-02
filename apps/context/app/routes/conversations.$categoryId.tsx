@@ -80,12 +80,14 @@ export default function ConversationsCategoryPage() {
 
             {/* Dialogue */}
             <div className="space-y-3">
-              {conv.dialogue.map((line, idx) => {
+              {conv.dialogue.map((line) => {
                 const isA = line.speaker === 'A';
                 const text = locale === 'ko' ? line.ko : line.en;
+                // Use speaker + text as unique key (dialogue lines are static)
+                const lineKey = `${line.speaker}-${line.ko.slice(0, 20)}`;
 
                 return (
-                  <div key={idx} className={cn('flex', isA ? 'justify-start' : 'justify-end')}>
+                  <div key={lineKey} className={cn('flex', isA ? 'justify-start' : 'justify-end')}>
                     <div
                       className={cn(
                         'max-w-[80%] px-4 py-2.5 rounded-2xl',

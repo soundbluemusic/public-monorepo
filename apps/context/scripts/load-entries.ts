@@ -587,7 +587,8 @@ function generateBinaryTrie(entries: JsonEntry[]): void {
 
   function getStringIndex(s: string | null): number {
     if (s === null) return 0xffffffff; // null marker
-    if (stringToIndex.has(s)) return stringToIndex.get(s)!;
+    const existing = stringToIndex.get(s);
+    if (existing !== undefined) return existing;
     const idx = stringTable.length;
     stringTable.push(s);
     stringToIndex.set(s, idx);

@@ -49,7 +49,7 @@ function RelationSection({ title, icon, ids, type, names }: RelationSectionProps
       </h4>
       <div className="flex flex-wrap gap-2">
         {validIds.map((id) => {
-          // conceptName is guaranteed to exist because validIds filters for it
+          // biome-ignore lint/style/noNonNullAssertion: validIds filters for existing names
           const conceptName = names[id]!;
           const name = conceptName[locale] || conceptName.en;
 

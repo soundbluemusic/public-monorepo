@@ -46,6 +46,7 @@ describe('SearchEngine', () => {
   describe('add', () => {
     it('should add a single item to the index', () => {
       const engine = new SearchEngine<TestItem>(testConfig);
+      // biome-ignore lint/style/noNonNullAssertion: test data is defined
       engine.add(testItems[0]!);
       expect(engine.documentCount).toBe(1);
     });
@@ -165,6 +166,7 @@ describe('SearchEngine', () => {
       const engine = new SearchEngine<TestItem>(testConfig);
       expect(engine.documentCount).toBe(0);
 
+      // biome-ignore lint/style/noNonNullAssertion: test data is defined
       engine.add(testItems[0]!);
       expect(engine.documentCount).toBe(1);
 
