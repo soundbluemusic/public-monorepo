@@ -88,25 +88,14 @@ export const useUserDataStore = create<UserDataState & UserDataActions>()(
       },
 
       toggleFavorite: (entryId) => {
-        console.log('[UserDataStore] toggleFavorite called with', entryId);
         const state = get();
         const exists = state.favorites.some((f) => f.entryId === entryId);
-        console.log(
-          '[UserDataStore] Current favorites count:',
-          state.favorites.length,
-          'exists:',
-          exists,
-        );
 
         if (exists) {
-          const newFavorites = state.favorites.filter((f) => f.entryId !== entryId);
-          console.log('[UserDataStore] Removing favorite, new count:', newFavorites.length);
-          set({ favorites: newFavorites });
+          set({ favorites: state.favorites.filter((f) => f.entryId !== entryId) });
           return false;
         }
-        const newFavorites = [{ entryId, addedAt: Date.now() }, ...state.favorites];
-        console.log('[UserDataStore] Adding favorite, new count:', newFavorites.length);
-        set({ favorites: newFavorites });
+        set({ favorites: [{ entryId, addedAt: Date.now() }, ...state.favorites] });
         return true;
       },
 
@@ -185,12 +174,6 @@ export const useUserDataStore = create<UserDataState & UserDataActions>()(
       onRehydrateStorage: () => (state, error) => {
         if (error) {
           console.error('[UserDataStore] Rehydration error:', error);
-        } else {
-          console.log(
-            '[UserDataStore] Rehydrated with',
-            state?.favorites?.length ?? 0,
-            'favorites',
-          );
         }
         state?.setHydrated();
       },

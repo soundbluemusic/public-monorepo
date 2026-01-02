@@ -29,6 +29,46 @@ export async function loader({ params }: { params: { entryId: string } }) {
   return { entry: entry || null };
 }
 
+/**
+ * clientLoader: SSG hydration workaround for React Router v7
+ *
+ * React Router v7 with ssr:false has a known issue where hydration fails
+ * because the turbo-stream data isn't properly decoded.
+ *
+ * Adding a clientLoader that returns the server data helps trigger proper
+ * hydration behavior. See: https://github.com/remix-run/react-router/issues/12893
+ */
+export async function clientLoader({
+  params,
+  serverLoader,
+}: {
+  params: { entryId: string };
+  serverLoader: () => Promise<{ entry: MeaningEntry | null }>;
+}) {
+  // For SSG: first try to get data from the pre-rendered server loader
+  // This allows proper hydration with the pre-rendered HTML
+  try {
+    const serverData = await serverLoader();
+    if (serverData?.entry) {
+      return serverData;
+    }
+  } catch {
+    // If serverLoader fails (stream decode issue), fall back to client-side fetch
+    console.log('[clientLoader] serverLoader failed, fetching client-side');
+  }
+
+  // Fallback: load data on client side
+  const { getEntryById } = await import('@/data/entries');
+  const entry = getEntryById(params.entryId);
+  return { entry: entry || null };
+}
+
+// Hydration fallback to show while clientLoader is running
+export function HydrateFallback() {
+  // Return null to use the pre-rendered HTML as-is during hydration
+  return null;
+}
+
 export function meta() {
   return [{ title: 'Entry - Context' }];
 }
@@ -59,27 +99,18 @@ export default function EntryPage() {
   };
 
   const handleToggleFavorite = () => {
-    console.log('[Bookmark] handleToggleFavorite called', { entryId: entry?.id, isFavorite });
-    if (!entry?.id) {
-      console.log('[Bookmark] entry.id is falsy, returning early');
-      return;
-    }
-    try {
-      const newState = toggleFavorite(entry.id);
-      console.log('[Bookmark] toggleFavorite returned', newState);
-      toast({
-        message: newState
-          ? locale === 'ko'
-            ? '즐겨찾기에 추가되었습니다'
-            : 'Added to favorites'
-          : locale === 'ko'
-            ? '즐겨찾기에서 제거되었습니다'
-            : 'Removed from favorites',
-        type: 'success',
-      });
-    } catch (err) {
-      console.error('[Bookmark] Error in toggleFavorite:', err);
-    }
+    if (!entry?.id) return;
+    const newState = toggleFavorite(entry.id);
+    toast({
+      message: newState
+        ? locale === 'ko'
+          ? '즐겨찾기에 추가되었습니다'
+          : 'Added to favorites'
+        : locale === 'ko'
+          ? '즐겨찾기에서 제거되었습니다'
+          : 'Removed from favorites',
+      type: 'success',
+    });
   };
 
   // 에러 또는 없는 엔트리
