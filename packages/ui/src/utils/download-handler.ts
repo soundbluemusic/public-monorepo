@@ -128,29 +128,128 @@ export const DOWNLOAD_PAGE_SCRIPT = `(function() {
     URL.revokeObjectURL(url);
   }
 
-  function togglePreview(format) {
-    // Find the format card containing this button
-    var cards = document.querySelectorAll('[data-format-card]');
-    cards.forEach(function(card) {
-      var cardFormat = card.getAttribute('data-format-card');
-      var preview = card.querySelector('[data-preview-panel]');
-      var previewBtn = card.querySelector('[data-action="preview"]');
+  var PREVIEW_COUNT = 3;
+  var FORMAT_LABELS = {
+    json: 'JSON',
+    txt: 'TXT',
+    md: 'Markdown',
+    csv: 'CSV'
+  };
 
-      if (cardFormat === format) {
-        // Toggle this card's preview
-        var isHidden = !preview || preview.hasAttribute('hidden') || preview.style.display === 'none';
-        if (preview) {
-          if (isHidden) {
-            preview.removeAttribute('hidden');
-            preview.style.display = '';
-          } else {
-            preview.setAttribute('hidden', '');
-            preview.style.display = 'none';
-          }
-        }
-        // Update button styling would be complex - React will handle it if hydration works
+  function showPreviewModal(format, entries, locale) {
+    // Remove existing modal if any
+    var existingModal = document.getElementById('download-preview-modal');
+    if (existingModal) {
+      existingModal.remove();
+    }
+
+    var sampleEntries = entries.slice(0, PREVIEW_COUNT);
+    var previewContent = generateContent(format, sampleEntries, locale);
+    var totalCount = entries.length;
+
+    // Create modal overlay
+    var modal = document.createElement('div');
+    modal.id = 'download-preview-modal';
+    modal.style.cssText = 'position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:1rem;background:rgba(0,0,0,0.5);backdrop-filter:blur(4px);';
+
+    // Get CSS variables for theming
+    var computedStyle = getComputedStyle(document.documentElement);
+    var bgPrimary = computedStyle.getPropertyValue('--bg-primary').trim() || '#ffffff';
+    var bgSecondary = computedStyle.getPropertyValue('--bg-secondary').trim() || '#f5f5f5';
+    var bgTertiary = computedStyle.getPropertyValue('--bg-tertiary').trim() || '#e5e5e5';
+    var textPrimary = computedStyle.getPropertyValue('--text-primary').trim() || '#171717';
+    var textSecondary = computedStyle.getPropertyValue('--text-secondary').trim() || '#525252';
+    var textTertiary = computedStyle.getPropertyValue('--text-tertiary').trim() || '#737373';
+    var borderPrimary = computedStyle.getPropertyValue('--border-primary').trim() || '#e5e5e5';
+    var accentPrimary = computedStyle.getPropertyValue('--accent-primary').trim() || '#3b82f6';
+
+    var labelText = locale === 'ko' ? '미리보기' : 'Preview';
+    var sampleText = locale === 'ko'
+      ? PREVIEW_COUNT + '개 샘플'
+      : PREVIEW_COUNT + ' samples';
+    var moreText = locale === 'ko'
+      ? '외 ' + (totalCount - PREVIEW_COUNT) + '개 더...'
+      : 'and ' + (totalCount - PREVIEW_COUNT) + ' more...';
+    var closeText = locale === 'ko' ? '닫기' : 'Close';
+
+    modal.innerHTML = '<div style="background:' + bgPrimary + ';border-radius:1rem;max-width:48rem;width:100%;max-height:80vh;display:flex;flex-direction:column;box-shadow:0 25px 50px -12px rgba(0,0,0,0.25);">' +
+      '<div style="display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;border-bottom:1px solid ' + borderPrimary + ';">' +
+        '<div style="display:flex;align-items:center;gap:0.75rem;">' +
+          '<span style="font-weight:600;color:' + textPrimary + ';">' + FORMAT_LABELS[format] + ' ' + labelText + '</span>' +
+          '<span style="font-size:0.75rem;padding:0.25rem 0.5rem;background:' + bgTertiary + ';border-radius:0.25rem;color:' + textTertiary + ';">' + sampleText + '</span>' +
+        '</div>' +
+        '<button id="close-preview-modal" type="button" style="padding:0.5rem;border-radius:0.5rem;border:none;background:transparent;cursor:pointer;color:' + textSecondary + ';" aria-label="' + closeText + '">' +
+          '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>' +
+        '</button>' +
+      '</div>' +
+      '<div style="flex:1;overflow:auto;padding:1rem;">' +
+        '<pre style="margin:0;padding:1rem;background:' + bgTertiary + ';border-radius:0.5rem;font-size:0.75rem;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;white-space:pre-wrap;word-break:break-all;color:' + textSecondary + ';overflow-x:auto;">' + escapeHtml(previewContent) + '</pre>' +
+      '</div>' +
+      '<div style="padding:0.75rem 1.5rem;border-top:1px solid ' + borderPrimary + ';background:' + bgSecondary + ';border-radius:0 0 1rem 1rem;">' +
+        '<p style="margin:0;font-size:0.75rem;color:' + textTertiary + ';">' + moreText + '</p>' +
+      '</div>' +
+    '</div>';
+
+    document.body.appendChild(modal);
+
+    // Set up event handlers after appending to DOM
+    modal.setAttribute('tabindex', '-1');
+
+    // Helper function to close modal and clean up handlers
+    function closeModal() {
+      var m = document.getElementById('download-preview-modal');
+      if (m) {
+        m.remove();
+        document.removeEventListener('keydown', escapeHandler, true);
+        document.removeEventListener('click', clickHandler, true);
       }
-    });
+    }
+
+    // Store keydown handler reference for cleanup
+    function escapeHandler(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    }
+
+    // Click handler for backdrop and close button
+    function clickHandler(e) {
+      var m = document.getElementById('download-preview-modal');
+      if (!m) {
+        document.removeEventListener('click', clickHandler, true);
+        return;
+      }
+
+      // Check if clicked on close button or its children (svg, line elements)
+      var target = e.target;
+      var closeBtn = document.getElementById('close-preview-modal');
+      if (closeBtn && (target === closeBtn || closeBtn.contains(target))) {
+        e.preventDefault();
+        e.stopPropagation();
+        closeModal();
+        return;
+      }
+
+      // Close if clicking directly on the modal backdrop (not inner content)
+      if (target === m) {
+        closeModal();
+      }
+    }
+
+    // Register document-level handlers
+    document.addEventListener('click', clickHandler, true);
+    document.addEventListener('keydown', escapeHandler, true);
+
+    modal.focus();
+  }
+
+  function escapeHtml(str) {
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
   }
 
   document.addEventListener('click', function(e) {
@@ -183,13 +282,10 @@ export const DOWNLOAD_PAGE_SCRIPT = `(function() {
         triggerDownload(content, format, locale);
       }
     } else if (action === 'preview') {
-      // For preview, we let the click through to React if it works
-      // But also try to toggle preview directly
-      // This is a fallback - if React hydration works, React will handle it
-      // If not, this provides basic functionality
+      // Show preview in a modal popup
       e.preventDefault();
       e.stopPropagation();
-      togglePreview(format);
+      showPreviewModal(format, entries, locale);
     }
   }, true); // Use capture phase to handle before React
 })();`;
