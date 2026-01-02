@@ -205,6 +205,97 @@ export async function loader({ params }: Route.LoaderArgs) {
 }
 ```
 
+### ⚠️ SSG Hydration Workaround (React Router v7 버그 대응)
+
+> **React Router v7 + React 19 SSG 환경에서 hydration 실패 시 버튼 클릭이 작동하지 않는 버그가 있습니다.**
+> **이 workaround는 공식 수정이 나올 때까지 필수입니다.**
+
+#### 문제 원인
+
+React Router v7 SSG에서 hydration 실패 시, React 19가 **새 DOM을 생성**하지만 **기존 서버 HTML을 삭제하지 않음**:
+
+```
+문제 상태 (DOM 중복):
+<body>
+  <div>서버 렌더링 버튼들</div>  ← 사용자에게 보임, React 핸들러 없음
+  <div>React가 만든 버튼들</div> ← 숨겨짐, React 핸들러 있음
+</body>
+→ 사용자가 클릭하는 버튼은 React가 관리하지 않아 작동 안 함
+```
+
+#### 해결책 (자체 구현)
+
+`apps/*/app/entry.client.tsx`에서 hydration 후 orphan DOM 제거:
+
+```typescript
+// entry.client.tsx - 삭제 금지!
+startTransition(() => {
+  hydrateRoot(document, <StrictMode><App /></StrictMode>);
+
+  // React Router v7 SSG hydration 버그 workaround
+  // hydration 실패 시 생성되는 orphan DOM 제거
+  setTimeout(() => {
+    const divs = Array.from(document.body.children).filter(
+      (el) => el.tagName === 'DIV'
+    );
+    if (divs.length >= 2) {
+      const firstDiv = divs[0] as HTMLElement;
+      const hasReact = Object.keys(firstDiv).some((k) =>
+        k.startsWith('__react')
+      );
+      if (!hasReact) {
+        firstDiv.remove(); // React가 관리 안 하는 orphan DOM 제거
+      }
+    }
+  }, 100);
+});
+```
+
+#### 동적 라우트 필수 패턴
+
+모든 동적 라우트에 `clientLoader` + `HydrateFallback` 필수:
+
+```typescript
+// routes/entry.$entryId.tsx
+export async function loader({ params }) { /* 빌드 시 실행 */ }
+
+export async function clientLoader({ serverLoader }) {
+  // hydration 시 서버 데이터 가져오기
+  return await serverLoader();
+}
+
+export function HydrateFallback() {
+  return null; // 서버 HTML 그대로 표시
+}
+```
+
+#### 수정 금지 파일
+
+| 파일 | 이유 |
+|------|------|
+| `apps/*/app/entry.client.tsx` | orphan DOM 정리 로직 삭제 시 모든 버튼 클릭 불가 |
+| `apps/*/app/entry.server.tsx` | `prerender` 함수 사용 필수 (`renderToString` 금지) |
+
+#### 빌드 후 필수 테스트
+
+```bash
+# E2E 테스트로 인터랙티브 기능 확인
+pnpm test:e2e --grep "interactive"
+```
+
+수동 확인:
+- [ ] 북마크 버튼 클릭 → localStorage 저장 확인
+- [ ] 다운로드 버튼 클릭 → 모달/다운로드 작동
+- [ ] DevTools → Elements → body 아래 div 중복 없음
+
+#### 관련 이슈
+
+- [React Router #12893](https://github.com/remix-run/react-router/issues/12893) - HydrateFallback + clientLoader 필요
+- [React Router #12360](https://github.com/remix-run/react-router/discussions/12360) - ssr:false 버그 논의
+- [React Router #13368](https://github.com/remix-run/react-router/issues/13368) - Full Static SSG 요청
+
+> **공식 팀 상태**: "ssr:false 관련 버그를 아직 수정 중" (2024년부터 진행 중)
+
 ## Code Quality Rules (코드 품질 규칙)
 
 ### Absolute Prohibitions (절대 금지) ⛔

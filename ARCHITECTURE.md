@@ -220,6 +220,54 @@ export function cn(...classes: string[]) {}
 
 ---
 
+## SSG Hydration Workaround (SSG Hydration 버그 대응)
+
+> ⚠️ **React Router v7 + React 19 SSG 환경의 알려진 버그에 대한 workaround입니다.**
+
+### 문제
+
+React Router v7 SSG(`ssr: false`)에서 hydration 실패 시:
+1. React 19가 새로운 DOM 트리를 생성
+2. 기존 서버 렌더링 HTML이 삭제되지 않음
+3. DOM 중복 → 사용자가 보는 버튼에 React 핸들러 없음 → 클릭 불가
+
+### 해결책 (자체 구현)
+
+각 앱의 `entry.client.tsx`에서 hydration 후 orphan DOM 제거:
+
+```typescript
+// apps/*/app/entry.client.tsx
+startTransition(() => {
+  hydrateRoot(document, <StrictMode><App /></StrictMode>);
+
+  // Orphan DOM 정리 (React Router v7 SSG 버그 workaround)
+  setTimeout(() => {
+    const divs = [...document.body.children].filter(el => el.tagName === 'DIV');
+    if (divs.length >= 2) {
+      const firstDiv = divs[0] as HTMLElement;
+      if (!Object.keys(firstDiv).some(k => k.startsWith('__react'))) {
+        firstDiv.remove();
+      }
+    }
+  }, 100);
+});
+```
+
+### 수정 금지 파일
+
+| 파일 | 역할 | 수정 금지 이유 |
+|------|------|---------------|
+| `apps/*/app/entry.client.tsx` | Hydration + orphan DOM 정리 | 삭제 시 모든 버튼 클릭 불가 |
+| `apps/*/app/entry.server.tsx` | SSG HTML 생성 | `prerender` 함수 필수 |
+
+### 관련 이슈
+
+- [React Router #12893](https://github.com/remix-run/react-router/issues/12893)
+- [React Router #12360](https://github.com/remix-run/react-router/discussions/12360)
+- [React Router #13368](https://github.com/remix-run/react-router/issues/13368)
+
+---
+
 ## Dependency Graph (의존성 그래프)
 
 ```
@@ -244,6 +292,11 @@ apps/permissive ──────┘    @soundblue/pwa
 ---
 
 ## Version History (변경 이력)
+
+### v2.1.0 (2026-01-02)
+- SSG Hydration Workaround 문서화
+- React Router v7 + React 19 hydration 버그 대응 코드 추가
+- `entry.client.tsx` orphan DOM 정리 로직 구현
 
 ### v2.0.0 (2025-12-31)
 - 패키지 6개 → 10개 모듈화
