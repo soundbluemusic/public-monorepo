@@ -90,6 +90,7 @@ export function ExampleList({ examples, title }: { examples?: ExampleInput[]; ti
         </h3>
       )}
       <div className="space-y-3">
+        {/* biome-ignore lint/suspicious/noArrayIndexKey: examples are static and won't be reordered */}
         {(examples ?? []).map((example, index) =>
           typeof example === 'string' ? (
             <SimpleExample key={`example-str-${index}`} example={example} index={index} />

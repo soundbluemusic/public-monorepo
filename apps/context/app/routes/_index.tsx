@@ -1,6 +1,4 @@
 import { metaFactory } from '@soundblue/i18n';
-import { FadeIn } from '@soundblue/ui/animation';
-import { useAutoAnimate } from '@soundblue/ui/hooks';
 import { ProgressBar } from '@soundblue/ui/primitives';
 import { FolderOpen, Sparkles, TrendingUp } from 'lucide-react';
 import { Link, useLoaderData } from 'react-router';
@@ -77,36 +75,36 @@ export default function HomePage() {
     categoryCounts,
   });
 
-  // Auto-animate for categories grid
-  const [categoriesRef] = useAutoAnimate<HTMLDivElement>();
-
   return (
     <Layout>
-      {/* Hero Section - with fade in animation */}
-      <FadeIn>
-        <div className="mb-8">
-          <h1 className="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">
-            {t('heroTitle')}
-          </h1>
-          <p className="text-(--text-secondary)">{t('heroSubtitle')}</p>
-        </div>
-      </FadeIn>
+      {/* Hero Section - CSS 애니메이션으로 TBT 최적화 */}
+      <div className="mb-8 animate-fade-in">
+        <h1 className="text-2xl sm:text-3xl font-bold text-(--text-primary) mb-2">
+          {t('heroTitle')}
+        </h1>
+        <p className="text-(--text-secondary)">{t('heroSubtitle')}</p>
+      </div>
 
-      {/* Overall Progress */}
-      {overallProgress.studied > 0 && (
-        <div className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) mb-8">
-          <div className="flex items-center justify-between mb-2">
-            <h2 className="text-sm font-semibold text-(--text-primary) flex items-center gap-2">
-              <TrendingUp size={18} aria-hidden="true" />
-              {locale === 'ko' ? '내 학습 현황' : 'My Progress'}
-            </h2>
-            <span className="text-sm text-(--text-secondary)">
-              {overallProgress.studied}/{overallProgress.total} {locale === 'ko' ? '단어' : 'words'}
-            </span>
-          </div>
-          <ProgressBar value={overallProgress.percentage} />
+      {/* Overall Progress - CLS 방지: 조건부 렌더링 대신 CSS visibility 사용 */}
+      <div
+        className={`p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) mb-8 transition-opacity duration-200 ${
+          overallProgress.studied > 0
+            ? 'opacity-100'
+            : 'opacity-0 h-0 overflow-hidden p-0 mb-0 border-0'
+        }`}
+        aria-hidden={overallProgress.studied === 0}
+      >
+        <div className="flex items-center justify-between mb-2">
+          <h2 className="text-sm font-semibold text-(--text-primary) flex items-center gap-2">
+            <TrendingUp size={18} aria-hidden="true" />
+            {locale === 'ko' ? '내 학습 현황' : 'My Progress'}
+          </h2>
+          <span className="text-sm text-(--text-secondary)">
+            {overallProgress.studied}/{overallProgress.total} {locale === 'ko' ? '단어' : 'words'}
+          </span>
         </div>
-      )}
+        <ProgressBar value={overallProgress.percentage} />
+      </div>
 
       {/* Daily Word */}
       {dailyWord && (
@@ -144,7 +142,7 @@ export default function HomePage() {
           </Link>
         </div>
 
-        <div ref={categoriesRef} className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2">
           {cats.map((category) => {
             const count = categoryCounts[category.id];
             const progress = categoryProgress[category.id] || {
@@ -169,8 +167,12 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                {/* Progress bar */}
-                {progress.studied > 0 && <ProgressBar value={progress.percentage} size="sm" />}
+                {/* Progress bar - CLS 방지: 항상 렌더링하되 조건부 표시 */}
+                <div
+                  className={`transition-opacity duration-150 ${progress.studied > 0 ? 'opacity-100' : 'opacity-0 h-0'}`}
+                >
+                  <ProgressBar value={progress.percentage} size="sm" />
+                </div>
               </Link>
             );
           })}

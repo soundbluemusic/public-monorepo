@@ -10,7 +10,8 @@
         "noUnusedVariables": "error"
       },
       "style": {
-        "useImportType": "error"
+        "useImportType": "error",
+        "noNonNullAssertion": "warn"
       },
       "suspicious": {
         "noExplicitAny": "error",
@@ -64,7 +65,8 @@
       "!**/apps/**/*/.inlang-plugins",
       "!**/apps/roots/app/routes/+types",
       "!**/packages/shared/src/styles/tailwind.css",
-      "!**/packages/config/src/styles/tailwind.css"
+      "!**/packages/config/src/styles/tailwind.css",
+      "!**/.lighthouseci"
     ]
   }
 }
