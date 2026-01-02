@@ -59,18 +59,27 @@ export default function EntryPage() {
   };
 
   const handleToggleFavorite = () => {
-    if (!entry?.id) return;
-    const newState = toggleFavorite(entry.id);
-    toast({
-      message: newState
-        ? locale === 'ko'
-          ? '즐겨찾기에 추가되었습니다'
-          : 'Added to favorites'
-        : locale === 'ko'
-          ? '즐겨찾기에서 제거되었습니다'
-          : 'Removed from favorites',
-      type: 'success',
-    });
+    console.log('[Bookmark] handleToggleFavorite called', { entryId: entry?.id, isFavorite });
+    if (!entry?.id) {
+      console.log('[Bookmark] entry.id is falsy, returning early');
+      return;
+    }
+    try {
+      const newState = toggleFavorite(entry.id);
+      console.log('[Bookmark] toggleFavorite returned', newState);
+      toast({
+        message: newState
+          ? locale === 'ko'
+            ? '즐겨찾기에 추가되었습니다'
+            : 'Added to favorites'
+          : locale === 'ko'
+            ? '즐겨찾기에서 제거되었습니다'
+            : 'Removed from favorites',
+        type: 'success',
+      });
+    } catch (err) {
+      console.error('[Bookmark] Error in toggleFavorite:', err);
+    }
   };
 
   // 에러 또는 없는 엔트리
