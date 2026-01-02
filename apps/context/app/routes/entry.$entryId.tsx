@@ -29,6 +29,46 @@ export async function loader({ params }: { params: { entryId: string } }) {
   return { entry: entry || null };
 }
 
+/**
+ * clientLoader: SSG hydration workaround for React Router v7
+ *
+ * React Router v7 with ssr:false has a known issue where hydration fails
+ * because the turbo-stream data isn't properly decoded.
+ *
+ * Adding a clientLoader that returns the server data helps trigger proper
+ * hydration behavior. See: https://github.com/remix-run/react-router/issues/12893
+ */
+export async function clientLoader({
+  params,
+  serverLoader,
+}: {
+  params: { entryId: string };
+  serverLoader: () => Promise<{ entry: MeaningEntry | null }>;
+}) {
+  // For SSG: first try to get data from the pre-rendered server loader
+  // This allows proper hydration with the pre-rendered HTML
+  try {
+    const serverData = await serverLoader();
+    if (serverData?.entry) {
+      return serverData;
+    }
+  } catch {
+    // If serverLoader fails (stream decode issue), fall back to client-side fetch
+    console.log('[clientLoader] serverLoader failed, fetching client-side');
+  }
+
+  // Fallback: load data on client side
+  const { getEntryById } = await import('@/data/entries');
+  const entry = getEntryById(params.entryId);
+  return { entry: entry || null };
+}
+
+// Hydration fallback to show while clientLoader is running
+export function HydrateFallback() {
+  // Return null to use the pre-rendered HTML as-is during hydration
+  return null;
+}
+
 export function meta() {
   return [{ title: 'Entry - Context' }];
 }
@@ -37,9 +77,15 @@ export default function EntryPage() {
   const { entry } = useLoaderData<{ entry: MeaningEntry | null }>();
   const { locale, t, localePath } = useI18n();
 
-  // Zustand store - sync state (no useEffect needed)
-  const isFavorite = useUserDataStore((state) => (entry?.id ? state.isFavorite(entry.id) : false));
-  const isStudied = useUserDataStore((state) => (entry?.id ? state.isStudied(entry.id) : false));
+  // Zustand store - 직접 state 속성 참조로 상태 변경 감지 보장
+  // ❌ state.isFavorite(id) 사용 금지 - get() 내부 호출로 Zustand 상태 추적 실패
+  // ✅ state.favorites를 직접 참조해야 Zustand가 변경을 감지함
+  const isFavorite = useUserDataStore((state) =>
+    entry?.id ? state.favorites.some((f) => f.entryId === entry.id) : false,
+  );
+  const isStudied = useUserDataStore((state) =>
+    entry?.id ? state.studyRecords.some((r) => r.entryId === entry.id) : false,
+  );
   const toggleFavorite = useUserDataStore((state) => state.toggleFavorite);
   const markAsStudied = useUserDataStore((state) => state.markAsStudied);
 

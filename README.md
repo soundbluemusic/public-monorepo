@@ -150,6 +150,32 @@ export async function loader({ params }: Route.LoaderArgs) {
 }
 ```
 
+### ⚠️ SSG Hydration Workaround
+
+> **React Router v7 + React 19 SSG 환경에서 알려진 hydration 버그가 있습니다.**
+> 자세한 내용은 [CLAUDE.md](CLAUDE.md#-ssg-hydration-workaround-react-router-v7-버그-대응) 참조.
+
+**증상:** 빌드 후 버튼 클릭(북마크, 다운로드 등)이 작동하지 않음
+
+**원인:** Hydration 실패 시 React가 새 DOM을 생성하지만 기존 서버 HTML을 삭제하지 않아 DOM 중복 발생
+
+**해결:** `entry.client.tsx`에서 orphan DOM 제거 (자체 구현 workaround)
+
+```typescript
+// apps/*/app/entry.client.tsx - 삭제 금지!
+// React Router v7 SSG hydration 버그 workaround
+setTimeout(() => {
+  const divs = [...document.body.children].filter(el => el.tagName === 'DIV');
+  if (divs.length >= 2 && !Object.keys(divs[0]).some(k => k.startsWith('__react'))) {
+    divs[0].remove();
+  }
+}, 100);
+```
+
+**관련 이슈:**
+- [React Router #12893](https://github.com/remix-run/react-router/issues/12893)
+- [React Router #12360](https://github.com/remix-run/react-router/discussions/12360)
+
 ---
 
 ## 📁 Project Structure

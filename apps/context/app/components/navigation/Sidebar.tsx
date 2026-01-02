@@ -119,7 +119,13 @@ export function Sidebar({ isOpen, isCollapsed, onClose, onToggleCollapse }: Side
         </nav>
 
         {/* Footer */}
-        <div className="shrink-0 p-4 border-t border-(--border-primary)">
+        <div
+          className={cn(
+            'shrink-0 p-4 border-t border-(--border-primary)',
+            // Collapsed: 패딩 줄여서 CollapseButton 표시 공간 확보
+            isCollapsed && 'md:p-2',
+          )}
+        >
           {/* Collapse Toggle Button (desktop only) */}
           <CollapseButton
             isCollapsed={isCollapsed}

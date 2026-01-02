@@ -92,14 +92,10 @@ export const useUserDataStore = create<UserDataState & UserDataActions>()(
         const exists = state.favorites.some((f) => f.entryId === entryId);
 
         if (exists) {
-          set({
-            favorites: state.favorites.filter((f) => f.entryId !== entryId),
-          });
+          set({ favorites: state.favorites.filter((f) => f.entryId !== entryId) });
           return false;
         }
-        set({
-          favorites: [{ entryId, addedAt: Date.now() }, ...state.favorites],
-        });
+        set({ favorites: [{ entryId, addedAt: Date.now() }, ...state.favorites] });
         return true;
       },
 
@@ -175,7 +171,10 @@ export const useUserDataStore = create<UserDataState & UserDataActions>()(
         favorites: state.favorites,
         studyRecords: state.studyRecords,
       }),
-      onRehydrateStorage: () => (state) => {
+      onRehydrateStorage: () => (state, error) => {
+        if (error) {
+          console.error('[UserDataStore] Rehydration error:', error);
+        }
         state?.setHydrated();
       },
     },

@@ -28,7 +28,8 @@ export function CollapseButton({
       className={cn(
         'hidden md:flex w-full items-center gap-2 min-h-11 px-3 py-2 rounded-lg',
         'text-(--text-secondary) hover:bg-(--bg-tertiary) transition-colors cursor-pointer',
-        isCollapsed && 'justify-center',
+        // Collapsed: 패딩 제거하고 중앙 정렬 (56px 사이드바에서 아이콘 표시용)
+        isCollapsed && 'justify-center px-0',
       )}
       title={label}
       aria-label={label}
