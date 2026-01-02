@@ -15,7 +15,9 @@ export function Footer() {
         'hidden md:block mt-auto py-8 bg-(--bg-secondary) border-t border-(--border-primary)',
         'transition-[padding] duration-200',
         // Desktop: offset for fixed sidebar (same as main content)
-        sidebarCollapsed ? 'md:pl-(--sidebar-collapsed-width)' : 'md:pl-(--sidebar-width)',
+        sidebarCollapsed
+          ? 'md:pl-[calc(var(--sidebar-collapsed-width)+1rem)]'
+          : 'md:pl-[calc(var(--sidebar-width)+1rem)]',
       )}
     >
       <div className="max-w-4xl mx-auto px-4">

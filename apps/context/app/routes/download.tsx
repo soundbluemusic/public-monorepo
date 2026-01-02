@@ -1,5 +1,5 @@
 import { metaFactory } from '@soundblue/i18n';
-import { cn } from '@soundblue/ui/utils';
+import { cn, DOWNLOAD_PAGE_SCRIPT } from '@soundblue/ui/utils';
 import { ChevronUp, Download, Eye, FileJson, FileText, FileType } from 'lucide-react';
 import { useCallback, useMemo, useState } from 'react';
 import { useLoaderData } from 'react-router';
@@ -295,9 +295,11 @@ export default function DownloadPage() {
                     <div className="flex items-center gap-2 mt-3">
                       <button
                         type="button"
+                        data-action="preview"
+                        data-format={format}
                         onClick={() => togglePreview(format)}
                         className={cn(
-                          'inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg transition-colors',
+                          'inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg transition-colors cursor-pointer',
                           'border border-(--border-primary)',
                           isExpanded
                             ? 'bg-(--accent-primary)/10 text-(--accent-primary) border-(--accent-primary)'
@@ -318,10 +320,12 @@ export default function DownloadPage() {
                       </button>
                       <button
                         type="button"
+                        data-action="download"
+                        data-format={format}
                         onClick={() => handleDownload(format)}
                         disabled={isDownloading}
                         className={cn(
-                          'inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg transition-colors',
+                          'inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg transition-colors cursor-pointer',
                           'bg-(--accent-primary) text-white hover:bg-(--accent-primary)/90',
                           'disabled:opacity-50 disabled:cursor-not-allowed',
                         )}
@@ -358,6 +362,19 @@ export default function DownloadPage() {
           <p>📜 {t('downloadLicenseNote')}</p>
         </div>
       </div>
+
+      {/* Embed download data for plain JS fallback when React hydration fails */}
+      <script
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for SSG hydration fallback
+        dangerouslySetInnerHTML={{
+          __html: `window.__downloadData = ${JSON.stringify({ entries, locale })};`,
+        }}
+      />
+      {/* Plain JS download handler - works even when React hydration fails */}
+      <script
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for SSG hydration fallback
+        dangerouslySetInnerHTML={{ __html: DOWNLOAD_PAGE_SCRIPT }}
+      />
     </Layout>
   );
 }

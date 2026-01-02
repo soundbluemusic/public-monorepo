@@ -36,7 +36,7 @@ export default defineConfig({
         baseURL: `http://localhost:${APP_PORTS.context}`,
       },
       testMatch:
-        /context|button-interactions|accessibility|responsive|mobile|seo|pwa|security|visual/,
+        /context|button-interactions|accessibility|responsive|mobile|seo|pwa|security|visual|download|hydration/,
     },
     {
       name: 'permissive',
