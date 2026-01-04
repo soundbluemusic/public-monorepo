@@ -55,9 +55,6 @@ export const DARK_MODE_INIT_SCRIPT = `(function() {
  * before React's event system.
  */
 export const DARK_MODE_TOGGLE_SCRIPT = `(function() {
-  var sunIcon = '${SUN_ICON_SVG}';
-  var moonIcon = '${MOON_ICON_SVG}';
-
   document.addEventListener('click', function(e) {
     var btn = e.target.closest('button[aria-label*="mode" i]');
     if (!btn) return;
@@ -81,7 +78,8 @@ export const DARK_MODE_TOGGLE_SCRIPT = `(function() {
       console.error('[Theme] Failed to save theme preference:', err);
     }
 
-    btn.innerHTML = willBeDark ? sunIcon : moonIcon;
+    // innerHTML 교체 제거: React 컴포넌트가 MutationObserver로 아이콘을 업데이트함
+    // DOM을 직접 수정하면 React와 충돌하여 에러 발생
     btn.setAttribute('aria-label', willBeDark ? 'Switch to light mode' : 'Switch to dark mode');
     btn.setAttribute('title', willBeDark ? 'Light mode' : 'Dark mode');
   }, true);
