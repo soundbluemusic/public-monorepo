@@ -39,11 +39,10 @@ interface MotionProviderProps {
  * ```
  */
 export function MotionProvider({ children }: MotionProviderProps) {
-  return (
-    <LazyMotion features={domAnimation} strict>
-      {children}
-    </LazyMotion>
-  );
+  // strict 모드 제거: SSG 환경에서 hydration 시 에러 발생 가능
+  // strict 모드는 m 컴포넌트가 LazyMotion 외부에서 렌더링될 때 에러를 던지지만,
+  // SSG hydration 과정에서 타이밍 이슈로 인해 에러가 발생할 수 있음
+  return <LazyMotion features={domAnimation}>{children}</LazyMotion>;
 }
 
 // ========================================
