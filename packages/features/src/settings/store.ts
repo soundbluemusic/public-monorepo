@@ -93,21 +93,10 @@ export const useSettingsStore = create<SettingsState>()(
         sidebarCollapsed: state.sidebarCollapsed,
         // sidebarOpen is not persisted (mobile overlay should start closed)
       }),
-      onRehydrateStorage: () => (state) => {
-        // Rehydration 후 테마 상태와 DOM 동기화
-        // DARK_MODE_INIT_SCRIPT가 이미 적용했지만, React hydration 후
-        // 불일치가 발생할 수 있으므로 명시적으로 동기화
-        if (state && typeof window !== 'undefined') {
-          const root = document.documentElement;
-          const currentTheme = state.theme;
-
-          if (currentTheme === 'system') {
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            root.classList.toggle('dark', prefersDark);
-          } else {
-            root.classList.toggle('dark', currentTheme === 'dark');
-          }
-        }
+      onRehydrateStorage: () => (_state) => {
+        // DARK_MODE_INIT_SCRIPT가 <head>에서 이미 올바른 테마를 적용함
+        // 여기서 DOM을 수정하면 오히려 FOUC(flash of wrong theme) 발생
+        // 따라서 rehydration 후 DOM 동기화는 하지 않음
       },
     },
   ),
