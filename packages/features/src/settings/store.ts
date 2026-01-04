@@ -93,9 +93,21 @@ export const useSettingsStore = create<SettingsState>()(
         sidebarCollapsed: state.sidebarCollapsed,
         // sidebarOpen is not persisted (mobile overlay should start closed)
       }),
-      onRehydrateStorage: () => (_state) => {
-        // Theme is already applied by DARK_MODE_INIT_SCRIPT in <head>
-        // Don't re-apply here to prevent flickering
+      onRehydrateStorage: () => (state) => {
+        // Rehydration 후 테마 상태와 DOM 동기화
+        // DARK_MODE_INIT_SCRIPT가 이미 적용했지만, React hydration 후
+        // 불일치가 발생할 수 있으므로 명시적으로 동기화
+        if (state && typeof window !== 'undefined') {
+          const root = document.documentElement;
+          const currentTheme = state.theme;
+
+          if (currentTheme === 'system') {
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            root.classList.toggle('dark', prefersDark);
+          } else {
+            root.classList.toggle('dark', currentTheme === 'dark');
+          }
+        }
       },
     },
   ),
