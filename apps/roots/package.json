@@ -25,7 +25,7 @@
     "@soundblue/seo": "workspace:*",
     "@soundblue/ui": "workspace:*",
     "dexie": "^4.0.10",
-    "lucide-react": "^0.468.0",
+    "lucide-react": "^0.562.0",
     "minisearch": "^7.2.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",

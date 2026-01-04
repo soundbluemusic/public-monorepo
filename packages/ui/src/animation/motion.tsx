@@ -1,20 +1,50 @@
 /**
- * @fileoverview Framer Motion Animation Components
+ * @fileoverview Framer Motion Animation Components with LazyMotion
  * @environment universal
  *
- * Reusable animation primitives for consistent UI transitions.
+ * 번들 사이즈 최적화: LazyMotion + m 컴포넌트 사용 (32KB → 4.6KB)
  * 선언적 애니메이션 컴포넌트 및 Variants 프리셋
+ *
+ * @see https://motion.dev/docs/react-reduce-bundle-size
  */
 import {
   AnimatePresence,
+  domAnimation,
   type HTMLMotionProps,
+  LazyMotion,
   type MotionProps,
-  motion,
+  m,
   type Variants,
 } from 'framer-motion';
 import { forwardRef, type ReactNode } from 'react';
 
 import { cn } from '../utils/cn';
+
+// ========================================
+// LazyMotion Provider
+// ========================================
+
+interface MotionProviderProps {
+  children: ReactNode;
+}
+
+/**
+ * MotionProvider - LazyMotion으로 번들 사이즈 최적화
+ *
+ * 앱의 루트에서 감싸서 사용:
+ * ```tsx
+ * <MotionProvider>
+ *   <App />
+ * </MotionProvider>
+ * ```
+ */
+export function MotionProvider({ children }: MotionProviderProps) {
+  return (
+    <LazyMotion features={domAnimation} strict>
+      {children}
+    </LazyMotion>
+  );
+}
 
 // ========================================
 // Animation Variants (Presets)
@@ -126,13 +156,13 @@ interface AnimationWrapperProps extends MotionProps {
   as?: 'div' | 'span' | 'li' | 'article' | 'section';
 }
 
-// Re-export core Framer Motion
-export { AnimatePresence, motion };
+// Re-export core Framer Motion (m for optimized, motion for backward compat)
+export { AnimatePresence, m, m as motion };
 
 /** FadeIn - 페이드 인 애니메이션 */
 export const FadeIn = forwardRef<HTMLDivElement, MotionDivProps>(
   ({ children, className, ...props }, ref) => (
-    <motion.div
+    <m.div
       ref={ref}
       initial="initial"
       animate="animate"
@@ -142,7 +172,7 @@ export const FadeIn = forwardRef<HTMLDivElement, MotionDivProps>(
       {...props}
     >
       {children}
-    </motion.div>
+    </m.div>
   ),
 );
 FadeIn.displayName = 'FadeIn';
@@ -150,7 +180,7 @@ FadeIn.displayName = 'FadeIn';
 /** SlideUp - 아래에서 위로 슬라이드 + 페이드 */
 export const SlideUp = forwardRef<HTMLDivElement, MotionDivProps>(
   ({ children, className, ...props }, ref) => (
-    <motion.div
+    <m.div
       ref={ref}
       initial="initial"
       animate="animate"
@@ -160,7 +190,7 @@ export const SlideUp = forwardRef<HTMLDivElement, MotionDivProps>(
       {...props}
     >
       {children}
-    </motion.div>
+    </m.div>
   ),
 );
 SlideUp.displayName = 'SlideUp';
@@ -168,7 +198,7 @@ SlideUp.displayName = 'SlideUp';
 /** SlideDown - 위에서 아래로 슬라이드 + 페이드 */
 export const SlideDown = forwardRef<HTMLDivElement, MotionDivProps>(
   ({ children, className, ...props }, ref) => (
-    <motion.div
+    <m.div
       ref={ref}
       initial="initial"
       animate="animate"
@@ -178,7 +208,7 @@ export const SlideDown = forwardRef<HTMLDivElement, MotionDivProps>(
       {...props}
     >
       {children}
-    </motion.div>
+    </m.div>
   ),
 );
 SlideDown.displayName = 'SlideDown';
@@ -186,7 +216,7 @@ SlideDown.displayName = 'SlideDown';
 /** ScaleIn - 스케일 + 페이드 인 */
 export const ScaleIn = forwardRef<HTMLDivElement, MotionDivProps>(
   ({ children, className, ...props }, ref) => (
-    <motion.div
+    <m.div
       ref={ref}
       initial="initial"
       animate="animate"
@@ -196,7 +226,7 @@ export const ScaleIn = forwardRef<HTMLDivElement, MotionDivProps>(
       {...props}
     >
       {children}
-    </motion.div>
+    </m.div>
   ),
 );
 ScaleIn.displayName = 'ScaleIn';
@@ -204,7 +234,7 @@ ScaleIn.displayName = 'ScaleIn';
 /** PopIn - Spring 기반 팝 애니메이션 */
 export const PopIn = forwardRef<HTMLDivElement, MotionDivProps>(
   ({ children, className, ...props }, ref) => (
-    <motion.div
+    <m.div
       ref={ref}
       initial="initial"
       animate="animate"
@@ -214,7 +244,7 @@ export const PopIn = forwardRef<HTMLDivElement, MotionDivProps>(
       {...props}
     >
       {children}
-    </motion.div>
+    </m.div>
   ),
 );
 PopIn.displayName = 'PopIn';
@@ -227,7 +257,7 @@ interface StaggerContainerProps extends MotionDivProps {
 /** StaggerContainer - 자식 요소들을 순차적으로 애니메이션 */
 export const StaggerContainer = forwardRef<HTMLDivElement, StaggerContainerProps>(
   ({ children, className, staggerDelay = 0.1, ...props }, ref) => (
-    <motion.div
+    <m.div
       ref={ref}
       initial="initial"
       animate="animate"
@@ -244,7 +274,7 @@ export const StaggerContainer = forwardRef<HTMLDivElement, StaggerContainerProps
       {...props}
     >
       {children}
-    </motion.div>
+    </m.div>
   ),
 );
 StaggerContainer.displayName = 'StaggerContainer';
@@ -252,9 +282,9 @@ StaggerContainer.displayName = 'StaggerContainer';
 /** StaggerItem - StaggerContainer 내에서 사용할 개별 아이템 */
 export const StaggerItem = forwardRef<HTMLDivElement, MotionDivProps>(
   ({ children, className, ...props }, ref) => (
-    <motion.div ref={ref} variants={staggerItem} className={cn(className)} {...props}>
+    <m.div ref={ref} variants={staggerItem} className={cn(className)} {...props}>
       {children}
-    </motion.div>
+    </m.div>
   ),
 );
 StaggerItem.displayName = 'StaggerItem';
@@ -265,7 +295,7 @@ StaggerItem.displayName = 'StaggerItem';
 
 /** Pressable - 터치/클릭 피드백 애니메이션 */
 export function Pressable({ children, className, as = 'div', ...props }: AnimationWrapperProps) {
-  const Component = motion[as];
+  const Component = m[as];
 
   return (
     <Component {...interactiveScale} className={cn(className)} {...props}>
@@ -281,7 +311,7 @@ interface AnimatedButtonProps extends HTMLMotionProps<'button'> {
 /** AnimatedButton - 탭/호버 효과가 있는 버튼 */
 export const AnimatedButton = forwardRef<HTMLButtonElement, AnimatedButtonProps>(
   ({ children, className, ...props }, ref) => (
-    <motion.button
+    <m.button
       ref={ref}
       whileTap={{ scale: 0.95 }}
       whileHover={{ y: -1 }}
@@ -290,7 +320,7 @@ export const AnimatedButton = forwardRef<HTMLButtonElement, AnimatedButtonProps>
       {...props}
     >
       {children}
-    </motion.button>
+    </m.button>
   ),
 );
 AnimatedButton.displayName = 'AnimatedButton';
@@ -306,7 +336,7 @@ interface PageTransitionProps extends MotionDivProps {
 /** PageTransition - 페이지 전환 애니메이션 래퍼 */
 export const PageTransition = forwardRef<HTMLDivElement, PageTransitionProps>(
   ({ children, className, ...props }, ref) => (
-    <motion.div
+    <m.div
       ref={ref}
       initial={{ opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}
@@ -316,7 +346,7 @@ export const PageTransition = forwardRef<HTMLDivElement, PageTransitionProps>(
       {...props}
     >
       {children}
-    </motion.div>
+    </m.div>
   ),
 );
 PageTransition.displayName = 'PageTransition';
@@ -331,7 +361,7 @@ export const Collapsible = forwardRef<HTMLDivElement, CollapsibleProps>(
   ({ isOpen, children, className, ...props }, ref) => (
     <AnimatePresence initial={false}>
       {isOpen && (
-        <motion.div
+        <m.div
           ref={ref}
           initial={{ height: 0, opacity: 0 }}
           animate={{ height: 'auto', opacity: 1 }}
@@ -342,7 +372,7 @@ export const Collapsible = forwardRef<HTMLDivElement, CollapsibleProps>(
           {...props}
         >
           {children}
-        </motion.div>
+        </m.div>
       )}
     </AnimatePresence>
   ),

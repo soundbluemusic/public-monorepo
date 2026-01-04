@@ -1,9 +1,12 @@
 /**
- * @fileoverview UI Animation Components
+ * @fileoverview UI Animation Components with LazyMotion optimization
  * @environment universal
+ *
+ * 번들 사이즈 최적화: LazyMotion + m 컴포넌트 사용 (32KB → 4.6KB)
  */
 
-// Core Framer Motion
+// LazyMotion Provider (앱 루트에서 사용)
+// Core Framer Motion (m = optimized, motion = backward compat alias)
 // Animation Variants (Presets)
 // Gesture Props
 // Motion Components
@@ -17,6 +20,8 @@ export {
   fadeIn,
   hoverLift,
   interactiveScale,
+  MotionProvider,
+  m,
   motion,
   PageTransition,
   PopIn,

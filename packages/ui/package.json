@@ -29,10 +29,11 @@
     "@formkit/auto-animate": "^0.9.0",
     "@soundblue/core": "workspace:*",
     "@soundblue/features": "workspace:*",
-    "@tanstack/react-virtual": "^3.13.13",
+    "@tanstack/react-virtual": "^3.13.16",
     "clsx": "^2.1.1",
+    "class-variance-authority": "^0.7.1",
     "framer-motion": "^12.23.26",
-    "lucide-react": "^0.468.0",
+    "lucide-react": "^0.562.0",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {

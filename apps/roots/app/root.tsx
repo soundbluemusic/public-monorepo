@@ -1,4 +1,5 @@
 import { OfflineIndicator } from '@soundblue/pwa/react';
+import { MotionProvider } from '@soundblue/ui/animation';
 import { ErrorBoundary, ToastContainer } from '@soundblue/ui/feedback';
 import { DARK_MODE_INIT_SCRIPT, DARK_MODE_TOGGLE_SCRIPT } from '@soundblue/ui/utils';
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from 'react-router';
@@ -71,13 +72,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
  */
 function AppContent() {
   return (
-    <I18nProvider>
-      <ErrorBoundary>
-        <OfflineIndicator />
-        <Outlet />
-        <ToastContainer />
-      </ErrorBoundary>
-    </I18nProvider>
+    <MotionProvider>
+      <I18nProvider>
+        <ErrorBoundary>
+          <OfflineIndicator />
+          <Outlet />
+          <ToastContainer />
+        </ErrorBoundary>
+      </I18nProvider>
+    </MotionProvider>
   );
 }
 
