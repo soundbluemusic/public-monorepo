@@ -94,8 +94,9 @@ export const useSettingsStore = create<SettingsState>()(
         // sidebarOpen is not persisted (mobile overlay should start closed)
       }),
       onRehydrateStorage: () => (_state) => {
-        // Theme is already applied by DARK_MODE_INIT_SCRIPT in <head>
-        // Don't re-apply here to prevent flickering
+        // DARK_MODE_INIT_SCRIPT가 <head>에서 이미 올바른 테마를 적용함
+        // 여기서 DOM을 수정하면 오히려 FOUC(flash of wrong theme) 발생
+        // 따라서 rehydration 후 DOM 동기화는 하지 않음
       },
     },
   ),

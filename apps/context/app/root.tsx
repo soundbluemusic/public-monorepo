@@ -1,4 +1,5 @@
 import { OfflineIndicator } from '@soundblue/pwa/react';
+import { MotionProvider } from '@soundblue/ui/animation';
 import { ErrorBoundary, ToastContainer } from '@soundblue/ui/feedback';
 import {
   DARK_MODE_INIT_SCRIPT,
@@ -85,13 +86,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
  */
 function AppContent() {
   return (
-    <I18nProvider>
-      <ErrorBoundary>
-        <OfflineIndicator />
-        <Outlet />
-        <ToastContainer />
-      </ErrorBoundary>
-    </I18nProvider>
+    <MotionProvider>
+      <I18nProvider>
+        <ErrorBoundary>
+          <OfflineIndicator />
+          <Outlet />
+          <ToastContainer />
+        </ErrorBoundary>
+      </I18nProvider>
+    </MotionProvider>
   );
 }
 

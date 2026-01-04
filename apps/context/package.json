@@ -26,8 +26,8 @@
     "@soundblue/search": "workspace:*",
     "@soundblue/seo": "workspace:*",
     "@soundblue/ui": "workspace:*",
-    "zustand": "^5.0.5",
-    "lucide-react": "^0.468.0",
+    "zustand": "^5.0.9",
+    "lucide-react": "^0.562.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-router": "^7.11.0"
