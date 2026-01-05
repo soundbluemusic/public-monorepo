@@ -1,0 +1,387 @@
+[
+  {
+    "id": "pacific-ocean",
+    "korean": "태평양",
+    "romanization": "taepyeongyang",
+    "partOfSpeech": "noun",
+    "categoryId": "geography",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "ocean",
+      "geography"
+    ],
+    "translations": {
+      "ko": {
+        "word": "태평양",
+        "explanation": "세계에서 가장 큰 바다로, 아시아, 오세아니아, 아메리카 대륙 사이에 있습니다.",
+        "examples": {
+          "beginner": "태평양은 매우 큽니다.",
+          "intermediate": "태평양은 세계에서 가장 큰 바다입니다.",
+          "advanced": "태평양은 지구 표면의 약 30%를 차지합니다.",
+          "master": "태평양의 평균 깊이는 약 4,000미터입니다."
+        }
+      },
+      "en": {
+        "word": "Pacific Ocean",
+        "explanation": "The largest ocean in the world, located between Asia, Oceania, and the Americas.",
+        "examples": {
+          "beginner": "The Pacific Ocean is very large.",
+          "intermediate": "The Pacific Ocean is the largest ocean in the world.",
+          "advanced": "The Pacific Ocean covers about 30% of Earth's surface.",
+          "master": "The average depth of the Pacific Ocean is about 4,000 meters."
+        }
+      }
+    }
+  },
+  {
+    "id": "atlantic-ocean",
+    "korean": "대서양",
+    "romanization": "daeseoyang",
+    "partOfSpeech": "noun",
+    "categoryId": "geography",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "ocean",
+      "geography"
+    ],
+    "translations": {
+      "ko": {
+        "word": "대서양",
+        "explanation": "유럽, 아프리카와 아메리카 대륙 사이에 있는 바다입니다.",
+        "examples": {
+          "beginner": "대서양은 매우 깊습니다.",
+          "intermediate": "대서양은 세계에서 두 번째로 큰 바다입니다.",
+          "advanced": "대서양은 유럽과 아메리카를 연결하는 중요한 해상 루트입니다.",
+          "master": "대서양 해류는 세계 기후에 큰 영향을 미칩니다."
+        }
+      },
+      "en": {
+        "word": "Atlantic Ocean",
+        "explanation": "The ocean between Europe, Africa, and the Americas.",
+        "examples": {
+          "beginner": "The Atlantic Ocean is very deep.",
+          "intermediate": "The Atlantic Ocean is the second largest ocean in the world.",
+          "advanced": "The Atlantic Ocean is an important maritime route connecting Europe and America.",
+          "master": "Atlantic Ocean currents have a significant impact on global climate."
+        }
+      }
+    }
+  },
+  {
+    "id": "indian-ocean",
+    "korean": "인도양",
+    "romanization": "indoyang",
+    "partOfSpeech": "noun",
+    "categoryId": "geography",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "ocean",
+      "geography"
+    ],
+    "translations": {
+      "ko": {
+        "word": "인도양",
+        "explanation": "아시아, 아프리카, 오세아니아 사이에 있는 바다입니다.",
+        "examples": {
+          "beginner": "인도양은 따뜻합니다.",
+          "intermediate": "인도양은 세계에서 세 번째로 큰 바다입니다.",
+          "advanced": "인도양은 계절풍의 영향을 받는 지역입니다.",
+          "master": "인도양은 고대 무역로로서 중요한 역할을 했습니다."
+        }
+      },
+      "en": {
+        "word": "Indian Ocean",
+        "explanation": "The ocean between Asia, Africa, and Oceania.",
+        "examples": {
+          "beginner": "The Indian Ocean is warm.",
+          "intermediate": "The Indian Ocean is the third largest ocean in the world.",
+          "advanced": "The Indian Ocean is a region affected by monsoons.",
+          "master": "The Indian Ocean played an important role as an ancient trade route."
+        }
+      }
+    }
+  },
+  {
+    "id": "arctic-ocean",
+    "korean": "북극해",
+    "romanization": "bukgeukhae",
+    "partOfSpeech": "noun",
+    "categoryId": "geography",
+    "difficulty": "intermediate",
+    "frequency": "rare",
+    "tags": [
+      "ocean",
+      "geography"
+    ],
+    "translations": {
+      "ko": {
+        "word": "북극해",
+        "explanation": "지구의 북쪽 끝에 있는 바다로, 대부분 얼음으로 덮여 있습니다.",
+        "examples": {
+          "beginner": "북극해는 매우 춥습니다.",
+          "intermediate": "북극해에는 북극곰이 삽니다.",
+          "advanced": "북극해의 빙하가 점점 녹고 있습니다.",
+          "master": "북극해는 기후 변화의 영향을 가장 크게 받는 지역 중 하나입니다."
+        }
+      },
+      "en": {
+        "word": "Arctic Ocean",
+        "explanation": "The ocean at the northern end of the Earth, mostly covered by ice.",
+        "examples": {
+          "beginner": "The Arctic Ocean is very cold.",
+          "intermediate": "Polar bears live in the Arctic Ocean region.",
+          "advanced": "The glaciers of the Arctic Ocean are gradually melting.",
+          "master": "The Arctic Ocean is one of the regions most affected by climate change."
+        }
+      }
+    }
+  },
+  {
+    "id": "southern-ocean",
+    "korean": "남극해",
+    "romanization": "namgeukhae",
+    "partOfSpeech": "noun",
+    "categoryId": "geography",
+    "difficulty": "intermediate",
+    "frequency": "rare",
+    "tags": [
+      "ocean",
+      "geography"
+    ],
+    "translations": {
+      "ko": {
+        "word": "남극해",
+        "explanation": "남극 대륙을 둘러싸고 있는 바다입니다.",
+        "examples": {
+          "beginner": "남극해는 매우 춥습니다.",
+          "intermediate": "남극해에는 펭귄이 많이 삽니다.",
+          "advanced": "남극해는 세계에서 가장 거친 바다 중 하나입니다.",
+          "master": "남극해의 심해 해류는 전 세계 해양 순환에 중요한 역할을 합니다."
+        }
+      },
+      "en": {
+        "word": "Southern Ocean",
+        "explanation": "The ocean surrounding Antarctica.",
+        "examples": {
+          "beginner": "The Southern Ocean is very cold.",
+          "intermediate": "Many penguins live in the Southern Ocean region.",
+          "advanced": "The Southern Ocean is one of the roughest seas in the world.",
+          "master": "Deep currents of the Southern Ocean play an important role in global ocean circulation."
+        }
+      }
+    }
+  },
+  {
+    "id": "asia",
+    "korean": "아시아",
+    "romanization": "asia",
+    "partOfSpeech": "noun",
+    "categoryId": "geography",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "continent",
+      "geography"
+    ],
+    "translations": {
+      "ko": {
+        "word": "아시아",
+        "explanation": "세계에서 가장 큰 대륙으로, 한국, 중국, 일본, 인도 등이 있습니다.",
+        "examples": {
+          "beginner": "한국은 아시아에 있습니다.",
+          "intermediate": "아시아는 세계에서 가장 큰 대륙입니다.",
+          "advanced": "아시아에는 세계 인구의 약 60%가 살고 있습니다.",
+          "master": "아시아는 다양한 문화와 종교가 공존하는 대륙입니다."
+        }
+      },
+      "en": {
+        "word": "Asia",
+        "explanation": "The largest continent in the world, including Korea, China, Japan, India, and more.",
+        "examples": {
+          "beginner": "Korea is in Asia.",
+          "intermediate": "Asia is the largest continent in the world.",
+          "advanced": "About 60% of the world's population lives in Asia.",
+          "master": "Asia is a continent where diverse cultures and religions coexist."
+        }
+      }
+    }
+  },
+  {
+    "id": "europe",
+    "korean": "유럽",
+    "romanization": "yureop",
+    "partOfSpeech": "noun",
+    "categoryId": "geography",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "continent",
+      "geography"
+    ],
+    "translations": {
+      "ko": {
+        "word": "유럽",
+        "explanation": "아시아의 서쪽에 있는 대륙으로, 영국, 프랑스, 독일 등이 있습니다.",
+        "examples": {
+          "beginner": "프랑스는 유럽에 있습니다.",
+          "intermediate": "유럽에는 많은 역사적 건물이 있습니다.",
+          "advanced": "유럽 연합은 27개 회원국으로 구성되어 있습니다.",
+          "master": "유럽의 르네상스는 세계 문화에 큰 영향을 미쳤습니다."
+        }
+      },
+      "en": {
+        "word": "Europe",
+        "explanation": "A continent west of Asia, including the UK, France, Germany, and more.",
+        "examples": {
+          "beginner": "France is in Europe.",
+          "intermediate": "There are many historic buildings in Europe.",
+          "advanced": "The European Union consists of 27 member states.",
+          "master": "The European Renaissance had a great influence on world culture."
+        }
+      }
+    }
+  },
+  {
+    "id": "africa",
+    "korean": "아프리카",
+    "romanization": "apeurika",
+    "partOfSpeech": "noun",
+    "categoryId": "geography",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "continent",
+      "geography"
+    ],
+    "translations": {
+      "ko": {
+        "word": "아프리카",
+        "explanation": "유럽의 남쪽에 있는 대륙으로, 이집트, 남아프리카공화국 등이 있습니다.",
+        "examples": {
+          "beginner": "아프리카는 덥습니다.",
+          "intermediate": "아프리카에는 사막과 정글이 있습니다.",
+          "advanced": "아프리카는 인류의 발상지로 알려져 있습니다.",
+          "master": "아프리카 대륙은 54개의 국가로 이루어져 있습니다."
+        }
+      },
+      "en": {
+        "word": "Africa",
+        "explanation": "A continent south of Europe, including Egypt, South Africa, and more.",
+        "examples": {
+          "beginner": "Africa is hot.",
+          "intermediate": "Africa has deserts and jungles.",
+          "advanced": "Africa is known as the birthplace of humanity.",
+          "master": "The African continent consists of 54 countries."
+        }
+      }
+    }
+  },
+  {
+    "id": "north-america",
+    "korean": "북아메리카",
+    "romanization": "bugamerika",
+    "partOfSpeech": "noun",
+    "categoryId": "geography",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "continent",
+      "geography"
+    ],
+    "translations": {
+      "ko": {
+        "word": "북아메리카",
+        "explanation": "아메리카 대륙의 북쪽 지역으로, 미국, 캐나다, 멕시코 등이 있습니다.",
+        "examples": {
+          "beginner": "미국은 북아메리카에 있습니다.",
+          "intermediate": "북아메리카는 매우 큰 대륙입니다.",
+          "advanced": "북아메리카에는 다양한 기후대가 있습니다.",
+          "master": "북아메리카의 그랜드 캐니언은 세계적으로 유명한 자연 명소입니다."
+        }
+      },
+      "en": {
+        "word": "North America",
+        "explanation": "The northern region of the Americas, including the USA, Canada, Mexico, and more.",
+        "examples": {
+          "beginner": "The USA is in North America.",
+          "intermediate": "North America is a very large continent.",
+          "advanced": "North America has various climate zones.",
+          "master": "The Grand Canyon in North America is a world-famous natural attraction."
+        }
+      }
+    }
+  },
+  {
+    "id": "south-america",
+    "korean": "남아메리카",
+    "romanization": "namamerika",
+    "partOfSpeech": "noun",
+    "categoryId": "geography",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "continent",
+      "geography"
+    ],
+    "translations": {
+      "ko": {
+        "word": "남아메리카",
+        "explanation": "아메리카 대륙의 남쪽 지역으로, 브라질, 아르헨티나, 칠레 등이 있습니다.",
+        "examples": {
+          "beginner": "브라질은 남아메리카에 있습니다.",
+          "intermediate": "남아메리카에는 아마존 열대우림이 있습니다.",
+          "advanced": "남아메리카의 안데스 산맥은 세계에서 가장 긴 산맥입니다.",
+          "master": "남아메리카의 마추픽추는 잉카 문명의 대표적인 유적입니다."
+        }
+      },
+      "en": {
+        "word": "South America",
+        "explanation": "The southern region of the Americas, including Brazil, Argentina, Chile, and more.",
+        "examples": {
+          "beginner": "Brazil is in South America.",
+          "intermediate": "South America has the Amazon rainforest.",
+          "advanced": "The Andes Mountains in South America is the longest mountain range in the world.",
+          "master": "Machu Picchu in South America is a representative ruin of the Inca civilization."
+        }
+      }
+    }
+  },
+  {
+    "id": "oceania",
+    "korean": "오세아니아",
+    "romanization": "oseania",
+    "partOfSpeech": "noun",
+    "categoryId": "geography",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "continent",
+      "geography"
+    ],
+    "translations": {
+      "ko": {
+        "word": "오세아니아",
+        "explanation": "태평양에 있는 대륙으로, 호주, 뉴질랜드 등이 있습니다.",
+        "examples": {
+          "beginner": "호주는 오세아니아에 있습니다.",
+          "intermediate": "오세아니아에는 많은 섬나라가 있습니다.",
+          "advanced": "오세아니아는 독특한 동식물로 유명합니다.",
+          "master": "오세아니아의 원주민들은 오랜 역사와 문화를 가지고 있습니다."
+        }
+      },
+      "en": {
+        "word": "Oceania",
+        "explanation": "A continent in the Pacific Ocean, including Australia, New Zealand, and more.",
+        "examples": {
+          "beginner": "Australia is in Oceania.",
+          "intermediate": "Oceania has many island nations.",
+          "advanced": "Oceania is famous for its unique flora and fauna.",
+          "master": "The indigenous peoples of Oceania have a long history and culture."
+        }
+      }
+    }
+  }
+]

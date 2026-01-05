@@ -345,6 +345,20 @@ export const categories: Category[] = [
     color: 'indigo',
     order: 23,
   },
+  {
+    id: 'geography',
+    name: {
+      ko: '지리',
+      en: 'Geography',
+    },
+    description: {
+      ko: '대륙, 바다 등 지리 관련 단어',
+      en: 'Geography-related words including continents and oceans',
+    },
+    icon: '◐',
+    color: 'teal',
+    order: 24,
+  },
 ];
 
 /**
