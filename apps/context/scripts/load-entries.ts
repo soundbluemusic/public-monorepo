@@ -379,6 +379,16 @@ export interface TrieNode {
 export const expressionTrie: TrieNode[] = ${JSON.stringify(trie)};
 
 /**
+ * 한글 문자인지 확인
+ */
+function isKorean(char: string | undefined): boolean {
+  if (!char) return false;
+  const code = char.charCodeAt(0);
+  // 한글 음절 (가-힣) 또는 한글 자모 (ㄱ-ㅎ, ㅏ-ㅣ)
+  return (code >= 0xAC00 && code <= 0xD7A3) || (code >= 0x3131 && code <= 0x318E);
+}
+
+/**
  * O(m) 시간에 텍스트에서 모든 표현 찾기
  * @param text 검색할 텍스트
  * @param excludeId 제외할 표현 ID (현재 보고 있는 항목)
@@ -419,6 +429,19 @@ export function findExpressions(
           const koreanLen = node.korean.length;
           const start = i - koreanLen + 1;
           const end = i + 1;
+
+          // 단어 경계 검사: 1-2글자 매칭은 앞뒤로 한글이 있으면 스킵
+          // 예: "아시아"에서 "시"는 앞뒤로 "아"가 있으므로 스킵
+          // 예: "아시아에"에서 "에"는 뒤가 공백이므로 매칭
+          if (koreanLen <= 2) {
+            const prevChar = text[start - 1];
+            const nextChar = text[end];
+            // 앞뒤 모두 한글이면 단어 내부로 판단하여 스킵
+            if (isKorean(prevChar) && isKorean(nextChar)) {
+              checkState = node.fail;
+              continue;
+            }
+          }
 
           // 겹치는 매칭 찾기
           const overlappingIdx = matches.findIndex(
