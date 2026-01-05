@@ -59,6 +59,16 @@
 
 ---
 
+## 🌐 Other Projects
+
+| Project | Description |
+|:--------|:------------|
+| [soundbluemusic.com](https://soundbluemusic.com) | Main site |
+| [tools.soundbluemusic.com](https://tools.soundbluemusic.com) | Tool collection |
+| [dialogue.soundbluemusic.com](https://dialogue.soundbluemusic.com) | Learning chatbot |
+
+---
+
 ## 🛠 Tech Stack
 
 ### Core
@@ -486,4 +496,9 @@ export default {
 
 <p align="center">
   Made by <a href="https://soundbluemusic.com"><b>soundbluemusic</b></a>
+  <br/><br/>
+  <a href="https://www.youtube.com/@SoundBlueMusic"><img src="https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white" alt="YouTube"></a>
+  <a href="https://x.com/SoundBlueMusic"><img src="https://img.shields.io/badge/X-000000?style=flat&logo=x&logoColor=white" alt="X"></a>
+  <a href="https://www.instagram.com/soundbluemusic/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white" alt="Instagram"></a>
+  <a href="https://www.threads.com/@soundbluemusic"><img src="https://img.shields.io/badge/Threads-000000?style=flat&logo=threads&logoColor=white" alt="Threads"></a>
 </p>
