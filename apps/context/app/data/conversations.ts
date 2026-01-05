@@ -699,6 +699,132 @@ export const conversations: Conversation[] = [
       { speaker: 'B', ko: '캐나다에 가보고 싶어요.', en: 'I want to visit Canada.' },
     ],
   },
+
+  // ============================================================================
+  // 지리 (Geography)
+  // ============================================================================
+  {
+    id: 'geography-mountain-1',
+    categoryId: 'geography',
+    title: { ko: '산 이야기', en: 'Talking About Mountains' },
+    dialogue: [
+      {
+        speaker: 'A',
+        ko: '한국에서 가장 높은 산이 어디예요?',
+        en: 'What is the highest mountain in Korea?',
+      },
+      {
+        speaker: 'B',
+        ko: '한라산이요. 제주도에 있어요.',
+        en: 'It is Hallasan. It is on Jeju Island.',
+      },
+      { speaker: 'A', ko: '한라산에 가보셨어요?', en: 'Have you been to Hallasan?' },
+      {
+        speaker: 'B',
+        ko: '네, 정상까지 등산했어요. 정말 아름다웠어요.',
+        en: 'Yes, I hiked to the top. It was really beautiful.',
+      },
+    ],
+  },
+  {
+    id: 'geography-ocean-1',
+    categoryId: 'geography',
+    title: { ko: '바다 이야기', en: 'Talking About the Ocean' },
+    dialogue: [
+      { speaker: 'A', ko: '태평양은 얼마나 커요?', en: 'How big is the Pacific Ocean?' },
+      {
+        speaker: 'B',
+        ko: '세계에서 가장 큰 바다예요.',
+        en: 'It is the largest ocean in the world.',
+      },
+      { speaker: 'A', ko: '대서양보다 더 커요?', en: 'Is it bigger than the Atlantic Ocean?' },
+      {
+        speaker: 'B',
+        ko: '네, 훨씬 더 커요. 지구 표면의 3분의 1이에요.',
+        en: 'Yes, much bigger. It covers one-third of the Earth.',
+      },
+    ],
+  },
+  {
+    id: 'geography-island-1',
+    categoryId: 'geography',
+    title: { ko: '섬 여행', en: 'Island Trip' },
+    dialogue: [
+      { speaker: 'A', ko: '제주도 가봤어요?', en: 'Have you been to Jeju Island?' },
+      {
+        speaker: 'B',
+        ko: '네, 작년에 갔어요. 너무 좋았어요.',
+        en: 'Yes, I went last year. It was great.',
+      },
+      { speaker: 'A', ko: '제주도에서 뭐 했어요?', en: 'What did you do in Jeju?' },
+      {
+        speaker: 'B',
+        ko: '해변에서 수영하고 한라산도 등산했어요.',
+        en: 'I swam at the beach and hiked Hallasan too.',
+      },
+    ],
+  },
+  {
+    id: 'geography-river-1',
+    categoryId: 'geography',
+    title: { ko: '강 이야기', en: 'Talking About Rivers' },
+    dialogue: [
+      { speaker: 'A', ko: '서울에 큰 강이 있어요?', en: 'Is there a big river in Seoul?' },
+      {
+        speaker: 'B',
+        ko: '네, 한강이 있어요. 서울을 가로질러요.',
+        en: 'Yes, there is the Han River. It runs through Seoul.',
+      },
+      { speaker: 'A', ko: '한강에서 뭐 할 수 있어요?', en: 'What can you do at the Han River?' },
+      {
+        speaker: 'B',
+        ko: '자전거 타기, 피크닉, 야경 구경도 할 수 있어요.',
+        en: 'You can bike, have picnics, and enjoy the night view.',
+      },
+    ],
+  },
+  {
+    id: 'geography-desert-1',
+    categoryId: 'geography',
+    title: { ko: '사막 이야기', en: 'Talking About Deserts' },
+    dialogue: [
+      {
+        speaker: 'A',
+        ko: '사하라 사막에 가보고 싶어요.',
+        en: 'I want to visit the Sahara Desert.',
+      },
+      {
+        speaker: 'B',
+        ko: '사하라 사막은 세계에서 가장 큰 사막이에요.',
+        en: 'The Sahara is the largest desert in the world.',
+      },
+      { speaker: 'A', ko: '거기 정말 더워요?', en: 'Is it really hot there?' },
+      {
+        speaker: 'B',
+        ko: '낮에는 아주 덥고, 밤에는 추워요.',
+        en: 'It is very hot during the day and cold at night.',
+      },
+    ],
+  },
+  {
+    id: 'geography-peninsula-1',
+    categoryId: 'geography',
+    title: { ko: '반도 이야기', en: 'Talking About Peninsulas' },
+    dialogue: [
+      { speaker: 'A', ko: '한반도가 뭐예요?', en: 'What is the Korean Peninsula?' },
+      {
+        speaker: 'B',
+        ko: '한반도는 한국이 위치한 반도예요.',
+        en: 'The Korean Peninsula is where Korea is located.',
+      },
+      { speaker: 'A', ko: '반도는 섬이랑 달라요?', en: 'Is a peninsula different from an island?' },
+      {
+        speaker: 'B',
+        ko: '네, 반도는 삼면이 바다이고 한쪽은 육지와 연결되어 있어요.',
+        en: 'Yes, a peninsula has water on three sides and is connected to land on one side.',
+      },
+    ],
+  },
 ];
 
 // ============================================================================
