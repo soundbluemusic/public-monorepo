@@ -11966,6 +11966,604 @@
     ]
   },
   {
+    "id": "i-subject",
+    "type": "entry",
+    "name": {
+      "ko": "이",
+      "en": "(subject marker)"
+    },
+    "description": {
+      "ko": "받침 있는 명사 뒤에 붙어 주어임을 나타내는 조사.",
+      "en": "Subject particle attached after consonant-ending nouns."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "subject",
+      "grammar",
+      "essential",
+      "i"
+    ]
+  },
+  {
+    "id": "ga-subject",
+    "type": "entry",
+    "name": {
+      "ko": "가",
+      "en": "(subject marker)"
+    },
+    "description": {
+      "ko": "받침 없는 명사 뒤에 붙어 주어임을 나타내는 조사.",
+      "en": "Subject particle attached after vowel-ending nouns."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "subject",
+      "grammar",
+      "essential",
+      "ga"
+    ]
+  },
+  {
+    "id": "eul-object",
+    "type": "entry",
+    "name": {
+      "ko": "을",
+      "en": "(object marker)"
+    },
+    "description": {
+      "ko": "받침 있는 명사 뒤에 붙어 목적어임을 나타내는 조사.",
+      "en": "Object particle attached after consonant-ending nouns."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "object",
+      "grammar",
+      "essential",
+      "eul"
+    ]
+  },
+  {
+    "id": "reul-object",
+    "type": "entry",
+    "name": {
+      "ko": "를",
+      "en": "(object marker)"
+    },
+    "description": {
+      "ko": "받침 없는 명사 뒤에 붙어 목적어임을 나타내는 조사.",
+      "en": "Object particle attached after vowel-ending nouns."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "object",
+      "grammar",
+      "essential",
+      "reul"
+    ]
+  },
+  {
+    "id": "eun-topic",
+    "type": "entry",
+    "name": {
+      "ko": "은",
+      "en": "(topic marker)"
+    },
+    "description": {
+      "ko": "받침 있는 명사 뒤에 붙어 주제나 대조를 나타내는 조사.",
+      "en": "Topic particle attached after consonant-ending nouns, indicating topic or contrast."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "topic",
+      "grammar",
+      "essential",
+      "eun"
+    ]
+  },
+  {
+    "id": "neun-topic",
+    "type": "entry",
+    "name": {
+      "ko": "는",
+      "en": "(topic marker)"
+    },
+    "description": {
+      "ko": "받침 없는 명사 뒤에 붙어 주제나 대조를 나타내는 조사.",
+      "en": "Topic particle attached after vowel-ending nouns, indicating topic or contrast."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "topic",
+      "grammar",
+      "essential",
+      "neun"
+    ]
+  },
+  {
+    "id": "e-location",
+    "type": "entry",
+    "name": {
+      "ko": "에",
+      "en": "(location/time marker)"
+    },
+    "description": {
+      "ko": "장소, 시간, 방향을 나타내는 조사. '~에 가다', '~에 있다' 등과 함께 사용.",
+      "en": "Particle indicating location, time, or direction. Used with verbs like 'go to', 'be at'."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "location",
+      "time",
+      "grammar",
+      "essential",
+      "e"
+    ]
+  },
+  {
+    "id": "eseo-location",
+    "type": "entry",
+    "name": {
+      "ko": "에서",
+      "en": "(at/from)"
+    },
+    "description": {
+      "ko": "동작이 일어나는 장소를 나타내거나 출발점을 나타내는 조사.",
+      "en": "Particle indicating where an action takes place or the starting point."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "location",
+      "action",
+      "grammar",
+      "essential",
+      "eseo"
+    ]
+  },
+  {
+    "id": "ro-direction",
+    "type": "entry",
+    "name": {
+      "ko": "로",
+      "en": "(to/by/as)"
+    },
+    "description": {
+      "ko": "받침 없거나 'ㄹ' 받침 뒤에 붙어 방향, 수단, 자격을 나타내는 조사.",
+      "en": "Particle after vowels or ㄹ indicating direction, means, or role."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "direction",
+      "means",
+      "grammar",
+      "ro"
+    ]
+  },
+  {
+    "id": "euro-direction",
+    "type": "entry",
+    "name": {
+      "ko": "으로",
+      "en": "(to/by/as)"
+    },
+    "description": {
+      "ko": "'ㄹ' 제외한 받침 있는 명사 뒤에 붙어 방향, 수단, 자격을 나타내는 조사.",
+      "en": "Particle after consonants (except ㄹ) indicating direction, means, or role."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "direction",
+      "means",
+      "grammar",
+      "euro"
+    ]
+  },
+  {
+    "id": "wa-and",
+    "type": "entry",
+    "name": {
+      "ko": "와",
+      "en": "(and/with)"
+    },
+    "description": {
+      "ko": "받침 없는 명사 뒤에 붙어 '~와 함께', '~와 같이'의 의미를 나타내는 조사.",
+      "en": "Particle after vowel-ending nouns meaning 'and' or 'with'."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "conjunction",
+      "grammar",
+      "wa"
+    ]
+  },
+  {
+    "id": "gwa-and",
+    "type": "entry",
+    "name": {
+      "ko": "과",
+      "en": "(and/with)"
+    },
+    "description": {
+      "ko": "받침 있는 명사 뒤에 붙어 '~와 함께', '~와 같이'의 의미를 나타내는 조사.",
+      "en": "Particle after consonant-ending nouns meaning 'and' or 'with'."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "conjunction",
+      "grammar",
+      "gwa"
+    ]
+  },
+  {
+    "id": "ui-possession",
+    "type": "entry",
+    "name": {
+      "ko": "의",
+      "en": "(of/'s)"
+    },
+    "description": {
+      "ko": "명사 뒤에 붙어 소유나 관계를 나타내는 조사. 영어의 's, of에 해당.",
+      "en": "Possessive particle indicating ownership or relationship."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "possession",
+      "grammar",
+      "essential",
+      "ui"
+    ]
+  },
+  {
+    "id": "do-also",
+    "type": "entry",
+    "name": {
+      "ko": "도",
+      "en": "(also/too)"
+    },
+    "description": {
+      "ko": "명사 뒤에 붙어 '~도', '역시', '또한'의 의미를 나타내는 보조사.",
+      "en": "Auxiliary particle meaning 'also', 'too', or 'even'."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "addition",
+      "grammar",
+      "essential",
+      "do"
+    ]
+  },
+  {
+    "id": "man-only",
+    "type": "entry",
+    "name": {
+      "ko": "만",
+      "en": "(only/just)"
+    },
+    "description": {
+      "ko": "명사 뒤에 붙어 '오직', '단지'의 의미로 제한을 나타내는 보조사.",
+      "en": "Auxiliary particle indicating limitation, meaning 'only' or 'just'."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "limitation",
+      "grammar",
+      "man"
+    ]
+  },
+  {
+    "id": "kkaji-until",
+    "type": "entry",
+    "name": {
+      "ko": "까지",
+      "en": "(until/to/even)"
+    },
+    "description": {
+      "ko": "명사 뒤에 붙어 끝 지점이나 '~조차'의 의미를 나타내는 보조사.",
+      "en": "Particle indicating end point or 'even'."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "extent",
+      "time",
+      "grammar",
+      "kkaji"
+    ]
+  },
+  {
+    "id": "buteo-from",
+    "type": "entry",
+    "name": {
+      "ko": "부터",
+      "en": "(from/since)"
+    },
+    "description": {
+      "ko": "명사 뒤에 붙어 시작 지점을 나타내는 조사.",
+      "en": "Particle indicating starting point."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "starting",
+      "time",
+      "grammar",
+      "buteo"
+    ]
+  },
+  {
+    "id": "boda-than",
+    "type": "entry",
+    "name": {
+      "ko": "보다",
+      "en": "(than)"
+    },
+    "description": {
+      "ko": "명사 뒤에 붙어 비교의 기준을 나타내는 조사.",
+      "en": "Particle indicating comparison standard."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "comparison",
+      "grammar",
+      "boda"
+    ]
+  },
+  {
+    "id": "hante-to",
+    "type": "entry",
+    "name": {
+      "ko": "한테",
+      "en": "(to someone)"
+    },
+    "description": {
+      "ko": "사람이나 동물 뒤에 붙어 '~에게'의 구어체 표현.",
+      "en": "Informal particle used after people/animals meaning 'to'."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "direction",
+      "person",
+      "grammar",
+      "informal",
+      "hante"
+    ]
+  },
+  {
+    "id": "ege-to",
+    "type": "entry",
+    "name": {
+      "ko": "에게",
+      "en": "(to someone)"
+    },
+    "description": {
+      "ko": "사람이나 동물 뒤에 붙어 행동의 대상을 나타내는 조사.",
+      "en": "Particle used after people/animals indicating recipient."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "direction",
+      "person",
+      "grammar",
+      "formal",
+      "ege"
+    ]
+  },
+  {
+    "id": "cheoreom-like",
+    "type": "entry",
+    "name": {
+      "ko": "처럼",
+      "en": "(like/as)"
+    },
+    "description": {
+      "ko": "명사 뒤에 붙어 비유나 비슷함을 나타내는 조사.",
+      "en": "Particle indicating simile or resemblance."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "comparison",
+      "simile",
+      "grammar",
+      "cheoreom"
+    ]
+  },
+  {
+    "id": "gati-like",
+    "type": "entry",
+    "name": {
+      "ko": "같이",
+      "en": "(like/together)"
+    },
+    "description": {
+      "ko": "명사 뒤에 붙어 '~처럼' 또는 '함께'의 의미를 나타내는 조사.",
+      "en": "Particle meaning 'like' or 'together'."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "comparison",
+      "together",
+      "grammar",
+      "gachi"
+    ]
+  },
+  {
+    "id": "hago-and",
+    "type": "entry",
+    "name": {
+      "ko": "하고",
+      "en": "(and/with)"
+    },
+    "description": {
+      "ko": "명사 뒤에 붙어 '~와/과'의 구어체 표현. 나열이나 동반을 나타냄.",
+      "en": "Informal particle meaning 'and' or 'with'."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "conjunction",
+      "grammar",
+      "informal",
+      "hago"
+    ]
+  },
+  {
+    "id": "bakke-only",
+    "type": "entry",
+    "name": {
+      "ko": "밖에",
+      "en": "(only/nothing but)"
+    },
+    "description": {
+      "ko": "명사 뒤에 붙어 '~만'의 의미를 강조. 반드시 부정문과 함께 사용.",
+      "en": "Particle emphasizing 'only', always used with negative verbs."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "limitation",
+      "negative",
+      "grammar",
+      "bakke"
+    ]
+  },
+  {
+    "id": "majeo-even",
+    "type": "entry",
+    "name": {
+      "ko": "마저",
+      "en": "(even/the last)"
+    },
+    "description": {
+      "ko": "명사 뒤에 붙어 마지막 남은 것까지 포함함을 나타내는 보조사.",
+      "en": "Particle indicating inclusion of the last remaining thing."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "addition",
+      "emphasis",
+      "grammar",
+      "majeo"
+    ]
+  },
+  {
+    "id": "jocha-even",
+    "type": "entry",
+    "name": {
+      "ko": "조차",
+      "en": "(even)"
+    },
+    "description": {
+      "ko": "명사 뒤에 붙어 예상 밖의 극단적인 경우까지 포함함을 나타내는 보조사.",
+      "en": "Particle indicating extreme or unexpected inclusion."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "emphasis",
+      "extreme",
+      "grammar",
+      "jocha"
+    ]
+  },
+  {
+    "id": "rago-quotation",
+    "type": "entry",
+    "name": {
+      "ko": "라고",
+      "en": "(called/said)"
+    },
+    "description": {
+      "ko": "받침 없는 명사 뒤에 붙어 인용이나 호칭을 나타내는 조사.",
+      "en": "Quotation particle after vowel-ending words."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "quotation",
+      "grammar",
+      "rago"
+    ]
+  },
+  {
+    "id": "irago-quotation",
+    "type": "entry",
+    "name": {
+      "ko": "이라고",
+      "en": "(called/said)"
+    },
+    "description": {
+      "ko": "받침 있는 명사 뒤에 붙어 인용이나 호칭을 나타내는 조사.",
+      "en": "Quotation particle after consonant-ending words."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "quotation",
+      "grammar",
+      "irago"
+    ]
+  },
+  {
+    "id": "kke-to-honorific",
+    "type": "entry",
+    "name": {
+      "ko": "께",
+      "en": "(to - honorific)"
+    },
+    "description": {
+      "ko": "높임의 대상 뒤에 붙어 '에게'의 존경 표현.",
+      "en": "Honorific form of 'to', used with respected people."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "direction",
+      "honorific",
+      "grammar",
+      "kke"
+    ]
+  },
+  {
+    "id": "seo-connective",
+    "type": "entry",
+    "name": {
+      "ko": "서",
+      "en": "(so/because)"
+    },
+    "description": {
+      "ko": "'~어서/아서'의 줄임말로 이유나 순서를 나타내는 연결 조사.",
+      "en": "Connective particle indicating reason or sequence."
+    },
+    "field": "particles",
+    "tags": [
+      "particle",
+      "connective",
+      "reason",
+      "grammar",
+      "seo"
+    ]
+  },
+  {
     "id": "mullihak",
     "type": "entry",
     "name": {
