@@ -1,6 +1,16 @@
 import { metaFactory } from '@soundblue/i18n';
 import { cn, DOWNLOAD_PAGE_SCRIPT } from '@soundblue/ui/utils';
-import { ChevronUp, Download, Eye, FileJson, FileText, FileType } from 'lucide-react';
+import {
+  Check,
+  ChevronUp,
+  Code,
+  Copy,
+  Download,
+  Eye,
+  FileJson,
+  FileText,
+  FileType,
+} from 'lucide-react';
 import { useCallback, useMemo, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import { Layout } from '@/components/layout';
@@ -176,11 +186,21 @@ function FormatPreview({
   );
 }
 
+const API_BASE_URL =
+  'https://raw.githubusercontent.com/soundbluemusic/public-monorepo/main/data/context';
+
 export default function DownloadPage() {
   const { entries, totalCount } = useLoaderData<LoaderData>();
   const { locale, t } = useI18n();
   const [downloading, setDownloading] = useState<ExportFormat | null>(null);
   const [expandedFormat, setExpandedFormat] = useState<ExportFormat | null>(null);
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyUrl = useCallback(() => {
+    navigator.clipboard.writeText(`${API_BASE_URL}/meta.json`);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  }, []);
 
   const togglePreview = useCallback((format: ExportFormat) => {
     setExpandedFormat((prev) => (prev === format ? null : format));
@@ -355,6 +375,55 @@ export default function DownloadPage() {
               </div>
             );
           })}
+        </div>
+
+        {/* API Section for Developers */}
+        <div className="mt-12">
+          <h2 className="text-lg font-semibold text-(--text-primary) mb-4 flex items-center gap-2">
+            <Code size={20} />
+            {t('apiSectionTitle')}
+          </h2>
+          <div className="rounded-xl border border-(--border-primary) bg-(--bg-primary) overflow-hidden">
+            <div className="p-4 border-b border-(--border-secondary)">
+              <p className="text-sm text-(--text-secondary) mb-3">{t('apiSectionDescription')}</p>
+              <p className="text-xs text-(--text-tertiary)">{t('apiMetaJson')}</p>
+            </div>
+            <div className="p-4 bg-(--bg-tertiary)">
+              <div className="flex items-center gap-2">
+                <code className="flex-1 text-xs bg-(--bg-secondary) px-3 py-2 rounded-lg font-mono text-(--text-primary) overflow-x-auto">
+                  {API_BASE_URL}/meta.json
+                </code>
+                <button
+                  type="button"
+                  onClick={handleCopyUrl}
+                  className={cn(
+                    'shrink-0 inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium rounded-lg transition-colors cursor-pointer',
+                    copied
+                      ? 'bg-green-500 text-white'
+                      : 'bg-(--accent-primary) text-white hover:bg-(--accent-primary)/90',
+                  )}
+                >
+                  {copied ? (
+                    <>
+                      <Check size={14} />
+                      {t('apiCopied')}
+                    </>
+                  ) : (
+                    <>
+                      <Copy size={14} />
+                      {t('apiCopyUrl')}
+                    </>
+                  )}
+                </button>
+              </div>
+              <p className="mt-3 text-xs text-(--text-tertiary)">
+                {t('apiDataIncludes')
+                  .replace('{count}', String(totalCount))
+                  .replace('{catCount}', '24')
+                  .replace('{convCount}', '53')}
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* License Note */}

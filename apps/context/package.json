@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "react-router dev",
-    "prebuild": "tsx scripts/generate-paraglide-messages.ts && tsx scripts/load-entries.ts && tsx scripts/generate-search-index.ts",
+    "prebuild": "tsx scripts/generate-paraglide-messages.ts && tsx scripts/load-entries.ts && tsx scripts/generate-search-index.ts && tsx scripts/export-data.ts",
+    "export:data": "tsx scripts/export-data.ts",
     "build": "react-router build && tsx scripts/generate-sitemaps.ts",
     "preview": "npx serve build/client -l 3003 --no-port-switching",
     "start": "npx serve build/client -l 3003 --no-port-switching",

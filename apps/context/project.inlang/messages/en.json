@@ -176,5 +176,11 @@
   "browseWordCount": "{count} words",
   "browsePageOf": "Page {current} of {total}",
   "browseNoWords": "No words found",
-  "browseLoadingCategory": "Loading category..."
+  "browseLoadingCategory": "Loading category...",
+  "apiSectionTitle": "For Developers",
+  "apiSectionDescription": "Fetch data directly via raw GitHub URLs. No API key required.",
+  "apiMetaJson": "Get meta.json first to discover all available files",
+  "apiCopyUrl": "Copy URL",
+  "apiCopied": "Copied!",
+  "apiDataIncludes": "Includes: {count} entries, {catCount} categories, {convCount} conversations"
 }
