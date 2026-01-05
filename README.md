@@ -33,7 +33,7 @@
 |---|---|
 | **Live** | [context.soundbluemusic.com](https://context.soundbluemusic.com) |
 | **Source** | [apps/context](apps/context) |
-| **Features** | 978 entries, 21 categories, 7 conversations |
+| **Features** | 978 entries, 22 categories, 8 conversations |
 
 ### 🔧 Permissive — Web Dev Resources
 > **무료 웹개발 자료 모음** | 8 SSG pages
@@ -55,7 +55,17 @@
 |---|---|
 | **Live** | [roots.soundbluemusic.com](https://roots.soundbluemusic.com) |
 | **Source** | [apps/roots](apps/roots) |
-| **Features** | 438 concepts, 50 fields |
+| **Features** | 414 concepts, 18 fields |
+
+---
+
+## 🌐 Other Projects
+
+| Project | Description |
+|:--------|:------------|
+| [soundbluemusic.com](https://soundbluemusic.com) | Main site |
+| [tools.soundbluemusic.com](https://tools.soundbluemusic.com) | Tool collection |
+| [dialogue.soundbluemusic.com](https://dialogue.soundbluemusic.com) | Learning chatbot |
 
 ---
 
@@ -124,8 +134,8 @@ React Router v7의 `prerender()` + `loader()` 패턴으로 **빌드 시** 모든
 
 | App | Dynamic Routes | SSG Pages | Data Source |
 |:----|:---------------|:---------:|:------------|
-| **Context** | 978 entries + 21 categories + 7 conversations | 2,012 | JSON |
-| **Roots** | 438 concepts + 50 fields | 976 | TypeScript |
+| **Context** | 978 entries + 22 categories + 8 conversations | 2,012 | JSON |
+| **Roots** | 414 concepts + 18 fields | 976 | TypeScript |
 | **Permissive** | 4 static routes | 8 | Array literals |
 | **Total** | — | **2,996** | — |
 
@@ -202,7 +212,7 @@ public-monorepo/
 │
 ├── data/                    # Centralized JSON data (SSoT)
 │   ├── context/             # 978 Korean entries
-│   ├── roots/               # 438 math concepts
+│   ├── roots/               # 414 math concepts
 │   └── permissive/          # 88 libraries, 56 Web APIs
 │
 └── package.json
@@ -449,7 +459,25 @@ export default {
 | Mock data to bypass errors | Type-safe enums |
 | Fallback values hiding bugs | CSS design tokens |
 
-### 3. Data Principles
+### 3. No Overfitting / No Quick Fixes
+
+> **모든 수정은 일반적인 해결책이어야 함. 특정 케이스만 해결하는 코드 금지.**
+
+| ❌ Prohibited | ✅ Required |
+|:--------------|:------------|
+| Conditions targeting specific test cases only | General solutions for all similar cases |
+| Branching on error message strings | Proper error type handling |
+| Exception handling for specific IDs/values | Uniform validation logic |
+| Hiding symptoms with try-catch | Fixing root causes |
+| Workarounds at call sites instead of source | Fixing the actual problem location |
+
+**Checklist before any fix:**
+1. Does this fix work for all similar inputs?
+2. Can I explain WHY this problem occurred?
+3. Will this code still work if new tests are added?
+4. Will another developer understand this in 6 months?
+
+### 4. Data Principles
 
 | Principle | Description |
 |:----------|:------------|
@@ -468,4 +496,9 @@ export default {
 
 <p align="center">
   Made by <a href="https://soundbluemusic.com"><b>soundbluemusic</b></a>
+  <br/><br/>
+  <a href="https://www.youtube.com/@SoundBlueMusic"><img src="https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white" alt="YouTube"></a>
+  <a href="https://x.com/SoundBlueMusic"><img src="https://img.shields.io/badge/X-000000?style=flat&logo=x&logoColor=white" alt="X"></a>
+  <a href="https://www.instagram.com/soundbluemusic/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white" alt="Instagram"></a>
+  <a href="https://www.threads.com/@soundbluemusic"><img src="https://img.shields.io/badge/Threads-000000?style=flat&logo=threads&logoColor=white" alt="Threads"></a>
 </p>

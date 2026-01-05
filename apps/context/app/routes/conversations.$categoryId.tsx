@@ -1,3 +1,4 @@
+import { dynamicMetaFactory } from '@soundblue/i18n';
 import { cn } from '@soundblue/ui/utils';
 import { ArrowLeft, MessageCircle } from 'lucide-react';
 import { Link, useLoaderData } from 'react-router';
@@ -17,9 +18,27 @@ export async function loader({ params }: { params: { categoryId: string } }) {
   return { category: category || null, conversations };
 }
 
-export function meta() {
-  return [{ title: 'Conversations - Context' }];
-}
+export const meta = dynamicMetaFactory(
+  (data: { category: Category | null; conversations: Conversation[] }) => {
+    if (!data?.category) {
+      return {
+        ko: { title: '카테고리를 찾을 수 없습니다 | Context' },
+        en: { title: 'Category Not Found | Context' },
+      };
+    }
+    const { category, conversations } = data;
+    return {
+      ko: {
+        title: `${category.name.ko} 대화 | Context`,
+        description: `${category.name.ko} 상황의 ${conversations.length}개 한국어 대화 예문`,
+      },
+      en: {
+        title: `${category.name.en} Conversations | Context`,
+        description: `${conversations.length} Korean conversation examples for ${category.name.en} situations`,
+      },
+    };
+  },
+);
 
 export default function ConversationsCategoryPage() {
   const { category, conversations } = useLoaderData<{

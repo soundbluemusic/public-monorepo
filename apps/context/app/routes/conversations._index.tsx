@@ -1,3 +1,4 @@
+import { metaFactory } from '@soundblue/i18n';
 import { MessageCircle } from 'lucide-react';
 import { Link, useLoaderData } from 'react-router';
 import { Layout } from '@/components/layout';
@@ -23,9 +24,16 @@ export async function loader() {
   return { categoriesWithCount };
 }
 
-export function meta() {
-  return [{ title: 'Conversations - Context' }];
-}
+export const meta = metaFactory({
+  ko: {
+    title: '대화 예문 | Context',
+    description: '일상 상황별 한국어 대화 예문으로 자연스러운 한국어를 배워보세요',
+  },
+  en: {
+    title: 'Conversations | Context',
+    description: 'Learn natural Korean with conversation examples for everyday situations',
+  },
+});
 
 export default function ConversationsIndexPage() {
   const { categoriesWithCount } = useLoaderData<{

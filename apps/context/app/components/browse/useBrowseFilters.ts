@@ -4,8 +4,14 @@ import type { categories } from '@/data/categories';
 import type { LightEntry } from '@/data/entries';
 
 export type FilterCategory = 'all' | string;
-export type FilterStatus = 'all' | 'studied' | 'unstudied' | 'bookmarked';
-export type SortOption = 'alphabetical' | 'category' | 'recent';
+
+/** 유효한 필터 상태 값 (타입과 검증 동기화) */
+export const FILTER_STATUSES = ['all', 'studied', 'unstudied', 'bookmarked'] as const;
+export type FilterStatus = (typeof FILTER_STATUSES)[number];
+
+/** 유효한 정렬 옵션 값 (타입과 검증 동기화) */
+export const SORT_OPTIONS = ['alphabetical', 'category', 'recent'] as const;
+export type SortOption = (typeof SORT_OPTIONS)[number];
 
 /** 페이지당 항목 수 */
 export const PAGE_SIZE = 50;
@@ -62,15 +68,13 @@ export function useBrowseFilters({
     }
 
     if (statusParam) {
-      const validStatuses = ['all', 'studied', 'unstudied', 'bookmarked'];
-      if (validStatuses.includes(statusParam)) {
+      if ((FILTER_STATUSES as readonly string[]).includes(statusParam)) {
         setFilterStatus(statusParam as FilterStatus);
       }
     }
 
     if (sortParam) {
-      const validSorts = ['alphabetical', 'category', 'recent'];
-      if (validSorts.includes(sortParam)) {
+      if ((SORT_OPTIONS as readonly string[]).includes(sortParam)) {
         setSortBy(sortParam as SortOption);
       }
     }

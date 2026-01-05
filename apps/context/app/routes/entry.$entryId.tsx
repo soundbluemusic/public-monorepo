@@ -1,4 +1,5 @@
 import { toast } from '@soundblue/features/toast';
+import { dynamicMetaFactory } from '@soundblue/i18n';
 import { cn } from '@soundblue/ui/utils';
 import { Bookmark, BookmarkCheck, Check } from 'lucide-react';
 import { Link, useLoaderData } from 'react-router';
@@ -69,9 +70,25 @@ export function HydrateFallback() {
   return null;
 }
 
-export function meta() {
-  return [{ title: 'Entry - Context' }];
-}
+export const meta = dynamicMetaFactory((data: { entry: MeaningEntry | null }) => {
+  if (!data?.entry) {
+    return {
+      ko: { title: '단어를 찾을 수 없습니다 | Context' },
+      en: { title: 'Entry Not Found | Context' },
+    };
+  }
+  const { entry } = data;
+  return {
+    ko: {
+      title: `${entry.korean} - ${entry.translations.ko.word} | Context`,
+      description: `${entry.korean} (${entry.romanization}): ${entry.translations.ko.explanation}`,
+    },
+    en: {
+      title: `${entry.korean} - ${entry.translations.en.word} | Context`,
+      description: `${entry.korean} (${entry.romanization}): ${entry.translations.en.explanation}`,
+    },
+  };
+});
 
 export default function EntryPage() {
   const { entry } = useLoaderData<{ entry: MeaningEntry | null }>();
