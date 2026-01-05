@@ -1,3 +1,4 @@
+import { dynamicMetaFactory } from '@soundblue/i18n';
 import { useAutoAnimate } from '@soundblue/ui/hooks';
 import { ProgressBar } from '@soundblue/ui/primitives';
 import { Link, useLoaderData } from 'react-router';
@@ -19,9 +20,27 @@ export async function loader({ params }: { params: { categoryId: string } }) {
   return { category: category || null, entries };
 }
 
-export function meta() {
-  return [{ title: 'Category - Context' }];
-}
+export const meta = dynamicMetaFactory(
+  (data: { category: Category | null; entries: MeaningEntry[] }) => {
+    if (!data?.category) {
+      return {
+        ko: { title: '카테고리를 찾을 수 없습니다 | Context' },
+        en: { title: 'Category Not Found | Context' },
+      };
+    }
+    const { category, entries } = data;
+    return {
+      ko: {
+        title: `${category.name.ko} | Context`,
+        description: `${category.name.ko} 카테고리의 ${entries.length}개 한국어 단어 학습`,
+      },
+      en: {
+        title: `${category.name.en} | Context`,
+        description: `Learn ${entries.length} Korean words in the ${category.name.en} category`,
+      },
+    };
+  },
+);
 
 export default function CategoryPage() {
   const { category, entries } = useLoaderData<{
