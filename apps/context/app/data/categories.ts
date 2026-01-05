@@ -331,6 +331,20 @@ export const categories: Category[] = [
     color: 'teal',
     order: 22,
   },
+  {
+    id: 'particles',
+    name: {
+      ko: '조사',
+      en: 'Particles',
+    },
+    description: {
+      ko: '문법적 관계를 나타내는 조사',
+      en: 'Grammatical particles indicating relationships',
+    },
+    icon: '∘',
+    color: 'indigo',
+    order: 23,
+  },
 ];
 
 /**
