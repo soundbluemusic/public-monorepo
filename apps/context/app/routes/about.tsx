@@ -2,10 +2,13 @@ import { metaFactory } from '@soundblue/i18n';
 import { Layout } from '@/components/layout';
 import { useI18n } from '@/i18n';
 
-export const meta = metaFactory({
-  ko: { title: '소개 - Context', description: 'Context 한국어 사전 소개' },
-  en: { title: 'About - Context', description: 'About Context Korean Dictionary' },
-});
+export const meta = metaFactory(
+  {
+    ko: { title: '소개 - Context', description: 'Context 한국어 사전 소개' },
+    en: { title: 'About - Context', description: 'About Context Korean Dictionary' },
+  },
+  'https://context.soundbluemusic.com',
+);
 
 export default function AboutPage() {
   const { t } = useI18n();

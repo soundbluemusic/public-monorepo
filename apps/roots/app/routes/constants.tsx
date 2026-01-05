@@ -41,10 +41,13 @@ const mathConstants = [
   },
 ];
 
-export const meta = metaFactory({
-  ko: { title: '수학 상수 - 수리', description: '수학 상수' },
-  en: { title: 'Constants - Roots', description: 'Mathematical constants' },
-});
+export const meta = metaFactory(
+  {
+    ko: { title: '수학 상수 - 수리', description: '수학 상수' },
+    en: { title: 'Constants - Roots', description: 'Mathematical constants' },
+  },
+  'https://roots.soundbluemusic.com',
+);
 
 export default function ConstantsPage() {
   const { locale, t } = useI18n();

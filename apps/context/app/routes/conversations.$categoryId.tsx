@@ -38,6 +38,7 @@ export const meta = dynamicMetaFactory(
       },
     };
   },
+  'https://context.soundbluemusic.com',
 );
 
 export default function ConversationsCategoryPage() {

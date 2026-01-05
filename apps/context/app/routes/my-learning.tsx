@@ -1,6 +1,6 @@
 import { LIMITS } from '@soundblue/core/validation';
+import { metaFactory } from '@soundblue/i18n';
 import { TrendingUp } from 'lucide-react';
-import type { MetaFunction } from 'react-router';
 import { Link } from 'react-router';
 import { Layout } from '@/components/layout';
 import {
@@ -19,21 +19,16 @@ import { useI18n } from '@/i18n';
  * 모든 데이터는 클라이언트에서 동적으로 로드
  */
 
-export const meta: MetaFunction = ({ location }) => {
-  const isKorean = location.pathname.startsWith('/ko');
-
-  if (isKorean) {
-    return [
-      { title: '내 학습 현황 - Context' },
-      { name: 'description', content: '학습 진행도와 북마크한 단어 확인' },
-    ];
-  }
-
-  return [
-    { title: 'My Learning - Context' },
-    { name: 'description', content: 'Track your learning progress and bookmarks' },
-  ];
-};
+export const meta = metaFactory(
+  {
+    ko: { title: '내 학습 현황 - Context', description: '학습 진행도와 북마크한 단어 확인' },
+    en: {
+      title: 'My Learning - Context',
+      description: 'Track your learning progress and bookmarks',
+    },
+  },
+  'https://context.soundbluemusic.com',
+);
 
 export default function MyLearningPage() {
   const { locale, t, localePath } = useI18n();

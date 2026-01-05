@@ -1,11 +1,14 @@
-import type { MetaFunction } from 'react-router';
+import { metaFactory } from '@soundblue/i18n';
 import { Layout } from '@/components/layout';
 import { useI18n } from '@/i18n';
 
-export const meta: MetaFunction = ({ location }) => {
-  const isKorean = location.pathname.startsWith('/ko');
-  return [{ title: isKorean ? '개인정보처리방침 - Context' : 'Privacy Policy - Context' }];
-};
+export const meta = metaFactory(
+  {
+    ko: { title: '개인정보처리방침 - Context' },
+    en: { title: 'Privacy Policy - Context' },
+  },
+  'https://context.soundbluemusic.com',
+);
 
 export default function PrivacyPage() {
   const { t } = useI18n();

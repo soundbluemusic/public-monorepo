@@ -22,10 +22,13 @@ export async function loader() {
   };
 }
 
-export const meta = metaFactory({
-  ko: { title: 'Libraries - Permissive', description: 'MIT 라이센스 오픈소스 라이브러리' },
-  en: { title: 'Libraries - Permissive', description: 'MIT licensed open source libraries' },
-});
+export const meta = metaFactory(
+  {
+    ko: { title: 'Libraries - Permissive', description: 'MIT 라이센스 오픈소스 라이브러리' },
+    en: { title: 'Libraries - Permissive', description: 'MIT licensed open source libraries' },
+  },
+  'https://permissive.soundbluemusic.com',
+);
 
 export default function LibrariesPage() {
   const { libraries: libs } = useLoaderData<{

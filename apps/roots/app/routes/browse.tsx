@@ -30,10 +30,13 @@ import { fields } from '@/data/fields';
 import { getSubfieldsByParent } from '@/data/subfields';
 import { useI18n } from '@/i18n';
 
-export const meta = metaFactory({
-  ko: { title: '찾아보기 - 수리', description: '분야별로 수학 개념 찾아보기' },
-  en: { title: 'Browse - Roots', description: 'Browse math concepts by field' },
-});
+export const meta = metaFactory(
+  {
+    ko: { title: '찾아보기 - 수리', description: '분야별로 수학 개념 찾아보기' },
+    en: { title: 'Browse - Roots', description: 'Browse math concepts by field' },
+  },
+  'https://roots.soundbluemusic.com',
+);
 
 export default function BrowsePage() {
   const { locale, t, localePath } = useI18n();

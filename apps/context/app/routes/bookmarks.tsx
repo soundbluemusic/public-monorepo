@@ -1,6 +1,6 @@
+import { metaFactory } from '@soundblue/i18n';
 import { Bookmark, Search, Trash2 } from 'lucide-react';
 import { useMemo, useState } from 'react';
-import type { MetaFunction } from 'react-router';
 import { Link } from 'react-router';
 import { Layout } from '@/components/layout';
 import { entriesById } from '@/data/entries';
@@ -8,21 +8,13 @@ import type { MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { useIsHydrated, useUserDataStore } from '@/stores/user-data-store';
 
-export const meta: MetaFunction = ({ location }) => {
-  const isKorean = location.pathname.startsWith('/ko');
-
-  if (isKorean) {
-    return [
-      { title: '북마크 - Context' },
-      { name: 'description', content: '북마크한 단어 모아보기' },
-    ];
-  }
-
-  return [
-    { title: 'Bookmarks - Context' },
-    { name: 'description', content: 'View your bookmarked words' },
-  ];
-};
+export const meta = metaFactory(
+  {
+    ko: { title: '북마크 - Context', description: '북마크한 단어 모아보기' },
+    en: { title: 'Bookmarks - Context', description: 'View your bookmarked words' },
+  },
+  'https://context.soundbluemusic.com',
+);
 
 export default function BookmarksPage() {
   const { locale, t, localePath } = useI18n();

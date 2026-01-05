@@ -3,10 +3,13 @@ import { Link } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import { useI18n } from '../i18n';
 
-export const meta = metaFactory({
-  ko: { title: '404 - 페이지를 찾을 수 없습니다 | Permissive' },
-  en: { title: '404 - Page Not Found | Permissive' },
-});
+export const meta = metaFactory(
+  {
+    ko: { title: '404 - 페이지를 찾을 수 없습니다 | Permissive' },
+    en: { title: '404 - Page Not Found | Permissive' },
+  },
+  'https://permissive.soundbluemusic.com',
+);
 
 export default function NotFound() {
   const { locale, localePath } = useI18n();

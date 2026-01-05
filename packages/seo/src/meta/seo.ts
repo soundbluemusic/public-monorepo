@@ -78,37 +78,58 @@ export function generateSEOMeta({
 
 /**
  * Generates hreflang link tags and canonical URL
+ *
+ * URL 구조:
+ * - 영어 (기본): /entry/xxx (prefix 없음)
+ * - 한국어: /ko/entry/xxx
+ *
+ * @param pathname - 현재 페이지 경로 (예: /entry/hello 또는 /ko/entry/hello)
+ * @param baseUrl - 사이트 기본 URL (예: https://context.soundbluemusic.com)
+ * @returns canonical + hreflang link 태그 배열
  */
-export function generateHreflangLinks(
-  pathname: string,
-  baseUrl: string,
-  locales: string[],
-  defaultLocale = 'ko',
-): LinkDescriptor[] {
+export function generateHreflangLinks(pathname: string, baseUrl: string): LinkDescriptor[] {
   const cleanBaseUrl = baseUrl.replace(/\/$/, '');
   const cleanPath = pathname.startsWith('/') ? pathname : `/${pathname}`;
 
-  const currentLocale = cleanPath.startsWith('/ko')
-    ? 'ko'
-    : cleanPath.startsWith('/en')
-      ? 'en'
-      : defaultLocale;
-  const pathWithoutLocale = cleanPath.replace(/^\/(ko|en)/, '') || '/';
+  // 현재 로케일 감지: /ko로 시작하면 한국어, 아니면 영어
+  const isKorean = cleanPath.startsWith('/ko');
+
+  // 로케일 prefix 제거하여 순수 경로 추출
+  const pathWithoutLocale = isKorean ? cleanPath.replace(/^\/ko/, '') || '/' : cleanPath;
+
+  // 각 언어별 URL 생성
+  // 영어: prefix 없음 (기본 언어)
+  // 한국어: /ko prefix
+  const enUrl = pathWithoutLocale === '/' ? cleanBaseUrl : `${cleanBaseUrl}${pathWithoutLocale}`;
+  const koUrl =
+    pathWithoutLocale === '/' ? `${cleanBaseUrl}/ko` : `${cleanBaseUrl}/ko${pathWithoutLocale}`;
+
+  // 현재 페이지의 canonical URL
+  const canonicalUrl = isKorean ? koUrl : enUrl;
 
   return [
+    // Canonical: 현재 페이지 자기 자신
     {
       rel: 'canonical',
-      href: `${cleanBaseUrl}/${currentLocale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`,
+      href: canonicalUrl,
     },
-    ...locales.map((locale) => ({
+    // hreflang: 영어 버전
+    {
       rel: 'alternate',
-      hreflang: locale,
-      href: `${cleanBaseUrl}/${locale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`,
-    })),
+      hreflang: 'en',
+      href: enUrl,
+    },
+    // hreflang: 한국어 버전
+    {
+      rel: 'alternate',
+      hreflang: 'ko',
+      href: koUrl,
+    },
+    // x-default: 기본 언어 (영어)
     {
       rel: 'alternate',
       hreflang: 'x-default',
-      href: `${cleanBaseUrl}/${defaultLocale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`,
+      href: enUrl,
     },
   ];
 }
