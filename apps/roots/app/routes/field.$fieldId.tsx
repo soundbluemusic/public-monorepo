@@ -2,6 +2,7 @@
  * @fileoverview 분야 상세 페이지
  */
 
+import { dynamicMetaFactory } from '@soundblue/i18n';
 import { useAutoAnimate } from '@soundblue/ui/hooks';
 import { Link, useLoaderData, useParams } from 'react-router';
 import { ConceptCard } from '@/components/concept/ConceptCard';
@@ -9,6 +10,7 @@ import { Layout } from '@/components/layout/Layout';
 import { getConceptsByField as getConceptsByFieldStatic } from '@/data/concepts/index';
 import { getFieldById } from '@/data/fields';
 import { getSubfieldsByParent } from '@/data/subfields';
+import type { MathConcept, MathFieldInfo } from '@/data/types';
 import { useI18n } from '@/i18n';
 
 /**
@@ -16,11 +18,42 @@ import { useI18n } from '@/i18n';
  */
 export async function loader({ params }: { params: { fieldId: string } }) {
   if (!params.fieldId) {
-    return { concepts: [] };
+    return { concepts: [], field: null };
   }
   const concepts = getConceptsByFieldStatic(params.fieldId);
-  return { concepts };
+  const field = getFieldById(params.fieldId);
+  return { concepts, field: field || null };
 }
+
+/**
+ * Meta: SEO 메타 태그 생성 (canonical, hreflang 포함)
+ */
+export const meta = dynamicMetaFactory(
+  (data: { concepts: MathConcept[]; field: MathFieldInfo | null }) => {
+    if (!data?.field) {
+      return {
+        ko: { title: '분야를 찾을 수 없습니다 | Roots' },
+        en: { title: 'Field Not Found | Roots' },
+      };
+    }
+    const { field } = data;
+    const nameKo = field.name.ko || field.name.en;
+    const nameEn = field.name.en;
+    const descKo = field.description?.ko || `${nameKo} 분야의 수학 개념`;
+    const descEn = field.description?.en || `Math concepts in ${nameEn}`;
+    return {
+      ko: {
+        title: `${nameKo} | Roots`,
+        description: descKo,
+      },
+      en: {
+        title: `${nameEn} | Roots`,
+        description: descEn,
+      },
+    };
+  },
+  'https://roots.soundbluemusic.com',
+);
 
 export default function FieldPage() {
   const loaderData = useLoaderData<typeof loader>();

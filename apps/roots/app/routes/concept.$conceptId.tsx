@@ -3,6 +3,7 @@
  */
 
 import { toast } from '@soundblue/features/toast';
+import { dynamicMetaFactory } from '@soundblue/i18n';
 import { BookOpen, Heart, History, Zap } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router';
@@ -14,6 +15,7 @@ import { DifficultyBadge } from '@/components/ui/DifficultyBadge';
 import { getConceptById as getConceptByIdStatic } from '@/data/concepts/index';
 import { getFieldById } from '@/data/fields';
 import { getSubfieldById } from '@/data/subfields';
+import type { MathConcept } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { favorites } from '@/lib/db';
 
@@ -41,6 +43,38 @@ export async function loader({ params }: { params: { conceptId: string } }) {
 
   return { concept: concept || null, conceptNames };
 }
+
+/**
+ * Meta: SEO 메타 태그 생성 (canonical, hreflang 포함)
+ */
+export const meta = dynamicMetaFactory(
+  (data: { concept: MathConcept | null; conceptNames: ConceptNames }) => {
+    if (!data?.concept) {
+      return {
+        ko: { title: '개념을 찾을 수 없습니다 | Roots' },
+        en: { title: 'Concept Not Found | Roots' },
+      };
+    }
+    const { concept } = data;
+    const nameKo = concept.name.ko || concept.name.en;
+    const nameEn = concept.name.en;
+    const contentKo = concept.content.ko;
+    const contentEn = concept.content.en;
+    const defKo = typeof contentKo === 'string' ? contentKo : contentKo.definition;
+    const defEn = typeof contentEn === 'string' ? contentEn : contentEn.definition;
+    return {
+      ko: {
+        title: `${nameKo} | Roots`,
+        description: defKo,
+      },
+      en: {
+        title: `${nameEn} | Roots`,
+        description: defEn,
+      },
+    };
+  },
+  'https://roots.soundbluemusic.com',
+);
 
 export default function ConceptPage() {
   const loaderData = useLoaderData<typeof loader>();

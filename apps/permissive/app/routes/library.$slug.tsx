@@ -1,6 +1,6 @@
+import { dynamicMetaFactory } from '@soundblue/i18n';
 import { FadeIn } from '@soundblue/ui/animation';
 import { ArrowLeft, Calendar, ExternalLink, Github, Package, Scale, Star } from 'lucide-react';
-import type { MetaFunction } from 'react-router';
 import { Link, useLoaderData } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import {
@@ -22,21 +22,28 @@ export async function loader({ params }: { params: { slug: string } }) {
 
 type LoaderData = { library: Library; related: Library[] };
 
-export const meta: MetaFunction<typeof loader> = ({ data, location }) => {
-  const loaderData = data as LoaderData | undefined;
-  if (!loaderData?.library) {
-    return [{ title: 'Not Found - Permissive' }];
+/**
+ * Meta: SEO 메타 태그 생성 (canonical, hreflang 포함)
+ */
+export const meta = dynamicMetaFactory((data: LoaderData | undefined) => {
+  if (!data?.library) {
+    return {
+      ko: { title: 'Not Found - Permissive' },
+      en: { title: 'Not Found - Permissive' },
+    };
   }
-  const isKorean = location.pathname.startsWith('/ko');
-  const lib = loaderData.library;
-  return [
-    { title: `${lib.name} - Permissive` },
-    {
-      name: 'description',
-      content: isKorean ? lib.descriptionKo : lib.description,
+  const lib = data.library;
+  return {
+    ko: {
+      title: `${lib.name} - Permissive`,
+      description: lib.descriptionKo,
     },
-  ];
-};
+    en: {
+      title: `${lib.name} - Permissive`,
+      description: lib.description,
+    },
+  };
+}, 'https://permissive.soundbluemusic.com');
 
 export default function LibraryDetailPage() {
   const { library: lib, related } = useLoaderData<{ library: Library; related: Library[] }>();
