@@ -331,6 +331,34 @@ export const categories: Category[] = [
     color: 'teal',
     order: 22,
   },
+  {
+    id: 'particles',
+    name: {
+      ko: '조사',
+      en: 'Particles',
+    },
+    description: {
+      ko: '문법적 관계를 나타내는 조사',
+      en: 'Grammatical particles indicating relationships',
+    },
+    icon: '∘',
+    color: 'indigo',
+    order: 23,
+  },
+  {
+    id: 'geography',
+    name: {
+      ko: '지리',
+      en: 'Geography',
+    },
+    description: {
+      ko: '대륙, 바다 등 지리 관련 단어',
+      en: 'Geography-related words including continents and oceans',
+    },
+    icon: '◐',
+    color: 'teal',
+    order: 24,
+  },
 ];
 
 /**

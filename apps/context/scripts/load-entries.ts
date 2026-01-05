@@ -243,8 +243,8 @@ export const lightEntries: LightEntry[] = ${JSON.stringify(lightEntries)};
 interface TrieNode {
   /** 자식 노드 (문자 → 자식 인덱스) */
   children: Record<string, number>;
-  /** 이 노드에서 끝나는 표현의 ID (없으면 null) */
-  output: string | null;
+  /** 이 노드에서 끝나는 표현의 ID들 (동음이의어 지원, 없으면 null) */
+  output: string[] | null;
   /** 매칭된 한국어 (output이 있을 때) */
   korean: string | null;
   /** 실패 링크 (Aho-Corasick) - 루트는 0 */
@@ -254,6 +254,7 @@ interface TrieNode {
 /**
  * Aho-Corasick Trie 빌드
  * O(총 패턴 길이) 시간에 구축
+ * 동음이의어 지원: 같은 korean에 여러 ID 저장
  */
 function buildAhoCorasickTrie(expressions: { id: string; korean: string }[]): TrieNode[] {
   // 루트 노드
@@ -270,11 +271,16 @@ function buildAhoCorasickTrie(expressions: { id: string; korean: string }[]): Tr
       }
       nodeIdx = currentNode.children[char]!;
     }
-    // 더 긴 표현이 이미 있으면 덮어쓰지 않음 (긴 것 우선)
+    // 동음이의어 지원: 같은 korean에 여러 ID 수집
     const targetNode = nodes[nodeIdx]!;
     if (targetNode.output === null) {
-      targetNode.output = expr.id;
+      targetNode.output = [expr.id];
       targetNode.korean = expr.korean;
+    } else {
+      // 이미 다른 ID가 있으면 추가 (중복 방지)
+      if (!targetNode.output.includes(expr.id)) {
+        targetNode.output.push(expr.id);
+      }
     }
   }
 
@@ -358,8 +364,8 @@ function generateKoreanExpressionsFile(entries: JsonEntry[]): string {
 export interface TrieNode {
   /** 자식 노드 (문자 → 자식 인덱스) */
   children: Record<string, number>;
-  /** 이 노드에서 끝나는 표현의 ID */
-  output: string | null;
+  /** 이 노드에서 끝나는 표현의 ID들 (동음이의어 지원) */
+  output: string[] | null;
   /** 매칭된 한국어 */
   korean: string | null;
   /** 실패 링크 */
@@ -373,16 +379,26 @@ export interface TrieNode {
 export const expressionTrie: TrieNode[] = ${JSON.stringify(trie)};
 
 /**
+ * 한글 문자인지 확인
+ */
+function isKorean(char: string | undefined): boolean {
+  if (!char) return false;
+  const code = char.charCodeAt(0);
+  // 한글 음절 (가-힣) 또는 한글 자모 (ㄱ-ㅎ, ㅏ-ㅣ)
+  return (code >= 0xAC00 && code <= 0xD7A3) || (code >= 0x3131 && code <= 0x318E);
+}
+
+/**
  * O(m) 시간에 텍스트에서 모든 표현 찾기
  * @param text 검색할 텍스트
  * @param excludeId 제외할 표현 ID (현재 보고 있는 항목)
- * @returns 매칭 결과 배열 [{start, end, id, korean}]
+ * @returns 매칭 결과 배열 [{start, end, ids, korean}] - ids는 동음이의어 지원
  */
 export function findExpressions(
   text: string,
   excludeId?: string
-): Array<{ start: number; end: number; id: string; korean: string }> {
-  const matches: Array<{ start: number; end: number; id: string; korean: string }> = [];
+): Array<{ start: number; end: number; ids: string[]; korean: string }> {
+  const matches: Array<{ start: number; end: number; ids: string[]; korean: string }> = [];
   let state = 0;
 
   for (let i = 0; i < text.length; i++) {
@@ -406,15 +422,45 @@ export function findExpressions(
     while (checkState !== 0) {
       const node = expressionTrie[checkState];
       if (!node) break;
-      if (node.output && node.output !== excludeId && node.korean) {
-        const koreanLen = node.korean.length;
-        const start = i - koreanLen + 1;
-        // 겹치는 매칭 중 가장 긴 것만 유지 (이미 긴 것 우선 정렬됨)
-        const overlaps = matches.some(
-          (m) => (start >= m.start && start < m.end) || (m.start >= start && m.start < start + koreanLen)
-        );
-        if (!overlaps) {
-          matches.push({ start, end: i + 1, id: node.output, korean: node.korean });
+      if (node.output && node.korean) {
+        // excludeId 필터링 (동음이의어 중 현재 항목 제외)
+        const filteredIds = node.output.filter((id) => id !== excludeId);
+        if (filteredIds.length > 0) {
+          const koreanLen = node.korean.length;
+          const start = i - koreanLen + 1;
+          const end = i + 1;
+
+          // 단어 경계 검사: 1-2글자 매칭은 앞뒤로 한글이 있으면 스킵
+          // 예: "아시아"에서 "시"는 앞뒤로 "아"가 있으므로 스킵
+          // 예: "아시아에"에서 "에"는 뒤가 공백이므로 매칭
+          if (koreanLen <= 2) {
+            const prevChar = text[start - 1];
+            const nextChar = text[end];
+            // 앞뒤 모두 한글이면 단어 내부로 판단하여 스킵
+            if (isKorean(prevChar) && isKorean(nextChar)) {
+              checkState = node.fail;
+              continue;
+            }
+          }
+
+          // 겹치는 매칭 찾기
+          const overlappingIdx = matches.findIndex(
+            (m) => (start >= m.start && start < m.end) || (m.start >= start && m.start < end)
+          );
+
+          if (overlappingIdx === -1) {
+            // 겹치는 매칭이 없으면 추가
+            matches.push({ start, end, ids: filteredIds, korean: node.korean });
+          } else {
+            // 겹치는 매칭이 있으면, 새 매칭이 더 길면 대체
+            const existing = matches[overlappingIdx];
+            if (existing) {
+              const existingLen = existing.end - existing.start;
+              if (koreanLen > existingLen) {
+                matches[overlappingIdx] = { start, end, ids: filteredIds, korean: node.korean };
+              }
+            }
+          }
         }
       }
       checkState = node.fail;
@@ -597,7 +643,8 @@ function generateBinaryTrie(entries: JsonEntry[]): void {
 
   // 먼저 문자열 인덱스 수집
   for (const node of trie) {
-    getStringIndex(node.output);
+    // output은 string[] | null이므로 JSON.stringify로 저장
+    getStringIndex(node.output ? JSON.stringify(node.output) : null);
     getStringIndex(node.korean);
     for (const char of Object.keys(node.children)) {
       getStringIndex(char);
@@ -637,9 +684,9 @@ function generateBinaryTrie(entries: JsonEntry[]): void {
       bufferParts.push(nodeIdxBuf);
     }
 
-    // output (4바이트)
+    // output (4바이트) - JSON 문자열로 저장
     const outputBuf = Buffer.alloc(4);
-    outputBuf.writeUInt32LE(getStringIndex(node.output), 0);
+    outputBuf.writeUInt32LE(getStringIndex(node.output ? JSON.stringify(node.output) : null), 0);
     bufferParts.push(outputBuf);
 
     // korean (4바이트)

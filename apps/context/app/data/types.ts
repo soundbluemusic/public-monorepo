@@ -308,11 +308,13 @@ export interface UILabels {
  * 대화 한 줄 (화자와 텍스트)
  * @property speaker - 화자 ("A" 또는 "B")
  * @property ko - 한국어 텍스트
+ * @property romanization - 발음 표기 (영어로 소리나는 대로)
  * @property en - 영어 텍스트
  */
 export interface DialogueLine {
   speaker: 'A' | 'B';
   ko: string;
+  romanization: string;
   en: string;
 }
 

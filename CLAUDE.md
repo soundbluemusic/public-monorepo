@@ -513,6 +513,37 @@ Before any fix (수정 전 반드시):
 2. **Explain why naive fixes are wrong** - 단순 수정(삭제/하드코딩/비활성화)이 왜 잘못인지 설명
 3. **Verify existing functionality is preserved** - 기존 기능 유지 확인
 4. **Check for hardcoded values** - 하드코딩된 값이 있는지 확인
+5. **Verify in actual UI** - 실제 UI에서 확인 (⛔ CRITICAL)
+
+### UI Verification Rule (UI 검증 규칙) ⛔
+
+> **모든 변경사항은 실제 UI에서 동작이 확인되어야 완료로 간주합니다.**
+> 코드 변경만으로 "해결됨"이라고 주장하는 것은 금지됩니다.
+
+```
+❌ 절대 금지 (NEVER ALLOWED):
+- 코드만 수정하고 UI에서 확인하지 않고 "수정 완료" 주장
+- 빌드 성공만으로 기능이 작동한다고 가정
+- 배포 후 UI에서 다르게 보이는 것을 무시
+
+✅ 필수 검증 (REQUIRED VERIFICATION):
+- 로컬 개발 서버에서 실제 페이지 로드 확인
+- 영어 페이지와 한국어 페이지 모두 확인
+- 변경된 기능의 인터랙션 테스트 (클릭, 입력 등)
+- 모바일/데스크톱 뷰포트에서 확인
+```
+
+**왜 이 규칙이 필요한가:**
+- SSG 빌드는 성공해도 hydration 문제로 UI가 작동하지 않을 수 있음
+- 코드가 올바르게 보여도 실제 렌더링 결과가 다를 수 있음
+- 한국어/영어 페이지 간 데이터 불일치가 발생할 수 있음
+
+**검증 체크리스트:**
+- [ ] `pnpm dev:context` (또는 해당 앱)로 로컬 서버 실행
+- [ ] 변경된 페이지를 브라우저에서 직접 확인
+- [ ] 영어 버전 (`/entry/xxx`)과 한국어 버전 (`/ko/entry/xxx`) 모두 확인
+- [ ] 콘솔에 에러가 없는지 확인
+- [ ] 인터랙티브 요소 (버튼, 링크 등) 작동 확인
 
 ### Quality Standards (품질 기준)
 - Structural solutions over superficial patches (표면적 패치보다 구조적 해결)
