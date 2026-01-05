@@ -176,5 +176,11 @@
   "browseWordCount": "{count}개의 단어",
   "browsePageOf": "{current} / {total} 페이지",
   "browseNoWords": "단어가 없습니다",
-  "browseLoadingCategory": "카테고리 로딩 중..."
+  "browseLoadingCategory": "카테고리 로딩 중...",
+  "apiSectionTitle": "개발자용",
+  "apiSectionDescription": "raw GitHub URL로 데이터를 직접 가져오세요. API 키 불필요.",
+  "apiMetaJson": "먼저 meta.json을 가져와 사용 가능한 파일 목록을 확인하세요",
+  "apiCopyUrl": "URL 복사",
+  "apiCopied": "복사됨!",
+  "apiDataIncludes": "포함: 어휘 {count}개, 카테고리 {catCount}개, 대화 {convCount}개"
 }

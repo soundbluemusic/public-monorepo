@@ -9,7 +9,21 @@
  */
 
 import MiniSearch from 'minisearch';
+import { z } from 'zod';
 import type { DifficultyLevel, Language } from '@/data/types';
+
+/** Zod schema for runtime validation of search index items */
+const SearchIndexItemSchema = z.object({
+  id: z.string(),
+  name: z.object({ ko: z.string(), en: z.string() }),
+  field: z.string(),
+  subfield: z.string(),
+  difficulty: z.number(),
+  tags: z.array(z.string()),
+  def: z.object({ ko: z.string(), en: z.string() }),
+});
+
+const SearchIndexArraySchema = z.array(SearchIndexItemSchema);
 
 /** 검색 인덱스 아이템 (경량) */
 export interface SearchIndexItem {
@@ -59,9 +73,11 @@ async function loadSearchIndex(): Promise<SearchIndexItem[]> {
 
   indexLoadPromise = fetch('/search-index.json')
     .then((res) => res.json())
-    .then((data: SearchIndexItem[]) => {
-      searchIndex = data;
-      return data;
+    .then((data: unknown) => {
+      // Runtime validation of fetched data
+      const parsed = SearchIndexArraySchema.parse(data);
+      searchIndex = parsed;
+      return parsed;
     });
 
   return indexLoadPromise;

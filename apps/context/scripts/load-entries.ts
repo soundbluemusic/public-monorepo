@@ -125,7 +125,7 @@ function loadJsonEntries(): JsonEntry[] {
     const filePath = join(ENTRIES_DIR, file);
     try {
       const content = readFileSync(filePath, 'utf-8');
-      const data = JSON.parse(content);
+      const data: JsonEntry | JsonEntry[] = JSON.parse(content);
 
       if (Array.isArray(data)) {
         entries.push(...data);

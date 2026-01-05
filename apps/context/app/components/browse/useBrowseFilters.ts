@@ -1,7 +1,22 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router';
+import { z } from 'zod';
 import type { categories } from '@/data/categories';
 import type { LightEntry } from '@/data/entries';
+
+/** Zod schema for runtime validation of fetched LightEntry data */
+const LightEntrySchema = z.object({
+  id: z.string(),
+  korean: z.string(),
+  romanization: z.string(),
+  categoryId: z.string(),
+  word: z.object({
+    ko: z.string(),
+    en: z.string(),
+  }),
+});
+
+const LightEntryArraySchema = z.array(LightEntrySchema);
 
 export type FilterCategory = 'all' | string;
 
@@ -101,8 +116,10 @@ export function useBrowseFilters({
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json();
       })
-      .then((data: LightEntry[]) => {
-        setCategoryEntries(data);
+      .then((data: unknown) => {
+        // Runtime validation of fetched data
+        const parsed = LightEntryArraySchema.parse(data);
+        setCategoryEntries(parsed);
         setIsLoadingCategory(false);
       })
       .catch(() => {

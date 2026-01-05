@@ -21,6 +21,16 @@ export interface ParaglideConfig {
 }
 
 /**
+ * Type for parsed message JSON files
+ * Keys are message identifiers, values are translated strings
+ * $schema is optional and used for JSON schema validation
+ */
+interface MessageJson {
+  $schema?: string;
+  [key: string]: string | undefined;
+}
+
+/**
  * Generate Paraglide message functions from JSON files
  */
 export function generateParaglideMessages(config: ParaglideConfig): void {
@@ -28,8 +38,8 @@ export function generateParaglideMessages(config: ParaglideConfig): void {
   const messagesOutputDir = join(outputDir, 'messages');
 
   // Read message files
-  const enMessages = JSON.parse(readFileSync(join(messagesDir, 'en.json'), 'utf-8'));
-  const koMessages = JSON.parse(readFileSync(join(messagesDir, 'ko.json'), 'utf-8'));
+  const enMessages: MessageJson = JSON.parse(readFileSync(join(messagesDir, 'en.json'), 'utf-8'));
+  const koMessages: MessageJson = JSON.parse(readFileSync(join(messagesDir, 'ko.json'), 'utf-8'));
 
   // Create output directories
   mkdirSync(outputDir, { recursive: true });
@@ -40,8 +50,8 @@ export function generateParaglideMessages(config: ParaglideConfig): void {
   const messageExports: string[] = [];
 
   for (const key of messageKeys) {
-    const en = enMessages[key];
-    const ko = koMessages[key];
+    const en = enMessages[key] ?? '';
+    const ko = koMessages[key] ?? en; // Fallback to English if Korean not found
 
     const functionName = keyTransformer(key);
     const filename = `${keyTransformer(key).toLowerCase()}.js`;
