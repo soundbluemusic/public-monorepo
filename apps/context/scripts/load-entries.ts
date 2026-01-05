@@ -409,12 +409,25 @@ export function findExpressions(
       if (node.output && node.output !== excludeId && node.korean) {
         const koreanLen = node.korean.length;
         const start = i - koreanLen + 1;
-        // 겹치는 매칭 중 가장 긴 것만 유지 (이미 긴 것 우선 정렬됨)
-        const overlaps = matches.some(
-          (m) => (start >= m.start && start < m.end) || (m.start >= start && m.start < start + koreanLen)
+        const end = i + 1;
+
+        // 겹치는 매칭 찾기
+        const overlappingIdx = matches.findIndex(
+          (m) => (start >= m.start && start < m.end) || (m.start >= start && m.start < end)
         );
-        if (!overlaps) {
-          matches.push({ start, end: i + 1, id: node.output, korean: node.korean });
+
+        if (overlappingIdx === -1) {
+          // 겹치는 매칭이 없으면 추가
+          matches.push({ start, end, id: node.output, korean: node.korean });
+        } else {
+          // 겹치는 매칭이 있으면, 새 매칭이 더 길면 대체
+          const existing = matches[overlappingIdx];
+          if (existing) {
+            const existingLen = existing.end - existing.start;
+            if (koreanLen > existingLen) {
+              matches[overlappingIdx] = { start, end, id: node.output, korean: node.korean };
+            }
+          }
         }
       }
       checkState = node.fail;
