@@ -10264,6 +10264,3822 @@
     ]
   },
   {
+    "id": "antarctica",
+    "type": "entry",
+    "name": {
+      "ko": "남극 대륙",
+      "en": "Antarctica"
+    },
+    "description": {
+      "ko": "지구의 최남단에 있는 얼음으로 덮인 대륙입니다.",
+      "en": "The ice-covered continent at the southernmost part of Earth."
+    },
+    "field": "geography",
+    "tags": [
+      "continent",
+      "geography",
+      "namgeuk daeryuk"
+    ]
+  },
+  {
+    "id": "east-sea",
+    "type": "entry",
+    "name": {
+      "ko": "동해",
+      "en": "East Sea"
+    },
+    "description": {
+      "ko": "한반도 동쪽에 있는 바다입니다.",
+      "en": "The sea east of the Korean Peninsula."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "donghae"
+    ]
+  },
+  {
+    "id": "yellow-sea",
+    "type": "entry",
+    "name": {
+      "ko": "황해",
+      "en": "Yellow Sea"
+    },
+    "description": {
+      "ko": "한반도 서쪽에 있는 바다입니다.",
+      "en": "The sea west of the Korean Peninsula."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "hwanghae"
+    ]
+  },
+  {
+    "id": "east-china-sea",
+    "type": "entry",
+    "name": {
+      "ko": "동중국해",
+      "en": "East China Sea"
+    },
+    "description": {
+      "ko": "중국 동부와 일본 사이에 있는 바다입니다.",
+      "en": "The sea between eastern China and Japan."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "dongjunggukhae"
+    ]
+  },
+  {
+    "id": "south-china-sea",
+    "type": "entry",
+    "name": {
+      "ko": "남중국해",
+      "en": "South China Sea"
+    },
+    "description": {
+      "ko": "동남아시아 지역의 바다입니다.",
+      "en": "The sea in the Southeast Asian region."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "namjunggukhae"
+    ]
+  },
+  {
+    "id": "philippine-sea",
+    "type": "entry",
+    "name": {
+      "ko": "필리핀해",
+      "en": "Philippine Sea"
+    },
+    "description": {
+      "ko": "필리핀 동쪽에 있는 바다입니다.",
+      "en": "The sea east of the Philippines."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "pilripinhae"
+    ]
+  },
+  {
+    "id": "coral-sea",
+    "type": "entry",
+    "name": {
+      "ko": "산호해",
+      "en": "Coral Sea"
+    },
+    "description": {
+      "ko": "호주 북동쪽에 있는 바다입니다.",
+      "en": "The sea northeast of Australia."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "sanhohae"
+    ]
+  },
+  {
+    "id": "tasman-sea",
+    "type": "entry",
+    "name": {
+      "ko": "태즈먼해",
+      "en": "Tasman Sea"
+    },
+    "description": {
+      "ko": "호주와 뉴질랜드 사이에 있는 바다입니다.",
+      "en": "The sea between Australia and New Zealand."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "taejeumeonhae"
+    ]
+  },
+  {
+    "id": "bering-sea",
+    "type": "entry",
+    "name": {
+      "ko": "베링해",
+      "en": "Bering Sea"
+    },
+    "description": {
+      "ko": "알래스카와 러시아 사이에 있는 바다입니다.",
+      "en": "The sea between Alaska and Russia."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "beringhae"
+    ]
+  },
+  {
+    "id": "sea-of-okhotsk",
+    "type": "entry",
+    "name": {
+      "ko": "오호츠크해",
+      "en": "Sea of Okhotsk"
+    },
+    "description": {
+      "ko": "러시아 극동 지역의 바다입니다.",
+      "en": "The sea in Russia's Far East region."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "ohocheukeuhae"
+    ]
+  },
+  {
+    "id": "caribbean-sea",
+    "type": "entry",
+    "name": {
+      "ko": "카리브해",
+      "en": "Caribbean Sea"
+    },
+    "description": {
+      "ko": "중앙아메리카 지역의 바다입니다.",
+      "en": "The sea in the Central American region."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "karibeuhae"
+    ]
+  },
+  {
+    "id": "gulf-of-mexico",
+    "type": "entry",
+    "name": {
+      "ko": "멕시코만",
+      "en": "Gulf of Mexico"
+    },
+    "description": {
+      "ko": "북아메리카 남부에 있는 큰 만입니다.",
+      "en": "A large gulf in southern North America."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "meksikoman"
+    ]
+  },
+  {
+    "id": "mediterranean-sea",
+    "type": "entry",
+    "name": {
+      "ko": "지중해",
+      "en": "Mediterranean Sea"
+    },
+    "description": {
+      "ko": "유럽과 아프리카 사이에 있는 바다입니다.",
+      "en": "The sea between Europe and Africa."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "jijunghae"
+    ]
+  },
+  {
+    "id": "north-sea",
+    "type": "entry",
+    "name": {
+      "ko": "북해",
+      "en": "North Sea"
+    },
+    "description": {
+      "ko": "북유럽에 있는 바다입니다.",
+      "en": "The sea in Northern Europe."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "bukhae"
+    ]
+  },
+  {
+    "id": "baltic-sea",
+    "type": "entry",
+    "name": {
+      "ko": "발트해",
+      "en": "Baltic Sea"
+    },
+    "description": {
+      "ko": "북유럽의 내해입니다.",
+      "en": "An inland sea in Northern Europe."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "balteuhae"
+    ]
+  },
+  {
+    "id": "black-sea",
+    "type": "entry",
+    "name": {
+      "ko": "흑해",
+      "en": "Black Sea"
+    },
+    "description": {
+      "ko": "동유럽의 내해입니다.",
+      "en": "An inland sea in Eastern Europe."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "heukhae"
+    ]
+  },
+  {
+    "id": "norwegian-sea",
+    "type": "entry",
+    "name": {
+      "ko": "노르웨이해",
+      "en": "Norwegian Sea"
+    },
+    "description": {
+      "ko": "노르웨이 서쪽에 있는 바다입니다.",
+      "en": "The sea west of Norway."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "noreuweihae"
+    ]
+  },
+  {
+    "id": "arabian-sea",
+    "type": "entry",
+    "name": {
+      "ko": "아라비아해",
+      "en": "Arabian Sea"
+    },
+    "description": {
+      "ko": "인도 서쪽에 있는 바다입니다.",
+      "en": "The sea west of India."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "arabiahae"
+    ]
+  },
+  {
+    "id": "bay-of-bengal",
+    "type": "entry",
+    "name": {
+      "ko": "벵골만",
+      "en": "Bay of Bengal"
+    },
+    "description": {
+      "ko": "인도 동쪽에 있는 큰 만입니다.",
+      "en": "A large bay east of India."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "benggolman"
+    ]
+  },
+  {
+    "id": "red-sea",
+    "type": "entry",
+    "name": {
+      "ko": "홍해",
+      "en": "Red Sea"
+    },
+    "description": {
+      "ko": "아프리카와 아라비아 반도 사이에 있는 바다입니다.",
+      "en": "The sea between Africa and the Arabian Peninsula."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "honghae"
+    ]
+  },
+  {
+    "id": "persian-gulf",
+    "type": "entry",
+    "name": {
+      "ko": "페르시아만",
+      "en": "Persian Gulf"
+    },
+    "description": {
+      "ko": "중동 지역의 만입니다.",
+      "en": "A gulf in the Middle East region."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "pereusiaman"
+    ]
+  },
+  {
+    "id": "andaman-sea",
+    "type": "entry",
+    "name": {
+      "ko": "안다만해",
+      "en": "Andaman Sea"
+    },
+    "description": {
+      "ko": "동남아시아의 바다입니다.",
+      "en": "A sea in Southeast Asia."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "andamanhae"
+    ]
+  },
+  {
+    "id": "java-sea",
+    "type": "entry",
+    "name": {
+      "ko": "자바해",
+      "en": "Java Sea"
+    },
+    "description": {
+      "ko": "인도네시아의 바다입니다.",
+      "en": "A sea in Indonesia."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "jabahae"
+    ]
+  },
+  {
+    "id": "barents-sea",
+    "type": "entry",
+    "name": {
+      "ko": "바렌츠해",
+      "en": "Barents Sea"
+    },
+    "description": {
+      "ko": "러시아 북부의 바다입니다.",
+      "en": "A sea in northern Russia."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "barencheuhae"
+    ]
+  },
+  {
+    "id": "kara-sea",
+    "type": "entry",
+    "name": {
+      "ko": "카라해",
+      "en": "Kara Sea"
+    },
+    "description": {
+      "ko": "시베리아 북부의 바다입니다.",
+      "en": "A sea in northern Siberia."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "karahae"
+    ]
+  },
+  {
+    "id": "chukchi-sea",
+    "type": "entry",
+    "name": {
+      "ko": "축치해",
+      "en": "Chukchi Sea"
+    },
+    "description": {
+      "ko": "러시아와 알래스카 북부의 바다입니다.",
+      "en": "A sea north of Russia and Alaska."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "chukchihae"
+    ]
+  },
+  {
+    "id": "beaufort-sea",
+    "type": "entry",
+    "name": {
+      "ko": "보퍼트해",
+      "en": "Beaufort Sea"
+    },
+    "description": {
+      "ko": "캐나다 북부의 바다입니다.",
+      "en": "A sea in northern Canada."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "bopeoteuhae"
+    ]
+  },
+  {
+    "id": "greenland-sea",
+    "type": "entry",
+    "name": {
+      "ko": "그린란드해",
+      "en": "Greenland Sea"
+    },
+    "description": {
+      "ko": "그린란드 동쪽의 바다입니다.",
+      "en": "A sea east of Greenland."
+    },
+    "field": "geography",
+    "tags": [
+      "sea",
+      "geography",
+      "geurinrandeuhae"
+    ]
+  },
+  {
+    "id": "korea-strait",
+    "type": "entry",
+    "name": {
+      "ko": "대한해협",
+      "en": "Korea Strait"
+    },
+    "description": {
+      "ko": "한국과 일본 사이의 해협입니다.",
+      "en": "The strait between Korea and Japan."
+    },
+    "field": "geography",
+    "tags": [
+      "strait",
+      "geography",
+      "daehanhyeop"
+    ]
+  },
+  {
+    "id": "strait-of-gibraltar",
+    "type": "entry",
+    "name": {
+      "ko": "지브롤터 해협",
+      "en": "Strait of Gibraltar"
+    },
+    "description": {
+      "ko": "유럽과 아프리카를 연결하는 해협입니다.",
+      "en": "The strait connecting Europe and Africa."
+    },
+    "field": "geography",
+    "tags": [
+      "strait",
+      "geography",
+      "jibeurolteo haehyeop"
+    ]
+  },
+  {
+    "id": "strait-of-malacca",
+    "type": "entry",
+    "name": {
+      "ko": "말라카 해협",
+      "en": "Strait of Malacca"
+    },
+    "description": {
+      "ko": "동남아시아의 주요 해상 항로입니다.",
+      "en": "A major shipping route in Southeast Asia."
+    },
+    "field": "geography",
+    "tags": [
+      "strait",
+      "geography",
+      "malraka haehyeop"
+    ]
+  },
+  {
+    "id": "bering-strait",
+    "type": "entry",
+    "name": {
+      "ko": "베링 해협",
+      "en": "Bering Strait"
+    },
+    "description": {
+      "ko": "아시아와 북아메리카 사이의 해협입니다.",
+      "en": "The strait between Asia and North America."
+    },
+    "field": "geography",
+    "tags": [
+      "strait",
+      "geography",
+      "bering haehyeop"
+    ]
+  },
+  {
+    "id": "english-channel",
+    "type": "entry",
+    "name": {
+      "ko": "영국 해협",
+      "en": "English Channel"
+    },
+    "description": {
+      "ko": "영국과 프랑스 사이의 해협입니다.",
+      "en": "The strait between England and France."
+    },
+    "field": "geography",
+    "tags": [
+      "strait",
+      "geography",
+      "yeongguk haehyeop"
+    ]
+  },
+  {
+    "id": "strait-of-hormuz",
+    "type": "entry",
+    "name": {
+      "ko": "호르무즈 해협",
+      "en": "Strait of Hormuz"
+    },
+    "description": {
+      "ko": "페르시아만 입구의 해협입니다.",
+      "en": "The strait at the entrance of the Persian Gulf."
+    },
+    "field": "geography",
+    "tags": [
+      "strait",
+      "geography",
+      "horeumujeu haehyeop"
+    ]
+  },
+  {
+    "id": "taiwan-strait",
+    "type": "entry",
+    "name": {
+      "ko": "대만 해협",
+      "en": "Taiwan Strait"
+    },
+    "description": {
+      "ko": "중국과 대만 사이의 해협입니다.",
+      "en": "The strait between China and Taiwan."
+    },
+    "field": "geography",
+    "tags": [
+      "strait",
+      "geography",
+      "daeman haehyeop"
+    ]
+  },
+  {
+    "id": "bosphorus",
+    "type": "entry",
+    "name": {
+      "ko": "보스포루스 해협",
+      "en": "Bosphorus"
+    },
+    "description": {
+      "ko": "유럽과 아시아의 경계를 이루는 해협입니다.",
+      "en": "The strait forming the boundary between Europe and Asia."
+    },
+    "field": "geography",
+    "tags": [
+      "strait",
+      "geography",
+      "boseuporuseu haehyeop"
+    ]
+  },
+  {
+    "id": "drake-passage",
+    "type": "entry",
+    "name": {
+      "ko": "드레이크 해협",
+      "en": "Drake Passage"
+    },
+    "description": {
+      "ko": "남아메리카와 남극 사이의 해협입니다.",
+      "en": "The strait between South America and Antarctica."
+    },
+    "field": "geography",
+    "tags": [
+      "strait",
+      "geography",
+      "deureikeu haehyeop"
+    ]
+  },
+  {
+    "id": "korean-peninsula",
+    "type": "entry",
+    "name": {
+      "ko": "한반도",
+      "en": "Korean Peninsula"
+    },
+    "description": {
+      "ko": "동북아시아에 있는 반도입니다.",
+      "en": "A peninsula in Northeast Asia."
+    },
+    "field": "geography",
+    "tags": [
+      "peninsula",
+      "geography",
+      "hanbando"
+    ]
+  },
+  {
+    "id": "iberian-peninsula",
+    "type": "entry",
+    "name": {
+      "ko": "이베리아 반도",
+      "en": "Iberian Peninsula"
+    },
+    "description": {
+      "ko": "스페인과 포르투갈이 있는 반도입니다.",
+      "en": "The peninsula where Spain and Portugal are located."
+    },
+    "field": "geography",
+    "tags": [
+      "peninsula",
+      "geography",
+      "iberia bando"
+    ]
+  },
+  {
+    "id": "italian-peninsula",
+    "type": "entry",
+    "name": {
+      "ko": "이탈리아 반도",
+      "en": "Italian Peninsula"
+    },
+    "description": {
+      "ko": "장화 모양의 반도입니다.",
+      "en": "A boot-shaped peninsula."
+    },
+    "field": "geography",
+    "tags": [
+      "peninsula",
+      "geography",
+      "italria bando"
+    ]
+  },
+  {
+    "id": "balkan-peninsula",
+    "type": "entry",
+    "name": {
+      "ko": "발칸 반도",
+      "en": "Balkan Peninsula"
+    },
+    "description": {
+      "ko": "남동유럽의 반도입니다.",
+      "en": "A peninsula in Southeastern Europe."
+    },
+    "field": "geography",
+    "tags": [
+      "peninsula",
+      "geography",
+      "balkan bando"
+    ]
+  },
+  {
+    "id": "scandinavian-peninsula",
+    "type": "entry",
+    "name": {
+      "ko": "스칸디나비아 반도",
+      "en": "Scandinavian Peninsula"
+    },
+    "description": {
+      "ko": "북유럽의 반도입니다.",
+      "en": "A peninsula in Northern Europe."
+    },
+    "field": "geography",
+    "tags": [
+      "peninsula",
+      "geography",
+      "seukandinabia bando"
+    ]
+  },
+  {
+    "id": "arabian-peninsula",
+    "type": "entry",
+    "name": {
+      "ko": "아라비아 반도",
+      "en": "Arabian Peninsula"
+    },
+    "description": {
+      "ko": "세계에서 가장 큰 반도입니다.",
+      "en": "The largest peninsula in the world."
+    },
+    "field": "geography",
+    "tags": [
+      "peninsula",
+      "geography",
+      "arabia bando"
+    ]
+  },
+  {
+    "id": "indochina-peninsula",
+    "type": "entry",
+    "name": {
+      "ko": "인도차이나 반도",
+      "en": "Indochina Peninsula"
+    },
+    "description": {
+      "ko": "동남아시아의 반도입니다.",
+      "en": "A peninsula in Southeast Asia."
+    },
+    "field": "geography",
+    "tags": [
+      "peninsula",
+      "geography",
+      "indochaina bando"
+    ]
+  },
+  {
+    "id": "malay-peninsula",
+    "type": "entry",
+    "name": {
+      "ko": "말레이 반도",
+      "en": "Malay Peninsula"
+    },
+    "description": {
+      "ko": "동남아시아 남단의 반도입니다.",
+      "en": "A peninsula at the southern end of Southeast Asia."
+    },
+    "field": "geography",
+    "tags": [
+      "peninsula",
+      "geography",
+      "malrei bando"
+    ]
+  },
+  {
+    "id": "kamchatka-peninsula",
+    "type": "entry",
+    "name": {
+      "ko": "캄차카 반도",
+      "en": "Kamchatka Peninsula"
+    },
+    "description": {
+      "ko": "러시아 극동의 반도입니다.",
+      "en": "A peninsula in Russia's Far East."
+    },
+    "field": "geography",
+    "tags": [
+      "peninsula",
+      "geography",
+      "kamchaka bando"
+    ]
+  },
+  {
+    "id": "sinai-peninsula",
+    "type": "entry",
+    "name": {
+      "ko": "시나이 반도",
+      "en": "Sinai Peninsula"
+    },
+    "description": {
+      "ko": "아시아와 아프리카를 연결하는 반도입니다.",
+      "en": "A peninsula connecting Asia and Africa."
+    },
+    "field": "geography",
+    "tags": [
+      "peninsula",
+      "geography",
+      "sinai bando"
+    ]
+  },
+  {
+    "id": "florida-peninsula",
+    "type": "entry",
+    "name": {
+      "ko": "플로리다 반도",
+      "en": "Florida Peninsula"
+    },
+    "description": {
+      "ko": "미국 남동부의 반도입니다.",
+      "en": "A peninsula in southeastern United States."
+    },
+    "field": "geography",
+    "tags": [
+      "peninsula",
+      "geography",
+      "peulrorida bando"
+    ]
+  },
+  {
+    "id": "crimean-peninsula",
+    "type": "entry",
+    "name": {
+      "ko": "크림 반도",
+      "en": "Crimean Peninsula"
+    },
+    "description": {
+      "ko": "흑해 북부의 반도입니다.",
+      "en": "A peninsula in the northern Black Sea."
+    },
+    "field": "geography",
+    "tags": [
+      "peninsula",
+      "geography",
+      "keurim bando"
+    ]
+  },
+  {
+    "id": "anatolia",
+    "type": "entry",
+    "name": {
+      "ko": "아나톨리아 반도",
+      "en": "Anatolia"
+    },
+    "description": {
+      "ko": "터키 본토를 이루는 반도입니다.",
+      "en": "The peninsula that makes up mainland Turkey."
+    },
+    "field": "geography",
+    "tags": [
+      "peninsula",
+      "geography",
+      "anatolria bando"
+    ]
+  },
+  {
+    "id": "new-guinea",
+    "type": "entry",
+    "name": {
+      "ko": "뉴기니",
+      "en": "New Guinea"
+    },
+    "description": {
+      "ko": "세계에서 두 번째로 큰 섬입니다.",
+      "en": "The second largest island in the world."
+    },
+    "field": "geography",
+    "tags": [
+      "island",
+      "geography",
+      "nyugini"
+    ]
+  },
+  {
+    "id": "borneo",
+    "type": "entry",
+    "name": {
+      "ko": "보르네오",
+      "en": "Borneo"
+    },
+    "description": {
+      "ko": "세계에서 세 번째로 큰 섬입니다.",
+      "en": "The third largest island in the world."
+    },
+    "field": "geography",
+    "tags": [
+      "island",
+      "geography",
+      "boreuneo"
+    ]
+  },
+  {
+    "id": "great-britain",
+    "type": "entry",
+    "name": {
+      "ko": "그레이트브리튼",
+      "en": "Great Britain"
+    },
+    "description": {
+      "ko": "영국의 본섬입니다.",
+      "en": "The main island of the United Kingdom."
+    },
+    "field": "geography",
+    "tags": [
+      "island",
+      "geography",
+      "geureiteubeuriteun"
+    ]
+  },
+  {
+    "id": "honshu",
+    "type": "entry",
+    "name": {
+      "ko": "혼슈",
+      "en": "Honshu"
+    },
+    "description": {
+      "ko": "일본에서 가장 큰 섬입니다.",
+      "en": "The largest island in Japan."
+    },
+    "field": "geography",
+    "tags": [
+      "island",
+      "geography",
+      "honsyu"
+    ]
+  },
+  {
+    "id": "sumatra",
+    "type": "entry",
+    "name": {
+      "ko": "수마트라",
+      "en": "Sumatra"
+    },
+    "description": {
+      "ko": "인도네시아의 대형 섬입니다.",
+      "en": "A large island in Indonesia."
+    },
+    "field": "geography",
+    "tags": [
+      "island",
+      "geography",
+      "sumateura"
+    ]
+  },
+  {
+    "id": "java",
+    "type": "entry",
+    "name": {
+      "ko": "자바",
+      "en": "Java"
+    },
+    "description": {
+      "ko": "인도네시아의 인구 중심 섬입니다.",
+      "en": "The population center island of Indonesia."
+    },
+    "field": "geography",
+    "tags": [
+      "island",
+      "geography",
+      "jaba"
+    ]
+  },
+  {
+    "id": "jeju-island",
+    "type": "entry",
+    "name": {
+      "ko": "제주도",
+      "en": "Jeju Island"
+    },
+    "description": {
+      "ko": "한국에서 가장 큰 섬입니다.",
+      "en": "The largest island in Korea."
+    },
+    "field": "geography",
+    "tags": [
+      "island",
+      "geography",
+      "jejudo"
+    ]
+  },
+  {
+    "id": "sicily",
+    "type": "entry",
+    "name": {
+      "ko": "시칠리아",
+      "en": "Sicily"
+    },
+    "description": {
+      "ko": "지중해에서 가장 큰 섬입니다.",
+      "en": "The largest island in the Mediterranean."
+    },
+    "field": "geography",
+    "tags": [
+      "island",
+      "geography",
+      "sichilria"
+    ]
+  },
+  {
+    "id": "hokkaido",
+    "type": "entry",
+    "name": {
+      "ko": "홋카이도",
+      "en": "Hokkaido"
+    },
+    "description": {
+      "ko": "일본 북부의 섬입니다.",
+      "en": "The northern island of Japan."
+    },
+    "field": "geography",
+    "tags": [
+      "island",
+      "geography",
+      "hoskaido"
+    ]
+  },
+  {
+    "id": "tasmania",
+    "type": "entry",
+    "name": {
+      "ko": "태즈메이니아",
+      "en": "Tasmania"
+    },
+    "description": {
+      "ko": "호주 남부의 섬입니다.",
+      "en": "An island south of Australia."
+    },
+    "field": "geography",
+    "tags": [
+      "island",
+      "geography",
+      "taejeumeinia"
+    ]
+  },
+  {
+    "id": "crete",
+    "type": "entry",
+    "name": {
+      "ko": "크레타",
+      "en": "Crete"
+    },
+    "description": {
+      "ko": "그리스에서 가장 큰 섬입니다.",
+      "en": "The largest island in Greece."
+    },
+    "field": "geography",
+    "tags": [
+      "island",
+      "geography",
+      "keureta"
+    ]
+  },
+  {
+    "id": "hawaiian-islands",
+    "type": "entry",
+    "name": {
+      "ko": "하와이 제도",
+      "en": "Hawaiian Islands"
+    },
+    "description": {
+      "ko": "태평양 중앙의 군도입니다.",
+      "en": "An archipelago in the central Pacific."
+    },
+    "field": "geography",
+    "tags": [
+      "archipelago",
+      "geography",
+      "hawai jedo"
+    ]
+  },
+  {
+    "id": "philippine-archipelago",
+    "type": "entry",
+    "name": {
+      "ko": "필리핀 군도",
+      "en": "Philippine Archipelago"
+    },
+    "description": {
+      "ko": "7,000여 개의 섬으로 이루어진 군도입니다.",
+      "en": "An archipelago consisting of over 7,000 islands."
+    },
+    "field": "geography",
+    "tags": [
+      "archipelago",
+      "geography",
+      "pilripin gundo"
+    ]
+  },
+  {
+    "id": "indonesian-archipelago",
+    "type": "entry",
+    "name": {
+      "ko": "인도네시아 군도",
+      "en": "Indonesian Archipelago"
+    },
+    "description": {
+      "ko": "세계에서 가장 큰 군도입니다.",
+      "en": "The largest archipelago in the world."
+    },
+    "field": "geography",
+    "tags": [
+      "archipelago",
+      "geography",
+      "indonesia gundo"
+    ]
+  },
+  {
+    "id": "japanese-archipelago",
+    "type": "entry",
+    "name": {
+      "ko": "일본 열도",
+      "en": "Japanese Archipelago"
+    },
+    "description": {
+      "ko": "동아시아의 섬나라입니다.",
+      "en": "An island nation in East Asia."
+    },
+    "field": "geography",
+    "tags": [
+      "archipelago",
+      "geography",
+      "ilbon yeoldo"
+    ]
+  },
+  {
+    "id": "british-isles",
+    "type": "entry",
+    "name": {
+      "ko": "영국 제도",
+      "en": "British Isles"
+    },
+    "description": {
+      "ko": "북서유럽의 군도입니다.",
+      "en": "An archipelago in Northwestern Europe."
+    },
+    "field": "geography",
+    "tags": [
+      "archipelago",
+      "geography",
+      "yeongguk jedo"
+    ]
+  },
+  {
+    "id": "caribbean-islands",
+    "type": "entry",
+    "name": {
+      "ko": "카리브 제도",
+      "en": "Caribbean Islands"
+    },
+    "description": {
+      "ko": "중앙아메리카의 섬들입니다.",
+      "en": "Islands in Central America."
+    },
+    "field": "geography",
+    "tags": [
+      "archipelago",
+      "geography",
+      "karibeu jedo"
+    ]
+  },
+  {
+    "id": "galapagos-islands",
+    "type": "entry",
+    "name": {
+      "ko": "갈라파고스 제도",
+      "en": "Galapagos Islands"
+    },
+    "description": {
+      "ko": "에콰도르령 태평양 섬입니다.",
+      "en": "Ecuadorian Pacific islands."
+    },
+    "field": "geography",
+    "tags": [
+      "archipelago",
+      "geography",
+      "galrapagoseu jedo"
+    ]
+  },
+  {
+    "id": "canary-islands",
+    "type": "entry",
+    "name": {
+      "ko": "카나리아 제도",
+      "en": "Canary Islands"
+    },
+    "description": {
+      "ko": "스페인령 대서양 섬입니다.",
+      "en": "Spanish Atlantic islands."
+    },
+    "field": "geography",
+    "tags": [
+      "archipelago",
+      "geography",
+      "kanaria jedo"
+    ]
+  },
+  {
+    "id": "himalayas",
+    "type": "entry",
+    "name": {
+      "ko": "히말라야 산맥",
+      "en": "Himalayas"
+    },
+    "description": {
+      "ko": "세계에서 가장 높은 산맥입니다.",
+      "en": "The highest mountain range in the world."
+    },
+    "field": "geography",
+    "tags": [
+      "mountainRange",
+      "geography",
+      "himalraya sanmaek"
+    ]
+  },
+  {
+    "id": "andes",
+    "type": "entry",
+    "name": {
+      "ko": "안데스 산맥",
+      "en": "Andes"
+    },
+    "description": {
+      "ko": "세계에서 가장 긴 산맥입니다.",
+      "en": "The longest mountain range in the world."
+    },
+    "field": "geography",
+    "tags": [
+      "mountainRange",
+      "geography",
+      "andeseu sanmaek"
+    ]
+  },
+  {
+    "id": "rocky-mountains",
+    "type": "entry",
+    "name": {
+      "ko": "로키 산맥",
+      "en": "Rocky Mountains"
+    },
+    "description": {
+      "ko": "북미 서부의 산맥입니다.",
+      "en": "A mountain range in western North America."
+    },
+    "field": "geography",
+    "tags": [
+      "mountainRange",
+      "geography",
+      "roki sanmaek"
+    ]
+  },
+  {
+    "id": "alps",
+    "type": "entry",
+    "name": {
+      "ko": "알프스 산맥",
+      "en": "Alps"
+    },
+    "description": {
+      "ko": "유럽 중앙의 산맥입니다.",
+      "en": "A mountain range in central Europe."
+    },
+    "field": "geography",
+    "tags": [
+      "mountainRange",
+      "geography",
+      "alpeuseu sanmaek"
+    ]
+  },
+  {
+    "id": "ural-mountains",
+    "type": "entry",
+    "name": {
+      "ko": "우랄 산맥",
+      "en": "Ural Mountains"
+    },
+    "description": {
+      "ko": "유럽과 아시아의 경계를 이루는 산맥입니다.",
+      "en": "A mountain range forming the boundary between Europe and Asia."
+    },
+    "field": "geography",
+    "tags": [
+      "mountainRange",
+      "geography",
+      "ural sanmaek"
+    ]
+  },
+  {
+    "id": "carpathian-mountains",
+    "type": "entry",
+    "name": {
+      "ko": "카르파티아 산맥",
+      "en": "Carpathian Mountains"
+    },
+    "description": {
+      "ko": "동유럽의 산맥입니다.",
+      "en": "A mountain range in Eastern Europe."
+    },
+    "field": "geography",
+    "tags": [
+      "mountainRange",
+      "geography",
+      "kareupatia sanmaek"
+    ]
+  },
+  {
+    "id": "pyrenees",
+    "type": "entry",
+    "name": {
+      "ko": "피레네 산맥",
+      "en": "Pyrenees"
+    },
+    "description": {
+      "ko": "프랑스와 스페인 경계의 산맥입니다.",
+      "en": "A mountain range on the France-Spain border."
+    },
+    "field": "geography",
+    "tags": [
+      "mountainRange",
+      "geography",
+      "pirene sanmaek"
+    ]
+  },
+  {
+    "id": "caucasus-mountains",
+    "type": "entry",
+    "name": {
+      "ko": "캅카스 산맥",
+      "en": "Caucasus Mountains"
+    },
+    "description": {
+      "ko": "유럽과 아시아 경계의 산맥입니다.",
+      "en": "A mountain range on the Europe-Asia border."
+    },
+    "field": "geography",
+    "tags": [
+      "mountainRange",
+      "geography",
+      "kapkaseu sanmaek"
+    ]
+  },
+  {
+    "id": "atlas-mountains",
+    "type": "entry",
+    "name": {
+      "ko": "아틀라스 산맥",
+      "en": "Atlas Mountains"
+    },
+    "description": {
+      "ko": "북아프리카의 산맥입니다.",
+      "en": "A mountain range in North Africa."
+    },
+    "field": "geography",
+    "tags": [
+      "mountainRange",
+      "geography",
+      "ateulraseu sanmaek"
+    ]
+  },
+  {
+    "id": "appalachian-mountains",
+    "type": "entry",
+    "name": {
+      "ko": "애팔래치아 산맥",
+      "en": "Appalachian Mountains"
+    },
+    "description": {
+      "ko": "북미 동부의 산맥입니다.",
+      "en": "A mountain range in eastern North America."
+    },
+    "field": "geography",
+    "tags": [
+      "mountainRange",
+      "geography",
+      "aepalraechia sanmaek"
+    ]
+  },
+  {
+    "id": "altai-mountains",
+    "type": "entry",
+    "name": {
+      "ko": "알타이 산맥",
+      "en": "Altai Mountains"
+    },
+    "description": {
+      "ko": "중앙아시아의 산맥입니다.",
+      "en": "A mountain range in Central Asia."
+    },
+    "field": "geography",
+    "tags": [
+      "mountainRange",
+      "geography",
+      "altai sanmaek"
+    ]
+  },
+  {
+    "id": "tian-shan",
+    "type": "entry",
+    "name": {
+      "ko": "톈산 산맥",
+      "en": "Tian Shan"
+    },
+    "description": {
+      "ko": "중앙아시아의 산맥입니다.",
+      "en": "A mountain range in Central Asia."
+    },
+    "field": "geography",
+    "tags": [
+      "mountainRange",
+      "geography",
+      "tyensan sanmaek"
+    ]
+  },
+  {
+    "id": "hindu-kush",
+    "type": "entry",
+    "name": {
+      "ko": "힌두쿠시 산맥",
+      "en": "Hindu Kush"
+    },
+    "description": {
+      "ko": "아프가니스탄의 산맥입니다.",
+      "en": "A mountain range in Afghanistan."
+    },
+    "field": "geography",
+    "tags": [
+      "mountainRange",
+      "geography",
+      "hindukusi sanmaek"
+    ]
+  },
+  {
+    "id": "karakoram",
+    "type": "entry",
+    "name": {
+      "ko": "카라코람 산맥",
+      "en": "Karakoram"
+    },
+    "description": {
+      "ko": "히말라야 서부의 산맥입니다.",
+      "en": "A mountain range west of the Himalayas."
+    },
+    "field": "geography",
+    "tags": [
+      "mountainRange",
+      "geography",
+      "karakoram sanmaek"
+    ]
+  },
+  {
+    "id": "sierra-nevada",
+    "type": "entry",
+    "name": {
+      "ko": "시에라네바다 산맥",
+      "en": "Sierra Nevada"
+    },
+    "description": {
+      "ko": "미국 캘리포니아의 산맥입니다.",
+      "en": "A mountain range in California, USA."
+    },
+    "field": "geography",
+    "tags": [
+      "mountainRange",
+      "geography",
+      "sieranebada sanmaek"
+    ]
+  },
+  {
+    "id": "taebaek-mountains",
+    "type": "entry",
+    "name": {
+      "ko": "태백산맥",
+      "en": "Taebaek Mountains"
+    },
+    "description": {
+      "ko": "한반도 동부의 산맥입니다.",
+      "en": "A mountain range in eastern Korean Peninsula."
+    },
+    "field": "geography",
+    "tags": [
+      "mountainRange",
+      "geography",
+      "taebaeksanmaek"
+    ]
+  },
+  {
+    "id": "mount-everest",
+    "type": "entry",
+    "name": {
+      "ko": "에베레스트 산",
+      "en": "Mount Everest"
+    },
+    "description": {
+      "ko": "세계에서 가장 높은 산입니다 (8,849m).",
+      "en": "The highest mountain in the world (8,849m)."
+    },
+    "field": "geography",
+    "tags": [
+      "mountain",
+      "geography",
+      "ebereseuteu san"
+    ]
+  },
+  {
+    "id": "k2",
+    "type": "entry",
+    "name": {
+      "ko": "K2",
+      "en": "K2"
+    },
+    "description": {
+      "ko": "세계에서 두 번째로 높은 산입니다 (8,611m).",
+      "en": "The second highest mountain in the world (8,611m)."
+    },
+    "field": "geography",
+    "tags": [
+      "mountain",
+      "geography",
+      "K2"
+    ]
+  },
+  {
+    "id": "mont-blanc",
+    "type": "entry",
+    "name": {
+      "ko": "몽블랑",
+      "en": "Mont Blanc"
+    },
+    "description": {
+      "ko": "알프스의 최고봉입니다.",
+      "en": "The highest peak in the Alps."
+    },
+    "field": "geography",
+    "tags": [
+      "mountain",
+      "geography",
+      "mongbeulrang"
+    ]
+  },
+  {
+    "id": "mount-kilimanjaro",
+    "type": "entry",
+    "name": {
+      "ko": "킬리만자로 산",
+      "en": "Mount Kilimanjaro"
+    },
+    "description": {
+      "ko": "아프리카의 최고봉입니다.",
+      "en": "The highest peak in Africa."
+    },
+    "field": "geography",
+    "tags": [
+      "mountain",
+      "geography",
+      "kilrimanjaro san"
+    ]
+  },
+  {
+    "id": "mount-fuji",
+    "type": "entry",
+    "name": {
+      "ko": "후지산",
+      "en": "Mount Fuji"
+    },
+    "description": {
+      "ko": "일본의 최고봉입니다.",
+      "en": "The highest peak in Japan."
+    },
+    "field": "geography",
+    "tags": [
+      "mountain",
+      "geography",
+      "fujisan"
+    ]
+  },
+  {
+    "id": "denali",
+    "type": "entry",
+    "name": {
+      "ko": "데날리",
+      "en": "Denali"
+    },
+    "description": {
+      "ko": "북미의 최고봉입니다.",
+      "en": "The highest peak in North America."
+    },
+    "field": "geography",
+    "tags": [
+      "mountain",
+      "geography",
+      "denalri"
+    ]
+  },
+  {
+    "id": "aconcagua",
+    "type": "entry",
+    "name": {
+      "ko": "아콩카과",
+      "en": "Aconcagua"
+    },
+    "description": {
+      "ko": "남미의 최고봉입니다.",
+      "en": "The highest peak in South America."
+    },
+    "field": "geography",
+    "tags": [
+      "mountain",
+      "geography",
+      "akongkagwa"
+    ]
+  },
+  {
+    "id": "mount-elbrus",
+    "type": "entry",
+    "name": {
+      "ko": "엘브루스 산",
+      "en": "Mount Elbrus"
+    },
+    "description": {
+      "ko": "유럽의 최고봉입니다.",
+      "en": "The highest peak in Europe."
+    },
+    "field": "geography",
+    "tags": [
+      "mountain",
+      "geography",
+      "elbeuruseu san"
+    ]
+  },
+  {
+    "id": "matterhorn",
+    "type": "entry",
+    "name": {
+      "ko": "마터호른",
+      "en": "Matterhorn"
+    },
+    "description": {
+      "ko": "알프스의 상징적인 봉우리입니다.",
+      "en": "An iconic peak in the Alps."
+    },
+    "field": "geography",
+    "tags": [
+      "mountain",
+      "geography",
+      "mateohoreun"
+    ]
+  },
+  {
+    "id": "mount-vesuvius",
+    "type": "entry",
+    "name": {
+      "ko": "베수비오 산",
+      "en": "Mount Vesuvius"
+    },
+    "description": {
+      "ko": "이탈리아의 활화산입니다.",
+      "en": "An active volcano in Italy."
+    },
+    "field": "geography",
+    "tags": [
+      "mountain",
+      "geography",
+      "besubio san"
+    ]
+  },
+  {
+    "id": "mount-etna",
+    "type": "entry",
+    "name": {
+      "ko": "에트나 산",
+      "en": "Mount Etna"
+    },
+    "description": {
+      "ko": "유럽 최대의 활화산입니다.",
+      "en": "The largest active volcano in Europe."
+    },
+    "field": "geography",
+    "tags": [
+      "mountain",
+      "geography",
+      "eteuna san"
+    ]
+  },
+  {
+    "id": "mauna-kea",
+    "type": "entry",
+    "name": {
+      "ko": "마우나케아",
+      "en": "Mauna Kea"
+    },
+    "description": {
+      "ko": "하와이의 최고봉입니다.",
+      "en": "The highest peak in Hawaii."
+    },
+    "field": "geography",
+    "tags": [
+      "mountain",
+      "geography",
+      "maunakea"
+    ]
+  },
+  {
+    "id": "hallasan",
+    "type": "entry",
+    "name": {
+      "ko": "한라산",
+      "en": "Hallasan"
+    },
+    "description": {
+      "ko": "한국의 최고봉입니다.",
+      "en": "The highest peak in South Korea."
+    },
+    "field": "geography",
+    "tags": [
+      "mountain",
+      "geography",
+      "hallasan"
+    ]
+  },
+  {
+    "id": "baekdusan",
+    "type": "entry",
+    "name": {
+      "ko": "백두산",
+      "en": "Baekdusan"
+    },
+    "description": {
+      "ko": "한반도의 최고봉입니다.",
+      "en": "The highest peak on the Korean Peninsula."
+    },
+    "field": "geography",
+    "tags": [
+      "mountain",
+      "geography",
+      "baekdusan"
+    ]
+  },
+  {
+    "id": "sahara-desert",
+    "type": "entry",
+    "name": {
+      "ko": "사하라 사막",
+      "en": "Sahara Desert"
+    },
+    "description": {
+      "ko": "세계에서 가장 큰 열사막입니다.",
+      "en": "The largest hot desert in the world."
+    },
+    "field": "geography",
+    "tags": [
+      "desert",
+      "geography",
+      "sahara samak"
+    ]
+  },
+  {
+    "id": "arabian-desert",
+    "type": "entry",
+    "name": {
+      "ko": "아라비아 사막",
+      "en": "Arabian Desert"
+    },
+    "description": {
+      "ko": "아라비아 반도의 사막입니다.",
+      "en": "The desert on the Arabian Peninsula."
+    },
+    "field": "geography",
+    "tags": [
+      "desert",
+      "geography",
+      "arabia samak"
+    ]
+  },
+  {
+    "id": "gobi-desert",
+    "type": "entry",
+    "name": {
+      "ko": "고비 사막",
+      "en": "Gobi Desert"
+    },
+    "description": {
+      "ko": "동아시아의 사막입니다.",
+      "en": "A desert in East Asia."
+    },
+    "field": "geography",
+    "tags": [
+      "desert",
+      "geography",
+      "gobi samak"
+    ]
+  },
+  {
+    "id": "kalahari-desert",
+    "type": "entry",
+    "name": {
+      "ko": "칼라하리 사막",
+      "en": "Kalahari Desert"
+    },
+    "description": {
+      "ko": "남아프리카의 사막입니다.",
+      "en": "A desert in Southern Africa."
+    },
+    "field": "geography",
+    "tags": [
+      "desert",
+      "geography",
+      "kalrahari samak"
+    ]
+  },
+  {
+    "id": "atacama-desert",
+    "type": "entry",
+    "name": {
+      "ko": "아타카마 사막",
+      "en": "Atacama Desert"
+    },
+    "description": {
+      "ko": "세계에서 가장 건조한 사막입니다.",
+      "en": "The driest desert in the world."
+    },
+    "field": "geography",
+    "tags": [
+      "desert",
+      "geography",
+      "atakama samak"
+    ]
+  },
+  {
+    "id": "mojave-desert",
+    "type": "entry",
+    "name": {
+      "ko": "모하비 사막",
+      "en": "Mojave Desert"
+    },
+    "description": {
+      "ko": "미국 캘리포니아의 사막입니다.",
+      "en": "A desert in California, USA."
+    },
+    "field": "geography",
+    "tags": [
+      "desert",
+      "geography",
+      "mohabi samak"
+    ]
+  },
+  {
+    "id": "sonoran-desert",
+    "type": "entry",
+    "name": {
+      "ko": "소노란 사막",
+      "en": "Sonoran Desert"
+    },
+    "description": {
+      "ko": "미국과 멕시코의 사막입니다.",
+      "en": "A desert in USA and Mexico."
+    },
+    "field": "geography",
+    "tags": [
+      "desert",
+      "geography",
+      "sonoran samak"
+    ]
+  },
+  {
+    "id": "taklamakan-desert",
+    "type": "entry",
+    "name": {
+      "ko": "타클라마칸 사막",
+      "en": "Taklamakan Desert"
+    },
+    "description": {
+      "ko": "중국 서부의 사막입니다.",
+      "en": "A desert in western China."
+    },
+    "field": "geography",
+    "tags": [
+      "desert",
+      "geography",
+      "takeulramakan samak"
+    ]
+  },
+  {
+    "id": "thar-desert",
+    "type": "entry",
+    "name": {
+      "ko": "타르 사막",
+      "en": "Thar Desert"
+    },
+    "description": {
+      "ko": "인도와 파키스탄의 사막입니다.",
+      "en": "A desert in India and Pakistan."
+    },
+    "field": "geography",
+    "tags": [
+      "desert",
+      "geography",
+      "tareu samak"
+    ]
+  },
+  {
+    "id": "antarctic-desert",
+    "type": "entry",
+    "name": {
+      "ko": "남극 사막",
+      "en": "Antarctic Desert"
+    },
+    "description": {
+      "ko": "세계에서 가장 큰 한랭 사막입니다.",
+      "en": "The largest cold desert in the world."
+    },
+    "field": "geography",
+    "tags": [
+      "desert",
+      "geography",
+      "namgeuk samak"
+    ]
+  },
+  {
+    "id": "nile-river",
+    "type": "entry",
+    "name": {
+      "ko": "나일강",
+      "en": "Nile River"
+    },
+    "description": {
+      "ko": "세계에서 가장 긴 강입니다.",
+      "en": "The longest river in the world."
+    },
+    "field": "geography",
+    "tags": [
+      "river",
+      "geography",
+      "nailgang"
+    ]
+  },
+  {
+    "id": "amazon-river",
+    "type": "entry",
+    "name": {
+      "ko": "아마존강",
+      "en": "Amazon River"
+    },
+    "description": {
+      "ko": "세계에서 가장 많은 물이 흐르는 강입니다.",
+      "en": "The river with the largest flow in the world."
+    },
+    "field": "geography",
+    "tags": [
+      "river",
+      "geography",
+      "amazongang"
+    ]
+  },
+  {
+    "id": "yangtze-river",
+    "type": "entry",
+    "name": {
+      "ko": "양쯔강",
+      "en": "Yangtze River"
+    },
+    "description": {
+      "ko": "아시아에서 가장 긴 강입니다.",
+      "en": "The longest river in Asia."
+    },
+    "field": "geography",
+    "tags": [
+      "river",
+      "geography",
+      "yangjjeugang"
+    ]
+  },
+  {
+    "id": "yellow-river",
+    "type": "entry",
+    "name": {
+      "ko": "황허강",
+      "en": "Yellow River"
+    },
+    "description": {
+      "ko": "중국 문명의 발상지입니다.",
+      "en": "The birthplace of Chinese civilization."
+    },
+    "field": "geography",
+    "tags": [
+      "river",
+      "geography",
+      "hwangheogang"
+    ]
+  },
+  {
+    "id": "mississippi-river",
+    "type": "entry",
+    "name": {
+      "ko": "미시시피강",
+      "en": "Mississippi River"
+    },
+    "description": {
+      "ko": "북미에서 가장 긴 강입니다.",
+      "en": "The longest river in North America."
+    },
+    "field": "geography",
+    "tags": [
+      "river",
+      "geography",
+      "misisipigang"
+    ]
+  },
+  {
+    "id": "ganges-river",
+    "type": "entry",
+    "name": {
+      "ko": "갠지스강",
+      "en": "Ganges River"
+    },
+    "description": {
+      "ko": "인도의 성스러운 강입니다.",
+      "en": "A sacred river in India."
+    },
+    "field": "geography",
+    "tags": [
+      "river",
+      "geography",
+      "gaenjiseugang"
+    ]
+  },
+  {
+    "id": "mekong-river",
+    "type": "entry",
+    "name": {
+      "ko": "메콩강",
+      "en": "Mekong River"
+    },
+    "description": {
+      "ko": "동남아시아의 대하천입니다.",
+      "en": "A major river in Southeast Asia."
+    },
+    "field": "geography",
+    "tags": [
+      "river",
+      "geography",
+      "mekonggang"
+    ]
+  },
+  {
+    "id": "danube-river",
+    "type": "entry",
+    "name": {
+      "ko": "다뉴브강",
+      "en": "Danube River"
+    },
+    "description": {
+      "ko": "유럽에서 두 번째로 긴 강입니다.",
+      "en": "The second longest river in Europe."
+    },
+    "field": "geography",
+    "tags": [
+      "river",
+      "geography",
+      "danyubeugang"
+    ]
+  },
+  {
+    "id": "volga-river",
+    "type": "entry",
+    "name": {
+      "ko": "볼가강",
+      "en": "Volga River"
+    },
+    "description": {
+      "ko": "유럽에서 가장 긴 강입니다.",
+      "en": "The longest river in Europe."
+    },
+    "field": "geography",
+    "tags": [
+      "river",
+      "geography",
+      "bolgagang"
+    ]
+  },
+  {
+    "id": "rhine-river",
+    "type": "entry",
+    "name": {
+      "ko": "라인강",
+      "en": "Rhine River"
+    },
+    "description": {
+      "ko": "서유럽의 주요 강입니다.",
+      "en": "A major river in Western Europe."
+    },
+    "field": "geography",
+    "tags": [
+      "river",
+      "geography",
+      "raingang"
+    ]
+  },
+  {
+    "id": "congo-river",
+    "type": "entry",
+    "name": {
+      "ko": "콩고강",
+      "en": "Congo River"
+    },
+    "description": {
+      "ko": "아프리카에서 두 번째로 긴 강입니다.",
+      "en": "The second longest river in Africa."
+    },
+    "field": "geography",
+    "tags": [
+      "river",
+      "geography",
+      "konggogang"
+    ]
+  },
+  {
+    "id": "indus-river",
+    "type": "entry",
+    "name": {
+      "ko": "인더스강",
+      "en": "Indus River"
+    },
+    "description": {
+      "ko": "파키스탄의 주요 강입니다.",
+      "en": "A major river in Pakistan."
+    },
+    "field": "geography",
+    "tags": [
+      "river",
+      "geography",
+      "indeoseugang"
+    ]
+  },
+  {
+    "id": "han-river",
+    "type": "entry",
+    "name": {
+      "ko": "한강",
+      "en": "Han River"
+    },
+    "description": {
+      "ko": "서울을 관통하는 강입니다.",
+      "en": "A river flowing through Seoul."
+    },
+    "field": "geography",
+    "tags": [
+      "river",
+      "geography",
+      "hangang"
+    ]
+  },
+  {
+    "id": "nakdong-river",
+    "type": "entry",
+    "name": {
+      "ko": "낙동강",
+      "en": "Nakdong River"
+    },
+    "description": {
+      "ko": "한국 남동부의 강입니다.",
+      "en": "A river in southeastern Korea."
+    },
+    "field": "geography",
+    "tags": [
+      "river",
+      "geography",
+      "nakdonggang"
+    ]
+  },
+  {
+    "id": "thames-river",
+    "type": "entry",
+    "name": {
+      "ko": "템스강",
+      "en": "Thames River"
+    },
+    "description": {
+      "ko": "런던을 관통하는 강입니다.",
+      "en": "A river flowing through London."
+    },
+    "field": "geography",
+    "tags": [
+      "river",
+      "geography",
+      "temseugang"
+    ]
+  },
+  {
+    "id": "seine-river",
+    "type": "entry",
+    "name": {
+      "ko": "센강",
+      "en": "Seine River"
+    },
+    "description": {
+      "ko": "파리를 관통하는 강입니다.",
+      "en": "A river flowing through Paris."
+    },
+    "field": "geography",
+    "tags": [
+      "river",
+      "geography",
+      "sengang"
+    ]
+  },
+  {
+    "id": "caspian-sea",
+    "type": "entry",
+    "name": {
+      "ko": "카스피해",
+      "en": "Caspian Sea"
+    },
+    "description": {
+      "ko": "세계에서 가장 큰 호수입니다.",
+      "en": "The largest lake in the world."
+    },
+    "field": "geography",
+    "tags": [
+      "lake",
+      "geography",
+      "kaseupihae"
+    ]
+  },
+  {
+    "id": "lake-superior",
+    "type": "entry",
+    "name": {
+      "ko": "슈피리어호",
+      "en": "Lake Superior"
+    },
+    "description": {
+      "ko": "면적 기준 가장 큰 담수호입니다.",
+      "en": "The largest freshwater lake by area."
+    },
+    "field": "geography",
+    "tags": [
+      "lake",
+      "geography",
+      "syupirieoho"
+    ]
+  },
+  {
+    "id": "lake-victoria",
+    "type": "entry",
+    "name": {
+      "ko": "빅토리아호",
+      "en": "Lake Victoria"
+    },
+    "description": {
+      "ko": "아프리카에서 가장 큰 호수입니다.",
+      "en": "The largest lake in Africa."
+    },
+    "field": "geography",
+    "tags": [
+      "lake",
+      "geography",
+      "biktoriaho"
+    ]
+  },
+  {
+    "id": "lake-baikal",
+    "type": "entry",
+    "name": {
+      "ko": "바이칼호",
+      "en": "Lake Baikal"
+    },
+    "description": {
+      "ko": "세계에서 가장 깊은 호수입니다.",
+      "en": "The deepest lake in the world."
+    },
+    "field": "geography",
+    "tags": [
+      "lake",
+      "geography",
+      "baikalho"
+    ]
+  },
+  {
+    "id": "lake-tanganyika",
+    "type": "entry",
+    "name": {
+      "ko": "탕가니카호",
+      "en": "Lake Tanganyika"
+    },
+    "description": {
+      "ko": "세계에서 가장 긴 호수입니다.",
+      "en": "The longest lake in the world."
+    },
+    "field": "geography",
+    "tags": [
+      "lake",
+      "geography",
+      "tangganikaho"
+    ]
+  },
+  {
+    "id": "lake-michigan",
+    "type": "entry",
+    "name": {
+      "ko": "미시간호",
+      "en": "Lake Michigan"
+    },
+    "description": {
+      "ko": "오대호 중 하나입니다.",
+      "en": "One of the Great Lakes."
+    },
+    "field": "geography",
+    "tags": [
+      "lake",
+      "geography",
+      "misiganho"
+    ]
+  },
+  {
+    "id": "lake-huron",
+    "type": "entry",
+    "name": {
+      "ko": "휴런호",
+      "en": "Lake Huron"
+    },
+    "description": {
+      "ko": "오대호 중 하나입니다.",
+      "en": "One of the Great Lakes."
+    },
+    "field": "geography",
+    "tags": [
+      "lake",
+      "geography",
+      "hyureonho"
+    ]
+  },
+  {
+    "id": "lake-erie",
+    "type": "entry",
+    "name": {
+      "ko": "이리호",
+      "en": "Lake Erie"
+    },
+    "description": {
+      "ko": "오대호 중 하나입니다.",
+      "en": "One of the Great Lakes."
+    },
+    "field": "geography",
+    "tags": [
+      "lake",
+      "geography",
+      "iriho"
+    ]
+  },
+  {
+    "id": "lake-ontario",
+    "type": "entry",
+    "name": {
+      "ko": "온타리오호",
+      "en": "Lake Ontario"
+    },
+    "description": {
+      "ko": "오대호 중 하나입니다.",
+      "en": "One of the Great Lakes."
+    },
+    "field": "geography",
+    "tags": [
+      "lake",
+      "geography",
+      "ontarioho"
+    ]
+  },
+  {
+    "id": "lake-titicaca",
+    "type": "entry",
+    "name": {
+      "ko": "티티카카호",
+      "en": "Lake Titicaca"
+    },
+    "description": {
+      "ko": "세계에서 가장 높은 항행 가능 호수입니다.",
+      "en": "The highest navigable lake in the world."
+    },
+    "field": "geography",
+    "tags": [
+      "lake",
+      "geography",
+      "titikakaho"
+    ]
+  },
+  {
+    "id": "dead-sea",
+    "type": "entry",
+    "name": {
+      "ko": "사해",
+      "en": "Dead Sea"
+    },
+    "description": {
+      "ko": "세계에서 가장 낮은 호수입니다.",
+      "en": "The lowest lake in the world."
+    },
+    "field": "geography",
+    "tags": [
+      "lake",
+      "geography",
+      "sahae"
+    ]
+  },
+  {
+    "id": "lake-geneva",
+    "type": "entry",
+    "name": {
+      "ko": "제네바호",
+      "en": "Lake Geneva"
+    },
+    "description": {
+      "ko": "스위스와 프랑스의 호수입니다.",
+      "en": "A lake between Switzerland and France."
+    },
+    "field": "geography",
+    "tags": [
+      "lake",
+      "geography",
+      "jenebaho"
+    ]
+  },
+  {
+    "id": "loch-ness",
+    "type": "entry",
+    "name": {
+      "ko": "네스호",
+      "en": "Loch Ness"
+    },
+    "description": {
+      "ko": "스코틀랜드의 유명한 호수입니다.",
+      "en": "A famous lake in Scotland."
+    },
+    "field": "geography",
+    "tags": [
+      "lake",
+      "geography",
+      "neseuho"
+    ]
+  },
+  {
+    "id": "niagara-falls",
+    "type": "entry",
+    "name": {
+      "ko": "나이아가라 폭포",
+      "en": "Niagara Falls"
+    },
+    "description": {
+      "ko": "북미를 대표하는 폭포입니다.",
+      "en": "A representative waterfall of North America."
+    },
+    "field": "geography",
+    "tags": [
+      "waterfall",
+      "geography",
+      "naiagara pokpo"
+    ]
+  },
+  {
+    "id": "victoria-falls",
+    "type": "entry",
+    "name": {
+      "ko": "빅토리아 폭포",
+      "en": "Victoria Falls"
+    },
+    "description": {
+      "ko": "아프리카의 대폭포입니다.",
+      "en": "A great waterfall in Africa."
+    },
+    "field": "geography",
+    "tags": [
+      "waterfall",
+      "geography",
+      "biktoria pokpo"
+    ]
+  },
+  {
+    "id": "angel-falls",
+    "type": "entry",
+    "name": {
+      "ko": "앙헬 폭포",
+      "en": "Angel Falls"
+    },
+    "description": {
+      "ko": "세계에서 낙차가 가장 큰 폭포입니다.",
+      "en": "The waterfall with the highest drop in the world."
+    },
+    "field": "geography",
+    "tags": [
+      "waterfall",
+      "geography",
+      "anghel pokpo"
+    ]
+  },
+  {
+    "id": "iguazu-falls",
+    "type": "entry",
+    "name": {
+      "ko": "이구아수 폭포",
+      "en": "Iguazu Falls"
+    },
+    "description": {
+      "ko": "남미의 대폭포입니다.",
+      "en": "A great waterfall in South America."
+    },
+    "field": "geography",
+    "tags": [
+      "waterfall",
+      "geography",
+      "iguasu pokpo"
+    ]
+  },
+  {
+    "id": "yosemite-falls",
+    "type": "entry",
+    "name": {
+      "ko": "요세미티 폭포",
+      "en": "Yosemite Falls"
+    },
+    "description": {
+      "ko": "미국을 대표하는 폭포입니다.",
+      "en": "A representative waterfall of the United States."
+    },
+    "field": "geography",
+    "tags": [
+      "waterfall",
+      "geography",
+      "yosemiti pokpo"
+    ]
+  },
+  {
+    "id": "tibetan-plateau",
+    "type": "entry",
+    "name": {
+      "ko": "티베트 고원",
+      "en": "Tibetan Plateau"
+    },
+    "description": {
+      "ko": "세계의 지붕이라 불리는 고원입니다.",
+      "en": "A plateau called the Roof of the World."
+    },
+    "field": "geography",
+    "tags": [
+      "plateau",
+      "geography",
+      "tibeteu gowon"
+    ]
+  },
+  {
+    "id": "great-plains",
+    "type": "entry",
+    "name": {
+      "ko": "그레이트플레인스",
+      "en": "Great Plains"
+    },
+    "description": {
+      "ko": "북미의 대평원입니다.",
+      "en": "The great plains of North America."
+    },
+    "field": "geography",
+    "tags": [
+      "plain",
+      "geography",
+      "geureiteupeulreinseu"
+    ]
+  },
+  {
+    "id": "siberian-plain",
+    "type": "entry",
+    "name": {
+      "ko": "서시베리아 평원",
+      "en": "Siberian Plain"
+    },
+    "description": {
+      "ko": "세계에서 가장 큰 평원입니다.",
+      "en": "The largest plain in the world."
+    },
+    "field": "geography",
+    "tags": [
+      "plain",
+      "geography",
+      "seosiberia pyeongwon"
+    ]
+  },
+  {
+    "id": "pampas",
+    "type": "entry",
+    "name": {
+      "ko": "팜파스",
+      "en": "Pampas"
+    },
+    "description": {
+      "ko": "아르헨티나의 초원입니다.",
+      "en": "The grasslands of Argentina."
+    },
+    "field": "geography",
+    "tags": [
+      "plain",
+      "geography",
+      "pampaseu"
+    ]
+  },
+  {
+    "id": "savanna",
+    "type": "entry",
+    "name": {
+      "ko": "사바나",
+      "en": "Savanna"
+    },
+    "description": {
+      "ko": "열대 초원 지대입니다.",
+      "en": "Tropical grassland region."
+    },
+    "field": "geography",
+    "tags": [
+      "plain",
+      "geography",
+      "sabana"
+    ]
+  },
+  {
+    "id": "steppe",
+    "type": "entry",
+    "name": {
+      "ko": "스텝",
+      "en": "Steppe"
+    },
+    "description": {
+      "ko": "중앙아시아의 초원입니다.",
+      "en": "The grasslands of Central Asia."
+    },
+    "field": "geography",
+    "tags": [
+      "plain",
+      "geography",
+      "seutep"
+    ]
+  },
+  {
+    "id": "tundra",
+    "type": "entry",
+    "name": {
+      "ko": "툰드라",
+      "en": "Tundra"
+    },
+    "description": {
+      "ko": "극지의 동토 지대입니다.",
+      "en": "Arctic permafrost region."
+    },
+    "field": "geography",
+    "tags": [
+      "plain",
+      "geography",
+      "tundeura"
+    ]
+  },
+  {
+    "id": "taiga",
+    "type": "entry",
+    "name": {
+      "ko": "타이가",
+      "en": "Taiga"
+    },
+    "description": {
+      "ko": "북방의 침엽수림입니다.",
+      "en": "Northern coniferous forest."
+    },
+    "field": "geography",
+    "tags": [
+      "plain",
+      "geography",
+      "taiga"
+    ]
+  },
+  {
+    "id": "deccan-plateau",
+    "type": "entry",
+    "name": {
+      "ko": "데칸 고원",
+      "en": "Deccan Plateau"
+    },
+    "description": {
+      "ko": "인도 남부의 고원입니다.",
+      "en": "A plateau in southern India."
+    },
+    "field": "geography",
+    "tags": [
+      "plateau",
+      "geography",
+      "dekan gowon"
+    ]
+  },
+  {
+    "id": "colorado-plateau",
+    "type": "entry",
+    "name": {
+      "ko": "콜로라도 고원",
+      "en": "Colorado Plateau"
+    },
+    "description": {
+      "ko": "미국 서부의 고원입니다.",
+      "en": "A plateau in western USA."
+    },
+    "field": "geography",
+    "tags": [
+      "plateau",
+      "geography",
+      "kolrorado gowon"
+    ]
+  },
+  {
+    "id": "grand-canyon",
+    "type": "entry",
+    "name": {
+      "ko": "그랜드캐니언",
+      "en": "Grand Canyon"
+    },
+    "description": {
+      "ko": "미국의 대협곡입니다.",
+      "en": "A great canyon in the USA."
+    },
+    "field": "geography",
+    "tags": [
+      "canyon",
+      "geography",
+      "geulaendeukaenieon"
+    ]
+  },
+  {
+    "id": "great-rift-valley",
+    "type": "entry",
+    "name": {
+      "ko": "그레이트 리프트 밸리",
+      "en": "Great Rift Valley"
+    },
+    "description": {
+      "ko": "동아프리카의 열곡대입니다.",
+      "en": "The rift valley in East Africa."
+    },
+    "field": "geography",
+    "tags": [
+      "plain",
+      "geography",
+      "geureiteu ripeuteu baelri"
+    ]
+  },
+  {
+    "id": "death-valley",
+    "type": "entry",
+    "name": {
+      "ko": "데스밸리",
+      "en": "Death Valley"
+    },
+    "description": {
+      "ko": "미국에서 가장 낮은 지점입니다.",
+      "en": "The lowest point in the USA."
+    },
+    "field": "geography",
+    "tags": [
+      "plain",
+      "geography",
+      "deseubaelri"
+    ]
+  },
+  {
+    "id": "nile-valley",
+    "type": "entry",
+    "name": {
+      "ko": "나일 계곡",
+      "en": "Nile Valley"
+    },
+    "description": {
+      "ko": "이집트 문명의 발상지입니다.",
+      "en": "The birthplace of Egyptian civilization."
+    },
+    "field": "geography",
+    "tags": [
+      "plain",
+      "geography",
+      "nail gyegok"
+    ]
+  },
+  {
+    "id": "silicon-valley",
+    "type": "entry",
+    "name": {
+      "ko": "실리콘밸리",
+      "en": "Silicon Valley"
+    },
+    "description": {
+      "ko": "미국의 IT 중심지입니다.",
+      "en": "The IT center of the USA."
+    },
+    "field": "geography",
+    "tags": [
+      "plain",
+      "geography",
+      "silrikonbaelri"
+    ]
+  },
+  {
+    "id": "cape-of-good-hope",
+    "type": "entry",
+    "name": {
+      "ko": "희망봉",
+      "en": "Cape of Good Hope"
+    },
+    "description": {
+      "ko": "아프리카 남단의 곶입니다.",
+      "en": "A cape at the southern tip of Africa."
+    },
+    "field": "geography",
+    "tags": [
+      "cape",
+      "geography",
+      "huimangbong"
+    ]
+  },
+  {
+    "id": "cape-horn",
+    "type": "entry",
+    "name": {
+      "ko": "혼곶",
+      "en": "Cape Horn"
+    },
+    "description": {
+      "ko": "남미 최남단의 곶입니다.",
+      "en": "A cape at the southernmost tip of South America."
+    },
+    "field": "geography",
+    "tags": [
+      "cape",
+      "geography",
+      "hongot"
+    ]
+  },
+  {
+    "id": "continent",
+    "type": "entry",
+    "name": {
+      "ko": "대륙",
+      "en": "continent"
+    },
+    "description": {
+      "ko": "대규모의 육지입니다.",
+      "en": "A large landmass."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "daeryuk"
+    ]
+  },
+  {
+    "id": "ocean",
+    "type": "entry",
+    "name": {
+      "ko": "대양",
+      "en": "ocean"
+    },
+    "description": {
+      "ko": "대규모의 바다입니다.",
+      "en": "A large body of water."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "daeyang"
+    ]
+  },
+  {
+    "id": "sea",
+    "type": "entry",
+    "name": {
+      "ko": "바다",
+      "en": "sea"
+    },
+    "description": {
+      "ko": "대양보다 작은 수역입니다.",
+      "en": "A body of water smaller than an ocean."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "bada"
+    ]
+  },
+  {
+    "id": "island",
+    "type": "entry",
+    "name": {
+      "ko": "섬",
+      "en": "island"
+    },
+    "description": {
+      "ko": "물에 둘러싸인 육지입니다.",
+      "en": "Land surrounded by water."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "seom"
+    ]
+  },
+  {
+    "id": "peninsula",
+    "type": "entry",
+    "name": {
+      "ko": "반도",
+      "en": "peninsula"
+    },
+    "description": {
+      "ko": "삼면이 물인 육지입니다.",
+      "en": "Land with water on three sides."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "bando"
+    ]
+  },
+  {
+    "id": "strait",
+    "type": "entry",
+    "name": {
+      "ko": "해협",
+      "en": "strait"
+    },
+    "description": {
+      "ko": "두 수역을 연결하는 좁은 수로입니다.",
+      "en": "A narrow waterway connecting two bodies of water."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "haehyeop"
+    ]
+  },
+  {
+    "id": "gulf",
+    "type": "entry",
+    "name": {
+      "ko": "만",
+      "en": "gulf"
+    },
+    "description": {
+      "ko": "육지로 들어간 바다입니다.",
+      "en": "A body of water extending into land."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "man"
+    ]
+  },
+  {
+    "id": "bay",
+    "type": "entry",
+    "name": {
+      "ko": "만",
+      "en": "bay"
+    },
+    "description": {
+      "ko": "작은 만입니다.",
+      "en": "A small gulf."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "man"
+    ]
+  },
+  {
+    "id": "cape",
+    "type": "entry",
+    "name": {
+      "ko": "곶",
+      "en": "cape"
+    },
+    "description": {
+      "ko": "바다로 돌출한 육지입니다.",
+      "en": "Land projecting into the sea."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "got"
+    ]
+  },
+  {
+    "id": "mountain",
+    "type": "entry",
+    "name": {
+      "ko": "산",
+      "en": "mountain"
+    },
+    "description": {
+      "ko": "높이 솟은 지형입니다.",
+      "en": "Elevated terrain."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "san"
+    ]
+  },
+  {
+    "id": "volcano",
+    "type": "entry",
+    "name": {
+      "ko": "화산",
+      "en": "volcano"
+    },
+    "description": {
+      "ko": "마그마가 분출하는 산입니다.",
+      "en": "A mountain that erupts magma."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "hwasan"
+    ]
+  },
+  {
+    "id": "valley",
+    "type": "entry",
+    "name": {
+      "ko": "계곡",
+      "en": "valley"
+    },
+    "description": {
+      "ko": "산 사이의 낮은 지형입니다.",
+      "en": "Low terrain between mountains."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "gyegok"
+    ]
+  },
+  {
+    "id": "canyon",
+    "type": "entry",
+    "name": {
+      "ko": "협곡",
+      "en": "canyon"
+    },
+    "description": {
+      "ko": "깊은 계곡입니다.",
+      "en": "A deep valley."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "hyeopgok"
+    ]
+  },
+  {
+    "id": "plateau",
+    "type": "entry",
+    "name": {
+      "ko": "고원",
+      "en": "plateau"
+    },
+    "description": {
+      "ko": "높고 평탄한 지형입니다.",
+      "en": "High and flat terrain."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "gowon"
+    ]
+  },
+  {
+    "id": "plain",
+    "type": "entry",
+    "name": {
+      "ko": "평원",
+      "en": "plain"
+    },
+    "description": {
+      "ko": "넓고 평탄한 지형입니다.",
+      "en": "Wide and flat terrain."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "pyeongwon"
+    ]
+  },
+  {
+    "id": "desert",
+    "type": "entry",
+    "name": {
+      "ko": "사막",
+      "en": "desert"
+    },
+    "description": {
+      "ko": "건조한 지역입니다.",
+      "en": "An arid region."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "samak"
+    ]
+  },
+  {
+    "id": "glacier",
+    "type": "entry",
+    "name": {
+      "ko": "빙하",
+      "en": "glacier"
+    },
+    "description": {
+      "ko": "얼음 덩어리입니다.",
+      "en": "A mass of ice."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "bingha"
+    ]
+  },
+  {
+    "id": "river",
+    "type": "entry",
+    "name": {
+      "ko": "강",
+      "en": "river"
+    },
+    "description": {
+      "ko": "흐르는 물입니다.",
+      "en": "Flowing water."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "gang"
+    ]
+  },
+  {
+    "id": "lake",
+    "type": "entry",
+    "name": {
+      "ko": "호수",
+      "en": "lake"
+    },
+    "description": {
+      "ko": "육지 내의 물입니다.",
+      "en": "Water within land."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "hosu"
+    ]
+  },
+  {
+    "id": "waterfall",
+    "type": "entry",
+    "name": {
+      "ko": "폭포",
+      "en": "waterfall"
+    },
+    "description": {
+      "ko": "물이 떨어지는 곳입니다.",
+      "en": "Where water falls."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "pokpo"
+    ]
+  },
+  {
+    "id": "delta",
+    "type": "entry",
+    "name": {
+      "ko": "삼각주",
+      "en": "delta"
+    },
+    "description": {
+      "ko": "하구의 퇴적 지형입니다.",
+      "en": "Sediment formation at a river mouth."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "samgakju"
+    ]
+  },
+  {
+    "id": "reef",
+    "type": "entry",
+    "name": {
+      "ko": "암초",
+      "en": "reef"
+    },
+    "description": {
+      "ko": "수중의 암석 지형입니다.",
+      "en": "Underwater rock formation."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "amcho"
+    ]
+  },
+  {
+    "id": "coral-reef",
+    "type": "entry",
+    "name": {
+      "ko": "산호초",
+      "en": "coral reef"
+    },
+    "description": {
+      "ko": "산호가 형성한 암초입니다.",
+      "en": "Reef formed by coral."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "sanhocho"
+    ]
+  },
+  {
+    "id": "archipelago",
+    "type": "entry",
+    "name": {
+      "ko": "군도",
+      "en": "archipelago"
+    },
+    "description": {
+      "ko": "섬의 집합체입니다.",
+      "en": "A group of islands."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "gundo"
+    ]
+  },
+  {
+    "id": "equator",
+    "type": "entry",
+    "name": {
+      "ko": "적도",
+      "en": "equator"
+    },
+    "description": {
+      "ko": "지구의 중앙선입니다.",
+      "en": "The central line of Earth."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "jeokdo"
+    ]
+  },
+  {
+    "id": "latitude",
+    "type": "entry",
+    "name": {
+      "ko": "위도",
+      "en": "latitude"
+    },
+    "description": {
+      "ko": "남북 위치입니다.",
+      "en": "North-south position."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "wido"
+    ]
+  },
+  {
+    "id": "longitude",
+    "type": "entry",
+    "name": {
+      "ko": "경도",
+      "en": "longitude"
+    },
+    "description": {
+      "ko": "동서 위치입니다.",
+      "en": "East-west position."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "gyeongdo"
+    ]
+  },
+  {
+    "id": "hemisphere",
+    "type": "entry",
+    "name": {
+      "ko": "반구",
+      "en": "hemisphere"
+    },
+    "description": {
+      "ko": "지구의 절반입니다.",
+      "en": "Half of Earth."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "bangu"
+    ]
+  },
+  {
+    "id": "north-pole",
+    "type": "entry",
+    "name": {
+      "ko": "북극",
+      "en": "North Pole"
+    },
+    "description": {
+      "ko": "지구의 최북단입니다.",
+      "en": "The northernmost point of Earth."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "bukgeuk"
+    ]
+  },
+  {
+    "id": "south-pole",
+    "type": "entry",
+    "name": {
+      "ko": "남극",
+      "en": "South Pole"
+    },
+    "description": {
+      "ko": "지구의 최남단입니다.",
+      "en": "The southernmost point of Earth."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "namgeuk"
+    ]
+  },
+  {
+    "id": "climate",
+    "type": "entry",
+    "name": {
+      "ko": "기후",
+      "en": "climate"
+    },
+    "description": {
+      "ko": "장기적인 날씨 패턴입니다.",
+      "en": "Long-term weather pattern."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "gihu"
+    ]
+  },
+  {
+    "id": "monsoon",
+    "type": "entry",
+    "name": {
+      "ko": "몬순",
+      "en": "monsoon"
+    },
+    "description": {
+      "ko": "계절풍입니다.",
+      "en": "Seasonal wind."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "monsun"
+    ]
+  },
+  {
+    "id": "typhoon",
+    "type": "entry",
+    "name": {
+      "ko": "태풍",
+      "en": "typhoon"
+    },
+    "description": {
+      "ko": "서태평양의 열대폭풍입니다.",
+      "en": "Tropical storm in the western Pacific."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "taepung"
+    ]
+  },
+  {
+    "id": "hurricane",
+    "type": "entry",
+    "name": {
+      "ko": "허리케인",
+      "en": "hurricane"
+    },
+    "description": {
+      "ko": "대서양의 열대폭풍입니다.",
+      "en": "Tropical storm in the Atlantic."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "heorikein"
+    ]
+  },
+  {
+    "id": "earthquake",
+    "type": "entry",
+    "name": {
+      "ko": "지진",
+      "en": "earthquake"
+    },
+    "description": {
+      "ko": "땅의 흔들림입니다.",
+      "en": "Shaking of the ground."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "jijin"
+    ]
+  },
+  {
+    "id": "tsunami",
+    "type": "entry",
+    "name": {
+      "ko": "쓰나미",
+      "en": "tsunami"
+    },
+    "description": {
+      "ko": "지진 해일입니다.",
+      "en": "Seismic sea wave."
+    },
+    "field": "geography",
+    "tags": [
+      "term",
+      "geography",
+      "sseunami"
+    ]
+  },
+  {
+    "id": "east-asia",
+    "type": "entry",
+    "name": {
+      "ko": "동아시아",
+      "en": "East Asia"
+    },
+    "description": {
+      "ko": "한국, 중국, 일본 등의 지역입니다.",
+      "en": "The region including Korea, China, and Japan."
+    },
+    "field": "geography",
+    "tags": [
+      "region",
+      "geography",
+      "dongasia"
+    ]
+  },
+  {
+    "id": "southeast-asia",
+    "type": "entry",
+    "name": {
+      "ko": "동남아시아",
+      "en": "Southeast Asia"
+    },
+    "description": {
+      "ko": "베트남, 태국 등의 지역입니다.",
+      "en": "The region including Vietnam and Thailand."
+    },
+    "field": "geography",
+    "tags": [
+      "region",
+      "geography",
+      "dongnamasia"
+    ]
+  },
+  {
+    "id": "south-asia",
+    "type": "entry",
+    "name": {
+      "ko": "남아시아",
+      "en": "South Asia"
+    },
+    "description": {
+      "ko": "인도, 파키스탄 등의 지역입니다.",
+      "en": "The region including India and Pakistan."
+    },
+    "field": "geography",
+    "tags": [
+      "region",
+      "geography",
+      "namasia"
+    ]
+  },
+  {
+    "id": "central-asia",
+    "type": "entry",
+    "name": {
+      "ko": "중앙아시아",
+      "en": "Central Asia"
+    },
+    "description": {
+      "ko": "카자흐스탄 등의 지역입니다.",
+      "en": "The region including Kazakhstan."
+    },
+    "field": "geography",
+    "tags": [
+      "region",
+      "geography",
+      "jungangasia"
+    ]
+  },
+  {
+    "id": "middle-east",
+    "type": "entry",
+    "name": {
+      "ko": "중동",
+      "en": "Middle East"
+    },
+    "description": {
+      "ko": "서아시아와 북아프리카 지역입니다.",
+      "en": "The West Asian and North African region."
+    },
+    "field": "geography",
+    "tags": [
+      "region",
+      "geography",
+      "jungdong"
+    ]
+  },
+  {
+    "id": "western-europe",
+    "type": "entry",
+    "name": {
+      "ko": "서유럽",
+      "en": "Western Europe"
+    },
+    "description": {
+      "ko": "프랑스, 독일 등의 지역입니다.",
+      "en": "The region including France and Germany."
+    },
+    "field": "geography",
+    "tags": [
+      "region",
+      "geography",
+      "seoyureop"
+    ]
+  },
+  {
+    "id": "eastern-europe",
+    "type": "entry",
+    "name": {
+      "ko": "동유럽",
+      "en": "Eastern Europe"
+    },
+    "description": {
+      "ko": "폴란드, 러시아 등의 지역입니다.",
+      "en": "The region including Poland and Russia."
+    },
+    "field": "geography",
+    "tags": [
+      "region",
+      "geography",
+      "dongyureop"
+    ]
+  },
+  {
+    "id": "northern-europe",
+    "type": "entry",
+    "name": {
+      "ko": "북유럽",
+      "en": "Northern Europe"
+    },
+    "description": {
+      "ko": "스칸디나비아 등의 지역입니다.",
+      "en": "The region including Scandinavia."
+    },
+    "field": "geography",
+    "tags": [
+      "region",
+      "geography",
+      "bukyureop"
+    ]
+  },
+  {
+    "id": "southern-europe",
+    "type": "entry",
+    "name": {
+      "ko": "남유럽",
+      "en": "Southern Europe"
+    },
+    "description": {
+      "ko": "이탈리아, 스페인 등의 지역입니다.",
+      "en": "The region including Italy and Spain."
+    },
+    "field": "geography",
+    "tags": [
+      "region",
+      "geography",
+      "namyureop"
+    ]
+  },
+  {
+    "id": "north-africa",
+    "type": "entry",
+    "name": {
+      "ko": "북아프리카",
+      "en": "North Africa"
+    },
+    "description": {
+      "ko": "이집트, 모로코 등의 지역입니다.",
+      "en": "The region including Egypt and Morocco."
+    },
+    "field": "geography",
+    "tags": [
+      "region",
+      "geography",
+      "bukapeurika"
+    ]
+  },
+  {
+    "id": "sub-saharan-africa",
+    "type": "entry",
+    "name": {
+      "ko": "사하라 이남 아프리카",
+      "en": "Sub-Saharan Africa"
+    },
+    "description": {
+      "ko": "사하라 사막 남쪽 지역입니다.",
+      "en": "The region south of the Sahara Desert."
+    },
+    "field": "geography",
+    "tags": [
+      "region",
+      "geography",
+      "sahara inam apeurika"
+    ]
+  },
+  {
+    "id": "caribbean",
+    "type": "entry",
+    "name": {
+      "ko": "카리브",
+      "en": "Caribbean"
+    },
+    "description": {
+      "ko": "카리브해 지역입니다.",
+      "en": "The Caribbean region."
+    },
+    "field": "geography",
+    "tags": [
+      "region",
+      "geography",
+      "karibeu"
+    ]
+  },
+  {
+    "id": "central-america",
+    "type": "entry",
+    "name": {
+      "ko": "중앙아메리카",
+      "en": "Central America"
+    },
+    "description": {
+      "ko": "멕시코와 콜롬비아 사이 지역입니다.",
+      "en": "The region between Mexico and Colombia."
+    },
+    "field": "geography",
+    "tags": [
+      "region",
+      "geography",
+      "jungangamerika"
+    ]
+  },
+  {
+    "id": "latin-america",
+    "type": "entry",
+    "name": {
+      "ko": "라틴아메리카",
+      "en": "Latin America"
+    },
+    "description": {
+      "ko": "스페인어/포르투갈어권 아메리카입니다.",
+      "en": "Spanish/Portuguese-speaking Americas."
+    },
+    "field": "geography",
+    "tags": [
+      "region",
+      "geography",
+      "ratinamerika"
+    ]
+  },
+  {
+    "id": "polynesia",
+    "type": "entry",
+    "name": {
+      "ko": "폴리네시아",
+      "en": "Polynesia"
+    },
+    "description": {
+      "ko": "태평양 동부의 섬들입니다.",
+      "en": "Islands in the eastern Pacific."
+    },
+    "field": "geography",
+    "tags": [
+      "region",
+      "geography",
+      "polrinesia"
+    ]
+  },
+  {
+    "id": "melanesia",
+    "type": "entry",
+    "name": {
+      "ko": "멜라네시아",
+      "en": "Melanesia"
+    },
+    "description": {
+      "ko": "태평양 서부의 섬들입니다.",
+      "en": "Islands in the western Pacific."
+    },
+    "field": "geography",
+    "tags": [
+      "region",
+      "geography",
+      "melranesia"
+    ]
+  },
+  {
     "id": "annyeong",
     "type": "entry",
     "name": {
