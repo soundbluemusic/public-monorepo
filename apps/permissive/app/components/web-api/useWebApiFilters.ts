@@ -123,7 +123,10 @@ export function useWebApiFilters({ apis, categories }: UseWebApiFiltersOptions) 
   };
 
   const handleCategoryChange = (cat: string) => {
-    setCategory(cat as CategoryFilter);
+    // Type guard: only set if valid category
+    if (categories.includes(cat)) {
+      setCategory(cat as CategoryFilter);
+    }
     const params = new URLSearchParams(searchParams);
     if (cat !== 'All') {
       params.set('category', cat);
