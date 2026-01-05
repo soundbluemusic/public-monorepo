@@ -33,7 +33,7 @@
 |---|---|
 | **Live** | [context.soundbluemusic.com](https://context.soundbluemusic.com) |
 | **Source** | [apps/context](apps/context) |
-| **Features** | 978 entries, 21 categories, 7 conversations |
+| **Features** | 978 entries, 22 categories, 8 conversations |
 
 ### 🔧 Permissive — Web Dev Resources
 > **무료 웹개발 자료 모음** | 8 SSG pages
@@ -55,7 +55,7 @@
 |---|---|
 | **Live** | [roots.soundbluemusic.com](https://roots.soundbluemusic.com) |
 | **Source** | [apps/roots](apps/roots) |
-| **Features** | 438 concepts, 50 fields |
+| **Features** | 414 concepts, 18 fields |
 
 ---
 
@@ -124,8 +124,8 @@ React Router v7의 `prerender()` + `loader()` 패턴으로 **빌드 시** 모든
 
 | App | Dynamic Routes | SSG Pages | Data Source |
 |:----|:---------------|:---------:|:------------|
-| **Context** | 978 entries + 21 categories + 7 conversations | 2,012 | JSON |
-| **Roots** | 438 concepts + 50 fields | 976 | TypeScript |
+| **Context** | 978 entries + 22 categories + 8 conversations | 2,012 | JSON |
+| **Roots** | 414 concepts + 18 fields | 976 | TypeScript |
 | **Permissive** | 4 static routes | 8 | Array literals |
 | **Total** | — | **2,996** | — |
 
@@ -202,7 +202,7 @@ public-monorepo/
 │
 ├── data/                    # Centralized JSON data (SSoT)
 │   ├── context/             # 978 Korean entries
-│   ├── roots/               # 438 math concepts
+│   ├── roots/               # 414 math concepts
 │   └── permissive/          # 88 libraries, 56 Web APIs
 │
 └── package.json
