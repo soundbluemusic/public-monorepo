@@ -449,7 +449,25 @@ export default {
 | Mock data to bypass errors | Type-safe enums |
 | Fallback values hiding bugs | CSS design tokens |
 
-### 3. Data Principles
+### 3. No Overfitting / No Quick Fixes
+
+> **모든 수정은 일반적인 해결책이어야 함. 특정 케이스만 해결하는 코드 금지.**
+
+| ❌ Prohibited | ✅ Required |
+|:--------------|:------------|
+| Conditions targeting specific test cases only | General solutions for all similar cases |
+| Branching on error message strings | Proper error type handling |
+| Exception handling for specific IDs/values | Uniform validation logic |
+| Hiding symptoms with try-catch | Fixing root causes |
+| Workarounds at call sites instead of source | Fixing the actual problem location |
+
+**Checklist before any fix:**
+1. Does this fix work for all similar inputs?
+2. Can I explain WHY this problem occurred?
+3. Will this code still work if new tests are added?
+4. Will another developer understand this in 6 months?
+
+### 4. Data Principles
 
 | Principle | Description |
 |:----------|:------------|

@@ -349,6 +349,86 @@ pnpm test:e2e --grep "interactive"
 - Never leave TODO comments without creating a tracking issue
 - Never commit placeholder implementations
 
+#### 5. 과적합/임시방편 금지 (NO OVERFITTING / NO QUICK FIXES)
+
+> **특정 케이스만 해결하는 코드는 금지. 모든 수정은 일반적인 해결책이어야 함.**
+
+```
+❌ 절대 금지 (NEVER ALLOWED):
+
+과적합 (Overfitting):
+- 특정 테스트 케이스만 통과시키는 조건문
+- 에러 메시지 문자열 매칭으로 분기하는 코드
+- 특정 ID/값에만 작동하는 예외 처리
+- "이 경우에만" 작동하는 하드코딩된 분기
+
+임시방편 (Quick Fixes):
+- 증상만 숨기는 코드 (try-catch로 에러 무시)
+- 문제 발생 지점이 아닌 호출 지점에서 우회
+- "일단 돌아가게" 하는 임시 코드
+- 근본 원인 파악 없이 적용하는 수정
+
+✅ 올바른 접근 (CORRECT APPROACH):
+- 문제의 근본 원인(root cause) 먼저 파악
+- 모든 유사 케이스에 적용되는 일반적 해결책 구현
+- 6개월 후 다른 개발자가 이해할 수 있는 코드 작성
+- 새 테스트를 추가해도 깨지지 않는 구조적 해결
+```
+
+**과적합 판단 체크리스트:**
+1. "이 수정이 다른 유사한 입력에도 작동하는가?"
+2. "특정 값/문자열을 체크하는 조건문이 있는가?"
+3. "왜 이 문제가 발생했는지 설명할 수 있는가?"
+4. "이 수정 없이 문제를 해결할 더 나은 방법이 있는가?"
+
+**예시: 잘못된 접근 vs 올바른 접근**
+
+```typescript
+// ❌ 과적합: 특정 케이스만 처리
+function processData(id: string) {
+  if (id === 'special-case-123') {
+    return handleSpecialCase(); // 왜 이게 특별한가?
+  }
+  return normalProcess(id);
+}
+
+// ❌ 임시방편: 증상만 숨김
+function fetchUser(id: string) {
+  try {
+    return api.getUser(id);
+  } catch {
+    return null; // 에러 원인 파악 없이 숨김
+  }
+}
+
+// ✅ 올바른 접근: 근본 원인 해결
+function processData(id: string) {
+  // 모든 ID에 대해 동일한 검증 로직 적용
+  const validated = validateId(id);
+  return process(validated);
+}
+
+// ✅ 올바른 접근: 명시적 에러 처리
+function fetchUser(id: string): Result<User, ApiError> {
+  const result = api.getUser(id);
+  if (!result.ok) {
+    // 에러 유형에 따른 명시적 처리
+    return { ok: false, error: categorizeError(result.error) };
+  }
+  return { ok: true, value: result.data };
+}
+```
+
+**증상 치료 vs 근본 해결:**
+
+| 상황 | ❌ 증상 치료 | ✅ 근본 해결 |
+|------|-------------|-------------|
+| 테스트 실패 | 테스트 조건 수정/삭제 | 코드 로직 수정 |
+| 타입 에러 | `as any` 캐스팅 | 올바른 타입 정의 |
+| null 에러 | `?.` 남발 | null이 되는 원인 수정 |
+| 빌드 실패 | 에러 나는 코드 주석 처리 | 의존성/설정 수정 |
+| 특정 입력 실패 | if문으로 해당 입력만 처리 | 입력 검증 로직 일반화 |
+
 ### Problem Resolution Guide (문제 해결 가이드)
 
 > **금지만 있고 대안이 없으면 막다른 길. 아래 해결책을 사용할 것.**
