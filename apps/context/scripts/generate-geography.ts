@@ -46,6 +46,36 @@ function toKebabCase(str: string): string {
     .replace(/^-|-$/g, '');
 }
 
+/**
+ * 한글 마지막 글자의 받침 유무 확인
+ */
+function hasBatchim(word: string): boolean {
+  const lastChar = word[word.length - 1];
+  if (!lastChar) return false;
+  const code = lastChar.charCodeAt(0);
+  // 한글 음절 범위 (가-힣)
+  if (code < 0xac00 || code > 0xd7a3) return false;
+  // 받침이 있으면 (code - 0xAC00) % 28 !== 0
+  return (code - 0xac00) % 28 !== 0;
+}
+
+/**
+ * 은/는 조사 선택 (받침 있으면 '은', 없으면 '는')
+ */
+function eunNeun(word: string): string {
+  return hasBatchim(word) ? '은' : '는';
+}
+
+/**
+ * 을/를 조사 선택 (받침 있으면 '을', 없으면 '를')
+ */
+function eulReul(word: string): string {
+  return hasBatchim(word) ? '을' : '를';
+}
+
+// NOTE: 이/가 particle helper available if needed:
+// function iGa(word: string): string { return hasBatchim(word) ? '이' : '가'; }
+
 // Simple romanization helper (basic)
 // Uses hardcoded replacements for common geography terms
 function romanize(korean: string): string {
@@ -1528,6 +1558,7 @@ const geographyData = {
 };
 
 // Generate examples for each entry
+// 한국어 조사(은/는, 을/를)는 받침 유무에 따라 동적으로 선택
 function generateExamples(
   ko: string,
   en: string,
@@ -1536,279 +1567,320 @@ function generateExamples(
   ko: GeographyEntry['translations']['ko']['examples'];
   en: GeographyEntry['translations']['en']['examples'];
 } {
-  const templates = {
-    ocean: {
-      ko: {
-        beginner: `${ko}은 넓습니다.`,
-        intermediate: `${ko}에 많은 배가 다닙니다.`,
-        advanced: `${ko}은 세계 해양 생태계에 중요한 역할을 합니다.`,
-        master: `${ko}의 해류는 전 세계 기후에 영향을 미칩니다.`,
-      },
-      en: {
-        beginner: `The ${en} is vast.`,
-        intermediate: `Many ships sail across the ${en}.`,
-        advanced: `The ${en} plays an important role in the global marine ecosystem.`,
-        master: `The currents of the ${en} affect the climate worldwide.`,
-      },
-    },
-    sea: {
-      ko: {
-        beginner: `${ko}은 아름답습니다.`,
-        intermediate: `${ko}에서 많은 물고기가 잡힙니다.`,
-        advanced: `${ko}은 주변 국가들의 주요 항로입니다.`,
-        master: `${ko}의 생태계는 지역 경제에 큰 영향을 미칩니다.`,
-      },
-      en: {
-        beginner: `The ${en} is beautiful.`,
-        intermediate: `Many fish are caught in the ${en}.`,
-        advanced: `The ${en} is a major shipping route for surrounding countries.`,
-        master: `The ecosystem of the ${en} greatly affects the regional economy.`,
-      },
-    },
-    continent: {
-      ko: {
-        beginner: `${ko}은 큽니다.`,
-        intermediate: `${ko}에는 많은 나라가 있습니다.`,
-        advanced: `${ko}에는 다양한 문화가 공존합니다.`,
-        master: `${ko}의 역사와 문화는 세계에 큰 영향을 미쳤습니다.`,
-      },
-      en: {
-        beginner: `${en} is large.`,
-        intermediate: `There are many countries in ${en}.`,
-        advanced: `Various cultures coexist in ${en}.`,
-        master: `The history and culture of ${en} have greatly influenced the world.`,
-      },
-    },
-    strait: {
-      ko: {
-        beginner: `${ko}은 좁습니다.`,
-        intermediate: `${ko}을 통해 배가 지나갑니다.`,
-        advanced: `${ko}은 중요한 해상 교통로입니다.`,
-        master: `${ko}의 전략적 중요성은 역사적으로 많은 분쟁의 원인이 되었습니다.`,
-      },
-      en: {
-        beginner: `The ${en} is narrow.`,
-        intermediate: `Ships pass through the ${en}.`,
-        advanced: `The ${en} is an important maritime route.`,
-        master: `The strategic importance of the ${en} has historically been a cause of many conflicts.`,
-      },
-    },
-    peninsula: {
-      ko: {
-        beginner: `${ko}은 삼면이 바다입니다.`,
-        intermediate: `${ko}에는 독특한 문화가 있습니다.`,
-        advanced: `${ko}의 지정학적 위치는 역사에 큰 영향을 미쳤습니다.`,
-        master: `${ko}은 해양 문화와 대륙 문화가 만나는 지점입니다.`,
-      },
-      en: {
-        beginner: `${en} is surrounded by sea on three sides.`,
-        intermediate: `${en} has a unique culture.`,
-        advanced: `The geopolitical location of ${en} has greatly influenced history.`,
-        master: `${en} is a meeting point of maritime and continental cultures.`,
-      },
-    },
-    island: {
-      ko: {
-        beginner: `${ko}은 아름다운 섬입니다.`,
-        intermediate: `${ko}에 많은 관광객이 방문합니다.`,
-        advanced: `${ko}은 독특한 생태계를 가지고 있습니다.`,
-        master: `${ko}의 고립된 환경은 독특한 종의 진화를 이끌었습니다.`,
-      },
-      en: {
-        beginner: `${en} is a beautiful island.`,
-        intermediate: `Many tourists visit ${en}.`,
-        advanced: `${en} has a unique ecosystem.`,
-        master: `The isolated environment of ${en} has led to the evolution of unique species.`,
-      },
-    },
-    archipelago: {
-      ko: {
-        beginner: `${ko}에는 많은 섬이 있습니다.`,
-        intermediate: `${ko}은 관광지로 유명합니다.`,
-        advanced: `${ko}은 다양한 해양 생물의 서식지입니다.`,
-        master: `${ko}의 섬들은 각각 고유한 문화와 생태계를 발전시켜 왔습니다.`,
-      },
-      en: {
-        beginner: `There are many islands in ${en}.`,
-        intermediate: `${en} is famous as a tourist destination.`,
-        advanced: `${en} is home to various marine life.`,
-        master: `Each island in ${en} has developed its own unique culture and ecosystem.`,
-      },
-    },
-    mountain: {
-      ko: {
-        beginner: `${ko}은 높습니다.`,
-        intermediate: `많은 등산객이 ${ko}을 찾습니다.`,
-        advanced: `${ko}은 중요한 수원지입니다.`,
-        master: `${ko}의 형성은 지질학적으로 중요한 의미를 가집니다.`,
-      },
-      en: {
-        beginner: `${en} is high.`,
-        intermediate: `Many hikers visit ${en}.`,
-        advanced: `${en} is an important water source.`,
-        master: `The formation of ${en} has significant geological importance.`,
-      },
-    },
-    mountainRange: {
-      ko: {
-        beginner: `${ko}은 길게 뻗어 있습니다.`,
-        intermediate: `${ko}에는 많은 높은 봉우리가 있습니다.`,
-        advanced: `${ko}은 주변 지역의 기후에 큰 영향을 미칩니다.`,
-        master: `${ko}의 형성은 대륙의 지질학적 역사를 보여줍니다.`,
-      },
-      en: {
-        beginner: `${en} stretches far.`,
-        intermediate: `${en} has many high peaks.`,
-        advanced: `${en} greatly affects the climate of surrounding areas.`,
-        master: `The formation of ${en} shows the geological history of the continent.`,
-      },
-    },
-    desert: {
-      ko: {
-        beginner: `${ko}은 매우 건조합니다.`,
-        intermediate: `${ko}에서는 물이 매우 귀합니다.`,
-        advanced: `${ko}의 생태계는 극한 환경에 적응해 있습니다.`,
-        master: `${ko}의 확장은 기후 변화의 중요한 지표입니다.`,
-      },
-      en: {
-        beginner: `${en} is very dry.`,
-        intermediate: `Water is very precious in ${en}.`,
-        advanced: `The ecosystem of ${en} is adapted to extreme conditions.`,
-        master: `The expansion of ${en} is an important indicator of climate change.`,
-      },
-    },
-    river: {
-      ko: {
-        beginner: `${ko}은 길게 흐릅니다.`,
-        intermediate: `${ko} 주변에 많은 도시가 있습니다.`,
-        advanced: `${ko}은 지역 경제에 중요한 역할을 합니다.`,
-        master: `${ko}의 유역은 고대 문명의 발상지입니다.`,
-      },
-      en: {
-        beginner: `${en} flows long.`,
-        intermediate: `Many cities are located along ${en}.`,
-        advanced: `${en} plays an important role in the regional economy.`,
-        master: `The basin of ${en} is the birthplace of ancient civilizations.`,
-      },
-    },
-    lake: {
-      ko: {
-        beginner: `${ko}은 물이 맑습니다.`,
-        intermediate: `${ko} 주변은 관광지입니다.`,
-        advanced: `${ko}은 담수 생태계의 보고입니다.`,
-        master: `${ko}의 수질 변화는 환경 오염의 지표가 됩니다.`,
-      },
-      en: {
-        beginner: `${en} has clear water.`,
-        intermediate: `The area around ${en} is a tourist destination.`,
-        advanced: `${en} is a treasure trove of freshwater ecosystems.`,
-        master: `Changes in water quality of ${en} are indicators of environmental pollution.`,
-      },
-    },
-    waterfall: {
-      ko: {
-        beginner: `${ko}은 아름답습니다.`,
-        intermediate: `${ko}에서 물이 쏟아집니다.`,
-        advanced: `${ko}은 세계적인 관광 명소입니다.`,
-        master: `${ko}의 형성 과정은 지질학적으로 흥미로운 연구 대상입니다.`,
-      },
-      en: {
-        beginner: `${en} is beautiful.`,
-        intermediate: `Water pours down at ${en}.`,
-        advanced: `${en} is a world-famous tourist attraction.`,
-        master: `The formation process of ${en} is a geologically interesting subject of study.`,
-      },
-    },
-    plateau: {
-      ko: {
-        beginner: `${ko}은 높고 평평합니다.`,
-        intermediate: `${ko}에는 독특한 생태계가 있습니다.`,
-        advanced: `${ko}의 기후는 주변 저지대와 다릅니다.`,
-        master: `${ko}의 지질학적 형성 과정은 대륙의 역사를 보여줍니다.`,
-      },
-      en: {
-        beginner: `${en} is high and flat.`,
-        intermediate: `${en} has a unique ecosystem.`,
-        advanced: `The climate of ${en} differs from surrounding lowlands.`,
-        master: `The geological formation of ${en} shows the history of the continent.`,
-      },
-    },
-    plain: {
-      ko: {
-        beginner: `${ko}은 넓고 평평합니다.`,
-        intermediate: `${ko}은 농업에 적합합니다.`,
-        advanced: `${ko}은 주요 농업 지대입니다.`,
-        master: `${ko}의 형성은 빙하기 퇴적 작용의 결과입니다.`,
-      },
-      en: {
-        beginner: `${en} is wide and flat.`,
-        intermediate: `${en} is suitable for agriculture.`,
-        advanced: `${en} is a major agricultural area.`,
-        master: `The formation of ${en} is the result of glacial sedimentation.`,
-      },
-    },
-    canyon: {
-      ko: {
-        beginner: `${ko}은 깊습니다.`,
-        intermediate: `${ko}의 경치는 장관입니다.`,
-        advanced: `${ko}은 수백만 년에 걸쳐 형성되었습니다.`,
-        master: `${ko}의 지층은 지구 역사의 기록입니다.`,
-      },
-      en: {
-        beginner: `${en} is deep.`,
-        intermediate: `The scenery of ${en} is spectacular.`,
-        advanced: `${en} was formed over millions of years.`,
-        master: `The strata of ${en} are a record of Earth's history.`,
-      },
-    },
-    cape: {
-      ko: {
-        beginner: `${ko}은 바다로 뻗어 있습니다.`,
-        intermediate: `${ko}에서 아름다운 경치를 볼 수 있습니다.`,
-        advanced: `${ko}은 역사적으로 중요한 항해 지점입니다.`,
-        master: `${ko}은 대항해 시대에 중요한 이정표였습니다.`,
-      },
-      en: {
-        beginner: `${en} extends into the sea.`,
-        intermediate: `You can see beautiful scenery at ${en}.`,
-        advanced: `${en} is a historically important navigation point.`,
-        master: `${en} was an important landmark during the Age of Exploration.`,
-      },
-    },
-    term: {
-      ko: {
-        beginner: `${ko}은 지리 용어입니다.`,
-        intermediate: `${ko}의 의미를 알아봅시다.`,
-        advanced: `${ko}은 지리학에서 중요한 개념입니다.`,
-        master: `${ko}의 정확한 정의는 지역에 따라 다를 수 있습니다.`,
-      },
-      en: {
-        beginner: `${en} is a geography term.`,
-        intermediate: `Let's learn the meaning of ${en}.`,
-        advanced: `${en} is an important concept in geography.`,
-        master: `The exact definition of ${en} may vary by region.`,
-      },
-    },
-    region: {
-      ko: {
-        beginner: `${ko}에는 여러 나라가 있습니다.`,
-        intermediate: `${ko}의 문화는 다양합니다.`,
-        advanced: `${ko}은 지정학적으로 중요한 지역입니다.`,
-        master: `${ko}의 역사와 문화는 세계사에 큰 영향을 미쳤습니다.`,
-      },
-      en: {
-        beginner: `There are several countries in ${en}.`,
-        intermediate: `The culture of ${en} is diverse.`,
-        advanced: `${en} is a geopolitically important region.`,
-        master: `The history and culture of ${en} have greatly influenced world history.`,
-      },
-    },
+  // 한국어 조사 (받침 유무에 따라 선택)
+  const EN = eunNeun(ko); // 은/는
+  const ER = eulReul(ko); // 을/를
+
+  // 태그별 템플릿 생성 함수
+  const getKoreanTemplates = () => {
+    switch (tag) {
+      case 'ocean':
+        return {
+          beginner: `${ko}${EN} 넓습니다.`,
+          intermediate: `${ko}에 많은 배가 다닙니다.`,
+          advanced: `${ko}${EN} 세계 해양 생태계에 중요한 역할을 합니다.`,
+          master: `${ko}의 해류는 전 세계 기후에 영향을 미칩니다.`,
+        };
+      case 'sea':
+        return {
+          beginner: `${ko}${EN} 아름답습니다.`,
+          intermediate: `${ko}에서 많은 물고기가 잡힙니다.`,
+          advanced: `${ko}${EN} 주변 국가들의 주요 항로입니다.`,
+          master: `${ko}의 생태계는 지역 경제에 큰 영향을 미칩니다.`,
+        };
+      case 'continent':
+        return {
+          beginner: `${ko}${EN} 큽니다.`,
+          intermediate: `${ko}에는 많은 나라가 있습니다.`,
+          advanced: `${ko}에는 다양한 문화가 공존합니다.`,
+          master: `${ko}의 역사와 문화는 세계에 큰 영향을 미쳤습니다.`,
+        };
+      case 'strait':
+        return {
+          beginner: `${ko}${EN} 좁습니다.`,
+          intermediate: `${ko}${ER} 통해 배가 지나갑니다.`,
+          advanced: `${ko}${EN} 중요한 해상 교통로입니다.`,
+          master: `${ko}의 전략적 중요성은 역사적으로 많은 분쟁의 원인이 되었습니다.`,
+        };
+      case 'peninsula':
+        return {
+          beginner: `${ko}${EN} 삼면이 바다입니다.`,
+          intermediate: `${ko}에는 독특한 문화가 있습니다.`,
+          advanced: `${ko}의 지정학적 위치는 역사에 큰 영향을 미쳤습니다.`,
+          master: `${ko}${EN} 해양 문화와 대륙 문화가 만나는 지점입니다.`,
+        };
+      case 'island':
+        return {
+          beginner: `${ko}${EN} 아름다운 섬입니다.`,
+          intermediate: `${ko}에 많은 관광객이 방문합니다.`,
+          advanced: `${ko}${EN} 독특한 생태계를 가지고 있습니다.`,
+          master: `${ko}의 고립된 환경은 독특한 종의 진화를 이끌었습니다.`,
+        };
+      case 'archipelago':
+        return {
+          beginner: `${ko}에는 많은 섬이 있습니다.`,
+          intermediate: `${ko}${EN} 관광지로 유명합니다.`,
+          advanced: `${ko}${EN} 다양한 해양 생물의 서식지입니다.`,
+          master: `${ko}의 섬들은 각각 고유한 문화와 생태계를 발전시켜 왔습니다.`,
+        };
+      case 'mountain':
+        return {
+          beginner: `${ko}${EN} 높습니다.`,
+          intermediate: `많은 등산객이 ${ko}${ER} 찾습니다.`,
+          advanced: `${ko}${EN} 중요한 수원지입니다.`,
+          master: `${ko}의 형성은 지질학적으로 중요한 의미를 가집니다.`,
+        };
+      case 'mountainRange':
+        return {
+          beginner: `${ko}${EN} 길게 뻗어 있습니다.`,
+          intermediate: `${ko}에는 많은 높은 봉우리가 있습니다.`,
+          advanced: `${ko}${EN} 주변 지역의 기후에 큰 영향을 미칩니다.`,
+          master: `${ko}의 형성은 대륙의 지질학적 역사를 보여줍니다.`,
+        };
+      case 'desert':
+        return {
+          beginner: `${ko}${EN} 매우 건조합니다.`,
+          intermediate: `${ko}에서는 물이 매우 귀합니다.`,
+          advanced: `${ko}의 생태계는 극한 환경에 적응해 있습니다.`,
+          master: `${ko}의 확장은 기후 변화의 중요한 지표입니다.`,
+        };
+      case 'river':
+        return {
+          beginner: `${ko}${EN} 길게 흐릅니다.`,
+          intermediate: `${ko} 주변에 많은 도시가 있습니다.`,
+          advanced: `${ko}${EN} 지역 경제에 중요한 역할을 합니다.`,
+          master: `${ko}의 유역은 고대 문명의 발상지입니다.`,
+        };
+      case 'lake':
+        return {
+          beginner: `${ko}${EN} 물이 맑습니다.`,
+          intermediate: `${ko} 주변은 관광지입니다.`,
+          advanced: `${ko}${EN} 담수 생태계의 보고입니다.`,
+          master: `${ko}의 수질 변화는 환경 오염의 지표가 됩니다.`,
+        };
+      case 'waterfall':
+        return {
+          beginner: `${ko}${EN} 아름답습니다.`,
+          intermediate: `${ko}에서 물이 쏟아집니다.`,
+          advanced: `${ko}${EN} 세계적인 관광 명소입니다.`,
+          master: `${ko}의 형성 과정은 지질학적으로 흥미로운 연구 대상입니다.`,
+        };
+      case 'plateau':
+        return {
+          beginner: `${ko}${EN} 높고 평평합니다.`,
+          intermediate: `${ko}에는 독특한 생태계가 있습니다.`,
+          advanced: `${ko}의 기후는 주변 저지대와 다릅니다.`,
+          master: `${ko}의 지질학적 형성 과정은 대륙의 역사를 보여줍니다.`,
+        };
+      case 'plain':
+        return {
+          beginner: `${ko}${EN} 넓고 평평합니다.`,
+          intermediate: `${ko}${EN} 농업에 적합합니다.`,
+          advanced: `${ko}${EN} 주요 농업 지대입니다.`,
+          master: `${ko}의 형성은 빙하기 퇴적 작용의 결과입니다.`,
+        };
+      case 'canyon':
+        return {
+          beginner: `${ko}${EN} 깊습니다.`,
+          intermediate: `${ko}의 경치는 장관입니다.`,
+          advanced: `${ko}${EN} 수백만 년에 걸쳐 형성되었습니다.`,
+          master: `${ko}의 지층은 지구 역사의 기록입니다.`,
+        };
+      case 'cape':
+        return {
+          beginner: `${ko}${EN} 바다로 뻗어 있습니다.`,
+          intermediate: `${ko}에서 아름다운 경치를 볼 수 있습니다.`,
+          advanced: `${ko}${EN} 역사적으로 중요한 항해 지점입니다.`,
+          master: `${ko}${EN} 대항해 시대에 중요한 이정표였습니다.`,
+        };
+      case 'gulf':
+        return {
+          beginner: `${ko}${EN} 넓은 바다입니다.`,
+          intermediate: `${ko}에서 많은 어업 활동이 이루어집니다.`,
+          advanced: `${ko}${EN} 주변 국가들의 주요 항구가 있습니다.`,
+          master: `${ko}의 해양 자원은 지역 경제의 핵심입니다.`,
+        };
+      case 'valley':
+        return {
+          beginner: `${ko}${EN} 산 사이에 있습니다.`,
+          intermediate: `${ko}에는 강이 흐릅니다.`,
+          advanced: `${ko}${EN} 농업에 적합한 지형입니다.`,
+          master: `${ko}의 형성은 빙하와 하천 침식의 결과입니다.`,
+        };
+      case 'region':
+        return {
+          beginner: `${ko}에는 여러 나라가 있습니다.`,
+          intermediate: `${ko}의 문화는 다양합니다.`,
+          advanced: `${ko}${EN} 지정학적으로 중요한 지역입니다.`,
+          master: `${ko}의 역사와 문화는 세계사에 큰 영향을 미쳤습니다.`,
+        };
+      case 'term':
+      default:
+        return {
+          beginner: `${ko}${EN} 지리 용어입니다.`,
+          intermediate: `${ko}의 의미를 알아봅시다.`,
+          advanced: `${ko}${EN} 지리학에서 중요한 개념입니다.`,
+          master: `${ko}의 정확한 정의는 지역에 따라 다를 수 있습니다.`,
+        };
+    }
   };
 
-  const template = templates[tag as keyof typeof templates] || templates.term;
+  const getEnglishTemplates = () => {
+    switch (tag) {
+      case 'ocean':
+        return {
+          beginner: `The ${en} is vast.`,
+          intermediate: `Many ships sail across the ${en}.`,
+          advanced: `The ${en} plays an important role in the global marine ecosystem.`,
+          master: `The currents of the ${en} affect the climate worldwide.`,
+        };
+      case 'sea':
+        return {
+          beginner: `The ${en} is beautiful.`,
+          intermediate: `Many fish are caught in the ${en}.`,
+          advanced: `The ${en} is a major shipping route for surrounding countries.`,
+          master: `The ecosystem of the ${en} greatly affects the regional economy.`,
+        };
+      case 'continent':
+        return {
+          beginner: `${en} is large.`,
+          intermediate: `There are many countries in ${en}.`,
+          advanced: `Various cultures coexist in ${en}.`,
+          master: `The history and culture of ${en} have greatly influenced the world.`,
+        };
+      case 'strait':
+        return {
+          beginner: `The ${en} is narrow.`,
+          intermediate: `Ships pass through the ${en}.`,
+          advanced: `The ${en} is an important maritime route.`,
+          master: `The strategic importance of the ${en} has historically been a cause of many conflicts.`,
+        };
+      case 'peninsula':
+        return {
+          beginner: `${en} is surrounded by sea on three sides.`,
+          intermediate: `${en} has a unique culture.`,
+          advanced: `The geopolitical location of ${en} has greatly influenced history.`,
+          master: `${en} is a meeting point of maritime and continental cultures.`,
+        };
+      case 'island':
+        return {
+          beginner: `${en} is a beautiful island.`,
+          intermediate: `Many tourists visit ${en}.`,
+          advanced: `${en} has a unique ecosystem.`,
+          master: `The isolated environment of ${en} has led to the evolution of unique species.`,
+        };
+      case 'archipelago':
+        return {
+          beginner: `There are many islands in ${en}.`,
+          intermediate: `${en} is famous as a tourist destination.`,
+          advanced: `${en} is home to various marine life.`,
+          master: `Each island in ${en} has developed its own unique culture and ecosystem.`,
+        };
+      case 'mountain':
+        return {
+          beginner: `${en} is high.`,
+          intermediate: `Many hikers visit ${en}.`,
+          advanced: `${en} is an important water source.`,
+          master: `The formation of ${en} has significant geological importance.`,
+        };
+      case 'mountainRange':
+        return {
+          beginner: `${en} stretches far.`,
+          intermediate: `${en} has many high peaks.`,
+          advanced: `${en} greatly affects the climate of surrounding areas.`,
+          master: `The formation of ${en} shows the geological history of the continent.`,
+        };
+      case 'desert':
+        return {
+          beginner: `${en} is very dry.`,
+          intermediate: `Water is very precious in ${en}.`,
+          advanced: `The ecosystem of ${en} is adapted to extreme conditions.`,
+          master: `The expansion of ${en} is an important indicator of climate change.`,
+        };
+      case 'river':
+        return {
+          beginner: `${en} flows long.`,
+          intermediate: `Many cities are located along ${en}.`,
+          advanced: `${en} plays an important role in the regional economy.`,
+          master: `The basin of ${en} is the birthplace of ancient civilizations.`,
+        };
+      case 'lake':
+        return {
+          beginner: `${en} has clear water.`,
+          intermediate: `The area around ${en} is a tourist destination.`,
+          advanced: `${en} is a treasure trove of freshwater ecosystems.`,
+          master: `Changes in water quality of ${en} are indicators of environmental pollution.`,
+        };
+      case 'waterfall':
+        return {
+          beginner: `${en} is beautiful.`,
+          intermediate: `Water pours down at ${en}.`,
+          advanced: `${en} is a world-famous tourist attraction.`,
+          master: `The formation process of ${en} is a geologically interesting subject of study.`,
+        };
+      case 'plateau':
+        return {
+          beginner: `${en} is high and flat.`,
+          intermediate: `${en} has a unique ecosystem.`,
+          advanced: `The climate of ${en} differs from surrounding lowlands.`,
+          master: `The geological formation of ${en} shows the history of the continent.`,
+        };
+      case 'plain':
+        return {
+          beginner: `${en} is wide and flat.`,
+          intermediate: `${en} is suitable for agriculture.`,
+          advanced: `${en} is a major agricultural area.`,
+          master: `The formation of ${en} is the result of glacial sedimentation.`,
+        };
+      case 'canyon':
+        return {
+          beginner: `${en} is deep.`,
+          intermediate: `The scenery of ${en} is spectacular.`,
+          advanced: `${en} was formed over millions of years.`,
+          master: `The strata of ${en} are a record of Earth's history.`,
+        };
+      case 'cape':
+        return {
+          beginner: `${en} extends into the sea.`,
+          intermediate: `You can see beautiful scenery at ${en}.`,
+          advanced: `${en} is a historically important navigation point.`,
+          master: `${en} was an important landmark during the Age of Exploration.`,
+        };
+      case 'gulf':
+        return {
+          beginner: `The ${en} is a large body of water.`,
+          intermediate: `Much fishing activity occurs in the ${en}.`,
+          advanced: `The ${en} has major ports for surrounding countries.`,
+          master: `The marine resources of the ${en} are key to the regional economy.`,
+        };
+      case 'valley':
+        return {
+          beginner: `${en} is between mountains.`,
+          intermediate: `A river flows through ${en}.`,
+          advanced: `${en} is suitable terrain for agriculture.`,
+          master: `The formation of ${en} is the result of glacial and river erosion.`,
+        };
+      case 'region':
+        return {
+          beginner: `There are several countries in ${en}.`,
+          intermediate: `The culture of ${en} is diverse.`,
+          advanced: `${en} is a geopolitically important region.`,
+          master: `The history and culture of ${en} have greatly influenced world history.`,
+        };
+      case 'term':
+      default:
+        return {
+          beginner: `${en} is a geography term.`,
+          intermediate: `Let's learn the meaning of ${en}.`,
+          advanced: `${en} is an important concept in geography.`,
+          master: `The exact definition of ${en} may vary by region.`,
+        };
+    }
+  };
+
   return {
-    ko: template.ko,
-    en: template.en,
+    ko: getKoreanTemplates(),
+    en: getEnglishTemplates(),
   };
 }
 
@@ -1862,19 +1934,33 @@ function generateAllEntries(): GeographyEntry[] {
     }
   };
 
-  // Existing entries (5 oceans + 6 continents)
+  // Existing entries (5 oceans + 6 continents) and country duplicates
   const existingEntries = [
+    // 5 oceans (in geography.json but we keep these)
     'pacific-ocean',
     'atlantic-ocean',
     'indian-ocean',
     'arctic-ocean',
     'southern-ocean',
+    // 6 continents
     'asia',
     'europe',
     'africa',
     'north-america',
     'south-america',
     'oceania',
+    // Countries that are also islands (already in countries.json)
+    'australia',
+    'greenland',
+    'madagascar',
+    'iceland',
+    'cuba',
+    'taiwan',
+    'sri-lanka',
+    'cyprus',
+    'maldives',
+    'new-zealand',
+    'micronesia',
   ];
   for (const id of existingEntries) {
     existingIds.add(id);
@@ -1993,15 +2079,9 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const existingPath = path.join(__dirname, '..', 'app', 'data', 'entries', 'geography.json');
-const existing = JSON.parse(fs.readFileSync(existingPath, 'utf-8'));
-const newEntries = generateAllEntries();
+const outputPath = path.join(__dirname, '..', 'app', 'data', 'entries', 'geography.json');
+const entries = generateAllEntries();
 
-// Merge existing with new (existing first)
-const merged = [...existing, ...newEntries];
-
-// Write output
-fs.writeFileSync(existingPath, `${JSON.stringify(merged, null, 2)}\n`);
-console.log(
-  `✅ Generated ${merged.length} geography entries (${existing.length} existing + ${newEntries.length} new)`,
-);
+// Write output (completely replace existing file)
+fs.writeFileSync(outputPath, `${JSON.stringify(entries, null, 2)}\n`);
+console.log(`✅ Generated ${entries.length} geography entries`);

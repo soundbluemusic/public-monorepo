@@ -1,390 +1,5 @@
 [
   {
-    "id": "pacific-ocean",
-    "korean": "태평양",
-    "romanization": "taepyeongyang",
-    "partOfSpeech": "noun",
-    "categoryId": "geography",
-    "difficulty": "intermediate",
-    "frequency": "common",
-    "tags": [
-      "ocean",
-      "geography"
-    ],
-    "translations": {
-      "ko": {
-        "word": "태평양",
-        "explanation": "세계에서 가장 큰 바다로, 아시아, 오세아니아, 아메리카 대륙 사이에 있습니다.",
-        "examples": {
-          "beginner": "태평양은 매우 큽니다.",
-          "intermediate": "태평양은 세계에서 가장 큰 바다입니다.",
-          "advanced": "태평양은 지구 표면의 약 30%를 차지합니다.",
-          "master": "태평양의 평균 깊이는 약 4,000미터입니다."
-        }
-      },
-      "en": {
-        "word": "Pacific Ocean",
-        "explanation": "The largest ocean in the world, located between Asia, Oceania, and the Americas.",
-        "examples": {
-          "beginner": "The Pacific Ocean is very large.",
-          "intermediate": "The Pacific Ocean is the largest ocean in the world.",
-          "advanced": "The Pacific Ocean covers about 30% of Earth's surface.",
-          "master": "The average depth of the Pacific Ocean is about 4,000 meters."
-        }
-      }
-    }
-  },
-  {
-    "id": "atlantic-ocean",
-    "korean": "대서양",
-    "romanization": "daeseoyang",
-    "partOfSpeech": "noun",
-    "categoryId": "geography",
-    "difficulty": "intermediate",
-    "frequency": "common",
-    "tags": [
-      "ocean",
-      "geography"
-    ],
-    "translations": {
-      "ko": {
-        "word": "대서양",
-        "explanation": "유럽, 아프리카와 아메리카 대륙 사이에 있는 바다입니다.",
-        "examples": {
-          "beginner": "대서양은 매우 깊습니다.",
-          "intermediate": "대서양은 세계에서 두 번째로 큰 바다입니다.",
-          "advanced": "대서양은 유럽과 아메리카를 연결하는 중요한 해상 루트입니다.",
-          "master": "대서양 해류는 세계 기후에 큰 영향을 미칩니다."
-        }
-      },
-      "en": {
-        "word": "Atlantic Ocean",
-        "explanation": "The ocean between Europe, Africa, and the Americas.",
-        "examples": {
-          "beginner": "The Atlantic Ocean is very deep.",
-          "intermediate": "The Atlantic Ocean is the second largest ocean in the world.",
-          "advanced": "The Atlantic Ocean is an important maritime route connecting Europe and America.",
-          "master": "Atlantic Ocean currents have a significant impact on global climate."
-        }
-      }
-    }
-  },
-  {
-    "id": "indian-ocean",
-    "korean": "인도양",
-    "romanization": "indoyang",
-    "partOfSpeech": "noun",
-    "categoryId": "geography",
-    "difficulty": "intermediate",
-    "frequency": "common",
-    "tags": [
-      "ocean",
-      "geography"
-    ],
-    "translations": {
-      "ko": {
-        "word": "인도양",
-        "explanation": "아시아, 아프리카, 오세아니아 사이에 있는 바다입니다.",
-        "examples": {
-          "beginner": "인도양은 따뜻합니다.",
-          "intermediate": "인도양은 세계에서 세 번째로 큰 바다입니다.",
-          "advanced": "인도양은 계절풍의 영향을 받는 지역입니다.",
-          "master": "인도양은 고대 무역로로서 중요한 역할을 했습니다."
-        }
-      },
-      "en": {
-        "word": "Indian Ocean",
-        "explanation": "The ocean between Asia, Africa, and Oceania.",
-        "examples": {
-          "beginner": "The Indian Ocean is warm.",
-          "intermediate": "The Indian Ocean is the third largest ocean in the world.",
-          "advanced": "The Indian Ocean is a region affected by monsoons.",
-          "master": "The Indian Ocean played an important role as an ancient trade route."
-        }
-      }
-    }
-  },
-  {
-    "id": "arctic-ocean",
-    "korean": "북극해",
-    "romanization": "bukgeukhae",
-    "partOfSpeech": "noun",
-    "categoryId": "geography",
-    "difficulty": "intermediate",
-    "frequency": "rare",
-    "tags": [
-      "ocean",
-      "geography"
-    ],
-    "translations": {
-      "ko": {
-        "word": "북극해",
-        "explanation": "지구의 북쪽 끝에 있는 바다로, 대부분 얼음으로 덮여 있습니다.",
-        "examples": {
-          "beginner": "북극해는 매우 춥습니다.",
-          "intermediate": "북극해에는 북극곰이 삽니다.",
-          "advanced": "북극해의 빙하가 점점 녹고 있습니다.",
-          "master": "북극해는 기후 변화의 영향을 가장 크게 받는 지역 중 하나입니다."
-        }
-      },
-      "en": {
-        "word": "Arctic Ocean",
-        "explanation": "The ocean at the northern end of the Earth, mostly covered by ice.",
-        "examples": {
-          "beginner": "The Arctic Ocean is very cold.",
-          "intermediate": "Polar bears live in the Arctic Ocean region.",
-          "advanced": "The glaciers of the Arctic Ocean are gradually melting.",
-          "master": "The Arctic Ocean is one of the regions most affected by climate change."
-        }
-      }
-    }
-  },
-  {
-    "id": "southern-ocean",
-    "korean": "남극해",
-    "romanization": "namgeukhae",
-    "partOfSpeech": "noun",
-    "categoryId": "geography",
-    "difficulty": "intermediate",
-    "frequency": "rare",
-    "tags": [
-      "ocean",
-      "geography"
-    ],
-    "translations": {
-      "ko": {
-        "word": "남극해",
-        "explanation": "남극 대륙을 둘러싸고 있는 바다입니다.",
-        "examples": {
-          "beginner": "남극해는 매우 춥습니다.",
-          "intermediate": "남극해에는 펭귄이 많이 삽니다.",
-          "advanced": "남극해는 세계에서 가장 거친 바다 중 하나입니다.",
-          "master": "남극해의 심해 해류는 전 세계 해양 순환에 중요한 역할을 합니다."
-        }
-      },
-      "en": {
-        "word": "Southern Ocean",
-        "explanation": "The ocean surrounding Antarctica.",
-        "examples": {
-          "beginner": "The Southern Ocean is very cold.",
-          "intermediate": "Many penguins live in the Southern Ocean region.",
-          "advanced": "The Southern Ocean is one of the roughest seas in the world.",
-          "master": "Deep currents of the Southern Ocean play an important role in global ocean circulation."
-        }
-      }
-    }
-  },
-  {
-    "id": "asia",
-    "korean": "아시아",
-    "romanization": "asia",
-    "partOfSpeech": "noun",
-    "categoryId": "geography",
-    "difficulty": "beginner",
-    "frequency": "common",
-    "tags": [
-      "continent",
-      "geography"
-    ],
-    "translations": {
-      "ko": {
-        "word": "아시아",
-        "explanation": "세계에서 가장 큰 대륙으로, 한국, 중국, 일본, 인도 등이 있습니다.",
-        "examples": {
-          "beginner": "한국은 아시아에 있습니다.",
-          "intermediate": "아시아는 세계에서 가장 큰 대륙입니다.",
-          "advanced": "아시아에는 세계 인구의 약 60%가 살고 있습니다.",
-          "master": "아시아는 다양한 문화와 종교가 공존하는 대륙입니다."
-        }
-      },
-      "en": {
-        "word": "Asia",
-        "explanation": "The largest continent in the world, including Korea, China, Japan, India, and more.",
-        "examples": {
-          "beginner": "Korea is in Asia.",
-          "intermediate": "Asia is the largest continent in the world.",
-          "advanced": "About 60% of the world's population lives in Asia.",
-          "master": "Asia is a continent where diverse cultures and religions coexist."
-        }
-      }
-    }
-  },
-  {
-    "id": "europe",
-    "korean": "유럽",
-    "romanization": "yureop",
-    "partOfSpeech": "noun",
-    "categoryId": "geography",
-    "difficulty": "beginner",
-    "frequency": "common",
-    "tags": [
-      "continent",
-      "geography"
-    ],
-    "translations": {
-      "ko": {
-        "word": "유럽",
-        "explanation": "아시아의 서쪽에 있는 대륙으로, 영국, 프랑스, 독일 등이 있습니다.",
-        "examples": {
-          "beginner": "프랑스는 유럽에 있습니다.",
-          "intermediate": "유럽에는 많은 역사적 건물이 있습니다.",
-          "advanced": "유럽 연합은 27개 회원국으로 구성되어 있습니다.",
-          "master": "유럽의 르네상스는 세계 문화에 큰 영향을 미쳤습니다."
-        }
-      },
-      "en": {
-        "word": "Europe",
-        "explanation": "A continent west of Asia, including the UK, France, Germany, and more.",
-        "examples": {
-          "beginner": "France is in Europe.",
-          "intermediate": "There are many historic buildings in Europe.",
-          "advanced": "The European Union consists of 27 member states.",
-          "master": "The European Renaissance had a great influence on world culture."
-        }
-      }
-    }
-  },
-  {
-    "id": "africa",
-    "korean": "아프리카",
-    "romanization": "apeurika",
-    "partOfSpeech": "noun",
-    "categoryId": "geography",
-    "difficulty": "beginner",
-    "frequency": "common",
-    "tags": [
-      "continent",
-      "geography"
-    ],
-    "translations": {
-      "ko": {
-        "word": "아프리카",
-        "explanation": "유럽의 남쪽에 있는 대륙으로, 이집트, 남아프리카공화국 등이 있습니다.",
-        "examples": {
-          "beginner": "아프리카는 덥습니다.",
-          "intermediate": "아프리카에는 사막과 정글이 있습니다.",
-          "advanced": "아프리카는 인류의 발상지로 알려져 있습니다.",
-          "master": "아프리카 대륙은 54개의 국가로 이루어져 있습니다."
-        }
-      },
-      "en": {
-        "word": "Africa",
-        "explanation": "A continent south of Europe, including Egypt, South Africa, and more.",
-        "examples": {
-          "beginner": "Africa is hot.",
-          "intermediate": "Africa has deserts and jungles.",
-          "advanced": "Africa is known as the birthplace of humanity.",
-          "master": "The African continent consists of 54 countries."
-        }
-      }
-    }
-  },
-  {
-    "id": "north-america",
-    "korean": "북아메리카",
-    "romanization": "bugamerika",
-    "partOfSpeech": "noun",
-    "categoryId": "geography",
-    "difficulty": "beginner",
-    "frequency": "common",
-    "tags": [
-      "continent",
-      "geography"
-    ],
-    "translations": {
-      "ko": {
-        "word": "북아메리카",
-        "explanation": "아메리카 대륙의 북쪽 지역으로, 미국, 캐나다, 멕시코 등이 있습니다.",
-        "examples": {
-          "beginner": "미국은 북아메리카에 있습니다.",
-          "intermediate": "북아메리카는 매우 큰 대륙입니다.",
-          "advanced": "북아메리카에는 다양한 기후대가 있습니다.",
-          "master": "북아메리카의 그랜드 캐니언은 세계적으로 유명한 자연 명소입니다."
-        }
-      },
-      "en": {
-        "word": "North America",
-        "explanation": "The northern region of the Americas, including the USA, Canada, Mexico, and more.",
-        "examples": {
-          "beginner": "The USA is in North America.",
-          "intermediate": "North America is a very large continent.",
-          "advanced": "North America has various climate zones.",
-          "master": "The Grand Canyon in North America is a world-famous natural attraction."
-        }
-      }
-    }
-  },
-  {
-    "id": "south-america",
-    "korean": "남아메리카",
-    "romanization": "namamerika",
-    "partOfSpeech": "noun",
-    "categoryId": "geography",
-    "difficulty": "beginner",
-    "frequency": "common",
-    "tags": [
-      "continent",
-      "geography"
-    ],
-    "translations": {
-      "ko": {
-        "word": "남아메리카",
-        "explanation": "아메리카 대륙의 남쪽 지역으로, 브라질, 아르헨티나, 칠레 등이 있습니다.",
-        "examples": {
-          "beginner": "브라질은 남아메리카에 있습니다.",
-          "intermediate": "남아메리카에는 아마존 열대우림이 있습니다.",
-          "advanced": "남아메리카의 안데스 산맥은 세계에서 가장 긴 산맥입니다.",
-          "master": "남아메리카의 마추픽추는 잉카 문명의 대표적인 유적입니다."
-        }
-      },
-      "en": {
-        "word": "South America",
-        "explanation": "The southern region of the Americas, including Brazil, Argentina, Chile, and more.",
-        "examples": {
-          "beginner": "Brazil is in South America.",
-          "intermediate": "South America has the Amazon rainforest.",
-          "advanced": "The Andes Mountains in South America is the longest mountain range in the world.",
-          "master": "Machu Picchu in South America is a representative ruin of the Inca civilization."
-        }
-      }
-    }
-  },
-  {
-    "id": "oceania",
-    "korean": "오세아니아",
-    "romanization": "oseania",
-    "partOfSpeech": "noun",
-    "categoryId": "geography",
-    "difficulty": "intermediate",
-    "frequency": "common",
-    "tags": [
-      "continent",
-      "geography"
-    ],
-    "translations": {
-      "ko": {
-        "word": "오세아니아",
-        "explanation": "태평양에 있는 대륙으로, 호주, 뉴질랜드 등이 있습니다.",
-        "examples": {
-          "beginner": "호주는 오세아니아에 있습니다.",
-          "intermediate": "오세아니아에는 많은 섬나라가 있습니다.",
-          "advanced": "오세아니아는 독특한 동식물로 유명합니다.",
-          "master": "오세아니아의 원주민들은 오랜 역사와 문화를 가지고 있습니다."
-        }
-      },
-      "en": {
-        "word": "Oceania",
-        "explanation": "A continent in the Pacific Ocean, including Australia, New Zealand, and more.",
-        "examples": {
-          "beginner": "Australia is in Oceania.",
-          "intermediate": "Oceania has many island nations.",
-          "advanced": "Oceania is famous for its unique flora and fauna.",
-          "master": "The indigenous peoples of Oceania have a long history and culture."
-        }
-      }
-    }
-  },
-  {
     "id": "antarctica",
     "korean": "남극 대륙",
     "romanization": "namgeuk daeryuk",
@@ -436,9 +51,9 @@
         "word": "동해",
         "explanation": "한반도 동쪽에 있는 바다입니다.",
         "examples": {
-          "beginner": "동해은 아름답습니다.",
+          "beginner": "동해는 아름답습니다.",
           "intermediate": "동해에서 많은 물고기가 잡힙니다.",
-          "advanced": "동해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "동해는 주변 국가들의 주요 항로입니다.",
           "master": "동해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -471,9 +86,9 @@
         "word": "황해",
         "explanation": "한반도 서쪽에 있는 바다입니다.",
         "examples": {
-          "beginner": "황해은 아름답습니다.",
+          "beginner": "황해는 아름답습니다.",
           "intermediate": "황해에서 많은 물고기가 잡힙니다.",
-          "advanced": "황해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "황해는 주변 국가들의 주요 항로입니다.",
           "master": "황해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -506,9 +121,9 @@
         "word": "동중국해",
         "explanation": "중국 동부와 일본 사이에 있는 바다입니다.",
         "examples": {
-          "beginner": "동중국해은 아름답습니다.",
+          "beginner": "동중국해는 아름답습니다.",
           "intermediate": "동중국해에서 많은 물고기가 잡힙니다.",
-          "advanced": "동중국해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "동중국해는 주변 국가들의 주요 항로입니다.",
           "master": "동중국해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -541,9 +156,9 @@
         "word": "남중국해",
         "explanation": "동남아시아 지역의 바다입니다.",
         "examples": {
-          "beginner": "남중국해은 아름답습니다.",
+          "beginner": "남중국해는 아름답습니다.",
           "intermediate": "남중국해에서 많은 물고기가 잡힙니다.",
-          "advanced": "남중국해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "남중국해는 주변 국가들의 주요 항로입니다.",
           "master": "남중국해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -576,9 +191,9 @@
         "word": "필리핀해",
         "explanation": "필리핀 동쪽에 있는 바다입니다.",
         "examples": {
-          "beginner": "필리핀해은 아름답습니다.",
+          "beginner": "필리핀해는 아름답습니다.",
           "intermediate": "필리핀해에서 많은 물고기가 잡힙니다.",
-          "advanced": "필리핀해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "필리핀해는 주변 국가들의 주요 항로입니다.",
           "master": "필리핀해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -611,9 +226,9 @@
         "word": "산호해",
         "explanation": "호주 북동쪽에 있는 바다입니다.",
         "examples": {
-          "beginner": "산호해은 아름답습니다.",
+          "beginner": "산호해는 아름답습니다.",
           "intermediate": "산호해에서 많은 물고기가 잡힙니다.",
-          "advanced": "산호해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "산호해는 주변 국가들의 주요 항로입니다.",
           "master": "산호해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -646,9 +261,9 @@
         "word": "태즈먼해",
         "explanation": "호주와 뉴질랜드 사이에 있는 바다입니다.",
         "examples": {
-          "beginner": "태즈먼해은 아름답습니다.",
+          "beginner": "태즈먼해는 아름답습니다.",
           "intermediate": "태즈먼해에서 많은 물고기가 잡힙니다.",
-          "advanced": "태즈먼해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "태즈먼해는 주변 국가들의 주요 항로입니다.",
           "master": "태즈먼해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -681,9 +296,9 @@
         "word": "베링해",
         "explanation": "알래스카와 러시아 사이에 있는 바다입니다.",
         "examples": {
-          "beginner": "베링해은 아름답습니다.",
+          "beginner": "베링해는 아름답습니다.",
           "intermediate": "베링해에서 많은 물고기가 잡힙니다.",
-          "advanced": "베링해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "베링해는 주변 국가들의 주요 항로입니다.",
           "master": "베링해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -716,9 +331,9 @@
         "word": "오호츠크해",
         "explanation": "러시아 극동 지역의 바다입니다.",
         "examples": {
-          "beginner": "오호츠크해은 아름답습니다.",
+          "beginner": "오호츠크해는 아름답습니다.",
           "intermediate": "오호츠크해에서 많은 물고기가 잡힙니다.",
-          "advanced": "오호츠크해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "오호츠크해는 주변 국가들의 주요 항로입니다.",
           "master": "오호츠크해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -751,9 +366,9 @@
         "word": "카리브해",
         "explanation": "중앙아메리카 지역의 바다입니다.",
         "examples": {
-          "beginner": "카리브해은 아름답습니다.",
+          "beginner": "카리브해는 아름답습니다.",
           "intermediate": "카리브해에서 많은 물고기가 잡힙니다.",
-          "advanced": "카리브해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "카리브해는 주변 국가들의 주요 항로입니다.",
           "master": "카리브해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -821,9 +436,9 @@
         "word": "지중해",
         "explanation": "유럽과 아프리카 사이에 있는 바다입니다.",
         "examples": {
-          "beginner": "지중해은 아름답습니다.",
+          "beginner": "지중해는 아름답습니다.",
           "intermediate": "지중해에서 많은 물고기가 잡힙니다.",
-          "advanced": "지중해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "지중해는 주변 국가들의 주요 항로입니다.",
           "master": "지중해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -856,9 +471,9 @@
         "word": "북해",
         "explanation": "북유럽에 있는 바다입니다.",
         "examples": {
-          "beginner": "북해은 아름답습니다.",
+          "beginner": "북해는 아름답습니다.",
           "intermediate": "북해에서 많은 물고기가 잡힙니다.",
-          "advanced": "북해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "북해는 주변 국가들의 주요 항로입니다.",
           "master": "북해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -891,9 +506,9 @@
         "word": "발트해",
         "explanation": "북유럽의 내해입니다.",
         "examples": {
-          "beginner": "발트해은 아름답습니다.",
+          "beginner": "발트해는 아름답습니다.",
           "intermediate": "발트해에서 많은 물고기가 잡힙니다.",
-          "advanced": "발트해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "발트해는 주변 국가들의 주요 항로입니다.",
           "master": "발트해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -926,9 +541,9 @@
         "word": "흑해",
         "explanation": "동유럽의 내해입니다.",
         "examples": {
-          "beginner": "흑해은 아름답습니다.",
+          "beginner": "흑해는 아름답습니다.",
           "intermediate": "흑해에서 많은 물고기가 잡힙니다.",
-          "advanced": "흑해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "흑해는 주변 국가들의 주요 항로입니다.",
           "master": "흑해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -961,9 +576,9 @@
         "word": "노르웨이해",
         "explanation": "노르웨이 서쪽에 있는 바다입니다.",
         "examples": {
-          "beginner": "노르웨이해은 아름답습니다.",
+          "beginner": "노르웨이해는 아름답습니다.",
           "intermediate": "노르웨이해에서 많은 물고기가 잡힙니다.",
-          "advanced": "노르웨이해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "노르웨이해는 주변 국가들의 주요 항로입니다.",
           "master": "노르웨이해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -996,9 +611,9 @@
         "word": "아라비아해",
         "explanation": "인도 서쪽에 있는 바다입니다.",
         "examples": {
-          "beginner": "아라비아해은 아름답습니다.",
+          "beginner": "아라비아해는 아름답습니다.",
           "intermediate": "아라비아해에서 많은 물고기가 잡힙니다.",
-          "advanced": "아라비아해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "아라비아해는 주변 국가들의 주요 항로입니다.",
           "master": "아라비아해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -1066,9 +681,9 @@
         "word": "홍해",
         "explanation": "아프리카와 아라비아 반도 사이에 있는 바다입니다.",
         "examples": {
-          "beginner": "홍해은 아름답습니다.",
+          "beginner": "홍해는 아름답습니다.",
           "intermediate": "홍해에서 많은 물고기가 잡힙니다.",
-          "advanced": "홍해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "홍해는 주변 국가들의 주요 항로입니다.",
           "master": "홍해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -1136,9 +751,9 @@
         "word": "안다만해",
         "explanation": "동남아시아의 바다입니다.",
         "examples": {
-          "beginner": "안다만해은 아름답습니다.",
+          "beginner": "안다만해는 아름답습니다.",
           "intermediate": "안다만해에서 많은 물고기가 잡힙니다.",
-          "advanced": "안다만해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "안다만해는 주변 국가들의 주요 항로입니다.",
           "master": "안다만해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -1171,9 +786,9 @@
         "word": "자바해",
         "explanation": "인도네시아의 바다입니다.",
         "examples": {
-          "beginner": "자바해은 아름답습니다.",
+          "beginner": "자바해는 아름답습니다.",
           "intermediate": "자바해에서 많은 물고기가 잡힙니다.",
-          "advanced": "자바해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "자바해는 주변 국가들의 주요 항로입니다.",
           "master": "자바해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -1206,9 +821,9 @@
         "word": "바렌츠해",
         "explanation": "러시아 북부의 바다입니다.",
         "examples": {
-          "beginner": "바렌츠해은 아름답습니다.",
+          "beginner": "바렌츠해는 아름답습니다.",
           "intermediate": "바렌츠해에서 많은 물고기가 잡힙니다.",
-          "advanced": "바렌츠해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "바렌츠해는 주변 국가들의 주요 항로입니다.",
           "master": "바렌츠해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -1241,9 +856,9 @@
         "word": "카라해",
         "explanation": "시베리아 북부의 바다입니다.",
         "examples": {
-          "beginner": "카라해은 아름답습니다.",
+          "beginner": "카라해는 아름답습니다.",
           "intermediate": "카라해에서 많은 물고기가 잡힙니다.",
-          "advanced": "카라해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "카라해는 주변 국가들의 주요 항로입니다.",
           "master": "카라해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -1276,9 +891,9 @@
         "word": "축치해",
         "explanation": "러시아와 알래스카 북부의 바다입니다.",
         "examples": {
-          "beginner": "축치해은 아름답습니다.",
+          "beginner": "축치해는 아름답습니다.",
           "intermediate": "축치해에서 많은 물고기가 잡힙니다.",
-          "advanced": "축치해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "축치해는 주변 국가들의 주요 항로입니다.",
           "master": "축치해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -1311,9 +926,9 @@
         "word": "보퍼트해",
         "explanation": "캐나다 북부의 바다입니다.",
         "examples": {
-          "beginner": "보퍼트해은 아름답습니다.",
+          "beginner": "보퍼트해는 아름답습니다.",
           "intermediate": "보퍼트해에서 많은 물고기가 잡힙니다.",
-          "advanced": "보퍼트해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "보퍼트해는 주변 국가들의 주요 항로입니다.",
           "master": "보퍼트해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -1346,9 +961,9 @@
         "word": "그린란드해",
         "explanation": "그린란드 동쪽의 바다입니다.",
         "examples": {
-          "beginner": "그린란드해은 아름답습니다.",
+          "beginner": "그린란드해는 아름답습니다.",
           "intermediate": "그린란드해에서 많은 물고기가 잡힙니다.",
-          "advanced": "그린란드해은 주변 국가들의 주요 항로입니다.",
+          "advanced": "그린란드해는 주변 국가들의 주요 항로입니다.",
           "master": "그린란드해의 생태계는 지역 경제에 큰 영향을 미칩니다."
         }
       },
@@ -1696,10 +1311,10 @@
         "word": "한반도",
         "explanation": "동북아시아에 있는 반도입니다.",
         "examples": {
-          "beginner": "한반도은 삼면이 바다입니다.",
+          "beginner": "한반도는 삼면이 바다입니다.",
           "intermediate": "한반도에는 독특한 문화가 있습니다.",
           "advanced": "한반도의 지정학적 위치는 역사에 큰 영향을 미쳤습니다.",
-          "master": "한반도은 해양 문화와 대륙 문화가 만나는 지점입니다."
+          "master": "한반도는 해양 문화와 대륙 문화가 만나는 지점입니다."
         }
       },
       "en": {
@@ -1731,10 +1346,10 @@
         "word": "이베리아 반도",
         "explanation": "스페인과 포르투갈이 있는 반도입니다.",
         "examples": {
-          "beginner": "이베리아 반도은 삼면이 바다입니다.",
+          "beginner": "이베리아 반도는 삼면이 바다입니다.",
           "intermediate": "이베리아 반도에는 독특한 문화가 있습니다.",
           "advanced": "이베리아 반도의 지정학적 위치는 역사에 큰 영향을 미쳤습니다.",
-          "master": "이베리아 반도은 해양 문화와 대륙 문화가 만나는 지점입니다."
+          "master": "이베리아 반도는 해양 문화와 대륙 문화가 만나는 지점입니다."
         }
       },
       "en": {
@@ -1766,10 +1381,10 @@
         "word": "이탈리아 반도",
         "explanation": "장화 모양의 반도입니다.",
         "examples": {
-          "beginner": "이탈리아 반도은 삼면이 바다입니다.",
+          "beginner": "이탈리아 반도는 삼면이 바다입니다.",
           "intermediate": "이탈리아 반도에는 독특한 문화가 있습니다.",
           "advanced": "이탈리아 반도의 지정학적 위치는 역사에 큰 영향을 미쳤습니다.",
-          "master": "이탈리아 반도은 해양 문화와 대륙 문화가 만나는 지점입니다."
+          "master": "이탈리아 반도는 해양 문화와 대륙 문화가 만나는 지점입니다."
         }
       },
       "en": {
@@ -1801,10 +1416,10 @@
         "word": "발칸 반도",
         "explanation": "남동유럽의 반도입니다.",
         "examples": {
-          "beginner": "발칸 반도은 삼면이 바다입니다.",
+          "beginner": "발칸 반도는 삼면이 바다입니다.",
           "intermediate": "발칸 반도에는 독특한 문화가 있습니다.",
           "advanced": "발칸 반도의 지정학적 위치는 역사에 큰 영향을 미쳤습니다.",
-          "master": "발칸 반도은 해양 문화와 대륙 문화가 만나는 지점입니다."
+          "master": "발칸 반도는 해양 문화와 대륙 문화가 만나는 지점입니다."
         }
       },
       "en": {
@@ -1836,10 +1451,10 @@
         "word": "스칸디나비아 반도",
         "explanation": "북유럽의 반도입니다.",
         "examples": {
-          "beginner": "스칸디나비아 반도은 삼면이 바다입니다.",
+          "beginner": "스칸디나비아 반도는 삼면이 바다입니다.",
           "intermediate": "스칸디나비아 반도에는 독특한 문화가 있습니다.",
           "advanced": "스칸디나비아 반도의 지정학적 위치는 역사에 큰 영향을 미쳤습니다.",
-          "master": "스칸디나비아 반도은 해양 문화와 대륙 문화가 만나는 지점입니다."
+          "master": "스칸디나비아 반도는 해양 문화와 대륙 문화가 만나는 지점입니다."
         }
       },
       "en": {
@@ -1871,10 +1486,10 @@
         "word": "아라비아 반도",
         "explanation": "세계에서 가장 큰 반도입니다.",
         "examples": {
-          "beginner": "아라비아 반도은 삼면이 바다입니다.",
+          "beginner": "아라비아 반도는 삼면이 바다입니다.",
           "intermediate": "아라비아 반도에는 독특한 문화가 있습니다.",
           "advanced": "아라비아 반도의 지정학적 위치는 역사에 큰 영향을 미쳤습니다.",
-          "master": "아라비아 반도은 해양 문화와 대륙 문화가 만나는 지점입니다."
+          "master": "아라비아 반도는 해양 문화와 대륙 문화가 만나는 지점입니다."
         }
       },
       "en": {
@@ -1906,10 +1521,10 @@
         "word": "인도차이나 반도",
         "explanation": "동남아시아의 반도입니다.",
         "examples": {
-          "beginner": "인도차이나 반도은 삼면이 바다입니다.",
+          "beginner": "인도차이나 반도는 삼면이 바다입니다.",
           "intermediate": "인도차이나 반도에는 독특한 문화가 있습니다.",
           "advanced": "인도차이나 반도의 지정학적 위치는 역사에 큰 영향을 미쳤습니다.",
-          "master": "인도차이나 반도은 해양 문화와 대륙 문화가 만나는 지점입니다."
+          "master": "인도차이나 반도는 해양 문화와 대륙 문화가 만나는 지점입니다."
         }
       },
       "en": {
@@ -1941,10 +1556,10 @@
         "word": "말레이 반도",
         "explanation": "동남아시아 남단의 반도입니다.",
         "examples": {
-          "beginner": "말레이 반도은 삼면이 바다입니다.",
+          "beginner": "말레이 반도는 삼면이 바다입니다.",
           "intermediate": "말레이 반도에는 독특한 문화가 있습니다.",
           "advanced": "말레이 반도의 지정학적 위치는 역사에 큰 영향을 미쳤습니다.",
-          "master": "말레이 반도은 해양 문화와 대륙 문화가 만나는 지점입니다."
+          "master": "말레이 반도는 해양 문화와 대륙 문화가 만나는 지점입니다."
         }
       },
       "en": {
@@ -1976,10 +1591,10 @@
         "word": "캄차카 반도",
         "explanation": "러시아 극동의 반도입니다.",
         "examples": {
-          "beginner": "캄차카 반도은 삼면이 바다입니다.",
+          "beginner": "캄차카 반도는 삼면이 바다입니다.",
           "intermediate": "캄차카 반도에는 독특한 문화가 있습니다.",
           "advanced": "캄차카 반도의 지정학적 위치는 역사에 큰 영향을 미쳤습니다.",
-          "master": "캄차카 반도은 해양 문화와 대륙 문화가 만나는 지점입니다."
+          "master": "캄차카 반도는 해양 문화와 대륙 문화가 만나는 지점입니다."
         }
       },
       "en": {
@@ -2011,10 +1626,10 @@
         "word": "시나이 반도",
         "explanation": "아시아와 아프리카를 연결하는 반도입니다.",
         "examples": {
-          "beginner": "시나이 반도은 삼면이 바다입니다.",
+          "beginner": "시나이 반도는 삼면이 바다입니다.",
           "intermediate": "시나이 반도에는 독특한 문화가 있습니다.",
           "advanced": "시나이 반도의 지정학적 위치는 역사에 큰 영향을 미쳤습니다.",
-          "master": "시나이 반도은 해양 문화와 대륙 문화가 만나는 지점입니다."
+          "master": "시나이 반도는 해양 문화와 대륙 문화가 만나는 지점입니다."
         }
       },
       "en": {
@@ -2046,10 +1661,10 @@
         "word": "플로리다 반도",
         "explanation": "미국 남동부의 반도입니다.",
         "examples": {
-          "beginner": "플로리다 반도은 삼면이 바다입니다.",
+          "beginner": "플로리다 반도는 삼면이 바다입니다.",
           "intermediate": "플로리다 반도에는 독특한 문화가 있습니다.",
           "advanced": "플로리다 반도의 지정학적 위치는 역사에 큰 영향을 미쳤습니다.",
-          "master": "플로리다 반도은 해양 문화와 대륙 문화가 만나는 지점입니다."
+          "master": "플로리다 반도는 해양 문화와 대륙 문화가 만나는 지점입니다."
         }
       },
       "en": {
@@ -2081,10 +1696,10 @@
         "word": "크림 반도",
         "explanation": "흑해 북부의 반도입니다.",
         "examples": {
-          "beginner": "크림 반도은 삼면이 바다입니다.",
+          "beginner": "크림 반도는 삼면이 바다입니다.",
           "intermediate": "크림 반도에는 독특한 문화가 있습니다.",
           "advanced": "크림 반도의 지정학적 위치는 역사에 큰 영향을 미쳤습니다.",
-          "master": "크림 반도은 해양 문화와 대륙 문화가 만나는 지점입니다."
+          "master": "크림 반도는 해양 문화와 대륙 문화가 만나는 지점입니다."
         }
       },
       "en": {
@@ -2116,10 +1731,10 @@
         "word": "아나톨리아 반도",
         "explanation": "터키 본토를 이루는 반도입니다.",
         "examples": {
-          "beginner": "아나톨리아 반도은 삼면이 바다입니다.",
+          "beginner": "아나톨리아 반도는 삼면이 바다입니다.",
           "intermediate": "아나톨리아 반도에는 독특한 문화가 있습니다.",
           "advanced": "아나톨리아 반도의 지정학적 위치는 역사에 큰 영향을 미쳤습니다.",
-          "master": "아나톨리아 반도은 해양 문화와 대륙 문화가 만나는 지점입니다."
+          "master": "아나톨리아 반도는 해양 문화와 대륙 문화가 만나는 지점입니다."
         }
       },
       "en": {
@@ -2151,9 +1766,9 @@
         "word": "뉴기니",
         "explanation": "세계에서 두 번째로 큰 섬입니다.",
         "examples": {
-          "beginner": "뉴기니은 아름다운 섬입니다.",
+          "beginner": "뉴기니는 아름다운 섬입니다.",
           "intermediate": "뉴기니에 많은 관광객이 방문합니다.",
-          "advanced": "뉴기니은 독특한 생태계를 가지고 있습니다.",
+          "advanced": "뉴기니는 독특한 생태계를 가지고 있습니다.",
           "master": "뉴기니의 고립된 환경은 독특한 종의 진화를 이끌었습니다."
         }
       },
@@ -2186,9 +1801,9 @@
         "word": "보르네오",
         "explanation": "세계에서 세 번째로 큰 섬입니다.",
         "examples": {
-          "beginner": "보르네오은 아름다운 섬입니다.",
+          "beginner": "보르네오는 아름다운 섬입니다.",
           "intermediate": "보르네오에 많은 관광객이 방문합니다.",
-          "advanced": "보르네오은 독특한 생태계를 가지고 있습니다.",
+          "advanced": "보르네오는 독특한 생태계를 가지고 있습니다.",
           "master": "보르네오의 고립된 환경은 독특한 종의 진화를 이끌었습니다."
         }
       },
@@ -2256,9 +1871,9 @@
         "word": "혼슈",
         "explanation": "일본에서 가장 큰 섬입니다.",
         "examples": {
-          "beginner": "혼슈은 아름다운 섬입니다.",
+          "beginner": "혼슈는 아름다운 섬입니다.",
           "intermediate": "혼슈에 많은 관광객이 방문합니다.",
-          "advanced": "혼슈은 독특한 생태계를 가지고 있습니다.",
+          "advanced": "혼슈는 독특한 생태계를 가지고 있습니다.",
           "master": "혼슈의 고립된 환경은 독특한 종의 진화를 이끌었습니다."
         }
       },
@@ -2291,9 +1906,9 @@
         "word": "수마트라",
         "explanation": "인도네시아의 대형 섬입니다.",
         "examples": {
-          "beginner": "수마트라은 아름다운 섬입니다.",
+          "beginner": "수마트라는 아름다운 섬입니다.",
           "intermediate": "수마트라에 많은 관광객이 방문합니다.",
-          "advanced": "수마트라은 독특한 생태계를 가지고 있습니다.",
+          "advanced": "수마트라는 독특한 생태계를 가지고 있습니다.",
           "master": "수마트라의 고립된 환경은 독특한 종의 진화를 이끌었습니다."
         }
       },
@@ -2326,9 +1941,9 @@
         "word": "자바",
         "explanation": "인도네시아의 인구 중심 섬입니다.",
         "examples": {
-          "beginner": "자바은 아름다운 섬입니다.",
+          "beginner": "자바는 아름다운 섬입니다.",
           "intermediate": "자바에 많은 관광객이 방문합니다.",
-          "advanced": "자바은 독특한 생태계를 가지고 있습니다.",
+          "advanced": "자바는 독특한 생태계를 가지고 있습니다.",
           "master": "자바의 고립된 환경은 독특한 종의 진화를 이끌었습니다."
         }
       },
@@ -2361,9 +1976,9 @@
         "word": "제주도",
         "explanation": "한국에서 가장 큰 섬입니다.",
         "examples": {
-          "beginner": "제주도은 아름다운 섬입니다.",
+          "beginner": "제주도는 아름다운 섬입니다.",
           "intermediate": "제주도에 많은 관광객이 방문합니다.",
-          "advanced": "제주도은 독특한 생태계를 가지고 있습니다.",
+          "advanced": "제주도는 독특한 생태계를 가지고 있습니다.",
           "master": "제주도의 고립된 환경은 독특한 종의 진화를 이끌었습니다."
         }
       },
@@ -2396,9 +2011,9 @@
         "word": "시칠리아",
         "explanation": "지중해에서 가장 큰 섬입니다.",
         "examples": {
-          "beginner": "시칠리아은 아름다운 섬입니다.",
+          "beginner": "시칠리아는 아름다운 섬입니다.",
           "intermediate": "시칠리아에 많은 관광객이 방문합니다.",
-          "advanced": "시칠리아은 독특한 생태계를 가지고 있습니다.",
+          "advanced": "시칠리아는 독특한 생태계를 가지고 있습니다.",
           "master": "시칠리아의 고립된 환경은 독특한 종의 진화를 이끌었습니다."
         }
       },
@@ -2431,9 +2046,9 @@
         "word": "홋카이도",
         "explanation": "일본 북부의 섬입니다.",
         "examples": {
-          "beginner": "홋카이도은 아름다운 섬입니다.",
+          "beginner": "홋카이도는 아름다운 섬입니다.",
           "intermediate": "홋카이도에 많은 관광객이 방문합니다.",
-          "advanced": "홋카이도은 독특한 생태계를 가지고 있습니다.",
+          "advanced": "홋카이도는 독특한 생태계를 가지고 있습니다.",
           "master": "홋카이도의 고립된 환경은 독특한 종의 진화를 이끌었습니다."
         }
       },
@@ -2466,9 +2081,9 @@
         "word": "태즈메이니아",
         "explanation": "호주 남부의 섬입니다.",
         "examples": {
-          "beginner": "태즈메이니아은 아름다운 섬입니다.",
+          "beginner": "태즈메이니아는 아름다운 섬입니다.",
           "intermediate": "태즈메이니아에 많은 관광객이 방문합니다.",
-          "advanced": "태즈메이니아은 독특한 생태계를 가지고 있습니다.",
+          "advanced": "태즈메이니아는 독특한 생태계를 가지고 있습니다.",
           "master": "태즈메이니아의 고립된 환경은 독특한 종의 진화를 이끌었습니다."
         }
       },
@@ -2501,9 +2116,9 @@
         "word": "크레타",
         "explanation": "그리스에서 가장 큰 섬입니다.",
         "examples": {
-          "beginner": "크레타은 아름다운 섬입니다.",
+          "beginner": "크레타는 아름다운 섬입니다.",
           "intermediate": "크레타에 많은 관광객이 방문합니다.",
-          "advanced": "크레타은 독특한 생태계를 가지고 있습니다.",
+          "advanced": "크레타는 독특한 생태계를 가지고 있습니다.",
           "master": "크레타의 고립된 환경은 독특한 종의 진화를 이끌었습니다."
         }
       },
@@ -2537,8 +2152,8 @@
         "explanation": "태평양 중앙의 군도입니다.",
         "examples": {
           "beginner": "하와이 제도에는 많은 섬이 있습니다.",
-          "intermediate": "하와이 제도은 관광지로 유명합니다.",
-          "advanced": "하와이 제도은 다양한 해양 생물의 서식지입니다.",
+          "intermediate": "하와이 제도는 관광지로 유명합니다.",
+          "advanced": "하와이 제도는 다양한 해양 생물의 서식지입니다.",
           "master": "하와이 제도의 섬들은 각각 고유한 문화와 생태계를 발전시켜 왔습니다."
         }
       },
@@ -2572,8 +2187,8 @@
         "explanation": "7,000여 개의 섬으로 이루어진 군도입니다.",
         "examples": {
           "beginner": "필리핀 군도에는 많은 섬이 있습니다.",
-          "intermediate": "필리핀 군도은 관광지로 유명합니다.",
-          "advanced": "필리핀 군도은 다양한 해양 생물의 서식지입니다.",
+          "intermediate": "필리핀 군도는 관광지로 유명합니다.",
+          "advanced": "필리핀 군도는 다양한 해양 생물의 서식지입니다.",
           "master": "필리핀 군도의 섬들은 각각 고유한 문화와 생태계를 발전시켜 왔습니다."
         }
       },
@@ -2607,8 +2222,8 @@
         "explanation": "세계에서 가장 큰 군도입니다.",
         "examples": {
           "beginner": "인도네시아 군도에는 많은 섬이 있습니다.",
-          "intermediate": "인도네시아 군도은 관광지로 유명합니다.",
-          "advanced": "인도네시아 군도은 다양한 해양 생물의 서식지입니다.",
+          "intermediate": "인도네시아 군도는 관광지로 유명합니다.",
+          "advanced": "인도네시아 군도는 다양한 해양 생물의 서식지입니다.",
           "master": "인도네시아 군도의 섬들은 각각 고유한 문화와 생태계를 발전시켜 왔습니다."
         }
       },
@@ -2642,8 +2257,8 @@
         "explanation": "동아시아의 섬나라입니다.",
         "examples": {
           "beginner": "일본 열도에는 많은 섬이 있습니다.",
-          "intermediate": "일본 열도은 관광지로 유명합니다.",
-          "advanced": "일본 열도은 다양한 해양 생물의 서식지입니다.",
+          "intermediate": "일본 열도는 관광지로 유명합니다.",
+          "advanced": "일본 열도는 다양한 해양 생물의 서식지입니다.",
           "master": "일본 열도의 섬들은 각각 고유한 문화와 생태계를 발전시켜 왔습니다."
         }
       },
@@ -2677,8 +2292,8 @@
         "explanation": "북서유럽의 군도입니다.",
         "examples": {
           "beginner": "영국 제도에는 많은 섬이 있습니다.",
-          "intermediate": "영국 제도은 관광지로 유명합니다.",
-          "advanced": "영국 제도은 다양한 해양 생물의 서식지입니다.",
+          "intermediate": "영국 제도는 관광지로 유명합니다.",
+          "advanced": "영국 제도는 다양한 해양 생물의 서식지입니다.",
           "master": "영국 제도의 섬들은 각각 고유한 문화와 생태계를 발전시켜 왔습니다."
         }
       },
@@ -2712,8 +2327,8 @@
         "explanation": "중앙아메리카의 섬들입니다.",
         "examples": {
           "beginner": "카리브 제도에는 많은 섬이 있습니다.",
-          "intermediate": "카리브 제도은 관광지로 유명합니다.",
-          "advanced": "카리브 제도은 다양한 해양 생물의 서식지입니다.",
+          "intermediate": "카리브 제도는 관광지로 유명합니다.",
+          "advanced": "카리브 제도는 다양한 해양 생물의 서식지입니다.",
           "master": "카리브 제도의 섬들은 각각 고유한 문화와 생태계를 발전시켜 왔습니다."
         }
       },
@@ -2747,8 +2362,8 @@
         "explanation": "에콰도르령 태평양 섬입니다.",
         "examples": {
           "beginner": "갈라파고스 제도에는 많은 섬이 있습니다.",
-          "intermediate": "갈라파고스 제도은 관광지로 유명합니다.",
-          "advanced": "갈라파고스 제도은 다양한 해양 생물의 서식지입니다.",
+          "intermediate": "갈라파고스 제도는 관광지로 유명합니다.",
+          "advanced": "갈라파고스 제도는 다양한 해양 생물의 서식지입니다.",
           "master": "갈라파고스 제도의 섬들은 각각 고유한 문화와 생태계를 발전시켜 왔습니다."
         }
       },
@@ -2782,8 +2397,8 @@
         "explanation": "스페인령 대서양 섬입니다.",
         "examples": {
           "beginner": "카나리아 제도에는 많은 섬이 있습니다.",
-          "intermediate": "카나리아 제도은 관광지로 유명합니다.",
-          "advanced": "카나리아 제도은 다양한 해양 생물의 서식지입니다.",
+          "intermediate": "카나리아 제도는 관광지로 유명합니다.",
+          "advanced": "카나리아 제도는 다양한 해양 생물의 서식지입니다.",
           "master": "카나리아 제도의 섬들은 각각 고유한 문화와 생태계를 발전시켜 왔습니다."
         }
       },
@@ -3411,9 +3026,9 @@
         "word": "K2",
         "explanation": "세계에서 두 번째로 높은 산입니다 (8,611m).",
         "examples": {
-          "beginner": "K2은 높습니다.",
-          "intermediate": "많은 등산객이 K2을 찾습니다.",
-          "advanced": "K2은 중요한 수원지입니다.",
+          "beginner": "K2는 높습니다.",
+          "intermediate": "많은 등산객이 K2를 찾습니다.",
+          "advanced": "K2는 중요한 수원지입니다.",
           "master": "K2의 형성은 지질학적으로 중요한 의미를 가집니다."
         }
       },
@@ -3551,9 +3166,9 @@
         "word": "데날리",
         "explanation": "북미의 최고봉입니다.",
         "examples": {
-          "beginner": "데날리은 높습니다.",
-          "intermediate": "많은 등산객이 데날리을 찾습니다.",
-          "advanced": "데날리은 중요한 수원지입니다.",
+          "beginner": "데날리는 높습니다.",
+          "intermediate": "많은 등산객이 데날리를 찾습니다.",
+          "advanced": "데날리는 중요한 수원지입니다.",
           "master": "데날리의 형성은 지질학적으로 중요한 의미를 가집니다."
         }
       },
@@ -3586,9 +3201,9 @@
         "word": "아콩카과",
         "explanation": "남미의 최고봉입니다.",
         "examples": {
-          "beginner": "아콩카과은 높습니다.",
-          "intermediate": "많은 등산객이 아콩카과을 찾습니다.",
-          "advanced": "아콩카과은 중요한 수원지입니다.",
+          "beginner": "아콩카과는 높습니다.",
+          "intermediate": "많은 등산객이 아콩카과를 찾습니다.",
+          "advanced": "아콩카과는 중요한 수원지입니다.",
           "master": "아콩카과의 형성은 지질학적으로 중요한 의미를 가집니다."
         }
       },
@@ -3761,9 +3376,9 @@
         "word": "마우나케아",
         "explanation": "하와이의 최고봉입니다.",
         "examples": {
-          "beginner": "마우나케아은 높습니다.",
-          "intermediate": "많은 등산객이 마우나케아을 찾습니다.",
-          "advanced": "마우나케아은 중요한 수원지입니다.",
+          "beginner": "마우나케아는 높습니다.",
+          "intermediate": "많은 등산객이 마우나케아를 찾습니다.",
+          "advanced": "마우나케아는 중요한 수원지입니다.",
           "master": "마우나케아의 형성은 지질학적으로 중요한 의미를 가집니다."
         }
       },
@@ -4776,9 +4391,9 @@
         "word": "카스피해",
         "explanation": "세계에서 가장 큰 호수입니다.",
         "examples": {
-          "beginner": "카스피해은 물이 맑습니다.",
+          "beginner": "카스피해는 물이 맑습니다.",
           "intermediate": "카스피해 주변은 관광지입니다.",
-          "advanced": "카스피해은 담수 생태계의 보고입니다.",
+          "advanced": "카스피해는 담수 생태계의 보고입니다.",
           "master": "카스피해의 수질 변화는 환경 오염의 지표가 됩니다."
         }
       },
@@ -4811,9 +4426,9 @@
         "word": "슈피리어호",
         "explanation": "면적 기준 가장 큰 담수호입니다.",
         "examples": {
-          "beginner": "슈피리어호은 물이 맑습니다.",
+          "beginner": "슈피리어호는 물이 맑습니다.",
           "intermediate": "슈피리어호 주변은 관광지입니다.",
-          "advanced": "슈피리어호은 담수 생태계의 보고입니다.",
+          "advanced": "슈피리어호는 담수 생태계의 보고입니다.",
           "master": "슈피리어호의 수질 변화는 환경 오염의 지표가 됩니다."
         }
       },
@@ -4846,9 +4461,9 @@
         "word": "빅토리아호",
         "explanation": "아프리카에서 가장 큰 호수입니다.",
         "examples": {
-          "beginner": "빅토리아호은 물이 맑습니다.",
+          "beginner": "빅토리아호는 물이 맑습니다.",
           "intermediate": "빅토리아호 주변은 관광지입니다.",
-          "advanced": "빅토리아호은 담수 생태계의 보고입니다.",
+          "advanced": "빅토리아호는 담수 생태계의 보고입니다.",
           "master": "빅토리아호의 수질 변화는 환경 오염의 지표가 됩니다."
         }
       },
@@ -4881,9 +4496,9 @@
         "word": "바이칼호",
         "explanation": "세계에서 가장 깊은 호수입니다.",
         "examples": {
-          "beginner": "바이칼호은 물이 맑습니다.",
+          "beginner": "바이칼호는 물이 맑습니다.",
           "intermediate": "바이칼호 주변은 관광지입니다.",
-          "advanced": "바이칼호은 담수 생태계의 보고입니다.",
+          "advanced": "바이칼호는 담수 생태계의 보고입니다.",
           "master": "바이칼호의 수질 변화는 환경 오염의 지표가 됩니다."
         }
       },
@@ -4916,9 +4531,9 @@
         "word": "탕가니카호",
         "explanation": "세계에서 가장 긴 호수입니다.",
         "examples": {
-          "beginner": "탕가니카호은 물이 맑습니다.",
+          "beginner": "탕가니카호는 물이 맑습니다.",
           "intermediate": "탕가니카호 주변은 관광지입니다.",
-          "advanced": "탕가니카호은 담수 생태계의 보고입니다.",
+          "advanced": "탕가니카호는 담수 생태계의 보고입니다.",
           "master": "탕가니카호의 수질 변화는 환경 오염의 지표가 됩니다."
         }
       },
@@ -4951,9 +4566,9 @@
         "word": "미시간호",
         "explanation": "오대호 중 하나입니다.",
         "examples": {
-          "beginner": "미시간호은 물이 맑습니다.",
+          "beginner": "미시간호는 물이 맑습니다.",
           "intermediate": "미시간호 주변은 관광지입니다.",
-          "advanced": "미시간호은 담수 생태계의 보고입니다.",
+          "advanced": "미시간호는 담수 생태계의 보고입니다.",
           "master": "미시간호의 수질 변화는 환경 오염의 지표가 됩니다."
         }
       },
@@ -4986,9 +4601,9 @@
         "word": "휴런호",
         "explanation": "오대호 중 하나입니다.",
         "examples": {
-          "beginner": "휴런호은 물이 맑습니다.",
+          "beginner": "휴런호는 물이 맑습니다.",
           "intermediate": "휴런호 주변은 관광지입니다.",
-          "advanced": "휴런호은 담수 생태계의 보고입니다.",
+          "advanced": "휴런호는 담수 생태계의 보고입니다.",
           "master": "휴런호의 수질 변화는 환경 오염의 지표가 됩니다."
         }
       },
@@ -5021,9 +4636,9 @@
         "word": "이리호",
         "explanation": "오대호 중 하나입니다.",
         "examples": {
-          "beginner": "이리호은 물이 맑습니다.",
+          "beginner": "이리호는 물이 맑습니다.",
           "intermediate": "이리호 주변은 관광지입니다.",
-          "advanced": "이리호은 담수 생태계의 보고입니다.",
+          "advanced": "이리호는 담수 생태계의 보고입니다.",
           "master": "이리호의 수질 변화는 환경 오염의 지표가 됩니다."
         }
       },
@@ -5056,9 +4671,9 @@
         "word": "온타리오호",
         "explanation": "오대호 중 하나입니다.",
         "examples": {
-          "beginner": "온타리오호은 물이 맑습니다.",
+          "beginner": "온타리오호는 물이 맑습니다.",
           "intermediate": "온타리오호 주변은 관광지입니다.",
-          "advanced": "온타리오호은 담수 생태계의 보고입니다.",
+          "advanced": "온타리오호는 담수 생태계의 보고입니다.",
           "master": "온타리오호의 수질 변화는 환경 오염의 지표가 됩니다."
         }
       },
@@ -5091,9 +4706,9 @@
         "word": "티티카카호",
         "explanation": "세계에서 가장 높은 항행 가능 호수입니다.",
         "examples": {
-          "beginner": "티티카카호은 물이 맑습니다.",
+          "beginner": "티티카카호는 물이 맑습니다.",
           "intermediate": "티티카카호 주변은 관광지입니다.",
-          "advanced": "티티카카호은 담수 생태계의 보고입니다.",
+          "advanced": "티티카카호는 담수 생태계의 보고입니다.",
           "master": "티티카카호의 수질 변화는 환경 오염의 지표가 됩니다."
         }
       },
@@ -5126,9 +4741,9 @@
         "word": "사해",
         "explanation": "세계에서 가장 낮은 호수입니다.",
         "examples": {
-          "beginner": "사해은 물이 맑습니다.",
+          "beginner": "사해는 물이 맑습니다.",
           "intermediate": "사해 주변은 관광지입니다.",
-          "advanced": "사해은 담수 생태계의 보고입니다.",
+          "advanced": "사해는 담수 생태계의 보고입니다.",
           "master": "사해의 수질 변화는 환경 오염의 지표가 됩니다."
         }
       },
@@ -5161,9 +4776,9 @@
         "word": "제네바호",
         "explanation": "스위스와 프랑스의 호수입니다.",
         "examples": {
-          "beginner": "제네바호은 물이 맑습니다.",
+          "beginner": "제네바호는 물이 맑습니다.",
           "intermediate": "제네바호 주변은 관광지입니다.",
-          "advanced": "제네바호은 담수 생태계의 보고입니다.",
+          "advanced": "제네바호는 담수 생태계의 보고입니다.",
           "master": "제네바호의 수질 변화는 환경 오염의 지표가 됩니다."
         }
       },
@@ -5196,9 +4811,9 @@
         "word": "네스호",
         "explanation": "스코틀랜드의 유명한 호수입니다.",
         "examples": {
-          "beginner": "네스호은 물이 맑습니다.",
+          "beginner": "네스호는 물이 맑습니다.",
           "intermediate": "네스호 주변은 관광지입니다.",
-          "advanced": "네스호은 담수 생태계의 보고입니다.",
+          "advanced": "네스호는 담수 생태계의 보고입니다.",
           "master": "네스호의 수질 변화는 환경 오염의 지표가 됩니다."
         }
       },
@@ -5231,9 +4846,9 @@
         "word": "나이아가라 폭포",
         "explanation": "북미를 대표하는 폭포입니다.",
         "examples": {
-          "beginner": "나이아가라 폭포은 아름답습니다.",
+          "beginner": "나이아가라 폭포는 아름답습니다.",
           "intermediate": "나이아가라 폭포에서 물이 쏟아집니다.",
-          "advanced": "나이아가라 폭포은 세계적인 관광 명소입니다.",
+          "advanced": "나이아가라 폭포는 세계적인 관광 명소입니다.",
           "master": "나이아가라 폭포의 형성 과정은 지질학적으로 흥미로운 연구 대상입니다."
         }
       },
@@ -5266,9 +4881,9 @@
         "word": "빅토리아 폭포",
         "explanation": "아프리카의 대폭포입니다.",
         "examples": {
-          "beginner": "빅토리아 폭포은 아름답습니다.",
+          "beginner": "빅토리아 폭포는 아름답습니다.",
           "intermediate": "빅토리아 폭포에서 물이 쏟아집니다.",
-          "advanced": "빅토리아 폭포은 세계적인 관광 명소입니다.",
+          "advanced": "빅토리아 폭포는 세계적인 관광 명소입니다.",
           "master": "빅토리아 폭포의 형성 과정은 지질학적으로 흥미로운 연구 대상입니다."
         }
       },
@@ -5301,9 +4916,9 @@
         "word": "앙헬 폭포",
         "explanation": "세계에서 낙차가 가장 큰 폭포입니다.",
         "examples": {
-          "beginner": "앙헬 폭포은 아름답습니다.",
+          "beginner": "앙헬 폭포는 아름답습니다.",
           "intermediate": "앙헬 폭포에서 물이 쏟아집니다.",
-          "advanced": "앙헬 폭포은 세계적인 관광 명소입니다.",
+          "advanced": "앙헬 폭포는 세계적인 관광 명소입니다.",
           "master": "앙헬 폭포의 형성 과정은 지질학적으로 흥미로운 연구 대상입니다."
         }
       },
@@ -5336,9 +4951,9 @@
         "word": "이구아수 폭포",
         "explanation": "남미의 대폭포입니다.",
         "examples": {
-          "beginner": "이구아수 폭포은 아름답습니다.",
+          "beginner": "이구아수 폭포는 아름답습니다.",
           "intermediate": "이구아수 폭포에서 물이 쏟아집니다.",
-          "advanced": "이구아수 폭포은 세계적인 관광 명소입니다.",
+          "advanced": "이구아수 폭포는 세계적인 관광 명소입니다.",
           "master": "이구아수 폭포의 형성 과정은 지질학적으로 흥미로운 연구 대상입니다."
         }
       },
@@ -5371,9 +4986,9 @@
         "word": "요세미티 폭포",
         "explanation": "미국을 대표하는 폭포입니다.",
         "examples": {
-          "beginner": "요세미티 폭포은 아름답습니다.",
+          "beginner": "요세미티 폭포는 아름답습니다.",
           "intermediate": "요세미티 폭포에서 물이 쏟아집니다.",
-          "advanced": "요세미티 폭포은 세계적인 관광 명소입니다.",
+          "advanced": "요세미티 폭포는 세계적인 관광 명소입니다.",
           "master": "요세미티 폭포의 형성 과정은 지질학적으로 흥미로운 연구 대상입니다."
         }
       },
@@ -5441,9 +5056,9 @@
         "word": "그레이트플레인스",
         "explanation": "북미의 대평원입니다.",
         "examples": {
-          "beginner": "그레이트플레인스은 넓고 평평합니다.",
-          "intermediate": "그레이트플레인스은 농업에 적합합니다.",
-          "advanced": "그레이트플레인스은 주요 농업 지대입니다.",
+          "beginner": "그레이트플레인스는 넓고 평평합니다.",
+          "intermediate": "그레이트플레인스는 농업에 적합합니다.",
+          "advanced": "그레이트플레인스는 주요 농업 지대입니다.",
           "master": "그레이트플레인스의 형성은 빙하기 퇴적 작용의 결과입니다."
         }
       },
@@ -5511,9 +5126,9 @@
         "word": "팜파스",
         "explanation": "아르헨티나의 초원입니다.",
         "examples": {
-          "beginner": "팜파스은 넓고 평평합니다.",
-          "intermediate": "팜파스은 농업에 적합합니다.",
-          "advanced": "팜파스은 주요 농업 지대입니다.",
+          "beginner": "팜파스는 넓고 평평합니다.",
+          "intermediate": "팜파스는 농업에 적합합니다.",
+          "advanced": "팜파스는 주요 농업 지대입니다.",
           "master": "팜파스의 형성은 빙하기 퇴적 작용의 결과입니다."
         }
       },
@@ -5546,9 +5161,9 @@
         "word": "사바나",
         "explanation": "열대 초원 지대입니다.",
         "examples": {
-          "beginner": "사바나은 넓고 평평합니다.",
-          "intermediate": "사바나은 농업에 적합합니다.",
-          "advanced": "사바나은 주요 농업 지대입니다.",
+          "beginner": "사바나는 넓고 평평합니다.",
+          "intermediate": "사바나는 농업에 적합합니다.",
+          "advanced": "사바나는 주요 농업 지대입니다.",
           "master": "사바나의 형성은 빙하기 퇴적 작용의 결과입니다."
         }
       },
@@ -5616,9 +5231,9 @@
         "word": "툰드라",
         "explanation": "극지의 동토 지대입니다.",
         "examples": {
-          "beginner": "툰드라은 넓고 평평합니다.",
-          "intermediate": "툰드라은 농업에 적합합니다.",
-          "advanced": "툰드라은 주요 농업 지대입니다.",
+          "beginner": "툰드라는 넓고 평평합니다.",
+          "intermediate": "툰드라는 농업에 적합합니다.",
+          "advanced": "툰드라는 주요 농업 지대입니다.",
           "master": "툰드라의 형성은 빙하기 퇴적 작용의 결과입니다."
         }
       },
@@ -5651,9 +5266,9 @@
         "word": "타이가",
         "explanation": "북방의 침엽수림입니다.",
         "examples": {
-          "beginner": "타이가은 넓고 평평합니다.",
-          "intermediate": "타이가은 농업에 적합합니다.",
-          "advanced": "타이가은 주요 농업 지대입니다.",
+          "beginner": "타이가는 넓고 평평합니다.",
+          "intermediate": "타이가는 농업에 적합합니다.",
+          "advanced": "타이가는 주요 농업 지대입니다.",
           "master": "타이가의 형성은 빙하기 퇴적 작용의 결과입니다."
         }
       },
@@ -5791,9 +5406,9 @@
         "word": "그레이트 리프트 밸리",
         "explanation": "동아프리카의 열곡대입니다.",
         "examples": {
-          "beginner": "그레이트 리프트 밸리은 넓고 평평합니다.",
-          "intermediate": "그레이트 리프트 밸리은 농업에 적합합니다.",
-          "advanced": "그레이트 리프트 밸리은 주요 농업 지대입니다.",
+          "beginner": "그레이트 리프트 밸리는 넓고 평평합니다.",
+          "intermediate": "그레이트 리프트 밸리는 농업에 적합합니다.",
+          "advanced": "그레이트 리프트 밸리는 주요 농업 지대입니다.",
           "master": "그레이트 리프트 밸리의 형성은 빙하기 퇴적 작용의 결과입니다."
         }
       },
@@ -5826,9 +5441,9 @@
         "word": "데스밸리",
         "explanation": "미국에서 가장 낮은 지점입니다.",
         "examples": {
-          "beginner": "데스밸리은 넓고 평평합니다.",
-          "intermediate": "데스밸리은 농업에 적합합니다.",
-          "advanced": "데스밸리은 주요 농업 지대입니다.",
+          "beginner": "데스밸리는 넓고 평평합니다.",
+          "intermediate": "데스밸리는 농업에 적합합니다.",
+          "advanced": "데스밸리는 주요 농업 지대입니다.",
           "master": "데스밸리의 형성은 빙하기 퇴적 작용의 결과입니다."
         }
       },
@@ -5896,9 +5511,9 @@
         "word": "실리콘밸리",
         "explanation": "미국의 IT 중심지입니다.",
         "examples": {
-          "beginner": "실리콘밸리은 넓고 평평합니다.",
-          "intermediate": "실리콘밸리은 농업에 적합합니다.",
-          "advanced": "실리콘밸리은 주요 농업 지대입니다.",
+          "beginner": "실리콘밸리는 넓고 평평합니다.",
+          "intermediate": "실리콘밸리는 농업에 적합합니다.",
+          "advanced": "실리콘밸리는 주요 농업 지대입니다.",
           "master": "실리콘밸리의 형성은 빙하기 퇴적 작용의 결과입니다."
         }
       },
@@ -6071,9 +5686,9 @@
         "word": "바다",
         "explanation": "대양보다 작은 수역입니다.",
         "examples": {
-          "beginner": "바다은 지리 용어입니다.",
+          "beginner": "바다는 지리 용어입니다.",
           "intermediate": "바다의 의미를 알아봅시다.",
-          "advanced": "바다은 지리학에서 중요한 개념입니다.",
+          "advanced": "바다는 지리학에서 중요한 개념입니다.",
           "master": "바다의 정확한 정의는 지역에 따라 다를 수 있습니다."
         }
       },
@@ -6141,9 +5756,9 @@
         "word": "반도",
         "explanation": "삼면이 물인 육지입니다.",
         "examples": {
-          "beginner": "반도은 지리 용어입니다.",
+          "beginner": "반도는 지리 용어입니다.",
           "intermediate": "반도의 의미를 알아봅시다.",
-          "advanced": "반도은 지리학에서 중요한 개념입니다.",
+          "advanced": "반도는 지리학에서 중요한 개념입니다.",
           "master": "반도의 정확한 정의는 지역에 따라 다를 수 있습니다."
         }
       },
@@ -6561,9 +6176,9 @@
         "word": "빙하",
         "explanation": "얼음 덩어리입니다.",
         "examples": {
-          "beginner": "빙하은 지리 용어입니다.",
+          "beginner": "빙하는 지리 용어입니다.",
           "intermediate": "빙하의 의미를 알아봅시다.",
-          "advanced": "빙하은 지리학에서 중요한 개념입니다.",
+          "advanced": "빙하는 지리학에서 중요한 개념입니다.",
           "master": "빙하의 정확한 정의는 지역에 따라 다를 수 있습니다."
         }
       },
@@ -6631,9 +6246,9 @@
         "word": "호수",
         "explanation": "육지 내의 물입니다.",
         "examples": {
-          "beginner": "호수은 지리 용어입니다.",
+          "beginner": "호수는 지리 용어입니다.",
           "intermediate": "호수의 의미를 알아봅시다.",
-          "advanced": "호수은 지리학에서 중요한 개념입니다.",
+          "advanced": "호수는 지리학에서 중요한 개념입니다.",
           "master": "호수의 정확한 정의는 지역에 따라 다를 수 있습니다."
         }
       },
@@ -6666,9 +6281,9 @@
         "word": "폭포",
         "explanation": "물이 떨어지는 곳입니다.",
         "examples": {
-          "beginner": "폭포은 지리 용어입니다.",
+          "beginner": "폭포는 지리 용어입니다.",
           "intermediate": "폭포의 의미를 알아봅시다.",
-          "advanced": "폭포은 지리학에서 중요한 개념입니다.",
+          "advanced": "폭포는 지리학에서 중요한 개념입니다.",
           "master": "폭포의 정확한 정의는 지역에 따라 다를 수 있습니다."
         }
       },
@@ -6701,9 +6316,9 @@
         "word": "삼각주",
         "explanation": "하구의 퇴적 지형입니다.",
         "examples": {
-          "beginner": "삼각주은 지리 용어입니다.",
+          "beginner": "삼각주는 지리 용어입니다.",
           "intermediate": "삼각주의 의미를 알아봅시다.",
-          "advanced": "삼각주은 지리학에서 중요한 개념입니다.",
+          "advanced": "삼각주는 지리학에서 중요한 개념입니다.",
           "master": "삼각주의 정확한 정의는 지역에 따라 다를 수 있습니다."
         }
       },
@@ -6736,9 +6351,9 @@
         "word": "암초",
         "explanation": "수중의 암석 지형입니다.",
         "examples": {
-          "beginner": "암초은 지리 용어입니다.",
+          "beginner": "암초는 지리 용어입니다.",
           "intermediate": "암초의 의미를 알아봅시다.",
-          "advanced": "암초은 지리학에서 중요한 개념입니다.",
+          "advanced": "암초는 지리학에서 중요한 개념입니다.",
           "master": "암초의 정확한 정의는 지역에 따라 다를 수 있습니다."
         }
       },
@@ -6771,9 +6386,9 @@
         "word": "산호초",
         "explanation": "산호가 형성한 암초입니다.",
         "examples": {
-          "beginner": "산호초은 지리 용어입니다.",
+          "beginner": "산호초는 지리 용어입니다.",
           "intermediate": "산호초의 의미를 알아봅시다.",
-          "advanced": "산호초은 지리학에서 중요한 개념입니다.",
+          "advanced": "산호초는 지리학에서 중요한 개념입니다.",
           "master": "산호초의 정확한 정의는 지역에 따라 다를 수 있습니다."
         }
       },
@@ -6806,9 +6421,9 @@
         "word": "군도",
         "explanation": "섬의 집합체입니다.",
         "examples": {
-          "beginner": "군도은 지리 용어입니다.",
+          "beginner": "군도는 지리 용어입니다.",
           "intermediate": "군도의 의미를 알아봅시다.",
-          "advanced": "군도은 지리학에서 중요한 개념입니다.",
+          "advanced": "군도는 지리학에서 중요한 개념입니다.",
           "master": "군도의 정확한 정의는 지역에 따라 다를 수 있습니다."
         }
       },
@@ -6841,9 +6456,9 @@
         "word": "적도",
         "explanation": "지구의 중앙선입니다.",
         "examples": {
-          "beginner": "적도은 지리 용어입니다.",
+          "beginner": "적도는 지리 용어입니다.",
           "intermediate": "적도의 의미를 알아봅시다.",
-          "advanced": "적도은 지리학에서 중요한 개념입니다.",
+          "advanced": "적도는 지리학에서 중요한 개념입니다.",
           "master": "적도의 정확한 정의는 지역에 따라 다를 수 있습니다."
         }
       },
@@ -6876,9 +6491,9 @@
         "word": "위도",
         "explanation": "남북 위치입니다.",
         "examples": {
-          "beginner": "위도은 지리 용어입니다.",
+          "beginner": "위도는 지리 용어입니다.",
           "intermediate": "위도의 의미를 알아봅시다.",
-          "advanced": "위도은 지리학에서 중요한 개념입니다.",
+          "advanced": "위도는 지리학에서 중요한 개념입니다.",
           "master": "위도의 정확한 정의는 지역에 따라 다를 수 있습니다."
         }
       },
@@ -6911,9 +6526,9 @@
         "word": "경도",
         "explanation": "동서 위치입니다.",
         "examples": {
-          "beginner": "경도은 지리 용어입니다.",
+          "beginner": "경도는 지리 용어입니다.",
           "intermediate": "경도의 의미를 알아봅시다.",
-          "advanced": "경도은 지리학에서 중요한 개념입니다.",
+          "advanced": "경도는 지리학에서 중요한 개념입니다.",
           "master": "경도의 정확한 정의는 지역에 따라 다를 수 있습니다."
         }
       },
@@ -6946,9 +6561,9 @@
         "word": "반구",
         "explanation": "지구의 절반입니다.",
         "examples": {
-          "beginner": "반구은 지리 용어입니다.",
+          "beginner": "반구는 지리 용어입니다.",
           "intermediate": "반구의 의미를 알아봅시다.",
-          "advanced": "반구은 지리학에서 중요한 개념입니다.",
+          "advanced": "반구는 지리학에서 중요한 개념입니다.",
           "master": "반구의 정확한 정의는 지역에 따라 다를 수 있습니다."
         }
       },
@@ -7051,9 +6666,9 @@
         "word": "기후",
         "explanation": "장기적인 날씨 패턴입니다.",
         "examples": {
-          "beginner": "기후은 지리 용어입니다.",
+          "beginner": "기후는 지리 용어입니다.",
           "intermediate": "기후의 의미를 알아봅시다.",
-          "advanced": "기후은 지리학에서 중요한 개념입니다.",
+          "advanced": "기후는 지리학에서 중요한 개념입니다.",
           "master": "기후의 정확한 정의는 지역에 따라 다를 수 있습니다."
         }
       },
@@ -7226,9 +6841,9 @@
         "word": "쓰나미",
         "explanation": "지진 해일입니다.",
         "examples": {
-          "beginner": "쓰나미은 지리 용어입니다.",
+          "beginner": "쓰나미는 지리 용어입니다.",
           "intermediate": "쓰나미의 의미를 알아봅시다.",
-          "advanced": "쓰나미은 지리학에서 중요한 개념입니다.",
+          "advanced": "쓰나미는 지리학에서 중요한 개념입니다.",
           "master": "쓰나미의 정확한 정의는 지역에 따라 다를 수 있습니다."
         }
       },
@@ -7263,7 +6878,7 @@
         "examples": {
           "beginner": "동아시아에는 여러 나라가 있습니다.",
           "intermediate": "동아시아의 문화는 다양합니다.",
-          "advanced": "동아시아은 지정학적으로 중요한 지역입니다.",
+          "advanced": "동아시아는 지정학적으로 중요한 지역입니다.",
           "master": "동아시아의 역사와 문화는 세계사에 큰 영향을 미쳤습니다."
         }
       },
@@ -7298,7 +6913,7 @@
         "examples": {
           "beginner": "동남아시아에는 여러 나라가 있습니다.",
           "intermediate": "동남아시아의 문화는 다양합니다.",
-          "advanced": "동남아시아은 지정학적으로 중요한 지역입니다.",
+          "advanced": "동남아시아는 지정학적으로 중요한 지역입니다.",
           "master": "동남아시아의 역사와 문화는 세계사에 큰 영향을 미쳤습니다."
         }
       },
@@ -7333,7 +6948,7 @@
         "examples": {
           "beginner": "남아시아에는 여러 나라가 있습니다.",
           "intermediate": "남아시아의 문화는 다양합니다.",
-          "advanced": "남아시아은 지정학적으로 중요한 지역입니다.",
+          "advanced": "남아시아는 지정학적으로 중요한 지역입니다.",
           "master": "남아시아의 역사와 문화는 세계사에 큰 영향을 미쳤습니다."
         }
       },
@@ -7368,7 +6983,7 @@
         "examples": {
           "beginner": "중앙아시아에는 여러 나라가 있습니다.",
           "intermediate": "중앙아시아의 문화는 다양합니다.",
-          "advanced": "중앙아시아은 지정학적으로 중요한 지역입니다.",
+          "advanced": "중앙아시아는 지정학적으로 중요한 지역입니다.",
           "master": "중앙아시아의 역사와 문화는 세계사에 큰 영향을 미쳤습니다."
         }
       },
@@ -7578,7 +7193,7 @@
         "examples": {
           "beginner": "북아프리카에는 여러 나라가 있습니다.",
           "intermediate": "북아프리카의 문화는 다양합니다.",
-          "advanced": "북아프리카은 지정학적으로 중요한 지역입니다.",
+          "advanced": "북아프리카는 지정학적으로 중요한 지역입니다.",
           "master": "북아프리카의 역사와 문화는 세계사에 큰 영향을 미쳤습니다."
         }
       },
@@ -7613,7 +7228,7 @@
         "examples": {
           "beginner": "사하라 이남 아프리카에는 여러 나라가 있습니다.",
           "intermediate": "사하라 이남 아프리카의 문화는 다양합니다.",
-          "advanced": "사하라 이남 아프리카은 지정학적으로 중요한 지역입니다.",
+          "advanced": "사하라 이남 아프리카는 지정학적으로 중요한 지역입니다.",
           "master": "사하라 이남 아프리카의 역사와 문화는 세계사에 큰 영향을 미쳤습니다."
         }
       },
@@ -7648,7 +7263,7 @@
         "examples": {
           "beginner": "카리브에는 여러 나라가 있습니다.",
           "intermediate": "카리브의 문화는 다양합니다.",
-          "advanced": "카리브은 지정학적으로 중요한 지역입니다.",
+          "advanced": "카리브는 지정학적으로 중요한 지역입니다.",
           "master": "카리브의 역사와 문화는 세계사에 큰 영향을 미쳤습니다."
         }
       },
@@ -7683,7 +7298,7 @@
         "examples": {
           "beginner": "중앙아메리카에는 여러 나라가 있습니다.",
           "intermediate": "중앙아메리카의 문화는 다양합니다.",
-          "advanced": "중앙아메리카은 지정학적으로 중요한 지역입니다.",
+          "advanced": "중앙아메리카는 지정학적으로 중요한 지역입니다.",
           "master": "중앙아메리카의 역사와 문화는 세계사에 큰 영향을 미쳤습니다."
         }
       },
@@ -7718,7 +7333,7 @@
         "examples": {
           "beginner": "라틴아메리카에는 여러 나라가 있습니다.",
           "intermediate": "라틴아메리카의 문화는 다양합니다.",
-          "advanced": "라틴아메리카은 지정학적으로 중요한 지역입니다.",
+          "advanced": "라틴아메리카는 지정학적으로 중요한 지역입니다.",
           "master": "라틴아메리카의 역사와 문화는 세계사에 큰 영향을 미쳤습니다."
         }
       },
@@ -7753,7 +7368,7 @@
         "examples": {
           "beginner": "폴리네시아에는 여러 나라가 있습니다.",
           "intermediate": "폴리네시아의 문화는 다양합니다.",
-          "advanced": "폴리네시아은 지정학적으로 중요한 지역입니다.",
+          "advanced": "폴리네시아는 지정학적으로 중요한 지역입니다.",
           "master": "폴리네시아의 역사와 문화는 세계사에 큰 영향을 미쳤습니다."
         }
       },
@@ -7788,7 +7403,7 @@
         "examples": {
           "beginner": "멜라네시아에는 여러 나라가 있습니다.",
           "intermediate": "멜라네시아의 문화는 다양합니다.",
-          "advanced": "멜라네시아은 지정학적으로 중요한 지역입니다.",
+          "advanced": "멜라네시아는 지정학적으로 중요한 지역입니다.",
           "master": "멜라네시아의 역사와 문화는 세계사에 큰 영향을 미쳤습니다."
         }
       },
