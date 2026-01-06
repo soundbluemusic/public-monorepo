@@ -48,10 +48,13 @@ export async function loader() {
   };
 }
 
-export const meta = metaFactory({
-  ko: { title: '찾아보기 - Context', description: '모든 한국어 단어 찾아보기 및 필터링' },
-  en: { title: 'Browse - Context', description: 'Browse and filter all Korean words' },
-});
+export const meta = metaFactory(
+  {
+    ko: { title: '찾아보기 - Context', description: '모든 한국어 단어 찾아보기 및 필터링' },
+    en: { title: 'Browse - Context', description: 'Browse and filter all Korean words' },
+  },
+  'https://context.soundbluemusic.com',
+);
 
 interface LoaderData {
   entries: LightEntry[];

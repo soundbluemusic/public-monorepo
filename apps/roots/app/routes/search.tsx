@@ -36,10 +36,13 @@ function SearchResultCard({ result }: { result: MiniSearchResult }) {
   );
 }
 
-export const meta = metaFactory({
-  ko: { title: '검색 - 수리', description: '수학 개념 검색' },
-  en: { title: 'Search - Roots', description: 'Search math concepts' },
-});
+export const meta = metaFactory(
+  {
+    ko: { title: '검색 - 수리', description: '수학 개념 검색' },
+    en: { title: 'Search - Roots', description: 'Search math concepts' },
+  },
+  'https://roots.soundbluemusic.com',
+);
 
 export default function SearchPage() {
   const [searchParams] = useSearchParams();

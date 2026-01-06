@@ -1,12 +1,15 @@
 import { getOpenSourceGrouped } from '@soundblue/core';
-import type { MetaFunction } from 'react-router';
+import { metaFactory } from '@soundblue/i18n';
 import { Layout } from '@/components/layout';
 import { useI18n } from '@/i18n';
 
-export const meta: MetaFunction = ({ location }) => {
-  const isKorean = location.pathname.startsWith('/ko');
-  return [{ title: isKorean ? '사용된 기술 - Context' : 'Built With - Context' }];
-};
+export const meta = metaFactory(
+  {
+    ko: { title: '사용된 기술 - Context' },
+    en: { title: 'Built With - Context' },
+  },
+  'https://context.soundbluemusic.com',
+);
 
 export default function BuiltWithPage() {
   const { t, locale } = useI18n();

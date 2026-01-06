@@ -1,14 +1,17 @@
+import { metaFactory } from '@soundblue/i18n';
 import { ExternalLink } from 'lucide-react';
-import type { MetaFunction } from 'react-router';
 import { Link } from 'react-router';
 import { Layout } from '@/components/layout';
 import { categories } from '@/data/categories';
 import { useI18n } from '@/i18n';
 
-export const meta: MetaFunction = ({ location }) => {
-  const isKorean = location.pathname.startsWith('/ko');
-  return [{ title: isKorean ? '사이트맵 - Context' : 'Sitemap - Context' }];
-};
+export const meta = metaFactory(
+  {
+    ko: { title: '사이트맵 - Context' },
+    en: { title: 'Sitemap - Context' },
+  },
+  'https://context.soundbluemusic.com',
+);
 
 export default function SitemapPage() {
   const { locale, t, localePath } = useI18n();

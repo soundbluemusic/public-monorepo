@@ -15,10 +15,13 @@ import { FEATURED_CONCEPTS, featuredCardColors } from '@/data/featuredConcepts';
 import { useI18n } from '@/i18n';
 import { preloadSearchIndex } from '@/lib/search';
 
-export const meta = metaFactory({
-  ko: { title: '수리 - 수학 문서', description: '누구나 쉽게 배우는 수학 개념 사전' },
-  en: { title: 'Roots - Math Documentation', description: 'Learn math concepts easily' },
-});
+export const meta = metaFactory(
+  {
+    ko: { title: '수리 - 수학 문서', description: '누구나 쉽게 배우는 수학 개념 사전' },
+    en: { title: 'Roots - Math Documentation', description: 'Learn math concepts easily' },
+  },
+  'https://roots.soundbluemusic.com',
+);
 
 export default function HomePage() {
   const { locale, localePath, t } = useI18n();

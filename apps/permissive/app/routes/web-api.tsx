@@ -18,10 +18,13 @@ export async function loader() {
   };
 }
 
-export const meta = metaFactory({
-  ko: { title: 'Web API - Permissive', description: '브라우저에 내장된 웹 표준 API' },
-  en: { title: 'Web API - Permissive', description: 'Browser built-in Web Standard APIs' },
-});
+export const meta = metaFactory(
+  {
+    ko: { title: 'Web API - Permissive', description: '브라우저에 내장된 웹 표준 API' },
+    en: { title: 'Web API - Permissive', description: 'Browser built-in Web Standard APIs' },
+  },
+  'https://permissive.soundbluemusic.com',
+);
 
 export default function WebApiPage() {
   const { webApis: apis, categories: cats } = useLoaderData<{

@@ -88,7 +88,7 @@ export const meta = dynamicMetaFactory((data: { entry: MeaningEntry | null }) =>
       description: `${entry.korean} (${entry.romanization}): ${entry.translations.en.explanation}`,
     },
   };
-});
+}, 'https://context.soundbluemusic.com');
 
 export default function EntryPage() {
   const { entry } = useLoaderData<{ entry: MeaningEntry | null }>();

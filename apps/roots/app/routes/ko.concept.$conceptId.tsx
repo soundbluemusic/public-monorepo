@@ -1,1 +1,1 @@
-export { default } from './concept.$conceptId';
+export { default, loader, meta } from './concept.$conceptId';

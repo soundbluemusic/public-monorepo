@@ -46,13 +46,16 @@ export async function loader() {
   };
 }
 
-export const meta = metaFactory({
-  ko: { title: 'Context - 한국어 사전', description: '한국어 학습자를 위한 의미 사전' },
-  en: {
-    title: 'Context - Korean Dictionary',
-    description: 'Meaning dictionary for Korean learners',
+export const meta = metaFactory(
+  {
+    ko: { title: 'Context - 한국어 사전', description: '한국어 학습자를 위한 의미 사전' },
+    en: {
+      title: 'Context - Korean Dictionary',
+      description: 'Meaning dictionary for Korean learners',
+    },
   },
-});
+  'https://context.soundbluemusic.com',
+);
 
 export default function HomePage() {
   const {

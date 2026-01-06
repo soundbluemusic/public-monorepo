@@ -24,16 +24,19 @@ export async function loader() {
   return { categoriesWithCount };
 }
 
-export const meta = metaFactory({
-  ko: {
-    title: '대화 예문 | Context',
-    description: '일상 상황별 한국어 대화 예문으로 자연스러운 한국어를 배워보세요',
+export const meta = metaFactory(
+  {
+    ko: {
+      title: '대화 예문 | Context',
+      description: '일상 상황별 한국어 대화 예문으로 자연스러운 한국어를 배워보세요',
+    },
+    en: {
+      title: 'Conversations | Context',
+      description: 'Learn natural Korean with conversation examples for everyday situations',
+    },
   },
-  en: {
-    title: 'Conversations | Context',
-    description: 'Learn natural Korean with conversation examples for everyday situations',
-  },
-});
+  'https://context.soundbluemusic.com',
+);
 
 export default function ConversationsIndexPage() {
   const { categoriesWithCount } = useLoaderData<{

@@ -16,13 +16,16 @@ import { Layout } from '@/components/layout/Layout';
 import { fields } from '@/data/fields';
 import { useI18n } from '@/i18n';
 
-export const meta = metaFactory({
-  ko: { title: '사이트맵 - Roots', description: 'Roots 사이트의 모든 페이지와 수학 분야 목록' },
-  en: {
-    title: 'Sitemap - Roots',
-    description: 'Complete list of all pages and math fields on Roots',
+export const meta = metaFactory(
+  {
+    ko: { title: '사이트맵 - Roots', description: 'Roots 사이트의 모든 페이지와 수학 분야 목록' },
+    en: {
+      title: 'Sitemap - Roots',
+      description: 'Complete list of all pages and math fields on Roots',
+    },
   },
-});
+  'https://roots.soundbluemusic.com',
+);
 
 const pages: { path: string; labelEn: string; labelKo: string; icon: ReactNode }[] = [
   { path: '/', labelEn: 'Home', labelKo: '홈', icon: <Home size={18} aria-hidden="true" /> },

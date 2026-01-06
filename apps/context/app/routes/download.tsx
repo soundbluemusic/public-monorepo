@@ -35,13 +35,19 @@ export async function loader(): Promise<LoaderData> {
   };
 }
 
-export const meta = metaFactory({
-  ko: { title: '어휘 다운로드 - Context', description: '모든 한국어 어휘 매핑을 다운로드하세요' },
-  en: {
-    title: 'Download Vocabulary - Context',
-    description: 'Download all Korean vocabulary mappings',
+export const meta = metaFactory(
+  {
+    ko: {
+      title: '어휘 다운로드 - Context',
+      description: '모든 한국어 어휘 매핑을 다운로드하세요',
+    },
+    en: {
+      title: 'Download Vocabulary - Context',
+      description: 'Download all Korean vocabulary mappings',
+    },
   },
-});
+  'https://context.soundbluemusic.com',
+);
 
 /**
  * JSON 형식으로 변환

@@ -5,10 +5,13 @@ import { Link } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import { useI18n } from '../i18n';
 
-export const meta = metaFactory({
-  ko: { title: '사이트맵 - Permissive', description: 'Permissive 사이트의 모든 페이지 목록' },
-  en: { title: 'Sitemap - Permissive', description: 'Complete list of all pages on Permissive' },
-});
+export const meta = metaFactory(
+  {
+    ko: { title: '사이트맵 - Permissive', description: 'Permissive 사이트의 모든 페이지 목록' },
+    en: { title: 'Sitemap - Permissive', description: 'Complete list of all pages on Permissive' },
+  },
+  'https://permissive.soundbluemusic.com',
+);
 
 const pages: { path: string; labelEn: string; labelKo: string; icon: ReactNode }[] = [
   { path: '/', labelEn: 'Home', labelKo: '홈', icon: <Home size={18} aria-hidden="true" /> },

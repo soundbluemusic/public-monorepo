@@ -2,10 +2,13 @@ import { metaFactory } from '@soundblue/i18n';
 import { Layout } from '@/components/layout/Layout';
 import { useI18n } from '@/i18n';
 
-export const meta = metaFactory({
-  ko: { title: '소개 - 수리', description: '수리 소개 - 학습자를 위한 수학 문서' },
-  en: { title: 'About - Roots', description: 'About Roots - Math documentation for learners' },
-});
+export const meta = metaFactory(
+  {
+    ko: { title: '소개 - 수리', description: '수리 소개 - 학습자를 위한 수학 문서' },
+    en: { title: 'About - Roots', description: 'About Roots - Math documentation for learners' },
+  },
+  'https://roots.soundbluemusic.com',
+);
 
 export default function AboutPage() {
   const { t } = useI18n();

@@ -3,16 +3,19 @@ import { metaFactory } from '@soundblue/seo/meta';
 import { Layout } from '@/components/layout/Layout';
 import { useI18n } from '@/i18n';
 
-export const meta = metaFactory({
-  ko: {
-    title: '사용된 기술 - Roots',
-    description: '이 사이트를 만드는 데 사용된 오픈소스 프로젝트 목록',
+export const meta = metaFactory(
+  {
+    ko: {
+      title: '사용된 기술 - Roots',
+      description: '이 사이트를 만드는 데 사용된 오픈소스 프로젝트 목록',
+    },
+    en: {
+      title: 'Built With - Roots',
+      description: 'Open source projects used to build this site',
+    },
   },
-  en: {
-    title: 'Built With - Roots',
-    description: 'Open source projects used to build this site',
-  },
-});
+  'https://roots.soundbluemusic.com',
+);
 
 export default function BuiltWithPage() {
   const { locale } = useI18n();

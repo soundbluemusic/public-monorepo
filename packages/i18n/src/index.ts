@@ -17,7 +17,12 @@ export {
 } from './core/config';
 
 // Meta
-export { dynamicMetaFactory, type LocalizedMeta, type MetaData, metaFactory } from './meta';
+export {
+  dynamicMetaFactory,
+  type LocalizedMeta,
+  type MetaData,
+  metaFactory,
+} from './meta';
 
 // React
 export { getLanguageFromParams, I18nProvider, useI18n } from './react';

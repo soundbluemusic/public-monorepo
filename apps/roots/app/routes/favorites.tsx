@@ -12,10 +12,13 @@ import { useI18n } from '@/i18n';
 import { getConceptById } from '@/lib/concepts';
 import { favorites } from '@/lib/db';
 
-export const meta = metaFactory({
-  ko: { title: '즐겨찾기 - 수리', description: '즐겨찾는 수학 개념' },
-  en: { title: 'Favorites - Roots', description: 'Your favorite math concepts' },
-});
+export const meta = metaFactory(
+  {
+    ko: { title: '즐겨찾기 - 수리', description: '즐겨찾는 수학 개념' },
+    en: { title: 'Favorites - Roots', description: 'Your favorite math concepts' },
+  },
+  'https://roots.soundbluemusic.com',
+);
 
 export default function FavoritesPage() {
   const { t, localePath } = useI18n();
