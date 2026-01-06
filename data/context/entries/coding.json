@@ -7,88 +7,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "build",
-      "deploy",
-      "SSG"
-    ],
+    "tags": ["build", "deploy", "SSG"],
     "translations": {
       "ko": {
         "word": "정적 사이트 생성",
         "explanation": "빌드 시점에 모든 HTML 페이지를 미리 생성하는 방식. 서버 없이 CDN에서 직접 서빙 가능하며, 빠른 로딩 속도와 보안이 장점이다.",
         "examples": {
-          "beginner": "정적 사이트 생성을/를 사용해요.",
-          "intermediate": "정적 사이트 생성이/가 프로그래밍에서 중요해요.",
-          "advanced": "정적 사이트 생성의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "정적 사이트 생성의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "정적 사이트 생성에 대해 배우고 있어요.",
-              "romanization": "jeongjeok saiteu saengseonge daehae baeugo iseoyo.",
-              "translation": "I'm learning about static site generation."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "SSG로 빌드하면 서버가 필요 없어요.",
+          "intermediate": "React Router v7에서 prerender() 함수로 SSG를 구현합니다.",
+          "advanced": "100% SSG 아키텍처를 채택하여 서버리스 배포가 가능해졌다.",
+          "master": "SSG + ISR 하이브리드 전략으로 동적 콘텐츠와 정적 성능을 모두 확보했다."
         }
       },
       "en": {
         "word": "Static Site Generation",
         "explanation": "A method of pre-generating all HTML pages at build time. Can be served directly from CDN without a server, offering fast loading and security benefits.",
         "examples": {
-          "beginner": "I use static site generation.",
-          "intermediate": "Static Site Generation is important in programming.",
-          "advanced": "Understanding static site generation improves coding skills.",
-          "master": "Deep understanding of static site generation is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about static site generation.",
-              "romanization": "",
-              "translation": "정적 사이트 생성에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "With SSG, you don't need a server.",
+          "intermediate": "React Router v7 implements SSG using the prerender() function.",
+          "advanced": "Adopting a 100% SSG architecture enabled serverless deployment.",
+          "master": "An SSG + ISR hybrid strategy secured both dynamic content and static performance."
         }
       }
     },
@@ -105,88 +43,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "build",
-      "optimization",
-      "bundling"
-    ],
+    "tags": ["build", "optimization", "bundling"],
     "translations": {
       "ko": {
         "word": "트리 쉐이킹",
         "explanation": "사용하지 않는 코드를 번들에서 제거하는 최적화 기법. 나무를 흔들어 죽은 가지를 떨어뜨리듯이 불필요한 코드를 제거한다.",
         "examples": {
-          "beginner": "트리 쉐이킹을/를 사용해요.",
-          "intermediate": "트리 쉐이킹이/가 프로그래밍에서 중요해요.",
-          "advanced": "트리 쉐이킹의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "트리 쉐이킹의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "트리 쉐이킹에 대해 배우고 있어요.",
-              "romanization": "teuri sweikinge daehae baeugo iseoyo.",
-              "translation": "I'm learning about tree shaking."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "트리 쉐이킹으로 번들 크기를 줄여요.",
+          "intermediate": "ES 모듈을 사용해야 트리 쉐이킹이 제대로 작동합니다.",
+          "advanced": "사이드 이펙트가 있는 코드는 트리 쉐이킹되지 않을 수 있다.",
+          "master": "sideEffects: false 설정으로 라이브러리의 트리 쉐이킹 효율을 극대화했다."
         }
       },
       "en": {
         "word": "Tree Shaking",
         "explanation": "An optimization technique that removes unused code from bundles. Like shaking a tree to drop dead branches, it eliminates unnecessary code.",
         "examples": {
-          "beginner": "I use tree shaking.",
-          "intermediate": "Tree Shaking is important in programming.",
-          "advanced": "Understanding tree shaking improves coding skills.",
-          "master": "Deep understanding of tree shaking is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about tree shaking.",
-              "romanization": "",
-              "translation": "트리 쉐이킹에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Tree shaking reduces bundle size.",
+          "intermediate": "Tree shaking works properly only with ES modules.",
+          "advanced": "Code with side effects may not be tree-shaken.",
+          "master": "Maximized tree shaking efficiency with sideEffects: false configuration."
         }
       }
     },
@@ -203,88 +79,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "build",
-      "optimization",
-      "performance"
-    ],
+    "tags": ["build", "optimization", "performance"],
     "translations": {
       "ko": {
         "word": "코드 스플리팅",
         "explanation": "하나의 큰 번들을 여러 작은 청크로 나누는 기법. 필요한 코드만 로드하여 초기 로딩 속도를 개선한다.",
         "examples": {
-          "beginner": "코드 스플리팅을/를 사용해요.",
-          "intermediate": "코드 스플리팅이/가 프로그래밍에서 중요해요.",
-          "advanced": "코드 스플리팅의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "코드 스플리팅의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "코드 스플리팅에 대해 배우고 있어요.",
-              "romanization": "kodeu seupeulritinge daehae baeugo iseoyo.",
-              "translation": "I'm learning about code splitting."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "코드 스플리팅으로 첫 로딩이 빨라져요.",
+          "intermediate": "dynamic import()를 사용해 라우트별로 코드를 분할합니다.",
+          "advanced": "React.lazy()와 Suspense를 활용해 컴포넌트 레벨 코드 스플리팅을 구현했다.",
+          "master": "manualChunks 설정으로 벤더 라이브러리를 별도 청크로 분리하여 캐싱 효율을 높였다."
         }
       },
       "en": {
         "word": "Code Splitting",
         "explanation": "A technique to divide one large bundle into smaller chunks. Improves initial loading speed by loading only necessary code.",
         "examples": {
-          "beginner": "I use code splitting.",
-          "intermediate": "Code Splitting is important in programming.",
-          "advanced": "Understanding code splitting improves coding skills.",
-          "master": "Deep understanding of code splitting is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about code splitting.",
-              "romanization": "",
-              "translation": "코드 스플리팅에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Code splitting makes first load faster.",
+          "intermediate": "Use dynamic import() to split code by route.",
+          "advanced": "Implemented component-level code splitting with React.lazy() and Suspense.",
+          "master": "Improved caching efficiency by separating vendor libraries into separate chunks with manualChunks."
         }
       }
     },
@@ -301,88 +115,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "PWA",
-      "offline",
-      "caching"
-    ],
+    "tags": ["PWA", "offline", "caching"],
     "translations": {
       "ko": {
         "word": "서비스 워커",
         "explanation": "브라우저와 네트워크 사이에서 프록시 역할을 하는 스크립트. 오프라인 지원, 푸시 알림, 백그라운드 동기화를 가능하게 한다.",
         "examples": {
-          "beginner": "서비스 워커을/를 사용해요.",
-          "intermediate": "서비스 워커이/가 프로그래밍에서 중요해요.",
-          "advanced": "서비스 워커의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "서비스 워커의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "서비스 워커에 대해 배우고 있어요.",
-              "romanization": "seobiseu wokeoe daehae baeugo iseoyo.",
-              "translation": "I'm learning about service worker."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "서비스 워커로 오프라인에서도 앱을 사용할 수 있어요.",
+          "intermediate": "서비스 워커는 HTTPS 환경에서만 동작합니다.",
+          "advanced": "Workbox를 사용해 서비스 워커의 캐싱 전략을 쉽게 구현했다.",
+          "master": "서비스 워커의 lifecycle을 이해하고 skipWaiting, clientsClaim을 적절히 활용했다."
         }
       },
       "en": {
         "word": "Service Worker",
         "explanation": "A script that acts as a proxy between the browser and network. Enables offline support, push notifications, and background sync.",
         "examples": {
-          "beginner": "I use service worker.",
-          "intermediate": "Service Worker is important in programming.",
-          "advanced": "Understanding service worker improves coding skills.",
-          "master": "Deep understanding of service worker is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about service worker.",
-              "romanization": "",
-              "translation": "서비스 워커에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Service workers let you use the app offline.",
+          "intermediate": "Service workers only work in HTTPS environments.",
+          "advanced": "Easily implemented caching strategies using Workbox.",
+          "master": "Understood the service worker lifecycle and properly utilized skipWaiting and clientsClaim."
         }
       }
     },
@@ -399,88 +151,26 @@
     "categoryId": "coding",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": [
-      "TypeScript",
-      "types",
-      "safety"
-    ],
+    "tags": ["TypeScript", "types", "safety"],
     "translations": {
       "ko": {
         "word": "타입 안정성",
         "explanation": "컴파일 시점에 타입 오류를 검출하여 런타임 오류를 방지하는 것. TypeScript의 핵심 장점이다.",
         "examples": {
-          "beginner": "타입 안정성을/를 사용해요.",
-          "intermediate": "타입 안정성이/가 프로그래밍에서 중요해요.",
-          "advanced": "타입 안정성의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "타입 안정성의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "타입 안정성에 대해 배우고 있어요.",
-              "romanization": "taip anjeongseonge daehae baeugo iseoyo.",
-              "translation": "I'm learning about type safety."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "타입 안정성으로 버그를 미리 잡을 수 있어요.",
+          "intermediate": "strict 모드를 활성화하면 더 강력한 타입 안정성을 확보할 수 있습니다.",
+          "advanced": "제네릭 타입을 활용해 재사용 가능하면서도 타입 안정성을 유지하는 함수를 작성했다.",
+          "master": "Discriminated Union과 타입 가드를 조합해 런타임 안정성까지 보장했다."
         }
       },
       "en": {
         "word": "Type Safety",
         "explanation": "Detecting type errors at compile time to prevent runtime errors. A core benefit of TypeScript.",
         "examples": {
-          "beginner": "I use type safety.",
-          "intermediate": "Type Safety is important in programming.",
-          "advanced": "Understanding type safety improves coding skills.",
-          "master": "Deep understanding of type safety is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about type safety.",
-              "romanization": "",
-              "translation": "타입 안정성에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Type safety helps catch bugs early.",
+          "intermediate": "Enabling strict mode provides stronger type safety.",
+          "advanced": "Wrote reusable functions that maintain type safety using generic types.",
+          "master": "Combined discriminated unions and type guards to guarantee runtime safety."
         }
       }
     },
@@ -497,88 +187,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "TypeScript",
-      "types",
-      "generics"
-    ],
+    "tags": ["TypeScript", "types", "generics"],
     "translations": {
       "ko": {
         "word": "제네릭 타입",
         "explanation": "타입을 파라미터처럼 받아 재사용 가능한 컴포넌트를 만드는 방법. 다양한 타입에서 동작하면서도 타입 안정성을 유지한다.",
         "examples": {
-          "beginner": "제네릭 타입을/를 사용해요.",
-          "intermediate": "제네릭 타입이/가 프로그래밍에서 중요해요.",
-          "advanced": "제네릭 타입의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "제네릭 타입의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "제네릭 타입에 대해 배우고 있어요.",
-              "romanization": "jenerik taipe daehae baeugo iseoyo.",
-              "translation": "I'm learning about generic types."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "제네릭으로 여러 타입에서 쓸 수 있는 함수를 만들어요.",
+          "intermediate": "Array<T>, Promise<T> 같은 내장 타입도 제네릭입니다.",
+          "advanced": "제네릭 제약조건(extends)을 사용해 특정 타입만 허용하도록 제한했다.",
+          "master": "조건부 타입과 제네릭을 조합해 추론 기반의 유틸리티 타입을 구현했다."
         }
       },
       "en": {
         "word": "Generic Types",
         "explanation": "A method to create reusable components by accepting types as parameters. Works with various types while maintaining type safety.",
         "examples": {
-          "beginner": "I use generic types.",
-          "intermediate": "Generic Types is important in programming.",
-          "advanced": "Understanding generic types improves coding skills.",
-          "master": "Deep understanding of generic types is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about generic types.",
-              "romanization": "",
-              "translation": "제네릭 타입에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Generics let you create functions that work with multiple types.",
+          "intermediate": "Built-in types like Array<T> and Promise<T> are also generics.",
+          "advanced": "Used generic constraints (extends) to restrict to specific types.",
+          "master": "Implemented inference-based utility types by combining conditional types and generics."
         }
       }
     },
@@ -595,88 +223,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "RRv7",
-      "data-fetching",
-      "routing"
-    ],
+    "tags": ["RRv7", "data-fetching", "routing"],
     "translations": {
       "ko": {
         "word": "로더 (Loaders)",
         "explanation": "React Router v7에서 라우트 렌더링 전에 데이터를 미리 가져오는 함수. SSG에서는 빌드 시 실행되어 .data 파일로 저장된다.",
         "examples": {
-          "beginner": "로더을/를 사용해요.",
-          "intermediate": "로더이/가 프로그래밍에서 중요해요.",
-          "advanced": "로더의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "로더의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "로더에 대해 배우고 있어요.",
-              "romanization": "rodeoe daehae baeugo iseoyo.",
-              "translation": "I'm learning about loaders."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "로더로 페이지에 필요한 데이터를 가져와요.",
+          "intermediate": "loader 함수는 export async function loader() 형태로 정의합니다.",
+          "advanced": "clientLoader와 서버 loader를 조합해 하이브리드 데이터 페칭을 구현했다.",
+          "master": "loader에서 defer()를 사용해 스트리밍 렌더링과 함께 점진적 데이터 로딩을 구현했다."
         }
       },
       "en": {
         "word": "Loaders",
         "explanation": "Functions in React Router v7 that fetch data before route rendering. In SSG, they run at build time and save to .data files.",
         "examples": {
-          "beginner": "I use loaders.",
-          "intermediate": "Loaders is important in programming.",
-          "advanced": "Understanding loaders improves coding skills.",
-          "master": "Deep understanding of loaders is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about loaders.",
-              "romanization": "",
-              "translation": "로더에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Loaders fetch the data needed for a page.",
+          "intermediate": "Define loader functions as export async function loader().",
+          "advanced": "Implemented hybrid data fetching by combining clientLoader and server loader.",
+          "master": "Used defer() in loaders to implement progressive data loading with streaming rendering."
         }
       }
     },
@@ -693,88 +259,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "RRv7",
-      "routing",
-      "layout"
-    ],
+    "tags": ["RRv7", "routing", "layout"],
     "translations": {
       "ko": {
         "word": "중첩 라우트",
         "explanation": "라우트 안에 라우트를 포함하는 구조. 레이아웃을 공유하면서 하위 콘텐츠만 변경하는 UI 패턴에 적합하다.",
         "examples": {
-          "beginner": "중첩 라우트을/를 사용해요.",
-          "intermediate": "중첩 라우트이/가 프로그래밍에서 중요해요.",
-          "advanced": "중첩 라우트의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "중첩 라우트의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "중첩 라우트에 대해 배우고 있어요.",
-              "romanization": "jungcheop rauteue daehae baeugo iseoyo.",
-              "translation": "I'm learning about nested routes."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "중첩 라우트로 레이아웃을 재사용해요.",
+          "intermediate": "<Outlet />으로 자식 라우트가 렌더링될 위치를 지정합니다.",
+          "advanced": "레이아웃 라우트와 인덱스 라우트를 조합해 복잡한 UI 구조를 구성했다.",
+          "master": "pathless 레이아웃 라우트로 URL에 영향 없이 공통 UI를 추가했다."
         }
       },
       "en": {
         "word": "Nested Routes",
         "explanation": "A structure of routes within routes. Suitable for UI patterns that share layouts while changing only child content.",
         "examples": {
-          "beginner": "I use nested routes.",
-          "intermediate": "Nested Routes is important in programming.",
-          "advanced": "Understanding nested routes improves coding skills.",
-          "master": "Deep understanding of nested routes is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about nested routes.",
-              "romanization": "",
-              "translation": "중첩 라우트에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Nested routes let you reuse layouts.",
+          "intermediate": "Use <Outlet /> to specify where child routes render.",
+          "advanced": "Combined layout routes and index routes to build complex UI structures.",
+          "master": "Added common UI without affecting URLs using pathless layout routes."
         }
       }
     },
@@ -791,88 +295,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "TailwindCSS",
-      "v4",
-      "configuration"
-    ],
+    "tags": ["TailwindCSS", "v4", "configuration"],
     "translations": {
       "ko": {
         "word": "CSS 우선 설정 (@theme)",
         "explanation": "Tailwind v4의 새로운 설정 방식. JavaScript 설정 파일 대신 CSS에서 @theme 디렉티브로 테마를 정의한다.",
         "examples": {
-          "beginner": "CSS 우선 설정을/를 사용해요.",
-          "intermediate": "CSS 우선 설정이/가 프로그래밍에서 중요해요.",
-          "advanced": "CSS 우선 설정의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "CSS 우선 설정의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "CSS 우선 설정에 대해 배우고 있어요.",
-              "romanization": "css useon seoljeonge daehae baeugo iseoyo.",
-              "translation": "I'm learning about css-first configuration (@theme)."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "Tailwind v4는 CSS 파일에서 설정해요.",
+          "intermediate": "@theme { --color-primary: oklch(0.7 0.15 200); }로 커스텀 색상을 정의합니다.",
+          "advanced": "@theme의 CSS 변수는 자동으로 유틸리티 클래스로 변환된다.",
+          "master": "Lightning CSS 엔진 덕분에 빌드 속도가 10배 이상 향상되었다."
         }
       },
       "en": {
         "word": "CSS-first Configuration (@theme)",
         "explanation": "Tailwind v4's new configuration approach. Defines themes using @theme directive in CSS instead of JavaScript config files.",
         "examples": {
-          "beginner": "I use css-first configuration (@theme).",
-          "intermediate": "CSS-first Configuration (@theme) is important in programming.",
-          "advanced": "Understanding css-first configuration (@theme) improves coding skills.",
-          "master": "Deep understanding of css-first configuration (@theme) is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about css-first configuration (@theme).",
-              "romanization": "",
-              "translation": "CSS 우선 설정에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Tailwind v4 is configured in CSS files.",
+          "intermediate": "Define custom colors with @theme { --color-primary: oklch(0.7 0.15 200); }.",
+          "advanced": "CSS variables in @theme are automatically converted to utility classes.",
+          "master": "Build speed improved 10x+ thanks to the Lightning CSS engine."
         }
       }
     },
@@ -889,88 +331,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "CSS",
-      "responsive",
-      "modern"
-    ],
+    "tags": ["CSS", "responsive", "modern"],
     "translations": {
       "ko": {
         "word": "컨테이너 쿼리",
         "explanation": "뷰포트 대신 부모 컨테이너 크기에 따라 스타일을 적용하는 CSS 기능. 컴포넌트 기반 반응형 디자인에 적합하다.",
         "examples": {
-          "beginner": "컨테이너 쿼리을/를 사용해요.",
-          "intermediate": "컨테이너 쿼리이/가 프로그래밍에서 중요해요.",
-          "advanced": "컨테이너 쿼리의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "컨테이너 쿼리의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "컨테이너 쿼리에 대해 배우고 있어요.",
-              "romanization": "keonteineo kworie daehae baeugo iseoyo.",
-              "translation": "I'm learning about container queries."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "컨테이너 쿼리로 컴포넌트별 반응형을 만들어요.",
+          "intermediate": "@container (min-width: 400px) { ... }로 컨테이너 쿼리를 정의합니다.",
+          "advanced": "container-type: inline-size로 가로 크기만 감지하도록 설정했다.",
+          "master": "Tailwind의 @container 변형과 container-type을 조합해 진정한 컴포넌트 기반 반응형을 구현했다."
         }
       },
       "en": {
         "word": "Container Queries",
         "explanation": "A CSS feature that applies styles based on parent container size instead of viewport. Ideal for component-based responsive design.",
         "examples": {
-          "beginner": "I use container queries.",
-          "intermediate": "Container Queries is important in programming.",
-          "advanced": "Understanding container queries improves coding skills.",
-          "master": "Deep understanding of container queries is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about container queries.",
-              "romanization": "",
-              "translation": "컨테이너 쿼리에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Container queries enable per-component responsiveness.",
+          "intermediate": "Define container queries with @container (min-width: 400px) { ... }.",
+          "advanced": "Set container-type: inline-size to detect only horizontal size.",
+          "master": "Achieved true component-based responsiveness by combining Tailwind's @container variants with container-type."
         }
       }
     },
@@ -987,88 +367,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "performance",
-      "metrics",
-      "SEO"
-    ],
+    "tags": ["performance", "metrics", "SEO"],
     "translations": {
       "ko": {
         "word": "코어 웹 바이탈 (LCP, INP, CLS)",
         "explanation": "Google이 정의한 사용자 경험의 핵심 성능 지표. LCP(로딩), INP(상호작용), CLS(시각적 안정성)로 구성된다.",
         "examples": {
-          "beginner": "코어 웹 바이탈을/를 사용해요.",
-          "intermediate": "코어 웹 바이탈이/가 프로그래밍에서 중요해요.",
-          "advanced": "코어 웹 바이탈의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "코어 웹 바이탈의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "코어 웹 바이탈에 대해 배우고 있어요.",
-              "romanization": "koeo wep baitale daehae baeugo iseoyo.",
-              "translation": "I'm learning about core web vitals (lcp, inp, cls)."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "코어 웹 바이탈 점수가 SEO에 영향을 줘요.",
+          "intermediate": "LCP는 2.5초 이내, CLS는 0.1 이하를 목표로 합니다.",
+          "advanced": "FID가 INP(Interaction to Next Paint)로 대체되어 전체 페이지 반응성을 측정한다.",
+          "master": "Performance Observer API로 실시간 Core Web Vitals 모니터링 시스템을 구축했다."
         }
       },
       "en": {
         "word": "Core Web Vitals (LCP, INP, CLS)",
         "explanation": "Core user experience metrics defined by Google. Consists of LCP (loading), INP (interactivity), and CLS (visual stability).",
         "examples": {
-          "beginner": "I use core web vitals (lcp, inp, cls).",
-          "intermediate": "Core Web Vitals (LCP, INP, CLS) is important in programming.",
-          "advanced": "Understanding core web vitals (lcp, inp, cls) improves coding skills.",
-          "master": "Deep understanding of core web vitals (lcp, inp, cls) is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about core web vitals (lcp, inp, cls).",
-              "romanization": "",
-              "translation": "코어 웹 바이탈에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Core Web Vitals scores affect SEO.",
+          "intermediate": "Target LCP under 2.5s and CLS below 0.1.",
+          "advanced": "FID was replaced by INP (Interaction to Next Paint) to measure overall page responsiveness.",
+          "master": "Built a real-time Core Web Vitals monitoring system using the Performance Observer API."
         }
       }
     },
@@ -1085,88 +403,26 @@
     "categoryId": "coding",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": [
-      "performance",
-      "optimization",
-      "loading"
-    ],
+    "tags": ["performance", "optimization", "loading"],
     "translations": {
       "ko": {
         "word": "지연 로딩",
         "explanation": "필요한 시점까지 리소스 로딩을 미루는 최적화 기법. 초기 로딩 속도를 개선하고 대역폭을 절약한다.",
         "examples": {
-          "beginner": "지연 로딩을/를 사용해요.",
-          "intermediate": "지연 로딩이/가 프로그래밍에서 중요해요.",
-          "advanced": "지연 로딩의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "지연 로딩의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "지연 로딩에 대해 배우고 있어요.",
-              "romanization": "jiyeon rodinge daehae baeugo iseoyo.",
-              "translation": "I'm learning about lazy loading."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "지연 로딩으로 필요할 때만 이미지를 불러와요.",
+          "intermediate": "loading='lazy' 속성으로 이미지 지연 로딩을 적용합니다.",
+          "advanced": "Intersection Observer API를 사용해 커스텀 지연 로딩을 구현했다.",
+          "master": "동적 import()와 React.lazy()를 조합해 컴포넌트 레벨 지연 로딩을 구현했다."
         }
       },
       "en": {
         "word": "Lazy Loading",
         "explanation": "An optimization technique that defers resource loading until needed. Improves initial loading speed and saves bandwidth.",
         "examples": {
-          "beginner": "I use lazy loading.",
-          "intermediate": "Lazy Loading is important in programming.",
-          "advanced": "Understanding lazy loading improves coding skills.",
-          "master": "Deep understanding of lazy loading is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about lazy loading.",
-              "romanization": "",
-              "translation": "지연 로딩에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Lazy loading loads images only when needed.",
+          "intermediate": "Apply image lazy loading with loading='lazy' attribute.",
+          "advanced": "Implemented custom lazy loading using the Intersection Observer API.",
+          "master": "Implemented component-level lazy loading by combining dynamic import() and React.lazy()."
         }
       }
     },
@@ -1183,88 +439,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "a11y",
-      "accessibility",
-      "standards"
-    ],
+    "tags": ["a11y", "accessibility", "standards"],
     "translations": {
       "ko": {
         "word": "WCAG 준수",
         "explanation": "웹 콘텐츠 접근성 지침(WCAG)을 따르는 것. 장애가 있는 사용자도 웹을 이용할 수 있도록 보장한다.",
         "examples": {
-          "beginner": "웹 접근성 지침 준수을/를 사용해요.",
-          "intermediate": "웹 접근성 지침 준수이/가 프로그래밍에서 중요해요.",
-          "advanced": "웹 접근성 지침 준수의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "웹 접근성 지침 준수의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "웹 접근성 지침 준수에 대해 배우고 있어요.",
-              "romanization": "wep jeopgeunseong jichim junsue daehae baeugo iseoyo.",
-              "translation": "I'm learning about wcag compliance."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "WCAG를 따르면 모든 사람이 웹을 사용할 수 있어요.",
+          "intermediate": "WCAG 2.1 AA 레벨을 목표로 색상 대비 4.5:1 이상을 유지합니다.",
+          "advanced": "axe-core를 사용해 자동화된 접근성 테스트를 CI/CD에 통합했다.",
+          "master": "WCAG 2.2의 새로운 기준인 Focus Appearance와 Target Size를 모두 충족했다."
         }
       },
       "en": {
         "word": "WCAG Compliance",
         "explanation": "Following Web Content Accessibility Guidelines. Ensures people with disabilities can use the web.",
         "examples": {
-          "beginner": "I use wcag compliance.",
-          "intermediate": "WCAG Compliance is important in programming.",
-          "advanced": "Understanding wcag compliance improves coding skills.",
-          "master": "Deep understanding of wcag compliance is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about wcag compliance.",
-              "romanization": "",
-              "translation": "웹 접근성 지침 준수에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Following WCAG makes the web usable for everyone.",
+          "intermediate": "Target WCAG 2.1 AA level by maintaining color contrast of 4.5:1 or higher.",
+          "advanced": "Integrated automated accessibility testing using axe-core into CI/CD.",
+          "master": "Met WCAG 2.2's new criteria including Focus Appearance and Target Size."
         }
       }
     },
@@ -1281,88 +475,26 @@
     "categoryId": "coding",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": [
-      "a11y",
-      "accessibility",
-      "ARIA"
-    ],
+    "tags": ["a11y", "accessibility", "ARIA"],
     "translations": {
       "ko": {
         "word": "ARIA 레이블",
         "explanation": "스크린 리더가 읽을 수 있는 접근성 레이블. 시각적으로 보이지 않는 추가 정보를 제공한다.",
         "examples": {
-          "beginner": "ARIA 레이블을/를 사용해요.",
-          "intermediate": "ARIA 레이블이/가 프로그래밍에서 중요해요.",
-          "advanced": "ARIA 레이블의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "ARIA 레이블의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "ARIA 레이블에 대해 배우고 있어요.",
-              "romanization": "aria reibeule daehae baeugo iseoyo.",
-              "translation": "I'm learning about aria labels."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "아이콘 버튼에 aria-label을 추가해요.",
+          "intermediate": "aria-label='메뉴 열기'로 버튼의 기능을 설명합니다.",
+          "advanced": "aria-labelledby로 다른 요소의 텍스트를 레이블로 참조했다.",
+          "master": "aria-describedby, aria-live 등을 조합해 동적 콘텐츠의 접근성을 완성했다."
         }
       },
       "en": {
         "word": "ARIA Labels",
         "explanation": "Accessibility labels that screen readers can read. Provides additional information not visually visible.",
         "examples": {
-          "beginner": "I use aria labels.",
-          "intermediate": "ARIA Labels is important in programming.",
-          "advanced": "Understanding aria labels improves coding skills.",
-          "master": "Deep understanding of aria labels is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about aria labels.",
-              "romanization": "",
-              "translation": "ARIA 레이블에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Add aria-label to icon buttons.",
+          "intermediate": "Describe button function with aria-label='Open menu'.",
+          "advanced": "Referenced text from other elements as labels using aria-labelledby.",
+          "master": "Completed dynamic content accessibility by combining aria-describedby, aria-live, etc."
         }
       }
     },
@@ -1379,88 +511,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "SEO",
-      "schema",
-      "JSON-LD"
-    ],
+    "tags": ["SEO", "schema", "JSON-LD"],
     "translations": {
       "ko": {
         "word": "구조화된 데이터 (Schema.org, JSON-LD)",
         "explanation": "검색 엔진이 페이지 내용을 이해할 수 있도록 하는 표준화된 데이터 형식. 리치 스니펫에 표시된다.",
         "examples": {
-          "beginner": "구조화된 데이터을/를 사용해요.",
-          "intermediate": "구조화된 데이터이/가 프로그래밍에서 중요해요.",
-          "advanced": "구조화된 데이터의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "구조화된 데이터의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "구조화된 데이터에 대해 배우고 있어요.",
-              "romanization": "gujohwadoen deiteoe daehae baeugo iseoyo.",
-              "translation": "I'm learning about structured data (schema.org, json-ld)."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "구조화된 데이터로 검색 결과를 풍성하게 해요.",
+          "intermediate": "JSON-LD 형식으로 Article, Product 등의 스키마를 추가합니다.",
+          "advanced": "@type: WebSite에 SearchAction을 추가해 사이트 검색 기능을 노출했다.",
+          "master": "FAQ, HowTo, BreadcrumbList 스키마를 조합해 SERP 점유율을 극대화했다."
         }
       },
       "en": {
         "word": "Structured Data (Schema.org, JSON-LD)",
         "explanation": "A standardized data format that helps search engines understand page content. Displayed as rich snippets.",
         "examples": {
-          "beginner": "I use structured data (schema.org, json-ld).",
-          "intermediate": "Structured Data (Schema.org, JSON-LD) is important in programming.",
-          "advanced": "Understanding structured data (schema.org, json-ld) improves coding skills.",
-          "master": "Deep understanding of structured data (schema.org, json-ld) is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about structured data (schema.org, json-ld).",
-              "romanization": "",
-              "translation": "구조화된 데이터에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Structured data enriches search results.",
+          "intermediate": "Add schemas like Article, Product in JSON-LD format.",
+          "advanced": "Exposed site search functionality by adding SearchAction to @type: WebSite.",
+          "master": "Maximized SERP presence by combining FAQ, HowTo, and BreadcrumbList schemas."
         }
       }
     },
@@ -1477,88 +547,26 @@
     "categoryId": "coding",
     "difficulty": "advanced",
     "frequency": "common",
-    "tags": [
-      "security",
-      "headers",
-      "CSP"
-    ],
+    "tags": ["security", "headers", "CSP"],
     "translations": {
       "ko": {
         "word": "콘텐츠 보안 정책 (CSP)",
         "explanation": "XSS 등의 공격을 방지하기 위해 허용된 리소스 출처를 지정하는 보안 헤더. 인라인 스크립트, 외부 리소스 등을 제어한다.",
         "examples": {
-          "beginner": "콘텐츠 보안 정책을/를 사용해요.",
-          "intermediate": "콘텐츠 보안 정책이/가 프로그래밍에서 중요해요.",
-          "advanced": "콘텐츠 보안 정책의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "콘텐츠 보안 정책의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "콘텐츠 보안 정책에 대해 배우고 있어요.",
-              "romanization": "kontencheu boan jeongchaeke daehae baeugo iseoyo.",
-              "translation": "I'm learning about content security policy (csp)."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "CSP로 악성 스크립트 실행을 막아요.",
+          "intermediate": "script-src 'self'로 같은 출처의 스크립트만 허용합니다.",
+          "advanced": "nonce 기반 CSP로 인라인 스크립트를 안전하게 허용했다.",
+          "master": "CSP report-uri를 설정해 정책 위반 시 로그를 수집하고 모니터링했다."
         }
       },
       "en": {
         "word": "Content Security Policy (CSP)",
         "explanation": "A security header that specifies allowed resource origins to prevent attacks like XSS. Controls inline scripts, external resources, etc.",
         "examples": {
-          "beginner": "I use content security policy (csp).",
-          "intermediate": "Content Security Policy (CSP) is important in programming.",
-          "advanced": "Understanding content security policy (csp) improves coding skills.",
-          "master": "Deep understanding of content security policy (csp) is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about content security policy (csp).",
-              "romanization": "",
-              "translation": "콘텐츠 보안 정책에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "CSP prevents malicious script execution.",
+          "intermediate": "Allow only same-origin scripts with script-src 'self'.",
+          "advanced": "Safely allowed inline scripts using nonce-based CSP.",
+          "master": "Set up CSP report-uri to collect and monitor logs on policy violations."
         }
       }
     },
@@ -1575,88 +583,26 @@
     "categoryId": "coding",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": [
-      "build-tool",
-      "bundler",
-      "dev"
-    ],
+    "tags": ["build-tool", "bundler", "dev"],
     "translations": {
       "ko": {
         "word": "Vite (빌드 도구)",
         "explanation": "차세대 프론트엔드 빌드 도구. ESM 기반 개발 서버로 빠른 HMR을 제공하고, Rollup 기반 프로덕션 빌드를 수행한다.",
         "examples": {
-          "beginner": "Vite을/를 사용해요.",
-          "intermediate": "Vite이/가 프로그래밍에서 중요해요.",
-          "advanced": "Vite의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "Vite의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "Vite에 대해 배우고 있어요.",
-              "romanization": "vitee daehae baeugo iseoyo.",
-              "translation": "I'm learning about vite (build tool)."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "Vite로 개발 서버를 빠르게 시작해요.",
+          "intermediate": "Vite는 ESM native import를 활용해 번들링 없이 개발 서버를 실행합니다.",
+          "advanced": "vite.config.ts에서 플러그인과 빌드 옵션을 커스터마이징했다.",
+          "master": "Vite의 esbuild 트랜스파일러와 Rollup 번들러의 역할 분담을 이해하고 최적화했다."
         }
       },
       "en": {
         "word": "Vite (Build Tool)",
         "explanation": "A next-generation frontend build tool. Provides fast HMR with ESM-based dev server and Rollup-based production builds.",
         "examples": {
-          "beginner": "I use vite (build tool).",
-          "intermediate": "Vite (Build Tool) is important in programming.",
-          "advanced": "Understanding vite (build tool) improves coding skills.",
-          "master": "Deep understanding of vite (build tool) is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about vite (build tool).",
-              "romanization": "",
-              "translation": "Vite에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Start dev server quickly with Vite.",
+          "intermediate": "Vite runs the dev server without bundling by utilizing ESM native imports.",
+          "advanced": "Customized plugins and build options in vite.config.ts.",
+          "master": "Understood and optimized the role division between Vite's esbuild transpiler and Rollup bundler."
         }
       }
     },
@@ -1673,88 +619,26 @@
     "categoryId": "coding",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": [
-      "linter",
-      "formatter",
-      "toolchain"
-    ],
+    "tags": ["linter", "formatter", "toolchain"],
     "translations": {
       "ko": {
         "word": "Biome (올인원 도구체인)",
         "explanation": "Rust로 작성된 초고속 린터 겸 포매터. ESLint + Prettier를 대체하며 설정 없이 바로 사용 가능하다.",
         "examples": {
-          "beginner": "Biome을/를 사용해요.",
-          "intermediate": "Biome이/가 프로그래밍에서 중요해요.",
-          "advanced": "Biome의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "Biome의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "Biome에 대해 배우고 있어요.",
-              "romanization": "biomee daehae baeugo iseoyo.",
-              "translation": "I'm learning about biome (all-in-one toolchain)."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "Biome 하나로 린팅과 포매팅을 해요.",
+          "intermediate": "biome check .으로 전체 프로젝트를 검사합니다.",
+          "advanced": "biome.json에서 규칙을 커스터마이징하고 CI에 통합했다.",
+          "master": "Biome의 점진적 도입을 위해 ESLint와 병행 운용하다가 완전히 마이그레이션했다."
         }
       },
       "en": {
         "word": "Biome (All-in-One Toolchain)",
         "explanation": "An ultra-fast linter and formatter written in Rust. Replaces ESLint + Prettier and works out of the box.",
         "examples": {
-          "beginner": "I use biome (all-in-one toolchain).",
-          "intermediate": "Biome (All-in-One Toolchain) is important in programming.",
-          "advanced": "Understanding biome (all-in-one toolchain) improves coding skills.",
-          "master": "Deep understanding of biome (all-in-one toolchain) is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about biome (all-in-one toolchain).",
-              "romanization": "",
-              "translation": "Biome에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Biome handles both linting and formatting.",
+          "intermediate": "Check the entire project with biome check .",
+          "advanced": "Customized rules in biome.json and integrated with CI.",
+          "master": "Ran Biome alongside ESLint for gradual adoption, then fully migrated."
         }
       }
     },
@@ -1771,88 +655,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "React",
-      "framework",
-      "2025"
-    ],
+    "tags": ["React", "framework", "2025"],
     "translations": {
       "ko": {
         "word": "React 19",
         "explanation": "2024년 출시된 React의 최신 메이저 버전. Server Actions, use() 훅, 향상된 Suspense 등 서버 중심 기능이 강화되었다.",
         "examples": {
-          "beginner": "React 19을/를 사용해요.",
-          "intermediate": "React 19이/가 프로그래밍에서 중요해요.",
-          "advanced": "React 19의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "React 19의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "React 19에 대해 배우고 있어요.",
-              "romanization": "react 19e daehae baeugo iseoyo.",
-              "translation": "I'm learning about react 19."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "React 19로 업그레이드했어요.",
+          "intermediate": "use() 훅으로 Promise와 Context를 더 간단하게 사용합니다.",
+          "advanced": "Server Actions로 폼 제출 시 클라이언트-서버 왕복을 최소화했다.",
+          "master": "useFormStatus, useOptimistic 훅을 활용해 낙관적 UI 업데이트를 구현했다."
         }
       },
       "en": {
         "word": "React 19",
         "explanation": "The latest major version of React released in 2024. Enhanced server-centric features including Server Actions, use() hook, and improved Suspense.",
         "examples": {
-          "beginner": "I use react 19.",
-          "intermediate": "React 19 is important in programming.",
-          "advanced": "Understanding react 19 improves coding skills.",
-          "master": "Deep understanding of react 19 is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about react 19.",
-              "romanization": "",
-              "translation": "React 19에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Upgraded to React 19.",
+          "intermediate": "Use Promises and Context more simply with the use() hook.",
+          "advanced": "Minimized client-server roundtrips on form submission with Server Actions.",
+          "master": "Implemented optimistic UI updates using useFormStatus and useOptimistic hooks."
         }
       }
     },
@@ -1869,88 +691,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "React",
-      "async",
-      "loading"
-    ],
+    "tags": ["React", "async", "loading"],
     "translations": {
       "ko": {
         "word": "서스펜스 (Suspense)",
         "explanation": "비동기 컴포넌트가 로딩되는 동안 폴백 UI를 표시하는 React 기능. 로딩 상태 관리를 선언적으로 처리한다.",
         "examples": {
-          "beginner": "서스펜스을/를 사용해요.",
-          "intermediate": "서스펜스이/가 프로그래밍에서 중요해요.",
-          "advanced": "서스펜스의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "서스펜스의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "서스펜스에 대해 배우고 있어요.",
-              "romanization": "seoseupenseue daehae baeugo iseoyo.",
-              "translation": "I'm learning about suspense."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "Suspense로 로딩 중 스피너를 보여줘요.",
+          "intermediate": "<Suspense fallback={<Loading />}>으로 로딩 UI를 감쌉니다.",
+          "advanced": "중첩 Suspense로 점진적 로딩 UI를 구현해 사용자 경험을 개선했다.",
+          "master": "Suspense 경계를 전략적으로 배치해 콘텐츠 우선순위에 따른 워터폴을 최소화했다."
         }
       },
       "en": {
         "word": "Suspense",
         "explanation": "A React feature that displays fallback UI while async components load. Handles loading states declaratively.",
         "examples": {
-          "beginner": "I use suspense.",
-          "intermediate": "Suspense is important in programming.",
-          "advanced": "Understanding suspense improves coding skills.",
-          "master": "Deep understanding of suspense is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about suspense.",
-              "romanization": "",
-              "translation": "서스펜스에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Suspense shows a spinner while loading.",
+          "intermediate": "Wrap loading UI with <Suspense fallback={<Loading />}>.",
+          "advanced": "Improved UX by implementing progressive loading UI with nested Suspense.",
+          "master": "Strategically placed Suspense boundaries to minimize waterfalls based on content priority."
         }
       }
     },
@@ -1967,88 +727,26 @@
     "categoryId": "coding",
     "difficulty": "advanced",
     "frequency": "common",
-    "tags": [
-      "CSS",
-      "animation",
-      "modern"
-    ],
+    "tags": ["CSS", "animation", "modern"],
     "translations": {
       "ko": {
         "word": "뷰 전환 API (View Transitions)",
         "explanation": "페이지나 상태 전환 시 부드러운 애니메이션을 적용하는 브라우저 API. 네이티브 앱 같은 전환 효과를 제공한다.",
         "examples": {
-          "beginner": "뷰 전환 API을/를 사용해요.",
-          "intermediate": "뷰 전환 API이/가 프로그래밍에서 중요해요.",
-          "advanced": "뷰 전환 API의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "뷰 전환 API의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "뷰 전환 API에 대해 배우고 있어요.",
-              "romanization": "byu jeonhwan apie daehae baeugo iseoyo.",
-              "translation": "I'm learning about view transitions api."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "뷰 전환 API로 페이지 전환을 부드럽게 해요.",
+          "intermediate": "document.startViewTransition()으로 전환 애니메이션을 시작합니다.",
+          "advanced": "view-transition-name으로 특정 요소에 개별 전환 효과를 적용했다.",
+          "master": "Cross-document View Transitions으로 MPA에서도 SPA 같은 전환을 구현했다."
         }
       },
       "en": {
         "word": "View Transitions API",
         "explanation": "A browser API that applies smooth animations during page or state transitions. Provides native app-like transition effects.",
         "examples": {
-          "beginner": "I use view transitions api.",
-          "intermediate": "View Transitions API is important in programming.",
-          "advanced": "Understanding view transitions api improves coding skills.",
-          "master": "Deep understanding of view transitions api is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about view transitions api.",
-              "romanization": "",
-              "translation": "뷰 전환 API에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "View Transitions API makes page transitions smooth.",
+          "intermediate": "Start transition animations with document.startViewTransition().",
+          "advanced": "Applied individual transition effects to specific elements with view-transition-name.",
+          "master": "Implemented SPA-like transitions in MPAs with Cross-document View Transitions."
         }
       }
     },
@@ -2065,88 +763,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "CSS",
-      "selector",
-      "modern"
-    ],
+    "tags": ["CSS", "selector", "modern"],
     "translations": {
       "ko": {
         "word": ":has() 셀렉터",
         "explanation": "특정 자식 요소를 포함하는 부모를 선택하는 CSS 셀렉터. 오랜 시간 불가능했던 '부모 셀렉터'를 드디어 구현한다.",
         "examples": {
-          "beginner": ":has() 셀렉터을/를 사용해요.",
-          "intermediate": ":has() 셀렉터이/가 프로그래밍에서 중요해요.",
-          "advanced": ":has() 셀렉터의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": ":has() 셀렉터의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": ":has() 셀렉터에 대해 배우고 있어요.",
-              "romanization": ":has() selrekteoe daehae baeugo iseoyo.",
-              "translation": "I'm learning about :has() selector."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": ":has()로 자식에 따라 부모 스타일을 바꿔요.",
+          "intermediate": "form:has(:invalid) { border-color: red; }로 유효하지 않은 폼을 표시합니다.",
+          "advanced": "article:has(> img)로 이미지가 있는 글에만 스타일을 적용했다.",
+          "master": ":has()와 :is(), :where()를 조합해 복잡한 조건부 스타일링을 CSS만으로 구현했다."
         }
       },
       "en": {
         "word": ":has() Selector",
         "explanation": "A CSS selector that selects parents containing specific child elements. Finally implements the long-awaited 'parent selector'.",
         "examples": {
-          "beginner": "I use :has() selector.",
-          "intermediate": ":has() Selector is important in programming.",
-          "advanced": "Understanding :has() selector improves coding skills.",
-          "master": "Deep understanding of :has() selector is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about :has() selector.",
-              "romanization": "",
-              "translation": ":has() 셀렉터에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": ":has() changes parent style based on children.",
+          "intermediate": "Show invalid forms with form:has(:invalid) { border-color: red; }.",
+          "advanced": "Applied styles only to articles with images using article:has(> img).",
+          "master": "Implemented complex conditional styling in CSS only by combining :has() with :is() and :where()."
         }
       }
     },
@@ -2163,88 +799,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "storage",
-      "database",
-      "PWA"
-    ],
+    "tags": ["storage", "database", "PWA"],
     "translations": {
       "ko": {
         "word": "IndexedDB (클라이언트 데이터베이스)",
         "explanation": "브라우저 내장 NoSQL 데이터베이스. 대용량 구조화된 데이터를 클라이언트에서 저장하고 인덱싱할 수 있다.",
         "examples": {
-          "beginner": "IndexedDB을/를 사용해요.",
-          "intermediate": "IndexedDB이/가 프로그래밍에서 중요해요.",
-          "advanced": "IndexedDB의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "IndexedDB의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "IndexedDB에 대해 배우고 있어요.",
-              "romanization": "indexeddbe daehae baeugo iseoyo.",
-              "translation": "I'm learning about indexeddb (client database)."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "IndexedDB로 오프라인에서도 데이터를 저장해요.",
+          "intermediate": "idb 라이브러리로 IndexedDB를 Promise 기반으로 사용합니다.",
+          "advanced": "IndexedDB의 트랜잭션과 인덱스를 활용해 빠른 검색을 구현했다.",
+          "master": "versioned schema와 migration 전략으로 IndexedDB 스키마 변경을 안전하게 관리했다."
         }
       },
       "en": {
         "word": "IndexedDB (Client Database)",
         "explanation": "A browser built-in NoSQL database. Can store and index large amounts of structured data on the client.",
         "examples": {
-          "beginner": "I use indexeddb (client database).",
-          "intermediate": "IndexedDB (Client Database) is important in programming.",
-          "advanced": "Understanding indexeddb (client database) improves coding skills.",
-          "master": "Deep understanding of indexeddb (client database) is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about indexeddb (client database).",
-              "romanization": "",
-              "translation": "IndexedDB에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "IndexedDB lets you save data even offline.",
+          "intermediate": "Use IndexedDB with Promises via the idb library.",
+          "advanced": "Implemented fast search using IndexedDB transactions and indexes.",
+          "master": "Safely managed IndexedDB schema changes with versioned schema and migration strategies."
         }
       }
     },
@@ -2261,88 +835,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "PWA",
-      "strategy",
-      "offline"
-    ],
+    "tags": ["PWA", "strategy", "offline"],
     "translations": {
       "ko": {
         "word": "오프라인 우선 전략",
         "explanation": "네트워크 연결 없이도 동작하도록 설계하는 접근 방식. 캐시를 먼저 확인하고 필요시 네트워크를 요청한다.",
         "examples": {
-          "beginner": "오프라인 우선을/를 사용해요.",
-          "intermediate": "오프라인 우선이/가 프로그래밍에서 중요해요.",
-          "advanced": "오프라인 우선의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "오프라인 우선의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "오프라인 우선에 대해 배우고 있어요.",
-              "romanization": "opeurain useone daehae baeugo iseoyo.",
-              "translation": "I'm learning about offline-first strategy."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "오프라인 우선으로 인터넷 없이도 앱을 사용해요.",
+          "intermediate": "Cache First 전략으로 캐시된 리소스를 우선 제공합니다.",
+          "advanced": "Stale-While-Revalidate 전략으로 빠른 응답과 최신 데이터를 모두 확보했다.",
+          "master": "NetworkFirst, CacheFirst, StaleWhileRevalidate를 리소스 특성에 맞게 조합했다."
         }
       },
       "en": {
         "word": "Offline-First Strategy",
         "explanation": "An approach to design apps that work without network connection. Checks cache first and requests network when needed.",
         "examples": {
-          "beginner": "I use offline-first strategy.",
-          "intermediate": "Offline-First Strategy is important in programming.",
-          "advanced": "Understanding offline-first strategy improves coding skills.",
-          "master": "Deep understanding of offline-first strategy is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about offline-first strategy.",
-              "romanization": "",
-              "translation": "오프라인 우선에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Offline-first lets you use apps without internet.",
+          "intermediate": "Cache First strategy serves cached resources first.",
+          "advanced": "Secured both fast response and fresh data with Stale-While-Revalidate strategy.",
+          "master": "Combined NetworkFirst, CacheFirst, and StaleWhileRevalidate based on resource characteristics."
         }
       }
     },
@@ -2359,88 +871,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "performance",
-      "optimization",
-      "React"
-    ],
+    "tags": ["performance", "optimization", "React"],
     "translations": {
       "ko": {
         "word": "메모이제이션",
         "explanation": "함수 호출 결과를 캐시하여 동일 입력에 대해 재계산을 방지하는 기법. React에서 useMemo, useCallback으로 구현한다.",
         "examples": {
-          "beginner": "메모이제이션을/를 사용해요.",
-          "intermediate": "메모이제이션이/가 프로그래밍에서 중요해요.",
-          "advanced": "메모이제이션의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "메모이제이션의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "메모이제이션에 대해 배우고 있어요.",
-              "romanization": "memoijeisyeone daehae baeugo iseoyo.",
-              "translation": "I'm learning about memoization."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "메모이제이션으로 같은 계산을 반복하지 않아요.",
+          "intermediate": "useMemo(() => expensiveCalc(data), [data])로 비싼 계산을 캐싱합니다.",
+          "advanced": "React.memo로 props가 변경되지 않으면 리렌더링을 건너뛰게 했다.",
+          "master": "메모이제이션 남용을 피하고 실제 성능 측정 후 필요한 곳에만 적용했다."
         }
       },
       "en": {
         "word": "Memoization",
         "explanation": "A technique that caches function call results to prevent recalculation for identical inputs. Implemented in React with useMemo and useCallback.",
         "examples": {
-          "beginner": "I use memoization.",
-          "intermediate": "Memoization is important in programming.",
-          "advanced": "Understanding memoization improves coding skills.",
-          "master": "Deep understanding of memoization is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about memoization.",
-              "romanization": "",
-              "translation": "메모이제이션에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Memoization avoids repeating the same calculations.",
+          "intermediate": "Cache expensive calculations with useMemo(() => expensiveCalc(data), [data]).",
+          "advanced": "Used React.memo to skip re-renders when props haven't changed.",
+          "master": "Avoided memoization overuse and applied it only where needed after actual performance measurement."
         }
       }
     },
@@ -2457,88 +907,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "performance",
-      "loading",
-      "ESM"
-    ],
+    "tags": ["performance", "loading", "ESM"],
     "translations": {
       "ko": {
         "word": "동적 임포트",
         "explanation": "런타임에 필요한 모듈을 비동기로 로드하는 ES 모듈 기능. 코드 스플리팅의 핵심 메커니즘이다.",
         "examples": {
-          "beginner": "동적 임포트을/를 사용해요.",
-          "intermediate": "동적 임포트이/가 프로그래밍에서 중요해요.",
-          "advanced": "동적 임포트의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "동적 임포트의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "동적 임포트에 대해 배우고 있어요.",
-              "romanization": "dongjeok impoteue daehae baeugo iseoyo.",
-              "translation": "I'm learning about dynamic import."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "동적 임포트로 필요할 때만 코드를 불러와요.",
+          "intermediate": "const module = await import('./heavy.js')로 동적 로딩합니다.",
+          "advanced": "라우트 기반 동적 임포트로 페이지별 청크를 분리했다.",
+          "master": "Magic comments (webpackChunkName 등)로 청크 이름을 제어하고 프리로드했다."
         }
       },
       "en": {
         "word": "Dynamic Import",
         "explanation": "An ES module feature that loads modules asynchronously at runtime. The core mechanism of code splitting.",
         "examples": {
-          "beginner": "I use dynamic import.",
-          "intermediate": "Dynamic Import is important in programming.",
-          "advanced": "Understanding dynamic import improves coding skills.",
-          "master": "Deep understanding of dynamic import is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about dynamic import.",
-              "romanization": "",
-              "translation": "동적 임포트에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Dynamic import loads code only when needed.",
+          "intermediate": "Dynamically load with const module = await import('./heavy.js').",
+          "advanced": "Separated per-page chunks with route-based dynamic imports.",
+          "master": "Controlled chunk names and preloaded with magic comments (webpackChunkName, etc.)."
         }
       }
     },
@@ -2555,88 +943,26 @@
     "categoryId": "coding",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": [
-      "JavaScript",
-      "modules",
-      "standard"
-    ],
+    "tags": ["JavaScript", "modules", "standard"],
     "translations": {
       "ko": {
         "word": "ESM (ECMAScript Modules)",
         "explanation": "JavaScript 표준 모듈 시스템. import/export 문법을 사용하며 2025년 현재 브라우저와 Node.js 모두 지원한다.",
         "examples": {
-          "beginner": "ES 모듈을/를 사용해요.",
-          "intermediate": "ES 모듈이/가 프로그래밍에서 중요해요.",
-          "advanced": "ES 모듈의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "ES 모듈의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "ES 모듈에 대해 배우고 있어요.",
-              "romanization": "es modyule daehae baeugo iseoyo.",
-              "translation": "I'm learning about esm (ecmascript modules)."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "ESM은 import로 모듈을 가져와요.",
+          "intermediate": "package.json에 \"type\": \"module\"을 설정해 ESM을 활성화합니다.",
+          "advanced": "ESM은 정적 분석이 가능해 트리 쉐이킹에 유리하다.",
+          "master": "ESM과 CJS 듀얼 패키지를 exports 필드로 제공해 호환성을 확보했다."
         }
       },
       "en": {
         "word": "ESM (ECMAScript Modules)",
         "explanation": "The JavaScript standard module system. Uses import/export syntax and is supported by both browsers and Node.js as of 2025.",
         "examples": {
-          "beginner": "I use esm (ecmascript modules).",
-          "intermediate": "ESM (ECMAScript Modules) is important in programming.",
-          "advanced": "Understanding esm (ecmascript modules) improves coding skills.",
-          "master": "Deep understanding of esm (ecmascript modules) is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about esm (ecmascript modules).",
-              "romanization": "",
-              "translation": "ES 모듈에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "ESM uses import to bring in modules.",
+          "intermediate": "Enable ESM by setting \"type\": \"module\" in package.json.",
+          "advanced": "ESM enables static analysis, which benefits tree shaking.",
+          "master": "Provided ESM and CJS dual packages via exports field for compatibility."
         }
       }
     },
@@ -2653,88 +979,26 @@
     "categoryId": "coding",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": [
-      "testing",
-      "quality",
-      "TDD"
-    ],
+    "tags": ["testing", "quality", "TDD"],
     "translations": {
       "ko": {
         "word": "유닛 테스트",
         "explanation": "개별 함수나 컴포넌트를 독립적으로 검증하는 테스트. 가장 작은 단위의 코드를 빠르게 테스트한다.",
         "examples": {
-          "beginner": "유닛 테스트을/를 사용해요.",
-          "intermediate": "유닛 테스트이/가 프로그래밍에서 중요해요.",
-          "advanced": "유닛 테스트의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "유닛 테스트의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "유닛 테스트에 대해 배우고 있어요.",
-              "romanization": "yunis teseuteue daehae baeugo iseoyo.",
-              "translation": "I'm learning about unit testing."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "유닛 테스트로 함수가 올바르게 동작하는지 확인해요.",
+          "intermediate": "Vitest로 유닛 테스트를 작성하고 실행합니다.",
+          "advanced": "mocking과 spying을 활용해 의존성을 격리한 순수 유닛 테스트를 작성했다.",
+          "master": "커버리지 80% 이상을 유지하면서 의미 있는 테스트 케이스에 집중했다."
         }
       },
       "en": {
         "word": "Unit Testing",
         "explanation": "Tests that verify individual functions or components independently. Quickly tests the smallest units of code.",
         "examples": {
-          "beginner": "I use unit testing.",
-          "intermediate": "Unit Testing is important in programming.",
-          "advanced": "Understanding unit testing improves coding skills.",
-          "master": "Deep understanding of unit testing is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about unit testing.",
-              "romanization": "",
-              "translation": "유닛 테스트에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Unit tests verify functions work correctly.",
+          "intermediate": "Write and run unit tests with Vitest.",
+          "advanced": "Wrote pure unit tests by isolating dependencies with mocking and spying.",
+          "master": "Maintained 80%+ coverage while focusing on meaningful test cases."
         }
       }
     },
@@ -2751,88 +1015,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "testing",
-      "quality",
-      "automation"
-    ],
+    "tags": ["testing", "quality", "automation"],
     "translations": {
       "ko": {
         "word": "E2E 테스트 (End-to-End)",
         "explanation": "실제 사용자 시나리오를 시뮬레이션하는 테스트. 브라우저에서 전체 애플리케이션 흐름을 검증한다.",
         "examples": {
-          "beginner": "E2E 테스트을/를 사용해요.",
-          "intermediate": "E2E 테스트이/가 프로그래밍에서 중요해요.",
-          "advanced": "E2E 테스트의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "E2E 테스트의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "E2E 테스트에 대해 배우고 있어요.",
-              "romanization": "e2e teseuteue daehae baeugo iseoyo.",
-              "translation": "I'm learning about e2e testing (end-to-end)."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "E2E 테스트는 사용자처럼 앱을 테스트해요.",
+          "intermediate": "Playwright로 로그인부터 결제까지 전체 흐름을 테스트합니다.",
+          "advanced": "시각적 회귀 테스트를 E2E에 통합해 UI 변경을 감지했다.",
+          "master": "Flaky 테스트를 최소화하고 테스트 격리(isolation)를 철저히 유지했다."
         }
       },
       "en": {
         "word": "E2E Testing (End-to-End)",
         "explanation": "Tests that simulate real user scenarios. Verifies the entire application flow in a browser.",
         "examples": {
-          "beginner": "I use e2e testing (end-to-end).",
-          "intermediate": "E2E Testing (End-to-End) is important in programming.",
-          "advanced": "Understanding e2e testing (end-to-end) improves coding skills.",
-          "master": "Deep understanding of e2e testing (end-to-end) is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about e2e testing (end-to-end).",
-              "romanization": "",
-              "translation": "E2E 테스트에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "E2E tests test the app like a user would.",
+          "intermediate": "Test the entire flow from login to checkout with Playwright.",
+          "advanced": "Detected UI changes by integrating visual regression testing with E2E.",
+          "master": "Minimized flaky tests and maintained thorough test isolation."
         }
       }
     },
@@ -2849,88 +1051,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "React",
-      "error-handling",
-      "UX"
-    ],
+    "tags": ["React", "error-handling", "UX"],
     "translations": {
       "ko": {
         "word": "에러 경계 (Error Boundary)",
         "explanation": "하위 컴포넌트에서 발생한 JavaScript 에러를 잡아서 폴백 UI를 보여주는 React 컴포넌트. 전체 앱 크래시를 방지한다.",
         "examples": {
-          "beginner": "에러 경계을/를 사용해요.",
-          "intermediate": "에러 경계이/가 프로그래밍에서 중요해요.",
-          "advanced": "에러 경계의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "에러 경계의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "에러 경계에 대해 배우고 있어요.",
-              "romanization": "ereo gyeonggyee daehae baeugo iseoyo.",
-              "translation": "I'm learning about error boundary."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "에러 경계로 앱 전체가 멈추는 걸 막아요.",
+          "intermediate": "componentDidCatch 생명주기 메서드로 에러 경계를 구현합니다.",
+          "advanced": "react-error-boundary 라이브러리로 함수형 컴포넌트에서 에러 경계를 사용했다.",
+          "master": "에러 경계를 계층적으로 배치해 세분화된 에러 복구 전략을 구현했다."
         }
       },
       "en": {
         "word": "Error Boundary",
         "explanation": "A React component that catches JavaScript errors in child components and displays a fallback UI. Prevents entire app crashes.",
         "examples": {
-          "beginner": "I use error boundary.",
-          "intermediate": "Error Boundary is important in programming.",
-          "advanced": "Understanding error boundary improves coding skills.",
-          "master": "Deep understanding of error boundary is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about error boundary.",
-              "romanization": "",
-              "translation": "에러 경계에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Error boundaries prevent the whole app from crashing.",
+          "intermediate": "Implement error boundaries with the componentDidCatch lifecycle method.",
+          "advanced": "Used react-error-boundary library for error boundaries in functional components.",
+          "master": "Implemented granular error recovery strategies by hierarchically placing error boundaries."
         }
       }
     },
@@ -2947,88 +1087,26 @@
     "categoryId": "coding",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": [
-      "build",
-      "optimization",
-      "bundling"
-    ],
+    "tags": ["build", "optimization", "bundling"],
     "translations": {
       "ko": {
         "word": "코드 압축 (Minification)",
         "explanation": "공백, 주석, 긴 변수명을 제거해 코드 크기를 줄이는 과정. 프로덕션 빌드에서 자동으로 수행된다.",
         "examples": {
-          "beginner": "코드 압축을/를 사용해요.",
-          "intermediate": "코드 압축이/가 프로그래밍에서 중요해요.",
-          "advanced": "코드 압축의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "코드 압축의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "코드 압축에 대해 배우고 있어요.",
-              "romanization": "kodeu apchuke daehae baeugo iseoyo.",
-              "translation": "I'm learning about minification."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "코드 압축으로 파일 크기를 줄여요.",
+          "intermediate": "Vite는 esbuild/terser로 자동으로 코드를 압축합니다.",
+          "advanced": "mangling 옵션으로 변수명까지 짧게 만들어 추가 최적화했다.",
+          "master": "소스맵을 함께 생성해 프로덕션에서도 디버깅이 가능하게 했다."
         }
       },
       "en": {
         "word": "Minification",
         "explanation": "The process of reducing code size by removing whitespace, comments, and long variable names. Performed automatically in production builds.",
         "examples": {
-          "beginner": "I use minification.",
-          "intermediate": "Minification is important in programming.",
-          "advanced": "Understanding minification improves coding skills.",
-          "master": "Deep understanding of minification is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about minification.",
-              "romanization": "",
-              "translation": "코드 압축에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Minification reduces file size.",
+          "intermediate": "Vite automatically minifies code with esbuild/terser.",
+          "advanced": "Added further optimization by shortening variable names with mangling options.",
+          "master": "Generated source maps alongside for debugging capability in production."
         }
       }
     },
@@ -3045,88 +1123,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "dev",
-      "DX",
-      "tooling"
-    ],
+    "tags": ["dev", "DX", "tooling"],
     "translations": {
       "ko": {
         "word": "HMR (Hot Module Replacement)",
         "explanation": "페이지 새로고침 없이 변경된 모듈만 교체하는 개발 기능. 상태를 유지하면서 빠르게 변경 사항을 확인할 수 있다.",
         "examples": {
-          "beginner": "핫 모듈 교체을/를 사용해요.",
-          "intermediate": "핫 모듈 교체이/가 프로그래밍에서 중요해요.",
-          "advanced": "핫 모듈 교체의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "핫 모듈 교체의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "핫 모듈 교체에 대해 배우고 있어요.",
-              "romanization": "has modyul gyochee daehae baeugo iseoyo.",
-              "translation": "I'm learning about hmr (hot module replacement)."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "HMR로 코드를 수정하면 바로 화면에 반영돼요.",
+          "intermediate": "Vite의 HMR은 밀리초 단위로 매우 빠릅니다.",
+          "advanced": "CSS 변경은 전체 리로드 없이 HMR로 즉시 적용된다.",
+          "master": "React Fast Refresh와 HMR을 조합해 컴포넌트 상태를 유지하면서 코드를 수정했다."
         }
       },
       "en": {
         "word": "HMR (Hot Module Replacement)",
         "explanation": "A development feature that replaces only changed modules without page refresh. Allows quick verification of changes while preserving state.",
         "examples": {
-          "beginner": "I use hmr (hot module replacement).",
-          "intermediate": "HMR (Hot Module Replacement) is important in programming.",
-          "advanced": "Understanding hmr (hot module replacement) improves coding skills.",
-          "master": "Deep understanding of hmr (hot module replacement) is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about hmr (hot module replacement).",
-              "romanization": "",
-              "translation": "핫 모듈 교체에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "HMR reflects code changes immediately on screen.",
+          "intermediate": "Vite's HMR is very fast, in milliseconds.",
+          "advanced": "CSS changes apply instantly via HMR without full reload.",
+          "master": "Modified code while preserving component state by combining React Fast Refresh with HMR."
         }
       }
     },
@@ -3143,88 +1159,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "testing",
-      "CI",
-      "performance"
-    ],
+    "tags": ["testing", "CI", "performance"],
     "translations": {
       "ko": {
         "word": "Lighthouse CI",
         "explanation": "Lighthouse 성능 감사를 CI/CD 파이프라인에 통합하는 도구. 성능 회귀를 자동으로 감지하고 알린다.",
         "examples": {
-          "beginner": "라이트하우스 CI을/를 사용해요.",
-          "intermediate": "라이트하우스 CI이/가 프로그래밍에서 중요해요.",
-          "advanced": "라이트하우스 CI의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "라이트하우스 CI의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "라이트하우스 CI에 대해 배우고 있어요.",
-              "romanization": "raiteuhauseu cie daehae baeugo iseoyo.",
-              "translation": "I'm learning about lighthouse ci."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "Lighthouse CI로 매 배포 전 성능을 검사해요.",
+          "intermediate": "lighthouserc.json에서 성능 임계값을 설정합니다.",
+          "advanced": "assertion 설정으로 성능 점수가 기준 이하면 빌드를 실패시켰다.",
+          "master": "여러 URL과 반복 실행으로 신뢰할 수 있는 성능 기준선을 확보했다."
         }
       },
       "en": {
         "word": "Lighthouse CI",
         "explanation": "A tool that integrates Lighthouse performance audits into CI/CD pipelines. Automatically detects and alerts on performance regressions.",
         "examples": {
-          "beginner": "I use lighthouse ci.",
-          "intermediate": "Lighthouse CI is important in programming.",
-          "advanced": "Understanding lighthouse ci improves coding skills.",
-          "master": "Deep understanding of lighthouse ci is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about lighthouse ci.",
-              "romanization": "",
-              "translation": "라이트하우스 CI에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Lighthouse CI checks performance before every deploy.",
+          "intermediate": "Set performance thresholds in lighthouserc.json.",
+          "advanced": "Failed builds when performance scores fell below thresholds using assertion settings.",
+          "master": "Established reliable performance baselines with multiple URLs and repeated runs."
         }
       }
     },
@@ -3241,88 +1195,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "performance",
-      "loading",
-      "hints"
-    ],
+    "tags": ["performance", "loading", "hints"],
     "translations": {
       "ko": {
         "word": "프리로드/프리페치 (Resource Hints)",
         "explanation": "리소스를 미리 로드하도록 브라우저에 힌트를 주는 기법. preload는 현재 페이지, prefetch는 미래 탐색을 위한 리소스를 미리 가져온다.",
         "examples": {
-          "beginner": "프리로드/프리페치을/를 사용해요.",
-          "intermediate": "프리로드/프리페치이/가 프로그래밍에서 중요해요.",
-          "advanced": "프리로드/프리페치의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "프리로드/프리페치의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "프리로드/프리페치에 대해 배우고 있어요.",
-              "romanization": "peurirodeu/peuripechie daehae baeugo iseoyo.",
-              "translation": "I'm learning about preload/prefetch (resource hints)."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "프리로드로 중요한 리소스를 먼저 불러와요.",
+          "intermediate": "<link rel='preload' href='font.woff2' as='font'>로 폰트를 미리 로드합니다.",
+          "advanced": "prefetch로 다음 페이지 리소스를 유휴 시간에 미리 다운로드했다.",
+          "master": "preconnect, dns-prefetch까지 조합해 외부 도메인 연결 시간을 단축했다."
         }
       },
       "en": {
         "word": "Preload/Prefetch (Resource Hints)",
         "explanation": "Techniques that hint browsers to load resources in advance. Preload fetches for current page, prefetch for future navigation.",
         "examples": {
-          "beginner": "I use preload/prefetch (resource hints).",
-          "intermediate": "Preload/Prefetch (Resource Hints) is important in programming.",
-          "advanced": "Understanding preload/prefetch (resource hints) improves coding skills.",
-          "master": "Deep understanding of preload/prefetch (resource hints) is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about preload/prefetch (resource hints).",
-              "romanization": "",
-              "translation": "프리로드/프리페치에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Preload loads important resources first.",
+          "intermediate": "Preload fonts with <link rel='preload' href='font.woff2' as='font'>.",
+          "advanced": "Pre-downloaded next page resources during idle time with prefetch.",
+          "master": "Reduced external domain connection time by combining preconnect and dns-prefetch."
         }
       }
     },
@@ -3339,88 +1231,26 @@
     "categoryId": "coding",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": [
-      "tooling",
-      "package-manager",
-      "monorepo"
-    ],
+    "tags": ["tooling", "package-manager", "monorepo"],
     "translations": {
       "ko": {
         "word": "pnpm (패키지 매니저)",
         "explanation": "빠르고 디스크 효율적인 JavaScript 패키지 매니저. 심볼릭 링크 기반 node_modules로 중복 설치를 방지한다.",
         "examples": {
-          "beginner": "pnpm을/를 사용해요.",
-          "intermediate": "pnpm이/가 프로그래밍에서 중요해요.",
-          "advanced": "pnpm의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "pnpm의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "pnpm에 대해 배우고 있어요.",
-              "romanization": "pnpme daehae baeugo iseoyo.",
-              "translation": "I'm learning about pnpm (package manager)."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "pnpm install로 의존성을 설치해요.",
+          "intermediate": "pnpm workspace로 모노레포를 관리합니다.",
+          "advanced": "pnpm의 strict 모드로 유령 의존성(phantom dependencies) 문제를 방지했다.",
+          "master": "pnpm의 content-addressable 저장소로 전체 디스크 사용량을 50% 이상 줄였다."
         }
       },
       "en": {
         "word": "pnpm (Package Manager)",
         "explanation": "A fast and disk-efficient JavaScript package manager. Prevents duplicate installations with symlink-based node_modules.",
         "examples": {
-          "beginner": "I use pnpm (package manager).",
-          "intermediate": "pnpm (Package Manager) is important in programming.",
-          "advanced": "Understanding pnpm (package manager) improves coding skills.",
-          "master": "Deep understanding of pnpm (package manager) is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about pnpm (package manager).",
-              "romanization": "",
-              "translation": "pnpm에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Install dependencies with pnpm install.",
+          "intermediate": "Manage monorepos with pnpm workspace.",
+          "advanced": "Prevented phantom dependencies issues with pnpm's strict mode.",
+          "master": "Reduced overall disk usage by 50%+ with pnpm's content-addressable storage."
         }
       }
     },
@@ -3437,88 +1267,26 @@
     "categoryId": "coding",
     "difficulty": "advanced",
     "frequency": "common",
-    "tags": [
-      "TypeScript",
-      "types",
-      "patterns"
-    ],
+    "tags": ["TypeScript", "types", "patterns"],
     "translations": {
       "ko": {
         "word": "판별된 유니온 (Discriminated Unions)",
         "explanation": "공통 리터럴 속성으로 타입을 구별하는 TypeScript 패턴. 타입 좁히기와 완전성 검사에 유용하다.",
         "examples": {
-          "beginner": "판별된 유니온을/를 사용해요.",
-          "intermediate": "판별된 유니온이/가 프로그래밍에서 중요해요.",
-          "advanced": "판별된 유니온의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "판별된 유니온의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "판별된 유니온에 대해 배우고 있어요.",
-              "romanization": "panbyeoldoen yunione daehae baeugo iseoyo.",
-              "translation": "I'm learning about discriminated unions."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "판별된 유니온으로 여러 상태를 안전하게 다뤄요.",
+          "intermediate": "type: 'success' | 'error' 같은 리터럴 필드로 타입을 구별합니다.",
+          "advanced": "switch 문에서 완전성 검사(exhaustiveness check)를 위해 never 타입을 활용했다.",
+          "master": "API 응답, 상태 머신, 폼 상태 등에 판별된 유니온을 적용해 런타임 안정성을 확보했다."
         }
       },
       "en": {
         "word": "Discriminated Unions",
         "explanation": "A TypeScript pattern that distinguishes types by common literal properties. Useful for type narrowing and exhaustiveness checking.",
         "examples": {
-          "beginner": "I use discriminated unions.",
-          "intermediate": "Discriminated Unions is important in programming.",
-          "advanced": "Understanding discriminated unions improves coding skills.",
-          "master": "Deep understanding of discriminated unions is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about discriminated unions.",
-              "romanization": "",
-              "translation": "판별된 유니온에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Discriminated unions safely handle multiple states.",
+          "intermediate": "Distinguish types with literal fields like type: 'success' | 'error'.",
+          "advanced": "Used never type for exhaustiveness checking in switch statements.",
+          "master": "Secured runtime stability by applying discriminated unions to API responses, state machines, and form states."
         }
       }
     },
@@ -3535,88 +1303,26 @@
     "categoryId": "coding",
     "difficulty": "advanced",
     "frequency": "common",
-    "tags": [
-      "UX",
-      "React",
-      "patterns"
-    ],
+    "tags": ["UX", "React", "patterns"],
     "translations": {
       "ko": {
         "word": "낙관적 UI (Optimistic UI)",
         "explanation": "서버 응답을 기다리지 않고 UI를 먼저 업데이트하는 패턴. 사용자 체감 속도를 크게 향상시킨다.",
         "examples": {
-          "beginner": "낙관적 UI을/를 사용해요.",
-          "intermediate": "낙관적 UI이/가 프로그래밍에서 중요해요.",
-          "advanced": "낙관적 UI의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "낙관적 UI의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "낙관적 UI에 대해 배우고 있어요.",
-              "romanization": "nakgwanjeok uie daehae baeugo iseoyo.",
-              "translation": "I'm learning about optimistic ui."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "낙관적 UI로 버튼 클릭 시 바로 반응해요.",
+          "intermediate": "useOptimistic 훅으로 폼 제출 시 즉각적인 피드백을 제공합니다.",
+          "advanced": "서버 요청 실패 시 롤백 로직을 구현해 데이터 일관성을 유지했다.",
+          "master": "복잡한 상태에서도 낙관적 업데이트와 에러 복구를 우아하게 처리했다."
         }
       },
       "en": {
         "word": "Optimistic UI",
         "explanation": "A pattern that updates UI first without waiting for server response. Greatly improves perceived speed for users.",
         "examples": {
-          "beginner": "I use optimistic ui.",
-          "intermediate": "Optimistic UI is important in programming.",
-          "advanced": "Understanding optimistic ui improves coding skills.",
-          "master": "Deep understanding of optimistic ui is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about optimistic ui.",
-              "romanization": "",
-              "translation": "낙관적 UI에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Optimistic UI responds immediately on button click.",
+          "intermediate": "Provide immediate feedback on form submission with useOptimistic hook.",
+          "advanced": "Maintained data consistency by implementing rollback logic on server request failure.",
+          "master": "Elegantly handled optimistic updates and error recovery even in complex states."
         }
       }
     },
@@ -3633,88 +1339,26 @@
     "categoryId": "coding",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": [
-      "PWA",
-      "manifest",
-      "mobile"
-    ],
+    "tags": ["PWA", "manifest", "mobile"],
     "translations": {
       "ko": {
         "word": "앱 매니페스트 (Web App Manifest)",
         "explanation": "PWA의 메타데이터를 정의하는 JSON 파일. 앱 이름, 아이콘, 테마 색상, 시작 URL 등을 지정한다.",
         "examples": {
-          "beginner": "앱 매니페스트을/를 사용해요.",
-          "intermediate": "앱 매니페스트이/가 프로그래밍에서 중요해요.",
-          "advanced": "앱 매니페스트의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "앱 매니페스트의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "앱 매니페스트에 대해 배우고 있어요.",
-              "romanization": "aep maenipeseuteue daehae baeugo iseoyo.",
-              "translation": "I'm learning about web app manifest."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "매니페스트로 홈 화면 아이콘을 설정해요.",
+          "intermediate": "manifest.json에서 display: standalone으로 앱 모드를 설정합니다.",
+          "advanced": "shortcuts 필드로 홈 화면 아이콘 롱프레스 시 빠른 액션을 제공했다.",
+          "master": "share_target, file_handlers 등 고급 기능을 활용해 네이티브 앱 수준의 통합을 구현했다."
         }
       },
       "en": {
         "word": "Web App Manifest",
         "explanation": "A JSON file that defines PWA metadata. Specifies app name, icons, theme color, start URL, etc.",
         "examples": {
-          "beginner": "I use web app manifest.",
-          "intermediate": "Web App Manifest is important in programming.",
-          "advanced": "Understanding web app manifest improves coding skills.",
-          "master": "Deep understanding of web app manifest is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about web app manifest.",
-              "romanization": "",
-              "translation": "앱 매니페스트에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Manifest sets the home screen icon.",
+          "intermediate": "Set app mode with display: standalone in manifest.json.",
+          "advanced": "Provided quick actions on home screen icon long-press with shortcuts field.",
+          "master": "Implemented native app-level integration using advanced features like share_target and file_handlers."
         }
       }
     },
@@ -3731,88 +1375,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "quality",
-      "maintenance",
-      "patterns"
-    ],
+    "tags": ["quality", "maintenance", "patterns"],
     "translations": {
       "ko": {
         "word": "기술 부채 (Technical Debt)",
         "explanation": "빠른 개발을 위해 품질을 희생한 결과 누적되는 추가 작업. 나중에 갚지 않으면 이자처럼 계속 증가한다.",
         "examples": {
-          "beginner": "기술 부채을/를 사용해요.",
-          "intermediate": "기술 부채이/가 프로그래밍에서 중요해요.",
-          "advanced": "기술 부채의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "기술 부채의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "기술 부채에 대해 배우고 있어요.",
-              "romanization": "gisul buchaee daehae baeugo iseoyo.",
-              "translation": "I'm learning about technical debt."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "기술 부채가 쌓이면 개발 속도가 느려져요.",
+          "intermediate": "TODO 주석과 임시 코드는 모두 기술 부채입니다.",
+          "advanced": "정기적인 리팩토링 스프린트로 기술 부채를 관리했다.",
+          "master": "기술 부채를 정량화하고 비즈니스 우선순위와 균형을 맞춰 상환 계획을 수립했다."
         }
       },
       "en": {
         "word": "Technical Debt",
         "explanation": "Additional work that accumulates from sacrificing quality for speed. Like interest, it keeps growing if not paid off.",
         "examples": {
-          "beginner": "I use technical debt.",
-          "intermediate": "Technical Debt is important in programming.",
-          "advanced": "Understanding technical debt improves coding skills.",
-          "master": "Deep understanding of technical debt is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about technical debt.",
-              "romanization": "",
-              "translation": "기술 부채에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Accumulated technical debt slows development.",
+          "intermediate": "TODO comments and temporary code are all technical debt.",
+          "advanced": "Managed technical debt with regular refactoring sprints.",
+          "master": "Quantified technical debt and established repayment plans balancing with business priorities."
         }
       }
     },
@@ -3829,88 +1411,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "runtime",
-      "tooling",
-      "2025"
-    ],
+    "tags": ["runtime", "tooling", "2025"],
     "translations": {
       "ko": {
         "word": "Bun (올인원 런타임)",
         "explanation": "Zig로 작성된 초고속 JavaScript/TypeScript 런타임. 번들러, 테스트 러너, 패키지 매니저를 내장한다.",
         "examples": {
-          "beginner": "Bun을/를 사용해요.",
-          "intermediate": "Bun이/가 프로그래밍에서 중요해요.",
-          "advanced": "Bun의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "Bun의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "Bun에 대해 배우고 있어요.",
-              "romanization": "bune daehae baeugo iseoyo.",
-              "translation": "I'm learning about bun (all-in-one runtime)."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "Bun으로 Node.js보다 더 빠르게 실행해요.",
+          "intermediate": "bun install로 npm보다 10배 빠르게 의존성을 설치합니다.",
+          "advanced": "Bun의 내장 테스트 러너로 별도 설정 없이 테스트를 실행했다.",
+          "master": "Bun의 native SQLite 바인딩과 내장 서버로 풀스택 앱을 구축했다."
         }
       },
       "en": {
         "word": "Bun (All-in-One Runtime)",
         "explanation": "An ultra-fast JavaScript/TypeScript runtime written in Zig. Includes bundler, test runner, and package manager built-in.",
         "examples": {
-          "beginner": "I use bun (all-in-one runtime).",
-          "intermediate": "Bun (All-in-One Runtime) is important in programming.",
-          "advanced": "Understanding bun (all-in-one runtime) improves coding skills.",
-          "master": "Deep understanding of bun (all-in-one runtime) is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about bun (all-in-one runtime).",
-              "romanization": "",
-              "translation": "Bun에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Bun runs faster than Node.js.",
+          "intermediate": "Install dependencies 10x faster than npm with bun install.",
+          "advanced": "Ran tests without separate configuration using Bun's built-in test runner.",
+          "master": "Built a fullstack app using Bun's native SQLite bindings and built-in server."
         }
       }
     },
@@ -3927,88 +1447,26 @@
     "categoryId": "coding",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": [
-      "CSS",
-      "dark-mode",
-      "modern"
-    ],
+    "tags": ["CSS", "dark-mode", "modern"],
     "translations": {
       "ko": {
         "word": "color-scheme (다크모드)",
         "explanation": "라이트/다크 모드를 선언하는 CSS 속성. 시스템 설정에 따라 기본 색상을 자동으로 조정한다.",
         "examples": {
-          "beginner": "색상 스킴을/를 사용해요.",
-          "intermediate": "색상 스킴이/가 프로그래밍에서 중요해요.",
-          "advanced": "색상 스킴의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "색상 스킴의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "색상 스킴에 대해 배우고 있어요.",
-              "romanization": "saeksang seukime daehae baeugo iseoyo.",
-              "translation": "I'm learning about color-scheme (dark mode)."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "color-scheme으로 다크모드를 지원해요.",
+          "intermediate": ":root { color-scheme: light dark; }로 양쪽 모드를 지원합니다.",
+          "advanced": "color-scheme은 폼 컨트롤, 스크롤바 등 브라우저 UI에도 영향을 준다.",
+          "master": "prefers-color-scheme 미디어 쿼리와 color-scheme을 조합해 완벽한 다크모드를 구현했다."
         }
       },
       "en": {
         "word": "color-scheme (Dark Mode)",
         "explanation": "A CSS property that declares light/dark mode support. Automatically adjusts default colors based on system settings.",
         "examples": {
-          "beginner": "I use color-scheme (dark mode).",
-          "intermediate": "color-scheme (Dark Mode) is important in programming.",
-          "advanced": "Understanding color-scheme (dark mode) improves coding skills.",
-          "master": "Deep understanding of color-scheme (dark mode) is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about color-scheme (dark mode).",
-              "romanization": "",
-              "translation": "색상 스킴에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "color-scheme enables dark mode support.",
+          "intermediate": "Support both modes with :root { color-scheme: light dark; }.",
+          "advanced": "color-scheme affects browser UI like form controls and scrollbars.",
+          "master": "Implemented perfect dark mode by combining prefers-color-scheme media query with color-scheme."
         }
       }
     },
@@ -4025,88 +1483,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "CSS",
-      "color",
-      "modern"
-    ],
+    "tags": ["CSS", "color", "modern"],
     "translations": {
       "ko": {
         "word": "OKLCH 색상 공간",
         "explanation": "인간 지각에 더 가까운 색상 공간. 밝기(Lightness), 채도(Chroma), 색상(Hue)을 직관적으로 조절할 수 있다.",
         "examples": {
-          "beginner": "OKLCH 색상을/를 사용해요.",
-          "intermediate": "OKLCH 색상이/가 프로그래밍에서 중요해요.",
-          "advanced": "OKLCH 색상의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "OKLCH 색상의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "OKLCH 색상에 대해 배우고 있어요.",
-              "romanization": "oklch saeksange daehae baeugo iseoyo.",
-              "translation": "I'm learning about oklch color space."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "OKLCH로 더 자연스러운 색상을 만들어요.",
+          "intermediate": "oklch(0.7 0.15 200)으로 밝기, 채도, 색상을 지정합니다.",
+          "advanced": "OKLCH의 균일한 밝기로 접근성 있는 색상 팔레트를 생성했다.",
+          "master": "color-mix()와 OKLCH를 조합해 동적 색상 테마 시스템을 구축했다."
         }
       },
       "en": {
         "word": "OKLCH Color Space",
         "explanation": "A color space closer to human perception. Allows intuitive adjustment of Lightness, Chroma, and Hue.",
         "examples": {
-          "beginner": "I use oklch color space.",
-          "intermediate": "OKLCH Color Space is important in programming.",
-          "advanced": "Understanding oklch color space improves coding skills.",
-          "master": "Deep understanding of oklch color space is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about oklch color space.",
-              "romanization": "",
-              "translation": "OKLCH 색상에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "OKLCH creates more natural colors.",
+          "intermediate": "Specify lightness, chroma, and hue with oklch(0.7 0.15 200).",
+          "advanced": "Created accessible color palettes with OKLCH's perceptually uniform lightness.",
+          "master": "Built a dynamic color theme system by combining color-mix() with OKLCH."
         }
       }
     },
@@ -4123,88 +1519,26 @@
     "categoryId": "coding",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": [
-      "Web API",
-      "mobile",
-      "sharing"
-    ],
+    "tags": ["Web API", "mobile", "sharing"],
     "translations": {
       "ko": {
         "word": "Web Share API",
         "explanation": "네이티브 공유 UI를 호출하는 웹 API. 설치된 앱으로 콘텐츠를 쉽게 공유할 수 있다.",
         "examples": {
-          "beginner": "웹 공유 API을/를 사용해요.",
-          "intermediate": "웹 공유 API이/가 프로그래밍에서 중요해요.",
-          "advanced": "웹 공유 API의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "웹 공유 API의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "웹 공유 API에 대해 배우고 있어요.",
-              "romanization": "wep gongyu apie daehae baeugo iseoyo.",
-              "translation": "I'm learning about web share api."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "Web Share API로 카카오톡에 공유해요.",
+          "intermediate": "navigator.share({ title, text, url })로 공유 다이얼로그를 엽니다.",
+          "advanced": "navigator.canShare()로 공유 가능 여부를 미리 확인했다.",
+          "master": "files 배열로 이미지와 파일까지 네이티브 공유 UI로 전달했다."
         }
       },
       "en": {
         "word": "Web Share API",
         "explanation": "A Web API that invokes native share UI. Easily share content to installed apps.",
         "examples": {
-          "beginner": "I use web share api.",
-          "intermediate": "Web Share API is important in programming.",
-          "advanced": "Understanding web share api improves coding skills.",
-          "master": "Deep understanding of web share api is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about web share api.",
-              "romanization": "",
-              "translation": "웹 공유 API에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Web Share API shares to KakaoTalk.",
+          "intermediate": "Open share dialog with navigator.share({ title, text, url }).",
+          "advanced": "Pre-checked share capability with navigator.canShare().",
+          "master": "Passed images and files to native share UI using the files array."
         }
       }
     },
@@ -4221,88 +1555,26 @@
     "categoryId": "coding",
     "difficulty": "advanced",
     "frequency": "common",
-    "tags": [
-      "architecture",
-      "hydration",
-      "performance"
-    ],
+    "tags": ["architecture", "hydration", "performance"],
     "translations": {
       "ko": {
         "word": "아일랜드 아키텍처",
         "explanation": "정적 HTML 바다에 상호작용 가능한 컴포넌트 '섬'을 배치하는 패턴. 필요한 부분만 hydrate하여 성능을 극대화한다.",
         "examples": {
-          "beginner": "아일랜드 아키텍처을/를 사용해요.",
-          "intermediate": "아일랜드 아키텍처이/가 프로그래밍에서 중요해요.",
-          "advanced": "아일랜드 아키텍처의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "아일랜드 아키텍처의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "아일랜드 아키텍처에 대해 배우고 있어요.",
-              "romanization": "ailraendeu akitekcheoe daehae baeugo iseoyo.",
-              "translation": "I'm learning about islands architecture."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "아일랜드 아키텍처로 필요한 부분만 인터랙티브해요.",
+          "intermediate": "Astro는 아일랜드 아키텍처를 기본으로 사용합니다.",
+          "advanced": "client:visible로 뷰포트에 들어올 때만 hydrate하도록 설정했다.",
+          "master": "정적 콘텐츠는 0 JS, 인터랙티브 섬만 필요한 최소 JS를 로드해 TTI를 최적화했다."
         }
       },
       "en": {
         "word": "Islands Architecture",
         "explanation": "A pattern that places interactive component 'islands' in a sea of static HTML. Maximizes performance by hydrating only necessary parts.",
         "examples": {
-          "beginner": "I use islands architecture.",
-          "intermediate": "Islands Architecture is important in programming.",
-          "advanced": "Understanding islands architecture improves coding skills.",
-          "master": "Deep understanding of islands architecture is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about islands architecture.",
-              "romanization": "",
-              "translation": "아일랜드 아키텍처에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Islands architecture makes only necessary parts interactive.",
+          "intermediate": "Astro uses islands architecture by default.",
+          "advanced": "Set to hydrate only when entering viewport with client:visible.",
+          "master": "Optimized TTI by loading 0 JS for static content, minimal JS only for interactive islands."
         }
       }
     },
@@ -4319,88 +1591,26 @@
     "categoryId": "coding",
     "difficulty": "advanced",
     "frequency": "common",
-    "tags": [
-      "hydration",
-      "performance",
-      "SSR"
-    ],
+    "tags": ["hydration", "performance", "SSR"],
     "translations": {
       "ko": {
         "word": "부분 하이드레이션",
         "explanation": "전체 페이지가 아닌 필요한 컴포넌트만 하이드레이션하는 기법. JavaScript 번들 크기와 TTI를 줄인다.",
         "examples": {
-          "beginner": "부분 하이드레이션을/를 사용해요.",
-          "intermediate": "부분 하이드레이션이/가 프로그래밍에서 중요해요.",
-          "advanced": "부분 하이드레이션의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "부분 하이드레이션의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "부분 하이드레이션에 대해 배우고 있어요.",
-              "romanization": "bubun haideureisyeone daehae baeugo iseoyo.",
-              "translation": "I'm learning about partial hydration."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "부분 하이드레이션으로 빠르게 상호작용할 수 있어요.",
+          "intermediate": "정적 헤더/푸터는 하이드레이션을 건너뛰고 동적 부분만 처리합니다.",
+          "advanced": "lazy hydration으로 스크롤 시 보이는 컴포넌트만 하이드레이션했다.",
+          "master": "selective hydration과 streaming SSR을 조합해 FCP와 TTI를 동시에 최적화했다."
         }
       },
       "en": {
         "word": "Partial Hydration",
         "explanation": "A technique that hydrates only necessary components, not the entire page. Reduces JavaScript bundle size and TTI.",
         "examples": {
-          "beginner": "I use partial hydration.",
-          "intermediate": "Partial Hydration is important in programming.",
-          "advanced": "Understanding partial hydration improves coding skills.",
-          "master": "Deep understanding of partial hydration is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about partial hydration.",
-              "romanization": "",
-              "translation": "부분 하이드레이션에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Partial hydration enables quick interaction.",
+          "intermediate": "Skip hydration for static header/footer and process only dynamic parts.",
+          "advanced": "Hydrated only visible components on scroll with lazy hydration.",
+          "master": "Optimized both FCP and TTI by combining selective hydration with streaming SSR."
         }
       }
     },
@@ -4417,88 +1627,26 @@
     "categoryId": "coding",
     "difficulty": "advanced",
     "frequency": "common",
-    "tags": [
-      "serverless",
-      "edge",
-      "CDN"
-    ],
+    "tags": ["serverless", "edge", "CDN"],
     "translations": {
       "ko": {
         "word": "엣지 함수 (Edge Functions)",
         "explanation": "사용자와 가까운 엣지 서버에서 실행되는 서버리스 함수. 지연 시간을 최소화하고 개인화된 응답을 제공한다.",
         "examples": {
-          "beginner": "엣지 함수을/를 사용해요.",
-          "intermediate": "엣지 함수이/가 프로그래밍에서 중요해요.",
-          "advanced": "엣지 함수의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "엣지 함수의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "엣지 함수에 대해 배우고 있어요.",
-              "romanization": "esji hamsue daehae baeugo iseoyo.",
-              "translation": "I'm learning about edge functions."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "엣지 함수로 빠른 응답을 받아요.",
+          "intermediate": "Cloudflare Workers, Vercel Edge Functions 등이 엣지 함수 플랫폼입니다.",
+          "advanced": "geo-location 기반으로 엣지에서 콘텐츠를 개인화했다.",
+          "master": "엣지에서 A/B 테스트와 feature flag를 실행해 오리진 부하를 줄였다."
         }
       },
       "en": {
         "word": "Edge Functions",
         "explanation": "Serverless functions that run on edge servers close to users. Minimizes latency and provides personalized responses.",
         "examples": {
-          "beginner": "I use edge functions.",
-          "intermediate": "Edge Functions is important in programming.",
-          "advanced": "Understanding edge functions improves coding skills.",
-          "master": "Deep understanding of edge functions is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about edge functions.",
-              "romanization": "",
-              "translation": "엣지 함수에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Edge functions provide fast responses.",
+          "intermediate": "Cloudflare Workers and Vercel Edge Functions are edge function platforms.",
+          "advanced": "Personalized content at the edge based on geo-location.",
+          "master": "Reduced origin load by running A/B tests and feature flags at the edge."
         }
       }
     },
@@ -4515,88 +1663,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "TypeScript",
-      "types",
-      "narrowing"
-    ],
+    "tags": ["TypeScript", "types", "narrowing"],
     "translations": {
       "ko": {
         "word": "타입 가드 (Type Guards)",
         "explanation": "런타임 검사를 통해 특정 스코프에서 타입을 좁히는 기법. typeof, instanceof, 사용자 정의 가드 함수 등을 사용한다.",
         "examples": {
-          "beginner": "타입 가드을/를 사용해요.",
-          "intermediate": "타입 가드이/가 프로그래밍에서 중요해요.",
-          "advanced": "타입 가드의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "타입 가드의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "타입 가드에 대해 배우고 있어요.",
-              "romanization": "taip gadeue daehae baeugo iseoyo.",
-              "translation": "I'm learning about type guards."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "타입 가드로 타입을 좁혀요.",
+          "intermediate": "typeof x === 'string'으로 문자열 타입을 확인합니다.",
+          "advanced": "is 키워드로 커스텀 타입 가드 함수를 정의했다: function isUser(x): x is User.",
+          "master": "assertion functions (asserts x is User)로 throw와 함께 타입을 좁혔다."
         }
       },
       "en": {
         "word": "Type Guards",
         "explanation": "A technique to narrow types in a specific scope through runtime checks. Uses typeof, instanceof, custom guard functions, etc.",
         "examples": {
-          "beginner": "I use type guards.",
-          "intermediate": "Type Guards is important in programming.",
-          "advanced": "Understanding type guards improves coding skills.",
-          "master": "Deep understanding of type guards is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about type guards.",
-              "romanization": "",
-              "translation": "타입 가드에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Type guards narrow down types.",
+          "intermediate": "Check string type with typeof x === 'string'.",
+          "advanced": "Defined custom type guard with is keyword: function isUser(x): x is User.",
+          "master": "Narrowed types along with throws using assertion functions (asserts x is User)."
         }
       }
     },
@@ -4613,88 +1699,26 @@
     "categoryId": "coding",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": [
-      "TypeScript",
-      "types",
-      "safety"
-    ],
+    "tags": ["TypeScript", "types", "safety"],
     "translations": {
       "ko": {
         "word": "strictNullChecks",
         "explanation": "null과 undefined를 다른 타입과 구분하는 TypeScript 컴파일러 옵션. null 관련 런타임 오류를 방지한다.",
         "examples": {
-          "beginner": "null 엄격 검사을/를 사용해요.",
-          "intermediate": "null 엄격 검사이/가 프로그래밍에서 중요해요.",
-          "advanced": "null 엄격 검사의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "null 엄격 검사의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "null 엄격 검사에 대해 배우고 있어요.",
-              "romanization": "null eomgyeok geomsae daehae baeugo iseoyo.",
-              "translation": "I'm learning about strictnullchecks."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "strictNullChecks로 null 오류를 미리 잡아요.",
+          "intermediate": "tsconfig.json에서 strictNullChecks: true를 설정합니다.",
+          "advanced": "Optional chaining(?.)과 nullish coalescing(??)로 null을 안전하게 처리했다.",
+          "master": "strict: true로 strictNullChecks를 포함한 모든 엄격 옵션을 활성화했다."
         }
       },
       "en": {
         "word": "strictNullChecks",
         "explanation": "A TypeScript compiler option that distinguishes null and undefined from other types. Prevents null-related runtime errors.",
         "examples": {
-          "beginner": "I use strictnullchecks.",
-          "intermediate": "strictNullChecks is important in programming.",
-          "advanced": "Understanding strictnullchecks improves coding skills.",
-          "master": "Deep understanding of strictnullchecks is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about strictnullchecks.",
-              "romanization": "",
-              "translation": "null 엄격 검사에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "strictNullChecks catches null errors early.",
+          "intermediate": "Set strictNullChecks: true in tsconfig.json.",
+          "advanced": "Safely handled null with optional chaining(?.) and nullish coalescing(??).",
+          "master": "Enabled all strict options including strictNullChecks with strict: true."
         }
       }
     },
@@ -4711,88 +1735,26 @@
     "categoryId": "coding",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": [
-      "HTML",
-      "accessibility",
-      "SEO"
-    ],
+    "tags": ["HTML", "accessibility", "SEO"],
     "translations": {
       "ko": {
         "word": "시맨틱 HTML",
         "explanation": "의미를 전달하는 HTML 태그를 사용하는 것. <div> 대신 <nav>, <main>, <article> 등을 사용해 접근성과 SEO를 개선한다.",
         "examples": {
-          "beginner": "시맨틱 HTML을/를 사용해요.",
-          "intermediate": "시맨틱 HTML이/가 프로그래밍에서 중요해요.",
-          "advanced": "시맨틱 HTML의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "시맨틱 HTML의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "시맨틱 HTML에 대해 배우고 있어요.",
-              "romanization": "simaentik htmle daehae baeugo iseoyo.",
-              "translation": "I'm learning about semantic html."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "시맨틱 태그로 의미 있는 마크업을 해요.",
+          "intermediate": "<header>, <main>, <footer>로 페이지 구조를 명확히 합니다.",
+          "advanced": "<article>과 <section>을 적절히 사용해 문서 아웃라인을 구성했다.",
+          "master": "시맨틱 HTML과 ARIA 랜드마크를 조합해 스크린 리더 탐색을 최적화했다."
         }
       },
       "en": {
         "word": "Semantic HTML",
         "explanation": "Using HTML tags that convey meaning. Using <nav>, <main>, <article> instead of <div> improves accessibility and SEO.",
         "examples": {
-          "beginner": "I use semantic html.",
-          "intermediate": "Semantic HTML is important in programming.",
-          "advanced": "Understanding semantic html improves coding skills.",
-          "master": "Deep understanding of semantic html is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about semantic html.",
-              "romanization": "",
-              "translation": "시맨틱 HTML에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Semantic tags create meaningful markup.",
+          "intermediate": "Clarify page structure with <header>, <main>, <footer>.",
+          "advanced": "Constructed document outline by properly using <article> and <section>.",
+          "master": "Optimized screen reader navigation by combining semantic HTML with ARIA landmarks."
         }
       }
     },
@@ -4809,88 +1771,26 @@
     "categoryId": "coding",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": [
-      "accessibility",
-      "UX",
-      "keyboard"
-    ],
+    "tags": ["accessibility", "UX", "keyboard"],
     "translations": {
       "ko": {
         "word": "포커스 관리",
         "explanation": "키보드 탐색 시 포커스를 적절히 이동시키는 것. 모달, SPA 라우팅 등에서 중요하다.",
         "examples": {
-          "beginner": "포커스 관리을/를 사용해요.",
-          "intermediate": "포커스 관리이/가 프로그래밍에서 중요해요.",
-          "advanced": "포커스 관리의 개념을 이해하면 코딩 실력이 향상됩니다.",
-          "master": "포커스 관리의 심층적 이해는 효율적인 소프트웨어 개발의 핵심입니다."
-        },
-        "dialogue": {
-          "context": "프로그래밍을 배우며",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "요즘 뭐 공부해요?",
-              "romanization": "yojeum mwo gongbuhaeyo?",
-              "translation": "What are you studying these days?"
-            },
-            {
-              "speaker": "B",
-              "text": "포커스 관리에 대해 배우고 있어요.",
-              "romanization": "pokeoseu gwanrie daehae baeugo iseoyo.",
-              "translation": "I'm learning about focus management."
-            },
-            {
-              "speaker": "A",
-              "text": "어때요?",
-              "romanization": "eottaeyo?",
-              "translation": "How is it?"
-            },
-            {
-              "speaker": "B",
-              "text": "어렵지만 재미있어요.",
-              "romanization": "eoryeopjiman jaemiiseoyo.",
-              "translation": "Difficult but fun."
-            }
-          ]
+          "beginner": "포커스 관리로 키보드 사용자도 쉽게 탐색해요.",
+          "intermediate": "모달이 열리면 포커스를 모달 안으로 가둡니다 (focus trap).",
+          "advanced": "SPA 라우트 전환 시 새 페이지의 주요 콘텐츠로 포커스를 이동시켰다.",
+          "master": "focus-visible로 마우스와 키보드 포커스 스타일을 구분하여 적용했다."
         }
       },
       "en": {
         "word": "Focus Management",
         "explanation": "Properly moving focus during keyboard navigation. Important in modals, SPA routing, etc.",
         "examples": {
-          "beginner": "I use focus management.",
-          "intermediate": "Focus Management is important in programming.",
-          "advanced": "Understanding focus management improves coding skills.",
-          "master": "Deep understanding of focus management is key to efficient software development."
-        },
-        "dialogue": {
-          "context": "Learning programming",
-          "dialogue": [
-            {
-              "speaker": "A",
-              "text": "What are you studying these days?",
-              "romanization": "",
-              "translation": "요즘 뭐 공부해요?"
-            },
-            {
-              "speaker": "B",
-              "text": "I'm learning about focus management.",
-              "romanization": "",
-              "translation": "포커스 관리에 대해 배우고 있어요."
-            },
-            {
-              "speaker": "A",
-              "text": "How is it?",
-              "romanization": "",
-              "translation": "어때요?"
-            },
-            {
-              "speaker": "B",
-              "text": "Difficult but fun.",
-              "romanization": "",
-              "translation": "어렵지만 재미있어요."
-            }
-          ]
+          "beginner": "Focus management helps keyboard users navigate easily.",
+          "intermediate": "Trap focus inside modal when it opens (focus trap).",
+          "advanced": "Moved focus to main content of new page on SPA route transition.",
+          "master": "Distinguished mouse and keyboard focus styles using focus-visible."
         }
       }
     },
