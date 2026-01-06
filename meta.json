@@ -1,9 +1,9 @@
 {
   "context": {
-    "entries": 1900,
+    "entries": 16836,
     "categories": 24,
     "conversations": 53,
-    "ssgRoutes": 3874
+    "ssgRoutes": 33746
   },
   "roots": {
     "concepts": 438,
@@ -15,6 +15,6 @@
     "webApis": 56,
     "ssgRoutes": 8
   },
-  "totalSsgRoutes": 4802,
-  "generatedAt": "2026-01-06T07:56:01.734Z"
+  "totalSsgRoutes": 34674,
+  "generatedAt": "2026-01-06T12:04:31.919Z"
 }

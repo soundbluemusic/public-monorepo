@@ -16,7 +16,7 @@ import { useI18n } from '@/i18n';
 export async function loader({ params }: { params: { categoryId: string } }) {
   const { getEntriesByCategory } = await import('@/data/entries');
   const category = getCategoryById(params.categoryId);
-  const entries = getEntriesByCategory(params.categoryId);
+  const entries = await getEntriesByCategory(params.categoryId);
   return { category: category || null, entries };
 }
 

@@ -17,9 +17,9 @@
         "word": "좋다",
         "explanation": "마음에 들다. 훌륭하다. 편안하다.",
         "examples": {
-          "beginner": "이것은 좋다요.",
-          "intermediate": "정말 좋다네요.",
-          "advanced": "좋다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 좋아요.",
+          "intermediate": "정말 좋네요.",
+          "advanced": "좋다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "좋다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -33,7 +33,7 @@
             },
             {
               "speaker": "B",
-              "text": "좋다요.",
+              "text": "좋아요",
               "romanization": "jotdayo.",
               "translation": "It's good / nice."
             },
@@ -74,7 +74,7 @@
               "speaker": "B",
               "text": "It's good / nice.",
               "romanization": "",
-              "translation": "좋다요."
+              "translation": "좋아요"
             },
             {
               "speaker": "A",
@@ -115,9 +115,9 @@
         "word": "나쁘다",
         "explanation": "좋지 않다. 해롭다. 잘못되다.",
         "examples": {
-          "beginner": "이것은 나쁘다요.",
-          "intermediate": "정말 나쁘다네요.",
-          "advanced": "나쁘다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 나빠요.",
+          "intermediate": "정말 나빠네요.",
+          "advanced": "나쁘다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "나쁘다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -131,7 +131,7 @@
             },
             {
               "speaker": "B",
-              "text": "나쁘다요.",
+              "text": "나빠요",
               "romanization": "nappeudayo.",
               "translation": "It's bad."
             },
@@ -172,7 +172,7 @@
               "speaker": "B",
               "text": "It's bad.",
               "romanization": "",
-              "translation": "나쁘다요."
+              "translation": "나빠요"
             },
             {
               "speaker": "A",
@@ -213,9 +213,9 @@
         "word": "크다",
         "explanation": "크기가 일반적인 것보다 위이다. 소리가 높다.",
         "examples": {
-          "beginner": "이것은 크다요.",
-          "intermediate": "정말 크다네요.",
-          "advanced": "크다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 커요.",
+          "intermediate": "정말 커네요.",
+          "advanced": "크다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "크다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -229,7 +229,7 @@
             },
             {
               "speaker": "B",
-              "text": "크다요.",
+              "text": "커요",
               "romanization": "keudayo.",
               "translation": "It's big / large / loud."
             },
@@ -270,7 +270,7 @@
               "speaker": "B",
               "text": "It's big / large / loud.",
               "romanization": "",
-              "translation": "크다요."
+              "translation": "커요"
             },
             {
               "speaker": "A",
@@ -311,9 +311,9 @@
         "word": "작다",
         "explanation": "크기가 일반적인 것보다 아래이다.",
         "examples": {
-          "beginner": "이것은 작다요.",
-          "intermediate": "정말 작다네요.",
-          "advanced": "작다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 작아요.",
+          "intermediate": "정말 작네요.",
+          "advanced": "작다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "작다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -327,7 +327,7 @@
             },
             {
               "speaker": "B",
-              "text": "작다요.",
+              "text": "작아요",
               "romanization": "jakdayo.",
               "translation": "It's small / little."
             },
@@ -368,7 +368,7 @@
               "speaker": "B",
               "text": "It's small / little.",
               "romanization": "",
-              "translation": "작다요."
+              "translation": "작아요"
             },
             {
               "speaker": "A",
@@ -409,9 +409,9 @@
         "word": "많다",
         "explanation": "수량이나 정도가 크다.",
         "examples": {
-          "beginner": "이것은 많다요.",
-          "intermediate": "정말 많다네요.",
-          "advanced": "많다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 많아요.",
+          "intermediate": "정말 많네요.",
+          "advanced": "많다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "많다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -425,7 +425,7 @@
             },
             {
               "speaker": "B",
-              "text": "많다요.",
+              "text": "많아요",
               "romanization": "mandayo.",
               "translation": "It's many / much / a lot."
             },
@@ -466,7 +466,7 @@
               "speaker": "B",
               "text": "It's many / much / a lot.",
               "romanization": "",
-              "translation": "많다요."
+              "translation": "많아요"
             },
             {
               "speaker": "A",
@@ -507,9 +507,9 @@
         "word": "적다",
         "explanation": "수량이나 정도가 작다.",
         "examples": {
-          "beginner": "이것은 적다요.",
-          "intermediate": "정말 적다네요.",
-          "advanced": "적다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 적어요.",
+          "intermediate": "정말 적네요.",
+          "advanced": "적다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "적다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -523,7 +523,7 @@
             },
             {
               "speaker": "B",
-              "text": "적다요.",
+              "text": "적어요",
               "romanization": "jeokdayo.",
               "translation": "It's few / little."
             },
@@ -564,7 +564,7 @@
               "speaker": "B",
               "text": "It's few / little.",
               "romanization": "",
-              "translation": "적다요."
+              "translation": "적어요"
             },
             {
               "speaker": "A",
@@ -605,9 +605,9 @@
         "word": "길다",
         "explanation": "한쪽 끝에서 다른 쪽 끝까지의 거리가 멀다.",
         "examples": {
-          "beginner": "이것은 길다요.",
-          "intermediate": "정말 길다네요.",
-          "advanced": "길다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 길어요.",
+          "intermediate": "정말 길네요.",
+          "advanced": "길다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "길다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -621,7 +621,7 @@
             },
             {
               "speaker": "B",
-              "text": "길다요.",
+              "text": "길어요",
               "romanization": "gildayo.",
               "translation": "It's long."
             },
@@ -662,7 +662,7 @@
               "speaker": "B",
               "text": "It's long.",
               "romanization": "",
-              "translation": "길다요."
+              "translation": "길어요"
             },
             {
               "speaker": "A",
@@ -703,9 +703,9 @@
         "word": "짧다",
         "explanation": "한쪽 끝에서 다른 쪽 끝까지의 거리가 가깝다.",
         "examples": {
-          "beginner": "이것은 짧다요.",
-          "intermediate": "정말 짧다네요.",
-          "advanced": "짧다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 짧아요.",
+          "intermediate": "정말 짧네요.",
+          "advanced": "짧다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "짧다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -719,7 +719,7 @@
             },
             {
               "speaker": "B",
-              "text": "짧다요.",
+              "text": "짧아요",
               "romanization": "jjaldayo.",
               "translation": "It's short."
             },
@@ -760,7 +760,7 @@
               "speaker": "B",
               "text": "It's short.",
               "romanization": "",
-              "translation": "짧다요."
+              "translation": "짧아요"
             },
             {
               "speaker": "A",
@@ -801,9 +801,9 @@
         "word": "높다",
         "explanation": "아래에서 위까지의 거리가 멀다. 수준이나 정도가 위이다.",
         "examples": {
-          "beginner": "이것은 높다요.",
-          "intermediate": "정말 높다네요.",
-          "advanced": "높다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 높아요.",
+          "intermediate": "정말 높네요.",
+          "advanced": "높다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "높다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -817,7 +817,7 @@
             },
             {
               "speaker": "B",
-              "text": "높다요.",
+              "text": "높아요",
               "romanization": "nopdayo.",
               "translation": "It's high / tall."
             },
@@ -858,7 +858,7 @@
               "speaker": "B",
               "text": "It's high / tall.",
               "romanization": "",
-              "translation": "높다요."
+              "translation": "높아요"
             },
             {
               "speaker": "A",
@@ -899,9 +899,9 @@
         "word": "낮다",
         "explanation": "아래에서 위까지의 거리가 가깝다. 수준이나 정도가 아래이다.",
         "examples": {
-          "beginner": "이것은 낮다요.",
-          "intermediate": "정말 낮다네요.",
-          "advanced": "낮다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 낮아요.",
+          "intermediate": "정말 낮네요.",
+          "advanced": "낮다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "낮다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -915,7 +915,7 @@
             },
             {
               "speaker": "B",
-              "text": "낮다요.",
+              "text": "낮아요",
               "romanization": "natdayo.",
               "translation": "It's low / short (height)."
             },
@@ -956,7 +956,7 @@
               "speaker": "B",
               "text": "It's low / short (height).",
               "romanization": "",
-              "translation": "낮다요."
+              "translation": "낮아요"
             },
             {
               "speaker": "A",
@@ -997,9 +997,9 @@
         "word": "빠르다",
         "explanation": "속도가 높다. 시간이 적게 걸린다.",
         "examples": {
-          "beginner": "이것은 빠르다요.",
-          "intermediate": "정말 빠르다네요.",
-          "advanced": "빠르다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 빨라요.",
+          "intermediate": "정말 빨라네요.",
+          "advanced": "빠르다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "빠르다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -1013,7 +1013,7 @@
             },
             {
               "speaker": "B",
-              "text": "빠르다요.",
+              "text": "빨라요",
               "romanization": "ppareudayo.",
               "translation": "It's fast / quick."
             },
@@ -1054,7 +1054,7 @@
               "speaker": "B",
               "text": "It's fast / quick.",
               "romanization": "",
-              "translation": "빠르다요."
+              "translation": "빨라요"
             },
             {
               "speaker": "A",
@@ -1095,9 +1095,9 @@
         "word": "느리다",
         "explanation": "속도가 낮다. 시간이 많이 걸린다.",
         "examples": {
-          "beginner": "이것은 느리다요.",
-          "intermediate": "정말 느리다네요.",
-          "advanced": "느리다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 느려요.",
+          "intermediate": "정말 느려네요.",
+          "advanced": "느리다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "느리다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -1111,7 +1111,7 @@
             },
             {
               "speaker": "B",
-              "text": "느리다요.",
+              "text": "느려요",
               "romanization": "neuridayo.",
               "translation": "It's slow."
             },
@@ -1152,7 +1152,7 @@
               "speaker": "B",
               "text": "It's slow.",
               "romanization": "",
-              "translation": "느리다요."
+              "translation": "느려요"
             },
             {
               "speaker": "A",
@@ -1193,9 +1193,9 @@
         "word": "무겁다",
         "explanation": "무게가 많이 나간다.",
         "examples": {
-          "beginner": "이것은 무겁다요.",
-          "intermediate": "정말 무겁다네요.",
-          "advanced": "무겁다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 무거워요.",
+          "intermediate": "정말 무거워네요.",
+          "advanced": "무겁다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "무겁다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -1209,7 +1209,7 @@
             },
             {
               "speaker": "B",
-              "text": "무겁다요.",
+              "text": "무거워요",
               "romanization": "mugeopdayo.",
               "translation": "It's heavy."
             },
@@ -1250,7 +1250,7 @@
               "speaker": "B",
               "text": "It's heavy.",
               "romanization": "",
-              "translation": "무겁다요."
+              "translation": "무거워요"
             },
             {
               "speaker": "A",
@@ -1291,9 +1291,9 @@
         "word": "가볍다",
         "explanation": "무게가 적게 나간다.",
         "examples": {
-          "beginner": "이것은 가볍다요.",
-          "intermediate": "정말 가볍다네요.",
-          "advanced": "가볍다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 가벼워요.",
+          "intermediate": "정말 가벼워네요.",
+          "advanced": "가볍다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "가볍다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -1307,7 +1307,7 @@
             },
             {
               "speaker": "B",
-              "text": "가볍다요.",
+              "text": "가벼워요",
               "romanization": "gabyeopdayo.",
               "translation": "It's light."
             },
@@ -1348,7 +1348,7 @@
               "speaker": "B",
               "text": "It's light.",
               "romanization": "",
-              "translation": "가볍다요."
+              "translation": "가벼워요"
             },
             {
               "speaker": "A",
@@ -1389,9 +1389,9 @@
         "word": "예쁘다",
         "explanation": "보기에 아름답다. 귀엽다.",
         "examples": {
-          "beginner": "이것은 예쁘다요.",
-          "intermediate": "정말 예쁘다네요.",
-          "advanced": "예쁘다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 예뻐요.",
+          "intermediate": "정말 예뻐네요.",
+          "advanced": "예쁘다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "예쁘다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -1405,7 +1405,7 @@
             },
             {
               "speaker": "B",
-              "text": "예쁘다요.",
+              "text": "예뻐요",
               "romanization": "yeppeudayo.",
               "translation": "It's pretty / beautiful."
             },
@@ -1446,7 +1446,7 @@
               "speaker": "B",
               "text": "It's pretty / beautiful.",
               "romanization": "",
-              "translation": "예쁘다요."
+              "translation": "예뻐요"
             },
             {
               "speaker": "A",
@@ -1487,9 +1487,9 @@
         "word": "잘생기다",
         "explanation": "남자의 외모가 좋다.",
         "examples": {
-          "beginner": "이것은 잘생기다요.",
-          "intermediate": "정말 잘생기다네요.",
-          "advanced": "잘생기다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 잘생겼어요.",
+          "intermediate": "정말 잘생겼네요.",
+          "advanced": "잘생기다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "잘생기다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -1503,7 +1503,7 @@
             },
             {
               "speaker": "B",
-              "text": "잘생기다요.",
+              "text": "잘생겼어요",
               "romanization": "jalsaenggidayo.",
               "translation": "It's handsome / good-looking."
             },
@@ -1544,7 +1544,7 @@
               "speaker": "B",
               "text": "It's handsome / good-looking.",
               "romanization": "",
-              "translation": "잘생기다요."
+              "translation": "잘생겼어요"
             },
             {
               "speaker": "A",
@@ -1585,9 +1585,9 @@
         "word": "뜨겁다",
         "explanation": "온도가 매우 높다.",
         "examples": {
-          "beginner": "이것은 뜨겁다요.",
-          "intermediate": "정말 뜨겁다네요.",
-          "advanced": "뜨겁다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 뜨거워요.",
+          "intermediate": "정말 뜨거워네요.",
+          "advanced": "뜨겁다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "뜨겁다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -1601,7 +1601,7 @@
             },
             {
               "speaker": "B",
-              "text": "뜨겁다요.",
+              "text": "뜨거워요",
               "romanization": "tteugeopdayo.",
               "translation": "It's hot (to touch)."
             },
@@ -1642,7 +1642,7 @@
               "speaker": "B",
               "text": "It's hot (to touch).",
               "romanization": "",
-              "translation": "뜨겁다요."
+              "translation": "뜨거워요"
             },
             {
               "speaker": "A",
@@ -1683,9 +1683,9 @@
         "word": "차갑다",
         "explanation": "온도가 매우 낮다.",
         "examples": {
-          "beginner": "이것은 차갑다요.",
-          "intermediate": "정말 차갑다네요.",
-          "advanced": "차갑다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 차가워요.",
+          "intermediate": "정말 차가워네요.",
+          "advanced": "차갑다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "차갑다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -1699,7 +1699,7 @@
             },
             {
               "speaker": "B",
-              "text": "차갑다요.",
+              "text": "차가워요",
               "romanization": "chagapdayo.",
               "translation": "It's cold (to touch)."
             },
@@ -1740,7 +1740,7 @@
               "speaker": "B",
               "text": "It's cold (to touch).",
               "romanization": "",
-              "translation": "차갑다요."
+              "translation": "차가워요"
             },
             {
               "speaker": "A",
@@ -1781,9 +1781,9 @@
         "word": "따뜻하다",
         "explanation": "적당히 온도가 높다. 마음이 포근하다.",
         "examples": {
-          "beginner": "이것은 따뜻하다요.",
-          "intermediate": "정말 따뜻하다네요.",
-          "advanced": "따뜻하다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 따뜻해요.",
+          "intermediate": "정말 따뜻하네요.",
+          "advanced": "따뜻하다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "따뜻하다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -1797,7 +1797,7 @@
             },
             {
               "speaker": "B",
-              "text": "따뜻하다요.",
+              "text": "따뜻해요",
               "romanization": "ttatteushadayo.",
               "translation": "It's warm."
             },
@@ -1838,7 +1838,7 @@
               "speaker": "B",
               "text": "It's warm.",
               "romanization": "",
-              "translation": "따뜻하다요."
+              "translation": "따뜻해요"
             },
             {
               "speaker": "A",
@@ -1879,9 +1879,9 @@
         "word": "시원하다",
         "explanation": "적당히 온도가 낮아 상쾌하다. 막힌 것이 뚫려 후련하다.",
         "examples": {
-          "beginner": "이것은 시원하다요.",
-          "intermediate": "정말 시원하다네요.",
-          "advanced": "시원하다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 시원해요.",
+          "intermediate": "정말 시원하네요.",
+          "advanced": "시원하다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "시원하다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -1895,7 +1895,7 @@
             },
             {
               "speaker": "B",
-              "text": "시원하다요.",
+              "text": "시원해요",
               "romanization": "siwonhadayo.",
               "translation": "It's cool / refreshing."
             },
@@ -1936,7 +1936,7 @@
               "speaker": "B",
               "text": "It's cool / refreshing.",
               "romanization": "",
-              "translation": "시원하다요."
+              "translation": "시원해요"
             },
             {
               "speaker": "A",
@@ -1977,9 +1977,9 @@
         "word": "맛있다",
         "explanation": "음식의 맛이 좋다.",
         "examples": {
-          "beginner": "이것은 맛있다요.",
-          "intermediate": "정말 맛있다네요.",
-          "advanced": "맛있다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 맛있어요.",
+          "intermediate": "정말 맛있네요.",
+          "advanced": "맛있다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "맛있다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -1993,7 +1993,7 @@
             },
             {
               "speaker": "B",
-              "text": "맛있다요.",
+              "text": "맛있어요",
               "romanization": "masisdayo.",
               "translation": "It's delicious / tasty."
             },
@@ -2034,7 +2034,7 @@
               "speaker": "B",
               "text": "It's delicious / tasty.",
               "romanization": "",
-              "translation": "맛있다요."
+              "translation": "맛있어요"
             },
             {
               "speaker": "A",
@@ -2075,9 +2075,9 @@
         "word": "맛없다",
         "explanation": "음식의 맛이 좋지 않다.",
         "examples": {
-          "beginner": "이것은 맛없다요.",
-          "intermediate": "정말 맛없다네요.",
-          "advanced": "맛없다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 맛없어요.",
+          "intermediate": "정말 맛없네요.",
+          "advanced": "맛없다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "맛없다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -2091,7 +2091,7 @@
             },
             {
               "speaker": "B",
-              "text": "맛없다요.",
+              "text": "맛없어요",
               "romanization": "maseopdayo.",
               "translation": "It's not delicious / tasteless."
             },
@@ -2132,7 +2132,7 @@
               "speaker": "B",
               "text": "It's not delicious / tasteless.",
               "romanization": "",
-              "translation": "맛없다요."
+              "translation": "맛없어요"
             },
             {
               "speaker": "A",
@@ -2173,9 +2173,9 @@
         "word": "짜다",
         "explanation": "소금 맛이 강하다.",
         "examples": {
-          "beginner": "이것은 짜다요.",
-          "intermediate": "정말 짜다네요.",
-          "advanced": "짜다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 짜요.",
+          "intermediate": "정말 짜네요.",
+          "advanced": "짜다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "짜다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -2189,7 +2189,7 @@
             },
             {
               "speaker": "B",
-              "text": "짜다요.",
+              "text": "짜요",
               "romanization": "jjadayo.",
               "translation": "It's salty."
             },
@@ -2230,7 +2230,7 @@
               "speaker": "B",
               "text": "It's salty.",
               "romanization": "",
-              "translation": "짜다요."
+              "translation": "짜요"
             },
             {
               "speaker": "A",
@@ -2271,9 +2271,9 @@
         "word": "달다",
         "explanation": "설탕 맛이 강하다.",
         "examples": {
-          "beginner": "이것은 달다요.",
-          "intermediate": "정말 달다네요.",
-          "advanced": "달다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 달아요.",
+          "intermediate": "정말 달네요.",
+          "advanced": "달다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "달다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -2287,7 +2287,7 @@
             },
             {
               "speaker": "B",
-              "text": "달다요.",
+              "text": "달아요",
               "romanization": "daldayo.",
               "translation": "It's sweet."
             },
@@ -2328,7 +2328,7 @@
               "speaker": "B",
               "text": "It's sweet.",
               "romanization": "",
-              "translation": "달다요."
+              "translation": "달아요"
             },
             {
               "speaker": "A",
@@ -2369,9 +2369,9 @@
         "word": "맵다",
         "explanation": "고추 맛이 강하다. 혀가 아프다.",
         "examples": {
-          "beginner": "이것은 맵다요.",
-          "intermediate": "정말 맵다네요.",
-          "advanced": "맵다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 매워요.",
+          "intermediate": "정말 매워네요.",
+          "advanced": "맵다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "맵다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -2385,7 +2385,7 @@
             },
             {
               "speaker": "B",
-              "text": "맵다요.",
+              "text": "매워요",
               "romanization": "maepdayo.",
               "translation": "It's spicy."
             },
@@ -2426,7 +2426,7 @@
               "speaker": "B",
               "text": "It's spicy.",
               "romanization": "",
-              "translation": "맵다요."
+              "translation": "매워요"
             },
             {
               "speaker": "A",
@@ -2467,9 +2467,9 @@
         "word": "시다",
         "explanation": "식초나 레몬 같은 맛이다.",
         "examples": {
-          "beginner": "이것은 시다요.",
-          "intermediate": "정말 시다네요.",
-          "advanced": "시다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 셔요.",
+          "intermediate": "정말 셔네요.",
+          "advanced": "시다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "시다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -2483,7 +2483,7 @@
             },
             {
               "speaker": "B",
-              "text": "시다요.",
+              "text": "셔요",
               "romanization": "sidayo.",
               "translation": "It's sour."
             },
@@ -2524,7 +2524,7 @@
               "speaker": "B",
               "text": "It's sour.",
               "romanization": "",
-              "translation": "시다요."
+              "translation": "셔요"
             },
             {
               "speaker": "A",
@@ -2565,9 +2565,9 @@
         "word": "쓰다",
         "explanation": "약이나 쓴 차 같은 맛이다.",
         "examples": {
-          "beginner": "이것은 쓰다요.",
-          "intermediate": "정말 쓰다네요.",
-          "advanced": "쓰다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 써요.",
+          "intermediate": "정말 써네요.",
+          "advanced": "쓰다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "쓰다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -2581,7 +2581,7 @@
             },
             {
               "speaker": "B",
-              "text": "쓰다요.",
+              "text": "써요",
               "romanization": "sseudayo.",
               "translation": "It's bitter."
             },
@@ -2622,7 +2622,7 @@
               "speaker": "B",
               "text": "It's bitter.",
               "romanization": "",
-              "translation": "쓰다요."
+              "translation": "써요"
             },
             {
               "speaker": "A",
@@ -2663,9 +2663,9 @@
         "word": "어렵다",
         "explanation": "하기가 쉽지 않다. 이해하기 힘들다.",
         "examples": {
-          "beginner": "이것은 어렵다요.",
-          "intermediate": "정말 어렵다네요.",
-          "advanced": "어렵다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 어려워요.",
+          "intermediate": "정말 어려워네요.",
+          "advanced": "어렵다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "어렵다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -2679,7 +2679,7 @@
             },
             {
               "speaker": "B",
-              "text": "어렵다요.",
+              "text": "어려워요",
               "romanization": "eoryeopdayo.",
               "translation": "It's difficult / hard."
             },
@@ -2720,7 +2720,7 @@
               "speaker": "B",
               "text": "It's difficult / hard.",
               "romanization": "",
-              "translation": "어렵다요."
+              "translation": "어려워요"
             },
             {
               "speaker": "A",
@@ -2761,9 +2761,9 @@
         "word": "쉽다",
         "explanation": "하기가 어렵지 않다. 이해하기 간단하다.",
         "examples": {
-          "beginner": "이것은 쉽다요.",
-          "intermediate": "정말 쉽다네요.",
-          "advanced": "쉽다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 쉬워요.",
+          "intermediate": "정말 쉬워네요.",
+          "advanced": "쉽다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "쉽다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -2777,7 +2777,7 @@
             },
             {
               "speaker": "B",
-              "text": "쉽다요.",
+              "text": "쉬워요",
               "romanization": "swipdayo.",
               "translation": "It's easy."
             },
@@ -2818,7 +2818,7 @@
               "speaker": "B",
               "text": "It's easy.",
               "romanization": "",
-              "translation": "쉽다요."
+              "translation": "쉬워요"
             },
             {
               "speaker": "A",
@@ -2859,9 +2859,9 @@
         "word": "재미있다",
         "explanation": "즐겁고 흥미롭다.",
         "examples": {
-          "beginner": "이것은 재미있다요.",
-          "intermediate": "정말 재미있다네요.",
-          "advanced": "재미있다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 재미있어요.",
+          "intermediate": "정말 재미있네요.",
+          "advanced": "재미있다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "재미있다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -2875,7 +2875,7 @@
             },
             {
               "speaker": "B",
-              "text": "재미있다요.",
+              "text": "재미있어요",
               "romanization": "jaemiisdayo.",
               "translation": "It's interesting / fun."
             },
@@ -2916,7 +2916,7 @@
               "speaker": "B",
               "text": "It's interesting / fun.",
               "romanization": "",
-              "translation": "재미있다요."
+              "translation": "재미있어요"
             },
             {
               "speaker": "A",
@@ -2957,9 +2957,9 @@
         "word": "재미없다",
         "explanation": "즐겁지 않고 지루하다.",
         "examples": {
-          "beginner": "이것은 재미없다요.",
-          "intermediate": "정말 재미없다네요.",
-          "advanced": "재미없다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 재미없어요.",
+          "intermediate": "정말 재미없네요.",
+          "advanced": "재미없다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "재미없다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -2973,7 +2973,7 @@
             },
             {
               "speaker": "B",
-              "text": "재미없다요.",
+              "text": "재미없어요",
               "romanization": "jaemieopdayo.",
               "translation": "It's boring / not fun."
             },
@@ -3014,7 +3014,7 @@
               "speaker": "B",
               "text": "It's boring / not fun.",
               "romanization": "",
-              "translation": "재미없다요."
+              "translation": "재미없어요"
             },
             {
               "speaker": "A",
@@ -3055,9 +3055,9 @@
         "word": "바쁘다",
         "explanation": "할 일이 많아서 시간이 없다.",
         "examples": {
-          "beginner": "이것은 바쁘다요.",
-          "intermediate": "정말 바쁘다네요.",
-          "advanced": "바쁘다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 바빠요.",
+          "intermediate": "정말 바빠네요.",
+          "advanced": "바쁘다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "바쁘다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -3071,7 +3071,7 @@
             },
             {
               "speaker": "B",
-              "text": "바쁘다요.",
+              "text": "바빠요",
               "romanization": "bappeudayo.",
               "translation": "It's busy."
             },
@@ -3112,7 +3112,7 @@
               "speaker": "B",
               "text": "It's busy.",
               "romanization": "",
-              "translation": "바쁘다요."
+              "translation": "바빠요"
             },
             {
               "speaker": "A",
@@ -3153,9 +3153,9 @@
         "word": "한가하다",
         "explanation": "할 일이 없어서 여유롭다.",
         "examples": {
-          "beginner": "이것은 한가하다요.",
-          "intermediate": "정말 한가하다네요.",
-          "advanced": "한가하다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 한가해요.",
+          "intermediate": "정말 한가하네요.",
+          "advanced": "한가하다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "한가하다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -3169,7 +3169,7 @@
             },
             {
               "speaker": "B",
-              "text": "한가하다요.",
+              "text": "한가해요",
               "romanization": "hangahadayo.",
               "translation": "It's free / not busy / leisurely."
             },
@@ -3210,7 +3210,7 @@
               "speaker": "B",
               "text": "It's free / not busy / leisurely.",
               "romanization": "",
-              "translation": "한가하다요."
+              "translation": "한가해요"
             },
             {
               "speaker": "A",
@@ -3251,9 +3251,9 @@
         "word": "피곤하다",
         "explanation": "몸과 마음이 지쳐 있다.",
         "examples": {
-          "beginner": "이것은 피곤하다요.",
-          "intermediate": "정말 피곤하다네요.",
-          "advanced": "피곤하다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 피곤해요.",
+          "intermediate": "정말 피곤하네요.",
+          "advanced": "피곤하다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "피곤하다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -3267,7 +3267,7 @@
             },
             {
               "speaker": "B",
-              "text": "피곤하다요.",
+              "text": "피곤해요",
               "romanization": "pigonhadayo.",
               "translation": "It's tired."
             },
@@ -3308,7 +3308,7 @@
               "speaker": "B",
               "text": "It's tired.",
               "romanization": "",
-              "translation": "피곤하다요."
+              "translation": "피곤해요"
             },
             {
               "speaker": "A",
@@ -3349,9 +3349,9 @@
         "word": "건강하다",
         "explanation": "몸 상태가 좋다. 병이 없다.",
         "examples": {
-          "beginner": "이것은 건강하다요.",
-          "intermediate": "정말 건강하다네요.",
-          "advanced": "건강하다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 건강해요.",
+          "intermediate": "정말 건강하네요.",
+          "advanced": "건강하다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "건강하다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -3365,7 +3365,7 @@
             },
             {
               "speaker": "B",
-              "text": "건강하다요.",
+              "text": "건강해요",
               "romanization": "geonganghadayo.",
               "translation": "It's healthy."
             },
@@ -3406,7 +3406,7 @@
               "speaker": "B",
               "text": "It's healthy.",
               "romanization": "",
-              "translation": "건강하다요."
+              "translation": "건강해요"
             },
             {
               "speaker": "A",
@@ -3447,9 +3447,9 @@
         "word": "아프다",
         "explanation": "몸의 어느 부분이 고통스럽다. 마음이 슬프다.",
         "examples": {
-          "beginner": "이것은 아프다요.",
-          "intermediate": "정말 아프다네요.",
-          "advanced": "아프다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 아파요.",
+          "intermediate": "정말 아파네요.",
+          "advanced": "아프다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "아프다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -3463,7 +3463,7 @@
             },
             {
               "speaker": "B",
-              "text": "아프다요.",
+              "text": "아파요",
               "romanization": "apeudayo.",
               "translation": "It's sick / hurt / painful."
             },
@@ -3504,7 +3504,7 @@
               "speaker": "B",
               "text": "It's sick / hurt / painful.",
               "romanization": "",
-              "translation": "아프다요."
+              "translation": "아파요"
             },
             {
               "speaker": "A",
@@ -3545,9 +3545,9 @@
         "word": "행복하다",
         "explanation": "기쁘고 만족스럽다.",
         "examples": {
-          "beginner": "이것은 행복하다요.",
-          "intermediate": "정말 행복하다네요.",
-          "advanced": "행복하다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 행복해요.",
+          "intermediate": "정말 행복하네요.",
+          "advanced": "행복하다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "행복하다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -3561,7 +3561,7 @@
             },
             {
               "speaker": "B",
-              "text": "행복하다요.",
+              "text": "행복해요",
               "romanization": "haengbokhadayo.",
               "translation": "It's happy."
             },
@@ -3602,7 +3602,7 @@
               "speaker": "B",
               "text": "It's happy.",
               "romanization": "",
-              "translation": "행복하다요."
+              "translation": "행복해요"
             },
             {
               "speaker": "A",
@@ -3643,9 +3643,9 @@
         "word": "슬프다",
         "explanation": "마음이 아프고 울고 싶다.",
         "examples": {
-          "beginner": "이것은 슬프다요.",
-          "intermediate": "정말 슬프다네요.",
-          "advanced": "슬프다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 슬퍼요.",
+          "intermediate": "정말 슬퍼네요.",
+          "advanced": "슬프다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "슬프다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -3659,7 +3659,7 @@
             },
             {
               "speaker": "B",
-              "text": "슬프다요.",
+              "text": "슬퍼요",
               "romanization": "seulpeudayo.",
               "translation": "It's sad."
             },
@@ -3700,7 +3700,7 @@
               "speaker": "B",
               "text": "It's sad.",
               "romanization": "",
-              "translation": "슬프다요."
+              "translation": "슬퍼요"
             },
             {
               "speaker": "A",
@@ -3741,9 +3741,9 @@
         "word": "기쁘다",
         "explanation": "마음이 즐겁고 좋다.",
         "examples": {
-          "beginner": "이것은 기쁘다요.",
-          "intermediate": "정말 기쁘다네요.",
-          "advanced": "기쁘다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 기뻐요.",
+          "intermediate": "정말 기뻐네요.",
+          "advanced": "기쁘다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "기쁘다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -3757,7 +3757,7 @@
             },
             {
               "speaker": "B",
-              "text": "기쁘다요.",
+              "text": "기뻐요",
               "romanization": "gippeudayo.",
               "translation": "It's glad / delighted."
             },
@@ -3798,7 +3798,7 @@
               "speaker": "B",
               "text": "It's glad / delighted.",
               "romanization": "",
-              "translation": "기쁘다요."
+              "translation": "기뻐요"
             },
             {
               "speaker": "A",
@@ -3839,9 +3839,9 @@
         "word": "화나다",
         "explanation": "마음이 불쾌하고 짜증이 난다.",
         "examples": {
-          "beginner": "이것은 화나다요.",
-          "intermediate": "정말 화나다네요.",
-          "advanced": "화나다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 화나요.",
+          "intermediate": "정말 화나네요.",
+          "advanced": "화나다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "화나다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -3855,7 +3855,7 @@
             },
             {
               "speaker": "B",
-              "text": "화나다요.",
+              "text": "화나요",
               "romanization": "hwanadayo.",
               "translation": "It's angry / upset."
             },
@@ -3896,7 +3896,7 @@
               "speaker": "B",
               "text": "It's angry / upset.",
               "romanization": "",
-              "translation": "화나다요."
+              "translation": "화나요"
             },
             {
               "speaker": "A",
@@ -3937,9 +3937,9 @@
         "word": "무섭다",
         "explanation": "두렵고 겁이 난다.",
         "examples": {
-          "beginner": "이것은 무섭다요.",
-          "intermediate": "정말 무섭다네요.",
-          "advanced": "무섭다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 무서워요.",
+          "intermediate": "정말 무서워네요.",
+          "advanced": "무섭다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "무섭다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -3953,7 +3953,7 @@
             },
             {
               "speaker": "B",
-              "text": "무섭다요.",
+              "text": "무서워요",
               "romanization": "museopdayo.",
               "translation": "It's scary / frightening / afraid."
             },
@@ -3994,7 +3994,7 @@
               "speaker": "B",
               "text": "It's scary / frightening / afraid.",
               "romanization": "",
-              "translation": "무섭다요."
+              "translation": "무서워요"
             },
             {
               "speaker": "A",
@@ -4035,9 +4035,9 @@
         "word": "외롭다",
         "explanation": "혼자라서 쓸쓸하다.",
         "examples": {
-          "beginner": "이것은 외롭다요.",
-          "intermediate": "정말 외롭다네요.",
-          "advanced": "외롭다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 외로워요.",
+          "intermediate": "정말 외로워네요.",
+          "advanced": "외롭다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "외롭다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -4051,7 +4051,7 @@
             },
             {
               "speaker": "B",
-              "text": "외롭다요.",
+              "text": "외로워요",
               "romanization": "oeropdayo.",
               "translation": "It's lonely."
             },
@@ -4092,7 +4092,7 @@
               "speaker": "B",
               "text": "It's lonely.",
               "romanization": "",
-              "translation": "외롭다요."
+              "translation": "외로워요"
             },
             {
               "speaker": "A",
@@ -4133,9 +4133,9 @@
         "word": "친절하다",
         "explanation": "다른 사람에게 따뜻하고 도움을 주다.",
         "examples": {
-          "beginner": "이것은 친절하다요.",
-          "intermediate": "정말 친절하다네요.",
-          "advanced": "친절하다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 친절해요.",
+          "intermediate": "정말 친절하네요.",
+          "advanced": "친절하다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "친절하다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -4149,7 +4149,7 @@
             },
             {
               "speaker": "B",
-              "text": "친절하다요.",
+              "text": "친절해요",
               "romanization": "chinjeolhadayo.",
               "translation": "It's kind / friendly."
             },
@@ -4190,7 +4190,7 @@
               "speaker": "B",
               "text": "It's kind / friendly.",
               "romanization": "",
-              "translation": "친절하다요."
+              "translation": "친절해요"
             },
             {
               "speaker": "A",
@@ -4231,9 +4231,9 @@
         "word": "정직하다",
         "explanation": "거짓말을 하지 않고 진실하다.",
         "examples": {
-          "beginner": "이것은 정직하다요.",
-          "intermediate": "정말 정직하다네요.",
-          "advanced": "정직하다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 정직해요.",
+          "intermediate": "정말 정직하네요.",
+          "advanced": "정직하다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "정직하다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -4247,7 +4247,7 @@
             },
             {
               "speaker": "B",
-              "text": "정직하다요.",
+              "text": "정직해요",
               "romanization": "jeongjikhadayo.",
               "translation": "It's honest."
             },
@@ -4288,7 +4288,7 @@
               "speaker": "B",
               "text": "It's honest.",
               "romanization": "",
-              "translation": "정직하다요."
+              "translation": "정직해요"
             },
             {
               "speaker": "A",
@@ -4329,9 +4329,9 @@
         "word": "부지런하다",
         "explanation": "열심히 일하고 게으르지 않다.",
         "examples": {
-          "beginner": "이것은 부지런하다요.",
-          "intermediate": "정말 부지런하다네요.",
-          "advanced": "부지런하다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 부지런해요.",
+          "intermediate": "정말 부지런하네요.",
+          "advanced": "부지런하다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "부지런하다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -4345,7 +4345,7 @@
             },
             {
               "speaker": "B",
-              "text": "부지런하다요.",
+              "text": "부지런해요",
               "romanization": "bujireonhadayo.",
               "translation": "It's diligent / hardworking."
             },
@@ -4386,7 +4386,7 @@
               "speaker": "B",
               "text": "It's diligent / hardworking.",
               "romanization": "",
-              "translation": "부지런하다요."
+              "translation": "부지런해요"
             },
             {
               "speaker": "A",
@@ -4427,9 +4427,9 @@
         "word": "게으르다",
         "explanation": "일하기 싫어하고 움직이지 않다.",
         "examples": {
-          "beginner": "이것은 게으르다요.",
-          "intermediate": "정말 게으르다네요.",
-          "advanced": "게으르다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 게을러요.",
+          "intermediate": "정말 게을러네요.",
+          "advanced": "게으르다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "게으르다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -4443,7 +4443,7 @@
             },
             {
               "speaker": "B",
-              "text": "게으르다요.",
+              "text": "게을러요",
               "romanization": "geeureudayo.",
               "translation": "It's lazy."
             },
@@ -4484,7 +4484,7 @@
               "speaker": "B",
               "text": "It's lazy.",
               "romanization": "",
-              "translation": "게으르다요."
+              "translation": "게을러요"
             },
             {
               "speaker": "A",
@@ -4525,9 +4525,9 @@
         "word": "조용하다",
         "explanation": "소리가 없거나 작다.",
         "examples": {
-          "beginner": "이것은 조용하다요.",
-          "intermediate": "정말 조용하다네요.",
-          "advanced": "조용하다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 조용해요.",
+          "intermediate": "정말 조용하네요.",
+          "advanced": "조용하다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "조용하다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -4541,7 +4541,7 @@
             },
             {
               "speaker": "B",
-              "text": "조용하다요.",
+              "text": "조용해요",
               "romanization": "joyonghadayo.",
               "translation": "It's quiet."
             },
@@ -4582,7 +4582,7 @@
               "speaker": "B",
               "text": "It's quiet.",
               "romanization": "",
-              "translation": "조용하다요."
+              "translation": "조용해요"
             },
             {
               "speaker": "A",
@@ -4623,9 +4623,9 @@
         "word": "시끄럽다",
         "explanation": "소리가 크고 불쾌하다.",
         "examples": {
-          "beginner": "이것은 시끄럽다요.",
-          "intermediate": "정말 시끄럽다네요.",
-          "advanced": "시끄럽다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 시끄러워요.",
+          "intermediate": "정말 시끄러워네요.",
+          "advanced": "시끄럽다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "시끄럽다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -4639,7 +4639,7 @@
             },
             {
               "speaker": "B",
-              "text": "시끄럽다요.",
+              "text": "시끄러워요",
               "romanization": "sikkeureopdayo.",
               "translation": "It's noisy / loud."
             },
@@ -4680,7 +4680,7 @@
               "speaker": "B",
               "text": "It's noisy / loud.",
               "romanization": "",
-              "translation": "시끄럽다요."
+              "translation": "시끄러워요"
             },
             {
               "speaker": "A",
@@ -4721,9 +4721,9 @@
         "word": "깨끗하다",
         "explanation": "더러운 것이 없다. 깔끔하다.",
         "examples": {
-          "beginner": "이것은 깨끗하다요.",
-          "intermediate": "정말 깨끗하다네요.",
-          "advanced": "깨끗하다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 깨끗해요.",
+          "intermediate": "정말 깨끗하네요.",
+          "advanced": "깨끗하다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "깨끗하다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -4737,7 +4737,7 @@
             },
             {
               "speaker": "B",
-              "text": "깨끗하다요.",
+              "text": "깨끗해요",
               "romanization": "kkaekkeushadayo.",
               "translation": "It's clean."
             },
@@ -4778,7 +4778,7 @@
               "speaker": "B",
               "text": "It's clean.",
               "romanization": "",
-              "translation": "깨끗하다요."
+              "translation": "깨끗해요"
             },
             {
               "speaker": "A",
@@ -4819,9 +4819,9 @@
         "word": "더럽다",
         "explanation": "깨끗하지 않고 지저분하다.",
         "examples": {
-          "beginner": "이것은 더럽다요.",
-          "intermediate": "정말 더럽다네요.",
-          "advanced": "더럽다다는 것은 긍정적인/부정적인 특성입니다.",
+          "beginner": "이것은 더러워요.",
+          "intermediate": "정말 더러워네요.",
+          "advanced": "더럽다는 것은 긍정적인/부정적인 특성입니다.",
           "master": "더럽다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
         },
         "dialogue": {
@@ -4835,7 +4835,7 @@
             },
             {
               "speaker": "B",
-              "text": "더럽다요.",
+              "text": "더러워요",
               "romanization": "deoreopdayo.",
               "translation": "It's dirty."
             },
@@ -4876,7 +4876,7 @@
               "speaker": "B",
               "text": "It's dirty.",
               "romanization": "",
-              "translation": "더럽다요."
+              "translation": "더러워요"
             },
             {
               "speaker": "A",
