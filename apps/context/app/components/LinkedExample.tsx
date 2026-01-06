@@ -6,6 +6,8 @@ import { useI18n } from '@/i18n';
 interface LinkedExampleProps {
   text: string;
   currentEntryId: string;
+  /** 링크 스타일 클래스 (기본: accent-primary 색상) */
+  linkClassName?: string;
 }
 
 /**
@@ -21,7 +23,10 @@ interface LinkedExampleProps {
  * - 같은 한국어에 여러 의미가 있으면 팝오버로 선택 가능
  * - 예: "이" → 숫자 2 vs 조사(주격)
  */
-export function LinkedExample({ text, currentEntryId }: LinkedExampleProps) {
+const DEFAULT_LINK_CLASS =
+  'text-(--accent-primary) underline decoration-dotted underline-offset-4 hover:decoration-solid';
+
+export function LinkedExample({ text, currentEntryId, linkClassName }: LinkedExampleProps) {
   const { localePath } = useI18n();
 
   // O(m) 시간에 모든 매칭 찾기
@@ -47,7 +52,7 @@ export function LinkedExample({ text, currentEntryId }: LinkedExampleProps) {
       <Link
         key={`link-${match.start}`}
         to={localePath(`/entry/${match.ids[0]}`)}
-        className="text-(--accent-primary) underline decoration-dotted underline-offset-4 hover:decoration-solid"
+        className={linkClassName ?? DEFAULT_LINK_CLASS}
       >
         {match.korean}
       </Link>,

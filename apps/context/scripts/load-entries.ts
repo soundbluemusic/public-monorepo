@@ -396,8 +396,12 @@ export interface TrieNode {
 /**
  * 사전 빌드된 Aho-Corasick Trie
  * ${trie.length}개 노드, ${expressions.length}개 표현
+ *
+ * @remarks
+ * 타입 추론 비용을 줄이기 위해 JSON.parse를 사용합니다.
+ * 빌드 시점에 JSON 문자열이 인라인되므로 런타임 오버헤드 없음.
  */
-export const expressionTrie: TrieNode[] = ${JSON.stringify(trie)};
+export const expressionTrie: TrieNode[] = JSON.parse('${JSON.stringify(trie).replace(/'/g, "\\'")}');
 
 /**
  * 한글 문자인지 확인

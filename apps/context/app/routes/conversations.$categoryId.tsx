@@ -102,7 +102,6 @@ export default function ConversationsCategoryPage() {
             <div className="space-y-3">
               {conv.dialogue.map((line) => {
                 const isA = line.speaker === 'A';
-                const text = locale === 'ko' ? line.ko : line.en;
                 // Use speaker + text as unique key (dialogue lines are static)
                 const lineKey = `${line.speaker}-${line.ko.slice(0, 20)}`;
 
@@ -120,7 +119,15 @@ export default function ConversationsCategoryPage() {
                         {line.speaker}
                       </span>
                       <p className={cn('text-sm', isA ? 'text-(--text-primary)' : 'text-white')}>
-                        {locale === 'ko' ? <LinkedExample text={text} currentEntryId="" /> : text}
+                        <LinkedExample
+                          text={line.ko}
+                          currentEntryId=""
+                          linkClassName={
+                            isA
+                              ? 'text-(--accent-primary) underline decoration-dotted underline-offset-4 hover:decoration-solid'
+                              : 'text-white underline decoration-dotted underline-offset-4 hover:decoration-solid'
+                          }
+                        />
                       </p>
                       {/* Show translation underneath */}
                       <p
@@ -129,7 +136,7 @@ export default function ConversationsCategoryPage() {
                           isA ? 'text-(--text-tertiary)' : 'text-white/70',
                         )}
                       >
-                        {locale === 'ko' ? line.en : line.ko}
+                        {line.en}
                       </p>
                     </div>
                   </div>
