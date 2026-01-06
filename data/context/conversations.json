@@ -1800,5 +1800,685 @@
         "en": "Yes, a peninsula has water on three sides and is connected to land on one side."
       }
     ]
+  },
+  {
+    "id": "geography-continent-1",
+    "categoryId": "geography",
+    "title": {
+      "ko": "대륙 이야기",
+      "en": "Talking About Continents"
+    },
+    "dialogue": [
+      {
+        "speaker": "A",
+        "ko": "세계에 대륙이 몇 개 있어요?",
+        "romanization": "segyee daeryugi myeot gae isseoyo?",
+        "en": "How many continents are there in the world?"
+      },
+      {
+        "speaker": "B",
+        "ko": "보통 6개나 7개로 봐요. 아시아, 유럽, 아프리카, 북아메리카, 남아메리카, 오세아니아요.",
+        "romanization": "botong yeoseot gaena ilgop gaero bwayo. asia, yureop, apeurika, bugamerika, namamerika, oseaniayo.",
+        "en": "Usually 6 or 7. Asia, Europe, Africa, North America, South America, and Oceania."
+      },
+      {
+        "speaker": "A",
+        "ko": "가장 큰 대륙은 어디예요?",
+        "romanization": "gajang keun daeryugeun eodiyeyo?",
+        "en": "Which is the largest continent?"
+      },
+      {
+        "speaker": "B",
+        "ko": "아시아가 가장 커요. 세계 인구의 절반 이상이 살아요.",
+        "romanization": "asiaga gajang keoyo. segye inguui jeolban isangi sarayo.",
+        "en": "Asia is the largest. More than half of the world's population lives there."
+      }
+    ]
+  },
+  {
+    "id": "geography-strait-1",
+    "categoryId": "geography",
+    "title": {
+      "ko": "해협 이야기",
+      "en": "Talking About Straits"
+    },
+    "dialogue": [
+      {
+        "speaker": "A",
+        "ko": "해협이 뭐예요?",
+        "romanization": "haehyeobi mwoyeyo?",
+        "en": "What is a strait?"
+      },
+      {
+        "speaker": "B",
+        "ko": "두 바다를 연결하는 좁은 물길이에요.",
+        "romanization": "du badareul yeongyeolhaneun jobeun mulgilieyo.",
+        "en": "It's a narrow waterway connecting two seas."
+      },
+      {
+        "speaker": "A",
+        "ko": "유명한 해협이 어디 있어요?",
+        "romanization": "yumyeonghan haehyeobi eodi isseoyo?",
+        "en": "Where are some famous straits?"
+      },
+      {
+        "speaker": "B",
+        "ko": "대한해협, 지브롤터 해협, 말라카 해협이 유명해요.",
+        "romanization": "daehanhaehyeop, jibeurollteo haehyeop, mallaka haehyeobi yumyeonghaeyo.",
+        "en": "The Korea Strait, Strait of Gibraltar, and Strait of Malacca are famous."
+      }
+    ]
+  },
+  {
+    "id": "geography-lake-1",
+    "categoryId": "geography",
+    "title": {
+      "ko": "호수 이야기",
+      "en": "Talking About Lakes"
+    },
+    "dialogue": [
+      {
+        "speaker": "A",
+        "ko": "세계에서 가장 큰 호수가 어디예요?",
+        "romanization": "segyeeseo gajang keun hosuga eodiyeyo?",
+        "en": "Where is the largest lake in the world?"
+      },
+      {
+        "speaker": "B",
+        "ko": "카스피해요. 사실 바다처럼 커서 '해'라고 불러요.",
+        "romanization": "kaseupihaeyo. sasil badacheoreom keoseo 'hae'rago bullyeoyo.",
+        "en": "The Caspian Sea. It's so big like a sea that it's called a 'sea'."
+      },
+      {
+        "speaker": "A",
+        "ko": "가장 깊은 호수는요?",
+        "romanization": "gajang gipeun hosuneunyo?",
+        "en": "What about the deepest lake?"
+      },
+      {
+        "speaker": "B",
+        "ko": "바이칼 호수예요. 러시아에 있고 정말 깊어요.",
+        "romanization": "baikal hosuyeyo. reosia-e itgo jeongmal gipeoyo.",
+        "en": "Lake Baikal. It's in Russia and is really deep."
+      }
+    ]
+  },
+  {
+    "id": "geography-waterfall-1",
+    "categoryId": "geography",
+    "title": {
+      "ko": "폭포 이야기",
+      "en": "Talking About Waterfalls"
+    },
+    "dialogue": [
+      {
+        "speaker": "A",
+        "ko": "나이아가라 폭포 가봤어요?",
+        "romanization": "naiagara pokpo gabwasseoyo?",
+        "en": "Have you been to Niagara Falls?"
+      },
+      {
+        "speaker": "B",
+        "ko": "아니요, 가보고 싶어요. 정말 크다면서요?",
+        "romanization": "aniyo, gabogo sipeoyo. jeongmal keudamyeonseoyo?",
+        "en": "No, I want to go. I heard it's really big?"
+      },
+      {
+        "speaker": "A",
+        "ko": "네, 미국과 캐나다 사이에 있어요. 소리가 엄청나요.",
+        "romanization": "ne, migukgwa kaenada saie isseoyo. soriga eomcheongnayo.",
+        "en": "Yes, it's between the US and Canada. The sound is tremendous."
+      },
+      {
+        "speaker": "B",
+        "ko": "빅토리아 폭포도 유명하다고 들었어요.",
+        "romanization": "biktoria pokpodo yumyeonghago deureosseoyo.",
+        "en": "I heard Victoria Falls is also famous."
+      }
+    ]
+  },
+  {
+    "id": "geography-plateau-1",
+    "categoryId": "geography",
+    "title": {
+      "ko": "고원 이야기",
+      "en": "Talking About Plateaus"
+    },
+    "dialogue": [
+      {
+        "speaker": "A",
+        "ko": "고원이 뭐예요?",
+        "romanization": "gowoni mwoyeyo?",
+        "en": "What is a plateau?"
+      },
+      {
+        "speaker": "B",
+        "ko": "높은 곳에 있는 평평한 땅이에요.",
+        "romanization": "nopeun gose inneun pyeongpyeonghan ttangieyo.",
+        "en": "It's flat land at a high altitude."
+      },
+      {
+        "speaker": "A",
+        "ko": "티베트 고원이 유명하죠?",
+        "romanization": "tibeteu gowoni yumyeonghajyo?",
+        "en": "The Tibetan Plateau is famous, right?"
+      },
+      {
+        "speaker": "B",
+        "ko": "네, '세계의 지붕'이라고 불려요. 평균 해발 4,500미터예요.",
+        "romanization": "ne, 'segyeui jibung'irago bullyeoyo. pyeonggyun haebal sasibaeok miteoyeyo.",
+        "en": "Yes, it's called the 'Roof of the World'. Average altitude is 4,500 meters."
+      }
+    ]
+  },
+  {
+    "id": "geography-canyon-1",
+    "categoryId": "geography",
+    "title": {
+      "ko": "협곡 이야기",
+      "en": "Talking About Canyons"
+    },
+    "dialogue": [
+      {
+        "speaker": "A",
+        "ko": "그랜드 캐니언 가봤어요?",
+        "romanization": "geulaendeu kaenieon gabwasseoyo?",
+        "en": "Have you been to the Grand Canyon?"
+      },
+      {
+        "speaker": "B",
+        "ko": "네, 작년에 갔어요. 정말 장관이었어요.",
+        "romanization": "ne, jaknyeone gasseoyo. jeongmal janggwanieosseoyo.",
+        "en": "Yes, I went last year. It was truly spectacular."
+      },
+      {
+        "speaker": "A",
+        "ko": "협곡이 어떻게 만들어졌어요?",
+        "romanization": "hyeopgogi eotteoke mandeuryeojyeosseoyo?",
+        "en": "How was the canyon formed?"
+      },
+      {
+        "speaker": "B",
+        "ko": "콜로라도 강이 수백만 년 동안 깎아서 만들어졌어요.",
+        "romanization": "kollorado gangi subaengman nyeon dongan kkakkaseo mandeuryeojyeosseoyo.",
+        "en": "The Colorado River carved it over millions of years."
+      }
+    ]
+  },
+  {
+    "id": "geography-mountain-range-1",
+    "categoryId": "geography",
+    "title": {
+      "ko": "산맥 이야기",
+      "en": "Talking About Mountain Ranges"
+    },
+    "dialogue": [
+      {
+        "speaker": "A",
+        "ko": "세계에서 가장 높은 산맥이 어디예요?",
+        "romanization": "segyeeseo gajang nopeun sanmaegi eodiyeyo?",
+        "en": "Where is the highest mountain range in the world?"
+      },
+      {
+        "speaker": "B",
+        "ko": "히말라야 산맥이에요. 에베레스트 산이 거기 있어요.",
+        "romanization": "himalraya sanmaegieyo. ebereseuteu sani geogi isseoyo.",
+        "en": "The Himalayas. Mount Everest is there."
+      },
+      {
+        "speaker": "A",
+        "ko": "알프스 산맥도 유명하죠?",
+        "romanization": "alpeseu sanmaekdo yumyeonghajyo?",
+        "en": "The Alps are also famous, right?"
+      },
+      {
+        "speaker": "B",
+        "ko": "네, 유럽에서 가장 유명한 산맥이에요. 스키로 유명해요.",
+        "romanization": "ne, yureobeseo gajang yumyeonghan sanmaegieyo. seukiro yumyeonghaeyo.",
+        "en": "Yes, it's the most famous mountain range in Europe. Famous for skiing."
+      }
+    ]
+  },
+  {
+    "id": "geography-gulf-1",
+    "categoryId": "geography",
+    "title": {
+      "ko": "만 이야기",
+      "en": "Talking About Gulfs and Bays"
+    },
+    "dialogue": [
+      {
+        "speaker": "A",
+        "ko": "만이랑 해협이 뭐가 달라요?",
+        "romanization": "anirang haehyeobi mwoga dallayo?",
+        "en": "What's the difference between a gulf and a strait?"
+      },
+      {
+        "speaker": "B",
+        "ko": "만은 육지로 둘러싸인 바다 부분이고, 해협은 좁은 물길이에요.",
+        "romanization": "maneun yukjiro dullyeossain bada bubunigo, haehyeobeun jobeun mulgilieyo.",
+        "en": "A gulf is a part of the sea surrounded by land, while a strait is a narrow waterway."
+      },
+      {
+        "speaker": "A",
+        "ko": "유명한 만이 어디 있어요?",
+        "romanization": "yumyeonghan mani eodi isseoyo?",
+        "en": "Where are some famous gulfs?"
+      },
+      {
+        "speaker": "B",
+        "ko": "페르시아 만, 멕시코 만, 벵골 만이 유명해요.",
+        "romanization": "pereusia man, meksiko man, benggol mani yumyeonghaeyo.",
+        "en": "The Persian Gulf, Gulf of Mexico, and Bay of Bengal are famous."
+      }
+    ]
+  },
+  {
+    "id": "geography-cape-1",
+    "categoryId": "geography",
+    "title": {
+      "ko": "곶 이야기",
+      "en": "Talking About Capes"
+    },
+    "dialogue": [
+      {
+        "speaker": "A",
+        "ko": "희망봉이 어디에 있어요?",
+        "romanization": "huimangbongi eodie isseoyo?",
+        "en": "Where is the Cape of Good Hope?"
+      },
+      {
+        "speaker": "B",
+        "ko": "남아프리카 공화국 남쪽 끝에 있어요.",
+        "romanization": "namapeurika gonghwaguk namjjok kkeute isseoyo.",
+        "en": "It's at the southern tip of South Africa."
+      },
+      {
+        "speaker": "A",
+        "ko": "곶이 뭐예요?",
+        "romanization": "gochi mwoyeyo?",
+        "en": "What is a cape?"
+      },
+      {
+        "speaker": "B",
+        "ko": "바다로 뻗어나간 뾰족한 땅이에요.",
+        "romanization": "badaro ppeo-neonagan ppyojokhan ttangieyo.",
+        "en": "It's a pointed piece of land that extends into the sea."
+      }
+    ]
+  },
+  {
+    "id": "geography-sea-1",
+    "categoryId": "geography",
+    "title": {
+      "ko": "바다 종류",
+      "en": "Types of Seas"
+    },
+    "dialogue": [
+      {
+        "speaker": "A",
+        "ko": "동해랑 서해는 어떻게 달라요?",
+        "romanization": "donghaerang seohaeneun eotteoke dallayo?",
+        "en": "How are the East Sea and West Sea different?"
+      },
+      {
+        "speaker": "B",
+        "ko": "동해는 깊고 파도가 높아요. 서해는 얕고 조수 간만의 차가 커요.",
+        "romanization": "donghaeneun gipgo padoga nopayo. seohaeneun yatgo josu ganmanui chaga keoyo.",
+        "en": "The East Sea is deep with high waves. The West Sea is shallow with large tidal differences."
+      },
+      {
+        "speaker": "A",
+        "ko": "지중해도 유명하죠?",
+        "romanization": "jijunghaedo yumyeonghajyo?",
+        "en": "The Mediterranean Sea is also famous, right?"
+      },
+      {
+        "speaker": "B",
+        "ko": "네, 유럽과 아프리카 사이에 있어요. 관광지로 인기가 많아요.",
+        "romanization": "ne, yureopgwa apeurika saie isseoyo. gwangwangjiro ingiga manayo.",
+        "en": "Yes, it's between Europe and Africa. It's a popular tourist destination."
+      }
+    ]
+  },
+  {
+    "id": "geography-plain-1",
+    "categoryId": "geography",
+    "title": {
+      "ko": "평원 이야기",
+      "en": "Talking About Plains"
+    },
+    "dialogue": [
+      {
+        "speaker": "A",
+        "ko": "평원에서 뭘 많이 키워요?",
+        "romanization": "pyeongwoneseo mwol mani kiwoyo?",
+        "en": "What do they grow a lot on plains?"
+      },
+      {
+        "speaker": "B",
+        "ko": "주로 곡물이요. 밀이나 옥수수요.",
+        "romanization": "juro gokmuryo. milina oksusuyo.",
+        "en": "Mainly grains. Wheat or corn."
+      },
+      {
+        "speaker": "A",
+        "ko": "미국 대평원이 유명하다면서요?",
+        "romanization": "miguk daepyeongwoni yumyeonghnadamyeonseoyo?",
+        "en": "I heard the American Great Plains are famous?"
+      },
+      {
+        "speaker": "B",
+        "ko": "네, 세계에서 가장 큰 곡창 지대 중 하나예요.",
+        "romanization": "ne, segyeeseo gajang keun gokchang jidae jung hanayeyo.",
+        "en": "Yes, it's one of the largest granaries in the world."
+      }
+    ]
+  },
+  {
+    "id": "geography-archipelago-1",
+    "categoryId": "geography",
+    "title": {
+      "ko": "군도 이야기",
+      "en": "Talking About Archipelagos"
+    },
+    "dialogue": [
+      {
+        "speaker": "A",
+        "ko": "군도가 뭐예요?",
+        "romanization": "gundoga mwoyeyo?",
+        "en": "What is an archipelago?"
+      },
+      {
+        "speaker": "B",
+        "ko": "여러 섬들이 모여 있는 곳이에요.",
+        "romanization": "yeoreo seomdeuri moyeo inneun gosieyo.",
+        "en": "It's a place where many islands are gathered together."
+      },
+      {
+        "speaker": "A",
+        "ko": "유명한 군도가 어디 있어요?",
+        "romanization": "yumyeonghan gundoga eodi isseoyo?",
+        "en": "Where are some famous archipelagos?"
+      },
+      {
+        "speaker": "B",
+        "ko": "인도네시아, 필리핀, 일본이 대표적인 군도 국가예요.",
+        "romanization": "indonesia, pillipin, ilboni daepyojeogin gundo gukgayeyo.",
+        "en": "Indonesia, the Philippines, and Japan are typical archipelago nations."
+      }
+    ]
+  },
+  {
+    "id": "geography-volcano-1",
+    "categoryId": "geography",
+    "title": {
+      "ko": "화산 이야기",
+      "en": "Talking About Volcanoes"
+    },
+    "dialogue": [
+      {
+        "speaker": "A",
+        "ko": "한국에 화산이 있어요?",
+        "romanization": "hanguge hwasani isseoyo?",
+        "en": "Are there volcanoes in Korea?"
+      },
+      {
+        "speaker": "B",
+        "ko": "네, 백두산이 화산이에요. 지금은 휴화산이에요.",
+        "romanization": "ne, baekdusani hwasanieyo. jigeumeun hyuhwasanieyo.",
+        "en": "Yes, Baekdusan is a volcano. It's currently dormant."
+      },
+      {
+        "speaker": "A",
+        "ko": "활화산은 어디에 많아요?",
+        "romanization": "hwalhwasaneun eodie manayo?",
+        "en": "Where are there many active volcanoes?"
+      },
+      {
+        "speaker": "B",
+        "ko": "인도네시아랑 일본에 많아요. 환태평양 조산대에 있어서요.",
+        "romanization": "indonesiarang ilbone manayo. hwantaepyeongyang josandae-e isseoseoyo.",
+        "en": "There are many in Indonesia and Japan. They're on the Pacific Ring of Fire."
+      }
+    ]
+  },
+  {
+    "id": "geography-glacier-1",
+    "categoryId": "geography",
+    "title": {
+      "ko": "빙하 이야기",
+      "en": "Talking About Glaciers"
+    },
+    "dialogue": [
+      {
+        "speaker": "A",
+        "ko": "빙하가 뭐예요?",
+        "romanization": "binghaga mwoyeyo?",
+        "en": "What is a glacier?"
+      },
+      {
+        "speaker": "B",
+        "ko": "오랜 시간 동안 눈이 쌓여서 만들어진 거대한 얼음이에요.",
+        "romanization": "oraen sigan dongan nuni ssayeoseo mandeuryeojin geodaehan eoreumieyo.",
+        "en": "It's a huge mass of ice formed from accumulated snow over a long time."
+      },
+      {
+        "speaker": "A",
+        "ko": "빙하가 어디에 있어요?",
+        "romanization": "binghaga eodie isseoyo?",
+        "en": "Where are glaciers?"
+      },
+      {
+        "speaker": "B",
+        "ko": "남극, 북극, 그린란드, 알프스 산맥에 있어요.",
+        "romanization": "namgeuk, bukgeuk, geurinrandeu, alpeseu sanmaege isseoyo.",
+        "en": "In Antarctica, the Arctic, Greenland, and the Alps."
+      }
+    ]
+  },
+  {
+    "id": "geography-climate-1",
+    "categoryId": "geography",
+    "title": {
+      "ko": "기후 이야기",
+      "en": "Talking About Climate"
+    },
+    "dialogue": [
+      {
+        "speaker": "A",
+        "ko": "열대 기후는 어떤 특징이 있어요?",
+        "romanization": "yeoldae gihuneun eotteon teukjingi isseoyo?",
+        "en": "What are the characteristics of tropical climate?"
+      },
+      {
+        "speaker": "B",
+        "ko": "일년 내내 덥고 비가 많이 와요.",
+        "romanization": "illyeon naenae deopgo biga mani wayo.",
+        "en": "It's hot all year round with lots of rain."
+      },
+      {
+        "speaker": "A",
+        "ko": "한국은 어떤 기후예요?",
+        "romanization": "hangugeun eotteon gihuyeyo?",
+        "en": "What kind of climate does Korea have?"
+      },
+      {
+        "speaker": "B",
+        "ko": "온대 기후예요. 사계절이 뚜렷해요.",
+        "romanization": "ondae gihuyeyo. sagyejeori tturyeothaeyo.",
+        "en": "Temperate climate. The four seasons are distinct."
+      }
+    ]
+  },
+  {
+    "id": "geography-reef-1",
+    "categoryId": "geography",
+    "title": {
+      "ko": "산호초 이야기",
+      "en": "Talking About Coral Reefs"
+    },
+    "dialogue": [
+      {
+        "speaker": "A",
+        "ko": "그레이트 배리어 리프가 뭐예요?",
+        "romanization": "geureiteu baerieo ripeuga mwoyeyo?",
+        "en": "What is the Great Barrier Reef?"
+      },
+      {
+        "speaker": "B",
+        "ko": "호주에 있는 세계 최대의 산호초예요.",
+        "romanization": "hojue inneun segye choedaeui sanhochoyeyo.",
+        "en": "It's the world's largest coral reef, located in Australia."
+      },
+      {
+        "speaker": "A",
+        "ko": "스노클링할 수 있어요?",
+        "romanization": "seunokeullinghal su isseoyo?",
+        "en": "Can you go snorkeling there?"
+      },
+      {
+        "speaker": "B",
+        "ko": "네, 다양한 해양 생물을 볼 수 있어요. 정말 아름다워요.",
+        "romanization": "ne, dayanghan haeyang saengmureul bol su isseoyo. jeongmal areumdawoyo.",
+        "en": "Yes, you can see various marine life. It's really beautiful."
+      }
+    ]
+  },
+  {
+    "id": "geography-delta-1",
+    "categoryId": "geography",
+    "title": {
+      "ko": "삼각주 이야기",
+      "en": "Talking About Deltas"
+    },
+    "dialogue": [
+      {
+        "speaker": "A",
+        "ko": "삼각주가 뭐예요?",
+        "romanization": "samgakjuga mwoyeyo?",
+        "en": "What is a delta?"
+      },
+      {
+        "speaker": "B",
+        "ko": "강이 바다로 흘러들어가는 곳에 생기는 삼각형 모양의 땅이에요.",
+        "romanization": "gangi badaro heullyeodeureoganeun gose saenggineun samgakhyeong moyangui ttangieyo.",
+        "en": "It's triangular-shaped land formed where a river flows into the sea."
+      },
+      {
+        "speaker": "A",
+        "ko": "유명한 삼각주가 어디 있어요?",
+        "romanization": "yumyeonghan samgakjuga eodi isseoyo?",
+        "en": "Where are some famous deltas?"
+      },
+      {
+        "speaker": "B",
+        "ko": "나일 강 삼각주, 메콩 강 삼각주가 유명해요.",
+        "romanization": "nail gang samgakju, mekong gang samgakjuga yumyeonghaeyo.",
+        "en": "The Nile Delta and the Mekong Delta are famous."
+      }
+    ]
+  },
+  {
+    "id": "geography-basin-1",
+    "categoryId": "geography",
+    "title": {
+      "ko": "분지 이야기",
+      "en": "Talking About Basins"
+    },
+    "dialogue": [
+      {
+        "speaker": "A",
+        "ko": "분지가 뭐예요?",
+        "romanization": "bunjiga mwoyeyo?",
+        "en": "What is a basin?"
+      },
+      {
+        "speaker": "B",
+        "ko": "주위가 산으로 둘러싸인 낮은 지역이에요.",
+        "romanization": "juuiga saneuro dullyeossain najeun jiyeogieyo.",
+        "en": "It's a low area surrounded by mountains."
+      },
+      {
+        "speaker": "A",
+        "ko": "아마존 분지가 유명하죠?",
+        "romanization": "amazon bunjiga yumyeonghajyo?",
+        "en": "The Amazon Basin is famous, right?"
+      },
+      {
+        "speaker": "B",
+        "ko": "네, 세계에서 가장 큰 열대 우림이 있어요.",
+        "romanization": "ne, segyeeseo gajang keun yeoldae urimi isseoyo.",
+        "en": "Yes, it has the world's largest tropical rainforest."
+      }
+    ]
+  },
+  {
+    "id": "geography-fjord-1",
+    "categoryId": "geography",
+    "title": {
+      "ko": "피오르 이야기",
+      "en": "Talking About Fjords"
+    },
+    "dialogue": [
+      {
+        "speaker": "A",
+        "ko": "피오르가 뭐예요?",
+        "romanization": "pioruga mwoyeyo?",
+        "en": "What is a fjord?"
+      },
+      {
+        "speaker": "B",
+        "ko": "빙하가 깎아 만든 좁고 깊은 만이에요.",
+        "romanization": "binghaga kkakka mandeun jopgo gipeun manieyo.",
+        "en": "It's a narrow, deep inlet carved by glaciers."
+      },
+      {
+        "speaker": "A",
+        "ko": "피오르가 어디에 많아요?",
+        "romanization": "pioruga eodie manayo?",
+        "en": "Where are there many fjords?"
+      },
+      {
+        "speaker": "B",
+        "ko": "노르웨이가 피오르로 유명해요. 경치가 정말 아름다워요.",
+        "romanization": "noreuweiga pioruro yumyeonghaeyo. gyeongchiga jeongmal areumdawoyo.",
+        "en": "Norway is famous for fjords. The scenery is really beautiful."
+      }
+    ]
+  },
+  {
+    "id": "geography-equator-1",
+    "categoryId": "geography",
+    "title": {
+      "ko": "적도 이야기",
+      "en": "Talking About the Equator"
+    },
+    "dialogue": [
+      {
+        "speaker": "A",
+        "ko": "적도가 뭐예요?",
+        "romanization": "jeokdoga mwoyeyo?",
+        "en": "What is the equator?"
+      },
+      {
+        "speaker": "B",
+        "ko": "지구를 남반구와 북반구로 나누는 가상의 선이에요.",
+        "romanization": "jigureul nambanguwa bukbanguro nanuneun gasangui seonieyo.",
+        "en": "It's an imaginary line that divides Earth into the Southern and Northern Hemispheres."
+      },
+      {
+        "speaker": "A",
+        "ko": "적도 근처는 날씨가 어때요?",
+        "romanization": "jeokdo geuncheoneun nalssiga eottaeyo?",
+        "en": "What's the weather like near the equator?"
+      },
+      {
+        "speaker": "B",
+        "ko": "일년 내내 덥고 습해요. 계절 변화가 거의 없어요.",
+        "romanization": "illyeon naenae deopgo seupaeyo. gyejeol byeonhwaga geoui eopseoyo.",
+        "en": "It's hot and humid all year. There's almost no seasonal change."
+      }
+    ]
   }
 ]
