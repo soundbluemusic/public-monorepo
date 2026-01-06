@@ -1,17 +1,16 @@
 import { cn } from '@soundblue/ui/utils';
 import { Search } from 'lucide-react';
-
-type SortOption = 'support' | 'newest' | 'name';
+import { type CategoryFilter, isSortOption, type SortOption } from './useWebApiFilters';
 
 interface SearchAndSortProps {
   locale: 'en' | 'ko';
   search: string;
   sortBy: SortOption;
-  category: string;
-  categories: readonly string[];
+  category: CategoryFilter;
+  categories: readonly CategoryFilter[];
   onSearchChange: (value: string) => void;
   onSortChange: (value: SortOption) => void;
-  onCategoryChange: (value: string) => void;
+  onCategoryChange: (value: CategoryFilter) => void;
 }
 
 export function SearchAndSort({
@@ -43,7 +42,11 @@ export function SearchAndSort({
         </div>
         <select
           value={sortBy}
-          onChange={(e) => onSortChange(e.target.value as SortOption)}
+          onChange={(e) => {
+            const value = e.target.value;
+            if (isSortOption(value)) onSortChange(value);
+          }}
+          title={locale === 'ko' ? '정렬 방식' : 'Sort by'}
           className="min-h-11 px-4 rounded-lg bg-(--bg-elevated) border border-(--border-primary) text-(--text-primary) focus:outline-hidden focus:border-(--border-focus) transition-colors cursor-pointer"
         >
           <option value="support">{locale === 'ko' ? '지원률순' : 'Most Supported'}</option>

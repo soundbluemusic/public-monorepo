@@ -1,11 +1,11 @@
 import { cn } from '@soundblue/ui/utils';
 import { ChevronLeft, Github } from 'lucide-react';
-import type { Language } from '../../../i18n';
+import type { Language, MessageKey } from '../../../i18n';
 
 interface SidebarFooterProps {
   locale: Language;
   isCollapsed: boolean;
-  t: (key: string) => string;
+  t: (key: MessageKey) => string;
   onToggleCollapse: () => void;
 }
 

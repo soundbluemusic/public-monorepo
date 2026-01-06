@@ -1,7 +1,7 @@
 import { cn } from '@soundblue/ui/utils';
 import { memo } from 'react';
 import type { DifficultyLevel } from '@/data/types';
-import { useI18n } from '@/i18n';
+import { type MessageKey, useI18n } from '@/i18n';
 
 interface DifficultyBadgeProps {
   level: 1 | 2 | 3 | 4 | 5;
@@ -9,7 +9,7 @@ interface DifficultyBadgeProps {
   size?: 'sm' | 'md';
 }
 
-const labels: Record<1 | 2 | 3 | 4 | 5, string> = {
+const labels: Record<1 | 2 | 3 | 4 | 5, MessageKey> = {
   1: 'elementary',
   2: 'middleSchool',
   3: 'highSchool',

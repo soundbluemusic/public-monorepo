@@ -1,13 +1,14 @@
 import { useAutoAnimate } from '@soundblue/ui/hooks';
 import { memo } from 'react';
 import { StatsCard } from '@/components/StatsCard';
+import type { MessageKey } from '@/i18n';
 
 interface BrowseStatsProps {
   overallProgress: { percentage: number; studied: number; total: number };
   todayStudied: number;
   bookmarkCount: number;
-  /** i18n translation function */
-  t: (key: string) => string;
+  /** i18n translation function (타입 안전) */
+  t: (key: MessageKey) => string;
 }
 
 export const BrowseStats = memo(function BrowseStats({

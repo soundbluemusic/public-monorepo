@@ -6,6 +6,14 @@ import { type CategoryFilter, categories, type Library } from '../../data/librar
 export type SortOption = 'stars' | 'newest' | 'name';
 export type QuickFilter = 'trending' | 'usedHere' | 'new' | null;
 
+/** 유효한 정렬 옵션 */
+const SORT_OPTIONS: readonly SortOption[] = ['stars', 'newest', 'name'] as const;
+
+/** 타입 가드: SortOption 검증 */
+export function isSortOption(value: string): value is SortOption {
+  return (SORT_OPTIONS as readonly string[]).includes(value);
+}
+
 interface UseLibraryFiltersOptions {
   libraries: Library[];
 }
@@ -16,16 +24,17 @@ export function useLibraryFilters({ libraries: libs }: UseLibraryFiltersOptions)
   // Initialize state from URL params
   const initialParams = {
     q: searchParams.get('q') || '',
-    category: (searchParams.get('category') as CategoryFilter) || 'All',
+    category: searchParams.get('category'),
     tag: searchParams.get('tag'),
     filter: searchParams.get('filter'),
     trending: searchParams.get('trending'),
   };
 
   const [search, setSearch] = useState(initialParams.q);
-  const [category, setCategory] = useState<CategoryFilter>(
-    categories.includes(initialParams.category) ? initialParams.category : 'All',
-  );
+  const [category, setCategory] = useState<CategoryFilter>(() => {
+    const cat = initialParams.category;
+    return cat && (categories as readonly string[]).includes(cat) ? (cat as CategoryFilter) : 'All';
+  });
   const [selectedTag, setSelectedTag] = useState<string | null>(initialParams.tag);
   const [quickFilter, setQuickFilter] = useState<QuickFilter>(() => {
     if (initialParams.trending === 'true') return 'trending';

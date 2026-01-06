@@ -265,3 +265,8 @@ export function getFieldById(id: string): MathFieldInfo | undefined {
 
 /** 분야 ID 목록 */
 export const fieldIds = fields.map((f) => f.id);
+
+/** 타입 가드: MathField 검증 */
+export function isMathField(value: string): value is MathFieldInfo['id'] {
+  return fieldIds.includes(value as MathFieldInfo['id']);
+}

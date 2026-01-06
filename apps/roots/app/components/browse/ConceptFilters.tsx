@@ -3,10 +3,10 @@
  */
 import { cn } from '@soundblue/ui/utils';
 import { X } from 'lucide-react';
-import { fields } from '@/data/fields';
+import { fields, isMathField } from '@/data/fields';
 import { type DifficultyLevel, difficultyLabels, type MathField } from '@/data/types';
 import { useI18n } from '@/i18n';
-import type { SortOption } from './useBrowseFilters';
+import { isSortOption, type SortOption } from './useBrowseFilters';
 
 interface ConceptFiltersProps {
   filterDifficulty: DifficultyLevel[];
@@ -76,7 +76,10 @@ export function ConceptFilters({
         <select
           id="field-filter"
           value={filterField}
-          onChange={(e) => onFieldChange(e.target.value as MathField | 'all')}
+          onChange={(e) => {
+            const value = e.target.value;
+            if (value === 'all' || isMathField(value)) onFieldChange(value);
+          }}
           className="w-full max-w-xs min-h-11 px-3 py-2 rounded-lg bg-(--bg-primary) border border-(--border-primary) text-(--text-primary) focus:outline-hidden focus:border-(--border-focus)"
         >
           <option value="all">{t('allFields')}</option>
@@ -99,7 +102,10 @@ export function ConceptFilters({
         <select
           id="sort-option"
           value={sortBy}
-          onChange={(e) => onSortChange(e.target.value as SortOption)}
+          onChange={(e) => {
+            const value = e.target.value;
+            if (isSortOption(value)) onSortChange(value);
+          }}
           className="w-full max-w-xs min-h-11 px-3 py-2 rounded-lg bg-(--bg-primary) border border-(--border-primary) text-(--text-primary) focus:outline-hidden focus:border-(--border-focus)"
         >
           <option value="name">{t('sortByName')}</option>

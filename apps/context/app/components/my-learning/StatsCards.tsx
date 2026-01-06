@@ -1,4 +1,5 @@
 import { BookmarkCheck, TrendingUp, Trophy } from 'lucide-react';
+import type { MessageKey } from '@/i18n';
 
 interface StatsCardsProps {
   studiedCount: number;
@@ -7,7 +8,8 @@ interface StatsCardsProps {
   completedCategories: number;
   totalCategories: number;
   favoriteCount: number;
-  t: (key: string) => string;
+  /** i18n translation function (타입 안전) */
+  t: (key: MessageKey) => string;
 }
 
 export function StatsCards({

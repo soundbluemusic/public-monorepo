@@ -3,9 +3,17 @@ import { useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router';
 import type { WebAPI, webApiCategories } from '../../data/web-apis';
 
-type CategoryFilter = (typeof webApiCategories)[number];
-type SortOption = 'support' | 'newest' | 'name';
+export type CategoryFilter = (typeof webApiCategories)[number];
+export type SortOption = 'support' | 'newest' | 'name';
 type QuickFilterType = 'trending' | 'highSupport' | 'new' | null;
+
+/** 유효한 정렬 옵션 */
+const SORT_OPTIONS: readonly SortOption[] = ['support', 'newest', 'name'] as const;
+
+/** 타입 가드: SortOption 검증 */
+export function isSortOption(value: string): value is SortOption {
+  return (SORT_OPTIONS as readonly string[]).includes(value);
+}
 
 interface UseWebApiFiltersOptions {
   apis: WebAPI[];
@@ -16,17 +24,19 @@ export function useWebApiFilters({ apis, categories }: UseWebApiFiltersOptions) 
   const [searchParams, setSearchParams] = useSearchParams();
 
   // Initialize state from URL params (one-way: URL → State on mount only)
+  const categoryParam = searchParams.get('category');
   const initialParams = {
     q: searchParams.get('q') || '',
-    category: (searchParams.get('category') as CategoryFilter) || 'All',
+    // 카테고리 검증: categories 배열에 포함된 경우만 사용
+    category: (categoryParam && categories.includes(categoryParam)
+      ? categoryParam
+      : 'All') as CategoryFilter,
     filter: searchParams.get('filter'),
     trending: searchParams.get('trending'),
   };
 
   const [search, setSearch] = useState(initialParams.q);
-  const [category, setCategory] = useState<CategoryFilter>(
-    categories.includes(initialParams.category) ? initialParams.category : 'All',
-  );
+  const [category, setCategory] = useState<CategoryFilter>(initialParams.category);
   const [quickFilter, setQuickFilter] = useState<QuickFilterType>(() => {
     if (initialParams.trending === 'true') return 'trending';
     if (initialParams.filter === 'highSupport' || initialParams.filter === 'new')
@@ -122,11 +132,8 @@ export function useWebApiFilters({ apis, categories }: UseWebApiFiltersOptions) 
     setSearchParams(params);
   };
 
-  const handleCategoryChange = (cat: string) => {
-    // Type guard: only set if valid category
-    if (categories.includes(cat)) {
-      setCategory(cat as CategoryFilter);
-    }
+  const handleCategoryChange = (cat: CategoryFilter) => {
+    setCategory(cat);
     const params = new URLSearchParams(searchParams);
     if (cat !== 'All') {
       params.set('category', cat);

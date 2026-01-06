@@ -1,7 +1,7 @@
 import { cn } from '@soundblue/ui/utils';
 import { Search } from 'lucide-react';
 import { type CategoryFilter, categories } from '../../data/libraries';
-import type { SortOption } from './useLibraryFilters';
+import { isSortOption, type SortOption } from './useLibraryFilters';
 
 interface SearchAndSortProps {
   locale: 'en' | 'ko';
@@ -41,7 +41,10 @@ export function SearchAndSort({
         </div>
         <select
           value={sortBy}
-          onChange={(e) => onSortChange(e.target.value as SortOption)}
+          onChange={(e) => {
+            const value = e.target.value;
+            if (isSortOption(value)) onSortChange(value);
+          }}
           className="min-h-11 px-4 rounded-lg bg-(--bg-elevated) border border-(--border-primary) text-(--text-primary) focus:outline-hidden focus:border-(--border-focus) transition-colors cursor-pointer"
         >
           <option value="stars">{locale === 'ko' ? '인기순' : 'Most Popular'}</option>

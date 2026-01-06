@@ -14,10 +14,27 @@ import {
   lightConceptsSortedByName,
   nameIndex,
 } from '@/data/concepts';
+import { isMathField } from '@/data/fields';
 import type { DifficultyLevel, MathField } from '@/data/types';
 
 export type SortOption = 'name' | 'difficulty' | 'field';
 export type ViewMode = 'fields' | 'concepts' | 'graph';
+
+/** 유효한 정렬 옵션 */
+const SORT_OPTIONS: readonly SortOption[] = ['name', 'difficulty', 'field'] as const;
+
+/** 유효한 뷰 모드 */
+const VIEW_MODES: readonly ViewMode[] = ['fields', 'concepts', 'graph'] as const;
+
+/** 타입 가드: SortOption 검증 */
+export function isSortOption(value: string): value is SortOption {
+  return (SORT_OPTIONS as readonly string[]).includes(value);
+}
+
+/** 타입 가드: ViewMode 검증 */
+export function isViewMode(value: string): value is ViewMode {
+  return (VIEW_MODES as readonly string[]).includes(value);
+}
 
 /** 페이지당 항목 수 */
 export const PAGE_SIZE = 50;
@@ -67,10 +84,8 @@ export function useBrowseFilters(): UseBrowseFiltersReturn {
     const sortParam = searchParams.get('sort');
     const pageParam = searchParams.get('page');
 
-    if (viewParam === 'concepts') {
-      setViewModeState('concepts');
-    } else if (viewParam === 'graph') {
-      setViewModeState('graph');
+    if (viewParam && isViewMode(viewParam) && viewParam !== 'fields') {
+      setViewModeState(viewParam);
     }
 
     if (diffParam) {
@@ -83,15 +98,12 @@ export function useBrowseFilters(): UseBrowseFiltersReturn {
       }
     }
 
-    if (fieldParam && fieldParam !== 'all') {
-      setFilterField(fieldParam as MathField);
+    if (fieldParam && fieldParam !== 'all' && isMathField(fieldParam)) {
+      setFilterField(fieldParam);
     }
 
-    if (sortParam) {
-      const validSorts: SortOption[] = ['name', 'difficulty', 'field'];
-      if (validSorts.includes(sortParam as SortOption)) {
-        setSortBy(sortParam as SortOption);
-      }
+    if (sortParam && isSortOption(sortParam)) {
+      setSortBy(sortParam);
     }
 
     if (pageParam) {

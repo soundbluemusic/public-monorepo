@@ -18,11 +18,11 @@ export const BrowseTabs = memo(function BrowseTabs({
 }: BrowseTabsProps) {
   const { t } = useI18n();
 
-  const tabs = useMemo(
+  const tabs: { mode: ViewMode; label: string; icon: typeof Grid3X3 }[] = useMemo(
     () => [
-      { mode: 'fields' as ViewMode, label: t('browseByField'), icon: Grid3X3 },
-      { mode: 'concepts' as ViewMode, label: t('allConcepts'), icon: LayoutList },
-      { mode: 'graph' as ViewMode, label: t('relationGraph'), icon: GitGraph },
+      { mode: 'fields', label: t('browseByField'), icon: Grid3X3 },
+      { mode: 'concepts', label: t('allConcepts'), icon: LayoutList },
+      { mode: 'graph', label: t('relationGraph'), icon: GitGraph },
     ],
     [t],
   );

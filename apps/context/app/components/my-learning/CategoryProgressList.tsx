@@ -1,13 +1,15 @@
 import { FolderOpen } from 'lucide-react';
 import { Link } from 'react-router';
 import type { categories } from '@/data/categories';
+import type { MessageKey } from '@/i18n';
 
 interface CategoryProgressListProps {
   cats: typeof categories;
   categoryProgress: Record<string, { studied: number; total: number }>;
   locale: 'en' | 'ko';
   localePath: (path: string) => string;
-  t: (key: string) => string;
+  /** i18n translation function (타입 안전) */
+  t: (key: MessageKey) => string;
 }
 
 export function CategoryProgressList({

@@ -7,6 +7,14 @@ import { useLocation } from 'react-router';
 import enMessages from '../../project.inlang/messages/en.json';
 import koMessages from '../../project.inlang/messages/ko.json';
 
+/** 번역 키 타입 (compile-time 검증) */
+export type MessageKey = keyof typeof enMessages;
+
+/** 타입 가드: MessageKey 검증 */
+export function isMessageKey(key: string): key is MessageKey {
+  return key in enMessages;
+}
+
 // 정규식 캐시: 매번 new RegExp 생성 방지
 const paramRegexCache = new Map<string, RegExp>();
 function getParamRegex(key: string): RegExp {
@@ -22,9 +30,9 @@ function getParamRegex(key: string): RegExp {
 export type { Language } from '@soundblue/i18n';
 
 // Message dictionaries by locale
-const messages: Record<Language, Record<string, string>> = {
-  en: enMessages as Record<string, string>,
-  ko: koMessages as Record<string, string>,
+const messages: Record<Language, Record<MessageKey, string>> = {
+  en: enMessages,
+  ko: koMessages as Record<MessageKey, string>,
 };
 
 export interface UILabels {
@@ -127,7 +135,10 @@ export interface UILabels {
 interface I18nContextType {
   locale: Language;
   setLocale: (lang: Language) => void;
-  t: (key: string, params?: Record<string, string | number>) => string;
+  /** 타입 안전한 번역 함수 (컴파일 타임 검증) */
+  t: (key: MessageKey, params?: Record<string, string | number>) => string;
+  /** 런타임 문자열 키용 번역 함수 */
+  tDynamic: (key: string, params?: Record<string, string | number>) => string;
   isKorean: boolean;
   localePath: (path: string) => string;
 }
@@ -149,25 +160,22 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       window.location.href = newPath;
     };
 
-    const t = (key: string, params?: Record<string, string | number>): string => {
-      // Look up translation from JSON messages
+    // 타입 안전한 번역 함수
+    const t = (key: MessageKey, params?: Record<string, string | number>): string => {
       const dict = messages[locale];
       let translation = dict[key];
-      if (translation === undefined) {
-        // Fallback to English if key not found in current locale
-        translation = messages.en[key];
-      }
-      if (translation === undefined) {
-        // Return key if not found anywhere
-        return key;
-      }
-      // Replace template variables: {key} → value
       if (params) {
         for (const [k, v] of Object.entries(params)) {
           translation = translation.replace(getParamRegex(k), String(v));
         }
       }
       return translation;
+    };
+
+    // 런타임 문자열 키용 번역 함수
+    const tDynamic = (key: string, params?: Record<string, string | number>): string => {
+      if (!isMessageKey(key)) return key;
+      return t(key, params);
     };
 
     const localePath = (path: string): string => {
@@ -178,6 +186,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       locale,
       setLocale,
       t,
+      tDynamic,
       isKorean: locale === 'ko',
       localePath,
     };

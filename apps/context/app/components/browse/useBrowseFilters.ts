@@ -18,6 +18,7 @@ const LightEntrySchema = z.object({
 
 const LightEntryArraySchema = z.array(LightEntrySchema);
 
+/** 카테고리 필터: 'all' 또는 카테고리 ID */
 export type FilterCategory = 'all' | string;
 
 /** 유효한 필터 상태 값 (타입과 검증 동기화) */
@@ -27,6 +28,16 @@ export type FilterStatus = (typeof FILTER_STATUSES)[number];
 /** 유효한 정렬 옵션 값 (타입과 검증 동기화) */
 export const SORT_OPTIONS = ['alphabetical', 'category', 'recent'] as const;
 export type SortOption = (typeof SORT_OPTIONS)[number];
+
+/** 타입 가드: FilterStatus 검증 */
+export function isFilterStatus(value: string): value is FilterStatus {
+  return (FILTER_STATUSES as readonly string[]).includes(value);
+}
+
+/** 타입 가드: SortOption 검증 */
+export function isSortOption(value: string): value is SortOption {
+  return (SORT_OPTIONS as readonly string[]).includes(value);
+}
 
 /** 페이지당 항목 수 */
 export const PAGE_SIZE = 50;
@@ -68,7 +79,7 @@ export function useBrowseFilters({
   const [categoryEntries, setCategoryEntries] = useState<LightEntry[] | null>(null);
   const [isLoadingCategory, setIsLoadingCategory] = useState(false);
 
-  // Sync URL params to state
+  // Sync URL params to state (타입 가드 사용)
   useEffect(() => {
     const categoryParam = searchParams.get('category');
     const statusParam = searchParams.get('status');
@@ -78,20 +89,16 @@ export function useBrowseFilters({
     if (categoryParam) {
       const isValidCategory = categoryParam === 'all' || cats.some((c) => c.id === categoryParam);
       if (isValidCategory) {
-        setFilterCategory(categoryParam as FilterCategory);
+        setFilterCategory(categoryParam);
       }
     }
 
-    if (statusParam) {
-      if ((FILTER_STATUSES as readonly string[]).includes(statusParam)) {
-        setFilterStatus(statusParam as FilterStatus);
-      }
+    if (statusParam && isFilterStatus(statusParam)) {
+      setFilterStatus(statusParam);
     }
 
-    if (sortParam) {
-      if ((SORT_OPTIONS as readonly string[]).includes(sortParam)) {
-        setSortBy(sortParam as SortOption);
-      }
+    if (sortParam && isSortOption(sortParam)) {
+      setSortBy(sortParam);
     }
 
     if (pageParam) {

@@ -15,7 +15,7 @@ import { useCallback, useMemo, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import { Layout } from '@/components/layout';
 import type { MeaningEntry } from '@/data/types';
-import { useI18n } from '@/i18n';
+import { type MessageKey, useI18n } from '@/i18n';
 
 type ExportFormat = 'json' | 'txt' | 'md' | 'csv';
 
@@ -155,7 +155,8 @@ function FormatPreview({
   format: ExportFormat;
   entries: MeaningEntry[];
   locale: 'en' | 'ko';
-  t: (key: string) => string;
+  /** i18n translation function (타입 안전) */
+  t: (key: MessageKey) => string;
 }) {
   const sampleEntries = entries.slice(0, PREVIEW_COUNT);
 
@@ -250,7 +251,8 @@ export default function DownloadPage() {
     [entries, locale],
   );
 
-  const formats: { format: ExportFormat; label: string; descriptionKey: string }[] = [
+  /** 다운로드 포맷 설정 (descriptionKey는 MessageKey 타입으로 명시) */
+  const formats: { format: ExportFormat; label: string; descriptionKey: MessageKey }[] = [
     { format: 'json', label: 'JSON', descriptionKey: 'downloadForDevFull' },
     { format: 'csv', label: 'CSV', descriptionKey: 'downloadForExcel' },
     { format: 'txt', label: 'TXT', descriptionKey: 'downloadTabSeparated' },

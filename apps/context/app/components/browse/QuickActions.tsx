@@ -1,6 +1,7 @@
 import { cn } from '@soundblue/ui/utils';
 import { Shuffle } from 'lucide-react';
 import { memo } from 'react';
+import type { MessageKey } from '@/i18n';
 import type { FilterStatus } from './useBrowseFilters';
 
 interface QuickActionsProps {
@@ -8,8 +9,8 @@ interface QuickActionsProps {
   onRandomWord: () => void;
   onShowBookmarks: () => void;
   onShowUnstudied: () => void;
-  /** i18n translation function */
-  t: (key: string) => string;
+  /** i18n translation function (타입 안전) */
+  t: (key: MessageKey) => string;
 }
 
 export const QuickActions = memo(function QuickActions({

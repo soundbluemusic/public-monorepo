@@ -10,10 +10,22 @@ import koMessages from '../../project.inlang/messages/ko.json';
 // Re-export for backward compatibility
 export type { Language } from '@soundblue/i18n';
 
-// Message dictionaries by locale
-const messages: Record<Language, Record<string, string>> = {
-  en: enMessages as Record<string, string>,
-  ko: koMessages as Record<string, string>,
+/**
+ * i18n 메시지 키 타입 (컴파일 타임 검증)
+ */
+export type MessageKey = keyof typeof enMessages;
+
+/**
+ * 타입 가드: 유효한 메시지 키인지 검증
+ */
+export function isMessageKey(key: string): key is MessageKey {
+  return key in enMessages;
+}
+
+// Message dictionaries by locale (타입 안전)
+const messages: Record<Language, Record<MessageKey, string>> = {
+  en: enMessages,
+  ko: koMessages as Record<MessageKey, string>,
 };
 
 export interface UILabels {
@@ -116,7 +128,10 @@ export interface UILabels {
 interface I18nContextType {
   locale: Language;
   setLocale: (lang: Language) => void;
-  t: (key: string) => string;
+  /** 타입 안전한 번역 함수 */
+  t: (key: MessageKey) => string;
+  /** 동적 키를 위한 번역 함수 (런타임 검증) */
+  tDynamic: (key: string) => string;
   isKorean: boolean;
   localePath: (path: string) => string;
 }
@@ -138,19 +153,19 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       window.location.href = newPath;
     };
 
-    const t = (key: string): string => {
-      // Look up translation from JSON messages
-      const dict = messages[locale];
-      const translation = dict[key];
-      if (translation !== undefined) {
-        return translation;
+    /** 타입 안전한 번역 함수 (MessageKey만 허용) */
+    const t = (key: MessageKey): string => {
+      return messages[locale][key];
+    };
+
+    /** 동적 키를 위한 번역 함수 (런타임 검증 + fallback) */
+    const tDynamic = (key: string): string => {
+      if (isMessageKey(key)) {
+        return messages[locale][key];
       }
-      // Fallback to English if key not found in current locale
-      const fallback = messages.en[key];
-      if (fallback !== undefined) {
-        return fallback;
+      if (key in messages.en) {
+        return messages.en[key as MessageKey];
       }
-      // Return key if not found anywhere
       return key;
     };
 
@@ -162,6 +177,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       locale,
       setLocale,
       t,
+      tDynamic,
       isKorean: locale === 'ko',
       localePath,
     };
@@ -180,3 +196,4 @@ export function useI18n() {
 
 export const useLocale = () => useI18n().locale;
 export const useT = () => useI18n().t;
+export const useTDynamic = () => useI18n().tDynamic;

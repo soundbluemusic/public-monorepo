@@ -5,6 +5,7 @@ import {
   BrowseFilters,
   BrowseStats,
   EntryList,
+  type FilterCategory,
   type FilterStatus,
   Pagination,
   QuickActions,
@@ -130,7 +131,7 @@ export default function BrowsePage() {
   }, [setFilterStatus, setFilterCategory, updateUrlParams]);
 
   const handleCategoryChange = useCallback(
-    (value: string) => {
+    (value: FilterCategory) => {
       setFilterCategory(value);
       updateUrlParams({ category: value });
     },
@@ -138,16 +139,16 @@ export default function BrowsePage() {
   );
 
   const handleStatusChange = useCallback(
-    (value: string) => {
-      setFilterStatus(value as FilterStatus);
+    (value: FilterStatus) => {
+      setFilterStatus(value);
       updateUrlParams({ status: value });
     },
     [setFilterStatus, updateUrlParams],
   );
 
   const handleSortChange = useCallback(
-    (value: string) => {
-      setSortBy(value as SortOption);
+    (value: SortOption) => {
+      setSortBy(value);
       updateUrlParams({ sort: value === 'alphabetical' ? null : value });
     },
     [setSortBy, updateUrlParams],

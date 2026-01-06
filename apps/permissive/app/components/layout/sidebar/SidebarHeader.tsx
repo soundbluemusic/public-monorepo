@@ -1,11 +1,12 @@
 import { cn } from '@soundblue/ui/utils';
 import { Sparkles, X } from 'lucide-react';
 import { Link } from 'react-router';
+import type { MessageKey } from '../../../i18n';
 
 interface SidebarHeaderProps {
   localePath: (path: string) => string;
   isCollapsed: boolean;
-  t: (key: string) => string;
+  t: (key: MessageKey) => string;
   onClose: () => void;
 }
 

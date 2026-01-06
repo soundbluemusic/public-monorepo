@@ -1,13 +1,14 @@
 import { cn } from '@soundblue/ui/utils';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { memo, useMemo } from 'react';
+import type { MessageKey } from '@/i18n';
 
 interface PaginationProps {
   currentPage: number;
   totalPages: number;
   onPageChange: (page: number) => void;
-  /** i18n translation function */
-  t: (key: string) => string;
+  /** i18n translation function (타입 안전) */
+  t: (key: MessageKey) => string;
 }
 
 /**
