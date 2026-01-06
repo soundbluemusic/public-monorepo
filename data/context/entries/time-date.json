@@ -7,26 +7,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "daily", "basic"],
+    "tags": [
+      "time",
+      "daily",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "오늘",
         "explanation": "지금 이 날을 가리키는 말. 과거나 미래가 아닌 현재의 날.",
         "examples": {
-          "beginner": "오늘 날씨가 좋아요.",
-          "intermediate": "오늘 저녁에 뭐 해요?",
-          "advanced": "오늘 하루도 정말 바쁘게 지나갔네요. 내일은 좀 여유가 있었으면 좋겠어요.",
-          "master": "오늘 아침 일찍 일어나서 운동을 하고 출근했더니 하루 종일 기분이 좋았다."
+          "beginner": "지금 오늘이에요.",
+          "intermediate": "오늘에 만나요.",
+          "advanced": "오늘의 개념은 일정 관리에 필수적입니다.",
+          "master": "오늘을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "오늘에 어때요?",
+              "romanization": "oneule eottaeyo?",
+              "translation": "How about today?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "today",
         "explanation": "The current day, not yesterday or tomorrow.",
         "examples": {
-          "beginner": "The weather is nice today.",
-          "intermediate": "What are you doing this evening?",
-          "advanced": "Today passed by really busily. I hope tomorrow will be more relaxed.",
-          "master": "I woke up early this morning, exercised, and went to work, and I felt good all day."
+          "beginner": "It's today now.",
+          "intermediate": "Let's meet at today.",
+          "advanced": "The concept of today is essential for schedule management.",
+          "master": "Efficiently utilizing today is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about today?",
+              "romanization": "",
+              "translation": "오늘에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -43,26 +105,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "daily", "basic"],
+    "tags": [
+      "time",
+      "daily",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "내일",
         "explanation": "오늘의 다음 날. 하루 뒤를 가리키는 말.",
         "examples": {
-          "beginner": "내일 만나요!",
-          "intermediate": "내일 시험이 있어서 공부해야 해요.",
-          "advanced": "내일 중요한 발표가 있어서 오늘 밤새 준비해야 할 것 같아요.",
-          "master": "내일이 마감인 프로젝트 때문에 팀원들과 밤늦게까지 회의를 했다."
+          "beginner": "지금 내일이에요.",
+          "intermediate": "내일에 만나요.",
+          "advanced": "내일의 개념은 일정 관리에 필수적입니다.",
+          "master": "내일을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "내일에 어때요?",
+              "romanization": "naeile eottaeyo?",
+              "translation": "How about tomorrow?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "tomorrow",
         "explanation": "The day after today.",
         "examples": {
-          "beginner": "See you tomorrow!",
-          "intermediate": "I have to study because there's an exam tomorrow.",
-          "advanced": "I have an important presentation tomorrow, so I think I'll have to prepare all night.",
-          "master": "Because of the project due tomorrow, we had a meeting with the team until late at night."
+          "beginner": "It's tomorrow now.",
+          "intermediate": "Let's meet at tomorrow.",
+          "advanced": "The concept of tomorrow is essential for schedule management.",
+          "master": "Efficiently utilizing tomorrow is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about tomorrow?",
+              "romanization": "",
+              "translation": "내일에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -79,26 +203,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "daily", "basic"],
+    "tags": [
+      "time",
+      "daily",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "어제",
         "explanation": "오늘의 바로 전날. 하루 전을 가리키는 말.",
         "examples": {
-          "beginner": "어제 뭐 했어요?",
-          "intermediate": "어제 친구를 만났어요.",
-          "advanced": "어제 저녁에 오랜만에 가족들과 함께 외식을 했어요.",
-          "master": "어제 회사에서 갑자기 야근을 하게 되어서 약속을 취소해야 했다."
+          "beginner": "지금 어제이에요.",
+          "intermediate": "어제에 만나요.",
+          "advanced": "어제의 개념은 일정 관리에 필수적입니다.",
+          "master": "어제을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "어제에 어때요?",
+              "romanization": "eojee eottaeyo?",
+              "translation": "How about yesterday?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "yesterday",
         "explanation": "The day before today.",
         "examples": {
-          "beginner": "What did you do yesterday?",
-          "intermediate": "I met a friend yesterday.",
-          "advanced": "Yesterday evening, I went out to eat with my family for the first time in a while.",
-          "master": "I had to cancel my appointment because I suddenly had to work overtime at the company yesterday."
+          "beginner": "It's yesterday now.",
+          "intermediate": "Let's meet at yesterday.",
+          "advanced": "The concept of yesterday is essential for schedule management.",
+          "master": "Efficiently utilizing yesterday is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about yesterday?",
+              "romanization": "",
+              "translation": "어제에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -115,26 +301,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "daily", "basic"],
+    "tags": [
+      "time",
+      "daily",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "아침",
         "explanation": "해가 뜨고 낮이 시작되는 시간. 또는 아침에 먹는 식사.",
         "examples": {
-          "beginner": "아침을 먹었어요.",
-          "intermediate": "아침에 일찍 일어나요.",
-          "advanced": "아침마다 공원에서 조깅을 하는 것이 저의 일상입니다.",
-          "master": "아침 일찍 일어나는 습관을 들이면 하루를 더 효율적으로 보낼 수 있다."
+          "beginner": "지금 아침이에요.",
+          "intermediate": "아침에 만나요.",
+          "advanced": "아침의 개념은 일정 관리에 필수적입니다.",
+          "master": "아침을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "아침에 어때요?",
+              "romanization": "achime eottaeyo?",
+              "translation": "How about morning / breakfast?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "morning / breakfast",
         "explanation": "The time when the sun rises and the day begins. Also refers to the morning meal.",
         "examples": {
-          "beginner": "I ate breakfast.",
-          "intermediate": "I wake up early in the morning.",
-          "advanced": "Jogging in the park every morning is part of my daily routine.",
-          "master": "If you develop the habit of waking up early in the morning, you can spend your day more efficiently."
+          "beginner": "It's morning / breakfast now.",
+          "intermediate": "Let's meet at morning / breakfast.",
+          "advanced": "The concept of morning / breakfast is essential for schedule management.",
+          "master": "Efficiently utilizing morning / breakfast is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about morning / breakfast?",
+              "romanization": "",
+              "translation": "아침에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -151,26 +399,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "daily", "basic"],
+    "tags": [
+      "time",
+      "daily",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "저녁",
         "explanation": "해가 지고 밤이 시작되는 시간. 또는 저녁에 먹는 식사.",
         "examples": {
-          "beginner": "저녁 먹었어요?",
-          "intermediate": "저녁에 영화 볼래요?",
-          "advanced": "저녁 시간에는 가족들과 함께 식사하면서 하루 이야기를 나눠요.",
-          "master": "퇴근 후 저녁 시간을 어떻게 보내느냐에 따라 삶의 질이 달라진다고 생각해요."
+          "beginner": "지금 저녁이에요.",
+          "intermediate": "저녁에 만나요.",
+          "advanced": "저녁의 개념은 일정 관리에 필수적입니다.",
+          "master": "저녁을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "저녁에 어때요?",
+              "romanization": "jeonyeoke eottaeyo?",
+              "translation": "How about evening / dinner?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "evening / dinner",
         "explanation": "The time when the sun sets and night begins. Also refers to the evening meal.",
         "examples": {
-          "beginner": "Did you eat dinner?",
-          "intermediate": "Do you want to watch a movie in the evening?",
-          "advanced": "In the evening, I share stories about the day while having dinner with my family.",
-          "master": "I think the quality of life changes depending on how you spend your evening after work."
+          "beginner": "It's evening / dinner now.",
+          "intermediate": "Let's meet at evening / dinner.",
+          "advanced": "The concept of evening / dinner is essential for schedule management.",
+          "master": "Efficiently utilizing evening / dinner is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about evening / dinner?",
+              "romanization": "",
+              "translation": "저녁에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -187,26 +497,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "daily", "basic"],
+    "tags": [
+      "time",
+      "daily",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "밤",
         "explanation": "해가 진 후부터 해가 뜨기 전까지의 어두운 시간.",
         "examples": {
-          "beginner": "밤에 잘 자요.",
-          "intermediate": "밤늦게까지 공부했어요.",
-          "advanced": "밤하늘의 별을 보면서 산책하는 것을 좋아해요.",
-          "master": "밤새 작업을 하느라 다음 날 아침에 너무 피곤해서 일어나기 힘들었다."
+          "beginner": "지금 밤이에요.",
+          "intermediate": "밤에 만나요.",
+          "advanced": "밤의 개념은 일정 관리에 필수적입니다.",
+          "master": "밤을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "밤에 어때요?",
+              "romanization": "bame eottaeyo?",
+              "translation": "How about night?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "night",
         "explanation": "The dark time from after the sun sets until before the sun rises.",
         "examples": {
-          "beginner": "Sleep well at night.",
-          "intermediate": "I studied until late at night.",
-          "advanced": "I like taking walks while looking at the stars in the night sky.",
-          "master": "I worked all night, so I was too tired to get up the next morning."
+          "beginner": "It's night now.",
+          "intermediate": "Let's meet at night.",
+          "advanced": "The concept of night is essential for schedule management.",
+          "master": "Efficiently utilizing night is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about night?",
+              "romanization": "",
+              "translation": "밤에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -223,26 +595,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "unit", "basic"],
+    "tags": [
+      "time",
+      "unit",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "시",
         "explanation": "시간을 나타내는 단위. 하루를 24등분한 것 중 하나.",
         "examples": {
-          "beginner": "지금 몇 시예요?",
-          "intermediate": "3시에 만나요.",
-          "advanced": "회의가 오후 2시에 시작하니까 점심은 일찍 먹어야 해요.",
-          "master": "아침 6시에 일어나서 7시까지 운동을 하고 8시에 출근하는 것이 저의 루틴이에요."
+          "beginner": "지금 시이에요.",
+          "intermediate": "시에 만나요.",
+          "advanced": "시의 개념은 일정 관리에 필수적입니다.",
+          "master": "시을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "시에 어때요?",
+              "romanization": "sie eottaeyo?",
+              "translation": "How about o'clock / hour?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "o'clock / hour",
         "explanation": "A unit for expressing time. One of 24 parts of a day.",
         "examples": {
-          "beginner": "What time is it now?",
-          "intermediate": "Let's meet at 3 o'clock.",
-          "advanced": "The meeting starts at 2 PM, so we need to eat lunch early.",
-          "master": "My routine is to wake up at 6 AM, exercise until 7, and go to work at 8."
+          "beginner": "It's o'clock / hour now.",
+          "intermediate": "Let's meet at o'clock / hour.",
+          "advanced": "The concept of o'clock / hour is essential for schedule management.",
+          "master": "Efficiently utilizing o'clock / hour is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about o'clock / hour?",
+              "romanization": "",
+              "translation": "시에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -259,26 +693,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "unit", "basic"],
+    "tags": [
+      "time",
+      "unit",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "분",
         "explanation": "시간을 나타내는 단위. 1시간을 60등분한 것 중 하나.",
         "examples": {
-          "beginner": "5분 기다려 주세요.",
-          "intermediate": "30분 후에 도착해요.",
-          "advanced": "지하철은 10분 간격으로 운행됩니다.",
-          "master": "약속 시간에서 15분이 지났는데도 친구가 오지 않아서 걱정이 되었다."
+          "beginner": "지금 분이에요.",
+          "intermediate": "분에 만나요.",
+          "advanced": "분의 개념은 일정 관리에 필수적입니다.",
+          "master": "분을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "분에 어때요?",
+              "romanization": "bune eottaeyo?",
+              "translation": "How about minute?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "minute",
         "explanation": "A unit for expressing time. One of 60 parts of an hour.",
         "examples": {
-          "beginner": "Please wait 5 minutes.",
-          "intermediate": "I'll arrive in 30 minutes.",
-          "advanced": "The subway runs at 10-minute intervals.",
-          "master": "Even though 15 minutes had passed from the appointment time, my friend hadn't arrived, so I was worried."
+          "beginner": "It's minute now.",
+          "intermediate": "Let's meet at minute.",
+          "advanced": "The concept of minute is essential for schedule management.",
+          "master": "Efficiently utilizing minute is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about minute?",
+              "romanization": "",
+              "translation": "분에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -295,26 +791,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "frequent",
-    "tags": ["time", "unit", "basic"],
+    "tags": [
+      "time",
+      "unit",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "초",
         "explanation": "시간을 나타내는 단위. 1분을 60등분한 것 중 하나.",
         "examples": {
-          "beginner": "10초만 기다려요.",
-          "intermediate": "라면은 3분 30초 동안 끓여요.",
-          "advanced": "100미터 달리기에서 10초 안에 들어오는 것이 목표예요.",
-          "master": "면접관이 '30초 안에 자기소개를 해 주세요'라고 해서 긴장했다."
+          "beginner": "지금 초이에요.",
+          "intermediate": "초에 만나요.",
+          "advanced": "초의 개념은 일정 관리에 필수적입니다.",
+          "master": "초을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "초에 어때요?",
+              "romanization": "choe eottaeyo?",
+              "translation": "How about second?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "second",
         "explanation": "A unit for expressing time. One of 60 parts of a minute.",
         "examples": {
-          "beginner": "Wait just 10 seconds.",
-          "intermediate": "Boil the ramen for 3 minutes and 30 seconds.",
-          "advanced": "My goal is to finish the 100-meter dash in under 10 seconds.",
-          "master": "The interviewer said 'Please introduce yourself in 30 seconds,' so I got nervous."
+          "beginner": "It's second now.",
+          "intermediate": "Let's meet at second.",
+          "advanced": "The concept of second is essential for schedule management.",
+          "master": "Efficiently utilizing second is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about second?",
+              "romanization": "",
+              "translation": "초에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -331,26 +889,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "calendar", "basic"],
+    "tags": [
+      "time",
+      "calendar",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "월",
         "explanation": "1년을 12등분한 것 중 하나. 달을 세는 단위.",
         "examples": {
-          "beginner": "지금 몇 월이에요?",
-          "intermediate": "3월에 봄이 와요.",
-          "advanced": "한국에서는 3월에 새 학기가 시작됩니다.",
-          "master": "12월은 한 해를 마무리하는 달이라 여러 가지 행사가 많아요."
+          "beginner": "지금 월이에요.",
+          "intermediate": "월에 만나요.",
+          "advanced": "월의 개념은 일정 관리에 필수적입니다.",
+          "master": "월을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "월에 어때요?",
+              "romanization": "wole eottaeyo?",
+              "translation": "How about month?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "month",
         "explanation": "One of 12 parts of a year. A unit for counting months.",
         "examples": {
-          "beginner": "What month is it now?",
-          "intermediate": "Spring comes in March.",
-          "advanced": "In Korea, the new school year starts in March.",
-          "master": "December is the month that wraps up the year, so there are many events."
+          "beginner": "It's month now.",
+          "intermediate": "Let's meet at month.",
+          "advanced": "The concept of month is essential for schedule management.",
+          "master": "Efficiently utilizing month is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about month?",
+              "romanization": "",
+              "translation": "월에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -367,26 +987,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "calendar", "basic"],
+    "tags": [
+      "time",
+      "calendar",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "일",
         "explanation": "날짜를 세는 단위. 하루.",
         "examples": {
-          "beginner": "오늘이 며칠이에요?",
-          "intermediate": "생일이 5월 15일이에요.",
-          "advanced": "이번 달 말일까지 보고서를 제출해야 합니다.",
-          "master": "매월 25일은 월급날이라서 직장인들이 가장 기다리는 날이다."
+          "beginner": "지금 일이에요.",
+          "intermediate": "일에 만나요.",
+          "advanced": "일의 개념은 일정 관리에 필수적입니다.",
+          "master": "일을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "일에 어때요?",
+              "romanization": "ile eottaeyo?",
+              "translation": "How about day (date)?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "day (date)",
         "explanation": "A unit for counting dates. One day.",
         "examples": {
-          "beginner": "What's the date today?",
-          "intermediate": "My birthday is May 15th.",
-          "advanced": "The report must be submitted by the end of this month.",
-          "master": "The 25th of every month is payday, so it's the day office workers look forward to the most."
+          "beginner": "It's day (date) now.",
+          "intermediate": "Let's meet at day (date).",
+          "advanced": "The concept of day (date) is essential for schedule management.",
+          "master": "Efficiently utilizing day (date) is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about day (date)?",
+              "romanization": "",
+              "translation": "일에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -403,26 +1085,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "calendar", "basic"],
+    "tags": [
+      "time",
+      "calendar",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "년",
         "explanation": "해를 세는 단위. 365일 또는 366일.",
         "examples": {
-          "beginner": "올해는 2025년이에요.",
-          "intermediate": "한국에 온 지 2년이 됐어요.",
-          "advanced": "새해에는 작년보다 더 열심히 살겠다고 다짐했어요.",
-          "master": "10년 전 이 회사에 입사했을 때와 지금을 비교하면 많은 것이 변했다."
+          "beginner": "지금 년이에요.",
+          "intermediate": "년에 만나요.",
+          "advanced": "년의 개념은 일정 관리에 필수적입니다.",
+          "master": "년을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "년에 어때요?",
+              "romanization": "nyeone eottaeyo?",
+              "translation": "How about year?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "year",
         "explanation": "A unit for counting years. 365 or 366 days.",
         "examples": {
-          "beginner": "This year is 2025.",
-          "intermediate": "It's been 2 years since I came to Korea.",
-          "advanced": "I resolved to live harder this new year than last year.",
-          "master": "Comparing when I joined this company 10 years ago to now, many things have changed."
+          "beginner": "It's year now.",
+          "intermediate": "Let's meet at year.",
+          "advanced": "The concept of year is essential for schedule management.",
+          "master": "Efficiently utilizing year is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about year?",
+              "romanization": "",
+              "translation": "년에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -439,26 +1183,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "weekly", "basic"],
+    "tags": [
+      "time",
+      "weekly",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "주말",
         "explanation": "한 주의 끝 부분. 보통 토요일과 일요일을 말한다.",
         "examples": {
-          "beginner": "주말에 뭐 해요?",
-          "intermediate": "주말에 친구를 만날 거예요.",
-          "advanced": "주말에는 보통 집에서 쉬거나 영화를 봐요.",
-          "master": "주말 동안 밀린 집안일을 하고 다음 주를 위해 충분히 쉬어야 해요."
+          "beginner": "지금 주말이에요.",
+          "intermediate": "주말에 만나요.",
+          "advanced": "주말의 개념은 일정 관리에 필수적입니다.",
+          "master": "주말을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "주말에 어때요?",
+              "romanization": "jumale eottaeyo?",
+              "translation": "How about weekend?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "weekend",
         "explanation": "The end of a week. Usually refers to Saturday and Sunday.",
         "examples": {
-          "beginner": "What are you doing on the weekend?",
-          "intermediate": "I'm going to meet a friend on the weekend.",
-          "advanced": "On weekends, I usually rest at home or watch movies.",
-          "master": "During the weekend, I need to do the household chores that piled up and rest enough for the next week."
+          "beginner": "It's weekend now.",
+          "intermediate": "Let's meet at weekend.",
+          "advanced": "The concept of weekend is essential for schedule management.",
+          "master": "Efficiently utilizing weekend is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about weekend?",
+              "romanization": "",
+              "translation": "주말에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -475,26 +1281,88 @@
     "categoryId": "time-date",
     "difficulty": "intermediate",
     "frequency": "frequent",
-    "tags": ["time", "weekly", "work"],
+    "tags": [
+      "time",
+      "weekly",
+      "work"
+    ],
     "translations": {
       "ko": {
         "word": "평일",
         "explanation": "주말이나 공휴일이 아닌 보통 날. 월요일부터 금요일까지.",
         "examples": {
-          "beginner": "평일에 바빠요.",
-          "intermediate": "평일에는 회사에 가요.",
-          "advanced": "평일 저녁에는 시간이 없어서 주말에 만나는 게 어때요?",
-          "master": "평일에는 직장과 집을 오가느라 바쁘지만, 주말에는 여유를 즐길 수 있다."
+          "beginner": "지금 평일이에요.",
+          "intermediate": "평일에 만나요.",
+          "advanced": "평일의 개념은 일정 관리에 필수적입니다.",
+          "master": "평일을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "평일에 어때요?",
+              "romanization": "pyeongile eottaeyo?",
+              "translation": "How about weekday?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "weekday",
         "explanation": "Regular days that are not weekends or holidays. Monday through Friday.",
         "examples": {
-          "beginner": "I'm busy on weekdays.",
-          "intermediate": "I go to work on weekdays.",
-          "advanced": "I don't have time on weekday evenings, so how about meeting on the weekend?",
-          "master": "On weekdays, I'm busy going back and forth between work and home, but on weekends, I can enjoy some leisure."
+          "beginner": "It's weekday now.",
+          "intermediate": "Let's meet at weekday.",
+          "advanced": "The concept of weekday is essential for schedule management.",
+          "master": "Efficiently utilizing weekday is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about weekday?",
+              "romanization": "",
+              "translation": "평일에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -511,26 +1379,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "weekday", "basic"],
+    "tags": [
+      "time",
+      "weekday",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "월요일",
         "explanation": "한 주의 첫째 날. 일요일 다음 날.",
         "examples": {
-          "beginner": "월요일에 학교 가요.",
-          "intermediate": "월요일은 한 주의 시작이에요.",
-          "advanced": "월요일 아침은 항상 피곤해서 커피를 두 잔 마셔요.",
-          "master": "월요병이라는 말이 있을 정도로 월요일 아침에 출근하기 싫어하는 사람들이 많다."
+          "beginner": "지금 월요일이에요.",
+          "intermediate": "월요일에 만나요.",
+          "advanced": "월요일의 개념은 일정 관리에 필수적입니다.",
+          "master": "월요일을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "월요일에 어때요?",
+              "romanization": "wolyoile eottaeyo?",
+              "translation": "How about monday?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "Monday",
         "explanation": "The first day of the week. The day after Sunday.",
         "examples": {
-          "beginner": "I go to school on Monday.",
-          "intermediate": "Monday is the start of the week.",
-          "advanced": "I'm always tired on Monday mornings, so I drink two cups of coffee.",
-          "master": "There's even a term called 'Monday blues' because so many people don't want to go to work on Monday mornings."
+          "beginner": "It's monday now.",
+          "intermediate": "Let's meet at monday.",
+          "advanced": "The concept of monday is essential for schedule management.",
+          "master": "Efficiently utilizing monday is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about monday?",
+              "romanization": "",
+              "translation": "월요일에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -547,26 +1477,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "weekday", "basic"],
+    "tags": [
+      "time",
+      "weekday",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "화요일",
         "explanation": "한 주의 둘째 날. 월요일 다음 날.",
         "examples": {
-          "beginner": "화요일에 만나요.",
-          "intermediate": "화요일마다 한국어 수업이 있어요.",
-          "advanced": "화요일 저녁에 친구들과 저녁 식사 약속이 있어요.",
-          "master": "매주 화요일에는 팀 회의가 있어서 그 전에 자료를 준비해야 한다."
+          "beginner": "지금 화요일이에요.",
+          "intermediate": "화요일에 만나요.",
+          "advanced": "화요일의 개념은 일정 관리에 필수적입니다.",
+          "master": "화요일을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "화요일에 어때요?",
+              "romanization": "hwayoile eottaeyo?",
+              "translation": "How about tuesday?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "Tuesday",
         "explanation": "The second day of the week. The day after Monday.",
         "examples": {
-          "beginner": "Let's meet on Tuesday.",
-          "intermediate": "I have Korean class every Tuesday.",
-          "advanced": "I have a dinner appointment with friends on Tuesday evening.",
-          "master": "We have a team meeting every Tuesday, so I need to prepare materials beforehand."
+          "beginner": "It's tuesday now.",
+          "intermediate": "Let's meet at tuesday.",
+          "advanced": "The concept of tuesday is essential for schedule management.",
+          "master": "Efficiently utilizing tuesday is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about tuesday?",
+              "romanization": "",
+              "translation": "화요일에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -583,26 +1575,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "weekday", "basic"],
+    "tags": [
+      "time",
+      "weekday",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "수요일",
         "explanation": "한 주의 셋째 날. 화요일 다음 날.",
         "examples": {
-          "beginner": "수요일이에요.",
-          "intermediate": "수요일은 주의 중간이에요.",
-          "advanced": "수요일까지 이 일을 끝내야 해요.",
-          "master": "수요일은 '불금'까지 이틀 남았다는 생각에 조금 힘이 나는 날이다."
+          "beginner": "지금 수요일이에요.",
+          "intermediate": "수요일에 만나요.",
+          "advanced": "수요일의 개념은 일정 관리에 필수적입니다.",
+          "master": "수요일을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "수요일에 어때요?",
+              "romanization": "suyoile eottaeyo?",
+              "translation": "How about wednesday?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "Wednesday",
         "explanation": "The third day of the week. The day after Tuesday.",
         "examples": {
-          "beginner": "It's Wednesday.",
-          "intermediate": "Wednesday is the middle of the week.",
-          "advanced": "I have to finish this work by Wednesday.",
-          "master": "Wednesday is a day that gives me a bit of energy thinking there are only two days left until Friday."
+          "beginner": "It's wednesday now.",
+          "intermediate": "Let's meet at wednesday.",
+          "advanced": "The concept of wednesday is essential for schedule management.",
+          "master": "Efficiently utilizing wednesday is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about wednesday?",
+              "romanization": "",
+              "translation": "수요일에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -619,26 +1673,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "weekday", "basic"],
+    "tags": [
+      "time",
+      "weekday",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "목요일",
         "explanation": "한 주의 넷째 날. 수요일 다음 날.",
         "examples": {
-          "beginner": "목요일에 시험이 있어요.",
-          "intermediate": "목요일 저녁에 시간 있어요?",
-          "advanced": "목요일에는 보통 금요일을 기다리면서 열심히 일해요.",
-          "master": "목요일이 되면 이번 주도 거의 끝났다는 생각에 마음이 한결 가벼워진다."
+          "beginner": "지금 목요일이에요.",
+          "intermediate": "목요일에 만나요.",
+          "advanced": "목요일의 개념은 일정 관리에 필수적입니다.",
+          "master": "목요일을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "목요일에 어때요?",
+              "romanization": "mokyoile eottaeyo?",
+              "translation": "How about thursday?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "Thursday",
         "explanation": "The fourth day of the week. The day after Wednesday.",
         "examples": {
-          "beginner": "I have an exam on Thursday.",
-          "intermediate": "Do you have time on Thursday evening?",
-          "advanced": "On Thursdays, I usually work hard while looking forward to Friday.",
-          "master": "When Thursday comes, my heart feels lighter thinking that this week is almost over."
+          "beginner": "It's thursday now.",
+          "intermediate": "Let's meet at thursday.",
+          "advanced": "The concept of thursday is essential for schedule management.",
+          "master": "Efficiently utilizing thursday is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about thursday?",
+              "romanization": "",
+              "translation": "목요일에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -655,26 +1771,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "weekday", "basic"],
+    "tags": [
+      "time",
+      "weekday",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "금요일",
         "explanation": "한 주의 다섯째 날. 목요일 다음 날. '불금'이라고도 부른다.",
         "examples": {
-          "beginner": "금요일 좋아요!",
-          "intermediate": "금요일에 파티가 있어요.",
-          "advanced": "금요일 저녁은 '불금'이라고 해서 많은 사람들이 놀러 나가요.",
-          "master": "금요일 퇴근 후에는 스트레스를 풀기 위해 친구들과 술 한잔 하는 것이 즐거움이다."
+          "beginner": "지금 금요일이에요.",
+          "intermediate": "금요일에 만나요.",
+          "advanced": "금요일의 개념은 일정 관리에 필수적입니다.",
+          "master": "금요일을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "금요일에 어때요?",
+              "romanization": "geumyoile eottaeyo?",
+              "translation": "How about friday?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "Friday",
         "explanation": "The fifth day of the week. The day after Thursday. Also called 'TGIF' (Thank God It's Friday).",
         "examples": {
-          "beginner": "I love Friday!",
-          "intermediate": "There's a party on Friday.",
-          "advanced": "Friday evening is called '불금' (fire Friday), and many people go out to have fun.",
-          "master": "After work on Friday, having a drink with friends to relieve stress is a pleasure."
+          "beginner": "It's friday now.",
+          "intermediate": "Let's meet at friday.",
+          "advanced": "The concept of friday is essential for schedule management.",
+          "master": "Efficiently utilizing friday is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about friday?",
+              "romanization": "",
+              "translation": "금요일에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -691,26 +1869,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "weekend", "basic"],
+    "tags": [
+      "time",
+      "weekend",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "토요일",
         "explanation": "한 주의 여섯째 날. 금요일 다음 날. 주말의 첫째 날.",
         "examples": {
-          "beginner": "토요일에 쉬어요.",
-          "intermediate": "토요일에 등산 갈 거예요.",
-          "advanced": "토요일 오전에는 늦잠을 자고 오후에 친구를 만나요.",
-          "master": "토요일 아침에 알람 없이 자연스럽게 일어나는 것만큼 행복한 일이 없다."
+          "beginner": "지금 토요일이에요.",
+          "intermediate": "토요일에 만나요.",
+          "advanced": "토요일의 개념은 일정 관리에 필수적입니다.",
+          "master": "토요일을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "토요일에 어때요?",
+              "romanization": "toyoile eottaeyo?",
+              "translation": "How about saturday?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "Saturday",
         "explanation": "The sixth day of the week. The day after Friday. The first day of the weekend.",
         "examples": {
-          "beginner": "I rest on Saturday.",
-          "intermediate": "I'm going hiking on Saturday.",
-          "advanced": "On Saturday mornings, I sleep in and meet friends in the afternoon.",
-          "master": "There's nothing as happy as waking up naturally without an alarm on Saturday morning."
+          "beginner": "It's saturday now.",
+          "intermediate": "Let's meet at saturday.",
+          "advanced": "The concept of saturday is essential for schedule management.",
+          "master": "Efficiently utilizing saturday is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about saturday?",
+              "romanization": "",
+              "translation": "토요일에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -727,26 +1967,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "weekend", "basic"],
+    "tags": [
+      "time",
+      "weekend",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "일요일",
         "explanation": "한 주의 일곱째 날. 토요일 다음 날. 주말의 둘째 날.",
         "examples": {
-          "beginner": "일요일은 쉬는 날이에요.",
-          "intermediate": "일요일에 교회에 가요.",
-          "advanced": "일요일 저녁에는 다음 주를 준비하면서 마음을 정리해요.",
-          "master": "일요일 밤이 되면 월요일이 다가온다는 생각에 조금 우울해지는 사람들이 있다."
+          "beginner": "지금 일요일이에요.",
+          "intermediate": "일요일에 만나요.",
+          "advanced": "일요일의 개념은 일정 관리에 필수적입니다.",
+          "master": "일요일을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "일요일에 어때요?",
+              "romanization": "ilyoile eottaeyo?",
+              "translation": "How about sunday?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "Sunday",
         "explanation": "The seventh day of the week. The day after Saturday. The second day of the weekend.",
         "examples": {
-          "beginner": "Sunday is a day off.",
-          "intermediate": "I go to church on Sunday.",
-          "advanced": "On Sunday evenings, I organize my thoughts while preparing for the next week.",
-          "master": "When Sunday night comes, some people feel a bit depressed thinking that Monday is approaching."
+          "beginner": "It's sunday now.",
+          "intermediate": "Let's meet at sunday.",
+          "advanced": "The concept of sunday is essential for schedule management.",
+          "master": "Efficiently utilizing sunday is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about sunday?",
+              "romanization": "",
+              "translation": "일요일에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -763,26 +2065,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "now", "basic"],
+    "tags": [
+      "time",
+      "now",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "지금",
         "explanation": "말하고 있는 바로 이 순간. 현재.",
         "examples": {
-          "beginner": "지금 뭐 해요?",
-          "intermediate": "지금 바로 갈게요.",
-          "advanced": "지금 당장 출발하지 않으면 비행기를 놓칠 거예요.",
-          "master": "과거를 후회하거나 미래를 걱정하기보다 지금 이 순간에 집중하는 것이 중요하다."
+          "beginner": "지금 지금이에요.",
+          "intermediate": "지금에 만나요.",
+          "advanced": "지금의 개념은 일정 관리에 필수적입니다.",
+          "master": "지금을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "지금에 어때요?",
+              "romanization": "jigeume eottaeyo?",
+              "translation": "How about now?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "now",
         "explanation": "The very moment of speaking. The present.",
         "examples": {
-          "beginner": "What are you doing now?",
-          "intermediate": "I'll go right now.",
-          "advanced": "If we don't leave right now, we'll miss the plane.",
-          "master": "Rather than regretting the past or worrying about the future, it's important to focus on this present moment."
+          "beginner": "It's now now.",
+          "intermediate": "Let's meet at now.",
+          "advanced": "The concept of now is essential for schedule management.",
+          "master": "Efficiently utilizing now is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about now?",
+              "romanization": "",
+              "translation": "지금에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -799,26 +2163,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "later", "basic"],
+    "tags": [
+      "time",
+      "later",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "나중에",
         "explanation": "지금이 아닌 앞으로의 어느 때. 이따가.",
         "examples": {
-          "beginner": "나중에 전화해요.",
-          "intermediate": "나중에 다시 이야기해요.",
-          "advanced": "나중에 후회하지 않으려면 지금 열심히 해야 해요.",
-          "master": "나중에 하겠다는 생각으로 미루다 보면 결국 아무것도 못 하게 된다."
+          "beginner": "지금 나중에이에요.",
+          "intermediate": "나중에에 만나요.",
+          "advanced": "나중에의 개념은 일정 관리에 필수적입니다.",
+          "master": "나중에을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "나중에에 어때요?",
+              "romanization": "najungee eottaeyo?",
+              "translation": "How about later?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "later",
         "explanation": "Some time in the future, not now.",
         "examples": {
-          "beginner": "Call me later.",
-          "intermediate": "Let's talk again later.",
-          "advanced": "If you don't want to regret it later, you need to work hard now.",
-          "master": "If you keep putting things off thinking you'll do it later, you end up not doing anything."
+          "beginner": "It's later now.",
+          "intermediate": "Let's meet at later.",
+          "advanced": "The concept of later is essential for schedule management.",
+          "master": "Efficiently utilizing later is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about later?",
+              "romanization": "",
+              "translation": "나중에에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -835,26 +2261,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "then", "basic"],
+    "tags": [
+      "time",
+      "then",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "그때",
         "explanation": "이미 이야기한 어떤 시점. 그 시간.",
         "examples": {
-          "beginner": "그때 만나요.",
-          "intermediate": "그때는 어땠어요?",
-          "advanced": "그때 그 일만 아니었다면 지금쯤 많이 달라졌을 거예요.",
-          "master": "학생 시절, 그때는 몰랐지만 지금 생각하면 정말 소중한 시간이었다."
+          "beginner": "지금 그때이에요.",
+          "intermediate": "그때에 만나요.",
+          "advanced": "그때의 개념은 일정 관리에 필수적입니다.",
+          "master": "그때을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "그때에 어때요?",
+              "romanization": "geuttaee eottaeyo?",
+              "translation": "How about that time / then?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "that time / then",
         "explanation": "A point in time already mentioned. That moment.",
         "examples": {
-          "beginner": "See you then.",
-          "intermediate": "How was it back then?",
-          "advanced": "If not for that incident back then, things would be very different now.",
-          "master": "During my student days, I didn't know it then, but looking back now, it was truly precious time."
+          "beginner": "It's that time / then now.",
+          "intermediate": "Let's meet at that time / then.",
+          "advanced": "The concept of that time / then is essential for schedule management.",
+          "master": "Efficiently utilizing that time / then is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about that time / then?",
+              "romanization": "",
+              "translation": "그때에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -871,26 +2359,88 @@
     "categoryId": "time-date",
     "difficulty": "intermediate",
     "frequency": "frequent",
-    "tags": ["time", "before", "formal"],
+    "tags": [
+      "time",
+      "before",
+      "formal"
+    ],
     "translations": {
       "ko": {
         "word": "이전",
         "explanation": "지금보다 앞선 때. 전에.",
         "examples": {
-          "beginner": "이전에 만난 적 있어요.",
-          "intermediate": "이전보다 나아졌어요.",
-          "advanced": "이전에는 여기가 시장이었는데 지금은 공원이 됐어요.",
-          "master": "이전의 실패 경험이 있었기에 이번에는 더 철저하게 준비할 수 있었다."
+          "beginner": "지금 이전이에요.",
+          "intermediate": "이전에 만나요.",
+          "advanced": "이전의 개념은 일정 관리에 필수적입니다.",
+          "master": "이전을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "이전에 어때요?",
+              "romanization": "ijeone eottaeyo?",
+              "translation": "How about before / previously?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "before / previously",
         "explanation": "A time earlier than now. Previously.",
         "examples": {
-          "beginner": "We've met before.",
-          "intermediate": "It's better than before.",
-          "advanced": "This used to be a market before, but now it's become a park.",
-          "master": "Because of the previous failure experience, I was able to prepare more thoroughly this time."
+          "beginner": "It's before / previously now.",
+          "intermediate": "Let's meet at before / previously.",
+          "advanced": "The concept of before / previously is essential for schedule management.",
+          "master": "Efficiently utilizing before / previously is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about before / previously?",
+              "romanization": "",
+              "translation": "이전에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -907,26 +2457,88 @@
     "categoryId": "time-date",
     "difficulty": "intermediate",
     "frequency": "frequent",
-    "tags": ["time", "after", "formal"],
+    "tags": [
+      "time",
+      "after",
+      "formal"
+    ],
     "translations": {
       "ko": {
         "word": "이후",
         "explanation": "어떤 때를 기준으로 그 뒤. 후에.",
         "examples": {
-          "beginner": "그 이후로 안 만났어요.",
-          "intermediate": "졸업 이후에 뭐 할 거예요?",
-          "advanced": "코로나 이후로 재택근무가 많아졌어요.",
-          "master": "그 사건 이후로 회사의 보안 정책이 완전히 바뀌었다."
+          "beginner": "지금 이후이에요.",
+          "intermediate": "이후에 만나요.",
+          "advanced": "이후의 개념은 일정 관리에 필수적입니다.",
+          "master": "이후을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "이후에 어때요?",
+              "romanization": "ihue eottaeyo?",
+              "translation": "How about after / since then?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "after / since then",
         "explanation": "After a certain point in time. Subsequently.",
         "examples": {
-          "beginner": "We haven't met since then.",
-          "intermediate": "What will you do after graduation?",
-          "advanced": "Since COVID, remote work has increased a lot.",
-          "master": "After that incident, the company's security policy completely changed."
+          "beginner": "It's after / since then now.",
+          "intermediate": "Let's meet at after / since then.",
+          "advanced": "The concept of after / since then is essential for schedule management.",
+          "master": "Efficiently utilizing after / since then is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about after / since then?",
+              "romanization": "",
+              "translation": "이후에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -943,26 +2555,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "school", "vacation"],
+    "tags": [
+      "time",
+      "school",
+      "vacation"
+    ],
     "translations": {
       "ko": {
         "word": "방학",
         "explanation": "학교에서 수업을 쉬는 기간. 여름 방학과 겨울 방학이 있다.",
         "examples": {
-          "beginner": "방학이에요!",
-          "intermediate": "방학에 뭐 할 거예요?",
-          "advanced": "여름 방학 동안 어학연수를 갈 계획이에요.",
-          "master": "방학이라고 해서 마냥 놀기만 하면 개학했을 때 적응하기 힘들어요."
+          "beginner": "지금 방학이에요.",
+          "intermediate": "방학에 만나요.",
+          "advanced": "방학의 개념은 일정 관리에 필수적입니다.",
+          "master": "방학을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "방학에 어때요?",
+              "romanization": "banghake eottaeyo?",
+              "translation": "How about vacation (school)?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "vacation (school)",
         "explanation": "A period when school classes are not held. There are summer and winter vacations.",
         "examples": {
-          "beginner": "It's vacation!",
-          "intermediate": "What will you do during vacation?",
-          "advanced": "I'm planning to study abroad during summer vacation.",
-          "master": "If you just play around during vacation, it's hard to adapt when school starts again."
+          "beginner": "It's vacation (school) now.",
+          "intermediate": "Let's meet at vacation (school).",
+          "advanced": "The concept of vacation (school) is essential for schedule management.",
+          "master": "Efficiently utilizing vacation (school) is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about vacation (school)?",
+              "romanization": "",
+              "translation": "방학에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -979,26 +2653,88 @@
     "categoryId": "time-date",
     "difficulty": "intermediate",
     "frequency": "frequent",
-    "tags": ["time", "holiday", "rest"],
+    "tags": [
+      "time",
+      "holiday",
+      "rest"
+    ],
     "translations": {
       "ko": {
         "word": "휴일",
         "explanation": "일하거나 공부하지 않고 쉬는 날.",
         "examples": {
-          "beginner": "오늘은 휴일이에요.",
-          "intermediate": "휴일에는 늦잠을 자요.",
-          "advanced": "휴일 근무를 하면 추가 수당을 받을 수 있어요.",
-          "master": "휴일에도 일을 생각하면 진정한 휴식이 아니라고 생각해요."
+          "beginner": "지금 휴일이에요.",
+          "intermediate": "휴일에 만나요.",
+          "advanced": "휴일의 개념은 일정 관리에 필수적입니다.",
+          "master": "휴일을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "휴일에 어때요?",
+              "romanization": "hyuile eottaeyo?",
+              "translation": "How about holiday / day off?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "holiday / day off",
         "explanation": "A day of rest without work or study.",
         "examples": {
-          "beginner": "Today is a holiday.",
-          "intermediate": "I sleep in on holidays.",
-          "advanced": "If you work on a holiday, you can receive extra pay.",
-          "master": "I think it's not true rest if you think about work even on holidays."
+          "beginner": "It's holiday / day off now.",
+          "intermediate": "Let's meet at holiday / day off.",
+          "advanced": "The concept of holiday / day off is essential for schedule management.",
+          "master": "Efficiently utilizing holiday / day off is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about holiday / day off?",
+              "romanization": "",
+              "translation": "휴일에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -1015,26 +2751,88 @@
     "categoryId": "time-date",
     "difficulty": "intermediate",
     "frequency": "frequent",
-    "tags": ["time", "anniversary", "special"],
+    "tags": [
+      "time",
+      "anniversary",
+      "special"
+    ],
     "translations": {
       "ko": {
         "word": "기념일",
         "explanation": "특별한 날을 기억하고 축하하는 날.",
         "examples": {
-          "beginner": "오늘이 기념일이에요.",
-          "intermediate": "결혼 기념일을 잊어버렸어요!",
-          "advanced": "100일 기념일에 특별한 선물을 준비했어요.",
-          "master": "기념일을 잊어버리면 관계에 금이 갈 수 있으니 캘린더에 꼭 표시해 두세요."
+          "beginner": "지금 기념일이에요.",
+          "intermediate": "기념일에 만나요.",
+          "advanced": "기념일의 개념은 일정 관리에 필수적입니다.",
+          "master": "기념일을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "기념일에 어때요?",
+              "romanization": "ginyeomile eottaeyo?",
+              "translation": "How about anniversary?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "anniversary",
         "explanation": "A day to remember and celebrate a special occasion.",
         "examples": {
-          "beginner": "Today is our anniversary.",
-          "intermediate": "I forgot our wedding anniversary!",
-          "advanced": "I prepared a special gift for our 100th day anniversary.",
-          "master": "Forgetting anniversaries can cause cracks in relationships, so make sure to mark them on your calendar."
+          "beginner": "It's anniversary now.",
+          "intermediate": "Let's meet at anniversary.",
+          "advanced": "The concept of anniversary is essential for schedule management.",
+          "master": "Efficiently utilizing anniversary is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about anniversary?",
+              "romanization": "",
+              "translation": "기념일에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -1051,26 +2849,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "new year", "holiday"],
+    "tags": [
+      "time",
+      "new year",
+      "holiday"
+    ],
     "translations": {
       "ko": {
         "word": "새해",
         "explanation": "새로 시작하는 해. 1월 1일부터 시작.",
         "examples": {
-          "beginner": "새해 복 많이 받으세요!",
-          "intermediate": "새해에는 건강하세요.",
-          "advanced": "새해 첫날에는 해돋이를 보러 바다에 가는 사람들이 많아요.",
-          "master": "새해가 되면 많은 사람들이 새로운 목표를 세우지만, 그것을 지키는 사람은 많지 않다."
+          "beginner": "지금 새해이에요.",
+          "intermediate": "새해에 만나요.",
+          "advanced": "새해의 개념은 일정 관리에 필수적입니다.",
+          "master": "새해을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "새해에 어때요?",
+              "romanization": "saehaee eottaeyo?",
+              "translation": "How about new year?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "New Year",
         "explanation": "A newly starting year. Begins from January 1st.",
         "examples": {
-          "beginner": "Happy New Year!",
-          "intermediate": "Be healthy in the new year.",
-          "advanced": "On New Year's Day, many people go to the sea to watch the sunrise.",
-          "master": "When the new year comes, many people set new goals, but not many keep them."
+          "beginner": "It's new year now.",
+          "intermediate": "Let's meet at new year.",
+          "advanced": "The concept of new year is essential for schedule management.",
+          "master": "Efficiently utilizing new year is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about new year?",
+              "romanization": "",
+              "translation": "새해에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -1087,26 +2947,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "birthday", "celebration"],
+    "tags": [
+      "time",
+      "birthday",
+      "celebration"
+    ],
     "translations": {
       "ko": {
         "word": "생일",
         "explanation": "태어난 날을 기념하는 날.",
         "examples": {
-          "beginner": "생일 축하해요!",
-          "intermediate": "생일이 언제예요?",
-          "advanced": "올해 생일에는 가족들과 함께 조용히 지낼 거예요.",
-          "master": "나이가 들수록 생일이 크게 의미가 없어지지만, 주변 사람들의 축하는 여전히 기쁘다."
+          "beginner": "지금 생일이에요.",
+          "intermediate": "생일에 만나요.",
+          "advanced": "생일의 개념은 일정 관리에 필수적입니다.",
+          "master": "생일을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "생일에 어때요?",
+              "romanization": "saengile eottaeyo?",
+              "translation": "How about birthday?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "birthday",
         "explanation": "A day commemorating the day one was born.",
         "examples": {
-          "beginner": "Happy birthday!",
-          "intermediate": "When is your birthday?",
-          "advanced": "This year on my birthday, I'm going to spend it quietly with my family.",
-          "master": "As you get older, birthdays become less significant, but congratulations from people around you are still pleasant."
+          "beginner": "It's birthday now.",
+          "intermediate": "Let's meet at birthday.",
+          "advanced": "The concept of birthday is essential for schedule management.",
+          "master": "Efficiently utilizing birthday is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about birthday?",
+              "romanization": "",
+              "translation": "생일에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -1123,26 +3045,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "calendar", "object"],
+    "tags": [
+      "time",
+      "calendar",
+      "object"
+    ],
     "translations": {
       "ko": {
         "word": "달력",
         "explanation": "날짜와 요일을 알 수 있게 만든 것.",
         "examples": {
-          "beginner": "달력을 봐요.",
-          "intermediate": "달력에 약속을 적어요.",
-          "advanced": "새해가 되면 새 달력을 걸어요.",
-          "master": "요즘은 종이 달력보다 스마트폰 캘린더를 더 많이 사용하는 것 같아요."
+          "beginner": "지금 달력이에요.",
+          "intermediate": "달력에 만나요.",
+          "advanced": "달력의 개념은 일정 관리에 필수적입니다.",
+          "master": "달력을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "달력에 어때요?",
+              "romanization": "dalryeoke eottaeyo?",
+              "translation": "How about calendar?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "calendar",
         "explanation": "Something made to show dates and days of the week.",
         "examples": {
-          "beginner": "Look at the calendar.",
-          "intermediate": "Write appointments on the calendar.",
-          "advanced": "When the new year comes, I hang a new calendar.",
-          "master": "These days, it seems like people use smartphone calendars more than paper calendars."
+          "beginner": "It's calendar now.",
+          "intermediate": "Let's meet at calendar.",
+          "advanced": "The concept of calendar is essential for schedule management.",
+          "master": "Efficiently utilizing calendar is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about calendar?",
+              "romanization": "",
+              "translation": "달력에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -1159,26 +3143,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "clock", "object"],
+    "tags": [
+      "time",
+      "clock",
+      "object"
+    ],
     "translations": {
       "ko": {
         "word": "시계",
         "explanation": "시간을 알려주는 기계. 벽에 거는 것, 손목에 차는 것 등이 있다.",
         "examples": {
-          "beginner": "시계가 몇 시예요?",
-          "intermediate": "새 시계를 샀어요.",
-          "advanced": "이 시계는 할아버지가 물려주신 거예요.",
-          "master": "스마트폰으로 시간을 확인할 수 있지만, 손목시계는 여전히 패션 아이템으로 인기가 있다."
+          "beginner": "지금 시계이에요.",
+          "intermediate": "시계에 만나요.",
+          "advanced": "시계의 개념은 일정 관리에 필수적입니다.",
+          "master": "시계을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "시계에 어때요?",
+              "romanization": "sigyee eottaeyo?",
+              "translation": "How about clock / watch?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "clock / watch",
         "explanation": "A device that shows time. Includes wall clocks and wristwatches.",
         "examples": {
-          "beginner": "What time is it on the clock?",
-          "intermediate": "I bought a new watch.",
-          "advanced": "This watch was handed down from my grandfather.",
-          "master": "Even though you can check time on smartphones, wristwatches are still popular as fashion items."
+          "beginner": "It's clock / watch now.",
+          "intermediate": "Let's meet at clock / watch.",
+          "advanced": "The concept of clock / watch is essential for schedule management.",
+          "master": "Efficiently utilizing clock / watch is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about clock / watch?",
+              "romanization": "",
+              "translation": "시계에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -1195,26 +3241,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "morning", "basic"],
+    "tags": [
+      "time",
+      "morning",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "오전",
         "explanation": "아침부터 낮 12시까지의 시간.",
         "examples": {
-          "beginner": "오전에 바빠요.",
-          "intermediate": "오전 10시에 회의가 있어요.",
-          "advanced": "오전 수업은 9시에 시작하고 12시에 끝나요.",
-          "master": "오전 시간을 효율적으로 사용하면 하루 전체의 생산성이 올라간다."
+          "beginner": "지금 오전이에요.",
+          "intermediate": "오전에 만나요.",
+          "advanced": "오전의 개념은 일정 관리에 필수적입니다.",
+          "master": "오전을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "오전에 어때요?",
+              "romanization": "ojeone eottaeyo?",
+              "translation": "How about morning / am?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "morning / AM",
         "explanation": "The time from morning until 12 noon.",
         "examples": {
-          "beginner": "I'm busy in the morning.",
-          "intermediate": "I have a meeting at 10 AM.",
-          "advanced": "Morning classes start at 9 and end at 12.",
-          "master": "If you use morning time efficiently, your productivity for the whole day increases."
+          "beginner": "It's morning / am now.",
+          "intermediate": "Let's meet at morning / am.",
+          "advanced": "The concept of morning / am is essential for schedule management.",
+          "master": "Efficiently utilizing morning / am is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about morning / am?",
+              "romanization": "",
+              "translation": "오전에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -1231,26 +3339,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "afternoon", "basic"],
+    "tags": [
+      "time",
+      "afternoon",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "오후",
         "explanation": "낮 12시부터 저녁까지의 시간.",
         "examples": {
-          "beginner": "오후에 만나요.",
-          "intermediate": "오후 3시에 수업이 있어요.",
-          "advanced": "오후에는 보통 졸음이 와서 커피를 마셔요.",
-          "master": "오후 2~3시경에 집중력이 떨어지는 것은 자연스러운 생체 리듬이라고 해요."
+          "beginner": "지금 오후이에요.",
+          "intermediate": "오후에 만나요.",
+          "advanced": "오후의 개념은 일정 관리에 필수적입니다.",
+          "master": "오후을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "오후에 어때요?",
+              "romanization": "ohue eottaeyo?",
+              "translation": "How about afternoon / pm?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "afternoon / PM",
         "explanation": "The time from 12 noon until evening.",
         "examples": {
-          "beginner": "Let's meet in the afternoon.",
-          "intermediate": "I have class at 3 PM.",
-          "advanced": "I usually get drowsy in the afternoon, so I drink coffee.",
-          "master": "They say losing concentration around 2-3 PM is a natural biological rhythm."
+          "beginner": "It's afternoon / pm now.",
+          "intermediate": "Let's meet at afternoon / pm.",
+          "advanced": "The concept of afternoon / pm is essential for schedule management.",
+          "master": "Efficiently utilizing afternoon / pm is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about afternoon / pm?",
+              "romanization": "",
+              "translation": "오후에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -1267,26 +3437,88 @@
     "categoryId": "time-date",
     "difficulty": "intermediate",
     "frequency": "frequent",
-    "tags": ["time", "noon", "formal"],
+    "tags": [
+      "time",
+      "noon",
+      "formal"
+    ],
     "translations": {
       "ko": {
         "word": "정오",
         "explanation": "낮 12시 정각.",
         "examples": {
-          "beginner": "정오에 만나요.",
-          "intermediate": "정오에 점심을 먹어요.",
-          "advanced": "정오가 되면 사무실 근처 식당들이 붐빕니다.",
-          "master": "정오의 태양이 가장 높이 떠 있을 때 그림자가 가장 짧아진다."
+          "beginner": "지금 정오이에요.",
+          "intermediate": "정오에 만나요.",
+          "advanced": "정오의 개념은 일정 관리에 필수적입니다.",
+          "master": "정오을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "정오에 어때요?",
+              "romanization": "jeongoe eottaeyo?",
+              "translation": "How about noon / midday?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "noon / midday",
         "explanation": "Exactly 12 o'clock in the daytime.",
         "examples": {
-          "beginner": "Let's meet at noon.",
-          "intermediate": "I eat lunch at noon.",
-          "advanced": "When noon comes, restaurants near the office get crowded.",
-          "master": "When the noon sun is at its highest, shadows become the shortest."
+          "beginner": "It's noon / midday now.",
+          "intermediate": "Let's meet at noon / midday.",
+          "advanced": "The concept of noon / midday is essential for schedule management.",
+          "master": "Efficiently utilizing noon / midday is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about noon / midday?",
+              "romanization": "",
+              "translation": "정오에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -1303,26 +3535,88 @@
     "categoryId": "time-date",
     "difficulty": "intermediate",
     "frequency": "frequent",
-    "tags": ["time", "midnight", "formal"],
+    "tags": [
+      "time",
+      "midnight",
+      "formal"
+    ],
     "translations": {
       "ko": {
         "word": "자정",
         "explanation": "밤 12시 정각. 하루가 바뀌는 시간.",
         "examples": {
-          "beginner": "자정이에요.",
-          "intermediate": "자정까지 일해야 해요.",
-          "advanced": "새해 자정에 불꽃놀이를 해요.",
-          "master": "자정이 넘어서까지 일하는 야근 문화는 건강에 좋지 않다."
+          "beginner": "지금 자정이에요.",
+          "intermediate": "자정에 만나요.",
+          "advanced": "자정의 개념은 일정 관리에 필수적입니다.",
+          "master": "자정을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "자정에 어때요?",
+              "romanization": "jajeonge eottaeyo?",
+              "translation": "How about midnight?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "midnight",
         "explanation": "Exactly 12 o'clock at night. The time when the day changes.",
         "examples": {
-          "beginner": "It's midnight.",
-          "intermediate": "I have to work until midnight.",
-          "advanced": "There are fireworks at New Year's midnight.",
-          "master": "The overtime culture of working past midnight is not good for health."
+          "beginner": "It's midnight now.",
+          "intermediate": "Let's meet at midnight.",
+          "advanced": "The concept of midnight is essential for schedule management.",
+          "master": "Efficiently utilizing midnight is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about midnight?",
+              "romanization": "",
+              "translation": "자정에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -1339,26 +3633,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "daily", "frequency"],
+    "tags": [
+      "time",
+      "daily",
+      "frequency"
+    ],
     "translations": {
       "ko": {
         "word": "매일",
         "explanation": "하루도 빠짐없이. 날마다.",
         "examples": {
-          "beginner": "매일 운동해요.",
-          "intermediate": "매일 아침 커피를 마셔요.",
-          "advanced": "한국어를 매일 30분씩 공부하면 빨리 늘어요.",
-          "master": "매일 조금씩 꾸준히 하는 것이 한꺼번에 많이 하는 것보다 효과적이다."
+          "beginner": "지금 매일이에요.",
+          "intermediate": "매일에 만나요.",
+          "advanced": "매일의 개념은 일정 관리에 필수적입니다.",
+          "master": "매일을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "매일에 어때요?",
+              "romanization": "maeile eottaeyo?",
+              "translation": "How about every day / daily?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "every day / daily",
         "explanation": "Without missing a day. Each day.",
         "examples": {
-          "beginner": "I exercise every day.",
-          "intermediate": "I drink coffee every morning.",
-          "advanced": "If you study Korean for 30 minutes every day, you'll improve quickly.",
-          "master": "Doing a little bit consistently every day is more effective than doing a lot at once."
+          "beginner": "It's every day / daily now.",
+          "intermediate": "Let's meet at every day / daily.",
+          "advanced": "The concept of every day / daily is essential for schedule management.",
+          "master": "Efficiently utilizing every day / daily is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about every day / daily?",
+              "romanization": "",
+              "translation": "매일에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -1375,26 +3731,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "weekly", "frequency"],
+    "tags": [
+      "time",
+      "weekly",
+      "frequency"
+    ],
     "translations": {
       "ko": {
         "word": "매주",
         "explanation": "주마다. 일주일에 한 번씩.",
         "examples": {
-          "beginner": "매주 일요일에 쉬어요.",
-          "intermediate": "매주 수요일에 한국어 수업이 있어요.",
-          "advanced": "매주 토요일마다 친구들과 축구를 해요.",
-          "master": "매주 정해진 시간에 운동을 하면 습관으로 자리 잡기 쉽다."
+          "beginner": "지금 매주이에요.",
+          "intermediate": "매주에 만나요.",
+          "advanced": "매주의 개념은 일정 관리에 필수적입니다.",
+          "master": "매주을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "매주에 어때요?",
+              "romanization": "maejue eottaeyo?",
+              "translation": "How about every week / weekly?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "every week / weekly",
         "explanation": "Each week. Once a week.",
         "examples": {
-          "beginner": "I rest every Sunday.",
-          "intermediate": "I have Korean class every Wednesday.",
-          "advanced": "I play soccer with friends every Saturday.",
-          "master": "If you exercise at a set time every week, it's easier to establish as a habit."
+          "beginner": "It's every week / weekly now.",
+          "intermediate": "Let's meet at every week / weekly.",
+          "advanced": "The concept of every week / weekly is essential for schedule management.",
+          "master": "Efficiently utilizing every week / weekly is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about every week / weekly?",
+              "romanization": "",
+              "translation": "매주에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -1411,26 +3829,88 @@
     "categoryId": "time-date",
     "difficulty": "intermediate",
     "frequency": "frequent",
-    "tags": ["time", "monthly", "frequency"],
+    "tags": [
+      "time",
+      "monthly",
+      "frequency"
+    ],
     "translations": {
       "ko": {
         "word": "매월",
         "explanation": "달마다. 한 달에 한 번씩.",
         "examples": {
-          "beginner": "매월 월급을 받아요.",
-          "intermediate": "매월 25일에 월급날이에요.",
-          "advanced": "매월 초에 회의가 있어요.",
-          "master": "매월 정기적으로 저축을 하면 목돈을 모을 수 있다."
+          "beginner": "지금 매월이에요.",
+          "intermediate": "매월에 만나요.",
+          "advanced": "매월의 개념은 일정 관리에 필수적입니다.",
+          "master": "매월을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "매월에 어때요?",
+              "romanization": "maewole eottaeyo?",
+              "translation": "How about every month / monthly?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "every month / monthly",
         "explanation": "Each month. Once a month.",
         "examples": {
-          "beginner": "I receive a salary every month.",
-          "intermediate": "Payday is on the 25th every month.",
-          "advanced": "There's a meeting at the beginning of every month.",
-          "master": "If you save regularly every month, you can accumulate a large sum."
+          "beginner": "It's every month / monthly now.",
+          "intermediate": "Let's meet at every month / monthly.",
+          "advanced": "The concept of every month / monthly is essential for schedule management.",
+          "master": "Efficiently utilizing every month / monthly is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about every month / monthly?",
+              "romanization": "",
+              "translation": "매월에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -1447,26 +3927,88 @@
     "categoryId": "time-date",
     "difficulty": "intermediate",
     "frequency": "frequent",
-    "tags": ["time", "yearly", "frequency"],
+    "tags": [
+      "time",
+      "yearly",
+      "frequency"
+    ],
     "translations": {
       "ko": {
         "word": "매년",
         "explanation": "해마다. 1년에 한 번씩.",
         "examples": {
-          "beginner": "매년 여행을 가요.",
-          "intermediate": "매년 설날에 가족들이 모여요.",
-          "advanced": "매년 건강검진을 받는 것이 좋아요.",
-          "master": "매년 같은 곳을 방문해도 계절과 기분에 따라 다른 느낌을 받을 수 있다."
+          "beginner": "지금 매년이에요.",
+          "intermediate": "매년에 만나요.",
+          "advanced": "매년의 개념은 일정 관리에 필수적입니다.",
+          "master": "매년을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "매년에 어때요?",
+              "romanization": "maenyeone eottaeyo?",
+              "translation": "How about every year / yearly?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "every year / yearly",
         "explanation": "Each year. Once a year.",
         "examples": {
-          "beginner": "I travel every year.",
-          "intermediate": "Family gathers on New Year's Day every year.",
-          "advanced": "It's good to get a health checkup every year.",
-          "master": "Even if you visit the same place every year, you can feel different depending on the season and mood."
+          "beginner": "It's every year / yearly now.",
+          "intermediate": "Let's meet at every year / yearly.",
+          "advanced": "The concept of every year / yearly is essential for schedule management.",
+          "master": "Efficiently utilizing every year / yearly is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about every year / yearly?",
+              "romanization": "",
+              "translation": "매년에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -1483,26 +4025,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "week", "duration"],
+    "tags": [
+      "time",
+      "week",
+      "duration"
+    ],
     "translations": {
       "ko": {
         "word": "일주일",
         "explanation": "7일. 한 주.",
         "examples": {
-          "beginner": "일주일에 한 번 만나요.",
-          "intermediate": "일주일 동안 여행했어요.",
-          "advanced": "일주일 내내 비가 왔어요.",
-          "master": "일주일 동안 아무도 만나지 않고 혼자 있으니까 좀 외로웠다."
+          "beginner": "지금 일주일이에요.",
+          "intermediate": "일주일에 만나요.",
+          "advanced": "일주일의 개념은 일정 관리에 필수적입니다.",
+          "master": "일주일을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "일주일에 어때요?",
+              "romanization": "iljuile eottaeyo?",
+              "translation": "How about one week?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "one week",
         "explanation": "Seven days. A week.",
         "examples": {
-          "beginner": "We meet once a week.",
-          "intermediate": "I traveled for a week.",
-          "advanced": "It rained all week long.",
-          "master": "Being alone for a week without meeting anyone made me feel a bit lonely."
+          "beginner": "It's one week now.",
+          "intermediate": "Let's meet at one week.",
+          "advanced": "The concept of one week is essential for schedule management.",
+          "master": "Efficiently utilizing one week is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about one week?",
+              "romanization": "",
+              "translation": "일주일에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -1519,26 +4123,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "month", "duration"],
+    "tags": [
+      "time",
+      "month",
+      "duration"
+    ],
     "translations": {
       "ko": {
         "word": "한 달",
         "explanation": "약 30일. 1개월.",
         "examples": {
-          "beginner": "한 달 전에 왔어요.",
-          "intermediate": "한 달 동안 한국어를 공부했어요.",
-          "advanced": "한 달에 책을 두 권 정도 읽어요.",
-          "master": "한 달만 꾸준히 운동해도 몸의 변화를 느낄 수 있다."
+          "beginner": "지금 한 달이에요.",
+          "intermediate": "한 달에 만나요.",
+          "advanced": "한 달의 개념은 일정 관리에 필수적입니다.",
+          "master": "한 달을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "한 달에 어때요?",
+              "romanization": "han dale eottaeyo?",
+              "translation": "How about one month?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "one month",
         "explanation": "About 30 days. One month.",
         "examples": {
-          "beginner": "I came a month ago.",
-          "intermediate": "I studied Korean for a month.",
-          "advanced": "I read about two books a month.",
-          "master": "Even if you exercise consistently for just one month, you can feel changes in your body."
+          "beginner": "It's one month now.",
+          "intermediate": "Let's meet at one month.",
+          "advanced": "The concept of one month is essential for schedule management.",
+          "master": "Efficiently utilizing one month is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about one month?",
+              "romanization": "",
+              "translation": "한 달에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -1555,26 +4221,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "year", "duration"],
+    "tags": [
+      "time",
+      "year",
+      "duration"
+    ],
     "translations": {
       "ko": {
         "word": "일 년",
         "explanation": "12개월. 365일 또는 366일.",
         "examples": {
-          "beginner": "일 년이 지났어요.",
-          "intermediate": "일 년 동안 한국에서 살았어요.",
-          "advanced": "일 년에 한 번 건강검진을 받아요.",
-          "master": "일 년이라는 시간이 정말 빨리 지나가는 것 같아요."
+          "beginner": "지금 일 년이에요.",
+          "intermediate": "일 년에 만나요.",
+          "advanced": "일 년의 개념은 일정 관리에 필수적입니다.",
+          "master": "일 년을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "일 년에 어때요?",
+              "romanization": "il nyeone eottaeyo?",
+              "translation": "How about one year?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "one year",
         "explanation": "12 months. 365 or 366 days.",
         "examples": {
-          "beginner": "A year has passed.",
-          "intermediate": "I lived in Korea for a year.",
-          "advanced": "I get a health checkup once a year.",
-          "master": "A year seems to pass by really quickly."
+          "beginner": "It's one year now.",
+          "intermediate": "Let's meet at one year.",
+          "advanced": "The concept of one year is essential for schedule management.",
+          "master": "Efficiently utilizing one year is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about one year?",
+              "romanization": "",
+              "translation": "일 년에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -1591,26 +4319,88 @@
     "categoryId": "time-date",
     "difficulty": "intermediate",
     "frequency": "frequent",
-    "tags": ["time", "past", "concept"],
+    "tags": [
+      "time",
+      "past",
+      "concept"
+    ],
     "translations": {
       "ko": {
         "word": "과거",
         "explanation": "지나간 때. 이전의 시간.",
         "examples": {
-          "beginner": "과거를 생각해요.",
-          "intermediate": "과거의 실수를 후회해요.",
-          "advanced": "과거에 연연하지 말고 앞으로 나아가세요.",
-          "master": "과거의 경험은 현재를 살아가는 데 중요한 교훈이 된다."
+          "beginner": "지금 과거이에요.",
+          "intermediate": "과거에 만나요.",
+          "advanced": "과거의 개념은 일정 관리에 필수적입니다.",
+          "master": "과거을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "과거에 어때요?",
+              "romanization": "gwageoe eottaeyo?",
+              "translation": "How about past?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "past",
         "explanation": "Time that has passed. Previous times.",
         "examples": {
-          "beginner": "I think about the past.",
-          "intermediate": "I regret past mistakes.",
-          "advanced": "Don't dwell on the past and move forward.",
-          "master": "Past experiences become important lessons for living in the present."
+          "beginner": "It's past now.",
+          "intermediate": "Let's meet at past.",
+          "advanced": "The concept of past is essential for schedule management.",
+          "master": "Efficiently utilizing past is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about past?",
+              "romanization": "",
+              "translation": "과거에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -1627,26 +4417,88 @@
     "categoryId": "time-date",
     "difficulty": "intermediate",
     "frequency": "frequent",
-    "tags": ["time", "present", "concept"],
+    "tags": [
+      "time",
+      "present",
+      "concept"
+    ],
     "translations": {
       "ko": {
         "word": "현재",
         "explanation": "지금 이 때. 현시점.",
         "examples": {
-          "beginner": "현재 시간이에요.",
-          "intermediate": "현재 어디에 살아요?",
-          "advanced": "현재 회사에서 3년째 일하고 있어요.",
-          "master": "현재에 집중하는 것이 행복의 비결이라고 많은 사람들이 말한다."
+          "beginner": "지금 현재이에요.",
+          "intermediate": "현재에 만나요.",
+          "advanced": "현재의 개념은 일정 관리에 필수적입니다.",
+          "master": "현재을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "현재에 어때요?",
+              "romanization": "hyeonjaee eottaeyo?",
+              "translation": "How about present / current?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "present / current",
         "explanation": "This time right now. The current point.",
         "examples": {
-          "beginner": "It's the current time.",
-          "intermediate": "Where do you currently live?",
-          "advanced": "I've been working at my current company for 3 years.",
-          "master": "Many people say that focusing on the present is the secret to happiness."
+          "beginner": "It's present / current now.",
+          "intermediate": "Let's meet at present / current.",
+          "advanced": "The concept of present / current is essential for schedule management.",
+          "master": "Efficiently utilizing present / current is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about present / current?",
+              "romanization": "",
+              "translation": "현재에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -1663,26 +4515,88 @@
     "categoryId": "time-date",
     "difficulty": "intermediate",
     "frequency": "frequent",
-    "tags": ["time", "future", "concept"],
+    "tags": [
+      "time",
+      "future",
+      "concept"
+    ],
     "translations": {
       "ko": {
         "word": "미래",
         "explanation": "앞으로 올 시간. 아직 오지 않은 때.",
         "examples": {
-          "beginner": "미래가 궁금해요.",
-          "intermediate": "미래에 뭐가 되고 싶어요?",
-          "advanced": "미래를 위해 지금 열심히 준비하고 있어요.",
-          "master": "미래는 예측할 수 없지만, 현재의 노력으로 어느 정도 만들어 갈 수 있다."
+          "beginner": "지금 미래이에요.",
+          "intermediate": "미래에 만나요.",
+          "advanced": "미래의 개념은 일정 관리에 필수적입니다.",
+          "master": "미래을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "미래에 어때요?",
+              "romanization": "miraee eottaeyo?",
+              "translation": "How about future?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "future",
         "explanation": "Time yet to come. Time that hasn't arrived yet.",
         "examples": {
-          "beginner": "I'm curious about the future.",
-          "intermediate": "What do you want to be in the future?",
-          "advanced": "I'm working hard now to prepare for the future.",
-          "master": "The future is unpredictable, but we can shape it to some extent through present efforts."
+          "beginner": "It's future now.",
+          "intermediate": "Let's meet at future.",
+          "advanced": "The concept of future is essential for schedule management.",
+          "master": "Efficiently utilizing future is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about future?",
+              "romanization": "",
+              "translation": "미래에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -1699,26 +4613,88 @@
     "categoryId": "time-date",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["time", "superlative", "basic"],
+    "tags": [
+      "time",
+      "superlative",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "가장",
         "explanation": "여럿 중에서 제일. 최고로.",
         "examples": {
-          "beginner": "가장 좋아하는 음식은 뭐예요?",
-          "intermediate": "가장 빨리 오는 버스를 타세요.",
-          "advanced": "가장 중요한 것은 건강이라고 생각해요.",
-          "master": "인생에서 가장 소중한 순간은 지나고 나서야 알게 되는 경우가 많다."
+          "beginner": "지금 가장이에요.",
+          "intermediate": "가장에 만나요.",
+          "advanced": "가장의 개념은 일정 관리에 필수적입니다.",
+          "master": "가장을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "가장에 어때요?",
+              "romanization": "gajange eottaeyo?",
+              "translation": "How about most / the most?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "most / the most",
         "explanation": "The best among many. Most of all.",
         "examples": {
-          "beginner": "What's your favorite food?",
-          "intermediate": "Take the bus that comes the fastest.",
-          "advanced": "I think the most important thing is health.",
-          "master": "The most precious moments in life are often realized only after they've passed."
+          "beginner": "It's most / the most now.",
+          "intermediate": "Let's meet at most / the most.",
+          "advanced": "The concept of most / the most is essential for schedule management.",
+          "master": "Efficiently utilizing most / the most is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about most / the most?",
+              "romanization": "",
+              "translation": "가장에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -1735,26 +4711,88 @@
     "categoryId": "time-date",
     "difficulty": "intermediate",
     "frequency": "frequent",
-    "tags": ["time", "half", "duration"],
+    "tags": [
+      "time",
+      "half",
+      "duration"
+    ],
     "translations": {
       "ko": {
         "word": "반해",
         "explanation": "1년의 절반. 6개월.",
         "examples": {
-          "beginner": "반년 동안 공부했어요.",
-          "intermediate": "반년 후에 한국에 갈 거예요.",
-          "advanced": "반년 만에 친구를 다시 만났어요.",
-          "master": "반년만 열심히 운동하면 체력이 많이 좋아질 거예요."
+          "beginner": "지금 반해이에요.",
+          "intermediate": "반해에 만나요.",
+          "advanced": "반해의 개념은 일정 관리에 필수적입니다.",
+          "master": "반해을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "반해에 어때요?",
+              "romanization": "banhaee eottaeyo?",
+              "translation": "How about half a year?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "half a year",
         "explanation": "Half of a year. Six months.",
         "examples": {
-          "beginner": "I studied for half a year.",
-          "intermediate": "I'm going to Korea in half a year.",
-          "advanced": "I met my friend again after half a year.",
-          "master": "If you exercise hard for just half a year, your stamina will improve a lot."
+          "beginner": "It's half a year now.",
+          "intermediate": "Let's meet at half a year.",
+          "advanced": "The concept of half a year is essential for schedule management.",
+          "master": "Efficiently utilizing half a year is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about half a year?",
+              "romanization": "",
+              "translation": "반해에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },
@@ -1771,26 +4809,88 @@
     "categoryId": "time-date",
     "difficulty": "intermediate",
     "frequency": "frequent",
-    "tags": ["time", "ten days", "duration"],
+    "tags": [
+      "time",
+      "ten days",
+      "duration"
+    ],
     "translations": {
       "ko": {
         "word": "열흘",
         "explanation": "10일. 열 일.",
         "examples": {
-          "beginner": "열흘 동안 쉬었어요.",
-          "intermediate": "열흘 후에 시험이 있어요.",
-          "advanced": "열흘간의 유럽 여행을 계획하고 있어요.",
-          "master": "열흘 동안 집중적으로 공부하면 기초 문법을 마스터할 수 있다."
+          "beginner": "지금 열흘이에요.",
+          "intermediate": "열흘에 만나요.",
+          "advanced": "열흘의 개념은 일정 관리에 필수적입니다.",
+          "master": "열흘을/를 효율적으로 활용하는 것이 생산성의 핵심입니다."
+        },
+        "dialogue": {
+          "context": "약속 시간을 정하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언제 만날까요?",
+              "romanization": "eonje mannalkkayo?",
+              "translation": "When shall we meet?"
+            },
+            {
+              "speaker": "B",
+              "text": "열흘에 어때요?",
+              "romanization": "yeolheule eottaeyo?",
+              "translation": "How about ten days?"
+            },
+            {
+              "speaker": "A",
+              "text": "좋아요.",
+              "romanization": "jotayo.",
+              "translation": "Sounds good."
+            },
+            {
+              "speaker": "B",
+              "text": "그럼 그때 봐요.",
+              "romanization": "geureom geuttae bwayo.",
+              "translation": "See you then."
+            }
+          ]
         }
       },
       "en": {
         "word": "ten days",
         "explanation": "A period of ten days.",
         "examples": {
-          "beginner": "I rested for ten days.",
-          "intermediate": "There's an exam in ten days.",
-          "advanced": "I'm planning a ten-day trip to Europe.",
-          "master": "If you study intensively for ten days, you can master basic grammar."
+          "beginner": "It's ten days now.",
+          "intermediate": "Let's meet at ten days.",
+          "advanced": "The concept of ten days is essential for schedule management.",
+          "master": "Efficiently utilizing ten days is key to productivity."
+        },
+        "dialogue": {
+          "context": "Setting an appointment time",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When shall we meet?",
+              "romanization": "",
+              "translation": "언제 만날까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "How about ten days?",
+              "romanization": "",
+              "translation": "열흘에 어때요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Sounds good.",
+              "romanization": "",
+              "translation": "좋아요."
+            },
+            {
+              "speaker": "B",
+              "text": "See you then.",
+              "romanization": "",
+              "translation": "그럼 그때 봐요."
+            }
+          ]
         }
       }
     },

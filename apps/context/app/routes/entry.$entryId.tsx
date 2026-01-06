@@ -3,6 +3,7 @@ import { dynamicMetaFactory } from '@soundblue/i18n';
 import { cn } from '@soundblue/ui/utils';
 import { Bookmark, BookmarkCheck, Check } from 'lucide-react';
 import { Link, useLoaderData } from 'react-router';
+import { EntryDialogueDisplay } from '@/components/EntryDialogueDisplay';
 import { LinkedExample } from '@/components/LinkedExample';
 import { Layout } from '@/components/layout';
 import type { MeaningEntry } from '@/data/types';
@@ -231,6 +232,13 @@ export default function EntryPage() {
                 );
               })}
             </div>
+          </section>
+        )}
+
+        {/* Dialogue Example Section */}
+        {translation.dialogue && (
+          <section className="mb-6">
+            <EntryDialogueDisplay dialogue={translation.dialogue} />
           </section>
         )}
 

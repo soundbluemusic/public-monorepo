@@ -78,11 +78,30 @@ function groupByChoseong(entries: JsonEntry[]): Map<string, JsonEntry[]> {
   return groups;
 }
 
+interface DialogueLine {
+  speaker: 'A' | 'B';
+  text: string;
+  romanization: string;
+  translation: string;
+}
+
+interface EntryDialogue {
+  context: string;
+  dialogue: DialogueLine[];
+}
+
+interface Examples {
+  beginner: string;
+  intermediate: string;
+  advanced: string;
+  master?: string;
+}
+
 interface JsonEntry {
   id: string;
   korean: string;
   romanization: string;
-  pronunciation?: string;
+  pronunciation?: { korean: string; ipa?: string };
   partOfSpeech: string;
   categoryId: string;
   difficulty: string;
@@ -92,7 +111,8 @@ interface JsonEntry {
     ko: {
       word: string;
       explanation: string;
-      examples?: string[];
+      examples?: Examples;
+      dialogue?: EntryDialogue;
       variations?: {
         formal?: string[];
         casual?: string[];
@@ -102,7 +122,8 @@ interface JsonEntry {
     en: {
       word: string;
       explanation: string;
-      examples?: string[];
+      examples?: Examples;
+      dialogue?: EntryDialogue;
       variations?: {
         formal?: string[];
         casual?: string[];

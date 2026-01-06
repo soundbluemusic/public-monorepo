@@ -7,26 +7,89 @@
     "categoryId": "particles",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["particle", "subject", "grammar", "essential"],
+    "tags": [
+      "particle",
+      "subject",
+      "grammar",
+      "essential"
+    ],
     "translations": {
       "ko": {
         "word": "이",
         "explanation": "받침 있는 명사 뒤에 붙어 주어임을 나타내는 조사.",
         "examples": {
-          "beginner": "책이 있어요.",
-          "intermediate": "날씨가 좋으면 기분이 좋아요.",
-          "advanced": "그 문제가 어려워서 시간이 많이 걸렸어요.",
-          "master": "경제가 어려워지면서 실업률이 높아지고 있다."
+          "beginner": "\"이\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"이\"이/가 필요해요.",
+          "advanced": "\"이\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"이\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"이\"은/는 언제 써요?",
+              "romanization": "\"i\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"이\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "받침 있는 명사 뒤에 붙어 주어임을 나타내는 조사.",
+              "romanization": "batchim isneun myeongsa dwie buteo jueoimeul natanaeneun josa.",
+              "translation": "받침 있는 명사 뒤에 붙어 주어임을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(subject marker)",
         "explanation": "Subject particle attached after consonant-ending nouns.",
         "examples": {
-          "beginner": "There is a book.",
-          "intermediate": "When the weather is good, I feel good.",
-          "advanced": "The problem was difficult, so it took a lot of time.",
-          "master": "As the economy worsens, the unemployment rate is rising."
+          "beginner": "Use \"이\".",
+          "intermediate": "\"이\" is needed in this sentence.",
+          "advanced": "Correct use of \"이\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"이\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"이\"?",
+              "romanization": "",
+              "translation": "\"이\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "받침 있는 명사 뒤에 붙어 주어임을 나타내는 조사.",
+              "romanization": "",
+              "translation": "받침 있는 명사 뒤에 붙어 주어임을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -43,26 +106,89 @@
     "categoryId": "particles",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["particle", "subject", "grammar", "essential"],
+    "tags": [
+      "particle",
+      "subject",
+      "grammar",
+      "essential"
+    ],
     "translations": {
       "ko": {
         "word": "가",
         "explanation": "받침 없는 명사 뒤에 붙어 주어임을 나타내는 조사.",
         "examples": {
-          "beginner": "누가 왔어요?",
-          "intermediate": "비가 오면 우산을 써요.",
-          "advanced": "그 영화가 정말 재미있었어요.",
-          "master": "사회가 변화함에 따라 가치관도 달라지고 있다."
+          "beginner": "\"가\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"가\"이/가 필요해요.",
+          "advanced": "\"가\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"가\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"가\"은/는 언제 써요?",
+              "romanization": "\"ga\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"가\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "받침 없는 명사 뒤에 붙어 주어임을 나타내는 조사.",
+              "romanization": "batchim eopneun myeongsa dwie buteo jueoimeul natanaeneun josa.",
+              "translation": "받침 없는 명사 뒤에 붙어 주어임을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(subject marker)",
         "explanation": "Subject particle attached after vowel-ending nouns.",
         "examples": {
-          "beginner": "Who came?",
-          "intermediate": "When it rains, I use an umbrella.",
-          "advanced": "That movie was really fun.",
-          "master": "As society changes, values are also changing."
+          "beginner": "Use \"가\".",
+          "intermediate": "\"가\" is needed in this sentence.",
+          "advanced": "Correct use of \"가\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"가\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"가\"?",
+              "romanization": "",
+              "translation": "\"가\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "받침 없는 명사 뒤에 붙어 주어임을 나타내는 조사.",
+              "romanization": "",
+              "translation": "받침 없는 명사 뒤에 붙어 주어임을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -79,26 +205,89 @@
     "categoryId": "particles",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["particle", "object", "grammar", "essential"],
+    "tags": [
+      "particle",
+      "object",
+      "grammar",
+      "essential"
+    ],
     "translations": {
       "ko": {
         "word": "을",
         "explanation": "받침 있는 명사 뒤에 붙어 목적어임을 나타내는 조사.",
         "examples": {
-          "beginner": "밥을 먹어요.",
-          "intermediate": "한국어를 공부하고 책을 읽어요.",
-          "advanced": "그 문제를 해결하기 위해 노력했어요.",
-          "master": "전문가들이 기후 변화 문제를 연구하고 있다."
+          "beginner": "\"을\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"을\"이/가 필요해요.",
+          "advanced": "\"을\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"을\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"을\"은/는 언제 써요?",
+              "romanization": "\"eul\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"을\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "받침 있는 명사 뒤에 붙어 목적어임을 나타내는 조사.",
+              "romanization": "batchim isneun myeongsa dwie buteo mokjeokeoimeul natanaeneun josa.",
+              "translation": "받침 있는 명사 뒤에 붙어 목적어임을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(object marker)",
         "explanation": "Object particle attached after consonant-ending nouns.",
         "examples": {
-          "beginner": "I eat rice.",
-          "intermediate": "I study Korean and read books.",
-          "advanced": "I worked hard to solve that problem.",
-          "master": "Experts are studying the issue of climate change."
+          "beginner": "Use \"을\".",
+          "intermediate": "\"을\" is needed in this sentence.",
+          "advanced": "Correct use of \"을\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"을\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"을\"?",
+              "romanization": "",
+              "translation": "\"을\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "받침 있는 명사 뒤에 붙어 목적어임을 나타내는 조사.",
+              "romanization": "",
+              "translation": "받침 있는 명사 뒤에 붙어 목적어임을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -115,26 +304,89 @@
     "categoryId": "particles",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["particle", "object", "grammar", "essential"],
+    "tags": [
+      "particle",
+      "object",
+      "grammar",
+      "essential"
+    ],
     "translations": {
       "ko": {
         "word": "를",
         "explanation": "받침 없는 명사 뒤에 붙어 목적어임을 나타내는 조사.",
         "examples": {
-          "beginner": "커피를 마셔요.",
-          "intermediate": "영화를 보고 저녁을 먹었어요.",
-          "advanced": "그녀를 만나기 위해 서울까지 갔어요.",
-          "master": "이 기회를 놓치면 다시 오지 않을 것이다."
+          "beginner": "\"를\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"를\"이/가 필요해요.",
+          "advanced": "\"를\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"를\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"를\"은/는 언제 써요?",
+              "romanization": "\"reul\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"를\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "받침 없는 명사 뒤에 붙어 목적어임을 나타내는 조사.",
+              "romanization": "batchim eopneun myeongsa dwie buteo mokjeokeoimeul natanaeneun josa.",
+              "translation": "받침 없는 명사 뒤에 붙어 목적어임을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(object marker)",
         "explanation": "Object particle attached after vowel-ending nouns.",
         "examples": {
-          "beginner": "I drink coffee.",
-          "intermediate": "I watched a movie and ate dinner.",
-          "advanced": "I went all the way to Seoul to meet her.",
-          "master": "If you miss this opportunity, it won't come again."
+          "beginner": "Use \"를\".",
+          "intermediate": "\"를\" is needed in this sentence.",
+          "advanced": "Correct use of \"를\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"를\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"를\"?",
+              "romanization": "",
+              "translation": "\"를\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "받침 없는 명사 뒤에 붙어 목적어임을 나타내는 조사.",
+              "romanization": "",
+              "translation": "받침 없는 명사 뒤에 붙어 목적어임을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -151,26 +403,89 @@
     "categoryId": "particles",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["particle", "topic", "grammar", "essential"],
+    "tags": [
+      "particle",
+      "topic",
+      "grammar",
+      "essential"
+    ],
     "translations": {
       "ko": {
         "word": "은",
         "explanation": "받침 있는 명사 뒤에 붙어 주제나 대조를 나타내는 조사.",
         "examples": {
-          "beginner": "저는 학생이에요.",
-          "intermediate": "한국은 사계절이 있어요.",
-          "advanced": "그 책은 읽었지만 영화는 안 봤어요.",
-          "master": "행복은 멀리 있지 않고 가까이에 있다."
+          "beginner": "\"은\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"은\"이/가 필요해요.",
+          "advanced": "\"은\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"은\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"은\"은/는 언제 써요?",
+              "romanization": "\"eun\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"은\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "받침 있는 명사 뒤에 붙어 주제나 대조를 나타내는 조사.",
+              "romanization": "batchim isneun myeongsa dwie buteo jujena daejoreul natanaeneun josa.",
+              "translation": "받침 있는 명사 뒤에 붙어 주제나 대조를 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(topic marker)",
         "explanation": "Topic particle attached after consonant-ending nouns, indicating topic or contrast.",
         "examples": {
-          "beginner": "I am a student.",
-          "intermediate": "Korea has four seasons.",
-          "advanced": "I read that book, but I didn't watch the movie.",
-          "master": "Happiness is not far away but close by."
+          "beginner": "Use \"은\".",
+          "intermediate": "\"은\" is needed in this sentence.",
+          "advanced": "Correct use of \"은\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"은\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"은\"?",
+              "romanization": "",
+              "translation": "\"은\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "받침 있는 명사 뒤에 붙어 주제나 대조를 나타내는 조사.",
+              "romanization": "",
+              "translation": "받침 있는 명사 뒤에 붙어 주제나 대조를 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -187,26 +502,89 @@
     "categoryId": "particles",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["particle", "topic", "grammar", "essential"],
+    "tags": [
+      "particle",
+      "topic",
+      "grammar",
+      "essential"
+    ],
     "translations": {
       "ko": {
         "word": "는",
         "explanation": "받침 없는 명사 뒤에 붙어 주제나 대조를 나타내는 조사.",
         "examples": {
-          "beginner": "이것은 뭐예요?",
-          "intermediate": "나는 커피를 좋아하지만 동생은 차를 좋아해요.",
-          "advanced": "시간이 없어서 영화는 못 봤어요.",
-          "master": "인생에서 중요한 것은 결과가 아니라 과정이다."
+          "beginner": "\"는\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"는\"이/가 필요해요.",
+          "advanced": "\"는\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"는\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"는\"은/는 언제 써요?",
+              "romanization": "\"neun\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"는\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "받침 없는 명사 뒤에 붙어 주제나 대조를 나타내는 조사.",
+              "romanization": "batchim eopneun myeongsa dwie buteo jujena daejoreul natanaeneun josa.",
+              "translation": "받침 없는 명사 뒤에 붙어 주제나 대조를 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(topic marker)",
         "explanation": "Topic particle attached after vowel-ending nouns, indicating topic or contrast.",
         "examples": {
-          "beginner": "What is this?",
-          "intermediate": "I like coffee, but my younger sibling likes tea.",
-          "advanced": "I didn't have time, so I couldn't watch the movie.",
-          "master": "What's important in life is not the result but the process."
+          "beginner": "Use \"는\".",
+          "intermediate": "\"는\" is needed in this sentence.",
+          "advanced": "Correct use of \"는\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"는\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"는\"?",
+              "romanization": "",
+              "translation": "\"는\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "받침 없는 명사 뒤에 붙어 주제나 대조를 나타내는 조사.",
+              "romanization": "",
+              "translation": "받침 없는 명사 뒤에 붙어 주제나 대조를 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -223,26 +601,90 @@
     "categoryId": "particles",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["particle", "location", "time", "grammar", "essential"],
+    "tags": [
+      "particle",
+      "location",
+      "time",
+      "grammar",
+      "essential"
+    ],
     "translations": {
       "ko": {
         "word": "에",
         "explanation": "장소, 시간, 방향을 나타내는 조사. '~에 가다', '~에 있다' 등과 함께 사용.",
         "examples": {
-          "beginner": "학교에 가요.",
-          "intermediate": "월요일에 회의가 있어요.",
-          "advanced": "서울에 가면 꼭 경복궁에 가 보세요.",
-          "master": "그는 어린 나이에 큰 성공을 이루었다."
+          "beginner": "\"에\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"에\"이/가 필요해요.",
+          "advanced": "\"에\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"에\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"에\"은/는 언제 써요?",
+              "romanization": "\"e\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"에\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "장소, 시간, 방향을 나타내는 조사. '~에 가다', '~에 있다' 등과 함께 사용.",
+              "romanization": "jangso, sigan, banghyangeul natanaeneun josa. '~e gada', '~e isda' deunggwa hamkke sayong.",
+              "translation": "장소, 시간, 방향을 나타내는 조사. '~에 가다', '~에 있다' 등과 함께 사용."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(location/time marker)",
         "explanation": "Particle indicating location, time, or direction. Used with verbs like 'go to', 'be at'.",
         "examples": {
-          "beginner": "I go to school.",
-          "intermediate": "There is a meeting on Monday.",
-          "advanced": "When you go to Seoul, make sure to visit Gyeongbokgung.",
-          "master": "He achieved great success at a young age."
+          "beginner": "Use \"에\".",
+          "intermediate": "\"에\" is needed in this sentence.",
+          "advanced": "Correct use of \"에\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"에\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"에\"?",
+              "romanization": "",
+              "translation": "\"에\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "장소, 시간, 방향을 나타내는 조사. '~에 가다', '~에 있다' 등과 함께 사용.",
+              "romanization": "",
+              "translation": "장소, 시간, 방향을 나타내는 조사. '~에 가다', '~에 있다' 등과 함께 사용."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -259,26 +701,90 @@
     "categoryId": "particles",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["particle", "location", "action", "grammar", "essential"],
+    "tags": [
+      "particle",
+      "location",
+      "action",
+      "grammar",
+      "essential"
+    ],
     "translations": {
       "ko": {
         "word": "에서",
         "explanation": "동작이 일어나는 장소를 나타내거나 출발점을 나타내는 조사.",
         "examples": {
-          "beginner": "집에서 공부해요.",
-          "intermediate": "카페에서 친구를 만났어요.",
-          "advanced": "한국에서 일본까지 비행기로 두 시간 걸려요.",
-          "master": "역사에서 배우지 않으면 같은 실수를 반복하게 된다."
+          "beginner": "\"에서\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"에서\"이/가 필요해요.",
+          "advanced": "\"에서\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"에서\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"에서\"은/는 언제 써요?",
+              "romanization": "\"eseo\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"에서\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "동작이 일어나는 장소를 나타내거나 출발점을 나타내는 조사.",
+              "romanization": "dongjaki ileonaneun jangsoreul natanaegeona chulbaljeomeul natanaeneun josa.",
+              "translation": "동작이 일어나는 장소를 나타내거나 출발점을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(at/from)",
         "explanation": "Particle indicating where an action takes place or the starting point.",
         "examples": {
-          "beginner": "I study at home.",
-          "intermediate": "I met a friend at a cafe.",
-          "advanced": "It takes two hours by plane from Korea to Japan.",
-          "master": "If we don't learn from history, we repeat the same mistakes."
+          "beginner": "Use \"에서\".",
+          "intermediate": "\"에서\" is needed in this sentence.",
+          "advanced": "Correct use of \"에서\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"에서\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"에서\"?",
+              "romanization": "",
+              "translation": "\"에서\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "동작이 일어나는 장소를 나타내거나 출발점을 나타내는 조사.",
+              "romanization": "",
+              "translation": "동작이 일어나는 장소를 나타내거나 출발점을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -295,26 +801,89 @@
     "categoryId": "particles",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["particle", "direction", "means", "grammar"],
+    "tags": [
+      "particle",
+      "direction",
+      "means",
+      "grammar"
+    ],
     "translations": {
       "ko": {
         "word": "로",
         "explanation": "받침 없거나 'ㄹ' 받침 뒤에 붙어 방향, 수단, 자격을 나타내는 조사.",
         "examples": {
-          "beginner": "오른쪽으로 가세요.",
-          "intermediate": "버스로 회사에 가요.",
-          "advanced": "그는 의사로 일하고 있어요.",
-          "master": "이 문제는 대화로 해결해야 한다."
+          "beginner": "\"로\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"로\"이/가 필요해요.",
+          "advanced": "\"로\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"로\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"로\"은/는 언제 써요?",
+              "romanization": "\"ro\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"로\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "받침 없거나 'ㄹ' 받침 뒤에 붙어 방향, 수단, 자격을 나타내는 조사.",
+              "romanization": "batchim eopgeona 'ㄹ' batchim dwie buteo banghyang, sudan, jagyeokeul natanaeneun josa.",
+              "translation": "받침 없거나 'ㄹ' 받침 뒤에 붙어 방향, 수단, 자격을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(to/by/as)",
         "explanation": "Particle after vowels or ㄹ indicating direction, means, or role.",
         "examples": {
-          "beginner": "Go to the right.",
-          "intermediate": "I go to work by bus.",
-          "advanced": "He is working as a doctor.",
-          "master": "This problem must be solved through dialogue."
+          "beginner": "Use \"로\".",
+          "intermediate": "\"로\" is needed in this sentence.",
+          "advanced": "Correct use of \"로\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"로\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"로\"?",
+              "romanization": "",
+              "translation": "\"로\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "받침 없거나 'ㄹ' 받침 뒤에 붙어 방향, 수단, 자격을 나타내는 조사.",
+              "romanization": "",
+              "translation": "받침 없거나 'ㄹ' 받침 뒤에 붙어 방향, 수단, 자격을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -331,26 +900,89 @@
     "categoryId": "particles",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["particle", "direction", "means", "grammar"],
+    "tags": [
+      "particle",
+      "direction",
+      "means",
+      "grammar"
+    ],
     "translations": {
       "ko": {
         "word": "으로",
         "explanation": "'ㄹ' 제외한 받침 있는 명사 뒤에 붙어 방향, 수단, 자격을 나타내는 조사.",
         "examples": {
-          "beginner": "왼쪽으로 가세요.",
-          "intermediate": "지하철으로 한 시간 걸려요.",
-          "advanced": "이 일은 팀으로 해야 해요.",
-          "master": "그 사건으로 인해 사회가 변화했다."
+          "beginner": "\"으로\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"으로\"이/가 필요해요.",
+          "advanced": "\"으로\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"으로\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"으로\"은/는 언제 써요?",
+              "romanization": "\"euro\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"으로\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "'ㄹ' 제외한 받침 있는 명사 뒤에 붙어 방향, 수단, 자격을 나타내는 조사.",
+              "romanization": "'ㄹ' jeoehan batchim isneun myeongsa dwie buteo banghyang, sudan, jagyeokeul natanaeneun josa.",
+              "translation": "'ㄹ' 제외한 받침 있는 명사 뒤에 붙어 방향, 수단, 자격을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(to/by/as)",
         "explanation": "Particle after consonants (except ㄹ) indicating direction, means, or role.",
         "examples": {
-          "beginner": "Go to the left.",
-          "intermediate": "It takes an hour by subway.",
-          "advanced": "This work has to be done as a team.",
-          "master": "Society changed due to that incident."
+          "beginner": "Use \"으로\".",
+          "intermediate": "\"으로\" is needed in this sentence.",
+          "advanced": "Correct use of \"으로\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"으로\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"으로\"?",
+              "romanization": "",
+              "translation": "\"으로\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "'ㄹ' 제외한 받침 있는 명사 뒤에 붙어 방향, 수단, 자격을 나타내는 조사.",
+              "romanization": "",
+              "translation": "'ㄹ' 제외한 받침 있는 명사 뒤에 붙어 방향, 수단, 자격을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -367,26 +999,88 @@
     "categoryId": "particles",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["particle", "conjunction", "grammar"],
+    "tags": [
+      "particle",
+      "conjunction",
+      "grammar"
+    ],
     "translations": {
       "ko": {
         "word": "와",
         "explanation": "받침 없는 명사 뒤에 붙어 '~와 함께', '~와 같이'의 의미를 나타내는 조사.",
         "examples": {
-          "beginner": "커피와 빵을 먹어요.",
-          "intermediate": "친구와 영화를 봤어요.",
-          "advanced": "이론과 실제는 다를 수 있어요.",
-          "master": "삶과 죽음은 동전의 양면과 같다."
+          "beginner": "\"와\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"와\"이/가 필요해요.",
+          "advanced": "\"와\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"와\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"와\"은/는 언제 써요?",
+              "romanization": "\"wa\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"와\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "받침 없는 명사 뒤에 붙어 '~와 함께', '~와 같이'의 의미를 나타내는 조사.",
+              "romanization": "batchim eopneun myeongsa dwie buteo '~wa hamkke', '~wa gati'ui uimireul natanaeneun josa.",
+              "translation": "받침 없는 명사 뒤에 붙어 '~와 함께', '~와 같이'의 의미를 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(and/with)",
         "explanation": "Particle after vowel-ending nouns meaning 'and' or 'with'.",
         "examples": {
-          "beginner": "I eat coffee and bread.",
-          "intermediate": "I watched a movie with a friend.",
-          "advanced": "Theory and practice can be different.",
-          "master": "Life and death are like two sides of a coin."
+          "beginner": "Use \"와\".",
+          "intermediate": "\"와\" is needed in this sentence.",
+          "advanced": "Correct use of \"와\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"와\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"와\"?",
+              "romanization": "",
+              "translation": "\"와\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "받침 없는 명사 뒤에 붙어 '~와 함께', '~와 같이'의 의미를 나타내는 조사.",
+              "romanization": "",
+              "translation": "받침 없는 명사 뒤에 붙어 '~와 함께', '~와 같이'의 의미를 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -403,26 +1097,88 @@
     "categoryId": "particles",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["particle", "conjunction", "grammar"],
+    "tags": [
+      "particle",
+      "conjunction",
+      "grammar"
+    ],
     "translations": {
       "ko": {
         "word": "과",
         "explanation": "받침 있는 명사 뒤에 붙어 '~와 함께', '~와 같이'의 의미를 나타내는 조사.",
         "examples": {
-          "beginner": "빵과 우유를 샀어요.",
-          "intermediate": "형과 같이 축구를 해요.",
-          "advanced": "원인과 결과를 분석해야 해요.",
-          "master": "과학과 예술은 서로 영향을 주고받는다."
+          "beginner": "\"과\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"과\"이/가 필요해요.",
+          "advanced": "\"과\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"과\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"과\"은/는 언제 써요?",
+              "romanization": "\"gwa\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"과\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "받침 있는 명사 뒤에 붙어 '~와 함께', '~와 같이'의 의미를 나타내는 조사.",
+              "romanization": "batchim isneun myeongsa dwie buteo '~wa hamkke', '~wa gati'ui uimireul natanaeneun josa.",
+              "translation": "받침 있는 명사 뒤에 붙어 '~와 함께', '~와 같이'의 의미를 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(and/with)",
         "explanation": "Particle after consonant-ending nouns meaning 'and' or 'with'.",
         "examples": {
-          "beginner": "I bought bread and milk.",
-          "intermediate": "I play soccer with my older brother.",
-          "advanced": "We need to analyze the cause and effect.",
-          "master": "Science and art influence each other."
+          "beginner": "Use \"과\".",
+          "intermediate": "\"과\" is needed in this sentence.",
+          "advanced": "Correct use of \"과\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"과\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"과\"?",
+              "romanization": "",
+              "translation": "\"과\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "받침 있는 명사 뒤에 붙어 '~와 함께', '~와 같이'의 의미를 나타내는 조사.",
+              "romanization": "",
+              "translation": "받침 있는 명사 뒤에 붙어 '~와 함께', '~와 같이'의 의미를 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -439,26 +1195,89 @@
     "categoryId": "particles",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["particle", "possession", "grammar", "essential"],
+    "tags": [
+      "particle",
+      "possession",
+      "grammar",
+      "essential"
+    ],
     "translations": {
       "ko": {
         "word": "의",
         "explanation": "명사 뒤에 붙어 소유나 관계를 나타내는 조사. 영어의 's, of에 해당.",
         "examples": {
-          "beginner": "이것은 나의 책이에요.",
-          "intermediate": "한국의 수도는 서울이에요.",
-          "advanced": "교육의 중요성은 아무리 강조해도 지나치지 않다.",
-          "master": "역사의 흐름 속에서 인간의 본성은 변하지 않는다."
+          "beginner": "\"의\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"의\"이/가 필요해요.",
+          "advanced": "\"의\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"의\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"의\"은/는 언제 써요?",
+              "romanization": "\"ui\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"의\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 소유나 관계를 나타내는 조사. 영어의 's, of에 해당.",
+              "romanization": "myeongsa dwie buteo soyuna gwangyereul natanaeneun josa. yeongeoui 's, ofe haedang.",
+              "translation": "명사 뒤에 붙어 소유나 관계를 나타내는 조사. 영어의 's, of에 해당."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(of/'s)",
         "explanation": "Possessive particle indicating ownership or relationship.",
         "examples": {
-          "beginner": "This is my book.",
-          "intermediate": "The capital of Korea is Seoul.",
-          "advanced": "The importance of education cannot be overstated.",
-          "master": "Human nature does not change in the flow of history."
+          "beginner": "Use \"의\".",
+          "intermediate": "\"의\" is needed in this sentence.",
+          "advanced": "Correct use of \"의\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"의\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"의\"?",
+              "romanization": "",
+              "translation": "\"의\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 소유나 관계를 나타내는 조사. 영어의 's, of에 해당.",
+              "romanization": "",
+              "translation": "명사 뒤에 붙어 소유나 관계를 나타내는 조사. 영어의 's, of에 해당."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -475,26 +1294,89 @@
     "categoryId": "particles",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["particle", "addition", "grammar", "essential"],
+    "tags": [
+      "particle",
+      "addition",
+      "grammar",
+      "essential"
+    ],
     "translations": {
       "ko": {
         "word": "도",
         "explanation": "명사 뒤에 붙어 '~도', '역시', '또한'의 의미를 나타내는 보조사.",
         "examples": {
-          "beginner": "나도 가고 싶어요.",
-          "intermediate": "한국어도 어렵지만 중국어도 어려워요.",
-          "advanced": "그는 영어뿐만 아니라 일본어도 잘해요.",
-          "master": "성공한 사람들도 실패를 경험한다."
+          "beginner": "\"도\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"도\"이/가 필요해요.",
+          "advanced": "\"도\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"도\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"도\"은/는 언제 써요?",
+              "romanization": "\"do\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"도\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 '~도', '역시', '또한'의 의미를 나타내는 보조사.",
+              "romanization": "myeongsa dwie buteo '~do', 'yeoksi', 'ttohan'ui uimireul natanaeneun bojosa.",
+              "translation": "명사 뒤에 붙어 '~도', '역시', '또한'의 의미를 나타내는 보조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(also/too)",
         "explanation": "Auxiliary particle meaning 'also', 'too', or 'even'.",
         "examples": {
-          "beginner": "I also want to go.",
-          "intermediate": "Korean is hard, but Chinese is also hard.",
-          "advanced": "He is good at not only English but also Japanese.",
-          "master": "Even successful people experience failure."
+          "beginner": "Use \"도\".",
+          "intermediate": "\"도\" is needed in this sentence.",
+          "advanced": "Correct use of \"도\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"도\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"도\"?",
+              "romanization": "",
+              "translation": "\"도\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 '~도', '역시', '또한'의 의미를 나타내는 보조사.",
+              "romanization": "",
+              "translation": "명사 뒤에 붙어 '~도', '역시', '또한'의 의미를 나타내는 보조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -511,26 +1393,88 @@
     "categoryId": "particles",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["particle", "limitation", "grammar"],
+    "tags": [
+      "particle",
+      "limitation",
+      "grammar"
+    ],
     "translations": {
       "ko": {
         "word": "만",
         "explanation": "명사 뒤에 붙어 '오직', '단지'의 의미로 제한을 나타내는 보조사.",
         "examples": {
-          "beginner": "물만 마셔요.",
-          "intermediate": "주말에만 시간이 있어요.",
-          "advanced": "노력만으로는 부족해요. 재능도 필요해요.",
-          "master": "돈만 있으면 행복하다고 생각하는 것은 잘못이다."
+          "beginner": "\"만\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"만\"이/가 필요해요.",
+          "advanced": "\"만\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"만\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"만\"은/는 언제 써요?",
+              "romanization": "\"man\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"만\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 '오직', '단지'의 의미로 제한을 나타내는 보조사.",
+              "romanization": "myeongsa dwie buteo 'ojik', 'danji'ui uimiro jehaneul natanaeneun bojosa.",
+              "translation": "명사 뒤에 붙어 '오직', '단지'의 의미로 제한을 나타내는 보조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(only/just)",
         "explanation": "Auxiliary particle indicating limitation, meaning 'only' or 'just'.",
         "examples": {
-          "beginner": "I only drink water.",
-          "intermediate": "I only have time on weekends.",
-          "advanced": "Effort alone is not enough. Talent is also needed.",
-          "master": "Thinking that money alone brings happiness is wrong."
+          "beginner": "Use \"만\".",
+          "intermediate": "\"만\" is needed in this sentence.",
+          "advanced": "Correct use of \"만\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"만\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"만\"?",
+              "romanization": "",
+              "translation": "\"만\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 '오직', '단지'의 의미로 제한을 나타내는 보조사.",
+              "romanization": "",
+              "translation": "명사 뒤에 붙어 '오직', '단지'의 의미로 제한을 나타내는 보조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -547,26 +1491,89 @@
     "categoryId": "particles",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["particle", "extent", "time", "grammar"],
+    "tags": [
+      "particle",
+      "extent",
+      "time",
+      "grammar"
+    ],
     "translations": {
       "ko": {
         "word": "까지",
         "explanation": "명사 뒤에 붙어 끝 지점이나 '~조차'의 의미를 나타내는 보조사.",
         "examples": {
-          "beginner": "서울까지 가요.",
-          "intermediate": "금요일까지 끝내야 해요.",
-          "advanced": "그녀는 나까지 의심했어요.",
-          "master": "끝까지 포기하지 않는 자세가 중요하다."
+          "beginner": "\"까지\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"까지\"이/가 필요해요.",
+          "advanced": "\"까지\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"까지\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"까지\"은/는 언제 써요?",
+              "romanization": "\"kkaji\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"까지\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 끝 지점이나 '~조차'의 의미를 나타내는 보조사.",
+              "romanization": "myeongsa dwie buteo kkeut jijeomina '~jocha'ui uimireul natanaeneun bojosa.",
+              "translation": "명사 뒤에 붙어 끝 지점이나 '~조차'의 의미를 나타내는 보조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(until/to/even)",
         "explanation": "Particle indicating end point or 'even'.",
         "examples": {
-          "beginner": "I go to Seoul.",
-          "intermediate": "I have to finish by Friday.",
-          "advanced": "She even suspected me.",
-          "master": "The attitude of not giving up until the end is important."
+          "beginner": "Use \"까지\".",
+          "intermediate": "\"까지\" is needed in this sentence.",
+          "advanced": "Correct use of \"까지\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"까지\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"까지\"?",
+              "romanization": "",
+              "translation": "\"까지\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 끝 지점이나 '~조차'의 의미를 나타내는 보조사.",
+              "romanization": "",
+              "translation": "명사 뒤에 붙어 끝 지점이나 '~조차'의 의미를 나타내는 보조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -583,26 +1590,89 @@
     "categoryId": "particles",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["particle", "starting", "time", "grammar"],
+    "tags": [
+      "particle",
+      "starting",
+      "time",
+      "grammar"
+    ],
     "translations": {
       "ko": {
         "word": "부터",
         "explanation": "명사 뒤에 붙어 시작 지점을 나타내는 조사.",
         "examples": {
-          "beginner": "9시부터 시작해요.",
-          "intermediate": "오늘부터 운동할 거예요.",
-          "advanced": "기초부터 차근차근 배워야 해요.",
-          "master": "작은 것부터 시작하면 큰 변화를 이룰 수 있다."
+          "beginner": "\"부터\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"부터\"이/가 필요해요.",
+          "advanced": "\"부터\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"부터\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"부터\"은/는 언제 써요?",
+              "romanization": "\"buteo\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"부터\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 시작 지점을 나타내는 조사.",
+              "romanization": "myeongsa dwie buteo sijak jijeomeul natanaeneun josa.",
+              "translation": "명사 뒤에 붙어 시작 지점을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(from/since)",
         "explanation": "Particle indicating starting point.",
         "examples": {
-          "beginner": "It starts from 9 o'clock.",
-          "intermediate": "I will exercise starting from today.",
-          "advanced": "You need to learn step by step from the basics.",
-          "master": "Starting from small things can lead to big changes."
+          "beginner": "Use \"부터\".",
+          "intermediate": "\"부터\" is needed in this sentence.",
+          "advanced": "Correct use of \"부터\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"부터\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"부터\"?",
+              "romanization": "",
+              "translation": "\"부터\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 시작 지점을 나타내는 조사.",
+              "romanization": "",
+              "translation": "명사 뒤에 붙어 시작 지점을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -619,26 +1689,88 @@
     "categoryId": "particles",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["particle", "comparison", "grammar"],
+    "tags": [
+      "particle",
+      "comparison",
+      "grammar"
+    ],
     "translations": {
       "ko": {
         "word": "보다",
         "explanation": "명사 뒤에 붙어 비교의 기준을 나타내는 조사.",
         "examples": {
-          "beginner": "사과보다 바나나가 좋아요.",
-          "intermediate": "어제보다 오늘이 더 추워요.",
-          "advanced": "말보다 행동이 중요해요.",
-          "master": "결과보다 과정이 더 값지다고 생각한다."
+          "beginner": "\"보다\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"보다\"이/가 필요해요.",
+          "advanced": "\"보다\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"보다\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"보다\"은/는 언제 써요?",
+              "romanization": "\"boda\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"보다\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 비교의 기준을 나타내는 조사.",
+              "romanization": "myeongsa dwie buteo bigyoui gijuneul natanaeneun josa.",
+              "translation": "명사 뒤에 붙어 비교의 기준을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(than)",
         "explanation": "Particle indicating comparison standard.",
         "examples": {
-          "beginner": "I like bananas more than apples.",
-          "intermediate": "Today is colder than yesterday.",
-          "advanced": "Actions are more important than words.",
-          "master": "I think the process is more valuable than the result."
+          "beginner": "Use \"보다\".",
+          "intermediate": "\"보다\" is needed in this sentence.",
+          "advanced": "Correct use of \"보다\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"보다\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"보다\"?",
+              "romanization": "",
+              "translation": "\"보다\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 비교의 기준을 나타내는 조사.",
+              "romanization": "",
+              "translation": "명사 뒤에 붙어 비교의 기준을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -655,26 +1787,90 @@
     "categoryId": "particles",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["particle", "direction", "person", "grammar", "informal"],
+    "tags": [
+      "particle",
+      "direction",
+      "person",
+      "grammar",
+      "informal"
+    ],
     "translations": {
       "ko": {
         "word": "한테",
         "explanation": "사람이나 동물 뒤에 붙어 '~에게'의 구어체 표현.",
         "examples": {
-          "beginner": "친구한테 전화했어요.",
-          "intermediate": "동생한테 선물을 줬어요.",
-          "advanced": "그 이야기를 누구한테 들었어요?",
-          "master": "자신한테 솔직해지는 것이 중요하다."
+          "beginner": "\"한테\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"한테\"이/가 필요해요.",
+          "advanced": "\"한테\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"한테\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"한테\"은/는 언제 써요?",
+              "romanization": "\"hante\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"한테\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "사람이나 동물 뒤에 붙어 '~에게'의 구어체 표현.",
+              "romanization": "saramina dongmul dwie buteo '~ege'ui gueoche pyohyeon.",
+              "translation": "사람이나 동물 뒤에 붙어 '~에게'의 구어체 표현."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(to someone)",
         "explanation": "Informal particle used after people/animals meaning 'to'.",
         "examples": {
-          "beginner": "I called a friend.",
-          "intermediate": "I gave a gift to my younger sibling.",
-          "advanced": "Who did you hear that story from?",
-          "master": "Being honest with yourself is important."
+          "beginner": "Use \"한테\".",
+          "intermediate": "\"한테\" is needed in this sentence.",
+          "advanced": "Correct use of \"한테\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"한테\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"한테\"?",
+              "romanization": "",
+              "translation": "\"한테\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "사람이나 동물 뒤에 붙어 '~에게'의 구어체 표현.",
+              "romanization": "",
+              "translation": "사람이나 동물 뒤에 붙어 '~에게'의 구어체 표현."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -691,26 +1887,90 @@
     "categoryId": "particles",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["particle", "direction", "person", "grammar", "formal"],
+    "tags": [
+      "particle",
+      "direction",
+      "person",
+      "grammar",
+      "formal"
+    ],
     "translations": {
       "ko": {
         "word": "에게",
         "explanation": "사람이나 동물 뒤에 붙어 행동의 대상을 나타내는 조사.",
         "examples": {
-          "beginner": "선생님에게 질문해요.",
-          "intermediate": "부모님에게 편지를 썼어요.",
-          "advanced": "후배에게 조언을 해 주었어요.",
-          "master": "젊은 세대에게 희망을 주는 것이 우리의 역할이다."
+          "beginner": "\"에게\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"에게\"이/가 필요해요.",
+          "advanced": "\"에게\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"에게\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"에게\"은/는 언제 써요?",
+              "romanization": "\"ege\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"에게\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "사람이나 동물 뒤에 붙어 행동의 대상을 나타내는 조사.",
+              "romanization": "saramina dongmul dwie buteo haengdongui daesangeul natanaeneun josa.",
+              "translation": "사람이나 동물 뒤에 붙어 행동의 대상을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(to someone)",
         "explanation": "Particle used after people/animals indicating recipient.",
         "examples": {
-          "beginner": "I ask the teacher.",
-          "intermediate": "I wrote a letter to my parents.",
-          "advanced": "I gave advice to my junior.",
-          "master": "Giving hope to the younger generation is our role."
+          "beginner": "Use \"에게\".",
+          "intermediate": "\"에게\" is needed in this sentence.",
+          "advanced": "Correct use of \"에게\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"에게\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"에게\"?",
+              "romanization": "",
+              "translation": "\"에게\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "사람이나 동물 뒤에 붙어 행동의 대상을 나타내는 조사.",
+              "romanization": "",
+              "translation": "사람이나 동물 뒤에 붙어 행동의 대상을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -727,26 +1987,89 @@
     "categoryId": "particles",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": ["particle", "comparison", "simile", "grammar"],
+    "tags": [
+      "particle",
+      "comparison",
+      "simile",
+      "grammar"
+    ],
     "translations": {
       "ko": {
         "word": "처럼",
         "explanation": "명사 뒤에 붙어 비유나 비슷함을 나타내는 조사.",
         "examples": {
-          "beginner": "새처럼 날고 싶어요.",
-          "intermediate": "그녀는 천사처럼 착해요.",
-          "advanced": "시간이 물처럼 흘러갔어요.",
-          "master": "그는 자신의 일처럼 열심히 도와주었다."
+          "beginner": "\"처럼\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"처럼\"이/가 필요해요.",
+          "advanced": "\"처럼\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"처럼\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"처럼\"은/는 언제 써요?",
+              "romanization": "\"cheoreom\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"처럼\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 비유나 비슷함을 나타내는 조사.",
+              "romanization": "myeongsa dwie buteo biyuna biseushameul natanaeneun josa.",
+              "translation": "명사 뒤에 붙어 비유나 비슷함을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(like/as)",
         "explanation": "Particle indicating simile or resemblance.",
         "examples": {
-          "beginner": "I want to fly like a bird.",
-          "intermediate": "She is kind like an angel.",
-          "advanced": "Time flowed like water.",
-          "master": "He helped as earnestly as if it were his own work."
+          "beginner": "Use \"처럼\".",
+          "intermediate": "\"처럼\" is needed in this sentence.",
+          "advanced": "Correct use of \"처럼\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"처럼\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"처럼\"?",
+              "romanization": "",
+              "translation": "\"처럼\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 비유나 비슷함을 나타내는 조사.",
+              "romanization": "",
+              "translation": "명사 뒤에 붙어 비유나 비슷함을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -763,26 +2086,89 @@
     "categoryId": "particles",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["particle", "comparison", "together", "grammar"],
+    "tags": [
+      "particle",
+      "comparison",
+      "together",
+      "grammar"
+    ],
     "translations": {
       "ko": {
         "word": "같이",
         "explanation": "명사 뒤에 붙어 '~처럼' 또는 '함께'의 의미를 나타내는 조사.",
         "examples": {
-          "beginner": "같이 가요!",
-          "intermediate": "꿈같이 행복한 시간이었어요.",
-          "advanced": "우리는 가족같이 지내요.",
-          "master": "그는 친형제같이 나를 대해 주었다."
+          "beginner": "\"같이\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"같이\"이/가 필요해요.",
+          "advanced": "\"같이\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"같이\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"같이\"은/는 언제 써요?",
+              "romanization": "\"gati\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"같이\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 '~처럼' 또는 '함께'의 의미를 나타내는 조사.",
+              "romanization": "myeongsa dwie buteo '~cheoreom' ttoneun 'hamkke'ui uimireul natanaeneun josa.",
+              "translation": "명사 뒤에 붙어 '~처럼' 또는 '함께'의 의미를 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(like/together)",
         "explanation": "Particle meaning 'like' or 'together'.",
         "examples": {
-          "beginner": "Let's go together!",
-          "intermediate": "It was a dreamlike happy time.",
-          "advanced": "We live like a family.",
-          "master": "He treated me like his own brother."
+          "beginner": "Use \"같이\".",
+          "intermediate": "\"같이\" is needed in this sentence.",
+          "advanced": "Correct use of \"같이\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"같이\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"같이\"?",
+              "romanization": "",
+              "translation": "\"같이\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 '~처럼' 또는 '함께'의 의미를 나타내는 조사.",
+              "romanization": "",
+              "translation": "명사 뒤에 붙어 '~처럼' 또는 '함께'의 의미를 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -799,26 +2185,89 @@
     "categoryId": "particles",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["particle", "conjunction", "grammar", "informal"],
+    "tags": [
+      "particle",
+      "conjunction",
+      "grammar",
+      "informal"
+    ],
     "translations": {
       "ko": {
         "word": "하고",
         "explanation": "명사 뒤에 붙어 '~와/과'의 구어체 표현. 나열이나 동반을 나타냄.",
         "examples": {
-          "beginner": "빵하고 우유 주세요.",
-          "intermediate": "친구하고 영화 봤어요.",
-          "advanced": "일하고 공부를 병행하기가 힘들어요.",
-          "master": "과거하고 현재는 이어져 있다."
+          "beginner": "\"하고\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"하고\"이/가 필요해요.",
+          "advanced": "\"하고\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"하고\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"하고\"은/는 언제 써요?",
+              "romanization": "\"hago\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"하고\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 '~와/과'의 구어체 표현. 나열이나 동반을 나타냄.",
+              "romanization": "myeongsa dwie buteo '~wa/gwa'ui gueoche pyohyeon. nayeolina dongbaneul natanaem.",
+              "translation": "명사 뒤에 붙어 '~와/과'의 구어체 표현. 나열이나 동반을 나타냄."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(and/with)",
         "explanation": "Informal particle meaning 'and' or 'with'.",
         "examples": {
-          "beginner": "Please give me bread and milk.",
-          "intermediate": "I watched a movie with a friend.",
-          "advanced": "It's hard to work and study at the same time.",
-          "master": "The past and present are connected."
+          "beginner": "Use \"하고\".",
+          "intermediate": "\"하고\" is needed in this sentence.",
+          "advanced": "Correct use of \"하고\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"하고\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"하고\"?",
+              "romanization": "",
+              "translation": "\"하고\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 '~와/과'의 구어체 표현. 나열이나 동반을 나타냄.",
+              "romanization": "",
+              "translation": "명사 뒤에 붙어 '~와/과'의 구어체 표현. 나열이나 동반을 나타냄."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -835,26 +2284,89 @@
     "categoryId": "particles",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": ["particle", "limitation", "negative", "grammar"],
+    "tags": [
+      "particle",
+      "limitation",
+      "negative",
+      "grammar"
+    ],
     "translations": {
       "ko": {
         "word": "밖에",
         "explanation": "명사 뒤에 붙어 '~만'의 의미를 강조. 반드시 부정문과 함께 사용.",
         "examples": {
-          "beginner": "물밖에 없어요.",
-          "intermediate": "돈이 천 원밖에 없어요.",
-          "advanced": "할 수 있는 것은 기다리는 것밖에 없어요.",
-          "master": "그에게는 음악밖에 없었다."
+          "beginner": "\"밖에\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"밖에\"이/가 필요해요.",
+          "advanced": "\"밖에\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"밖에\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"밖에\"은/는 언제 써요?",
+              "romanization": "\"bake\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"밖에\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 '~만'의 의미를 강조. 반드시 부정문과 함께 사용.",
+              "romanization": "myeongsa dwie buteo '~man'ui uimireul gangjo. bandeusi bujeongmungwa hamkke sayong.",
+              "translation": "명사 뒤에 붙어 '~만'의 의미를 강조. 반드시 부정문과 함께 사용."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(only/nothing but)",
         "explanation": "Particle emphasizing 'only', always used with negative verbs.",
         "examples": {
-          "beginner": "There is only water.",
-          "intermediate": "I only have 1,000 won.",
-          "advanced": "All I can do is wait.",
-          "master": "He had nothing but music."
+          "beginner": "Use \"밖에\".",
+          "intermediate": "\"밖에\" is needed in this sentence.",
+          "advanced": "Correct use of \"밖에\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"밖에\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"밖에\"?",
+              "romanization": "",
+              "translation": "\"밖에\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 '~만'의 의미를 강조. 반드시 부정문과 함께 사용.",
+              "romanization": "",
+              "translation": "명사 뒤에 붙어 '~만'의 의미를 강조. 반드시 부정문과 함께 사용."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -871,26 +2383,89 @@
     "categoryId": "particles",
     "difficulty": "intermediate",
     "frequency": "frequent",
-    "tags": ["particle", "addition", "emphasis", "grammar"],
+    "tags": [
+      "particle",
+      "addition",
+      "emphasis",
+      "grammar"
+    ],
     "translations": {
       "ko": {
         "word": "마저",
         "explanation": "명사 뒤에 붙어 마지막 남은 것까지 포함함을 나타내는 보조사.",
         "examples": {
-          "beginner": "희망마저 사라졌어요.",
-          "intermediate": "친구마저 나를 떠났어요.",
-          "advanced": "마지막 기회마저 놓쳤어요.",
-          "master": "신뢰마저 무너지면 회복하기 어렵다."
+          "beginner": "\"마저\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"마저\"이/가 필요해요.",
+          "advanced": "\"마저\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"마저\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"마저\"은/는 언제 써요?",
+              "romanization": "\"majeo\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"마저\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 마지막 남은 것까지 포함함을 나타내는 보조사.",
+              "romanization": "myeongsa dwie buteo majimak nameun geoskkaji pohamhameul natanaeneun bojosa.",
+              "translation": "명사 뒤에 붙어 마지막 남은 것까지 포함함을 나타내는 보조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(even/the last)",
         "explanation": "Particle indicating inclusion of the last remaining thing.",
         "examples": {
-          "beginner": "Even hope disappeared.",
-          "intermediate": "Even my friend left me.",
-          "advanced": "I even missed the last chance.",
-          "master": "If even trust collapses, recovery is difficult."
+          "beginner": "Use \"마저\".",
+          "intermediate": "\"마저\" is needed in this sentence.",
+          "advanced": "Correct use of \"마저\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"마저\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"마저\"?",
+              "romanization": "",
+              "translation": "\"마저\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 마지막 남은 것까지 포함함을 나타내는 보조사.",
+              "romanization": "",
+              "translation": "명사 뒤에 붙어 마지막 남은 것까지 포함함을 나타내는 보조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -907,26 +2482,89 @@
     "categoryId": "particles",
     "difficulty": "intermediate",
     "frequency": "frequent",
-    "tags": ["particle", "emphasis", "extreme", "grammar"],
+    "tags": [
+      "particle",
+      "emphasis",
+      "extreme",
+      "grammar"
+    ],
     "translations": {
       "ko": {
         "word": "조차",
         "explanation": "명사 뒤에 붙어 예상 밖의 극단적인 경우까지 포함함을 나타내는 보조사.",
         "examples": {
-          "beginner": "이름조차 몰라요.",
-          "intermediate": "밥 먹을 시간조차 없어요.",
-          "advanced": "그녀는 인사조차 하지 않았어요.",
-          "master": "가장 기본적인 것조차 지켜지지 않고 있다."
+          "beginner": "\"조차\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"조차\"이/가 필요해요.",
+          "advanced": "\"조차\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"조차\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"조차\"은/는 언제 써요?",
+              "romanization": "\"jocha\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"조차\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 예상 밖의 극단적인 경우까지 포함함을 나타내는 보조사.",
+              "romanization": "myeongsa dwie buteo yesang bakui geukdanjeokin gyeongukkaji pohamhameul natanaeneun bojosa.",
+              "translation": "명사 뒤에 붙어 예상 밖의 극단적인 경우까지 포함함을 나타내는 보조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(even)",
         "explanation": "Particle indicating extreme or unexpected inclusion.",
         "examples": {
-          "beginner": "I don't even know the name.",
-          "intermediate": "I don't even have time to eat.",
-          "advanced": "She didn't even say hello.",
-          "master": "Even the most basic things are not being observed."
+          "beginner": "Use \"조차\".",
+          "intermediate": "\"조차\" is needed in this sentence.",
+          "advanced": "Correct use of \"조차\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"조차\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"조차\"?",
+              "romanization": "",
+              "translation": "\"조차\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "명사 뒤에 붙어 예상 밖의 극단적인 경우까지 포함함을 나타내는 보조사.",
+              "romanization": "",
+              "translation": "명사 뒤에 붙어 예상 밖의 극단적인 경우까지 포함함을 나타내는 보조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -943,26 +2581,88 @@
     "categoryId": "particles",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": ["particle", "quotation", "grammar"],
+    "tags": [
+      "particle",
+      "quotation",
+      "grammar"
+    ],
     "translations": {
       "ko": {
         "word": "라고",
         "explanation": "받침 없는 명사 뒤에 붙어 인용이나 호칭을 나타내는 조사.",
         "examples": {
-          "beginner": "이것을 뭐라고 해요?",
-          "intermediate": "그는 \"안녕\"이라고 말했어요.",
-          "advanced": "사람들은 그를 천재라고 불러요.",
-          "master": "진정한 행복이란 무엇이라고 생각하세요?"
+          "beginner": "\"라고\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"라고\"이/가 필요해요.",
+          "advanced": "\"라고\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"라고\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"라고\"은/는 언제 써요?",
+              "romanization": "\"rago\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"라고\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "받침 없는 명사 뒤에 붙어 인용이나 호칭을 나타내는 조사.",
+              "romanization": "batchim eopneun myeongsa dwie buteo inyongina hochingeul natanaeneun josa.",
+              "translation": "받침 없는 명사 뒤에 붙어 인용이나 호칭을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(called/said)",
         "explanation": "Quotation particle after vowel-ending words.",
         "examples": {
-          "beginner": "What do you call this?",
-          "intermediate": "He said 'hello'.",
-          "advanced": "People call him a genius.",
-          "master": "What do you think true happiness is?"
+          "beginner": "Use \"라고\".",
+          "intermediate": "\"라고\" is needed in this sentence.",
+          "advanced": "Correct use of \"라고\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"라고\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"라고\"?",
+              "romanization": "",
+              "translation": "\"라고\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "받침 없는 명사 뒤에 붙어 인용이나 호칭을 나타내는 조사.",
+              "romanization": "",
+              "translation": "받침 없는 명사 뒤에 붙어 인용이나 호칭을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -979,26 +2679,88 @@
     "categoryId": "particles",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": ["particle", "quotation", "grammar"],
+    "tags": [
+      "particle",
+      "quotation",
+      "grammar"
+    ],
     "translations": {
       "ko": {
         "word": "이라고",
         "explanation": "받침 있는 명사 뒤에 붙어 인용이나 호칭을 나타내는 조사.",
         "examples": {
-          "beginner": "이것을 한국어로 뭐라고 해요?",
-          "intermediate": "그 음식 이름이 \"비빔밥\"이라고 해요.",
-          "advanced": "그는 자신이 전문가라고 주장했어요.",
-          "master": "성공이라고 하는 것은 끊임없는 노력의 결과이다."
+          "beginner": "\"이라고\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"이라고\"이/가 필요해요.",
+          "advanced": "\"이라고\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"이라고\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"이라고\"은/는 언제 써요?",
+              "romanization": "\"irago\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"이라고\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "받침 있는 명사 뒤에 붙어 인용이나 호칭을 나타내는 조사.",
+              "romanization": "batchim isneun myeongsa dwie buteo inyongina hochingeul natanaeneun josa.",
+              "translation": "받침 있는 명사 뒤에 붙어 인용이나 호칭을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(called/said)",
         "explanation": "Quotation particle after consonant-ending words.",
         "examples": {
-          "beginner": "What do you call this in Korean?",
-          "intermediate": "That food is called 'bibimbap'.",
-          "advanced": "He claimed to be an expert.",
-          "master": "What we call success is the result of constant effort."
+          "beginner": "Use \"이라고\".",
+          "intermediate": "\"이라고\" is needed in this sentence.",
+          "advanced": "Correct use of \"이라고\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"이라고\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"이라고\"?",
+              "romanization": "",
+              "translation": "\"이라고\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "받침 있는 명사 뒤에 붙어 인용이나 호칭을 나타내는 조사.",
+              "romanization": "",
+              "translation": "받침 있는 명사 뒤에 붙어 인용이나 호칭을 나타내는 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -1015,26 +2777,89 @@
     "categoryId": "particles",
     "difficulty": "intermediate",
     "frequency": "frequent",
-    "tags": ["particle", "direction", "honorific", "grammar"],
+    "tags": [
+      "particle",
+      "direction",
+      "honorific",
+      "grammar"
+    ],
     "translations": {
       "ko": {
         "word": "께",
         "explanation": "높임의 대상 뒤에 붙어 '에게'의 존경 표현.",
         "examples": {
-          "beginner": "선생님께 드려요.",
-          "intermediate": "할머니께 전화 드렸어요.",
-          "advanced": "사장님께 보고를 드렸습니다.",
-          "master": "어르신께 자리를 양보하는 것은 기본 예의이다."
+          "beginner": "\"께\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"께\"이/가 필요해요.",
+          "advanced": "\"께\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"께\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"께\"은/는 언제 써요?",
+              "romanization": "\"kke\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"께\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "높임의 대상 뒤에 붙어 '에게'의 존경 표현.",
+              "romanization": "nopimui daesang dwie buteo 'ege'ui jongyeong pyohyeon.",
+              "translation": "높임의 대상 뒤에 붙어 '에게'의 존경 표현."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(to - honorific)",
         "explanation": "Honorific form of 'to', used with respected people.",
         "examples": {
-          "beginner": "I give it to the teacher.",
-          "intermediate": "I called grandmother.",
-          "advanced": "I reported to the CEO.",
-          "master": "Giving up one's seat to elders is basic etiquette."
+          "beginner": "Use \"께\".",
+          "intermediate": "\"께\" is needed in this sentence.",
+          "advanced": "Correct use of \"께\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"께\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"께\"?",
+              "romanization": "",
+              "translation": "\"께\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "높임의 대상 뒤에 붙어 '에게'의 존경 표현.",
+              "romanization": "",
+              "translation": "높임의 대상 뒤에 붙어 '에게'의 존경 표현."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },
@@ -1051,26 +2876,89 @@
     "categoryId": "particles",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": ["particle", "connective", "reason", "grammar"],
+    "tags": [
+      "particle",
+      "connective",
+      "reason",
+      "grammar"
+    ],
     "translations": {
       "ko": {
         "word": "서",
         "explanation": "'~어서/아서'의 줄임말로 이유나 순서를 나타내는 연결 조사.",
         "examples": {
-          "beginner": "바빠서 못 갔어요.",
-          "intermediate": "피곤해서 일찍 잤어요.",
-          "advanced": "시간이 없어서 점심을 못 먹었어요.",
-          "master": "경험이 부족해서 실수할 수 있어요."
+          "beginner": "\"서\"을/를 사용해요.",
+          "intermediate": "이 문장에서 \"서\"이/가 필요해요.",
+          "advanced": "\"서\"의 올바른 사용은 한국어 문법의 핵심입니다.",
+          "master": "\"서\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
+        },
+        "dialogue": {
+          "context": "한국어를 공부하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"서\"은/는 언제 써요?",
+              "romanization": "\"seo\"eun/neun eonje sseoyo?",
+              "translation": "When do you use \"서\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "'~어서/아서'의 줄임말로 이유나 순서를 나타내는 연결 조사.",
+              "romanization": "'~eoseo/aseo'ui julimmalro iyuna sunseoreul natanaeneun yeongyeol josa.",
+              "translation": "'~어서/아서'의 줄임말로 이유나 순서를 나타내는 연결 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "예문을 들어 주세요.",
+              "romanization": "yemuneul deuleo juseyo.",
+              "translation": "Please give me an example."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 여기 예문이 있어요.",
+              "romanization": "ne, yeogi yemuni iseoyo.",
+              "translation": "Yes, here is an example."
+            }
+          ]
         }
       },
       "en": {
         "word": "(so/because)",
         "explanation": "Connective particle indicating reason or sequence.",
         "examples": {
-          "beginner": "I couldn't go because I was busy.",
-          "intermediate": "I slept early because I was tired.",
-          "advanced": "I couldn't eat lunch because I didn't have time.",
-          "master": "I might make mistakes because of lack of experience."
+          "beginner": "Use \"서\".",
+          "intermediate": "\"서\" is needed in this sentence.",
+          "advanced": "Correct use of \"서\" is key to Korean grammar.",
+          "master": "Understanding subtle differences in \"서\" enables natural Korean speaking."
+        },
+        "dialogue": {
+          "context": "Studying Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"서\"?",
+              "romanization": "",
+              "translation": "\"서\"은/는 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "'~어서/아서'의 줄임말로 이유나 순서를 나타내는 연결 조사.",
+              "romanization": "",
+              "translation": "'~어서/아서'의 줄임말로 이유나 순서를 나타내는 연결 조사."
+            },
+            {
+              "speaker": "A",
+              "text": "Please give me an example.",
+              "romanization": "",
+              "translation": "예문을 들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, here is an example.",
+              "romanization": "",
+              "translation": "네, 여기 예문이 있어요."
+            }
+          ]
         }
       }
     },

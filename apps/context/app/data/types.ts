@@ -29,11 +29,36 @@ export interface LeveledExamples {
 }
 
 /**
+ * 어휘별 대화예문 한 줄
+ * @property speaker - 화자 ("A" 또는 "B")
+ * @property text - 대사 텍스트
+ * @property romanization - 발음 표기
+ * @property translation - 번역
+ */
+export interface EntryDialogueLine {
+  speaker: 'A' | 'B';
+  text: string;
+  romanization: string;
+  translation: string;
+}
+
+/**
+ * 어휘별 대화예문
+ * @property context - 대화 상황 설명 (예: "처음 만나서 인사하며")
+ * @property dialogue - 대화 내용 배열 (2-6턴)
+ */
+export interface EntryDialogue {
+  context: string;
+  dialogue: EntryDialogueLine[];
+}
+
+/**
  * 특정 언어로의 번역 데이터
  * @property word - 번역된 단어
  * @property reading - 읽기 표기 (선택)
  * @property explanation - 해당 언어로 된 설명
  * @property examples - 레벨별 예문 (beginner, intermediate, advanced, master)
+ * @property dialogue - 어휘별 대화예문 (선택)
  * @property variations - 격식 수준별 표현 변형
  */
 export interface Translation {
@@ -41,6 +66,7 @@ export interface Translation {
   reading?: string;
   explanation: string;
   examples?: LeveledExamples;
+  dialogue?: EntryDialogue;
   variations?: Variations;
 }
 

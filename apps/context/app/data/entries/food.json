@@ -7,26 +7,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "basic", "staple"],
+    "tags": [
+      "food",
+      "basic",
+      "staple"
+    ],
     "translations": {
       "ko": {
         "word": "밥",
         "explanation": "지은 쌀, 한국의 주식. '식사' 전체를 의미하기도 한다. '밥 먹었어?'(식사했어?)는 일상적인 인사다.",
         "examples": {
-          "beginner": "밥 먹었어요?",
-          "intermediate": "밥 먹으러 가자!",
-          "advanced": "한국에서는 \"밥 먹었어요?\"라는 말이 단순한 질문이 아니라 상대방의 안부를 묻는 인사처럼 사용된다.",
-          "master": "엄마가 해주신 따뜻한 집밥을 먹으면 어떤 스트레스도 사라지는 것 같다."
+          "beginner": "밥을/를 먹어요.",
+          "intermediate": "밥이/가 맛있어요.",
+          "advanced": "밥은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "밥의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "밥 주세요.",
+              "romanization": "bap juseyo.",
+              "translation": "Rice / Meal, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Rice / Meal",
         "explanation": "Cooked rice, the staple food of Korea. Also used to mean 'meal' in general. '밥 먹었어?' (Did you eat?) is a common greeting.",
         "examples": {
-          "beginner": "밥 먹었어요? - Have you eaten?",
-          "intermediate": "밥 먹으러 가자! - Let's go eat!",
-          "advanced": "In Korea, asking \"밥 먹었어요?\" (Have you eaten?) is not just a simple question but is used as a greeting to check on someone's well-being.",
-          "master": "When I eat the warm home-cooked meal my mom makes, all my stress seems to melt away."
+          "beginner": "I eat rice / meal.",
+          "intermediate": "Rice / Meal is delicious.",
+          "advanced": "Rice / Meal is one of Korea's representative foods.",
+          "master": "The cooking method and history of rice / meal is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Rice / Meal, please.",
+              "romanization": "",
+              "translation": "밥 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -43,26 +105,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "korean", "traditional"],
+    "tags": [
+      "food",
+      "korean",
+      "traditional"
+    ],
     "translations": {
       "ko": {
         "word": "김치",
         "explanation": "한국 전통 발효 채소 요리. 주로 배추와 무로 만든다. 한국 음식의 기본 반찬이다.",
         "examples": {
-          "beginner": "김치 좋아해요?",
-          "intermediate": "김치찌개 먹고 싶어요.",
-          "advanced": "할머니께서 담그신 김치는 시중에서 파는 것과는 비교할 수 없을 정도로 맛있다.",
-          "master": "외국인 친구에게 김치를 소개했더니 처음에는 매워서 힘들어했지만, 지금은 푹 빠져서 매일 먹는다."
+          "beginner": "김치을/를 먹어요.",
+          "intermediate": "김치이/가 맛있어요.",
+          "advanced": "김치은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "김치의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "김치 주세요.",
+              "romanization": "gimchi juseyo.",
+              "translation": "Kimchi, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Kimchi",
         "explanation": "Traditional Korean fermented vegetable dish, usually made with napa cabbage and radish. A staple side dish in Korean cuisine.",
         "examples": {
-          "beginner": "김치 좋아해요? - Do you like kimchi?",
-          "intermediate": "김치찌개 먹고 싶어요. - I want to eat kimchi stew.",
-          "advanced": "The kimchi my grandmother makes is incomparably more delicious than store-bought ones.",
-          "master": "When I introduced kimchi to my foreign friend, they struggled with the spiciness at first, but now they're hooked and eat it every day."
+          "beginner": "I eat kimchi.",
+          "intermediate": "Kimchi is delicious.",
+          "advanced": "Kimchi is one of Korea's representative foods.",
+          "master": "The cooking method and history of kimchi is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Kimchi, please.",
+              "romanization": "",
+              "translation": "김치 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -79,26 +203,87 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["drink", "basic"],
+    "tags": [
+      "drink",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "물",
         "explanation": "가장 기본적인 음료. 식당에서 주문할 때 필수 어휘다.",
         "examples": {
-          "beginner": "물 주세요.",
-          "intermediate": "물 마시고 싶어요.",
-          "advanced": "등산을 할 때는 충분한 물을 가져가야 탈수를 예방할 수 있다.",
-          "master": "한국 식당에서는 물을 무료로 제공하는 경우가 많아서 따로 주문하지 않아도 된다."
+          "beginner": "물을/를 먹어요.",
+          "intermediate": "물이/가 맛있어요.",
+          "advanced": "물은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "물의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Water",
         "explanation": "The most basic drink. Essential vocabulary for ordering at restaurants.",
         "examples": {
-          "beginner": "물 주세요. - Water, please.",
-          "intermediate": "물 마시고 싶어요. - I want to drink water.",
-          "advanced": "When hiking, you should bring enough water to prevent dehydration.",
-          "master": "In Korean restaurants, water is often provided for free, so you don't need to order it separately."
+          "beginner": "I eat water.",
+          "intermediate": "Water is delicious.",
+          "advanced": "Water is one of Korea's representative foods.",
+          "master": "The cooking method and history of water is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -115,26 +300,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "meat", "basic"],
+    "tags": [
+      "food",
+      "meat",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "고기",
         "explanation": "식용 동물의 살. 소고기, 돼지고기, 닭고기 등을 통틀어 이른다. 한국에서 삼겹살, 갈비 등 고기 요리가 인기 있다.",
         "examples": {
-          "beginner": "고기 먹으러 갈까?",
-          "intermediate": "나는 고기를 좋아해요.",
-          "advanced": "한국에서는 친구들과 모이면 삼겹살 같은 고기를 구워 먹는 문화가 있다.",
-          "master": "채식주의자여서 고기 대신 두부나 버섯으로 단백질을 섭취해요."
+          "beginner": "고기을/를 먹어요.",
+          "intermediate": "고기이/가 맛있어요.",
+          "advanced": "고기은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "고기의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "고기 주세요.",
+              "romanization": "gogi juseyo.",
+              "translation": "Meat, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Meat",
         "explanation": "Edible animal flesh. Includes beef, pork, chicken, etc. In Korea, grilled meat dishes like samgyeopsal and galbi are popular.",
         "examples": {
-          "beginner": "고기 먹으러 갈까? - Shall we go eat meat?",
-          "intermediate": "나는 고기를 좋아해요. - I like meat.",
-          "advanced": "In Korea, there's a culture of grilling meat like samgyeopsal when friends get together.",
-          "master": "Since I'm vegetarian, I get my protein from tofu or mushrooms instead of meat."
+          "beginner": "I eat meat.",
+          "intermediate": "Meat is delicious.",
+          "advanced": "Meat is one of Korea's representative foods.",
+          "master": "The cooking method and history of meat is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Meat, please.",
+              "romanization": "",
+              "translation": "고기 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -151,26 +398,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "korean", "popular"],
+    "tags": [
+      "food",
+      "korean",
+      "popular"
+    ],
     "translations": {
       "ko": {
         "word": "라면",
         "explanation": "한국식 인스턴트 국수. 빠르고 쉽게 만들 수 있어 야식이나 간편식으로 인기 있다.",
         "examples": {
-          "beginner": "라면 먹을래?",
-          "intermediate": "밤에 라면 먹으면 살쪄.",
-          "advanced": "비 오는 날에는 왠지 라면이 더 맛있게 느껴진다.",
-          "master": "한국 드라마에서 '라면 먹고 갈래?'라는 대사가 유명해져서 외국인들도 많이 알고 있다."
+          "beginner": "라면을/를 먹어요.",
+          "intermediate": "라면이/가 맛있어요.",
+          "advanced": "라면은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "라면의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "라면 주세요.",
+              "romanization": "ramyeon juseyo.",
+              "translation": "Ramen / Instant noodles, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Ramen / Instant noodles",
         "explanation": "Korean-style instant noodles. Popular as a late-night snack or quick meal because it's fast and easy to make.",
         "examples": {
-          "beginner": "라면 먹을래? - Do you want to eat ramyeon?",
-          "intermediate": "밤에 라면 먹으면 살쪄. - You'll gain weight if you eat ramyeon at night.",
-          "advanced": "On rainy days, ramyeon somehow tastes even better.",
-          "master": "The line 'Do you want to come up for ramyeon?' from Korean dramas has become so famous that even foreigners know it."
+          "beginner": "I eat ramen / instant noodles.",
+          "intermediate": "Ramen / Instant noodles is delicious.",
+          "advanced": "Ramen / Instant noodles is one of Korea's representative foods.",
+          "master": "The cooking method and history of ramen / instant noodles is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Ramen / Instant noodles, please.",
+              "romanization": "",
+              "translation": "라면 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -187,26 +496,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "adjective", "basic"],
+    "tags": [
+      "food",
+      "adjective",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "맛있다",
         "explanation": "음식의 맛이 좋다. 식사할 때 가장 많이 쓰는 표현 중 하나이다.",
         "examples": {
-          "beginner": "맛있어요!",
-          "intermediate": "이거 진짜 맛있다!",
-          "advanced": "엄마 손맛으로 만든 요리는 항상 맛있어서 자꾸 생각나요.",
-          "master": "맛있는 음식을 먹으면 기분이 좋아지고 스트레스도 풀린다."
+          "beginner": "맛있다을/를 먹어요.",
+          "intermediate": "맛있다이/가 맛있어요.",
+          "advanced": "맛있다은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "맛있다의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "맛있다 주세요.",
+              "romanization": "masisda juseyo.",
+              "translation": "Delicious / Tasty, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Delicious / Tasty",
         "explanation": "When food tastes good. One of the most commonly used expressions when eating.",
         "examples": {
-          "beginner": "맛있어요! - It's delicious!",
-          "intermediate": "이거 진짜 맛있다! - This is really tasty!",
-          "advanced": "Food made with my mom's touch is always delicious, and I keep craving it.",
-          "master": "Eating delicious food makes me feel better and relieves stress."
+          "beginner": "I eat delicious / tasty.",
+          "intermediate": "Delicious / Tasty is delicious.",
+          "advanced": "Delicious / Tasty is one of Korea's representative foods.",
+          "master": "The cooking method and history of delicious / tasty is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Delicious / Tasty, please.",
+              "romanization": "",
+              "translation": "맛있다 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -223,26 +594,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "taste", "adjective"],
+    "tags": [
+      "food",
+      "taste",
+      "adjective"
+    ],
     "translations": {
       "ko": {
         "word": "맵다",
         "explanation": "매운 맛이 나다. 한국 음식에서 자주 경험하는 맛이다.",
         "examples": {
-          "beginner": "너무 매워요!",
-          "intermediate": "이거 많이 매워?",
-          "advanced": "한국 음식은 대부분 매워서 처음에는 적응하기 힘들었어요.",
-          "master": "매운 음식을 먹으면 땀이 나지만 그 뒤에 오는 기분 좋은 느낌이 좋아요."
+          "beginner": "맵다을/를 먹어요.",
+          "intermediate": "맵다이/가 맛있어요.",
+          "advanced": "맵다은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "맵다의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "맵다 주세요.",
+              "romanization": "maepda juseyo.",
+              "translation": "Spicy, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Spicy",
         "explanation": "Having a hot, pungent taste. A common flavor in Korean cuisine.",
         "examples": {
-          "beginner": "너무 매워요! - It's too spicy!",
-          "intermediate": "이거 많이 매워? - Is this very spicy?",
-          "advanced": "Most Korean food is spicy, so it was hard to adjust at first.",
-          "master": "When I eat spicy food, I sweat, but I like the good feeling that comes after."
+          "beginner": "I eat spicy.",
+          "intermediate": "Spicy is delicious.",
+          "advanced": "Spicy is one of Korea's representative foods.",
+          "master": "The cooking method and history of spicy is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Spicy, please.",
+              "romanization": "",
+              "translation": "맵다 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -259,26 +692,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "place", "basic"],
+    "tags": [
+      "food",
+      "place",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "식당",
         "explanation": "음식을 파는 가게. 레스토랑보다 더 일반적이고 캐주얼한 느낌의 표현이다.",
         "examples": {
-          "beginner": "식당 어디로 갈까?",
-          "intermediate": "이 근처에 맛있는 식당 있어요?",
-          "advanced": "점심시간에는 회사 근처 식당마다 사람들로 붐빈다.",
-          "master": "한국 식당에서는 반찬을 무료로 리필해 주는 곳이 많아서 좋아요."
+          "beginner": "식당을/를 먹어요.",
+          "intermediate": "식당이/가 맛있어요.",
+          "advanced": "식당은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "식당의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "식당 주세요.",
+              "romanization": "sikdang juseyo.",
+              "translation": "Restaurant, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Restaurant",
         "explanation": "A place that sells food. A more general and casual expression than 'restaurant'.",
         "examples": {
-          "beginner": "식당 어디로 갈까? - Which restaurant shall we go to?",
-          "intermediate": "이 근처에 맛있는 식당 있어요? - Are there any good restaurants nearby?",
-          "advanced": "During lunch time, every restaurant near the office is crowded with people.",
-          "master": "I like that many Korean restaurants offer free refills on side dishes."
+          "beginner": "I eat restaurant.",
+          "intermediate": "Restaurant is delicious.",
+          "advanced": "Restaurant is one of Korea's representative foods.",
+          "master": "The cooking method and history of restaurant is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Restaurant, please.",
+              "romanization": "",
+              "translation": "식당 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -295,26 +790,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "feeling", "basic"],
+    "tags": [
+      "food",
+      "feeling",
+      "basic"
+    ],
     "translations": {
       "ko": {
         "word": "배고프다",
         "explanation": "배가 고픈 상태. 음식을 먹고 싶을 때 사용하는 표현이다.",
         "examples": {
-          "beginner": "배고파요.",
-          "intermediate": "너무 배고파서 아무거나 먹고 싶어.",
-          "advanced": "회의가 길어져서 점심을 못 먹었더니 너무 배고프다.",
-          "master": "다이어트 중인데 밤에 배고프면 참기가 정말 힘들어요."
+          "beginner": "배고프다을/를 먹어요.",
+          "intermediate": "배고프다이/가 맛있어요.",
+          "advanced": "배고프다은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "배고프다의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "배고프다 주세요.",
+              "romanization": "baegopeuda juseyo.",
+              "translation": "Hungry, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Hungry",
         "explanation": "The state of feeling hungry. Used when you want to eat food.",
         "examples": {
-          "beginner": "배고파요. - I'm hungry.",
-          "intermediate": "너무 배고파서 아무거나 먹고 싶어. - I'm so hungry I want to eat anything.",
-          "advanced": "The meeting went long and I couldn't eat lunch, so I'm really hungry.",
-          "master": "I'm on a diet, but it's really hard to resist when I'm hungry at night."
+          "beginner": "I eat hungry.",
+          "intermediate": "Hungry is delicious.",
+          "advanced": "Hungry is one of Korea's representative foods.",
+          "master": "The cooking method and history of hungry is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Hungry, please.",
+              "romanization": "",
+              "translation": "배고프다 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -331,26 +888,87 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["drink", "popular"],
+    "tags": [
+      "drink",
+      "popular"
+    ],
     "translations": {
       "ko": {
         "word": "커피",
         "explanation": "커피 원두로 만든 음료. 한국에서 매우 인기 있는 음료로, 커피숍이 어디에나 있다.",
         "examples": {
-          "beginner": "커피 마실래요?",
-          "intermediate": "아침에 커피 한 잔 없으면 안 돼요.",
-          "advanced": "한국은 커피 소비량이 세계 상위권이어서 거리마다 카페가 있다.",
-          "master": "점심 먹고 커피 한 잔 마시면서 이야기하자."
+          "beginner": "커피을/를 먹어요.",
+          "intermediate": "커피이/가 맛있어요.",
+          "advanced": "커피은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "커피의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "커피 주세요.",
+              "romanization": "keopi juseyo.",
+              "translation": "Coffee, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Coffee",
         "explanation": "A beverage made from coffee beans. Very popular in Korea, with coffee shops everywhere.",
         "examples": {
-          "beginner": "커피 마실래요? - Do you want to drink coffee?",
-          "intermediate": "아침에 커피 한 잔 없으면 안 돼요. - I can't function without a cup of coffee in the morning.",
-          "advanced": "Korea's coffee consumption is among the highest in the world, so there are cafes on every street.",
-          "master": "Let's have a cup of coffee and chat after lunch."
+          "beginner": "I eat coffee.",
+          "intermediate": "Coffee is delicious.",
+          "advanced": "Coffee is one of Korea's representative foods.",
+          "master": "The cooking method and history of coffee is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Coffee, please.",
+              "romanization": "",
+              "translation": "커피 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -367,26 +985,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "korean", "traditional"],
+    "tags": [
+      "food",
+      "korean",
+      "traditional"
+    ],
     "translations": {
       "ko": {
         "word": "비빔밥",
         "explanation": "밥 위에 여러 나물과 고추장을 넣고 비벼 먹는 한국 전통 음식.",
         "examples": {
-          "beginner": "비빔밥 주세요.",
-          "intermediate": "비빔밥에 계란 프라이 올려주세요.",
-          "advanced": "전주 비빔밥은 다양한 재료와 함께 돌솥에 담겨 나온다.",
-          "master": "비빔밥은 남은 반찬을 활용해 만들기도 해서 가정에서 쉽게 해먹을 수 있다."
+          "beginner": "비빔밥을/를 먹어요.",
+          "intermediate": "비빔밥이/가 맛있어요.",
+          "advanced": "비빔밥은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "비빔밥의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "비빔밥 주세요.",
+              "romanization": "bibimbap juseyo.",
+              "translation": "Bibimbap, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Bibimbap",
         "explanation": "A traditional Korean dish of rice topped with vegetables and gochujang, mixed together before eating.",
         "examples": {
-          "beginner": "Bibimbap, please.",
-          "intermediate": "Please add a fried egg on top of the bibimbap.",
-          "advanced": "Jeonju bibimbap is served in a hot stone pot with various ingredients.",
-          "master": "Bibimbap can be made by using leftover side dishes, so it's easy to prepare at home."
+          "beginner": "I eat bibimbap.",
+          "intermediate": "Bibimbap is delicious.",
+          "advanced": "Bibimbap is one of Korea's representative foods.",
+          "master": "The cooking method and history of bibimbap is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Bibimbap, please.",
+              "romanization": "",
+              "translation": "비빔밥 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -403,26 +1083,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "korean", "meat"],
+    "tags": [
+      "food",
+      "korean",
+      "meat"
+    ],
     "translations": {
       "ko": {
         "word": "불고기",
         "explanation": "양념에 재운 쇠고기를 구운 한국 전통 요리.",
         "examples": {
-          "beginner": "불고기 맛있어요.",
-          "intermediate": "불고기 백반 하나 주세요.",
-          "advanced": "외국인들에게 불고기는 한국 음식 중 가장 인기 있는 메뉴 중 하나다.",
-          "master": "불고기의 달콤한 양념은 배와 간장으로 만드는데, 고기를 부드럽게 해준다."
+          "beginner": "불고기을/를 먹어요.",
+          "intermediate": "불고기이/가 맛있어요.",
+          "advanced": "불고기은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "불고기의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "불고기 주세요.",
+              "romanization": "bulgogi juseyo.",
+              "translation": "Bulgogi, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Bulgogi",
         "explanation": "Traditional Korean dish of marinated and grilled beef.",
         "examples": {
-          "beginner": "Bulgogi is delicious.",
-          "intermediate": "One bulgogi set meal, please.",
-          "advanced": "Bulgogi is one of the most popular Korean dishes among foreigners.",
-          "master": "The sweet bulgogi marinade is made with pear and soy sauce, which tenderizes the meat."
+          "beginner": "I eat bulgogi.",
+          "intermediate": "Bulgogi is delicious.",
+          "advanced": "Bulgogi is one of Korea's representative foods.",
+          "master": "The cooking method and history of bulgogi is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Bulgogi, please.",
+              "romanization": "",
+              "translation": "불고기 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -439,26 +1181,89 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "korean", "meat", "pork"],
+    "tags": [
+      "food",
+      "korean",
+      "meat",
+      "pork"
+    ],
     "translations": {
       "ko": {
         "word": "삼겹살",
         "explanation": "돼지의 삼겹 부위. 한국에서 가장 인기 있는 고기 메뉴 중 하나.",
         "examples": {
-          "beginner": "삼겹살 먹을래?",
-          "intermediate": "삼겹살에 소주 한 잔 어때요?",
-          "advanced": "한국 사람들은 스트레스 받으면 삼겹살 구워 먹으러 간다.",
-          "master": "삼겹살은 상추 쌈에 싸서 쌈장과 함께 먹으면 정말 맛있다."
+          "beginner": "삼겹살을/를 먹어요.",
+          "intermediate": "삼겹살이/가 맛있어요.",
+          "advanced": "삼겹살은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "삼겹살의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "삼겹살 주세요.",
+              "romanization": "samgyeopsal juseyo.",
+              "translation": "Samgyeopsal (Pork belly), please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Samgyeopsal (Pork belly)",
         "explanation": "Pork belly. One of the most popular meat dishes in Korea.",
         "examples": {
-          "beginner": "Do you want to eat samgyeopsal?",
-          "intermediate": "How about samgyeopsal with a glass of soju?",
-          "advanced": "Koreans go eat grilled samgyeopsal when they're stressed.",
-          "master": "Samgyeopsal is really delicious when wrapped in lettuce with ssamjang."
+          "beginner": "I eat samgyeopsal (pork belly).",
+          "intermediate": "Samgyeopsal (Pork belly) is delicious.",
+          "advanced": "Samgyeopsal (Pork belly) is one of Korea's representative foods.",
+          "master": "The cooking method and history of samgyeopsal (pork belly) is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Samgyeopsal (Pork belly), please.",
+              "romanization": "",
+              "translation": "삼겹살 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -475,26 +1280,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "korean", "popular"],
+    "tags": [
+      "food",
+      "korean",
+      "popular"
+    ],
     "translations": {
       "ko": {
         "word": "김밥",
         "explanation": "김에 밥과 여러 재료를 넣어 말아 만든 음식. 도시락이나 간식으로 인기.",
         "examples": {
-          "beginner": "김밥 하나 주세요.",
-          "intermediate": "소풍 갈 때 김밥 싸 가자.",
-          "advanced": "김밥천국에서 참치김밥이 제일 인기가 많다.",
-          "master": "집에서 김밥을 말 때는 밥을 너무 많이 넣지 않는 게 포인트다."
+          "beginner": "김밥을/를 먹어요.",
+          "intermediate": "김밥이/가 맛있어요.",
+          "advanced": "김밥은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "김밥의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "김밥 주세요.",
+              "romanization": "gimbap juseyo.",
+              "translation": "Kimbap (Korean rice roll), please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Kimbap (Korean rice roll)",
         "explanation": "Rice and various ingredients rolled in seaweed. Popular as a lunch box or snack.",
         "examples": {
-          "beginner": "One kimbap, please.",
-          "intermediate": "Let's pack kimbap for the picnic.",
-          "advanced": "Tuna kimbap is the most popular at Kimbap Cheonguk.",
-          "master": "When making kimbap at home, the key is not to put too much rice."
+          "beginner": "I eat kimbap (korean rice roll).",
+          "intermediate": "Kimbap (Korean rice roll) is delicious.",
+          "advanced": "Kimbap (Korean rice roll) is one of Korea's representative foods.",
+          "master": "The cooking method and history of kimbap (korean rice roll) is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Kimbap (Korean rice roll), please.",
+              "romanization": "",
+              "translation": "김밥 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -511,26 +1378,89 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "korean", "street-food", "spicy"],
+    "tags": [
+      "food",
+      "korean",
+      "street-food",
+      "spicy"
+    ],
     "translations": {
       "ko": {
         "word": "떡볶이",
         "explanation": "떡을 매운 고추장 양념에 볶은 한국 대표 분식.",
         "examples": {
-          "beginner": "떡볶이 먹고 싶어요.",
-          "intermediate": "학교 앞 떡볶이집 가자.",
-          "advanced": "떡볶이는 한국 길거리 음식의 대표 메뉴다.",
-          "master": "떡볶이 국물에 밥을 비벼 먹으면 정말 맛있어요."
+          "beginner": "떡볶이을/를 먹어요.",
+          "intermediate": "떡볶이이/가 맛있어요.",
+          "advanced": "떡볶이은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "떡볶이의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "떡볶이 주세요.",
+              "romanization": "tteokboki juseyo.",
+              "translation": "Tteokbokki (Spicy rice cakes), please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Tteokbokki (Spicy rice cakes)",
         "explanation": "Rice cakes stir-fried in spicy gochujang sauce. A representative Korean street food.",
         "examples": {
-          "beginner": "I want to eat tteokbokki.",
-          "intermediate": "Let's go to the tteokbokki shop in front of school.",
-          "advanced": "Tteokbokki is a representative Korean street food.",
-          "master": "Mixing rice in tteokbokki sauce is really delicious."
+          "beginner": "I eat tteokbokki (spicy rice cakes).",
+          "intermediate": "Tteokbokki (Spicy rice cakes) is delicious.",
+          "advanced": "Tteokbokki (Spicy rice cakes) is one of Korea's representative foods.",
+          "master": "The cooking method and history of tteokbokki (spicy rice cakes) is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Tteokbokki (Spicy rice cakes), please.",
+              "romanization": "",
+              "translation": "떡볶이 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -547,26 +1477,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "korean", "soup"],
+    "tags": [
+      "food",
+      "korean",
+      "soup"
+    ],
     "translations": {
       "ko": {
         "word": "찌개",
         "explanation": "국물이 있는 한국식 스튜. 김치찌개, 된장찌개 등이 있다.",
         "examples": {
-          "beginner": "찌개 뜨거워요.",
-          "intermediate": "오늘 점심은 김치찌개 어때?",
-          "advanced": "추운 날에는 뜨끈한 찌개가 최고다.",
-          "master": "한국 가정에서는 거의 매일 찌개를 끓여 먹는다."
+          "beginner": "찌개을/를 먹어요.",
+          "intermediate": "찌개이/가 맛있어요.",
+          "advanced": "찌개은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "찌개의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "찌개 주세요.",
+              "romanization": "jjigae juseyo.",
+              "translation": "Jjigae (Korean stew), please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Jjigae (Korean stew)",
         "explanation": "Korean-style stew with broth. Includes kimchi jjigae, doenjang jjigae, etc.",
         "examples": {
-          "beginner": "The stew is hot.",
-          "intermediate": "How about kimchi jjigae for lunch today?",
-          "advanced": "On cold days, hot stew is the best.",
-          "master": "Korean families make and eat stew almost every day."
+          "beginner": "I eat jjigae (korean stew).",
+          "intermediate": "Jjigae (Korean stew) is delicious.",
+          "advanced": "Jjigae (Korean stew) is one of Korea's representative foods.",
+          "master": "The cooking method and history of jjigae (korean stew) is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Jjigae (Korean stew), please.",
+              "romanization": "",
+              "translation": "찌개 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -583,26 +1575,88 @@
     "categoryId": "food",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": ["food", "korean", "noodles"],
+    "tags": [
+      "food",
+      "korean",
+      "noodles"
+    ],
     "translations": {
       "ko": {
         "word": "잡채",
         "explanation": "당면과 여러 채소를 볶아 만든 한국 전통 음식. 명절에 많이 먹는다.",
         "examples": {
-          "beginner": "잡채 좋아해요.",
-          "intermediate": "명절에는 항상 잡채를 만들어요.",
-          "advanced": "잡채는 만들기 어려워 보이지만 재료만 준비하면 간단하다.",
-          "master": "잔치에 빠지지 않는 음식이 잡채인데, 손이 많이 가서 정성이 느껴진다."
+          "beginner": "잡채을/를 먹어요.",
+          "intermediate": "잡채이/가 맛있어요.",
+          "advanced": "잡채은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "잡채의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "잡채 주세요.",
+              "romanization": "japchae juseyo.",
+              "translation": "Japchae (Glass noodles), please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Japchae (Glass noodles)",
         "explanation": "Traditional Korean dish of stir-fried glass noodles and vegetables. Often eaten during holidays.",
         "examples": {
-          "beginner": "I like japchae.",
-          "intermediate": "We always make japchae during holidays.",
-          "advanced": "Japchae looks difficult to make but it's simple once ingredients are prepared.",
-          "master": "Japchae is essential at celebrations, and you can feel the care since it requires much effort."
+          "beginner": "I eat japchae (glass noodles).",
+          "intermediate": "Japchae (Glass noodles) is delicious.",
+          "advanced": "Japchae (Glass noodles) is one of Korea's representative foods.",
+          "master": "The cooking method and history of japchae (glass noodles) is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Japchae (Glass noodles), please.",
+              "romanization": "",
+              "translation": "잡채 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -619,26 +1673,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "korean", "meat"],
+    "tags": [
+      "food",
+      "korean",
+      "meat"
+    ],
     "translations": {
       "ko": {
         "word": "갈비",
         "explanation": "소나 돼지의 갈비뼈 부위. 양념해서 굽거나 찜으로 먹는다.",
         "examples": {
-          "beginner": "갈비 맛있어요!",
-          "intermediate": "생일에 갈비 먹으러 가자.",
-          "advanced": "갈비찜은 명절이나 생일에 먹는 특별한 음식이다.",
-          "master": "LA갈비는 미국식으로 얇게 썰어서 한국에서도 인기가 많다."
+          "beginner": "갈비을/를 먹어요.",
+          "intermediate": "갈비이/가 맛있어요.",
+          "advanced": "갈비은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "갈비의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "갈비 주세요.",
+              "romanization": "galbi juseyo.",
+              "translation": "Galbi (Korean ribs), please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Galbi (Korean ribs)",
         "explanation": "Beef or pork ribs. Marinated and grilled or braised.",
         "examples": {
-          "beginner": "The ribs are delicious!",
-          "intermediate": "Let's go eat galbi for your birthday.",
-          "advanced": "Galbijjim is a special dish eaten during holidays or birthdays.",
-          "master": "LA galbi is thinly sliced American-style and popular in Korea too."
+          "beginner": "I eat galbi (korean ribs).",
+          "intermediate": "Galbi (Korean ribs) is delicious.",
+          "advanced": "Galbi (Korean ribs) is one of Korea's representative foods.",
+          "master": "The cooking method and history of galbi (korean ribs) is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Galbi (Korean ribs), please.",
+              "romanization": "",
+              "translation": "갈비 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -655,26 +1771,89 @@
     "categoryId": "food",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": ["food", "korean", "noodles", "cold"],
+    "tags": [
+      "food",
+      "korean",
+      "noodles",
+      "cold"
+    ],
     "translations": {
       "ko": {
         "word": "냉면",
         "explanation": "차가운 국물이나 양념장에 먹는 면 요리. 여름에 인기가 많다.",
         "examples": {
-          "beginner": "냉면 먹을래요?",
-          "intermediate": "여름에는 시원한 냉면이 최고야.",
-          "advanced": "평양냉면과 함흥냉면은 맛과 면이 다르다.",
-          "master": "고기를 먹은 뒤에 냉면으로 입가심하는 것이 한국의 식문화다."
+          "beginner": "냉면을/를 먹어요.",
+          "intermediate": "냉면이/가 맛있어요.",
+          "advanced": "냉면은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "냉면의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "냉면 주세요.",
+              "romanization": "naengmyeon juseyo.",
+              "translation": "Naengmyeon (Cold noodles), please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Naengmyeon (Cold noodles)",
         "explanation": "Cold noodle dish served in chilled broth or spicy sauce. Popular in summer.",
         "examples": {
-          "beginner": "Do you want to eat cold noodles?",
-          "intermediate": "In summer, cold naengmyeon is the best.",
-          "advanced": "Pyongyang naengmyeon and Hamheung naengmyeon differ in taste and noodles.",
-          "master": "It's Korean food culture to finish a meat meal with naengmyeon to cleanse the palate."
+          "beginner": "I eat naengmyeon (cold noodles).",
+          "intermediate": "Naengmyeon (Cold noodles) is delicious.",
+          "advanced": "Naengmyeon (Cold noodles) is one of Korea's representative foods.",
+          "master": "The cooking method and history of naengmyeon (cold noodles) is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Naengmyeon (Cold noodles), please.",
+              "romanization": "",
+              "translation": "냉면 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -691,26 +1870,89 @@
     "categoryId": "food",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": ["food", "korean", "soup", "chicken"],
+    "tags": [
+      "food",
+      "korean",
+      "soup",
+      "chicken"
+    ],
     "translations": {
       "ko": {
         "word": "삼계탕",
         "explanation": "인삼을 넣어 끓인 닭 요리. 여름 보양식으로 유명하다.",
         "examples": {
-          "beginner": "삼계탕 먹어봤어요?",
-          "intermediate": "복날에는 삼계탕을 먹어요.",
-          "advanced": "삼계탕은 이열치열의 대표적인 음식이다.",
-          "master": "삼계탕 안에 들어있는 찹쌀과 대추도 꼭 먹어야 해요."
+          "beginner": "삼계탕을/를 먹어요.",
+          "intermediate": "삼계탕이/가 맛있어요.",
+          "advanced": "삼계탕은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "삼계탕의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "삼계탕 주세요.",
+              "romanization": "samgyetang juseyo.",
+              "translation": "Samgyetang (Ginseng chicken soup), please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Samgyetang (Ginseng chicken soup)",
         "explanation": "Chicken soup with ginseng. Famous as a summer health food.",
         "examples": {
-          "beginner": "Have you tried samgyetang?",
-          "intermediate": "We eat samgyetang on the hottest days of summer.",
-          "advanced": "Samgyetang is a representative dish of 'fight heat with heat' philosophy.",
-          "master": "You should also eat the glutinous rice and jujubes inside the samgyetang."
+          "beginner": "I eat samgyetang (ginseng chicken soup).",
+          "intermediate": "Samgyetang (Ginseng chicken soup) is delicious.",
+          "advanced": "Samgyetang (Ginseng chicken soup) is one of Korea's representative foods.",
+          "master": "The cooking method and history of samgyetang (ginseng chicken soup) is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Samgyetang (Ginseng chicken soup), please.",
+              "romanization": "",
+              "translation": "삼계탕 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -727,26 +1969,88 @@
     "categoryId": "food",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": ["food", "korean", "street-food"],
+    "tags": [
+      "food",
+      "korean",
+      "street-food"
+    ],
     "translations": {
       "ko": {
         "word": "순대",
         "explanation": "돼지 창자에 당면과 채소를 넣어 만든 한국식 소시지.",
         "examples": {
-          "beginner": "순대 좋아해요?",
-          "intermediate": "떡볶이에 순대 추가해주세요.",
-          "advanced": "피순대와 야채순대는 속 재료가 다르다.",
-          "master": "시장에서 파는 순대는 막창과 간도 함께 먹으면 더 맛있다."
+          "beginner": "순대을/를 먹어요.",
+          "intermediate": "순대이/가 맛있어요.",
+          "advanced": "순대은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "순대의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "순대 주세요.",
+              "romanization": "sundae juseyo.",
+              "translation": "Sundae (Korean blood sausage), please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Sundae (Korean blood sausage)",
         "explanation": "Korean-style sausage made with intestines filled with glass noodles and vegetables.",
         "examples": {
-          "beginner": "Do you like sundae?",
-          "intermediate": "Please add sundae to my tteokbokki.",
-          "advanced": "Blood sundae and vegetable sundae have different fillings.",
-          "master": "Market sundae tastes even better with intestines and liver."
+          "beginner": "I eat sundae (korean blood sausage).",
+          "intermediate": "Sundae (Korean blood sausage) is delicious.",
+          "advanced": "Sundae (Korean blood sausage) is one of Korea's representative foods.",
+          "master": "The cooking method and history of sundae (korean blood sausage) is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Sundae (Korean blood sausage), please.",
+              "romanization": "",
+              "translation": "순대 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -763,26 +2067,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "korean", "traditional"],
+    "tags": [
+      "food",
+      "korean",
+      "traditional"
+    ],
     "translations": {
       "ko": {
         "word": "전",
         "explanation": "재료에 밀가루와 계란을 입혀 부친 한국 전통 음식.",
         "examples": {
-          "beginner": "전 맛있어요.",
-          "intermediate": "비 오는 날에는 전이 먹고 싶어요.",
-          "advanced": "추석에는 동그랑땡, 녹두전 등 여러 전을 부친다.",
-          "master": "전을 부칠 때 불 조절이 중요한데, 약불에서 천천히 익혀야 바삭하다."
+          "beginner": "전을/를 먹어요.",
+          "intermediate": "전이/가 맛있어요.",
+          "advanced": "전은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "전의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "전 주세요.",
+              "romanization": "jeon juseyo.",
+              "translation": "Jeon (Korean pancake), please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Jeon (Korean pancake)",
         "explanation": "Traditional Korean food made by coating ingredients in flour and egg, then pan-frying.",
         "examples": {
-          "beginner": "The jeon is delicious.",
-          "intermediate": "I want to eat jeon on rainy days.",
-          "advanced": "During Chuseok, various jeon like meatballs and mung bean pancakes are made.",
-          "master": "When making jeon, temperature control is important - cooking slowly on low heat makes it crispy."
+          "beginner": "I eat jeon (korean pancake).",
+          "intermediate": "Jeon (Korean pancake) is delicious.",
+          "advanced": "Jeon (Korean pancake) is one of Korea's representative foods.",
+          "master": "The cooking method and history of jeon (korean pancake) is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Jeon (Korean pancake), please.",
+              "romanization": "",
+              "translation": "전 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -799,26 +2165,87 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "korean"],
+    "tags": [
+      "food",
+      "korean"
+    ],
     "translations": {
       "ko": {
         "word": "만두",
         "explanation": "밀가루 반죽에 고기와 채소 소를 넣어 만든 음식. 찌거나 굽거나 튀겨 먹는다.",
         "examples": {
-          "beginner": "만두 좋아해요.",
-          "intermediate": "고기만두 다섯 개 주세요.",
-          "advanced": "설날에는 만둣국을 끓여 먹는다.",
-          "master": "손만두를 빚을 때는 반죽이 너무 두꺼우면 안 맛있어요."
+          "beginner": "만두을/를 먹어요.",
+          "intermediate": "만두이/가 맛있어요.",
+          "advanced": "만두은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "만두의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "만두 주세요.",
+              "romanization": "mandu juseyo.",
+              "translation": "Mandu (Korean dumplings), please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Mandu (Korean dumplings)",
         "explanation": "Dumplings made with flour dough filled with meat and vegetables. Steamed, pan-fried, or deep-fried.",
         "examples": {
-          "beginner": "I like dumplings.",
-          "intermediate": "Five meat dumplings, please.",
-          "advanced": "During Lunar New Year, we make dumpling soup.",
-          "master": "When making handmade dumplings, they won't taste good if the dough is too thick."
+          "beginner": "I eat mandu (korean dumplings).",
+          "intermediate": "Mandu (Korean dumplings) is delicious.",
+          "advanced": "Mandu (Korean dumplings) is one of Korea's representative foods.",
+          "master": "The cooking method and history of mandu (korean dumplings) is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Mandu (Korean dumplings), please.",
+              "romanization": "",
+              "translation": "만두 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -835,26 +2262,88 @@
     "categoryId": "food",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": ["food", "korean", "fermented"],
+    "tags": [
+      "food",
+      "korean",
+      "fermented"
+    ],
     "translations": {
       "ko": {
         "word": "된장",
         "explanation": "콩을 발효시켜 만든 한국 전통 장. 찌개나 국에 많이 사용한다.",
         "examples": {
-          "beginner": "된장찌개 먹을래요?",
-          "intermediate": "된장찌개에 두부 넣어주세요.",
-          "advanced": "된장은 한국의 대표적인 발효 식품으로 건강에 좋다.",
-          "master": "집에서 담근 된장은 공장 된장과 맛이 완전히 다르다."
+          "beginner": "된장을/를 먹어요.",
+          "intermediate": "된장이/가 맛있어요.",
+          "advanced": "된장은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "된장의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "된장 주세요.",
+              "romanization": "doenjang juseyo.",
+              "translation": "Doenjang (Fermented soybean paste), please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Doenjang (Fermented soybean paste)",
         "explanation": "Traditional Korean fermented soybean paste. Used in stews and soups.",
         "examples": {
-          "beginner": "Do you want to eat doenjang stew?",
-          "intermediate": "Please add tofu to the doenjang stew.",
-          "advanced": "Doenjang is Korea's representative fermented food and is healthy.",
-          "master": "Homemade doenjang tastes completely different from factory-made."
+          "beginner": "I eat doenjang (fermented soybean paste).",
+          "intermediate": "Doenjang (Fermented soybean paste) is delicious.",
+          "advanced": "Doenjang (Fermented soybean paste) is one of Korea's representative foods.",
+          "master": "The cooking method and history of doenjang (fermented soybean paste) is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Doenjang (Fermented soybean paste), please.",
+              "romanization": "",
+              "translation": "된장 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -871,26 +2360,89 @@
     "categoryId": "food",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": ["food", "korean", "condiment", "spicy"],
+    "tags": [
+      "food",
+      "korean",
+      "condiment",
+      "spicy"
+    ],
     "translations": {
       "ko": {
         "word": "고추장",
         "explanation": "고춧가루로 만든 매운 한국 전통 장. 비빔밥, 떡볶이 등에 사용한다.",
         "examples": {
-          "beginner": "고추장 주세요.",
-          "intermediate": "비빔밥에 고추장 더 넣어도 돼요?",
-          "advanced": "고추장은 매운맛과 단맛이 함께 있어서 한국 음식에 깊은 맛을 준다.",
-          "master": "순창 고추장이 유명한데, 전통 방식으로 오래 숙성시켜서 맛이 깊다."
+          "beginner": "고추장을/를 먹어요.",
+          "intermediate": "고추장이/가 맛있어요.",
+          "advanced": "고추장은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "고추장의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "고추장 주세요.",
+              "romanization": "gochujang juseyo.",
+              "translation": "Gochujang (Red pepper paste), please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Gochujang (Red pepper paste)",
         "explanation": "Spicy Korean traditional paste made with chili powder. Used in bibimbap, tteokbokki, etc.",
         "examples": {
-          "beginner": "Gochujang, please.",
-          "intermediate": "Can I add more gochujang to my bibimbap?",
-          "advanced": "Gochujang has both spicy and sweet flavors, giving Korean food a deep taste.",
-          "master": "Sunchang gochujang is famous because it's aged traditionally for a rich flavor."
+          "beginner": "I eat gochujang (red pepper paste).",
+          "intermediate": "Gochujang (Red pepper paste) is delicious.",
+          "advanced": "Gochujang (Red pepper paste) is one of Korea's representative foods.",
+          "master": "The cooking method and history of gochujang (red pepper paste) is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Gochujang (Red pepper paste), please.",
+              "romanization": "",
+              "translation": "고추장 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -907,26 +2459,87 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "vegetable"],
+    "tags": [
+      "food",
+      "vegetable"
+    ],
     "translations": {
       "ko": {
         "word": "배추",
         "explanation": "김치의 주재료가 되는 채소. 김장철에 많이 사용한다.",
         "examples": {
-          "beginner": "배추 한 포기 주세요.",
-          "intermediate": "김장할 때 배추를 소금에 절여요.",
-          "advanced": "요즘 배추값이 많이 올라서 김치 담그기 부담스럽다.",
-          "master": "좋은 배추는 속이 꽉 차고 노란색이어야 맛있는 김치가 된다."
+          "beginner": "배추을/를 먹어요.",
+          "intermediate": "배추이/가 맛있어요.",
+          "advanced": "배추은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "배추의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "배추 주세요.",
+              "romanization": "baechu juseyo.",
+              "translation": "Napa cabbage, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Napa cabbage",
         "explanation": "Main vegetable ingredient for kimchi. Widely used during kimjang season.",
         "examples": {
-          "beginner": "One head of napa cabbage, please.",
-          "intermediate": "When making kimchi, we salt the cabbage.",
-          "advanced": "Cabbage prices have risen so much that making kimchi is burdensome.",
-          "master": "Good cabbage should be dense and yellow inside for delicious kimchi."
+          "beginner": "I eat napa cabbage.",
+          "intermediate": "Napa cabbage is delicious.",
+          "advanced": "Napa cabbage is one of Korea's representative foods.",
+          "master": "The cooking method and history of napa cabbage is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Napa cabbage, please.",
+              "romanization": "",
+              "translation": "배추 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -943,26 +2556,87 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "ingredient"],
+    "tags": [
+      "food",
+      "ingredient"
+    ],
     "translations": {
       "ko": {
         "word": "계란",
         "explanation": "닭이 낳은 알. 다양한 요리에 사용되는 기본 재료.",
         "examples": {
-          "beginner": "계란 두 개 주세요.",
-          "intermediate": "아침에 계란 프라이 해먹어요.",
-          "advanced": "한국에서는 찜질방에서 맥반석 계란을 먹는 게 유명하다.",
-          "master": "계란찜은 간단해 보이지만 부드럽게 만들려면 기술이 필요하다."
+          "beginner": "계란을/를 먹어요.",
+          "intermediate": "계란이/가 맛있어요.",
+          "advanced": "계란은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "계란의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "계란 주세요.",
+              "romanization": "gyeran juseyo.",
+              "translation": "Egg, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Egg",
         "explanation": "Chicken egg. A basic ingredient used in various dishes.",
         "examples": {
-          "beginner": "Two eggs, please.",
-          "intermediate": "I make fried eggs for breakfast.",
-          "advanced": "In Korea, it's famous to eat baked eggs at jjimjilbang.",
-          "master": "Steamed egg looks simple but requires skill to make it fluffy."
+          "beginner": "I eat egg.",
+          "intermediate": "Egg is delicious.",
+          "advanced": "Egg is one of Korea's representative foods.",
+          "master": "The cooking method and history of egg is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Egg, please.",
+              "romanization": "",
+              "translation": "계란 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -979,26 +2653,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "ingredient", "vegetarian"],
+    "tags": [
+      "food",
+      "ingredient",
+      "vegetarian"
+    ],
     "translations": {
       "ko": {
         "word": "두부",
         "explanation": "콩으로 만든 음식. 찌개, 부침 등 다양하게 요리한다.",
         "examples": {
-          "beginner": "두부 좋아해요.",
-          "intermediate": "순두부찌개 하나 주세요.",
-          "advanced": "두부는 단백질이 풍부해서 채식주의자에게 좋은 식품이다.",
-          "master": "재래시장에서 파는 손두부는 공장 두부와 식감이 완전히 다르다."
+          "beginner": "두부을/를 먹어요.",
+          "intermediate": "두부이/가 맛있어요.",
+          "advanced": "두부은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "두부의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "두부 주세요.",
+              "romanization": "dubu juseyo.",
+              "translation": "Tofu, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Tofu",
         "explanation": "Food made from soybeans. Cooked in various ways like stew and pan-frying.",
         "examples": {
-          "beginner": "I like tofu.",
-          "intermediate": "One soft tofu stew, please.",
-          "advanced": "Tofu is rich in protein and good for vegetarians.",
-          "master": "Hand-pressed tofu from traditional markets has a completely different texture from factory tofu."
+          "beginner": "I eat tofu.",
+          "intermediate": "Tofu is delicious.",
+          "advanced": "Tofu is one of Korea's representative foods.",
+          "master": "The cooking method and history of tofu is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Tofu, please.",
+              "romanization": "",
+              "translation": "두부 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -1015,26 +2751,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "korean", "side-dish"],
+    "tags": [
+      "food",
+      "korean",
+      "side-dish"
+    ],
     "translations": {
       "ko": {
         "word": "반찬",
         "explanation": "밥과 함께 먹는 여러 가지 작은 요리. 한국 식사의 특징.",
         "examples": {
-          "beginner": "반찬 맛있어요.",
-          "intermediate": "반찬 좀 더 주세요.",
-          "advanced": "한국 식당에서는 반찬을 무료로 리필해준다.",
-          "master": "어머니가 싸주시는 반찬은 자취하는 사람에게 최고의 선물이다."
+          "beginner": "반찬을/를 먹어요.",
+          "intermediate": "반찬이/가 맛있어요.",
+          "advanced": "반찬은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "반찬의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "반찬 주세요.",
+              "romanization": "banchan juseyo.",
+              "translation": "Banchan (Side dishes), please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Banchan (Side dishes)",
         "explanation": "Various small dishes eaten with rice. A characteristic of Korean meals.",
         "examples": {
-          "beginner": "The side dishes are delicious.",
-          "intermediate": "More side dishes, please.",
-          "advanced": "In Korean restaurants, side dishes are refilled for free.",
-          "master": "Side dishes packed by mom are the best gift for someone living alone."
+          "beginner": "I eat banchan (side dishes).",
+          "intermediate": "Banchan (Side dishes) is delicious.",
+          "advanced": "Banchan (Side dishes) is one of Korea's representative foods.",
+          "master": "The cooking method and history of banchan (side dishes) is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Banchan (Side dishes), please.",
+              "romanization": "",
+              "translation": "반찬 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -1051,26 +2849,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "korean", "soup"],
+    "tags": [
+      "food",
+      "korean",
+      "soup"
+    ],
     "translations": {
       "ko": {
         "word": "국",
         "explanation": "한국식 맑은 국물 요리. 밥과 함께 먹는 기본 음식.",
         "examples": {
-          "beginner": "국이 뜨거워요.",
-          "intermediate": "미역국 좋아해요.",
-          "advanced": "한국에서는 생일에 미역국을 먹는 전통이 있다.",
-          "master": "한국 밥상에는 국이 빠지지 않는데, 국물 문화가 발달해서 그렇다."
+          "beginner": "국을/를 먹어요.",
+          "intermediate": "국이/가 맛있어요.",
+          "advanced": "국은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "국의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "국 주세요.",
+              "romanization": "guk juseyo.",
+              "translation": "Guk (Korean soup), please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Guk (Korean soup)",
         "explanation": "Korean-style clear soup. A basic dish eaten with rice.",
         "examples": {
-          "beginner": "The soup is hot.",
-          "intermediate": "I like seaweed soup.",
-          "advanced": "In Korea, there's a tradition of eating seaweed soup on birthdays.",
-          "master": "Korean tables always have soup because the soup culture is well-developed."
+          "beginner": "I eat guk (korean soup).",
+          "intermediate": "Guk (Korean soup) is delicious.",
+          "advanced": "Guk (Korean soup) is one of Korea's representative foods.",
+          "master": "The cooking method and history of guk (korean soup) is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Guk (Korean soup), please.",
+              "romanization": "",
+              "translation": "국 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -1087,26 +2947,88 @@
     "categoryId": "food",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": ["food", "korean", "vegetable"],
+    "tags": [
+      "food",
+      "korean",
+      "vegetable"
+    ],
     "translations": {
       "ko": {
         "word": "나물",
         "explanation": "채소를 데치거나 볶아 양념한 반찬. 비빔밥에도 많이 들어간다.",
         "examples": {
-          "beginner": "나물 맛있어요.",
-          "intermediate": "콩나물 좋아해요.",
-          "advanced": "봄에는 산에서 캔 나물이 제일 맛있다.",
-          "master": "한국의 나물 문화는 다양한 채소를 건강하게 먹는 지혜가 담겨있다."
+          "beginner": "나물을/를 먹어요.",
+          "intermediate": "나물이/가 맛있어요.",
+          "advanced": "나물은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "나물의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "나물 주세요.",
+              "romanization": "namul juseyo.",
+              "translation": "Namul (Seasoned vegetables), please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Namul (Seasoned vegetables)",
         "explanation": "Side dishes of blanched or stir-fried seasoned vegetables. Also used in bibimbap.",
         "examples": {
-          "beginner": "The namul is delicious.",
-          "intermediate": "I like bean sprouts.",
-          "advanced": "In spring, wild vegetables from the mountains taste the best.",
-          "master": "Korean namul culture contains wisdom about eating various vegetables healthily."
+          "beginner": "I eat namul (seasoned vegetables).",
+          "intermediate": "Namul (Seasoned vegetables) is delicious.",
+          "advanced": "Namul (Seasoned vegetables) is one of Korea's representative foods.",
+          "master": "The cooking method and history of namul (seasoned vegetables) is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Namul (Seasoned vegetables), please.",
+              "romanization": "",
+              "translation": "나물 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -1123,26 +3045,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["drink", "alcohol", "korean"],
+    "tags": [
+      "drink",
+      "alcohol",
+      "korean"
+    ],
     "translations": {
       "ko": {
         "word": "소주",
         "explanation": "한국의 대표적인 술. 투명하고 도수가 높다.",
         "examples": {
-          "beginner": "소주 한 병 주세요.",
-          "intermediate": "삼겹살에는 소주가 최고야.",
-          "advanced": "소주는 한국에서 가장 많이 팔리는 술이다.",
-          "master": "소주를 처음 마실 때는 입문자용 과일 소주로 시작하는 게 좋다."
+          "beginner": "소주을/를 먹어요.",
+          "intermediate": "소주이/가 맛있어요.",
+          "advanced": "소주은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "소주의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "소주 주세요.",
+              "romanization": "soju juseyo.",
+              "translation": "Soju, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Soju",
         "explanation": "Korea's representative alcoholic beverage. Clear and high in alcohol content.",
         "examples": {
-          "beginner": "One bottle of soju, please.",
-          "intermediate": "Soju goes best with samgyeopsal.",
-          "advanced": "Soju is the best-selling alcohol in Korea.",
-          "master": "When trying soju for the first time, it's good to start with fruit soju for beginners."
+          "beginner": "I eat soju.",
+          "intermediate": "Soju is delicious.",
+          "advanced": "Soju is one of Korea's representative foods.",
+          "master": "The cooking method and history of soju is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Soju, please.",
+              "romanization": "",
+              "translation": "소주 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -1159,26 +3143,87 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["drink", "alcohol"],
+    "tags": [
+      "drink",
+      "alcohol"
+    ],
     "translations": {
       "ko": {
         "word": "맥주",
         "explanation": "보리로 만든 술. 치킨과 함께 먹는 것이 인기다.",
         "examples": {
-          "beginner": "맥주 마실래요?",
-          "intermediate": "치킨에는 맥주지!",
-          "advanced": "요즘 한국에서는 수제 맥주가 인기가 많다.",
-          "master": "치킨과 맥주의 조합을 '치맥'이라고 하는데, 한국의 대표적인 야식 문화다."
+          "beginner": "맥주을/를 먹어요.",
+          "intermediate": "맥주이/가 맛있어요.",
+          "advanced": "맥주은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "맥주의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "맥주 주세요.",
+              "romanization": "maekju juseyo.",
+              "translation": "Beer, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Beer",
         "explanation": "Alcoholic beverage made from barley. Popular to drink with chicken.",
         "examples": {
-          "beginner": "Do you want to drink beer?",
-          "intermediate": "Chicken goes with beer!",
-          "advanced": "Recently, craft beer is very popular in Korea.",
-          "master": "The combination of chicken and beer is called 'chimaek' - a representative Korean late-night food culture."
+          "beginner": "I eat beer.",
+          "intermediate": "Beer is delicious.",
+          "advanced": "Beer is one of Korea's representative foods.",
+          "master": "The cooking method and history of beer is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Beer, please.",
+              "romanization": "",
+              "translation": "맥주 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -1195,26 +3240,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "korean", "simple"],
+    "tags": [
+      "food",
+      "korean",
+      "simple"
+    ],
     "translations": {
       "ko": {
         "word": "주먹밥",
         "explanation": "밥을 주먹으로 동글게 뭉쳐 만든 간단한 음식.",
         "examples": {
-          "beginner": "주먹밥 만들어줘.",
-          "intermediate": "소풍 갈 때 주먹밥 싸가자.",
-          "advanced": "간단한 재료로 주먹밥을 만들면 훌륭한 도시락이 된다.",
-          "master": "어렸을 때 엄마가 만들어주신 주먹밥은 언제 먹어도 그리운 맛이다."
+          "beginner": "주먹밥을/를 먹어요.",
+          "intermediate": "주먹밥이/가 맛있어요.",
+          "advanced": "주먹밥은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "주먹밥의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "주먹밥 주세요.",
+              "romanization": "jumeokbap juseyo.",
+              "translation": "Jumeokbap (Rice ball), please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Jumeokbap (Rice ball)",
         "explanation": "Simple food made by shaping rice into balls with your fist.",
         "examples": {
-          "beginner": "Make me a rice ball.",
-          "intermediate": "Let's pack rice balls for the picnic.",
-          "advanced": "Making rice balls with simple ingredients makes a great lunch box.",
-          "master": "The rice balls my mom made when I was young always bring back nostalgic memories."
+          "beginner": "I eat jumeokbap (rice ball).",
+          "intermediate": "Jumeokbap (Rice ball) is delicious.",
+          "advanced": "Jumeokbap (Rice ball) is one of Korea's representative foods.",
+          "master": "The cooking method and history of jumeokbap (rice ball) is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Jumeokbap (Rice ball), please.",
+              "romanization": "",
+              "translation": "주먹밥 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -1231,26 +3338,88 @@
     "categoryId": "food",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": ["food", "korean", "healthy"],
+    "tags": [
+      "food",
+      "korean",
+      "healthy"
+    ],
     "translations": {
       "ko": {
         "word": "보리밥",
         "explanation": "보리를 섞어 지은 밥. 건강식으로 인기가 있다.",
         "examples": {
-          "beginner": "보리밥 먹어봤어요?",
-          "intermediate": "다이어트 중이라 보리밥 먹어요.",
-          "advanced": "보리밥은 섬유질이 많아서 소화에 좋다.",
-          "master": "시골에서는 보리밥을 비빔밥처럼 쓱쓱 비벼 먹는다."
+          "beginner": "보리밥을/를 먹어요.",
+          "intermediate": "보리밥이/가 맛있어요.",
+          "advanced": "보리밥은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "보리밥의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "보리밥 주세요.",
+              "romanization": "boribap juseyo.",
+              "translation": "Barley rice, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Barley rice",
         "explanation": "Rice mixed with barley. Popular as a healthy food.",
         "examples": {
-          "beginner": "Have you tried barley rice?",
-          "intermediate": "I eat barley rice because I'm on a diet.",
-          "advanced": "Barley rice is good for digestion because it's high in fiber.",
-          "master": "In the countryside, people mix barley rice like bibimbap."
+          "beginner": "I eat barley rice.",
+          "intermediate": "Barley rice is delicious.",
+          "advanced": "Barley rice is one of Korea's representative foods.",
+          "master": "The cooking method and history of barley rice is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Barley rice, please.",
+              "romanization": "",
+              "translation": "보리밥 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -1267,26 +3436,88 @@
     "categoryId": "food",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": ["food", "korean", "kimchi"],
+    "tags": [
+      "food",
+      "korean",
+      "kimchi"
+    ],
     "translations": {
       "ko": {
         "word": "깍두기",
         "explanation": "무를 네모나게 썰어 담근 김치. 설렁탕과 잘 어울린다.",
         "examples": {
-          "beginner": "깍두기 좋아해요.",
-          "intermediate": "설렁탕에 깍두기 넣어 먹으면 맛있어요.",
-          "advanced": "깍두기는 배추김치보다 만들기 쉬워서 처음 배울 때 좋다.",
-          "master": "잘 익은 깍두기는 국물에 넣어 먹거나 볶음밥에 넣어도 맛있다."
+          "beginner": "깍두기을/를 먹어요.",
+          "intermediate": "깍두기이/가 맛있어요.",
+          "advanced": "깍두기은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "깍두기의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "깍두기 주세요.",
+              "romanization": "kkakdugi juseyo.",
+              "translation": "Kkakdugi (Cubed radish kimchi), please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Kkakdugi (Cubed radish kimchi)",
         "explanation": "Kimchi made from cubed radish. Goes well with seolleongtang.",
         "examples": {
-          "beginner": "I like kkakdugi.",
-          "intermediate": "It's delicious to add kkakdugi to seolleongtang.",
-          "advanced": "Kkakdugi is easier to make than cabbage kimchi, so it's good for beginners.",
-          "master": "Well-fermented kkakdugi is delicious in soup or fried rice."
+          "beginner": "I eat kkakdugi (cubed radish kimchi).",
+          "intermediate": "Kkakdugi (Cubed radish kimchi) is delicious.",
+          "advanced": "Kkakdugi (Cubed radish kimchi) is one of Korea's representative foods.",
+          "master": "The cooking method and history of kkakdugi (cubed radish kimchi) is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Kkakdugi (Cubed radish kimchi), please.",
+              "romanization": "",
+              "translation": "깍두기 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -1303,26 +3534,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "vegetable", "ingredient"],
+    "tags": [
+      "food",
+      "vegetable",
+      "ingredient"
+    ],
     "translations": {
       "ko": {
         "word": "파",
         "explanation": "한국 요리에서 향신료로 많이 쓰이는 채소.",
         "examples": {
-          "beginner": "파 넣을까요?",
-          "intermediate": "파전 먹으러 가자.",
-          "advanced": "국이나 찌개에 파를 마지막에 넣으면 향이 좋다.",
-          "master": "대파와 쪽파는 용도가 다른데, 대파는 국물 요리에, 쪽파는 무침에 많이 쓴다."
+          "beginner": "파을/를 먹어요.",
+          "intermediate": "파이/가 맛있어요.",
+          "advanced": "파은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "파의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "파 주세요.",
+              "romanization": "pa juseyo.",
+              "translation": "Green onion / Scallion, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Green onion / Scallion",
         "explanation": "Vegetable commonly used as a seasoning in Korean cooking.",
         "examples": {
-          "beginner": "Should I add green onion?",
-          "intermediate": "Let's go eat green onion pancake.",
-          "advanced": "Adding green onion at the end to soup or stew gives good aroma.",
-          "master": "Leek and scallion have different uses - leek for soups, scallion for side dishes."
+          "beginner": "I eat green onion / scallion.",
+          "intermediate": "Green onion / Scallion is delicious.",
+          "advanced": "Green onion / Scallion is one of Korea's representative foods.",
+          "master": "The cooking method and history of green onion / scallion is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Green onion / Scallion, please.",
+              "romanization": "",
+              "translation": "파 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -1339,26 +3632,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "vegetable", "ingredient"],
+    "tags": [
+      "food",
+      "vegetable",
+      "ingredient"
+    ],
     "translations": {
       "ko": {
         "word": "마늘",
         "explanation": "한국 요리에 빠지지 않는 향신료. 건강에도 좋다.",
         "examples": {
-          "beginner": "마늘 냄새나요.",
-          "intermediate": "김치에는 마늘이 많이 들어가요.",
-          "advanced": "마늘은 한국 음식의 기본 양념으로 거의 모든 요리에 들어간다.",
-          "master": "마늘을 많이 먹어서 한국 사람은 피부가 좋다는 말이 있다."
+          "beginner": "마늘을/를 먹어요.",
+          "intermediate": "마늘이/가 맛있어요.",
+          "advanced": "마늘은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "마늘의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "마늘 주세요.",
+              "romanization": "maneul juseyo.",
+              "translation": "Garlic, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Garlic",
         "explanation": "An essential seasoning in Korean cooking. Also good for health.",
         "examples": {
-          "beginner": "It smells like garlic.",
-          "intermediate": "A lot of garlic goes into kimchi.",
-          "advanced": "Garlic is a basic seasoning in Korean food and goes into almost every dish.",
-          "master": "There's a saying that Koreans have good skin because they eat a lot of garlic."
+          "beginner": "I eat garlic.",
+          "intermediate": "Garlic is delicious.",
+          "advanced": "Garlic is one of Korea's representative foods.",
+          "master": "The cooking method and history of garlic is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Garlic, please.",
+              "romanization": "",
+              "translation": "마늘 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -1375,26 +3730,87 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "vegetable"],
+    "tags": [
+      "food",
+      "vegetable"
+    ],
     "translations": {
       "ko": {
         "word": "시금치",
         "explanation": "나물로 많이 먹는 녹색 채소. 비빔밥에도 들어간다.",
         "examples": {
-          "beginner": "시금치 좋아해요?",
-          "intermediate": "시금치나물 해줄게요.",
-          "advanced": "시금치는 철분이 많아서 빈혈에 좋다고 해요.",
-          "master": "시금치를 데칠 때 소금을 조금 넣으면 색이 더 예쁘게 나온다."
+          "beginner": "시금치을/를 먹어요.",
+          "intermediate": "시금치이/가 맛있어요.",
+          "advanced": "시금치은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "시금치의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "시금치 주세요.",
+              "romanization": "sigeumchi juseyo.",
+              "translation": "Spinach, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Spinach",
         "explanation": "Green vegetable often eaten as namul. Also goes in bibimbap.",
         "examples": {
-          "beginner": "Do you like spinach?",
-          "intermediate": "I'll make spinach namul for you.",
-          "advanced": "Spinach is high in iron, so it's good for anemia.",
-          "master": "Adding a little salt when blanching spinach keeps the color prettier."
+          "beginner": "I eat spinach.",
+          "intermediate": "Spinach is delicious.",
+          "advanced": "Spinach is one of Korea's representative foods.",
+          "master": "The cooking method and history of spinach is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Spinach, please.",
+              "romanization": "",
+              "translation": "시금치 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -1411,26 +3827,87 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "vegetable"],
+    "tags": [
+      "food",
+      "vegetable"
+    ],
     "translations": {
       "ko": {
         "word": "호박",
         "explanation": "한국에서 찌개나 전으로 많이 먹는 채소.",
         "examples": {
-          "beginner": "호박전 먹을래?",
-          "intermediate": "된장찌개에 호박 넣어줘.",
-          "advanced": "늙은 호박은 단맛이 강해서 죽으로 많이 끓인다.",
-          "master": "산후조리할 때 호박을 먹으면 붓기가 빠진다고 해요."
+          "beginner": "호박을/를 먹어요.",
+          "intermediate": "호박이/가 맛있어요.",
+          "advanced": "호박은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "호박의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "호박 주세요.",
+              "romanization": "hobak juseyo.",
+              "translation": "Zucchini / Squash, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Zucchini / Squash",
         "explanation": "Vegetable often used in stews and pancakes in Korea.",
         "examples": {
-          "beginner": "Do you want zucchini pancake?",
-          "intermediate": "Add zucchini to the doenjang stew.",
-          "advanced": "Ripe pumpkin is very sweet, so it's often made into porridge.",
-          "master": "Eating pumpkin during postpartum care is said to reduce swelling."
+          "beginner": "I eat zucchini / squash.",
+          "intermediate": "Zucchini / Squash is delicious.",
+          "advanced": "Zucchini / Squash is one of Korea's representative foods.",
+          "master": "The cooking method and history of zucchini / squash is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Zucchini / Squash, please.",
+              "romanization": "",
+              "translation": "호박 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -1447,26 +3924,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "vegetable", "ingredient"],
+    "tags": [
+      "food",
+      "vegetable",
+      "ingredient"
+    ],
     "translations": {
       "ko": {
         "word": "양파",
         "explanation": "단맛을 내는 채소. 볶음, 찌개 등에 많이 사용한다.",
         "examples": {
-          "beginner": "양파 썰 때 눈물나요.",
-          "intermediate": "불고기에 양파 많이 넣어줘.",
-          "advanced": "양파를 오래 볶으면 단맛이 더 강해진다.",
-          "master": "양파즙은 고기 재울 때 넣으면 육질이 부드러워진다."
+          "beginner": "양파을/를 먹어요.",
+          "intermediate": "양파이/가 맛있어요.",
+          "advanced": "양파은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "양파의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "양파 주세요.",
+              "romanization": "yangpa juseyo.",
+              "translation": "Onion, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Onion",
         "explanation": "Vegetable that adds sweetness. Used in stir-fries, stews, etc.",
         "examples": {
-          "beginner": "I tear up when cutting onions.",
-          "intermediate": "Add lots of onion to the bulgogi.",
-          "advanced": "Caramelizing onion for a long time makes it sweeter.",
-          "master": "Adding onion juice when marinating meat makes it tender."
+          "beginner": "I eat onion.",
+          "intermediate": "Onion is delicious.",
+          "advanced": "Onion is one of Korea's representative foods.",
+          "master": "The cooking method and history of onion is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Onion, please.",
+              "romanization": "",
+              "translation": "양파 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -1483,26 +4022,87 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "vegetable"],
+    "tags": [
+      "food",
+      "vegetable"
+    ],
     "translations": {
       "ko": {
         "word": "당근",
         "explanation": "주황색 뿌리채소. 다양한 요리에 사용된다.",
         "examples": {
-          "beginner": "당근 좋아해요?",
-          "intermediate": "잡채에 당근 채썰어 넣어.",
-          "advanced": "당근은 눈 건강에 좋다고 해서 어릴 때 많이 먹었다.",
-          "master": "당근을 기름에 볶으면 베타카로틴 흡수율이 높아진다."
+          "beginner": "당근을/를 먹어요.",
+          "intermediate": "당근이/가 맛있어요.",
+          "advanced": "당근은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "당근의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "당근 주세요.",
+              "romanization": "danggeun juseyo.",
+              "translation": "Carrot, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Carrot",
         "explanation": "Orange root vegetable. Used in various dishes.",
         "examples": {
-          "beginner": "Do you like carrots?",
-          "intermediate": "Julienne the carrots for the japchae.",
-          "advanced": "I ate a lot of carrots as a child because they're good for eye health.",
-          "master": "Cooking carrots in oil increases beta-carotene absorption."
+          "beginner": "I eat carrot.",
+          "intermediate": "Carrot is delicious.",
+          "advanced": "Carrot is one of Korea's representative foods.",
+          "master": "The cooking method and history of carrot is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Carrot, please.",
+              "romanization": "",
+              "translation": "당근 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -1519,26 +4119,87 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "vegetable"],
+    "tags": [
+      "food",
+      "vegetable"
+    ],
     "translations": {
       "ko": {
         "word": "감자",
         "explanation": "전 세계적으로 많이 먹는 구황작물. 한국에서는 감자탕, 감자전으로 많이 먹는다.",
         "examples": {
-          "beginner": "감자 삶았어요.",
-          "intermediate": "감자탕 먹으러 갈까?",
-          "advanced": "강원도 감자가 유명한데 전분이 많아서 포슬포슬하다.",
-          "master": "감자를 껍질째 삶으면 영양분이 덜 빠져나간다."
+          "beginner": "감자을/를 먹어요.",
+          "intermediate": "감자이/가 맛있어요.",
+          "advanced": "감자은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "감자의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "감자 주세요.",
+              "romanization": "gamja juseyo.",
+              "translation": "Potato, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Potato",
         "explanation": "A staple crop eaten worldwide. In Korea, used in gamjatang and potato pancakes.",
         "examples": {
-          "beginner": "I boiled potatoes.",
-          "intermediate": "Shall we go eat gamjatang?",
-          "advanced": "Gangwon-do potatoes are famous for being starchy and fluffy.",
-          "master": "Boiling potatoes with the skin retains more nutrients."
+          "beginner": "I eat potato.",
+          "intermediate": "Potato is delicious.",
+          "advanced": "Potato is one of Korea's representative foods.",
+          "master": "The cooking method and history of potato is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Potato, please.",
+              "romanization": "",
+              "translation": "감자 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -1555,26 +4216,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "vegetable", "snack"],
+    "tags": [
+      "food",
+      "vegetable",
+      "snack"
+    ],
     "translations": {
       "ko": {
         "word": "고구마",
         "explanation": "달콤한 맛의 뿌리채소. 겨울 간식으로 인기가 많다.",
         "examples": {
-          "beginner": "고구마 맛있어요.",
-          "intermediate": "겨울에는 군고구마가 최고야.",
-          "advanced": "에어프라이어로 고구마를 구우면 군고구마처럼 맛있다.",
-          "master": "고구마에 김치를 같이 먹으면 속이 안 더부룩하다고 해요."
+          "beginner": "고구마을/를 먹어요.",
+          "intermediate": "고구마이/가 맛있어요.",
+          "advanced": "고구마은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "고구마의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "고구마 주세요.",
+              "romanization": "goguma juseyo.",
+              "translation": "Sweet potato, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Sweet potato",
         "explanation": "Sweet root vegetable. Popular as a winter snack.",
         "examples": {
-          "beginner": "Sweet potatoes are delicious.",
-          "intermediate": "In winter, roasted sweet potato is the best.",
-          "advanced": "Baking sweet potatoes in an air fryer tastes like roasted ones.",
-          "master": "Eating kimchi with sweet potato is said to prevent bloating."
+          "beginner": "I eat sweet potato.",
+          "intermediate": "Sweet potato is delicious.",
+          "advanced": "Sweet potato is one of Korea's representative foods.",
+          "master": "The cooking method and history of sweet potato is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Sweet potato, please.",
+              "romanization": "",
+              "translation": "고구마 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -1591,26 +4314,88 @@
     "categoryId": "food",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": ["food", "ingredient", "spice"],
+    "tags": [
+      "food",
+      "ingredient",
+      "spice"
+    ],
     "translations": {
       "ko": {
         "word": "생강",
         "explanation": "향신료로 쓰이는 뿌리. 감기에 좋다고 알려져 있다.",
         "examples": {
-          "beginner": "생강차 마실래요?",
-          "intermediate": "생선 요리할 때 생강 넣으면 비린내가 없어져요.",
-          "advanced": "생강청을 만들어두면 차로 마시거나 요리에 활용할 수 있다.",
-          "master": "생강은 몸을 따뜻하게 해줘서 겨울철에 특히 좋다."
+          "beginner": "생강을/를 먹어요.",
+          "intermediate": "생강이/가 맛있어요.",
+          "advanced": "생강은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "생강의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "생강 주세요.",
+              "romanization": "saenggang juseyo.",
+              "translation": "Ginger, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Ginger",
         "explanation": "Root used as a spice. Known to be good for colds.",
         "examples": {
-          "beginner": "Do you want ginger tea?",
-          "intermediate": "Adding ginger when cooking fish removes the fishy smell.",
-          "advanced": "Making ginger syrup lets you use it for tea or cooking.",
-          "master": "Ginger warms the body, so it's especially good in winter."
+          "beginner": "I eat ginger.",
+          "intermediate": "Ginger is delicious.",
+          "advanced": "Ginger is one of Korea's representative foods.",
+          "master": "The cooking method and history of ginger is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Ginger, please.",
+              "romanization": "",
+              "translation": "생강 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -1627,26 +4412,87 @@
     "categoryId": "food",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": ["food", "ingredient"],
+    "tags": [
+      "food",
+      "ingredient"
+    ],
     "translations": {
       "ko": {
         "word": "깨",
         "explanation": "고소한 맛을 내는 씨앗. 나물이나 밥에 뿌려 먹는다.",
         "examples": {
-          "beginner": "깨 뿌려줘.",
-          "intermediate": "나물에 참깨 넣으면 고소해요.",
-          "advanced": "참기름과 깨는 한국 음식에서 고소한 맛을 내는 핵심 재료다.",
-          "master": "들깨는 참깨와 다르게 뽀얀 국물을 만들어서 들깨탕에 많이 쓴다."
+          "beginner": "깨을/를 먹어요.",
+          "intermediate": "깨이/가 맛있어요.",
+          "advanced": "깨은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "깨의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "깨 주세요.",
+              "romanization": "kkae juseyo.",
+              "translation": "Sesame seeds, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Sesame seeds",
         "explanation": "Seeds that add nutty flavor. Sprinkled on namul or rice.",
         "examples": {
-          "beginner": "Sprinkle some sesame.",
-          "intermediate": "Adding sesame to namul makes it nutty.",
-          "advanced": "Sesame oil and seeds are key ingredients for nutty flavor in Korean food.",
-          "master": "Perilla seeds make a creamy broth unlike sesame, used in perilla seed soup."
+          "beginner": "I eat sesame seeds.",
+          "intermediate": "Sesame seeds is delicious.",
+          "advanced": "Sesame seeds is one of Korea's representative foods.",
+          "master": "The cooking method and history of sesame seeds is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Sesame seeds, please.",
+              "romanization": "",
+              "translation": "깨 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -1663,26 +4509,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "ingredient", "oil"],
+    "tags": [
+      "food",
+      "ingredient",
+      "oil"
+    ],
     "translations": {
       "ko": {
         "word": "참기름",
         "explanation": "참깨로 만든 기름. 한국 음식의 고소한 맛을 내는 필수 재료.",
         "examples": {
-          "beginner": "참기름 좀 넣어줘.",
-          "intermediate": "비빔밥에 참기름 넣으면 맛있어요.",
-          "advanced": "한국 음식에서 참기름은 마무리 양념으로 자주 쓰인다.",
-          "master": "방앗간에서 직접 짜는 참기름은 향이 훨씬 좋다."
+          "beginner": "참기름을/를 먹어요.",
+          "intermediate": "참기름이/가 맛있어요.",
+          "advanced": "참기름은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "참기름의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "참기름 주세요.",
+              "romanization": "chamgireum juseyo.",
+              "translation": "Sesame oil, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Sesame oil",
         "explanation": "Oil made from sesame seeds. Essential ingredient for nutty flavor in Korean food.",
         "examples": {
-          "beginner": "Add some sesame oil.",
-          "intermediate": "Adding sesame oil to bibimbap makes it delicious.",
-          "advanced": "In Korean cooking, sesame oil is often used as a finishing seasoning.",
-          "master": "Freshly pressed sesame oil from a mill has a much better aroma."
+          "beginner": "I eat sesame oil.",
+          "intermediate": "Sesame oil is delicious.",
+          "advanced": "Sesame oil is one of Korea's representative foods.",
+          "master": "The cooking method and history of sesame oil is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Sesame oil, please.",
+              "romanization": "",
+              "translation": "참기름 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -1699,26 +4607,87 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "condiment"],
+    "tags": [
+      "food",
+      "condiment"
+    ],
     "translations": {
       "ko": {
         "word": "간장",
         "explanation": "콩으로 만든 한국 전통 조미료. 요리에 간을 맞출 때 사용한다.",
         "examples": {
-          "beginner": "간장 주세요.",
-          "intermediate": "간장에 찍어 먹으면 맛있어요.",
-          "advanced": "국간장과 진간장은 용도가 달라서 구분해서 써야 한다.",
-          "master": "전통 방식으로 담근 조선간장은 맛이 깊고 건강에도 좋다."
+          "beginner": "간장을/를 먹어요.",
+          "intermediate": "간장이/가 맛있어요.",
+          "advanced": "간장은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "간장의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "간장 주세요.",
+              "romanization": "ganjang juseyo.",
+              "translation": "Soy sauce, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Soy sauce",
         "explanation": "Traditional Korean seasoning made from soybeans. Used to season dishes.",
         "examples": {
-          "beginner": "Soy sauce, please.",
-          "intermediate": "It's delicious when dipped in soy sauce.",
-          "advanced": "Light soy sauce and dark soy sauce have different uses.",
-          "master": "Traditionally brewed Joseon soy sauce has a deep flavor and is healthy."
+          "beginner": "I eat soy sauce.",
+          "intermediate": "Soy sauce is delicious.",
+          "advanced": "Soy sauce is one of Korea's representative foods.",
+          "master": "The cooking method and history of soy sauce is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Soy sauce, please.",
+              "romanization": "",
+              "translation": "간장 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -1735,26 +4704,87 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "condiment"],
+    "tags": [
+      "food",
+      "condiment"
+    ],
     "translations": {
       "ko": {
         "word": "식초",
         "explanation": "신맛을 내는 조미료. 냉면이나 물회에 많이 넣는다.",
         "examples": {
-          "beginner": "식초 넣을까요?",
-          "intermediate": "냉면에 식초 많이 넣어줘.",
-          "advanced": "식초는 음식의 느끼한 맛을 잡아주는 역할을 한다.",
-          "master": "천연 발효 식초는 건강에 좋아서 요즘 많이 찾는다."
+          "beginner": "식초을/를 먹어요.",
+          "intermediate": "식초이/가 맛있어요.",
+          "advanced": "식초은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "식초의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "식초 주세요.",
+              "romanization": "sikcho juseyo.",
+              "translation": "Vinegar, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Vinegar",
         "explanation": "Sour seasoning. Often added to naengmyeon or raw fish.",
         "examples": {
-          "beginner": "Should I add vinegar?",
-          "intermediate": "Add lots of vinegar to my naengmyeon.",
-          "advanced": "Vinegar helps cut the greasiness in food.",
-          "master": "Naturally fermented vinegar is healthy and popular these days."
+          "beginner": "I eat vinegar.",
+          "intermediate": "Vinegar is delicious.",
+          "advanced": "Vinegar is one of Korea's representative foods.",
+          "master": "The cooking method and history of vinegar is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Vinegar, please.",
+              "romanization": "",
+              "translation": "식초 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },
@@ -1771,26 +4801,88 @@
     "categoryId": "food",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["food", "ingredient", "condiment"],
+    "tags": [
+      "food",
+      "ingredient",
+      "condiment"
+    ],
     "translations": {
       "ko": {
         "word": "설탕",
         "explanation": "단맛을 내는 기본 조미료. 요리와 제과에 필수적이다.",
         "examples": {
-          "beginner": "설탕 좀 주세요.",
-          "intermediate": "커피에 설탕 넣을까요?",
-          "advanced": "요즘은 건강을 위해 설탕 대신 꿀이나 대체당을 쓰는 사람이 많다.",
-          "master": "한국 요리에서 설탕은 간장과 함께 양념의 기본이 된다."
+          "beginner": "설탕을/를 먹어요.",
+          "intermediate": "설탕이/가 맛있어요.",
+          "advanced": "설탕은/는 한국의 대표적인 음식 중 하나입니다.",
+          "master": "설탕의 조리법과 역사는 한국 식문화를 이해하는 데 중요합니다."
+        },
+        "dialogue": {
+          "context": "식당에서 주문하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
+            },
+            {
+              "speaker": "B",
+              "text": "설탕 주세요.",
+              "romanization": "seoltang juseyo.",
+              "translation": "Sugar, please."
+            },
+            {
+              "speaker": "A",
+              "text": "음료는요?",
+              "romanization": "eumryoneunyo?",
+              "translation": "Any drinks?"
+            },
+            {
+              "speaker": "B",
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "Water, please."
+            }
+          ]
         }
       },
       "en": {
         "word": "Sugar",
         "explanation": "Basic seasoning for sweetness. Essential in cooking and baking.",
         "examples": {
-          "beginner": "Some sugar, please.",
-          "intermediate": "Should I add sugar to the coffee?",
-          "advanced": "Many people now use honey or sugar substitutes instead of sugar for health.",
-          "master": "In Korean cooking, sugar along with soy sauce forms the base of seasonings."
+          "beginner": "I eat sugar.",
+          "intermediate": "Sugar is delicious.",
+          "advanced": "Sugar is one of Korea's representative foods.",
+          "master": "The cooking method and history of sugar is important for understanding Korean food culture."
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What would you like?",
+              "romanization": "",
+              "translation": "뭐 드시겠어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Sugar, please.",
+              "romanization": "",
+              "translation": "설탕 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Any drinks?",
+              "romanization": "",
+              "translation": "음료는요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Water, please.",
+              "romanization": "",
+              "translation": "물 주세요."
+            }
+          ]
         }
       }
     },

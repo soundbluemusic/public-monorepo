@@ -182,5 +182,9 @@
   "apiMetaJson": "Get meta.json first to discover all available files",
   "apiCopyUrl": "Copy URL",
   "apiCopied": "Copied!",
-  "apiDataIncludes": "Includes: {count} entries, {catCount} categories, {convCount} conversations"
+  "apiDataIncludes": "Includes: {count} entries, {catCount} categories, {convCount} conversations",
+  "entryDialogue": "Dialogue Example",
+  "entryDialogueContext": "Context",
+  "speakerA": "A",
+  "speakerB": "B"
 }
