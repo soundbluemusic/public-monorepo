@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generatedAt": "2026-01-06T07:56:01.734Z",
+  "generatedAt": "2026-01-06T10:54:58.207Z",
   "baseUrl": "https://raw.githubusercontent.com/soundbluemusic/public-monorepo/main/data/context",
   "files": {
     "categories": "categories.json",
@@ -8,19 +8,31 @@
     "entries": [
       "entries/adjectives-basic.json",
       "entries/art.json",
+      "entries/basic-words.json",
+      "entries/body.json",
       "entries/coding.json",
+      "entries/colors.json",
+      "entries/compound-words.json",
       "entries/countries.json",
+      "entries/cultural-expressions.json",
       "entries/culture.json",
       "entries/daily-life.json",
+      "entries/education.json",
       "entries/emotions.json",
       "entries/family.json",
       "entries/food.json",
       "entries/geography.json",
       "entries/greetings.json",
+      "entries/idioms.json",
+      "entries/interjections.json",
+      "entries/legal.json",
       "entries/math.json",
+      "entries/medical.json",
       "entries/music.json",
       "entries/numbers.json",
+      "entries/onomatopoeia.json",
       "entries/particles.json",
+      "entries/phrasal-verbs.json",
       "entries/physics.json",
       "entries/shopping.json",
       "entries/space.json",
@@ -28,6 +40,7 @@
       "entries/time-date.json",
       "entries/transportation.json",
       "entries/travel.json",
+      "entries/verb-stems.json",
       "entries/verbs-basic.json",
       "entries/work.json"
     ]
@@ -35,6 +48,6 @@
   "counts": {
     "categories": 24,
     "conversations": 53,
-    "entryFiles": 24
+    "entryFiles": 37
   }
 }

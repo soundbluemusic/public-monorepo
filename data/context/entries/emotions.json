@@ -4921,5 +4921,2405 @@
       "korean": "[편안하다]",
       "ipa": "[pʰjʌnanɦada]"
     }
+  },
+  {
+    "id": "d-emo-gippeum",
+    "korean": "기쁨",
+    "romanization": "gippeum",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "기쁨",
+        "explanation": "기쁨의 뜻은 'joy'입니다.",
+        "examples": {
+          "beginner": "\"기쁨\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"기쁨\"를 자주 써요.",
+          "advanced": "\"기쁨\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"기쁨\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "기쁨입니다.",
+            "기쁨이/가 있습니다."
+          ],
+          "casual": [
+            "기쁨이야.",
+            "기쁨 있어."
+          ],
+          "short": [
+            "기쁨"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "기쁨 느낌이에요.",
+              "romanization": "gippeum neukkimieyo.",
+              "translation": "I feel joy."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "joy",
+        "explanation": "'기쁨' means 'joy' in English.",
+        "examples": {
+          "beginner": "We say \"기쁨\" in Korean.",
+          "intermediate": "In Korea, people often say \"기쁨\".",
+          "advanced": "\"기쁨\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"기쁨\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is joy.",
+            "There is joy."
+          ],
+          "casual": [
+            "It's joy.",
+            "joy, you know."
+          ],
+          "short": [
+            "joy"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel joy.",
+              "romanization": "",
+              "translation": "기쁨 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[기쁨]",
+      "ipa": "[gippeum]"
+    }
+  },
+  {
+    "id": "d-emo-슬픔",
+    "korean": "슬픔",
+    "romanization": "seulpeum",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "슬픔",
+        "explanation": "슬픔의 뜻은 'sadness'입니다.",
+        "examples": {
+          "beginner": "\"슬픔\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"슬픔\"를 자주 써요.",
+          "advanced": "\"슬픔\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"슬픔\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "슬픔입니다.",
+            "슬픔이/가 있습니다."
+          ],
+          "casual": [
+            "슬픔이야.",
+            "슬픔 있어."
+          ],
+          "short": [
+            "슬픔"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "슬픔 느낌이에요.",
+              "romanization": "seulpeum neukkimieyo.",
+              "translation": "I feel sadness."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "sadness",
+        "explanation": "'슬픔' means 'sadness' in English.",
+        "examples": {
+          "beginner": "We say \"슬픔\" in Korean.",
+          "intermediate": "In Korea, people often say \"슬픔\".",
+          "advanced": "\"슬픔\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"슬픔\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is sadness.",
+            "There is sadness."
+          ],
+          "casual": [
+            "It's sadness.",
+            "sadness, you know."
+          ],
+          "short": [
+            "sadness"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel sadness.",
+              "romanization": "",
+              "translation": "슬픔 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[슬픔]",
+      "ipa": "[seulpeum]"
+    }
+  },
+  {
+    "id": "d-emo-bunno",
+    "korean": "분노",
+    "romanization": "bunno",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "분노",
+        "explanation": "분노의 뜻은 'anger'입니다.",
+        "examples": {
+          "beginner": "\"분노\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"분노\"를 자주 써요.",
+          "advanced": "\"분노\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"분노\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "분노입니다.",
+            "분노이/가 있습니다."
+          ],
+          "casual": [
+            "분노이야.",
+            "분노 있어."
+          ],
+          "short": [
+            "분노"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "분노 느낌이에요.",
+              "romanization": "bunno neukkimieyo.",
+              "translation": "I feel anger."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "anger",
+        "explanation": "'분노' means 'anger' in English.",
+        "examples": {
+          "beginner": "We say \"분노\" in Korean.",
+          "intermediate": "In Korea, people often say \"분노\".",
+          "advanced": "\"분노\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"분노\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is anger.",
+            "There is anger."
+          ],
+          "casual": [
+            "It's anger.",
+            "anger, you know."
+          ],
+          "short": [
+            "anger"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel anger.",
+              "romanization": "",
+              "translation": "분노 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[분노]",
+      "ipa": "[bunno]"
+    }
+  },
+  {
+    "id": "d-emo-gongpo",
+    "korean": "공포",
+    "romanization": "gongpo",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "공포",
+        "explanation": "공포의 뜻은 'fear'입니다.",
+        "examples": {
+          "beginner": "\"공포\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"공포\"를 자주 써요.",
+          "advanced": "\"공포\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"공포\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "공포입니다.",
+            "공포이/가 있습니다."
+          ],
+          "casual": [
+            "공포이야.",
+            "공포 있어."
+          ],
+          "short": [
+            "공포"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "공포 느낌이에요.",
+              "romanization": "gongpo neukkimieyo.",
+              "translation": "I feel fear."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "fear",
+        "explanation": "'공포' means 'fear' in English.",
+        "examples": {
+          "beginner": "We say \"공포\" in Korean.",
+          "intermediate": "In Korea, people often say \"공포\".",
+          "advanced": "\"공포\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"공포\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is fear.",
+            "There is fear."
+          ],
+          "casual": [
+            "It's fear.",
+            "fear, you know."
+          ],
+          "short": [
+            "fear"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel fear.",
+              "romanization": "",
+              "translation": "공포 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[공포]",
+      "ipa": "[gongpo]"
+    }
+  },
+  {
+    "id": "d-emo-nolram",
+    "korean": "놀람",
+    "romanization": "nollam",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "놀람",
+        "explanation": "놀람의 뜻은 'surprise'입니다.",
+        "examples": {
+          "beginner": "\"놀람\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"놀람\"를 자주 써요.",
+          "advanced": "\"놀람\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"놀람\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "놀람입니다.",
+            "놀람이/가 있습니다."
+          ],
+          "casual": [
+            "놀람이야.",
+            "놀람 있어."
+          ],
+          "short": [
+            "놀람"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "놀람 느낌이에요.",
+              "romanization": "nollam neukkimieyo.",
+              "translation": "I feel surprise."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "surprise",
+        "explanation": "'놀람' means 'surprise' in English.",
+        "examples": {
+          "beginner": "We say \"놀람\" in Korean.",
+          "intermediate": "In Korea, people often say \"놀람\".",
+          "advanced": "\"놀람\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"놀람\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is surprise.",
+            "There is surprise."
+          ],
+          "casual": [
+            "It's surprise.",
+            "surprise, you know."
+          ],
+          "short": [
+            "surprise"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel surprise.",
+              "romanization": "",
+              "translation": "놀람 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[놀람]",
+      "ipa": "[nollam]"
+    }
+  },
+  {
+    "id": "d-emo-혐o",
+    "korean": "혐오",
+    "romanization": "hyeomo",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "혐오",
+        "explanation": "혐오의 뜻은 'disgust'입니다.",
+        "examples": {
+          "beginner": "\"혐오\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"혐오\"를 자주 써요.",
+          "advanced": "\"혐오\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"혐오\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "혐오입니다.",
+            "혐오이/가 있습니다."
+          ],
+          "casual": [
+            "혐오이야.",
+            "혐오 있어."
+          ],
+          "short": [
+            "혐오"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "혐오 느낌이에요.",
+              "romanization": "hyeomo neukkimieyo.",
+              "translation": "I feel disgust."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "disgust",
+        "explanation": "'혐오' means 'disgust' in English.",
+        "examples": {
+          "beginner": "We say \"혐오\" in Korean.",
+          "intermediate": "In Korea, people often say \"혐오\".",
+          "advanced": "\"혐오\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"혐오\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is disgust.",
+            "There is disgust."
+          ],
+          "casual": [
+            "It's disgust.",
+            "disgust, you know."
+          ],
+          "short": [
+            "disgust"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel disgust.",
+              "romanization": "",
+              "translation": "혐오 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[혐오]",
+      "ipa": "[hyeomo]"
+    }
+  },
+  {
+    "id": "d-emo-bulan",
+    "korean": "불안",
+    "romanization": "bulan",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "불안",
+        "explanation": "불안의 뜻은 'anxiety'입니다.",
+        "examples": {
+          "beginner": "\"불안\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"불안\"를 자주 써요.",
+          "advanced": "\"불안\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"불안\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "불안입니다.",
+            "불안이/가 있습니다."
+          ],
+          "casual": [
+            "불안이야.",
+            "불안 있어."
+          ],
+          "short": [
+            "불안"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "불안 느낌이에요.",
+              "romanization": "bulan neukkimieyo.",
+              "translation": "I feel anxiety."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "anxiety",
+        "explanation": "'불안' means 'anxiety' in English.",
+        "examples": {
+          "beginner": "We say \"불안\" in Korean.",
+          "intermediate": "In Korea, people often say \"불안\".",
+          "advanced": "\"불안\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"불안\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is anxiety.",
+            "There is anxiety."
+          ],
+          "casual": [
+            "It's anxiety.",
+            "anxiety, you know."
+          ],
+          "short": [
+            "anxiety"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel anxiety.",
+              "romanization": "",
+              "translation": "불안 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[불안]",
+      "ipa": "[bulan]"
+    }
+  },
+  {
+    "id": "d-emo-ginjang",
+    "korean": "긴장",
+    "romanization": "ginjang",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "긴장",
+        "explanation": "긴장의 뜻은 'tension'입니다.",
+        "examples": {
+          "beginner": "\"긴장\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"긴장\"를 자주 써요.",
+          "advanced": "\"긴장\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"긴장\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "긴장입니다.",
+            "긴장이/가 있습니다."
+          ],
+          "casual": [
+            "긴장이야.",
+            "긴장 있어."
+          ],
+          "short": [
+            "긴장"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "긴장 느낌이에요.",
+              "romanization": "ginjang neukkimieyo.",
+              "translation": "I feel tension."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "tension",
+        "explanation": "'긴장' means 'tension' in English.",
+        "examples": {
+          "beginner": "We say \"긴장\" in Korean.",
+          "intermediate": "In Korea, people often say \"긴장\".",
+          "advanced": "\"긴장\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"긴장\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is tension.",
+            "There is tension."
+          ],
+          "casual": [
+            "It's tension.",
+            "tension, you know."
+          ],
+          "short": [
+            "tension"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel tension.",
+              "romanization": "",
+              "translation": "긴장 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[긴장]",
+      "ipa": "[ginjang]"
+    }
+  },
+  {
+    "id": "d-emo-seuteureseu",
+    "korean": "스트레스",
+    "romanization": "seuteureseu",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "스트레스",
+        "explanation": "스트레스의 뜻은 'stress'입니다.",
+        "examples": {
+          "beginner": "\"스트레스\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"스트레스\"를 자주 써요.",
+          "advanced": "\"스트레스\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"스트레스\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "스트레스입니다.",
+            "스트레스이/가 있습니다."
+          ],
+          "casual": [
+            "스트레스이야.",
+            "스트레스 있어."
+          ],
+          "short": [
+            "스트"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "스트레스 느낌이에요.",
+              "romanization": "seuteureseu neukkimieyo.",
+              "translation": "I feel stress."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "stress",
+        "explanation": "'스트레스' means 'stress' in English.",
+        "examples": {
+          "beginner": "We say \"스트레스\" in Korean.",
+          "intermediate": "In Korea, people often say \"스트레스\".",
+          "advanced": "\"스트레스\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"스트레스\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is stress.",
+            "There is stress."
+          ],
+          "casual": [
+            "It's stress.",
+            "stress, you know."
+          ],
+          "short": [
+            "stress"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel stress.",
+              "romanization": "",
+              "translation": "스트레스 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[스트레스]",
+      "ipa": "[seuteureseu]"
+    }
+  },
+  {
+    "id": "d-emo-uul",
+    "korean": "우울",
+    "romanization": "uul",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "우울",
+        "explanation": "우울의 뜻은 'depression'입니다.",
+        "examples": {
+          "beginner": "\"우울\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"우울\"를 자주 써요.",
+          "advanced": "\"우울\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"우울\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "우울입니다.",
+            "우울이/가 있습니다."
+          ],
+          "casual": [
+            "우울이야.",
+            "우울 있어."
+          ],
+          "short": [
+            "우울"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "우울 느낌이에요.",
+              "romanization": "uul neukkimieyo.",
+              "translation": "I feel depression."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "depression",
+        "explanation": "'우울' means 'depression' in English.",
+        "examples": {
+          "beginner": "We say \"우울\" in Korean.",
+          "intermediate": "In Korea, people often say \"우울\".",
+          "advanced": "\"우울\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"우울\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is depression.",
+            "There is depression."
+          ],
+          "casual": [
+            "It's depression.",
+            "depression, you know."
+          ],
+          "short": [
+            "depression"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel depression.",
+              "romanization": "",
+              "translation": "우울 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[우울]",
+      "ipa": "[uul]"
+    }
+  },
+  {
+    "id": "d-emo-oero움",
+    "korean": "외로움",
+    "romanization": "oeroum",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "외로움",
+        "explanation": "외로움의 뜻은 'loneliness'입니다.",
+        "examples": {
+          "beginner": "\"외로움\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"외로움\"를 자주 써요.",
+          "advanced": "\"외로움\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"외로움\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "외로움입니다.",
+            "외로움이/가 있습니다."
+          ],
+          "casual": [
+            "외로움이야.",
+            "외로움 있어."
+          ],
+          "short": [
+            "외로"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "외로움 느낌이에요.",
+              "romanization": "oeroum neukkimieyo.",
+              "translation": "I feel loneliness."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "loneliness",
+        "explanation": "'외로움' means 'loneliness' in English.",
+        "examples": {
+          "beginner": "We say \"외로움\" in Korean.",
+          "intermediate": "In Korea, people often say \"외로움\".",
+          "advanced": "\"외로움\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"외로움\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is loneliness.",
+            "There is loneliness."
+          ],
+          "casual": [
+            "It's loneliness.",
+            "loneliness, you know."
+          ],
+          "short": [
+            "loneliness"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel loneliness.",
+              "romanization": "",
+              "translation": "외로움 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[외로움]",
+      "ipa": "[oeroum]"
+    }
+  },
+  {
+    "id": "d-emo-jiltu",
+    "korean": "질투",
+    "romanization": "jiltu",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "질투",
+        "explanation": "질투의 뜻은 'jealousy'입니다.",
+        "examples": {
+          "beginner": "\"질투\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"질투\"를 자주 써요.",
+          "advanced": "\"질투\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"질투\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "질투입니다.",
+            "질투이/가 있습니다."
+          ],
+          "casual": [
+            "질투이야.",
+            "질투 있어."
+          ],
+          "short": [
+            "질투"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "질투 느낌이에요.",
+              "romanization": "jiltu neukkimieyo.",
+              "translation": "I feel jealousy."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "jealousy",
+        "explanation": "'질투' means 'jealousy' in English.",
+        "examples": {
+          "beginner": "We say \"질투\" in Korean.",
+          "intermediate": "In Korea, people often say \"질투\".",
+          "advanced": "\"질투\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"질투\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is jealousy.",
+            "There is jealousy."
+          ],
+          "casual": [
+            "It's jealousy.",
+            "jealousy, you know."
+          ],
+          "short": [
+            "jealousy"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel jealousy.",
+              "romanization": "",
+              "translation": "질투 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[질투]",
+      "ipa": "[jiltu]"
+    }
+  },
+  {
+    "id": "d-emo-bukkeureo움",
+    "korean": "부끄러움",
+    "romanization": "bukkeureoum",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "부끄러움",
+        "explanation": "부끄러움의 뜻은 'embarrassment'입니다.",
+        "examples": {
+          "beginner": "\"부끄러움\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"부끄러움\"를 자주 써요.",
+          "advanced": "\"부끄러움\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"부끄러움\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "부끄러움입니다.",
+            "부끄러움이/가 있습니다."
+          ],
+          "casual": [
+            "부끄러움이야.",
+            "부끄러움 있어."
+          ],
+          "short": [
+            "부끄"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "부끄러움 느낌이에요.",
+              "romanization": "bukkeureoum neukkimieyo.",
+              "translation": "I feel embarrassment."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "embarrassment",
+        "explanation": "'부끄러움' means 'embarrassment' in English.",
+        "examples": {
+          "beginner": "We say \"부끄러움\" in Korean.",
+          "intermediate": "In Korea, people often say \"부끄러움\".",
+          "advanced": "\"부끄러움\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"부끄러움\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is embarrassment.",
+            "There is embarrassment."
+          ],
+          "casual": [
+            "It's embarrassment.",
+            "embarrassment, you know."
+          ],
+          "short": [
+            "embarrassment"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel embarrassment.",
+              "romanization": "",
+              "translation": "부끄러움 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[부끄러움]",
+      "ipa": "[bukkeureoum]"
+    }
+  },
+  {
+    "id": "d-emo-hu회",
+    "korean": "후회",
+    "romanization": "huhoe",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "후회",
+        "explanation": "후회의 뜻은 'regret'입니다.",
+        "examples": {
+          "beginner": "\"후회\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"후회\"를 자주 써요.",
+          "advanced": "\"후회\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"후회\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "후회입니다.",
+            "후회이/가 있습니다."
+          ],
+          "casual": [
+            "후회이야.",
+            "후회 있어."
+          ],
+          "short": [
+            "후회"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "후회 느낌이에요.",
+              "romanization": "huhoe neukkimieyo.",
+              "translation": "I feel regret."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "regret",
+        "explanation": "'후회' means 'regret' in English.",
+        "examples": {
+          "beginner": "We say \"후회\" in Korean.",
+          "intermediate": "In Korea, people often say \"후회\".",
+          "advanced": "\"후회\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"후회\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is regret.",
+            "There is regret."
+          ],
+          "casual": [
+            "It's regret.",
+            "regret, you know."
+          ],
+          "short": [
+            "regret"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel regret.",
+              "romanization": "",
+              "translation": "후회 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[후회]",
+      "ipa": "[huhoe]"
+    }
+  },
+  {
+    "id": "d-emo-joe책gam",
+    "korean": "죄책감",
+    "romanization": "joechaekgam",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "죄책감",
+        "explanation": "죄책감의 뜻은 'guilt'입니다.",
+        "examples": {
+          "beginner": "\"죄책감\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"죄책감\"를 자주 써요.",
+          "advanced": "\"죄책감\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"죄책감\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "죄책감입니다.",
+            "죄책감이/가 있습니다."
+          ],
+          "casual": [
+            "죄책감이야.",
+            "죄책감 있어."
+          ],
+          "short": [
+            "죄책"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "죄책감 느낌이에요.",
+              "romanization": "joechaekgam neukkimieyo.",
+              "translation": "I feel guilt."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "guilt",
+        "explanation": "'죄책감' means 'guilt' in English.",
+        "examples": {
+          "beginner": "We say \"죄책감\" in Korean.",
+          "intermediate": "In Korea, people often say \"죄책감\".",
+          "advanced": "\"죄책감\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"죄책감\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is guilt.",
+            "There is guilt."
+          ],
+          "casual": [
+            "It's guilt.",
+            "guilt, you know."
+          ],
+          "short": [
+            "guilt"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel guilt.",
+              "romanization": "",
+              "translation": "죄책감 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[죄책감]",
+      "ipa": "[joechaekgam]"
+    }
+  },
+  {
+    "id": "d-emo-jjajeung",
+    "korean": "짜증",
+    "romanization": "jjajeung",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "짜증",
+        "explanation": "짜증의 뜻은 'annoyance'입니다.",
+        "examples": {
+          "beginner": "\"짜증\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"짜증\"를 자주 써요.",
+          "advanced": "\"짜증\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"짜증\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "짜증입니다.",
+            "짜증이/가 있습니다."
+          ],
+          "casual": [
+            "짜증이야.",
+            "짜증 있어."
+          ],
+          "short": [
+            "짜증"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "짜증 느낌이에요.",
+              "romanization": "jjajeung neukkimieyo.",
+              "translation": "I feel annoyance."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "annoyance",
+        "explanation": "'짜증' means 'annoyance' in English.",
+        "examples": {
+          "beginner": "We say \"짜증\" in Korean.",
+          "intermediate": "In Korea, people often say \"짜증\".",
+          "advanced": "\"짜증\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"짜증\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is annoyance.",
+            "There is annoyance."
+          ],
+          "casual": [
+            "It's annoyance.",
+            "annoyance, you know."
+          ],
+          "short": [
+            "annoyance"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel annoyance.",
+              "romanization": "",
+              "translation": "짜증 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[짜증]",
+      "ipa": "[jjajeung]"
+    }
+  },
+  {
+    "id": "d-emo-답답함",
+    "korean": "답답함",
+    "romanization": "dapdapham",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "답답함",
+        "explanation": "답답함의 뜻은 'frustration'입니다.",
+        "examples": {
+          "beginner": "\"답답함\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"답답함\"를 자주 써요.",
+          "advanced": "\"답답함\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"답답함\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "답답함입니다.",
+            "답답함이/가 있습니다."
+          ],
+          "casual": [
+            "답답함이야.",
+            "답답함 있어."
+          ],
+          "short": [
+            "답답"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "답답함 느낌이에요.",
+              "romanization": "dapdapham neukkimieyo.",
+              "translation": "I feel frustration."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "frustration",
+        "explanation": "'답답함' means 'frustration' in English.",
+        "examples": {
+          "beginner": "We say \"답답함\" in Korean.",
+          "intermediate": "In Korea, people often say \"답답함\".",
+          "advanced": "\"답답함\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"답답함\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is frustration.",
+            "There is frustration."
+          ],
+          "casual": [
+            "It's frustration.",
+            "frustration, you know."
+          ],
+          "short": [
+            "frustration"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel frustration.",
+              "romanization": "",
+              "translation": "답답함 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[답답함]",
+      "ipa": "[dapdapham]"
+    }
+  },
+  {
+    "id": "d-emo-jasingam",
+    "korean": "자신감",
+    "romanization": "jasingam",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "자신감",
+        "explanation": "자신감의 뜻은 'confidence'입니다.",
+        "examples": {
+          "beginner": "\"자신감\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"자신감\"를 자주 써요.",
+          "advanced": "\"자신감\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"자신감\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "자신감입니다.",
+            "자신감이/가 있습니다."
+          ],
+          "casual": [
+            "자신감이야.",
+            "자신감 있어."
+          ],
+          "short": [
+            "자신"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "자신감 느낌이에요.",
+              "romanization": "jasingam neukkimieyo.",
+              "translation": "I feel confidence."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "confidence",
+        "explanation": "'자신감' means 'confidence' in English.",
+        "examples": {
+          "beginner": "We say \"자신감\" in Korean.",
+          "intermediate": "In Korea, people often say \"자신감\".",
+          "advanced": "\"자신감\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"자신감\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is confidence.",
+            "There is confidence."
+          ],
+          "casual": [
+            "It's confidence.",
+            "confidence, you know."
+          ],
+          "short": [
+            "confidence"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel confidence.",
+              "romanization": "",
+              "translation": "자신감 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[자신감]",
+      "ipa": "[jasingam]"
+    }
+  },
+  {
+    "id": "d-emo-jajongam",
+    "korean": "자존감",
+    "romanization": "jajongam",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "자존감",
+        "explanation": "자존감의 뜻은 'self-esteem'입니다.",
+        "examples": {
+          "beginner": "\"자존감\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"자존감\"를 자주 써요.",
+          "advanced": "\"자존감\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"자존감\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "자존감입니다.",
+            "자존감이/가 있습니다."
+          ],
+          "casual": [
+            "자존감이야.",
+            "자존감 있어."
+          ],
+          "short": [
+            "자존"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "자존감 느낌이에요.",
+              "romanization": "jajongam neukkimieyo.",
+              "translation": "I feel self-esteem."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "self-esteem",
+        "explanation": "'자존감' means 'self-esteem' in English.",
+        "examples": {
+          "beginner": "We say \"자존감\" in Korean.",
+          "intermediate": "In Korea, people often say \"자존감\".",
+          "advanced": "\"자존감\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"자존감\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is self-esteem.",
+            "There is self-esteem."
+          ],
+          "casual": [
+            "It's self-esteem.",
+            "self-esteem, you know."
+          ],
+          "short": [
+            "self-esteem"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel self-esteem.",
+              "romanization": "",
+              "translation": "자존감 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[자존감]",
+      "ipa": "[jajongam]"
+    }
+  },
+  {
+    "id": "d-emo-manjok",
+    "korean": "만족",
+    "romanization": "manjok",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "만족",
+        "explanation": "만족의 뜻은 'satisfaction'입니다.",
+        "examples": {
+          "beginner": "\"만족\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"만족\"를 자주 써요.",
+          "advanced": "\"만족\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"만족\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "만족입니다.",
+            "만족이/가 있습니다."
+          ],
+          "casual": [
+            "만족이야.",
+            "만족 있어."
+          ],
+          "short": [
+            "만족"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "만족 느낌이에요.",
+              "romanization": "manjok neukkimieyo.",
+              "translation": "I feel satisfaction."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "satisfaction",
+        "explanation": "'만족' means 'satisfaction' in English.",
+        "examples": {
+          "beginner": "We say \"만족\" in Korean.",
+          "intermediate": "In Korea, people often say \"만족\".",
+          "advanced": "\"만족\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"만족\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is satisfaction.",
+            "There is satisfaction."
+          ],
+          "casual": [
+            "It's satisfaction.",
+            "satisfaction, you know."
+          ],
+          "short": [
+            "satisfaction"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel satisfaction.",
+              "romanization": "",
+              "translation": "만족 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[만족]",
+      "ipa": "[manjok]"
+    }
+  },
+  {
+    "id": "d-emo-gamsa",
+    "korean": "감사",
+    "romanization": "gamsa",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "감사",
+        "explanation": "감사의 뜻은 'gratitude'입니다.",
+        "examples": {
+          "beginner": "\"감사\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"감사\"를 자주 써요.",
+          "advanced": "\"감사\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"감사\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "감사입니다.",
+            "감사이/가 있습니다."
+          ],
+          "casual": [
+            "감사이야.",
+            "감사 있어."
+          ],
+          "short": [
+            "감사"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "감사 느낌이에요.",
+              "romanization": "gamsa neukkimieyo.",
+              "translation": "I feel gratitude."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "gratitude",
+        "explanation": "'감사' means 'gratitude' in English.",
+        "examples": {
+          "beginner": "We say \"감사\" in Korean.",
+          "intermediate": "In Korea, people often say \"감사\".",
+          "advanced": "\"감사\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"감사\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is gratitude.",
+            "There is gratitude."
+          ],
+          "casual": [
+            "It's gratitude.",
+            "gratitude, you know."
+          ],
+          "short": [
+            "gratitude"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel gratitude.",
+              "romanization": "",
+              "translation": "감사 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[감사]",
+      "ipa": "[gamsa]"
+    }
+  },
+  {
+    "id": "d-emo-seol렘",
+    "korean": "설렘",
+    "romanization": "seollem",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "설렘",
+        "explanation": "설렘의 뜻은 'excitement'입니다.",
+        "examples": {
+          "beginner": "\"설렘\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"설렘\"를 자주 써요.",
+          "advanced": "\"설렘\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"설렘\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "설렘입니다.",
+            "설렘이/가 있습니다."
+          ],
+          "casual": [
+            "설렘이야.",
+            "설렘 있어."
+          ],
+          "short": [
+            "설렘"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "설렘 느낌이에요.",
+              "romanization": "seollem neukkimieyo.",
+              "translation": "I feel excitement."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "excitement",
+        "explanation": "'설렘' means 'excitement' in English.",
+        "examples": {
+          "beginner": "We say \"설렘\" in Korean.",
+          "intermediate": "In Korea, people often say \"설렘\".",
+          "advanced": "\"설렘\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"설렘\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is excitement.",
+            "There is excitement."
+          ],
+          "casual": [
+            "It's excitement.",
+            "excitement, you know."
+          ],
+          "short": [
+            "excitement"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel excitement.",
+              "romanization": "",
+              "translation": "설렘 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[설렘]",
+      "ipa": "[seollem]"
+    }
+  },
+  {
+    "id": "d-emo-pyeongon",
+    "korean": "평온",
+    "romanization": "pyeongon",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "평온",
+        "explanation": "평온의 뜻은 'peace'입니다.",
+        "examples": {
+          "beginner": "\"평온\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"평온\"를 자주 써요.",
+          "advanced": "\"평온\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"평온\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "평온입니다.",
+            "평온이/가 있습니다."
+          ],
+          "casual": [
+            "평온이야.",
+            "평온 있어."
+          ],
+          "short": [
+            "평온"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "평온 느낌이에요.",
+              "romanization": "pyeongon neukkimieyo.",
+              "translation": "I feel peace."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "peace",
+        "explanation": "'평온' means 'peace' in English.",
+        "examples": {
+          "beginner": "We say \"평온\" in Korean.",
+          "intermediate": "In Korea, people often say \"평온\".",
+          "advanced": "\"평온\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"평온\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is peace.",
+            "There is peace."
+          ],
+          "casual": [
+            "It's peace.",
+            "peace, you know."
+          ],
+          "short": [
+            "peace"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel peace.",
+              "romanization": "",
+              "translation": "평온 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[평온]",
+      "ipa": "[pyeongon]"
+    }
+  },
+  {
+    "id": "d-emo-편an",
+    "korean": "편안",
+    "romanization": "pyeonan",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "편안",
+        "explanation": "편안의 뜻은 'comfort'입니다.",
+        "examples": {
+          "beginner": "\"편안\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"편안\"를 자주 써요.",
+          "advanced": "\"편안\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"편안\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "편안입니다.",
+            "편안이/가 있습니다."
+          ],
+          "casual": [
+            "편안이야.",
+            "편안 있어."
+          ],
+          "short": [
+            "편안"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "편안 느낌이에요.",
+              "romanization": "pyeonan neukkimieyo.",
+              "translation": "I feel comfort."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "comfort",
+        "explanation": "'편안' means 'comfort' in English.",
+        "examples": {
+          "beginner": "We say \"편안\" in Korean.",
+          "intermediate": "In Korea, people often say \"편안\".",
+          "advanced": "\"편안\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"편안\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is comfort.",
+            "There is comfort."
+          ],
+          "casual": [
+            "It's comfort.",
+            "comfort, you know."
+          ],
+          "short": [
+            "comfort"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel comfort.",
+              "romanization": "",
+              "translation": "편안 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[편안]",
+      "ipa": "[pyeonan]"
+    }
+  },
+  {
+    "id": "d-emo-heungbun",
+    "korean": "흥분",
+    "romanization": "heungbun",
+    "partOfSpeech": "noun",
+    "categoryId": "emotions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "흥분",
+        "explanation": "흥분의 뜻은 'excitement'입니다.",
+        "examples": {
+          "beginner": "\"흥분\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"흥분\"를 자주 써요.",
+          "advanced": "\"흥분\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"흥분\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "흥분입니다.",
+            "흥분이/가 있습니다."
+          ],
+          "casual": [
+            "흥분이야.",
+            "흥분 있어."
+          ],
+          "short": [
+            "흥분"
+          ]
+        },
+        "dialogue": {
+          "context": "감정을 표현하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "지금 기분이 어때요?",
+              "romanization": "jigeum gibuni eottaeyo?",
+              "translation": "How do you feel now?"
+            },
+            {
+              "speaker": "B",
+              "text": "흥분 느낌이에요.",
+              "romanization": "heungbun neukkimieyo.",
+              "translation": "I feel excitement."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "excitement",
+        "explanation": "'흥분' means 'excitement' in English.",
+        "examples": {
+          "beginner": "We say \"흥분\" in Korean.",
+          "intermediate": "In Korea, people often say \"흥분\".",
+          "advanced": "\"흥분\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"흥분\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is excitement.",
+            "There is excitement."
+          ],
+          "casual": [
+            "It's excitement.",
+            "excitement, you know."
+          ],
+          "short": [
+            "excitement"
+          ]
+        },
+        "dialogue": {
+          "context": "Expressing emotions",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you feel now?",
+              "romanization": "",
+              "translation": "지금 기분이 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I feel excitement.",
+              "romanization": "",
+              "translation": "흥분 느낌이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[흥분]",
+      "ipa": "[heungbun]"
+    }
   }
 ]

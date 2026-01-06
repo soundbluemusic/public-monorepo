@@ -44,7 +44,7 @@ export default defineConfig({
         cleanupOutdatedCaches: true,
         skipWaiting: true,
         clientsClaim: true,
-        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB (dialogue 데이터 포함)
+        maximumFileSizeToCacheInBytes: 35 * 1024 * 1024, // 35MB (16,836 entries with enrichment)
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,

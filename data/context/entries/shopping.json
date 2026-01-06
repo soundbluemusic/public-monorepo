@@ -4898,5 +4898,3173 @@
       "korean": "[표시가격]",
       "ipa": "[pʰjoɕiɡaɡjʌk]"
     }
+  },
+  {
+    "id": "d-sho-syo핑",
+    "korean": "쇼핑",
+    "romanization": "syoping",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "쇼핑",
+        "explanation": "쇼핑의 뜻은 'shopping'입니다.",
+        "examples": {
+          "beginner": "\"쇼핑\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"쇼핑\"를 자주 써요.",
+          "advanced": "\"쇼핑\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"쇼핑\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "쇼핑입니다.",
+            "쇼핑이/가 있습니다."
+          ],
+          "casual": [
+            "쇼핑이야.",
+            "쇼핑 있어."
+          ],
+          "short": [
+            "쇼핑"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "쇼핑 얼마예요?",
+              "romanization": "syoping eolmayeyo?",
+              "translation": "How much is shopping?"
+            },
+            {
+              "speaker": "B",
+              "text": "쇼핑은/는 만 원이에요.",
+              "romanization": "syopingeun/neun man wonieyo.",
+              "translation": "shopping is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "shopping",
+        "explanation": "'쇼핑' means 'shopping' in English.",
+        "examples": {
+          "beginner": "We say \"쇼핑\" in Korean.",
+          "intermediate": "In Korea, people often say \"쇼핑\".",
+          "advanced": "\"쇼핑\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"쇼핑\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is shopping.",
+            "There is shopping."
+          ],
+          "casual": [
+            "It's shopping.",
+            "shopping, you know."
+          ],
+          "short": [
+            "shopping"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is shopping?",
+              "romanization": "",
+              "translation": "쇼핑 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "shopping is 10,000 won.",
+              "romanization": "",
+              "translation": "쇼핑은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[쇼핑]",
+      "ipa": "[syoping]"
+    }
+  },
+  {
+    "id": "d-sho-onrainsyo핑",
+    "korean": "온라인쇼핑",
+    "romanization": "onlainsyoping",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "온라인쇼핑",
+        "explanation": "온라인쇼핑의 뜻은 'online shopping'입니다.",
+        "examples": {
+          "beginner": "\"온라인쇼핑\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"온라인쇼핑\"를 자주 써요.",
+          "advanced": "\"온라인쇼핑\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"온라인쇼핑\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "온라인쇼핑입니다.",
+            "온라인쇼핑이/가 있습니다."
+          ],
+          "casual": [
+            "온라인쇼핑이야.",
+            "온라인쇼핑 있어."
+          ],
+          "short": [
+            "온라"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "온라인쇼핑 얼마예요?",
+              "romanization": "onlainsyoping eolmayeyo?",
+              "translation": "How much is online shopping?"
+            },
+            {
+              "speaker": "B",
+              "text": "온라인쇼핑은/는 만 원이에요.",
+              "romanization": "onlainsyopingeun/neun man wonieyo.",
+              "translation": "online shopping is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "online shopping",
+        "explanation": "'온라인쇼핑' means 'online shopping' in English.",
+        "examples": {
+          "beginner": "We say \"온라인쇼핑\" in Korean.",
+          "intermediate": "In Korea, people often say \"온라인쇼핑\".",
+          "advanced": "\"온라인쇼핑\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"온라인쇼핑\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is online shopping.",
+            "There is online shopping."
+          ],
+          "casual": [
+            "It's online shopping.",
+            "online shopping, you know."
+          ],
+          "short": [
+            "online"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is online shopping?",
+              "romanization": "",
+              "translation": "온라인쇼핑 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "online shopping is 10,000 won.",
+              "romanization": "",
+              "translation": "온라인쇼핑은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[온라인쇼핑]",
+      "ipa": "[onlainsyoping]"
+    }
+  },
+  {
+    "id": "d-sho-opeurain",
+    "korean": "오프라인",
+    "romanization": "opeurain",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "오프라인",
+        "explanation": "오프라인의 뜻은 'offline'입니다.",
+        "examples": {
+          "beginner": "\"오프라인\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"오프라인\"를 자주 써요.",
+          "advanced": "\"오프라인\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"오프라인\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "오프라인입니다.",
+            "오프라인이/가 있습니다."
+          ],
+          "casual": [
+            "오프라인이야.",
+            "오프라인 있어."
+          ],
+          "short": [
+            "오프"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "오프라인 얼마예요?",
+              "romanization": "opeurain eolmayeyo?",
+              "translation": "How much is offline?"
+            },
+            {
+              "speaker": "B",
+              "text": "오프라인은/는 만 원이에요.",
+              "romanization": "opeuraineun/neun man wonieyo.",
+              "translation": "offline is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "offline",
+        "explanation": "'오프라인' means 'offline' in English.",
+        "examples": {
+          "beginner": "We say \"오프라인\" in Korean.",
+          "intermediate": "In Korea, people often say \"오프라인\".",
+          "advanced": "\"오프라인\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"오프라인\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is offline.",
+            "There is offline."
+          ],
+          "casual": [
+            "It's offline.",
+            "offline, you know."
+          ],
+          "short": [
+            "offline"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is offline?",
+              "romanization": "",
+              "translation": "오프라인 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "offline is 10,000 won.",
+              "romanization": "",
+              "translation": "오프라인은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[오프라인]",
+      "ipa": "[opeurain]"
+    }
+  },
+  {
+    "id": "d-sho-결je",
+    "korean": "결제",
+    "romanization": "gyeolje",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "결제",
+        "explanation": "결제의 뜻은 'payment'입니다.",
+        "examples": {
+          "beginner": "\"결제\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"결제\"를 자주 써요.",
+          "advanced": "\"결제\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"결제\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "결제입니다.",
+            "결제이/가 있습니다."
+          ],
+          "casual": [
+            "결제이야.",
+            "결제 있어."
+          ],
+          "short": [
+            "결제"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "결제 얼마예요?",
+              "romanization": "gyeolje eolmayeyo?",
+              "translation": "How much is payment?"
+            },
+            {
+              "speaker": "B",
+              "text": "결제은/는 만 원이에요.",
+              "romanization": "gyeoljeeun/neun man wonieyo.",
+              "translation": "payment is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "payment",
+        "explanation": "'결제' means 'payment' in English.",
+        "examples": {
+          "beginner": "We say \"결제\" in Korean.",
+          "intermediate": "In Korea, people often say \"결제\".",
+          "advanced": "\"결제\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"결제\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is payment.",
+            "There is payment."
+          ],
+          "casual": [
+            "It's payment.",
+            "payment, you know."
+          ],
+          "short": [
+            "payment"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is payment?",
+              "romanization": "",
+              "translation": "결제 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "payment is 10,000 won.",
+              "romanization": "",
+              "translation": "결제은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[결제]",
+      "ipa": "[gyeolje]"
+    }
+  },
+  {
+    "id": "d-sho-현금",
+    "korean": "현금",
+    "romanization": "hyeongeum",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "현금",
+        "explanation": "현금의 뜻은 'cash'입니다.",
+        "examples": {
+          "beginner": "\"현금\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"현금\"를 자주 써요.",
+          "advanced": "\"현금\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"현금\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "현금입니다.",
+            "현금이/가 있습니다."
+          ],
+          "casual": [
+            "현금이야.",
+            "현금 있어."
+          ],
+          "short": [
+            "현금"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "현금 얼마예요?",
+              "romanization": "hyeongeum eolmayeyo?",
+              "translation": "How much is cash?"
+            },
+            {
+              "speaker": "B",
+              "text": "현금은/는 만 원이에요.",
+              "romanization": "hyeongeumeun/neun man wonieyo.",
+              "translation": "cash is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "cash",
+        "explanation": "'현금' means 'cash' in English.",
+        "examples": {
+          "beginner": "We say \"현금\" in Korean.",
+          "intermediate": "In Korea, people often say \"현금\".",
+          "advanced": "\"현금\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"현금\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is cash.",
+            "There is cash."
+          ],
+          "casual": [
+            "It's cash.",
+            "cash, you know."
+          ],
+          "short": [
+            "cash"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is cash?",
+              "romanization": "",
+              "translation": "현금 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "cash is 10,000 won.",
+              "romanization": "",
+              "translation": "현금은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[현금]",
+      "ipa": "[hyeongeum]"
+    }
+  },
+  {
+    "id": "d-sho-kadeu",
+    "korean": "카드",
+    "romanization": "kadeu",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "카드",
+        "explanation": "카드의 뜻은 'card'입니다.",
+        "examples": {
+          "beginner": "\"카드\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"카드\"를 자주 써요.",
+          "advanced": "\"카드\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"카드\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "카드입니다.",
+            "카드이/가 있습니다."
+          ],
+          "casual": [
+            "카드이야.",
+            "카드 있어."
+          ],
+          "short": [
+            "카드"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "카드 얼마예요?",
+              "romanization": "kadeu eolmayeyo?",
+              "translation": "How much is card?"
+            },
+            {
+              "speaker": "B",
+              "text": "카드은/는 만 원이에요.",
+              "romanization": "kadeueun/neun man wonieyo.",
+              "translation": "card is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "card",
+        "explanation": "'카드' means 'card' in English.",
+        "examples": {
+          "beginner": "We say \"카드\" in Korean.",
+          "intermediate": "In Korea, people often say \"카드\".",
+          "advanced": "\"카드\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"카드\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is card.",
+            "There is card."
+          ],
+          "casual": [
+            "It's card.",
+            "card, you know."
+          ],
+          "short": [
+            "card"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is card?",
+              "romanization": "",
+              "translation": "카드 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "card is 10,000 won.",
+              "romanization": "",
+              "translation": "카드은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[카드]",
+      "ipa": "[kadeu]"
+    }
+  },
+  {
+    "id": "d-sho-sinyongkadeu",
+    "korean": "신용카드",
+    "romanization": "sinyongkadeu",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "신용카드",
+        "explanation": "신용카드의 뜻은 'credit card'입니다.",
+        "examples": {
+          "beginner": "\"신용카드\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"신용카드\"를 자주 써요.",
+          "advanced": "\"신용카드\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"신용카드\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "신용카드입니다.",
+            "신용카드이/가 있습니다."
+          ],
+          "casual": [
+            "신용카드이야.",
+            "신용카드 있어."
+          ],
+          "short": [
+            "신용"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "신용카드 얼마예요?",
+              "romanization": "sinyongkadeu eolmayeyo?",
+              "translation": "How much is credit card?"
+            },
+            {
+              "speaker": "B",
+              "text": "신용카드은/는 만 원이에요.",
+              "romanization": "sinyongkadeueun/neun man wonieyo.",
+              "translation": "credit card is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "credit card",
+        "explanation": "'신용카드' means 'credit card' in English.",
+        "examples": {
+          "beginner": "We say \"신용카드\" in Korean.",
+          "intermediate": "In Korea, people often say \"신용카드\".",
+          "advanced": "\"신용카드\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"신용카드\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is credit card.",
+            "There is credit card."
+          ],
+          "casual": [
+            "It's credit card.",
+            "credit card, you know."
+          ],
+          "short": [
+            "credit"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is credit card?",
+              "romanization": "",
+              "translation": "신용카드 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "credit card is 10,000 won.",
+              "romanization": "",
+              "translation": "신용카드은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[신용카드]",
+      "ipa": "[sinyongkadeu]"
+    }
+  },
+  {
+    "id": "d-sho-chekeukadeu",
+    "korean": "체크카드",
+    "romanization": "chekeukadeu",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "체크카드",
+        "explanation": "체크카드의 뜻은 'debit card'입니다.",
+        "examples": {
+          "beginner": "\"체크카드\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"체크카드\"를 자주 써요.",
+          "advanced": "\"체크카드\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"체크카드\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "체크카드입니다.",
+            "체크카드이/가 있습니다."
+          ],
+          "casual": [
+            "체크카드이야.",
+            "체크카드 있어."
+          ],
+          "short": [
+            "체크"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "체크카드 얼마예요?",
+              "romanization": "chekeukadeu eolmayeyo?",
+              "translation": "How much is debit card?"
+            },
+            {
+              "speaker": "B",
+              "text": "체크카드은/는 만 원이에요.",
+              "romanization": "chekeukadeueun/neun man wonieyo.",
+              "translation": "debit card is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "debit card",
+        "explanation": "'체크카드' means 'debit card' in English.",
+        "examples": {
+          "beginner": "We say \"체크카드\" in Korean.",
+          "intermediate": "In Korea, people often say \"체크카드\".",
+          "advanced": "\"체크카드\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"체크카드\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is debit card.",
+            "There is debit card."
+          ],
+          "casual": [
+            "It's debit card.",
+            "debit card, you know."
+          ],
+          "short": [
+            "debit"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is debit card?",
+              "romanization": "",
+              "translation": "체크카드 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "debit card is 10,000 won.",
+              "romanization": "",
+              "translation": "체크카드은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[체크카드]",
+      "ipa": "[chekeukadeu]"
+    }
+  },
+  {
+    "id": "d-sho-gyejwaiche",
+    "korean": "계좌이체",
+    "romanization": "gyejwaiche",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "계좌이체",
+        "explanation": "계좌이체의 뜻은 'bank transfer'입니다.",
+        "examples": {
+          "beginner": "\"계좌이체\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"계좌이체\"를 자주 써요.",
+          "advanced": "\"계좌이체\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"계좌이체\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "계좌이체입니다.",
+            "계좌이체이/가 있습니다."
+          ],
+          "casual": [
+            "계좌이체이야.",
+            "계좌이체 있어."
+          ],
+          "short": [
+            "계좌"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "계좌이체 얼마예요?",
+              "romanization": "gyejwaiche eolmayeyo?",
+              "translation": "How much is bank transfer?"
+            },
+            {
+              "speaker": "B",
+              "text": "계좌이체은/는 만 원이에요.",
+              "romanization": "gyejwaicheeun/neun man wonieyo.",
+              "translation": "bank transfer is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "bank transfer",
+        "explanation": "'계좌이체' means 'bank transfer' in English.",
+        "examples": {
+          "beginner": "We say \"계좌이체\" in Korean.",
+          "intermediate": "In Korea, people often say \"계좌이체\".",
+          "advanced": "\"계좌이체\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"계좌이체\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is bank transfer.",
+            "There is bank transfer."
+          ],
+          "casual": [
+            "It's bank transfer.",
+            "bank transfer, you know."
+          ],
+          "short": [
+            "bank"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is bank transfer?",
+              "romanization": "",
+              "translation": "계좌이체 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "bank transfer is 10,000 won.",
+              "romanization": "",
+              "translation": "계좌이체은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[계좌이체]",
+      "ipa": "[gyejwaiche]"
+    }
+  },
+  {
+    "id": "d-sho-yeongsujeung",
+    "korean": "영수증",
+    "romanization": "yeongsujeung",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "영수증",
+        "explanation": "영수증의 뜻은 'receipt'입니다.",
+        "examples": {
+          "beginner": "\"영수증\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"영수증\"를 자주 써요.",
+          "advanced": "\"영수증\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"영수증\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "영수증입니다.",
+            "영수증이/가 있습니다."
+          ],
+          "casual": [
+            "영수증이야.",
+            "영수증 있어."
+          ],
+          "short": [
+            "영수"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "영수증 얼마예요?",
+              "romanization": "yeongsujeung eolmayeyo?",
+              "translation": "How much is receipt?"
+            },
+            {
+              "speaker": "B",
+              "text": "영수증은/는 만 원이에요.",
+              "romanization": "yeongsujeungeun/neun man wonieyo.",
+              "translation": "receipt is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "receipt",
+        "explanation": "'영수증' means 'receipt' in English.",
+        "examples": {
+          "beginner": "We say \"영수증\" in Korean.",
+          "intermediate": "In Korea, people often say \"영수증\".",
+          "advanced": "\"영수증\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"영수증\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is receipt.",
+            "There is receipt."
+          ],
+          "casual": [
+            "It's receipt.",
+            "receipt, you know."
+          ],
+          "short": [
+            "receipt"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is receipt?",
+              "romanization": "",
+              "translation": "영수증 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "receipt is 10,000 won.",
+              "romanization": "",
+              "translation": "영수증은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[영수증]",
+      "ipa": "[yeongsujeung]"
+    }
+  },
+  {
+    "id": "d-sho-halin",
+    "korean": "할인",
+    "romanization": "halin",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "할인",
+        "explanation": "할인의 뜻은 'discount'입니다.",
+        "examples": {
+          "beginner": "\"할인\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"할인\"를 자주 써요.",
+          "advanced": "\"할인\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"할인\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "할인입니다.",
+            "할인이/가 있습니다."
+          ],
+          "casual": [
+            "할인이야.",
+            "할인 있어."
+          ],
+          "short": [
+            "할인"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "할인 얼마예요?",
+              "romanization": "halin eolmayeyo?",
+              "translation": "How much is discount?"
+            },
+            {
+              "speaker": "B",
+              "text": "할인은/는 만 원이에요.",
+              "romanization": "halineun/neun man wonieyo.",
+              "translation": "discount is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "discount",
+        "explanation": "'할인' means 'discount' in English.",
+        "examples": {
+          "beginner": "We say \"할인\" in Korean.",
+          "intermediate": "In Korea, people often say \"할인\".",
+          "advanced": "\"할인\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"할인\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is discount.",
+            "There is discount."
+          ],
+          "casual": [
+            "It's discount.",
+            "discount, you know."
+          ],
+          "short": [
+            "discount"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is discount?",
+              "romanization": "",
+              "translation": "할인 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "discount is 10,000 won.",
+              "romanization": "",
+              "translation": "할인은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[할인]",
+      "ipa": "[halin]"
+    }
+  },
+  {
+    "id": "d-sho-seil",
+    "korean": "세일",
+    "romanization": "seil",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "세일",
+        "explanation": "세일의 뜻은 'sale'입니다.",
+        "examples": {
+          "beginner": "\"세일\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"세일\"를 자주 써요.",
+          "advanced": "\"세일\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"세일\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "세일입니다.",
+            "세일이/가 있습니다."
+          ],
+          "casual": [
+            "세일이야.",
+            "세일 있어."
+          ],
+          "short": [
+            "세일"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "세일 얼마예요?",
+              "romanization": "seil eolmayeyo?",
+              "translation": "How much is sale?"
+            },
+            {
+              "speaker": "B",
+              "text": "세일은/는 만 원이에요.",
+              "romanization": "seileun/neun man wonieyo.",
+              "translation": "sale is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "sale",
+        "explanation": "'세일' means 'sale' in English.",
+        "examples": {
+          "beginner": "We say \"세일\" in Korean.",
+          "intermediate": "In Korea, people often say \"세일\".",
+          "advanced": "\"세일\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"세일\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is sale.",
+            "There is sale."
+          ],
+          "casual": [
+            "It's sale.",
+            "sale, you know."
+          ],
+          "short": [
+            "sale"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is sale?",
+              "romanization": "",
+              "translation": "세일 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "sale is 10,000 won.",
+              "romanization": "",
+              "translation": "세일은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[세일]",
+      "ipa": "[seil]"
+    }
+  },
+  {
+    "id": "d-sho-ku폰",
+    "korean": "쿠폰",
+    "romanization": "kupon",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "쿠폰",
+        "explanation": "쿠폰의 뜻은 'coupon'입니다.",
+        "examples": {
+          "beginner": "\"쿠폰\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"쿠폰\"를 자주 써요.",
+          "advanced": "\"쿠폰\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"쿠폰\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "쿠폰입니다.",
+            "쿠폰이/가 있습니다."
+          ],
+          "casual": [
+            "쿠폰이야.",
+            "쿠폰 있어."
+          ],
+          "short": [
+            "쿠폰"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "쿠폰 얼마예요?",
+              "romanization": "kupon eolmayeyo?",
+              "translation": "How much is coupon?"
+            },
+            {
+              "speaker": "B",
+              "text": "쿠폰은/는 만 원이에요.",
+              "romanization": "kuponeun/neun man wonieyo.",
+              "translation": "coupon is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "coupon",
+        "explanation": "'쿠폰' means 'coupon' in English.",
+        "examples": {
+          "beginner": "We say \"쿠폰\" in Korean.",
+          "intermediate": "In Korea, people often say \"쿠폰\".",
+          "advanced": "\"쿠폰\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"쿠폰\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is coupon.",
+            "There is coupon."
+          ],
+          "casual": [
+            "It's coupon.",
+            "coupon, you know."
+          ],
+          "short": [
+            "coupon"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is coupon?",
+              "romanization": "",
+              "translation": "쿠폰 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "coupon is 10,000 won.",
+              "romanization": "",
+              "translation": "쿠폰은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[쿠폰]",
+      "ipa": "[kupon]"
+    }
+  },
+  {
+    "id": "d-sho-pointeu",
+    "korean": "포인트",
+    "romanization": "pointeu",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "포인트",
+        "explanation": "포인트의 뜻은 'points'입니다.",
+        "examples": {
+          "beginner": "\"포인트\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"포인트\"를 자주 써요.",
+          "advanced": "\"포인트\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"포인트\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "포인트입니다.",
+            "포인트이/가 있습니다."
+          ],
+          "casual": [
+            "포인트이야.",
+            "포인트 있어."
+          ],
+          "short": [
+            "포인"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "포인트 얼마예요?",
+              "romanization": "pointeu eolmayeyo?",
+              "translation": "How much is points?"
+            },
+            {
+              "speaker": "B",
+              "text": "포인트은/는 만 원이에요.",
+              "romanization": "pointeueun/neun man wonieyo.",
+              "translation": "points is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "points",
+        "explanation": "'포인트' means 'points' in English.",
+        "examples": {
+          "beginner": "We say \"포인트\" in Korean.",
+          "intermediate": "In Korea, people often say \"포인트\".",
+          "advanced": "\"포인트\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"포인트\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is points.",
+            "There is points."
+          ],
+          "casual": [
+            "It's points.",
+            "points, you know."
+          ],
+          "short": [
+            "points"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is points?",
+              "romanization": "",
+              "translation": "포인트 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "points is 10,000 won.",
+              "romanization": "",
+              "translation": "포인트은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[포인트]",
+      "ipa": "[pointeu]"
+    }
+  },
+  {
+    "id": "d-sho-jeok립",
+    "korean": "적립",
+    "romanization": "jeokrip",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "적립",
+        "explanation": "적립의 뜻은 'accumulation'입니다.",
+        "examples": {
+          "beginner": "\"적립\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"적립\"를 자주 써요.",
+          "advanced": "\"적립\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"적립\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "적립입니다.",
+            "적립이/가 있습니다."
+          ],
+          "casual": [
+            "적립이야.",
+            "적립 있어."
+          ],
+          "short": [
+            "적립"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "적립 얼마예요?",
+              "romanization": "jeokrip eolmayeyo?",
+              "translation": "How much is accumulation?"
+            },
+            {
+              "speaker": "B",
+              "text": "적립은/는 만 원이에요.",
+              "romanization": "jeokripeun/neun man wonieyo.",
+              "translation": "accumulation is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "accumulation",
+        "explanation": "'적립' means 'accumulation' in English.",
+        "examples": {
+          "beginner": "We say \"적립\" in Korean.",
+          "intermediate": "In Korea, people often say \"적립\".",
+          "advanced": "\"적립\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"적립\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is accumulation.",
+            "There is accumulation."
+          ],
+          "casual": [
+            "It's accumulation.",
+            "accumulation, you know."
+          ],
+          "short": [
+            "accumulation"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is accumulation?",
+              "romanization": "",
+              "translation": "적립 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "accumulation is 10,000 won.",
+              "romanization": "",
+              "translation": "적립은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[적립]",
+      "ipa": "[jeokrip]"
+    }
+  },
+  {
+    "id": "d-sho-환bul",
+    "korean": "환불",
+    "romanization": "hwanbul",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "환불",
+        "explanation": "환불의 뜻은 'refund'입니다.",
+        "examples": {
+          "beginner": "\"환불\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"환불\"를 자주 써요.",
+          "advanced": "\"환불\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"환불\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "환불입니다.",
+            "환불이/가 있습니다."
+          ],
+          "casual": [
+            "환불이야.",
+            "환불 있어."
+          ],
+          "short": [
+            "환불"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "환불 얼마예요?",
+              "romanization": "hwanbul eolmayeyo?",
+              "translation": "How much is refund?"
+            },
+            {
+              "speaker": "B",
+              "text": "환불은/는 만 원이에요.",
+              "romanization": "hwanbuleun/neun man wonieyo.",
+              "translation": "refund is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "refund",
+        "explanation": "'환불' means 'refund' in English.",
+        "examples": {
+          "beginner": "We say \"환불\" in Korean.",
+          "intermediate": "In Korea, people often say \"환불\".",
+          "advanced": "\"환불\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"환불\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is refund.",
+            "There is refund."
+          ],
+          "casual": [
+            "It's refund.",
+            "refund, you know."
+          ],
+          "short": [
+            "refund"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is refund?",
+              "romanization": "",
+              "translation": "환불 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "refund is 10,000 won.",
+              "romanization": "",
+              "translation": "환불은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[환불]",
+      "ipa": "[hwanbul]"
+    }
+  },
+  {
+    "id": "d-sho-gyo환",
+    "korean": "교환",
+    "romanization": "gyohwan",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "교환",
+        "explanation": "교환의 뜻은 'exchange'입니다.",
+        "examples": {
+          "beginner": "\"교환\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"교환\"를 자주 써요.",
+          "advanced": "\"교환\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"교환\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "교환입니다.",
+            "교환이/가 있습니다."
+          ],
+          "casual": [
+            "교환이야.",
+            "교환 있어."
+          ],
+          "short": [
+            "교환"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "교환 얼마예요?",
+              "romanization": "gyohwan eolmayeyo?",
+              "translation": "How much is exchange?"
+            },
+            {
+              "speaker": "B",
+              "text": "교환은/는 만 원이에요.",
+              "romanization": "gyohwaneun/neun man wonieyo.",
+              "translation": "exchange is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "exchange",
+        "explanation": "'교환' means 'exchange' in English.",
+        "examples": {
+          "beginner": "We say \"교환\" in Korean.",
+          "intermediate": "In Korea, people often say \"교환\".",
+          "advanced": "\"교환\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"교환\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is exchange.",
+            "There is exchange."
+          ],
+          "casual": [
+            "It's exchange.",
+            "exchange, you know."
+          ],
+          "short": [
+            "exchange"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is exchange?",
+              "romanization": "",
+              "translation": "교환 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "exchange is 10,000 won.",
+              "romanization": "",
+              "translation": "교환은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[교환]",
+      "ipa": "[gyohwan]"
+    }
+  },
+  {
+    "id": "d-sho-ban품",
+    "korean": "반품",
+    "romanization": "banpum",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "반품",
+        "explanation": "반품의 뜻은 'return'입니다.",
+        "examples": {
+          "beginner": "\"반품\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"반품\"를 자주 써요.",
+          "advanced": "\"반품\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"반품\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "반품입니다.",
+            "반품이/가 있습니다."
+          ],
+          "casual": [
+            "반품이야.",
+            "반품 있어."
+          ],
+          "short": [
+            "반품"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "반품 얼마예요?",
+              "romanization": "banpum eolmayeyo?",
+              "translation": "How much is return?"
+            },
+            {
+              "speaker": "B",
+              "text": "반품은/는 만 원이에요.",
+              "romanization": "banpumeun/neun man wonieyo.",
+              "translation": "return is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "return",
+        "explanation": "'반품' means 'return' in English.",
+        "examples": {
+          "beginner": "We say \"반품\" in Korean.",
+          "intermediate": "In Korea, people often say \"반품\".",
+          "advanced": "\"반품\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"반품\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is return.",
+            "There is return."
+          ],
+          "casual": [
+            "It's return.",
+            "return, you know."
+          ],
+          "short": [
+            "return"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is return?",
+              "romanization": "",
+              "translation": "반품 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "return is 10,000 won.",
+              "romanization": "",
+              "translation": "반품은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[반품]",
+      "ipa": "[banpum]"
+    }
+  },
+  {
+    "id": "d-sho-baesong",
+    "korean": "배송",
+    "romanization": "baesong",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "배송",
+        "explanation": "배송의 뜻은 'delivery'입니다.",
+        "examples": {
+          "beginner": "\"배송\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"배송\"를 자주 써요.",
+          "advanced": "\"배송\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"배송\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "배송입니다.",
+            "배송이/가 있습니다."
+          ],
+          "casual": [
+            "배송이야.",
+            "배송 있어."
+          ],
+          "short": [
+            "배송"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "배송 얼마예요?",
+              "romanization": "baesong eolmayeyo?",
+              "translation": "How much is delivery?"
+            },
+            {
+              "speaker": "B",
+              "text": "배송은/는 만 원이에요.",
+              "romanization": "baesongeun/neun man wonieyo.",
+              "translation": "delivery is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "delivery",
+        "explanation": "'배송' means 'delivery' in English.",
+        "examples": {
+          "beginner": "We say \"배송\" in Korean.",
+          "intermediate": "In Korea, people often say \"배송\".",
+          "advanced": "\"배송\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"배송\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is delivery.",
+            "There is delivery."
+          ],
+          "casual": [
+            "It's delivery.",
+            "delivery, you know."
+          ],
+          "short": [
+            "delivery"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is delivery?",
+              "romanization": "",
+              "translation": "배송 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "delivery is 10,000 won.",
+              "romanization": "",
+              "translation": "배송은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[배송]",
+      "ipa": "[baesong]"
+    }
+  },
+  {
+    "id": "d-sho-택bae",
+    "korean": "택배",
+    "romanization": "taekbae",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "택배",
+        "explanation": "택배의 뜻은 'courier'입니다.",
+        "examples": {
+          "beginner": "\"택배\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"택배\"를 자주 써요.",
+          "advanced": "\"택배\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"택배\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "택배입니다.",
+            "택배이/가 있습니다."
+          ],
+          "casual": [
+            "택배이야.",
+            "택배 있어."
+          ],
+          "short": [
+            "택배"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "택배 얼마예요?",
+              "romanization": "taekbae eolmayeyo?",
+              "translation": "How much is courier?"
+            },
+            {
+              "speaker": "B",
+              "text": "택배은/는 만 원이에요.",
+              "romanization": "taekbaeeun/neun man wonieyo.",
+              "translation": "courier is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "courier",
+        "explanation": "'택배' means 'courier' in English.",
+        "examples": {
+          "beginner": "We say \"택배\" in Korean.",
+          "intermediate": "In Korea, people often say \"택배\".",
+          "advanced": "\"택배\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"택배\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is courier.",
+            "There is courier."
+          ],
+          "casual": [
+            "It's courier.",
+            "courier, you know."
+          ],
+          "short": [
+            "courier"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is courier?",
+              "romanization": "",
+              "translation": "택배 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "courier is 10,000 won.",
+              "romanization": "",
+              "translation": "택배은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[택배]",
+      "ipa": "[taekbae]"
+    }
+  },
+  {
+    "id": "d-sho-muryobaesong",
+    "korean": "무료배송",
+    "romanization": "muryobaesong",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "무료배송",
+        "explanation": "무료배송의 뜻은 'free shipping'입니다.",
+        "examples": {
+          "beginner": "\"무료배송\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"무료배송\"를 자주 써요.",
+          "advanced": "\"무료배송\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"무료배송\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "무료배송입니다.",
+            "무료배송이/가 있습니다."
+          ],
+          "casual": [
+            "무료배송이야.",
+            "무료배송 있어."
+          ],
+          "short": [
+            "무료"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "무료배송 얼마예요?",
+              "romanization": "muryobaesong eolmayeyo?",
+              "translation": "How much is free shipping?"
+            },
+            {
+              "speaker": "B",
+              "text": "무료배송은/는 만 원이에요.",
+              "romanization": "muryobaesongeun/neun man wonieyo.",
+              "translation": "free shipping is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "free shipping",
+        "explanation": "'무료배송' means 'free shipping' in English.",
+        "examples": {
+          "beginner": "We say \"무료배송\" in Korean.",
+          "intermediate": "In Korea, people often say \"무료배송\".",
+          "advanced": "\"무료배송\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"무료배송\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is free shipping.",
+            "There is free shipping."
+          ],
+          "casual": [
+            "It's free shipping.",
+            "free shipping, you know."
+          ],
+          "short": [
+            "free"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is free shipping?",
+              "romanization": "",
+              "translation": "무료배송 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "free shipping is 10,000 won.",
+              "romanization": "",
+              "translation": "무료배송은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[무료배송]",
+      "ipa": "[muryobaesong]"
+    }
+  },
+  {
+    "id": "d-sho-dangilbaesong",
+    "korean": "당일배송",
+    "romanization": "dangilbaesong",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "당일배송",
+        "explanation": "당일배송의 뜻은 'same-day delivery'입니다.",
+        "examples": {
+          "beginner": "\"당일배송\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"당일배송\"를 자주 써요.",
+          "advanced": "\"당일배송\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"당일배송\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "당일배송입니다.",
+            "당일배송이/가 있습니다."
+          ],
+          "casual": [
+            "당일배송이야.",
+            "당일배송 있어."
+          ],
+          "short": [
+            "당일"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "당일배송 얼마예요?",
+              "romanization": "dangilbaesong eolmayeyo?",
+              "translation": "How much is same-day delivery?"
+            },
+            {
+              "speaker": "B",
+              "text": "당일배송은/는 만 원이에요.",
+              "romanization": "dangilbaesongeun/neun man wonieyo.",
+              "translation": "same-day delivery is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "same-day delivery",
+        "explanation": "'당일배송' means 'same-day delivery' in English.",
+        "examples": {
+          "beginner": "We say \"당일배송\" in Korean.",
+          "intermediate": "In Korea, people often say \"당일배송\".",
+          "advanced": "\"당일배송\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"당일배송\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is same-day delivery.",
+            "There is same-day delivery."
+          ],
+          "casual": [
+            "It's same-day delivery.",
+            "same-day delivery, you know."
+          ],
+          "short": [
+            "same-day"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is same-day delivery?",
+              "romanization": "",
+              "translation": "당일배송 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "same-day delivery is 10,000 won.",
+              "romanization": "",
+              "translation": "당일배송은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[당일배송]",
+      "ipa": "[dangilbaesong]"
+    }
+  },
+  {
+    "id": "d-sho-jumun",
+    "korean": "주문",
+    "romanization": "jumun",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "주문",
+        "explanation": "주문의 뜻은 'order'입니다.",
+        "examples": {
+          "beginner": "\"주문\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"주문\"를 자주 써요.",
+          "advanced": "\"주문\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"주문\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "주문입니다.",
+            "주문이/가 있습니다."
+          ],
+          "casual": [
+            "주문이야.",
+            "주문 있어."
+          ],
+          "short": [
+            "주문"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "주문 얼마예요?",
+              "romanization": "jumun eolmayeyo?",
+              "translation": "How much is order?"
+            },
+            {
+              "speaker": "B",
+              "text": "주문은/는 만 원이에요.",
+              "romanization": "jumuneun/neun man wonieyo.",
+              "translation": "order is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "order",
+        "explanation": "'주문' means 'order' in English.",
+        "examples": {
+          "beginner": "We say \"주문\" in Korean.",
+          "intermediate": "In Korea, people often say \"주문\".",
+          "advanced": "\"주문\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"주문\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is order.",
+            "There is order."
+          ],
+          "casual": [
+            "It's order.",
+            "order, you know."
+          ],
+          "short": [
+            "order"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is order?",
+              "romanization": "",
+              "translation": "주문 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "order is 10,000 won.",
+              "romanization": "",
+              "translation": "주문은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[주문]",
+      "ipa": "[jumun]"
+    }
+  },
+  {
+    "id": "d-sho-jangbaguni",
+    "korean": "장바구니",
+    "romanization": "jangbaguni",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "장바구니",
+        "explanation": "장바구니의 뜻은 'cart'입니다.",
+        "examples": {
+          "beginner": "\"장바구니\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"장바구니\"를 자주 써요.",
+          "advanced": "\"장바구니\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"장바구니\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "장바구니입니다.",
+            "장바구니이/가 있습니다."
+          ],
+          "casual": [
+            "장바구니이야.",
+            "장바구니 있어."
+          ],
+          "short": [
+            "장바"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "장바구니 얼마예요?",
+              "romanization": "jangbaguni eolmayeyo?",
+              "translation": "How much is cart?"
+            },
+            {
+              "speaker": "B",
+              "text": "장바구니은/는 만 원이에요.",
+              "romanization": "jangbagunieun/neun man wonieyo.",
+              "translation": "cart is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "cart",
+        "explanation": "'장바구니' means 'cart' in English.",
+        "examples": {
+          "beginner": "We say \"장바구니\" in Korean.",
+          "intermediate": "In Korea, people often say \"장바구니\".",
+          "advanced": "\"장바구니\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"장바구니\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is cart.",
+            "There is cart."
+          ],
+          "casual": [
+            "It's cart.",
+            "cart, you know."
+          ],
+          "short": [
+            "cart"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is cart?",
+              "romanization": "",
+              "translation": "장바구니 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "cart is 10,000 won.",
+              "romanization": "",
+              "translation": "장바구니은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[장바구니]",
+      "ipa": "[jangbaguni]"
+    }
+  },
+  {
+    "id": "d-sho-위siriseuteu",
+    "korean": "위시리스트",
+    "romanization": "wisiriseuteu",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "위시리스트",
+        "explanation": "위시리스트의 뜻은 'wishlist'입니다.",
+        "examples": {
+          "beginner": "\"위시리스트\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"위시리스트\"를 자주 써요.",
+          "advanced": "\"위시리스트\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"위시리스트\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "위시리스트입니다.",
+            "위시리스트이/가 있습니다."
+          ],
+          "casual": [
+            "위시리스트이야.",
+            "위시리스트 있어."
+          ],
+          "short": [
+            "위시"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "위시리스트 얼마예요?",
+              "romanization": "wisiriseuteu eolmayeyo?",
+              "translation": "How much is wishlist?"
+            },
+            {
+              "speaker": "B",
+              "text": "위시리스트은/는 만 원이에요.",
+              "romanization": "wisiriseuteueun/neun man wonieyo.",
+              "translation": "wishlist is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "wishlist",
+        "explanation": "'위시리스트' means 'wishlist' in English.",
+        "examples": {
+          "beginner": "We say \"위시리스트\" in Korean.",
+          "intermediate": "In Korea, people often say \"위시리스트\".",
+          "advanced": "\"위시리스트\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"위시리스트\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is wishlist.",
+            "There is wishlist."
+          ],
+          "casual": [
+            "It's wishlist.",
+            "wishlist, you know."
+          ],
+          "short": [
+            "wishlist"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is wishlist?",
+              "romanization": "",
+              "translation": "위시리스트 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "wishlist is 10,000 won.",
+              "romanization": "",
+              "translation": "위시리스트은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[위시리스트]",
+      "ipa": "[wisiriseuteu]"
+    }
+  },
+  {
+    "id": "d-sho-jaego",
+    "korean": "재고",
+    "romanization": "jaego",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "재고",
+        "explanation": "재고의 뜻은 'stock'입니다.",
+        "examples": {
+          "beginner": "\"재고\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"재고\"를 자주 써요.",
+          "advanced": "\"재고\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"재고\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "재고입니다.",
+            "재고이/가 있습니다."
+          ],
+          "casual": [
+            "재고이야.",
+            "재고 있어."
+          ],
+          "short": [
+            "재고"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "재고 얼마예요?",
+              "romanization": "jaego eolmayeyo?",
+              "translation": "How much is stock?"
+            },
+            {
+              "speaker": "B",
+              "text": "재고은/는 만 원이에요.",
+              "romanization": "jaegoeun/neun man wonieyo.",
+              "translation": "stock is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "stock",
+        "explanation": "'재고' means 'stock' in English.",
+        "examples": {
+          "beginner": "We say \"재고\" in Korean.",
+          "intermediate": "In Korea, people often say \"재고\".",
+          "advanced": "\"재고\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"재고\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is stock.",
+            "There is stock."
+          ],
+          "casual": [
+            "It's stock.",
+            "stock, you know."
+          ],
+          "short": [
+            "stock"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is stock?",
+              "romanization": "",
+              "translation": "재고 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "stock is 10,000 won.",
+              "romanization": "",
+              "translation": "재고은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[재고]",
+      "ipa": "[jaego]"
+    }
+  },
+  {
+    "id": "d-sho-품jeol",
+    "korean": "품절",
+    "romanization": "pumjeol",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "품절",
+        "explanation": "품절의 뜻은 'sold out'입니다.",
+        "examples": {
+          "beginner": "\"품절\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"품절\"를 자주 써요.",
+          "advanced": "\"품절\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"품절\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "품절입니다.",
+            "품절이/가 있습니다."
+          ],
+          "casual": [
+            "품절이야.",
+            "품절 있어."
+          ],
+          "short": [
+            "품절"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "품절 얼마예요?",
+              "romanization": "pumjeol eolmayeyo?",
+              "translation": "How much is sold out?"
+            },
+            {
+              "speaker": "B",
+              "text": "품절은/는 만 원이에요.",
+              "romanization": "pumjeoleun/neun man wonieyo.",
+              "translation": "sold out is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "sold out",
+        "explanation": "'품절' means 'sold out' in English.",
+        "examples": {
+          "beginner": "We say \"품절\" in Korean.",
+          "intermediate": "In Korea, people often say \"품절\".",
+          "advanced": "\"품절\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"품절\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is sold out.",
+            "There is sold out."
+          ],
+          "casual": [
+            "It's sold out.",
+            "sold out, you know."
+          ],
+          "short": [
+            "sold"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is sold out?",
+              "romanization": "",
+              "translation": "품절 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "sold out is 10,000 won.",
+              "romanization": "",
+              "translation": "품절은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[품절]",
+      "ipa": "[pumjeol]"
+    }
+  },
+  {
+    "id": "d-sho-gagyeok",
+    "korean": "가격",
+    "romanization": "gagyeok",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "가격",
+        "explanation": "가격의 뜻은 'price'입니다.",
+        "examples": {
+          "beginner": "\"가격\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"가격\"를 자주 써요.",
+          "advanced": "\"가격\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"가격\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "가격입니다.",
+            "가격이/가 있습니다."
+          ],
+          "casual": [
+            "가격이야.",
+            "가격 있어."
+          ],
+          "short": [
+            "가격"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "가격 얼마예요?",
+              "romanization": "gagyeok eolmayeyo?",
+              "translation": "How much is price?"
+            },
+            {
+              "speaker": "B",
+              "text": "가격은/는 만 원이에요.",
+              "romanization": "gagyeokeun/neun man wonieyo.",
+              "translation": "price is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "price",
+        "explanation": "'가격' means 'price' in English.",
+        "examples": {
+          "beginner": "We say \"가격\" in Korean.",
+          "intermediate": "In Korea, people often say \"가격\".",
+          "advanced": "\"가격\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"가격\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is price.",
+            "There is price."
+          ],
+          "casual": [
+            "It's price.",
+            "price, you know."
+          ],
+          "short": [
+            "price"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is price?",
+              "romanization": "",
+              "translation": "가격 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "price is 10,000 won.",
+              "romanization": "",
+              "translation": "가격은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[가격]",
+      "ipa": "[gagyeok]"
+    }
+  },
+  {
+    "id": "d-sho-원ga",
+    "korean": "원가",
+    "romanization": "wonga",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "원가",
+        "explanation": "원가의 뜻은 'cost'입니다.",
+        "examples": {
+          "beginner": "\"원가\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"원가\"를 자주 써요.",
+          "advanced": "\"원가\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"원가\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "원가입니다.",
+            "원가이/가 있습니다."
+          ],
+          "casual": [
+            "원가이야.",
+            "원가 있어."
+          ],
+          "short": [
+            "원가"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "원가 얼마예요?",
+              "romanization": "wonga eolmayeyo?",
+              "translation": "How much is cost?"
+            },
+            {
+              "speaker": "B",
+              "text": "원가은/는 만 원이에요.",
+              "romanization": "wongaeun/neun man wonieyo.",
+              "translation": "cost is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "cost",
+        "explanation": "'원가' means 'cost' in English.",
+        "examples": {
+          "beginner": "We say \"원가\" in Korean.",
+          "intermediate": "In Korea, people often say \"원가\".",
+          "advanced": "\"원가\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"원가\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is cost.",
+            "There is cost."
+          ],
+          "casual": [
+            "It's cost.",
+            "cost, you know."
+          ],
+          "short": [
+            "cost"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is cost?",
+              "romanization": "",
+              "translation": "원가 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "cost is 10,000 won.",
+              "romanization": "",
+              "translation": "원가은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[원가]",
+      "ipa": "[wonga]"
+    }
+  },
+  {
+    "id": "d-sho-jeongga",
+    "korean": "정가",
+    "romanization": "jeongga",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "정가",
+        "explanation": "정가의 뜻은 'regular price'입니다.",
+        "examples": {
+          "beginner": "\"정가\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"정가\"를 자주 써요.",
+          "advanced": "\"정가\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"정가\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "정가입니다.",
+            "정가이/가 있습니다."
+          ],
+          "casual": [
+            "정가이야.",
+            "정가 있어."
+          ],
+          "short": [
+            "정가"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "정가 얼마예요?",
+              "romanization": "jeongga eolmayeyo?",
+              "translation": "How much is regular price?"
+            },
+            {
+              "speaker": "B",
+              "text": "정가은/는 만 원이에요.",
+              "romanization": "jeonggaeun/neun man wonieyo.",
+              "translation": "regular price is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "regular price",
+        "explanation": "'정가' means 'regular price' in English.",
+        "examples": {
+          "beginner": "We say \"정가\" in Korean.",
+          "intermediate": "In Korea, people often say \"정가\".",
+          "advanced": "\"정가\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"정가\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is regular price.",
+            "There is regular price."
+          ],
+          "casual": [
+            "It's regular price.",
+            "regular price, you know."
+          ],
+          "short": [
+            "regular"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is regular price?",
+              "romanization": "",
+              "translation": "정가 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "regular price is 10,000 won.",
+              "romanization": "",
+              "translation": "정가은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[정가]",
+      "ipa": "[jeongga]"
+    }
+  },
+  {
+    "id": "d-sho-halinga",
+    "korean": "할인가",
+    "romanization": "halinga",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "할인가",
+        "explanation": "할인가의 뜻은 'sale price'입니다.",
+        "examples": {
+          "beginner": "\"할인가\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"할인가\"를 자주 써요.",
+          "advanced": "\"할인가\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"할인가\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "할인가입니다.",
+            "할인가이/가 있습니다."
+          ],
+          "casual": [
+            "할인가이야.",
+            "할인가 있어."
+          ],
+          "short": [
+            "할인"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "할인가 얼마예요?",
+              "romanization": "halinga eolmayeyo?",
+              "translation": "How much is sale price?"
+            },
+            {
+              "speaker": "B",
+              "text": "할인가은/는 만 원이에요.",
+              "romanization": "halingaeun/neun man wonieyo.",
+              "translation": "sale price is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "sale price",
+        "explanation": "'할인가' means 'sale price' in English.",
+        "examples": {
+          "beginner": "We say \"할인가\" in Korean.",
+          "intermediate": "In Korea, people often say \"할인가\".",
+          "advanced": "\"할인가\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"할인가\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is sale price.",
+            "There is sale price."
+          ],
+          "casual": [
+            "It's sale price.",
+            "sale price, you know."
+          ],
+          "short": [
+            "sale"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is sale price?",
+              "romanization": "",
+              "translation": "할인가 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "sale price is 10,000 won.",
+              "romanization": "",
+              "translation": "할인가은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[할인가]",
+      "ipa": "[halinga]"
+    }
+  },
+  {
+    "id": "d-sho-bugase",
+    "korean": "부가세",
+    "romanization": "bugase",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "부가세",
+        "explanation": "부가세의 뜻은 'VAT'입니다.",
+        "examples": {
+          "beginner": "\"부가세\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"부가세\"를 자주 써요.",
+          "advanced": "\"부가세\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"부가세\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "부가세입니다.",
+            "부가세이/가 있습니다."
+          ],
+          "casual": [
+            "부가세이야.",
+            "부가세 있어."
+          ],
+          "short": [
+            "부가"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "부가세 얼마예요?",
+              "romanization": "bugase eolmayeyo?",
+              "translation": "How much is VAT?"
+            },
+            {
+              "speaker": "B",
+              "text": "부가세은/는 만 원이에요.",
+              "romanization": "bugaseeun/neun man wonieyo.",
+              "translation": "VAT is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "VAT",
+        "explanation": "'부가세' means 'VAT' in English.",
+        "examples": {
+          "beginner": "We say \"부가세\" in Korean.",
+          "intermediate": "In Korea, people often say \"부가세\".",
+          "advanced": "\"부가세\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"부가세\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is VAT.",
+            "There is VAT."
+          ],
+          "casual": [
+            "It's VAT.",
+            "VAT, you know."
+          ],
+          "short": [
+            "VAT"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is VAT?",
+              "romanization": "",
+              "translation": "부가세 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "VAT is 10,000 won.",
+              "romanization": "",
+              "translation": "부가세은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[부가세]",
+      "ipa": "[bugase]"
+    }
+  },
+  {
+    "id": "d-sho-면se",
+    "korean": "면세",
+    "romanization": "myeonse",
+    "partOfSpeech": "noun",
+    "categoryId": "shopping",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "면세",
+        "explanation": "면세의 뜻은 'duty-free'입니다.",
+        "examples": {
+          "beginner": "\"면세\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"면세\"를 자주 써요.",
+          "advanced": "\"면세\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"면세\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "면세입니다.",
+            "면세이/가 있습니다."
+          ],
+          "casual": [
+            "면세이야.",
+            "면세 있어."
+          ],
+          "short": [
+            "면세"
+          ]
+        },
+        "dialogue": {
+          "context": "쇼핑하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "면세 얼마예요?",
+              "romanization": "myeonse eolmayeyo?",
+              "translation": "How much is duty-free?"
+            },
+            {
+              "speaker": "B",
+              "text": "면세은/는 만 원이에요.",
+              "romanization": "myeonseeun/neun man wonieyo.",
+              "translation": "duty-free is 10,000 won."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "duty-free",
+        "explanation": "'면세' means 'duty-free' in English.",
+        "examples": {
+          "beginner": "We say \"면세\" in Korean.",
+          "intermediate": "In Korea, people often say \"면세\".",
+          "advanced": "\"면세\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"면세\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is duty-free.",
+            "There is duty-free."
+          ],
+          "casual": [
+            "It's duty-free.",
+            "duty-free, you know."
+          ],
+          "short": [
+            "duty-free"
+          ]
+        },
+        "dialogue": {
+          "context": "While shopping",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How much is duty-free?",
+              "romanization": "",
+              "translation": "면세 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "duty-free is 10,000 won.",
+              "romanization": "",
+              "translation": "면세은/는 만 원이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[면세]",
+      "ipa": "[myeonse]"
+    }
   }
 ]

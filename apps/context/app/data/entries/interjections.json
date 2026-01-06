@@ -1,0 +1,1442 @@
+[
+  {
+    "id": "w-wa",
+    "korean": "와",
+    "romanization": "wa",
+    "partOfSpeech": "interjection",
+    "categoryId": "interjections",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "와",
+        "explanation": "와의 뜻은 'Wow'입니다.",
+        "examples": {
+          "beginner": "\"와\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"와\"를 자주 써요.",
+          "advanced": "\"와\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"와\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "와입니다.",
+            "와이/가 있습니다."
+          ],
+          "casual": [
+            "와이야.",
+            "와 있어."
+          ],
+          "short": [
+            "와"
+          ]
+        },
+        "dialogue": {
+          "context": "일상 대화에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "와이/가 뭐예요?",
+              "romanization": "wai/ga mwoyeyo?",
+              "translation": "What is \"와\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "와은/는 Wow(이)에요.",
+              "romanization": "waeun/neun Wow(i)eyo.",
+              "translation": "\"와\" means \"Wow\"."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "Wow",
+        "explanation": "'와' means 'Wow' in English.",
+        "examples": {
+          "beginner": "We say \"와\" in Korean.",
+          "intermediate": "In Korea, people often say \"와\".",
+          "advanced": "\"와\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"와\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is Wow.",
+            "There is Wow."
+          ],
+          "casual": [
+            "It's Wow.",
+            "Wow, you know."
+          ],
+          "short": [
+            "Wow"
+          ]
+        },
+        "dialogue": {
+          "context": "In daily conversation",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What is \"와\"?",
+              "romanization": "",
+              "translation": "와이/가 뭐예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"와\" means \"Wow\".",
+              "romanization": "",
+              "translation": "와은/는 Wow(이)에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[와]",
+      "ipa": "[wa]"
+    }
+  },
+  {
+    "id": "w-wau",
+    "korean": "와우",
+    "romanization": "wau",
+    "partOfSpeech": "interjection",
+    "categoryId": "interjections",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "와우",
+        "explanation": "와우의 뜻은 'Wow'입니다.",
+        "examples": {
+          "beginner": "\"와우\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"와우\"를 자주 써요.",
+          "advanced": "\"와우\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"와우\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "와우입니다.",
+            "와우이/가 있습니다."
+          ],
+          "casual": [
+            "와우이야.",
+            "와우 있어."
+          ],
+          "short": [
+            "와우"
+          ]
+        },
+        "dialogue": {
+          "context": "일상 대화에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "와우이/가 뭐예요?",
+              "romanization": "waui/ga mwoyeyo?",
+              "translation": "What is \"와우\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "와우은/는 Wow(이)에요.",
+              "romanization": "waueun/neun Wow(i)eyo.",
+              "translation": "\"와우\" means \"Wow\"."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "Wow",
+        "explanation": "'와우' means 'Wow' in English.",
+        "examples": {
+          "beginner": "We say \"와우\" in Korean.",
+          "intermediate": "In Korea, people often say \"와우\".",
+          "advanced": "\"와우\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"와우\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is Wow.",
+            "There is Wow."
+          ],
+          "casual": [
+            "It's Wow.",
+            "Wow, you know."
+          ],
+          "short": [
+            "Wow"
+          ]
+        },
+        "dialogue": {
+          "context": "In daily conversation",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What is \"와우\"?",
+              "romanization": "",
+              "translation": "와우이/가 뭐예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"와우\" means \"Wow\".",
+              "romanization": "",
+              "translation": "와우은/는 Wow(이)에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[와우]",
+      "ipa": "[wau]"
+    }
+  },
+  {
+    "id": "w-uwa",
+    "korean": "우와",
+    "romanization": "uwa",
+    "partOfSpeech": "interjection",
+    "categoryId": "interjections",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "우와",
+        "explanation": "우와의 뜻은 'Wow'입니다.",
+        "examples": {
+          "beginner": "\"우와\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"우와\"를 자주 써요.",
+          "advanced": "\"우와\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"우와\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "우와입니다.",
+            "우와이/가 있습니다."
+          ],
+          "casual": [
+            "우와이야.",
+            "우와 있어."
+          ],
+          "short": [
+            "우와"
+          ]
+        },
+        "dialogue": {
+          "context": "일상 대화에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "우와이/가 뭐예요?",
+              "romanization": "uwai/ga mwoyeyo?",
+              "translation": "What is \"우와\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "우와은/는 Wow(이)에요.",
+              "romanization": "uwaeun/neun Wow(i)eyo.",
+              "translation": "\"우와\" means \"Wow\"."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "Wow",
+        "explanation": "'우와' means 'Wow' in English.",
+        "examples": {
+          "beginner": "We say \"우와\" in Korean.",
+          "intermediate": "In Korea, people often say \"우와\".",
+          "advanced": "\"우와\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"우와\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is Wow.",
+            "There is Wow."
+          ],
+          "casual": [
+            "It's Wow.",
+            "Wow, you know."
+          ],
+          "short": [
+            "Wow"
+          ]
+        },
+        "dialogue": {
+          "context": "In daily conversation",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What is \"우와\"?",
+              "romanization": "",
+              "translation": "우와이/가 뭐예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"우와\" means \"Wow\".",
+              "romanization": "",
+              "translation": "우와은/는 Wow(이)에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[우와]",
+      "ipa": "[uwa]"
+    }
+  },
+  {
+    "id": "w-eum",
+    "korean": "음",
+    "romanization": "eum",
+    "partOfSpeech": "interjection",
+    "categoryId": "interjections",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "음",
+        "explanation": "음의 뜻은 'Mmm'입니다.",
+        "examples": {
+          "beginner": "\"음\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"음\"를 자주 써요.",
+          "advanced": "\"음\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"음\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "음입니다.",
+            "음이/가 있습니다."
+          ],
+          "casual": [
+            "음이야.",
+            "음 있어."
+          ],
+          "short": [
+            "음"
+          ]
+        },
+        "dialogue": {
+          "context": "일상 대화에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "음이/가 뭐예요?",
+              "romanization": "eumi/ga mwoyeyo?",
+              "translation": "What is \"음\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "음은/는 Mmm(이)에요.",
+              "romanization": "eumeun/neun Mmm(i)eyo.",
+              "translation": "\"음\" means \"Mmm\"."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "Mmm",
+        "explanation": "'음' means 'Mmm' in English.",
+        "examples": {
+          "beginner": "We say \"음\" in Korean.",
+          "intermediate": "In Korea, people often say \"음\".",
+          "advanced": "\"음\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"음\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is Mmm.",
+            "There is Mmm."
+          ],
+          "casual": [
+            "It's Mmm.",
+            "Mmm, you know."
+          ],
+          "short": [
+            "Mmm"
+          ]
+        },
+        "dialogue": {
+          "context": "In daily conversation",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What is \"음\"?",
+              "romanization": "",
+              "translation": "음이/가 뭐예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"음\" means \"Mmm\".",
+              "romanization": "",
+              "translation": "음은/는 Mmm(이)에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[음]",
+      "ipa": "[eum]"
+    }
+  },
+  {
+    "id": "w-eumeum",
+    "korean": "음음",
+    "romanization": "eumeum",
+    "partOfSpeech": "interjection",
+    "categoryId": "interjections",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "음음",
+        "explanation": "음음의 뜻은 'Mmm'입니다.",
+        "examples": {
+          "beginner": "\"음음\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"음음\"를 자주 써요.",
+          "advanced": "\"음음\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"음음\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "음음입니다.",
+            "음음이/가 있습니다."
+          ],
+          "casual": [
+            "음음이야.",
+            "음음 있어."
+          ],
+          "short": [
+            "음음"
+          ]
+        },
+        "dialogue": {
+          "context": "일상 대화에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "음음이/가 뭐예요?",
+              "romanization": "eumeumi/ga mwoyeyo?",
+              "translation": "What is \"음음\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "음음은/는 Mmm(이)에요.",
+              "romanization": "eumeumeun/neun Mmm(i)eyo.",
+              "translation": "\"음음\" means \"Mmm\"."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "Mmm",
+        "explanation": "'음음' means 'Mmm' in English.",
+        "examples": {
+          "beginner": "We say \"음음\" in Korean.",
+          "intermediate": "In Korea, people often say \"음음\".",
+          "advanced": "\"음음\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"음음\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is Mmm.",
+            "There is Mmm."
+          ],
+          "casual": [
+            "It's Mmm.",
+            "Mmm, you know."
+          ],
+          "short": [
+            "Mmm"
+          ]
+        },
+        "dialogue": {
+          "context": "In daily conversation",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What is \"음음\"?",
+              "romanization": "",
+              "translation": "음음이/가 뭐예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"음음\" means \"Mmm\".",
+              "romanization": "",
+              "translation": "음음은/는 Mmm(이)에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[음음]",
+      "ipa": "[eumeum]"
+    }
+  },
+  {
+    "id": "w-a",
+    "korean": "아",
+    "romanization": "a",
+    "partOfSpeech": "interjection",
+    "categoryId": "interjections",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "아",
+        "explanation": "아의 뜻은 'Ah'입니다.",
+        "examples": {
+          "beginner": "\"아\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"아\"를 자주 써요.",
+          "advanced": "\"아\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"아\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "아입니다.",
+            "아이/가 있습니다."
+          ],
+          "casual": [
+            "아이야.",
+            "아 있어."
+          ],
+          "short": [
+            "아"
+          ]
+        },
+        "dialogue": {
+          "context": "일상 대화에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "아이/가 뭐예요?",
+              "romanization": "ai/ga mwoyeyo?",
+              "translation": "What is \"아\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "아은/는 Ah(이)에요.",
+              "romanization": "aeun/neun Ah(i)eyo.",
+              "translation": "\"아\" means \"Ah\"."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "Ah",
+        "explanation": "'아' means 'Ah' in English.",
+        "examples": {
+          "beginner": "We say \"아\" in Korean.",
+          "intermediate": "In Korea, people often say \"아\".",
+          "advanced": "\"아\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"아\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is Ah.",
+            "There is Ah."
+          ],
+          "casual": [
+            "It's Ah.",
+            "Ah, you know."
+          ],
+          "short": [
+            "Ah"
+          ]
+        },
+        "dialogue": {
+          "context": "In daily conversation",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What is \"아\"?",
+              "romanization": "",
+              "translation": "아이/가 뭐예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"아\" means \"Ah\".",
+              "romanization": "",
+              "translation": "아은/는 Ah(이)에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아]",
+      "ipa": "[a]"
+    }
+  },
+  {
+    "id": "w-aa",
+    "korean": "아아",
+    "romanization": "aa",
+    "partOfSpeech": "interjection",
+    "categoryId": "interjections",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "아아",
+        "explanation": "아아의 뜻은 'Ah'입니다.",
+        "examples": {
+          "beginner": "\"아아\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"아아\"를 자주 써요.",
+          "advanced": "\"아아\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"아아\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "아아입니다.",
+            "아아이/가 있습니다."
+          ],
+          "casual": [
+            "아아이야.",
+            "아아 있어."
+          ],
+          "short": [
+            "아아"
+          ]
+        },
+        "dialogue": {
+          "context": "일상 대화에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "아아이/가 뭐예요?",
+              "romanization": "aai/ga mwoyeyo?",
+              "translation": "What is \"아아\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "아아은/는 Ah(이)에요.",
+              "romanization": "aaeun/neun Ah(i)eyo.",
+              "translation": "\"아아\" means \"Ah\"."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "Ah",
+        "explanation": "'아아' means 'Ah' in English.",
+        "examples": {
+          "beginner": "We say \"아아\" in Korean.",
+          "intermediate": "In Korea, people often say \"아아\".",
+          "advanced": "\"아아\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"아아\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is Ah.",
+            "There is Ah."
+          ],
+          "casual": [
+            "It's Ah.",
+            "Ah, you know."
+          ],
+          "short": [
+            "Ah"
+          ]
+        },
+        "dialogue": {
+          "context": "In daily conversation",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What is \"아아\"?",
+              "romanization": "",
+              "translation": "아아이/가 뭐예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"아아\" means \"Ah\".",
+              "romanization": "",
+              "translation": "아아은/는 Ah(이)에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아아]",
+      "ipa": "[aa]"
+    }
+  },
+  {
+    "id": "w-oo",
+    "korean": "오오",
+    "romanization": "oo",
+    "partOfSpeech": "interjection",
+    "categoryId": "interjections",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "오오",
+        "explanation": "오오의 뜻은 'Oh'입니다.",
+        "examples": {
+          "beginner": "\"오오\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"오오\"를 자주 써요.",
+          "advanced": "\"오오\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"오오\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "오오입니다.",
+            "오오이/가 있습니다."
+          ],
+          "casual": [
+            "오오이야.",
+            "오오 있어."
+          ],
+          "short": [
+            "오오"
+          ]
+        },
+        "dialogue": {
+          "context": "일상 대화에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "오오이/가 뭐예요?",
+              "romanization": "ooi/ga mwoyeyo?",
+              "translation": "What is \"오오\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "오오은/는 Oh(이)에요.",
+              "romanization": "ooeun/neun Oh(i)eyo.",
+              "translation": "\"오오\" means \"Oh\"."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "Oh",
+        "explanation": "'오오' means 'Oh' in English.",
+        "examples": {
+          "beginner": "We say \"오오\" in Korean.",
+          "intermediate": "In Korea, people often say \"오오\".",
+          "advanced": "\"오오\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"오오\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is Oh.",
+            "There is Oh."
+          ],
+          "casual": [
+            "It's Oh.",
+            "Oh, you know."
+          ],
+          "short": [
+            "Oh"
+          ]
+        },
+        "dialogue": {
+          "context": "In daily conversation",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What is \"오오\"?",
+              "romanization": "",
+              "translation": "오오이/가 뭐예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"오오\" means \"Oh\".",
+              "romanization": "",
+              "translation": "오오은/는 Oh(이)에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[오오]",
+      "ipa": "[oo]"
+    }
+  },
+  {
+    "id": "w-eo",
+    "korean": "어",
+    "romanization": "eo",
+    "partOfSpeech": "interjection",
+    "categoryId": "interjections",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "어",
+        "explanation": "어의 뜻은 'Uh'입니다.",
+        "examples": {
+          "beginner": "\"어\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"어\"를 자주 써요.",
+          "advanced": "\"어\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"어\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "어입니다.",
+            "어이/가 있습니다."
+          ],
+          "casual": [
+            "어이야.",
+            "어 있어."
+          ],
+          "short": [
+            "어"
+          ]
+        },
+        "dialogue": {
+          "context": "일상 대화에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "어이/가 뭐예요?",
+              "romanization": "eoi/ga mwoyeyo?",
+              "translation": "What is \"어\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "어은/는 Uh(이)에요.",
+              "romanization": "eoeun/neun Uh(i)eyo.",
+              "translation": "\"어\" means \"Uh\"."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "Uh",
+        "explanation": "'어' means 'Uh' in English.",
+        "examples": {
+          "beginner": "We say \"어\" in Korean.",
+          "intermediate": "In Korea, people often say \"어\".",
+          "advanced": "\"어\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"어\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is Uh.",
+            "There is Uh."
+          ],
+          "casual": [
+            "It's Uh.",
+            "Uh, you know."
+          ],
+          "short": [
+            "Uh"
+          ]
+        },
+        "dialogue": {
+          "context": "In daily conversation",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What is \"어\"?",
+              "romanization": "",
+              "translation": "어이/가 뭐예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"어\" means \"Uh\".",
+              "romanization": "",
+              "translation": "어은/는 Uh(이)에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[어]",
+      "ipa": "[eo]"
+    }
+  },
+  {
+    "id": "w-eoeo",
+    "korean": "어어",
+    "romanization": "eoeo",
+    "partOfSpeech": "interjection",
+    "categoryId": "interjections",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "어어",
+        "explanation": "어어의 뜻은 'Uh'입니다.",
+        "examples": {
+          "beginner": "\"어어\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"어어\"를 자주 써요.",
+          "advanced": "\"어어\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"어어\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "어어입니다.",
+            "어어이/가 있습니다."
+          ],
+          "casual": [
+            "어어이야.",
+            "어어 있어."
+          ],
+          "short": [
+            "어어"
+          ]
+        },
+        "dialogue": {
+          "context": "일상 대화에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "어어이/가 뭐예요?",
+              "romanization": "eoeoi/ga mwoyeyo?",
+              "translation": "What is \"어어\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "어어은/는 Uh(이)에요.",
+              "romanization": "eoeoeun/neun Uh(i)eyo.",
+              "translation": "\"어어\" means \"Uh\"."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "Uh",
+        "explanation": "'어어' means 'Uh' in English.",
+        "examples": {
+          "beginner": "We say \"어어\" in Korean.",
+          "intermediate": "In Korea, people often say \"어어\".",
+          "advanced": "\"어어\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"어어\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is Uh.",
+            "There is Uh."
+          ],
+          "casual": [
+            "It's Uh.",
+            "Uh, you know."
+          ],
+          "short": [
+            "Uh"
+          ]
+        },
+        "dialogue": {
+          "context": "In daily conversation",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What is \"어어\"?",
+              "romanization": "",
+              "translation": "어어이/가 뭐예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"어어\" means \"Uh\".",
+              "romanization": "",
+              "translation": "어어은/는 Uh(이)에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[어어]",
+      "ipa": "[eoeo]"
+    }
+  },
+  {
+    "id": "w-e",
+    "korean": "에",
+    "romanization": "e",
+    "partOfSpeech": "interjection",
+    "categoryId": "interjections",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "에",
+        "explanation": "에의 뜻은 'Eh'입니다.",
+        "examples": {
+          "beginner": "\"에\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"에\"를 자주 써요.",
+          "advanced": "\"에\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"에\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "에입니다.",
+            "에이/가 있습니다."
+          ],
+          "casual": [
+            "에이야.",
+            "에 있어."
+          ],
+          "short": [
+            "에"
+          ]
+        },
+        "dialogue": {
+          "context": "일상 대화에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "에이/가 뭐예요?",
+              "romanization": "ei/ga mwoyeyo?",
+              "translation": "What is \"에\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "에은/는 Eh(이)에요.",
+              "romanization": "eeun/neun Eh(i)eyo.",
+              "translation": "\"에\" means \"Eh\"."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "Eh",
+        "explanation": "'에' means 'Eh' in English.",
+        "examples": {
+          "beginner": "We say \"에\" in Korean.",
+          "intermediate": "In Korea, people often say \"에\".",
+          "advanced": "\"에\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"에\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is Eh.",
+            "There is Eh."
+          ],
+          "casual": [
+            "It's Eh.",
+            "Eh, you know."
+          ],
+          "short": [
+            "Eh"
+          ]
+        },
+        "dialogue": {
+          "context": "In daily conversation",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What is \"에\"?",
+              "romanization": "",
+              "translation": "에이/가 뭐예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"에\" means \"Eh\".",
+              "romanization": "",
+              "translation": "에은/는 Eh(이)에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[에]",
+      "ipa": "[e]"
+    }
+  },
+  {
+    "id": "w-aigo",
+    "korean": "아이고",
+    "romanization": "aigo",
+    "partOfSpeech": "interjection",
+    "categoryId": "interjections",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "아이고",
+        "explanation": "아이고의 뜻은 'Oh my'입니다.",
+        "examples": {
+          "beginner": "\"아이고\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"아이고\"를 자주 써요.",
+          "advanced": "\"아이고\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"아이고\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "아이고입니다.",
+            "아이고이/가 있습니다."
+          ],
+          "casual": [
+            "아이고이야.",
+            "아이고 있어."
+          ],
+          "short": [
+            "아이"
+          ]
+        },
+        "dialogue": {
+          "context": "일상 대화에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "아이고이/가 뭐예요?",
+              "romanization": "aigoi/ga mwoyeyo?",
+              "translation": "What is \"아이고\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "아이고은/는 Oh my(이)에요.",
+              "romanization": "aigoeun/neun Oh my(i)eyo.",
+              "translation": "\"아이고\" means \"Oh my\"."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "Oh my",
+        "explanation": "'아이고' means 'Oh my' in English.",
+        "examples": {
+          "beginner": "We say \"아이고\" in Korean.",
+          "intermediate": "In Korea, people often say \"아이고\".",
+          "advanced": "\"아이고\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"아이고\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is Oh my.",
+            "There is Oh my."
+          ],
+          "casual": [
+            "It's Oh my.",
+            "Oh my, you know."
+          ],
+          "short": [
+            "Oh"
+          ]
+        },
+        "dialogue": {
+          "context": "In daily conversation",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What is \"아이고\"?",
+              "romanization": "",
+              "translation": "아이고이/가 뭐예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"아이고\" means \"Oh my\".",
+              "romanization": "",
+              "translation": "아이고은/는 Oh my(이)에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아이고]",
+      "ipa": "[aigo]"
+    }
+  },
+  {
+    "id": "w-sesange",
+    "korean": "세상에",
+    "romanization": "sesange",
+    "partOfSpeech": "interjection",
+    "categoryId": "interjections",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "세상에",
+        "explanation": "세상에의 뜻은 'Oh my'입니다.",
+        "examples": {
+          "beginner": "\"세상에\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"세상에\"를 자주 써요.",
+          "advanced": "\"세상에\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"세상에\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "세상에입니다.",
+            "세상에이/가 있습니다."
+          ],
+          "casual": [
+            "세상에이야.",
+            "세상에 있어."
+          ],
+          "short": [
+            "세상"
+          ]
+        },
+        "dialogue": {
+          "context": "일상 대화에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "세상에이/가 뭐예요?",
+              "romanization": "sesangei/ga mwoyeyo?",
+              "translation": "What is \"세상에\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "세상에은/는 Oh my(이)에요.",
+              "romanization": "sesangeeun/neun Oh my(i)eyo.",
+              "translation": "\"세상에\" means \"Oh my\"."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "Oh my",
+        "explanation": "'세상에' means 'Oh my' in English.",
+        "examples": {
+          "beginner": "We say \"세상에\" in Korean.",
+          "intermediate": "In Korea, people often say \"세상에\".",
+          "advanced": "\"세상에\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"세상에\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is Oh my.",
+            "There is Oh my."
+          ],
+          "casual": [
+            "It's Oh my.",
+            "Oh my, you know."
+          ],
+          "short": [
+            "Oh"
+          ]
+        },
+        "dialogue": {
+          "context": "In daily conversation",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What is \"세상에\"?",
+              "romanization": "",
+              "translation": "세상에이/가 뭐예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"세상에\" means \"Oh my\".",
+              "romanization": "",
+              "translation": "세상에은/는 Oh my(이)에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[세상에]",
+      "ipa": "[sesange]"
+    }
+  },
+  {
+    "id": "w-heol",
+    "korean": "헐",
+    "romanization": "heol",
+    "partOfSpeech": "interjection",
+    "categoryId": "interjections",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "헐",
+        "explanation": "헐의 뜻은 'Wow'입니다.",
+        "examples": {
+          "beginner": "\"헐\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"헐\"를 자주 써요.",
+          "advanced": "\"헐\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"헐\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "헐입니다.",
+            "헐이/가 있습니다."
+          ],
+          "casual": [
+            "헐이야.",
+            "헐 있어."
+          ],
+          "short": [
+            "헐"
+          ]
+        },
+        "dialogue": {
+          "context": "일상 대화에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "헐이/가 뭐예요?",
+              "romanization": "heoli/ga mwoyeyo?",
+              "translation": "What is \"헐\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "헐은/는 Wow(이)에요.",
+              "romanization": "heoleun/neun Wow(i)eyo.",
+              "translation": "\"헐\" means \"Wow\"."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "Wow",
+        "explanation": "'헐' means 'Wow' in English.",
+        "examples": {
+          "beginner": "We say \"헐\" in Korean.",
+          "intermediate": "In Korea, people often say \"헐\".",
+          "advanced": "\"헐\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"헐\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is Wow.",
+            "There is Wow."
+          ],
+          "casual": [
+            "It's Wow.",
+            "Wow, you know."
+          ],
+          "short": [
+            "Wow"
+          ]
+        },
+        "dialogue": {
+          "context": "In daily conversation",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What is \"헐\"?",
+              "romanization": "",
+              "translation": "헐이/가 뭐예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"헐\" means \"Wow\".",
+              "romanization": "",
+              "translation": "헐은/는 Wow(이)에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[헐]",
+      "ipa": "[heol]"
+    }
+  },
+  {
+    "id": "w-o",
+    "korean": "오",
+    "romanization": "o",
+    "partOfSpeech": "interjection",
+    "categoryId": "interjections",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [],
+    "translations": {
+      "ko": {
+        "word": "오",
+        "explanation": "오의 뜻은 'come'입니다.",
+        "examples": {
+          "beginner": "\"오\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"오\"를 자주 써요.",
+          "advanced": "\"오\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"오\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "오입니다.",
+            "오이/가 있습니다."
+          ],
+          "casual": [
+            "오이야.",
+            "오 있어."
+          ],
+          "short": [
+            "오"
+          ]
+        },
+        "dialogue": {
+          "context": "일상 대화에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "오이/가 뭐예요?",
+              "romanization": "oi/ga mwoyeyo?",
+              "translation": "What is \"오\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "오은/는 come(이)에요.",
+              "romanization": "oeun/neun come(i)eyo.",
+              "translation": "\"오\" means \"come\"."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "come",
+        "explanation": "'오' means 'come' in English.",
+        "examples": {
+          "beginner": "We say \"오\" in Korean.",
+          "intermediate": "In Korea, people often say \"오\".",
+          "advanced": "\"오\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"오\" makes communication more natural."
+        },
+        "variations": {
+          "formal": [
+            "It is come.",
+            "There is come."
+          ],
+          "casual": [
+            "It's come.",
+            "come, you know."
+          ],
+          "short": [
+            "come"
+          ]
+        },
+        "dialogue": {
+          "context": "In daily conversation",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What is \"오\"?",
+              "romanization": "",
+              "translation": "오이/가 뭐예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"오\" means \"come\".",
+              "romanization": "",
+              "translation": "오은/는 come(이)에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[오]",
+      "ipa": "[o]"
+    }
+  }
+]
