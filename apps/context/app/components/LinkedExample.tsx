@@ -42,11 +42,11 @@ export function LinkedExample({ text, currentEntryId }: LinkedExampleProps) {
       parts.push(<span key={`text-${lastEnd}`}>{text.slice(lastEnd, match.start)}</span>);
     }
 
-    // 매칭된 링크 (단일 ID만 지원 - 동음이의어는 별도 처리 필요)
+    // 매칭된 링크 (첫 번째 ID 사용 - 동음이의어는 별도 처리 필요)
     parts.push(
       <Link
         key={`link-${match.start}`}
-        to={localePath(`/entry/${match.id}`)}
+        to={localePath(`/entry/${match.ids[0]}`)}
         className="text-(--accent-primary) underline decoration-dotted underline-offset-4 hover:decoration-solid"
       >
         {match.korean}
