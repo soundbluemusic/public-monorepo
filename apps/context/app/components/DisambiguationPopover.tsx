@@ -15,6 +15,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router';
 import { getEntryById } from '@/data/entries';
+import type { MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 
 interface DisambiguationPopoverProps {
@@ -22,6 +23,13 @@ interface DisambiguationPopoverProps {
   korean: string;
   /** 해당하는 엔트리 ID 목록 */
   ids: string[];
+}
+
+interface ResolvedEntry {
+  id: string;
+  word: string;
+  explanation: string;
+  partOfSpeech: string;
 }
 
 /**
@@ -32,8 +40,35 @@ interface DisambiguationPopoverProps {
 export function DisambiguationPopover({ korean, ids }: DisambiguationPopoverProps) {
   const { localePath, locale } = useI18n();
   const [isOpen, setIsOpen] = useState(false);
+  const [entries, setEntries] = useState<ResolvedEntry[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const popoverRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
+
+  // 엔트리 정보를 비동기로 로드
+  useEffect(() => {
+    async function loadEntries() {
+      setIsLoading(true);
+      const resolved: ResolvedEntry[] = [];
+
+      for (const id of ids) {
+        const entry = await getEntryById(id);
+        if (entry) {
+          resolved.push({
+            id: entry.id,
+            word: entry.translations[locale].word,
+            explanation: entry.translations[locale].explanation,
+            partOfSpeech: entry.partOfSpeech,
+          });
+        }
+      }
+
+      setEntries(resolved);
+      setIsLoading(false);
+    }
+
+    loadEntries();
+  }, [ids, locale]);
 
   // 외부 클릭 시 팝오버 닫기
   useEffect(() => {
@@ -69,27 +104,8 @@ export function DisambiguationPopover({ korean, ids }: DisambiguationPopoverProp
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen]);
 
-  // 엔트리 정보 조회
-  const entries = ids
-    .map((id) => {
-      const entry = getEntryById(id);
-      if (!entry) return null;
-      return {
-        id: entry.id,
-        word: entry.translations[locale].word,
-        explanation: entry.translations[locale].explanation,
-        partOfSpeech: entry.partOfSpeech,
-      };
-    })
-    .filter(Boolean) as Array<{
-    id: string;
-    word: string;
-    explanation: string;
-    partOfSpeech: string;
-  }>;
-
-  // 유효한 엔트리가 없으면 빈 span 반환
-  if (entries.length === 0) {
+  // 로딩 중이거나 유효한 엔트리가 없으면 빈 span 반환
+  if (isLoading || entries.length === 0) {
     return <span>{korean}</span>;
   }
 

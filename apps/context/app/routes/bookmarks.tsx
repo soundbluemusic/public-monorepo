@@ -1,9 +1,9 @@
 import { metaFactory } from '@soundblue/i18n';
 import { Bookmark, Search, Trash2 } from 'lucide-react';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router';
 import { Layout } from '@/components/layout';
-import { entriesById } from '@/data/entries';
+import { getEntryById } from '@/data/entries';
 import type { MeaningEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { useIsHydrated, useUserDataStore } from '@/stores/user-data-store';
@@ -22,18 +22,30 @@ export default function BookmarksPage() {
   const favorites = useUserDataStore((state) => state.favorites);
   const removeFavorite = useUserDataStore((state) => state.removeFavorite);
   const [searchQuery, setSearchQuery] = useState('');
+  const [bookmarkedEntries, setBookmarkedEntries] = useState<MeaningEntry[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  // Convert favorites to entries
-  const bookmarkedEntries = useMemo(() => {
-    const entries: MeaningEntry[] = [];
-    for (const fav of favorites) {
-      const entry = entriesById.get(fav.entryId);
-      if (entry) {
-        entries.push(entry);
+  // Load bookmarked entries asynchronously (from category chunks)
+  useEffect(() => {
+    if (!isHydrated) return;
+
+    async function loadEntries() {
+      setIsLoading(true);
+      const entries: MeaningEntry[] = [];
+
+      for (const fav of favorites) {
+        const entry = await getEntryById(fav.entryId);
+        if (entry) {
+          entries.push(entry);
+        }
       }
+
+      setBookmarkedEntries(entries);
+      setIsLoading(false);
     }
-    return entries;
-  }, [favorites]);
+
+    loadEntries();
+  }, [favorites, isHydrated]);
 
   // 검색 필터링
   const filteredEntries = useMemo(() => {
@@ -50,8 +62,8 @@ export default function BookmarksPage() {
     });
   }, [bookmarkedEntries, searchQuery, locale]);
 
-  // Show loading only before hydration
-  if (!isHydrated) {
+  // Show loading only before hydration or while loading entries
+  if (!isHydrated || isLoading) {
     return (
       <Layout>
         <div className="flex items-center justify-center py-12">

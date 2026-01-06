@@ -1,12 +1,14 @@
 /**
  * Sitemap Generator for Context App
+ *
+ * lightEntries를 사용하여 sitemap 생성 (번들 최적화)
  */
 
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createDynamicUrls, generateSitemaps, type StaticPage } from '@soundblue/seo/sitemap';
 import { categories } from '../app/data/categories';
-import { meaningEntries } from '../app/data/entries';
+import { lightEntries } from '../app/data/entries';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -47,7 +49,7 @@ generateSitemaps(CONFIG, STATIC_PAGES, [
     urls: createDynamicUrls(
       CONFIG.siteUrl,
       '/entry',
-      meaningEntries.map((e) => e.id),
+      lightEntries.map((e) => e.id),
       '0.6',
       'monthly',
       CONFIG.languages,

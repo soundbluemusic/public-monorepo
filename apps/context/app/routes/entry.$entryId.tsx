@@ -24,10 +24,11 @@ import { useUserDataStore } from '@/stores/user-data-store';
 
 /**
  * Loader: SSG 빌드 시 데이터 로드
+ * 카테고리 청크에서 동적 로드 (번들 최적화)
  */
 export async function loader({ params }: { params: { entryId: string } }) {
   const { getEntryById } = await import('@/data/entries');
-  const entry = getEntryById(params.entryId);
+  const entry = await getEntryById(params.entryId);
   return { entry: entry || null };
 }
 
@@ -61,7 +62,7 @@ export async function clientLoader({
 
   // Fallback: load data on client side
   const { getEntryById } = await import('@/data/entries');
-  const entry = getEntryById(params.entryId);
+  const entry = await getEntryById(params.entryId);
   return { entry: entry || null };
 }
 

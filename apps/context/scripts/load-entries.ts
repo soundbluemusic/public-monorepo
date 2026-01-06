@@ -227,24 +227,27 @@ function generateTypeScriptFile(entries: JsonEntry[]): string {
     },
   }));
 
+  // 번들 최적화: 전체 데이터는 카테고리별 청크에서 로드
+  // jsonEntries 제거로 50MB → ~1MB 절감
   return `/**
- * @fileoverview 자동 생성된 엔트리 데이터
+ * @fileoverview 자동 생성된 엔트리 데이터 (경량 버전)
  *
  * 이 파일은 scripts/load-entries.ts에 의해 자동 생성됩니다.
  * 직접 수정하지 마세요. 대신 src/data/entries/*.json 파일을 수정하세요.
  *
+ * ## 번들 최적화
+ * - 전체 MeaningEntry 데이터는 /public/data/by-category-full/*.json에서 동적 로드
+ * - 이 파일에는 경량 LightEntry만 포함 (browse 페이지용)
+ *
  * @generated
  * @date ${new Date().toISOString()}
  */
-import type { MeaningEntry } from '../types';
-
-export const jsonEntries: MeaningEntry[] = ${JSON.stringify(entries, null, 2)} as const;
 
 export const jsonEntriesCount = ${entries.length};
 
 /**
  * Browse 페이지용 경량 엔트리
- * 전체 데이터 대비 ~85% 용량 절감 (1MB → 150KB)
+ * 전체 데이터 대비 ~95% 용량 절감
  */
 export interface LightEntry {
   id: string;
@@ -544,9 +547,15 @@ function generateChunks(entries: JsonEntry[]): void {
   };
   writeFileSync(join(CHUNKS_DIR, 'meta.json'), JSON.stringify(meta, null, 2));
 
+  // ID → categoryId 매핑 생성
+  const entryToCategory: Record<string, string> = {};
+  for (const entry of entries) {
+    entryToCategory[entry.id] = entry.categoryId;
+  }
+
   // ID → 청크 인덱스 TypeScript 파일 생성
   const indexContent = `/**
- * @fileoverview 엔트리 ID → 청크 인덱스 맵
+ * @fileoverview 엔트리 ID → 청크/카테고리 인덱스 맵
  *
  * 이 파일은 scripts/load-entries.ts에 의해 자동 생성됩니다.
  * 100만개+ 엔트리에서도 O(1) 조회 지원
@@ -558,6 +567,9 @@ function generateChunks(entries: JsonEntry[]): void {
 /** 엔트리 ID → 초성 (청크 키) */
 export const entryIndex: Record<string, string> = ${JSON.stringify(entryIndex)};
 
+/** 엔트리 ID → 카테고리 ID (entry 페이지 로딩용) */
+export const entryToCategory: Record<string, string> = ${JSON.stringify(entryToCategory)};
+
 /** 청크 메타 정보 */
 export const chunkMeta = ${JSON.stringify(meta, null, 2)};
 
@@ -566,9 +578,19 @@ export function getChunkKey(entryId: string): string | undefined {
   return entryIndex[entryId];
 }
 
+/** ID로 카테고리 조회 */
+export function getCategoryId(entryId: string): string | undefined {
+  return entryToCategory[entryId];
+}
+
 /** 청크 파일 URL 생성 */
 export function getChunkUrl(choseong: string): string {
   return \`/data/chunks/entries-\${choseong}.json\`;
+}
+
+/** 카테고리 전체 데이터 URL 생성 */
+export function getCategoryFullUrl(categoryId: string): string {
+  return \`/data/by-category-full/\${categoryId}.json\`;
 }
 `;
   writeFileSync(INDEX_FILE, indexContent);
@@ -580,7 +602,8 @@ export function getChunkUrl(choseong: string): string {
 
 /**
  * 카테고리별 JSON 청크 파일 생성
- * 100만개+ 확장성 지원 - 카테고리 선택 시 동적 fetch
+ * - light/: LightEntry (browse 페이지용, 경량)
+ * - full/: 전체 MeaningEntry (entry 페이지용)
  */
 function generateCategoryChunks(entries: JsonEntry[]): void {
   // 카테고리 청크 디렉토리 생성
@@ -588,13 +611,22 @@ function generateCategoryChunks(entries: JsonEntry[]): void {
     mkdirSync(CATEGORY_CHUNKS_DIR, { recursive: true });
   }
 
+  const fullChunksDir = join(dirname(CATEGORY_CHUNKS_DIR), 'by-category-full');
+  if (!existsSync(fullChunksDir)) {
+    mkdirSync(fullChunksDir, { recursive: true });
+  }
+
   console.log('\n📦 Generating JSON chunks by category...');
 
-  // 카테고리별 그룹화
+  // 카테고리별 그룹화 (경량)
   const byCategory = new Map<string, LightEntry[]>();
+  // 카테고리별 전체 데이터
+  const byCategoryFull = new Map<string, JsonEntry[]>();
+
   for (const entry of entries) {
-    const list = byCategory.get(entry.categoryId) || [];
-    list.push({
+    // 경량 데이터
+    const lightList = byCategory.get(entry.categoryId) || [];
+    lightList.push({
       id: entry.id,
       korean: entry.korean,
       romanization: entry.romanization,
@@ -604,15 +636,28 @@ function generateCategoryChunks(entries: JsonEntry[]): void {
         en: entry.translations.en.word,
       },
     });
-    byCategory.set(entry.categoryId, list);
+    byCategory.set(entry.categoryId, lightList);
+
+    // 전체 데이터
+    const fullList = byCategoryFull.get(entry.categoryId) || [];
+    fullList.push(entry);
+    byCategoryFull.set(entry.categoryId, fullList);
   }
 
-  // 각 카테고리 JSON 파일 생성
+  // 각 카테고리 JSON 파일 생성 (경량)
   for (const [categoryId, catEntries] of byCategory) {
     const filename = `${categoryId}.json`;
     const filepath = join(CATEGORY_CHUNKS_DIR, filename);
     writeFileSync(filepath, JSON.stringify(catEntries));
     console.log(`   ✓ by-category/${filename} (${catEntries.length} entries)`);
+  }
+
+  // 각 카테고리 JSON 파일 생성 (전체) - entry 페이지 SSG용
+  for (const [categoryId, catEntries] of byCategoryFull) {
+    const filename = `${categoryId}.json`;
+    const filepath = join(fullChunksDir, filename);
+    writeFileSync(filepath, JSON.stringify(catEntries));
+    console.log(`   ✓ by-category-full/${filename} (${catEntries.length} entries)`);
   }
 
   // 메타 정보 저장
@@ -628,7 +673,7 @@ function generateCategoryChunks(entries: JsonEntry[]): void {
   writeFileSync(join(CATEGORY_CHUNKS_DIR, 'meta.json'), JSON.stringify(meta, null, 2));
 
   console.log(`   ✓ meta.json`);
-  console.log(`✅ Generated ${byCategory.size} category chunk files`);
+  console.log(`✅ Generated ${byCategory.size} category chunk files (light + full)`);
 }
 
 /**

@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useState } from 'react';
 import type { categories } from '@/data/categories';
-import type { MeaningEntry } from '@/data/types';
+import type { LightEntry } from '@/data/entries';
 import { useFavorites, useIsHydrated, useStudyRecords } from '@/stores/user-data-store';
 
 export function useMyLearningData() {
-  const [entries, setEntries] = useState<MeaningEntry[]>([]);
+  const [entries, setEntries] = useState<LightEntry[]>([]);
   const [cats, setCats] = useState<typeof categories>([]);
   const [totalEntries, setTotalEntries] = useState(0);
   const [categoryProgress, setCategoryProgress] = useState<
@@ -22,18 +22,18 @@ export function useMyLearningData() {
   const studiedIds = useMemo(() => new Set(studyRecords.map((r) => r.entryId)), [studyRecords]);
   const favoriteIds = useMemo(() => new Set(favorites.map((f) => f.entryId)), [favorites]);
 
-  // 엔트리 데이터 로드 (한 번만)
+  // 엔트리 데이터 로드 (한 번만) - lightEntries 사용으로 번들 최적화
   useEffect(() => {
     async function loadData() {
       try {
-        const [{ meaningEntries }, { categories: loadedCategories }] = await Promise.all([
+        const [{ lightEntries }, { categories: loadedCategories }] = await Promise.all([
           import('@/data/entries'),
           import('@/data/categories'),
         ]);
 
-        setEntries(meaningEntries);
+        setEntries(lightEntries);
         setCats(loadedCategories);
-        setTotalEntries(meaningEntries.length);
+        setTotalEntries(lightEntries.length);
         setDataLoaded(true);
       } catch (err: unknown) {
         console.error('Failed to load my-learning data:', err);

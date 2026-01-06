@@ -19,30 +19,33 @@ const getPronunciation = (entry: MeaningEntry, locale: Language): string | undef
 
 /**
  * Loader: 빌드 시 데이터 로드 (SSG용)
- * 동적 import로 번들 크기 최적화 - 빌드 시에만 데이터 로드
+ * 번들 최적화: lightEntries + 개별 entry 조회
  */
 export async function loader() {
-  const { meaningEntries } = await import('@/data/entries');
+  const { lightEntries, getEntryById } = await import('@/data/entries');
 
   // 오늘의 단어 계산 (빌드 시점)
   const today = new Date();
   const dayOfYear = Math.floor(
     (today.getTime() - new Date(today.getFullYear(), 0, 0).getTime()) / 86400000,
   );
-  const randomIndex = dayOfYear % meaningEntries.length;
-  const dailyWord = meaningEntries[randomIndex];
+  const randomIndex = dayOfYear % lightEntries.length;
+  const dailyWordLight = lightEntries[randomIndex];
 
-  // 카테고리별 엔트리 수 계산
+  // 전체 entry 데이터 로드 (카테고리 청크에서)
+  const dailyWord = dailyWordLight ? await getEntryById(dailyWordLight.id) : null;
+
+  // 카테고리별 엔트리 수 계산 (lightEntries 기반)
   const categoryCounts: Record<string, number> = {};
   for (const cat of categories) {
-    categoryCounts[cat.id] = meaningEntries.filter((e) => e.categoryId === cat.id).length;
+    categoryCounts[cat.id] = lightEntries.filter((e) => e.categoryId === cat.id).length;
   }
 
   return {
     dailyWord,
     categories,
     categoryCounts,
-    totalEntries: meaningEntries.length,
+    totalEntries: lightEntries.length,
   };
 }
 

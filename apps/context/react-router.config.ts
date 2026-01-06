@@ -24,8 +24,9 @@ export default {
     const { getCategoriesWithConversations } = await import('./app/data/conversations.js');
 
     // Entry routes: 모든 entry 페이지를 SSG로 생성 (SEO 필수)
-    const { meaningEntries } = await import('./app/data/entries/index.js');
-    const entryRoutes = generateI18nRoutes(meaningEntries, (entry) => `/entry/${entry.id}`);
+    // lightEntries 사용 (번들 최적화 - 전체 데이터 대신 경량 버전)
+    const { lightEntries } = await import('./app/data/entries/index.js');
+    const entryRoutes = generateI18nRoutes(lightEntries, (entry) => `/entry/${entry.id}`);
 
     // Category routes
     const categoryRoutes = generateI18nRoutes(categories, (category) => `/category/${category.id}`);

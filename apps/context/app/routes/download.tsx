@@ -28,10 +28,19 @@ interface LoaderData {
 }
 
 export async function loader(): Promise<LoaderData> {
-  const { meaningEntries } = await import('@/data/entries');
+  // 모든 카테고리의 전체 데이터 로드
+  const { categories } = await import('@/data/categories');
+  const { getEntriesByCategory } = await import('@/data/entries');
+
+  const allEntries: MeaningEntry[] = [];
+  for (const category of categories) {
+    const categoryEntries = await getEntriesByCategory(category.id);
+    allEntries.push(...categoryEntries);
+  }
+
   return {
-    entries: meaningEntries,
-    totalCount: meaningEntries.length,
+    entries: allEntries,
+    totalCount: allEntries.length,
   };
 }
 
