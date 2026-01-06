@@ -51,6 +51,22 @@ export const ExamplesSchema = z.object({
 });
 
 // ============================================
+// 대화예문 (어휘별)
+// ============================================
+
+export const DialogueLineSchema = z.object({
+  speaker: z.enum(['A', 'B']),
+  text: z.string().min(1),
+  romanization: z.string().min(1),
+  translation: z.string().min(1),
+});
+
+export const EntryDialogueSchema = z.object({
+  context: z.string().min(1), // 대화 상황 설명 (예: "친구와 여행 계획을 세우며")
+  dialogue: z.array(DialogueLineSchema).min(2).max(6),
+});
+
+// ============================================
 // 변형 표현
 // ============================================
 
@@ -68,6 +84,7 @@ export const TranslationContentSchema = z.object({
   word: z.string().min(1),
   explanation: z.string().min(1),
   examples: ExamplesSchema,
+  dialogue: EntryDialogueSchema.optional(), // 어휘별 대화예문
   variations: VariationsSchema.optional(),
 });
 
@@ -106,6 +123,8 @@ export type Difficulty = z.infer<typeof DifficultySchema>;
 export type Frequency = z.infer<typeof FrequencySchema>;
 export type Pronunciation = z.infer<typeof PronunciationSchema>;
 export type Examples = z.infer<typeof ExamplesSchema>;
+export type DialogueLine = z.infer<typeof DialogueLineSchema>;
+export type EntryDialogue = z.infer<typeof EntryDialogueSchema>;
 export type Variations = z.infer<typeof VariationsSchema>;
 export type TranslationContent = z.infer<typeof TranslationContentSchema>;
 export type Translations = z.infer<typeof TranslationsSchema>;
