@@ -55,7 +55,7 @@ type MetaDescriptor =
   | { property: string; content: string }
   | { charSet: string }
   | { httpEquiv: string; content: string }
-  | { tagName: 'link'; rel: string; href: string; hreflang?: string };
+  | { tagName: 'link'; rel: string; href: string; hrefLang?: string };
 
 /**
  * React Router MetaFunction 호환 타입
@@ -95,11 +95,11 @@ function generateSeoLinkTags(pathname: string, baseUrl: string): MetaDescriptor[
     // Canonical: 현재 페이지 자기 자신
     { tagName: 'link', rel: 'canonical', href: canonicalUrl },
     // hreflang: 영어 버전
-    { tagName: 'link', rel: 'alternate', hreflang: 'en', href: enUrl },
+    { tagName: 'link', rel: 'alternate', hrefLang: 'en', href: enUrl },
     // hreflang: 한국어 버전
-    { tagName: 'link', rel: 'alternate', hreflang: 'ko', href: koUrl },
+    { tagName: 'link', rel: 'alternate', hrefLang: 'ko', href: koUrl },
     // x-default: 기본 언어 (영어)
-    { tagName: 'link', rel: 'alternate', hreflang: 'x-default', href: enUrl },
+    { tagName: 'link', rel: 'alternate', hrefLang: 'x-default', href: enUrl },
   ];
 }
 

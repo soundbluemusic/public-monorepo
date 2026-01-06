@@ -112,6 +112,38 @@ export interface MeaningEntry {
 }
 
 /**
+ * Locale별 엔트리 (번들 최적화용)
+ *
+ * MeaningEntry와 동일하지만 translations 대신 단일 translation 필드만 포함합니다.
+ * SSG 빌드 시 locale별로 분리된 JSON에서 로드되며, 약 50% 용량 절감 효과가 있습니다.
+ *
+ * ## Dialogue lazy-loading
+ * dialogue 데이터는 translation에 포함되지 않으며, hasDialogue 플래그로 존재 여부만 표시합니다.
+ * 실제 dialogue 데이터는 `/data/dialogues/{locale}/{entryId}.json`에서 별도 로드합니다.
+ *
+ * @property translation - 현재 locale의 번역만 포함 (dialogue 제외)
+ * @property hasDialogue - dialogue 데이터 존재 여부 (lazy-load용)
+ */
+export interface LocaleEntry {
+  id: string;
+  korean: string;
+  romanization: string;
+  pronunciation?: {
+    korean: string;
+    ipa?: string;
+  };
+  partOfSpeech: PartOfSpeech;
+  categoryId: string;
+  tags: string[];
+  difficulty: DifficultyLevel;
+  frequency?: FrequencyLevel;
+  /** dialogue 데이터 존재 여부 (별도 JSON에서 lazy-load) */
+  hasDialogue?: boolean;
+  /** 단일 locale의 번역 (dialogue 제외, 별도 로드) */
+  translation: Omit<Translation, 'dialogue'>;
+}
+
+/**
  * 품사 유형
  * - noun: 명사
  * - verb: 동사

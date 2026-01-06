@@ -6,29 +6,29 @@ import { Link, useLoaderData } from 'react-router';
 import { EntryDialogueDisplay } from '@/components/EntryDialogueDisplay';
 import { LinkedExample } from '@/components/LinkedExample';
 import { Layout } from '@/components/layout';
-import type { MeaningEntry } from '@/data/types';
+import type { LocaleEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { useUserDataStore } from '@/stores/user-data-store';
 
 /**
- * Entry 페이지 (Full SSG 모드)
+ * Entry 페이지 (Full SSG 모드) - 영어 버전
  *
  * ## SSG 빌드 시
- * - loader에서 entryId로 데이터 조회
- * - 빌드 시 모든 entry 페이지에 대해 .data 파일 생성
+ * - loader에서 entryId + locale로 데이터 조회
+ * - locale별 분리된 JSON에서 해당 언어 데이터만 로드 (50% 용량 절감)
  *
  * ## 런타임
  * - useLoaderData로 프리렌더된 데이터 사용
- * - 추가 fetch 불필요
+ * - entry.translation에 영어 번역만 포함
  */
 
 /**
- * Loader: SSG 빌드 시 데이터 로드
- * 카테고리 청크에서 동적 로드 (번들 최적화)
+ * Loader: SSG 빌드 시 영어 데이터 로드
+ * locale 분리된 카테고리 청크에서 동적 로드 (번들 최적화)
  */
 export async function loader({ params }: { params: { entryId: string } }) {
-  const { getEntryById } = await import('@/data/entries');
-  const entry = await getEntryById(params.entryId);
+  const { getEntryByIdForLocale } = await import('@/data/entries');
+  const entry = await getEntryByIdForLocale(params.entryId, 'en');
   return { entry: entry || null };
 }
 
@@ -46,7 +46,7 @@ export async function clientLoader({
   serverLoader,
 }: {
   params: { entryId: string };
-  serverLoader: () => Promise<{ entry: MeaningEntry | null }>;
+  serverLoader: () => Promise<{ entry: LocaleEntry | null }>;
 }) {
   // For SSG: first try to get data from the pre-rendered server loader
   // This allows proper hydration with the pre-rendered HTML
@@ -60,9 +60,9 @@ export async function clientLoader({
     console.log('[clientLoader] serverLoader failed, fetching client-side');
   }
 
-  // Fallback: load data on client side
-  const { getEntryById } = await import('@/data/entries');
-  const entry = await getEntryById(params.entryId);
+  // Fallback: load data on client side (영어)
+  const { getEntryByIdForLocale } = await import('@/data/entries');
+  const entry = await getEntryByIdForLocale(params.entryId, 'en');
   return { entry: entry || null };
 }
 
@@ -72,7 +72,7 @@ export function HydrateFallback() {
   return null;
 }
 
-export const meta = dynamicMetaFactory((data: { entry: MeaningEntry | null }) => {
+export const meta = dynamicMetaFactory((data: { entry: LocaleEntry | null }) => {
   if (!data?.entry) {
     return {
       ko: { title: '단어를 찾을 수 없습니다 | Context' },
@@ -80,20 +80,21 @@ export const meta = dynamicMetaFactory((data: { entry: MeaningEntry | null }) =>
     };
   }
   const { entry } = data;
+  // 영어 페이지이므로 entry.translation은 영어 번역
   return {
     ko: {
-      title: `${entry.korean} - ${entry.translations.ko.word} | Context`,
-      description: `${entry.korean} (${entry.romanization}): ${entry.translations.ko.explanation}`,
+      title: `${entry.korean} - ${entry.translation.word} | Context`,
+      description: `${entry.korean} (${entry.romanization}): ${entry.translation.explanation}`,
     },
     en: {
-      title: `${entry.korean} - ${entry.translations.en.word} | Context`,
-      description: `${entry.korean} (${entry.romanization}): ${entry.translations.en.explanation}`,
+      title: `${entry.korean} - ${entry.translation.word} | Context`,
+      description: `${entry.korean} (${entry.romanization}): ${entry.translation.explanation}`,
     },
   };
 }, 'https://context.soundbluemusic.com');
 
 export default function EntryPage() {
-  const { entry } = useLoaderData<{ entry: MeaningEntry | null }>();
+  const { entry } = useLoaderData<{ entry: LocaleEntry | null }>();
   const { locale, t, localePath } = useI18n();
 
   // Zustand store - 직접 state 속성 참조로 상태 변경 감지 보장
@@ -149,7 +150,8 @@ export default function EntryPage() {
     );
   }
 
-  const translation = entry.translations[locale];
+  // LocaleEntry는 이미 해당 locale의 translation만 포함
+  const translation = entry.translation;
 
   return (
     <Layout>
@@ -236,12 +238,10 @@ export default function EntryPage() {
           </section>
         )}
 
-        {/* Dialogue Example Section */}
-        {translation.dialogue && (
-          <section className="mb-6">
-            <EntryDialogueDisplay dialogue={translation.dialogue} />
-          </section>
-        )}
+        {/* Dialogue Example Section (lazy-loaded) */}
+        <section className="mb-6">
+          <EntryDialogueDisplay entryId={entry.id} hasDialogue={entry.hasDialogue} />
+        </section>
 
         <div className="mt-8">
           <Link

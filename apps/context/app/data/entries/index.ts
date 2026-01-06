@@ -25,7 +25,7 @@
 // JSON에서 생성된 경량 엔트리 (prebuild 스크립트에서 생성됨)
 import { jsonEntriesCount, type LightEntry, lightEntries } from '../generated/entries';
 import { entryToCategory } from '../generated/entry-index';
-import type { Language, MeaningEntry } from '../types';
+import type { Language, LocaleEntry, MeaningEntry } from '../types';
 
 // Re-export 경량 버전
 export { lightEntries, type LightEntry, jsonEntriesCount };
@@ -34,17 +34,23 @@ export { lightEntries, type LightEntry, jsonEntriesCount };
 // 카테고리별 청크 캐시 (런타임에서 재사용)
 // ============================================================================
 
-/** 카테고리 → 전체 Entry 배열 캐시 */
-const categoryCache = new Map<string, MeaningEntry[]>();
+/** 카테고리+locale → LocaleEntry 배열 캐시 */
+const localeCategoryCache = new Map<string, LocaleEntry[]>();
 
 /**
- * 카테고리별 전체 데이터 로드 (캐시됨)
+ * 카테고리별 locale 분리 데이터 로드 (캐시됨)
  * SSG 빌드 시: Node.js fs로 JSON 파일 읽기
  * 런타임 시: fetch로 JSON 파일 요청
+ *
+ * @param categoryId - 카테고리 ID
+ * @param locale - 언어 코드 ('en' | 'ko')
+ * @returns LocaleEntry 배열 (단일 locale 번역만 포함)
  */
-async function loadCategoryFull(categoryId: string): Promise<MeaningEntry[]> {
+async function loadCategoryByLocale(categoryId: string, locale: Language): Promise<LocaleEntry[]> {
+  const cacheKey = `${locale}:${categoryId}`;
+
   // 캐시 확인
-  const cached = categoryCache.get(categoryId);
+  const cached = localeCategoryCache.get(cacheKey);
   if (cached) return cached;
 
   try {
@@ -53,25 +59,28 @@ async function loadCategoryFull(categoryId: string): Promise<MeaningEntry[]> {
       const { readFileSync } = await import('node:fs');
       const { join } = await import('node:path');
 
-      // process.cwd()는 apps/context에서 실행되므로 public/ 직접 참조
-      const filePath = join(process.cwd(), `public/data/by-category-full/${categoryId}.json`);
+      // locale별 분리된 디렉토리에서 로드
+      const filePath = join(
+        process.cwd(),
+        `public/data/by-category-full/${locale}/${categoryId}.json`,
+      );
       const content = readFileSync(filePath, 'utf-8');
-      const entries: MeaningEntry[] = JSON.parse(content);
-      categoryCache.set(categoryId, entries);
+      const entries: LocaleEntry[] = JSON.parse(content);
+      localeCategoryCache.set(cacheKey, entries);
       return entries;
     }
 
     // 브라우저 런타임 (클라이언트 사이드 네비게이션)
-    const response = await fetch(`/data/by-category-full/${categoryId}.json`);
+    const response = await fetch(`/data/by-category-full/${locale}/${categoryId}.json`);
     if (!response.ok) {
-      console.warn(`Failed to load category: ${categoryId}`);
+      console.warn(`Failed to load category: ${locale}/${categoryId}`);
       return [];
     }
-    const entries: MeaningEntry[] = await response.json();
-    categoryCache.set(categoryId, entries);
+    const entries: LocaleEntry[] = await response.json();
+    localeCategoryCache.set(cacheKey, entries);
     return entries;
   } catch (error) {
-    console.error(`Error loading category ${categoryId}:`, error);
+    console.error(`Error loading category ${locale}/${categoryId}:`, error);
     return [];
   }
 }
@@ -81,8 +90,49 @@ async function loadCategoryFull(categoryId: string): Promise<MeaningEntry[]> {
 // ============================================================================
 
 /**
- * ID로 엔트리 조회 (비동기)
- * 카테고리 청크에서 동적 로드 후 캐시
+ * ID로 locale별 엔트리 조회 (비동기)
+ * locale 분리된 카테고리 청크에서 동적 로드 후 캐시
+ *
+ * @param id - 엔트리 ID
+ * @param locale - 언어 코드 ('en' | 'ko')
+ * @returns LocaleEntry (단일 locale 번역만 포함) 또는 undefined
+ */
+export async function getEntryByIdForLocale(
+  id: string,
+  locale: Language,
+): Promise<LocaleEntry | undefined> {
+  const categoryId = entryToCategory[id];
+  if (!categoryId) {
+    console.warn(`Entry not found in index: ${id}`);
+    return undefined;
+  }
+
+  const entries = await loadCategoryByLocale(categoryId, locale);
+  return entries.find((e) => e.id === id);
+}
+
+/**
+ * 카테고리 ID로 locale별 엔트리 필터링 (비동기)
+ *
+ * @param categoryId - 카테고리 ID
+ * @param locale - 언어 코드 ('en' | 'ko')
+ * @returns LocaleEntry 배열
+ */
+export async function getEntriesByCategoryForLocale(
+  categoryId: string,
+  locale: Language,
+): Promise<LocaleEntry[]> {
+  return loadCategoryByLocale(categoryId, locale);
+}
+
+// ============================================================================
+// Legacy 함수 (하위 호환성 - 양쪽 locale 데이터 필요한 경우)
+// ============================================================================
+
+/**
+ * @deprecated Use getEntryByIdForLocale instead for better performance
+ * ID로 엔트리 조회 (양쪽 locale 데이터 포함)
+ * 두 locale을 모두 로드해서 MeaningEntry 형태로 반환
  */
 export async function getEntryById(id: string): Promise<MeaningEntry | undefined> {
   const categoryId = entryToCategory[id];
@@ -91,15 +141,71 @@ export async function getEntryById(id: string): Promise<MeaningEntry | undefined
     return undefined;
   }
 
-  const entries = await loadCategoryFull(categoryId);
-  return entries.find((e) => e.id === id);
+  // 양쪽 locale 데이터 로드
+  const [enEntries, koEntries] = await Promise.all([
+    loadCategoryByLocale(categoryId, 'en'),
+    loadCategoryByLocale(categoryId, 'ko'),
+  ]);
+
+  const enEntry = enEntries.find((e) => e.id === id);
+  const koEntry = koEntries.find((e) => e.id === id);
+
+  if (!enEntry || !koEntry) return undefined;
+
+  // MeaningEntry 형태로 재구성
+  return {
+    id: enEntry.id,
+    korean: enEntry.korean,
+    romanization: enEntry.romanization,
+    pronunciation: enEntry.pronunciation as MeaningEntry['pronunciation'],
+    partOfSpeech: enEntry.partOfSpeech,
+    categoryId: enEntry.categoryId,
+    tags: enEntry.tags,
+    difficulty: enEntry.difficulty,
+    frequency: enEntry.frequency,
+    translations: {
+      en: enEntry.translation,
+      ko: koEntry.translation,
+    },
+  };
 }
 
 /**
- * 카테고리 ID로 엔트리 필터링 (비동기)
+ * @deprecated Use getEntriesByCategoryForLocale instead for better performance
+ * 카테고리 ID로 엔트리 필터링 (양쪽 locale 데이터 포함)
  */
 export async function getEntriesByCategory(categoryId: string): Promise<MeaningEntry[]> {
-  return loadCategoryFull(categoryId);
+  // 양쪽 locale 데이터 로드
+  const [enEntries, koEntries] = await Promise.all([
+    loadCategoryByLocale(categoryId, 'en'),
+    loadCategoryByLocale(categoryId, 'ko'),
+  ]);
+
+  // ID 기반 매핑
+  const koMap = new Map(koEntries.map((e) => [e.id, e]));
+
+  return enEntries
+    .map((enEntry) => {
+      const koEntry = koMap.get(enEntry.id);
+      if (!koEntry) return null;
+
+      return {
+        id: enEntry.id,
+        korean: enEntry.korean,
+        romanization: enEntry.romanization,
+        pronunciation: enEntry.pronunciation as MeaningEntry['pronunciation'],
+        partOfSpeech: enEntry.partOfSpeech,
+        categoryId: enEntry.categoryId,
+        tags: enEntry.tags,
+        difficulty: enEntry.difficulty,
+        frequency: enEntry.frequency,
+        translations: {
+          en: enEntry.translation,
+          ko: koEntry.translation,
+        },
+      } as MeaningEntry;
+    })
+    .filter((e): e is MeaningEntry => e !== null);
 }
 
 // ============================================================================

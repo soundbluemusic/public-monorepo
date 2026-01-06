@@ -24,7 +24,7 @@ type MetaDescriptor =
   | { property: string; content: string }
   | { charSet: string }
   | { httpEquiv: string; content: string }
-  | { tagName: 'link'; rel: string; href: string; hreflang?: string };
+  | { tagName: 'link'; rel: string; href: string; hrefLang?: string };
 
 type MetaFunctionArgs = {
   location: { pathname: string };
@@ -49,9 +49,9 @@ function generateSeoLinkTags(pathname: string, baseUrl: string): MetaDescriptor[
 
   return [
     { tagName: 'link', rel: 'canonical', href: canonicalUrl },
-    { tagName: 'link', rel: 'alternate', hreflang: 'en', href: enUrl },
-    { tagName: 'link', rel: 'alternate', hreflang: 'ko', href: koUrl },
-    { tagName: 'link', rel: 'alternate', hreflang: 'x-default', href: enUrl },
+    { tagName: 'link', rel: 'alternate', hrefLang: 'en', href: enUrl },
+    { tagName: 'link', rel: 'alternate', hrefLang: 'ko', href: koUrl },
+    { tagName: 'link', rel: 'alternate', hrefLang: 'x-default', href: enUrl },
   ];
 }
 
