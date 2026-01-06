@@ -25,7 +25,7 @@
 ## 🚀 Apps
 
 ### 📖 Context — Korean Dictionary
-> **학습자를 위한 한국어 사전** | 2,012 SSG pages
+> **학습자를 위한 한국어 사전** | 2,514 SSG pages
 >
 > 한국어 학습자를 위한 맥락 기반 사전. 단어의 의미, 예문, 관련 표현을 제공합니다.
 
@@ -33,7 +33,7 @@
 |---|---|
 | **Live** | [context.soundbluemusic.com](https://context.soundbluemusic.com) |
 | **Source** | [apps/context](apps/context) |
-| **Features** | 978 entries, 22 categories, 8 conversations |
+| **Features** | 1220 entries, 24 categories, 53 conversations |
 
 ### 🔧 Permissive — Web Dev Resources
 > **무료 웹개발 자료 모음** | 8 SSG pages
@@ -47,7 +47,7 @@
 | **Features** | 88 libraries, 56 Web APIs |
 
 ### 📐 Roots — Math Documentation
-> **학습자를 위한 수학 문서** | 976 SSG pages
+> **학습자를 위한 수학 문서** | 920 SSG pages
 >
 > 수학 개념을 체계적으로 정리한 학습 문서. 대수학, 기하학, 미적분 등 다양한 분야를 다룹니다.
 
@@ -55,7 +55,7 @@
 |---|---|
 | **Live** | [roots.soundbluemusic.com](https://roots.soundbluemusic.com) |
 | **Source** | [apps/roots](apps/roots) |
-| **Features** | 414 concepts, 18 fields |
+| **Features** | 438 concepts, 18 fields |
 
 ---
 
@@ -134,10 +134,10 @@ React Router v7의 `prerender()` + `loader()` 패턴으로 **빌드 시** 모든
 
 | App | Dynamic Routes | SSG Pages | Data Source |
 |:----|:---------------|:---------:|:------------|
-| **Context** | 978 entries + 22 categories + 8 conversations | 2,012 | JSON |
-| **Roots** | 414 concepts + 18 fields | 976 | TypeScript |
+| **Context** | 1220 entries + 24 categories + 53 conversations | 2,514 | JSON |
+| **Roots** | 438 concepts + 18 fields | 920 | TypeScript |
 | **Permissive** | 4 static routes | 8 | Array literals |
-| **Total** | — | **2,996** | — |
+| **Total** | — | **3,442** | — |
 
 ### Code Pattern
 
@@ -194,9 +194,9 @@ setTimeout(() => {
 public-monorepo/
 │
 ├── apps/                    # 3 applications
-│   ├── context/             # Korean dictionary (2,012 SSG pages)
+│   ├── context/             # Korean dictionary (2,514 SSG pages)
 │   ├── permissive/          # Web dev resources (8 SSG pages)
-│   └── roots/               # Math documentation (976 SSG pages)
+│   └── roots/               # Math documentation (920 SSG pages)
 │
 ├── packages/                # 10 shared packages (Layer 0-3)
 │   ├── core/                # [L0] Pure functions, validation, types
@@ -211,8 +211,8 @@ public-monorepo/
 │   └── ui/                  # [L3] React components
 │
 ├── data/                    # Centralized JSON data (SSoT)
-│   ├── context/             # 978 Korean entries
-│   ├── roots/               # 414 math concepts
+│   ├── context/             # 1220 Korean entries
+│   ├── roots/               # 438 math concepts
 │   └── permissive/          # 88 libraries, 56 Web APIs
 │
 └── package.json
@@ -267,23 +267,59 @@ All routes are duplicated for each language at build time (SSG).
 |:--------|:---------------|
 | **Pre-rendered HTML** | 모든 페이지 빌드 시 완전한 HTML 생성 |
 | **Meta Tags** | 동적 title, description, og:image |
+| **Canonical URLs** | 모든 페이지에 자기 참조 canonical 태그 |
+| **Hreflang Tags** | 영어/한국어 페이지 상호 연결 |
 | **Sitemap** | 자동 생성 (`/sitemap.xml`, `/sitemap-*.xml`) |
 | **Robots.txt** | 검색 엔진 크롤링 허용 |
-| **Canonical URLs** | 중복 콘텐츠 방지 |
-| **Structured Data** | JSON-LD 스키마 (향후) |
 
-### Meta Tag Pattern
+### Canonical & Hreflang Implementation
+
+> **Google Search Console 색인 오류 해결을 위해 2026-01-05에 구현됨**
+
+다국어 사이트에서 검색 엔진이 각 언어 버전을 올바르게 인식하도록 canonical과 hreflang 태그를 모든 페이지에 자동 생성합니다.
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  /entry/hello (영어 페이지)                                      │
+│  ┌─────────────────────────────────────────────────────────┐   │
+│  │ <link rel="canonical" href=".../entry/hello" />         │   │
+│  │ <link rel="alternate" hreflang="en" href=".../entry/hello" />│
+│  │ <link rel="alternate" hreflang="ko" href=".../ko/entry/hello"/>│
+│  └─────────────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────────────┘
+                              ↕ 상호 연결
+┌─────────────────────────────────────────────────────────────────┐
+│  /ko/entry/hello (한국어 페이지)                                 │
+│  ┌─────────────────────────────────────────────────────────┐   │
+│  │ <link rel="canonical" href=".../ko/entry/hello" />      │   │
+│  │ <link rel="alternate" hreflang="en" href=".../entry/hello" />│
+│  │ <link rel="alternate" hreflang="ko" href=".../ko/entry/hello"/>│
+│  └─────────────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Meta Factory Pattern
+
+정적 라우트와 동적 라우트 모두 SEO 태그를 자동 생성합니다.
 
 ```typescript
-// routes/entry.$entryId.tsx
-export function meta({ data }: Route.MetaArgs) {
-  return [
-    { title: `${data.entry.title} | Context` },
-    { name: 'description', content: data.entry.description },
-    { property: 'og:title', content: data.entry.title },
-    { property: 'og:type', content: 'article' },
-  ];
-}
+// 정적 라우트: metaFactory 사용
+import { metaFactory } from '@soundblue/i18n';
+
+export const meta = metaFactory({
+  ko: { title: '소개 - Context', description: '한국어 사전 소개' },
+  en: { title: 'About - Context', description: 'About Korean Dictionary' },
+}, 'https://context.soundbluemusic.com');
+// → canonical, hreflang 태그 자동 생성
+
+// 동적 라우트: dynamicMetaFactory 사용
+import { dynamicMetaFactory } from '@soundblue/seo/meta';
+
+export const meta = dynamicMetaFactory<typeof loader>({
+  getTitle: (data) => `${data.entry.korean} - Context`,
+  getDescription: (data) => data.entry.translations.en.explanation,
+  baseUrl: 'https://context.soundbluemusic.com',
+});
 ```
 
 ### Verification
@@ -292,6 +328,14 @@ export function meta({ data }: Route.MetaArgs) {
 pnpm verify:ssg    # 모든 페이지 meta tag 검증
 pnpm check:links   # 깨진 링크 검사
 ```
+
+### Troubleshooting: Google Search Console
+
+| 오류 | 원인 | 해결 |
+|:-----|:-----|:-----|
+| "페이지가 색인되지 않음" | canonical/hreflang 누락 | metaFactory 사용 |
+| "중복 페이지" | canonical 미설정 | 자기 참조 canonical 추가 |
+| "대체 페이지 선택됨" | hreflang 미설정 | 양방향 hreflang 추가 |
 
 ---
 

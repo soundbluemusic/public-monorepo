@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 [![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?logo=react-router)](https://reactrouter.com)
 [![100% SSG](https://img.shields.io/badge/100%25-SSG-brightgreen)](https://en.wikipedia.org/wiki/Static_site_generator)
-[![SSG Routes](https://img.shields.io/badge/SSG_Routes-184-blue)](react-router.config.ts)
+[![SSG Routes](https://img.shields.io/badge/SSG_Routes-8-blue)](react-router.config.ts)
 
 **[Live Site](https://permissive.soundbluemusic.com)**
 
@@ -28,7 +28,7 @@ A comprehensive collection of free web development resources:
 ```
 react-router.config.ts
 ├── ssr: false
-├── prerender() → 184 static routes generated
+├── prerender() → 8 static routes generated
 │   ├── Static routes from routes.ts (extractStaticRoutes)
 │   └── Library detail routes from data (88 × 2 langs)
 └── loader() functions → .data files for each route
@@ -63,7 +63,7 @@ app/data/
 | `/library/:slug` | ✓ | ✓ | 88 | Library detail page |
 | `/sitemap` | ✓ | ✓ | - | Sitemap |
 
-**Total:** 184 SSG routes (92 EN + 92 KO)
+**Total:** 8 SSG routes (4 EN + 4 KO)
 
 ---
 
@@ -82,7 +82,7 @@ app/data/
 
 | Feature | Context | Roots | Permissive |
 |:--------|:-------:|:-----:|:----------:|
-| SSG Routes | 2012 | 976 | 184 |
+| SSG Routes | 2514 | 920 | 8 |
 | Search | ✓ MiniSearch | ✓ MiniSearch | ✓ MiniSearch |
 | Favorites | ✓ | ✓ | ❌ |
 | Detail pages | ✓ | ✓ | ✓ |

@@ -137,7 +137,7 @@ export const storage: StorageFactory = {
    - `ssr: false` + `prerender()` + `loader()` in `react-router.config.ts`
    - 빌드 출력: `build/client` (HTML + JS + .data 파일)
    - 런타임 서버 없음, CDN에서 직접 서빙
-   - 각 앱 SSG 라우트: Context 2012개, Roots 976개, Permissive 8개
+   - 각 앱 SSG 라우트: Context 2514개, Roots 920개, Permissive 8개
 2. **오픈소스 Only** - 모든 라이브러리/도구는 오픈소스만 사용.
 3. **웹 표준 API Only** - 브라우저 표준 API만 사용. 벤더 종속 API 금지.
 4. **로컬 스토리지 Only** - DB는 localStorage, IndexedDB만 사용. 외부 DB/CMS 절대 금지.
@@ -605,7 +605,7 @@ validateId()는 빈 문자열에 대해 ValidationError를 던집니다."
 ```
 data/
 ├── context/           # Context 앱 데이터
-│   └── entries/       # 978개 한국어 단어 (JSON)
+│   └── entries/       # 1220개 한국어 단어 (JSON)
 │       ├── greetings.json
 │       ├── food.json
 │       └── ...
@@ -676,6 +676,66 @@ function BadExample() {
   return <h1>{locale === 'ko' ? '안녕하세요' : 'Hello'}</h1>;
 }
 ```
+
+## SEO Rules (SEO 규칙)
+
+> **모든 라우트에 canonical과 hreflang 태그 필수 (Google Search Console 색인 오류 방지)**
+
+### Required: Meta Factory 사용
+
+새 라우트 추가 시 반드시 `metaFactory` 또는 `dynamicMetaFactory`를 사용하여 SEO 태그를 자동 생성합니다.
+
+```typescript
+// ✅ 정적 라우트: metaFactory (필수)
+import { metaFactory } from '@soundblue/i18n';
+
+export const meta = metaFactory({
+  ko: { title: '페이지 제목', description: '페이지 설명' },
+  en: { title: 'Page Title', description: 'Page description' },
+}, 'https://app.soundbluemusic.com');
+// 자동 생성: canonical, hreflang (en, ko)
+
+// ✅ 동적 라우트: dynamicMetaFactory (필수)
+import { dynamicMetaFactory } from '@soundblue/seo/meta';
+
+export const meta = dynamicMetaFactory<typeof loader>({
+  getTitle: (data) => data.entry.title,
+  getDescription: (data) => data.entry.description,
+  baseUrl: 'https://app.soundbluemusic.com',
+});
+
+// ❌ 금지: 직접 meta 배열 반환 (canonical/hreflang 누락)
+export const meta = () => [
+  { title: 'Page Title' },
+  { name: 'description', content: 'Description' },
+];
+```
+
+### Generated SEO Tags
+
+`metaFactory`와 `dynamicMetaFactory`는 다음 태그를 자동 생성합니다:
+
+| Tag | Purpose | Example |
+|-----|---------|---------|
+| `<link rel="canonical">` | 현재 페이지 URL | `href="https://app.com/page"` |
+| `<link rel="alternate" hreflang="en">` | 영어 버전 | `href="https://app.com/page"` |
+| `<link rel="alternate" hreflang="ko">` | 한국어 버전 | `href="https://app.com/ko/page"` |
+| `<link rel="alternate" hreflang="x-default">` | 기본 언어 | `href="https://app.com/page"` |
+
+### SEO Checklist for New Routes
+
+- [ ] `metaFactory` 또는 `dynamicMetaFactory` 사용
+- [ ] `baseUrl` 파라미터에 올바른 도메인 전달
+- [ ] 영어/한국어 title, description 모두 제공
+- [ ] 한국어 라우트 (`ko.*.tsx`)에서도 meta export
+
+### File Locations
+
+| Package | File | Purpose |
+|---------|------|---------|
+| `@soundblue/i18n` | `src/meta/factory.ts` | 정적 라우트용 metaFactory |
+| `@soundblue/seo` | `src/meta/factory.ts` | 동적 라우트용 dynamicMetaFactory |
+| `@soundblue/seo` | `src/meta/seo.ts` | SEO 헬퍼 함수들 |
 
 ## Component Writing Rules (컴포넌트 작성 규칙)
 

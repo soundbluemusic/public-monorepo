@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 [![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?logo=react-router)](https://reactrouter.com)
 [![100% SSG](https://img.shields.io/badge/100%25-SSG-brightgreen)](https://en.wikipedia.org/wiki/Static_site_generator)
-[![SSG Routes](https://img.shields.io/badge/SSG_Routes-976-blue)](react-router.config.ts)
+[![SSG Routes](https://img.shields.io/badge/SSG_Routes-920-blue)](react-router.config.ts)
 
 **[Live Site](https://roots.soundbluemusic.com)**
 
@@ -16,7 +16,7 @@
 A math documentation site designed for learners:
 
 - **438 Math Concepts** - From elementary to graduate level
-- **50 Math Fields** - Algebra, Calculus, Geometry, etc.
+- **18 Math Fields** - Algebra, Calculus, Geometry, etc.
 - **MathML Rendering** - Browser-native LaTeX formulas
 - **Difficulty Levels** - Elementary → Graduate+
 - **Bilingual** - Korean ↔ English
@@ -30,15 +30,15 @@ A math documentation site designed for learners:
 ```
 react-router.config.ts
 ├── ssr: false
-├── prerender() → 976 static routes generated
+├── prerender() → 920 static routes generated
 │   ├── concept-names.json → 438 concept routes × 2 langs
-│   └── fields.ts → 50 field routes × 2 langs
+│   └── fields.ts → 18 field routes × 2 langs
 └── loader() functions → .data files for each route
 
 Build output (build/client/):
 ├── index.html, ko/index.html
 ├── concept/{id}.html, ko/concept/{id}.html (×438)
-├── field/{id}.html, ko/field/{id}.html (×50)
+├── field/{id}.html, ko/field/{id}.html (×18)
 └── *.data files (prerendered loader data)
 ```
 
@@ -49,7 +49,7 @@ data/roots/concepts/      # Centralized JSON (SSoT)
 ├── algebra.json
 ├── calculus.json
 ├── geometry.json
-└── ... (50 field files, 438 concepts total)
+└── ... (18 field files, 438 concepts total)
 
 app/data/
 ├── concepts.ts           # TypeScript loader
@@ -80,7 +80,7 @@ Browser-native MathML (no KaTeX/MathJax bundle required).
 | `/favorites` | ✓ | ✓ | - | Saved concepts |
 | `/about` | ✓ | ✓ | - | About |
 
-**Total:** 976 SSG routes (488 EN + 488 KO)
+**Total:** 920 SSG routes (460 EN + 460 KO)
 
 ---
 

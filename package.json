@@ -35,6 +35,7 @@
     "lhci:roots": "APP=roots lhci autorun",
     "lhci:all": "pnpm lhci:context && pnpm lhci:permissive && pnpm lhci:roots",
     "add-data": "tsx scripts/add-data.ts",
+    "sync:stats": "tsx scripts/sync-stats.ts",
     "prepare": "husky",
     "postinstall": "pnpm --filter './apps/*' prebuild",
     "prebuild:all": "pnpm --filter './apps/*' prebuild",
