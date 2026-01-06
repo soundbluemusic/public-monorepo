@@ -1,2 +1,2 @@
-pnpm sync:stats && git add meta.json README.md CLAUDE.md apps/context/README.md apps/roots/README.md apps/permissive/README.md
+pnpm sync:stats && git add meta.json data/context/meta.json README.md CLAUDE.md apps/context/README.md apps/roots/README.md apps/permissive/README.md
 pnpm typecheck

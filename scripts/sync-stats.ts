@@ -514,6 +514,15 @@ function main() {
   writeFileSync(metaPath, JSON.stringify(stats, null, 2), 'utf-8');
   console.log(`\n✅ Saved stats to meta.json`);
 
+  // data/context/meta.json 타임스탬프 업데이트 (SEO: 데이터 신선도 표시)
+  const contextMetaPath = join(ROOT_DIR, 'data/context/meta.json');
+  if (existsSync(contextMetaPath)) {
+    const contextMeta = JSON.parse(readFileSync(contextMetaPath, 'utf-8'));
+    contextMeta.generatedAt = stats.generatedAt;
+    writeFileSync(contextMetaPath, JSON.stringify(contextMeta, null, 2), 'utf-8');
+    console.log('✅ Updated data/context/meta.json timestamp');
+  }
+
   if (isCheckOnly) {
     console.log('\n🔍 Check mode: verifying docs are in sync...');
     // TODO: 실제 검증 로직 추가
