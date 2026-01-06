@@ -15,7 +15,14 @@
  * - data/context/entries/*.json (동기화)
  */
 
-import { copyFileSync, existsSync, mkdirSync, readdirSync, writeFileSync } from 'node:fs';
+import {
+  copyFileSync,
+  existsSync,
+  mkdirSync,
+  readdirSync,
+  readFileSync,
+  writeFileSync,
+} from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -92,17 +99,18 @@ function syncEntries() {
 }
 
 // ============================================================================
-// 4. 메타데이터 생성
+// 4. 메타데이터 생성 (콘텐츠 변경 시에만 타임스탬프 업데이트)
 // ============================================================================
 async function generateMeta() {
   const { categories } = await import('../app/data/categories.js');
   const { conversations } = await import('../app/data/conversations.js');
 
   const files = readdirSync(entriesDir).filter((f) => f.endsWith('.json'));
+  const metaPath = join(REPO_DATA_DIR, 'meta.json');
 
-  const meta = {
+  // 새 메타데이터 (타임스탬프 제외)
+  const newMetaContent = {
     version: '1.0.0',
-    generatedAt: new Date().toISOString(),
     baseUrl: 'https://raw.githubusercontent.com/soundbluemusic/public-monorepo/main/data/context',
     files: {
       categories: 'categories.json',
@@ -116,8 +124,38 @@ async function generateMeta() {
     },
   };
 
-  const outPath = join(REPO_DATA_DIR, 'meta.json');
-  writeFileSync(outPath, JSON.stringify(meta, null, 2));
+  // 기존 메타데이터 읽기
+  let existingTimestamp = new Date().toISOString();
+  if (existsSync(metaPath)) {
+    try {
+      const existingMeta = JSON.parse(readFileSync(metaPath, 'utf-8'));
+      // 타임스탬프 제외하고 비교
+      const { generatedAt, ...existingContent } = existingMeta;
+
+      // 콘텐츠가 동일하면 기존 타임스탬프 유지
+      if (JSON.stringify(existingContent) === JSON.stringify(newMetaContent)) {
+        existingTimestamp = generatedAt;
+      }
+    } catch {
+      // 파일 읽기 실패 시 새 타임스탬프 사용
+    }
+  }
+
+  const meta = {
+    ...newMetaContent,
+    generatedAt: existingTimestamp,
+  };
+
+  // JSON 속성 순서 보장 (generatedAt이 version 다음에 오도록)
+  const orderedMeta = {
+    version: meta.version,
+    generatedAt: meta.generatedAt,
+    baseUrl: meta.baseUrl,
+    files: meta.files,
+    counts: meta.counts,
+  };
+
+  writeFileSync(metaPath, JSON.stringify(orderedMeta, null, 2));
   console.log(`  ✓ meta.json`);
 }
 
