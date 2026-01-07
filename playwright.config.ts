@@ -57,4 +57,26 @@ export default defineConfig({
         /roots|button-interactions|accessibility|responsive|mobile|seo|pwa|security|visual/,
     },
   ],
+
+  /* 빌드된 앱을 서빙하는 preview 서버 (CI에서 필요) */
+  webServer: [
+    {
+      command: 'pnpm preview:context',
+      port: APP_PORTS.context,
+      reuseExistingServer: !process.env.CI,
+      timeout: 120 * 1000,
+    },
+    {
+      command: 'pnpm preview:permissive',
+      port: APP_PORTS.permissive,
+      reuseExistingServer: !process.env.CI,
+      timeout: 120 * 1000,
+    },
+    {
+      command: 'pnpm preview:roots',
+      port: APP_PORTS.roots,
+      reuseExistingServer: !process.env.CI,
+      timeout: 120 * 1000,
+    },
+  ],
 });

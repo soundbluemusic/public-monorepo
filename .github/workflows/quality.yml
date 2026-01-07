@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [main]
 
+# 같은 workflow 중복 실행 방지 - 새 커밋 오면 이전 실행 취소
+concurrency:
+  group: quality-gate-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   # Job 1: 빠른 검증 (Vitest, skott, syncpack)
   fast-checks:
@@ -88,6 +93,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Install Chrome for Lighthouse
+        run: |
+          npx @puppeteer/browsers install chrome@stable
+          echo "CHROME_PATH=$(find $HOME -name 'chrome' -type f -executable 2>/dev/null | head -1)" >> $GITHUB_ENV
+
       - name: Build all apps
         run: pnpm build
 
@@ -157,7 +167,8 @@ jobs:
           pnpm preview:context &
           pnpm preview:permissive &
           pnpm preview:roots &
-          sleep 5
+          # 서버가 ready될 때까지 대기 (최대 30초)
+          npx wait-on http://localhost:3003 http://localhost:3004 http://localhost:3005 -t 30000
 
       - name: Run accessibility tests
         run: pnpm exec playwright test tests/e2e/accessibility.spec.ts
@@ -198,7 +209,8 @@ jobs:
           pnpm preview:context &
           pnpm preview:permissive &
           pnpm preview:roots &
-          sleep 5
+          # 서버가 ready될 때까지 대기 (최대 30초)
+          npx wait-on http://localhost:3003 http://localhost:3004 http://localhost:3005 -t 30000
 
       - name: Run PWA tests
         run: pnpm exec playwright test tests/e2e/pwa/

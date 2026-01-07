@@ -9,6 +9,11 @@ on:
       - 'data/context/**'
   workflow_dispatch: # 수동 트리거 가능
 
+# 같은 workflow 중복 실행 방지 - 새 커밋 오면 이전 실행 취소
+concurrency:
+  group: deploy-context-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   deploy:
     name: Build & Deploy Context

@@ -6,13 +6,14 @@ import { dynamicMetaFactory, metaFactory } from '@soundblue/i18n/meta';
 import { describe, expect, it } from 'vitest';
 
 describe('metaFactory', () => {
+  const baseUrl = 'https://example.com';
   const localizedMeta = {
     ko: { title: '소개 - 앱', description: '앱에 대한 소개입니다.' },
     en: { title: 'About - App', description: 'About the application.' },
   };
 
   it('should return Korean meta for Korean paths', () => {
-    const meta = metaFactory(localizedMeta);
+    const meta = metaFactory(localizedMeta, baseUrl);
     const result = meta({ location: { pathname: '/ko/about' } });
 
     expect(result).toContainEqual({ title: '소개 - 앱' });
@@ -20,7 +21,7 @@ describe('metaFactory', () => {
   });
 
   it('should return English meta for English paths', () => {
-    const meta = metaFactory(localizedMeta);
+    const meta = metaFactory(localizedMeta, baseUrl);
     const result = meta({ location: { pathname: '/about' } });
 
     expect(result).toContainEqual({ title: 'About - App' });
@@ -28,14 +29,14 @@ describe('metaFactory', () => {
   });
 
   it('should return English meta for root path', () => {
-    const meta = metaFactory(localizedMeta);
+    const meta = metaFactory(localizedMeta, baseUrl);
     const result = meta({ location: { pathname: '/' } });
 
     expect(result).toContainEqual({ title: 'About - App' });
   });
 
   it('should return Korean meta for /ko path', () => {
-    const meta = metaFactory(localizedMeta);
+    const meta = metaFactory(localizedMeta, baseUrl);
     const result = meta({ location: { pathname: '/ko' } });
 
     expect(result).toContainEqual({ title: '소개 - 앱' });
@@ -46,15 +47,16 @@ describe('metaFactory', () => {
       ko: { title: '404 - 앱' },
       en: { title: '404 - App' },
     };
-    const meta = metaFactory(metaWithoutDesc);
+    const meta = metaFactory(metaWithoutDesc, baseUrl);
     const result = meta({ location: { pathname: '/' } });
 
-    expect(result).toHaveLength(1);
+    // title + 4 link tags (canonical, en, ko, x-default)
+    expect(result).toHaveLength(5);
     expect(result).toContainEqual({ title: '404 - App' });
   });
 
   it('should detect Korean for /ko/ prefix', () => {
-    const meta = metaFactory(localizedMeta);
+    const meta = metaFactory(localizedMeta, baseUrl);
     const result = meta({ location: { pathname: '/ko/entry/hello' } });
 
     expect(result).toContainEqual({ title: '소개 - 앱' });
@@ -62,6 +64,8 @@ describe('metaFactory', () => {
 });
 
 describe('dynamicMetaFactory', () => {
+  const baseUrl = 'https://example.com';
+
   interface Entry {
     korean: string;
     english: string;
@@ -79,7 +83,7 @@ describe('dynamicMetaFactory', () => {
   });
 
   it('should return Korean meta for Korean paths', () => {
-    const meta = dynamicMetaFactory(getLocalizedMeta);
+    const meta = dynamicMetaFactory(getLocalizedMeta, baseUrl);
     const result = meta({
       location: { pathname: '/ko/entry/hello' },
       data: { entry: { korean: '안녕하세요', english: 'Hello' } },
@@ -90,7 +94,7 @@ describe('dynamicMetaFactory', () => {
   });
 
   it('should return English meta for English paths', () => {
-    const meta = dynamicMetaFactory(getLocalizedMeta);
+    const meta = dynamicMetaFactory(getLocalizedMeta, baseUrl);
     const result = meta({
       location: { pathname: '/entry/hello' },
       data: { entry: { korean: '안녕하세요', english: 'Hello' } },
@@ -109,13 +113,14 @@ describe('dynamicMetaFactory', () => {
       en: { title: `${data.title} - App` },
     });
 
-    const meta = dynamicMetaFactory(getMetaWithoutDesc);
+    const meta = dynamicMetaFactory(getMetaWithoutDesc, baseUrl);
     const result = meta({
       location: { pathname: '/' },
       data: { title: 'Test' },
     });
 
-    expect(result).toHaveLength(1);
+    // title + 4 link tags (canonical, en, ko, x-default)
+    expect(result).toHaveLength(5);
     expect(result).toContainEqual({ title: 'Test - App' });
   });
 
@@ -125,7 +130,7 @@ describe('dynamicMetaFactory', () => {
       en: { title: data.nested.deep.value },
     });
 
-    const meta = dynamicMetaFactory(getComplexMeta);
+    const meta = dynamicMetaFactory(getComplexMeta, baseUrl);
     const result = meta({
       location: { pathname: '/' },
       data: { nested: { deep: { value: 'Deep Value' } } },

@@ -33,7 +33,8 @@ export const onRequest: PagesFunction<Env> = async (context) => {
         headers.set('Content-Type', 'application/octet-stream');
       }
       headers.set('Cache-Control', 'public, max-age=86400, s-maxage=604800');
-      headers.set('Access-Control-Allow-Origin', '*');
+      // CORS: context.soundbluemusic.com에서만 접근 허용
+      headers.set('Access-Control-Allow-Origin', 'https://context.soundbluemusic.com');
 
       return new Response(object.body, { headers });
     }

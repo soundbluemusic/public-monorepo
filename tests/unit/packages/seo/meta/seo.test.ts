@@ -94,17 +94,20 @@ describe('generateSEOMeta', () => {
 
 describe('generateHreflangLinks', () => {
   const baseUrl = 'https://example.com';
-  const locales = ['en', 'ko'];
+
+  // 프로젝트 URL 구조:
+  // - 영어 (기본): /about (prefix 없음)
+  // - 한국어: /ko/about
 
   it('should generate canonical link', () => {
-    const links = generateHreflangLinks('/about', baseUrl, locales);
+    const links = generateHreflangLinks('/about', baseUrl);
     const canonical = links.find((l) => l.rel === 'canonical');
     expect(canonical).toBeDefined();
-    expect(canonical?.href).toContain('/about');
+    expect(canonical?.href).toBe('https://example.com/about');
   });
 
   it('should generate hreflang links for all locales', () => {
-    const links = generateHreflangLinks('/about', baseUrl, locales);
+    const links = generateHreflangLinks('/about', baseUrl);
     const alternates = links.filter((l) => l.rel === 'alternate' && l.hreflang !== 'x-default');
     expect(alternates).toHaveLength(2);
     expect(alternates.map((l) => l.hreflang)).toContain('en');
@@ -112,54 +115,53 @@ describe('generateHreflangLinks', () => {
   });
 
   it('should generate x-default link', () => {
-    const links = generateHreflangLinks('/about', baseUrl, locales);
+    const links = generateHreflangLinks('/about', baseUrl);
     const xDefault = links.find((l) => l.hreflang === 'x-default');
     expect(xDefault).toBeDefined();
     expect(xDefault?.rel).toBe('alternate');
+    // x-default는 영어(기본) URL과 동일
+    expect(xDefault?.href).toBe('https://example.com/about');
   });
 
   it('should detect Korean locale from path', () => {
-    const links = generateHreflangLinks('/ko/about', baseUrl, locales);
+    const links = generateHreflangLinks('/ko/about', baseUrl);
     const canonical = links.find((l) => l.rel === 'canonical');
-    expect(canonical?.href).toContain('/ko/about');
+    expect(canonical?.href).toBe('https://example.com/ko/about');
   });
 
-  it('should detect English locale from path', () => {
-    const links = generateHreflangLinks('/en/about', baseUrl, locales);
+  it('should detect English locale from path (no prefix)', () => {
+    // 영어 경로는 /en prefix가 없음
+    const links = generateHreflangLinks('/about', baseUrl);
     const canonical = links.find((l) => l.rel === 'canonical');
-    expect(canonical?.href).toContain('/en/about');
+    expect(canonical?.href).toBe('https://example.com/about');
   });
 
   it('should strip locale from path for alternate links', () => {
-    const links = generateHreflangLinks('/ko/about', baseUrl, locales);
+    const links = generateHreflangLinks('/ko/about', baseUrl);
     const enLink = links.find((l) => l.hreflang === 'en');
-    expect(enLink?.href).toBe('https://example.com/en/about');
+    // 영어는 prefix 없음
+    expect(enLink?.href).toBe('https://example.com/about');
     const koLink = links.find((l) => l.hreflang === 'ko');
     expect(koLink?.href).toBe('https://example.com/ko/about');
   });
 
   it('should handle root path', () => {
-    const links = generateHreflangLinks('/', baseUrl, locales);
-    expect(links.find((l) => l.hreflang === 'en')?.href).toBe('https://example.com/en');
+    const links = generateHreflangLinks('/', baseUrl);
+    // 영어 루트는 baseUrl 그대로
+    expect(links.find((l) => l.hreflang === 'en')?.href).toBe('https://example.com');
     expect(links.find((l) => l.hreflang === 'ko')?.href).toBe('https://example.com/ko');
   });
 
   it('should handle trailing slash in baseUrl', () => {
-    const links = generateHreflangLinks('/about', 'https://example.com/', locales);
+    const links = generateHreflangLinks('/about', 'https://example.com/');
     const canonical = links.find((l) => l.rel === 'canonical');
     expect(canonical?.href).not.toContain('//about');
   });
 
   it('should handle path without leading slash', () => {
-    const links = generateHreflangLinks('about', baseUrl, locales);
+    const links = generateHreflangLinks('about', baseUrl);
     const canonical = links.find((l) => l.rel === 'canonical');
-    expect(canonical?.href).toContain('/about');
-  });
-
-  it('should use custom default locale', () => {
-    const links = generateHreflangLinks('/about', baseUrl, locales, 'en');
-    const xDefault = links.find((l) => l.hreflang === 'x-default');
-    expect(xDefault?.href).toContain('/en/about');
+    expect(canonical?.href).toBe('https://example.com/about');
   });
 });
 

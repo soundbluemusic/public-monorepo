@@ -12,7 +12,9 @@ module.exports = {
       staticDistDir: `./apps/${app}/build/client`,
       url: ['http://localhost/index.html'],
       numberOfRuns: 1,
-      chromePath: '/root/.cache/ms-playwright/chromium-1194/chrome-linux/chrome',
+      // chromePath는 환경변수 CHROME_PATH가 있으면 사용, 없으면 자동 감지
+      // GitHub Actions에서는 workflow에서 CHROME_PATH 설정 필요
+      ...(process.env.CHROME_PATH ? { chromePath: process.env.CHROME_PATH } : {}),
       settings: {
         chromeFlags: '--no-sandbox --disable-dev-shm-usage --headless',
       },
