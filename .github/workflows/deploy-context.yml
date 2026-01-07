@@ -52,9 +52,9 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cache/rclone
-          key: rclone-r2-${{ runner.os }}-${{ github.run_id }}
+          key: rclone-r2-${{ runner.os }}
           restore-keys: |
-            rclone-r2-${{ runner.os }}-
+            rclone-r2-
 
       # 4. rclone 설정 (R2 S3 호환 API 사용)
       - name: Configure rclone for R2
