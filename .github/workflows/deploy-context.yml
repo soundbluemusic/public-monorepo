@@ -47,6 +47,15 @@ jobs:
           sudo cp rclone-*-linux-amd64/rclone /usr/local/bin/
           rclone version
 
+      # 3.5. rclone 캐시 복원 (R2 파일 목록 비교 시간 단축)
+      - name: Restore rclone cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/rclone
+          key: rclone-r2-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: |
+            rclone-r2-${{ runner.os }}-
+
       # 4. rclone 설정 (R2 S3 호환 API 사용)
       - name: Configure rclone for R2
         env:
@@ -68,12 +77,14 @@ jobs:
       # 5. R2에 데이터 파일 업로드 (rclone sync - 변경분만 업로드)
       - name: Upload data files to R2
         run: |
+          mkdir -p ~/.cache/rclone
           rclone sync apps/context/public/data r2:all-sites-static/public-monorepo/context/data \
             --transfers=32 \
             --checkers=16 \
             --fast-list \
             --progress \
-            --stats=10s
+            --stats=10s \
+            --cache-dir ~/.cache/rclone
 
       # 6. R2용 엔트리 HTML 빌드
       - name: Build entries for R2
@@ -89,4 +100,5 @@ jobs:
             --checkers=16 \
             --fast-list \
             --progress \
-            --stats=10s
+            --stats=10s \
+            --cache-dir ~/.cache/rclone
