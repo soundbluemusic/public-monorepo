@@ -23,44 +23,12 @@ import { useUserDataStore } from '@/stores/user-data-store';
  */
 
 /**
- * Loader: SSG 빌드 시 영어 데이터 로드
- * locale 분리된 카테고리 청크에서 동적 로드 (번들 최적화)
- */
-export async function loader({ params }: { params: { entryId: string } }) {
-  const { getEntryByIdForLocale } = await import('@/data/entries');
-  const entry = await getEntryByIdForLocale(params.entryId, 'en');
-  return { entry: entry || null };
-}
-
-/**
- * clientLoader: SSG hydration workaround for React Router v7
+ * clientLoader: 클라이언트에서 데이터 로드
  *
- * React Router v7 with ssr:false has a known issue where hydration fails
- * because the turbo-stream data isn't properly decoded.
- *
- * Adding a clientLoader that returns the server data helps trigger proper
- * hydration behavior. See: https://github.com/remix-run/react-router/issues/12893
+ * Pages 빌드에서는 entry 라우트가 prerender 대상이 아니므로
+ * clientLoader만 사용하여 런타임에 데이터 로드
  */
-export async function clientLoader({
-  params,
-  serverLoader,
-}: {
-  params: { entryId: string };
-  serverLoader: () => Promise<{ entry: LocaleEntry | null }>;
-}) {
-  // For SSG: first try to get data from the pre-rendered server loader
-  // This allows proper hydration with the pre-rendered HTML
-  try {
-    const serverData = await serverLoader();
-    if (serverData?.entry) {
-      return serverData;
-    }
-  } catch {
-    // If serverLoader fails (stream decode issue), fall back to client-side fetch
-    console.log('[clientLoader] serverLoader failed, fetching client-side');
-  }
-
-  // Fallback: load data on client side (영어)
+export async function clientLoader({ params }: { params: { entryId: string } }) {
   const { getEntryByIdForLocale } = await import('@/data/entries');
   const entry = await getEntryByIdForLocale(params.entryId, 'en');
   return { entry: entry || null };

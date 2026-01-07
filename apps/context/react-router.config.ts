@@ -5,28 +5,28 @@ import routes from './app/routes.js';
 /**
  * React Router SSG 설정
  *
- * ## Single Source of Truth
- * - 정적 라우트: routes.ts에서 자동 추출 (extractStaticRoutes)
- * - 동적 라우트: 데이터 기반 생성 (generateI18nRoutes)
+ * ## 하이브리드 빌드 전략 (Pages + R2)
  *
- * ## 100% SSG 필수 (SEO 원칙)
+ * ### BUILD_TARGET 환경변수에 따라 빌드 대상 분리:
+ * - `pages` (기본): 핵심 페이지만 빌드 → Cloudflare Pages (20K 제한)
+ * - `r2`: 엔트리 페이지만 빌드 → R2 업로드 (파일 무제한)
+ * - `all`: 전체 빌드 (로컬 테스트용)
+ *
+ * ### 100% SSG 유지 (SEO 원칙)
  * - 모든 페이지는 빌드 시 완전한 HTML로 생성
- * - 빈 HTML 서빙 금지 (검색엔진 크롤링 필수)
+ * - R2에서 서빙해도 완전한 HTML (빈 HTML 아님)
  */
 export default {
   ssr: false,
   async prerender() {
+    const buildTarget = process.env.BUILD_TARGET || 'pages';
+
     // 정적 라우트: routes.ts에서 자동 추출
     const staticRoutes = extractStaticRoutes(routes);
 
     // 동적 라우트: 데이터 기반 생성
     const { categories } = await import('./app/data/categories.js');
     const { getCategoriesWithConversations } = await import('./app/data/conversations.js');
-
-    // Entry routes: 모든 entry 페이지를 SSG로 생성 (SEO 필수)
-    // lightEntries 사용 (번들 최적화 - 전체 데이터 대신 경량 버전)
-    const { lightEntries } = await import('./app/data/entries/index.js');
-    const entryRoutes = generateI18nRoutes(lightEntries, (entry) => `/entry/${entry.id}`);
 
     // Category routes
     const categoryRoutes = generateI18nRoutes(categories, (category) => `/category/${category.id}`);
@@ -38,8 +38,28 @@ export default {
       (categoryId) => `/conversations/${categoryId}`,
     );
 
-    const allRoutes = [...staticRoutes, ...entryRoutes, ...categoryRoutes, ...conversationRoutes];
-    console.log(`[SSG] Total prerender routes: ${allRoutes.length}`);
+    // Entry routes (대량 - R2용)
+    const { lightEntries } = await import('./app/data/entries/index.js');
+    const entryRoutes = generateI18nRoutes(lightEntries, (entry) => `/entry/${entry.id}`);
+
+    // 빌드 대상에 따라 라우트 선택
+    let allRoutes: string[];
+
+    if (buildTarget === 'pages') {
+      // Pages: 핵심 페이지만 (20K 제한 내)
+      allRoutes = [...staticRoutes, ...categoryRoutes, ...conversationRoutes];
+      console.log(
+        `[SSG:pages] Prerender routes: ${allRoutes.length} (excluding ${entryRoutes.length} entries)`,
+      );
+    } else if (buildTarget === 'r2') {
+      // R2: 엔트리 페이지만
+      allRoutes = [...entryRoutes];
+      console.log(`[SSG:r2] Prerender routes: ${allRoutes.length} (entries only)`);
+    } else {
+      // all: 전체 (로컬 테스트용)
+      allRoutes = [...staticRoutes, ...entryRoutes, ...categoryRoutes, ...conversationRoutes];
+      console.log(`[SSG:all] Total prerender routes: ${allRoutes.length}`);
+    }
 
     return allRoutes;
   },
