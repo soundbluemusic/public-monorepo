@@ -64,3 +64,10 @@ playwright-report/
 
 # Local Chrome for Testing download
 chrome/
+
+# Wrangler local state
+.wrangler/
+
+# Temporary/debug files
+apps/context/.tmp/
+apps/context/entry-mismatch-report.json
