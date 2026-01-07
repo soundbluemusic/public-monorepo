@@ -19,10 +19,10 @@ import { useStudyData } from '@/hooks';
 import { useI18n } from '@/i18n';
 
 /**
- * Loader: 빌드 시 데이터 로드 (SSG용)
- * 경량 LightEntry를 사용하여 ~85% 데이터 절감
+ * clientLoader: 클라이언트에서 데이터 로드
+ * Pages 빌드에서는 loader 대신 clientLoader 사용
  */
-export async function loader() {
+export async function clientLoader() {
   const {
     lightEntries,
     lightEntriesSortedAlphabetically,

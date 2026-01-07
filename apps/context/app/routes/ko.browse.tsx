@@ -1,1 +1,1 @@
-export { default, loader, meta } from './browse';
+export { clientLoader, default, meta } from './browse';

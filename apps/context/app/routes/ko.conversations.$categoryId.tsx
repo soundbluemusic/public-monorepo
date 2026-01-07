@@ -1,1 +1,1 @@
-export { default, loader, meta } from './conversations.$categoryId';
+export { clientLoader, default, meta } from './conversations.$categoryId';

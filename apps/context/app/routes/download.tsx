@@ -27,7 +27,7 @@ interface LoaderData {
   totalCount: number;
 }
 
-export async function loader(): Promise<LoaderData> {
+export async function clientLoader(): Promise<LoaderData> {
   // 모든 카테고리의 전체 데이터 로드
   const { categories } = await import('@/data/categories');
   const { getEntriesByCategory } = await import('@/data/entries');

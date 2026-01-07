@@ -1,1 +1,1 @@
-export { default, loader, meta } from './category.$categoryId';
+export { clientLoader, default, meta } from './category.$categoryId';

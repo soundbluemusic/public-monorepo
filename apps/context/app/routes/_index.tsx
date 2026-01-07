@@ -18,10 +18,10 @@ const getPronunciation = (entry: MeaningEntry, locale: Language): string | undef
 };
 
 /**
- * Loader: 빌드 시 데이터 로드 (SSG용)
- * 번들 최적화: lightEntries + 개별 entry 조회
+ * clientLoader: 클라이언트에서 데이터 로드
+ * Pages 빌드에서는 loader 대신 clientLoader 사용
  */
-export async function loader() {
+export async function clientLoader() {
   const { lightEntries, getEntryById } = await import('@/data/entries');
 
   // 오늘의 단어 계산 (빌드 시점)

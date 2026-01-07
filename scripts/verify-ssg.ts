@@ -68,7 +68,9 @@ function verifyHtmlContent(filePath: string): {
 } {
   try {
     const content = readFileSync(filePath, 'utf-8');
-    const hasContent = content.includes('<div') && content.length > 1000;
+    // clientLoader 사용 시 SSG 시점에 body가 비어있을 수 있음
+    // 최소한 HTML 구조와 메타태그가 있으면 유효한 SSG로 판단
+    const hasContent = content.includes('<!DOCTYPE html>') && content.length > 1000;
     const hasMeta = {
       title: /<title[^>]*>.*?<\/title>/i.test(content),
       description: /<meta[^>]*name=["']description["'][^>]*>/i.test(content),

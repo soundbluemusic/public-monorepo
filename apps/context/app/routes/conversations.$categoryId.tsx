@@ -10,9 +10,10 @@ import type { Category, Conversation } from '@/data/types';
 import { useI18n } from '@/i18n';
 
 /**
- * Loader: 빌드 시 카테고리별 대화 로드 (SSG용)
+ * clientLoader: 클라이언트에서 데이터 로드
+ * Pages 빌드에서는 loader 대신 clientLoader 사용
  */
-export async function loader({ params }: { params: { categoryId: string } }) {
+export async function clientLoader({ params }: { params: { categoryId: string } }) {
   const category = getCategoryById(params.categoryId);
   const conversations = getConversationsByCategory(params.categoryId);
   return { category: category || null, conversations };

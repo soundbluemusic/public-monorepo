@@ -8,9 +8,10 @@ import type { Category } from '@/data/types';
 import { useI18n } from '@/i18n';
 
 /**
- * Loader: 빌드 시 대화가 있는 카테고리 목록 로드 (SSG용)
+ * clientLoader: 클라이언트에서 데이터 로드
+ * Pages 빌드에서는 loader 대신 clientLoader 사용
  */
-export async function loader() {
+export async function clientLoader() {
   const categoryIds = getCategoriesWithConversations();
   const categoriesWithCount = categoryIds
     .map((id) => {

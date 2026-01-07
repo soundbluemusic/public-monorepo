@@ -1,1 +1,1 @@
-export { default, loader, meta } from './conversations._index';
+export { clientLoader, default, meta } from './conversations._index';

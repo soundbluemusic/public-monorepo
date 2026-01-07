@@ -10,10 +10,10 @@ import { useStudyData } from '@/hooks';
 import { useI18n } from '@/i18n';
 
 /**
- * Loader: 빌드 시 데이터 로드 (SSG용) - O(1) Map 조회
- * 동적 import로 번들 크기 최적화 - 빌드 시에만 데이터 로드
+ * clientLoader: 클라이언트에서 데이터 로드
+ * Pages 빌드에서는 loader 대신 clientLoader 사용
  */
-export async function loader({ params }: { params: { categoryId: string } }) {
+export async function clientLoader({ params }: { params: { categoryId: string } }) {
   const { getEntriesByCategory } = await import('@/data/entries');
   const category = getCategoryById(params.categoryId);
   const entries = await getEntriesByCategory(params.categoryId);
