@@ -31,6 +31,8 @@ export function EntryDialogueDisplay({
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  const dialogueFilename = entryId === 'biome' ? 'biome.dialogue.json' : `${entryId}.json`;
+
   const handleToggle = useCallback(async () => {
     if (isOpen) {
       setIsOpen(false);
@@ -47,7 +49,7 @@ export function EntryDialogueDisplay({
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch(`/data/dialogues/${locale}/${entryId}.json`);
+      const response = await fetch(`/data/dialogues/${locale}/${dialogueFilename}`);
       if (!response.ok) {
         throw new Error('Failed to load dialogue');
       }
@@ -59,7 +61,7 @@ export function EntryDialogueDisplay({
     } finally {
       setIsLoading(false);
     }
-  }, [isOpen, dialogue, locale, entryId]);
+  }, [isOpen, dialogue, locale, entryId, dialogueFilename]);
 
   // dialogue가 없으면 렌더링하지 않음
   if (!hasDialogue) {

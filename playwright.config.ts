@@ -63,19 +63,19 @@ export default defineConfig({
     {
       command: 'pnpm preview:context',
       port: APP_PORTS.context,
-      reuseExistingServer: !process.env.CI,
+      reuseExistingServer: true,
       timeout: 120 * 1000,
     },
     {
       command: 'pnpm preview:permissive',
       port: APP_PORTS.permissive,
-      reuseExistingServer: !process.env.CI,
+      reuseExistingServer: true,
       timeout: 120 * 1000,
     },
     {
       command: 'pnpm preview:roots',
       port: APP_PORTS.roots,
-      reuseExistingServer: !process.env.CI,
+      reuseExistingServer: true,
       timeout: 120 * 1000,
     },
   ],

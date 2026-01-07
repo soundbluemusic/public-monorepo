@@ -1,113 +1,107 @@
 import { expect, test } from '@playwright/test';
 
-const apps = [
-  { name: 'context', url: 'http://localhost:3003' },
-  { name: 'permissive', url: 'http://localhost:3004' },
-  { name: 'roots', url: 'http://localhost:3005' },
-];
+test.describe('Button Interactions', () => {
+  test('dark mode toggle should work', async ({ page }) => {
+    await page.goto('/');
+    await page.waitForLoadState('networkidle');
 
-for (const app of apps) {
-  test.describe(`${app.name} - Button Interactions`, () => {
-    test('dark mode toggle should work', async ({ page }) => {
-      await page.goto(app.url);
-      await page.waitForLoadState('networkidle');
+    // Find dark mode toggle button by aria-label
+    const darkModeButton = page.locator('button[aria-label*="mode" i]').first();
+    await expect(darkModeButton).toBeVisible({ timeout: 5000 });
 
-      // Find dark mode toggle button by aria-label
-      const darkModeButton = page.locator('button[aria-label*="mode" i]').first();
-      await expect(darkModeButton).toBeVisible({ timeout: 5000 });
+    // Get initial theme
+    const initialIsDark = await page.evaluate(() =>
+      document.documentElement.classList.contains('dark'),
+    );
 
-      // Get initial theme
-      const initialIsDark = await page.evaluate(() =>
-        document.documentElement.classList.contains('dark'),
-      );
+    // Click the button (capture phase handler in root.tsx handles it)
+    await darkModeButton.click();
+    await page.waitForTimeout(200);
 
-      // Click the button (capture phase handler in root.tsx handles it)
-      await darkModeButton.click();
-      await page.waitForTimeout(200);
+    // Check theme changed
+    const newIsDark = await page.evaluate(() =>
+      document.documentElement.classList.contains('dark'),
+    );
+    expect(newIsDark).not.toBe(initialIsDark);
 
-      // Check theme changed
-      const newIsDark = await page.evaluate(() =>
-        document.documentElement.classList.contains('dark'),
-      );
-      expect(newIsDark).not.toBe(initialIsDark);
+    // Click again to toggle back
+    await darkModeButton.click();
+    await page.waitForTimeout(200);
 
-      // Click again to toggle back
-      await darkModeButton.click();
-      await page.waitForTimeout(200);
-
-      const finalIsDark = await page.evaluate(() =>
-        document.documentElement.classList.contains('dark'),
-      );
-      expect(finalIsDark).toBe(initialIsDark);
-    });
-
-    test('language toggle should work', async ({ page }) => {
-      await page.goto(app.url);
-
-      // Find language toggle
-      const langToggle = page.locator('a').filter({ hasText: /EN|KR/ }).first();
-
-      // Check current language
-      const currentLang = await langToggle.textContent();
-
-      // Verify toggle exists and is visible
-      await expect(langToggle).toBeVisible();
-      expect(currentLang).toMatch(/EN|KR/);
-
-      // Click language toggle
-      await langToggle.click();
-
-      // Wait for navigation
-      await page.waitForLoadState('networkidle');
-
-      // Check URL changed (should have /ko or not)
-      const url = page.url();
-      if (currentLang?.includes('EN')) {
-        // Was English, should now be Korean
-        expect(url).toContain('/ko');
-      } else {
-        // Was Korean, should now be English
-        expect(url).not.toContain('/ko');
-      }
-    });
-
-    // Skip: Back to top button uses React state (showBackToTop) which requires
-    // full JavaScript hydration. In SSG builds, the button is not in initial HTML
-    // and only appears after React hydrates and scroll event fires.
-    // This works correctly in production but is difficult to test reliably in E2E.
-    // Manual testing confirmed: scroll > 300px triggers button, click scrolls to top.
-    test.skip('back to top button should work', async ({ page }) => {
-      await page.goto(`${app.url}/browse`);
-      await page.waitForLoadState('networkidle');
-      await page.waitForTimeout(1000);
-
-      await page.evaluate(() => {
-        window.scrollTo({ top: 1500, behavior: 'instant' });
-        window.dispatchEvent(new Event('scroll'));
-      });
-
-      await page.waitForTimeout(500);
-
-      const backToTopButton = page
-        .locator('button[aria-label*="top" i], button[aria-label*="위로"]')
-        .first();
-      await expect(backToTopButton).toBeVisible({ timeout: 5000 });
-
-      await backToTopButton.click();
-      await page.waitForTimeout(1000);
-
-      const scrollY = await page.evaluate(() => window.scrollY);
-      expect(scrollY).toBeLessThan(100);
-    });
+    const finalIsDark = await page.evaluate(() =>
+      document.documentElement.classList.contains('dark'),
+    );
+    expect(finalIsDark).toBe(initialIsDark);
   });
-}
+
+  test('language toggle should work', async ({ page }) => {
+    await page.goto('/');
+
+    // Find language toggle
+    const langToggle = page.locator('a').filter({ hasText: /EN|KR/ }).first();
+
+    // Check current language
+    const currentLang = await langToggle.textContent();
+
+    // Verify toggle exists and is visible
+    await expect(langToggle).toBeVisible();
+    expect(currentLang).toMatch(/EN|KR/);
+
+    // Click language toggle
+    await langToggle.click();
+
+    // Wait for navigation
+    await page.waitForLoadState('networkidle');
+
+    // Check URL changed (should have /ko or not)
+    const url = page.url();
+    if (currentLang?.includes('EN')) {
+      // Was English, should now be Korean
+      expect(url).toContain('/ko');
+    } else {
+      // Was Korean, should now be English
+      expect(url).not.toContain('/ko');
+    }
+  });
+
+  // Skip: Back to top button uses React state (showBackToTop) which requires
+  // full JavaScript hydration. In SSG builds, the button is not in initial HTML
+  // and only appears after React hydrates and scroll event fires.
+  // This works correctly in production but is difficult to test reliably in E2E.
+  // Manual testing confirmed: scroll > 300px triggers button, click scrolls to top.
+  test.skip('back to top button should work', async ({ page }) => {
+    await page.goto('/browse');
+    await page.waitForLoadState('networkidle');
+    await page.waitForTimeout(1000);
+
+    await page.evaluate(() => {
+      window.scrollTo({ top: 1500, behavior: 'instant' });
+      window.dispatchEvent(new Event('scroll'));
+    });
+
+    await page.waitForTimeout(500);
+
+    const backToTopButton = page
+      .locator('button[aria-label*="top" i], button[aria-label*="위로"]')
+      .first();
+    await expect(backToTopButton).toBeVisible({ timeout: 5000 });
+
+    await backToTopButton.click();
+    await page.waitForTimeout(1000);
+
+    const scrollY = await page.evaluate(() => window.scrollY);
+    expect(scrollY).toBeLessThan(100);
+  });
+});
 
 // Context app specific tests
 test.describe('context - Specific Button Tests', () => {
+  test.skip(({}, testInfo) => testInfo.project.name !== 'context', 'Context-only tests.');
+
   test('menu button should open sidebar on mobile', async ({ page }) => {
     // Set mobile viewport
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto('http://localhost:3003');
+    await page.goto('/');
 
     // Wait for page to be fully loaded and React to hydrate
     await page.waitForLoadState('networkidle');
@@ -151,7 +145,7 @@ test.describe('context - Specific Button Tests', () => {
   test('sidebar collapse button should work on desktop', async ({ page }) => {
     // Set desktop viewport
     await page.setViewportSize({ width: 1200, height: 800 });
-    await page.goto('http://localhost:3003');
+    await page.goto('/');
 
     // Wait for React hydration
     await page.waitForLoadState('networkidle');
@@ -210,7 +204,7 @@ test.describe('context - Specific Button Tests', () => {
   });
 
   test('search input should work', async ({ page }) => {
-    await page.goto('http://localhost:3003');
+    await page.goto('/');
     await page.waitForLoadState('networkidle');
 
     // Find search input - uses type="search" not type="text"
@@ -229,7 +223,7 @@ test.describe('context - Specific Button Tests', () => {
   });
 
   test('navigation links should work', async ({ page }) => {
-    await page.goto('http://localhost:3003');
+    await page.goto('/');
 
     // Test Browse link
     const browseLink = page.locator('a[href="/browse"], a[href="/ko/browse"]').first();
@@ -245,10 +239,12 @@ test.describe('context - Specific Button Tests', () => {
 
 // Permissive app specific tests
 test.describe('permissive - Specific Button Tests', () => {
+  test.skip(({}, testInfo) => testInfo.project.name !== 'permissive', 'Permissive-only tests.');
+
   test('menu button should open sidebar on mobile', async ({ page }) => {
     // Set mobile viewport
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto('http://localhost:3004');
+    await page.goto('/');
 
     // Wait for page to be fully loaded and React to hydrate
     await page.waitForLoadState('networkidle');
@@ -303,7 +299,7 @@ test.describe('permissive - Specific Button Tests', () => {
   });
 
   test('navigation links should work', async ({ page }) => {
-    await page.goto('http://localhost:3004');
+    await page.goto('/');
 
     // Test Web API link
     const webApiLink = page.locator('a[href="/web-api"], a[href="/ko/web-api"]').first();
@@ -317,7 +313,7 @@ test.describe('permissive - Specific Button Tests', () => {
   });
 
   test('external links should have correct attributes', async ({ page }) => {
-    await page.goto('http://localhost:3004');
+    await page.goto('/');
 
     // Find GitHub link
     const githubLink = page.locator('a[href*="github.com"]').first();
@@ -330,8 +326,10 @@ test.describe('permissive - Specific Button Tests', () => {
 
 // Roots app specific tests
 test.describe('roots - Specific Button Tests', () => {
+  test.skip(({}, testInfo) => testInfo.project.name !== 'roots', 'Roots-only tests.');
+
   test('search dropdown should show results', async ({ page }) => {
-    await page.goto('http://localhost:3005');
+    await page.goto('/');
 
     // Wait for hydration
     await page.waitForLoadState('networkidle');
@@ -352,7 +350,7 @@ test.describe('roots - Specific Button Tests', () => {
   });
 
   test('navigation links should work', async ({ page }) => {
-    await page.goto('http://localhost:3005');
+    await page.goto('/');
 
     // Test Browse link
     const browseLink = page.locator('a[href="/browse"], a[href="/ko/browse"]').first();
@@ -368,7 +366,7 @@ test.describe('roots - Specific Button Tests', () => {
   test('bottom navigation should work on mobile', async ({ page }) => {
     // Set mobile viewport (< 640px for SCSS Modules @include sm)
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto('http://localhost:3005');
+    await page.goto('/');
 
     // Wait for page to be fully loaded
     await page.waitForLoadState('networkidle');

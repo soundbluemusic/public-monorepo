@@ -14,10 +14,12 @@ const viewports = [
 
 // ==================== Context App Tests ====================
 test.describe('Context App Responsive', () => {
+  test.skip(({}, testInfo) => testInfo.project.name !== 'context', 'Context-only tests.');
+
   for (const viewport of viewports) {
     test(`Homepage - ${viewport.name} (${viewport.width}x${viewport.height})`, async ({ page }) => {
       await page.setViewportSize({ width: viewport.width, height: viewport.height });
-      await page.goto('http://localhost:3003/');
+      await page.goto('/');
 
       // 페이지 로드 확인
       await expect(page.locator('h1')).toBeVisible();
@@ -50,7 +52,7 @@ test.describe('Context App Responsive', () => {
       page,
     }) => {
       await page.setViewportSize({ width: viewport.width, height: viewport.height });
-      await page.goto('http://localhost:3003/entry/piano');
+      await page.goto('/entry/piano');
 
       await expect(page.locator('h1')).toBeVisible();
 
@@ -70,7 +72,7 @@ test.describe('Context App Responsive', () => {
       page,
     }) => {
       await page.setViewportSize({ width: viewport.width, height: viewport.height });
-      await page.goto('http://localhost:3003/browse');
+      await page.goto('/browse');
 
       await expect(page.locator('main')).toBeVisible();
 
@@ -90,7 +92,7 @@ test.describe('Context App Responsive', () => {
   // 모바일 네비게이션 테스트
   test('Mobile navigation hamburger menu', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto('http://localhost:3003/');
+    await page.goto('/');
 
     // 햄버거 메뉴 또는 바텀 네비게이션 확인
     const bottomNav = page.locator('nav').filter({ has: page.locator('a[href="/browse"]') });
@@ -106,10 +108,12 @@ test.describe('Context App Responsive', () => {
 
 // ==================== Permissive App Tests ====================
 test.describe('Permissive App Responsive', () => {
+  test.skip(({}, testInfo) => testInfo.project.name !== 'permissive', 'Permissive-only tests.');
+
   for (const viewport of viewports) {
     test(`Homepage - ${viewport.name} (${viewport.width}x${viewport.height})`, async ({ page }) => {
       await page.setViewportSize({ width: viewport.width, height: viewport.height });
-      await page.goto('http://localhost:3004/');
+      await page.goto('/');
 
       await expect(page.locator('h1')).toBeVisible();
 
@@ -129,7 +133,7 @@ test.describe('Permissive App Responsive', () => {
       page,
     }) => {
       await page.setViewportSize({ width: viewport.width, height: viewport.height });
-      await page.goto('http://localhost:3004/libraries');
+      await page.goto('/libraries');
 
       await expect(page.locator('main')).toBeVisible();
 
@@ -149,7 +153,7 @@ test.describe('Permissive App Responsive', () => {
       page,
     }) => {
       await page.setViewportSize({ width: viewport.width, height: viewport.height });
-      await page.goto('http://localhost:3004/web-api');
+      await page.goto('/web-api');
 
       await expect(page.locator('main')).toBeVisible();
 
@@ -170,7 +174,7 @@ test.describe('Permissive App Responsive', () => {
   test('Sidebar hidden on mobile, visible on desktop', async ({ page }) => {
     // 모바일
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto('http://localhost:3004/');
+    await page.goto('/');
 
     const sidebar = page.locator('aside');
     const isSidebarVisibleMobile = await sidebar.isVisible().catch(() => false);
@@ -180,7 +184,7 @@ test.describe('Permissive App Responsive', () => {
 
     // 데스크탑
     await page.setViewportSize({ width: 1920, height: 1080 });
-    await page.goto('http://localhost:3004/');
+    await page.goto('/');
 
     const isSidebarVisibleDesktop = await sidebar.isVisible().catch(() => false);
 
@@ -191,10 +195,12 @@ test.describe('Permissive App Responsive', () => {
 
 // ==================== Roots App Tests ====================
 test.describe('Roots App Responsive', () => {
+  test.skip(({}, testInfo) => testInfo.project.name !== 'roots', 'Roots-only tests.');
+
   for (const viewport of viewports) {
     test(`Homepage - ${viewport.name} (${viewport.width}x${viewport.height})`, async ({ page }) => {
       await page.setViewportSize({ width: viewport.width, height: viewport.height });
-      await page.goto('http://localhost:3005/');
+      await page.goto('/');
 
       await expect(page.locator('h1')).toBeVisible();
 
@@ -214,7 +220,7 @@ test.describe('Roots App Responsive', () => {
       page,
     }) => {
       await page.setViewportSize({ width: viewport.width, height: viewport.height });
-      await page.goto('http://localhost:3005/concept/pythagorean-theorem');
+      await page.goto('/concept/pythagorean-theorem');
 
       await expect(page.locator('h1')).toBeVisible();
 
@@ -234,7 +240,7 @@ test.describe('Roots App Responsive', () => {
       page,
     }) => {
       await page.setViewportSize({ width: viewport.width, height: viewport.height });
-      await page.goto('http://localhost:3005/browse');
+      await page.goto('/browse');
 
       await expect(page.locator('main')).toBeVisible();
 
@@ -254,7 +260,7 @@ test.describe('Roots App Responsive', () => {
       page,
     }) => {
       await page.setViewportSize({ width: viewport.width, height: viewport.height });
-      await page.goto('http://localhost:3005/field/algebra');
+      await page.goto('/field/algebra');
 
       await expect(page.locator('main')).toBeVisible();
 
@@ -274,7 +280,7 @@ test.describe('Roots App Responsive', () => {
   // 터치 타겟 크기 테스트 (44px 이상)
   test('Touch targets are at least 44px on mobile', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto('http://localhost:3005/');
+    await page.goto('/');
 
     // 클릭 가능한 요소들 확인
     const buttons = await page.locator('button').all();
@@ -292,11 +298,11 @@ test.describe('Roots App Responsive', () => {
   test('Grid columns adjust based on viewport', async ({ page }) => {
     // 모바일 - 1열
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto('http://localhost:3005/');
+    await page.goto('/');
 
     // 데스크탑 - 4열
     await page.setViewportSize({ width: 1920, height: 1080 });
-    await page.goto('http://localhost:3005/');
+    await page.goto('/');
 
     // Featured concepts 그리드 확인
     const grid = page.locator('.grid').first();
@@ -307,70 +313,62 @@ test.describe('Roots App Responsive', () => {
 
 // ==================== Cross-App Tests ====================
 test.describe('Cross-App Responsive Checks', () => {
-  const apps = [
-    { name: 'Context', url: 'http://localhost:3003/' },
-    { name: 'Permissive', url: 'http://localhost:3004/' },
-    { name: 'Roots', url: 'http://localhost:3005/' },
-  ];
+  test('No text overflow on smallest mobile', async ({ page }) => {
+    await page.setViewportSize({ width: 320, height: 568 });
+    await page.goto('/');
 
-  for (const app of apps) {
-    test(`${app.name} - No text overflow on smallest mobile`, async ({ page }) => {
-      await page.setViewportSize({ width: 320, height: 568 });
-      await page.goto(app.url);
-
-      // 텍스트가 화면 밖으로 나가지 않는지 확인
-      const hasOverflow = await page.evaluate(() => {
-        const elements = document.querySelectorAll('p, h1, h2, h3, span, a');
-        for (const el of elements) {
-          const rect = el.getBoundingClientRect();
-          if (rect.right > window.innerWidth + 5) {
-            return true;
-          }
+    // 텍스트가 화면 밖으로 나가지 않는지 확인
+    const hasOverflow = await page.evaluate(() => {
+      const elements = document.querySelectorAll('p, h1, h2, h3, span, a');
+      for (const el of elements) {
+        const rect = el.getBoundingClientRect();
+        if (rect.right > window.innerWidth + 5) {
+          return true;
         }
-        return false;
-      });
-
-      expect(hasOverflow).toBe(false);
+      }
+      return false;
     });
 
-    test(`${app.name} - Font sizes are readable on mobile`, async ({ page }) => {
-      await page.setViewportSize({ width: 375, height: 667 });
-      await page.goto(app.url);
+    expect(hasOverflow).toBe(false);
+  });
 
-      // 본문 텍스트 최소 14px 확인
-      const smallestFontSize = await page.evaluate(() => {
-        const textElements = document.querySelectorAll('p, span, a, li');
-        let smallest = 100;
-        for (const el of textElements) {
-          const style = window.getComputedStyle(el);
-          const fontSize = Number.parseFloat(style.fontSize);
-          if (fontSize > 0 && fontSize < smallest) {
-            smallest = fontSize;
-          }
+  test('Font sizes are readable on mobile', async ({ page }) => {
+    await page.setViewportSize({ width: 375, height: 667 });
+    await page.goto('/');
+
+    // 본문 텍스트 최소 14px 확인
+    const smallestFontSize = await page.evaluate(() => {
+      const textElements = document.querySelectorAll('p, span, a, li');
+      let smallest = 100;
+      for (const el of textElements) {
+        const style = window.getComputedStyle(el);
+        const fontSize = Number.parseFloat(style.fontSize);
+        if (fontSize > 0 && fontSize < smallest) {
+          smallest = fontSize;
         }
-        return smallest;
-      });
-
-      // 최소 12px 이상
-      expect(smallestFontSize).toBeGreaterThanOrEqual(12);
+      }
+      return smallest;
     });
 
-    test(`${app.name} - Images are responsive`, async ({ page }) => {
-      await page.setViewportSize({ width: 375, height: 667 });
-      await page.goto(app.url);
+    // 최소 12px 이상
+    expect(smallestFontSize).toBeGreaterThanOrEqual(12);
+  });
 
-      // 이미지가 화면을 넘어가지 않는지 확인
-      const hasOversizedImages = await page.evaluate(() => {
-        const images = document.querySelectorAll('img');
-        for (const img of images) {
-          if (img.offsetWidth > window.innerWidth) {
-            return true;
-          }
+  test('Images are responsive', async ({ page }) => {
+    await page.setViewportSize({ width: 375, height: 667 });
+    await page.goto('/');
+
+    // 이미지가 화면을 넘어가지 않는지 확인
+    const hasOversizedImages = await page.evaluate(() => {
+      const images = document.querySelectorAll('img');
+      for (const img of images) {
+        if (img.offsetWidth > window.innerWidth) {
+          return true;
         }
-        return false;
-      });
-
-      expect(hasOversizedImages).toBe(false);
+      }
+      return false;
     });
-  }
+
+    expect(hasOversizedImages).toBe(false);
+  });
 });

@@ -162,14 +162,6 @@ jobs:
       - name: Build all apps
         run: pnpm build
 
-      - name: Start preview servers
-        run: |
-          pnpm preview:context &
-          pnpm preview:permissive &
-          pnpm preview:roots &
-          # 서버가 ready될 때까지 대기 (최대 30초)
-          npx wait-on http://localhost:3003 http://localhost:3004 http://localhost:3005 -t 30000
-
       - name: Run accessibility tests
         run: pnpm exec playwright test tests/e2e/accessibility.spec.ts
 
@@ -203,14 +195,6 @@ jobs:
 
       - name: Build all apps
         run: pnpm build
-
-      - name: Start preview servers
-        run: |
-          pnpm preview:context &
-          pnpm preview:permissive &
-          pnpm preview:roots &
-          # 서버가 ready될 때까지 대기 (최대 30초)
-          npx wait-on http://localhost:3003 http://localhost:3004 http://localhost:3005 -t 30000
 
       - name: Run PWA tests
         run: pnpm exec playwright test tests/e2e/pwa/

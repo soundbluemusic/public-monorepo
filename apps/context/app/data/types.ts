@@ -120,6 +120,7 @@ export interface MeaningEntry {
  * ## Dialogue lazy-loading
  * dialogue 데이터는 translation에 포함되지 않으며, hasDialogue 플래그로 존재 여부만 표시합니다.
  * 실제 dialogue 데이터는 `/data/dialogues/{locale}/{entryId}.json`에서 별도 로드합니다.
+ * biome entry는 파일명이 `biome.dialogue.json`으로 예외 처리됩니다.
  *
  * @property translation - 현재 locale의 번역만 포함 (dialogue 제외)
  * @property hasDialogue - dialogue 데이터 존재 여부 (lazy-load용)

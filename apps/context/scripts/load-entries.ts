@@ -676,6 +676,9 @@ function generateCategoryChunks(entries: JsonEntry[]): void {
 
   console.log('\n📦 Generating JSON chunks by category (locale-separated, dialogue-separated)...');
 
+  const dialogueFilename = (entryId: string) =>
+    entryId === 'biome' ? 'biome.dialogue.json' : `${entryId}.json`;
+
   // 카테고리별 그룹화 (경량)
   const byCategory = new Map<string, LightEntry[]>();
   // 카테고리별 locale 분리 데이터 (dialogue 제외)
@@ -780,7 +783,7 @@ function generateCategoryChunks(entries: JsonEntry[]): void {
   // 영어 dialogue JSON 생성 (entryId별 개별 파일)
   let enDialogueSize = 0;
   for (const [entryId, dialogue] of dialoguesEn) {
-    const filename = `${entryId}.json`;
+    const filename = dialogueFilename(entryId);
     const filepath = join(dialoguesDirEn, filename);
     const content = JSON.stringify(dialogue);
     writeFileSync(filepath, content);
@@ -793,7 +796,7 @@ function generateCategoryChunks(entries: JsonEntry[]): void {
   // 한국어 dialogue JSON 생성 (entryId별 개별 파일)
   let koDialogueSize = 0;
   for (const [entryId, dialogue] of dialoguesKo) {
-    const filename = `${entryId}.json`;
+    const filename = dialogueFilename(entryId);
     const filepath = join(dialoguesDirKo, filename);
     const content = JSON.stringify(dialogue);
     writeFileSync(filepath, content);
