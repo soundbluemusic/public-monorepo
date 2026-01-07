@@ -1,0 +1,31 @@
+# .claudeignore - Claude Code가 탐색하지 않을 파일/디렉토리
+# 토큰 절약을 위해 불필요한 파일 제외
+
+# 빌드 산출물
+node_modules/
+build/
+dist/
+.turbo/
+.wrangler/
+.tmp/
+
+# 캐시
+.cache/
+*.log
+.DS_Store
+
+# 대용량 데이터 (필요시 @파일명으로 직접 지정)
+data/context/entries/
+
+# Git
+.git/
+
+# Lock 파일
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# 테스트 산출물
+coverage/
+playwright-report/
+test-results/
