@@ -22,6 +22,7 @@
  * ```
  */
 
+import { type CompressedFile, expandCompressedFile } from '../expand-entry';
 // JSON에서 생성된 경량 엔트리 (prebuild 스크립트에서 생성됨)
 import { jsonEntriesCount, type LightEntry, lightEntries } from '../generated/entries';
 import { entryToCategory } from '../generated/entry-index';
@@ -59,24 +60,23 @@ async function loadCategoryByLocale(categoryId: string, locale: Language): Promi
       const { readFileSync } = await import('node:fs');
       const { join } = await import('node:path');
 
-      // locale별 분리된 디렉토리에서 로드
-      const filePath = join(
-        process.cwd(),
-        `public/data/by-category-full/${locale}/${categoryId}.json`,
-      );
+      // 압축된 데이터에서 로드 후 복원
+      const filePath = join(process.cwd(), `public/data/compressed/${locale}/${categoryId}.json`);
       const content = readFileSync(filePath, 'utf-8');
-      const entries: LocaleEntry[] = JSON.parse(content);
+      const compressed: CompressedFile = JSON.parse(content);
+      const entries = expandCompressedFile(compressed);
       localeCategoryCache.set(cacheKey, entries);
       return entries;
     }
 
     // 브라우저 런타임 (클라이언트 사이드 네비게이션)
-    const response = await fetch(`/data/by-category-full/${locale}/${categoryId}.json`);
+    const response = await fetch(`/data/compressed/${locale}/${categoryId}.json`);
     if (!response.ok) {
       console.warn(`Failed to load category: ${locale}/${categoryId}`);
       return [];
     }
-    const entries: LocaleEntry[] = await response.json();
+    const compressed: CompressedFile = await response.json();
+    const entries = expandCompressedFile(compressed);
     localeCategoryCache.set(cacheKey, entries);
     return entries;
   } catch (error) {

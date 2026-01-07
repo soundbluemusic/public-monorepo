@@ -1,241 +1,17 @@
 [
   {
-    "id": "greetings",
+    "id": "actions",
     "name": {
-      "ko": "인사",
-      "en": "Greetings"
+      "ko": "신체 동작",
+      "en": "Body Actions"
     },
     "description": {
-      "ko": "일상에서 사용하는 인사말",
-      "en": "Everyday greetings and salutations"
+      "ko": "걷기, 뛰기, 들기 등 신체 동작",
+      "en": "Walking, running, lifting and other body movements"
     },
-    "icon": "―",
-    "color": "yellow",
-    "order": 1
-  },
-  {
-    "id": "emotions",
-    "name": {
-      "ko": "감정",
-      "en": "Emotions"
-    },
-    "description": {
-      "ko": "감정과 기분을 표현하는 단어",
-      "en": "Words expressing feelings and moods"
-    },
-    "icon": "◐",
-    "color": "pink",
-    "order": 2
-  },
-  {
-    "id": "daily-life",
-    "name": {
-      "ko": "일상생활",
-      "en": "Daily Life"
-    },
-    "description": {
-      "ko": "일상생활에서 자주 쓰는 단어",
-      "en": "Common words used in daily activities"
-    },
-    "icon": "⌂",
-    "color": "blue",
-    "order": 3
-  },
-  {
-    "id": "food",
-    "name": {
-      "ko": "음식",
-      "en": "Food"
-    },
-    "description": {
-      "ko": "음식과 식사 관련 단어",
-      "en": "Food and dining related vocabulary"
-    },
-    "icon": "○",
-    "color": "orange",
-    "order": 4
-  },
-  {
-    "id": "travel",
-    "name": {
-      "ko": "여행",
-      "en": "Travel"
-    },
-    "description": {
-      "ko": "여행과 이동 관련 단어",
-      "en": "Travel and transportation vocabulary"
-    },
-    "icon": "→",
-    "color": "teal",
-    "order": 5
-  },
-  {
-    "id": "work",
-    "name": {
-      "ko": "직장",
-      "en": "Work"
-    },
-    "description": {
-      "ko": "직장과 비즈니스 관련 단어",
-      "en": "Work and business related vocabulary"
-    },
-    "icon": "□",
-    "color": "indigo",
-    "order": 6
-  },
-  {
-    "id": "culture",
-    "name": {
-      "ko": "문화",
-      "en": "Culture"
-    },
-    "description": {
-      "ko": "한국 문화 관련 단어",
-      "en": "Korean culture related vocabulary"
-    },
-    "icon": "◇",
-    "color": "purple",
-    "order": 7
-  },
-  {
-    "id": "numbers",
-    "name": {
-      "ko": "숫자/시간",
-      "en": "Numbers & Time"
-    },
-    "description": {
-      "ko": "숫자와 시간 관련 단어",
-      "en": "Numbers and time related vocabulary"
-    },
-    "icon": "#",
-    "color": "green",
-    "order": 8
-  },
-  {
-    "id": "music",
-    "name": {
-      "ko": "음악",
-      "en": "Music"
-    },
-    "description": {
-      "ko": "악기와 음악 관련 단어",
-      "en": "Musical instruments and music vocabulary"
-    },
-    "icon": "♪",
+    "icon": "🏃",
     "color": "red",
-    "order": 9
-  },
-  {
-    "id": "art",
-    "name": {
-      "ko": "예술",
-      "en": "Art"
-    },
-    "description": {
-      "ko": "미술과 예술 관련 단어",
-      "en": "Art and creative expression vocabulary"
-    },
-    "icon": "◎",
-    "color": "purple",
-    "order": 10
-  },
-  {
-    "id": "sports",
-    "name": {
-      "ko": "스포츠",
-      "en": "Sports"
-    },
-    "description": {
-      "ko": "스포츠와 운동 관련 단어",
-      "en": "Sports and exercise vocabulary"
-    },
-    "icon": "●",
-    "color": "green",
-    "order": 11
-  },
-  {
-    "id": "space",
-    "name": {
-      "ko": "우주",
-      "en": "Space"
-    },
-    "description": {
-      "ko": "우주와 천문학 관련 단어",
-      "en": "Space and astronomy vocabulary"
-    },
-    "icon": "☆",
-    "color": "indigo",
-    "order": 12
-  },
-  {
-    "id": "physics",
-    "name": {
-      "ko": "물리학",
-      "en": "Physics"
-    },
-    "description": {
-      "ko": "물리학과 과학 관련 단어",
-      "en": "Physics and science vocabulary"
-    },
-    "icon": "∿",
-    "color": "blue",
-    "order": 13
-  },
-  {
-    "id": "math",
-    "name": {
-      "ko": "수학",
-      "en": "Mathematics"
-    },
-    "description": {
-      "ko": "수학과 계산 관련 단어",
-      "en": "Mathematics and calculation vocabulary"
-    },
-    "icon": "∑",
-    "color": "teal",
-    "order": 14
-  },
-  {
-    "id": "time-date",
-    "name": {
-      "ko": "시간/날짜",
-      "en": "Time & Date"
-    },
-    "description": {
-      "ko": "시간, 날짜, 요일 관련 단어",
-      "en": "Time, date, and day-related vocabulary"
-    },
-    "icon": "◴",
-    "color": "blue",
-    "order": 15
-  },
-  {
-    "id": "family",
-    "name": {
-      "ko": "가족/관계",
-      "en": "Family & Relationships"
-    },
-    "description": {
-      "ko": "가족, 친척, 인간관계 관련 단어",
-      "en": "Family, relatives, and relationship vocabulary"
-    },
-    "icon": "∞",
-    "color": "pink",
-    "order": 16
-  },
-  {
-    "id": "verbs-basic",
-    "name": {
-      "ko": "기본 동사",
-      "en": "Basic Verbs"
-    },
-    "description": {
-      "ko": "TOPIK 필수 기본 동사",
-      "en": "Essential basic verbs for TOPIK"
-    },
-    "icon": "→",
-    "color": "orange",
-    "order": 17
+    "order": 121
   },
   {
     "id": "adjectives-basic",
@@ -252,32 +28,74 @@
     "order": 18
   },
   {
-    "id": "shopping",
+    "id": "adverbs",
     "name": {
-      "ko": "쇼핑",
-      "en": "Shopping"
+      "ko": "부사/강조어",
+      "en": "Adverbs & Intensifiers"
     },
     "description": {
-      "ko": "쇼핑과 구매 관련 단어",
-      "en": "Shopping and purchasing vocabulary"
+      "ko": "정도, 빈도, 시간 부사",
+      "en": "Degree, frequency, and time adverbs"
     },
-    "icon": "▢",
-    "color": "pink",
-    "order": 19
+    "icon": "⚡",
+    "color": "yellow",
+    "order": 103
   },
   {
-    "id": "transportation",
+    "id": "anatomy",
     "name": {
-      "ko": "교통",
-      "en": "Transportation"
+      "ko": "해부학",
+      "en": "Anatomy"
     },
     "description": {
-      "ko": "교통수단과 이동 관련 단어",
-      "en": "Transportation and travel vocabulary"
+      "ko": "근육, 뼈, 관절 등 해부학 용어",
+      "en": "Muscles, bones, joints and anatomical terms"
     },
-    "icon": "⊳",
-    "color": "blue",
-    "order": 20
+    "icon": "🦴",
+    "color": "purple",
+    "order": 122
+  },
+  {
+    "id": "art",
+    "name": {
+      "ko": "예술",
+      "en": "Art"
+    },
+    "description": {
+      "ko": "미술과 예술 관련 단어",
+      "en": "Art and creative expression vocabulary"
+    },
+    "icon": "◎",
+    "color": "purple",
+    "order": 10
+  },
+  {
+    "id": "body-misc",
+    "name": {
+      "ko": "신체 기타",
+      "en": "Body Misc"
+    },
+    "description": {
+      "ko": "기타 신체 관련 어휘",
+      "en": "Other body-related vocabulary"
+    },
+    "icon": "🫁",
+    "color": "purple",
+    "order": 126
+  },
+  {
+    "id": "body-parts",
+    "name": {
+      "ko": "신체 부위",
+      "en": "Body Parts"
+    },
+    "description": {
+      "ko": "머리, 팔, 다리 등 신체 부위",
+      "en": "Head, arms, legs and other body parts"
+    },
+    "icon": "🫀",
+    "color": "red",
+    "order": 124
   },
   {
     "id": "coding",
@@ -294,48 +112,6 @@
     "order": 21
   },
   {
-    "id": "countries",
-    "name": {
-      "ko": "국가",
-      "en": "Countries"
-    },
-    "description": {
-      "ko": "전 세계 국가와 지역의 이름",
-      "en": "Names of countries and regions around the world"
-    },
-    "icon": "◯",
-    "color": "teal",
-    "order": 22
-  },
-  {
-    "id": "particles",
-    "name": {
-      "ko": "조사",
-      "en": "Particles"
-    },
-    "description": {
-      "ko": "문법적 관계를 나타내는 조사",
-      "en": "Grammatical particles indicating relationships"
-    },
-    "icon": "∘",
-    "color": "indigo",
-    "order": 23
-  },
-  {
-    "id": "geography",
-    "name": {
-      "ko": "지리",
-      "en": "Geography"
-    },
-    "description": {
-      "ko": "대륙, 바다 등 지리 관련 단어",
-      "en": "Geography-related words including continents and oceans"
-    },
-    "icon": "◐",
-    "color": "teal",
-    "order": 24
-  },
-  {
     "id": "colors",
     "name": {
       "ko": "색상",
@@ -348,62 +124,6 @@
     "icon": "◉",
     "color": "pink",
     "order": 25
-  },
-  {
-    "id": "idioms",
-    "name": {
-      "ko": "관용구",
-      "en": "Idioms"
-    },
-    "description": {
-      "ko": "한국어 관용 표현과 속담",
-      "en": "Korean idiomatic expressions and proverbs"
-    },
-    "icon": "≋",
-    "color": "purple",
-    "order": 26
-  },
-  {
-    "id": "onomatopoeia",
-    "name": {
-      "ko": "의성어/의태어",
-      "en": "Onomatopoeia"
-    },
-    "description": {
-      "ko": "소리와 모양을 흉내내는 단어",
-      "en": "Sound and mimetic words"
-    },
-    "icon": "∿",
-    "color": "orange",
-    "order": 27
-  },
-  {
-    "id": "cultural-expressions",
-    "name": {
-      "ko": "문화 표현",
-      "en": "Cultural Expressions"
-    },
-    "description": {
-      "ko": "한국 문화 특유의 표현",
-      "en": "Uniquely Korean cultural expressions"
-    },
-    "icon": "◈",
-    "color": "red",
-    "order": 28
-  },
-  {
-    "id": "phrasal-verbs",
-    "name": {
-      "ko": "구동사",
-      "en": "Phrasal Verbs"
-    },
-    "description": {
-      "ko": "동사구와 복합 동사 표현",
-      "en": "Verb phrases and compound verb expressions"
-    },
-    "icon": "⇢",
-    "color": "teal",
-    "order": 29
   },
   {
     "id": "compound-words",
@@ -420,60 +140,60 @@
     "order": 30
   },
   {
-    "id": "verb-stems",
+    "id": "countries",
     "name": {
-      "ko": "동사 어간",
-      "en": "Verb Stems"
+      "ko": "국가",
+      "en": "Countries"
     },
     "description": {
-      "ko": "한국어 동사의 기본 어간",
-      "en": "Basic stems of Korean verbs"
-    },
-    "icon": "∨",
-    "color": "green",
-    "order": 31
-  },
-  {
-    "id": "body",
-    "name": {
-      "ko": "신체",
-      "en": "Body"
-    },
-    "description": {
-      "ko": "인체와 신체 부위 관련 단어",
-      "en": "Human body and anatomy vocabulary"
+      "ko": "전 세계 국가와 지역의 이름",
+      "en": "Names of countries and regions around the world"
     },
     "icon": "◯",
-    "color": "red",
-    "order": 32
+    "color": "teal",
+    "order": 22
   },
   {
-    "id": "medical",
+    "id": "cultural-expressions",
     "name": {
-      "ko": "의학",
-      "en": "Medical"
+      "ko": "문화 표현",
+      "en": "Cultural Expressions"
     },
     "description": {
-      "ko": "의학과 건강 관련 단어",
-      "en": "Medical and health related vocabulary"
+      "ko": "한국 문화 특유의 표현",
+      "en": "Uniquely Korean cultural expressions"
     },
-    "icon": "+",
+    "icon": "◈",
     "color": "red",
-    "order": 33
+    "order": 28
   },
   {
-    "id": "legal",
+    "id": "culture",
     "name": {
-      "ko": "법률",
-      "en": "Legal"
+      "ko": "문화",
+      "en": "Culture"
     },
     "description": {
-      "ko": "법률과 법적 용어",
-      "en": "Legal and law related vocabulary"
+      "ko": "한국 문화 관련 단어",
+      "en": "Korean culture related vocabulary"
     },
-    "icon": "§",
-    "color": "indigo",
-    "order": 34
+    "icon": "◇",
+    "color": "purple",
+    "order": 7
+  },
+  {
+    "id": "daily-misc",
+    "name": {
+      "ko": "일상 기타",
+      "en": "Daily Misc"
+    },
+    "description": {
+      "ko": "기타 일상 관련 어휘",
+      "en": "Other daily life vocabulary"
+    },
+    "icon": "📋",
+    "color": "teal",
+    "order": 116
   },
   {
     "id": "education",
@@ -490,6 +210,146 @@
     "order": 35
   },
   {
+    "id": "emotions",
+    "name": {
+      "ko": "감정",
+      "en": "Emotions"
+    },
+    "description": {
+      "ko": "감정과 기분을 표현하는 단어",
+      "en": "Words expressing feelings and moods"
+    },
+    "icon": "◐",
+    "color": "pink",
+    "order": 2
+  },
+  {
+    "id": "events",
+    "name": {
+      "ko": "행사/이벤트",
+      "en": "Events & Occasions"
+    },
+    "description": {
+      "ko": "생일, 결혼, 기념일, 모임",
+      "en": "Birthdays, weddings, anniversaries, gatherings"
+    },
+    "icon": "🎉",
+    "color": "pink",
+    "order": 114
+  },
+  {
+    "id": "family",
+    "name": {
+      "ko": "가족/관계",
+      "en": "Family & Relationships"
+    },
+    "description": {
+      "ko": "가족, 친척, 인간관계 관련 단어",
+      "en": "Family, relatives, and relationship vocabulary"
+    },
+    "icon": "∞",
+    "color": "pink",
+    "order": 16
+  },
+  {
+    "id": "food",
+    "name": {
+      "ko": "음식",
+      "en": "Food"
+    },
+    "description": {
+      "ko": "음식과 식사 관련 단어",
+      "en": "Food and dining related vocabulary"
+    },
+    "icon": "○",
+    "color": "orange",
+    "order": 4
+  },
+  {
+    "id": "geography",
+    "name": {
+      "ko": "지리",
+      "en": "Geography"
+    },
+    "description": {
+      "ko": "대륙, 바다 등 지리 관련 단어",
+      "en": "Geography-related words including continents and oceans"
+    },
+    "icon": "◐",
+    "color": "teal",
+    "order": 24
+  },
+  {
+    "id": "gestures",
+    "name": {
+      "ko": "표정/제스처",
+      "en": "Expressions & Gestures"
+    },
+    "description": {
+      "ko": "표정, 손짓, 비언어적 표현",
+      "en": "Facial expressions, hand gestures, non-verbal communication"
+    },
+    "icon": "🙌",
+    "color": "orange",
+    "order": 123
+  },
+  {
+    "id": "greetings",
+    "name": {
+      "ko": "인사",
+      "en": "Greetings"
+    },
+    "description": {
+      "ko": "일상에서 사용하는 인사말",
+      "en": "Everyday greetings and salutations"
+    },
+    "icon": "―",
+    "color": "yellow",
+    "order": 1
+  },
+  {
+    "id": "health",
+    "name": {
+      "ko": "건강/상태",
+      "en": "Health & Conditions"
+    },
+    "description": {
+      "ko": "건강, 통증, 신체 상태",
+      "en": "Health, pain, physical conditions"
+    },
+    "icon": "💊",
+    "color": "green",
+    "order": 125
+  },
+  {
+    "id": "home",
+    "name": {
+      "ko": "가정/주거",
+      "en": "Home & Living"
+    },
+    "description": {
+      "ko": "집, 가구, 가전제품",
+      "en": "House, furniture, appliances"
+    },
+    "icon": "🏠",
+    "color": "indigo",
+    "order": 112
+  },
+  {
+    "id": "idioms",
+    "name": {
+      "ko": "관용구",
+      "en": "Idioms"
+    },
+    "description": {
+      "ko": "한국어 관용 표현과 속담",
+      "en": "Korean idiomatic expressions and proverbs"
+    },
+    "icon": "≋",
+    "color": "purple",
+    "order": 26
+  },
+  {
     "id": "interjections",
     "name": {
       "ko": "감탄사",
@@ -504,17 +364,367 @@
     "order": 36
   },
   {
-    "id": "basic-words",
+    "id": "legal",
     "name": {
-      "ko": "기본 단어",
-      "en": "Basic Words"
+      "ko": "법률",
+      "en": "Legal"
     },
     "description": {
-      "ko": "일상에서 자주 쓰는 기본 단어",
-      "en": "Basic words commonly used in daily life"
+      "ko": "법률과 법적 용어",
+      "en": "Legal and law related vocabulary"
     },
-    "icon": "·",
-    "color": "gray",
-    "order": 37
+    "icon": "§",
+    "color": "indigo",
+    "order": 34
+  },
+  {
+    "id": "math",
+    "name": {
+      "ko": "수학",
+      "en": "Mathematics"
+    },
+    "description": {
+      "ko": "수학과 계산 관련 단어",
+      "en": "Mathematics and calculation vocabulary"
+    },
+    "icon": "∑",
+    "color": "teal",
+    "order": 14
+  },
+  {
+    "id": "medical",
+    "name": {
+      "ko": "의학",
+      "en": "Medical"
+    },
+    "description": {
+      "ko": "의학과 건강 관련 단어",
+      "en": "Medical and health related vocabulary"
+    },
+    "icon": "+",
+    "color": "red",
+    "order": 33
+  },
+  {
+    "id": "music",
+    "name": {
+      "ko": "음악",
+      "en": "Music"
+    },
+    "description": {
+      "ko": "악기와 음악 관련 단어",
+      "en": "Musical instruments and music vocabulary"
+    },
+    "icon": "♪",
+    "color": "red",
+    "order": 9
+  },
+  {
+    "id": "nouns-common",
+    "name": {
+      "ko": "기본 명사",
+      "en": "Common Nouns"
+    },
+    "description": {
+      "ko": "자주 쓰이는 기본 명사",
+      "en": "Frequently used common nouns"
+    },
+    "icon": "📦",
+    "color": "blue",
+    "order": 106
+  },
+  {
+    "id": "numbers",
+    "name": {
+      "ko": "숫자/시간",
+      "en": "Numbers & Time"
+    },
+    "description": {
+      "ko": "숫자와 시간 관련 단어",
+      "en": "Numbers and time related vocabulary"
+    },
+    "icon": "#",
+    "color": "green",
+    "order": 8
+  },
+  {
+    "id": "objects",
+    "name": {
+      "ko": "일상 물건",
+      "en": "Everyday Objects"
+    },
+    "description": {
+      "ko": "개인용품, 생활용품",
+      "en": "Personal items, household items"
+    },
+    "icon": "🧴",
+    "color": "green",
+    "order": 115
+  },
+  {
+    "id": "onomatopoeia",
+    "name": {
+      "ko": "의성어/의태어",
+      "en": "Onomatopoeia"
+    },
+    "description": {
+      "ko": "소리와 모양을 흉내내는 단어",
+      "en": "Sound and mimetic words"
+    },
+    "icon": "∿",
+    "color": "orange",
+    "order": 27
+  },
+  {
+    "id": "particles",
+    "name": {
+      "ko": "조사",
+      "en": "Particles"
+    },
+    "description": {
+      "ko": "문법적 관계를 나타내는 조사",
+      "en": "Grammatical particles indicating relationships"
+    },
+    "icon": "∘",
+    "color": "indigo",
+    "order": 23
+  },
+  {
+    "id": "phrasal-verbs",
+    "name": {
+      "ko": "구동사",
+      "en": "Phrasal Verbs"
+    },
+    "description": {
+      "ko": "동사구와 복합 동사 표현",
+      "en": "Verb phrases and compound verb expressions"
+    },
+    "icon": "⇢",
+    "color": "teal",
+    "order": 29
+  },
+  {
+    "id": "physics",
+    "name": {
+      "ko": "물리학",
+      "en": "Physics"
+    },
+    "description": {
+      "ko": "물리학과 과학 관련 단어",
+      "en": "Physics and science vocabulary"
+    },
+    "icon": "∿",
+    "color": "blue",
+    "order": 13
+  },
+  {
+    "id": "places",
+    "name": {
+      "ko": "장소/시설",
+      "en": "Places & Facilities"
+    },
+    "description": {
+      "ko": "공공장소, 상업시설, 교통시설",
+      "en": "Public places, shops, transportation"
+    },
+    "icon": "🏢",
+    "color": "teal",
+    "order": 111
+  },
+  {
+    "id": "pronouns",
+    "name": {
+      "ko": "대명사/지시어",
+      "en": "Pronouns & Demonstratives"
+    },
+    "description": {
+      "ko": "인칭대명사, 지시대명사, 의문사",
+      "en": "Personal pronouns, demonstratives, interrogatives"
+    },
+    "icon": "👉",
+    "color": "blue",
+    "order": 102
+  },
+  {
+    "id": "responses",
+    "name": {
+      "ko": "감탄사/응답어",
+      "en": "Interjections & Responses"
+    },
+    "description": {
+      "ko": "감탄사, 응답어, 추임새",
+      "en": "Interjections, responses, filler words"
+    },
+    "icon": "💬",
+    "color": "green",
+    "order": 104
+  },
+  {
+    "id": "routines",
+    "name": {
+      "ko": "일상 루틴",
+      "en": "Daily Routines"
+    },
+    "description": {
+      "ko": "아침 루틴, 위생, 일상 활동",
+      "en": "Morning routines, hygiene, daily activities"
+    },
+    "icon": "🌅",
+    "color": "yellow",
+    "order": 113
+  },
+  {
+    "id": "shopping",
+    "name": {
+      "ko": "쇼핑",
+      "en": "Shopping"
+    },
+    "description": {
+      "ko": "쇼핑과 구매 관련 단어",
+      "en": "Shopping and purchasing vocabulary"
+    },
+    "icon": "▢",
+    "color": "pink",
+    "order": 19
+  },
+  {
+    "id": "slang",
+    "name": {
+      "ko": "슬랭/신조어",
+      "en": "Slang & Trends"
+    },
+    "description": {
+      "ko": "인터넷 신조어, 유행어, 줄임말",
+      "en": "Internet slang, trending words, abbreviations"
+    },
+    "icon": "🔥",
+    "color": "orange",
+    "order": 101
+  },
+  {
+    "id": "space",
+    "name": {
+      "ko": "우주",
+      "en": "Space"
+    },
+    "description": {
+      "ko": "우주와 천문학 관련 단어",
+      "en": "Space and astronomy vocabulary"
+    },
+    "icon": "☆",
+    "color": "indigo",
+    "order": 12
+  },
+  {
+    "id": "sports",
+    "name": {
+      "ko": "스포츠",
+      "en": "Sports"
+    },
+    "description": {
+      "ko": "스포츠와 운동 관련 단어",
+      "en": "Sports and exercise vocabulary"
+    },
+    "icon": "●",
+    "color": "green",
+    "order": 11
+  },
+  {
+    "id": "time-date",
+    "name": {
+      "ko": "시간/날짜",
+      "en": "Time & Date"
+    },
+    "description": {
+      "ko": "시간, 날짜, 요일 관련 단어",
+      "en": "Time, date, and day-related vocabulary"
+    },
+    "icon": "◴",
+    "color": "blue",
+    "order": 15
+  },
+  {
+    "id": "transportation",
+    "name": {
+      "ko": "교통",
+      "en": "Transportation"
+    },
+    "description": {
+      "ko": "교통수단과 이동 관련 단어",
+      "en": "Transportation and travel vocabulary"
+    },
+    "icon": "⊳",
+    "color": "blue",
+    "order": 20
+  },
+  {
+    "id": "travel",
+    "name": {
+      "ko": "여행",
+      "en": "Travel"
+    },
+    "description": {
+      "ko": "여행과 이동 관련 단어",
+      "en": "Travel and transportation vocabulary"
+    },
+    "icon": "→",
+    "color": "teal",
+    "order": 5
+  },
+  {
+    "id": "verb-stems",
+    "name": {
+      "ko": "동사 어간",
+      "en": "Verb Stems"
+    },
+    "description": {
+      "ko": "한국어 동사의 기본 어간",
+      "en": "Basic stems of Korean verbs"
+    },
+    "icon": "∨",
+    "color": "green",
+    "order": 31
+  },
+  {
+    "id": "verbs-basic",
+    "name": {
+      "ko": "기본 동사",
+      "en": "Basic Verbs"
+    },
+    "description": {
+      "ko": "TOPIK 필수 기본 동사",
+      "en": "Essential basic verbs for TOPIK"
+    },
+    "icon": "→",
+    "color": "orange",
+    "order": 17
+  },
+  {
+    "id": "verbs-common",
+    "name": {
+      "ko": "기본 동사",
+      "en": "Common Verbs"
+    },
+    "description": {
+      "ko": "일상에서 자주 쓰는 기본 동사",
+      "en": "Frequently used basic verbs"
+    },
+    "icon": "🏃",
+    "color": "purple",
+    "order": 105
+  },
+  {
+    "id": "work",
+    "name": {
+      "ko": "직장",
+      "en": "Work"
+    },
+    "description": {
+      "ko": "직장과 비즈니스 관련 단어",
+      "en": "Work and business related vocabulary"
+    },
+    "icon": "□",
+    "color": "indigo",
+    "order": 6
   }
 ]
