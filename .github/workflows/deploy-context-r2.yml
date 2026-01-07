@@ -1,0 +1,47 @@
+name: Sync Context R2
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/context/**'
+  workflow_dispatch:
+
+concurrency:
+  group: sync-context-r2-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    name: Sync to R2
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install rclone
+        run: |
+          curl -fsSL https://rclone.org/install.sh | sudo bash
+
+      - name: Configure rclone for R2
+        run: |
+          mkdir -p ~/.config/rclone
+          cat > ~/.config/rclone/rclone.conf << EOF
+          [r2]
+          type = s3
+          provider = Cloudflare
+          access_key_id = ${{ secrets.R2_ACCESS_KEY_ID }}
+          secret_access_key = ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          endpoint = https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
+          acl = private
+          EOF
+
+      - name: Sync to R2
+        run: |
+          rclone sync data/context/entries r2:context-audio/entries \
+            --checksum \
+            --transfers 32 \
+            --checkers 32 \
+            --fast-list \
+            --stats 10s \
+            --stats-one-line \
+            -v
