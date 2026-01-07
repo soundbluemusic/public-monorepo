@@ -137,7 +137,7 @@ export const storage: StorageFactory = {
    - `ssr: false` + `prerender()` + `loader()` in `react-router.config.ts`
    - 빌드 출력: `build/client` (HTML + JS + .data 파일)
    - 런타임 서버 없음, CDN에서 직접 서빙
-   - 각 앱 SSG 라우트: Context 33746개, Roots 920개, Permissive 8개
+   - 각 앱 SSG 라우트: Context 46364개, Roots 920개, Permissive 8개
 2. **오픈소스 Only** - 모든 라이브러리/도구는 오픈소스만 사용.
 3. **웹 표준 API Only** - 브라우저 표준 API만 사용. 벤더 종속 API 금지.
 4. **로컬 스토리지 Only** - DB는 localStorage, IndexedDB만 사용. 외부 DB/CMS 절대 금지.
@@ -605,7 +605,7 @@ validateId()는 빈 문자열에 대해 ValidationError를 던집니다."
 ```
 data/
 ├── context/           # Context 앱 데이터
-│   └── entries/       # 16836개 한국어 단어 (JSON)
+│   └── entries/       # 23145개 한국어 단어 (JSON)
 │       ├── greetings.json
 │       ├── food.json
 │       └── ...
