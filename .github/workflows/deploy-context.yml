@@ -70,9 +70,8 @@ jobs:
           acl = private
           EOF
 
-      # 5. R2에 데이터 파일 업로드 (rclone sync - 변경분만 업로드)
-      # --checksum: HEAD 요청 대신 MD5 해시로 비교 (53K 파일 → API 호출 대폭 감소)
-      - name: Upload data files to R2
+      # 5. 데이터 업로드: R2 실제 상태와 비교하여 동기화
+      - name: Sync data files to R2
         run: |
           rclone sync apps/context/public/data r2:all-sites-static/public-monorepo/context/data \
             --checksum \
@@ -88,9 +87,8 @@ jobs:
           cd apps/context
           pnpm build:r2
 
-      # 7. R2에 엔트리 HTML 업로드 (rclone sync)
-      # --checksum: HEAD 요청 대신 MD5 해시로 비교
-      - name: Upload entry HTML to R2
+      # 7. 엔트리 HTML 업로드: R2 실제 상태와 비교하여 동기화
+      - name: Sync entry HTML to R2
         run: |
           rclone sync apps/context/build/client r2:all-sites-static/public-monorepo/context \
             --checksum \

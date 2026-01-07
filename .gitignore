@@ -61,3 +61,6 @@ test-results/
 playwright-test-output.txt
 playwright-report/
 *-snapshots/
+
+# Local Chrome for Testing download
+chrome/
