@@ -30,6 +30,7 @@ interface UserDataState {
 
 interface UserDataActions {
   setHydrated: () => void;
+  pruneLegacyEntries: () => void;
 
   // Favorites
   addFavorite: (entryId: string) => void;
@@ -68,6 +69,29 @@ export const useUserDataStore = create<UserDataState & UserDataActions>()(
 
       // Actions
       setHydrated: () => set({ isHydrated: true }),
+      pruneLegacyEntries: () => {
+        // Only run in the browser; legacy entries can linger in localStorage.
+        if (typeof window === 'undefined') return;
+
+        void (async () => {
+          try {
+            const { entryIndex } = await import('@/data/generated/entry-index');
+            const isValid = (id: string) => Boolean(entryIndex[id]);
+
+            const favorites = get().favorites.filter((f) => isValid(f.entryId));
+            const studyRecords = get().studyRecords.filter((r) => isValid(r.entryId));
+
+            if (
+              favorites.length !== get().favorites.length ||
+              studyRecords.length !== get().studyRecords.length
+            ) {
+              set({ favorites, studyRecords });
+            }
+          } catch (error) {
+            console.error('[UserDataStore] Failed to prune legacy entries:', error);
+          }
+        })();
+      },
 
       // ========================================
       // Favorites
@@ -176,6 +200,7 @@ export const useUserDataStore = create<UserDataState & UserDataActions>()(
           console.error('[UserDataStore] Rehydration error:', error);
         }
         state?.setHydrated();
+        state?.pruneLegacyEntries();
       },
     },
   ),
