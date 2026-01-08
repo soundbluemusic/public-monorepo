@@ -240,7 +240,7 @@ function generateTypeScriptFile(entries: JsonEntry[]): string {
  * - 이 파일에는 경량 LightEntry만 포함 (browse 페이지용)
  *
  * @generated
- * @date ${new Date().toISOString()}
+ * @date 2024-01-01T00:00:00.000Z
  */
 
 export const jsonEntriesCount = ${entries.length};
@@ -392,7 +392,7 @@ function generateKoreanExpressionsFile(entries: JsonEntry[]): string {
  * 10,000개 표현에서도 동일한 성능 보장
  *
  * @generated
- * @date ${new Date().toISOString()}
+ * @date 2024-01-01T00:00:00.000Z
  */
 
 /**
@@ -556,7 +556,7 @@ function generateChunks(entries: JsonEntry[]): void {
       count: v.length,
       file: `entries-${k}.json`,
     })),
-    generatedAt: new Date().toISOString(),
+    generatedAt: '2024-01-01T00:00:00.000Z',
   };
   writeFileSync(join(CHUNKS_DIR, 'meta.json'), JSON.stringify(meta, null, 2));
 
@@ -574,7 +574,7 @@ function generateChunks(entries: JsonEntry[]): void {
  * 100만개+ 엔트리에서도 O(1) 조회 지원
  *
  * @generated
- * @date ${new Date().toISOString()}
+ * @date 2024-01-01T00:00:00.000Z
  */
 
 /** 엔트리 ID → 초성 (청크 키) */
