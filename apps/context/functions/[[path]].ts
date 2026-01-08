@@ -33,8 +33,15 @@ export const onRequest: PagesFunction<Env> = async (context) => {
         headers.set('Content-Type', 'application/octet-stream');
       }
       headers.set('Cache-Control', 'public, max-age=86400, s-maxage=604800');
-      // CORS: context.soundbluemusic.com에서만 접근 허용
-      headers.set('Access-Control-Allow-Origin', 'https://context.soundbluemusic.com');
+
+      // CORS: context.soundbluemusic.com 및 미리보기 URL(*.pages.dev) 허용
+      const origin = context.request.headers.get('Origin');
+      const allowedOrigins = ['https://context.soundbluemusic.com'];
+      if (origin && (allowedOrigins.includes(origin) || origin.endsWith('.pages.dev'))) {
+        headers.set('Access-Control-Allow-Origin', origin);
+      } else {
+        headers.set('Access-Control-Allow-Origin', 'https://context.soundbluemusic.com');
+      }
 
       return new Response(object.body, { headers });
     }
@@ -52,6 +59,13 @@ export const onRequest: PagesFunction<Env> = async (context) => {
       const headers = new Headers();
       headers.set('Content-Type', 'text/html; charset=utf-8');
       headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400');
+
+      // CORS: context.soundbluemusic.com 및 미리보기 URL(*.pages.dev) 허용
+      const origin = context.request.headers.get('Origin');
+      const allowedOrigins = ['https://context.soundbluemusic.com'];
+      if (origin && (allowedOrigins.includes(origin) || origin.endsWith('.pages.dev'))) {
+        headers.set('Access-Control-Allow-Origin', origin);
+      }
 
       return new Response(object.body, { headers });
     }
