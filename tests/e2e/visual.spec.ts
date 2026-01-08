@@ -86,7 +86,7 @@ test.describe('Visual Regression', () => {
 
 // 컴포넌트 수준 시각 테스트 (Context 앱 예시)
 test.describe('Context - Component Visual Tests', () => {
-  test.skip(({}, testInfo) => testInfo.project.name !== 'context', 'Context-only visual checks.');
+  test.skip((_, testInfo) => testInfo.project.name !== 'context', 'Context-only visual checks.');
 
   test('search component should match snapshot', async ({ page }) => {
     await page.goto('/');

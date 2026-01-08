@@ -96,7 +96,7 @@ test.describe('Button Interactions', () => {
 
 // Context app specific tests
 test.describe('context - Specific Button Tests', () => {
-  test.skip(({}, testInfo) => testInfo.project.name !== 'context', 'Context-only tests.');
+  test.skip((_, testInfo) => testInfo.project.name !== 'context', 'Context-only tests.');
 
   test('menu button should open sidebar on mobile', async ({ page }) => {
     // Set mobile viewport
@@ -239,7 +239,7 @@ test.describe('context - Specific Button Tests', () => {
 
 // Permissive app specific tests
 test.describe('permissive - Specific Button Tests', () => {
-  test.skip(({}, testInfo) => testInfo.project.name !== 'permissive', 'Permissive-only tests.');
+  test.skip((_, testInfo) => testInfo.project.name !== 'permissive', 'Permissive-only tests.');
 
   test('menu button should open sidebar on mobile', async ({ page }) => {
     // Set mobile viewport
@@ -326,7 +326,7 @@ test.describe('permissive - Specific Button Tests', () => {
 
 // Roots app specific tests
 test.describe('roots - Specific Button Tests', () => {
-  test.skip(({}, testInfo) => testInfo.project.name !== 'roots', 'Roots-only tests.');
+  test.skip((_, testInfo) => testInfo.project.name !== 'roots', 'Roots-only tests.');
 
   test('search dropdown should show results', async ({ page }) => {
     await page.goto('/');

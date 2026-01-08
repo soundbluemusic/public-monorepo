@@ -47,52 +47,7 @@ interface Entry {
 
 // 한글을 로마자로 변환 (간단한 규칙 기반)
 function toRomanization(korean: string): string {
-  const romanMap: Record<string, string> = {
-    // 초성
-    ㄱ: 'g',
-    ㄲ: 'kk',
-    ㄴ: 'n',
-    ㄷ: 'd',
-    ㄸ: 'tt',
-    ㄹ: 'r',
-    ㅁ: 'm',
-    ㅂ: 'b',
-    ㅃ: 'pp',
-    ㅅ: 's',
-    ㅆ: 'ss',
-    ㅇ: '',
-    ㅈ: 'j',
-    ㅉ: 'jj',
-    ㅊ: 'ch',
-    ㅋ: 'k',
-    ㅌ: 't',
-    ㅍ: 'p',
-    ㅎ: 'h',
-    // 모음
-    ㅏ: 'a',
-    ㅐ: 'ae',
-    ㅑ: 'ya',
-    ㅒ: 'yae',
-    ㅓ: 'eo',
-    ㅔ: 'e',
-    ㅕ: 'yeo',
-    ㅖ: 'ye',
-    ㅗ: 'o',
-    ㅘ: 'wa',
-    ㅙ: 'wae',
-    ㅚ: 'oe',
-    ㅛ: 'yo',
-    ㅜ: 'u',
-    ㅝ: 'wo',
-    ㅞ: 'we',
-    ㅟ: 'wi',
-    ㅠ: 'yu',
-    ㅡ: 'eu',
-    ㅢ: 'ui',
-    ㅣ: 'i',
-    // 종성
-    // (초성과 동일한 것은 생략)
-  };
+  // 간단한 변환 - 실제로는 더 복잡한 규칙 필요
 
   // 간단한 변환 - 실제로는 더 복잡한 규칙 필요
   let result = '';
@@ -200,7 +155,7 @@ function toId(english: string): string {
 }
 
 // 태그 결정
-function getTags(section: string, korean: string): string[] {
+function getTags(section: string, _korean: string): string[] {
   const tags: string[] = ['geography'];
 
   if (section.includes('5대양') || section.includes('Ocean')) {
@@ -255,7 +210,7 @@ function getTags(section: string, korean: string): string[] {
 }
 
 // 난이도 결정
-function getDifficulty(korean: string, english: string): string {
+function getDifficulty(korean: string, _english: string): string {
   // 기본 지리 용어는 beginner
   const beginnerTerms = ['대륙', '대양', '바다', '섬', '산', '강', '호수', '사막', '평원', '고원'];
   const intermediateTerms = ['해협', '만', '반도', '폭포', '협곡', '계곡'];

@@ -1,6 +1,12 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.3.10/schema.json",
-  "assist": { "actions": { "source": { "organizeImports": "on" } } },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
   "linter": {
     "enabled": true,
     "rules": {
@@ -58,6 +64,7 @@
       "!**/apps/context/app/data/generated",
       "!**/apps/context/public/data/**/*.json",
       "!**/apps/roots/public/**/*.json",
+      "!**/chrome",
       "!**/apps/**/*/public/search-index.json",
       "!**/apps/**/*/public/**/*.xml",
       "!**/apps/**/*/public/**/*.xsl",
@@ -66,7 +73,10 @@
       "!**/apps/roots/app/routes/+types",
       "!**/packages/shared/src/styles/tailwind.css",
       "!**/packages/config/src/styles/tailwind.css",
-      "!**/.lighthouseci"
+      "!**/.lighthouseci",
+      "!**/coverage",
+      "!**/playwright-report",
+      "!**/test-results"
     ]
   }
 }

@@ -7,7 +7,7 @@ import { I18nProvider } from './i18n';
 import './styles/global.css';
 import type { MetaArgs } from 'react-router';
 
-export function meta({ }: MetaArgs) {
+export function meta(_: MetaArgs) {
   return [
     { title: 'Roots - Math Documentation' },
     {
