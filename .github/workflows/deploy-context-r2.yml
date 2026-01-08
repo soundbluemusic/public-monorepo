@@ -37,7 +37,7 @@ jobs:
 
       - name: Sync to R2
         run: |
-          rclone sync data/context/entries r2:context-audio/entries \
+          rclone sync data/context/entries r2:all-sites-static/public-monorepo/context/data/entries \
             --checksum \
             --transfers 32 \
             --checkers 32 \
