@@ -5,6 +5,17 @@ import { DARK_MODE_INIT_SCRIPT, DARK_MODE_TOGGLE_SCRIPT } from '@soundblue/ui/ut
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from 'react-router';
 import { I18nProvider } from './i18n';
 import './styles/global.css';
+import type { MetaArgs } from 'react-router';
+
+export function meta({ }: MetaArgs) {
+  return [
+    { title: 'Roots - Math Documentation' },
+    {
+      name: 'description',
+      content: 'Learn math concepts easily - From basic arithmetic to advanced calculus',
+    },
+  ];
+}
 
 /**
  * Layout - Pure HTML structure only, no hooks
