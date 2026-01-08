@@ -71,3 +71,4 @@ chrome/
 # Temporary/debug files
 apps/context/.tmp/
 apps/context/entry-mismatch-report.json
+lint_output.txt
