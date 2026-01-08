@@ -40,7 +40,7 @@
 ### 응답 규칙
 | 규칙 | 설명 |
 |------|------|
-| **한글 답변 필수** | 모든 설명과 대답은 반드시 한글로 작성 |
+| **한글 답변 및 문서 작성 필수** (Korean Required for Responses and Documents) | 모든 설명, 대답, 그리고 계획표(Plan) 등의 문서는 반드시 한글로 작성해야 합니다. (All explanations, answers, and documents like plans must be written in Korean.) |
 | **확인 전 단정 금지** | 추측 말고 코드 확인 후 답변 |
 | **완전한 코드 제공** | `// ...` 사용 금지 |
 | **출처 명시** | `파일:라인` 형식으로 근거 제시 |
