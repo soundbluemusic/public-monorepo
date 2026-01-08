@@ -15,7 +15,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router';
 import { getEntryById } from '@/data/entries';
-import type { MeaningEntry } from '@/data/types';
+
 import { useI18n } from '@/i18n';
 
 interface DisambiguationPopoverProps {

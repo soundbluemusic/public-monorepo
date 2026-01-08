@@ -61,7 +61,7 @@ export function EntryDialogueDisplay({
     } finally {
       setIsLoading(false);
     }
-  }, [isOpen, dialogue, locale, entryId, dialogueFilename]);
+  }, [isOpen, dialogue, locale, dialogueFilename]);
 
   // dialogue가 없으면 렌더링하지 않음
   if (!hasDialogue) {

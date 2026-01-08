@@ -43,7 +43,7 @@ interface Entry {
 
 // 로마자 변환 (간단한 규칙 기반)
 function toRomanization(korean: string): string {
-  const romanMap: Record<string, string> = {
+  const _romanMap: Record<string, string> = {
     // 초성
     ㄱ: 'g',
     ㄲ: 'kk',
@@ -304,7 +304,7 @@ function determineFrequency(korean: string, tags: string[]): 'common' | 'occasio
 function generateExamples(
   korean: string,
   english: string,
-  description: string,
+  _description: string,
   tags: string[],
 ): {
   ko: { beginner: string; intermediate: string; advanced: string; master: string };

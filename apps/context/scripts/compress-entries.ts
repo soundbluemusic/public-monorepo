@@ -28,7 +28,7 @@ const OUTPUT_DIR = join(__dirname, '../public/data/compressed');
 // ============================================================================
 
 /** 엔트리 레벨 키 매핑 */
-const ENTRY_KEY_MAP = {
+const _ENTRY_KEY_MAP = {
   id: 'i',
   korean: 'k',
   romanization: 'r',
@@ -43,13 +43,13 @@ const ENTRY_KEY_MAP = {
 } as const;
 
 /** 발음 키 매핑 */
-const PRONUNCIATION_KEY_MAP = {
+const _PRONUNCIATION_KEY_MAP = {
   korean: 'k',
   ipa: 'i',
 } as const;
 
 /** 번역 키 매핑 */
-const TRANSLATION_KEY_MAP = {
+const _TRANSLATION_KEY_MAP = {
   word: 'w',
   explanation: 'x', // explanation
   examples: 'e',

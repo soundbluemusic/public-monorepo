@@ -269,7 +269,9 @@ async function main() {
 
       let fileErrors = 0;
       for (let i = 0; i < originalEntries.length; i++) {
+        // biome-ignore lint/style/noNonNullAssertion: length check passed
         const orig = normalizeEntry(originalEntries[i]!);
+        // biome-ignore lint/style/noNonNullAssertion: length check passed
         const expanded = normalizeEntry(expandedEntries[i]!);
 
         if (!deepEqual(orig, expanded)) {

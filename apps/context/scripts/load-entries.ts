@@ -288,14 +288,17 @@ function buildAhoCorasickTrie(expressions: { id: string; korean: string }[]): Tr
   for (const expr of expressions) {
     let nodeIdx = 0;
     for (const char of expr.korean) {
+      // biome-ignore lint/style/noNonNullAssertion: guaranteed by algorithm
       const currentNode = nodes[nodeIdx]!;
       if (!(char in currentNode.children)) {
         currentNode.children[char] = nodes.length;
         nodes.push({ children: {}, output: null, korean: null, fail: 0 });
       }
+      // biome-ignore lint/style/noNonNullAssertion: guaranteed by algorithm
       nodeIdx = currentNode.children[char]!;
     }
     // 동음이의어 지원: 같은 korean에 여러 ID 수집
+    // biome-ignore lint/style/noNonNullAssertion: guaranteed by algorithm
     const targetNode = nodes[nodeIdx]!;
     if (targetNode.output === null) {
       targetNode.output = [expr.id];
@@ -312,31 +315,41 @@ function buildAhoCorasickTrie(expressions: { id: string; korean: string }[]): Tr
   const queue: number[] = [];
 
   // 루트의 직접 자식들의 fail은 모두 루트(0)
+  // biome-ignore lint/style/noNonNullAssertion: root always exists
   const rootNode = nodes[0]!;
   for (const char in rootNode.children) {
+    // biome-ignore lint/style/noNonNullAssertion: guaranteed by loop
     const childIdx = rootNode.children[char]!;
+    // biome-ignore lint/style/noNonNullAssertion: nodes exist
     const childNode = nodes[childIdx]!;
     childNode.fail = 0;
     queue.push(childIdx);
   }
 
   while (queue.length > 0) {
+    // biome-ignore lint/style/noNonNullAssertion: queue not empty
     const current = queue.shift()!;
+    // biome-ignore lint/style/noNonNullAssertion: nodes exist
     const currentNode = nodes[current]!;
 
     for (const char in currentNode.children) {
+      // biome-ignore lint/style/noNonNullAssertion: guaranteed by loop
       const childIdx = currentNode.children[char]!;
+      // biome-ignore lint/style/noNonNullAssertion: nodes exist
       const childNode = nodes[childIdx]!;
       queue.push(childIdx);
 
       // fail 링크 따라가며 현재 문자 찾기
       let failState = currentNode.fail;
+      // biome-ignore lint/style/noNonNullAssertion: guaranteed by structure
       let failNode = nodes[failState]!;
       while (failState !== 0 && !(char in failNode.children)) {
         failState = failNode.fail;
+        // biome-ignore lint/style/noNonNullAssertion: guaranteed by loop
         failNode = nodes[failState]!;
       }
 
+      // biome-ignore lint/style/noNonNullAssertion: guaranteed by structure
       childNode.fail = char in failNode.children ? failNode.children[char]! : 0;
 
       // 자기 자신을 가리키면 안됨
