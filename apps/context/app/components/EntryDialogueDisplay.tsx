@@ -118,6 +118,7 @@ export function EntryDialogueDisplay({
           <div className="space-y-3">
             {dialogue.dialogue.map((line, index) => (
               <div
+                // biome-ignore lint/suspicious/noArrayIndexKey: Dialogue lines are static and strictly ordered
                 key={index}
                 className={cn(
                   'flex flex-col gap-1',
