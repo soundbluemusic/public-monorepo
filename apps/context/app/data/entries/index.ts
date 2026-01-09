@@ -167,6 +167,8 @@ export async function getEntryById(id: string): Promise<MeaningEntry | undefined
       en: enEntry.translation,
       ko: koEntry.translation,
     },
+    // colors 카테고리 전용 필드
+    ...(enEntry.colorCode && { colorCode: enEntry.colorCode }),
   };
 }
 
@@ -203,6 +205,8 @@ export async function getEntriesByCategory(categoryId: string): Promise<MeaningE
           en: enEntry.translation,
           ko: koEntry.translation,
         },
+        // colors 카테고리 전용 필드
+        ...(enEntry.colorCode && { colorCode: enEntry.colorCode }),
       } as MeaningEntry;
     })
     .filter((e): e is MeaningEntry => e !== null);

@@ -112,6 +112,8 @@ interface JsonEntry {
   difficulty: string;
   frequency?: string;
   tags: string[];
+  /** colors 카테고리 전용: 색상 코드 (hex) */
+  colorCode?: string;
   translations: {
     ko: {
       word: string;
@@ -742,6 +744,8 @@ function generateCategoryChunks(entries: JsonEntry[]): void {
       tags: entry.tags,
       hasDialogue: !!enDialogue,
       translation: enTranslationWithoutDialogue,
+      // colors 카테고리 전용 필드
+      ...(entry.colorCode && { colorCode: entry.colorCode }),
     });
     byCategoryEn.set(entry.categoryId, enList);
 
@@ -760,6 +764,8 @@ function generateCategoryChunks(entries: JsonEntry[]): void {
       tags: entry.tags,
       hasDialogue: !!koDialogue,
       translation: koTranslationWithoutDialogue,
+      // colors 카테고리 전용 필드
+      ...(entry.colorCode && { colorCode: entry.colorCode }),
     });
     byCategoryKo.set(entry.categoryId, koList);
   }
