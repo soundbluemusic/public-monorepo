@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "react-router dev",
-    "prebuild": "tsx scripts/generate-paraglide-messages.ts && tsx scripts/load-entries.ts && tsx scripts/compress-entries.ts && tsx scripts/generate-search-index.ts && tsx scripts/export-data.ts",
+    "prebuild": "tsx scripts/generate-paraglide-messages.ts && tsx scripts/load-entries.ts && tsx scripts/generate-homonyms.ts && tsx scripts/compress-entries.ts && tsx scripts/generate-search-index.ts && tsx scripts/export-data.ts",
     "export:data": "tsx scripts/export-data.ts",
     "build": "BUILD_TARGET=pages NODE_OPTIONS='--max-old-space-size=8192' react-router build && tsx scripts/generate-sitemaps.ts",
     "build:r2": "BUILD_TARGET=r2 NODE_OPTIONS='--max-old-space-size=8192' react-router build",

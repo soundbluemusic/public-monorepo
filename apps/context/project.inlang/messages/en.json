@@ -186,5 +186,7 @@
   "entryDialogue": "Dialogue Example",
   "entryDialogueContext": "Context",
   "speakerA": "A",
-  "speakerB": "B"
+  "speakerB": "B",
+  "homonyms": "Homonyms",
+  "homonymsDescription": "Same pronunciation, different meaning"
 }

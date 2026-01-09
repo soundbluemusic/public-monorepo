@@ -4,6 +4,7 @@ import { cn } from '@soundblue/ui/utils';
 import { Bookmark, BookmarkCheck, Check } from 'lucide-react';
 import { Link, useLoaderData } from 'react-router';
 import { EntryDialogueDisplay } from '@/components/EntryDialogueDisplay';
+import { HomonymSection } from '@/components/HomonymSection';
 import { LinkedExample } from '@/components/LinkedExample';
 import { Layout } from '@/components/layout';
 import type { LocaleEntry } from '@/data/types';
@@ -210,6 +211,9 @@ export default function EntryPage() {
         <section className="mb-6">
           <EntryDialogueDisplay entryId={entry.id} hasDialogue={entry.hasDialogue} />
         </section>
+
+        {/* Homonym Section - 같은 발음, 다른 의미 */}
+        <HomonymSection korean={entry.korean} currentId={entry.id} className="mb-6" />
 
         <div className="mt-8">
           <Link

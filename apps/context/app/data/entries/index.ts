@@ -278,3 +278,15 @@ export function getEntryByIdSync(_id: string): MeaningEntry | undefined {
 
 export type { EntryInput, EntryMap } from './helpers';
 export { createCategory } from './helpers';
+
+// ============================================================================
+// 다의어 (Homonym) - 같은 korean을 가진 다른 의미의 단어들
+// ============================================================================
+
+export {
+  getHomonyms,
+  type HomonymEntry,
+  homonymIndex,
+  homonymStats,
+  isHomonym,
+} from '../generated/homonyms';

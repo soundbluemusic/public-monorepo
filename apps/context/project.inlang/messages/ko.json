@@ -186,5 +186,7 @@
   "entryDialogue": "대화 예문",
   "entryDialogueContext": "상황",
   "speakerA": "A",
-  "speakerB": "B"
+  "speakerB": "B",
+  "homonyms": "다의어",
+  "homonymsDescription": "같은 발음, 다른 의미"
 }
