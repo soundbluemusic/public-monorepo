@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generatedAt": "2026-01-09T11:59:13.517Z",
+  "generatedAt": "2026-01-09T12:00:59.099Z",
   "baseUrl": "https://raw.githubusercontent.com/soundbluemusic/public-monorepo/main/data/context",
   "files": {
     "categories": "categories.json",
@@ -61,7 +61,7 @@
     ]
   },
   "counts": {
-    "categories": 24,
+    "categories": 25,
     "conversations": 53,
     "entryFiles": 52
   }
