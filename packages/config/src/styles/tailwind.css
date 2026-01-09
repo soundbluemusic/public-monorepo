@@ -202,96 +202,111 @@
 }
 
 /* ============================================
-   Utility Classes (@layer utilities)
+   Utility Classes - Tailwind CSS v4 @utility
+   https://tailwindcss.com/docs/functions-and-directives#utility
    ============================================ */
-@layer utilities {
-  /* Text wrapping - balanced for headings */
-  .text-balance {
-    text-wrap: balance;
-  }
-  .text-pretty {
-    text-wrap: pretty;
-  }
 
-  /* Text colors using CSS variables */
-  .text-primary {
-    color: var(--text-primary);
-  }
-  .text-secondary {
-    color: var(--text-secondary);
-  }
-  .text-tertiary {
-    color: var(--text-tertiary);
-  }
-  .text-accent {
-    color: var(--accent-primary);
-  }
+/* Text wrapping - balanced for headings */
+@utility text-balance {
+  text-wrap: balance;
+}
 
-  /* Background colors using CSS variables */
-  .bg-primary {
-    background-color: var(--bg-primary);
-  }
-  .bg-secondary {
-    background-color: var(--bg-secondary);
-  }
-  .bg-tertiary {
+@utility text-pretty {
+  text-wrap: pretty;
+}
+
+/* Text colors using CSS variables */
+@utility text-primary {
+  color: var(--text-primary);
+}
+
+@utility text-secondary {
+  color: var(--text-secondary);
+}
+
+@utility text-tertiary {
+  color: var(--text-tertiary);
+}
+
+@utility text-accent {
+  color: var(--accent-primary);
+}
+
+/* Background colors using CSS variables */
+@utility bg-primary {
+  background-color: var(--bg-primary);
+}
+
+@utility bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+@utility bg-tertiary {
+  background-color: var(--bg-tertiary);
+}
+
+@utility bg-elevated {
+  background-color: var(--bg-elevated);
+}
+
+/* Border colors using CSS variables */
+@utility border-primary {
+  border-color: var(--border-primary);
+}
+
+@utility border-secondary {
+  border-color: var(--border-secondary);
+}
+
+@utility border-focus {
+  border-color: var(--border-focus);
+}
+
+/* Layout utilities */
+@utility h-header {
+  height: var(--header-height);
+}
+
+@utility pt-header {
+  padding-top: var(--header-height);
+}
+
+@utility pb-bottom-nav {
+  padding-bottom: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom, 0px));
+}
+
+@utility w-sidebar {
+  width: var(--sidebar-width);
+}
+
+@utility ml-sidebar {
+  margin-left: var(--sidebar-width);
+}
+
+/* Fade in up animation */
+@utility animate-fade-in-up {
+  animation: fade-in-up 0.3s ease-out;
+}
+
+/* Hover background - base transition */
+@utility hover-bg {
+  transition: color 150ms, background-color 150ms;
+  &:hover {
     background-color: var(--bg-tertiary);
   }
-  .bg-elevated {
-    background-color: var(--bg-elevated);
-  }
+}
 
-  /* Border colors using CSS variables */
-  .border-primary {
-    border-color: var(--border-primary);
-  }
-  .border-secondary {
-    border-color: var(--border-secondary);
-  }
-  .border-focus {
-    border-color: var(--border-focus);
-  }
+/* Container Query - Container Types */
+@utility container-inline {
+  container-type: inline-size;
+}
 
-  /* Layout utilities */
-  .h-header {
-    height: var(--header-height);
-  }
-  .pt-header {
-    padding-top: var(--header-height);
-  }
-  .pb-bottom-nav {
-    padding-bottom: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom, 0px));
-  }
-  .w-sidebar {
-    width: var(--sidebar-width);
-  }
-  .ml-sidebar {
-    margin-left: var(--sidebar-width);
-  }
+@utility container-size {
+  container-type: size;
+}
 
-  /* Fade in up animation */
-  .animate-fade-in-up {
-    animation: fade-in-up 0.3s ease-out;
-  }
-
-  /* Hover background */
-  .hover-bg {
-    transition: color 150ms, background-color 150ms;
-  }
-  .hover-bg:hover {
-    background-color: var(--bg-tertiary);
-  }
-
-  /* Container Query - Container Types */
-  .container-inline {
-    container-type: inline-size;
-  }
-  .container-size {
-    container-type: size;
-  }
-  .container-normal {
-    container-type: normal;
-  }
+@utility container-normal {
+  container-type: normal;
 }
 
 /* ============================================
