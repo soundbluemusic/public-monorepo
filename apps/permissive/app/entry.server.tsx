@@ -1,6 +1,14 @@
 import { renderToString } from 'react-dom/server';
 import type { EntryContext } from 'react-router';
 import { ServerRouter } from 'react-router';
+import { AsyncLocalStorage } from 'node:async_hooks';
+import {
+  overwriteServerAsyncLocalStorage,
+} from '~/paraglide/runtime.js';
+
+// Create a single AsyncLocalStorage instance for the server build
+const storage = new AsyncLocalStorage<{ locale: string }>();
+overwriteServerAsyncLocalStorage(storage);
 
 /**
  * SSG Entry Point
@@ -17,7 +25,14 @@ export default function handleRequest(
   responseHeaders: Headers,
   routerContext: EntryContext,
 ) {
-  const html = renderToString(<ServerRouter context={routerContext} url={request.url} />);
+  // Manual locale extraction for SSG because Paraglide's runtime strategy 
+  // excludes 'url' in this project's configuration
+  const url = new URL(request.url);
+  const locale = url.pathname.startsWith('/ko/') || url.pathname === '/ko' ? 'ko' : 'en';
+
+  const html = storage.run({ locale }, () =>
+    renderToString(<ServerRouter context={routerContext} url={request.url} />)
+  );
 
   responseHeaders.set('Content-Type', 'text/html');
 
