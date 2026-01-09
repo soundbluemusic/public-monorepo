@@ -31,29 +31,59 @@ interface Entry {
   };
 }
 
+/** 예문 타입 */
+interface Examples {
+  beginner: string;
+  intermediate: string;
+  advanced: string;
+  master: string;
+}
+
+/** 변형 타입 */
+interface Variations {
+  formal: string[];
+  casual: string[];
+  short: string[];
+}
+
+/** 대화 항목 타입 */
+interface DialogueItem {
+  speaker: 'A' | 'B';
+  text: string;
+  romanization: string;
+  translation: string;
+}
+
+/** 대화 타입 */
+interface Dialogue {
+  context: string;
+  dialogue: DialogueItem[];
+}
+
+/** 다국어 예문 반환 타입 */
+interface LocalizedExamples {
+  ko: Examples;
+  en: Examples;
+}
+
+/** 다국어 변형 반환 타입 */
+interface LocalizedVariations {
+  ko: Variations;
+  en: Variations;
+}
+
+/** 다국어 대화 반환 타입 */
+interface LocalizedDialogue {
+  ko: Dialogue;
+  en: Dialogue;
+}
+
 interface TranslationContent {
   word: string;
   explanation: string;
-  examples: {
-    beginner: string;
-    intermediate: string;
-    advanced: string;
-    master: string;
-  };
-  variations: {
-    formal: string[];
-    casual: string[];
-    short: string[];
-  };
-  dialogue: {
-    context: string;
-    dialogue: Array<{
-      speaker: 'A' | 'B';
-      text: string;
-      romanization: string;
-      translation: string;
-    }>;
-  };
+  examples: Examples;
+  variations: Variations;
+  dialogue: Dialogue;
 }
 
 // ============================================
@@ -230,7 +260,7 @@ const METAL_COLORS = new Set([
 // 예문 생성 함수
 // ============================================
 
-function generateBasicColorExamples(korean: string, english: string): { ko: any; en: any } {
+function generateBasicColorExamples(korean: string, english: string): LocalizedExamples {
   const isColor = korean.endsWith('색');
   const baseColor = isColor ? korean.slice(0, -1) : korean;
 
@@ -250,7 +280,7 @@ function generateBasicColorExamples(korean: string, english: string): { ko: any;
   };
 }
 
-function generateTraditionalColorExamples(korean: string, english: string): { ko: any; en: any } {
+function generateTraditionalColorExamples(korean: string, english: string): LocalizedExamples {
   return {
     ko: {
       beginner: `${korean}${iGa(korean)} 아름다워요.`,
@@ -267,7 +297,7 @@ function generateTraditionalColorExamples(korean: string, english: string): { ko
   };
 }
 
-function generateNatureColorExamples(korean: string, english: string): { ko: any; en: any } {
+function generateNatureColorExamples(korean: string, english: string): LocalizedExamples {
   return {
     ko: {
       beginner: `${korean}${iGa(korean)} 좋아요.`,
@@ -284,7 +314,7 @@ function generateNatureColorExamples(korean: string, english: string): { ko: any
   };
 }
 
-function generateFoodColorExamples(korean: string, english: string): { ko: any; en: any } {
+function generateFoodColorExamples(korean: string, english: string): LocalizedExamples {
   return {
     ko: {
       beginner: `${korean}${iGa(korean)} 예뻐요.`,
@@ -301,7 +331,7 @@ function generateFoodColorExamples(korean: string, english: string): { ko: any; 
   };
 }
 
-function generateGemColorExamples(korean: string, english: string): { ko: any; en: any } {
+function generateGemColorExamples(korean: string, english: string): LocalizedExamples {
   return {
     ko: {
       beginner: `${korean}${iGa(korean)} 반짝여요.`,
@@ -318,7 +348,7 @@ function generateGemColorExamples(korean: string, english: string): { ko: any; e
   };
 }
 
-function generateMetalColorExamples(korean: string, english: string): { ko: any; en: any } {
+function generateMetalColorExamples(korean: string, english: string): LocalizedExamples {
   return {
     ko: {
       beginner: `${korean}${iGa(korean)} 멋있어요.`,
@@ -335,7 +365,7 @@ function generateMetalColorExamples(korean: string, english: string): { ko: any;
   };
 }
 
-function generateCSSColorExamples(korean: string, english: string): { ko: any; en: any } {
+function generateCSSColorExamples(korean: string, english: string): LocalizedExamples {
   return {
     ko: {
       beginner: `${korean}${iGa(korean)} 예뻐요.`,
@@ -352,7 +382,7 @@ function generateCSSColorExamples(korean: string, english: string): { ko: any; e
   };
 }
 
-function generateGenericColorExamples(korean: string, english: string): { ko: any; en: any } {
+function generateGenericColorExamples(korean: string, english: string): LocalizedExamples {
   return {
     ko: {
       beginner: `${korean}${iGa(korean)} 좋아요.`,
@@ -369,7 +399,7 @@ function generateGenericColorExamples(korean: string, english: string): { ko: an
   };
 }
 
-function getExamplesForColor(korean: string, english: string): { ko: any; en: any } {
+function getExamplesForColor(korean: string, english: string): LocalizedExamples {
   if (BASIC_COLORS.has(korean)) {
     return generateBasicColorExamples(korean, english);
   }
@@ -396,7 +426,7 @@ function getExamplesForColor(korean: string, english: string): { ko: any; en: an
 // Variations 생성
 // ============================================
 
-function generateVariations(korean: string, english: string): { ko: any; en: any } {
+function generateVariations(korean: string, english: string): LocalizedVariations {
   return {
     ko: {
       formal: [`${korean}입니다.`, `${korean}${iGa(korean)} 있습니다.`],
@@ -419,7 +449,7 @@ function generateDialogue(
   korean: string,
   english: string,
   romanization: string,
-): { ko: any; en: any } {
+): LocalizedDialogue {
   const ieyoSuffix = hasBatchim(korean) ? 'ieyo' : 'yeyo';
   return {
     ko: {
