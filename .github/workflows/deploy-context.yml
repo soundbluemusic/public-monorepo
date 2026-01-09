@@ -38,4 +38,9 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: npx wrangler pages deploy apps/context/build/client --project-name=c0ntext --branch=main
+        run: |
+          npx wrangler pages deploy apps/context/build/client \
+            --project-name=c0ntext \
+            --branch=main \
+            --commit-dirty=true \
+            --commit-message="${{ github.event.head_commit.message || 'Deploy from GitHub Actions' }}"

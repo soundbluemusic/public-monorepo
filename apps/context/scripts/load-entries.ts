@@ -2,8 +2,12 @@
  * @fileoverview JSON 파일에서 엔트리 데이터 로드
  *
  * 빌드 시점에 JSON 파일들을 TypeScript 모듈로 변환합니다.
- * 이 스크립트는 src/data/entries/*.json 파일을 읽어서
- * src/data/generated/entries.ts 파일을 생성합니다.
+ * data/context/entries/*.json 파일을 읽어서
+ * app/data/generated/entries.ts 파일을 생성합니다.
+ *
+ * ## Single Source of Truth
+ * - 소스: data/context/entries/*.json (monorepo root)
+ * - 출력: apps/context/app/data/generated/*.ts
  *
  * ## 100만개+ 확장성 지원
  * - 초성별 JSON 청킹 (19개 파일)
@@ -15,7 +19,8 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const ENTRIES_DIR = join(__dirname, '../app/data/entries');
+// Single Source of Truth: data/context/entries/
+const ENTRIES_DIR = join(__dirname, '../../../data/context/entries');
 const OUTPUT_FILE = join(__dirname, '../app/data/generated/entries.ts');
 const EXPRESSIONS_FILE = join(__dirname, '../app/data/generated/korean-expressions.ts');
 const CHUNKS_DIR = join(__dirname, '../public/data/chunks');

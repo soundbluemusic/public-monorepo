@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generatedAt": "2026-01-09T11:34:51.694Z",
+  "generatedAt": "2026-01-09T11:47:06.519Z",
   "baseUrl": "https://raw.githubusercontent.com/soundbluemusic/public-monorepo/main/data/context",
   "files": {
     "categories": "categories.json",
@@ -11,17 +11,14 @@
       "entries/adverbs.json",
       "entries/anatomy.json",
       "entries/art.json",
-      "entries/basic-words.json",
       "entries/body-misc.json",
       "entries/body-parts.json",
-      "entries/body.json",
       "entries/coding.json",
       "entries/colors.json",
       "entries/compound-words.json",
       "entries/countries.json",
       "entries/cultural-expressions.json",
       "entries/culture.json",
-      "entries/daily-life.json",
       "entries/daily-misc.json",
       "entries/education.json",
       "entries/emotions.json",
@@ -66,6 +63,6 @@
   "counts": {
     "categories": 24,
     "conversations": 53,
-    "entryFiles": 55
+    "entryFiles": 52
   }
 }

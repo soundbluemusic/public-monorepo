@@ -4,6 +4,10 @@
  * Context 앱의 데이터를 JSON 형식으로 data/context/에 내보냅니다.
  * 다른 프로젝트에서 raw GitHub URL로 fetch할 수 있도록 합니다.
  *
+ * ## Single Source of Truth
+ * - entries: data/context/entries/*.json (이미 SSoT, 복사 불필요)
+ * - categories/conversations: TypeScript에서 JSON으로 내보내기
+ *
  * @example
  * ```bash
  * pnpm export:data
@@ -12,22 +16,14 @@
  * 출력 파일:
  * - data/context/categories.json
  * - data/context/conversations.json
- * - data/context/entries/*.json (동기화)
+ * - data/context/meta.json
  */
 
-import {
-  copyFileSync,
-  existsSync,
-  mkdirSync,
-  readdirSync,
-  readFileSync,
-  writeFileSync,
-} from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const APP_DATA_DIR = join(__dirname, '../app/data');
 const REPO_DATA_DIR = join(__dirname, '../../../data/context');
 
 // 출력 디렉토리 생성
@@ -75,31 +71,7 @@ async function exportConversations() {
 }
 
 // ============================================================================
-// 3. Entries 동기화 (app/data/entries → data/context/entries)
-// ============================================================================
-function syncEntries() {
-  const appEntriesDir = join(APP_DATA_DIR, 'entries');
-
-  if (!existsSync(appEntriesDir)) {
-    console.log('  ⚠ No entries directory found in app/data/entries');
-    return;
-  }
-
-  const files = readdirSync(appEntriesDir).filter((f) => f.endsWith('.json'));
-  let synced = 0;
-
-  for (const file of files) {
-    const src = join(appEntriesDir, file);
-    const dest = join(entriesDir, file);
-    copyFileSync(src, dest);
-    synced++;
-  }
-
-  console.log(`  ✓ entries/*.json (${synced} files synced)`);
-}
-
-// ============================================================================
-// 4. 메타데이터 생성 (콘텐츠 변경 시에만 타임스탬프 업데이트)
+// 3. 메타데이터 생성 (콘텐츠 변경 시에만 타임스탬프 업데이트)
 // ============================================================================
 async function generateMeta() {
   const { categories } = await import('../app/data/categories.js');
@@ -166,7 +138,8 @@ async function main() {
   try {
     await exportCategories();
     await exportConversations();
-    syncEntries();
+    // entries는 data/context/entries/가 SSoT이므로 복사 불필요
+    console.log(`  ✓ entries/*.json (SSoT: data/context/entries/)`);
     await generateMeta();
 
     console.log('\n✅ Export complete!');

@@ -82,7 +82,7 @@ app/data/
 
 | Feature | Context | Roots | Permissive |
 |:--------|:-------:|:-----:|:----------:|
-| SSG Routes | 46364 | 920 | 8 |
+| SSG Routes | 33746 | 920 | 8 |
 | Search | ✓ MiniSearch | ✓ MiniSearch | ✓ MiniSearch |
 | Favorites | ✓ | ✓ | ❌ |
 | Detail pages | ✓ | ✓ | ✓ |
