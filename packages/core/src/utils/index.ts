@@ -7,4 +7,5 @@
 export { chunkArray, splitIntoGroups } from './chunk';
 export { cn } from './cn';
 export { debounce, debounceWithCancel } from './debounce';
+export { generatePageNumbers } from './pagination';
 export { throttle, throttleWithTrailing } from './throttle';
