@@ -3,6 +3,7 @@ import { dynamicMetaFactory } from '@soundblue/i18n';
 import { cn } from '@soundblue/ui/utils';
 import { Bookmark, BookmarkCheck, Check } from 'lucide-react';
 import { Link, useLoaderData } from 'react-router';
+import { ColorSwatch, isColorEntry } from '@/components/ColorSwatch';
 import { EntryDialogueDisplay } from '@/components/EntryDialogueDisplay';
 import { HomonymSection } from '@/components/HomonymSection';
 import { LinkedExample } from '@/components/LinkedExample';
@@ -171,6 +172,16 @@ export default function EntryPage() {
             </button>
           )}
         </header>
+
+        {/* Color Swatch - colors 카테고리만 표시 */}
+        {isColorEntry(entry.categoryId) && entry.colorCode && (
+          <section className="mb-6">
+            <h2 className="text-lg font-semibold text-(--text-primary) mb-3">
+              {locale === 'ko' ? '색상 미리보기' : 'Color Preview'}
+            </h2>
+            <ColorSwatch colorCode={entry.colorCode} colorName={translation.word} />
+          </section>
+        )}
 
         <section className="mb-6">
           <h2 className="text-lg font-semibold text-(--text-primary) mb-2">{t('translation')}</h2>

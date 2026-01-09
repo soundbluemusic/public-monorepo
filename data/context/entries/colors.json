@@ -93,7 +93,8 @@
     "pronunciation": {
       "korean": "[빨강]",
       "ipa": "[ppalgang]"
-    }
+    },
+    "colorCode": "#FF0000"
   },
   {
     "id": "col-빨gan색",
@@ -189,7 +190,8 @@
     "pronunciation": {
       "korean": "[빨간색]",
       "ipa": "[ppalgansaek]"
-    }
+    },
+    "colorCode": "#FF0000"
   },
   {
     "id": "col-ju황",
@@ -285,7 +287,8 @@
     "pronunciation": {
       "korean": "[주황]",
       "ipa": "[juhwang]"
-    }
+    },
+    "colorCode": "#FFA500"
   },
   {
     "id": "col-ju황색",
@@ -381,7 +384,8 @@
     "pronunciation": {
       "korean": "[주황색]",
       "ipa": "[juhwangsaek]"
-    }
+    },
+    "colorCode": "#FFA500"
   },
   {
     "id": "col-norang",
@@ -477,7 +481,8 @@
     "pronunciation": {
       "korean": "[노랑]",
       "ipa": "[norang]"
-    }
+    },
+    "colorCode": "#FFFF00"
   },
   {
     "id": "col-noran색",
@@ -573,7 +578,8 @@
     "pronunciation": {
       "korean": "[노란색]",
       "ipa": "[noransaek]"
-    }
+    },
+    "colorCode": "#FFFF00"
   },
   {
     "id": "col-chorok",
@@ -669,7 +675,8 @@
     "pronunciation": {
       "korean": "[초록]",
       "ipa": "[chorok]"
-    }
+    },
+    "colorCode": "#008000"
   },
   {
     "id": "col-chorok색",
@@ -765,7 +772,8 @@
     "pronunciation": {
       "korean": "[초록색]",
       "ipa": "[choroksaek]"
-    }
+    },
+    "colorCode": "#008000"
   },
   {
     "id": "col-parang",
@@ -861,7 +869,8 @@
     "pronunciation": {
       "korean": "[파랑]",
       "ipa": "[parang]"
-    }
+    },
+    "colorCode": "#0000FF"
   },
   {
     "id": "col-paran색",
@@ -957,7 +966,8 @@
     "pronunciation": {
       "korean": "[파란색]",
       "ipa": "[paransaek]"
-    }
+    },
+    "colorCode": "#0000FF"
   },
   {
     "id": "col-bora",
@@ -1053,7 +1063,8 @@
     "pronunciation": {
       "korean": "[보라]",
       "ipa": "[bora]"
-    }
+    },
+    "colorCode": "#800080"
   },
   {
     "id": "col-bora색",
@@ -1149,7 +1160,8 @@
     "pronunciation": {
       "korean": "[보라색]",
       "ipa": "[borasaek]"
-    }
+    },
+    "colorCode": "#800080"
   },
   {
     "id": "col-bunhong",
@@ -1245,7 +1257,8 @@
     "pronunciation": {
       "korean": "[분홍]",
       "ipa": "[bunhong]"
-    }
+    },
+    "colorCode": "#FFC0CB"
   },
   {
     "id": "col-bunhong색",
@@ -1341,7 +1354,8 @@
     "pronunciation": {
       "korean": "[분홍색]",
       "ipa": "[bunhongsaek]"
-    }
+    },
+    "colorCode": "#FFC0CB"
   },
   {
     "id": "col-gal색",
@@ -1437,7 +1451,8 @@
     "pronunciation": {
       "korean": "[갈색]",
       "ipa": "[galsaek]"
-    }
+    },
+    "colorCode": "#A52A2A"
   },
   {
     "id": "col-geomjeong",
@@ -1533,7 +1548,8 @@
     "pronunciation": {
       "korean": "[검정]",
       "ipa": "[geomjeong]"
-    }
+    },
+    "colorCode": "#000000"
   },
   {
     "id": "col-geom은색",
@@ -1629,7 +1645,8 @@
     "pronunciation": {
       "korean": "[검은색]",
       "ipa": "[geomeunsaek]"
-    }
+    },
+    "colorCode": "#000000"
   },
   {
     "id": "col-흰색",
@@ -1725,7 +1742,8 @@
     "pronunciation": {
       "korean": "[흰색]",
       "ipa": "[huinsaek]"
-    }
+    },
+    "colorCode": "#FFFFFF"
   },
   {
     "id": "col-ha얀색",
@@ -1821,7 +1839,8 @@
     "pronunciation": {
       "korean": "[하얀색]",
       "ipa": "[hayansaek]"
-    }
+    },
+    "colorCode": "#FFFFFF"
   },
   {
     "id": "col-회색",
@@ -1917,7 +1936,8 @@
     "pronunciation": {
       "korean": "[회색]",
       "ipa": "[hoesaek]"
-    }
+    },
+    "colorCode": "#808080"
   },
   {
     "id": "col-indieon-redeu",
@@ -2013,7 +2033,8 @@
     "pronunciation": {
       "korean": "[인디언 레드]",
       "ipa": "[indieon redeu]"
-    }
+    },
+    "colorCode": "#CD5C5C"
   },
   {
     "id": "col-raiteu-koral",
@@ -2109,7 +2130,8 @@
     "pronunciation": {
       "korean": "[라이트 코랄]",
       "ipa": "[raiteu koral]"
-    }
+    },
+    "colorCode": "#F08080"
   },
   {
     "id": "col-salmon",
@@ -2205,7 +2227,8 @@
     "pronunciation": {
       "korean": "[살몬]",
       "ipa": "[salmon]"
-    }
+    },
+    "colorCode": "#FA8072"
   },
   {
     "id": "col-dakeu-salmon",
@@ -2301,7 +2324,8 @@
     "pronunciation": {
       "korean": "[다크 살몬]",
       "ipa": "[dakeu salmon]"
-    }
+    },
+    "colorCode": "#E9967A"
   },
   {
     "id": "col-raiteu-salmon",
@@ -2397,7 +2421,8 @@
     "pronunciation": {
       "korean": "[라이트 살몬]",
       "ipa": "[raiteu salmon]"
-    }
+    },
+    "colorCode": "#FFA07A"
   },
   {
     "id": "col-keurim슨",
@@ -2493,7 +2518,8 @@
     "pronunciation": {
       "korean": "[크림슨]",
       "ipa": "[keurimseun]"
-    }
+    },
+    "colorCode": "#DC143C"
   },
   {
     "id": "col-paieobeu릭",
@@ -2589,7 +2615,8 @@
     "pronunciation": {
       "korean": "[파이어브릭]",
       "ipa": "[paieobeurik]"
-    }
+    },
+    "colorCode": "#B22222"
   },
   {
     "id": "col-dakeu-redeu",
@@ -2685,7 +2712,8 @@
     "pronunciation": {
       "korean": "[다크 레드]",
       "ipa": "[dakeu redeu]"
-    }
+    },
+    "colorCode": "#8B0000"
   },
   {
     "id": "col-핑keu",
@@ -2781,7 +2809,8 @@
     "pronunciation": {
       "korean": "[핑크]",
       "ipa": "[pingkeu]"
-    }
+    },
+    "colorCode": "#FFC0CB"
   },
   {
     "id": "col-raiteu-핑keu",
@@ -2877,7 +2906,8 @@
     "pronunciation": {
       "korean": "[라이트 핑크]",
       "ipa": "[raiteu pingkeu]"
-    }
+    },
+    "colorCode": "#FFB6C1"
   },
   {
     "id": "col-핫-핑keu",
@@ -2973,7 +3003,8 @@
     "pronunciation": {
       "korean": "[핫 핑크]",
       "ipa": "[hat pingkeu]"
-    }
+    },
+    "colorCode": "#FF69B4"
   },
   {
     "id": "col-딥-핑keu",
@@ -3069,7 +3100,8 @@
     "pronunciation": {
       "korean": "[딥 핑크]",
       "ipa": "[dip pingkeu]"
-    }
+    },
+    "colorCode": "#FF1493"
   },
   {
     "id": "col-midieom-baiol렛-redeu",
@@ -3165,7 +3197,8 @@
     "pronunciation": {
       "korean": "[미디엄 바이올렛 레드]",
       "ipa": "[midieom baiollet redeu]"
-    }
+    },
+    "colorCode": "#C71585"
   },
   {
     "id": "col-페il-baiol렛-redeu",
@@ -3261,7 +3294,8 @@
     "pronunciation": {
       "korean": "[페일 바이올렛 레드]",
       "ipa": "[peil baiollet redeu]"
-    }
+    },
+    "colorCode": "#DB7093"
   },
   {
     "id": "col-koral",
@@ -3357,7 +3391,8 @@
     "pronunciation": {
       "korean": "[코랄]",
       "ipa": "[koral]"
-    }
+    },
+    "colorCode": "#FF7F50"
   },
   {
     "id": "col-tomato",
@@ -3453,7 +3488,8 @@
     "pronunciation": {
       "korean": "[토마토]",
       "ipa": "[tomato]"
-    }
+    },
+    "colorCode": "#FF6347"
   },
   {
     "id": "col-o렌ji-redeu",
@@ -3549,7 +3585,8 @@
     "pronunciation": {
       "korean": "[오렌지 레드]",
       "ipa": "[orenji redeu]"
-    }
+    },
+    "colorCode": "#FF4500"
   },
   {
     "id": "col-dakeu-o렌ji",
@@ -3645,7 +3682,8 @@
     "pronunciation": {
       "korean": "[다크 오렌지]",
       "ipa": "[dakeu orenji]"
-    }
+    },
+    "colorCode": "#FF8C00"
   },
   {
     "id": "col-o렌ji",
@@ -3741,7 +3779,8 @@
     "pronunciation": {
       "korean": "[오렌지]",
       "ipa": "[orenji]"
-    }
+    },
+    "colorCode": "#FFA500"
   },
   {
     "id": "col-goldeu",
@@ -3837,7 +3876,8 @@
     "pronunciation": {
       "korean": "[골드]",
       "ipa": "[goldeu]"
-    }
+    },
+    "colorCode": "#FFD700"
   },
   {
     "id": "col-raiteu-옐rou",
@@ -3933,7 +3973,8 @@
     "pronunciation": {
       "korean": "[라이트 옐로우]",
       "ipa": "[raiteu yellou]"
-    }
+    },
+    "colorCode": "#FFFFE0"
   },
   {
     "id": "col-remon-쉬폰",
@@ -4029,7 +4070,8 @@
     "pronunciation": {
       "korean": "[레몬 쉬폰]",
       "ipa": "[remon swipon]"
-    }
+    },
+    "colorCode": "#FFFACD"
   },
   {
     "id": "col-raiteu-gol든rodeu-옐rou",
@@ -4125,7 +4167,8 @@
     "pronunciation": {
       "korean": "[라이트 골든로드 옐로우]",
       "ipa": "[raiteu goldeunlodeu yellou]"
-    }
+    },
+    "colorCode": "#FAFAD2"
   },
   {
     "id": "col-papaya-휩",
@@ -4221,7 +4264,8 @@
     "pronunciation": {
       "korean": "[파파야 휩]",
       "ipa": "[papaya hwip]"
-    }
+    },
+    "colorCode": "#FFEFD5"
   },
   {
     "id": "col-mokasin",
@@ -4317,7 +4361,8 @@
     "pronunciation": {
       "korean": "[모카신]",
       "ipa": "[mokasin]"
-    }
+    },
+    "colorCode": "#FFE4B5"
   },
   {
     "id": "col-pichi-peopeu",
@@ -4413,7 +4458,8 @@
     "pronunciation": {
       "korean": "[피치 퍼프]",
       "ipa": "[pichi peopeu]"
-    }
+    },
+    "colorCode": "#FFDAB9"
   },
   {
     "id": "col-페il-gol든rodeu",
@@ -4509,7 +4555,8 @@
     "pronunciation": {
       "korean": "[페일 골든로드]",
       "ipa": "[peil goldeunlodeu]"
-    }
+    },
+    "colorCode": "#EEE8AA"
   },
   {
     "id": "col-kaki",
@@ -4605,7 +4652,8 @@
     "pronunciation": {
       "korean": "[카키]",
       "ipa": "[kaki]"
-    }
+    },
+    "colorCode": "#F0E68C"
   },
   {
     "id": "col-dakeu-kaki",
@@ -4701,7 +4749,8 @@
     "pronunciation": {
       "korean": "[다크 카키]",
       "ipa": "[dakeu kaki]"
-    }
+    },
+    "colorCode": "#BDB76B"
   },
   {
     "id": "col-ra벤deo",
@@ -4797,7 +4846,8 @@
     "pronunciation": {
       "korean": "[라벤더]",
       "ipa": "[rabendeo]"
-    }
+    },
+    "colorCode": "#E6E6FA"
   },
   {
     "id": "col-si슬",
@@ -4893,7 +4943,8 @@
     "pronunciation": {
       "korean": "[시슬]",
       "ipa": "[siseul]"
-    }
+    },
+    "colorCode": "#D8BFD8"
   },
   {
     "id": "col-peulreom",
@@ -4989,7 +5040,8 @@
     "pronunciation": {
       "korean": "[플럼]",
       "ipa": "[peulleom]"
-    }
+    },
+    "colorCode": "#DDA0DD"
   },
   {
     "id": "col-baiol렛",
@@ -5085,7 +5137,8 @@
     "pronunciation": {
       "korean": "[바이올렛]",
       "ipa": "[baiollet]"
-    }
+    },
+    "colorCode": "#EE82EE"
   },
   {
     "id": "col-okideu",
@@ -5181,7 +5234,8 @@
     "pronunciation": {
       "korean": "[오키드]",
       "ipa": "[okideu]"
-    }
+    },
+    "colorCode": "#DA70D6"
   },
   {
     "id": "col-pusia",
@@ -5277,7 +5331,8 @@
     "pronunciation": {
       "korean": "[푸시아]",
       "ipa": "[pusia]"
-    }
+    },
+    "colorCode": "#FF00FF"
   },
   {
     "id": "col-ma젠ta",
@@ -5373,7 +5428,8 @@
     "pronunciation": {
       "korean": "[마젠타]",
       "ipa": "[majenta]"
-    }
+    },
+    "colorCode": "#FF00FF"
   },
   {
     "id": "col-midieom-okideu",
@@ -5469,7 +5525,8 @@
     "pronunciation": {
       "korean": "[미디엄 오키드]",
       "ipa": "[midieom okideu]"
-    }
+    },
+    "colorCode": "#BA55D3"
   },
   {
     "id": "col-midieom-peopeul",
@@ -5565,7 +5622,8 @@
     "pronunciation": {
       "korean": "[미디엄 퍼플]",
       "ipa": "[midieom peopeul]"
-    }
+    },
+    "colorCode": "#9370DB"
   },
   {
     "id": "col-rebeka-peopeul",
@@ -5661,7 +5719,8 @@
     "pronunciation": {
       "korean": "[레베카 퍼플]",
       "ipa": "[rebeka peopeul]"
-    }
+    },
+    "colorCode": "#663399"
   },
   {
     "id": "col-블ru-baiol렛",
@@ -5757,7 +5816,8 @@
     "pronunciation": {
       "korean": "[블루 바이올렛]",
       "ipa": "[beullu baiollet]"
-    }
+    },
+    "colorCode": "#8A2BE2"
   },
   {
     "id": "col-dakeu-baiol렛",
@@ -5853,7 +5913,8 @@
     "pronunciation": {
       "korean": "[다크 바이올렛]",
       "ipa": "[dakeu baiollet]"
-    }
+    },
+    "colorCode": "#9400D3"
   },
   {
     "id": "col-dakeu-okideu",
@@ -5949,7 +6010,8 @@
     "pronunciation": {
       "korean": "[다크 오키드]",
       "ipa": "[dakeu okideu]"
-    }
+    },
+    "colorCode": "#9932CC"
   },
   {
     "id": "col-dakeu-ma젠ta",
@@ -6045,7 +6107,8 @@
     "pronunciation": {
       "korean": "[다크 마젠타]",
       "ipa": "[dakeu majenta]"
-    }
+    },
+    "colorCode": "#8B008B"
   },
   {
     "id": "col-peopeul",
@@ -6141,7 +6204,8 @@
     "pronunciation": {
       "korean": "[퍼플]",
       "ipa": "[peopeul]"
-    }
+    },
+    "colorCode": "#800080"
   },
   {
     "id": "col-indigo",
@@ -6237,7 +6301,8 @@
     "pronunciation": {
       "korean": "[인디고]",
       "ipa": "[indigo]"
-    }
+    },
+    "colorCode": "#4B0082"
   },
   {
     "id": "col-슬reiteu-블ru",
@@ -6333,7 +6398,8 @@
     "pronunciation": {
       "korean": "[슬레이트 블루]",
       "ipa": "[seulleiteu beullu]"
-    }
+    },
+    "colorCode": "#6A5ACD"
   },
   {
     "id": "col-dakeu-슬reiteu-블ru",
@@ -6429,7 +6495,8 @@
     "pronunciation": {
       "korean": "[다크 슬레이트 블루]",
       "ipa": "[dakeu seulleiteu beullu]"
-    }
+    },
+    "colorCode": "#483D8B"
   },
   {
     "id": "col-midieom-슬reiteu-블ru",
@@ -6525,7 +6592,8 @@
     "pronunciation": {
       "korean": "[미디엄 슬레이트 블루]",
       "ipa": "[midieom seulleiteu beullu]"
-    }
+    },
+    "colorCode": "#7B68EE"
   },
   {
     "id": "col-geurin-옐rou",
@@ -6621,7 +6689,8 @@
     "pronunciation": {
       "korean": "[그린 옐로우]",
       "ipa": "[geurin yellou]"
-    }
+    },
+    "colorCode": "#ADFF2F"
   },
   {
     "id": "col-syareuteuroejeu",
@@ -6717,7 +6786,8 @@
     "pronunciation": {
       "korean": "[샤르트뢰즈]",
       "ipa": "[syareuteuroejeu]"
-    }
+    },
+    "colorCode": "#7FFF00"
   },
   {
     "id": "col-ron-geurin",
@@ -6813,7 +6883,8 @@
     "pronunciation": {
       "korean": "[론 그린]",
       "ipa": "[ron geurin]"
-    }
+    },
+    "colorCode": "#7CFC00"
   },
   {
     "id": "col-raim",
@@ -6909,7 +6980,8 @@
     "pronunciation": {
       "korean": "[라임]",
       "ipa": "[raim]"
-    }
+    },
+    "colorCode": "#00FF00"
   },
   {
     "id": "col-raim-geurin",
@@ -7005,7 +7077,8 @@
     "pronunciation": {
       "korean": "[라임 그린]",
       "ipa": "[raim geurin]"
-    }
+    },
+    "colorCode": "#32CD32"
   },
   {
     "id": "col-페il-geurin",
@@ -7101,7 +7174,8 @@
     "pronunciation": {
       "korean": "[페일 그린]",
       "ipa": "[peil geurin]"
-    }
+    },
+    "colorCode": "#98FB98"
   },
   {
     "id": "col-raiteu-geurin",
@@ -7197,7 +7271,8 @@
     "pronunciation": {
       "korean": "[라이트 그린]",
       "ipa": "[raiteu geurin]"
-    }
+    },
+    "colorCode": "#90EE90"
   },
   {
     "id": "col-midieom-seupeu링-geurin",
@@ -7293,7 +7368,8 @@
     "pronunciation": {
       "korean": "[미디엄 스프링 그린]",
       "ipa": "[midieom seupeuring geurin]"
-    }
+    },
+    "colorCode": "#00FA9A"
   },
   {
     "id": "col-seupeu링-geurin",
@@ -7389,7 +7465,8 @@
     "pronunciation": {
       "korean": "[스프링 그린]",
       "ipa": "[seupeuring geurin]"
-    }
+    },
+    "colorCode": "#00FF7F"
   },
   {
     "id": "col-midieom-si-geurin",
@@ -7485,7 +7562,8 @@
     "pronunciation": {
       "korean": "[미디엄 시 그린]",
       "ipa": "[midieom si geurin]"
-    }
+    },
+    "colorCode": "#3CB371"
   },
   {
     "id": "col-si-geurin",
@@ -7581,7 +7659,8 @@
     "pronunciation": {
       "korean": "[시 그린]",
       "ipa": "[si geurin]"
-    }
+    },
+    "colorCode": "#2E8B57"
   },
   {
     "id": "col-poreseuteu-geurin",
@@ -7677,7 +7756,8 @@
     "pronunciation": {
       "korean": "[포레스트 그린]",
       "ipa": "[poreseuteu geurin]"
-    }
+    },
+    "colorCode": "#228B22"
   },
   {
     "id": "col-geurin",
@@ -7773,7 +7853,8 @@
     "pronunciation": {
       "korean": "[그린]",
       "ipa": "[geurin]"
-    }
+    },
+    "colorCode": "#008000"
   },
   {
     "id": "col-dakeu-geurin",
@@ -7869,7 +7950,8 @@
     "pronunciation": {
       "korean": "[다크 그린]",
       "ipa": "[dakeu geurin]"
-    }
+    },
+    "colorCode": "#006400"
   },
   {
     "id": "col-옐rou-geurin",
@@ -7965,7 +8047,8 @@
     "pronunciation": {
       "korean": "[옐로우 그린]",
       "ipa": "[yellou geurin]"
-    }
+    },
+    "colorCode": "#9ACD32"
   },
   {
     "id": "col-olribeu-deu랩",
@@ -8061,7 +8144,8 @@
     "pronunciation": {
       "korean": "[올리브 드랩]",
       "ipa": "[ollibeu deuraep]"
-    }
+    },
+    "colorCode": "#6B8E23"
   },
   {
     "id": "col-olribeu",
@@ -8157,7 +8241,8 @@
     "pronunciation": {
       "korean": "[올리브]",
       "ipa": "[ollibeu]"
-    }
+    },
+    "colorCode": "#808000"
   },
   {
     "id": "col-dakeu-olribeu-geurin",
@@ -8253,7 +8338,8 @@
     "pronunciation": {
       "korean": "[다크 올리브 그린]",
       "ipa": "[dakeu ollibeu geurin]"
-    }
+    },
+    "colorCode": "#556B2F"
   },
   {
     "id": "col-midieom-akuamarin",
@@ -8349,7 +8435,8 @@
     "pronunciation": {
       "korean": "[미디엄 아쿠아마린]",
       "ipa": "[midieom akuamarin]"
-    }
+    },
+    "colorCode": "#66CDAA"
   },
   {
     "id": "col-dakeu-si-geurin",
@@ -8445,7 +8532,8 @@
     "pronunciation": {
       "korean": "[다크 시 그린]",
       "ipa": "[dakeu si geurin]"
-    }
+    },
+    "colorCode": "#8FBC8F"
   },
   {
     "id": "col-raiteu-si-geurin",
@@ -8541,7 +8629,8 @@
     "pronunciation": {
       "korean": "[라이트 시 그린]",
       "ipa": "[raiteu si geurin]"
-    }
+    },
+    "colorCode": "#20B2AA"
   },
   {
     "id": "col-dakeu-sian",
@@ -8637,7 +8726,8 @@
     "pronunciation": {
       "korean": "[다크 시안]",
       "ipa": "[dakeu sian]"
-    }
+    },
+    "colorCode": "#008B8B"
   },
   {
     "id": "col-til",
@@ -8733,7 +8823,8 @@
     "pronunciation": {
       "korean": "[틸]",
       "ipa": "[til]"
-    }
+    },
+    "colorCode": "#008080"
   },
   {
     "id": "col-akua",
@@ -8829,7 +8920,8 @@
     "pronunciation": {
       "korean": "[아쿠아]",
       "ipa": "[akua]"
-    }
+    },
+    "colorCode": "#00FFFF"
   },
   {
     "id": "col-sian",
@@ -8925,7 +9017,8 @@
     "pronunciation": {
       "korean": "[시안]",
       "ipa": "[sian]"
-    }
+    },
+    "colorCode": "#00FFFF"
   },
   {
     "id": "col-raiteu-sian",
@@ -9021,7 +9114,8 @@
     "pronunciation": {
       "korean": "[라이트 시안]",
       "ipa": "[raiteu sian]"
-    }
+    },
+    "colorCode": "#E0FFFF"
   },
   {
     "id": "col-페il-teo쿼ijeu",
@@ -9117,7 +9211,8 @@
     "pronunciation": {
       "korean": "[페일 터쿼이즈]",
       "ipa": "[peil teokwoijeu]"
-    }
+    },
+    "colorCode": "#AFEEEE"
   },
   {
     "id": "col-akuamarin",
@@ -9213,7 +9308,8 @@
     "pronunciation": {
       "korean": "[아쿠아마린]",
       "ipa": "[akuamarin]"
-    }
+    },
+    "colorCode": "#7FFFD4"
   },
   {
     "id": "col-teo쿼ijeu",
@@ -9309,7 +9405,8 @@
     "pronunciation": {
       "korean": "[터쿼이즈]",
       "ipa": "[teokwoijeu]"
-    }
+    },
+    "colorCode": "#40E0D0"
   },
   {
     "id": "col-midieom-teo쿼ijeu",
@@ -9405,7 +9502,8 @@
     "pronunciation": {
       "korean": "[미디엄 터쿼이즈]",
       "ipa": "[midieom teokwoijeu]"
-    }
+    },
+    "colorCode": "#48D1CC"
   },
   {
     "id": "col-dakeu-teo쿼ijeu",
@@ -9501,7 +9599,8 @@
     "pronunciation": {
       "korean": "[다크 터쿼이즈]",
       "ipa": "[dakeu teokwoijeu]"
-    }
+    },
+    "colorCode": "#00CED1"
   },
   {
     "id": "col-ka뎃-블ru",
@@ -9597,7 +9696,8 @@
     "pronunciation": {
       "korean": "[카뎃 블루]",
       "ipa": "[kadet beullu]"
-    }
+    },
+    "colorCode": "#5F9EA0"
   },
   {
     "id": "col-seutil-블ru",
@@ -9693,7 +9793,8 @@
     "pronunciation": {
       "korean": "[스틸 블루]",
       "ipa": "[seutil beullu]"
-    }
+    },
+    "colorCode": "#4682B4"
   },
   {
     "id": "col-raiteu-seutil-블ru",
@@ -9789,7 +9890,8 @@
     "pronunciation": {
       "korean": "[라이트 스틸 블루]",
       "ipa": "[raiteu seutil beullu]"
-    }
+    },
+    "colorCode": "#B0C4DE"
   },
   {
     "id": "col-paudeo-블ru",
@@ -9885,7 +9987,8 @@
     "pronunciation": {
       "korean": "[파우더 블루]",
       "ipa": "[paudeo beullu]"
-    }
+    },
+    "colorCode": "#B0E0E6"
   },
   {
     "id": "col-raiteu-블ru",
@@ -9981,7 +10084,8 @@
     "pronunciation": {
       "korean": "[라이트 블루]",
       "ipa": "[raiteu beullu]"
-    }
+    },
+    "colorCode": "#ADD8E6"
   },
   {
     "id": "col-seukai-블ru",
@@ -10077,7 +10181,8 @@
     "pronunciation": {
       "korean": "[스카이 블루]",
       "ipa": "[seukai beullu]"
-    }
+    },
+    "colorCode": "#87CEEB"
   },
   {
     "id": "col-raiteu-seukai-블ru",
@@ -10173,7 +10278,8 @@
     "pronunciation": {
       "korean": "[라이트 스카이 블루]",
       "ipa": "[raiteu seukai beullu]"
-    }
+    },
+    "colorCode": "#87CEFA"
   },
   {
     "id": "col-딥-seukai-블ru",
@@ -10269,7 +10375,8 @@
     "pronunciation": {
       "korean": "[딥 스카이 블루]",
       "ipa": "[dip seukai beullu]"
-    }
+    },
+    "colorCode": "#00BFFF"
   },
   {
     "id": "col-dajeo-블ru",
@@ -10365,7 +10472,8 @@
     "pronunciation": {
       "korean": "[다저 블루]",
       "ipa": "[dajeo beullu]"
-    }
+    },
+    "colorCode": "#1E90FF"
   },
   {
     "id": "col-콘peulra워-블ru",
@@ -10461,7 +10569,8 @@
     "pronunciation": {
       "korean": "[콘플라워 블루]",
       "ipa": "[konpeullawo beullu]"
-    }
+    },
+    "colorCode": "#6495ED"
   },
   {
     "id": "col-royeol-블ru",
@@ -10557,7 +10666,8 @@
     "pronunciation": {
       "korean": "[로열 블루]",
       "ipa": "[royeol beullu]"
-    }
+    },
+    "colorCode": "#4169E1"
   },
   {
     "id": "col-블ru",
@@ -10653,7 +10763,8 @@
     "pronunciation": {
       "korean": "[블루]",
       "ipa": "[beullu]"
-    }
+    },
+    "colorCode": "#0000FF"
   },
   {
     "id": "col-midieom-블ru",
@@ -10749,7 +10860,8 @@
     "pronunciation": {
       "korean": "[미디엄 블루]",
       "ipa": "[midieom beullu]"
-    }
+    },
+    "colorCode": "#0000CD"
   },
   {
     "id": "col-dakeu-블ru",
@@ -10845,7 +10957,8 @@
     "pronunciation": {
       "korean": "[다크 블루]",
       "ipa": "[dakeu beullu]"
-    }
+    },
+    "colorCode": "#00008B"
   },
   {
     "id": "col-neibi",
@@ -10941,7 +11054,8 @@
     "pronunciation": {
       "korean": "[네이비]",
       "ipa": "[neibi]"
-    }
+    },
+    "colorCode": "#000080"
   },
   {
     "id": "col-mideuna잇-블ru",
@@ -11037,7 +11151,8 @@
     "pronunciation": {
       "korean": "[미드나잇 블루]",
       "ipa": "[mideunait beullu]"
-    }
+    },
+    "colorCode": "#191970"
   },
   {
     "id": "col-콘silkeu",
@@ -11133,7 +11248,8 @@
     "pronunciation": {
       "korean": "[콘실크]",
       "ipa": "[konsilkeu]"
-    }
+    },
+    "colorCode": "#FFF8DC"
   },
   {
     "id": "col-블랜chideu-amondeu",
@@ -11229,7 +11345,8 @@
     "pronunciation": {
       "korean": "[블랜치드 아몬드]",
       "ipa": "[beullaenchideu amondeu]"
-    }
+    },
+    "colorCode": "#FFEBCD"
   },
   {
     "id": "col-biseukeu",
@@ -11325,7 +11442,8 @@
     "pronunciation": {
       "korean": "[비스크]",
       "ipa": "[biseukeu]"
-    }
+    },
+    "colorCode": "#FFE4C4"
   },
   {
     "id": "col-nabaho-화iteu",
@@ -11421,7 +11539,8 @@
     "pronunciation": {
       "korean": "[나바호 화이트]",
       "ipa": "[nabaho hwaiteu]"
-    }
+    },
+    "colorCode": "#FFDEAD"
   },
   {
     "id": "col-휘teu",
@@ -11517,7 +11636,8 @@
     "pronunciation": {
       "korean": "[휘트]",
       "ipa": "[hwiteu]"
-    }
+    },
+    "colorCode": "#F5DEB3"
   },
   {
     "id": "col-beolriudeu",
@@ -11613,7 +11733,8 @@
     "pronunciation": {
       "korean": "[벌리우드]",
       "ipa": "[beolliudeu]"
-    }
+    },
+    "colorCode": "#DEB887"
   },
   {
     "id": "col-tan",
@@ -11709,7 +11830,8 @@
     "pronunciation": {
       "korean": "[탄]",
       "ipa": "[tan]"
-    }
+    },
+    "colorCode": "#D2B48C"
   },
   {
     "id": "col-roji-beuraun",
@@ -11805,7 +11927,8 @@
     "pronunciation": {
       "korean": "[로지 브라운]",
       "ipa": "[roji beuraun]"
-    }
+    },
+    "colorCode": "#BC8F8F"
   },
   {
     "id": "col-샌di-beuraun",
@@ -11901,7 +12024,8 @@
     "pronunciation": {
       "korean": "[샌디 브라운]",
       "ipa": "[saendi beuraun]"
-    }
+    },
+    "colorCode": "#F4A460"
   },
   {
     "id": "col-gol든rodeu",
@@ -11997,7 +12121,8 @@
     "pronunciation": {
       "korean": "[골든로드]",
       "ipa": "[goldeunlodeu]"
-    }
+    },
+    "colorCode": "#DAA520"
   },
   {
     "id": "col-dakeu-gol든rodeu",
@@ -12093,7 +12218,8 @@
     "pronunciation": {
       "korean": "[다크 골든로드]",
       "ipa": "[dakeu goldeunlodeu]"
-    }
+    },
+    "colorCode": "#B8860B"
   },
   {
     "id": "col-페ru",
@@ -12189,7 +12315,8 @@
     "pronunciation": {
       "korean": "[페루]",
       "ipa": "[peru]"
-    }
+    },
+    "colorCode": "#CD853F"
   },
   {
     "id": "col-chokol릿",
@@ -12285,7 +12412,8 @@
     "pronunciation": {
       "korean": "[초콜릿]",
       "ipa": "[chokollit]"
-    }
+    },
+    "colorCode": "#D2691E"
   },
   {
     "id": "col-saedeul-beuraun",
@@ -12381,7 +12509,8 @@
     "pronunciation": {
       "korean": "[새들 브라운]",
       "ipa": "[saedeul beuraun]"
-    }
+    },
+    "colorCode": "#8B4513"
   },
   {
     "id": "col-siena",
@@ -12477,7 +12606,8 @@
     "pronunciation": {
       "korean": "[시에나]",
       "ipa": "[siena]"
-    }
+    },
+    "colorCode": "#A0522D"
   },
   {
     "id": "col-beuraun",
@@ -12573,7 +12703,8 @@
     "pronunciation": {
       "korean": "[브라운]",
       "ipa": "[beuraun]"
-    }
+    },
+    "colorCode": "#A52A2A"
   },
   {
     "id": "col-marun",
@@ -12669,7 +12800,8 @@
     "pronunciation": {
       "korean": "[마룬]",
       "ipa": "[marun]"
-    }
+    },
+    "colorCode": "#800000"
   },
   {
     "id": "col-화iteu",
@@ -12765,7 +12897,8 @@
     "pronunciation": {
       "korean": "[화이트]",
       "ipa": "[hwaiteu]"
-    }
+    },
+    "colorCode": "#FFFFFF"
   },
   {
     "id": "col-seunou",
@@ -12861,7 +12994,8 @@
     "pronunciation": {
       "korean": "[스노우]",
       "ipa": "[seunou]"
-    }
+    },
+    "colorCode": "#FFFAFA"
   },
   {
     "id": "col-heonidyu",
@@ -12957,7 +13091,8 @@
     "pronunciation": {
       "korean": "[허니듀]",
       "ipa": "[heonidyu]"
-    }
+    },
+    "colorCode": "#F0FFF0"
   },
   {
     "id": "col-minteu-keurim",
@@ -13053,7 +13188,8 @@
     "pronunciation": {
       "korean": "[민트 크림]",
       "ipa": "[minteu keurim]"
-    }
+    },
+    "colorCode": "#F5FFFA"
   },
   {
     "id": "col-aejeo",
@@ -13149,7 +13285,8 @@
     "pronunciation": {
       "korean": "[애저]",
       "ipa": "[aejeo]"
-    }
+    },
+    "colorCode": "#F0FFFF"
   },
   {
     "id": "col-앨riseu-블ru",
@@ -13245,7 +13382,8 @@
     "pronunciation": {
       "korean": "[앨리스 블루]",
       "ipa": "[aelliseu beullu]"
-    }
+    },
+    "colorCode": "#F0F8FF"
   },
   {
     "id": "col-goseuteu-화iteu",
@@ -13341,7 +13479,8 @@
     "pronunciation": {
       "korean": "[고스트 화이트]",
       "ipa": "[goseuteu hwaiteu]"
-    }
+    },
+    "colorCode": "#F8F8FF"
   },
   {
     "id": "col-화iteu-seumokeu",
@@ -13437,7 +13576,8 @@
     "pronunciation": {
       "korean": "[화이트 스모크]",
       "ipa": "[hwaiteu seumokeu]"
-    }
+    },
+    "colorCode": "#F5F5F5"
   },
   {
     "id": "col-si쉘",
@@ -13533,7 +13673,8 @@
     "pronunciation": {
       "korean": "[시쉘]",
       "ipa": "[siswel]"
-    }
+    },
+    "colorCode": "#FFF5EE"
   },
   {
     "id": "col-beiji",
@@ -13629,7 +13770,8 @@
     "pronunciation": {
       "korean": "[베이지]",
       "ipa": "[beiji]"
-    }
+    },
+    "colorCode": "#F5F5DC"
   },
   {
     "id": "col-oldeu-reiseu",
@@ -13725,7 +13867,8 @@
     "pronunciation": {
       "korean": "[올드 레이스]",
       "ipa": "[oldeu reiseu]"
-    }
+    },
+    "colorCode": "#FDF5E6"
   },
   {
     "id": "col-peulroral-화iteu",
@@ -13821,7 +13964,8 @@
     "pronunciation": {
       "korean": "[플로랄 화이트]",
       "ipa": "[peulloral hwaiteu]"
-    }
+    },
+    "colorCode": "#FFFAF0"
   },
   {
     "id": "col-aibori",
@@ -13917,7 +14061,8 @@
     "pronunciation": {
       "korean": "[아이보리]",
       "ipa": "[aibori]"
-    }
+    },
+    "colorCode": "#FFFFF0"
   },
   {
     "id": "col-앤tik-화iteu",
@@ -14013,7 +14158,8 @@
     "pronunciation": {
       "korean": "[앤틱 화이트]",
       "ipa": "[aentik hwaiteu]"
-    }
+    },
+    "colorCode": "#FAEBD7"
   },
   {
     "id": "col-ri넨",
@@ -14109,7 +14255,8 @@
     "pronunciation": {
       "korean": "[리넨]",
       "ipa": "[rinen]"
-    }
+    },
+    "colorCode": "#FAF0E6"
   },
   {
     "id": "col-ra벤deo-블reo쉬",
@@ -14205,7 +14352,8 @@
     "pronunciation": {
       "korean": "[라벤더 블러쉬]",
       "ipa": "[rabendeo beulleoswi]"
-    }
+    },
+    "colorCode": "#FFF0F5"
   },
   {
     "id": "col-miseuti-rojeu",
@@ -14301,7 +14449,8 @@
     "pronunciation": {
       "korean": "[미스티 로즈]",
       "ipa": "[miseuti rojeu]"
-    }
+    },
+    "colorCode": "#FFE4E1"
   },
   {
     "id": "col-geinjeuboro",
@@ -14397,7 +14546,8 @@
     "pronunciation": {
       "korean": "[게인즈보로]",
       "ipa": "[geinjeuboro]"
-    }
+    },
+    "colorCode": "#DCDCDC"
   },
   {
     "id": "col-raiteu-geurei",
@@ -14493,7 +14643,8 @@
     "pronunciation": {
       "korean": "[라이트 그레이]",
       "ipa": "[raiteu geurei]"
-    }
+    },
+    "colorCode": "#D3D3D3"
   },
   {
     "id": "col-silbeo",
@@ -14589,7 +14740,8 @@
     "pronunciation": {
       "korean": "[실버]",
       "ipa": "[silbeo]"
-    }
+    },
+    "colorCode": "#C0C0C0"
   },
   {
     "id": "col-dakeu-geurei",
@@ -14685,7 +14837,8 @@
     "pronunciation": {
       "korean": "[다크 그레이]",
       "ipa": "[dakeu geurei]"
-    }
+    },
+    "colorCode": "#A9A9A9"
   },
   {
     "id": "col-geurei",
@@ -14781,7 +14934,8 @@
     "pronunciation": {
       "korean": "[그레이]",
       "ipa": "[geurei]"
-    }
+    },
+    "colorCode": "#808080"
   },
   {
     "id": "col-dim-geurei",
@@ -14877,7 +15031,8 @@
     "pronunciation": {
       "korean": "[딤 그레이]",
       "ipa": "[dim geurei]"
-    }
+    },
+    "colorCode": "#696969"
   },
   {
     "id": "col-raiteu-슬reiteu-geurei",
@@ -14973,7 +15128,8 @@
     "pronunciation": {
       "korean": "[라이트 슬레이트 그레이]",
       "ipa": "[raiteu seulleiteu geurei]"
-    }
+    },
+    "colorCode": "#778899"
   },
   {
     "id": "col-슬reiteu-geurei",
@@ -15069,7 +15225,8 @@
     "pronunciation": {
       "korean": "[슬레이트 그레이]",
       "ipa": "[seulleiteu geurei]"
-    }
+    },
+    "colorCode": "#708090"
   },
   {
     "id": "col-dakeu-슬reiteu-geurei",
@@ -15165,7 +15322,8 @@
     "pronunciation": {
       "korean": "[다크 슬레이트 그레이]",
       "ipa": "[dakeu seulleiteu geurei]"
-    }
+    },
+    "colorCode": "#2F4F4F"
   },
   {
     "id": "col-블랙",
@@ -15261,7 +15419,8 @@
     "pronunciation": {
       "korean": "[블랙]",
       "ipa": "[beullaek]"
-    }
+    },
+    "colorCode": "#000000"
   },
   {
     "id": "col-dancheong-빨gang",
@@ -15357,7 +15516,8 @@
     "pronunciation": {
       "korean": "[단청 빨강]",
       "ipa": "[dancheong ppalgang]"
-    }
+    },
+    "colorCode": "#C8102E"
   },
   {
     "id": "col-obang색-cheong색",
@@ -15453,7 +15613,8 @@
     "pronunciation": {
       "korean": "[오방색 청색]",
       "ipa": "[obangsaek cheongsaek]"
-    }
+    },
+    "colorCode": "#0047AB"
   },
   {
     "id": "col-obang색-jeok색",
@@ -15549,7 +15710,8 @@
     "pronunciation": {
       "korean": "[오방색 적색]",
       "ipa": "[obangsaek jeoksaek]"
-    }
+    },
+    "colorCode": "#FF0000"
   },
   {
     "id": "col-obang색-황색",
@@ -15645,7 +15807,8 @@
     "pronunciation": {
       "korean": "[오방색 황색]",
       "ipa": "[obangsaek hwangsaek]"
-    }
+    },
+    "colorCode": "#FFCC00"
   },
   {
     "id": "col-obang색-백색",
@@ -15741,7 +15904,8 @@
     "pronunciation": {
       "korean": "[오방색 백색]",
       "ipa": "[obangsaek baeksaek]"
-    }
+    },
+    "colorCode": "#FFFFFF"
   },
   {
     "id": "col-obang색-흑색",
@@ -15837,7 +16001,8 @@
     "pronunciation": {
       "korean": "[오방색 흑색]",
       "ipa": "[obangsaek heuksaek]"
-    }
+    },
+    "colorCode": "#000000"
   },
   {
     "id": "col-norigae-bunhong",
@@ -15933,7 +16098,8 @@
     "pronunciation": {
       "korean": "[노리개 분홍]",
       "ipa": "[norigae bunhong]"
-    }
+    },
+    "colorCode": "#D8A7A7"
   },
   {
     "id": "col-cheongja색",
@@ -16029,7 +16195,8 @@
     "pronunciation": {
       "korean": "[청자색]",
       "ipa": "[cheongjasaek]"
-    }
+    },
+    "colorCode": "#ACE1AF"
   },
   {
     "id": "col-hanbok-nam색",
@@ -16125,7 +16292,8 @@
     "pronunciation": {
       "korean": "[한복 남색]",
       "ipa": "[hanbok namsaek]"
-    }
+    },
+    "colorCode": "#26619C"
   },
   {
     "id": "col-sakura",
@@ -16221,7 +16389,8 @@
     "pronunciation": {
       "korean": "[사쿠라]",
       "ipa": "[sakura]"
-    }
+    },
+    "colorCode": "#FFB7C5"
   },
   {
     "id": "col-벚꽃색",
@@ -16317,7 +16486,8 @@
     "pronunciation": {
       "korean": "[벚꽃색]",
       "ipa": "[beotkkotsaek]"
-    }
+    },
+    "colorCode": "#FFB7C5"
   },
   {
     "id": "col-malcha색",
@@ -16413,7 +16583,8 @@
     "pronunciation": {
       "korean": "[말차색]",
       "ipa": "[malchasaek]"
-    }
+    },
+    "colorCode": "#C5E17A"
   },
   {
     "id": "col-wasabi색",
@@ -16509,7 +16680,8 @@
     "pronunciation": {
       "korean": "[와사비색]",
       "ipa": "[wasabisaek]"
-    }
+    },
+    "colorCode": "#ACD978"
   },
   {
     "id": "col-seumi",
@@ -16605,7 +16777,8 @@
     "pronunciation": {
       "korean": "[스미]",
       "ipa": "[seumi]"
-    }
+    },
+    "colorCode": "#595857"
   },
   {
     "id": "col-먹색",
@@ -16701,7 +16874,8 @@
     "pronunciation": {
       "korean": "[먹색]",
       "ipa": "[meoksaek]"
-    }
+    },
+    "colorCode": "#595857"
   },
   {
     "id": "col-ai색",
@@ -16797,7 +16971,8 @@
     "pronunciation": {
       "korean": "[아이색]",
       "ipa": "[aisaek]"
-    }
+    },
+    "colorCode": "#68A0B0"
   },
   {
     "id": "col-쪽색",
@@ -16893,7 +17068,8 @@
     "pronunciation": {
       "korean": "[쪽색]",
       "ipa": "[jjoksaek]"
-    }
+    },
+    "colorCode": "#68A0B0"
   },
   {
     "id": "col-akane",
@@ -16989,7 +17165,8 @@
     "pronunciation": {
       "korean": "[아카네]",
       "ipa": "[akane]"
-    }
+    },
+    "colorCode": "#B94047"
   },
   {
     "id": "col-꼭duseoni색",
@@ -17085,7 +17262,8 @@
     "pronunciation": {
       "korean": "[꼭두서니색]",
       "ipa": "[kkokduseonisaek]"
-    }
+    },
+    "colorCode": "#B94047"
   },
   {
     "id": "col-hobak색",
@@ -17181,7 +17359,8 @@
     "pronunciation": {
       "korean": "[호박색]",
       "ipa": "[hobaksaek]"
-    }
+    },
+    "colorCode": "#CA6924"
   },
   {
     "id": "col-uguiseu",
@@ -17277,7 +17456,8 @@
     "pronunciation": {
       "korean": "[우구이스]",
       "ipa": "[uguiseu]"
-    }
+    },
+    "colorCode": "#6C6024"
   },
   {
     "id": "col-휘paramsae색",
@@ -17373,7 +17553,8 @@
     "pronunciation": {
       "korean": "[휘파람새색]",
       "ipa": "[hwiparamsaesaek]"
-    }
+    },
+    "colorCode": "#6C6024"
   },
   {
     "id": "col-jusa",
@@ -17469,7 +17650,8 @@
     "pronunciation": {
       "korean": "[주사]",
       "ipa": "[jusa]"
-    }
+    },
+    "colorCode": "#E34234"
   },
   {
     "id": "col-jinsa",
@@ -17565,7 +17747,8 @@
     "pronunciation": {
       "korean": "[진사]",
       "ipa": "[jinsa]"
-    }
+    },
+    "colorCode": "#E34234"
   },
   {
     "id": "col-ok색",
@@ -17661,7 +17844,8 @@
     "pronunciation": {
       "korean": "[옥색]",
       "ipa": "[oksaek]"
-    }
+    },
+    "colorCode": "#00A86B"
   },
   {
     "id": "col-황je-norang",
@@ -17757,7 +17941,8 @@
     "pronunciation": {
       "korean": "[황제 노랑]",
       "ipa": "[hwangje norang]"
-    }
+    },
+    "colorCode": "#FFD700"
   },
   {
     "id": "col-myeongnara-parang",
@@ -17853,7 +18038,8 @@
     "pronunciation": {
       "korean": "[명나라 파랑]",
       "ipa": "[myeongnara parang]"
-    }
+    },
+    "colorCode": "#36747D"
   },
   {
     "id": "col-rubi",
@@ -17949,7 +18135,8 @@
     "pronunciation": {
       "korean": "[루비]",
       "ipa": "[rubi]"
-    }
+    },
+    "colorCode": "#E0115F"
   },
   {
     "id": "col-sapaieo",
@@ -18045,7 +18232,8 @@
     "pronunciation": {
       "korean": "[사파이어]",
       "ipa": "[sapaieo]"
-    }
+    },
+    "colorCode": "#0F52BA"
   },
   {
     "id": "col-emeraldeu",
@@ -18141,7 +18329,8 @@
     "pronunciation": {
       "korean": "[에메랄드]",
       "ipa": "[emeraldeu]"
-    }
+    },
+    "colorCode": "#50C878"
   },
   {
     "id": "col-jasujeong",
@@ -18237,7 +18426,8 @@
     "pronunciation": {
       "korean": "[자수정]",
       "ipa": "[jasujeong]"
-    }
+    },
+    "colorCode": "#9966CC"
   },
   {
     "id": "col-topajeu",
@@ -18333,7 +18523,8 @@
     "pronunciation": {
       "korean": "[토파즈]",
       "ipa": "[topajeu]"
-    }
+    },
+    "colorCode": "#FFC87C"
   },
   {
     "id": "col-jinju",
@@ -18429,7 +18620,8 @@
     "pronunciation": {
       "korean": "[진주]",
       "ipa": "[jinju]"
-    }
+    },
+    "colorCode": "#FDEEF4"
   },
   {
     "id": "col-o닉seu",
@@ -18525,7 +18717,8 @@
     "pronunciation": {
       "korean": "[오닉스]",
       "ipa": "[onikseu]"
-    }
+    },
+    "colorCode": "#353839"
   },
   {
     "id": "col-jeideu",
@@ -18621,7 +18814,8 @@
     "pronunciation": {
       "korean": "[제이드]",
       "ipa": "[jeideu]"
-    }
+    },
+    "colorCode": "#00A86B"
   },
   {
     "id": "col-opal",
@@ -18717,7 +18911,8 @@
     "pronunciation": {
       "korean": "[오팔]",
       "ipa": "[opal]"
-    }
+    },
+    "colorCode": "#A8C3BC"
   },
   {
     "id": "col-ga넷",
@@ -18813,7 +19008,8 @@
     "pronunciation": {
       "korean": "[가넷]",
       "ipa": "[ganet]"
-    }
+    },
+    "colorCode": "#733635"
   },
   {
     "id": "col-앰beo",
@@ -18909,7 +19105,8 @@
     "pronunciation": {
       "korean": "[앰버]",
       "ipa": "[aembeo]"
-    }
+    },
+    "colorCode": "#FFBF00"
   },
   {
     "id": "col-흑yoseok",
@@ -19005,7 +19202,8 @@
     "pronunciation": {
       "korean": "[흑요석]",
       "ipa": "[heukyoseok]"
-    }
+    },
+    "colorCode": "#3D3D3D"
   },
   {
     "id": "col-rapiseu-rajulri",
@@ -19101,7 +19299,8 @@
     "pronunciation": {
       "korean": "[라피스 라줄리]",
       "ipa": "[rapiseu rajulli]"
-    }
+    },
+    "colorCode": "#26619C"
   },
   {
     "id": "col-malrakaiteu",
@@ -19197,7 +19396,8 @@
     "pronunciation": {
       "korean": "[말라카이트]",
       "ipa": "[mallakaiteu]"
-    }
+    },
+    "colorCode": "#0BDA51"
   },
   {
     "id": "col-munseu톤",
@@ -19293,7 +19493,8 @@
     "pronunciation": {
       "korean": "[문스톤]",
       "ipa": "[munseuton]"
-    }
+    },
+    "colorCode": "#3AA8C1"
   },
   {
     "id": "col-페ridoteu",
@@ -19389,7 +19590,8 @@
     "pronunciation": {
       "korean": "[페리도트]",
       "ipa": "[peridoteu]"
-    }
+    },
+    "colorCode": "#E6E200"
   },
   {
     "id": "col-rojeu-goldeu",
@@ -19485,7 +19687,8 @@
     "pronunciation": {
       "korean": "[로즈 골드]",
       "ipa": "[rojeu goldeu]"
-    }
+    },
+    "colorCode": "#B76E79"
   },
   {
     "id": "col-beuronjeu",
@@ -19581,7 +19784,8 @@
     "pronunciation": {
       "korean": "[브론즈]",
       "ipa": "[beuronjeu]"
-    }
+    },
+    "colorCode": "#CD7F32"
   },
   {
     "id": "col-kopeo",
@@ -19677,7 +19881,8 @@
     "pronunciation": {
       "korean": "[코퍼]",
       "ipa": "[kopeo]"
-    }
+    },
+    "colorCode": "#B87333"
   },
   {
     "id": "col-peulraetineom",
@@ -19773,7 +19978,8 @@
     "pronunciation": {
       "korean": "[플래티넘]",
       "ipa": "[peullaetineom]"
-    }
+    },
+    "colorCode": "#E5E4E2"
   },
   {
     "id": "col-beuraseu",
@@ -19869,7 +20075,8 @@
     "pronunciation": {
       "korean": "[브라스]",
       "ipa": "[beuraseu]"
-    }
+    },
+    "colorCode": "#B5A642"
   },
   {
     "id": "col-퓨teo",
@@ -19965,7 +20172,8 @@
     "pronunciation": {
       "korean": "[퓨터]",
       "ipa": "[pyuteo]"
-    }
+    },
+    "colorCode": "#8E8E8E"
   },
   {
     "id": "col-keurom",
@@ -20061,7 +20269,8 @@
     "pronunciation": {
       "korean": "[크롬]",
       "ipa": "[keurom]"
-    }
+    },
+    "colorCode": "#DBE4EB"
   },
   {
     "id": "col-tita늄",
@@ -20157,7 +20366,8 @@
     "pronunciation": {
       "korean": "[티타늄]",
       "ipa": "[titanyum]"
-    }
+    },
+    "colorCode": "#878681"
   },
   {
     "id": "col-danpung",
@@ -20253,7 +20463,8 @@
     "pronunciation": {
       "korean": "[단풍]",
       "ipa": "[danpung]"
-    }
+    },
+    "colorCode": "#A65D1A"
   },
   {
     "id": "col-벚꽃",
@@ -20349,7 +20560,8 @@
     "pronunciation": {
       "korean": "[벚꽃]",
       "ipa": "[beotkkot]"
-    }
+    },
+    "colorCode": "#FFB7C5"
   },
   {
     "id": "col-seokyang-o렌ji",
@@ -20445,7 +20657,8 @@
     "pronunciation": {
       "korean": "[석양 오렌지]",
       "ipa": "[seokyang orenji]"
-    }
+    },
+    "colorCode": "#FD5E53"
   },
   {
     "id": "col-bada-parang",
@@ -20541,7 +20754,8 @@
     "pronunciation": {
       "korean": "[바다 파랑]",
       "ipa": "[bada parang]"
-    }
+    },
+    "colorCode": "#4F97A3"
   },
   {
     "id": "col-숲-chorok",
@@ -20637,7 +20851,8 @@
     "pronunciation": {
       "korean": "[숲 초록]",
       "ipa": "[sup chorok]"
-    }
+    },
+    "colorCode": "#228B22"
   },
   {
     "id": "col-morae색",
@@ -20733,7 +20948,8 @@
     "pronunciation": {
       "korean": "[모래색]",
       "ipa": "[moraesaek]"
-    }
+    },
+    "colorCode": "#C2B280"
   },
   {
     "id": "col-흙색",
@@ -20829,7 +21045,8 @@
     "pronunciation": {
       "korean": "[흙색]",
       "ipa": "[heuksaek]"
-    }
+    },
+    "colorCode": "#B66A50"
   },
   {
     "id": "col-pokpung-회색",
@@ -20925,7 +21142,8 @@
     "pronunciation": {
       "korean": "[폭풍 회색]",
       "ipa": "[pokpung hoesaek]"
-    }
+    },
+    "colorCode": "#717486"
   },
   {
     "id": "col-saebyeok-bunhong",
@@ -21021,7 +21239,8 @@
     "pronunciation": {
       "korean": "[새벽 분홍]",
       "ipa": "[saebyeok bunhong]"
-    }
+    },
+    "colorCode": "#F4E3E3"
   },
   {
     "id": "col-jajeong색",
@@ -21117,7 +21336,8 @@
     "pronunciation": {
       "korean": "[자정색]",
       "ipa": "[jajeongsaek]"
-    }
+    },
+    "colorCode": "#191970"
   },
   {
     "id": "col-황혼색",
@@ -21213,7 +21433,8 @@
     "pronunciation": {
       "korean": "[황혼색]",
       "ipa": "[hwanghonsaek]"
-    }
+    },
+    "colorCode": "#4E5481"
   },
   {
     "id": "col-nun-흰색",
@@ -21309,7 +21530,8 @@
     "pronunciation": {
       "korean": "[눈 흰색]",
       "ipa": "[nun huinsaek]"
-    }
+    },
+    "colorCode": "#FFFAFA"
   },
   {
     "id": "col-얼eum-parang",
@@ -21405,7 +21627,8 @@
     "pronunciation": {
       "korean": "[얼음 파랑]",
       "ipa": "[eoleum parang]"
-    }
+    },
+    "colorCode": "#99FFFF"
   },
   {
     "id": "col-ikki-chorok",
@@ -21501,7 +21724,8 @@
     "pronunciation": {
       "korean": "[이끼 초록]",
       "ipa": "[ikki chorok]"
-    }
+    },
+    "colorCode": "#8A9A5B"
   },
   {
     "id": "col-beo섯색",
@@ -21597,7 +21821,8 @@
     "pronunciation": {
       "korean": "[버섯색]",
       "ipa": "[beoseotsaek]"
-    }
+    },
+    "colorCode": "#C9B79C"
   },
   {
     "id": "col-namu껍jil-gal색",
@@ -21693,7 +21918,8 @@
     "pronunciation": {
       "korean": "[나무껍질 갈색]",
       "ipa": "[namukkeopjil galsaek]"
-    }
+    },
+    "colorCode": "#6E4C30"
   },
   {
     "id": "col-꽃잎-bunhong",
@@ -21789,7 +22015,8 @@
     "pronunciation": {
       "korean": "[꽃잎 분홍]",
       "ipa": "[kkotip bunhong]"
-    }
+    },
+    "colorCode": "#FFDDF4"
   },
   {
     "id": "col-abokado",
@@ -21885,7 +22112,8 @@
     "pronunciation": {
       "korean": "[아보카도]",
       "ipa": "[abokado]"
-    }
+    },
+    "colorCode": "#568203"
   },
   {
     "id": "col-beoteo",
@@ -21981,7 +22209,8 @@
     "pronunciation": {
       "korean": "[버터]",
       "ipa": "[beoteo]"
-    }
+    },
+    "colorCode": "#FFFF99"
   },
   {
     "id": "col-kara멜",
@@ -22077,7 +22306,8 @@
     "pronunciation": {
       "korean": "[카라멜]",
       "ipa": "[karamel]"
-    }
+    },
+    "colorCode": "#FFD59A"
   },
   {
     "id": "col-샴페in",
@@ -22173,7 +22403,8 @@
     "pronunciation": {
       "korean": "[샴페인]",
       "ipa": "[syampein]"
-    }
+    },
+    "colorCode": "#F7E7CE"
   },
   {
     "id": "col-cheri",
@@ -22269,7 +22500,8 @@
     "pronunciation": {
       "korean": "[체리]",
       "ipa": "[cheri]"
-    }
+    },
+    "colorCode": "#DE3163"
   },
   {
     "id": "col-bam색",
@@ -22365,7 +22597,8 @@
     "pronunciation": {
       "korean": "[밤색]",
       "ipa": "[bamsaek]"
-    }
+    },
+    "colorCode": "#954535"
   },
   {
     "id": "col-sinamon",
@@ -22461,7 +22694,8 @@
     "pronunciation": {
       "korean": "[시나몬]",
       "ipa": "[sinamon]"
-    }
+    },
+    "colorCode": "#D2691E"
   },
   {
     "id": "col-koko넛",
@@ -22557,7 +22791,8 @@
     "pronunciation": {
       "korean": "[코코넛]",
       "ipa": "[kokoneot]"
-    }
+    },
+    "colorCode": "#965A3E"
   },
   {
     "id": "col-keopi",
@@ -22653,7 +22888,8 @@
     "pronunciation": {
       "korean": "[커피]",
       "ipa": "[keopi]"
-    }
+    },
+    "colorCode": "#6F4E37"
   },
   {
     "id": "col-keu랜beri",
@@ -22749,7 +22985,8 @@
     "pronunciation": {
       "korean": "[크랜베리]",
       "ipa": "[keuraenberi]"
-    }
+    },
+    "colorCode": "#9C2542"
   },
   {
     "id": "col-keurim",
@@ -22845,7 +23082,8 @@
     "pronunciation": {
       "korean": "[크림]",
       "ipa": "[keurim]"
-    }
+    },
+    "colorCode": "#FFFDD0"
   },
   {
     "id": "col-gaji색",
@@ -22941,7 +23179,8 @@
     "pronunciation": {
       "korean": "[가지색]",
       "ipa": "[gajisaek]"
-    }
+    },
+    "colorCode": "#614051"
   },
   {
     "id": "col-eseupeureso",
@@ -23037,7 +23276,8 @@
     "pronunciation": {
       "korean": "[에스프레소]",
       "ipa": "[eseupeureso]"
-    }
+    },
+    "colorCode": "#3C2415"
   },
   {
     "id": "col-생gang색",
@@ -23133,7 +23373,8 @@
     "pronunciation": {
       "korean": "[생강색]",
       "ipa": "[saenggangsaek]"
-    }
+    },
+    "colorCode": "#B06500"
   },
   {
     "id": "col-podo",
@@ -23229,7 +23470,8 @@
     "pronunciation": {
       "korean": "[포도]",
       "ipa": "[podo]"
-    }
+    },
+    "colorCode": "#6F2DA8"
   },
   {
     "id": "col-꿀색",
@@ -23325,7 +23567,8 @@
     "pronunciation": {
       "korean": "[꿀색]",
       "ipa": "[kkulsaek]"
-    }
+    },
+    "colorCode": "#EB9605"
   },
   {
     "id": "col-remon",
@@ -23421,7 +23664,8 @@
     "pronunciation": {
       "korean": "[레몬]",
       "ipa": "[remon]"
-    }
+    },
+    "colorCode": "#FFF44F"
   },
   {
     "id": "col-manggo",
@@ -23517,7 +23761,8 @@
     "pronunciation": {
       "korean": "[망고]",
       "ipa": "[manggo]"
-    }
+    },
+    "colorCode": "#FF8243"
   },
   {
     "id": "col-멜ron",
@@ -23613,7 +23858,8 @@
     "pronunciation": {
       "korean": "[멜론]",
       "ipa": "[mellon]"
-    }
+    },
+    "colorCode": "#FEBAAD"
   },
   {
     "id": "col-minteu",
@@ -23709,7 +23955,8 @@
     "pronunciation": {
       "korean": "[민트]",
       "ipa": "[minteu]"
-    }
+    },
+    "colorCode": "#3EB489"
   },
   {
     "id": "col-moka",
@@ -23805,7 +24052,8 @@
     "pronunciation": {
       "korean": "[모카]",
       "ipa": "[moka]"
-    }
+    },
+    "colorCode": "#967969"
   },
   {
     "id": "col-meoseutadeu",
@@ -23901,7 +24149,8 @@
     "pronunciation": {
       "korean": "[머스타드]",
       "ipa": "[meoseutadeu]"
-    }
+    },
+    "colorCode": "#FFDB58"
   },
   {
     "id": "col-papeurika",
@@ -23997,7 +24246,8 @@
     "pronunciation": {
       "korean": "[파프리카]",
       "ipa": "[papeurika]"
-    }
+    },
+    "colorCode": "#8B2500"
   },
   {
     "id": "col-boksunga",
@@ -24093,7 +24343,8 @@
     "pronunciation": {
       "korean": "[복숭아]",
       "ipa": "[boksunga]"
-    }
+    },
+    "colorCode": "#FFCBA4"
   },
   {
     "id": "col-bae색",
@@ -24189,7 +24440,8 @@
     "pronunciation": {
       "korean": "[배색]",
       "ipa": "[baesaek]"
-    }
+    },
+    "colorCode": "#D1E231"
   },
   {
     "id": "col-페peominteu",
@@ -24285,7 +24537,8 @@
     "pronunciation": {
       "korean": "[페퍼민트]",
       "ipa": "[pepeominteu]"
-    }
+    },
+    "colorCode": "#D8E4C8"
   },
   {
     "id": "col-piseutachio",
@@ -24381,7 +24634,8 @@
     "pronunciation": {
       "korean": "[피스타치오]",
       "ipa": "[piseutachio]"
-    }
+    },
+    "colorCode": "#93C572"
   },
   {
     "id": "col-jadu",
@@ -24477,7 +24731,8 @@
     "pronunciation": {
       "korean": "[자두]",
       "ipa": "[jadu]"
-    }
+    },
+    "colorCode": "#DDA0DD"
   },
   {
     "id": "col-hobak",
@@ -24573,7 +24828,8 @@
     "pronunciation": {
       "korean": "[호박]",
       "ipa": "[hobak]"
-    }
+    },
+    "colorCode": "#FF7518"
   },
   {
     "id": "col-rajeuberi",
@@ -24669,7 +24925,8 @@
     "pronunciation": {
       "korean": "[라즈베리]",
       "ipa": "[rajeuberi]"
-    }
+    },
+    "colorCode": "#E30B5D"
   },
   {
     "id": "col-sapeuran",
@@ -24765,7 +25022,8 @@
     "pronunciation": {
       "korean": "[사프란]",
       "ipa": "[sapeuran]"
-    }
+    },
+    "colorCode": "#F4C430"
   },
   {
     "id": "col-딸gi",
@@ -24861,7 +25119,8 @@
     "pronunciation": {
       "korean": "[딸기]",
       "ipa": "[ttalgi]"
-    }
+    },
+    "colorCode": "#FC5A8D"
   },
   {
     "id": "col-귤색",
@@ -24957,7 +25216,8 @@
     "pronunciation": {
       "korean": "[귤색]",
       "ipa": "[gyulsaek]"
-    }
+    },
+    "colorCode": "#FF9966"
   },
   {
     "id": "col-banilra",
@@ -25053,7 +25313,8 @@
     "pronunciation": {
       "korean": "[바닐라]",
       "ipa": "[banilla]"
-    }
+    },
+    "colorCode": "#F3E5AB"
   },
   {
     "id": "col-subak",
@@ -25149,7 +25410,8 @@
     "pronunciation": {
       "korean": "[수박]",
       "ipa": "[subak]"
-    }
+    },
+    "colorCode": "#FD4659"
   },
   {
     "id": "col-wain",
@@ -25245,7 +25507,8 @@
     "pronunciation": {
       "korean": "[와인]",
       "ipa": "[wain]"
-    }
+    },
+    "colorCode": "#722F37"
   },
   {
     "id": "col-jangmi",
@@ -25341,7 +25604,8 @@
     "pronunciation": {
       "korean": "[장미]",
       "ipa": "[jangmi]"
-    }
+    },
+    "colorCode": "#FF007F"
   },
   {
     "id": "col-튤립",
@@ -25437,7 +25701,8 @@
     "pronunciation": {
       "korean": "[튤립]",
       "ipa": "[tyullip]"
-    }
+    },
+    "colorCode": "#FF878D"
   },
   {
     "id": "col-railrak",
@@ -25533,7 +25798,8 @@
     "pronunciation": {
       "korean": "[라일락]",
       "ipa": "[raillak]"
-    }
+    },
+    "colorCode": "#C8A2C8"
   },
   {
     "id": "col-deungnamu",
@@ -25629,7 +25895,8 @@
     "pronunciation": {
       "korean": "[등나무]",
       "ipa": "[deungnamu]"
-    }
+    },
+    "colorCode": "#C9A0DC"
   },
   {
     "id": "col-moran",
@@ -25725,7 +25992,8 @@
     "pronunciation": {
       "korean": "[모란]",
       "ipa": "[moran]"
-    }
+    },
+    "colorCode": "#DE6FA1"
   },
   {
     "id": "col-kanei션",
@@ -25821,7 +26089,8 @@
     "pronunciation": {
       "korean": "[카네이션]",
       "ipa": "[kaneisyeon]"
-    }
+    },
+    "colorCode": "#FFA6C9"
   },
   {
     "id": "col-dalria",
@@ -25917,7 +26186,8 @@
     "pronunciation": {
       "korean": "[달리아]",
       "ipa": "[dallia]"
-    }
+    },
+    "colorCode": "#D8A903"
   },
   {
     "id": "col-airiseu",
@@ -26013,7 +26283,8 @@
     "pronunciation": {
       "korean": "[아이리스]",
       "ipa": "[airiseu]"
-    }
+    },
+    "colorCode": "#5A4FCF"
   },
   {
     "id": "col-merigoldeu",
@@ -26109,7 +26380,8 @@
     "pronunciation": {
       "korean": "[메리골드]",
       "ipa": "[merigoldeu]"
-    }
+    },
+    "colorCode": "#EAA221"
   },
   {
     "id": "col-해baragi",
@@ -26205,7 +26477,8 @@
     "pronunciation": {
       "korean": "[해바라기]",
       "ipa": "[haebaragi]"
-    }
+    },
+    "colorCode": "#FFDA03"
   },
   {
     "id": "col-hibiseukeoseu",
@@ -26301,7 +26574,8 @@
     "pronunciation": {
       "korean": "[히비스커스]",
       "ipa": "[hibiseukeoseu]"
-    }
+    },
+    "colorCode": "#B6316C"
   },
   {
     "id": "col-연꽃",
@@ -26397,7 +26671,8 @@
     "pronunciation": {
       "korean": "[연꽃]",
       "ipa": "[yeonkkot]"
-    }
+    },
+    "colorCode": "#F5B2B2"
   },
   {
     "id": "col-jaseumin",
@@ -26493,7 +26768,8 @@
     "pronunciation": {
       "korean": "[자스민]",
       "ipa": "[jaseumin]"
-    }
+    },
+    "colorCode": "#F8DE7E"
   },
   {
     "id": "col-mok련",
@@ -26589,7 +26865,8 @@
     "pronunciation": {
       "korean": "[목련]",
       "ipa": "[mokryeon]"
-    }
+    },
+    "colorCode": "#F8F4FF"
   },
   {
     "id": "col-dong백",
@@ -26685,7 +26962,8 @@
     "pronunciation": {
       "korean": "[동백]",
       "ipa": "[dongbaek]"
-    }
+    },
+    "colorCode": "#E3A9A9"
   },
   {
     "id": "col-jindalrae",
@@ -26781,7 +27059,8 @@
     "pronunciation": {
       "korean": "[진달래]",
       "ipa": "[jindallae]"
-    }
+    },
+    "colorCode": "#F19CBB"
   },
   {
     "id": "col-guk화",
@@ -26877,7 +27156,8 @@
     "pronunciation": {
       "korean": "[국화]",
       "ipa": "[gukhwa]"
-    }
+    },
+    "colorCode": "#FFB7B7"
   },
   {
     "id": "col-yang귀bi",
@@ -26973,7 +27253,8 @@
     "pronunciation": {
       "korean": "[양귀비]",
       "ipa": "[yanggwibi]"
-    }
+    },
+    "colorCode": "#E35335"
   },
   {
     "id": "col-hiasinseu",
@@ -27069,7 +27350,8 @@
     "pronunciation": {
       "korean": "[히아신스]",
       "ipa": "[hiasinseu]"
-    }
+    },
+    "colorCode": "#7B68EE"
   },
   {
     "id": "col-chija",
@@ -27165,7 +27447,8 @@
     "pronunciation": {
       "korean": "[치자]",
       "ipa": "[chija]"
-    }
+    },
+    "colorCode": "#F8F4E6"
   },
   {
     "id": "col-topeu",
@@ -27261,7 +27544,8 @@
     "pronunciation": {
       "korean": "[토프]",
       "ipa": "[topeu]"
-    }
+    },
+    "colorCode": "#483C32"
   },
   {
     "id": "col-geureiji",
@@ -27357,7 +27641,8 @@
     "pronunciation": {
       "korean": "[그레이지]",
       "ipa": "[geureiji]"
-    }
+    },
+    "colorCode": "#B5A794"
   },
   {
     "id": "col-ekeuru",
@@ -27453,7 +27738,8 @@
     "pronunciation": {
       "korean": "[에크루]",
       "ipa": "[ekeuru]"
-    }
+    },
+    "colorCode": "#C2B280"
   },
   {
     "id": "col-bon",
@@ -27549,7 +27835,8 @@
     "pronunciation": {
       "korean": "[본]",
       "ipa": "[bon]"
-    }
+    },
+    "colorCode": "#E3DAC9"
   },
   {
     "id": "col-egeu쉘",
@@ -27645,7 +27932,8 @@
     "pronunciation": {
       "korean": "[에그쉘]",
       "ipa": "[egeuswel]"
-    }
+    },
+    "colorCode": "#F0EAD6"
   },
   {
     "id": "col-oiseuteo",
@@ -27741,7 +28029,8 @@
     "pronunciation": {
       "korean": "[오이스터]",
       "ipa": "[oiseuteo]"
-    }
+    },
+    "colorCode": "#E8E0D5"
   },
   {
     "id": "col-meo쉬룸",
@@ -27837,7 +28126,8 @@
     "pronunciation": {
       "korean": "[머쉬룸]",
       "ipa": "[meoswirum]"
-    }
+    },
+    "colorCode": "#C9B79C"
   },
   {
     "id": "col-peoti",
@@ -27933,7 +28223,8 @@
     "pronunciation": {
       "korean": "[퍼티]",
       "ipa": "[peoti]"
-    }
+    },
+    "colorCode": "#E6D4A3"
   },
   {
     "id": "col-seu톤",
@@ -28029,7 +28320,8 @@
     "pronunciation": {
       "korean": "[스톤]",
       "ipa": "[seuton]"
-    }
+    },
+    "colorCode": "#888C8D"
   },
   {
     "id": "col-페블",
@@ -28125,7 +28417,8 @@
     "pronunciation": {
       "korean": "[페블]",
       "ipa": "[pebeul]"
-    }
+    },
+    "colorCode": "#8E8E8E"
   },
   {
     "id": "col-deuripeuteuudeu",
@@ -28221,7 +28514,8 @@
     "pronunciation": {
       "korean": "[드리프트우드]",
       "ipa": "[deuripeuteuudeu]"
-    }
+    },
+    "colorCode": "#AF8751"
   },
   {
     "id": "col-oteumil",
@@ -28317,7 +28611,8 @@
     "pronunciation": {
       "korean": "[오트밀]",
       "ipa": "[oteumil]"
-    }
+    },
+    "colorCode": "#D9C5A0"
   },
   {
     "id": "col-ra떼",
@@ -28413,7 +28708,8 @@
     "pronunciation": {
       "korean": "[라떼]",
       "ipa": "[ratte]"
-    }
+    },
+    "colorCode": "#C8A282"
   },
   {
     "id": "col-ka멜",
@@ -28509,7 +28805,8 @@
     "pronunciation": {
       "korean": "[카멜]",
       "ipa": "[kamel]"
-    }
+    },
+    "colorCode": "#C19A6B"
   },
   {
     "id": "col-폰",
@@ -28605,7 +28902,8 @@
     "pronunciation": {
       "korean": "[폰]",
       "ipa": "[pon]"
-    }
+    },
+    "colorCode": "#E5AA70"
   },
   {
     "id": "col-beopeu",
@@ -28701,7 +28999,8 @@
     "pronunciation": {
       "korean": "[버프]",
       "ipa": "[beopeu]"
-    }
+    },
+    "colorCode": "#F0DC82"
   },
   {
     "id": "col-peul랙seu",
@@ -28797,7 +29096,8 @@
     "pronunciation": {
       "korean": "[플랙스]",
       "ipa": "[peullaekseu]"
-    }
+    },
+    "colorCode": "#EEDC82"
   },
   {
     "id": "col-헴peu",
@@ -28893,7 +29193,8 @@
     "pronunciation": {
       "korean": "[헴프]",
       "ipa": "[hempeu]"
-    }
+    },
+    "colorCode": "#907B71"
   },
   {
     "id": "col-beibi-블ru",
@@ -28989,7 +29290,8 @@
     "pronunciation": {
       "korean": "[베이비 블루]",
       "ipa": "[beibi beullu]"
-    }
+    },
+    "colorCode": "#89CFF0"
   },
   {
     "id": "col-beibi-핑keu",
@@ -29085,7 +29387,8 @@
     "pronunciation": {
       "korean": "[베이비 핑크]",
       "ipa": "[beibi pingkeu]"
-    }
+    },
+    "colorCode": "#F4C2C2"
   },
   {
     "id": "col-블reo쉬",
@@ -29181,7 +29484,8 @@
     "pronunciation": {
       "korean": "[블러쉬]",
       "ipa": "[beulleoswi]"
-    }
+    },
+    "colorCode": "#DE5D83"
   },
   {
     "id": "col-aepeuri콧",
@@ -29277,7 +29581,8 @@
     "pronunciation": {
       "korean": "[애프리콧]",
       "ipa": "[aepeurikot]"
-    }
+    },
+    "colorCode": "#FBCEB1"
   },
   {
     "id": "col-캔teolrupeu",
@@ -29373,7 +29678,8 @@
     "pronunciation": {
       "korean": "[캔털루프]",
       "ipa": "[kaenteollupeu]"
-    }
+    },
+    "colorCode": "#FFA62F"
   },
   {
     "id": "col-beoteokeurim",
@@ -29469,7 +29775,8 @@
     "pronunciation": {
       "korean": "[버터크림]",
       "ipa": "[beoteokeurim]"
-    }
+    },
+    "colorCode": "#FFFCE0"
   },
   {
     "id": "col-minteu-geurin",
@@ -29565,7 +29872,8 @@
     "pronunciation": {
       "korean": "[민트 그린]",
       "ipa": "[minteu geurin]"
-    }
+    },
+    "colorCode": "#98FF98"
   },
   {
     "id": "col-si폼",
@@ -29661,7 +29969,8 @@
     "pronunciation": {
       "korean": "[시폼]",
       "ipa": "[sipom]"
-    }
+    },
+    "colorCode": "#71EEB8"
   },
   {
     "id": "col-페ri윙keul",
@@ -29757,7 +30066,8 @@
     "pronunciation": {
       "korean": "[페리윙클]",
       "ipa": "[periwingkeul]"
-    }
+    },
+    "colorCode": "#CCCCFF"
   },
   {
     "id": "col-mobeu",
@@ -29853,7 +30163,8 @@
     "pronunciation": {
       "korean": "[모브]",
       "ipa": "[mobeu]"
-    }
+    },
+    "colorCode": "#E0B0FF"
   },
   {
     "id": "col-deoseuti-rojeu",
@@ -29949,7 +30260,8 @@
     "pronunciation": {
       "korean": "[더스티 로즈]",
       "ipa": "[deoseuti rojeu]"
-    }
+    },
+    "colorCode": "#DCAE96"
   },
   {
     "id": "col-쉘-핑keu",
@@ -30045,7 +30357,8 @@
     "pronunciation": {
       "korean": "[쉘 핑크]",
       "ipa": "[swel pingkeu]"
-    }
+    },
+    "colorCode": "#FFB4B4"
   },
   {
     "id": "col-aiseu-핑keu",
@@ -30141,7 +30454,8 @@
     "pronunciation": {
       "korean": "[아이스 핑크]",
       "ipa": "[aiseu pingkeu]"
-    }
+    },
+    "colorCode": "#F7DDDC"
   },
   {
     "id": "col-sopeuteu-railrak",
@@ -30237,7 +30551,8 @@
     "pronunciation": {
       "korean": "[소프트 라일락]",
       "ipa": "[sopeuteu raillak]"
-    }
+    },
+    "colorCode": "#DCD0FF"
   },
   {
     "id": "col-neon-핑keu",
@@ -30333,7 +30648,8 @@
     "pronunciation": {
       "korean": "[네온 핑크]",
       "ipa": "[neon pingkeu]"
-    }
+    },
+    "colorCode": "#FF6EC7"
   },
   {
     "id": "col-neon-geurin",
@@ -30429,7 +30745,8 @@
     "pronunciation": {
       "korean": "[네온 그린]",
       "ipa": "[neon geurin]"
-    }
+    },
+    "colorCode": "#39FF14"
   },
   {
     "id": "col-neon-옐rou",
@@ -30525,7 +30842,8 @@
     "pronunciation": {
       "korean": "[네온 옐로우]",
       "ipa": "[neon yellou]"
-    }
+    },
+    "colorCode": "#CFFF04"
   },
   {
     "id": "col-neon-o렌ji",
@@ -30621,7 +30939,8 @@
     "pronunciation": {
       "korean": "[네온 오렌지]",
       "ipa": "[neon orenji]"
-    }
+    },
+    "colorCode": "#FF5F1F"
   },
   {
     "id": "col-neon-블ru",
@@ -30717,7 +31036,8 @@
     "pronunciation": {
       "korean": "[네온 블루]",
       "ipa": "[neon beullu]"
-    }
+    },
+    "colorCode": "#4D4DFF"
   },
   {
     "id": "col-il렉teu릭-블ru",
@@ -30813,7 +31133,8 @@
     "pronunciation": {
       "korean": "[일렉트릭 블루]",
       "ipa": "[illekteurik beullu]"
-    }
+    },
+    "colorCode": "#7DF9FF"
   },
   {
     "id": "col-il렉teu릭-raim",
@@ -30909,7 +31230,8 @@
     "pronunciation": {
       "korean": "[일렉트릭 라임]",
       "ipa": "[illekteurik raim]"
-    }
+    },
+    "colorCode": "#CCFF00"
   },
   {
     "id": "col-syo킹-핑keu",
@@ -31005,7 +31327,8 @@
     "pronunciation": {
       "korean": "[쇼킹 핑크]",
       "ipa": "[syoking pingkeu]"
-    }
+    },
+    "colorCode": "#FC0FC0"
   },
   {
     "id": "col-hyeonggwang색",
@@ -31101,7 +31424,8 @@
     "pronunciation": {
       "korean": "[형광색]",
       "ipa": "[hyeonggwangsaek]"
-    }
+    },
+    "colorCode": "#08FF08"
   },
   {
     "id": "col-hairaiteo-옐rou",
@@ -31197,7 +31521,8 @@
     "pronunciation": {
       "korean": "[하이라이터 옐로우]",
       "ipa": "[hairaiteo yellou]"
-    }
+    },
+    "colorCode": "#FDFC00"
   },
   {
     "id": "col-테rakota",
@@ -31293,7 +31618,8 @@
     "pronunciation": {
       "korean": "[테라코타]",
       "ipa": "[terakota]"
-    }
+    },
+    "colorCode": "#E2725B"
   },
   {
     "id": "col-reoseuteu",
@@ -31389,7 +31715,8 @@
     "pronunciation": {
       "korean": "[러스트]",
       "ipa": "[reoseuteu]"
-    }
+    },
+    "colorCode": "#B7410E"
   },
   {
     "id": "col-beonteu-o렌ji",
@@ -31485,7 +31812,8 @@
     "pronunciation": {
       "korean": "[번트 오렌지]",
       "ipa": "[beonteu orenji]"
-    }
+    },
+    "colorCode": "#CC5500"
   },
   {
     "id": "col-beonteu-siena",
@@ -31581,7 +31909,8 @@
     "pronunciation": {
       "korean": "[번트 시에나]",
       "ipa": "[beonteu siena]"
-    }
+    },
+    "colorCode": "#E97451"
   },
   {
     "id": "col-ro-siena",
@@ -31677,7 +32006,8 @@
     "pronunciation": {
       "korean": "[로 시에나]",
       "ipa": "[ro siena]"
-    }
+    },
+    "colorCode": "#D68A59"
   },
   {
     "id": "col-ro-eombeo",
@@ -31773,7 +32103,8 @@
     "pronunciation": {
       "korean": "[로 엄버]",
       "ipa": "[ro eombeo]"
-    }
+    },
+    "colorCode": "#826644"
   },
   {
     "id": "col-beonteu-eombeo",
@@ -31869,7 +32200,8 @@
     "pronunciation": {
       "korean": "[번트 엄버]",
       "ipa": "[beonteu eombeo]"
-    }
+    },
+    "colorCode": "#8A3324"
   },
   {
     "id": "col-okeo",
@@ -31965,7 +32297,8 @@
     "pronunciation": {
       "korean": "[오커]",
       "ipa": "[okeo]"
-    }
+    },
+    "colorCode": "#CC7722"
   },
   {
     "id": "col-sepia",
@@ -32061,7 +32394,8 @@
     "pronunciation": {
       "korean": "[세피아]",
       "ipa": "[sepia]"
-    }
+    },
+    "colorCode": "#704214"
   },
   {
     "id": "col-eombeo",
@@ -32157,7 +32491,8 @@
     "pronunciation": {
       "korean": "[엄버]",
       "ipa": "[eombeo]"
-    }
+    },
+    "colorCode": "#635147"
   },
   {
     "id": "col-mahogani",
@@ -32253,7 +32588,8 @@
     "pronunciation": {
       "korean": "[마호가니]",
       "ipa": "[mahogani]"
-    }
+    },
+    "colorCode": "#C04000"
   },
   {
     "id": "col-cheseuteu넛",
@@ -32349,7 +32685,8 @@
     "pronunciation": {
       "korean": "[체스트넛]",
       "ipa": "[cheseuteuneot]"
-    }
+    },
+    "colorCode": "#954535"
   },
   {
     "id": "col-jinjeo",
@@ -32445,7 +32782,8 @@
     "pronunciation": {
       "korean": "[진저]",
       "ipa": "[jinjeo]"
-    }
+    },
+    "colorCode": "#B06500"
   },
   {
     "id": "col-넛맥",
@@ -32541,7 +32879,8 @@
     "pronunciation": {
       "korean": "[넛맥]",
       "ipa": "[neotmaek]"
-    }
+    },
+    "colorCode": "#7E4A35"
   },
   {
     "id": "col-월넛",
@@ -32637,7 +32976,8 @@
     "pronunciation": {
       "korean": "[월넛]",
       "ipa": "[wolneot]"
-    }
+    },
+    "colorCode": "#773F1A"
   },
   {
     "id": "col-kokoa",
@@ -32733,7 +33073,8 @@
     "pronunciation": {
       "korean": "[코코아]",
       "ipa": "[kokoa]"
-    }
+    },
+    "colorCode": "#5C3A21"
   },
   {
     "id": "col-헤i즐넛",
@@ -32829,7 +33170,8 @@
     "pronunciation": {
       "korean": "[헤이즐넛]",
       "ipa": "[heijeulneot]"
-    }
+    },
+    "colorCode": "#A67B5B"
   },
   {
     "id": "col-amondeu",
@@ -32925,7 +33267,8 @@
     "pronunciation": {
       "korean": "[아몬드]",
       "ipa": "[amondeu]"
-    }
+    },
+    "colorCode": "#EFDECD"
   },
   {
     "id": "col-캐reo멜",
@@ -33021,7 +33364,8 @@
     "pronunciation": {
       "korean": "[캐러멜]",
       "ipa": "[kaereomel]"
-    }
+    },
+    "colorCode": "#FFD59A"
   },
   {
     "id": "col-topi",
@@ -33117,7 +33461,8 @@
     "pronunciation": {
       "korean": "[토피]",
       "ipa": "[topi]"
-    }
+    },
+    "colorCode": "#755139"
   },
   {
     "id": "col-biseu킷",
@@ -33213,7 +33558,8 @@
     "pronunciation": {
       "korean": "[비스킷]",
       "ipa": "[biseukit]"
-    }
+    },
+    "colorCode": "#D4A76A"
   },
   {
     "id": "col-샌deuseu톤",
@@ -33309,7 +33655,8 @@
     "pronunciation": {
       "korean": "[샌드스톤]",
       "ipa": "[saendeuseuton]"
-    }
+    },
+    "colorCode": "#786D5F"
   },
   {
     "id": "col-eodobi",
@@ -33405,7 +33752,8 @@
     "pronunciation": {
       "korean": "[어도비]",
       "ipa": "[eodobi]"
-    }
+    },
+    "colorCode": "#BD6C48"
   },
   {
     "id": "col-테ra",
@@ -33501,7 +33849,8 @@
     "pronunciation": {
       "korean": "[테라]",
       "ipa": "[tera]"
-    }
+    },
+    "colorCode": "#C65D3E"
   },
   {
     "id": "col-eoseu",
@@ -33597,7 +33946,8 @@
     "pronunciation": {
       "korean": "[어스]",
       "ipa": "[eoseu]"
-    }
+    },
+    "colorCode": "#A98D6D"
   },
   {
     "id": "col-meodeu",
@@ -33693,7 +34043,8 @@
     "pronunciation": {
       "korean": "[머드]",
       "ipa": "[meodeu]"
-    }
+    },
+    "colorCode": "#70543E"
   },
   {
     "id": "col-deoteu",
@@ -33789,7 +34140,8 @@
     "pronunciation": {
       "korean": "[더트]",
       "ipa": "[deoteu]"
-    }
+    },
+    "colorCode": "#9B7653"
   },
   {
     "id": "col-soil",
@@ -33885,7 +34237,8 @@
     "pronunciation": {
       "korean": "[소일]",
       "ipa": "[soil]"
-    }
+    },
+    "colorCode": "#6B4226"
   },
   {
     "id": "col-keulrei",
@@ -33981,7 +34334,8 @@
     "pronunciation": {
       "korean": "[클레이]",
       "ipa": "[keullei]"
-    }
+    },
+    "colorCode": "#B66A50"
   },
   {
     "id": "col-beu릭",
@@ -34077,7 +34431,8 @@
     "pronunciation": {
       "korean": "[브릭]",
       "ipa": "[beurik]"
-    }
+    },
+    "colorCode": "#CB4154"
   },
   {
     "id": "col-캐년",
@@ -34173,7 +34528,8 @@
     "pronunciation": {
       "korean": "[캐년]",
       "ipa": "[kaenyeon]"
-    }
+    },
+    "colorCode": "#B97A57"
   },
   {
     "id": "col-dejeoteu",
@@ -34269,7 +34625,8 @@
     "pronunciation": {
       "korean": "[데저트]",
       "ipa": "[dejeoteu]"
-    }
+    },
+    "colorCode": "#C19A6B"
   },
   {
     "id": "col-beogeondi",
@@ -34365,7 +34722,8 @@
     "pronunciation": {
       "korean": "[버건디]",
       "ipa": "[beogeondi]"
-    }
+    },
+    "colorCode": "#800020"
   },
   {
     "id": "col-boreudo",
@@ -34461,7 +34819,8 @@
     "pronunciation": {
       "korean": "[보르도]",
       "ipa": "[boreudo]"
-    }
+    },
+    "colorCode": "#6D2C34"
   },
   {
     "id": "col-멜롯",
@@ -34557,7 +34916,8 @@
     "pronunciation": {
       "korean": "[멜롯]",
       "ipa": "[mellot]"
-    }
+    },
+    "colorCode": "#73343A"
   },
   {
     "id": "col-keulra렛",
@@ -34653,7 +35013,8 @@
     "pronunciation": {
       "korean": "[클라렛]",
       "ipa": "[keullaret]"
-    }
+    },
+    "colorCode": "#7F1734"
   },
   {
     "id": "col-okseu블reodeu",
@@ -34749,7 +35110,8 @@
     "pronunciation": {
       "korean": "[옥스블러드]",
       "ipa": "[okseubeulleodeu]"
-    }
+    },
+    "colorCode": "#4A0000"
   },
   {
     "id": "col-meolberi",
@@ -34845,7 +35207,8 @@
     "pronunciation": {
       "korean": "[멀베리]",
       "ipa": "[meolberi]"
-    }
+    },
+    "colorCode": "#C54B8C"
   },
   {
     "id": "col-obereujin",
@@ -34941,7 +35304,8 @@
     "pronunciation": {
       "korean": "[오베르진]",
       "ipa": "[obereujin]"
-    }
+    },
+    "colorCode": "#614051"
   },
   {
     "id": "col-egeupeul랜teu",
@@ -35037,7 +35401,8 @@
     "pronunciation": {
       "korean": "[에그플랜트]",
       "ipa": "[egeupeullaenteu]"
-    }
+    },
+    "colorCode": "#614051"
   },
   {
     "id": "col-boi즌beri",
@@ -35133,7 +35498,8 @@
     "pronunciation": {
       "korean": "[보이즌베리]",
       "ipa": "[boijeunberi]"
-    }
+    },
+    "colorCode": "#873260"
   },
   {
     "id": "col-블랙beri",
@@ -35229,7 +35595,8 @@
     "pronunciation": {
       "korean": "[블랙베리]",
       "ipa": "[beullaekberi]"
-    }
+    },
+    "colorCode": "#4D0135"
   },
   {
     "id": "col-엘deoberi",
@@ -35325,7 +35692,8 @@
     "pronunciation": {
       "korean": "[엘더베리]",
       "ipa": "[eldeoberi]"
-    }
+    },
+    "colorCode": "#4F0147"
   },
   {
     "id": "col-keoreonteu",
@@ -35421,7 +35789,8 @@
     "pronunciation": {
       "korean": "[커런트]",
       "ipa": "[keoreonteu]"
-    }
+    },
+    "colorCode": "#6B1C2A"
   },
   {
     "id": "col-pomegeurae닛",
@@ -35517,7 +35886,8 @@
     "pronunciation": {
       "korean": "[포메그래닛]",
       "ipa": "[pomegeuraenit]"
-    }
+    },
+    "colorCode": "#C0392B"
   },
   {
     "id": "col-seuteuroberi",
@@ -35613,7 +35983,8 @@
     "pronunciation": {
       "korean": "[스트로베리]",
       "ipa": "[seuteuroberi]"
-    }
+    },
+    "colorCode": "#FC5A8D"
   },
   {
     "id": "col-moka-museu",
@@ -35709,7 +36080,8 @@
     "pronunciation": {
       "korean": "[모카 무스]",
       "ipa": "[moka museu]"
-    }
+    },
+    "colorCode": "#A47764"
   },
   {
     "id": "col-pichi-peojeu",
@@ -35805,7 +36177,8 @@
     "pronunciation": {
       "korean": "[피치 퍼즈]",
       "ipa": "[pichi peojeu]"
-    }
+    },
+    "colorCode": "#FFBE98"
   },
   {
     "id": "col-biba-ma젠ta",
@@ -35901,7 +36274,8 @@
     "pronunciation": {
       "korean": "[비바 마젠타]",
       "ipa": "[biba majenta]"
-    }
+    },
+    "colorCode": "#BE3455"
   },
   {
     "id": "col-beri-페ri",
@@ -35997,7 +36371,8 @@
     "pronunciation": {
       "korean": "[베리 페리]",
       "ipa": "[beri peri]"
-    }
+    },
+    "colorCode": "#6667AB"
   },
   {
     "id": "col-얼ti밋-geurei",
@@ -36093,7 +36468,8 @@
     "pronunciation": {
       "korean": "[얼티밋 그레이]",
       "ipa": "[eoltimit geurei]"
-    }
+    },
+    "colorCode": "#939597"
   },
   {
     "id": "col-ilruminei팅",
@@ -36189,7 +36565,8 @@
     "pronunciation": {
       "korean": "[일루미네이팅]",
       "ipa": "[illumineiting]"
-    }
+    },
+    "colorCode": "#F5DF4D"
   },
   {
     "id": "col-keulrae식-블ru",
@@ -36285,7 +36662,8 @@
     "pronunciation": {
       "korean": "[클래식 블루]",
       "ipa": "[keullaesik beullu]"
-    }
+    },
+    "colorCode": "#0F4C81"
   },
   {
     "id": "col-ri빙-koral",
@@ -36381,7 +36759,8 @@
     "pronunciation": {
       "korean": "[리빙 코랄]",
       "ipa": "[ribing koral]"
-    }
+    },
+    "colorCode": "#FF6F61"
   },
   {
     "id": "col-ulteura-baiol렛",
@@ -36477,7 +36856,8 @@
     "pronunciation": {
       "korean": "[울트라 바이올렛]",
       "ipa": "[ulteura baiollet]"
-    }
+    },
+    "colorCode": "#5F4B8B"
   },
   {
     "id": "col-geurineori",
@@ -36573,7 +36953,8 @@
     "pronunciation": {
       "korean": "[그리너리]",
       "ipa": "[geurineori]"
-    }
+    },
+    "colorCode": "#88B04B"
   },
   {
     "id": "col-rojeu-쿼cheu",
@@ -36669,7 +37050,8 @@
     "pronunciation": {
       "korean": "[로즈 쿼츠]",
       "ipa": "[rojeu kwocheu]"
-    }
+    },
+    "colorCode": "#F7CAC9"
   },
   {
     "id": "col-sereoniti",
@@ -36765,7 +37147,8 @@
     "pronunciation": {
       "korean": "[세러니티]",
       "ipa": "[sereoniti]"
-    }
+    },
+    "colorCode": "#92A8D1"
   },
   {
     "id": "col-mareusalra",
@@ -36861,7 +37244,8 @@
     "pronunciation": {
       "korean": "[마르살라]",
       "ipa": "[mareusalla]"
-    }
+    },
+    "colorCode": "#964F4C"
   },
   {
     "id": "col-redieonteu-okideu",
@@ -36957,7 +37341,8 @@
     "pronunciation": {
       "korean": "[레디언트 오키드]",
       "ipa": "[redieonteu okideu]"
-    }
+    },
+    "colorCode": "#B163A3"
   },
   {
     "id": "col-탠jeorin-탱go",
@@ -37053,7 +37438,8 @@
     "pronunciation": {
       "korean": "[탠저린 탱고]",
       "ipa": "[taenjeorin taenggo]"
-    }
+    },
+    "colorCode": "#DD4124"
   },
   {
     "id": "col-heoniseokeul",
@@ -37149,7 +37535,8 @@
     "pronunciation": {
       "korean": "[허니서클]",
       "ipa": "[heoniseokeul]"
-    }
+    },
+    "colorCode": "#E5A6A2"
   },
   {
     "id": "col-koseu믹-ra떼",
@@ -37245,7 +37632,8 @@
     "pronunciation": {
       "korean": "[코스믹 라떼]",
       "ipa": "[koseumik ratte]"
-    }
+    },
+    "colorCode": "#FFF8E7"
   },
   {
     "id": "col-nebwolra-블ru",
@@ -37341,7 +37729,8 @@
     "pronunciation": {
       "korean": "[네뷸라 블루]",
       "ipa": "[nebyulla beullu]"
-    }
+    },
+    "colorCode": "#2E4A87"
   },
   {
     "id": "col-갤럭si-peopeul",
@@ -37437,7 +37826,8 @@
     "pronunciation": {
       "korean": "[갤럭시 퍼플]",
       "ipa": "[gaelleoksi peopeul]"
-    }
+    },
+    "colorCode": "#3A243B"
   },
   {
     "id": "col-seutadeoseuteu",
@@ -37533,7 +37923,8 @@
     "pronunciation": {
       "korean": "[스타더스트]",
       "ipa": "[seutadeoseuteu]"
-    }
+    },
+    "colorCode": "#9CA7B8"
   },
   {
     "id": "col-orora",
@@ -37629,7 +38020,8 @@
     "pronunciation": {
       "korean": "[오로라]",
       "ipa": "[orora]"
-    }
+    },
+    "colorCode": "#78D64B"
   },
   {
     "id": "col-solra-peulreeo",
@@ -37725,7 +38117,8 @@
     "pronunciation": {
       "korean": "[솔라 플레어]",
       "ipa": "[solla peulleeo]"
-    }
+    },
+    "colorCode": "#FF7800"
   },
   {
     "id": "col-runa-geurei",
@@ -37821,7 +38214,8 @@
     "pronunciation": {
       "korean": "[루나 그레이]",
       "ipa": "[runa geurei]"
-    }
+    },
+    "colorCode": "#B1B1B1"
   },
   {
     "id": "col-ma션-redeu",
@@ -37917,7 +38311,8 @@
     "pronunciation": {
       "korean": "[마션 레드]",
       "ipa": "[masyeon redeu]"
-    }
+    },
+    "colorCode": "#A23B2D"
   },
   {
     "id": "col-sae턴-goldeu",
@@ -38013,7 +38408,8 @@
     "pronunciation": {
       "korean": "[새턴 골드]",
       "ipa": "[saeteon goldeu]"
-    }
+    },
+    "colorCode": "#C5B358"
   },
   {
     "id": "col-넵튠-블ru",
@@ -38109,7 +38505,8 @@
     "pronunciation": {
       "korean": "[넵튠 블루]",
       "ipa": "[neptyun beullu]"
-    }
+    },
+    "colorCode": "#5B9BD5"
   },
   {
     "id": "col-cmyk-sian",
@@ -38205,7 +38602,8 @@
     "pronunciation": {
       "korean": "[CMYK 시안]",
       "ipa": "[CMYK sian]"
-    }
+    },
+    "colorCode": "#00FFFF"
   },
   {
     "id": "col-cmyk-ma젠ta",
@@ -38301,7 +38699,8 @@
     "pronunciation": {
       "korean": "[CMYK 마젠타]",
       "ipa": "[CMYK majenta]"
-    }
+    },
+    "colorCode": "#FF00FF"
   },
   {
     "id": "col-cmyk-옐rou",
@@ -38397,7 +38796,8 @@
     "pronunciation": {
       "korean": "[CMYK 옐로우]",
       "ipa": "[CMYK yellou]"
-    }
+    },
+    "colorCode": "#FFFF00"
   },
   {
     "id": "col-cmyk-블랙",
@@ -38493,7 +38893,8 @@
     "pronunciation": {
       "korean": "[CMYK 블랙]",
       "ipa": "[CMYK beullaek]"
-    }
+    },
+    "colorCode": "#000000"
   },
   {
     "id": "col-rgb-redeu",
@@ -38589,7 +38990,8 @@
     "pronunciation": {
       "korean": "[RGB 레드]",
       "ipa": "[RGB redeu]"
-    }
+    },
+    "colorCode": "#FF0000"
   },
   {
     "id": "col-rgb-geurin",
@@ -38685,7 +39087,8 @@
     "pronunciation": {
       "korean": "[RGB 그린]",
       "ipa": "[RGB geurin]"
-    }
+    },
+    "colorCode": "#00FF00"
   },
   {
     "id": "col-rgb-블ru",
@@ -38781,7 +39184,8 @@
     "pronunciation": {
       "korean": "[RGB 블루]",
       "ipa": "[RGB beullu]"
-    }
+    },
+    "colorCode": "#0000FF"
   },
   {
     "id": "col-peurinteo-블랙",
@@ -38877,7 +39281,8 @@
     "pronunciation": {
       "korean": "[프린터 블랙]",
       "ipa": "[peurinteo beullaek]"
-    }
+    },
+    "colorCode": "#000000"
   },
   {
     "id": "col-richi-블랙",
@@ -38973,7 +39378,8 @@
     "pronunciation": {
       "korean": "[리치 블랙]",
       "ipa": "[richi beullaek]"
-    }
+    },
+    "colorCode": "#010203"
   },
   {
     "id": "col-peuroseseu-블ru",
@@ -39069,7 +39475,8 @@
     "pronunciation": {
       "korean": "[프로세스 블루]",
       "ipa": "[peuroseseu beullu]"
-    }
+    },
+    "colorCode": "#0085CA"
   },
   {
     "id": "col-ripeul렉seu-블ru",
@@ -39165,7 +39572,8 @@
     "pronunciation": {
       "korean": "[리플렉스 블루]",
       "ipa": "[ripeullekseu beullu]"
-    }
+    },
+    "colorCode": "#001489"
   },
   {
     "id": "col-웜-redeu",
@@ -39261,7 +39669,8 @@
     "pronunciation": {
       "korean": "[웜 레드]",
       "ipa": "[wom redeu]"
-    }
+    },
+    "colorCode": "#F9423A"
   },
   {
     "id": "col-rubin-redeu",
@@ -39357,7 +39766,8 @@
     "pronunciation": {
       "korean": "[루빈 레드]",
       "ipa": "[rubin redeu]"
-    }
+    },
+    "colorCode": "#CE0058"
   },
   {
     "id": "col-ato믹-탠jeorin",
@@ -39453,7 +39863,8 @@
     "pronunciation": {
       "korean": "[아토믹 탠저린]",
       "ipa": "[atomik taenjeorin]"
-    }
+    },
+    "colorCode": "#FF9966"
   },
   {
     "id": "col-banana-maenia",
@@ -39549,7 +39960,8 @@
     "pronunciation": {
       "korean": "[바나나 매니아]",
       "ipa": "[banana maenia]"
-    }
+    },
+    "colorCode": "#FAE7B5"
   },
   {
     "id": "col-biteoseu위teu",
@@ -39645,7 +40057,8 @@
     "pronunciation": {
       "korean": "[비터스위트]",
       "ipa": "[biteoseuwiteu]"
-    }
+    },
+    "colorCode": "#FE6F5E"
   },
   {
     "id": "col-블ru-벨",
@@ -39741,7 +40154,8 @@
     "pronunciation": {
       "korean": "[블루 벨]",
       "ipa": "[beullu bel]"
-    }
+    },
+    "colorCode": "#A2A2D0"
   },
   {
     "id": "col-beu릭-redeu",
@@ -39837,7 +40251,8 @@
     "pronunciation": {
       "korean": "[브릭 레드]",
       "ipa": "[beurik redeu]"
-    }
+    },
+    "colorCode": "#C62D42"
   },
   {
     "id": "col-kanei션-핑keu",
@@ -39933,7 +40348,8 @@
     "pronunciation": {
       "korean": "[카네이션 핑크]",
       "ipa": "[kaneisyeon pingkeu]"
-    }
+    },
+    "colorCode": "#FFA6C9"
   },
   {
     "id": "col-serulrian",
@@ -40029,7 +40445,8 @@
     "pronunciation": {
       "korean": "[세룰리안]",
       "ipa": "[serullian]"
-    }
+    },
+    "colorCode": "#007BA7"
   },
   {
     "id": "col-kopeo-페ni",
@@ -40125,7 +40542,8 @@
     "pronunciation": {
       "korean": "[코퍼 페니]",
       "ipa": "[kopeo peni]"
-    }
+    },
+    "colorCode": "#AD6F69"
   },
   {
     "id": "col-콘peulra워",
@@ -40221,7 +40639,8 @@
     "pronunciation": {
       "korean": "[콘플라워]",
       "ipa": "[konpeullawo]"
-    }
+    },
+    "colorCode": "#9ACEEB"
   },
   {
     "id": "col-ko튼-캔di",
@@ -40317,7 +40736,8 @@
     "pronunciation": {
       "korean": "[코튼 캔디]",
       "ipa": "[koteun kaendi]"
-    }
+    },
+    "colorCode": "#FFBCD9"
   },
   {
     "id": "col-댄deulraieon",
@@ -40413,7 +40833,8 @@
     "pronunciation": {
       "korean": "[댄들라이언]",
       "ipa": "[daendeullaieon]"
-    }
+    },
+    "colorCode": "#F0E130"
   },
   {
     "id": "col-denim",
@@ -40509,7 +40930,8 @@
     "pronunciation": {
       "korean": "[데님]",
       "ipa": "[denim]"
-    }
+    },
+    "colorCode": "#1560BD"
   },
   {
     "id": "col-펀",
@@ -40605,7 +41027,8 @@
     "pronunciation": {
       "korean": "[펀]",
       "ipa": "[peon]"
-    }
+    },
+    "colorCode": "#71BC78"
   },
   {
     "id": "col-peoji-워ji",
@@ -40701,7 +41124,8 @@
     "pronunciation": {
       "korean": "[퍼지 워지]",
       "ipa": "[peoji woji]"
-    }
+    },
+    "colorCode": "#CC6666"
   },
   {
     "id": "col-geuraeni-seumiseu-aepeul",
@@ -40797,7 +41221,8 @@
     "pronunciation": {
       "korean": "[그래니 스미스 애플]",
       "ipa": "[geuraeni seumiseu aepeul]"
-    }
+    },
+    "colorCode": "#A8E4A0"
   },
   {
     "id": "col-inchi-웜",
@@ -40893,7 +41318,8 @@
     "pronunciation": {
       "korean": "[인치 웜]",
       "ipa": "[inchi wom]"
-    }
+    },
+    "colorCode": "#B2EC5D"
   },
   {
     "id": "col-jaejeuberi-잼",
@@ -40989,7 +41415,8 @@
     "pronunciation": {
       "korean": "[재즈베리 잼]",
       "ipa": "[jaejeuberi jaem]"
-    }
+    },
+    "colorCode": "#A50B5E"
   },
   {
     "id": "col-jeonggeul-geurin",
@@ -41085,7 +41512,8 @@
     "pronunciation": {
       "korean": "[정글 그린]",
       "ipa": "[jeonggeul geurin]"
-    }
+    },
+    "colorCode": "#29AB87"
   },
   {
     "id": "col-reijeo-remon",
@@ -41181,7 +41609,8 @@
     "pronunciation": {
       "korean": "[레이저 레몬]",
       "ipa": "[reijeo remon]"
-    }
+    },
+    "colorCode": "#FFFF66"
   },
   {
     "id": "col-makaroni-앤-chijeu",
@@ -41277,7 +41706,8 @@
     "pronunciation": {
       "korean": "[마카로니 앤 치즈]",
       "ipa": "[makaroni aen chijeu]"
-    }
+    },
+    "colorCode": "#FFBD88"
   },
   {
     "id": "col-mae직-minteu",
@@ -41373,7 +41803,8 @@
     "pronunciation": {
       "korean": "[매직 민트]",
       "ipa": "[maejik minteu]"
-    }
+    },
+    "colorCode": "#AAF0D1"
   },
   {
     "id": "col-maeneoti",
@@ -41469,7 +41900,8 @@
     "pronunciation": {
       "korean": "[매너티]",
       "ipa": "[maeneoti]"
-    }
+    },
+    "colorCode": "#979AAA"
   },
   {
     "id": "col-manggo-탱go",
@@ -41565,7 +41997,8 @@
     "pronunciation": {
       "korean": "[망고 탱고]",
       "ipa": "[manggo taenggo]"
-    }
+    },
+    "colorCode": "#FF8243"
   },
   {
     "id": "col-mauntin-medou",
@@ -41661,7 +42094,8 @@
     "pronunciation": {
       "korean": "[마운틴 메도우]",
       "ipa": "[mauntin medou]"
-    }
+    },
+    "colorCode": "#30BA8F"
   },
   {
     "id": "col-neon-캐럿",
@@ -41757,7 +42191,8 @@
     "pronunciation": {
       "korean": "[네온 캐럿]",
       "ipa": "[neon kaereot]"
-    }
+    },
+    "colorCode": "#FFA343"
   },
   {
     "id": "col-olribeu-geurin",
@@ -41853,7 +42288,8 @@
     "pronunciation": {
       "korean": "[올리브 그린]",
       "ipa": "[ollibeu geurin]"
-    }
+    },
+    "colorCode": "#BAB86C"
   },
   {
     "id": "col-auteo-seu페iseu",
@@ -41949,7 +42385,8 @@
     "pronunciation": {
       "korean": "[아우터 스페이스]",
       "ipa": "[auteo seupeiseu]"
-    }
+    },
+    "colorCode": "#414A4C"
   },
   {
     "id": "col-a웃reijeoseu-o렌ji",
@@ -42045,7 +42482,8 @@
     "pronunciation": {
       "korean": "[아웃레이저스 오렌지]",
       "ipa": "[autreijeoseu orenji]"
-    }
+    },
+    "colorCode": "#FF6E4A"
   },
   {
     "id": "col-peosipik-블ru",
@@ -42141,7 +42579,8 @@
     "pronunciation": {
       "korean": "[퍼시픽 블루]",
       "ipa": "[peosipik beullu]"
-    }
+    },
+    "colorCode": "#1CA9C9"
   },
   {
     "id": "col-pichi",
@@ -42237,7 +42676,8 @@
     "pronunciation": {
       "korean": "[피치]",
       "ipa": "[pichi]"
-    }
+    },
+    "colorCode": "#FFCBA4"
   },
   {
     "id": "col-pigi-핑keu",
@@ -42333,7 +42773,8 @@
     "pronunciation": {
       "korean": "[피기 핑크]",
       "ipa": "[pigi pingkeu]"
-    }
+    },
+    "colorCode": "#FDDDE6"
   },
   {
     "id": "col-pain-geurin",
@@ -42429,7 +42870,8 @@
     "pronunciation": {
       "korean": "[파인 그린]",
       "ipa": "[pain geurin]"
-    }
+    },
+    "colorCode": "#01796F"
   },
   {
     "id": "col-핑keu-peulra밍go",
@@ -42525,7 +42967,8 @@
     "pronunciation": {
       "korean": "[핑크 플라밍고]",
       "ipa": "[pingkeu peullaminggo]"
-    }
+    },
+    "colorCode": "#FC74FD"
   },
   {
     "id": "col-peopeul-hateu",
@@ -42621,7 +43064,8 @@
     "pronunciation": {
       "korean": "[퍼플 하트]",
       "ipa": "[peopeul hateu]"
-    }
+    },
+    "colorCode": "#69359C"
   },
   {
     "id": "col-peopeul-mauntinseu-maejeoseuti",
@@ -42717,7 +43161,8 @@
     "pronunciation": {
       "korean": "[퍼플 마운틴스 매저스티]",
       "ipa": "[peopeul mauntinseu maejeoseuti]"
-    }
+    },
+    "colorCode": "#9D81BA"
   },
   {
     "id": "col-raedikeol-redeu",
@@ -42813,7 +43258,8 @@
     "pronunciation": {
       "korean": "[래디컬 레드]",
       "ipa": "[raedikeol redeu]"
-    }
+    },
+    "colorCode": "#FF496C"
   },
   {
     "id": "col-rae즐-dae즐-rojeu",
@@ -42909,7 +43355,8 @@
     "pronunciation": {
       "korean": "[래즐 대즐 로즈]",
       "ipa": "[raejeul daejeul rojeu]"
-    }
+    },
+    "colorCode": "#FF33CC"
   },
   {
     "id": "col-raejeumatajeu",
@@ -43005,7 +43452,8 @@
     "pronunciation": {
       "korean": "[래즈마타즈]",
       "ipa": "[raejeumatajeu]"
-    }
+    },
+    "colorCode": "#E3256B"
   },
   {
     "id": "col-robin-egeu-블ru",
@@ -43101,7 +43549,8 @@
     "pronunciation": {
       "korean": "[로빈 에그 블루]",
       "ipa": "[robin egeu beullu]"
-    }
+    },
+    "colorCode": "#00CCCC"
   },
   {
     "id": "col-royeol-peopeul",
@@ -43197,7 +43646,8 @@
     "pronunciation": {
       "korean": "[로열 퍼플]",
       "ipa": "[royeol peopeul]"
-    }
+    },
+    "colorCode": "#7851A9"
   },
   {
     "id": "col-seukal렛",
@@ -43293,7 +43743,8 @@
     "pronunciation": {
       "korean": "[스칼렛]",
       "ipa": "[seukallet]"
-    }
+    },
+    "colorCode": "#FF2400"
   },
   {
     "id": "col-seukeuri밍-geurin",
@@ -43389,7 +43840,8 @@
     "pronunciation": {
       "korean": "[스크리밍 그린]",
       "ipa": "[seukeuriming geurin]"
-    }
+    },
+    "colorCode": "#76FF7A"
   },
   {
     "id": "col-섀dou",
@@ -43485,7 +43937,8 @@
     "pronunciation": {
       "korean": "[섀도우]",
       "ipa": "[syaedou]"
-    }
+    },
+    "colorCode": "#8A795D"
   },
   {
     "id": "col-샴rok",
@@ -43581,7 +44034,8 @@
     "pronunciation": {
       "korean": "[샴록]",
       "ipa": "[syamrok]"
-    }
+    },
+    "colorCode": "#45CEA2"
   },
   {
     "id": "col-seongeulrou",
@@ -43677,7 +44131,8 @@
     "pronunciation": {
       "korean": "[선글로우]",
       "ipa": "[seongeullou]"
-    }
+    },
+    "colorCode": "#FFCF48"
   },
   {
     "id": "col-seon셋-o렌ji",
@@ -43773,7 +44228,8 @@
     "pronunciation": {
       "korean": "[선셋 오렌지]",
       "ipa": "[seonset orenji]"
-    }
+    },
+    "colorCode": "#FD5E53"
   },
   {
     "id": "col-tikeul-mi-핑keu",
@@ -43869,7 +44325,8 @@
     "pronunciation": {
       "korean": "[티클 미 핑크]",
       "ipa": "[tikeul mi pingkeu]"
-    }
+    },
+    "colorCode": "#FC89AC"
   },
   {
     "id": "col-팀beoulpeu",
@@ -43965,7 +44422,8 @@
     "pronunciation": {
       "korean": "[팀버울프]",
       "ipa": "[timbeoulpeu]"
-    }
+    },
+    "colorCode": "#DBD7D2"
   },
   {
     "id": "col-tochi-redeu",
@@ -44061,7 +44519,8 @@
     "pronunciation": {
       "korean": "[토치 레드]",
       "ipa": "[tochi redeu]"
-    }
+    },
+    "colorCode": "#FD0E35"
   },
   {
     "id": "col-teuropikeol-rein-poreseuteu",
@@ -44157,7 +44616,8 @@
     "pronunciation": {
       "korean": "[트로피컬 레인 포레스트]",
       "ipa": "[teuropikeol rein poreseuteu]"
-    }
+    },
+    "colorCode": "#00755E"
   },
   {
     "id": "col-텀블위deu",
@@ -44253,7 +44713,8 @@
     "pronunciation": {
       "korean": "[텀블위드]",
       "ipa": "[teombeulwideu]"
-    }
+    },
+    "colorCode": "#DEAA88"
   },
   {
     "id": "col-teo쿼ijeu-블ru",
@@ -44349,7 +44810,8 @@
     "pronunciation": {
       "korean": "[터쿼이즈 블루]",
       "ipa": "[teokwoijeu beullu]"
-    }
+    },
+    "colorCode": "#00FFEF"
   },
   {
     "id": "col-eon멜rou-옐rou",
@@ -44445,7 +44907,8 @@
     "pronunciation": {
       "korean": "[언멜로우 옐로우]",
       "ipa": "[eonmellou yellou]"
-    }
+    },
+    "colorCode": "#FFFF66"
   },
   {
     "id": "col-bibideu-탠jeorin",
@@ -44541,7 +45004,8 @@
     "pronunciation": {
       "korean": "[비비드 탠저린]",
       "ipa": "[bibideu taenjeorin]"
-    }
+    },
+    "colorCode": "#FFA089"
   },
   {
     "id": "col-bibideu-baiol렛",
@@ -44637,7 +45101,8 @@
     "pronunciation": {
       "korean": "[비비드 바이올렛]",
       "ipa": "[bibideu baiollet]"
-    }
+    },
+    "colorCode": "#9F00FF"
   },
   {
     "id": "col-waildeu-블ru-욘deo",
@@ -44733,7 +45198,8 @@
     "pronunciation": {
       "korean": "[와일드 블루 욘더]",
       "ipa": "[waildeu beullu yondeo]"
-    }
+    },
+    "colorCode": "#A2ADD0"
   },
   {
     "id": "col-waildeu-seuteuroberi",
@@ -44829,7 +45295,8 @@
     "pronunciation": {
       "korean": "[와일드 스트로베리]",
       "ipa": "[waildeu seuteuroberi]"
-    }
+    },
+    "colorCode": "#FF43A4"
   },
   {
     "id": "col-waildeu-워teo멜ron",
@@ -44925,7 +45392,8 @@
     "pronunciation": {
       "korean": "[와일드 워터멜론]",
       "ipa": "[waildeu woteomellon]"
-    }
+    },
+    "colorCode": "#FC6C85"
   },
   {
     "id": "col-위seu테ria",
@@ -45021,7 +45489,8 @@
     "pronunciation": {
       "korean": "[위스테리아]",
       "ipa": "[wiseuteria]"
-    }
+    },
+    "colorCode": "#C9A0DC"
   },
   {
     "id": "col-옐rou-o렌ji",
@@ -45117,6 +45586,7 @@
     "pronunciation": {
       "korean": "[옐로우 오렌지]",
       "ipa": "[yellou orenji]"
-    }
+    },
+    "colorCode": "#FFAE42"
   }
 ]

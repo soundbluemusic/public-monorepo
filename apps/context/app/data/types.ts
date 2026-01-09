@@ -87,6 +87,7 @@ export interface Translation {
  * @property tags - 검색 및 분류용 태그
  * @property difficulty - 학습 난이도
  * @property frequency - 사용 빈도 (선택)
+ * @property colorCode - 색상 코드 (colors 카테고리 전용, hex 형식 예: "#FF0000")
  * @property createdAt - 생성 일시 (ISO 8601)
  * @property updatedAt - 수정 일시 (ISO 8601)
  */
@@ -107,6 +108,8 @@ export interface MeaningEntry {
   tags: string[];
   difficulty: DifficultyLevel;
   frequency?: FrequencyLevel;
+  /** 색상 코드 (colors 카테고리 전용, hex 형식) */
+  colorCode?: string;
   createdAt?: string;
   updatedAt?: string;
 }
@@ -140,6 +143,8 @@ export interface LocaleEntry {
   frequency?: FrequencyLevel;
   /** dialogue 데이터 존재 여부 (별도 JSON에서 lazy-load) */
   hasDialogue?: boolean;
+  /** 색상 코드 (colors 카테고리 전용, hex 형식) */
+  colorCode?: string;
   /** 단일 locale의 번역 (dialogue 제외, 별도 로드) */
   translation: Omit<Translation, 'dialogue'>;
 }
