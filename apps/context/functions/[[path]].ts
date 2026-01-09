@@ -1,3 +1,5 @@
+/// <reference types="@cloudflare/workers-types" />
+
 interface Env {
   BUCKET: R2Bucket;
 }
@@ -30,23 +32,19 @@ export const onRequest: PagesFunction<Env> = async (context) => {
       } else if (path.endsWith('.bin')) {
         headers.set('Content-Type', 'application/octet-stream');
       } else {
-        headers.set('Content-Type', 'application/octet-stream');
+        object.writeHttpMetadata(headers);
+        headers.set('etag', object.httpEtag);
       }
-      headers.set('Cache-Control', 'public, max-age=86400, s-maxage=604800');
 
-      // CORS: context.soundbluemusic.com 및 미리보기 URL(*.pages.dev) 허용
-      const origin = context.request.headers.get('Origin');
-      const allowedOrigins = ['https://context.soundbluemusic.com'];
-      if (origin && (allowedOrigins.includes(origin) || origin.endsWith('.pages.dev'))) {
-        headers.set('Access-Control-Allow-Origin', origin);
-      } else {
-        headers.set('Access-Control-Allow-Origin', 'https://context.soundbluemusic.com');
-      }
+      headers.set('Access-Control-Allow-Origin', '*');
+      headers.set('Access-Control-Allow-Methods', 'GET, HEAD, OPTIONS');
+      headers.set('Access-Control-Allow-Headers', 'Content-Type');
 
       return new Response(object.body, { headers });
     }
 
-    return new Response('Not Found', { status: 404 });
+    // R2에 없으면 Pages 정적 에셋으로 폴백 (client builds)
+    return context.next();
   }
 
   // /entry/* 요청은 R2에서 HTML 서빙

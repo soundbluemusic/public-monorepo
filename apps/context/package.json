@@ -7,7 +7,7 @@
     "dev": "react-router dev",
     "prebuild": "tsx scripts/generate-paraglide-messages.ts && tsx scripts/load-entries.ts && tsx scripts/compress-entries.ts && tsx scripts/generate-search-index.ts && tsx scripts/export-data.ts",
     "export:data": "tsx scripts/export-data.ts",
-    "build": "BUILD_TARGET=pages NODE_OPTIONS='--max-old-space-size=8192' react-router build && rm -rf build/client/data && tsx scripts/generate-sitemaps.ts",
+    "build": "BUILD_TARGET=pages NODE_OPTIONS='--max-old-space-size=8192' react-router build && tsx scripts/generate-sitemaps.ts",
     "build:r2": "BUILD_TARGET=r2 NODE_OPTIONS='--max-old-space-size=8192' react-router build",
     "build:all": "BUILD_TARGET=all NODE_OPTIONS='--max-old-space-size=8192' react-router build && tsx scripts/generate-sitemaps.ts",
     "upload:r2:entries": "tsx scripts/upload-to-r2.ts entries",
