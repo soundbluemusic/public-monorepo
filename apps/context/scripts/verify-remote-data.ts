@@ -4,6 +4,11 @@ import { entryIndex } from '../app/data/generated/entry-index';
 import { existsSync, readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
 
+/** Entry chunk 파일에 저장된 엔트리의 최소 타입 */
+interface ChunkEntry {
+  id: string;
+}
+
 console.log('Verifying Remote Data Consistency...');
 
 const BASE_URL = 'https://context.soundbluemusic.com';
@@ -26,8 +31,8 @@ async function checkRemote() {
             continue;
         }
 
-        const localData = JSON.parse(readFileSync(localPath, 'utf-8'));
-        const localIds = new Set(localData.map((e: any) => e.id));
+        const localData: ChunkEntry[] = JSON.parse(readFileSync(localPath, 'utf-8'));
+        const localIds = new Set(localData.map((e) => e.id));
 
         // Fetch Remote
         // Handle Hangul in URL
@@ -43,8 +48,8 @@ async function checkRemote() {
                 continue;
             }
 
-            const remoteData = await res.json();
-            const remoteIds = new Set(remoteData.map((e: any) => e.id));
+            const remoteData: ChunkEntry[] = await res.json();
+            const remoteIds = new Set(remoteData.map((e) => e.id));
 
             // Compare: Are all Local IDs present in Remote?
             // If Local (Client) thinks it's there (based on Index), but Remote (R2) doesn't have it, CRASH.

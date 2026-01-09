@@ -105,14 +105,11 @@ export const PANEL_LEFT_OPEN_SVG = `<svg xmlns="http://www.w3.org/2000/svg" widt
  * Script to handle sidebar collapse button clicks.
  * Should be placed at end of <body>.
  *
- * Uses event delegation with capture phase to intercept clicks
- * before React's event system. Updates DOM, localStorage, and
- * dispatches a custom event for React components to listen to.
+ * Updates CSS classes and localStorage only.
+ * React components handle their own rendering via Zustand state.
+ * NO DOM manipulation of React-managed elements (svg, span, etc.)
  */
 export const SIDEBAR_COLLAPSE_SCRIPT = `(function() {
-  var panelCloseIcon = '${PANEL_LEFT_CLOSE_SVG}';
-  var panelOpenIcon = '${PANEL_LEFT_OPEN_SVG}';
-
   document.addEventListener('click', function(e) {
     var btn = e.target.closest('button[aria-label*="sidebar" i]');
     if (!btn) return;
@@ -124,7 +121,7 @@ export const SIDEBAR_COLLAPSE_SCRIPT = `(function() {
     var isCurrentlyCollapsed = html.classList.contains('sidebar-collapsed');
     var willBeCollapsed = !isCurrentlyCollapsed;
 
-    // Update html class (for global CSS)
+    // Update html class (for global CSS only)
     if (willBeCollapsed) {
       html.classList.add('sidebar-collapsed');
       sidebar.setAttribute('data-collapsed', 'true');
@@ -133,7 +130,7 @@ export const SIDEBAR_COLLAPSE_SCRIPT = `(function() {
       sidebar.removeAttribute('data-collapsed');
     }
 
-    // Update localStorage
+    // Update localStorage (Zustand will sync on next render)
     try {
       var currentStored = localStorage.getItem('settings-storage');
       var newState = currentStored ? JSON.parse(currentStored) : { state: { sidebarCollapsed: false }, version: 0 };
@@ -143,26 +140,10 @@ export const SIDEBAR_COLLAPSE_SCRIPT = `(function() {
       console.error('[Sidebar] Failed to save sidebar preference:', err);
     }
 
-    // Update button icon
-    var svg = btn.querySelector('svg');
-    if (svg) {
-      svg.outerHTML = willBeCollapsed ? panelOpenIcon : panelCloseIcon;
-    }
+    // DO NOT modify React-managed DOM elements (svg, span, button text)
+    // React components will re-render based on Zustand state
 
-    // Update button label
-    var expandLabel = btn.getAttribute('data-expand-label') || 'Expand sidebar';
-    var collapseLabel = btn.getAttribute('data-collapse-label') || 'Collapse sidebar';
-    var newLabel = willBeCollapsed ? expandLabel : collapseLabel;
-    btn.setAttribute('aria-label', newLabel);
-    btn.setAttribute('title', newLabel);
-
-    // Update button text
-    var span = btn.querySelector('span');
-    if (span) {
-      span.textContent = willBeCollapsed ? expandLabel.split(' ')[0] : collapseLabel.split(' ')[0];
-    }
-
-    // Dispatch custom event for React components to sync
+    // Dispatch custom event for React components to sync immediately
     window.dispatchEvent(new CustomEvent('sidebar-collapse-change', {
       detail: { collapsed: willBeCollapsed }
     }));

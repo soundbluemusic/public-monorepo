@@ -1,6 +1,7 @@
 /**
  * @fileoverview 페이지네이션 컴포넌트
  */
+import { generatePageNumbers } from '@soundblue/core/utils';
 import { cn } from '@soundblue/ui/utils';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { memo, useMemo } from 'react';
@@ -10,36 +11,6 @@ interface PaginationProps {
   currentPage: number;
   totalPages: number;
   onPageChange: (page: number) => void;
-}
-
-/**
- * 페이지 번호 배열 생성 (1, 2, ..., 5, 6, 7, ..., 19, 20 형태)
- */
-function generatePageNumbers(current: number, total: number): (number | '...')[] {
-  if (total <= 7) {
-    return Array.from({ length: total }, (_, i) => i + 1);
-  }
-
-  const pages: (number | '...')[] = [];
-  pages.push(1);
-
-  if (current > 3) {
-    pages.push('...');
-  }
-
-  const start = Math.max(2, current - 1);
-  const end = Math.min(total - 1, current + 1);
-
-  for (let i = start; i <= end; i++) {
-    pages.push(i);
-  }
-
-  if (current < total - 2) {
-    pages.push('...');
-  }
-
-  pages.push(total);
-  return pages;
 }
 
 export const Pagination = memo(function Pagination({

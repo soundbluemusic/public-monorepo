@@ -28,6 +28,7 @@
   --accent-tertiary: #9178ff;
   --accent-hover: #5a3ed4;
   --accent-mint: #c5b8ff; /* For selection highlight */
+  --accent-bg: #6b4de6; /* Background color for buttons with white text - WCAG AA 4.5:1 */
 
   /* Border */
   --border-primary: #e0dce8;
@@ -61,6 +62,7 @@
   --accent-tertiary: #c5b8ff;
   --accent-hover: #b0a0ff;
   --accent-mint: #9b82ff;
+  --accent-bg: #6b4de6; /* Background color for buttons with white text - WCAG AA 4.5:1 */
 
   /* Border */
   --border-primary: #352f45;
@@ -88,20 +90,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ============================================
-   Layout Utilities (used by SCSS Modules)
-   ============================================ */
-.h-header {
-  height: var(--header-height);
-}
-
-.pt-header {
-  padding-top: var(--header-height);
-}
-
-.pb-bottom-nav {
-  padding-bottom: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom, 0px));
-}
+/* Note: h-header, pt-header, pb-bottom-nav are defined in @soundblue/config/styles/tailwind.css as @utility */
 
 /* ============================================
    Accessibility - Skip to content

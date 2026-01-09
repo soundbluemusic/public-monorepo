@@ -35,7 +35,7 @@ export const cssVariables = {
   // Spacing
   '--header-height': '56px',
   '--sidebar-width': '280px',
-  '--sidebar-collapsed-width': '64px',
+  '--sidebar-collapsed-width': '56px',
 } as const;
 
 /**

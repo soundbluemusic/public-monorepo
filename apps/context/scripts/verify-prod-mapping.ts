@@ -4,6 +4,11 @@ import { entryToCategory, entryIndex } from '../app/data/generated/entry-index';
 import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
 
+/** Entry chunk 파일에 저장된 엔트리의 최소 타입 */
+interface ChunkEntry {
+  id: string;
+}
+
 console.log('Verifying Entry Mapping (Category + Choseong)...');
 
 const failures: string[] = [];
@@ -14,7 +19,7 @@ const CAT_BASE_DIR = join(process.cwd(), 'apps/context/public/data/by-category-f
 console.log(`\nChecking Category Strategy (ClientLoader)...`);
 console.log(`Base Dir: ${CAT_BASE_DIR}`);
 
-const catJsonCache = new Map<string, any[]>();
+const catJsonCache = new Map<string, ChunkEntry[]>();
 
 for (const entry of lightEntries) {
     const id = entry.id;
@@ -43,7 +48,7 @@ for (const entry of lightEntries) {
         }
 
         const entriesInChunk = catJsonCache.get(filename);
-        if (entriesInChunk && !entriesInChunk.find((e: any) => e.id === id)) {
+        if (entriesInChunk && !entriesInChunk.find((e) => e.id === id)) {
             console.error(`[FAIL][CAT] ${id}: Missing in ${filename}`);
             failures.push(`${id} (Missing in Cat JSON)`);
         }
@@ -55,7 +60,7 @@ const CHOSEONG_BASE_DIR = join(process.cwd(), 'apps/context/public/data/chunks')
 console.log(`\nChecking Choseong Strategy (useEntryLoader)...`);
 console.log(`Base Dir: ${CHOSEONG_BASE_DIR}`);
 
-const choseongJsonCache = new Map<string, any[]>();
+const choseongJsonCache = new Map<string, ChunkEntry[]>();
 
 for (const entry of lightEntries) {
     const id = entry.id;
@@ -87,7 +92,7 @@ for (const entry of lightEntries) {
     }
 
     const entriesInChunk = choseongJsonCache.get(filename);
-    if (entriesInChunk && !entriesInChunk.find((e: any) => e.id === id)) {
+    if (entriesInChunk && !entriesInChunk.find((e) => e.id === id)) {
         console.error(`[FAIL][CHO] ${id}: Missing in ${filename}`);
         failures.push(`${id} (Missing in Cho JSON)`);
     }
