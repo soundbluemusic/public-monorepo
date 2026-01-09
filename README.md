@@ -25,7 +25,7 @@
 ## 🚀 Apps
 
 ### 📖 Context — Korean Dictionary
-> **학습자를 위한 한국어 사전** | 33,746 SSG pages
+> **학습자를 위한 한국어 사전** | 33,748 SSG pages
 >
 > 한국어 학습자를 위한 맥락 기반 사전. 단어의 의미, 예문, 관련 표현을 제공합니다.
 
@@ -33,7 +33,7 @@
 |---|---|
 | **Live** | [context.soundbluemusic.com](https://context.soundbluemusic.com) |
 | **Source** | [apps/context](apps/context) |
-| **Features** | 16836 entries, 24 categories, 53 conversations |
+| **Features** | 16836 entries, 25 categories, 53 conversations |
 
 ### 🔧 Permissive — Web Dev Resources
 > **무료 웹개발 자료 모음** | 8 SSG pages
@@ -134,10 +134,10 @@ React Router v7의 `prerender()` + `loader()` 패턴으로 **빌드 시** 모든
 
 | App | Dynamic Routes | SSG Pages | Data Source |
 |:----|:---------------|:---------:|:------------|
-| **Context** | 16836 entries + 24 categories + 53 conversations | 33,746 | JSON |
+| **Context** | 16836 entries + 25 categories + 53 conversations | 33,748 | JSON |
 | **Roots** | 438 concepts + 18 fields | 920 | TypeScript |
 | **Permissive** | 4 static routes | 8 | Array literals |
-| **Total** | — | **34,674** | — |
+| **Total** | — | **34,676** | — |
 
 ### Code Pattern
 
@@ -194,7 +194,7 @@ setTimeout(() => {
 public-monorepo/
 │
 ├── apps/                    # 3 applications
-│   ├── context/             # Korean dictionary (33,746 SSG pages)
+│   ├── context/             # Korean dictionary (33,748 SSG pages)
 │   ├── permissive/          # Web dev resources (8 SSG pages)
 │   └── roots/               # Math documentation (920 SSG pages)
 │

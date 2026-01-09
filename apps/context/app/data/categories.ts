@@ -359,6 +359,20 @@ export const categories: Category[] = [
     color: 'teal',
     order: 24,
   },
+  {
+    id: 'colors',
+    name: {
+      ko: '색깔',
+      en: 'Colors',
+    },
+    description: {
+      ko: '다양한 색깔과 색상 관련 단어',
+      en: 'Various colors and color-related vocabulary',
+    },
+    icon: '◉',
+    color: 'red',
+    order: 25,
+  },
 ];
 
 /**

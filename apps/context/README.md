@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 [![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?logo=react-router)](https://reactrouter.com)
 [![100% SSG](https://img.shields.io/badge/100%25-SSG-brightgreen)](https://en.wikipedia.org/wiki/Static_site_generator)
-[![SSG Routes](https://img.shields.io/badge/SSG_Routes-33746-blue)](react-router.config.ts)
+[![SSG Routes](https://img.shields.io/badge/SSG_Routes-33748-blue)](react-router.config.ts)
 
 **[Live Site](https://context.soundbluemusic.com)**
 
@@ -30,7 +30,7 @@ A Korean dictionary designed for language learners:
 ```
 react-router.config.ts
 ├── ssr: false
-├── prerender() → 33746 static routes generated
+├── prerender() → 33748 static routes generated
 │   ├── entries → 16836 × 2 langs
 │   ├── categories → 21 × 2 langs
 │   └── conversations → 7 × 2 langs
@@ -89,7 +89,7 @@ Runtime:
 | `/terms` | ✓ | ✓ | - | Terms of service |
 | `/license` | ✓ | ✓ | - | License |
 
-**Total:** 33746 SSG routes (16873 EN + 16873 KO)
+**Total:** 33748 SSG routes (16874 EN + 16874 KO)
 
 ---
 
