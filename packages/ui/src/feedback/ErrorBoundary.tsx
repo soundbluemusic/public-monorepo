@@ -127,15 +127,15 @@ export function ErrorFallbackUI({ error, onReset }: ErrorFallbackUIProps) {
       <div className="mb-6 text-6xl" aria-hidden="true">
         ⚠️
       </div>
-      <h2 className="mb-2 text-xl font-semibold text-primary">문제가 발생했습니다</h2>
-      <p className="mb-6 text-secondary">Something went wrong</p>
+      <h2 className="mb-2 text-xl font-semibold text-(--text-primary)">문제가 발생했습니다</h2>
+      <p className="mb-6 text-(--text-secondary)">Something went wrong</p>
 
       {error && isDev && (
         <details className="mb-6 max-w-lg text-left">
-          <summary className="cursor-pointer text-sm text-tertiary hover:text-secondary">
+          <summary className="cursor-pointer text-sm text-(--text-tertiary) hover:text-(--text-secondary)">
             Error details
           </summary>
-          <pre className="mt-2 overflow-auto rounded-lg bg-secondary p-4 text-xs text-primary">
+          <pre className="mt-2 overflow-auto rounded-lg bg-(--bg-secondary) p-4 text-xs text-(--text-primary)">
             {error.message}
             {error.stack && `\n\n${error.stack}`}
           </pre>
@@ -146,7 +146,7 @@ export function ErrorFallbackUI({ error, onReset }: ErrorFallbackUIProps) {
         <button
           type="button"
           onClick={onReset}
-          className="btn-primary px-6 py-2"
+          className="min-h-11 px-6 py-2 rounded-lg font-medium bg-(--accent-primary) text-white hover:brightness-110 active:scale-[0.98] transition-all cursor-pointer"
           aria-label="Try again"
         >
           다시 시도
@@ -154,7 +154,7 @@ export function ErrorFallbackUI({ error, onReset }: ErrorFallbackUIProps) {
         <button
           type="button"
           onClick={() => window.location.reload()}
-          className="btn-secondary px-6 py-2"
+          className="min-h-11 px-6 py-2 rounded-lg font-medium bg-(--bg-tertiary) text-(--text-primary) hover:bg-(--border-primary) transition-colors cursor-pointer"
           aria-label="Reload page"
         >
           페이지 새로고침
@@ -284,14 +284,17 @@ export function RouteErrorFallback() {
   return (
     <div
       role="alert"
-      className="flex min-h-screen flex-col items-center justify-center bg-primary p-8 text-center"
+      className="flex min-h-screen flex-col items-center justify-center bg-(--bg-primary) p-8 text-center"
     >
       <div className="mb-6 text-6xl" aria-hidden="true">
         🔍
       </div>
-      <h1 className="mb-2 text-2xl font-bold text-primary">페이지를 찾을 수 없습니다</h1>
-      <p className="mb-6 text-secondary">Page not found</p>
-      <a href="/" className="btn-primary px-6 py-2">
+      <h1 className="mb-2 text-2xl font-bold text-(--text-primary)">페이지를 찾을 수 없습니다</h1>
+      <p className="mb-6 text-(--text-secondary)">Page not found</p>
+      <a
+        href="/"
+        className="inline-block rounded-lg bg-(--accent-primary) px-6 py-3 text-white transition-colors hover:brightness-110"
+      >
         홈으로 돌아가기
       </a>
     </div>

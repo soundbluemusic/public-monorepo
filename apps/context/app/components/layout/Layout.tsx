@@ -25,17 +25,33 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const { sidebarCollapsed, toggleSidebarCollapse } = useSettingsStore();
 
-  // Sync sidebar state with inline script's custom event
+  // Sync sidebar state with inline script's custom events
   useEffect(() => {
     const handleMobileSidebarToggle = (e: CustomEvent<{ isOpen: boolean }>) => {
       setSidebarOpen(e.detail.isOpen);
     };
+    const handleSidebarCollapseChange = (e: CustomEvent<{ collapsed: boolean }>) => {
+      // Sync Zustand state with inline script's localStorage update
+      const { setSidebarCollapsed } = useSettingsStore.getState();
+      setSidebarCollapsed(e.detail.collapsed);
+    };
+
     window.addEventListener('mobile-sidebar-toggle', handleMobileSidebarToggle as EventListener);
-    return () =>
+    window.addEventListener(
+      'sidebar-collapse-change',
+      handleSidebarCollapseChange as EventListener,
+    );
+
+    return () => {
       window.removeEventListener(
         'mobile-sidebar-toggle',
         handleMobileSidebarToggle as EventListener,
       );
+      window.removeEventListener(
+        'sidebar-collapse-change',
+        handleSidebarCollapseChange as EventListener,
+      );
+    };
   }, []);
 
   // 스크롤 이벤트 throttling (requestAnimationFrame 사용)

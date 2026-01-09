@@ -45,6 +45,7 @@
   --accent-tertiary: #3d8880;
   --accent-hover: #185850;
   --accent-mint: #a8e8d8;
+  --accent-bg: #1f6960; /* Background color for buttons with white text - WCAG AA 4.5:1 */
 
   /* Border */
   --border-primary: #d5e0dd;
@@ -83,6 +84,7 @@
   --accent-tertiary: #9ce4db;
   --accent-hover: #85d8d0;
   --accent-mint: #b0f0e5;
+  --accent-bg: #1f6960; /* Background color for buttons with white text - WCAG AA 4.5:1 */
 
   /* Border */
   --border-primary: #2e3e3c;
@@ -114,50 +116,9 @@ body {
 }
 
 /* ============================================
-   Buttons
-   ============================================ */
-.btn {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  font-weight: 500;
-  transition:
-    background-color 0.2s,
-    color 0.2s;
-}
-
-.btn-primary {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  font-weight: 500;
-  transition:
-    background-color 0.2s,
-    color 0.2s;
-  background-color: var(--accent-primary);
-  color: white;
-}
-
-.btn-primary:hover {
-  background-color: var(--accent-hover);
-}
-
-.btn-secondary {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  font-weight: 500;
-  transition:
-    background-color 0.2s,
-    color 0.2s;
-  background-color: var(--bg-tertiary);
-  color: var(--text-primary);
-}
-
-.btn-secondary:hover {
-  background-color: var(--border-primary);
-}
-
-/* ============================================
    Cards
    ============================================ */
+/* Note: btn, btn-primary, btn-secondary are defined in @soundblue/config/styles/tailwind.css */
 .card {
   background-color: var(--bg-elevated);
   border: 1px solid var(--border-primary);
