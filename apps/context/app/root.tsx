@@ -7,7 +7,7 @@ import {
   MOBILE_SIDEBAR_TOGGLE_SCRIPT,
   SIDEBAR_COLLAPSE_SCRIPT,
 } from '@soundblue/ui/utils';
-import { Links, Meta, Outlet, Scripts, ScrollRestoration } from 'react-router';
+import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLocation } from 'react-router';
 import { I18nProvider } from './i18n';
 import './styles/global.css';
 
@@ -18,8 +18,11 @@ import { getLocale } from '~/paraglide/runtime.js';
  * Follows soundblue-monorepo pattern for proper SSG hydration
  */
 export function Layout({ children }: { children: React.ReactNode }) {
+  const location = useLocation();
+  const lang = location.pathname.startsWith('/ko') ? 'ko' : 'en';
+
   return (
-    <html lang={getLocale()} suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

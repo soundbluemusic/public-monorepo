@@ -18,4 +18,8 @@ declare module '~/paraglide/runtime.js' {
 
   export const baseLocale: Language;
   export const locales: readonly Language[];
+
+  export function cancelAsyncLocalStorage(): void;
+  export function extractLocaleFromRequest(request: Request): Language;
+  export function overwriteServerAsyncLocalStorage(storage: any): void;
 }
