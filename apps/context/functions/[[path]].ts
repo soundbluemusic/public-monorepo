@@ -36,6 +36,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
         headers.set('etag', object.httpEtag);
       }
 
+      headers.set('Cache-Control', 'public, max-age=31536000');
       headers.set('Access-Control-Allow-Origin', '*');
       headers.set('Access-Control-Allow-Methods', 'GET, HEAD, OPTIONS');
       headers.set('Access-Control-Allow-Headers', 'Content-Type');
