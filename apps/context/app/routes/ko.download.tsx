@@ -1,2 +1,2 @@
 // Korean version of Download page - reuses the same component
-export { clientLoader, default, meta } from './download';
+export { clientLoader, default, loader, meta } from './download';

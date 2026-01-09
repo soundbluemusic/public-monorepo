@@ -27,6 +27,30 @@ interface LoaderData {
   totalCount: number;
 }
 
+/**
+ * SSG loader: 빌드 시 모든 엔트리를 로드하여 HTML에 임베드
+ * 이렇게 해야 hydration 실패 시에도 fallback 스크립트가 작동함
+ */
+export async function loader(): Promise<LoaderData> {
+  const { categories } = await import('@/data/categories');
+  const { getEntriesByCategory } = await import('@/data/entries');
+
+  const allEntries: MeaningEntry[] = [];
+  for (const category of categories) {
+    const categoryEntries = await getEntriesByCategory(category.id);
+    allEntries.push(...categoryEntries);
+  }
+
+  return {
+    entries: allEntries,
+    totalCount: allEntries.length,
+  };
+}
+
+/**
+ * clientLoader: 클라이언트 네비게이션 시 데이터 로드
+ * SSG 빌드된 페이지에 직접 접근 시에는 loader의 데이터 사용
+ */
 export async function clientLoader(): Promise<LoaderData> {
   // 모든 카테고리의 전체 데이터 로드
   const { categories } = await import('@/data/categories');
