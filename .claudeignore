@@ -29,3 +29,18 @@ yarn.lock
 coverage/
 playwright-report/
 test-results/
+*.snap
+
+# 소스맵 및 압축 파일
+*.map
+*.min.js
+*.min.css
+
+# 스토리북
+storybook-static/
+
+# 환경변수
+.env*
+
+# 추가 대용량 데이터 (필요시 @파일명으로 직접 지정)
+data/roots/
