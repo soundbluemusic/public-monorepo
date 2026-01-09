@@ -2,14 +2,17 @@
 
 interface Env {
   BUCKET: R2Bucket;
+  ASSETS: Fetcher;
 }
 
 /**
  * Pages Functions: R2에서 대용량 파일 서빙
  *
  * ## R2에서 서빙하는 항목:
- * 1. /entry/* - 엔트리 HTML 페이지 (67,000+개)
- * 2. /data/* - JSON 데이터 파일 (32,000+개)
+ * 1. /data/* - JSON 데이터 파일 (압축된 엔트리 데이터)
+ *
+ * ## SPA Fallback으로 처리하는 항목:
+ * 1. /entry/* - 엔트리 페이지 (clientLoader가 데이터 로드)
  *
  * ## Pages에서 서빙하는 항목:
  * - 정적 자산 (JS, CSS, 이미지 등)
@@ -48,29 +51,11 @@ export const onRequest: PagesFunction<Env> = async (context) => {
     return context.next();
   }
 
-  // /entry/* 요청은 R2에서 HTML 서빙
+  // /entry/* 요청은 SPA fallback으로 처리 (clientLoader가 데이터 로드)
   if (path.startsWith('/entry/') || path.startsWith('/ko/entry/')) {
-    const htmlPath = path.endsWith('/') ? `${path}index.html` : `${path}/index.html`;
-    const r2Path = `public-monorepo/context${htmlPath}`;
-    const object = await context.env.BUCKET.get(r2Path);
-
-    if (object) {
-      const headers = new Headers();
-      headers.set('Content-Type', 'text/html; charset=utf-8');
-      headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400');
-
-      // CORS: context.soundbluemusic.com 및 미리보기 URL(*.pages.dev) 허용
-      const origin = context.request.headers.get('Origin');
-      const allowedOrigins = ['https://context.soundbluemusic.com'];
-      if (origin && (allowedOrigins.includes(origin) || origin.endsWith('.pages.dev'))) {
-        headers.set('Access-Control-Allow-Origin', origin);
-      }
-
-      return new Response(object.body, { headers });
-    }
-
-    // R2에 없으면 SPA fallback으로 (clientLoader가 처리)
-    return context.next();
+    // SPA fallback HTML 반환 - React Router가 클라이언트에서 라우팅 처리
+    const fallbackRequest = new Request(new URL('/__spa-fallback.html', url.origin));
+    return context.env.ASSETS.fetch(fallbackRequest);
   }
 
   // 나머지는 Pages에서 처리
