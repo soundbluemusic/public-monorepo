@@ -3,7 +3,7 @@ import { dynamicMetaFactory } from '@soundblue/i18n';
 import { cn } from '@soundblue/ui/utils';
 import { Bookmark, BookmarkCheck, Check } from 'lucide-react';
 import { Link, useLoaderData } from 'react-router';
-import { ColorSwatch, isColorEntry } from '@/components/ColorSwatch';
+import { ColorSwatch, getColorCodeByName, isColorEntry } from '@/components/ColorSwatch';
 import { EntryDialogueDisplay } from '@/components/EntryDialogueDisplay';
 import { HomonymSection } from '@/components/HomonymSection';
 import { LinkedExample } from '@/components/LinkedExample';
@@ -33,7 +33,15 @@ import { useUserDataStore } from '@/stores/user-data-store';
 export async function clientLoader({ params }: { params: { entryId: string } }) {
   const { getEntryByIdForLocale } = await import('@/data/entries');
   const entry = await getEntryByIdForLocale(params.entryId, 'ko');
-  return { entry: entry || null };
+
+  // colors 카테고리의 경우 영어 색상명도 함께 로드 (색상 표시용)
+  let englishColorName: string | undefined;
+  if (entry?.categoryId === 'colors') {
+    const enEntry = await getEntryByIdForLocale(params.entryId, 'en');
+    englishColorName = enEntry?.translation.word;
+  }
+
+  return { entry: entry || null, englishColorName };
 }
 
 export function HydrateFallback() {
@@ -62,7 +70,10 @@ export const meta = dynamicMetaFactory((data: { entry: LocaleEntry | null }) => 
 }, 'https://context.soundbluemusic.com');
 
 export default function EntryPage() {
-  const { entry } = useLoaderData<{ entry: LocaleEntry | null }>();
+  const { entry, englishColorName } = useLoaderData<{
+    entry: LocaleEntry | null;
+    englishColorName?: string;
+  }>();
   const { locale, t, localePath } = useI18n();
 
   const isFavorite = useUserDataStore((state) =>
@@ -166,14 +177,19 @@ export default function EntryPage() {
         </header>
 
         {/* Color Swatch - colors 카테고리만 표시 */}
-        {isColorEntry(entry.categoryId) && entry.colorCode && (
-          <section className="mb-6">
-            <h2 className="text-lg font-semibold text-(--text-primary) mb-3">
-              {locale === 'ko' ? '색상 미리보기' : 'Color Preview'}
-            </h2>
-            <ColorSwatch colorCode={entry.colorCode} colorName={translation.word} />
-          </section>
-        )}
+        {isColorEntry(entry.categoryId) &&
+          englishColorName &&
+          (() => {
+            const colorCode = getColorCodeByName(englishColorName);
+            return colorCode ? (
+              <section className="mb-6">
+                <h2 className="text-lg font-semibold text-(--text-primary) mb-3">
+                  {locale === 'ko' ? '색상 미리보기' : 'Color Preview'}
+                </h2>
+                <ColorSwatch colorCode={colorCode} colorName={translation.word} />
+              </section>
+            ) : null;
+          })()}
 
         <section className="mb-6">
           <h2 className="text-lg font-semibold text-(--text-primary) mb-2">{t('translation')}</h2>
