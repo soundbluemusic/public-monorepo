@@ -54,8 +54,9 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   // /entry/* 요청: R2에서 SSG HTML 먼저 찾고, 없으면 SPA fallback
   if (path.startsWith('/entry/') || path.startsWith('/ko/entry/')) {
     // R2에서 SSG HTML 조회 (BUILD_TARGET=r2 빌드 결과물)
-    // 경로 예: /entry/hello → public-monorepo/context/entry/hello.html
-    const htmlPath = `public-monorepo/context${path}.html`;
+    // 빌드 결과: build/client/entry/hello/index.html
+    // R2 경로: public-monorepo/context/entry/hello/index.html
+    const htmlPath = `public-monorepo/context${path}/index.html`;
     const ssgHtml = await context.env.BUCKET.get(htmlPath);
 
     if (ssgHtml) {

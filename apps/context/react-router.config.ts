@@ -52,9 +52,12 @@ export default {
         `[SSG:pages] Prerender routes: ${allRoutes.length} (excluding ${entryRoutes.length} entries)`,
       );
     } else if (buildTarget === 'r2') {
-      // R2: 엔트리 페이지만
-      allRoutes = [...entryRoutes];
-      console.log(`[SSG:r2] Prerender routes: ${allRoutes.length} (entries only)`);
+      // R2: 엔트리 + 정적 페이지 (loader 있는 라우트도 prerender해야 검증 통과)
+      // 업로드 스크립트에서 entry 폴더만 선택하므로 정적 페이지는 R2에 업로드되지 않음
+      allRoutes = [...staticRoutes, ...entryRoutes, ...categoryRoutes, ...conversationRoutes];
+      console.log(
+        `[SSG:r2] Prerender routes: ${allRoutes.length} (entries: ${entryRoutes.length})`,
+      );
     } else {
       // all: 전체 (로컬 테스트용)
       allRoutes = [...staticRoutes, ...entryRoutes, ...categoryRoutes, ...conversationRoutes];
