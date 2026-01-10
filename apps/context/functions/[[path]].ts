@@ -51,9 +51,24 @@ export const onRequest: PagesFunction<Env> = async (context) => {
     return context.next();
   }
 
-  // /entry/* 요청은 SPA fallback으로 처리 (clientLoader가 데이터 로드)
+  // /entry/* 요청: R2에서 SSG HTML 먼저 찾고, 없으면 SPA fallback
   if (path.startsWith('/entry/') || path.startsWith('/ko/entry/')) {
-    // SPA fallback HTML 반환 - React Router가 클라이언트에서 라우팅 처리
+    // R2에서 SSG HTML 조회 (BUILD_TARGET=r2 빌드 결과물)
+    // 경로 예: /entry/hello → public-monorepo/context/entry/hello.html
+    const htmlPath = `public-monorepo/context${path}.html`;
+    const ssgHtml = await context.env.BUCKET.get(htmlPath);
+
+    if (ssgHtml) {
+      // SSG HTML 발견 → 완성차 서빙
+      const headers = new Headers();
+      headers.set('Content-Type', 'text/html; charset=utf-8');
+      headers.set('Cache-Control', 'public, max-age=86400, stale-while-revalidate=604800');
+      headers.set('X-SSG-Source', 'r2'); // 디버깅용
+
+      return new Response(ssgHtml.body, { headers });
+    }
+
+    // R2에 SSG HTML 없음 → SPA fallback (Pages 빌드만 있는 경우)
     const fallbackRequest = new Request(new URL('/__spa-fallback.html', url.origin));
     return context.env.ASSETS.fetch(fallbackRequest);
   }
