@@ -27,8 +27,9 @@ import { useUserDataStore } from '@/stores/user-data-store';
 /**
  * clientLoader: 클라이언트에서 데이터 로드
  *
- * Pages 빌드에서는 entry 라우트가 prerender 대상이 아니므로
- * clientLoader만 사용하여 런타임에 데이터 로드
+ * BUILD_TARGET=pages 빌드에서 entry 라우트는 prerender 대상이 아니므로
+ * loader 사용 시 React Router 검증 에러 발생.
+ * R2 SSG는 별도 파이프라인으로 구현 필요.
  */
 export async function clientLoader({ params }: { params: { entryId: string } }) {
   const { getEntryByIdForLocale } = await import('@/data/entries');
