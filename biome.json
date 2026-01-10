@@ -69,6 +69,7 @@
       "!**/apps/**/*/public/**/*.xml",
       "!**/apps/**/*/public/**/*.xsl",
       "!**/apps/**/*/app/paraglide",
+      "!**/apps/*/app/paraglide.d.ts",
       "!**/apps/**/*/.inlang-plugins",
       "!**/apps/roots/app/routes/+types",
       "!**/packages/shared/src/styles/tailwind.css",

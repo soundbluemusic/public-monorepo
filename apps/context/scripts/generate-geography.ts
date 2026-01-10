@@ -1714,7 +1714,6 @@ function generateExamples(
           advanced: `${ko}${EN} 지정학적으로 중요한 지역입니다.`,
           master: `${ko}의 역사와 문화는 세계사에 큰 영향을 미쳤습니다.`,
         };
-      case 'term':
       default:
         return {
           beginner: `${ko}${EN} 지리 용어입니다.`,
@@ -1867,7 +1866,6 @@ function generateExamples(
           advanced: `${en} is a geopolitically important region.`,
           master: `The history and culture of ${en} have greatly influenced world history.`,
         };
-      case 'term':
       default:
         return {
           beginner: `${en} is a geography term.`,

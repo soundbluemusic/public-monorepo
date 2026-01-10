@@ -191,7 +191,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 인사 (greetings)
   // ============================================
-  greetings: (korean, english, explanation, partOfSpeech) => ({
+  greetings: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `"${korean}" 라고 인사해요.`,
@@ -222,7 +222,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 음식 (food)
   // ============================================
-  food: (korean, english, explanation, partOfSpeech) => ({
+  food: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `${korean}을/를 먹어요.`,
@@ -253,7 +253,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 일상생활 (daily-life)
   // ============================================
-  'daily-life': (korean, english, explanation, partOfSpeech) => ({
+  'daily-life': (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `매일 ${korean}을/를 해요.`,
@@ -288,7 +288,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 감정 (emotions)
   // ============================================
-  emotions: (korean, english, explanation, partOfSpeech) => ({
+  emotions: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `저는 ${korean}해요.`,
@@ -319,7 +319,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 가족 (family)
   // ============================================
-  family: (korean, english, explanation, partOfSpeech) => ({
+  family: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `제 ${korean}이에요/예요.`,
@@ -350,7 +350,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 직장 (work)
   // ============================================
-  work: (korean, english, explanation, partOfSpeech) => ({
+  work: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `회사에서 ${korean}을/를 해요.`,
@@ -385,7 +385,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 교통 (transportation)
   // ============================================
-  transportation: (korean, english, explanation, partOfSpeech) => ({
+  transportation: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `${korean}을/를 타요.`,
@@ -416,7 +416,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 쇼핑 (shopping)
   // ============================================
-  shopping: (korean, english, explanation, partOfSpeech) => ({
+  shopping: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `${korean}을/를 사요.`,
@@ -451,7 +451,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 여행 (travel)
   // ============================================
-  travel: (korean, english, explanation, partOfSpeech) => ({
+  travel: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `${korean}에 가요.`,
@@ -486,7 +486,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 시간/날짜 (time-date)
   // ============================================
-  'time-date': (korean, english, explanation, partOfSpeech) => ({
+  'time-date': (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `지금 ${korean}이에요.`,
@@ -517,7 +517,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 나라 (countries)
   // ============================================
-  countries: (korean, english, explanation, partOfSpeech) => ({
+  countries: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `${korean}에서 왔어요.`,
@@ -548,7 +548,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 기본 동사 (verbs-basic)
   // ============================================
-  'verbs-basic': (korean, english, explanation, partOfSpeech) => ({
+  'verbs-basic': (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `저는 ${korean}요.`,
@@ -579,7 +579,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 기본 형용사 (adjectives-basic)
   // ============================================
-  'adjectives-basic': (korean, english, explanation, partOfSpeech) => ({
+  'adjectives-basic': (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `이것은 ${korean}요.`,
@@ -610,7 +610,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 조사 (particles)
   // ============================================
-  particles: (korean, english, explanation, partOfSpeech) => ({
+  particles: (korean, _english, explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `"${korean}"을/를 사용해요.`,
@@ -641,7 +641,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 숫자 (numbers)
   // ============================================
-  numbers: (korean, english, explanation, partOfSpeech) => ({
+  numbers: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `${korean}이에요.`,
@@ -672,7 +672,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 스포츠 (sports)
   // ============================================
-  sports: (korean, english, explanation, partOfSpeech) => ({
+  sports: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `${korean}을/를 해요.`,
@@ -707,7 +707,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 우주 (space)
   // ============================================
-  space: (korean, english, explanation, partOfSpeech) => ({
+  space: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `${korean}이/가 보여요.`,
@@ -750,7 +750,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 물리학 (physics)
   // ============================================
-  physics: (korean, english, explanation, partOfSpeech) => ({
+  physics: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `${korean}을/를 배워요.`,
@@ -789,7 +789,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 음악 (music)
   // ============================================
-  music: (korean, english, explanation, partOfSpeech) => ({
+  music: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `${korean}을/를 들어요.`,
@@ -820,7 +820,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 수학 (math)
   // ============================================
-  math: (korean, english, explanation, partOfSpeech) => ({
+  math: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `${korean}을/를 배워요.`,
@@ -859,7 +859,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 문화 (culture)
   // ============================================
-  culture: (korean, english, explanation, partOfSpeech) => ({
+  culture: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `${korean}을/를 좋아해요.`,
@@ -898,7 +898,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 예술 (art)
   // ============================================
-  art: (korean, english, explanation, partOfSpeech) => ({
+  art: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `${korean}을/를 봐요.`,
@@ -933,7 +933,7 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 코딩 (coding)
   // ============================================
-  coding: (korean, english, explanation, partOfSpeech) => ({
+  coding: (korean, english, _explanation, _partOfSpeech) => ({
     sentences: {
       ko: {
         beginner: `${korean}을/를 사용해요.`,
@@ -971,7 +971,7 @@ function defaultTemplate(
   korean: string,
   english: string,
   explanation: string,
-  partOfSpeech: string,
+  _partOfSpeech: string,
 ): ExampleTemplates {
   return {
     sentences: {

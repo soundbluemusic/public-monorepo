@@ -34,7 +34,7 @@ export function splitIntoGroups<T>(array: T[], numGroups: number): T[][] {
   const groups: T[][] = Array.from({ length: numGroups }, () => []);
 
   array.forEach((item, index) => {
-    groups[index % numGroups]!.push(item);
+    groups[index % numGroups]?.push(item);
   });
 
   return groups.filter((g) => g.length > 0);

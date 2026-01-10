@@ -71,7 +71,7 @@ function isDarkColor(hex: string): boolean {
 export function ColorSwatch({ colorCode, colorName, className }: ColorSwatchProps) {
   const { locale } = useI18n();
   const [copied, setCopied] = useState(false);
-  const isDark = isDarkColor(colorCode);
+  const _isDark = isDarkColor(colorCode);
 
   const handleCopy = async () => {
     try {

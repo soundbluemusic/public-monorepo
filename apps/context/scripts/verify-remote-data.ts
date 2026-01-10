@@ -1,8 +1,7 @@
 
-import { lightEntries } from '../app/data/generated/entries';
 import { entryIndex } from '../app/data/generated/entry-index';
-import { existsSync, readdirSync, readFileSync } from 'fs';
-import { join } from 'path';
+import { existsSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
 
 /** Entry chunk 파일에 저장된 엔트리의 최소 타입 */
 interface ChunkEntry {

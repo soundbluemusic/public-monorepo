@@ -334,7 +334,7 @@ async function main() {
 
   // 최종 통계
   const totalReduction = ((1 - totalCompressedSize / totalOriginalSize) * 100).toFixed(1);
-  console.log('\n' + '='.repeat(60));
+  console.log(`\n${'='.repeat(60)}`);
   console.log('📊 압축 결과');
   console.log('='.repeat(60));
   console.log(`   엔트리 수: ${totalEntries.toLocaleString()}개`);

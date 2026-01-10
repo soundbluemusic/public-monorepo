@@ -262,7 +262,7 @@ const METAL_COLORS = new Set([
 
 function generateBasicColorExamples(korean: string, english: string): LocalizedExamples {
   const isColor = korean.endsWith('색');
-  const baseColor = isColor ? korean.slice(0, -1) : korean;
+  const _baseColor = isColor ? korean.slice(0, -1) : korean;
 
   return {
     ko: {
@@ -382,7 +382,7 @@ function generateCSSColorExamples(korean: string, english: string): LocalizedExa
   };
 }
 
-function generateGenericColorExamples(korean: string, english: string): LocalizedExamples {
+function _generateGenericColorExamples(korean: string, english: string): LocalizedExamples {
   return {
     ko: {
       beginner: `${korean}${iGa(korean)} 좋아요.`,
@@ -504,7 +504,7 @@ async function main() {
 
   for (const entry of entries) {
     const korean = entry.korean;
-    const englishKo = entry.translations.ko.word;
+    const _englishKo = entry.translations.ko.word;
     const englishEn = entry.translations.en.word;
     const romanization = entry.romanization;
 

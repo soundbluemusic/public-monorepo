@@ -581,7 +581,9 @@ async function main() {
 
   if (unmatchedColors.length > 0) {
     console.log('\n⚠️  Unmatched colors:');
-    unmatchedColors.forEach((c) => console.log(`   - ${c}`));
+    for (const c of unmatchedColors) {
+      console.log(`   - ${c}`);
+    }
   }
 
   console.log('\n✨ Done! colors.json updated.');

@@ -11,7 +11,6 @@ import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLocation } from 're
 import { I18nProvider } from './i18n';
 import './styles/global.css';
 
-import { getLocale } from '~/paraglide/runtime.js';
 
 /**
  * Layout - Pure HTML structure only, no hooks

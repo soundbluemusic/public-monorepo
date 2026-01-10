@@ -1,8 +1,8 @@
 
 import { lightEntries } from '../app/data/generated/entries';
 import { entryToCategory, entryIndex } from '../app/data/generated/entry-index';
-import { readFileSync, existsSync } from 'fs';
-import { join } from 'path';
+import { readFileSync, existsSync } from 'node:fs';
+import { join } from 'node:path';
 
 /** Entry chunk 파일에 저장된 엔트리의 최소 타입 */
 interface ChunkEntry {
@@ -43,7 +43,7 @@ for (const entry of lightEntries) {
                 try {
                     const json = JSON.parse(readFileSync(filepath, 'utf-8'));
                     catJsonCache.set(filename, json);
-                } catch (e) { console.error(`Failed to parse ${filename}`); }
+                } catch (_e) { console.error(`Failed to parse ${filename}`); }
             }
         }
 
@@ -87,7 +87,7 @@ for (const entry of lightEntries) {
             try {
                 const json = JSON.parse(readFileSync(filepath, 'utf-8'));
                 choseongJsonCache.set(filename, json);
-            } catch (e) { console.error(`Failed to parse ${filename}`); }
+            } catch (_e) { console.error(`Failed to parse ${filename}`); }
         }
     }
 

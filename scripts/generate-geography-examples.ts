@@ -189,7 +189,7 @@ type SubcategoryTemplates = Record<
 
 const subcategoryTemplates: SubcategoryTemplates = {
   // 대양 (5대양)
-  ocean: (korean, english, explanation) => ({
+  ocean: (korean, english, _explanation) => ({
     sentences: {
       ko: {
         beginner: `${korean}은 정말 넓어요.`,
@@ -230,7 +230,7 @@ const subcategoryTemplates: SubcategoryTemplates = {
   }),
 
   // 대륙 (6대륙)
-  continent: (korean, english, explanation) => ({
+  continent: (korean, english, _explanation) => ({
     sentences: {
       ko: {
         beginner: `${korean}에 가보고 싶어요.`,
@@ -275,7 +275,7 @@ const subcategoryTemplates: SubcategoryTemplates = {
   }),
 
   // 바다 (지역 바다)
-  sea: (korean, english, explanation) => ({
+  sea: (korean, english, _explanation) => ({
     sentences: {
       ko: {
         beginner: `${korean}는 아름다워요.`,
@@ -312,7 +312,7 @@ const subcategoryTemplates: SubcategoryTemplates = {
   }),
 
   // 해협
-  strait: (korean, english, explanation) => ({
+  strait: (korean, english, _explanation) => ({
     sentences: {
       ko: {
         beginner: `${korean}은 좁아요.`,
@@ -349,7 +349,7 @@ const subcategoryTemplates: SubcategoryTemplates = {
   }),
 
   // 만/걸프
-  gulf: (korean, english, explanation) => ({
+  gulf: (korean, english, _explanation) => ({
     sentences: {
       ko: {
         beginner: `${korean}에 배가 많아요.`,
@@ -394,7 +394,7 @@ const subcategoryTemplates: SubcategoryTemplates = {
   }),
 
   // 반도
-  peninsula: (korean, english, explanation) => ({
+  peninsula: (korean, english, _explanation) => ({
     sentences: {
       ko: {
         beginner: `${korean}은 바다로 둘러싸여 있어요.`,
@@ -431,7 +431,7 @@ const subcategoryTemplates: SubcategoryTemplates = {
   }),
 
   // 섬/군도
-  island: (korean, english, explanation) => ({
+  island: (korean, english, _explanation) => ({
     sentences: {
       ko: {
         beginner: `${korean}에 가고 싶어요.`,
@@ -472,7 +472,7 @@ const subcategoryTemplates: SubcategoryTemplates = {
   }),
 
   // 군도
-  archipelago: (korean, english, explanation) => ({
+  archipelago: (korean, english, _explanation) => ({
     sentences: {
       ko: {
         beginner: `${korean}에는 섬이 많아요.`,
@@ -513,7 +513,7 @@ const subcategoryTemplates: SubcategoryTemplates = {
   }),
 
   // 산맥
-  'mountain-range': (korean, english, explanation) => ({
+  'mountain-range': (korean, english, _explanation) => ({
     sentences: {
       ko: {
         beginner: `${korean}은 높아요.`,
@@ -553,7 +553,7 @@ const subcategoryTemplates: SubcategoryTemplates = {
     ],
   }),
 
-  mountainRange: (korean, english, explanation) => ({
+  mountainRange: (korean, english, _explanation) => ({
     sentences: {
       ko: {
         beginner: `${korean}은 높아요.`,
@@ -594,7 +594,7 @@ const subcategoryTemplates: SubcategoryTemplates = {
   }),
 
   // 산
-  mountain: (korean, english, explanation) => ({
+  mountain: (korean, english, _explanation) => ({
     sentences: {
       ko: {
         beginner: `${korean}은 아름다워요.`,
@@ -631,7 +631,7 @@ const subcategoryTemplates: SubcategoryTemplates = {
   }),
 
   // 사막
-  desert: (korean, english, explanation) => ({
+  desert: (korean, english, _explanation) => ({
     sentences: {
       ko: {
         beginner: `${korean}은 뜨거워요.`,
@@ -671,7 +671,7 @@ const subcategoryTemplates: SubcategoryTemplates = {
   }),
 
   // 강
-  river: (korean, english, explanation) => ({
+  river: (korean, english, _explanation) => ({
     sentences: {
       ko: {
         beginner: `${korean}은 길어요.`,
@@ -716,7 +716,7 @@ const subcategoryTemplates: SubcategoryTemplates = {
   }),
 
   // 호수
-  lake: (korean, english, explanation) => ({
+  lake: (korean, english, _explanation) => ({
     sentences: {
       ko: {
         beginner: `${korean}은 맑아요.`,
@@ -753,7 +753,7 @@ const subcategoryTemplates: SubcategoryTemplates = {
   }),
 
   // 폭포
-  waterfall: (korean, english, explanation) => ({
+  waterfall: (korean, english, _explanation) => ({
     sentences: {
       ko: {
         beginner: `${korean}은 멋져요.`,
@@ -794,7 +794,7 @@ const subcategoryTemplates: SubcategoryTemplates = {
   }),
 
   // 평원/고원
-  plain: (korean, english, explanation) => ({
+  plain: (korean, english, _explanation) => ({
     sentences: {
       ko: {
         beginner: `${korean}은 넓어요.`,
@@ -839,7 +839,7 @@ const subcategoryTemplates: SubcategoryTemplates = {
   }),
 
   // 고원
-  plateau: (korean, english, explanation) => ({
+  plateau: (korean, english, _explanation) => ({
     sentences: {
       ko: {
         beginner: `${korean}은 높아요.`,
@@ -876,7 +876,7 @@ const subcategoryTemplates: SubcategoryTemplates = {
   }),
 
   // 협곡/계곡
-  canyon: (korean, english, explanation) => ({
+  canyon: (korean, english, _explanation) => ({
     sentences: {
       ko: {
         beginner: `${korean}은 깊어요.`,
@@ -917,7 +917,7 @@ const subcategoryTemplates: SubcategoryTemplates = {
   }),
 
   // 곶/해안
-  coastal: (korean, english, explanation) => ({
+  coastal: (korean, english, _explanation) => ({
     sentences: {
       ko: {
         beginner: `${korean}에 배가 있어요.`,
@@ -957,7 +957,7 @@ const subcategoryTemplates: SubcategoryTemplates = {
     ],
   }),
 
-  cape: (korean, english, explanation) => ({
+  cape: (korean, english, _explanation) => ({
     sentences: {
       ko: {
         beginner: `${korean}에 등대가 있어요.`,
@@ -1039,7 +1039,7 @@ const subcategoryTemplates: SubcategoryTemplates = {
   }),
 
   // 지역 구분
-  region: (korean, english, explanation) => ({
+  region: (korean, english, _explanation) => ({
     sentences: {
       ko: {
         beginner: `${korean}은 어디예요?`,

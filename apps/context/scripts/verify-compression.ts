@@ -293,7 +293,7 @@ async function main() {
     }
   }
 
-  console.log('\n' + '='.repeat(60));
+  console.log(`\n${'='.repeat(60)}`);
   console.log('📊 검증 결과');
   console.log('='.repeat(60));
   console.log(`   총 엔트리: ${totalEntries.toLocaleString()}개`);

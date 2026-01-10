@@ -14,7 +14,7 @@ const viewports = [
 
 // ==================== Context App Tests ====================
 test.describe('Context App Responsive', () => {
-  test.skip((_, testInfo) => testInfo.project.name !== 'context', 'Context-only tests.');
+  test.skip((_fixtures, testInfo) => testInfo.project.name !== 'context', 'Context-only tests.');
 
   for (const viewport of viewports) {
     test(`Homepage - ${viewport.name} (${viewport.width}x${viewport.height})`, async ({ page }) => {
@@ -108,7 +108,10 @@ test.describe('Context App Responsive', () => {
 
 // ==================== Permissive App Tests ====================
 test.describe('Permissive App Responsive', () => {
-  test.skip((_, testInfo) => testInfo.project.name !== 'permissive', 'Permissive-only tests.');
+  test.skip(
+    (_fixtures, testInfo) => testInfo.project.name !== 'permissive',
+    'Permissive-only tests.',
+  );
 
   for (const viewport of viewports) {
     test(`Homepage - ${viewport.name} (${viewport.width}x${viewport.height})`, async ({ page }) => {
@@ -195,7 +198,7 @@ test.describe('Permissive App Responsive', () => {
 
 // ==================== Roots App Tests ====================
 test.describe('Roots App Responsive', () => {
-  test.skip((_, testInfo) => testInfo.project.name !== 'roots', 'Roots-only tests.');
+  test.skip((_fixtures, testInfo) => testInfo.project.name !== 'roots', 'Roots-only tests.');
 
   for (const viewport of viewports) {
     test(`Homepage - ${viewport.name} (${viewport.width}x${viewport.height})`, async ({ page }) => {

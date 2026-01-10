@@ -89,6 +89,7 @@ interface RouteConfigEntry {
  * routes.ts에서 정적 라우트를 자동 추출하여 prerender 경로 생성
  *
  * 동적 라우트(`:param` 포함)는 제외하고 정적 라우트만 추출합니다.
+ * 단, `(:locale)?` 패턴은 선택적 로케일로 인식하여 영어/한국어 경로 쌍으로 확장합니다.
  * 동적 라우트는 별도로 데이터 기반 generateI18nRoutes()로 생성해야 합니다.
  *
  * @param routes - routes.ts에서 export한 RouteConfig 배열
@@ -100,13 +101,14 @@ interface RouteConfigEntry {
  * export default [
  *   index('routes/_index.tsx'),
  *   route('browse', 'routes/browse.tsx'),
+ *   route('(:locale)?/about', 'routes/($locale).about.tsx'), // 정적 → 확장
  *   route('entry/:entryId', 'routes/entry.$entryId.tsx'), // 동적 → 제외
  * ];
  *
  * // react-router.config.ts
  * import routes from './app/routes';
  * const staticRoutes = extractStaticRoutes(routes);
- * // → ['/', '/ko', '/browse', '/ko/browse']
+ * // → ['/', '/ko', '/browse', '/ko/browse', '/about', '/ko/about']
  * ```
  */
 export function extractStaticRoutes(routes: RouteConfigEntry[], parentPath = ''): string[] {
@@ -124,6 +126,24 @@ export function extractStaticRoutes(routes: RouteConfigEntry[], parentPath = '')
       currentPath = parentPath ? `${parentPath}/${route.path}` : `/${route.path}`;
     } else {
       currentPath = parentPath;
+    }
+
+    // (:locale)? 선택적 로케일 패턴 처리
+    // 예: /(:locale)?/about → /about, /ko/about
+    const optionalLocalePattern = /\/?\(:locale\)\?/g;
+    if (optionalLocalePattern.test(currentPath)) {
+      // 로케일 패턴 제거 후 남은 경로 확인
+      const pathWithoutLocale = currentPath.replace(optionalLocalePattern, '');
+      const cleanPath = pathWithoutLocale || '/';
+
+      // 남은 경로에 다른 동적 세그먼트가 있으면 제외
+      if (cleanPath.includes(':')) continue;
+
+      // 영어 경로 + 한국어 경로 추가
+      result.push(cleanPath);
+      const koPath = cleanPath === '/' ? '/ko' : `/ko${cleanPath}`;
+      result.push(koPath);
+      continue;
     }
 
     // 동적 라우트 (`:param` 포함) 제외

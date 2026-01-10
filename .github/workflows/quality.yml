@@ -94,9 +94,13 @@ jobs:
         run: pnpm install
 
       - name: Install Chrome for Lighthouse
-        run: |
-          npx @puppeteer/browsers install chrome@stable
-          echo "CHROME_PATH=$(find $HOME -name 'chrome' -type f -executable 2>/dev/null | head -1)" >> $GITHUB_ENV
+        uses: browser-actions/setup-chrome@latest
+        with:
+          chrome-version: stable
+        id: setup-chrome
+
+      - name: Set Chrome path
+        run: echo "CHROME_PATH=${{ steps.setup-chrome.outputs.chrome-path }}" >> $GITHUB_ENV
 
       - name: Build all apps
         run: pnpm build

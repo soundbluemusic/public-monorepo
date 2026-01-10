@@ -989,7 +989,7 @@ async function main() {
           if (!newCategories[newCat]) newCategories[newCat] = [];
           const updated = { ...entry, categoryId: newCat };
           newCategories[newCat].push(updated);
-          stats['body'][newCat] = (stats['body'][newCat] || 0) + 1;
+          stats.body[newCat] = (stats.body[newCat] || 0) + 1;
         } else {
           remaining.push(entry);
         }
@@ -997,7 +997,7 @@ async function main() {
       // 남은 것은 body-misc로
       if (remaining.length > 0) {
         newCategories['body-misc'] = remaining.map((e) => ({ ...e, categoryId: 'body-misc' }));
-        stats['body']['body-misc'] = remaining.length;
+        stats.body['body-misc'] = remaining.length;
       }
     }
 
@@ -1070,7 +1070,7 @@ async function main() {
   console.log(`  ✓ ${updatedCategories.length}개 카테고리 저장`);
 
   // 결과 출력
-  console.log('\n' + '='.repeat(60));
+  console.log(`\n${'='.repeat(60)}`);
   console.log('📊 세분화 결과');
   console.log('='.repeat(60));
 
