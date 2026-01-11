@@ -75,10 +75,11 @@ test.describe('XSS Prevention', () => {
 
     // Check that data attributes don't contain executable code
     const dataAttributes = await page.evaluate(() => {
-      const elements = document.querySelectorAll('[data-*]');
+      // Get all elements and filter for those with data-* attributes
+      const allElements = document.querySelectorAll('*');
       const attrs: string[] = [];
 
-      for (const el of elements) {
+      for (const el of allElements) {
         for (let i = 0; i < el.attributes.length; i++) {
           const attr = el.attributes[i];
           if (attr.name.startsWith('data-')) {

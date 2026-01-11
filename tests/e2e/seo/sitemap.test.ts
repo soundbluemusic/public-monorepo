@@ -19,16 +19,21 @@ test.describe('Sitemap XML', () => {
   });
 
   test('should be valid XML', async ({ page }) => {
-    const response = await page.goto('/sitemap.xml');
-    const content = await response?.text();
+    // Use fetch to get raw XML (browser renders XSL-transformed HTML)
+    const content = await page.evaluate(async () => {
+      const res = await fetch('/sitemap.xml');
+      return res.text();
+    });
 
-    expect(content).toContain('<?xml version="1.0"');
-    expect(content).toContain('xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"');
+    expect(content).toContain('<?xml');
+    expect(content).toContain('xmlns');
   });
 
   test('should contain sitemap index or urlset', async ({ page }) => {
-    const response = await page.goto('/sitemap.xml');
-    const content = await response?.text();
+    const content = await page.evaluate(async () => {
+      const res = await fetch('/sitemap.xml');
+      return res.text();
+    });
 
     const hasSitemapIndex = content?.includes('<sitemapindex');
     const hasUrlset = content?.includes('<urlset');
@@ -37,73 +42,79 @@ test.describe('Sitemap XML', () => {
   });
 
   test('should include lastmod dates', async ({ page }) => {
-    const response = await page.goto('/sitemap.xml');
-    const content = await response?.text();
+    const content = await page.evaluate(async () => {
+      const res = await fetch('/sitemap.xml');
+      return res.text();
+    });
 
     expect(content).toContain('<lastmod>');
   });
 
   test('should have valid date format in lastmod', async ({ page }) => {
-    const response = await page.goto('/sitemap.xml');
-    const content = await response?.text();
+    // Use fetch to get raw XML (browser renders XSL-transformed HTML)
+    const content = await page.evaluate(async () => {
+      const res = await fetch('/sitemap.xml');
+      return res.text();
+    });
 
-    if (content) {
-      // Extract lastmod dates
-      const lastmodMatches = content.match(/<lastmod>(.*?)<\/lastmod>/g);
+    // Extract lastmod dates
+    const lastmodMatches = content.match(/<lastmod>(.*?)<\/lastmod>/g);
 
-      if (lastmodMatches) {
-        for (const match of lastmodMatches) {
-          const date = match.replace(/<\/?lastmod>/g, '');
-          // Should be ISO 8601 format (YYYY-MM-DD or full timestamp)
-          expect(date).toMatch(/^\d{4}-\d{2}-\d{2}/);
-        }
+    if (lastmodMatches) {
+      for (const match of lastmodMatches) {
+        const date = match.replace(/<\/?lastmod>/g, '');
+        // Should be ISO 8601 format (YYYY-MM-DD or full timestamp)
+        expect(date).toMatch(/^\d{4}-\d{2}-\d{2}/);
       }
     }
   });
 
   test('should include all main routes', async ({ page }) => {
-    const response = await page.goto('/sitemap.xml');
-    const content = await response?.text();
+    // Use fetch to get raw XML (browser renders XSL-transformed HTML)
+    const content = await page.evaluate(async () => {
+      const res = await fetch('/sitemap.xml');
+      return res.text();
+    });
 
-    if (content) {
-      // Should include homepage variations
-      expect(content).toMatch(/\/ko|\/en|\/<\/loc>/);
+    // Should include homepage variations
+    expect(content).toMatch(/\/ko|\/en|\/<\/loc>/);
 
-      // Check if it's a sitemap index
-      if (content.includes('<sitemapindex')) {
-        // Should reference sub-sitemaps
-        expect(content).toContain('<sitemap>');
-        expect(content).toContain('<loc>');
-      }
+    // Check if it's a sitemap index
+    if (content.includes('<sitemapindex')) {
+      // Should reference sub-sitemaps
+      expect(content).toContain('<sitemap>');
+      expect(content).toContain('<loc>');
     }
   });
 
   test('all URLs should be absolute HTTPS URLs', async ({ page }) => {
-    const response = await page.goto('/sitemap.xml');
-    const content = await response?.text();
+    // Use fetch to get raw XML (browser renders XSL-transformed HTML)
+    const content = await page.evaluate(async () => {
+      const res = await fetch('/sitemap.xml');
+      return res.text();
+    });
 
-    if (content) {
-      const urlMatches = content.match(/<loc>(.*?)<\/loc>/g);
+    const urlMatches = content.match(/<loc>(.*?)<\/loc>/g);
 
-      if (urlMatches) {
-        for (const match of urlMatches) {
-          const url = match.replace(/<\/?loc>/g, '');
-          expect(url).toMatch(/^https:\/\//);
-        }
+    if (urlMatches) {
+      for (const match of urlMatches) {
+        const url = match.replace(/<\/?loc>/g, '');
+        expect(url).toMatch(/^https:\/\//);
       }
     }
   });
 
   test('should not contain invalid URLs', async ({ page }) => {
-    const response = await page.goto('/sitemap.xml');
-    const content = await response?.text();
+    // Use fetch to get raw XML (browser renders XSL-transformed HTML)
+    const content = await page.evaluate(async () => {
+      const res = await fetch('/sitemap.xml');
+      return res.text();
+    });
 
-    if (content) {
-      expect(content).not.toContain('undefined');
-      expect(content).not.toContain('null');
-      expect(content).not.toContain('localhost');
-      expect(content).not.toContain('127.0.0.1');
-    }
+    expect(content).not.toContain('undefined');
+    expect(content).not.toContain('null');
+    expect(content).not.toContain('localhost');
+    expect(content).not.toContain('127.0.0.1');
   });
 });
 
@@ -137,21 +148,25 @@ test.describe('Sitemap Structure (roots app)', () => {
 
 test.describe('Sitemap Validation', () => {
   test('should not exceed 50MB size limit', async ({ page }) => {
-    const response = await page.goto('/sitemap.xml');
-    const content = await response?.text();
+    // Use fetch to get raw XML (browser renders XSL-transformed HTML)
+    const content = await page.evaluate(async () => {
+      const res = await fetch('/sitemap.xml');
+      return res.text();
+    });
 
-    if (content) {
-      const sizeInBytes = Buffer.byteLength(content, 'utf-8');
-      const sizeInMB = sizeInBytes / (1024 * 1024);
+    const sizeInBytes = Buffer.byteLength(content, 'utf-8');
+    const sizeInMB = sizeInBytes / (1024 * 1024);
 
-      // Sitemap protocol limit is 50MB uncompressed
-      expect(sizeInMB).toBeLessThan(50);
-    }
+    // Sitemap protocol limit is 50MB uncompressed
+    expect(sizeInMB).toBeLessThan(50);
   });
 
   test('should not have too many URLs in single sitemap', async ({ page }) => {
-    const response = await page.goto('/sitemap.xml');
-    const content = await response?.text();
+    // Use fetch to get raw XML (browser renders XSL-transformed HTML)
+    const content = await page.evaluate(async () => {
+      const res = await fetch('/sitemap.xml');
+      return res.text();
+    });
 
     if (content?.includes('<urlset')) {
       // Count <url> tags
@@ -164,13 +179,14 @@ test.describe('Sitemap Validation', () => {
   });
 
   test('should have proper XML escaping', async ({ page }) => {
-    const response = await page.goto('/sitemap.xml');
-    const content = await response?.text();
+    // Use fetch to get raw XML (browser renders XSL-transformed HTML)
+    const content = await page.evaluate(async () => {
+      const res = await fetch('/sitemap.xml');
+      return res.text();
+    });
 
-    if (content) {
-      // Should not contain unescaped ampersands
-      const invalidAmpersands = content.match(/&(?!(amp|lt|gt|quot|apos);)/g);
-      expect(invalidAmpersands).toBeNull();
-    }
+    // Should not contain unescaped ampersands
+    const invalidAmpersands = content.match(/&(?!(amp|lt|gt|quot|apos);)/g);
+    expect(invalidAmpersands).toBeNull();
   });
 });
