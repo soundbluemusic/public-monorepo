@@ -3,33 +3,32 @@ import { dynamicMetaFactory } from '@soundblue/i18n';
 import { cn } from '@soundblue/ui/utils';
 import { Bookmark, BookmarkCheck, Check } from 'lucide-react';
 import { Link, useLoaderData } from 'react-router';
-import { ColorSwatch, getColorCodeByName, isColorEntry } from '@/components/ColorSwatch';
-import { EntryDialogueDisplay } from '@/components/EntryDialogueDisplay';
-import { HomonymSection } from '@/components/HomonymSection';
-import { LinkedExample } from '@/components/LinkedExample';
+import {
+  ColorSwatch,
+  EntryDialogueDisplay,
+  getColorCodeByName,
+  HomonymSection,
+  isColorEntry,
+  LinkedExample,
+} from '@/components/entry';
 import { Layout } from '@/components/layout';
 import type { LocaleEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { useUserDataStore } from '@/stores/user-data-store';
 
 /**
- * Entry 페이지 (Full SSG 모드) - 한국어 버전
+ * Entry 페이지 (Pages 빌드용) - 한국어 버전
  *
- * ## SSG 빌드 시
- * - loader에서 entryId + 'ko' locale로 데이터 조회
- * - locale별 분리된 JSON에서 한국어 데이터만 로드 (50% 용량 절감)
+ * ## BUILD_TARGET=pages
+ * - clientLoader만 사용 (SPA fallback 방식)
+ * - entry 라우트는 prerender 대상이 아님
  *
- * ## 런타임
- * - useLoaderData로 프리렌더된 데이터 사용
- * - entry.translation에 한국어 번역만 포함
+ * ## R2 빌드는 ko.entry.$entryId.r2.tsx 사용
+ * - loader 포함 → 완전한 SSG
  */
 
 /**
  * clientLoader: 클라이언트에서 데이터 로드
- *
- * BUILD_TARGET=pages 빌드에서 entry 라우트는 prerender 대상이 아니므로
- * loader 사용 시 React Router 검증 에러 발생.
- * R2 SSG는 별도 파이프라인으로 구현 필요.
  */
 export async function clientLoader({ params }: { params: { entryId: string } }) {
   const { getEntryByIdForLocale } = await import('@/data/entries');

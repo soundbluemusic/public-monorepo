@@ -19,10 +19,33 @@ import { useStudyData } from '@/hooks';
 import { useI18n } from '@/i18n';
 
 /**
- * clientLoader: 클라이언트에서 데이터 로드
- * Pages 빌드에서는 loader 대신 clientLoader 사용
+ * 찾아보기 페이지 데이터 로더
+ *
+ * loader: SSG 빌드 시 실행 - 정적 데이터 포함
+ * clientLoader: 런타임에 실행 - serverLoader 데이터 활용
  */
-export async function clientLoader() {
+
+interface LoaderData {
+  entries: LightEntry[];
+  sortedArrays: {
+    alphabetical: LightEntry[];
+    category: LightEntry[];
+    recent: LightEntry[];
+  };
+  sortIndices: {
+    alphabetical: Record<string, number>;
+    category: Record<string, number>;
+    recent: Record<string, number>;
+  };
+  categories: typeof categories;
+  totalEntries: number;
+}
+
+/**
+ * loader: SSG 빌드 시 실행
+ * 정렬된 엔트리 배열과 인덱스를 HTML에 포함
+ */
+export async function loader(): Promise<LoaderData> {
   const {
     lightEntries,
     lightEntriesSortedAlphabetically,
@@ -32,6 +55,7 @@ export async function clientLoader() {
     categoryIndex,
     recentIndex,
   } = await import('@/data/entries');
+
   return {
     entries: lightEntries,
     sortedArrays: {
@@ -49,6 +73,47 @@ export async function clientLoader() {
   };
 }
 
+/**
+ * clientLoader: 클라이언트에서 실행
+ * serverLoader 데이터가 있으면 사용, 없으면 직접 로드
+ */
+export async function clientLoader({
+  serverLoader,
+}: {
+  serverLoader: () => Promise<LoaderData>;
+}): Promise<LoaderData> {
+  try {
+    return await serverLoader();
+  } catch {
+    // Pages 빌드에서 loader가 없는 경우 직접 로드
+    const {
+      lightEntries,
+      lightEntriesSortedAlphabetically,
+      lightEntriesSortedByCategory,
+      lightEntriesSortedRecent,
+      alphabeticalIndex,
+      categoryIndex,
+      recentIndex,
+    } = await import('@/data/entries');
+
+    return {
+      entries: lightEntries,
+      sortedArrays: {
+        alphabetical: lightEntriesSortedAlphabetically,
+        category: lightEntriesSortedByCategory,
+        recent: lightEntriesSortedRecent,
+      },
+      sortIndices: {
+        alphabetical: Object.fromEntries(alphabeticalIndex),
+        category: Object.fromEntries(categoryIndex),
+        recent: Object.fromEntries(recentIndex),
+      },
+      categories,
+      totalEntries: lightEntries.length,
+    };
+  }
+}
+
 export const meta = metaFactory(
   {
     ko: { title: '찾아보기 - Context', description: '모든 한국어 단어 찾아보기 및 필터링' },
@@ -56,22 +121,6 @@ export const meta = metaFactory(
   },
   'https://context.soundbluemusic.com',
 );
-
-interface LoaderData {
-  entries: LightEntry[];
-  sortedArrays: {
-    alphabetical: LightEntry[];
-    category: LightEntry[];
-    recent: LightEntry[];
-  };
-  sortIndices: {
-    alphabetical: Record<string, number>;
-    category: Record<string, number>;
-    recent: Record<string, number>;
-  };
-  categories: typeof categories;
-  totalEntries: number;
-}
 
 export default function BrowsePage() {
   const {

@@ -2,7 +2,7 @@ import { dynamicMetaFactory } from '@soundblue/i18n';
 import { cn } from '@soundblue/ui/utils';
 import { ArrowLeft, MessageCircle } from 'lucide-react';
 import { Link, useLoaderData } from 'react-router';
-import { LinkedExample } from '@/components/LinkedExample';
+import { LinkedExample } from '@/components/entry';
 import { Layout } from '@/components/layout';
 import { getCategoryById } from '@/data/categories';
 import { getConversationsByCategory } from '@/data/conversations';

@@ -3,7 +3,7 @@ import { ProgressBar } from '@soundblue/ui/primitives';
 import { FolderOpen, Sparkles, TrendingUp } from 'lucide-react';
 import { Link, useLoaderData } from 'react-router';
 import { Layout } from '@/components/layout';
-import { categories } from '@/data/categories';
+import { categories as allCategories } from '@/data/categories';
 import type { Category, MeaningEntry } from '@/data/types';
 import { useStudyData } from '@/hooks';
 import { type Language, useI18n } from '@/i18n';
@@ -18,13 +18,72 @@ const getPronunciation = (entry: MeaningEntry, locale: Language): string | undef
 };
 
 /**
- * clientLoader: 클라이언트에서 데이터 로드
- * Pages 빌드에서는 loader 대신 clientLoader 사용
+ * 홈페이지 데이터 로더
+ *
+ * loader: SSG 빌드 시 실행 - 정적 데이터만 포함
+ * clientLoader: 런타임에 실행 - 동적 데이터(오늘의 단어) 추가
  */
-export async function clientLoader() {
+
+interface StaticLoaderData {
+  categories: Category[];
+  categoryCounts: Record<string, number>;
+  totalEntries: number;
+}
+
+interface LoaderData extends StaticLoaderData {
+  dailyWord: MeaningEntry | null;
+}
+
+/**
+ * loader: SSG 빌드 시 실행
+ * 정적 데이터(카테고리, 엔트리 수)를 HTML에 포함
+ */
+export async function loader(): Promise<StaticLoaderData> {
+  const { lightEntries } = await import('@/data/entries');
+
+  // 카테고리별 엔트리 수 계산
+  const categoryCounts: Record<string, number> = {};
+  for (const cat of allCategories) {
+    categoryCounts[cat.id] = lightEntries.filter((e) => e.categoryId === cat.id).length;
+  }
+
+  return {
+    categories: allCategories,
+    categoryCounts,
+    totalEntries: lightEntries.length,
+  };
+}
+
+/**
+ * clientLoader: 클라이언트에서 실행
+ * 동적 데이터(오늘의 단어)를 추가
+ */
+export async function clientLoader({
+  serverLoader,
+}: {
+  serverLoader: () => Promise<StaticLoaderData>;
+}): Promise<LoaderData> {
+  // SSG 빌드 데이터 가져오기 (있으면)
+  let staticData: StaticLoaderData;
+  try {
+    staticData = await serverLoader();
+  } catch {
+    // Pages 빌드에서 loader가 없는 경우 직접 로드
+    const { lightEntries } = await import('@/data/entries');
+    const categoryCounts: Record<string, number> = {};
+    for (const cat of allCategories) {
+      categoryCounts[cat.id] = lightEntries.filter((e) => e.categoryId === cat.id).length;
+    }
+    staticData = {
+      categories: allCategories,
+      categoryCounts,
+      totalEntries: lightEntries.length,
+    };
+  }
+
   const { lightEntries, getEntryById } = await import('@/data/entries');
 
-  // 오늘의 단어 계산 (빌드 시점)
+  // 오늘의 단어 계산 (런타임)
   const today = new Date();
   const dayOfYear = Math.floor(
     (today.getTime() - new Date(today.getFullYear(), 0, 0).getTime()) / 86400000,
@@ -33,19 +92,11 @@ export async function clientLoader() {
   const dailyWordLight = lightEntries[randomIndex];
 
   // 전체 entry 데이터 로드 (카테고리 청크에서)
-  const dailyWord = dailyWordLight ? await getEntryById(dailyWordLight.id) : null;
-
-  // 카테고리별 엔트리 수 계산 (lightEntries 기반)
-  const categoryCounts: Record<string, number> = {};
-  for (const cat of categories) {
-    categoryCounts[cat.id] = lightEntries.filter((e) => e.categoryId === cat.id).length;
-  }
+  const dailyWord = dailyWordLight ? ((await getEntryById(dailyWordLight.id)) ?? null) : null;
 
   return {
+    ...staticData,
     dailyWord,
-    categories,
-    categoryCounts,
-    totalEntries: lightEntries.length,
   };
 }
 
@@ -61,17 +112,7 @@ export const meta = metaFactory(
 );
 
 export default function HomePage() {
-  const {
-    dailyWord,
-    categories: cats,
-    categoryCounts,
-    totalEntries,
-  } = useLoaderData<{
-    dailyWord: MeaningEntry;
-    categories: Category[];
-    categoryCounts: Record<string, number>;
-    totalEntries: number;
-  }>();
+  const { dailyWord, categories: cats, categoryCounts, totalEntries } = useLoaderData<LoaderData>();
   const { locale, t, localePath } = useI18n();
 
   // Study data from custom hook

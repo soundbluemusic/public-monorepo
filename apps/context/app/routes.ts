@@ -1,16 +1,14 @@
 import { index, type RouteConfig, route } from '@react-router/dev/routes';
 
 /**
- * BUILD_TARGET에 따라 entry 라우트 파일 선택
+ * Context 앱 라우트 설정
  *
- * - pages: clientLoader만 있는 파일 (SPA fallback 방식)
- * - r2/all: loader 포함 파일 (SSG 완전한 HTML 생성)
+ * 라우트 파일들은 BUILD_TARGET 환경변수에 따라 조건부로 loader를 export합니다.
+ * - pages: clientLoader만 사용 (SPA fallback)
+ * - r2/all: loader + clientLoader 모두 사용 (완전한 SSG)
+ *
+ * 이 방식으로 라우트 파일 중복을 제거하고 단일 파일로 관리합니다.
  */
-const buildTarget = process.env.BUILD_TARGET || 'pages';
-const isR2Build = buildTarget === 'r2' || buildTarget === 'all';
-
-const entryRoute = isR2Build ? 'routes/entry.$entryId.r2.tsx' : 'routes/entry.$entryId.tsx';
-const koEntryRoute = isR2Build ? 'routes/ko.entry.$entryId.r2.tsx' : 'routes/ko.entry.$entryId.tsx';
 
 export default [
   // English routes
@@ -25,7 +23,7 @@ export default [
   route('license', 'routes/license.tsx'),
   route('built-with', 'routes/built-with.tsx'),
   route('download', 'routes/download.tsx'),
-  route('entry/:entryId', entryRoute),
+  route('entry/:entryId', 'routes/entry.$entryId.tsx'),
   route('category/:categoryId', 'routes/category.$categoryId.tsx'),
   route('conversations', 'routes/conversations._index.tsx'),
   route('conversations/:categoryId', 'routes/conversations.$categoryId.tsx'),
@@ -42,7 +40,7 @@ export default [
   route('ko/license', 'routes/ko.license.tsx'),
   route('ko/built-with', 'routes/ko.built-with.tsx'),
   route('ko/download', 'routes/ko.download.tsx'),
-  route('ko/entry/:entryId', koEntryRoute),
+  route('ko/entry/:entryId', 'routes/ko.entry.$entryId.tsx'),
   route('ko/category/:categoryId', 'routes/ko.category.$categoryId.tsx'),
   route('ko/conversations', 'routes/ko.conversations._index.tsx'),
   route('ko/conversations/:categoryId', 'routes/ko.conversations.$categoryId.tsx'),

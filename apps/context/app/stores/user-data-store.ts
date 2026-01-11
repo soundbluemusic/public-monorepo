@@ -31,6 +31,7 @@ interface UserDataState {
 interface UserDataActions {
   setHydrated: () => void;
   pruneLegacyEntries: () => void;
+  pruneOldStudyRecords: () => void;
 
   // Favorites
   addFavorite: (entryId: string) => void;
@@ -54,6 +55,22 @@ interface UserDataActions {
     percentage: number;
   };
 }
+
+// ========================================
+// Constants
+// ========================================
+
+/**
+ * 학습 기록 보존 기간 (일)
+ * 90일 이전의 기록은 자동 정리됨
+ */
+const STUDY_RECORD_RETENTION_DAYS = 90;
+
+/**
+ * 엔트리당 최대 학습 기록 수
+ * 같은 엔트리의 기록이 이 수를 초과하면 오래된 것부터 삭제
+ */
+const MAX_RECORDS_PER_ENTRY = 10;
 
 // ========================================
 // Store
@@ -91,6 +108,46 @@ export const useUserDataStore = create<UserDataState & UserDataActions>()(
             console.error('[UserDataStore] Failed to prune legacy entries:', error);
           }
         })();
+      },
+
+      /**
+       * 오래된 학습 기록 정리
+       *
+       * 1. STUDY_RECORD_RETENTION_DAYS(90일) 이전 기록 삭제
+       * 2. 엔트리당 MAX_RECORDS_PER_ENTRY(10개) 초과 시 오래된 것 삭제
+       *
+       * 이 함수는 hydration 시 자동 호출됨
+       */
+      pruneOldStudyRecords: () => {
+        if (typeof window === 'undefined') return;
+
+        const records = get().studyRecords;
+        if (records.length === 0) return;
+
+        const now = Date.now();
+        const retentionMs = STUDY_RECORD_RETENTION_DAYS * 24 * 60 * 60 * 1000;
+        const cutoffTime = now - retentionMs;
+
+        // 1단계: 오래된 기록 필터링
+        const recentRecords = records.filter((r) => r.studiedAt >= cutoffTime);
+
+        // 2단계: 엔트리당 최대 기록 수 제한
+        // 최신 기록부터 유지하므로 배열은 이미 최신순 정렬되어 있음
+        const entryRecordCount = new Map<string, number>();
+        const prunedRecords: StudyRecord[] = [];
+
+        for (const record of recentRecords) {
+          const count = entryRecordCount.get(record.entryId) || 0;
+          if (count < MAX_RECORDS_PER_ENTRY) {
+            prunedRecords.push(record);
+            entryRecordCount.set(record.entryId, count + 1);
+          }
+        }
+
+        // 변경이 있을 때만 업데이트
+        if (prunedRecords.length !== records.length) {
+          set({ studyRecords: prunedRecords });
+        }
       },
 
       // ========================================
@@ -201,6 +258,7 @@ export const useUserDataStore = create<UserDataState & UserDataActions>()(
         }
         state?.setHydrated();
         state?.pruneLegacyEntries();
+        state?.pruneOldStudyRecords();
       },
     },
   ),
