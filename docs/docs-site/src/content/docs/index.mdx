@@ -1,0 +1,87 @@
+---
+title: SoundBlue Public Monorepo
+description: Complete documentation for Context, Permissive, and Roots applications - Three apps for learners (학습자를 위한 세 개의 앱)
+template: splash
+hero:
+  tagline: Three 100% SSG apps for learners, built with React Router v7, TypeScript, and Cloudflare Pages
+  image:
+    file: ../../assets/hero.svg
+  actions:
+    - text: Get Started
+      link: /public-monorepo/guides/introduction/
+      icon: right-arrow
+      variant: primary
+    - text: View on GitHub
+      link: https://github.com/soundbluemusic/public-monorepo
+      icon: external
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+## 🚀 Our Applications
+
+<CardGrid stagger>
+  <Card title="📖 Context" icon="open-book">
+    **Korean Dictionary for Learners** (학습자를 위한 한국어 사전)
+
+    33,748 SSG pages with context-based definitions, examples, and related expressions.
+
+    [Visit Context →](https://context.soundbluemusic.com)
+  </Card>
+
+  <Card title="🔧 Permissive" icon="setting">
+    **Web Development Resources** (무료 웹개발 자료 모음)
+
+    Curated collection of permissively-licensed web development libraries and Web APIs.
+
+    [Visit Permissive →](https://permissive.soundbluemusic.com)
+  </Card>
+
+  <Card title="📐 Roots" icon="document">
+    **Math Documentation** (학습자를 위한 수학 문서)
+
+    920 SSG pages covering algebra, geometry, calculus, and more mathematical concepts.
+
+    [Visit Roots →](https://roots.soundbluemusic.com)
+  </Card>
+</CardGrid>
+
+## ⚡ Tech Stack
+
+<CardGrid>
+  <Card title="100% SSG" icon="rocket">
+    All apps use Static Site Generation with React Router v7's `prerender()` pattern. No server required - served directly from CDN.
+  </Card>
+
+  <Card title="Turborepo" icon="seti:turborepo">
+    Monorepo management with 97%+ build time reduction through intelligent caching.
+  </Card>
+
+  <Card title="Cloudflare Pages" icon="cloudflare">
+    Global CDN deployment with automatic SSL, DDoS protection, and edge caching.
+  </Card>
+
+  <Card title="TypeScript" icon="seti:typescript">
+    Strict type safety across all applications and shared packages.
+  </Card>
+</CardGrid>
+
+## 📚 Quick Links
+
+<LinkCard
+  title="Quick Start Guide"
+  description="Get up and running with the monorepo in minutes"
+  href="/public-monorepo/guides/quickstart/"
+/>
+
+<LinkCard
+  title="Architecture Overview"
+  description="Understand the SSG architecture and package layer system"
+  href="/public-monorepo/guides/architecture/"
+/>
+
+<LinkCard
+  title="Contributing Guide"
+  description="Learn how to contribute to the project"
+  href="/public-monorepo/development/contributing/"
+/>
