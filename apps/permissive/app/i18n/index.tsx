@@ -28,13 +28,36 @@ const messages: Record<Language, Record<MessageKey, string>> = {
   ko: koMessages as Record<MessageKey, string>,
 };
 
+/**
+ * 번역 파라미터 정규식 캐시 (성능 최적화)
+ * 동일 키에 대해 정규식을 재사용하여 GC 부하 감소
+ */
+const paramRegexCache = new Map<string, RegExp>();
+function getParamRegex(key: string): RegExp {
+  let regex = paramRegexCache.get(key);
+  if (!regex) {
+    regex = new RegExp(`\\{${key}\\}`, 'g');
+    paramRegexCache.set(key, regex);
+  }
+  return regex;
+}
+
 interface I18nContextType {
   locale: Language;
   setLocale: (lang: Language) => void;
-  /** 타입 안전한 번역 함수 */
-  t: (key: MessageKey) => string;
-  /** 동적 키를 위한 번역 함수 (런타임 검증) */
-  tDynamic: (key: string) => string;
+  /**
+   * 타입 안전한 번역 함수
+   * @param key - MessageKey 타입의 번역 키
+   * @param params - 번역 문자열 내 {key} 형식의 플레이스홀더를 대체할 값
+   * @example t('itemCount', { count: 5 }) // "{count} items" → "5 items"
+   */
+  t: (key: MessageKey, params?: Record<string, string | number>) => string;
+  /**
+   * 동적 키를 위한 번역 함수 (런타임 검증)
+   * @param key - 문자열 키 (런타임에 검증됨)
+   * @param params - 번역 문자열 내 {key} 형식의 플레이스홀더를 대체할 값
+   */
+  tDynamic: (key: string, params?: Record<string, string | number>) => string;
   isKorean: boolean;
   localePath: (path: string) => string;
 }
@@ -56,20 +79,42 @@ export function I18nProvider({ children }: { children: ReactNode }) {
       window.location.href = newPath;
     };
 
-    /** 타입 안전한 번역 함수 (MessageKey만 허용) */
-    const t = (key: MessageKey): string => {
-      return messages[locale][key];
+    /**
+     * 타입 안전한 번역 함수 (MessageKey만 허용)
+     * @param key - MessageKey 타입의 번역 키
+     * @param params - {key} 형식의 플레이스홀더를 대체할 값
+     */
+    const t = (key: MessageKey, params?: Record<string, string | number>): string => {
+      let translation = messages[locale][key];
+      if (params) {
+        for (const [k, v] of Object.entries(params)) {
+          translation = translation.replace(getParamRegex(k), String(v));
+        }
+      }
+      return translation;
     };
 
-    /** 동적 키를 위한 번역 함수 (런타임 검증 + fallback) */
-    const tDynamic = (key: string): string => {
+    /**
+     * 동적 키를 위한 번역 함수 (런타임 검증 + fallback)
+     * @param key - 문자열 키 (런타임에 검증됨)
+     * @param params - {key} 형식의 플레이스홀더를 대체할 값
+     */
+    const tDynamic = (key: string, params?: Record<string, string | number>): string => {
+      let translation: string;
       if (isMessageKey(key)) {
-        return messages[locale][key];
+        translation = messages[locale][key];
+      } else if (key in messages.en) {
+        translation = messages.en[key as MessageKey];
+      } else {
+        return key;
       }
-      if (key in messages.en) {
-        return messages.en[key as MessageKey];
+
+      if (params) {
+        for (const [k, v] of Object.entries(params)) {
+          translation = translation.replace(getParamRegex(k), String(v));
+        }
       }
-      return key;
+      return translation;
     };
 
     const localePath = (path: string): string => {
