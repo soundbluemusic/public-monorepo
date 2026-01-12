@@ -138,26 +138,57 @@ async function generateMeta() {
 // ============================================================================
 function generateZip() {
   const zipPath = join(REPO_DATA_DIR, 'context-data.zip');
-
-  // 기존 ZIP 삭제
-  if (existsSync(zipPath)) {
-    execSync(`rm "${zipPath}"`);
-  }
+  const tempZipPath = join(REPO_DATA_DIR, 'context-data.zip.tmp');
 
   // ZIP 생성 (data/context/ 디렉토리 내용 전체)
-  // -j: 경로 없이 파일만, -r: 재귀적으로 폴더 포함
+  // -X: 추가 파일 속성(타임스탬프) 제외하여 재현 가능한 빌드 보장
   try {
     execSync(
-      `cd "${REPO_DATA_DIR}" && zip -r context-data.zip categories.json conversations.json meta.json entries/`,
+      `cd "${REPO_DATA_DIR}" && zip -rX "${tempZipPath}" categories.json conversations.json meta.json entries/`,
       {
         stdio: 'pipe',
       },
     );
 
-    const stats = statSync(zipPath);
-    const sizeMB = (stats.size / 1024 / 1024).toFixed(2);
-    console.log(`  ✓ context-data.zip (${sizeMB} MB)`);
+    // 기존 ZIP과 새 ZIP의 내용 비교 (unzip -l로 파일 목록/크기 비교)
+    let shouldReplace = true;
+    if (existsSync(zipPath)) {
+      try {
+        // macOS/Linux 호환: grep으로 파일 라인만 추출 (날짜 형식 매칭)
+        const oldList = execSync(
+          `unzip -l "${zipPath}" | grep -E '^\\s+[0-9]+\\s+[0-9]{2}-' | awk '{print $4, $1}'`,
+          { encoding: 'utf-8' },
+        ).trim();
+        const newList = execSync(
+          `unzip -l "${tempZipPath}" | grep -E '^\\s+[0-9]+\\s+[0-9]{2}-' | awk '{print $4, $1}'`,
+          { encoding: 'utf-8' },
+        ).trim();
+
+        if (oldList === newList) {
+          shouldReplace = false;
+          execSync(`rm "${tempZipPath}"`);
+          console.log(`  ✓ context-data.zip (unchanged)`);
+        }
+      } catch {
+        // 비교 실패 시 교체
+      }
+    }
+
+    if (shouldReplace) {
+      if (existsSync(zipPath)) {
+        execSync(`rm "${zipPath}"`);
+      }
+      execSync(`mv "${tempZipPath}" "${zipPath}"`);
+
+      const stats = statSync(zipPath);
+      const sizeMB = (stats.size / 1024 / 1024).toFixed(2);
+      console.log(`  ✓ context-data.zip (${sizeMB} MB)`);
+    }
   } catch {
+    // 임시 파일 정리
+    if (existsSync(tempZipPath)) {
+      execSync(`rm "${tempZipPath}"`);
+    }
     console.error('  ⚠ ZIP 생성 실패 (zip 명령어가 설치되어 있지 않을 수 있습니다)');
   }
 }
