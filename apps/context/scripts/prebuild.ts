@@ -7,10 +7,12 @@
  *   - load-entries.ts (가장 느림, entries.ts 생성)
  *
  * - Phase B (load-entries 의존, Phase A 완료 후 병렬 실행):
- *   - generate-search-index.ts (entries 데이터 필요)
- *   - generate-homonyms.ts
+ *   - generate-homonyms.ts (homonyms.ts 생성)
  *   - compress-entries.ts
  *   - export-data.ts
+ *
+ * - Phase C (homonyms 의존, Phase B 완료 후):
+ *   - generate-search-index.ts (entries/index.ts가 homonyms re-export하므로 의존)
  *
  * 예상 시간 단축: 50-60초 → 25-30초 (50% 감소)
  */
@@ -130,17 +132,30 @@ async function main(): Promise<void> {
   }
 
   // Phase B: load-entries 의존 스크립트들 (병렬)
-  const phaseBScripts = [
-    'generate-search-index.ts',
-    'generate-homonyms.ts',
-    'compress-entries.ts',
-    'export-data.ts',
-  ];
+  const phaseBScripts = ['generate-homonyms.ts', 'compress-entries.ts', 'export-data.ts'];
   const phaseBResults = await runPhase(
     'Phase B: Dependent scripts (parallel after Phase A)',
     phaseBScripts,
   );
   allResults.push(...phaseBResults);
+
+  // Phase B 실패 확인 (homonyms 필수)
+  const homonymsFailed = phaseBResults.find(
+    (r) => r.script === 'generate-homonyms.ts' && !r.success,
+  );
+  if (homonymsFailed) {
+    console.error('\n❌ generate-homonyms.ts failed - cannot continue with Phase C');
+    printSummary(allResults, Date.now() - startTime);
+    process.exit(1);
+  }
+
+  // Phase C: homonyms 의존 스크립트 (entries/index.ts가 homonyms re-export)
+  const phaseCScripts = ['generate-search-index.ts'];
+  const phaseCResults = await runPhase(
+    'Phase C: Search index (depends on homonyms)',
+    phaseCScripts,
+  );
+  allResults.push(...phaseCResults);
 
   // 최종 요약
   const totalDuration = Date.now() - startTime;
