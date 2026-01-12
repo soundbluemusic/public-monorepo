@@ -4,10 +4,10 @@
  * 의존 관계 분석:
  * - Phase A (독립, 병렬 실행):
  *   - generate-paraglide-messages.ts
- *   - load-entries.ts (가장 느림)
- *   - generate-search-index.ts
+ *   - load-entries.ts (가장 느림, entries.ts 생성)
  *
  * - Phase B (load-entries 의존, Phase A 완료 후 병렬 실행):
+ *   - generate-search-index.ts (entries 데이터 필요)
  *   - generate-homonyms.ts
  *   - compress-entries.ts
  *   - export-data.ts
@@ -111,11 +111,8 @@ async function main(): Promise<void> {
   console.log(`   Mode: ${process.env.PREBUILD_MODE || 'parallel (default)'}`);
 
   // Phase A: 독립적인 스크립트들 (병렬)
-  const phaseAScripts = [
-    'generate-paraglide-messages.ts',
-    'load-entries.ts',
-    'generate-search-index.ts',
-  ];
+  // generate-search-index.ts는 entries 데이터에 의존하므로 Phase B로 이동
+  const phaseAScripts = ['generate-paraglide-messages.ts', 'load-entries.ts'];
   const phaseAResults = await runPhase('Phase A: Independent scripts (parallel)', phaseAScripts);
   allResults.push(...phaseAResults);
 
@@ -133,7 +130,12 @@ async function main(): Promise<void> {
   }
 
   // Phase B: load-entries 의존 스크립트들 (병렬)
-  const phaseBScripts = ['generate-homonyms.ts', 'compress-entries.ts', 'export-data.ts'];
+  const phaseBScripts = [
+    'generate-search-index.ts',
+    'generate-homonyms.ts',
+    'compress-entries.ts',
+    'export-data.ts',
+  ];
   const phaseBResults = await runPhase(
     'Phase B: Dependent scripts (parallel after Phase A)',
     phaseBScripts,
