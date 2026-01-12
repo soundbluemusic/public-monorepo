@@ -1,5 +1,4 @@
 import { dynamicMetaFactory } from '@soundblue/i18n';
-import { FadeIn } from '@soundblue/ui/animation';
 import {
   ArrowLeft,
   Calendar,
@@ -63,7 +62,7 @@ export default function LibraryDetailPage() {
 
   return (
     <DocsLayout>
-      <FadeIn>
+      <div>
         {/* Back link */}
         <Link
           to={localePath('/libraries')}
@@ -257,7 +256,7 @@ export default function LibraryDetailPage() {
             </div>
           </div>
         )}
-      </FadeIn>
+      </div>
     </DocsLayout>
   );
 }

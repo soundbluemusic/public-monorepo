@@ -1,5 +1,4 @@
 import { metaFactory } from '@soundblue/seo/meta';
-import { FadeIn } from '@soundblue/ui/animation';
 import { useLoaderData } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import {
@@ -57,16 +56,14 @@ export default function LibrariesPage() {
   return (
     <DocsLayout>
       {/* Header */}
-      <FadeIn>
-        <div className="mb-6">
-          <h1 className="text-2xl font-bold text-(--text-primary) mb-2">Libraries</h1>
-          <p className="text-(--text-secondary)">
-            {locale === 'ko'
-              ? 'MIT 라이센스 오픈소스. 상업적 사용 가능'
-              : 'MIT licensed open source. Free for commercial use'}
-          </p>
-        </div>
-      </FadeIn>
+      <div className="mb-6">
+        <h1 className="text-2xl font-bold text-(--text-primary) mb-2">Libraries</h1>
+        <p className="text-(--text-secondary)">
+          {locale === 'ko'
+            ? 'MIT 라이센스 오픈소스. 상업적 사용 가능'
+            : 'MIT licensed open source. Free for commercial use'}
+        </p>
+      </div>
 
       <QuickFilters
         locale={locale}

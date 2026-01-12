@@ -1,5 +1,4 @@
 import { dynamicMetaFactory } from '@soundblue/i18n';
-import { FadeIn } from '@soundblue/ui/animation';
 import { ArrowLeft, ExternalLink, Github, Package, Scale, Star } from 'lucide-react';
 import { Link, useLoaderData } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
@@ -53,7 +52,7 @@ export default function CategoryPage() {
 
   return (
     <DocsLayout>
-      <FadeIn>
+      <div>
         {/* Back link */}
         <Link
           to={localePath('/libraries')}
@@ -161,7 +160,7 @@ export default function CategoryPage() {
             </Link>
           </div>
         </div>
-      </FadeIn>
+      </div>
     </DocsLayout>
   );
 }
