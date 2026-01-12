@@ -4,6 +4,7 @@ export default [
   // English routes
   index('routes/_index.tsx'),
   route('web-api', 'routes/web-api.tsx'),
+  route('web-api/:slug', 'routes/web-api.$slug.tsx'),
   route('libraries', 'routes/libraries.tsx'),
   route('library/:slug', 'routes/library.$slug.tsx'),
   route('built-with', 'routes/built-with.tsx'),
@@ -12,6 +13,7 @@ export default [
   // Korean routes
   route('ko', 'routes/ko._index.tsx'),
   route('ko/web-api', 'routes/ko.web-api.tsx'),
+  route('ko/web-api/:slug', 'routes/ko.web-api.$slug.tsx'),
   route('ko/libraries', 'routes/ko.libraries.tsx'),
   route('ko/library/:slug', 'routes/ko.library.$slug.tsx'),
   route('ko/built-with', 'routes/ko.built-with.tsx'),
