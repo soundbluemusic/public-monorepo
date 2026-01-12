@@ -37,7 +37,7 @@
     "add-data": "tsx scripts/add-data.ts",
     "sync:stats": "tsx scripts/sync-stats.ts",
     "prepare": "husky",
-    "postinstall": "pnpm --filter './apps/*' prebuild",
+    "postinstall": "pnpm --filter @soundblue/config build && pnpm --filter './apps/*' prebuild",
     "prebuild:all": "pnpm --filter './apps/*' prebuild",
     "storybook": "pnpm --filter @soundblue/ui storybook",
     "build-storybook": "pnpm --filter @soundblue/ui build-storybook"

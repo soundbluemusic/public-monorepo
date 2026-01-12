@@ -2,21 +2,35 @@
   "name": "@soundblue/config",
   "version": "1.0.0",
   "type": "module",
-  "sideEffects": ["./src/entry-client.tsx"],
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "sideEffects": ["./dist/entry-client.js"],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist", "src/styles"],
   "exports": {
-    ".": "./src/index.ts",
-    "./tailwind": "./src/tailwind.ts",
-    "./vite": "./src/vite.ts",
-    "./biome": "./src/biome.ts",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./tailwind": {
+      "types": "./dist/tailwind.d.ts",
+      "default": "./dist/tailwind.js"
+    },
+    "./vite": {
+      "types": "./dist/vite.d.ts",
+      "default": "./dist/vite.js"
+    },
+    "./biome": {
+      "types": "./dist/biome.d.ts",
+      "default": "./dist/biome.js"
+    },
     "./styles/tailwind.css": "./src/styles/tailwind.css",
     "./entry-client": {
-      "types": "./src/entry-client.tsx",
-      "default": "./src/entry-client.tsx"
+      "types": "./dist/entry-client.d.ts",
+      "default": "./dist/entry-client.js"
     }
   },
   "scripts": {
+    "build": "tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
