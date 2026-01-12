@@ -11,6 +11,39 @@ import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLocation } from 're
 import { I18nProvider } from './i18n';
 import './styles/global.css';
 
+/**
+ * Critical CSS for FOUC prevention
+ *
+ * This CSS MUST be inlined before DARK_MODE_INIT_SCRIPT and external CSS.
+ * It defines only the essential variables needed for initial paint.
+ *
+ * Order in <head>:
+ * 1. CRITICAL_THEME_CSS (inline <style>)
+ * 2. DARK_MODE_INIT_SCRIPT (inline <script>)
+ * 3. External CSS (<link> via <Links />)
+ */
+const CRITICAL_THEME_CSS = `
+:root {
+  --bg-primary: #faf9fc;
+  --bg-secondary: #f3f1f8;
+  --bg-tertiary: #ebe8f2;
+  --bg-elevated: #ffffff;
+  --text-primary: #2d2640;
+  --text-secondary: #5c5470;
+}
+.dark {
+  --bg-primary: #14121c;
+  --bg-secondary: #1c1926;
+  --bg-tertiary: #252230;
+  --bg-elevated: #2a2638;
+  --text-primary: #f0eef5;
+  --text-secondary: #b8b3c8;
+}
+html, body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+`;
 
 /**
  * Layout - Pure HTML structure only, no hooks
@@ -26,6 +59,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="color-scheme" content="light dark" />
+        {/* Critical theme CSS - MUST be first for FOUC prevention */}
+        <style
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for FOUC prevention
+          dangerouslySetInnerHTML={{ __html: CRITICAL_THEME_CSS }}
+        />
+        {/* Dark mode init - MUST be after critical CSS but before external CSS */}
+        <script
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for dark mode flash prevention
+          dangerouslySetInnerHTML={{ __html: DARK_MODE_INIT_SCRIPT }}
+        />
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#7c5cff" />
@@ -53,11 +96,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
               },
             }),
           }}
-        />
-        {/* Inline dark mode init - prevents flash of wrong theme */}
-        <script
-          // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for dark mode flash prevention
-          dangerouslySetInnerHTML={{ __html: DARK_MODE_INIT_SCRIPT }}
         />
       </head>
       <body>

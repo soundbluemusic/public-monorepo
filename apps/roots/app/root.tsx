@@ -2,10 +2,44 @@ import { OfflineIndicator } from '@soundblue/pwa/react';
 import { MotionProvider } from '@soundblue/ui/animation';
 import { ErrorBoundary, ToastContainer } from '@soundblue/ui/feedback';
 import { DARK_MODE_INIT_SCRIPT, DARK_MODE_TOGGLE_SCRIPT } from '@soundblue/ui/utils';
+import type { MetaArgs } from 'react-router';
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLocation } from 'react-router';
 import { I18nProvider } from './i18n';
 import './styles/global.css';
-import type { MetaArgs } from 'react-router';
+
+/**
+ * Critical CSS for FOUC prevention
+ *
+ * This CSS MUST be inlined before DARK_MODE_INIT_SCRIPT and external CSS.
+ * It defines only the essential variables needed for initial paint.
+ *
+ * Order in <head>:
+ * 1. CRITICAL_THEME_CSS (inline <style>)
+ * 2. DARK_MODE_INIT_SCRIPT (inline <script>)
+ * 3. External CSS (<link> via <Links />)
+ */
+const CRITICAL_THEME_CSS = `
+:root {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-tertiary: #e2e8f0;
+  --bg-elevated: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+}
+.dark {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --bg-elevated: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+}
+html, body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+`;
 
 export function meta(_: MetaArgs) {
   return [
@@ -31,6 +65,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="color-scheme" content="light dark" />
+        {/* Critical theme CSS - MUST be first for FOUC prevention */}
+        <style
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for FOUC prevention
+          dangerouslySetInnerHTML={{ __html: CRITICAL_THEME_CSS }}
+        />
+        {/* Dark mode init - MUST be after critical CSS but before external CSS */}
+        <script
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for dark mode flash prevention
+          dangerouslySetInnerHTML={{ __html: DARK_MODE_INIT_SCRIPT }}
+        />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
         <link rel="manifest" href="/manifest.json" />
@@ -59,11 +103,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
               },
             }),
           }}
-        />
-        {/* Inline dark mode init - prevents flash of wrong theme */}
-        <script
-          // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for dark mode flash prevention
-          dangerouslySetInnerHTML={{ __html: DARK_MODE_INIT_SCRIPT }}
         />
       </head>
       <body>

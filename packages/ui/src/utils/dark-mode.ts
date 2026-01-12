@@ -10,6 +10,15 @@
  * 1. They need to run before React hydrates
  * 2. They prevent the flash of wrong theme
  * 3. SSG apps have no server to handle this
+ *
+ * ## FOUC Prevention Architecture
+ *
+ * To prevent FOUC, the following order MUST be maintained in <head>:
+ * 1. Critical theme CSS (inline <style>) - defines CSS variables for :root and .dark
+ * 2. DARK_MODE_INIT_SCRIPT (inline <script>) - adds .dark class based on preference
+ * 3. External CSS files (<link>) - full styles that use the CSS variables
+ *
+ * Each app has its own theme colors, so Critical CSS must be defined per-app.
  */
 
 /**
