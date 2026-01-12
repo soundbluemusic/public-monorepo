@@ -1,70 +1,71 @@
 import { metaFactory } from '@soundblue/i18n';
-import { cn, DOWNLOAD_PAGE_SCRIPT } from '@soundblue/ui/utils';
+import { cn } from '@soundblue/ui/utils';
 import {
+  Archive,
+  BookOpen,
   Check,
-  ChevronUp,
   Code,
   Copy,
   Download,
-  Eye,
+  ExternalLink,
   FileJson,
-  FileText,
-  FileType,
+  MessageSquare,
 } from 'lucide-react';
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import { Layout } from '@/components/layout';
-import type { MeaningEntry } from '@/data/types';
-import { type MessageKey, useI18n } from '@/i18n';
-
-type ExportFormat = 'json' | 'txt' | 'md' | 'csv';
-
-/** 미리보기용 샘플 개수 */
-const PREVIEW_COUNT = 3;
-
-interface LoaderData {
-  entries: MeaningEntry[];
-  totalCount: number;
-}
+import { useI18n } from '@/i18n';
 
 /**
- * SSG loader: 빌드 시 모든 엔트리를 로드하여 HTML에 임베드
- * 이렇게 해야 hydration 실패 시에도 fallback 스크립트가 작동함
+ * 통계 데이터 (GitHub Raw URL에서 직접 다운로드하므로 데이터 임베드 불필요)
  */
-export async function loader(): Promise<LoaderData> {
-  const { categories } = await import('@/data/categories');
-  const { getEntriesByCategory } = await import('@/data/entries');
-
-  const allEntries: MeaningEntry[] = [];
-  for (const category of categories) {
-    const categoryEntries = await getEntriesByCategory(category.id);
-    allEntries.push(...categoryEntries);
-  }
-
-  return {
-    entries: allEntries,
-    totalCount: allEntries.length,
+interface LoaderData {
+  stats: {
+    /** 총 어휘 수 (auto-generated from load-entries.ts) */
+    totalEntries: number;
+    /** 총 카테고리 수 */
+    totalCategories: number;
+    /** 총 대화 예문 수 */
+    totalConversations: number;
   };
 }
 
 /**
- * clientLoader: 클라이언트 네비게이션 시 데이터 로드
- * SSG 빌드된 페이지에 직접 접근 시에는 loader의 데이터 사용
+ * SSG loader: 통계 정보만 반환 (데이터는 GitHub Raw URL에서 직접 다운로드)
+ *
+ * 데이터 동기화:
+ * - jsonEntriesCount는 load-entries.ts가 JSON 파일에서 자동 생성
+ * - conversations.ts 파일에서 대화 수 계산
+ * - 새 데이터 추가 시 pnpm build로 자동 반영됨
  */
-export async function clientLoader(): Promise<LoaderData> {
-  // 모든 카테고리의 전체 데이터 로드
+export async function loader(): Promise<LoaderData> {
+  const { jsonEntriesCount } = await import('@/data/entries');
+  const { conversations } = await import('@/data/conversations');
   const { categories } = await import('@/data/categories');
-  const { getEntriesByCategory } = await import('@/data/entries');
-
-  const allEntries: MeaningEntry[] = [];
-  for (const category of categories) {
-    const categoryEntries = await getEntriesByCategory(category.id);
-    allEntries.push(...categoryEntries);
-  }
 
   return {
-    entries: allEntries,
-    totalCount: allEntries.length,
+    stats: {
+      totalEntries: jsonEntriesCount,
+      totalCategories: categories.length,
+      totalConversations: conversations.length,
+    },
+  };
+}
+
+/**
+ * clientLoader: 클라이언트 네비게이션 시에도 동일한 통계 반환
+ */
+export async function clientLoader(): Promise<LoaderData> {
+  const { jsonEntriesCount } = await import('@/data/entries');
+  const { conversations } = await import('@/data/conversations');
+  const { categories } = await import('@/data/categories');
+
+  return {
+    stats: {
+      totalEntries: jsonEntriesCount,
+      totalCategories: categories.length,
+      totalConversations: conversations.length,
+    },
   };
 }
 
@@ -82,215 +83,68 @@ export const meta = metaFactory(
   'https://context.soundbluemusic.com',
 );
 
-/**
- * JSON 형식으로 변환
- */
-function toJSON(entries: MeaningEntry[]): string {
-  return JSON.stringify(entries, null, 2);
-}
-
-/**
- * TXT 형식으로 변환 (간단한 탭 구분)
- * 헤더는 데이터 형식이므로 하드코딩 유지 (i18n 불필요)
- */
-function toTXT(entries: MeaningEntry[], locale: 'en' | 'ko'): string {
-  const header =
-    locale === 'ko'
-      ? '한국어\t로마자\t번역\t설명\t카테고리\t난이도'
-      : 'Korean\tRomanization\tTranslation\tExplanation\tCategory\tDifficulty';
-
-  const rows = entries.map((entry) => {
-    const translation = entry.translations[locale];
-    return [
-      entry.korean,
-      entry.romanization,
-      translation.word,
-      translation.explanation.replace(/\n/g, ' '),
-      entry.categoryId,
-      entry.difficulty,
-    ].join('\t');
-  });
-
-  return [header, ...rows].join('\n');
-}
-
-/**
- * Markdown 형식으로 변환
- */
-function toMarkdown(entries: MeaningEntry[], locale: 'en' | 'ko'): string {
-  const title = locale === 'ko' ? '# 한국어 어휘 목록\n\n' : '# Korean Vocabulary List\n\n';
-  const tableHeader =
-    locale === 'ko'
-      ? '| 한국어 | 로마자 | 번역 | 설명 | 카테고리 | 난이도 |\n|---|---|---|---|---|---|'
-      : '| Korean | Romanization | Translation | Explanation | Category | Difficulty |\n|---|---|---|---|---|---|';
-
-  const rows = entries.map((entry) => {
-    const translation = entry.translations[locale];
-    return `| ${entry.korean} | ${entry.romanization} | ${translation.word} | ${translation.explanation.replace(/\n/g, ' ').replace(/\|/g, '\\|')} | ${entry.categoryId} | ${entry.difficulty} |`;
-  });
-
-  return `${title}${tableHeader}\n${rows.join('\n')}`;
-}
-
-/**
- * CSV 형식으로 변환
- */
-function toCSV(entries: MeaningEntry[], locale: 'en' | 'ko'): string {
-  const header =
-    locale === 'ko'
-      ? 'ID,한국어,로마자,번역,설명,카테고리,난이도,품사,태그'
-      : 'ID,Korean,Romanization,Translation,Explanation,Category,Difficulty,Part of Speech,Tags';
-
-  const escapeCSV = (str: string) => {
-    if (str.includes(',') || str.includes('"') || str.includes('\n')) {
-      return `"${str.replace(/"/g, '""')}"`;
-    }
-    return str;
-  };
-
-  const rows = entries.map((entry) => {
-    const translation = entry.translations[locale];
-    return [
-      entry.id,
-      entry.korean,
-      entry.romanization,
-      escapeCSV(translation.word),
-      escapeCSV(translation.explanation),
-      entry.categoryId,
-      entry.difficulty,
-      entry.partOfSpeech,
-      entry.tags.join(';'),
-    ].join(',');
-  });
-
-  return [header, ...rows].join('\n');
-}
-
-const FORMAT_INFO: Record<
-  ExportFormat,
-  { icon: typeof FileJson; extension: string; mimeType: string }
-> = {
-  json: { icon: FileJson, extension: 'json', mimeType: 'application/json' },
-  txt: { icon: FileText, extension: 'txt', mimeType: 'text/plain' },
-  md: { icon: FileType, extension: 'md', mimeType: 'text/markdown' },
-  csv: { icon: FileText, extension: 'csv', mimeType: 'text/csv' },
-};
-
-/**
- * 미리보기 컴포넌트
- */
-function FormatPreview({
-  format,
-  entries,
-  locale,
-  t,
-}: {
-  format: ExportFormat;
-  entries: MeaningEntry[];
-  locale: 'en' | 'ko';
-  /** i18n translation function (타입 안전) */
-  t: (key: MessageKey) => string;
-}) {
-  const sampleEntries = entries.slice(0, PREVIEW_COUNT);
-
-  const previewContent = useMemo(() => {
-    switch (format) {
-      case 'json':
-        return JSON.stringify(sampleEntries, null, 2);
-      case 'txt':
-        return toTXT(sampleEntries, locale);
-      case 'md':
-        return toMarkdown(sampleEntries, locale);
-      case 'csv':
-        return toCSV(sampleEntries, locale);
-    }
-  }, [format, sampleEntries, locale]);
-
-  return (
-    <div className="mt-3 rounded-lg bg-(--bg-tertiary) border border-(--border-secondary) overflow-hidden">
-      <div className="flex items-center gap-2 px-3 py-2 border-b border-(--border-secondary) bg-(--bg-secondary)">
-        <Eye size={14} className="text-(--text-tertiary)" />
-        <span className="text-xs font-medium text-(--text-tertiary)">
-          {t('downloadPreviewSamples').replace('{count}', String(PREVIEW_COUNT))}
-        </span>
-      </div>
-      <pre className="p-3 text-xs overflow-x-auto max-h-64 overflow-y-auto text-(--text-secondary) font-mono whitespace-pre">
-        {previewContent}
-      </pre>
-      <div className="px-3 py-2 border-t border-(--border-secondary) bg-(--bg-secondary)">
-        <p className="text-xs text-(--text-tertiary)">
-          {t('downloadAndMore').replace('{count}', String(entries.length - PREVIEW_COUNT))}
-        </p>
-      </div>
-    </div>
-  );
-}
-
-const API_BASE_URL =
+/** GitHub Raw URL base (public repository) */
+const GITHUB_RAW_BASE =
   'https://raw.githubusercontent.com/soundbluemusic/public-monorepo/main/data/context';
 
+/** ZIP 다운로드 URL */
+const ZIP_DOWNLOAD_URL = `${GITHUB_RAW_BASE}/context-data.zip`;
+
+/** 다운로드 가능한 데이터 유형 */
+type DownloadType = 'entries' | 'conversations' | 'meta';
+
+/** 다운로드 항목 정보 */
+interface DownloadItem {
+  type: DownloadType;
+  icon: typeof FileJson;
+  labelKey: 'downloadEntries' | 'downloadConversations' | 'downloadMeta';
+  descKey: 'downloadEntriesDesc' | 'downloadConversationsDesc' | 'downloadMetaDesc';
+  getUrl: () => string;
+}
+
 export default function DownloadPage() {
-  const { entries, totalCount } = useLoaderData<LoaderData>();
-  const { locale, t } = useI18n();
-  const [downloading, setDownloading] = useState<ExportFormat | null>(null);
-  const [expandedFormat, setExpandedFormat] = useState<ExportFormat | null>(null);
-  const [copied, setCopied] = useState(false);
+  const { stats } = useLoaderData<LoaderData>();
+  const { t } = useI18n();
+  const [copiedUrl, setCopiedUrl] = useState<string | null>(null);
 
-  const handleCopyUrl = useCallback(() => {
-    navigator.clipboard.writeText(`${API_BASE_URL}/meta.json`);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  }, []);
-
-  const togglePreview = useCallback((format: ExportFormat) => {
-    setExpandedFormat((prev) => (prev === format ? null : format));
-  }, []);
-
-  const handleDownload = useCallback(
-    (format: ExportFormat) => {
-      setDownloading(format);
-
-      try {
-        let content: string;
-        switch (format) {
-          case 'json':
-            content = toJSON(entries);
-            break;
-          case 'txt':
-            content = toTXT(entries, locale);
-            break;
-          case 'md':
-            content = toMarkdown(entries, locale);
-            break;
-          case 'csv':
-            content = toCSV(entries, locale);
-            break;
-        }
-
-        const { extension, mimeType } = FORMAT_INFO[format];
-        const blob = new Blob([content], { type: `${mimeType};charset=utf-8` });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = `context-vocabulary-${locale}.${extension}`;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        URL.revokeObjectURL(url);
-      } finally {
-        setDownloading(null);
-      }
+  /** 다운로드 항목 목록 */
+  const downloadItems: DownloadItem[] = [
+    {
+      type: 'entries',
+      icon: BookOpen,
+      labelKey: 'downloadEntries',
+      descKey: 'downloadEntriesDesc',
+      getUrl: () => `${GITHUB_RAW_BASE}/entries/`,
     },
-    [entries, locale],
-  );
-
-  /** 다운로드 포맷 설정 (descriptionKey는 MessageKey 타입으로 명시) */
-  const formats: { format: ExportFormat; label: string; descriptionKey: MessageKey }[] = [
-    { format: 'json', label: 'JSON', descriptionKey: 'downloadForDevFull' },
-    { format: 'csv', label: 'CSV', descriptionKey: 'downloadForExcel' },
-    { format: 'txt', label: 'TXT', descriptionKey: 'downloadTabSeparated' },
-    { format: 'md', label: 'Markdown', descriptionKey: 'downloadMarkdownTable' },
+    {
+      type: 'conversations',
+      icon: MessageSquare,
+      labelKey: 'downloadConversations',
+      descKey: 'downloadConversationsDesc',
+      getUrl: () => `${GITHUB_RAW_BASE}/conversations.json`,
+    },
+    {
+      type: 'meta',
+      icon: FileJson,
+      labelKey: 'downloadMeta',
+      descKey: 'downloadMetaDesc',
+      getUrl: () => `${GITHUB_RAW_BASE}/meta.json`,
+    },
   ];
+
+  const handleCopyUrl = useCallback((url: string) => {
+    navigator.clipboard.writeText(url);
+    setCopiedUrl(url);
+    setTimeout(() => setCopiedUrl(null), 2000);
+  }, []);
+
+  const handleOpenGitHub = useCallback(() => {
+    window.open(
+      'https://github.com/soundbluemusic/public-monorepo/tree/main/data/context',
+      '_blank',
+      'noopener,noreferrer',
+    );
+  }, []);
 
   return (
     <Layout>
@@ -303,122 +157,153 @@ export default function DownloadPage() {
           <p className="text-(--text-secondary)">{t('downloadDescription')}</p>
         </div>
 
-        {/* Stats */}
+        {/* Stats Overview */}
         <div className="mb-8 p-4 bg-(--bg-secondary) rounded-xl border border-(--border-primary)">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 mb-4">
             <div className="p-2 bg-(--accent-primary)/10 rounded-lg">
               <Download size={24} className="text-(--accent-primary)" />
             </div>
             <div>
               <p className="text-lg font-semibold text-(--text-primary)">
-                {totalCount.toLocaleString()} {t('words')}
+                {t('downloadDataOverview')}
               </p>
               <p className="text-sm text-(--text-tertiary)">{t('downloadAllMappings')}</p>
             </div>
           </div>
+
+          {/* Stats Grid */}
+          <div className="grid grid-cols-3 gap-4 mt-4">
+            <div className="text-center p-3 bg-(--bg-tertiary) rounded-lg">
+              <p className="text-2xl font-bold text-(--accent-primary)">
+                {stats.totalEntries.toLocaleString()}
+              </p>
+              <p className="text-xs text-(--text-tertiary) mt-1">{t('words')}</p>
+            </div>
+            <div className="text-center p-3 bg-(--bg-tertiary) rounded-lg">
+              <p className="text-2xl font-bold text-(--accent-primary)">{stats.totalCategories}</p>
+              <p className="text-xs text-(--text-tertiary) mt-1">{t('categories')}</p>
+            </div>
+            <div className="text-center p-3 bg-(--bg-tertiary) rounded-lg">
+              <p className="text-2xl font-bold text-(--accent-primary)">
+                {stats.totalConversations}
+              </p>
+              <p className="text-xs text-(--text-tertiary) mt-1">{t('conversations')}</p>
+            </div>
+          </div>
         </div>
 
-        {/* Format Selection */}
+        {/* ZIP Download - Primary CTA */}
+        <div className="mb-8">
+          <a
+            href={ZIP_DOWNLOAD_URL}
+            download="context-data.zip"
+            className={cn(
+              'w-full p-4 rounded-xl border transition-all cursor-pointer block',
+              'bg-(--accent-primary) border-(--accent-primary) hover:bg-(--accent-primary)/90',
+              'flex items-center justify-between gap-4',
+            )}
+          >
+            <div className="flex items-center gap-3">
+              <div className="p-2 bg-white/20 rounded-lg">
+                <Archive size={24} className="text-white" />
+              </div>
+              <div className="text-left">
+                <p className="font-medium text-white">{t('downloadZip')}</p>
+                <p className="text-sm text-white/80">{t('downloadZipDesc')}</p>
+              </div>
+            </div>
+            <Download size={20} className="text-white shrink-0" />
+          </a>
+        </div>
+
+        {/* GitHub Repository Link */}
+        <div className="mb-8">
+          <button
+            type="button"
+            onClick={handleOpenGitHub}
+            className={cn(
+              'w-full p-4 rounded-xl border transition-all cursor-pointer',
+              'bg-(--bg-primary) border-(--border-primary) hover:border-(--accent-primary)',
+              'flex items-center justify-between gap-4',
+            )}
+          >
+            <div className="flex items-center gap-3">
+              <div className="p-2 bg-(--bg-tertiary) rounded-lg">
+                <Code size={24} className="text-(--text-secondary)" />
+              </div>
+              <div className="text-left">
+                <p className="font-medium text-(--text-primary)">{t('downloadFromGitHub')}</p>
+                <p className="text-sm text-(--text-tertiary)">{t('downloadFromGitHubDesc')}</p>
+              </div>
+            </div>
+            <ExternalLink size={20} className="text-(--text-tertiary) shrink-0" />
+          </button>
+        </div>
+
+        {/* Download Items */}
         <div className="space-y-3">
           <h2 className="text-lg font-semibold text-(--text-primary) mb-4">
-            {t('downloadSelectFormat')}
+            {t('downloadDirectLinks')}
           </h2>
 
-          {formats.map(({ format, label, descriptionKey }) => {
-            const { icon: Icon } = FORMAT_INFO[format];
-            const isDownloading = downloading === format;
-            const isExpanded = expandedFormat === format;
+          {downloadItems.map(({ type, icon: Icon, labelKey, descKey, getUrl }) => {
+            const url = getUrl();
+            const isCopied = copiedUrl === url;
 
             return (
               <div
-                key={format}
-                className={cn(
-                  'rounded-xl border transition-all',
-                  'bg-(--bg-primary) border-(--border-primary)',
-                  isExpanded && 'border-(--accent-primary)',
-                )}
+                key={type}
+                className="rounded-xl border bg-(--bg-primary) border-(--border-primary) p-4"
               >
-                {/* 카드 헤더 */}
-                <div className="p-4 flex items-start gap-4">
+                <div className="flex items-start gap-4">
                   <div className="p-2 bg-(--bg-tertiary) rounded-lg shrink-0">
                     <Icon size={24} className="text-(--text-secondary)" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
-                      <span className="font-medium text-(--text-primary)">{label}</span>
+                      <span className="font-medium text-(--text-primary)">{t(labelKey)}</span>
                       <span className="text-xs px-2 py-0.5 bg-(--bg-tertiary) rounded text-(--text-tertiary)">
-                        .{FORMAT_INFO[format].extension}
+                        .json
                       </span>
                     </div>
-                    <p className="text-sm text-(--text-secondary) mt-1">{t(descriptionKey)}</p>
+                    <p className="text-sm text-(--text-secondary) mt-1">{t(descKey)}</p>
 
-                    {/* 액션 버튼들 */}
-                    <div className="flex items-center gap-2 mt-3">
+                    {/* URL Display */}
+                    <div className="mt-3 flex items-center gap-2">
+                      <code className="flex-1 text-xs bg-(--bg-tertiary) px-3 py-2 rounded-lg font-mono text-(--text-secondary) overflow-x-auto whitespace-nowrap">
+                        {url}
+                      </code>
                       <button
                         type="button"
-                        data-action="preview"
-                        data-format={format}
-                        onClick={() => togglePreview(format)}
+                        onClick={() => handleCopyUrl(url)}
                         className={cn(
-                          'inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg transition-colors cursor-pointer',
-                          'border border-(--border-primary)',
-                          isExpanded
-                            ? 'bg-(--accent-primary)/10 text-(--accent-primary) border-(--accent-primary)'
-                            : 'text-(--text-secondary) hover:bg-(--bg-tertiary)',
+                          'shrink-0 inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium rounded-lg transition-colors cursor-pointer',
+                          isCopied
+                            ? 'bg-green-500 text-white'
+                            : 'bg-(--accent-primary) text-white hover:bg-(--accent-primary)/90',
                         )}
                       >
-                        {isExpanded ? (
+                        {isCopied ? (
                           <>
-                            <ChevronUp size={14} />
-                            {t('downloadHidePreview')}
+                            <Check size={14} />
+                            {t('apiCopied')}
                           </>
                         ) : (
                           <>
-                            <Eye size={14} />
-                            {t('downloadPreview')}
-                          </>
-                        )}
-                      </button>
-                      <button
-                        type="button"
-                        data-action="download"
-                        data-format={format}
-                        onClick={() => handleDownload(format)}
-                        disabled={isDownloading}
-                        className={cn(
-                          'inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg transition-colors cursor-pointer',
-                          'bg-(--accent-primary) text-white hover:bg-(--accent-primary)/90',
-                          'disabled:opacity-50 disabled:cursor-not-allowed',
-                        )}
-                      >
-                        {isDownloading ? (
-                          <>
-                            <div className="w-3 h-3 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                            {t('downloading')}
-                          </>
-                        ) : (
-                          <>
-                            <Download size={14} />
-                            {t('download')}
+                            <Copy size={14} />
+                            {t('apiCopyUrl')}
                           </>
                         )}
                       </button>
                     </div>
                   </div>
                 </div>
-
-                {/* 미리보기 패널 */}
-                {isExpanded && (
-                  <div className="px-4 pb-4">
-                    <FormatPreview format={format} entries={entries} locale={locale} t={t} />
-                  </div>
-                )}
               </div>
             );
           })}
         </div>
 
-        {/* API Section for Developers */}
+        {/* API Usage Example */}
         <div className="mt-12">
           <h2 className="text-lg font-semibold text-(--text-primary) mb-4 flex items-center gap-2">
             <Code size={20} />
@@ -426,65 +311,28 @@ export default function DownloadPage() {
           </h2>
           <div className="rounded-xl border border-(--border-primary) bg-(--bg-primary) overflow-hidden">
             <div className="p-4 border-b border-(--border-secondary)">
-              <p className="text-sm text-(--text-secondary) mb-3">{t('apiSectionDescription')}</p>
-              <p className="text-xs text-(--text-tertiary)">{t('apiMetaJson')}</p>
+              <p className="text-sm text-(--text-secondary)">{t('apiSectionDescription')}</p>
             </div>
             <div className="p-4 bg-(--bg-tertiary)">
-              <div className="flex items-center gap-2">
-                <code className="flex-1 text-xs bg-(--bg-secondary) px-3 py-2 rounded-lg font-mono text-(--text-primary) overflow-x-auto">
-                  {API_BASE_URL}/meta.json
-                </code>
-                <button
-                  type="button"
-                  onClick={handleCopyUrl}
-                  className={cn(
-                    'shrink-0 inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium rounded-lg transition-colors cursor-pointer',
-                    copied
-                      ? 'bg-green-500 text-white'
-                      : 'bg-(--accent-primary) text-white hover:bg-(--accent-primary)/90',
-                  )}
-                >
-                  {copied ? (
-                    <>
-                      <Check size={14} />
-                      {t('apiCopied')}
-                    </>
-                  ) : (
-                    <>
-                      <Copy size={14} />
-                      {t('apiCopyUrl')}
-                    </>
-                  )}
-                </button>
-              </div>
-              <p className="mt-3 text-xs text-(--text-tertiary)">
-                {t('apiDataIncludes')
-                  .replace('{count}', String(totalCount))
-                  .replace('{catCount}', '24')
-                  .replace('{convCount}', '53')}
-              </p>
+              <pre className="text-xs font-mono text-(--text-secondary) overflow-x-auto whitespace-pre">
+                {`// Fetch all entries
+const res = await fetch('${GITHUB_RAW_BASE}/meta.json');
+const meta = await res.json();
+
+// Load specific category
+const greetings = await fetch(
+  '${GITHUB_RAW_BASE}/entries/greetings.json'
+).then(r => r.json());`}
+              </pre>
             </div>
           </div>
         </div>
 
         {/* License Note */}
         <div className="mt-8 p-4 bg-(--bg-tertiary) rounded-xl text-sm text-(--text-secondary)">
-          <p>📜 {t('downloadLicenseNote')}</p>
+          <p>{t('downloadLicenseNote')}</p>
         </div>
       </div>
-
-      {/* Embed download data for plain JS fallback when React hydration fails */}
-      <script
-        // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for SSG hydration fallback
-        dangerouslySetInnerHTML={{
-          __html: `window.__downloadData = ${JSON.stringify({ entries, locale })};`,
-        }}
-      />
-      {/* Plain JS download handler - works even when React hydration fails */}
-      <script
-        // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for SSG hydration fallback
-        dangerouslySetInnerHTML={{ __html: DOWNLOAD_PAGE_SCRIPT }}
-      />
     </Layout>
   );
 }

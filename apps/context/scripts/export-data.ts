@@ -17,9 +17,11 @@
  * - data/context/categories.json
  * - data/context/conversations.json
  * - data/context/meta.json
+ * - data/context/context-data.zip (전체 데이터 ZIP)
  */
 
-import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { execSync } from 'node:child_process';
+import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -132,6 +134,35 @@ async function generateMeta() {
 }
 
 // ============================================================================
+// 4. ZIP 파일 생성 (일반 사용자 다운로드용)
+// ============================================================================
+function generateZip() {
+  const zipPath = join(REPO_DATA_DIR, 'context-data.zip');
+
+  // 기존 ZIP 삭제
+  if (existsSync(zipPath)) {
+    execSync(`rm "${zipPath}"`);
+  }
+
+  // ZIP 생성 (data/context/ 디렉토리 내용 전체)
+  // -j: 경로 없이 파일만, -r: 재귀적으로 폴더 포함
+  try {
+    execSync(
+      `cd "${REPO_DATA_DIR}" && zip -r context-data.zip categories.json conversations.json meta.json entries/`,
+      {
+        stdio: 'pipe',
+      },
+    );
+
+    const stats = statSync(zipPath);
+    const sizeMB = (stats.size / 1024 / 1024).toFixed(2);
+    console.log(`  ✓ context-data.zip (${sizeMB} MB)`);
+  } catch {
+    console.error('  ⚠ ZIP 생성 실패 (zip 명령어가 설치되어 있지 않을 수 있습니다)');
+  }
+}
+
+// ============================================================================
 // Main
 // ============================================================================
 async function main() {
@@ -141,6 +172,7 @@ async function main() {
     // entries는 data/context/entries/가 SSoT이므로 복사 불필요
     console.log(`  ✓ entries/*.json (SSoT: data/context/entries/)`);
     await generateMeta();
+    generateZip();
 
     console.log('\n✅ Export complete!');
     console.log(`   Output: ${REPO_DATA_DIR}`);
