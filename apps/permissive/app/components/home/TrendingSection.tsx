@@ -14,31 +14,76 @@ import {
 } from 'lucide-react';
 import type { ReactNode } from 'react';
 import { Link } from 'react-router';
+import { getLibrarySlug } from '../../data/libraries';
+import { getWebApiSlug } from '../../data/web-apis';
 
 interface TrendingItem {
   name: string;
+  slug: string;
   category?: string;
   icon: ReactNode;
 }
 
 const trendingLibraries: TrendingItem[] = [
-  { name: 'Bun', category: 'Runtime', icon: <Zap size={18} aria-hidden="true" /> },
-  { name: 'Astro', category: 'Meta-framework', icon: <Rocket size={18} aria-hidden="true" /> },
-  { name: 'shadcn/ui', category: 'UI', icon: <Palette size={18} aria-hidden="true" /> },
+  {
+    name: 'Bun',
+    slug: getLibrarySlug('Bun'),
+    category: 'Runtime',
+    icon: <Zap size={18} aria-hidden="true" />,
+  },
+  {
+    name: 'Astro',
+    slug: getLibrarySlug('Astro'),
+    category: 'Meta-framework',
+    icon: <Rocket size={18} aria-hidden="true" />,
+  },
+  {
+    name: 'shadcn/ui',
+    slug: getLibrarySlug('shadcn/ui'),
+    category: 'UI',
+    icon: <Palette size={18} aria-hidden="true" />,
+  },
   {
     name: 'TanStack Query',
+    slug: getLibrarySlug('TanStack Query'),
     category: 'Data Fetching',
     icon: <Radio size={18} aria-hidden="true" />,
   },
-  { name: 'Vitest', category: 'Testing', icon: <TestTube size={18} aria-hidden="true" /> },
-  { name: 'Zod', category: 'Type Safety', icon: <Shield size={18} aria-hidden="true" /> },
+  {
+    name: 'Vitest',
+    slug: getLibrarySlug('Vitest'),
+    category: 'Testing',
+    icon: <TestTube size={18} aria-hidden="true" />,
+  },
+  {
+    name: 'Zod',
+    slug: getLibrarySlug('Zod'),
+    category: 'Type Safety',
+    icon: <Shield size={18} aria-hidden="true" />,
+  },
 ];
 
 const trendingApis: TrendingItem[] = [
-  { name: 'View Transitions API', icon: <Sparkles size={18} aria-hidden="true" /> },
-  { name: 'WebGPU', icon: <Gamepad2 size={18} aria-hidden="true" /> },
-  { name: 'Navigation API', icon: <Compass size={18} aria-hidden="true" /> },
-  { name: 'Popover API', icon: <MessageSquare size={18} aria-hidden="true" /> },
+  {
+    name: 'View Transitions API',
+    slug: getWebApiSlug('View Transitions API'),
+    icon: <Sparkles size={18} aria-hidden="true" />,
+  },
+  {
+    name: 'WebGPU',
+    slug: getWebApiSlug('WebGPU'),
+    icon: <Gamepad2 size={18} aria-hidden="true" />,
+  },
+  {
+    name: 'Navigation API',
+    slug: getWebApiSlug('Navigation API'),
+    icon: <Compass size={18} aria-hidden="true" />,
+  },
+  {
+    name: 'Popover API',
+    slug: getWebApiSlug('Popover API'),
+    icon: <MessageSquare size={18} aria-hidden="true" />,
+  },
 ];
 
 interface TrendingSectionProps {
@@ -64,7 +109,7 @@ export function TrendingSection({ locale, localePath }: TrendingSectionProps) {
             {trendingLibraries.map((lib) => (
               <Link
                 key={lib.name}
-                to={`${localePath('/libraries')}?trending=true`}
+                to={localePath(`/library/${lib.slug}`)}
                 className="flex items-center gap-3 p-3 rounded-lg bg-(--bg-elevated) border border-(--border-primary) no-underline transition-all hover:border-(--border-focus) hover:shadow-sm group"
               >
                 <span className="text-(--accent-primary)">{lib.icon}</span>
@@ -91,7 +136,7 @@ export function TrendingSection({ locale, localePath }: TrendingSectionProps) {
             {trendingApis.map((api) => (
               <Link
                 key={api.name}
-                to={`${localePath('/web-api')}?trending=true`}
+                to={localePath(`/web-api/${api.slug}`)}
                 className="flex items-center gap-3 p-3 rounded-lg bg-(--bg-elevated) border border-(--border-primary) no-underline transition-all hover:border-(--border-focus) hover:shadow-sm group"
               >
                 <span className="text-(--accent-primary)">{api.icon}</span>

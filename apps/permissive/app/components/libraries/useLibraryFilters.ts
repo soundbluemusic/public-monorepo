@@ -1,5 +1,5 @@
 import { LIMITS } from '@soundblue/core/validation';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router';
 import { type CategoryFilter, categories, type Library } from '../../data/libraries';
 
@@ -21,28 +21,35 @@ interface UseLibraryFiltersOptions {
 export function useLibraryFilters({ libraries: libs }: UseLibraryFiltersOptions) {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  // Initialize state from URL params
-  const initialParams = {
-    q: searchParams.get('q') || '',
-    category: searchParams.get('category'),
-    tag: searchParams.get('tag'),
-    filter: searchParams.get('filter'),
-    trending: searchParams.get('trending'),
-  };
-
-  const [search, setSearch] = useState(initialParams.q);
-  const [category, setCategory] = useState<CategoryFilter>(() => {
-    const cat = initialParams.category;
-    return cat && (categories as readonly string[]).includes(cat) ? (cat as CategoryFilter) : 'All';
-  });
-  const [selectedTag, setSelectedTag] = useState<string | null>(initialParams.tag);
-  const [quickFilter, setQuickFilter] = useState<QuickFilter>(() => {
-    if (initialParams.trending === 'true') return 'trending';
-    if (initialParams.filter === 'usedHere' || initialParams.filter === 'new')
-      return initialParams.filter;
-    return null;
-  });
+  // SSG Hydration 안전: 기본값으로 초기화 (클라이언트에서 useEffect로 URL 동기화)
+  const [search, setSearch] = useState('');
+  const [category, setCategory] = useState<CategoryFilter>('All');
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [quickFilter, setQuickFilter] = useState<QuickFilter>(null);
   const [sortBy, setSortBy] = useState<SortOption>('stars');
+
+  // 클라이언트에서만 URL 파라미터 동기화 (hydration 불일치 방지)
+  useEffect(() => {
+    const q = searchParams.get('q');
+    const cat = searchParams.get('category');
+    const tag = searchParams.get('tag');
+    const filter = searchParams.get('filter');
+    const trending = searchParams.get('trending');
+
+    if (q) setSearch(q);
+
+    if (cat && (categories as readonly string[]).includes(cat)) {
+      setCategory(cat as CategoryFilter);
+    }
+
+    if (tag) setSelectedTag(tag);
+
+    if (trending === 'true') {
+      setQuickFilter('trending');
+    } else if (filter === 'usedHere' || filter === 'new') {
+      setQuickFilter(filter);
+    }
+  }, [searchParams]);
 
   const filteredLibraries = useMemo(() => {
     let filtered = libs;

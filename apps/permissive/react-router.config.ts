@@ -1,6 +1,7 @@
 import type { Config } from '@react-router/dev/config';
 import { extractStaticRoutes } from '@soundblue/i18n';
-import { categoryMeta, getCategorySlug, getLibrarySlug, libraries } from './app/data/libraries.js';
+import { categoryMeta, getLibrarySlug, libraries } from './app/data/libraries.js';
+import { getWebApiSlug, webApis } from './app/data/web-apis.js';
 import routes from './app/routes.js';
 
 /**
@@ -8,7 +9,7 @@ import routes from './app/routes.js';
  *
  * ## Single Source of Truth
  * - 정적 라우트: routes.ts에서 자동 추출 (extractStaticRoutes)
- * - 동적 라우트: libraries, categories 데이터에서 생성
+ * - 동적 라우트: libraries, categories, webApis 데이터에서 생성
  */
 export default {
   ssr: false, // 100% SSG - 서버 없이 정적 파일만 생성
@@ -26,6 +27,12 @@ export default {
       .filter((cat) => cat.id !== 'all')
       .flatMap((cat) => [`/category/${cat.id}`, `/ko/category/${cat.id}`]);
 
-    return [...staticRoutes, ...libraryRoutes, ...categoryRoutes];
+    // Generate Web API detail routes
+    const webApiRoutes = webApis.flatMap((api) => {
+      const slug = getWebApiSlug(api.name);
+      return [`/web-api/${slug}`, `/ko/web-api/${slug}`];
+    });
+
+    return [...staticRoutes, ...libraryRoutes, ...categoryRoutes, ...webApiRoutes];
   },
 } satisfies Config;

@@ -2,7 +2,9 @@ import { LIMITS } from '@soundblue/core/validation';
 import { cn } from '@soundblue/ui/utils';
 import { Flame, Star } from 'lucide-react';
 import { memo } from 'react';
-import type { Library } from '../../data/libraries';
+import { Link } from 'react-router';
+import { getLibrarySlug, type Library } from '../../data/libraries';
+import { useI18n } from '../../i18n';
 
 interface LibraryCardProps {
   library: Library;
@@ -17,13 +19,18 @@ export const LibraryCard = memo(function LibraryCard({
   selectedTag,
   onTagClick,
 }: LibraryCardProps) {
+  const { localePath } = useI18n();
+
   return (
     <div className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) overflow-hidden">
       <div className="flex items-start justify-between gap-2 mb-2">
         <div className="flex items-center flex-wrap gap-2 min-w-0">
-          <h3 className="font-medium text-(--text-primary) truncate max-w-[150px] sm:max-w-none">
+          <Link
+            to={localePath(`/library/${getLibrarySlug(lib.name)}`)}
+            className="font-medium text-(--text-primary) truncate max-w-[150px] sm:max-w-none hover:text-(--accent-primary) transition-colors"
+          >
             {lib.name}
-          </h3>
+          </Link>
           {lib.trending && (
             <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-orange-500/10 text-orange-500 shrink-0">
               <Flame size={12} aria-hidden="true" />

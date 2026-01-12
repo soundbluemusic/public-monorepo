@@ -25,6 +25,8 @@ export interface QuickLink {
   descKo: string;
   href: string;
   icon: ReactNode;
+  /** true면 외부 링크 (새 탭에서 열림) */
+  external?: boolean;
 }
 
 export const navItems: readonly NavItem[] = [
@@ -49,28 +51,28 @@ export const quickLinks = {
       name: 'Fetch API',
       desc: 'HTTP requests',
       descKo: 'HTTP 요청',
-      href: 'https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API',
+      href: '/web-api/fetch-api',
       icon: <Globe size={16} aria-hidden="true" />,
     },
     {
       name: 'localStorage',
       desc: 'Persistent storage',
       descKo: '영구 저장소',
-      href: 'https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage',
+      href: '/web-api/localstorage',
       icon: <HardDrive size={16} aria-hidden="true" />,
     },
     {
       name: 'WebSocket',
       desc: 'Real-time',
       descKo: '실시간 통신',
-      href: 'https://developer.mozilla.org/en-US/docs/Web/API/WebSocket',
+      href: '/web-api/websocket',
       icon: <Plug size={16} aria-hidden="true" />,
     },
     {
-      name: 'Canvas',
+      name: 'Canvas 2D',
       desc: '2D graphics',
       descKo: '2D 그래픽',
-      href: 'https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API',
+      href: '/web-api/canvas-2d',
       icon: <Palette size={16} aria-hidden="true" />,
     },
   ],
@@ -79,28 +81,28 @@ export const quickLinks = {
       name: 'React',
       desc: 'UI library',
       descKo: 'UI 라이브러리',
-      href: 'https://github.com/facebook/react',
+      href: '/library/react',
       icon: <Atom size={16} aria-hidden="true" />,
     },
     {
       name: 'Vue',
       desc: 'Progressive',
       descKo: '프로그레시브',
-      href: 'https://github.com/vuejs/core',
+      href: '/library/vue',
       icon: <Sparkles size={16} aria-hidden="true" />,
     },
     {
       name: 'Vite',
       desc: 'Build tool',
       descKo: '빌드 도구',
-      href: 'https://github.com/vitejs/vite',
+      href: '/library/vite',
       icon: <Zap size={16} aria-hidden="true" />,
     },
     {
-      name: 'Tailwind',
+      name: 'Tailwind CSS',
       desc: 'Utility CSS',
       descKo: '유틸리티 CSS',
-      href: 'https://github.com/tailwindlabs/tailwindcss',
+      href: '/library/tailwind-css',
       icon: <Wind size={16} aria-hidden="true" />,
     },
   ],

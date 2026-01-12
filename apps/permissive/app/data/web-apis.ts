@@ -573,3 +573,21 @@ export const webApiCategories = [
   'File & System',
   'Other',
 ] as const;
+
+/** Web API 이름을 URL slug로 변환 */
+export function getWebApiSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
+
+/** slug로 Web API 조회 */
+export function getWebApiBySlug(slug: string): WebAPI | undefined {
+  return webApis.find((api) => getWebApiSlug(api.name) === slug);
+}
+
+/** 같은 카테고리의 관련 Web API 조회 */
+export function getRelatedWebApis(api: WebAPI, limit = 3): WebAPI[] {
+  return webApis.filter((a) => a.category === api.category && a.name !== api.name).slice(0, limit);
+}

@@ -1,6 +1,8 @@
 import { Flame } from 'lucide-react';
 import { memo } from 'react';
-import type { WebAPI } from '../../data/web-apis';
+import { Link } from 'react-router';
+import { getWebApiSlug, type WebAPI } from '../../data/web-apis';
+import { useI18n } from '../../i18n';
 
 interface ApiCardProps {
   api: WebAPI;
@@ -8,11 +10,11 @@ interface ApiCardProps {
 }
 
 export const ApiCard = memo(function ApiCard({ api, locale }: ApiCardProps) {
+  const { localePath } = useI18n();
+
   return (
-    <a
-      href={api.mdnUrl}
-      target="_blank"
-      rel="noopener noreferrer"
+    <Link
+      to={localePath(`/web-api/${getWebApiSlug(api.name)}`)}
       className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) no-underline transition-all hover:border-(--border-focus) hover:shadow-sm group"
     >
       <div className="flex items-start justify-between gap-2 mb-2">
@@ -32,6 +34,6 @@ export const ApiCard = memo(function ApiCard({ api, locale }: ApiCardProps) {
         {locale === 'ko' ? api.descriptionKo : api.description}
       </p>
       {api.yearStable && <p className="text-xs text-(--text-tertiary)">Since {api.yearStable}</p>}
-    </a>
+    </Link>
   );
 });

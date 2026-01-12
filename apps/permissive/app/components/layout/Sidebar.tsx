@@ -85,12 +85,14 @@ export default function Sidebar({
               title={locale === 'ko' ? '인기 Web API' : 'Popular Web API'}
               links={quickLinks.webApi}
               locale={locale}
+              localePath={localePath}
             />
 
             <QuickLinksSection
               title={locale === 'ko' ? '인기 Libraries' : 'Popular Libraries'}
               links={quickLinks.libraries}
               locale={locale}
+              localePath={localePath}
             />
 
             {/* More from Us */}
