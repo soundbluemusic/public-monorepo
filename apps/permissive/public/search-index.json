@@ -1406,6 +1406,949 @@
     ]
   },
   {
+    "id": "lib-ffmpeg-wasm",
+    "type": "library",
+    "name": {
+      "en": "FFmpeg.wasm",
+      "ko": "FFmpeg.wasm"
+    },
+    "description": {
+      "en": "FFmpeg compiled to WebAssembly for browser video/audio processing",
+      "ko": "브라우저에서 비디오/오디오 처리를 위해 WebAssembly로 컴파일된 FFmpeg"
+    },
+    "field": "WASM Runtime",
+    "tags": [
+      "WASM",
+      "Video",
+      "Audio",
+      "Codec"
+    ]
+  },
+  {
+    "id": "lib-sql-js",
+    "type": "library",
+    "name": {
+      "en": "sql.js",
+      "ko": "sql.js"
+    },
+    "description": {
+      "en": "SQLite compiled to JavaScript via Emscripten",
+      "ko": "Emscripten을 통해 JavaScript로 컴파일된 SQLite"
+    },
+    "field": "WASM Runtime",
+    "tags": [
+      "WASM",
+      "Database",
+      "SQLite"
+    ]
+  },
+  {
+    "id": "lib-pyodide",
+    "type": "library",
+    "name": {
+      "en": "Pyodide",
+      "ko": "Pyodide"
+    },
+    "description": {
+      "en": "Python runtime for the browser via WebAssembly",
+      "ko": "WebAssembly를 통한 브라우저용 Python 런타임"
+    },
+    "field": "WASM Runtime",
+    "tags": [
+      "WASM",
+      "Python",
+      "Scientific"
+    ]
+  },
+  {
+    "id": "lib-assemblyscript",
+    "type": "library",
+    "name": {
+      "en": "AssemblyScript",
+      "ko": "AssemblyScript"
+    },
+    "description": {
+      "en": "TypeScript-like language that compiles to WebAssembly",
+      "ko": "WebAssembly로 컴파일되는 TypeScript 유사 언어"
+    },
+    "field": "WASM Runtime",
+    "tags": [
+      "WASM",
+      "TypeScript",
+      "Compiler"
+    ]
+  },
+  {
+    "id": "lib-wasm-bindgen",
+    "type": "library",
+    "name": {
+      "en": "wasm-bindgen",
+      "ko": "wasm-bindgen"
+    },
+    "description": {
+      "en": "Facilitates communication between Rust and JavaScript",
+      "ko": "Rust와 JavaScript 간 통신을 용이하게 하는 도구"
+    },
+    "field": "WASM Runtime",
+    "tags": [
+      "WASM",
+      "Rust",
+      "Binding"
+    ]
+  },
+  {
+    "id": "lib-emscripten",
+    "type": "library",
+    "name": {
+      "en": "Emscripten",
+      "ko": "Emscripten"
+    },
+    "description": {
+      "en": "LLVM-to-WebAssembly compiler toolchain",
+      "ko": "LLVM에서 WebAssembly로 컴파일하는 툴체인"
+    },
+    "field": "WASM Runtime",
+    "tags": [
+      "WASM",
+      "C",
+      "C++",
+      "Compiler"
+    ]
+  },
+  {
+    "id": "lib-opencv-js",
+    "type": "library",
+    "name": {
+      "en": "OpenCV.js",
+      "ko": "OpenCV.js"
+    },
+    "description": {
+      "en": "OpenCV compiled to JavaScript for browser-based computer vision",
+      "ko": "브라우저 기반 컴퓨터 비전을 위해 JavaScript로 컴파일된 OpenCV"
+    },
+    "field": "Computer Vision",
+    "tags": [
+      "WASM",
+      "Vision",
+      "Image"
+    ]
+  },
+  {
+    "id": "lib-tracking-js",
+    "type": "library",
+    "name": {
+      "en": "tracking.js",
+      "ko": "tracking.js"
+    },
+    "description": {
+      "en": "JavaScript library for real-time color and face tracking",
+      "ko": "실시간 색상 및 얼굴 추적을 위한 JavaScript 라이브러리"
+    },
+    "field": "Computer Vision",
+    "tags": [
+      "Vision",
+      "Tracking",
+      "Face"
+    ]
+  },
+  {
+    "id": "lib-face-api-js",
+    "type": "library",
+    "name": {
+      "en": "face-api.js",
+      "ko": "face-api.js"
+    },
+    "description": {
+      "en": "JavaScript face detection and recognition API",
+      "ko": "JavaScript 얼굴 감지 및 인식 API"
+    },
+    "field": "Computer Vision",
+    "tags": [
+      "ML",
+      "Face",
+      "Recognition"
+    ]
+  },
+  {
+    "id": "lib-mediapipe",
+    "type": "library",
+    "name": {
+      "en": "MediaPipe",
+      "ko": "MediaPipe"
+    },
+    "description": {
+      "en": "Google ML solutions for face, hand, and pose detection",
+      "ko": "얼굴, 손, 자세 감지를 위한 Google ML 솔루션"
+    },
+    "field": "Computer Vision",
+    "tags": [
+      "ML",
+      "Google",
+      "Pose",
+      "Hand"
+    ]
+  },
+  {
+    "id": "lib-tensorflow-js",
+    "type": "library",
+    "name": {
+      "en": "TensorFlow.js",
+      "ko": "TensorFlow.js"
+    },
+    "description": {
+      "en": "Machine learning library for JavaScript",
+      "ko": "JavaScript용 머신러닝 라이브러리"
+    },
+    "field": "Machine Learning",
+    "tags": [
+      "ML",
+      "AI",
+      "Google",
+      "WASM"
+    ]
+  },
+  {
+    "id": "lib-onnx-runtime-web",
+    "type": "library",
+    "name": {
+      "en": "ONNX Runtime Web",
+      "ko": "ONNX Runtime Web"
+    },
+    "description": {
+      "en": "Run ONNX models in browser with WebAssembly/WebGL",
+      "ko": "WebAssembly/WebGL로 브라우저에서 ONNX 모델 실행"
+    },
+    "field": "Machine Learning",
+    "tags": [
+      "ML",
+      "ONNX",
+      "Microsoft",
+      "WASM"
+    ]
+  },
+  {
+    "id": "lib-transformers-js",
+    "type": "library",
+    "name": {
+      "en": "Transformers.js",
+      "ko": "Transformers.js"
+    },
+    "description": {
+      "en": "Run Hugging Face transformers in the browser",
+      "ko": "브라우저에서 Hugging Face 트랜스포머 실행"
+    },
+    "field": "Machine Learning",
+    "tags": [
+      "ML",
+      "NLP",
+      "Hugging Face",
+      "WASM"
+    ]
+  },
+  {
+    "id": "lib-ml5-js",
+    "type": "library",
+    "name": {
+      "en": "ml5.js",
+      "ko": "ml5.js"
+    },
+    "description": {
+      "en": "Friendly machine learning for the web",
+      "ko": "웹을 위한 친화적인 머신러닝"
+    },
+    "field": "Machine Learning",
+    "tags": [
+      "ML",
+      "Beginner",
+      "p5.js"
+    ]
+  },
+  {
+    "id": "lib-brain-js",
+    "type": "library",
+    "name": {
+      "en": "Brain.js",
+      "ko": "Brain.js"
+    },
+    "description": {
+      "en": "GPU accelerated neural networks in JavaScript",
+      "ko": "JavaScript에서 GPU 가속 신경망"
+    },
+    "field": "Machine Learning",
+    "tags": [
+      "ML",
+      "Neural Network",
+      "GPU"
+    ]
+  },
+  {
+    "id": "lib-canvaskit",
+    "type": "library",
+    "name": {
+      "en": "CanvasKit",
+      "ko": "CanvasKit"
+    },
+    "description": {
+      "en": "Skia graphics library compiled to WebAssembly",
+      "ko": "WebAssembly로 컴파일된 Skia 그래픽 라이브러리"
+    },
+    "field": "Graphics/Canvas",
+    "tags": [
+      "WASM",
+      "Graphics",
+      "Skia"
+    ]
+  },
+  {
+    "id": "lib-konva",
+    "type": "library",
+    "name": {
+      "en": "Konva",
+      "ko": "Konva"
+    },
+    "description": {
+      "en": "2D canvas library for desktop and mobile",
+      "ko": "데스크톱 및 모바일용 2D 캔버스 라이브러리"
+    },
+    "field": "Graphics/Canvas",
+    "tags": [
+      "Canvas",
+      "2D",
+      "Interactive"
+    ]
+  },
+  {
+    "id": "lib-fabric-js",
+    "type": "library",
+    "name": {
+      "en": "Fabric.js",
+      "ko": "Fabric.js"
+    },
+    "description": {
+      "en": "Powerful canvas library with interactive object model",
+      "ko": "인터랙티브 객체 모델을 갖춘 강력한 캔버스 라이브러리"
+    },
+    "field": "Graphics/Canvas",
+    "tags": [
+      "Canvas",
+      "Editor",
+      "SVG"
+    ]
+  },
+  {
+    "id": "lib-paper-js",
+    "type": "library",
+    "name": {
+      "en": "Paper.js",
+      "ko": "Paper.js"
+    },
+    "description": {
+      "en": "Vector graphics scripting framework",
+      "ko": "벡터 그래픽 스크립팅 프레임워크"
+    },
+    "field": "Graphics/Canvas",
+    "tags": [
+      "Canvas",
+      "Vector",
+      "SVG"
+    ]
+  },
+  {
+    "id": "lib-p5-js",
+    "type": "library",
+    "name": {
+      "en": "p5.js",
+      "ko": "p5.js"
+    },
+    "description": {
+      "en": "JavaScript library for creative coding",
+      "ko": "크리에이티브 코딩을 위한 JavaScript 라이브러리"
+    },
+    "field": "Graphics/Canvas",
+    "tags": [
+      "Creative",
+      "Art",
+      "Education"
+    ]
+  },
+  {
+    "id": "lib-three-js",
+    "type": "library",
+    "name": {
+      "en": "Three.js",
+      "ko": "Three.js"
+    },
+    "description": {
+      "en": "3D library for creating WebGL content",
+      "ko": "WebGL 콘텐츠 생성을 위한 3D 라이브러리"
+    },
+    "field": "3D Graphics",
+    "tags": [
+      "3D",
+      "WebGL",
+      "Graphics"
+    ]
+  },
+  {
+    "id": "lib-babylon-js",
+    "type": "library",
+    "name": {
+      "en": "Babylon.js",
+      "ko": "Babylon.js"
+    },
+    "description": {
+      "en": "Powerful 3D game engine for the web",
+      "ko": "웹을 위한 강력한 3D 게임 엔진"
+    },
+    "field": "3D Graphics",
+    "tags": [
+      "3D",
+      "Game Engine",
+      "WebGL"
+    ]
+  },
+  {
+    "id": "lib-react-three-fiber",
+    "type": "library",
+    "name": {
+      "en": "React Three Fiber",
+      "ko": "React Three Fiber"
+    },
+    "description": {
+      "en": "React renderer for Three.js",
+      "ko": "Three.js를 위한 React 렌더러"
+    },
+    "field": "3D Graphics",
+    "tags": [
+      "React",
+      "Three.js",
+      "3D"
+    ]
+  },
+  {
+    "id": "lib-a-frame",
+    "type": "library",
+    "name": {
+      "en": "A-Frame",
+      "ko": "A-Frame"
+    },
+    "description": {
+      "en": "Web framework for building VR experiences",
+      "ko": "VR 경험 구축을 위한 웹 프레임워크"
+    },
+    "field": "3D Graphics",
+    "tags": [
+      "VR",
+      "AR",
+      "WebXR"
+    ]
+  },
+  {
+    "id": "lib-fflate",
+    "type": "library",
+    "name": {
+      "en": "fflate",
+      "ko": "fflate"
+    },
+    "description": {
+      "en": "High performance (de)compression in pure JavaScript",
+      "ko": "순수 JavaScript로 구현된 고성능 (압축/해제)"
+    },
+    "field": "Compression",
+    "tags": [
+      "Compression",
+      "Zip",
+      "Gzip"
+    ]
+  },
+  {
+    "id": "lib-pako",
+    "type": "library",
+    "name": {
+      "en": "pako",
+      "ko": "pako"
+    },
+    "description": {
+      "en": "zlib port to JavaScript - fast, modular, with streams",
+      "ko": "JavaScript로 포팅된 zlib - 빠르고 모듈식, 스트림 지원"
+    },
+    "field": "Compression",
+    "tags": [
+      "Compression",
+      "Zlib",
+      "Deflate"
+    ]
+  },
+  {
+    "id": "lib-lz-string",
+    "type": "library",
+    "name": {
+      "en": "lz-string",
+      "ko": "lz-string"
+    },
+    "description": {
+      "en": "LZ-based compression for JavaScript strings",
+      "ko": "JavaScript 문자열용 LZ 기반 압축"
+    },
+    "field": "Compression",
+    "tags": [
+      "Compression",
+      "String",
+      "localStorage"
+    ]
+  },
+  {
+    "id": "lib-brotli-wasm",
+    "type": "library",
+    "name": {
+      "en": "brotli-wasm",
+      "ko": "brotli-wasm"
+    },
+    "description": {
+      "en": "Brotli compression compiled to WebAssembly",
+      "ko": "WebAssembly로 컴파일된 Brotli 압축"
+    },
+    "field": "Compression",
+    "tags": [
+      "WASM",
+      "Compression",
+      "Brotli"
+    ]
+  },
+  {
+    "id": "lib-zstd-codec",
+    "type": "library",
+    "name": {
+      "en": "zstd-codec",
+      "ko": "zstd-codec"
+    },
+    "description": {
+      "en": "Zstandard compression for JavaScript via WASM",
+      "ko": "WASM을 통한 JavaScript용 Zstandard 압축"
+    },
+    "field": "Compression",
+    "tags": [
+      "WASM",
+      "Compression",
+      "Zstandard"
+    ]
+  },
+  {
+    "id": "lib-tweetnacl-js",
+    "type": "library",
+    "name": {
+      "en": "TweetNaCl.js",
+      "ko": "TweetNaCl.js"
+    },
+    "description": {
+      "en": "Port of TweetNaCl cryptographic library",
+      "ko": "TweetNaCl 암호화 라이브러리 포팅"
+    },
+    "field": "Cryptography",
+    "tags": [
+      "Crypto",
+      "Encryption",
+      "Signing"
+    ]
+  },
+  {
+    "id": "lib-noble-curves",
+    "type": "library",
+    "name": {
+      "en": "noble-curves",
+      "ko": "noble-curves"
+    },
+    "description": {
+      "en": "Audited elliptic curve cryptography in JavaScript",
+      "ko": "감사된 JavaScript 타원 곡선 암호화"
+    },
+    "field": "Cryptography",
+    "tags": [
+      "Crypto",
+      "Elliptic Curve",
+      "Audited"
+    ]
+  },
+  {
+    "id": "lib-libsodium-js",
+    "type": "library",
+    "name": {
+      "en": "libsodium.js",
+      "ko": "libsodium.js"
+    },
+    "description": {
+      "en": "JavaScript port of libsodium cryptographic library",
+      "ko": "libsodium 암호화 라이브러리의 JavaScript 포팅"
+    },
+    "field": "Cryptography",
+    "tags": [
+      "WASM",
+      "Crypto",
+      "libsodium"
+    ]
+  },
+  {
+    "id": "lib-crypto-js",
+    "type": "library",
+    "name": {
+      "en": "crypto-js",
+      "ko": "crypto-js"
+    },
+    "description": {
+      "en": "JavaScript library of crypto standards",
+      "ko": "암호화 표준의 JavaScript 라이브러리"
+    },
+    "field": "Cryptography",
+    "tags": [
+      "Crypto",
+      "AES",
+      "SHA",
+      "MD5"
+    ]
+  },
+  {
+    "id": "lib-protobuf-js",
+    "type": "library",
+    "name": {
+      "en": "protobuf.js",
+      "ko": "protobuf.js"
+    },
+    "description": {
+      "en": "Protocol Buffers for JavaScript",
+      "ko": "JavaScript용 Protocol Buffers"
+    },
+    "field": "Data Serialization",
+    "tags": [
+      "Protobuf",
+      "Binary",
+      "Google"
+    ]
+  },
+  {
+    "id": "lib-flatbuffers",
+    "type": "library",
+    "name": {
+      "en": "FlatBuffers",
+      "ko": "FlatBuffers"
+    },
+    "description": {
+      "en": "Efficient cross-platform serialization library",
+      "ko": "효율적인 크로스 플랫폼 직렬화 라이브러리"
+    },
+    "field": "Data Serialization",
+    "tags": [
+      "Binary",
+      "Google",
+      "Gaming"
+    ]
+  },
+  {
+    "id": "lib-msgpackr",
+    "type": "library",
+    "name": {
+      "en": "msgpackr",
+      "ko": "msgpackr"
+    },
+    "description": {
+      "en": "Fast MessagePack encoder/decoder",
+      "ko": "빠른 MessagePack 인코더/디코더"
+    },
+    "field": "Data Serialization",
+    "tags": [
+      "MessagePack",
+      "Binary",
+      "Fast"
+    ]
+  },
+  {
+    "id": "lib-cbor-x",
+    "type": "library",
+    "name": {
+      "en": "cbor-x",
+      "ko": "cbor-x"
+    },
+    "description": {
+      "en": "Fast CBOR encoder/decoder",
+      "ko": "빠른 CBOR 인코더/디코더"
+    },
+    "field": "Data Serialization",
+    "tags": [
+      "CBOR",
+      "Binary",
+      "IoT"
+    ]
+  },
+  {
+    "id": "lib-sharp",
+    "type": "library",
+    "name": {
+      "en": "Sharp",
+      "ko": "Sharp"
+    },
+    "description": {
+      "en": "High performance image processing",
+      "ko": "고성능 이미지 처리"
+    },
+    "field": "Image Processing",
+    "tags": [
+      "Image",
+      "Resize",
+      "Convert"
+    ]
+  },
+  {
+    "id": "lib-jimp",
+    "type": "library",
+    "name": {
+      "en": "Jimp",
+      "ko": "Jimp"
+    },
+    "description": {
+      "en": "JavaScript Image Manipulation Program",
+      "ko": "JavaScript 이미지 조작 프로그램"
+    },
+    "field": "Image Processing",
+    "tags": [
+      "Image",
+      "Pure JS",
+      "Manipulation"
+    ]
+  },
+  {
+    "id": "lib-pica",
+    "type": "library",
+    "name": {
+      "en": "Pica",
+      "ko": "Pica"
+    },
+    "description": {
+      "en": "High quality image resize in browser",
+      "ko": "브라우저에서 고품질 이미지 리사이즈"
+    },
+    "field": "Image Processing",
+    "tags": [
+      "Image",
+      "Resize",
+      "Browser"
+    ]
+  },
+  {
+    "id": "lib-upng-js",
+    "type": "library",
+    "name": {
+      "en": "UPNG.js",
+      "ko": "UPNG.js"
+    },
+    "description": {
+      "en": "Fast PNG encoder/decoder",
+      "ko": "빠른 PNG 인코더/디코더"
+    },
+    "field": "Image Processing",
+    "tags": [
+      "PNG",
+      "APNG",
+      "Image"
+    ]
+  },
+  {
+    "id": "lib-tone-js",
+    "type": "library",
+    "name": {
+      "en": "Tone.js",
+      "ko": "Tone.js"
+    },
+    "description": {
+      "en": "Web Audio framework for music synthesis",
+      "ko": "음악 합성을 위한 Web Audio 프레임워크"
+    },
+    "field": "Audio/Video",
+    "tags": [
+      "Audio",
+      "Music",
+      "Synthesizer"
+    ]
+  },
+  {
+    "id": "lib-howler-js",
+    "type": "library",
+    "name": {
+      "en": "Howler.js",
+      "ko": "Howler.js"
+    },
+    "description": {
+      "en": "Audio library for the modern web",
+      "ko": "모던 웹을 위한 오디오 라이브러리"
+    },
+    "field": "Audio/Video",
+    "tags": [
+      "Audio",
+      "Sound",
+      "Game"
+    ]
+  },
+  {
+    "id": "lib-wavesurfer-js",
+    "type": "library",
+    "name": {
+      "en": "WaveSurfer.js",
+      "ko": "WaveSurfer.js"
+    },
+    "description": {
+      "en": "Audio visualization and playback",
+      "ko": "오디오 시각화 및 재생"
+    },
+    "field": "Audio/Video",
+    "tags": [
+      "Audio",
+      "Waveform",
+      "Visualization"
+    ]
+  },
+  {
+    "id": "lib-video-js",
+    "type": "library",
+    "name": {
+      "en": "Video.js",
+      "ko": "Video.js"
+    },
+    "description": {
+      "en": "HTML5 video player framework",
+      "ko": "HTML5 비디오 플레이어 프레임워크"
+    },
+    "field": "Audio/Video",
+    "tags": [
+      "Video",
+      "Player",
+      "Streaming"
+    ]
+  },
+  {
+    "id": "lib-pdf-lib",
+    "type": "library",
+    "name": {
+      "en": "pdf-lib",
+      "ko": "pdf-lib"
+    },
+    "description": {
+      "en": "Create and modify PDF documents",
+      "ko": "PDF 문서 생성 및 수정"
+    },
+    "field": "PDF/Documents",
+    "tags": [
+      "PDF",
+      "Document",
+      "Pure JS"
+    ]
+  },
+  {
+    "id": "lib-pdf-js",
+    "type": "library",
+    "name": {
+      "en": "PDF.js",
+      "ko": "PDF.js"
+    },
+    "description": {
+      "en": "PDF reader built with JavaScript",
+      "ko": "JavaScript로 만든 PDF 리더"
+    },
+    "field": "PDF/Documents",
+    "tags": [
+      "PDF",
+      "Viewer",
+      "Mozilla"
+    ]
+  },
+  {
+    "id": "lib-mammoth",
+    "type": "library",
+    "name": {
+      "en": "Mammoth",
+      "ko": "Mammoth"
+    },
+    "description": {
+      "en": "Convert Word documents to HTML",
+      "ko": "Word 문서를 HTML로 변환"
+    },
+    "field": "PDF/Documents",
+    "tags": [
+      "Word",
+      "DOCX",
+      "HTML"
+    ]
+  },
+  {
+    "id": "lib-math-js",
+    "type": "library",
+    "name": {
+      "en": "Math.js",
+      "ko": "Math.js"
+    },
+    "description": {
+      "en": "Extensive math library for JavaScript",
+      "ko": "JavaScript용 광범위한 수학 라이브러리"
+    },
+    "field": "Math/Science",
+    "tags": [
+      "Math",
+      "Algebra",
+      "Expression"
+    ]
+  },
+  {
+    "id": "lib-numeric-js",
+    "type": "library",
+    "name": {
+      "en": "Numeric.js",
+      "ko": "Numeric.js"
+    },
+    "description": {
+      "en": "Numerical analysis in JavaScript",
+      "ko": "JavaScript에서 수치 분석"
+    },
+    "field": "Math/Science",
+    "tags": [
+      "Math",
+      "Matrix",
+      "Linear Algebra"
+    ]
+  },
+  {
+    "id": "lib-simple-statistics",
+    "type": "library",
+    "name": {
+      "en": "Simple Statistics",
+      "ko": "Simple Statistics"
+    },
+    "description": {
+      "en": "Statistical methods in JavaScript",
+      "ko": "JavaScript 통계 메서드"
+    },
+    "field": "Math/Science",
+    "tags": [
+      "Statistics",
+      "Math",
+      "Data"
+    ]
+  },
+  {
+    "id": "lib-stdlib",
+    "type": "library",
+    "name": {
+      "en": "stdlib",
+      "ko": "stdlib"
+    },
+    "description": {
+      "en": "Standard library for JavaScript numerical computing",
+      "ko": "JavaScript 수치 컴퓨팅 표준 라이브러리"
+    },
+    "field": "Math/Science",
+    "tags": [
+      "Math",
+      "Scientific",
+      "Statistics"
+    ]
+  },
+  {
     "id": "api-view-transitions-api",
     "type": "api",
     "name": {

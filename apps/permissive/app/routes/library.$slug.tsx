@@ -1,9 +1,20 @@
 import { dynamicMetaFactory } from '@soundblue/i18n';
 import { FadeIn } from '@soundblue/ui/animation';
-import { ArrowLeft, Calendar, ExternalLink, Github, Package, Scale, Star } from 'lucide-react';
+import {
+  ArrowLeft,
+  Calendar,
+  Code,
+  ExternalLink,
+  Github,
+  Lightbulb,
+  Package,
+  Scale,
+  Star,
+} from 'lucide-react';
 import { Link, useLoaderData } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import {
+  getCategorySlug,
   getLibraryBySlug,
   getLibrarySlug,
   getRelatedLibraries,
@@ -78,6 +89,11 @@ export default function LibraryDetailPage() {
 
         {/* Badges */}
         <div className="flex flex-wrap gap-2 mb-6">
+          {lib.wasmBased && (
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-blue-500/10 text-blue-500">
+              ⚡ WASM
+            </span>
+          )}
           {lib.trending && (
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-orange-500/10 text-orange-500">
               🔥 {isKorean ? '트렌딩' : 'Trending'}
@@ -88,9 +104,12 @@ export default function LibraryDetailPage() {
               ✨ {isKorean ? '이 사이트에서 사용 중' : 'Used in this site'}
             </span>
           )}
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-(--bg-tertiary) text-(--text-secondary)">
+          <Link
+            to={localePath(`/category/${getCategorySlug(lib.category)}`)}
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-(--bg-tertiary) text-(--text-secondary) hover:bg-(--bg-elevated) hover:text-(--text-primary) transition-colors"
+          >
             {lib.category}
-          </span>
+          </Link>
         </div>
 
         {/* Stats */}
@@ -179,6 +198,36 @@ export default function LibraryDetailPage() {
             )}
           </div>
         </div>
+
+        {/* Use Cases */}
+        {lib.useCases && (
+          <div className="mb-8">
+            <h2 className="flex items-center gap-2 text-lg font-semibold text-(--text-primary) mb-3">
+              <Lightbulb size={20} aria-hidden="true" className="text-yellow-500" />
+              {isKorean ? '용도 및 활용' : 'Use Cases'}
+            </h2>
+            <div className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)">
+              <p className="text-(--text-secondary) leading-relaxed">
+                {isKorean ? lib.useCases.ko : lib.useCases.en}
+              </p>
+            </div>
+          </div>
+        )}
+
+        {/* Code Example */}
+        {lib.codeExample && (
+          <div className="mb-8">
+            <h2 className="flex items-center gap-2 text-lg font-semibold text-(--text-primary) mb-3">
+              <Code size={20} aria-hidden="true" className="text-green-500" />
+              {isKorean ? '코드 예시' : 'Code Example'}
+            </h2>
+            <div className="rounded-xl bg-(--bg-elevated) border border-(--border-primary) overflow-hidden">
+              <pre className="p-4 overflow-x-auto text-sm">
+                <code className="text-(--text-secondary) whitespace-pre">{lib.codeExample}</code>
+              </pre>
+            </div>
+          </div>
+        )}
 
         {/* Related Libraries */}
         {related.length > 0 && (
