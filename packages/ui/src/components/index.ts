@@ -10,6 +10,8 @@ export {
   type AccordionProps,
   type AccordionTriggerProps,
 } from './Accordion';
+// Bottom Navigation
+export { BottomNav, type BottomNavItem, type BottomNavProps } from './BottomNav';
 // Button Components
 export {
   Button,

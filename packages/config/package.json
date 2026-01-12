@@ -2,7 +2,7 @@
   "name": "@soundblue/config",
   "version": "1.0.0",
   "type": "module",
-  "sideEffects": false,
+  "sideEffects": ["./src/entry-client.tsx"],
   "main": "./src/index.ts",
   "types": "./src/index.ts",
   "exports": {
@@ -10,13 +10,45 @@
     "./tailwind": "./src/tailwind.ts",
     "./vite": "./src/vite.ts",
     "./biome": "./src/biome.ts",
-    "./styles/tailwind.css": "./src/styles/tailwind.css"
+    "./styles/tailwind.css": "./src/styles/tailwind.css",
+    "./entry-client": {
+      "types": "./src/entry-client.tsx",
+      "default": "./src/entry-client.tsx"
+    }
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "^7.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "react-router": {
+      "optional": true
+    }
+  },
   "devDependencies": {
+    "@inlang/paraglide-js": "^2.7.2",
+    "@react-router/dev": "^7.12.0",
+    "@tailwindcss/vite": "^4.1.18",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "^7.0.0",
+    "rollup-plugin-visualizer": "^5.14.0",
     "tailwindcss": "^4.1.18",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "vite": "^7.3.1",
+    "vite-plugin-pwa": "^1.2.0",
+    "workbox-build": "^7.4.0"
   }
 }

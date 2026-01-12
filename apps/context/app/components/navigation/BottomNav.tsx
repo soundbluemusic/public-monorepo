@@ -1,68 +1,23 @@
-import { cn } from '@soundblue/ui/utils';
+import { BottomNav as BaseBottomNav, type BottomNavItem } from '@soundblue/ui/components';
 import { Bookmark, Grid3X3, Home, Info, MessageCircle } from 'lucide-react';
-import { Link } from 'react-router';
-import { useIsActiveRoute } from '@/hooks';
 import { useI18n } from '@/i18n';
 
-export function BottomNav() {
-  const { t, localePath } = useI18n();
-  const { isActive } = useIsActiveRoute();
+const items: BottomNavItem[] = [
+  { to: '/', icon: Home, label: 'Home', labelKo: '홈' },
+  { to: '/browse', icon: Grid3X3, label: 'Browse', labelKo: '탐색' },
+  { to: '/conversations', icon: MessageCircle, label: 'Talk', labelKo: '대화' },
+  { to: '/bookmarks', icon: Bookmark, label: 'Bookmarks', labelKo: '북마크' },
+  { to: '/about', icon: Info, label: 'About', labelKo: '정보' },
+];
 
+export function BottomNav() {
+  const { locale, localePath } = useI18n();
   return (
-    <nav
-      className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-(--bg-elevated) border-t border-(--border-primary) flex items-center justify-around h-(--bottom-nav-height) pb-[env(safe-area-inset-bottom)]"
-      aria-label="Mobile navigation"
-    >
-      <Link
-        to={localePath('/')}
-        className={cn(
-          'flex flex-col items-center justify-center gap-1 min-h-11 min-w-11 px-3 py-2 rounded-lg transition-colors',
-          isActive('/') ? 'text-(--accent-primary)' : 'text-(--text-secondary)',
-        )}
-      >
-        <Home size={20} aria-hidden="true" />
-        <span className="text-[12px]">{t('home')}</span>
-      </Link>
-      <Link
-        to={localePath('/browse')}
-        className={cn(
-          'flex flex-col items-center justify-center gap-1 min-h-11 min-w-11 px-3 py-2 rounded-lg transition-colors',
-          isActive('/browse') ? 'text-(--accent-primary)' : 'text-(--text-secondary)',
-        )}
-      >
-        <Grid3X3 size={20} aria-hidden="true" />
-        <span className="text-[12px]">{t('browse')}</span>
-      </Link>
-      <Link
-        to={localePath('/conversations')}
-        className={cn(
-          'flex flex-col items-center justify-center gap-1 min-h-11 min-w-11 px-3 py-2 rounded-lg transition-colors',
-          isActive('/conversations') ? 'text-(--accent-primary)' : 'text-(--text-secondary)',
-        )}
-      >
-        <MessageCircle size={20} aria-hidden="true" />
-        <span className="text-[12px]">{t('talk')}</span>
-      </Link>
-      <Link
-        to={localePath('/bookmarks')}
-        className={cn(
-          'flex flex-col items-center justify-center gap-1 min-h-11 min-w-11 px-3 py-2 rounded-lg transition-colors',
-          isActive('/bookmarks') ? 'text-(--accent-primary)' : 'text-(--text-secondary)',
-        )}
-      >
-        <Bookmark size={20} aria-hidden="true" />
-        <span className="text-[12px]">{t('bookmarks')}</span>
-      </Link>
-      <Link
-        to={localePath('/about')}
-        className={cn(
-          'flex flex-col items-center justify-center gap-1 min-h-11 min-w-11 px-3 py-2 rounded-lg transition-colors',
-          isActive('/about') ? 'text-(--accent-primary)' : 'text-(--text-secondary)',
-        )}
-      >
-        <Info size={20} aria-hidden="true" />
-        <span className="text-[12px]">{t('about')}</span>
-      </Link>
-    </nav>
+    <BaseBottomNav
+      items={items}
+      locale={locale}
+      localePath={localePath}
+      heightClass="h-(--bottom-nav-height)"
+    />
   );
 }
