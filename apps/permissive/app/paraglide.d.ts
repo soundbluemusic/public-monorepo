@@ -11,6 +11,8 @@ declare module '~/paraglide/messages.js' {
 }
 
 declare module '~/paraglide/runtime.js' {
+  import type { AsyncLocalStorage } from 'node:async_hooks';
+
   export type Language = 'en' | 'ko';
 
   export function getLocale(): Language;
@@ -21,5 +23,5 @@ declare module '~/paraglide/runtime.js' {
 
   export function cancelAsyncLocalStorage(): void;
   export function extractLocaleFromRequest(request: Request): Language;
-  export function overwriteServerAsyncLocalStorage(storage: any): void;
+  export function overwriteServerAsyncLocalStorage(storage: AsyncLocalStorage<{ locale: string }>): void;
 }

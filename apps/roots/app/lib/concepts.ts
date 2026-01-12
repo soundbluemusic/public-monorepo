@@ -50,7 +50,7 @@ async function loadIndex(): Promise<ConceptsIndex> {
     new Promise<never>((_, reject) =>
       setTimeout(() => reject(new Error('Timeout loading concepts/index.json')), 10000),
     ),
-  ]).catch((err) => {
+  ]).catch((err: unknown) => {
     console.error('Failed to load concepts/index.json:', err);
     indexLoadPromise = null;
     throw err;
@@ -88,7 +88,7 @@ export async function loadConceptsByField(field: string): Promise<MathConcept[]>
     new Promise<never>((_, reject) =>
       setTimeout(() => reject(new Error(`Timeout loading concepts/${field}.json`)), 10000),
     ),
-  ]).catch((err) => {
+  ]).catch((err: unknown) => {
     console.error(`Failed to load concepts/${field}.json:`, err);
     fieldLoadPromises.delete(field);
     throw err;
