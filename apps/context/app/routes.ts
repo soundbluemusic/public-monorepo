@@ -3,47 +3,40 @@ import { index, type RouteConfig, route } from '@react-router/dev/routes';
 /**
  * Context 앱 라우트 설정
  *
- * 라우트 파일들은 BUILD_TARGET 환경변수에 따라 조건부로 loader를 export합니다.
+ * ## URL 패턴
+ * - /path        → 영어 (locale = undefined)
+ * - /ko/path     → 한국어 (locale = 'ko')
+ *
+ * ## (:locale)? 패턴
+ * React Router v7의 optional segment를 사용하여 영어/한국어 라우트를 단일 파일로 관리합니다.
+ * - 파일명: ($locale).route-name.tsx
+ * - params.locale: undefined (영어) | 'ko' (한국어)
+ *
+ * ## BUILD_TARGET
  * - pages: clientLoader만 사용 (SPA fallback)
  * - r2/all: loader + clientLoader 모두 사용 (완전한 SSG)
- *
- * 이 방식으로 라우트 파일 중복을 제거하고 단일 파일로 관리합니다.
  */
 
 export default [
-  // English routes
+  // Static pages (optional locale)
   index('routes/_index.tsx'),
-  route('browse', 'routes/browse.tsx'),
-  route('my-learning', 'routes/my-learning.tsx'),
-  route('bookmarks', 'routes/bookmarks.tsx'),
-  route('about', 'routes/about.tsx'),
-  route('sitemap', 'routes/sitemap.tsx'),
-  route('privacy', 'routes/privacy.tsx'),
-  route('terms', 'routes/terms.tsx'),
-  route('license', 'routes/license.tsx'),
-  route('built-with', 'routes/built-with.tsx'),
-  route('download', 'routes/download.tsx'),
-  route('entry/:entryId', 'routes/entry.$entryId.tsx'),
-  route('category/:categoryId', 'routes/category.$categoryId.tsx'),
-  route('conversations', 'routes/conversations._index.tsx'),
-  route('conversations/:categoryId', 'routes/conversations.$categoryId.tsx'),
-
-  // Korean routes
   route('ko', 'routes/ko._index.tsx'),
-  route('ko/browse', 'routes/ko.browse.tsx'),
-  route('ko/my-learning', 'routes/ko.my-learning.tsx'),
-  route('ko/bookmarks', 'routes/ko.bookmarks.tsx'),
-  route('ko/about', 'routes/ko.about.tsx'),
-  route('ko/sitemap', 'routes/ko.sitemap.tsx'),
-  route('ko/privacy', 'routes/ko.privacy.tsx'),
-  route('ko/terms', 'routes/ko.terms.tsx'),
-  route('ko/license', 'routes/ko.license.tsx'),
-  route('ko/built-with', 'routes/ko.built-with.tsx'),
-  route('ko/download', 'routes/ko.download.tsx'),
-  route('ko/entry/:entryId', 'routes/ko.entry.$entryId.tsx'),
-  route('ko/category/:categoryId', 'routes/ko.category.$categoryId.tsx'),
-  route('ko/conversations', 'routes/ko.conversations._index.tsx'),
-  route('ko/conversations/:categoryId', 'routes/ko.conversations.$categoryId.tsx'),
+  route('(:locale)?/browse', 'routes/($locale).browse.tsx'),
+  route('(:locale)?/my-learning', 'routes/($locale).my-learning.tsx'),
+  route('(:locale)?/bookmarks', 'routes/($locale).bookmarks.tsx'),
+  route('(:locale)?/about', 'routes/($locale).about.tsx'),
+  route('(:locale)?/sitemap', 'routes/($locale).sitemap.tsx'),
+  route('(:locale)?/privacy', 'routes/($locale).privacy.tsx'),
+  route('(:locale)?/terms', 'routes/($locale).terms.tsx'),
+  route('(:locale)?/license', 'routes/($locale).license.tsx'),
+  route('(:locale)?/built-with', 'routes/($locale).built-with.tsx'),
+  route('(:locale)?/download', 'routes/($locale).download.tsx'),
+
+  // Dynamic pages (optional locale)
+  route('(:locale)?/entry/:entryId', 'routes/($locale).entry.$entryId.tsx'),
+  route('(:locale)?/category/:categoryId', 'routes/($locale).category.$categoryId.tsx'),
+  route('(:locale)?/conversations', 'routes/($locale).conversations._index.tsx'),
+  route('(:locale)?/conversations/:categoryId', 'routes/($locale).conversations.$categoryId.tsx'),
 
   // 404 catch-all
   route('*', 'routes/$.tsx'),

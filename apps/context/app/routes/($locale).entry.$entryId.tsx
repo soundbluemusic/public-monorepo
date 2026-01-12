@@ -17,28 +17,38 @@ import { useI18n } from '@/i18n';
 import { useUserDataStore } from '@/stores/user-data-store';
 
 /**
- * Entry 페이지 (Pages 빌드용) - 영어 버전
+ * Entry 페이지 (영어/한국어 통합)
  *
- * ## BUILD_TARGET=pages
- * - clientLoader만 사용 (SPA fallback 방식)
- * - entry 라우트는 prerender 대상이 아님
- *
- * ## R2 빌드는 entry.$entryId.r2.tsx 사용
- * - loader 포함 → 완전한 SSG
+ * URL 패턴:
+ * - /entry/:entryId     → 영어 (locale = undefined)
+ * - /ko/entry/:entryId  → 한국어 (locale = 'ko')
  */
+
+interface LoaderParams {
+  locale?: string;
+  entryId: string;
+}
 
 /**
  * clientLoader: 클라이언트에서 데이터 로드
  */
-export async function clientLoader({ params }: { params: { entryId: string } }) {
+export async function clientLoader({ params }: { params: LoaderParams }) {
   const { getEntryByIdForLocale } = await import('@/data/entries');
-  const entry = await getEntryByIdForLocale(params.entryId, 'en');
-  return { entry: entry || null };
+  const locale = params.locale === 'ko' ? 'ko' : 'en';
+  const entry = await getEntryByIdForLocale(params.entryId, locale);
+
+  // colors 카테고리의 경우 영어 색상명도 함께 로드 (색상 표시용)
+  let englishColorName: string | undefined;
+  if (locale === 'ko' && entry?.categoryId === 'colors') {
+    const enEntry = await getEntryByIdForLocale(params.entryId, 'en');
+    englishColorName = enEntry?.translation.word;
+  }
+
+  return { entry: entry || null, englishColorName };
 }
 
 // Hydration fallback to show while clientLoader is running
 export function HydrateFallback() {
-  // Return null to use the pre-rendered HTML as-is during hydration
   return null;
 }
 
@@ -50,7 +60,6 @@ export const meta = dynamicMetaFactory((data: { entry: LocaleEntry | null }) => 
     };
   }
   const { entry } = data;
-  // 영어 페이지이므로 entry.translation은 영어 번역
   return {
     ko: {
       title: `${entry.korean} - ${entry.translation.word} | Context`,
@@ -64,12 +73,12 @@ export const meta = dynamicMetaFactory((data: { entry: LocaleEntry | null }) => 
 }, 'https://context.soundbluemusic.com');
 
 export default function EntryPage() {
-  const { entry } = useLoaderData<{ entry: LocaleEntry | null }>();
+  const { entry, englishColorName } = useLoaderData<{
+    entry: LocaleEntry | null;
+    englishColorName?: string;
+  }>();
   const { locale, t, localePath } = useI18n();
 
-  // Zustand store - 직접 state 속성 참조로 상태 변경 감지 보장
-  // ❌ state.isFavorite(id) 사용 금지 - get() 내부 호출로 Zustand 상태 추적 실패
-  // ✅ state.favorites를 직접 참조해야 Zustand가 변경을 감지함
   const isFavorite = useUserDataStore((state) =>
     entry?.id ? state.favorites.some((f) => f.entryId === entry.id) : false,
   );
@@ -103,7 +112,6 @@ export default function EntryPage() {
     });
   };
 
-  // 에러 또는 없는 엔트리
   if (!entry) {
     return (
       <Layout>
@@ -120,8 +128,10 @@ export default function EntryPage() {
     );
   }
 
-  // LocaleEntry는 이미 해당 locale의 translation만 포함
   const translation = entry.translation;
+
+  // 색상 코드: 한국어 페이지는 영어 색상명 사용, 영어 페이지는 translation.word 사용
+  const colorName = englishColorName || translation.word;
 
   return (
     <Layout>
@@ -133,7 +143,6 @@ export default function EntryPage() {
               <p className="text-lg text-(--text-tertiary)">{entry.romanization}</p>
             </div>
 
-            {/* Action buttons */}
             <div className="flex items-center gap-2">
               <button
                 type="button"
@@ -151,7 +160,6 @@ export default function EntryPage() {
             </div>
           </div>
 
-          {/* Study status */}
           {isStudied ? (
             <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-(--bg-elevated) border border-(--accent-primary)">
               <div className="w-5 h-5 rounded-full flex items-center justify-center bg-(--accent-primary)">
@@ -176,7 +184,7 @@ export default function EntryPage() {
         {/* Color Swatch - colors 카테고리만 표시 */}
         {isColorEntry(entry.categoryId) &&
           (() => {
-            const colorCode = getColorCodeByName(translation.word);
+            const colorCode = getColorCodeByName(colorName);
             return colorCode ? (
               <section className="mb-6">
                 <h2 className="text-lg font-semibold text-(--text-primary) mb-3">

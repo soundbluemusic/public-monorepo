@@ -551,6 +551,9 @@ importers:
       '@soundblue/core':
         specifier: workspace:*
         version: link:../core
+      '@soundblue/seo':
+        specifier: workspace:*
+        version: link:../seo
       react:
         specifier: ^19.2.3
         version: 19.2.3

@@ -1,23 +1,24 @@
-import { index, type RouteConfig, route } from '@react-router/dev/routes';
+import { type RouteConfig, route } from '@react-router/dev/routes';
 
+/**
+ * Permissive 라우트 설정
+ *
+ * optional locale 패턴 사용: `(:locale)?`
+ * - `/` → 영어 (기본)
+ * - `/ko` → 한국어
+ *
+ * 기존 명시적 분리 패턴 (ko.*.tsx)에서 통합 패턴 (($locale).*.tsx)으로 마이그레이션됨.
+ * 라우트 파일 수: 14개 → 8개 (43% 감소)
+ */
 export default [
-  // English routes
-  index('routes/_index.tsx'),
-  route('web-api', 'routes/web-api.tsx'),
-  route('web-api/:slug', 'routes/web-api.$slug.tsx'),
-  route('libraries', 'routes/libraries.tsx'),
-  route('library/:slug', 'routes/library.$slug.tsx'),
-  route('built-with', 'routes/built-with.tsx'),
-  route('sitemap', 'routes/sitemap.tsx'),
-
-  // Korean routes
-  route('ko', 'routes/ko._index.tsx'),
-  route('ko/web-api', 'routes/ko.web-api.tsx'),
-  route('ko/web-api/:slug', 'routes/ko.web-api.$slug.tsx'),
-  route('ko/libraries', 'routes/ko.libraries.tsx'),
-  route('ko/library/:slug', 'routes/ko.library.$slug.tsx'),
-  route('ko/built-with', 'routes/ko.built-with.tsx'),
-  route('ko/sitemap', 'routes/ko.sitemap.tsx'),
+  // Consolidated routes with optional locale
+  route('(:locale)?', 'routes/($locale)._index.tsx'),
+  route('(:locale)?/web-api', 'routes/($locale).web-api.tsx'),
+  route('(:locale)?/web-api/:slug', 'routes/($locale).web-api.$slug.tsx'),
+  route('(:locale)?/libraries', 'routes/($locale).libraries.tsx'),
+  route('(:locale)?/library/:slug', 'routes/($locale).library.$slug.tsx'),
+  route('(:locale)?/built-with', 'routes/($locale).built-with.tsx'),
+  route('(:locale)?/sitemap', 'routes/($locale).sitemap.tsx'),
 
   // 404 catch-all
   route('*', 'routes/$.tsx'),

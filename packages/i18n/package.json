@@ -17,7 +17,8 @@
     "./codegen": "./src/codegen/index.ts"
   },
   "dependencies": {
-    "@soundblue/core": "workspace:*"
+    "@soundblue/core": "workspace:*",
+    "@soundblue/seo": "workspace:*"
   },
   "peerDependencies": {
     "react": "^19.2.3",
