@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "react-router dev",
     "prebuild": "pnpm exec paraglide-js compile --project ./project.inlang --outdir ./app/paraglide && tsx scripts/generate-search-index.ts",
-    "build": "react-router build && tsx scripts/generate-sitemaps.ts",
+    "build": "NODE_OPTIONS='--max-old-space-size=8192' react-router build && tsx scripts/generate-sitemaps.ts",
     "preview": "npx serve build/client -l 3005 --no-port-switching",
     "start": "npx serve build/client -l 3005 --no-port-switching",
     "lint": "biome lint .",

@@ -38,20 +38,20 @@ export default {
       (categoryId) => `/conversations/${categoryId}`,
     );
 
-    // Entry routes (대량 - R2용)
-    const { lightEntries } = await import('./app/data/entries/index.js');
-    const entryRoutes = generateI18nRoutes(lightEntries, (entry) => `/entry/${entry.id}`);
-
     // 빌드 대상에 따라 라우트 선택
     let allRoutes: string[];
 
     if (buildTarget === 'pages') {
       // Pages: 핵심 페이지만 (20K 제한 내)
+      // 메모리 최적화: lightEntries를 로드하지 않음 (~30MB 절약)
       allRoutes = [...staticRoutes, ...categoryRoutes, ...conversationRoutes];
       console.log(
-        `[SSG:pages] Prerender routes: ${allRoutes.length} (excluding ${entryRoutes.length} entries)`,
+        `[SSG:pages] Prerender routes: ${allRoutes.length} (entries excluded for memory optimization)`,
       );
     } else if (buildTarget === 'r2') {
+      // Entry routes (대량 - R2용) - r2/all 모드에서만 로드
+      const { lightEntries } = await import('./app/data/entries/index.js');
+      const entryRoutes = generateI18nRoutes(lightEntries, (entry) => `/entry/${entry.id}`);
       // R2: 엔트리 + 정적 페이지 (loader 있는 라우트도 prerender해야 검증 통과)
       // 업로드 스크립트에서 entry 폴더만 선택하므로 정적 페이지는 R2에 업로드되지 않음
       allRoutes = [...staticRoutes, ...entryRoutes, ...categoryRoutes, ...conversationRoutes];
@@ -60,6 +60,8 @@ export default {
       );
     } else {
       // all: 전체 (로컬 테스트용)
+      const { lightEntries } = await import('./app/data/entries/index.js');
+      const entryRoutes = generateI18nRoutes(lightEntries, (entry) => `/entry/${entry.id}`);
       allRoutes = [...staticRoutes, ...entryRoutes, ...categoryRoutes, ...conversationRoutes];
       console.log(`[SSG:all] Total prerender routes: ${allRoutes.length}`);
     }
