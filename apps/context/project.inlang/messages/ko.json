@@ -196,6 +196,8 @@
   "downloadMetaDesc": "파일 목록 및 카테고리 정보",
   "downloadZip": "전체 데이터 다운로드 (ZIP)",
   "downloadZipDesc": "모든 어휘, 대화, 메타데이터를 한 파일로 (~3MB)",
+  "folder": "폴더",
+  "openInGitHub": "GitHub에서 보기",
   "entryDialogue": "대화 예문",
   "entryDialogueContext": "상황",
   "speakerA": "A",

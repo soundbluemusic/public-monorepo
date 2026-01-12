@@ -87,6 +87,10 @@ export const meta = metaFactory(
 const GITHUB_RAW_BASE =
   'https://raw.githubusercontent.com/soundbluemusic/public-monorepo/main/data/context';
 
+/** GitHub 브라우저 URL (디렉토리 탐색용) */
+const GITHUB_BROWSER_BASE =
+  'https://github.com/soundbluemusic/public-monorepo/tree/main/data/context';
+
 /** ZIP 다운로드 URL */
 const ZIP_DOWNLOAD_URL = `${GITHUB_RAW_BASE}/context-data.zip`;
 
@@ -100,6 +104,8 @@ interface DownloadItem {
   labelKey: 'downloadEntries' | 'downloadConversations' | 'downloadMeta';
   descKey: 'downloadEntriesDesc' | 'downloadConversationsDesc' | 'downloadMetaDesc';
   getUrl: () => string;
+  /** true면 GitHub 브라우저 페이지로 연결 (디렉토리용) */
+  isExternal?: boolean;
 }
 
 export default function DownloadPage() {
@@ -114,7 +120,8 @@ export default function DownloadPage() {
       icon: BookOpen,
       labelKey: 'downloadEntries',
       descKey: 'downloadEntriesDesc',
-      getUrl: () => `${GITHUB_RAW_BASE}/entries/`,
+      getUrl: () => `${GITHUB_BROWSER_BASE}/entries`,
+      isExternal: true,
     },
     {
       type: 'conversations',
@@ -246,7 +253,7 @@ export default function DownloadPage() {
             {t('downloadDirectLinks')}
           </h2>
 
-          {downloadItems.map(({ type, icon: Icon, labelKey, descKey, getUrl }) => {
+          {downloadItems.map(({ type, icon: Icon, labelKey, descKey, getUrl, isExternal }) => {
             const url = getUrl();
             const isCopied = copiedUrl === url;
 
@@ -263,7 +270,7 @@ export default function DownloadPage() {
                     <div className="flex items-center gap-2">
                       <span className="font-medium text-(--text-primary)">{t(labelKey)}</span>
                       <span className="text-xs px-2 py-0.5 bg-(--bg-tertiary) rounded text-(--text-tertiary)">
-                        .json
+                        {isExternal ? t('folder') : '.json'}
                       </span>
                     </div>
                     <p className="text-sm text-(--text-secondary) mt-1">{t(descKey)}</p>
@@ -273,28 +280,40 @@ export default function DownloadPage() {
                       <code className="flex-1 text-xs bg-(--bg-tertiary) px-3 py-2 rounded-lg font-mono text-(--text-secondary) overflow-x-auto whitespace-nowrap">
                         {url}
                       </code>
-                      <button
-                        type="button"
-                        onClick={() => handleCopyUrl(url)}
-                        className={cn(
-                          'shrink-0 inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium rounded-lg transition-colors cursor-pointer',
-                          isCopied
-                            ? 'bg-green-500 text-white'
-                            : 'bg-(--accent-primary) text-white hover:bg-(--accent-primary)/90',
-                        )}
-                      >
-                        {isCopied ? (
-                          <>
-                            <Check size={14} />
-                            {t('apiCopied')}
-                          </>
-                        ) : (
-                          <>
-                            <Copy size={14} />
-                            {t('apiCopyUrl')}
-                          </>
-                        )}
-                      </button>
+                      {isExternal ? (
+                        <a
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="shrink-0 inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium rounded-lg transition-colors cursor-pointer bg-(--accent-primary) text-white hover:bg-(--accent-primary)/90"
+                        >
+                          <ExternalLink size={14} />
+                          {t('openInGitHub')}
+                        </a>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={() => handleCopyUrl(url)}
+                          className={cn(
+                            'shrink-0 inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium rounded-lg transition-colors cursor-pointer',
+                            isCopied
+                              ? 'bg-green-500 text-white'
+                              : 'bg-(--accent-primary) text-white hover:bg-(--accent-primary)/90',
+                          )}
+                        >
+                          {isCopied ? (
+                            <>
+                              <Check size={14} />
+                              {t('apiCopied')}
+                            </>
+                          ) : (
+                            <>
+                              <Copy size={14} />
+                              {t('apiCopyUrl')}
+                            </>
+                          )}
+                        </button>
+                      )}
                     </div>
                   </div>
                 </div>

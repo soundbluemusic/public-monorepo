@@ -196,6 +196,8 @@
   "downloadMetaDesc": "File listing and category information",
   "downloadZip": "Download All Data (ZIP)",
   "downloadZipDesc": "All vocabulary, conversations, and metadata in one file (~3MB)",
+  "folder": "Folder",
+  "openInGitHub": "View on GitHub",
   "entryDialogue": "Dialogue Example",
   "entryDialogueContext": "Context",
   "speakerA": "A",
