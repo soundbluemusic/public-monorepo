@@ -120,6 +120,9 @@ export function useLibraryFilters({ libraries: libs }: UseLibraryFiltersOptions)
       setQuickFilter(filter);
       setSelectedTag(null);
       const params = new URLSearchParams(searchParams);
+      // 기존 필터 파라미터 먼저 삭제 (상호 배타적)
+      params.delete('filter');
+      params.delete('trending');
       if (filter === 'trending') {
         params.set('trending', 'true');
       } else {
