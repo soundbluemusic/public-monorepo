@@ -1,5 +1,4 @@
 import { dynamicMetaFactory } from '@soundblue/i18n';
-import { FadeIn } from '@soundblue/ui/animation';
 import { ArrowLeft, Calendar, CheckCircle, ExternalLink, Globe } from 'lucide-react';
 import { Link, useLoaderData } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
@@ -56,7 +55,7 @@ export default function WebApiDetailPage() {
 
   return (
     <DocsLayout>
-      <FadeIn>
+      <div>
         {/* Back link */}
         <Link
           to={localePath('/web-api')}
@@ -173,7 +172,7 @@ export default function WebApiDetailPage() {
             </div>
           </div>
         )}
-      </FadeIn>
+      </div>
     </DocsLayout>
   );
 }

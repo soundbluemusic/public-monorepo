@@ -1,5 +1,4 @@
 import { metaFactory } from '@soundblue/seo/meta';
-import { FadeIn } from '@soundblue/ui/animation';
 import { useLoaderData } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import { ApiGrid, QuickFilters, SearchAndSort, useWebApiFilters } from '../components/web-api';
@@ -50,16 +49,14 @@ export default function WebApiPage() {
   return (
     <DocsLayout>
       {/* Header */}
-      <FadeIn>
-        <div className="mb-6">
-          <h1 className="text-2xl font-bold text-(--text-primary) mb-2">Web API</h1>
-          <p className="text-(--text-secondary)">
-            {locale === 'ko'
-              ? '브라우저에 내장된 무료 API. 설치 없이 바로 사용 가능'
-              : 'Browser built-in APIs. Free to use, no installation required'}
-          </p>
-        </div>
-      </FadeIn>
+      <div className="mb-6">
+        <h1 className="text-2xl font-bold text-(--text-primary) mb-2">Web API</h1>
+        <p className="text-(--text-secondary)">
+          {locale === 'ko'
+            ? '브라우저에 내장된 무료 API. 설치 없이 바로 사용 가능'
+            : 'Browser built-in APIs. Free to use, no installation required'}
+        </p>
+      </div>
 
       <QuickFilters
         locale={locale}
