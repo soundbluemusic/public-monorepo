@@ -92,7 +92,7 @@ export default defineConfig({
         },
         {
           tag: 'meta',
-          attrs: { name: 'apple-mobile-web-app-capable', content: 'yes' },
+          attrs: { name: 'mobile-web-app-capable', content: 'yes' },
         },
         {
           tag: 'meta',
@@ -100,7 +100,15 @@ export default defineConfig({
         },
         {
           tag: 'link',
-          attrs: { rel: 'apple-touch-icon', href: '/public-monorepo/apple-touch-icon.svg' },
+          attrs: { rel: 'apple-touch-icon', sizes: '180x180', href: '/public-monorepo/apple-touch-icon.png' },
+        },
+        {
+          tag: 'link',
+          attrs: { rel: 'icon', type: 'image/svg+xml', href: '/public-monorepo/favicon.svg' },
+        },
+        {
+          tag: 'link',
+          attrs: { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/public-monorepo/favicon-32.png' },
         },
         {
           tag: 'script',

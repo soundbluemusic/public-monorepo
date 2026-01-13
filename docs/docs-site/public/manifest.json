@@ -5,23 +5,33 @@
   "start_url": "/public-monorepo/",
   "scope": "/public-monorepo/",
   "display": "standalone",
+  "orientation": "any",
   "background_color": "#0a0a0a",
   "theme_color": "#2563eb",
+  "categories": ["education", "documentation"],
+  "lang": "en",
+  "dir": "ltr",
   "icons": [
     {
-      "src": "/public-monorepo/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any"
+      "src": "/public-monorepo/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/public-monorepo/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/public-monorepo/icons/icon-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
       "src": "/public-monorepo/favicon.svg",
       "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "maskable"
+      "type": "image/svg+xml"
     }
-  ],
-  "categories": ["education", "documentation"],
-  "lang": "en",
-  "dir": "ltr"
+  ]
 }
