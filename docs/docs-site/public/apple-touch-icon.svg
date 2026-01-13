@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#60a5fa;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="180" height="180" rx="30" fill="url(#grad)"/>
+  <!-- 열린 책 (스케일 업) -->
+  <path d="M30 50 Q90 35 90 35 Q90 35 150 50 L150 140 Q90 125 90 125 Q90 125 30 140 Z" fill="white" opacity="0.95"/>
+  <path d="M90 35 L90 125" stroke="#2563eb" stroke-width="2" opacity="0.3"/>
+  <!-- 체크마크 -->
+  <path d="M60 85 L80 105 L120 65" stroke="#2563eb" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
