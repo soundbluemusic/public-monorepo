@@ -16,9 +16,7 @@ export function BuiltWithSection({ locale }: BuiltWithSectionProps) {
   return (
     <div className="py-8 text-center border-t border-(--border-primary)">
       <p className="text-sm text-(--text-tertiary) mb-3">
-        {locale === 'ko'
-          ? '이 사이트도 여기 있는 도구로 만들었어요'
-          : 'This site is built with tools listed here'}
+        {locale === 'ko' ? '사용된 오픈소스' : 'Open source'}
       </p>
       <div className="flex flex-wrap justify-center gap-2 mb-4">
         {featuredProjects.map((project) => (
