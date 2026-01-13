@@ -89,32 +89,32 @@ main {
 /* ===== 2. Sidebar Toggle Button ===== */
 .sidebar-toggle-btn {
   position: fixed;
-  top: calc(var(--sl-nav-height, 3.5rem) + 1rem);
-  /* 사이드바 너비 + 약간의 여백에 배치 */
-  left: calc(var(--sl-sidebar-width, 18.75rem) - 18px);
+  top: calc(var(--sl-nav-height, 3.5rem) + 0.75rem);
+  /* 사이드바 내부 오른쪽 상단에 배치 */
+  left: calc(var(--sl-sidebar-width, 18.75rem) - 2.5rem - var(--sl-sidebar-pad-x, 1rem));
   z-index: 300;
   display: none;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   padding: 0;
-  background: var(--sl-color-bg-nav);
+  background: var(--sl-color-bg-sidebar);
   border: 1px solid var(--sl-color-gray-5);
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: none;
   transition: all 0.2s ease;
 }
 
 .sidebar-toggle-btn:hover {
-  background: var(--sl-color-gray-6);
+  background: var(--sl-color-gray-5);
   border-color: var(--sl-color-accent);
 }
 
 .sidebar-toggle-btn svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   color: var(--sl-color-text);
   transition: transform 0.2s ease;
 }
@@ -128,7 +128,7 @@ main {
     display: flex;
   }
 
-  /* 사이드바 접힘 시 왼쪽 끝으로 이동 */
+  /* 사이드바 접힘 시 왼쪽 가장자리로 이동 */
   [data-sidebar-collapsed="true"] .sidebar-toggle-btn {
     left: 0.5rem;
   }
