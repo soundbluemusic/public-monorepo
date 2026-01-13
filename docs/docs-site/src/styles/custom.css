@@ -89,9 +89,10 @@ main {
 /* ===== 2. Sidebar Toggle Button ===== */
 .sidebar-toggle-btn {
   position: fixed;
-  top: calc(var(--sl-nav-height) + 1rem);
-  left: 1rem;
-  z-index: 200;
+  top: calc(var(--sl-nav-height, 3.5rem) + 1rem);
+  /* 사이드바 너비 + 약간의 여백에 배치 */
+  left: calc(var(--sl-sidebar-width, 18.75rem) - 18px);
+  z-index: 300;
   display: none;
   align-items: center;
   justify-content: center;
@@ -102,7 +103,7 @@ main {
   border: 1px solid var(--sl-color-gray-5);
   border-radius: 8px;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transition: all 0.2s ease;
 }
 
@@ -127,6 +128,7 @@ main {
     display: flex;
   }
 
+  /* 사이드바 접힘 시 왼쪽 끝으로 이동 */
   [data-sidebar-collapsed="true"] .sidebar-toggle-btn {
     left: 0.5rem;
   }
