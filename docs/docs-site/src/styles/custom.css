@@ -90,8 +90,8 @@ main {
 .sidebar-toggle-btn {
   position: fixed;
   top: calc(var(--sl-nav-height, 3.5rem) + 0.75rem);
-  /* 항상 왼쪽 고정 위치 */
-  left: 0.75rem;
+  /* 사이드바 열림: 사이드바 오른쪽 끝에 위치 */
+  left: calc(var(--sb-sidebar-width, 280px) - 40px);
   /* z-index를 낮춰서 헤더 드롭다운보다 뒤에 위치 */
   z-index: 10;
   display: none;
@@ -135,6 +135,11 @@ main {
 
 [data-sidebar-collapsed="true"] .sidebar-toggle-btn svg.sidebar-closed {
   display: block;
+}
+
+/* 사이드바 닫힘: 버튼을 왼쪽 끝으로 이동 */
+[data-sidebar-collapsed="true"] .sidebar-toggle-btn {
+  left: 0.75rem;
 }
 
 @media (min-width: 72rem) {
