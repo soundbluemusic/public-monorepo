@@ -95,8 +95,8 @@ export default defineConfig({
               if (savedWidth) document.documentElement.style.setProperty('--sb-sidebar-width', savedWidth);
             })();
 
-            // Create sidebar toggle button after DOM is ready
-            document.addEventListener('DOMContentLoaded', function() {
+            // Create sidebar toggle button
+            function createSidebarToggle() {
               if (document.getElementById('sidebar-toggle')) return;
 
               var btn = document.createElement('button');
@@ -111,7 +111,17 @@ export default defineConfig({
                 document.documentElement.setAttribute('data-sidebar-collapsed', String(!isCollapsed));
                 localStorage.setItem('sb-sidebar-collapsed', String(!isCollapsed));
               });
-            });
+            }
+
+            // Run on DOMContentLoaded or immediately if already loaded
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', createSidebarToggle);
+            } else {
+              createSidebarToggle();
+            }
+
+            // Also handle Astro view transitions
+            document.addEventListener('astro:page-load', createSidebarToggle);
           `,
         },
       ],
