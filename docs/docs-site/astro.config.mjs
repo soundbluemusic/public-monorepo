@@ -158,12 +158,18 @@ export default defineConfig({
 
             // Search suggestions - show quick links when search is empty
             function initSearchSuggestions() {
-              var searchContainer = document.querySelector('#starlight__search');
+              // 다이얼로그 내 search-container 찾기
+              var dialog = document.querySelector('dialog[aria-label="Search"]');
+              if (!dialog || !dialog.open) return;
+
+              var searchContainer = dialog.querySelector('.search-container');
               if (!searchContainer) return;
+
+              // 이미 추가되어 있으면 스킵
+              if (searchContainer.querySelector('#search-suggestions-container')) return;
 
               var lang = document.documentElement.lang || 'en';
               var basePath = '/public-monorepo';
-              var langPrefix = (lang === 'ko' || lang === 'ja') ? '/' + lang : '';
 
               var suggestions = {
                 en: {
@@ -200,7 +206,9 @@ export default defineConfig({
 
               var data = suggestions[lang] || suggestions.en;
 
-              var html = '<div class="search-suggestions">' +
+              var suggestionsEl = document.createElement('div');
+              suggestionsEl.id = 'search-suggestions-container';
+              suggestionsEl.innerHTML = '<div class="search-suggestions">' +
                 '<div class="search-suggestions-title">' + data.title + '</div>' +
                 '<div class="search-suggestions-links">' +
                 data.links.map(function(link) {
@@ -211,42 +219,44 @@ export default defineConfig({
                 }).join('') +
                 '</div></div>';
 
-              var suggestionsEl = document.createElement('div');
-              suggestionsEl.id = 'search-suggestions-container';
-              suggestionsEl.innerHTML = html;
               searchContainer.appendChild(suggestionsEl);
 
-              // Hide suggestions when there are search results
-              var observer = new MutationObserver(function() {
-                var hasResults = searchContainer.querySelector('[data-pagefind-ui]');
-                var input = searchContainer.querySelector('input');
-                var hasQuery = input && input.value.length > 0;
-                suggestionsEl.style.display = (hasResults || hasQuery) ? 'none' : 'block';
-              });
-              observer.observe(searchContainer, { childList: true, subtree: true });
-
-              // Also listen to input changes
-              setTimeout(function() {
+              // input 변화 감지하여 표시/숨김 처리
+              function checkInput() {
                 var input = searchContainer.querySelector('input');
                 if (input) {
+                  var hasQuery = input.value.length > 0;
+                  suggestionsEl.style.display = hasQuery ? 'none' : 'block';
                   input.addEventListener('input', function() {
-                    suggestionsEl.style.display = input.value.length > 0 ? 'none' : 'block';
+                    suggestionsEl.style.display = this.value.length > 0 ? 'none' : 'block';
                   });
                 }
-              }, 500);
+              }
+
+              // Pagefind UI가 로드될 때까지 대기
+              var checkInterval = setInterval(function() {
+                var input = searchContainer.querySelector('input');
+                if (input) {
+                  clearInterval(checkInterval);
+                  checkInput();
+                }
+              }, 100);
+
+              // 5초 후 자동 정리
+              setTimeout(function() { clearInterval(checkInterval); }, 5000);
             }
 
-            // Initialize on dialog open
+            // 다이얼로그 열림 감지
             document.addEventListener('click', function(e) {
               if (e.target.closest('[data-open-modal]')) {
-                setTimeout(initSearchSuggestions, 100);
+                setTimeout(initSearchSuggestions, 300);
               }
             });
 
-            // Also init on keyboard shortcut
+            // 키보드 단축키로 열릴 때
             document.addEventListener('keydown', function(e) {
               if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-                setTimeout(initSearchSuggestions, 100);
+                setTimeout(initSearchSuggestions, 300);
               }
             });
           `,
