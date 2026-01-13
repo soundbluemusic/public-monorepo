@@ -1,27 +1,27 @@
 ---
-title: Architecture
-description: Understanding the SSG architecture and package layer system of the monorepo
+title: 아키텍처
+description: 모노레포의 SSG 아키텍처와 패키지 레이어 시스템 이해하기
 ---
 
-# Architecture Overview
+# 아키텍처 개요
 
-This document explains the architectural decisions and patterns used in the SoundBlue Public Monorepo.
+이 문서는 SoundBlue Public Monorepo에서 사용하는 아키텍처 결정과 패턴을 설명합니다.
 
-## SSG Architecture
+## SSG 아키텍처
 
-All applications use **Static Site Generation (SSG)** with React Router v7's `prerender()` pattern.
+모든 애플리케이션은 React Router v7의 `prerender()` 패턴을 사용한 **정적 사이트 생성(SSG)** 방식입니다.
 
-### How It Works
+### 작동 방식
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                        Build Time                               │
+│                        빌드 시점                                │
 │                                                                 │
-│   prerender()  →  loader()  →  HTML Files  →  CDN              │
+│   prerender()  →  loader()  →  HTML 파일  →  CDN               │
 │                                                                 │
 │   ┌──────────┐   ┌──────────┐   ┌──────────┐   ┌──────────┐   │
-│   │ Generate │ → │ Fetch    │ → │ Render   │ → │ Deploy   │   │
-│   │ Routes   │   │ Data     │   │ HTML     │   │ Static   │   │
+│   │ 라우트   │ → │ 데이터   │ → │ HTML     │ → │ 정적     │   │
+│   │ 생성     │   │ 가져오기 │   │ 렌더링   │   │ 배포     │   │
 │   └──────────┘   └──────────┘   └──────────┘   └──────────┘   │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
@@ -29,19 +29,19 @@ All applications use **Static Site Generation (SSG)** with React Router v7's `pr
                               ↓
 
 ┌─────────────────────────────────────────────────────────────────┐
-│                       Runtime (CDN)                             │
+│                       런타임 (CDN)                              │
 │                                                                 │
-│   Static HTML  →  Hydration  →  Interactive React App          │
+│   정적 HTML  →  Hydration  →  인터랙티브 React 앱              │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-### SSG Configuration Pattern
+### SSG 설정 패턴
 
 ```typescript
 // react-router.config.ts
 export default {
-  ssr: false,  // ← SSG mode (NEVER change to true)
+  ssr: false,  // ← SSG 모드 (절대 true로 변경 금지)
   async prerender() {
     const staticRoutes = extractStaticRoutes(routes);
     const dynamicRoutes = generateI18nRoutes(entries, `/entry/`);
@@ -50,113 +50,113 @@ export default {
 } satisfies Config;
 ```
 
-### Pages Generated
+### 생성된 페이지 수
 
-| App | SSG Pages | Description |
-|-----|-----------|-------------|
-| Context | 33,748 | All dictionary entries × 2 languages |
-| Permissive | 8 | Libraries + Web APIs pages |
-| Roots | 920 | Math topics × 2 languages |
+| 앱 | SSG 페이지 | 설명 |
+|----|-----------|------|
+| Context | 33,748 | 모든 사전 항목 × 2개 언어 |
+| Permissive | 8 | 라이브러리 + Web API 페이지 |
+| Roots | 920 | 수학 개념 × 2개 언어 |
 
-## Package Layer System
+## 패키지 레이어 시스템
 
-The monorepo follows a strict layered architecture:
+모노레포는 엄격한 레이어 아키텍처를 따릅니다:
 
 ```
-Layer 3 (Apps + UI)
+Layer 3 (앱 + UI)
 ┌─────────────────────────────────────┐
 │  apps/*  +  @soundblue/ui          │
 │  @soundblue/features               │
 └────────────────┬────────────────────┘
                  │
-Layer 2 (Domain)
+Layer 2 (도메인)
 ┌────────────────┴────────────────────┐
 │  @soundblue/i18n   @soundblue/seo  │
 │  @soundblue/search @soundblue/pwa  │
 └────────────────┬────────────────────┘
                  │
-Layer 1 (Data)
+Layer 1 (데이터)
 ┌────────────────┴────────────────────┐
 │  @soundblue/data  @soundblue/platform │
 └────────────────┬────────────────────┘
                  │
-Layer 0 (Foundation)
+Layer 0 (기반)
 ┌────────────────┴────────────────────┐
 │  @soundblue/core  @soundblue/config │
 └─────────────────────────────────────┘
 ```
 
-### Layer Rules
+### 레이어 규칙
 
-- **Layer N can only import from Layer N-1 or below**
-- Apps (Layer 3) can import from any package
-- `@soundblue/i18n` (Layer 2) cannot import from `@soundblue/ui` (Layer 3)
-- `@soundblue/core` (Layer 0) cannot import from any other package
+- **Layer N은 Layer N-1 이하만 import 가능**
+- 앱 (Layer 3)은 모든 패키지에서 import 가능
+- `@soundblue/i18n` (Layer 2)은 `@soundblue/ui` (Layer 3)에서 import 불가
+- `@soundblue/core` (Layer 0)는 다른 패키지에서 import 불가
 
-## Directory Structure
+## 디렉토리 구조
 
 ```
 public-monorepo/
-├── apps/                    # Applications (Layer 3)
-│   ├── context/            # Korean Dictionary
-│   ├── permissive/         # Web Dev Resources
-│   └── roots/              # Math Documentation
+├── apps/                    # 애플리케이션 (Layer 3)
+│   ├── context/            # 한국어 사전
+│   ├── permissive/         # 웹 개발 자료
+│   └── roots/              # 수학 문서
 │
-├── packages/               # Shared packages (10 packages)
-│   ├── core/              # Layer 0: Validation, utils, types
-│   ├── config/            # Layer 0: Vite, Tailwind configs
-│   ├── data/              # Layer 1: Zod schemas, loaders
-│   ├── platform/          # Layer 1: IndexedDB storage
-│   ├── i18n/              # Layer 2: URL routing, Paraglide
-│   ├── search/            # Layer 2: MiniSearch wrapper
-│   ├── seo/               # Layer 2: Meta tags, sitemap
-│   ├── pwa/               # Layer 2: Service worker
-│   ├── features/          # Layer 3: Settings, toast
-│   └── ui/                # Layer 3: React components
+├── packages/               # 공유 패키지 (10개)
+│   ├── core/              # Layer 0: 검증, 유틸리티, 타입
+│   ├── config/            # Layer 0: Vite, Tailwind 설정
+│   ├── data/              # Layer 1: Zod 스키마, 로더
+│   ├── platform/          # Layer 1: IndexedDB 스토리지
+│   ├── i18n/              # Layer 2: URL 라우팅, Paraglide
+│   ├── search/            # Layer 2: MiniSearch 래퍼
+│   ├── seo/               # Layer 2: 메타 태그, 사이트맵
+│   ├── pwa/               # Layer 2: 서비스 워커
+│   ├── features/          # Layer 3: 설정, 토스트
+│   └── ui/                # Layer 3: React 컴포넌트
 │
-├── data/                   # JSON data (SSoT)
-│   ├── context/           # Dictionary entries
-│   └── roots/             # Math content
+├── data/                   # JSON 데이터 (단일 소스)
+│   ├── context/           # 사전 항목
+│   └── roots/             # 수학 콘텐츠
 │
-├── docs/                   # Documentation
-│   └── docs-site/         # Starlight documentation site
+├── docs/                   # 문서
+│   └── docs-site/         # Starlight 문서 사이트
 │
-└── tests/                  # E2E tests
+└── tests/                  # E2E 테스트
 ```
 
-## i18n Routing
+## i18n 라우팅
 
-URL path-based language detection (not query parameters):
+URL 경로 기반 언어 감지 (쿼리 파라미터가 아님):
 
-| URL | Language |
-|-----|----------|
-| `/entry/hello` | English (default) |
-| `/ko/entry/hello` | Korean |
+| URL | 언어 |
+|-----|------|
+| `/entry/hello` | 영어 (기본) |
+| `/ko/entry/hello` | 한국어 |
 
-All routes are duplicated for each language at build time.
+모든 라우트는 빌드 시점에 각 언어로 복제됩니다.
 
-## SEO Implementation
+## SEO 구현
 
 ### Canonical & Hreflang
 
 ```html
-<!-- /entry/hello (English page) -->
+<!-- /entry/hello (영어 페이지) -->
 <link rel="canonical" href="https://context.soundbluemusic.com/entry/hello" />
 <link rel="alternate" hreflang="en" href="https://context.soundbluemusic.com/entry/hello" />
 <link rel="alternate" hreflang="ko" href="https://context.soundbluemusic.com/ko/entry/hello" />
 <link rel="alternate" hreflang="x-default" href="https://context.soundbluemusic.com/entry/hello" />
 ```
 
-### Meta Factory Pattern
+### Meta Factory 패턴
 
 ```typescript
-// Static routes
+// 정적 라우트
 export const meta = metaFactory({
   ko: { title: '소개 - Context', description: '한국어 사전 소개' },
   en: { title: 'About - Context', description: 'About Korean Dictionary' },
 }, 'https://context.soundbluemusic.com');
 
-// Dynamic routes
+// 동적 라우트
 export const meta = dynamicMetaFactory<typeof loader>({
   getTitle: (data) => `${data.entry.word} - Context`,
   getDescription: (data) => data.entry.translations.explanation,
@@ -164,34 +164,34 @@ export const meta = dynamicMetaFactory<typeof loader>({
 });
 ```
 
-## Critical Rules
+## 핵심 규칙
 
-### 1. SSG Mode Only
+### 1. SSG 모드만 허용
 
 ```typescript
-// ✅ Correct
+// ✅ 올바름
 export default { ssr: false, ... }
 
-// ❌ NEVER do this
+// ❌ 절대 금지
 export default { ssr: true, ... }
 ```
 
-### 2. No Hardcoding
+### 2. 하드코딩 금지
 
 ```typescript
-// ✅ Use data files
+// ✅ 데이터 파일 사용
 const entries = await loadEntries();
 
-// ❌ Don't hardcode
+// ❌ 하드코딩 금지
 const entries = [{ id: 'hello', ... }];
 ```
 
-### 3. Hydration Workaround
+### 3. Hydration 우회 코드
 
-Due to React Router v7 + React 19 SSG hydration bug, a workaround is required:
+React Router v7 + React 19 SSG hydration 버그로 인해 우회 코드가 필요합니다:
 
 ```typescript
-// apps/*/app/entry.client.tsx - DO NOT DELETE!
+// apps/*/app/entry.client.tsx - 삭제 금지!
 setTimeout(() => {
   const divs = [...document.body.children].filter(el => el.tagName === 'DIV');
   if (divs.length > 1 && Object.keys(divs[0]).some(k => k.startsWith('__react'))) {
@@ -200,7 +200,7 @@ setTimeout(() => {
 }, 100);
 ```
 
-## Next Steps
+## 다음 단계
 
-- [Package Documentation](/public-monorepo/packages/) - Learn about each shared package
-- [Contributing Guide](/public-monorepo/contributing/) - How to contribute to this project
+- [패키지 문서](/public-monorepo/ko/packages/) - 각 공유 패키지 알아보기
+- [기여 가이드](/public-monorepo/ko/contributing/) - 이 프로젝트에 기여하는 방법

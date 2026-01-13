@@ -78,13 +78,13 @@ Systematically organized math documentation covering algebra, geometry, calculus
 ## Key Principles
 
 1. **SSG Only** - All pages are pre-rendered at build time
-2. 2. **No Hardcoding** - Use data files, not inline values
-   3. 3. **No Quick Fixes** - Every fix must be a general solution
-      4. 4. **Data Integrity** - Single source of truth for all data
-         5. 5. **UI Verification** - All changes must be verified in actual UI
-           
-            6. ## Next Steps
-           
-            7. - [Quick Start Guide](/public-monorepo/guides/quickstart/) - Get the project running locally
-               - - [Architecture Overview](/public-monorepo/guides/architecture/) - Understand the SSG architecture
-                 - - [Context Documentation](/public-monorepo/apps/context/overview/) - Learn about the Korean dictionary app
+2. **No Hardcoding** - Use data files, not inline values
+3. **No Quick Fixes** - Every fix must be a general solution
+4. **Data Integrity** - Single source of truth for all data
+5. **UI Verification** - All changes must be verified in actual UI
+
+## Next Steps
+
+- [Quick Start Guide](/public-monorepo/guides/quickstart/) - Get the project running locally
+- [Architecture Overview](/public-monorepo/guides/architecture/) - Understand the SSG architecture
+- [Context Documentation](/public-monorepo/apps/context/overview/) - Learn about the Korean dictionary app

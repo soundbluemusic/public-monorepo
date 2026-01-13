@@ -47,6 +47,14 @@ export default defineConfig({
           label: 'Roots — Math Documentation',
           autogenerate: { directory: 'apps/roots' },
         },
+        {
+          label: 'Packages (API)',
+          autogenerate: { directory: 'packages' },
+        },
+        {
+          label: 'Contributing',
+          autogenerate: { directory: 'contributing' },
+        },
       ],
       customCss: [
         './src/styles/custom.css',
