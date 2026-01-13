@@ -85,7 +85,7 @@ export default defineConfig({
         {
           tag: 'script',
           content: `
-            // Sidebar controls initialization
+            // Sidebar controls initialization (runs before DOM)
             (function() {
               const COLLAPSED_KEY = 'sb-sidebar-collapsed';
               const WIDTH_KEY = 'sb-sidebar-width';
@@ -94,6 +94,24 @@ export default defineConfig({
               if (isCollapsed) document.documentElement.setAttribute('data-sidebar-collapsed', 'true');
               if (savedWidth) document.documentElement.style.setProperty('--sb-sidebar-width', savedWidth);
             })();
+
+            // Create sidebar toggle button after DOM is ready
+            document.addEventListener('DOMContentLoaded', function() {
+              if (document.getElementById('sidebar-toggle')) return;
+
+              var btn = document.createElement('button');
+              btn.id = 'sidebar-toggle';
+              btn.className = 'sidebar-toggle-btn';
+              btn.setAttribute('aria-label', 'Toggle sidebar');
+              btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+              document.body.appendChild(btn);
+
+              btn.addEventListener('click', function() {
+                var isCollapsed = document.documentElement.getAttribute('data-sidebar-collapsed') === 'true';
+                document.documentElement.setAttribute('data-sidebar-collapsed', String(!isCollapsed));
+                localStorage.setItem('sb-sidebar-collapsed', String(!isCollapsed));
+              });
+            });
           `,
         },
       ],
