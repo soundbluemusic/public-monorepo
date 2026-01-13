@@ -141,6 +141,11 @@ main {
   .sidebar-toggle-btn {
     display: flex;
   }
+
+  /* 홈페이지(히어로 페이지)에서는 사이드바가 없으므로 버튼 숨김 */
+  [data-has-hero] .sidebar-toggle-btn {
+    display: none;
+  }
 }
 
 /* ===== 3. Footer Styles ===== */
