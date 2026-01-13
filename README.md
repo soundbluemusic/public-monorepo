@@ -215,6 +215,9 @@ public-monorepo/
 │   ├── roots/               # 438 math concepts
 │   └── permissive/          # 88 libraries, 56 Web APIs
 │
+├── docs/                    # Documentation (GitHub Pages)
+│   └── docs-site/           # Astro + Starlight site
+│
 └── package.json
 ```
 
@@ -463,6 +466,56 @@ pnpm build
 ---
 
 ## 📚 Documentation
+
+### 📖 Documentation Site
+
+> **Astro + Starlight 기반 문서 사이트** | GitHub Pages 배포
+>
+> 이 모노레포의 전체 문서를 제공하는 정적 사이트입니다.
+
+| | |
+|---|---|
+| **Live** | [soundbluemusic.github.io/public-monorepo](https://soundbluemusic.github.io/public-monorepo) |
+| **Source** | [docs/docs-site](docs/docs-site) |
+| **Framework** | Astro 4.x + Starlight |
+| **Deploy** | GitHub Actions → GitHub Pages |
+
+#### Features
+
+| Feature | Description |
+|:--------|:------------|
+| **Multi-language** | 영어/한국어 문서 지원 (`/ko/*`) |
+| **Auto-sidebar** | 디렉토리 구조 기반 자동 사이드바 생성 |
+| **Search** | 내장 검색 기능 |
+| **Dark Mode** | 자동 다크 모드 지원 |
+| **Edit Links** | GitHub에서 직접 수정 가능 |
+
+#### Development
+
+```bash
+cd docs/docs-site
+pnpm install
+pnpm dev        # → http://localhost:4321
+pnpm build      # → dist/
+```
+
+> **Note:** 문서 사이트는 모노레포 workspace와 분리되어 있습니다 (`pnpm-workspace.yaml`에 포함되지 않음).
+> 독립적으로 `pnpm install`을 실행해야 합니다.
+
+#### Deployment
+
+GitHub Actions가 `docs/docs-site/**` 경로 변경 시 자동 배포합니다.
+
+```yaml
+# .github/workflows/deploy-docs.yml
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/docs-site/**'
+```
+
+### 📄 Markdown Docs
 
 | Document | Description |
 |:---------|:------------|
