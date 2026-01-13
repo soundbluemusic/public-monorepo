@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg-gradient)"/>
+
+  <!-- Decorative accent line at top -->
+  <rect x="0" y="0" width="1200" height="4" fill="url(#accent-gradient)"/>
+
+  <!-- Logo (enlarged book with checkmark) -->
+  <g transform="translate(100, 200)">
+    <path d="M0 20 Q60 5 60 5 Q60 5 120 20 L120 100 Q60 85 60 85 Q60 85 0 100 Z" fill="#2563eb"/>
+    <path d="M60 5 L60 85" stroke="#60a5fa" stroke-width="2"/>
+    <path d="M30 50 L50 70 L90 30" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Title -->
+  <text x="260" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="700" fill="white">
+    SoundBlue Docs
+  </text>
+
+  <!-- Subtitle -->
+  <text x="260" y="330" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="#a0a0a0">
+    Complete documentation for Context, Permissive, and Roots
+  </text>
+
+  <!-- App badges -->
+  <g transform="translate(260, 380)">
+    <!-- Context badge -->
+    <rect x="0" y="0" width="180" height="50" rx="25" fill="#1e3a5f"/>
+    <text x="90" y="33" font-family="system-ui, sans-serif" font-size="20" fill="#60a5fa" text-anchor="middle">Context</text>
+
+    <!-- Permissive badge -->
+    <rect x="200" y="0" width="180" height="50" rx="25" fill="#1e3a5f"/>
+    <text x="290" y="33" font-family="system-ui, sans-serif" font-size="20" fill="#60a5fa" text-anchor="middle">Permissive</text>
+
+    <!-- Roots badge -->
+    <rect x="400" y="0" width="180" height="50" rx="25" fill="#1e3a5f"/>
+    <text x="490" y="33" font-family="system-ui, sans-serif" font-size="20" fill="#60a5fa" text-anchor="middle">Roots</text>
+  </g>
+
+  <!-- Stats at bottom -->
+  <g transform="translate(260, 480)">
+    <text font-family="system-ui, sans-serif" font-size="18" fill="#606060">
+      <tspan x="0" y="0">34,676 SSG Pages</tspan>
+      <tspan x="200" y="0">10 Packages</tspan>
+      <tspan x="380" y="0">3 Languages</tspan>
+    </text>
+  </g>
+
+  <!-- URL at bottom right -->
+  <text x="1100" y="590" font-family="system-ui, sans-serif" font-size="18" fill="#404040" text-anchor="end">
+    soundbluemusic.github.io/public-monorepo
+  </text>
+</svg>

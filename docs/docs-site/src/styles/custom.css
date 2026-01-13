@@ -434,6 +434,34 @@ nav.sidebar {
   }
 }
 
+/* ===== Right Sidebar (Table of Contents) Text Overflow Fix ===== */
+/* 우측 사이드바 텍스트가 화면 바깥으로 잘리는 문제 수정 */
+starlight-toc,
+.right-sidebar,
+.right-sidebar-panel {
+  overflow-x: hidden;
+}
+
+starlight-toc nav,
+starlight-toc ul {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+starlight-toc a {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* "On this page" 제목 줄바꿈 허용 */
+.right-sidebar-panel h2 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
 /* ===== Ultra-wide Screen Fix (2000px+) ===== */
 @media (min-width: 120rem) {
   /* 콘텐츠 최대 너비 확대 */

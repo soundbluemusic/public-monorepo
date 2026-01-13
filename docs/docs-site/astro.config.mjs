@@ -80,6 +80,10 @@ export default defineConfig({
       head: [
         {
           tag: 'meta',
+          attrs: { name: 'google-site-verification', content: 'QWPMYT_MaDQIC8WTwnD_iwBWX8QWfeTR1hdkjYIclwc' },
+        },
+        {
+          tag: 'meta',
           attrs: { property: 'og:image', content: 'https://soundbluemusic.github.io/public-monorepo/og-image.png' },
         },
         {

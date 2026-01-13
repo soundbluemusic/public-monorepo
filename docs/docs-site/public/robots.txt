@@ -1,0 +1,11 @@
+# SoundBlue Docs - Robots.txt
+# https://soundbluemusic.github.io/public-monorepo/
+
+User-agent: *
+Allow: /public-monorepo/
+
+# Sitemaps
+Sitemap: https://soundbluemusic.github.io/public-monorepo/sitemap-index.xml
+
+# Disallow admin/internal paths (none currently)
+# Disallow: /admin/
