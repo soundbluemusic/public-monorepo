@@ -22,6 +22,21 @@
   --sl-color-accent-high: #bfdbfe;
 }
 
+/* ===== Content Area Top Padding Reduction ===== */
+/* Starlight 기본 콘텐츠 영역 상단 여백 축소 */
+.sl-markdown-content {
+  padding-block-start: 0 !important;
+}
+
+main {
+  padding-block-start: 1rem !important;
+}
+
+/* 문서 페이지 헤더(h1) 상단 마진 축소 */
+.sl-markdown-content > h1:first-child {
+  margin-block-start: 0 !important;
+}
+
 /* ===== 1. Resizable Sidebar ===== */
 @media (min-width: 72rem) {
   .sidebar-pane {
@@ -170,7 +185,7 @@
 
 /* ===== Hero Section Improvements ===== */
 .hero {
-  padding-block: 2rem 1.5rem !important;
+  padding-block: 1rem 1rem !important;
 }
 
 /* Hero title styling */
@@ -279,7 +294,7 @@ nav.sidebar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  margin: 1.5rem 0 2rem;
+  margin: 0.5rem 0 1.5rem;
 }
 
 .stat-item {
@@ -421,8 +436,12 @@ nav.sidebar {
 
 /* ===== Responsive Adjustments ===== */
 @media (max-width: 50rem) {
+  main {
+    padding-block-start: 0.5rem !important;
+  }
+
   .hero {
-    padding-block: 1.5rem 1rem !important;
+    padding-block: 0.5rem 0.5rem !important;
   }
 
   .hero .sl-flex h1 {
