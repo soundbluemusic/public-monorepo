@@ -155,6 +155,100 @@ export default defineConfig({
                   });
               });
             }
+
+            // Search suggestions - show quick links when search is empty
+            function initSearchSuggestions() {
+              var searchContainer = document.querySelector('#starlight__search');
+              if (!searchContainer) return;
+
+              var lang = document.documentElement.lang || 'en';
+              var basePath = '/public-monorepo';
+              var langPrefix = (lang === 'ko' || lang === 'ja') ? '/' + lang : '';
+
+              var suggestions = {
+                en: {
+                  title: 'Quick Links',
+                  links: [
+                    { icon: '🚀', label: 'Quick Start', href: basePath + '/guides/quickstart/' },
+                    { icon: '📐', label: 'Architecture', href: basePath + '/guides/architecture/' },
+                    { icon: '📖', label: 'Context App', href: basePath + '/apps/context/overview/' },
+                    { icon: '📦', label: 'Packages', href: basePath + '/packages/' },
+                    { icon: '🤖', label: 'AI Guidelines', href: basePath + '/ai-guidelines/' }
+                  ]
+                },
+                ko: {
+                  title: '빠른 링크',
+                  links: [
+                    { icon: '🚀', label: '빠른 시작', href: basePath + '/ko/guides/quickstart/' },
+                    { icon: '📐', label: '아키텍처', href: basePath + '/ko/guides/architecture/' },
+                    { icon: '📖', label: 'Context 앱', href: basePath + '/ko/apps/context/overview/' },
+                    { icon: '📦', label: '패키지', href: basePath + '/ko/packages/' },
+                    { icon: '🤖', label: 'AI 가이드', href: basePath + '/ko/ai-guidelines/' }
+                  ]
+                },
+                ja: {
+                  title: 'クイックリンク',
+                  links: [
+                    { icon: '🚀', label: 'クイックスタート', href: basePath + '/ja/guides/quickstart/' },
+                    { icon: '📐', label: 'アーキテクチャ', href: basePath + '/ja/guides/architecture/' },
+                    { icon: '📖', label: 'Context アプリ', href: basePath + '/ja/apps/context/overview/' },
+                    { icon: '📦', label: 'パッケージ', href: basePath + '/ja/packages/' },
+                    { icon: '🤖', label: 'AI ガイド', href: basePath + '/ja/ai-guidelines/' }
+                  ]
+                }
+              };
+
+              var data = suggestions[lang] || suggestions.en;
+
+              var html = '<div class="search-suggestions">' +
+                '<div class="search-suggestions-title">' + data.title + '</div>' +
+                '<div class="search-suggestions-links">' +
+                data.links.map(function(link) {
+                  return '<a href="' + link.href + '" class="search-suggestion-link">' +
+                    '<span class="search-suggestion-icon">' + link.icon + '</span>' +
+                    '<span>' + link.label + '</span>' +
+                  '</a>';
+                }).join('') +
+                '</div></div>';
+
+              var suggestionsEl = document.createElement('div');
+              suggestionsEl.id = 'search-suggestions-container';
+              suggestionsEl.innerHTML = html;
+              searchContainer.appendChild(suggestionsEl);
+
+              // Hide suggestions when there are search results
+              var observer = new MutationObserver(function() {
+                var hasResults = searchContainer.querySelector('[data-pagefind-ui]');
+                var input = searchContainer.querySelector('input');
+                var hasQuery = input && input.value.length > 0;
+                suggestionsEl.style.display = (hasResults || hasQuery) ? 'none' : 'block';
+              });
+              observer.observe(searchContainer, { childList: true, subtree: true });
+
+              // Also listen to input changes
+              setTimeout(function() {
+                var input = searchContainer.querySelector('input');
+                if (input) {
+                  input.addEventListener('input', function() {
+                    suggestionsEl.style.display = input.value.length > 0 ? 'none' : 'block';
+                  });
+                }
+              }, 500);
+            }
+
+            // Initialize on dialog open
+            document.addEventListener('click', function(e) {
+              if (e.target.closest('[data-open-modal]')) {
+                setTimeout(initSearchSuggestions, 100);
+              }
+            });
+
+            // Also init on keyboard shortcut
+            document.addEventListener('keydown', function(e) {
+              if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+                setTimeout(initSearchSuggestions, 100);
+              }
+            });
           `,
         },
       ],
