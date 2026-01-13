@@ -116,11 +116,24 @@ main {
   width: 18px;
   height: 18px;
   color: var(--sl-color-text);
-  transition: transform 0.2s ease;
 }
 
-[data-sidebar-collapsed="true"] .sidebar-toggle-btn svg {
-  transform: rotate(180deg);
+/* 사이드바 열림: 패널 아이콘 표시 */
+.sidebar-toggle-btn svg.sidebar-open {
+  display: block;
+}
+
+.sidebar-toggle-btn svg.sidebar-closed {
+  display: none;
+}
+
+/* 사이드바 닫힘: 화살표 있는 아이콘 표시 */
+[data-sidebar-collapsed="true"] .sidebar-toggle-btn svg.sidebar-open {
+  display: none;
+}
+
+[data-sidebar-collapsed="true"] .sidebar-toggle-btn svg.sidebar-closed {
+  display: block;
 }
 
 @media (min-width: 72rem) {
