@@ -302,7 +302,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
               to={localePath('/built-with')}
               className="no-underline hover:underline text-inherit"
             >
-              {locale === 'ko' ? '사용된 기술' : 'Built With'}
+              {locale === 'ko' ? '오픈소스' : 'Open source'}
             </Link>
             <Link to={localePath('/sitemap')} className="no-underline hover:underline text-inherit">
               {t('sitemap')}
