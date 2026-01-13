@@ -2,7 +2,12 @@ import { LIMITS } from '@soundblue/core/validation';
 import { useSettingsStore } from '@soundblue/features/settings';
 import { stripLocaleFromPath } from '@soundblue/i18n';
 import { useSearchWorker } from '@soundblue/search/react';
-import { DarkModeToggle, FamilySites, LanguageToggle } from '@soundblue/ui/components';
+import {
+  DarkModeToggle,
+  FamilySites,
+  LanguageToggle,
+  ServicesDropdown,
+} from '@soundblue/ui/components';
 import { SearchDropdown } from '@soundblue/ui/patterns';
 import { cn } from '@soundblue/ui/utils';
 import { ArrowUp, BookOpen, ChevronRight, Github, Heart, Menu, Star } from 'lucide-react';
@@ -164,12 +169,14 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
               {t('constants')}
             </Link>
 
+            <ServicesDropdown currentAppId="roots" locale={locale} />
             <LanguageToggle locale={locale} currentPath={stripLocale(location.pathname)} />
             <DarkModeToggle />
           </div>
 
           {/* Right Actions - Mobile */}
           <div className="flex sm:hidden items-center gap-1">
+            <ServicesDropdown currentAppId="roots" locale={locale} />
             <LanguageToggle locale={locale} currentPath={stripLocale(location.pathname)} />
             <DarkModeToggle />
           </div>

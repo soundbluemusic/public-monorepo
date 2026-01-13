@@ -24,6 +24,7 @@ export {
 export { DarkModeToggle, type DarkModeToggleProps } from './DarkModeToggle';
 export { FamilySites, type FamilySitesProps, type FamilySitesVariant } from './FamilySites';
 export { type Language, LanguageToggle, type LanguageToggleProps } from './LanguageToggle';
+export { ServicesDropdown, type ServicesDropdownProps } from './ServicesDropdown';
 // Compound Components
 export {
   Tabs,

@@ -1,4 +1,4 @@
-import { DarkModeToggle, LanguageToggle } from '@soundblue/ui/components';
+import { DarkModeToggle, LanguageToggle, ServicesDropdown } from '@soundblue/ui/components';
 import { cn } from '@soundblue/ui/utils';
 import { Menu } from 'lucide-react';
 import { Link } from 'react-router';
@@ -117,12 +117,14 @@ export function Header({ onMenuClick, sidebarCollapsed = false }: HeaderProps) {
           >
             {t('conversations')}
           </Link>
+          <ServicesDropdown currentAppId="context" locale={locale} />
           <LanguageToggle locale={locale} currentPath={currentPath} />
           <DarkModeToggle />
         </div>
 
         {/* Right Actions - Mobile */}
         <div className="flex sm:hidden items-center gap-1">
+          <ServicesDropdown currentAppId="context" locale={locale} />
           <LanguageToggle locale={locale} currentPath={currentPath} />
           <DarkModeToggle />
         </div>

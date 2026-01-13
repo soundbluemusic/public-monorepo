@@ -1,5 +1,5 @@
 import { stripLocaleFromPath } from '@soundblue/i18n';
-import { DarkModeToggle, LanguageToggle } from '@soundblue/ui/components';
+import { DarkModeToggle, LanguageToggle, ServicesDropdown } from '@soundblue/ui/components';
 import { cn } from '@soundblue/ui/utils';
 import { Menu, Sparkles, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
@@ -72,6 +72,7 @@ export default function Header({ onMenuClick, isSidebarOpen }: HeaderProps) {
 
       {/* Right: Controls */}
       <div className="flex items-center gap-1">
+        <ServicesDropdown currentAppId="permissive" locale={locale} />
         <LanguageToggle locale={locale} currentPath={stripLocale(location.pathname)} />
         <DarkModeToggle />
       </div>

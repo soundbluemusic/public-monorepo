@@ -4,7 +4,15 @@
  */
 
 import { type AppId, getOtherApps } from '@soundblue/core';
-import { BookOpen, Code, type LucideIcon, PiSquare } from 'lucide-react';
+import {
+  BookOpen,
+  Code,
+  Home,
+  type LucideIcon,
+  MessageCircle,
+  PiSquare,
+  Wrench,
+} from 'lucide-react';
 
 export type FamilySitesVariant = 'footer' | 'sidebar';
 
@@ -14,16 +22,19 @@ export interface FamilySitesProps {
   locale?: 'en' | 'ko';
 }
 
-type IconName = 'book-open' | 'pi-square' | 'code';
+type IconName = 'home' | 'book-open' | 'pi-square' | 'code' | 'wrench' | 'message-circle';
 
 const ICON_MAP: Record<IconName, LucideIcon> = {
+  home: Home,
   'book-open': BookOpen,
   'pi-square': PiSquare,
   code: Code,
+  wrench: Wrench,
+  'message-circle': MessageCircle,
 };
 
 function getIcon(iconName: string): LucideIcon {
-  return ICON_MAP[iconName as IconName] ?? BookOpen;
+  return ICON_MAP[iconName as IconName] ?? Home;
 }
 
 /**
