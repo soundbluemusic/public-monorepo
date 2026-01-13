@@ -8,23 +8,53 @@ interface Props {
 const { locale = 'en' } = Astro.props;
 const { totals, i18n } = metadata;
 const labels = i18n.stats;
+
+// Base path for locale-aware links
+const basePath = '/public-monorepo';
+const localePath = locale === 'en' ? '' : `/${locale}`;
+
+// Deep links for each stat
+const links = {
+  pages: `${basePath}${localePath}/guides/architecture/`,
+  apps: `${basePath}${localePath}/apps/context/overview/`,
+  packages: `${basePath}${localePath}/packages/`,
+  static: `${basePath}${localePath}/guides/ssg-deep-dive/`,
+};
 ---
 
 <div class="stats-grid">
-  <div class="stat-item">
+  <a href={links.pages} class="stat-item stat-link">
     <div class="stat-value">{totals.pages.toLocaleString()}</div>
     <div class="stat-label">{labels.pages[locale]}</div>
-  </div>
-  <div class="stat-item">
+  </a>
+  <a href={links.apps} class="stat-item stat-link">
     <div class="stat-value">{totals.apps}</div>
     <div class="stat-label">{labels.apps[locale]}</div>
-  </div>
-  <div class="stat-item">
+  </a>
+  <a href={links.packages} class="stat-item stat-link">
     <div class="stat-value">{totals.packages}</div>
     <div class="stat-label">{labels.packages[locale]}</div>
-  </div>
-  <div class="stat-item">
+  </a>
+  <a href={links.static} class="stat-item stat-link">
     <div class="stat-value">100%</div>
     <div class="stat-label">{labels.static[locale]}</div>
-  </div>
+  </a>
 </div>
+
+<style>
+  .stat-link {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .stat-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  }
+
+  .stat-link:focus-visible {
+    outline: 2px solid var(--sl-color-accent);
+    outline-offset: 2px;
+  }
+</style>
