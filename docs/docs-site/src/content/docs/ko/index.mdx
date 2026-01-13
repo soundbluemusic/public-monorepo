@@ -1,0 +1,81 @@
+---
+title: SoundBlue Public Monorepo
+description: Context, Permissive, Roots 애플리케이션을 위한 완전한 문서 - 학습자를 위한 세 개의 앱
+template: splash
+hero:
+  tagline: React Router v7, TypeScript, Cloudflare Pages로 구축된 100% SSG 학습 앱 3종
+  image:
+    file: ../../../assets/hero.svg
+  actions:
+    - text: 시작하기
+      link: /public-monorepo/ko/guides/introduction/
+      icon: right-arrow
+      variant: primary
+    - text: GitHub에서 보기
+      link: https://github.com/soundbluemusic/public-monorepo
+      icon: external
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+## 🚀 애플리케이션
+
+<CardGrid stagger>
+  <Card title="📖 Context" icon="open-book">
+    **학습자를 위한 한국어 사전**
+
+    맥락 기반 정의, 예문, 관련 표현이 포함된 33,748개의 SSG 페이지.
+
+    [Context 방문하기 →](https://context.soundbluemusic.com)
+  </Card>
+
+  <Card title="🔧 Permissive" icon="setting">
+    **무료 웹개발 자료 모음**
+
+    허용적 라이선스를 가진 웹 개발 라이브러리 및 Web API 모음.
+
+    [Permissive 방문하기 →](https://permissive.soundbluemusic.com)
+  </Card>
+
+  <Card title="📐 Roots" icon="document">
+    **학습자를 위한 수학 문서**
+
+    대수학, 기하학, 미적분 등 다양한 수학 개념을 다루는 920개의 SSG 페이지.
+
+    [Roots 방문하기 →](https://roots.soundbluemusic.com)
+  </Card>
+</CardGrid>
+
+## ⚡ 기술 스택
+
+<CardGrid>
+  <Card title="100% SSG" icon="rocket">
+    모든 앱은 React Router v7의 `prerender()` 패턴을 사용한 정적 사이트 생성 방식입니다. 서버 없이 CDN에서 바로 서빙됩니다.
+  </Card>
+
+  <Card title="Turborepo" icon="seti:turborepo">
+    지능형 캐싱을 통해 빌드 시간을 97% 이상 단축하는 모노레포 관리 도구.
+  </Card>
+
+  <Card title="Cloudflare Pages" icon="cloudflare">
+    자동 SSL, DDoS 보호, 엣지 캐싱이 포함된 글로벌 CDN 배포.
+  </Card>
+
+  <Card title="TypeScript" icon="seti:typescript">
+    모든 애플리케이션과 공유 패키지에 걸친 엄격한 타입 안정성.
+  </Card>
+</CardGrid>
+
+## 📚 빠른 링크
+
+<LinkCard
+  title="빠른 시작 가이드"
+  description="몇 분 안에 모노레포를 시작하세요"
+  href="/public-monorepo/ko/guides/quickstart/"
+/>
+
+<LinkCard
+  title="아키텍처 개요"
+  description="SSG 아키텍처와 패키지 레이어 시스템 이해하기"
+  href="/public-monorepo/ko/guides/architecture/"
+/>

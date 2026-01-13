@@ -1,0 +1,81 @@
+---
+title: SoundBlue Public Monorepo
+description: Context、Permissive、Rootsアプリケーションの完全なドキュメント - 学習者のための3つのアプリ
+template: splash
+hero:
+  tagline: React Router v7、TypeScript、Cloudflare Pagesで構築された100% SSG学習アプリ3種
+  image:
+    file: ../../../assets/hero.svg
+  actions:
+    - text: はじめる
+      link: /public-monorepo/ja/guides/introduction/
+      icon: right-arrow
+      variant: primary
+    - text: GitHubで見る
+      link: https://github.com/soundbluemusic/public-monorepo
+      icon: external
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+## 🚀 アプリケーション
+
+<CardGrid stagger>
+  <Card title="📖 Context" icon="open-book">
+    **学習者のための韓国語辞書**
+
+    文脈ベースの定義、例文、関連表現を含む33,748のSSGページ。
+
+    [Contextを訪問 →](https://context.soundbluemusic.com)
+  </Card>
+
+  <Card title="🔧 Permissive" icon="setting">
+    **無料Web開発リソース**
+
+    許容的ライセンスを持つWeb開発ライブラリとWeb APIのコレクション。
+
+    [Permissiveを訪問 →](https://permissive.soundbluemusic.com)
+  </Card>
+
+  <Card title="📐 Roots" icon="document">
+    **学習者のための数学ドキュメント**
+
+    代数、幾何学、微積分などの数学概念をカバーする920のSSGページ。
+
+    [Rootsを訪問 →](https://roots.soundbluemusic.com)
+  </Card>
+</CardGrid>
+
+## ⚡ 技術スタック
+
+<CardGrid>
+  <Card title="100% SSG" icon="rocket">
+    すべてのアプリはReact Router v7の`prerender()`パターンを使用した静的サイト生成方式です。サーバー不要でCDNから直接配信されます。
+  </Card>
+
+  <Card title="Turborepo" icon="seti:turborepo">
+    インテリジェントキャッシングによりビルド時間を97%以上短縮するモノレポ管理ツール。
+  </Card>
+
+  <Card title="Cloudflare Pages" icon="cloudflare">
+    自動SSL、DDoS保護、エッジキャッシングを含むグローバルCDNデプロイ。
+  </Card>
+
+  <Card title="TypeScript" icon="seti:typescript">
+    すべてのアプリケーションと共有パッケージにわたる厳格な型安全性。
+  </Card>
+</CardGrid>
+
+## 📚 クイックリンク
+
+<LinkCard
+  title="クイックスタートガイド"
+  description="数分でモノレポを始めましょう"
+  href="/public-monorepo/ja/guides/quickstart/"
+/>
+
+<LinkCard
+  title="アーキテクチャ概要"
+  description="SSGアーキテクチャとパッケージレイヤーシステムの理解"
+  href="/public-monorepo/ja/guides/architecture/"
+/>

@@ -20,6 +20,7 @@ export default defineConfig({
       locales: {
         en: { label: 'English', lang: 'en' },
         ko: { label: '한국어', lang: 'ko' },
+        ja: { label: '日本語', lang: 'ja' },
       },
       sidebar: [
         {

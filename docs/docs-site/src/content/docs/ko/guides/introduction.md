@@ -1,0 +1,88 @@
+---
+title: 소개
+description: SoundBlue Public Monorepo 개요 - 학습자를 위한 세 개의 앱
+---
+
+# 소개
+
+**SoundBlue Public Monorepo** 문서에 오신 것을 환영합니다. 이 모노레포에는 최신 웹 기술로 구축된 세 개의 교육용 애플리케이션이 포함되어 있습니다.
+
+## 이게 뭔가요?
+
+모든 앱은 **100% 정적 사이트 생성(SSG)** 방식입니다. 서버 없이 CDN에서 바로 서빙됩니다.
+
+:::caution[SSG 모드만 허용]
+⛔ **SSG 모드 변경 절대 금지** - SPA, SSR, ISR 등 다른 렌더링 모드로 전환하지 마세요.
+:::
+
+## 세 개의 앱
+
+### 📖 Context — 한국어 사전
+
+**학습자를 위한 한국어 사전** | 33,748 SSG 페이지
+
+한국어 학습자를 위한 맥락 기반 사전입니다. 단어 의미, 예문, 관련 표현을 제공합니다.
+
+| 특징 | 설명 |
+|------|------|
+| 페이지 | 33,748 SSG 페이지 |
+| 언어 | 한국어, 영어 |
+| URL | [context.soundbluemusic.com](https://context.soundbluemusic.com) |
+
+### 🔧 Permissive — 웹개발 자료
+
+**무료 웹개발 자료 모음** | 8 SSG 페이지
+
+허용적 라이선스(MIT, Apache 등)를 가진 웹 개발 라이브러리와 Web API 문서 모음입니다.
+
+| 특징 | 설명 |
+|------|------|
+| 페이지 | 8 SSG 페이지 |
+| 언어 | 한국어, 영어 |
+| URL | [permissive.soundbluemusic.com](https://permissive.soundbluemusic.com) |
+
+### 📐 Roots — 수학 문서
+
+**학습자를 위한 수학 문서** | 920 SSG 페이지
+
+대수학, 기하학, 미적분 등 다양한 수학 분야를 체계적으로 정리한 학습 문서입니다.
+
+| 특징 | 설명 |
+|------|------|
+| 페이지 | 920 SSG 페이지 |
+| 언어 | 한국어, 영어 |
+| URL | [roots.soundbluemusic.com](https://roots.soundbluemusic.com) |
+
+## 기술 스택 개요
+
+### 핵심 기술
+
+| 기술 | 버전 | 용도 |
+|------|------|------|
+| React | 19 | UI 라이브러리 |
+| React Router | 7 | 라우팅 + SSG |
+| TypeScript | 5.8 | 타입 안전성 |
+| Tailwind CSS | 4 | 스타일링 |
+
+### 빌드 및 배포
+
+| 도구 | 용도 |
+|------|------|
+| Turborepo | 모노레포 관리 |
+| pnpm | 패키지 매니저 |
+| Cloudflare Pages | 배포 |
+| GitHub Actions | CI/CD |
+
+## 핵심 원칙
+
+1. **SSG 전용** - 모든 페이지는 빌드 시점에 사전 렌더링됩니다
+2. **하드코딩 금지** - 인라인 값이 아닌 데이터 파일 사용
+3. **임시방편 금지** - 모든 수정은 일반적인 해결책이어야 합니다
+4. **데이터 무결성** - 모든 데이터에 대한 단일 진실 공급원
+5. **UI 검증 필수** - 모든 변경사항은 실제 UI에서 확인되어야 합니다
+
+## 다음 단계
+
+- [빠른 시작 가이드](/public-monorepo/ko/guides/quickstart/) - 로컬에서 프로젝트 실행하기
+- [아키텍처 개요](/public-monorepo/ko/guides/architecture/) - SSG 아키텍처 이해하기
+- [Context 문서](/public-monorepo/ko/apps/context/overview/) - 한국어 사전 앱에 대해 알아보기

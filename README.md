@@ -2,6 +2,8 @@
 
 **Three apps for learners (학습자를 위한 세 개의 앱)**
 
+🌐 **English** | [한국어](https://soundbluemusic.github.io/public-monorepo/ko/) | [日本語](https://soundbluemusic.github.io/public-monorepo/ja/)
+
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Node](https://img.shields.io/badge/Node-%3E%3D20-green.svg)](https://nodejs.org)
 [![pnpm](https://img.shields.io/badge/pnpm-10.11.0-orange.svg)](https://pnpm.io)
