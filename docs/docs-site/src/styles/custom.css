@@ -10,10 +10,8 @@
   --sl-font: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --sl-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
-  /* Sidebar width customization */
-  --sb-sidebar-width: 280px;
-  --sb-sidebar-min: 200px;
-  --sb-sidebar-max: 400px;
+  /* Sidebar width customization - Starlight 변수 덮어쓰기 */
+  --sl-sidebar-width: 280px;
 
   /* Wider content area for large screens */
   --sl-content-width: 55rem;
@@ -40,117 +38,15 @@ main {
   margin-block-start: 0 !important;
 }
 
-/* ===== 1. Resizable Sidebar ===== */
-@media (min-width: 72rem) {
-  .sidebar-pane {
-    width: var(--sb-sidebar-width) !important;
-    min-width: var(--sb-sidebar-min);
-    max-width: var(--sb-sidebar-max);
-    position: relative;
-    transition: width 0.2s ease;
-  }
+/* ===== 1. Sidebar Customization ===== */
+/* Starlight 기본 레이아웃 유지 - position: fixed sidebar + padding 방식 */
+/* 커스텀 width는 :root의 --sl-sidebar-width로 설정됨 */
 
-  /* Resize handle */
-  .sidebar-resize-handle {
-    position: absolute;
-    top: 0;
-    right: -3px;
-    width: 6px;
-    height: 100%;
-    cursor: col-resize;
-    background: transparent;
-    z-index: 100;
-    transition: background-color 0.2s;
-  }
-
-  .sidebar-resize-handle:hover,
-  .sidebar-resize-handle.dragging {
-    background: var(--sl-color-accent);
-  }
-
-  /* Sidebar collapsed state */
-  [data-sidebar-collapsed="true"] .sidebar-pane {
-    width: 0 !important;
-    min-width: 0;
-    overflow: hidden;
-    padding: 0;
-  }
-
-  [data-sidebar-collapsed="true"] .sidebar-pane > * {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  [data-sidebar-collapsed="true"] .main-pane {
-    margin-inline-start: 0 !important;
-  }
-}
-
-/* ===== 2. Sidebar Toggle Button ===== */
+/* ===== 2. Sidebar Toggle Button (비활성화) ===== */
+/* Starlight 기본 레이아웃(position: fixed sidebar)과 충돌하여 비활성화 */
+/* 토글 기능이 필요하면 Starlight의 모바일 메뉴 버튼 사용 */
 .sidebar-toggle-btn {
-  position: fixed;
-  top: calc(var(--sl-nav-height, 3.5rem) + 0.75rem);
-  /* 사이드바 열림: 사이드바 바깥 오른쪽에 위치 */
-  left: calc(var(--sb-sidebar-width, 280px) + 0.5rem);
-  /* z-index를 낮춰서 헤더 드롭다운보다 뒤에 위치 */
-  z-index: 10;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  background: var(--sl-color-bg-sidebar);
-  border: 1px solid var(--sl-color-gray-5);
-  border-radius: 6px;
-  cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  transition: all 0.2s ease;
-}
-
-.sidebar-toggle-btn:hover {
-  background: var(--sl-color-gray-5);
-  border-color: var(--sl-color-accent);
-}
-
-.sidebar-toggle-btn svg {
-  width: 18px;
-  height: 18px;
-  color: var(--sl-color-text);
-}
-
-/* 사이드바 열림: 패널 아이콘 표시 */
-.sidebar-toggle-btn svg.sidebar-open {
-  display: block;
-}
-
-.sidebar-toggle-btn svg.sidebar-closed {
-  display: none;
-}
-
-/* 사이드바 닫힘: 화살표 있는 아이콘 표시 */
-[data-sidebar-collapsed="true"] .sidebar-toggle-btn svg.sidebar-open {
-  display: none;
-}
-
-[data-sidebar-collapsed="true"] .sidebar-toggle-btn svg.sidebar-closed {
-  display: block;
-}
-
-/* 사이드바 닫힘: 버튼을 왼쪽 끝으로 이동 */
-[data-sidebar-collapsed="true"] .sidebar-toggle-btn {
-  left: 0.75rem;
-}
-
-@media (min-width: 72rem) {
-  .sidebar-toggle-btn {
-    display: flex;
-  }
-
-  /* 홈페이지(히어로 페이지)에서는 사이드바가 없으므로 버튼 숨김 */
-  [data-has-hero] .sidebar-toggle-btn {
-    display: none;
-  }
+  display: none !important;
 }
 
 /* ===== 2.5 Search Suggestions ===== */
