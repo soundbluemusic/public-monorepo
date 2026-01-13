@@ -5,6 +5,12 @@
       "dependencies": ["@soundblue/*"],
       "dependencyTypes": ["dev", "prod"],
       "pinVersion": "workspace:*"
+    },
+    {
+      "label": "Pin zod to 3.x for Astro/Starlight compatibility",
+      "dependencies": ["zod"],
+      "dependencyTypes": ["dev", "prod"],
+      "pinVersion": "^3.25.0"
     }
   ],
   "semverGroups": [
