@@ -17,65 +17,14 @@ hero:
 ---
 
 import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import StatsGrid from '../../../components/StatsGrid.astro';
+import AppCards from '../../../components/AppCards.astro';
 
-<div class="stats-grid">
-  <div class="stat-item">
-    <div class="stat-value">34,676</div>
-    <div class="stat-label">SSGページ</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-value">3</div>
-    <div class="stat-label">アプリケーション</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-value">10</div>
-    <div class="stat-label">パッケージ</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-value">100%</div>
-    <div class="stat-label">静的</div>
-  </div>
-</div>
+<StatsGrid locale="ja" />
 
 ## アプリケーション
 
-<CardGrid>
-  <Card title="📖 Context" icon="open-book">
-    **学習者のための韓国語辞書**
-
-    文脈ベースの定義、例文、関連表現を含む33,748のSSGページ。英語と韓国語UIをサポート。
-
-    - 16,836辞書エントリ
-    - 25カテゴリ
-    - 53例文会話
-
-    [Contextを訪問 →](https://context.soundbluemusic.com)
-  </Card>
-
-  <Card title="🔧 Permissive" icon="setting">
-    **Web開発リソース**
-
-    開発者向けの許容的ライセンスライブラリとWeb APIドキュメントのコレクション。
-
-    - 88 JavaScriptライブラリ
-    - 56 Web APIドキュメント
-    - MIT/Apacheライセンスのみ
-
-    [Permissiveを訪問 →](https://permissive.soundbluemusic.com)
-  </Card>
-
-  <Card title="📐 Roots" icon="document">
-    **学習者のための数学ドキュメント**
-
-    代数から微積分まで基礎的な数学概念をカバーする920のSSGページ。
-
-    - 438数学概念
-    - 18数学分野
-    - 前提知識接続
-
-    [Rootsを訪問 →](https://roots.soundbluemusic.com)
-  </Card>
-</CardGrid>
+<AppCards locale="ja" />
 
 ## なぜSSG？
 

@@ -17,65 +17,14 @@ hero:
 ---
 
 import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import StatsGrid from '../../../components/StatsGrid.astro';
+import AppCards from '../../../components/AppCards.astro';
 
-<div class="stats-grid">
-  <div class="stat-item">
-    <div class="stat-value">34,676</div>
-    <div class="stat-label">SSG 페이지</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-value">3</div>
-    <div class="stat-label">애플리케이션</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-value">10</div>
-    <div class="stat-label">패키지</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-value">100%</div>
-    <div class="stat-label">정적</div>
-  </div>
-</div>
+<StatsGrid locale="ko" />
 
 ## 애플리케이션
 
-<CardGrid>
-  <Card title="📖 Context" icon="open-book">
-    **학습자를 위한 한국어 사전**
-
-    맥락 기반 정의, 예문, 관련 표현이 포함된 33,748개의 SSG 페이지. 영어와 한국어 UI 지원.
-
-    - 16,836개 사전 항목
-    - 25개 카테고리
-    - 53개 예문 대화
-
-    [Context 방문하기 →](https://context.soundbluemusic.com)
-  </Card>
-
-  <Card title="🔧 Permissive" icon="setting">
-    **웹 개발 리소스**
-
-    개발자를 위한 허용적 라이선스 라이브러리 및 Web API 문서 모음.
-
-    - 88개 JavaScript 라이브러리
-    - 56개 Web API 문서
-    - MIT/Apache 라이선스만
-
-    [Permissive 방문하기 →](https://permissive.soundbluemusic.com)
-  </Card>
-
-  <Card title="📐 Roots" icon="document">
-    **학습자를 위한 수학 문서**
-
-    대수학부터 미적분까지 기초 수학 개념을 다루는 920개의 SSG 페이지.
-
-    - 438개 수학 개념
-    - 18개 수학 분야
-    - 선수 지식 연결
-
-    [Roots 방문하기 →](https://roots.soundbluemusic.com)
-  </Card>
-</CardGrid>
+<AppCards locale="ko" />
 
 ## 왜 SSG인가?
 

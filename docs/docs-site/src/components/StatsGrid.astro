@@ -1,0 +1,30 @@
+---
+import metadata from '../data/metadata.json';
+
+interface Props {
+  locale?: 'en' | 'ko' | 'ja';
+}
+
+const { locale = 'en' } = Astro.props;
+const { totals, i18n } = metadata;
+const labels = i18n.stats;
+---
+
+<div class="stats-grid">
+  <div class="stat-item">
+    <div class="stat-value">{totals.pages.toLocaleString()}</div>
+    <div class="stat-label">{labels.pages[locale]}</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-value">{totals.apps}</div>
+    <div class="stat-label">{labels.apps[locale]}</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-value">{totals.packages}</div>
+    <div class="stat-label">{labels.packages[locale]}</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-value">100%</div>
+    <div class="stat-label">{labels.static[locale]}</div>
+  </div>
+</div>

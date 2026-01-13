@@ -17,65 +17,14 @@ hero:
 ---
 
 import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import StatsGrid from '../../components/StatsGrid.astro';
+import AppCards from '../../components/AppCards.astro';
 
-<div class="stats-grid">
-  <div class="stat-item">
-    <div class="stat-value">34,676</div>
-    <div class="stat-label">SSG Pages</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-value">3</div>
-    <div class="stat-label">Applications</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-value">10</div>
-    <div class="stat-label">Packages</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-value">100%</div>
-    <div class="stat-label">Static</div>
-  </div>
-</div>
+<StatsGrid locale="en" />
 
 ## Applications
 
-<CardGrid>
-  <Card title="📖 Context" icon="open-book">
-    **Korean Dictionary for Learners**
-
-    33,748 SSG pages with context-based definitions, examples, and related expressions. Supports both English and Korean UI.
-
-    - 16,836 dictionary entries
-    - 25 categories
-    - 53 example conversations
-
-    [Visit Context →](https://context.soundbluemusic.com)
-  </Card>
-
-  <Card title="🔧 Permissive" icon="setting">
-    **Web Development Resources**
-
-    Curated collection of permissively-licensed libraries and Web API documentation for developers.
-
-    - 88 JavaScript libraries
-    - 56 Web APIs documented
-    - MIT/Apache licensed only
-
-    [Visit Permissive →](https://permissive.soundbluemusic.com)
-  </Card>
-
-  <Card title="📐 Roots" icon="document">
-    **Math Documentation for Learners**
-
-    920 SSG pages covering fundamental mathematical concepts from algebra to calculus.
-
-    - 438 math concepts
-    - 18 mathematical fields
-    - Prerequisite connections
-
-    [Visit Roots →](https://roots.soundbluemusic.com)
-  </Card>
-</CardGrid>
+<AppCards locale="en" />
 
 ## Why SSG?
 

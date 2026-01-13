@@ -56,6 +56,14 @@ export default defineConfig({
           autogenerate: { directory: 'contributing' },
         },
         {
+          label: 'AI Guidelines',
+          autogenerate: { directory: 'ai-guidelines' },
+        },
+        {
+          label: 'Reference',
+          autogenerate: { directory: 'reference' },
+        },
+        {
           label: 'Open Source',
           link: '/open-source/',
         },
