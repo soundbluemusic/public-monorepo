@@ -5,7 +5,7 @@ User-agent: *
 Allow: /public-monorepo/
 
 # Sitemaps
-Sitemap: https://soundbluemusic.github.io/public-monorepo/sitemap-index.xml
+Sitemap: https://soundbluemusic.github.io/public-monorepo/sitemap.xml
 
 # Disallow admin/internal paths (none currently)
 # Disallow: /admin/
