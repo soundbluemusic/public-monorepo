@@ -13,6 +13,7 @@ apps/roots/public/concepts.json
 apps/roots/public/concept-names.json
 apps/roots/public/search-index.json
 apps/roots/public/concepts/
+apps/roots/public/sitemap*.xml
 apps/context/app/data/generated/
 apps/context/public/data/by-category/
 apps/context/public/data/chunks/
