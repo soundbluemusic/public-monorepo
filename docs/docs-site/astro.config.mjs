@@ -83,6 +83,26 @@ export default defineConfig({
           attrs: { property: 'og:image', content: 'https://soundbluemusic.github.io/public-monorepo/og-image.png' },
         },
         {
+          tag: 'link',
+          attrs: { rel: 'manifest', href: '/public-monorepo/manifest.json' },
+        },
+        {
+          tag: 'meta',
+          attrs: { name: 'theme-color', content: '#2563eb' },
+        },
+        {
+          tag: 'meta',
+          attrs: { name: 'apple-mobile-web-app-capable', content: 'yes' },
+        },
+        {
+          tag: 'meta',
+          attrs: { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
+        },
+        {
+          tag: 'link',
+          attrs: { rel: 'apple-touch-icon', href: '/public-monorepo/apple-touch-icon.svg' },
+        },
+        {
           tag: 'script',
           content: `
             // Sidebar controls initialization (runs before DOM)
@@ -122,6 +142,19 @@ export default defineConfig({
 
             // Also handle Astro view transitions
             document.addEventListener('astro:page-load', createSidebarToggle);
+
+            // Register Service Worker for PWA
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/public-monorepo/sw.js')
+                  .then(function(registration) {
+                    console.log('SW registered:', registration.scope);
+                  })
+                  .catch(function(error) {
+                    console.log('SW registration failed:', error);
+                  });
+              });
+            }
           `,
         },
       ],

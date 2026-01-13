@@ -90,9 +90,10 @@ main {
 .sidebar-toggle-btn {
   position: fixed;
   top: calc(var(--sl-nav-height, 3.5rem) + 0.75rem);
-  /* 사이드바 내부 오른쪽 상단에 배치 */
-  left: calc(var(--sl-sidebar-width, 18.75rem) - 2.5rem - var(--sl-sidebar-pad-x, 1rem));
-  z-index: 300;
+  /* 항상 왼쪽 고정 위치 */
+  left: 0.75rem;
+  /* z-index를 낮춰서 헤더 드롭다운보다 뒤에 위치 */
+  z-index: 10;
   display: none;
   align-items: center;
   justify-content: center;
@@ -103,7 +104,7 @@ main {
   border: 1px solid var(--sl-color-gray-5);
   border-radius: 6px;
   cursor: pointer;
-  box-shadow: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease;
 }
 
@@ -139,11 +140,6 @@ main {
 @media (min-width: 72rem) {
   .sidebar-toggle-btn {
     display: flex;
-  }
-
-  /* 사이드바 접힘 시 왼쪽 가장자리로 이동 */
-  [data-sidebar-collapsed="true"] .sidebar-toggle-btn {
-    left: 0.5rem;
   }
 }
 
