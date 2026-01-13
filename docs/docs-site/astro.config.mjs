@@ -13,9 +13,9 @@ export default defineConfig({
                             dark: './src/assets/logo-dark.svg',
                             replacesTitle: false,
                   },
-                  social: [
-                    { icon: 'github', label: 'GitHub', href: 'https://github.com/soundbluemusic/public-monorepo' },
-                          ],
+                  social: {
+                    github: 'https://github.com/soundbluemusic/public-monorepo',
+                  },
                   defaultLocale: 'en',
                   locales: {
                             en: { label: 'English', lang: 'en' },

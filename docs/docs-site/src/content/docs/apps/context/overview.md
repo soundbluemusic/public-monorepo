@@ -3,148 +3,96 @@ title: Context Overview
 description: Complete documentation for Context - Korean Dictionary for Learners (학습자를 위한 한국어 사전)
 sidebar:
   order: 1
-  ---
+---
 
-  # Context — Korean Dictionary
+# Context — Korean Dictionary
 
-  **학습자를 위한 한국어 사전** | 33,748 SSG pages
+**학습자를 위한 한국어 사전** | 33,748 SSG pages
 
-  Context is a context-based Korean dictionary designed specifically for language learners. It provides word meanings, example sentences, and related expressions in a user-friendly interface.
+Context is a context-based Korean dictionary designed specifically for language learners. It provides word meanings, example sentences, and related expressions in a user-friendly interface.
 
-  ## Live Demo
+## Live Demo
 
-  🌐 **[context.soundbluemusic.com](https://context.soundbluemusic.com)**
+🌐 **[context.soundbluemusic.com](https://context.soundbluemusic.com)**
 
-  ## Features
+## Features
 
-  ### 📚 Comprehensive Dictionary
+### 📚 Comprehensive Dictionary
 
-  - **33,748 entries** covering vocabulary from beginner to advanced
-  - - Context-based definitions with real-world usage examples
-    - - Related expressions and collocations
-      - - Bilingual support (Korean/English)
-       
-        - ### 🔍 Smart Search
-       
-        - - Instant search with Korean Romanization support
-          - - Auto-suggestions as you type
-            - - Search by Korean, English, or Romanization
-             
-              - ### 🌐 Multilingual Interface
-             
-              - - Full support for English and Korean UI
-                - - URL-based language switching (`/entry/...` vs `/ko/entry/...`)
-                  - - SEO-optimized with proper canonical and hreflang tags
-                   
-                    - ### 📱 PWA Support
-                   
-                    - - Installable as a Progressive Web App
-                      - - Offline-capable with service worker caching
-                        - - Stale-while-revalidate caching strategy
-                         
-                          - ## Project Structure
-                         
-                          - ```
-                            apps/context/
-                            ├── app/
-                            │   ├── components/      # React components
-                            │   ├── routes/          # React Router routes
-                            │   ├── data/            # Entry data loaders
-                            │   ├── hooks/           # Custom React hooks
-                            │   └── utils/           # Utility functions
-                            ├── public/              # Static assets
-                            └── react-router.config.ts  # SSG configuration
-                            ```
+- **33,748 entries** covering vocabulary from beginner to advanced
+- Context-based definitions with real-world usage examples
+- Related expressions and collocations
+- Bilingual support (Korean/English)
 
-                            ## Key Routes
+### 🔍 Smart Search
 
-                            | Route | Description |
-                            |-------|-------------|
-                            | `/` | Homepage with search |
-                            | `/entry/:entryId` | Individual entry page (English) |
-                            | `/ko/entry/:entryId` | Individual entry page (Korean) |
-                            | `/about` | About page |
-                            | `/sitemap.xml` | XML sitemap |
+- Instant search with Korean Romanization support
+- Auto-suggestions as you type
+- Search by Korean, English, or Romanization
 
-                            ## SSG Configuration
+### 🌐 Multilingual Interface
 
-                            Context uses React Router v7's prerender pattern:
+- Full support for English and Korean UI
+- URL-based language switching (`/entry/...` vs `/ko/entry/...`)
+- SEO-optimized with proper canonical and hreflang tags
 
-                            ```typescript
-                            // react-router.config.ts
-                            export default {
-                              ssr: false,  // SSG mode
-                              async prerender() {
-                                const staticRoutes = extractStaticRoutes(routes);
-                                const entryRoutes = generateI18nRoutes(entries, `/entry/`);
-                                return [...staticRoutes, ...entryRoutes];
-                              },
-                            } satisfies Config;
-                            ```
+### 📱 PWA Support
 
-                            ## Data Structure
+- Installable as a Progressive Web App
+- Offline-capable with service worker caching
+- Stale-while-revalidate caching strategy
 
-                            Each entry contains:
+## Project Structure
 
-                            ```typescript
-                            interface Entry {
-                              id: string;
-                              word: string;
-                              pronunciation?: string;
-                              partOfSpeech: string;
-                              translations: {
-                                definition: string;
-                                explanation?: string;
-                                examples?: string[];
-                              };
-                              relatedWords?: string[];
-                              tags?: string[];
-                            }
-                            ```
+```
+apps/context/
+├── app/
+│   ├── components/      # React components
+│   ├── routes/          # React Router routes
+│   ├── data/            # Entry data loaders
+│   ├── hooks/           # Custom React hooks
+│   └── utils/           # Utility functions
+├── public/              # Static assets
+└── react-router.config.ts  # SSG configuration
+```
 
-                            ## Development
+## Key Routes
 
-                            ### Start Development Server
+| Route | Description |
+|-------|-------------|
+| `/` | Homepage with search |
+| `/entry/:entryId` | Individual entry page (English) |
+| `/ko/entry/:entryId` | Individual entry page (Korean) |
+| `/about` | About page |
+| `/sitemap.xml` | XML sitemap |
 
-                            ```bash
-                            pnpm dev:context
-                            # → http://localhost:3003
-                            ```
+## SSG Configuration
 
-                            ### Build for Production
+Context uses React Router v7's prerender pattern:
 
-                            ```bash
-                            pnpm build:context
-                            ```
+```typescript
+// react-router.config.ts
+export default {
+  ssr: false,  // SSG mode
+  async prerender() {
+    const staticRoutes = extractStaticRoutes(routes);
+    const entryRoutes = generateI18nRoutes(entries, `/entry/`);
+    return [...staticRoutes, ...entryRoutes];
+  },
+} satisfies Config;
+```
 
-                            ### Run Tests
+## Development
 
-                            ```bash
-                            pnpm test:context
-                            ```
+### Start Development Server
 
-                            ## Deployment
+```bash
+pnpm dev:context
+# → http://localhost:3003
+```
 
-                            Context is automatically deployed to Cloudflare Pages via GitHub Actions when changes are pushed to the `main` branch.
+### Build for Production
 
-                            ### Cloudflare Pages Configuration
-
-                            - **Project Name:** `c0ntext`
-                            - - **Build Output:** `apps/context/build/client`
-                              - - **Domain:** `context.soundbluemusic.com`
-                               
-                                - ## SEO Features
-                               
-                                - - Automatic canonical URL generation
-                                  - - Hreflang tags for multilingual SEO
-                                    - - Dynamic meta tags with `metaFactory` and `dynamicMetaFactory`
-                                      - - XML sitemap with all 33,748 pages
-                                       
-                                        - ## Performance
-                                       
-                                        - | Metric | Score |
-                                        - |--------|-------|
-                                        - | Lighthouse Performance | 95+ |
-                                        - | First Contentful Paint | <1.2s |
-                                        - | Largest Contentful Paint | <2.5s |
-                                        - | Total Blocking Time | <200ms |
+```bash
+pnpm build:context
+```

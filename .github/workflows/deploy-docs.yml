@@ -38,7 +38,8 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install --filter @soundblue/docs...
+        working-directory: docs/docs-site
+        run: pnpm install --ignore-workspace
 
       - name: Build documentation site
         working-directory: docs/docs-site
