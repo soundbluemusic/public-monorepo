@@ -5,6 +5,63 @@
 > ⛔ **100% SSG Only** - 이 프로젝트는 정적 사이트 생성(SSG) 전용입니다.
 > SPA, SSR, ISR 등 다른 렌더링 모드로 전환 절대 금지.
 
+---
+
+## SSG Architecture (SSG 아키텍처)
+
+### How It Works
+
+React Router v7의 `prerender()` + `loader()` 패턴으로 **빌드 시** 모든 페이지를 완전한 HTML로 생성합니다.
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  Build Time                                                     │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐         │
+│  │ prerender() │ → │  loader()   │ → │  HTML + .data │         │
+│  │ (route list)│    │ (fetch data)│    │  (static)    │         │
+│  └─────────────┘    └─────────────┘    └─────────────┘         │
+└─────────────────────────────────────────────────────────────────┘
+                              ↓
+┌─────────────────────────────────────────────────────────────────┐
+│  Runtime (CDN)                                                  │
+│  ┌─────────────────────────────────────────────────────────┐   │
+│  │  Static HTML served instantly — No server required       │   │
+│  └─────────────────────────────────────────────────────────┘   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### SSG Pages per App
+
+| App | Dynamic Routes | SSG Pages | Data Source |
+|:----|:---------------|:---------:|:------------|
+| **Context** | 16836 entries + 25 categories + 53 conversations | 33,748 | JSON |
+| **Roots** | 438 concepts + 18 fields | 920 | TypeScript |
+| **Permissive** | 4 static routes | 8 | Array literals |
+| **Total** | — | **34,676** | — |
+
+### Code Pattern
+
+```typescript
+// react-router.config.ts
+export default {
+  ssr: false,  // SSG mode
+  async prerender() {
+    const staticRoutes = extractStaticRoutes(routes);
+    const entryRoutes = generateI18nRoutes(entries, (e) => `/entry/${e.id}`);
+    return [...staticRoutes, ...entryRoutes];
+  },
+} satisfies Config;
+
+// routes/entry.$entryId.tsx
+export async function loader({ params }: Route.LoaderArgs) {
+  const entry = getEntryById(params.entryId);
+  if (!entry) throw new Response('Not Found', { status: 404 });
+  return { entry };  // → saved as .data file at build time
+}
+```
+
+---
+
 ## Package Layer System (패키지 레이어 시스템)
 
 ```
