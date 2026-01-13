@@ -27,7 +27,8 @@
 | | |
 |---|---|
 | **Live** | [context.soundbluemusic.com](https://context.soundbluemusic.com) |
-| **Source** | [apps/context](apps/context) |
+| **Source** | [apps/context/](apps/context) · [README](apps/context/README.md) · [config](apps/context/react-router.config.ts) |
+| **Data** | [data/context/](data/context) |
 | **Features** | 16836 entries, 25 categories, 53 conversations |
 
 ### 🔧 Permissive — Web Dev Resources
@@ -36,7 +37,8 @@
 | | |
 |---|---|
 | **Live** | [permissive.soundbluemusic.com](https://permissive.soundbluemusic.com) |
-| **Source** | [apps/permissive](apps/permissive) |
+| **Source** | [apps/permissive/](apps/permissive) · [README](apps/permissive/README.md) · [config](apps/permissive/react-router.config.ts) |
+| **Data** | [data/permissive/](data/permissive) |
 | **Features** | 88 libraries, 56 Web APIs |
 
 ### 📐 Roots — Math Documentation
@@ -45,7 +47,8 @@
 | | |
 |---|---|
 | **Live** | [roots.soundbluemusic.com](https://roots.soundbluemusic.com) |
-| **Source** | [apps/roots](apps/roots) |
+| **Source** | [apps/roots/](apps/roots) · [README](apps/roots/README.md) · [config](apps/roots/react-router.config.ts) |
+| **Data** | [data/roots/](data/roots) |
 | **Features** | 438 concepts, 18 fields |
 
 ---
@@ -63,7 +66,7 @@ pnpm dev:permissive  # → http://localhost:3004
 pnpm dev:roots       # → http://localhost:3005
 ```
 
-> **Prerequisites:** Node.js ≥ 20, pnpm 10.11.0
+> **Prerequisites:** Node.js ≥ 20, pnpm 10.11.0 · [package.json](package.json)
 
 ---
 
@@ -71,26 +74,44 @@ pnpm dev:roots       # → http://localhost:3005
 
 ```
 public-monorepo/
-├── apps/           # 3 applications (Context, Permissive, Roots)
-├── packages/       # 10 shared packages (Layer 0-3)
-├── data/           # JSON data (SSoT)
-└── docs/           # Documentation site (Astro + Starlight)
+├── apps/                → 3 applications
+│   ├── context/         → Korean dictionary (33,748 pages)
+│   ├── permissive/      → Web dev resources (8 pages)
+│   └── roots/           → Math documentation (920 pages)
+├── packages/            → 10 shared packages
+│   ├── core/            → [L0] validation, utils, types
+│   ├── config/          → [L0] Vite, Tailwind configs
+│   ├── data/            → [L1] Zod schemas, loaders
+│   ├── platform/        → [L1] IndexedDB storage
+│   ├── i18n/            → [L2] URL routing, Paraglide
+│   ├── search/          → [L2] MiniSearch wrapper
+│   ├── seo/             → [L2] Meta tags, sitemap
+│   ├── pwa/             → [L2] Service worker
+│   ├── features/        → [L3] Settings, toast
+│   └── ui/              → [L3] React components
+├── data/                → JSON data (SSoT)
+└── docs/                → Documentation site
 ```
 
-> 📐 **Architecture details:** [ARCHITECTURE.md](ARCHITECTURE.md)
+> 📐 **Layer system:** [ARCHITECTURE.md](ARCHITECTURE.md) · **Package details:** [packages/](packages/)
 
 ---
 
 ## 🛠 Tech Stack
 
-| Category | Technology |
-|:---------|:-----------|
-| **Framework** | React 19 + React Router v7 |
-| **Language** | TypeScript 5.x (strict mode) |
-| **Styling** | Tailwind CSS v4 |
-| **Rendering** | 100% SSG (34,676 pages total) |
-| **Hosting** | Cloudflare Pages |
-| **Build** | Vite + Turborepo |
+| Category | Technology | Source |
+|:---------|:-----------|:-------|
+| **Framework** | React 19 + React Router v7 | [apps/*/routes/](apps/context/app/routes) |
+| **Language** | TypeScript 5.x | [tsconfig.json](tsconfig.json) |
+| **Styling** | Tailwind CSS v4 | [packages/config/](packages/config) |
+| **Search** | MiniSearch | [packages/search/](packages/search) |
+| **i18n** | Paraglide | [packages/i18n/](packages/i18n) |
+| **SEO** | Meta Factory | [packages/seo/](packages/seo) |
+| **Storage** | IndexedDB (Dexie) | [packages/platform/](packages/platform) |
+| **PWA** | Service Worker | [packages/pwa/](packages/pwa) |
+| **UI** | Components | [packages/ui/](packages/ui) |
+| **Hosting** | Cloudflare Pages | — |
+| **Build** | Vite + Turborepo | [turbo.json](turbo.json) |
 
 ---
 
@@ -109,7 +130,7 @@ public-monorepo/
 
 | Command | Description |
 |:--------|:------------|
-| `pnpm build` | Build all apps (Turborepo cached) |
+| `pnpm build` | Build all apps ([Turborepo](turbo.json) cached) |
 | `pnpm build:context` | Build Context → `build/client` |
 | `pnpm build:permissive` | Build Permissive → `build/client` |
 | `pnpm build:roots` | Build Roots → `build/client` |
@@ -118,11 +139,11 @@ public-monorepo/
 
 | Command | Description |
 |:--------|:------------|
-| `pnpm lint` | Check code with Biome |
-| `pnpm format` | Format code with Biome |
+| `pnpm lint` | Check code with [Biome](biome.json) |
+| `pnpm format` | Format code with [Biome](biome.json) |
 | `pnpm typecheck` | TypeScript type check |
-| `pnpm test` | Run Vitest unit tests |
-| `pnpm test:e2e` | Run Playwright E2E tests |
+| `pnpm test` | Run [Vitest](vitest.config.ts) unit tests |
+| `pnpm test:e2e` | Run [Playwright](playwright.config.ts) E2E tests |
 
 </details>
 
@@ -133,9 +154,10 @@ public-monorepo/
 | Resource | Description |
 |:---------|:------------|
 | [📖 Docs Site](https://soundbluemusic.github.io/public-monorepo) | Full documentation |
-| [ARCHITECTURE.md](ARCHITECTURE.md) | Package layer design |
-| [CONTRIBUTING.md](CONTRIBUTING.md) | Contribution guidelines |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | SSG architecture, package layers |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Critical rules, contribution guide |
 | [CLAUDE.md](CLAUDE.md) | AI assistant guidelines |
+| [LICENSE](LICENSE) | Apache License 2.0 |
 
 ---
 
@@ -151,7 +173,7 @@ public-monorepo/
 
 ## 📄 License
 
-**Apache License 2.0** — Free to use, modify, and distribute.
+**[Apache License 2.0](LICENSE)** — Free to use, modify, and distribute.
 
 ---
 
