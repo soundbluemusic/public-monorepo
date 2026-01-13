@@ -14,6 +14,9 @@
   --sb-sidebar-width: 280px;
   --sb-sidebar-min: 200px;
   --sb-sidebar-max: 400px;
+
+  /* Wider content area for large screens */
+  --sl-content-width: 55rem;
 }
 
 :root[data-theme='dark'] {
@@ -459,5 +462,43 @@ nav.sidebar {
 
   .stat-value {
     font-size: 1.25rem;
+  }
+}
+
+/* ===== Wide Screen Layout Fix (1500px+) ===== */
+/* Starlight의 복잡한 calc() 레이아웃이 넓은 화면에서 깨지는 문제 수정 */
+@media (min-width: 95rem) {
+  /* 전체 레이아웃 컨테이너 최대 너비 제한 */
+  .main-frame {
+    max-width: 95rem;
+    margin-inline: auto;
+  }
+}
+
+/* ===== Ultra-wide Screen Fix (2000px+) ===== */
+@media (min-width: 120rem) {
+  /* 콘텐츠 최대 너비 확대 */
+  :root {
+    --sl-content-width: 60rem;
+  }
+
+  /* 전체 레이아웃 컨테이너 최대 너비 */
+  .main-frame {
+    max-width: 110rem;
+    margin-inline: auto;
+  }
+
+  /* 메인 콘텐츠 영역 강제 표시 */
+  .main-pane {
+    min-width: 0;
+    flex: 1 1 auto;
+    width: auto !important;
+  }
+
+  /* 오른쪽 사이드바 너비 고정 */
+  .right-sidebar-container {
+    flex-shrink: 0;
+    width: var(--sl-sidebar-width, 18.75rem) !important;
+    max-width: var(--sl-sidebar-width, 18.75rem) !important;
   }
 }
