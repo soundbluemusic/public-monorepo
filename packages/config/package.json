@@ -5,6 +5,15 @@
   "sideEffects": ["./dist/entry-client.js"],
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soundbluemusic/public-monorepo",
+    "directory": "packages/config"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": ["dist", "src/styles"],
   "exports": {
     ".": {
