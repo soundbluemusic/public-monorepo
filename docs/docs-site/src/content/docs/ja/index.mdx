@@ -3,7 +3,7 @@ title: SoundBlue Public Monorepo
 description: Context、Permissive、Rootsアプリケーションの完全なドキュメント - 学習者のための3つのアプリ
 template: splash
 hero:
-  tagline: React Router v7、TypeScript、Cloudflare Pagesで構築された100% SSG学習アプリ3種
+  tagline: 学習者のための3つの100% SSGアプリケーション — 韓国語辞書、Web開発リソース、数学ドキュメント
   image:
     file: ../../../assets/hero.svg
   actions:
@@ -18,21 +18,48 @@ hero:
 
 import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
 
-## 🚀 アプリケーション
+<div class="stats-grid">
+  <div class="stat-item">
+    <div class="stat-value">34,676</div>
+    <div class="stat-label">SSGページ</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-value">3</div>
+    <div class="stat-label">アプリケーション</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-value">10</div>
+    <div class="stat-label">パッケージ</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-value">100%</div>
+    <div class="stat-label">静的</div>
+  </div>
+</div>
 
-<CardGrid stagger>
+## アプリケーション
+
+<CardGrid>
   <Card title="📖 Context" icon="open-book">
     **学習者のための韓国語辞書**
 
-    文脈ベースの定義、例文、関連表現を含む33,748のSSGページ。
+    文脈ベースの定義、例文、関連表現を含む33,748のSSGページ。英語と韓国語UIをサポート。
+
+    - 16,836辞書エントリ
+    - 25カテゴリ
+    - 53例文会話
 
     [Contextを訪問 →](https://context.soundbluemusic.com)
   </Card>
 
   <Card title="🔧 Permissive" icon="setting">
-    **無料Web開発リソース**
+    **Web開発リソース**
 
-    許容的ライセンスを持つWeb開発ライブラリとWeb APIのコレクション。
+    開発者向けの許容的ライセンスライブラリとWeb APIドキュメントのコレクション。
+
+    - 88 JavaScriptライブラリ
+    - 56 Web APIドキュメント
+    - MIT/Apacheライセンスのみ
 
     [Permissiveを訪問 →](https://permissive.soundbluemusic.com)
   </Card>
@@ -40,42 +67,78 @@ import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
   <Card title="📐 Roots" icon="document">
     **学習者のための数学ドキュメント**
 
-    代数、幾何学、微積分などの数学概念をカバーする920のSSGページ。
+    代数から微積分まで基礎的な数学概念をカバーする920のSSGページ。
+
+    - 438数学概念
+    - 18数学分野
+    - 前提知識接続
 
     [Rootsを訪問 →](https://roots.soundbluemusic.com)
   </Card>
 </CardGrid>
 
-## ⚡ 技術スタック
+## なぜSSG？
 
 <CardGrid>
-  <Card title="100% SSG" icon="rocket">
-    すべてのアプリはReact Router v7の`prerender()`パターンを使用した静的サイト生成方式です。サーバー不要でCDNから直接配信されます。
+  <Card title="⚡ 即時ロード" icon="rocket">
+    世界中のCDNエッジロケーションから事前レンダリングされたHTMLを配信。サーバー処理なし、待機なし。
   </Card>
 
-  <Card title="Turborepo" icon="seti:turborepo">
-    インテリジェントキャッシングによりビルド時間を97%以上短縮するモノレポ管理ツール。
+  <Card title="🔒 デフォルトでセキュア" icon="approve-check">
+    サーバーがなければサーバーの脆弱性もありません。静的ファイルは本質的に安全です。
   </Card>
 
-  <Card title="Cloudflare Pages" icon="cloudflare">
-    自動SSL、DDoS保護、エッジキャッシングを含むグローバルCDNデプロイ。
+  <Card title="💰 ゼロコストホスティング" icon="sun">
+    無制限帯域幅のCloudflare Pagesでホスティング。維持するサーバーなし。
   </Card>
 
-  <Card title="TypeScript" icon="seti:typescript">
-    すべてのアプリケーションと共有パッケージにわたる厳格な型安全性。
+  <Card title="🌐 SEO最適化" icon="magnifier">
+    検索エンジンが利用できる完全なHTMLコンテンツ。適切なメタタグとサイトマップ含む。
   </Card>
 </CardGrid>
 
-## 📚 クイックリンク
+## 技術スタック
+
+<CardGrid stagger>
+  <Card title="React Router v7" icon="seti:react">
+    クライアントサイドハイドレーションと共に静的サイト生成のための`prerender()`パターンを使用。
+  </Card>
+
+  <Card title="TypeScript" icon="seti:typescript">
+    10の共有パッケージと3つのアプリケーション全体にわたる厳格な型安全性。
+  </Card>
+
+  <Card title="Turborepo" icon="seti:turborepo">
+    97%以上のキャッシュヒット率を持つモノレポビルドオーケストレーション。
+  </Card>
+
+  <Card title="Tailwind CSS v4" icon="seti:tailwind">
+    カスタムデザイントークンを使用したユーティリティファーストスタイリング。
+  </Card>
+</CardGrid>
+
+## クイックリンク
 
 <LinkCard
   title="クイックスタートガイド"
-  description="数分でモノレポを始めましょう"
+  description="2分以内にクローン、インストール、アプリ実行"
   href="/public-monorepo/ja/guides/quickstart/"
 />
 
 <LinkCard
   title="アーキテクチャ概要"
-  description="SSGアーキテクチャとパッケージレイヤーシステムの理解"
+  description="4レイヤーパッケージシステムとSSGパターンを理解する"
   href="/public-monorepo/ja/guides/architecture/"
+/>
+
+<LinkCard
+  title="パッケージAPIリファレンス"
+  description="10共有パッケージの完全ドキュメント"
+  href="/public-monorepo/ja/packages/"
+/>
+
+<LinkCard
+  title="コントリビューションガイド"
+  description="モノレポへの貢献方法"
+  href="/public-monorepo/ja/contributing/"
 />

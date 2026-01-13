@@ -1,0 +1,70 @@
+---
+/**
+ * CustomFooter.astro
+ * Custom footer with "Pages by soundbluemusic" branding
+ */
+
+interface Props {
+  locale?: string;
+}
+
+const { locale = 'en' } = Astro.props;
+
+const currentYear = new Date().getFullYear();
+
+const links = {
+  en: {
+    github: 'GitHub',
+    openSource: 'Open Source',
+    context: 'Context',
+    permissive: 'Permissive',
+    roots: 'Roots',
+  },
+  ko: {
+    github: 'GitHub',
+    openSource: '오픈소스',
+    context: 'Context',
+    permissive: 'Permissive',
+    roots: 'Roots',
+  },
+  ja: {
+    github: 'GitHub',
+    openSource: 'オープンソース',
+    context: 'Context',
+    permissive: 'Permissive',
+    roots: 'Roots',
+  },
+};
+
+const t = links[locale as keyof typeof links] || links.en;
+const openSourcePath = locale === 'en' ? '/public-monorepo/open-source/' : `/public-monorepo/${locale}/open-source/`;
+---
+
+<footer class="custom-footer">
+  <div class="custom-footer-content">
+    <div class="custom-footer-brand">
+      <span>Pages by</span>
+      <a href="https://soundbluemusic.com" target="_blank" rel="noopener noreferrer">
+        soundbluemusic
+      </a>
+      <span>© {currentYear}</span>
+    </div>
+    <div class="custom-footer-links">
+      <a href="https://github.com/soundbluemusic/public-monorepo" target="_blank" rel="noopener noreferrer">
+        {t.github}
+      </a>
+      <a href={openSourcePath}>
+        {t.openSource}
+      </a>
+      <a href="https://context.soundbluemusic.com" target="_blank" rel="noopener noreferrer">
+        {t.context}
+      </a>
+      <a href="https://permissive.soundbluemusic.com" target="_blank" rel="noopener noreferrer">
+        {t.permissive}
+      </a>
+      <a href="https://roots.soundbluemusic.com" target="_blank" rel="noopener noreferrer">
+        {t.roots}
+      </a>
+    </div>
+  </div>
+</footer>

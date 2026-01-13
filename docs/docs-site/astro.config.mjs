@@ -55,6 +55,10 @@ export default defineConfig({
           label: 'Contributing',
           autogenerate: { directory: 'contributing' },
         },
+        {
+          label: 'Open Source',
+          link: '/open-source/',
+        },
       ],
       customCss: [
         './src/styles/custom.css',
@@ -70,7 +74,24 @@ export default defineConfig({
           tag: 'meta',
           attrs: { property: 'og:image', content: 'https://soundbluemusic.github.io/public-monorepo/og-image.png' },
         },
+        {
+          tag: 'script',
+          content: `
+            // Sidebar controls initialization
+            (function() {
+              const COLLAPSED_KEY = 'sb-sidebar-collapsed';
+              const WIDTH_KEY = 'sb-sidebar-width';
+              const isCollapsed = localStorage.getItem(COLLAPSED_KEY) === 'true';
+              const savedWidth = localStorage.getItem(WIDTH_KEY);
+              if (isCollapsed) document.documentElement.setAttribute('data-sidebar-collapsed', 'true');
+              if (savedWidth) document.documentElement.style.setProperty('--sb-sidebar-width', savedWidth);
+            })();
+          `,
+        },
       ],
+      components: {
+        Footer: './src/components/CustomFooter.astro',
+      },
     }),
   ],
 });
