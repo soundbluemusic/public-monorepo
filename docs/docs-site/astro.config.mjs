@@ -4,6 +4,14 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
   site: 'https://soundbluemusic.github.io',
   base: '/public-monorepo',
+  legacy: {
+    collections: true,
+  },
+  vite: {
+    ssr: {
+      noExternal: ['nanoid'],
+    },
+  },
   integrations: [
     starlight({
       title: 'SoundBlue Docs',
@@ -13,12 +21,12 @@ export default defineConfig({
         dark: './src/assets/logo-dark.svg',
         replacesTitle: false,
       },
-      social: {
-        github: 'https://github.com/soundbluemusic/public-monorepo',
-      },
-      defaultLocale: 'en',
+      social: [
+        { icon: 'github', label: 'GitHub', href: 'https://github.com/soundbluemusic/public-monorepo' },
+      ],
+      defaultLocale: 'root',
       locales: {
-        en: { label: 'English', lang: 'en' },
+        root: { label: 'English', lang: 'en' },
         ko: { label: '한국어', lang: 'ko' },
         ja: { label: '日本語', lang: 'ja' },
       },
