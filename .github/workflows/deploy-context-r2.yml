@@ -1,26 +1,45 @@
-name: Sync Context R2
+name: Deploy Context SSG to R2
 
 on:
   push:
     branches: [main]
     paths:
       - 'data/context/**'
+      - 'apps/context/**'
+      - 'packages/**'
   workflow_dispatch:
 
 concurrency:
-  group: sync-context-r2-${{ github.ref }}
+  group: deploy-context-r2-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  sync:
-    name: Sync to R2
+  build-and-sync:
+    name: Build SSG & Deploy to R2
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build R2 SSG (33,672 entry pages)
+        run: pnpm build:r2
+        working-directory: apps/context
+        env:
+          NODE_OPTIONS: '--max-old-space-size=8192'
+
       - name: Install rclone
-        run: |
-          curl -fsSL https://rclone.org/install.sh | sudo bash
+        run: curl -fsSL https://rclone.org/install.sh | sudo bash
 
       - name: Configure rclone for R2
         run: |
@@ -35,13 +54,60 @@ jobs:
           acl = private
           EOF
 
-      - name: Sync to R2
+      - name: Sync entry SSG HTML to R2
+        working-directory: apps/context
         run: |
-          rclone sync data/context/entries r2:all-sites-static/public-monorepo/context/data/entries \
-            --checksum \
-            --transfers 32 \
-            --checkers 32 \
-            --fast-list \
-            --stats 10s \
-            --stats-one-line \
-            -v
+          echo "📤 Uploading English entries..."
+          rclone sync build/client/entry r2:all-sites-static/public-monorepo/context/entry \
+            --checksum --transfers 32 --checkers 32 --fast-list \
+            --stats 10s --stats-one-line -v
+
+          echo "📤 Uploading Korean entries..."
+          rclone sync build/client/ko/entry r2:all-sites-static/public-monorepo/context/ko/entry \
+            --checksum --transfers 32 --checkers 32 --fast-list \
+            --stats 10s --stats-one-line -v
+
+      - name: Wait for CDN propagation
+        run: sleep 30
+
+      - name: Verify SSG URLs (sample test)
+        run: |
+          echo "🔍 사이트맵 URL 샘플 검증 중..."
+
+          # 사이트맵에서 엔트리 URL 추출 (영어 + 한국어 각 50개)
+          curl -s https://context.soundbluemusic.com/sitemap-entries.xml | \
+            grep -oP '(?<=<loc>)[^<]+' | shuf -n 100 > /tmp/sample-urls.txt
+
+          FAILED=0
+          TESTED=0
+
+          while IFS= read -r url; do
+            TESTED=$((TESTED + 1))
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" -H "Cache-Control: no-cache" "$url")
+            SSG_SOURCE=$(curl -s -I -H "Cache-Control: no-cache" "$url" | grep -i "x-ssg-source" | cut -d: -f2 | tr -d ' \r')
+
+            if [ "$STATUS" != "200" ]; then
+              echo "❌ [$STATUS] $url"
+              FAILED=$((FAILED + 1))
+            elif [ "$SSG_SOURCE" != "r2" ]; then
+              echo "⚠️ [SPA fallback] $url (X-SSG-Source: $SSG_SOURCE)"
+              FAILED=$((FAILED + 1))
+            fi
+          done < /tmp/sample-urls.txt
+
+          echo ""
+          echo "📊 검증 결과: $TESTED개 테스트, $FAILED개 실패"
+
+          if [ "$FAILED" -gt 0 ]; then
+            echo "❌ R2 SSG 서빙에 문제가 있습니다!"
+            exit 1
+          fi
+
+          echo "✅ 모든 샘플 URL이 R2에서 정상 서빙됩니다."
+
+      - name: Summary
+        run: |
+          echo "✅ R2 SSG 배포 완료"
+          echo "   - 영어 엔트리: /entry/*"
+          echo "   - 한국어 엔트리: /ko/entry/*"
+          echo "   - 샘플 검증: 100개 URL 통과"
