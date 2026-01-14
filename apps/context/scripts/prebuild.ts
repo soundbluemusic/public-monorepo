@@ -132,7 +132,12 @@ async function main(): Promise<void> {
   }
 
   // Phase B: load-entries 의존 스크립트들 (병렬)
-  const phaseBScripts = ['generate-homonyms.ts', 'compress-entries.ts', 'export-data.ts'];
+  const phaseBScripts = [
+    'generate-homonyms.ts',
+    'compress-entries.ts',
+    'export-data.ts',
+    'generate-browse-chunks.ts',
+  ];
   const phaseBResults = await runPhase(
     'Phase B: Dependent scripts (parallel after Phase A)',
     phaseBScripts,
