@@ -25,6 +25,7 @@ apps/context/public/data/trie.bin
 *.tsbuildinfo
 node-compile-cache/
 tsx-0/
+.lycheecache
 
 # Environment
 .env
