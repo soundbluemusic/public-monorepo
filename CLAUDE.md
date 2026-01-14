@@ -180,6 +180,7 @@ export const meta = dynamicMetaFactory<typeof loader>({
 | `/ssg-check` | SSG 규칙 위반 검사 (fork context) |
 | `/layer-check` | import 레이어 규칙 검사 (fork context) |
 | `/link-check` | 프로덕션 URL 링크 무결성 검사 (lychee) |
+| `/quality-gate` | 병렬 품질 검사 통합 (SSG, Layer, Link, TypeCheck, Lint) |
 
 ### 모델 사용 기준
 

@@ -14,11 +14,13 @@ SSG(Static Site Generation) 규칙 위반을 검사하는 스킬입니다.
 /ssg-check [앱 이름]
 ```
 
-## 예시
+## 실행 방법
 
-- `/ssg-check` - 전체 앱 검사
-- `/ssg-check context` - context 앱만 검사
-- `/ssg-check roots` - roots 앱만 검사
+**이 스킬을 실행하면 다음 명령어를 Bash로 실행하세요:**
+
+```bash
+pnpm verify:ssg
+```
 
 ## 검사 항목
 
@@ -35,11 +37,6 @@ SSG(Static Site Generation) 규칙 위반을 검사하는 스킬입니다.
 - 빈 `prerender()` 반환
 - SPA/SSR/ISR 패턴 코드
 
-## 설정
-
-- **context**: fork (메인 컨텍스트 오염 방지)
-- **model**: haiku (규칙 기반 검사)
-
 ## 반환 형식
 
 ```
@@ -51,9 +48,6 @@ SSG 검사 결과:
 
 ❌ 위반:
 - (위반 항목 없음)
-
-⚠️ 경고:
-- (경고 항목 없음)
 ```
 
 ## 관련 파일
@@ -61,3 +55,4 @@ SSG 검사 결과:
 - `apps/*/react-router.config.ts`
 - `apps/*/app/entry.client.tsx`
 - `apps/*/app/entry.server.tsx`
+- `scripts/verify-ssg.ts`

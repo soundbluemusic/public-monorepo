@@ -30,6 +30,8 @@
     "check:size": "size-limit",
     "check:links": "tsx scripts/check-links.ts",
     "check:links:prod": "./scripts/check-links-prod.sh",
+    "quality": "tsx scripts/quality-gate.ts",
+    "quality:quick": "tsx scripts/quality-gate.ts --quick",
     "lhci": "lhci autorun",
     "lhci:context": "APP=context lhci autorun",
     "lhci:permissive": "APP=permissive lhci autorun",
