@@ -72,6 +72,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#7c5cff" />
+        <meta name="naver-site-verification" content="08c5e0c0cc564309e1781214f8a6e300536c9a69" />
+        <meta
+          name="google-site-verification"
+          content="mw0M1q-2K63FX-NZCL5AetN7V6VI6cXY5ItnMXyl85A"
+        />
         <Meta />
         <Links />
         <script
