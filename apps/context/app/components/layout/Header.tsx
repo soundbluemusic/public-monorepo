@@ -32,10 +32,10 @@ export function Header({ onMenuClick, sidebarCollapsed = false }: HeaderProps) {
   } = useGlobalSearch({ locale, localePath });
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 h-(--header-height) backdrop-blur-sm bg-(--bg-primary)/80 border-b border-(--border-primary)">
+    <header className="fixed top-0 left-0 right-0 z-40 h-(--header-height) backdrop-blur-sm bg-(--bg-primary)/80 border-b border-(--border-primary) overflow-hidden">
       <div
         className={cn(
-          'h-full px-4 flex items-center gap-4 transition-[padding] duration-200',
+          'h-full pl-4 pr-6 flex items-center gap-2 sm:gap-4 transition-[padding] duration-200',
           sidebarCollapsed
             ? 'md:pl-[calc(var(--sidebar-collapsed-width)+1rem)]'
             : 'md:pl-[calc(var(--sidebar-width)+1rem)]',
@@ -61,7 +61,7 @@ export function Header({ onMenuClick, sidebarCollapsed = false }: HeaderProps) {
 
         {/* Search */}
         <div
-          className="relative flex-1 max-w-70 max-md:max-w-40 max-[480px]:max-w-30"
+          className="relative min-w-0 flex-1 max-w-70 max-md:max-w-40 max-[480px]:max-w-30"
           ref={containerRef}
         >
           <SearchInput
@@ -93,14 +93,15 @@ export function Header({ onMenuClick, sidebarCollapsed = false }: HeaderProps) {
         </div>
 
         {/* Spacer */}
-        <div className="flex-1" />
+        <div className="flex-1 min-w-0" />
 
-        {/* Right Actions - Desktop */}
-        <div className="hidden sm:flex items-center gap-1 shrink-0">
+        {/* Right Actions */}
+        <div className="flex items-center gap-1 shrink-0">
+          {/* Nav links - only on large screens */}
           <Link
             to={localePath('/browse')}
             className={cn(
-              'px-3 py-2 text-sm rounded-lg transition-colors min-h-11 flex items-center justify-center',
+              'hidden lg:flex px-3 py-2 text-sm rounded-lg transition-colors min-h-11 items-center justify-center',
               'text-(--text-secondary) hover:bg-(--bg-tertiary)',
               isActive('/browse') && 'text-(--accent-primary) bg-(--bg-tertiary)',
             )}
@@ -110,20 +111,13 @@ export function Header({ onMenuClick, sidebarCollapsed = false }: HeaderProps) {
           <Link
             to={localePath('/conversations')}
             className={cn(
-              'px-3 py-2 text-sm rounded-lg transition-colors min-h-11 flex items-center justify-center',
+              'hidden lg:flex px-3 py-2 text-sm rounded-lg transition-colors min-h-11 items-center justify-center',
               'text-(--text-secondary) hover:bg-(--bg-tertiary)',
               isActive('/conversations') && 'text-(--accent-primary) bg-(--bg-tertiary)',
             )}
           >
             {t('conversations')}
           </Link>
-          <ServicesDropdown currentAppId="context" locale={locale} />
-          <LanguageToggle locale={locale} currentPath={currentPath} />
-          <DarkModeToggle />
-        </div>
-
-        {/* Right Actions - Mobile */}
-        <div className="flex sm:hidden items-center gap-1 shrink-0">
           <ServicesDropdown currentAppId="context" locale={locale} />
           <LanguageToggle locale={locale} currentPath={currentPath} />
           <DarkModeToggle />
