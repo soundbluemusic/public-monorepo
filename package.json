@@ -29,6 +29,7 @@
     "check:versions": "syncpack list-mismatches",
     "check:size": "size-limit",
     "check:links": "tsx scripts/check-links.ts",
+    "check:links:prod": "./scripts/check-links-prod.sh",
     "lhci": "lhci autorun",
     "lhci:context": "APP=context lhci autorun",
     "lhci:permissive": "APP=permissive lhci autorun",

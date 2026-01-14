@@ -1,0 +1,93 @@
+name: Production Link Check
+
+on:
+  # 매주 월요일 오전 9시 (KST) = 일요일 자정 (UTC)
+  schedule:
+    - cron: '0 0 * * 0'
+
+  # 수동 실행 가능
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: '검사할 URL (쉼표로 구분, 비우면 모든 앱)'
+        required: false
+        default: ''
+
+# 동시 실행 방지
+concurrency:
+  group: link-check-prod
+  cancel-in-progress: true
+
+jobs:
+  check-links:
+    name: Check Production Links
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # 설치만 하고 실행은 별도로
+          args: --version
+
+      - name: Check Context links
+        if: ${{ github.event.inputs.urls == '' || contains(github.event.inputs.urls, 'context') }}
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --config .lychee.toml
+            --verbose
+            --no-progress
+            https://context.soundbluemusic.com
+          fail: true
+        continue-on-error: true
+        id: context
+
+      - name: Check Permissive links
+        if: ${{ github.event.inputs.urls == '' || contains(github.event.inputs.urls, 'permissive') }}
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --config .lychee.toml
+            --verbose
+            --no-progress
+            https://permissive.soundbluemusic.com
+          fail: true
+        continue-on-error: true
+        id: permissive
+
+      - name: Check Roots links
+        if: ${{ github.event.inputs.urls == '' || contains(github.event.inputs.urls, 'roots') }}
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --config .lychee.toml
+            --verbose
+            --no-progress
+            https://roots.soundbluemusic.com
+          fail: true
+        continue-on-error: true
+        id: roots
+
+      - name: Summary
+        run: |
+          echo "## 🔗 프로덕션 링크 검사 결과" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| App | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|-----|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Context | ${{ steps.context.outcome == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Permissive | ${{ steps.permissive.outcome == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Roots | ${{ steps.roots.outcome == 'success' && '✅ Pass' || '❌ Fail' }} |" >> $GITHUB_STEP_SUMMARY
+
+      - name: Check results
+        run: |
+          if [[ "${{ steps.context.outcome }}" == "failure" ]] || \
+             [[ "${{ steps.permissive.outcome }}" == "failure" ]] || \
+             [[ "${{ steps.roots.outcome }}" == "failure" ]]; then
+            echo "❌ 일부 앱에서 깨진 링크가 발견되었습니다."
+            exit 1
+          fi
+          echo "✅ 모든 앱의 링크가 정상입니다!"

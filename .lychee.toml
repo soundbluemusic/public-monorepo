@@ -1,0 +1,72 @@
+# lychee 링크 검사 설정
+# https://lychee.cli.rs/
+
+# 프로덕션 URL 검사용 설정
+# 사용법: lychee --config .lychee.toml https://context.soundbluemusic.com
+
+# 캐시 설정 (반복 실행 시 속도 향상)
+cache = true
+max_cache_age = "1d"
+
+# 동시 요청 수 (너무 높으면 rate limit 발생)
+max_concurrency = 8
+
+# 타임아웃 (초)
+timeout = 30
+
+# 재시도 횟수
+max_retries = 3
+
+# User-Agent (일부 사이트는 봇 차단)
+user_agent = "Mozilla/5.0 (compatible; lychee/0.22; +https://github.com/lycheeverse/lychee)"
+
+# 허용할 HTTP 상태 코드
+accept = [200, 204, 206, 301, 302, 307, 308]
+
+# 제외할 URL 패턴
+exclude = [
+  # 소셜 미디어 (rate limit 자주 발생)
+  "https?://twitter\\.com",
+  "https?://x\\.com",
+  "https?://www\\.instagram\\.com",
+  "https?://www\\.threads\\.com",
+
+  # 로컬호스트
+  "https?://localhost",
+  "https?://127\\.0\\.0\\.1",
+
+  # 메일 링크
+  "^mailto:",
+
+  # 전화 링크
+  "^tel:",
+
+  # JavaScript 링크
+  "^javascript:",
+
+  # 앵커 링크
+  "^#",
+]
+
+# 제외할 경로 패턴 (glob)
+exclude_path = [
+  "node_modules",
+  ".git",
+  "build",
+  "dist",
+]
+
+# 출력 형식 (compact, detailed, json, markdown)
+format = "compact"
+
+# 상세 출력 레벨 (error, warn, info, debug, trace)
+verbose = "info"
+
+# GitHub rate limit 방지 (GITHUB_TOKEN 환경변수 필요)
+github_token = ""
+
+# 메일 주소 검증 비활성화
+include_mail = false
+
+# 링크 추출 모드
+include_verbatim = true
