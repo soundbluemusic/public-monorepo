@@ -101,6 +101,8 @@ async function checkLinks(url: string): Promise<{
     linksToSkip: [
       // 외부 링크 제외
       /^https?:\/\/(?!localhost)/,
+      // Context 앱: /entry/* 경로는 R2에서 서빙되므로 Pages 빌드에서 404 정상
+      /\/entry\//,
     ],
   });
 
