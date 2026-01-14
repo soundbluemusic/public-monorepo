@@ -5,71 +5,48 @@ description: 프로덕션 URL 링크 무결성 검사. lychee로 깨진 링크, 
 
 # Link Check 스킬
 
-프로덕션 URL의 링크 무결성을 검사하는 스킬입니다. SEO에 중요한 깨진 링크를 자동으로 검출합니다.
+프로덕션 URL의 링크 무결성을 검사하는 스킬입니다.
 
-## 사용법
+## 자동 실행 지시
 
-```
-/link-check
-/link-check [앱 이름]
-/link-check [URL]
-```
+**이 스킬이 호출되면 즉시 다음을 수행하세요:**
 
-## 실행 방법
-
-**이 스킬을 실행하면 다음 명령어를 Bash로 실행하세요:**
+1. Bash tool로 lychee 실행
+2. 결과 분석 후 요약 출력
+3. 깨진 링크 발견 시 해당 페이지 소스 확인 및 수정 제안
 
 ```bash
 # 전체 앱 검사
-pnpm check:links:prod
+lychee --config .lychee.toml https://context.soundbluemusic.com https://permissive.soundbluemusic.com https://roots.soundbluemusic.com
 
-# 개별 앱 검사
+# 개별 앱 검사 (인자로 앱 이름 전달 시)
 lychee --config .lychee.toml https://context.soundbluemusic.com
-lychee --config .lychee.toml https://permissive.soundbluemusic.com
-lychee --config .lychee.toml https://roots.soundbluemusic.com
 ```
 
 ## 프로덕션 URL
 
-| 앱 | URL |
-|---|-----|
-| context | https://context.soundbluemusic.com |
+| 앱         | URL                                   |
+| ---------- | ------------------------------------- |
+| context    | https://context.soundbluemusic.com    |
 | permissive | https://permissive.soundbluemusic.com |
-| roots | https://roots.soundbluemusic.com |
+| roots      | https://roots.soundbluemusic.com      |
 
-## 검사 항목
+## 오류 발견 시 자동 처리
 
-| 항목 | 설명 |
-|------|------|
-| 깨진 링크 (404) | 존재하지 않는 페이지 링크 |
-| 리다이렉트 체인 | 연속 리다이렉트 (301, 302, 307, 308) |
-| 타임아웃 | 30초 이상 응답 없는 링크 |
-| SSL 오류 | HTTPS 인증서 문제 |
-
-## 반환 형식
-
-```
-🔗 프로덕션 링크 검사 결과
-
-📦 context.soundbluemusic.com
-   ✅ 1,234개 링크 검사 완료
-   - OK: 1,200개
-   - Redirects: 34개
-   - Errors: 0개
-
-📊 전체 결과: ✅ 모든 링크 정상
-```
+1. 깨진 링크 URL과 상태 코드 파싱
+2. 해당 링크가 있는 소스 파일 검색 (Grep)
+3. 올바른 URL로 수정 제안
+4. 사용자 승인 후 Edit로 수정
 
 ## SEO 영향
 
-| 문제 | SEO 영향 |
-|------|---------|
-| 404 에러 | 크롤링 예산 낭비, 사용자 이탈 |
-| 과도한 리다이렉트 | PageRank 감소 (약 15%/hop) |
-| 느린 응답 | Core Web Vitals 저하 |
+| 문제               | SEO 영향                       |
+| ------------------ | ------------------------------ |
+| 404 에러           | 크롤링 예산 낭비, 사용자 이탈  |
+| 과도한 리다이렉트  | PageRank 감소 (약 15%/hop)     |
+| 느린 응답          | Core Web Vitals 저하           |
 
 ## 관련 파일
 
 - `.lychee.toml` - lychee 설정
 - `scripts/check-links-prod.sh` - 로컬 실행 스크립트
-- `.github/workflows/check-links-prod.yml` - 주간 자동 검사

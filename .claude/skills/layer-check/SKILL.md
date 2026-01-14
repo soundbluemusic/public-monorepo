@@ -7,16 +7,13 @@ description: 패키지 import 레이어 규칙 검사. L3→L2→L1→L0 방향�
 
 패키지 import 레이어 규칙 위반을 검사하는 스킬입니다.
 
-## 사용법
+## 자동 실행 지시
 
-```text
-/layer-check
-/layer-check [패키지 이름]
-```
+**이 스킬이 호출되면 즉시 다음을 수행하세요:**
 
-## 실행 방법
-
-**이 스킬을 실행하면 다음 명령어를 Bash로 실행하세요:**
+1. Bash tool로 `pnpm check:circular` 실행
+2. 결과 분석 후 요약 출력
+3. 순환 의존 발견 시 해당 import 경로 분석 및 수정 제안
 
 ```bash
 pnpm check:circular
@@ -28,8 +25,6 @@ pnpm check:circular
 L3 (apps, ui, features) → L2 (i18n, search, seo, pwa) → L1 (data, platform) → L0 (core, config)
 ```
 
-### 레이어별 패키지
-
 | 레이어 | 패키지                 |
 | ------ | ---------------------- |
 | L0     | core, config           |
@@ -37,39 +32,12 @@ L3 (apps, ui, features) → L2 (i18n, search, seo, pwa) → L1 (data, platform) 
 | L2     | i18n, search, seo, pwa |
 | L3     | apps/*, ui, features   |
 
-## 검사 규칙
+## 오류 발견 시 자동 처리
 
-| 규칙               | 설명                             |
-| ------------------ | -------------------------------- |
-| 하위 레이어만 import | L3 → L2 ✅, L2 → L3 ❌           |
-| 순환 의존 금지     | 같은 레이어 간 상호 import ❌    |
-
-### 금지 패턴
-
-```typescript
-// ❌ L0 → L1 (core에서 platform import)
-import { storage } from '@soundblue/platform';
-
-// ❌ L2 → L3 (i18n에서 features import)
-import { useSettings } from '@soundblue/features';
-
-// ❌ 순환 의존 (search ↔ seo)
-// search/index.ts: import from '@soundblue/seo'
-// seo/index.ts: import from '@soundblue/search'
-```
-
-## 반환 형식
-
-```text
-레이어 규칙 검사 결과:
-
-✅ 통과:
-- packages/core: L0 규칙 준수
-- packages/data: L1 규칙 준수
-
-❌ 위반:
-- (순환 의존 없음)
-```
+1. 순환 의존 경로 파싱 (A → B → C → A)
+2. 각 import 문 위치 확인
+3. 의존성 방향 수정 방법 제안
+4. 사용자 승인 후 리팩토링
 
 ## 관련 파일
 
