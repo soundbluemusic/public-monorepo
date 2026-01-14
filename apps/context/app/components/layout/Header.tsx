@@ -96,7 +96,7 @@ export function Header({ onMenuClick, sidebarCollapsed = false }: HeaderProps) {
         <div className="flex-1" />
 
         {/* Right Actions - Desktop */}
-        <div className="hidden sm:flex items-center gap-1">
+        <div className="hidden sm:flex items-center gap-1 shrink-0">
           <Link
             to={localePath('/browse')}
             className={cn(
@@ -123,7 +123,7 @@ export function Header({ onMenuClick, sidebarCollapsed = false }: HeaderProps) {
         </div>
 
         {/* Right Actions - Mobile */}
-        <div className="flex sm:hidden items-center gap-1">
+        <div className="flex sm:hidden items-center gap-1 shrink-0">
           <ServicesDropdown currentAppId="context" locale={locale} />
           <LanguageToggle locale={locale} currentPath={currentPath} />
           <DarkModeToggle />
