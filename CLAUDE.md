@@ -179,6 +179,7 @@ export const meta = dynamicMetaFactory<typeof loader>({
 | `/find [검색어]` | 파일/함수 위치 검색 (haiku) |
 | `/ssg-check` | SSG 규칙 위반 검사 (fork context) |
 | `/layer-check` | import 레이어 규칙 검사 (fork context) |
+| `/link-check` | 프로덕션 URL 링크 무결성 검사 (lychee) |
 
 ### 모델 사용 기준
 
