@@ -5,4 +5,4 @@
  */
 
 export { createDataLoader, type LoaderConfig } from './create-loader';
-export { loadJson, loadJsonDirectory } from './json-loader';
+export { loadJson, loadJsonAsMap, loadJsonDirectory, loadJsonDirectoryFlat } from './json-loader';
