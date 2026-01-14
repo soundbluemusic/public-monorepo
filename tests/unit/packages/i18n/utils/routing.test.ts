@@ -215,4 +215,29 @@ describe('extractStaticRoutes', () => {
     expect(result).toContain('/ko');
     expect(result).toContain('/ko/about');
   });
+
+  it('should handle optional locale pattern (:locale)?', () => {
+    const routes = [{ path: '(:locale)?/about', file: 'routes/about.tsx' }];
+
+    const result = extractStaticRoutes(routes);
+    expect(result).toContain('/about');
+    expect(result).toContain('/ko/about');
+  });
+
+  it('should handle optional locale pattern at root', () => {
+    const routes = [{ path: '(:locale)?', file: 'routes/_index.tsx' }];
+
+    const result = extractStaticRoutes(routes);
+    expect(result).toContain('/');
+    expect(result).toContain('/ko');
+  });
+
+  it('should exclude optional locale routes with other dynamic segments', () => {
+    const routes = [{ path: '(:locale)?/entry/:id', file: 'routes/entry.tsx' }];
+
+    const result = extractStaticRoutes(routes);
+    // Should not include routes with :id dynamic segment
+    expect(result).not.toContain('/entry/:id');
+    expect(result).not.toContain('/ko/entry/:id');
+  });
 });

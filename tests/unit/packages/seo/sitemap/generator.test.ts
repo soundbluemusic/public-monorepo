@@ -6,6 +6,7 @@ import {
   generateHreflangLinks,
   generateSitemap,
   generateSitemapIndex,
+  generateUrlEntries,
   generateUrlEntry,
   generateXslStylesheet,
   getLocalizedUrl,
@@ -167,5 +168,62 @@ describe('generateXslStylesheet', () => {
     expect(xsl).toContain('<table>');
     expect(xsl).toContain('<thead>');
     expect(xsl).toContain('<tbody>');
+  });
+});
+
+describe('generateUrlEntries', () => {
+  const siteUrl = 'https://example.com';
+  const languages = ['en', 'ko'] as const;
+
+  it('should generate URL entries for each language', () => {
+    const entries = generateUrlEntries(siteUrl, '/about', '0.8', 'weekly', languages, '2024-01-01');
+
+    expect(entries).toHaveLength(2);
+    expect(entries[0]).toContain('<loc>https://example.com/about</loc>');
+    expect(entries[1]).toContain('<loc>https://example.com/ko/about</loc>');
+  });
+
+  it('should include hreflang links in each entry', () => {
+    const entries = generateUrlEntries(siteUrl, '/about', '0.8', 'weekly', languages, '2024-01-01');
+
+    // Each entry should have hreflang for both languages
+    for (const entry of entries) {
+      expect(entry).toContain('hreflang="en"');
+      expect(entry).toContain('hreflang="ko"');
+      expect(entry).toContain('hreflang="x-default"');
+    }
+  });
+
+  it('should include correct metadata in each entry', () => {
+    const entries = generateUrlEntries(siteUrl, '/about', '0.8', 'weekly', languages, '2024-01-01');
+
+    for (const entry of entries) {
+      expect(entry).toContain('<lastmod>2024-01-01</lastmod>');
+      expect(entry).toContain('<changefreq>weekly</changefreq>');
+      expect(entry).toContain('<priority>0.8</priority>');
+    }
+  });
+
+  it('should handle root path correctly', () => {
+    const entries = generateUrlEntries(siteUrl, '/', '1.0', 'daily', languages, '2024-01-01');
+
+    expect(entries[0]).toContain('<loc>https://example.com/</loc>');
+    expect(entries[1]).toContain('<loc>https://example.com/ko</loc>');
+  });
+
+  it('should work with custom default language', () => {
+    const entries = generateUrlEntries(
+      siteUrl,
+      '/about',
+      '0.8',
+      'weekly',
+      languages,
+      '2024-01-01',
+      'ko',
+    );
+
+    // With 'ko' as default, Korean URL has no prefix
+    expect(entries[0]).toContain('<loc>https://example.com/en/about</loc>');
+    expect(entries[1]).toContain('<loc>https://example.com/about</loc>');
   });
 });

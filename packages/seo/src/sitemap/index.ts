@@ -8,6 +8,7 @@ export {
   generateSitemap,
   generateSitemapIndex,
   generateSitemaps,
+  generateUrlEntries,
   generateUrlEntry,
   generateXslStylesheet,
   getLocalizedUrl,
