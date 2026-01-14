@@ -34,12 +34,6 @@ jobs:
       - name: Build for Pages
         run: pnpm build:context
 
-      - name: Copy Functions to deploy directory
-        run: |
-          cp -r apps/context/functions apps/context/build/client/
-          echo "Functions copied to build/client/functions/"
-          ls -la apps/context/build/client/functions/
-
       - name: Deploy to Cloudflare Pages
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
