@@ -57,21 +57,50 @@ export const onRequest: PagesFunction<Env> = async (context) => {
     // 빌드 결과: build/client/entry/hello/index.html
     // R2 경로: public-monorepo/context/entry/hello/index.html
     const htmlPath = `public-monorepo/context${path}/index.html`;
-    const ssgHtml = await context.env.BUCKET.get(htmlPath);
 
-    if (ssgHtml) {
-      // SSG HTML 발견 → 완성차 서빙
-      const headers = new Headers();
-      headers.set('Content-Type', 'text/html; charset=utf-8');
-      headers.set('Cache-Control', 'public, max-age=86400, stale-while-revalidate=604800');
-      headers.set('X-SSG-Source', 'r2'); // 디버깅용
+    try {
+      const ssgHtml = await context.env.BUCKET.get(htmlPath);
 
-      return new Response(ssgHtml.body, { headers });
+      if (ssgHtml) {
+        // SSG HTML 발견 → 완성차 서빙
+        const headers = new Headers();
+        headers.set('Content-Type', 'text/html; charset=utf-8');
+        headers.set('Cache-Control', 'public, max-age=86400, stale-while-revalidate=604800');
+        headers.set('X-SSG-Source', 'r2');
+        headers.set('X-R2-Path', htmlPath);
+
+        return new Response(ssgHtml.body, { headers });
+      }
+
+      // R2에 SSG HTML 없음 → SPA fallback
+      const fallbackResponse = await context.env.ASSETS.fetch(
+        new Request(new URL('/__spa-fallback', url.origin)),
+      );
+
+      // SPA fallback 응답에 디버깅 헤더 추가
+      const headers = new Headers(fallbackResponse.headers);
+      headers.set('X-SSG-Source', 'spa-fallback');
+      headers.set('X-R2-Path-Checked', htmlPath);
+
+      return new Response(fallbackResponse.body, {
+        status: fallbackResponse.status,
+        headers,
+      });
+    } catch (error) {
+      // R2 접근 에러 → SPA fallback
+      const fallbackResponse = await context.env.ASSETS.fetch(
+        new Request(new URL('/__spa-fallback', url.origin)),
+      );
+
+      const headers = new Headers(fallbackResponse.headers);
+      headers.set('X-SSG-Source', 'error');
+      headers.set('X-R2-Error', String(error));
+
+      return new Response(fallbackResponse.body, {
+        status: fallbackResponse.status,
+        headers,
+      });
     }
-
-    // R2에 SSG HTML 없음 → SPA fallback (Pages 빌드만 있는 경우)
-    const fallbackRequest = new Request(new URL('/__spa-fallback.html', url.origin));
-    return context.env.ASSETS.fetch(fallbackRequest);
   }
 
   // 나머지는 Pages에서 처리
