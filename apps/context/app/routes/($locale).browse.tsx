@@ -86,7 +86,10 @@ export async function clientLoader({
     if (!response.ok) {
       throw new Error(`Failed to fetch initial browse data: ${response.status}`);
     }
-    const initialData = await response.json();
+    const initialData = (await response.json()) as {
+      alphabetical: LightEntry[];
+      meta: BrowseMetadata;
+    };
 
     return {
       initialEntries: initialData.alphabetical,

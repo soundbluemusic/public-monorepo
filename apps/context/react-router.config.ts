@@ -3,21 +3,28 @@ import { extractStaticRoutes, generateI18nRoutes } from '@soundblue/i18n';
 import routes from './app/routes.js';
 
 /**
- * React Router SSG 설정
+ * React Router 설정 (SSR + SSG 하이브리드)
  *
- * ## 하이브리드 빌드 전략 (Pages + R2 + Chunked)
+ * ## BUILD_MODE 환경변수에 따라 렌더링 모드 선택:
+ * - `ssr`: SSR 모드 - Cloudflare Pages Functions + D1 (권장)
+ * - (기본): SSG 모드 - 정적 HTML 생성 (레거시)
  *
- * ### BUILD_TARGET 환경변수에 따라 빌드 대상 분리:
+ * ## BUILD_TARGET 환경변수에 따라 빌드 대상 분리 (SSG 모드 전용):
  * - `pages` (기본): 핵심 페이지만 빌드 → Cloudflare Pages (20K 제한)
  * - `r2`: 엔트리 페이지만 빌드 → R2 업로드 (파일 무제한)
  * - `chunked`: 청크 기반 빌드 → 100만+ 페이지 지원 (CHUNK_INDEX, CHUNK_SIZE 필요)
  * - `all`: 전체 빌드 (로컬 테스트용)
  *
- * ### 100% SSG 유지 (SEO 원칙)
- * - 모든 페이지는 빌드 시 완전한 HTML로 생성
- * - R2에서 서빙해도 완전한 HTML (빈 HTML 아님)
+ * ## SSR 모드 사용법
+ * ```bash
+ * # 개발 서버
+ * BUILD_MODE=ssr pnpm dev
  *
- * ### 청크 빌드 사용법 (100만+ 페이지)
+ * # 빌드
+ * BUILD_MODE=ssr pnpm build
+ * ```
+ *
+ * ## SSG 청크 빌드 사용법 (100만+ 페이지)
  * ```bash
  * # 청크 메타데이터 확인
  * tsx -e "import('./app/data/route-chunks.js').then(m => m.getChunkMetadata().then(console.log))"
@@ -26,9 +33,30 @@ import routes from './app/routes.js';
  * BUILD_TARGET=chunked CHUNK_INDEX=0 CHUNK_SIZE=50000 pnpm build
  * ```
  */
+
+const isSSR = process.env.BUILD_MODE === 'ssr';
+
 export default {
-  ssr: false,
+  ssr: isSSR,
   async prerender() {
+    // SSR 모드에서는 정적 페이지만 prerender
+    if (isSSR) {
+      const staticRoutes = extractStaticRoutes(routes);
+      const { categories } = await import('./app/data/categories.js');
+      const { getCategoriesWithConversations } = await import('./app/data/conversations.js');
+
+      const categoryRoutes = generateI18nRoutes(categories, (category) => `/category/${category.id}`);
+      const conversationCategoryIds = getCategoriesWithConversations();
+      const conversationRoutes = generateI18nRoutes(
+        conversationCategoryIds,
+        (categoryId) => `/conversations/${categoryId}`,
+      );
+
+      console.log('[SSR] Prerender static routes only, entry pages served dynamically from D1');
+      return [...staticRoutes, ...categoryRoutes, ...conversationRoutes];
+    }
+
+    // SSG 모드: 기존 로직 유지
     const buildTarget = process.env.BUILD_TARGET || 'pages';
 
     // 정적 라우트: routes.ts에서 자동 추출

@@ -71,10 +71,7 @@ export async function getEntryByIdFromD1(
   id: string,
   locale: Language,
 ): Promise<LocaleEntry | null> {
-  const row = await db
-    .prepare('SELECT * FROM entries WHERE id = ?')
-    .bind(id)
-    .first<D1EntryRow>();
+  const row = await db.prepare('SELECT * FROM entries WHERE id = ?').bind(id).first<D1EntryRow>();
 
   if (!row) return null;
 
@@ -95,8 +92,8 @@ export async function getEntriesByCategoryFromD1(
     .all<D1EntryRow>();
 
   return results
-    .map((row) => rowToLocaleEntry(row, locale))
-    .filter((entry): entry is LocaleEntry => entry !== null);
+    .map((row: D1EntryRow) => rowToLocaleEntry(row, locale))
+    .filter((entry: LocaleEntry | null): entry is LocaleEntry => entry !== null);
 }
 
 /**
