@@ -205,7 +205,6 @@ const TabsContent = forwardRef<HTMLDivElement, TabsContentProps>(
         className={cn(
           'mt-2 rounded-lg',
           'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--accent-primary)',
-          !isSelected && 'hidden',
           className,
         )}
       >

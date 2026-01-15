@@ -38,7 +38,7 @@ export default function Header({ onMenuClick, isSidebarOpen }: HeaderProps) {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-40 h-14 flex items-center justify-between gap-4 px-4 bg-(--bg-primary)/80 backdrop-blur-sm border-b border-(--border-primary) transition-shadow',
+        'fixed top-0 left-0 right-0 z-30 h-14 flex items-center justify-between gap-4 px-4 bg-(--bg-primary)/80 backdrop-blur-sm border-b border-(--border-primary) transition-shadow',
         scrolled && 'shadow-sm',
       )}
     >

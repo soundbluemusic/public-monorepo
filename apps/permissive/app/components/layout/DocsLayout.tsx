@@ -72,7 +72,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
           sidebarCollapsed
             ? 'lg:pl-[calc(var(--sidebar-collapsed-width)+1rem)]'
             : 'lg:pl-[calc(var(--sidebar-width)+1rem)]',
-          'pb-(--bottom-nav-height) lg:pb-0',
+          'pb-16 lg:pb-0',
         )}
       >
         <div className="max-w-4xl mx-auto px-4 py-8">{children}</div>
@@ -89,7 +89,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
         <button
           type="button"
           onClick={scrollToTop}
-          className="fixed bottom-24 lg:bottom-8 right-4 z-30 min-h-11 min-w-11 flex items-center justify-center rounded-full shadow-md transition-colors bg-(--bg-elevated) border border-(--border-primary) text-(--text-secondary) cursor-pointer hover:bg-(--bg-tertiary)"
+          className="fixed bottom-24 lg:bottom-8 right-4 z-20 min-h-11 min-w-11 flex items-center justify-center rounded-full shadow-md transition-colors bg-(--bg-elevated) border border-(--border-primary) text-(--text-secondary) cursor-pointer hover:bg-(--bg-tertiary)"
           aria-label={locale === 'ko' ? '맨 위로' : 'Back to top'}
         >
           <ArrowUp size={20} aria-hidden="true" />

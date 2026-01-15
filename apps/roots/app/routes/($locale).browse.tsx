@@ -175,7 +175,7 @@ export default function BrowsePage() {
           </div>
 
           {/* 그래프 시각화 */}
-          <div className="rounded-lg overflow-hidden border border-(--border-primary)">
+          <div className="relative rounded-lg border border-(--border-primary)">
             <Suspense
               fallback={
                 <div className="flex items-center justify-center h-150 bg-(--bg-secondary)">

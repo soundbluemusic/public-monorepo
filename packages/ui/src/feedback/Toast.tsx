@@ -150,9 +150,9 @@ export const ToastContainer = memo(function ToastContainer() {
   return (
     <div
       className={cn(
-        'fixed bottom-20 left-1/2 -translate-x-1/2 z-50',
+        'fixed bottom-24 left-1/2 -translate-x-1/2 z-50',
         'flex flex-col gap-2 w-full max-w-sm px-4',
-        'lg:bottom-6',
+        'lg:bottom-8',
       )}
       role="region"
       aria-label="알림"

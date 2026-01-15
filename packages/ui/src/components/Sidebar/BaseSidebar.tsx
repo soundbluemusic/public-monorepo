@@ -93,7 +93,7 @@ export function BaseSidebar({
       {/* Backdrop (mobile only) */}
       {isOpen && (
         <div
-          className="lg:hidden fixed inset-0 z-40 bg-black/50 transition-opacity"
+          className="lg:hidden fixed inset-0 z-50 bg-black/50 transition-opacity"
           onClick={onClose}
           aria-hidden="true"
         />
@@ -102,10 +102,12 @@ export function BaseSidebar({
       {/* Sidebar */}
       <aside
         className={cn(
-          'fixed top-0 left-0 z-50 h-full bg-(--bg-elevated) border-r border-(--border-primary)',
+          'fixed left-0 z-40 bg-(--bg-elevated) border-r border-(--border-primary)',
+          // Mobile: full height from top, Desktop: below header
+          'top-0 h-full lg:top-(--header-height) lg:h-[calc(100vh-var(--header-height))]',
           'flex flex-col transform transition-all duration-200',
           // Mobile: slide in/out based on isOpen
-          'lg:translate-x-0 lg:top-(--header-height) lg:h-[calc(100vh-var(--header-height))]',
+          'lg:translate-x-0',
           isOpen ? 'translate-x-0' : '-translate-x-full',
           // Width based on collapsed state
           'w-64 lg:w-(--sidebar-width)',
@@ -135,7 +137,11 @@ export function BaseSidebar({
 
         <nav
           aria-label="Main navigation"
-          className={cn('flex-1 overflow-y-auto p-4', isCollapsed && 'lg:p-2')}
+          className={cn(
+            'flex-1 overflow-y-auto p-4',
+            'supports-[-webkit-overflow-scrolling:touch]:[-webkit-overflow-scrolling:touch]',
+            isCollapsed && 'lg:p-2',
+          )}
         >
           {/* Main navigation */}
           <div className="flex flex-col gap-1">
