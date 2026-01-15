@@ -10,6 +10,7 @@ import {
   LayoutGrid,
   List,
   MessageCircle,
+  PanelLeftClose,
 } from 'lucide-react';
 import { Link } from 'react-router';
 import { categories } from '@/data/categories';
@@ -72,7 +73,7 @@ export function Sidebar({ isOpen, isCollapsed, onClose, onToggleCollapse }: Side
         aria-label={t('menu')}
       >
         {/* Header (mobile only) */}
-        <SidebarHeader menuLabel={t('menu')} closeLabel={t('closeMenu')} onClose={onClose} />
+        <SidebarHeader menuLabel={t('menu')} />
 
         <nav aria-label="Main navigation" className="flex-1 overflow-y-auto py-4">
           {/* Main navigation */}
@@ -126,6 +127,17 @@ export function Sidebar({ isOpen, isCollapsed, onClose, onToggleCollapse }: Side
             isCollapsed && 'md:p-2',
           )}
         >
+          {/* Close Button (mobile only) - 하단 위치로 열기 버튼과 일관된 UX */}
+          <button
+            type="button"
+            onClick={onClose}
+            className="md:hidden w-full mb-3 min-h-11 flex items-center justify-center gap-2 rounded-lg transition-colors bg-(--bg-tertiary) hover:bg-(--bg-secondary) text-(--text-secondary)"
+            aria-label={t('closeMenu')}
+          >
+            <PanelLeftClose size={20} aria-hidden="true" />
+            <span className="text-sm font-medium">{t('closeMenu')}</span>
+          </button>
+
           {/* Collapse Toggle Button (desktop only) */}
           <CollapseButton
             isCollapsed={isCollapsed}
