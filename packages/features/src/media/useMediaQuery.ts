@@ -57,6 +57,6 @@ export function useMediaQuery(query: string): boolean {
  * const isSmallMobile = useIsMobile(640);
  * ```
  */
-export function useIsMobile(breakpoint = 768): boolean {
+export function useIsMobile(breakpoint: number = 768): boolean {
   return useMediaQuery(`(max-width: ${breakpoint - 1}px)`);
 }
