@@ -133,7 +133,10 @@ export function BaseSidebar({
           </button>
         </div>
 
-        <nav aria-label="Main navigation" className="flex-1 overflow-y-auto p-4">
+        <nav
+          aria-label="Main navigation"
+          className={cn('flex-1 overflow-y-auto p-4', isCollapsed && 'lg:p-2')}
+        >
           {/* Main navigation */}
           <div className="flex flex-col gap-1">
             {navItems.map((item) => (
@@ -171,7 +174,9 @@ export function BaseSidebar({
         </nav>
 
         {/* Footer with collapse toggle */}
-        <div className="shrink-0 p-4 border-t border-(--border-primary)">
+        <div
+          className={cn('shrink-0 p-4 border-t border-(--border-primary)', isCollapsed && 'lg:p-2')}
+        >
           {/* Collapse Toggle Button (desktop only) */}
           <button
             type="button"
@@ -179,7 +184,7 @@ export function BaseSidebar({
             className={cn(
               'hidden lg:flex w-full items-center gap-2 min-h-11 px-3 py-2 rounded-lg',
               'text-(--text-secondary) hover:bg-(--bg-tertiary) transition-colors cursor-pointer',
-              isCollapsed && 'justify-center',
+              isCollapsed && 'justify-center px-0',
             )}
             title={collapseLabel}
             aria-label={collapseLabel}

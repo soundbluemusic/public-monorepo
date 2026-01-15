@@ -404,7 +404,20 @@ input:focus-visible {
   }
 }
 
-/* Desktop: Sidebar collapsed state handled via Tailwind classes (no CSS override needed) */
+/* Desktop: Sidebar collapsed state via html.sidebar-collapsed class */
+@media (min-width: 1024px) {
+  .sidebar-collapsed aside[aria-label] {
+    width: var(--sidebar-collapsed-width) !important;
+  }
+
+  .sidebar-collapsed aside[aria-label] nav {
+    padding: 0.5rem !important;
+  }
+
+  .sidebar-collapsed aside[aria-label] .shrink-0.p-4 {
+    padding: 0.5rem !important;
+  }
+}
 
 /* ============================================
    Scrollbar Utilities
