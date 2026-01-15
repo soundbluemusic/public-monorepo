@@ -10,7 +10,7 @@
  * - 핵심 페이지 (/, /about, /categories 등)
  */
 export default {
-  async fetch(request, env, ctx) {
+  async fetch(request, env, _ctx) {
     const url = new URL(request.url);
     const path = url.pathname;
 

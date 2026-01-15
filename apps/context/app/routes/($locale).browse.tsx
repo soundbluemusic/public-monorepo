@@ -27,9 +27,6 @@ import { useI18n } from '@/i18n';
  * - 초기 로드 크기: ~7MB → ~100KB (98% 감소)
  */
 
-/** 청크당 엔트리 수 (generate-browse-chunks.ts와 동기화) */
-const CHUNK_SIZE = 1000;
-
 /** Browse 메타데이터 */
 interface BrowseMetadata {
   totalEntries: number;
@@ -138,16 +135,13 @@ export default function BrowsePage() {
   });
 
   const handleRandomWord = useCallback(() => {
-    // 랜덤 페이지로 이동 후 해당 페이지에서 랜덤 선택
-    const randomPage = Math.floor(Math.random() * meta.totalChunks);
-    const randomIndex = Math.floor(Math.random() * meta.chunkSize);
-    // 간단히 현재 표시된 엔트리에서 랜덤 선택
+    // 현재 표시된 엔트리에서 랜덤 선택
     if (displayEntries.length === 0) return;
     const randomEntry = displayEntries[Math.floor(Math.random() * displayEntries.length)];
     if (randomEntry) {
       window.location.href = localePath(`/entry/${randomEntry.id}`);
     }
-  }, [displayEntries, localePath, meta.totalChunks, meta.chunkSize]);
+  }, [displayEntries, localePath]);
 
   const handleShowBookmarks = useCallback(() => {
     setFilterStatus('bookmarked');

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router';
 import { z } from 'zod';
 import type { categories } from '@/data/categories';
@@ -228,14 +228,23 @@ export function useBrowseFilters({
       });
   }, [filterCategory]);
 
-  // 필터 변경 시 페이지 리셋
+  // 필터 변경 시 페이지 리셋 (이전 값과 비교)
+  const prevFiltersRef = useRef({ filterCategory, filterStatus, sortBy });
   useEffect(() => {
-    setCurrentPage(1);
-    const params = new URLSearchParams(searchParams);
-    params.delete('page');
-    setSearchParams(params, { replace: true });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filterCategory, filterStatus, sortBy]);
+    const prev = prevFiltersRef.current;
+    const filtersChanged =
+      prev.filterCategory !== filterCategory ||
+      prev.filterStatus !== filterStatus ||
+      prev.sortBy !== sortBy;
+
+    if (filtersChanged) {
+      setCurrentPage(1);
+      const params = new URLSearchParams(searchParams);
+      params.delete('page');
+      setSearchParams(params, { replace: true });
+      prevFiltersRef.current = { filterCategory, filterStatus, sortBy };
+    }
+  }, [filterCategory, filterStatus, sortBy, searchParams, setSearchParams]);
 
   // URL update helper
   const updateUrlParams = useCallback(
@@ -299,7 +308,6 @@ export function useBrowseFilters({
     }
 
     // 청크 내 페이지 위치 계산
-    const chunkIndex = Math.floor(((currentPage - 1) * PAGE_SIZE) / CHUNK_SIZE);
     const offsetInChunk = ((currentPage - 1) * PAGE_SIZE) % CHUNK_SIZE;
 
     // 상태 필터가 없을 때만 청크 내 페이지네이션 적용
