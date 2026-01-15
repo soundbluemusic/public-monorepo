@@ -65,13 +65,67 @@ export async function clientLoader({ params, serverLoader }) {
 }
 ```
 
-## 오류 발견 시 자동 처리
+## 오류 발견 시 자동 수정 (필수)
 
-1. 위반 항목 식별
-2. 해당 파일 Read로 확인
-3. **loader 누락 시**: loader 함수 추가 코드 제안
-4. 수정 방법 제안
-5. 사용자 승인 후 Edit로 수정
+**loader 누락 오류 발견 시, 즉시 자동으로 수정하세요:**
+
+1. 위반 파일 Read로 확인
+2. 기존 clientLoader 코드 분석
+3. **loader 함수 자동 추가** (clientLoader 로직 복사)
+4. clientLoader를 serverLoader 패턴으로 변경
+5. Edit tool로 파일 수정
+6. `pnpm verify:ssg` 재실행하여 수정 확인
+
+### 자동 수정 템플릿
+
+기존 코드:
+
+```typescript
+export async function clientLoader({ params }) {
+  const data = await fetchData(params.id);
+  return { data };
+}
+```
+
+자동 변환 결과:
+
+```typescript
+interface LoaderData {
+  data: DataType;
+}
+
+// SSG 빌드 시 실행
+export async function loader({ params }): Promise<LoaderData> {
+  const data = await fetchData(params.id);
+  return { data };
+}
+
+// 클라이언트 네비게이션 시 실행
+export async function clientLoader({
+  params,
+  serverLoader,
+}: {
+  params: { id: string };
+  serverLoader: () => Promise<LoaderData>;
+}): Promise<LoaderData> {
+  try {
+    return await serverLoader();
+  } catch {
+    const data = await fetchData(params.id);
+    return { data };
+  }
+}
+```
+
+## 서브에이전트 활용
+
+복잡한 수정이 필요한 경우, Task tool을 사용하여 서브에이전트를 호출하세요:
+
+```yaml
+Task tool 호출 예시:
+- subagent_type: "general-purpose"
+- prompt: "apps/context/app/routes/($locale).conversations.$categoryId.tsx 파일의 clientLoader를 loader + clientLoader 패턴으로 변환해줘. SSG 빌드 시 데이터가 HTML에 포함되어야 함."
+```
 
 ## 관련 파일
 

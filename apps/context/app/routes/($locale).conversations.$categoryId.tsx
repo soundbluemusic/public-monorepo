@@ -9,14 +9,39 @@ import { getConversationsByCategory } from '@/data/conversations';
 import type { Category, Conversation } from '@/data/types';
 import { useI18n } from '@/i18n';
 
+interface LoaderData {
+  category: Category | null;
+  conversations: Conversation[];
+}
+
 /**
- * clientLoader: 클라이언트에서 데이터 로드
- * Pages 빌드에서는 loader 대신 clientLoader 사용
+ * loader: SSG 빌드 시 실행
+ * 카테고리별 대화 데이터를 HTML에 포함
  */
-export async function clientLoader({ params }: { params: { categoryId: string } }) {
+export async function loader({ params }: { params: { categoryId: string } }): Promise<LoaderData> {
   const category = getCategoryById(params.categoryId);
   const conversations = getConversationsByCategory(params.categoryId);
   return { category: category || null, conversations };
+}
+
+/**
+ * clientLoader: 클라이언트에서 데이터 로드
+ * SSG 데이터가 있으면 사용, 없으면 직접 로드
+ */
+export async function clientLoader({
+  params,
+  serverLoader,
+}: {
+  params: { categoryId: string };
+  serverLoader: () => Promise<LoaderData>;
+}): Promise<LoaderData> {
+  try {
+    return await serverLoader();
+  } catch {
+    const category = getCategoryById(params.categoryId);
+    const conversations = getConversationsByCategory(params.categoryId);
+    return { category: category || null, conversations };
+  }
 }
 
 export const meta = dynamicMetaFactory(

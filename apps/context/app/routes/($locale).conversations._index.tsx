@@ -7,11 +7,15 @@ import { getCategoriesWithConversations, getConversationsByCategory } from '@/da
 import type { Category } from '@/data/types';
 import { useI18n } from '@/i18n';
 
+interface LoaderData {
+  categoriesWithCount: { category: Category; count: number }[];
+}
+
 /**
- * clientLoader: 클라이언트에서 데이터 로드
- * Pages 빌드에서는 loader 대신 clientLoader 사용
+ * loader: SSG 빌드 시 실행
+ * 대화 카테고리 목록을 HTML에 포함
  */
-export async function clientLoader() {
+export async function loader(): Promise<LoaderData> {
   const categoryIds = getCategoriesWithConversations();
   const categoriesWithCount = categoryIds
     .map((id) => {
@@ -23,6 +27,32 @@ export async function clientLoader() {
     .sort((a, b) => a.category.order - b.category.order);
 
   return { categoriesWithCount };
+}
+
+/**
+ * clientLoader: 클라이언트에서 데이터 로드
+ * SSG 데이터가 있으면 사용, 없으면 직접 로드
+ */
+export async function clientLoader({
+  serverLoader,
+}: {
+  serverLoader: () => Promise<LoaderData>;
+}): Promise<LoaderData> {
+  try {
+    return await serverLoader();
+  } catch {
+    const categoryIds = getCategoriesWithConversations();
+    const categoriesWithCount = categoryIds
+      .map((id) => {
+        const category = getCategoryById(id);
+        const conversations = getConversationsByCategory(id);
+        return category ? { category, count: conversations.length } : null;
+      })
+      .filter((item): item is { category: Category; count: number } => item !== null)
+      .sort((a, b) => a.category.order - b.category.order);
+
+    return { categoriesWithCount };
+  }
 }
 
 export const meta = metaFactory(
