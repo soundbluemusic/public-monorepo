@@ -381,6 +381,88 @@ startTransition(() => {
 
 ---
 
+## Scaling Strategy (확장 전략)
+
+### 100만+ 엔트리 대응
+
+현재 아키텍처는 100만 개 이상의 엔트리를 지원하도록 설계되었습니다.
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  Distributed Build (분산 빌드)                                   │
+│                                                                  │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐       ┌──────────┐   │
+│  │ Chunk 0  │  │ Chunk 1  │  │ Chunk 2  │  ...  │ Chunk N  │   │
+│  │ 50K each │  │ 50K each │  │ 50K each │       │ 50K each │   │
+│  └────┬─────┘  └────┬─────┘  └────┬─────┘       └────┬─────┘   │
+│       │             │             │                   │         │
+│       └─────────────┴─────────────┴───────────────────┘         │
+│                              │                                   │
+│                              ▼                                   │
+│                    ┌─────────────────┐                          │
+│                    │  Merge & Sync   │                          │
+│                    │  (rclone → R2)  │                          │
+│                    └─────────────────┘                          │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### 빌드 모드
+
+| 환경변수 | 용도 | 대상 |
+|:---------|:-----|:-----|
+| `BUILD_TARGET=pages` | 핵심 페이지만 | Cloudflare Pages |
+| `BUILD_TARGET=r2` | 엔트리 전체 (단일) | R2 (소규모) |
+| `BUILD_TARGET=chunked` | **청크 분할 (권장)** | R2 (대규모) |
+| `BUILD_TARGET=all` | 전체 | 로컬 테스트 |
+
+### 청크 빌드 흐름
+
+```bash
+# 1. 청크 메타데이터 확인
+npx tsx -e "import('./app/data/route-chunks.js').then(m => m.getChunkMetadata().then(console.log))"
+
+# 2. 개별 청크 빌드
+BUILD_TARGET=chunked CHUNK_INDEX=0 CHUNK_SIZE=50000 npx react-router build
+BUILD_TARGET=chunked CHUNK_INDEX=1 CHUNK_SIZE=50000 npx react-router build
+# ...
+
+# 3. GitHub Actions Matrix로 병렬화
+# .github/workflows/build-context-distributed.yml 참조
+```
+
+### 사이트맵 분할
+
+Google 제한 (50,000 URL/파일) 대응:
+
+```
+sitemap.xml (index)
+├── sitemap-pages.xml
+├── sitemap-categories.xml
+├── sitemap-entry-greetings.xml    ← 카테고리별 분리
+├── sitemap-entry-food.xml
+├── sitemap-entry-coding.xml
+└── sitemap-entry-{categoryId}.xml
+```
+
+### 성능 비교
+
+| 엔트리 수 | 단일 빌드 | 분산 빌드 (20 병렬) |
+|:----------|:----------|:--------------------|
+| 1.6만 | 1.3분 | 1.3분 |
+| 10만 | ~8분 | ~2분 |
+| 100만 | ~78분 (OOM 위험) | **~8분** |
+
+### 관련 파일
+
+| 파일 | 역할 |
+|:-----|:-----|
+| `apps/context/react-router.config.ts` | BUILD_TARGET 분기 로직 |
+| `apps/context/app/data/route-chunks.ts` | 청크 계산 및 생성 |
+| `apps/context/scripts/generate-sitemaps.ts` | 카테고리별 사이트맵 생성 |
+| `.github/workflows/build-context-distributed.yml` | Matrix 병렬 빌드 |
+
+---
+
 ## Dependency Graph (의존성 그래프)
 
 ```

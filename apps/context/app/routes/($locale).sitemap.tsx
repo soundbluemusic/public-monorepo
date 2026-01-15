@@ -25,17 +25,17 @@ export default function SitemapPage() {
     { path: '/license', label: t('license') },
   ];
 
+  // 카테고리별 사이트맵 생성
+  const entrySitemaps = categories.map((cat) => ({
+    path: `/sitemap-entry-${cat.id}.xml`,
+    label: `${cat.name[locale]} ${locale === 'ko' ? '단어' : 'entries'}`,
+  }));
+
   const xmlSitemaps = [
     { path: '/sitemap.xml', label: locale === 'ko' ? '사이트맵 인덱스' : 'Sitemap Index' },
-    { path: '/sitemap-pages.xml', label: locale === 'ko' ? '페이지 사이트맵' : 'Pages Sitemap' },
-    {
-      path: '/sitemap-categories.xml',
-      label: locale === 'ko' ? '카테고리 사이트맵' : 'Categories Sitemap',
-    },
-    {
-      path: '/sitemap-entries.xml',
-      label: locale === 'ko' ? '단어 사이트맵' : 'Entries Sitemap',
-    },
+    { path: '/sitemap-pages.xml', label: locale === 'ko' ? '페이지' : 'Pages' },
+    { path: '/sitemap-categories.xml', label: locale === 'ko' ? '카테고리' : 'Categories' },
+    ...entrySitemaps,
   ];
 
   return (

@@ -167,6 +167,62 @@ endpoint = https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
 
 **참고 파일:** `.github/workflows/deploy-context-r2.yml`
 
+### 9. SSG 분산 빌드 필수 (100만+ 대응)
+
+> ⚠️ **확장성**: 엔트리 수와 관계없이 항상 청크 빌드 사용
+
+**왜 청크 빌드인가?**
+
+| 항목 | 단일 빌드 | 청크 빌드 |
+| ---- | -------- | --------- |
+| 메모리 | 전체 로드 (OOM 위험) | 청크당 3MB (안전) |
+| 실패 시 | 전체 재빌드 | 실패 청크만 재실행 |
+| 병렬화 | 불가 | Matrix 20개 동시 |
+| 100만 빌드 | ~78분 | **~8분** |
+| 디버깅 | 어디서 실패? | 청크 단위 추적 |
+
+**빌드 환경변수:**
+
+```bash
+# BUILD_TARGET 옵션
+pages    # 핵심 페이지만 (Cloudflare Pages용)
+r2       # 엔트리 전체 (단일 빌드 - 비권장)
+chunked  # 청크 분할 빌드 (권장)
+all      # 전체 (로컬 테스트용)
+
+# 청크 빌드 예시
+BUILD_TARGET=chunked CHUNK_INDEX=0 CHUNK_SIZE=50000 npx react-router build
+```
+
+**워크플로우:**
+
+| 파일 | 용도 |
+| ---- | ---- |
+| `build-context-distributed.yml` | **권장** - Matrix 병렬 빌드 |
+| `deploy-context-r2.yml` | 레거시 단일 빌드 |
+
+**사이트맵 분할 규칙:**
+
+- Google 제한: 사이트맵당 50,000 URL
+- 현재 구조: `sitemap-entry-{categoryId}.xml` (카테고리별 분리)
+- 단일 `sitemap-entries.xml` 사용 금지
+
+```bash
+# ✅ 카테고리별 분리 (현재)
+sitemap-entry-greetings.xml
+sitemap-entry-food.xml
+sitemap-entry-coding.xml
+
+# ❌ 단일 파일 금지
+sitemap-entries.xml  # 100만 개 시 URL 제한 초과
+```
+
+**참고 파일:**
+
+- `apps/context/react-router.config.ts` - BUILD_TARGET 분기
+- `apps/context/app/data/route-chunks.ts` - 청크 로직
+- `.github/workflows/build-context-distributed.yml` - Matrix 빌드
+
 ---
 
 ## ✅ 필수 준수 (MUST DO)
