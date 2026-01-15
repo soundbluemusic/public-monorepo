@@ -97,13 +97,13 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
         id="main-content"
         data-sidebar-collapsed={sidebarCollapsed ? 'true' : undefined}
         className={cn(
-          'flex-1 w-full px-4 py-6 pb-20 md:pb-6',
+          'flex-1 w-full px-4 py-6 pb-20 lg:pb-6',
           'pt-(--header-height)',
-          // Desktop: offset for fixed sidebar (collapsed: 56px + 1rem, expanded: 18rem + 1rem)
+          // Desktop (lg:): offset for fixed sidebar
           sidebarCollapsed
-            ? 'md:pl-[calc(var(--sidebar-collapsed-width)+1rem)]'
-            : 'md:pl-[calc(var(--sidebar-width)+1rem)]',
-          'md:pr-4',
+            ? 'lg:pl-[calc(var(--sidebar-collapsed-width)+1rem)]'
+            : 'lg:pl-[calc(var(--sidebar-width)+1rem)]',
+          'lg:pr-4',
           'max-w-[calc(48rem+18rem+2rem)] mx-auto',
           'transition-[padding] duration-200',
         )}
@@ -142,7 +142,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
         <button
           type="button"
           onClick={scrollToTop}
-          className="fixed bottom-20 md:bottom-8 right-4 z-30 min-h-11 min-w-11 flex items-center justify-center rounded-full shadow-md bg-(--bg-elevated) border border-(--border-primary) text-(--text-secondary) cursor-pointer transition-all hover:bg-(--bg-tertiary) focus:outline-2 focus:outline-(--accent-primary) focus:outline-offset-2"
+          className="fixed bottom-20 lg:bottom-8 right-4 z-30 min-h-11 min-w-11 flex items-center justify-center rounded-full shadow-md bg-(--bg-elevated) border border-(--border-primary) text-(--text-secondary) cursor-pointer transition-all hover:bg-(--bg-tertiary) focus:outline-2 focus:outline-(--accent-primary) focus:outline-offset-2"
           aria-label={t('backToTop')}
         >
           <ArrowUp size={20} aria-hidden="true" />

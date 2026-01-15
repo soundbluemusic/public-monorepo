@@ -18,6 +18,7 @@ export function BottomNav() {
       locale={locale}
       localePath={localePath}
       heightClass="h-(--bottom-nav-height)"
+      hideAt="lg"
     />
   );
 }

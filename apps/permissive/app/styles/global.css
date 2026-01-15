@@ -331,24 +331,18 @@ input:focus-visible {
 }
 
 /* ============================================
-   Responsive Layout Adjustments
+   Sidebar Responsive Layout
    ============================================ */
 
-/* Mobile: no sidebar margin, has bottom nav padding */
-@media (max-width: 767px) {
-  .main-content {
-    margin-left: 0;
-    padding-bottom: var(--bottom-nav-height);
-  }
-
-  /* Hide sidebar on mobile by default (SSG hydration fix) */
-  aside {
+/* Mobile: Hide sidebar by default (SSG hydration fix) */
+@media (max-width: 1023px) {
+  aside[aria-label] {
     transform: translateX(-100%) !important;
     visibility: hidden !important;
   }
 
   /* Show sidebar when explicitly opened via JavaScript */
-  aside[data-mobile-open="true"] {
+  aside[aria-label].translate-x-0 {
     transform: translateX(0) !important;
     visibility: visible !important;
   }
@@ -410,13 +404,7 @@ input:focus-visible {
   }
 }
 
-/* Desktop: sidebar margin, no bottom nav */
-@media (min-width: 768px) {
-  .main-content {
-    margin-left: var(--sidebar-width);
-    padding-bottom: 0;
-  }
-}
+/* Desktop: Sidebar collapsed state handled via Tailwind classes (no CSS override needed) */
 
 /* ============================================
    Scrollbar Utilities
@@ -462,13 +450,3 @@ select {
   }
 }
 
-/* ============================================
-   Sidebar Collapsed State (Desktop only)
-   data-sidebar-collapsed 속성으로 CSS 제어
-   ============================================ */
-@media (min-width: 1024px) {
-  /* Main content margin when sidebar is collapsed */
-  main[data-sidebar-collapsed="true"] {
-    margin-left: var(--sidebar-collapsed-width) !important;
-  }
-}

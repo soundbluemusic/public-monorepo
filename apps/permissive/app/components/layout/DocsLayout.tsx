@@ -1,4 +1,3 @@
-import { useIsMobile } from '@soundblue/features/media';
 import { useSettingsStore } from '@soundblue/features/settings';
 import { cn } from '@soundblue/ui/utils';
 import { ArrowUp } from 'lucide-react';
@@ -17,35 +16,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
   const { t, locale } = useI18n();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const { sidebarCollapsed, toggleSidebarCollapse } = useSettingsStore();
-  const isMobile = useIsMobile();
-  const [isReady, setIsReady] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
-
-  useEffect(() => {
-    requestAnimationFrame(() => {
-      setIsReady(true);
-    });
-  }, []);
-
-  // Sync sidebar state with inline script's custom event
-  useEffect(() => {
-    const handleMobileSidebarToggle = (e: CustomEvent<{ isOpen: boolean }>) => {
-      setSidebarOpen(e.detail.isOpen);
-    };
-    window.addEventListener('mobile-sidebar-toggle', handleMobileSidebarToggle as EventListener);
-    return () =>
-      window.removeEventListener(
-        'mobile-sidebar-toggle',
-        handleMobileSidebarToggle as EventListener,
-      );
-  }, []);
-
-  // Close mobile sidebar when switching to desktop
-  useEffect(() => {
-    if (!isMobile && sidebarOpen) {
-      setSidebarOpen(false);
-    }
-  }, [isMobile, sidebarOpen]);
 
   // Back to top visibility with RAF throttling
   useEffect(() => {
@@ -87,8 +58,6 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
       <Sidebar
         isOpen={sidebarOpen}
         isCollapsed={sidebarCollapsed}
-        isMobile={isMobile}
-        isReady={isReady}
         onClose={closeSidebar}
         onToggleCollapse={toggleSidebarCollapse}
       />
@@ -99,11 +68,11 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
         data-sidebar-collapsed={sidebarCollapsed ? 'true' : undefined}
         className={cn(
           'pt-14 min-h-screen transition-[margin] duration-200',
-          // 모바일: marginLeft 0, paddingBottom for BottomNav
-          // 데스크톱 (lg): marginLeft sidebar width, paddingBottom 0
-          'ml-0 lg:ml-(--sidebar-width)',
+          // Desktop (lg): offset for fixed sidebar
+          sidebarCollapsed
+            ? 'lg:pl-[calc(var(--sidebar-collapsed-width)+1rem)]'
+            : 'lg:pl-[calc(var(--sidebar-width)+1rem)]',
           'pb-(--bottom-nav-height) lg:pb-0',
-          isReady && 'ready',
         )}
       >
         <div className="max-w-4xl mx-auto px-4 py-8">{children}</div>

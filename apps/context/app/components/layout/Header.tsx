@@ -37,15 +37,15 @@ export function Header({ onMenuClick, sidebarCollapsed = false }: HeaderProps) {
         className={cn(
           'h-full pl-4 pr-6 flex items-center gap-2 sm:gap-4 transition-[padding] duration-200',
           sidebarCollapsed
-            ? 'md:pl-[calc(var(--sidebar-collapsed-width)+1rem)]'
-            : 'md:pl-[calc(var(--sidebar-width)+1rem)]',
+            ? 'lg:pl-[calc(var(--sidebar-collapsed-width)+1rem)]'
+            : 'lg:pl-[calc(var(--sidebar-width)+1rem)]',
         )}
       >
-        {/* Menu Button (mobile only) */}
+        {/* Menu Button (mobile/tablet only) */}
         <button
           type="button"
           onClick={onMenuClick}
-          className="md:hidden min-h-11 min-w-11 flex items-center justify-center rounded-lg transition-colors hover:bg-(--bg-tertiary)"
+          className="lg:hidden min-h-11 min-w-11 flex items-center justify-center rounded-lg transition-colors hover:bg-(--bg-tertiary)"
           aria-label={t('menu')}
         >
           <Menu size={20} aria-hidden="true" />

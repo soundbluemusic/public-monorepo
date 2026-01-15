@@ -1,5 +1,16 @@
+/**
+ * @fileoverview Context 앱 사이드바 컴포넌트
+ * BaseSidebar를 사용하여 앱별 데이터만 전달
+ */
+
 import { LIMITS } from '@soundblue/core/validation';
-import { FamilySites } from '@soundblue/ui/components';
+import { stripLocaleFromPath } from '@soundblue/i18n';
+import {
+  BaseSidebar,
+  FamilySites,
+  type SidebarNavItem,
+  SidebarSection,
+} from '@soundblue/ui/components';
 import { cn } from '@soundblue/ui/utils';
 import {
   Bookmark,
@@ -10,13 +21,55 @@ import {
   LayoutGrid,
   List,
   MessageCircle,
-  PanelLeftClose,
 } from 'lucide-react';
-import { Link } from 'react-router';
+import { Link, useLocation } from 'react-router';
 import { categories } from '@/data/categories';
-import { useIsActiveRoute } from '@/hooks';
 import { useI18n } from '@/i18n';
-import { CategoryLink, CollapseButton, NavLink, SidebarHeader, useSidebarEffects } from './sidebar';
+
+// Use shared utility for locale stripping
+const stripLocale = stripLocaleFromPath;
+
+/** 메인 네비게이션 링크 설정 */
+const NAV_ITEMS: SidebarNavItem[] = [
+  { path: '/', icon: <Home size={20} aria-hidden="true" />, label: 'Home', labelKo: '홈' },
+  {
+    path: '/browse',
+    icon: <List size={20} aria-hidden="true" />,
+    label: 'Browse',
+    labelKo: '탐색',
+  },
+  {
+    path: '/conversations',
+    icon: <MessageCircle size={20} aria-hidden="true" />,
+    label: 'Conversations',
+    labelKo: '대화 예시',
+  },
+  {
+    path: '/my-learning',
+    icon: <LayoutGrid size={20} aria-hidden="true" />,
+    label: 'My Learning',
+    labelKo: '내 학습',
+  },
+  {
+    path: '/bookmarks',
+    icon: <Bookmark size={20} aria-hidden="true" />,
+    label: 'Bookmarks',
+    labelKo: '북마크',
+  },
+  { path: '/about', icon: <Info size={20} aria-hidden="true" />, label: 'About', labelKo: '정보' },
+  {
+    path: '/download',
+    icon: <Download size={20} aria-hidden="true" />,
+    label: 'Download',
+    labelKo: '다운로드',
+  },
+];
+
+/** More 섹션 링크 설정 */
+const MORE_ITEMS = [
+  { path: '/built-with', icon: Code2, labelKey: 'builtWithTitle' as const },
+  { path: '/sitemap', icon: LayoutGrid, labelKey: 'sitemap' as const },
+];
 
 interface SidebarProps {
   isOpen: boolean;
@@ -25,147 +78,95 @@ interface SidebarProps {
   onToggleCollapse: () => void;
 }
 
-/** 메인 네비게이션 링크 설정 */
-const NAV_ITEMS = [
-  { path: '/', icon: Home, labelKey: 'home' },
-  { path: '/browse', icon: List, labelKey: 'browse' },
-  { path: '/conversations', icon: MessageCircle, labelKey: 'conversationExamples' },
-  { path: '/my-learning', icon: LayoutGrid, labelKey: 'myLearning' },
-  { path: '/bookmarks', icon: Bookmark, labelKey: 'bookmarks' },
-  { path: '/about', icon: Info, labelKey: 'about' },
-  { path: '/download', icon: Download, labelKey: 'download' },
-] as const;
-
-/** More 섹션 링크 설정 */
-const MORE_ITEMS = [
-  { path: '/built-with', icon: Code2, labelKey: 'builtWithTitle' },
-  { path: '/sitemap', icon: LayoutGrid, labelKey: 'sitemap' },
-] as const;
-
 export function Sidebar({ isOpen, isCollapsed, onClose, onToggleCollapse }: SidebarProps) {
-  const { locale, t, localePath } = useI18n();
-  const { isActive } = useIsActiveRoute();
+  const { locale, localePath, t } = useI18n();
+  const location = useLocation();
 
-  useSidebarEffects({ isOpen, onClose });
+  const isActive = (basePath: string) => {
+    const currentPath = stripLocale(location.pathname);
+    return currentPath === basePath || currentPath.startsWith(`${basePath}/`);
+  };
 
   return (
-    <>
-      {/* Backdrop (mobile only) */}
-      {isOpen && (
-        <div
-          className="md:hidden fixed inset-0 z-40 bg-black/50 transition-opacity"
-          onClick={onClose}
-          aria-hidden="true"
-        />
-      )}
-
-      {/* Sidebar */}
-      <aside
-        className={cn(
-          'fixed top-0 left-0 z-50 h-full bg-(--bg-elevated) border-r border-(--border-primary)',
-          'flex flex-col transform transition-all duration-200',
-          'md:translate-x-0 md:top-(--header-height) md:h-[calc(100vh-var(--header-height))]',
-          isOpen ? 'translate-x-0' : '-translate-x-full',
-          'w-72 md:w-(--sidebar-width)',
-          isCollapsed && 'md:w-(--sidebar-collapsed-width) md:overflow-hidden',
-        )}
-        data-collapsed={isCollapsed ? 'true' : undefined}
-        aria-label={t('menu')}
-      >
-        {/* Header (mobile only) */}
-        <SidebarHeader menuLabel={t('menu')} />
-
-        <nav aria-label="Main navigation" className="flex-1 overflow-y-auto py-4">
-          {/* Main navigation */}
-          <div className="px-3 mb-6">
-            {NAV_ITEMS.map((item) => (
-              <NavLink
-                key={item.path}
-                to={localePath(item.path)}
-                icon={item.icon}
-                label={t(item.labelKey)}
-                isActive={isActive(item.path)}
-                isCollapsed={isCollapsed}
-                onClick={onClose}
-              />
-            ))}
-          </div>
-
-          {/* Categories - hidden when collapsed */}
-          <div className={cn('px-3 mb-6', isCollapsed && 'md:hidden')}>
-            <div className="px-3 py-2 text-xs font-medium uppercase tracking-wider text-(--text-tertiary)">
-              {t('browseByCategory')}
-            </div>
-            <div className="flex flex-col gap-0.5">
-              {categories.slice(0, LIMITS.SIDEBAR_CATEGORIES_PREVIEW).map((category) => (
-                <CategoryLink
-                  key={category.id}
-                  to={localePath(`/category/${category.id}`)}
-                  icon={category.icon}
-                  label={category.name[locale]}
-                  isActive={isActive(`/category/${category.id}`)}
-                  onClick={onClose}
-                />
-              ))}
-              <Link
-                to={localePath('/browse')}
-                onClick={onClose}
-                className="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11 text-sm text-(--accent-primary) hover:bg-(--bg-tertiary)"
-              >
-                <span className="text-base text-(--text-secondary)">+{categories.length - 6}</span>
-                {t('viewAll')}
-              </Link>
-            </div>
-          </div>
-
-          {/* More section - hidden when collapsed */}
-          <div className={cn('px-3', isCollapsed && 'md:hidden')}>
-            <div className="px-3 py-2 text-xs font-medium uppercase tracking-wider text-(--text-tertiary)">
-              {t('more')}
-            </div>
-            {MORE_ITEMS.map((item) => (
-              <NavLink
-                key={item.path}
-                to={localePath(item.path)}
-                icon={item.icon}
-                label={t(item.labelKey)}
-                isActive={isActive(item.path)}
-                isCollapsed={isCollapsed}
-                onClick={onClose}
-              />
-            ))}
-
-            {/* More from Us */}
-            <div className="mt-4">
-              <FamilySites currentAppId="context" variant="sidebar" locale={locale} />
-            </div>
-          </div>
-        </nav>
-
-        {/* Footer - Close button (mobile) + Collapse button (desktop) */}
-        <div
-          className={cn('shrink-0 p-4 border-t border-(--border-primary)', isCollapsed && 'md:p-2')}
-        >
-          {/* Close Button (mobile only) */}
-          <button
-            type="button"
+    <BaseSidebar
+      isOpen={isOpen}
+      isCollapsed={isCollapsed}
+      onClose={onClose}
+      onToggleCollapse={onToggleCollapse}
+      locale={locale}
+      localePath={localePath}
+      isActive={isActive}
+      logo={
+        <>
+          <span className="text-xl">📖</span>
+          <span>Context</span>
+        </>
+      }
+      ariaLabel={t('menu')}
+      navItems={NAV_ITEMS}
+      closeMenuLabel={t('closeMenu')}
+    >
+      {/* Categories Section */}
+      <SidebarSection title={t('browseByCategory')}>
+        {categories.slice(0, LIMITS.SIDEBAR_CATEGORIES_PREVIEW).map((category) => (
+          <Link
+            key={category.id}
+            to={localePath(`/category/${category.id}`)}
             onClick={onClose}
-            className="md:hidden w-full min-h-11 flex items-center justify-center gap-2 rounded-lg transition-colors bg-(--bg-tertiary) hover:bg-(--bg-secondary) text-(--text-secondary)"
-            aria-label={t('closeMenu')}
+            className={cn(
+              'flex items-center gap-3 px-3 py-3 rounded-lg min-h-11 transition-all no-underline',
+              isActive(`/category/${category.id}`)
+                ? 'bg-(--bg-tertiary) text-(--accent-primary) shadow-sm'
+                : 'text-(--text-secondary) hover:bg-(--bg-tertiary)',
+            )}
           >
-            <PanelLeftClose size={20} aria-hidden="true" />
-            <span className="text-sm font-medium">{t('closeMenu')}</span>
-          </button>
+            <span className="text-lg shrink-0">{category.icon}</span>
+            <span className="font-medium text-sm">{category.name[locale]}</span>
+            {isActive(`/category/${category.id}`) && (
+              <div className="w-1 h-6 rounded-full shrink-0 bg-(--accent-primary) ml-auto" />
+            )}
+          </Link>
+        ))}
+        <Link
+          to={localePath('/browse')}
+          onClick={onClose}
+          className="flex items-center gap-3 px-3 py-2 rounded-lg transition-colors min-h-11 text-sm text-(--accent-primary) hover:bg-(--bg-tertiary) no-underline"
+        >
+          <span className="text-base text-(--text-secondary)">+{categories.length - 6}</span>
+          {t('viewAll')}
+        </Link>
+      </SidebarSection>
 
-          {/* Collapse Toggle Button (desktop only) */}
-          <CollapseButton
-            isCollapsed={isCollapsed}
-            expandLabel={t('expandSidebar')}
-            collapseLabel={t('collapseSidebar')}
-            onToggle={onToggleCollapse}
-          />
-        </div>
-      </aside>
-    </>
+      {/* More Section */}
+      <SidebarSection title={t('more')}>
+        {MORE_ITEMS.map((item) => {
+          const Icon = item.icon;
+          return (
+            <Link
+              key={item.path}
+              to={localePath(item.path)}
+              onClick={onClose}
+              className={cn(
+                'flex items-center gap-3 px-3 py-3 rounded-lg min-h-11 transition-all no-underline',
+                isActive(item.path)
+                  ? 'bg-(--bg-tertiary) text-(--accent-primary) shadow-sm'
+                  : 'text-(--text-secondary) hover:bg-(--bg-tertiary)',
+              )}
+            >
+              <Icon size={20} aria-hidden="true" className="shrink-0" />
+              <span className="font-medium text-sm">{t(item.labelKey)}</span>
+              {isActive(item.path) && (
+                <div className="w-1 h-6 rounded-full shrink-0 bg-(--accent-primary) ml-auto" />
+              )}
+            </Link>
+          );
+        })}
+      </SidebarSection>
+
+      {/* More from Us */}
+      <div className="mt-6 pt-4 border-t border-(--border-primary)">
+        <FamilySites currentAppId="context" variant="sidebar" locale={locale} />
+      </div>
+    </BaseSidebar>
   );
 }
