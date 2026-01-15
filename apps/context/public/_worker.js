@@ -91,6 +91,19 @@ export default {
       }
     }
 
+    // 사이트맵 파일: 캐시 비활성화 (검색엔진 크롤링용)
+    if (path.startsWith('/sitemap') && (path.endsWith('.xml') || path.endsWith('.xsl'))) {
+      const response = await env.ASSETS.fetch(request);
+      const headers = new Headers(response.headers);
+      headers.set('Cache-Control', 'no-cache, no-store, must-revalidate');
+      headers.set('Pragma', 'no-cache');
+      headers.set('Expires', '0');
+      return new Response(response.body, {
+        status: response.status,
+        headers,
+      });
+    }
+
     // 나머지는 Pages에서 처리
     return env.ASSETS.fetch(request);
   },
