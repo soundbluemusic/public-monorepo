@@ -1,6 +1,7 @@
 -- D1 Schema for Context App
 -- Migration: 0001_initial
 -- Created: 2026-01-15
+-- Note: FOREIGN KEY constraints removed for flexibility (categoryId values exceed categories table)
 
 -- ============================================
 -- Categories Table
@@ -29,8 +30,7 @@ CREATE TABLE IF NOT EXISTS entries (
   frequency TEXT,
   tags TEXT,           -- JSON array: ["casual", "informal"]
   translations TEXT,   -- JSON object: { ko: {...}, en: {...} }
-  created_at INTEGER DEFAULT (unixepoch()),
-  FOREIGN KEY (category_id) REFERENCES categories(id)
+  created_at INTEGER DEFAULT (unixepoch())
 );
 
 -- Indexes for entries
@@ -47,8 +47,7 @@ CREATE TABLE IF NOT EXISTS conversations (
   title_ko TEXT NOT NULL,
   title_en TEXT NOT NULL,
   dialogue TEXT NOT NULL,  -- JSON array of dialogue objects
-  created_at INTEGER DEFAULT (unixepoch()),
-  FOREIGN KEY (category_id) REFERENCES categories(id)
+  created_at INTEGER DEFAULT (unixepoch())
 );
 
 -- Index for conversations
