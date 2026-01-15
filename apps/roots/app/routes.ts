@@ -1,4 +1,4 @@
-import { type RouteConfig, route } from '@react-router/dev/routes';
+import { index, type RouteConfig, route } from '@react-router/dev/routes';
 
 /**
  * Roots 앱 라우트 설정
@@ -16,8 +16,8 @@ import { type RouteConfig, route } from '@react-router/dev/routes';
  * 동일한 컴포넌트 파일을 재사용하되, 라우트 ID만 분리하여 각각 loader가 실행되도록 합니다.
  */
 export default [
-  // Static pages - English
-  route('', 'routes/($locale)._index.tsx', { id: 'en-index' }),
+  // Index pages (home) - use index() function for root path
+  index('routes/($locale)._index.tsx', { id: 'en-index' }),
   route('browse', 'routes/($locale).browse.tsx', { id: 'en-browse' }),
   route('search', 'routes/($locale).search.tsx', { id: 'en-search' }),
   route('favorites', 'routes/($locale).favorites.tsx', { id: 'en-favorites' }),
