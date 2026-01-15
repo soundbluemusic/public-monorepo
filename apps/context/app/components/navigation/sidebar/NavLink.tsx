@@ -32,12 +32,12 @@ export const NavLink = memo(function NavLink({
         'flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors min-h-11',
         'text-(--text-secondary) hover:bg-(--bg-tertiary) hover:text-(--text-primary)',
         isActive && 'bg-(--bg-tertiary) text-(--accent-primary)',
-        isCollapsed && 'md:justify-center md:px-0',
+        isCollapsed && 'lg:justify-center lg:px-0',
       )}
       title={isCollapsed ? label : undefined}
     >
       <Icon size={20} aria-hidden="true" className="shrink-0" />
-      <span className={cn(isCollapsed && 'md:hidden')}>{label}</span>
+      <span className={cn(isCollapsed && 'lg:hidden')}>{label}</span>
     </Link>
   );
 });

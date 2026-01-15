@@ -56,7 +56,7 @@ export function SearchAndSort({
       {/* Category filter */}
       <div className="relative">
         <div className="absolute right-0 top-0 bottom-0 w-8 bg-linear-to-l from-(--bg-primary) to-transparent pointer-events-none z-10 sm:hidden" />
-        <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-none sm:flex-wrap sm:overflow-visible sm:pb-0">
+        <div className="flex gap-2 overflow-x-auto pb-2 pr-8 scrollbar-none sm:flex-wrap sm:overflow-visible sm:pb-0 sm:pr-0">
           {categories.map((cat) => (
             <button
               key={cat}

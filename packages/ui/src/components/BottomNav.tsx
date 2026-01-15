@@ -66,7 +66,7 @@ export function BottomNav({
     <nav
       aria-label="Mobile navigation"
       className={cn(
-        'fixed bottom-0 left-0 right-0 z-40',
+        'fixed bottom-0 left-0 right-0 z-50',
         'bg-(--bg-elevated) border-t border-(--border-primary)',
         'flex items-center justify-around',
         'pb-[env(safe-area-inset-bottom,0px)]',
@@ -90,7 +90,7 @@ export function BottomNav({
             aria-current={active ? 'page' : undefined}
           >
             <Icon size={20} aria-hidden="true" />
-            <span className="text-[11px] sm:text-xs font-medium">
+            <span className="text-xs font-medium">
               {locale === 'ko' ? item.labelKo : item.label}
             </span>
           </Link>

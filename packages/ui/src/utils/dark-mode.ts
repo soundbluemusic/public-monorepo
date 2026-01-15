@@ -217,7 +217,7 @@ export const MOBILE_SIDEBAR_TOGGLE_SCRIPT = `(function() {
           if (!existingBackdrop) {
             var newBackdrop = document.createElement('div');
             newBackdrop.setAttribute('data-sidebar-backdrop', '');
-            newBackdrop.className = 'fixed inset-0 bg-black/50 z-40 md:hidden';
+            newBackdrop.className = 'fixed inset-0 bg-black/50 z-50 lg:hidden';
             document.body.appendChild(newBackdrop);
           }
         } else if (existingBackdrop) {

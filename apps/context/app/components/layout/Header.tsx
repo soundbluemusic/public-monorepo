@@ -32,7 +32,7 @@ export function Header({ onMenuClick, sidebarCollapsed = false }: HeaderProps) {
   } = useGlobalSearch({ locale, localePath });
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 h-(--header-height) backdrop-blur-sm bg-(--bg-primary)/80 border-b border-(--border-primary) overflow-hidden">
+    <header className="fixed top-0 left-0 right-0 z-30 h-(--header-height) backdrop-blur-sm bg-(--bg-primary)/80 border-b border-(--border-primary)">
       <div
         className={cn(
           'h-full pl-4 pr-6 flex items-center gap-2 sm:gap-4 transition-[padding] duration-200',

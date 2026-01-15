@@ -146,10 +146,12 @@ input:focus-visible {
 }
 
 /* ============================================
-   Prevent horizontal overflow
+   Prevent horizontal overflow on small screens
    ============================================ */
-main {
-  overflow-x: hidden;
+@media (max-width: 640px) {
+  main {
+    overflow-x: clip;
+  }
 }
 
 /* ============================================

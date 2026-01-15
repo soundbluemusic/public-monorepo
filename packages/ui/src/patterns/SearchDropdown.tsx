@@ -250,7 +250,7 @@ export function SearchDropdown<T extends SearchResultItem = SearchResultItem>({
           id={listboxId}
           role="listbox"
           tabIndex={-1}
-          className="absolute top-[calc(100%+4px)] left-0 right-0 z-[600] max-h-75 overflow-y-auto rounded-xl shadow-lg m-0 p-1 bg-(--bg-secondary) border border-(--border-primary)"
+          className="absolute top-[calc(100%+4px)] left-0 right-0 z-60 max-h-[300px] overflow-y-auto rounded-xl shadow-lg m-0 p-1 bg-(--bg-secondary) border border-(--border-primary)"
         >
           {isLoading ? (
             <div className="px-3 py-2.5 text-sm text-(--text-tertiary)">
@@ -282,7 +282,7 @@ export function SearchDropdown<T extends SearchResultItem = SearchResultItem>({
       )}
 
       {isOpen && query.trim() && results.length === 0 && !isLoading && (
-        <div className="absolute top-[calc(100%+4px)] left-0 right-0 z-[600] rounded-xl shadow-lg p-4 text-center text-sm bg-(--bg-secondary) border border-(--border-primary) text-(--text-tertiary)">
+        <div className="absolute top-[calc(100%+4px)] left-0 right-0 z-60 rounded-xl shadow-lg p-4 text-center text-sm bg-(--bg-secondary) border border-(--border-primary) text-(--text-tertiary)">
           {locale === 'ko' ? '검색 결과 없음' : 'No results found'}
         </div>
       )}

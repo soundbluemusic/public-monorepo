@@ -87,7 +87,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
       </a>
 
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-40 h-(--header-height) backdrop-blur-sm bg-(--bg-primary)/80 border-b border-(--border-primary)">
+      <header className="fixed top-0 left-0 right-0 z-30 h-(--header-height) backdrop-blur-sm bg-(--bg-primary)/80 border-b border-(--border-primary)">
         <div
           className={cn(
             'h-full px-4 flex items-center gap-4 transition-[padding] duration-200',
@@ -242,7 +242,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
       {/* Mobile Bottom Navigation */}
       <nav
         aria-label="Mobile navigation"
-        className="fixed bottom-0 left-0 right-0 z-40 bg-(--bg-elevated) border-t border-(--border-primary) flex items-center justify-around h-16 pb-[env(safe-area-inset-bottom,0px)] lg:hidden"
+        className="fixed bottom-0 left-0 right-0 z-50 bg-(--bg-elevated) border-t border-(--border-primary) flex items-center justify-around h-16 pb-[env(safe-area-inset-bottom,0px)] lg:hidden"
       >
         <Link
           to={localePath('/browse')}
@@ -294,7 +294,9 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
           'hidden lg:block mt-auto py-8 bg-(--bg-secondary) border-t border-(--border-primary)',
           'transition-[padding] duration-200',
           // Desktop: offset for fixed sidebar (same as main content)
-          sidebarCollapsed ? 'lg:pl-(--sidebar-collapsed-width)' : 'lg:pl-(--sidebar-width)',
+          sidebarCollapsed
+            ? 'lg:pl-[calc(var(--sidebar-collapsed-width)+1rem)]'
+            : 'lg:pl-[calc(var(--sidebar-width)+1rem)]',
         )}
       >
         <div className="max-w-4xl mx-auto px-4">
