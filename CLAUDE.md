@@ -156,6 +156,31 @@ import { useSearch } from '@soundblue/search/react';      // L2
 /ko/entry/hello  → Korean
 ```
 
+### 동적 라우트에서 locale 추출 (중요!)
+
+> **⛔ `params.locale` 사용 금지** - 항상 `undefined`입니다!
+
+routes.ts에서 `route('ko/entry/:entryId', ...)`로 정의하면 `ko`는 **고정 문자열**입니다.
+따라서 `params.locale`은 항상 `undefined`가 됩니다.
+
+```typescript
+import { getLocaleFromPath } from '@soundblue/i18n';
+
+// ❌ 금지 (params.locale은 항상 undefined)
+const locale = params.locale === 'ko' ? 'ko' : 'en';
+
+// ✅ loader에서 (request.url 사용)
+export async function loader({ params, request }) {
+  const url = new URL(request.url);
+  const locale = getLocaleFromPath(url.pathname);  // '/ko/entry/...' → 'ko'
+}
+
+// ✅ clientLoader에서 (window.location 사용)
+export async function clientLoader({ params, serverLoader }) {
+  const locale = getLocaleFromPath(window.location.pathname);
+}
+```
+
 ### Meta Factory 필수
 ```typescript
 // 정적 라우트

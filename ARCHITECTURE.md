@@ -64,6 +64,58 @@ export async function loader({ params }: Route.LoaderArgs) {
 }
 ```
 
+### 다국어 동적 라우트 패턴 (중요!)
+
+> **⛔ `params.locale` 사용 금지** - 항상 `undefined`입니다!
+
+#### 원인
+
+routes.ts에서 다국어 라우트를 정의할 때:
+
+```typescript
+// routes.ts
+route('entry/:entryId', entryFile, { id: 'entry-en' }),      // 영어
+route('ko/entry/:entryId', entryFile, { id: 'entry-ko' }),   // 한국어
+```
+
+`ko`는 **파라미터가 아닌 고정 문자열**입니다. 따라서 `params.locale`은 항상 `undefined`가 됩니다.
+
+#### 올바른 패턴
+
+```typescript
+import { getLocaleFromPath } from '@soundblue/i18n';
+
+// ✅ loader에서 (SSG 빌드 시)
+export async function loader({ params, request }) {
+  const url = new URL(request.url);
+  const locale = getLocaleFromPath(url.pathname);  // '/ko/entry/...' → 'ko'
+  const entry = await getEntryByIdForLocale(params.entryId, locale);
+  return { entry };
+}
+
+// ✅ clientLoader에서 (브라우저 런타임)
+export async function clientLoader({ params, serverLoader }) {
+  try {
+    return await serverLoader();
+  } catch {
+    const locale = getLocaleFromPath(window.location.pathname);
+    const entry = await getEntryByIdForLocale(params.entryId, locale);
+    return { entry };
+  }
+}
+```
+
+#### 검증
+
+```bash
+# params.locale 사용 여부 검사
+pnpm verify:ssg
+
+# 빌드된 HTML 콘텐츠 검증
+grep -r "단어를 찾을 수 없습니다" apps/context/build/client/ko/entry/ | wc -l
+# 기대값: 0 (404 콘텐츠 없어야 함)
+```
+
 ---
 
 ## Package Layer System (패키지 레이어 시스템)

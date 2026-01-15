@@ -32,8 +32,52 @@ pnpm verify:ssg
 | HTML 출력 | 빈 `<div id="root">` 없음 | 콘텐츠 포함 필수 |
 | orphan DOM 정리 | entry.client.tsx 로직 유지 | hydration 버그 방지 |
 | **동적 라우트 loader** | `$param` 라우트에 loader 필수 | **SEO 데이터 필수** |
+| **params.locale 사용 금지** | URL pathname에서 locale 추출 | **다국어 데이터 정확성** |
 
-## 동적 라우트 loader 검사 (신규)
+## params.locale 사용 금지 (중요!)
+
+> **⛔ `params.locale`은 ($locale) 라우트에서 항상 `undefined`입니다!**
+
+### 원인
+
+routes.ts에서 `route('ko/entry/:entryId', ...)`로 정의하면 `ko`는 **파라미터가 아닌 고정 문자열**입니다.
+따라서 `params.locale`은 항상 `undefined`가 됩니다.
+
+### 금지 패턴
+
+```typescript
+// ❌ 모든 요청에서 'en'을 반환 (params.locale이 항상 undefined이므로)
+const locale = params.locale === 'ko' ? 'ko' : 'en';
+const locale = params.locale || 'en';
+```
+
+### 올바른 패턴
+
+```typescript
+import { getLocaleFromPath } from '@soundblue/i18n';
+
+// ✅ loader에서 (SSG 빌드 시)
+export async function loader({ params, request }) {
+  const url = new URL(request.url);
+  const locale = getLocaleFromPath(url.pathname);  // '/ko/entry/...' → 'ko'
+  // ...
+}
+
+// ✅ clientLoader에서 (브라우저 런타임)
+export async function clientLoader({ params, serverLoader }) {
+  const locale = getLocaleFromPath(window.location.pathname);
+  // ...
+}
+```
+
+### 검사 방법
+
+```bash
+# params.locale 사용 검색
+grep -r "params\.locale" apps/context/app/routes/
+```
+
+## 동적 라우트 loader 검사
 
 **prerender 목록에 있는 동적 라우트는 반드시 `loader`가 있어야 합니다.**
 

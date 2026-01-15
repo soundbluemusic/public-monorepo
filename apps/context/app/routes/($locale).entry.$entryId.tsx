@@ -1,5 +1,5 @@
 import { toast } from '@soundblue/features/toast';
-import { dynamicMetaFactory } from '@soundblue/i18n';
+import { dynamicMetaFactory, getLocaleFromPath } from '@soundblue/i18n';
 import { cn } from '@soundblue/ui/utils';
 import { Bookmark, BookmarkCheck, Check } from 'lucide-react';
 import { Link, useLoaderData } from 'react-router';
@@ -26,12 +26,14 @@ import { useUserDataStore } from '@/stores/user-data-store';
  * SSG 빌드(BUILD_TARGET=r2)는 ($locale).entry.$entryId.ssg.tsx 사용
  *
  * URL 패턴:
- * - /entry/:entryId     → 영어 (locale = undefined)
- * - /ko/entry/:entryId  → 한국어 (locale = 'ko')
+ * - /entry/:entryId     → 영어
+ * - /ko/entry/:entryId  → 한국어
+ *
+ * ⚠️ 중요: params.locale은 routes.ts 정의 방식 때문에 항상 undefined입니다.
+ * 반드시 window.location.pathname에서 locale을 추출해야 합니다.
  */
 
 interface LoaderParams {
-  locale?: string;
   entryId: string;
 }
 
@@ -43,10 +45,15 @@ interface LoaderData {
 /**
  * clientLoader: 클라이언트에서 데이터 로드
  * Pages 빌드에서는 loader가 없으므로 항상 직접 로드
+ *
+ * ⚠️ params.locale 사용 금지! window.location.pathname에서 locale 추출 필수
  */
 export async function clientLoader({ params }: { params: LoaderParams }): Promise<LoaderData> {
   const { getEntryByIdForLocale } = await import('@/data/entries');
-  const locale = params.locale === 'ko' ? 'ko' : 'en';
+
+  // 브라우저 환경에서 URL pathname으로 locale 추출 (params.locale은 항상 undefined)
+  const locale = getLocaleFromPath(window.location.pathname);
+
   const entry = await getEntryByIdForLocale(params.entryId, locale);
 
   // colors 카테고리의 경우 영어 색상명도 함께 로드 (색상 표시용)
