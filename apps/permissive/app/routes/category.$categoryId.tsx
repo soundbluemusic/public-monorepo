@@ -1,5 +1,5 @@
 import { dynamicMetaFactory } from '@soundblue/i18n';
-import { ArrowLeft, ExternalLink, Github, Package, Scale, Star } from 'lucide-react';
+import { ArrowLeft, Package, Scale, Star } from 'lucide-react';
 import { Link, useLoaderData } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import {

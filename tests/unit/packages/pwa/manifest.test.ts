@@ -62,8 +62,8 @@ describe('@soundblue/pwa/manifest', () => {
       const manifest = generateManifestContent(config);
 
       expect(manifest.shortcuts).toHaveLength(2);
-      expect(manifest.shortcuts![0].name).toBe('Browse');
-      expect(manifest.shortcuts![1].url).toBe('/search');
+      expect(manifest.shortcuts?.[0].name).toBe('Browse');
+      expect(manifest.shortcuts?.[1].url).toBe('/search');
     });
 
     it('should exclude shortcuts when empty array', () => {

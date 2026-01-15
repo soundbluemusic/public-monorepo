@@ -70,8 +70,10 @@ export function FormulaList({ formulas, title }: { formulas: FormulaInput[]; tit
       )}
       {formulas.map((formula, index) =>
         typeof formula === 'string' ? (
+          // biome-ignore lint/suspicious/noArrayIndexKey: formulas are static and won't be reordered
           <SimpleFormula key={`formula-str-${index}`} formula={formula} />
         ) : (
+          // biome-ignore lint/suspicious/noArrayIndexKey: formulas are static and won't be reordered
           <FormulaCard key={`formula-obj-${index}`} formula={formula} index={index} />
         ),
       )}

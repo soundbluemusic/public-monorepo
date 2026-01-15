@@ -189,7 +189,7 @@ async function main() {
     }
   }
 
-  console.log('\n' + '='.repeat(60));
+  console.log(`\n${'='.repeat(60)}`);
   console.log(`\n⏱️  총 소요 시간: ${formatDuration(totalDuration)}`);
 
   // JSON 출력 (CI 연동용)
