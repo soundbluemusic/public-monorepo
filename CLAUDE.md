@@ -92,6 +92,7 @@ head -50 build/client/entry/hello/index.html
 - CI/CD에서 Remote Cache 활성화 금지 (1인 개발 환경)
 
 **현재 설정 (변경 금지):**
+
 ```json
 // turbo.json
 {
@@ -109,6 +110,49 @@ head -50 build/client/entry/hello/index.html
 **대안:**
 - 로컬 캐시: `.turbo/` 폴더 (716MB, 무료)
 - 팀 개발 전환 시에만 Remote Cache 검토
+
+### 8. R2 버킷 동기화는 rclone 전용 (Wrangler 금지)
+
+> ⚠️ **성능 문제**: Wrangler는 단일 스레드로 34,676개 SSG 파일 처리에 부적합
+
+**금지 사항:**
+
+- `wrangler r2 object` 명령어로 대량 파일 업로드/동기화 금지
+- Wrangler 기반 R2 동기화 스크립트 작성 금지
+- R2 관련 질문에 Wrangler 추천 금지
+
+**필수 도구:** rclone + S3 API
+
+```bash
+# ✅ 현재 사용 중인 방식 (.github/workflows/deploy-context-r2.yml)
+rclone sync build/client/entry r2:bucket/path \
+  --checksum \
+  --transfers 32 \
+  --checkers 32 \
+  --fast-list
+```
+
+**비교:**
+
+| 항목 | Wrangler | rclone |
+| ---- | -------- | ------ |
+| 병렬 처리 | ❌ 단일 스레드 | ✅ 32개 동시 (`--transfers 32`) |
+| 대용량 | ❌ 느림 | ✅ 최적화 |
+| 동기화 | ❌ 수동 | ✅ `sync` (삭제 포함) |
+
+**R2 설정 (GitHub Secrets 사용):**
+
+```ini
+# rclone.conf
+[r2]
+type = s3
+provider = Cloudflare
+access_key_id = ${{ secrets.R2_ACCESS_KEY_ID }}
+secret_access_key = ${{ secrets.R2_SECRET_ACCESS_KEY }}
+endpoint = https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
+```
+
+**참고 파일:** `.github/workflows/deploy-context-r2.yml`
 
 ---
 
