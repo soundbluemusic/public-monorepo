@@ -17,13 +17,12 @@ import { useI18n } from '@/i18n';
 import { useUserDataStore } from '@/stores/user-data-store';
 
 /**
- * Entry 페이지 - Pages 빌드용 (SPA fallback)
+ * Entry 페이지 - R2 SSG 빌드용
  *
- * 이 파일은 BUILD_TARGET=pages에서 사용됩니다.
- * loader가 없으므로 React Router SSG 검증을 통과합니다.
- * 데이터는 clientLoader에서 런타임에 로드됩니다.
+ * 이 파일은 BUILD_TARGET=r2/all/chunked에서 사용됩니다.
+ * loader가 있어서 빌드 시 데이터가 HTML에 포함됩니다.
  *
- * SSG 빌드(BUILD_TARGET=r2)는 ($locale).entry.$entryId.ssg.tsx 사용
+ * Pages 빌드(BUILD_TARGET=pages)는 ($locale).entry.$entryId.tsx 사용 (loader 없음)
  *
  * URL 패턴:
  * - /entry/:entryId     → 영어 (locale = undefined)
@@ -41,10 +40,10 @@ interface LoaderData {
 }
 
 /**
- * clientLoader: 클라이언트에서 데이터 로드
- * Pages 빌드에서는 loader가 없으므로 항상 직접 로드
+ * loader: SSG 빌드 시 실행
+ * 엔트리 데이터를 HTML에 포함
  */
-export async function clientLoader({ params }: { params: LoaderParams }): Promise<LoaderData> {
+export async function loader({ params }: { params: LoaderParams }): Promise<LoaderData> {
   const { getEntryByIdForLocale } = await import('@/data/entries');
   const locale = params.locale === 'ko' ? 'ko' : 'en';
   const entry = await getEntryByIdForLocale(params.entryId, locale);
@@ -57,6 +56,35 @@ export async function clientLoader({ params }: { params: LoaderParams }): Promis
   }
 
   return { entry: entry || null, englishColorName };
+}
+
+/**
+ * clientLoader: 클라이언트 네비게이션 시 실행
+ * SSG 데이터가 있으면 사용, 없으면 직접 로드
+ */
+export async function clientLoader({
+  params,
+  serverLoader,
+}: {
+  params: LoaderParams;
+  serverLoader: () => Promise<LoaderData>;
+}): Promise<LoaderData> {
+  try {
+    return await serverLoader();
+  } catch {
+    // SSG 데이터가 없는 경우 직접 로드
+    const { getEntryByIdForLocale } = await import('@/data/entries');
+    const locale = params.locale === 'ko' ? 'ko' : 'en';
+    const entry = await getEntryByIdForLocale(params.entryId, locale);
+
+    let englishColorName: string | undefined;
+    if (locale === 'ko' && entry?.categoryId === 'colors') {
+      const enEntry = await getEntryByIdForLocale(params.entryId, 'en');
+      englishColorName = enEntry?.translation.word;
+    }
+
+    return { entry: entry || null, englishColorName };
+  }
 }
 
 // Hydration fallback to show while clientLoader is running

@@ -9,15 +9,42 @@ import type { Category, MeaningEntry } from '@/data/types';
 import { useStudyData } from '@/hooks';
 import { useI18n } from '@/i18n';
 
+interface LoaderData {
+  category: Category | null;
+  entries: MeaningEntry[];
+}
+
 /**
- * clientLoader: 클라이언트에서 데이터 로드
- * Pages 빌드에서는 loader 대신 clientLoader 사용
+ * loader: SSG 빌드 시 실행
+ * 카테고리 데이터를 HTML에 포함
  */
-export async function clientLoader({ params }: { params: { categoryId: string } }) {
+export async function loader({ params }: { params: { categoryId: string } }): Promise<LoaderData> {
   const { getEntriesByCategory } = await import('@/data/entries');
   const category = getCategoryById(params.categoryId);
   const entries = await getEntriesByCategory(params.categoryId);
   return { category: category || null, entries };
+}
+
+/**
+ * clientLoader: 클라이언트 네비게이션 시 실행
+ * SSG 데이터가 있으면 사용, 없으면 직접 로드
+ */
+export async function clientLoader({
+  params,
+  serverLoader,
+}: {
+  params: { categoryId: string };
+  serverLoader: () => Promise<LoaderData>;
+}): Promise<LoaderData> {
+  try {
+    return await serverLoader();
+  } catch {
+    // SSG 데이터가 없는 경우 직접 로드
+    const { getEntriesByCategory } = await import('@/data/entries');
+    const category = getCategoryById(params.categoryId);
+    const entries = await getEntriesByCategory(params.categoryId);
+    return { category: category || null, entries };
+  }
 }
 
 export const meta = dynamicMetaFactory(
