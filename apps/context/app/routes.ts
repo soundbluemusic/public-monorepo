@@ -16,16 +16,26 @@ import { index, type RouteConfig, route } from '@react-router/dev/routes';
  * 동일한 컴포넌트 파일을 재사용하되, 라우트 ID만 분리하여 각각 loader가 실행되도록 합니다.
  *
  * ## Entry 라우트 분기
- * React Router SSG에서 동적 라우트에 loader가 있으면 prerender 목록에 있어야 합니다.
- * - BUILD_TARGET=pages: entry가 prerender에 없음 → loader 없는 파일 사용
- * - BUILD_TARGET=r2/all: entry가 prerender에 있음 → loader 있는 파일 사용
+ * - BUILD_MODE=ssr: D1에서 데이터 조회 → .ssr.tsx 파일 사용
+ * - BUILD_TARGET=r2/all/chunked: SSG 빌드 → .ssg.tsx 파일 사용
+ * - BUILD_TARGET=pages: loader 없음 → .tsx 파일 사용
  */
 
+const buildMode = process.env.BUILD_MODE;
 const buildTarget = process.env.BUILD_TARGET || 'pages';
-const entryFile =
-  buildTarget === 'r2' || buildTarget === 'all' || buildTarget === 'chunked'
-    ? 'routes/($locale).entry.$entryId.ssg.tsx'
-    : 'routes/($locale).entry.$entryId.tsx';
+
+// Entry 파일 선택
+let entryFile: string;
+if (buildMode === 'ssr') {
+  // SSR 모드: D1에서 실시간 조회
+  entryFile = 'routes/($locale).entry.$entryId.ssr.tsx';
+} else if (buildTarget === 'r2' || buildTarget === 'all' || buildTarget === 'chunked') {
+  // SSG 모드 (R2/전체): 빌드 시 데이터 포함
+  entryFile = 'routes/($locale).entry.$entryId.ssg.tsx';
+} else {
+  // SSG 모드 (Pages): clientLoader만 사용
+  entryFile = 'routes/($locale).entry.$entryId.tsx';
+}
 
 export default [
   // Index pages

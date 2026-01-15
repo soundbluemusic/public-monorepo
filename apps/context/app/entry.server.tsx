@@ -1,4 +1,5 @@
 import { prerender } from 'react-dom/static';
+import { renderToReadableStream } from 'react-dom/server';
 import type { EntryContext } from 'react-router';
 import { ServerRouter } from 'react-router';
 import { AsyncLocalStorage } from 'node:async_hooks';
@@ -11,19 +12,22 @@ const storage = new AsyncLocalStorage<{ locale: string }>();
 overwriteServerAsyncLocalStorage(storage);
 
 /**
- * SSG Entry Point
+ * Server Entry Point (SSG + SSR)
  *
- * This file is required for React Router v7 SSG builds.
- * It only runs at BUILD TIME to generate static HTML files.
- * There is NO runtime server - all pages are pre-rendered as static files.
+ * SSG Mode (BUILD_MODE !== 'ssr'):
+ * - Runs at BUILD TIME to generate static HTML files
+ * - Uses `prerender` from react-dom/static
+ * - No runtime server - all pages are pre-rendered
  *
- * Uses `prerender` from react-dom/static instead of renderToString because:
- * - prerender properly supports Suspense boundaries
- * - It waits for all data to load before resolving
- * - This is required for React Router v7's turbo-stream data transfer
+ * SSR Mode (BUILD_MODE === 'ssr'):
+ * - Runs at RUNTIME on Cloudflare Workers
+ * - Uses `renderToReadableStream` for streaming SSR
+ * - D1 database queries happen on each request
+ * - Edge caching via Cache-Control headers
  *
- * @see react-router.config.ts for SSG route configuration
+ * @see react-router.config.ts for mode configuration
  * @see https://react.dev/reference/react-dom/static/prerender
+ * @see https://react.dev/reference/react-dom/server/renderToReadableStream
  */
 export default async function handleRequest(
   request: Request,
@@ -31,12 +35,35 @@ export default async function handleRequest(
   responseHeaders: Headers,
   routerContext: EntryContext,
 ) {
-  // Manual locale extraction for SSG because Paraglide's runtime strategy 
-  // excludes 'url' in this project's configuration
+  // Manual locale extraction for Paraglide
   const url = new URL(request.url);
   const locale = url.pathname.startsWith('/ko/') || url.pathname === '/ko' ? 'ko' : 'en';
 
-  // Run the render within the Paraglide context
+  // SSR Mode: Use streaming rendering
+  if (process.env.BUILD_MODE === 'ssr') {
+    const stream = await storage.run({ locale }, () =>
+      renderToReadableStream(<ServerRouter context={routerContext} url={request.url} />, {
+        onError(error: unknown) {
+          console.error('SSR Error:', error);
+          responseStatusCode = 500;
+        },
+      })
+    );
+
+    responseHeaders.set('Content-Type', 'text/html');
+
+    // Edge caching for SSR responses (1 hour cache, 1 day stale-while-revalidate)
+    if (responseStatusCode === 200) {
+      responseHeaders.set('Cache-Control', 'public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400');
+    }
+
+    return new Response(stream, {
+      status: responseStatusCode,
+      headers: responseHeaders,
+    });
+  }
+
+  // SSG Mode: Use prerender for static generation
   const { prelude } = await storage.run({ locale }, () =>
     prerender(<ServerRouter context={routerContext} url={request.url} />)
   );
