@@ -140,6 +140,19 @@ rclone sync build/client/entry r2:bucket/path \
 | 대용량 | ❌ 느림 | ✅ 최적화 |
 | 동기화 | ❌ 수동 | ✅ `sync` (삭제 포함) |
 
+**rclone sync 자동 삭제 동작:**
+
+> `rclone sync`는 **완전 동기화**입니다. 소스에 없는 파일은 목적지에서 자동 삭제됩니다.
+> ([rclone 공식 문서](https://rclone.org/commands/rclone_sync/))
+
+| 동작 | 결과 |
+| ---- | ---- |
+| 소스에 새 파일 | R2에 업로드 |
+| 소스 파일 변경 | R2 업데이트 |
+| **소스에서 삭제** | **R2에서도 자동 삭제** |
+
+**즉, GitHub에 푸시하면 삭제된 파일도 R2에서 자동 제거됩니다. 수동 작업 불필요.**
+
 **R2 설정 (GitHub Secrets 사용):**
 
 ```ini

@@ -86,9 +86,47 @@ grep -r "TURBO_REMOTE" .env* 2>/dev/null || echo "No TURBO_REMOTE variables foun
 | 대용량 | ❌ 느림 | ✅ 최적화 |
 | 동기화 | ❌ 수동 | ✅ `sync` (삭제 포함) |
 
+### rclone sync 자동 삭제 동작 (중요!)
+
+> **`rclone sync`는 완전 동기화입니다. 소스에 없는 파일은 목적지에서 자동 삭제됩니다.**
+>
+> 출처: [rclone 공식 문서](https://rclone.org/commands/rclone_sync/)
+
+| 동작 | 결과 |
+| ---- | ---- |
+| 소스에 새 파일 | R2에 업로드 |
+| 소스 파일 변경 | R2 업데이트 |
+| **소스에서 삭제** | **R2에서도 자동 삭제** |
+
+**GitHub에 푸시 → GitHub Actions 실행 → `rclone sync` → 삭제된 파일도 R2에서 자동 제거**
+
+**수동 작업 불필요. R2 정리를 위한 추가 설정(KV, Cache API 등) 불필요.**
+
+## FAQ
+
+### Q: 파일 삭제하면 R2에서도 삭제되나요?
+
+**A: 예, 자동으로 삭제됩니다.**
+
+`rclone sync`의 기본 동작이 완전 동기화이므로, 소스(빌드 결과)에 없는 파일은 목적지(R2)에서 자동 삭제됩니다.
+
+### Q: KV나 Cache API 설정이 필요한가요?
+
+**A: 아니요, 불필요합니다.**
+
+- KV: 34,676개 파일 저장에 부적합
+- Cache API: 빌드/배포 시 R2 요청 감소 불가 (런타임 캐싱만)
+
+현재 구조(rclone sync + Cloudflare CDN)가 최적입니다.
+
 ## 관련 파일
 
 - `turbo.json` - Remote Cache 설정
 - `.github/workflows/deploy-context-r2.yml` - R2 배포 워크플로우 (rclone 사용)
 - `.env*` - 환경변수 파일들
 - `CLAUDE.md` - 규칙 문서 (섹션 7, 8)
+
+## 참고 링크
+
+- [rclone sync 공식 문서](https://rclone.org/commands/rclone_sync/)
+- [rclone forum - sync delete behavior](https://forum.rclone.org/t/does-rclone-sync-only-delete-files-at-destination-and-never-source/785)
