@@ -1,12 +1,18 @@
 /**
  * SSG 빌드 검증 스크립트
- * - HTML 파일이 빈 껍데기가 아닌지 확인
- * - SEO 메타태그 존재 확인
- * - 최소 페이지 수 확인
+ *
+ * 검사 항목:
+ * 1. HTML 파일이 빈 껍데기가 아닌지 확인
+ * 2. SEO 메타태그 존재 확인
+ * 3. 최소 페이지 수 확인
+ * 4. 동적 라우트에 loader 존재 확인 (SPA 방지)
+ *
+ * ⚠️ SPA 금지: 이 프로젝트는 100% SSG 전용입니다.
+ * clientLoader만 있고 loader가 없는 동적 라우트는 SEO 불가능합니다.
  */
 
-import { readdirSync, readFileSync, statSync } from 'node:fs';
-import { join } from 'node:path';
+import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
+import { basename, join } from 'node:path';
 
 interface AppConfig {
   name: string;
@@ -81,6 +87,52 @@ function verifyHtmlContent(filePath: string): {
   }
 }
 
+/**
+ * 동적 라우트 파일에서 loader 존재 여부 확인
+ * SPA 방지: clientLoader만 있고 loader가 없으면 SEO 불가능
+ */
+function verifyDynamicRouteLoaders(routesDir: string): {
+  passed: boolean;
+  warnings: string[];
+} {
+  const warnings: string[] = [];
+
+  if (!existsSync(routesDir)) {
+    return { passed: true, warnings: [] };
+  }
+
+  try {
+    const files = readdirSync(routesDir);
+    const dynamicRoutes = files.filter(
+      (f) => f.includes('$') && f.endsWith('.tsx') && !f.includes('.ssg.'),
+    );
+
+    for (const file of dynamicRoutes) {
+      const filePath = join(routesDir, file);
+      const content = readFileSync(filePath, 'utf-8');
+
+      const hasLoader = /export\s+(async\s+)?function\s+loader\s*\(/m.test(content);
+      const hasClientLoader = /export\s+(async\s+)?function\s+clientLoader\s*\(/m.test(content);
+
+      // clientLoader만 있고 loader가 없으면 경고
+      if (hasClientLoader && !hasLoader) {
+        // .ssg.tsx 파일이 별도로 있는지 확인
+        const ssgFile = file.replace('.tsx', '.ssg.tsx');
+        const ssgFilePath = join(routesDir, ssgFile);
+        if (!existsSync(ssgFilePath)) {
+          warnings.push(
+            `${basename(file)}: clientLoader만 있고 loader 없음 (SEO 데이터 누락 가능)`,
+          );
+        }
+      }
+    }
+  } catch {
+    // 디렉토리 읽기 실패
+  }
+
+  return { passed: warnings.length === 0, warnings };
+}
+
 function verify(): boolean {
   console.log('\n🔍 SSG 빌드 검증 시작...\n');
   let allPassed = true;
@@ -122,6 +174,16 @@ function verify(): boolean {
       console.log(`   ${routesPassed ? '✅' : '⚠️'} _routes.json: Functions 비활성화`);
     } catch {
       console.log('   ⚠️  _routes.json: 파일 없음 (Cloudflare Functions 오류 가능)');
+    }
+
+    // 5. 동적 라우트 loader 검사 (SPA 방지)
+    const routesDir = join('apps', app.name, 'app', 'routes');
+    const { warnings: loaderWarnings } = verifyDynamicRouteLoaders(routesDir);
+    if (loaderWarnings.length > 0) {
+      console.log('   ⚠️  동적 라우트 loader 검사:');
+      for (const warning of loaderWarnings) {
+        console.log(`      - ${warning}`);
+      }
     }
 
     console.log('');

@@ -6,11 +6,42 @@
 
 ## ⛔ 절대 금지 (DO NOT)
 
-### 1. SSG 모드 변경 금지
+### 1. 100% SSG 전용 - SPA/SSR/ISR 절대 금지
+> ⚠️ **SEO 필수**: 이 프로젝트의 모든 페이지는 검색 엔진이 완전한 HTML을 크롤링할 수 있어야 합니다.
+> SPA는 빈 HTML을 반환하여 SEO가 불가능합니다. 절대 SPA로 전환하지 마세요.
+
+**금지 사항:**
 - `ssr: true` 설정 금지
-- SPA, SSR, ISR 모드 전환 금지
+- SPA 모드 전환 금지 (클라이언트 사이드 렌더링만으로 콘텐츠 생성 금지)
+- SSR, ISR 모드 전환 금지
 - `prerender()` 제거/빈 배열 반환 금지
 - 빈 `<div id="root"></div>` HTML 금지
+- `clientLoader`만 있고 `loader` 없는 동적 라우트 금지 (SEO 데이터 누락)
+
+**필수 패턴:**
+
+```typescript
+// ✅ 동적 라우트는 반드시 loader + clientLoader 둘 다 필요
+export async function loader({ params }) {
+  // 빌드 시 실행 → HTML에 데이터 포함 (SEO용)
+  return { data: await fetchData(params.id) };
+}
+
+export async function clientLoader({ params, serverLoader }) {
+  // 클라이언트 네비게이션 시 실행
+  try { return await serverLoader(); }
+  catch { return { data: await fetchData(params.id) }; }
+}
+```
+
+**검증 방법:**
+
+```bash
+# 빌드된 HTML에 실제 콘텐츠가 있는지 확인
+head -50 build/client/entry/hello/index.html
+# ✅ 기대값: <title>실제제목 | Context</title>, 본문 콘텐츠 포함
+# ❌ 오류: <title>Not Found</title> 또는 빈 body
+```
 
 ### 2. 하드코딩 금지
 - 테스트 통과용 하드코딩 값 금지
@@ -177,10 +208,16 @@ export const meta = dynamicMetaFactory<typeof loader>({
 |------|------|
 | `/explore [질문]` | 코드베이스 구조 분석 (fork context) |
 | `/find [검색어]` | 파일/함수 위치 검색 (haiku) |
-| `/ssg-check` | SSG 규칙 위반 검사 (fork context) |
+| `/ssg-check` | **필수** - SSG 규칙 위반 검사. 라우트 수정 후 반드시 실행 |
 | `/layer-check` | import 레이어 규칙 검사 (fork context) |
 | `/link-check` | 프로덕션 URL 링크 무결성 검사 (lychee) |
 | `/quality-gate` | 병렬 품질 검사 통합 (SSG, Layer, Link, TypeCheck, Lint) |
+
+**⚠️ 라우트 수정 후 반드시 `/ssg-check` 실행:**
+
+- 동적 라우트(`$param`) 추가/수정 시
+- loader/clientLoader 변경 시
+- react-router.config.ts 수정 시
 
 ### 모델 사용 기준
 
