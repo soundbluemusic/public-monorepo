@@ -83,6 +83,33 @@ head -50 build/client/entry/hello/index.html
 "pnpm": { "overrides": { "zod": "^3.25.0" } }  // 충돌 격리
 ```
 
+### 7. Turborepo Remote Cache 금지 (R2 비용 최적화)
+> ⚠️ **비용 문제**: Remote Cache 활성화 시 빌드마다 R2 Class A 요청 수만 건 발생
+
+**금지 사항:**
+- `turbo.json`에서 `remoteCache.enabled: true` 설정 금지
+- 환경 변수 `TURBO_REMOTE_ONLY=true` 사용 금지
+- CI/CD에서 Remote Cache 활성화 금지 (1인 개발 환경)
+
+**현재 설정 (변경 금지):**
+```json
+// turbo.json
+{
+  "remoteCache": {
+    "enabled": false  // ⚠️ 절대 true로 변경 금지
+  }
+}
+```
+
+**왜?**
+- R2에 1.7GB 빌드 캐시 저장 중
+- 매 빌드마다 LIST 요청 (Class A) 발생 → 비용 증가
+- 1인 개발 환경에서는 로컬 캐시(`.turbo/`)로 충분
+
+**대안:**
+- 로컬 캐시: `.turbo/` 폴더 (716MB, 무료)
+- 팀 개발 전환 시에만 Remote Cache 검토
+
 ---
 
 ## ✅ 필수 준수 (MUST DO)
@@ -231,6 +258,7 @@ export const meta = dynamicMetaFactory<typeof loader>({
 ### 커스텀 스킬 활용
 | 스킬 | 용도 |
 |------|------|
+| `/cost-check` | R2 비용 최적화 규칙 검사. Turborepo Remote Cache 비활성화 상태 확인 |
 | `/explore [질문]` | 코드베이스 구조 분석 (fork context) |
 | `/find [검색어]` | 파일/함수 위치 검색 (haiku) |
 | `/ssg-check` | **필수** - SSG 규칙 위반 검사. 라우트 수정 후 반드시 실행 |
