@@ -88,7 +88,7 @@
  * @see {@link SearchEngine} 핵심 검색 엔진 클래스
  */
 import { SearchEngine } from '../core/engine';
-import type { WorkerMessage } from '../core/types';
+import type { SearchableItem, WorkerMessage } from '../core/types';
 
 /**
  * 검색 엔진 인스턴스
@@ -98,7 +98,7 @@ import type { WorkerMessage } from '../core/types';
  *
  * ⚠️ null 체크 필수: INIT 전에 SEARCH/SUGGEST 요청이 오면 ERROR 응답
  */
-let engine: SearchEngine<{ id: string; [key: string]: unknown }> | null = null;
+let engine: SearchEngine<SearchableItem> | null = null;
 
 /**
  * 메시지 핸들러

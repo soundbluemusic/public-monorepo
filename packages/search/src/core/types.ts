@@ -296,7 +296,7 @@ export type WorkerMessage =
         /** 검색 엔진 설정 */
         config: SearchConfig;
         /** 인덱싱할 데이터 배열 */
-        data: Array<{ id: string; [key: string]: unknown }>;
+        data: SearchableItem[];
       };
     }
   /**
