@@ -163,13 +163,10 @@ async function main() {
   console.log(`-- Entries: ${allEntries.length}`);
   console.log(`-- Conversations: ${conversations.length}`);
   console.log('');
-  console.log('BEGIN TRANSACTION;');
-  console.log('');
+  // Note: D1 does not support BEGIN TRANSACTION / COMMIT in wrangler d1 execute
   console.log(generateCategoriesSQL(categories));
   console.log(generateEntriesSQL(allEntries));
   console.log(generateConversationsSQL(conversations));
-  console.log('');
-  console.log('COMMIT;');
 }
 
 main().catch(console.error);
