@@ -67,7 +67,7 @@ export function Sidebar({ isOpen, isCollapsed, onClose, onToggleCollapse }: Side
           'md:translate-x-0 md:top-(--header-height) md:h-[calc(100vh-var(--header-height))]',
           isOpen ? 'translate-x-0' : '-translate-x-full',
           'w-72 md:w-(--sidebar-width)',
-          isCollapsed && 'md:w-(--sidebar-collapsed-width)',
+          isCollapsed && 'md:w-(--sidebar-collapsed-width) md:overflow-hidden',
         )}
         data-collapsed={isCollapsed ? 'true' : undefined}
         aria-label={t('menu')}
@@ -117,37 +117,9 @@ export function Sidebar({ isOpen, isCollapsed, onClose, onToggleCollapse }: Side
               </Link>
             </div>
           </div>
-        </nav>
-
-        {/* Footer */}
-        <div
-          className={cn(
-            'shrink-0 p-4 border-t border-(--border-primary)',
-            // Collapsed: 패딩 줄여서 CollapseButton 표시 공간 확보
-            isCollapsed && 'md:p-2',
-          )}
-        >
-          {/* Close Button (mobile only) - 하단 위치로 열기 버튼과 일관된 UX */}
-          <button
-            type="button"
-            onClick={onClose}
-            className="md:hidden w-full mb-3 min-h-11 flex items-center justify-center gap-2 rounded-lg transition-colors bg-(--bg-tertiary) hover:bg-(--bg-secondary) text-(--text-secondary)"
-            aria-label={t('closeMenu')}
-          >
-            <PanelLeftClose size={20} aria-hidden="true" />
-            <span className="text-sm font-medium">{t('closeMenu')}</span>
-          </button>
-
-          {/* Collapse Toggle Button (desktop only) */}
-          <CollapseButton
-            isCollapsed={isCollapsed}
-            expandLabel={t('expandSidebar')}
-            collapseLabel={t('collapseSidebar')}
-            onToggle={onToggleCollapse}
-          />
 
           {/* More section - hidden when collapsed */}
-          <div className={cn(isCollapsed && 'md:hidden')}>
+          <div className={cn('px-3', isCollapsed && 'md:hidden')}>
             <div className="px-3 py-2 text-xs font-medium uppercase tracking-wider text-(--text-tertiary)">
               {t('more')}
             </div>
@@ -168,6 +140,30 @@ export function Sidebar({ isOpen, isCollapsed, onClose, onToggleCollapse }: Side
               <FamilySites currentAppId="context" variant="sidebar" locale={locale} />
             </div>
           </div>
+        </nav>
+
+        {/* Footer - Close button (mobile) + Collapse button (desktop) */}
+        <div
+          className={cn('shrink-0 p-4 border-t border-(--border-primary)', isCollapsed && 'md:p-2')}
+        >
+          {/* Close Button (mobile only) */}
+          <button
+            type="button"
+            onClick={onClose}
+            className="md:hidden w-full min-h-11 flex items-center justify-center gap-2 rounded-lg transition-colors bg-(--bg-tertiary) hover:bg-(--bg-secondary) text-(--text-secondary)"
+            aria-label={t('closeMenu')}
+          >
+            <PanelLeftClose size={20} aria-hidden="true" />
+            <span className="text-sm font-medium">{t('closeMenu')}</span>
+          </button>
+
+          {/* Collapse Toggle Button (desktop only) */}
+          <CollapseButton
+            isCollapsed={isCollapsed}
+            expandLabel={t('expandSidebar')}
+            collapseLabel={t('collapseSidebar')}
+            onToggle={onToggleCollapse}
+          />
         </div>
       </aside>
     </>

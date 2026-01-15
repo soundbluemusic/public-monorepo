@@ -2,6 +2,13 @@
 @import "@soundblue/ui/styles/base.css";
 
 /* ============================================
+   Tailwind v4 Source Detection
+   Include external packages for class scanning
+   ============================================ */
+@source "../../../../packages/ui/src/**/*.tsx";
+@source "../../../../packages/features/src/**/*.tsx";
+
+/* ============================================
    Morning Mist / Deep Lagoon Theme (Permissive)
    ============================================ */
 :root {
