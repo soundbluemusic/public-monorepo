@@ -9,13 +9,13 @@
 [![pnpm](https://img.shields.io/badge/pnpm-10.11.0-orange.svg)](https://pnpm.io)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-19-61dafb.svg)](https://react.dev/)
-[![100% SSG](https://img.shields.io/badge/100%25-SSG-brightgreen)](https://en.wikipedia.org/wiki/Static_site_generator)
+[![SSR + D1](https://img.shields.io/badge/SSR-D1_Database-F38020?logo=cloudflare)](https://developers.cloudflare.com/d1/)
 
 ---
 
 ## 📖 What is this?
 
-> 학습자를 위한 3개의 100% SSG 앱. 서버 없이 CDN에서 바로 서빙됩니다.
+> 학습자를 위한 3개의 앱. Cloudflare Pages에서 호스팅됩니다.
 >
 > 📚 **[Documentation →](https://soundbluemusic.github.io/public-monorepo)**
 
@@ -24,17 +24,17 @@
 ## 🚀 Apps
 
 ### 📖 Context — Korean Dictionary
-> **학습자를 위한 한국어 사전** | 33,748 SSG pages
+> **학습자를 위한 한국어 사전** | SSR + Cloudflare D1
 
 | | |
 |---|---|
 | **Live** | [context.soundbluemusic.com](https://context.soundbluemusic.com) |
 | **Source** | [apps/context/](apps/context) · [README](apps/context/README.md) · [config](apps/context/react-router.config.ts) |
-| **Data** | [data/context/](data/context) |
-| **Features** | 16836 entries, 25 categories, 53 conversations |
+| **Database** | Cloudflare D1 (`context-db`) |
+| **Features** | 16836 entries, 52 categories, 53 conversations |
 
 ### 🔧 Permissive — Web Dev Resources
-> **무료 웹개발 자료 모음** | 8 SSG pages
+> **무료 웹개발 자료 모음** | SSR
 
 | | |
 |---|---|
@@ -77,9 +77,9 @@ pnpm dev:roots       # → http://localhost:3005
 ```
 public-monorepo/
 ├── apps/                → 3 applications
-│   ├── context/         → Korean dictionary (33,748 pages)
-│   ├── permissive/      → Web dev resources (8 pages)
-│   └── roots/           → Math documentation (920 pages)
+│   ├── context/         → Korean dictionary (SSR + D1)
+│   ├── permissive/      → Web dev resources (SSR)
+│   └── roots/           → Math documentation (920 SSG pages)
 ├── packages/            → 10 shared packages
 │   ├── core/            → [L0] validation, utils, types
 │   ├── config/          → [L0] Vite, Tailwind configs
@@ -103,16 +103,17 @@ public-monorepo/
 
 | Category | Technology | Source |
 |:---------|:-----------|:-------|
-| **Framework** | React 19 + React Router v7 | [apps/*/routes/](apps/context/app/routes) |
+| **Framework** | React 19 + React Router v7 (SSR) | [apps/*/routes/](apps/context/app/routes) |
 | **Language** | TypeScript 5.x | [tsconfig.json](tsconfig.json) |
 | **Styling** | Tailwind CSS v4 | [packages/config/](packages/config) |
+| **Database** | Cloudflare D1 | [apps/context/wrangler.toml](apps/context/wrangler.toml) |
 | **Search** | MiniSearch | [packages/search/](packages/search) |
 | **i18n** | Paraglide | [packages/i18n/](packages/i18n) |
 | **SEO** | Meta Factory | [packages/seo/](packages/seo) |
 | **Storage** | IndexedDB (Dexie) | [packages/platform/](packages/platform) |
 | **PWA** | Service Worker | [packages/pwa/](packages/pwa) |
 | **UI** | Components | [packages/ui/](packages/ui) |
-| **Hosting** | Cloudflare Pages | — |
+| **Hosting** | Cloudflare Pages (Functions) | — |
 | **Build** | Vite + Turborepo | [turbo.json](turbo.json) |
 
 ---

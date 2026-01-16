@@ -44,8 +44,14 @@ export default {
         (categoryId) => `/conversations/${categoryId}`,
       );
 
+      // sitemap.xml 라우트는 런타임에 D1에서 동적 생성하므로 prerender 제외
+      const prerenderRoutes = [...staticRoutes, ...categoryRoutes, ...conversationRoutes].filter(
+        (route) => !route.includes('sitemap') || !route.endsWith('.xml'),
+      );
+
       console.log('[SSR] Prerender static routes only, entry pages served dynamically from D1');
-      return [...staticRoutes, ...categoryRoutes, ...conversationRoutes];
+      console.log(`[SSR] Sitemap routes excluded from prerender (served dynamically from D1)`);
+      return prerenderRoutes;
     }
 
     // SSG 모드: 기존 로직 유지
