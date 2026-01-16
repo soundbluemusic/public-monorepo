@@ -8,8 +8,6 @@ declare global {
   interface CloudflareEnv {
     /** D1 데이터베이스 바인딩 */
     DB: D1Database;
-    /** R2 버킷 바인딩 (레거시, SSR에서는 사용 안 함) */
-    BUCKET?: R2Bucket;
   }
 }
 
