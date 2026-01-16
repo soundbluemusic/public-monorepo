@@ -74,6 +74,9 @@ export default [
   route('sitemap-categories.xml', 'routes/sitemap-categories[.xml].tsx'),
   route('sitemap-entry-:categoryId.xml', 'routes/sitemap-entry-$categoryId[.xml].tsx'),
 
+  // API 엔드포인트
+  route('api/offline-db', 'routes/api.offline-db.tsx'),
+
   // 404 catch-all
   route('*', 'routes/$.tsx'),
 ] satisfies RouteConfig;
