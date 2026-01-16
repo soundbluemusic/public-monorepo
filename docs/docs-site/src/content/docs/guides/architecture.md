@@ -15,7 +15,7 @@ Each application uses a different rendering mode optimized for its use case:
 |:----|:-----|:------------|:------------|
 | **Context** | **SSR + D1** | Cloudflare D1 | 16,836 entries served dynamically |
 | **Permissive** | SSR | In-memory | Web dev resources |
-| **Roots** | SSG | TypeScript | 920 pre-rendered math pages |
+| **Roots** | SSG | TypeScript | Pre-rendered math documentation |
 
 ### SSR + D1 Architecture (Context)
 

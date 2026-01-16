@@ -11,8 +11,8 @@ description: SoundBlue Public Monorepo 개요 - 학습자를 위한 세 개의 �
 
 각 앱은 콘텐츠 유형에 **최적화된 렌더링 모드**를 사용합니다. 모든 모드는 SEO를 위한 완전한 HTML을 제공합니다.
 
-:::caution[SPA 모드 금지]
-⛔ **SPA 모드 절대 금지** - SPA는 빈 HTML을 반환하여 SEO가 불가능합니다. 항상 SSR 또는 SSG를 사용하세요.
+:::danger[SPA 모드 차단]
+⛔ **SPA 모드 차단됨** - SPA는 빈 HTML(`<div id="root"></div>`)을 반환하여 SEO가 불가능합니다. 이 프로젝트는 **SSR 또는 SSG만 허용**합니다.
 :::
 
 ## 세 개의 앱
@@ -44,13 +44,13 @@ description: SoundBlue Public Monorepo 개요 - 학습자를 위한 세 개의 �
 
 ### 📐 Roots — 수학 문서
 
-**학습자를 위한 수학 문서** | 920 SSG 페이지
+**학습자를 위한 수학 문서** | SSG
 
 대수학, 기하학, 미적분 등 다양한 수학 분야를 체계적으로 정리한 학습 문서입니다.
 
 | 특징 | 설명 |
 |------|------|
-| 모드 | SSG (920 페이지) |
+| 모드 | SSG |
 | 언어 | 한국어, 영어 |
 | URL | [roots.soundbluemusic.com](https://roots.soundbluemusic.com) |
 

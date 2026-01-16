@@ -13,8 +13,8 @@ Each app uses an **optimized rendering mode** for its content type. All modes pr
 
 각 앱은 콘텐츠 유형에 최적화된 렌더링 모드를 사용합니다. 모든 모드는 SEO를 위한 완전한 HTML을 제공합니다.
 
-:::caution[SPA Mode Prohibited]
-⛔ **SPA 모드 절대 금지** - SPA returns empty HTML, breaking SEO. Always use SSR or SSG.
+:::danger[SPA Mode Blocked]
+⛔ **SPA mode is BLOCKED** - SPA returns empty HTML (`<div id="root"></div>`), making SEO impossible. This project ONLY allows SSR or SSG.
 :::
 
 ## The Three Apps
@@ -46,13 +46,13 @@ A curated collection of web development libraries with permissive licenses (MIT,
 
 ### 📐 Roots — Math Documentation
 
-**학습자를 위한 수학 문서** | 920 SSG pages
+**학습자를 위한 수학 문서** | SSG
 
 Systematically organized math documentation covering algebra, geometry, calculus, and various mathematical fields.
 
 | Feature | Description |
 |---------|-------------|
-| Mode | SSG (920 pages) |
+| Mode | SSG |
 | Languages | Korean, English |
 | URL | [roots.soundbluemusic.com](https://roots.soundbluemusic.com) |
 

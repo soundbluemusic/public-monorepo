@@ -42,7 +42,7 @@ pnpm dev:roots       # → http://localhost:3005
 
 - **Context**: SSR + Cloudflare D1
 - **Permissive**: SSR
-- **Roots**: SSG (920 페이지)
+- **Roots**: SSG
 :::
 
 ### 1. 각 앱의 렌더링 모드 준수

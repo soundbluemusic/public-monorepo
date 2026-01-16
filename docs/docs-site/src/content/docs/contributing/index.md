@@ -41,7 +41,7 @@ This project uses **SSR and SSG modes only**. SPA mode is prohibited because it 
 Each app has its own rendering mode:
 - **Context**: SSR + Cloudflare D1
 - **Permissive**: SSR
-- **Roots**: SSG (920 pages)
+- **Roots**: SSG
 :::
 
 ### 1. Respect Each App's Rendering Mode

@@ -11,8 +11,8 @@ description: SoundBlue Public Monorepoの概要 - 学習者のための3つの�
 
 各アプリはコンテンツタイプに**最適化されたレンダリングモード**を使用しています。すべてのモードはSEOのための完全なHTMLを提供します。
 
-:::caution[SPAモード禁止]
-⛔ **SPAモードは絶対禁止** - SPAは空のHTMLを返すためSEOが不可能です。常にSSRまたはSSGを使用してください。
+:::danger[SPAモードブロック]
+⛔ **SPAモードはブロックされています** - SPAは空のHTML(`<div id="root"></div>`)を返すためSEOが不可能です。このプロジェクトは**SSRまたはSSGのみ許可**します。
 :::
 
 ## 3つのアプリ
@@ -44,13 +44,13 @@ description: SoundBlue Public Monorepoの概要 - 学習者のための3つの�
 
 ### 📐 Roots — 数学ドキュメント
 
-**学習者のための数学ドキュメント** | 920 SSGページ
+**学習者のための数学ドキュメント** | SSG
 
 代数、幾何学、微積分など、様々な数学分野を体系的にまとめた学習ドキュメントです。
 
 | 特徴 | 説明 |
 |------|------|
-| モード | SSG（920ページ） |
+| モード | SSG |
 | 言語 | 韓国語、英語 |
 | URL | [roots.soundbluemusic.com](https://roots.soundbluemusic.com) |
 

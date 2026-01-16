@@ -15,7 +15,7 @@ description: 모노레포의 렌더링 모드와 패키지 레이어 시스템 �
 |----|------|------------|------|
 | **Context** | **SSR + D1** | Cloudflare D1 | 16,836개 항목을 동적 제공 |
 | **Permissive** | SSR | In-memory | 웹 개발 자료 |
-| **Roots** | SSG | TypeScript | 920개 수학 페이지 사전 렌더링 |
+| **Roots** | SSG | TypeScript | 수학 문서 사전 렌더링 |
 
 ### SSR + D1 아키텍처 (Context)
 

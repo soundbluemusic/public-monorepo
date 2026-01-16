@@ -15,7 +15,6 @@ const localePath = locale === 'en' ? '' : `/${locale}`;
 
 // Deep links for each stat
 const links = {
-  pages: `${basePath}${localePath}/guides/architecture/`,
   apps: `${basePath}${localePath}/apps/context/overview/`,
   packages: `${basePath}${localePath}/packages/`,
   noSpa: `${basePath}${localePath}/guides/introduction/`,
@@ -23,10 +22,6 @@ const links = {
 ---
 
 <div class="stats-grid">
-  <a href={links.pages} class="stat-item stat-link">
-    <div class="stat-value">{totals.pages.toLocaleString()}</div>
-    <div class="stat-label">{labels.pages[locale]}</div>
-  </a>
   <a href={links.apps} class="stat-item stat-link">
     <div class="stat-value">{totals.apps}</div>
     <div class="stat-label">{labels.apps[locale]}</div>

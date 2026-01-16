@@ -51,9 +51,9 @@
   <!-- Stats at bottom -->
   <g transform="translate(260, 480)">
     <text font-family="system-ui, sans-serif" font-size="18" fill="#606060">
-      <tspan x="0" y="0">34,676 SSG Pages</tspan>
-      <tspan x="200" y="0">10 Packages</tspan>
-      <tspan x="380" y="0">3 Languages</tspan>
+      <tspan x="0" y="0">3 Apps</tspan>
+      <tspan x="100" y="0">10 Packages</tspan>
+      <tspan x="280" y="0">No SPA (SSR/SSG)</tspan>
     </text>
   </g>
 

@@ -61,11 +61,6 @@
   },
   "i18n": {
     "stats": {
-      "pages": {
-        "en": "HTML Pages",
-        "ko": "HTML 페이지",
-        "ja": "HTMLページ"
-      },
       "apps": {
         "en": "Applications",
         "ko": "애플리케이션",
@@ -119,9 +114,9 @@
       },
       "roots": {
         "description": {
-          "en": "920 SSG pages covering fundamental mathematical concepts from algebra to calculus.",
-          "ko": "대수학부터 미적분까지 기초 수학 개념을 다루는 920개의 SSG 페이지.",
-          "ja": "代数から微積分まで基礎的な数学概念をカバーする920のSSGページ。"
+          "en": "Math documentation covering fundamental concepts from algebra to calculus.",
+          "ko": "대수학부터 미적분까지 기초 수학 개념을 다루는 문서.",
+          "ja": "代数から微積分まで基礎的な数学概念をカバーするドキュメント。"
         },
         "features": {
           "en": ["438 math concepts", "18 mathematical fields", "Prerequisite connections"],
