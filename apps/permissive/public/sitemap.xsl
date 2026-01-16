@@ -7,7 +7,7 @@
   <xsl:template match="/">
     <html lang="en">
       <head>
-        <title>XML Sitemap - Roots</title>
+        <title>XML Sitemap - Permissive</title>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <style>
           :root {
@@ -95,7 +95,7 @@
               <a href="/">Home</a> › Sitemap
             </div>
             <h1>XML Sitemap</h1>
-            <p class="subtitle">Roots - Math Documentation for Learners</p>
+            <p class="subtitle">Permissive - Free Web Dev Resources</p>
             <p class="meta-info">
               This sitemap contains
               <xsl:choose>
