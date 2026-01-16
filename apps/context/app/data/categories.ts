@@ -52,7 +52,7 @@ export const categories: Category[] = [
     order: 2,
   },
   {
-    id: 'daily-life',
+    id: 'daily-misc',
     name: {
       ko: '일상생활',
       en: 'Daily Life',
@@ -372,6 +372,384 @@ export const categories: Category[] = [
     icon: '◉',
     color: 'red',
     order: 25,
+  },
+  {
+    id: 'actions',
+    name: {
+      ko: '동작',
+      en: 'Actions',
+    },
+    description: {
+      ko: '일상적인 동작과 행위 관련 단어',
+      en: 'Common actions and activities vocabulary',
+    },
+    icon: '⤳',
+    color: 'orange',
+    order: 26,
+  },
+  {
+    id: 'adverbs',
+    name: {
+      ko: '부사',
+      en: 'Adverbs',
+    },
+    description: {
+      ko: '동사, 형용사를 수식하는 부사',
+      en: 'Adverbs modifying verbs and adjectives',
+    },
+    icon: '~',
+    color: 'indigo',
+    order: 27,
+  },
+  {
+    id: 'anatomy',
+    name: {
+      ko: '해부학',
+      en: 'Anatomy',
+    },
+    description: {
+      ko: '인체 해부학 관련 단어',
+      en: 'Human anatomy vocabulary',
+    },
+    icon: '♡',
+    color: 'pink',
+    order: 28,
+  },
+  {
+    id: 'body-misc',
+    name: {
+      ko: '신체 기타',
+      en: 'Body Misc',
+    },
+    description: {
+      ko: '신체와 관련된 기타 단어',
+      en: 'Miscellaneous body-related vocabulary',
+    },
+    icon: '⊕',
+    color: 'teal',
+    order: 29,
+  },
+  {
+    id: 'body-parts',
+    name: {
+      ko: '신체 부위',
+      en: 'Body Parts',
+    },
+    description: {
+      ko: '신체 각 부위의 이름',
+      en: 'Names of body parts',
+    },
+    icon: '⊙',
+    color: 'pink',
+    order: 30,
+  },
+  {
+    id: 'compound-words',
+    name: {
+      ko: '합성어',
+      en: 'Compound Words',
+    },
+    description: {
+      ko: '두 개 이상의 단어가 결합된 합성어',
+      en: 'Words formed by combining two or more words',
+    },
+    icon: '+',
+    color: 'purple',
+    order: 31,
+  },
+  {
+    id: 'cultural-expressions',
+    name: {
+      ko: '문화 표현',
+      en: 'Cultural Expressions',
+    },
+    description: {
+      ko: '한국 문화 특유의 표현',
+      en: 'Expressions unique to Korean culture',
+    },
+    icon: '◈',
+    color: 'purple',
+    order: 32,
+  },
+  {
+    id: 'education',
+    name: {
+      ko: '교육',
+      en: 'Education',
+    },
+    description: {
+      ko: '학교와 교육 관련 단어',
+      en: 'School and education vocabulary',
+    },
+    icon: '📖',
+    color: 'blue',
+    order: 33,
+  },
+  {
+    id: 'events',
+    name: {
+      ko: '행사',
+      en: 'Events',
+    },
+    description: {
+      ko: '각종 행사와 이벤트 관련 단어',
+      en: 'Various events and occasions vocabulary',
+    },
+    icon: '★',
+    color: 'yellow',
+    order: 34,
+  },
+  {
+    id: 'gestures',
+    name: {
+      ko: '제스처',
+      en: 'Gestures',
+    },
+    description: {
+      ko: '몸짓과 제스처 관련 단어',
+      en: 'Body language and gesture vocabulary',
+    },
+    icon: '✋',
+    color: 'orange',
+    order: 35,
+  },
+  {
+    id: 'health',
+    name: {
+      ko: '건강',
+      en: 'Health',
+    },
+    description: {
+      ko: '건강과 웰빙 관련 단어',
+      en: 'Health and wellness vocabulary',
+    },
+    icon: '✚',
+    color: 'green',
+    order: 36,
+  },
+  {
+    id: 'home',
+    name: {
+      ko: '가정',
+      en: 'Home',
+    },
+    description: {
+      ko: '집과 가정생활 관련 단어',
+      en: 'Home and household vocabulary',
+    },
+    icon: '⌂',
+    color: 'teal',
+    order: 37,
+  },
+  {
+    id: 'idioms',
+    name: {
+      ko: '관용어',
+      en: 'Idioms',
+    },
+    description: {
+      ko: '한국어 관용 표현과 숙어',
+      en: 'Korean idiomatic expressions',
+    },
+    icon: '≋',
+    color: 'purple',
+    order: 38,
+  },
+  {
+    id: 'interjections',
+    name: {
+      ko: '감탄사',
+      en: 'Interjections',
+    },
+    description: {
+      ko: '감정을 표현하는 감탄사',
+      en: 'Exclamations expressing emotions',
+    },
+    icon: '!',
+    color: 'yellow',
+    order: 39,
+  },
+  {
+    id: 'legal',
+    name: {
+      ko: '법률',
+      en: 'Legal',
+    },
+    description: {
+      ko: '법률과 법적 용어',
+      en: 'Legal terms and vocabulary',
+    },
+    icon: '§',
+    color: 'indigo',
+    order: 40,
+  },
+  {
+    id: 'medical',
+    name: {
+      ko: '의료',
+      en: 'Medical',
+    },
+    description: {
+      ko: '의료와 병원 관련 단어',
+      en: 'Medical and hospital vocabulary',
+    },
+    icon: '⚕',
+    color: 'red',
+    order: 41,
+  },
+  {
+    id: 'nouns-common',
+    name: {
+      ko: '일반 명사',
+      en: 'Common Nouns',
+    },
+    description: {
+      ko: '일상에서 자주 쓰이는 일반 명사',
+      en: 'Common nouns used in daily life',
+    },
+    icon: '▪',
+    color: 'blue',
+    order: 42,
+  },
+  {
+    id: 'objects',
+    name: {
+      ko: '사물',
+      en: 'Objects',
+    },
+    description: {
+      ko: '일상 사물과 물건 관련 단어',
+      en: 'Everyday objects and items vocabulary',
+    },
+    icon: '▣',
+    color: 'teal',
+    order: 43,
+  },
+  {
+    id: 'onomatopoeia',
+    name: {
+      ko: '의성어/의태어',
+      en: 'Onomatopoeia',
+    },
+    description: {
+      ko: '소리와 모양을 흉내 내는 말',
+      en: 'Words imitating sounds and appearances',
+    },
+    icon: '♬',
+    color: 'yellow',
+    order: 44,
+  },
+  {
+    id: 'phrasal-verbs',
+    name: {
+      ko: '구동사',
+      en: 'Phrasal Verbs',
+    },
+    description: {
+      ko: '동사와 조사가 결합된 표현',
+      en: 'Verb phrases with particles',
+    },
+    icon: '⇢',
+    color: 'orange',
+    order: 45,
+  },
+  {
+    id: 'places',
+    name: {
+      ko: '장소',
+      en: 'Places',
+    },
+    description: {
+      ko: '다양한 장소와 위치 관련 단어',
+      en: 'Various places and locations vocabulary',
+    },
+    icon: '⌖',
+    color: 'green',
+    order: 46,
+  },
+  {
+    id: 'pronouns',
+    name: {
+      ko: '대명사',
+      en: 'Pronouns',
+    },
+    description: {
+      ko: '명사를 대신하는 대명사',
+      en: 'Words replacing nouns',
+    },
+    icon: '⊛',
+    color: 'indigo',
+    order: 47,
+  },
+  {
+    id: 'responses',
+    name: {
+      ko: '대답/응답',
+      en: 'Responses',
+    },
+    description: {
+      ko: '대화에서 사용하는 응답 표현',
+      en: 'Response expressions in conversations',
+    },
+    icon: '↩',
+    color: 'teal',
+    order: 48,
+  },
+  {
+    id: 'routines',
+    name: {
+      ko: '일과',
+      en: 'Routines',
+    },
+    description: {
+      ko: '일상 루틴과 습관 관련 단어',
+      en: 'Daily routines and habits vocabulary',
+    },
+    icon: '↻',
+    color: 'blue',
+    order: 49,
+  },
+  {
+    id: 'slang',
+    name: {
+      ko: '속어/은어',
+      en: 'Slang',
+    },
+    description: {
+      ko: '비격식 표현과 속어',
+      en: 'Informal expressions and slang',
+    },
+    icon: '※',
+    color: 'pink',
+    order: 50,
+  },
+  {
+    id: 'verb-stems',
+    name: {
+      ko: '동사 어간',
+      en: 'Verb Stems',
+    },
+    description: {
+      ko: '동사의 기본 어간 형태',
+      en: 'Base stem forms of verbs',
+    },
+    icon: '⊢',
+    color: 'orange',
+    order: 51,
+  },
+  {
+    id: 'verbs-common',
+    name: {
+      ko: '일반 동사',
+      en: 'Common Verbs',
+    },
+    description: {
+      ko: '자주 사용되는 일반 동사',
+      en: 'Frequently used common verbs',
+    },
+    icon: '⊨',
+    color: 'green',
+    order: 52,
   },
 ];
 
