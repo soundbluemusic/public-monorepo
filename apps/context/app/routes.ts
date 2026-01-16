@@ -86,6 +86,16 @@ export default [
     id: 'ko-conversations-category',
   }),
 
+  // SSR 모드 전용: 동적 사이트맵 (D1에서 실시간 생성)
+  ...(buildMode === 'ssr'
+    ? [
+        route('sitemap.xml', 'routes/sitemap[.xml].tsx'),
+        route('sitemap-pages.xml', 'routes/sitemap-pages[.xml].tsx'),
+        route('sitemap-categories.xml', 'routes/sitemap-categories[.xml].tsx'),
+        route('sitemap-entry-:categoryId.xml', 'routes/sitemap-entry-$categoryId[.xml].tsx'),
+      ]
+    : []),
+
   // 404 catch-all
   route('*', 'routes/$.tsx'),
 ] satisfies RouteConfig;
