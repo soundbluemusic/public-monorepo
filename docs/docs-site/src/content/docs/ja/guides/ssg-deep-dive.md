@@ -3,7 +3,7 @@ title: SSG 詳細解説
 description: React Router v7を使用した静的サイト生成アーキテクチャの理解
 ---
 
-**Roots**アプリは静的サイト生成（SSG）を使用しています — 920ページすべてがビルド時に事前レンダリングされ、CDNから直接配信されます。
+**Roots**アプリは静的サイト生成（SSG）を使用しています — すべてのページがビルド時に事前レンダリングされ、CDNから直接配信されます。
 
 :::caution[アプリ別レンダリングモード]
 - **Context**: SSR + D1（動的レンダリング）
@@ -39,7 +39,7 @@ React Router v7の`prerender()` + `loader()`パターンでビルド時に完全
 |:----|:-------|:------------|:-----|
 | **Context** | SSR + D1 | Cloudflare D1 | 16,836エントリを動的に提供 |
 | **Permissive** | SSR | In-memory | 動的レンダリング |
-| **Roots** | SSG | TypeScript | 920ページを事前レンダリング |
+| **Roots** | SSG | TypeScript | 数学文書を事前レンダリング |
 
 ## コードパターン (Roots)
 

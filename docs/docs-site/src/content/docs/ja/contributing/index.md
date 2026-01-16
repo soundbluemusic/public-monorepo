@@ -42,7 +42,7 @@ pnpm dev:roots       # → http://localhost:3005
 
 - **Context**: SSR + Cloudflare D1
 - **Permissive**: SSR
-- **Roots**: SSG（920ページ）
+- **Roots**: SSG
 :::
 
 ### 1. 各アプリのレンダリングモードを遵守

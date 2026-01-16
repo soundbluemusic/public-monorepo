@@ -15,7 +15,7 @@ description: モノレポのレンダリングモードとパッケージレイ�
 |--------|--------|-------------|------|
 | **Context** | **SSR + D1** | Cloudflare D1 | 16,836エントリを動的に提供 |
 | **Permissive** | SSR | In-memory | Web開発リソース |
-| **Roots** | SSG | TypeScript | 920ページを事前レンダリング |
+| **Roots** | SSG | TypeScript | 数学文書を事前レンダリング |
 
 ### SSR + D1アーキテクチャ (Context)
 
