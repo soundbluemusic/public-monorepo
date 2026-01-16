@@ -71,7 +71,13 @@ export async function getEntryByIdFromD1(
   id: string,
   locale: Language,
 ): Promise<LocaleEntry | null> {
-  const row = await db.prepare('SELECT * FROM entries WHERE id = ?').bind(id).first<D1EntryRow>();
+  const row = await db
+    .prepare(
+      `SELECT id, korean, romanization, part_of_speech, category_id, difficulty, frequency, tags, translations
+       FROM entries WHERE id = ?`,
+    )
+    .bind(id)
+    .first<D1EntryRow>();
 
   if (!row) return null;
 
@@ -87,7 +93,10 @@ export async function getEntriesByCategoryFromD1(
   locale: Language,
 ): Promise<LocaleEntry[]> {
   const { results } = await db
-    .prepare('SELECT * FROM entries WHERE category_id = ?')
+    .prepare(
+      `SELECT id, korean, romanization, part_of_speech, category_id, difficulty, frequency, tags, translations
+       FROM entries WHERE category_id = ?`,
+    )
     .bind(categoryId)
     .all<D1EntryRow>();
 
@@ -100,16 +109,21 @@ export async function getEntriesByCategoryFromD1(
  * D1에서 모든 카테고리 조회
  */
 export async function getCategoriesFromD1(db: D1Database) {
-  const { results } = await db.prepare('SELECT * FROM categories ORDER BY sort_order').all<{
-    id: string;
-    name_ko: string;
-    name_en: string;
-    description_ko: string | null;
-    description_en: string | null;
-    icon: string | null;
-    color: string | null;
-    sort_order: number;
-  }>();
+  const { results } = await db
+    .prepare(
+      `SELECT id, name_ko, name_en, description_ko, description_en, icon, color, sort_order
+       FROM categories ORDER BY sort_order`,
+    )
+    .all<{
+      id: string;
+      name_ko: string;
+      name_en: string;
+      description_ko: string | null;
+      description_en: string | null;
+      icon: string | null;
+      color: string | null;
+      sort_order: number;
+    }>();
 
   return results.map((row) => ({
     id: row.id,
@@ -132,7 +146,10 @@ export async function getCategoriesFromD1(db: D1Database) {
  */
 export async function getConversationsByCategoryFromD1(db: D1Database, categoryId: string) {
   const { results } = await db
-    .prepare('SELECT * FROM conversations WHERE category_id = ?')
+    .prepare(
+      `SELECT id, category_id, title_ko, title_en, dialogue
+       FROM conversations WHERE category_id = ?`,
+    )
     .bind(categoryId)
     .all<{
       id: string;

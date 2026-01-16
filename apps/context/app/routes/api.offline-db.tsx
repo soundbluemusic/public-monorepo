@@ -29,11 +29,21 @@ export async function loader({ context }: LoaderArgs) {
   }
 
   try {
-    // 모든 테이블 데이터 조회
+    // 모든 테이블 데이터 조회 (명시적 컬럼 선택)
     const [entries, categories, conversations] = await Promise.all([
-      db.prepare('SELECT * FROM entries').all(),
-      db.prepare('SELECT * FROM categories').all(),
-      db.prepare('SELECT * FROM conversations').all(),
+      db
+        .prepare(
+          `SELECT id, korean, romanization, part_of_speech, category_id, difficulty, frequency, tags, translations
+           FROM entries`,
+        )
+        .all(),
+      db
+        .prepare(
+          `SELECT id, name_ko, name_en, description_ko, description_en, icon, color, sort_order
+           FROM categories`,
+        )
+        .all(),
+      db.prepare(`SELECT id, category_id, title_ko, title_en, dialogue FROM conversations`).all(),
     ]);
 
     const data = {

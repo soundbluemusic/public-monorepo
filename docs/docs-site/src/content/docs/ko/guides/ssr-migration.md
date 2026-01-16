@@ -153,7 +153,63 @@ SSR + D1의 새로운 이점:
    database_id = "your-db-id"
    ```
 
-5. **Functions용 _routes.json 업데이트**
+5. **D1 스키마 설계**
+
+   ```sql
+   -- categories 테이블
+   CREATE TABLE categories (
+     id TEXT PRIMARY KEY,
+     name_ko TEXT NOT NULL,
+     name_en TEXT NOT NULL,
+     description_ko TEXT,
+     description_en TEXT,
+     icon TEXT,
+     color TEXT,
+     sort_order INTEGER DEFAULT 0
+   );
+
+   -- entries 테이블
+   CREATE TABLE entries (
+     id TEXT PRIMARY KEY,
+     korean TEXT NOT NULL,
+     romanization TEXT,
+     part_of_speech TEXT,
+     category_id TEXT NOT NULL,  -- FK 없음 (아래 참고)
+     difficulty TEXT,
+     frequency TEXT,
+     tags TEXT,           -- JSON array: ["casual", "informal"]
+     translations TEXT,   -- JSON object: { ko: {...}, en: {...} }
+     created_at INTEGER DEFAULT (unixepoch())
+   );
+
+   -- conversations 테이블
+   CREATE TABLE conversations (
+     id TEXT PRIMARY KEY,
+     category_id TEXT,
+     title_ko TEXT NOT NULL,
+     title_en TEXT NOT NULL,
+     dialogue TEXT NOT NULL,  -- JSON array
+     created_at INTEGER DEFAULT (unixepoch())
+   );
+
+   -- 인덱스 생성 (성능 최적화)
+   CREATE INDEX idx_entries_category ON entries(category_id);
+   CREATE INDEX idx_entries_korean ON entries(korean);
+   ```
+
+   :::caution[Foreign Key 미사용]
+   `entries.category_id`에 **Foreign Key 제약조건이 없습니다**.
+
+   카테고리 ID 변경의 유연성을 위해 FK를 사용하지 않습니다. 예를 들어 `daily-life` → `daily-misc`로 카테고리 ID를 변경할 때, FK가 있으면 entries 테이블을 먼저 수정해야 하지만, FK가 없으면 categories만 수정하면 됩니다.
+
+   | FK 있음                    | FK 없음 (현재)           |
+   |----------------------------|--------------------------|
+   | ❌ 카테고리 삭제 시 에러   | ✅ 유연한 마이그레이션   |
+   | ❌ entries 먼저 수정 필요  | ✅ 바로 삭제 가능        |
+
+   :::
+
+6. **Functions용 _routes.json 업데이트**
 
    ```json
    {

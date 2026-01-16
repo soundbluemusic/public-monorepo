@@ -59,30 +59,68 @@ Cloudflare Pages:
 
 ### D1 Database Schema
 
-```sql
--- entries 테이블
-CREATE TABLE entries (
-  id TEXT PRIMARY KEY,
-  korean TEXT NOT NULL,
-  english TEXT,
-  romanization TEXT,
-  category_id TEXT NOT NULL,
-  difficulty TEXT,
-  part_of_speech TEXT,
-  audio_url TEXT,
-  examples TEXT,  -- JSON array
-  tags TEXT       -- JSON array
-);
+> 📁 **스키마 정의**: [migrations/0001_initial.sql](migrations/0001_initial.sql)
 
+```sql
 -- categories 테이블
 CREATE TABLE categories (
   id TEXT PRIMARY KEY,
   name_ko TEXT NOT NULL,
   name_en TEXT NOT NULL,
+  description_ko TEXT,
+  description_en TEXT,
   icon TEXT,
-  entry_count INTEGER DEFAULT 0
+  color TEXT,
+  sort_order INTEGER DEFAULT 0
+);
+
+-- entries 테이블
+CREATE TABLE entries (
+  id TEXT PRIMARY KEY,
+  korean TEXT NOT NULL,
+  romanization TEXT,
+  part_of_speech TEXT,
+  category_id TEXT NOT NULL,  -- FK 없음 (아래 참고)
+  difficulty TEXT,
+  frequency TEXT,
+  tags TEXT,           -- JSON array: ["casual", "informal"]
+  translations TEXT,   -- JSON object: { ko: {...}, en: {...} }
+  created_at INTEGER DEFAULT (unixepoch())
+);
+
+-- conversations 테이블
+CREATE TABLE conversations (
+  id TEXT PRIMARY KEY,
+  category_id TEXT,
+  title_ko TEXT NOT NULL,
+  title_en TEXT NOT NULL,
+  dialogue TEXT NOT NULL,  -- JSON array of dialogue objects
+  created_at INTEGER DEFAULT (unixepoch())
 );
 ```
+
+#### Foreign Key 제약조건 미사용 이유
+
+> ⚠️ `entries.category_id`에 **Foreign Key 제약조건이 없습니다**.
+
+**배경**: 카테고리 ID 변경의 유연성을 위해 FK를 사용하지 않습니다.
+
+```sql
+-- 예: 카테고리 이름 변경 시 (daily-life → daily-misc)
+-- FK가 있으면 entries 테이블을 먼저 수정해야 하지만,
+-- FK가 없으면 categories만 수정하면 됨
+
+-- migrations/0003_sync_categories.sql
+DELETE FROM categories WHERE id = 'daily-life';
+INSERT INTO categories (...) VALUES ('daily-misc', '일상생활', ...);
+```
+
+| FK 있음                    | FK 없음 (현재)           |
+|----------------------------|--------------------------|
+| ❌ 카테고리 삭제 시 에러   | ✅ 유연한 마이그레이션   |
+| ❌ entries 먼저 수정 필요  | ✅ 바로 삭제 가능        |
+
+**결과**: 카테고리 구조 변경 시 entries 테이블 수정 없이 유연하게 마이그레이션할 수 있습니다.
 
 ### Data Flow
 
