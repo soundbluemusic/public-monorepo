@@ -11,14 +11,14 @@ import routes from './app/routes.js';
 type ConceptNamesJson = Record<string, { ko: string; en: string }>;
 
 /**
- * React Router SSG 설정
+ * React Router SSR 설정
  *
  * ## Single Source of Truth
  * - 정적 라우트: routes.ts에서 자동 추출 (extractStaticRoutes)
  * - 동적 라우트: 데이터 기반 생성 (generateI18nRoutes)
  */
 export default {
-  ssr: false, // 100% SSG - no SSR, only static files
+  ssr: true,
   async prerender() {
     // 정적 라우트: routes.ts에서 자동 추출
     const staticRoutes = extractStaticRoutes(routes);
