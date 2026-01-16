@@ -36,6 +36,13 @@ export default defineConfig({
       compress: { drop_console: true, drop_debugger: true },
     },
   },
+  // Cloudflare Workers 환경에서 process.env를 대체
+  ssr: {
+    target: 'webworker',
+  },
+  define: {
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'),
+  },
   plugins: [
     tailwindcss(),
     paraglide({
