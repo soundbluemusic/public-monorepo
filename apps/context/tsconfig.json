@@ -4,7 +4,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./app/*"],
-      "~/*": ["./app/*"]
+      "~/*": ["./app/*"],
+      "@soundblue/platform/sqlite": ["../../packages/platform/src/sqlite/index.browser.ts"],
+      "@soundblue/platform/sqlite/types": ["../../packages/platform/src/sqlite/types.ts"]
     },
     "types": ["vite/client", "@cloudflare/workers-types"]
   },

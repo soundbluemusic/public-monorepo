@@ -1,20 +1,34 @@
+import { toast } from '@soundblue/features/toast';
 import { metaFactory } from '@soundblue/i18n';
+import type { DownloadProgress } from '@soundblue/platform/sqlite/types';
 import { cn } from '@soundblue/ui/utils';
 import {
   Archive,
   BookOpen,
   Check,
+  CheckCircle,
   Code,
   Copy,
   Download,
   ExternalLink,
   FileJson,
   MessageSquare,
+  RefreshCw,
+  Smartphone,
+  Trash2,
 } from 'lucide-react';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import { Layout } from '@/components/layout';
+import { OfflineDownloadDialog } from '@/components/OfflineDownloadDialog';
 import { useI18n } from '@/i18n';
+import {
+  checkOfflineDBUpdate,
+  clearOfflineDB,
+  downloadOfflineDB,
+  getOfflineDBMeta,
+  getOfflineDBStatus,
+} from '@/services/offline-db';
 
 /**
  * 통계 데이터 (GitHub Raw URL에서 직접 다운로드하므로 데이터 임베드 불필요)
@@ -110,8 +124,97 @@ interface DownloadItem {
 
 export default function DownloadPage() {
   const { stats } = useLoaderData<LoaderData>();
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [copiedUrl, setCopiedUrl] = useState<string | null>(null);
+
+  // 오프라인 모드 상태
+  const [showOfflineDialog, setShowOfflineDialog] = useState(false);
+  const [isDownloading, setIsDownloading] = useState(false);
+  const [downloadProgress, setDownloadProgress] = useState<DownloadProgress | null>(null);
+  const [downloadError, setDownloadError] = useState<string | null>(null);
+  const [offlineStatus, setOfflineStatus] = useState<'not-downloaded' | 'ready' | 'checking'>(
+    'checking',
+  );
+  const [offlineDate, setOfflineDate] = useState<string | null>(null);
+  const [hasUpdate, setHasUpdate] = useState(false);
+
+  // 오프라인 DB 상태 확인
+  useEffect(() => {
+    async function checkOfflineStatus() {
+      try {
+        const status = getOfflineDBStatus();
+        if (status === 'ready') {
+          setOfflineStatus('ready');
+          const meta = await getOfflineDBMeta();
+          if (meta) {
+            const date = new Date(meta.downloadedAt);
+            setOfflineDate(date.toLocaleDateString(locale === 'ko' ? 'ko-KR' : 'en-US'));
+          }
+          // 업데이트 확인
+          const updateCheck = await checkOfflineDBUpdate();
+          setHasUpdate(updateCheck.hasUpdate);
+        } else {
+          setOfflineStatus('not-downloaded');
+        }
+      } catch {
+        setOfflineStatus('not-downloaded');
+      }
+    }
+    checkOfflineStatus();
+  }, [locale]);
+
+  // 오프라인 다운로드 핸들러
+  const handleOfflineDownload = useCallback(async () => {
+    setIsDownloading(true);
+    setDownloadError(null);
+
+    try {
+      await downloadOfflineDB((progress) => {
+        setDownloadProgress(progress);
+      });
+
+      setOfflineStatus('ready');
+      setShowOfflineDialog(false);
+      setHasUpdate(false);
+
+      const meta = await getOfflineDBMeta();
+      if (meta) {
+        const date = new Date(meta.downloadedAt);
+        setOfflineDate(date.toLocaleDateString(locale === 'ko' ? 'ko-KR' : 'en-US'));
+      }
+
+      toast({
+        message: t('offlineDownloadComplete'),
+        type: 'success',
+      });
+    } catch (error) {
+      setDownloadError(error instanceof Error ? error.message : t('offlineDownloadError'));
+    } finally {
+      setIsDownloading(false);
+      setDownloadProgress(null);
+    }
+  }, [locale, t]);
+
+  // 오프라인 데이터 삭제 핸들러
+  const handleDeleteOffline = useCallback(async () => {
+    if (!confirm(t('offlineDeleteConfirm'))) return;
+
+    try {
+      await clearOfflineDB();
+      setOfflineStatus('not-downloaded');
+      setOfflineDate(null);
+      setHasUpdate(false);
+      toast({
+        message: locale === 'ko' ? '오프라인 데이터가 삭제되었습니다' : 'Offline data deleted',
+        type: 'success',
+      });
+    } catch (error) {
+      toast({
+        message: locale === 'ko' ? '삭제에 실패했습니다' : 'Delete failed',
+        type: 'error',
+      });
+    }
+  }, [locale, t]);
 
   /** 다운로드 항목 목록 */
   const downloadItems: DownloadItem[] = [
@@ -197,6 +300,67 @@ export default function DownloadPage() {
               <p className="text-xs text-(--text-tertiary) mt-1">{t('conversations')}</p>
             </div>
           </div>
+        </div>
+
+        {/* Offline Mode Section */}
+        <div className="mb-8 p-4 bg-(--bg-secondary) rounded-xl border border-(--border-primary)">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="p-2 bg-(--accent-primary)/10 rounded-lg">
+              <Smartphone size={24} className="text-(--accent-primary)" />
+            </div>
+            <div className="flex-1">
+              <p className="text-lg font-semibold text-(--text-primary)">{t('offlineMode')}</p>
+              <p className="text-sm text-(--text-tertiary)">{t('offlineModeDesc')}</p>
+            </div>
+          </div>
+
+          {offlineStatus === 'checking' ? (
+            <div className="flex items-center gap-2 text-(--text-tertiary)">
+              <RefreshCw size={16} className="animate-spin" />
+              <span className="text-sm">{locale === 'ko' ? '확인 중...' : 'Checking...'}</span>
+            </div>
+          ) : offlineStatus === 'ready' ? (
+            <div className="space-y-3">
+              <div className="flex items-center gap-2 text-green-600 dark:text-green-400">
+                <CheckCircle size={18} />
+                <span className="text-sm font-medium">{t('offlineReady')}</span>
+              </div>
+              {offlineDate && (
+                <p className="text-xs text-(--text-tertiary)">
+                  {t('offlineDownloadedAt')}: {offlineDate}
+                </p>
+              )}
+              <div className="flex flex-wrap gap-2">
+                {hasUpdate && (
+                  <button
+                    type="button"
+                    onClick={() => setShowOfflineDialog(true)}
+                    className="inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg bg-(--accent-primary) text-white hover:bg-(--accent-primary)/90 transition-colors"
+                  >
+                    <RefreshCw size={14} />
+                    {t('offlineUpdate')}
+                  </button>
+                )}
+                <button
+                  type="button"
+                  onClick={handleDeleteOffline}
+                  className="inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg bg-red-500/10 text-red-600 dark:text-red-400 hover:bg-red-500/20 transition-colors"
+                >
+                  <Trash2 size={14} />
+                  {t('offlineDelete')}
+                </button>
+              </div>
+            </div>
+          ) : (
+            <button
+              type="button"
+              onClick={() => setShowOfflineDialog(true)}
+              className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium rounded-lg bg-(--accent-primary) text-white hover:bg-(--accent-primary)/90 transition-colors"
+            >
+              <Download size={18} />
+              {t('offlineDownload')}
+            </button>
+          )}
         </div>
 
         {/* ZIP Download - Primary CTA */}
@@ -352,6 +516,17 @@ const greetings = await fetch(
           <p>{t('downloadLicenseNote')}</p>
         </div>
       </div>
+
+      {/* Offline Download Dialog */}
+      <OfflineDownloadDialog
+        isOpen={showOfflineDialog}
+        onClose={() => setShowOfflineDialog(false)}
+        onConfirm={handleOfflineDownload}
+        isDownloading={isDownloading}
+        progress={downloadProgress}
+        error={downloadError}
+        entriesCount={stats.totalEntries}
+      />
     </Layout>
   );
 }

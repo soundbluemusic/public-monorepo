@@ -21,7 +21,20 @@
       "browser": "./src/storage/index.browser.ts",
       "default": "./src/storage/index.noop.ts"
     },
+    "./sqlite": {
+      "browser": "./src/sqlite/index.browser.ts",
+      "default": "./src/sqlite/index.noop.ts"
+    },
+    "./sqlite/types": "./src/sqlite/types.ts",
     "./db": "./src/db/index.ts"
+  },
+  "typesVersions": {
+    "*": {
+      "sqlite": ["./src/sqlite/index.browser.ts"],
+      "sqlite/types": ["./src/sqlite/types.ts"],
+      "storage": ["./src/storage/types.ts"],
+      "db": ["./src/db/index.ts"]
+    }
   },
   "scripts": {
     "typecheck": "tsc --noEmit"

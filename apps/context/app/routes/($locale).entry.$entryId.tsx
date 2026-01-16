@@ -15,6 +15,7 @@ import { Layout } from '@/components/layout';
 import type { LocaleEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { getEntryByIdFromD1 } from '@/services/d1';
+import { getEntryByIdFromOffline, isOfflineReady } from '@/services/offline-db';
 import { useUserDataStore } from '@/stores/user-data-store';
 
 /**
@@ -77,7 +78,10 @@ export async function loader({
 
 /**
  * clientLoader: 클라이언트 네비게이션 시 실행
- * SSR 데이터가 있으면 사용, 없으면 서버에 요청
+ *
+ * 오프라인 우선 전략:
+ * 1. 오프라인 DB가 준비되어 있으면 로컬에서 조회 (네트워크 불필요)
+ * 2. 오프라인 DB가 없거나 온라인이면 서버에 요청
  */
 export async function clientLoader({
   params,
@@ -86,6 +90,24 @@ export async function clientLoader({
   params: LoaderParams;
   serverLoader: () => Promise<LoaderData>;
 }): Promise<LoaderData> {
+  // 오프라인 DB가 준비되어 있으면 로컬에서 조회
+  if (isOfflineReady()) {
+    const locale = getLocaleFromPath(window.location.pathname);
+    const entry = await getEntryByIdFromOffline(params.entryId, locale);
+
+    // 색상 카테고리의 경우 영어 색상명도 조회
+    let englishColorName: string | undefined;
+    if (locale === 'ko' && entry?.categoryId === 'colors') {
+      const enEntry = await getEntryByIdFromOffline(params.entryId, 'en');
+      englishColorName = enEntry?.translation.word;
+    }
+
+    if (entry) {
+      return { entry, englishColorName };
+    }
+  }
+
+  // 오프라인 DB에 없거나 준비되지 않았으면 서버에 요청
   return serverLoader();
 }
 

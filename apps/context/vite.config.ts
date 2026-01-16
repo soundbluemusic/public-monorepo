@@ -1,6 +1,6 @@
 import { paraglideVitePlugin as paraglide } from '@inlang/paraglide-js';
-import { cloudflareDevProxy } from '@react-router/dev/vite/cloudflare';
 import { reactRouter } from '@react-router/dev/vite';
+import { cloudflareDevProxy } from '@react-router/dev/vite/cloudflare';
 import tailwindcss from '@tailwindcss/vite';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig, type PluginOption } from 'vite';
@@ -23,7 +23,12 @@ export default defineConfig({
   server: { port: 3003 },
   preview: { port: 3003 },
   resolve: {
-    alias: { '@': '/app', '~': '/app' },
+    alias: {
+      '@': '/app',
+      '~': '/app',
+      '@soundblue/platform/sqlite/types': '../../packages/platform/src/sqlite/types.ts',
+      '@soundblue/platform/sqlite': '../../packages/platform/src/sqlite/index.browser.ts',
+    },
   },
   build: {
     minify: 'terser',
