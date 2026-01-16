@@ -6,29 +6,49 @@
 
 ## ⛔ 절대 금지 (DO NOT)
 
-### 1. 100% SSG 전용 - SPA/SSR/ISR 절대 금지
+### 1. SPA 모드 전환 절대 금지 (SSG/SSR 허용)
 > ⚠️ **SEO 필수**: 이 프로젝트의 모든 페이지는 검색 엔진이 완전한 HTML을 크롤링할 수 있어야 합니다.
 > SPA는 빈 HTML을 반환하여 SEO가 불가능합니다. 절대 SPA로 전환하지 마세요.
 
-**금지 사항:**
-- `ssr: true` 설정 금지
-- SPA 모드 전환 금지 (클라이언트 사이드 렌더링만으로 콘텐츠 생성 금지)
-- SSR, ISR 모드 전환 금지
-- `prerender()` 제거/빈 배열 반환 금지
-- 빈 `<div id="root"></div>` HTML 금지
-- `clientLoader`만 있고 `loader` 없는 동적 라우트 금지 (SEO 데이터 누락)
+**현재 배포 모드:**
 
-**필수 패턴:**
+| App | Mode | 데이터 소스 | 설정 파일 |
+|:----|:-----|:-----------|:----------|
+| Context | **SSR** | Cloudflare D1 | `wrangler.toml` |
+| Permissive | SSR | In-memory | `wrangler.toml` |
+| Roots | SSG | TypeScript | — |
+
+**금지 사항:**
+- SPA 모드 전환 금지 (클라이언트 사이드 렌더링만으로 콘텐츠 생성 금지)
+- 빈 `<div id="root"></div>` HTML 금지
+- `loader` 없는 동적 라우트 금지 (SEO 데이터 누락)
+- D1 바인딩 없이 SSR 배포 금지
+
+**SSR 모드 필수 패턴 (Context):**
 
 ```typescript
-// ✅ 동적 라우트는 반드시 loader + clientLoader 둘 다 필요
+// ✅ SSR loader - D1에서 데이터 가져오기
+export async function loader({ params, context }: Route.LoaderArgs) {
+  const db = context?.cloudflare?.env?.DB;
+  if (!db) throw new Response('Database unavailable', { status: 503 });
+
+  const entry = await db.prepare('SELECT * FROM entries WHERE id = ?')
+    .bind(params.entryId).first();
+  if (!entry) throw new Response('Not Found', { status: 404 });
+
+  return { entry };
+}
+```
+
+**SSG 모드 필수 패턴 (Roots):**
+
+```typescript
+// ✅ SSG loader + clientLoader
 export async function loader({ params }) {
-  // 빌드 시 실행 → HTML에 데이터 포함 (SEO용)
   return { data: await fetchData(params.id) };
 }
 
 export async function clientLoader({ params, serverLoader }) {
-  // 클라이언트 네비게이션 시 실행
   try { return await serverLoader(); }
   catch { return { data: await fetchData(params.id) }; }
 }
@@ -37,10 +57,12 @@ export async function clientLoader({ params, serverLoader }) {
 **검증 방법:**
 
 ```bash
-# 빌드된 HTML에 실제 콘텐츠가 있는지 확인
-head -50 build/client/entry/hello/index.html
-# ✅ 기대값: <title>실제제목 | Context</title>, 본문 콘텐츠 포함
-# ❌ 오류: <title>Not Found</title> 또는 빈 body
+# SSR: 라이브 사이트에서 HTML 확인
+curl -s https://context.soundbluemusic.com/entry/annyeong | head -50
+# ✅ 기대값: <title>안녕 | Context</title>, 본문 콘텐츠 포함
+
+# SSG: 빌드된 HTML 확인
+head -50 apps/roots/build/client/concept/hello/index.html
 ```
 
 ### 2. 하드코딩 금지
@@ -167,61 +189,46 @@ endpoint = https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
 
 **참고 파일:** `.github/workflows/deploy-context-r2.yml`
 
-### 9. SSG 분산 빌드 필수 (100만+ 대응)
+### 9. Context App: SSR + D1 배포 규칙
 
-> ⚠️ **확장성**: 엔트리 수와 관계없이 항상 청크 빌드 사용
+> ⚠️ **Context는 SSR + D1으로 운영 중**. SSG + R2는 백업 모드로만 유지.
 
-**왜 청크 빌드인가?**
+**현재 운영 구조:**
 
-| 항목 | 단일 빌드 | 청크 빌드 |
-| ---- | -------- | --------- |
-| 메모리 | 전체 로드 (OOM 위험) | 청크당 3MB (안전) |
-| 실패 시 | 전체 재빌드 | 실패 청크만 재실행 |
-| 병렬화 | 불가 | Matrix 20개 동시 |
-| 100만 빌드 | ~78분 | **~8분** |
-| 디버깅 | 어디서 실패? | 청크 단위 추적 |
+| 구성요소 | 설명 |
+| -------- | ---- |
+| 렌더링 모드 | SSR (Cloudflare Pages Functions) |
+| 데이터베이스 | Cloudflare D1 (`context-db`) |
+| 엔트리 수 | 16,836 entries + 25 categories |
+| 사이트맵 | D1에서 동적 생성 |
 
-**빌드 환경변수:**
-
-```bash
-# BUILD_TARGET 옵션
-pages    # 핵심 페이지만 (Cloudflare Pages용)
-r2       # 엔트리 전체 (단일 빌드 - 비권장)
-chunked  # 청크 분할 빌드 (권장)
-all      # 전체 (로컬 테스트용)
-
-# 청크 빌드 예시
-BUILD_TARGET=chunked CHUNK_INDEX=0 CHUNK_SIZE=50000 npx react-router build
-```
-
-**워크플로우:**
-
-| 파일 | 용도 |
-| ---- | ---- |
-| `build-context-distributed.yml` | **권장** - Matrix 병렬 빌드 |
-| `deploy-context-r2.yml` | 레거시 단일 빌드 |
-
-**사이트맵 분할 규칙:**
-
-- Google 제한: 사이트맵당 50,000 URL
-- 현재 구조: `sitemap-entry-{categoryId}.xml` (카테고리별 분리)
-- 단일 `sitemap-entries.xml` 사용 금지
+**배포 명령어:**
 
 ```bash
-# ✅ 카테고리별 분리 (현재)
-sitemap-entry-greetings.xml
-sitemap-entry-food.xml
-sitemap-entry-coding.xml
-
-# ❌ 단일 파일 금지
-sitemap-entries.xml  # 100만 개 시 URL 제한 초과
+# SSR 빌드 + 배포
+cd apps/context
+BUILD_MODE=ssr npx react-router build
+npx wrangler pages deploy build/client --project-name=c0ntext
 ```
+
+**D1 바인딩 (Cloudflare Dashboard에서 설정):**
+- Variable name: `DB`
+- D1 database: `context-db`
+
+**사이트맵 구조 (D1에서 동적 생성):**
+
+| Route | 설명 |
+| ----- | ---- |
+| `/sitemap.xml` | 인덱스 (25개 카테고리 사이트맵 링크) |
+| `/sitemap-pages.xml` | 정적 페이지 |
+| `/sitemap-categories.xml` | 카테고리 목록 |
+| `/sitemap-entry-{categoryId}.xml` | 카테고리별 엔트리 (25개) |
 
 **참고 파일:**
 
-- `apps/context/react-router.config.ts` - BUILD_TARGET 분기
-- `apps/context/app/data/route-chunks.ts` - 청크 로직
-- `.github/workflows/build-context-distributed.yml` - Matrix 빌드
+- `apps/context/wrangler.toml` - D1 바인딩 설정
+- `apps/context/public/_routes.json` - Functions 라우팅
+- `apps/context/app/routes/sitemap[.xml].tsx` - 동적 사이트맵 생성
 
 ---
 
@@ -281,10 +288,11 @@ import { useSearch } from '@soundblue/search/react';      // L2
 ### 금지
 | 위치 | 금지 액션 |
 |------|----------|
-| `react-router.config.ts` | `ssr: true` |
-| `*.browser.ts` | SSG 빌드 시점 실행 코드 |
+| `apps/roots/react-router.config.ts` | `ssr: true` (SSG 전용 앱) |
+| `*.browser.ts` | SSR/SSG 빌드 시점 실행 코드 |
 | `*.noop.ts` | 실제 로직 (빈 구현만) |
 | `entry.client.tsx` | orphan DOM 정리 로직 삭제 |
+| `wrangler.toml` (Context) | D1 바인딩 제거 |
 
 ---
 
@@ -374,16 +382,18 @@ export const meta = dynamicMetaFactory<typeof loader>({
 | `/cost-check` | R2 비용 최적화 규칙 검사. Turborepo Remote Cache 비활성화 상태 확인 |
 | `/explore [질문]` | 코드베이스 구조 분석 (fork context) |
 | `/find [검색어]` | 파일/함수 위치 검색 (haiku) |
-| `/ssg-check` | **필수** - SSG 규칙 위반 검사. 라우트 수정 후 반드시 실행 |
+| `/ssg-check` | SSG 규칙 위반 검사 (Roots 앱 전용) |
 | `/layer-check` | import 레이어 규칙 검사 (fork context) |
 | `/link-check` | 프로덕션 URL 링크 무결성 검사 (lychee) |
 | `/quality-gate` | 병렬 품질 검사 통합 (SSG, Layer, Link, TypeCheck, Lint) |
 
-**⚠️ 라우트 수정 후 반드시 `/ssg-check` 실행:**
+**⚠️ 앱별 라우트 수정 검증:**
 
-- 동적 라우트(`$param`) 추가/수정 시
-- loader/clientLoader 변경 시
-- react-router.config.ts 수정 시
+| 앱 | 수정 시 확인 사항 |
+|----|------------------|
+| Context (SSR) | D1 바인딩 존재, loader에서 DB 쿼리 |
+| Permissive (SSR) | wrangler.toml 설정 |
+| Roots (SSG) | `/ssg-check` 실행 |
 
 ### 모델 사용 기준
 
@@ -402,3 +412,5 @@ export const meta = dynamicMetaFactory<typeof loader>({
 | Tailwind CSS v4 | [tailwindcss.com](https://tailwindcss.com/docs) |
 | React Router v7 | [reactrouter.com](https://reactrouter.com) |
 | TypeScript | [typescriptlang.org](https://www.typescriptlang.org/docs) |
+| Cloudflare D1 | [developers.cloudflare.com/d1](https://developers.cloudflare.com/d1/) |
+| Cloudflare Pages | [developers.cloudflare.com/pages](https://developers.cloudflare.com/pages/) |

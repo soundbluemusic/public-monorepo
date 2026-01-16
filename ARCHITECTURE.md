@@ -2,16 +2,113 @@
 
 모노레포 패키지 구조 및 레이어 설계 문서입니다.
 
-> ⛔ **100% SSG Only** - 이 프로젝트는 정적 사이트 생성(SSG) 전용입니다.
-> SPA, SSR, ISR 등 다른 렌더링 모드로 전환 절대 금지.
->
 > **SEO 필수**: 검색 엔진은 JavaScript를 실행하지 않습니다.
 > SPA는 빈 HTML(`<div id="root"></div>`)을 반환하여 **검색 노출이 불가능**합니다.
 > 모든 페이지는 완전한 HTML로 빌드되어야 합니다.
 
 ---
 
-## SSG Architecture (SSG 아키텍처)
+## Deployment Modes (배포 모드)
+
+| App | Mode | 데이터 소스 | 배포 대상 |
+|:----|:-----|:-----------|:----------|
+| **Context** | **SSR** | Cloudflare D1 | Cloudflare Pages (Functions) |
+| Permissive | SSR | In-memory | Cloudflare Pages (Functions) |
+| Roots | SSG | TypeScript | Cloudflare Pages (Static) |
+
+> **Context App**: SSR + D1으로 운영 중. SSG + R2는 백업 모드로 유지.
+
+---
+
+## SSR Architecture (SSR 아키텍처) - Context App
+
+### How It Works
+
+React Router v7의 SSR 모드 + Cloudflare D1으로 **런타임에** 동적 페이지를 생성합니다.
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  Build Time                                                     │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐         │
+│  │ prerender() │ → │  loader()   │ → │  Static HTML  │         │
+│  │ (정적 페이지)│    │ (정적 데이터)│    │  (CDN 캐시)   │         │
+│  └─────────────┘    └─────────────┘    └─────────────┘         │
+└─────────────────────────────────────────────────────────────────┘
+                              +
+┌─────────────────────────────────────────────────────────────────┐
+│  Runtime (Cloudflare Pages Functions)                           │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐         │
+│  │  Request    │ → │  loader()   │ → │  SSR HTML     │         │
+│  │ /entry/:id  │    │  D1 Query   │    │  (dynamic)   │         │
+│  └─────────────┘    └─────────────┘    └─────────────┘         │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### D1 Database Schema
+
+```sql
+-- context-db (Cloudflare D1)
+CREATE TABLE entries (
+  id TEXT PRIMARY KEY,
+  korean TEXT NOT NULL,
+  english TEXT,
+  romanization TEXT,
+  category_id TEXT NOT NULL,
+  difficulty TEXT,
+  part_of_speech TEXT,
+  audio_url TEXT,
+  examples TEXT,  -- JSON array
+  tags TEXT       -- JSON array
+);
+
+CREATE TABLE categories (
+  id TEXT PRIMARY KEY,
+  name_ko TEXT NOT NULL,
+  name_en TEXT NOT NULL,
+  icon TEXT,
+  entry_count INTEGER DEFAULT 0
+);
+```
+
+### SSR Configuration
+
+```typescript
+// react-router.config.ts (BUILD_MODE=ssr)
+export default {
+  ssr: true,  // SSR 활성화
+  async prerender() {
+    // 정적 페이지만 prerender (entry 페이지 제외)
+    return [...staticRoutes, ...categoryRoutes];
+  },
+} satisfies Config;
+
+// wrangler.toml
+[[d1_databases]]
+binding = "DB"
+database_name = "context-db"
+database_id = "55c25518-db3d-4547-8ad8-e36fc66493c8"
+
+// public/_routes.json
+{
+  "include": ["/entry/*", "/ko/entry/*", "/sitemap*.xml"],
+  "exclude": []
+}
+```
+
+### Dynamic Sitemap Generation
+
+SSR 모드에서 사이트맵은 D1에서 실시간 생성됩니다:
+
+| Route | 설명 | 데이터 소스 |
+|:------|:-----|:-----------|
+| `/sitemap.xml` | 인덱스 | D1 categories 테이블 |
+| `/sitemap-pages.xml` | 정적 페이지 | 하드코딩 |
+| `/sitemap-categories.xml` | 카테고리 목록 | D1 categories |
+| `/sitemap-entry-{categoryId}.xml` | 카테고리별 엔트리 | D1 entries |
+
+---
+
+## SSG Architecture (SSG 아키텍처) - Roots, Permissive
 
 ### How It Works
 
@@ -36,12 +133,13 @@ React Router v7의 `prerender()` + `loader()` 패턴으로 **빌드 시** 모든
 
 ### SSG Pages per App
 
-| App | Dynamic Routes | SSG Pages | Data Source |
-|:----|:---------------|:---------:|:------------|
-| **Context** | 16836 entries + 25 categories + 53 conversations | 33,748 | JSON |
-| **Roots** | 438 concepts + 18 fields | 920 | TypeScript |
-| **Permissive** | 4 static routes | 8 | Array literals |
-| **Total** | — | **34,676** | — |
+| App | Mode | Dynamic Routes | Pages | Data Source |
+|:----|:-----|:---------------|:-----:|:------------|
+| **Context** | SSR | 16836 entries (D1) | — | Cloudflare D1 |
+| **Roots** | SSG | 438 concepts + 18 fields | 920 | TypeScript |
+| **Permissive** | SSR | 4 static routes | 8 | In-memory |
+
+> Context는 SSR 모드로 운영되어 SSG 페이지 수가 없음. 모든 entry 페이지는 D1에서 동적 생성.
 
 ### Code Pattern
 
