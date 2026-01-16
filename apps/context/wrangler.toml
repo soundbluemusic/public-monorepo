@@ -8,6 +8,3 @@ binding = "DB"
 database_name = "context-db"
 database_id = "55c25518-db3d-4547-8ad8-e36fc66493c8"
 
-[[r2_buckets]]
-binding = "BUCKET"
-bucket_name = "all-sites-static"
