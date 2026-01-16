@@ -4,8 +4,7 @@
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 [![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?logo=react-router)](https://reactrouter.com)
-[![100% SSG](https://img.shields.io/badge/100%25-SSG-brightgreen)](https://en.wikipedia.org/wiki/Static_site_generator)
-[![SSG Routes](https://img.shields.io/badge/SSG_Routes-8-blue)](react-router.config.ts)
+[![SSR](https://img.shields.io/badge/SSR-Cloudflare_Pages-F38020?logo=cloudflare)](https://pages.cloudflare.com)
 
 **[Live Site](https://permissive.soundbluemusic.com)**
 
@@ -23,21 +22,18 @@ A comprehensive collection of free web development resources:
 
 ## Architecture (아키텍처)
 
-### 100% SSG with Build-time Data Prerendering
+### SSR with Cloudflare Pages Functions
 
 ```
 react-router.config.ts
-├── ssr: false
-├── prerender() → 8 static routes generated
-│   ├── Static routes from routes.ts (extractStaticRoutes)
-│   └── Library detail routes from data (88 × 2 langs)
-└── loader() functions → .data files for each route
+├── ssr: true (SSR 모드)
+├── Cloudflare Adapter (nodejs_compat)
+└── loader() → 런타임 데이터 조회
 
-Build output (build/client/):
-├── index.html, ko/index.html
-├── libraries/index.html, ko/libraries/index.html
-├── library/{slug}/index.html (88 libraries × 2 langs)
-└── *.data files
+Cloudflare Pages:
+├── Static Assets (build/client/)
+└── Functions (_worker.js)
+    └── 모든 라우트 SSR 처리
 ```
 
 ### Data Architecture
@@ -56,14 +52,14 @@ app/data/
 
 ## Routes (라우트 구조)
 
-| Route | EN | KO | Dynamic | Description |
-|:------|:--:|:--:|:-------:|:------------|
-| `/` | ✓ | ✓ | - | Home with search |
-| `/libraries` | ✓ | ✓ | - | Libraries list |
-| `/library/:slug` | ✓ | ✓ | 88 | Library detail page |
-| `/sitemap` | ✓ | ✓ | - | Sitemap |
+| Route | EN | KO | Mode | Description |
+|:------|:--:|:--:|:----:|:------------|
+| `/` | ✓ | ✓ | SSR | Home with search |
+| `/libraries` | ✓ | ✓ | SSR | Libraries list |
+| `/library/:slug` | ✓ | ✓ | SSR | Library detail page (88) |
+| `/sitemap` | ✓ | ✓ | SSR | Sitemap |
 
-**Total:** 8 SSG routes (4 EN + 4 KO)
+**Mode:** SSR (Cloudflare Pages Functions)
 
 ---
 
@@ -82,7 +78,7 @@ app/data/
 
 | Feature | Context | Roots | Permissive |
 |:--------|:-------:|:-----:|:----------:|
-| SSG Routes | 33802 | 920 | 8 |
+| Mode | SSR + D1 | SSG | SSR |
 | Search | ✓ MiniSearch | ✓ MiniSearch | ✓ MiniSearch |
 | Favorites | ✓ | ✓ | ❌ |
 | Detail pages | ✓ | ✓ | ✓ |

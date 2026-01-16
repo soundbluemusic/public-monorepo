@@ -22,26 +22,27 @@ pnpm dev:context     # → http://localhost:3003
 
 ## Critical Rules (필수 규칙)
 
-### 1. SSG Mode Only
+### 1. SPA Mode Prohibited (SPA 모드 금지)
 
-> **이 프로젝트는 100% SSG 전용입니다. 다른 렌더링 모드로 전환 절대 금지.**
+> **이 프로젝트는 SSR과 SSG 모드만 사용합니다. SPA 모드는 절대 금지.**
+
+| App | Mode | Data Source |
+|:----|:-----|:------------|
+| Context | SSR + D1 | Cloudflare D1 |
+| Permissive | SSR | In-memory |
+| Roots | SSG | TypeScript |
 
 | Prohibited | Why |
 |:-----------|:----|
 | SPA (Client-side only) | SEO 불가, 빈 HTML |
-| SSR (Server-side rendering) | 서버 비용, 복잡성 |
-| ISR (Incremental Static) | 서버 필요 |
-| Edge/Serverless Functions | 벤더 종속 |
 | Empty `<div id="root">` | 검색엔진 크롤링 실패 |
 
 ```typescript
-// react-router.config.ts - Never change ssr to true
-export default {
-  ssr: false,
-  async prerender() {
-    return ['/', '/ko', ...allRoutes];
-  },
-}
+// Context, Permissive (SSR)
+export default { ssr: true, ... }
+
+// Roots (SSG)
+export default { ssr: false, async prerender() { ... } }
 ```
 
 ### 2. No Hardcoding (for wrong reasons)

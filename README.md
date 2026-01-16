@@ -19,6 +19,8 @@
 >
 > 📚 **[Documentation →](https://soundbluemusic.github.io/public-monorepo)**
 
+⚠️ **No SPA Mode** — This project uses SSR/SSG only. SPA returns empty HTML, breaking SEO.
+
 ---
 
 ## 🚀 Apps

@@ -142,8 +142,9 @@ Before making any changes:
 
 | Location | Prohibited Actions |
 |----------|-------------------|
-| `apps/context/react-router.config.ts` | `ssr: false` (Context is SSR only) |
-| `apps/roots/react-router.config.ts` | `ssr: true` (Roots is SSG only) |
+| `apps/context/react-router.config.ts` | `ssr: false` (Context uses SSR + D1) |
+| `apps/permissive/react-router.config.ts` | `ssr: false` (Permissive uses SSR) |
+| `apps/roots/react-router.config.ts` | `ssr: true` (Roots uses SSG, keep `ssr: false`) |
 | `*.browser.ts` | Code running at build time |
 | `*.noop.ts` | Actual logic (empty implementation only) |
 | `entry.client.tsx` | Deleting orphan DOM cleanup logic |

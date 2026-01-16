@@ -144,8 +144,9 @@ function processData(data: Input): Output {
 
 | 위치 | 금지 액션 |
 |----------|-------------------|
-| `apps/context/react-router.config.ts` | `ssr: false` (Context는 SSR 전용) |
-| `apps/roots/react-router.config.ts` | `ssr: true` (Roots는 SSG 전용) |
+| `apps/context/react-router.config.ts` | `ssr: false` (Context는 SSR + D1) |
+| `apps/permissive/react-router.config.ts` | `ssr: false` (Permissive는 SSR) |
+| `apps/roots/react-router.config.ts` | `ssr: true` (Roots는 SSG, `ssr: false` 유지) |
 | `*.browser.ts` | 빌드 시점 실행 코드 |
 | `*.noop.ts` | 실제 로직 (빈 구현만) |
 | `entry.client.tsx` | orphan DOM 정리 로직 삭제 |
