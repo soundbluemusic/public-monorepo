@@ -152,3 +152,33 @@ export async function getConversationsByCategoryFromD1(db: D1Database, categoryI
     dialogue: JSON.parse(row.dialogue),
   }));
 }
+
+/**
+ * D1에서 카테고리별 엔트리 ID 목록 조회 (사이트맵용)
+ */
+export async function getEntryIdsByCategoryFromD1(
+  db: D1Database,
+  categoryId: string,
+): Promise<string[]> {
+  const { results } = await db
+    .prepare('SELECT id FROM entries WHERE category_id = ?')
+    .bind(categoryId)
+    .all<{ id: string }>();
+
+  return results.map((row) => row.id);
+}
+
+/**
+ * D1에서 모든 카테고리별 엔트리 수 조회 (사이트맵용)
+ */
+export async function getEntryCounts(db: D1Database): Promise<Map<string, number>> {
+  const { results } = await db
+    .prepare('SELECT category_id, COUNT(*) as count FROM entries GROUP BY category_id')
+    .all<{ category_id: string; count: number }>();
+
+  const counts = new Map<string, number>();
+  for (const row of results) {
+    counts.set(row.category_id, row.count);
+  }
+  return counts;
+}

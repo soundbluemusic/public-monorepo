@@ -6,9 +6,13 @@
   "type": "module",
   "scripts": {
     "dev": "react-router dev",
+    "dev:ssr": "BUILD_MODE=ssr react-router dev",
     "prebuild": "pnpm exec tsx scripts/generate-paraglide-messages.ts && tsx scripts/generate-search-index.ts",
     "build": "NODE_OPTIONS='--max-old-space-size=8192' react-router build && tsx scripts/generate-sitemaps.ts",
+    "build:ssr": "BUILD_MODE=ssr react-router build",
+    "deploy:ssr": "pnpm build:ssr && wrangler pages deploy build/client --project-name=permissive",
     "preview": "npx serve build/client -l 3004 --no-port-switching",
+    "preview:ssr": "BUILD_MODE=ssr wrangler pages dev build/client",
     "start": "npx serve build/client -l 3004 --no-port-switching",
     "data:fetch": "pnpm run data:fetch:npm && pnpm run data:fetch:github && pnpm run data:fetch:bundle",
     "data:fetch:npm": "tsx scripts/fetch-npm-data.ts",
@@ -39,6 +43,8 @@
     "react-router": "^7.12.0"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260109.0",
+    "@react-router/cloudflare": "^7.12.0",
     "@react-router/dev": "^7.12.0",
     "@react-router/node": "^7.12.0",
     "@react-router/serve": "^7.12.0",
@@ -52,7 +58,8 @@
     "typescript": "^5.7.2",
     "vite": "^7.3.1",
     "vite-plugin-pwa": "^1.2.0",
-    "workbox-window": "^7.3.0"
+    "workbox-window": "^7.3.0",
+    "wrangler": "^4.58.0"
   },
   "engines": {
     "node": ">=20"

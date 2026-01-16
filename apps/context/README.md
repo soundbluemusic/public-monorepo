@@ -4,8 +4,8 @@
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 [![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?logo=react-router)](https://reactrouter.com)
-[![100% SSG](https://img.shields.io/badge/100%25-SSG-brightgreen)](https://en.wikipedia.org/wiki/Static_site_generator)
-[![SSG Routes](https://img.shields.io/badge/SSG_Routes-33748-blue)](react-router.config.ts)
+[![SSR + D1](https://img.shields.io/badge/SSR-D1_Database-F38020?logo=cloudflare)](https://developers.cloudflare.com/d1/)
+[![Entries](https://img.shields.io/badge/Entries-16836-blue)](react-router.config.ts)
 
 **[Live Site](https://context.soundbluemusic.com)**
 
@@ -25,71 +25,102 @@ A Korean dictionary designed for language learners:
 
 ## Architecture (아키텍처)
 
-### 100% SSG with Build-time Data Prerendering
+### Dual Mode: SSR (Production) + SSG (Backup)
+
+| Mode | 용도 | 데이터 소스 | 배포 방식 |
+|:-----|:-----|:-----------|:----------|
+| **SSR** | Production | Cloudflare D1 | `pnpm deploy:ssr` |
+| SSG | Backup/Archive | JSON files + R2 | `pnpm deploy:r2` |
+
+### SSR Mode (현재 운영 중)
 
 ```
-react-router.config.ts
-├── ssr: false
-├── prerender() → 33748 static routes generated
-│   ├── entries → 16836 × 2 langs
-│   ├── categories → 21 × 2 langs
-│   └── conversations → 7 × 2 langs
-└── loader() functions → .data files for each route
+react-router.config.ts (BUILD_MODE=ssr)
+├── ssr: true
+├── Cloudflare Adapter (nodejs_compat)
+└── loader() → D1 Database 실시간 쿼리
 
-Build output (build/client/):
-├── index.html, ko/index.html
-├── entry/{id}.html, ko/entry/{id}.html (×16836)
-├── category/{id}.html, ko/category/{id}.html (×21)
-├── conversation/{id}.html, ko/conversation/{id}.html (×7)
-└── *.data files (prerendered loader data)
+Cloudflare Pages:
+├── Static Assets (build/client/)
+├── Functions (_worker.js)
+│   ├── /entry/:id → D1 쿼리
+│   ├── /category/:id → D1 쿼리
+│   └── /sitemap*.xml → D1에서 동적 생성
+└── D1 Database (context-db)
+    ├── entries (16836 rows)
+    └── categories (25 rows)
 ```
 
-### Data Architecture
+### D1 Database Schema
 
-```
-data/context/             # Centralized JSON (SSoT)
-├── entries/              # 22 category files
-│   ├── greetings.json
-│   ├── food.json
-│   └── ... (16836 entries total)
-└── conversations/        # 7 conversation files
+```sql
+-- entries 테이블
+CREATE TABLE entries (
+  id TEXT PRIMARY KEY,
+  korean TEXT NOT NULL,
+  english TEXT,
+  romanization TEXT,
+  category_id TEXT NOT NULL,
+  difficulty TEXT,
+  part_of_speech TEXT,
+  audio_url TEXT,
+  examples TEXT,  -- JSON array
+  tags TEXT       -- JSON array
+);
 
-app/data/
-├── entries.ts            # TypeScript loader
-├── categories.ts         # Category definitions
-└── types.ts              # TypeScript types
+-- categories 테이블
+CREATE TABLE categories (
+  id TEXT PRIMARY KEY,
+  name_ko TEXT NOT NULL,
+  name_en TEXT NOT NULL,
+  icon TEXT,
+  entry_count INTEGER DEFAULT 0
+);
 ```
 
 ### Data Flow
 
 ```
-Build time:
-  data/context/*.json → prerender() → loader() → .data files
+SSR Mode (Production):
+  Request → Cloudflare Pages Function → D1 Query → React SSR → HTML
 
-Runtime:
-  Static HTML + .data → useLoaderData() → React component
-  IndexedDB → favorites, study records (client-only)
+SSG Mode (Backup):
+  Build: data/context/*.json → prerender() → Static HTML + .data files
+  Runtime: R2 CDN → Static files
 ```
+
+### Sitemap Generation
+
+SSR 모드에서 사이트맵은 D1에서 **실시간 동적 생성**됩니다:
+
+| Route | 설명 |
+|:------|:-----|
+| `/sitemap.xml` | 인덱스 (모든 사이트맵 링크) |
+| `/sitemap-pages.xml` | 정적 페이지 |
+| `/sitemap-categories.xml` | 카테고리 목록 |
+| `/sitemap-entry-{categoryId}.xml` | 카테고리별 엔트리 (25개)
 
 ---
 
 ## Routes (라우트 구조)
 
-| Route | EN | KO | Dynamic | Description |
-|:------|:--:|:--:|:-------:|:------------|
-| `/` | ✓ | ✓ | - | Home |
-| `/browse` | ✓ | ✓ | - | Browse all entries |
-| `/entry/:entryId` | ✓ | ✓ | 16836 | Word entry page |
-| `/category/:categoryId` | ✓ | ✓ | 21 | Category page |
-| `/conversation/:conversationId` | ✓ | ✓ | 7 | Conversation page |
-| `/about` | ✓ | ✓ | - | About |
-| `/my-learning` | ✓ | ✓ | - | Learning progress |
-| `/built-with` | ✓ | ✓ | - | Tech stack |
-| `/privacy` | ✓ | ✓ | - | Privacy policy |
-| `/terms` | ✓ | ✓ | - | Terms of service |
-| `/license` | ✓ | ✓ | - | License |
+| Route | EN | KO | Mode | Description |
+|:------|:--:|:--:|:----:|:------------|
+| `/` | ✓ | ✓ | Static | Home |
+| `/browse` | ✓ | ✓ | Static | Browse all entries |
+| `/entry/:entryId` | ✓ | ✓ | **SSR** | Word entry page (D1) |
+| `/category/:categoryId` | ✓ | ✓ | Static | Category page |
+| `/conversation/:conversationId` | ✓ | ✓ | Static | Conversation page |
+| `/sitemap.xml` | ✓ | - | **SSR** | Sitemap index (D1) |
+| `/sitemap-*.xml` | ✓ | - | **SSR** | Category sitemaps (D1) |
+| `/about` | ✓ | ✓ | Static | About |
+| `/my-learning` | ✓ | ✓ | Static | Learning progress |
+| `/built-with` | ✓ | ✓ | Static | Tech stack |
+| `/privacy` | ✓ | ✓ | Static | Privacy policy |
+| `/terms` | ✓ | ✓ | Static | Terms of service |
+| `/license` | ✓ | ✓ | Static | License |
 
-**Total:** 33748 SSG routes (16874 EN + 16874 KO)
+**Data:** 16836 entries + 25 categories (D1 Database)
 
 ---
 
@@ -128,9 +159,38 @@ const { query, setQuery, results, isReady } = useSearchWorker({
 # From monorepo root
 pnpm dev:context     # → http://localhost:3003
 
-# Build (outputs to build/client)
+# Build (SSG mode - default)
 pnpm build:context
+
+# Build (SSR mode)
+BUILD_MODE=ssr pnpm build:context
 ```
+
+---
+
+## Deployment (배포)
+
+### SSR Mode (Production)
+
+```bash
+# 1. SSR 빌드
+cd apps/context
+BUILD_MODE=ssr npx react-router build
+
+# 2. Cloudflare Pages 배포
+npx wrangler pages deploy build/client --project-name=c0ntext
+```
+
+**필수 설정 (Cloudflare Dashboard):**
+- D1 Binding: `DB` → `context-db`
+
+### Configuration Files
+
+| File | Purpose |
+|:-----|:--------|
+| `wrangler.toml` | D1 바인딩, Pages 설정 |
+| `public/_routes.json` | Functions 라우팅 규칙 |
+| `react-router.config.ts` | SSR/SSG 모드 분기 |
 
 ---
 
@@ -138,13 +198,14 @@ pnpm build:context
 
 | Role | Technology |
 |:-----|:-----------|
-| Framework | React Router v7 |
-| UI | React |
+| Framework | React Router v7 (SSR mode) |
+| UI | React 19 |
 | Styling | Tailwind CSS v4 |
 | Language | TypeScript |
+| **Database** | **Cloudflare D1** (SQLite) |
 | Search | MiniSearch (via @soundblue/search) |
-| Storage | localStorage / IndexedDB |
-| Hosting | Cloudflare Pages |
+| Storage | localStorage / IndexedDB (client) |
+| Hosting | Cloudflare Pages (Functions) |
 
 ---
 
