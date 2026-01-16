@@ -1,5 +1,5 @@
 /**
- * SSG 빌드 검증 스크립트
+ * SSG 빌드 검증 스크립트 (Roots 앱 전용)
  *
  * 검사 항목:
  * 1. HTML 파일이 빈 껍데기가 아닌지 확인
@@ -9,7 +9,10 @@
  * 5. params.locale 사용 금지 (URL pathname에서 추출해야 함)
  * 6. 빌드된 HTML에서 404 콘텐츠 감지
  *
- * ⚠️ SPA 금지: 이 프로젝트는 100% SSG 전용입니다.
+ * ⚠️ SPA 금지: 이 프로젝트는 SSR/SSG만 사용합니다.
+ *   - Context: SSR + D1 (검증 대상 아님)
+ *   - Permissive: SSR (검증 대상 아님)
+ *   - Roots: SSG (검증 대상)
  * clientLoader만 있고 loader가 없는 동적 라우트는 SEO 불가능합니다.
  *
  * ⚠️ params.locale 금지: ($locale) 라우트에서 params.locale은 항상 undefined입니다.

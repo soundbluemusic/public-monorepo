@@ -57,7 +57,7 @@ import { Button } from '@soundblue/ui/components';
 ### 機能
 - 3つのアプリ: Context、Permissive、Roots
 - 6つのパッケージ: core、data、search、i18n、shared、shared-react
-- 100% SSGアーキテクチャ
+- SSGアーキテクチャ（後にContextはSSR + D1に移行）
 - 多言語サポート（en、ko）
 
 ### パッケージ（v1.0）

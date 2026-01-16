@@ -35,22 +35,25 @@ pnpm dev:roots       # → http://localhost:3005
 
 ## Critical Rules
 
-:::danger[SSG Mode Only]
-This project is **100% Static Site Generation (SSG) only**.
+:::danger[SPA Mode Prohibited]
+This project uses **SSR and SSG modes only**. SPA mode is prohibited because it returns empty HTML, breaking SEO.
 
-Do not switch to SPA, SSR, ISR, or any other rendering mode.
+Each app has its own rendering mode:
+- **Context**: SSR + Cloudflare D1
+- **Permissive**: SSR
+- **Roots**: SSG
 :::
 
-### 1. No Rendering Mode Changes
+### 1. Respect Each App's Rendering Mode
 
 ```typescript
-// react-router.config.ts
-export default {
-  ssr: false,  // ← NEVER change to true
-  async prerender() {
-    return ['/', '/ko', ...allRoutes];
-  },
-}
+// Context app (SSR + D1)
+export default { ssr: true, ... }
+
+// Roots app (SSG)
+export default { ssr: false, async prerender() { ... } }
+
+// ❌ NEVER use SPA mode (no loader, client-only rendering)
 ```
 
 ### 2. No Hardcoding

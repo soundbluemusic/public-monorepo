@@ -48,16 +48,16 @@ setTimeout(() => {
 
 **目的:** React Router設定
 
-:::danger[ssr: false維持]
-`ssr: true`に設定するとSSGアーキテクチャが壊れます。このプロジェクトは100% SSG専用です。
+:::danger[各アプリのレンダリングモードを遵守]
+各アプリには固有のレンダリングモードがあります。アーキテクチャを理解せずに変更しないでください。
 :::
 
 ```typescript
-// これは必ず維持
-export default {
-  ssr: false,  // 変更禁止
-  async prerender() { /* ... */ }
-} satisfies Config;
+// Contextアプリ - SSR + D1（ssr: falseに変更禁止）
+export default { ssr: true, ... }
+
+// Rootsアプリ - SSG（ssr: trueに変更禁止）
+export default { ssr: false, async prerender() { ... } }
 ```
 
 ## ファイル命名規則
@@ -115,7 +115,7 @@ export const storage = {
 
 1. ✅ このコードがなぜ存在するか理解したか？
 2. ✅ 関連ドキュメントを読んだか？
-3. ✅ 変更がSSGを壊すか？
+3. ✅ 変更がレンダリングモード（SSR/SSG）を壊すか？
 4. ✅ 変更がhydrationを壊すか？
 5. ✅ プロダクションビルドでテストしたか？
 

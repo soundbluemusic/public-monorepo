@@ -6,11 +6,25 @@
 
 ## ⛔ 절대 금지 (DO NOT)
 
-### 1. SSG 모드 변경 금지
-- `ssr: true` 설정 금지
-- SPA, SSR, ISR 모드 전환 금지
-- `prerender()` 제거/빈 배열 반환 금지
+### 1. SPA 모드 절대 금지 (SEO 필수)
+
+> ⚠️ **SEO 필수**: 이 프로젝트의 모든 페이지는 검색 엔진이 완전한 HTML을 크롤링할 수 있어야 합니다.
+> SPA는 빈 HTML(`<div id="root"></div>`)을 반환하여 SEO가 불가능합니다.
+
+**현재 배포 모드:**
+
+| App | Mode | 데이터 소스 |
+|:----|:-----|:-----------|
+| Context | **SSR + D1** | Cloudflare D1 |
+| Permissive | SSR | In-memory |
+| Roots | SSG | TypeScript |
+
+**금지 사항:**
+- SPA 모드 전환 금지 (클라이언트 사이드 렌더링만으로 콘텐츠 생성 금지)
 - 빈 `<div id="root"></div>` HTML 금지
+- `loader` 없는 동적 라우트 금지 (SEO 데이터 누락)
+- Context/Permissive에서 `ssr: false` 설정 금지
+- Roots에서 `ssr: true` 설정 금지 (SSG 유지)
 
 ### 2. 하드코딩 금지
 - 테스트 통과용 하드코딩 값 금지

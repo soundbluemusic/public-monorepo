@@ -25,18 +25,21 @@ A Korean dictionary designed for language learners:
 
 ## Architecture (아키텍처)
 
-### Dual Mode: SSR (Production) + SSG (Backup)
+### SSR + D1 전용
 
-| Mode | 용도 | 데이터 소스 | 배포 방식 |
-|:-----|:-----|:-----------|:----------|
-| **SSR** | Production | Cloudflare D1 | `pnpm deploy:ssr` |
-| SSG | Backup/Archive | JSON files + R2 | `pnpm deploy:r2` |
+> ⚠️ **SSG 빌드는 지원하지 않습니다.** 모든 entry 페이지는 D1에서 실시간 조회합니다.
 
-### SSR Mode (현재 운영 중)
+| 항목 | 설명 |
+|:-----|:-----|
+| 렌더링 모드 | **SSR** (Cloudflare Pages Functions) |
+| 데이터베이스 | Cloudflare D1 (`context-db`) |
+| 배포 명령어 | `pnpm deploy` |
+
+### 아키텍처 다이어그램
 
 ```
-react-router.config.ts (BUILD_MODE=ssr)
-├── ssr: true
+react-router.config.ts
+├── ssr: true (고정)
 ├── Cloudflare Adapter (nodejs_compat)
 └── loader() → D1 Database 실시간 쿼리
 
@@ -48,7 +51,7 @@ Cloudflare Pages:
 │   └── /sitemap*.xml → D1에서 동적 생성
 └── D1 Database (context-db)
     ├── entries (16836 rows)
-    └── categories (25 rows)
+    └── categories (52 rows)
 ```
 
 ### D1 Database Schema
@@ -81,12 +84,7 @@ CREATE TABLE categories (
 ### Data Flow
 
 ```
-SSR Mode (Production):
-  Request → Cloudflare Pages Function → D1 Query → React SSR → HTML
-
-SSG Mode (Backup):
-  Build: data/context/*.json → prerender() → Static HTML + .data files
-  Runtime: R2 CDN → Static files
+Request → Cloudflare Pages Function → D1 Query → React SSR → HTML Response
 ```
 
 ### Sitemap Generation
@@ -159,26 +157,18 @@ const { query, setQuery, results, isReady } = useSearchWorker({
 # From monorepo root
 pnpm dev:context     # → http://localhost:3003
 
-# Build (SSG mode - default)
-pnpm build:context
-
-# Build (SSR mode)
-BUILD_MODE=ssr pnpm build:context
+# Build
+pnpm build:context   # SSR 빌드 (기본)
 ```
 
 ---
 
 ## Deployment (배포)
 
-### SSR Mode (Production)
-
 ```bash
-# 1. SSR 빌드
 cd apps/context
-BUILD_MODE=ssr npx react-router build
-
-# 2. Cloudflare Pages 배포
-npx wrangler pages deploy build/client --project-name=c0ntext
+pnpm build   # SSR 빌드
+pnpm deploy  # Cloudflare Pages 배포
 ```
 
 **필수 설정 (Cloudflare Dashboard):**
@@ -190,7 +180,7 @@ npx wrangler pages deploy build/client --project-name=c0ntext
 |:-----|:--------|
 | `wrangler.toml` | D1 바인딩, Pages 설정 |
 | `public/_routes.json` | Functions 라우팅 규칙 |
-| `react-router.config.ts` | SSR/SSG 모드 분기 |
+| `react-router.config.ts` | SSR 설정 (`ssr: true` 고정) |
 
 ---
 

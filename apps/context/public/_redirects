@@ -1,5 +1,5 @@
 # Cloudflare Pages - Redirects Configuration
-# 100% SSG - 모든 페이지가 미리 생성되므로 SPA fallback 불필요
+# SSR + D1 모드 - Entry 페이지는 D1에서 실시간 조회
 # https://developers.cloudflare.com/pages/configuration/redirects/
 
 # SEO 파일 - 명시적 서빙

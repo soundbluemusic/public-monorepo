@@ -35,22 +35,26 @@ pnpm dev:roots       # → http://localhost:3005
 
 ## 핵심 규칙
 
-:::danger[SSG 모드만 허용]
-이 프로젝트는 **100% 정적 사이트 생성(SSG) 전용**입니다.
+:::danger[SPA 모드 금지]
+이 프로젝트는 **SSR과 SSG 모드만 사용**합니다. SPA 모드는 빈 HTML을 반환하여 SEO가 불가능하므로 금지됩니다.
 
-SPA, SSR, ISR 또는 다른 렌더링 모드로 전환하지 마세요.
+각 앱의 렌더링 모드:
+
+- **Context**: SSR + Cloudflare D1
+- **Permissive**: SSR
+- **Roots**: SSG
 :::
 
-### 1. 렌더링 모드 변경 금지
+### 1. 각 앱의 렌더링 모드 준수
 
 ```typescript
-// react-router.config.ts
-export default {
-  ssr: false,  // ← 절대 true로 변경 금지
-  async prerender() {
-    return ['/', '/ko', ...allRoutes];
-  },
-}
+// Context 앱 (SSR + D1)
+export default { ssr: true, ... }
+
+// Roots 앱 (SSG)
+export default { ssr: false, async prerender() { ... } }
+
+// ❌ SPA 모드 사용 금지 (loader 없이 클라이언트만 렌더링)
 ```
 
 ### 2. 하드코딩 금지

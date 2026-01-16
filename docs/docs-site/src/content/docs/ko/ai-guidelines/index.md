@@ -14,12 +14,25 @@ description: 이 프로젝트에 기여하는 AI 어시스턴트를 위한 가�
 
 ## 핵심 원칙
 
-### 1. SSG 전용 — 예외 없음
+### 1. 렌더링 모드 규칙
 
-이 프로젝트는 **100% 정적 사이트 생성**을 사용합니다. 절대 하지 말 것:
-- `ssr: true` 설정
-- `prerender()` 함수 제거
-- 빈 `<div id="root"></div>`로 SPA 생성
+이 프로젝트는 **앱별로 다른 렌더링 모드**를 사용합니다:
+
+| 앱 | 모드 | 데이터 소스 |
+|:---|:-----|:-----------|
+| **Context** | **SSR + D1** | Cloudflare D1 |
+| **Permissive** | SSR | In-memory |
+| **Roots** | SSG | TypeScript |
+
+**모든 앱 공통 금지:**
+
+- SPA 모드 (SEO 불가)
+- 동적 라우트에서 `loader()` 제거
+
+**Context 앱 (SSR + D1):**
+
+- react-router.config.ts에서 `ssr: false` 설정 금지
+- D1 없이 entry 데이터 로딩 금지
 
 ### 2. 다운그레이드 금지
 

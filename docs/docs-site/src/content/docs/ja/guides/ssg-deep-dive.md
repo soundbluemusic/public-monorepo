@@ -3,10 +3,13 @@ title: SSG 詳細解説
 description: React Router v7を使用した静的サイト生成アーキテクチャの理解
 ---
 
-このプロジェクトは**100%静的サイト生成（SSG）**を使用しています — 34,676ページすべてがビルド時に事前レンダリングされ、CDNから直接配信されます。
+**Roots**アプリは静的サイト生成（SSG）を使用しています — すべてのページがビルド時に事前レンダリングされ、CDNから直接配信されます。
 
-:::caution[SSG専用]
-このプロジェクトはSSG専用です。SPA、SSR、ISRモードは禁止されています。
+:::caution[アプリ別レンダリングモード]
+- **Context**: SSR + D1（動的レンダリング）
+- **Permissive**: SSR（動的レンダリング）
+- **Roots**: SSG（このページで説明）
+- SPAモードは禁止されています
 :::
 
 ## 仕組み
@@ -30,42 +33,42 @@ React Router v7の`prerender()` + `loader()`パターンでビルド時に完全
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-## アプリごとのSSGページ数
+## アプリごとのレンダリングモード
 
-| アプリ | 動的ルート | SSGページ | データソース |
-|:----|:---------------|:---------:|:------------|
-| **Context** | 16,836エントリ + 25カテゴリ + 53会話 | 33,748 | JSON |
-| **Roots** | 438概念 + 18分野 | 920 | TypeScript |
-| **Permissive** | 4つの静的ルート | 8 | 配列リテラル |
-| **合計** | — | **34,676** | — |
+| アプリ | モード | データソース | 説明 |
+|:----|:-------|:------------|:-----|
+| **Context** | SSR + D1 | Cloudflare D1 | 16,836エントリを動的に提供 |
+| **Permissive** | SSR | In-memory | 動的レンダリング |
+| **Roots** | SSG | TypeScript | 数学文書を事前レンダリング |
 
-## コードパターン
+## コードパターン (Roots)
 
-### 設定 (`react-router.config.ts`)
+### 設定 (`apps/roots/react-router.config.ts`)
 
 ```typescript
+// Roots app - SSG mode
 export default {
-  ssr: false,  // SSGモード - 変更禁止
+  ssr: false,  // SSGモード - Rootsのみ
   async prerender() {
     const staticRoutes = extractStaticRoutes(routes);
-    const entryRoutes = generateI18nRoutes(entries, (e) => `/entry/${e.id}`);
-    return [...staticRoutes, ...entryRoutes];
+    const conceptRoutes = generateI18nRoutes(concepts, (c) => `/concept/${c.id}`);
+    return [...staticRoutes, ...conceptRoutes];
   },
 } satisfies Config;
 ```
 
-### ローダー付きルート (`routes/entry.$entryId.tsx`)
+### ローダー付きルート (`routes/concept.$conceptId.tsx`)
 
 ```typescript
 export async function loader({ params }: Route.LoaderArgs) {
-  const entry = getEntryById(params.entryId);
-  if (!entry) throw new Response('Not Found', { status: 404 });
-  return { entry };  // → ビルド時に.dataファイルとして保存
+  const concept = getConceptById(params.conceptId);
+  if (!concept) throw new Response('Not Found', { status: 404 });
+  return { concept };  // → ビルド時に.dataファイルとして保存
 }
 
-export default function EntryPage() {
-  const { entry } = useLoaderData<typeof loader>();
-  return <EntryView entry={entry} />;
+export default function ConceptPage() {
+  const { concept } = useLoaderData<typeof loader>();
+  return <ConceptView concept={concept} />;
 }
 ```
 

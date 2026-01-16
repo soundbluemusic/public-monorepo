@@ -7,9 +7,11 @@ sidebar:
 
 # Permissive — Web開発リソース
 
-**無料Web開発リソース** | 8 SSGページ
+**無料Web開発リソース** | SSR
 
 Permissiveは、許容的ライセンス（MIT、Apacheなど）を持つWeb開発ライブラリとWeb APIドキュメントのキュレーションコレクションです。
+
+> **レンダリングモード:** SSR — サーバーサイドレンダリングで高速かつSEO最適化されたページを提供します。
 
 ## ライブデモ
 
@@ -46,7 +48,7 @@ apps/permissive/
 │   ├── data/            # ライブラリとAPIデータ
 │   └── utils/           # ユーティリティ関数
 ├── public/              # 静的アセット
-└── react-router.config.ts  # SSG設定
+└── react-router.config.ts  # SSR設定
 ```
 
 ## 主要ルート

@@ -5,13 +5,22 @@ description: AIアシスタント向け重要ルール - 禁止事項と必須�
 
 ## 禁止事項 (DO NOT)
 
-### 1. SSGモード変更
+### 1. レンダリングモード違反
 
 :::danger[厳格に禁止]
-- `ssr: true`設定
-- SPA、SSR、ISRモード変換
-- `prerender()`の削除/空にする
+- すべてのアプリでSPAモード（SEO不可）
+- 動的ルートから`loader()`削除
 - 空の`<div id="root"></div>` HTML
+
+**Contextアプリ（SSR + D1）：**
+
+- react-router.config.tsで`ssr: false`設定
+- D1なしでentryデータロード
+
+**Rootsアプリ（SSG）：**
+
+- react-router.config.tsで`ssr: true`設定
+- `prerender()`の削除/空にする
 :::
 
 ### 2. ハードコーディング
@@ -135,8 +144,10 @@ function processData(data: Input): Output {
 
 | 場所 | 禁止アクション |
 |----------|-------------------|
-| `react-router.config.ts` | `ssr: true` |
-| `*.browser.ts` | SSGビルド時実行コード |
+| `apps/context/react-router.config.ts` | `ssr: false`（ContextはSSR + D1） |
+| `apps/permissive/react-router.config.ts` | `ssr: false`（PermissiveはSSR） |
+| `apps/roots/react-router.config.ts` | `ssr: true`（RootsはSSG、`ssr: false`維持） |
+| `*.browser.ts` | ビルド時実行コード |
 | `*.noop.ts` | 実際のロジック（空の実装のみ） |
 | `entry.client.tsx` | orphan DOMクリーンアップロジック削除 |
 

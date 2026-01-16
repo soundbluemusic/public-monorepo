@@ -14,12 +14,23 @@ This guide helps AI assistants (Claude, GPT, Gemini, etc.) contribute effectivel
 
 ## Core Principles
 
-### 1. SSG Only — No Exceptions
+### 1. Rendering Mode Rules
 
-This project uses **100% Static Site Generation**. Never:
-- Set `ssr: true`
-- Remove `prerender()` function
-- Create SPA with empty `<div id="root"></div>`
+This project uses **different rendering modes per app**:
+
+| App | Mode | Data Source |
+|:----|:-----|:-----------|
+| **Context** | **SSR + D1** | Cloudflare D1 |
+| **Permissive** | SSR | In-memory |
+| **Roots** | SSG | TypeScript |
+
+**Prohibited for all apps:**
+- SPA mode (empty `<div id="root"></div>`)
+- Removing `loader()` from dynamic routes
+
+**Context-specific (SSR + D1):**
+- Never set `ssr: false` in react-router.config.ts
+- Always use D1 database for entry data
 
 ### 2. No Downgrades
 

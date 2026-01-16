@@ -14,12 +14,25 @@ description: このプロジェクトに貢献するAIアシスタント向け�
 
 ## 核心原則
 
-### 1. SSG専用 — 例外なし
+### 1. レンダリングモードルール
 
-このプロジェクトは**100%静的サイト生成**を使用しています。絶対にしないこと：
-- `ssr: true`設定
-- `prerender()`関数の削除
-- 空の`<div id="root"></div>`でSPA作成
+このプロジェクトは**アプリごとに異なるレンダリングモード**を使用しています：
+
+| アプリ | モード | データソース |
+|:-------|:-------|:-------------|
+| **Context** | **SSR + D1** | Cloudflare D1 |
+| **Permissive** | SSR | In-memory |
+| **Roots** | SSG | TypeScript |
+
+**すべてのアプリ共通禁止：**
+
+- SPAモード（SEO不可）
+- 動的ルートから`loader()`削除
+
+**Contextアプリ（SSR + D1）：**
+
+- react-router.config.tsで`ssr: false`設定禁止
+- D1なしでentryデータロード禁止
 
 ### 2. ダウングレード禁止
 

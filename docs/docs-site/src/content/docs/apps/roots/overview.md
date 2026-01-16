@@ -7,7 +7,7 @@ sidebar:
 
 # Roots — Math Documentation
 
-**학습자를 위한 수학 문서** | 920 SSG pages
+**학습자를 위한 수학 문서** | SSG
 
 Roots is a comprehensive math documentation site covering concepts from algebra to calculus, organized systematically for learners.
 

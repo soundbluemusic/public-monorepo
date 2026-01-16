@@ -5,13 +5,20 @@ description: Critical rules for AI assistants - what's prohibited and what's req
 
 ## Prohibited Actions (DO NOT)
 
-### 1. SSG Mode Changes
+### 1. Rendering Mode Violations
 
 :::danger[Strictly Prohibited]
-- `ssr: true` setting
-- SPA, SSR, ISR mode conversion
-- Removing/emptying `prerender()`
+- SPA mode for any app (breaks SEO)
+- Removing `loader()` from dynamic routes
 - Empty `<div id="root"></div>` HTML
+
+**Context App (SSR + D1):**
+- Setting `ssr: false` in react-router.config.ts
+- Loading entry data without D1 database
+
+**Roots App (SSG):**
+- Setting `ssr: true` in react-router.config.ts
+- Removing/emptying `prerender()`
 :::
 
 ### 2. Hardcoding
@@ -135,8 +142,10 @@ Before making any changes:
 
 | Location | Prohibited Actions |
 |----------|-------------------|
-| `react-router.config.ts` | `ssr: true` |
-| `*.browser.ts` | Code running at SSG build time |
+| `apps/context/react-router.config.ts` | `ssr: false` (Context uses SSR + D1) |
+| `apps/permissive/react-router.config.ts` | `ssr: false` (Permissive uses SSR) |
+| `apps/roots/react-router.config.ts` | `ssr: true` (Roots uses SSG, keep `ssr: false`) |
+| `*.browser.ts` | Code running at build time |
 | `*.noop.ts` | Actual logic (empty implementation only) |
 | `entry.client.tsx` | Deleting orphan DOM cleanup logic |
 

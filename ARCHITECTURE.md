@@ -16,7 +16,7 @@
 | Permissive | SSR | In-memory | Cloudflare Pages (Functions) |
 | Roots | SSG | TypeScript | Cloudflare Pages (Static) |
 
-> **Context App**: SSR + D1으로 운영 중. SSG + R2는 백업 모드로 유지.
+> **Context App**: SSR + D1 전용. SSG 빌드는 지원하지 않습니다.
 
 ---
 
@@ -108,7 +108,7 @@ SSR 모드에서 사이트맵은 D1에서 실시간 생성됩니다:
 
 ---
 
-## SSG Architecture (SSG 아키텍처) - Roots, Permissive
+## SSG Architecture (SSG 아키텍처) - Roots 앱 전용
 
 ### How It Works
 
@@ -131,17 +131,17 @@ React Router v7의 `prerender()` + `loader()` 패턴으로 **빌드 시** 모든
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-### SSG Pages per App
+### 앱별 렌더링 모드
 
 | App | Mode | Dynamic Routes | Pages | Data Source |
 |:----|:-----|:---------------|:-----:|:------------|
-| **Context** | SSR | 16836 entries (D1) | — | Cloudflare D1 |
+| **Context** | **SSR** | 16836 entries (D1) | 동적 | Cloudflare D1 |
 | **Roots** | SSG | 438 concepts + 18 fields | 920 | TypeScript |
 | **Permissive** | SSR | 4 static routes | 8 | In-memory |
 
-> Context는 SSR 모드로 운영되어 SSG 페이지 수가 없음. 모든 entry 페이지는 D1에서 동적 생성.
+> **Context는 SSR + D1 전용**. 모든 entry 페이지는 D1에서 실시간 조회합니다.
 
-### Code Pattern
+### SSG Code Pattern (Roots 앱)
 
 ```typescript
 // react-router.config.ts
@@ -149,16 +149,16 @@ export default {
   ssr: false,  // SSG mode
   async prerender() {
     const staticRoutes = extractStaticRoutes(routes);
-    const entryRoutes = generateI18nRoutes(entries, (e) => `/entry/${e.id}`);
-    return [...staticRoutes, ...entryRoutes];
+    const conceptRoutes = generateI18nRoutes(concepts, (c) => `/concept/${c.id}`);
+    return [...staticRoutes, ...conceptRoutes];
   },
 } satisfies Config;
 
-// routes/entry.$entryId.tsx
+// routes/concept.$conceptId.tsx
 export async function loader({ params }: Route.LoaderArgs) {
-  const entry = getEntryById(params.entryId);
-  if (!entry) throw new Response('Not Found', { status: 404 });
-  return { entry };  // → saved as .data file at build time
+  const concept = getConceptById(params.conceptId);
+  if (!concept) throw new Response('Not Found', { status: 404 });
+  return { concept };  // → saved as .data file at build time
 }
 ```
 
@@ -172,8 +172,8 @@ routes.ts에서 다국어 라우트를 정의할 때:
 
 ```typescript
 // routes.ts
-route('entry/:entryId', entryFile, { id: 'entry-en' }),      // 영어
-route('ko/entry/:entryId', entryFile, { id: 'entry-ko' }),   // 한국어
+route('concept/:conceptId', conceptFile, { id: 'concept-en' }),      // 영어
+route('ko/concept/:conceptId', conceptFile, { id: 'concept-ko' }),   // 한국어
 ```
 
 `ko`는 **파라미터가 아닌 고정 문자열**입니다. 따라서 `params.locale`은 항상 `undefined`가 됩니다.
@@ -183,35 +183,22 @@ route('ko/entry/:entryId', entryFile, { id: 'entry-ko' }),   // 한국어
 ```typescript
 import { getLocaleFromPath } from '@soundblue/i18n';
 
-// ✅ loader에서 (SSG 빌드 시)
-export async function loader({ params, request }) {
+// ✅ SSR loader에서 (Context 앱)
+export async function loader({ params, request, context }) {
+  const db = context.cloudflare.env.DB;
   const url = new URL(request.url);
   const locale = getLocaleFromPath(url.pathname);  // '/ko/entry/...' → 'ko'
-  const entry = await getEntryByIdForLocale(params.entryId, locale);
+  const entry = await getEntryByIdFromD1(db, params.entryId, locale);
   return { entry };
 }
 
-// ✅ clientLoader에서 (브라우저 런타임)
-export async function clientLoader({ params, serverLoader }) {
-  try {
-    return await serverLoader();
-  } catch {
-    const locale = getLocaleFromPath(window.location.pathname);
-    const entry = await getEntryByIdForLocale(params.entryId, locale);
-    return { entry };
-  }
+// ✅ SSG loader에서 (Roots 앱)
+export async function loader({ params, request }) {
+  const url = new URL(request.url);
+  const locale = getLocaleFromPath(url.pathname);
+  const concept = getConceptByIdForLocale(params.conceptId, locale);
+  return { concept };
 }
-```
-
-#### 검증
-
-```bash
-# params.locale 사용 여부 검사
-pnpm verify:ssg
-
-# 빌드된 HTML 콘텐츠 검증
-grep -r "단어를 찾을 수 없습니다" apps/context/build/client/ko/entry/ | wc -l
-# 기대값: 0 (404 콘텐츠 없어야 함)
 ```
 
 ---
@@ -481,54 +468,34 @@ startTransition(() => {
 
 ## Scaling Strategy (확장 전략)
 
-### 100만+ 엔트리 대응
+### Context App: SSR + D1 아키텍처
 
-현재 아키텍처는 100만 개 이상의 엔트리를 지원하도록 설계되었습니다.
+Context 앱은 SSR + Cloudflare D1으로 **무제한 확장**이 가능합니다.
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  Distributed Build (분산 빌드)                                   │
+│  SSR + D1 Architecture                                          │
 │                                                                  │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐       ┌──────────┐   │
-│  │ Chunk 0  │  │ Chunk 1  │  │ Chunk 2  │  ...  │ Chunk N  │   │
-│  │ 50K each │  │ 50K each │  │ 50K each │       │ 50K each │   │
-│  └────┬─────┘  └────┬─────┘  └────┬─────┘       └────┬─────┘   │
-│       │             │             │                   │         │
-│       └─────────────┴─────────────┴───────────────────┘         │
-│                              │                                   │
-│                              ▼                                   │
-│                    ┌─────────────────┐                          │
-│                    │  Merge & Sync   │                          │
-│                    │  (rclone → R2)  │                          │
-│                    └─────────────────┘                          │
+│  ┌──────────┐    ┌──────────┐    ┌──────────┐                  │
+│  │  Client  │ → │  Pages   │ → │    D1     │                  │
+│  │ Request  │    │ Function │    │ Database  │                  │
+│  └──────────┘    └──────────┘    └──────────┘                  │
+│       ↑                               │                         │
+│       └───────────────────────────────┘                         │
+│              SSR HTML Response                                   │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-### 빌드 모드
+### 장점
 
-| 환경변수 | 용도 | 대상 |
-|:---------|:-----|:-----|
-| `BUILD_TARGET=pages` | 핵심 페이지만 | Cloudflare Pages |
-| `BUILD_TARGET=r2` | 엔트리 전체 (단일) | R2 (소규모) |
-| `BUILD_TARGET=chunked` | **청크 분할 (권장)** | R2 (대규모) |
-| `BUILD_TARGET=all` | 전체 | 로컬 테스트 |
+| 항목 | SSG (레거시) | SSR + D1 (현재) |
+|:-----|:-------------|:----------------|
+| 빌드 시간 | 엔트리 수에 비례 | **일정** (~30초) |
+| 배포 크기 | 34,000+ HTML 파일 | **정적 페이지만** |
+| 확장성 | OOM 위험 | **무제한** |
+| 데이터 갱신 | 재빌드 필요 | **즉시 반영** |
 
-### 청크 빌드 흐름
-
-```bash
-# 1. 청크 메타데이터 확인
-npx tsx -e "import('./app/data/route-chunks.js').then(m => m.getChunkMetadata().then(console.log))"
-
-# 2. 개별 청크 빌드
-BUILD_TARGET=chunked CHUNK_INDEX=0 CHUNK_SIZE=50000 npx react-router build
-BUILD_TARGET=chunked CHUNK_INDEX=1 CHUNK_SIZE=50000 npx react-router build
-# ...
-
-# 3. GitHub Actions Matrix로 병렬화
-# .github/workflows/build-context-distributed.yml 참조
-```
-
-### 사이트맵 분할
+### 사이트맵 (D1에서 동적 생성)
 
 Google 제한 (50,000 URL/파일) 대응:
 
@@ -542,22 +509,14 @@ sitemap.xml (index)
 └── sitemap-entry-{categoryId}.xml
 ```
 
-### 성능 비교
-
-| 엔트리 수 | 단일 빌드 | 분산 빌드 (20 병렬) |
-|:----------|:----------|:--------------------|
-| 1.6만 | 1.3분 | 1.3분 |
-| 10만 | ~8분 | ~2분 |
-| 100만 | ~78분 (OOM 위험) | **~8분** |
-
 ### 관련 파일
 
 | 파일 | 역할 |
 |:-----|:-----|
-| `apps/context/react-router.config.ts` | BUILD_TARGET 분기 로직 |
-| `apps/context/app/data/route-chunks.ts` | 청크 계산 및 생성 |
-| `apps/context/scripts/generate-sitemaps.ts` | 카테고리별 사이트맵 생성 |
-| `.github/workflows/build-context-distributed.yml` | Matrix 병렬 빌드 |
+| `apps/context/react-router.config.ts` | SSR 설정 (`ssr: true`) |
+| `apps/context/wrangler.toml` | D1 바인딩 설정 |
+| `apps/context/app/services/d1.ts` | D1 쿼리 함수 |
+| `apps/context/app/routes/sitemap[.xml].tsx` | 동적 사이트맵 생성 |
 
 ---
 
@@ -585,6 +544,12 @@ apps/permissive ──────┘    @soundblue/pwa
 ---
 
 ## Version History (변경 이력)
+
+### v3.0.0 (2026-01-16)
+- **Context 앱 SSR + D1 전용으로 전환**
+- SSG 빌드 모드 제거 (BUILD_TARGET 환경변수 폐기)
+- Entry 페이지 D1 실시간 조회로 통합
+- 사이트맵 D1 동적 생성
 
 ### v2.1.0 (2026-01-02)
 - SSG Hydration Workaround 문서화

@@ -1,62 +1,81 @@
 ---
 title: 아키텍처
-description: 모노레포의 SSG 아키텍처와 패키지 레이어 시스템 이해하기
+description: 모노레포의 렌더링 모드와 패키지 레이어 시스템 이해하기
 ---
 
 # 아키텍처 개요
 
 이 문서는 SoundBlue Public Monorepo에서 사용하는 아키텍처 결정과 패턴을 설명합니다.
 
-## SSG 아키텍처
+## 렌더링 모드
 
-모든 애플리케이션은 React Router v7의 `prerender()` 패턴을 사용한 **정적 사이트 생성(SSG)** 방식입니다.
+각 애플리케이션은 용도에 맞게 최적화된 렌더링 모드를 사용합니다:
 
-### 작동 방식
+| 앱 | 모드 | 데이터 소스 | 설명 |
+|----|------|------------|------|
+| **Context** | **SSR + D1** | Cloudflare D1 | 16,836개 항목을 동적 제공 |
+| **Permissive** | SSR | In-memory | 웹 개발 자료 |
+| **Roots** | SSG | TypeScript | 수학 문서 사전 렌더링 |
+
+### SSR + D1 아키텍처 (Context)
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                        빌드 시점                                │
-│                                                                 │
-│   prerender()  →  loader()  →  HTML 파일  →  CDN               │
-│                                                                 │
-│   ┌──────────┐   ┌──────────┐   ┌──────────┐   ┌──────────┐   │
-│   │ 라우트   │ → │ 데이터   │ → │ HTML     │ → │ 정적     │   │
-│   │ 생성     │   │ 가져오기 │   │ 렌더링   │   │ 배포     │   │
-│   └──────────┘   └──────────┘   └──────────┘   └──────────┘   │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-
-                              ↓
-
-┌─────────────────────────────────────────────────────────────────┐
-│                       런타임 (CDN)                              │
-│                                                                 │
-│   정적 HTML  →  Hydration  →  인터랙티브 React 앱              │
-│                                                                 │
+│  런타임 (Cloudflare Pages Functions)                            │
+│                                                                  │
+│  ┌──────────┐    ┌──────────┐    ┌──────────┐                  │
+│  │  클라이언트 │ → │  Pages   │ → │    D1     │                  │
+│  │  요청     │    │ Function │    │ 데이터베이스│                  │
+│  └──────────┘    └──────────┘    └──────────┘                  │
+│       ↑                               │                         │
+│       └───────────────────────────────┘                         │
+│              SSR HTML 응답                                       │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-### SSG 설정 패턴
+### SSR 설정 패턴 (Context)
 
 ```typescript
 // react-router.config.ts
 export default {
-  ssr: false,  // ← SSG 모드 (절대 true로 변경 금지)
+  ssr: true,  // ← SSR 모드 - D1 쿼리를 런타임에 실행
   async prerender() {
-    const staticRoutes = extractStaticRoutes(routes);
-    const dynamicRoutes = generateI18nRoutes(entries, `/entry/`);
-    return [...staticRoutes, ...dynamicRoutes];
+    // 정적 페이지만 (홈, 소개, 카테고리)
+    return [...staticRoutes, ...categoryRoutes];
   },
 } satisfies Config;
 ```
 
-### 생성된 페이지 수
+### SSG 아키텍처 (Roots)
 
-| 앱 | SSG 페이지 | 설명 |
-|----|-----------|------|
-| Context | 33,748 | 모든 사전 항목 × 2개 언어 |
-| Permissive | 8 | 라이브러리 + Web API 페이지 |
-| Roots | 920 | 수학 개념 × 2개 언어 |
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  빌드 시점                                                       │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐         │
+│  │ prerender() │ → │  loader()   │ → │  HTML + .data │         │
+│  │ (라우트 목록)│    │ (데이터 조회)│    │  (정적 파일)  │         │
+│  └─────────────┘    └─────────────┘    └─────────────┘         │
+└─────────────────────────────────────────────────────────────────┘
+                              ↓
+┌─────────────────────────────────────────────────────────────────┐
+│  런타임 (CDN)                                                    │
+│  정적 HTML 즉시 제공 — 서버 불필요                                │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### SSG 설정 패턴 (Roots)
+
+```typescript
+// react-router.config.ts
+export default {
+  ssr: false,  // ← SSG 모드 (Roots만) - 모든 페이지 빌드 시 사전 렌더링
+  async prerender() {
+    const staticRoutes = extractStaticRoutes(routes);
+    const conceptRoutes = generateI18nRoutes(concepts, `/concept/`);
+    return [...staticRoutes, ...conceptRoutes];
+  },
+} satisfies Config;
+```
 
 ## 패키지 레이어 시스템
 
@@ -166,14 +185,16 @@ export const meta = dynamicMetaFactory<typeof loader>({
 
 ## 핵심 규칙
 
-### 1. SSG 모드만 허용
+### 1. 각 앱의 렌더링 모드 준수
 
 ```typescript
-// ✅ 올바름
+// Context (SSR + D1)
+export default { ssr: true, ... }
+
+// Roots (SSG)
 export default { ssr: false, ... }
 
-// ❌ 절대 금지
-export default { ssr: true, ... }
+// ❌ SPA 모드 사용 금지 (loader 없이 클라이언트만 렌더링)
 ```
 
 ### 2. 하드코딩 금지

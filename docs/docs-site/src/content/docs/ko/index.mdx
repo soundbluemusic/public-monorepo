@@ -3,7 +3,7 @@ title: SoundBlue Public Monorepo
 description: Context, Permissive, Roots 애플리케이션을 위한 완전한 문서 - 학습자를 위한 세 개의 앱
 template: splash
 hero:
-  tagline: 학습자를 위한 3개의 100% SSG 애플리케이션 — 한국어 사전, 웹 개발 리소스, 수학 문서
+  tagline: 학습자를 위한 3개의 애플리케이션 — 한국어 사전 (SSR + D1), 웹 개발 리소스 (SSR), 수학 문서 (SSG)
   image:
     file: ../../../assets/hero.svg
   actions:
@@ -26,23 +26,23 @@ import AppCards from '../../../components/AppCards.astro';
 
 <AppCards locale="ko" />
 
-## 왜 SSG인가?
+## 렌더링 모드
 
 <CardGrid>
-  <Card title="⚡ 즉시 로드" icon="rocket">
-    전 세계 CDN 엣지 위치에서 미리 렌더링된 HTML 제공. 서버 처리 없음, 대기 없음.
+  <Card title="⚡ SSR + D1 (Context)" icon="rocket">
+    Cloudflare D1 데이터베이스를 활용한 서버 사이드 렌더링. 16,836개 엔트리를 동적으로 제공하며 즉시 업데이트됩니다.
   </Card>
 
-  <Card title="🔒 기본 보안" icon="approve-check">
-    서버가 없으면 서버 취약점도 없습니다. 정적 파일은 본질적으로 안전합니다.
+  <Card title="🔒 SSR (Permissive)" icon="approve-check">
+    웹 개발 리소스를 위한 서버 사이드 렌더링. 빠르고 안전하며 SEO에 최적화되어 있습니다.
   </Card>
 
-  <Card title="💰 무료 호스팅" icon="sun">
-    무제한 대역폭의 Cloudflare Pages에서 호스팅. 유지할 서버 없음.
+  <Card title="📐 SSG (Roots)" icon="sun">
+    수학 문서를 위한 정적 사이트 생성. 모든 페이지가 빌드 시 미리 생성됩니다.
   </Card>
 
   <Card title="🌐 SEO 최적화" icon="magnifier">
-    검색 엔진이 사용할 수 있는 전체 HTML 콘텐츠. 적절한 메타 태그와 사이트맵 포함.
+    검색 엔진이 사용할 수 있는 전체 HTML 콘텐츠. 모든 모드에서 크롤러에게 완전한 HTML을 제공합니다.
   </Card>
 </CardGrid>
 
@@ -50,7 +50,7 @@ import AppCards from '../../../components/AppCards.astro';
 
 <CardGrid stagger>
   <Card title="React Router v7" icon="seti:react">
-    클라이언트 사이드 하이드레이션과 함께 정적 사이트 생성을 위한 `prerender()` 패턴 사용.
+    동적 콘텐츠를 위한 D1 연동 SSR 모드, 정적 콘텐츠를 위한 `prerender()` SSG 모드.
   </Card>
 
   <Card title="TypeScript" icon="seti:typescript">
@@ -76,7 +76,7 @@ import AppCards from '../../../components/AppCards.astro';
 
 <LinkCard
   title="아키텍처 개요"
-  description="4계층 패키지 시스템과 SSG 패턴 이해하기"
+  description="4계층 패키지 시스템과 렌더링 모드 이해하기"
   href="/public-monorepo/ko/guides/architecture/"
 />
 
