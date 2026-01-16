@@ -77,6 +77,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           name="google-site-verification"
           content="mw0M1q-2K63FX-NZCL5AetN7V6VI6cXY5ItnMXyl85A"
         />
+        <meta name="msvalidate.01" content="2555E807B2875180F8DAC1EB5D284D3D" />
         <Meta />
         <Links />
         <script
