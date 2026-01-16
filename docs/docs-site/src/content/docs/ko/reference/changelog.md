@@ -129,7 +129,7 @@ import { Button } from '@soundblue/ui/components';
 ### 기능
 - 3개 앱: Context, Permissive, Roots
 - 6개 패키지: core, data, search, i18n, shared, shared-react
-- 100% SSG 아키텍처
+- SSG 아키텍처 (이후 Context는 SSR + D1로 마이그레이션)
 - 다국어 지원 (en, ko)
 
 ### 패키지 (v1.0)

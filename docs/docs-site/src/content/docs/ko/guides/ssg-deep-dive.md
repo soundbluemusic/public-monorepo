@@ -99,7 +99,7 @@ Roots 앱은 정적 수학 문서를 위해 **SSG**를 사용합니다.
 ```typescript
 // apps/roots/react-router.config.ts
 export default {
-  ssr: false,  // SSG 모드 - 빌드 시 모든 페이지 사전 렌더링
+  ssr: false,  // SSG 모드 (Roots만) - 빌드 시 모든 페이지 사전 렌더링
   async prerender() {
     const staticRoutes = extractStaticRoutes(routes);
     const conceptRoutes = generateI18nRoutes(concepts, (c) => `/concept/${c.id}`);

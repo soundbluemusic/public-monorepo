@@ -62,9 +62,9 @@
   "i18n": {
     "stats": {
       "pages": {
-        "en": "SSG Pages",
-        "ko": "SSG 페이지",
-        "ja": "SSGページ"
+        "en": "HTML Pages",
+        "ko": "HTML 페이지",
+        "ja": "HTMLページ"
       },
       "apps": {
         "en": "Applications",
@@ -76,18 +76,18 @@
         "ko": "패키지",
         "ja": "パッケージ"
       },
-      "static": {
-        "en": "Static",
-        "ko": "정적",
-        "ja": "静的"
+      "noSpa": {
+        "en": "SSR/SSG Only",
+        "ko": "SSR/SSG 전용",
+        "ja": "SSR/SSGのみ"
       }
     },
     "appDetails": {
       "context": {
         "description": {
-          "en": "33,748 SSG pages with context-based definitions, examples, and related expressions. Supports both English and Korean UI.",
-          "ko": "맥락 기반 정의, 예문, 관련 표현이 포함된 33,748개의 SSG 페이지. 영어와 한국어 UI 지원.",
-          "ja": "文脈ベースの定義、例文、関連表現を含む33,748のSSGページ。英語と韓国語UIをサポート。"
+          "en": "16,836 entries served via SSR + Cloudflare D1 with context-based definitions, examples, and related expressions. Supports both English and Korean UI.",
+          "ko": "맥락 기반 정의, 예문, 관련 표현이 포함된 16,836개 엔트리를 SSR + Cloudflare D1로 제공. 영어와 한국어 UI 지원.",
+          "ja": "文脈ベースの定義、例文、関連表現を含む16,836エントリをSSR + Cloudflare D1で提供。英語と韓国語UIをサポート。"
         },
         "features": {
           "en": ["16,836 dictionary entries", "25 categories", "53 example conversations"],

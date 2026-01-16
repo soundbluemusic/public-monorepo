@@ -18,7 +18,7 @@ const links = {
   pages: `${basePath}${localePath}/guides/architecture/`,
   apps: `${basePath}${localePath}/apps/context/overview/`,
   packages: `${basePath}${localePath}/packages/`,
-  static: `${basePath}${localePath}/guides/ssg-deep-dive/`,
+  noSpa: `${basePath}${localePath}/guides/introduction/`,
 };
 ---
 
@@ -35,9 +35,9 @@ const links = {
     <div class="stat-value">{totals.packages}</div>
     <div class="stat-label">{labels.packages[locale]}</div>
   </a>
-  <a href={links.static} class="stat-item stat-link">
-    <div class="stat-value">100%</div>
-    <div class="stat-label">{labels.static[locale]}</div>
+  <a href={links.noSpa} class="stat-item stat-link">
+    <div class="stat-value">No SPA</div>
+    <div class="stat-label">{labels.noSpa[locale]}</div>
   </a>
 </div>
 

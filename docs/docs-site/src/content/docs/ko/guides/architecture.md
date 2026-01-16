@@ -68,7 +68,7 @@ export default {
 ```typescript
 // react-router.config.ts
 export default {
-  ssr: false,  // ← SSG 모드 - 모든 페이지 빌드 시 사전 렌더링
+  ssr: false,  // ← SSG 모드 (Roots만) - 모든 페이지 빌드 시 사전 렌더링
   async prerender() {
     const staticRoutes = extractStaticRoutes(routes);
     const conceptRoutes = generateI18nRoutes(concepts, `/concept/`);
