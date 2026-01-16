@@ -88,11 +88,18 @@ binding = "DB"
 database_name = "context-db"
 database_id = "55c25518-db3d-4547-8ad8-e36fc66493c8"
 
-// public/_routes.json
+// public/_routes.json (Pages Functions 라우팅)
 {
-  "include": ["/entry/*", "/ko/entry/*", "/sitemap*.xml"],
+  "include": ["/__manifest", "/api/*", "/data/*", "/entry/*", "/ko/entry/*", "/sitemap.xml", "/sitemap-*.xml"],
   "exclude": []
 }
+
+// functions/[[path]].ts (Pages Functions 핸들러)
+import { createPagesFunctionHandler } from '@react-router/cloudflare';
+export const onRequest = createPagesFunctionHandler({
+  build: serverBuild,
+  getLoadContext: (ctx) => ctx.context,  // D1 바인딩 전달
+});
 ```
 
 ### Dynamic Sitemap Generation
@@ -105,6 +112,7 @@ SSR 모드에서 사이트맵은 D1에서 실시간 생성됩니다:
 | `/sitemap-pages.xml` | 정적 페이지 | 하드코딩 |
 | `/sitemap-categories.xml` | 카테고리 목록 | D1 categories |
 | `/sitemap-entry-{categoryId}.xml` | 카테고리별 엔트리 | D1 entries |
+| `/api/offline-db` | 오프라인 DB 덤프 | D1 전체 테이블 |
 
 ---
 

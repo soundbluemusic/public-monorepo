@@ -45,13 +45,16 @@ react-router.config.ts
 
 Cloudflare Pages:
 ├── Static Assets (build/client/)
-├── Functions (_worker.js)
+├── functions/[[path]].ts (Pages Functions 핸들러)
+│   ├── /__manifest → React Router Lazy Route Discovery
 │   ├── /entry/:id → D1 쿼리
-│   ├── /category/:id → D1 쿼리
+│   ├── /api/offline-db → D1 전체 덤프 (오프라인용)
 │   └── /sitemap*.xml → D1에서 동적 생성
+├── public/_routes.json (Functions 라우팅 규칙)
 └── D1 Database (context-db)
     ├── entries (16836 rows)
-    └── categories (52 rows)
+    ├── categories (52 rows)
+    └── conversations (53 rows)
 ```
 
 ### D1 Database Schema
@@ -96,7 +99,8 @@ SSR 모드에서 사이트맵은 D1에서 **실시간 동적 생성**됩니다:
 | `/sitemap.xml` | 인덱스 (모든 사이트맵 링크) |
 | `/sitemap-pages.xml` | 정적 페이지 |
 | `/sitemap-categories.xml` | 카테고리 목록 |
-| `/sitemap-entry-{categoryId}.xml` | 카테고리별 엔트리 (25개)
+| `/sitemap-entry-{categoryId}.xml` | 카테고리별 엔트리 (52개) |
+| `/api/offline-db` | 오프라인 DB 덤프 (JSON) |
 
 ---
 
@@ -111,6 +115,8 @@ SSR 모드에서 사이트맵은 D1에서 **실시간 동적 생성**됩니다:
 | `/conversation/:conversationId` | ✓ | ✓ | Static | Conversation page |
 | `/sitemap.xml` | ✓ | - | **SSR** | Sitemap index (D1) |
 | `/sitemap-*.xml` | ✓ | - | **SSR** | Category sitemaps (D1) |
+| `/api/offline-db` | ✓ | - | **SSR** | Offline DB dump (D1) |
+| `/download` | ✓ | ✓ | Static | Offline download page |
 | `/about` | ✓ | ✓ | Static | About |
 | `/my-learning` | ✓ | ✓ | Static | Learning progress |
 | `/built-with` | ✓ | ✓ | Static | Tech stack |
@@ -132,6 +138,7 @@ SSR 모드에서 사이트맵은 D1에서 **실시간 동적 생성**됩니다:
 | 🌐 i18n | URL-based (`/ko/*`) + Paraglide |
 | 💾 Favorites | IndexedDB (Dexie) |
 | 📊 Study Records | IndexedDB (Dexie) |
+| 📥 Offline Mode | D1 → IndexedDB 동기화 (`/api/offline-db`) |
 
 ---
 
@@ -179,8 +186,10 @@ pnpm deploy  # Cloudflare Pages 배포
 | File | Purpose |
 |:-----|:--------|
 | `wrangler.toml` | D1 바인딩, Pages 설정 |
-| `public/_routes.json` | Functions 라우팅 규칙 |
+| `functions/[[path]].ts` | Pages Functions 핸들러 (D1 바인딩 전달) |
+| `public/_routes.json` | Functions 라우팅 규칙 (`/__manifest`, `/api/*` 등) |
 | `react-router.config.ts` | SSR 설정 (`ssr: true` 고정) |
+| `app/routes.ts` | 라우트 정의 (API 엔드포인트 포함) |
 
 ---
 
