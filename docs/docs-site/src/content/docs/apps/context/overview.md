@@ -7,9 +7,11 @@ sidebar:
 
 # Context — Korean Dictionary
 
-**학습자를 위한 한국어 사전** | 33,748 SSG pages
+**학습자를 위한 한국어 사전** | SSR + Cloudflare D1
 
 Context is a context-based Korean dictionary designed specifically for language learners. It provides word meanings, example sentences, and related expressions in a user-friendly interface.
+
+> **Rendering Mode:** SSR + D1 — All entry pages are served dynamically from Cloudflare D1 database.
 
 ## Live Demo
 
@@ -19,7 +21,7 @@ Context is a context-based Korean dictionary designed specifically for language 
 
 ### 📚 Comprehensive Dictionary
 
-- **33,748 entries** covering vocabulary from beginner to advanced
+- **16,836 entries** covering vocabulary from beginner to advanced
 - Context-based definitions with real-world usage examples
 - Related expressions and collocations
 - Bilingual support (Korean/English)
@@ -49,11 +51,12 @@ apps/context/
 ├── app/
 │   ├── components/      # React components
 │   ├── routes/          # React Router routes
-│   ├── data/            # Entry data loaders
+│   ├── services/        # D1 database queries
 │   ├── hooks/           # Custom React hooks
 │   └── utils/           # Utility functions
 ├── public/              # Static assets
-└── react-router.config.ts  # SSG configuration
+├── wrangler.toml        # D1 binding configuration
+└── react-router.config.ts  # SSR configuration
 ```
 
 ## Key Routes
@@ -66,20 +69,30 @@ apps/context/
 | `/about` | About page |
 | `/sitemap.xml` | XML sitemap |
 
-## SSG Configuration
+## SSR + D1 Configuration
 
-Context uses React Router v7's prerender pattern:
+Context uses React Router v7's SSR mode with Cloudflare D1:
 
 ```typescript
 // react-router.config.ts
 export default {
-  ssr: false,  // SSG mode
+  ssr: true,  // SSR mode - D1 queries at runtime
   async prerender() {
-    const staticRoutes = extractStaticRoutes(routes);
-    const entryRoutes = generateI18nRoutes(entries, `/entry/`);
-    return [...staticRoutes, ...entryRoutes];
+    // Only static pages (home, about, categories)
+    // Entry pages served dynamically from D1
+    return [...staticRoutes, ...categoryRoutes];
   },
 } satisfies Config;
+```
+
+```typescript
+// Loader pattern - D1 query
+export async function loader({ params, context }: Route.LoaderArgs) {
+  const db = context.cloudflare.env.DB;
+  const entry = await db.prepare('SELECT * FROM entries WHERE id = ?')
+    .bind(params.entryId).first();
+  return { entry };
+}
 ```
 
 ## Development

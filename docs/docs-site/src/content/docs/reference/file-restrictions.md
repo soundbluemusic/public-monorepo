@@ -48,16 +48,16 @@ The `prerender` export is required for SSG to work. Removing it breaks the build
 
 **Purpose:** React Router configuration
 
-:::danger[Keep ssr: false]
-Setting `ssr: true` will break the SSG architecture. This project is 100% SSG only.
+:::danger[Respect Each App's Rendering Mode]
+Each app has a specific rendering mode. Do not change it without understanding the architecture.
 :::
 
 ```typescript
-// This MUST remain
-export default {
-  ssr: false,  // DO NOT CHANGE
-  async prerender() { /* ... */ }
-} satisfies Config;
+// Context app - SSR + D1 (DO NOT change to ssr: false)
+export default { ssr: true, ... }
+
+// Roots app - SSG (DO NOT change to ssr: true)
+export default { ssr: false, async prerender() { ... } }
 ```
 
 ## File Naming Conventions
@@ -115,7 +115,7 @@ Before modifying any protected file:
 
 1. ✅ Do I understand WHY this code exists?
 2. ✅ Have I read the related documentation?
-3. ✅ Will my change break SSG?
+3. ✅ Will my change break the rendering mode (SSR/SSG)?
 4. ✅ Will my change break hydration?
 5. ✅ Have I tested in production build?
 

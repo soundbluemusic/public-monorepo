@@ -5,13 +5,22 @@ description: AI 어시스턴트를 위한 중요 규칙 - 금지 사항과 필�
 
 ## 금지 사항 (DO NOT)
 
-### 1. SSG 모드 변경
+### 1. 렌더링 모드 위반
 
 :::danger[엄격히 금지]
-- `ssr: true` 설정
-- SPA, SSR, ISR 모드 전환
-- `prerender()` 제거/비우기
+- 모든 앱에서 SPA 모드 (SEO 불가)
+- 동적 라우트에서 `loader()` 제거
 - 빈 `<div id="root"></div>` HTML
+
+**Context 앱 (SSR + D1):**
+
+- react-router.config.ts에서 `ssr: false` 설정
+- D1 없이 entry 데이터 로딩
+
+**Roots 앱 (SSG):**
+
+- react-router.config.ts에서 `ssr: true` 설정
+- `prerender()` 제거/비우기
 :::
 
 ### 2. 하드코딩
@@ -135,8 +144,9 @@ function processData(data: Input): Output {
 
 | 위치 | 금지 액션 |
 |----------|-------------------|
-| `react-router.config.ts` | `ssr: true` |
-| `*.browser.ts` | SSG 빌드 시점 실행 코드 |
+| `apps/context/react-router.config.ts` | `ssr: false` (Context는 SSR 전용) |
+| `apps/roots/react-router.config.ts` | `ssr: true` (Roots는 SSG 전용) |
+| `*.browser.ts` | 빌드 시점 실행 코드 |
 | `*.noop.ts` | 실제 로직 (빈 구현만) |
 | `entry.client.tsx` | orphan DOM 정리 로직 삭제 |
 

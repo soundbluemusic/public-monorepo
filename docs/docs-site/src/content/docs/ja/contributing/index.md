@@ -35,22 +35,26 @@ pnpm dev:roots       # → http://localhost:3005
 
 ## 重要なルール
 
-:::danger[SSGモードのみ]
-このプロジェクトは**100%静的サイト生成（SSG）専用**です。
+:::danger[SPAモード禁止]
+このプロジェクトは**SSRとSSGモードのみ使用**します。SPAモードは空のHTMLを返すためSEOが不可能なので禁止です。
 
-SPA、SSR、ISR、その他のレンダリングモードへの切り替えは禁止です。
+各アプリのレンダリングモード：
+
+- **Context**: SSR + Cloudflare D1
+- **Permissive**: SSR
+- **Roots**: SSG（920ページ）
 :::
 
-### 1. レンダリングモード変更禁止
+### 1. 各アプリのレンダリングモードを遵守
 
 ```typescript
-// react-router.config.ts
-export default {
-  ssr: false,  // ← 絶対にtrueに変更禁止
-  async prerender() {
-    return ['/', '/ko', ...allRoutes];
-  },
-}
+// Contextアプリ (SSR + D1)
+export default { ssr: true, ... }
+
+// Rootsアプリ (SSG)
+export default { ssr: false, async prerender() { ... } }
+
+// ❌ SPAモード使用禁止（loaderなし、クライアントのみレンダリング）
 ```
 
 ### 2. ハードコーディング禁止

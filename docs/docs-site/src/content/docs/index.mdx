@@ -3,7 +3,7 @@ title: SoundBlue Public Monorepo
 description: Complete documentation for Context, Permissive, and Roots applications - Three apps for learners (학습자를 위한 세 개의 앱)
 template: splash
 hero:
-  tagline: Three 100% SSG applications for learners — Korean Dictionary, Web Dev Resources, and Math Documentation
+  tagline: Three applications for learners — Korean Dictionary (SSR + D1), Web Dev Resources (SSR), and Math Documentation (SSG)
   image:
     file: ../../assets/hero.svg
   actions:
@@ -26,23 +26,23 @@ import AppCards from '../../components/AppCards.astro';
 
 <AppCards locale="en" />
 
-## Why SSG?
+## Rendering Modes
 
 <CardGrid>
-  <Card title="⚡ Instant Load" icon="rocket">
-    Pre-rendered HTML served from CDN edge locations worldwide. No server processing, no waiting.
+  <Card title="⚡ SSR + D1 (Context)" icon="rocket">
+    Server-side rendering with Cloudflare D1 database. 16,836 entries served dynamically with instant updates.
   </Card>
 
-  <Card title="🔒 Secure by Default" icon="approve-check">
-    No server means no server vulnerabilities. Static files are inherently secure.
+  <Card title="🔒 SSR (Permissive)" icon="approve-check">
+    Server-side rendering for web dev resources. Fast, secure, and SEO-optimized.
   </Card>
 
-  <Card title="💰 Zero Cost Hosting" icon="sun">
-    Hosted on Cloudflare Pages with unlimited bandwidth. No servers to maintain.
+  <Card title="📐 SSG (Roots)" icon="sun">
+    Static site generation for math documentation. 920 pages pre-built at build time.
   </Card>
 
   <Card title="🌐 SEO Optimized" icon="magnifier">
-    Full HTML content available to search engines. Proper meta tags and sitemaps included.
+    Full HTML content available to search engines. All modes provide complete HTML for crawlers.
   </Card>
 </CardGrid>
 
@@ -50,7 +50,7 @@ import AppCards from '../../components/AppCards.astro';
 
 <CardGrid stagger>
   <Card title="React Router v7" icon="seti:react">
-    Using the `prerender()` pattern for static site generation with client-side hydration.
+    SSR mode with D1 for dynamic content, SSG mode with `prerender()` for static content.
   </Card>
 
   <Card title="TypeScript" icon="seti:typescript">
@@ -76,7 +76,7 @@ import AppCards from '../../components/AppCards.astro';
 
 <LinkCard
   title="Architecture Overview"
-  description="Understand the 4-layer package system and SSG patterns"
+  description="Understand the 4-layer package system and rendering modes"
   href="/public-monorepo/guides/architecture/"
 />
 

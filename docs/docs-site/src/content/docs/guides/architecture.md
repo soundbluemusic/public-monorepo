@@ -1,62 +1,81 @@
 ---
 title: Architecture
-description: Understanding the SSG architecture and package layer system of the monorepo
+description: Understanding the rendering modes and package layer system of the monorepo
 ---
 
 # Architecture Overview
 
 This document explains the architectural decisions and patterns used in the SoundBlue Public Monorepo.
 
-## SSG Architecture
+## Rendering Modes
 
-All applications use **Static Site Generation (SSG)** with React Router v7's `prerender()` pattern.
+Each application uses a different rendering mode optimized for its use case:
 
-### How It Works
+| App | Mode | Data Source | Description |
+|:----|:-----|:------------|:------------|
+| **Context** | **SSR + D1** | Cloudflare D1 | 16,836 entries served dynamically |
+| **Permissive** | SSR | In-memory | Web dev resources |
+| **Roots** | SSG | TypeScript | 920 pre-rendered math pages |
+
+### SSR + D1 Architecture (Context)
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                        Build Time                               │
-│                                                                 │
-│   prerender()  →  loader()  →  HTML Files  →  CDN              │
-│                                                                 │
-│   ┌──────────┐   ┌──────────┐   ┌──────────┐   ┌──────────┐   │
-│   │ Generate │ → │ Fetch    │ → │ Render   │ → │ Deploy   │   │
-│   │ Routes   │   │ Data     │   │ HTML     │   │ Static   │   │
-│   └──────────┘   └──────────┘   └──────────┘   └──────────┘   │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-
-                              ↓
-
-┌─────────────────────────────────────────────────────────────────┐
-│                       Runtime (CDN)                             │
-│                                                                 │
-│   Static HTML  →  Hydration  →  Interactive React App          │
-│                                                                 │
+│  Runtime (Cloudflare Pages Functions)                           │
+│                                                                  │
+│  ┌──────────┐    ┌──────────┐    ┌──────────┐                  │
+│  │  Client  │ → │  Pages   │ → │    D1     │                  │
+│  │ Request  │    │ Function │    │ Database  │                  │
+│  └──────────┘    └──────────┘    └──────────┘                  │
+│       ↑                               │                         │
+│       └───────────────────────────────┘                         │
+│              SSR HTML Response                                   │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-### SSG Configuration Pattern
+### SSR Configuration Pattern (Context)
 
 ```typescript
 // react-router.config.ts
 export default {
-  ssr: false,  // ← SSG mode (NEVER change to true)
+  ssr: true,  // ← SSR mode - D1 queries at runtime
   async prerender() {
-    const staticRoutes = extractStaticRoutes(routes);
-    const dynamicRoutes = generateI18nRoutes(entries, `/entry/`);
-    return [...staticRoutes, ...dynamicRoutes];
+    // Only static pages (home, about, categories)
+    return [...staticRoutes, ...categoryRoutes];
   },
 } satisfies Config;
 ```
 
-### Pages Generated
+### SSG Architecture (Roots)
 
-| App | SSG Pages | Description |
-|-----|-----------|-------------|
-| Context | 33,748 | All dictionary entries × 2 languages |
-| Permissive | 8 | Libraries + Web APIs pages |
-| Roots | 920 | Math topics × 2 languages |
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  Build Time                                                     │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐         │
+│  │ prerender() │ → │  loader()   │ → │  HTML + .data │         │
+│  │ (route list)│    │ (fetch data)│    │  (static)    │         │
+│  └─────────────┘    └─────────────┘    └─────────────┘         │
+└─────────────────────────────────────────────────────────────────┘
+                              ↓
+┌─────────────────────────────────────────────────────────────────┐
+│  Runtime (CDN)                                                  │
+│  Static HTML served instantly — No server required              │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### SSG Configuration Pattern (Roots)
+
+```typescript
+// react-router.config.ts
+export default {
+  ssr: false,  // ← SSG mode - all pages pre-rendered at build
+  async prerender() {
+    const staticRoutes = extractStaticRoutes(routes);
+    const conceptRoutes = generateI18nRoutes(concepts, `/concept/`);
+    return [...staticRoutes, ...conceptRoutes];
+  },
+} satisfies Config;
+```
 
 ## Package Layer System
 
@@ -166,14 +185,16 @@ export const meta = dynamicMetaFactory<typeof loader>({
 
 ## Critical Rules
 
-### 1. SSG Mode Only
+### 1. Respect Each App's Rendering Mode
 
 ```typescript
-// ✅ Correct
+// Context (SSR + D1)
+export default { ssr: true, ... }
+
+// Roots (SSG)
 export default { ssr: false, ... }
 
-// ❌ NEVER do this
-export default { ssr: true, ... }
+// ❌ NEVER use SPA mode (no loader, client-only rendering)
 ```
 
 ### 2. No Hardcoding

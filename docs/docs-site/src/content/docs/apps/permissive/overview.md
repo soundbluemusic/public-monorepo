@@ -7,9 +7,11 @@ sidebar:
 
 # Permissive — Web Dev Resources
 
-**무료 웹개발 자료 모음** | 8 SSG pages
+**무료 웹개발 자료 모음** | SSR
 
 Permissive is a curated collection of web development libraries with permissive licenses (MIT, Apache, etc.) and Web API documentation.
+
+> **Rendering Mode:** SSR — Server-side rendering with in-memory data.
 
 ## Live Demo
 
@@ -38,7 +40,7 @@ apps/permissive/
 │   ├── routes/          # React Router routes
 │   └── data/            # Library and API data
 ├── public/              # Static assets
-└── react-router.config.ts  # SSG configuration
+└── react-router.config.ts  # SSR configuration
 ```
 
 ## Development

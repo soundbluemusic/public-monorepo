@@ -9,35 +9,36 @@ description: SoundBlue Public Monorepo 개요 - 학습자를 위한 세 개의 �
 
 ## 이게 뭔가요?
 
-모든 앱은 **100% 정적 사이트 생성(SSG)** 방식입니다. 서버 없이 CDN에서 바로 서빙됩니다.
+각 앱은 콘텐츠 유형에 **최적화된 렌더링 모드**를 사용합니다. 모든 모드는 SEO를 위한 완전한 HTML을 제공합니다.
 
-:::caution[SSG 모드만 허용]
-⛔ **SSG 모드 변경 절대 금지** - SPA, SSR, ISR 등 다른 렌더링 모드로 전환하지 마세요.
+:::caution[SPA 모드 금지]
+⛔ **SPA 모드 절대 금지** - SPA는 빈 HTML을 반환하여 SEO가 불가능합니다. 항상 SSR 또는 SSG를 사용하세요.
 :::
 
 ## 세 개의 앱
 
 ### 📖 Context — 한국어 사전
 
-**학습자를 위한 한국어 사전** | 33,748 SSG 페이지
+**학습자를 위한 한국어 사전** | SSR + Cloudflare D1
 
 한국어 학습자를 위한 맥락 기반 사전입니다. 단어 의미, 예문, 관련 표현을 제공합니다.
 
 | 특징 | 설명 |
 |------|------|
-| 페이지 | 33,748 SSG 페이지 |
+| 모드 | SSR + D1 (동적) |
+| 항목 | 16,836 |
 | 언어 | 한국어, 영어 |
 | URL | [context.soundbluemusic.com](https://context.soundbluemusic.com) |
 
 ### 🔧 Permissive — 웹개발 자료
 
-**무료 웹개발 자료 모음** | 8 SSG 페이지
+**무료 웹개발 자료 모음** | SSR
 
 허용적 라이선스(MIT, Apache 등)를 가진 웹 개발 라이브러리와 Web API 문서 모음입니다.
 
 | 특징 | 설명 |
 |------|------|
-| 페이지 | 8 SSG 페이지 |
+| 모드 | SSR |
 | 언어 | 한국어, 영어 |
 | URL | [permissive.soundbluemusic.com](https://permissive.soundbluemusic.com) |
 
@@ -49,7 +50,7 @@ description: SoundBlue Public Monorepo 개요 - 학습자를 위한 세 개의 �
 
 | 특징 | 설명 |
 |------|------|
-| 페이지 | 920 SSG 페이지 |
+| 모드 | SSG (920 페이지) |
 | 언어 | 한국어, 영어 |
 | URL | [roots.soundbluemusic.com](https://roots.soundbluemusic.com) |
 
@@ -75,14 +76,15 @@ description: SoundBlue Public Monorepo 개요 - 학습자를 위한 세 개의 �
 
 ## 핵심 원칙
 
-1. **SSG 전용** - 모든 페이지는 빌드 시점에 사전 렌더링됩니다
-2. **하드코딩 금지** - 인라인 값이 아닌 데이터 파일 사용
-3. **임시방편 금지** - 모든 수정은 일반적인 해결책이어야 합니다
-4. **데이터 무결성** - 모든 데이터에 대한 단일 진실 공급원
-5. **UI 검증 필수** - 모든 변경사항은 실제 UI에서 확인되어야 합니다
+1. **SPA 모드 금지** - 모든 페이지는 SEO를 위한 완전한 HTML이 있어야 합니다
+2. **적절한 렌더링 모드 사용** - 대용량/동적 콘텐츠는 SSR, 정적 콘텐츠는 SSG
+3. **하드코딩 금지** - 인라인 값이 아닌 데이터 파일 사용
+4. **임시방편 금지** - 모든 수정은 일반적인 해결책이어야 합니다
+5. **데이터 무결성** - 모든 데이터에 대한 단일 진실 공급원
+6. **UI 검증 필수** - 모든 변경사항은 실제 UI에서 확인되어야 합니다
 
 ## 다음 단계
 
 - [빠른 시작 가이드](/public-monorepo/ko/guides/quickstart/) - 로컬에서 프로젝트 실행하기
-- [아키텍처 개요](/public-monorepo/ko/guides/architecture/) - SSG 아키텍처 이해하기
+- [아키텍처 개요](/public-monorepo/ko/guides/architecture/) - 렌더링 모드와 아키텍처 이해하기
 - [Context 문서](/public-monorepo/ko/apps/context/overview/) - 한국어 사전 앱에 대해 알아보기
