@@ -189,26 +189,32 @@ endpoint = https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
 
 **참고 파일:** `.github/workflows/deploy-context-r2.yml`
 
-### 9. Context App: SSR + D1 배포 규칙
+### 9. Context App: SSR + D1 전용 (SSG 금지)
 
-> ⚠️ **Context는 SSR + D1으로 운영 중**. SSG + R2는 백업 모드로만 유지.
+> ⚠️ **Context는 SSR + D1 전용**입니다. SSG 빌드는 지원하지 않습니다.
+
+**금지 사항:**
+- `react-router.config.ts`에서 `ssr: false` 설정 금지
+- `BUILD_TARGET=pages` 또는 SSG 관련 환경변수 사용 금지
+- Entry 페이지에 `clientLoader`만 있는 파일 생성 금지
+- D1 없이 entry 데이터 로딩 시도 금지
 
 **현재 운영 구조:**
 
 | 구성요소 | 설명 |
 | -------- | ---- |
-| 렌더링 모드 | SSR (Cloudflare Pages Functions) |
+| 렌더링 모드 | **SSR 전용** (Cloudflare Pages Functions) |
 | 데이터베이스 | Cloudflare D1 (`context-db`) |
-| 엔트리 수 | 16,836 entries + 25 categories |
+| 엔트리 수 | 16,836 entries + 52 categories |
 | 사이트맵 | D1에서 동적 생성 |
 
 **배포 명령어:**
 
 ```bash
-# SSR 빌드 + 배포
+# SSR 빌드 + 배포 (기본)
 cd apps/context
-BUILD_MODE=ssr npx react-router build
-npx wrangler pages deploy build/client --project-name=c0ntext
+pnpm build  # BUILD_MODE=ssr가 기본값
+pnpm deploy
 ```
 
 **D1 바인딩 (Cloudflare Dashboard에서 설정):**
@@ -219,10 +225,10 @@ npx wrangler pages deploy build/client --project-name=c0ntext
 
 | Route | 설명 |
 | ----- | ---- |
-| `/sitemap.xml` | 인덱스 (25개 카테고리 사이트맵 링크) |
+| `/sitemap.xml` | 인덱스 (52개 카테고리 사이트맵 링크) |
 | `/sitemap-pages.xml` | 정적 페이지 |
 | `/sitemap-categories.xml` | 카테고리 목록 |
-| `/sitemap-entry-{categoryId}.xml` | 카테고리별 엔트리 (25개) |
+| `/sitemap-entry-{categoryId}.xml` | 카테고리별 엔트리 |
 
 **참고 파일:**
 

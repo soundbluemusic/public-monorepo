@@ -3,92 +3,41 @@ import { extractStaticRoutes, generateI18nRoutes } from '@soundblue/i18n';
 import routes from './app/routes.js';
 
 /**
- * React Router 설정 (SSR 모드)
+ * React Router 설정 (SSR + D1 전용)
  *
- * ## BUILD_MODE 환경변수에 따라 렌더링 모드 선택:
- * - `ssr`: SSR 모드 - Cloudflare Pages Functions + D1 (권장)
- * - (기본): SSG 모드 - 정적 HTML 생성 (레거시, pages/all만 지원)
+ * Context 앱은 SSR 모드로만 운영됩니다.
+ * 모든 entry 페이지는 Cloudflare D1에서 실시간 조회합니다.
  *
- * ## BUILD_TARGET 환경변수 (SSG 모드 전용):
- * - `pages` (기본): 핵심 페이지만 빌드 → Cloudflare Pages
- * - `all`: 전체 빌드 (로컬 테스트용)
+ * ## 정적 페이지 (prerender)
+ * - 홈, about, browse 등 정적 페이지
+ * - 카테고리 목록 페이지
+ * - 대화 목록 페이지
  *
- * ## SSR 모드 사용법
- * ```bash
- * # 개발 서버
- * BUILD_MODE=ssr pnpm dev
- *
- * # 빌드
- * BUILD_MODE=ssr pnpm build
- * ```
+ * ## 동적 페이지 (SSR)
+ * - /entry/:entryId - D1에서 실시간 조회
+ * - /sitemap*.xml - D1에서 실시간 생성
  */
 
-const isSSR = process.env.BUILD_MODE === 'ssr';
-
 export default {
-  ssr: isSSR,
+  ssr: true,
   async prerender() {
-    // SSR 모드에서는 정적 페이지만 prerender
-    if (isSSR) {
-      const staticRoutes = extractStaticRoutes(routes);
-      const { categories } = await import('./app/data/categories.js');
-      const { getCategoriesWithConversations } = await import('./app/data/conversations.js');
-
-      const categoryRoutes = generateI18nRoutes(
-        categories,
-        (category) => `/category/${category.id}`,
-      );
-      const conversationCategoryIds = getCategoriesWithConversations();
-      const conversationRoutes = generateI18nRoutes(
-        conversationCategoryIds,
-        (categoryId) => `/conversations/${categoryId}`,
-      );
-
-      // sitemap.xml 라우트는 런타임에 D1에서 동적 생성하므로 prerender 제외
-      const prerenderRoutes = [...staticRoutes, ...categoryRoutes, ...conversationRoutes].filter(
-        (route) => !route.includes('sitemap') || !route.endsWith('.xml'),
-      );
-
-      console.log('[SSR] Prerender static routes only, entry pages served dynamically from D1');
-      console.log(`[SSR] Sitemap routes excluded from prerender (served dynamically from D1)`);
-      return prerenderRoutes;
-    }
-
-    // SSG 모드: 기존 로직 유지
-    const buildTarget = process.env.BUILD_TARGET || 'pages';
-
-    // 정적 라우트: routes.ts에서 자동 추출
     const staticRoutes = extractStaticRoutes(routes);
-
-    // 동적 라우트: 데이터 기반 생성
     const { categories } = await import('./app/data/categories.js');
     const { getCategoriesWithConversations } = await import('./app/data/conversations.js');
 
-    // Category routes
     const categoryRoutes = generateI18nRoutes(categories, (category) => `/category/${category.id}`);
-
-    // Conversation routes
     const conversationCategoryIds = getCategoriesWithConversations();
     const conversationRoutes = generateI18nRoutes(
       conversationCategoryIds,
       (categoryId) => `/conversations/${categoryId}`,
     );
 
-    // 빌드 대상에 따라 라우트 선택
-    let allRoutes: string[];
+    // sitemap.xml 라우트는 런타임에 D1에서 동적 생성하므로 prerender 제외
+    const prerenderRoutes = [...staticRoutes, ...categoryRoutes, ...conversationRoutes].filter(
+      (route) => !route.includes('sitemap') || !route.endsWith('.xml'),
+    );
 
-    if (buildTarget === 'pages') {
-      // Pages: 핵심 페이지만
-      allRoutes = [...staticRoutes, ...categoryRoutes, ...conversationRoutes];
-      console.log(`[SSG:pages] Prerender routes: ${allRoutes.length}`);
-    } else {
-      // all: 전체 (로컬 테스트용)
-      const { lightEntries } = await import('./app/data/entries/index.js');
-      const entryRoutes = generateI18nRoutes(lightEntries, (entry) => `/entry/${entry.id}`);
-      allRoutes = [...staticRoutes, ...entryRoutes, ...categoryRoutes, ...conversationRoutes];
-      console.log(`[SSG:all] Total prerender routes: ${allRoutes.length}`);
-    }
-
-    return allRoutes;
+    console.log('[SSR] Prerender static routes only, entry pages served dynamically from D1');
+    return prerenderRoutes;
   },
 } satisfies Config;

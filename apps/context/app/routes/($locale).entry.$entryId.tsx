@@ -14,23 +14,21 @@ import {
 import { Layout } from '@/components/layout';
 import type { LocaleEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
+import { getEntryByIdFromD1 } from '@/services/d1';
 import { useUserDataStore } from '@/stores/user-data-store';
 
 /**
- * Entry 페이지 - Pages 빌드용 (SPA fallback)
+ * Entry 페이지 - SSR + D1 버전
  *
- * 이 파일은 BUILD_TARGET=pages에서 사용됩니다.
- * loader가 없으므로 React Router SSG 검증을 통과합니다.
- * 데이터는 clientLoader에서 런타임에 로드됩니다.
- *
- * SSG 빌드(BUILD_TARGET=r2)는 ($locale).entry.$entryId.ssg.tsx 사용
+ * 이 파일은 SSR 모드에서 사용됩니다.
+ * Cloudflare D1에서 실시간으로 데이터를 조회합니다.
  *
  * URL 패턴:
  * - /entry/:entryId     → 영어
  * - /ko/entry/:entryId  → 한국어
  *
  * ⚠️ 중요: params.locale은 routes.ts 정의 방식 때문에 항상 undefined입니다.
- * 반드시 window.location.pathname에서 locale을 추출해야 합니다.
+ * 반드시 request.url에서 locale을 추출해야 합니다.
  */
 
 interface LoaderParams {
@@ -43,30 +41,55 @@ interface LoaderData {
 }
 
 /**
- * clientLoader: 클라이언트에서 데이터 로드
- * Pages 빌드에서는 loader가 없으므로 항상 직접 로드
+ * loader: SSR 런타임에서 실행
+ * Cloudflare D1에서 엔트리 데이터를 조회합니다.
  *
- * ⚠️ params.locale 사용 금지! window.location.pathname에서 locale 추출 필수
+ * @param params - URL 파라미터 (entryId)
+ * @param request - HTTP Request 객체
+ * @param context - Cloudflare context (D1 바인딩 포함)
  */
-export async function clientLoader({ params }: { params: LoaderParams }): Promise<LoaderData> {
-  const { getEntryByIdForLocale } = await import('@/data/entries');
+export async function loader({
+  params,
+  request,
+  context,
+}: {
+  params: LoaderParams;
+  request: Request;
+  context: { cloudflare: { env: CloudflareEnv } };
+}): Promise<LoaderData> {
+  const db = context.cloudflare.env.DB;
 
-  // 브라우저 환경에서 URL pathname으로 locale 추출 (params.locale은 항상 undefined)
-  const locale = getLocaleFromPath(window.location.pathname);
+  // URL pathname에서 locale 추출 (params.locale은 항상 undefined)
+  const url = new URL(request.url);
+  const locale = getLocaleFromPath(url.pathname);
 
-  const entry = await getEntryByIdForLocale(params.entryId, locale);
+  const entry = await getEntryByIdFromD1(db, params.entryId, locale);
 
   // colors 카테고리의 경우 영어 색상명도 함께 로드 (색상 표시용)
   let englishColorName: string | undefined;
   if (locale === 'ko' && entry?.categoryId === 'colors') {
-    const enEntry = await getEntryByIdForLocale(params.entryId, 'en');
+    const enEntry = await getEntryByIdFromD1(db, params.entryId, 'en');
     englishColorName = enEntry?.translation.word;
   }
 
   return { entry: entry || null, englishColorName };
 }
 
-// Hydration fallback to show while clientLoader is running
+/**
+ * clientLoader: 클라이언트 네비게이션 시 실행
+ * SSR 데이터가 있으면 사용, 없으면 서버에 요청
+ */
+export async function clientLoader({
+  params,
+  serverLoader,
+}: {
+  params: LoaderParams;
+  serverLoader: () => Promise<LoaderData>;
+}): Promise<LoaderData> {
+  return serverLoader();
+}
+
+// Hydration fallback
 export function HydrateFallback() {
   return null;
 }

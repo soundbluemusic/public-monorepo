@@ -1,19 +1,83 @@
 ---
-title: SSG 심층 분석
-description: React Router v7을 활용한 정적 사이트 생성 아키텍처 이해
+title: 렌더링 모드
+description: React Router v7을 활용한 SSG와 SSR 아키텍처 이해
 ---
 
-이 프로젝트는 **100% 정적 사이트 생성(SSG)**을 사용합니다 — 34,676개의 모든 페이지가 빌드 시점에 사전 렌더링되어 CDN에서 직접 제공됩니다.
+이 프로젝트는 최적의 성능과 확장성을 위해 앱별로 다른 렌더링 모드를 사용합니다.
 
-:::caution[SSG 전용]
-이 프로젝트는 SSG 전용입니다. SPA, SSR, ISR 모드는 금지됩니다.
+## 앱별 렌더링 모드
+
+| 앱 | 모드 | 데이터 소스 | 페이지 | 용도 |
+|:---|:-----|:-----------|:------:|:-----|
+| **Context** | **SSR + D1** | Cloudflare D1 | 동적 | 16,836 엔트리 (100만+까지 확장 가능) |
+| **Roots** | SSG | TypeScript | 920 | 438 개념 (정적 콘텐츠) |
+| **Permissive** | SSR | In-memory | 8 | 소규모 정적 데이터 |
+
+:::note[모드 선택 가이드]
+
+- **SSR + D1**: 대규모/자주 업데이트되는 콘텐츠 (1,000개 이상)
+- **SSG**: 소규모/거의 업데이트되지 않는 콘텐츠 (1,000페이지 미만)
+- **SPA**: ❌ 절대 금지 (SEO 불가능)
+
 :::
 
-## 작동 원리
+---
 
-React Router v7의 `prerender()` + `loader()` 패턴으로 빌드 시 완전한 HTML을 생성합니다.
+## SSR + D1 아키텍처 (Context 앱)
 
+Context 앱은 무제한 확장성을 위해 **SSR + Cloudflare D1**을 사용합니다.
+
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│  런타임 (Cloudflare Pages Functions)                             │
+│                                                                  │
+│  ┌──────────┐    ┌──────────┐    ┌──────────┐                  │
+│  │  클라이언트 │ → │  Pages   │ → │    D1     │                  │
+│  │  요청     │    │ Function │    │ 데이터베이스│                  │
+│  └──────────┘    └──────────┘    └──────────┘                  │
+│       ↑                               │                         │
+│       └───────────────────────────────┘                         │
+│              SSR HTML 응답                                       │
+└─────────────────────────────────────────────────────────────────┘
 ```
+
+### SSR 설정
+
+```typescript
+// apps/context/react-router.config.ts
+export default {
+  ssr: true,  // SSR 모드 - 런타임에 D1 쿼리
+  async prerender() {
+    // 정적 페이지만 (홈, about, 카테고리)
+    // Entry 페이지는 D1에서 동적으로 제공
+    return [...staticRoutes, ...categoryRoutes];
+  },
+} satisfies Config;
+```
+
+### SSR Loader 패턴
+
+```typescript
+// apps/context/app/routes/($locale).entry.$entryId.tsx
+export async function loader({ params, context }: Route.LoaderArgs) {
+  const db = context.cloudflare.env.DB;
+  if (!db) throw new Response('Database unavailable', { status: 503 });
+
+  const entry = await db.prepare('SELECT * FROM entries WHERE id = ?')
+    .bind(params.entryId).first();
+
+  if (!entry) throw new Response('Not Found', { status: 404 });
+  return { entry };
+}
+```
+
+---
+
+## SSG 아키텍처 (Roots 앱)
+
+Roots 앱은 정적 수학 문서를 위해 **SSG**를 사용합니다.
+
+```text
 ┌─────────────────────────────────────────────────────────────────┐
 │  빌드 시점                                                       │
 │  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐         │
@@ -30,63 +94,59 @@ React Router v7의 `prerender()` + `loader()` 패턴으로 빌드 시 완전한 
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-## 앱별 SSG 페이지 수
-
-| 앱 | 동적 라우트 | SSG 페이지 | 데이터 소스 |
-|:----|:---------------|:---------:|:------------|
-| **Context** | 16,836 엔트리 + 25 카테고리 + 53 대화 | 33,748 | JSON |
-| **Roots** | 438 개념 + 18 분야 | 920 | TypeScript |
-| **Permissive** | 4개 정적 라우트 | 8 | 배열 리터럴 |
-| **총계** | — | **34,676** | — |
-
-## 코드 패턴
-
-### 설정 (`react-router.config.ts`)
+### SSG 설정
 
 ```typescript
+// apps/roots/react-router.config.ts
 export default {
-  ssr: false,  // SSG 모드 - 변경 금지
+  ssr: false,  // SSG 모드 - 빌드 시 모든 페이지 사전 렌더링
   async prerender() {
     const staticRoutes = extractStaticRoutes(routes);
-    const entryRoutes = generateI18nRoutes(entries, (e) => `/entry/${e.id}`);
-    return [...staticRoutes, ...entryRoutes];
+    const conceptRoutes = generateI18nRoutes(concepts, (c) => `/concept/${c.id}`);
+    return [...staticRoutes, ...conceptRoutes];
   },
 } satisfies Config;
 ```
 
-### 로더가 있는 라우트 (`routes/entry.$entryId.tsx`)
+### SSG Loader 패턴
 
 ```typescript
+// apps/roots/app/routes/($locale).concept.$conceptId.tsx
 export async function loader({ params }: Route.LoaderArgs) {
-  const entry = getEntryById(params.entryId);
-  if (!entry) throw new Response('Not Found', { status: 404 });
-  return { entry };  // → 빌드 시 .data 파일로 저장됨
-}
-
-export default function EntryPage() {
-  const { entry } = useLoaderData<typeof loader>();
-  return <EntryView entry={entry} />;
+  const concept = getConceptById(params.conceptId);
+  if (!concept) throw new Response('Not Found', { status: 404 });
+  return { concept };  // → 빌드 시 .data 파일로 저장됨
 }
 ```
 
-## 왜 SSG인가?
+---
 
-| 장점 | 설명 |
-|---------|-------------|
-| **즉시 로딩** | CDN 엣지 로케이션에서 사전 렌더링된 HTML 제공 |
-| **비용 제로** | 유지할 서버 인프라 없음 |
-| **보안** | 서버가 없으면 서버 취약점도 없음 |
-| **SEO 최적화** | 검색 엔진이 사용할 수 있는 완전한 HTML 콘텐츠 |
+## 왜 다른 모드를 사용하나요?
 
-## 금지된 변경 사항
+| 요소 | SSG (Roots) | SSR + D1 (Context) |
+|:----|:------------|:-------------------|
+| **콘텐츠 크기** | 438 개념 | 16,836 엔트리 |
+| **업데이트 빈도** | 드물게 | 자주 |
+| **빌드 시간** | ~2분 | 해당 없음 (동적) |
+| **확장성** | 빌드에 제한됨 | 무제한 |
+| **데이터 최신성** | 빌드 시점 스냅샷 | 실시간 |
 
-:::danger[수정 금지]
-- 설정에서 `ssr: true` 설정
-- `prerender()` 함수 제거 또는 비우기
-- 빈 `<div id="root"></div>`로 SPA 전환
+---
+
+## 금지된 모드
+
+:::danger[절대 사용 금지]
+
+- **SPA 모드** — 빈 `<div id="root"></div>`는 SEO를 망침
+- **ISR 모드** — Cloudflare Pages에서 지원하지 않음
+- **대규모 콘텐츠에 SSG** — 규모에서 빌드 실패
+
 :::
+
+---
 
 ## 관련 문서
 
+- [SSR 마이그레이션 가이드](/public-monorepo/ko/guides/ssr-migration/) — Context를 SSR로 마이그레이션한 이유
 - [Hydration 버그 대응](/public-monorepo/ko/guides/hydration-workaround/) — React 19 SSG 버그 수정
 - [문제 해결](/public-monorepo/ko/guides/troubleshooting/) — 일반적인 빌드 오류

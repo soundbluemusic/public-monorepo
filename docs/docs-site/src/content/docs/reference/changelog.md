@@ -3,6 +3,74 @@ title: Changelog
 description: Version history and notable changes
 ---
 
+## v3.0.0 (2026-01-16)
+
+### Breaking Changes
+- **Context app: SSR + D1 only** — SSG build mode removed
+- `BUILD_TARGET` environment variable deprecated
+- Entry pages now served dynamically from D1
+
+### Changed
+- Context rendering: SSG → **SSR + Cloudflare D1**
+- Sitemap generation: Static → **Dynamic from D1**
+- Build output: 16,836 HTML files → **149 static pages only**
+
+### Removed
+- `apps/context/app/routes/($locale).entry.$entryId.ssg.tsx`
+- `apps/context/app/routes/($locale).entry.$entryId.tsx` (SPA fallback)
+- SSG-related environment variables and scripts
+
+### SSG vs SSR + D1 Comparison
+
+| Category | SSG (Legacy) | SSR + D1 (Current) |
+|:---------|:-------------|:-------------------|
+| **SEO** | | |
+| HTML Content | ✅ Full HTML (build time) | ✅ Full HTML (runtime) |
+| Meta Tags | ✅ Static | ✅ Dynamic (latest data) |
+| Sitemap | Static at build | **Real-time from D1** |
+| Crawler Response | Build-time snapshot | **Always fresh** |
+| **Build** | | |
+| Build Time | ~15min (16,836 HTML) | **~10sec** (149 pages) |
+| Build Output | 16,836 HTML + .data | 149 HTML + _worker.js |
+| Memory Usage | High (OOM risk) | **Low** |
+| CI/CD Time | Long | **Short** |
+| **Deployment** | | |
+| Deploy Target | R2 + Pages | **Pages Functions only** |
+| Deploy Size | ~1.7GB (34,000+ files) | **~50MB** |
+| Deploy Speed | Slow (rclone sync) | **Fast** |
+| R2 Cost | Class A requests | **None** |
+| **Data** | | |
+| Data Source | TypeScript (frozen) | **D1 (real-time)** |
+| Data Update | Rebuild + redeploy | **D1 update only** |
+| Data Consistency | Build-time snapshot | **Always current** |
+| Data Size Limit | Build memory limit | **D1 capacity** |
+| **Scalability** | | |
+| 1M+ Entries | Chunked build required | **Just add queries** |
+| OOM Risk | Yes | **None** |
+| Workflow Complexity | Matrix build, rclone | **Simple deploy** |
+| **Operations** | | |
+| Hotfix | Rebuild (~15min) | **D1 instant** |
+| A/B Testing | Difficult | **D1 flags** |
+| Rollback | Redeploy old build | **D1 data restore** |
+| **Cost** | | |
+| R2 Storage | 1.7GB used | **None** |
+| R2 Requests | Many Class A | **None** |
+| D1 Requests | None | Per-request (free tier sufficient) |
+| Pages Functions | None | Per-request (free tier sufficient) |
+| **Developer Experience** | | |
+| Local Testing | Full build needed | **`pnpm dev` instant** |
+| Add Data | Build + deploy | **D1 INSERT** |
+| Debugging | Build logs | **Runtime logs** |
+
+### Files Modified
+- `.github/workflows/deploy-context.yml` — SSR build command
+- `apps/context/package.json` — SSR as default
+- `apps/context/app/routes.ts` — SSR-only routing
+- `apps/context/react-router.config.ts` — `ssr: true` fixed
+- `CLAUDE.md`, `ARCHITECTURE.md`, `apps/context/README.md`
+
+---
+
 ## v2.1.0 (2026-01-02)
 
 ### Added

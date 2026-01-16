@@ -1,14 +1,22 @@
 ---
 name: ssg-check
-description: SSG 규칙 위반 검사. ssr:false 유지, prerender() 존재, orphan DOM 정리 로직 확인
+description: SSG 규칙 위반 검사. Roots 앱 전용 (Context는 SSR이므로 제외)
 ---
 
 # SSG Check 스킬
 
 SSG(Static Site Generation) 규칙 위반을 검사하는 스킬입니다.
 
-> ⚠️ **중요**: 이 프로젝트는 100% SSG 전용입니다.
+> ⚠️ **대상 앱**: **Roots 앱 전용**. Context 앱은 SSR + D1으로 운영되므로 이 검사에서 **제외**됩니다.
 > SPA 모드는 SEO 불가능으로 인해 **절대 허용되지 않습니다**.
+
+## 앱별 렌더링 모드
+
+| App | Mode | 이 스킬 대상 |
+|:----|:-----|:------------|
+| **Context** | SSR + D1 | ❌ 제외 |
+| Permissive | SSR | ❌ 제외 |
+| **Roots** | SSG | ✅ 대상 |
 
 ## 자동 실행 지시
 
@@ -173,7 +181,9 @@ Task tool 호출 예시:
 
 ## 관련 파일
 
-- `apps/*/react-router.config.ts`
-- `apps/*/app/entry.client.tsx`
-- `apps/*/app/routes/*.tsx` (동적 라우트)
+- `apps/roots/react-router.config.ts` (SSG 설정)
+- `apps/roots/app/entry.client.tsx`
+- `apps/roots/app/routes/*.tsx` (동적 라우트)
 - `scripts/verify-ssg.ts`
+
+> **참고**: Context 앱은 SSR + D1 전용이므로 `apps/context/`는 이 검사에서 제외됩니다.

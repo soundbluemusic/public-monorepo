@@ -31,8 +31,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build for Pages
-        run: pnpm build:context
+      - name: Build for SSR + D1
+        run: pnpm --filter context build:ssr
 
       - name: Deploy to Cloudflare Pages
         env:
