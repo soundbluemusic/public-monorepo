@@ -11,7 +11,7 @@ sidebar:
 
 Context is a context-based Korean dictionary designed specifically for language learners. It provides word meanings, example sentences, and related expressions in a user-friendly interface.
 
-> **Rendering Mode:** SSR + D1 — All entry pages are served dynamically from Cloudflare D1 database.
+> **Rendering Mode:** SSR + D1 — All entry pages are served dynamically from Cloudflare D1 database via **Cloudflare Workers**.
 
 ## Live Demo
 
@@ -55,7 +55,7 @@ apps/context/
 │   ├── hooks/           # Custom React hooks
 │   └── utils/           # Utility functions
 ├── public/              # Static assets
-├── wrangler.toml        # D1 binding configuration
+├── wrangler.toml        # Workers + D1 binding configuration
 └── react-router.config.ts  # SSR configuration
 ```
 
@@ -69,9 +69,9 @@ apps/context/
 | `/about` | About page |
 | `/sitemap.xml` | XML sitemap |
 
-## SSR + D1 Configuration
+## SSR + D1 Configuration (Cloudflare Workers)
 
-Context uses React Router v7's SSR mode with Cloudflare D1:
+Context uses React Router v7's SSR mode with Cloudflare Workers + D1:
 
 ```typescript
 // react-router.config.ts

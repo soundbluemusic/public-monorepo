@@ -14,17 +14,17 @@ import {
 } from '@/components/browse';
 import { Layout } from '@/components/layout';
 import { categories } from '@/data/categories';
-import type { LightEntry } from '@/data/entries';
+import { type LightEntry, lightEntriesSortedAlphabetically, jsonEntriesCount } from '@/data/entries';
 import { useStudyData } from '@/hooks';
 import { useI18n } from '@/i18n';
 
 /**
- * 찾아보기 페이지 데이터 로더 (청크 기반)
+ * 찾아보기 페이지 데이터 로더 (SSR 모드)
  *
  * ## 최적화 전략
- * - SSG HTML에는 첫 페이지 데이터만 포함 (1000개)
- * - 페이지 전환 시 청크 JSON fetch
- * - 초기 로드 크기: ~7MB → ~100KB (98% 감소)
+ * - SSR HTML에는 첫 페이지 데이터만 포함 (1000개)
+ * - 사전 생성된 lightEntries 데이터 사용 (번들에 포함)
+ * - 페이지 전환 시 클라이언트에서 필터링
  */
 
 /** Browse 메타데이터 */
@@ -45,58 +45,42 @@ interface LoaderData {
   categories: typeof categories;
 }
 
+/** 페이지당 표시할 엔트리 수 */
+const CHUNK_SIZE = 1000;
+
 /**
- * loader: SSG 빌드 시 실행
- * 첫 청크 데이터만 HTML에 포함 (기존 대비 98% 용량 감소)
+ * loader: SSR 모드에서 실행
+ * 사전 생성된 lightEntries 데이터를 직접 사용
  */
 export async function loader(): Promise<LoaderData> {
-  // SSG 빌드 시 (Node.js 환경)
-  if (typeof window === 'undefined') {
-    const { readFileSync } = await import('node:fs');
-    const { join } = await import('node:path');
+  // 첫 청크 반환 (알파벳순 정렬된 첫 1000개)
+  const initialEntries = lightEntriesSortedAlphabetically.slice(0, CHUNK_SIZE);
 
-    const initialPath = join(process.cwd(), 'public/data/browse/initial.json');
-    const initialData = JSON.parse(readFileSync(initialPath, 'utf-8'));
+  const meta: BrowseMetadata = {
+    totalEntries: jsonEntriesCount,
+    chunkSize: CHUNK_SIZE,
+    totalChunks: Math.ceil(jsonEntriesCount / CHUNK_SIZE),
+    sortTypes: ['alphabetical', 'category', 'recent'],
+    generatedAt: new Date().toISOString(),
+  };
 
-    return {
-      initialEntries: initialData.alphabetical,
-      meta: initialData.meta,
-      categories,
-    };
-  }
-
-  // 런타임 시 (이 코드는 실행되지 않음 - SSG이므로)
-  throw new Error('loader should only run at build time');
+  return {
+    initialEntries,
+    meta,
+    categories,
+  };
 }
 
 /**
  * clientLoader: 클라이언트에서 실행
- * serverLoader 데이터가 있으면 사용, 없으면 fetch
+ * SSR에서 전달된 serverLoader 데이터 사용
  */
 export async function clientLoader({
   serverLoader,
 }: {
   serverLoader: () => Promise<LoaderData>;
 }): Promise<LoaderData> {
-  try {
-    return await serverLoader();
-  } catch {
-    // Pages 빌드에서 SSG 데이터가 없는 경우 fetch
-    const response = await fetch('/data/browse/initial.json');
-    if (!response.ok) {
-      throw new Error(`Failed to fetch initial browse data: ${response.status}`);
-    }
-    const initialData = (await response.json()) as {
-      alphabetical: LightEntry[];
-      meta: BrowseMetadata;
-    };
-
-    return {
-      initialEntries: initialData.alphabetical,
-      meta: initialData.meta,
-      categories,
-    };
-  }
+  return await serverLoader();
 }
 
 export const meta = metaFactory(

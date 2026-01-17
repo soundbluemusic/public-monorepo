@@ -12,7 +12,7 @@
 
 | App | Mode | 데이터 소스 | 배포 대상 |
 |:----|:-----|:-----------|:----------|
-| **Context** | **SSR** | Cloudflare D1 | Cloudflare Pages (Functions) |
+| **Context** | **SSR** | Cloudflare D1 | **Cloudflare Workers** |
 | Permissive | SSR | In-memory | Cloudflare Pages (Functions) |
 | Roots | SSG | TypeScript | Cloudflare Pages (Static) |
 
@@ -36,9 +36,9 @@ React Router v7의 SSR 모드 + Cloudflare D1으로 **런타임에** 동적 페�
 └─────────────────────────────────────────────────────────────────┘
                               +
 ┌─────────────────────────────────────────────────────────────────┐
-│  Runtime (Cloudflare Pages Functions)                           │
+│  Runtime (Cloudflare Workers)                                    │
 │  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐         │
-│  │  Request    │ → │  loader()   │ → │  SSR HTML     │         │
+│  │  Request    │ → │  Workers    │ → │  SSR HTML     │         │
 │  │ /entry/:id  │    │  D1 Query   │    │  (dynamic)   │         │
 │  └─────────────┘    └─────────────┘    └─────────────┘         │
 └─────────────────────────────────────────────────────────────────┘
@@ -82,24 +82,19 @@ export default {
   },
 } satisfies Config;
 
-// wrangler.toml
+// wrangler.toml (Workers 설정)
+name = "context"
+main = "build/server/index.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
 [[d1_databases]]
 binding = "DB"
 database_name = "context-db"
 database_id = "55c25518-db3d-4547-8ad8-e36fc66493c8"
 
-// public/_routes.json (Pages Functions 라우팅)
-{
-  "include": ["/__manifest", "/api/*", "/data/*", "/entry/*", "/ko/entry/*", "/sitemap.xml", "/sitemap-*.xml"],
-  "exclude": []
-}
-
-// functions/[[path]].ts (Pages Functions 핸들러)
-import { createPagesFunctionHandler } from '@react-router/cloudflare';
-export const onRequest = createPagesFunctionHandler({
-  build: serverBuild,
-  getLoadContext: (ctx) => ctx.context,  // D1 바인딩 전달
-});
+[assets]
+directory = "build/client"
 ```
 
 ### Dynamic Sitemap Generation
@@ -482,11 +477,11 @@ Context 앱은 SSR + Cloudflare D1으로 **무제한 확장**이 가능합니다
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  SSR + D1 Architecture                                          │
+│  SSR + D1 Architecture (Cloudflare Workers)                      │
 │                                                                  │
 │  ┌──────────┐    ┌──────────┐    ┌──────────┐                  │
-│  │  Client  │ → │  Pages   │ → │    D1     │                  │
-│  │ Request  │    │ Function │    │ Database  │                  │
+│  │  Client  │ → │ Workers  │ → │    D1     │                  │
+│  │ Request  │    │  (SSR)   │    │ Database  │                  │
 │  └──────────┘    └──────────┘    └──────────┘                  │
 │       ↑                               │                         │
 │       └───────────────────────────────┘                         │
@@ -552,6 +547,11 @@ apps/permissive ──────┘    @soundblue/pwa
 ---
 
 ## Version History (변경 이력)
+
+### v3.1.0 (2026-01-17)
+- **Context 앱 Pages Functions → Cloudflare Workers로 마이그레이션**
+- Workers 기반 SSR + D1 바인딩으로 전환
+- 정적 자산은 Workers Assets로 서빙
 
 ### v3.0.0 (2026-01-16)
 - **Context 앱 SSR + D1 전용으로 전환**

@@ -11,21 +11,21 @@ This document explains the architectural decisions and patterns used in the Soun
 
 Each application uses a different rendering mode optimized for its use case:
 
-| App | Mode | Data Source | Description |
-|:----|:-----|:------------|:------------|
-| **Context** | **SSR + D1** | Cloudflare D1 | 16,836 entries served dynamically |
-| **Permissive** | SSR | In-memory | Web dev resources |
-| **Roots** | SSG | TypeScript | Pre-rendered math documentation |
+| App | Mode | Data Source | Deployment |
+|:----|:-----|:------------|:-----------|
+| **Context** | **SSR + D1** | Cloudflare D1 | **Cloudflare Workers** |
+| **Permissive** | SSR | In-memory | Cloudflare Pages (Functions) |
+| **Roots** | SSG | TypeScript | Cloudflare Pages (Static) |
 
 ### SSR + D1 Architecture (Context)
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  Runtime (Cloudflare Pages Functions)                           │
+│  Runtime (Cloudflare Workers)                                    │
 │                                                                  │
 │  ┌──────────┐    ┌──────────┐    ┌──────────┐                  │
-│  │  Client  │ → │  Pages   │ → │    D1     │                  │
-│  │ Request  │    │ Function │    │ Database  │                  │
+│  │  Client  │ → │ Workers  │ → │    D1     │                  │
+│  │ Request  │    │  (SSR)   │    │ Database  │                  │
 │  └──────────┘    └──────────┘    └──────────┘                  │
 │       ↑                               │                         │
 │       └───────────────────────────────┘                         │

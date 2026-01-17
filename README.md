@@ -15,7 +15,7 @@
 
 ## 📖 What is this?
 
-> 학습자를 위한 3개의 앱. Cloudflare Pages에서 호스팅됩니다.
+> 학습자를 위한 3개의 앱. Cloudflare에서 호스팅됩니다 (Workers + Pages).
 >
 > 📚 **[Documentation →](https://soundbluemusic.github.io/public-monorepo)**
 
@@ -115,7 +115,7 @@ public-monorepo/
 | **Storage** | IndexedDB (Dexie) | [packages/platform/](packages/platform) |
 | **PWA** | Service Worker | [packages/pwa/](packages/pwa) |
 | **UI** | Components | [packages/ui/](packages/ui) |
-| **Hosting** | Cloudflare Pages (Functions) | — |
+| **Hosting** | Cloudflare Workers (Context) / Pages (Others) | — |
 | **Build** | Vite + Turborepo | [turbo.json](turbo.json) |
 
 ---

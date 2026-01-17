@@ -3,6 +3,20 @@ title: 변경 로그
 description: 버전 히스토리 및 주요 변경 사항
 ---
 
+## v3.1.0 (2026-01-17)
+
+### 변경
+- **Context 앱: Pages Functions → Cloudflare Workers 마이그레이션**
+- Workers 기반 SSR + D1 바인딩으로 전환
+- 정적 자산은 Workers Assets로 서빙
+
+### 수정된 파일
+- `apps/context/wrangler.toml` — Workers 설정 (`main`, `[assets]`)
+- `README.md`, `ARCHITECTURE.md`, `CLAUDE.md` — 문서 업데이트
+- `docs/` — 모든 아키텍처 및 마이그레이션 가이드 업데이트
+
+---
+
 ## v3.0.0 (2026-01-16)
 
 ### Breaking Changes
@@ -38,7 +52,7 @@ description: 버전 히스토리 및 주요 변경 사항
 | 메모리 사용 | 높음 (OOM 위험) | **낮음** |
 | CI/CD 시간 | 길음 | **짧음** |
 | **배포** | | |
-| 배포 대상 | R2 (정적 파일) + Pages | **Pages Functions만** |
+| 배포 대상 | R2 (정적 파일) + Pages | **Cloudflare Workers** |
 | 배포 크기 | ~1.7GB (34,000+ 파일) | **~50MB** |
 | 배포 속도 | 느림 (rclone 동기화) | **빠름** |
 | R2 비용 | Class A 요청 발생 | **없음** |
@@ -59,7 +73,7 @@ description: 버전 히스토리 및 주요 변경 사항
 | R2 스토리지 | 1.7GB 사용 | **없음** |
 | R2 요청 | Class A 다수 발생 | **없음** |
 | D1 요청 | 없음 | 요청당 과금 (무료 티어 충분) |
-| Pages Functions | 없음 | 요청당 과금 (무료 티어 충분) |
+| Workers | 없음 | 요청당 과금 (무료 티어 충분) |
 | **개발 경험** | | |
 | 로컬 테스트 | 전체 빌드 필요 | **`pnpm dev` 즉시** |
 | 데이터 추가 | 빌드 + 배포 | **D1 INSERT만** |
