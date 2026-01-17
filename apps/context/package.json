@@ -10,7 +10,7 @@
     "export:data": "tsx scripts/export-data.ts",
     "build": "BUILD_MODE=ssr react-router build",
     "build:ssr": "BUILD_MODE=ssr react-router build",
-    "deploy": "pnpm build && wrangler pages deploy build/client --project-name=c0ntext",
+    "deploy": "pnpm build && wrangler deploy",
     "preview": "BUILD_MODE=ssr wrangler pages dev build/client --d1=DB",
     "start": "BUILD_MODE=ssr wrangler pages dev build/client --d1=DB",
     "sitemap": "tsx scripts/generate-sitemaps.ts",

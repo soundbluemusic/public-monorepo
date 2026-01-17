@@ -1,4 +1,4 @@
-name: Deploy Context Pages
+name: Deploy Context Workers
 
 on:
   push:
@@ -9,12 +9,12 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: deploy-context-pages-${{ github.ref }}
+  group: deploy-context-workers-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   deploy:
-    name: Build & Deploy Pages
+    name: Build & Deploy Workers
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -31,19 +31,15 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build for SSR + D1
-        run: pnpm --filter context build:ssr
+      - name: Build Context (SSR + D1)
+        run: pnpm build:context
 
-      - name: Deploy to Cloudflare Pages
+      - name: Deploy to Cloudflare Workers
+        working-directory: apps/context
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: |
-          npx wrangler pages deploy apps/context/build/client \
-            --project-name=c0ntext \
-            --branch=main \
-            --commit-dirty=true \
-            --commit-message="${{ github.event.head_commit.message || 'Deploy from GitHub Actions' }}"
+        run: npx wrangler deploy
 
       - name: Purge Cloudflare CDN Cache
         env:
