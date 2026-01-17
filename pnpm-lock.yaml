@@ -422,6 +422,12 @@ importers:
         specifier: ^7.12.0
         version: 7.12.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
     devDependencies:
+      '@cloudflare/workers-types':
+        specifier: ^4.20260109.0
+        version: 4.20260113.0
+      '@react-router/cloudflare':
+        specifier: ^7.12.0
+        version: 7.12.0(@cloudflare/workers-types@4.20260113.0)(react-router@7.12.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(typescript@5.9.3)
       '@react-router/dev':
         specifier: ^7.12.0
         version: 7.12.0(@react-router/serve@7.12.0(react-router@7.12.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(typescript@5.9.3))(@types/node@25.0.7)(jiti@2.6.1)(lightningcss@1.30.2)(react-router@7.12.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(terser@5.44.1)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.0.7)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1)(tsx@4.21.0))(wrangler@4.59.0(@cloudflare/workers-types@4.20260113.0))
@@ -470,6 +476,9 @@ importers:
       workbox-window:
         specifier: ^7.3.0
         version: 7.4.0
+      wrangler:
+        specifier: ^4.58.0
+        version: 4.59.0(@cloudflare/workers-types@4.20260113.0)
 
   docs/docs-site:
     dependencies:

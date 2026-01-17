@@ -10,7 +10,7 @@
     "prebuild": "pnpm exec tsx scripts/generate-paraglide-messages.ts && tsx scripts/generate-search-index.ts",
     "build": "NODE_OPTIONS='--max-old-space-size=8192' react-router build && tsx scripts/generate-sitemaps.ts",
     "build:ssr": "BUILD_MODE=ssr react-router build",
-    "deploy:ssr": "pnpm build:ssr && wrangler pages deploy build/client --project-name=permissive",
+    "deploy": "pnpm build && wrangler deploy",
     "preview": "npx serve build/client -l 3004 --no-port-switching",
     "preview:ssr": "BUILD_MODE=ssr wrangler pages dev build/client",
     "start": "npx serve build/client -l 3004 --no-port-switching",

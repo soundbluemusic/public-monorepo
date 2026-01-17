@@ -1,6 +1,7 @@
-name = "roots-pages"
-compatibility_date = "2024-01-01"
+name = "roots"
+main = "workers.ts"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
 
-[[r2_buckets]]
-binding = "BUCKET"
-bucket_name = "all-sites-static"
+[assets]
+directory = "build/client"
