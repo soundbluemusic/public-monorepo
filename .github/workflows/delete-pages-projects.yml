@@ -18,13 +18,13 @@ jobs:
           cf-bulk-delete delete pages ro0ts \
             --token "$CLOUDFLARE_API_TOKEN" \
             --account "$CLOUDFLARE_ACCOUNT_ID" \
-            --all --yes || echo "ro0ts deployments deletion done"
+            --yes || echo "ro0ts deployments deletion done"
 
           echo "=== Step 2: Delete ALL permissive deployments ==="
           cf-bulk-delete delete pages permissive \
             --token "$CLOUDFLARE_API_TOKEN" \
             --account "$CLOUDFLARE_ACCOUNT_ID" \
-            --all --yes || echo "permissive deployments deletion done"
+            --yes || echo "permissive deployments deletion done"
 
           echo "=== Step 3: Destroy ro0ts project ==="
           cf-bulk-delete destroy pages ro0ts \
