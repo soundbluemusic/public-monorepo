@@ -11,7 +11,7 @@ sidebar:
 
 Context는 한국어 학습자를 위해 특별히 설계된 맥락 기반 한국어 사전입니다. 단어 의미, 예문, 관련 표현을 사용자 친화적인 인터페이스로 제공합니다.
 
-> **렌더링 모드:** SSR + D1 — 모든 entry 페이지는 Cloudflare D1 데이터베이스에서 동적으로 제공됩니다.
+> **렌더링 모드:** SSR + D1 — 모든 entry 페이지는 **Cloudflare Workers**를 통해 D1 데이터베이스에서 동적으로 제공됩니다.
 
 ## 라이브 데모
 
@@ -68,9 +68,9 @@ apps/context/
 | `/about` | 소개 페이지 |
 | `/sitemap.xml` | XML 사이트맵 (D1에서 동적 생성) |
 
-## SSR + D1 설정
+## SSR + D1 설정 (Cloudflare Workers)
 
-Context는 React Router v7의 SSR 모드와 Cloudflare D1 데이터베이스를 사용합니다:
+Context는 React Router v7의 SSR 모드와 Cloudflare Workers + D1을 사용합니다:
 
 ```typescript
 // react-router.config.ts

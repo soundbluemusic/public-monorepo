@@ -11,21 +11,21 @@ description: モノレポのレンダリングモードとパッケージレイ�
 
 各アプリケーションは用途に最適化されたレンダリングモードを使用しています：
 
-| アプリ | モード | データソース | 説明 |
-|--------|--------|-------------|------|
-| **Context** | **SSR + D1** | Cloudflare D1 | 16,836エントリを動的に提供 |
-| **Permissive** | SSR | In-memory | Web開発リソース |
-| **Roots** | SSG | TypeScript | 数学文書を事前レンダリング |
+| アプリ | モード | データソース | デプロイ先 |
+|--------|--------|-------------|-----------|
+| **Context** | **SSR + D1** | Cloudflare D1 | **Cloudflare Workers** |
+| **Permissive** | SSR | In-memory | Cloudflare Pages (Functions) |
+| **Roots** | SSG | TypeScript | Cloudflare Pages (Static) |
 
 ### SSR + D1アーキテクチャ (Context)
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  ランタイム (Cloudflare Pages Functions)                         │
+│  ランタイム (Cloudflare Workers)                                  │
 │                                                                  │
 │  ┌──────────┐    ┌──────────┐    ┌──────────┐                  │
-│  │ クライアント│ → │  Pages   │ → │    D1     │                  │
-│  │  リクエスト │    │ Function │    │ データベース│                  │
+│  │ クライアント│ → │ Workers  │ → │    D1     │                  │
+│  │  リクエスト │    │  (SSR)   │    │ データベース│                  │
 │  └──────────┘    └──────────┘    └──────────┘                  │
 │       ↑                               │                         │
 │       └───────────────────────────────┘                         │

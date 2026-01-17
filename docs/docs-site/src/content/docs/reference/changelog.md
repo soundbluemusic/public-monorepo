@@ -3,6 +3,20 @@ title: Changelog
 description: Version history and notable changes
 ---
 
+## v3.1.0 (2026-01-17)
+
+### Changed
+- **Context app: Pages Functions → Cloudflare Workers migration**
+- Workers-based SSR + D1 binding
+- Static assets served via Workers Assets
+
+### Files Modified
+- `apps/context/wrangler.toml` — Workers configuration (`main`, `[assets]`)
+- `README.md`, `ARCHITECTURE.md`, `CLAUDE.md` — Documentation updates
+- `docs/` — All architecture and migration guides updated
+
+---
+
 ## v3.0.0 (2026-01-16)
 
 ### Breaking Changes
@@ -35,7 +49,7 @@ description: Version history and notable changes
 | Memory Usage | High (OOM risk) | **Low** |
 | CI/CD Time | Long | **Short** |
 | **Deployment** | | |
-| Deploy Target | R2 + Pages | **Pages Functions only** |
+| Deploy Target | R2 + Pages | **Cloudflare Workers** |
 | Deploy Size | ~1.7GB (34,000+ files) | **~50MB** |
 | Deploy Speed | Slow (rclone sync) | **Fast** |
 | R2 Cost | Class A requests | **None** |
@@ -56,7 +70,7 @@ description: Version history and notable changes
 | R2 Storage | 1.7GB used | **None** |
 | R2 Requests | Many Class A | **None** |
 | D1 Requests | None | Per-request (free tier sufficient) |
-| Pages Functions | None | Per-request (free tier sufficient) |
+| Workers | None | Per-request (free tier sufficient) |
 | **Developer Experience** | | |
 | Local Testing | Full build needed | **`pnpm dev` instant** |
 | Add Data | Build + deploy | **D1 INSERT** |

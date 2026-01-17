@@ -203,7 +203,7 @@ endpoint = https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
 
 | 구성요소 | 설명 |
 | -------- | ---- |
-| 렌더링 모드 | **SSR 전용** (Cloudflare Pages Functions) |
+| 렌더링 모드 | **SSR 전용** (Cloudflare Workers) |
 | 데이터베이스 | Cloudflare D1 (`context-db`) |
 | 엔트리 수 | 16,836 entries + 52 categories |
 | 사이트맵 | D1에서 동적 생성 |
@@ -232,8 +232,7 @@ pnpm deploy
 
 **참고 파일:**
 
-- `apps/context/wrangler.toml` - D1 바인딩 설정
-- `apps/context/public/_routes.json` - Functions 라우팅
+- `apps/context/wrangler.toml` - Workers + D1 바인딩 설정
 - `apps/context/app/routes/sitemap[.xml].tsx` - 동적 사이트맵 생성
 
 ---
@@ -446,4 +445,5 @@ export const meta = dynamicMetaFactory<typeof loader>({
 | React Router v7 | [reactrouter.com](https://reactrouter.com) |
 | TypeScript | [typescriptlang.org](https://www.typescriptlang.org/docs) |
 | Cloudflare D1 | [developers.cloudflare.com/d1](https://developers.cloudflare.com/d1/) |
+| Cloudflare Workers | [developers.cloudflare.com/workers](https://developers.cloudflare.com/workers/) |
 | Cloudflare Pages | [developers.cloudflare.com/pages](https://developers.cloudflare.com/pages/) |

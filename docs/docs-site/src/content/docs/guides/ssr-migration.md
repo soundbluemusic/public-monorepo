@@ -3,7 +3,7 @@ title: SSR Migration Guide
 description: Why and how we migrated from SSG to SSR + D1 for large-scale content sites
 ---
 
-This guide explains why Context app migrated from **SSG + R2** to **SSR + D1 + Pages Functions**, and provides a comprehensive comparison for anyone considering a similar migration.
+This guide explains why Context app migrated from **SSG + R2** to **SSR + D1 + Cloudflare Workers**, and provides a comprehensive comparison for anyone considering a similar migration.
 
 :::tip[TL;DR]
 For sites with 2,000+ entries or frequently updated content, **SSR + D1 is the only viable solution**. SSG becomes a maintenance nightmare at scale.
@@ -50,7 +50,7 @@ For sites with 2,000+ entries or frequently updated content, **SSR + D1 is the o
 | **Deployment** | | | |
 | Deploy Time | Build 1-3hr + Deploy 10min | Build 2min + Deploy 1min | Emergency fixes possible |
 | Deploy Size | ~1.7GB (34,000+ files) | ~50MB | 97% reduction |
-| Infrastructure | Pages only | Pages + Functions (unified) | Single project management |
+| Infrastructure | Pages only | **Cloudflare Workers** | Single project management |
 | **Performance** | | | |
 | Response Time | 50-100ms (CDN) | First: 100-300ms, Cached: 50-100ms | With Edge Cache, **identical speed** |
 | Cache Strategy | Automatic (static files) | Cache-Control headers | 80-90% cache hit rate |
@@ -159,7 +159,7 @@ New benefits from SSR + D1:
 
 ## Conclusion
 
-**D1 + SSR + Functions = The only answer for large-scale content sites**
+**D1 + SSR + Cloudflare Workers = The only answer for large-scale content sites**
 
 If you have 2,000+ entries or frequently updated content, SSG is a maintenance nightmare. SSR + D1 provides:
 - Unlimited scalability
