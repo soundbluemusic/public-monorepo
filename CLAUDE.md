@@ -392,6 +392,7 @@ export const meta = dynamicMetaFactory<typeof loader>({
 | `/layer-check` | import 레이어 규칙 검사 (fork context) |
 | `/link-check` | 프로덕션 URL 링크 무결성 검사 (lychee) |
 | `/quality-gate` | 병렬 품질 검사 통합 (SSG, Layer, Link, TypeCheck, Lint) |
+| `/latest-check` | 기술 스택 최신 정보 검색 (GitHub API로 정확한 릴리스 날짜 확인) |
 
 **⚠️ 앱별 라우트 수정 검증:**
 
@@ -408,6 +409,32 @@ export const meta = dynamicMetaFactory<typeof loader>({
 | **Opus** | 복잡한 로직 작성, 아키텍처 결정, 버그 분석 |
 | **Sonnet** | 일반 코드 수정, 구조 분석 |
 | **Haiku** | 검색, 단순 검증, 파일 찾기 |
+
+---
+
+## 🔍 최신 정보 확인 필수 (공식 문서 우선)
+
+> ⚠️ **내 지식 컷오프(2025년 5월) 이후 변경 가능성이 높은 주제**.
+> 아래 주제 답변 전 **반드시 공식 문서 확인**.
+
+| 주제 | 공식 문서 URL | 이유 |
+|------|--------------|------|
+| Cloudflare Workers | developers.cloudflare.com/workers/platform/changelog | Pages/Workers 통합 진행 중 |
+| Cloudflare D1 | developers.cloudflare.com/d1/platform/release-notes | GA 이후 변경사항 |
+| React Router v7 | reactrouter.com/changelog | 빠른 릴리스 주기 |
+| Tailwind CSS v4 | tailwindcss.com/docs/upgrade-guide | v3 → v4 대규모 변경 |
+| TypeScript 5.x | typescriptlang.org/docs/handbook/release-notes | 분기별 릴리스 |
+
+**규칙**:
+
+1. 위 주제 관련 질문 시 → **WebFetch로 공식 문서 직접 확인**
+2. **GitHub API로 정확한 릴리스 날짜 확인** (HTML 페이지의 상대 시간 표시는 부정확)
+   - TypeScript: `https://api.github.com/repos/microsoft/TypeScript/releases?per_page=5`
+   - Tailwind CSS: `https://api.github.com/repos/tailwindlabs/tailwindcss/releases?per_page=5`
+   - React Router: `https://api.github.com/repos/remix-run/react-router/releases?per_page=5`
+3. 공식 문서에서 정보 부족 시에만 WebSearch 사용 (공식 도메인 필터 적용)
+4. 출처 우선순위: **GitHub API > 공식 문서 > GitHub 릴리스 > 공식 블로그 > 기타**
+5. Medium, dev.to, 개인 블로그, 커뮤니티 포럼은 **지양**
 
 ---
 
