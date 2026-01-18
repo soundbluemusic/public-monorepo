@@ -15,11 +15,11 @@
 
 ## 📖 What is this?
 
-> 학습자를 위한 3개의 앱. Cloudflare에서 호스팅됩니다 (Workers + Pages).
+> 학습자를 위한 3개의 앱. Cloudflare Workers에서 호스팅됩니다.
 >
 > 📚 **[Documentation →](https://soundbluemusic.github.io/public-monorepo)**
 
-⚠️ **No SPA Mode** — This project uses SSR/SSG only. SPA returns empty HTML, breaking SEO.
+⚠️ **No SPA Mode** — This project uses SSR only. SPA returns empty HTML, breaking SEO.
 
 ---
 
@@ -46,7 +46,7 @@
 | **Features** | 88 libraries, 56 Web APIs |
 
 ### 📐 Roots — Math Documentation
-> **학습자를 위한 수학 문서** | 920 SSG pages
+> **학습자를 위한 수학 문서** | SSR
 
 | | |
 |---|---|
@@ -81,7 +81,7 @@ public-monorepo/
 ├── apps/                → 3 applications
 │   ├── context/         → Korean dictionary (SSR + D1)
 │   ├── permissive/      → Web dev resources (SSR)
-│   └── roots/           → Math documentation (920 SSG pages)
+│   └── roots/           → Math documentation (SSR)
 ├── packages/            → 10 shared packages
 │   ├── core/            → [L0] validation, utils, types
 │   ├── config/          → [L0] Vite, Tailwind configs
@@ -115,7 +115,7 @@ public-monorepo/
 | **Storage** | IndexedDB (Dexie) | [packages/platform/](packages/platform) |
 | **PWA** | Service Worker | [packages/pwa/](packages/pwa) |
 | **UI** | Components | [packages/ui/](packages/ui) |
-| **Hosting** | Cloudflare Workers (Context) / Pages (Others) | — |
+| **Hosting** | Cloudflare Workers | — |
 | **Build** | Vite + Turborepo | [turbo.json](turbo.json) |
 
 ---
@@ -159,7 +159,7 @@ public-monorepo/
 | Resource | Description |
 |:---------|:------------|
 | [📖 Docs Site](https://soundbluemusic.github.io/public-monorepo) | Full documentation |
-| [ARCHITECTURE.md](ARCHITECTURE.md) | SSG architecture, package layers |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | SSR architecture, package layers |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Critical rules, contribution guide |
 | [CLAUDE.md](CLAUDE.md) | AI assistant guidelines |
 | [LICENSE](LICENSE) | Apache License 2.0 |

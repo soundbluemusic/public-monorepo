@@ -13,10 +13,10 @@
 | App | Mode | 데이터 소스 | 배포 대상 |
 |:----|:-----|:-----------|:----------|
 | **Context** | **SSR** | Cloudflare D1 | **Cloudflare Workers** |
-| Permissive | SSR | In-memory | Cloudflare Pages (Functions) |
-| Roots | SSG | TypeScript | Cloudflare Pages (Static) |
+| Permissive | SSR | In-memory | Cloudflare Workers |
+| Roots | SSR | TypeScript | Cloudflare Workers |
 
-> **Context App**: SSR + D1 전용. SSG 빌드는 지원하지 않습니다.
+> **모든 앱은 SSR + Cloudflare Workers**로 배포됩니다.
 
 ---
 
@@ -111,45 +111,46 @@ SSR 모드에서 사이트맵은 D1에서 실시간 생성됩니다:
 
 ---
 
-## SSG Architecture (SSG 아키텍처) - Roots 앱 전용
+## SSR Architecture (SSR 아키텍처) - Roots/Permissive 앱
 
 ### How It Works
 
-React Router v7의 `prerender()` + `loader()` 패턴으로 **빌드 시** 모든 페이지를 완전한 HTML로 생성합니다.
+React Router v7의 SSR 모드 + Cloudflare Workers로 **런타임에** 동적 페이지를 생성합니다.
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │  Build Time                                                     │
 │  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐         │
-│  │ prerender() │ → │  loader()   │ → │  HTML + .data │         │
-│  │ (route list)│    │ (fetch data)│    │  (static)    │         │
+│  │ prerender() │ → │  loader()   │ → │  Static HTML  │         │
+│  │ (정적 페이지)│    │ (정적 데이터)│    │  (CDN 캐시)   │         │
 │  └─────────────┘    └─────────────┘    └─────────────┘         │
 └─────────────────────────────────────────────────────────────────┘
-                              ↓
+                              +
 ┌─────────────────────────────────────────────────────────────────┐
-│  Runtime (CDN)                                                  │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │  Static HTML served instantly — No server required       │   │
-│  └─────────────────────────────────────────────────────────┘   │
+│  Runtime (Cloudflare Workers)                                    │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐         │
+│  │  Request    │ → │  Workers    │ → │  SSR HTML     │         │
+│  │ /concept/:id│    │  loader()   │    │  (dynamic)   │         │
+│  └─────────────┘    └─────────────┘    └─────────────┘         │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
 ### 앱별 렌더링 모드
 
-| App | Mode | Dynamic Routes | Pages | Data Source |
-|:----|:-----|:---------------|:-----:|:------------|
-| **Context** | **SSR** | 16836 entries (D1) | 동적 | Cloudflare D1 |
-| **Roots** | SSG | 438 concepts + 18 fields | 920 | TypeScript |
-| **Permissive** | SSR | 4 static routes | 8 | In-memory |
+| App | Mode | Dynamic Routes | Data Source |
+|:----|:-----|:---------------|:------------|
+| **Context** | **SSR** | 16836 entries | Cloudflare D1 |
+| **Roots** | SSR | 438 concepts + 18 fields | TypeScript |
+| **Permissive** | SSR | 88 libraries + 56 Web APIs | In-memory |
 
-> **Context는 SSR + D1 전용**. 모든 entry 페이지는 D1에서 실시간 조회합니다.
+> **모든 앱은 SSR + Cloudflare Workers**로 배포됩니다.
 
-### SSG Code Pattern (Roots 앱)
+### SSR Code Pattern (Roots/Permissive 앱)
 
 ```typescript
 // react-router.config.ts
 export default {
-  ssr: false,  // SSG mode
+  ssr: true,  // SSR mode
   async prerender() {
     const staticRoutes = extractStaticRoutes(routes);
     const conceptRoutes = generateI18nRoutes(concepts, (c) => `/concept/${c.id}`);
@@ -161,7 +162,7 @@ export default {
 export async function loader({ params }: Route.LoaderArgs) {
   const concept = getConceptById(params.conceptId);
   if (!concept) throw new Response('Not Found', { status: 404 });
-  return { concept };  // → saved as .data file at build time
+  return { concept };
 }
 ```
 
@@ -195,7 +196,7 @@ export async function loader({ params, request, context }) {
   return { entry };
 }
 
-// ✅ SSG loader에서 (Roots 앱)
+// ✅ SSR loader에서 (Roots/Permissive 앱)
 export async function loader({ params, request }) {
   const url = new URL(request.url);
   const locale = getLocaleFromPath(url.pathname);
@@ -421,13 +422,13 @@ export function cn(...classes: string[]) {}
 
 ---
 
-## SSG Hydration Workaround (SSG Hydration 버그 대응)
+## Hydration Workaround (Hydration 버그 대응)
 
-> ⚠️ **React Router v7 + React 19 SSG 환경의 알려진 버그에 대한 workaround입니다.**
+> ⚠️ **React Router v7 + React 19 SSR 환경의 알려진 버그에 대한 workaround입니다.**
 
 ### 문제
 
-React Router v7 SSG(`ssr: false`)에서 hydration 실패 시:
+React Router v7 SSR에서 hydration 실패 시:
 1. React 19가 새로운 DOM 트리를 생성
 2. 기존 서버 렌더링 HTML이 삭제되지 않음
 3. DOM 중복 → 사용자가 보는 버튼에 React 핸들러 없음 → 클릭 불가
@@ -441,7 +442,7 @@ React Router v7 SSG(`ssr: false`)에서 hydration 실패 시:
 startTransition(() => {
   hydrateRoot(document, <StrictMode><App /></StrictMode>);
 
-  // Orphan DOM 정리 (React Router v7 SSG 버그 workaround)
+  // Orphan DOM 정리 (React Router v7 hydration 버그 workaround)
   setTimeout(() => {
     const divs = [...document.body.children].filter(el => el.tagName === 'DIV');
     if (divs.length >= 2) {
@@ -459,7 +460,7 @@ startTransition(() => {
 | 파일 | 역할 | 수정 금지 이유 |
 |------|------|---------------|
 | `apps/*/app/entry.client.tsx` | Hydration + orphan DOM 정리 | 삭제 시 모든 버튼 클릭 불가 |
-| `apps/*/app/entry.server.tsx` | SSG HTML 생성 | `prerender` 함수 필수 |
+| `apps/*/app/entry.server.tsx` | SSR HTML 생성 | `prerender` 함수 필수 |
 
 ### 관련 이슈
 
@@ -491,12 +492,12 @@ Context 앱은 SSR + Cloudflare D1으로 **무제한 확장**이 가능합니다
 
 ### 장점
 
-| 항목 | SSG (레거시) | SSR + D1 (현재) |
-|:-----|:-------------|:----------------|
-| 빌드 시간 | 엔트리 수에 비례 | **일정** (~30초) |
-| 배포 크기 | 34,000+ HTML 파일 | **정적 페이지만** |
-| 확장성 | OOM 위험 | **무제한** |
-| 데이터 갱신 | 재빌드 필요 | **즉시 반영** |
+| 항목 | SSR + Workers (현재) |
+|:-----|:--------------------|
+| 빌드 시간 | **일정** (~30초) |
+| 배포 크기 | **정적 페이지만** |
+| 확장성 | **무제한** |
+| 데이터 갱신 | **즉시 반영** |
 
 ### 사이트맵 (D1에서 동적 생성)
 
@@ -548,6 +549,11 @@ apps/permissive ──────┘    @soundblue/pwa
 
 ## Version History (변경 이력)
 
+### v3.2.0 (2026-01-18)
+- **Permissive, Roots 앱 Cloudflare Workers로 마이그레이션**
+- 모든 앱 SSR + Cloudflare Workers로 통합
+- Pages 프로젝트 삭제 (ro0ts, permissive)
+
 ### v3.1.0 (2026-01-17)
 - **Context 앱 Pages Functions → Cloudflare Workers로 마이그레이션**
 - Workers 기반 SSR + D1 바인딩으로 전환
@@ -555,12 +561,11 @@ apps/permissive ──────┘    @soundblue/pwa
 
 ### v3.0.0 (2026-01-16)
 - **Context 앱 SSR + D1 전용으로 전환**
-- SSG 빌드 모드 제거 (BUILD_TARGET 환경변수 폐기)
 - Entry 페이지 D1 실시간 조회로 통합
 - 사이트맵 D1 동적 생성
 
 ### v2.1.0 (2026-01-02)
-- SSG Hydration Workaround 문서화
+- Hydration Workaround 문서화
 - React Router v7 + React 19 hydration 버그 대응 코드 추가
 - `entry.client.tsx` orphan DOM 정리 로직 구현
 

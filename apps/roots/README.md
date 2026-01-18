@@ -4,8 +4,7 @@
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 [![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?logo=react-router)](https://reactrouter.com)
-[![100% SSG](https://img.shields.io/badge/100%25-SSG-brightgreen)](https://en.wikipedia.org/wiki/Static_site_generator)
-[![SSG Routes](https://img.shields.io/badge/SSG_Routes-920-blue)](react-router.config.ts)
+[![SSR](https://img.shields.io/badge/SSR-Cloudflare_Workers-F38020?logo=cloudflare)](https://developers.cloudflare.com/workers/)
 
 **[Live Site](https://roots.soundbluemusic.com)**
 
@@ -25,21 +24,19 @@ A math documentation site designed for learners:
 
 ## Architecture (아키텍처)
 
-### 100% SSG with Build-time Data Prerendering
+### SSR with Cloudflare Workers
 
 ```
 react-router.config.ts
-├── ssr: false
-├── prerender() → 920 static routes generated
+├── ssr: true
+├── prerender() → Static pages generated at build time
 │   ├── concept-names.json → 438 concept routes × 2 langs
 │   └── fields.ts → 18 field routes × 2 langs
-└── loader() functions → .data files for each route
+└── loader() functions → Server-side data loading
 
-Build output (build/client/):
-├── index.html, ko/index.html
-├── concept/{id}.html, ko/concept/{id}.html (×438)
-├── field/{id}.html, ko/field/{id}.html (×18)
-└── *.data files (prerendered loader data)
+Deployment:
+├── Cloudflare Workers (SSR)
+└── Workers Assets (static files)
 ```
 
 ### Data Architecture
@@ -80,7 +77,7 @@ Browser-native MathML (no KaTeX/MathJax bundle required).
 | `/favorites` | ✓ | ✓ | - | Saved concepts |
 | `/about` | ✓ | ✓ | - | About |
 
-**Total:** 920 SSG routes (460 EN + 460 KO)
+**Total:** 920 routes (460 EN + 460 KO)
 
 ---
 
@@ -132,7 +129,7 @@ pnpm build:roots
 | Math Rendering | Browser-native MathML |
 | Search | MiniSearch (via @soundblue/search) |
 | Storage | localStorage / IndexedDB |
-| Hosting | Cloudflare Pages |
+| Hosting | Cloudflare Workers |
 
 ---
 

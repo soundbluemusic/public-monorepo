@@ -3,18 +3,18 @@
     "entries": 16836,
     "categories": 52,
     "conversations": 53,
-    "ssgRoutes": 33802
+    "routes": 33802
   },
   "roots": {
     "concepts": 438,
     "fields": 18,
-    "ssgRoutes": 920
+    "routes": 920
   },
   "permissive": {
     "libraries": 88,
     "webApis": 56,
-    "ssgRoutes": 8
+    "routes": 8
   },
-  "totalSsgRoutes": 34730,
-  "generatedAt": "2026-01-17T15:56:04.385Z"
+  "totalRoutes": 34730,
+  "generatedAt": "2026-01-18T01:01:27.149Z"
 }

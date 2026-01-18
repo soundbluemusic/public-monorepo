@@ -6,7 +6,7 @@
 
 ## ⛔ 절대 금지 (DO NOT)
 
-### 1. SPA 모드 전환 절대 금지 (SSG/SSR 허용)
+### 1. SPA 모드 전환 절대 금지 (SSR 전용)
 > ⚠️ **SEO 필수**: 이 프로젝트의 모든 페이지는 검색 엔진이 완전한 HTML을 크롤링할 수 있어야 합니다.
 > SPA는 빈 HTML을 반환하여 SEO가 불가능합니다. 절대 SPA로 전환하지 마세요.
 
@@ -16,7 +16,7 @@
 |:----|:-----|:-----------|:----------|
 | Context | **SSR** | Cloudflare D1 | `wrangler.toml` |
 | Permissive | SSR | In-memory | `wrangler.toml` |
-| Roots | SSG | TypeScript | — |
+| Roots | SSR | TypeScript | `wrangler.toml` |
 
 **금지 사항:**
 - SPA 모드 전환 금지 (클라이언트 사이드 렌더링만으로 콘텐츠 생성 금지)
@@ -40,17 +40,14 @@ export async function loader({ params, context }: Route.LoaderArgs) {
 }
 ```
 
-**SSG 모드 필수 패턴 (Roots):**
+**SSR 모드 필수 패턴 (Roots/Permissive):**
 
 ```typescript
-// ✅ SSG loader + clientLoader
-export async function loader({ params }) {
-  return { data: await fetchData(params.id) };
-}
-
-export async function clientLoader({ params, serverLoader }) {
-  try { return await serverLoader(); }
-  catch { return { data: await fetchData(params.id) }; }
+// ✅ SSR loader - 데이터 로딩
+export async function loader({ params }: Route.LoaderArgs) {
+  const data = await fetchData(params.id);
+  if (!data) throw new Response('Not Found', { status: 404 });
+  return { data };
 }
 ```
 
@@ -61,8 +58,8 @@ export async function clientLoader({ params, serverLoader }) {
 curl -s https://context.soundbluemusic.com/entry/annyeong | head -50
 # ✅ 기대값: <title>안녕 | Context</title>, 본문 콘텐츠 포함
 
-# SSG: 빌드된 HTML 확인
-head -50 apps/roots/build/client/concept/hello/index.html
+curl -s https://roots.soundbluemusic.com/concept/addition | head -50
+# ✅ 기대값: <title>Addition | Roots</title>, 본문 콘텐츠 포함
 ```
 
 ### 2. 하드코딩 금지
@@ -135,7 +132,7 @@ head -50 apps/roots/build/client/concept/hello/index.html
 
 ### 8. R2 버킷 동기화는 rclone 전용 (Wrangler 금지)
 
-> ⚠️ **성능 문제**: Wrangler는 단일 스레드로 34,676개 SSG 파일 처리에 부적합
+> ⚠️ **성능 문제**: Wrangler는 단일 스레드로 대량 파일 처리에 부적합
 
 **금지 사항:**
 
@@ -189,13 +186,12 @@ endpoint = https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
 
 **참고 파일:** `.github/workflows/deploy-context-r2.yml`
 
-### 9. Context App: SSR + D1 전용 (SSG 금지)
+### 9. Context App: SSR + D1 전용
 
-> ⚠️ **Context는 SSR + D1 전용**입니다. SSG 빌드는 지원하지 않습니다.
+> ⚠️ **Context는 SSR + D1 전용**입니다.
 
 **금지 사항:**
 - `react-router.config.ts`에서 `ssr: false` 설정 금지
-- `BUILD_TARGET=pages` 또는 SSG 관련 환경변수 사용 금지
 - Entry 페이지에 `clientLoader`만 있는 파일 생성 금지
 - D1 없이 entry 데이터 로딩 시도 금지
 
@@ -293,8 +289,8 @@ import { useSearch } from '@soundblue/search/react';      // L2
 ### 금지
 | 위치 | 금지 액션 |
 |------|----------|
-| `apps/roots/react-router.config.ts` | `ssr: true` (SSG 전용 앱) |
-| `*.browser.ts` | SSR/SSG 빌드 시점 실행 코드 |
+| `apps/*/react-router.config.ts` | `ssr: false` 설정 (모든 앱 SSR) |
+| `*.browser.ts` | SSR 빌드 시점 실행 코드 |
 | `*.noop.ts` | 실제 로직 (빈 구현만) |
 | `entry.client.tsx` | orphan DOM 정리 로직 삭제 |
 | `wrangler.toml` (Context) | D1 바인딩 제거 |
@@ -387,10 +383,10 @@ export const meta = dynamicMetaFactory<typeof loader>({
 | `/cost-check` | R2 비용 최적화 규칙 검사. Turborepo Remote Cache 비활성화 상태 확인 |
 | `/explore [질문]` | 코드베이스 구조 분석 (fork context) |
 | `/find [검색어]` | 파일/함수 위치 검색 (haiku) |
-| `/ssg-check` | SSG 규칙 위반 검사 (Roots 앱 전용) |
+| `/rendering-check` | SSR 규칙 위반 검사 (Roots 앱 전용) |
 | `/layer-check` | import 레이어 규칙 검사 (fork context) |
 | `/link-check` | 프로덕션 URL 링크 무결성 검사 (lychee) |
-| `/quality-gate` | 병렬 품질 검사 통합 (SSG, Layer, Link, TypeCheck, Lint) |
+| `/quality-gate` | 병렬 품질 검사 통합 (SSR, Layer, Link, TypeCheck, Lint) |
 | `/latest-check` | 기술 스택 최신 정보 검색 (GitHub API로 정확한 릴리스 날짜 확인) |
 
 **⚠️ 앱별 라우트 수정 검증:**
@@ -399,7 +395,7 @@ export const meta = dynamicMetaFactory<typeof loader>({
 |----|------------------|
 | Context (SSR) | D1 바인딩 존재, loader에서 DB 쿼리 |
 | Permissive (SSR) | wrangler.toml 설정 |
-| Roots (SSG) | `/ssg-check` 실행 |
+| Roots (SSR) | wrangler.toml 설정 |
 
 ### 모델 사용 기준
 

@@ -26,7 +26,7 @@ interface AppStats {
   entries: number;
   categories: number;
   conversations: number;
-  ssgRoutes: number;
+  routes: number;
 }
 
 interface AllStats {
@@ -34,14 +34,14 @@ interface AllStats {
   roots: {
     concepts: number;
     fields: number;
-    ssgRoutes: number;
+    routes: number;
   };
   permissive: {
     libraries: number;
     webApis: number;
-    ssgRoutes: number;
+    routes: number;
   };
-  totalSsgRoutes: number;
+  totalRoutes: number;
   generatedAt: string;
 }
 
@@ -106,11 +106,11 @@ function getContextStats(): AppStats {
   // conversations 총 개수
   const conversations = countTsArrayItems(conversationsFile, /{\s*id:\s*'[^']+',\s*categoryId:/g);
 
-  // SSG 라우트 계산: (entries * 2) + (categories * 2) + (convCategories * 2) + static
+  // 라우트 계산: (entries * 2) + (categories * 2) + (convCategories * 2) + static
   const staticRoutes = 8; // /, /ko, /about, /ko/about, /categories, /ko/categories, /conversations, /ko/conversations
-  const ssgRoutes = entries * 2 + categories * 2 + conversationCategories * 2 + staticRoutes;
+  const routes = entries * 2 + categories * 2 + conversationCategories * 2 + staticRoutes;
 
-  return { entries, categories, conversations, ssgRoutes };
+  return { entries, categories, conversations, routes };
 }
 
 /**
@@ -125,11 +125,11 @@ function getRootsStats() {
 
   const fields = countTsArrayItems(fieldsFile, /{\s*id:\s*'/g);
 
-  // SSG 라우트: (concepts * 2) + (fields * 2) + static
+  // 라우트: (concepts * 2) + (fields * 2) + static
   const staticRoutes = 8;
-  const ssgRoutes = concepts * 2 + fields * 2 + staticRoutes;
+  const routes = concepts * 2 + fields * 2 + staticRoutes;
 
-  return { concepts, fields, ssgRoutes };
+  return { concepts, fields, routes };
 }
 
 /**
@@ -152,10 +152,10 @@ function getPermissiveStats() {
     webApis = Array.isArray(data) ? data.length : 0;
   }
 
-  // SSG 라우트: 정적 페이지만
-  const ssgRoutes = 8; // /, /ko, /libraries, /ko/libraries, /web-apis, /ko/web-apis, /about, /ko/about
+  // 라우트: 정적 페이지만
+  const routes = 8; // /, /ko, /libraries, /ko/libraries, /web-apis, /ko/web-apis, /about, /ko/about
 
-  return { libraries, webApis, ssgRoutes };
+  return { libraries, webApis, routes };
 }
 
 /**
@@ -170,7 +170,7 @@ function getAllStats(): AllStats {
     context,
     roots,
     permissive,
-    totalSsgRoutes: context.ssgRoutes + roots.ssgRoutes + permissive.ssgRoutes,
+    totalRoutes: context.routes + roots.routes + permissive.routes,
     generatedAt: new Date().toISOString(),
   };
 }
@@ -194,21 +194,21 @@ function getReadmeReplacements(stats: AllStats): Replacement[] {
       pattern: /\| \*\*Features\*\* \| \d+ entries, \d+ categories, \d+ conversations \|/g,
       replacement: `| **Features** | ${stats.context.entries} entries, ${stats.context.categories} categories, ${stats.context.conversations} conversations |`,
     },
-    // Context SSG table row
+    // Context table row
     {
       pattern:
         /\| \*\*Context\*\* \| \d+ entries \+ \d+ categories \+ \d+ conversations \| [\d,]+ \| JSON \|/g,
-      replacement: `| **Context** | ${stats.context.entries} entries + ${stats.context.categories} categories + ${stats.context.conversations} conversations | ${stats.context.ssgRoutes.toLocaleString()} | JSON |`,
+      replacement: `| **Context** | ${stats.context.entries} entries + ${stats.context.categories} categories + ${stats.context.conversations} conversations | ${stats.context.routes.toLocaleString()} | JSON |`,
     },
-    // Roots SSG table row
+    // Roots table row
     {
       pattern: /\| \*\*Roots\*\* \| \d+ concepts \+ \d+ fields \| [\d,]+ \| TypeScript \|/g,
-      replacement: `| **Roots** | ${stats.roots.concepts} concepts + ${stats.roots.fields} fields | ${stats.roots.ssgRoutes.toLocaleString()} | TypeScript |`,
+      replacement: `| **Roots** | ${stats.roots.concepts} concepts + ${stats.roots.fields} fields | ${stats.roots.routes.toLocaleString()} | TypeScript |`,
     },
-    // Total SSG routes
+    // Total routes
     {
       pattern: /\| \*\*Total\*\* \| — \| \*\*[\d,]+\*\* \| — \|/g,
-      replacement: `| **Total** | — | **${stats.totalSsgRoutes.toLocaleString()}** | — |`,
+      replacement: `| **Total** | — | **${stats.totalRoutes.toLocaleString()}** | — |`,
     },
     // Project structure comments
     {
@@ -229,29 +229,29 @@ function getReadmeReplacements(stats: AllStats): Replacement[] {
       pattern: /\| \*\*Features\*\* \| \d+ libraries, \d+ Web APIs \|/g,
       replacement: `| **Features** | ${stats.permissive.libraries} libraries, ${stats.permissive.webApis} Web APIs |`,
     },
-    // Context SSG pages in header
+    // Context routes in header
     {
-      pattern: /> \*\*학습자를 위한 한국어 사전\*\* \| [\d,]+ SSG pages/g,
-      replacement: `> **학습자를 위한 한국어 사전** | ${stats.context.ssgRoutes.toLocaleString()} SSG pages`,
+      pattern: /> \*\*학습자를 위한 한국어 사전\*\* \| [\d,]+ routes/g,
+      replacement: `> **학습자를 위한 한국어 사전** | ${stats.context.routes.toLocaleString()} routes`,
     },
-    // Roots SSG pages in header
+    // Roots routes in header
     {
-      pattern: /> \*\*학습자를 위한 수학 문서\*\* \| [\d,]+ SSG pages/g,
-      replacement: `> **학습자를 위한 수학 문서** | ${stats.roots.ssgRoutes.toLocaleString()} SSG pages`,
+      pattern: /> \*\*학습자를 위한 수학 문서\*\* \| [\d,]+ routes/g,
+      replacement: `> **학습자를 위한 수학 문서** | ${stats.roots.routes.toLocaleString()} routes`,
     },
-    // Permissive SSG pages in header
+    // Permissive routes in header
     {
-      pattern: /> \*\*무료 웹개발 자료 모음\*\* \| \d+ SSG pages/g,
-      replacement: `> **무료 웹개발 자료 모음** | ${stats.permissive.ssgRoutes} SSG pages`,
+      pattern: /> \*\*무료 웹개발 자료 모음\*\* \| \d+ routes/g,
+      replacement: `> **무료 웹개발 자료 모음** | ${stats.permissive.routes} routes`,
     },
-    // Project structure - apps SSG pages
+    // Project structure - apps routes
     {
-      pattern: /│ {3}├── context\/\s+# Korean dictionary \([\d,]+ SSG pages\)/g,
-      replacement: `│   ├── context/             # Korean dictionary (${stats.context.ssgRoutes.toLocaleString()} SSG pages)`,
+      pattern: /│ {3}├── context\/\s+# Korean dictionary \([\d,]+ routes\)/g,
+      replacement: `│   ├── context/             # Korean dictionary (${stats.context.routes.toLocaleString()} routes)`,
     },
     {
-      pattern: /│ {3}└── roots\/\s+# Math documentation \([\d,]+ SSG pages\)/g,
-      replacement: `│   └── roots/               # Math documentation (${stats.roots.ssgRoutes.toLocaleString()} SSG pages)`,
+      pattern: /│ {3}└── roots\/\s+# Math documentation \([\d,]+ routes\)/g,
+      replacement: `│   └── roots/               # Math documentation (${stats.roots.routes.toLocaleString()} routes)`,
     },
   ];
 }
@@ -261,10 +261,10 @@ function getReadmeReplacements(stats: AllStats): Replacement[] {
  */
 function getClaudeMdReplacements(stats: AllStats): Replacement[] {
   return [
-    // SSG routes line
+    // routes line
     {
-      pattern: /각 앱 SSG 라우트: Context \d+개, Roots \d+개, Permissive \d+개/g,
-      replacement: `각 앱 SSG 라우트: Context ${stats.context.ssgRoutes}개, Roots ${stats.roots.ssgRoutes}개, Permissive ${stats.permissive.ssgRoutes}개`,
+      pattern: /각 앱 라우트: Context \d+개, Roots \d+개, Permissive \d+개/g,
+      replacement: `각 앱 라우트: Context ${stats.context.routes}개, Roots ${stats.roots.routes}개, Permissive ${stats.permissive.routes}개`,
     },
     // Data directory entries comment
     {
@@ -284,15 +284,15 @@ function getClaudeMdReplacements(stats: AllStats): Replacement[] {
  */
 function getContextReadmeReplacements(stats: AllStats): Replacement[] {
   const entries = stats.context.entries;
-  const ssg = stats.context.ssgRoutes;
+  const ssg = stats.context.routes;
   const enRoutes = Math.floor(ssg / 2);
   const koRoutes = ssg - enRoutes;
 
   return [
     // Badge
     {
-      pattern: /SSG_Routes-\d+-blue/g,
-      replacement: `SSG_Routes-${ssg}-blue`,
+      pattern: /Routes-\d+-blue/g,
+      replacement: `Routes-${ssg}-blue`,
     },
     // Word entries line
     {
@@ -324,10 +324,10 @@ function getContextReadmeReplacements(stats: AllStats): Replacement[] {
       pattern: /\| `\/entry\/:entryId` \| ✓ \| ✓ \| \d+ \| Word entry page \|/g,
       replacement: `| \`/entry/:entryId\` | ✓ | ✓ | ${entries} | Word entry page |`,
     },
-    // Total SSG routes line
+    // Total routes line
     {
-      pattern: /\*\*Total:\*\* \d+ SSG routes \(\d+ EN \+ \d+ KO\)/g,
-      replacement: `**Total:** ${ssg} SSG routes (${enRoutes} EN + ${koRoutes} KO)`,
+      pattern: /\*\*Total:\*\* \d+ routes \(\d+ EN \+ \d+ KO\)/g,
+      replacement: `**Total:** ${ssg} routes (${enRoutes} EN + ${koRoutes} KO)`,
     },
   ];
 }
@@ -338,15 +338,15 @@ function getContextReadmeReplacements(stats: AllStats): Replacement[] {
 function getRootsReadmeReplacements(stats: AllStats): Replacement[] {
   const concepts = stats.roots.concepts;
   const fields = stats.roots.fields;
-  const ssg = stats.roots.ssgRoutes;
+  const ssg = stats.roots.routes;
   const enRoutes = Math.floor(ssg / 2);
   const koRoutes = ssg - enRoutes;
 
   return [
     // Badge
     {
-      pattern: /SSG_Routes-\d+-blue/g,
-      replacement: `SSG_Routes-${ssg}-blue`,
+      pattern: /Routes-\d+-blue/g,
+      replacement: `Routes-${ssg}-blue`,
     },
     // Math concepts count
     {
@@ -388,10 +388,10 @@ function getRootsReadmeReplacements(stats: AllStats): Replacement[] {
       pattern: /└── \.\.\. \(\d+ field files, \d+ concepts total\)/g,
       replacement: `└── ... (${fields} field files, ${concepts} concepts total)`,
     },
-    // Total SSG routes line
+    // Total routes line
     {
-      pattern: /\*\*Total:\*\* \d+ SSG routes \(\d+ EN \+ \d+ KO\)/g,
-      replacement: `**Total:** ${ssg} SSG routes (${enRoutes} EN + ${koRoutes} KO)`,
+      pattern: /\*\*Total:\*\* \d+ routes \(\d+ EN \+ \d+ KO\)/g,
+      replacement: `**Total:** ${ssg} routes (${enRoutes} EN + ${koRoutes} KO)`,
     },
   ];
 }
@@ -402,15 +402,15 @@ function getRootsReadmeReplacements(stats: AllStats): Replacement[] {
 function getPermissiveReadmeReplacements(stats: AllStats): Replacement[] {
   const libraries = stats.permissive.libraries;
   const webApis = stats.permissive.webApis;
-  const ssg = stats.permissive.ssgRoutes;
+  const ssg = stats.permissive.routes;
   const enRoutes = Math.floor(ssg / 2);
   const koRoutes = ssg - enRoutes;
 
   return [
     // Badge
     {
-      pattern: /SSG_Routes-\d+-blue/g,
-      replacement: `SSG_Routes-${ssg}-blue`,
+      pattern: /Routes-\d+-blue/g,
+      replacement: `Routes-${ssg}-blue`,
     },
     // Libraries count
     {
@@ -442,15 +442,15 @@ function getPermissiveReadmeReplacements(stats: AllStats): Replacement[] {
       pattern: /\| `\/library\/:slug` \| ✓ \| ✓ \| \d+ \| Library detail page \|/g,
       replacement: `| \`/library/:slug\` | ✓ | ✓ | ${libraries} | Library detail page |`,
     },
-    // Total SSG routes line
+    // Total routes line
     {
-      pattern: /\*\*Total:\*\* \d+ SSG routes \(\d+ EN \+ \d+ KO\)/g,
-      replacement: `**Total:** ${ssg} SSG routes (${enRoutes} EN + ${koRoutes} KO)`,
+      pattern: /\*\*Total:\*\* \d+ routes \(\d+ EN \+ \d+ KO\)/g,
+      replacement: `**Total:** ${ssg} routes (${enRoutes} EN + ${koRoutes} KO)`,
     },
     // Comparison table
     {
-      pattern: /\| SSG Routes \| \d+ \| \d+ \| \d+ \|/g,
-      replacement: `| SSG Routes | ${stats.context.ssgRoutes} | ${stats.roots.ssgRoutes} | ${ssg} |`,
+      pattern: /\| Routes \| \d+ \| \d+ \| \d+ \|/g,
+      replacement: `| Routes | ${stats.context.routes} | ${stats.roots.routes} | ${ssg} |`,
     },
   ];
 }
@@ -495,19 +495,19 @@ function main() {
   console.log(`  - Entries: ${stats.context.entries}`);
   console.log(`  - Categories: ${stats.context.categories}`);
   console.log(`  - Conversations: ${stats.context.conversations}`);
-  console.log(`  - SSG Routes: ${stats.context.ssgRoutes}`);
+  console.log(`  - Routes: ${stats.context.routes}`);
 
   console.log('\nRoots App:');
   console.log(`  - Concepts: ${stats.roots.concepts}`);
   console.log(`  - Fields: ${stats.roots.fields}`);
-  console.log(`  - SSG Routes: ${stats.roots.ssgRoutes}`);
+  console.log(`  - Routes: ${stats.roots.routes}`);
 
   console.log('\nPermissive App:');
   console.log(`  - Libraries: ${stats.permissive.libraries}`);
   console.log(`  - Web APIs: ${stats.permissive.webApis}`);
-  console.log(`  - SSG Routes: ${stats.permissive.ssgRoutes}`);
+  console.log(`  - Routes: ${stats.permissive.routes}`);
 
-  console.log(`\nTotal SSG Routes: ${stats.totalSsgRoutes}`);
+  console.log(`\nTotal Routes: ${stats.totalRoutes}`);
 
   // meta.json 저장
   const metaPath = join(ROOT_DIR, 'meta.json');

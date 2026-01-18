@@ -72,9 +72,9 @@
         "ja": "パッケージ"
       },
       "noSpa": {
-        "en": "SSR/SSG Only",
-        "ko": "SSR/SSG 전용",
-        "ja": "SSR/SSGのみ"
+        "en": "SSR Only",
+        "ko": "SSR 전용",
+        "ja": "SSRのみ"
       }
     },
     "appDetails": {

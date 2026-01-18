@@ -1,22 +1,22 @@
 ---
 title: Rendering Modes
-description: Understanding SSG and SSR architecture with React Router v7
+description: Understanding SSR architecture with React Router v7 and Cloudflare Workers
 ---
 
-This project uses different rendering modes per app for optimal performance and scalability.
+This project uses **SSR (Server-Side Rendering)** for all apps, deployed on **Cloudflare Workers**.
 
 ## Rendering Mode by App
 
-| App | Mode | Data Source | Pages | Use Case |
-|:----|:-----|:------------|:-----:|:---------|
-| **Context** | **SSR + D1** | Cloudflare D1 | Dynamic | 16,836 entries (scalable to 1M+) |
-| **Roots** | SSG | TypeScript | 920 | 438 concepts (static content) |
-| **Permissive** | SSR | In-memory | 8 | Small static data |
+| App | Mode | Data Source | Use Case |
+|:----|:-----|:------------|:---------|
+| **Context** | **SSR + D1** | Cloudflare D1 | 16,836 entries (scalable to 1M+) |
+| **Roots** | SSR | TypeScript | 438 concepts |
+| **Permissive** | SSR | In-memory | 88 libraries, 56 Web APIs |
 
 :::note[Mode Selection Guide]
 - **SSR + D1**: Large/frequently updated content (1,000+ entries)
-- **SSG**: Small/rarely updated content (under 1,000 pages)
-- **SPA**: ❌ Never allowed (SEO impossible)
+- **SSR + In-memory**: Small/static content
+- **SPA**: Never allowed (SEO impossible)
 :::
 
 ---
@@ -25,13 +25,13 @@ This project uses different rendering modes per app for optimal performance and 
 
 Context app uses **SSR + Cloudflare D1** for unlimited scalability.
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────┐
-│  Runtime (Cloudflare Pages Functions)                           │
+│  Runtime (Cloudflare Workers)                                    │
 │                                                                  │
 │  ┌──────────┐    ┌──────────┐    ┌──────────┐                  │
-│  │  Client  │ → │  Pages   │ → │    D1     │                  │
-│  │ Request  │    │ Function │    │ Database  │                  │
+│  │  Client  │ → │ Workers  │ → │    D1     │                  │
+│  │ Request  │    │  (SSR)   │    │ Database  │                  │
 │  └──────────┘    └──────────┘    └──────────┘                  │
 │       ↑                               │                         │
 │       └───────────────────────────────┘                         │
@@ -53,7 +53,7 @@ export default {
 } satisfies Config;
 ```
 
-### SSR Loader Pattern
+### SSR Loader Pattern (D1)
 
 ```typescript
 // apps/context/app/routes/($locale).entry.$entryId.tsx
@@ -71,33 +71,34 @@ export async function loader({ params, context }: Route.LoaderArgs) {
 
 ---
 
-## SSG Architecture (Roots App)
+## SSR Architecture (Roots/Permissive Apps)
 
-Roots app uses **SSG** for static math documentation.
+Roots and Permissive apps use **SSR + Cloudflare Workers** with in-memory data.
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────┐
 │  Build Time                                                     │
 │  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐         │
-│  │ prerender() │ → │  loader()   │ → │  HTML + .data │         │
-│  │ (route list)│    │ (fetch data)│    │  (static)    │         │
+│  │ prerender() │ → │  loader()   │ → │  Static HTML  │         │
+│  │ (정적 페이지)│    │ (정적 데이터)│    │  (CDN 캐시)   │         │
 │  └─────────────┘    └─────────────┘    └─────────────┘         │
 └─────────────────────────────────────────────────────────────────┘
-                              ↓
+                              +
 ┌─────────────────────────────────────────────────────────────────┐
-│  Runtime (CDN)                                                  │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │  Static HTML served instantly — No server required       │   │
-│  └─────────────────────────────────────────────────────────┘   │
+│  Runtime (Cloudflare Workers)                                    │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐         │
+│  │  Request    │ → │  Workers    │ → │  SSR HTML     │         │
+│  │ /concept/:id│    │  loader()   │    │  (dynamic)   │         │
+│  └─────────────┘    └─────────────┘    └─────────────┘         │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-### SSG Configuration
+### SSR Configuration
 
 ```typescript
 // apps/roots/react-router.config.ts
 export default {
-  ssr: false,  // SSG mode (Roots only) - all pages pre-rendered at build
+  ssr: true,  // SSR mode
   async prerender() {
     const staticRoutes = extractStaticRoutes(routes);
     const conceptRoutes = generateI18nRoutes(concepts, (c) => `/concept/${c.id}`);
@@ -106,28 +107,28 @@ export default {
 } satisfies Config;
 ```
 
-### SSG Loader Pattern
+### SSR Loader Pattern (In-memory)
 
 ```typescript
 // apps/roots/app/routes/($locale).concept.$conceptId.tsx
 export async function loader({ params }: Route.LoaderArgs) {
   const concept = getConceptById(params.conceptId);
   if (!concept) throw new Response('Not Found', { status: 404 });
-  return { concept };  // → saved as .data file at build time
+  return { concept };
 }
 ```
 
 ---
 
-## Why Different Modes?
+## Why SSR for All Apps?
 
-| Factor | SSG (Roots) | SSR + D1 (Context) |
-|:-------|:------------|:-------------------|
-| **Content size** | 438 concepts | 16,836 entries |
-| **Update frequency** | Rarely | Frequently |
-| **Build time** | ~2 min | N/A (dynamic) |
-| **Scalability** | Limited by build | Unlimited |
-| **Data freshness** | Build-time snapshot | Real-time |
+| Factor | SSR + Workers |
+|:-------|:--------------|
+| **Deployment** | Unified Cloudflare Workers |
+| **Scalability** | Unlimited |
+| **Data freshness** | Real-time |
+| **Build time** | Fast (~30s) |
+| **SEO** | Full HTML on first request |
 
 ---
 
@@ -135,14 +136,13 @@ export async function loader({ params }: Route.LoaderArgs) {
 
 :::danger[Never Use]
 - **SPA mode** — Empty `<div id="root"></div>` breaks SEO
-- **ISR mode** — Not supported by Cloudflare Pages
-- **SSG for large content** — Build failures at scale
+- **ISR mode** — Not supported by Cloudflare Workers
 :::
 
 ---
 
 ## Related
 
-- [SSR Migration Guide](/public-monorepo/guides/ssr-migration/) — Why we migrated Context to SSR
-- [Hydration Workaround](/public-monorepo/guides/hydration-workaround/) — React 19 SSG bug fix
+- [SSR Migration Guide](/public-monorepo/guides/ssr-migration/) — Why we migrated to SSR
+- [Hydration Workaround](/public-monorepo/guides/hydration-workaround/) — React 19 hydration bug fix
 - [Troubleshooting](/public-monorepo/guides/troubleshooting/) — Common build errors
