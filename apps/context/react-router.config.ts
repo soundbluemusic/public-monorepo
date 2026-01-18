@@ -35,7 +35,7 @@ export default {
     // sitemap.xml, api 라우트는 런타임에 D1에서 동적 처리하므로 prerender 제외
     const prerenderRoutes = [...staticRoutes, ...categoryRoutes, ...conversationRoutes].filter(
       (route) =>
-        !route.startsWith('/api/') && (!route.includes('sitemap') || !route.endsWith('.xml')),
+        !route.includes('/api/') && (!route.includes('sitemap') || !route.endsWith('.xml')),
     );
 
     console.log('[SSR] Prerender static routes only, entry pages served dynamically from D1');

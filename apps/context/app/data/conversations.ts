@@ -957,7 +957,7 @@ export const conversations: Conversation[] = [
   // ============================================================================
   {
     id: 'daily-weather-1',
-    categoryId: 'daily-life',
+    categoryId: 'daily-misc',
     title: { ko: '날씨 이야기', en: 'Talking About Weather' },
     dialogue: [
       {
@@ -988,7 +988,7 @@ export const conversations: Conversation[] = [
   },
   {
     id: 'daily-time-1',
-    categoryId: 'daily-life',
+    categoryId: 'daily-misc',
     title: { ko: '시간 묻기', en: 'Asking the Time' },
     dialogue: [
       {
@@ -1019,7 +1019,7 @@ export const conversations: Conversation[] = [
   },
   {
     id: 'daily-phone-1',
-    categoryId: 'daily-life',
+    categoryId: 'daily-misc',
     title: { ko: '전화 통화', en: 'Phone Call' },
     dialogue: [
       {
@@ -1050,7 +1050,7 @@ export const conversations: Conversation[] = [
   },
   {
     id: 'daily-hobby-1',
-    categoryId: 'daily-life',
+    categoryId: 'daily-misc',
     title: { ko: '취미 이야기', en: 'Talking About Hobbies' },
     dialogue: [
       {
@@ -1081,7 +1081,7 @@ export const conversations: Conversation[] = [
   },
   {
     id: 'daily-appointment-1',
-    categoryId: 'daily-life',
+    categoryId: 'daily-misc',
     title: { ko: '약속 잡기', en: 'Making Plans' },
     dialogue: [
       {
@@ -1112,7 +1112,7 @@ export const conversations: Conversation[] = [
   },
   {
     id: 'daily-sick-1',
-    categoryId: 'daily-life',
+    categoryId: 'daily-misc',
     title: { ko: '아플 때', en: 'When Sick' },
     dialogue: [
       {

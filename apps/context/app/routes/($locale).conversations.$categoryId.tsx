@@ -10,23 +10,29 @@ import type { Category, Conversation } from '@/data/types';
 import { useI18n } from '@/i18n';
 
 interface LoaderData {
-  category: Category | null;
+  category: Category;
   conversations: Conversation[];
 }
 
 /**
- * loader: SSG 빌드 시 실행
- * 카테고리별 대화 데이터를 HTML에 포함
+ * loader: SSR 런타임에서 실행
+ * 카테고리별 대화 데이터를 조회합니다.
  */
 export async function loader({ params }: { params: { categoryId: string } }): Promise<LoaderData> {
   const category = getCategoryById(params.categoryId);
+
+  // Category가 없으면 HTTP 404 반환 (Soft 404 방지)
+  if (!category) {
+    throw new Response('Category not found', { status: 404 });
+  }
+
   const conversations = getConversationsByCategory(params.categoryId);
-  return { category: category || null, conversations };
+  return { category, conversations };
 }
 
 /**
  * clientLoader: 클라이언트에서 데이터 로드
- * SSG 데이터가 있으면 사용, 없으면 직접 로드
+ * SSR 데이터가 있으면 사용, 없으면 직접 로드
  */
 export async function clientLoader({
   params,
@@ -39,19 +45,19 @@ export async function clientLoader({
     return await serverLoader();
   } catch {
     const category = getCategoryById(params.categoryId);
+
+    // Category가 없으면 HTTP 404 반환
+    if (!category) {
+      throw new Response('Category not found', { status: 404 });
+    }
+
     const conversations = getConversationsByCategory(params.categoryId);
-    return { category: category || null, conversations };
+    return { category, conversations };
   }
 }
 
 export const meta = dynamicMetaFactory(
-  (data: { category: Category | null; conversations: Conversation[] }) => {
-    if (!data?.category) {
-      return {
-        ko: { title: '카테고리를 찾을 수 없습니다 | Context' },
-        en: { title: 'Category Not Found | Context' },
-      };
-    }
+  (data: { category: Category; conversations: Conversation[] }) => {
     const { category, conversations } = data;
     return {
       ko: {
@@ -69,26 +75,10 @@ export const meta = dynamicMetaFactory(
 
 export default function ConversationsCategoryPage() {
   const { category, conversations } = useLoaderData<{
-    category: Category | null;
+    category: Category;
     conversations: Conversation[];
   }>();
   const { locale, t, localePath } = useI18n();
-
-  if (!category) {
-    return (
-      <Layout>
-        <div className="text-center py-12 px-4 text-(--text-tertiary)">
-          <p className="text-(--text-secondary)">{t('categoryNotFoundMsg')}</p>
-          <Link
-            to={localePath('/conversations')}
-            className="text-(--accent-primary) hover:underline mt-4 inline-block"
-          >
-            {t('backToConversations')}
-          </Link>
-        </div>
-      </Layout>
-    );
-  }
 
   return (
     <Layout>

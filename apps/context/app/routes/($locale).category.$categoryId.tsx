@@ -1,7 +1,7 @@
 import { dynamicMetaFactory } from '@soundblue/i18n';
 import { useAutoAnimate } from '@soundblue/ui/hooks';
 import { ProgressBar } from '@soundblue/ui/primitives';
-import { Link, useLoaderData } from 'react-router';
+import { useLoaderData } from 'react-router';
 import { EntryListItem } from '@/components/entry/EntryListItem';
 import { Layout } from '@/components/layout';
 import { getCategoryById } from '@/data/categories';
@@ -10,24 +10,30 @@ import { useStudyData } from '@/hooks';
 import { useI18n } from '@/i18n';
 
 interface LoaderData {
-  category: Category | null;
+  category: Category;
   entries: MeaningEntry[];
 }
 
 /**
- * loader: SSG 빌드 시 실행
- * 카테고리 데이터를 HTML에 포함
+ * loader: SSR 런타임에서 실행
+ * 카테고리 데이터를 조회합니다.
  */
 export async function loader({ params }: { params: { categoryId: string } }): Promise<LoaderData> {
   const { getEntriesByCategory } = await import('@/data/entries');
   const category = getCategoryById(params.categoryId);
+
+  // Category가 없으면 HTTP 404 반환 (Soft 404 방지)
+  if (!category) {
+    throw new Response('Category not found', { status: 404 });
+  }
+
   const entries = await getEntriesByCategory(params.categoryId);
-  return { category: category || null, entries };
+  return { category, entries };
 }
 
 /**
  * clientLoader: 클라이언트 네비게이션 시 실행
- * SSG 데이터가 있으면 사용, 없으면 직접 로드
+ * SSR 데이터가 있으면 사용, 없으면 직접 로드
  */
 export async function clientLoader({
   params,
@@ -39,40 +45,37 @@ export async function clientLoader({
   try {
     return await serverLoader();
   } catch {
-    // SSG 데이터가 없는 경우 직접 로드
+    // SSR 데이터가 없는 경우 직접 로드
     const { getEntriesByCategory } = await import('@/data/entries');
     const category = getCategoryById(params.categoryId);
+
+    // Category가 없으면 HTTP 404 반환
+    if (!category) {
+      throw new Response('Category not found', { status: 404 });
+    }
+
     const entries = await getEntriesByCategory(params.categoryId);
-    return { category: category || null, entries };
+    return { category, entries };
   }
 }
 
-export const meta = dynamicMetaFactory(
-  (data: { category: Category | null; entries: MeaningEntry[] }) => {
-    if (!data?.category) {
-      return {
-        ko: { title: '카테고리를 찾을 수 없습니다 | Context' },
-        en: { title: 'Category Not Found | Context' },
-      };
-    }
-    const { category, entries } = data;
-    return {
-      ko: {
-        title: `${category.name.ko} | Context`,
-        description: `${category.name.ko} 카테고리의 ${entries.length}개 한국어 단어 학습`,
-      },
-      en: {
-        title: `${category.name.en} | Context`,
-        description: `Learn ${entries.length} Korean words in the ${category.name.en} category`,
-      },
-    };
-  },
-  'https://context.soundbluemusic.com',
-);
+export const meta = dynamicMetaFactory((data: { category: Category; entries: MeaningEntry[] }) => {
+  const { category, entries } = data;
+  return {
+    ko: {
+      title: `${category.name.ko} | Context`,
+      description: `${category.name.ko} 카테고리의 ${entries.length}개 한국어 단어 학습`,
+    },
+    en: {
+      title: `${category.name.en} | Context`,
+      description: `Learn ${entries.length} Korean words in the ${category.name.en} category`,
+    },
+  };
+}, 'https://context.soundbluemusic.com');
 
 export default function CategoryPage() {
   const { category, entries } = useLoaderData<{
-    category: Category | null;
+    category: Category;
     entries: MeaningEntry[];
   }>();
   const { locale, t, localePath } = useI18n();
@@ -82,23 +85,6 @@ export default function CategoryPage() {
 
   // Auto-animate for list section
   const [listRef] = useAutoAnimate<HTMLDivElement>();
-
-  // Early return for missing category - after all hooks
-  if (!category) {
-    return (
-      <Layout>
-        <div className="text-center py-12 px-4 text-(--text-tertiary)">
-          <p className="text-(--text-secondary)">{t('categoryNotFound')}</p>
-          <Link
-            to={localePath('/browse')}
-            className="text-(--accent-primary) hover:underline mt-4 inline-block"
-          >
-            {t('browse')}
-          </Link>
-        </div>
-      </Layout>
-    );
-  }
 
   const studiedCount = entries.filter((e) => studiedIds.has(e.id)).length;
 

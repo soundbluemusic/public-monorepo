@@ -37,7 +37,7 @@ interface LoaderParams {
 }
 
 interface LoaderData {
-  entry: LocaleEntry | null;
+  entry: LocaleEntry;
   englishColorName?: string;
 }
 
@@ -66,14 +66,19 @@ export async function loader({
 
   const entry = await getEntryByIdFromD1(db, params.entryId, locale);
 
+  // Entry가 없으면 HTTP 404 반환 (Soft 404 방지)
+  if (!entry) {
+    throw new Response('Entry not found', { status: 404 });
+  }
+
   // colors 카테고리의 경우 영어 색상명도 함께 로드 (색상 표시용)
   let englishColorName: string | undefined;
-  if (locale === 'ko' && entry?.categoryId === 'colors') {
+  if (locale === 'ko' && entry.categoryId === 'colors') {
     const enEntry = await getEntryByIdFromD1(db, params.entryId, 'en');
     englishColorName = enEntry?.translation.word;
   }
 
-  return { entry: entry || null, englishColorName };
+  return { entry, englishColorName };
 }
 
 /**
@@ -116,13 +121,7 @@ export function HydrateFallback() {
   return null;
 }
 
-export const meta = dynamicMetaFactory((data: { entry: LocaleEntry | null }) => {
-  if (!data?.entry) {
-    return {
-      ko: { title: '단어를 찾을 수 없습니다 | Context' },
-      en: { title: 'Entry Not Found | Context' },
-    };
-  }
+export const meta = dynamicMetaFactory((data: { entry: LocaleEntry }) => {
   const { entry } = data;
   return {
     ko: {
@@ -138,22 +137,21 @@ export const meta = dynamicMetaFactory((data: { entry: LocaleEntry | null }) => 
 
 export default function EntryPage() {
   const { entry, englishColorName } = useLoaderData<{
-    entry: LocaleEntry | null;
+    entry: LocaleEntry;
     englishColorName?: string;
   }>();
   const { locale, t, localePath } = useI18n();
 
   const isFavorite = useUserDataStore((state) =>
-    entry?.id ? state.favorites.some((f) => f.entryId === entry.id) : false,
+    state.favorites.some((f) => f.entryId === entry.id),
   );
   const isStudied = useUserDataStore((state) =>
-    entry?.id ? state.studyRecords.some((r) => r.entryId === entry.id) : false,
+    state.studyRecords.some((r) => r.entryId === entry.id),
   );
   const toggleFavorite = useUserDataStore((state) => state.toggleFavorite);
   const markAsStudied = useUserDataStore((state) => state.markAsStudied);
 
   const handleMarkAsStudied = () => {
-    if (!entry?.id) return;
     markAsStudied(entry.id);
     toast({
       message: locale === 'ko' ? '학습 완료로 표시되었습니다' : 'Marked as studied',
@@ -162,7 +160,6 @@ export default function EntryPage() {
   };
 
   const handleToggleFavorite = () => {
-    if (!entry?.id) return;
     const newState = toggleFavorite(entry.id);
     toast({
       message: newState
@@ -175,22 +172,6 @@ export default function EntryPage() {
       type: 'success',
     });
   };
-
-  if (!entry) {
-    return (
-      <Layout>
-        <div className="text-center py-12 px-4 text-(--text-tertiary)">
-          <p className="text-(--text-secondary)">{t('entryNotFound')}</p>
-          <Link
-            to={localePath('/')}
-            className="text-(--accent-primary) hover:underline mt-4 inline-block"
-          >
-            {t('backToList')}
-          </Link>
-        </div>
-      </Layout>
-    );
-  }
 
   const translation = entry.translation;
 
