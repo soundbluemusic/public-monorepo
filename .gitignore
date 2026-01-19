@@ -18,6 +18,7 @@ apps/context/app/data/generated/
 apps/context/public/data/by-category/
 apps/context/public/data/chunks/
 apps/context/public/data/trie.bin
+apps/context/public/data/expression-trie.json
 
 # Cache
 .cache/

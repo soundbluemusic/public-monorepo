@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router';
-import { findExpressions } from '@/data/generated/korean-expressions';
+import { findExpressions, isTrieLoaded, loadTrie } from '@/data/generated/korean-expressions';
 import { useI18n } from '@/i18n';
 
 interface LinkedExampleProps {
@@ -19,6 +20,10 @@ interface LinkedExampleProps {
  * - 751개 표현: ~50ms → <1ms
  * - 10,000개 표현: ~500ms → <1ms (동일 성능)
  *
+ * 번들 최적화:
+ * - Trie 데이터가 별도 JSON 파일로 분리됨 (2.5MB → 0)
+ * - 컴포넌트 마운트 시 비동기로 로드
+ *
  * 동음이의어 지원:
  * - 같은 한국어에 여러 의미가 있으면 팝오버로 선택 가능
  * - 예: "이" → 숫자 2 vs 조사(주격)
@@ -28,6 +33,19 @@ const DEFAULT_LINK_CLASS =
 
 export function LinkedExample({ text, currentEntryId, linkClassName }: LinkedExampleProps) {
   const { localePath } = useI18n();
+  const [isLoaded, setIsLoaded] = useState(isTrieLoaded());
+
+  // Trie 데이터 로드 (최초 1회만)
+  useEffect(() => {
+    if (!isLoaded) {
+      loadTrie().then(() => setIsLoaded(true));
+    }
+  }, [isLoaded]);
+
+  // Trie가 아직 로드되지 않았으면 텍스트만 반환
+  if (!isLoaded) {
+    return <>{text}</>;
+  }
 
   // O(m) 시간에 모든 매칭 찾기
   const matches = findExpressions(text, currentEntryId);

@@ -26,6 +26,7 @@ const EXPRESSIONS_FILE = join(__dirname, '../app/data/generated/korean-expressio
 const CHUNKS_DIR = join(__dirname, '../public/data/chunks');
 const CATEGORY_CHUNKS_DIR = join(__dirname, '../public/data/by-category');
 const TRIE_FILE = join(__dirname, '../public/data/trie.bin');
+const TRIE_JSON_FILE = join(__dirname, '../public/data/expression-trie.json');
 const INDEX_FILE = join(__dirname, '../app/data/generated/entry-index.ts');
 
 // 한글 초성 목록 (19개)
@@ -375,6 +376,10 @@ function buildAhoCorasickTrie(expressions: { id: string; korean: string }[]): Tr
  * 기존 O(n*m) 알고리즘을 O(m)으로 최적화
  * - n: 표현 개수 (751개 → 10,000개+)
  * - m: 텍스트 길이
+ *
+ * 번들 최적화: Trie 데이터를 별도 JSON 파일로 분리하여 동적 로딩
+ * - 기존: 2.5MB가 JS 번들에 포함
+ * - 개선: JSON 파일로 분리, 필요할 때만 fetch
  */
 function generateKoreanExpressionsFile(entries: JsonEntry[]): string {
   // 길이순 정렬 (긴 것부터) - 긴 표현 우선 매칭
@@ -385,8 +390,14 @@ function generateKoreanExpressionsFile(entries: JsonEntry[]): string {
   // Aho-Corasick Trie 빌드
   const trie = buildAhoCorasickTrie(expressions);
 
+  // Trie 데이터를 별도 JSON 파일로 저장
+  writeFileSync(TRIE_JSON_FILE, JSON.stringify(trie));
+  console.log(
+    `   ✓ expression-trie.json (${trie.length} nodes, ${(JSON.stringify(trie).length / 1024 / 1024).toFixed(2)}MB)`,
+  );
+
   return `/**
- * @fileoverview LinkedExample 컴포넌트용 Aho-Corasick Trie 데이터
+ * @fileoverview LinkedExample 컴포넌트용 Aho-Corasick Trie 로더
  *
  * 이 파일은 scripts/load-entries.ts에 의해 자동 생성됩니다.
  * 직접 수정하지 마세요.
@@ -396,7 +407,9 @@ function generateKoreanExpressionsFile(entries: JsonEntry[]): string {
  * - 기존: O(n*m) where n=표현개수, m=텍스트길이
  * - 개선: O(m) - 표현 개수와 무관
  *
- * 10,000개 표현에서도 동일한 성능 보장
+ * 번들 최적화:
+ * - Trie 데이터가 별도 JSON 파일로 분리됨 (2.5MB → 0)
+ * - 필요할 때만 동적으로 로드
  *
  * @generated
  * @date 2024-01-01T00:00:00.000Z
@@ -417,14 +430,55 @@ export interface TrieNode {
 }
 
 /**
- * 사전 빌드된 Aho-Corasick Trie
+ * Trie 데이터 통계
  * ${trie.length}개 노드, ${expressions.length}개 표현
- *
- * @remarks
- * 타입 추론 비용을 줄이기 위해 JSON.parse를 사용합니다.
- * 빌드 시점에 JSON 문자열이 인라인되므로 런타임 오버헤드 없음.
  */
-export const expressionTrie: TrieNode[] = JSON.parse('${JSON.stringify(trie).replace(/'/g, "\\'")}');
+export const TRIE_STATS = {
+  nodeCount: ${trie.length},
+  expressionCount: ${expressions.length},
+} as const;
+
+/** Trie 데이터 캐시 */
+let trieCache: TrieNode[] | null = null;
+let trieLoadPromise: Promise<TrieNode[]> | null = null;
+
+/**
+ * Trie 데이터 로드 (캐시됨)
+ * 최초 호출 시 JSON 파일에서 로드, 이후 캐시 반환
+ */
+export async function loadTrie(): Promise<TrieNode[]> {
+  // 이미 로드됨
+  if (trieCache) return trieCache;
+
+  // 로딩 중이면 기존 Promise 반환 (중복 요청 방지)
+  if (trieLoadPromise) return trieLoadPromise;
+
+  trieLoadPromise = (async () => {
+    try {
+      const response = await fetch('/data/expression-trie.json');
+      if (!response.ok) {
+        throw new Error(\`Failed to load trie: \${response.status}\`);
+      }
+      trieCache = await response.json();
+      return trieCache!;
+    } catch (error) {
+      console.error('Failed to load expression trie:', error);
+      trieCache = []; // 빈 배열로 폴백
+      return trieCache;
+    } finally {
+      trieLoadPromise = null;
+    }
+  })();
+
+  return trieLoadPromise;
+}
+
+/**
+ * Trie가 로드되었는지 확인
+ */
+export function isTrieLoaded(): boolean {
+  return trieCache !== null && trieCache.length > 0;
+}
 
 /**
  * 한글 문자인지 확인
@@ -437,15 +491,45 @@ function isKorean(char: string | undefined): boolean {
 }
 
 /**
- * O(m) 시간에 텍스트에서 모든 표현 찾기
+ * O(m) 시간에 텍스트에서 모든 표현 찾기 (비동기)
  * @param text 검색할 텍스트
  * @param excludeId 제외할 표현 ID (현재 보고 있는 항목)
  * @returns 매칭 결과 배열 [{start, end, ids, korean}] - ids는 동음이의어 지원
+ */
+export async function findExpressionsAsync(
+  text: string,
+  excludeId?: string
+): Promise<Array<{ start: number; end: number; ids: string[]; korean: string }>> {
+  const trie = await loadTrie();
+  return findExpressionsWithTrie(trie, text, excludeId);
+}
+
+/**
+ * O(m) 시간에 텍스트에서 모든 표현 찾기 (동기 - Trie가 이미 로드된 경우)
+ * @param text 검색할 텍스트
+ * @param excludeId 제외할 표현 ID (현재 보고 있는 항목)
+ * @returns 매칭 결과 배열 또는 빈 배열 (Trie 미로드 시)
  */
 export function findExpressions(
   text: string,
   excludeId?: string
 ): Array<{ start: number; end: number; ids: string[]; korean: string }> {
+  if (!trieCache || trieCache.length === 0) {
+    return [];
+  }
+  return findExpressionsWithTrie(trieCache, text, excludeId);
+}
+
+/**
+ * Trie를 사용한 표현 찾기 (내부 함수)
+ */
+function findExpressionsWithTrie(
+  trie: TrieNode[],
+  text: string,
+  excludeId?: string
+): Array<{ start: number; end: number; ids: string[]; korean: string }> {
+  if (trie.length === 0) return [];
+
   const matches: Array<{ start: number; end: number; ids: string[]; korean: string }> = [];
   let state = 0;
 
@@ -454,10 +538,10 @@ export function findExpressions(
     if (!char) continue;
 
     // 현재 상태에서 char로 갈 수 없으면 fail 따라감
-    let currentNode = expressionTrie[state];
+    let currentNode = trie[state];
     while (state !== 0 && currentNode && !(char in currentNode.children)) {
       state = currentNode.fail;
-      currentNode = expressionTrie[state];
+      currentNode = trie[state];
     }
 
     // char로 전이
@@ -468,7 +552,7 @@ export function findExpressions(
     // 출력 체크 (현재 상태 + fail 체인)
     let checkState = state;
     while (checkState !== 0) {
-      const node = expressionTrie[checkState];
+      const node = trie[checkState];
       if (!node) break;
       if (node.output && node.korean) {
         // excludeId 필터링 (동음이의어 중 현재 항목 제외)
