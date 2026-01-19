@@ -6,9 +6,8 @@
  * @see https://www.sitemaps.org/protocol.html
  */
 
+import { SITE_URL } from '@/constants';
 import { getCategoriesFromD1 } from '@/services/d1';
-
-const SITE_URL = 'https://context.soundbluemusic.com';
 
 interface LoaderArgs {
   context: { cloudflare?: { env?: { DB?: D1Database } } };

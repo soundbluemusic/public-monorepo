@@ -111,10 +111,16 @@ export default function ConceptPage() {
   useEffect(() => {
     if (isClient) {
       fetch('/concept-names.json')
-        .then((res) => res.json())
+        .then((res) => {
+          if (!res.ok) {
+            console.error(`[ConceptPage] Failed to load concept-names: ${res.status}`);
+            return {};
+          }
+          return res.json();
+        })
         .then(setConceptNames)
-        .catch(() => {
-          // fetch 실패 시 빈 객체 유지
+        .catch((error) => {
+          console.error('[ConceptPage] Failed to load concept-names:', error);
         });
     }
   }, [isClient]);
@@ -125,8 +131,8 @@ export default function ConceptPage() {
       favorites
         .isFavorite(params.conceptId)
         .then(setIsFavorite)
-        .catch(() => {
-          // IndexedDB 접근 실패 시 기본값 유지
+        .catch((error) => {
+          console.error('[ConceptPage] IndexedDB access failed:', error);
         });
     }
   }, [isClient, params.conceptId]);

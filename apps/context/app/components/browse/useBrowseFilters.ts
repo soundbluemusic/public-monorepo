@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router';
 import { z } from 'zod';
+import { BROWSE_CHUNK_SIZE, PAGE_SIZE } from '@/constants';
 import type { categories } from '@/data/categories';
 import type { LightEntry } from '@/data/entries';
 
@@ -46,11 +47,11 @@ export function isSortOption(value: string): value is SortOption {
   return (SORT_OPTIONS as readonly string[]).includes(value);
 }
 
-/** 페이지당 항목 수 */
-export const PAGE_SIZE = 50;
+// PAGE_SIZE와 BROWSE_CHUNK_SIZE는 @/constants에서 import
+export { PAGE_SIZE } from '@/constants';
 
-/** 청크당 항목 수 (generate-browse-chunks.ts와 동기화) */
-const CHUNK_SIZE = 1000;
+/** 청크당 항목 수 (constants에서 BROWSE_CHUNK_SIZE로 정의) */
+const CHUNK_SIZE = BROWSE_CHUNK_SIZE;
 
 /** Browse 메타데이터 */
 interface BrowseMetadata {

@@ -5,9 +5,8 @@
  * D1에서 해당 카테고리의 모든 엔트리 ID를 조회하여 사이트맵 생성
  */
 
+import { SITE_URL } from '@/constants';
 import { getEntryIdsByCategoryFromD1 } from '@/services/d1';
-
-const SITE_URL = 'https://context.soundbluemusic.com';
 
 interface LoaderArgs {
   context: { cloudflare?: { env?: { DB?: D1Database } } };

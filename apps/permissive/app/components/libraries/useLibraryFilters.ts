@@ -1,6 +1,7 @@
 import { LIMITS } from '@soundblue/core/validation';
 import { useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router';
+import { NEW_LIBRARY_YEAR } from '../../constants';
 import { type CategoryFilter, categories, type Library } from '../../data/libraries';
 
 export type SortOption = 'stars' | 'newest' | 'name';
@@ -59,7 +60,7 @@ export function useLibraryFilters({ libraries: libs }: UseLibraryFiltersOptions)
     } else if (quickFilter === 'usedHere') {
       filtered = filtered.filter((lib) => lib.usedHere);
     } else if (quickFilter === 'new') {
-      filtered = filtered.filter((lib) => lib.yearReleased && lib.yearReleased >= 2023);
+      filtered = filtered.filter((lib) => lib.yearReleased && lib.yearReleased >= NEW_LIBRARY_YEAR);
     }
 
     if (category !== 'All') {

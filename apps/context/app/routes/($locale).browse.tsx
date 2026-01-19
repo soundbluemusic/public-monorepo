@@ -13,6 +13,7 @@ import {
   useBrowseFilters,
 } from '@/components/browse';
 import { Layout } from '@/components/layout';
+import { BROWSE_CHUNK_SIZE, SITE_URL } from '@/constants';
 import { categories } from '@/data/categories';
 import { jsonEntriesCount, type LightEntry, loadLightEntriesChunkForSSR } from '@/data/entries';
 import { useStudyData } from '@/hooks';
@@ -45,9 +46,6 @@ interface LoaderData {
   categories: typeof categories;
 }
 
-/** 페이지당 표시할 엔트리 수 */
-const CHUNK_SIZE = 1000;
-
 /**
  * loader: SSR 모드에서 실행
  * JSON 파일에서 첫 청크를 읽어서 HTML에 주입
@@ -58,8 +56,8 @@ export async function loader(): Promise<LoaderData> {
 
   const meta: BrowseMetadata = {
     totalEntries: jsonEntriesCount,
-    chunkSize: CHUNK_SIZE,
-    totalChunks: Math.ceil(jsonEntriesCount / CHUNK_SIZE),
+    chunkSize: BROWSE_CHUNK_SIZE,
+    totalChunks: Math.ceil(jsonEntriesCount / BROWSE_CHUNK_SIZE),
     sortTypes: ['alphabetical', 'category', 'recent'],
     generatedAt: new Date().toISOString(),
   };
@@ -88,7 +86,7 @@ export const meta = metaFactory(
     ko: { title: '찾아보기 - Context', description: '모든 한국어 단어 찾아보기 및 필터링' },
     en: { title: 'Browse - Context', description: 'Browse and filter all Korean words' },
   },
-  'https://context.soundbluemusic.com',
+  SITE_URL,
 );
 
 export default function BrowsePage() {

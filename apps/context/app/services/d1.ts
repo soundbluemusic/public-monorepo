@@ -5,62 +5,12 @@
  * JSON 파일 기반 로딩을 대체합니다.
  */
 
-import type { Language, LocaleEntry, Translation } from '@/data/types';
+import type { Language, LocaleEntry } from '@/data/types';
+import { type D1EntryRow, rowToLocaleEntry } from './entry-converter';
 
-/**
- * D1 entries 테이블 row 타입
- */
-interface D1EntryRow {
-  id: string;
-  korean: string;
-  romanization: string | null;
-  part_of_speech: string | null;
-  category_id: string;
-  difficulty: string | null;
-  frequency: string | null;
-  tags: string | null; // JSON array
-  translations: string | null; // JSON object { ko: {...}, en: {...} }
-  created_at: number | null;
-}
-
-/**
- * D1 row를 LocaleEntry로 변환
- */
-function rowToLocaleEntry(row: D1EntryRow, locale: Language): LocaleEntry | null {
-  if (!row.translations) return null;
-
-  try {
-    const translations = JSON.parse(row.translations) as {
-      ko?: Translation;
-      en?: Translation;
-    };
-
-    const translation = translations[locale];
-    if (!translation) return null;
-
-    const tags = row.tags ? (JSON.parse(row.tags) as string[]) : [];
-
-    return {
-      id: row.id,
-      korean: row.korean,
-      romanization: row.romanization || '',
-      partOfSpeech: (row.part_of_speech || 'noun') as LocaleEntry['partOfSpeech'],
-      categoryId: row.category_id,
-      tags,
-      difficulty: (row.difficulty || 'beginner') as LocaleEntry['difficulty'],
-      frequency: row.frequency as LocaleEntry['frequency'] | undefined,
-      hasDialogue: !!translation.dialogue,
-      translation: {
-        word: translation.word,
-        explanation: translation.explanation,
-        examples: translation.examples,
-        variations: translation.variations,
-      },
-    };
-  } catch (error) {
-    console.error(`Failed to parse entry ${row.id}:`, error);
-    return null;
-  }
+/** D1 쿼리 에러를 로깅하고 null/빈 배열 반환 */
+function logD1Error(operation: string, error: unknown): void {
+  console.error(`[D1] ${operation} failed:`, error instanceof Error ? error.message : error);
 }
 
 /**
@@ -71,17 +21,22 @@ export async function getEntryByIdFromD1(
   id: string,
   locale: Language,
 ): Promise<LocaleEntry | null> {
-  const row = await db
-    .prepare(
-      `SELECT id, korean, romanization, part_of_speech, category_id, difficulty, frequency, tags, translations
-       FROM entries WHERE id = ?`,
-    )
-    .bind(id)
-    .first<D1EntryRow>();
+  try {
+    const row = await db
+      .prepare(
+        `SELECT id, korean, romanization, part_of_speech, category_id, difficulty, frequency, tags, translations
+         FROM entries WHERE id = ?`,
+      )
+      .bind(id)
+      .first<D1EntryRow>();
 
-  if (!row) return null;
+    if (!row) return null;
 
-  return rowToLocaleEntry(row, locale);
+    return rowToLocaleEntry(row, locale);
+  } catch (error) {
+    logD1Error(`getEntryById(${id})`, error);
+    return null;
+  }
 }
 
 /**
@@ -92,82 +47,106 @@ export async function getEntriesByCategoryFromD1(
   categoryId: string,
   locale: Language,
 ): Promise<LocaleEntry[]> {
-  const { results } = await db
-    .prepare(
-      `SELECT id, korean, romanization, part_of_speech, category_id, difficulty, frequency, tags, translations
-       FROM entries WHERE category_id = ?`,
-    )
-    .bind(categoryId)
-    .all<D1EntryRow>();
+  try {
+    const { results } = await db
+      .prepare(
+        `SELECT id, korean, romanization, part_of_speech, category_id, difficulty, frequency, tags, translations
+         FROM entries WHERE category_id = ?`,
+      )
+      .bind(categoryId)
+      .all<D1EntryRow>();
 
-  return results
-    .map((row: D1EntryRow) => rowToLocaleEntry(row, locale))
-    .filter((entry: LocaleEntry | null): entry is LocaleEntry => entry !== null);
+    return results
+      .map((row: D1EntryRow) => rowToLocaleEntry(row, locale))
+      .filter((entry: LocaleEntry | null): entry is LocaleEntry => entry !== null);
+  } catch (error) {
+    logD1Error(`getEntriesByCategory(${categoryId})`, error);
+    return [];
+  }
 }
 
 /**
  * D1에서 모든 카테고리 조회
  */
 export async function getCategoriesFromD1(db: D1Database) {
-  const { results } = await db
-    .prepare(
-      `SELECT id, name_ko, name_en, description_ko, description_en, icon, color, sort_order
-       FROM categories ORDER BY sort_order`,
-    )
-    .all<{
-      id: string;
-      name_ko: string;
-      name_en: string;
-      description_ko: string | null;
-      description_en: string | null;
-      icon: string | null;
-      color: string | null;
-      sort_order: number;
-    }>();
+  try {
+    const { results } = await db
+      .prepare(
+        `SELECT id, name_ko, name_en, description_ko, description_en, icon, color, sort_order
+         FROM categories ORDER BY sort_order`,
+      )
+      .all<{
+        id: string;
+        name_ko: string;
+        name_en: string;
+        description_ko: string | null;
+        description_en: string | null;
+        icon: string | null;
+        color: string | null;
+        sort_order: number;
+      }>();
 
-  return results.map((row) => ({
-    id: row.id,
-    name: {
-      ko: row.name_ko,
-      en: row.name_en,
-    },
-    description: {
-      ko: row.description_ko || '',
-      en: row.description_en || '',
-    },
-    icon: row.icon || '',
-    color: row.color || 'blue',
-    order: row.sort_order,
-  }));
+    return results.map((row) => ({
+      id: row.id,
+      name: {
+        ko: row.name_ko,
+        en: row.name_en,
+      },
+      description: {
+        ko: row.description_ko || '',
+        en: row.description_en || '',
+      },
+      icon: row.icon || '',
+      color: row.color || 'blue',
+      order: row.sort_order,
+    }));
+  } catch (error) {
+    logD1Error('getCategories', error);
+    return [];
+  }
 }
 
 /**
  * D1에서 대화 조회
  */
 export async function getConversationsByCategoryFromD1(db: D1Database, categoryId: string) {
-  const { results } = await db
-    .prepare(
-      `SELECT id, category_id, title_ko, title_en, dialogue
-       FROM conversations WHERE category_id = ?`,
-    )
-    .bind(categoryId)
-    .all<{
-      id: string;
-      category_id: string | null;
-      title_ko: string;
-      title_en: string;
-      dialogue: string;
-    }>();
+  try {
+    const { results } = await db
+      .prepare(
+        `SELECT id, category_id, title_ko, title_en, dialogue
+         FROM conversations WHERE category_id = ?`,
+      )
+      .bind(categoryId)
+      .all<{
+        id: string;
+        category_id: string | null;
+        title_ko: string;
+        title_en: string;
+        dialogue: string;
+      }>();
 
-  return results.map((row) => ({
-    id: row.id,
-    categoryId: row.category_id || '',
-    title: {
-      ko: row.title_ko,
-      en: row.title_en,
-    },
-    dialogue: JSON.parse(row.dialogue),
-  }));
+    return results
+      .map((row) => {
+        try {
+          return {
+            id: row.id,
+            categoryId: row.category_id || '',
+            title: {
+              ko: row.title_ko,
+              en: row.title_en,
+            },
+            dialogue: JSON.parse(row.dialogue),
+          };
+        } catch {
+          console.error(`[D1] Failed to parse dialogue for conversation ${row.id}`);
+          return null;
+        }
+      })
+      .filter((c): c is NonNullable<typeof c> => c !== null);
+  } catch (error) {
+    logD1Error(`getConversationsByCategory(${categoryId})`, error);
+    return [];
+  }
 }
 
 /**
@@ -177,25 +156,35 @@ export async function getEntryIdsByCategoryFromD1(
   db: D1Database,
   categoryId: string,
 ): Promise<string[]> {
-  const { results } = await db
-    .prepare('SELECT id FROM entries WHERE category_id = ?')
-    .bind(categoryId)
-    .all<{ id: string }>();
+  try {
+    const { results } = await db
+      .prepare('SELECT id FROM entries WHERE category_id = ?')
+      .bind(categoryId)
+      .all<{ id: string }>();
 
-  return results.map((row) => row.id);
+    return results.map((row) => row.id);
+  } catch (error) {
+    logD1Error(`getEntryIdsByCategory(${categoryId})`, error);
+    return [];
+  }
 }
 
 /**
  * D1에서 모든 카테고리별 엔트리 수 조회 (사이트맵용)
  */
 export async function getEntryCounts(db: D1Database): Promise<Map<string, number>> {
-  const { results } = await db
-    .prepare('SELECT category_id, COUNT(*) as count FROM entries GROUP BY category_id')
-    .all<{ category_id: string; count: number }>();
+  try {
+    const { results } = await db
+      .prepare('SELECT category_id, COUNT(*) as count FROM entries GROUP BY category_id')
+      .all<{ category_id: string; count: number }>();
 
-  const counts = new Map<string, number>();
-  for (const row of results) {
-    counts.set(row.category_id, row.count);
+    const counts = new Map<string, number>();
+    for (const row of results) {
+      counts.set(row.category_id, row.count);
+    }
+    return counts;
+  } catch (error) {
+    logD1Error('getEntryCounts', error);
+    return new Map();
   }
-  return counts;
 }

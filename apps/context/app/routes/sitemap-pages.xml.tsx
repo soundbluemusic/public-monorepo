@@ -2,7 +2,7 @@
  * 정적 페이지 사이트맵 (SSR 모드 전용)
  */
 
-const SITE_URL = 'https://context.soundbluemusic.com';
+import { SITE_URL } from '@/constants';
 
 const STATIC_PAGES = [
   { path: '/', priority: '1.0', changefreq: 'weekly' },

@@ -71,14 +71,25 @@ async function loadSearchIndex(): Promise<SearchIndexItem[]> {
     return indexLoadPromise;
   }
 
-  indexLoadPromise = fetch('/search-index.json')
-    .then((res) => res.json())
-    .then((data: unknown) => {
+  indexLoadPromise = (async () => {
+    try {
+      const res = await fetch('/search-index.json');
+      if (!res.ok) {
+        console.error(`[Search] Failed to load index: ${res.status} ${res.statusText}`);
+        return [];
+      }
+      const data: unknown = await res.json();
       // Runtime validation of fetched data
       const parsed = SearchIndexArraySchema.parse(data);
       searchIndex = parsed;
       return parsed;
-    });
+    } catch (error) {
+      console.error('[Search] Failed to load or parse search index:', error);
+      // 에러 시 캐시 초기화하여 다음 시도 가능
+      indexLoadPromise = null;
+      return [];
+    }
+  })();
 
   return indexLoadPromise;
 }

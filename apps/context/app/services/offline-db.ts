@@ -9,54 +9,12 @@
 
 import { getOfflineSQLite } from '@soundblue/platform/sqlite';
 import type {
-  D1CategoryRow,
-  D1ConversationRow,
-  D1EntryRow,
   DownloadProgress,
   OfflineDBMeta,
   OfflineDBStatus,
 } from '@soundblue/platform/sqlite/types';
-import type { Language, LocaleEntry, Translation } from '@/data/types';
-
-/**
- * D1 row를 LocaleEntry로 변환 (d1.ts와 동일한 로직)
- */
-function rowToLocaleEntry(row: D1EntryRow, locale: Language): LocaleEntry | null {
-  if (!row.translations) return null;
-
-  try {
-    const translations = JSON.parse(row.translations) as {
-      ko?: Translation;
-      en?: Translation;
-    };
-
-    const translation = translations[locale];
-    if (!translation) return null;
-
-    const tags = row.tags ? (JSON.parse(row.tags) as string[]) : [];
-
-    return {
-      id: row.id,
-      korean: row.korean,
-      romanization: row.romanization || '',
-      partOfSpeech: (row.part_of_speech || 'noun') as LocaleEntry['partOfSpeech'],
-      categoryId: row.category_id,
-      tags,
-      difficulty: (row.difficulty || 'beginner') as LocaleEntry['difficulty'],
-      frequency: row.frequency as LocaleEntry['frequency'] | undefined,
-      hasDialogue: !!translation.dialogue,
-      translation: {
-        word: translation.word,
-        explanation: translation.explanation,
-        examples: translation.examples,
-        variations: translation.variations,
-      },
-    };
-  } catch (error) {
-    console.error(`Failed to parse offline entry ${row.id}:`, error);
-    return null;
-  }
-}
+import type { Language, LocaleEntry } from '@/data/types';
+import { rowToLocaleEntry } from './entry-converter';
 
 /**
  * 오프라인 DB 상태 확인

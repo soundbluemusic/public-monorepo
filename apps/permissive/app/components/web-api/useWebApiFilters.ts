@@ -1,6 +1,7 @@
 import { LIMITS } from '@soundblue/core/validation';
 import { useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router';
+import { HIGH_SUPPORT_THRESHOLD, NEW_API_YEAR } from '../../constants';
 import type { WebAPI, webApiCategories } from '../../data/web-apis';
 
 export type CategoryFilter = (typeof webApiCategories)[number];
@@ -52,9 +53,11 @@ export function useWebApiFilters({ apis, categories }: UseWebApiFiltersOptions) 
     if (quickFilter === 'trending') {
       filtered = filtered.filter((api) => api.trending);
     } else if (quickFilter === 'highSupport') {
-      filtered = filtered.filter((api) => Number.parseInt(api.support, 10) >= 95);
+      filtered = filtered.filter(
+        (api) => Number.parseInt(api.support, 10) >= HIGH_SUPPORT_THRESHOLD,
+      );
     } else if (quickFilter === 'new') {
-      filtered = filtered.filter((api) => api.yearStable && api.yearStable >= 2020);
+      filtered = filtered.filter((api) => api.yearStable && api.yearStable >= NEW_API_YEAR);
     }
 
     // Category filter
