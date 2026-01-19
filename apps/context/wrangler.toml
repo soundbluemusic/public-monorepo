@@ -3,10 +3,6 @@ main = "workers.ts"
 compatibility_date = "2024-01-01"
 compatibility_flags = ["nodejs_compat"]
 
-[[routes]]
-pattern = "context.soundbluemusic.com/*"
-zone_name = "soundbluemusic.com"
-
 [[d1_databases]]
 binding = "DB"
 database_name = "context-db"
