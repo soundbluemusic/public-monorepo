@@ -1,1 +1,1 @@
-export { clientLoader, default, meta } from './_index';
+export { clientLoader, default, loader, meta } from './_index';
