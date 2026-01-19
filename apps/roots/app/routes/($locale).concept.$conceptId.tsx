@@ -20,66 +20,82 @@ import { useI18n } from '@/i18n';
 import { favorites } from '@/lib/db';
 
 /**
- * Loader: 빌드 시 데이터 로드 (SSG용)
- * 빌드 시에는 TypeScript에서 직접 import
- * conceptNames도 빌드 시 로드하여 RelationLinks에 전달 (런타임 fetch 제거)
+ * Loader: SSR/prerender 모두 지원 (Node.js 의존성 제거)
+ *
+ * conceptNames는 클라이언트에서 로드 (RelationLinks 컴포넌트에서 처리)
  */
 export async function loader({ params }: { params: { conceptId: string } }) {
   if (!params.conceptId) {
-    return { concept: null, conceptNames: {} as ConceptNames };
+    throw new Response('Concept ID required', { status: 400 });
   }
   const concept = getConceptByIdStatic(params.conceptId);
 
-  // 빌드 시 concept-names.json 로드 (런타임 fetch 제거)
-  const { readFileSync } = await import('node:fs');
-  const { join } = await import('node:path');
-  let conceptNames: ConceptNames = {};
-  try {
-    const conceptNamesPath = join(process.cwd(), 'public', 'concept-names.json');
-    conceptNames = JSON.parse(readFileSync(conceptNamesPath, 'utf-8'));
-  } catch {
-    // 빌드 시 파일이 없을 수 있음 (초기 빌드)
+  // Concept이 없으면 HTTP 404 반환 (Soft 404 방지)
+  if (!concept) {
+    throw new Response('Concept not found', { status: 404 });
   }
 
-  return { concept: concept || null, conceptNames };
+  return { concept };
+}
+
+/**
+ * clientLoader: 클라이언트 네비게이션 시 실행
+ * SSR 데이터가 있으면 사용, 없으면 직접 로드
+ */
+export async function clientLoader({
+  params,
+  serverLoader,
+}: {
+  params: { conceptId: string };
+  serverLoader: () => Promise<{ concept: MathConcept }>;
+}) {
+  // 먼저 서버 데이터 시도 (prerendered pages)
+  try {
+    return await serverLoader();
+  } catch {
+    // SSR 데이터 없으면 클라이언트에서 로드
+  }
+
+  if (!params.conceptId) {
+    throw new Response('Concept ID required', { status: 400 });
+  }
+
+  const concept = getConceptByIdStatic(params.conceptId);
+
+  // Concept이 없으면 HTTP 404 반환
+  if (!concept) {
+    throw new Response('Concept not found', { status: 404 });
+  }
+
+  return { concept };
 }
 
 /**
  * Meta: SEO 메타 태그 생성 (canonical, hreflang 포함)
  */
-export const meta = dynamicMetaFactory(
-  (data: { concept: MathConcept | null; conceptNames: ConceptNames }) => {
-    if (!data?.concept) {
-      return {
-        ko: { title: '개념을 찾을 수 없습니다 | Roots' },
-        en: { title: 'Concept Not Found | Roots' },
-      };
-    }
-    const { concept } = data;
-    const nameKo = concept.name.ko || concept.name.en;
-    const nameEn = concept.name.en;
-    const contentKo = concept.content.ko;
-    const contentEn = concept.content.en;
-    const defKo = typeof contentKo === 'string' ? contentKo : contentKo.definition;
-    const defEn = typeof contentEn === 'string' ? contentEn : contentEn.definition;
-    return {
-      ko: {
-        title: `${nameKo} | Roots`,
-        description: defKo,
-      },
-      en: {
-        title: `${nameEn} | Roots`,
-        description: defEn,
-      },
-    };
-  },
-  'https://roots.soundbluemusic.com',
-);
+export const meta = dynamicMetaFactory((data: { concept: MathConcept }) => {
+  const { concept } = data;
+  const nameKo = concept.name.ko || concept.name.en;
+  const nameEn = concept.name.en;
+  const contentKo = concept.content.ko;
+  const contentEn = concept.content.en;
+  const defKo = typeof contentKo === 'string' ? contentKo : contentKo.definition;
+  const defEn = typeof contentEn === 'string' ? contentEn : contentEn.definition;
+  return {
+    ko: {
+      title: `${nameKo} | Roots`,
+      description: defKo,
+    },
+    en: {
+      title: `${nameEn} | Roots`,
+      description: defEn,
+    },
+  };
+}, 'https://roots.soundbluemusic.com');
 
 export default function ConceptPage() {
-  const loaderData = useLoaderData<typeof loader>();
-  const concept = loaderData?.concept || null;
-  const conceptNames = loaderData?.conceptNames || {};
+  const { concept } = useLoaderData<typeof loader>();
+  const [conceptNames, setConceptNames] = useState<ConceptNames>({});
   const params = useParams<{ conceptId: string }>();
   const { locale, t, localePath } = useI18n();
 
@@ -90,6 +106,18 @@ export default function ConceptPage() {
   useEffect(() => {
     setIsClient(true);
   }, []);
+
+  // conceptNames 로드 (클라이언트 전용)
+  useEffect(() => {
+    if (isClient) {
+      fetch('/concept-names.json')
+        .then((res) => res.json())
+        .then(setConceptNames)
+        .catch(() => {
+          // fetch 실패 시 빈 객체 유지
+        });
+    }
+  }, [isClient]);
 
   // 즐겨찾기 상태 확인 (클라이언트 전용)
   useEffect(() => {
@@ -130,22 +158,6 @@ export default function ConceptPage() {
       });
     }
   };
-
-  if (!concept) {
-    return (
-      <Layout>
-        <div className="text-center py-20">
-          <h1 className="text-2xl font-bold text-(--text-primary) mb-4">{t('conceptNotFound')}</h1>
-          <Link
-            to={localePath('/browse')}
-            className="min-h-11 px-6 inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors bg-(--accent-bg) text-white hover:brightness-110 active:scale-[0.98]"
-          >
-            {t('backToList')}
-          </Link>
-        </div>
-      </Layout>
-    );
-  }
 
   // concept.field may be a subfield ID, so try to get parent field
   const subfield = getSubfieldById(concept.subfield);
