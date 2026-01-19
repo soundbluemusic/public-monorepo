@@ -4,6 +4,7 @@ import { FolderOpen, Sparkles, TrendingUp } from 'lucide-react';
 import { Link, useLoaderData } from 'react-router';
 import { Layout } from '@/components/layout';
 import { categories as allCategories } from '@/data/categories';
+import { jsonEntriesCount, type LightEntry, loadLightEntriesForSSR } from '@/data/entries';
 import type { Category, MeaningEntry } from '@/data/types';
 import { useStudyData } from '@/hooks';
 import { type Language, useI18n } from '@/i18n';
@@ -18,10 +19,12 @@ const getPronunciation = (entry: MeaningEntry, locale: Language): string | undef
 };
 
 /**
- * 홈페이지 데이터 로더
+ * 홈페이지 데이터 로더 (번들 최적화 v2)
  *
- * loader: SSG 빌드 시 실행 - 정적 데이터만 포함
- * clientLoader: 런타임에 실행 - 동적 데이터(오늘의 단어) 추가
+ * ## 최적화 전략
+ * - lightEntries가 번들에서 제거됨 (2.2MB → 0)
+ * - SSR loader에서 JSON 파일 직접 읽기
+ * - 카테고리별 엔트리 수는 SSR에서 계산
  */
 
 interface StaticLoaderData {
@@ -35,11 +38,12 @@ interface LoaderData extends StaticLoaderData {
 }
 
 /**
- * loader: SSG 빌드 시 실행
- * 정적 데이터(카테고리, 엔트리 수)를 HTML에 포함
+ * loader: SSR 모드에서 실행
+ * JSON 파일에서 카테고리별 엔트리 수를 계산
  */
 export async function loader(): Promise<StaticLoaderData> {
-  const { lightEntries } = await import('@/data/entries');
+  // SSR: JSON 파일에서 전체 lightEntries 로드
+  const lightEntries = await loadLightEntriesForSSR();
 
   // 카테고리별 엔트리 수 계산
   const categoryCounts: Record<string, number> = {};
@@ -50,26 +54,28 @@ export async function loader(): Promise<StaticLoaderData> {
   return {
     categories: allCategories,
     categoryCounts,
-    totalEntries: lightEntries.length,
+    totalEntries: jsonEntriesCount,
   };
 }
 
 /**
  * clientLoader: 클라이언트에서 실행
- * 동적 데이터(오늘의 단어)를 추가
+ * SSR 데이터 사용 + 오늘의 단어 동적 로드
  */
 export async function clientLoader({
   serverLoader,
 }: {
   serverLoader: () => Promise<StaticLoaderData>;
 }): Promise<LoaderData> {
-  // SSG 빌드 데이터 가져오기 (있으면)
+  // SSR 데이터 가져오기
   let staticData: StaticLoaderData;
   try {
     staticData = await serverLoader();
   } catch {
-    // Pages 빌드에서 loader가 없는 경우 직접 로드
-    const { lightEntries } = await import('@/data/entries');
+    // SSR 데이터 없으면 fetch로 직접 로드 (첫 번째 청크만)
+    const response = await fetch('/data/browse/alphabetical/chunk-0.json');
+    const chunk = (await response.json()) as { entries: LightEntry[] };
+    const lightEntries: LightEntry[] = chunk.entries;
     const categoryCounts: Record<string, number> = {};
     for (const cat of allCategories) {
       categoryCounts[cat.id] = lightEntries.filter((e) => e.categoryId === cat.id).length;
@@ -77,17 +83,23 @@ export async function clientLoader({
     staticData = {
       categories: allCategories,
       categoryCounts,
-      totalEntries: lightEntries.length,
+      totalEntries: jsonEntriesCount,
     };
   }
 
-  const { lightEntries, getEntryById } = await import('@/data/entries');
+  // 오늘의 단어: fetch로 initial.json에서 선택
+  const { getEntryById } = await import('@/data/entries');
 
   // 오늘의 단어 계산 (런타임)
   const today = new Date();
   const dayOfYear = Math.floor(
     (today.getTime() - new Date(today.getFullYear(), 0, 0).getTime()) / 86400000,
   );
+
+  // 첫 번째 청크에서 오늘의 단어 선택
+  const response = await fetch('/data/browse/alphabetical/chunk-0.json');
+  const chunk = (await response.json()) as { entries: LightEntry[] };
+  const lightEntries: LightEntry[] = chunk.entries;
   const randomIndex = dayOfYear % lightEntries.length;
   const dailyWordLight = lightEntries[randomIndex];
 

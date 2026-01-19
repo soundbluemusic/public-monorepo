@@ -1,10 +1,10 @@
 /**
- * @fileoverview 엔트리 통합 모듈 (번들 최적화 버전)
+ * @fileoverview 엔트리 통합 모듈 (번들 최적화 v2)
  *
- * ## 번들 최적화
- * - 전체 MeaningEntry 데이터는 번들에서 제거됨 (50MB → 0)
- * - 개별 entry 조회: 카테고리별 청크에서 동적 로드
- * - browse 페이지: lightEntries만 사용 (~1MB)
+ * ## 번들 최적화 v2
+ * - lightEntries가 번들에서 제거됨 (2.2MB → 0)
+ * - SSR loader에서 JSON 파일을 직접 읽어서 HTML에 주입
+ * - 클라이언트는 SSR 데이터 또는 fetch로 청크 로드
  *
  * ## 데이터 추가 방법
  * 1. `src/data/entries/*.json` 파일에 데이터 추가
@@ -12,24 +12,28 @@
  *
  * @example
  * ```ts
- * import { lightEntries, getEntryById } from '@/data/entries';
+ * // SSR loader에서 (Node.js)
+ * const entries = await loadLightEntriesForSSR();
  *
- * // browse 페이지: 경량 데이터 사용
- * const entries = lightEntries;
- *
- * // entry 페이지: SSG loader에서 동적 로드
- * const entry = await getEntryById('annyeong');
+ * // 클라이언트에서 (fetch)
+ * const entries = await loadLightEntriesChunk('alphabetical', 0);
  * ```
  */
 
 import { type CompressedFile, expandCompressedFile } from '../expand-entry';
-// JSON에서 생성된 경량 엔트리 (prebuild 스크립트에서 생성됨)
-import { jsonEntriesCount, type LightEntry, lightEntries } from '../generated/entries';
+// JSON에서 생성된 메타데이터만 import (배열은 제거됨)
+import { jsonEntriesCount, type LightEntry } from '../generated/entries';
 import { entryToCategory } from '../generated/entry-index';
 import type { Language, LocaleEntry, MeaningEntry } from '../types';
 
-// Re-export 경량 버전
-export { lightEntries, type LightEntry, jsonEntriesCount };
+// Re-export 타입과 카운트
+export { type LightEntry, jsonEntriesCount };
+
+/**
+ * @deprecated lightEntries는 더 이상 번들에 포함되지 않습니다.
+ * SSR loader에서 loadLightEntriesForSSR()을 사용하세요.
+ */
+export const lightEntries: LightEntry[] = [];
 
 // ============================================================================
 // 카테고리별 청크 캐시 (런타임에서 재사용)
@@ -213,58 +217,127 @@ export async function getEntriesByCategory(categoryId: string): Promise<MeaningE
 }
 
 // ============================================================================
-// 경량 버전 (LightEntry) - browse 페이지 최적화용
+// SSR용 데이터 로더 (Node.js 환경에서만 실행)
 // ============================================================================
 
-/** 경량 버전 정렬 배열 */
-export const lightEntriesSortedAlphabetically: LightEntry[] = [...lightEntries].sort((a, b) =>
-  a.korean.localeCompare(b.korean, 'ko'),
-);
-export const lightEntriesSortedByCategory: LightEntry[] = [...lightEntries].sort((a, b) => {
-  if (a.categoryId === b.categoryId) {
-    return a.korean.localeCompare(b.korean, 'ko');
-  }
-  return a.categoryId.localeCompare(b.categoryId);
-});
-export const lightEntriesSortedRecent: LightEntry[] = [...lightEntries].reverse();
-
-/** ID → 정렬 인덱스 (필터링 후 정렬 유지용) */
-export const alphabeticalIndex = new Map<string, number>(
-  lightEntriesSortedAlphabetically.map((e, i) => [e.id, i]),
-);
-export const categoryIndex = new Map<string, number>(
-  lightEntriesSortedByCategory.map((e, i) => [e.id, i]),
-);
-export const recentIndex = new Map<string, number>(
-  lightEntriesSortedRecent.map((e, i) => [e.id, i]),
-);
-
-// ============================================================================
-// 검색 (경량 데이터 기반)
-// ============================================================================
+/** LightEntry 청크 캐시 */
+let lightEntriesCache: LightEntry[] | null = null;
 
 /**
- * 검색 쿼리로 엔트리 찾기 (경량 데이터 기반)
+ * SSR loader에서 사용: JSON 파일에서 lightEntries 로드
+ * Node.js 환경에서만 동작, 브라우저에서는 빈 배열 반환
+ *
+ * 모든 청크 파일을 읽어서 전체 lightEntries 배열 반환
  */
-export function searchLightEntries(query: string, locale: Language = 'ko'): LightEntry[] {
-  const q = query.toLowerCase().trim();
-  if (!q) return [];
+export async function loadLightEntriesForSSR(): Promise<LightEntry[]> {
+  // 캐시 확인
+  if (lightEntriesCache) return lightEntriesCache;
 
-  return lightEntries.filter((entry) => {
-    return (
-      entry.korean.toLowerCase().includes(q) ||
-      entry.romanization.toLowerCase().includes(q) ||
-      entry.word[locale].toLowerCase().includes(q)
+  // Node.js 환경 확인
+  if (typeof window !== 'undefined') {
+    console.warn('loadLightEntriesForSSR should only be called in SSR context');
+    return [];
+  }
+
+  try {
+    const { readFileSync, readdirSync } = await import('node:fs');
+    const { join } = await import('node:path');
+
+    // alphabetical 청크 디렉토리에서 모든 청크 로드
+    const chunkDir = join(process.cwd(), 'public/data/browse/alphabetical');
+    const files = readdirSync(chunkDir).filter(
+      (f) => f.startsWith('chunk-') && f.endsWith('.json'),
     );
-  });
+
+    // 청크 번호순 정렬
+    files.sort((a, b) => {
+      const numA = Number.parseInt(a.match(/chunk-(\d+)/)?.[1] || '0');
+      const numB = Number.parseInt(b.match(/chunk-(\d+)/)?.[1] || '0');
+      return numA - numB;
+    });
+
+    // 모든 청크에서 entries 추출
+    const allEntries: LightEntry[] = [];
+    for (const file of files) {
+      const filePath = join(chunkDir, file);
+      const content = readFileSync(filePath, 'utf-8');
+      const chunk = JSON.parse(content) as { chunkIndex: number; entries: LightEntry[] };
+      allEntries.push(...chunk.entries);
+    }
+
+    lightEntriesCache = allEntries;
+    return lightEntriesCache;
+  } catch (error) {
+    console.error('Failed to load lightEntries for SSR:', error);
+    return [];
+  }
 }
 
 /**
- * 추천 엔트리 (홈페이지용) - 경량 버전
+ * SSR loader에서 사용: 정렬된 첫 청크 로드
+ * @param sortType - 정렬 타입 ('alphabetical' | 'category' | 'recent')
+ * @param chunkIndex - 청크 인덱스 (기본 0)
  */
-export function getFeaturedLightEntries(count = 6): LightEntry[] {
-  // 첫 N개 반환 (정렬은 이미 알파벳순)
-  return lightEntriesSortedAlphabetically.slice(0, count);
+export async function loadLightEntriesChunkForSSR(
+  sortType: 'alphabetical' | 'category' | 'recent' = 'alphabetical',
+  chunkIndex = 0,
+): Promise<LightEntry[]> {
+  if (typeof window !== 'undefined') {
+    console.warn('loadLightEntriesChunkForSSR should only be called in SSR context');
+    return [];
+  }
+
+  try {
+    const { readFileSync } = await import('node:fs');
+    const { join } = await import('node:path');
+
+    const filePath = join(process.cwd(), `public/data/browse/${sortType}/chunk-${chunkIndex}.json`);
+    const content = readFileSync(filePath, 'utf-8');
+    const data = JSON.parse(content) as { entries: LightEntry[] };
+    return data.entries;
+  } catch (error) {
+    console.error(`Failed to load chunk ${sortType}/${chunkIndex}:`, error);
+    return [];
+  }
+}
+
+// ============================================================================
+// 경량 버전 (LightEntry) - browse 페이지 최적화용
+// ============================================================================
+
+/**
+ * @deprecated 정적 배열은 더 이상 사용하지 않습니다.
+ * SSR loader에서 loadLightEntriesChunkForSSR()을 사용하세요.
+ */
+export const lightEntriesSortedAlphabetically: LightEntry[] = [];
+export const lightEntriesSortedByCategory: LightEntry[] = [];
+export const lightEntriesSortedRecent: LightEntry[] = [];
+
+/**
+ * @deprecated 정적 인덱스는 더 이상 사용하지 않습니다.
+ */
+export const alphabeticalIndex = new Map<string, number>();
+export const categoryIndex = new Map<string, number>();
+export const recentIndex = new Map<string, number>();
+
+// ============================================================================
+// 검색 (MiniSearch 인덱스 사용 권장)
+// ============================================================================
+
+/**
+ * @deprecated MiniSearch 인덱스를 사용하세요 (/data/search-index.json)
+ */
+export function searchLightEntries(_query: string, _locale: Language = 'ko'): LightEntry[] {
+  console.warn('searchLightEntries is deprecated. Use MiniSearch index instead.');
+  return [];
+}
+
+/**
+ * @deprecated SSR loader에서 직접 로드하세요
+ */
+export function getFeaturedLightEntries(_count = 6): LightEntry[] {
+  console.warn('getFeaturedLightEntries is deprecated. Use loadLightEntriesChunkForSSR instead.');
+  return [];
 }
 
 // ============================================================================

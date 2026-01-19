@@ -14,17 +14,17 @@ import {
 } from '@/components/browse';
 import { Layout } from '@/components/layout';
 import { categories } from '@/data/categories';
-import { type LightEntry, lightEntriesSortedAlphabetically, jsonEntriesCount } from '@/data/entries';
+import { jsonEntriesCount, type LightEntry, loadLightEntriesChunkForSSR } from '@/data/entries';
 import { useStudyData } from '@/hooks';
 import { useI18n } from '@/i18n';
 
 /**
  * 찾아보기 페이지 데이터 로더 (SSR 모드)
  *
- * ## 최적화 전략
- * - SSR HTML에는 첫 페이지 데이터만 포함 (1000개)
- * - 사전 생성된 lightEntries 데이터 사용 (번들에 포함)
- * - 페이지 전환 시 클라이언트에서 필터링
+ * ## 최적화 전략 v2
+ * - lightEntries가 번들에서 제거됨 (2.2MB → 0)
+ * - SSR loader에서 JSON 파일을 직접 읽어서 HTML에 주입
+ * - 클라이언트는 SSR 데이터 사용 또는 fetch로 청크 로드
  */
 
 /** Browse 메타데이터 */
@@ -37,7 +37,7 @@ interface BrowseMetadata {
 }
 
 interface LoaderData {
-  /** 현재 정렬의 첫 청크 (SSG용) */
+  /** 현재 정렬의 첫 청크 (SSR용) */
   initialEntries: LightEntry[];
   /** 메타데이터 */
   meta: BrowseMetadata;
@@ -50,11 +50,11 @@ const CHUNK_SIZE = 1000;
 
 /**
  * loader: SSR 모드에서 실행
- * 사전 생성된 lightEntries 데이터를 직접 사용
+ * JSON 파일에서 첫 청크를 읽어서 HTML에 주입
  */
 export async function loader(): Promise<LoaderData> {
-  // 첫 청크 반환 (알파벳순 정렬된 첫 1000개)
-  const initialEntries = lightEntriesSortedAlphabetically.slice(0, CHUNK_SIZE);
+  // SSR: JSON 파일에서 첫 청크 로드
+  const initialEntries = await loadLightEntriesChunkForSSR('alphabetical', 0);
 
   const meta: BrowseMetadata = {
     totalEntries: jsonEntriesCount,
