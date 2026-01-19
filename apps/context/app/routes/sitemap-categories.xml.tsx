@@ -6,8 +6,8 @@ import { getCategoriesFromD1 } from '@/services/d1';
 
 const SITE_URL = 'https://context.soundbluemusic.com';
 
-interface LoaderContext {
-  cloudflare?: { env?: { DB?: D1Database } };
+interface LoaderArgs {
+  context: { cloudflare?: { env?: { DB?: D1Database } } };
 }
 
 function generateUrl(categoryId: string) {
@@ -35,13 +35,13 @@ function generateUrl(categoryId: string) {
   </url>`;
 }
 
-export async function loader({ context }: { context: LoaderContext }) {
-  const db = context?.cloudflare?.env?.DB;
+export async function loader({ context }: LoaderArgs) {
+  const db = context.cloudflare?.env?.DB;
 
   if (!db) {
-    throw new Response(null, {
-      status: 302,
-      headers: { Location: '/sitemap-categories.xml' },
+    return new Response('Database not available', {
+      status: 503,
+      headers: { 'Content-Type': 'text/plain' },
     });
   }
 

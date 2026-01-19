@@ -1,8 +1,7 @@
 /**
  * 동적 사이트맵 인덱스 라우트 (SSR 모드 전용)
  *
- * SSR 모드에서 D1 데이터베이스를 조회하여 사이트맵 인덱스를 동적 생성합니다.
- * SSG 모드에서는 빌드 스크립트(generate-sitemaps.ts)로 정적 파일이 생성됩니다.
+ * D1 데이터베이스를 조회하여 사이트맵 인덱스를 동적 생성합니다.
  *
  * @see https://www.sitemaps.org/protocol.html
  */
@@ -11,19 +10,17 @@ import { getCategoriesFromD1 } from '@/services/d1';
 
 const SITE_URL = 'https://context.soundbluemusic.com';
 
-interface LoaderContext {
-  cloudflare?: { env?: { DB?: D1Database } };
+interface LoaderArgs {
+  context: { cloudflare?: { env?: { DB?: D1Database } } };
 }
 
-export async function loader({ context }: { context: LoaderContext }) {
-  // SSR 모드에서만 D1 사용
-  const db = context?.cloudflare?.env?.DB;
+export async function loader({ context }: LoaderArgs) {
+  const db = context.cloudflare?.env?.DB;
 
   if (!db) {
-    // SSG 모드: 정적 파일로 리다이렉트
-    throw new Response(null, {
-      status: 302,
-      headers: { Location: '/sitemap.xml' },
+    return new Response('Database not available', {
+      status: 503,
+      headers: { 'Content-Type': 'text/plain' },
     });
   }
 
@@ -34,7 +31,7 @@ export async function loader({ context }: { context: LoaderContext }) {
     { loc: `${SITE_URL}/sitemap-pages.xml`, lastmod: now },
     { loc: `${SITE_URL}/sitemap-categories.xml`, lastmod: now },
     ...categories.map((cat) => ({
-      loc: `${SITE_URL}/sitemap-entry-${cat.id}.xml`,
+      loc: `${SITE_URL}/sitemaps/entries/${cat.id}.xml`,
       lastmod: now,
     })),
   ];

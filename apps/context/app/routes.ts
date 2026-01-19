@@ -69,10 +69,11 @@ export default [
   }),
 
   // 동적 사이트맵 (D1에서 실시간 생성)
-  route('sitemap.xml', 'routes/sitemap[.xml].tsx'),
-  route('sitemap-pages.xml', 'routes/sitemap-pages[.xml].tsx'),
-  route('sitemap-categories.xml', 'routes/sitemap-categories[.xml].tsx'),
-  route('sitemap-entry-:categoryId.xml', 'routes/sitemap-entry-$categoryId[.xml].tsx'),
+  route('sitemap.xml', 'routes/sitemap.xml.tsx'),
+  route('sitemap-pages.xml', 'routes/sitemap-pages.xml.tsx'),
+  route('sitemap-categories.xml', 'routes/sitemap-categories.xml.tsx'),
+  // Dynamic sitemap: /sitemaps/entries/greetings.xml
+  route('sitemaps/entries/:categoryId.xml', 'routes/sitemap-entry-$categoryId.tsx'),
 
   // API 엔드포인트
   route('api/offline-db', 'routes/api.offline-db.tsx'),

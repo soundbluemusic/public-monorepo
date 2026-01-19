@@ -9,12 +9,9 @@ import { getEntryIdsByCategoryFromD1 } from '@/services/d1';
 
 const SITE_URL = 'https://context.soundbluemusic.com';
 
-interface LoaderContext {
-  cloudflare?: { env?: { DB?: D1Database } };
-}
-
-interface LoaderParams {
-  categoryId?: string;
+interface LoaderArgs {
+  context: { cloudflare?: { env?: { DB?: D1Database } } };
+  params: { categoryId?: string };
 }
 
 function generateUrl(entryId: string) {
@@ -42,26 +39,26 @@ function generateUrl(entryId: string) {
   </url>`;
 }
 
-export async function loader({
-  context,
-  params,
-}: {
-  context: LoaderContext;
-  params: LoaderParams;
-}) {
-  const { categoryId } = params;
+export async function loader({ context, params }: LoaderArgs) {
+  // URL: /sitemaps/entries/greetings.xml
+  // categoryId = "greetings.xml" (React Router includes .xml in param)
+  // Strip the .xml suffix
+  const rawCategoryId = params.categoryId;
+  const categoryId = rawCategoryId?.replace(/\.xml$/, '');
 
   if (!categoryId) {
-    throw new Response('Category ID required', { status: 400 });
+    return new Response('Category ID required', {
+      status: 400,
+      headers: { 'Content-Type': 'text/plain' },
+    });
   }
 
-  const db = context?.cloudflare?.env?.DB;
+  const db = context.cloudflare?.env?.DB;
 
   if (!db) {
-    // SSG 모드: 정적 파일로 리다이렉트
-    throw new Response(null, {
-      status: 302,
-      headers: { Location: `/sitemap-entry-${categoryId}.xml` },
+    return new Response('Database not available', {
+      status: 503,
+      headers: { 'Content-Type': 'text/plain' },
     });
   }
 
