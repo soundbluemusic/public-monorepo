@@ -1,0 +1,39 @@
+name: Delete R2 Bucket
+
+on:
+  workflow_dispatch:
+
+jobs:
+  delete-bucket:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install rclone
+        run: |
+          curl https://rclone.org/install.sh | sudo bash
+
+      - name: Configure rclone for R2
+        run: |
+          mkdir -p ~/.config/rclone
+          cat > ~/.config/rclone/rclone.conf << EOF
+          [r2]
+          type = s3
+          provider = Cloudflare
+          access_key_id = ${{ secrets.R2_ACCESS_KEY_ID }}
+          secret_access_key = ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          endpoint = https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
+          EOF
+
+      - name: Empty R2 bucket
+        run: |
+          echo "🗑️ Emptying bucket all-sites-static..."
+          rclone delete r2:all-sites-static --rmdirs -v
+          echo "✅ Bucket emptied"
+
+      - name: Delete R2 bucket via Wrangler
+        run: |
+          npm install -g wrangler
+          echo "🗑️ Deleting bucket..."
+          npx wrangler r2 bucket delete all-sites-static
+          echo "✅ Bucket deleted"
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
