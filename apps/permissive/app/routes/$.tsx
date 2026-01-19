@@ -3,6 +3,14 @@ import { Link } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
 import { useI18n } from '../i18n';
 
+/**
+ * loader: HTTP 404 상태 코드 반환
+ * catch-all 라우트에서 검색 엔진이 404를 인식하도록 함
+ */
+export function loader() {
+  throw new Response('Not Found', { status: 404 });
+}
+
 export const meta = metaFactory(
   {
     ko: { title: '404 - 페이지를 찾을 수 없습니다 | Permissive' },
