@@ -251,8 +251,8 @@ export async function loadLightEntriesForSSR(): Promise<LightEntry[]> {
 
     // 청크 번호순 정렬
     files.sort((a, b) => {
-      const numA = Number.parseInt(a.match(/chunk-(\d+)/)?.[1] || '0');
-      const numB = Number.parseInt(b.match(/chunk-(\d+)/)?.[1] || '0');
+      const numA = Number.parseInt(a.match(/chunk-(\d+)/)?.[1] || '0', 10);
+      const numB = Number.parseInt(b.match(/chunk-(\d+)/)?.[1] || '0', 10);
       return numA - numB;
     });
 

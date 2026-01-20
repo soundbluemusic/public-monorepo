@@ -84,6 +84,16 @@ export function OfflineDownloadDialog({
     [isDownloading, onClose],
   );
 
+  // 키보드 이벤트 핸들러 (ESC는 dialog 자체에서 처리)
+  const handleKeyDown = useCallback(
+    (e: React.KeyboardEvent) => {
+      if (e.key === 'Escape' && !isDownloading) {
+        onClose();
+      }
+    },
+    [isDownloading, onClose],
+  );
+
   const progressPercent = progress?.percent ?? 0;
 
   return (
@@ -95,6 +105,7 @@ export function OfflineDownloadDialog({
         isClosing ? 'animate-fade-out' : 'animate-fade-in',
       )}
       onClick={handleBackdropClick}
+      onKeyDown={handleKeyDown}
     >
       <div className="bg-(--bg-primary) rounded-2xl border border-(--border-primary) shadow-xl overflow-hidden">
         {/* Header */}

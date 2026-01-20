@@ -208,7 +208,7 @@ export default function DownloadPage() {
         message: locale === 'ko' ? '오프라인 데이터가 삭제되었습니다' : 'Offline data deleted',
         type: 'success',
       });
-    } catch (error) {
+    } catch {
       toast({
         message: locale === 'ko' ? '삭제에 실패했습니다' : 'Delete failed',
         type: 'error',
