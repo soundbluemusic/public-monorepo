@@ -238,6 +238,7 @@ export default defineConfig({
       ],
       components: {
         Footer: './src/components/CustomFooter.astro',
+        Header: './src/components/CustomHeader.astro',
       },
     }),
   ],
