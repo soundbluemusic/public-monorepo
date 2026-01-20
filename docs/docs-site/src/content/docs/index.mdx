@@ -3,7 +3,7 @@ title: SoundBlue Public Monorepo
 description: Complete documentation for Context, Permissive, and Roots applications - Three apps for learners (학습자를 위한 세 개의 앱)
 template: splash
 hero:
-  tagline: Three applications for learners — Korean Dictionary (SSR + D1), Web Dev Resources (SSR), and Math Documentation (SSG)
+  tagline: Three applications for learners — Korean Dictionary (SSR + D1), Web Dev Resources (SSR), and Math Documentation (SSR)
   image:
     file: ../../assets/hero.svg
   actions:
@@ -37,8 +37,8 @@ import AppCards from '../../components/AppCards.astro';
     Server-side rendering for web dev resources. Fast, secure, and SEO-optimized.
   </Card>
 
-  <Card title="📐 SSG (Roots)" icon="sun">
-    Static site generation for math documentation. All pages pre-built at build time.
+  <Card title="📐 SSR (Roots)" icon="sun">
+    Server-side rendering for math documentation. All pages rendered dynamically on Cloudflare Workers.
   </Card>
 
   <Card title="🌐 SEO Optimized" icon="magnifier">
@@ -50,7 +50,7 @@ import AppCards from '../../components/AppCards.astro';
 
 <CardGrid stagger>
   <Card title="React Router v7" icon="seti:react">
-    SSR mode with D1 for dynamic content, SSG mode with `prerender()` for static content.
+    SSR mode with D1 for dynamic content, SSR mode with `prerender()` for prerendered pages.
   </Card>
 
   <Card title="TypeScript" icon="seti:typescript">

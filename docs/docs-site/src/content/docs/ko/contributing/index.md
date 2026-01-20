@@ -36,13 +36,13 @@ pnpm dev:roots       # → http://localhost:3005
 ## 핵심 규칙
 
 :::danger[SPA 모드 금지]
-이 프로젝트는 **SSR과 SSG 모드만 사용**합니다. SPA 모드는 빈 HTML을 반환하여 SEO가 불가능하므로 금지됩니다.
+이 프로젝트는 **SSR 모드만 사용**합니다. SPA 모드는 빈 HTML을 반환하여 SEO가 불가능하므로 금지됩니다.
 
 각 앱의 렌더링 모드:
 
 - **Context**: SSR + Cloudflare D1
 - **Permissive**: SSR
-- **Roots**: SSG
+- **Roots**: SSR
 :::
 
 ### 1. 각 앱의 렌더링 모드 준수
@@ -51,8 +51,11 @@ pnpm dev:roots       # → http://localhost:3005
 // Context 앱 (SSR + D1)
 export default { ssr: true, ... }
 
-// Roots 앱 (SSG)
-export default { ssr: false, async prerender() { ... } }
+// Roots 앱 (SSR)
+export default { ssr: true, async prerender() { ... } }
+
+// Permissive 앱 (SSR)
+export default { ssr: true, async prerender() { ... } }
 
 // ❌ SPA 모드 사용 금지 (loader 없이 클라이언트만 렌더링)
 ```

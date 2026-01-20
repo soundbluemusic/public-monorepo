@@ -7,7 +7,7 @@ sidebar:
 
 # Roots — 数学ドキュメント
 
-**学習者のための数学ドキュメント** | SSG
+**学習者のための数学ドキュメント** | SSR
 
 Rootsは、代数、幾何学、微積分など様々な数学分野を体系的に整理した数学ドキュメントサイトです。
 
@@ -45,7 +45,7 @@ apps/roots/
 │   ├── data/            # 数学概念データ
 │   └── utils/           # ユーティリティ関数
 ├── public/              # 静的アセット
-└── react-router.config.ts  # SSG設定
+└── react-router.config.ts  # SSR設定
 ```
 
 ## 主要ルート

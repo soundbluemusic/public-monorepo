@@ -44,13 +44,13 @@ description: SoundBlue Public Monorepoの概要 - 学習者のための3つの�
 
 ### 📐 Roots — 数学ドキュメント
 
-**学習者のための数学ドキュメント** | SSG
+**学習者のための数学ドキュメント** | SSR
 
 代数、幾何学、微積分など、様々な数学分野を体系的にまとめた学習ドキュメントです。
 
 | 特徴 | 説明 |
 |------|------|
-| モード | SSG |
+| モード | SSR |
 | 言語 | 韓国語、英語 |
 | URL | [roots.soundbluemusic.com](https://roots.soundbluemusic.com) |
 
@@ -61,7 +61,7 @@ description: SoundBlue Public Monorepoの概要 - 学習者のための3つの�
 | 技術 | バージョン | 用途 |
 |------|-----------|------|
 | React | 19 | UIライブラリ |
-| React Router | 7 | ルーティング + SSG |
+| React Router | 7 | ルーティング + SSR |
 | TypeScript | 5.8 | 型安全性 |
 | Tailwind CSS | 4 | スタイリング |
 
@@ -71,7 +71,7 @@ description: SoundBlue Public Monorepoの概要 - 学習者のための3つの�
 |--------|------|
 | Turborepo | モノレポ管理 |
 | pnpm | パッケージマネージャー |
-| Cloudflare Pages | デプロイ |
+| Cloudflare Workers | デプロイ |
 | GitHub Actions | CI/CD |
 
 ## 主要原則

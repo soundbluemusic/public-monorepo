@@ -46,13 +46,13 @@ A curated collection of web development libraries with permissive licenses (MIT,
 
 ### 📐 Roots — Math Documentation
 
-**학습자를 위한 수학 문서** | SSG
+**학습자를 위한 수학 문서** | SSR
 
 Systematically organized math documentation covering algebra, geometry, calculus, and various mathematical fields.
 
 | Feature | Description |
 |---------|-------------|
-| Mode | SSG |
+| Mode | SSR |
 | Languages | Korean, English |
 | URL | [roots.soundbluemusic.com](https://roots.soundbluemusic.com) |
 
@@ -63,7 +63,7 @@ Systematically organized math documentation covering algebra, geometry, calculus
 | Technology | Version | Purpose |
 |------------|---------|---------|
 | React | 19 | UI Library |
-| React Router | 7 | Routing + SSG |
+| React Router | 7 | Routing + SSR |
 | TypeScript | 5.8 | Type Safety |
 | Tailwind CSS | 4 | Styling |
 
@@ -73,7 +73,7 @@ Systematically organized math documentation covering algebra, geometry, calculus
 |------|---------|
 | Turborepo | Monorepo management |
 | pnpm | Package manager |
-| Cloudflare Pages | Deployment |
+| Cloudflare Workers | Deployment |
 | GitHub Actions | CI/CD |
 
 ## Key Principles

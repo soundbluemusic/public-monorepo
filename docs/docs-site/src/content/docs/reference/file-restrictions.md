@@ -14,7 +14,7 @@ Certain files in this codebase are protected and must not be modified without un
 **Purpose:** Client-side hydration + orphan DOM cleanup
 
 :::danger[Do Not Remove Cleanup Code]
-The orphan DOM cleanup code is a workaround for a React Router v7 + React 19 SSG bug. Removing it will break all button clicks.
+The orphan DOM cleanup code is a workaround for a React Router v7 + React 19 SSR bug. Removing it will break all button clicks.
 :::
 
 ```typescript
@@ -36,10 +36,10 @@ See [Hydration Workaround](/public-monorepo/guides/hydration-workaround/) for de
 
 **Location:** `apps/*/app/entry.server.tsx`
 
-**Purpose:** SSG HTML generation
+**Purpose:** SSR HTML generation
 
 :::caution[Do Not Remove prerender]
-The `prerender` export is required for SSG to work. Removing it breaks the build.
+The `prerender` export is required for SSR prerendering to work. Removing it breaks the build.
 :::
 
 ### `react-router.config.ts`
@@ -56,8 +56,11 @@ Each app has a specific rendering mode. Do not change it without understanding t
 // Context app - SSR + D1 (DO NOT change to ssr: false)
 export default { ssr: true, ... }
 
-// Roots app - SSG (DO NOT change to ssr: true)
-export default { ssr: false, async prerender() { ... } }
+// Roots app - SSR (DO NOT change to ssr: false)
+export default { ssr: true, async prerender() { ... } }
+
+// Permissive app - SSR (DO NOT change to ssr: false)
+export default { ssr: true, async prerender() { ... } }
 ```
 
 ## File Naming Conventions
@@ -66,18 +69,18 @@ export default { ssr: false, async prerender() { ... } }
 
 Files ending with `.browser.ts` run **only in the browser**. They should:
 - Use browser APIs (localStorage, IndexedDB, etc.)
-- Not be imported in SSG build-time code
-- Have a corresponding `.noop.ts` for SSG if needed
+- Not be imported in SSR build-time code
+- Have a corresponding `.noop.ts` for SSR if needed
 
 ### `*.noop.ts`
 
-Files ending with `.noop.ts` are **no-operation stubs** for SSG compatibility:
+Files ending with `.noop.ts` are **no-operation stubs** for SSR compatibility:
 - Provide empty/default implementations
 - Used when browser code needs a build-time fallback
 - Must not contain actual logic
 
 ```typescript
-// storage.noop.ts - SSG fallback
+// storage.noop.ts - SSR fallback
 export const storage = {
   get: () => null,
   set: () => {},

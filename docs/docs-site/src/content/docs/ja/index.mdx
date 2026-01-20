@@ -3,7 +3,7 @@ title: SoundBlue Public Monorepo
 description: Context、Permissive、Rootsアプリケーションの完全なドキュメント - 学習者のための3つのアプリ
 template: splash
 hero:
-  tagline: 学習者のための3つのアプリケーション — 韓国語辞書 (SSR + D1)、Web開発リソース (SSR)、数学ドキュメント (SSG)
+  tagline: 学習者のための3つのアプリケーション — 韓国語辞書 (SSR + D1)、Web開発リソース (SSR)、数学ドキュメント (SSR)
   image:
     file: ../../../assets/hero.svg
   actions:
@@ -37,8 +37,8 @@ import AppCards from '../../../components/AppCards.astro';
     Web開発リソースのためのサーバーサイドレンダリング。高速で安全、SEOに最適化されています。
   </Card>
 
-  <Card title="📐 SSG (Roots)" icon="sun">
-    数学ドキュメントのための静的サイト生成。すべてのページがビルド時に事前生成されます。
+  <Card title="📐 SSR (Roots)" icon="sun">
+    数学ドキュメントのためのサーバーサイドレンダリング。すべてのページがCloudflare Workersで動的にレンダリングされます。
   </Card>
 
   <Card title="🌐 SEO最適化" icon="magnifier">
@@ -50,7 +50,7 @@ import AppCards from '../../../components/AppCards.astro';
 
 <CardGrid stagger>
   <Card title="React Router v7" icon="seti:react">
-    動的コンテンツのためのD1連携SSRモード、静的コンテンツのための`prerender()` SSGモード。
+    動的コンテンツのためのD1連携SSRモード、事前レンダリングページのための`prerender()` SSRモード。
   </Card>
 
   <Card title="TypeScript" icon="seti:typescript">

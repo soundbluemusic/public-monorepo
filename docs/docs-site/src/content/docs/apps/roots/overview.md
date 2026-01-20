@@ -7,7 +7,7 @@ sidebar:
 
 # Roots — Math Documentation
 
-**학습자를 위한 수학 문서** | SSG
+**학습자를 위한 수학 문서** | SSR
 
 Roots is a comprehensive math documentation site covering concepts from algebra to calculus, organized systematically for learners.
 
@@ -48,7 +48,7 @@ apps/roots/
 │   ├── routes/          # React Router routes
 │   └── data/            # Math concept data
 ├── public/              # Static assets
-└── react-router.config.ts  # SSG configuration
+└── react-router.config.ts  # SSR configuration
 ```
 
 ## Development

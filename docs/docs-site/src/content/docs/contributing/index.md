@@ -36,12 +36,12 @@ pnpm dev:roots       # → http://localhost:3005
 ## Critical Rules
 
 :::danger[SPA Mode Prohibited]
-This project uses **SSR and SSG modes only**. SPA mode is prohibited because it returns empty HTML, breaking SEO.
+This project uses **SSR mode only**. SPA mode is prohibited because it returns empty HTML, breaking SEO.
 
 Each app has its own rendering mode:
 - **Context**: SSR + Cloudflare D1
 - **Permissive**: SSR
-- **Roots**: SSG
+- **Roots**: SSR
 :::
 
 ### 1. Respect Each App's Rendering Mode
@@ -50,8 +50,11 @@ Each app has its own rendering mode:
 // Context app (SSR + D1)
 export default { ssr: true, ... }
 
-// Roots app (SSG)
-export default { ssr: false, async prerender() { ... } }
+// Roots app (SSR)
+export default { ssr: true, async prerender() { ... } }
+
+// Permissive app (SSR)
+export default { ssr: true, async prerender() { ... } }
 
 // ❌ NEVER use SPA mode (no loader, client-only rendering)
 ```

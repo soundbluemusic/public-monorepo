@@ -3,12 +3,12 @@ title: SSG 詳細解説
 description: React Router v7を使用した静的サイト生成アーキテクチャの理解
 ---
 
-**Roots**アプリは静的サイト生成（SSG）を使用しています — すべてのページがビルド時に事前レンダリングされ、CDNから直接配信されます。
+このページでは静的サイト生成（SSG）アーキテクチャについて説明します。現在、すべてのアプリはSSRモードを使用していますが、`prerender()`関数でビルド時に静的ページを事前生成しています。
 
 :::caution[アプリ別レンダリングモード]
 - **Context**: SSR + D1（動的レンダリング）
 - **Permissive**: SSR（動的レンダリング）
-- **Roots**: SSG（このページで説明）
+- **Roots**: SSR（動的レンダリング + prerender）
 - SPAモードは禁止されています
 :::
 
@@ -39,16 +39,16 @@ React Router v7の`prerender()` + `loader()`パターンでビルド時に完全
 |:----|:-------|:------------|:-----|
 | **Context** | SSR + D1 | Cloudflare D1 | 16,836エントリを動的に提供 |
 | **Permissive** | SSR | In-memory | 動的レンダリング |
-| **Roots** | SSG | TypeScript | 数学文書を事前レンダリング |
+| **Roots** | SSR | TypeScript | 数学文書を動的に提供 |
 
 ## コードパターン (Roots)
 
 ### 設定 (`apps/roots/react-router.config.ts`)
 
 ```typescript
-// Roots app - SSG mode
+// Roots app - SSR mode with prerender
 export default {
-  ssr: false,  // SSGモード - Rootsのみ
+  ssr: true,  // SSRモード - すべてのアプリで使用
   async prerender() {
     const staticRoutes = extractStaticRoutes(routes);
     const conceptRoutes = generateI18nRoutes(concepts, (c) => `/concept/${c.id}`);
@@ -72,24 +72,24 @@ export default function ConceptPage() {
 }
 ```
 
-## なぜSSGか？
+## なぜSSR + prerenderか？
 
 | メリット | 説明 |
 |---------|-------------|
-| **即時ロード** | CDNエッジロケーションから事前レンダリングされたHTMLを配信 |
-| **コストゼロ** | 維持するサーバーインフラなし |
-| **セキュア** | サーバーがなければサーバーの脆弱性もなし |
+| **即時ロード** | prerenderされたページはCDNエッジから配信 |
+| **動的対応** | 新しいページもSSRで即座に対応可能 |
 | **SEO最適化** | 検索エンジンが利用できる完全なHTMLコンテンツ |
+| **柔軟性** | 静的ページと動的ページの両方に対応 |
 
 ## 禁止された変更
 
 :::danger[変更禁止]
-- 設定で`ssr: true`を設定
+- 設定で`ssr: false`を設定
 - `prerender()`関数の削除または空にする
 - 空の`<div id="root"></div>`でSPAに変換
 :::
 
 ## 関連ドキュメント
 
-- [Hydrationバグ対応](/public-monorepo/ja/guides/hydration-workaround/) — React 19 SSGバグ修正
+- [Hydrationバグ対応](/public-monorepo/ja/guides/hydration-workaround/) — React 19 SSRバグ修正
 - [トラブルシューティング](/public-monorepo/ja/guides/troubleshooting/) — 一般的なビルドエラー

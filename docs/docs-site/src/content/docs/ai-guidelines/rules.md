@@ -16,8 +16,8 @@ description: Critical rules for AI assistants - what's prohibited and what's req
 - Setting `ssr: false` in react-router.config.ts
 - Loading entry data without D1 database
 
-**Roots App (SSG):**
-- Setting `ssr: true` in react-router.config.ts
+**Roots App (SSR):**
+- Setting `ssr: false` in react-router.config.ts
 - Removing/emptying `prerender()`
 :::
 
@@ -144,7 +144,7 @@ Before making any changes:
 |----------|-------------------|
 | `apps/context/react-router.config.ts` | `ssr: false` (Context uses SSR + D1) |
 | `apps/permissive/react-router.config.ts` | `ssr: false` (Permissive uses SSR) |
-| `apps/roots/react-router.config.ts` | `ssr: true` (Roots uses SSG, keep `ssr: false`) |
+| `apps/roots/react-router.config.ts` | `ssr: false` (Roots uses SSR, keep `ssr: true`) |
 | `*.browser.ts` | Code running at build time |
 | `*.noop.ts` | Actual logic (empty implementation only) |
 | `entry.client.tsx` | Deleting orphan DOM cleanup logic |

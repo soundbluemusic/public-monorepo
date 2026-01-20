@@ -36,13 +36,13 @@ pnpm dev:roots       # → http://localhost:3005
 ## 重要なルール
 
 :::danger[SPAモード禁止]
-このプロジェクトは**SSRとSSGモードのみ使用**します。SPAモードは空のHTMLを返すためSEOが不可能なので禁止です。
+このプロジェクトは**SSRモードのみ使用**します。SPAモードは空のHTMLを返すためSEOが不可能なので禁止です。
 
 各アプリのレンダリングモード：
 
 - **Context**: SSR + Cloudflare D1
 - **Permissive**: SSR
-- **Roots**: SSG
+- **Roots**: SSR
 :::
 
 ### 1. 各アプリのレンダリングモードを遵守
@@ -51,8 +51,11 @@ pnpm dev:roots       # → http://localhost:3005
 // Contextアプリ (SSR + D1)
 export default { ssr: true, ... }
 
-// Rootsアプリ (SSG)
-export default { ssr: false, async prerender() { ... } }
+// Rootsアプリ (SSR)
+export default { ssr: true, async prerender() { ... } }
+
+// Permissiveアプリ (SSR)
+export default { ssr: true, async prerender() { ... } }
 
 // ❌ SPAモード使用禁止（loaderなし、クライアントのみレンダリング）
 ```

@@ -3,7 +3,7 @@ title: SoundBlue Public Monorepo
 description: Context, Permissive, Roots 애플리케이션을 위한 완전한 문서 - 학습자를 위한 세 개의 앱
 template: splash
 hero:
-  tagline: 학습자를 위한 3개의 애플리케이션 — 한국어 사전 (SSR + D1), 웹 개발 리소스 (SSR), 수학 문서 (SSG)
+  tagline: 학습자를 위한 3개의 애플리케이션 — 한국어 사전 (SSR + D1), 웹 개발 리소스 (SSR), 수학 문서 (SSR)
   image:
     file: ../../../assets/hero.svg
   actions:
@@ -37,8 +37,8 @@ import AppCards from '../../../components/AppCards.astro';
     웹 개발 리소스를 위한 서버 사이드 렌더링. 빠르고 안전하며 SEO에 최적화되어 있습니다.
   </Card>
 
-  <Card title="📐 SSG (Roots)" icon="sun">
-    수학 문서를 위한 정적 사이트 생성. 모든 페이지가 빌드 시 미리 생성됩니다.
+  <Card title="📐 SSR (Roots)" icon="sun">
+    수학 문서를 위한 서버 사이드 렌더링. 모든 페이지가 Cloudflare Workers에서 동적으로 렌더링됩니다.
   </Card>
 
   <Card title="🌐 SEO 최적화" icon="magnifier">
@@ -50,7 +50,7 @@ import AppCards from '../../../components/AppCards.astro';
 
 <CardGrid stagger>
   <Card title="React Router v7" icon="seti:react">
-    동적 콘텐츠를 위한 D1 연동 SSR 모드, 정적 콘텐츠를 위한 `prerender()` SSG 모드.
+    동적 콘텐츠를 위한 D1 연동 SSR 모드, 사전 렌더링 페이지를 위한 `prerender()` SSR 모드.
   </Card>
 
   <Card title="TypeScript" icon="seti:typescript">

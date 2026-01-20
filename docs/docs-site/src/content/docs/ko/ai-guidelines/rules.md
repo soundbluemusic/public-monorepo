@@ -17,9 +17,9 @@ description: AI 어시스턴트를 위한 중요 규칙 - 금지 사항과 필�
 - react-router.config.ts에서 `ssr: false` 설정
 - D1 없이 entry 데이터 로딩
 
-**Roots 앱 (SSG):**
+**Roots 앱 (SSR):**
 
-- react-router.config.ts에서 `ssr: true` 설정
+- react-router.config.ts에서 `ssr: false` 설정
 - `prerender()` 제거/비우기
 :::
 
@@ -146,7 +146,7 @@ function processData(data: Input): Output {
 |----------|-------------------|
 | `apps/context/react-router.config.ts` | `ssr: false` (Context는 SSR + D1) |
 | `apps/permissive/react-router.config.ts` | `ssr: false` (Permissive는 SSR) |
-| `apps/roots/react-router.config.ts` | `ssr: true` (Roots는 SSG, `ssr: false` 유지) |
+| `apps/roots/react-router.config.ts` | `ssr: false` (Roots는 SSR, `ssr: true` 유지) |
 | `*.browser.ts` | 빌드 시점 실행 코드 |
 | `*.noop.ts` | 실제 로직 (빈 구현만) |
 | `entry.client.tsx` | orphan DOM 정리 로직 삭제 |

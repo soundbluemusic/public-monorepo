@@ -22,7 +22,7 @@ description: このプロジェクトに貢献するAIアシスタント向け�
 |:-------|:-------|:-------------|
 | **Context** | **SSR + D1** | Cloudflare D1 |
 | **Permissive** | SSR | In-memory |
-| **Roots** | SSG | TypeScript |
+| **Roots** | SSR | TypeScript |
 
 **すべてのアプリ共通禁止：**
 

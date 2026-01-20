@@ -17,9 +17,9 @@ description: AIアシスタント向け重要ルール - 禁止事項と必須�
 - react-router.config.tsで`ssr: false`設定
 - D1なしでentryデータロード
 
-**Rootsアプリ（SSG）：**
+**Rootsアプリ（SSR）：**
 
-- react-router.config.tsで`ssr: true`設定
+- react-router.config.tsで`ssr: false`設定
 - `prerender()`の削除/空にする
 :::
 
@@ -146,7 +146,7 @@ function processData(data: Input): Output {
 |----------|-------------------|
 | `apps/context/react-router.config.ts` | `ssr: false`（ContextはSSR + D1） |
 | `apps/permissive/react-router.config.ts` | `ssr: false`（PermissiveはSSR） |
-| `apps/roots/react-router.config.ts` | `ssr: true`（RootsはSSG、`ssr: false`維持） |
+| `apps/roots/react-router.config.ts` | `ssr: false`（RootsはSSR、`ssr: true`維持） |
 | `*.browser.ts` | ビルド時実行コード |
 | `*.noop.ts` | 実際のロジック（空の実装のみ） |
 | `entry.client.tsx` | orphan DOMクリーンアップロジック削除 |

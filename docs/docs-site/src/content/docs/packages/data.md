@@ -176,9 +176,9 @@ const ConceptSchema = z.object({
 });
 ```
 
-## Usage in SSG
+## Usage in SSR
 
-Data is loaded at build time in `prerender()` and `loader()` functions:
+Data is loaded at build time in `prerender()` and at runtime in `loader()` functions:
 
 ```typescript
 // react-router.config.ts
@@ -186,7 +186,7 @@ import { loadJsonDirectory } from '@soundblue/data/loaders';
 import { EntrySchema } from '@soundblue/data/schemas/context';
 
 export default {
-  ssr: false,
+  ssr: true,  // All apps use SSR mode
   async prerender() {
     const entries = await loadJsonDirectory('data/context/entries');
     return entries.map(e => `/entry/${e.id}`);

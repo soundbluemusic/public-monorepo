@@ -14,7 +14,7 @@ description: 수정하면 안 되는 파일과 그 이유
 **목적:** 클라이언트 측 hydration + orphan DOM 정리
 
 :::danger[정리 코드 삭제 금지]
-orphan DOM 정리 코드는 React Router v7 + React 19 SSG 버그에 대한 해결책입니다. 삭제하면 모든 버튼 클릭이 작동하지 않습니다.
+orphan DOM 정리 코드는 React Router v7 + React 19 SSR 버그에 대한 해결책입니다. 삭제하면 모든 버튼 클릭이 작동하지 않습니다.
 :::
 
 ```typescript
@@ -36,10 +36,10 @@ setTimeout(() => {
 
 **위치:** `apps/*/app/entry.server.tsx`
 
-**목적:** SSG HTML 생성
+**목적:** SSR HTML 생성
 
 :::caution[prerender 제거 금지]
-`prerender` export는 SSG가 작동하는 데 필수입니다. 제거하면 빌드가 실패합니다.
+`prerender` export는 SSR 사전 렌더링이 작동하는 데 필수입니다. 제거하면 빌드가 실패합니다.
 :::
 
 ### `react-router.config.ts`
@@ -56,8 +56,11 @@ setTimeout(() => {
 // Context 앱 - SSR + D1 (ssr: false로 변경 금지)
 export default { ssr: true, ... }
 
-// Roots 앱 - SSG (ssr: true로 변경 금지)
-export default { ssr: false, async prerender() { ... } }
+// Roots 앱 - SSR (ssr: false로 변경 금지)
+export default { ssr: true, async prerender() { ... } }
+
+// Permissive 앱 - SSR (ssr: false로 변경 금지)
+export default { ssr: true, async prerender() { ... } }
 ```
 
 ## 파일 명명 규칙
@@ -66,18 +69,18 @@ export default { ssr: false, async prerender() { ... } }
 
 `.browser.ts`로 끝나는 파일은 **브라우저에서만** 실행됩니다:
 - 브라우저 API 사용 (localStorage, IndexedDB 등)
-- SSG 빌드 시점 코드에서 import 금지
-- 필요시 SSG용 `.noop.ts` 파일 필요
+- SSR 빌드 시점 코드에서 import 금지
+- 필요시 SSR용 `.noop.ts` 파일 필요
 
 ### `*.noop.ts`
 
-`.noop.ts`로 끝나는 파일은 SSG 호환성을 위한 **무작업 스텁**입니다:
+`.noop.ts`로 끝나는 파일은 SSR 호환성을 위한 **무작업 스텁**입니다:
 - 빈/기본 구현 제공
 - 브라우저 코드에 빌드 시점 fallback이 필요할 때 사용
 - 실제 로직 포함 금지
 
 ```typescript
-// storage.noop.ts - SSG fallback
+// storage.noop.ts - SSR fallback
 export const storage = {
   get: () => null,
   set: () => {},

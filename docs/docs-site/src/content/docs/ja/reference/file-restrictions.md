@@ -14,7 +14,7 @@ description: 変更してはいけないファイルとその理由
 **目的:** クライアント側hydration + orphan DOMクリーンアップ
 
 :::danger[クリーンアップコード削除禁止]
-orphan DOMクリーンアップコードはReact Router v7 + React 19 SSGバグの回避策です。削除するとすべてのボタンクリックが動作しなくなります。
+orphan DOMクリーンアップコードはReact Router v7 + React 19 SSRバグの回避策です。削除するとすべてのボタンクリックが動作しなくなります。
 :::
 
 ```typescript
@@ -36,10 +36,10 @@ setTimeout(() => {
 
 **場所:** `apps/*/app/entry.server.tsx`
 
-**目的:** SSG HTML生成
+**目的:** SSR HTML生成
 
 :::caution[prerender削除禁止]
-`prerender`エクスポートはSSGが動作するために必須です。削除するとビルドが失敗します。
+`prerender`エクスポートはSSR事前レンダリングが動作するために必須です。削除するとビルドが失敗します。
 :::
 
 ### `react-router.config.ts`
@@ -56,8 +56,11 @@ setTimeout(() => {
 // Contextアプリ - SSR + D1（ssr: falseに変更禁止）
 export default { ssr: true, ... }
 
-// Rootsアプリ - SSG（ssr: trueに変更禁止）
-export default { ssr: false, async prerender() { ... } }
+// Rootsアプリ - SSR（ssr: falseに変更禁止）
+export default { ssr: true, async prerender() { ... } }
+
+// Permissiveアプリ - SSR（ssr: falseに変更禁止）
+export default { ssr: true, async prerender() { ... } }
 ```
 
 ## ファイル命名規則
@@ -66,18 +69,18 @@ export default { ssr: false, async prerender() { ... } }
 
 `.browser.ts`で終わるファイルは**ブラウザでのみ**実行されます：
 - ブラウザAPI使用（localStorage、IndexedDBなど）
-- SSGビルド時コードからのインポート禁止
-- 必要に応じてSSG用の`.noop.ts`ファイル必要
+- SSRビルド時コードからのインポート禁止
+- 必要に応じてSSR用の`.noop.ts`ファイル必要
 
 ### `*.noop.ts`
 
-`.noop.ts`で終わるファイルはSSG互換性のための**無操作スタブ**です：
+`.noop.ts`で終わるファイルはSSR互換性のための**無操作スタブ**です：
 - 空/デフォルト実装を提供
 - ブラウザコードにビルド時フォールバックが必要な場合に使用
 - 実際のロジック含有禁止
 
 ```typescript
-// storage.noop.ts - SSGフォールバック
+// storage.noop.ts - SSRフォールバック
 export const storage = {
   get: () => null,
   set: () => {},

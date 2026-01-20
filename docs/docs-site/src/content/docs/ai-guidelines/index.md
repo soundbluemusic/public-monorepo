@@ -22,7 +22,7 @@ This project uses **different rendering modes per app**:
 |:----|:-----|:-----------|
 | **Context** | **SSR + D1** | Cloudflare D1 |
 | **Permissive** | SSR | In-memory |
-| **Roots** | SSG | TypeScript |
+| **Roots** | SSR | TypeScript |
 
 **Prohibited for all apps:**
 - SPA mode (empty `<div id="root"></div>`)
