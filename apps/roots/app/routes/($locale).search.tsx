@@ -8,7 +8,6 @@ import { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router';
 import { Layout } from '@/components/layout/Layout';
 import { DifficultyBadge } from '@/components/ui/DifficultyBadge';
-import type { DifficultyLevel } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { type MiniSearchResult, searchConcepts } from '@/lib/search';
 
@@ -26,7 +25,7 @@ function SearchResultCard({ result }: { result: MiniSearchResult }) {
     >
       <div className="flex items-start justify-between gap-2 mb-2">
         <h2 className="text-base font-medium text-(--text-primary)">{name}</h2>
-        <DifficultyBadge level={item.difficulty as DifficultyLevel} showLabel={false} size="sm" />
+        <DifficultyBadge level={item.difficulty} showLabel={false} size="sm" />
       </div>
       <p className="text-sm text-(--text-secondary) line-clamp-2 mb-2">{def}</p>
       <div className="flex items-center gap-2">

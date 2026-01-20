@@ -1,7 +1,7 @@
 import { PencilLine } from 'lucide-react';
 import { useState } from 'react';
 import { DifficultyStars } from '@/components/ui/DifficultyBadge';
-import type { DifficultyLevel, Example as ExampleType } from '@/data/types';
+import type { Example as ExampleType } from '@/data/types';
 import { useI18n } from '@/i18n';
 /**
  * @fileoverview 예제 컴포넌트
@@ -30,7 +30,7 @@ export function ExampleCard({ example, index }: ExampleCardProps) {
         <span className="text-sm font-medium text-(--text-tertiary)">
           {t('exampleNumber')} {index + 1}
         </span>
-        {example.difficulty && <DifficultyStars level={example.difficulty as DifficultyLevel} />}
+        {example.difficulty && <DifficultyStars level={example.difficulty} />}
       </div>
 
       {/* 문제 */}

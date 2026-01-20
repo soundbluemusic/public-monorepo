@@ -18,7 +18,7 @@ const SearchIndexItemSchema = z.object({
   name: z.object({ ko: z.string(), en: z.string() }),
   field: z.string(),
   subfield: z.string(),
-  difficulty: z.number(),
+  difficulty: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4), z.literal(5)]),
   tags: z.array(z.string()),
   def: z.object({ ko: z.string(), en: z.string() }),
 });
@@ -31,7 +31,7 @@ export interface SearchIndexItem {
   name: { ko: string; en: string };
   field: string;
   subfield: string;
-  difficulty: number;
+  difficulty: DifficultyLevel;
   tags: string[];
   def: { ko: string; en: string };
 }
@@ -186,7 +186,7 @@ export async function searchConcepts(
         name: (result.name as { ko: string; en: string }) || { ko: '', en: '' },
         field: (result.field as string) || '',
         subfield: (result.subfield as string) || '',
-        difficulty: (result.difficulty as number) || 1,
+        difficulty: (result.difficulty as DifficultyLevel) || 1,
         tags: (result.tags as string[]) || [],
         def: (result.def as { ko: string; en: string }) || { ko: '', en: '' },
       },
