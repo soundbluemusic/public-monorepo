@@ -238,6 +238,7 @@ export default defineConfig({
       ],
       components: {
         Footer: './src/components/CustomFooter.astro',
+        LanguageSelect: './src/components/CustomLanguageSelect.astro',
       },
     }),
   ],
