@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 [![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?logo=react-router)](https://reactrouter.com)
-[![SSR](https://img.shields.io/badge/SSR-Cloudflare_Pages-F38020?logo=cloudflare)](https://pages.cloudflare.com)
+[![SSR](https://img.shields.io/badge/SSR-Cloudflare_Workers-F38020?logo=cloudflare)](https://developers.cloudflare.com/workers/)
 
 **[Live Site](https://permissive.soundbluemusic.com)**
 
@@ -22,7 +22,7 @@ A comprehensive collection of free web development resources:
 
 ## Architecture (아키텍처)
 
-### SSR with Cloudflare Pages Functions
+### SSR with Cloudflare Workers
 
 ```
 react-router.config.ts
@@ -30,10 +30,9 @@ react-router.config.ts
 ├── Cloudflare Adapter (nodejs_compat)
 └── loader() → 런타임 데이터 조회
 
-Cloudflare Pages:
-├── Static Assets (build/client/)
-└── Functions (_worker.js)
-    └── 모든 라우트 SSR 처리
+Cloudflare Workers:
+├── build/server/index.js (Workers 핸들러)
+└── build/client/ (Workers Assets - 정적 파일)
 ```
 
 ### Data Architecture
@@ -59,7 +58,7 @@ app/data/
 | `/library/:slug` | ✓ | ✓ | SSR | Library detail page (88) |
 | `/sitemap` | ✓ | ✓ | SSR | Sitemap |
 
-**Mode:** SSR (Cloudflare Pages Functions)
+**Mode:** SSR (Cloudflare Workers)
 
 ---
 
@@ -78,7 +77,7 @@ app/data/
 
 | Feature | Context | Roots | Permissive |
 |:--------|:-------:|:-----:|:----------:|
-| Mode | SSR + D1 | SSG | SSR |
+| Mode | SSR + D1 | SSR | SSR |
 | Search | ✓ MiniSearch | ✓ MiniSearch | ✓ MiniSearch |
 | Favorites | ✓ | ✓ | ❌ |
 | Detail pages | ✓ | ✓ | ✓ |
@@ -93,7 +92,7 @@ app/data/
 | UI | [React](https://react.dev) | MIT |
 | Styling | [Tailwind CSS v4](https://tailwindcss.com) | MIT |
 | Language | [TypeScript](https://www.typescriptlang.org) | Apache 2.0 |
-| Hosting | [Cloudflare Pages](https://pages.cloudflare.com) | - |
+| Hosting | [Cloudflare Workers](https://developers.cloudflare.com/workers/) | - |
 
 ---
 

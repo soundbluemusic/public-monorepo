@@ -14,8 +14,8 @@ Each application uses a different rendering mode optimized for its use case:
 | App | Mode | Data Source | Deployment |
 |:----|:-----|:------------|:-----------|
 | **Context** | **SSR + D1** | Cloudflare D1 | **Cloudflare Workers** |
-| **Permissive** | SSR | In-memory | Cloudflare Pages (Functions) |
-| **Roots** | SSG | TypeScript | Cloudflare Pages (Static) |
+| **Permissive** | SSR | In-memory | Cloudflare Workers |
+| **Roots** | SSR | TypeScript | Cloudflare Workers |
 
 ### SSR + D1 Architecture (Context)
 
@@ -46,29 +46,32 @@ export default {
 } satisfies Config;
 ```
 
-### SSG Architecture (Roots)
+### SSR Architecture (Roots/Permissive)
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │  Build Time                                                     │
 │  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐         │
-│  │ prerender() │ → │  loader()   │ → │  HTML + .data │         │
-│  │ (route list)│    │ (fetch data)│    │  (static)    │         │
+│  │ prerender() │ → │  loader()   │ → │  Static HTML  │         │
+│  │ (정적 페이지)│    │ (정적 데이터)│    │  (CDN 캐시)   │         │
 │  └─────────────┘    └─────────────┘    └─────────────┘         │
 └─────────────────────────────────────────────────────────────────┘
-                              ↓
+                              +
 ┌─────────────────────────────────────────────────────────────────┐
-│  Runtime (CDN)                                                  │
-│  Static HTML served instantly — No server required              │
+│  Runtime (Cloudflare Workers)                                    │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐         │
+│  │  Request    │ → │  Workers    │ → │  SSR HTML     │         │
+│  │ /concept/:id│    │  loader()   │    │  (dynamic)   │         │
+│  └─────────────┘    └─────────────┘    └─────────────┘         │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-### SSG Configuration Pattern (Roots)
+### SSR Configuration Pattern (Roots/Permissive)
 
 ```typescript
 // react-router.config.ts
 export default {
-  ssr: false,  // ← SSG mode (Roots only) - all pages pre-rendered at build
+  ssr: true,  // ← SSR mode - all apps use SSR
   async prerender() {
     const staticRoutes = extractStaticRoutes(routes);
     const conceptRoutes = generateI18nRoutes(concepts, `/concept/`);
@@ -188,13 +191,11 @@ export const meta = dynamicMetaFactory<typeof loader>({
 ### 1. Respect Each App's Rendering Mode
 
 ```typescript
-// Context (SSR + D1)
+// All apps use SSR mode
 export default { ssr: true, ... }
 
-// Roots (SSG)
-export default { ssr: false, ... }
-
 // ❌ NEVER use SPA mode (no loader, client-only rendering)
+// ❌ NEVER set ssr: false
 ```
 
 ### 2. No Hardcoding
@@ -209,7 +210,7 @@ const entries = [{ id: 'hello', ... }];
 
 ### 3. Hydration Workaround
 
-Due to React Router v7 + React 19 SSG hydration bug, a workaround is required:
+Due to React Router v7 + React 19 SSR hydration bug, a workaround is required:
 
 ```typescript
 // apps/*/app/entry.client.tsx - DO NOT DELETE!

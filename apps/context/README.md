@@ -31,7 +31,7 @@ A Korean dictionary designed for language learners:
 
 | 항목 | 설명 |
 |:-----|:-----|
-| 렌더링 모드 | **SSR** (Cloudflare Pages Functions) |
+| 렌더링 모드 | **SSR** (Cloudflare Workers) |
 | 데이터베이스 | Cloudflare D1 (`context-db`) |
 | 배포 명령어 | `pnpm deploy` |
 
@@ -43,14 +43,13 @@ react-router.config.ts
 ├── Cloudflare Adapter (nodejs_compat)
 └── loader() → D1 Database 실시간 쿼리
 
-Cloudflare Pages:
-├── Static Assets (build/client/)
-├── functions/[[path]].ts (Pages Functions 핸들러)
+Cloudflare Workers:
+├── build/server/index.js (Workers 핸들러)
 │   ├── /__manifest → React Router Lazy Route Discovery
 │   ├── /entry/:id → D1 쿼리
 │   ├── /api/offline-db → D1 전체 덤프 (오프라인용)
 │   └── /sitemap*.xml → D1에서 동적 생성
-├── public/_routes.json (Functions 라우팅 규칙)
+├── build/client/ (Workers Assets - 정적 파일)
 └── D1 Database (context-db)
     ├── entries (16836 rows)
     ├── categories (52 rows)
@@ -125,7 +124,7 @@ INSERT INTO categories (...) VALUES ('daily-misc', '일상생활', ...);
 ### Data Flow
 
 ```
-Request → Cloudflare Pages Function → D1 Query → React SSR → HTML Response
+Request → Cloudflare Workers → D1 Query → React SSR → HTML Response
 ```
 
 ### Sitemap Generation
@@ -213,7 +212,7 @@ pnpm build:context   # SSR 빌드 (기본)
 ```bash
 cd apps/context
 pnpm build   # SSR 빌드
-pnpm deploy  # Cloudflare Pages 배포
+pnpm deploy  # Cloudflare Workers 배포
 ```
 
 **필수 설정 (Cloudflare Dashboard):**
@@ -223,9 +222,7 @@ pnpm deploy  # Cloudflare Pages 배포
 
 | File | Purpose |
 |:-----|:--------|
-| `wrangler.toml` | D1 바인딩, Pages 설정 |
-| `functions/[[path]].ts` | Pages Functions 핸들러 (D1 바인딩 전달) |
-| `public/_routes.json` | Functions 라우팅 규칙 (`/__manifest`, `/api/*` 등) |
+| `wrangler.toml` | D1 바인딩, Workers 설정 |
 | `react-router.config.ts` | SSR 설정 (`ssr: true` 고정) |
 | `app/routes.ts` | 라우트 정의 (API 엔드포인트 포함) |
 
@@ -242,7 +239,7 @@ pnpm deploy  # Cloudflare Pages 배포
 | **Database** | **Cloudflare D1** (SQLite) |
 | Search | MiniSearch (via @soundblue/search) |
 | Storage | localStorage / IndexedDB (client) |
-| Hosting | Cloudflare Pages (Functions) |
+| Hosting | Cloudflare Workers |
 
 ---
 
