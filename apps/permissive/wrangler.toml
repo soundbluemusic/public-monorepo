@@ -5,3 +5,14 @@ compatibility_flags = ["nodejs_compat"]
 
 [assets]
 directory = "build/client"
+
+# D1 Databases
+[[d1_databases]]
+binding = "KNOWLEDGE_DB"
+database_name = "knowledge"
+database_id = "6f93ae7e-84ab-4d0a-9ba7-d392b2d00034"
+
+[[d1_databases]]
+binding = "PRIVATE_DB"
+database_name = "private"
+database_id = "de05bd43-f2be-41c5-8e4e-8d04fa4f4534"

@@ -33,7 +33,7 @@
 | **Live** | [context.soundbluemusic.com](https://context.soundbluemusic.com) |
 | **Source** | [apps/context/](apps/context) · [README](apps/context/README.md) · [config](apps/context/react-router.config.ts) |
 | **Database** | Cloudflare D1 (`context-db`) |
-| **Features** | 16836 entries, 52 categories, 53 conversations |
+| **Features** | 16394 entries, 52 categories, 53 conversations |
 
 ### 🔧 Permissive — Web Dev Resources
 > **무료 웹개발 자료 모음** | SSR

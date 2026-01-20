@@ -4364,69 +4364,6 @@
     }
   },
   {
-    "id": "d-hom-칫sol",
-    "korean": "칫솔",
-    "romanization": "chitsol",
-    "pronunciation": {
-      "korean": "[칫솔]",
-      "ipa": "[chitsol]"
-    },
-    "partOfSpeech": "noun",
-    "categoryId": "routines",
-    "difficulty": "beginner",
-    "frequency": "common",
-    "tags": [],
-    "hasDialogue": true,
-    "translations": {
-      "en": {
-        "word": "toothbrush",
-        "explanation": "'칫솔' means 'toothbrush' in English.",
-        "examples": {
-          "beginner": "We say \"칫솔\" in Korean.",
-          "intermediate": "In Korea, people often say \"칫솔\".",
-          "advanced": "\"칫솔\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"칫솔\" makes communication more natural."
-        },
-        "variations": {
-          "formal": [
-            "It is toothbrush.",
-            "There is toothbrush."
-          ],
-          "casual": [
-            "It's toothbrush.",
-            "toothbrush, you know."
-          ],
-          "short": [
-            "toothbrush"
-          ]
-        }
-      },
-      "ko": {
-        "word": "toothbrush",
-        "explanation": "'칫솔' means 'toothbrush' in English.",
-        "examples": {
-          "beginner": "We say \"칫솔\" in Korean.",
-          "intermediate": "In Korea, people often say \"칫솔\".",
-          "advanced": "\"칫솔\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"칫솔\" makes communication more natural."
-        },
-        "variations": {
-          "formal": [
-            "It is toothbrush.",
-            "There is toothbrush."
-          ],
-          "casual": [
-            "It's toothbrush.",
-            "toothbrush, you know."
-          ],
-          "short": [
-            "toothbrush"
-          ]
-        }
-      }
-    }
-  },
-  {
     "id": "d-hom-jeondong칫sol",
     "korean": "전동칫솔",
     "romanization": "jeondongchitsol",

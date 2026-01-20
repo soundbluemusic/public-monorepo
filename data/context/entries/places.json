@@ -840,69 +840,6 @@
     }
   },
   {
-    "id": "d-hom-집",
-    "korean": "집",
-    "romanization": "jip",
-    "pronunciation": {
-      "korean": "[집]",
-      "ipa": "[jip]"
-    },
-    "partOfSpeech": "noun",
-    "categoryId": "places",
-    "difficulty": "beginner",
-    "frequency": "common",
-    "tags": [],
-    "hasDialogue": true,
-    "translations": {
-      "en": {
-        "word": "house",
-        "explanation": "'집' means 'house' in English.",
-        "examples": {
-          "beginner": "We say \"집\" in Korean.",
-          "intermediate": "In Korea, people often say \"집\".",
-          "advanced": "\"집\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"집\" makes communication more natural."
-        },
-        "variations": {
-          "formal": [
-            "It is house.",
-            "There is house."
-          ],
-          "casual": [
-            "It's house.",
-            "house, you know."
-          ],
-          "short": [
-            "house"
-          ]
-        }
-      },
-      "ko": {
-        "word": "집",
-        "explanation": "집의 뜻은 'house'입니다.",
-        "examples": {
-          "beginner": "\"집\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"집\"를 자주 써요.",
-          "advanced": "\"집\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"집\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
-        },
-        "variations": {
-          "formal": [
-            "집입니다.",
-            "집이/가 있습니다."
-          ],
-          "casual": [
-            "집이야.",
-            "집 있어."
-          ],
-          "short": [
-            "집"
-          ]
-        }
-      }
-    }
-  },
-  {
     "id": "d-hom-2cheung집",
     "korean": "2층집",
     "romanization": "2cheungjip",
@@ -1212,69 +1149,6 @@
           ],
           "short": [
             "통나"
-          ]
-        }
-      }
-    }
-  },
-  {
-    "id": "d-hom-apateu",
-    "korean": "아파트",
-    "romanization": "apateu",
-    "pronunciation": {
-      "korean": "[아파트]",
-      "ipa": "[apateu]"
-    },
-    "partOfSpeech": "noun",
-    "categoryId": "places",
-    "difficulty": "beginner",
-    "frequency": "common",
-    "tags": [],
-    "hasDialogue": true,
-    "translations": {
-      "en": {
-        "word": "apartment",
-        "explanation": "'아파트' means 'apartment' in English.",
-        "examples": {
-          "beginner": "We say \"아파트\" in Korean.",
-          "intermediate": "In Korea, people often say \"아파트\".",
-          "advanced": "\"아파트\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"아파트\" makes communication more natural."
-        },
-        "variations": {
-          "formal": [
-            "It is apartment.",
-            "There is apartment."
-          ],
-          "casual": [
-            "It's apartment.",
-            "apartment, you know."
-          ],
-          "short": [
-            "apartment"
-          ]
-        }
-      },
-      "ko": {
-        "word": "아파트",
-        "explanation": "아파트의 뜻은 'apartment'입니다.",
-        "examples": {
-          "beginner": "\"아파트\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"아파트\"를 자주 써요.",
-          "advanced": "\"아파트\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"아파트\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
-        },
-        "variations": {
-          "formal": [
-            "아파트입니다.",
-            "아파트이/가 있습니다."
-          ],
-          "casual": [
-            "아파트이야.",
-            "아파트 있어."
-          ],
-          "short": [
-            "아파"
           ]
         }
       }
@@ -2226,69 +2100,6 @@
     }
   },
   {
-    "id": "d-hom-찜jilbang",
-    "korean": "찜질방",
-    "romanization": "jjimjilbang",
-    "pronunciation": {
-      "korean": "[찜질방]",
-      "ipa": "[jjimjilbang]"
-    },
-    "partOfSpeech": "noun",
-    "categoryId": "places",
-    "difficulty": "beginner",
-    "frequency": "common",
-    "tags": [],
-    "hasDialogue": true,
-    "translations": {
-      "en": {
-        "word": "jjimjilbang room",
-        "explanation": "'찜질방' means 'jjimjilbang room' in English.",
-        "examples": {
-          "beginner": "We say \"찜질방\" in Korean.",
-          "intermediate": "In Korea, people often say \"찜질방\".",
-          "advanced": "\"찜질방\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"찜질방\" makes communication more natural."
-        },
-        "variations": {
-          "formal": [
-            "It is jjimjilbang room.",
-            "There is jjimjilbang room."
-          ],
-          "casual": [
-            "It's jjimjilbang room.",
-            "jjimjilbang room, you know."
-          ],
-          "short": [
-            "jjimjilbang"
-          ]
-        }
-      },
-      "ko": {
-        "word": "찜질방",
-        "explanation": "찜질방의 뜻은 'jjimjilbang room'입니다.",
-        "examples": {
-          "beginner": "\"찜질방\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"찜질방\"를 자주 써요.",
-          "advanced": "\"찜질방\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"찜질방\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
-        },
-        "variations": {
-          "formal": [
-            "찜질방입니다.",
-            "찜질방이/가 있습니다."
-          ],
-          "casual": [
-            "찜질방이야.",
-            "찜질방 있어."
-          ],
-          "short": [
-            "찜질"
-          ]
-        }
-      }
-    }
-  },
-  {
     "id": "d-hom-doseosil",
     "korean": "도서실",
     "romanization": "doseosil",
@@ -2346,69 +2157,6 @@
           ],
           "short": [
             "library"
-          ]
-        }
-      }
-    }
-  },
-  {
-    "id": "d-hom-suyeongjang",
-    "korean": "수영장",
-    "romanization": "suyeongjang",
-    "pronunciation": {
-      "korean": "[수영장]",
-      "ipa": "[suyeongjang]"
-    },
-    "partOfSpeech": "noun",
-    "categoryId": "places",
-    "difficulty": "beginner",
-    "frequency": "common",
-    "tags": [],
-    "hasDialogue": true,
-    "translations": {
-      "en": {
-        "word": "swimming pool",
-        "explanation": "'수영장' means 'swimming pool' in English.",
-        "examples": {
-          "beginner": "We say \"수영장\" in Korean.",
-          "intermediate": "In Korea, people often say \"수영장\".",
-          "advanced": "\"수영장\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"수영장\" makes communication more natural."
-        },
-        "variations": {
-          "formal": [
-            "It is swimming pool.",
-            "There is swimming pool."
-          ],
-          "casual": [
-            "It's swimming pool.",
-            "swimming pool, you know."
-          ],
-          "short": [
-            "swimming"
-          ]
-        }
-      },
-      "ko": {
-        "word": "수영장",
-        "explanation": "수영장의 뜻은 'swimming pool'입니다.",
-        "examples": {
-          "beginner": "\"수영장\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"수영장\"를 자주 써요.",
-          "advanced": "\"수영장\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"수영장\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
-        },
-        "variations": {
-          "formal": [
-            "수영장입니다.",
-            "수영장이/가 있습니다."
-          ],
-          "casual": [
-            "수영장이야.",
-            "수영장 있어."
-          ],
-          "short": [
-            "수영"
           ]
         }
       }

@@ -1191,69 +1191,6 @@
     }
   },
   {
-    "id": "d-hom-sugeon",
-    "korean": "수건",
-    "romanization": "sugeon",
-    "pronunciation": {
-      "korean": "[수건]",
-      "ipa": "[sugeon]"
-    },
-    "partOfSpeech": "noun",
-    "categoryId": "objects",
-    "difficulty": "beginner",
-    "frequency": "common",
-    "tags": [],
-    "hasDialogue": true,
-    "translations": {
-      "en": {
-        "word": "towel",
-        "explanation": "'수건' means 'towel' in English.",
-        "examples": {
-          "beginner": "We say \"수건\" in Korean.",
-          "intermediate": "In Korea, people often say \"수건\".",
-          "advanced": "\"수건\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"수건\" makes communication more natural."
-        },
-        "variations": {
-          "formal": [
-            "It is towel.",
-            "There is towel."
-          ],
-          "casual": [
-            "It's towel.",
-            "towel, you know."
-          ],
-          "short": [
-            "towel"
-          ]
-        }
-      },
-      "ko": {
-        "word": "수건",
-        "explanation": "수건의 뜻은 'towel'입니다.",
-        "examples": {
-          "beginner": "\"수건\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"수건\"를 자주 써요.",
-          "advanced": "\"수건\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"수건\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
-        },
-        "variations": {
-          "formal": [
-            "수건입니다.",
-            "수건이/가 있습니다."
-          ],
-          "casual": [
-            "수건이야.",
-            "수건 있어."
-          ],
-          "short": [
-            "수건"
-          ]
-        }
-      }
-    }
-  },
-  {
     "id": "d-hom-sonsugeon",
     "korean": "손수건",
     "romanization": "sonsugeon",
@@ -1563,69 +1500,6 @@
           ],
           "short": [
             "scrub"
-          ]
-        }
-      }
-    }
-  },
-  {
-    "id": "d-hom-binu",
-    "korean": "비누",
-    "romanization": "binu",
-    "pronunciation": {
-      "korean": "[비누]",
-      "ipa": "[binu]"
-    },
-    "partOfSpeech": "noun",
-    "categoryId": "objects",
-    "difficulty": "beginner",
-    "frequency": "common",
-    "tags": [],
-    "hasDialogue": true,
-    "translations": {
-      "en": {
-        "word": "soap",
-        "explanation": "'비누' means 'soap' in English.",
-        "examples": {
-          "beginner": "We say \"비누\" in Korean.",
-          "intermediate": "In Korea, people often say \"비누\".",
-          "advanced": "\"비누\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"비누\" makes communication more natural."
-        },
-        "variations": {
-          "formal": [
-            "It is soap.",
-            "There is soap."
-          ],
-          "casual": [
-            "It's soap.",
-            "soap, you know."
-          ],
-          "short": [
-            "soap"
-          ]
-        }
-      },
-      "ko": {
-        "word": "비누",
-        "explanation": "비누의 뜻은 'soap'입니다.",
-        "examples": {
-          "beginner": "\"비누\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"비누\"를 자주 써요.",
-          "advanced": "\"비누\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"비누\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
-        },
-        "variations": {
-          "formal": [
-            "비누입니다.",
-            "비누이/가 있습니다."
-          ],
-          "casual": [
-            "비누이야.",
-            "비누 있어."
-          ],
-          "short": [
-            "비누"
           ]
         }
       }

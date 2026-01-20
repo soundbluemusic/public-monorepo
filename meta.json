@@ -1,9 +1,9 @@
 {
   "context": {
-    "entries": 16836,
+    "entries": 16394,
     "categories": 52,
     "conversations": 53,
-    "routes": 33802
+    "routes": 32918
   },
   "roots": {
     "concepts": 438,
@@ -15,6 +15,6 @@
     "webApis": 56,
     "routes": 8
   },
-  "totalRoutes": 34730,
-  "generatedAt": "2026-01-20T06:16:51.469Z"
+  "totalRoutes": 33846,
+  "generatedAt": "2026-01-20T22:45:09.238Z"
 }
