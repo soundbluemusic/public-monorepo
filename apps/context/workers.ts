@@ -1,6 +1,30 @@
+/**
+ * @fileoverview Cloudflare Workers Entry Point for Context App
+ * @environment server-only (Cloudflare Workers)
+ *
+ * React Router의 Cloudflare Workers 어댑터를 사용하여 SSR 요청을 처리합니다.
+ * D1 데이터베이스와 Assets 바인딩을 통해 동적 콘텐츠를 제공합니다.
+ */
+
 import { createRequestHandler } from '@react-router/cloudflare';
-// @ts-expect-error - virtual module from build
+// @ts-expect-error - virtual module from build (React Router generates this at build time)
 import * as serverBuild from './build/server';
+
+/**
+ * Cloudflare Workers 환경 변수 타입 정의
+ *
+ * wrangler.toml의 바인딩과 일치해야 합니다.
+ *
+ * @see {@link wrangler.toml} 바인딩 설정
+ */
+interface Env {
+  /** Context 앱의 메인 D1 데이터베이스 (context-db) */
+  DB: D1Database;
+  /** 사용자 데이터용 프라이빗 D1 데이터베이스 */
+  PRIVATE_DB: D1Database;
+  /** 정적 자산 서빙을 위한 Assets 바인딩 */
+  ASSETS: Fetcher;
+}
 
 const requestHandler = createRequestHandler({
   build: serverBuild,
@@ -8,7 +32,15 @@ const requestHandler = createRequestHandler({
 });
 
 export default {
-  async fetch(request: Request, env: Record<string, unknown>, ctx: ExecutionContext) {
+  /**
+   * Workers fetch 이벤트 핸들러
+   *
+   * @param request - 들어오는 HTTP 요청
+   * @param env - Cloudflare 환경 바인딩 (D1, Assets 등)
+   * @param ctx - 실행 컨텍스트 (waitUntil, passThroughOnException)
+   * @returns HTTP 응답
+   */
+  async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     return requestHandler({
       request,
       env,
@@ -16,4 +48,4 @@ export default {
       passThroughOnException: ctx.passThroughOnException.bind(ctx),
     });
   },
-} satisfies ExportedHandler;
+} satisfies ExportedHandler<Env>;
