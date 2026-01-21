@@ -7,11 +7,13 @@ compatibility_flags = ["nodejs_compat"]
 directory = "build/client"
 
 # D1 Databases
+# Knowledge DB: 학문/참고자료 데이터 (수학 개념, 라이브러리, API)
 [[d1_databases]]
 binding = "KNOWLEDGE_DB"
 database_name = "knowledge"
 database_id = "6f93ae7e-84ab-4d0a-9ba7-d392b2d00034"
 
+# Private DB: 사용자 학습 진도 저장용 (향후 구현 예정)
 [[d1_databases]]
 binding = "PRIVATE_DB"
 database_name = "private"
