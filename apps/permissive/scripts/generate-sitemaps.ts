@@ -68,6 +68,11 @@ const WEB_APIS = [
   'performance',
 ];
 
+// Trailing slash required for Cloudflare Workers Assets
+// Workers Assets serves folder/index.html with 307 redirect to folder/
+// Sitemap URLs must match the final canonical URL with trailing slash
+const TRAILING_SLASH = true;
+
 generateSitemaps(CONFIG, STATIC_PAGES, [
   {
     name: 'libraries',
@@ -78,6 +83,7 @@ generateSitemaps(CONFIG, STATIC_PAGES, [
       '0.7',
       'monthly',
       CONFIG.languages,
+      TRAILING_SLASH,
     ),
   },
   {
@@ -89,6 +95,7 @@ generateSitemaps(CONFIG, STATIC_PAGES, [
       '0.7',
       'monthly',
       CONFIG.languages,
+      TRAILING_SLASH,
     ),
   },
 ]);

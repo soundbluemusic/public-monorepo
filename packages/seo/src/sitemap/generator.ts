@@ -40,6 +40,13 @@ export interface SitemapConfig {
   outputDir: string;
   /** Build output directory (build/client/) - if exists, files are written here too */
   buildOutputDir?: string;
+  /**
+   * Whether to add trailing slash to dynamic URLs
+   * - true: /concept/addition/ (for Workers Assets with folder structure)
+   * - false: /concept/addition (for Workers SSR or direct HTML files)
+   * @default false
+   */
+  trailingSlash?: boolean;
 }
 
 export interface StaticPage {
@@ -348,6 +355,14 @@ export function generateSitemaps(
 
 /**
  * Helper to create URL entries for dynamic routes (each ID × each language = separate URL)
+ *
+ * @param siteUrl - Base URL without trailing slash
+ * @param pathPrefix - Path prefix (e.g., '/concept')
+ * @param ids - Array of IDs to generate URLs for
+ * @param priority - Sitemap priority (0.0 - 1.0)
+ * @param changefreq - Change frequency
+ * @param languages - Supported languages
+ * @param trailingSlash - Whether to add trailing slash (for Workers Assets compatibility)
  */
 export function createDynamicUrls(
   siteUrl: string,
@@ -356,9 +371,18 @@ export function createDynamicUrls(
   priority: string,
   changefreq: string,
   languages: readonly string[],
+  trailingSlash = false,
 ): string[] {
   const today = getTodayISODate();
+  const suffix = trailingSlash ? '/' : '';
   return ids.flatMap((id) =>
-    generateUrlEntries(siteUrl, `${pathPrefix}/${id}`, priority, changefreq, languages, today),
+    generateUrlEntries(
+      siteUrl,
+      `${pathPrefix}/${id}${suffix}`,
+      priority,
+      changefreq,
+      languages,
+      today,
+    ),
   );
 }

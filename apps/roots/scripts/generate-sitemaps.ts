@@ -40,6 +40,11 @@ const conceptNamesPath = join(CONFIG.outputDir, 'concept-names.json');
 const conceptNames: ConceptNamesJson = JSON.parse(readFileSync(conceptNamesPath, 'utf-8'));
 const conceptIds = Object.keys(conceptNames);
 
+// Trailing slash required for Cloudflare Workers Assets
+// Workers Assets serves folder/index.html with 307 redirect to folder/
+// Sitemap URLs must match the final canonical URL with trailing slash
+const TRAILING_SLASH = true;
+
 generateSitemaps(CONFIG, STATIC_PAGES, [
   {
     name: 'concepts',
@@ -50,6 +55,7 @@ generateSitemaps(CONFIG, STATIC_PAGES, [
       '0.7',
       'monthly',
       CONFIG.languages,
+      TRAILING_SLASH,
     ),
   },
   {
@@ -61,6 +67,7 @@ generateSitemaps(CONFIG, STATIC_PAGES, [
       '0.8',
       'monthly',
       CONFIG.languages,
+      TRAILING_SLASH,
     ),
   },
 ]);
