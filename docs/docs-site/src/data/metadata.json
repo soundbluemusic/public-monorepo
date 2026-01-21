@@ -9,7 +9,7 @@
       },
       "pages": 33748,
       "entries": 16836,
-      "categories": 25,
+      "categories": 52,
       "conversations": 53,
       "url": "https://context.soundbluemusic.com",
       "devPort": 3003,
@@ -85,9 +85,9 @@
           "ja": "文脈ベースの定義、例文、関連表現を含む16,836エントリをSSR + Cloudflare D1で提供。英語と韓国語UIをサポート。"
         },
         "features": {
-          "en": ["16,836 dictionary entries", "25 categories", "53 example conversations"],
-          "ko": ["16,836개 사전 항목", "25개 카테고리", "53개 예문 대화"],
-          "ja": ["16,836辞書エントリ", "25カテゴリ", "53例文会話"]
+          "en": ["16,836 dictionary entries", "52 categories", "53 example conversations"],
+          "ko": ["16,836개 사전 항목", "52개 카테고리", "53개 예문 대화"],
+          "ja": ["16,836辞書エントリ", "52カテゴリ", "53例文会話"]
         },
         "visitLabel": {
           "en": "Visit Context →",

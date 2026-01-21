@@ -24,7 +24,8 @@
     "./schemas/context": "./src/schemas/context/index.ts",
     "./schemas/roots": "./src/schemas/roots/index.ts",
     "./schemas/permissive": "./src/schemas/permissive/index.ts",
-    "./loaders": "./src/loaders/index.ts"
+    "./loaders": "./src/loaders/index.ts",
+    "./metadata": "./src/metadata.ts"
   },
   "dependencies": {
     "zod": "^3.25.0"

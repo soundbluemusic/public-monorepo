@@ -48,6 +48,9 @@ jobs:
       - name: Check package versions
         run: pnpm check:versions
 
+      - name: Check metadata consistency
+        run: pnpm sync:stats --check
+
   # ============================================================
   # Stage 2: 빌드 (한 번만 실행, artifact로 공유)
   # ============================================================

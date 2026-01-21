@@ -15,7 +15,7 @@
 
 A Korean dictionary designed for language learners:
 
-- **16394 Word Entries** - Organized by category and difficulty
+- **16836 Word Entries** - Organized by category and difficulty
 - **Bilingual Support** - Korean ↔ English translations
 - **Romanization** - Pronunciation guides
 - **Categories** - 21 topics + 7 conversation categories

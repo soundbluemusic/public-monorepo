@@ -1,8 +1,8 @@
 /**
  * 문서 통계 동기화 스크립트
  *
- * 실제 데이터를 기반으로 README.md와 CLAUDE.md의 통계 숫자를 자동 업데이트합니다.
- * Single Source of Truth: data/ 디렉토리의 JSON 파일들
+ * 실제 데이터를 기반으로 README.md, CLAUDE.md, metadata.json의 통계 숫자를 자동 업데이트합니다.
+ * Single Source of Truth: packages/data/src/metadata.ts
  *
  * @example
  * ```bash
@@ -82,32 +82,31 @@ function countTsArrayItems(filePath: string, pattern: RegExp): number {
 
 /**
  * Context 앱 통계 수집
+ *
+ * Context는 D1에서 데이터를 가져오므로, SSoT 파일(packages/data/src/metadata.ts)에서 값을 읽습니다.
+ * D1 데이터 변경 시 metadata.ts를 먼저 업데이트하세요.
  */
 function getContextStats(): AppStats {
-  const entriesDir = join(ROOT_DIR, 'data/context/entries');
-  const categoriesFile = join(ROOT_DIR, 'apps/context/app/data/categories.ts');
-  const conversationsFile = join(ROOT_DIR, 'apps/context/app/data/conversations.ts');
+  // SSoT: packages/data/src/metadata.ts에서 값 읽기
+  const metadataPath = join(ROOT_DIR, 'packages/data/src/metadata.ts');
+  const metadataContent = readFileSync(metadataPath, 'utf-8');
 
-  const entries = countJsonArrayItems(entriesDir);
+  // entries: 16836 형식에서 추출
+  const entriesMatch = metadataContent.match(/entries:\s*(\d+)/);
+  const entries = entriesMatch ? Number(entriesMatch[1]) : 0;
 
-  // categories.ts에서 { id: 패턴 카운트
-  const categories = countTsArrayItems(categoriesFile, /{\s*id:\s*'/g);
+  // categories: 52 형식에서 추출
+  const categoriesMatch = metadataContent.match(/categories:\s*(\d+)/);
+  const categories = categoriesMatch ? Number(categoriesMatch[1]) : 0;
 
-  // conversations.ts에서 categoryId 패턴으로 unique 카테고리 수 세기
-  const conversationsContent = existsSync(conversationsFile)
-    ? readFileSync(conversationsFile, 'utf-8')
-    : '';
-  const convMatches = conversationsContent.match(/categoryId:\s*'([^']+)'/g) || [];
-  const uniqueConvCategories = new Set(
-    convMatches.map((m) => m.replace(/categoryId:\s*'([^']+)'/, '$1')),
-  );
-  const conversationCategories = uniqueConvCategories.size;
+  // conversations: 53 형식에서 추출
+  const conversationsMatch = metadataContent.match(/conversations:\s*(\d+)/);
+  const conversations = conversationsMatch ? Number(conversationsMatch[1]) : 0;
 
-  // conversations 총 개수
-  const conversations = countTsArrayItems(conversationsFile, /{\s*id:\s*'[^']+',\s*categoryId:/g);
-
-  // 라우트 계산: (entries * 2) + (categories * 2) + (convCategories * 2) + static
-  const staticRoutes = 8; // /, /ko, /about, /ko/about, /categories, /ko/categories, /conversations, /ko/conversations
+  // 라우트 계산: (entries * 2) + (categories * 2) + (conversations_categories * 2) + static
+  // conversation categories는 약 7개로 고정 (대화 카테고리 수)
+  const staticRoutes = 8;
+  const conversationCategories = 7; // greetings, food, shopping, directions, emergencies, etc.
   const routes = entries * 2 + categories * 2 + conversationCategories * 2 + staticRoutes;
 
   return { entries, categories, conversations, routes };
@@ -525,7 +524,58 @@ function main() {
 
   if (isCheckOnly) {
     console.log('\n🔍 Check mode: verifying docs are in sync...');
-    // TODO: 실제 검증 로직 추가
+
+    const mismatches: string[] = [];
+
+    // README.md 검증
+    const readmePath = join(ROOT_DIR, 'README.md');
+    const readmeContent = readFileSync(readmePath, 'utf-8');
+
+    // Context entries 검증
+    const contextEntriesMatch = readmeContent.match(/\| \*\*Features\*\* \| (\d+) entries/);
+    if (contextEntriesMatch && Number(contextEntriesMatch[1]) !== stats.context.entries) {
+      mismatches.push(
+        `README.md: Context entries (${contextEntriesMatch[1]} → ${stats.context.entries})`,
+      );
+    }
+
+    // metadata.json 검증
+    const metadataPath = join(ROOT_DIR, 'docs/docs-site/src/data/metadata.json');
+    if (existsSync(metadataPath)) {
+      const metadata = JSON.parse(readFileSync(metadataPath, 'utf-8'));
+
+      if (metadata.apps.context.entries !== stats.context.entries) {
+        mismatches.push(
+          `metadata.json: Context entries (${metadata.apps.context.entries} → ${stats.context.entries})`,
+        );
+      }
+      if (metadata.apps.context.categories !== stats.context.categories) {
+        mismatches.push(
+          `metadata.json: Context categories (${metadata.apps.context.categories} → ${stats.context.categories})`,
+        );
+      }
+      if (metadata.apps.roots.concepts !== stats.roots.concepts) {
+        mismatches.push(
+          `metadata.json: Roots concepts (${metadata.apps.roots.concepts} → ${stats.roots.concepts})`,
+        );
+      }
+      if (metadata.apps.permissive.libraries !== stats.permissive.libraries) {
+        mismatches.push(
+          `metadata.json: Permissive libraries (${metadata.apps.permissive.libraries} → ${stats.permissive.libraries})`,
+        );
+      }
+    }
+
+    if (mismatches.length > 0) {
+      console.log('\n❌ Found mismatches:\n');
+      for (const mismatch of mismatches) {
+        console.log(`  - ${mismatch}`);
+      }
+      console.log('\nRun `pnpm sync:stats` to fix these issues.\n');
+      process.exit(1);
+    }
+
+    console.log('✅ All documentation is in sync with data sources.\n');
     process.exit(0);
   }
 
@@ -577,7 +627,75 @@ function main() {
     console.log('ℹ️  apps/permissive/README.md already in sync');
   }
 
+  // GitHub Pages metadata.json 업데이트
+  const metadataJsonPath = join(ROOT_DIR, 'docs/docs-site/src/data/metadata.json');
+  const metadataUpdated = updateMetadataJson(metadataJsonPath, stats);
+  if (metadataUpdated) {
+    console.log('✅ docs/docs-site/src/data/metadata.json updated');
+  } else {
+    console.log('ℹ️  docs/docs-site/src/data/metadata.json already in sync');
+  }
+
   console.log('\n✨ Stats sync complete!');
+}
+
+/**
+ * GitHub Pages metadata.json 업데이트
+ */
+function updateMetadataJson(filePath: string, stats: AllStats): boolean {
+  if (!existsSync(filePath)) {
+    console.warn(`⚠️  File not found: ${filePath}`);
+    return false;
+  }
+
+  const content = readFileSync(filePath, 'utf-8');
+  const metadata = JSON.parse(content);
+  const originalContent = JSON.stringify(metadata, null, 2);
+
+  // Context 통계 업데이트
+  metadata.apps.context.entries = stats.context.entries;
+  metadata.apps.context.categories = stats.context.categories;
+  metadata.apps.context.conversations = stats.context.conversations;
+
+  // Permissive 통계 업데이트
+  metadata.apps.permissive.libraries = stats.permissive.libraries;
+  metadata.apps.permissive.webAPIs = stats.permissive.webApis;
+
+  // Roots 통계 업데이트
+  metadata.apps.roots.concepts = stats.roots.concepts;
+  metadata.apps.roots.fields = stats.roots.fields;
+
+  // i18n.appDetails.context.features 업데이트
+  if (metadata.i18n?.appDetails?.context?.features) {
+    const entries = stats.context.entries.toLocaleString();
+    const categories = stats.context.categories;
+    const conversations = stats.context.conversations;
+
+    metadata.i18n.appDetails.context.features.en = [
+      `${entries} dictionary entries`,
+      `${categories} categories`,
+      `${conversations} example conversations`,
+    ];
+    metadata.i18n.appDetails.context.features.ko = [
+      `${entries}개 사전 항목`,
+      `${categories}개 카테고리`,
+      `${conversations}개 예문 대화`,
+    ];
+    metadata.i18n.appDetails.context.features.ja = [
+      `${entries}辞書エントリ`,
+      `${categories}カテゴリ`,
+      `${conversations}例文会話`,
+    ];
+  }
+
+  const newContent = JSON.stringify(metadata, null, 2) + '\n';
+
+  if (newContent !== originalContent + '\n' && newContent !== originalContent) {
+    writeFileSync(filePath, newContent, 'utf-8');
+    return true;
+  }
+
+  return false;
 }
 
 main();

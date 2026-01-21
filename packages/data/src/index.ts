@@ -6,5 +6,7 @@
 
 // Loaders
 export * from './loaders';
+// Metadata (SSoT)
+export * from './metadata';
 // Schemas
 export * from './schemas';
