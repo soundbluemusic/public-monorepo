@@ -391,6 +391,10 @@ function generateKoreanExpressionsFile(entries: JsonEntry[]): string {
   const trie = buildAhoCorasickTrie(expressions);
 
   // Trie 데이터를 별도 JSON 파일로 저장
+  const trieDir = dirname(TRIE_JSON_FILE);
+  if (!existsSync(trieDir)) {
+    mkdirSync(trieDir, { recursive: true });
+  }
   writeFileSync(TRIE_JSON_FILE, JSON.stringify(trie));
   console.log(
     `   ✓ expression-trie.json (${trie.length} nodes, ${(JSON.stringify(trie).length / 1024 / 1024).toFixed(2)}MB)`,
