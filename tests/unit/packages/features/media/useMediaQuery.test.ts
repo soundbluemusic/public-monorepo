@@ -3,7 +3,7 @@
  */
 
 import { useIsMobile, useMediaQuery } from '@soundblue/features/media';
-import { renderHook } from '@testing-library/react';
+import { act, renderHook } from '@testing-library/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 describe('useMediaQuery', () => {
@@ -61,15 +61,16 @@ describe('useMediaQuery', () => {
   });
 
   it('should update when media query changes', () => {
-    const { result, rerender } = renderHook(() => useMediaQuery('(min-width: 768px)'));
+    const { result } = renderHook(() => useMediaQuery('(min-width: 768px)'));
     expect(result.current).toBe(false);
 
     // Simulate media query change
-    for (const listener of listeners) {
-      listener({ matches: true } as MediaQueryListEvent);
-    }
+    act(() => {
+      for (const listener of listeners) {
+        listener({ matches: true } as MediaQueryListEvent);
+      }
+    });
 
-    rerender();
     expect(result.current).toBe(true);
   });
 

@@ -115,6 +115,61 @@ describe('highlightMatch', () => {
     const result = highlightMatch('price: $100', '$100');
     expect(result).toBe('price: <mark>$100</mark>');
   });
+
+  // Edge cases - Security
+  it('should escape all regex special characters', () => {
+    // Test all special regex chars: . * + ? ^ $ { } ( ) | [ ] \
+    const result = highlightMatch('test.*+?^${}()|[]\\end', '.*+?^${}()|[]\\');
+    expect(result).toBe('test<mark>.*+?^${}()|[]\\</mark>end');
+  });
+
+  it('should handle backslash in query', () => {
+    const result = highlightMatch('path\\to\\file', '\\to\\');
+    expect(result).toBe('path<mark>\\to\\</mark>file');
+  });
+
+  it('should preserve original case in highlighted text', () => {
+    const result = highlightMatch('HELLO hello HeLLo', 'hello');
+    expect(result).toBe('<mark>HELLO</mark> <mark>hello</mark> <mark>HeLLo</mark>');
+  });
+
+  // Edge cases - Unicode
+  it('should handle Korean text', () => {
+    const result = highlightMatch('안녕하세요 반갑습니다', '안녕');
+    expect(result).toBe('<mark>안녕</mark>하세요 반갑습니다');
+  });
+
+  it('should handle emoji in text', () => {
+    const result = highlightMatch('hello 🎵 world', '🎵');
+    expect(result).toBe('hello <mark>🎵</mark> world');
+  });
+
+  it('should handle zero-width characters', () => {
+    const textWithZeroWidth = 'hello\u200Bworld';
+    const result = highlightMatch(textWithZeroWidth, 'world');
+    expect(result).toContain('<mark>world</mark>');
+  });
+
+  // Edge cases - Performance
+  it('should handle very long text efficiently', () => {
+    const longText = 'word '.repeat(10000); // ~50KB
+    const start = performance.now();
+    const result = highlightMatch(longText, 'word');
+    const elapsed = performance.now() - start;
+
+    expect(result).toContain('<mark>word</mark>');
+    expect(elapsed).toBeLessThan(100); // Should complete in under 100ms
+  });
+
+  it('should handle no matches gracefully', () => {
+    const result = highlightMatch('hello world', 'xyz');
+    expect(result).toBe('hello world');
+  });
+
+  it('should handle query longer than text', () => {
+    const result = highlightMatch('hi', 'hello world');
+    expect(result).toBe('hi');
+  });
 });
 
 describe('createSearchHandler', () => {

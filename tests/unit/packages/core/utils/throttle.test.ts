@@ -67,6 +67,44 @@ describe('throttle', () => {
     throttled();
     expect(fn).toHaveBeenCalledTimes(2);
   });
+
+  // Edge cases
+  it('should handle limit of 0 (always execute)', () => {
+    const fn = vi.fn();
+    const throttled = throttle(fn, 0);
+
+    throttled('first');
+    throttled('second');
+    throttled('third');
+
+    // With limit=0, all calls should execute immediately
+    expect(fn).toHaveBeenCalledTimes(3);
+  });
+
+  it('should handle negative limit (treated as 0)', () => {
+    const fn = vi.fn();
+    const throttled = throttle(fn, -100);
+
+    throttled('first');
+    throttled('second');
+
+    // Negative limit acts like 0
+    expect(fn).toHaveBeenCalledTimes(2);
+  });
+
+  it('should handle rapid successive calls', () => {
+    const fn = vi.fn();
+    const throttled = throttle(fn, 100);
+
+    // Simulate 100 rapid calls
+    for (let i = 0; i < 100; i++) {
+      throttled(i);
+    }
+
+    // Only first call should execute
+    expect(fn).toHaveBeenCalledTimes(1);
+    expect(fn).toHaveBeenCalledWith(0);
+  });
 });
 
 describe('throttleWithTrailing', () => {

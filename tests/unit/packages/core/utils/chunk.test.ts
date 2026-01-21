@@ -53,6 +53,46 @@ describe('chunkArray', () => {
     const result = chunkArray(items, 2);
     expect(result).toEqual([[{ id: 1 }, { id: 2 }], [{ id: 3 }]]);
   });
+
+  // Edge cases
+  it('should handle array with null/undefined elements', () => {
+    const result = chunkArray([1, null, undefined, 4], 2);
+    expect(result).toEqual([[1, null], [undefined, 4]]);
+  });
+
+  it('should handle Infinity as chunk size (returns single chunk)', () => {
+    const result = chunkArray([1, 2, 3, 4, 5], Infinity);
+    expect(result).toEqual([[1, 2, 3, 4, 5]]);
+  });
+
+  it('should handle very large chunk size', () => {
+    const result = chunkArray([1, 2, 3], Number.MAX_SAFE_INTEGER);
+    expect(result).toEqual([[1, 2, 3]]);
+  });
+
+  it('should handle decimal chunk size', () => {
+    // 2.9 is treated as 2.9 in loop increment (i += 2.9)
+    // Iteration: i=0, i=2.9, i=5.8 (stops at 5.8 > 5)
+    // slice(0, 2.9) → [1, 2], slice(2.9, 5.8) → [3, 4, 5]
+    const result = chunkArray([1, 2, 3, 4, 5], 2.9);
+    expect(result).toHaveLength(2);
+    expect(result).toEqual([[1, 2], [3, 4, 5]]);
+  });
+
+  it('should handle NaN chunk size (creates single empty chunk)', () => {
+    // NaN <= 0 is false, so no throw
+    // Loop: i=0, i=0+NaN=NaN, NaN < 3 is false → exits after one iteration
+    // slice(0, NaN) → slice(0, 0) → []
+    const result = chunkArray([1, 2, 3], NaN);
+    expect(result).toEqual([[]]);
+  });
+
+  it('should handle sparse arrays', () => {
+    // eslint-disable-next-line no-sparse-arrays
+    const sparseArray = [1, , 3, , 5];
+    const result = chunkArray(sparseArray, 2);
+    expect(result).toHaveLength(3);
+  });
 });
 
 describe('splitIntoGroups', () => {

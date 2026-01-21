@@ -2,7 +2,14 @@
  * @fileoverview Unit tests for useSettingsStore (Zustand store with persist middleware)
  */
 
-import { useSettingsStore } from '@soundblue/features/settings';
+import {
+  useSidebarActions,
+  useSidebarCollapsed,
+  useSidebarOpen,
+  useSettingsStore,
+  useTheme,
+  useThemeActions,
+} from '@soundblue/features/settings';
 import { act, renderHook } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
@@ -483,6 +490,268 @@ describe('useSettingsStore', () => {
       // Theme should change but sidebar should remain
       expect(result.current.theme).toBe('light');
       expect(result.current.sidebarCollapsed).toBe(true);
+    });
+  });
+
+  describe('Mobile Sidebar (sidebarOpen)', () => {
+    it('should have sidebarOpen false by default', () => {
+      const { result } = renderHook(() => useSettingsStore());
+      expect(result.current.sidebarOpen).toBe(false);
+    });
+
+    it('should set sidebarOpen to true', () => {
+      const { result } = renderHook(() => useSettingsStore());
+
+      act(() => {
+        result.current.setSidebarOpen(true);
+      });
+
+      expect(result.current.sidebarOpen).toBe(true);
+    });
+
+    it('should toggle sidebarOpen', () => {
+      // Reset state first
+      act(() => {
+        useSettingsStore.setState({ sidebarOpen: false });
+      });
+
+      expect(useSettingsStore.getState().sidebarOpen).toBe(false);
+
+      act(() => {
+        useSettingsStore.getState().toggleSidebarOpen();
+      });
+
+      expect(useSettingsStore.getState().sidebarOpen).toBe(true);
+
+      act(() => {
+        useSettingsStore.getState().toggleSidebarOpen();
+      });
+
+      expect(useSettingsStore.getState().sidebarOpen).toBe(false);
+    });
+
+    it('should not persist sidebarOpen (mobile overlay starts closed)', () => {
+      const { result } = renderHook(() => useSettingsStore());
+
+      act(() => {
+        result.current.setSidebarOpen(true);
+      });
+
+      // Reset state to simulate app restart
+      act(() => {
+        useSettingsStore.setState({
+          theme: 'system',
+          sidebarCollapsed: false,
+          sidebarOpen: false,
+        });
+      });
+
+      // After "restart", sidebarOpen should be false
+      expect(result.current.sidebarOpen).toBe(false);
+    });
+  });
+});
+
+describe('Selector Hooks', () => {
+  let localStorageMock: Map<string, string>;
+
+  beforeEach(() => {
+    localStorageMock = new Map<string, string>();
+
+    Object.defineProperty(window, 'localStorage', {
+      value: {
+        getItem: vi.fn((key: string) => localStorageMock.get(key) ?? null),
+        setItem: vi.fn((key: string, value: string) => {
+          localStorageMock.set(key, value);
+        }),
+        removeItem: vi.fn((key: string) => {
+          localStorageMock.delete(key);
+        }),
+        clear: vi.fn(() => {
+          localStorageMock.clear();
+        }),
+      },
+      writable: true,
+      configurable: true,
+    });
+
+    Object.defineProperty(window, 'matchMedia', {
+      writable: true,
+      configurable: true,
+      value: vi.fn((query: string) => ({
+        matches: false,
+        media: query,
+        addEventListener: vi.fn(),
+        removeEventListener: vi.fn(),
+      })),
+    });
+
+    Object.defineProperty(document, 'documentElement', {
+      value: {
+        classList: {
+          add: vi.fn(),
+          remove: vi.fn(),
+          toggle: vi.fn(),
+        },
+      },
+      writable: true,
+      configurable: true,
+    });
+
+    localStorageMock.clear();
+  });
+
+  afterEach(() => {
+    act(() => {
+      useSettingsStore.setState({
+        theme: 'system',
+        sidebarCollapsed: false,
+        sidebarOpen: false,
+      });
+    });
+  });
+
+  describe('useTheme', () => {
+    it('should return current theme', () => {
+      const { result } = renderHook(() => useTheme());
+      expect(result.current).toBe('system');
+    });
+
+    it('should update when theme changes', () => {
+      const { result } = renderHook(() => useTheme());
+
+      act(() => {
+        useSettingsStore.getState().setTheme('dark');
+      });
+
+      expect(result.current).toBe('dark');
+    });
+  });
+
+  describe('useThemeActions', () => {
+    it('should return setTheme and toggleTheme functions', () => {
+      // Access store directly to avoid hook snapshot issues
+      const state = useSettingsStore.getState();
+      expect(typeof state.setTheme).toBe('function');
+      expect(typeof state.toggleTheme).toBe('function');
+    });
+
+    it('should change theme via setTheme action', () => {
+      const { result: themeResult } = renderHook(() => useTheme());
+
+      act(() => {
+        useSettingsStore.getState().setTheme('light');
+      });
+
+      expect(themeResult.current).toBe('light');
+    });
+
+    it('should toggle theme via toggleTheme action', () => {
+      const { result: themeResult } = renderHook(() => useTheme());
+
+      // system -> dark
+      act(() => {
+        useSettingsStore.getState().toggleTheme();
+      });
+
+      expect(themeResult.current).toBe('dark');
+    });
+  });
+
+  describe('useSidebarCollapsed', () => {
+    it('should return sidebar collapsed state', () => {
+      const { result } = renderHook(() => useSidebarCollapsed());
+      expect(result.current).toBe(false);
+    });
+
+    it('should update when sidebar collapsed changes', () => {
+      const { result } = renderHook(() => useSidebarCollapsed());
+
+      act(() => {
+        useSettingsStore.getState().setSidebarCollapsed(true);
+      });
+
+      expect(result.current).toBe(true);
+    });
+  });
+
+  describe('useSidebarOpen', () => {
+    it('should return sidebar open state', () => {
+      const { result } = renderHook(() => useSidebarOpen());
+      expect(result.current).toBe(false);
+    });
+
+    it('should update when sidebar open changes', () => {
+      const { result } = renderHook(() => useSidebarOpen());
+
+      act(() => {
+        useSettingsStore.getState().setSidebarOpen(true);
+      });
+
+      expect(result.current).toBe(true);
+    });
+  });
+
+  describe('useSidebarActions', () => {
+    it('should return all sidebar action functions', () => {
+      // Access store directly to avoid hook snapshot issues
+      const state = useSettingsStore.getState();
+      expect(typeof state.setSidebarCollapsed).toBe('function');
+      expect(typeof state.toggleSidebarCollapse).toBe('function');
+      expect(typeof state.setSidebarOpen).toBe('function');
+      expect(typeof state.toggleSidebarOpen).toBe('function');
+    });
+
+    it('should toggle sidebar collapse via action', () => {
+      const { result: collapsedResult } = renderHook(() => useSidebarCollapsed());
+
+      act(() => {
+        useSettingsStore.getState().toggleSidebarCollapse();
+      });
+
+      expect(collapsedResult.current).toBe(true);
+    });
+
+    it('should toggle sidebar open via action', () => {
+      const { result: openResult } = renderHook(() => useSidebarOpen());
+
+      act(() => {
+        useSettingsStore.getState().toggleSidebarOpen();
+      });
+
+      expect(openResult.current).toBe(true);
+    });
+
+    it('should set sidebar collapsed via action', () => {
+      const { result: collapsedResult } = renderHook(() => useSidebarCollapsed());
+
+      act(() => {
+        useSettingsStore.getState().setSidebarCollapsed(true);
+      });
+
+      expect(collapsedResult.current).toBe(true);
+
+      act(() => {
+        useSettingsStore.getState().setSidebarCollapsed(false);
+      });
+
+      expect(collapsedResult.current).toBe(false);
+    });
+
+    it('should set sidebar open via action', () => {
+      const { result: openResult } = renderHook(() => useSidebarOpen());
+
+      act(() => {
+        useSettingsStore.getState().setSidebarOpen(true);
+      });
+
+      expect(openResult.current).toBe(true);
+
+      act(() => {
+        useSettingsStore.getState().setSidebarOpen(false);
+      });
+
+      expect(openResult.current).toBe(false);
     });
   });
 });

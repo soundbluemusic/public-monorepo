@@ -140,4 +140,59 @@ describe('@soundblue/core/utils - generatePageNumbers', () => {
       expect(result).toContain(11);
     });
   });
+
+  describe('boundary value edge cases', () => {
+    it('should handle total=0 (no pages)', () => {
+      const result = generatePageNumbers(1, 0);
+      expect(result).toEqual([]);
+    });
+
+    it('should handle negative total', () => {
+      const result = generatePageNumbers(1, -5);
+      expect(result).toEqual([]);
+    });
+
+    it('should handle current > total', () => {
+      // When current page exceeds total, behavior is undefined but should not crash
+      const result = generatePageNumbers(25, 20);
+      expect(Array.isArray(result)).toBe(true);
+    });
+
+    it('should handle current = 0', () => {
+      const result = generatePageNumbers(0, 20);
+      expect(Array.isArray(result)).toBe(true);
+      expect(result[0]).toBe(1);
+    });
+
+    it('should handle negative current', () => {
+      const result = generatePageNumbers(-5, 20);
+      expect(Array.isArray(result)).toBe(true);
+    });
+
+    it('should handle decimal current page', () => {
+      // JavaScript behavior: 1.5 - 1 = 0.5, Math.max(2, 0.5) = 2
+      const result = generatePageNumbers(1.5, 10);
+      expect(Array.isArray(result)).toBe(true);
+    });
+
+    it('should handle very large page numbers', () => {
+      const result = generatePageNumbers(5000, 10000);
+      expect(result[0]).toBe(1);
+      expect(result[result.length - 1]).toBe(10000);
+      expect(result).toContain(5000);
+    });
+
+    it('should handle Infinity total (returns only first and last pages)', () => {
+      // With Infinity > 7, the function uses the ellipsis logic
+      // and doesn't use Array.from with Infinity length
+      const result = generatePageNumbers(1, Number.POSITIVE_INFINITY);
+      expect(result[0]).toBe(1);
+      expect(result[result.length - 1]).toBe(Number.POSITIVE_INFINITY);
+    });
+
+    it('should handle NaN values', () => {
+      const result = generatePageNumbers(Number.NaN, 10);
+      expect(Array.isArray(result)).toBe(true);
+    });
+  });
 });

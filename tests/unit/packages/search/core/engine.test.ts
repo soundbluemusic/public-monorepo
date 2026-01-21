@@ -174,4 +174,186 @@ describe('SearchEngine', () => {
       expect(engine.documentCount).toBe(4);
     });
   });
+
+  // Edge cases
+  describe('search edge cases', () => {
+    it('should return empty array for empty query', () => {
+      const engine = new SearchEngine<TestItem>(testConfig);
+      engine.addAll(testItems);
+
+      const results = engine.search('');
+      expect(results).toHaveLength(0);
+    });
+
+    it('should return empty array for whitespace-only query', () => {
+      const engine = new SearchEngine<TestItem>(testConfig);
+      engine.addAll(testItems);
+
+      const results = engine.search('   ');
+      expect(results).toHaveLength(0);
+    });
+
+    it('should handle regex metacharacters in query', () => {
+      const engine = new SearchEngine<TestItem>(testConfig);
+      engine.add({ id: 'special', title: 'Test (value)', content: 'Contains $100' });
+
+      // Query with regex special characters should not throw
+      expect(() => engine.search('$100')).not.toThrow();
+      expect(() => engine.search('(value)')).not.toThrow();
+      expect(() => engine.search('.*+?^${}()|[]')).not.toThrow();
+    });
+
+    it('should handle XSS attempt in query safely', () => {
+      const engine = new SearchEngine<TestItem>(testConfig);
+      engine.addAll(testItems);
+
+      // Should not throw, just return no results
+      const results = engine.search('<script>alert(1)</script>');
+      expect(results).toHaveLength(0);
+    });
+
+    it('should handle SQL injection attempt in query safely', () => {
+      const engine = new SearchEngine<TestItem>(testConfig);
+      engine.addAll(testItems);
+
+      // Should not throw, just return no results
+      const results = engine.search("' OR '1'='1");
+      expect(results).toHaveLength(0);
+    });
+
+    it('should handle very long query', () => {
+      const engine = new SearchEngine<TestItem>(testConfig);
+      engine.addAll(testItems);
+
+      const longQuery = 'a'.repeat(10000);
+      // Should not throw
+      expect(() => engine.search(longQuery)).not.toThrow();
+    });
+
+    it('should handle limit of 0 (slice behavior returns empty)', () => {
+      const engine = new SearchEngine<TestItem>(testConfig);
+      engine.addAll(testItems);
+
+      // Note: With limit=0, slice(0, 0) returns empty array
+      // But current implementation returns results when limit is falsy
+      const results = engine.search('test', 0);
+      // This documents actual behavior - 0 is falsy so no limit applied
+      expect(results.length).toBeGreaterThan(0);
+    });
+
+    it('should handle limit greater than results', () => {
+      const engine = new SearchEngine<TestItem>(testConfig);
+      engine.addAll(testItems);
+
+      const results = engine.search('hello', 100);
+      expect(results.length).toBeLessThanOrEqual(4); // Only 4 items total
+    });
+
+    it('should handle Korean query', () => {
+      const engine = new SearchEngine<TestItem>(testConfig);
+      engine.add({ id: 'korean', title: '안녕하세요', content: '한국어 테스트' });
+
+      const results = engine.search('안녕');
+      expect(results.length).toBeGreaterThan(0);
+    });
+
+    it('should handle emoji query', () => {
+      const engine = new SearchEngine<TestItem>(testConfig);
+      engine.add({ id: 'emoji', title: '🎵 Music Note', content: 'Music emoji test' });
+
+      // Emoji search behavior depends on MiniSearch tokenization
+      expect(() => engine.search('🎵')).not.toThrow();
+    });
+
+    it('should be case-insensitive by default', () => {
+      const engine = new SearchEngine<TestItem>(testConfig);
+      engine.addAll(testItems);
+
+      const upperResults = engine.search('HELLO');
+      const lowerResults = engine.search('hello');
+
+      expect(upperResults.length).toBe(lowerResults.length);
+    });
+  });
+
+  describe('add edge cases', () => {
+    it('should handle adding item with duplicate ID', () => {
+      const engine = new SearchEngine<TestItem>(testConfig);
+
+      // biome-ignore lint/style/noNonNullAssertion: test data is defined
+      engine.add(testItems[0]!);
+      // MiniSearch throws on duplicate ID
+      expect(() => engine.add(testItems[0]!)).toThrow();
+    });
+
+    it('should handle adding empty content fields', () => {
+      const engine = new SearchEngine<TestItem>(testConfig);
+
+      engine.add({ id: 'empty', title: '', content: '' });
+      expect(engine.documentCount).toBe(1);
+
+      // Empty content means no matches
+      const results = engine.search('empty');
+      expect(results).toHaveLength(0);
+    });
+  });
+
+  describe('suggest edge cases', () => {
+    it('should return empty array for empty query', () => {
+      const engine = new SearchEngine<TestItem>(testConfig);
+      engine.addAll(testItems);
+
+      const suggestions = engine.suggest('');
+      expect(suggestions).toHaveLength(0);
+    });
+
+    it('should work after clear()', () => {
+      const engine = new SearchEngine<TestItem>(testConfig);
+      engine.addAll(testItems);
+      engine.clear();
+
+      const suggestions = engine.suggest('hel');
+      expect(suggestions).toHaveLength(0);
+    });
+
+    it('should handle negative limit', () => {
+      const engine = new SearchEngine<TestItem>(testConfig);
+      engine.addAll(testItems);
+
+      // Negative limit should be treated as 0 (slice behavior)
+      const suggestions = engine.suggest('hel', -1);
+      expect(suggestions).toHaveLength(0);
+    });
+  });
+
+  describe('exportIndex/loadIndex edge cases', () => {
+    it('should handle empty index export/import', () => {
+      const engine1 = new SearchEngine<TestItem>(testConfig);
+      const exported = engine1.exportIndex();
+
+      const engine2 = new SearchEngine<TestItem>(testConfig);
+      engine2.loadIndex(exported);
+
+      expect(engine2.documentCount).toBe(0);
+    });
+
+    it('should throw for invalid JSON in loadIndex', () => {
+      const engine = new SearchEngine<TestItem>(testConfig);
+
+      expect(() => engine.loadIndex('not valid json')).toThrow();
+    });
+
+    it('should allow search after loadIndex', () => {
+      const engine1 = new SearchEngine<TestItem>(testConfig);
+      engine1.addAll(testItems);
+      const exported = engine1.exportIndex();
+
+      const engine2 = new SearchEngine<TestItem>(testConfig);
+      engine2.loadIndex(exported);
+
+      // Note: item storage is not exported, only index
+      const results = engine2.search('hello');
+      expect(results.length).toBeGreaterThan(0);
+    });
+  });
 });

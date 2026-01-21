@@ -417,3 +417,194 @@ describe('Search Worker Logic', () => {
     });
   });
 });
+
+/**
+ * Tests for the actual search.worker.ts file
+ *
+ * The worker runs in a Web Worker context with `self.onmessage`.
+ * Since Vitest runs in Node.js, we import the module and simulate
+ * the Web Worker environment by mocking `self` and `postMessage`.
+ */
+describe('Search Worker Module (Actual File Coverage)', () => {
+  let mockPostMessageFn: ReturnType<typeof vi.fn>;
+  let originalSelf: typeof globalThis;
+
+  beforeEach(() => {
+    // Save original self
+    originalSelf = globalThis.self;
+
+    // Create mock postMessage
+    mockPostMessageFn = vi.fn();
+
+    // Mock self with postMessage
+    (globalThis as unknown as { self: { postMessage: typeof mockPostMessageFn; onmessage: null | ((e: MessageEvent) => void) } }).self = {
+      postMessage: mockPostMessageFn,
+      onmessage: null,
+    };
+  });
+
+  afterEach(() => {
+    // Restore original self
+    (globalThis as unknown as { self: typeof originalSelf }).self = originalSelf;
+    vi.resetModules();
+  });
+
+  it('should register onmessage handler when module loads', async () => {
+    // Dynamic import to trigger module execution with mocked self
+    await import('@soundblue/search/worker/search.worker');
+
+    // The worker should have set self.onmessage
+    expect((globalThis as unknown as { self: { onmessage: unknown } }).self.onmessage).toBeDefined();
+  });
+
+  it('should handle INIT message and post READY', async () => {
+    await import('@soundblue/search/worker/search.worker');
+
+    const onmessage = (globalThis as unknown as { self: { onmessage: (e: MessageEvent) => Promise<void> } }).self.onmessage;
+
+    await onmessage({
+      data: {
+        type: 'INIT',
+        payload: {
+          config: {
+            fields: ['title'],
+            storeFields: ['id', 'title'],
+          },
+          data: [{ id: '1', title: 'Test' }],
+        },
+      },
+    } as MessageEvent);
+
+    expect(mockPostMessageFn).toHaveBeenCalledWith({ type: 'READY' });
+  });
+
+  it('should handle SEARCH message after INIT', async () => {
+    await import('@soundblue/search/worker/search.worker');
+
+    const onmessage = (globalThis as unknown as { self: { onmessage: (e: MessageEvent) => Promise<void> } }).self.onmessage;
+
+    // Initialize first
+    await onmessage({
+      data: {
+        type: 'INIT',
+        payload: {
+          config: {
+            fields: ['title'],
+            storeFields: ['id', 'title'],
+          },
+          data: [{ id: '1', title: 'Hello World' }],
+        },
+      },
+    } as MessageEvent);
+
+    mockPostMessageFn.mockClear();
+
+    // Search
+    await onmessage({
+      data: {
+        type: 'SEARCH',
+        payload: { query: 'Hello', limit: 10 },
+      },
+    } as MessageEvent);
+
+    expect(mockPostMessageFn).toHaveBeenCalledWith(
+      expect.objectContaining({
+        type: 'RESULTS',
+        payload: expect.any(Array),
+      })
+    );
+  });
+
+  it('should handle SUGGEST message after INIT', async () => {
+    await import('@soundblue/search/worker/search.worker');
+
+    const onmessage = (globalThis as unknown as { self: { onmessage: (e: MessageEvent) => Promise<void> } }).self.onmessage;
+
+    // Initialize first
+    await onmessage({
+      data: {
+        type: 'INIT',
+        payload: {
+          config: {
+            fields: ['title'],
+            storeFields: ['id', 'title'],
+          },
+          data: [{ id: '1', title: 'Hello World' }],
+        },
+      },
+    } as MessageEvent);
+
+    mockPostMessageFn.mockClear();
+
+    // Suggest
+    await onmessage({
+      data: {
+        type: 'SUGGEST',
+        payload: { query: 'Hel', limit: 5 },
+      },
+    } as MessageEvent);
+
+    expect(mockPostMessageFn).toHaveBeenCalledWith(
+      expect.objectContaining({
+        type: 'SUGGESTIONS',
+        payload: expect.any(Array),
+      })
+    );
+  });
+
+  it('should return ERROR for SEARCH without INIT', async () => {
+    vi.resetModules();
+
+    // Re-mock self after reset
+    mockPostMessageFn = vi.fn();
+    (globalThis as unknown as { self: { postMessage: typeof mockPostMessageFn; onmessage: null | ((e: MessageEvent) => void) } }).self = {
+      postMessage: mockPostMessageFn,
+      onmessage: null,
+    };
+
+    await import('@soundblue/search/worker/search.worker');
+
+    const onmessage = (globalThis as unknown as { self: { onmessage: (e: MessageEvent) => Promise<void> } }).self.onmessage;
+
+    // Search without init
+    await onmessage({
+      data: {
+        type: 'SEARCH',
+        payload: { query: 'test', limit: 10 },
+      },
+    } as MessageEvent);
+
+    expect(mockPostMessageFn).toHaveBeenCalledWith({
+      type: 'ERROR',
+      error: 'Engine not initialized',
+    });
+  });
+
+  it('should return ERROR for SUGGEST without INIT', async () => {
+    vi.resetModules();
+
+    // Re-mock self after reset
+    mockPostMessageFn = vi.fn();
+    (globalThis as unknown as { self: { postMessage: typeof mockPostMessageFn; onmessage: null | ((e: MessageEvent) => void) } }).self = {
+      postMessage: mockPostMessageFn,
+      onmessage: null,
+    };
+
+    await import('@soundblue/search/worker/search.worker');
+
+    const onmessage = (globalThis as unknown as { self: { onmessage: (e: MessageEvent) => Promise<void> } }).self.onmessage;
+
+    // Suggest without init
+    await onmessage({
+      data: {
+        type: 'SUGGEST',
+        payload: { query: 'test', limit: 5 },
+      },
+    } as MessageEvent);
+
+    expect(mockPostMessageFn).toHaveBeenCalledWith({
+      type: 'ERROR',
+      error: 'Engine not initialized',
+    });
+  });
+});

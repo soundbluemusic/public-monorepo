@@ -32,6 +32,36 @@ describe('getLocaleFromPath', () => {
     expect(getLocaleFromPath('/korea')).toBe('en');
     expect(getLocaleFromPath('/korean-food')).toBe('en');
   });
+
+  // Edge cases
+  it('should handle double slashes', () => {
+    expect(getLocaleFromPath('//ko/about')).toBe('en'); // Leading // is not /ko
+    expect(getLocaleFromPath('/ko//about')).toBe('ko'); // Still starts with /ko
+  });
+
+  it('should handle empty string', () => {
+    expect(getLocaleFromPath('')).toBe('en');
+  });
+
+  it('should handle very long paths', () => {
+    const longPath = '/ko/' + 'segment/'.repeat(100);
+    expect(getLocaleFromPath(longPath)).toBe('ko');
+  });
+
+  it('should handle path with query string', () => {
+    expect(getLocaleFromPath('/ko/about?param=value')).toBe('ko');
+    expect(getLocaleFromPath('/about?lang=ko')).toBe('en'); // Query doesn't affect locale
+  });
+
+  it('should handle path with hash', () => {
+    expect(getLocaleFromPath('/ko/about#section')).toBe('ko');
+    expect(getLocaleFromPath('/about#ko')).toBe('en'); // Hash doesn't affect locale
+  });
+
+  it('should handle special characters in path', () => {
+    expect(getLocaleFromPath('/ko/한글-경로')).toBe('ko');
+    expect(getLocaleFromPath('/ko/path%20with%20spaces')).toBe('ko');
+  });
 });
 
 describe('isKoreanPath', () => {
@@ -66,6 +96,24 @@ describe('stripLocaleFromPath', () => {
     expect(stripLocaleFromPath('/')).toBe('/');
     expect(stripLocaleFromPath('/about')).toBe('/about');
     expect(stripLocaleFromPath('/entry/hello')).toBe('/entry/hello');
+  });
+
+  // Edge cases
+  it('should handle paths that look like /ko but are not', () => {
+    expect(stripLocaleFromPath('/korea')).toBe('/korea');
+    expect(stripLocaleFromPath('/ko-kr/about')).toBe('/ko-kr/about');
+  });
+
+  it('should handle empty string', () => {
+    expect(stripLocaleFromPath('')).toBe('');
+  });
+
+  it('should handle path with query string', () => {
+    expect(stripLocaleFromPath('/ko/about?param=value')).toBe('/about?param=value');
+  });
+
+  it('should handle path with hash', () => {
+    expect(stripLocaleFromPath('/ko/about#section')).toBe('/about#section');
   });
 });
 

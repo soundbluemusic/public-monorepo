@@ -7,14 +7,18 @@ import { act, renderHook } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 describe('Toast Store Functions', () => {
-  beforeEach(() => {
+  beforeEach(async () => {
     vi.useFakeTimers();
-    clearToasts();
+    await act(async () => {
+      clearToasts();
+    });
   });
 
-  afterEach(() => {
+  afterEach(async () => {
+    await act(async () => {
+      clearToasts();
+    });
     vi.useRealTimers();
-    clearToasts();
   });
 
   describe('toast', () => {
@@ -23,8 +27,9 @@ describe('Toast Store Functions', () => {
       expect(id).toMatch(/^toast-/);
     });
 
-    it('should add toast with custom type', () => {
+    it('should add toast with custom type', async () => {
       const { result } = renderHook(() => useToast());
+      await act(async () => {});
 
       act(() => {
         toast({ message: 'Success!', type: 'success' });
@@ -34,8 +39,9 @@ describe('Toast Store Functions', () => {
       expect(result.current.toasts[0]?.type).toBe('success');
     });
 
-    it('should add toast with custom duration', () => {
+    it('should add toast with custom duration', async () => {
       const { result } = renderHook(() => useToast());
+      await act(async () => {});
 
       act(() => {
         toast({ message: 'Long toast', duration: 5000 });
@@ -44,8 +50,9 @@ describe('Toast Store Functions', () => {
       expect(result.current.toasts[0]?.duration).toBe(5000);
     });
 
-    it('should auto-remove toast after duration', () => {
+    it('should auto-remove toast after duration', async () => {
       const { result } = renderHook(() => useToast());
+      await act(async () => {});
 
       act(() => {
         toast({ message: 'Auto remove', duration: 1000 });
@@ -60,8 +67,9 @@ describe('Toast Store Functions', () => {
       expect(result.current.toasts).toHaveLength(0);
     });
 
-    it('should not auto-remove if duration is 0', () => {
+    it('should not auto-remove if duration is 0', async () => {
       const { result } = renderHook(() => useToast());
+      await act(async () => {});
 
       act(() => {
         toast({ message: 'Persistent toast', duration: 0 });
@@ -74,8 +82,9 @@ describe('Toast Store Functions', () => {
       expect(result.current.toasts).toHaveLength(1);
     });
 
-    it('should handle multiple toasts', () => {
+    it('should handle multiple toasts', async () => {
       const { result } = renderHook(() => useToast());
+      await act(async () => {});
 
       act(() => {
         toast({ message: 'First' });
@@ -88,8 +97,9 @@ describe('Toast Store Functions', () => {
   });
 
   describe('removeToast', () => {
-    it('should remove specific toast by id', () => {
+    it('should remove specific toast by id', async () => {
       const { result } = renderHook(() => useToast());
+      await act(async () => {});
 
       let id: string;
       act(() => {
@@ -107,8 +117,9 @@ describe('Toast Store Functions', () => {
       expect(result.current.toasts[0]?.message).toBe('To stay');
     });
 
-    it('should handle removing non-existent toast', () => {
+    it('should handle removing non-existent toast', async () => {
       const { result } = renderHook(() => useToast());
+      await act(async () => {});
 
       act(() => {
         toast({ message: 'Test', duration: 0 });
@@ -123,8 +134,9 @@ describe('Toast Store Functions', () => {
   });
 
   describe('clearToasts', () => {
-    it('should remove all toasts', () => {
+    it('should remove all toasts', async () => {
       const { result } = renderHook(() => useToast());
+      await act(async () => {});
 
       act(() => {
         toast({ message: 'First', duration: 0 });
@@ -141,8 +153,9 @@ describe('Toast Store Functions', () => {
       expect(result.current.toasts).toHaveLength(0);
     });
 
-    it('should handle clearing empty store', () => {
+    it('should handle clearing empty store', async () => {
       const { result } = renderHook(() => useToast());
+      await act(async () => {});
 
       act(() => {
         clearToasts();
@@ -154,38 +167,47 @@ describe('Toast Store Functions', () => {
 });
 
 describe('useToast hook', () => {
-  beforeEach(() => {
+  beforeEach(async () => {
     vi.useFakeTimers();
-    clearToasts();
+    await act(async () => {
+      clearToasts();
+    });
   });
 
-  afterEach(() => {
+  afterEach(async () => {
+    await act(async () => {
+      clearToasts();
+    });
     vi.useRealTimers();
-    clearToasts();
   });
 
-  it('should return toast function', () => {
+  it('should return toast function', async () => {
     const { result } = renderHook(() => useToast());
+    await act(async () => {});
     expect(typeof result.current.toast).toBe('function');
   });
 
-  it('should return toasts array', () => {
+  it('should return toasts array', async () => {
     const { result } = renderHook(() => useToast());
+    await act(async () => {});
     expect(Array.isArray(result.current.toasts)).toBe(true);
   });
 
-  it('should return removeToast function', () => {
+  it('should return removeToast function', async () => {
     const { result } = renderHook(() => useToast());
+    await act(async () => {});
     expect(typeof result.current.removeToast).toBe('function');
   });
 
-  it('should return clearToasts function', () => {
+  it('should return clearToasts function', async () => {
     const { result } = renderHook(() => useToast());
+    await act(async () => {});
     expect(typeof result.current.clearToasts).toBe('function');
   });
 
-  it('should add toast via hook toast function', () => {
+  it('should add toast via hook toast function', async () => {
     const { result } = renderHook(() => useToast());
+    await act(async () => {});
 
     act(() => {
       result.current.toast({ message: 'Via hook' });
@@ -195,9 +217,10 @@ describe('useToast hook', () => {
     expect(result.current.toasts[0]?.message).toBe('Via hook');
   });
 
-  it('should share state between multiple hooks', () => {
+  it('should share state between multiple hooks', async () => {
     const { result: result1 } = renderHook(() => useToast());
     const { result: result2 } = renderHook(() => useToast());
+    await act(async () => {});
 
     act(() => {
       result1.current.toast({ message: 'Shared toast', duration: 0 });
@@ -207,8 +230,9 @@ describe('useToast hook', () => {
     expect(result2.current.toasts).toHaveLength(1);
   });
 
-  it('should support all toast types', () => {
+  it('should support all toast types', async () => {
     const { result } = renderHook(() => useToast());
+    await act(async () => {});
     const types: Array<'success' | 'error' | 'info' | 'warning'> = [
       'success',
       'error',

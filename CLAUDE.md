@@ -388,6 +388,7 @@ export const meta = dynamicMetaFactory<typeof loader>({
 | `/link-check` | 프로덕션 URL 링크 무결성 검사 (lychee) |
 | `/quality-gate` | 병렬 품질 검사 통합 (SSR, Layer, Link, TypeCheck, Lint) |
 | `/latest-check` | 기술 스택 최신 정보 검색 (GitHub API로 정확한 릴리스 날짜 확인) |
+| `/edge-test` | 엣지 케이스 테스트 자동 생성. 함수 분석 → 경계값/예외 상황 식별 → 테스트 코드 자동 작성 |
 
 **⚠️ 앱별 라우트 수정 검증:**
 

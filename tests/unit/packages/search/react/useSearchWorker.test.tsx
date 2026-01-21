@@ -47,26 +47,29 @@ describe('@soundblue/search/react - useSearchWorker', () => {
   });
 
   describe('initialization', () => {
-    it('should start with empty query', () => {
+    it('should start with empty query', async () => {
       const { result } = renderHook(() =>
         useSearchWorker({ indexUrl: '/search-index.json', locale: 'en' }),
       );
+      await act(async () => {});
 
       expect(result.current.query).toBe('');
     });
 
-    it('should start with empty results', () => {
+    it('should start with empty results', async () => {
       const { result } = renderHook(() =>
         useSearchWorker({ indexUrl: '/search-index.json', locale: 'en' }),
       );
+      await act(async () => {});
 
       expect(result.current.results).toEqual([]);
     });
 
-    it('should start with no error', () => {
+    it('should start with no error', async () => {
       const { result } = renderHook(() =>
         useSearchWorker({ indexUrl: '/search-index.json', locale: 'en' }),
       );
+      await act(async () => {});
 
       expect(result.current.error).toBeNull();
     });

@@ -328,3 +328,244 @@ describe('Edge Cases', () => {
     expect(Array.isArray(filtered)).toBe(true);
   });
 });
+
+// === XSS/Security Edge Cases ===
+describe('XSS/Security edge cases', () => {
+  it('should handle XSS attempt in search query', () => {
+    const query = '<script>alert(1)</script>';
+    const filtered = mockSearchIndex.filter(
+      (item) =>
+        item.name.en.toLowerCase().includes(query.toLowerCase()) ||
+        item.name.ko.includes(query),
+    );
+    expect(filtered).toHaveLength(0);
+  });
+
+  it('should handle img onerror XSS', () => {
+    const query = '<img src=x onerror=alert(1)>';
+    const filtered = mockSearchIndex.filter((item) =>
+      item.name.en.toLowerCase().includes(query.toLowerCase()),
+    );
+    expect(filtered).toHaveLength(0);
+  });
+
+  it('should handle SQL injection in query', () => {
+    const query = "' OR '1'='1";
+    const filtered = mockSearchIndex.filter((item) =>
+      item.name.en.toLowerCase().includes(query.toLowerCase()),
+    );
+    expect(filtered).toHaveLength(0);
+  });
+
+  it('should handle SQL injection DROP TABLE', () => {
+    const query = "'; DROP TABLE concepts; --";
+    const filtered = mockSearchIndex.filter((item) =>
+      item.name.en.toLowerCase().includes(query.toLowerCase()),
+    );
+    expect(filtered).toHaveLength(0);
+  });
+
+  it('should handle prototype pollution in query', () => {
+    const query = '__proto__';
+    const filtered = mockSearchIndex.filter((item) =>
+      item.name.en.toLowerCase().includes(query.toLowerCase()),
+    );
+    expect(filtered).toHaveLength(0);
+  });
+
+  it('should handle constructor pollution', () => {
+    const query = 'constructor';
+    const filtered = mockSearchIndex.filter((item) =>
+      item.name.en.toLowerCase().includes(query.toLowerCase()),
+    );
+    expect(filtered).toHaveLength(0);
+  });
+
+  it('should handle javascript protocol in query', () => {
+    const query = 'javascript:alert(1)';
+    const filtered = mockSearchIndex.filter((item) =>
+      item.name.en.toLowerCase().includes(query.toLowerCase()),
+    );
+    expect(filtered).toHaveLength(0);
+  });
+
+  it('should handle data protocol in query', () => {
+    const query = 'data:text/html,<script>alert(1)</script>';
+    const filtered = mockSearchIndex.filter((item) =>
+      item.name.en.toLowerCase().includes(query.toLowerCase()),
+    );
+    expect(filtered).toHaveLength(0);
+  });
+});
+
+// === Boundary Value - Infinity/NaN ===
+describe('Boundary value - Infinity/NaN', () => {
+  it('should handle Infinity in difficulty filter', () => {
+    const minLevel = Number.POSITIVE_INFINITY;
+    const maxLevel = Number.POSITIVE_INFINITY;
+    const filtered = mockSearchIndex.filter(
+      (c) => c.difficulty >= minLevel && c.difficulty <= maxLevel,
+    );
+    expect(filtered).toHaveLength(0);
+  });
+
+  it('should handle NaN in difficulty filter', () => {
+    const minLevel = Number.NaN;
+    const maxLevel = Number.NaN;
+    const filtered = mockSearchIndex.filter(
+      (c) => c.difficulty >= minLevel && c.difficulty <= maxLevel,
+    );
+    // NaN comparisons always return false
+    expect(filtered).toHaveLength(0);
+  });
+
+  it('should handle negative Infinity in difficulty filter', () => {
+    const minLevel = Number.NEGATIVE_INFINITY;
+    const maxLevel = 0;
+    const filtered = mockSearchIndex.filter(
+      (c) => c.difficulty >= minLevel && c.difficulty <= maxLevel,
+    );
+    expect(filtered).toHaveLength(0);
+  });
+
+  it('should handle MAX_SAFE_INTEGER in difficulty', () => {
+    const minLevel = 1;
+    const maxLevel = Number.MAX_SAFE_INTEGER;
+    const filtered = mockSearchIndex.filter(
+      (c) => c.difficulty >= minLevel && c.difficulty <= maxLevel,
+    );
+    expect(filtered).toHaveLength(mockSearchIndex.length);
+  });
+
+  it('should handle negative difficulty range', () => {
+    const minLevel = -10;
+    const maxLevel = -1;
+    const filtered = mockSearchIndex.filter(
+      (c) => c.difficulty >= minLevel && c.difficulty <= maxLevel,
+    );
+    expect(filtered).toHaveLength(0);
+  });
+
+  it('should handle zero difficulty boundary', () => {
+    const minLevel = 0;
+    const maxLevel = 0;
+    const filtered = mockSearchIndex.filter(
+      (c) => c.difficulty >= minLevel && c.difficulty <= maxLevel,
+    );
+    expect(filtered).toHaveLength(0);
+  });
+
+  it('should handle Infinity in limit', () => {
+    const limit = Number.POSITIVE_INFINITY;
+    const results = mockSearchIndex.slice(0, limit);
+    expect(results).toHaveLength(mockSearchIndex.length);
+  });
+
+  it('should handle NaN in limit', () => {
+    const limit = Number.NaN;
+    const results = mockSearchIndex.slice(0, limit);
+    // slice(0, NaN) returns empty array
+    expect(results).toHaveLength(0);
+  });
+
+  it('should handle negative limit', () => {
+    const limit = -5;
+    const results = mockSearchIndex.slice(0, limit);
+    expect(results).toHaveLength(0);
+  });
+});
+
+// === Unicode/Emoji Edge Cases ===
+describe('Unicode/Emoji edge cases', () => {
+  it('should handle emoji in search query', () => {
+    const query = '📐';
+    const filtered = mockSearchIndex.filter(
+      (item) => item.name.en.includes(query) || item.name.ko.includes(query),
+    );
+    expect(Array.isArray(filtered)).toBe(true);
+  });
+
+  it('should handle mathematical symbols in query', () => {
+    const query = '∫';
+    const filtered = mockSearchIndex.filter(
+      (item) => item.name.en.includes(query) || item.name.ko.includes(query),
+    );
+    expect(Array.isArray(filtered)).toBe(true);
+  });
+
+  it('should handle Greek letters in query', () => {
+    const query = 'αβγ';
+    const filtered = mockSearchIndex.filter(
+      (item) => item.name.en.includes(query) || item.name.ko.includes(query),
+    );
+    expect(Array.isArray(filtered)).toBe(true);
+  });
+
+  it('should handle Japanese hiragana in query', () => {
+    const query = 'すうがく';
+    const filtered = mockSearchIndex.filter(
+      (item) => item.name.en.includes(query) || item.name.ko.includes(query),
+    );
+    expect(filtered).toHaveLength(0);
+  });
+
+  it('should handle zero-width space in query', () => {
+    const query = 'algebra\u200B';
+    const filtered = mockSearchIndex.filter((item) =>
+      item.name.en.toLowerCase().includes(query.toLowerCase()),
+    );
+    // Zero-width space is included in the query
+    expect(Array.isArray(filtered)).toBe(true);
+  });
+
+  it('should handle right-to-left characters', () => {
+    const query = 'الجبر'; // Arabic for algebra
+    const filtered = mockSearchIndex.filter(
+      (item) => item.name.en.includes(query) || item.name.ko.includes(query),
+    );
+    expect(filtered).toHaveLength(0);
+  });
+
+  it('should handle combining diacritics', () => {
+    const query = 'e\u0301'; // é as e + combining acute
+    const filtered = mockSearchIndex.filter((item) =>
+      item.name.en.toLowerCase().includes(query.toLowerCase()),
+    );
+    expect(Array.isArray(filtered)).toBe(true);
+  });
+
+  it('should handle superscript/subscript numbers', () => {
+    const query = 'x²'; // superscript 2
+    const filtered = mockSearchIndex.filter((item) =>
+      item.name.en.includes(query),
+    );
+    expect(Array.isArray(filtered)).toBe(true);
+  });
+});
+
+// === Tag Security Edge Cases ===
+describe('Tag filtering - security edge cases', () => {
+  it('should handle XSS in tag search', () => {
+    const tag = '<script>';
+    const filtered = mockSearchIndex.filter((c) =>
+      c.tags.some((t) => t.toLowerCase().includes(tag.toLowerCase())),
+    );
+    expect(filtered).toHaveLength(0);
+  });
+
+  it('should handle SQL injection in tag search', () => {
+    const tag = "'; DROP TABLE;--";
+    const filtered = mockSearchIndex.filter((c) =>
+      c.tags.some((t) => t.toLowerCase().includes(tag.toLowerCase())),
+    );
+    expect(filtered).toHaveLength(0);
+  });
+
+  it('should handle prototype pollution in tag search', () => {
+    const tag = '__proto__';
+    const filtered = mockSearchIndex.filter((c) =>
+      c.tags.some((t) => t.toLowerCase().includes(tag.toLowerCase())),
+    );
+    expect(filtered).toHaveLength(0);
+  });
+});

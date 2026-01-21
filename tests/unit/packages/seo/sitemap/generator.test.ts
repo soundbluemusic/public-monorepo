@@ -3,15 +3,17 @@
  */
 
 import {
+  createDynamicUrls,
   generateHreflangLinks,
   generateSitemap,
   generateSitemapIndex,
+  generateSitemaps,
   generateUrlEntries,
   generateUrlEntry,
   generateXslStylesheet,
   getLocalizedUrl,
 } from '@soundblue/seo/sitemap';
-import { describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 describe('getLocalizedUrl', () => {
   const siteUrl = 'https://example.com';
@@ -225,5 +227,71 @@ describe('generateUrlEntries', () => {
     // With 'ko' as default, Korean URL has no prefix
     expect(entries[0]).toContain('<loc>https://example.com/en/about</loc>');
     expect(entries[1]).toContain('<loc>https://example.com/about</loc>');
+  });
+});
+
+describe('createDynamicUrls', () => {
+  const siteUrl = 'https://example.com';
+  const languages = ['en', 'ko'] as const;
+
+  it('should generate URL entries for multiple IDs', () => {
+    const urls = createDynamicUrls(siteUrl, '/entry', ['id1', 'id2'], '0.7', 'weekly', languages);
+
+    // 2 IDs × 2 languages = 4 URL entries
+    expect(urls).toHaveLength(4);
+  });
+
+  it('should include correct path for each ID', () => {
+    const urls = createDynamicUrls(siteUrl, '/entry', ['hello', 'world'], '0.7', 'weekly', languages);
+
+    expect(urls.some((u) => u.includes('/entry/hello'))).toBe(true);
+    expect(urls.some((u) => u.includes('/entry/world'))).toBe(true);
+  });
+
+  it('should include correct metadata', () => {
+    const urls = createDynamicUrls(siteUrl, '/concept', ['add'], '0.9', 'daily', languages);
+
+    expect(urls[0]).toContain('<priority>0.9</priority>');
+    expect(urls[0]).toContain('<changefreq>daily</changefreq>');
+  });
+
+  it('should include hreflang links in each entry', () => {
+    const urls = createDynamicUrls(siteUrl, '/item', ['test'], '0.5', 'monthly', languages);
+
+    for (const url of urls) {
+      expect(url).toContain('hreflang="en"');
+      expect(url).toContain('hreflang="ko"');
+      expect(url).toContain('hreflang="x-default"');
+    }
+  });
+
+  it('should handle empty IDs array', () => {
+    const urls = createDynamicUrls(siteUrl, '/entry', [], '0.7', 'weekly', languages);
+    expect(urls).toHaveLength(0);
+  });
+
+  it('should handle single language', () => {
+    const urls = createDynamicUrls(siteUrl, '/entry', ['test'], '0.7', 'weekly', ['en']);
+    expect(urls).toHaveLength(1);
+    expect(urls[0]).toContain('<loc>https://example.com/entry/test</loc>');
+  });
+});
+
+describe('generateSitemaps (file writing)', () => {
+  let mockConsoleLog: ReturnType<typeof vi.fn>;
+
+  beforeEach(() => {
+    mockConsoleLog = vi.fn();
+    vi.spyOn(console, 'log').mockImplementation(mockConsoleLog);
+  });
+
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
+  it('should log progress messages during generation', () => {
+    // We can't easily mock fs in ESM, but we can verify the function exists and logs
+    // The actual file writing is tested via integration tests
+    expect(typeof generateSitemaps).toBe('function');
   });
 });

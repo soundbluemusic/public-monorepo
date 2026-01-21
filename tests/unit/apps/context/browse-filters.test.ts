@@ -250,4 +250,201 @@ describe('apps/context - Browse Filters', () => {
       expect(uniqueKeys.size).toBe(3);
     });
   });
+
+  // === XSS/Security Edge Cases ===
+  describe('XSS/Security edge cases', () => {
+    it('should handle XSS attempt in filter status', () => {
+      expect(isFilterStatus('<script>alert(1)</script>')).toBe(false);
+      expect(isFilterStatus('<img onerror=alert(1) src=x>')).toBe(false);
+    });
+
+    it('should handle SQL injection attempt in filter status', () => {
+      expect(isFilterStatus("' OR '1'='1")).toBe(false);
+      expect(isFilterStatus('all; DROP TABLE entries;--')).toBe(false);
+    });
+
+    it('should handle prototype pollution attempt in filter status', () => {
+      expect(isFilterStatus('__proto__')).toBe(false);
+      expect(isFilterStatus('constructor')).toBe(false);
+      expect(isFilterStatus('prototype')).toBe(false);
+    });
+
+    it('should handle XSS attempt in sort option', () => {
+      expect(isSortOption('<script>alert(1)</script>')).toBe(false);
+      expect(isSortOption('javascript:alert(1)')).toBe(false);
+    });
+
+    it('should handle SQL injection attempt in sort option', () => {
+      expect(isSortOption("'; DELETE FROM entries; --")).toBe(false);
+    });
+
+    it('should handle prototype pollution attempt in sort option', () => {
+      expect(isSortOption('__proto__')).toBe(false);
+      expect(isSortOption('constructor')).toBe(false);
+    });
+  });
+
+  // === Boundary Value Tests ===
+  describe('Boundary value - Infinity/NaN', () => {
+    it('should handle Infinity page number', () => {
+      const page = Number.POSITIVE_INFINITY;
+      const startIndex = (page - 1) * PAGE_SIZE;
+      expect(startIndex).toBe(Number.POSITIVE_INFINITY);
+      // Infinity % 1000 = NaN (special case)
+      expect(Number.isNaN(startIndex % CHUNK_SIZE)).toBe(true);
+    });
+
+    it('should handle NaN page number', () => {
+      const page = Number.NaN;
+      const startIndex = (page - 1) * PAGE_SIZE;
+      expect(Number.isNaN(startIndex)).toBe(true);
+    });
+
+    it('should handle MAX_SAFE_INTEGER page number', () => {
+      const page = Number.MAX_SAFE_INTEGER;
+      const startIndex = (page - 1) * PAGE_SIZE;
+      // Large number but still valid
+      expect(Number.isFinite(startIndex)).toBe(true);
+    });
+
+    it('should handle negative Infinity page number', () => {
+      const page = Number.NEGATIVE_INFINITY;
+      const startIndex = (page - 1) * PAGE_SIZE;
+      expect(startIndex).toBe(Number.NEGATIVE_INFINITY);
+    });
+
+    it('should handle page number at MAX_SAFE_INTEGER boundary', () => {
+      const totalEntries = Number.MAX_SAFE_INTEGER;
+      const totalPages = Math.ceil(totalEntries / PAGE_SIZE);
+      expect(Number.isFinite(totalPages)).toBe(true);
+    });
+
+    it('should handle zero total entries', () => {
+      const totalEntries = 0;
+      const totalPages = Math.ceil(totalEntries / PAGE_SIZE);
+      expect(totalPages).toBe(0);
+    });
+
+    it('should handle negative total entries', () => {
+      const totalEntries = -100;
+      const totalPages = Math.ceil(totalEntries / PAGE_SIZE);
+      expect(totalPages).toBe(-2); // ceil(-2) = -2
+    });
+  });
+
+  // === Unicode/Emoji Edge Cases ===
+  describe('Unicode/Emoji edge cases', () => {
+    it('should return false for Korean text in filter status', () => {
+      expect(isFilterStatus('전체')).toBe(false);
+      expect(isFilterStatus('학습완료')).toBe(false);
+    });
+
+    it('should return false for emoji in filter status', () => {
+      expect(isFilterStatus('📚')).toBe(false);
+      expect(isFilterStatus('✅')).toBe(false);
+    });
+
+    it('should return false for Korean text in sort option', () => {
+      expect(isSortOption('가나다순')).toBe(false);
+      expect(isSortOption('카테고리')).toBe(false);
+    });
+
+    it('should return false for emoji in sort option', () => {
+      expect(isSortOption('🔤')).toBe(false);
+      expect(isSortOption('📁')).toBe(false);
+    });
+
+    it('should handle zero-width characters', () => {
+      expect(isFilterStatus('all\u200B')).toBe(false); // zero-width space
+      expect(isSortOption('recent\u200B')).toBe(false);
+    });
+
+    it('should handle combining characters', () => {
+      // Korean with combining marks
+      expect(isFilterStatus('가\u0301')).toBe(false);
+    });
+  });
+
+  // === Entry Filtering Security ===
+  describe('Entry filtering - security edge cases', () => {
+    interface TestEntry {
+      id: string;
+      korean: string;
+      categoryId: string;
+    }
+
+    const testEntries: TestEntry[] = [
+      { id: 'hello', korean: '안녕', categoryId: 'greetings' },
+      { id: 'goodbye', korean: '안녕히', categoryId: 'greetings' },
+    ];
+
+    it('should handle XSS in entry ID for studied filter', () => {
+      const maliciousId = '<script>alert(1)</script>';
+      const studiedIds = new Set([maliciousId]);
+      const filtered = testEntries.filter((e) => studiedIds.has(e.id));
+      expect(filtered).toHaveLength(0);
+    });
+
+    it('should handle SQL injection in category filter', () => {
+      const maliciousCategoryId = "'; DROP TABLE entries; --";
+      const filtered = testEntries.filter((e) => e.categoryId === maliciousCategoryId);
+      expect(filtered).toHaveLength(0);
+    });
+
+    it('should handle prototype pollution in entry ID', () => {
+      const studiedIds = new Set(['__proto__', 'constructor']);
+      const filtered = testEntries.filter((e) => studiedIds.has(e.id));
+      expect(filtered).toHaveLength(0);
+    });
+
+    it('should handle emoji in category ID', () => {
+      const emojiCategory = '🎉';
+      const filtered = testEntries.filter((e) => e.categoryId === emojiCategory);
+      expect(filtered).toHaveLength(0);
+    });
+  });
+
+  // === URL Parameter Security ===
+  describe('URL parameter parsing - security edge cases', () => {
+    it('should handle XSS attempt in page param', () => {
+      const pageParam = '<script>alert(1)</script>';
+      const page = Number.parseInt(pageParam, 10);
+      expect(Number.isNaN(page)).toBe(true);
+    });
+
+    it('should handle SQL injection in page param', () => {
+      const pageParam = "1; DROP TABLE entries;--";
+      const page = Number.parseInt(pageParam, 10);
+      // parseInt stops at first non-numeric character
+      expect(page).toBe(1);
+    });
+
+    it('should handle very long page param', () => {
+      const pageParam = '1'.repeat(1000);
+      const page = Number.parseInt(pageParam, 10);
+      // JavaScript handles this as Infinity
+      expect(page).toBe(Number.POSITIVE_INFINITY);
+    });
+
+    it('should handle scientific notation in page param', () => {
+      const pageParam = '1e10';
+      const page = Number.parseInt(pageParam, 10);
+      // parseInt stops at 'e', returns 1
+      expect(page).toBe(1);
+    });
+
+    it('should handle hexadecimal in page param', () => {
+      const pageParam = '0x10';
+      const page = Number.parseInt(pageParam, 10);
+      // With radix 10, parseInt stops at 'x', returns 0
+      expect(page).toBe(0);
+    });
+
+    it('should handle octal in page param', () => {
+      const pageParam = '010';
+      const page = Number.parseInt(pageParam, 10);
+      // With radix 10, this is 10, not 8
+      expect(page).toBe(10);
+    });
+  });
 });

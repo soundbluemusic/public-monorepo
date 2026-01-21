@@ -74,6 +74,57 @@ describe('debounce', () => {
     vi.advanceTimersByTime(100);
     expect(fn).toHaveBeenCalledTimes(2);
   });
+
+  // Edge cases
+  it('should handle delay of 0 (executes immediately after microtask)', () => {
+    const fn = vi.fn();
+    const debounced = debounce(fn, 0);
+
+    debounced('test');
+    expect(fn).not.toHaveBeenCalled(); // Still async
+
+    vi.advanceTimersByTime(0);
+    expect(fn).toHaveBeenCalledTimes(1);
+    expect(fn).toHaveBeenCalledWith('test');
+  });
+
+  it('should handle negative delay (treated as 0)', () => {
+    const fn = vi.fn();
+    const debounced = debounce(fn, -100);
+
+    debounced('test');
+    vi.advanceTimersByTime(0);
+    expect(fn).toHaveBeenCalledTimes(1);
+  });
+
+  it('should handle rapid successive calls without memory leak', () => {
+    const fn = vi.fn();
+    const debounced = debounce(fn, 100);
+
+    // Simulate 1000 rapid calls
+    for (let i = 0; i < 1000; i++) {
+      debounced(i);
+    }
+
+    // Only last call should execute
+    vi.advanceTimersByTime(100);
+    expect(fn).toHaveBeenCalledTimes(1);
+    expect(fn).toHaveBeenCalledWith(999);
+  });
+
+  it('should handle very large delay', () => {
+    const fn = vi.fn();
+    // Use a large but reasonable delay (1 hour)
+    const debounced = debounce(fn, 3600000);
+
+    debounced('test');
+    vi.advanceTimersByTime(10000); // Only advance 10 seconds
+    expect(fn).not.toHaveBeenCalled();
+
+    // Advance the rest to complete
+    vi.advanceTimersByTime(3590000);
+    expect(fn).toHaveBeenCalledTimes(1);
+  });
 });
 
 describe('debounceWithCancel', () => {
