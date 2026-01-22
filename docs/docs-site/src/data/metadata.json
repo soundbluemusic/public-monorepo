@@ -8,7 +8,7 @@
         "ja": "学習者のための韓国語辞書"
       },
       "pages": 33748,
-      "entries": 16836,
+      "entries": 16394,
       "categories": 52,
       "conversations": 53,
       "url": "https://context.soundbluemusic.com",
@@ -80,14 +80,26 @@
     "appDetails": {
       "context": {
         "description": {
-          "en": "16,836 entries served via SSR + Cloudflare D1 with context-based definitions, examples, and related expressions. Supports both English and Korean UI.",
-          "ko": "맥락 기반 정의, 예문, 관련 표현이 포함된 16,836개 엔트리를 SSR + Cloudflare D1로 제공. 영어와 한국어 UI 지원.",
-          "ja": "文脈ベースの定義、例文、関連表現を含む16,836エントリをSSR + Cloudflare D1で提供。英語と韓国語UIをサポート。"
+          "en": "16,394 entries served via SSR + Cloudflare D1 with context-based definitions, examples, and related expressions. Supports both English and Korean UI.",
+          "ko": "맥락 기반 정의, 예문, 관련 표현이 포함된 16,394개 엔트리를 SSR + Cloudflare D1로 제공. 영어와 한국어 UI 지원.",
+          "ja": "文脈ベースの定義、例文、関連表現を含む16,394エントリをSSR + Cloudflare D1で提供。英語と韓国語UIをサポート。"
         },
         "features": {
-          "en": ["16,836 dictionary entries", "52 categories", "53 example conversations"],
-          "ko": ["16,836개 사전 항목", "52개 카테고리", "53개 예문 대화"],
-          "ja": ["16,836辞書エントリ", "52カテゴリ", "53例文会話"]
+          "en": [
+            "16,394 dictionary entries",
+            "52 categories",
+            "53 example conversations"
+          ],
+          "ko": [
+            "16,394개 사전 항목",
+            "52개 카테고리",
+            "53개 예문 대화"
+          ],
+          "ja": [
+            "16,394辞書エントリ",
+            "52カテゴリ",
+            "53例文会話"
+          ]
         },
         "visitLabel": {
           "en": "Visit Context →",
@@ -102,9 +114,21 @@
           "ja": "開発者向けの許容的ライセンスライブラリとWeb APIドキュメントのコレクション。"
         },
         "features": {
-          "en": ["88 JavaScript libraries", "56 Web APIs documented", "MIT/Apache licensed only"],
-          "ko": ["88개 JavaScript 라이브러리", "56개 Web API 문서", "MIT/Apache 라이선스만"],
-          "ja": ["88 JavaScriptライブラリ", "56 Web APIドキュメント", "MIT/Apacheライセンスのみ"]
+          "en": [
+            "88 JavaScript libraries",
+            "56 Web APIs documented",
+            "MIT/Apache licensed only"
+          ],
+          "ko": [
+            "88개 JavaScript 라이브러리",
+            "56개 Web API 문서",
+            "MIT/Apache 라이선스만"
+          ],
+          "ja": [
+            "88 JavaScriptライブラリ",
+            "56 Web APIドキュメント",
+            "MIT/Apacheライセンスのみ"
+          ]
         },
         "visitLabel": {
           "en": "Visit Permissive →",
@@ -119,9 +143,21 @@
           "ja": "代数から微積分まで基礎的な数学概念をカバーするドキュメント。"
         },
         "features": {
-          "en": ["438 math concepts", "18 mathematical fields", "Prerequisite connections"],
-          "ko": ["438개 수학 개념", "18개 수학 분야", "선수 지식 연결"],
-          "ja": ["438数学概念", "18数学分野", "前提知識接続"]
+          "en": [
+            "438 math concepts",
+            "18 mathematical fields",
+            "Prerequisite connections"
+          ],
+          "ko": [
+            "438개 수학 개념",
+            "18개 수학 분야",
+            "선수 지식 연결"
+          ],
+          "ja": [
+            "438数学概念",
+            "18数学分野",
+            "前提知識接続"
+          ]
         },
         "visitLabel": {
           "en": "Visit Roots →",

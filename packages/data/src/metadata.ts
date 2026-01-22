@@ -17,7 +17,7 @@ export const APP_METADATA = {
       ja: '学習者のための韓国語辞書',
     },
     stats: {
-      entries: 16836,
+      entries: 16394,
       categories: 52,
       conversations: 53,
     },

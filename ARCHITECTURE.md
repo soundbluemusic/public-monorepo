@@ -139,7 +139,7 @@ React Router v7의 SSR 모드 + Cloudflare Workers로 **런타임에** 동적 �
 
 | App | Mode | Dynamic Routes | Data Source |
 |:----|:-----|:---------------|:------------|
-| **Context** | **SSR** | 16836 entries | Cloudflare D1 |
+| **Context** | **SSR** | 16394 entries | Cloudflare D1 |
 | **Roots** | SSR | 438 concepts + 18 fields | TypeScript |
 | **Permissive** | SSR | 88 libraries + 56 Web APIs | In-memory |
 

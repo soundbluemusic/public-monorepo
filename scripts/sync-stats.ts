@@ -6,11 +6,13 @@
  *
  * @example
  * ```bash
- * pnpm sync:stats        # 통계 동기화
- * pnpm sync:stats --check # 동기화 필요 여부만 확인 (CI용)
+ * pnpm sync:stats              # 통계 동기화 (metadata.ts → 문서)
+ * pnpm sync:stats --fetch-d1   # D1에서 통계 조회 후 전체 동기화 (D1 → metadata.ts → 문서)
+ * pnpm sync:stats --check      # 동기화 필요 여부만 확인 (CI용)
  * ```
  */
 
+import { execSync } from 'node:child_process';
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -80,11 +82,86 @@ function countTsArrayItems(filePath: string, pattern: RegExp): number {
   return matches ? matches.length : 0;
 }
 
+// ============================================================================
+// D1 Database Functions
+// ============================================================================
+
+interface D1Stats {
+  entries: number;
+  categories: number;
+  conversations: number;
+}
+
+/**
+ * Cloudflare D1에서 실제 통계 조회
+ *
+ * wrangler d1 execute 명령어를 사용하여 프로덕션 D1에서 직접 통계를 가져옵니다.
+ */
+function fetchD1Stats(): D1Stats {
+  console.log('🔄 Fetching stats from Cloudflare D1...\n');
+
+  const runD1Query = (query: string): number => {
+    try {
+      const result = execSync(
+        `npx wrangler d1 execute context-db --remote --command "${query}" --json`,
+        { cwd: ROOT_DIR, encoding: 'utf-8', stdio: ['pipe', 'pipe', 'pipe'] },
+      );
+      const parsed = JSON.parse(result);
+      return parsed[0]?.results?.[0]?.count ?? 0;
+    } catch (error) {
+      console.error(`❌ D1 query failed: ${query}`);
+      throw error;
+    }
+  };
+
+  const entries = runD1Query('SELECT COUNT(*) as count FROM entries');
+  const categories = runD1Query('SELECT COUNT(*) as count FROM categories');
+  const conversations = runD1Query('SELECT COUNT(*) as count FROM conversations');
+
+  console.log(`  D1 entries: ${entries}`);
+  console.log(`  D1 categories: ${categories}`);
+  console.log(`  D1 conversations: ${conversations}\n`);
+
+  return { entries, categories, conversations };
+}
+
+/**
+ * metadata.ts 파일 업데이트
+ *
+ * D1에서 가져온 통계로 SSoT 파일을 업데이트합니다.
+ */
+function updateMetadataTs(stats: D1Stats): boolean {
+  const metadataPath = join(ROOT_DIR, 'packages/data/src/metadata.ts');
+  let content = readFileSync(metadataPath, 'utf-8');
+  const originalContent = content;
+
+  // stats 블록 내의 값들만 업데이트 (context.stats 블록)
+  content = content.replace(
+    /(context:[\s\S]*?stats:\s*\{[\s\S]*?entries:\s*)\d+/,
+    `$1${stats.entries}`,
+  );
+  content = content.replace(
+    /(context:[\s\S]*?stats:\s*\{[\s\S]*?categories:\s*)\d+/,
+    `$1${stats.categories}`,
+  );
+  content = content.replace(
+    /(context:[\s\S]*?stats:\s*\{[\s\S]*?conversations:\s*)\d+/,
+    `$1${stats.conversations}`,
+  );
+
+  if (content !== originalContent) {
+    writeFileSync(metadataPath, content, 'utf-8');
+    return true;
+  }
+
+  return false;
+}
+
 /**
  * Context 앱 통계 수집
  *
  * Context는 D1에서 데이터를 가져오므로, SSoT 파일(packages/data/src/metadata.ts)에서 값을 읽습니다.
- * D1 데이터 변경 시 metadata.ts를 먼저 업데이트하세요.
+ * D1 데이터 변경 시 --fetch-d1 플래그를 사용하거나 metadata.ts를 먼저 업데이트하세요.
  */
 function getContextStats(): AppStats {
   // SSoT: packages/data/src/metadata.ts에서 값 읽기
@@ -259,7 +336,13 @@ function getReadmeReplacements(stats: AllStats): Replacement[] {
  * CLAUDE.md 업데이트를 위한 치환 규칙 생성
  */
 function getClaudeMdReplacements(stats: AllStats): Replacement[] {
+  const entriesFormatted = stats.context.entries.toLocaleString();
   return [
+    // 엔트리 수 테이블 (| 엔트리 수 | 16,836 entries + 52 categories |)
+    {
+      pattern: /\| 엔트리 수 \| [\d,]+ entries \+ \d+ categories \|/g,
+      replacement: `| 엔트리 수 | ${entriesFormatted} entries + ${stats.context.categories} categories |`,
+    },
     // routes line
     {
       pattern: /각 앱 라우트: Context \d+개, Roots \d+개, Permissive \d+개/g,
@@ -279,16 +362,36 @@ function getClaudeMdReplacements(stats: AllStats): Replacement[] {
 }
 
 /**
+ * ARCHITECTURE.md 업데이트를 위한 치환 규칙 생성
+ */
+function getArchitectureMdReplacements(stats: AllStats): Replacement[] {
+  return [
+    // Context entries in table (| **Context** | **SSR** | 16836 entries | Cloudflare D1 |)
+    {
+      pattern: /\| \*\*Context\*\* \| \*\*SSR\*\* \| \d+ entries \| Cloudflare D1 \|/g,
+      replacement: `| **Context** | **SSR** | ${stats.context.entries} entries | Cloudflare D1 |`,
+    },
+  ];
+}
+
+/**
  * apps/context/README.md 업데이트를 위한 치환 규칙 생성
  */
 function getContextReadmeReplacements(stats: AllStats): Replacement[] {
   const entries = stats.context.entries;
+  const categories = stats.context.categories;
+  const conversations = stats.context.conversations;
   const ssg = stats.context.routes;
   const enRoutes = Math.floor(ssg / 2);
   const koRoutes = ssg - enRoutes;
 
   return [
-    // Badge
+    // Entries Badge (Entries-16836-blue)
+    {
+      pattern: /Entries-\d+-blue/g,
+      replacement: `Entries-${entries}-blue`,
+    },
+    // Routes Badge
     {
       pattern: /Routes-\d+-blue/g,
       replacement: `Routes-${ssg}-blue`,
@@ -318,10 +421,30 @@ function getContextReadmeReplacements(stats: AllStats): Replacement[] {
       pattern: /│ {3}└── \.\.\. \(\d+ entries total\)/g,
       replacement: `│   └── ... (${entries} entries total)`,
     },
+    // D1 Database entries rows (├── entries (16836 rows))
+    {
+      pattern: /├── entries \(\d+ rows\)/g,
+      replacement: `├── entries (${entries} rows)`,
+    },
+    // D1 Database categories rows
+    {
+      pattern: /├── categories \(\d+ rows\)/g,
+      replacement: `├── categories (${categories} rows)`,
+    },
+    // D1 Database conversations rows
+    {
+      pattern: /└── conversations \(\d+ rows\)/g,
+      replacement: `└── conversations (${conversations} rows)`,
+    },
     // Route table entry count
     {
       pattern: /\| `\/entry\/:entryId` \| ✓ \| ✓ \| \d+ \| Word entry page \|/g,
       replacement: `| \`/entry/:entryId\` | ✓ | ✓ | ${entries} | Word entry page |`,
+    },
+    // Data summary line (**Data:** 16836 entries + 25 categories)
+    {
+      pattern: /\*\*Data:\*\* \d+ entries \+ \d+ categories/g,
+      replacement: `**Data:** ${entries} entries + ${categories} categories`,
     },
     // Total routes line
     {
@@ -484,6 +607,21 @@ function updateFile(filePath: string, replacements: Replacement[]): boolean {
 
 function main() {
   const isCheckOnly = process.argv.includes('--check');
+  const shouldFetchD1 = process.argv.includes('--fetch-d1');
+
+  // --fetch-d1: D1에서 통계를 가져와 metadata.ts 업데이트
+  if (shouldFetchD1) {
+    console.log('🗄️  Fetching stats from Cloudflare D1 (production)...\n');
+
+    const d1Stats = fetchD1Stats();
+    const metadataUpdated = updateMetadataTs(d1Stats);
+
+    if (metadataUpdated) {
+      console.log('✅ packages/data/src/metadata.ts updated with D1 stats\n');
+    } else {
+      console.log('ℹ️  packages/data/src/metadata.ts already in sync with D1\n');
+    }
+  }
 
   console.log('📊 Collecting stats from data sources...\n');
 
@@ -584,12 +722,17 @@ function main() {
 
   const readmePath = join(ROOT_DIR, 'README.md');
   const claudeMdPath = join(ROOT_DIR, 'CLAUDE.md');
+  const architectureMdPath = join(ROOT_DIR, 'ARCHITECTURE.md');
   const contextReadmePath = join(ROOT_DIR, 'apps/context/README.md');
   const rootsReadmePath = join(ROOT_DIR, 'apps/roots/README.md');
   const permissiveReadmePath = join(ROOT_DIR, 'apps/permissive/README.md');
 
   const readmeUpdated = updateFile(readmePath, getReadmeReplacements(stats));
   const claudeMdUpdated = updateFile(claudeMdPath, getClaudeMdReplacements(stats));
+  const architectureMdUpdated = updateFile(
+    architectureMdPath,
+    getArchitectureMdReplacements(stats),
+  );
   const contextReadmeUpdated = updateFile(contextReadmePath, getContextReadmeReplacements(stats));
   const rootsReadmeUpdated = updateFile(rootsReadmePath, getRootsReadmeReplacements(stats));
   const permissiveReadmeUpdated = updateFile(
@@ -607,6 +750,12 @@ function main() {
     console.log('✅ CLAUDE.md updated');
   } else {
     console.log('ℹ️  CLAUDE.md already in sync');
+  }
+
+  if (architectureMdUpdated) {
+    console.log('✅ ARCHITECTURE.md updated');
+  } else {
+    console.log('ℹ️  ARCHITECTURE.md already in sync');
   }
 
   if (contextReadmeUpdated) {
@@ -665,27 +814,37 @@ function updateMetadataJson(filePath: string, stats: AllStats): boolean {
   metadata.apps.roots.concepts = stats.roots.concepts;
   metadata.apps.roots.fields = stats.roots.fields;
 
-  // i18n.appDetails.context.features 업데이트
-  if (metadata.i18n?.appDetails?.context?.features) {
+  // i18n.appDetails.context 업데이트
+  if (metadata.i18n?.appDetails?.context) {
     const entries = stats.context.entries.toLocaleString();
     const categories = stats.context.categories;
     const conversations = stats.context.conversations;
 
-    metadata.i18n.appDetails.context.features.en = [
-      `${entries} dictionary entries`,
-      `${categories} categories`,
-      `${conversations} example conversations`,
-    ];
-    metadata.i18n.appDetails.context.features.ko = [
-      `${entries}개 사전 항목`,
-      `${categories}개 카테고리`,
-      `${conversations}개 예문 대화`,
-    ];
-    metadata.i18n.appDetails.context.features.ja = [
-      `${entries}辞書エントリ`,
-      `${categories}カテゴリ`,
-      `${conversations}例文会話`,
-    ];
+    // description 업데이트
+    if (metadata.i18n.appDetails.context.description) {
+      metadata.i18n.appDetails.context.description.en = `${entries} entries served via SSR + Cloudflare D1 with context-based definitions, examples, and related expressions. Supports both English and Korean UI.`;
+      metadata.i18n.appDetails.context.description.ko = `맥락 기반 정의, 예문, 관련 표현이 포함된 ${entries}개 엔트리를 SSR + Cloudflare D1로 제공. 영어와 한국어 UI 지원.`;
+      metadata.i18n.appDetails.context.description.ja = `文脈ベースの定義、例文、関連表現を含む${entries}エントリをSSR + Cloudflare D1で提供。英語と韓国語UIをサポート。`;
+    }
+
+    // features 업데이트
+    if (metadata.i18n.appDetails.context.features) {
+      metadata.i18n.appDetails.context.features.en = [
+        `${entries} dictionary entries`,
+        `${categories} categories`,
+        `${conversations} example conversations`,
+      ];
+      metadata.i18n.appDetails.context.features.ko = [
+        `${entries}개 사전 항목`,
+        `${categories}개 카테고리`,
+        `${conversations}개 예문 대화`,
+      ];
+      metadata.i18n.appDetails.context.features.ja = [
+        `${entries}辞書エントリ`,
+        `${categories}カテゴリ`,
+        `${conversations}例文会話`,
+      ];
+    }
   }
 
   const newContent = JSON.stringify(metadata, null, 2) + '\n';

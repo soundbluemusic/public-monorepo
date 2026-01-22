@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 [![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?logo=react-router)](https://reactrouter.com)
 [![SSR + D1](https://img.shields.io/badge/SSR-D1_Database-F38020?logo=cloudflare)](https://developers.cloudflare.com/d1/)
-[![Entries](https://img.shields.io/badge/Entries-16836-blue)](react-router.config.ts)
+[![Entries](https://img.shields.io/badge/Entries-16394-blue)](react-router.config.ts)
 
 **[Live Site](https://context.soundbluemusic.com)**
 
@@ -15,7 +15,7 @@
 
 A Korean dictionary designed for language learners:
 
-- **16836 Word Entries** - Organized by category and difficulty
+- **16394 Word Entries** - Organized by category and difficulty
 - **Bilingual Support** - Korean ↔ English translations
 - **Romanization** - Pronunciation guides
 - **Categories** - 21 topics + 7 conversation categories
@@ -51,7 +51,7 @@ Cloudflare Workers:
 │   └── /sitemap*.xml → D1에서 동적 생성
 ├── build/client/ (Workers Assets - 정적 파일)
 └── D1 Database (context-db)
-    ├── entries (16836 rows)
+    ├── entries (16394 rows)
     ├── categories (52 rows)
     └── conversations (53 rows)
 ```
@@ -161,7 +161,7 @@ SSR 모드에서 사이트맵은 D1에서 **실시간 동적 생성**됩니다:
 | `/terms` | ✓ | ✓ | Static | Terms of service |
 | `/license` | ✓ | ✓ | Static | License |
 
-**Data:** 16836 entries + 25 categories (D1 Database)
+**Data:** 16394 entries + 52 categories (D1 Database)
 
 ---
 

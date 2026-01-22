@@ -201,7 +201,7 @@ endpoint = https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
 | -------- | ---- |
 | 렌더링 모드 | **SSR 전용** (Cloudflare Workers) |
 | 데이터베이스 | Cloudflare D1 (`context-db`) |
-| 엔트리 수 | 16,836 entries + 52 categories |
+| 엔트리 수 | 16,394 entries + 52 categories |
 | 사이트맵 | D1에서 동적 생성 |
 
 **배포 명령어:**
