@@ -5,8 +5,6 @@
  * 이 모듈은 서버에서만 실행되며, Cloudflare Workers의 D1 바인딩에 접근합니다.
  */
 
-// cloudflare:workers는 Cloudflare Workers 런타임에서만 사용 가능
-import { env } from 'cloudflare:workers';
 import { createServerFn } from '@tanstack/react-start';
 import type { LocaleEntry } from '../data/types';
 import {
@@ -18,10 +16,14 @@ import {
 
 /**
  * 서버에서 D1 데이터베이스에 접근 (cloudflare:workers env 사용)
+ * 주의: 이 import는 빌드 시점에 external로 처리되어 런타임에서만 resolve됩니다.
  */
 function getD1Database(): D1Database | null {
   try {
-    return (env as { DB?: D1Database }).DB ?? null;
+    // Dynamic import to defer resolution to runtime
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const { env } = require('cloudflare:workers') as { env: { DB?: D1Database } };
+    return env.DB ?? null;
   } catch (error) {
     console.error('[D1Server] Failed to access Cloudflare env:', error);
     return null;

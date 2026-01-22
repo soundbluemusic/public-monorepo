@@ -1,5 +1,5 @@
 name = "context"
-main = "dist/server/index.js"
+# main is added to generated wrangler.json in postbuild script
 compatibility_date = "2026-01-22"
 compatibility_flags = ["nodejs_compat"]
 

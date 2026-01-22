@@ -8,6 +8,7 @@
     "prebuild": "echo 'Context uses D1 - no prebuild needed'",
     "build": "vite build",
     "sitemap": "tsx scripts/generate-sitemaps.ts",
+    "postbuild": "node -e \"const fs=require('fs');const p='dist/client/wrangler.json';if(fs.existsSync(p)){const c=JSON.parse(fs.readFileSync(p));c.main='../server/server.js';fs.writeFileSync(p,JSON.stringify(c,null,2));}\"",
     "deploy": "pnpm build && pnpm sitemap && wrangler deploy",
     "preview": "wrangler dev",
     "start": "wrangler dev",
