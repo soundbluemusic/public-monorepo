@@ -102,16 +102,17 @@ export function BaseSidebar({
       {/* Sidebar */}
       <aside
         className={cn(
-          'fixed left-0 z-50 bg-(--bg-elevated) border-r border-(--border-primary)',
+          'fixed left-0 z-50 bg-elevated border-r border-primary',
           // Mobile: full height from top, Desktop: below header
           'top-0 h-full lg:top-(--header-height) lg:h-[calc(100vh-var(--header-height))]',
-          'flex flex-col transform transition-all duration-200',
+          // transition-transform만 사용 (너비 전환 시 버벅임 방지)
+          'flex flex-col transform transition-transform duration-200',
           // Mobile: slide in/out based on isOpen
           'lg:translate-x-0',
           isOpen ? 'translate-x-0' : '-translate-x-full',
-          // Width based on collapsed state
-          'w-64 lg:w-(--sidebar-width)',
-          isCollapsed && 'lg:w-(--sidebar-collapsed-width)',
+          // Width: 모바일은 항상 w-64, 데스크톱은 collapsed 상태에 따라
+          'w-64 lg:w-sidebar',
+          isCollapsed && 'lg:w-sidebar-collapsed',
         )}
         data-collapsed={isCollapsed ? 'true' : undefined}
         aria-label={ariaLabel}

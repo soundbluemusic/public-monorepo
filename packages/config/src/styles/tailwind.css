@@ -279,6 +279,10 @@
   width: var(--sidebar-width);
 }
 
+@utility w-sidebar-collapsed {
+  width: var(--sidebar-collapsed-width);
+}
+
 @utility ml-sidebar {
   margin-left: var(--sidebar-width);
 }
