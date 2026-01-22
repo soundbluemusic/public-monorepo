@@ -39,31 +39,31 @@
           ]
         },
         "dialogue": {
-          "context": "친구와 감정을 나누며",
+          "context": "연인에게 마음을 고백하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "오늘 기분이 어때요?",
-              "romanization": "oneul gibuni eottaeyo?",
-              "translation": "How do you feel today?"
+              "text": "나 할 말이 있어.",
+              "romanization": "na hal mari isseo.",
+              "translation": "I have something to tell you."
             },
             {
               "speaker": "B",
-              "text": "좀 사랑해요.",
-              "romanization": "jom saranghaeyo.",
-              "translation": "I feel a bit love."
+              "text": "응? 뭔데?",
+              "romanization": "eung? mwonde?",
+              "translation": "Yeah? What is it?"
             },
             {
               "speaker": "A",
-              "text": "왜요? 무슨 일 있어요?",
-              "romanization": "waeyo? museun il iseoyo?",
-              "translation": "Why? What happened?"
+              "text": "너를 사랑해.",
+              "romanization": "neoreul saranghae.",
+              "translation": "I love you."
             },
             {
               "speaker": "B",
-              "text": "그냥 요즘 좀 그래요.",
-              "romanization": "geunyang yojeum jom geuraeyo.",
-              "translation": "Just feeling that way lately."
+              "text": "나도 사랑해!",
+              "romanization": "nado saranghae!",
+              "translation": "I love you too!"
             }
           ]
         }
@@ -95,31 +95,31 @@
           ]
         },
         "dialogue": {
-          "context": "Sharing feelings with a friend",
+          "context": "Confessing feelings to a loved one",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "How do you feel today?",
+              "text": "I have something to tell you.",
               "romanization": "",
-              "translation": "오늘 기분이 어때요?"
+              "translation": "나 할 말이 있어."
             },
             {
               "speaker": "B",
-              "text": "I feel a bit love.",
+              "text": "Yeah? What is it?",
               "romanization": "",
-              "translation": "좀 사랑해요."
+              "translation": "응? 뭔데?"
             },
             {
               "speaker": "A",
-              "text": "Why? What happened?",
+              "text": "I love you.",
               "romanization": "",
-              "translation": "왜요? 무슨 일 있어요?"
+              "translation": "너를 사랑해."
             },
             {
               "speaker": "B",
-              "text": "Just feeling that way lately.",
+              "text": "I love you too!",
               "romanization": "",
-              "translation": "그냥 요즘 좀 그래요."
+              "translation": "나도 사랑해!"
             }
           ]
         }

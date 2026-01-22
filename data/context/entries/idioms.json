@@ -13,10 +13,10 @@
         "word": "눈이 높다",
         "explanation": "눈이 높다의 뜻은 'have high standards'입니다.",
         "examples": {
-          "beginner": "\"눈이 높다\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"눈이 높다\"를 자주 써요.",
-          "advanced": "\"눈이 높다\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"눈이 높다\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "그 사람은 눈이 높아요.",
+          "intermediate": "그녀는 남자 보는 눈이 높아서 아직 미혼이에요.",
+          "advanced": "부모님이 눈이 높으셔서 제 여자친구를 못마땅해하세요.",
+          "master": "\"눈이 높다\"는 기준이 까다롭다는 의미로, 연애나 취업 상황에서 자주 쓰입니다."
         },
         "variations": {
           "formal": [
@@ -32,19 +32,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "친구와 연애 이야기를 하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "눈이 높다이/가 뭐예요?",
-              "romanization": "nuni nopdai/ga mwoyeyo?",
-              "translation": "What is \"눈이 높다\"?"
+              "text": "왜 아직 안 사귀어?",
+              "romanization": "wae ajik an sagwieo?",
+              "translation": "Why aren't you dating anyone yet?"
             },
             {
               "speaker": "B",
-              "text": "눈이 높다은/는 have high standards(이)에요.",
-              "romanization": "nuni nopdaeun/neun have high standards(i)eyo.",
-              "translation": "\"눈이 높다\" means \"have high standards\"."
+              "text": "나 눈이 높아서...",
+              "romanization": "na nuni nopaseo...",
+              "translation": "I have high standards..."
+            },
+            {
+              "speaker": "A",
+              "text": "조건을 좀 낮춰 봐.",
+              "romanization": "jogeonul jom najchwo bwa.",
+              "translation": "Try lowering your standards."
+            },
+            {
+              "speaker": "B",
+              "text": "그게 쉽지 않아.",
+              "romanization": "geuge swipji ana.",
+              "translation": "That's not easy."
             }
           ]
         }
@@ -53,10 +65,10 @@
         "word": "have high standards",
         "explanation": "'눈이 높다' means 'have high standards' in English.",
         "examples": {
-          "beginner": "We say \"눈이 높다\" in Korean.",
-          "intermediate": "In Korea, people often say \"눈이 높다\".",
-          "advanced": "\"눈이 높다\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"눈이 높다\" makes communication more natural."
+          "beginner": "That person has high standards.",
+          "intermediate": "She's still single because she's picky about men.",
+          "advanced": "My parents have high standards, so they don't approve of my girlfriend.",
+          "master": "\"Having high standards\" means being picky, often used in dating or job contexts."
         },
         "variations": {
           "formal": [
@@ -72,19 +84,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about dating with a friend",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"눈이 높다\"?",
+              "text": "Why aren't you dating anyone yet?",
               "romanization": "",
-              "translation": "눈이 높다이/가 뭐예요?"
+              "translation": "왜 아직 안 사귀어?"
             },
             {
               "speaker": "B",
-              "text": "\"눈이 높다\" means \"have high standards\".",
+              "text": "I have high standards...",
               "romanization": "",
-              "translation": "눈이 높다은/는 have high standards(이)에요."
+              "translation": "나 눈이 높아서..."
+            },
+            {
+              "speaker": "A",
+              "text": "Try lowering your standards.",
+              "romanization": "",
+              "translation": "조건을 좀 낮춰 봐."
+            },
+            {
+              "speaker": "B",
+              "text": "That's not easy.",
+              "romanization": "",
+              "translation": "그게 쉽지 않아."
             }
           ]
         }
@@ -109,10 +133,10 @@
         "word": "눈이 낮다",
         "explanation": "눈이 낮다의 뜻은 'have low standards'입니다.",
         "examples": {
-          "beginner": "\"눈이 낮다\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"눈이 낮다\"를 자주 써요.",
-          "advanced": "\"눈이 낮다\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"눈이 낮다\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "그 사람은 눈이 낮아요.",
+          "intermediate": "눈이 낮다고 놀리지 마세요.",
+          "advanced": "본인이 눈이 낮다고 생각하면 더 행복할 수 있어요.",
+          "master": "\"눈이 낮다\"는 기준이 낮다는 뜻으로, 때로는 겸손을 표현할 때도 씁니다."
         },
         "variations": {
           "formal": [
@@ -128,19 +152,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "친구의 선택을 평가하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "눈이 낮다이/가 뭐예요?",
-              "romanization": "nuni natdai/ga mwoyeyo?",
-              "translation": "What is \"눈이 낮다\"?"
+              "text": "그 사람이랑 사귀어?",
+              "romanization": "geu saramirang sagwieo?",
+              "translation": "You're dating that person?"
             },
             {
               "speaker": "B",
-              "text": "눈이 낮다은/는 have low standards(이)에요.",
-              "romanization": "nuni natdaeun/neun have low standards(i)eyo.",
-              "translation": "\"눈이 낮다\" means \"have low standards\"."
+              "text": "응, 왜?",
+              "romanization": "eung, wae?",
+              "translation": "Yeah, why?"
+            },
+            {
+              "speaker": "A",
+              "text": "눈이 좀 낮은 거 아니야?",
+              "romanization": "nuni jom najeun geo aniya?",
+              "translation": "Don't you have low standards?"
+            },
+            {
+              "speaker": "B",
+              "text": "행복하면 됐지.",
+              "romanization": "haengbokmyeon dwaetji.",
+              "translation": "As long as I'm happy."
             }
           ]
         }
@@ -149,10 +185,10 @@
         "word": "have low standards",
         "explanation": "'눈이 낮다' means 'have low standards' in English.",
         "examples": {
-          "beginner": "We say \"눈이 낮다\" in Korean.",
-          "intermediate": "In Korea, people often say \"눈이 낮다\".",
-          "advanced": "\"눈이 낮다\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"눈이 낮다\" makes communication more natural."
+          "beginner": "That person has low standards.",
+          "intermediate": "Don't tease them for having low standards.",
+          "advanced": "If you think you have low standards, you might be happier.",
+          "master": "\"Having low standards\" can also express humility in some contexts."
         },
         "variations": {
           "formal": [
@@ -168,19 +204,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Evaluating a friend's choice",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"눈이 낮다\"?",
+              "text": "You're dating that person?",
               "romanization": "",
-              "translation": "눈이 낮다이/가 뭐예요?"
+              "translation": "그 사람이랑 사귀어?"
             },
             {
               "speaker": "B",
-              "text": "\"눈이 낮다\" means \"have low standards\".",
+              "text": "Yeah, why?",
               "romanization": "",
-              "translation": "눈이 낮다은/는 have low standards(이)에요."
+              "translation": "응, 왜?"
+            },
+            {
+              "speaker": "A",
+              "text": "Don't you have low standards?",
+              "romanization": "",
+              "translation": "눈이 좀 낮은 거 아니야?"
+            },
+            {
+              "speaker": "B",
+              "text": "As long as I'm happy.",
+              "romanization": "",
+              "translation": "행복하면 됐지."
             }
           ]
         }

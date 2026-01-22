@@ -1977,10 +1977,10 @@
         "word": "맛있다",
         "explanation": "음식의 맛이 좋다.",
         "examples": {
-          "beginner": "이것은 맛있어요.",
-          "intermediate": "정말 맛있네요.",
-          "advanced": "맛있다는 것은 긍정적인/부정적인 특성입니다.",
-          "master": "맛있다의 뉘앙스를 이해하면 미묘한 감정 표현이 가능합니다."
+          "beginner": "이거 정말 맛있어요!",
+          "intermediate": "어머니가 만든 음식이 제일 맛있어요.",
+          "advanced": "\"맛있다\"는 음식뿐만 아니라 좋은 경험을 표현할 때도 써요.",
+          "master": "한국어에서 \"맛있다\"는 맛을 넘어 만족과 감탄을 표현하는 말입니다."
         },
         "dialogue": {
           "context": "무언가를 평가하며",
@@ -2016,10 +2016,10 @@
         "word": "delicious / tasty",
         "explanation": "The taste of food is good.",
         "examples": {
-          "beginner": "This is delicious / tasty.",
-          "intermediate": "It's really delicious / tasty.",
-          "advanced": "Being delicious / tasty is a positive/negative characteristic.",
-          "master": "Understanding the nuance of delicious / tasty enables subtle emotional expression."
+          "beginner": "This is really delicious!",
+          "intermediate": "My mother's cooking is the most delicious.",
+          "advanced": "\"Masitda\" can express not just taste but also great experiences.",
+          "master": "In Korean, \"delicious\" goes beyond taste to express satisfaction and admiration."
         },
         "dialogue": {
           "context": "Evaluating something",
