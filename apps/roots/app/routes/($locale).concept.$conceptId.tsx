@@ -4,6 +4,11 @@
 
 import { toast } from '@soundblue/features/toast';
 import { dynamicMetaFactory } from '@soundblue/i18n';
+import {
+  type BreadcrumbItem,
+  generateArticleSchema,
+  generateBreadcrumbSchema,
+} from '@soundblue/seo/structured-data';
 import { BookOpen, Heart, History, Zap } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router';
@@ -81,14 +86,31 @@ export const meta = dynamicMetaFactory((data: { concept: MathConcept }) => {
   const contentEn = concept.content.en;
   const defKo = typeof contentKo === 'string' ? contentKo : contentKo.definition;
   const defEn = typeof contentEn === 'string' ? contentEn : contentEn.definition;
+  const field = getFieldById(concept.field);
   return {
     ko: {
       title: `${nameKo} | Roots`,
       description: defKo,
+      keywords: [
+        nameKo,
+        `${nameKo} 공식`,
+        `${nameKo} 정의`,
+        field?.name.ko || concept.field,
+        '수학 개념',
+        '수학 공식',
+      ],
     },
     en: {
       title: `${nameEn} | Roots`,
       description: defEn,
+      keywords: [
+        nameEn,
+        `${nameEn} formula`,
+        `${nameEn} definition`,
+        field?.name.en || concept.field,
+        'math concept',
+        'math formula',
+      ],
     },
   };
 }, 'https://roots.soundbluemusic.com');
@@ -176,8 +198,46 @@ export default function ConceptPage() {
   const content =
     typeof rawContent === 'string' ? { definition: rawContent, examples: [] } : rawContent;
 
+  // JSON-LD 구조화 데이터
+  const baseUrl = 'https://roots.soundbluemusic.com';
+  const localePrefix = locale === 'ko' ? '/ko' : '';
+
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { name: locale === 'ko' ? '홈' : 'Home', url: `${baseUrl}${localePrefix}` },
+  ];
+  if (field) {
+    breadcrumbItems.push({
+      name: field.name[locale] || field.name.en,
+      url: `${baseUrl}${localePrefix}/field/${field.id}`,
+    });
+  }
+  breadcrumbItems.push({
+    name,
+    url: `${baseUrl}${localePrefix}/concept/${concept.id}`,
+  });
+
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems);
+  const articleSchema = generateArticleSchema({
+    headline: name,
+    description: content.definition,
+    url: `${baseUrl}${localePrefix}/concept/${concept.id}`,
+    datePublished: '2025-01-01',
+    author: { name: 'SoundBlue Music', url: 'https://soundbluemusic.com' },
+    inLanguage: locale,
+  });
+
   return (
     <Layout>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm mb-6">
         <Link

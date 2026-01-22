@@ -1,4 +1,5 @@
 import { dynamicMetaFactory } from '@soundblue/i18n';
+import { type BreadcrumbItem, generateBreadcrumbSchema } from '@soundblue/seo/structured-data';
 import { useAutoAnimate } from '@soundblue/ui/hooks';
 import { ProgressBar } from '@soundblue/ui/primitives';
 import { useLoaderData } from 'react-router';
@@ -65,10 +66,24 @@ export const meta = dynamicMetaFactory((data: { category: Category; entries: Mea
     ko: {
       title: `${category.name.ko} | Context`,
       description: `${category.name.ko} 카테고리의 ${entries.length}개 한국어 단어 학습`,
+      keywords: [
+        category.name.ko,
+        `${category.name.ko} 단어`,
+        '한국어 단어 목록',
+        '한국어 학습',
+        '한국어 어휘',
+      ],
     },
     en: {
       title: `${category.name.en} | Context`,
       description: `Learn ${entries.length} Korean words in the ${category.name.en} category`,
+      keywords: [
+        category.name.en,
+        `${category.name.en} words`,
+        'Korean vocabulary list',
+        'learn Korean',
+        'Korean words',
+      ],
     },
   };
 }, 'https://context.soundbluemusic.com');
@@ -88,8 +103,25 @@ export default function CategoryPage() {
 
   const studiedCount = entries.filter((e) => studiedIds.has(e.id)).length;
 
+  // JSON-LD 구조화 데이터
+  const baseUrl = 'https://context.soundbluemusic.com';
+  const localePrefix = locale === 'ko' ? '/ko' : '';
+
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { name: locale === 'ko' ? '홈' : 'Home', url: `${baseUrl}${localePrefix}` },
+    { name: category.name[locale], url: `${baseUrl}${localePrefix}/category/${category.id}` },
+  ];
+
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems);
+
   return (
     <Layout>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       <div className="pt-6">
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-2">

@@ -3,6 +3,7 @@
  */
 
 import { dynamicMetaFactory } from '@soundblue/i18n';
+import { type BreadcrumbItem, generateBreadcrumbSchema } from '@soundblue/seo/structured-data';
 import { useAutoAnimate } from '@soundblue/ui/hooks';
 import { Link, useLoaderData, useParams } from 'react-router';
 import { ConceptCard } from '@/components/concept/ConceptCard';
@@ -45,10 +46,12 @@ export const meta = dynamicMetaFactory(
       ko: {
         title: `${nameKo} | Roots`,
         description: descKo,
+        keywords: [nameKo, `${nameKo} 수학`, '수학 분야', '수학 개념', '수학 공식'],
       },
       en: {
         title: `${nameEn} | Roots`,
         description: descEn,
+        keywords: [nameEn, `${nameEn} math`, 'math field', 'math concepts', 'math formulas'],
       },
     };
   },
@@ -68,6 +71,10 @@ export default function FieldPage() {
   const [subfieldsRef] = useAutoAnimate<HTMLDivElement>();
   const [conceptsRef] = useAutoAnimate<HTMLDivElement>();
 
+  // JSON-LD 구조화 데이터
+  const baseUrl = 'https://roots.soundbluemusic.com';
+  const localePrefix = locale === 'ko' ? '/ko' : '';
+
   if (!field) {
     return (
       <Layout>
@@ -84,8 +91,25 @@ export default function FieldPage() {
     );
   }
 
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { name: locale === 'ko' ? '홈' : 'Home', url: `${baseUrl}${localePrefix}` },
+    { name: locale === 'ko' ? '탐색' : 'Browse', url: `${baseUrl}${localePrefix}/browse` },
+    {
+      name: field.name[locale] || field.name.en,
+      url: `${baseUrl}${localePrefix}/field/${field.id}`,
+    },
+  ];
+
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems);
+
   return (
     <Layout>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm mb-6">
         <Link

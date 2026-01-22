@@ -1,5 +1,10 @@
 import { toast } from '@soundblue/features/toast';
 import { dynamicMetaFactory, getLocaleFromPath } from '@soundblue/i18n';
+import {
+  type BreadcrumbItem,
+  generateBreadcrumbSchema,
+  generateDefinedTermSchema,
+} from '@soundblue/seo/structured-data';
 import { cn } from '@soundblue/ui/utils';
 import { Bookmark, BookmarkCheck, Check } from 'lucide-react';
 import { Link, useLoaderData } from 'react-router';
@@ -12,6 +17,7 @@ import {
   LinkedExample,
 } from '@/components/entry';
 import { Layout } from '@/components/layout';
+import { getCategoryById } from '@/data/categories';
 import type { LocaleEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
 import { getEntryByIdFromD1 } from '@/services/d1';
@@ -123,14 +129,32 @@ export function HydrateFallback() {
 
 export const meta = dynamicMetaFactory((data: { entry: LocaleEntry }) => {
   const { entry } = data;
+  const category = getCategoryById(entry.categoryId);
   return {
     ko: {
       title: `${entry.korean} - ${entry.translation.word} | Context`,
       description: `${entry.korean} (${entry.romanization}): ${entry.translation.explanation}`,
+      keywords: [
+        entry.korean,
+        `${entry.korean} 뜻`,
+        `${entry.korean} 의미`,
+        entry.translation.word,
+        category?.name.ko || entry.categoryId,
+        '한국어 사전',
+        '한국어 학습',
+      ],
     },
     en: {
       title: `${entry.korean} - ${entry.translation.word} | Context`,
       description: `${entry.korean} (${entry.romanization}): ${entry.translation.explanation}`,
+      keywords: [
+        entry.korean,
+        `${entry.korean} meaning`,
+        entry.translation.word,
+        category?.name.en || entry.categoryId,
+        'Korean dictionary',
+        'learn Korean',
+      ],
     },
   };
 }, 'https://context.soundbluemusic.com');
@@ -178,8 +202,46 @@ export default function EntryPage() {
   // 색상 코드: 한국어 페이지는 영어 색상명 사용, 영어 페이지는 translation.word 사용
   const colorName = englishColorName || translation.word;
 
+  // 카테고리 정보
+  const category = getCategoryById(entry.categoryId);
+  const categoryName = category?.name[locale] || category?.name.en || entry.categoryId;
+
+  // JSON-LD 구조화 데이터
+  const baseUrl = 'https://context.soundbluemusic.com';
+  const localePrefix = locale === 'ko' ? '/ko' : '';
+
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { name: locale === 'ko' ? '홈' : 'Home', url: `${baseUrl}${localePrefix}` },
+    {
+      name: categoryName,
+      url: `${baseUrl}${localePrefix}/category/${entry.categoryId}`,
+    },
+    { name: entry.korean, url: `${baseUrl}${localePrefix}/entry/${entry.id}` },
+  ];
+
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems);
+  const definedTermSchema = generateDefinedTermSchema({
+    name: entry.korean,
+    description: `${entry.translation.word} - ${entry.translation.explanation}`,
+    termCode: entry.romanization,
+    inDefinedTermSet: 'Korean Vocabulary',
+    url: `${baseUrl}${localePrefix}/entry/${entry.id}`,
+    inLanguage: locale,
+    educationalLevel: entry.difficulty,
+  });
+
   return (
     <Layout>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSchema) }}
+      />
+
       <article className="pt-6">
         <header className="mb-8">
           <div className="flex items-center justify-between gap-4 mb-4">

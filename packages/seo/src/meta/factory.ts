@@ -10,6 +10,8 @@
 export interface MetaData {
   title: string;
   description?: string;
+  /** 키워드 (Google은 무시하지만 Bing/Yandex 등에서 참고 가능) */
+  keywords?: string[];
 }
 
 /** 다국어 Meta 데이터 타입 */
@@ -83,6 +85,10 @@ export function metaFactory(
       result.push({ name: 'description', content: meta.description });
     }
 
+    if (meta.keywords && meta.keywords.length > 0) {
+      result.push({ name: 'keywords', content: meta.keywords.join(', ') });
+    }
+
     // SEO link tags (canonical + hreflang)
     result.push(...generateSeoLinkTags(location.pathname, baseUrl));
 
@@ -117,6 +123,10 @@ export function dynamicMetaFactory<T>(
 
     if (meta.description) {
       result.push({ name: 'description', content: meta.description });
+    }
+
+    if (meta.keywords && meta.keywords.length > 0) {
+      result.push({ name: 'keywords', content: meta.keywords.join(', ') });
     }
 
     // SEO link tags (canonical + hreflang)

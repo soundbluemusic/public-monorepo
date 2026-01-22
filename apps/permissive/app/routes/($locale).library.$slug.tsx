@@ -1,5 +1,10 @@
 import { dynamicMetaFactory } from '@soundblue/i18n';
 import {
+  type BreadcrumbItem,
+  generateBreadcrumbSchema,
+  generateSoftwareApplicationSchema,
+} from '@soundblue/seo/structured-data';
+import {
   ArrowLeft,
   Calendar,
   Code,
@@ -43,14 +48,33 @@ export const meta = dynamicMetaFactory((data: LoaderData | undefined) => {
     };
   }
   const lib = data.library;
+  const tags = lib.tags || [];
   return {
     ko: {
       title: `${lib.name} - Permissive`,
       description: lib.descriptionKo,
+      keywords: [
+        lib.name,
+        `${lib.name} 라이브러리`,
+        lib.license,
+        lib.category,
+        '오픈소스',
+        '무료 라이브러리',
+        ...tags.slice(0, 3),
+      ],
     },
     en: {
       title: `${lib.name} - Permissive`,
       description: lib.description,
+      keywords: [
+        lib.name,
+        `${lib.name} library`,
+        lib.license,
+        lib.category,
+        'open source',
+        'free library',
+        ...tags.slice(0, 3),
+      ],
     },
   };
 }, 'https://permissive.soundbluemusic.com');
@@ -60,8 +84,45 @@ export default function LibraryDetailPage() {
   const { locale, localePath } = useI18n();
   const isKorean = locale === 'ko';
 
+  // JSON-LD 구조화 데이터
+  const baseUrl = 'https://permissive.soundbluemusic.com';
+  const localePrefix = locale === 'ko' ? '/ko' : '';
+
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { name: isKorean ? '홈' : 'Home', url: `${baseUrl}${localePrefix}` },
+    { name: isKorean ? '라이브러리' : 'Libraries', url: `${baseUrl}${localePrefix}/libraries` },
+    { name: lib.name, url: `${baseUrl}${localePrefix}/library/${getLibrarySlug(lib.name)}` },
+  ];
+
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems);
+
+  const softwareSchema = generateSoftwareApplicationSchema({
+    name: lib.name,
+    description: isKorean ? lib.descriptionKo : lib.description,
+    url: `${baseUrl}${localePrefix}/library/${getLibrarySlug(lib.name)}`,
+    applicationCategory: 'DeveloperApplication',
+    operatingSystem: 'Cross-platform',
+    license: lib.license,
+    codeRepository: lib.github,
+    programmingLanguage: 'JavaScript',
+    author: {
+      name: lib.name,
+      url: lib.website || lib.github,
+    },
+  });
+
   return (
     <DocsLayout>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+      />
+
       <div>
         {/* Back link */}
         <Link

@@ -1,4 +1,9 @@
 import { dynamicMetaFactory } from '@soundblue/i18n';
+import {
+  type BreadcrumbItem,
+  generateBreadcrumbSchema,
+  generateTechArticleSchema,
+} from '@soundblue/seo/structured-data';
 import { ArrowLeft, Calendar, CheckCircle, ExternalLink, Globe } from 'lucide-react';
 import { Link, useLoaderData } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
@@ -31,10 +36,28 @@ export const meta = dynamicMetaFactory((data: LoaderData | undefined) => {
     ko: {
       title: `${api.name} - Permissive`,
       description: api.descriptionKo,
+      keywords: [
+        api.name,
+        `${api.name} API`,
+        'Web API',
+        api.category,
+        '브라우저 API',
+        'JavaScript API',
+        'MDN',
+      ],
     },
     en: {
       title: `${api.name} - Permissive`,
       description: api.description,
+      keywords: [
+        api.name,
+        `${api.name} API`,
+        'Web API',
+        api.category,
+        'browser API',
+        'JavaScript API',
+        'MDN',
+      ],
     },
   };
 }, 'https://permissive.soundbluemusic.com');
@@ -53,8 +76,43 @@ export default function WebApiDetailPage() {
         ? 'text-yellow-500'
         : 'text-red-500';
 
+  // JSON-LD 구조화 데이터
+  const baseUrl = 'https://permissive.soundbluemusic.com';
+  const localePrefix = locale === 'ko' ? '/ko' : '';
+
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { name: isKorean ? '홈' : 'Home', url: `${baseUrl}${localePrefix}` },
+    { name: 'Web API', url: `${baseUrl}${localePrefix}/web-api` },
+    { name: api.name, url: `${baseUrl}${localePrefix}/web-api/${getWebApiSlug(api.name)}` },
+  ];
+
+  const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems);
+
+  const techArticleSchema = generateTechArticleSchema({
+    headline: api.name,
+    description: isKorean ? api.descriptionKo : api.description,
+    url: `${baseUrl}${localePrefix}/web-api/${getWebApiSlug(api.name)}`,
+    datePublished: api.yearStable ? `${api.yearStable}-01-01` : '2020-01-01',
+    author: {
+      name: 'SoundBlue Music',
+      url: 'https://soundbluemusic.com',
+    },
+    inLanguage: locale,
+    proficiencyLevel: supportPercent >= 90 ? 'Beginner' : 'Intermediate',
+  });
+
   return (
     <DocsLayout>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(techArticleSchema) }}
+      />
+
       <div>
         {/* Back link */}
         <Link

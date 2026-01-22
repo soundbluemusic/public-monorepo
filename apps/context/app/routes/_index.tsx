@@ -114,10 +114,21 @@ export async function clientLoader({
 
 export const meta = metaFactory(
   {
-    ko: { title: 'Context - 한국어 사전', description: '한국어 학습자를 위한 의미 사전' },
+    ko: {
+      title: 'Context - 한국어 사전',
+      description: '한국어 학습자를 위한 의미 사전',
+      keywords: ['한국어 사전', '한국어 학습', '한국어 뜻', '한국어 예문', '한국어 단어'],
+    },
     en: {
       title: 'Context - Korean Dictionary',
       description: 'Meaning dictionary for Korean learners',
+      keywords: [
+        'Korean dictionary',
+        'learn Korean',
+        'Korean meaning',
+        'Korean words',
+        'Korean vocabulary',
+      ],
     },
   },
   'https://context.soundbluemusic.com',

@@ -652,3 +652,354 @@ export function serializeSchema(schema: JsonLdSchema): string {
 export function generateJsonLdScript(schema: JsonLdSchema): string {
   return `<script type="application/ld+json">${serializeSchema(schema)}</script>`;
 }
+
+// ============================================================================
+// Extended Schema Types (Phase 2 & 3)
+// ============================================================================
+
+/**
+ * DefinedTerm 스키마 생성을 위한 입력 설정
+ *
+ * 사전/용어집 형태의 콘텐츠에 사용됩니다.
+ * Google 검색 결과에서 정의형 리치 스니펫으로 표시될 수 있습니다.
+ *
+ * @see https://schema.org/DefinedTerm
+ *
+ * @example
+ * ```typescript
+ * const config: DefinedTermSchema = {
+ *   name: '안녕',
+ *   description: 'Hello - Korean greeting used in informal situations',
+ *   termCode: 'annyeong',
+ *   inDefinedTermSet: 'Korean Vocabulary',
+ *   url: 'https://context.soundbluemusic.com/entry/annyeong',
+ *   inLanguage: 'ko',
+ * };
+ * ```
+ */
+export interface DefinedTermSchema {
+  /** 용어 이름 (단어) */
+  name: string;
+  /** 용어 설명 */
+  description: string;
+  /** 용어 코드 (romanization 등) */
+  termCode?: string;
+  /** 용어가 속한 용어집/사전 이름 */
+  inDefinedTermSet?: string;
+  /** 용어 페이지 URL */
+  url: string;
+  /** 언어 코드 (예: 'ko', 'en') */
+  inLanguage?: string;
+  /** 난이도 (예: 'beginner', 'intermediate') */
+  educationalLevel?: string;
+}
+
+/** DefinedTerm JSON-LD schema */
+export interface DefinedTermJsonLd extends JsonLdSchema {
+  '@type': 'DefinedTerm';
+  name: string;
+  description: string;
+  termCode?: string;
+  inDefinedTermSet?: string;
+  url: string;
+  inLanguage?: string;
+  educationalLevel?: string;
+}
+
+/**
+ * DefinedTerm JSON-LD 스키마를 생성합니다.
+ *
+ * 사전/용어집 형태의 콘텐츠에 대한 리치 스니펫을 제공합니다.
+ * Context 앱의 Entry 페이지에 적합합니다.
+ *
+ * @param config - DefinedTerm 스키마 설정 객체
+ * @returns Schema.org DefinedTerm 형식의 JSON-LD 객체
+ *
+ * @example
+ * ```typescript
+ * const schema = generateDefinedTermSchema({
+ *   name: '안녕',
+ *   description: 'Hello - Korean greeting',
+ *   termCode: 'annyeong',
+ *   url: 'https://context.soundbluemusic.com/entry/annyeong',
+ *   inLanguage: 'ko',
+ *   educationalLevel: 'beginner',
+ * });
+ * ```
+ */
+export function generateDefinedTermSchema(config: DefinedTermSchema): DefinedTermJsonLd {
+  const schema: DefinedTermJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'DefinedTerm',
+    name: config.name,
+    description: config.description,
+    url: config.url,
+  };
+
+  if (config.termCode) {
+    schema.termCode = config.termCode;
+  }
+
+  if (config.inDefinedTermSet) {
+    schema.inDefinedTermSet = config.inDefinedTermSet;
+  }
+
+  if (config.inLanguage) {
+    schema.inLanguage = config.inLanguage;
+  }
+
+  if (config.educationalLevel) {
+    schema.educationalLevel = config.educationalLevel;
+  }
+
+  return schema;
+}
+
+/**
+ * SoftwareApplication 스키마 생성을 위한 입력 설정
+ *
+ * 소프트웨어/라이브러리에 대한 구조화 데이터입니다.
+ * Google 검색 결과에서 소프트웨어 리치 스니펫으로 표시될 수 있습니다.
+ *
+ * @see https://schema.org/SoftwareApplication
+ *
+ * @example
+ * ```typescript
+ * const config: SoftwareApplicationSchema = {
+ *   name: 'Lodash',
+ *   description: 'A modern JavaScript utility library',
+ *   applicationCategory: 'DeveloperApplication',
+ *   operatingSystem: 'Cross-platform',
+ *   license: 'MIT',
+ *   url: 'https://permissive.soundbluemusic.com/library/lodash',
+ *   codeRepository: 'https://github.com/lodash/lodash',
+ * };
+ * ```
+ */
+export interface SoftwareApplicationSchema {
+  /** 소프트웨어 이름 */
+  name: string;
+  /** 소프트웨어 설명 */
+  description: string;
+  /** 애플리케이션 카테고리 (예: 'DeveloperApplication', 'WebApplication') */
+  applicationCategory?: string;
+  /** 지원 운영체제 */
+  operatingSystem?: string;
+  /** 라이선스 (예: 'MIT', 'Apache-2.0') */
+  license?: string;
+  /** 소프트웨어 페이지 URL */
+  url: string;
+  /** GitHub/GitLab 등 코드 저장소 URL */
+  codeRepository?: string;
+  /** 프로그래밍 언어 */
+  programmingLanguage?: string;
+  /** 가격 (무료인 경우 '0') */
+  price?: string;
+  /** 통화 코드 (예: 'USD') */
+  priceCurrency?: string;
+  /** 저자/개발자 */
+  author?: string | OrganizationSchema;
+}
+
+/** SoftwareApplication JSON-LD schema */
+export interface SoftwareApplicationJsonLd extends JsonLdSchema {
+  '@type': 'SoftwareApplication';
+  name: string;
+  description: string;
+  applicationCategory?: string;
+  operatingSystem?: string;
+  license?: string;
+  url: string;
+  codeRepository?: string;
+  programmingLanguage?: string;
+  offers?: {
+    '@type': 'Offer';
+    price: string;
+    priceCurrency: string;
+  };
+  author?: { '@type': 'Person' | 'Organization'; name: string; url?: string };
+}
+
+/**
+ * SoftwareApplication JSON-LD 스키마를 생성합니다.
+ *
+ * 소프트웨어/라이브러리에 대한 리치 스니펫을 제공합니다.
+ * Permissive 앱의 Library 페이지에 적합합니다.
+ *
+ * @param config - SoftwareApplication 스키마 설정 객체
+ * @returns Schema.org SoftwareApplication 형식의 JSON-LD 객체
+ *
+ * @example
+ * ```typescript
+ * const schema = generateSoftwareApplicationSchema({
+ *   name: 'Lodash',
+ *   description: 'A modern JavaScript utility library',
+ *   applicationCategory: 'DeveloperApplication',
+ *   license: 'MIT',
+ *   url: 'https://permissive.soundbluemusic.com/library/lodash',
+ *   codeRepository: 'https://github.com/lodash/lodash',
+ *   price: '0',
+ *   priceCurrency: 'USD',
+ * });
+ * ```
+ */
+export function generateSoftwareApplicationSchema(
+  config: SoftwareApplicationSchema,
+): SoftwareApplicationJsonLd {
+  const schema: SoftwareApplicationJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: config.name,
+    description: config.description,
+    url: config.url,
+  };
+
+  if (config.applicationCategory) {
+    schema.applicationCategory = config.applicationCategory;
+  }
+
+  if (config.operatingSystem) {
+    schema.operatingSystem = config.operatingSystem;
+  }
+
+  if (config.license) {
+    schema.license = `https://opensource.org/licenses/${config.license}`;
+  }
+
+  if (config.codeRepository) {
+    schema.codeRepository = config.codeRepository;
+  }
+
+  if (config.programmingLanguage) {
+    schema.programmingLanguage = config.programmingLanguage;
+  }
+
+  if (config.price !== undefined && config.priceCurrency) {
+    schema.offers = {
+      '@type': 'Offer',
+      price: config.price,
+      priceCurrency: config.priceCurrency,
+    };
+  }
+
+  if (config.author) {
+    schema.author =
+      typeof config.author === 'string'
+        ? { '@type': 'Person' as const, name: config.author }
+        : { '@type': 'Organization' as const, name: config.author.name, url: config.author.url };
+  }
+
+  return schema;
+}
+
+/**
+ * TechArticle 스키마 생성을 위한 입력 설정
+ *
+ * 기술 문서/API 참조에 대한 구조화 데이터입니다.
+ * Google 검색 결과에서 기술 문서 리치 스니펫으로 표시될 수 있습니다.
+ *
+ * @see https://schema.org/TechArticle
+ *
+ * @example
+ * ```typescript
+ * const config: TechArticleSchema = {
+ *   headline: 'Fetch API',
+ *   description: 'Modern way to make HTTP requests in JavaScript',
+ *   url: 'https://permissive.soundbluemusic.com/web-api/fetch-api',
+ *   proficiencyLevel: 'Beginner',
+ * };
+ * ```
+ */
+export interface TechArticleSchema {
+  /** 기사 제목 */
+  headline: string;
+  /** 기사 설명 */
+  description: string;
+  /** 기사 URL */
+  url: string;
+  /** 최초 발행일 (ISO 8601 형식: YYYY-MM-DD) */
+  datePublished?: string;
+  /** 최종 수정일 (ISO 8601 형식: YYYY-MM-DD) */
+  dateModified?: string;
+  /** 숙련도 수준 (예: 'Beginner', 'Expert') */
+  proficiencyLevel?: string;
+  /** 기술 종속성 (예: ['JavaScript', 'Browser']) */
+  dependencies?: string[];
+  /** 저자 */
+  author?: string | OrganizationSchema;
+  /** 언어 코드 */
+  inLanguage?: string;
+}
+
+/** TechArticle JSON-LD schema */
+export interface TechArticleJsonLd extends JsonLdSchema {
+  '@type': 'TechArticle';
+  headline: string;
+  description: string;
+  url: string;
+  datePublished?: string;
+  dateModified?: string;
+  proficiencyLevel?: string;
+  dependencies?: string;
+  author?: { '@type': 'Person' | 'Organization'; name: string; url?: string };
+  inLanguage?: string;
+}
+
+/**
+ * TechArticle JSON-LD 스키마를 생성합니다.
+ *
+ * 기술 문서/API 참조에 대한 리치 스니펫을 제공합니다.
+ * Permissive 앱의 Web API 페이지에 적합합니다.
+ *
+ * @param config - TechArticle 스키마 설정 객체
+ * @returns Schema.org TechArticle 형식의 JSON-LD 객체
+ *
+ * @example
+ * ```typescript
+ * const schema = generateTechArticleSchema({
+ *   headline: 'Fetch API',
+ *   description: 'Modern way to make HTTP requests',
+ *   url: 'https://permissive.soundbluemusic.com/web-api/fetch-api',
+ *   proficiencyLevel: 'Beginner',
+ *   inLanguage: 'en',
+ * });
+ * ```
+ */
+export function generateTechArticleSchema(config: TechArticleSchema): TechArticleJsonLd {
+  const schema: TechArticleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: config.headline,
+    description: config.description,
+    url: config.url,
+  };
+
+  if (config.datePublished) {
+    schema.datePublished = config.datePublished;
+  }
+
+  if (config.dateModified) {
+    schema.dateModified = config.dateModified;
+  }
+
+  if (config.proficiencyLevel) {
+    schema.proficiencyLevel = config.proficiencyLevel;
+  }
+
+  if (config.dependencies && config.dependencies.length > 0) {
+    schema.dependencies = config.dependencies.join(', ');
+  }
+
+  if (config.author) {
+    schema.author =
+      typeof config.author === 'string'
+        ? { '@type': 'Person' as const, name: config.author }
+        : { '@type': 'Organization' as const, name: config.author.name, url: config.author.url };
+  }
+
+  if (config.inLanguage) {
+    schema.inLanguage = config.inLanguage;
+  }
+
+  return schema;
+}
