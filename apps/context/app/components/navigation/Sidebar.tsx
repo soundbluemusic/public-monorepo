@@ -12,6 +12,7 @@ import {
   SidebarSection,
 } from '@soundblue/ui/components';
 import { cn } from '@soundblue/ui/utils';
+import { Link, useRouterState } from '@tanstack/react-router';
 import {
   Bookmark,
   Code2,
@@ -22,7 +23,6 @@ import {
   List,
   MessageCircle,
 } from 'lucide-react';
-import { Link, useLocation } from 'react-router';
 import { categories } from '@/data/categories';
 import { useI18n } from '@/i18n';
 
@@ -80,10 +80,11 @@ interface SidebarProps {
 
 export function Sidebar({ isOpen, isCollapsed, onClose, onToggleCollapse }: SidebarProps) {
   const { locale, localePath, t } = useI18n();
-  const location = useLocation();
+  const routerState = useRouterState();
+  const pathname = routerState.location.pathname;
 
   const isActive = (basePath: string) => {
-    const currentPath = stripLocale(location.pathname);
+    const currentPath = stripLocale(pathname);
     return currentPath === basePath || currentPath.startsWith(`${basePath}/`);
   };
 

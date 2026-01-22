@@ -11,11 +11,21 @@
  * This package uses Node.js fs and should never be imported in client code.
  */
 
-// Meta tag utilities
+// Meta tag utilities (React Router v7)
+// TanStack Start head 팩토리 (신규)
 export {
+  dynamicHeadFactory,
+  dynamicHeadFactoryEn,
+  dynamicHeadFactoryKo,
   dynamicMetaFactory,
   generateHreflangLinks,
   generateSEOMeta,
+  type HeadConfig,
+  type HeadLink,
+  type HeadMeta,
+  headFactory,
+  headFactoryEn,
+  headFactoryKo,
   type LinkDescriptor,
   type LocalizedMeta,
   type MetaData,

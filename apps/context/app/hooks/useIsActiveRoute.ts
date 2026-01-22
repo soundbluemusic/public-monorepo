@@ -1,6 +1,6 @@
 import { stripLocaleFromPath } from '@soundblue/i18n';
+import { useRouterState } from '@tanstack/react-router';
 import { useCallback } from 'react';
-import { useLocation } from 'react-router';
 
 /**
  * Route matching mode for active link detection
@@ -26,8 +26,8 @@ type MatchMode = 'exact' | 'prefix';
  * isActiveExact('/') // true only on exactly /
  */
 export function useIsActiveRoute() {
-  const location = useLocation();
-  const currentPath = stripLocaleFromPath(location.pathname);
+  const routerState = useRouterState();
+  const currentPath = stripLocaleFromPath(routerState.location.pathname);
 
   /**
    * Check if the given path is active

@@ -3,8 +3,8 @@
  * 빌드 시 loader에서 전달받은 concept names 사용 (SSG 최적화)
  */
 
+import { Link } from '@tanstack/react-router';
 import { Link2 } from 'lucide-react';
-import { Link } from 'react-router';
 import type { ConceptRelations } from '@/data/types';
 import { useI18n } from '@/i18n';
 

@@ -1,8 +1,8 @@
 import { useSettingsStore } from '@soundblue/features/settings';
 import { cn } from '@soundblue/ui/utils';
+import { Link } from '@tanstack/react-router';
 import { ArrowUp, ChevronRight } from 'lucide-react';
 import { type ReactNode, useEffect, useState } from 'react';
-import { Link } from 'react-router';
 import { useI18n } from '@/i18n';
 import { BottomNav } from '../navigation/BottomNav';
 import { Sidebar } from '../navigation/Sidebar';

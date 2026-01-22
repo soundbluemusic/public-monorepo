@@ -1,8 +1,8 @@
 import { useSettingsStore } from '@soundblue/features/settings';
 import { FamilySites } from '@soundblue/ui/components';
 import { cn } from '@soundblue/ui/utils';
+import { Link } from '@tanstack/react-router';
 import { Github } from 'lucide-react';
-import { Link } from 'react-router';
 import { useI18n } from '@/i18n';
 
 export function Footer() {

@@ -6,8 +6,8 @@
  * Customizable via items array for different apps.
  */
 
+import { Link, useRouterState } from '@tanstack/react-router';
 import type { LucideIcon } from 'lucide-react';
-import { Link, useLocation } from 'react-router';
 import { cn } from '../utils';
 
 export interface BottomNavItem {
@@ -59,8 +59,8 @@ export function BottomNav({
   hideAt = 'md',
   heightClass = 'h-16',
 }: BottomNavProps) {
-  const location = useLocation();
-  const isActive = (path: string) => location.pathname === localePath(path);
+  const routerState = useRouterState();
+  const isActive = (path: string) => routerState.location.pathname === localePath(path);
 
   return (
     <nav

@@ -2,9 +2,10 @@
  * @fileoverview Browse 페이지 필터 훅
  *
  * URL 파라미터로 필터 상태를 관리하여 북마크/공유 가능
+ * TanStack Router 호환: Browser URLSearchParams API 직접 사용
  */
+import { useNavigate, useRouterState } from '@tanstack/react-router';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { useSearchParams } from 'react-router';
 import {
   difficultyIndex,
   fieldIndex,
@@ -65,7 +66,14 @@ interface UseBrowseFiltersReturn {
 }
 
 export function useBrowseFilters(): UseBrowseFiltersReturn {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const routerState = useRouterState();
+  const navigate = useNavigate();
+
+  // Parse search params from router state
+  const getSearchParams = useCallback(() => {
+    if (typeof window === 'undefined') return new URLSearchParams();
+    return new URLSearchParams(routerState.location.search);
+  }, [routerState.location.search]);
 
   // View mode state
   const [viewMode, setViewModeState] = useState<ViewMode>('fields');
@@ -78,6 +86,7 @@ export function useBrowseFilters(): UseBrowseFiltersReturn {
 
   // Sync URL params to state (on mount)
   useEffect(() => {
+    const searchParams = getSearchParams();
     const viewParam = searchParams.get('view');
     const diffParam = searchParams.get('difficulty');
     const fieldParam = searchParams.get('field');
@@ -112,20 +121,27 @@ export function useBrowseFilters(): UseBrowseFiltersReturn {
         setCurrentPage(page);
       }
     }
-  }, [searchParams]);
+  }, [getSearchParams]);
 
-  // URL update helper
-  const updateUrlParams = (updates: Record<string, string | null>) => {
-    const params = new URLSearchParams(searchParams);
-    for (const [key, value] of Object.entries(updates)) {
-      if (value === null || value === '' || value === 'all') {
-        params.delete(key);
-      } else {
-        params.set(key, value);
+  // URL update helper - use browser history API
+  const updateUrlParams = useCallback(
+    (updates: Record<string, string | null>) => {
+      const params = getSearchParams();
+      for (const [key, value] of Object.entries(updates)) {
+        if (value === null || value === '' || value === 'all') {
+          params.delete(key);
+        } else {
+          params.set(key, value);
+        }
       }
-    }
-    setSearchParams(params, { replace: true });
-  };
+      const search = params.toString();
+      const newUrl = search
+        ? `${routerState.location.pathname}?${search}`
+        : routerState.location.pathname;
+      window.history.replaceState(null, '', newUrl);
+    },
+    [getSearchParams, routerState.location.pathname],
+  );
 
   // View mode setter
   const setViewMode = (mode: ViewMode) => {
@@ -237,13 +253,17 @@ export function useBrowseFilters(): UseBrowseFiltersReturn {
   // Page change handler
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
-    const params = new URLSearchParams(searchParams);
+    const params = getSearchParams();
     if (page === 1) {
       params.delete('page');
     } else {
       params.set('page', String(page));
     }
-    setSearchParams(params, { replace: true });
+    const search = params.toString();
+    const newUrl = search
+      ? `${routerState.location.pathname}?${search}`
+      : routerState.location.pathname;
+    window.history.replaceState(null, '', newUrl);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -253,7 +273,7 @@ export function useBrowseFilters(): UseBrowseFiltersReturn {
     setFilterField('all');
     setSortBy('name');
     setCurrentPage(1);
-    setSearchParams({}, { replace: true });
+    window.history.replaceState(null, '', routerState.location.pathname);
   };
 
   return {

@@ -1,5 +1,5 @@
+import { Link } from '@tanstack/react-router';
 import { Calendar } from 'lucide-react';
-import { Link } from 'react-router';
 import type { LightEntry } from '@/data/entries';
 
 interface EntryListProps {

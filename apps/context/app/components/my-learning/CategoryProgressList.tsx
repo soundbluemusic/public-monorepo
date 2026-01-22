@@ -1,5 +1,5 @@
+import { Link } from '@tanstack/react-router';
 import { FolderOpen } from 'lucide-react';
-import { Link } from 'react-router';
 import type { categories } from '@/data/categories';
 import type { MessageKey } from '@/i18n';
 

@@ -10,9 +10,9 @@ import {
 } from '@soundblue/ui/components';
 import { SearchDropdown } from '@soundblue/ui/patterns';
 import { cn } from '@soundblue/ui/utils';
+import { Link, useNavigate, useRouterState } from '@tanstack/react-router';
 import { ArrowUp, BookOpen, ChevronRight, Github, Heart, Menu, Star } from 'lucide-react';
 import { type ReactNode, useCallback, useEffect, useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router';
 import { useI18n } from '@/i18n';
 import { Sidebar } from './Sidebar';
 
@@ -31,7 +31,8 @@ interface LayoutProps {
 
 export function Layout({ children, breadcrumbs }: LayoutProps) {
   const { locale, t, localePath } = useI18n();
-  const location = useLocation();
+  const routerState = useRouterState();
+  const pathname = routerState.location?.pathname ?? '/';
   const navigate = useNavigate();
 
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -48,7 +49,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
 
   const handleSelectResult = useCallback(
     (result: { item: { id: string } }) => {
-      navigate(localePath(`/concept/${result.item.id}`));
+      navigate({ to: localePath(`/concept/${result.item.id}`) });
     },
     [navigate, localePath],
   );
@@ -75,7 +76,7 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
   };
 
   const isActive = (basePath: string) => {
-    const currentPath = stripLocale(location.pathname);
+    const currentPath = stripLocale(pathname);
     return currentPath === basePath || currentPath.startsWith(`${basePath}/`);
   };
 
@@ -170,14 +171,14 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
             </Link>
 
             <ServicesDropdown currentAppId="roots" locale={locale} />
-            <LanguageToggle locale={locale} currentPath={stripLocale(location.pathname)} />
+            <LanguageToggle locale={locale} currentPath={stripLocale(pathname)} />
             <DarkModeToggle />
           </div>
 
           {/* Right Actions - Mobile */}
           <div className="flex sm:hidden items-center gap-1">
             <ServicesDropdown currentAppId="roots" locale={locale} />
-            <LanguageToggle locale={locale} currentPath={stripLocale(location.pathname)} />
+            <LanguageToggle locale={locale} currentPath={stripLocale(pathname)} />
             <DarkModeToggle />
           </div>
         </div>

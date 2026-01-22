@@ -1,7 +1,7 @@
 import { LIMITS } from '@soundblue/core/validation';
 import { useSearchWorker } from '@soundblue/search/react';
+import { useNavigate } from '@tanstack/react-router';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { useNavigate } from 'react-router';
 
 interface UseGlobalSearchOptions {
   locale: 'en' | 'ko';
@@ -92,7 +92,7 @@ export function useGlobalSearch({ locale, localePath }: UseGlobalSearchOptions) 
           e.preventDefault();
           const selectedResult = results[selectedIndex];
           if (selectedIndex >= 0 && selectedResult) {
-            navigate(localePath(`/entry/${selectedResult.id}`));
+            navigate({ to: localePath(`/entry/${selectedResult.id}`) });
             setIsOpen(false);
             setQuery('');
           }

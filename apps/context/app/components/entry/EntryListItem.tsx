@@ -6,9 +6,9 @@
  */
 
 import { cn } from '@soundblue/ui/utils';
+import { Link } from '@tanstack/react-router';
 import { Check, Star } from 'lucide-react';
 import { memo } from 'react';
-import { Link } from 'react-router';
 
 /**
  * Category 정보 (선택적 표시용)

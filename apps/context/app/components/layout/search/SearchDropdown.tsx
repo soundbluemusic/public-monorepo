@@ -1,6 +1,6 @@
 import { cn } from '@soundblue/ui/utils';
+import { Link } from '@tanstack/react-router';
 import { memo } from 'react';
-import { Link } from 'react-router';
 
 interface SearchResult {
   id: string;

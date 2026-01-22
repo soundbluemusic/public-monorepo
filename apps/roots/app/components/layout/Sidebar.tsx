@@ -6,7 +6,7 @@
 import { stripLocaleFromPath } from '@soundblue/i18n';
 import { BaseSidebar, FamilySites, SidebarSection } from '@soundblue/ui/components';
 import { cn } from '@soundblue/ui/utils';
-import { Link, useLocation } from 'react-router';
+import { Link, useRouterState } from '@tanstack/react-router';
 import { fields } from '@/data/fields';
 import { useI18n } from '@/i18n';
 
@@ -22,10 +22,11 @@ interface SidebarProps {
 
 export function Sidebar({ isOpen, isCollapsed, onClose, onToggleCollapse }: SidebarProps) {
   const { locale, localePath, t } = useI18n();
-  const location = useLocation();
+  const routerState = useRouterState();
+  const pathname = routerState.location?.pathname ?? '/';
 
   const isActive = (basePath: string) => {
-    const currentPath = stripLocale(location.pathname);
+    const currentPath = stripLocale(pathname);
     return currentPath === basePath || currentPath.startsWith(`${basePath}/`);
   };
 
@@ -42,6 +43,7 @@ export function Sidebar({ isOpen, isCollapsed, onClose, onToggleCollapse }: Side
       ariaLabel="Math fields"
       navItems={[]}
       closeMenuLabel={locale === 'ko' ? '메뉴 닫기' : 'Close menu'}
+      LinkComponent={Link}
     >
       {/* Math Fields Section */}
       <SidebarSection title={t('mathFields')}>

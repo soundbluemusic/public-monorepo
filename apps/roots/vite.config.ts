@@ -1,7 +1,7 @@
+import { cloudflare } from '@cloudflare/vite-plugin';
 import { paraglideVitePlugin as paraglide } from '@inlang/paraglide-js';
-import { reactRouter } from '@react-router/dev/vite';
-import { cloudflareDevProxy } from '@react-router/dev/vite/cloudflare';
 import tailwindcss from '@tailwindcss/vite';
+import { tanstackStart } from '@tanstack/react-start/plugin/vite';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig, type PluginOption } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
@@ -18,21 +18,20 @@ export default defineConfig({
       compress: { drop_console: true, drop_debugger: true },
     },
   },
-  ssr: {
-    target: 'webworker',
-  },
   define: {
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'),
   },
   plugins: [
+    cloudflare({ viteEnvironment: { name: 'ssr' } }),
+    tanstackStart({
+      srcDirectory: 'app',
+    }),
     tailwindcss(),
     paraglide({
       project: './project.inlang',
       outdir: './app/paraglide',
       outputStructure: 'message-modules',
     }),
-    cloudflareDevProxy(),
-    reactRouter(),
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'apple-touch-icon.svg', 'icons/*.svg'],

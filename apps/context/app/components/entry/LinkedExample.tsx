@@ -1,6 +1,6 @@
+import { Link } from '@tanstack/react-router';
 import type { ReactNode } from 'react';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router';
 import { findExpressions, isTrieLoaded, loadTrie } from '@/data/generated/korean-expressions';
 import { useI18n } from '@/i18n';
 

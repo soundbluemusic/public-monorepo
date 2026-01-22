@@ -1,12 +1,14 @@
 /**
  * @fileoverview 공통 사이드바 컴포넌트
  * roots/context/permissive 앱에서 공통으로 사용
+ *
+ * NOTE: TanStack Start 앱은 LinkComponent prop으로 TanStack Router의 Link를 전달해야 함
  */
 
+import { Link as TanStackLink } from '@tanstack/react-router';
 import { PanelLeftClose, PanelLeftOpen, X } from 'lucide-react';
-import type { ReactNode } from 'react';
+import type { ComponentType, ReactNode } from 'react';
 import { useEffect } from 'react';
-import { Link } from 'react-router';
 import { cn } from '../../utils/cn';
 
 export interface SidebarNavItem {
@@ -14,6 +16,15 @@ export interface SidebarNavItem {
   icon: ReactNode;
   label: string;
   labelKo: string;
+}
+
+/** Link 컴포넌트 Props 인터페이스 (React Router / TanStack Router 호환) */
+export interface LinkComponentProps {
+  to: string;
+  onClick?: () => void;
+  className?: string;
+  title?: string;
+  children: ReactNode;
 }
 
 export interface BaseSidebarProps {
@@ -41,6 +52,8 @@ export interface BaseSidebarProps {
   children?: ReactNode;
   /** 닫기 메뉴 label */
   closeMenuLabel?: string;
+  /** 커스텀 Link 컴포넌트 (TanStack Router 사용 시 전달) */
+  LinkComponent?: ComponentType<LinkComponentProps>;
 }
 
 export function BaseSidebar({
@@ -56,7 +69,10 @@ export function BaseSidebar({
   navItems,
   children,
   closeMenuLabel = locale === 'ko' ? '메뉴 닫기' : 'Close menu',
+  LinkComponent = TanStackLink,
 }: BaseSidebarProps) {
+  // Use the provided Link component (React Router or TanStack Router)
+  const Link = LinkComponent;
   // Escape key handling
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {

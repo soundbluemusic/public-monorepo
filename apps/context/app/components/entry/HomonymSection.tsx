@@ -1,6 +1,6 @@
 import { cn } from '@soundblue/ui/utils';
+import { Link } from '@tanstack/react-router';
 import { ArrowRight, Languages } from 'lucide-react';
-import { Link } from 'react-router';
 import { getCategoryById, getCategoryColor } from '@/data/categories';
 import { getHomonyms, type HomonymEntry } from '@/data/entries';
 import { useI18n } from '@/i18n';

@@ -1,5 +1,5 @@
+import { useNavigate, useRouterState } from '@tanstack/react-router';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { useSearchParams } from 'react-router';
 import { z } from 'zod';
 import { BROWSE_CHUNK_SIZE, PAGE_SIZE } from '@/constants';
 import type { categories } from '@/data/categories';
@@ -92,7 +92,23 @@ export function useBrowseFilters({
   favoriteIds,
   isLoading,
 }: UseBrowseFiltersOptions) {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
+  const routerState = useRouterState();
+  const searchParams = useMemo(
+    () => new URLSearchParams(routerState.location.search),
+    [routerState.location.search],
+  );
+  const setSearchParams = useCallback(
+    (paramsOrUpdater: URLSearchParams | ((prev: URLSearchParams) => URLSearchParams)) => {
+      const newParams =
+        typeof paramsOrUpdater === 'function'
+          ? paramsOrUpdater(new URLSearchParams(routerState.location.search))
+          : paramsOrUpdater;
+      // @ts-expect-error - TanStack Router navigate search type incompatibility
+      navigate({ search: newParams.toString() || undefined });
+    },
+    [navigate, routerState.location.search],
+  );
 
   // Filter & Sort state
   const [filterCategory, setFilterCategory] = useState<FilterCategory>('all');
@@ -242,7 +258,7 @@ export function useBrowseFilters({
       setCurrentPage(1);
       const params = new URLSearchParams(searchParams);
       params.delete('page');
-      setSearchParams(params, { replace: true });
+      setSearchParams(params);
       prevFiltersRef.current = { filterCategory, filterStatus, sortBy };
     }
   }, [filterCategory, filterStatus, sortBy, searchParams, setSearchParams]);

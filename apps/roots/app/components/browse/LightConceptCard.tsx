@@ -1,8 +1,8 @@
 /**
  * @fileoverview 경량 개념 카드 컴포넌트 (browse 페이지용)
  */
+import { Link } from '@tanstack/react-router';
 import { memo, useMemo } from 'react';
-import { Link } from 'react-router';
 import { DifficultyBadge } from '@/components/ui/DifficultyBadge';
 import type { LightConcept } from '@/data/concepts';
 import { getFieldById } from '@/data/fields';

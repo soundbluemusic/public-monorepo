@@ -21,8 +21,8 @@
  *   });
  * ```
  */
+import { useRouterState } from '@tanstack/react-router';
 import { createContext, type ReactNode, useContext, useMemo } from 'react';
-import { useLocation } from 'react-router';
 import type { Language } from '../core/config';
 import { getLocaleFromPath, stripLocaleFromPath } from '../utils/routing';
 
@@ -102,12 +102,13 @@ export function createI18nProvider<K extends string>(
 
   // Provider 컴포넌트
   function I18nProvider({ children }: { children: ReactNode }) {
-    const location = useLocation();
-    const locale = getLocaleFromPath(location.pathname);
+    const routerState = useRouterState();
+    const pathname = routerState.location.pathname;
+    const locale = getLocaleFromPath(pathname);
 
     const value = useMemo(() => {
       const setLocale = (lang: Language) => {
-        const currentPath = stripLocaleFromPath(location.pathname);
+        const currentPath = stripLocaleFromPath(pathname);
         const newPath =
           lang === 'en' ? currentPath : `/ko${currentPath === '/' ? '' : currentPath}`;
         window.location.href = newPath;
@@ -154,7 +155,7 @@ export function createI18nProvider<K extends string>(
         isKorean: locale === 'ko',
         localePath,
       };
-    }, [locale, location.pathname]);
+    }, [locale, pathname]);
 
     return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
   }

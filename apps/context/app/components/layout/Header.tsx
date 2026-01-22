@@ -1,8 +1,8 @@
 import { DarkModeToggle, LanguageToggle, ServicesDropdown } from '@soundblue/ui/components';
 import { cn } from '@soundblue/ui/utils';
+import { Link } from '@tanstack/react-router';
 import { ArrowLeft, Menu, Search, X } from 'lucide-react';
 import { useState } from 'react';
-import { Link } from 'react-router';
 import { useIsActiveRoute } from '@/hooks';
 import { useI18n } from '@/i18n';
 import { NoResults, SearchDropdown, SearchInput, useGlobalSearch } from './search';

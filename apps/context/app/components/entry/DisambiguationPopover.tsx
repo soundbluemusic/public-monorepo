@@ -12,8 +12,9 @@
  * />
  * ```
  */
+
+import { Link } from '@tanstack/react-router';
 import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router';
 import { getEntryById } from '@/data/entries';
 
 import { useI18n } from '@/i18n';

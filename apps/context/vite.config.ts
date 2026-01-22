@@ -1,23 +1,10 @@
+import { cloudflare } from '@cloudflare/vite-plugin';
 import { paraglideVitePlugin as paraglide } from '@inlang/paraglide-js';
-import { reactRouter } from '@react-router/dev/vite';
-import { cloudflareDevProxy } from '@react-router/dev/vite/cloudflare';
 import tailwindcss from '@tailwindcss/vite';
+import { tanstackStart } from '@tanstack/react-start/plugin/vite';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig, type PluginOption } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
-
-/**
- * Context 앱 Vite 설정
- *
- * SSR 모드: Cloudflare Pages Functions + D1
- * SSG 모드: 정적 HTML 생성 (레거시)
- *
- * BUILD_MODE 환경변수로 모드 선택:
- * - ssr: Cloudflare Pages Functions (D1 사용)
- * - ssg: 정적 빌드 (기존 방식)
- */
-
-const isSSR = process.env.BUILD_MODE === 'ssr';
 
 export default defineConfig({
   server: { port: 3003 },
@@ -36,23 +23,20 @@ export default defineConfig({
       compress: { drop_console: true, drop_debugger: true },
     },
   },
-  // Cloudflare Workers 환경에서 process.env를 대체
-  ssr: {
-    target: 'webworker',
-  },
   define: {
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'),
   },
   plugins: [
+    cloudflare({ viteEnvironment: { name: 'ssr' } }),
+    tanstackStart({
+      srcDirectory: 'app',
+    }),
     tailwindcss(),
     paraglide({
       project: './project.inlang',
       outdir: './app/paraglide',
       outputStructure: 'message-modules',
     }),
-    // SSR 모드에서만 Cloudflare dev proxy 사용
-    ...(isSSR ? [cloudflareDevProxy()] : []),
-    reactRouter(),
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'icons/*.svg'],

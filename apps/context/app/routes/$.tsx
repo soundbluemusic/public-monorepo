@@ -1,25 +1,27 @@
-import { metaFactory } from '@soundblue/i18n';
-import { Link } from 'react-router';
+import { headFactory } from '@soundblue/seo/meta';
+import { createFileRoute, Link, notFound } from '@tanstack/react-router';
 import { Layout } from '@/components/layout';
 import { useI18n } from '@/i18n';
 
-/**
- * loader: HTTP 404 상태 코드 반환
- * catch-all 라우트에서 검색 엔진이 404를 인식하도록 함
- */
-export function loader() {
-  throw new Response('Not Found', { status: 404 });
-}
-
-export const meta = metaFactory(
-  {
-    ko: { title: '404 - 페이지를 찾을 수 없습니다 | Context' },
-    en: { title: '404 - Page Not Found | Context' },
+export const Route = createFileRoute('/$')({
+  loader: () => {
+    throw notFound();
   },
-  'https://context.soundbluemusic.com',
-);
+  // @ts-expect-error - TanStack Start head function type incompatibility
+  head: headFactory(
+    {
+      ko: {
+        title: '404 - 페이지를 찾을 수 없습니다 | Context',
+        description: '페이지를 찾을 수 없습니다',
+      },
+      en: { title: '404 - Page Not Found | Context', description: 'Page not found' },
+    },
+    'https://context.soundbluemusic.com',
+  ),
+  component: NotFound,
+});
 
-export default function NotFound() {
+function NotFound() {
   const { t, localePath } = useI18n();
 
   return (

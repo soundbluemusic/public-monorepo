@@ -1,8 +1,8 @@
 /**
  * @fileoverview 개념 미리보기 카드 컴포넌트
  */
+import { Link } from '@tanstack/react-router';
 import { memo, useMemo } from 'react';
-import { Link } from 'react-router';
 import { DifficultyBadge } from '@/components/ui/DifficultyBadge';
 import { getFieldById } from '@/data/fields';
 import type { MathConcept } from '@/data/types';
