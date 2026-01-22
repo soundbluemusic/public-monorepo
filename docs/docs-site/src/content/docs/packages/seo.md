@@ -1,6 +1,11 @@
 ---
 title: "@soundblue/seo"
 description: Meta tags, sitemap generation, and structured data for SEO - Layer 2 domain package
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: SEO package, meta tags, sitemap, structured data, JSON-LD, canonical, hreflang, Open Graph, Twitter Card
 sidebar:
   order: 8
 ---

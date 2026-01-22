@@ -1,6 +1,11 @@
 ---
 title: AI Assistant Guidelines
 description: Guidelines for AI assistants contributing to this project
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: AI assistant, Claude, GPT, Gemini, coding guidelines, SSR rules, no downgrade policy, token efficiency
 ---
 
 This guide helps AI assistants (Claude, GPT, Gemini, etc.) contribute effectively to this monorepo.

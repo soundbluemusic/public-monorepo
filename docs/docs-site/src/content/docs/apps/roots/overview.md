@@ -1,6 +1,11 @@
 ---
 title: Roots Overview
 description: Complete documentation for Roots - Math Documentation for Learners (학습자를 위한 수학 문서)
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Roots app, math documentation, algebra, geometry, calculus, trigonometry, statistics, SSR, bilingual
 sidebar:
   order: 1
 ---

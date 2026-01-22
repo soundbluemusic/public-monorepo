@@ -1,6 +1,11 @@
 ---
 title: Permissive Overview
 description: Complete documentation for Permissive - Free Web Development Resources (무료 웹개발 자료 모음)
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Permissive app, web dev resources, MIT license, Apache license, open source libraries, Web APIs, SSR, React
 sidebar:
   order: 1
 ---

@@ -1,6 +1,11 @@
 ---
 title: Introduction
 description: Overview of the SoundBlue Public Monorepo - Three apps for learners
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: introduction, overview, Context app, Permissive app, Roots app, Korean dictionary, web dev resources, math documentation, SSR, SEO
 ---
 
 # Introduction

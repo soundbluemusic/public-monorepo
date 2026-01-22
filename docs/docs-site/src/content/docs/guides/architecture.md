@@ -1,6 +1,11 @@
 ---
 title: Architecture
 description: Understanding the rendering modes and package layer system of the monorepo
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: architecture, SSR, SSG, rendering modes, package layers, Cloudflare D1, i18n routing, SEO implementation, hydration workaround
 ---
 
 # Architecture Overview

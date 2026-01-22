@@ -79,6 +79,32 @@ export default defineConfig({
       tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 },
       head: [
         {
+          tag: 'script',
+          attrs: { type: 'application/ld+json' },
+          content: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'SoundBlue Docs',
+            url: 'https://soundbluemusic.github.io/public-monorepo',
+            description: 'Complete documentation for Context, Permissive, and Roots applications',
+            inLanguage: ['en', 'ko', 'ja'],
+            publisher: {
+              '@type': 'Organization',
+              name: 'SoundBlue Music',
+              url: 'https://soundbluemusic.com',
+            },
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: 'https://soundbluemusic.github.io/public-monorepo/?q={search_term_string}',
+              'query-input': 'required name=search_term_string',
+            },
+          }),
+        },
+        {
+          tag: 'meta',
+          attrs: { name: 'keywords', content: 'monorepo, React, TypeScript, Cloudflare Workers, SSR, D1, Korean dictionary, math documentation, web dev resources' },
+        },
+        {
           tag: 'meta',
           attrs: { name: 'google-site-verification', content: 'QWPMYT_MaDQIC8WTwnD_iwBWX8QWfeTR1hdkjYIclwc' },
         },
@@ -239,6 +265,7 @@ export default defineConfig({
       components: {
         Footer: './src/components/CustomFooter.astro',
         Header: './src/components/CustomHeader.astro',
+        Head: './src/components/CustomHead.astro',
       },
     }),
   ],

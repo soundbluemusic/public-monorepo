@@ -1,6 +1,11 @@
 ---
 title: Package Overview
 description: Overview of the 10 shared packages in the monorepo and their layer architecture
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: packages, monorepo, layer architecture, core, config, data, platform, i18n, search, seo, pwa, features, ui
 sidebar:
   order: 1
 ---

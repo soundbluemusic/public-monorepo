@@ -1,6 +1,11 @@
 ---
 title: Quick Start
 description: Get up and running with the SoundBlue Public Monorepo in minutes
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: quick start, installation, pnpm, Node.js, development server, Turborepo, build, monorepo setup
 ---
 
 # Quick Start Guide

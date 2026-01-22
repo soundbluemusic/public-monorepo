@@ -1,6 +1,11 @@
 ---
 title: Context Overview
 description: Complete documentation for Context - Korean Dictionary for Learners (학습자를 위한 한국어 사전)
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: Context app, Korean dictionary, Cloudflare D1, SSR, PWA, bilingual, language learning, search, React Router
 sidebar:
   order: 1
 ---

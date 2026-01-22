@@ -1,6 +1,11 @@
 ---
 title: Contributing Guide
 description: How to contribute to the SoundBlue Public Monorepo
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: contributing, pull request, code style, SSR, no downgrade policy, package layers, conventional commits, open source
 sidebar:
   order: 1
 ---

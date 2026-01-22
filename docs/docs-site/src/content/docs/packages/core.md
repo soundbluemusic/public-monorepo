@@ -1,6 +1,11 @@
 ---
 title: "@soundblue/core"
 description: Pure functions, types, and validation utilities - Layer 0 foundation package
+head:
+  - tag: meta
+    attrs:
+      name: keywords
+      content: core package, validation, utilities, types, TypeScript, pure functions, cn, debounce, throttle
 sidebar:
   order: 2
 ---
