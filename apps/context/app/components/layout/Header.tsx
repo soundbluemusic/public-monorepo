@@ -95,8 +95,8 @@ export function Header({ onMenuClick, sidebarCollapsed = false }: HeaderProps) {
                   results={results}
                   selectedIndex={selectedIndex}
                   localePath={localePath}
-                  onResultClick={(result) => {
-                    handleResultClick(result);
+                  onResultClick={() => {
+                    handleResultClick();
                     closeMobileSearch();
                   }}
                   onMouseEnter={handleMouseEnter}
@@ -149,10 +149,7 @@ export function Header({ onMenuClick, sidebarCollapsed = false }: HeaderProps) {
             </button>
 
             {/* 데스크톱/태블릿 검색 (sm 이상에서만) */}
-            <div
-              className="relative min-w-0 flex-1 max-w-70 hidden sm:block"
-              ref={containerRef}
-            >
+            <div className="relative min-w-0 flex-1 max-w-70 hidden sm:block" ref={containerRef}>
               <SearchInput
                 ref={inputRef}
                 query={query}

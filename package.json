@@ -107,10 +107,16 @@
     "tsx": "^4.19.2",
     "turbo": "^2.7.3",
     "vitest": "^4.0.16",
-    "zod": "^3.25.0"
+    "zod": "^4.3.5"
   },
   "engines": {
     "node": ">=20"
   },
-  "packageManager": "pnpm@10.11.0"
+  "packageManager": "pnpm@10.11.0",
+  "pnpm": {
+    "overrides": {
+      "astro>zod": "^3.25.0",
+      "@astrojs/starlight>zod": "^3.25.0"
+    }
+  }
 }

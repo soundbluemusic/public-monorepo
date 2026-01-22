@@ -210,7 +210,7 @@ export default function LibraryDetailPage() {
               {lib.tags.map((tag) => (
                 <Link
                   key={tag}
-                  to={localePath(`/libraries?tag=${encodeURIComponent(tag)}`)}
+                  to={localePath(`/libraries/?tag=${encodeURIComponent(tag)}`)}
                   className="px-3 py-1 rounded-full text-sm bg-(--bg-tertiary) text-(--text-secondary) hover:bg-(--bg-elevated) hover:text-(--text-primary) transition-colors"
                 >
                   {tag}
