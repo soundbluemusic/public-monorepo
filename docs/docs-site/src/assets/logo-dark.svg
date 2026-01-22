@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <!-- 열린 책 - 미니멀 (다크모드) -->
-  <path d="M4 8 Q16 5 16 5 Q16 5 28 8 L28 25 Q16 22 16 22 Q16 22 4 25 Z" fill="#60a5fa"/>
-  <path d="M16 5 L16 22" stroke="#93c5fd" stroke-width="0.5"/>
-  <!-- 체크마크 (문서 완료/가이드 상징) -->
-  <path d="M11 14 L14 17 L21 10" stroke="#1e293b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
