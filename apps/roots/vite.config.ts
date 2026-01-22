@@ -33,6 +33,7 @@ export default defineConfig({
       outputStructure: 'message-modules',
     }),
     VitePWA({
+      disable: true, // Temporarily disabled for TanStack Start compatibility
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'apple-touch-icon.svg', 'icons/*.svg'],
       manifest: false,

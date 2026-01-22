@@ -22,6 +22,12 @@ export default defineConfig({
     terserOptions: {
       compress: { drop_console: true, drop_debugger: true },
     },
+    rollupOptions: {
+      external: ['cloudflare:workers'],
+    },
+  },
+  ssr: {
+    external: ['cloudflare:workers'],
   },
   define: {
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'),
@@ -38,6 +44,7 @@ export default defineConfig({
       outputStructure: 'message-modules',
     }),
     VitePWA({
+      disable: true, // Temporarily disabled for TanStack Start compatibility
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'icons/*.svg'],
       manifest: false,
