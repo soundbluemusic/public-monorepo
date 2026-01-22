@@ -7,6 +7,7 @@ import {
 import { ArrowLeft, Calendar, CheckCircle, ExternalLink, Globe } from 'lucide-react';
 import { Link, useLoaderData } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
+import { APP_CONFIG } from '../config';
 import { getRelatedWebApis, getWebApiBySlug, getWebApiSlug, type WebAPI } from '../data/web-apis';
 import { useI18n } from '../i18n';
 
@@ -77,7 +78,7 @@ export default function WebApiDetailPage() {
         : 'text-red-500';
 
   // JSON-LD 구조화 데이터
-  const baseUrl = 'https://permissive.soundbluemusic.com';
+  const { baseUrl } = APP_CONFIG;
   const localePrefix = locale === 'ko' ? '/ko' : '';
 
   const breadcrumbItems: BreadcrumbItem[] = [

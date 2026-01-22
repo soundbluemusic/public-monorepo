@@ -126,5 +126,9 @@
   "algorithms": "알고리즘",
   "dataStructures": "자료구조",
   "nodesCount": "{count}개 노드",
-  "edgesCount": "{count}개 연결"
+  "edgesCount": "{count}개 연결",
+  "toast.addedToFavorites": "즐겨찾기에 추가되었습니다",
+  "toast.removedFromFavorites": "즐겨찾기에서 제거되었습니다",
+  "toast.saveFailed": "저장에 실패했습니다",
+  "toast.searchFailed": "검색 중 오류가 발생했습니다"
 }

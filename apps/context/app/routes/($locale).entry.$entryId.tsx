@@ -17,6 +17,7 @@ import {
   LinkedExample,
 } from '@/components/entry';
 import { Layout } from '@/components/layout';
+import { APP_CONFIG } from '@/config';
 import { getCategoryById } from '@/data/categories';
 import type { LocaleEntry } from '@/data/types';
 import { useI18n } from '@/i18n';
@@ -178,7 +179,7 @@ export default function EntryPage() {
   const handleMarkAsStudied = () => {
     markAsStudied(entry.id);
     toast({
-      message: locale === 'ko' ? '학습 완료로 표시되었습니다' : 'Marked as studied',
+      message: t('toast.markedAsStudied'),
       type: 'success',
     });
   };
@@ -186,13 +187,7 @@ export default function EntryPage() {
   const handleToggleFavorite = () => {
     const newState = toggleFavorite(entry.id);
     toast({
-      message: newState
-        ? locale === 'ko'
-          ? '즐겨찾기에 추가되었습니다'
-          : 'Added to favorites'
-        : locale === 'ko'
-          ? '즐겨찾기에서 제거되었습니다'
-          : 'Removed from favorites',
+      message: newState ? t('toast.addedToFavorites') : t('toast.removedFromFavorites'),
       type: 'success',
     });
   };
@@ -207,7 +202,7 @@ export default function EntryPage() {
   const categoryName = category?.name[locale] || category?.name.en || entry.categoryId;
 
   // JSON-LD 구조화 데이터
-  const baseUrl = 'https://context.soundbluemusic.com';
+  const { baseUrl } = APP_CONFIG;
   const localePrefix = locale === 'ko' ? '/ko' : '';
 
   const breadcrumbItems: BreadcrumbItem[] = [

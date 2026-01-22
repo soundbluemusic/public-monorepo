@@ -126,5 +126,9 @@
   "algorithms": "Algorithms",
   "dataStructures": "Data Structures",
   "nodesCount": "{count} nodes",
-  "edgesCount": "{count} edges"
+  "edgesCount": "{count} edges",
+  "toast.addedToFavorites": "Added to favorites",
+  "toast.removedFromFavorites": "Removed from favorites",
+  "toast.saveFailed": "Failed to save",
+  "toast.searchFailed": "Search failed"
 }

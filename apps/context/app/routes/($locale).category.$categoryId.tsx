@@ -5,6 +5,7 @@ import { ProgressBar } from '@soundblue/ui/primitives';
 import { useLoaderData } from 'react-router';
 import { EntryListItem } from '@/components/entry/EntryListItem';
 import { Layout } from '@/components/layout';
+import { APP_CONFIG } from '@/config';
 import { getCategoryById } from '@/data/categories';
 import type { Category, MeaningEntry } from '@/data/types';
 import { useStudyData } from '@/hooks';
@@ -104,7 +105,7 @@ export default function CategoryPage() {
   const studiedCount = entries.filter((e) => studiedIds.has(e.id)).length;
 
   // JSON-LD 구조화 데이터
-  const baseUrl = 'https://context.soundbluemusic.com';
+  const { baseUrl } = APP_CONFIG;
   const localePrefix = locale === 'ko' ? '/ko' : '';
 
   const breadcrumbItems: BreadcrumbItem[] = [

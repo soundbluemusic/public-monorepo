@@ -8,6 +8,7 @@ import { useAutoAnimate } from '@soundblue/ui/hooks';
 import { Link, useLoaderData, useParams } from 'react-router';
 import { ConceptCard } from '@/components/concept/ConceptCard';
 import { Layout } from '@/components/layout/Layout';
+import { APP_CONFIG } from '@/config';
 import { getConceptsByField as getConceptsByFieldStatic } from '@/data/concepts/index';
 import { getFieldById } from '@/data/fields';
 import { getSubfieldsByParent } from '@/data/subfields';
@@ -72,7 +73,7 @@ export default function FieldPage() {
   const [conceptsRef] = useAutoAnimate<HTMLDivElement>();
 
   // JSON-LD 구조화 데이터
-  const baseUrl = 'https://roots.soundbluemusic.com';
+  const { baseUrl } = APP_CONFIG;
   const localePrefix = locale === 'ko' ? '/ko' : '';
 
   if (!field) {

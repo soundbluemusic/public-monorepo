@@ -17,6 +17,7 @@ import { Layout } from '@/components/layout/Layout';
 import { ExampleList } from '@/components/math/Example';
 import { FormulaList } from '@/components/math/Formula';
 import { DifficultyBadge } from '@/components/ui/DifficultyBadge';
+import { APP_CONFIG } from '@/config';
 import { getConceptById as getConceptByIdStatic } from '@/data/concepts/index';
 import { getFieldById } from '@/data/fields';
 import { getSubfieldById } from '@/data/subfields';
@@ -168,20 +169,20 @@ export default function ConceptPage() {
         await favorites.remove(conceptId);
         setIsFavorite(false);
         toast({
-          message: locale === 'ko' ? '즐겨찾기에서 제거되었습니다' : 'Removed from favorites',
+          message: t('toast.removedFromFavorites'),
           type: 'success',
         });
       } else {
         await favorites.add(conceptId);
         setIsFavorite(true);
         toast({
-          message: locale === 'ko' ? '즐겨찾기에 추가되었습니다' : 'Added to favorites',
+          message: t('toast.addedToFavorites'),
           type: 'success',
         });
       }
     } catch {
       toast({
-        message: locale === 'ko' ? '저장에 실패했습니다' : 'Failed to save',
+        message: t('toast.saveFailed'),
         type: 'error',
       });
     }
@@ -199,7 +200,7 @@ export default function ConceptPage() {
     typeof rawContent === 'string' ? { definition: rawContent, examples: [] } : rawContent;
 
   // JSON-LD 구조화 데이터
-  const baseUrl = 'https://roots.soundbluemusic.com';
+  const { baseUrl } = APP_CONFIG;
   const localePrefix = locale === 'ko' ? '/ko' : '';
 
   const breadcrumbItems: BreadcrumbItem[] = [

@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { Link, useLoaderData } from 'react-router';
 import DocsLayout from '../components/layout/DocsLayout';
+import { APP_CONFIG } from '../config';
 import {
   getCategorySlug,
   getLibraryBySlug,
@@ -85,7 +86,7 @@ export default function LibraryDetailPage() {
   const isKorean = locale === 'ko';
 
   // JSON-LD 구조화 데이터
-  const baseUrl = 'https://permissive.soundbluemusic.com';
+  const { baseUrl } = APP_CONFIG;
   const localePrefix = locale === 'ko' ? '/ko' : '';
 
   const breadcrumbItems: BreadcrumbItem[] = [

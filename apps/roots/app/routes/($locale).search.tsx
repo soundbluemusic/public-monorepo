@@ -64,14 +64,14 @@ export default function SearchPage() {
         .catch(() => {
           setIsSearching(false);
           toast({
-            message: locale === 'ko' ? '검색 중 오류가 발생했습니다' : 'Search failed',
+            message: t('toast.searchFailed'),
             type: 'error',
           });
         });
     } else {
       setResults([]);
     }
-  }, [query, locale]);
+  }, [query, locale, t]);
 
   return (
     <Layout>

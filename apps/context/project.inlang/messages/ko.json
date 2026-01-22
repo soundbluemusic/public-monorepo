@@ -224,5 +224,12 @@
   "offlineUpdate": "업데이트 가능",
   "offlineUpdateDesc": "새로운 어휘 데이터가 있습니다",
   "offlineDelete": "오프라인 데이터 삭제",
-  "offlineDeleteConfirm": "오프라인 데이터를 삭제하시겠습니까?"
+  "offlineDeleteConfirm": "오프라인 데이터를 삭제하시겠습니까?",
+  "toast.markedAsStudied": "학습 완료로 표시되었습니다",
+  "toast.addedToFavorites": "즐겨찾기에 추가되었습니다",
+  "toast.removedFromFavorites": "즐겨찾기에서 제거되었습니다",
+  "toast.offlineDataDeleted": "오프라인 데이터가 삭제되었습니다",
+  "toast.deleteFailed": "삭제에 실패했습니다",
+  "toast.colorCodeCopied": "색상 코드가 복사되었습니다",
+  "toast.copyFailed": "복사에 실패했습니다"
 }

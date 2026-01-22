@@ -69,7 +69,7 @@ function isDarkColor(hex: string): boolean {
 }
 
 export function ColorSwatch({ colorCode, colorName, className }: ColorSwatchProps) {
-  const { locale } = useI18n();
+  const { locale, t } = useI18n();
   const [copied, setCopied] = useState(false);
   const _isDark = isDarkColor(colorCode);
 
@@ -78,13 +78,13 @@ export function ColorSwatch({ colorCode, colorName, className }: ColorSwatchProp
       await navigator.clipboard.writeText(colorCode);
       setCopied(true);
       toast({
-        message: locale === 'ko' ? '색상 코드가 복사되었습니다' : 'Color code copied',
+        message: t('toast.colorCodeCopied'),
         type: 'success',
       });
       setTimeout(() => setCopied(false), 2000);
     } catch {
       toast({
-        message: locale === 'ko' ? '복사에 실패했습니다' : 'Failed to copy',
+        message: t('toast.copyFailed'),
         type: 'error',
       });
     }

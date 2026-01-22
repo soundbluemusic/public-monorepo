@@ -224,5 +224,12 @@
   "offlineUpdate": "Update Available",
   "offlineUpdateDesc": "New vocabulary data is available",
   "offlineDelete": "Delete offline data",
-  "offlineDeleteConfirm": "Are you sure you want to delete offline data?"
+  "offlineDeleteConfirm": "Are you sure you want to delete offline data?",
+  "toast.markedAsStudied": "Marked as studied",
+  "toast.addedToFavorites": "Added to favorites",
+  "toast.removedFromFavorites": "Removed from favorites",
+  "toast.offlineDataDeleted": "Offline data deleted",
+  "toast.deleteFailed": "Delete failed",
+  "toast.colorCodeCopied": "Color code copied",
+  "toast.copyFailed": "Failed to copy"
 }
