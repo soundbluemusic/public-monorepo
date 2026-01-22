@@ -102,7 +102,7 @@ export function BaseSidebar({
       {/* Sidebar */}
       <aside
         className={cn(
-          'fixed left-0 z-50 bg-(--bg-elevated) border-r border-(--border-primary)',
+          'fixed left-0 z-50 bg-elevated border-r border-primary',
           // Mobile: full height from top, Desktop: below header
           'top-0 h-full lg:top-(--header-height) lg:h-[calc(100vh-var(--header-height))]',
           'flex flex-col transform transition-all duration-200',
