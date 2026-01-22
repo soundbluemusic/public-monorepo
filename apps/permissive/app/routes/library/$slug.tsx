@@ -80,9 +80,9 @@ export const Route = createFileRoute('/library/$slug')({
 
 function LibraryDetailPage() {
   const { library: lib, related } = Route.useLoaderData();
-  const locale = 'en';
-  const localePath = (path: string) => path;
-  const isKorean = false;
+  const _locale = 'en';
+  const _localePath = (path: string) => path;
+  const _isKorean = false;
 
   // JSON-LD 구조화 데이터
   const { baseUrl } = APP_CONFIG;
@@ -116,10 +116,12 @@ function LibraryDetailPage() {
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for Schema.org JSON-LD
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for Schema.org JSON-LD
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
 

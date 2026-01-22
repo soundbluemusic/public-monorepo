@@ -45,9 +45,9 @@ export const Route = createFileRoute('/ko/category/$categoryId')({
 
 function CategoryPageKo() {
   const { category, libraries } = Route.useLoaderData();
-  const locale = 'ko';
-  const localePath = (path: string) => `/ko${path}`;
-  const isKorean = true;
+  const _locale = 'ko';
+  const _localePath = (path: string) => `/ko${path}`;
+  const _isKorean = true;
 
   return (
     <DocsLayout>

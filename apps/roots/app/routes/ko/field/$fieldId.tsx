@@ -107,6 +107,7 @@ function FieldPageKo() {
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for Schema.org JSON-LD
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 

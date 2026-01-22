@@ -20,7 +20,7 @@ export const Route = createFileRoute('/built-with')({
 });
 
 function BuiltWithPage() {
-  const locale = 'en';
+  const _locale = 'en';
   const groups = getOpenSourceGrouped();
 
   return (

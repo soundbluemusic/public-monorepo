@@ -32,7 +32,7 @@ function dedupeFile(filePath: string): { before: number; after: number; removed:
   }
 
   if (removed.length > 0) {
-    writeFileSync(filePath, JSON.stringify(deduped, null, 2) + '\n', 'utf-8');
+    writeFileSync(filePath, `${JSON.stringify(deduped, null, 2)}\n`, 'utf-8');
   }
 
   return {
@@ -45,7 +45,7 @@ function dedupeFile(filePath: string): { before: number; after: number; removed:
 async function main(): Promise<void> {
   console.log('='.repeat(60));
   console.log('Deduplicating context entries');
-  console.log('='.repeat(60) + '\n');
+  console.log(`${'='.repeat(60)}\n`);
 
   const files = readdirSync(ENTRIES_DIR).filter((f) => f.endsWith('.json'));
   let totalRemoved = 0;

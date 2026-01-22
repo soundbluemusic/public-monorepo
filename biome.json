@@ -60,6 +60,7 @@
       "!**/.output",
       "!**/dist",
       "!**/build",
+      "!**/routeTree.gen.ts",
       "!**/*.min.js",
       "!**/data/**/*.json",
       "!**/apps/context/app/data/generated",

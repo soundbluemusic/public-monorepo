@@ -31,9 +31,9 @@ const pages: { path: string; labelEn: string; labelKo: string; icon: ReactNode }
 ];
 
 function SitemapPageKo() {
-  const locale = 'ko';
-  const localePath = (path: string) => `/ko${path}`;
-  const isKorean = true;
+  const _locale = 'ko';
+  const _localePath = (path: string) => `/ko${path}`;
+  const _isKorean = true;
 
   return (
     <DocsLayout>

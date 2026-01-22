@@ -98,6 +98,7 @@ const ToastItem = memo(function ToastItem({
   };
 
   return (
+    // biome-ignore lint/a11y/useSemanticElements: role="status" with aria-live is correct for toast notifications
     <div
       role="status"
       aria-live="polite"
@@ -148,6 +149,7 @@ export const ToastContainer = memo(function ToastContainer() {
   }
 
   return (
+    // biome-ignore lint/a11y/useSemanticElements: role="region" with aria-label is correct for toast container
     <div
       className={cn(
         'fixed bottom-24 left-1/2 -translate-x-1/2 z-50',

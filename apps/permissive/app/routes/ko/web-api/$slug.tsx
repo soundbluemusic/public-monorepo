@@ -69,8 +69,8 @@ export const Route = createFileRoute('/ko/web-api/$slug')({
 function WebApiDetailPageKo() {
   const { api, related } = Route.useLoaderData();
   const locale = 'ko';
-  const localePath = (path: string) => `/ko${path}`;
-  const isKorean = true;
+  const _localePath = (path: string) => `/ko${path}`;
+  const _isKorean = true;
 
   // 브라우저 지원율을 숫자로 파싱
   const supportPercent = Number.parseInt(api.support.replace('%', ''), 10);
@@ -111,10 +111,12 @@ function WebApiDetailPageKo() {
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for Schema.org JSON-LD
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for Schema.org JSON-LD
         dangerouslySetInnerHTML={{ __html: JSON.stringify(techArticleSchema) }}
       />
 

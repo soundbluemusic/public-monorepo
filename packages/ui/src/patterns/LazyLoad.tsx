@@ -110,6 +110,7 @@ export interface LazyLoadProps {
  */
 export function LazyLoadSkeleton({ className = '' }: { className?: string }) {
   return (
+    // biome-ignore lint/a11y/useSemanticElements: role="status" is correct for loading indicators
     <div className={`animate-pulse ${className}`} role="status" aria-label="Loading content">
       <div className="skeleton h-32 w-full rounded-lg" />
     </div>

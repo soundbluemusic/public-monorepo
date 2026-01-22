@@ -67,7 +67,7 @@ interface UseBrowseFiltersReturn {
 
 export function useBrowseFilters(): UseBrowseFiltersReturn {
   const routerState = useRouterState();
-  const navigate = useNavigate();
+  const _navigate = useNavigate();
 
   // Parse search params from router state
   const getSearchParams = useCallback(() => {

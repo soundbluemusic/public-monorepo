@@ -26,6 +26,7 @@ interface SkeletonTextProps {
 export function SkeletonText({ lines = 3, className = '' }: SkeletonTextProps) {
   return (
     <div className={cn('space-y-2', className)}>
+      {/* biome-ignore lint/suspicious/noArrayIndexKey: Static skeleton items never reorder */}
       {Array.from({ length: lines }, (_, i) => (
         <div
           key={`skeleton-line-${i}`}
@@ -67,6 +68,7 @@ interface SkeletonListProps {
 export function SkeletonList({ count = 5, className = '' }: SkeletonListProps) {
   return (
     <div className={cn('space-y-3', className)}>
+      {/* biome-ignore lint/suspicious/noArrayIndexKey: Static skeleton items never reorder */}
       {Array.from({ length: count }, (_, i) => (
         <div key={`skeleton-list-${i}`} className="flex items-center gap-3">
           <div className="w-10 h-10 shrink-0 animate-pulse bg-(--bg-tertiary) rounded-full" />
@@ -97,6 +99,7 @@ export function SkeletonGrid({ count = 6, columns = 3, className = '' }: Skeleto
 
   return (
     <div className={cn('grid gap-4', columnClass, className)}>
+      {/* biome-ignore lint/suspicious/noArrayIndexKey: Static skeleton items never reorder */}
       {Array.from({ length: count }, (_, i) => (
         <SkeletonCard key={`skeleton-grid-${i}`} />
       ))}

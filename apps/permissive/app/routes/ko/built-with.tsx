@@ -20,7 +20,7 @@ export const Route = createFileRoute('/ko/built-with')({
 });
 
 function BuiltWithPageKo() {
-  const locale = 'ko';
+  const _locale = 'ko';
   const groups = getOpenSourceGrouped();
 
   return (

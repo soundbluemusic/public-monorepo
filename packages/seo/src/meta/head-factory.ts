@@ -212,9 +212,9 @@ export function dynamicHeadFactoryKo<T>(
   getLocalizedMeta: (data: T) => LocalizedMeta,
   baseUrl: string,
   getPathname?: (data: T) => string,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // biome-ignore lint/suspicious/noExplicitAny: TanStack Router context type is complex and varies by route
 ): (args: any) => HeadConfig {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // biome-ignore lint/suspicious/noExplicitAny: TanStack Router context type is complex and varies by route
   return (ctx: any): HeadConfig => {
     const loaderData = ctx.loaderData as T;
     const localizedMeta = getLocalizedMeta(loaderData);
@@ -237,9 +237,9 @@ export function dynamicHeadFactoryEn<T>(
   getLocalizedMeta: (data: T) => LocalizedMeta,
   baseUrl: string,
   getPathname?: (data: T) => string,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // biome-ignore lint/suspicious/noExplicitAny: TanStack Router context type is complex and varies by route
 ): (args: any) => HeadConfig {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // biome-ignore lint/suspicious/noExplicitAny: TanStack Router context type is complex and varies by route
   return (ctx: any): HeadConfig => {
     const loaderData = ctx.loaderData as T;
     const localizedMeta = getLocalizedMeta(loaderData);

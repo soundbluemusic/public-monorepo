@@ -9,7 +9,12 @@
 import { env } from 'cloudflare:workers';
 import { createServerFn } from '@tanstack/react-start';
 import type { LocaleEntry } from '../data/types';
-import { getEntryByIdFromD1, getEntryCounts as getEntryCountsFromD1 } from './d1';
+import {
+  getCategoriesFromD1,
+  getEntryByIdFromD1,
+  getEntryCounts as getEntryCountsFromD1,
+  getEntryIdsByCategoryFromD1,
+} from './d1';
 
 /**
  * 서버에서 D1 데이터베이스에 접근 (cloudflare:workers env 사용)
@@ -54,5 +59,37 @@ export const fetchEntryCountsFromD1 = createServerFn().handler(
     }
 
     return await getEntryCountsFromD1(db);
+  },
+);
+
+/**
+ * 모든 카테고리를 D1에서 로드하는 서버 함수 (사이트맵용)
+ */
+export const fetchCategoriesFromD1 = createServerFn().handler(async () => {
+  const db = getD1Database();
+
+  if (!db) {
+    console.error('[fetchCategoriesFromD1] D1 database not available');
+    return [];
+  }
+
+  return await getCategoriesFromD1(db);
+});
+
+/**
+ * 카테고리별 Entry ID 목록을 D1에서 로드하는 서버 함수 (사이트맵용)
+ */
+export const fetchEntryIdsByCategoryFromD1 = createServerFn().handler(
+  // @ts-expect-error - TanStack Start createServerFn handler type incompatibility
+  async (opts: { data: { categoryId: string } }): Promise<string[]> => {
+    const { categoryId } = opts.data;
+    const db = getD1Database();
+
+    if (!db) {
+      console.error('[fetchEntryIdsByCategoryFromD1] D1 database not available');
+      return [];
+    }
+
+    return await getEntryIdsByCategoryFromD1(db, categoryId);
   },
 );

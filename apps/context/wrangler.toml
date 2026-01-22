@@ -1,7 +1,10 @@
 name = "context"
-main = "@tanstack/react-start/server-entry"
+main = "dist/server/index.js"
 compatibility_date = "2026-01-22"
 compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "dist/client"
 
 [observability]
 enabled = true

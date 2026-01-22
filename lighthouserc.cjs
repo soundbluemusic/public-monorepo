@@ -9,7 +9,7 @@ const app = process.env.APP || 'roots';
 module.exports = {
   ci: {
     collect: {
-      staticDistDir: `./apps/${app}/build/client`,
+      staticDistDir: `./apps/${app}/dist/client`,
       url: ['http://localhost/index.html'],
       numberOfRuns: 1,
       // chromePath는 환경변수 CHROME_PATH가 있으면 사용, 없으면 자동 감지

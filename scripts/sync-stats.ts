@@ -847,9 +847,9 @@ function updateMetadataJson(filePath: string, stats: AllStats): boolean {
     }
   }
 
-  const newContent = JSON.stringify(metadata, null, 2) + '\n';
+  const newContent = `${JSON.stringify(metadata, null, 2)}\n`;
 
-  if (newContent !== originalContent + '\n' && newContent !== originalContent) {
+  if (newContent !== `${originalContent}\n` && newContent !== originalContent) {
     writeFileSync(filePath, newContent, 'utf-8');
     return true;
   }

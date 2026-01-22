@@ -1,10 +1,10 @@
 name = "permissive"
-main = "@tanstack/react-start/server-entry"
+main = "dist/server/index.js"
 compatibility_date = "2026-01-22"
 compatibility_flags = ["nodejs_compat"]
 
 [assets]
-directory = "build/client"
+directory = "dist/client"
 
 # D1 Databases
 [[d1_databases]]

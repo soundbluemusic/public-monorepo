@@ -16,8 +16,8 @@ export const Route = createFileRoute('/$')({
 });
 
 function NotFound() {
-  const locale = 'en';
-  const localePath = (path: string) => path;
+  const _locale = 'en';
+  const _localePath = (path: string) => path;
 
   return (
     <DocsLayout>

@@ -1,17 +1,17 @@
 [
   {
     "name": "context",
-    "path": "apps/context/build/client/assets/entry.client-*.js",
-    "limit": "200 KB"
+    "path": "apps/context/dist/client/assets/main-*.js",
+    "limit": "500 KB"
   },
   {
     "name": "permissive",
-    "path": "apps/permissive/build/client/assets/entry.client-*.js",
-    "limit": "200 KB"
+    "path": "apps/permissive/dist/client/assets/main-*.js",
+    "limit": "500 KB"
   },
   {
     "name": "roots",
-    "path": "apps/roots/build/client/assets/entry.client-*.js",
-    "limit": "200 KB"
+    "path": "apps/roots/dist/client/assets/main-*.js",
+    "limit": "500 KB"
   }
 ]

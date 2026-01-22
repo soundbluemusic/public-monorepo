@@ -10,6 +10,7 @@ export interface LoadingSpinnerProps {
 /** Default loading spinner component */
 export function LoadingSpinner({ className = '' }: LoadingSpinnerProps) {
   return (
+    // biome-ignore lint/a11y/useSemanticElements: role="status" is semantically correct for loading indicators, <output> is for calculation results
     <div className={`flex items-center justify-center p-4 ${className}`} role="status">
       <svg
         className="h-6 w-6 animate-spin text-accent"
