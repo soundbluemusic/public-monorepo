@@ -5,11 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "prebuild": "mkdir -p dist/server && echo 'export default {}' > dist/server/index.js",
     "build": "vite build",
-    "postbuild": "node scripts/inject-polyfill.mjs",
     "sitemap": "tsx scripts/generate-sitemaps.ts",
-    "deploy": "pnpm build && pnpm sitemap && wrangler deploy",
+    "deploy": "pnpm build && wrangler deploy",
     "preview": "wrangler dev",
     "start": "wrangler dev",
     "lint": "biome lint .",
