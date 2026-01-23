@@ -1,5 +1,5 @@
+import { Link, useLocation } from '@tanstack/react-router';
 import type { ReactNode } from 'react';
-import { Link, useLocation } from 'react-router';
 import { Header } from './Header';
 import { Sidebar } from './Sidebar';
 import { TableOfContents } from './TableOfContents';
@@ -66,13 +66,11 @@ function getLocaleFromPath(pathname: string): 'en' | 'ko' | 'ja' {
 }
 
 function PrevNextLinks({ locale }: { locale: 'en' | 'ko' | 'ja'; currentPath: string }) {
+  const homePath = locale === 'en' ? '/' : `/${locale}/`;
   // Simplified - would need proper navigation structure
   return (
     <div className="flex justify-between w-full">
-      <Link
-        to={locale === 'en' ? '/public-monorepo/' : `/public-monorepo/${locale}/`}
-        className="text-(--accent) hover:underline"
-      >
+      <Link to={homePath as '/'} className="text-(--accent) hover:underline">
         ← Home
       </Link>
     </div>

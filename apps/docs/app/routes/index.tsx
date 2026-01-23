@@ -1,18 +1,20 @@
-import type { MetaFunction } from 'react-router';
-import { Link } from 'react-router';
+import { createFileRoute, Link } from '@tanstack/react-router';
 import { DocsLayout } from '@/components/DocsLayout';
 
-export const meta: MetaFunction = () => [
-  { title: 'SoundBlue Docs' },
-  {
-    name: 'description',
-    content: 'Complete documentation for Context, Permissive, and Roots applications',
-  },
-];
+export const Route = createFileRoute('/')({
+  head: () => ({
+    meta: [
+      { title: 'SoundBlue Docs' },
+      {
+        name: 'description',
+        content: 'Complete documentation for Context, Permissive, and Roots applications',
+      },
+    ],
+  }),
+  component: HomePage,
+});
 
-export default function HomePage() {
-  const basePath = '/public-monorepo';
-
+function HomePage() {
   return (
     <DocsLayout>
       <div className="max-w-4xl">
@@ -28,13 +30,13 @@ export default function HomePage() {
             <Card
               title="Introduction"
               description="Learn about the monorepo structure and architecture"
-              href={`${basePath}/guides/introduction`}
+              href="/guides/introduction"
               icon="📖"
             />
             <Card
               title="Quick Start"
               description="Get up and running in minutes"
-              href={`${basePath}/guides/quickstart`}
+              href="/guides/quickstart"
               icon="🚀"
             />
           </div>
@@ -47,19 +49,19 @@ export default function HomePage() {
             <Card
               title="Context"
               description="Korean dictionary for learners"
-              href={`${basePath}/apps/context/overview`}
+              href="/apps/context/overview"
               icon="📖"
             />
             <Card
               title="Permissive"
               description="Web development resources"
-              href={`${basePath}/apps/permissive/overview`}
+              href="/apps/permissive/overview"
               icon="🔧"
             />
             <Card
               title="Roots"
               description="Math documentation"
-              href={`${basePath}/apps/roots/overview`}
+              href="/apps/roots/overview"
               icon="📐"
             />
           </div>
@@ -72,7 +74,7 @@ export default function HomePage() {
             The monorepo contains 10 shared packages organized in layers.
           </p>
           <Link
-            to={`${basePath}/packages`}
+            to={'/packages' as '/'}
             className="inline-flex items-center gap-2 text-(--accent) hover:underline"
           >
             View all packages →
@@ -99,7 +101,7 @@ export default function HomePage() {
               GitHub
             </a>
             <Link
-              to={`${basePath}/contributing`}
+              to={'/contributing' as '/'}
               className="inline-flex items-center gap-2 px-4 py-2 bg-(--bg-secondary) hover:bg-(--bg-tertiary) rounded-lg transition-colors"
             >
               Contributing
@@ -124,7 +126,7 @@ function Card({
 }) {
   return (
     <Link
-      to={href}
+      to={href as string}
       className="block p-4 bg-(--bg-secondary) hover:bg-(--bg-tertiary) rounded-lg transition-colors"
     >
       <div className="flex items-center gap-2 mb-2">

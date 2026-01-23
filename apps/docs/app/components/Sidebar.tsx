@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router';
+import { Link, useLocation } from '@tanstack/react-router';
 
 interface SidebarProps {
   locale: 'en' | 'ko' | 'ja';
@@ -11,7 +11,7 @@ interface SidebarSection {
 
 export function Sidebar({ locale }: SidebarProps) {
   const location = useLocation();
-  const basePath = locale === 'en' ? '/public-monorepo' : `/public-monorepo/${locale}`;
+  const basePath = locale === 'en' ? '' : `/${locale}`;
 
   const sections: SidebarSection[] = getSidebarSections(locale, basePath);
 

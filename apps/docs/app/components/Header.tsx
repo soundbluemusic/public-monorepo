@@ -1,5 +1,5 @@
+import { Link } from '@tanstack/react-router';
 import { useState } from 'react';
-import { Link } from 'react-router';
 import { SearchDialog } from './SearchDialog';
 
 interface HeaderProps {
@@ -10,8 +10,7 @@ export function Header({ locale }: HeaderProps) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const basePath = '/public-monorepo';
-  const localePath = locale === 'en' ? basePath : `${basePath}/${locale}`;
+  const localePath = locale === 'en' ? '/' : `/${locale}`;
 
   const labels = {
     en: { search: 'Search...', github: 'GitHub', theme: 'Toggle theme' },
@@ -133,12 +132,11 @@ export function Header({ locale }: HeaderProps) {
 
 function LanguageSelector({ currentLocale }: { currentLocale: 'en' | 'ko' | 'ja' }) {
   const [isOpen, setIsOpen] = useState(false);
-  const basePath = '/public-monorepo';
 
   const languages = [
-    { code: 'en', label: 'English', path: basePath },
-    { code: 'ko', label: '한국어', path: `${basePath}/ko` },
-    { code: 'ja', label: '日本語', path: `${basePath}/ja` },
+    { code: 'en', label: 'English', path: '/' },
+    { code: 'ko', label: '한국어', path: '/ko' },
+    { code: 'ja', label: '日本語', path: '/ja' },
   ] as const;
 
   const current = languages.find((l) => l.code === currentLocale) ?? languages[0];
@@ -174,7 +172,7 @@ function LanguageSelector({ currentLocale }: { currentLocale: 'en' | 'ko' | 'ja'
             {languages.map((lang) => (
               <Link
                 key={lang.code}
-                to={lang.path}
+                to={lang.path as '/'}
                 onClick={() => setIsOpen(false)}
                 className={`block px-4 py-2 text-sm hover:bg-(--bg-secondary) ${
                   lang.code === currentLocale ? 'text-(--accent)' : ''

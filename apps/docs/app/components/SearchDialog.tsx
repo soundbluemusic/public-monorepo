@@ -1,6 +1,6 @@
+import { Link } from '@tanstack/react-router';
 import MiniSearch from 'minisearch';
 import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router';
 
 interface SearchDialogProps {
   isOpen: boolean;
@@ -113,7 +113,7 @@ export function SearchDialog({ isOpen, onClose, locale }: SearchDialogProps) {
 
   if (!isOpen) return null;
 
-  const basePath = locale === 'en' ? '/public-monorepo' : `/public-monorepo/${locale}`;
+  const basePath = locale === 'en' ? '' : `/${locale}`;
   const quickLinks = getQuickLinks(locale, basePath);
 
   return (
@@ -270,56 +270,56 @@ function getDocsData(): SearchDoc[] {
       id: '1',
       title: 'Quick Start',
       description: 'Get started with the monorepo in minutes',
-      path: '/public-monorepo/guides/quickstart',
+      path: '/guides/quickstart',
       section: 'Getting Started',
     },
     {
       id: '2',
       title: 'Architecture',
       description: 'Understand the SSG architecture and package layers',
-      path: '/public-monorepo/guides/architecture',
+      path: '/guides/architecture',
       section: 'Getting Started',
     },
     {
       id: '3',
       title: 'Context App',
       description: 'Korean dictionary application',
-      path: '/public-monorepo/apps/context/overview',
+      path: '/apps/context/overview',
       section: 'Apps',
     },
     {
       id: '4',
       title: 'Permissive App',
       description: 'Web development resources',
-      path: '/public-monorepo/apps/permissive/overview',
+      path: '/apps/permissive/overview',
       section: 'Apps',
     },
     {
       id: '5',
       title: 'Roots App',
       description: 'Math documentation',
-      path: '/public-monorepo/apps/roots/overview',
+      path: '/apps/roots/overview',
       section: 'Apps',
     },
     {
       id: '6',
       title: '@soundblue/core',
       description: 'Core utilities, validation, and types',
-      path: '/public-monorepo/packages/core',
+      path: '/packages/core',
       section: 'Packages',
     },
     {
       id: '7',
       title: '@soundblue/ui',
       description: 'React UI components',
-      path: '/public-monorepo/packages/ui',
+      path: '/packages/ui',
       section: 'Packages',
     },
     {
       id: '8',
       title: 'AI Guidelines',
       description: 'Guidelines for AI assistants',
-      path: '/public-monorepo/ai-guidelines',
+      path: '/ai-guidelines',
       section: 'AI Guidelines',
     },
   ];
