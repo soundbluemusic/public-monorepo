@@ -104,38 +104,65 @@ if (!workerContent.includes('handleApiRoute')) {
 
 // Wrap the fetch handler to process API routes first
 // Find the main handler export pattern and wrap it
-// Look for patterns like: {fetch:async(r,e,t)=>...} or {async fetch(r,e,t){...}}
-// Dynamically find the original handler variable name from exports
+// The Worker handler is exported as G (not F - F is createServerEntry)
 function findOriginalHandlerName(content) {
-  // Look for pattern like "gd as F" or similar in export statement
-  const exportMatch = content.match(/export\{[^}]*?(\w+) as F[,}]/);
+  // Look for pattern like "ad as G" or similar in export statement
+  // G is the Worker handler that gets exported as default by index.js
+  const exportMatch = content.match(/export\{[^}]*?(\w+) as G[,}]/);
   if (exportMatch) {
     return exportMatch[1];
   }
+  // Fallback: look for pattern like "gd as F" (older versions)
+  const fallbackMatch = content.match(/export\{[^}]*?(\w+) as F[,}]/);
+  if (fallbackMatch) {
+    return fallbackMatch[1];
+  }
   // Fallback patterns
-  const patterns = ['gd', 'Mx', 'w'];
+  const patterns = ['ad', 'gd', 'Mx', 'w'];
   for (const p of patterns) {
-    if (content.includes(`const ${p}={async fetch(`)) {
+    if (content.includes(`const ${p}={`) || content.includes(`var ${p}={`)) {
       return p;
     }
   }
-  return 'gd'; // default
+  return 'ad'; // default
 }
 
 const originalHandlerName = findOriginalHandlerName(workerContent);
+console.log(`ℹ️  Found handler variable: ${originalHandlerName}`);
 
 const fetchWrapperCode = `
 // Wrap original fetch to handle API routes first and set global env for SSR
 const __originalHandler__ = typeof ${originalHandlerName} !== 'undefined' ? ${originalHandlerName} : null;
+// Static asset paths that should be served by Workers Assets
+const __isStaticAsset__ = (pathname) => {
+  return pathname.startsWith('/assets/') ||
+         pathname.startsWith('/icons/') ||
+         pathname.startsWith('/screenshots/') ||
+         pathname === '/favicon.ico' ||
+         pathname === '/manifest.json' ||
+         pathname === '/robots.txt' ||
+         pathname === '/sitemap.xsl' ||
+         pathname.endsWith('.png') ||
+         pathname.endsWith('.jpg') ||
+         pathname.endsWith('.svg') ||
+         pathname.endsWith('.woff2') ||
+         pathname.endsWith('.webmanifest');
+};
 const __wrappedHandler__ = __originalHandler__ ? {
   ...__originalHandler__,
   async fetch(request, env, ctx) {
     // Set global env for createServerFn handlers using require('cloudflare:workers')
     globalThis.__cfEnv__ = env;
-    // Handle API routes first
+    const url = new URL(request.url);
+    const pathname = url.pathname;
+    // Serve static assets via Workers Assets binding
+    if (__isStaticAsset__(pathname) && env.ASSETS) {
+      return env.ASSETS.fetch(request);
+    }
+    // Handle API routes
     const apiResponse = await handleApiRoute(request, env);
     if (apiResponse) return apiResponse;
-    // Pass to TanStack Start handler
+    // Pass to TanStack Start handler for SSR
     return __originalHandler__.fetch(request, env, ctx);
   }
 } : null;
@@ -147,10 +174,6 @@ if (!workerContent.includes('__wrappedHandler__')) {
   const exportIndex = workerContent.lastIndexOf('export{');
   if (exportIndex > 0) {
     workerContent = workerContent.slice(0, exportIndex) + fetchWrapperCode + workerContent.slice(exportIndex);
-
-    // Update the export to use wrapped handler
-    // Change "Mx as w" to "__wrappedHandler__ as w" in exports
-    workerContent = workerContent.replace(/Mx as w/g, '__wrappedHandler__ as w');
     console.log('✅ Wrapped fetch handler for API routes');
   }
 }
@@ -176,19 +199,38 @@ const indexPath = path.join(distDir, 'index.js');
 if (fs.existsSync(indexPath)) {
   let indexContent = fs.readFileSync(indexPath, 'utf8');
 
-  // The index.js imports a specific export (like F) which is the original handler
-  // We need to change it to import the default export which is our wrapped handler
-  // Pattern: import{F as e}from"./assets/worker-entry-xxx.js" -> import e from"./assets/worker-entry-xxx.js"
-  const importPattern = /import\{(\w+) as (\w+)\}from"(\.\/assets\/worker-entry-[^"]+\.js)"/;
-  const match = indexContent.match(importPattern);
-  if (match) {
-    const [fullMatch, originalExport, alias, path] = match;
-    // Change to default import
-    indexContent = indexContent.replace(
-      fullMatch,
-      `import ${alias} from"${path}"`
-    );
-    console.log(`✅ Fixed index.js to use default (wrapped) export instead of ${originalExport}`);
+  // Current format: import{F as e,G as r}from"./assets/worker-entry-xxx.js";...;export{e as createServerEntry,r as default}
+  // Target format: import __handler__,{F as e}from"./assets/worker-entry-xxx.js";...;export{e as createServerEntry,__handler__ as default}
+
+  // Pattern 1: Match import statement with multiple named imports including G
+  const multiImportPattern = /import\{([^}]+)\}from"(\.\/assets\/worker-entry-[^"]+\.js)"/;
+  const importMatch = indexContent.match(multiImportPattern);
+
+  if (importMatch) {
+    const [fullImport, namedImports, workerPath] = importMatch;
+    // Parse named imports: "F as e,G as r" -> [{orig: 'F', alias: 'e'}, {orig: 'G', alias: 'r'}]
+    const imports = namedImports.split(',').map((s) => {
+      const [orig, alias] = s.trim().split(' as ');
+      return { orig, alias };
+    });
+
+    // Find the G import (this is the handler that becomes default)
+    const gImport = imports.find((i) => i.orig === 'G');
+    // Keep other imports (F, etc.)
+    const otherImports = imports.filter((i) => i.orig !== 'G');
+
+    if (gImport) {
+      // Build new import: import __handler__,{F as e}from"./worker-entry.js"
+      const namedPart = otherImports.length > 0 ? `,{${otherImports.map((i) => `${i.orig} as ${i.alias}`).join(',')}}` : '';
+      const newImport = `import __handler__${namedPart}from"${workerPath}"`;
+
+      indexContent = indexContent.replace(fullImport, newImport);
+
+      // Update export: change "r as default" to "__handler__ as default"
+      indexContent = indexContent.replace(new RegExp(`${gImport.alias} as default`, 'g'), '__handler__ as default');
+
+      console.log(`✅ Fixed index.js to use default (wrapped) export`);
+    }
   }
 
   fs.writeFileSync(indexPath, indexContent);
