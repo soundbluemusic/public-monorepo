@@ -61,7 +61,7 @@
   /* Text */
   --text-primary: #f0eef5;
   --text-secondary: #b8b3c8;
-  --text-tertiary: #8b82a0;
+  --text-tertiary: #9d94b5; /* Lightened for WCAG AA 4.5:1 contrast (was #8b82a0 = 4.04:1) */
 
   /* Accent */
   --accent-primary: #9b82ff;
