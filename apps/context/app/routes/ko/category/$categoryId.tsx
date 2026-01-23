@@ -11,14 +11,14 @@ import { EntryListItem } from '@/components/entry/EntryListItem';
 import { Layout } from '@/components/layout';
 import { APP_CONFIG } from '@/config';
 import { getCategoryById } from '@/data/categories';
-import { getEntriesByCategory } from '@/data/entries';
-import type { Category, MeaningEntry } from '@/data/types';
+import type { Category, LocaleEntry } from '@/data/types';
 import { useStudyData } from '@/hooks';
 import { useI18n } from '@/i18n';
+import { fetchEntriesByCategoryFromD1 } from '@/services/d1-server';
 
 interface LoaderData {
   category: Category;
-  entries: MeaningEntry[];
+  entries: LocaleEntry[];
 }
 
 export const Route = createFileRoute('/ko/category/$categoryId')({
@@ -29,7 +29,10 @@ export const Route = createFileRoute('/ko/category/$categoryId')({
       throw notFound();
     }
 
-    const entries = await getEntriesByCategory(params.categoryId);
+    // D1에서 엔트리 로드 (한국어 페이지이므로 locale: 'ko')
+    const entries = await fetchEntriesByCategoryFromD1({
+      data: { categoryId: params.categoryId, locale: 'ko' },
+    });
     return { category, entries };
   },
   head: dynamicHeadFactoryKo<LoaderData>(
@@ -118,7 +121,6 @@ function CategoryPage() {
 
         <div ref={listRef} className="space-y-1">
           {entries.map((entry) => {
-            const translation = entry.translations[locale];
             const isStudied = studiedIds.has(entry.id);
 
             return (
@@ -127,7 +129,7 @@ function CategoryPage() {
                 entryId={entry.id}
                 korean={entry.korean}
                 romanization={entry.romanization}
-                translation={translation.word}
+                translation={entry.translation.word}
                 isStudied={isStudied}
                 locale={locale}
                 localePath={localePath}

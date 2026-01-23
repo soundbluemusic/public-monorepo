@@ -14,6 +14,7 @@ import { createServerFn } from '@tanstack/react-start';
 import type { LocaleEntry } from '../data/types';
 import {
   getCategoriesFromD1,
+  getEntriesByCategoryFromD1,
   getEntryByIdFromD1,
   getEntryCounts as getEntryCountsFromD1,
   getEntryIdsByCategoryFromD1,
@@ -115,4 +116,27 @@ export const fetchEntryIdsByCategoryFromD1 = createServerFn({ method: 'POST' })
     }
 
     return await getEntryIdsByCategoryFromD1(db, categoryId);
+  });
+
+/** 카테고리별 Entry 조회 입력 타입 */
+type FetchEntriesByCategoryInput = { categoryId: string; locale: 'en' | 'ko' };
+
+/**
+ * 카테고리별 Entry 목록을 D1에서 로드하는 서버 함수
+ *
+ * @example
+ * const entries = await fetchEntriesByCategoryFromD1({ data: { categoryId: 'greetings', locale: 'ko' } });
+ */
+export const fetchEntriesByCategoryFromD1 = createServerFn({ method: 'POST' })
+  .inputValidator((data: FetchEntriesByCategoryInput) => data)
+  .handler(async ({ data }): Promise<LocaleEntry[]> => {
+    const { categoryId, locale } = data;
+    const db = getD1Database();
+
+    if (!db) {
+      console.error('[fetchEntriesByCategoryFromD1] D1 database not available');
+      return [];
+    }
+
+    return await getEntriesByCategoryFromD1(db, categoryId, locale);
   });
