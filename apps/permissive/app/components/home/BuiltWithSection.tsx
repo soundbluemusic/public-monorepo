@@ -1,5 +1,5 @@
 import { OPEN_SOURCE_PROJECTS } from '@soundblue/core';
-import { Link } from 'react-router';
+import { Link } from '@tanstack/react-router';
 
 interface BuiltWithSectionProps {
   locale: 'en' | 'ko';

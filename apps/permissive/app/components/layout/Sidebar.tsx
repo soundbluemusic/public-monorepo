@@ -5,8 +5,8 @@
 
 import { stripLocaleFromPath } from '@soundblue/i18n';
 import { BaseSidebar, FamilySites, type SidebarNavItem } from '@soundblue/ui/components';
+import { useLocation } from '@tanstack/react-router';
 import { Globe, Home, Package, Sparkles } from 'lucide-react';
-import { useLocation } from 'react-router';
 import { useI18n } from '../../i18n';
 import { QuickLinksSection, quickLinks } from './sidebar';
 

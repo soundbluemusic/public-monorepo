@@ -1,4 +1,4 @@
-import { Link } from 'react-router';
+import { Link } from '@tanstack/react-router';
 
 interface QuickCategoriesProps {
   locale: 'en' | 'ko';
@@ -24,7 +24,8 @@ export function QuickCategories({ locale, localePath }: QuickCategoriesProps) {
         {categories.map((cat) => (
           <Link
             key={cat}
-            to={`${localePath('/libraries')}?category=${encodeURIComponent(cat)}`}
+            to={localePath('/libraries') as '/libraries'}
+            search={{ category: cat }}
             className="px-4 py-2 rounded-full bg-(--bg-tertiary) text-(--text-secondary) text-sm font-medium no-underline transition-colors hover:bg-(--accent-primary)/10 hover:text-(--accent-primary)"
           >
             {cat}

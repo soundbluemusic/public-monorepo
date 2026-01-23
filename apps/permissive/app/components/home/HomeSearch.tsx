@@ -1,9 +1,9 @@
 import { LIMITS } from '@soundblue/core/validation';
 import { type SearchResult, useSearchWorker } from '@soundblue/search/react';
 import { cn } from '@soundblue/ui/utils';
+import { useNavigate } from '@tanstack/react-router';
 import { Globe, Package, Search } from 'lucide-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router';
 
 interface HomeSearchProps {
   locale: 'en' | 'ko';
@@ -34,7 +34,8 @@ export function HomeSearch({ locale, localePath }: HomeSearchProps) {
         item.type === 'library'
           ? `${localePath('/library')}/${slug}`
           : `${localePath('/web-api')}#${slug}`;
-      navigate(path);
+      // Dynamic path navigation - type assertion needed for computed routes
+      navigate({ to: path as '/' });
       setShowResults(false);
       setQuery('');
     },
@@ -46,7 +47,8 @@ export function HomeSearch({ locale, localePath }: HomeSearchProps) {
     if (selectedIndex >= 0 && results[selectedIndex]) {
       handleResultClick(results[selectedIndex]);
     } else if (query.trim()) {
-      navigate(`${localePath('/libraries')}?q=${encodeURIComponent(query)}`);
+      // Dynamic path with search params - type assertion needed
+      navigate({ to: localePath('/libraries') as '/libraries', search: { q: query } });
       setShowResults(false);
     }
   };

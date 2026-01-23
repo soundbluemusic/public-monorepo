@@ -1,3 +1,4 @@
+import { Link } from '@tanstack/react-router';
 import {
   ChevronRight,
   Compass,
@@ -13,7 +14,6 @@ import {
   Zap,
 } from 'lucide-react';
 import type { ReactNode } from 'react';
-import { Link } from 'react-router';
 import { getLibrarySlug } from '../../data/libraries';
 import { getWebApiSlug } from '../../data/web-apis';
 
@@ -109,7 +109,7 @@ export function TrendingSection({ locale, localePath }: TrendingSectionProps) {
             {trendingLibraries.map((lib) => (
               <Link
                 key={lib.name}
-                to={localePath(`/library/${lib.slug}`)}
+                to={localePath(`/library/${lib.slug}`) as string}
                 className="flex items-center gap-3 p-3 rounded-lg bg-(--bg-elevated) border border-(--border-primary) no-underline transition-all hover:border-(--border-focus) hover:shadow-sm group"
               >
                 <span className="text-(--accent-primary)">{lib.icon}</span>
@@ -136,7 +136,7 @@ export function TrendingSection({ locale, localePath }: TrendingSectionProps) {
             {trendingApis.map((api) => (
               <Link
                 key={api.name}
-                to={localePath(`/web-api/${api.slug}`)}
+                to={localePath(`/web-api/${api.slug}`) as string}
                 className="flex items-center gap-3 p-3 rounded-lg bg-(--bg-elevated) border border-(--border-primary) no-underline transition-all hover:border-(--border-focus) hover:shadow-sm group"
               >
                 <span className="text-(--accent-primary)">{api.icon}</span>

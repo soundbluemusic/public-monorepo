@@ -1,5 +1,5 @@
+import { Link } from '@tanstack/react-router';
 import { ExternalLink } from 'lucide-react';
-import { Link } from 'react-router';
 import type { Language } from '../../../i18n';
 import type { QuickLink } from './sidebarData';
 

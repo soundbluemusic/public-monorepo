@@ -1,5 +1,5 @@
 import { cn } from '@soundblue/ui/utils';
-import { Link } from 'react-router';
+import { Link } from '@tanstack/react-router';
 import type { Language } from '../../../i18n';
 import type { NavItem } from './sidebarData';
 

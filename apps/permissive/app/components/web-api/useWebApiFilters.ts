@@ -1,6 +1,6 @@
 import { LIMITS } from '@soundblue/core/validation';
+import { useNavigate, useSearch } from '@tanstack/react-router';
 import { useMemo, useState } from 'react';
-import { useSearchParams } from 'react-router';
 import { HIGH_SUPPORT_THRESHOLD, NEW_API_YEAR } from '../../constants';
 import type { WebAPI, webApiCategories } from '../../data/web-apis';
 
@@ -21,19 +21,27 @@ interface UseWebApiFiltersOptions {
   categories: readonly string[];
 }
 
+interface SearchParams {
+  q?: string;
+  category?: string;
+  filter?: string;
+  trending?: string;
+}
+
 export function useWebApiFilters({ apis, categories }: UseWebApiFiltersOptions) {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const searchParams = useSearch({ strict: false }) as SearchParams;
+  const navigate = useNavigate();
 
   // Initialize state from URL params (one-way: URL → State on mount only)
-  const categoryParam = searchParams.get('category');
+  const categoryParam = searchParams.category;
   const initialParams = {
-    q: searchParams.get('q') || '',
+    q: searchParams.q || '',
     // 카테고리 검증: categories 배열에 포함된 경우만 사용
     category: (categoryParam && categories.includes(categoryParam)
       ? categoryParam
       : 'All') as CategoryFilter,
-    filter: searchParams.get('filter'),
-    trending: searchParams.get('trending'),
+    filter: searchParams.filter,
+    trending: searchParams.trending,
   };
 
   const [search, setSearch] = useState(initialParams.q);
@@ -105,52 +113,52 @@ export function useWebApiFilters({ apis, categories }: UseWebApiFiltersOptions) 
     }, {});
   }, [filteredApis, category]);
 
+  const updateSearchParams = (updates: Partial<SearchParams>) => {
+    navigate({
+      search: ((prev: SearchParams) => {
+        const newParams = { ...prev };
+        for (const [key, value] of Object.entries(updates)) {
+          if (value === undefined || value === null || value === '') {
+            delete newParams[key as keyof SearchParams];
+          } else {
+            (newParams as Record<string, string>)[key] = value;
+          }
+        }
+        return newParams;
+      }) as never,
+      replace: true,
+    });
+  };
+
   const handleQuickFilter = (filter: 'trending' | 'highSupport' | 'new') => {
     if (quickFilter === filter) {
       setQuickFilter(null);
-      const params = new URLSearchParams(searchParams);
-      params.delete('filter');
-      params.delete('trending');
-      setSearchParams(params);
+      updateSearchParams({ filter: undefined, trending: undefined });
     } else {
       setQuickFilter(filter);
-      const params = new URLSearchParams(searchParams);
       if (filter === 'trending') {
-        params.set('trending', 'true');
+        updateSearchParams({ trending: 'true', filter: undefined });
       } else {
-        params.set('filter', filter);
+        updateSearchParams({ filter, trending: undefined });
       }
-      setSearchParams(params);
     }
   };
 
   const handleSearchChange = (value: string) => {
     setSearch(value);
-    const params = new URLSearchParams(searchParams);
-    if (value) {
-      params.set('q', value);
-    } else {
-      params.delete('q');
-    }
-    setSearchParams(params);
+    updateSearchParams({ q: value || undefined });
   };
 
   const handleCategoryChange = (cat: CategoryFilter) => {
     setCategory(cat);
-    const params = new URLSearchParams(searchParams);
-    if (cat !== 'All') {
-      params.set('category', cat);
-    } else {
-      params.delete('category');
-    }
-    setSearchParams(params);
+    updateSearchParams({ category: cat !== 'All' ? cat : undefined });
   };
 
   const clearFilters = () => {
     setQuickFilter(null);
     setCategory('All');
     setSearch('');
-    setSearchParams({});
+    navigate({ search: {} as never, replace: true });
   };
 
   return {

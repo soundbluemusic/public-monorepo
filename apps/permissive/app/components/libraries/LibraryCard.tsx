@@ -1,8 +1,8 @@
 import { LIMITS } from '@soundblue/core/validation';
 import { cn } from '@soundblue/ui/utils';
+import { Link } from '@tanstack/react-router';
 import { Flame, Star } from 'lucide-react';
 import { memo } from 'react';
-import { Link } from 'react-router';
 import { getLibrarySlug, type Library } from '../../data/libraries';
 import { useI18n } from '../../i18n';
 

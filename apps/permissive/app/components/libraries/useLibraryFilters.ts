@@ -1,6 +1,6 @@
 import { LIMITS } from '@soundblue/core/validation';
+import { useNavigate, useSearch } from '@tanstack/react-router';
 import { useEffect, useMemo, useState } from 'react';
-import { useSearchParams } from 'react-router';
 import { NEW_LIBRARY_YEAR } from '../../constants';
 import { type CategoryFilter, categories, type Library } from '../../data/libraries';
 
@@ -19,8 +19,17 @@ interface UseLibraryFiltersOptions {
   libraries: Library[];
 }
 
+interface SearchParams {
+  q?: string;
+  category?: string;
+  tag?: string;
+  filter?: string;
+  trending?: string;
+}
+
 export function useLibraryFilters({ libraries: libs }: UseLibraryFiltersOptions) {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const searchParams = useSearch({ strict: false }) as SearchParams;
+  const navigate = useNavigate();
 
   // SSG Hydration 안전: 기본값으로 초기화 (클라이언트에서 useEffect로 URL 동기화)
   const [search, setSearch] = useState('');
@@ -31,11 +40,11 @@ export function useLibraryFilters({ libraries: libs }: UseLibraryFiltersOptions)
 
   // 클라이언트에서만 URL 파라미터 동기화 (hydration 불일치 방지)
   useEffect(() => {
-    const q = searchParams.get('q');
-    const cat = searchParams.get('category');
-    const tag = searchParams.get('tag');
-    const filter = searchParams.get('filter');
-    const trending = searchParams.get('trending');
+    const q = searchParams.q;
+    const cat = searchParams.category;
+    const tag = searchParams.tag;
+    const filter = searchParams.filter;
+    const trending = searchParams.trending;
 
     if (q) setSearch(q);
 
@@ -109,35 +118,41 @@ export function useLibraryFilters({ libraries: libs }: UseLibraryFiltersOptions)
     }, {});
   }, [filteredLibraries, category]);
 
+  const updateSearchParams = (updates: Partial<SearchParams>) => {
+    navigate({
+      search: ((prev: SearchParams) => {
+        const newParams = { ...prev };
+        for (const [key, value] of Object.entries(updates)) {
+          if (value === undefined || value === null || value === '') {
+            delete newParams[key as keyof SearchParams];
+          } else {
+            (newParams as Record<string, string>)[key] = value;
+          }
+        }
+        return newParams;
+      }) as never,
+      replace: true,
+    });
+  };
+
   const handleTagClick = (tag: string) => {
     setSelectedTag(tag);
     setQuickFilter(null);
-    const params = new URLSearchParams(searchParams);
-    params.set('tag', tag);
-    setSearchParams(params);
+    updateSearchParams({ tag });
   };
 
   const handleQuickFilter = (filter: 'trending' | 'usedHere' | 'new') => {
     if (quickFilter === filter) {
       setQuickFilter(null);
-      const params = new URLSearchParams(searchParams);
-      params.delete('filter');
-      params.delete('trending');
-      setSearchParams(params);
+      updateSearchParams({ filter: undefined, trending: undefined });
     } else {
       setQuickFilter(filter);
       setSelectedTag(null);
-      const params = new URLSearchParams(searchParams);
-      // 기존 필터 파라미터 먼저 삭제 (상호 배타적)
-      params.delete('filter');
-      params.delete('trending');
       if (filter === 'trending') {
-        params.set('trending', 'true');
+        updateSearchParams({ trending: 'true', filter: undefined, tag: undefined });
       } else {
-        params.set('filter', filter);
+        updateSearchParams({ filter, trending: undefined, tag: undefined });
       }
-      params.delete('tag');
-      setSearchParams(params);
     }
   };
 
@@ -146,36 +161,22 @@ export function useLibraryFilters({ libraries: libs }: UseLibraryFiltersOptions)
     setSelectedTag(null);
     setCategory('All');
     setSearch('');
-    setSearchParams({});
+    navigate({ search: {} as never, replace: true });
   };
 
   const handleSearchChange = (value: string) => {
     setSearch(value);
-    const params = new URLSearchParams(searchParams);
-    if (value) {
-      params.set('q', value);
-    } else {
-      params.delete('q');
-    }
-    setSearchParams(params);
+    updateSearchParams({ q: value || undefined });
   };
 
   const handleCategoryChange = (cat: CategoryFilter) => {
     setCategory(cat);
-    const params = new URLSearchParams(searchParams);
-    if (cat !== 'All') {
-      params.set('category', cat);
-    } else {
-      params.delete('category');
-    }
-    setSearchParams(params);
+    updateSearchParams({ category: cat !== 'All' ? cat : undefined });
   };
 
   const handleClearTag = () => {
     setSelectedTag(null);
-    const params = new URLSearchParams(searchParams);
-    params.delete('tag');
-    setSearchParams(params);
+    updateSearchParams({ tag: undefined });
   };
 
   return {

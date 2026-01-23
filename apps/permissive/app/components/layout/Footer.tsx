@@ -1,6 +1,6 @@
 import { FamilySites } from '@soundblue/ui/components';
+import { Link } from '@tanstack/react-router';
 import { Github, Sparkles } from 'lucide-react';
-import { Link } from 'react-router';
 import { useI18n } from '../../i18n';
 
 export default function Footer() {

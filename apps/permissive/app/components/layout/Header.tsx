@@ -1,9 +1,9 @@
 import { stripLocaleFromPath } from '@soundblue/i18n';
 import { DarkModeToggle, LanguageToggle, ServicesDropdown } from '@soundblue/ui/components';
 import { cn } from '@soundblue/ui/utils';
+import { Link, useLocation } from '@tanstack/react-router';
 import { Menu, Sparkles, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router';
 import { useI18n } from '../../i18n';
 
 // Use shared utility for locale stripping

@@ -1,5 +1,5 @@
+import { Link } from '@tanstack/react-router';
 import { ChevronRight, Globe, Package } from 'lucide-react';
-import { Link } from 'react-router';
 
 interface MainCardsProps {
   locale: 'en' | 'ko';
@@ -11,7 +11,7 @@ export function MainCards({ locale, localePath }: MainCardsProps) {
     <div className="grid md:grid-cols-2 gap-4 py-8">
       {/* Web API Card */}
       <Link
-        to={localePath('/web-api')}
+        to={localePath('/web-api') as string}
         className="p-6 rounded-xl bg-(--bg-elevated) border border-(--border-primary) no-underline transition-all hover:-translate-y-1 hover:shadow-lg hover:border-(--border-focus) group"
       >
         <div className="text-blue-500 mb-4">
@@ -38,7 +38,7 @@ export function MainCards({ locale, localePath }: MainCardsProps) {
 
       {/* Libraries Card */}
       <Link
-        to={localePath('/libraries')}
+        to={localePath('/libraries') as string}
         className="p-6 rounded-xl bg-(--bg-elevated) border border-(--border-primary) no-underline transition-all hover:-translate-y-1 hover:shadow-lg hover:border-(--border-focus) group"
       >
         <div className="text-purple-500 mb-4">

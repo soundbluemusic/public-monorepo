@@ -1,6 +1,6 @@
+import { Link } from '@tanstack/react-router';
 import { Flame } from 'lucide-react';
 import { memo } from 'react';
-import { Link } from 'react-router';
 import { getWebApiSlug, type WebAPI } from '../../data/web-apis';
 import { useI18n } from '../../i18n';
 
