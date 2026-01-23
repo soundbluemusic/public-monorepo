@@ -9,12 +9,74 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as MyLearningRouteImport } from './routes/my-learning'
+import { Route as LicenseRouteImport } from './routes/license'
+import { Route as DownloadRouteImport } from './routes/download'
+import { Route as BrowseRouteImport } from './routes/browse'
+import { Route as BookmarksRouteImport } from './routes/bookmarks'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as SplatRouteImport } from './routes/$'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as KoIndexRouteImport } from './routes/ko/index'
+import { Route as ConversationsIndexRouteImport } from './routes/conversations/index'
+import { Route as KoTermsRouteImport } from './routes/ko/terms'
+import { Route as KoPrivacyRouteImport } from './routes/ko/privacy'
+import { Route as KoMyLearningRouteImport } from './routes/ko/my-learning'
+import { Route as KoLicenseRouteImport } from './routes/ko/license'
+import { Route as KoDownloadRouteImport } from './routes/ko/download'
+import { Route as KoBrowseRouteImport } from './routes/ko/browse'
+import { Route as KoBookmarksRouteImport } from './routes/ko/bookmarks'
+import { Route as KoAboutRouteImport } from './routes/ko/about'
 import { Route as EntryEntryIdRouteImport } from './routes/entry/$entryId'
+import { Route as ConversationsCategoryIdRouteImport } from './routes/conversations/$categoryId'
+import { Route as CategoryCategoryIdRouteImport } from './routes/category/$categoryId'
+import { Route as KoConversationsIndexRouteImport } from './routes/ko/conversations/index'
 import { Route as KoEntryEntryIdRouteImport } from './routes/ko/entry/$entryId'
+import { Route as KoConversationsCategoryIdRouteImport } from './routes/ko/conversations/$categoryId'
+import { Route as KoCategoryCategoryIdRouteImport } from './routes/ko/category/$categoryId'
 
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MyLearningRoute = MyLearningRouteImport.update({
+  id: '/my-learning',
+  path: '/my-learning',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LicenseRoute = LicenseRouteImport.update({
+  id: '/license',
+  path: '/license',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DownloadRoute = DownloadRouteImport.update({
+  id: '/download',
+  path: '/download',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BrowseRoute = BrowseRouteImport.update({
+  id: '/browse',
+  path: '/browse',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookmarksRoute = BookmarksRouteImport.update({
+  id: '/bookmarks',
+  path: '/bookmarks',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SplatRoute = SplatRouteImport.update({
   id: '/$',
   path: '/$',
@@ -30,9 +92,69 @@ const KoIndexRoute = KoIndexRouteImport.update({
   path: '/ko/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ConversationsIndexRoute = ConversationsIndexRouteImport.update({
+  id: '/conversations/',
+  path: '/conversations/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoTermsRoute = KoTermsRouteImport.update({
+  id: '/ko/terms',
+  path: '/ko/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoPrivacyRoute = KoPrivacyRouteImport.update({
+  id: '/ko/privacy',
+  path: '/ko/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoMyLearningRoute = KoMyLearningRouteImport.update({
+  id: '/ko/my-learning',
+  path: '/ko/my-learning',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoLicenseRoute = KoLicenseRouteImport.update({
+  id: '/ko/license',
+  path: '/ko/license',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoDownloadRoute = KoDownloadRouteImport.update({
+  id: '/ko/download',
+  path: '/ko/download',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoBrowseRoute = KoBrowseRouteImport.update({
+  id: '/ko/browse',
+  path: '/ko/browse',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoBookmarksRoute = KoBookmarksRouteImport.update({
+  id: '/ko/bookmarks',
+  path: '/ko/bookmarks',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoAboutRoute = KoAboutRouteImport.update({
+  id: '/ko/about',
+  path: '/ko/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EntryEntryIdRoute = EntryEntryIdRouteImport.update({
   id: '/entry/$entryId',
   path: '/entry/$entryId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConversationsCategoryIdRoute = ConversationsCategoryIdRouteImport.update({
+  id: '/conversations/$categoryId',
+  path: '/conversations/$categoryId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CategoryCategoryIdRoute = CategoryCategoryIdRouteImport.update({
+  id: '/category/$categoryId',
+  path: '/category/$categoryId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoConversationsIndexRoute = KoConversationsIndexRouteImport.update({
+  id: '/ko/conversations/',
+  path: '/ko/conversations/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KoEntryEntryIdRoute = KoEntryEntryIdRouteImport.update({
@@ -40,53 +162,284 @@ const KoEntryEntryIdRoute = KoEntryEntryIdRouteImport.update({
   path: '/ko/entry/$entryId',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KoConversationsCategoryIdRoute =
+  KoConversationsCategoryIdRouteImport.update({
+    id: '/ko/conversations/$categoryId',
+    path: '/ko/conversations/$categoryId',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const KoCategoryCategoryIdRoute = KoCategoryCategoryIdRouteImport.update({
+  id: '/ko/category/$categoryId',
+  path: '/ko/category/$categoryId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
+  '/about': typeof AboutRoute
+  '/bookmarks': typeof BookmarksRoute
+  '/browse': typeof BrowseRoute
+  '/download': typeof DownloadRoute
+  '/license': typeof LicenseRoute
+  '/my-learning': typeof MyLearningRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
+  '/category/$categoryId': typeof CategoryCategoryIdRoute
+  '/conversations/$categoryId': typeof ConversationsCategoryIdRoute
   '/entry/$entryId': typeof EntryEntryIdRoute
+  '/ko/about': typeof KoAboutRoute
+  '/ko/bookmarks': typeof KoBookmarksRoute
+  '/ko/browse': typeof KoBrowseRoute
+  '/ko/download': typeof KoDownloadRoute
+  '/ko/license': typeof KoLicenseRoute
+  '/ko/my-learning': typeof KoMyLearningRoute
+  '/ko/privacy': typeof KoPrivacyRoute
+  '/ko/terms': typeof KoTermsRoute
+  '/conversations/': typeof ConversationsIndexRoute
   '/ko/': typeof KoIndexRoute
+  '/ko/category/$categoryId': typeof KoCategoryCategoryIdRoute
+  '/ko/conversations/$categoryId': typeof KoConversationsCategoryIdRoute
   '/ko/entry/$entryId': typeof KoEntryEntryIdRoute
+  '/ko/conversations/': typeof KoConversationsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
+  '/about': typeof AboutRoute
+  '/bookmarks': typeof BookmarksRoute
+  '/browse': typeof BrowseRoute
+  '/download': typeof DownloadRoute
+  '/license': typeof LicenseRoute
+  '/my-learning': typeof MyLearningRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
+  '/category/$categoryId': typeof CategoryCategoryIdRoute
+  '/conversations/$categoryId': typeof ConversationsCategoryIdRoute
   '/entry/$entryId': typeof EntryEntryIdRoute
+  '/ko/about': typeof KoAboutRoute
+  '/ko/bookmarks': typeof KoBookmarksRoute
+  '/ko/browse': typeof KoBrowseRoute
+  '/ko/download': typeof KoDownloadRoute
+  '/ko/license': typeof KoLicenseRoute
+  '/ko/my-learning': typeof KoMyLearningRoute
+  '/ko/privacy': typeof KoPrivacyRoute
+  '/ko/terms': typeof KoTermsRoute
+  '/conversations': typeof ConversationsIndexRoute
   '/ko': typeof KoIndexRoute
+  '/ko/category/$categoryId': typeof KoCategoryCategoryIdRoute
+  '/ko/conversations/$categoryId': typeof KoConversationsCategoryIdRoute
   '/ko/entry/$entryId': typeof KoEntryEntryIdRoute
+  '/ko/conversations': typeof KoConversationsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
+  '/about': typeof AboutRoute
+  '/bookmarks': typeof BookmarksRoute
+  '/browse': typeof BrowseRoute
+  '/download': typeof DownloadRoute
+  '/license': typeof LicenseRoute
+  '/my-learning': typeof MyLearningRoute
+  '/privacy': typeof PrivacyRoute
+  '/terms': typeof TermsRoute
+  '/category/$categoryId': typeof CategoryCategoryIdRoute
+  '/conversations/$categoryId': typeof ConversationsCategoryIdRoute
   '/entry/$entryId': typeof EntryEntryIdRoute
+  '/ko/about': typeof KoAboutRoute
+  '/ko/bookmarks': typeof KoBookmarksRoute
+  '/ko/browse': typeof KoBrowseRoute
+  '/ko/download': typeof KoDownloadRoute
+  '/ko/license': typeof KoLicenseRoute
+  '/ko/my-learning': typeof KoMyLearningRoute
+  '/ko/privacy': typeof KoPrivacyRoute
+  '/ko/terms': typeof KoTermsRoute
+  '/conversations/': typeof ConversationsIndexRoute
   '/ko/': typeof KoIndexRoute
+  '/ko/category/$categoryId': typeof KoCategoryCategoryIdRoute
+  '/ko/conversations/$categoryId': typeof KoConversationsCategoryIdRoute
   '/ko/entry/$entryId': typeof KoEntryEntryIdRoute
+  '/ko/conversations/': typeof KoConversationsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/$' | '/entry/$entryId' | '/ko/' | '/ko/entry/$entryId'
+  fullPaths:
+    | '/'
+    | '/$'
+    | '/about'
+    | '/bookmarks'
+    | '/browse'
+    | '/download'
+    | '/license'
+    | '/my-learning'
+    | '/privacy'
+    | '/terms'
+    | '/category/$categoryId'
+    | '/conversations/$categoryId'
+    | '/entry/$entryId'
+    | '/ko/about'
+    | '/ko/bookmarks'
+    | '/ko/browse'
+    | '/ko/download'
+    | '/ko/license'
+    | '/ko/my-learning'
+    | '/ko/privacy'
+    | '/ko/terms'
+    | '/conversations/'
+    | '/ko/'
+    | '/ko/category/$categoryId'
+    | '/ko/conversations/$categoryId'
+    | '/ko/entry/$entryId'
+    | '/ko/conversations/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/$' | '/entry/$entryId' | '/ko' | '/ko/entry/$entryId'
+  to:
+    | '/'
+    | '/$'
+    | '/about'
+    | '/bookmarks'
+    | '/browse'
+    | '/download'
+    | '/license'
+    | '/my-learning'
+    | '/privacy'
+    | '/terms'
+    | '/category/$categoryId'
+    | '/conversations/$categoryId'
+    | '/entry/$entryId'
+    | '/ko/about'
+    | '/ko/bookmarks'
+    | '/ko/browse'
+    | '/ko/download'
+    | '/ko/license'
+    | '/ko/my-learning'
+    | '/ko/privacy'
+    | '/ko/terms'
+    | '/conversations'
+    | '/ko'
+    | '/ko/category/$categoryId'
+    | '/ko/conversations/$categoryId'
+    | '/ko/entry/$entryId'
+    | '/ko/conversations'
   id:
     | '__root__'
     | '/'
     | '/$'
+    | '/about'
+    | '/bookmarks'
+    | '/browse'
+    | '/download'
+    | '/license'
+    | '/my-learning'
+    | '/privacy'
+    | '/terms'
+    | '/category/$categoryId'
+    | '/conversations/$categoryId'
     | '/entry/$entryId'
+    | '/ko/about'
+    | '/ko/bookmarks'
+    | '/ko/browse'
+    | '/ko/download'
+    | '/ko/license'
+    | '/ko/my-learning'
+    | '/ko/privacy'
+    | '/ko/terms'
+    | '/conversations/'
     | '/ko/'
+    | '/ko/category/$categoryId'
+    | '/ko/conversations/$categoryId'
     | '/ko/entry/$entryId'
+    | '/ko/conversations/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   SplatRoute: typeof SplatRoute
+  AboutRoute: typeof AboutRoute
+  BookmarksRoute: typeof BookmarksRoute
+  BrowseRoute: typeof BrowseRoute
+  DownloadRoute: typeof DownloadRoute
+  LicenseRoute: typeof LicenseRoute
+  MyLearningRoute: typeof MyLearningRoute
+  PrivacyRoute: typeof PrivacyRoute
+  TermsRoute: typeof TermsRoute
+  CategoryCategoryIdRoute: typeof CategoryCategoryIdRoute
+  ConversationsCategoryIdRoute: typeof ConversationsCategoryIdRoute
   EntryEntryIdRoute: typeof EntryEntryIdRoute
+  KoAboutRoute: typeof KoAboutRoute
+  KoBookmarksRoute: typeof KoBookmarksRoute
+  KoBrowseRoute: typeof KoBrowseRoute
+  KoDownloadRoute: typeof KoDownloadRoute
+  KoLicenseRoute: typeof KoLicenseRoute
+  KoMyLearningRoute: typeof KoMyLearningRoute
+  KoPrivacyRoute: typeof KoPrivacyRoute
+  KoTermsRoute: typeof KoTermsRoute
+  ConversationsIndexRoute: typeof ConversationsIndexRoute
   KoIndexRoute: typeof KoIndexRoute
+  KoCategoryCategoryIdRoute: typeof KoCategoryCategoryIdRoute
+  KoConversationsCategoryIdRoute: typeof KoConversationsCategoryIdRoute
   KoEntryEntryIdRoute: typeof KoEntryEntryIdRoute
+  KoConversationsIndexRoute: typeof KoConversationsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/my-learning': {
+      id: '/my-learning'
+      path: '/my-learning'
+      fullPath: '/my-learning'
+      preLoaderRoute: typeof MyLearningRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/license': {
+      id: '/license'
+      path: '/license'
+      fullPath: '/license'
+      preLoaderRoute: typeof LicenseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/download': {
+      id: '/download'
+      path: '/download'
+      fullPath: '/download'
+      preLoaderRoute: typeof DownloadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/browse': {
+      id: '/browse'
+      path: '/browse'
+      fullPath: '/browse'
+      preLoaderRoute: typeof BrowseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bookmarks': {
+      id: '/bookmarks'
+      path: '/bookmarks'
+      fullPath: '/bookmarks'
+      preLoaderRoute: typeof BookmarksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/$': {
       id: '/$'
       path: '/$'
@@ -108,11 +461,95 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KoIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/conversations/': {
+      id: '/conversations/'
+      path: '/conversations'
+      fullPath: '/conversations/'
+      preLoaderRoute: typeof ConversationsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ko/terms': {
+      id: '/ko/terms'
+      path: '/ko/terms'
+      fullPath: '/ko/terms'
+      preLoaderRoute: typeof KoTermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ko/privacy': {
+      id: '/ko/privacy'
+      path: '/ko/privacy'
+      fullPath: '/ko/privacy'
+      preLoaderRoute: typeof KoPrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ko/my-learning': {
+      id: '/ko/my-learning'
+      path: '/ko/my-learning'
+      fullPath: '/ko/my-learning'
+      preLoaderRoute: typeof KoMyLearningRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ko/license': {
+      id: '/ko/license'
+      path: '/ko/license'
+      fullPath: '/ko/license'
+      preLoaderRoute: typeof KoLicenseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ko/download': {
+      id: '/ko/download'
+      path: '/ko/download'
+      fullPath: '/ko/download'
+      preLoaderRoute: typeof KoDownloadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ko/browse': {
+      id: '/ko/browse'
+      path: '/ko/browse'
+      fullPath: '/ko/browse'
+      preLoaderRoute: typeof KoBrowseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ko/bookmarks': {
+      id: '/ko/bookmarks'
+      path: '/ko/bookmarks'
+      fullPath: '/ko/bookmarks'
+      preLoaderRoute: typeof KoBookmarksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ko/about': {
+      id: '/ko/about'
+      path: '/ko/about'
+      fullPath: '/ko/about'
+      preLoaderRoute: typeof KoAboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/entry/$entryId': {
       id: '/entry/$entryId'
       path: '/entry/$entryId'
       fullPath: '/entry/$entryId'
       preLoaderRoute: typeof EntryEntryIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/conversations/$categoryId': {
+      id: '/conversations/$categoryId'
+      path: '/conversations/$categoryId'
+      fullPath: '/conversations/$categoryId'
+      preLoaderRoute: typeof ConversationsCategoryIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/category/$categoryId': {
+      id: '/category/$categoryId'
+      path: '/category/$categoryId'
+      fullPath: '/category/$categoryId'
+      preLoaderRoute: typeof CategoryCategoryIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ko/conversations/': {
+      id: '/ko/conversations/'
+      path: '/ko/conversations'
+      fullPath: '/ko/conversations/'
+      preLoaderRoute: typeof KoConversationsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ko/entry/$entryId': {
@@ -122,15 +559,51 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof KoEntryEntryIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ko/conversations/$categoryId': {
+      id: '/ko/conversations/$categoryId'
+      path: '/ko/conversations/$categoryId'
+      fullPath: '/ko/conversations/$categoryId'
+      preLoaderRoute: typeof KoConversationsCategoryIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ko/category/$categoryId': {
+      id: '/ko/category/$categoryId'
+      path: '/ko/category/$categoryId'
+      fullPath: '/ko/category/$categoryId'
+      preLoaderRoute: typeof KoCategoryCategoryIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   SplatRoute: SplatRoute,
+  AboutRoute: AboutRoute,
+  BookmarksRoute: BookmarksRoute,
+  BrowseRoute: BrowseRoute,
+  DownloadRoute: DownloadRoute,
+  LicenseRoute: LicenseRoute,
+  MyLearningRoute: MyLearningRoute,
+  PrivacyRoute: PrivacyRoute,
+  TermsRoute: TermsRoute,
+  CategoryCategoryIdRoute: CategoryCategoryIdRoute,
+  ConversationsCategoryIdRoute: ConversationsCategoryIdRoute,
   EntryEntryIdRoute: EntryEntryIdRoute,
+  KoAboutRoute: KoAboutRoute,
+  KoBookmarksRoute: KoBookmarksRoute,
+  KoBrowseRoute: KoBrowseRoute,
+  KoDownloadRoute: KoDownloadRoute,
+  KoLicenseRoute: KoLicenseRoute,
+  KoMyLearningRoute: KoMyLearningRoute,
+  KoPrivacyRoute: KoPrivacyRoute,
+  KoTermsRoute: KoTermsRoute,
+  ConversationsIndexRoute: ConversationsIndexRoute,
   KoIndexRoute: KoIndexRoute,
+  KoCategoryCategoryIdRoute: KoCategoryCategoryIdRoute,
+  KoConversationsCategoryIdRoute: KoConversationsCategoryIdRoute,
   KoEntryEntryIdRoute: KoEntryEntryIdRoute,
+  KoConversationsIndexRoute: KoConversationsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
