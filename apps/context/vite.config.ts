@@ -2,6 +2,7 @@ import { cloudflare } from '@cloudflare/vite-plugin';
 import { paraglideVitePlugin as paraglide } from '@inlang/paraglide-js';
 import tailwindcss from '@tailwindcss/vite';
 import { tanstackStart } from '@tanstack/react-start/plugin/vite';
+import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig, type PluginOption } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
@@ -22,69 +23,15 @@ export default defineConfig({
     terserOptions: {
       compress: { drop_console: true, drop_debugger: true },
     },
-    rollupOptions: {
-      external: ['cloudflare:workers'],
-      output: {
-        // Inject polyfill at the start of the SSR bundle
-        // This runs BEFORE any imports in the bundled output
-        banner: `
-(function() {
-  // Wrap URL to handle TanStack Router's initialization edge cases
-  var OriginalURL = globalThis.URL;
-  globalThis.URL = function SafeURL(url, base) {
-    if (url === undefined || url === null) {
-      return new OriginalURL('https://context.soundbluemusic.com/');
-    }
-    if (typeof url === 'object' && !(url instanceof OriginalURL)) {
-      // Handle TanStack Router's internal URL-like objects
-      var protocol = url.protocol || 'https:';
-      var host = url.host || url.hostname || 'context.soundbluemusic.com';
-      var pathname = url.pathname || '/';
-      var search = url.search || '';
-      return new OriginalURL(protocol + '//' + host + pathname + search);
-    }
-    return new OriginalURL(url, base);
-  };
-  globalThis.URL.prototype = OriginalURL.prototype;
-  Object.setPrototypeOf(globalThis.URL, OriginalURL);
-
-  // Provide location if missing
-  if (!globalThis.location) {
-    globalThis.location = {
-      protocol: 'https:',
-      host: 'context.soundbluemusic.com',
-      hostname: 'context.soundbluemusic.com',
-      port: '',
-      pathname: '/',
-      search: '',
-      hash: '',
-      href: 'https://context.soundbluemusic.com/',
-      origin: 'https://context.soundbluemusic.com'
-    };
-  }
-})();
-`,
-      },
-    },
-  },
-  ssr: {
-    external: ['cloudflare:workers'],
-  },
-  define: {
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'),
-    // Provide default values for URL-related globals during SSR
-    'globalThis.location': JSON.stringify({
-      protocol: 'https:',
-      hostname: 'context.soundbluemusic.com',
-      port: '',
-    }),
   },
   plugins: [
+    // Plugin order follows official TanStack Start + Cloudflare example
+    tailwindcss(),
     cloudflare({ viteEnvironment: { name: 'ssr' } }),
     tanstackStart({
       srcDirectory: 'app',
     }),
-    tailwindcss(),
+    react(),
     paraglide({
       project: './project.inlang',
       outdir: './app/paraglide',

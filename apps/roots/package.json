@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "prebuild": "pnpm exec paraglide-js compile --project ./project.inlang --outdir ./app/paraglide && tsx scripts/generate-search-index.ts",
+    "prebuild": "mkdir -p dist/server && echo 'export default {}' > dist/server/index.js && pnpm exec paraglide-js compile --project ./project.inlang --outdir ./app/paraglide && tsx scripts/generate-search-index.ts",
     "build": "NODE_OPTIONS='--max-old-space-size=8192' vite build && tsx scripts/generate-sitemaps.ts",
+    "postbuild": "node scripts/inject-polyfill.mjs",
     "deploy": "pnpm build && wrangler deploy",
     "preview": "vite preview",
     "start": "vite preview",

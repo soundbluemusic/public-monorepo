@@ -6,8 +6,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "prebuild": "pnpm exec tsx scripts/generate-paraglide-messages.ts && tsx scripts/generate-search-index.ts",
+    "prebuild": "mkdir -p dist/server && echo 'export default {}' > dist/server/index.js && pnpm exec tsx scripts/generate-paraglide-messages.ts && tsx scripts/generate-search-index.ts",
     "build": "NODE_OPTIONS='--max-old-space-size=8192' vite build && tsx scripts/generate-sitemaps.ts",
+    "postbuild": "node scripts/inject-polyfill.mjs",
     "deploy": "pnpm build && wrangler deploy",
     "preview": "vite preview",
     "start": "vite preview",
@@ -41,6 +42,7 @@
     "react-dom": "^19.2.3"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.21.1",
     "@cloudflare/workers-types": "^4.20260109.0",
     "@tailwindcss/vite": "^4.1.18",
     "@tanstack/router-plugin": "^1.154.7",
