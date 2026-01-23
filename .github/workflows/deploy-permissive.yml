@@ -35,12 +35,16 @@ jobs:
       - name: Build Permissive
         run: pnpm build:permissive
 
+      - name: Inject polyfill for SSR
+        working-directory: apps/permissive
+        run: node scripts/inject-polyfill.mjs
+
       - name: Deploy to Cloudflare Workers
         working-directory: apps/permissive
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: npx wrangler deploy
+        run: npx wrangler deploy --config dist/server/wrangler.json
 
       - name: Purge Cloudflare CDN Cache
         env:
