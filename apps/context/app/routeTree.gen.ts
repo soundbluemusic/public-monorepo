@@ -10,9 +10,6 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermsRouteImport } from './routes/terms'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as SitemapPagesDotxmlRouteImport } from './routes/sitemap-pages[.]xml'
-import { Route as SitemapCategoriesDotxmlRouteImport } from './routes/sitemap-categories[.]xml'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as MyLearningRouteImport } from './routes/my-learning'
 import { Route as LicenseRouteImport } from './routes/license'
@@ -37,9 +34,7 @@ import { Route as KoAboutRouteImport } from './routes/ko/about'
 import { Route as EntryEntryIdRouteImport } from './routes/entry/$entryId'
 import { Route as ConversationsCategoryIdRouteImport } from './routes/conversations/$categoryId'
 import { Route as CategoryCategoryIdRouteImport } from './routes/category/$categoryId'
-import { Route as ApiOfflineDbRouteImport } from './routes/api/offline-db'
 import { Route as KoConversationsIndexRouteImport } from './routes/ko/conversations/index'
-import { Route as SitemapsEntriesCategoryIdDotxmlRouteImport } from './routes/sitemaps/entries/$categoryId[.]xml'
 import { Route as KoEntryEntryIdRouteImport } from './routes/ko/entry/$entryId'
 import { Route as KoConversationsCategoryIdRouteImport } from './routes/ko/conversations/$categoryId'
 import { Route as KoCategoryCategoryIdRouteImport } from './routes/ko/category/$categoryId'
@@ -47,21 +42,6 @@ import { Route as KoCategoryCategoryIdRouteImport } from './routes/ko/category/$
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapPagesDotxmlRoute = SitemapPagesDotxmlRouteImport.update({
-  id: '/sitemap-pages.xml',
-  path: '/sitemap-pages.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapCategoriesDotxmlRoute = SitemapCategoriesDotxmlRouteImport.update({
-  id: '/sitemap-categories.xml',
-  path: '/sitemap-categories.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyRoute = PrivacyRouteImport.update({
@@ -184,22 +164,11 @@ const CategoryCategoryIdRoute = CategoryCategoryIdRouteImport.update({
   path: '/category/$categoryId',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiOfflineDbRoute = ApiOfflineDbRouteImport.update({
-  id: '/api/offline-db',
-  path: '/api/offline-db',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const KoConversationsIndexRoute = KoConversationsIndexRouteImport.update({
   id: '/ko/conversations/',
   path: '/ko/conversations/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SitemapsEntriesCategoryIdDotxmlRoute =
-  SitemapsEntriesCategoryIdDotxmlRouteImport.update({
-    id: '/sitemaps/entries/$categoryId.xml',
-    path: '/sitemaps/entries/$categoryId.xml',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const KoEntryEntryIdRoute = KoEntryEntryIdRouteImport.update({
   id: '/ko/entry/$entryId',
   path: '/ko/entry/$entryId',
@@ -228,11 +197,7 @@ export interface FileRoutesByFullPath {
   '/license': typeof LicenseRoute
   '/my-learning': typeof MyLearningRoute
   '/privacy': typeof PrivacyRoute
-  '/sitemap-categories.xml': typeof SitemapCategoriesDotxmlRoute
-  '/sitemap-pages.xml': typeof SitemapPagesDotxmlRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
-  '/api/offline-db': typeof ApiOfflineDbRoute
   '/category/$categoryId': typeof CategoryCategoryIdRoute
   '/conversations/$categoryId': typeof ConversationsCategoryIdRoute
   '/entry/$entryId': typeof EntryEntryIdRoute
@@ -250,7 +215,6 @@ export interface FileRoutesByFullPath {
   '/ko/category/$categoryId': typeof KoCategoryCategoryIdRoute
   '/ko/conversations/$categoryId': typeof KoConversationsCategoryIdRoute
   '/ko/entry/$entryId': typeof KoEntryEntryIdRoute
-  '/sitemaps/entries/$categoryId.xml': typeof SitemapsEntriesCategoryIdDotxmlRoute
   '/ko/conversations/': typeof KoConversationsIndexRoute
 }
 export interface FileRoutesByTo {
@@ -264,11 +228,7 @@ export interface FileRoutesByTo {
   '/license': typeof LicenseRoute
   '/my-learning': typeof MyLearningRoute
   '/privacy': typeof PrivacyRoute
-  '/sitemap-categories.xml': typeof SitemapCategoriesDotxmlRoute
-  '/sitemap-pages.xml': typeof SitemapPagesDotxmlRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
-  '/api/offline-db': typeof ApiOfflineDbRoute
   '/category/$categoryId': typeof CategoryCategoryIdRoute
   '/conversations/$categoryId': typeof ConversationsCategoryIdRoute
   '/entry/$entryId': typeof EntryEntryIdRoute
@@ -286,7 +246,6 @@ export interface FileRoutesByTo {
   '/ko/category/$categoryId': typeof KoCategoryCategoryIdRoute
   '/ko/conversations/$categoryId': typeof KoConversationsCategoryIdRoute
   '/ko/entry/$entryId': typeof KoEntryEntryIdRoute
-  '/sitemaps/entries/$categoryId.xml': typeof SitemapsEntriesCategoryIdDotxmlRoute
   '/ko/conversations': typeof KoConversationsIndexRoute
 }
 export interface FileRoutesById {
@@ -301,11 +260,7 @@ export interface FileRoutesById {
   '/license': typeof LicenseRoute
   '/my-learning': typeof MyLearningRoute
   '/privacy': typeof PrivacyRoute
-  '/sitemap-categories.xml': typeof SitemapCategoriesDotxmlRoute
-  '/sitemap-pages.xml': typeof SitemapPagesDotxmlRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
-  '/api/offline-db': typeof ApiOfflineDbRoute
   '/category/$categoryId': typeof CategoryCategoryIdRoute
   '/conversations/$categoryId': typeof ConversationsCategoryIdRoute
   '/entry/$entryId': typeof EntryEntryIdRoute
@@ -323,7 +278,6 @@ export interface FileRoutesById {
   '/ko/category/$categoryId': typeof KoCategoryCategoryIdRoute
   '/ko/conversations/$categoryId': typeof KoConversationsCategoryIdRoute
   '/ko/entry/$entryId': typeof KoEntryEntryIdRoute
-  '/sitemaps/entries/$categoryId.xml': typeof SitemapsEntriesCategoryIdDotxmlRoute
   '/ko/conversations/': typeof KoConversationsIndexRoute
 }
 export interface FileRouteTypes {
@@ -339,11 +293,7 @@ export interface FileRouteTypes {
     | '/license'
     | '/my-learning'
     | '/privacy'
-    | '/sitemap-categories.xml'
-    | '/sitemap-pages.xml'
-    | '/sitemap.xml'
     | '/terms'
-    | '/api/offline-db'
     | '/category/$categoryId'
     | '/conversations/$categoryId'
     | '/entry/$entryId'
@@ -361,7 +311,6 @@ export interface FileRouteTypes {
     | '/ko/category/$categoryId'
     | '/ko/conversations/$categoryId'
     | '/ko/entry/$entryId'
-    | '/sitemaps/entries/$categoryId.xml'
     | '/ko/conversations/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -375,11 +324,7 @@ export interface FileRouteTypes {
     | '/license'
     | '/my-learning'
     | '/privacy'
-    | '/sitemap-categories.xml'
-    | '/sitemap-pages.xml'
-    | '/sitemap.xml'
     | '/terms'
-    | '/api/offline-db'
     | '/category/$categoryId'
     | '/conversations/$categoryId'
     | '/entry/$entryId'
@@ -397,7 +342,6 @@ export interface FileRouteTypes {
     | '/ko/category/$categoryId'
     | '/ko/conversations/$categoryId'
     | '/ko/entry/$entryId'
-    | '/sitemaps/entries/$categoryId.xml'
     | '/ko/conversations'
   id:
     | '__root__'
@@ -411,11 +355,7 @@ export interface FileRouteTypes {
     | '/license'
     | '/my-learning'
     | '/privacy'
-    | '/sitemap-categories.xml'
-    | '/sitemap-pages.xml'
-    | '/sitemap.xml'
     | '/terms'
-    | '/api/offline-db'
     | '/category/$categoryId'
     | '/conversations/$categoryId'
     | '/entry/$entryId'
@@ -433,7 +373,6 @@ export interface FileRouteTypes {
     | '/ko/category/$categoryId'
     | '/ko/conversations/$categoryId'
     | '/ko/entry/$entryId'
-    | '/sitemaps/entries/$categoryId.xml'
     | '/ko/conversations/'
   fileRoutesById: FileRoutesById
 }
@@ -448,11 +387,7 @@ export interface RootRouteChildren {
   LicenseRoute: typeof LicenseRoute
   MyLearningRoute: typeof MyLearningRoute
   PrivacyRoute: typeof PrivacyRoute
-  SitemapCategoriesDotxmlRoute: typeof SitemapCategoriesDotxmlRoute
-  SitemapPagesDotxmlRoute: typeof SitemapPagesDotxmlRoute
-  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
-  ApiOfflineDbRoute: typeof ApiOfflineDbRoute
   CategoryCategoryIdRoute: typeof CategoryCategoryIdRoute
   ConversationsCategoryIdRoute: typeof ConversationsCategoryIdRoute
   EntryEntryIdRoute: typeof EntryEntryIdRoute
@@ -470,7 +405,6 @@ export interface RootRouteChildren {
   KoCategoryCategoryIdRoute: typeof KoCategoryCategoryIdRoute
   KoConversationsCategoryIdRoute: typeof KoConversationsCategoryIdRoute
   KoEntryEntryIdRoute: typeof KoEntryEntryIdRoute
-  SitemapsEntriesCategoryIdDotxmlRoute: typeof SitemapsEntriesCategoryIdDotxmlRoute
   KoConversationsIndexRoute: typeof KoConversationsIndexRoute
 }
 
@@ -481,27 +415,6 @@ declare module '@tanstack/react-router' {
       path: '/terms'
       fullPath: '/terms'
       preLoaderRoute: typeof TermsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap-pages.xml': {
-      id: '/sitemap-pages.xml'
-      path: '/sitemap-pages.xml'
-      fullPath: '/sitemap-pages.xml'
-      preLoaderRoute: typeof SitemapPagesDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap-categories.xml': {
-      id: '/sitemap-categories.xml'
-      path: '/sitemap-categories.xml'
-      fullPath: '/sitemap-categories.xml'
-      preLoaderRoute: typeof SitemapCategoriesDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy': {
@@ -672,25 +585,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CategoryCategoryIdRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/offline-db': {
-      id: '/api/offline-db'
-      path: '/api/offline-db'
-      fullPath: '/api/offline-db'
-      preLoaderRoute: typeof ApiOfflineDbRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/ko/conversations/': {
       id: '/ko/conversations/'
       path: '/ko/conversations'
       fullPath: '/ko/conversations/'
       preLoaderRoute: typeof KoConversationsIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemaps/entries/$categoryId.xml': {
-      id: '/sitemaps/entries/$categoryId.xml'
-      path: '/sitemaps/entries/$categoryId.xml'
-      fullPath: '/sitemaps/entries/$categoryId.xml'
-      preLoaderRoute: typeof SitemapsEntriesCategoryIdDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ko/entry/$entryId': {
@@ -728,11 +627,7 @@ const rootRouteChildren: RootRouteChildren = {
   LicenseRoute: LicenseRoute,
   MyLearningRoute: MyLearningRoute,
   PrivacyRoute: PrivacyRoute,
-  SitemapCategoriesDotxmlRoute: SitemapCategoriesDotxmlRoute,
-  SitemapPagesDotxmlRoute: SitemapPagesDotxmlRoute,
-  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
-  ApiOfflineDbRoute: ApiOfflineDbRoute,
   CategoryCategoryIdRoute: CategoryCategoryIdRoute,
   ConversationsCategoryIdRoute: ConversationsCategoryIdRoute,
   EntryEntryIdRoute: EntryEntryIdRoute,
@@ -750,7 +645,6 @@ const rootRouteChildren: RootRouteChildren = {
   KoCategoryCategoryIdRoute: KoCategoryCategoryIdRoute,
   KoConversationsCategoryIdRoute: KoConversationsCategoryIdRoute,
   KoEntryEntryIdRoute: KoEntryEntryIdRoute,
-  SitemapsEntriesCategoryIdDotxmlRoute: SitemapsEntriesCategoryIdDotxmlRoute,
   KoConversationsIndexRoute: KoConversationsIndexRoute,
 }
 export const routeTree = rootRouteImport
