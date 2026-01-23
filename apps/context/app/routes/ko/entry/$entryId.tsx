@@ -33,7 +33,6 @@ type LoaderData = { entry: LocaleEntry; englishColorName?: string };
 export const Route = createFileRoute('/ko/entry/$entryId')({
   loader: async ({ params }) => {
     // TanStack Start: createServerFn을 통해 D1에서 데이터 로드
-    // @ts-expect-error - TanStack Start createServerFn type incompatibility
     const entry = await fetchEntryFromD1({ data: { entryId: params.entryId, locale: 'ko' } });
 
     if (!entry) {
@@ -43,7 +42,6 @@ export const Route = createFileRoute('/ko/entry/$entryId')({
     // colors 카테고리의 경우 영어 색상명도 함께 로드 (색상 표시용)
     let englishColorName: string | undefined;
     if (entry.categoryId === 'colors') {
-      // @ts-expect-error - TanStack Start createServerFn type incompatibility
       const enEntry = await fetchEntryFromD1({ data: { entryId: params.entryId, locale: 'en' } });
       englishColorName = enEntry?.translation.word;
     }

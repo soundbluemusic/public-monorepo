@@ -7,13 +7,8 @@ import {
   MOBILE_SIDEBAR_TOGGLE_SCRIPT,
   SIDEBAR_COLLAPSE_SCRIPT,
 } from '@soundblue/ui/utils';
-import {
-  createRootRoute,
-  HeadContent,
-  Outlet,
-  Scripts,
-  useRouterState,
-} from '@tanstack/react-router';
+import { createRootRoute, HeadContent, Scripts, useRouterState } from '@tanstack/react-router';
+import type * as React from 'react';
 import { I18nProvider } from '../i18n';
 import '../styles/global.css';
 
@@ -80,10 +75,15 @@ export const Route = createRootRoute({
       { rel: 'manifest', href: '/manifest.json' },
     ],
   }),
-  component: RootComponent,
+  shellComponent: RootDocument,
 });
 
-function RootComponent() {
+/**
+ * Root Document Shell (TanStack Start 공식 패턴)
+ *
+ * shellComponent는 HTML 문서 구조를 정의하고, children으로 라우트 콘텐츠를 받습니다.
+ */
+function RootDocument({ children }: { children: React.ReactNode }) {
   const routerState = useRouterState();
   const pathname = routerState.location.pathname;
   const lang = pathname.startsWith('/ko') ? 'ko' : 'en';
@@ -113,7 +113,7 @@ function RootComponent() {
           <I18nProvider>
             <ErrorBoundary>
               <OfflineIndicator />
-              <Outlet />
+              {children}
               <ToastContainer />
             </ErrorBoundary>
           </I18nProvider>

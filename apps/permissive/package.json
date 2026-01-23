@@ -34,8 +34,8 @@
     "@soundblue/search": "workspace:*",
     "@soundblue/seo": "workspace:*",
     "@soundblue/ui": "workspace:*",
-    "@tanstack/react-router": "^1.154.7",
-    "@tanstack/react-start": "^1.154.7",
+    "@tanstack/react-router": "^1.154.12",
+    "@tanstack/react-start": "^1.154.12",
     "dexie": "^4.0.10",
     "lucide-react": "^0.562.0",
     "react": "^19.2.3",
@@ -45,18 +45,18 @@
     "@cloudflare/vite-plugin": "^1.21.1",
     "@cloudflare/workers-types": "^4.20260109.0",
     "@tailwindcss/vite": "^4.1.18",
-    "@tanstack/router-plugin": "^1.154.7",
+    "@tanstack/router-plugin": "^1.154.12",
     "@types/node": "^25.0.3",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
     "clsx": "^2.1.1",
     "tailwindcss": "^4.1.18",
     "tsx": "^4.19.2",
-    "typescript": "^5.7.2",
+    "typescript": "^5.9.3",
     "vite": "^7.3.1",
     "vite-plugin-pwa": "^1.2.0",
     "workbox-window": "^7.3.0",
-    "wrangler": "^4.58.0"
+    "wrangler": "^4.60.0"
   },
   "engines": {
     "node": ">=20"

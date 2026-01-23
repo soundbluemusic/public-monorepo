@@ -3,6 +3,11 @@
  * @environment server-only
  *
  * 이 모듈은 서버에서만 실행되며, Cloudflare Workers의 D1 바인딩에 접근합니다.
+ *
+ * TanStack Start 공식 패턴:
+ * - createServerFn({ method: 'POST' }) - POST 메서드 지정 (데이터 전송용)
+ * - .inputValidator() - 입력 타입 검증
+ * - .handler() - 실제 처리 로직
  */
 
 import { createServerFn } from '@tanstack/react-start';
@@ -30,13 +35,22 @@ function getD1Database(): D1Database | null {
   }
 }
 
+/** Entry 조회 입력 타입 */
+type FetchEntryInput = { entryId: string; locale: 'en' | 'ko' };
+
+/** 카테고리별 Entry ID 조회 입력 타입 */
+type FetchEntryIdsByCategoryInput = { categoryId: string };
+
 /**
  * Entry를 D1에서 로드하는 서버 함수
+ *
+ * @example
+ * const entry = await fetchEntryFromD1({ data: { entryId: 'hello', locale: 'ko' } });
  */
-export const fetchEntryFromD1 = createServerFn().handler(
-  // @ts-expect-error - TanStack Start createServerFn handler type incompatibility
-  async (opts: { data: { entryId: string; locale: 'en' | 'ko' } }): Promise<LocaleEntry | null> => {
-    const { entryId, locale } = opts.data;
+export const fetchEntryFromD1 = createServerFn({ method: 'POST' })
+  .inputValidator((data: FetchEntryInput) => data)
+  .handler(async ({ data }): Promise<LocaleEntry | null> => {
+    const { entryId, locale } = data;
     const db = getD1Database();
 
     if (!db) {
@@ -45,11 +59,13 @@ export const fetchEntryFromD1 = createServerFn().handler(
     }
 
     return await getEntryByIdFromD1(db, entryId, locale);
-  },
-);
+  });
 
 /**
  * 카테고리별 Entry 수를 D1에서 로드하는 서버 함수
+ *
+ * @example
+ * const counts = await fetchEntryCountsFromD1();
  */
 export const fetchEntryCountsFromD1 = createServerFn().handler(
   async (): Promise<Map<string, number>> => {
@@ -66,6 +82,9 @@ export const fetchEntryCountsFromD1 = createServerFn().handler(
 
 /**
  * 모든 카테고리를 D1에서 로드하는 서버 함수 (사이트맵용)
+ *
+ * @example
+ * const categories = await fetchCategoriesFromD1();
  */
 export const fetchCategoriesFromD1 = createServerFn().handler(async () => {
   const db = getD1Database();
@@ -80,11 +99,14 @@ export const fetchCategoriesFromD1 = createServerFn().handler(async () => {
 
 /**
  * 카테고리별 Entry ID 목록을 D1에서 로드하는 서버 함수 (사이트맵용)
+ *
+ * @example
+ * const ids = await fetchEntryIdsByCategoryFromD1({ data: { categoryId: 'greetings' } });
  */
-export const fetchEntryIdsByCategoryFromD1 = createServerFn().handler(
-  // @ts-expect-error - TanStack Start createServerFn handler type incompatibility
-  async (opts: { data: { categoryId: string } }): Promise<string[]> => {
-    const { categoryId } = opts.data;
+export const fetchEntryIdsByCategoryFromD1 = createServerFn({ method: 'POST' })
+  .inputValidator((data: FetchEntryIdsByCategoryInput) => data)
+  .handler(async ({ data }): Promise<string[]> => {
+    const { categoryId } = data;
     const db = getD1Database();
 
     if (!db) {
@@ -93,5 +115,4 @@ export const fetchEntryIdsByCategoryFromD1 = createServerFn().handler(
     }
 
     return await getEntryIdsByCategoryFromD1(db, categoryId);
-  },
-);
+  });

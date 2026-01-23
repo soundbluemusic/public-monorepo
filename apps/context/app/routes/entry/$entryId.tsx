@@ -33,7 +33,6 @@ type LoaderData = { entry: LocaleEntry; englishColorName?: string };
 export const Route = createFileRoute('/entry/$entryId')({
   loader: async ({ params }) => {
     // TanStack Start: createServerFn을 통해 D1에서 데이터 로드
-    // @ts-expect-error - TanStack Start createServerFn type incompatibility
     const entry = await fetchEntryFromD1({ data: { entryId: params.entryId, locale: 'en' } });
 
     if (!entry) {

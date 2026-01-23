@@ -11,7 +11,7 @@ export function createRouter() {
   return router;
 }
 
-// TanStack Start 클라이언트 hydration용 (필수)
+// TanStack Start server entry용 (필수)
 export const getRouter = createRouter;
 
 declare module '@tanstack/react-router' {
