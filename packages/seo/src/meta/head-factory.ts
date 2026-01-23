@@ -126,12 +126,13 @@ export function headFactory(
   baseUrl: string,
 ): (args: HeadFunctionArgs) => HeadConfig {
   return ({ location }: HeadFunctionArgs): HeadConfig => {
-    const isKorean = location.pathname.startsWith('/ko');
+    const pathname = location?.pathname ?? '/';
+    const isKorean = pathname.startsWith('/ko');
     const meta = isKorean ? localizedMeta.ko : localizedMeta.en;
 
     return {
       meta: metaDataToHeadMeta(meta),
-      links: generateSeoLinks(location.pathname, baseUrl),
+      links: generateSeoLinks(pathname, baseUrl),
     };
   };
 }
@@ -162,13 +163,14 @@ export function dynamicHeadFactory<T>(
   baseUrl: string,
 ): (args: DynamicHeadFunctionArgs<T>) => HeadConfig {
   return ({ loaderData, location }: DynamicHeadFunctionArgs<T>): HeadConfig => {
-    const isKorean = location.pathname.startsWith('/ko');
+    const pathname = location?.pathname ?? '/';
+    const isKorean = pathname.startsWith('/ko');
     const localizedMeta = getLocalizedMeta(loaderData);
     const meta = isKorean ? localizedMeta.ko : localizedMeta.en;
 
     return {
       meta: metaDataToHeadMeta(meta),
-      links: generateSeoLinks(location.pathname, baseUrl),
+      links: generateSeoLinks(pathname, baseUrl),
     };
   };
 }
