@@ -1,5 +1,5 @@
 {
   "version": 1,
-  "include": ["/__manifest", "/api/*", "/data/*", "/entry/*", "/ko/entry/*", "/sitemap.xml", "/sitemap-*.xml"],
+  "include": ["/__manifest", "/api/*", "/data/*", "/entry/*", "/ko/entry/*", "/sitemap.xml", "/sitemap-*.xml", "/sitemaps/*"],
   "exclude": []
 }

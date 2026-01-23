@@ -1,29 +1,17 @@
 /**
- * API Handlers - TanStack Start 외부에서 처리되는 API 라우트
+ * TanStack Start Custom Server Entry
  *
- * TanStack Start는 loader에서 Response 객체 직접 반환을 지원하지 않습니다.
- * API 전용 라우트(sitemap, offline-db 등)는 server.tsx에서 인터셉트하여 처리합니다.
+ * 이 파일은 서버 요청을 처리하는 진입점입니다.
+ * API 라우트(sitemap, offline-db)를 먼저 처리하고 나머지는 TanStack Start로 전달합니다.
  */
 
-const SITE_URL = 'https://context.soundbluemusic.com';
-
-interface CloudflareEnv {
-  DB: D1Database;
-}
-
-export interface RequestContext {
-  cloudflare?: { env: unknown };
-}
-
-/** Type guard to check if env has D1 database */
-function getDb(context: RequestContext): D1Database | null {
-  const env = context?.cloudflare?.env as CloudflareEnv | undefined;
-  return env?.DB ?? null;
-}
+import tanstackHandler from '@tanstack/react-start/server-entry';
 
 // ============================================================================
 // Helpers
 // ============================================================================
+
+const SITE_URL = 'https://context.soundbluemusic.com';
 
 function getCurrentDateString(): string {
   return new Date().toISOString().slice(0, 10);
@@ -58,6 +46,14 @@ function generateBilingualUrl(
   </url>`;
 }
 
+interface CloudflareEnv {
+  DB?: D1Database;
+}
+
+function getD1Database(env: CloudflareEnv): D1Database | null {
+  return env?.DB ?? null;
+}
+
 const xmlHeaders = {
   'Content-Type': 'application/xml; charset=utf-8',
   'Cache-Control': 'public, max-age=3600, s-maxage=86400',
@@ -69,11 +65,22 @@ const jsonHeaders = {
 };
 
 // ============================================================================
-// /sitemap.xml - Sitemap Index
+// API Route Handlers
 // ============================================================================
 
-async function handleSitemapIndex(context: RequestContext): Promise<Response> {
-  const db = getDb(context);
+const STATIC_PAGES = [
+  { path: '/', priority: '1.0', changefreq: 'weekly' },
+  { path: '/about', priority: '0.8', changefreq: 'monthly' },
+  { path: '/browse', priority: '0.9', changefreq: 'weekly' },
+  { path: '/download', priority: '0.7', changefreq: 'monthly' },
+  { path: '/built-with', priority: '0.5', changefreq: 'monthly' },
+  { path: '/license', priority: '0.3', changefreq: 'yearly' },
+  { path: '/privacy', priority: '0.3', changefreq: 'yearly' },
+  { path: '/terms', priority: '0.3', changefreq: 'yearly' },
+];
+
+async function handleSitemapIndex(env: CloudflareEnv): Promise<Response> {
+  const db = getD1Database(env);
 
   if (!db) {
     return new Response('Database not available', {
@@ -117,21 +124,6 @@ ${sitemaps
   }
 }
 
-// ============================================================================
-// /sitemap-pages.xml - Static Pages Sitemap
-// ============================================================================
-
-const STATIC_PAGES = [
-  { path: '/', priority: '1.0', changefreq: 'weekly' },
-  { path: '/about', priority: '0.8', changefreq: 'monthly' },
-  { path: '/browse', priority: '0.9', changefreq: 'weekly' },
-  { path: '/download', priority: '0.7', changefreq: 'monthly' },
-  { path: '/built-with', priority: '0.5', changefreq: 'monthly' },
-  { path: '/license', priority: '0.3', changefreq: 'yearly' },
-  { path: '/privacy', priority: '0.3', changefreq: 'yearly' },
-  { path: '/terms', priority: '0.3', changefreq: 'yearly' },
-];
-
 function handleSitemapPages(): Response {
   const now = getCurrentDateString();
   const urls = STATIC_PAGES.map((page) =>
@@ -148,12 +140,8 @@ ${urls}
   return new Response(xml, { headers: xmlHeaders });
 }
 
-// ============================================================================
-// /sitemap-categories.xml - Categories Sitemap
-// ============================================================================
-
-async function handleSitemapCategories(context: RequestContext): Promise<Response> {
-  const db = getDb(context);
+async function handleSitemapCategories(env: CloudflareEnv): Promise<Response> {
+  const db = getD1Database(env);
 
   if (!db) {
     return new Response('Database not available', {
@@ -186,15 +174,8 @@ ${urls}
   }
 }
 
-// ============================================================================
-// /sitemaps/entries/:categoryId.xml - Entry Sitemap by Category
-// ============================================================================
-
-async function handleSitemapEntries(
-  context: RequestContext,
-  categoryId: string,
-): Promise<Response> {
-  const db = getDb(context);
+async function handleSitemapEntries(env: CloudflareEnv, categoryId: string): Promise<Response> {
+  const db = getD1Database(env);
 
   if (!db) {
     return new Response('Database not available', {
@@ -232,12 +213,8 @@ ${urls}
   }
 }
 
-// ============================================================================
-// /api/offline-db - Offline Database Dump
-// ============================================================================
-
-async function handleOfflineDb(context: RequestContext): Promise<Response> {
-  const db = getDb(context);
+async function handleOfflineDb(env: CloudflareEnv): Promise<Response> {
+  const db = getD1Database(env);
 
   if (!db) {
     return new Response(JSON.stringify({ error: 'Database not available' }), {
@@ -299,23 +276,16 @@ async function handleOfflineDb(context: RequestContext): Promise<Response> {
 }
 
 // ============================================================================
-// Main Router
+// API Router
 // ============================================================================
 
-/**
- * API 라우트 매칭 및 핸들러 실행
- * @returns Response if matched, null if not an API route
- */
-export async function handleApiRoute(
-  request: Request,
-  context: RequestContext,
-): Promise<Response | null> {
+async function handleApiRoute(request: Request, env: CloudflareEnv): Promise<Response | null> {
   const url = new URL(request.url);
   const pathname = url.pathname;
 
   // Sitemap routes
   if (pathname === '/sitemap.xml') {
-    return handleSitemapIndex(context);
+    return handleSitemapIndex(env);
   }
 
   if (pathname === '/sitemap-pages.xml') {
@@ -323,20 +293,38 @@ export async function handleApiRoute(
   }
 
   if (pathname === '/sitemap-categories.xml') {
-    return handleSitemapCategories(context);
+    return handleSitemapCategories(env);
   }
 
   // /sitemaps/entries/:categoryId.xml
   const entrySitemapMatch = pathname.match(/^\/sitemaps\/entries\/([^/]+)\.xml$/);
   if (entrySitemapMatch?.[1]) {
-    return handleSitemapEntries(context, entrySitemapMatch[1]);
+    return handleSitemapEntries(env, entrySitemapMatch[1]);
   }
 
   // API routes
   if (pathname === '/api/offline-db') {
-    return handleOfflineDb(context);
+    return handleOfflineDb(env);
   }
 
   // Not an API route - pass to TanStack Start
   return null;
 }
+
+// ============================================================================
+// Server Handler
+// ============================================================================
+
+export default {
+  async fetch(request: Request, env: CloudflareEnv, ctx: ExecutionContext): Promise<Response> {
+    // Check for API routes first
+    const apiResponse = await handleApiRoute(request, env);
+    if (apiResponse) {
+      return apiResponse;
+    }
+
+    // Pass to TanStack Start for page routes
+    // @ts-expect-error - TanStack Start internal handler
+    return tanstackHandler.fetch(request, env, ctx);
+  },
+};
