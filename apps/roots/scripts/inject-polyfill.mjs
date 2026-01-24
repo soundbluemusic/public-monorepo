@@ -3,10 +3,8 @@
  * This is needed because TanStack Router accesses location.protocol during module initialization
  * and Cloudflare Workers don't have globalThis.location
  *
- * Strategy:
- * 1. Inject location polyfill at the start of worker-entry
- * 2. Patch TanStack Router's URL class to handle undefined arguments
- * 3. Fix index.js to export the correct handler
+ * Strategy (Vite 7): Patch worker-entry-*.js in assets/
+ * Strategy (Vite 8+): Patch index.js directly (all-in-one bundle)
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -19,74 +17,54 @@ const polyfill = `// CF Workers Polyfill
 if(typeof globalThis.location==='undefined'){globalThis.location={protocol:'https:',host:'roots.soundbluemusic.com',hostname:'roots.soundbluemusic.com',port:'',pathname:'/',search:'',hash:'',href:'https://roots.soundbluemusic.com/',origin:'https://roots.soundbluemusic.com'};}
 `;
 
-// Find and patch the worker-entry file
-let workerEntryFile = null;
+// Find worker-entry file (Vite 7) or use index.js (Vite 8+)
+let targetFile = null;
+let targetPath = null;
+
 if (fs.existsSync(assetsDir)) {
   const files = fs.readdirSync(assetsDir);
-  workerEntryFile = files.find((f) => f.startsWith('worker-entry') && f.endsWith('.js'));
+  const workerEntryFile = files.find((f) => f.startsWith('worker-entry') && f.endsWith('.js'));
+  if (workerEntryFile) {
+    targetFile = workerEntryFile;
+    targetPath = path.join(assetsDir, workerEntryFile);
+    console.log('ℹ️  Vite 7 mode: patching worker-entry');
+  }
 }
 
-if (!workerEntryFile) {
-  console.log('❌ worker-entry file not found');
+// Vite 8+: worker-entry doesn't exist, patch index.js directly
+if (!targetFile) {
+  const indexPath = path.join(distDir, 'index.js');
+  if (fs.existsSync(indexPath)) {
+    targetFile = 'index.js';
+    targetPath = indexPath;
+    console.log('ℹ️  Vite 8+ mode: patching index.js directly');
+  }
+}
+
+if (!targetPath) {
+  console.log('❌ No target file found for patching');
   process.exit(1);
 }
 
-// Read and patch worker-entry
-const workerEntryPath = path.join(assetsDir, workerEntryFile);
-let workerContent = fs.readFileSync(workerEntryPath, 'utf8');
+// Read and patch target file
+let content = fs.readFileSync(targetPath, 'utf8');
 
 // Patch 1: Handle undefined 'e' in TanStack Router's URL class
 const urlClassPattern = /\(this\.#f=e\.protocol,this\.#m=e\.host,this\.#g=e\.pathname,this\.#y=e\.search\)/g;
 const urlClassReplacement = "(this.#f=(e||{}).protocol||'https:',this.#m=(e||{}).host||'',this.#g=(e||{}).pathname||'/',this.#y=(e||{}).search||'')";
 
-if (urlClassPattern.test(workerContent)) {
-  workerContent = workerContent.replace(urlClassPattern, urlClassReplacement);
+if (urlClassPattern.test(content)) {
+  content = content.replace(urlClassPattern, urlClassReplacement);
   console.log('✅ Patched TanStack Router URL class');
 }
 
 // Add polyfill at start if not already present
-if (!workerContent.startsWith('// CF Workers Polyfill')) {
-  workerContent = polyfill + workerContent;
-  console.log('✅ Injected location polyfill into worker-entry');
+if (!content.startsWith('// CF Workers Polyfill')) {
+  content = polyfill + content;
+  console.log('✅ Injected location polyfill');
 }
 
-// Check if default export already exists (either 'export default' or 'as default' in export{})
-const hasDefaultExport = workerContent.includes('export default') || workerContent.includes('as default');
-if (!hasDefaultExport) {
-  // Add default export for handler - find Mx (exported as 'w') which contains fetch method
-  const exportMatch = workerContent.match(/export\{([^}]+)\}/);
-  if (exportMatch) {
-    workerContent = workerContent.replace(
-      /export\{([^}]+Mx as w[^}]*)\}/,
-      'export{$1};export default Mx;'
-    );
-    console.log('✅ Added default export for handler');
-  }
-} else {
-  console.log('ℹ️  Default export already exists, skipping');
-}
-
-fs.writeFileSync(workerEntryPath, workerContent);
-console.log(`✅ Saved ${workerEntryFile}`);
-
-// Step 3: Fix index.js to use the correct handler
-const indexPath = path.join(distDir, 'index.js');
-if (fs.existsSync(indexPath)) {
-  let indexContent = fs.readFileSync(indexPath, 'utf8');
-
-  // The index.js tries to use Yn (default export) which may be undefined
-  // Replace the handler export logic to use the actual handler
-  if (indexContent.includes('Gn=Yn??{}??{}')) {
-    // Import 'w' which is Mx (the handler with fetch method)
-    indexContent = indexContent.replace(
-      /const Jn=await import\("([^"]+)"\),\{default:Yn,\.\.\.(\$n)\}=Jn,Gn=Yn\?\?\{\}\?\?\{\};export\{Gn as default,Yn as handler,(\$n) as rest\};/,
-      `const Jn=await import("$1"),{w:handler,...$2}=Jn;export{handler as default,$2 as rest};`
-    );
-    console.log('✅ Fixed index.js handler export');
-  }
-
-  fs.writeFileSync(indexPath, indexContent);
-  console.log('✅ Saved index.js');
-}
+fs.writeFileSync(targetPath, content);
+console.log(`✅ Saved ${targetFile}`);
 
 console.log('✨ Polyfill injection complete');

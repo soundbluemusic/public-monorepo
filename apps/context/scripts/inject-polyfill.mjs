@@ -1,12 +1,8 @@
 /**
  * Inject polyfills and API handlers into built server files
  *
- * Strategy:
- * 1. Inject location polyfill at the start of worker-entry
- * 2. Patch TanStack Router's URL class to handle undefined arguments
- * 3. Inject API route handlers (sitemap, offline-db)
- * 4. Wrap fetch handler to process API routes first
- * 5. Fix index.js to export the correct handler
+ * Strategy (Vite 7): Patch worker-entry-*.js in assets/
+ * Strategy (Vite 8+): Patch index.js directly (all-in-one bundle)
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -67,71 +63,82 @@ async function handleApiRoute(request,env){const url=new URL(request.url);const 
 // ============================================================================
 `;
 
-// Find and patch the worker-entry file
-let workerEntryFile = null;
+// Find worker-entry file (Vite 7) or use index.js (Vite 8+)
+let targetFile = null;
+let targetPath = null;
+let isVite8Mode = false;
+
 if (fs.existsSync(assetsDir)) {
   const files = fs.readdirSync(assetsDir);
-  workerEntryFile = files.find((f) => f.startsWith('worker-entry') && f.endsWith('.js'));
+  const workerEntryFile = files.find((f) => f.startsWith('worker-entry') && f.endsWith('.js'));
+  if (workerEntryFile) {
+    targetFile = workerEntryFile;
+    targetPath = path.join(assetsDir, workerEntryFile);
+    console.log('ℹ️  Vite 7 mode: patching worker-entry');
+  }
 }
 
-if (!workerEntryFile) {
-  console.log('❌ worker-entry file not found');
+// Vite 8+: worker-entry doesn't exist, patch index.js directly
+if (!targetFile) {
+  const indexPath = path.join(distDir, 'index.js');
+  if (fs.existsSync(indexPath)) {
+    targetFile = 'index.js';
+    targetPath = indexPath;
+    isVite8Mode = true;
+    console.log('ℹ️  Vite 8+ mode: patching index.js directly');
+  }
+}
+
+if (!targetPath) {
+  console.log('❌ No target file found for patching');
   process.exit(1);
 }
 
-// Read and patch worker-entry
-const workerEntryPath = path.join(assetsDir, workerEntryFile);
-let workerContent = fs.readFileSync(workerEntryPath, 'utf8');
+// Read and patch target file
+let content = fs.readFileSync(targetPath, 'utf8');
 
 // Patch 1: Handle undefined 'e' in TanStack Router's URL class
 const urlClassPattern = /\(this\.#f=e\.protocol,this\.#m=e\.host,this\.#g=e\.pathname,this\.#y=e\.search\)/g;
 const urlClassReplacement = "(this.#f=(e||{}).protocol||'https:',this.#m=(e||{}).host||'',this.#g=(e||{}).pathname||'/',this.#y=(e||{}).search||'')";
 
-if (urlClassPattern.test(workerContent)) {
-  workerContent = workerContent.replace(urlClassPattern, urlClassReplacement);
+if (urlClassPattern.test(content)) {
+  content = content.replace(urlClassPattern, urlClassReplacement);
   console.log('✅ Patched TanStack Router URL class');
 }
 
 // Add polyfill at start if not already present
-if (!workerContent.startsWith('// CF Workers Polyfill')) {
-  workerContent = polyfill + workerContent;
-  console.log('✅ Injected location polyfill into worker-entry');
+if (!content.startsWith('// CF Workers Polyfill')) {
+  content = polyfill + content;
+  console.log('✅ Injected location polyfill');
 }
 
 // Inject API handlers after polyfill
-if (!workerContent.includes('handleApiRoute')) {
-  // Find the end of polyfill (or start of actual code)
-  const polyfillEndIndex = workerContent.indexOf('import{') > 0 ? workerContent.indexOf('import{') : workerContent.length;
-  workerContent = workerContent.slice(0, polyfillEndIndex) + apiHandlers + workerContent.slice(polyfillEndIndex);
+if (!content.includes('handleApiRoute')) {
+  const polyfillEndIndex = content.indexOf('import{') > 0 ? content.indexOf('import{') : (content.indexOf('import ') > 0 ? content.indexOf('import ') : content.length);
+  content = content.slice(0, polyfillEndIndex) + apiHandlers + content.slice(polyfillEndIndex);
   console.log('✅ Injected API handlers');
 }
 
-// Wrap the fetch handler to process API routes first
-// Find the main handler export pattern and wrap it
-// The Worker handler is exported as G (not F - F is createServerEntry)
+// Find original handler name for wrapping
 function findOriginalHandlerName(content) {
-  // Look for pattern like "ad as G" or similar in export statement
-  // G is the Worker handler that gets exported as default by index.js
+  // Vite 8: Look for handler in export patterns
   const exportMatch = content.match(/export\{[^}]*?(\w+) as G[,}]/);
-  if (exportMatch) {
-    return exportMatch[1];
-  }
-  // Fallback: look for pattern like "gd as F" (older versions)
+  if (exportMatch) return exportMatch[1];
+
   const fallbackMatch = content.match(/export\{[^}]*?(\w+) as F[,}]/);
-  if (fallbackMatch) {
-    return fallbackMatch[1];
-  }
-  // Fallback patterns
+  if (fallbackMatch) return fallbackMatch[1];
+
+  // Look for common handler patterns
   const patterns = ['ad', 'gd', 'Mx', 'w'];
   for (const p of patterns) {
     if (content.includes(`const ${p}={`) || content.includes(`var ${p}={`)) {
       return p;
     }
   }
-  return 'ad'; // default
+  return 'ad';
 }
 
-const originalHandlerName = findOriginalHandlerName(workerContent);
+const originalHandlerName = findOriginalHandlerName(content);
 console.log(`ℹ️  Found handler variable: ${originalHandlerName}`);
 
 const fetchWrapperCode = `
@@ -175,20 +182,18 @@ const __wrappedHandler__ = __originalHandler__ ? {
 `;
 
 // Check if we already have the wrapper
-if (!workerContent.includes('__wrappedHandler__')) {
-  // Add wrapper before the export statement
-  const exportIndex = workerContent.lastIndexOf('export{');
+if (!content.includes('__wrappedHandler__')) {
+  const exportIndex = content.lastIndexOf('export{');
   if (exportIndex > 0) {
-    workerContent = workerContent.slice(0, exportIndex) + fetchWrapperCode + workerContent.slice(exportIndex);
+    content = content.slice(0, exportIndex) + fetchWrapperCode + content.slice(exportIndex);
     console.log('✅ Wrapped fetch handler for API routes');
   }
 }
 
-// Check if default export already exists (either 'export default' or 'as default' in export{})
-const hasDefaultExport = workerContent.includes('export default') || workerContent.includes('as default');
+// Add default export if not present
+const hasDefaultExport = content.includes('export default') || content.includes('as default');
 if (!hasDefaultExport) {
-  // Add default export for handler - use wrapped handler
-  workerContent = workerContent.replace(
+  content = content.replace(
     /export\{([^}]+)\}/,
     'export{$1};export default __wrappedHandler__;'
   );
@@ -197,50 +202,42 @@ if (!hasDefaultExport) {
   console.log('ℹ️  Default export already exists, skipping');
 }
 
-fs.writeFileSync(workerEntryPath, workerContent);
-console.log(`✅ Saved ${workerEntryFile}`);
+fs.writeFileSync(targetPath, content);
+console.log(`✅ Saved ${targetFile}`);
 
-// Step 3: Fix index.js to use the wrapped handler (default export)
-const indexPath = path.join(distDir, 'index.js');
-if (fs.existsSync(indexPath)) {
-  let indexContent = fs.readFileSync(indexPath, 'utf8');
+// For Vite 7 only: Fix index.js to use the wrapped handler
+if (!isVite8Mode) {
+  const indexPath = path.join(distDir, 'index.js');
+  if (fs.existsSync(indexPath)) {
+    let indexContent = fs.readFileSync(indexPath, 'utf8');
 
-  // Current format: import{F as e,G as r}from"./assets/worker-entry-xxx.js";...;export{e as createServerEntry,r as default}
-  // Target format: import __handler__,{F as e}from"./assets/worker-entry-xxx.js";...;export{e as createServerEntry,__handler__ as default}
+    const multiImportPattern = /import\{([^}]+)\}from"(\.\/assets\/worker-entry-[^"]+\.js)"/;
+    const importMatch = indexContent.match(multiImportPattern);
 
-  // Pattern 1: Match import statement with multiple named imports including G
-  const multiImportPattern = /import\{([^}]+)\}from"(\.\/assets\/worker-entry-[^"]+\.js)"/;
-  const importMatch = indexContent.match(multiImportPattern);
+    if (importMatch) {
+      const [fullImport, namedImports, workerPath] = importMatch;
+      const imports = namedImports.split(',').map((s) => {
+        const [orig, alias] = s.trim().split(' as ');
+        return { orig, alias };
+      });
 
-  if (importMatch) {
-    const [fullImport, namedImports, workerPath] = importMatch;
-    // Parse named imports: "F as e,G as r" -> [{orig: 'F', alias: 'e'}, {orig: 'G', alias: 'r'}]
-    const imports = namedImports.split(',').map((s) => {
-      const [orig, alias] = s.trim().split(' as ');
-      return { orig, alias };
-    });
+      const gImport = imports.find((i) => i.orig === 'G');
+      const otherImports = imports.filter((i) => i.orig !== 'G');
 
-    // Find the G import (this is the handler that becomes default)
-    const gImport = imports.find((i) => i.orig === 'G');
-    // Keep other imports (F, etc.)
-    const otherImports = imports.filter((i) => i.orig !== 'G');
+      if (gImport) {
+        const namedPart = otherImports.length > 0 ? `,{${otherImports.map((i) => `${i.orig} as ${i.alias}`).join(',')}}` : '';
+        const newImport = `import __handler__${namedPart}from"${workerPath}"`;
 
-    if (gImport) {
-      // Build new import: import __handler__,{F as e}from"./worker-entry.js"
-      const namedPart = otherImports.length > 0 ? `,{${otherImports.map((i) => `${i.orig} as ${i.alias}`).join(',')}}` : '';
-      const newImport = `import __handler__${namedPart}from"${workerPath}"`;
+        indexContent = indexContent.replace(fullImport, newImport);
+        indexContent = indexContent.replace(new RegExp(`${gImport.alias} as default`, 'g'), '__handler__ as default');
 
-      indexContent = indexContent.replace(fullImport, newImport);
-
-      // Update export: change "r as default" to "__handler__ as default"
-      indexContent = indexContent.replace(new RegExp(`${gImport.alias} as default`, 'g'), '__handler__ as default');
-
-      console.log(`✅ Fixed index.js to use default (wrapped) export`);
+        console.log(`✅ Fixed index.js to use default (wrapped) export`);
+      }
     }
-  }
 
-  fs.writeFileSync(indexPath, indexContent);
-  console.log('✅ Saved index.js');
+    fs.writeFileSync(indexPath, indexContent);
+    console.log('✅ Saved index.js');
+  }
 }
 
 console.log('✨ Polyfill injection complete');
