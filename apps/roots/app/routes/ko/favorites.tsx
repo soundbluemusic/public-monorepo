@@ -3,14 +3,8 @@
  */
 
 import { headFactoryKo } from '@soundblue/seo/meta';
-import { createFileRoute, Link } from '@tanstack/react-router';
-import { useEffect, useState } from 'react';
-import { ConceptCard } from '../../components/concept/ConceptCard';
-import { Layout } from '../../components/layout/Layout';
-import type { MathConcept } from '../../data/types';
-import { useI18n } from '../../i18n';
-import { getConceptById } from '../../lib/concepts';
-import { favorites } from '../../lib/db';
+import { createFileRoute } from '@tanstack/react-router';
+import { FavoritesPage } from '../../components/pages';
 
 export const Route = createFileRoute('/ko/favorites')({
   head: headFactoryKo(
@@ -20,67 +14,5 @@ export const Route = createFileRoute('/ko/favorites')({
     },
     'https://roots.soundbluemusic.com',
   ),
-  component: FavoritesPageKo,
+  component: FavoritesPage,
 });
-
-function FavoritesPageKo() {
-  const { t, localePath } = useI18n();
-
-  const [favoriteConcepts, setFavoriteConcepts] = useState<MathConcept[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  // 즐겨찾기 로드
-  useEffect(() => {
-    async function loadFavorites() {
-      try {
-        const favs = await favorites.getAll();
-        const concepts = await Promise.all(favs.map((f) => getConceptById(f.conceptId)));
-        setFavoriteConcepts(concepts.filter((c): c is MathConcept => c !== undefined));
-      } catch (error: unknown) {
-        console.error('Failed to load favorites:', error);
-      } finally {
-        setIsLoading(false);
-      }
-    }
-    loadFavorites();
-  }, []);
-
-  return (
-    <Layout>
-      <h1 className="text-2xl font-bold text-(--text-primary) mb-8">{t('favorites')}</h1>
-
-      {isLoading ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {[1, 2, 3].map((i) => (
-            <div
-              key={i}
-              className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)"
-            >
-              <div className="h-6 w-3/4 rounded bg-(--bg-tertiary) animate-pulse mb-2" />
-              <div className="h-4 w-full rounded bg-(--bg-tertiary) animate-pulse" />
-            </div>
-          ))}
-        </div>
-      ) : favoriteConcepts.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {favoriteConcepts.map((concept) => (
-            <ConceptCard key={concept.id} concept={concept} />
-          ))}
-        </div>
-      ) : (
-        <div className="text-center py-20">
-          <div className="text-5xl mb-4">💝</div>
-          <p className="text-xl font-medium text-(--text-primary) mb-2">{t('noFavoritesYet')}</p>
-          <p className="text-(--text-secondary) mb-6">{t('addFavoritesHint')}</p>
-          <Link
-            to={localePath('/browse')}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-(--accent-bg) text-white font-medium transition-colors hover:brightness-110 active:scale-[0.98]"
-          >
-            {t('browseAllConcepts')}
-            <span>→</span>
-          </Link>
-        </div>
-      )}
-    </Layout>
-  );
-}

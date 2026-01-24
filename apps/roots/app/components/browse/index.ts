@@ -1,6 +1,7 @@
 /**
  * @fileoverview Browse 컴포넌트 모듈
  */
+export { BrowsePage } from './BrowsePage';
 export { BrowseTabs } from './BrowseTabs';
 export { ConceptFilters } from './ConceptFilters';
 export { LightConceptCard } from './LightConceptCard';

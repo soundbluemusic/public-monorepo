@@ -5,9 +5,12 @@
 import {
   generateArticleSchema,
   generateBreadcrumbSchema,
+  generateDefinedTermSchema,
   generateFAQSchema,
   generateJsonLdScript,
   generateOrganizationSchema,
+  generateSoftwareApplicationSchema,
+  generateTechArticleSchema,
   generateWebsiteSchema,
   serializeSchema,
 } from '@soundblue/seo/structured-data';
@@ -283,5 +286,401 @@ describe('generateJsonLdScript', () => {
     expect(script).toBe(
       '<script type="application/ld+json">{"@type":"WebSite","name":"Test"}</script>',
     );
+  });
+});
+
+describe('generateDefinedTermSchema', () => {
+  it('should generate basic defined term schema', () => {
+    const schema = generateDefinedTermSchema({
+      name: '안녕',
+      description: 'Hello - Korean greeting',
+      url: 'https://context.soundbluemusic.com/entry/annyeong',
+    });
+
+    expect(schema).toMatchObject({
+      '@context': 'https://schema.org',
+      '@type': 'DefinedTerm',
+      name: '안녕',
+      description: 'Hello - Korean greeting',
+      url: 'https://context.soundbluemusic.com/entry/annyeong',
+    });
+  });
+
+  it('should include termCode when provided', () => {
+    const schema = generateDefinedTermSchema({
+      name: '안녕',
+      description: 'Hello - Korean greeting',
+      url: 'https://context.soundbluemusic.com/entry/annyeong',
+      termCode: 'annyeong',
+    });
+
+    expect(schema).toHaveProperty('termCode', 'annyeong');
+  });
+
+  it('should include inDefinedTermSet when provided', () => {
+    const schema = generateDefinedTermSchema({
+      name: '안녕',
+      description: 'Hello - Korean greeting',
+      url: 'https://context.soundbluemusic.com/entry/annyeong',
+      inDefinedTermSet: 'Korean Greetings',
+    });
+
+    expect(schema).toHaveProperty('inDefinedTermSet', 'Korean Greetings');
+  });
+
+  it('should include inLanguage when provided', () => {
+    const schema = generateDefinedTermSchema({
+      name: '안녕',
+      description: 'Hello - Korean greeting',
+      url: 'https://context.soundbluemusic.com/entry/annyeong',
+      inLanguage: 'ko',
+    });
+
+    expect(schema).toHaveProperty('inLanguage', 'ko');
+  });
+
+  it('should include educationalLevel when provided', () => {
+    const schema = generateDefinedTermSchema({
+      name: '안녕',
+      description: 'Hello - Korean greeting',
+      url: 'https://context.soundbluemusic.com/entry/annyeong',
+      educationalLevel: 'beginner',
+    });
+
+    expect(schema).toHaveProperty('educationalLevel', 'beginner');
+  });
+
+  it('should include all optional fields when provided', () => {
+    const schema = generateDefinedTermSchema({
+      name: '감사합니다',
+      description: 'Thank you in Korean',
+      url: 'https://context.soundbluemusic.com/entry/gamsahamnida',
+      termCode: 'gamsahamnida',
+      inDefinedTermSet: 'Korean Phrases',
+      inLanguage: 'ko',
+      educationalLevel: 'intermediate',
+    });
+
+    expect(schema).toMatchObject({
+      '@context': 'https://schema.org',
+      '@type': 'DefinedTerm',
+      name: '감사합니다',
+      description: 'Thank you in Korean',
+      url: 'https://context.soundbluemusic.com/entry/gamsahamnida',
+      termCode: 'gamsahamnida',
+      inDefinedTermSet: 'Korean Phrases',
+      inLanguage: 'ko',
+      educationalLevel: 'intermediate',
+    });
+  });
+});
+
+describe('generateSoftwareApplicationSchema', () => {
+  it('should generate basic software application schema', () => {
+    const schema = generateSoftwareApplicationSchema({
+      name: 'Lodash',
+      description: 'A modern JavaScript utility library',
+      url: 'https://permissive.soundbluemusic.com/library/lodash',
+    });
+
+    expect(schema).toMatchObject({
+      '@context': 'https://schema.org',
+      '@type': 'SoftwareApplication',
+      name: 'Lodash',
+      description: 'A modern JavaScript utility library',
+      url: 'https://permissive.soundbluemusic.com/library/lodash',
+    });
+  });
+
+  it('should include applicationCategory when provided', () => {
+    const schema = generateSoftwareApplicationSchema({
+      name: 'Lodash',
+      description: 'A modern JavaScript utility library',
+      url: 'https://permissive.soundbluemusic.com/library/lodash',
+      applicationCategory: 'DeveloperApplication',
+    });
+
+    expect(schema).toHaveProperty('applicationCategory', 'DeveloperApplication');
+  });
+
+  it('should include operatingSystem when provided', () => {
+    const schema = generateSoftwareApplicationSchema({
+      name: 'Lodash',
+      description: 'A modern JavaScript utility library',
+      url: 'https://permissive.soundbluemusic.com/library/lodash',
+      operatingSystem: 'Cross-platform',
+    });
+
+    expect(schema).toHaveProperty('operatingSystem', 'Cross-platform');
+  });
+
+  it('should convert license to opensource.org URL', () => {
+    const schema = generateSoftwareApplicationSchema({
+      name: 'Lodash',
+      description: 'A modern JavaScript utility library',
+      url: 'https://permissive.soundbluemusic.com/library/lodash',
+      license: 'MIT',
+    });
+
+    expect(schema).toHaveProperty('license', 'https://opensource.org/licenses/MIT');
+  });
+
+  it('should include codeRepository when provided', () => {
+    const schema = generateSoftwareApplicationSchema({
+      name: 'Lodash',
+      description: 'A modern JavaScript utility library',
+      url: 'https://permissive.soundbluemusic.com/library/lodash',
+      codeRepository: 'https://github.com/lodash/lodash',
+    });
+
+    expect(schema).toHaveProperty('codeRepository', 'https://github.com/lodash/lodash');
+  });
+
+  it('should include programmingLanguage when provided', () => {
+    const schema = generateSoftwareApplicationSchema({
+      name: 'Lodash',
+      description: 'A modern JavaScript utility library',
+      url: 'https://permissive.soundbluemusic.com/library/lodash',
+      programmingLanguage: 'JavaScript',
+    });
+
+    expect(schema).toHaveProperty('programmingLanguage', 'JavaScript');
+  });
+
+  it('should include offers when price and priceCurrency are provided', () => {
+    const schema = generateSoftwareApplicationSchema({
+      name: 'Lodash',
+      description: 'A modern JavaScript utility library',
+      url: 'https://permissive.soundbluemusic.com/library/lodash',
+      price: '0',
+      priceCurrency: 'USD',
+    }) as Record<string, unknown>;
+
+    expect(schema.offers).toMatchObject({
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    });
+  });
+
+  it('should not include offers when only price is provided', () => {
+    const schema = generateSoftwareApplicationSchema({
+      name: 'Lodash',
+      description: 'A modern JavaScript utility library',
+      url: 'https://permissive.soundbluemusic.com/library/lodash',
+      price: '0',
+    });
+
+    expect(schema).not.toHaveProperty('offers');
+  });
+
+  it('should include string author as Person', () => {
+    const schema = generateSoftwareApplicationSchema({
+      name: 'Lodash',
+      description: 'A modern JavaScript utility library',
+      url: 'https://permissive.soundbluemusic.com/library/lodash',
+      author: 'John-David Dalton',
+    }) as Record<string, unknown>;
+
+    expect(schema.author).toMatchObject({
+      '@type': 'Person',
+      name: 'John-David Dalton',
+    });
+  });
+
+  it('should include organization author', () => {
+    const schema = generateSoftwareApplicationSchema({
+      name: 'React',
+      description: 'A JavaScript library for building user interfaces',
+      url: 'https://permissive.soundbluemusic.com/library/react',
+      author: { name: 'Meta', url: 'https://meta.com' },
+    }) as Record<string, unknown>;
+
+    expect(schema.author).toMatchObject({
+      '@type': 'Organization',
+      name: 'Meta',
+      url: 'https://meta.com',
+    });
+  });
+
+  it('should include all optional fields when provided', () => {
+    const schema = generateSoftwareApplicationSchema({
+      name: 'Lodash',
+      description: 'A modern JavaScript utility library',
+      url: 'https://permissive.soundbluemusic.com/library/lodash',
+      applicationCategory: 'DeveloperApplication',
+      operatingSystem: 'Cross-platform',
+      license: 'MIT',
+      codeRepository: 'https://github.com/lodash/lodash',
+      programmingLanguage: 'JavaScript',
+      price: '0',
+      priceCurrency: 'USD',
+      author: 'John-David Dalton',
+    }) as Record<string, unknown>;
+
+    expect(schema).toMatchObject({
+      '@context': 'https://schema.org',
+      '@type': 'SoftwareApplication',
+      name: 'Lodash',
+      applicationCategory: 'DeveloperApplication',
+      operatingSystem: 'Cross-platform',
+      license: 'https://opensource.org/licenses/MIT',
+      codeRepository: 'https://github.com/lodash/lodash',
+      programmingLanguage: 'JavaScript',
+    });
+    expect(schema.offers).toMatchObject({
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    });
+    expect(schema.author).toMatchObject({
+      '@type': 'Person',
+      name: 'John-David Dalton',
+    });
+  });
+});
+
+describe('generateTechArticleSchema', () => {
+  it('should generate basic tech article schema', () => {
+    const schema = generateTechArticleSchema({
+      headline: 'Fetch API',
+      description: 'Modern way to make HTTP requests in JavaScript',
+      url: 'https://permissive.soundbluemusic.com/web-api/fetch-api',
+    });
+
+    expect(schema).toMatchObject({
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Fetch API',
+      description: 'Modern way to make HTTP requests in JavaScript',
+      url: 'https://permissive.soundbluemusic.com/web-api/fetch-api',
+    });
+  });
+
+  it('should include datePublished when provided', () => {
+    const schema = generateTechArticleSchema({
+      headline: 'Fetch API',
+      description: 'Modern way to make HTTP requests',
+      url: 'https://permissive.soundbluemusic.com/web-api/fetch-api',
+      datePublished: '2024-01-01',
+    });
+
+    expect(schema).toHaveProperty('datePublished', '2024-01-01');
+  });
+
+  it('should include dateModified when provided', () => {
+    const schema = generateTechArticleSchema({
+      headline: 'Fetch API',
+      description: 'Modern way to make HTTP requests',
+      url: 'https://permissive.soundbluemusic.com/web-api/fetch-api',
+      datePublished: '2024-01-01',
+      dateModified: '2024-06-15',
+    });
+
+    expect(schema).toHaveProperty('dateModified', '2024-06-15');
+  });
+
+  it('should include proficiencyLevel when provided', () => {
+    const schema = generateTechArticleSchema({
+      headline: 'Fetch API',
+      description: 'Modern way to make HTTP requests',
+      url: 'https://permissive.soundbluemusic.com/web-api/fetch-api',
+      proficiencyLevel: 'Beginner',
+    });
+
+    expect(schema).toHaveProperty('proficiencyLevel', 'Beginner');
+  });
+
+  it('should include dependencies as comma-separated string when provided', () => {
+    const schema = generateTechArticleSchema({
+      headline: 'Fetch API',
+      description: 'Modern way to make HTTP requests',
+      url: 'https://permissive.soundbluemusic.com/web-api/fetch-api',
+      dependencies: ['JavaScript', 'Browser', 'Promise'],
+    });
+
+    expect(schema).toHaveProperty('dependencies', 'JavaScript, Browser, Promise');
+  });
+
+  it('should not include dependencies for empty array', () => {
+    const schema = generateTechArticleSchema({
+      headline: 'Fetch API',
+      description: 'Modern way to make HTTP requests',
+      url: 'https://permissive.soundbluemusic.com/web-api/fetch-api',
+      dependencies: [],
+    });
+
+    expect(schema).not.toHaveProperty('dependencies');
+  });
+
+  it('should include string author as Person', () => {
+    const schema = generateTechArticleSchema({
+      headline: 'Fetch API',
+      description: 'Modern way to make HTTP requests',
+      url: 'https://permissive.soundbluemusic.com/web-api/fetch-api',
+      author: 'MDN Contributors',
+    }) as Record<string, unknown>;
+
+    expect(schema.author).toMatchObject({
+      '@type': 'Person',
+      name: 'MDN Contributors',
+    });
+  });
+
+  it('should include organization author', () => {
+    const schema = generateTechArticleSchema({
+      headline: 'Fetch API',
+      description: 'Modern way to make HTTP requests',
+      url: 'https://permissive.soundbluemusic.com/web-api/fetch-api',
+      author: { name: 'Mozilla', url: 'https://mozilla.org' },
+    }) as Record<string, unknown>;
+
+    expect(schema.author).toMatchObject({
+      '@type': 'Organization',
+      name: 'Mozilla',
+      url: 'https://mozilla.org',
+    });
+  });
+
+  it('should include inLanguage when provided', () => {
+    const schema = generateTechArticleSchema({
+      headline: 'Fetch API',
+      description: 'Modern way to make HTTP requests',
+      url: 'https://permissive.soundbluemusic.com/web-api/fetch-api',
+      inLanguage: 'en',
+    });
+
+    expect(schema).toHaveProperty('inLanguage', 'en');
+  });
+
+  it('should include all optional fields when provided', () => {
+    const schema = generateTechArticleSchema({
+      headline: 'WebSocket API',
+      description: 'Real-time bidirectional communication',
+      url: 'https://permissive.soundbluemusic.com/web-api/websocket-api',
+      datePublished: '2024-01-01',
+      dateModified: '2024-06-15',
+      proficiencyLevel: 'Intermediate',
+      dependencies: ['JavaScript', 'Browser'],
+      author: 'MDN Contributors',
+      inLanguage: 'en',
+    }) as Record<string, unknown>;
+
+    expect(schema).toMatchObject({
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'WebSocket API',
+      description: 'Real-time bidirectional communication',
+      url: 'https://permissive.soundbluemusic.com/web-api/websocket-api',
+      datePublished: '2024-01-01',
+      dateModified: '2024-06-15',
+      proficiencyLevel: 'Intermediate',
+      dependencies: 'JavaScript, Browser',
+      inLanguage: 'en',
+    });
+    expect(schema.author).toMatchObject({
+      '@type': 'Person',
+      name: 'MDN Contributors',
+    });
   });
 });

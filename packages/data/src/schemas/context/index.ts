@@ -18,8 +18,10 @@ export {
   LocalizedTextSchema,
 } from './category';
 export type {
+  DialogueLine as EntryDialogueLine,
   Difficulty,
   Entry,
+  EntryDialogue,
   Examples,
   Frequency,
   PartOfSpeech,
@@ -29,8 +31,11 @@ export type {
   Variations,
 } from './entry';
 // Entry schemas
+// Entry dialogue schemas (별도 이름으로 export - category.ts와 구분)
 export {
+  DialogueLineSchema as EntryDialogueLineSchema,
   DifficultySchema,
+  EntryDialogueSchema,
   EntrySchema,
   ExamplesSchema,
   FrequencySchema,

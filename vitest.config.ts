@@ -56,6 +56,9 @@ export default defineConfig({
         'packages/search/src/**/!(index).ts',
         'packages/seo/src/**/!(index).ts',
         'packages/features/src/**/!(index).ts',
+        'packages/pwa/src/**/!(index).{ts,tsx}',
+        'packages/ui/src/**/!(index).{ts,tsx}',
+        'packages/data/src/**/!(index).ts',
       ],
       thresholds: {
         global: {

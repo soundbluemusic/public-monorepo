@@ -289,9 +289,33 @@ describe('generateSitemaps (file writing)', () => {
     vi.restoreAllMocks();
   });
 
-  it('should log progress messages during generation', () => {
-    // We can't easily mock fs in ESM, but we can verify the function exists and logs
-    // The actual file writing is tested via integration tests
+  it('should export generateSitemaps function', () => {
+    // Verify the function exists and has correct signature
     expect(typeof generateSitemaps).toBe('function');
+    expect(generateSitemaps.length).toBe(3); // 3 parameters
+  });
+});
+
+describe('createDynamicUrls with trailingSlash', () => {
+  const siteUrl = 'https://example.com';
+  const languages = ['en', 'ko'] as const;
+
+  it('should not add trailing slash by default', () => {
+    const urls = createDynamicUrls(siteUrl, '/entry', ['test'], '0.7', 'weekly', languages);
+
+    expect(urls[0]).toContain('<loc>https://example.com/entry/test</loc>');
+    expect(urls[0]).not.toContain('<loc>https://example.com/entry/test/</loc>');
+  });
+
+  it('should add trailing slash when trailingSlash is true', () => {
+    const urls = createDynamicUrls(siteUrl, '/entry', ['test'], '0.7', 'weekly', languages, true);
+
+    expect(urls[0]).toContain('<loc>https://example.com/entry/test/</loc>');
+  });
+
+  it('should add trailing slash to Korean URLs too', () => {
+    const urls = createDynamicUrls(siteUrl, '/entry', ['test'], '0.7', 'weekly', languages, true);
+
+    expect(urls[1]).toContain('<loc>https://example.com/ko/entry/test/</loc>');
   });
 });
