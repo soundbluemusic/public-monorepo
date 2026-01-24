@@ -93,11 +93,9 @@ export function useOnlineStatus(): UseOnlineStatusReturn {
     // Mark as mounted to prevent hydration mismatch
     setIsMounted(true);
 
-    // Set initial state from navigator after a short delay
-    // Some browsers report incorrect offline status immediately after page load
-    const initTimer = setTimeout(() => {
-      setIsOnline(navigator.onLine);
-    }, 100);
+    // Don't check navigator.onLine on initial load - it can be unreliable
+    // especially during SSR hydration or when network is initializing.
+    // Instead, only respond to actual online/offline events.
 
     const handleOnline = () => setIsOnline(true);
     const handleOffline = () => {
@@ -110,7 +108,6 @@ export function useOnlineStatus(): UseOnlineStatusReturn {
     window.addEventListener('offline', handleOffline);
 
     return () => {
-      clearTimeout(initTimer);
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
     };

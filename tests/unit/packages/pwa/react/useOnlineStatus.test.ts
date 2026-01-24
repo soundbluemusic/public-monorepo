@@ -3,16 +3,16 @@
  *
  * Note: The hook has hydration-safe behavior:
  * - Returns `isOnline: true` before mount to prevent SSR/client mismatch
- * - Reads `navigator.onLine` after 100ms delay to avoid browser quirks
+ * - Only responds to actual online/offline events (does NOT check navigator.onLine on load)
+ * - This avoids false "offline" detection during SSR hydration or network initialization
  */
 
 import { useOnlineStatus } from '@soundblue/pwa/react';
-import { act, renderHook, waitFor } from '@testing-library/react';
+import { act, renderHook } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 describe('useOnlineStatus', () => {
   beforeEach(() => {
-    vi.useFakeTimers();
     // Reset navigator.onLine to true before each test
     Object.defineProperty(navigator, 'onLine', {
       writable: true,
@@ -22,7 +22,7 @@ describe('useOnlineStatus', () => {
   });
 
   afterEach(() => {
-    vi.useRealTimers();
+    vi.restoreAllMocks();
   });
 
   it('should return true before mount (hydration safety)', () => {
@@ -32,19 +32,16 @@ describe('useOnlineStatus', () => {
     expect(result.current.wasOffline).toBe(false);
   });
 
-  it('should return initial online status (true) after mount', async () => {
+  it('should return isOnline: true after mount (default state)', () => {
     const { result } = renderHook(() => useOnlineStatus());
 
-    // Advance timers to trigger the 100ms delay check
-    act(() => {
-      vi.advanceTimersByTime(150);
-    });
-
+    // After mount, should still be true (we don't check navigator.onLine)
     expect(result.current.isOnline).toBe(true);
     expect(result.current.wasOffline).toBe(false);
   });
 
-  it('should return initial online status (false) after mount delay', async () => {
+  it('should NOT read navigator.onLine on initial load', () => {
+    // Even if navigator.onLine is false, we don't check it on initial load
     Object.defineProperty(navigator, 'onLine', {
       writable: true,
       configurable: true,
@@ -53,25 +50,14 @@ describe('useOnlineStatus', () => {
 
     const { result } = renderHook(() => useOnlineStatus());
 
-    // Before delay, should still be true (hydration safety)
+    // Should still report online because we don't check navigator.onLine
+    // This prevents false "offline" detection during page load/hydration
     expect(result.current.isOnline).toBe(true);
-
-    // Advance timers past the 100ms delay
-    act(() => {
-      vi.advanceTimersByTime(150);
-    });
-
-    // Now should reflect actual navigator.onLine value
-    expect(result.current.isOnline).toBe(false);
     expect(result.current.wasOffline).toBe(false);
   });
 
-  it('should update isOnline when going offline', async () => {
+  it('should update isOnline when going offline', () => {
     const { result } = renderHook(() => useOnlineStatus());
-
-    act(() => {
-      vi.advanceTimersByTime(150);
-    });
 
     expect(result.current.isOnline).toBe(true);
     expect(result.current.wasOffline).toBe(false);
@@ -84,22 +70,17 @@ describe('useOnlineStatus', () => {
     expect(result.current.wasOffline).toBe(true);
   });
 
-  it('should update isOnline when going online', async () => {
-    Object.defineProperty(navigator, 'onLine', {
-      writable: true,
-      configurable: true,
-      value: false,
-    });
-
+  it('should update isOnline when going online', () => {
     const { result } = renderHook(() => useOnlineStatus());
 
-    // Wait for mount + delay
+    // Go offline first
     act(() => {
-      vi.advanceTimersByTime(150);
+      window.dispatchEvent(new Event('offline'));
     });
 
     expect(result.current.isOnline).toBe(false);
 
+    // Then go online
     act(() => {
       window.dispatchEvent(new Event('online'));
     });
@@ -107,12 +88,8 @@ describe('useOnlineStatus', () => {
     expect(result.current.isOnline).toBe(true);
   });
 
-  it('should set wasOffline flag when going offline', async () => {
+  it('should set wasOffline flag when going offline', () => {
     const { result } = renderHook(() => useOnlineStatus());
-
-    act(() => {
-      vi.advanceTimersByTime(150);
-    });
 
     expect(result.current.wasOffline).toBe(false);
 
@@ -123,12 +100,8 @@ describe('useOnlineStatus', () => {
     expect(result.current.wasOffline).toBe(true);
   });
 
-  it('should maintain wasOffline flag after coming back online', async () => {
+  it('should maintain wasOffline flag after coming back online (sticky flag)', () => {
     const { result } = renderHook(() => useOnlineStatus());
-
-    act(() => {
-      vi.advanceTimersByTime(150);
-    });
 
     // Go offline
     act(() => {
@@ -144,15 +117,11 @@ describe('useOnlineStatus', () => {
     });
 
     expect(result.current.isOnline).toBe(true);
-    expect(result.current.wasOffline).toBe(true); // Should still be true
+    expect(result.current.wasOffline).toBe(true); // Should still be true (sticky)
   });
 
-  it('should handle multiple offline/online transitions', async () => {
+  it('should handle multiple offline/online transitions', () => {
     const { result } = renderHook(() => useOnlineStatus());
-
-    act(() => {
-      vi.advanceTimersByTime(150);
-    });
 
     // Go offline
     act(() => {
@@ -179,7 +148,6 @@ describe('useOnlineStatus', () => {
   });
 
   it('should cleanup event listeners on unmount', () => {
-    vi.useRealTimers(); // Use real timers for this test
     const addEventListenerSpy = vi.spyOn(window, 'addEventListener');
     const removeEventListenerSpy = vi.spyOn(window, 'removeEventListener');
 
@@ -192,17 +160,10 @@ describe('useOnlineStatus', () => {
 
     expect(removeEventListenerSpy).toHaveBeenCalledWith('online', expect.any(Function));
     expect(removeEventListenerSpy).toHaveBeenCalledWith('offline', expect.any(Function));
-
-    addEventListenerSpy.mockRestore();
-    removeEventListenerSpy.mockRestore();
   });
 
-  it('should not update state after unmount', async () => {
+  it('should not update state after unmount', () => {
     const { result, unmount } = renderHook(() => useOnlineStatus());
-
-    act(() => {
-      vi.advanceTimersByTime(150);
-    });
 
     unmount();
 
@@ -215,16 +176,5 @@ describe('useOnlineStatus', () => {
     // Should still have the last value before unmount
     expect(result.current.isOnline).toBe(true);
     expect(result.current.wasOffline).toBe(false);
-  });
-
-  it('should clear timeout on unmount', () => {
-    const clearTimeoutSpy = vi.spyOn(global, 'clearTimeout');
-
-    const { unmount } = renderHook(() => useOnlineStatus());
-
-    unmount();
-
-    expect(clearTimeoutSpy).toHaveBeenCalled();
-    clearTimeoutSpy.mockRestore();
   });
 });
