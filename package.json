@@ -95,7 +95,6 @@
     "jest-axe": "^10.0.0",
     "jsdom": "^27.4.0",
     "lighthouse": "^13.0.1",
-    "linkinator": "^7.5.3",
     "nanoid": "^5.1.6",
     "pixelmatch": "^7.1.0",
     "react": "^19.2.3",

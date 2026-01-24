@@ -1,12 +1,11 @@
 /**
- * 링크 무결성 검사 스크립트 (linkinator 기반)
+ * 링크 무결성 검사 스크립트 (lychee 기반 - Rust)
  * - 모든 앱의 내부 링크가 404 없이 정상 작동하는지 확인
  * - 빌드된 정적 사이트의 preview 서버를 사용하여 검증
  */
 
 import type { ChildProcess } from 'node:child_process';
-import { spawn } from 'node:child_process';
-import { LinkChecker, type LinkResult } from 'linkinator';
+import { execSync, spawn } from 'node:child_process';
 
 interface AppConfig {
   name: string;
@@ -19,6 +18,23 @@ const apps: AppConfig[] = [
   { name: 'permissive', port: 3004, url: 'http://localhost:3004' },
   { name: 'roots', port: 3005, url: 'http://localhost:3005' },
 ];
+
+interface LycheeLink {
+  url: string;
+  status: { code: number } | { text: string };
+}
+
+interface LycheeResult {
+  fail_map: Record<string, LycheeLink[]>;
+  success_map: Record<string, LycheeLink[]>;
+  error_map: Record<string, LycheeLink[]>;
+  stats: {
+    total: number;
+    successful: number;
+    failed: number;
+    errors: number;
+  };
+}
 
 interface LinkCheckResult {
   app: string;
@@ -81,35 +97,79 @@ async function checkLinks(url: string): Promise<{
   totalLinks: number;
   brokenDetails: Array<{ url: string; status: number; parent: string }>;
 }> {
-  const checker = new LinkChecker();
   const brokenDetails: Array<{ url: string; status: number; parent: string }> = [];
 
-  // 진행 상황 표시
-  checker.on('link', (link: LinkResult) => {
-    if (link.state === 'BROKEN') {
-      brokenDetails.push({
-        url: link.url,
-        status: link.status ?? 0,
-        parent: link.parent ?? 'unknown',
-      });
+  try {
+    // lychee CLI 실행 (Rust 기반 - 훨씬 빠름)
+    // --exclude: 외부 링크 및 /entry/* 경로 제외
+    // --format json: JSON 출력
+    // --no-progress: 진행 상태 표시 안함
+    // --timeout 10: 10초 타임아웃
+    const result = execSync(
+      `lychee "${url}" --format json --no-progress --timeout 10 --exclude "^https?://(?!localhost)" --exclude "/entry/"`,
+      { encoding: 'utf-8', maxBuffer: 10 * 1024 * 1024 },
+    );
+
+    const lycheeResult: LycheeResult = JSON.parse(result);
+
+    // 실패한 링크 수집
+    for (const [parent, links] of Object.entries(lycheeResult.fail_map || {})) {
+      for (const link of links) {
+        const status =
+          typeof link.status === 'object' && 'code' in link.status ? link.status.code : 0;
+        brokenDetails.push({ url: link.url, status, parent });
+      }
     }
-  });
 
-  const result = await checker.check({
-    path: url,
-    recurse: true,
-    linksToSkip: [
-      // 외부 링크 제외
-      /^https?:\/\/(?!localhost)/,
-      // Context 앱: /entry/* 경로는 R2에서 서빙되므로 Pages 빌드에서 404 정상
-      /\/entry\//,
-    ],
-  });
+    // 에러 링크도 실패로 처리
+    for (const [parent, links] of Object.entries(lycheeResult.error_map || {})) {
+      for (const link of links) {
+        brokenDetails.push({ url: link.url, status: 0, parent });
+      }
+    }
 
-  const brokenLinks = result.links.filter((link) => link.state === 'BROKEN').length;
-  const totalLinks = result.links.length;
+    return {
+      brokenLinks: lycheeResult.stats.failed + lycheeResult.stats.errors,
+      totalLinks: lycheeResult.stats.total,
+      brokenDetails,
+    };
+  } catch (error: unknown) {
+    // lychee는 깨진 링크가 있으면 exit code 1 반환
+    // 하지만 stdout에는 JSON 결과가 있음
+    if (error instanceof Error && 'stdout' in error) {
+      const stdout = (error as { stdout: string }).stdout;
+      if (stdout) {
+        try {
+          const lycheeResult: LycheeResult = JSON.parse(stdout);
 
-  return { brokenLinks, totalLinks, brokenDetails };
+          for (const [parent, links] of Object.entries(lycheeResult.fail_map || {})) {
+            for (const link of links) {
+              const status =
+                typeof link.status === 'object' && 'code' in link.status ? link.status.code : 0;
+              brokenDetails.push({ url: link.url, status, parent });
+            }
+          }
+
+          for (const [parent, links] of Object.entries(lycheeResult.error_map || {})) {
+            for (const link of links) {
+              brokenDetails.push({ url: link.url, status: 0, parent });
+            }
+          }
+
+          return {
+            brokenLinks: lycheeResult.stats.failed + lycheeResult.stats.errors,
+            totalLinks: lycheeResult.stats.total,
+            brokenDetails,
+          };
+        } catch {
+          // JSON 파싱 실패 시 기본값 반환
+        }
+      }
+    }
+
+    // 완전한 실패
+    throw error;
+  }
 }
 
 async function checkApp(app: AppConfig): Promise<LinkCheckResult> {
@@ -125,7 +185,7 @@ async function checkApp(app: AppConfig): Promise<LinkCheckResult> {
 
     console.log(`   ✓ Preview 서버 시작됨: ${app.url}`);
 
-    // 링크 체크 실행 (linkinator 사용)
+    // 링크 체크 실행 (lychee 사용 - Rust 기반)
     const { brokenLinks, totalLinks, brokenDetails } = await checkLinks(app.url);
 
     if (brokenLinks === 0) {
@@ -157,7 +217,7 @@ async function checkApp(app: AppConfig): Promise<LinkCheckResult> {
 }
 
 async function main(): Promise<void> {
-  console.log('\n🔗 링크 무결성 검사 시작 (linkinator)...\n');
+  console.log('\n🔗 링크 무결성 검사 시작 (lychee - Rust)...\n');
   console.log('='.repeat(60));
 
   const results: LinkCheckResult[] = [];
