@@ -87,10 +87,17 @@ export interface UseOnlineStatusReturn {
 export function useOnlineStatus(): UseOnlineStatusReturn {
   const [isOnline, setIsOnline] = useState(true);
   const [wasOffline, setWasOffline] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    // Set initial state from navigator
-    setIsOnline(navigator.onLine);
+    // Mark as mounted to prevent hydration mismatch
+    setIsMounted(true);
+
+    // Set initial state from navigator after a short delay
+    // Some browsers report incorrect offline status immediately after page load
+    const initTimer = setTimeout(() => {
+      setIsOnline(navigator.onLine);
+    }, 100);
 
     const handleOnline = () => setIsOnline(true);
     const handleOffline = () => {
@@ -103,10 +110,12 @@ export function useOnlineStatus(): UseOnlineStatusReturn {
     window.addEventListener('offline', handleOffline);
 
     return () => {
+      clearTimeout(initTimer);
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
     };
   }, []);
 
-  return { isOnline, wasOffline };
+  // During SSR or before mount, always report as online to prevent hydration mismatch
+  return { isOnline: isMounted ? isOnline : true, wasOffline };
 }
