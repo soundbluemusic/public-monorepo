@@ -24,7 +24,7 @@
 
 ### How It Works
 
-React Router v7의 SSR 모드 + Cloudflare D1으로 **런타임에** 동적 페이지를 생성합니다.
+TanStack Start의 SSR 모드 + Cloudflare D1으로 **런타임에** 동적 페이지를 생성합니다.
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -73,14 +73,20 @@ CREATE TABLE categories (
 ### SSR Configuration
 
 ```typescript
-// react-router.config.ts (BUILD_MODE=ssr)
-export default {
-  ssr: true,  // SSR 활성화
-  async prerender() {
-    // 정적 페이지만 prerender (entry 페이지 제외)
-    return [...staticRoutes, ...categoryRoutes];
-  },
-} satisfies Config;
+// vite.config.ts (TanStack Start)
+import { cloudflare } from '@cloudflare/vite-plugin';
+import { tanstackStart } from '@tanstack/react-start/plugin/vite';
+
+export default defineConfig({
+  plugins: [
+    cloudflare({ viteEnvironment: { name: 'ssr' } }),
+    tanstackStart({ srcDirectory: 'app' }),
+  ],
+});
+
+// app.config.ts (TanStack Start 설정)
+import { defineConfig } from '@tanstack/react-start/config';
+export default defineConfig({});
 
 // wrangler.toml (Workers 설정)
 name = "context"
@@ -106,7 +112,7 @@ SSR 모드에서 사이트맵은 D1에서 실시간 생성됩니다:
 | `/sitemap.xml` | 인덱스 | D1 categories 테이블 |
 | `/sitemap-pages.xml` | 정적 페이지 | 하드코딩 |
 | `/sitemap-categories.xml` | 카테고리 목록 | D1 categories |
-| `/sitemap-entry-{categoryId}.xml` | 카테고리별 엔트리 | D1 entries |
+| `/sitemaps/entries/{categoryId}.xml` | 카테고리별 엔트리 | D1 entries |
 | `/api/offline-db` | 오프라인 DB 덤프 | D1 전체 테이블 |
 
 ---
@@ -115,7 +121,7 @@ SSR 모드에서 사이트맵은 D1에서 실시간 생성됩니다:
 
 ### How It Works
 
-React Router v7의 SSR 모드 + Cloudflare Workers로 **런타임에** 동적 페이지를 생성합니다.
+TanStack Start의 SSR 모드 + Cloudflare Workers로 **런타임에** 동적 페이지를 생성합니다.
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -145,25 +151,33 @@ React Router v7의 SSR 모드 + Cloudflare Workers로 **런타임에** 동적 �
 
 > **모든 앱은 SSR + Cloudflare Workers**로 배포됩니다.
 
-### SSR Code Pattern (Roots/Permissive 앱)
+### SSR Code Pattern (TanStack Start)
 
 ```typescript
-// react-router.config.ts
-export default {
-  ssr: true,  // SSR mode
-  async prerender() {
-    const staticRoutes = extractStaticRoutes(routes);
-    const conceptRoutes = generateI18nRoutes(concepts, (c) => `/concept/${c.id}`);
-    return [...staticRoutes, ...conceptRoutes];
-  },
-} satisfies Config;
+// vite.config.ts
+import { tanstackStart } from '@tanstack/react-start/plugin/vite';
 
-// routes/concept.$conceptId.tsx
-export async function loader({ params }: Route.LoaderArgs) {
-  const concept = getConceptById(params.conceptId);
-  if (!concept) throw new Response('Not Found', { status: 404 });
-  return { concept };
-}
+export default defineConfig({
+  plugins: [
+    cloudflare({ viteEnvironment: { name: 'ssr' } }),
+    tanstackStart({ srcDirectory: 'app' }),
+  ],
+});
+
+// routes/concept/$conceptId.tsx (파일 기반 라우팅)
+import { createFileRoute, notFound } from '@tanstack/react-router';
+
+export const Route = createFileRoute('/concept/$conceptId')({
+  loader: async ({ params }) => {
+    const concept = getConceptById(params.conceptId);
+    if (!concept) throw notFound();
+    return { concept };
+  },
+  head: ({ loaderData }) => ({
+    meta: [{ title: loaderData.concept.name.en }],
+  }),
+  component: ConceptPage,
+});
 ```
 
 ### 다국어 동적 라우트 패턴 (중요!)
@@ -172,36 +186,37 @@ export async function loader({ params }: Route.LoaderArgs) {
 
 #### 원인
 
-routes.ts에서 다국어 라우트를 정의할 때:
+TanStack Start 파일 기반 라우팅에서 다국어 라우트 구조:
 
-```typescript
-// routes.ts
-route('concept/:conceptId', conceptFile, { id: 'concept-en' }),      // 영어
-route('ko/concept/:conceptId', conceptFile, { id: 'concept-ko' }),   // 한국어
+```
+routes/
+├── concept/$conceptId.tsx        # 영어: /concept/:conceptId
+└── ko/concept/$conceptId.tsx     # 한국어: /ko/concept/:conceptId
 ```
 
-`ko`는 **파라미터가 아닌 고정 문자열**입니다. 따라서 `params.locale`은 항상 `undefined`가 됩니다.
+`ko`는 **폴더명(고정 문자열)**입니다. 따라서 `params.locale`은 항상 `undefined`가 됩니다.
 
 #### 올바른 패턴
 
 ```typescript
 import { getLocaleFromPath } from '@soundblue/i18n';
+import { createFileRoute, notFound } from '@tanstack/react-router';
 
-// ✅ SSR loader에서 (Context 앱)
-export async function loader({ params, request, context }) {
-  const db = context.cloudflare.env.DB;
-  const url = new URL(request.url);
-  const locale = getLocaleFromPath(url.pathname);  // '/ko/entry/...' → 'ko'
-  const entry = await getEntryByIdFromD1(db, params.entryId, locale);
-  return { entry };
-}
+// ✅ TanStack Start loader에서 (location.pathname 사용)
+export const Route = createFileRoute('/entry/$entryId')({
+  loader: async ({ params, location }) => {
+    const locale = getLocaleFromPath(location.pathname);  // '/ko/entry/...' → 'ko'
+    const entry = await getEntry(params.entryId, locale);
+    if (!entry) throw notFound();
+    return { entry, locale };
+  },
+  component: EntryPage,
+});
 
-// ✅ SSR loader에서 (Roots/Permissive 앱)
-export async function loader({ params, request }) {
-  const url = new URL(request.url);
-  const locale = getLocaleFromPath(url.pathname);
-  const concept = getConceptByIdForLocale(params.conceptId, locale);
-  return { concept };
+// ✅ 컴포넌트에서 (useLocation 사용)
+function EntryPage() {
+  const { pathname } = useLocation();
+  const locale = getLocaleFromPath(pathname);
 }
 ```
 
@@ -422,51 +437,42 @@ export function cn(...classes: string[]) {}
 
 ---
 
-## Hydration Workaround (Hydration 버그 대응)
+## TanStack Start SSR (서버 사이드 렌더링)
 
-> ⚠️ **React Router v7 + React 19 SSR 환경의 알려진 버그에 대한 workaround입니다.**
+> TanStack Start는 Vinxi 기반으로 SSR을 처리하며, Cloudflare Workers와 완벽히 통합됩니다.
 
-### 문제
+### 핵심 파일
 
-React Router v7 SSR에서 hydration 실패 시:
-1. React 19가 새로운 DOM 트리를 생성
-2. 기존 서버 렌더링 HTML이 삭제되지 않음
-3. DOM 중복 → 사용자가 보는 버튼에 React 핸들러 없음 → 클릭 불가
+| 파일 | 역할 |
+|------|------|
+| `app/routes/__root.tsx` | 루트 레이아웃 + HeadContent, Scripts |
+| `app/router.tsx` | Router 인스턴스 생성 |
+| `app/client.tsx` | 클라이언트 진입점 (hydration) |
+| `app/ssr.tsx` | 서버 진입점 (SSR 핸들러) |
 
-### 해결책 (자체 구현)
+### Server Functions (createServerFn)
 
-각 앱의 `entry.client.tsx`에서 hydration 후 orphan DOM 제거:
+D1 데이터베이스 접근은 `createServerFn`을 통해 서버에서만 실행됩니다:
 
 ```typescript
-// apps/*/app/entry.client.tsx
-startTransition(() => {
-  hydrateRoot(document, <StrictMode><App /></StrictMode>);
+// app/services/d1-server.ts
+import { createServerFn } from '@tanstack/react-start';
+import { getCloudflareContext } from '@opennextjs/cloudflare';
 
-  // Orphan DOM 정리 (React Router v7 hydration 버그 workaround)
-  setTimeout(() => {
-    const divs = [...document.body.children].filter(el => el.tagName === 'DIV');
-    if (divs.length >= 2) {
-      const firstDiv = divs[0] as HTMLElement;
-      if (!Object.keys(firstDiv).some(k => k.startsWith('__react'))) {
-        firstDiv.remove();
-      }
-    }
-  }, 100);
-});
+export const getEntry = createServerFn({ method: 'GET' })
+  .validator((entryId: string) => entryId)
+  .handler(async ({ data: entryId }) => {
+    const { env } = getCloudflareContext();
+    const db = env.DB;
+    return await db.prepare('SELECT * FROM entries WHERE id = ?')
+      .bind(entryId).first();
+  });
 ```
 
-### 수정 금지 파일
+### 관련 문서
 
-| 파일 | 역할 | 수정 금지 이유 |
-|------|------|---------------|
-| `apps/*/app/entry.client.tsx` | Hydration + orphan DOM 정리 | 삭제 시 모든 버튼 클릭 불가 |
-| `apps/*/app/entry.server.tsx` | SSR HTML 생성 | `prerender` 함수 필수 |
-
-### 관련 이슈
-
-- [React Router #12893](https://github.com/remix-run/react-router/issues/12893)
-- [React Router #12360](https://github.com/remix-run/react-router/discussions/12360)
-- [React Router #13368](https://github.com/remix-run/react-router/issues/13368)
+- [TanStack Start Docs](https://tanstack.com/start/latest)
+- [TanStack Router Docs](https://tanstack.com/router/latest)
 
 ---
 
@@ -507,20 +513,21 @@ Google 제한 (50,000 URL/파일) 대응:
 sitemap.xml (index)
 ├── sitemap-pages.xml
 ├── sitemap-categories.xml
-├── sitemap-entry-greetings.xml    ← 카테고리별 분리
-├── sitemap-entry-food.xml
-├── sitemap-entry-coding.xml
-└── sitemap-entry-{categoryId}.xml
+├── sitemaps/entries/greetings.xml    ← 카테고리별 분리
+├── sitemaps/entries/food.xml
+├── sitemaps/entries/coding.xml
+└── sitemaps/entries/{categoryId}.xml
 ```
 
 ### 관련 파일
 
 | 파일 | 역할 |
 |:-----|:-----|
-| `apps/context/react-router.config.ts` | SSR 설정 (`ssr: true`) |
+| `apps/context/vite.config.ts` | TanStack Start + Cloudflare 플러그인 설정 |
+| `apps/context/app.config.ts` | TanStack Start 설정 |
 | `apps/context/wrangler.toml` | D1 바인딩 설정 |
-| `apps/context/app/services/d1.ts` | D1 쿼리 함수 |
-| `apps/context/app/routes/sitemap[.xml].tsx` | 동적 사이트맵 생성 |
+| `apps/context/app/services/d1-server.ts` | createServerFn 기반 D1 쿼리 |
+| `apps/context/app/server.ts` | 동적 사이트맵 생성 + API 라우트 |
 
 ---
 
@@ -549,6 +556,12 @@ apps/permissive ──────┘    @soundblue/pwa
 
 ## Version History (변경 이력)
 
+### v3.3.0 (2026-01-25)
+- **문서 정확성 개선: React Router → TanStack Start 반영**
+- 모든 문서에서 실제 사용 프레임워크(TanStack Start) 명시
+- 불필요한 react-router 의존성 제거
+- TanStack 패키지 버전 업데이트
+
 ### v3.2.0 (2026-01-18)
 - **Permissive, Roots 앱 Cloudflare Workers로 마이그레이션**
 - 모든 앱 SSR + Cloudflare Workers로 통합
@@ -565,9 +578,9 @@ apps/permissive ──────┘    @soundblue/pwa
 - 사이트맵 D1 동적 생성
 
 ### v2.1.0 (2026-01-02)
-- Hydration Workaround 문서화
-- React Router v7 + React 19 hydration 버그 대응 코드 추가
-- `entry.client.tsx` orphan DOM 정리 로직 구현
+- TanStack Start로 프레임워크 마이그레이션
+- React Router v7 → TanStack Router/Start 전환
+- `createServerFn` 기반 서버 함수 도입
 
 ### v2.0.0 (2025-12-31)
 - 패키지 6개 → 10개 모듈화

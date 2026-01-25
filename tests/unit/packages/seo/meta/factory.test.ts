@@ -1,7 +1,7 @@
 /**
  * @fileoverview Unit tests for SEO meta factory
  *
- * Tests for React Router v7 meta function factories:
+ * Tests for TanStack Start head function factories:
  * - metaFactory - static pages
  * - dynamicMetaFactory - dynamic pages with loader data
  */
