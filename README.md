@@ -31,7 +31,7 @@
 | | |
 |---|---|
 | **Live** | [context.soundbluemusic.com](https://context.soundbluemusic.com) |
-| **Source** | [apps/context/](apps/context) · [README](apps/context/README.md) · [config](apps/context/react-router.config.ts) |
+| **Source** | [apps/context/](apps/context) · [README](apps/context/README.md) · [config](apps/context/vite.config.ts) |
 | **Database** | Cloudflare D1 (`context-db`) |
 | **Features** | 16394 entries, 52 categories, 53 conversations |
 
@@ -41,7 +41,7 @@
 | | |
 |---|---|
 | **Live** | [permissive.soundbluemusic.com](https://permissive.soundbluemusic.com) |
-| **Source** | [apps/permissive/](apps/permissive) · [README](apps/permissive/README.md) · [config](apps/permissive/react-router.config.ts) |
+| **Source** | [apps/permissive/](apps/permissive) · [README](apps/permissive/README.md) · [config](apps/permissive/vite.config.ts) |
 | **Data** | [data/permissive/](data/permissive) |
 | **Features** | 88 libraries, 56 Web APIs |
 
@@ -51,7 +51,7 @@
 | | |
 |---|---|
 | **Live** | [roots.soundbluemusic.com](https://roots.soundbluemusic.com) |
-| **Source** | [apps/roots/](apps/roots) · [README](apps/roots/README.md) · [config](apps/roots/react-router.config.ts) |
+| **Source** | [apps/roots/](apps/roots) · [README](apps/roots/README.md) · [config](apps/roots/vite.config.ts) |
 | **Data** | [data/roots/](data/roots) |
 | **Features** | 438 concepts, 18 fields |
 
@@ -105,7 +105,7 @@ public-monorepo/
 
 | Category | Technology | Source |
 |:---------|:-----------|:-------|
-| **Framework** | React 19 + React Router v7 (SSR) | [apps/*/routes/](apps/context/app/routes) |
+| **Framework** | React 19 + TanStack Start (SSR) | [apps/*/routes/](apps/context/app/routes) |
 | **Language** | TypeScript 5.x | [tsconfig.json](tsconfig.json) |
 | **Styling** | Tailwind CSS v4 | [packages/config/](packages/config) |
 | **Database** | Cloudflare D1 | [apps/context/wrangler.toml](apps/context/wrangler.toml) |

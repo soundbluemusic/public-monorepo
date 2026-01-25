@@ -24,31 +24,54 @@
 - `loader` 없는 동적 라우트 금지 (SEO 데이터 누락)
 - D1 바인딩 없이 SSR 배포 금지
 
-**SSR 모드 필수 패턴 (Context):**
+**SSR 모드 필수 패턴 (TanStack Start + D1):**
 
 ```typescript
-// ✅ SSR loader - D1에서 데이터 가져오기
-export async function loader({ params, context }: Route.LoaderArgs) {
-  const db = context?.cloudflare?.env?.DB;
-  if (!db) throw new Response('Database unavailable', { status: 503 });
+// ✅ TanStack Start - createFileRoute + createServerFn
+import { createFileRoute, notFound } from '@tanstack/react-router';
+import { createServerFn } from '@tanstack/react-start';
 
-  const entry = await db.prepare('SELECT * FROM entries WHERE id = ?')
-    .bind(params.entryId).first();
-  if (!entry) throw new Response('Not Found', { status: 404 });
+// Server Function (D1 접근)
+const getEntry = createServerFn({ method: 'GET' })
+  .validator((entryId: string) => entryId)
+  .handler(async ({ data: entryId }) => {
+    const db = getCloudflareContext().env.DB;
+    const entry = await db.prepare('SELECT * FROM entries WHERE id = ?')
+      .bind(entryId).first();
+    if (!entry) throw notFound();
+    return entry;
+  });
 
-  return { entry };
-}
+// Route 정의
+export const Route = createFileRoute('/entry/$entryId')({
+  loader: async ({ params }) => {
+    const entry = await getEntry({ data: params.entryId });
+    return { entry };
+  },
+  head: ({ loaderData }) => ({
+    meta: [{ title: loaderData.entry.korean }],
+  }),
+  component: EntryPage,
+});
 ```
 
-**SSR 모드 필수 패턴 (Roots/Permissive):**
+**SSR 모드 필수 패턴 (Roots/Permissive - 정적 데이터):**
 
 ```typescript
-// ✅ SSR loader - 데이터 로딩
-export async function loader({ params }: Route.LoaderArgs) {
-  const data = await fetchData(params.id);
-  if (!data) throw new Response('Not Found', { status: 404 });
-  return { data };
-}
+// ✅ TanStack Start - loader에서 직접 데이터 로딩
+import { createFileRoute, notFound } from '@tanstack/react-router';
+
+export const Route = createFileRoute('/concept/$conceptId')({
+  loader: async ({ params }) => {
+    const concept = getConceptById(params.conceptId);
+    if (!concept) throw notFound();
+    return { concept };
+  },
+  head: ({ loaderData }) => ({
+    meta: [{ title: loaderData.concept.name.en }],
+  }),
+  component: ConceptPage,
+});
 ```
 
 **검증 방법:**
@@ -191,9 +214,10 @@ endpoint = https://${{ secrets.CLOUDFLARE_ACCOUNT_ID }}.r2.cloudflarestorage.com
 > ⚠️ **Context는 SSR + D1 전용**입니다.
 
 **금지 사항:**
-- `react-router.config.ts`에서 `ssr: false` 설정 금지
-- Entry 페이지에 `clientLoader`만 있는 파일 생성 금지
+- `app.config.ts`에서 SSR 비활성화 금지
+- Entry 페이지에 `loader` 없이 클라이언트에서만 데이터 로딩 금지
 - D1 없이 entry 데이터 로딩 시도 금지
+- `createServerFn` 없이 서버 데이터 접근 금지
 
 **현재 운영 구조:**
 
@@ -289,10 +313,10 @@ import { useSearch } from '@soundblue/search/react';      // L2
 ### 금지
 | 위치 | 금지 액션 |
 |------|----------|
-| `apps/*/react-router.config.ts` | `ssr: false` 설정 (모든 앱 SSR) |
+| `apps/*/app.config.ts` | SSR 비활성화 설정 (모든 앱 SSR) |
+| `apps/*/vite.config.ts` | `tanstackStart` 플러그인 제거 |
 | `*.browser.ts` | SSR 빌드 시점 실행 코드 |
 | `*.noop.ts` | 실제 로직 (빈 구현만) |
-| `entry.client.tsx` | orphan DOM 정리 로직 삭제 |
 | `wrangler.toml` (Context) | D1 바인딩 제거 |
 
 ---
@@ -309,7 +333,7 @@ import { useSearch } from '@soundblue/search/react';      // L2
 
 > **⛔ `params.locale` 사용 금지** - 항상 `undefined`입니다!
 
-routes.ts에서 `route('ko/entry/:entryId', ...)`로 정의하면 `ko`는 **고정 문자열**입니다.
+TanStack Start 파일 기반 라우팅에서 `ko/entry/$entryId.tsx`로 정의하면 `ko`는 **폴더명(고정 문자열)**입니다.
 따라서 `params.locale`은 항상 `undefined`가 됩니다.
 
 ```typescript
@@ -318,30 +342,45 @@ import { getLocaleFromPath } from '@soundblue/i18n';
 // ❌ 금지 (params.locale은 항상 undefined)
 const locale = params.locale === 'ko' ? 'ko' : 'en';
 
-// ✅ loader에서 (request.url 사용)
-export async function loader({ params, request }) {
-  const url = new URL(request.url);
-  const locale = getLocaleFromPath(url.pathname);  // '/ko/entry/...' → 'ko'
-}
+// ✅ TanStack Start loader에서 (location.pathname 사용)
+export const Route = createFileRoute('/entry/$entryId')({
+  loader: async ({ params, location }) => {
+    const locale = getLocaleFromPath(location.pathname);  // '/ko/entry/...' → 'ko'
+    return { entry, locale };
+  },
+});
 
-// ✅ clientLoader에서 (window.location 사용)
-export async function clientLoader({ params, serverLoader }) {
-  const locale = getLocaleFromPath(window.location.pathname);
+// ✅ 컴포넌트에서 (useLocation 사용)
+function EntryPage() {
+  const { pathname } = useLocation();
+  const locale = getLocaleFromPath(pathname);
 }
 ```
 
-### Meta Factory 필수
+### Head Factory 필수 (TanStack Start)
 ```typescript
-// 정적 라우트
-export const meta = metaFactory({
-  ko: { title: '제목', description: '설명' },
-  en: { title: 'Title', description: 'Desc' },
-}, 'https://app.soundbluemusic.com');
+// ✅ TanStack Start - head 옵션 사용
+export const Route = createFileRoute('/about')({
+  head: () => ({
+    meta: [
+      { title: 'About | Context' },
+      { name: 'description', content: 'About this app' },
+    ],
+    links: [{ rel: 'canonical', href: 'https://app.soundbluemusic.com/about' }],
+  }),
+  component: AboutPage,
+});
 
-// 동적 라우트
-export const meta = dynamicMetaFactory<typeof loader>({
-  getTitle: (data) => data.entry.title,
-  baseUrl: 'https://app.soundbluemusic.com',
+// ✅ 동적 라우트 - loaderData 활용
+export const Route = createFileRoute('/entry/$entryId')({
+  loader: async ({ params }) => getEntry(params.entryId),
+  head: ({ loaderData }) => ({
+    meta: [
+      { title: `${loaderData.entry.korean} | Context` },
+      { name: 'description', content: loaderData.entry.english },
+    ],
+  }),
+  component: EntryPage,
 });
 ```
 
@@ -417,7 +456,8 @@ export const meta = dynamicMetaFactory<typeof loader>({
 |------|--------------|------|
 | Cloudflare Workers | developers.cloudflare.com/workers/platform/changelog | Pages/Workers 통합 진행 중 |
 | Cloudflare D1 | developers.cloudflare.com/d1/platform/release-notes | GA 이후 변경사항 |
-| React Router v7 | reactrouter.com/changelog | 빠른 릴리스 주기 |
+| TanStack Start | tanstack.com/start/latest/docs/overview | 빠른 릴리스 주기, SSR 프레임워크 |
+| TanStack Router | tanstack.com/router/latest/docs/overview | 파일 기반 라우팅 |
 | Tailwind CSS v4 | tailwindcss.com/docs/upgrade-guide | v3 → v4 대규모 변경 |
 | TypeScript 5.x | typescriptlang.org/docs/handbook/release-notes | 분기별 릴리스 |
 
@@ -427,7 +467,7 @@ export const meta = dynamicMetaFactory<typeof loader>({
 2. **GitHub API로 정확한 릴리스 날짜 확인** (HTML 페이지의 상대 시간 표시는 부정확)
    - TypeScript: `https://api.github.com/repos/microsoft/TypeScript/releases?per_page=5`
    - Tailwind CSS: `https://api.github.com/repos/tailwindlabs/tailwindcss/releases?per_page=5`
-   - React Router: `https://api.github.com/repos/remix-run/react-router/releases?per_page=5`
+   - TanStack Start: `https://api.github.com/repos/TanStack/router/releases?per_page=5`
 3. 공식 문서에서 정보 부족 시에만 WebSearch 사용 (공식 도메인 필터 적용)
 4. 출처 우선순위: **GitHub API > 공식 문서 > GitHub 릴리스 > 공식 블로그 > 기타**
 5. Medium, dev.to, 개인 블로그, 커뮤니티 포럼은 **지양**
@@ -438,8 +478,9 @@ export const meta = dynamicMetaFactory<typeof loader>({
 
 | 기술 | 문서 |
 |------|------|
+| TanStack Start | [tanstack.com/start](https://tanstack.com/start/latest) |
+| TanStack Router | [tanstack.com/router](https://tanstack.com/router/latest) |
 | Tailwind CSS v4 | [tailwindcss.com](https://tailwindcss.com/docs) |
-| React Router v7 | [reactrouter.com](https://reactrouter.com) |
 | TypeScript | [typescriptlang.org](https://www.typescriptlang.org/docs) |
 | Cloudflare D1 | [developers.cloudflare.com/d1](https://developers.cloudflare.com/d1/) |
 | Cloudflare Workers | [developers.cloudflare.com/workers](https://developers.cloudflare.com/workers/) |

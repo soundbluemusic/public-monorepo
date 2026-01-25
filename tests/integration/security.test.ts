@@ -118,7 +118,7 @@ describe('Development Files Protection', () => {
     const configFiles = [
       'tsconfig.json',
       'vite.config.ts',
-      'react-router.config.ts',
+      'app.config.ts',
       '.env',
       '.env.local',
       '.gitignore',
