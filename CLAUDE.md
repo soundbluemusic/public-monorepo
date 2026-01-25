@@ -248,12 +248,12 @@ pnpm deploy
 | `/sitemap.xml` | 인덱스 (52개 카테고리 사이트맵 링크) |
 | `/sitemap-pages.xml` | 정적 페이지 |
 | `/sitemap-categories.xml` | 카테고리 목록 |
-| `/sitemap-entry-{categoryId}.xml` | 카테고리별 엔트리 |
+| `/sitemaps/entries/{categoryId}.xml` | 카테고리별 엔트리 |
 
 **참고 파일:**
 
 - `apps/context/wrangler.toml` - Workers + D1 바인딩 설정
-- `apps/context/app/routes/sitemap[.xml].tsx` - 동적 사이트맵 생성
+- `apps/context/app/server.ts` - 동적 사이트맵 생성
 
 ---
 

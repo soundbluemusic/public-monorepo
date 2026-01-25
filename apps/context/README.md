@@ -136,7 +136,7 @@ SSR 모드에서 사이트맵은 D1에서 **실시간 동적 생성**됩니다:
 | `/sitemap.xml` | 인덱스 (모든 사이트맵 링크) |
 | `/sitemap-pages.xml` | 정적 페이지 |
 | `/sitemap-categories.xml` | 카테고리 목록 |
-| `/sitemap-entry-{categoryId}.xml` | 카테고리별 엔트리 (52개) |
+| `/sitemaps/entries/{categoryId}.xml` | 카테고리별 엔트리 (52개) |
 | `/api/offline-db` | 오프라인 DB 덤프 (JSON) |
 
 ---
@@ -151,7 +151,7 @@ SSR 모드에서 사이트맵은 D1에서 **실시간 동적 생성**됩니다:
 | `/category/:categoryId` | ✓ | ✓ | Static | Category page |
 | `/conversation/:conversationId` | ✓ | ✓ | Static | Conversation page |
 | `/sitemap.xml` | ✓ | - | **SSR** | Sitemap index (D1) |
-| `/sitemap-*.xml` | ✓ | - | **SSR** | Category sitemaps (D1) |
+| `/sitemaps/entries/*.xml` | ✓ | - | **SSR** | Category sitemaps (D1) |
 | `/api/offline-db` | ✓ | - | **SSR** | Offline DB dump (D1) |
 | `/download` | ✓ | ✓ | Static | Offline download page |
 | `/about` | ✓ | ✓ | Static | About |

@@ -302,6 +302,16 @@ async function handleApiRoute(request: Request, env: CloudflareEnv): Promise<Res
     return handleSitemapEntries(env, entrySitemapMatch[1]);
   }
 
+  // Legacy sitemap URL redirect: /sitemap-entry-{categoryId}.xml → /sitemaps/entries/{categoryId}.xml
+  const legacySitemapMatch = pathname.match(/^\/sitemap-entry-([^/]+)\.xml$/);
+  if (legacySitemapMatch?.[1]) {
+    const newUrl = `${SITE_URL}/sitemaps/entries/${legacySitemapMatch[1]}.xml`;
+    return new Response(null, {
+      status: 301,
+      headers: { Location: newUrl },
+    });
+  }
+
   // API routes
   if (pathname === '/api/offline-db') {
     return handleOfflineDb(env);

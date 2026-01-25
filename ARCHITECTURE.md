@@ -112,7 +112,7 @@ SSR 모드에서 사이트맵은 D1에서 실시간 생성됩니다:
 | `/sitemap.xml` | 인덱스 | D1 categories 테이블 |
 | `/sitemap-pages.xml` | 정적 페이지 | 하드코딩 |
 | `/sitemap-categories.xml` | 카테고리 목록 | D1 categories |
-| `/sitemap-entry-{categoryId}.xml` | 카테고리별 엔트리 | D1 entries |
+| `/sitemaps/entries/{categoryId}.xml` | 카테고리별 엔트리 | D1 entries |
 | `/api/offline-db` | 오프라인 DB 덤프 | D1 전체 테이블 |
 
 ---
@@ -513,10 +513,10 @@ Google 제한 (50,000 URL/파일) 대응:
 sitemap.xml (index)
 ├── sitemap-pages.xml
 ├── sitemap-categories.xml
-├── sitemap-entry-greetings.xml    ← 카테고리별 분리
-├── sitemap-entry-food.xml
-├── sitemap-entry-coding.xml
-└── sitemap-entry-{categoryId}.xml
+├── sitemaps/entries/greetings.xml    ← 카테고리별 분리
+├── sitemaps/entries/food.xml
+├── sitemaps/entries/coding.xml
+└── sitemaps/entries/{categoryId}.xml
 ```
 
 ### 관련 파일
@@ -527,7 +527,7 @@ sitemap.xml (index)
 | `apps/context/app.config.ts` | TanStack Start 설정 |
 | `apps/context/wrangler.toml` | D1 바인딩 설정 |
 | `apps/context/app/services/d1-server.ts` | createServerFn 기반 D1 쿼리 |
-| `apps/context/app/routes/sitemap.xml.tsx` | 동적 사이트맵 생성 |
+| `apps/context/app/server.ts` | 동적 사이트맵 생성 + API 라우트 |
 
 ---
 
