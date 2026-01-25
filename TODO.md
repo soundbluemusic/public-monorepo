@@ -34,4 +34,3 @@
 - [x] Cloudflare Pages 20,000 파일 제한 우회 (R2 하이브리드 아키텍처)
 - [x] rclone을 이용한 빠른 R2 업로드 (32 병렬 전송)
 - [x] loader → clientLoader 변환 (ssr:false 호환)
-- [ ] test git push
