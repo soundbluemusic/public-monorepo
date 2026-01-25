@@ -162,7 +162,16 @@ function EntryPage() {
           <div className="flex items-center justify-between gap-4 mb-4">
             <div className="flex-1">
               <h1 className="text-3xl font-bold mb-2 text-(--text-primary)">{entry.korean}</h1>
-              <p className="text-lg text-(--text-tertiary)">{entry.romanization}</p>
+              <p className="text-lg text-(--text-tertiary) mb-2">{entry.romanization}</p>
+              {category && (
+                <Link
+                  to={localePath(`/category/${entry.categoryId}`)}
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-(--bg-elevated) text-(--text-secondary) border border-(--border-primary) hover:bg-(--bg-tertiary) transition-colors"
+                >
+                  {category.icon && <span>{category.icon}</span>}
+                  <span>{categoryName}</span>
+                </Link>
+              )}
             </div>
 
             <div className="flex items-center gap-2">
