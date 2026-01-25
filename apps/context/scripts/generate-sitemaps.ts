@@ -158,23 +158,6 @@ ${urls.join('\n')}
 </urlset>`;
 }
 
-/**
- * 파일 저장
- */
-function writeFile(filename: string, content: string): void {
-  const outputPath = path.join(OUTPUT_DIR, filename);
-  fs.writeFileSync(outputPath, content, 'utf8');
-  console.log(`  ✓ ${filename} (${Math.round(content.length / 1024)}KB)`);
-}
-
-/**
- * public 폴더에도 저장 (로컬 개발용)
- */
-function writeToPublic(filename: string, content: string): void {
-  const outputPath = path.join(PUBLIC_DIR, filename);
-  fs.writeFileSync(outputPath, content, 'utf8');
-}
-
 async function main() {
   console.log('🗺️  사이트맵 생성 시작...\n');
 
