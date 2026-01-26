@@ -176,14 +176,19 @@ function EntryPage() {
                 Korean word for {translation.word}
               </p>
               {category && (
-                <Link
-                  to="/category/$categoryId"
-                  params={{ categoryId: entry.categoryId }}
-                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-(--bg-elevated) text-(--text-secondary) border border-(--border-primary) hover:bg-(--bg-tertiary) transition-colors"
-                >
-                  {category.icon && <span>{category.icon}</span>}
-                  <span>{categoryName}</span>
-                </Link>
+                <div className="space-y-2">
+                  <Link
+                    to="/category/$categoryId"
+                    params={{ categoryId: entry.categoryId }}
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-(--bg-elevated) text-(--text-secondary) border border-(--border-primary) hover:bg-(--bg-tertiary) transition-colors"
+                  >
+                    {category.icon && <span>{category.icon}</span>}
+                    <span>{categoryName}</span>
+                  </Link>
+                  {category.description?.en && (
+                    <p className="text-sm text-(--text-tertiary) pl-1">{category.description.en}</p>
+                  )}
+                </div>
               )}
             </div>
 
@@ -272,6 +277,7 @@ function EntryPage() {
             partOfSpeech={entry.partOfSpeech}
             categoryId={entry.categoryId}
             translationWord={translation.word}
+            categoryDescription={category?.description?.en}
           />
         </section>
 

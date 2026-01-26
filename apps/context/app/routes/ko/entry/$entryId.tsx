@@ -204,6 +204,10 @@ function EntryPageKo() {
                   {difficultyLabels[entry.difficulty]}
                 </span>
               </div>
+              {/* 카테고리 설명 */}
+              {category?.description?.ko && (
+                <p className="text-sm text-(--text-tertiary) mt-2">{category.description.ko}</p>
+              )}
             </div>
 
             <div className="flex items-center gap-2">

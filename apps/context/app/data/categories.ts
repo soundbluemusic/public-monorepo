@@ -170,8 +170,8 @@ export const categories: Category[] = [
       en: 'Sports',
     },
     description: {
-      ko: '스포츠와 운동 관련 단어',
-      en: 'Sports and exercise vocabulary',
+      ko: '올림픽 종목, 경기 규칙, 스포츠 용어 등 운동과 관련된 표현',
+      en: 'Olympic events, game rules, and sports terminology',
     },
     icon: '●',
     color: 'green',

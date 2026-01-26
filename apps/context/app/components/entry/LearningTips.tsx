@@ -17,6 +17,8 @@ interface LearningTipsProps {
   partOfSpeech: PartOfSpeech;
   categoryId: string;
   translationWord: string;
+  /** 카테고리 설명 (하드코딩 팁이 없을 때 폴백으로 사용) */
+  categoryDescription?: string;
 }
 
 /**
@@ -67,8 +69,9 @@ function getPartOfSpeechTip(partOfSpeech: PartOfSpeech): string {
 
 /**
  * 카테고리별 문화 팁을 반환합니다.
+ * 하드코딩된 팁이 없으면 categoryDescription을 폴백으로 사용합니다.
  */
-function getCategoryTip(categoryId: string): string | null {
+function getCategoryTip(categoryId: string, categoryDescription?: string): string | null {
   const categoryTips: Record<string, string> = {
     greetings:
       'Koreans value respectful greetings. Bow slightly when greeting elders or in formal situations.',
@@ -89,7 +92,8 @@ function getCategoryTip(categoryId: string): string | null {
       'Slang changes quickly. What sounds cool today might be outdated tomorrow. Use with friends only.',
   };
 
-  return categoryTips[categoryId] || null;
+  // 하드코딩된 팁이 있으면 사용, 없으면 categoryDescription 폴백
+  return categoryTips[categoryId] || categoryDescription || null;
 }
 
 /**
@@ -119,10 +123,11 @@ export function LearningTips({
   partOfSpeech,
   categoryId,
   translationWord,
+  categoryDescription,
 }: LearningTipsProps) {
   const difficultyTip = getDifficultyTip(difficulty);
   const partOfSpeechTip = getPartOfSpeechTip(partOfSpeech);
-  const categoryTip = getCategoryTip(categoryId);
+  const categoryTip = getCategoryTip(categoryId, categoryDescription);
   const generalTips = getGeneralTips(korean, translationWord);
 
   const allTips = [difficultyTip, partOfSpeechTip, categoryTip, ...generalTips].filter(
