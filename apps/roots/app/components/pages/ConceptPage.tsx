@@ -8,6 +8,7 @@ import {
   generateArticleSchema,
   generateBreadcrumbSchema,
 } from '@soundblue/seo/structured-data';
+import { Breadcrumb, FeedbackButton, ShareButton } from '@soundblue/ui/components';
 import { Link } from '@tanstack/react-router';
 import { BookOpen, Heart, History, Zap } from 'lucide-react';
 import { useEffect, useState } from 'react';
@@ -159,31 +160,21 @@ export function ConceptPage({ concept, conceptId }: ConceptPageProps) {
       />
 
       {/* Breadcrumb */}
-      <nav className="flex items-center gap-2 text-sm mb-6">
-        <Link
-          to={localePath('/')}
-          className="text-(--text-secondary) no-underline hover:text-(--text-primary)"
-        >
-          {t('home')}
-        </Link>
-        <span className="text-(--text-tertiary)">/</span>
-        {field && (
-          <Link
-            to={localePath(`/field/${field.id}`)}
-            className="text-(--text-secondary) no-underline hover:text-(--text-primary)"
-          >
-            {field.name[locale] || field.name.en}
-          </Link>
-        )}
-        {subfield && (
-          <>
-            <span className="text-(--text-tertiary)">/</span>
-            <span className="text-(--text-primary)">
-              {subfield.name[locale] || subfield.name.en}
-            </span>
-          </>
-        )}
-      </nav>
+      <Breadcrumb
+        items={[
+          ...(field
+            ? [{ label: field.name[locale] || field.name.en, href: `/field/${field.id}` }]
+            : []),
+          ...(subfield
+            ? [{ label: subfield.name[locale] || subfield.name.en }]
+            : [{ label: name }]),
+        ]}
+        showHome
+        homeLabel={t('home')}
+        homePath={localePath('/')}
+        LinkComponent={Link}
+        className="mb-6"
+      />
 
       {/* Header */}
       <header className="mb-8">
@@ -193,6 +184,14 @@ export function ConceptPage({ concept, conceptId }: ConceptPageProps) {
             <h1 className="text-3xl font-bold text-(--text-primary)">{name}</h1>
           </div>
           <div className="flex items-center gap-2">
+            <ShareButton
+              url={`${baseUrl}${localePrefix}/concept/${concept.id}`}
+              title={name}
+              description={content.definition}
+              variant="ghost"
+              iconOnly
+              size="md"
+            />
             <button
               type="button"
               onClick={toggleFavorite}
@@ -310,6 +309,18 @@ export function ConceptPage({ concept, conceptId }: ConceptPageProps) {
             </div>
           </section>
         )}
+
+        {/* Feedback */}
+        <section className="pt-8 border-t border-(--border-primary)">
+          <FeedbackButton
+            contentId={concept.id}
+            question={locale === 'ko' ? '이 페이지가 도움이 되었나요?' : 'Was this page helpful?'}
+            positiveLabel={locale === 'ko' ? '네' : 'Yes'}
+            negativeLabel={locale === 'ko' ? '아니요' : 'No'}
+            thankYouMessage={locale === 'ko' ? '피드백 감사합니다!' : 'Thanks for your feedback!'}
+            variant="default"
+          />
+        </section>
       </div>
     </Layout>
   );

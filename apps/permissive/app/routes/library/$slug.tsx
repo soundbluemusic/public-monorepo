@@ -4,9 +4,15 @@ import {
   generateBreadcrumbSchema,
   generateSoftwareApplicationSchema,
 } from '@soundblue/seo/structured-data';
+import {
+  Breadcrumb,
+  CodeBlock,
+  FeedbackButton,
+  RelatedContent,
+  ShareButton,
+} from '@soundblue/ui/components';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import {
-  ArrowLeft,
   Calendar,
   Code,
   ExternalLink,
@@ -126,22 +132,33 @@ function LibraryDetailPage() {
       />
 
       <div>
-        {/* Back link */}
-        <Link
-          to="/libraries"
-          className="inline-flex items-center gap-2 text-(--text-secondary) hover:text-(--text-primary) transition-colors mb-6"
-        >
-          <ArrowLeft size={16} aria-hidden="true" />
-          Back to Libraries
-        </Link>
+        {/* Breadcrumb */}
+        <Breadcrumb
+          items={[{ label: 'Libraries', href: '/libraries' }, { label: lib.name }]}
+          showHome
+          homeLabel="Home"
+          homePath="/"
+          LinkComponent={Link}
+          className="mb-6"
+        />
 
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-start justify-between gap-4 mb-3">
             <h1 className="text-2xl sm:text-3xl font-bold text-(--text-primary)">{lib.name}</h1>
-            <div className="flex items-center gap-1 text-(--text-secondary)">
-              <Star size={18} aria-hidden="true" className="fill-current text-yellow-500" />
-              <span className="font-medium">{lib.stars}</span>
+            <div className="flex items-center gap-2">
+              <ShareButton
+                url={`${baseUrl}/library/${getLibrarySlug(lib.name)}`}
+                title={lib.name}
+                description={lib.description}
+                variant="ghost"
+                iconOnly
+                size="md"
+              />
+              <div className="flex items-center gap-1 text-(--text-secondary)">
+                <Star size={18} aria-hidden="true" className="fill-current text-yellow-500" />
+                <span className="font-medium">{lib.stars}</span>
+              </div>
             </div>
           </div>
           <p className="text-lg text-(--text-secondary)">{lib.description}</p>
@@ -277,41 +294,43 @@ function LibraryDetailPage() {
               <Code size={20} aria-hidden="true" className="text-green-500" />
               Code Example
             </h2>
-            <div className="rounded-xl bg-(--bg-elevated) border border-(--border-primary) overflow-hidden">
-              <pre className="p-4 overflow-x-auto text-sm">
-                <code className="text-(--text-secondary) whitespace-pre">{lib.codeExample}</code>
-              </pre>
-            </div>
+            <CodeBlock
+              code={lib.codeExample}
+              language="javascript"
+              className="rounded-xl border border-(--border-primary) overflow-hidden"
+            />
           </div>
         )}
 
         {/* Related Libraries */}
         {related.length > 0 && (
-          <div>
-            <h2 className="text-lg font-semibold text-(--text-primary) mb-4">Related Libraries</h2>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {related.map((relLib) => (
-                <Link
-                  key={relLib.name}
-                  to="/library/$slug"
-                  params={{ slug: getLibrarySlug(relLib.name) }}
-                  className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary) hover:border-(--border-focus) transition-colors"
-                >
-                  <div className="flex items-center justify-between gap-2 mb-2">
-                    <h3 className="font-medium text-(--text-primary)">{relLib.name}</h3>
-                    <div className="flex items-center gap-1 text-sm text-(--text-tertiary)">
-                      <Star size={14} aria-hidden="true" className="fill-current" />
-                      {relLib.stars}
-                    </div>
-                  </div>
-                  <p className="text-sm text-(--text-secondary) line-clamp-2">
-                    {relLib.description}
-                  </p>
-                </Link>
-              ))}
-            </div>
-          </div>
+          <RelatedContent
+            title="Related Libraries"
+            items={related.map((relLib) => ({
+              id: relLib.name,
+              title: relLib.name,
+              description: relLib.description,
+              href: `/library/${getLibrarySlug(relLib.name)}`,
+              meta: `★ ${relLib.stars}`,
+            }))}
+            variant="cards"
+            maxItems={6}
+            LinkComponent={Link}
+            className="mb-8"
+          />
         )}
+
+        {/* Feedback */}
+        <div className="pt-8 border-t border-(--border-primary)">
+          <FeedbackButton
+            contentId={lib.name}
+            question="Was this page helpful?"
+            positiveLabel="Yes"
+            negativeLabel="No"
+            thankYouMessage="Thanks for your feedback!"
+            variant="default"
+          />
+        </div>
       </div>
     </DocsLayout>
   );

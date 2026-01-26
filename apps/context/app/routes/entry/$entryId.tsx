@@ -9,6 +9,7 @@ import {
   generateBreadcrumbSchema,
   generateDefinedTermSchema,
 } from '@soundblue/seo/structured-data';
+import { FeedbackButton, ShareButton } from '@soundblue/ui/components';
 import { cn } from '@soundblue/ui/utils';
 import { createFileRoute, Link, notFound } from '@tanstack/react-router';
 import { Bookmark, BookmarkCheck, Check } from 'lucide-react';
@@ -175,6 +176,14 @@ function EntryPage() {
             </div>
 
             <div className="flex items-center gap-2">
+              <ShareButton
+                url={`${APP_CONFIG.baseUrl}${localePrefix}/entry/${entry.id}`}
+                title={`${entry.korean} - ${translation.word}`}
+                description={translation.explanation}
+                variant="outline"
+                iconOnly
+                size="md"
+              />
               <button
                 type="button"
                 onClick={handleToggleFavorite}
@@ -269,13 +278,25 @@ function EntryPage() {
         {/* Homonym Section - 같은 발음, 다른 의미 */}
         <HomonymSection korean={entry.korean} currentId={entry.id} className="mb-6" />
 
-        <div className="mt-8">
+        <div className="mt-8 flex items-center justify-between gap-4 flex-wrap">
           <Link
             to={localePath('/browse')}
             className="inline-block text-sm text-(--accent-primary) hover:underline"
           >
             ← {t('backToList')}
           </Link>
+        </div>
+
+        {/* Feedback Section */}
+        <div className="mt-8 pt-8 border-t border-(--border-primary)">
+          <FeedbackButton
+            contentId={entry.id}
+            question={locale === 'ko' ? '이 페이지가 도움이 되었나요?' : 'Was this page helpful?'}
+            positiveLabel={locale === 'ko' ? '네' : 'Yes'}
+            negativeLabel={locale === 'ko' ? '아니요' : 'No'}
+            thankYouMessage={locale === 'ko' ? '피드백 감사합니다!' : 'Thanks for your feedback!'}
+            variant="default"
+          />
         </div>
       </article>
     </Layout>
