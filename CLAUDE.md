@@ -247,7 +247,7 @@ pnpm deploy
 | 바인딩 | 데이터베이스 | 용도 |
 |:-------|:------------|:-----|
 | `DB` | context-db | 한국어 사전 엔트리 (16,394개) |
-| `PRIVATE_DB` | private | 사용자 학습 진도 (향후 구현) |
+| `PRIVATE_DB` | private | 저작권 자료 (공개 레포에 넣을 수 없는 콘텐츠) |
 
 **사이트맵 구조 (D1에서 동적 생성):**
 
@@ -546,8 +546,8 @@ directory = "dist/client"
 | 앱 | 바인딩 | 데이터베이스 | 용도 |
 |:---|:-------|:------------|:-----|
 | **Context** | `DB` | context-db | 한국어 사전 (16,394 entries) |
-| **Context** | `PRIVATE_DB` | private | 사용자 학습 진도 |
+| **Context** | `PRIVATE_DB` | private | 저작권 자료 |
 | **Permissive** | `KNOWLEDGE_DB` | knowledge | 웹개발 자료 (88 libraries, 56 APIs) |
-| **Permissive** | `PRIVATE_DB` | private | 사용자 학습 진도 |
+| **Permissive** | `PRIVATE_DB` | private | 저작권 자료 |
 | **Roots** | `KNOWLEDGE_DB` | knowledge | 수학 개념 (438 concepts, 18 fields) |
-| **Roots** | `PRIVATE_DB` | private | 사용자 학습 진도 |
+| **Roots** | `PRIVATE_DB` | private | 저작권 자료 |

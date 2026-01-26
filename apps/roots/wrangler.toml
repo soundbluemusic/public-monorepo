@@ -16,7 +16,7 @@ binding = "KNOWLEDGE_DB"
 database_name = "knowledge"
 database_id = "6f93ae7e-84ab-4d0a-9ba7-d392b2d00034"
 
-# Private DB: 사용자 학습 진도 저장용 (향후 구현 예정)
+# Private DB: 저작권 자료 (공개 레포에 넣을 수 없는 콘텐츠)
 [[d1_databases]]
 binding = "PRIVATE_DB"
 database_name = "private"
