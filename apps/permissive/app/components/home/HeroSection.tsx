@@ -11,7 +11,9 @@ export function HeroSection({ locale, children }: HeroSectionProps) {
       <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300 text-xs sm:text-sm font-medium mb-6 max-w-full">
         <Flame size={16} aria-hidden="true" className="shrink-0" />
         <span className="truncate">
-          {locale === 'ko' ? '2025년 최신 기술 업데이트' : '2025 Latest Tech Updated'}
+          {locale === 'ko'
+            ? `${new Date().getFullYear()}년 최신 기술 업데이트`
+            : `${new Date().getFullYear()} Latest Tech Updated`}
         </span>
       </div>
 

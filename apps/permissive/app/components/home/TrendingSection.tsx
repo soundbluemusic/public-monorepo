@@ -96,7 +96,9 @@ export function TrendingSection({ locale, localePath }: TrendingSectionProps) {
     <div className="py-8">
       <h2 className="text-xl font-semibold text-(--text-primary) mb-6 flex items-center gap-2">
         <Flame size={20} aria-hidden="true" className="text-orange-500" />
-        {locale === 'ko' ? '2025년 트렌딩' : 'Trending 2025'}
+        {locale === 'ko'
+          ? `${new Date().getFullYear()}년 트렌딩`
+          : `Trending ${new Date().getFullYear()}`}
       </h2>
 
       <div className="grid md:grid-cols-2 gap-6">

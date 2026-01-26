@@ -33,7 +33,9 @@ export function QuickFilters({
         )}
       >
         <Flame size={16} aria-hidden="true" />
-        {locale === 'ko' ? '2025 트렌딩' : 'Trending 2025'}
+        {locale === 'ko'
+          ? `${new Date().getFullYear()} 트렌딩`
+          : `Trending ${new Date().getFullYear()}`}
       </button>
       <button
         type="button"
