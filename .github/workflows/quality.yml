@@ -80,9 +80,9 @@ jobs:
         with:
           name: build-output
           path: |
-            apps/context/build
-            apps/permissive/build
-            apps/roots/build
+            apps/context/dist
+            apps/permissive/dist
+            apps/roots/dist
           retention-days: 1
 
   # ============================================================
@@ -118,8 +118,8 @@ jobs:
       - name: Fix artifact paths
         run: |
           for app in context permissive roots; do
-            if [ -d "apps/$app/$app/build" ]; then
-              mv apps/$app/$app/build apps/$app/build
+            if [ -d "apps/$app/$app/dist" ]; then
+              mv apps/$app/$app/dist apps/$app/dist
               rmdir apps/$app/$app 2>/dev/null || true
             fi
           done
@@ -159,8 +159,8 @@ jobs:
       - name: Fix artifact paths
         run: |
           for app in context permissive roots; do
-            if [ -d "apps/$app/$app/build" ]; then
-              mv apps/$app/$app/build apps/$app/build
+            if [ -d "apps/$app/$app/dist" ]; then
+              mv apps/$app/$app/dist apps/$app/dist
               rmdir apps/$app/$app 2>/dev/null || true
             fi
           done
@@ -208,8 +208,8 @@ jobs:
       - name: Fix artifact paths
         run: |
           for app in context permissive roots; do
-            if [ -d "apps/$app/$app/build" ]; then
-              mv apps/$app/$app/build apps/$app/build
+            if [ -d "apps/$app/$app/dist" ]; then
+              mv apps/$app/$app/dist apps/$app/dist
               rmdir apps/$app/$app 2>/dev/null || true
             fi
           done
@@ -220,8 +220,8 @@ jobs:
       - name: Check broken links
         run: pnpm check:links
 
-      - name: Verify SSG meta tags
-        run: pnpm verify:ssg
+      - name: Verify SSR build
+        run: pnpm verify:ssr
 
   # Job 3-4: UX 품질 테스트
   ux-quality:
@@ -252,8 +252,8 @@ jobs:
       - name: Fix artifact paths
         run: |
           for app in context permissive roots; do
-            if [ -d "apps/$app/$app/build" ]; then
-              mv apps/$app/$app/build apps/$app/build
+            if [ -d "apps/$app/$app/dist" ]; then
+              mv apps/$app/$app/dist apps/$app/dist
               rmdir apps/$app/$app 2>/dev/null || true
             fi
           done
@@ -299,8 +299,8 @@ jobs:
       - name: Fix artifact paths
         run: |
           for app in context permissive roots; do
-            if [ -d "apps/$app/$app/build" ]; then
-              mv apps/$app/$app/build apps/$app/build
+            if [ -d "apps/$app/$app/dist" ]; then
+              mv apps/$app/$app/dist apps/$app/dist
               rmdir apps/$app/$app 2>/dev/null || true
             fi
           done
