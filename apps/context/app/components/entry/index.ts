@@ -9,4 +9,6 @@ export { DisambiguationPopover } from './DisambiguationPopover';
 export { EntryDialogueDisplay } from './EntryDialogueDisplay';
 export { EntryListItem } from './EntryListItem';
 export { HomonymSection } from './HomonymSection';
+export { LearningTips } from './LearningTips';
 export { LinkedExample } from './LinkedExample';
+export { PronunciationGuide } from './PronunciationGuide';

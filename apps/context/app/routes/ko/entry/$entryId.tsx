@@ -1,5 +1,10 @@
 /**
  * @fileoverview Entry 페이지 - 한국어 버전 (SSR + D1)
+ *
+ * 한국어 사용자를 위한 간결한 버전입니다.
+ * - 발음 가이드 없음 (모국어 화자에게 불필요)
+ * - 학습 팁 없음 (모국어 화자에게 불필요)
+ * - 한국어 중심 간결한 UI
  */
 
 import { toast } from '@soundblue/features/toast';
@@ -24,7 +29,6 @@ import { Layout } from '../../../components/layout';
 import { APP_CONFIG } from '../../../config';
 import { getCategoryById } from '../../../data/categories';
 import type { LocaleEntry } from '../../../data/types';
-import { useI18n } from '../../../i18n';
 import { fetchEntryFromD1 } from '../../../services/d1-server';
 import { useUserDataStore } from '../../../stores/user-data-store';
 
@@ -32,7 +36,6 @@ type LoaderData = { entry: LocaleEntry; englishColorName?: string };
 
 export const Route = createFileRoute('/ko/entry/$entryId')({
   loader: async ({ params }) => {
-    // TanStack Start: createServerFn을 통해 D1에서 데이터 로드
     const entry = await fetchEntryFromD1({ data: { entryId: params.entryId, locale: 'ko' } });
 
     if (!entry) {
@@ -58,31 +61,23 @@ export const Route = createFileRoute('/ko/entry/$entryId')({
       }
       const { entry } = data;
       const category = getCategoryById(entry.categoryId);
+      // 한국어 버전: 간결한 메타 태그
       return {
         ko: {
-          title: `${entry.korean} - ${entry.translation.word} | Context`,
-          description: `${entry.korean} (${entry.romanization}): ${entry.translation.explanation}`,
+          title: `${entry.korean} | Context 한국어 사전`,
+          description: `${entry.korean}: ${entry.translation.explanation}`,
           keywords: [
             entry.korean,
             `${entry.korean} 뜻`,
             `${entry.korean} 의미`,
-            entry.translation.word,
             category?.name.ko || entry.categoryId,
             '한국어 사전',
-            '한국어 학습',
           ],
         },
         en: {
           title: `${entry.korean} - ${entry.translation.word} | Context`,
           description: `${entry.korean} (${entry.romanization}): ${entry.translation.explanation}`,
-          keywords: [
-            entry.korean,
-            `${entry.korean} meaning`,
-            entry.translation.word,
-            category?.name.en || entry.categoryId,
-            'Korean dictionary',
-            'learn Korean',
-          ],
+          keywords: [entry.korean, entry.translation.word, category?.name.en || entry.categoryId],
         },
       };
     },
@@ -94,7 +89,6 @@ export const Route = createFileRoute('/ko/entry/$entryId')({
 
 function EntryPageKo() {
   const { entry, englishColorName } = Route.useLoaderData();
-  const { locale, t, localePath } = useI18n();
 
   const isFavorite = useUserDataStore((state) =>
     state.favorites.some((f) => f.entryId === entry.id),
@@ -108,7 +102,7 @@ function EntryPageKo() {
   const handleMarkAsStudied = () => {
     markAsStudied(entry.id);
     toast({
-      message: t('toast.markedAsStudied'),
+      message: '학습 완료로 표시되었습니다!',
       type: 'success',
     });
   };
@@ -116,7 +110,7 @@ function EntryPageKo() {
   const handleToggleFavorite = () => {
     const newState = toggleFavorite(entry.id);
     toast({
-      message: newState ? t('toast.addedToFavorites') : t('toast.removedFromFavorites'),
+      message: newState ? '즐겨찾기에 추가되었습니다!' : '즐겨찾기에서 제거되었습니다',
       type: 'success',
     });
   };
@@ -124,31 +118,45 @@ function EntryPageKo() {
   const translation = entry.translation;
   const colorName = englishColorName || translation.word;
   const category = getCategoryById(entry.categoryId);
-  const categoryName = category?.name[locale] || category?.name.en || entry.categoryId;
+  const categoryName = category?.name.ko || entry.categoryId;
 
   // JSON-LD 구조화 데이터
   const { baseUrl } = APP_CONFIG;
-  const localePrefix = '/ko';
 
   const breadcrumbItems: BreadcrumbItem[] = [
-    { name: '홈', url: `${baseUrl}${localePrefix}` },
+    { name: '홈', url: `${baseUrl}/ko` },
     {
       name: categoryName,
-      url: `${baseUrl}${localePrefix}/category/${entry.categoryId}`,
+      url: `${baseUrl}/ko/category/${entry.categoryId}`,
     },
-    { name: entry.korean, url: `${baseUrl}${localePrefix}/entry/${entry.id}` },
+    { name: entry.korean, url: `${baseUrl}/ko/entry/${entry.id}` },
   ];
 
   const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems);
   const definedTermSchema = generateDefinedTermSchema({
     name: entry.korean,
-    description: `${entry.translation.word} - ${entry.translation.explanation}`,
+    description: entry.translation.explanation,
     termCode: entry.romanization,
-    inDefinedTermSet: 'Korean Vocabulary',
-    url: `${baseUrl}${localePrefix}/entry/${entry.id}`,
-    inLanguage: locale,
+    inDefinedTermSet: '한국어 어휘',
+    url: `${baseUrl}/ko/entry/${entry.id}`,
+    inLanguage: 'ko',
     educationalLevel: entry.difficulty,
   });
+
+  // 난이도 한글 레이블
+  const difficultyLabels = {
+    beginner: '초급',
+    intermediate: '중급',
+    advanced: '고급',
+  };
+
+  // 예문 레벨 한글 레이블
+  const levelLabels = {
+    beginner: '초급',
+    intermediate: '중급',
+    advanced: '고급',
+    master: '마스터',
+  };
 
   return (
     <Layout>
@@ -165,20 +173,37 @@ function EntryPageKo() {
       />
 
       <article className="pt-6">
+        {/* Header - 한국어 사용자 중심 간결한 UI */}
         <header className="mb-8">
           <div className="flex items-center justify-between gap-4 mb-4">
             <div className="flex-1">
               <h1 className="text-3xl font-bold mb-2 text-(--text-primary)">{entry.korean}</h1>
-              <p className="text-lg text-(--text-tertiary) mb-2">{entry.romanization}</p>
-              {category && (
-                <Link
-                  to={localePath(`/category/${entry.categoryId}`)}
-                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-(--bg-elevated) text-(--text-secondary) border border-(--border-primary) hover:bg-(--bg-tertiary) transition-colors"
+              {/* 한국어 버전: 로마자는 작게 표시 */}
+              <p className="text-sm text-(--text-tertiary) mb-3">{entry.romanization}</p>
+              <div className="flex items-center gap-2 flex-wrap">
+                {category && (
+                  <Link
+                    to="/ko/category/$categoryId"
+                    params={{ categoryId: entry.categoryId }}
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium bg-(--bg-elevated) text-(--text-secondary) border border-(--border-primary) hover:bg-(--bg-tertiary) transition-colors"
+                  >
+                    {category.icon && <span>{category.icon}</span>}
+                    <span>{categoryName}</span>
+                  </Link>
+                )}
+                {/* 난이도 배지 */}
+                <span
+                  className={`px-2 py-0.5 rounded-full text-xs font-medium ${
+                    entry.difficulty === 'beginner'
+                      ? 'bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-200'
+                      : entry.difficulty === 'intermediate'
+                        ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/50 dark:text-yellow-200'
+                        : 'bg-red-100 text-red-800 dark:bg-red-900/50 dark:text-red-200'
+                  }`}
                 >
-                  {category.icon && <span>{category.icon}</span>}
-                  <span>{categoryName}</span>
-                </Link>
-              )}
+                  {difficultyLabels[entry.difficulty]}
+                </span>
+              </div>
             </div>
 
             <div className="flex items-center gap-2">
@@ -223,25 +248,28 @@ function EntryPageKo() {
             const colorCode = getColorCodeByName(colorName);
             return colorCode ? (
               <section className="mb-6">
-                <h2 className="text-lg font-semibold text-(--text-primary) mb-3">색상 미리보기</h2>
+                <h2 className="text-lg font-semibold text-(--text-primary) mb-3">색상</h2>
                 <ColorSwatch colorCode={colorCode} colorName={translation.word} />
               </section>
             ) : null;
           })()}
 
+        {/* 뜻 */}
         <section className="mb-6">
-          <h2 className="text-lg font-semibold text-(--text-primary) mb-2">{t('translation')}</h2>
-          <p className="text-(--text-secondary)">{translation.word}</p>
+          <h2 className="text-lg font-semibold text-(--text-primary) mb-2">뜻</h2>
+          <p className="text-xl text-(--text-secondary) font-medium">{translation.word}</p>
         </section>
 
+        {/* 설명 */}
         <section className="mb-6">
-          <h2 className="text-lg font-semibold text-(--text-primary) mb-2">{t('explanation')}</h2>
+          <h2 className="text-lg font-semibold text-(--text-primary) mb-2">설명</h2>
           <p className="text-(--text-secondary)">{translation.explanation}</p>
         </section>
 
+        {/* 예문 */}
         {translation.examples && (
           <section className="mb-6">
-            <h2 className="text-lg font-semibold text-(--text-primary) mb-3">{t('examples')}</h2>
+            <h2 className="text-lg font-semibold text-(--text-primary) mb-3">예문</h2>
             <div className="space-y-3">
               {(['beginner', 'intermediate', 'advanced', 'master'] as const).map((level) => {
                 const example = translation.examples?.[level];
@@ -252,7 +280,7 @@ function EntryPageKo() {
                     className="p-4 rounded-xl bg-(--bg-elevated) border border-(--border-primary)"
                   >
                     <span className="inline-block px-2.5 py-0.5 rounded-full text-xs font-medium bg-(--accent-primary) text-white mb-2">
-                      {t(level)}
+                      {levelLabels[level]}
                     </span>
                     <div className="text-(--text-secondary)">
                       <LinkedExample text={example} currentEntryId={entry.id} />
@@ -264,20 +292,20 @@ function EntryPageKo() {
           </section>
         )}
 
-        {/* Dialogue Example Section (lazy-loaded) */}
+        {/* 대화 예시 (lazy-loaded) */}
         <section className="mb-6">
           <EntryDialogueDisplay entryId={entry.id} hasDialogue={entry.hasDialogue} />
         </section>
 
-        {/* Homonym Section - 같은 발음, 다른 의미 */}
+        {/* 동음이의어 */}
         <HomonymSection korean={entry.korean} currentId={entry.id} className="mb-6" />
 
         <div className="mt-8">
           <Link
-            to={localePath('/browse')}
+            to="/ko/browse"
             className="inline-block text-sm text-(--accent-primary) hover:underline"
           >
-            ← {t('backToList')}
+            ← 목록으로 돌아가기
           </Link>
         </div>
       </article>
