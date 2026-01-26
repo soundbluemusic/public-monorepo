@@ -39,6 +39,43 @@ export default defineConfig({
             content: 'https://soundbluemusic.github.io/public-monorepo/og-image.png',
           },
         },
+        // PWA manifest
+        {
+          tag: 'link',
+          attrs: {
+            rel: 'manifest',
+            href: '/public-monorepo/manifest.json',
+          },
+        },
+        // PWA theme color
+        {
+          tag: 'meta',
+          attrs: {
+            name: 'theme-color',
+            content: '#2563eb',
+          },
+        },
+        // Apple touch icon
+        {
+          tag: 'link',
+          attrs: {
+            rel: 'apple-touch-icon',
+            href: '/public-monorepo/apple-touch-icon.png',
+          },
+        },
+        // Service Worker registration
+        {
+          tag: 'script',
+          content: `
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/public-monorepo/sw.js')
+                  .then(reg => console.log('SW registered'))
+                  .catch(err => console.log('SW registration failed:', err));
+              });
+            }
+          `,
+        },
       ],
       logo: {
         src: './src/assets/logo.svg',
