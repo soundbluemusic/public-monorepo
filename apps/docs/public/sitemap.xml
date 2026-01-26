@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/public-monorepo/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- English (root) -->
+  <url>
+    <loc>https://soundbluemusic.github.io/public-monorepo/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soundbluemusic.github.io/public-monorepo/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://soundbluemusic.github.io/public-monorepo/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://soundbluemusic.github.io/public-monorepo/ja/"/>
+  </url>
+  <url>
+    <loc>https://soundbluemusic.github.io/public-monorepo/introduction/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soundbluemusic.github.io/public-monorepo/introduction/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://soundbluemusic.github.io/public-monorepo/ko/introduction/"/>
+  </url>
+  <url>
+    <loc>https://soundbluemusic.github.io/public-monorepo/quick-start/</loc>
+  </url>
+  <url>
+    <loc>https://soundbluemusic.github.io/public-monorepo/apps/context/</loc>
+  </url>
+  <url>
+    <loc>https://soundbluemusic.github.io/public-monorepo/apps/permissive/</loc>
+  </url>
+  <url>
+    <loc>https://soundbluemusic.github.io/public-monorepo/apps/roots/</loc>
+  </url>
+  <url>
+    <loc>https://soundbluemusic.github.io/public-monorepo/architecture/overview/</loc>
+  </url>
+  <url>
+    <loc>https://soundbluemusic.github.io/public-monorepo/architecture/packages/</loc>
+  </url>
+  <url>
+    <loc>https://soundbluemusic.github.io/public-monorepo/architecture/layers/</loc>
+  </url>
+  <url>
+    <loc>https://soundbluemusic.github.io/public-monorepo/contributing/guidelines/</loc>
+  </url>
+  <url>
+    <loc>https://soundbluemusic.github.io/public-monorepo/contributing/development/</loc>
+  </url>
+  <url>
+    <loc>https://soundbluemusic.github.io/public-monorepo/packages/core/</loc>
+  </url>
+
+  <!-- Korean (ko) -->
+  <url>
+    <loc>https://soundbluemusic.github.io/public-monorepo/ko/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soundbluemusic.github.io/public-monorepo/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://soundbluemusic.github.io/public-monorepo/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://soundbluemusic.github.io/public-monorepo/ja/"/>
+  </url>
+  <url>
+    <loc>https://soundbluemusic.github.io/public-monorepo/ko/introduction/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soundbluemusic.github.io/public-monorepo/introduction/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://soundbluemusic.github.io/public-monorepo/ko/introduction/"/>
+  </url>
+
+  <!-- Japanese (ja) -->
+  <url>
+    <loc>https://soundbluemusic.github.io/public-monorepo/ja/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://soundbluemusic.github.io/public-monorepo/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://soundbluemusic.github.io/public-monorepo/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://soundbluemusic.github.io/public-monorepo/ja/"/>
+  </url>
+</urlset>
