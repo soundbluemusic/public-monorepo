@@ -4,7 +4,7 @@
  * This module provides React components and utilities for code-splitting and
  * lazy loading, optimizing initial bundle size and improving page load performance.
  *
- * All exports are compatible with React 18+ Suspense and work in both SSR/SSG
+ * All exports are compatible with React 18+ Suspense and work in SSR
  * and client-side environments.
  *
  * @module @soundblue/ui/patterns/LazyLoad

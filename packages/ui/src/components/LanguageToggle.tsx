@@ -14,7 +14,7 @@ export interface LanguageToggleProps {
 }
 
 /**
- * Language toggle using anchor tag for SSG compatibility
+ * Language toggle using anchor tag for SSR compatibility
  * Works without JavaScript hydration
  */
 export function LanguageToggle({ locale, currentPath = '/' }: LanguageToggleProps) {

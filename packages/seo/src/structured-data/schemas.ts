@@ -615,12 +615,12 @@ export function serializeSchema(schema: JsonLdSchema): string {
  * JSON-LD 스키마를 HTML script 태그로 생성합니다.
  *
  * 스키마 객체를 `<script type="application/ld+json">` 태그로 감싸서 반환합니다.
- * SSG 빌드 시점에 HTML에 직접 삽입할 수 있습니다.
+ * 빌드 시점에 HTML에 직접 삽입할 수 있습니다.
  *
  * @param schema - JSON-LD 스키마 객체
  * @returns 완전한 HTML script 태그 문자열
  *
- * @example SSG 빌드에서 사용
+ * @example 빌드에서 사용
  * ```typescript
  * // entry.server.tsx 또는 root.tsx에서
  * const websiteSchema = generateWebsiteSchema({

@@ -7,7 +7,7 @@
  *   pnpm quality:quick  # 빠른 검사 (링크 검사 제외)
  *
  * 검사 항목:
- *   - SSG 규칙 검사 (ssr:false, prerender 존재)
+ *   - SSR 빌드 검증 (서버 번들, 클라이언트 자산)
  *   - Layer 규칙 검사 (순환 의존성)
  *   - 링크 무결성 검사 (프로덕션 URL)
  */
@@ -32,9 +32,9 @@ interface CheckConfig {
 
 const checks: CheckConfig[] = [
   {
-    name: 'SSG Check',
+    name: 'SSR Check',
     command: 'tsx',
-    args: ['scripts/verify-ssg.ts'],
+    args: ['scripts/verify-html.ts'],
     parser: (output) => {
       const errors: string[] = [];
       if (output.includes('❌')) {

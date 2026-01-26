@@ -3,7 +3,7 @@
  * @environment universal
  *
  * Reusable UI components for React applications.
- * SSG-safe, no client-only dependencies in core exports.
+ * SSR-safe, no client-only dependencies in core exports.
  *
  * @packageDocumentation
  */

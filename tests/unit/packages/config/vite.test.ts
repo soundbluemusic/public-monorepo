@@ -48,7 +48,7 @@ const appPorts = {
   roots: 3005,
 } as const;
 
-const ssgOptimizations = {
+const staticOptimizations = {
   prerenderConcurrency: 10,
   staticExtensions: [
     '.html',
@@ -210,13 +210,13 @@ describe('@soundblue/config - Vite', () => {
     });
   });
 
-  describe('ssgOptimizations', () => {
+  describe('staticOptimizations', () => {
     it('should have correct prerender concurrency', () => {
-      expect(ssgOptimizations.prerenderConcurrency).toBe(10);
+      expect(staticOptimizations.prerenderConcurrency).toBe(10);
     });
 
     it('should include common static extensions', () => {
-      const extensions = ssgOptimizations.staticExtensions;
+      const extensions = staticOptimizations.staticExtensions;
 
       expect(extensions).toContain('.html');
       expect(extensions).toContain('.css');
@@ -226,7 +226,7 @@ describe('@soundblue/config - Vite', () => {
     });
 
     it('should include image extensions', () => {
-      const extensions = ssgOptimizations.staticExtensions;
+      const extensions = staticOptimizations.staticExtensions;
 
       expect(extensions).toContain('.png');
       expect(extensions).toContain('.jpg');
@@ -235,7 +235,7 @@ describe('@soundblue/config - Vite', () => {
     });
 
     it('should include font extensions', () => {
-      const extensions = ssgOptimizations.staticExtensions;
+      const extensions = staticOptimizations.staticExtensions;
 
       expect(extensions).toContain('.woff2');
     });

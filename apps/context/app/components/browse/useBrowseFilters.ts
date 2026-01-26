@@ -64,7 +64,7 @@ interface BrowseMetadata {
 
 interface UseBrowseFiltersOptions {
   categories: typeof categories;
-  /** SSG에서 로드된 초기 엔트리 (첫 청크) */
+  /** loader에서 로드된 초기 엔트리 (첫 청크) */
   initialEntries: LightEntry[];
   /** 메타데이터 */
   meta: BrowseMetadata;
@@ -80,7 +80,7 @@ const chunkCache = new Map<string, LightEntry[]>();
  * 청크 기반 Browse 필터 훅
  *
  * ## 최적화 전략
- * - SSG에서 첫 청크만 로드 (1000개)
+ * - 서버에서 첫 청크만 로드 (1000개)
  * - 페이지 전환 시 필요한 청크만 fetch
  * - 청크는 메모리에 캐시하여 재사용
  */

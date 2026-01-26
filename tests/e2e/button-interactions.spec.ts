@@ -65,7 +65,7 @@ test.describe('Button Interactions', () => {
   });
 
   // Skip: Back to top button uses React state (showBackToTop) which requires
-  // full JavaScript hydration. In SSG builds, the button is not in initial HTML
+  // full JavaScript hydration. In SSR builds, the button is not in initial HTML
   // and only appears after React hydrates and scroll event fires.
   // This works correctly in production but is difficult to test reliably in E2E.
   // Manual testing confirmed: scroll > 300px triggers button, click scrolls to top.

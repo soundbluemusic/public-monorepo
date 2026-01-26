@@ -12,7 +12,7 @@
  * - For datasets with 500+ items, MiniSearch is significantly faster
  *
  * ## Why synchronous instead of Web Workers?
- * For SSG apps with small datasets (<1000 items), synchronous search is:
+ * For SSR apps with small datasets (<1000 items), synchronous search is:
  * - More reliable (no worker initialization/communication overhead)
  * - Simpler to debug
  * - Fast enough (< 5ms search time on modern devices)
@@ -354,7 +354,7 @@ export function useSearchWorker({
   // Load and initialize search index on mount
   // Re-initializes if indexUrl or locale changes
   useEffect(() => {
-    // Skip on server-side (SSG build)
+    // Skip on server-side (SSR)
     if (typeof window === 'undefined') {
       return;
     }

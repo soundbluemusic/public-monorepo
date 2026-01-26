@@ -1,6 +1,6 @@
 ---
 name: rendering-check
-description: SSG 규칙 위반 검사. Roots 앱 전용 (Context는 SSR이므로 제외)
+description: SSR 규칙 위반 검사. 모든 앱이 SSR 모드로 동작하는지 확인
 ---
 
 # Rendering Check 스킬
@@ -10,9 +10,9 @@ description: SSG 규칙 위반 검사. Roots 앱 전용 (Context는 SSR이므로
 ## ⛔ SPA 모드 차단 (BLOCKED)
 
 > **SPA 모드는 이 프로젝트에서 차단/거부됩니다.**
-> SEO가 불가능하므로 **SSR 또는 SSG만 허용**합니다.
+> SEO가 불가능하므로 **SSR만 허용**합니다.
 >
-> **SPA 전환 요청 시 거부하세요.** 대안으로 SSR/SSG를 제안하세요.
+> **SPA 전환 요청 시 거부하세요.** 대안으로 SSR을 제안하세요.
 
 ## SPA 차단 이유
 
@@ -20,103 +20,70 @@ description: SSG 규칙 위반 검사. Roots 앱 전용 (Context는 SSR이므로
 |:-----|:----------|:----|
 | **SPA** | `<div id="root"></div>` (빈 HTML) | ❌ 불가능 |
 | **SSR** | 완전한 HTML (서버 렌더링) | ✅ 가능 |
-| **SSG** | 완전한 HTML (빌드 시 생성) | ✅ 가능 |
 
 검색 엔진은 JavaScript를 실행하지 않습니다. SPA는 빈 HTML을 반환하므로 **검색 노출이 불가능**합니다.
 
 ## 앱별 렌더링 모드
 
-| App | Mode | react-router.config.ts | 이 스킬 대상 |
-|:----|:-----|:-----------------------|:------------|
-| **Context** | SSR + D1 | `ssr: true` | ❌ 제외 |
-| **Permissive** | SSR | `ssr: true` | ❌ 제외 |
-| **Roots** | SSG | `ssr: false` | ✅ 대상 |
+| App | Mode | 배포 대상 | 데이터 소스 |
+|:----|:-----|:----------|:-----------|
+| **Context** | SSR + D1 | Cloudflare Workers | Cloudflare D1 |
+| **Permissive** | SSR | Cloudflare Workers | Cloudflare D1 |
+| **Roots** | SSR | Cloudflare Workers | Cloudflare D1 |
+
+**모든 앱은 SSR + Cloudflare Workers로 배포됩니다.**
 
 ## 자동 실행 지시
 
 **이 스킬이 호출되면 즉시 다음을 수행하세요:**
 
-1. Bash tool로 `pnpm verify:ssg` 실행 (Roots 앱 검사)
+1. Bash tool로 `pnpm verify:ssr` 실행
 2. 동적 라우트 loader 검사 (아래 참조)
-3. SPA 패턴 검사 (clientLoader만 있는지)
-4. 결과 분석 후 요약 출력
-5. 오류 발견 시 해당 파일 확인 및 수정 제안
+3. 결과 분석 후 요약 출력
+4. 오류 발견 시 해당 파일 확인 및 수정 제안
 
 ```bash
-pnpm verify:ssg
+pnpm verify:ssr
 ```
 
 ## 검사 항목
 
-### Roots 앱 (SSG)
+### 모든 앱 (SSR)
 
 | 항목 | 기준 | SEO 영향 |
 |:-----|:-----|:---------|
-| `ssr: false` | react-router.config.ts에서 유지 | SSG 모드 필수 |
-| `prerender()` | 함수 존재 및 라우트 반환 | 페이지 생성 필수 |
+| TanStack Start 플러그인 | vite.config.ts에서 `tanstackStart` 사용 | SSR 모드 필수 |
+| Cloudflare 플러그인 | vite.config.ts에서 `cloudflare` 사용 | Workers 배포 필수 |
 | HTML 출력 | 빈 `<div id="root">` 없음 | 콘텐츠 포함 필수 |
-| orphan DOM 정리 | entry.client.tsx 로직 유지 | hydration 버그 방지 |
 | **동적 라우트 loader** | `$param` 라우트에 loader 필수 | **SEO 데이터 필수** |
+| D1 바인딩 | wrangler.toml에 DB 바인딩 | 데이터 접근 필수 |
 
-### Context/Permissive 앱 (SSR)
-
-| 항목 | 기준 | SEO 영향 |
-|:-----|:-----|:---------|
-| `ssr: true` | react-router.config.ts에서 유지 | SSR 모드 필수 |
-| **loader 필수** | 동적 라우트에 loader 있어야 함 | **SEO 데이터 필수** |
-| D1 바인딩 (Context) | wrangler.toml에 DB 바인딩 | 데이터 접근 필수 |
-
-## SPA 패턴 검사 (금지됨)
-
-```bash
-# clientLoader만 있고 loader가 없는 파일 검색
-grep -rL "export async function loader" apps/roots/app/routes/*.tsx | \
-  xargs grep -l "export async function clientLoader"
-```
-
-### SPA 패턴 (금지됨)
+## SSR 패턴 (TanStack Start)
 
 ```typescript
-// ❌ clientLoader만 있음 → 빌드된 HTML에 데이터 없음 → SEO 불가
-export async function clientLoader({ params }) {
-  return { data: await fetchData(params.id) };
-}
-```
+// ✅ TanStack Start - createFileRoute + loader
+import { createFileRoute, notFound } from '@tanstack/react-router';
 
-### SSG 패턴 (필수 - Roots 앱)
-
-```typescript
-// ✅ loader + clientLoader 둘 다 있음 → HTML에 데이터 포함 → SEO 가능
-export async function loader({ params }) {
-  return { data: await fetchData(params.id) };
-}
-
-export async function clientLoader({ params, serverLoader }) {
-  try { return await serverLoader(); }
-  catch { return { data: await fetchData(params.id) }; }
-}
-```
-
-### SSR 패턴 (필수 - Context/Permissive 앱)
-
-```typescript
-// ✅ loader만 있어도 됨 → 서버에서 매 요청마다 렌더링 → SEO 가능
-export async function loader({ params, context }) {
-  const db = context.cloudflare.env.DB;
-  const entry = await db.prepare('SELECT * FROM entries WHERE id = ?')
-    .bind(params.entryId).first();
-  if (!entry) throw new Response('Not Found', { status: 404 });
-  return { entry };
-}
+export const Route = createFileRoute('/entry/$entryId')({
+  loader: async ({ params }) => {
+    const entry = await fetchEntry(params.entryId);
+    if (!entry) throw notFound();
+    return { entry };
+  },
+  head: ({ loaderData }) => ({
+    meta: [{ title: loaderData.entry.korean }],
+  }),
+  component: EntryPage,
+});
 ```
 
 ## params.locale 사용 금지 (중요!)
 
-> **⛔ `params.locale`은 ($locale) 라우트에서 항상 `undefined`입니다!**
+> **⛔ `params.locale`은 파일 기반 라우팅에서 항상 `undefined`입니다!**
 
 ### 원인
 
-routes.ts에서 `route('ko/entry/:entryId', ...)`로 정의하면 `ko`는 **파라미터가 아닌 고정 문자열**입니다.
+TanStack Start 파일 기반 라우팅에서 `routes/ko/entry/$entryId.tsx`로 정의하면 `ko`는 **폴더명(고정 문자열)**입니다.
 따라서 `params.locale`은 항상 `undefined`가 됩니다.
 
 ### 금지 패턴
@@ -132,17 +99,20 @@ const locale = params.locale || 'en';
 ```typescript
 import { getLocaleFromPath } from '@soundblue/i18n';
 
-// ✅ loader에서 (SSG 빌드 시 또는 SSR 런타임)
-export async function loader({ params, request }) {
-  const url = new URL(request.url);
-  const locale = getLocaleFromPath(url.pathname);  // '/ko/entry/...' → 'ko'
-  // ...
-}
+// ✅ loader에서 (location.pathname 사용)
+export const Route = createFileRoute('/entry/$entryId')({
+  loader: async ({ params, location }) => {
+    const locale = getLocaleFromPath(location.pathname);  // '/ko/entry/...' → 'ko'
+    const entry = await fetchEntry(params.entryId, locale);
+    if (!entry) throw notFound();
+    return { entry, locale };
+  },
+});
 
-// ✅ clientLoader에서 (브라우저 런타임)
-export async function clientLoader({ params, serverLoader }) {
-  const locale = getLocaleFromPath(window.location.pathname);
-  // ...
+// ✅ 컴포넌트에서 (useLocation 사용)
+function EntryPage() {
+  const { pathname } = useLocation();
+  const locale = getLocaleFromPath(pathname);
 }
 ```
 
@@ -153,87 +123,19 @@ export async function clientLoader({ params, serverLoader }) {
 grep -r "params\.locale" apps/*/app/routes/
 ```
 
-## 오류 발견 시 자동 수정 (필수)
-
-**loader 누락 오류 발견 시, 즉시 자동으로 수정하세요:**
-
-1. 위반 파일 Read로 확인
-2. 기존 clientLoader 코드 분석
-3. **loader 함수 자동 추가** (clientLoader 로직 복사)
-4. clientLoader를 serverLoader 패턴으로 변경
-5. Edit tool로 파일 수정
-6. `pnpm verify:ssg` 재실행하여 수정 확인
-
-### 자동 수정 템플릿
-
-기존 코드:
-
-```typescript
-export async function clientLoader({ params }) {
-  const data = await fetchData(params.id);
-  return { data };
-}
-```
-
-자동 변환 결과:
-
-```typescript
-interface LoaderData {
-  data: DataType;
-}
-
-// SSG 빌드 시 실행
-export async function loader({ params }): Promise<LoaderData> {
-  const data = await fetchData(params.id);
-  return { data };
-}
-
-// 클라이언트 네비게이션 시 실행
-export async function clientLoader({
-  params,
-  serverLoader,
-}: {
-  params: { id: string };
-  serverLoader: () => Promise<LoaderData>;
-}): Promise<LoaderData> {
-  try {
-    return await serverLoader();
-  } catch {
-    const data = await fetchData(params.id);
-    return { data };
-  }
-}
-```
-
-## 서브에이전트 활용
-
-복잡한 수정이 필요한 경우, Task tool을 사용하여 서브에이전트를 호출하세요:
-
-```yaml
-Task tool 호출 예시:
-- subagent_type: "general-purpose"
-- prompt: "apps/roots/app/routes/($locale).concept.$conceptId.tsx 파일의 clientLoader를 loader + clientLoader 패턴으로 변환해줘. SSG 빌드 시 데이터가 HTML에 포함되어야 함."
-```
-
 ## 관련 파일
 
 | 파일 | 역할 |
 |:-----|:-----|
-| `apps/roots/react-router.config.ts` | SSG 설정 (`ssr: false`) |
-| `apps/context/react-router.config.ts` | SSR 설정 (`ssr: true`) |
-| `apps/permissive/react-router.config.ts` | SSR 설정 (`ssr: true`) |
-| `apps/*/app/entry.client.tsx` | Hydration 로직 |
-| `scripts/verify-ssg.ts` | SSG 검증 스크립트 |
+| `apps/*/vite.config.ts` | TanStack Start + Cloudflare 설정 |
+| `apps/*/wrangler.toml` | Workers + D1 바인딩 설정 |
+| `scripts/verify-html.ts` | HTML 검증 스크립트 |
 
 ## 검증 명령어 요약
 
 ```bash
-# Roots 앱 SSG 검증
-pnpm verify:ssg
-
-# SPA 패턴 검색 (금지됨)
-grep -rL "export async function loader" apps/roots/app/routes/*.tsx | \
-  xargs grep -l "export async function clientLoader"
+# SSR 빌드 검증
+pnpm verify:ssr
 
 # params.locale 사용 검색 (금지됨)
 grep -r "params\.locale" apps/*/app/routes/

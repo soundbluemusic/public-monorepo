@@ -1,6 +1,6 @@
 /**
- * @fileoverview Integration tests for SSG build verification
- * Tests that static site generation works correctly
+ * @fileoverview Integration tests for HTML build verification
+ * Tests that build works correctly and generates proper HTML
  *
  * Note: These tests require the build to exist. Run `pnpm build:roots` first.
  */
@@ -12,7 +12,7 @@ import { describe, expect, it } from 'vitest';
 const buildDir = path.join(process.cwd(), 'apps/roots/build/client');
 const hasBuild = fs.existsSync(buildDir);
 
-describe.skipIf(!hasBuild)('SSG Build Verification', () => {
+describe.skipIf(!hasBuild)('HTML Build Verification', () => {
   it('should generate index.html for root route', () => {
     const indexPath = path.join(buildDir, 'index.html');
     expect(fs.existsSync(indexPath)).toBe(true);

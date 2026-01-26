@@ -1,5 +1,5 @@
 /**
- * @fileoverview Dark Mode Scripts for SSG Apps
+ * @fileoverview Dark Mode Scripts for SSR Apps
  * @environment universal
  *
  * These scripts are designed to be inlined in the HTML to prevent
@@ -9,7 +9,7 @@
  * The scripts must be inlined because:
  * 1. They need to run before React hydrates
  * 2. They prevent the flash of wrong theme
- * 3. SSG apps have no server to handle this
+ * 3. SSR apps need client-side script to handle this
  *
  * ## FOUC Prevention Architecture
  *

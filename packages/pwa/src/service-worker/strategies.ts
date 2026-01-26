@@ -123,7 +123,7 @@ export const API_STRATEGY: RuntimeCaching = {
 
 /**
  * Cache strategy for data files (.data, .json)
- * Uses StaleWhileRevalidate - SSG data files
+ * Uses StaleWhileRevalidate - static data files
  */
 export const DATA_STRATEGY: RuntimeCaching = {
   urlPattern: /\.(?:data|json)$/,
@@ -142,16 +142,21 @@ export const DATA_STRATEGY: RuntimeCaching = {
 // ============================================================================
 
 /**
- * Get default runtime caching rules for SSG apps
+ * Get default runtime caching rules for static apps
  */
-export function getSSGCachingRules(): RuntimeCaching[] {
+export function getDefaultCachingRules(): RuntimeCaching[] {
   return [STATIC_ASSETS_STRATEGY, BUNDLE_STRATEGY, DATA_STRATEGY, PAGE_STRATEGY];
 }
 
 /**
- * Create service worker config for an SSG app
+ * @deprecated Use getDefaultCachingRules instead
  */
-export function createSSGServiceWorkerConfig(
+export const getSSGCachingRules = getDefaultCachingRules;
+
+/**
+ * Create service worker config for a static app
+ */
+export function createDefaultServiceWorkerConfig(
   globDirectory: string,
   swDest: string,
 ): ServiceWorkerConfig {
@@ -159,8 +164,13 @@ export function createSSGServiceWorkerConfig(
     globPatterns: ['**/*.{html,js,css,png,jpg,jpeg,svg,gif,webp,ico,woff2,data,json}'],
     globDirectory,
     swDest,
-    runtimeCaching: getSSGCachingRules(),
+    runtimeCaching: getDefaultCachingRules(),
     skipWaiting: true,
     clientsClaim: true,
   };
 }
+
+/**
+ * @deprecated Use createDefaultServiceWorkerConfig instead
+ */
+export const createSSGServiceWorkerConfig = createDefaultServiceWorkerConfig;

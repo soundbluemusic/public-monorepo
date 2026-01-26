@@ -65,13 +65,13 @@ class RootsDatabase extends Dexie {
   }
 }
 
-// Lazy initialization to avoid SSG build errors
+// Lazy initialization to avoid server-side errors
 let db: RootsDatabase | null = null;
 
 function getDb(): RootsDatabase | null {
   // CRITICAL: Only initialize in browser environment
   if (typeof window === 'undefined') {
-    return null; // SSG build - return null, don't throw
+    return null; // server-side - return null, don't throw
   }
   if (!db) {
     try {
@@ -91,7 +91,7 @@ export const favorites = {
   async add(conceptId: string) {
     validateId(conceptId, 'conceptId');
     const database = getDb();
-    if (!database) return null; // SSG environment
+    if (!database) return null; // server environment
     const exists = await database.favorites.where('conceptId').equals(conceptId).first();
     if (exists) return exists.id;
     return database.favorites.add({ conceptId, addedAt: new Date() });
@@ -100,14 +100,14 @@ export const favorites = {
   async remove(conceptId: string) {
     validateId(conceptId, 'conceptId');
     const database = getDb();
-    if (!database) return 0; // SSG environment
+    if (!database) return 0; // server environment
     return database.favorites.where('conceptId').equals(conceptId).delete();
   },
 
   async toggle(conceptId: string) {
     validateId(conceptId, 'conceptId');
     const database = getDb();
-    if (!database) return false; // SSG environment
+    if (!database) return false; // server environment
     const exists = await database.favorites.where('conceptId').equals(conceptId).first();
     if (exists?.id) {
       await database.favorites.delete(exists.id);
@@ -120,20 +120,20 @@ export const favorites = {
   async isFavorite(conceptId: string) {
     validateId(conceptId, 'conceptId');
     const database = getDb();
-    if (!database) return false; // SSG environment
+    if (!database) return false; // server environment
     const exists = await database.favorites.where('conceptId').equals(conceptId).first();
     return !!exists;
   },
 
   async getAll() {
     const database = getDb();
-    if (!database) return []; // SSG environment
+    if (!database) return []; // server environment
     return database.favorites.orderBy('addedAt').reverse().toArray();
   },
 
   async count() {
     const database = getDb();
-    if (!database) return 0; // SSG environment
+    if (!database) return 0; // server environment
     return database.favorites.count();
   },
 };
@@ -143,7 +143,7 @@ export const studyRecords = {
   async add(conceptId: string, duration: number, completed: boolean, quizScore?: number) {
     validateId(conceptId, 'conceptId');
     const database = getDb();
-    if (!database) return null; // SSG environment
+    if (!database) return null; // server environment
     return database.studyRecords.add({
       conceptId,
       studiedAt: new Date(),
@@ -156,20 +156,20 @@ export const studyRecords = {
   async getByConcept(conceptId: string) {
     validateId(conceptId, 'conceptId');
     const database = getDb();
-    if (!database) return []; // SSG environment
+    if (!database) return []; // server environment
     return database.studyRecords.where('conceptId').equals(conceptId).toArray();
   },
 
   async getRecent(limit = 50) {
     const database = getDb();
-    if (!database) return []; // SSG environment
+    if (!database) return []; // server environment
     return database.studyRecords.orderBy('studiedAt').reverse().limit(limit).toArray();
   },
 
   async getStats(conceptId: string) {
     validateId(conceptId, 'conceptId');
     const database = getDb();
-    if (!database) return { total: 0, totalDuration: 0, completedCount: 0, avgQuizScore: null }; // SSG environment
+    if (!database) return { total: 0, totalDuration: 0, completedCount: 0, avgQuizScore: null }; // server environment
     const records = await database.studyRecords.where('conceptId').equals(conceptId).toArray();
     const total = records.length;
     const totalDuration = records.reduce((sum, r) => sum + r.duration, 0);
@@ -190,7 +190,7 @@ export const studyRecords = {
 
   async getTotalStudyTime() {
     const database = getDb();
-    if (!database) return 0; // SSG environment
+    if (!database) return 0; // server environment
     const records = await database.studyRecords.toArray();
     return records.reduce((sum, r) => sum + r.duration, 0);
   },
@@ -203,7 +203,7 @@ export const learningPaths = {
       validateId(id, 'conceptId');
     }
     const database = getDb();
-    if (!database) return null; // SSG environment
+    if (!database) return null; // server environment
     return database.learningPaths.add({
       name,
       conceptIds,
@@ -215,19 +215,19 @@ export const learningPaths = {
 
   async get(id: number) {
     const database = getDb();
-    if (!database) return undefined; // SSG environment
+    if (!database) return undefined; // server environment
     return database.learningPaths.get(id);
   },
 
   async getAll() {
     const database = getDb();
-    if (!database) return []; // SSG environment
+    if (!database) return []; // server environment
     return database.learningPaths.orderBy('updatedAt').reverse().toArray();
   },
 
   async updateProgress(id: number, currentIndex: number) {
     const database = getDb();
-    if (!database) return 0; // SSG environment
+    if (!database) return 0; // server environment
     return database.learningPaths.update(id, {
       currentIndex,
       updatedAt: new Date(),
@@ -236,7 +236,7 @@ export const learningPaths = {
 
   async delete(id: number) {
     const database = getDb();
-    if (!database) return; // SSG environment
+    if (!database) return; // server environment
     return database.learningPaths.delete(id);
   },
 };
@@ -246,7 +246,7 @@ export const recentViews = {
   async add(conceptId: string) {
     validateId(conceptId, 'conceptId');
     const database = getDb();
-    if (!database) return; // SSG environment
+    if (!database) return; // server environment
     // 기존 기록 삭제 후 새로 추가 (맨 위로)
     await database.recentViews.where('conceptId').equals(conceptId).delete();
     await database.recentViews.add({ conceptId, viewedAt: new Date() });
@@ -263,13 +263,13 @@ export const recentViews = {
 
   async getRecent(limit = 20) {
     const database = getDb();
-    if (!database) return []; // SSG environment
+    if (!database) return []; // server environment
     return database.recentViews.orderBy('viewedAt').reverse().limit(limit).toArray();
   },
 
   async clear() {
     const database = getDb();
-    if (!database) return; // SSG environment
+    if (!database) return; // server environment
     return database.recentViews.clear();
   },
 };
@@ -287,14 +287,14 @@ export const settings = {
       updatedAt: new Date(),
     };
     const database = getDb();
-    if (!database) return defaultSettings; // SSG environment
+    if (!database) return defaultSettings; // server environment
     const s = await database.settings.get(1);
     return s || defaultSettings;
   },
 
   async update(updates: Partial<Omit<UserSettings, 'id'>>) {
     const database = getDb();
-    if (!database) return 1; // SSG environment
+    if (!database) return 1; // server environment
     const current = await this.get();
     return database.settings.put({
       ...current,

@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 
 /**
  * Test to verify download page buttons work
- * Tests the plain JS event delegation fallback for SSG hydration issues
+ * Tests the plain JS event delegation fallback for hydration issues
  */
 test.describe('Download Page Buttons', () => {
   test('JSON download button triggers download', async ({ page }) => {

@@ -2,8 +2,8 @@
  * @fileoverview 동적 엔트리 로더 훅
  *
  * 100만개+ 확장성을 위한 청크 기반 동적 로딩
- * - SSG 시: loader()에서 미리 로드된 데이터 사용
- * - SPA 시: 청크 파일에서 동적 fetch
+ * - SSR 시: loader()에서 미리 로드된 데이터 사용
+ * - 클라이언트 네비게이션 시: 청크 파일에서 동적 fetch
  *
  * ## 캐싱 전략
  * - 청크 단위 캐싱 (같은 초성 엔트리는 한 번만 fetch)
@@ -103,7 +103,7 @@ interface UseEntryLoaderResult {
  * 엔트리 동적 로더 훅
  *
  * @param entryId - 로드할 엔트리 ID
- * @param preloadedEntry - SSG에서 미리 로드된 엔트리 (있으면 사용)
+ * @param preloadedEntry - SSR loader에서 미리 로드된 엔트리 (있으면 사용)
  */
 export function useEntryLoader(
   entryId: string | undefined,

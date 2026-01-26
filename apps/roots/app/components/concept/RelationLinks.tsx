@@ -1,6 +1,6 @@
 /**
  * @fileoverview 연관 문서 링크 컴포넌트
- * 빌드 시 loader에서 전달받은 concept names 사용 (SSG 최적화)
+ * loader에서 전달받은 concept names 사용 (SSR 최적화)
  */
 
 import { Link } from '@tanstack/react-router';
@@ -71,7 +71,7 @@ function RelationSection({ title, icon, ids, type, names }: RelationSectionProps
 
 /**
  * 연관 문서 링크 섹션
- * 빌드 시 loader에서 전달받은 names 사용 (SSG 최적화)
+ * loader에서 전달받은 names 사용 (SSR 최적화)
  */
 export function RelationLinks({ relations, names }: RelationLinksProps) {
   const { t } = useI18n();

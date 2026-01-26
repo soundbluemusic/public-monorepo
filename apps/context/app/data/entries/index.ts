@@ -44,8 +44,8 @@ const localeCategoryCache = new Map<string, LocaleEntry[]>();
 
 /**
  * 카테고리별 locale 분리 데이터 로드 (캐시됨)
- * SSG 빌드 시: Node.js fs로 JSON 파일 읽기
- * 런타임 시: fetch로 JSON 파일 요청
+ * 서버 사이드: Node.js fs로 JSON 파일 읽기
+ * 클라이언트: fetch로 JSON 파일 요청
  *
  * @param categoryId - 카테고리 ID
  * @param locale - 언어 코드 ('en' | 'ko')
@@ -59,7 +59,7 @@ async function loadCategoryByLocale(categoryId: string, locale: Language): Promi
   if (cached) return cached;
 
   try {
-    // SSG 빌드 시 (Node.js 환경)
+    // 서버 사이드 (Node.js 환경)
     if (typeof window === 'undefined') {
       const { readFileSync } = await import('node:fs');
       const { join } = await import('node:path');

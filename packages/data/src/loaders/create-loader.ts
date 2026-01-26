@@ -1,7 +1,7 @@
 /**
  * React Router 데이터 로더 팩토리
  *
- * SSG 빌드타임 데이터 로딩을 위한 로더 생성 유틸리티
+ * 빌드타임/런타임 데이터 로딩을 위한 로더 생성 유틸리티
  */
 
 /**
@@ -10,7 +10,7 @@
 export interface LoaderConfig<T> {
   /** 데이터 가져오기 함수 */
   getData: (id: string, lang: string) => Promise<T | null> | T | null;
-  /** SSG용 정적 경로 생성 (선택) */
+  /** 정적 경로 생성 (선택) */
   getStaticPaths?: () => Promise<string[]> | string[];
   /** 404 시 리다이렉트 경로 (선택) */
   notFoundRedirect?: string;

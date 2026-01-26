@@ -63,9 +63,9 @@ export const appPorts = {
 } as const;
 
 /**
- * SSG optimization settings
+ * Static build optimization settings
  */
-export const ssgOptimizations = {
+export const staticOptimizations = {
   // Pre-render concurrency
   prerenderConcurrency: 10,
 
@@ -85,6 +85,11 @@ export const ssgOptimizations = {
     '.woff2',
   ],
 } as const;
+
+/**
+ * @deprecated Use staticOptimizations instead
+ */
+export const ssgOptimizations = staticOptimizations;
 
 import type { RuntimeCaching } from 'workbox-build';
 

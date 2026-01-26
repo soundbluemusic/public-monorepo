@@ -161,7 +161,7 @@ test.describe('Content Sanitization', () => {
     });
 
     // React apps typically have a root element
-    expect(hasReactRoot || true).toBe(true); // SSG apps may not have data-reactroot
+    expect(hasReactRoot || true).toBe(true); // SSR apps may not have data-reactroot
   });
 });
 

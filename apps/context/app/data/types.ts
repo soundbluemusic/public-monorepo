@@ -118,7 +118,7 @@ export interface MeaningEntry {
  * Locale별 엔트리 (번들 최적화용)
  *
  * MeaningEntry와 동일하지만 translations 대신 단일 translation 필드만 포함합니다.
- * SSG 빌드 시 locale별로 분리된 JSON에서 로드되며, 약 50% 용량 절감 효과가 있습니다.
+ * 서버에서 locale별로 분리된 JSON에서 로드되며, 약 50% 용량 절감 효과가 있습니다.
  *
  * ## Dialogue lazy-loading
  * dialogue 데이터는 translation에 포함되지 않으며, hasDialogue 플래그로 존재 여부만 표시합니다.

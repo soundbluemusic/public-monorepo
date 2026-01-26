@@ -158,7 +158,7 @@ input:focus-visible {
    Sidebar Responsive Layout
    ============================================ */
 
-/* Mobile: Hide sidebar by default (SSG hydration fix) */
+/* Mobile: Hide sidebar by default (hydration fix) */
 @media (max-width: 1023px) {
   aside[aria-label] {
     transform: translateX(-100%) !important;

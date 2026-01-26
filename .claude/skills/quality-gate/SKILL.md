@@ -1,6 +1,6 @@
 ---
 name: quality-gate
-description: 병렬 품질 검사 통합. SSG, Layer, Link, TypeCheck, Lint를 동시 실행하여 전체 품질 검증
+description: 병렬 품질 검사 통합. HTML, Layer, Link, TypeCheck, Lint를 동시 실행하여 전체 품질 검증
 ---
 
 # Quality Gate 스킬
@@ -29,7 +29,7 @@ pnpm quality
 
 | 검사        | 명령어                | 설명                 |
 | ----------- | --------------------- | -------------------- |
-| SSG Check   | `pnpm verify:ssg`     | SSG 규칙 위반 검출   |
+| SSR Check   | `pnpm verify:ssr`     | SSR 빌드 검증        |
 | Layer Check | `pnpm check:circular` | 순환 의존성 검출     |
 | TypeCheck   | `pnpm typecheck`      | TypeScript 타입 오류 |
 | Lint        | `pnpm lint`           | 코드 스타일 오류     |

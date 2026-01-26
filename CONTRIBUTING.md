@@ -24,13 +24,13 @@ pnpm dev:context     # → http://localhost:3003
 
 ### 1. SPA Mode Prohibited (SPA 모드 금지)
 
-> **이 프로젝트는 SSR과 SSG 모드만 사용합니다. SPA 모드는 절대 금지.**
+> **이 프로젝트는 SSR 모드만 사용합니다. SPA 모드는 절대 금지.**
 
 | App | Mode | Data Source |
 |:----|:-----|:------------|
 | Context | SSR + D1 | Cloudflare D1 |
-| Permissive | SSR | In-memory |
-| Roots | SSG | TypeScript |
+| Permissive | SSR | Cloudflare D1 |
+| Roots | SSR | Cloudflare D1 |
 
 | Prohibited | Why |
 |:-----------|:----|
@@ -38,11 +38,8 @@ pnpm dev:context     # → http://localhost:3003
 | Empty `<div id="root">` | 검색엔진 크롤링 실패 |
 
 ```typescript
-// Context, Permissive (SSR)
+// All apps (SSR)
 export default { ssr: true, ... }
-
-// Roots (SSG)
-export default { ssr: false, async prerender() { ... } }
 ```
 
 ### 2. No Hardcoding (for wrong reasons)

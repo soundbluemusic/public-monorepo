@@ -3,10 +3,10 @@ import { hydrateRoot } from 'react-dom/client';
 import { HydratedRouter } from 'react-router/dom';
 
 /**
- * Client-side hydration for React Router v7 SSG
+ * Client-side hydration for React Router v7 SSR
  *
- * Known issue: React Router v7 with SSG mode has hydration mismatches due to
- * script injection order differences between prerender and client. React 19
+ * Known issue: React Router v7 SSR can have hydration mismatches due to
+ * script injection order differences between server and client. React 19
  * recovers by creating new DOM elements, but old elements stay in DOM.
  *
  * Workaround: After hydration completes, remove the stale server-rendered
@@ -25,7 +25,7 @@ function App() {
 /**
  * Orphan DOM 감지 및 제거
  *
- * React Router v7 SSG hydration 실패 시 React가 새 DOM을 생성하면서
+ * React Router v7 SSR hydration 실패 시 React가 새 DOM을 생성하면서
  * 기존 서버 렌더링된 DOM이 고아 상태로 남는 버그에 대한 workaround.
  *
  * MutationObserver를 사용하여 DOM 변경을 감지하고,

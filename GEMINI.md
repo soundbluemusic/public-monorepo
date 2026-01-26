@@ -15,16 +15,15 @@
 
 | App | Mode | 데이터 소스 |
 |:----|:-----|:-----------|
-| Context | **SSR + D1** | Cloudflare D1 |
-| Permissive | SSR | In-memory |
-| Roots | SSG | TypeScript |
+| Context | SSR + D1 | Cloudflare D1 |
+| Permissive | SSR | Cloudflare D1 |
+| Roots | SSR | Cloudflare D1 |
 
 **금지 사항:**
 - SPA 모드 전환 금지 (클라이언트 사이드 렌더링만으로 콘텐츠 생성 금지)
 - 빈 `<div id="root"></div>` HTML 금지
 - `loader` 없는 동적 라우트 금지 (SEO 데이터 누락)
-- Context/Permissive에서 `ssr: false` 설정 금지
-- Roots에서 `ssr: true` 설정 금지 (SSG 유지)
+- 모든 앱에서 `ssr: false` 설정 금지
 
 ### 2. 하드코딩 금지
 - 테스트 통과용 하드코딩 값 금지
@@ -104,10 +103,9 @@ import { useSearch } from '@soundblue/search/react';      // L2
 ### 금지
 | 위치 | 금지 액션 |
 |------|----------|
-| `react-router.config.ts` | `ssr: true` |
-| `*.browser.ts` | SSG 빌드 시점 실행 코드 |
+| `vite.config.ts` | `ssr: false` 설정 |
+| `*.browser.ts` | 서버 빌드 시점 실행 코드 |
 | `*.noop.ts` | 실제 로직 (빈 구현만) |
-| `entry.client.tsx` | orphan DOM 정리 로직 삭제 |
 
 ---
 

@@ -1,7 +1,7 @@
 /**
  * User Data Store - Zustand + localStorage
  *
- * SSG 호환: 서버에서는 빈 상태, 클라이언트에서 hydration 후 로드
+ * SSR 호환: 서버에서는 빈 상태, 클라이언트에서 hydration 후 로드
  * dialogue 앱의 chat-store.ts 패턴을 따름
  */
 import { create } from 'zustand';
@@ -271,7 +271,7 @@ export const useUserDataStore = create<UserDataState & UserDataActions>()(
 
 /**
  * Hydration 상태 확인
- * SSG 페이지에서 로딩 상태 렌더링 방지용
+ * SSR 페이지에서 로딩 상태 렌더링 방지용
  */
 export const useIsHydrated = () => useUserDataStore((s) => s.isHydrated);
 

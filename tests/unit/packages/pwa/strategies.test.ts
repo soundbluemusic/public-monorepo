@@ -7,9 +7,11 @@ import {
   API_STRATEGY,
   BUNDLE_STRATEGY,
   type CacheStrategy,
-  createSSGServiceWorkerConfig,
+  createDefaultServiceWorkerConfig,
+  createSSGServiceWorkerConfig, // deprecated alias
   DATA_STRATEGY,
-  getSSGCachingRules,
+  getDefaultCachingRules,
+  getSSGCachingRules, // deprecated alias
   PAGE_STRATEGY,
   type RuntimeCaching,
   STATIC_ASSETS_STRATEGY,
@@ -144,14 +146,14 @@ describe('@soundblue/pwa/service-worker', () => {
     });
   });
 
-  describe('getSSGCachingRules', () => {
+  describe('getDefaultCachingRules', () => {
     it('should return array of caching rules', () => {
-      const rules = getSSGCachingRules();
+      const rules = getDefaultCachingRules();
       expect(Array.isArray(rules)).toBe(true);
     });
 
-    it('should include all SSG-relevant strategies', () => {
-      const rules = getSSGCachingRules();
+    it('should include all relevant strategies', () => {
+      const rules = getDefaultCachingRules();
 
       expect(rules).toContain(STATIC_ASSETS_STRATEGY);
       expect(rules).toContain(BUNDLE_STRATEGY);
@@ -160,48 +162,56 @@ describe('@soundblue/pwa/service-worker', () => {
     });
 
     it('should not include API strategy by default', () => {
-      const rules = getSSGCachingRules();
+      const rules = getDefaultCachingRules();
       expect(rules).not.toContain(API_STRATEGY);
     });
 
     it('should have 4 rules', () => {
-      const rules = getSSGCachingRules();
+      const rules = getDefaultCachingRules();
       expect(rules).toHaveLength(4);
+    });
+
+    it('should have deprecated alias getSSGCachingRules', () => {
+      expect(getSSGCachingRules).toBe(getDefaultCachingRules);
     });
   });
 
-  describe('createSSGServiceWorkerConfig', () => {
+  describe('createDefaultServiceWorkerConfig', () => {
     it('should create config with correct globDirectory', () => {
-      const config = createSSGServiceWorkerConfig('./build/client', './build/sw.js');
+      const config = createDefaultServiceWorkerConfig('./build/client', './build/sw.js');
       expect(config.globDirectory).toBe('./build/client');
     });
 
     it('should create config with correct swDest', () => {
-      const config = createSSGServiceWorkerConfig('./build/client', './build/sw.js');
+      const config = createDefaultServiceWorkerConfig('./build/client', './build/sw.js');
       expect(config.swDest).toBe('./build/sw.js');
     });
 
     it('should include comprehensive glob patterns', () => {
-      const config = createSSGServiceWorkerConfig('./dist', './dist/sw.js');
+      const config = createDefaultServiceWorkerConfig('./dist', './dist/sw.js');
       expect(config.globPatterns).toContain(
         '**/*.{html,js,css,png,jpg,jpeg,svg,gif,webp,ico,woff2,data,json}',
       );
     });
 
     it('should include runtime caching rules', () => {
-      const config = createSSGServiceWorkerConfig('./dist', './dist/sw.js');
+      const config = createDefaultServiceWorkerConfig('./dist', './dist/sw.js');
       expect(config.runtimeCaching).toBeDefined();
-      expect(config.runtimeCaching).toEqual(getSSGCachingRules());
+      expect(config.runtimeCaching).toEqual(getDefaultCachingRules());
     });
 
     it('should enable skipWaiting', () => {
-      const config = createSSGServiceWorkerConfig('./dist', './dist/sw.js');
+      const config = createDefaultServiceWorkerConfig('./dist', './dist/sw.js');
       expect(config.skipWaiting).toBe(true);
     });
 
     it('should enable clientsClaim', () => {
-      const config = createSSGServiceWorkerConfig('./dist', './dist/sw.js');
+      const config = createDefaultServiceWorkerConfig('./dist', './dist/sw.js');
       expect(config.clientsClaim).toBe(true);
+    });
+
+    it('should have deprecated alias createSSGServiceWorkerConfig', () => {
+      expect(createSSGServiceWorkerConfig).toBe(createDefaultServiceWorkerConfig);
     });
   });
 

@@ -1,14 +1,13 @@
 /**
- * @fileoverview Download Page Handler Script for SSG Apps
+ * @fileoverview Download Page Handler Script for SSR Apps
  * @environment universal
  *
  * This script handles download and preview button clicks via event delegation,
- * ensuring functionality works even when React hydration fails in SSG mode.
+ * ensuring functionality works even when React hydration fails.
  *
  * @remarks
- * React Router v7 SSG mode has known hydration issues where React fibers
- * never attach to DOM elements. This script provides a fallback that
- * works independently of React.
+ * React hydration can have issues where React fibers never attach to DOM elements.
+ * This script provides a fallback that works independently of React.
  */
 
 /**

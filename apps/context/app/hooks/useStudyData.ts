@@ -2,7 +2,7 @@
  * @fileoverview 학습 데이터 로딩을 위한 커스텀 훅
  *
  * Zustand store (useUserDataStore)를 기반으로 학습 데이터를 제공합니다.
- * SSG 호환: isHydrated 상태를 통해 로딩 상태를 관리합니다.
+ * SSR 호환: isHydrated 상태를 통해 로딩 상태를 관리합니다.
  *
  * - _index.tsx: overallProgress, categoryProgress
  * - browse.tsx: studiedIds, favoriteIds, overallProgress, todayStudied

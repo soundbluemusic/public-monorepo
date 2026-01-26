@@ -31,7 +31,7 @@ export function useLibraryFilters({ libraries: libs }: UseLibraryFiltersOptions)
   const searchParams = useSearch({ strict: false }) as SearchParams;
   const navigate = useNavigate();
 
-  // SSG Hydration 안전: 기본값으로 초기화 (클라이언트에서 useEffect로 URL 동기화)
+  // SSR Hydration 안전: 기본값으로 초기화 (클라이언트에서 useEffect로 URL 동기화)
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState<CategoryFilter>('All');
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
