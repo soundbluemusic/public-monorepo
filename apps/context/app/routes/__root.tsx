@@ -5,6 +5,7 @@ import {
   DARK_MODE_INIT_SCRIPT,
   DARK_MODE_TOGGLE_SCRIPT,
   MOBILE_SIDEBAR_TOGGLE_SCRIPT,
+  SIDEBAR_COLLAPSE_INIT_SCRIPT,
   SIDEBAR_COLLAPSE_SCRIPT,
 } from '@soundblue/ui/utils';
 import { createRootRoute, HeadContent, Scripts, useRouterState } from '@tanstack/react-router';
@@ -100,6 +101,11 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <script
           // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for dark mode flash prevention
           dangerouslySetInnerHTML={{ __html: DARK_MODE_INIT_SCRIPT }}
+        />
+        {/* Sidebar collapsed init - applies sidebar-collapsed class before React hydrates */}
+        <script
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for sidebar state flash prevention
+          dangerouslySetInnerHTML={{ __html: SIDEBAR_COLLAPSE_INIT_SCRIPT }}
         />
         <HeadContent />
         <script

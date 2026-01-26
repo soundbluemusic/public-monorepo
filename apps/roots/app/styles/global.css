@@ -230,4 +230,24 @@ input:focus-visible {
   .sidebar-collapsed aside[aria-label] .shrink-0.p-4 {
     padding: 0.5rem !important;
   }
+
+  /* Hide children section when collapsed */
+  .sidebar-collapsed aside[aria-label] .sidebar-children-section {
+    display: none !important;
+  }
+
+  /* Sync main content padding with sidebar collapsed state */
+  .sidebar-collapsed main#main-content {
+    padding-left: calc(var(--sidebar-collapsed-width) + 1rem) !important;
+  }
+
+  /* Sync header padding with sidebar collapsed state */
+  .sidebar-collapsed header.fixed > div {
+    padding-left: calc(var(--sidebar-collapsed-width) + 1rem) !important;
+  }
+
+  /* Sync footer padding with sidebar collapsed state */
+  .sidebar-collapsed footer > div {
+    padding-left: calc(var(--sidebar-collapsed-width) + 1rem) !important;
+  }
 }

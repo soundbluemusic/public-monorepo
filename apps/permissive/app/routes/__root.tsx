@@ -5,6 +5,8 @@ import {
   DARK_MODE_INIT_SCRIPT,
   DARK_MODE_TOGGLE_SCRIPT,
   MOBILE_SIDEBAR_TOGGLE_SCRIPT,
+  SIDEBAR_COLLAPSE_INIT_SCRIPT,
+  SIDEBAR_COLLAPSE_SCRIPT,
 } from '@soundblue/ui/utils';
 import { createRootRoute, HeadContent, Outlet, Scripts } from '@tanstack/react-router';
 import { I18nProvider } from '../i18n';
@@ -86,6 +88,11 @@ function RootComponent() {
           // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for dark mode flash prevention
           dangerouslySetInnerHTML={{ __html: DARK_MODE_INIT_SCRIPT }}
         />
+        {/* Sidebar collapsed init - applies sidebar-collapsed class before React hydrates */}
+        <script
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for sidebar state flash prevention
+          dangerouslySetInnerHTML={{ __html: SIDEBAR_COLLAPSE_INIT_SCRIPT }}
+        />
         <HeadContent />
         <script
           type="application/ld+json"
@@ -113,6 +120,11 @@ function RootComponent() {
         <script
           // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for mobile sidebar toggle
           dangerouslySetInnerHTML={{ __html: MOBILE_SIDEBAR_TOGGLE_SCRIPT }}
+        />
+        {/* Sidebar collapse script - handles clicks via event delegation */}
+        <script
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for sidebar collapse
+          dangerouslySetInnerHTML={{ __html: SIDEBAR_COLLAPSE_SCRIPT }}
         />
       </body>
     </html>

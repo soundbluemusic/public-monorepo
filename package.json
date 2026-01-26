@@ -35,6 +35,7 @@
     "check:size": "size-limit",
     "check:links": "tsx scripts/check-links.ts",
     "check:links:prod": "./scripts/check-links-prod.sh",
+    "check:deprecated": "tsx scripts/check-deprecated-imports.ts",
     "quality": "tsx scripts/quality-gate.ts",
     "quality:quick": "tsx scripts/quality-gate.ts --quick",
     "lhci": "lhci autorun",
