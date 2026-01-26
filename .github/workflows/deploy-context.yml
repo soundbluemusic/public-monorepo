@@ -54,3 +54,64 @@ jobs:
             -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
             -H "Content-Type: application/json" \
             --data '{"purge_everything":true}'
+
+      - name: Verify static assets are accessible
+        run: |
+          echo "⏳ Waiting 5s for deployment propagation..."
+          sleep 5
+
+          # Extract CSS filename from production HTML
+          CSS_FILE=$(curl -sL https://context.soundbluemusic.com/ | grep -oE 'main-[A-Za-z0-9_-]+\.css' | head -1)
+          JS_FILE=$(curl -sL https://context.soundbluemusic.com/ | grep -oE 'main-[A-Za-z0-9_-]+\.js' | head -1)
+
+          echo "📦 Checking CSS: $CSS_FILE"
+          echo "📦 Checking JS: $JS_FILE"
+
+          FAILED=0
+
+          # Check CSS
+          CSS_STATUS=$(curl -sI "https://context.soundbluemusic.com/assets/$CSS_FILE" | head -1 | grep -oE '[0-9]{3}')
+          if [ "$CSS_STATUS" != "200" ]; then
+            echo "❌ CSS returned HTTP $CSS_STATUS (expected 200)"
+            FAILED=1
+          else
+            echo "✅ CSS: HTTP 200"
+          fi
+
+          # Check JS
+          JS_STATUS=$(curl -sI "https://context.soundbluemusic.com/assets/$JS_FILE" | head -1 | grep -oE '[0-9]{3}')
+          if [ "$JS_STATUS" != "200" ]; then
+            echo "❌ JS returned HTTP $JS_STATUS (expected 200)"
+            FAILED=1
+          else
+            echo "✅ JS: HTTP 200"
+          fi
+
+          # Check favicon
+          FAV_STATUS=$(curl -sI "https://context.soundbluemusic.com/favicon.ico" | head -1 | grep -oE '[0-9]{3}')
+          if [ "$FAV_STATUS" != "200" ]; then
+            echo "❌ favicon.ico returned HTTP $FAV_STATUS (expected 200)"
+            FAILED=1
+          else
+            echo "✅ favicon.ico: HTTP 200"
+          fi
+
+          # Check manifest.json
+          MANIFEST_STATUS=$(curl -sI "https://context.soundbluemusic.com/manifest.json" | head -1 | grep -oE '[0-9]{3}')
+          if [ "$MANIFEST_STATUS" != "200" ]; then
+            echo "❌ manifest.json returned HTTP $MANIFEST_STATUS (expected 200)"
+            FAILED=1
+          else
+            echo "✅ manifest.json: HTTP 200"
+          fi
+
+          if [ "$FAILED" -eq 1 ]; then
+            echo ""
+            echo "🚨 DEPLOYMENT VERIFICATION FAILED!"
+            echo "   Static assets are not accessible. UI will be broken."
+            echo "   Check inject-polyfill.mjs and wrangler configuration."
+            exit 1
+          fi
+
+          echo ""
+          echo "✨ All static assets verified successfully!"

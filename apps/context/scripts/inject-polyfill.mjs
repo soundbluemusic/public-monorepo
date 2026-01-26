@@ -121,21 +121,32 @@ if (!content.includes('handleApiRoute')) {
 
 // Find original handler name for wrapping
 function findOriginalHandlerName(content) {
-  // Vite 8: Look for handler in export patterns
-  const exportMatch = content.match(/export\{[^}]*?(\w+) as G[,}]/);
-  if (exportMatch) return exportMatch[1];
+  // Priority 1: Find the default export variable name directly
+  // Pattern: export{...,xxx as default} or export{xxx as default,...}
+  const defaultExportMatch = content.match(/export\{[^}]*?(\w+) as default[,}]/);
+  if (defaultExportMatch) {
+    console.log(`ℹ️  Found default export variable: ${defaultExportMatch[1]}`);
+    return defaultExportMatch[1];
+  }
 
-  const fallbackMatch = content.match(/export\{[^}]*?(\w+) as F[,}]/);
-  if (fallbackMatch) return fallbackMatch[1];
+  // Priority 2: Look for createServerEntry pattern (pl function result)
+  // Pattern: var gl=pl({fetch:...})
+  const serverEntryMatch = content.match(/var\s+(\w+)\s*=\s*pl\s*\(/);
+  if (serverEntryMatch) {
+    console.log(`ℹ️  Found server entry variable: ${serverEntryMatch[1]}`);
+    return serverEntryMatch[1];
+  }
 
-  // Look for common handler patterns
-  const patterns = ['ad', 'gd', 'Mx', 'w'];
+  // Fallback: common handler patterns
+  const patterns = ['gl', 'ad', 'gd', 'Mx', 'w'];
   for (const p of patterns) {
-    if (content.includes(`const ${p}={`) || content.includes(`var ${p}={`)) {
+    if (content.includes(`var ${p}=pl(`) || content.includes(`const ${p}=pl(`)) {
       return p;
     }
   }
-  return 'ad';
+
+  console.warn('⚠️  Could not find handler variable, using fallback "gl"');
+  return 'gl';
 }
 
 const originalHandlerName = findOriginalHandlerName(content);
@@ -190,16 +201,30 @@ if (!content.includes('__wrappedHandler__')) {
   }
 }
 
-// Add default export if not present
-const hasDefaultExport = content.includes('export default') || content.includes('as default');
-if (!hasDefaultExport) {
+// Replace or add default export with __wrappedHandler__
+const defaultExportMatch = content.match(/(\w+) as default/);
+if (defaultExportMatch) {
+  const originalDefault = defaultExportMatch[1];
+  content = content.replace(
+    new RegExp(`${originalDefault} as default`, 'g'),
+    '__wrappedHandler__ as default'
+  );
+  console.log(`✅ Replaced default export: ${originalDefault} → __wrappedHandler__`);
+} else if (!content.includes('export default')) {
+  // No default export at all, add one
   content = content.replace(
     /export\{([^}]+)\}/,
     'export{$1};export default __wrappedHandler__;'
   );
   console.log('✅ Added default export for wrapped handler');
-} else {
-  console.log('ℹ️  Default export already exists, skipping');
+}
+
+// Verify that __wrappedHandler__ is now the default export
+if (!content.includes('__wrappedHandler__ as default') && !content.includes('export default __wrappedHandler__')) {
+  console.error('❌ FATAL: Failed to set __wrappedHandler__ as default export!');
+  console.error('   This will cause all static assets (CSS, JS, images) to return 404.');
+  console.error('   The build cannot proceed.');
+  process.exit(1);
 }
 
 fs.writeFileSync(targetPath, content);
