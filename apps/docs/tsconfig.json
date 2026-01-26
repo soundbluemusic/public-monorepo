@@ -10,11 +10,10 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./app/*"],
-      "@/content/*": ["./content/*"]
+      "~/*": ["./app/*"]
     },
-    "types": ["vite/client", "@types/mdx"]
+    "types": ["vite/client"]
   },
-  "include": ["app/**/*", "content/**/*", "vite.config.ts", "react-router.config.ts", "**/*.mdx"],
-  "exclude": ["node_modules", "build"]
+  "include": ["app/**/*", "vite.config.ts"],
+  "exclude": ["node_modules", "dist"]
 }

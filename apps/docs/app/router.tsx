@@ -12,13 +12,9 @@ export function createRouter() {
   return router;
 }
 
-let router: ReturnType<typeof createRouter> | undefined;
-
-export function getRouter() {
-  if (!router) {
-    router = createRouter();
-  }
-  return router;
+// TanStack Start SSR expects getRouter export
+export async function getRouter() {
+  return createRouter();
 }
 
 declare module '@tanstack/react-router' {
