@@ -8,6 +8,38 @@ export default defineConfig({
     starlight({
       title: 'SoundBlue Docs',
       description: 'Documentation for Context, Permissive, and Roots applications',
+      head: [
+        // Open Graph image
+        {
+          tag: 'meta',
+          attrs: {
+            property: 'og:image',
+            content: 'https://soundbluemusic.github.io/public-monorepo/og-image.png',
+          },
+        },
+        {
+          tag: 'meta',
+          attrs: {
+            property: 'og:image:width',
+            content: '1200',
+          },
+        },
+        {
+          tag: 'meta',
+          attrs: {
+            property: 'og:image:height',
+            content: '630',
+          },
+        },
+        // Twitter image
+        {
+          tag: 'meta',
+          attrs: {
+            name: 'twitter:image',
+            content: 'https://soundbluemusic.github.io/public-monorepo/og-image.png',
+          },
+        },
+      ],
       logo: {
         src: './src/assets/logo.svg',
         replacesTitle: false,
