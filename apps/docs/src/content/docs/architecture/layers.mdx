@@ -1,0 +1,91 @@
+---
+title: Layer System
+description: Understanding the package layer system and dependency rules.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+## Layer Diagram
+
+```
+Layer 3 (Apps + UI)     ┌─────────────────────────────────────────────┐
+                        │  apps/context, apps/roots, apps/permissive  │
+                        │  @soundblue/ui, @soundblue/features         │
+                        └─────────────────────────────────────────────┘
+                                            │
+                                            ▼
+Layer 2 (Domain)        ┌─────────────────────────────────────────────┐
+                        │  @soundblue/i18n     @soundblue/search      │
+                        │  @soundblue/seo      @soundblue/pwa         │
+                        └─────────────────────────────────────────────┘
+                                            │
+                                            ▼
+Layer 1 (Data)          ┌─────────────────────────────────────────────┐
+                        │  @soundblue/data     @soundblue/platform    │
+                        └─────────────────────────────────────────────┘
+                                            │
+                                            ▼
+Layer 0 (Foundation)    ┌─────────────────────────────────────────────┐
+                        │  @soundblue/core     @soundblue/config      │
+                        └─────────────────────────────────────────────┘
+```
+
+## Layer Rules
+
+<Aside type="caution" title="Critical Rules">
+  1. **Only depend on lower layers** — Layer N can only import from Layer N-1 or below
+  2. **No circular dependencies** — No mutual imports between same-layer packages
+</Aside>
+
+### Valid Imports
+
+```typescript
+// ✅ OK - Higher layer importing from lower layer
+import { validateId } from '@soundblue/core/validation';  // L0
+import { storage } from '@soundblue/platform/storage';    // L1
+import { useSearch } from '@soundblue/search/react';      // L2
+```
+
+### Invalid Imports
+
+```typescript
+// ❌ FORBIDDEN - Lower layer importing from higher layer
+// In @soundblue/core (L0):
+import { SearchEngine } from '@soundblue/search';  // L2 → L0 ❌
+
+// ❌ FORBIDDEN - Cross-layer import in wrong direction
+// In @soundblue/i18n (L2):
+import { Button } from '@soundblue/ui/components'; // L3 → L2 ❌
+```
+
+## Dependency Graph
+
+```
+apps/context ─────────┬─── @soundblue/ui
+apps/roots ───────────┤    @soundblue/features
+apps/permissive ──────┘    @soundblue/pwa
+                           │
+                           ▼
+                      @soundblue/i18n
+                      @soundblue/search
+                      @soundblue/seo
+                           │
+                           ▼
+                      @soundblue/data
+                      @soundblue/platform
+                           │
+                           ▼
+                      @soundblue/core
+                      @soundblue/config
+```
+
+## Checking Layer Rules
+
+Use the `/layer-check` skill to verify layer rules:
+
+```bash
+# In Claude Code
+/layer-check
+```
+
+This will analyze all imports and report any violations.

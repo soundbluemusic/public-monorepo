@@ -1,0 +1,135 @@
+---
+title: Development Setup
+description: Setting up your development environment for contributing.
+---
+
+import { Tabs, TabItem, Steps, Aside } from '@astrojs/starlight/components';
+
+## Prerequisites
+
+| Tool | Version | Check |
+|:-----|:--------|:------|
+| Node.js | ≥ 20 | `node -v` |
+| pnpm | 10.11.0 | `pnpm -v` |
+| Git | Latest | `git --version` |
+
+## Setup
+
+<Steps>
+
+1. **Install pnpm** (if not installed)
+   ```bash
+   corepack enable
+   corepack prepare pnpm@10.11.0 --activate
+   ```
+
+2. **Clone and install**
+   ```bash
+   git clone https://github.com/soundbluemusic/public-monorepo.git
+   cd public-monorepo
+   pnpm install
+   ```
+
+3. **Run development server**
+   <Tabs>
+     <TabItem label="Context">
+       ```bash
+       pnpm dev:context
+       ```
+     </TabItem>
+     <TabItem label="Permissive">
+       ```bash
+       pnpm dev:permissive
+       ```
+     </TabItem>
+     <TabItem label="Roots">
+       ```bash
+       pnpm dev:roots
+       ```
+     </TabItem>
+   </Tabs>
+
+</Steps>
+
+## IDE Setup
+
+### VS Code
+
+Recommended extensions:
+
+- **Biome** — Linting and formatting
+- **Tailwind CSS IntelliSense** — CSS autocomplete
+- **TypeScript** — Type checking
+
+### Settings
+
+The project includes `.vscode/settings.json` with recommended settings.
+
+## Project Scripts
+
+### Development
+
+| Command | Description |
+|:--------|:------------|
+| `pnpm dev:context` | Run Context at http://localhost:3003 |
+| `pnpm dev:permissive` | Run Permissive at http://localhost:3004 |
+| `pnpm dev:roots` | Run Roots at http://localhost:3005 |
+
+### Building
+
+| Command | Description |
+|:--------|:------------|
+| `pnpm build` | Build all apps |
+| `pnpm build:context` | Build Context only |
+| `pnpm build:permissive` | Build Permissive only |
+| `pnpm build:roots` | Build Roots only |
+
+### Quality
+
+| Command | Description |
+|:--------|:------------|
+| `pnpm lint` | Check with Biome |
+| `pnpm format` | Format with Biome |
+| `pnpm typecheck` | TypeScript check |
+| `pnpm test` | Run Vitest |
+| `pnpm test:e2e` | Run Playwright |
+
+## Turborepo
+
+The project uses Turborepo for build orchestration:
+
+- **Caching** — Local cache in `.turbo/`
+- **Parallelization** — Concurrent builds
+- **Dependencies** — Automatic build order
+
+<Aside type="caution" title="No Remote Cache">
+  Remote cache is disabled for cost optimization.
+  Do NOT enable `remoteCache.enabled: true` in `turbo.json`.
+</Aside>
+
+## Database (Context App)
+
+Context uses Cloudflare D1. For local development:
+
+```bash
+cd apps/context
+pnpm wrangler d1 execute context-db --local --command "SELECT COUNT(*) FROM entries"
+```
+
+## Troubleshooting
+
+### Build errors
+
+```bash
+# Clear caches and rebuild
+rm -rf node_modules .turbo
+pnpm install
+pnpm build
+```
+
+### Type errors
+
+```bash
+# Regenerate route types
+pnpm typecheck
+```

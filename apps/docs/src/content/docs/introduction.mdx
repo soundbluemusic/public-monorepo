@@ -1,0 +1,42 @@
+---
+title: Introduction
+description: Overview of the SoundBlue public monorepo project.
+---
+
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+## What is this?
+
+This is a monorepo containing three learning applications, all hosted on Cloudflare Workers:
+
+- **Context** — Korean dictionary for learners
+- **Permissive** — Web development resources
+- **Roots** — Math documentation
+
+All apps use **Server-Side Rendering (SSR)** for SEO optimization. No SPA mode.
+
+## Tech Stack
+
+| Category | Technology |
+|:---------|:-----------|
+| Framework | React 19 + TanStack Start |
+| Language | TypeScript 5.x |
+| Styling | Tailwind CSS v4 |
+| Database | Cloudflare D1 |
+| Search | MiniSearch |
+| i18n | Paraglide |
+| Hosting | Cloudflare Workers |
+| Build | Vite + Turborepo |
+
+## Quick Links
+
+<CardGrid>
+  <LinkCard title="Quick Start" href="/public-monorepo/quick-start/" description="Get up and running in minutes" />
+  <LinkCard title="Architecture" href="/public-monorepo/architecture/overview/" description="Learn about the project structure" />
+  <LinkCard title="Apps" href="/public-monorepo/apps/context/" description="Explore the three applications" />
+  <LinkCard title="Contributing" href="/public-monorepo/contributing/guidelines/" description="How to contribute" />
+</CardGrid>
+
+## License
+
+This project is licensed under **Apache License 2.0** — free to use, modify, and distribute.

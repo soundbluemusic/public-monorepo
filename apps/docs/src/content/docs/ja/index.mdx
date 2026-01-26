@@ -1,0 +1,56 @@
+---
+title: SoundBlue ドキュメント
+description: Context、Permissive、Rootsアプリの完全なドキュメント。
+template: splash
+hero:
+  tagline: 学習者のための3つのアプリ - 韓国語辞書、ウェブ開発リソース、数学ドキュメント
+  image:
+    file: ../../../assets/logo.svg
+  actions:
+    - text: はじめに
+      link: /public-monorepo/ja/introduction/
+      icon: right-arrow
+      variant: primary
+    - text: GitHubで見る
+      link: https://github.com/soundbluemusic/public-monorepo
+      icon: external
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## アプリ
+
+<CardGrid stagger>
+  <Card title="Context" icon="open-book">
+    学習者のための韓国語辞書 - **16,394項目**と52カテゴリ。
+
+    [Contextを訪問 →](https://context.soundbluemusic.com)
+  </Card>
+  <Card title="Permissive" icon="setting">
+    無料ウェブ開発リソース - **88ライブラリ**と56 Web API。
+
+    [Permissiveを訪問 →](https://permissive.soundbluemusic.com)
+  </Card>
+  <Card title="Roots" icon="document">
+    学習者のための数学ドキュメント - 18分野にわたる**438概念**。
+
+    [Rootsを訪問 →](https://roots.soundbluemusic.com)
+  </Card>
+</CardGrid>
+
+## 特徴
+
+<CardGrid>
+  <Card title="SSR + D1" icon="rocket">
+    すべてのアプリは最適なSEOのためにCloudflare D1データベースとサーバーサイドレンダリングを使用。
+  </Card>
+  <Card title="オープンソース" icon="github">
+    Apache 2.0ライセンスで完全にオープンソース。GitHubで貢献しよう！
+  </Card>
+  <Card title="多言語" icon="translate">
+    すべてのアプリで英語、韓国語、日本語をサポート。
+  </Card>
+  <Card title="PWA対応" icon="laptop">
+    オフラインサポートとプログレッシブウェブアプリとしてインストール可能。
+  </Card>
+</CardGrid>

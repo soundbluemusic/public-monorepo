@@ -1,0 +1,84 @@
+---
+title: "@soundblue/core"
+description: Foundation package with pure functions, types, and validation.
+---
+
+import { Badge } from '@astrojs/starlight/components';
+
+<Badge text="Layer 0" variant="note" />
+
+## Overview
+
+The core package provides foundational utilities used across all apps. It has **no React dependency** and contains only pure functions.
+
+## Installation
+
+```bash
+pnpm add @soundblue/core
+```
+
+## Exports
+
+### Validation
+
+```typescript
+import {
+  LIMITS,
+  validateId,
+  isValidLanguage,
+  sanitizeInput
+} from '@soundblue/core/validation';
+
+// Validate entry ID
+const isValid = validateId('hello-world'); // true
+const isInvalid = validateId(''); // false
+
+// Check language code
+isValidLanguage('ko'); // true
+isValidLanguage('xx'); // false
+
+// Sanitize user input
+const safe = sanitizeInput('<script>alert(1)</script>');
+```
+
+### Utilities
+
+```typescript
+import {
+  chunkArray,
+  debounce,
+  throttle,
+  cn
+} from '@soundblue/core/utils';
+
+// Chunk array
+const chunks = chunkArray([1, 2, 3, 4, 5], 2);
+// [[1, 2], [3, 4], [5]]
+
+// Debounce function
+const debouncedSearch = debounce(search, 300);
+
+// Throttle function
+const throttledScroll = throttle(onScroll, 100);
+
+// Class names utility (like clsx)
+const className = cn('base', isActive && 'active', { 'dark': isDark });
+```
+
+### Types
+
+```typescript
+import type {
+  Language,
+  Theme,
+  DeepPartial,
+  Nullable
+} from '@soundblue/core/types';
+
+const lang: Language = 'ko'; // 'en' | 'ko' | 'ja'
+const theme: Theme = 'dark'; // 'light' | 'dark' | 'system'
+```
+
+## Source
+
+[`packages/core/`](https://github.com/soundbluemusic/public-monorepo/tree/main/packages/core)

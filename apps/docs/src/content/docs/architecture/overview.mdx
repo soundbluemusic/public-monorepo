@@ -1,0 +1,75 @@
+---
+title: Architecture Overview
+description: High-level architecture of the SoundBlue monorepo.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+## SSR Architecture
+
+All apps use **Server-Side Rendering (SSR)** with Cloudflare Workers.
+
+<Aside type="caution" title="No SPA Mode">
+  This project uses SSR only. SPA returns empty HTML, breaking SEO.
+  All pages must render complete HTML on the server.
+</Aside>
+
+## Deployment Modes
+
+| App | Mode | Data Source | Platform |
+|:----|:-----|:-----------|:---------|
+| **Context** | SSR | Cloudflare D1 | Workers |
+| **Permissive** | SSR | In-memory | Workers |
+| **Roots** | SSR | TypeScript | Workers |
+
+## SSR Flow
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  Runtime (Cloudflare Workers)                                    │
+│                                                                  │
+│  ┌──────────┐    ┌──────────┐    ┌──────────┐                  │
+│  │  Client  │ → │ Workers  │ → │    D1     │                  │
+│  │ Request  │    │  (SSR)   │    │ Database  │                  │
+│  └──────────┘    └──────────┘    └──────────┘                  │
+│       ↑                               │                         │
+│       └───────────────────────────────┘                         │
+│              SSR HTML Response                                   │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+## Key Technologies
+
+### TanStack Start
+
+- File-based routing
+- Server functions with `createServerFn`
+- SSR with hydration
+
+### Cloudflare D1
+
+- SQLite-based serverless database
+- Used by Context app for 16,394 entries
+- Dynamic sitemap generation
+
+### Vite 8
+
+- Fast development server
+- Optimized production builds
+- Output to `dist/` directory
+
+## Build Output
+
+```
+apps/context/dist/
+├── server/
+│   └── index.js          # Workers entry (all-in-one bundle)
+└── client/
+    ├── assets/           # Static assets (CSS, JS, images)
+    └── [prerendered]/    # Pre-rendered pages
+```
+
+## Next Steps
+
+- [Package Layers](/public-monorepo/architecture/layers/) — Learn about the layer system
+- [Packages](/public-monorepo/architecture/packages/) — Explore shared packages

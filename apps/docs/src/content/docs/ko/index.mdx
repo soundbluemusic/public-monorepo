@@ -1,0 +1,56 @@
+---
+title: SoundBlue 문서
+description: Context, Permissive, Roots 앱에 대한 완전한 문서.
+template: splash
+hero:
+  tagline: 학습자를 위한 세 가지 앱 - 한국어 사전, 웹 개발 리소스, 수학 문서
+  image:
+    file: ../../../assets/logo.svg
+  actions:
+    - text: 시작하기
+      link: /public-monorepo/ko/introduction/
+      icon: right-arrow
+      variant: primary
+    - text: GitHub에서 보기
+      link: https://github.com/soundbluemusic/public-monorepo
+      icon: external
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## 앱
+
+<CardGrid stagger>
+  <Card title="Context" icon="open-book">
+    학습자를 위한 한국어 사전 - **16,394개 항목**과 52개 카테고리.
+
+    [Context 방문하기 →](https://context.soundbluemusic.com)
+  </Card>
+  <Card title="Permissive" icon="setting">
+    무료 웹 개발 리소스 - **88개 라이브러리**와 56개 Web API.
+
+    [Permissive 방문하기 →](https://permissive.soundbluemusic.com)
+  </Card>
+  <Card title="Roots" icon="document">
+    학습자를 위한 수학 문서 - 18개 분야의 **438개 개념**.
+
+    [Roots 방문하기 →](https://roots.soundbluemusic.com)
+  </Card>
+</CardGrid>
+
+## 특징
+
+<CardGrid>
+  <Card title="SSR + D1" icon="rocket">
+    모든 앱은 최적의 SEO를 위해 Cloudflare D1 데이터베이스와 서버 사이드 렌더링을 사용합니다.
+  </Card>
+  <Card title="오픈 소스" icon="github">
+    Apache 2.0 라이선스로 완전한 오픈 소스입니다. GitHub에서 기여하세요!
+  </Card>
+  <Card title="다국어" icon="translate">
+    모든 앱에서 영어, 한국어, 일본어를 지원합니다.
+  </Card>
+  <Card title="PWA 지원" icon="laptop">
+    오프라인 지원 및 프로그레시브 웹 앱으로 설치 가능합니다.
+  </Card>
+</CardGrid>

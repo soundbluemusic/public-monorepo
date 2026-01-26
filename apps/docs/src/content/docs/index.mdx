@@ -1,0 +1,56 @@
+---
+title: SoundBlue Documentation
+description: Complete documentation for Context, Permissive, and Roots applications.
+template: splash
+hero:
+  tagline: Three apps for learners - Korean dictionary, web dev resources, and math documentation.
+  image:
+    file: ../../assets/logo.svg
+  actions:
+    - text: Get Started
+      link: /public-monorepo/introduction/
+      icon: right-arrow
+      variant: primary
+    - text: View on GitHub
+      link: https://github.com/soundbluemusic/public-monorepo
+      icon: external
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Apps
+
+<CardGrid stagger>
+  <Card title="Context" icon="open-book">
+    Korean dictionary for learners with **16,394 entries** and 52 categories.
+
+    [Visit Context →](https://context.soundbluemusic.com)
+  </Card>
+  <Card title="Permissive" icon="setting">
+    Free web development resources - **88 libraries** and 56 Web APIs.
+
+    [Visit Permissive →](https://permissive.soundbluemusic.com)
+  </Card>
+  <Card title="Roots" icon="document">
+    Math documentation for learners - **438 concepts** across 18 fields.
+
+    [Visit Roots →](https://roots.soundbluemusic.com)
+  </Card>
+</CardGrid>
+
+## Features
+
+<CardGrid>
+  <Card title="SSR + D1" icon="rocket">
+    All apps use Server-Side Rendering with Cloudflare D1 database for optimal SEO.
+  </Card>
+  <Card title="Open Source" icon="github">
+    Fully open source under Apache 2.0 license. Contribute on GitHub!
+  </Card>
+  <Card title="Multilingual" icon="translate">
+    Support for English, Korean, and Japanese across all applications.
+  </Card>
+  <Card title="PWA Ready" icon="laptop">
+    Offline support and installable as Progressive Web Apps.
+  </Card>
+</CardGrid>

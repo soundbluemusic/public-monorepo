@@ -1,0 +1,42 @@
+---
+title: 소개
+description: SoundBlue 퍼블릭 모노레포 프로젝트 개요.
+---
+
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+## 이것은 무엇인가요?
+
+Cloudflare Workers에서 호스팅되는 세 가지 학습 앱을 포함하는 모노레포입니다:
+
+- **Context** — 학습자를 위한 한국어 사전
+- **Permissive** — 웹 개발 리소스
+- **Roots** — 수학 문서
+
+모든 앱은 SEO 최적화를 위해 **서버 사이드 렌더링(SSR)**을 사용합니다. SPA 모드 없음.
+
+## 기술 스택
+
+| 카테고리 | 기술 |
+|:---------|:-----|
+| 프레임워크 | React 19 + TanStack Start |
+| 언어 | TypeScript 5.x |
+| 스타일링 | Tailwind CSS v4 |
+| 데이터베이스 | Cloudflare D1 |
+| 검색 | MiniSearch |
+| i18n | Paraglide |
+| 호스팅 | Cloudflare Workers |
+| 빌드 | Vite + Turborepo |
+
+## 빠른 링크
+
+<CardGrid>
+  <LinkCard title="빠른 시작" href="/public-monorepo/quick-start/" description="몇 분 안에 시작하기" />
+  <LinkCard title="아키텍처" href="/public-monorepo/architecture/overview/" description="프로젝트 구조 알아보기" />
+  <LinkCard title="앱" href="/public-monorepo/apps/context/" description="세 가지 앱 탐색하기" />
+  <LinkCard title="기여하기" href="/public-monorepo/contributing/guidelines/" description="기여 방법" />
+</CardGrid>
+
+## 라이선스
+
+이 프로젝트는 **Apache License 2.0** 하에 라이선스됩니다 — 자유롭게 사용, 수정, 배포할 수 있습니다.

@@ -1,0 +1,97 @@
+---
+title: Contributing Guidelines
+description: How to contribute to the SoundBlue monorepo.
+---
+
+import { Aside, Steps } from '@astrojs/starlight/components';
+
+## Welcome
+
+Thank you for your interest in contributing! This document outlines the guidelines for contributing to the project.
+
+## Code of Conduct
+
+- Be respectful and inclusive
+- Provide constructive feedback
+- Focus on technical merit
+
+## Getting Started
+
+<Steps>
+
+1. **Fork the repository** on GitHub
+
+2. **Clone your fork**
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/public-monorepo.git
+   ```
+
+3. **Create a branch**
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+4. **Make your changes** and commit
+   ```bash
+   git commit -m "feat: add your feature"
+   ```
+
+5. **Push and create a PR**
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+
+</Steps>
+
+## Critical Rules
+
+<Aside type="danger" title="Do NOT">
+  - **Never use SPA mode** — All apps must use SSR for SEO
+  - **Never downgrade packages** — Fix issues by upgrading or modifying code
+  - **Never hardcode values** — Use constants and configuration
+  - **Never hide errors** — No empty catch blocks or @ts-ignore
+</Aside>
+
+## Commit Convention
+
+Use conventional commits:
+
+| Type | Description |
+|:-----|:------------|
+| `feat` | New feature |
+| `fix` | Bug fix |
+| `docs` | Documentation |
+| `style` | Formatting |
+| `refactor` | Code refactoring |
+| `test` | Adding tests |
+| `chore` | Maintenance |
+
+Example:
+```
+feat(context): add audio playback for entries
+fix(roots): correct formula rendering
+docs: update architecture documentation
+```
+
+## Pull Request Process
+
+1. Ensure all tests pass
+2. Update documentation if needed
+3. Request review from maintainers
+4. Address feedback promptly
+
+## Quality Checks
+
+Before submitting:
+
+```bash
+pnpm lint        # Check code style
+pnpm typecheck   # Check types
+pnpm test        # Run tests
+pnpm build       # Verify build
+```
+
+## Questions?
+
+- Open an issue on GitHub
+- Check existing documentation

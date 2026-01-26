@@ -1,0 +1,67 @@
+---
+title: Context
+description: Korean dictionary app for learners with 16,394 entries.
+---
+
+import { Badge, LinkCard } from '@astrojs/starlight/components';
+
+<Badge text="SSR + D1" variant="tip" />
+
+## Overview
+
+**Context** is a Korean dictionary designed for learners, featuring comprehensive vocabulary with examples and audio.
+
+| Feature | Value |
+|:--------|:------|
+| **Entries** | 16,394 |
+| **Categories** | 52 |
+| **Conversations** | 53 |
+| **Database** | Cloudflare D1 |
+
+<LinkCard
+  title="Visit Context"
+  href="https://context.soundbluemusic.com"
+  description="Try the live application"
+/>
+
+## Features
+
+- **Comprehensive Dictionary** — 16,394 Korean vocabulary entries
+- **52 Categories** — Organized by topic (greetings, food, coding, etc.)
+- **Audio Pronunciation** — Native speaker recordings
+- **Example Sentences** — Real-world usage examples
+- **Offline Support** — Works without internet connection
+- **PWA** — Installable as app
+
+## Technical Details
+
+### Database Schema
+
+```sql
+CREATE TABLE entries (
+  id TEXT PRIMARY KEY,
+  korean TEXT NOT NULL,
+  english TEXT,
+  romanization TEXT,
+  category_id TEXT NOT NULL,
+  difficulty TEXT,
+  part_of_speech TEXT,
+  audio_url TEXT,
+  examples TEXT,  -- JSON array
+  tags TEXT       -- JSON array
+);
+```
+
+### Sitemap Structure
+
+Dynamic sitemaps generated from D1:
+
+- `/sitemap.xml` — Index
+- `/sitemap-pages.xml` — Static pages
+- `/sitemap-categories.xml` — Categories
+- `/sitemaps/entries/{categoryId}.xml` — Per-category entries
+
+## Source Code
+
+- **App:** [`apps/context/`](https://github.com/soundbluemusic/public-monorepo/tree/main/apps/context)
+- **Config:** [`apps/context/wrangler.toml`](https://github.com/soundbluemusic/public-monorepo/blob/main/apps/context/wrangler.toml)

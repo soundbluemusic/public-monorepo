@@ -1,0 +1,87 @@
+---
+title: Quick Start
+description: Get started with the SoundBlue monorepo in minutes.
+---
+
+import { Steps, Tabs, TabItem, Code } from '@astrojs/starlight/components';
+
+## Prerequisites
+
+- **Node.js** ≥ 20
+- **pnpm** 10.11.0
+
+## Installation
+
+<Steps>
+
+1. Clone the repository
+
+   ```bash
+   git clone https://github.com/soundbluemusic/public-monorepo.git
+   cd public-monorepo
+   ```
+
+2. Install dependencies
+
+   ```bash
+   pnpm install
+   ```
+
+3. Run an app
+
+   <Tabs>
+     <TabItem label="Context">
+       ```bash
+       pnpm dev:context
+       # → http://localhost:3003
+       ```
+     </TabItem>
+     <TabItem label="Permissive">
+       ```bash
+       pnpm dev:permissive
+       # → http://localhost:3004
+       ```
+     </TabItem>
+     <TabItem label="Roots">
+       ```bash
+       pnpm dev:roots
+       # → http://localhost:3005
+       ```
+     </TabItem>
+   </Tabs>
+
+</Steps>
+
+## Project Structure
+
+```
+public-monorepo/
+├── apps/                → 3 applications
+│   ├── context/         → Korean dictionary (SSR + D1)
+│   ├── permissive/      → Web dev resources (SSR)
+│   └── roots/           → Math documentation (SSR)
+├── packages/            → 10 shared packages
+│   ├── core/            → [L0] validation, utils, types
+│   ├── config/          → [L0] Vite, Tailwind configs
+│   ├── data/            → [L1] Zod schemas, loaders
+│   └── ...              → More packages
+└── data/                → JSON data (SSoT)
+```
+
+## Available Commands
+
+| Command | Description |
+|:--------|:------------|
+| `pnpm dev:context` | Run Context app |
+| `pnpm dev:permissive` | Run Permissive app |
+| `pnpm dev:roots` | Run Roots app |
+| `pnpm build` | Build all apps |
+| `pnpm lint` | Check code with Biome |
+| `pnpm typecheck` | TypeScript type check |
+| `pnpm test` | Run unit tests |
+
+## Next Steps
+
+- Learn about the [Architecture](/public-monorepo/architecture/overview/)
+- Explore the [Apps](/public-monorepo/apps/context/)
+- Read the [Contributing Guidelines](/public-monorepo/contributing/guidelines/)

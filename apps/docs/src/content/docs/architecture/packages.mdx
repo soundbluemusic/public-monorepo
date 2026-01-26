@@ -1,0 +1,116 @@
+---
+title: Shared Packages
+description: Overview of the 10 shared packages in the monorepo.
+---
+
+## Package Overview
+
+The monorepo contains **10 shared packages** organized by layer:
+
+| Layer | Packages | Purpose |
+|:------|:---------|:--------|
+| L0 | `core`, `config` | Foundation |
+| L1 | `data`, `platform` | Data layer |
+| L2 | `i18n`, `search`, `seo`, `pwa` | Domain services |
+| L3 | `ui`, `features` | UI & business logic |
+
+## Layer 0: Foundation
+
+### @soundblue/core
+
+Pure functions, types, and validation utilities. No React dependency.
+
+```typescript
+import { LIMITS, validateId, isValidLanguage } from '@soundblue/core/validation';
+import { chunkArray, debounce, throttle, cn } from '@soundblue/core/utils';
+import type { Language, Theme } from '@soundblue/core/types';
+```
+
+### @soundblue/config
+
+Vite, Tailwind, and TypeScript configurations.
+
+```typescript
+import { createViteConfig } from '@soundblue/config/vite';
+import { tailwindPreset } from '@soundblue/config/tailwind';
+```
+
+## Layer 1: Data
+
+### @soundblue/data
+
+Zod schemas, data loaders, type definitions.
+
+```typescript
+import { EntrySchema, ConceptSchema } from '@soundblue/data/schemas';
+import { createDataLoader, loadJson } from '@soundblue/data/loaders';
+```
+
+### @soundblue/platform
+
+Browser IndexedDB storage (Dexie.js based).
+
+```typescript
+import { storage } from '@soundblue/platform/storage';
+import type { FavoriteItem, RecentViewItem } from '@soundblue/platform';
+```
+
+## Layer 2: Domain
+
+### @soundblue/i18n
+
+Multilingual routing, meta factory, Paraglide integration.
+
+```typescript
+import { getLocaleFromPath, generateI18nRoutes } from '@soundblue/i18n';
+import { metaFactory } from '@soundblue/i18n';
+```
+
+### @soundblue/search
+
+MiniSearch wrapper, search worker.
+
+```typescript
+import { SearchEngine } from '@soundblue/search';
+import { useSearch, useSearchWorker } from '@soundblue/search/react';
+```
+
+### @soundblue/seo
+
+Meta tag factory, sitemap generator.
+
+```typescript
+import { metaFactory, dynamicMetaFactory } from '@soundblue/seo/meta';
+import { generateSitemap } from '@soundblue/seo/sitemap';
+```
+
+### @soundblue/pwa
+
+Service worker, offline indicator.
+
+```typescript
+import { OfflineIndicator, useOnlineStatus } from '@soundblue/pwa/react';
+import { generateManifest } from '@soundblue/pwa/manifest';
+```
+
+## Layer 3: UI & Features
+
+### @soundblue/ui
+
+React UI components, animations, utilities.
+
+```typescript
+import { DarkModeToggle, LanguageToggle } from '@soundblue/ui/components';
+import { SearchDropdown, VirtualList } from '@soundblue/ui/patterns';
+import { ToastContainer, ErrorBoundary } from '@soundblue/ui/feedback';
+```
+
+### @soundblue/features
+
+Business logic hooks (settings, toast, media queries).
+
+```typescript
+import { useSettingsStore } from '@soundblue/features/settings';
+import { useToast, toast } from '@soundblue/features/toast';
+import { useMediaQuery, useIsMobile } from '@soundblue/features/media';
+```
