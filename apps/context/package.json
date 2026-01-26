@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
+    "postbuild": "node scripts/inject-polyfill.mjs && tsx ../../scripts/generate-sw.ts context",
     "sitemap": "tsx scripts/generate-sitemaps.ts",
-    "deploy": "pnpm build && node scripts/inject-polyfill.mjs && wrangler deploy --config dist/server/wrangler.json",
+    "deploy": "pnpm build && wrangler deploy --config dist/server/wrangler.json",
     "preview": "wrangler dev",
     "start": "wrangler dev",
     "lint": "biome lint .",

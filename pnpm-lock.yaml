@@ -171,7 +171,7 @@ importers:
         version: 7.71.1(react@19.2.3)
       rollup-plugin-visualizer:
         specifier: ^6.0.5
-        version: 6.0.5(rolldown@1.0.0-rc.1)(rollup@4.56.0)
+        version: 6.0.5(rolldown@1.0.0-rc.1)(rollup@2.79.2)
       sharp:
         specifier: ^0.34.5
         version: 0.34.5
@@ -199,6 +199,9 @@ importers:
       vitest:
         specifier: ^4.0.16
         version: 4.0.18(@opentelemetry/api@1.9.0)(@types/node@25.0.10)(happy-dom@20.3.9)(jiti@2.6.1)(jsdom@27.4.0)(lightningcss@1.31.1)(terser@5.46.0)(tsx@4.21.0)
+      workbox-build:
+        specifier: ^7.4.0
+        version: 7.4.0(@types/babel__core@7.20.5)
       zod:
         specifier: ^4.3.5
         version: 4.3.6
@@ -519,7 +522,7 @@ importers:
         version: 7.13.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       rollup-plugin-visualizer:
         specifier: ^6.0.5
-        version: 6.0.5(rolldown@1.0.0-rc.1)(rollup@2.79.2)
+        version: 6.0.5(rolldown@1.0.0-rc.1)(rollup@4.56.0)
       tailwindcss:
         specifier: ^4.1.18
         version: 4.1.18

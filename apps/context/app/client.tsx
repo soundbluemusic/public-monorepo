@@ -15,6 +15,7 @@ if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
           if (newWorker) {
             newWorker.addEventListener('statechange', () => {
               if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                // 새 버전 사용 가능 알림 (선택적)
                 console.log('[PWA] New content available, refresh to update.');
               }
             });

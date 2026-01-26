@@ -112,6 +112,7 @@
     "turbo": "^2.7.3",
     "vite": "8.0.0-beta.9",
     "vitest": "^4.0.16",
+    "workbox-build": "^7.4.0",
     "zod": "^4.3.5"
   },
   "engines": {

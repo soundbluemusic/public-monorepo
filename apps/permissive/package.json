@@ -8,7 +8,7 @@
     "dev": "vite dev",
     "prebuild": "mkdir -p dist/server && echo 'export default {}' > dist/server/index.js && pnpm exec tsx scripts/generate-paraglide-messages.ts && tsx scripts/generate-search-index.ts",
     "build": "NODE_OPTIONS='--max-old-space-size=8192' vite build && tsx scripts/generate-sitemaps.ts",
-    "postbuild": "node scripts/inject-polyfill.mjs",
+    "postbuild": "node scripts/inject-polyfill.mjs && tsx ../../scripts/generate-sw.ts permissive",
     "deploy": "pnpm build && wrangler deploy",
     "preview": "vite preview",
     "start": "vite preview",

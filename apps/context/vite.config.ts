@@ -23,6 +23,24 @@ export default defineConfig({
     terserOptions: {
       compress: { drop_console: true, drop_debugger: true },
     },
+    rollupOptions: {
+      output: {
+        manualChunks: (id: string) => {
+          if (id.includes('node_modules')) {
+            if (id.includes('react-dom') || id.includes('/react/')) {
+              return 'vendor-react';
+            }
+            if (id.includes('@tanstack')) {
+              return 'vendor-tanstack';
+            }
+            if (id.includes('lucide-react')) {
+              return 'vendor-icons';
+            }
+          }
+          return undefined;
+        },
+      },
+    },
   },
   plugins: [
     // Plugin order follows official TanStack Start + Cloudflare example
@@ -37,37 +55,9 @@ export default defineConfig({
       outdir: './app/paraglide',
       outputStructure: 'message-modules',
     }),
-    VitePWA({
-      disable: true, // Temporarily disabled for TanStack Start compatibility
-      registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'icons/*.svg'],
-      manifest: false,
-      workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,svg,woff2}'],
-        cleanupOutdatedCaches: true,
-        skipWaiting: true,
-        clientsClaim: true,
-        maximumFileSizeToCacheInBytes: 35 * 1024 * 1024, // 35MB
-        runtimeCaching: [
-          {
-            urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'google-fonts-stylesheets',
-              expiration: { maxAgeSeconds: 60 * 60 * 24 * 365 },
-            },
-          },
-          {
-            urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'google-fonts-webfonts',
-              expiration: { maxEntries: 30, maxAgeSeconds: 60 * 60 * 24 * 365 },
-            },
-          },
-        ],
-      },
-    }),
+    // VitePWA disabled - using workbox-build via postbuild script instead
+    // (VitePWA doesn't work well with SSR frameworks and causes deprecated warnings)
+    VitePWA({ disable: true }),
     visualizer({
       filename: './build/stats.html',
       open: false,
