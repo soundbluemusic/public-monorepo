@@ -12,11 +12,11 @@
 
 **현재 배포 모드:**
 
-| App | Mode | 데이터 소스 | 설정 파일 |
-|:----|:-----|:-----------|:----------|
-| Context | **SSR** | Cloudflare D1 | `wrangler.toml` |
-| Permissive | SSR | In-memory | `wrangler.toml` |
-| Roots | SSR | TypeScript | `wrangler.toml` |
+| App | Mode | 데이터 소스 | D1 바인딩 | 설정 파일 |
+|:----|:-----|:-----------|:---------|:----------|
+| Context | **SSR** | Cloudflare D1 | `DB` (context-db) | `wrangler.toml` |
+| Permissive | SSR | Cloudflare D1 | `KNOWLEDGE_DB` (knowledge) | `wrangler.toml` |
+| Roots | SSR | Cloudflare D1 | `KNOWLEDGE_DB` (knowledge) | `wrangler.toml` |
 
 **금지 사항:**
 - SPA 모드 전환 금지 (클라이언트 사이드 렌더링만으로 콘텐츠 생성 금지)
@@ -30,22 +30,27 @@
 // ✅ TanStack Start - createFileRoute + createServerFn
 import { createFileRoute, notFound } from '@tanstack/react-router';
 import { createServerFn } from '@tanstack/react-start';
+import { getD1Database } from '../services/d1';
 
 // Server Function (D1 접근)
-const getEntry = createServerFn({ method: 'GET' })
-  .validator((entryId: string) => entryId)
-  .handler(async ({ data: entryId }) => {
-    const db = getCloudflareContext().env.DB;
+const fetchEntry = createServerFn({ method: 'POST' })
+  .inputValidator((data: { entryId: string; locale: string }) => data)
+  .handler(async ({ data }) => {
+    const db = getD1Database();
+    if (!db) {
+      console.error('[fetchEntry] D1 database not available');
+      return null;
+    }
     const entry = await db.prepare('SELECT * FROM entries WHERE id = ?')
-      .bind(entryId).first();
-    if (!entry) throw notFound();
+      .bind(data.entryId).first();
     return entry;
   });
 
 // Route 정의
 export const Route = createFileRoute('/entry/$entryId')({
   loader: async ({ params }) => {
-    const entry = await getEntry({ data: params.entryId });
+    const entry = await fetchEntry({ data: { entryId: params.entryId, locale: 'en' } });
+    if (!entry) throw notFound();
     return { entry };
   },
   head: ({ loaderData }) => ({
@@ -167,7 +172,7 @@ curl -s https://roots.soundbluemusic.com/concept/addition | head -50
 
 ```bash
 # ✅ 현재 사용 중인 방식 (.github/workflows/deploy-context-r2.yml)
-rclone sync build/client/entry r2:bucket/path \
+rclone sync dist/client/entry r2:bucket/path \
   --checksum \
   --transfers 32 \
   --checkers 32 \
@@ -237,9 +242,12 @@ pnpm build  # BUILD_MODE=ssr가 기본값
 pnpm deploy
 ```
 
-**D1 바인딩 (Cloudflare Dashboard에서 설정):**
-- Variable name: `DB`
-- D1 database: `context-db`
+**D1 바인딩 (wrangler.toml에서 설정):**
+
+| 바인딩 | 데이터베이스 | 용도 |
+|:-------|:------------|:-----|
+| `DB` | context-db | 한국어 사전 엔트리 (16,394개) |
+| `PRIVATE_DB` | private | 사용자 학습 진도 (향후 구현) |
 
 **사이트맵 구조 (D1에서 동적 생성):**
 
@@ -485,3 +493,61 @@ export const Route = createFileRoute('/entry/$entryId')({
 | Cloudflare D1 | [developers.cloudflare.com/d1](https://developers.cloudflare.com/d1/) |
 | Cloudflare Workers | [developers.cloudflare.com/workers](https://developers.cloudflare.com/workers/) |
 | Cloudflare Pages | [developers.cloudflare.com/pages](https://developers.cloudflare.com/pages/) |
+
+---
+
+## 🛠 기술 스택 버전 (2026-01-25 기준)
+
+> ⚠️ **AI 어시스턴트 참고용**: 이 버전들은 실제 사용 중인 버전입니다. 코드 작성 시 참고하세요.
+
+| 기술 | 버전 | 비고 |
+|------|------|------|
+| **React** | ^19.2.3 | React 19 Stable |
+| **TanStack Start** | ^1.157.2 | SSR 프레임워크 |
+| **TanStack Router** | ^1.157.2 | 파일 기반 라우팅 |
+| **Vite** | 8.0.0-beta.9 | Rolldown 번들러 (7x 빠른 빌드) |
+| **TypeScript** | ^5.7.2 | 타입 체크 |
+| **Tailwind CSS** | ^4.1.18 | v4 사용 중 |
+| **Zod** | ^4.3.5 | 스키마 검증 |
+| **Zustand** | ^5.0.9 | 상태 관리 |
+| **Node.js** | >=20 | 런타임 |
+| **pnpm** | 10.11.0 | 패키지 매니저 |
+
+---
+
+## 📂 빌드 출력 구조 (Vite 8 + Cloudflare)
+
+> **Vite 8**부터 빌드 출력 경로가 `build/` → `dist/`로 변경되었습니다.
+
+```
+apps/context/dist/
+├── server/
+│   └── index.js          # Workers 진입점 (all-in-one 번들)
+└── client/
+    ├── assets/           # 정적 자산 (CSS, JS, 이미지)
+    └── [prerendered]/    # 사전 렌더링된 페이지
+```
+
+**wrangler.toml 설정 (모든 앱 공통):**
+
+```toml
+main = "@tanstack/react-start/server-entry"
+compatibility_date = "2026-01-22"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "dist/client"
+```
+
+---
+
+## 📊 앱별 D1 바인딩 요약
+
+| 앱 | 바인딩 | 데이터베이스 | 용도 |
+|:---|:-------|:------------|:-----|
+| **Context** | `DB` | context-db | 한국어 사전 (16,394 entries) |
+| **Context** | `PRIVATE_DB` | private | 사용자 학습 진도 |
+| **Permissive** | `KNOWLEDGE_DB` | knowledge | 웹개발 자료 (88 libraries, 56 APIs) |
+| **Permissive** | `PRIVATE_DB` | private | 사용자 학습 진도 |
+| **Roots** | `KNOWLEDGE_DB` | knowledge | 수학 개념 (438 concepts, 18 fields) |
+| **Roots** | `PRIVATE_DB` | private | 사용자 학습 진도 |

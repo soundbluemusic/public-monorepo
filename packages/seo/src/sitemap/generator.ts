@@ -14,6 +14,19 @@ import { join } from 'node:path';
 // ============================================================================
 
 /**
+ * Escape special characters for XML
+ * Required for valid XML sitemap generation
+ */
+function escapeXml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
+/**
  * Get today's date in ISO format (YYYY-MM-DD)
  * Safe accessor for noUncheckedIndexedAccess
  */
@@ -73,10 +86,10 @@ export function getLocalizedUrl(
   lang: string,
   defaultLang = 'en',
 ): string {
-  if (lang === defaultLang) {
-    return `${siteUrl}${path}`;
-  }
-  return `${siteUrl}/${lang}${path === '/' ? '' : path}`;
+  const url =
+    lang === defaultLang ? `${siteUrl}${path}` : `${siteUrl}/${lang}${path === '/' ? '' : path}`;
+  // Escape XML special characters in URL
+  return escapeXml(url);
 }
 
 /**

@@ -165,7 +165,7 @@ export function createAppViteConfig(options: AppViteConfigOptions) {
         project: './project.inlang',
         outdir: './app/paraglide',
         outputStructure: 'message-modules',
-      }),
+      }) as PluginOption,
       reactRouter(),
       VitePWA({
         registerType: 'autoUpdate',
