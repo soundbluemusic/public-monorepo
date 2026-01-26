@@ -367,3 +367,13 @@
     }
   }
 }
+
+/* ============================================
+   Sidebar - Collapsed State
+   ============================================ */
+/* Hide children sections when sidebar is collapsed on desktop */
+@media (min-width: 1024px) {
+  aside[data-collapsed="true"] .sidebar-children-section {
+    display: none;
+  }
+}

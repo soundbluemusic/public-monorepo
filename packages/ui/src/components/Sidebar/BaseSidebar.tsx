@@ -192,8 +192,8 @@ export function BaseSidebar({
             ))}
           </div>
 
-          {/* Additional sections - hidden when collapsed */}
-          {children && <div className={cn(isCollapsed && 'lg:hidden')}>{children}</div>}
+          {/* Additional sections - hidden when collapsed on desktop */}
+          {children && <div className="sidebar-children-section">{children}</div>}
         </nav>
 
         {/* Footer with collapse toggle */}
