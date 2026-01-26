@@ -148,7 +148,7 @@ ${urls.join('\n')}
 /**
  * 엔트리 사이트맵 생성 (카테고리별)
  */
-function generateEntrySitemap(categoryId: string, entryIds: string[]): string {
+function generateEntrySitemap(_categoryId: string, entryIds: string[]): string {
   const urls = entryIds.map((id) => urlEntry(`/entry/${id}`, 'monthly', '0.7'));
 
   return `${xmlHeader()}

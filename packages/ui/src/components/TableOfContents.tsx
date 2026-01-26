@@ -187,7 +187,7 @@ export const TableOfContents = memo(function TableOfContents({
 
       {/* 목차 리스트 */}
       {isOpen && (
-        <ul className="mt-3 space-y-1" role="list">
+        <ul className="mt-3 space-y-1">
           {items.map((item) => {
             const indent = (item.level - minLevel) * 12;
             const isActive = activeId === item.id;

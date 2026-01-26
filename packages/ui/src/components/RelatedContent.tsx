@@ -159,17 +159,15 @@ const RelatedItemComponent = memo(function RelatedItemComponent({
   // 내부 링크
   return (
     <LinkComponent to={item.href} className={getItemClassName(variant)}>
-      <span onClick={handleClick} className="contents">
-        <ItemContent item={item} variant={variant} />
-        <ArrowRight
-          size={14}
-          className={cn(
-            'shrink-0 text-(--text-tertiary) transition-transform',
-            'group-hover:translate-x-1',
-          )}
-          aria-hidden="true"
-        />
-      </span>
+      <ItemContent item={item} variant={variant} />
+      <ArrowRight
+        size={14}
+        className={cn(
+          'shrink-0 text-(--text-tertiary) transition-transform',
+          'group-hover:translate-x-1',
+        )}
+        aria-hidden="true"
+      />
     </LinkComponent>
   );
 });

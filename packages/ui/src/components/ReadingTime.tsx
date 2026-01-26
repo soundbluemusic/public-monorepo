@@ -102,24 +102,16 @@ export const ReadingTime = memo(function ReadingTime({
   variant = 'default',
   className,
 }: ReadingTimeProps) {
-  const { minutes, wordCount } = useMemo(() => {
+  const minutes = useMemo(() => {
     if (propWordCount !== undefined) {
-      return {
-        minutes: Math.ceil(propWordCount / wordsPerMinute),
-        wordCount: propWordCount,
-      };
+      return Math.ceil(propWordCount / wordsPerMinute);
     }
 
     if (content) {
-      const min = calculateReadingTime(content, wordsPerMinute, charsPerMinute);
-      const { english, korean } = countWords(content);
-      return {
-        minutes: min,
-        wordCount: english + Math.ceil(korean / 2), // 한글 2자 = 1단어로 환산
-      };
+      return calculateReadingTime(content, wordsPerMinute, charsPerMinute);
     }
 
-    return { minutes: 0, wordCount: 0 };
+    return 0;
   }, [content, propWordCount, wordsPerMinute, charsPerMinute]);
 
   if (minutes === 0) {

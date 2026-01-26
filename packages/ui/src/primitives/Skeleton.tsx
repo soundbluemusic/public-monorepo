@@ -2,8 +2,16 @@
  * @fileoverview Skeleton Loading Components
  * @environment universal
  */
-import type { CSSProperties, ReactNode } from 'react';
+import { type CSSProperties, type ReactNode, useMemo } from 'react';
 import { cn } from '../utils/cn';
+
+/** Generate stable IDs for skeleton items */
+function useSkeletonIds(prefix: string, count: number): string[] {
+  return useMemo(
+    () => Array.from({ length: count }, (_, i) => `${prefix}-${i}`),
+    [prefix, count],
+  );
+}
 
 interface SkeletonProps {
   className?: string;
@@ -24,12 +32,12 @@ interface SkeletonTextProps {
 
 /** Multi-line text skeleton placeholder */
 export function SkeletonText({ lines = 3, className = '' }: SkeletonTextProps) {
+  const ids = useSkeletonIds('skeleton-line', lines);
   return (
     <div className={cn('space-y-2', className)}>
-      {/* biome-ignore lint/suspicious/noArrayIndexKey: Static skeleton items never reorder */}
-      {Array.from({ length: lines }, (_, i) => (
+      {ids.map((id, i) => (
         <div
-          key={`skeleton-line-${i}`}
+          key={id}
           className={cn('h-4 animate-pulse bg-(--bg-tertiary) rounded', i === lines - 1 && 'w-2/3')}
         />
       ))}
@@ -66,11 +74,11 @@ interface SkeletonListProps {
 
 /** List skeleton with avatar and text placeholders */
 export function SkeletonList({ count = 5, className = '' }: SkeletonListProps) {
+  const ids = useSkeletonIds('skeleton-list', count);
   return (
     <div className={cn('space-y-3', className)}>
-      {/* biome-ignore lint/suspicious/noArrayIndexKey: Static skeleton items never reorder */}
-      {Array.from({ length: count }, (_, i) => (
-        <div key={`skeleton-list-${i}`} className="flex items-center gap-3">
+      {ids.map((id) => (
+        <div key={id} className="flex items-center gap-3">
           <div className="w-10 h-10 shrink-0 animate-pulse bg-(--bg-tertiary) rounded-full" />
           <div className="flex-1 space-y-2">
             <div className="h-4 w-1/3 animate-pulse bg-(--bg-tertiary) rounded" />
@@ -90,6 +98,7 @@ interface SkeletonGridProps {
 
 /** Grid of skeleton cards */
 export function SkeletonGrid({ count = 6, columns = 3, className = '' }: SkeletonGridProps) {
+  const ids = useSkeletonIds('skeleton-grid', count);
   const columnClasses: Record<number, string> = {
     2: 'grid-cols-2',
     3: 'grid-cols-3',
@@ -99,9 +108,8 @@ export function SkeletonGrid({ count = 6, columns = 3, className = '' }: Skeleto
 
   return (
     <div className={cn('grid gap-4', columnClass, className)}>
-      {/* biome-ignore lint/suspicious/noArrayIndexKey: Static skeleton items never reorder */}
-      {Array.from({ length: count }, (_, i) => (
-        <SkeletonCard key={`skeleton-grid-${i}`} />
+      {ids.map((id) => (
+        <SkeletonCard key={id} />
       ))}
     </div>
   );

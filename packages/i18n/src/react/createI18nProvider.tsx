@@ -106,7 +106,7 @@ export function createI18nProvider<K extends string>(
     const pathname = routerState.location.pathname;
     const locale = getLocaleFromPath(pathname);
 
-    // biome-ignore lint/correctness/useExhaustiveDependencies: messages is a constant from closure
+    // Note: `messages` is intentionally omitted from deps - it's a constant from closure
     const value = useMemo(() => {
       const setLocale = (lang: Language) => {
         const currentPath = stripLocaleFromPath(pathname);

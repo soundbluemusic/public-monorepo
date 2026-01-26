@@ -196,7 +196,7 @@ export const VersionHistory = memo(function VersionHistory({
         {title || defaultTitle}
       </h3>
 
-      <ul className="space-y-2" role="list">
+      <ul className="space-y-2">
         {displayedItems.map((item, index) => {
           const dateObj = typeof item.date === 'string' ? new Date(item.date) : item.date;
 
