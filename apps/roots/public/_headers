@@ -27,7 +27,7 @@
   Cache-Control: public, max-age=0, must-revalidate
 
 # =============================================================================
-# React Router Static Assets - Long-term caching
+# Static Assets - Long-term caching
 # =============================================================================
 /assets/*
   Cache-Control: public, max-age=31536000, immutable

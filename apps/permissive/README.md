@@ -3,7 +3,7 @@
 > **Free Web Dev Tools Collection (무료 웹개발 도구 모음)**
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
-[![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?logo=react-router)](https://reactrouter.com)
+[![TanStack Start](https://img.shields.io/badge/TanStack_Start-v1-FF4154?logo=react)](https://tanstack.com/start)
 [![SSR](https://img.shields.io/badge/SSR-Cloudflare_Workers-F38020?logo=cloudflare)](https://developers.cloudflare.com/workers/)
 
 **[Live Site](https://permissive.soundbluemusic.com)**
@@ -25,14 +25,14 @@ A comprehensive collection of free web development resources:
 ### SSR with Cloudflare Workers
 
 ```
-react-router.config.ts
-├── ssr: true (SSR 모드)
-├── Cloudflare Adapter (nodejs_compat)
+vite.config.ts (TanStack Start + Cloudflare)
+├── tanstackStart() - SSR 프레임워크
+├── cloudflare() - Workers 어댑터
 └── loader() → 런타임 데이터 조회
 
 Cloudflare Workers:
-├── build/server/index.js (Workers 핸들러)
-└── build/client/ (Workers Assets - 정적 파일)
+├── dist/server/ (Workers 핸들러)
+└── dist/client/ (Workers Assets - 정적 파일)
 ```
 
 ### Data Architecture
@@ -88,7 +88,7 @@ app/data/
 
 | Role | Technology | License |
 |------|------------|---------|
-| Framework | [React Router v7](https://reactrouter.com) | MIT |
+| Framework | [TanStack Start](https://tanstack.com/start) | MIT |
 | UI | [React](https://react.dev) | MIT |
 | Styling | [Tailwind CSS v4](https://tailwindcss.com) | MIT |
 | Language | [TypeScript](https://www.typescriptlang.org) | Apache 2.0 |
@@ -102,7 +102,7 @@ app/data/
 # From monorepo root
 pnpm dev:permissive     # → http://localhost:3004
 
-# Build (outputs to build/client)
+# Build (outputs to dist/client)
 pnpm build:permissive
 ```
 

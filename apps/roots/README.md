@@ -3,7 +3,7 @@
 > **Math Documentation for Learners (학습자를 위한 수학 문서)**
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
-[![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?logo=react-router)](https://reactrouter.com)
+[![TanStack Start](https://img.shields.io/badge/TanStack_Start-v1-FF4154?logo=react)](https://tanstack.com/start)
 [![SSR](https://img.shields.io/badge/SSR-Cloudflare_Workers-F38020?logo=cloudflare)](https://developers.cloudflare.com/workers/)
 
 **[Live Site](https://roots.soundbluemusic.com)**
@@ -27,16 +27,14 @@ A math documentation site designed for learners:
 ### SSR with Cloudflare Workers
 
 ```
-react-router.config.ts
-├── ssr: true
-├── prerender() → Static pages generated at build time
-│   ├── concept-names.json → 438 concept routes × 2 langs
-│   └── fields.ts → 18 field routes × 2 langs
-└── loader() functions → Server-side data loading
+vite.config.ts (TanStack Start + Cloudflare)
+├── tanstackStart() - SSR 프레임워크
+├── cloudflare() - Workers 어댑터
+└── loader() → 서버 사이드 데이터 로딩
 
 Deployment:
-├── Cloudflare Workers (SSR)
-└── Workers Assets (static files)
+├── dist/server/ (Workers 핸들러)
+└── dist/client/ (Workers Assets - 정적 파일)
 ```
 
 ### Data Architecture
@@ -112,7 +110,7 @@ const { results, isLoading } = useSearchWorker(query);
 # From monorepo root
 pnpm dev:roots       # → http://localhost:3005
 
-# Build (outputs to build/client)
+# Build (outputs to dist/client)
 pnpm build:roots
 ```
 
@@ -122,7 +120,7 @@ pnpm build:roots
 
 | Role | Technology |
 |:-----|:-----------|
-| Framework | React Router v7 |
+| Framework | TanStack Start |
 | UI | React |
 | Styling | Tailwind CSS v4 |
 | Language | TypeScript |

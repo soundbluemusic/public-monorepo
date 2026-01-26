@@ -90,17 +90,17 @@ export default defineConfig({});
 
 // wrangler.toml (Workers 설정)
 name = "context"
-main = "build/server/index.js"
-compatibility_date = "2024-01-01"
+main = "@tanstack/react-start/server-entry"
+compatibility_date = "2026-01-22"
 compatibility_flags = ["nodejs_compat"]
 
 [[d1_databases]]
 binding = "DB"
 database_name = "context-db"
-database_id = "55c25518-db3d-4547-8ad8-e36fc66493c8"
+database_id = "..."
 
 [assets]
-directory = "build/client"
+directory = "dist/client"
 ```
 
 ### Dynamic Sitemap Generation

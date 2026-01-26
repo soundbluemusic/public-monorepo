@@ -16,15 +16,15 @@
 | App | Mode | 데이터 소스 | D1 바인딩 | 설정 파일 |
 | :-- | :--- | :---------- | :-------- | :-------- |
 | Context | **SSR** | Cloudflare D1 | `DB` (context-db) | `wrangler.toml` |
-| Permissive | SSR | Cloudflare D1 | `KNOWLEDGE_DB` (knowledge) | `wrangler.toml` |
-| Roots | SSR | Cloudflare D1 | `KNOWLEDGE_DB` (knowledge) | `wrangler.toml` |
+| Permissive | SSR | In-memory (JSON) | - | `wrangler.toml` |
+| Roots | SSR | TypeScript (JSON) | - | `wrangler.toml` |
 
 **금지 사항:**
 
 - SPA 모드 전환 금지 (클라이언트 사이드 렌더링만으로 콘텐츠 생성 금지)
 - 빈 `<div id="root"></div>` HTML 금지
 - `loader` 없는 동적 라우트 금지 (SEO 데이터 누락)
-- D1 바인딩 없이 SSR 배포 금지
+- Context 앱: D1 바인딩 없이 SSR 배포 금지
 
 **SSR 모드 필수 패턴 (TanStack Start + D1):**
 

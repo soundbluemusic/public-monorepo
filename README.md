@@ -136,9 +136,9 @@ public-monorepo/
 | Command | Description |
 |:--------|:------------|
 | `pnpm build` | Build all apps ([Turborepo](turbo.json) cached) |
-| `pnpm build:context` | Build Context → `build/client` |
-| `pnpm build:permissive` | Build Permissive → `build/client` |
-| `pnpm build:roots` | Build Roots → `build/client` |
+| `pnpm build:context` | Build Context → `dist/client` |
+| `pnpm build:permissive` | Build Permissive → `dist/client` |
+| `pnpm build:roots` | Build Roots → `dist/client` |
 
 ### Quality Checks
 

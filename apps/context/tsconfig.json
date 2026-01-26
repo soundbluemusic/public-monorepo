@@ -10,6 +10,6 @@
     },
     "types": ["vite/client", "@cloudflare/workers-types"]
   },
-  "include": ["app/**/*", "scripts/**/*", "vite.config.ts", "react-router.config.ts"],
+  "include": ["app/**/*", "scripts/**/*", "vite.config.ts"],
   "exclude": ["node_modules", "app/paraglide"]
 }

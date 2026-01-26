@@ -53,7 +53,7 @@ wrangler r2 object put ...
 wrangler r2 object sync ...
 
 # ✅ 필수
-rclone sync build/client/entry r2:bucket/path \
+rclone sync dist/client/entry r2:bucket/path \
   --checksum \
   --transfers 32 \
   --checkers 32 \

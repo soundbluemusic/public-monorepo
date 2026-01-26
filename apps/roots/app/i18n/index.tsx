@@ -1,8 +1,8 @@
 /**
  * @fileoverview Roots App i18n (TanStack Router 버전)
  *
- * TanStack Start로 마이그레이션 후 useRouterState()를 사용하는 로컬 Provider.
- * Context 앱은 아직 React Router를 사용하므로 공유 패키지와 분리.
+ * TanStack Start의 useRouterState()를 사용하는 로컬 Provider.
+ * 앱별 메시지 파일을 사용하므로 공유 패키지와 분리.
  */
 
 import type { Language } from '@soundblue/i18n';

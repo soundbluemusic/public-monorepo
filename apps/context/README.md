@@ -3,9 +3,9 @@
 > **Korean Dictionary for Learners (학습자를 위한 한국어 사전)**
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
-[![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?logo=react-router)](https://reactrouter.com)
+[![TanStack Start](https://img.shields.io/badge/TanStack_Start-v1-FF4154?logo=react)](https://tanstack.com/start)
 [![SSR + D1](https://img.shields.io/badge/SSR-D1_Database-F38020?logo=cloudflare)](https://developers.cloudflare.com/d1/)
-[![Entries](https://img.shields.io/badge/Entries-16394-blue)](react-router.config.ts)
+[![Entries](https://img.shields.io/badge/Entries-16394-blue)](vite.config.ts)
 
 **[Live Site](https://context.soundbluemusic.com)**
 
@@ -38,18 +38,17 @@ A Korean dictionary designed for language learners:
 ### 아키텍처 다이어그램
 
 ```
-react-router.config.ts
-├── ssr: true (고정)
-├── Cloudflare Adapter (nodejs_compat)
+vite.config.ts (TanStack Start + Cloudflare)
+├── tanstackStart() - SSR 프레임워크
+├── cloudflare() - Workers 어댑터
 └── loader() → D1 Database 실시간 쿼리
 
 Cloudflare Workers:
-├── build/server/index.js (Workers 핸들러)
-│   ├── /__manifest → React Router Lazy Route Discovery
+├── dist/server/ (Workers 핸들러)
 │   ├── /entry/:id → D1 쿼리
 │   ├── /api/offline-db → D1 전체 덤프 (오프라인용)
 │   └── /sitemap*.xml → D1에서 동적 생성
-├── build/client/ (Workers Assets - 정적 파일)
+├── dist/client/ (Workers Assets - 정적 파일)
 └── D1 Database (context-db)
     ├── entries (16394 rows)
     ├── categories (52 rows)
@@ -223,8 +222,8 @@ pnpm deploy  # Cloudflare Workers 배포
 | File | Purpose |
 |:-----|:--------|
 | `wrangler.toml` | D1 바인딩, Workers 설정 |
-| `react-router.config.ts` | SSR 설정 (`ssr: true` 고정) |
-| `app/routes.ts` | 라우트 정의 (API 엔드포인트 포함) |
+| `vite.config.ts` | TanStack Start + Cloudflare 설정 |
+| `app/routes/` | 파일 기반 라우트 (API 엔드포인트 포함) |
 
 ---
 
@@ -232,7 +231,7 @@ pnpm deploy  # Cloudflare Workers 배포
 
 | Role | Technology |
 |:-----|:-----------|
-| Framework | React Router v7 (SSR mode) |
+| Framework | TanStack Start (SSR mode) |
 | UI | React 19 |
 | Styling | Tailwind CSS v4 |
 | Language | TypeScript |
