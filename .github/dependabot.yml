@@ -1,5 +1,10 @@
-# Dependabot configuration
-# https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+# Dependabot version updates configuration
+# https://docs.github.com/en/code-security/dependabot/dependabot-version-updates
+#
+# 제한사항 (pnpm 모노레포):
+# - 하위 패키지 업데이트 누락 가능 (Issue #10758)
+# - pnpm-lock.yaml 하위 반영 안 됨 (Issue #4993)
+# - 문제 발생 시 수동 `pnpm update` 필요
 
 version: 2
 updates:
@@ -9,58 +14,41 @@ updates:
     schedule:
       interval: "weekly"
       day: "monday"
-      time: "09:00"
+      time: "00:00"
       timezone: "Asia/Seoul"
-    # PR 라벨
-    labels:
-      - "dependencies"
-      - "automated"
-    # 동시 오픈 PR 제한
-    open-pull-requests-limit: 10
-    # 버전 업데이트 전략
-    versioning-strategy: increase
-    # 그룹화 (관련 패키지 묶어서 PR)
+    open-pull-requests-limit: 5
     groups:
-      # React 관련
+      tanstack:
+        patterns:
+          - "@tanstack/*"
+      cloudflare:
+        patterns:
+          - "@cloudflare/*"
+          - "wrangler"
       react:
         patterns:
           - "react"
           - "react-dom"
           - "@types/react*"
-      # TanStack 관련
-      tanstack:
+      vite:
         patterns:
-          - "@tanstack/*"
-      # Cloudflare 관련
-      cloudflare:
-        patterns:
-          - "wrangler"
-          - "@cloudflare/*"
-      # 테스트 관련
+          - "vite"
+          - "@vitejs/*"
       testing:
         patterns:
           - "vitest"
           - "@vitest/*"
           - "playwright"
           - "@playwright/*"
-      # Lint/Format 관련
-      linting:
+      quality:
         patterns:
           - "@biomejs/*"
           - "typescript"
-      # 빌드 도구
-      build:
-        patterns:
-          - "vite"
-          - "@vitejs/*"
-          - "turbo"
-    # 무시할 의존성 (메이저 버전 업데이트는 수동으로)
     ignore:
-      # React 19 → 20 같은 메이저 업데이트는 수동
-      - dependency-name: "react"
+      - dependency-name: "*"
         update-types: ["version-update:semver-major"]
-      - dependency-name: "react-dom"
-        update-types: ["version-update:semver-major"]
+    commit-message:
+      prefix: "chore(deps)"
 
   # GitHub Actions 업데이트
   - package-ecosystem: "github-actions"
@@ -68,9 +56,11 @@ updates:
     schedule:
       interval: "weekly"
       day: "monday"
-      time: "09:00"
+      time: "00:00"
       timezone: "Asia/Seoul"
-    labels:
-      - "dependencies"
-      - "github-actions"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 3
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    commit-message:
+      prefix: "chore(deps)"
