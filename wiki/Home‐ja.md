@@ -13,6 +13,14 @@
 | Roots | 数学ドキュメント (SSR) | [/apps/roots/](https://github.com/soundbluemusic/public-monorepo/tree/main/apps/roots) | [roots.soundbluemusic.com](https://roots.soundbluemusic.com) |
 | Docs | ドキュメントサイト | [/apps/docs/](https://github.com/soundbluemusic/public-monorepo/tree/main/apps/docs) | [soundbluemusic.github.io/public-monorepo](https://soundbluemusic.github.io/public-monorepo) |
 
+## 🔗 クイックリンク
+
+**Context** — [ブラウズ](https://context.soundbluemusic.com) · [会話](https://context.soundbluemusic.com/conversations) · [学習記録](https://context.soundbluemusic.com/my-learning) · [ダウンロード](https://context.soundbluemusic.com/download)
+
+**Roots** — [ブラウズ](https://roots.soundbluemusic.com/browse) · [定数](https://roots.soundbluemusic.com/constants) · [お気に入り](https://roots.soundbluemusic.com/favorites) · [検索](https://roots.soundbluemusic.com/search)
+
+**Permissive** — [ライブラリ](https://permissive.soundbluemusic.com/libraries) · [Web API](https://permissive.soundbluemusic.com/web-api)
+
 ## 📦 パッケージ
 
 | レイヤー | パッケージ | 用途 | コード |

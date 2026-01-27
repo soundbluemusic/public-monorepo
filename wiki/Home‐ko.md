@@ -15,6 +15,14 @@
 | **Roots** | 수학 문서 (SSR) | [/apps/roots/](https://github.com/soundbluemusic/public-monorepo/tree/main/apps/roots) | [roots.soundbluemusic.com](https://roots.soundbluemusic.com) |
 | **Docs** | 문서 사이트 | [/apps/docs/](https://github.com/soundbluemusic/public-monorepo/tree/main/apps/docs) | [soundbluemusic.github.io/public-monorepo](https://soundbluemusic.github.io/public-monorepo) |
 
+## 🔗 빠른 링크
+
+**Context** — [탐색](https://context.soundbluemusic.com) · [대화](https://context.soundbluemusic.com/conversations) · [학습 기록](https://context.soundbluemusic.com/my-learning) · [다운로드](https://context.soundbluemusic.com/download)
+
+**Roots** — [탐색](https://roots.soundbluemusic.com/browse) · [상수](https://roots.soundbluemusic.com/constants) · [즐겨찾기](https://roots.soundbluemusic.com/favorites) · [검색](https://roots.soundbluemusic.com/search)
+
+**Permissive** — [라이브러리](https://permissive.soundbluemusic.com/libraries) · [Web API](https://permissive.soundbluemusic.com/web-api)
+
 ## 📦 패키지
 
 | 레이어 | 패키지 | 용도 | 코드 |

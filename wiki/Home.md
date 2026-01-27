@@ -15,6 +15,14 @@ Quick navigation to source code and live sites.
 | **Roots** | Math Documentation (SSR) | [/apps/roots/](https://github.com/soundbluemusic/public-monorepo/tree/main/apps/roots) | [roots.soundbluemusic.com](https://roots.soundbluemusic.com) |
 | **Docs** | Documentation Site | [/apps/docs/](https://github.com/soundbluemusic/public-monorepo/tree/main/apps/docs) | [soundbluemusic.github.io/public-monorepo](https://soundbluemusic.github.io/public-monorepo) |
 
+## 🔗 Quick Links
+
+**Context** — [Browse](https://context.soundbluemusic.com) · [Conversations](https://context.soundbluemusic.com/conversations) · [My Learning](https://context.soundbluemusic.com/my-learning) · [Download](https://context.soundbluemusic.com/download)
+
+**Roots** — [Browse](https://roots.soundbluemusic.com/browse) · [Constants](https://roots.soundbluemusic.com/constants) · [Favorites](https://roots.soundbluemusic.com/favorites) · [Search](https://roots.soundbluemusic.com/search)
+
+**Permissive** — [Libraries](https://permissive.soundbluemusic.com/libraries) · [Web APIs](https://permissive.soundbluemusic.com/web-api)
+
 ## 📦 Packages
 
 | Layer | Package | Purpose | Code |
