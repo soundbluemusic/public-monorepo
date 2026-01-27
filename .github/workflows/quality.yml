@@ -133,16 +133,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-output
-          path: apps
-
-      - name: Fix artifact paths
-        run: |
-          for app in context permissive roots; do
-            if [ -d "apps/$app/$app/dist" ]; then
-              mv apps/$app/$app/dist apps/$app/dist
-              rmdir apps/$app/$app 2>/dev/null || true
-            fi
-          done
+          path: .
 
       # Playwright 브라우저 캐싱
       - name: Get Playwright version
@@ -192,16 +183,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-output
-          path: apps
-
-      - name: Fix artifact paths
-        run: |
-          for app in context permissive roots; do
-            if [ -d "apps/$app/$app/dist" ]; then
-              mv apps/$app/$app/dist apps/$app/dist
-              rmdir apps/$app/$app 2>/dev/null || true
-            fi
-          done
+          path: .
 
       - name: Install Chrome for Lighthouse
         uses: browser-actions/setup-chrome@latest
@@ -241,16 +223,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-output
-          path: apps
-
-      - name: Fix artifact paths
-        run: |
-          for app in context permissive roots; do
-            if [ -d "apps/$app/$app/dist" ]; then
-              mv apps/$app/$app/dist apps/$app/dist
-              rmdir apps/$app/$app 2>/dev/null || true
-            fi
-          done
+          path: .
 
       - name: Check bundle size
         run: pnpm check:size

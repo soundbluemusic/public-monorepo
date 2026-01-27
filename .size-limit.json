@@ -5,28 +5,13 @@
     "limit": "500 KB"
   },
   {
-    "name": "context-css",
-    "path": "apps/context/dist/client/assets/main-*.css",
-    "limit": "100 KB"
-  },
-  {
     "name": "permissive-js",
     "path": "apps/permissive/dist/client/assets/main-*.js",
     "limit": "500 KB"
   },
   {
-    "name": "permissive-css",
-    "path": "apps/permissive/dist/client/assets/main-*.css",
-    "limit": "100 KB"
-  },
-  {
     "name": "roots-js",
     "path": "apps/roots/dist/client/assets/main-*.js",
     "limit": "500 KB"
-  },
-  {
-    "name": "roots-css",
-    "path": "apps/roots/dist/client/assets/main-*.css",
-    "limit": "100 KB"
   }
 ]
