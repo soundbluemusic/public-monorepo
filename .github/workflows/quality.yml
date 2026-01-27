@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   # ============================================================
-  # Stage 1: 빠른 검증 (빌드 불필요)
+  # Stage 1: 빠른 검증 (빌드 불필요) - build와 병렬 실행
   # ============================================================
   fast-checks:
     name: Fast Checks
@@ -30,8 +30,18 @@ jobs:
           node-version: 20
           cache: 'pnpm'
 
+      # Turborepo 로컬 캐시 복원
+      - name: Restore Turbo cache
+        uses: actions/cache@v4
+        with:
+          path: .turbo
+          key: turbo-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-${{ github.sha }}
+          restore-keys: |
+            turbo-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-
+            turbo-${{ runner.os }}-
+
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: TypeScript check
         run: pnpm typecheck
@@ -69,8 +79,18 @@ jobs:
           node-version: 20
           cache: 'pnpm'
 
+      # Turborepo 로컬 캐시 복원
+      - name: Restore Turbo cache
+        uses: actions/cache@v4
+        with:
+          path: .turbo
+          key: turbo-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-${{ github.sha }}
+          restore-keys: |
+            turbo-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-
+            turbo-${{ runner.os }}-
+
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Build all apps
         run: pnpm build
@@ -89,7 +109,7 @@ jobs:
   # Stage 3: 빌드 결과 사용하는 테스트들 (병렬 실행)
   # ============================================================
 
-  # Job 3-1: Playwright 테스트
+  # Job 3-1: Playwright 통합 테스트 (브라우저 캐싱 + 모든 E2E 테스트)
   playwright:
     name: Playwright Tests
     runs-on: ubuntu-latest
@@ -107,7 +127,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Download build artifacts
         uses: actions/download-artifact@v4
@@ -124,10 +144,28 @@ jobs:
             fi
           done
 
+      # Playwright 브라우저 캐싱
+      - name: Get Playwright version
+        id: playwright-version
+        run: echo "version=$(pnpm exec playwright --version | head -1)" >> $GITHUB_OUTPUT
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ steps.playwright-version.outputs.version }}
+
       - name: Install Playwright browsers
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
         run: pnpm exec playwright install --with-deps chromium
 
-      - name: Run Playwright tests
+      - name: Install Playwright deps (cached)
+        if: steps.playwright-cache.outputs.cache-hit == 'true'
+        run: pnpm exec playwright install-deps chromium
+
+      # 모든 E2E 테스트 실행 (통합)
+      - name: Run all E2E tests
         run: pnpm test:e2e
 
   # Job 3-2: Lighthouse CI
@@ -148,7 +186,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Download build artifacts
         uses: actions/download-artifact@v4
@@ -197,7 +235,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Download build artifacts
         uses: actions/download-artifact@v4
@@ -222,94 +260,3 @@ jobs:
 
       - name: Verify SSR build
         run: pnpm verify:ssr
-
-  # Job 3-4: UX 품질 테스트
-  ux-quality:
-    name: UX Quality Tests
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'pnpm'
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: build-output
-          path: apps
-
-      - name: Fix artifact paths
-        run: |
-          for app in context permissive roots; do
-            if [ -d "apps/$app/$app/dist" ]; then
-              mv apps/$app/$app/dist apps/$app/dist
-              rmdir apps/$app/$app 2>/dev/null || true
-            fi
-          done
-
-      - name: Install Playwright browsers
-        run: pnpm exec playwright install --with-deps chromium
-
-      - name: Run accessibility tests
-        run: pnpm exec playwright test tests/e2e/accessibility.spec.ts
-
-      - name: Run mobile tests
-        run: pnpm exec playwright test tests/e2e/mobile.spec.ts
-
-      - name: Run responsive tests
-        run: pnpm exec playwright test tests/e2e/responsive.spec.ts
-
-  # Job 3-5: PWA 및 보안 검증
-  pwa-security:
-    name: PWA & Security
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'pnpm'
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: build-output
-          path: apps
-
-      - name: Fix artifact paths
-        run: |
-          for app in context permissive roots; do
-            if [ -d "apps/$app/$app/dist" ]; then
-              mv apps/$app/$app/dist apps/$app/dist
-              rmdir apps/$app/$app 2>/dev/null || true
-            fi
-          done
-
-      - name: Install Playwright browsers
-        run: pnpm exec playwright install --with-deps chromium
-
-      - name: Run PWA tests
-        run: pnpm exec playwright test tests/e2e/pwa/
-
-      - name: Run security tests
-        run: pnpm exec playwright test tests/e2e/security/
