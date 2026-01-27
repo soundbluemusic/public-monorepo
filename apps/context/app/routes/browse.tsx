@@ -1,7 +1,8 @@
 /**
- * @fileoverview 찾아보기 페이지 - 영어 버전 (TanStack Start)
+ * @fileoverview 찾아보기 페이지 - 영어 버전 (TanStack Start + Query Hydration)
  */
 
+import { dehydrate, HydrationBoundary, QueryClient, queryKeys } from '@soundblue/features/query';
 import { headFactory } from '@soundblue/seo/meta';
 import { createFileRoute } from '@tanstack/react-router';
 import { useCallback } from 'react';
@@ -16,6 +17,7 @@ import {
   type SortOption,
   useBrowseFilters,
 } from '@/components/browse';
+
 import { Layout } from '@/components/layout';
 import { APP_CONFIG } from '@/config';
 import { BROWSE_CHUNK_SIZE } from '@/constants';
@@ -34,14 +36,20 @@ interface BrowseMetadata {
 }
 
 interface LoaderData {
-  initialEntries: LightEntry[];
+  dehydratedState: ReturnType<typeof dehydrate>;
   meta: BrowseMetadata;
   categories: typeof categories;
 }
 
 export const Route = createFileRoute('/browse')({
   loader: async (): Promise<LoaderData> => {
-    const initialEntries = await loadLightEntriesChunkForSSR('alphabetical', 0);
+    const queryClient = new QueryClient();
+
+    // SSR에서 첫 청크를 Query 캐시에 prefetch
+    await queryClient.prefetchQuery({
+      queryKey: queryKeys.browse.chunk('alphabetical', 0),
+      queryFn: () => loadLightEntriesChunkForSSR('alphabetical', 0),
+    });
 
     const meta: BrowseMetadata = {
       totalEntries: jsonEntriesCount,
@@ -52,7 +60,7 @@ export const Route = createFileRoute('/browse')({
     };
 
     return {
-      initialEntries,
+      dehydratedState: dehydrate(queryClient),
       meta,
       categories,
     };
@@ -69,7 +77,22 @@ export const Route = createFileRoute('/browse')({
 });
 
 function BrowsePage() {
-  const { initialEntries, meta, categories: cats } = Route.useLoaderData();
+  const { dehydratedState, meta, categories: cats } = Route.useLoaderData();
+
+  return (
+    <HydrationBoundary state={dehydratedState}>
+      <BrowseContent meta={meta} categories={cats} />
+    </HydrationBoundary>
+  );
+}
+
+function BrowseContent({
+  meta,
+  categories: cats,
+}: {
+  meta: BrowseMetadata;
+  categories: typeof categories;
+}) {
   const { locale, localePath, t } = useI18n();
 
   const { studiedIds, favoriteIds, overallProgress, todayStudied, bookmarkCount, isLoading } =
@@ -91,7 +114,6 @@ function BrowsePage() {
     handlePageChange,
   } = useBrowseFilters({
     categories: cats,
-    initialEntries,
     meta,
     studiedIds,
     favoriteIds,
@@ -178,7 +200,8 @@ function BrowsePage() {
         t={t}
       />
 
-      <div className="mb-4 flex items-center justify-between">
+      {/* 결과 수 */}
+      <div className="mb-4 flex items-center gap-4">
         <p className="text-sm text-(--text-secondary)">
           {isLoadingChunk
             ? t('loading')

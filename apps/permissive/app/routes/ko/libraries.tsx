@@ -78,10 +78,11 @@ function LibrariesPageKo() {
       />
 
       {/* Results count */}
-      <div className="text-sm text-(--text-tertiary) mb-4">
+      <div className="mb-4 text-sm text-(--text-tertiary)">
         {filteredLibraries.length} 개의 라이브러리
       </div>
 
+      {/* Library Grid */}
       <LibraryGrid
         locale={locale}
         groupedLibraries={groupedLibraries}

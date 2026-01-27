@@ -1,6 +1,7 @@
 export { BrowseFilters } from './BrowseFilters';
 export { BrowseStats } from './BrowseStats';
 export { EntryList } from './EntryList';
+export { EntryTable } from './EntryTable';
 export { Pagination } from './Pagination';
 export { QuickActions } from './QuickActions';
 export {

@@ -1,30 +1,16 @@
-import { useNavigate, useRouterState } from '@tanstack/react-router';
+/**
+ * @fileoverview Browse 필터 훅 (TanStack Query Hydration 기반)
+ *
+ * SSR에서 prefetch된 데이터가 HydrationBoundary를 통해 Query 캐시에 주입됩니다.
+ * useQuery는 캐시에서 즉시 데이터를 반환하므로 로딩 없이 렌더링됩니다.
+ */
+
+import { useRouterState } from '@tanstack/react-router';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { z } from 'zod';
 import { BROWSE_CHUNK_SIZE, PAGE_SIZE } from '@/constants';
 import type { categories } from '@/data/categories';
 import type { LightEntry } from '@/data/entries';
-
-/** Zod schema for runtime validation of fetched LightEntry data */
-const LightEntrySchema = z.object({
-  id: z.string(),
-  korean: z.string(),
-  romanization: z.string(),
-  categoryId: z.string(),
-  word: z.object({
-    ko: z.string(),
-    en: z.string(),
-  }),
-});
-
-const LightEntryArraySchema = z.array(LightEntrySchema);
-
-/** 청크 파일 스키마 */
-const ChunkFileSchema = z.object({
-  chunkIndex: z.number(),
-  entries: LightEntryArraySchema,
-  hasMore: z.boolean(),
-});
+import { type SortOption, useBrowseByCategory, useBrowseChunk } from '@/hooks/useBrowseQuery';
 
 /** 카테고리 필터: 'all' 또는 카테고리 ID */
 export type FilterCategory = 'all' | string;
@@ -35,7 +21,7 @@ export type FilterStatus = (typeof FILTER_STATUSES)[number];
 
 /** 유효한 정렬 옵션 값 (타입과 검증 동기화) */
 export const SORT_OPTIONS = ['alphabetical', 'category', 'recent'] as const;
-export type SortOption = (typeof SORT_OPTIONS)[number];
+export type { SortOption } from '@/hooks/useBrowseQuery';
 
 /** 타입 가드: FilterStatus 검증 */
 export function isFilterStatus(value: string): value is FilterStatus {
@@ -47,10 +33,8 @@ export function isSortOption(value: string): value is SortOption {
   return (SORT_OPTIONS as readonly string[]).includes(value);
 }
 
-// PAGE_SIZE와 BROWSE_CHUNK_SIZE는 @/constants에서 import
 export { PAGE_SIZE } from '@/constants';
 
-/** 청크당 항목 수 (constants에서 BROWSE_CHUNK_SIZE로 정의) */
 const CHUNK_SIZE = BROWSE_CHUNK_SIZE;
 
 /** Browse 메타데이터 */
@@ -64,8 +48,6 @@ interface BrowseMetadata {
 
 interface UseBrowseFiltersOptions {
   categories: typeof categories;
-  /** loader에서 로드된 초기 엔트리 (첫 청크) */
-  initialEntries: LightEntry[];
   /** 메타데이터 */
   meta: BrowseMetadata;
   studiedIds: Set<string>;
@@ -73,41 +55,26 @@ interface UseBrowseFiltersOptions {
   isLoading: boolean;
 }
 
-/** 청크 캐시 (정렬 타입별) */
-const chunkCache = new Map<string, LightEntry[]>();
-
 /**
- * 청크 기반 Browse 필터 훅
+ * 청크 기반 Browse 필터 훅 (TanStack Query Hydration)
  *
- * ## 최적화 전략
- * - 서버에서 첫 청크만 로드 (1000개)
- * - 페이지 전환 시 필요한 청크만 fetch
- * - 청크는 메모리에 캐시하여 재사용
+ * ## 동작 방식
+ * 1. SSR loader에서 prefetchQuery로 캐시 채움
+ * 2. dehydrate로 캐시 상태 추출
+ * 3. HydrationBoundary로 클라이언트 캐시에 주입
+ * 4. useQuery가 캐시에서 즉시 반환 (isPending = false)
  */
 export function useBrowseFilters({
   categories: cats,
-  initialEntries,
   meta,
   studiedIds,
   favoriteIds,
   isLoading,
 }: UseBrowseFiltersOptions) {
-  const navigate = useNavigate();
   const routerState = useRouterState();
   const searchParams = useMemo(
     () => new URLSearchParams(routerState.location.search),
     [routerState.location.search],
-  );
-  const setSearchParams = useCallback(
-    (paramsOrUpdater: URLSearchParams | ((prev: URLSearchParams) => URLSearchParams)) => {
-      const newParams =
-        typeof paramsOrUpdater === 'function'
-          ? paramsOrUpdater(new URLSearchParams(routerState.location.search))
-          : paramsOrUpdater;
-      // @ts-expect-error - TanStack Router navigate search type incompatibility
-      navigate({ search: newParams.toString() || undefined });
-    },
-    [navigate, routerState.location.search],
   );
 
   // Filter & Sort state
@@ -116,21 +83,39 @@ export function useBrowseFilters({
   const [sortBy, setSortBy] = useState<SortOption>('alphabetical');
   const [currentPage, setCurrentPage] = useState(1);
 
-  // 청크 로딩 상태
-  const [isLoadingChunk, setIsLoadingChunk] = useState(false);
-  const [currentChunkEntries, setCurrentChunkEntries] = useState<LightEntry[]>(initialEntries);
+  // 현재 페이지에 해당하는 청크 인덱스 계산
+  const chunkIndex = useMemo(() => {
+    const startIndex = (currentPage - 1) * PAGE_SIZE;
+    return Math.floor(startIndex / CHUNK_SIZE);
+  }, [currentPage]);
 
-  // 카테고리별 동적 로드 상태
-  const [categoryEntries, setCategoryEntries] = useState<LightEntry[] | null>(null);
-  const [isLoadingCategory, setIsLoadingCategory] = useState(false);
+  // 청크 Query (카테고리 필터가 'all'일 때만 활성화)
+  // HydrationBoundary로 SSR 데이터가 캐시에 있으므로 즉시 반환
+  const { data: chunkData, isPending: isChunkPending } = useBrowseChunk(
+    sortBy,
+    chunkIndex,
+    filterCategory === 'all',
+  );
 
-  // 초기 청크를 캐시에 저장
-  useEffect(() => {
-    const cacheKey = `alphabetical-0`;
-    if (!chunkCache.has(cacheKey)) {
-      chunkCache.set(cacheKey, initialEntries);
+  // 카테고리 Query (카테고리 필터가 있을 때만 활성화)
+  const { data: categoryData, isPending: isCategoryPending } = useBrowseByCategory(
+    filterCategory,
+    filterCategory !== 'all',
+  );
+
+  // 현재 청크 엔트리 (Query 캐시에서 가져옴)
+  const currentChunkEntries = useMemo(() => {
+    if (filterCategory !== 'all') {
+      return []; // 카테고리 모드에서는 사용 안함
     }
-  }, [initialEntries]);
+    return chunkData ?? [];
+  }, [filterCategory, chunkData]);
+
+  // 카테고리 엔트리
+  const categoryEntries = useMemo(() => {
+    if (filterCategory === 'all') return null;
+    return categoryData ?? null;
+  }, [filterCategory, categoryData]);
 
   // Sync URL params to state
   useEffect(() => {
@@ -162,90 +147,7 @@ export function useBrowseFilters({
     }
   }, [searchParams, cats]);
 
-  // 청크 fetch 함수
-  const fetchChunk = useCallback(
-    async (sortType: SortOption, chunkIndex: number): Promise<LightEntry[]> => {
-      const cacheKey = `${sortType}-${chunkIndex}`;
-
-      // 캐시 확인
-      const cached = chunkCache.get(cacheKey);
-      if (cached) {
-        return cached;
-      }
-
-      // fetch
-      const response = await fetch(`/data/browse/${sortType}/chunk-${chunkIndex}.json`);
-      if (!response.ok) {
-        console.error(`Failed to fetch chunk: ${sortType}/${chunkIndex}`);
-        return [];
-      }
-
-      const data = await response.json();
-      const parsed = ChunkFileSchema.parse(data);
-
-      // 캐시에 저장
-      chunkCache.set(cacheKey, parsed.entries);
-      return parsed.entries;
-    },
-    [],
-  );
-
-  // 페이지에 해당하는 청크 로드
-  useEffect(() => {
-    // 카테고리 필터 사용 시에는 청크 로드하지 않음
-    if (filterCategory !== 'all') {
-      return;
-    }
-
-    // 현재 페이지가 어느 청크에 속하는지 계산
-    const startIndex = (currentPage - 1) * PAGE_SIZE;
-    const chunkIndex = Math.floor(startIndex / CHUNK_SIZE);
-    const cacheKey = `${sortBy}-${chunkIndex}`;
-
-    // 이미 캐시에 있으면 바로 사용
-    const cached = chunkCache.get(cacheKey);
-    if (cached) {
-      setCurrentChunkEntries(cached);
-      return;
-    }
-
-    // 새 청크 fetch
-    setIsLoadingChunk(true);
-    fetchChunk(sortBy, chunkIndex)
-      .then((entries) => {
-        setCurrentChunkEntries(entries);
-      })
-      .finally(() => {
-        setIsLoadingChunk(false);
-      });
-  }, [currentPage, sortBy, filterCategory, fetchChunk]);
-
-  // 카테고리 변경 시 동적 로드
-  useEffect(() => {
-    if (filterCategory === 'all') {
-      setCategoryEntries(null);
-      setIsLoadingCategory(false);
-      return;
-    }
-
-    setIsLoadingCategory(true);
-    fetch(`/data/by-category/${filterCategory}.json`)
-      .then((r) => {
-        if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        return r.json();
-      })
-      .then((data: unknown) => {
-        const parsed = LightEntryArraySchema.parse(data);
-        setCategoryEntries(parsed);
-        setIsLoadingCategory(false);
-      })
-      .catch(() => {
-        setCategoryEntries([]);
-        setIsLoadingCategory(false);
-      });
-  }, [filterCategory]);
-
-  // 필터 변경 시 페이지 리셋 (이전 값과 비교)
+  // 필터 변경 시 페이지 리셋
   const prevFiltersRef = useRef({ filterCategory, filterStatus, sortBy });
   useEffect(() => {
     const prev = prevFiltersRef.current;
@@ -256,12 +158,9 @@ export function useBrowseFilters({
 
     if (filtersChanged) {
       setCurrentPage(1);
-      const params = new URLSearchParams(searchParams);
-      params.delete('page');
-      setSearchParams(params);
       prevFiltersRef.current = { filterCategory, filterStatus, sortBy };
     }
-  }, [filterCategory, filterStatus, sortBy, searchParams, setSearchParams]);
+  }, [filterCategory, filterStatus, sortBy]);
 
   // URL update helper
   const updateUrlParams = useCallback(
@@ -274,16 +173,20 @@ export function useBrowseFilters({
           params.set(key, value);
         }
       }
-      setSearchParams(params);
+      const search = params.toString();
+      const newUrl = search
+        ? `${routerState.location.pathname}?${search}`
+        : routerState.location.pathname;
+      window.history.replaceState(null, '', newUrl);
     },
-    [searchParams, setSearchParams],
+    [searchParams, routerState.location.pathname],
   );
 
   // 필터링 및 표시할 엔트리 계산
   const { displayEntries, totalFilteredCount } = useMemo(() => {
     // 카테고리 필터 사용 시
     if (filterCategory !== 'all') {
-      if (isLoadingCategory || categoryEntries === null) {
+      if (isCategoryPending || categoryEntries === null) {
         return { displayEntries: [], totalFilteredCount: 0 };
       }
 
@@ -311,7 +214,6 @@ export function useBrowseFilters({
     }
 
     // 전체 목록 (청크 기반)
-    // 상태 필터가 있으면 현재 청크에서 필터링
     let filtered = currentChunkEntries;
 
     if (!isLoading && filterStatus !== 'all') {
@@ -332,15 +234,12 @@ export function useBrowseFilters({
     if (filterStatus === 'all') {
       paginatedEntries = filtered.slice(offsetInChunk, offsetInChunk + PAGE_SIZE);
     } else {
-      // 상태 필터 있으면 필터링된 결과에서 페이지네이션
-      // (이 경우 totalFilteredCount가 정확하지 않을 수 있음 - 전체 스캔 필요)
       const start = (currentPage - 1) * PAGE_SIZE;
       paginatedEntries = filtered.slice(start % CHUNK_SIZE, (start % CHUNK_SIZE) + PAGE_SIZE);
     }
 
     return {
       displayEntries: paginatedEntries,
-      // 상태 필터 없을 때는 전체 개수, 있을 때는 현재 청크 기준 (근사치)
       totalFilteredCount: filterStatus === 'all' ? meta.totalEntries : filtered.length,
     };
   }, [
@@ -348,7 +247,7 @@ export function useBrowseFilters({
     filterStatus,
     currentPage,
     categoryEntries,
-    isLoadingCategory,
+    isCategoryPending,
     currentChunkEntries,
     studiedIds,
     favoriteIds,
@@ -362,7 +261,6 @@ export function useBrowseFilters({
       return Math.ceil(totalFilteredCount / PAGE_SIZE);
     }
     if (filterStatus !== 'all') {
-      // 상태 필터 시 정확한 페이지 수 계산 불가 - 근사치 사용
       return Math.ceil(totalFilteredCount / PAGE_SIZE);
     }
     return Math.ceil(meta.totalEntries / PAGE_SIZE);
@@ -378,11 +276,18 @@ export function useBrowseFilters({
       } else {
         params.set('page', String(page));
       }
-      setSearchParams(params);
+      const search = params.toString();
+      const newUrl = search
+        ? `${routerState.location.pathname}?${search}`
+        : routerState.location.pathname;
+      window.history.replaceState(null, '', newUrl);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     },
-    [searchParams, setSearchParams],
+    [searchParams, routerState.location.pathname],
   );
+
+  // 로딩 상태 통합
+  const isLoadingChunk = filterCategory === 'all' ? isChunkPending : isCategoryPending;
 
   return {
     // State
@@ -390,7 +295,7 @@ export function useBrowseFilters({
     filterStatus,
     sortBy,
     currentPage,
-    isLoadingChunk: isLoadingChunk || isLoadingCategory,
+    isLoadingChunk,
 
     // Setters
     setFilterCategory,

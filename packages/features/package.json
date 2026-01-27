@@ -19,12 +19,15 @@
     ".": "./src/index.ts",
     "./settings": "./src/settings/index.ts",
     "./toast": "./src/toast/index.ts",
-    "./media": "./src/media/index.ts"
+    "./media": "./src/media/index.ts",
+    "./query": "./src/query/index.ts"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
+    "@tanstack/react-query": "^5.0.0",
+    "@tanstack/react-query-devtools": "^5.0.0",
     "react": "^19.2.3"
   },
   "dependencies": {

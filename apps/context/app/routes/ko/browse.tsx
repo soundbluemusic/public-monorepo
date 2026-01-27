@@ -1,8 +1,13 @@
 /**
- * @fileoverview 찾아보기 페이지 - 한국어 버전 (TanStack Start)
+ * @fileoverview 찾아보기 페이지 - 한국어 버전 (TanStack Start + TanStack Query Hydration)
+ *
+ * SSR에서 prefetch된 데이터가 HydrationBoundary를 통해 Query 캐시에 주입됩니다.
+ * useQuery는 캐시에서 즉시 데이터를 반환하므로 로딩 없이 렌더링됩니다.
  */
 
+import { dehydrate, HydrationBoundary, QueryClient, queryKeys } from '@soundblue/features/query';
 import { headFactory } from '@soundblue/seo/meta';
+import type { DehydratedState } from '@tanstack/react-query';
 import { createFileRoute } from '@tanstack/react-router';
 import { useCallback } from 'react';
 import {
@@ -16,11 +21,12 @@ import {
   type SortOption,
   useBrowseFilters,
 } from '@/components/browse';
+
 import { Layout } from '@/components/layout';
 import { APP_CONFIG } from '@/config';
 import { BROWSE_CHUNK_SIZE } from '@/constants';
 import { categories } from '@/data/categories';
-import { jsonEntriesCount, type LightEntry, loadLightEntriesChunkForSSR } from '@/data/entries';
+import { jsonEntriesCount, loadLightEntriesChunkForSSR } from '@/data/entries';
 import { useStudyData } from '@/hooks';
 import { useI18n } from '@/i18n';
 
@@ -33,14 +39,21 @@ interface BrowseMetadata {
 }
 
 interface LoaderData {
-  initialEntries: LightEntry[];
+  dehydratedState: DehydratedState;
   meta: BrowseMetadata;
   categories: typeof categories;
 }
 
 export const Route = createFileRoute('/ko/browse')({
   loader: async (): Promise<LoaderData> => {
-    const initialEntries = await loadLightEntriesChunkForSSR('alphabetical', 0);
+    // SSR용 QueryClient 생성
+    const queryClient = new QueryClient();
+
+    // 첫 번째 청크 prefetch (캐시에 저장)
+    await queryClient.prefetchQuery({
+      queryKey: queryKeys.browse.chunk('alphabetical', 0),
+      queryFn: () => loadLightEntriesChunkForSSR('alphabetical', 0),
+    });
 
     const meta: BrowseMetadata = {
       totalEntries: jsonEntriesCount,
@@ -51,7 +64,7 @@ export const Route = createFileRoute('/ko/browse')({
     };
 
     return {
-      initialEntries,
+      dehydratedState: dehydrate(queryClient),
       meta,
       categories,
     };
@@ -68,7 +81,22 @@ export const Route = createFileRoute('/ko/browse')({
 });
 
 function BrowsePage() {
-  const { initialEntries, meta, categories: cats } = Route.useLoaderData();
+  const { dehydratedState, meta, categories: cats } = Route.useLoaderData();
+
+  return (
+    <HydrationBoundary state={dehydratedState}>
+      <BrowseContent meta={meta} categories={cats} />
+    </HydrationBoundary>
+  );
+}
+
+function BrowseContent({
+  meta,
+  categories: cats,
+}: {
+  meta: BrowseMetadata;
+  categories: typeof categories;
+}) {
   const { locale, localePath, t } = useI18n();
 
   const { studiedIds, favoriteIds, overallProgress, todayStudied, bookmarkCount, isLoading } =
@@ -90,7 +118,6 @@ function BrowsePage() {
     handlePageChange,
   } = useBrowseFilters({
     categories: cats,
-    initialEntries,
     meta,
     studiedIds,
     favoriteIds,
@@ -177,7 +204,8 @@ function BrowsePage() {
         t={t}
       />
 
-      <div className="mb-4 flex items-center justify-between">
+      {/* 결과 수 */}
+      <div className="mb-4 flex items-center gap-4">
         <p className="text-sm text-(--text-secondary)">
           {isLoadingChunk
             ? t('loading')

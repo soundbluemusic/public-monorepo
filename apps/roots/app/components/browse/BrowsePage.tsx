@@ -130,6 +130,11 @@ export function BrowsePage() {
             filteredCount={totalCount}
           />
 
+          {/* 결과 수 */}
+          <div className="mb-4 text-sm text-(--text-tertiary)">
+            {totalCount} {locale === 'ko' ? '개의 개념' : 'concepts'}
+          </div>
+
           {/* 개념 그리드 */}
           <div ref={conceptsGridRef} className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {paginatedConcepts.map((concept) => (

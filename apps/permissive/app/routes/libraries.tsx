@@ -78,10 +78,11 @@ function LibrariesPage() {
       />
 
       {/* Results count */}
-      <div className="text-sm text-(--text-tertiary) mb-4">
+      <div className="mb-4 text-sm text-(--text-tertiary)">
         {filteredLibraries.length} libraries
       </div>
 
+      {/* Library Grid */}
       <LibraryGrid
         locale={locale}
         groupedLibraries={groupedLibraries}

@@ -24,6 +24,7 @@
     "./utils": "./src/utils/index.ts",
     "./hooks": "./src/hooks/index.ts",
     "./components": "./src/components/index.ts",
+    "./table": "./src/components/Table/index.ts",
     "./styles/base.css": "./src/styles/base.css"
   },
   "scripts": {
@@ -32,6 +33,7 @@
     "build-storybook": "storybook build"
   },
   "peerDependencies": {
+    "@tanstack/react-table": "^8.0.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"
   },
