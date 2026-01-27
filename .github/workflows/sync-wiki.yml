@@ -1,0 +1,30 @@
+# Wiki 동기화 워크플로우
+# wiki/ 폴더 변경 시 GitHub Wiki로 자동 동기화
+#
+# 방향: 레포 (wiki/) → GitHub Wiki (단방향)
+
+name: Sync Wiki
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "wiki/**"
+  workflow_dispatch: # 수동 실행 허용
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Sync wiki folder to GitHub Wiki
+        uses: Andrew-Chen-Wang/github-wiki-action@v4
+        with:
+          path: wiki/
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
