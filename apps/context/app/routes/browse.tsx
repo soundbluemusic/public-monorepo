@@ -22,7 +22,7 @@ import { Layout } from '@/components/layout';
 import { APP_CONFIG } from '@/config';
 import { BROWSE_CHUNK_SIZE } from '@/constants';
 import { categories } from '@/data/categories';
-import { jsonEntriesCount, type LightEntry, loadLightEntriesChunkForSSR } from '@/data/entries';
+import { jsonEntriesCount, loadLightEntriesChunkForSSR } from '@/data/entries';
 import { useStudyData } from '@/hooks';
 import { useI18n } from '@/i18n';
 
@@ -239,7 +239,11 @@ function BrowseContent({
             currentPage={currentPage}
             totalPages={totalPages}
             onPageChange={handlePageChange}
-            t={t}
+            labels={{
+              navLabel: t('pageNavigation'),
+              previousPage: t('previousPage'),
+              nextPage: t('nextPage'),
+            }}
           />
         </>
       )}

@@ -7,7 +7,6 @@
 'use client';
 
 import { DataTable, TableFilter } from '@soundblue/ui/table';
-import { cn } from '@soundblue/ui/utils';
 import { Link } from '@tanstack/react-router';
 import type { ColumnDef } from '@tanstack/react-table';
 import { Bookmark, CheckCircle } from 'lucide-react';
@@ -22,7 +21,6 @@ interface EntryTableProps {
   categories: typeof categories;
   studiedIds: Set<string>;
   favoriteIds: Set<string>;
-  bookmarkedLabel?: string;
 }
 
 export function EntryTable({
@@ -32,7 +30,6 @@ export function EntryTable({
   categories: cats,
   studiedIds,
   favoriteIds,
-  bookmarkedLabel,
 }: EntryTableProps) {
   const [globalFilter, setGlobalFilter] = useState('');
 

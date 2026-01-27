@@ -7,13 +7,13 @@ import { ProgressBar } from '@soundblue/ui/primitives';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { FolderOpen, Sparkles, TrendingUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { Layout } from '../../components/layout';
-import { categories as allCategories } from '../../data/categories';
-import { getEntryById, type LightEntry } from '../../data/entries';
-import type { Category, MeaningEntry } from '../../data/types';
-import { useStudyData } from '../../hooks';
-import { type Language, useI18n } from '../../i18n';
-import { fetchEntryCountsFromD1 } from '../../services/d1-server';
+import { Layout } from '@/components/layout';
+import { categories as allCategories } from '@/data/categories';
+import { getEntryById, type LightEntry } from '@/data/entries';
+import type { Category, MeaningEntry } from '@/data/types';
+import { useStudyData } from '@/hooks';
+import { type Language, useI18n } from '@/i18n';
+import { fetchEntryCountsFromD1 } from '@/services/d1-server';
 
 const getPronunciation = (entry: MeaningEntry, locale: Language): string | undefined => {
   switch (locale) {

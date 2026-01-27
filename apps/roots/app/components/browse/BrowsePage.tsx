@@ -6,6 +6,7 @@
  */
 
 import { useAutoAnimate } from '@soundblue/ui/hooks';
+import { Pagination } from '@soundblue/ui/patterns';
 import { Link, useNavigate } from '@tanstack/react-router';
 import { lazy, Suspense, useMemo, useState } from 'react';
 import { buildConceptGraph, type GraphNode } from '../../data/algorithms';
@@ -17,7 +18,6 @@ import { Layout } from '../layout/Layout';
 import { BrowseTabs } from './BrowseTabs';
 import { ConceptFilters } from './ConceptFilters';
 import { LightConceptCard } from './LightConceptCard';
-import { Pagination } from './Pagination';
 import { useBrowseFilters } from './useBrowseFilters';
 
 // Lazy load ConceptGraph (D3.js ~500KB)

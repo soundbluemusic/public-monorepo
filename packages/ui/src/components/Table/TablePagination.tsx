@@ -60,16 +60,17 @@ export function TablePagination<TData>({ table, className }: TablePaginationProp
 
         {/* Page numbers */}
         <div className="flex items-center gap-1 mx-2">
-          {generatePageNumbers(currentPage, totalPages).map((page, index) =>
-            page === '...' ? (
-              <span key={`ellipsis-${index}`} className="px-2 text-(--text-tertiary)">
+          {generatePageNumbers(currentPage, totalPages).map((page, index) => {
+            const key = page === '...' ? `ellipsis-${index < 3 ? 'start' : 'end'}` : `page-${page}`;
+            return page === '...' ? (
+              <span key={key} className="px-2 text-(--text-tertiary)">
                 ...
               </span>
             ) : (
               <button
-                key={page}
+                key={key}
                 type="button"
-                onClick={() => table.setPageIndex(page - 1)}
+                onClick={() => table.setPageIndex((page as number) - 1)}
                 className={cn(
                   'min-w-[2rem] h-8 px-2 rounded-lg text-sm font-medium transition-colors',
                   page === currentPage
@@ -79,8 +80,8 @@ export function TablePagination<TData>({ table, className }: TablePaginationProp
               >
                 {page}
               </button>
-            ),
-          )}
+            );
+          })}
         </div>
 
         <button

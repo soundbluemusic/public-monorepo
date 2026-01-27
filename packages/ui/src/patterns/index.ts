@@ -10,6 +10,7 @@ export {
   preloadComponent,
   usePreloadOnVisible,
 } from './LazyLoad';
+export { Pagination, type PaginationLabels, type PaginationProps } from './Pagination';
 export {
   SearchDropdown,
   type SearchDropdownProps,

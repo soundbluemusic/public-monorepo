@@ -25,13 +25,13 @@ import {
   HomonymSection,
   isColorEntry,
   LinkedExample,
-} from '../../../components/entry';
-import { Layout } from '../../../components/layout';
-import { APP_CONFIG } from '../../../config';
-import { getCategoryById } from '../../../data/categories';
-import type { LocaleEntry } from '../../../data/types';
-import { fetchEntryFromD1 } from '../../../services/d1-server';
-import { useUserDataStore } from '../../../stores/user-data-store';
+} from '@/components/entry';
+import { Layout } from '@/components/layout';
+import { APP_CONFIG } from '@/config';
+import { getCategoryById } from '@/data/categories';
+import type { LocaleEntry } from '@/data/types';
+import { fetchEntryFromD1 } from '@/services/d1-server';
+import { useUserDataStore } from '@/stores/user-data-store';
 
 type LoaderData = { entry: LocaleEntry; englishColorName?: string };
 

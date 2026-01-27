@@ -1,24 +1,68 @@
 /**
- * @fileoverview 페이지네이션 컴포넌트
+ * @fileoverview Pagination Component
+ * @environment universal
+ *
+ * 재사용 가능한 페이지네이션 컴포넌트.
+ * i18n 독립적으로 설계되어 labels를 props로 받습니다.
  */
 import { generatePageNumbers } from '@soundblue/core/utils';
-import { cn } from '@soundblue/ui/utils';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { memo, useMemo } from 'react';
-import { useI18n } from '@/i18n';
+import { cn } from '../utils/cn';
 
-interface PaginationProps {
-  currentPage: number;
-  totalPages: number;
-  onPageChange: (page: number) => void;
+export interface PaginationLabels {
+  /** 페이지 네비게이션 aria-label */
+  navLabel?: string;
+  /** 이전 페이지 버튼 aria-label */
+  previousPage?: string;
+  /** 다음 페이지 버튼 aria-label */
+  nextPage?: string;
 }
 
+export interface PaginationProps {
+  /** 현재 페이지 (1부터 시작) */
+  currentPage: number;
+  /** 전체 페이지 수 */
+  totalPages: number;
+  /** 페이지 변경 핸들러 */
+  onPageChange: (page: number) => void;
+  /** 접근성 라벨 (선택사항) */
+  labels?: PaginationLabels;
+  /** 추가 클래스명 */
+  className?: string;
+}
+
+const DEFAULT_LABELS: Required<PaginationLabels> = {
+  navLabel: 'Page navigation',
+  previousPage: 'Previous page',
+  nextPage: 'Next page',
+};
+
+/**
+ * 페이지네이션 컴포넌트
+ *
+ * @example
+ * ```tsx
+ * <Pagination
+ *   currentPage={1}
+ *   totalPages={10}
+ *   onPageChange={(page) => setPage(page)}
+ *   labels={{
+ *     navLabel: '페이지 네비게이션',
+ *     previousPage: '이전 페이지',
+ *     nextPage: '다음 페이지',
+ *   }}
+ * />
+ * ```
+ */
 export const Pagination = memo(function Pagination({
   currentPage,
   totalPages,
   onPageChange,
+  labels,
+  className,
 }: PaginationProps) {
-  const { locale } = useI18n();
+  const mergedLabels = { ...DEFAULT_LABELS, ...labels };
 
   const pageNumbers = useMemo(
     () => generatePageNumbers(currentPage, totalPages),
@@ -29,8 +73,8 @@ export const Pagination = memo(function Pagination({
 
   return (
     <nav
-      className="mt-6 mb-20 md:mb-0 flex items-center justify-center gap-2"
-      aria-label={locale === 'ko' ? '페이지 네비게이션' : 'Page navigation'}
+      className={cn('mt-6 mb-20 md:mb-0 flex items-center justify-center gap-2', className)}
+      aria-label={mergedLabels.navLabel}
     >
       <button
         type="button"
@@ -42,14 +86,13 @@ export const Pagination = memo(function Pagination({
             ? 'text-(--text-tertiary) cursor-not-allowed'
             : 'text-(--text-primary) hover:bg-(--bg-tertiary)',
         )}
-        aria-label={locale === 'ko' ? '이전 페이지' : 'Previous page'}
+        aria-label={mergedLabels.previousPage}
       >
         <ChevronLeft size={20} aria-hidden="true" />
       </button>
 
       <div className="flex items-center gap-1">
         {pageNumbers.map((page, idx) => {
-          // 고유 키 생성: 숫자는 그대로, ellipsis는 위치 기반 (앞/뒤)
           const key = page === '...' ? `ellipsis-${idx < 3 ? 'start' : 'end'}` : `page-${page}`;
           return page === '...' ? (
             <span key={key} className="px-2 text-(--text-tertiary)" aria-hidden="true">
@@ -64,7 +107,7 @@ export const Pagination = memo(function Pagination({
               className={cn(
                 'min-h-11 min-w-11 flex items-center justify-center rounded-lg font-medium transition-colors',
                 currentPage === page
-                  ? 'bg-(--accent-bg) text-white'
+                  ? 'bg-(--accent-primary) text-white'
                   : 'text-(--text-primary) hover:bg-(--bg-tertiary)',
               )}
             >
@@ -84,7 +127,7 @@ export const Pagination = memo(function Pagination({
             ? 'text-(--text-tertiary) cursor-not-allowed'
             : 'text-(--text-primary) hover:bg-(--bg-tertiary)',
         )}
-        aria-label={locale === 'ko' ? '다음 페이지' : 'Next page'}
+        aria-label={mergedLabels.nextPage}
       >
         <ChevronRight size={20} aria-hidden="true" />
       </button>

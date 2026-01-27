@@ -243,7 +243,11 @@ function BrowseContent({
             currentPage={currentPage}
             totalPages={totalPages}
             onPageChange={handlePageChange}
-            t={t}
+            labels={{
+              navLabel: t('pageNavigation'),
+              previousPage: t('previousPage'),
+              nextPage: t('nextPage'),
+            }}
           />
         </>
       )}

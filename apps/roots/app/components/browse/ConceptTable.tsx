@@ -20,7 +20,7 @@ interface ConceptTableProps {
 }
 
 export function ConceptTable({ concepts }: ConceptTableProps) {
-  const { locale, localePath, t } = useI18n();
+  const { locale, localePath } = useI18n();
   const [globalFilter, setGlobalFilter] = useState('');
 
   const columns: ColumnDef<LightConcept>[] = useMemo(

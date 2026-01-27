@@ -6,10 +6,10 @@
 
 'use client';
 
-import { DataTable, TableFilter, TablePagination } from '@soundblue/ui/table';
+import { DataTable, TableFilter } from '@soundblue/ui/table';
 import { cn } from '@soundblue/ui/utils';
 import { Link } from '@tanstack/react-router';
-import type { ColumnDef, ColumnFiltersState, SortingState } from '@tanstack/react-table';
+import type { ColumnDef } from '@tanstack/react-table';
 import { ExternalLink, Github, Star } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { getLibrarySlug, type Library } from '../../data/libraries';
