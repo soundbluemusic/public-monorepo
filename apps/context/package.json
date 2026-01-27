@@ -43,7 +43,7 @@
     "@types/react-dom": "^19.0.2",
     "@vitejs/plugin-react": "^5.1.2",
     "clsx": "^2.1.1",
-    "rollup-plugin-visualizer": "^5.14.0",
+    "rollup-plugin-visualizer": "^6.0.5",
     "tailwindcss": "^4.1.18",
     "tsx": "^4.19.2",
     "typescript": "^5.9.3",
