@@ -70,7 +70,7 @@
     "rollup-plugin-visualizer": "^6.0.5",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.7.2",
-    "vite": "^7.3.1",
+    "vite": "^8.0.0-beta.10",
     "vite-plugin-pwa": "^1.2.0",
     "workbox-build": "^7.4.0"
   }
