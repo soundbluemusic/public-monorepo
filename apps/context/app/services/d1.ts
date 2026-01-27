@@ -188,3 +188,59 @@ export async function getEntryCounts(db: D1Database): Promise<Map<string, number
     return new Map();
   }
 }
+
+/** D1 동음이의어 결과 타입 */
+export interface HomonymEntryFromD1 {
+  id: string;
+  korean: string;
+  romanization: string;
+  categoryId: string;
+  word: { ko: string; en: string };
+}
+
+/**
+ * D1에서 동음이의어 조회 (같은 korean, 다른 id)
+ */
+export async function getHomonymsByKoreanFromD1(
+  db: D1Database,
+  korean: string,
+): Promise<HomonymEntryFromD1[]> {
+  try {
+    const { results } = await db
+      .prepare(
+        'SELECT id, korean, romanization, category_id, translations FROM entries WHERE korean = ?',
+      )
+      .bind(korean)
+      .all<{
+        id: string;
+        korean: string;
+        romanization: string;
+        category_id: string;
+        translations: string;
+      }>();
+
+    return results.map((row) => {
+      let word = { ko: '', en: '' };
+      try {
+        const translations = JSON.parse(row.translations);
+        word = {
+          ko: translations.ko?.word || '',
+          en: translations.en?.word || '',
+        };
+      } catch {
+        // translations 파싱 실패 시 빈 값 사용
+      }
+
+      return {
+        id: row.id,
+        korean: row.korean,
+        romanization: row.romanization,
+        categoryId: row.category_id,
+        word,
+      };
+    });
+  } catch (error) {
+    logD1Error(`getHomonymsByKorean(${korean})`, error);
+    return [];
+  }
+}

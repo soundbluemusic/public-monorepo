@@ -1,8 +1,8 @@
 import { cn } from '@soundblue/ui/utils';
 import { Link } from '@tanstack/react-router';
-import { ArrowRight, Languages } from 'lucide-react';
+import { ArrowRight, Languages, Loader2 } from 'lucide-react';
 import { getCategoryById, getCategoryColor } from '@/data/categories';
-import { getHomonyms, type HomonymEntry } from '@/data/entries';
+import { useHomonyms } from '@/hooks';
 import { useI18n } from '@/i18n';
 
 interface HomonymSectionProps {
@@ -19,6 +19,8 @@ interface HomonymSectionProps {
  * 같은 한글(korean)을 가진 다른 의미의 단어들을 표시합니다.
  * 예: "배" → ship, pear, belly
  *
+ * TanStack Query를 사용하여 D1에서 동음이의어를 조회합니다.
+ *
  * @example
  * ```tsx
  * <HomonymSection korean="배" currentId="d-foo-bae" />
@@ -27,8 +29,25 @@ interface HomonymSectionProps {
 export function HomonymSection({ korean, currentId, className }: HomonymSectionProps) {
   const { locale, localePath, t } = useI18n();
 
-  // 다의어 조회 (현재 항목 제외)
-  const homonyms = getHomonyms(korean, currentId);
+  // TanStack Query를 사용한 다의어 조회 (현재 항목 제외)
+  const { data: homonyms = [], isLoading } = useHomonyms(korean, currentId);
+
+  // 로딩 중이면 스켈레톤 표시
+  if (isLoading) {
+    return (
+      <section
+        className={cn(
+          'rounded-xl bg-(--bg-elevated) border border-(--border-primary) overflow-hidden',
+          className,
+        )}
+      >
+        <div className="flex items-center gap-2 p-4">
+          <Loader2 size={18} className="text-(--accent-primary) animate-spin" />
+          <span className="text-sm text-(--text-tertiary)">{t('loading')}</span>
+        </div>
+      </section>
+    );
+  }
 
   // 다의어가 없으면 렌더링하지 않음
   if (homonyms.length === 0) {
@@ -57,6 +76,15 @@ export function HomonymSection({ korean, currentId, className }: HomonymSectionP
       </div>
     </section>
   );
+}
+
+/** D1에서 조회된 동음이의어 타입 */
+interface HomonymEntry {
+  id: string;
+  korean: string;
+  romanization: string;
+  categoryId: string;
+  word: { ko: string; en: string };
 }
 
 interface HomonymItemProps {

@@ -18,6 +18,8 @@ import {
   getEntryByIdFromD1,
   getEntryCounts as getEntryCountsFromD1,
   getEntryIdsByCategoryFromD1,
+  getHomonymsByKoreanFromD1,
+  type HomonymEntryFromD1,
 } from './d1';
 
 /**
@@ -139,4 +141,27 @@ export const fetchEntriesByCategoryFromD1 = createServerFn({ method: 'POST' })
     }
 
     return await getEntriesByCategoryFromD1(db, categoryId, locale);
+  });
+
+/** 동음이의어 조회 입력 타입 */
+type FetchHomonymsInput = { korean: string };
+
+/**
+ * 동음이의어(같은 한글, 다른 ID)를 D1에서 로드하는 서버 함수
+ *
+ * @example
+ * const homonyms = await fetchHomonyms({ data: { korean: '안녕' } });
+ */
+export const fetchHomonyms = createServerFn({ method: 'POST' })
+  .inputValidator((data: FetchHomonymsInput) => data)
+  .handler(async ({ data }): Promise<HomonymEntryFromD1[]> => {
+    const { korean } = data;
+    const db = getD1Database();
+
+    if (!db) {
+      console.error('[fetchHomonyms] D1 database not available');
+      return [];
+    }
+
+    return await getHomonymsByKoreanFromD1(db, korean);
   });
