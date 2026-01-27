@@ -37,7 +37,6 @@ export interface CompactEntry {
   d?: number; // difficulty (0=beginner이면 생략)
   f?: number; // frequency (0=common이면 생략)
   g?: string[]; // tags (빈 배열이면 생략)
-  h?: 1; // hasDialogue (1 if true, omitted if false)
   t: CompactTranslation; // translation
 }
 
@@ -129,9 +128,7 @@ export function expandEntry(compact: CompactEntry, categoryId: string): LocaleEn
     entry.frequency = 'common';
   }
 
-  if (compact.h === 1) {
-    entry.hasDialogue = true;
-  }
+  // dialogue는 압축 데이터에 포함되지 않음 (D1에서만 로드)
 
   return entry;
 }

@@ -1,70 +1,27 @@
 import { cn } from '@soundblue/ui/utils';
-import { ChevronDown, Loader2, MessageSquare } from 'lucide-react';
-import { useCallback, useState } from 'react';
+import { ChevronDown, MessageSquare } from 'lucide-react';
+import { useState } from 'react';
 import type { EntryDialogue } from '@/data/types';
 import { useI18n } from '@/i18n';
 
 interface EntryDialogueDisplayProps {
-  /** entry ID - dialogue 데이터 fetch용 */
-  entryId: string;
-  /** dialogue 데이터 존재 여부 */
-  hasDialogue?: boolean;
+  /** dialogue 데이터 (D1에서 로드됨) */
+  dialogue?: EntryDialogue;
   className?: string;
 }
 
 /**
- * 어휘별 대화예문 표시 컴포넌트 (Lazy-loading)
+ * 어휘별 대화예문 표시 컴포넌트
  *
- * dialogue 데이터는 사용자가 펼칠 때 lazy-load됩니다.
- * 초기 페이지 로딩 시 ~30% 용량 절감 효과가 있습니다.
- *
+ * D1에서 로드된 dialogue 데이터를 props로 받아 표시합니다.
  * A/B 화자를 구분하여 채팅 스타일로 렌더링합니다.
  */
-export function EntryDialogueDisplay({
-  entryId,
-  hasDialogue,
-  className,
-}: EntryDialogueDisplayProps) {
+export function EntryDialogueDisplay({ dialogue, className }: EntryDialogueDisplayProps) {
   const { t, locale } = useI18n();
   const [isOpen, setIsOpen] = useState(false);
-  const [dialogue, setDialogue] = useState<EntryDialogue | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  const dialogueFilename = entryId === 'biome' ? 'biome.dialogue.json' : `${entryId}.json`;
-
-  const handleToggle = useCallback(async () => {
-    if (isOpen) {
-      setIsOpen(false);
-      return;
-    }
-
-    // 이미 로드된 경우 바로 열기
-    if (dialogue) {
-      setIsOpen(true);
-      return;
-    }
-
-    // dialogue 데이터 lazy-load
-    setIsLoading(true);
-    setError(null);
-    try {
-      const response = await fetch(`/data/dialogues/${locale}/${dialogueFilename}`);
-      if (!response.ok) {
-        throw new Error('Failed to load dialogue');
-      }
-      const data: EntryDialogue = await response.json();
-      setDialogue(data);
-      setIsOpen(true);
-    } catch {
-      setError(locale === 'ko' ? '대화 예문을 불러올 수 없습니다' : 'Failed to load dialogue');
-    } finally {
-      setIsLoading(false);
-    }
-  }, [isOpen, dialogue, locale, dialogueFilename]);
 
   // dialogue가 없으면 렌더링하지 않음
-  if (!hasDialogue) {
+  if (!dialogue) {
     return null;
   }
 
@@ -78,33 +35,21 @@ export function EntryDialogueDisplay({
       {/* Collapsible Header */}
       <button
         type="button"
-        onClick={handleToggle}
-        disabled={isLoading}
+        onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between gap-2 p-4 hover:bg-(--bg-tertiary) transition-colors"
       >
         <div className="flex items-center gap-2">
           <MessageSquare size={18} className="text-(--accent-primary)" />
           <h3 className="text-base font-semibold text-(--text-primary)">{t('entryDialogue')}</h3>
         </div>
-        {isLoading ? (
-          <Loader2 size={18} className="text-(--text-tertiary) animate-spin" />
-        ) : (
-          <ChevronDown
-            size={18}
-            className={cn('text-(--text-tertiary) transition-transform', isOpen && 'rotate-180')}
-          />
-        )}
+        <ChevronDown
+          size={18}
+          className={cn('text-(--text-tertiary) transition-transform', isOpen && 'rotate-180')}
+        />
       </button>
 
-      {/* Error state */}
-      {error && (
-        <div className="px-4 pb-4">
-          <p className="text-sm text-red-500">{error}</p>
-        </div>
-      )}
-
       {/* Dialogue content */}
-      {isOpen && dialogue && (
+      {isOpen && (
         <div className="px-4 pb-4">
           {/* Context */}
           <div className="mb-4 px-3 py-2 rounded-lg bg-(--bg-tertiary) border border-(--border-secondary)">

@@ -313,9 +313,9 @@ function EntryPage() {
           </section>
         )}
 
-        {/* Dialogue Example Section (lazy-loaded) */}
+        {/* Dialogue Example Section */}
         <section className="mb-6">
-          <EntryDialogueDisplay entryId={entry.id} hasDialogue={entry.hasDialogue} />
+          <EntryDialogueDisplay dialogue={entry.dialogue} />
         </section>
 
         {/* Homonym Section - Similar Words */}

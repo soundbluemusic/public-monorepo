@@ -39,7 +39,7 @@ export function rowToLocaleEntry(row: D1EntryRow, locale: Language): LocaleEntry
       tags,
       difficulty: (row.difficulty || 'beginner') as LocaleEntry['difficulty'],
       frequency: row.frequency as LocaleEntry['frequency'] | undefined,
-      hasDialogue: !!translation.dialogue,
+      dialogue: translation.dialogue,
       translation: {
         word: translation.word,
         explanation: translation.explanation,

@@ -296,9 +296,9 @@ function EntryPageKo() {
           </section>
         )}
 
-        {/* 대화 예시 (lazy-loaded) */}
+        {/* 대화 예시 */}
         <section className="mb-6">
-          <EntryDialogueDisplay entryId={entry.id} hasDialogue={entry.hasDialogue} />
+          <EntryDialogueDisplay dialogue={entry.dialogue} />
         </section>
 
         {/* 동음이의어 */}
