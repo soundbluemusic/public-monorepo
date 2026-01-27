@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
+    "prebuild": "tsx scripts/generate-browse-chunks.ts",
     "build": "vite build",
     "postbuild": "node scripts/inject-polyfill.mjs && tsx ../../scripts/generate-sw.ts context",
     "sitemap": "tsx scripts/generate-sitemaps.ts",
