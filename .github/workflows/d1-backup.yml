@@ -1,0 +1,78 @@
+name: D1 Database Backup
+
+on:
+  schedule:
+    # 매일 UTC 03:00 (KST 12:00)에 실행
+    - cron: '0 3 * * *'
+  workflow_dispatch: # 수동 실행 허용
+
+jobs:
+  backup:
+    name: Backup D1 Databases
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Wrangler
+        run: npm install -g wrangler
+
+      - name: Export context-db
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          echo "📦 Exporting context-db..."
+          mkdir -p backups
+
+          # D1 export 명령어 실행
+          wrangler d1 export context-db --output backups/context-db.sql --remote
+
+          # 파일 크기 확인
+          SIZE=$(ls -lh backups/context-db.sql | awk '{print $5}')
+          echo "✅ context-db exported: $SIZE"
+
+      - name: Export knowledge (shared DB)
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          echo "📦 Exporting knowledge db..."
+
+          # D1 export 명령어 실행
+          wrangler d1 export knowledge --output backups/knowledge.sql --remote
+
+          # 파일 크기 확인
+          SIZE=$(ls -lh backups/knowledge.sql | awk '{print $5}')
+          echo "✅ knowledge exported: $SIZE"
+
+      - name: Compress backups
+        run: |
+          cd backups
+          DATE=$(date -u '+%Y-%m-%d')
+          tar -czvf "d1-backup-${DATE}.tar.gz" *.sql
+          rm *.sql
+          ls -lh
+
+      - name: Upload backup artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: d1-backup-${{ github.run_id }}
+          path: backups/*.tar.gz
+          retention-days: 30
+
+      - name: Summary
+        run: |
+          echo ""
+          echo "✨ D1 backup completed!"
+          echo "Backup date: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          echo "Retention: 30 days"
+          echo ""
+          echo "To restore:"
+          echo "  1. Download artifact from GitHub Actions"
+          echo "  2. Extract: tar -xzvf d1-backup-*.tar.gz"
+          echo "  3. Import: wrangler d1 execute DB_NAME --file=backup.sql --remote"

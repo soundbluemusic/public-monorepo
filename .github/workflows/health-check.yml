@@ -1,0 +1,131 @@
+name: Scheduled Health Check
+
+on:
+  schedule:
+    # 매 6시간마다 실행 (UTC 0, 6, 12, 18시)
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # 수동 실행 허용
+
+jobs:
+  health-check:
+    name: Production Health Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Context App
+        run: |
+          echo "🔍 Checking Context App..."
+          FAILED=0
+
+          # Homepage
+          HTTP_CODE=$(curl -sL -o /dev/null -w "%{http_code}" "https://context.soundbluemusic.com/")
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "❌ Context homepage returned HTTP $HTTP_CODE"
+            FAILED=1
+          else
+            echo "✅ Context homepage: HTTP 200"
+          fi
+
+          # Entry page (D1 query)
+          HTTP_CODE=$(curl -sL -o /dev/null -w "%{http_code}" "https://context.soundbluemusic.com/entry/annyeong")
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "❌ Context entry page returned HTTP $HTTP_CODE"
+            FAILED=1
+          else
+            echo "✅ Context entry page: HTTP 200"
+          fi
+
+          # SSR content check
+          HTML=$(curl -sL "https://context.soundbluemusic.com/entry/annyeong")
+          if ! echo "$HTML" | grep -q '안녕'; then
+            echo "❌ Context SSR content missing (D1 query failed)"
+            FAILED=1
+          else
+            echo "✅ Context SSR content present"
+          fi
+
+          if [ "$FAILED" -eq 1 ]; then
+            echo "::error::Context App health check failed"
+            exit 1
+          fi
+
+      - name: Check Permissive App
+        run: |
+          echo "🔍 Checking Permissive App..."
+          FAILED=0
+
+          # Homepage
+          HTTP_CODE=$(curl -sL -o /dev/null -w "%{http_code}" "https://permissive.soundbluemusic.com/")
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "❌ Permissive homepage returned HTTP $HTTP_CODE"
+            FAILED=1
+          else
+            echo "✅ Permissive homepage: HTTP 200"
+          fi
+
+          # Library page
+          HTTP_CODE=$(curl -sL -o /dev/null -w "%{http_code}" "https://permissive.soundbluemusic.com/library/react")
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "❌ Permissive library page returned HTTP $HTTP_CODE"
+            FAILED=1
+          else
+            echo "✅ Permissive library page: HTTP 200"
+          fi
+
+          if [ "$FAILED" -eq 1 ]; then
+            echo "::error::Permissive App health check failed"
+            exit 1
+          fi
+
+      - name: Check Roots App
+        run: |
+          echo "🔍 Checking Roots App..."
+          FAILED=0
+
+          # Homepage
+          HTTP_CODE=$(curl -sL -o /dev/null -w "%{http_code}" "https://roots.soundbluemusic.com/")
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "❌ Roots homepage returned HTTP $HTTP_CODE"
+            FAILED=1
+          else
+            echo "✅ Roots homepage: HTTP 200"
+          fi
+
+          # Concept page
+          HTTP_CODE=$(curl -sL -o /dev/null -w "%{http_code}" "https://roots.soundbluemusic.com/concept/addition")
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "❌ Roots concept page returned HTTP $HTTP_CODE"
+            FAILED=1
+          else
+            echo "✅ Roots concept page: HTTP 200"
+          fi
+
+          if [ "$FAILED" -eq 1 ]; then
+            echo "::error::Roots App health check failed"
+            exit 1
+          fi
+
+      - name: Check Response Times
+        run: |
+          echo "🔍 Checking response times..."
+
+          for URL in \
+            "https://context.soundbluemusic.com/" \
+            "https://permissive.soundbluemusic.com/" \
+            "https://roots.soundbluemusic.com/"
+          do
+            TIME=$(curl -sL -o /dev/null -w "%{time_total}" "$URL")
+            TIME_MS=$(echo "$TIME * 1000" | bc | cut -d'.' -f1)
+
+            if [ "$TIME_MS" -gt 3000 ]; then
+              echo "⚠️ $URL: ${TIME_MS}ms (slow, >3s)"
+            else
+              echo "✅ $URL: ${TIME_MS}ms"
+            fi
+          done
+
+      - name: Summary
+        if: success()
+        run: |
+          echo ""
+          echo "✨ All health checks passed!"
+          echo "Checked at: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"

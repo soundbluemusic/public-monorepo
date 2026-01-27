@@ -1,0 +1,76 @@
+# Dependabot configuration
+# https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  # npm 의존성 업데이트
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Seoul"
+    # PR 라벨
+    labels:
+      - "dependencies"
+      - "automated"
+    # 동시 오픈 PR 제한
+    open-pull-requests-limit: 10
+    # 버전 업데이트 전략
+    versioning-strategy: increase
+    # 그룹화 (관련 패키지 묶어서 PR)
+    groups:
+      # React 관련
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "@types/react*"
+      # TanStack 관련
+      tanstack:
+        patterns:
+          - "@tanstack/*"
+      # Cloudflare 관련
+      cloudflare:
+        patterns:
+          - "wrangler"
+          - "@cloudflare/*"
+      # 테스트 관련
+      testing:
+        patterns:
+          - "vitest"
+          - "@vitest/*"
+          - "playwright"
+          - "@playwright/*"
+      # Lint/Format 관련
+      linting:
+        patterns:
+          - "@biomejs/*"
+          - "typescript"
+      # 빌드 도구
+      build:
+        patterns:
+          - "vite"
+          - "@vitejs/*"
+          - "turbo"
+    # 무시할 의존성 (메이저 버전 업데이트는 수동으로)
+    ignore:
+      # React 19 → 20 같은 메이저 업데이트는 수동
+      - dependency-name: "react"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "react-dom"
+        update-types: ["version-update:semver-major"]
+
+  # GitHub Actions 업데이트
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Seoul"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    open-pull-requests-limit: 5
