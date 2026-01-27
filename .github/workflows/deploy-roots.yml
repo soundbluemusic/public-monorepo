@@ -55,3 +55,65 @@ jobs:
             -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
             -H "Content-Type: application/json" \
             --data '{"purge_everything":true}'
+
+      - name: Smoke test - SSR page rendering
+        run: |
+          echo "🔍 Testing SSR page rendering..."
+          echo "⏳ Waiting 5s for deployment propagation..."
+          sleep 5
+
+          FAILED=0
+          BASE_URL="https://roots.soundbluemusic.com"
+
+          # Test 1: Homepage has SSR content
+          echo ""
+          echo "📄 Test 1: Homepage SSR"
+          HOME_HTML=$(curl -sL "$BASE_URL/")
+          if echo "$HOME_HTML" | grep -q '<title>.*Roots'; then
+            echo "✅ Homepage has title tag"
+          else
+            echo "❌ Homepage missing title tag (SSR failed)"
+            FAILED=1
+          fi
+
+          # Test 2: Concept page renders
+          echo ""
+          echo "📄 Test 2: Concept page"
+          CONCEPT_HTML=$(curl -sL "$BASE_URL/concept/addition")
+          if echo "$CONCEPT_HTML" | grep -qi 'addition\|덧셈'; then
+            echo "✅ Concept page renders"
+          else
+            echo "❌ Concept page failed"
+            FAILED=1
+          fi
+
+          # Test 3: Korean version works
+          echo ""
+          echo "📄 Test 3: Korean version"
+          KO_HTML=$(curl -sL "$BASE_URL/ko/")
+          if echo "$KO_HTML" | grep -q 'Roots'; then
+            echo "✅ Korean version renders"
+          else
+            echo "❌ Korean version failed"
+            FAILED=1
+          fi
+
+          # Test 4: Field page
+          echo ""
+          echo "📄 Test 4: Field page"
+          FIELD_HTML=$(curl -sL "$BASE_URL/field/algebra")
+          if echo "$FIELD_HTML" | grep -qi 'algebra\|대수'; then
+            echo "✅ Field page renders"
+          else
+            echo "❌ Field page failed"
+            FAILED=1
+          fi
+
+          if [ "$FAILED" -eq 1 ]; then
+            echo ""
+            echo "🚨 SMOKE TEST FAILED!"
+            exit 1
+          fi
+
+          echo ""
+          echo "✨ All smoke tests passed!"

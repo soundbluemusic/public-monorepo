@@ -115,3 +115,72 @@ jobs:
 
           echo ""
           echo "✨ All static assets verified successfully!"
+
+      - name: Smoke test - SSR page rendering
+        run: |
+          echo "🔍 Testing SSR page rendering..."
+          FAILED=0
+          BASE_URL="https://context.soundbluemusic.com"
+
+          # Test 1: Homepage has SSR content (not empty div)
+          echo ""
+          echo "📄 Test 1: Homepage SSR"
+          HOME_HTML=$(curl -sL "$BASE_URL/")
+          if echo "$HOME_HTML" | grep -q '<title>Context'; then
+            echo "✅ Homepage has title tag"
+          else
+            echo "❌ Homepage missing title tag (SSR failed)"
+            FAILED=1
+          fi
+
+          # Test 2: Entry page loads from D1
+          echo ""
+          echo "📄 Test 2: Entry page (D1 query)"
+          ENTRY_HTML=$(curl -sL "$BASE_URL/entry/annyeong")
+          if echo "$ENTRY_HTML" | grep -q '안녕'; then
+            echo "✅ Entry page has Korean content from D1"
+          else
+            echo "❌ Entry page missing Korean content (D1 query failed)"
+            FAILED=1
+          fi
+
+          # Test 3: Korean version works
+          echo ""
+          echo "📄 Test 3: Korean version"
+          KO_HTML=$(curl -sL "$BASE_URL/ko/")
+          if echo "$KO_HTML" | grep -q 'Context'; then
+            echo "✅ Korean version renders"
+          else
+            echo "❌ Korean version failed"
+            FAILED=1
+          fi
+
+          # Test 4: Category page
+          echo ""
+          echo "📄 Test 4: Category page"
+          CAT_HTML=$(curl -sL "$BASE_URL/category/greetings")
+          if echo "$CAT_HTML" | grep -q 'greetings\|인사\|Greetings'; then
+            echo "✅ Category page renders"
+          else
+            echo "❌ Category page failed"
+            FAILED=1
+          fi
+
+          # Test 5: Check for hydration error markers
+          echo ""
+          echo "📄 Test 5: No hydration errors in HTML"
+          if echo "$HOME_HTML" | grep -qi 'hydration\|mismatch'; then
+            echo "⚠️ Warning: Possible hydration issue detected"
+          else
+            echo "✅ No hydration error markers"
+          fi
+
+          if [ "$FAILED" -eq 1 ]; then
+            echo ""
+            echo "🚨 SMOKE TEST FAILED!"
+            echo "   SSR pages are not rendering correctly."
+            exit 1
+          fi
+
+          echo ""
+          echo "✨ All smoke tests passed!"
