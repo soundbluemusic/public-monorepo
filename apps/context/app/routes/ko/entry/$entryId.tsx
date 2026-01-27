@@ -14,6 +14,7 @@ import {
   generateBreadcrumbSchema,
   generateDefinedTermSchema,
 } from '@soundblue/seo/structured-data';
+import { FeedbackButton } from '@soundblue/ui/components';
 import { cn } from '@soundblue/ui/utils';
 import { createFileRoute, Link, notFound } from '@tanstack/react-router';
 import { Bookmark, BookmarkCheck, Check } from 'lucide-react';
@@ -303,6 +304,26 @@ function EntryPageKo() {
 
         {/* 동음이의어 */}
         <HomonymSection korean={entry.korean} currentId={entry.id} className="mb-6" />
+
+        {/* 복습 필요 여부 */}
+        <div className="mt-8 pt-8 border-t border-(--border-primary)">
+          <FeedbackButton
+            contentId={entry.id}
+            question="이 단어 복습이 필요한가요?"
+            positiveLabel="네, 나중에 복습"
+            negativeLabel="아니요, 이해했어요"
+            thankYouMessage="확인했어요!"
+            variant="default"
+            onFeedback={(type) => {
+              if (type === 'positive') {
+                useUserDataStore.getState().addToReview(entry.id);
+                toast({ message: '복습 목록에 추가했어요!', type: 'success' });
+              } else if (type === 'negative') {
+                useUserDataStore.getState().removeFromReview(entry.id);
+              }
+            }}
+          />
+        </div>
 
         <div className="mt-8">
           <Link

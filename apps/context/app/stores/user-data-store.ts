@@ -22,9 +22,15 @@ export interface StudyRecord {
   correct: boolean;
 }
 
+export interface ReviewEntry {
+  entryId: string;
+  addedAt: number; // timestamp
+}
+
 interface UserDataState {
   favorites: FavoriteEntry[];
   studyRecords: StudyRecord[];
+  reviewEntries: ReviewEntry[];
   isHydrated: boolean;
 }
 
@@ -47,6 +53,13 @@ interface UserDataActions {
   getStudiedIds: () => Set<string>;
   getStudyRecords: () => StudyRecord[];
   getTodayStudiedCount: () => number;
+
+  // Review (복습)
+  addToReview: (entryId: string) => void;
+  removeFromReview: (entryId: string) => void;
+  isInReview: (entryId: string) => boolean;
+  getReviewIds: () => Set<string>;
+  getReviewEntries: () => ReviewEntry[];
 
   // Stats
   getOverallProgress: (totalEntries: number) => {
@@ -82,6 +95,7 @@ export const useUserDataStore = create<UserDataState & UserDataActions>()(
       // Initial state
       favorites: [],
       studyRecords: [],
+      reviewEntries: [],
       isHydrated: false,
 
       // Actions
@@ -97,12 +111,14 @@ export const useUserDataStore = create<UserDataState & UserDataActions>()(
 
             const favorites = get().favorites.filter((f) => isValid(f.entryId));
             const studyRecords = get().studyRecords.filter((r) => isValid(r.entryId));
+            const reviewEntries = get().reviewEntries.filter((r) => isValid(r.entryId));
 
             if (
               favorites.length !== get().favorites.length ||
-              studyRecords.length !== get().studyRecords.length
+              studyRecords.length !== get().studyRecords.length ||
+              reviewEntries.length !== get().reviewEntries.length
             ) {
-              set({ favorites, studyRecords });
+              set({ favorites, studyRecords, reviewEntries });
             }
           } catch (error) {
             console.error('[UserDataStore] Failed to prune legacy entries:', error);
@@ -234,6 +250,36 @@ export const useUserDataStore = create<UserDataState & UserDataActions>()(
       },
 
       // ========================================
+      // Review (복습)
+      // ========================================
+      addToReview: (entryId) => {
+        const state = get();
+        if (state.reviewEntries.some((r) => r.entryId === entryId)) return;
+
+        set({
+          reviewEntries: [{ entryId, addedAt: Date.now() }, ...state.reviewEntries],
+        });
+      },
+
+      removeFromReview: (entryId) => {
+        set((state) => ({
+          reviewEntries: state.reviewEntries.filter((r) => r.entryId !== entryId),
+        }));
+      },
+
+      isInReview: (entryId) => {
+        return get().reviewEntries.some((r) => r.entryId === entryId);
+      },
+
+      getReviewIds: () => {
+        return new Set(get().reviewEntries.map((r) => r.entryId));
+      },
+
+      getReviewEntries: () => {
+        return get().reviewEntries;
+      },
+
+      // ========================================
       // Stats
       // ========================================
       getOverallProgress: (totalEntries) => {
@@ -251,6 +297,7 @@ export const useUserDataStore = create<UserDataState & UserDataActions>()(
       partialize: (state) => ({
         favorites: state.favorites,
         studyRecords: state.studyRecords,
+        reviewEntries: state.reviewEntries,
       }),
       onRehydrateStorage: () => (state, error) => {
         if (error) {
@@ -286,6 +333,11 @@ export const useFavorites = () => useUserDataStore((s) => s.favorites);
 export const useStudyRecords = () => useUserDataStore((s) => s.studyRecords);
 
 /**
+ * 복습 목록 (배열)
+ */
+export const useReviewEntries = () => useUserDataStore((s) => s.reviewEntries);
+
+/**
  * 즐겨찾기 액션들만 구독
  */
 export const useFavoriteActions = () =>
@@ -311,3 +363,14 @@ export const useStudyActions = () =>
  * 진행률 계산 함수만 구독
  */
 export const useProgressCalculator = () => useUserDataStore((s) => s.getOverallProgress);
+
+/**
+ * 복습 액션들만 구독
+ */
+export const useReviewActions = () =>
+  useUserDataStore((s) => ({
+    addToReview: s.addToReview,
+    removeFromReview: s.removeFromReview,
+    isInReview: s.isInReview,
+    getReviewIds: s.getReviewIds,
+  }));

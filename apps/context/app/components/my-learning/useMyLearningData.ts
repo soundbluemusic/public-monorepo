@@ -1,7 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
 import type { categories } from '@/data/categories';
 import type { LightEntry } from '@/data/entries';
-import { useFavorites, useIsHydrated, useStudyRecords } from '@/stores/user-data-store';
+import {
+  useFavorites,
+  useIsHydrated,
+  useReviewEntries,
+  useStudyRecords,
+} from '@/stores/user-data-store';
 
 /**
  * 클라이언트에서 browse 청크 데이터를 fetch로 로드
@@ -51,10 +56,12 @@ export function useMyLearningData() {
   const isHydrated = useIsHydrated();
   const favorites = useFavorites();
   const studyRecords = useStudyRecords();
+  const reviewEntries = useReviewEntries();
 
   // 배열에서 Set으로 변환 (메모이제이션으로 무한 루프 방지)
   const studiedIds = useMemo(() => new Set(studyRecords.map((r) => r.entryId)), [studyRecords]);
   const favoriteIds = useMemo(() => new Set(favorites.map((f) => f.entryId)), [favorites]);
+  const reviewIds = useMemo(() => new Set(reviewEntries.map((r) => r.entryId)), [reviewEntries]);
 
   // 엔트리 데이터 로드 (한 번만) - fetch로 청크 데이터 로드
   useEffect(() => {
@@ -109,6 +116,7 @@ export function useMyLearningData() {
     totalEntries,
     studiedIds: Array.from(studiedIds),
     favoriteIds: Array.from(favoriteIds),
+    reviewIds: Array.from(reviewIds),
     categoryProgress,
     isLoading: !isHydrated || !dataLoaded,
     error,

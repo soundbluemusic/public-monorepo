@@ -40,12 +40,14 @@ function MyLearningPage() {
     totalEntries,
     studiedIds,
     favoriteIds,
+    reviewIds,
     categoryProgress,
     isLoading,
     error,
   } = useMyLearningData();
 
   const favoriteEntries = entries.filter((e) => favoriteIds.includes(e.id));
+  const reviewEntries = entries.filter((e) => reviewIds.includes(e.id));
   const recentStudied = entries
     .filter((e) => studiedIds.includes(e.id))
     .slice(0, LIMITS.RECENT_ITEMS_DISPLAY);
@@ -117,6 +119,15 @@ function MyLearningPage() {
         localePath={localePath}
         title={t('bookmarkedWords')}
       />
+
+      {reviewEntries.length > 0 && (
+        <EntryList
+          entries={reviewEntries.slice(0, LIMITS.RECENT_ITEMS_DISPLAY)}
+          locale={locale}
+          localePath={localePath}
+          title={locale === 'ko' ? '복습 필요' : 'Need to Review'}
+        />
+      )}
 
       <EntryList
         entries={recentStudied}

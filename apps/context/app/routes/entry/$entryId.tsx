@@ -330,15 +330,23 @@ function EntryPage() {
           </Link>
         </div>
 
-        {/* Feedback Section */}
+        {/* Feedback Section - 복습 필요 여부 */}
         <div className="mt-8 pt-8 border-t border-(--border-primary)">
           <FeedbackButton
             contentId={entry.id}
-            question="Was this page helpful?"
-            positiveLabel="Yes"
-            negativeLabel="No"
-            thankYouMessage="Thanks for your feedback!"
+            question="Need to review this word?"
+            positiveLabel="Yes, review later"
+            negativeLabel="No, I got it"
+            thankYouMessage="Got it!"
             variant="default"
+            onFeedback={(type) => {
+              if (type === 'positive') {
+                useUserDataStore.getState().addToReview(entry.id);
+                toast({ message: 'Added to review list!', type: 'success' });
+              } else if (type === 'negative') {
+                useUserDataStore.getState().removeFromReview(entry.id);
+              }
+            }}
           />
         </div>
       </article>
