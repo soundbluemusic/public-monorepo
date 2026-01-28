@@ -99,10 +99,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: build-output
-          path: |
-            apps/context/dist
-            apps/permissive/dist
-            apps/roots/dist
+          path: apps/*/dist
+          include-hidden-files: true
           retention-days: 1
 
   # ============================================================
@@ -133,7 +131,16 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-output
-          path: .
+          path: apps
+
+      - name: Debug artifact structure
+        run: |
+          echo "=== Listing apps directory ==="
+          ls -la apps/
+          echo "=== Listing apps/context ==="
+          ls -la apps/context/ || echo "context not found"
+          echo "=== Listing apps/context/dist ==="
+          ls -la apps/context/dist/ || echo "dist not found"
 
       # Playwright 브라우저 캐싱
       - name: Get Playwright version
@@ -183,7 +190,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-output
-          path: .
+          path: apps
 
       - name: Install Chrome for Lighthouse
         uses: browser-actions/setup-chrome@latest
@@ -223,7 +230,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-output
-          path: .
+          path: apps
 
       - name: Check bundle size
         run: pnpm check:size
