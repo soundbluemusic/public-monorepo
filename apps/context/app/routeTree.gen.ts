@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as SitemapRouteImport } from './routes/sitemap'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as MyLearningRouteImport } from './routes/my-learning'
 import { Route as LicenseRouteImport } from './routes/license'
@@ -42,6 +43,11 @@ import { Route as KoCategoryCategoryIdRouteImport } from './routes/ko/category/$
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
   path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapRoute = SitemapRouteImport.update({
+  id: '/sitemap',
+  path: '/sitemap',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyRoute = PrivacyRouteImport.update({
@@ -197,6 +203,7 @@ export interface FileRoutesByFullPath {
   '/license': typeof LicenseRoute
   '/my-learning': typeof MyLearningRoute
   '/privacy': typeof PrivacyRoute
+  '/sitemap': typeof SitemapRoute
   '/terms': typeof TermsRoute
   '/category/$categoryId': typeof CategoryCategoryIdRoute
   '/conversations/$categoryId': typeof ConversationsCategoryIdRoute
@@ -228,6 +235,7 @@ export interface FileRoutesByTo {
   '/license': typeof LicenseRoute
   '/my-learning': typeof MyLearningRoute
   '/privacy': typeof PrivacyRoute
+  '/sitemap': typeof SitemapRoute
   '/terms': typeof TermsRoute
   '/category/$categoryId': typeof CategoryCategoryIdRoute
   '/conversations/$categoryId': typeof ConversationsCategoryIdRoute
@@ -260,6 +268,7 @@ export interface FileRoutesById {
   '/license': typeof LicenseRoute
   '/my-learning': typeof MyLearningRoute
   '/privacy': typeof PrivacyRoute
+  '/sitemap': typeof SitemapRoute
   '/terms': typeof TermsRoute
   '/category/$categoryId': typeof CategoryCategoryIdRoute
   '/conversations/$categoryId': typeof ConversationsCategoryIdRoute
@@ -293,6 +302,7 @@ export interface FileRouteTypes {
     | '/license'
     | '/my-learning'
     | '/privacy'
+    | '/sitemap'
     | '/terms'
     | '/category/$categoryId'
     | '/conversations/$categoryId'
@@ -324,6 +334,7 @@ export interface FileRouteTypes {
     | '/license'
     | '/my-learning'
     | '/privacy'
+    | '/sitemap'
     | '/terms'
     | '/category/$categoryId'
     | '/conversations/$categoryId'
@@ -355,6 +366,7 @@ export interface FileRouteTypes {
     | '/license'
     | '/my-learning'
     | '/privacy'
+    | '/sitemap'
     | '/terms'
     | '/category/$categoryId'
     | '/conversations/$categoryId'
@@ -387,6 +399,7 @@ export interface RootRouteChildren {
   LicenseRoute: typeof LicenseRoute
   MyLearningRoute: typeof MyLearningRoute
   PrivacyRoute: typeof PrivacyRoute
+  SitemapRoute: typeof SitemapRoute
   TermsRoute: typeof TermsRoute
   CategoryCategoryIdRoute: typeof CategoryCategoryIdRoute
   ConversationsCategoryIdRoute: typeof ConversationsCategoryIdRoute
@@ -415,6 +428,13 @@ declare module '@tanstack/react-router' {
       path: '/terms'
       fullPath: '/terms'
       preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap': {
+      id: '/sitemap'
+      path: '/sitemap'
+      fullPath: '/sitemap'
+      preLoaderRoute: typeof SitemapRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy': {
@@ -627,6 +647,7 @@ const rootRouteChildren: RootRouteChildren = {
   LicenseRoute: LicenseRoute,
   MyLearningRoute: MyLearningRoute,
   PrivacyRoute: PrivacyRoute,
+  SitemapRoute: SitemapRoute,
   TermsRoute: TermsRoute,
   CategoryCategoryIdRoute: CategoryCategoryIdRoute,
   ConversationsCategoryIdRoute: ConversationsCategoryIdRoute,
