@@ -24,7 +24,7 @@ description: 프로젝트 기술 스택 최신 정보 검색. GitHub API로 정�
 
 | 기술 | GitHub API URL |
 |------|----------------|
-| React Router | `https://api.github.com/repos/remix-run/react-router/releases?per_page=5` |
+| TanStack Router | `https://api.github.com/repos/TanStack/router/releases?per_page=5` |
 | Tailwind CSS | `https://api.github.com/repos/tailwindlabs/tailwindcss/releases?per_page=5` |
 | TypeScript | `https://api.github.com/repos/microsoft/TypeScript/releases?per_page=5` |
 
@@ -42,7 +42,7 @@ Cloudflare는 GitHub API가 없으므로 공식 문서를 직접 확인합니다
 |------|-----|
 | Cloudflare Workers | `https://developers.cloudflare.com/workers/platform/changelog/` |
 | Cloudflare D1 | `https://developers.cloudflare.com/d1/platform/release-notes/` |
-| React Router | `https://reactrouter.com/changelog` |
+| TanStack Router | `https://tanstack.com/router/latest/docs/framework/react/overview` |
 
 **prompt 형식**:
 
@@ -73,7 +73,7 @@ allowed_domains:
 |------|------------|----------------|
 | Cloudflare Workers | 공식 문서 (절대 날짜) | Context, Permissive 앱 호스팅 |
 | Cloudflare D1 | 공식 문서 (절대 날짜) | Context 앱 데이터베이스 |
-| React Router v7 | GitHub API + changelog | 모든 앱 라우팅 |
+| TanStack Router/Start | GitHub API | 모든 앱 라우팅 |
 | Tailwind CSS v4 | GitHub API | UI 스타일링 |
 | TypeScript | GitHub API | 전체 코드베이스 |
 
@@ -147,7 +147,7 @@ allowed_domains:
 |------|----------|------------|--------|--------|
 | Cloudflare Workers | - | 2026-01-13 | 4일 | 없음 |
 | Cloudflare D1 | - | 2025-11-05 | 73일 | 없음 |
-| React Router v7 | v7.12.0 | 2026-01-07 | 10일 | 확인 필요 |
+| TanStack Router | v1.157.2 | 2026-01-17 | 0일 | 확인 필요 |
 | Tailwind CSS v4 | v4.1.18 | 2025-12-11 | 37일 | 없음 |
 | TypeScript | v5.9.3 | 2025-10-01 | 108일 | 확인 필요 |
 ```
@@ -158,7 +158,7 @@ allowed_domains:
 |------|------------|------|
 | GitHub API | ✅ 정확 | `published_at` 필드 (ISO 8601) |
 | Cloudflare 공식 문서 | ✅ 정확 | 절대 날짜 표시 |
-| React Router changelog | ✅ 정확 | 절대 날짜 표시 |
+| TanStack 공식 문서 | ✅ 정확 | GitHub releases 연동 |
 | GitHub 릴리스 페이지 HTML | ⚠️ 부정확 | 상대 시간 ("3 days ago") |
 | npm registry | ❌ 사용 불가 | 응답 크기 초과 (10MB+) |
 

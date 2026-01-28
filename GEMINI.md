@@ -155,5 +155,6 @@ export const meta = dynamicMetaFactory<typeof loader>({
 | 기술 | 문서 |
 |------|------|
 | Tailwind CSS v4 | [tailwindcss.com](https://tailwindcss.com/docs) |
-| React Router v7 | [reactrouter.com](https://reactrouter.com) |
+| TanStack Start | [tanstack.com/start](https://tanstack.com/start/latest) |
+| TanStack Router | [tanstack.com/router](https://tanstack.com/router/latest) |
 | TypeScript | [typescriptlang.org](https://www.typescriptlang.org/docs) |

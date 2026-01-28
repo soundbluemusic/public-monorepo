@@ -6,7 +6,6 @@
  */
 
 import { paraglideVitePlugin as paraglide } from '@inlang/paraglide-js';
-import { reactRouter } from '@react-router/dev/vite';
 import tailwindcss from '@tailwindcss/vite';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig, type PluginOption } from 'vite';
@@ -25,7 +24,6 @@ export const buildOptimizations = {
       // Manual chunk splitting
       manualChunks: {
         react: ['react', 'react-dom'],
-        router: ['react-router'],
       },
     },
   },
@@ -171,7 +169,6 @@ export function createAppViteConfig(options: AppViteConfigOptions) {
         outdir: './app/paraglide',
         outputStructure: 'message-modules',
       }) as PluginOption,
-      reactRouter(),
       VitePWA({
         registerType: 'autoUpdate',
         includeAssets: pwaAssets,
