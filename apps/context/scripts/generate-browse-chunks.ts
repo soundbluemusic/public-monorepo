@@ -36,6 +36,13 @@ const BY_CATEGORY_DIR = join(__dirname, '../public/data/by-category');
 const BROWSE_DIR = join(__dirname, '../public/data/browse');
 
 function loadAllEntries(): LightEntry[] {
+  // CI 환경에서는 by-category 디렉토리가 없을 수 있음 (gitignore)
+  // 이미 커밋된 browse 데이터 사용
+  if (!existsSync(BY_CATEGORY_DIR)) {
+    console.log('⏭️  by-category 디렉토리 없음 - 스킵 (CI 환경)');
+    return [];
+  }
+
   const files = readdirSync(BY_CATEGORY_DIR).filter(
     (f) => f.endsWith('.json') && f !== 'meta.json',
   );
@@ -115,6 +122,13 @@ function main(): void {
 
   // 모든 엔트리 로드
   const allEntries = loadAllEntries();
+
+  // CI 환경에서 by-category 없으면 스킵
+  if (allEntries.length === 0) {
+    console.log('✅ 스킵 완료 (기존 browse 데이터 사용)');
+    return;
+  }
+
   console.log(`Loaded ${allEntries.length} entries from ${BY_CATEGORY_DIR}\n`);
 
   // alphabetical 청크 생성
