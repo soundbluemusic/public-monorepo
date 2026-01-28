@@ -76,3 +76,6 @@ chrome/
 apps/context/.tmp/
 apps/context/entry-mismatch-report.json
 lint_output.txt
+
+# Auto-generated browse meta (regenerated on build)
+apps/context/public/data/browse/meta.json
