@@ -90,7 +90,7 @@
     "d3": "^7.9.0",
     "dexie": "^4.0.10",
     "fake-indexeddb": "^6.2.5",
-    "framer-motion": "^12.25.0",
+    "framer-motion": "^12.29.2",
     "glob": "^13.0.0",
     "happy-dom": "^20.1.0",
     "husky": "^9.1.7",
