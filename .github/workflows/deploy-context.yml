@@ -60,9 +60,10 @@ jobs:
           echo "⏳ Waiting 5s for deployment propagation..."
           sleep 5
 
-          # Extract CSS filename from production HTML
-          CSS_FILE=$(curl -sL https://context.soundbluemusic.com/ | grep -oE 'main-[A-Za-z0-9_-]+\.css' | head -1)
-          JS_FILE=$(curl -sL https://context.soundbluemusic.com/ | grep -oE 'main-[A-Za-z0-9_-]+\.js' | head -1)
+          # Extract asset filenames from production HTML (avoid hardcoding main-*.css)
+          HTML=$(curl -sL https://context.soundbluemusic.com/)
+          CSS_FILE=$(echo "$HTML" | grep -oE '/assets/[A-Za-z0-9._-]+\.css' | head -1 | sed 's#^/assets/##')
+          JS_FILE=$(echo "$HTML" | grep -oE '/assets/[A-Za-z0-9._-]+\.js' | head -1 | sed 's#^/assets/##')
 
           echo "📦 Checking CSS: $CSS_FILE"
           echo "📦 Checking JS: $JS_FILE"
@@ -70,21 +71,31 @@ jobs:
           FAILED=0
 
           # Check CSS
-          CSS_STATUS=$(curl -sI "https://context.soundbluemusic.com/assets/$CSS_FILE" | head -1 | grep -oE '[0-9]{3}')
-          if [ "$CSS_STATUS" != "200" ]; then
-            echo "❌ CSS returned HTTP $CSS_STATUS (expected 200)"
+          if [ -z "$CSS_FILE" ]; then
+            echo "❌ CSS file not found in HTML (expected at least one /assets/*.css)"
             FAILED=1
           else
-            echo "✅ CSS: HTTP 200"
+            CSS_STATUS=$(curl -sI "https://context.soundbluemusic.com/assets/$CSS_FILE" | head -1 | grep -oE '[0-9]{3}')
+            if [ "$CSS_STATUS" != "200" ]; then
+              echo "❌ CSS returned HTTP $CSS_STATUS (expected 200)"
+              FAILED=1
+            else
+              echo "✅ CSS: HTTP 200"
+            fi
           fi
 
           # Check JS
-          JS_STATUS=$(curl -sI "https://context.soundbluemusic.com/assets/$JS_FILE" | head -1 | grep -oE '[0-9]{3}')
-          if [ "$JS_STATUS" != "200" ]; then
-            echo "❌ JS returned HTTP $JS_STATUS (expected 200)"
+          if [ -z "$JS_FILE" ]; then
+            echo "❌ JS file not found in HTML (expected at least one /assets/*.js)"
             FAILED=1
           else
-            echo "✅ JS: HTTP 200"
+            JS_STATUS=$(curl -sI "https://context.soundbluemusic.com/assets/$JS_FILE" | head -1 | grep -oE '[0-9]{3}')
+            if [ "$JS_STATUS" != "200" ]; then
+              echo "❌ JS returned HTTP $JS_STATUS (expected 200)"
+              FAILED=1
+            else
+              echo "✅ JS: HTTP 200"
+            fi
           fi
 
           # Check favicon
