@@ -35,7 +35,7 @@
     "zustand": "^5.0.10"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "^1.21.1",
+    "@cloudflare/vite-plugin": "^1.22.0",
     "@cloudflare/workers-types": "^4.20260109.0",
     "@inlang/paraglide-js": "^2.9.1",
     "@tailwindcss/vite": "^4.1.18",
