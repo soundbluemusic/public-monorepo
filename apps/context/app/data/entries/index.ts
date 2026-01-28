@@ -25,6 +25,7 @@ import { type CompressedFile, expandCompressedFile } from '../expand-entry';
 import { jsonEntriesCount, type LightEntry } from '../generated/entries';
 import { entryToCategory } from '../generated/entry-index';
 import type { Language, LocaleEntry, MeaningEntry } from '../types';
+import { APP_CONFIG } from '@/config';
 
 // Re-export 타입과 카운트
 export { type LightEntry, jsonEntriesCount };
@@ -222,6 +223,9 @@ export async function getEntriesByCategory(categoryId: string): Promise<MeaningE
 
 /** LightEntry 청크 캐시 */
 let lightEntriesCache: LightEntry[] | null = null;
+let useFetchForLightEntries = false;
+let useFetchForBrowseChunks = false;
+let fetchFallbackLogged = false;
 
 /**
  * SSR loader에서 사용: JSON 파일에서 lightEntries 로드
@@ -237,6 +241,10 @@ export async function loadLightEntriesForSSR(): Promise<LightEntry[]> {
   if (typeof window !== 'undefined') {
     console.warn('loadLightEntriesForSSR should only be called in SSR context');
     return [];
+  }
+
+  if (useFetchForLightEntries) {
+    return loadLightEntriesForSSRByFetch();
   }
 
   try {
@@ -268,8 +276,12 @@ export async function loadLightEntriesForSSR(): Promise<LightEntry[]> {
     lightEntriesCache = allEntries;
     return lightEntriesCache;
   } catch (error) {
-    console.error('Failed to load lightEntries for SSR:', error);
-    return [];
+    useFetchForLightEntries = true;
+    if (!fetchFallbackLogged) {
+      console.warn('Failed to load lightEntries from fs in SSR, falling back to fetch:', error);
+      fetchFallbackLogged = true;
+    }
+    return loadLightEntriesForSSRByFetch();
   }
 }
 
@@ -287,6 +299,10 @@ export async function loadLightEntriesChunkForSSR(
     return [];
   }
 
+  if (useFetchForBrowseChunks) {
+    return loadLightEntriesChunkForSSRByFetch(sortType, chunkIndex);
+  }
+
   try {
     const { readFileSync } = await import('node:fs');
     const { join } = await import('node:path');
@@ -296,7 +312,62 @@ export async function loadLightEntriesChunkForSSR(
     const data = JSON.parse(content) as { entries: LightEntry[] };
     return data.entries;
   } catch (error) {
-    console.error(`Failed to load chunk ${sortType}/${chunkIndex}:`, error);
+    useFetchForBrowseChunks = true;
+    if (!fetchFallbackLogged) {
+      console.warn(
+        `Failed to load chunk ${sortType}/${chunkIndex} from fs in SSR, falling back to fetch:`,
+        error,
+      );
+      fetchFallbackLogged = true;
+    }
+    return loadLightEntriesChunkForSSRByFetch(sortType, chunkIndex);
+  }
+}
+
+async function loadLightEntriesForSSRByFetch(): Promise<LightEntry[]> {
+  try {
+    const baseUrl = APP_CONFIG.baseUrl.replace(/\/$/, '');
+    const metaResponse = await fetch(`${baseUrl}/data/browse/meta.json`);
+    if (!metaResponse.ok) {
+      console.warn('Failed to fetch browse meta.json for SSR fallback');
+      return [];
+    }
+    const meta = (await metaResponse.json()) as { totalChunks?: number };
+    const totalChunks = meta.totalChunks ?? 0;
+    const indexUrl = `${baseUrl}/data/browse/alphabetical`;
+    const entries: LightEntry[] = [];
+    for (let i = 0; i < totalChunks; i++) {
+      const chunkUrl = `${indexUrl}/chunk-${i}.json`;
+      const response = await fetch(chunkUrl);
+      if (!response.ok) break;
+      const data = (await response.json()) as { entries?: LightEntry[] };
+      if (!data.entries?.length) break;
+      entries.push(...data.entries);
+    }
+    lightEntriesCache = entries;
+    return entries;
+  } catch (error) {
+    console.error('Failed to load lightEntries via fetch in SSR:', error);
+    return [];
+  }
+}
+
+async function loadLightEntriesChunkForSSRByFetch(
+  sortType: 'alphabetical' | 'category' | 'recent',
+  chunkIndex: number,
+): Promise<LightEntry[]> {
+  try {
+    const baseUrl = APP_CONFIG.baseUrl.replace(/\/$/, '');
+    const url = `${baseUrl}/data/browse/${sortType}/chunk-${chunkIndex}.json`;
+    const response = await fetch(url);
+    if (!response.ok) {
+      console.warn(`Failed to fetch chunk: ${sortType}/${chunkIndex}`);
+      return [];
+    }
+    const data = (await response.json()) as { entries?: LightEntry[] };
+    return data.entries ?? [];
+  } catch (error) {
+    console.error(`Failed to load chunk ${sortType}/${chunkIndex} via fetch:`, error);
     return [];
   }
 }
