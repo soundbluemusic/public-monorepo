@@ -8,7 +8,7 @@ import {
   generateArticleSchema,
   generateBreadcrumbSchema,
 } from '@soundblue/seo/structured-data';
-import { Breadcrumb, FeedbackButton, ShareButton } from '@soundblue/ui/components';
+import { Breadcrumb, FeedbackButton, ShareButton, TagList } from '@soundblue/ui/components';
 import { Link } from '@tanstack/react-router';
 import { BookOpen, Heart, History, Zap } from 'lucide-react';
 import { useEffect, useState } from 'react';
@@ -297,16 +297,11 @@ export function ConceptPage({ concept, conceptId }: ConceptPageProps) {
         {/* 태그 Tags */}
         {concept.tags.length > 0 && (
           <section>
-            <div className="flex flex-wrap gap-2">
-              {concept.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="px-3 py-1 rounded-full text-sm bg-(--bg-tertiary) text-(--text-secondary)"
-                >
-                  #{tag}
-                </span>
-              ))}
-            </div>
+            <TagList
+              tags={concept.tags}
+              label={locale === 'ko' ? '태그:' : 'Tags:'}
+              getTagHref={(tag) => localePath(`/tag/${encodeURIComponent(tag)}`)}
+            />
           </section>
         )}
 

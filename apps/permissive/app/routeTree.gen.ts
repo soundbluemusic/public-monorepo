@@ -10,26 +10,35 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WebApiRouteImport } from './routes/web-api'
+import { Route as TagsRouteImport } from './routes/tags'
 import { Route as SitemapRouteImport } from './routes/sitemap'
 import { Route as LibrariesRouteImport } from './routes/libraries'
 import { Route as BuiltWithRouteImport } from './routes/built-with'
 import { Route as IndexRouteImport } from './routes/_index'
 import { Route as SplatRouteImport } from './routes/$'
 import { Route as WebApiSlugRouteImport } from './routes/web-api/$slug'
+import { Route as TagTagIdRouteImport } from './routes/tag/$tagId'
 import { Route as LibrarySlugRouteImport } from './routes/library/$slug'
 import { Route as KoWebApiRouteImport } from './routes/ko/web-api'
+import { Route as KoTagsRouteImport } from './routes/ko/tags'
 import { Route as KoSitemapRouteImport } from './routes/ko/sitemap'
 import { Route as KoLibrariesRouteImport } from './routes/ko/libraries'
 import { Route as KoBuiltWithRouteImport } from './routes/ko/built-with'
 import { Route as KoIndexRouteImport } from './routes/ko/_index'
 import { Route as CategoryCategoryIdRouteImport } from './routes/category/$categoryId'
 import { Route as KoWebApiSlugRouteImport } from './routes/ko/web-api/$slug'
+import { Route as KoTagTagIdRouteImport } from './routes/ko/tag/$tagId'
 import { Route as KoLibrarySlugRouteImport } from './routes/ko/library/$slug'
 import { Route as KoCategoryCategoryIdRouteImport } from './routes/ko/category/$categoryId'
 
 const WebApiRoute = WebApiRouteImport.update({
   id: '/web-api',
   path: '/web-api',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TagsRoute = TagsRouteImport.update({
+  id: '/tags',
+  path: '/tags',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapRoute = SitemapRouteImport.update({
@@ -61,6 +70,11 @@ const WebApiSlugRoute = WebApiSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => WebApiRoute,
 } as any)
+const TagTagIdRoute = TagTagIdRouteImport.update({
+  id: '/tag/$tagId',
+  path: '/tag/$tagId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LibrarySlugRoute = LibrarySlugRouteImport.update({
   id: '/library/$slug',
   path: '/library/$slug',
@@ -69,6 +83,11 @@ const LibrarySlugRoute = LibrarySlugRouteImport.update({
 const KoWebApiRoute = KoWebApiRouteImport.update({
   id: '/ko/web-api',
   path: '/ko/web-api',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KoTagsRoute = KoTagsRouteImport.update({
+  id: '/ko/tags',
+  path: '/ko/tags',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KoSitemapRoute = KoSitemapRouteImport.update({
@@ -101,6 +120,11 @@ const KoWebApiSlugRoute = KoWebApiSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => KoWebApiRoute,
 } as any)
+const KoTagTagIdRoute = KoTagTagIdRouteImport.update({
+  id: '/ko/tag/$tagId',
+  path: '/ko/tag/$tagId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const KoLibrarySlugRoute = KoLibrarySlugRouteImport.update({
   id: '/ko/library/$slug',
   path: '/ko/library/$slug',
@@ -118,17 +142,21 @@ export interface FileRoutesByFullPath {
   '/built-with': typeof BuiltWithRoute
   '/libraries': typeof LibrariesRoute
   '/sitemap': typeof SitemapRoute
+  '/tags': typeof TagsRoute
   '/web-api': typeof WebApiRouteWithChildren
   '/category/$categoryId': typeof CategoryCategoryIdRoute
   '/ko': typeof KoIndexRoute
   '/ko/built-with': typeof KoBuiltWithRoute
   '/ko/libraries': typeof KoLibrariesRoute
   '/ko/sitemap': typeof KoSitemapRoute
+  '/ko/tags': typeof KoTagsRoute
   '/ko/web-api': typeof KoWebApiRouteWithChildren
   '/library/$slug': typeof LibrarySlugRoute
+  '/tag/$tagId': typeof TagTagIdRoute
   '/web-api/$slug': typeof WebApiSlugRoute
   '/ko/category/$categoryId': typeof KoCategoryCategoryIdRoute
   '/ko/library/$slug': typeof KoLibrarySlugRoute
+  '/ko/tag/$tagId': typeof KoTagTagIdRoute
   '/ko/web-api/$slug': typeof KoWebApiSlugRoute
 }
 export interface FileRoutesByTo {
@@ -137,17 +165,21 @@ export interface FileRoutesByTo {
   '/built-with': typeof BuiltWithRoute
   '/libraries': typeof LibrariesRoute
   '/sitemap': typeof SitemapRoute
+  '/tags': typeof TagsRoute
   '/web-api': typeof WebApiRouteWithChildren
   '/category/$categoryId': typeof CategoryCategoryIdRoute
   '/ko': typeof KoIndexRoute
   '/ko/built-with': typeof KoBuiltWithRoute
   '/ko/libraries': typeof KoLibrariesRoute
   '/ko/sitemap': typeof KoSitemapRoute
+  '/ko/tags': typeof KoTagsRoute
   '/ko/web-api': typeof KoWebApiRouteWithChildren
   '/library/$slug': typeof LibrarySlugRoute
+  '/tag/$tagId': typeof TagTagIdRoute
   '/web-api/$slug': typeof WebApiSlugRoute
   '/ko/category/$categoryId': typeof KoCategoryCategoryIdRoute
   '/ko/library/$slug': typeof KoLibrarySlugRoute
+  '/ko/tag/$tagId': typeof KoTagTagIdRoute
   '/ko/web-api/$slug': typeof KoWebApiSlugRoute
 }
 export interface FileRoutesById {
@@ -157,17 +189,21 @@ export interface FileRoutesById {
   '/built-with': typeof BuiltWithRoute
   '/libraries': typeof LibrariesRoute
   '/sitemap': typeof SitemapRoute
+  '/tags': typeof TagsRoute
   '/web-api': typeof WebApiRouteWithChildren
   '/category/$categoryId': typeof CategoryCategoryIdRoute
   '/ko/_index': typeof KoIndexRoute
   '/ko/built-with': typeof KoBuiltWithRoute
   '/ko/libraries': typeof KoLibrariesRoute
   '/ko/sitemap': typeof KoSitemapRoute
+  '/ko/tags': typeof KoTagsRoute
   '/ko/web-api': typeof KoWebApiRouteWithChildren
   '/library/$slug': typeof LibrarySlugRoute
+  '/tag/$tagId': typeof TagTagIdRoute
   '/web-api/$slug': typeof WebApiSlugRoute
   '/ko/category/$categoryId': typeof KoCategoryCategoryIdRoute
   '/ko/library/$slug': typeof KoLibrarySlugRoute
+  '/ko/tag/$tagId': typeof KoTagTagIdRoute
   '/ko/web-api/$slug': typeof KoWebApiSlugRoute
 }
 export interface FileRouteTypes {
@@ -178,17 +214,21 @@ export interface FileRouteTypes {
     | '/built-with'
     | '/libraries'
     | '/sitemap'
+    | '/tags'
     | '/web-api'
     | '/category/$categoryId'
     | '/ko'
     | '/ko/built-with'
     | '/ko/libraries'
     | '/ko/sitemap'
+    | '/ko/tags'
     | '/ko/web-api'
     | '/library/$slug'
+    | '/tag/$tagId'
     | '/web-api/$slug'
     | '/ko/category/$categoryId'
     | '/ko/library/$slug'
+    | '/ko/tag/$tagId'
     | '/ko/web-api/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -197,17 +237,21 @@ export interface FileRouteTypes {
     | '/built-with'
     | '/libraries'
     | '/sitemap'
+    | '/tags'
     | '/web-api'
     | '/category/$categoryId'
     | '/ko'
     | '/ko/built-with'
     | '/ko/libraries'
     | '/ko/sitemap'
+    | '/ko/tags'
     | '/ko/web-api'
     | '/library/$slug'
+    | '/tag/$tagId'
     | '/web-api/$slug'
     | '/ko/category/$categoryId'
     | '/ko/library/$slug'
+    | '/ko/tag/$tagId'
     | '/ko/web-api/$slug'
   id:
     | '__root__'
@@ -216,17 +260,21 @@ export interface FileRouteTypes {
     | '/built-with'
     | '/libraries'
     | '/sitemap'
+    | '/tags'
     | '/web-api'
     | '/category/$categoryId'
     | '/ko/_index'
     | '/ko/built-with'
     | '/ko/libraries'
     | '/ko/sitemap'
+    | '/ko/tags'
     | '/ko/web-api'
     | '/library/$slug'
+    | '/tag/$tagId'
     | '/web-api/$slug'
     | '/ko/category/$categoryId'
     | '/ko/library/$slug'
+    | '/ko/tag/$tagId'
     | '/ko/web-api/$slug'
   fileRoutesById: FileRoutesById
 }
@@ -236,16 +284,20 @@ export interface RootRouteChildren {
   BuiltWithRoute: typeof BuiltWithRoute
   LibrariesRoute: typeof LibrariesRoute
   SitemapRoute: typeof SitemapRoute
+  TagsRoute: typeof TagsRoute
   WebApiRoute: typeof WebApiRouteWithChildren
   CategoryCategoryIdRoute: typeof CategoryCategoryIdRoute
   KoIndexRoute: typeof KoIndexRoute
   KoBuiltWithRoute: typeof KoBuiltWithRoute
   KoLibrariesRoute: typeof KoLibrariesRoute
   KoSitemapRoute: typeof KoSitemapRoute
+  KoTagsRoute: typeof KoTagsRoute
   KoWebApiRoute: typeof KoWebApiRouteWithChildren
   LibrarySlugRoute: typeof LibrarySlugRoute
+  TagTagIdRoute: typeof TagTagIdRoute
   KoCategoryCategoryIdRoute: typeof KoCategoryCategoryIdRoute
   KoLibrarySlugRoute: typeof KoLibrarySlugRoute
+  KoTagTagIdRoute: typeof KoTagTagIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -255,6 +307,13 @@ declare module '@tanstack/react-router' {
       path: '/web-api'
       fullPath: '/web-api'
       preLoaderRoute: typeof WebApiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tags': {
+      id: '/tags'
+      path: '/tags'
+      fullPath: '/tags'
+      preLoaderRoute: typeof TagsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap': {
@@ -299,6 +358,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WebApiSlugRouteImport
       parentRoute: typeof WebApiRoute
     }
+    '/tag/$tagId': {
+      id: '/tag/$tagId'
+      path: '/tag/$tagId'
+      fullPath: '/tag/$tagId'
+      preLoaderRoute: typeof TagTagIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/library/$slug': {
       id: '/library/$slug'
       path: '/library/$slug'
@@ -311,6 +377,13 @@ declare module '@tanstack/react-router' {
       path: '/ko/web-api'
       fullPath: '/ko/web-api'
       preLoaderRoute: typeof KoWebApiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ko/tags': {
+      id: '/ko/tags'
+      path: '/ko/tags'
+      fullPath: '/ko/tags'
+      preLoaderRoute: typeof KoTagsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ko/sitemap': {
@@ -354,6 +427,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/ko/web-api/$slug'
       preLoaderRoute: typeof KoWebApiSlugRouteImport
       parentRoute: typeof KoWebApiRoute
+    }
+    '/ko/tag/$tagId': {
+      id: '/ko/tag/$tagId'
+      path: '/ko/tag/$tagId'
+      fullPath: '/ko/tag/$tagId'
+      preLoaderRoute: typeof KoTagTagIdRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/ko/library/$slug': {
       id: '/ko/library/$slug'
@@ -401,16 +481,20 @@ const rootRouteChildren: RootRouteChildren = {
   BuiltWithRoute: BuiltWithRoute,
   LibrariesRoute: LibrariesRoute,
   SitemapRoute: SitemapRoute,
+  TagsRoute: TagsRoute,
   WebApiRoute: WebApiRouteWithChildren,
   CategoryCategoryIdRoute: CategoryCategoryIdRoute,
   KoIndexRoute: KoIndexRoute,
   KoBuiltWithRoute: KoBuiltWithRoute,
   KoLibrariesRoute: KoLibrariesRoute,
   KoSitemapRoute: KoSitemapRoute,
+  KoTagsRoute: KoTagsRoute,
   KoWebApiRoute: KoWebApiRouteWithChildren,
   LibrarySlugRoute: LibrarySlugRoute,
+  TagTagIdRoute: TagTagIdRoute,
   KoCategoryCategoryIdRoute: KoCategoryCategoryIdRoute,
   KoLibrarySlugRoute: KoLibrarySlugRoute,
+  KoTagTagIdRoute: KoTagTagIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

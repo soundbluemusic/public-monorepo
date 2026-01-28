@@ -10,6 +10,7 @@ import {
   FeedbackButton,
   RelatedContent,
   ShareButton,
+  TagList,
 } from '@soundblue/ui/components';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import {
@@ -220,19 +221,11 @@ function LibraryDetailPage() {
         {/* Tags */}
         {lib.tags && lib.tags.length > 0 && (
           <div className="mb-8">
-            <h2 className="text-sm font-medium text-(--text-tertiary) mb-3">Tags</h2>
-            <div className="flex flex-wrap gap-2">
-              {lib.tags.map((tag) => (
-                <Link
-                  key={tag}
-                  to="/libraries"
-                  search={{ tag }}
-                  className="px-3 py-1 rounded-full text-sm bg-(--bg-tertiary) text-(--text-secondary) hover:bg-(--bg-elevated) hover:text-(--text-primary) transition-colors"
-                >
-                  {tag}
-                </Link>
-              ))}
-            </div>
+            <TagList
+              tags={lib.tags}
+              label="Tags:"
+              getTagHref={(tag) => `/tag/${encodeURIComponent(tag)}`}
+            />
           </div>
         )}
 

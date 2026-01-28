@@ -244,3 +244,73 @@ export async function getHomonymsByKoreanFromD1(
     return [];
   }
 }
+
+// ============================================================================
+// 태그 관련 함수
+// ============================================================================
+
+export interface TagWithCount {
+  tag: string;
+  count: number;
+}
+
+/**
+ * D1에서 태그로 엔트리 검색
+ * tags 컬럼은 JSON 배열 문자열로 저장되어 있음
+ */
+export async function getEntriesByTagFromD1(
+  db: D1Database,
+  tag: string,
+  locale: Language,
+): Promise<LocaleEntry[]> {
+  try {
+    // JSON 배열에서 태그 검색 (LIKE 사용)
+    const searchPattern = `%"${tag}"%`;
+    const { results } = await db
+      .prepare(
+        `SELECT id, korean, romanization, part_of_speech, category_id, difficulty, frequency, tags, translations
+         FROM entries WHERE tags LIKE ?`,
+      )
+      .bind(searchPattern)
+      .all<D1EntryRow>();
+
+    return results
+      .map((row: D1EntryRow) => rowToLocaleEntry(row, locale))
+      .filter((entry: LocaleEntry | null): entry is LocaleEntry => entry !== null);
+  } catch (error) {
+    logD1Error(`getEntriesByTag(${tag})`, error);
+    return [];
+  }
+}
+
+/**
+ * D1에서 모든 태그와 개수 조회
+ */
+export async function getAllTagsFromD1(db: D1Database): Promise<TagWithCount[]> {
+  try {
+    // 모든 엔트리의 tags 컬럼을 가져와서 JavaScript에서 집계
+    const { results } = await db
+      .prepare('SELECT tags FROM entries WHERE tags IS NOT NULL AND tags != "[]"')
+      .all<{ tags: string }>();
+
+    const tagCounts = new Map<string, number>();
+
+    for (const row of results) {
+      try {
+        const tags = JSON.parse(row.tags) as string[];
+        for (const tag of tags) {
+          tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+        }
+      } catch {
+        // JSON 파싱 실패 시 무시
+      }
+    }
+
+    return Array.from(tagCounts.entries())
+      .map(([tag, count]) => ({ tag, count }))
+      .sort((a, b) => b.count - a.count);
+  } catch (error) {
+    logD1Error('getAllTags', error);
+    return [];
+  }
+}

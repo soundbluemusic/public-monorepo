@@ -14,7 +14,7 @@ import {
   generateBreadcrumbSchema,
   generateDefinedTermSchema,
 } from '@soundblue/seo/structured-data';
-import { FeedbackButton, ShareButton } from '@soundblue/ui/components';
+import { FeedbackButton, ShareButton, TagList } from '@soundblue/ui/components';
 import { cn } from '@soundblue/ui/utils';
 import { createFileRoute, Link, notFound } from '@tanstack/react-router';
 import { Bookmark, BookmarkCheck, Check } from 'lucide-react';
@@ -320,6 +320,17 @@ function EntryPage() {
 
         {/* Homonym Section - Similar Words */}
         <HomonymSection korean={entry.korean} currentId={entry.id} className="mb-6" />
+
+        {/* Tags */}
+        {entry.tags && entry.tags.length > 0 && (
+          <section className="mb-6">
+            <TagList
+              tags={entry.tags}
+              label="Tags:"
+              getTagHref={(tag) => `/tag/${encodeURIComponent(tag)}`}
+            />
+          </section>
+        )}
 
         <div className="mt-8 flex items-center justify-between gap-4 flex-wrap">
           <Link

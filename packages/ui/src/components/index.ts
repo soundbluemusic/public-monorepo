@@ -93,3 +93,12 @@ export {
   type TabsProps,
   type TabsTriggerProps,
 } from './Tabs';
+// Tag Components
+export { TagBadge, type TagBadgeProps, tagBadgeVariants } from './TagBadge';
+export {
+  TagCloud,
+  type TagCloudItem,
+  type TagCloudProps,
+  TagList,
+  type TagListProps,
+} from './TagCloud';

@@ -273,3 +273,31 @@ export const difficultyIndex = new Map<string, number>(
 export const fieldIndex = new Map<string, number>(
   lightConceptsSortedByField.map((c, i) => [c.id, i]),
 );
+
+// ============================================================================
+// 태그 관련 유틸리티
+// ============================================================================
+
+/** Tag → Concept[] 맵 (O(1) 조회용) */
+export const conceptsByTag = new Map<string, MathConcept[]>();
+for (const concept of allConcepts) {
+  for (const tag of concept.tags) {
+    const list = conceptsByTag.get(tag) || [];
+    list.push(concept);
+    conceptsByTag.set(tag, list);
+  }
+}
+
+/** 모든 고유 태그 목록 (count 포함) */
+export interface TagWithCount {
+  tag: string;
+  count: number;
+}
+
+/** 모든 태그와 개수 (정렬됨) */
+export const allTags: TagWithCount[] = Array.from(conceptsByTag.entries())
+  .map(([tag, concepts]) => ({ tag, count: concepts.length }))
+  .sort((a, b) => b.count - a.count);
+
+/** 태그 개수 */
+export const totalTagCount = allTags.length;

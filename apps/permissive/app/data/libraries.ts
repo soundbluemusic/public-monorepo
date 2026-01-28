@@ -2593,3 +2593,33 @@ export function getLibrariesByCategorySlug(slug: string): Library[] {
   if (!categoryName || categoryName === 'All') return [];
   return libraries.filter((lib) => lib.category === categoryName);
 }
+
+// ============================================================================
+// 태그 관련 유틸리티
+// ============================================================================
+
+export interface TagWithCount {
+  tag: string;
+  count: number;
+}
+
+/** 모든 태그와 개수 (정렬됨) */
+export const allLibraryTags: TagWithCount[] = (() => {
+  const tagCounts = new Map<string, number>();
+  for (const lib of libraries) {
+    for (const tag of lib.tags || []) {
+      tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+    }
+  }
+  return Array.from(tagCounts.entries())
+    .map(([tag, count]) => ({ tag, count }))
+    .sort((a, b) => b.count - a.count);
+})();
+
+/** 태그별 라이브러리 조회 */
+export function getLibrariesByTag(tag: string): Library[] {
+  return libraries.filter((lib) => lib.tags?.includes(tag));
+}
+
+/** 총 태그 수 */
+export const totalLibraryTagCount = allLibraryTags.length;

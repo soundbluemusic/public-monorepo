@@ -13,13 +13,16 @@
 import { createServerFn } from '@tanstack/react-start';
 import type { LocaleEntry } from '../data/types';
 import {
+  getAllTagsFromD1,
   getCategoriesFromD1,
   getEntriesByCategoryFromD1,
+  getEntriesByTagFromD1,
   getEntryByIdFromD1,
   getEntryCounts as getEntryCountsFromD1,
   getEntryIdsByCategoryFromD1,
   getHomonymsByKoreanFromD1,
   type HomonymEntryFromD1,
+  type TagWithCount,
 } from './d1';
 
 /**
@@ -165,3 +168,41 @@ export const fetchHomonyms = createServerFn({ method: 'POST' })
 
     return await getHomonymsByKoreanFromD1(db, korean);
   });
+
+// ============================================================================
+// 태그 관련 서버 함수
+// ============================================================================
+
+/** 태그별 Entry 조회 입력 타입 */
+type FetchEntriesByTagInput = { tag: string; locale: 'en' | 'ko' };
+
+/**
+ * 태그별 Entry 목록을 D1에서 로드하는 서버 함수
+ */
+export const fetchEntriesByTagFromD1 = createServerFn({ method: 'POST' })
+  .inputValidator((data: FetchEntriesByTagInput) => data)
+  .handler(async ({ data }): Promise<LocaleEntry[]> => {
+    const { tag, locale } = data;
+    const db = getD1Database();
+
+    if (!db) {
+      console.error('[fetchEntriesByTagFromD1] D1 database not available');
+      return [];
+    }
+
+    return await getEntriesByTagFromD1(db, tag, locale);
+  });
+
+/**
+ * 모든 태그와 개수를 D1에서 로드하는 서버 함수
+ */
+export const fetchAllTagsFromD1 = createServerFn().handler(async (): Promise<TagWithCount[]> => {
+  const db = getD1Database();
+
+  if (!db) {
+    console.error('[fetchAllTagsFromD1] D1 database not available');
+    return [];
+  }
+
+  return await getAllTagsFromD1(db);
+});
