@@ -56,8 +56,8 @@ exclude_path = [
   "dist",
 ]
 
-# 출력 형식 (compact, detailed, json, markdown)
-format = "compact"
+# 출력 형식 (Compact, Detailed, Json, Markdown, Raw)
+format = "Compact"
 
 # 상세 출력 레벨 (error, warn, info, debug, trace)
 verbose = "info"
