@@ -23,6 +23,7 @@ Monorepo with 3 SSR apps (TanStack Start + Cloudflare Workers). **SPA mode is fo
 - Run `pnpm test` for Vitest unit tests.
 - Run `pnpm test:e2e` for Playwright E2E tests.
 - Run `pnpm quality` to execute all checks at once.
+- Do **not** run `pnpm check:size` locally unless explicitly requested — it uses size-limit (puppeteer/estimo) and spawns headless Chrome instances for performance measurement.
 - Fix any errors before committing.
 
 ## Code style
