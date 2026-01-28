@@ -230,6 +230,10 @@ jobs:
       - name: Check bundle size
         run: pnpm check:size
 
+      - name: Install lychee
+        run: |
+          curl -sSfL https://github.com/lycheeverse/lychee/releases/download/v0.15.1/lychee-v0.15.1-x86_64-unknown-linux-gnu.tar.gz | tar xzf - -C /usr/local/bin
+
       - name: Check broken links (production)
         run: pnpm check:links:prod
 
