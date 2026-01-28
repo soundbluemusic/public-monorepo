@@ -1,19 +1,25 @@
-// Default config for roots app
+// Lighthouse CI config for SSR apps (production URL testing)
 // Use APP environment variable to test different apps:
 // APP=context pnpm lhci
 // APP=permissive pnpm lhci
 // APP=roots pnpm lhci (default)
+//
+// Note: SSR apps don't have static index.html, so we test production URLs
 
 const app = process.env.APP || 'roots';
+
+const PROD_URLS = {
+  context: 'https://context.soundbluemusic.com',
+  permissive: 'https://permissive.soundbluemusic.com',
+  roots: 'https://roots.soundbluemusic.com',
+};
 
 module.exports = {
   ci: {
     collect: {
-      staticDistDir: `./apps/${app}/dist/client`,
-      url: ['http://localhost/index.html'],
+      // SSR 앱은 프로덕션 URL 테스트 (staticDistDir 사용 불가)
+      url: [PROD_URLS[app]],
       numberOfRuns: 1,
-      // chromePath는 환경변수 CHROME_PATH가 있으면 사용, 없으면 자동 감지
-      // GitHub Actions에서는 workflow에서 CHROME_PATH 설정 필요
       ...(process.env.CHROME_PATH ? { chromePath: process.env.CHROME_PATH } : {}),
       settings: {
         chromeFlags: '--no-sandbox --disable-dev-shm-usage --headless',

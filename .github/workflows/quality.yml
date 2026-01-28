@@ -133,15 +133,6 @@ jobs:
           name: build-output
           path: apps
 
-      - name: Debug artifact structure
-        run: |
-          echo "=== Listing apps directory ==="
-          ls -la apps/
-          echo "=== Listing apps/context ==="
-          ls -la apps/context/ || echo "context not found"
-          echo "=== Listing apps/context/dist ==="
-          ls -la apps/context/dist/ || echo "dist not found"
-
       # Playwright 브라우저 캐싱
       - name: Get Playwright version
         id: playwright-version
@@ -162,9 +153,13 @@ jobs:
         if: steps.playwright-cache.outputs.cache-hit == 'true'
         run: pnpm exec playwright install-deps chromium
 
-      # 모든 E2E 테스트 실행 (통합)
-      - name: Run all E2E tests
-        run: pnpm test:e2e
+      # 프로덕션 URL로 E2E 테스트 실행 (SSR 앱은 로컬 서버 불가)
+      - name: Run E2E tests against production
+        run: pnpm exec playwright test --project=context-prod --project=permissive-prod --project=roots-prod
+        env:
+          PLAYWRIGHT_BASE_URL_CONTEXT: https://context.soundbluemusic.com
+          PLAYWRIGHT_BASE_URL_PERMISSIVE: https://permissive.soundbluemusic.com
+          PLAYWRIGHT_BASE_URL_ROOTS: https://roots.soundbluemusic.com
 
   # Job 3-2: Lighthouse CI
   lighthouse:
@@ -235,8 +230,8 @@ jobs:
       - name: Check bundle size
         run: pnpm check:size
 
-      - name: Check broken links
-        run: pnpm check:links
+      - name: Check broken links (production)
+        run: pnpm check:links:prod
 
       - name: Verify SSR build
         run: pnpm verify:ssr
