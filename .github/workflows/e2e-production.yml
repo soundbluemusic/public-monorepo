@@ -1,0 +1,94 @@
+name: Production E2E Tests
+
+on:
+  # 배포 후 자동 실행
+  workflow_run:
+    workflows: ['Deploy Context', 'Deploy Permissive', 'Deploy Roots']
+    types:
+      - completed
+  # 수동 실행
+  workflow_dispatch:
+    inputs:
+      app:
+        description: 'App to test (context, permissive, roots, all)'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - context
+          - permissive
+          - roots
+
+jobs:
+  e2e-production:
+    name: E2E Tests on Production
+    runs-on: ubuntu-latest
+    # 배포 성공 시에만 실행
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Run E2E tests against production
+        run: |
+          # 프로덕션 URL 설정
+          export PLAYWRIGHT_BASE_URL_CONTEXT="https://context.soundbluemusic.com"
+          export PLAYWRIGHT_BASE_URL_PERMISSIVE="https://permissive.soundbluemusic.com"
+          export PLAYWRIGHT_BASE_URL_ROOTS="https://roots.soundbluemusic.com"
+
+          # 테스트 대상 결정
+          APP="${{ github.event.inputs.app || 'all' }}"
+
+          if [ "$APP" = "all" ] || [ "$APP" = "context" ]; then
+            echo "🧪 Testing Context (production)..."
+            pnpm exec playwright test --project=context-prod || FAILED=1
+          fi
+
+          if [ "$APP" = "all" ] || [ "$APP" = "permissive" ]; then
+            echo "🧪 Testing Permissive (production)..."
+            pnpm exec playwright test --project=permissive-prod || FAILED=1
+          fi
+
+          if [ "$APP" = "all" ] || [ "$APP" = "roots" ]; then
+            echo "🧪 Testing Roots (production)..."
+            pnpm exec playwright test --project=roots-prod || FAILED=1
+          fi
+
+          if [ "$FAILED" = "1" ]; then
+            exit 1
+          fi
+        env:
+          CI: true
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report-production
+          path: playwright-report/
+          retention-days: 7
+
+      - name: Upload screenshots on failure
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: test-screenshots-production
+          path: test-results/
+          retention-days: 7

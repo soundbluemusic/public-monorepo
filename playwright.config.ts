@@ -6,6 +6,13 @@ const APP_PORTS = {
   roots: 3005,
 } as const;
 
+// 프로덕션 URL (환경 변수로 오버라이드 가능)
+const PROD_URLS = {
+  context: process.env.PLAYWRIGHT_BASE_URL_CONTEXT || 'https://context.soundbluemusic.com',
+  permissive: process.env.PLAYWRIGHT_BASE_URL_PERMISSIVE || 'https://permissive.soundbluemusic.com',
+  roots: process.env.PLAYWRIGHT_BASE_URL_ROOTS || 'https://roots.soundbluemusic.com',
+} as const;
+
 export default defineConfig({
   testDir: './tests/e2e',
   fullyParallel: true,
@@ -56,27 +63,54 @@ export default defineConfig({
       testMatch:
         /roots|button-interactions|accessibility|responsive|mobile|seo|pwa|security|visual/,
     },
+    // Production projects (프로덕션 URL 테스트용)
+    {
+      name: 'context-prod',
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: PROD_URLS.context,
+      },
+      testMatch: /context|seo|accessibility/,
+    },
+    {
+      name: 'permissive-prod',
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: PROD_URLS.permissive,
+      },
+      testMatch: /permissive|seo|accessibility/,
+    },
+    {
+      name: 'roots-prod',
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: PROD_URLS.roots,
+      },
+      testMatch: /roots|seo|accessibility/,
+    },
   ],
 
-  /* 빌드된 앱을 서빙하는 preview 서버 (CI에서 필요) */
-  webServer: [
-    {
-      command: 'pnpm preview:context',
-      port: APP_PORTS.context,
-      reuseExistingServer: true,
-      timeout: 120 * 1000,
-    },
-    {
-      command: 'pnpm preview:permissive',
-      port: APP_PORTS.permissive,
-      reuseExistingServer: true,
-      timeout: 120 * 1000,
-    },
-    {
-      command: 'pnpm preview:roots',
-      port: APP_PORTS.roots,
-      reuseExistingServer: true,
-      timeout: 120 * 1000,
-    },
-  ],
+  /* 빌드된 앱을 서빙하는 preview 서버 (로컬 테스트용, 프로덕션 테스트 시 불필요) */
+  webServer: process.env.PLAYWRIGHT_BASE_URL_CONTEXT
+    ? undefined
+    : [
+        {
+          command: 'pnpm preview:context',
+          port: APP_PORTS.context,
+          reuseExistingServer: true,
+          timeout: 120 * 1000,
+        },
+        {
+          command: 'pnpm preview:permissive',
+          port: APP_PORTS.permissive,
+          reuseExistingServer: true,
+          timeout: 120 * 1000,
+        },
+        {
+          command: 'pnpm preview:roots',
+          port: APP_PORTS.roots,
+          reuseExistingServer: true,
+          timeout: 120 * 1000,
+        },
+      ],
 });
