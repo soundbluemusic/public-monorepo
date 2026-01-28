@@ -4509,8 +4509,8 @@
   },
   {
     "id": "KTX",
-    "korean": "KTX",
-    "romanization": "KTX",
+    "korean": "케이티엑스",
+    "romanization": "kengitingekseu",
     "partOfSpeech": "noun",
     "categoryId": "transportation",
     "difficulty": "beginner",
@@ -4522,7 +4522,7 @@
     ],
     "translations": {
       "ko": {
-        "word": "KTX",
+        "word": "케이티엑스",
         "explanation": "한국의 고속 열차.",
         "examples": {
           "beginner": "KTX을/를 타요.",

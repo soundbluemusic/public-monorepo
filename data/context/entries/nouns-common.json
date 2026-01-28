@@ -7687,10 +7687,10 @@
   },
   {
     "id": "w-pd",
-    "korean": "PD",
-    "romanization": "PD",
+    "korean": "피디",
+    "romanization": "pidi",
     "pronunciation": {
-      "korean": "[PD]",
+      "korean": "[피디]",
       "ipa": "[PD]"
     },
     "partOfSpeech": "noun",
@@ -7724,7 +7724,7 @@
         }
       },
       "ko": {
-        "word": "PD",
+        "word": "피디",
         "explanation": "PD의 뜻은 'producer'입니다.",
         "examples": {
           "beginner": "\"PD\"는 한국어로 말해요.",
@@ -8002,10 +8002,10 @@
   },
   {
     "id": "w-ceo",
-    "korean": "CEO",
-    "romanization": "CEO",
+    "korean": "씨이오",
+    "romanization": "ssingingo",
     "pronunciation": {
-      "korean": "[CEO]",
+      "korean": "[씨이오]",
       "ipa": "[CEO]"
     },
     "partOfSpeech": "noun",
@@ -8039,7 +8039,7 @@
         }
       },
       "ko": {
-        "word": "CEO",
+        "word": "씨이오",
         "explanation": "CEO의 뜻은 'CEO'입니다.",
         "examples": {
           "beginner": "\"CEO\"는 한국어로 말해요.",
@@ -31942,10 +31942,10 @@
   },
   {
     "id": "w-tv",
-    "korean": "TV",
-    "romanization": "TV",
+    "korean": "티브이",
+    "romanization": "tibeungi",
     "pronunciation": {
-      "korean": "[TV]",
+      "korean": "[티브이]",
       "ipa": "[TV]"
     },
     "partOfSpeech": "noun",
@@ -31979,7 +31979,7 @@
         }
       },
       "ko": {
-        "word": "TV",
+        "word": "티브이",
         "explanation": "TV의 뜻은 'TV'입니다.",
         "examples": {
           "beginner": "\"TV\"는 한국어로 말해요.",
@@ -33139,10 +33139,10 @@
   },
   {
     "id": "w-usb",
-    "korean": "USB",
-    "romanization": "USB",
+    "korean": "유에스비",
+    "romanization": "ngyungeseubi",
     "pronunciation": {
-      "korean": "[USB]",
+      "korean": "[유에스비]",
       "ipa": "[USB]"
     },
     "partOfSpeech": "noun",
@@ -33176,7 +33176,7 @@
         }
       },
       "ko": {
-        "word": "USB",
+        "word": "유에스비",
         "explanation": "USB의 뜻은 'USB'입니다.",
         "examples": {
           "beginner": "\"USB\"는 한국어로 말해요.",
@@ -47440,10 +47440,10 @@
   },
   {
     "id": "w-ai-1",
-    "korean": "AI",
-    "romanization": "AI",
+    "korean": "에이아이",
+    "romanization": "ngengingangi",
     "pronunciation": {
-      "korean": "[AI]",
+      "korean": "[에이아이]",
       "ipa": "[AI]"
     },
     "partOfSpeech": "noun",
@@ -47477,7 +47477,7 @@
         }
       },
       "ko": {
-        "word": "AI",
+        "word": "에이아이",
         "explanation": "AI의 뜻은 'AI'입니다.",
         "examples": {
           "beginner": "\"AI\"는 한국어로 말해요.",
@@ -47881,10 +47881,10 @@
   },
   {
     "id": "w-nft",
-    "korean": "NFT",
-    "romanization": "NFT",
+    "korean": "엔에프티",
+    "romanization": "ngenngepeuti",
     "pronunciation": {
-      "korean": "[NFT]",
+      "korean": "[엔에프티]",
       "ipa": "[NFT]"
     },
     "partOfSpeech": "noun",
@@ -47918,7 +47918,7 @@
         }
       },
       "ko": {
-        "word": "NFT",
+        "word": "엔에프티",
         "explanation": "NFT의 뜻은 'NFT'입니다.",
         "examples": {
           "beginner": "\"NFT\"는 한국어로 말해요.",
@@ -48007,10 +48007,10 @@
   },
   {
     "id": "w-vr",
-    "korean": "VR",
-    "romanization": "VR",
+    "korean": "브이알",
+    "romanization": "beungingal",
     "pronunciation": {
-      "korean": "[VR]",
+      "korean": "[브이알]",
       "ipa": "[VR]"
     },
     "partOfSpeech": "noun",
@@ -48044,7 +48044,7 @@
         }
       },
       "ko": {
-        "word": "VR",
+        "word": "브이알",
         "explanation": "VR의 뜻은 'VR'입니다.",
         "examples": {
           "beginner": "\"VR\"는 한국어로 말해요.",
@@ -48070,10 +48070,10 @@
   },
   {
     "id": "w-ar",
-    "korean": "AR",
-    "romanization": "AR",
+    "korean": "에이알",
+    "romanization": "ngengingal",
     "pronunciation": {
-      "korean": "[AR]",
+      "korean": "[에이알]",
       "ipa": "[AR]"
     },
     "partOfSpeech": "noun",
@@ -48107,7 +48107,7 @@
         }
       },
       "ko": {
-        "word": "AR",
+        "word": "에이알",
         "explanation": "AR의 뜻은 'AR'입니다.",
         "examples": {
           "beginner": "\"AR\"는 한국어로 말해요.",
@@ -66214,10 +66214,10 @@
   },
   {
     "id": "w-api",
-    "korean": "API",
-    "romanization": "API",
+    "korean": "에이피아이",
+    "romanization": "ngengipingangi",
     "pronunciation": {
-      "korean": "[API]",
+      "korean": "[에이피아이]",
       "ipa": "[API]"
     },
     "partOfSpeech": "noun",
@@ -66251,7 +66251,7 @@
         }
       },
       "ko": {
-        "word": "API",
+        "word": "에이피아이",
         "explanation": "API의 뜻은 'API'입니다.",
         "examples": {
           "beginner": "\"API\"는 한국어로 말해요.",

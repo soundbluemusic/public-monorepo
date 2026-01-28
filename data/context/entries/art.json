@@ -4737,8 +4737,8 @@
   },
   {
     "id": "d-art-edm",
-    "korean": "EDM",
-    "romanization": "EDM",
+    "korean": "이디엠",
+    "romanization": "ngidingem",
     "partOfSpeech": "noun",
     "categoryId": "art",
     "difficulty": "beginner",
@@ -4746,7 +4746,7 @@
     "tags": [],
     "translations": {
       "ko": {
-        "word": "EDM",
+        "word": "이디엠",
         "explanation": "EDM의 뜻은 'EDM'입니다.",
         "examples": {
           "beginner": "\"EDM\"는 한국어로 말해요.",
@@ -4827,7 +4827,7 @@
       }
     },
     "pronunciation": {
-      "korean": "[EDM]",
+      "korean": "[이디엠]",
       "ipa": "[EDM]"
     }
   },

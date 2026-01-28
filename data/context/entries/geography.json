@@ -3011,8 +3011,8 @@
   },
   {
     "id": "k2",
-    "korean": "K2",
-    "romanization": "K2",
+    "korean": "케이2",
+    "romanization": "kengi2",
     "partOfSpeech": "noun",
     "categoryId": "geography",
     "difficulty": "intermediate",
@@ -3023,7 +3023,7 @@
     ],
     "translations": {
       "ko": {
-        "word": "K2",
+        "word": "케이2",
         "explanation": "세계에서 두 번째로 높은 산입니다 (8,611m).",
         "examples": {
           "beginner": "K2는 높습니다.",
@@ -3042,6 +3042,9 @@
           "master": "The formation of K2 has significant geological importance."
         }
       }
+    },
+    "pronunciation": {
+      "korean": "[케이2]"
     }
   },
   {

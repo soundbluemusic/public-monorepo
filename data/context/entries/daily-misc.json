@@ -12168,10 +12168,10 @@
   },
   {
     "id": "d-hom-lvt",
-    "korean": "LVT",
-    "romanization": "LVT",
+    "korean": "엘브이티",
+    "romanization": "ngelbeungiti",
     "pronunciation": {
-      "korean": "[LVT]",
+      "korean": "[엘브이티]",
       "ipa": "[LVT]"
     },
     "partOfSpeech": "noun",
@@ -12205,7 +12205,7 @@
         }
       },
       "ko": {
-        "word": "LVT",
+        "word": "엘브이티",
         "explanation": "LVT의 뜻은 'luxury vinyl tile'입니다.",
         "examples": {
           "beginner": "\"LVT\"는 한국어로 말해요.",
@@ -14499,10 +14499,10 @@
   },
   {
     "id": "d-hom-mdf",
-    "korean": "MDF",
-    "romanization": "MDF",
+    "korean": "엠디에프",
+    "romanization": "ngemdingepeu",
     "pronunciation": {
-      "korean": "[MDF]",
+      "korean": "[엠디에프]",
       "ipa": "[MDF]"
     },
     "partOfSpeech": "noun",
@@ -14536,7 +14536,7 @@
         }
       },
       "ko": {
-        "word": "MDF",
+        "word": "엠디에프",
         "explanation": "MDF의 뜻은 'mdf'입니다.",
         "examples": {
           "beginner": "\"MDF\"는 한국어로 말해요.",
@@ -46566,10 +46566,10 @@
   },
   {
     "id": "d-hom-tv",
-    "korean": "TV",
-    "romanization": "TV",
+    "korean": "티브이",
+    "romanization": "tibeungi",
     "pronunciation": {
-      "korean": "[TV]",
+      "korean": "[티브이]",
       "ipa": "[TV]"
     },
     "partOfSpeech": "noun",
@@ -46603,7 +46603,7 @@
         }
       },
       "ko": {
-        "word": "TV",
+        "word": "티브이",
         "explanation": "TV의 뜻은 'tv'입니다.",
         "examples": {
           "beginner": "\"TV\"는 한국어로 말해요.",
@@ -46629,10 +46629,10 @@
   },
   {
     "id": "d-hom-led-tv",
-    "korean": "LED TV",
-    "romanization": "LED TV",
+    "korean": "엘이디 티브이",
+    "romanization": "ngelngidi tibeungi",
     "pronunciation": {
-      "korean": "[LED TV]",
+      "korean": "[엘이디 티브이]",
       "ipa": "[LED TV]"
     },
     "partOfSpeech": "noun",
@@ -46666,7 +46666,7 @@
         }
       },
       "ko": {
-        "word": "LED TV",
+        "word": "엘이디 티브이",
         "explanation": "LED TV의 뜻은 'led tv'입니다.",
         "examples": {
           "beginner": "\"LED TV\"는 한국어로 말해요.",
@@ -46692,10 +46692,10 @@
   },
   {
     "id": "d-hom-oled-tv",
-    "korean": "OLED TV",
-    "romanization": "OLED TV",
+    "korean": "오엘이디 티브이",
+    "romanization": "ngongelngidi tibeungi",
     "pronunciation": {
-      "korean": "[OLED TV]",
+      "korean": "[오엘이디 티브이]",
       "ipa": "[OLED TV]"
     },
     "partOfSpeech": "noun",
@@ -46729,7 +46729,7 @@
         }
       },
       "ko": {
-        "word": "OLED TV",
+        "word": "오엘이디 티브이",
         "explanation": "OLED TV의 뜻은 'oled tv'입니다.",
         "examples": {
           "beginner": "\"OLED TV\"는 한국어로 말해요.",
@@ -46755,10 +46755,10 @@
   },
   {
     "id": "d-hom-qled-tv",
-    "korean": "QLED TV",
-    "romanization": "QLED TV",
+    "korean": "큐엘이디 티브이",
+    "romanization": "kyungelngidi tibeungi",
     "pronunciation": {
-      "korean": "[QLED TV]",
+      "korean": "[큐엘이디 티브이]",
       "ipa": "[QLED TV]"
     },
     "partOfSpeech": "noun",
@@ -46792,7 +46792,7 @@
         }
       },
       "ko": {
-        "word": "QLED TV",
+        "word": "큐엘이디 티브이",
         "explanation": "QLED TV의 뜻은 'qled tv'입니다.",
         "examples": {
           "beginner": "\"QLED TV\"는 한국어로 말해요.",
@@ -46818,10 +46818,10 @@
   },
   {
     "id": "d-hom-4k-tv",
-    "korean": "4K TV",
-    "romanization": "4K TV",
+    "korean": "4케이 티브이",
+    "romanization": "4kengi tibeungi",
     "pronunciation": {
-      "korean": "[4K TV]",
+      "korean": "[4케이 티브이]",
       "ipa": "[4K TV]"
     },
     "partOfSpeech": "noun",
@@ -46855,7 +46855,7 @@
         }
       },
       "ko": {
-        "word": "4K TV",
+        "word": "4케이 티브이",
         "explanation": "4K TV의 뜻은 '4k tv'입니다.",
         "examples": {
           "beginner": "\"4K TV\"는 한국어로 말해요.",
@@ -46881,10 +46881,10 @@
   },
   {
     "id": "d-hom-8k-tv",
-    "korean": "8K TV",
-    "romanization": "8K TV",
+    "korean": "8케이 티브이",
+    "romanization": "8kengi tibeungi",
     "pronunciation": {
-      "korean": "[8K TV]",
+      "korean": "[8케이 티브이]",
       "ipa": "[8K TV]"
     },
     "partOfSpeech": "noun",
@@ -46918,7 +46918,7 @@
         }
       },
       "ko": {
-        "word": "8K TV",
+        "word": "8케이 티브이",
         "explanation": "8K TV의 뜻은 '8k tv'입니다.",
         "examples": {
           "beginner": "\"8K TV\"는 한국어로 말해요.",
@@ -48393,10 +48393,10 @@
   },
   {
     "id": "d-hom-cdp",
-    "korean": "CDP",
-    "romanization": "CDP",
+    "korean": "씨디피",
+    "romanization": "ssidipi",
     "pronunciation": {
-      "korean": "[CDP]",
+      "korean": "[씨디피]",
       "ipa": "[CDP]"
     },
     "partOfSpeech": "noun",
@@ -48430,7 +48430,7 @@
         }
       },
       "ko": {
-        "word": "CDP",
+        "word": "씨디피",
         "explanation": "CDP의 뜻은 'cd player'입니다.",
         "examples": {
           "beginner": "\"CDP\"는 한국어로 말해요.",
@@ -52236,10 +52236,10 @@
   },
   {
     "id": "d-hom-ups",
-    "korean": "UPS",
-    "romanization": "UPS",
+    "korean": "유피에스",
+    "romanization": "ngyupingeseu",
     "pronunciation": {
-      "korean": "[UPS]",
+      "korean": "[유피에스]",
       "ipa": "[UPS]"
     },
     "partOfSpeech": "noun",
@@ -52273,7 +52273,7 @@
         }
       },
       "ko": {
-        "word": "UPS",
+        "word": "유피에스",
         "explanation": "UPS의 뜻은 'ups'입니다.",
         "examples": {
           "beginner": "\"UPS\"는 한국어로 말해요.",
@@ -72963,10 +72963,10 @@
   },
   {
     "id": "d-hom-cctv",
-    "korean": "CCTV",
-    "romanization": "CCTV",
+    "korean": "씨씨티브이",
+    "romanization": "ssissitibeungi",
     "pronunciation": {
-      "korean": "[CCTV]",
+      "korean": "[씨씨티브이]",
       "ipa": "[CCTV]"
     },
     "partOfSpeech": "noun",
@@ -73000,7 +73000,7 @@
         }
       },
       "ko": {
-        "word": "CCTV",
+        "word": "씨씨티브이",
         "explanation": "CCTV의 뜻은 'cctv'입니다.",
         "examples": {
           "beginner": "\"CCTV\"는 한국어로 말해요.",
@@ -79578,10 +79578,10 @@
   },
   {
     "id": "d-hom-ess",
-    "korean": "ESS",
-    "romanization": "ESS",
+    "korean": "이에스에스",
+    "romanization": "ngingeseungeseu",
     "pronunciation": {
-      "korean": "[ESS]",
+      "korean": "[이에스에스]",
       "ipa": "[ESS]"
     },
     "partOfSpeech": "noun",
@@ -79615,7 +79615,7 @@
         }
       },
       "ko": {
-        "word": "ESS",
+        "word": "이에스에스",
         "explanation": "ESS의 뜻은 'energy storage system'입니다.",
         "examples": {
           "beginner": "\"ESS\"는 한국어로 말해요.",

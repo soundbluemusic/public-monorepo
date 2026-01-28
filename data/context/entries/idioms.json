@@ -16369,8 +16369,8 @@
   },
   {
     "id": "id-tmi",
-    "korean": "TMI",
-    "romanization": "TMI",
+    "korean": "티엠아이",
+    "romanization": "tingemngangi",
     "partOfSpeech": "expression",
     "categoryId": "idioms",
     "difficulty": "beginner",
@@ -16378,7 +16378,7 @@
     "tags": [],
     "translations": {
       "ko": {
-        "word": "TMI",
+        "word": "티엠아이",
         "explanation": "TMI의 뜻은 'too much information'입니다.",
         "examples": {
           "beginner": "\"TMI\"는 한국어로 말해요.",
@@ -16459,7 +16459,7 @@
       }
     },
     "pronunciation": {
-      "korean": "[TMI]",
+      "korean": "[티엠아이]",
       "ipa": "[TMI]"
     }
   },
@@ -18961,8 +18961,8 @@
   },
   {
     "id": "id-jmt",
-    "korean": "JMT",
-    "romanization": "JMT",
+    "korean": "제이엠티",
+    "romanization": "jengingemti",
     "partOfSpeech": "expression",
     "categoryId": "idioms",
     "difficulty": "beginner",
@@ -18970,7 +18970,7 @@
     "tags": [],
     "translations": {
       "ko": {
-        "word": "JMT",
+        "word": "제이엠티",
         "explanation": "JMT의 뜻은 'super delicious'입니다.",
         "examples": {
           "beginner": "\"JMT\"는 한국어로 말해요.",
@@ -19051,7 +19051,7 @@
       }
     },
     "pronunciation": {
-      "korean": "[JMT]",
+      "korean": "[제이엠티]",
       "ipa": "[JMT]"
     }
   },

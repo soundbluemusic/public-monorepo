@@ -14561,8 +14561,8 @@
   },
   {
     "id": "d-fit-rdl",
-    "korean": "RDL",
-    "romanization": "RDL",
+    "korean": "알디엘",
+    "romanization": "ngaldingel",
     "partOfSpeech": "noun",
     "categoryId": "sports",
     "difficulty": "beginner",
@@ -14570,7 +14570,7 @@
     "tags": [],
     "translations": {
       "ko": {
-        "word": "RDL",
+        "word": "알디엘",
         "explanation": "RDL의 뜻은 'Romanian deadlift'입니다.",
         "examples": {
           "beginner": "\"RDL\"는 한국어로 말해요.",
@@ -14651,7 +14651,7 @@
       }
     },
     "pronunciation": {
-      "korean": "[RDL]",
+      "korean": "[알디엘]",
       "ipa": "[RDL]"
     }
   },
@@ -38273,8 +38273,8 @@
   },
   {
     "id": "d-spo-100m",
-    "korean": "100m",
-    "romanization": "100m",
+    "korean": "100엠",
+    "romanization": "100ngem",
     "partOfSpeech": "noun",
     "categoryId": "sports",
     "difficulty": "beginner",
@@ -38282,7 +38282,7 @@
     "tags": [],
     "translations": {
       "ko": {
-        "word": "100m",
+        "word": "100엠",
         "explanation": "100m의 뜻은 '100 metres'입니다.",
         "examples": {
           "beginner": "\"100m\"는 한국어로 말해요.",
@@ -38363,14 +38363,14 @@
       }
     },
     "pronunciation": {
-      "korean": "[100m]",
+      "korean": "[100엠]",
       "ipa": "[100m]"
     }
   },
   {
     "id": "d-spo-200m",
-    "korean": "200m",
-    "romanization": "200m",
+    "korean": "200엠",
+    "romanization": "200ngem",
     "partOfSpeech": "noun",
     "categoryId": "sports",
     "difficulty": "beginner",
@@ -38378,7 +38378,7 @@
     "tags": [],
     "translations": {
       "ko": {
-        "word": "200m",
+        "word": "200엠",
         "explanation": "200m의 뜻은 '200 metres'입니다.",
         "examples": {
           "beginner": "\"200m\"는 한국어로 말해요.",
@@ -38459,14 +38459,14 @@
       }
     },
     "pronunciation": {
-      "korean": "[200m]",
+      "korean": "[200엠]",
       "ipa": "[200m]"
     }
   },
   {
     "id": "d-spo-400m",
-    "korean": "400m",
-    "romanization": "400m",
+    "korean": "400엠",
+    "romanization": "400ngem",
     "partOfSpeech": "noun",
     "categoryId": "sports",
     "difficulty": "beginner",
@@ -38474,7 +38474,7 @@
     "tags": [],
     "translations": {
       "ko": {
-        "word": "400m",
+        "word": "400엠",
         "explanation": "400m의 뜻은 '400 metres'입니다.",
         "examples": {
           "beginner": "\"400m\"는 한국어로 말해요.",
@@ -38555,7 +38555,7 @@
       }
     },
     "pronunciation": {
-      "korean": "[400m]",
+      "korean": "[400엠]",
       "ipa": "[400m]"
     }
   },
@@ -38657,8 +38657,8 @@
   },
   {
     "id": "d-spo-800m",
-    "korean": "800m",
-    "romanization": "800m",
+    "korean": "800엠",
+    "romanization": "800ngem",
     "partOfSpeech": "noun",
     "categoryId": "sports",
     "difficulty": "beginner",
@@ -38666,7 +38666,7 @@
     "tags": [],
     "translations": {
       "ko": {
-        "word": "800m",
+        "word": "800엠",
         "explanation": "800m의 뜻은 '800 metres'입니다.",
         "examples": {
           "beginner": "\"800m\"는 한국어로 말해요.",
@@ -38747,14 +38747,14 @@
       }
     },
     "pronunciation": {
-      "korean": "[800m]",
+      "korean": "[800엠]",
       "ipa": "[800m]"
     }
   },
   {
     "id": "d-spo-1500m",
-    "korean": "1500m",
-    "romanization": "1500m",
+    "korean": "1500엠",
+    "romanization": "1500ngem",
     "partOfSpeech": "noun",
     "categoryId": "sports",
     "difficulty": "beginner",
@@ -38762,7 +38762,7 @@
     "tags": [],
     "translations": {
       "ko": {
-        "word": "1500m",
+        "word": "1500엠",
         "explanation": "1500m의 뜻은 '1500 metres'입니다.",
         "examples": {
           "beginner": "\"1500m\"는 한국어로 말해요.",
@@ -38843,7 +38843,7 @@
       }
     },
     "pronunciation": {
-      "korean": "[1500m]",
+      "korean": "[1500엠]",
       "ipa": "[1500m]"
     }
   },
@@ -38945,8 +38945,8 @@
   },
   {
     "id": "d-spo-5000m",
-    "korean": "5000m",
-    "romanization": "5000m",
+    "korean": "5000엠",
+    "romanization": "5000ngem",
     "partOfSpeech": "noun",
     "categoryId": "sports",
     "difficulty": "beginner",
@@ -38954,7 +38954,7 @@
     "tags": [],
     "translations": {
       "ko": {
-        "word": "5000m",
+        "word": "5000엠",
         "explanation": "5000m의 뜻은 '5000 metres'입니다.",
         "examples": {
           "beginner": "\"5000m\"는 한국어로 말해요.",
@@ -39035,14 +39035,14 @@
       }
     },
     "pronunciation": {
-      "korean": "[5000m]",
+      "korean": "[5000엠]",
       "ipa": "[5000m]"
     }
   },
   {
     "id": "d-spo-10000m",
-    "korean": "10000m",
-    "romanization": "10000m",
+    "korean": "10000엠",
+    "romanization": "10000ngem",
     "partOfSpeech": "noun",
     "categoryId": "sports",
     "difficulty": "beginner",
@@ -39050,7 +39050,7 @@
     "tags": [],
     "translations": {
       "ko": {
-        "word": "10000m",
+        "word": "10000엠",
         "explanation": "10000m의 뜻은 '10000 metres'입니다.",
         "examples": {
           "beginner": "\"10000m\"는 한국어로 말해요.",
@@ -39131,7 +39131,7 @@
       }
     },
     "pronunciation": {
-      "korean": "[10000m]",
+      "korean": "[10000엠]",
       "ipa": "[10000m]"
     }
   },
@@ -53153,8 +53153,8 @@
   },
   {
     "id": "d-spo-mtb",
-    "korean": "MTB",
-    "romanization": "MTB",
+    "korean": "엠티비",
+    "romanization": "ngemtibi",
     "partOfSpeech": "noun",
     "categoryId": "sports",
     "difficulty": "beginner",
@@ -53162,7 +53162,7 @@
     "tags": [],
     "translations": {
       "ko": {
-        "word": "MTB",
+        "word": "엠티비",
         "explanation": "MTB의 뜻은 'mountain bike'입니다.",
         "examples": {
           "beginner": "\"MTB\"는 한국어로 말해요.",
@@ -53243,7 +53243,7 @@
       }
     },
     "pronunciation": {
-      "korean": "[MTB]",
+      "korean": "[엠티비]",
       "ipa": "[MTB]"
     }
   },
@@ -64865,8 +64865,8 @@
   },
   {
     "id": "d-spo-lol",
-    "korean": "LoL",
-    "romanization": "LoL",
+    "korean": "엘오엘",
+    "romanization": "ngelngongel",
     "partOfSpeech": "noun",
     "categoryId": "sports",
     "difficulty": "beginner",
@@ -64874,7 +64874,7 @@
     "tags": [],
     "translations": {
       "ko": {
-        "word": "LoL",
+        "word": "엘오엘",
         "explanation": "LoL의 뜻은 'League of Legends'입니다.",
         "examples": {
           "beginner": "\"LoL\"는 한국어로 말해요.",
@@ -64955,7 +64955,7 @@
       }
     },
     "pronunciation": {
-      "korean": "[LoL]",
+      "korean": "[엘오엘]",
       "ipa": "[LoL]"
     }
   },
@@ -65249,8 +65249,8 @@
   },
   {
     "id": "d-spo-dota-2",
-    "korean": "DOTA 2",
-    "romanization": "DOTA 2",
+    "korean": "디오티에이 2",
+    "romanization": "dingotingengi 2",
     "partOfSpeech": "noun",
     "categoryId": "sports",
     "difficulty": "beginner",
@@ -65258,7 +65258,7 @@
     "tags": [],
     "translations": {
       "ko": {
-        "word": "DOTA 2",
+        "word": "디오티에이 2",
         "explanation": "DOTA 2의 뜻은 'Dota 2'입니다.",
         "examples": {
           "beginner": "\"DOTA 2\"는 한국어로 말해요.",
@@ -65339,7 +65339,7 @@
       }
     },
     "pronunciation": {
-      "korean": "[DOTA 2]",
+      "korean": "[디오티에이 2]",
       "ipa": "[DOTA 2]"
     }
   },
