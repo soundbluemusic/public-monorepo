@@ -161,7 +161,7 @@ const __isStaticAsset__ = (pathname) => {
          pathname.startsWith('/icons/') ||
          pathname.startsWith('/screenshots/') ||
          pathname.startsWith('/fonts/') ||
-         (pathname.startsWith('/data/') && !pathname.startsWith('/data/browse/')) ||
+         pathname.startsWith('/data/') ||
          pathname === '/favicon.ico' ||
          pathname === '/manifest.json' ||
          pathname === '/robots.txt' ||
