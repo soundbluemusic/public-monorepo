@@ -59,7 +59,7 @@ export default defineConfig({
     // (VitePWA doesn't work well with SSR frameworks and causes deprecated warnings)
     VitePWA({ disable: true }),
     visualizer({
-      filename: './build/stats.html',
+      filename: './dist/stats.html',
       open: false,
       gzipSize: true,
       brotliSize: true,

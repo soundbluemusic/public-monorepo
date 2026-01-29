@@ -7,7 +7,7 @@
     "build": {
       "dependsOn": ["^build", "prebuild"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": ["build/**", ".react-router/**", "dist/**"]
+      "outputs": ["dist/**"]
     },
     "typecheck": {
       "dependsOn": ["^typecheck"],

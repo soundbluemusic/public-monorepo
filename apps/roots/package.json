@@ -8,7 +8,7 @@
     "prebuild": "mkdir -p dist/server && echo 'export default {}' > dist/server/index.js && pnpm exec paraglide-js compile --project ./project.inlang --outdir ./app/paraglide && tsx scripts/generate-search-index.ts",
     "build": "NODE_OPTIONS='--max-old-space-size=8192' vite build && tsx scripts/generate-sitemaps.ts",
     "postbuild": "node scripts/inject-polyfill.mjs && tsx ../../scripts/generate-sw.ts roots",
-    "deploy": "pnpm build && wrangler deploy",
+    "deploy": "pnpm build && wrangler deploy --config dist/server/wrangler.json",
     "preview": "wrangler dev --config dist/server/wrangler.json",
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "biome lint .",
