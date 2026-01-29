@@ -11,10 +11,10 @@
     "routes": 920
   },
   "permissive": {
-    "libraries": 88,
+    "libraries": 110,
     "webApis": 56,
     "routes": 8
   },
   "totalRoutes": 33842,
-  "generatedAt": "2026-01-29T02:27:47.646Z"
+  "generatedAt": "2026-01-29T02:42:39.352Z"
 }

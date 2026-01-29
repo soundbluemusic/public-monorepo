@@ -43,7 +43,7 @@
 | **Live** | [permissive.soundbluemusic.com](https://permissive.soundbluemusic.com) |
 | **Source** | [apps/permissive/](apps/permissive) · [README](apps/permissive/README.md) · [config](apps/permissive/vite.config.ts) |
 | **Data** | [data/permissive/](data/permissive) |
-| **Features** | 88 libraries, 56 Web APIs |
+| **Features** | 110 libraries, 56 Web APIs |
 
 ### 📐 Roots — Math Documentation
 > **학습자를 위한 수학 문서** | SSR

@@ -14,7 +14,7 @@
 
 A comprehensive collection of free web development resources:
 
-- **88 Libraries** - MIT/OSS licensed libraries with detail pages
+- **110 Libraries** - MIT/OSS licensed libraries with detail pages
 - **56 Web APIs** - Browser built-in APIs
 - **Search** - MiniSearch-based instant search
 

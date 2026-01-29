@@ -1531,5 +1531,400 @@
       "TypeScript",
       "Fast"
     ]
+  },
+  {
+    "name": "Angular",
+    "description": "Platform for building web applications",
+    "descriptionKo": "웹 애플리케이션 구축 플랫폼",
+    "category": "Frameworks",
+    "license": "MIT",
+    "github": "https://github.com/angular/angular",
+    "website": "https://angular.dev",
+    "npm": "@angular/core",
+    "stars": "98k",
+    "yearReleased": 2016,
+    "tags": [
+      "TypeScript",
+      "Google",
+      "Enterprise",
+      "Signals"
+    ]
+  },
+  {
+    "name": "Ember.js",
+    "description": "Framework for ambitious web applications",
+    "descriptionKo": "대규모 웹 애플리케이션을 위한 프레임워크",
+    "category": "Frameworks",
+    "license": "MIT",
+    "github": "https://github.com/emberjs/ember.js",
+    "website": "https://emberjs.com",
+    "npm": "ember-source",
+    "stars": "22k",
+    "yearReleased": 2011,
+    "tags": [
+      "Convention",
+      "Enterprise",
+      "Classic"
+    ]
+  },
+  {
+    "name": "htmx",
+    "description": "High power tools for HTML",
+    "descriptionKo": "HTML을 위한 고급 도구",
+    "category": "Frameworks",
+    "license": "BSD-2-Clause",
+    "github": "https://github.com/bigskysoftware/htmx",
+    "website": "https://htmx.org",
+    "npm": "htmx.org",
+    "stars": "42k",
+    "trending": true,
+    "yearReleased": 2020,
+    "tags": [
+      "HTML",
+      "Server-driven",
+      "No-build"
+    ]
+  },
+  {
+    "name": "TanStack Start",
+    "description": "Full-stack React framework powered by TanStack Router",
+    "descriptionKo": "TanStack Router 기반 풀스택 React 프레임워크",
+    "category": "Meta-frameworks",
+    "license": "MIT",
+    "github": "https://github.com/TanStack/router",
+    "website": "https://tanstack.com/start",
+    "npm": "@tanstack/react-start",
+    "stars": "8k",
+    "usedHere": true,
+    "trending": true,
+    "yearReleased": 2024,
+    "tags": [
+      "React",
+      "SSR",
+      "TypeScript",
+      "Full-stack"
+    ]
+  },
+  {
+    "name": "Payload",
+    "description": "Open-source headless CMS built on Next.js",
+    "descriptionKo": "Next.js 기반 오픈소스 헤드리스 CMS",
+    "category": "Meta-frameworks",
+    "license": "MIT",
+    "github": "https://github.com/payloadcms/payload",
+    "website": "https://payloadcms.com",
+    "npm": "payload",
+    "stars": "30k",
+    "trending": true,
+    "yearReleased": 2021,
+    "tags": [
+      "CMS",
+      "Next.js",
+      "TypeScript",
+      "Full-stack"
+    ]
+  },
+  {
+    "name": "Express",
+    "description": "Fast, unopinionated web framework for Node.js",
+    "descriptionKo": "Node.js를 위한 빠르고 유연한 웹 프레임워크",
+    "category": "Server",
+    "license": "MIT",
+    "github": "https://github.com/expressjs/express",
+    "website": "https://expressjs.com",
+    "npm": "express",
+    "stars": "66k",
+    "yearReleased": 2010,
+    "tags": [
+      "Node.js",
+      "Classic",
+      "Middleware"
+    ]
+  },
+  {
+    "name": "Fastify",
+    "description": "Fast and low overhead web framework for Node.js",
+    "descriptionKo": "Node.js를 위한 고성능 저오버헤드 웹 프레임워크",
+    "category": "Server",
+    "license": "MIT",
+    "github": "https://github.com/fastify/fastify",
+    "website": "https://fastify.dev",
+    "npm": "fastify",
+    "stars": "33k",
+    "trending": true,
+    "yearReleased": 2016,
+    "tags": [
+      "Node.js",
+      "Fast",
+      "TypeScript"
+    ]
+  },
+  {
+    "name": "NestJS",
+    "description": "Progressive Node.js framework for enterprise applications",
+    "descriptionKo": "엔터프라이즈 애플리케이션을 위한 프로그레시브 Node.js 프레임워크",
+    "category": "Server",
+    "license": "MIT",
+    "github": "https://github.com/nestjs/nest",
+    "website": "https://nestjs.com",
+    "npm": "@nestjs/core",
+    "stars": "69k",
+    "trending": true,
+    "yearReleased": 2017,
+    "tags": [
+      "Node.js",
+      "TypeScript",
+      "Enterprise",
+      "DI"
+    ]
+  },
+  {
+    "name": "Nitro",
+    "description": "Next generation server toolkit by UnJS",
+    "descriptionKo": "UnJS의 차세대 서버 툴킷",
+    "category": "Server",
+    "license": "MIT",
+    "github": "https://github.com/nitrojs/nitro",
+    "website": "https://nitro.build",
+    "npm": "nitro",
+    "stars": "6k",
+    "yearReleased": 2022,
+    "tags": [
+      "UnJS",
+      "TypeScript",
+      "Edge",
+      "Universal"
+    ]
+  },
+  {
+    "name": "Socket.io",
+    "description": "Bidirectional event-based real-time communication",
+    "descriptionKo": "양방향 이벤트 기반 실시간 통신 라이브러리",
+    "category": "Server",
+    "license": "MIT",
+    "github": "https://github.com/socketio/socket.io",
+    "website": "https://socket.io",
+    "npm": "socket.io",
+    "stars": "62k",
+    "yearReleased": 2010,
+    "tags": [
+      "WebSocket",
+      "Real-time",
+      "Node.js"
+    ]
+  },
+  {
+    "name": "Supabase",
+    "description": "Open source Firebase alternative with PostgreSQL",
+    "descriptionKo": "PostgreSQL 기반 오픈소스 Firebase 대안",
+    "category": "Data Fetching",
+    "license": "Apache-2.0",
+    "github": "https://github.com/supabase/supabase",
+    "website": "https://supabase.com",
+    "npm": "@supabase/supabase-js",
+    "stars": "75k",
+    "trending": true,
+    "yearReleased": 2020,
+    "tags": [
+      "BaaS",
+      "PostgreSQL",
+      "Auth",
+      "Real-time"
+    ]
+  },
+  {
+    "name": "Kysely",
+    "description": "Type-safe TypeScript SQL query builder",
+    "descriptionKo": "타입 안전 TypeScript SQL 쿼리 빌더",
+    "category": "ORM",
+    "license": "MIT",
+    "github": "https://github.com/kysely-org/kysely",
+    "website": "https://kysely.dev",
+    "npm": "kysely",
+    "stars": "11k",
+    "trending": true,
+    "yearReleased": 2022,
+    "tags": [
+      "TypeScript",
+      "SQL",
+      "Type-safe"
+    ]
+  },
+  {
+    "name": "Nx",
+    "description": "Smart monorepo build system for enterprise",
+    "descriptionKo": "엔터프라이즈를 위한 스마트 모노레포 빌드 시스템",
+    "category": "Build Tools",
+    "license": "MIT",
+    "github": "https://github.com/nrwl/nx",
+    "website": "https://nx.dev",
+    "npm": "nx",
+    "stars": "24k",
+    "yearReleased": 2018,
+    "tags": [
+      "Monorepo",
+      "Enterprise",
+      "CI"
+    ]
+  },
+  {
+    "name": "Turborepo",
+    "description": "High-performance build system for monorepos",
+    "descriptionKo": "모노레포를 위한 고성능 빌드 시스템",
+    "category": "Build Tools",
+    "license": "MIT",
+    "github": "https://github.com/vercel/turborepo",
+    "website": "https://turbo.build",
+    "npm": "turbo",
+    "stars": "26k",
+    "usedHere": true,
+    "yearReleased": 2021,
+    "tags": [
+      "Monorepo",
+      "Caching",
+      "Rust"
+    ]
+  },
+  {
+    "name": "Rolldown",
+    "description": "Rust-based JavaScript bundler designed for Vite",
+    "descriptionKo": "Vite를 위해 설계된 Rust 기반 JavaScript 번들러",
+    "category": "Build Tools",
+    "license": "MIT",
+    "github": "https://github.com/rolldown/rolldown",
+    "website": "https://rolldown.rs",
+    "npm": "rolldown",
+    "stars": "9k",
+    "trending": true,
+    "yearReleased": 2024,
+    "tags": [
+      "Rust",
+      "Bundler",
+      "Vite"
+    ]
+  },
+  {
+    "name": "Tauri",
+    "description": "Build smaller, faster, more secure desktop apps",
+    "descriptionKo": "더 작고 빠르고 안전한 데스크톱 앱 빌드",
+    "category": "Frameworks",
+    "license": "MIT",
+    "github": "https://github.com/tauri-apps/tauri",
+    "website": "https://tauri.app",
+    "npm": "@tauri-apps/cli",
+    "stars": "88k",
+    "trending": true,
+    "yearReleased": 2019,
+    "tags": [
+      "Desktop",
+      "Rust",
+      "Cross-platform"
+    ]
+  },
+  {
+    "name": "Electron",
+    "description": "Build cross-platform desktop apps with web technologies",
+    "descriptionKo": "웹 기술로 크로스 플랫폼 데스크톱 앱 빌드",
+    "category": "Frameworks",
+    "license": "MIT",
+    "github": "https://github.com/electron/electron",
+    "website": "https://www.electronjs.org",
+    "npm": "electron",
+    "stars": "115k",
+    "yearReleased": 2013,
+    "tags": [
+      "Desktop",
+      "Chromium",
+      "Cross-platform"
+    ]
+  },
+  {
+    "name": "Ark UI",
+    "description": "Headless UI components powered by state machines",
+    "descriptionKo": "상태 머신 기반 헤드리스 UI 컴포넌트",
+    "category": "UI Components",
+    "license": "MIT",
+    "github": "https://github.com/chakra-ui/ark",
+    "website": "https://ark-ui.com",
+    "npm": "@ark-ui/react",
+    "stars": "4k",
+    "trending": true,
+    "yearReleased": 2023,
+    "tags": [
+      "Headless",
+      "React",
+      "State Machine"
+    ]
+  },
+  {
+    "name": "PocketBase",
+    "description": "Open source backend in a single file",
+    "descriptionKo": "단일 파일 오픈소스 백엔드",
+    "category": "Server",
+    "license": "MIT",
+    "github": "https://github.com/pocketbase/pocketbase",
+    "website": "https://pocketbase.io",
+    "stars": "42k",
+    "trending": true,
+    "yearReleased": 2022,
+    "tags": [
+      "BaaS",
+      "SQLite",
+      "Go",
+      "Self-hosted"
+    ]
+  },
+  {
+    "name": "Effect",
+    "description": "Powerful TypeScript library for building complex applications",
+    "descriptionKo": "복잡한 애플리케이션 구축을 위한 강력한 TypeScript 라이브러리",
+    "category": "Utilities",
+    "license": "MIT",
+    "github": "https://github.com/Effect-TS/effect",
+    "website": "https://effect.website",
+    "npm": "effect",
+    "stars": "8k",
+    "trending": true,
+    "yearReleased": 2023,
+    "tags": [
+      "TypeScript",
+      "Functional",
+      "Concurrency"
+    ]
+  },
+  {
+    "name": "Turso",
+    "description": "Distributed database built on libSQL for the edge",
+    "descriptionKo": "엣지를 위한 libSQL 기반 분산 데이터베이스",
+    "category": "ORM",
+    "license": "MIT",
+    "github": "https://github.com/tursodatabase/libsql",
+    "website": "https://turso.tech",
+    "npm": "@libsql/client",
+    "stars": "13k",
+    "trending": true,
+    "yearReleased": 2022,
+    "tags": [
+      "SQLite",
+      "Edge",
+      "Distributed"
+    ]
+  },
+  {
+    "name": "OpenTelemetry JS",
+    "description": "Observability framework for cloud-native software",
+    "descriptionKo": "클라우드 네이티브 소프트웨어를 위한 관측성 프레임워크",
+    "category": "Utilities",
+    "license": "Apache-2.0",
+    "github": "https://github.com/open-telemetry/opentelemetry-js",
+    "website": "https://opentelemetry.io",
+    "npm": "@opentelemetry/api",
+    "stars": "3k",
+    "yearReleased": 2019,
+    "tags": [
+      "Observability",
+      "Tracing",
+      "Metrics"
+    ]
   }
 ]
