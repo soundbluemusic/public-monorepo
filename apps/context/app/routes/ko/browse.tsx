@@ -46,14 +46,16 @@ interface LoaderData {
 
 export const Route = createFileRoute('/ko/browse')({
   loader: async (): Promise<LoaderData> => {
-    // SSR용 QueryClient 생성
     const queryClient = new QueryClient();
 
-    // 첫 번째 청크 prefetch (캐시에 저장)
-    await queryClient.prefetchQuery({
-      queryKey: queryKeys.browse.chunk('alphabetical', 0),
-      queryFn: () => loadLightEntriesChunkForSSR('alphabetical', 0),
-    });
+    // SSR에서만 첫 청크를 Query 캐시에 prefetch
+    // 클라이언트 네비게이션 시에는 useBrowseChunk 훅이 직접 fetch함
+    if (typeof window === 'undefined') {
+      await queryClient.prefetchQuery({
+        queryKey: queryKeys.browse.chunk('alphabetical', 0),
+        queryFn: () => loadLightEntriesChunkForSSR('alphabetical', 0),
+      });
+    }
 
     const meta: BrowseMetadata = {
       totalEntries: jsonEntriesCount,

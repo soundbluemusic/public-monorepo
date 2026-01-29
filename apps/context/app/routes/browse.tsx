@@ -45,11 +45,14 @@ export const Route = createFileRoute('/browse')({
   loader: async (): Promise<LoaderData> => {
     const queryClient = new QueryClient();
 
-    // SSR에서 첫 청크를 Query 캐시에 prefetch
-    await queryClient.prefetchQuery({
-      queryKey: queryKeys.browse.chunk('alphabetical', 0),
-      queryFn: () => loadLightEntriesChunkForSSR('alphabetical', 0),
-    });
+    // SSR에서만 첫 청크를 Query 캐시에 prefetch
+    // 클라이언트 네비게이션 시에는 useBrowseChunk 훅이 직접 fetch함
+    if (typeof window === 'undefined') {
+      await queryClient.prefetchQuery({
+        queryKey: queryKeys.browse.chunk('alphabetical', 0),
+        queryFn: () => loadLightEntriesChunkForSSR('alphabetical', 0),
+      });
+    }
 
     const meta: BrowseMetadata = {
       totalEntries: jsonEntriesCount,
