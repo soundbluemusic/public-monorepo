@@ -5,35 +5,50 @@
 import { dynamicHeadFactoryEn } from '@soundblue/seo/meta';
 import { type BreadcrumbItem, generateBreadcrumbSchema } from '@soundblue/seo/structured-data';
 import { useAutoAnimate } from '@soundblue/ui/hooks';
+import { Pagination } from '@soundblue/ui/patterns';
 import { ProgressBar } from '@soundblue/ui/primitives';
-import { createFileRoute, notFound } from '@tanstack/react-router';
+import { createFileRoute, notFound, useRouterState } from '@tanstack/react-router';
+import { useCallback } from 'react';
 import { EntryListItem } from '@/components/entry/EntryListItem';
 import { Layout } from '@/components/layout';
 import { APP_CONFIG } from '@/config';
+import { PAGE_SIZE } from '@/constants';
 import { getCategoryById } from '@/data/categories';
 import type { Category, LocaleEntry } from '@/data/types';
 import { useStudyData } from '@/hooks';
 import { useI18n } from '@/i18n';
-import { fetchEntriesByCategoryFromD1 } from '@/services/d1-server';
+import { fetchEntriesByCategoryPaginated } from '@/services/d1-server';
 
 interface LoaderData {
   category: Category;
   entries: LocaleEntry[];
+  currentPage: number;
+  totalCount: number;
+  totalPages: number;
 }
 
 export const Route = createFileRoute('/category/$categoryId')({
-  loader: async ({ params }): Promise<LoaderData> => {
+  loader: async ({ params, location }): Promise<LoaderData> => {
     const category = getCategoryById(params.categoryId);
 
     if (!category) {
       throw notFound();
     }
 
-    // D1에서 엔트리 로드 (영어 페이지이므로 locale: 'en')
-    const entries = await fetchEntriesByCategoryFromD1({
-      data: { categoryId: params.categoryId, locale: 'en' },
+    const searchParams = new URLSearchParams(location.search);
+    const page = Math.max(1, Number.parseInt(searchParams.get('page') || '1', 10) || 1);
+
+    const { entries, totalCount } = await fetchEntriesByCategoryPaginated({
+      data: { categoryId: params.categoryId, locale: 'en', page, pageSize: PAGE_SIZE },
     });
-    return { category, entries };
+
+    return {
+      category,
+      entries,
+      currentPage: page,
+      totalCount,
+      totalPages: Math.ceil(totalCount / PAGE_SIZE),
+    };
   },
   head: dynamicHeadFactoryEn<LoaderData>(
     (data) => {
@@ -43,11 +58,11 @@ export const Route = createFileRoute('/category/$categoryId')({
           en: { title: 'Not Found | Context' },
         };
       }
-      const { category, entries } = data;
+      const { category, totalCount } = data;
       return {
         ko: {
           title: `${category.name.ko} | Context`,
-          description: `${category.name.ko} 카테고리의 ${entries.length}개 한국어 단어 학습`,
+          description: `${category.name.ko} 카테고리의 ${totalCount}개 한국어 단어 학습`,
           keywords: [
             category.name.ko,
             `${category.name.ko} 단어`,
@@ -58,7 +73,7 @@ export const Route = createFileRoute('/category/$categoryId')({
         },
         en: {
           title: `${category.name.en} | Context`,
-          description: `Learn ${entries.length} Korean words in the ${category.name.en} category`,
+          description: `Learn ${totalCount} Korean words in the ${category.name.en} category`,
           keywords: [
             category.name.en,
             `${category.name.en} words`,
@@ -76,10 +91,11 @@ export const Route = createFileRoute('/category/$categoryId')({
 });
 
 function CategoryPage() {
-  const { category, entries } = Route.useLoaderData();
+  const { category, entries, currentPage, totalCount, totalPages } = Route.useLoaderData();
   const { locale, t, localePath } = useI18n();
+  const routerState = useRouterState();
 
-  const { studiedIds } = useStudyData({ totalEntries: entries.length });
+  const { studiedIds } = useStudyData({ totalEntries: totalCount });
   const [listRef] = useAutoAnimate<HTMLDivElement>();
 
   const studiedCount = entries.filter((e) => studiedIds.has(e.id)).length;
@@ -93,6 +109,23 @@ function CategoryPage() {
   ];
 
   const breadcrumbSchema = generateBreadcrumbSchema(breadcrumbItems);
+
+  const handlePageChange = useCallback(
+    (page: number) => {
+      const params = new URLSearchParams(routerState.location.search);
+      if (page === 1) {
+        params.delete('page');
+      } else {
+        params.set('page', String(page));
+      }
+      const search = params.toString();
+      const newUrl = search
+        ? `${routerState.location.pathname}?${search}`
+        : routerState.location.pathname;
+      window.location.href = newUrl;
+    },
+    [routerState.location.search, routerState.location.pathname],
+  );
 
   return (
     <Layout>
@@ -111,13 +144,21 @@ function CategoryPage() {
             </h1>
           </div>
           <p className="text-(--text-secondary)">
-            {studiedCount}/{entries.length} {locale === 'ko' ? '단어 학습함' : 'words studied'}
+            {studiedCount}/{totalCount} {locale === 'ko' ? '단어 학습함' : 'words studied'}
           </p>
 
           {studiedCount > 0 && (
-            <ProgressBar value={studiedCount} max={entries.length} className="mt-3" />
+            <ProgressBar value={studiedCount} max={totalCount} className="mt-3" />
           )}
         </div>
+
+        {totalPages > 1 && (
+          <p className="mb-4 text-sm text-(--text-tertiary)">
+            {t('browsePageOf')
+              .replace('{current}', String(currentPage))
+              .replace('{total}', String(totalPages))}
+          </p>
+        )}
 
         <div ref={listRef} className="space-y-1">
           {entries.map((entry) => {
@@ -140,6 +181,19 @@ function CategoryPage() {
 
         {entries.length === 0 && (
           <p className="text-center py-12 px-4 text-(--text-tertiary)">{t('noCategoryWords')}</p>
+        )}
+
+        {totalPages > 1 && (
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={handlePageChange}
+            labels={{
+              navLabel: t('pageNavigation'),
+              previousPage: t('previousPage'),
+              nextPage: t('nextPage'),
+            }}
+          />
         )}
       </div>
     </Layout>

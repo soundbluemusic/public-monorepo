@@ -16,12 +16,14 @@ import {
   getAllTagsFromD1,
   getCategoriesFromD1,
   getEntriesByCategoryFromD1,
+  getEntriesByCategoryPaginatedFromD1,
   getEntriesByTagFromD1,
   getEntryByIdFromD1,
   getEntryCounts as getEntryCountsFromD1,
   getEntryIdsByCategoryFromD1,
   getHomonymsByKoreanFromD1,
   type HomonymEntryFromD1,
+  type PaginatedEntries,
   type TagWithCount,
 } from './d1';
 
@@ -126,6 +128,14 @@ export const fetchEntryIdsByCategoryFromD1 = createServerFn({ method: 'POST' })
 /** 카테고리별 Entry 조회 입력 타입 */
 type FetchEntriesByCategoryInput = { categoryId: string; locale: 'en' | 'ko' };
 
+/** 카테고리별 Entry 페이지네이션 조회 입력 타입 */
+type FetchEntriesByCategoryPaginatedInput = {
+  categoryId: string;
+  locale: 'en' | 'ko';
+  page: number;
+  pageSize: number;
+};
+
 /**
  * 카테고리별 Entry 목록을 D1에서 로드하는 서버 함수
  *
@@ -144,6 +154,23 @@ export const fetchEntriesByCategoryFromD1 = createServerFn({ method: 'POST' })
     }
 
     return await getEntriesByCategoryFromD1(db, categoryId, locale);
+  });
+
+/**
+ * 카테고리별 Entry 목록을 페이지네이션하여 D1에서 로드하는 서버 함수
+ */
+export const fetchEntriesByCategoryPaginated = createServerFn({ method: 'POST' })
+  .inputValidator((data: FetchEntriesByCategoryPaginatedInput) => data)
+  .handler(async ({ data }): Promise<PaginatedEntries> => {
+    const { categoryId, locale, page, pageSize } = data;
+    const db = getD1Database();
+
+    if (!db) {
+      console.error('[fetchEntriesByCategoryPaginated] D1 database not available');
+      return { entries: [], totalCount: 0 };
+    }
+
+    return await getEntriesByCategoryPaginatedFromD1(db, categoryId, locale, page, pageSize);
   });
 
 /** 동음이의어 조회 입력 타입 */

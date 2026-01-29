@@ -65,6 +65,49 @@ export async function getEntriesByCategoryFromD1(
   }
 }
 
+/** 페이지네이션된 카테고리별 엔트리 조회 결과 */
+export interface PaginatedEntries {
+  entries: LocaleEntry[];
+  totalCount: number;
+}
+
+/**
+ * D1에서 카테고리별 엔트리 페이지네이션 조회
+ */
+export async function getEntriesByCategoryPaginatedFromD1(
+  db: D1Database,
+  categoryId: string,
+  locale: Language,
+  page: number,
+  pageSize: number,
+): Promise<PaginatedEntries> {
+  try {
+    const [countResult, entriesResult] = await Promise.all([
+      db
+        .prepare('SELECT COUNT(*) as count FROM entries WHERE category_id = ?')
+        .bind(categoryId)
+        .first<{ count: number }>(),
+      db
+        .prepare(
+          `SELECT id, korean, romanization, part_of_speech, category_id, difficulty, frequency, tags, translations
+           FROM entries WHERE category_id = ? ORDER BY korean COLLATE NOCASE LIMIT ? OFFSET ?`,
+        )
+        .bind(categoryId, pageSize, (page - 1) * pageSize)
+        .all<D1EntryRow>(),
+    ]);
+
+    const totalCount = countResult?.count ?? 0;
+    const entries = entriesResult.results
+      .map((row: D1EntryRow) => rowToLocaleEntry(row, locale))
+      .filter((entry: LocaleEntry | null): entry is LocaleEntry => entry !== null);
+
+    return { entries, totalCount };
+  } catch (error) {
+    logD1Error(`getEntriesByCategoryPaginated(${categoryId}, page=${page})`, error);
+    return { entries: [], totalCount: 0 };
+  }
+}
+
 /**
  * D1에서 모든 카테고리 조회
  */
