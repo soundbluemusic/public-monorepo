@@ -25,7 +25,6 @@ import { type CompressedFile, expandCompressedFile } from '../expand-entry';
 import { jsonEntriesCount, type LightEntry } from '../generated/entries';
 import { entryToCategory } from '../generated/entry-index';
 import type { Language, LocaleEntry, MeaningEntry } from '../types';
-import { APP_CONFIG } from '@/config';
 
 // Re-export 타입과 카운트
 export { type LightEntry, jsonEntriesCount };
@@ -324,21 +323,42 @@ export async function loadLightEntriesChunkForSSR(
   }
 }
 
+/**
+ * Workers Assets binding을 통해 정적 파일 fetch
+ * Cloudflare Workers에서 자기 자신에게 외부 fetch하면 실패하므로
+ * env.ASSETS.fetch()로 내부적으로 정적 파일을 직접 읽습니다.
+ */
+function getAssetsFetcher(): ((path: string) => Promise<Response>) | null {
+  try {
+    const { env } = require('cloudflare:workers') as {
+      env: { ASSETS?: { fetch: (req: Request) => Promise<Response> } };
+    };
+    if (!env.ASSETS) return null;
+    const assets = env.ASSETS;
+    return (assetPath: string) => assets.fetch(new Request(`https://assets.local${assetPath}`));
+  } catch {
+    return null;
+  }
+}
+
 async function loadLightEntriesForSSRByFetch(): Promise<LightEntry[]> {
   try {
-    const baseUrl = APP_CONFIG.baseUrl.replace(/\/$/, '');
-    const metaResponse = await fetch(`${baseUrl}/data/browse/meta.json`);
+    const assetsFetch = getAssetsFetcher();
+    if (!assetsFetch) {
+      console.warn('ASSETS binding not available for SSR browse data');
+      return [];
+    }
+
+    const metaResponse = await assetsFetch('/data/browse/meta.json');
     if (!metaResponse.ok) {
-      console.warn('Failed to fetch browse meta.json for SSR fallback');
+      console.warn('Failed to fetch browse meta.json from ASSETS');
       return [];
     }
     const meta = (await metaResponse.json()) as { totalChunks?: number };
     const totalChunks = meta.totalChunks ?? 0;
-    const indexUrl = `${baseUrl}/data/browse/alphabetical`;
     const entries: LightEntry[] = [];
     for (let i = 0; i < totalChunks; i++) {
-      const chunkUrl = `${indexUrl}/chunk-${i}.json`;
-      const response = await fetch(chunkUrl);
+      const response = await assetsFetch(`/data/browse/alphabetical/chunk-${i}.json`);
       if (!response.ok) break;
       const data = (await response.json()) as { entries?: LightEntry[] };
       if (!data.entries?.length) break;
@@ -347,7 +367,7 @@ async function loadLightEntriesForSSRByFetch(): Promise<LightEntry[]> {
     lightEntriesCache = entries;
     return entries;
   } catch (error) {
-    console.error('Failed to load lightEntries via fetch in SSR:', error);
+    console.error('Failed to load lightEntries via ASSETS in SSR:', error);
     return [];
   }
 }
@@ -357,17 +377,21 @@ async function loadLightEntriesChunkForSSRByFetch(
   chunkIndex: number,
 ): Promise<LightEntry[]> {
   try {
-    const baseUrl = APP_CONFIG.baseUrl.replace(/\/$/, '');
-    const url = `${baseUrl}/data/browse/${sortType}/chunk-${chunkIndex}.json`;
-    const response = await fetch(url);
+    const assetsFetch = getAssetsFetcher();
+    if (!assetsFetch) {
+      console.warn('ASSETS binding not available for SSR browse chunk');
+      return [];
+    }
+
+    const response = await assetsFetch(`/data/browse/${sortType}/chunk-${chunkIndex}.json`);
     if (!response.ok) {
-      console.warn(`Failed to fetch chunk: ${sortType}/${chunkIndex}`);
+      console.warn(`Failed to fetch chunk from ASSETS: ${sortType}/${chunkIndex}`);
       return [];
     }
     const data = (await response.json()) as { entries?: LightEntry[] };
     return data.entries ?? [];
   } catch (error) {
-    console.error(`Failed to load chunk ${sortType}/${chunkIndex} via fetch:`, error);
+    console.error(`Failed to load chunk ${sortType}/${chunkIndex} via ASSETS:`, error);
     return [];
   }
 }
