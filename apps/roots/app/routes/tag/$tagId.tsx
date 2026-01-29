@@ -8,7 +8,7 @@ import { createFileRoute, Link, notFound } from '@tanstack/react-router';
 import { Tags } from 'lucide-react';
 import { Layout } from '../../components/layout/Layout';
 import { DifficultyBadge } from '../../components/ui/DifficultyBadge';
-import { allTags, conceptsByTag } from '../../data/concepts';
+import { conceptsByTag } from '../../data/concepts';
 import type { MathConcept } from '../../data/types';
 import { useI18n } from '../../i18n';
 
