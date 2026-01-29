@@ -39,15 +39,35 @@ export interface HeadConfig {
  * head 함수 인자 타입
  */
 interface HeadFunctionArgs {
-  location: { pathname: string };
+  loaderData?: unknown;
+  location?: { pathname: string };
 }
 
 /**
  * 동적 head 함수 인자 타입
+ *
+ * TanStack Start의 AssetFnContextOptions에서 loaderData는 optional이므로
+ * 여기서도 optional로 정의합니다.
  */
 interface DynamicHeadFunctionArgs<T> {
-  loaderData: T;
-  location: { pathname: string };
+  loaderData?: T;
+  location?: { pathname: string };
+}
+
+/**
+ * loaderData가 존재하는지 검증하고 타입을 좁혀 반환합니다.
+ *
+ * TanStack Start의 AssetFnContextOptions에서 loaderData는 optional로 선언되지만,
+ * loader가 정의된 라우트에서 head 함수가 호출될 때는 항상 존재합니다.
+ * 이 함수는 런타임에 해당 불변 조건을 검증합니다.
+ *
+ * @internal
+ */
+function requireLoaderData<T>(ctx: DynamicHeadFunctionArgs<T>): T {
+  if (ctx.loaderData == null) {
+    throw new Error('loaderData is required for dynamic head factory');
+  }
+  return ctx.loaderData;
 }
 
 /**
@@ -162,8 +182,9 @@ export function dynamicHeadFactory<T>(
   getLocalizedMeta: (data: T) => LocalizedMeta,
   baseUrl: string,
 ): (args: DynamicHeadFunctionArgs<T>) => HeadConfig {
-  return ({ loaderData, location }: DynamicHeadFunctionArgs<T>): HeadConfig => {
-    const pathname = location?.pathname ?? '/';
+  return (ctx: DynamicHeadFunctionArgs<T>): HeadConfig => {
+    const loaderData = requireLoaderData(ctx);
+    const pathname = ctx.location?.pathname ?? '/';
     const isKorean = pathname.startsWith('/ko');
     const localizedMeta = getLocalizedMeta(loaderData);
     const meta = isKorean ? localizedMeta.ko : localizedMeta.en;
@@ -214,11 +235,9 @@ export function dynamicHeadFactoryKo<T>(
   getLocalizedMeta: (data: T) => LocalizedMeta,
   baseUrl: string,
   getPathname?: (data: T) => string,
-  // biome-ignore lint/suspicious/noExplicitAny: TanStack Router context type is complex and varies by route
-): (args: any) => HeadConfig {
-  // biome-ignore lint/suspicious/noExplicitAny: TanStack Router context type is complex and varies by route
-  return (ctx: any): HeadConfig => {
-    const loaderData = ctx.loaderData as T;
+): (ctx: DynamicHeadFunctionArgs<T>) => HeadConfig {
+  return (ctx): HeadConfig => {
+    const loaderData = requireLoaderData(ctx);
     const localizedMeta = getLocalizedMeta(loaderData);
     const meta = localizedMeta.ko;
     const pathname = getPathname
@@ -239,11 +258,9 @@ export function dynamicHeadFactoryEn<T>(
   getLocalizedMeta: (data: T) => LocalizedMeta,
   baseUrl: string,
   getPathname?: (data: T) => string,
-  // biome-ignore lint/suspicious/noExplicitAny: TanStack Router context type is complex and varies by route
-): (args: any) => HeadConfig {
-  // biome-ignore lint/suspicious/noExplicitAny: TanStack Router context type is complex and varies by route
-  return (ctx: any): HeadConfig => {
-    const loaderData = ctx.loaderData as T;
+): (ctx: DynamicHeadFunctionArgs<T>) => HeadConfig {
+  return (ctx): HeadConfig => {
+    const loaderData = requireLoaderData(ctx);
     const localizedMeta = getLocalizedMeta(loaderData);
     const meta = localizedMeta.en;
     const pathname = getPathname ? getPathname(loaderData) : (ctx.location?.pathname ?? '/');

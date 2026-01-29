@@ -9,7 +9,6 @@ import { APP_CONFIG } from '@/config';
 import { useI18n } from '@/i18n';
 
 export const Route = createFileRoute('/ko/license')({
-  // @ts-expect-error - TanStack Start head function type incompatibility
   head: headFactory(
     {
       ko: { title: '라이선스 - Context' },

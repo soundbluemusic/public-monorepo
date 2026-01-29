@@ -71,7 +71,6 @@ export const Route = createFileRoute('/ko/browse')({
       categories,
     };
   },
-  // @ts-expect-error - TanStack Start head function type incompatibility
   head: headFactory(
     {
       ko: { title: '찾아보기 - Context', description: '모든 한국어 단어 찾아보기 및 필터링' },

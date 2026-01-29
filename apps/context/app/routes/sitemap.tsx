@@ -21,7 +21,6 @@ import { APP_CONFIG } from '@/config';
 import { useI18n } from '@/i18n';
 
 export const Route = createFileRoute('/sitemap')({
-  // @ts-expect-error - TanStack Start head function type incompatibility
   head: headFactory(
     {
       ko: {

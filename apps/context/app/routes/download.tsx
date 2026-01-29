@@ -73,7 +73,6 @@ export const Route = createFileRoute('/download')({
       },
     };
   },
-  // @ts-expect-error - TanStack Start head function type incompatibility
   head: headFactory(
     {
       ko: {

@@ -60,7 +60,6 @@ export const Route = createFileRoute('/')({
       totalEntries,
     };
   },
-  // @ts-expect-error - TanStack Start head function type incompatibility
   head: headFactory(
     {
       ko: {

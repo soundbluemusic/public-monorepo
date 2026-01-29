@@ -7,7 +7,6 @@ export const Route = createFileRoute('/$')({
   loader: () => {
     throw notFound();
   },
-  // @ts-expect-error - TanStack Start head function type incompatibility
   head: headFactory(
     {
       ko: {

@@ -30,7 +30,6 @@ export const Route = createFileRoute('/ko/conversations/')({
 
     return { categoriesWithCount };
   },
-  // @ts-expect-error - TanStack Start head function type incompatibility
   head: headFactory(
     {
       ko: {

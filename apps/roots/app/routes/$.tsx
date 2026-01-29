@@ -7,7 +7,6 @@ export const Route = createFileRoute('/$')({
   loader: () => {
     throw notFound();
   },
-  // @ts-expect-error - TanStack Start head function type incompatibility
   head: headFactory(
     {
       ko: { title: '404 - 수리', description: '페이지를 찾을 수 없습니다' },

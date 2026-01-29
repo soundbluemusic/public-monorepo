@@ -18,7 +18,6 @@ import { APP_CONFIG } from '@/config';
 import { useI18n } from '@/i18n';
 
 export const Route = createFileRoute('/ko/my-learning')({
-  // @ts-expect-error - TanStack Start head function type incompatibility
   head: headFactory(
     {
       ko: { title: '내 학습 현황 - Context', description: '학습 진행도와 북마크한 단어 확인' },

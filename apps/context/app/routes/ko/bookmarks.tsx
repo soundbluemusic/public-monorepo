@@ -14,7 +14,6 @@ import { useI18n } from '@/i18n';
 import { useIsHydrated, useUserDataStore } from '@/stores/user-data-store';
 
 export const Route = createFileRoute('/ko/bookmarks')({
-  // @ts-expect-error - TanStack Start head function type incompatibility
   head: headFactory(
     {
       ko: { title: '북마크 - Context', description: '북마크한 단어 모아보기' },

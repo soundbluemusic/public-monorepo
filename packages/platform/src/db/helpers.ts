@@ -31,14 +31,37 @@ import type { EntityTable, Table } from 'dexie';
 import type { BaseFavorite, BaseRecentView, BaseSettings } from './types';
 
 /**
- * Internal type for Dexie table operations.
+ * Convert EntityTable to Table for consistent auto-increment handling.
  *
- * Dexie's EntityTable uses branded 'id' for primary key, while Table uses
- * the actual key type. We use Table<T, number> for consistent auto-increment handling.
+ * Dexie's EntityTable uses a branded 'id' primary key type that is incompatible
+ * with Table's numeric key type. The `id` field is optional on insert (auto-increment)
+ * which makes generic constraints impossible without losing type safety elsewhere.
+ *
+ * This function isolates the single unavoidable type assertion at the Dexie
+ * EntityTable/Table boundary, keeping all call sites assertion-free.
  *
  * @internal
  */
-type AnyTable<T> = Table<T, number>;
+function toTable<T>(table: unknown): Table<T, number> {
+  return table as Table<T, number>;
+}
+
+/**
+ * Build a record with a dynamic ID field name for Dexie insertion.
+ *
+ * TypeScript cannot verify that `{ [dynamicKey]: value }` satisfies generic `T`,
+ * even when constraints guarantee the field exists. This function isolates
+ * the single assertion needed for computed property key objects.
+ *
+ * @internal
+ */
+function buildRecord<T>(
+  idFieldName: string,
+  idValue: string,
+  extraFields: Record<string, unknown>,
+): T {
+  return { [idFieldName]: idValue, ...extraFields } as T;
+}
 
 /**
  * Creates a favorites helper for managing user-saved items
@@ -55,13 +78,13 @@ export function createFavoritesHelper<T extends BaseFavorite & Record<K, string>
   table: EntityTable<T, 'id'>,
   idFieldName: K,
 ) {
-  const t = table as unknown as AnyTable<T>;
+  const t = toTable<T>(table);
   return {
     async add(itemId: string) {
       validateId(itemId, idFieldName);
       const exists = await t.where(idFieldName).equals(itemId).first();
       if (exists) return exists.id;
-      return t.add({ [idFieldName]: itemId, addedAt: new Date() } as unknown as T);
+      return t.add(buildRecord<T>(idFieldName, itemId, { addedAt: new Date() }));
     },
 
     async remove(itemId: string) {
@@ -76,7 +99,7 @@ export function createFavoritesHelper<T extends BaseFavorite & Record<K, string>
         await t.delete(exists.id);
         return false;
       }
-      await t.add({ [idFieldName]: itemId, addedAt: new Date() } as unknown as T);
+      await t.add(buildRecord<T>(idFieldName, itemId, { addedAt: new Date() }));
       return true;
     },
 
@@ -111,7 +134,7 @@ export function createSettingsHelper<T extends BaseSettings>(
   table: EntityTable<T, 'id'>,
   defaultSettings: T,
 ) {
-  const t = table as unknown as AnyTable<T>;
+  const t = toTable<T>(table);
   const helper = {
     async get(): Promise<T> {
       const s = await t.get(1);
@@ -155,15 +178,12 @@ export function createRecentViewsHelper<
   T extends BaseRecentView & Record<K, string>,
   K extends string,
 >(table: EntityTable<T, 'id'>, idFieldName: K, maxItems = 100) {
-  const t = table as unknown as AnyTable<T>;
+  const t = toTable<T>(table);
   return {
     async add(itemId: string) {
       validateId(itemId, idFieldName);
       await t.where(idFieldName).equals(itemId).delete();
-      const id = await t.add({
-        [idFieldName]: itemId,
-        viewedAt: new Date(),
-      } as unknown as T);
+      const id = await t.add(buildRecord<T>(idFieldName, itemId, { viewedAt: new Date() }));
 
       const count = await t.count();
       if (count > maxItems) {
