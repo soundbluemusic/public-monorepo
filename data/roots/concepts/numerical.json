@@ -746,7 +746,7 @@
             "description": "특이값 분해 (SVD)"
           },
           {
-            "latex": "A = LDL^T",
+            "latex": "A = LL^T",
             "description": "촐레스키 분해 (대칭 양정치)"
           }
         ],
@@ -787,7 +787,7 @@
             "description": "Singular Value Decomposition (SVD)"
           },
           {
-            "latex": "A = LDL^T",
+            "latex": "A = LL^T",
             "description": "Cholesky decomposition (symmetric positive definite)"
           }
         ],

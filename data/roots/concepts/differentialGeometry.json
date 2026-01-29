@@ -402,7 +402,7 @@
         ]
       }
     },
-    "latex": "d\\omega = \\sum_i \\frac{\\partial \\omega}{\\partial x^i} dx^i \\wedge \\omega",
+    "latex": "df = \\sum_i \\frac{\\partial f}{\\partial x^i} dx^i",
     "relations": {
       "prerequisites": [
         "manifold",
