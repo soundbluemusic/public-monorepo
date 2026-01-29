@@ -272,7 +272,7 @@ export function ConceptGraph({
       .drag<HTMLCanvasElement, unknown, SimulationNode | undefined>()
       .subject(dragSubject)
       .on('start', (event) => {
-        if (!event.active) simulation.alphaTarget(0.3).restart();
+        if (!event.active) simulation.alphaTarget(0.05).restart();
         if (event.subject) {
           event.subject.fx = event.subject.x;
           event.subject.fy = event.subject.y;
