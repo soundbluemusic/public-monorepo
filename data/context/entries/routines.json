@@ -1844,12 +1844,12 @@
     }
   },
   {
-    "id": "d-hom-ih밥솥",
-    "korean": "IH밥솥",
-    "romanization": "IHbapsot",
+    "id": "d-hom-bapsot",
+    "korean": "밥솥",
+    "romanization": "bapsot",
     "pronunciation": {
-      "korean": "[IH밥솥]",
-      "ipa": "[IHbapsot]"
+      "korean": "[밥솥]",
+      "ipa": "[paps͈ot̚]"
     },
     "partOfSpeech": "noun",
     "categoryId": "routines",
@@ -1859,48 +1859,48 @@
     "hasDialogue": true,
     "translations": {
       "en": {
-        "word": "ih rice cooker",
-        "explanation": "'IH밥솥' means 'ih rice cooker' in English.",
+        "word": "rice cooker",
+        "explanation": "'밥솥' means 'rice cooker' in English.",
         "examples": {
-          "beginner": "We say \"IH밥솥\" in Korean.",
-          "intermediate": "In Korea, people often say \"IH밥솥\".",
-          "advanced": "\"IH밥솥\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"IH밥솥\" makes communication more natural."
+          "beginner": "We say \"밥솥\" in Korean.",
+          "intermediate": "In Korea, people often say \"밥솥\".",
+          "advanced": "\"밥솥\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"밥솥\" makes communication more natural."
         },
         "variations": {
           "formal": [
-            "It is ih rice cooker.",
-            "There is ih rice cooker."
+            "It is a rice cooker.",
+            "There is a rice cooker."
           ],
           "casual": [
-            "It's ih rice cooker.",
-            "ih rice cooker, you know."
+            "It's a rice cooker.",
+            "Rice cooker, you know."
           ],
           "short": [
-            "ih"
+            "cooker"
           ]
         }
       },
       "ko": {
-        "word": "IH밥솥",
-        "explanation": "IH밥솥의 뜻은 'ih rice cooker'입니다.",
+        "word": "밥솥",
+        "explanation": "밥솥의 뜻은 'rice cooker'입니다.",
         "examples": {
-          "beginner": "\"IH밥솥\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"IH밥솥\"를 자주 써요.",
-          "advanced": "\"IH밥솥\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"IH밥솥\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"밥솥\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"밥솥\"를 자주 써요.",
+          "advanced": "\"밥솥\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"밥솥\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
         },
         "variations": {
           "formal": [
-            "IH밥솥입니다.",
-            "IH밥솥이/가 있습니다."
+            "밥솥입니다.",
+            "밥솥이 있습니다."
           ],
           "casual": [
-            "IH밥솥이야.",
-            "IH밥솥 있어."
+            "밥솥이야.",
+            "밥솥 있어."
           ],
           "short": [
-            "IH"
+            "솥"
           ]
         }
       }

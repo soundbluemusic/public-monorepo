@@ -107812,9 +107812,9 @@
     }
   },
   {
-    "id": "d-too-윈dou-teomineol",
-    "korean": "윈도우 터미널",
-    "romanization": "windou teomineol",
+    "id": "d-too-teomineol",
+    "korean": "터미널",
+    "romanization": "teomineol",
     "partOfSpeech": "noun",
     "categoryId": "coding",
     "difficulty": "beginner",
@@ -107822,25 +107822,25 @@
     "tags": [],
     "translations": {
       "ko": {
-        "word": "윈도우 터미널",
-        "explanation": "윈도우 터미널의 뜻은 'Windows Terminal'입니다.",
+        "word": "터미널",
+        "explanation": "터미널의 뜻은 'terminal'입니다.",
         "examples": {
-          "beginner": "\"윈도우 터미널\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"윈도우 터미널\"를 자주 써요.",
-          "advanced": "\"윈도우 터미널\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"윈도우 터미널\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"터미널\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"터미널\"를 자주 써요.",
+          "advanced": "\"터미널\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"터미널\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
         },
         "variations": {
           "formal": [
-            "윈도우 터미널입니다.",
-            "윈도우 터미널이/가 있습니다."
+            "터미널입니다.",
+            "터미널이 있습니다."
           ],
           "casual": [
-            "윈도우 터미널이야.",
-            "윈도우 터미널 있어."
+            "터미널이야.",
+            "터미널 있어."
           ],
           "short": [
-            "윈도"
+            "터미널"
           ]
         },
         "dialogue": {
@@ -107848,39 +107848,39 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "윈도우 터미널이/가 뭐예요?",
-              "romanization": "windou teomineoli/ga mwoyeyo?",
-              "translation": "What is \"윈도우 터미널\"?"
+              "text": "터미널이 뭐예요?",
+              "romanization": "teomineoli mwoyeyo?",
+              "translation": "What is a terminal?"
             },
             {
               "speaker": "B",
-              "text": "윈도우 터미널은/는 Windows Terminal(이)에요.",
-              "romanization": "windou teomineoleun/neun Windows Terminal(i)eyo.",
-              "translation": "\"윈도우 터미널\" means \"Windows Terminal\"."
+              "text": "터미널은 명령어를 입력하는 프로그램이에요.",
+              "romanization": "teomineoleun myeongnyeongeoreul ipryeokaneun peurogeuraemieyo.",
+              "translation": "A terminal is a program where you type commands."
             }
           ]
         }
       },
       "en": {
-        "word": "Windows Terminal",
-        "explanation": "'윈도우 터미널' means 'Windows Terminal' in English.",
+        "word": "terminal",
+        "explanation": "'터미널' means 'terminal' in English.",
         "examples": {
-          "beginner": "We say \"윈도우 터미널\" in Korean.",
-          "intermediate": "In Korea, people often say \"윈도우 터미널\".",
-          "advanced": "\"윈도우 터미널\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"윈도우 터미널\" makes communication more natural."
+          "beginner": "We say \"터미널\" in Korean.",
+          "intermediate": "In Korea, people often say \"터미널\".",
+          "advanced": "\"터미널\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"터미널\" makes communication more natural."
         },
         "variations": {
           "formal": [
-            "It is Windows Terminal.",
-            "There is Windows Terminal."
+            "It is a terminal.",
+            "There is a terminal."
           ],
           "casual": [
-            "It's Windows Terminal.",
-            "Windows Terminal, you know."
+            "It's a terminal.",
+            "Terminal, you know."
           ],
           "short": [
-            "Windows"
+            "terminal"
           ]
         },
         "dialogue": {
@@ -107888,23 +107888,23 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"윈도우 터미널\"?",
+              "text": "What is \"터미널\"?",
               "romanization": "",
-              "translation": "윈도우 터미널이/가 뭐예요?"
+              "translation": "터미널이 뭐예요?"
             },
             {
               "speaker": "B",
-              "text": "\"윈도우 터미널\" means \"Windows Terminal\".",
+              "text": "\"터미널\" means \"terminal\".",
               "romanization": "",
-              "translation": "윈도우 터미널은/는 Windows Terminal(이)에요."
+              "translation": "터미널은 명령어를 입력하는 프로그램이에요."
             }
           ]
         }
       }
     },
     "pronunciation": {
-      "korean": "[윈도우 터미널]",
-      "ipa": "[windou teomineol]"
+      "korean": "[터미널]",
+      "ipa": "[tʰʌminal]"
     }
   },
   {
@@ -136516,9 +136516,9 @@
     }
   },
   {
-    "id": "d-web-teu위teo-kadeu",
-    "korean": "트위터 카드",
-    "romanization": "teuwiteo kadeu",
+    "id": "d-web-sosyel-kadeu",
+    "korean": "소셜 카드",
+    "romanization": "sosyel kadeu",
     "partOfSpeech": "noun",
     "categoryId": "coding",
     "difficulty": "beginner",
@@ -136526,25 +136526,25 @@
     "tags": [],
     "translations": {
       "ko": {
-        "word": "트위터 카드",
-        "explanation": "트위터 카드의 뜻은 'Twitter Card'입니다.",
+        "word": "소셜 카드",
+        "explanation": "소셜 카드의 뜻은 'social card'입니다.",
         "examples": {
-          "beginner": "\"트위터 카드\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"트위터 카드\"를 자주 써요.",
-          "advanced": "\"트위터 카드\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"트위터 카드\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"소셜 카드\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"소셜 카드\"를 자주 써요.",
+          "advanced": "\"소셜 카드\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"소셜 카드\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
         },
         "variations": {
           "formal": [
-            "트위터 카드입니다.",
-            "트위터 카드이/가 있습니다."
+            "소셜 카드입니다.",
+            "소셜 카드가 있습니다."
           ],
           "casual": [
-            "트위터 카드이야.",
-            "트위터 카드 있어."
+            "소셜 카드야.",
+            "소셜 카드 있어."
           ],
           "short": [
-            "트위"
+            "카드"
           ]
         },
         "dialogue": {
@@ -136552,39 +136552,39 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "트위터 카드이/가 뭐예요?",
-              "romanization": "teuwiteo kadeui/ga mwoyeyo?",
-              "translation": "What is \"트위터 카드\"?"
+              "text": "소셜 카드가 뭐예요?",
+              "romanization": "sosyel kadeuga mwoyeyo?",
+              "translation": "What is a social card?"
             },
             {
               "speaker": "B",
-              "text": "트위터 카드은/는 Twitter Card(이)에요.",
-              "romanization": "teuwiteo kadeueun/neun Twitter Card(i)eyo.",
-              "translation": "\"트위터 카드\" means \"Twitter Card\"."
+              "text": "소셜 카드는 링크 공유 시 미리보기 이미지예요.",
+              "romanization": "sosyel kadeuneun ringkeu gongyusi miribogi imijiyeyo.",
+              "translation": "A social card is the preview image when sharing a link."
             }
           ]
         }
       },
       "en": {
-        "word": "Twitter Card",
-        "explanation": "'트위터 카드' means 'Twitter Card' in English.",
+        "word": "social card",
+        "explanation": "'소셜 카드' means 'social card' in English.",
         "examples": {
-          "beginner": "We say \"트위터 카드\" in Korean.",
-          "intermediate": "In Korea, people often say \"트위터 카드\".",
-          "advanced": "\"트위터 카드\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"트위터 카드\" makes communication more natural."
+          "beginner": "We say \"소셜 카드\" in Korean.",
+          "intermediate": "In Korea, people often say \"소셜 카드\".",
+          "advanced": "\"소셜 카드\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"소셜 카드\" makes communication more natural."
         },
         "variations": {
           "formal": [
-            "It is Twitter Card.",
-            "There is Twitter Card."
+            "It is a social card.",
+            "There is a social card."
           ],
           "casual": [
-            "It's Twitter Card.",
-            "Twitter Card, you know."
+            "It's a social card.",
+            "Social card, you know."
           ],
           "short": [
-            "Twitter"
+            "card"
           ]
         },
         "dialogue": {
@@ -136592,23 +136592,23 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"트위터 카드\"?",
+              "text": "What is \"소셜 카드\"?",
               "romanization": "",
-              "translation": "트위터 카드이/가 뭐예요?"
+              "translation": "소셜 카드가 뭐예요?"
             },
             {
               "speaker": "B",
-              "text": "\"트위터 카드\" means \"Twitter Card\".",
+              "text": "\"소셜 카드\" means \"social card\".",
               "romanization": "",
-              "translation": "트위터 카드은/는 Twitter Card(이)에요."
+              "translation": "소셜 카드는 링크 공유 시 미리보기 이미지예요."
             }
           ]
         }
       }
     },
     "pronunciation": {
-      "korean": "[트위터 카드]",
-      "ipa": "[teuwiteo kadeu]"
+      "korean": "[소셜 카드]",
+      "ipa": "[sosʰjʌl kʰadɯ]"
     }
   },
   {

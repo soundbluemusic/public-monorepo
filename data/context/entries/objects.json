@@ -2325,12 +2325,12 @@
     }
   },
   {
-    "id": "d-hom-kukusigye",
-    "korean": "쿠쿠시계",
-    "romanization": "kukusigye",
+    "id": "d-hom-ppeokkugisigye",
+    "korean": "뻐꾸기 시계",
+    "romanization": "ppeokkugi sigye",
     "pronunciation": {
-      "korean": "[쿠쿠시계]",
-      "ipa": "[kukusigye]"
+      "korean": "[뻐꾸기 시계]",
+      "ipa": "[p͈ʌk͈uɡi ɕiɡje]"
     },
     "partOfSpeech": "noun",
     "categoryId": "objects",
@@ -2341,21 +2341,21 @@
     "translations": {
       "en": {
         "word": "cuckoo clock",
-        "explanation": "'쿠쿠시계' means 'cuckoo clock' in English.",
+        "explanation": "'뻐꾸기 시계' means 'cuckoo clock' in English.",
         "examples": {
-          "beginner": "We say \"쿠쿠시계\" in Korean.",
-          "intermediate": "In Korea, people often say \"쿠쿠시계\".",
-          "advanced": "\"쿠쿠시계\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"쿠쿠시계\" makes communication more natural."
+          "beginner": "We say \"뻐꾸기 시계\" in Korean.",
+          "intermediate": "In Korea, people often say \"뻐꾸기 시계\".",
+          "advanced": "\"뻐꾸기 시계\" is an important expression in Korean.",
+          "master": "Understanding the cultural context of \"뻐꾸기 시계\" makes communication more natural."
         },
         "variations": {
           "formal": [
-            "It is cuckoo clock.",
-            "There is cuckoo clock."
+            "It is a cuckoo clock.",
+            "There is a cuckoo clock."
           ],
           "casual": [
-            "It's cuckoo clock.",
-            "cuckoo clock, you know."
+            "It's a cuckoo clock.",
+            "Cuckoo clock, you know."
           ],
           "short": [
             "cuckoo"
@@ -2363,25 +2363,25 @@
         }
       },
       "ko": {
-        "word": "쿠쿠시계",
-        "explanation": "쿠쿠시계의 뜻은 'cuckoo clock'입니다.",
+        "word": "뻐꾸기 시계",
+        "explanation": "뻐꾸기 시계의 뜻은 'cuckoo clock'입니다.",
         "examples": {
-          "beginner": "\"쿠쿠시계\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"쿠쿠시계\"를 자주 써요.",
-          "advanced": "\"쿠쿠시계\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"쿠쿠시계\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"뻐꾸기 시계\"는 한국어로 말해요.",
+          "intermediate": "한국에서는 \"뻐꾸기 시계\"를 자주 써요.",
+          "advanced": "\"뻐꾸기 시계\"는 한국어에서 중요한 표현입니다.",
+          "master": "\"뻐꾸기 시계\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
         },
         "variations": {
           "formal": [
-            "쿠쿠시계입니다.",
-            "쿠쿠시계이/가 있습니다."
+            "뻐꾸기 시계입니다.",
+            "뻐꾸기 시계가 있습니다."
           ],
           "casual": [
-            "쿠쿠시계이야.",
-            "쿠쿠시계 있어."
+            "뻐꾸기 시계야.",
+            "뻐꾸기 시계 있어."
           ],
           "short": [
-            "쿠쿠"
+            "뻐꾸기"
           ]
         }
       }
