@@ -4,6 +4,16 @@ import { createRouter } from './router';
 
 const router = createRouter();
 
+// bfcache(Back-Forward Cache) 복원 시 페이지 reload
+// bfcache에서 복원되면 React 이벤트 바인딩이 죽은 상태이므로 reload 필요
+if (typeof window !== 'undefined') {
+  window.addEventListener('pageshow', (event) => {
+    if (event.persisted) {
+      window.location.reload();
+    }
+  });
+}
+
 // Service Worker 등록 (PWA)
 if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
   window.addEventListener('load', () => {

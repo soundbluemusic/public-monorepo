@@ -201,6 +201,7 @@ export const DOWNLOAD_PAGE_SCRIPT = `(function() {
         m.remove();
         document.removeEventListener('keydown', escapeHandler, true);
         document.removeEventListener('click', clickHandler, true);
+        window.removeEventListener('pagehide', closeModal);
       }
     }
 
@@ -238,6 +239,8 @@ export const DOWNLOAD_PAGE_SCRIPT = `(function() {
     // Register document-level handlers
     document.addEventListener('click', clickHandler, true);
     document.addEventListener('keydown', escapeHandler, true);
+    // 페이지 이탈 시 모달 자동 정리 (bfcache에 백드롭이 남는 것 방지)
+    window.addEventListener('pagehide', closeModal);
 
     modal.focus();
   }

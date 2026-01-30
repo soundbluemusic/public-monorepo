@@ -193,6 +193,16 @@ export const SIDEBAR_COLLAPSE_SCRIPT = `(function() {
  * by adding/removing translate-x-0 class.
  */
 export const MOBILE_SIDEBAR_TOGGLE_SCRIPT = `(function() {
+  // bfcache 복원 시 고아 백드롭/overflow 정리
+  window.addEventListener('pageshow', function(e) {
+    if (e.persisted) {
+      var orphanedBackdrop = document.querySelector('[data-sidebar-backdrop]');
+      if (orphanedBackdrop) orphanedBackdrop.remove();
+      var modal = document.getElementById('download-preview-modal');
+      if (modal) modal.remove();
+      document.body.style.overflow = '';
+    }
+  });
   document.addEventListener('click', function(e) {
     // Check for menu button click (aria-label contains "Menu" or "메뉴")
     var menuBtn = e.target.closest('button[aria-label*="Menu" i], button[aria-label*="menu" i], button[aria-label*="메뉴"]');
