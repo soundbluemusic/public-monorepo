@@ -1,0 +1,368 @@
+[
+  {
+    "id": "san",
+    "korean": "산",
+    "romanization": "san",
+    "partOfSpeech": "noun",
+    "categoryId": "nature",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["nature", "landscape"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "산",
+        "explanation": "땅이 높이 솟아오른 지형입니다. 한국은 국토의 약 70%가 산지이며, 등산은 한국인이 가장 좋아하는 여가 활동 중 하나입니다.",
+        "examples": {
+          "beginner": "산에 가요.",
+          "intermediate": "주말에 산에 등산하러 갔어요.",
+          "advanced": "한국은 국토의 70%가 산지이다.",
+          "master": "산세가 험준하여 예로부터 자연 방어벽 역할을 했다."
+        },
+        "variations": {
+          "formal": ["산에 올라가겠습니다.", "등산을 합니다."],
+          "casual": ["산 가자.", "산 타자."],
+          "short": ["산"]
+        },
+        "dialogue": {
+          "context": "주말 계획을 세우며",
+          "dialogue": [
+            {"speaker": "A", "text": "주말에 뭐 할까?", "romanization": "jumale mwo halkka?", "translation": "What should we do this weekend?"},
+            {"speaker": "B", "text": "북한산 가자! 단풍이 예쁠 거야.", "romanization": "bukhansan gaja! danpungi yeppeul geoya.", "translation": "Let's go to Bukhansan! The fall leaves will be beautiful."}
+          ]
+        }
+      },
+      "en": {
+        "word": "mountain",
+        "explanation": "An elevated landform rising above the surrounding area. About 70% of Korea's territory is mountainous, and hiking is one of the most popular leisure activities among Koreans.",
+        "examples": {
+          "beginner": "Let's go to the mountain.",
+          "intermediate": "I went hiking in the mountains on the weekend.",
+          "advanced": "About 70% of Korea's land is mountainous.",
+          "master": "The rugged mountain terrain has served as a natural defense barrier since ancient times."
+        },
+        "variations": {
+          "formal": ["I will climb the mountain.", "I go hiking."],
+          "casual": ["Let's go hiking.", "Let's hit the mountain."],
+          "short": ["mountain"]
+        },
+        "dialogue": {
+          "context": "Making weekend plans",
+          "dialogue": [
+            {"speaker": "A", "text": "What should we do this weekend?", "romanization": "", "translation": "주말에 뭐 할까?"},
+            {"speaker": "B", "text": "Let's go to Bukhansan! The fall leaves will be beautiful.", "romanization": "", "translation": "북한산 가자! 단풍이 예쁠 거야."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[산]",
+      "ipa": "[san]"
+    }
+  },
+  {
+    "id": "bada",
+    "korean": "바다",
+    "romanization": "bada",
+    "partOfSpeech": "noun",
+    "categoryId": "nature",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["nature", "landscape", "water"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "바다",
+        "explanation": "넓은 짠물이 있는 곳입니다. 한국은 삼면이 바다(서해, 남해, 동해)로 둘러싸인 반도 국가입니다.",
+        "examples": {
+          "beginner": "바다가 예뻐요.",
+          "intermediate": "여름에 바다에 수영하러 갔어요.",
+          "advanced": "동해의 일출은 한국에서 가장 아름다운 풍경 중 하나이다.",
+          "master": "삼면이 바다로 둘러싸인 한반도는 해양 자원이 풍부하다."
+        },
+        "variations": {
+          "formal": ["바다에 갔습니다.", "해변을 방문했습니다."],
+          "casual": ["바다 가자!", "바다 좋다."],
+          "short": ["바다"]
+        },
+        "dialogue": {
+          "context": "여름휴가 계획",
+          "dialogue": [
+            {"speaker": "A", "text": "이번 여름에 바다 갈까?", "romanization": "ibeon yeoreume bada galkka?", "translation": "Shall we go to the beach this summer?"},
+            {"speaker": "B", "text": "좋아! 제주도 바다가 제일 예뻐.", "romanization": "joa! jejudo badaga jeil yeppeo.", "translation": "Yes! Jeju Island has the prettiest sea."}
+          ]
+        }
+      },
+      "en": {
+        "word": "sea / ocean",
+        "explanation": "A large body of saltwater. Korea is a peninsula surrounded by sea on three sides: the West Sea (서해), the South Sea (남해), and the East Sea (동해).",
+        "examples": {
+          "beginner": "The sea is beautiful.",
+          "intermediate": "I went swimming in the sea in summer.",
+          "advanced": "The sunrise over the East Sea is one of Korea's most beautiful sights.",
+          "master": "The Korean Peninsula, surrounded by sea on three sides, is rich in marine resources."
+        },
+        "variations": {
+          "formal": ["I went to the sea.", "I visited the beach."],
+          "casual": ["Let's go to the beach!", "Love the sea."],
+          "short": ["sea"]
+        },
+        "dialogue": {
+          "context": "Planning summer vacation",
+          "dialogue": [
+            {"speaker": "A", "text": "Shall we go to the beach this summer?", "romanization": "", "translation": "이번 여름에 바다 갈까?"},
+            {"speaker": "B", "text": "Yes! Jeju Island has the prettiest sea.", "romanization": "", "translation": "좋아! 제주도 바다가 제일 예뻐."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[바다]",
+      "ipa": "[pa.da]"
+    }
+  },
+  {
+    "id": "gang",
+    "korean": "강",
+    "romanization": "gang",
+    "partOfSpeech": "noun",
+    "categoryId": "nature",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["nature", "landscape", "water"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "강",
+        "explanation": "물이 흐르는 큰 수로입니다. 서울의 한강은 한국에서 가장 유명한 강으로, 시민들의 휴식 공간입니다.",
+        "examples": {
+          "beginner": "강이 넓어요.",
+          "intermediate": "한강에서 자전거를 타요.",
+          "advanced": "한강은 서울 시민의 대표적인 휴식 공간이다.",
+          "master": "한강의 기적이라는 표현은 한국의 경제 성장을 상징한다."
+        },
+        "variations": {
+          "formal": ["강에 갔습니다.", "한강을 방문했습니다."],
+          "casual": ["한강 가자.", "강변 산책하자."],
+          "short": ["강"]
+        },
+        "dialogue": {
+          "context": "저녁에 한강에서",
+          "dialogue": [
+            {"speaker": "A", "text": "한강에서 치킨 먹을까?", "romanization": "hangangeseo chikin meogeulkka?", "translation": "Shall we eat chicken by the Han River?"},
+            {"speaker": "B", "text": "좋지! 배달 시키자.", "romanization": "joji! baedal sikija.", "translation": "Sounds great! Let's order delivery."}
+          ]
+        }
+      },
+      "en": {
+        "word": "river",
+        "explanation": "A large natural waterway. The Han River (한강) in Seoul is Korea's most famous river and a beloved recreation area. 'The Miracle on the Han River' refers to Korea's rapid economic growth.",
+        "examples": {
+          "beginner": "The river is wide.",
+          "intermediate": "I ride a bike along the Han River.",
+          "advanced": "The Han River is Seoul citizens' most iconic recreation space.",
+          "master": "The phrase 'Miracle on the Han River' symbolizes Korea's economic growth."
+        },
+        "variations": {
+          "formal": ["I went to the river.", "I visited the Han River."],
+          "casual": ["Let's go to the Han River.", "Let's walk by the river."],
+          "short": ["river"]
+        },
+        "dialogue": {
+          "context": "By the Han River in the evening",
+          "dialogue": [
+            {"speaker": "A", "text": "Shall we eat chicken by the Han River?", "romanization": "", "translation": "한강에서 치킨 먹을까?"},
+            {"speaker": "B", "text": "Sounds great! Let's order delivery.", "romanization": "", "translation": "좋지! 배달 시키자."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[강]",
+      "ipa": "[kaŋ]"
+    }
+  },
+  {
+    "id": "haneul",
+    "korean": "하늘",
+    "romanization": "haneul",
+    "partOfSpeech": "noun",
+    "categoryId": "nature",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["nature", "landscape"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "하늘",
+        "explanation": "머리 위에 보이는 공간입니다. 한국어에서 '하늘'은 하느님(God)의 어원이기도 하며, '하늘이 무너져도 솟아날 구멍이 있다'는 유명한 속담이 있습니다.",
+        "examples": {
+          "beginner": "하늘이 파래요.",
+          "intermediate": "오늘 하늘이 정말 맑아요.",
+          "advanced": "노을이 지는 하늘이 아름답다.",
+          "master": "하늘이 무너져도 솟아날 구멍이 있다."
+        },
+        "variations": {
+          "formal": ["하늘이 맑습니다.", "하늘을 바라봅니다."],
+          "casual": ["하늘 예쁘다.", "하늘 봐!"],
+          "short": ["하늘"]
+        },
+        "dialogue": {
+          "context": "저녁 산책 중",
+          "dialogue": [
+            {"speaker": "A", "text": "와, 오늘 하늘 진짜 예쁘다.", "romanization": "wa, oneul haneul jinjja yeppeuda.", "translation": "Wow, the sky is really beautiful today."},
+            {"speaker": "B", "text": "노을이 장관이다.", "romanization": "noeuri janggwanida.", "translation": "The sunset is spectacular."}
+          ]
+        }
+      },
+      "en": {
+        "word": "sky",
+        "explanation": "The expanse of air above the earth. In Korean, '하늘' is also the root of '하느님' (God). There's a famous proverb: 'Even if the sky falls, there's a hole to crawl out of' — meaning there's always a way out.",
+        "examples": {
+          "beginner": "The sky is blue.",
+          "intermediate": "The sky is really clear today.",
+          "advanced": "The sunset sky is beautiful.",
+          "master": "Even if the sky falls, there's a hole to crawl out of."
+        },
+        "variations": {
+          "formal": ["The sky is clear.", "I gaze at the sky."],
+          "casual": ["Pretty sky.", "Look at the sky!"],
+          "short": ["sky"]
+        },
+        "dialogue": {
+          "context": "During an evening walk",
+          "dialogue": [
+            {"speaker": "A", "text": "Wow, the sky is really beautiful today.", "romanization": "", "translation": "와, 오늘 하늘 진짜 예쁘다."},
+            {"speaker": "B", "text": "The sunset is spectacular.", "romanization": "", "translation": "노을이 장관이다."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[하늘]",
+      "ipa": "[ha.nɯl]"
+    }
+  },
+  {
+    "id": "kkot",
+    "korean": "꽃",
+    "romanization": "kkot",
+    "partOfSpeech": "noun",
+    "categoryId": "nature",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["nature", "plants"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "꽃",
+        "explanation": "식물의 생식 기관으로, 아름다운 색과 향기가 있습니다. 한국의 국화는 무궁화입니다. '꽃'의 받침 ㅌ은 뒤에 모음이 오면 연음됩니다: 꽃이 → [꼬치].",
+        "examples": {
+          "beginner": "꽃이 예뻐요.",
+          "intermediate": "봄에 벚꽃이 피어요.",
+          "advanced": "진달래는 한국의 대표적인 봄꽃이다.",
+          "master": "꽃이 피고 지는 것은 자연의 순환을 상징한다."
+        },
+        "variations": {
+          "formal": ["꽃이 아름답습니다.", "꽃을 감상합니다."],
+          "casual": ["꽃 예쁘다!", "꽃 봐!"],
+          "short": ["꽃"]
+        },
+        "dialogue": {
+          "context": "봄에 벚꽃 구경하면서",
+          "dialogue": [
+            {"speaker": "A", "text": "벚꽃이 진짜 예쁘다!", "romanization": "beotkkochi jinjja yeppeuda!", "translation": "The cherry blossoms are really pretty!"},
+            {"speaker": "B", "text": "사진 찍자!", "romanization": "sajin jjikja!", "translation": "Let's take a photo!"}
+          ]
+        }
+      },
+      "en": {
+        "word": "flower",
+        "explanation": "The reproductive part of a plant, known for its beauty and fragrance. Korea's national flower is the 무궁화 (mugunghwa / Rose of Sharon). The final consonant ㅌ undergoes liaison: 꽃이 → [꼬치].",
+        "examples": {
+          "beginner": "The flowers are pretty.",
+          "intermediate": "Cherry blossoms bloom in spring.",
+          "advanced": "Azaleas are one of Korea's most representative spring flowers.",
+          "master": "The blooming and wilting of flowers symbolizes the cycle of nature."
+        },
+        "variations": {
+          "formal": ["The flowers are beautiful.", "I appreciate the flowers."],
+          "casual": ["Pretty flowers!", "Look at the flowers!"],
+          "short": ["flower"]
+        },
+        "dialogue": {
+          "context": "Viewing cherry blossoms in spring",
+          "dialogue": [
+            {"speaker": "A", "text": "The cherry blossoms are really pretty!", "romanization": "", "translation": "벚꽃이 진짜 예쁘다!"},
+            {"speaker": "B", "text": "Let's take a photo!", "romanization": "", "translation": "사진 찍자!"}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[꼳]",
+      "ipa": "[k͈ot̚]"
+    }
+  },
+  {
+    "id": "namu",
+    "korean": "나무",
+    "romanization": "namu",
+    "partOfSpeech": "noun",
+    "categoryId": "nature",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["nature", "plants"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "나무",
+        "explanation": "줄기와 가지가 있는 큰 식물입니다. '나무'는 재료로서의 목재(wood)도 뜻합니다. 한국에는 은행나무, 소나무 등이 흔합니다.",
+        "examples": {
+          "beginner": "나무가 커요.",
+          "intermediate": "가을에 나무 잎이 빨갛게 변해요.",
+          "advanced": "소나무는 한국인이 가장 사랑하는 나무이다.",
+          "master": "나무를 심는 것은 미래 세대를 위한 투자이다."
+        },
+        "variations": {
+          "formal": ["나무가 자라고 있습니다.", "수목을 관찰합니다."],
+          "casual": ["나무 크다.", "저 나무 봐."],
+          "short": ["나무"]
+        },
+        "dialogue": {
+          "context": "숲속 산책",
+          "dialogue": [
+            {"speaker": "A", "text": "이 나무 엄청 오래된 것 같아.", "romanization": "i namu eomcheong oraedoen geot gata.", "translation": "This tree seems really old."},
+            {"speaker": "B", "text": "수백 년은 됐을 거야.", "romanization": "subaek nyeoneun dwaesseul geoya.", "translation": "It's probably hundreds of years old."}
+          ]
+        }
+      },
+      "en": {
+        "word": "tree",
+        "explanation": "A large plant with a trunk and branches. '나무' also refers to wood as a material. Pine trees (소나무) and ginkgo trees (은행나무) are very common in Korea.",
+        "examples": {
+          "beginner": "The tree is big.",
+          "intermediate": "In autumn, tree leaves turn red.",
+          "advanced": "The pine tree is the most beloved tree among Koreans.",
+          "master": "Planting trees is an investment for future generations."
+        },
+        "variations": {
+          "formal": ["The tree is growing.", "We observe the trees."],
+          "casual": ["Big tree.", "Look at that tree."],
+          "short": ["tree"]
+        },
+        "dialogue": {
+          "context": "Walking through the forest",
+          "dialogue": [
+            {"speaker": "A", "text": "This tree seems really old.", "romanization": "", "translation": "이 나무 엄청 오래된 것 같아."},
+            {"speaker": "B", "text": "It's probably hundreds of years old.", "romanization": "", "translation": "수백 년은 됐을 거야."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[나무]",
+      "ipa": "[na.mu]"
+    }
+  }
+]

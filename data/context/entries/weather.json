@@ -1,0 +1,490 @@
+[
+  {
+    "id": "bi",
+    "korean": "비",
+    "romanization": "bi",
+    "partOfSpeech": "noun",
+    "categoryId": "weather",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["weather", "nature"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "비",
+        "explanation": "하늘에서 물방울이 떨어지는 기상 현상입니다. 한국에는 장마철(6~7월)에 비가 많이 옵니다.",
+        "examples": {
+          "beginner": "오늘 비가 와요.",
+          "intermediate": "장마철에는 비가 자주 내려요.",
+          "advanced": "가을비가 추적추적 내리고 있다.",
+          "master": "비가 오다가 갑자기 개었다."
+        },
+        "variations": {
+          "formal": ["비가 내리고 있습니다.", "비가 오고 있습니다."],
+          "casual": ["비 온다.", "비 와."],
+          "short": ["비"]
+        },
+        "dialogue": {
+          "context": "아침에 외출 준비를 하면서",
+          "dialogue": [
+            {"speaker": "A", "text": "밖에 비 와?", "romanization": "bakke bi wa?", "translation": "Is it raining outside?"},
+            {"speaker": "B", "text": "응, 우산 챙겨.", "romanization": "eung, usan chaenggyeo.", "translation": "Yeah, bring an umbrella."}
+          ]
+        }
+      },
+      "en": {
+        "word": "rain",
+        "explanation": "Rain, a weather phenomenon where water droplets fall from clouds. Korea has a monsoon season (jangma) from June to July with heavy rainfall.",
+        "examples": {
+          "beginner": "It's raining today.",
+          "intermediate": "It rains often during the monsoon season.",
+          "advanced": "The autumn rain is drizzling softly.",
+          "master": "It was raining and then suddenly cleared up."
+        },
+        "variations": {
+          "formal": ["It is raining.", "Rain is falling."],
+          "casual": ["It's raining.", "Rain's coming down."],
+          "short": ["rain"]
+        },
+        "dialogue": {
+          "context": "Getting ready to go out in the morning",
+          "dialogue": [
+            {"speaker": "A", "text": "Is it raining outside?", "romanization": "", "translation": "밖에 비 와?"},
+            {"speaker": "B", "text": "Yeah, bring an umbrella.", "romanization": "", "translation": "응, 우산 챙겨."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[비]",
+      "ipa": "[pi]"
+    }
+  },
+  {
+    "id": "nun",
+    "korean": "눈",
+    "romanization": "nun",
+    "partOfSpeech": "noun",
+    "categoryId": "weather",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["weather", "nature", "winter"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "눈",
+        "explanation": "하늘에서 얼음 결정이 내리는 기상 현상입니다. '눈'은 동음이의어로 신체 부위(eye)도 뜻합니다. 문맥으로 구분합니다.",
+        "examples": {
+          "beginner": "눈이 와요!",
+          "intermediate": "첫눈이 내렸어요.",
+          "advanced": "함박눈이 펑펑 쏟아지고 있다.",
+          "master": "눈이 녹아서 길이 미끄럽다."
+        },
+        "variations": {
+          "formal": ["눈이 내리고 있습니다.", "눈이 오고 있습니다."],
+          "casual": ["눈 온다!", "눈이야!"],
+          "short": ["눈"]
+        },
+        "dialogue": {
+          "context": "창밖을 보며",
+          "dialogue": [
+            {"speaker": "A", "text": "와, 눈이다!", "romanization": "wa, nunida!", "translation": "Wow, it's snowing!"},
+            {"speaker": "B", "text": "첫눈이네! 소원 빌어.", "romanization": "cheonnunine! sowon bireo.", "translation": "It's the first snow! Make a wish."}
+          ]
+        }
+      },
+      "en": {
+        "word": "snow",
+        "explanation": "Snow, frozen precipitation in the form of ice crystals. The word '눈' is a homonym that also means 'eye' in Korean — context determines the meaning. In Korean culture, the first snow (첫눈) is considered romantic.",
+        "examples": {
+          "beginner": "It's snowing!",
+          "intermediate": "The first snow has fallen.",
+          "advanced": "Big fluffy snowflakes are pouring down.",
+          "master": "The snow has melted and the roads are slippery."
+        },
+        "variations": {
+          "formal": ["It is snowing.", "Snow is falling."],
+          "casual": ["It's snowing!", "Snow!"],
+          "short": ["snow"]
+        },
+        "dialogue": {
+          "context": "Looking out the window",
+          "dialogue": [
+            {"speaker": "A", "text": "Wow, it's snowing!", "romanization": "", "translation": "와, 눈이다!"},
+            {"speaker": "B", "text": "It's the first snow! Make a wish.", "romanization": "", "translation": "첫눈이네! 소원 빌어."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[눈]",
+      "ipa": "[nun]"
+    }
+  },
+  {
+    "id": "makda",
+    "korean": "맑다",
+    "romanization": "makda",
+    "partOfSpeech": "adjective",
+    "categoryId": "weather",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["weather", "adjective"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "맑다",
+        "explanation": "하늘에 구름이 없고 날씨가 좋은 상태를 뜻합니다. '맑은 하늘', '맑은 물'처럼 투명하고 깨끗한 것에도 씁니다.",
+        "examples": {
+          "beginner": "오늘 날씨가 맑아요.",
+          "intermediate": "맑은 날에 산책하고 싶어요.",
+          "advanced": "비가 그치고 하늘이 맑게 개었다.",
+          "master": "가을 하늘은 높고 맑아서 천고마비의 계절이라고 한다."
+        },
+        "variations": {
+          "formal": ["날씨가 맑습니다.", "하늘이 맑습니다."],
+          "casual": ["날씨 맑다.", "하늘 진짜 맑다."],
+          "short": ["맑음"]
+        },
+        "dialogue": {
+          "context": "날씨 예보를 보며",
+          "dialogue": [
+            {"speaker": "A", "text": "내일 날씨 어때?", "romanization": "naeil nalssi eottae?", "translation": "How's the weather tomorrow?"},
+            {"speaker": "B", "text": "맑대! 소풍 가자.", "romanization": "maktae! sopung gaja.", "translation": "It'll be clear! Let's go on a picnic."}
+          ]
+        }
+      },
+      "en": {
+        "word": "clear (weather)",
+        "explanation": "Describes clear, cloudless weather. Also used to describe anything transparent or pure, such as clear water or a clear voice.",
+        "examples": {
+          "beginner": "The weather is clear today.",
+          "intermediate": "I want to take a walk on a clear day.",
+          "advanced": "The rain stopped and the sky cleared up.",
+          "master": "Autumn skies are high and clear — that's why it's called the season of high skies."
+        },
+        "variations": {
+          "formal": ["The weather is clear.", "The sky is clear."],
+          "casual": ["It's clear out.", "Nice and clear."],
+          "short": ["clear"]
+        },
+        "dialogue": {
+          "context": "Checking the weather forecast",
+          "dialogue": [
+            {"speaker": "A", "text": "How's the weather tomorrow?", "romanization": "", "translation": "내일 날씨 어때?"},
+            {"speaker": "B", "text": "It'll be clear! Let's go on a picnic.", "romanization": "", "translation": "맑대! 소풍 가자."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[막따]",
+      "ipa": "[mak̚.t͈a]"
+    }
+  },
+  {
+    "id": "heurida",
+    "korean": "흐리다",
+    "romanization": "heurida",
+    "partOfSpeech": "adjective",
+    "categoryId": "weather",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["weather", "adjective"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "흐리다",
+        "explanation": "구름이 많이 끼어 하늘이 어두운 상태를 뜻합니다. 시야가 흐린 경우(안경이 흐리다)에도 씁니다.",
+        "examples": {
+          "beginner": "오늘 날씨가 흐려요.",
+          "intermediate": "흐린 날에는 기분이 가라앉아요.",
+          "advanced": "아침부터 잔뜩 흐려서 비가 올 것 같다.",
+          "master": "구름이 잔뜩 끼어 흐린 하늘이 종일 계속되었다."
+        },
+        "variations": {
+          "formal": ["날씨가 흐립니다.", "하늘이 흐립니다."],
+          "casual": ["날씨 흐리다.", "흐리네."],
+          "short": ["흐림"]
+        },
+        "dialogue": {
+          "context": "아침에 창밖을 보며",
+          "dialogue": [
+            {"speaker": "A", "text": "오늘 날씨 흐리네.", "romanization": "oneul nalssi heurine.", "translation": "The weather is cloudy today."},
+            {"speaker": "B", "text": "비 올 수도 있겠다.", "romanization": "bi ol sudo itgetda.", "translation": "It might rain."}
+          ]
+        }
+      },
+      "en": {
+        "word": "cloudy",
+        "explanation": "Describes overcast or cloudy weather where clouds cover the sky. Can also describe blurry or unclear vision (e.g., foggy glasses).",
+        "examples": {
+          "beginner": "The weather is cloudy today.",
+          "intermediate": "I feel down on cloudy days.",
+          "advanced": "It's been heavily overcast since morning, so it looks like rain.",
+          "master": "The cloud-covered sky remained overcast all day long."
+        },
+        "variations": {
+          "formal": ["The weather is overcast.", "The sky is cloudy."],
+          "casual": ["It's cloudy.", "Looks gloomy."],
+          "short": ["cloudy"]
+        },
+        "dialogue": {
+          "context": "Looking outside in the morning",
+          "dialogue": [
+            {"speaker": "A", "text": "The weather is cloudy today.", "romanization": "", "translation": "오늘 날씨 흐리네."},
+            {"speaker": "B", "text": "It might rain.", "romanization": "", "translation": "비 올 수도 있겠다."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[흐리다]",
+      "ipa": "[hɯ.ɾi.da]"
+    }
+  },
+  {
+    "id": "taepung",
+    "korean": "태풍",
+    "romanization": "taepung",
+    "partOfSpeech": "noun",
+    "categoryId": "weather",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["weather", "nature", "disaster"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "태풍",
+        "explanation": "열대 해상에서 발생하는 강한 폭풍입니다. 한국에는 주로 여름~가을(7~9월)에 영향을 줍니다. 한자어 '颱風'에서 유래했습니다.",
+        "examples": {
+          "beginner": "태풍이 오고 있어요.",
+          "intermediate": "태풍 때문에 비행기가 취소되었어요.",
+          "advanced": "이번 태풍은 강풍을 동반하여 피해가 컸다.",
+          "master": "태풍의 눈이 한반도를 관통할 것으로 예상된다."
+        },
+        "variations": {
+          "formal": ["태풍이 접근하고 있습니다.", "태풍 경보가 발령되었습니다."],
+          "casual": ["태풍 온대.", "태풍 무섭다."],
+          "short": ["태풍"]
+        },
+        "dialogue": {
+          "context": "뉴스를 보면서",
+          "dialogue": [
+            {"speaker": "A", "text": "이번 주에 태풍 온대.", "romanization": "ibeon jue taepung ondae.", "translation": "They say a typhoon is coming this week."},
+            {"speaker": "B", "text": "진짜? 비상식량 사 놓자.", "romanization": "jinjja? bisangsignyang sa noja.", "translation": "Really? Let's stock up on emergency food."}
+          ]
+        }
+      },
+      "en": {
+        "word": "typhoon",
+        "explanation": "A powerful tropical storm that forms over the Pacific Ocean. Typhoons typically affect Korea during summer and early autumn (July–September). The word comes from the Chinese characters '颱風'.",
+        "examples": {
+          "beginner": "A typhoon is coming.",
+          "intermediate": "The flight was canceled because of the typhoon.",
+          "advanced": "This typhoon brought strong winds and caused significant damage.",
+          "master": "The eye of the typhoon is expected to pass through the Korean Peninsula."
+        },
+        "variations": {
+          "formal": ["A typhoon is approaching.", "A typhoon warning has been issued."],
+          "casual": ["Typhoon's coming.", "Typhoon's scary."],
+          "short": ["typhoon"]
+        },
+        "dialogue": {
+          "context": "Watching the news",
+          "dialogue": [
+            {"speaker": "A", "text": "They say a typhoon is coming this week.", "romanization": "", "translation": "이번 주에 태풍 온대."},
+            {"speaker": "B", "text": "Really? Let's stock up on emergency food.", "romanization": "", "translation": "진짜? 비상식량 사 놓자."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[태풍]",
+      "ipa": "[tʰɛ.pʰuŋ]"
+    }
+  },
+  {
+    "id": "baram",
+    "korean": "바람",
+    "romanization": "baram",
+    "partOfSpeech": "noun",
+    "categoryId": "weather",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["weather", "nature"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "바람",
+        "explanation": "공기가 움직이는 현상입니다. 비유적으로 '바람을 피우다'(have an affair), '바람이 불다'(a trend emerges) 등 다양한 관용 표현에 쓰입니다.",
+        "examples": {
+          "beginner": "바람이 불어요.",
+          "intermediate": "오늘은 바람이 많이 불어서 추워요.",
+          "advanced": "찬바람이 불기 시작하면 겨울이 온 거다.",
+          "master": "산들바람이 불어와 나뭇잎이 살랑살랑 흔들렸다."
+        },
+        "variations": {
+          "formal": ["바람이 불고 있습니다.", "강풍이 예상됩니다."],
+          "casual": ["바람 분다.", "바람 엄청 세다."],
+          "short": ["바람"]
+        },
+        "dialogue": {
+          "context": "산책하면서",
+          "dialogue": [
+            {"speaker": "A", "text": "바람이 시원하다.", "romanization": "barami siwonhada.", "translation": "The wind feels refreshing."},
+            {"speaker": "B", "text": "그러게, 산책하기 딱 좋은 날씨야.", "romanization": "geureoge, sanchaekhagi ttak joeun nalssiya.", "translation": "Right, it's perfect weather for a walk."}
+          ]
+        }
+      },
+      "en": {
+        "word": "wind",
+        "explanation": "The movement of air. In Korean, '바람' is also used idiomatically: '바람을 피우다' means 'to have an affair,' and '바람이 불다' can mean 'a trend is emerging.'",
+        "examples": {
+          "beginner": "The wind is blowing.",
+          "intermediate": "It's cold today because the wind is blowing a lot.",
+          "advanced": "When cold winds start blowing, winter has arrived.",
+          "master": "A gentle breeze blew and the leaves swayed softly."
+        },
+        "variations": {
+          "formal": ["The wind is blowing.", "Strong winds are expected."],
+          "casual": ["It's windy.", "Wind's really strong."],
+          "short": ["wind"]
+        },
+        "dialogue": {
+          "context": "While taking a walk",
+          "dialogue": [
+            {"speaker": "A", "text": "The wind feels refreshing.", "romanization": "", "translation": "바람이 시원하다."},
+            {"speaker": "B", "text": "Right, it's perfect weather for a walk.", "romanization": "", "translation": "그러게, 산책하기 딱 좋은 날씨야."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[바람]",
+      "ipa": "[pa.ɾam]"
+    }
+  },
+  {
+    "id": "deopda",
+    "korean": "덥다",
+    "romanization": "deopda",
+    "partOfSpeech": "adjective",
+    "categoryId": "weather",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["weather", "adjective", "summer"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "덥다",
+        "explanation": "기온이 높아 몸이 더운 느낌을 뜻합니다. 'ㅂ' 불규칙 활용으로 '더워요', '더운' 등으로 변합니다.",
+        "examples": {
+          "beginner": "오늘 너무 더워요.",
+          "intermediate": "여름에는 정말 더워서 에어컨이 필요해요.",
+          "advanced": "찜통더위에 숨이 막힐 것 같다.",
+          "master": "체감 온도가 40도를 넘어 폭염 경보가 내려졌다."
+        },
+        "variations": {
+          "formal": ["날씨가 덥습니다.", "기온이 높습니다."],
+          "casual": ["더워.", "너무 덥다."],
+          "short": ["덥다"]
+        },
+        "dialogue": {
+          "context": "한여름 더운 날",
+          "dialogue": [
+            {"speaker": "A", "text": "아, 너무 더워.", "romanization": "a, neomu deowo.", "translation": "Ah, it's so hot."},
+            {"speaker": "B", "text": "아이스크림 먹으러 가자.", "romanization": "aiseukeulim meogeureo gaja.", "translation": "Let's go get ice cream."}
+          ]
+        }
+      },
+      "en": {
+        "word": "hot (weather)",
+        "explanation": "Describes hot weather or feeling warm due to high temperature. This adjective follows the 'ㅂ' irregular conjugation: 덥다 → 더워요 (present), 더운 (modifier).",
+        "examples": {
+          "beginner": "It's very hot today.",
+          "intermediate": "In summer it's really hot, so you need air conditioning.",
+          "advanced": "It feels suffocating in the sweltering heat.",
+          "master": "The perceived temperature exceeded 40°C and a heat wave warning was issued."
+        },
+        "variations": {
+          "formal": ["The weather is hot.", "The temperature is high."],
+          "casual": ["It's hot.", "So hot."],
+          "short": ["hot"]
+        },
+        "dialogue": {
+          "context": "On a hot midsummer day",
+          "dialogue": [
+            {"speaker": "A", "text": "Ah, it's so hot.", "romanization": "", "translation": "아, 너무 더워."},
+            {"speaker": "B", "text": "Let's go get ice cream.", "romanization": "", "translation": "아이스크림 먹으러 가자."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[덥따]",
+      "ipa": "[tʌp̚.t͈a]"
+    }
+  },
+  {
+    "id": "chupda",
+    "korean": "춥다",
+    "romanization": "chupda",
+    "partOfSpeech": "adjective",
+    "categoryId": "weather",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["weather", "adjective", "winter"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "춥다",
+        "explanation": "기온이 낮아 몸이 추운 느낌을 뜻합니다. 'ㅂ' 불규칙 활용으로 '추워요', '추운' 등으로 변합니다.",
+        "examples": {
+          "beginner": "오늘 너무 추워요.",
+          "intermediate": "겨울에는 많이 추워서 따뜻하게 입어야 해요.",
+          "advanced": "뼛속까지 추운 한파가 몰려왔다.",
+          "master": "영하 20도의 혹한에 수도관이 얼었다."
+        },
+        "variations": {
+          "formal": ["날씨가 춥습니다.", "기온이 낮습니다."],
+          "casual": ["추워.", "너무 춥다."],
+          "short": ["춥다"]
+        },
+        "dialogue": {
+          "context": "겨울 아침 출근길에",
+          "dialogue": [
+            {"speaker": "A", "text": "오늘 진짜 춥다.", "romanization": "oneul jinjja chupda.", "translation": "It's really cold today."},
+            {"speaker": "B", "text": "그러니까, 목도리 하고 나올 걸.", "romanization": "geureonikka, mokdori hago naol geol.", "translation": "I know, I should've worn a scarf."}
+          ]
+        }
+      },
+      "en": {
+        "word": "cold (weather)",
+        "explanation": "Describes cold weather or feeling cold due to low temperature. This adjective follows the 'ㅂ' irregular conjugation: 춥다 → 추워요 (present), 추운 (modifier).",
+        "examples": {
+          "beginner": "It's very cold today.",
+          "intermediate": "In winter it's very cold, so you need to dress warmly.",
+          "advanced": "A bone-chilling cold wave has arrived.",
+          "master": "At minus 20°C, the water pipes froze in the extreme cold."
+        },
+        "variations": {
+          "formal": ["The weather is cold.", "The temperature is low."],
+          "casual": ["It's cold.", "So cold."],
+          "short": ["cold"]
+        },
+        "dialogue": {
+          "context": "On a winter morning commute",
+          "dialogue": [
+            {"speaker": "A", "text": "It's really cold today.", "romanization": "", "translation": "오늘 진짜 춥다."},
+            {"speaker": "B", "text": "I know, I should've worn a scarf.", "romanization": "", "translation": "그러니까, 목도리 하고 나올 걸."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[춥따]",
+      "ipa": "[tɕʰup̚.t͈a]"
+    }
+  }
+]

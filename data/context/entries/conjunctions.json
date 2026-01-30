@@ -1,0 +1,307 @@
+[
+  {
+    "id": "geurigo",
+    "korean": "그리고",
+    "romanization": "geurigo",
+    "partOfSpeech": "conjunction",
+    "categoryId": "conjunctions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["conjunctions", "grammar"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "그리고",
+        "explanation": "앞의 내용에 뒤의 내용을 더할 때 쓰는 접속사입니다. 문장과 문장을 연결하거나 나열할 때 사용합니다.",
+        "examples": {
+          "beginner": "사과 그리고 바나나를 샀어요.",
+          "intermediate": "공부를 했어요. 그리고 운동도 했어요.",
+          "advanced": "그리고는 병렬 접속사로, 대등한 내용을 연결한다.",
+          "master": "구어체에서는 '그리고'를 '그리구'로 발음하는 경우도 있다."
+        },
+        "variations": {
+          "formal": ["그리고 다음 사항을 말씀드리겠습니다."],
+          "casual": ["그리고 또...", "그리구..."],
+          "short": ["그리고"]
+        },
+        "dialogue": {
+          "context": "쇼핑 목록을 말하면서",
+          "dialogue": [
+            {"speaker": "A", "text": "뭐 사야 해?", "romanization": "mwo saya hae?", "translation": "What do we need to buy?"},
+            {"speaker": "B", "text": "우유, 빵, 그리고 계란.", "romanization": "uyu, ppang, geurigo gyeran.", "translation": "Milk, bread, and eggs."}
+          ]
+        }
+      },
+      "en": {
+        "word": "and / and then",
+        "explanation": "A conjunction used to add or list items. It connects sentences or items of equal importance. Equivalent to 'and' or 'and then' in English.",
+        "examples": {
+          "beginner": "I bought apples and bananas.",
+          "intermediate": "I studied. And I also exercised.",
+          "advanced": "'그리고' is a parallel conjunction that connects equal content.",
+          "master": "In casual speech, '그리고' is sometimes pronounced as '그리구'."
+        },
+        "variations": {
+          "formal": ["And I would like to mention the following."],
+          "casual": ["And also...", "And then..."],
+          "short": ["and"]
+        },
+        "dialogue": {
+          "context": "Going over a shopping list",
+          "dialogue": [
+            {"speaker": "A", "text": "What do we need to buy?", "romanization": "", "translation": "뭐 사야 해?"},
+            {"speaker": "B", "text": "Milk, bread, and eggs.", "romanization": "", "translation": "우유, 빵, 그리고 계란."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[그리고]",
+      "ipa": "[kɯ.ɾi.ɡo]"
+    }
+  },
+  {
+    "id": "hajiman",
+    "korean": "하지만",
+    "romanization": "hajiman",
+    "partOfSpeech": "conjunction",
+    "categoryId": "conjunctions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["conjunctions", "grammar"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "하지만",
+        "explanation": "앞의 내용과 반대되거나 대조되는 내용을 연결하는 접속사입니다. '그렇지만', '그러나'와 같은 뜻입니다.",
+        "examples": {
+          "beginner": "비싸요. 하지만 맛있어요.",
+          "intermediate": "피곤해요. 하지만 공부해야 해요.",
+          "advanced": "하지만은 역접 접속사로, 앞 내용과 대조되는 내용을 이끈다.",
+          "master": "하지만과 그러나의 차이는 구어/문어 차이가 크다."
+        },
+        "variations": {
+          "formal": ["하지만 한 가지 문제가 있습니다.", "그러나 상황이 다릅니다."],
+          "casual": ["하지만...", "근데..."],
+          "short": ["하지만"]
+        },
+        "dialogue": {
+          "context": "식당 추천하면서",
+          "dialogue": [
+            {"speaker": "A", "text": "이 식당 맛있어. 하지만 좀 비싸.", "romanization": "i sikdang masisseo. hajiman jom bissa.", "translation": "This restaurant is good. But it's a bit expensive."},
+            {"speaker": "B", "text": "괜찮아, 오늘은 특별한 날이니까.", "romanization": "gwaenchana, oneureun teukbyeolhan narnikka.", "translation": "That's okay, it's a special day."}
+          ]
+        }
+      },
+      "en": {
+        "word": "but / however",
+        "explanation": "A conjunction that introduces a contrasting or opposing idea. Equivalent to 'but' or 'however.' Similar expressions include '그렇지만' and '그러나' (more formal/literary).",
+        "examples": {
+          "beginner": "It's expensive. But it's delicious.",
+          "intermediate": "I'm tired. But I have to study.",
+          "advanced": "'하지만' is an adversative conjunction introducing contrasting content.",
+          "master": "The difference between '하지만' and '그러나' largely lies in spoken vs. written register."
+        },
+        "variations": {
+          "formal": ["However, there is one problem.", "Nevertheless, the situation differs."],
+          "casual": ["But...", "Though..."],
+          "short": ["but"]
+        },
+        "dialogue": {
+          "context": "Recommending a restaurant",
+          "dialogue": [
+            {"speaker": "A", "text": "This restaurant is good. But it's a bit expensive.", "romanization": "", "translation": "이 식당 맛있어. 하지만 좀 비싸."},
+            {"speaker": "B", "text": "That's okay, it's a special day.", "romanization": "", "translation": "괜찮아, 오늘은 특별한 날이니까."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[하지만]",
+      "ipa": "[ha.dʑi.man]"
+    }
+  },
+  {
+    "id": "geuraeseo",
+    "korean": "그래서",
+    "romanization": "geuraeseo",
+    "partOfSpeech": "conjunction",
+    "categoryId": "conjunctions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["conjunctions", "grammar"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "그래서",
+        "explanation": "앞 문장의 원인이나 이유에 대한 결과를 나타내는 접속사입니다. '그러므로', '따라서'보다 구어적인 표현입니다.",
+        "examples": {
+          "beginner": "비가 와요. 그래서 우산을 가져갔어요.",
+          "intermediate": "시험이 있어요. 그래서 열심히 공부해요.",
+          "advanced": "그래서는 인과 접속사로, 원인과 결과를 연결한다.",
+          "master": "그래서와 그러니까의 차이는 결과 서술과 이유 강조의 차이이다."
+        },
+        "variations": {
+          "formal": ["그래서 다음과 같이 결정했습니다.", "따라서 조치를 취하겠습니다."],
+          "casual": ["그래서?", "그래서 어떻게 됐어?"],
+          "short": ["그래서"]
+        },
+        "dialogue": {
+          "context": "이야기하면서",
+          "dialogue": [
+            {"speaker": "A", "text": "어제 늦게 잤어.", "romanization": "eoje neutge jasseo.", "translation": "I went to bed late yesterday."},
+            {"speaker": "B", "text": "그래서 피곤해 보이는구나.", "romanization": "geuraeseo pigonhae boineguna.", "translation": "So that's why you look tired."}
+          ]
+        }
+      },
+      "en": {
+        "word": "so / therefore",
+        "explanation": "A conjunction that shows the result or consequence of a preceding cause. More conversational than '그러므로' or '따라서' (therefore — more formal/written).",
+        "examples": {
+          "beginner": "It's raining. So I brought an umbrella.",
+          "intermediate": "There's an exam. So I'm studying hard.",
+          "advanced": "'그래서' is a causal conjunction connecting cause and effect.",
+          "master": "The difference between '그래서' and '그러니까' is stating a result vs. emphasizing a reason."
+        },
+        "variations": {
+          "formal": ["Therefore, we have decided as follows.", "Accordingly, we will take action."],
+          "casual": ["So?", "So what happened?"],
+          "short": ["so"]
+        },
+        "dialogue": {
+          "context": "Chatting",
+          "dialogue": [
+            {"speaker": "A", "text": "I went to bed late yesterday.", "romanization": "", "translation": "어제 늦게 잤어."},
+            {"speaker": "B", "text": "So that's why you look tired.", "romanization": "", "translation": "그래서 피곤해 보이는구나."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[그래서]",
+      "ipa": "[kɯ.ɾɛ.sʌ]"
+    }
+  },
+  {
+    "id": "go",
+    "korean": "-고",
+    "romanization": "go",
+    "partOfSpeech": "particle",
+    "categoryId": "conjunctions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["conjunctions", "grammar", "connective-ending"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "-고",
+        "explanation": "동사나 형용사 어간 뒤에 붙어 두 가지 동작이나 상태를 나열하는 연결어미입니다. 시간 순서(~하고 나서) 또는 동시 동작(~하면서)을 나타냅니다.",
+        "examples": {
+          "beginner": "밥을 먹고 학교에 갔어요.",
+          "intermediate": "노래를 듣고 춤을 춰요.",
+          "advanced": "-고는 대등적 연결어미로, 나열, 순서, 대조를 나타낸다.",
+          "master": "-고의 시제는 뒤 절의 시제에 의존하며, 앞 절에는 시제 표시를 하지 않는다."
+        },
+        "variations": {
+          "formal": ["보고서를 작성하고 제출하겠습니다."],
+          "casual": ["먹고 가자.", "씻고 자."],
+          "short": ["-고"]
+        },
+        "dialogue": {
+          "context": "하루 일과를 말하면서",
+          "dialogue": [
+            {"speaker": "A", "text": "오늘 뭐 했어?", "romanization": "oneul mwo haesseo?", "translation": "What did you do today?"},
+            {"speaker": "B", "text": "운동하고 친구 만났어.", "romanization": "undonghago chingu mannasseo.", "translation": "I exercised and met a friend."}
+          ]
+        }
+      },
+      "en": {
+        "word": "-go (and / and then)",
+        "explanation": "A connective ending attached to verb/adjective stems to list two actions or states. Can indicate sequential actions (did X and then Y) or simultaneous actions. The tense is determined by the final verb.",
+        "examples": {
+          "beginner": "I ate and went to school.",
+          "intermediate": "I listen to music and dance.",
+          "advanced": "'-고' is a coordinating connective ending for listing, sequencing, or contrasting.",
+          "master": "The tense of '-고' depends on the final clause; the preceding clause doesn't carry its own tense marker."
+        },
+        "variations": {
+          "formal": ["I will write the report and submit it."],
+          "casual": ["Let's eat and go.", "Wash up and sleep."],
+          "short": ["-go"]
+        },
+        "dialogue": {
+          "context": "Talking about the day",
+          "dialogue": [
+            {"speaker": "A", "text": "What did you do today?", "romanization": "", "translation": "오늘 뭐 했어?"},
+            {"speaker": "B", "text": "I exercised and met a friend.", "romanization": "", "translation": "운동하고 친구 만났어."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[고]",
+      "ipa": "[ko]"
+    }
+  },
+  {
+    "id": "myeon",
+    "korean": "-면",
+    "romanization": "myeon",
+    "partOfSpeech": "particle",
+    "categoryId": "conjunctions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["conjunctions", "grammar", "connective-ending", "conditional"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "-면 / -으면",
+        "explanation": "조건을 나타내는 연결어미입니다. '~한다면', '~할 경우'의 뜻입니다. 받침이 있으면 '-으면', 없으면 '-면'을 씁니다.",
+        "examples": {
+          "beginner": "시간이 있으면 같이 가요.",
+          "intermediate": "비가 오면 집에 있을 거예요.",
+          "advanced": "-면은 가정, 조건, 전제를 나타내는 연결어미이다.",
+          "master": "-면의 쓰임은 조건문뿐 아니라 소망(-면 좋겠다), 습관(-면 ~하다) 등에도 확장된다."
+        },
+        "variations": {
+          "formal": ["문제가 있으시면 말씀해 주세요."],
+          "casual": ["시간 되면 연락해.", "가고 싶으면 가."],
+          "short": ["-면"]
+        },
+        "dialogue": {
+          "context": "약속을 정하면서",
+          "dialogue": [
+            {"speaker": "A", "text": "내일 시간 되면 만날까?", "romanization": "naeil sigan doemyeon mannalkka?", "translation": "Shall we meet tomorrow if you're free?"},
+            {"speaker": "B", "text": "좋아, 오후면 괜찮아.", "romanization": "joa, ohumyeon gwaenchana.", "translation": "Sure, afternoon works for me."}
+          ]
+        }
+      },
+      "en": {
+        "word": "-myeon (if / when)",
+        "explanation": "A conditional connective ending meaning 'if' or 'when.' Use '-으면' after consonants and '-면' after vowels. Beyond simple conditionals, it extends to wishes (-면 좋겠다 = 'I wish') and habitual actions.",
+        "examples": {
+          "beginner": "If you have time, let's go together.",
+          "intermediate": "If it rains, I'll stay home.",
+          "advanced": "'-면' is a connective ending expressing conditions, assumptions, and premises.",
+          "master": "'-면' extends beyond conditionals to express wishes (-면 좋겠다) and habitual actions."
+        },
+        "variations": {
+          "formal": ["If you have any questions, please let me know."],
+          "casual": ["Contact me if you're free.", "Go if you want to."],
+          "short": ["-myeon"]
+        },
+        "dialogue": {
+          "context": "Making plans",
+          "dialogue": [
+            {"speaker": "A", "text": "Shall we meet tomorrow if you're free?", "romanization": "", "translation": "내일 시간 되면 만날까?"},
+            {"speaker": "B", "text": "Sure, afternoon works for me.", "romanization": "", "translation": "좋아, 오후면 괜찮아."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[면]",
+      "ipa": "[mjʌn]"
+    }
+  }
+]

@@ -1,0 +1,1360 @@
+[
+  {
+    "id": "giyeok",
+    "korean": "ㄱ",
+    "romanization": "giyeok",
+    "partOfSpeech": "noun",
+    "categoryId": "consonants",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "consonant"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㄱ (기역)",
+        "explanation": "한글 자음 첫 번째 글자. 혀뿌리가 목구멍을 막는 모양을 본떠 만든 글자입니다. 초성에서는 'ㄱ', 종성에서는 받침 'ㄱ'으로 쓰입니다.",
+        "examples": {
+          "beginner": "\"ㄱ\"은 '기역'이라고 읽어요.",
+          "intermediate": "\"ㄱ\"은 '가', '고', '구' 등의 첫소리에 쓰여요.",
+          "advanced": "\"ㄱ\"은 어두에서 [ɡ], 어말에서 [k̚]로 발음됩니다.",
+          "master": "\"ㄱ\"은 훈민정음에서 아음(牙音)을 나타내며, 혀뿌리가 목구멍을 막는 모양을 상형한 글자입니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 기역입니다.",
+            "ㄱ은 자음의 첫 번째 글자입니다."
+          ],
+          "casual": [
+            "이거 기역이야.",
+            "ㄱ으로 시작하는 글자 뭐 있어?"
+          ],
+          "short": [
+            "ㄱ"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "이 글자는 뭐예요?",
+              "romanization": "i geuljaneun mwoyeyo?",
+              "translation": "What is this letter?"
+            },
+            {
+              "speaker": "B",
+              "text": "ㄱ이에요. 기역이라고 읽어요.",
+              "romanization": "giyeogieyo. giyeokirago ilgeoyo.",
+              "translation": "It's ㄱ. It's read as 'giyeok'."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "giyeok (ㄱ)",
+        "explanation": "The first consonant of the Korean alphabet. Pronounced like 'g' at the beginning of a word, and 'k' at the end. It was designed to represent the shape of the tongue blocking the throat.",
+        "examples": {
+          "beginner": "\"ㄱ\" is called 'giyeok' in Korean.",
+          "intermediate": "\"ㄱ\" is used in syllables like '가' (ga), '고' (go), '구' (gu).",
+          "advanced": "\"ㄱ\" is pronounced [ɡ] initially and [k̚] finally.",
+          "master": "\"ㄱ\" in Hunminjeongeum represents a velar sound, modeled after the root of the tongue blocking the throat."
+        },
+        "variations": {
+          "formal": [
+            "This letter is giyeok.",
+            "ㄱ is the first consonant letter."
+          ],
+          "casual": [
+            "This is giyeok.",
+            "What words start with ㄱ?"
+          ],
+          "short": [
+            "ㄱ"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What is this letter?",
+              "romanization": "",
+              "translation": "이 글자는 뭐예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's ㄱ. It's called 'giyeok'.",
+              "romanization": "",
+              "translation": "ㄱ이에요. 기역이라고 읽어요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[기역]",
+      "ipa": "[ki.jʌk̚]"
+    }
+  },
+  {
+    "id": "nieun",
+    "korean": "ㄴ",
+    "romanization": "nieun",
+    "partOfSpeech": "noun",
+    "categoryId": "consonants",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "consonant"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㄴ (니은)",
+        "explanation": "한글 자음 두 번째 글자. 혀끝이 윗잇몸에 닿는 모양을 본떠 만든 글자입니다.",
+        "examples": {
+          "beginner": "\"ㄴ\"은 '니은'이라고 읽어요.",
+          "intermediate": "\"ㄴ\"은 '나', '노', '누' 등의 첫소리에 쓰여요.",
+          "advanced": "\"ㄴ\"은 초성과 종성 모두에서 [n]으로 발음됩니다.",
+          "master": "\"ㄴ\"은 훈민정음에서 설음(舌音)을 나타내며, 혀끝이 윗잇몸에 닿는 모양을 상형한 글자입니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 니은입니다.",
+            "ㄴ은 자음의 두 번째 글자입니다."
+          ],
+          "casual": [
+            "이거 니은이야.",
+            "ㄴ으로 시작하는 단어 뭐 있어?"
+          ],
+          "short": [
+            "ㄴ"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㄴ은 어떻게 발음해요?",
+              "romanization": "nieuneun eotteoke bareumaheyo?",
+              "translation": "How do you pronounce ㄴ?"
+            },
+            {
+              "speaker": "B",
+              "text": "영어의 'n' 소리와 같아요.",
+              "romanization": "yeongeoeui 'n' soriwa gatayo.",
+              "translation": "It's the same as the 'n' sound in English."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "nieun (ㄴ)",
+        "explanation": "The second consonant of the Korean alphabet. Pronounced like 'n'. It represents the shape of the tongue touching the upper gum.",
+        "examples": {
+          "beginner": "\"ㄴ\" is called 'nieun' in Korean.",
+          "intermediate": "\"ㄴ\" is used in syllables like '나' (na), '노' (no), '누' (nu).",
+          "advanced": "\"ㄴ\" is pronounced [n] in both initial and final positions.",
+          "master": "\"ㄴ\" in Hunminjeongeum represents a lingual sound, modeled after the tongue touching the upper gum ridge."
+        },
+        "variations": {
+          "formal": [
+            "This letter is nieun.",
+            "ㄴ is the second consonant letter."
+          ],
+          "casual": [
+            "This is nieun.",
+            "What words start with ㄴ?"
+          ],
+          "short": [
+            "ㄴ"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you pronounce ㄴ?",
+              "romanization": "",
+              "translation": "ㄴ은 어떻게 발음해요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's the same as the 'n' sound in English.",
+              "romanization": "",
+              "translation": "영어의 'n' 소리와 같아요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[니은]",
+      "ipa": "[ni.ɯn]"
+    }
+  },
+  {
+    "id": "digeut",
+    "korean": "ㄷ",
+    "romanization": "digeut",
+    "partOfSpeech": "noun",
+    "categoryId": "consonants",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "consonant"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㄷ (디귿)",
+        "explanation": "한글 자음 세 번째 글자. ㄴ에 획을 더하여 만든 글자로, 혀끝이 윗잇몸에 닿았다 떨어지는 소리를 나타냅니다.",
+        "examples": {
+          "beginner": "\"ㄷ\"은 '디귿'이라고 읽어요.",
+          "intermediate": "\"ㄷ\"은 '다', '도', '두' 등의 첫소리에 쓰여요.",
+          "advanced": "\"ㄷ\"은 어두에서 [d], 어말에서 [t̚]로 발음됩니다.",
+          "master": "\"ㄷ\"은 ㄴ에 획을 더해 만든 가획자로, 소리가 더 세짐을 나타냅니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 디귿입니다.",
+            "ㄷ은 자음의 세 번째 글자입니다."
+          ],
+          "casual": [
+            "이거 디귿이야.",
+            "ㄷ으로 시작하는 단어 뭐 있어?"
+          ],
+          "short": [
+            "ㄷ"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㄷ은 ㄴ과 비슷해 보여요.",
+              "romanization": "digeuseun nieungwa biseutae boyeoyo.",
+              "translation": "ㄷ looks similar to ㄴ."
+            },
+            {
+              "speaker": "B",
+              "text": "네, ㄴ에 획을 하나 더한 글자예요.",
+              "romanization": "ne, nieune hoekeul hana dehan geuljayeyo.",
+              "translation": "Yes, it's ㄴ with an extra stroke."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "digeut (ㄷ)",
+        "explanation": "The third consonant of the Korean alphabet. Pronounced like 'd' at the beginning and 't' at the end. It was created by adding a stroke to ㄴ.",
+        "examples": {
+          "beginner": "\"ㄷ\" is called 'digeut' in Korean.",
+          "intermediate": "\"ㄷ\" is used in syllables like '다' (da), '도' (do), '두' (du).",
+          "advanced": "\"ㄷ\" is pronounced [d] initially and [t̚] finally.",
+          "master": "\"ㄷ\" was created by adding a stroke to ㄴ, indicating a stronger sound in the same place of articulation."
+        },
+        "variations": {
+          "formal": [
+            "This letter is digeut.",
+            "ㄷ is the third consonant letter."
+          ],
+          "casual": [
+            "This is digeut.",
+            "What words start with ㄷ?"
+          ],
+          "short": [
+            "ㄷ"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㄷ looks similar to ㄴ.",
+              "romanization": "",
+              "translation": "ㄷ은 ㄴ과 비슷해 보여요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, it's ㄴ with an extra stroke added.",
+              "romanization": "",
+              "translation": "네, ㄴ에 획을 하나 더한 글자예요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[디귿]",
+      "ipa": "[ti.ɡɯt̚]"
+    }
+  },
+  {
+    "id": "rieul",
+    "korean": "ㄹ",
+    "romanization": "rieul",
+    "partOfSpeech": "noun",
+    "categoryId": "consonants",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "consonant"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㄹ (리을)",
+        "explanation": "한글 자음 네 번째 글자. 혀끝이 윗잇몸을 가볍게 치는 소리를 나타냅니다. 영어의 'r'과 'l' 사이의 소리입니다.",
+        "examples": {
+          "beginner": "\"ㄹ\"은 '리을'이라고 읽어요.",
+          "intermediate": "\"ㄹ\"은 '라', '로', '루' 등의 첫소리에 쓰여요.",
+          "advanced": "\"ㄹ\"은 초성에서 [ɾ], 종성에서 [l]로 발음됩니다.",
+          "master": "\"ㄹ\"은 탄설음(彈舌音)과 설측음(舌側音)을 모두 나타내는 독특한 글자입니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 리을입니다.",
+            "ㄹ은 자음의 네 번째 글자입니다."
+          ],
+          "casual": [
+            "이거 리을이야.",
+            "ㄹ 발음이 어려워."
+          ],
+          "short": [
+            "ㄹ"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㄹ 발음이 너무 어려워요.",
+              "romanization": "rieul bareumi neomu eoryeowoyo.",
+              "translation": "Pronouncing ㄹ is so hard."
+            },
+            {
+              "speaker": "B",
+              "text": "혀끝을 윗잇몸에 가볍게 대 보세요.",
+              "romanization": "hyeokkkeuseul winnismome gabyeopge dae boseyo.",
+              "translation": "Try lightly touching your tongue tip to the upper gum."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "rieul (ㄹ)",
+        "explanation": "The fourth consonant of the Korean alphabet. Pronounced between 'r' and 'l'. In initial position it's a flap like Spanish 'r', in final position it's like 'l'.",
+        "examples": {
+          "beginner": "\"ㄹ\" is called 'rieul' in Korean.",
+          "intermediate": "\"ㄹ\" is used in syllables like '라' (ra), '로' (ro), '루' (ru).",
+          "advanced": "\"ㄹ\" is pronounced [ɾ] (flap) initially and [l] (lateral) finally.",
+          "master": "\"ㄹ\" uniquely represents both an alveolar flap and a lateral approximant depending on position."
+        },
+        "variations": {
+          "formal": [
+            "This letter is rieul.",
+            "ㄹ is the fourth consonant letter."
+          ],
+          "casual": [
+            "This is rieul.",
+            "ㄹ is hard to pronounce."
+          ],
+          "short": [
+            "ㄹ"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Pronouncing ㄹ is so difficult.",
+              "romanization": "",
+              "translation": "ㄹ 발음이 너무 어려워요."
+            },
+            {
+              "speaker": "B",
+              "text": "Try lightly tapping your tongue tip to the upper gum.",
+              "romanization": "",
+              "translation": "혀끝을 윗잇몸에 가볍게 대 보세요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[리을]",
+      "ipa": "[ɾi.ɯl]"
+    }
+  },
+  {
+    "id": "mieum",
+    "korean": "ㅁ",
+    "romanization": "mieum",
+    "partOfSpeech": "noun",
+    "categoryId": "consonants",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "consonant"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㅁ (미음)",
+        "explanation": "한글 자음 다섯 번째 글자. 입술 모양을 본떠 만든 글자입니다. 두 입술을 다물었다 열면서 내는 소리입니다.",
+        "examples": {
+          "beginner": "\"ㅁ\"은 '미음'이라고 읽어요.",
+          "intermediate": "\"ㅁ\"은 '마', '모', '무' 등의 첫소리에 쓰여요.",
+          "advanced": "\"ㅁ\"은 초성과 종성 모두에서 [m]으로 발음됩니다.",
+          "master": "\"ㅁ\"은 훈민정음에서 순음(脣音)을 나타내며, 입 모양을 상형한 글자입니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 미음입니다.",
+            "ㅁ은 자음의 다섯 번째 글자입니다."
+          ],
+          "casual": [
+            "이거 미음이야.",
+            "ㅁ은 입술 모양이야."
+          ],
+          "short": [
+            "ㅁ"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㅁ은 왜 네모 모양이에요?",
+              "romanization": "mieumeun wae nemo moyangieyo?",
+              "translation": "Why is ㅁ a square shape?"
+            },
+            {
+              "speaker": "B",
+              "text": "입 모양을 본떠서 만들었어요.",
+              "romanization": "ip moyangeul bontteoseo mandeureosseoyo.",
+              "translation": "It was modeled after the shape of the mouth."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "mieum (ㅁ)",
+        "explanation": "The fifth consonant of the Korean alphabet. Pronounced like 'm'. Its square shape represents the closed mouth.",
+        "examples": {
+          "beginner": "\"ㅁ\" is called 'mieum' in Korean.",
+          "intermediate": "\"ㅁ\" is used in syllables like '마' (ma), '모' (mo), '무' (mu).",
+          "advanced": "\"ㅁ\" is pronounced [m] in both initial and final positions.",
+          "master": "\"ㅁ\" in Hunminjeongeum represents a labial sound, with its shape depicting the closed lips."
+        },
+        "variations": {
+          "formal": [
+            "This letter is mieum.",
+            "ㅁ is the fifth consonant letter."
+          ],
+          "casual": [
+            "This is mieum.",
+            "ㅁ looks like a mouth."
+          ],
+          "short": [
+            "ㅁ"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Why is ㅁ shaped like a square?",
+              "romanization": "",
+              "translation": "ㅁ은 왜 네모 모양이에요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It was modeled after the shape of the mouth.",
+              "romanization": "",
+              "translation": "입 모양을 본떠서 만들었어요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[미음]",
+      "ipa": "[mi.ɯm]"
+    }
+  },
+  {
+    "id": "bieup",
+    "korean": "ㅂ",
+    "romanization": "bieup",
+    "partOfSpeech": "noun",
+    "categoryId": "consonants",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "consonant"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㅂ (비읍)",
+        "explanation": "한글 자음 여섯 번째 글자. ㅁ에 획을 더하여 만든 글자로, 두 입술을 다물었다 터뜨리는 소리를 나타냅니다.",
+        "examples": {
+          "beginner": "\"ㅂ\"은 '비읍'이라고 읽어요.",
+          "intermediate": "\"ㅂ\"은 '바', '보', '부' 등의 첫소리에 쓰여요.",
+          "advanced": "\"ㅂ\"은 어두에서 [b], 어말에서 [p̚]로 발음됩니다.",
+          "master": "\"ㅂ\"은 ㅁ에 획을 더한 가획자로, 같은 조음 위치에서 더 센 소리를 나타냅니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 비읍입니다.",
+            "ㅂ은 자음의 여섯 번째 글자입니다."
+          ],
+          "casual": [
+            "이거 비읍이야.",
+            "ㅂ으로 시작하는 단어 뭐 있어?"
+          ],
+          "short": [
+            "ㅂ"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㅂ은 영어의 어떤 소리예요?",
+              "romanization": "bieubeun yeongeoeui eotteon soriyeyo?",
+              "translation": "What English sound is ㅂ?"
+            },
+            {
+              "speaker": "B",
+              "text": "'b' 소리와 비슷해요.",
+              "romanization": "'b' soriwa biseutaeyo.",
+              "translation": "It's similar to the 'b' sound."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "bieup (ㅂ)",
+        "explanation": "The sixth consonant of the Korean alphabet. Pronounced like 'b' at the beginning and 'p' at the end. Created by adding strokes to ㅁ.",
+        "examples": {
+          "beginner": "\"ㅂ\" is called 'bieup' in Korean.",
+          "intermediate": "\"ㅂ\" is used in syllables like '바' (ba), '보' (bo), '부' (bu).",
+          "advanced": "\"ㅂ\" is pronounced [b] initially and [p̚] finally.",
+          "master": "\"ㅂ\" was created by adding strokes to ㅁ, indicating a stronger bilabial sound."
+        },
+        "variations": {
+          "formal": [
+            "This letter is bieup.",
+            "ㅂ is the sixth consonant letter."
+          ],
+          "casual": [
+            "This is bieup.",
+            "What words start with ㅂ?"
+          ],
+          "short": [
+            "ㅂ"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What English sound is ㅂ?",
+              "romanization": "",
+              "translation": "ㅂ은 영어의 어떤 소리예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's similar to the 'b' sound.",
+              "romanization": "",
+              "translation": "'b' 소리와 비슷해요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[비읍]",
+      "ipa": "[pi.ɯp̚]"
+    }
+  },
+  {
+    "id": "siot",
+    "korean": "ㅅ",
+    "romanization": "siot",
+    "partOfSpeech": "noun",
+    "categoryId": "consonants",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "consonant"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㅅ (시옷)",
+        "explanation": "한글 자음 일곱 번째 글자. 이빨 모양을 본떠 만든 글자로, 혀끝과 윗니 사이로 바람을 내보내는 소리입니다.",
+        "examples": {
+          "beginner": "\"ㅅ\"은 '시옷'이라고 읽어요.",
+          "intermediate": "\"ㅅ\"은 '사', '소', '수' 등의 첫소리에 쓰여요.",
+          "advanced": "\"ㅅ\"은 'ㅣ' 앞에서 [ɕ], 그 외에서는 [s]로 발음됩니다.",
+          "master": "\"ㅅ\"은 훈민정음에서 치음(齒音)을 나타내며, 이빨 모양을 상형한 글자입니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 시옷입니다.",
+            "ㅅ은 자음의 일곱 번째 글자입니다."
+          ],
+          "casual": [
+            "이거 시옷이야.",
+            "ㅅ으로 시작하는 단어 뭐 있어?"
+          ],
+          "short": [
+            "ㅅ"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㅅ은 이빨 모양이에요?",
+              "romanization": "sioseun ippal moyangieyo?",
+              "translation": "Is ㅅ shaped like teeth?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 이빨 모양을 본떠서 만들었어요.",
+              "romanization": "ne, ippal moyangeul bontteoseo mandeureosseoyo.",
+              "translation": "Yes, it was modeled after the shape of teeth."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "siot (ㅅ)",
+        "explanation": "The seventh consonant of the Korean alphabet. Pronounced like 's'. Before 'i', it becomes 'sh'. Its shape represents teeth.",
+        "examples": {
+          "beginner": "\"ㅅ\" is called 'siot' in Korean.",
+          "intermediate": "\"ㅅ\" is used in syllables like '사' (sa), '소' (so), '수' (su).",
+          "advanced": "\"ㅅ\" is pronounced [ɕ] before 'i' and [s] elsewhere.",
+          "master": "\"ㅅ\" in Hunminjeongeum represents a dental sound, with its shape depicting teeth."
+        },
+        "variations": {
+          "formal": [
+            "This letter is siot.",
+            "ㅅ is the seventh consonant letter."
+          ],
+          "casual": [
+            "This is siot.",
+            "What words start with ㅅ?"
+          ],
+          "short": [
+            "ㅅ"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Is ㅅ shaped like teeth?",
+              "romanization": "",
+              "translation": "ㅅ은 이빨 모양이에요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, it was modeled after the shape of teeth.",
+              "romanization": "",
+              "translation": "네, 이빨 모양을 본떠서 만들었어요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[시옷]",
+      "ipa": "[ɕi.ot̚]"
+    }
+  },
+  {
+    "id": "ieung",
+    "korean": "ㅇ",
+    "romanization": "ieung",
+    "partOfSpeech": "noun",
+    "categoryId": "consonants",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "consonant"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㅇ (이응)",
+        "explanation": "한글 자음 여덟 번째 글자. 목구멍 모양을 본떠 만든 글자입니다. 초성에서는 소리가 없고, 종성(받침)에서는 [ŋ] 소리가 납니다.",
+        "examples": {
+          "beginner": "\"ㅇ\"은 '이응'이라고 읽어요.",
+          "intermediate": "\"ㅇ\"은 초성에서 소리가 없어요. '아', '오', '우'에서 쓰여요.",
+          "advanced": "\"ㅇ\"은 초성에서 무음, 종성에서 [ŋ]으로 발음됩니다.",
+          "master": "\"ㅇ\"은 훈민정음에서 후음(喉音)을 나타내며, 목구멍의 둥근 모양을 상형한 글자입니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 이응입니다.",
+            "ㅇ은 자음의 여덟 번째 글자입니다."
+          ],
+          "casual": [
+            "이거 이응이야.",
+            "ㅇ은 초성에서 소리 없어."
+          ],
+          "short": [
+            "ㅇ"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㅇ은 왜 소리가 없어요?",
+              "romanization": "ieungeun wae soriga eopseoyo?",
+              "translation": "Why does ㅇ have no sound?"
+            },
+            {
+              "speaker": "B",
+              "text": "초성에서는 자리만 채워요. 받침에서는 'ng' 소리가 나요.",
+              "romanization": "choseongeeseoneun jariman chaeweoyo. batchimeeseoneun 'ng' soriga nayo.",
+              "translation": "In initial position it's just a placeholder. As a final consonant it makes an 'ng' sound."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "ieung (ㅇ)",
+        "explanation": "The eighth consonant of the Korean alphabet. Silent in initial position, pronounced 'ng' in final position. Its round shape represents the throat.",
+        "examples": {
+          "beginner": "\"ㅇ\" is called 'ieung' in Korean.",
+          "intermediate": "\"ㅇ\" is silent at the start: '아' (a), '오' (o), '우' (u).",
+          "advanced": "\"ㅇ\" is silent initially and pronounced [ŋ] finally.",
+          "master": "\"ㅇ\" in Hunminjeongeum represents a glottal sound, with its round shape depicting the throat opening."
+        },
+        "variations": {
+          "formal": [
+            "This letter is ieung.",
+            "ㅇ is the eighth consonant letter."
+          ],
+          "casual": [
+            "This is ieung.",
+            "ㅇ is silent at the start of a syllable."
+          ],
+          "short": [
+            "ㅇ"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Why does ㅇ have no sound?",
+              "romanization": "",
+              "translation": "ㅇ은 왜 소리가 없어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a placeholder initially. As a final consonant, it sounds like 'ng'.",
+              "romanization": "",
+              "translation": "초성에서는 자리만 채워요. 받침에서는 'ng' 소리가 나요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[이응]",
+      "ipa": "[i.ɯŋ]"
+    }
+  },
+  {
+    "id": "jieut",
+    "korean": "ㅈ",
+    "romanization": "jieut",
+    "partOfSpeech": "noun",
+    "categoryId": "consonants",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "consonant"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㅈ (지읒)",
+        "explanation": "한글 자음 아홉 번째 글자. ㅅ에 획을 더하여 만든 글자로, 혀끝이 윗잇몸에 닿았다 떨어지면서 마찰음을 내는 소리입니다.",
+        "examples": {
+          "beginner": "\"ㅈ\"은 '지읒'이라고 읽어요.",
+          "intermediate": "\"ㅈ\"은 '자', '조', '주' 등의 첫소리에 쓰여요.",
+          "advanced": "\"ㅈ\"은 어두에서 [dʑ], 어말에서 [t̚]로 발음됩니다.",
+          "master": "\"ㅈ\"은 ㅅ에 획을 더한 가획자로, 파찰음을 나타냅니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 지읒입니다.",
+            "ㅈ은 자음의 아홉 번째 글자입니다."
+          ],
+          "casual": [
+            "이거 지읒이야.",
+            "ㅈ으로 시작하는 단어 뭐 있어?"
+          ],
+          "short": [
+            "ㅈ"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㅈ은 영어의 'j' 소리예요?",
+              "romanization": "jieuseun yeongeoeui 'j' soriyeyo?",
+              "translation": "Is ㅈ the 'j' sound in English?"
+            },
+            {
+              "speaker": "B",
+              "text": "비슷하지만 완전히 같지는 않아요.",
+              "romanization": "biseutajiman wanjeonhi gatjineun anayo.",
+              "translation": "It's similar but not exactly the same."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "jieut (ㅈ)",
+        "explanation": "The ninth consonant of the Korean alphabet. Pronounced like 'j' at the beginning and 't' at the end. Created by adding a stroke to ㅅ.",
+        "examples": {
+          "beginner": "\"ㅈ\" is called 'jieut' in Korean.",
+          "intermediate": "\"ㅈ\" is used in syllables like '자' (ja), '조' (jo), '주' (ju).",
+          "advanced": "\"ㅈ\" is pronounced [dʑ] initially and [t̚] finally.",
+          "master": "\"ㅈ\" was created by adding a stroke to ㅅ, representing an affricate sound."
+        },
+        "variations": {
+          "formal": [
+            "This letter is jieut.",
+            "ㅈ is the ninth consonant letter."
+          ],
+          "casual": [
+            "This is jieut.",
+            "What words start with ㅈ?"
+          ],
+          "short": [
+            "ㅈ"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Is ㅈ the 'j' sound in English?",
+              "romanization": "",
+              "translation": "ㅈ은 영어의 'j' 소리예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's similar but not exactly the same.",
+              "romanization": "",
+              "translation": "비슷하지만 완전히 같지는 않아요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[지읒]",
+      "ipa": "[tɕi.ɯt̚]"
+    }
+  },
+  {
+    "id": "chieut",
+    "korean": "ㅊ",
+    "romanization": "chieut",
+    "partOfSpeech": "noun",
+    "categoryId": "consonants",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "consonant"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㅊ (치읓)",
+        "explanation": "한글 자음 열 번째 글자. ㅈ에 획을 더하여 만든 거센소리(격음) 글자입니다.",
+        "examples": {
+          "beginner": "\"ㅊ\"은 '치읓'이라고 읽어요.",
+          "intermediate": "\"ㅊ\"은 '차', '초', '추' 등의 첫소리에 쓰여요.",
+          "advanced": "\"ㅊ\"은 어두에서 [tɕʰ], 어말에서 [t̚]로 발음됩니다.",
+          "master": "\"ㅊ\"은 ㅈ의 격음(거센소리)으로, 기식을 동반한 파찰음입니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 치읓입니다.",
+            "ㅊ은 자음의 열 번째 글자입니다."
+          ],
+          "casual": [
+            "이거 치읓이야.",
+            "ㅊ은 ㅈ보다 세게 소리 내."
+          ],
+          "short": [
+            "ㅊ"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㅊ과 ㅈ의 차이가 뭐예요?",
+              "romanization": "chieutgwa jieusui chaiga mwoyeyo?",
+              "translation": "What's the difference between ㅊ and ㅈ?"
+            },
+            {
+              "speaker": "B",
+              "text": "ㅊ은 숨을 세게 내뱉으면서 소리 내요.",
+              "romanization": "chieuseun sumeul sege nabaetteumyeonseo sori naeyo.",
+              "translation": "ㅊ is pronounced with a strong breath of air."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "chieut (ㅊ)",
+        "explanation": "The tenth consonant of the Korean alphabet. Pronounced like 'ch' with aspiration. It's the aspirated version of ㅈ.",
+        "examples": {
+          "beginner": "\"ㅊ\" is called 'chieut' in Korean.",
+          "intermediate": "\"ㅊ\" is used in syllables like '차' (cha), '초' (cho), '추' (chu).",
+          "advanced": "\"ㅊ\" is pronounced [tɕʰ] initially and [t̚] finally.",
+          "master": "\"ㅊ\" is the aspirated counterpart of ㅈ, produced with a burst of air."
+        },
+        "variations": {
+          "formal": [
+            "This letter is chieut.",
+            "ㅊ is the tenth consonant letter."
+          ],
+          "casual": [
+            "This is chieut.",
+            "ㅊ sounds stronger than ㅈ."
+          ],
+          "short": [
+            "ㅊ"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What's the difference between ㅊ and ㅈ?",
+              "romanization": "",
+              "translation": "ㅊ과 ㅈ의 차이가 뭐예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "ㅊ is pronounced with a strong breath of air.",
+              "romanization": "",
+              "translation": "ㅊ은 숨을 세게 내뱉으면서 소리 내요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[치읓]",
+      "ipa": "[tɕʰi.ɯt̚]"
+    }
+  },
+  {
+    "id": "kieuk",
+    "korean": "ㅋ",
+    "romanization": "kieuk",
+    "partOfSpeech": "noun",
+    "categoryId": "consonants",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "consonant"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㅋ (키읔)",
+        "explanation": "한글 자음 열한 번째 글자. ㄱ에 획을 더하여 만든 거센소리(격음) 글자입니다.",
+        "examples": {
+          "beginner": "\"ㅋ\"은 '키읔'이라고 읽어요.",
+          "intermediate": "\"ㅋ\"은 '카', '코', '쿠' 등의 첫소리에 쓰여요.",
+          "advanced": "\"ㅋ\"은 어두에서 [kʰ], 어말에서 [k̚]로 발음됩니다.",
+          "master": "\"ㅋ\"은 ㄱ의 격음(거센소리)으로, 기식을 동반한 파열음입니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 키읔입니다.",
+            "ㅋ은 자음의 열한 번째 글자입니다."
+          ],
+          "casual": [
+            "이거 키읔이야.",
+            "ㅋㅋㅋ는 웃음 소리야."
+          ],
+          "short": [
+            "ㅋ"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㅋㅋㅋ가 무슨 뜻이에요?",
+              "romanization": "kkkga museun tteusieyo?",
+              "translation": "What does ㅋㅋㅋ mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "인터넷에서 웃음을 나타내는 표현이에요.",
+              "romanization": "inteoneeseo useumeul natananeun pyohyeonieyo.",
+              "translation": "It's an expression for laughter on the internet."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "kieuk (ㅋ)",
+        "explanation": "The eleventh consonant of the Korean alphabet. Pronounced like 'k' with aspiration. It's the aspirated version of ㄱ. Also used as 'ㅋㅋㅋ' for laughter online.",
+        "examples": {
+          "beginner": "\"ㅋ\" is called 'kieuk' in Korean.",
+          "intermediate": "\"ㅋ\" is used in syllables like '카' (ka), '코' (ko), '쿠' (ku).",
+          "advanced": "\"ㅋ\" is pronounced [kʰ] initially and [k̚] finally.",
+          "master": "\"ㅋ\" is the aspirated counterpart of ㄱ. In digital communication, 'ㅋㅋㅋ' represents laughter."
+        },
+        "variations": {
+          "formal": [
+            "This letter is kieuk.",
+            "ㅋ is the eleventh consonant letter."
+          ],
+          "casual": [
+            "This is kieuk.",
+            "ㅋㅋㅋ means laughter online."
+          ],
+          "short": [
+            "ㅋ"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does ㅋㅋㅋ mean?",
+              "romanization": "",
+              "translation": "ㅋㅋㅋ가 무슨 뜻이에요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's an expression for laughter on the internet.",
+              "romanization": "",
+              "translation": "인터넷에서 웃음을 나타내는 표현이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[키읔]",
+      "ipa": "[kʰi.ɯk̚]"
+    }
+  },
+  {
+    "id": "tieut",
+    "korean": "ㅌ",
+    "romanization": "tieut",
+    "partOfSpeech": "noun",
+    "categoryId": "consonants",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "consonant"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㅌ (티읕)",
+        "explanation": "한글 자음 열두 번째 글자. ㄷ에 획을 더하여 만든 거센소리(격음) 글자입니다.",
+        "examples": {
+          "beginner": "\"ㅌ\"은 '티읕'이라고 읽어요.",
+          "intermediate": "\"ㅌ\"은 '타', '토', '투' 등의 첫소리에 쓰여요.",
+          "advanced": "\"ㅌ\"은 어두에서 [tʰ], 어말에서 [t̚]로 발음됩니다.",
+          "master": "\"ㅌ\"은 ㄷ의 격음(거센소리)으로, 기식을 동반한 파열음입니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 티읕입니다.",
+            "ㅌ은 자음의 열두 번째 글자입니다."
+          ],
+          "casual": [
+            "이거 티읕이야.",
+            "ㅌ은 ㄷ보다 세게 소리 내."
+          ],
+          "short": [
+            "ㅌ"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㅌ은 영어의 't'와 같아요?",
+              "romanization": "tieuseun yeongeoeui 't'wa gatayo?",
+              "translation": "Is ㅌ the same as English 't'?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 영어의 't'와 거의 같아요.",
+              "romanization": "ne, yeongeoeui 't'wa geoui gatayo.",
+              "translation": "Yes, it's almost the same as English 't'."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "tieut (ㅌ)",
+        "explanation": "The twelfth consonant of the Korean alphabet. Pronounced like 't' with aspiration. It's the aspirated version of ㄷ.",
+        "examples": {
+          "beginner": "\"ㅌ\" is called 'tieut' in Korean.",
+          "intermediate": "\"ㅌ\" is used in syllables like '타' (ta), '토' (to), '투' (tu).",
+          "advanced": "\"ㅌ\" is pronounced [tʰ] initially and [t̚] finally.",
+          "master": "\"ㅌ\" is the aspirated counterpart of ㄷ, nearly identical to English 't'."
+        },
+        "variations": {
+          "formal": [
+            "This letter is tieut.",
+            "ㅌ is the twelfth consonant letter."
+          ],
+          "casual": [
+            "This is tieut.",
+            "ㅌ sounds like English 't'."
+          ],
+          "short": [
+            "ㅌ"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Is ㅌ the same as English 't'?",
+              "romanization": "",
+              "translation": "ㅌ은 영어의 't'와 같아요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, it's almost the same as English 't'.",
+              "romanization": "",
+              "translation": "네, 영어의 't'와 거의 같아요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[티읕]",
+      "ipa": "[tʰi.ɯt̚]"
+    }
+  },
+  {
+    "id": "pieup",
+    "korean": "ㅍ",
+    "romanization": "pieup",
+    "partOfSpeech": "noun",
+    "categoryId": "consonants",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "consonant"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㅍ (피읖)",
+        "explanation": "한글 자음 열세 번째 글자. ㅂ에 획을 더하여 만든 거센소리(격음) 글자입니다.",
+        "examples": {
+          "beginner": "\"ㅍ\"은 '피읖'이라고 읽어요.",
+          "intermediate": "\"ㅍ\"은 '파', '포', '푸' 등의 첫소리에 쓰여요.",
+          "advanced": "\"ㅍ\"은 어두에서 [pʰ], 어말에서 [p̚]로 발음됩니다.",
+          "master": "\"ㅍ\"은 ㅂ의 격음(거센소리)으로, 기식을 동반한 양순 파열음입니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 피읖입니다.",
+            "ㅍ은 자음의 열세 번째 글자입니다."
+          ],
+          "casual": [
+            "이거 피읖이야.",
+            "ㅍ은 ㅂ보다 세게 소리 내."
+          ],
+          "short": [
+            "ㅍ"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㅍ은 영어의 'p'와 같아요?",
+              "romanization": "pieubeun yeongeoeui 'p'wa gatayo?",
+              "translation": "Is ㅍ the same as English 'p'?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 영어의 'p'와 비슷해요.",
+              "romanization": "ne, yeongeoeui 'p'wa biseutaeyo.",
+              "translation": "Yes, it's similar to English 'p'."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "pieup (ㅍ)",
+        "explanation": "The thirteenth consonant of the Korean alphabet. Pronounced like 'p' with aspiration. It's the aspirated version of ㅂ.",
+        "examples": {
+          "beginner": "\"ㅍ\" is called 'pieup' in Korean.",
+          "intermediate": "\"ㅍ\" is used in syllables like '파' (pa), '포' (po), '푸' (pu).",
+          "advanced": "\"ㅍ\" is pronounced [pʰ] initially and [p̚] finally.",
+          "master": "\"ㅍ\" is the aspirated counterpart of ㅂ, nearly identical to English 'p'."
+        },
+        "variations": {
+          "formal": [
+            "This letter is pieup.",
+            "ㅍ is the thirteenth consonant letter."
+          ],
+          "casual": [
+            "This is pieup.",
+            "ㅍ sounds like English 'p'."
+          ],
+          "short": [
+            "ㅍ"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Is ㅍ the same as English 'p'?",
+              "romanization": "",
+              "translation": "ㅍ은 영어의 'p'와 같아요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, it's similar to English 'p'.",
+              "romanization": "",
+              "translation": "네, 영어의 'p'와 비슷해요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[피읖]",
+      "ipa": "[pʰi.ɯp̚]"
+    }
+  },
+  {
+    "id": "hieut",
+    "korean": "ㅎ",
+    "romanization": "hieut",
+    "partOfSpeech": "noun",
+    "categoryId": "consonants",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "consonant"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㅎ (히읗)",
+        "explanation": "한글 자음 열네 번째(마지막) 글자. ㅇ에 획을 더하여 만든 글자로, 목구멍에서 나오는 거친 숨소리를 나타냅니다.",
+        "examples": {
+          "beginner": "\"ㅎ\"은 '히읗'이라고 읽어요.",
+          "intermediate": "\"ㅎ\"은 '하', '호', '후' 등의 첫소리에 쓰여요.",
+          "advanced": "\"ㅎ\"은 어두에서 [h], 모음 사이에서 약화되어 거의 발음되지 않기도 합니다.",
+          "master": "\"ㅎ\"은 ㅇ에 획을 더한 글자로, 인터넷에서 'ㅎㅎ'은 가벼운 웃음을 나타냅니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 히읗입니다.",
+            "ㅎ은 자음의 마지막 글자입니다."
+          ],
+          "casual": [
+            "이거 히읗이야.",
+            "ㅎㅎ는 웃는 거야."
+          ],
+          "short": [
+            "ㅎ"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㅎ은 영어의 'h'와 같아요?",
+              "romanization": "hieuseun yeongeoeui 'h'wa gatayo?",
+              "translation": "Is ㅎ the same as English 'h'?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 거의 같아요. 숨을 내쉬면서 소리 내요.",
+              "romanization": "ne, geoui gatayo. sumeul naeswiemyeonseo sori naeyo.",
+              "translation": "Yes, almost the same. You make sound while breathing out."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "hieut (ㅎ)",
+        "explanation": "The fourteenth and last consonant of the Korean alphabet. Pronounced like 'h'. In digital communication, 'ㅎㅎ' represents a light chuckle.",
+        "examples": {
+          "beginner": "\"ㅎ\" is called 'hieut' in Korean.",
+          "intermediate": "\"ㅎ\" is used in syllables like '하' (ha), '호' (ho), '후' (hu).",
+          "advanced": "\"ㅎ\" is pronounced [h] initially and can weaken between vowels.",
+          "master": "\"ㅎ\" was created by adding a stroke to ㅇ. In digital communication, 'ㅎㅎ' means a light laugh."
+        },
+        "variations": {
+          "formal": [
+            "This letter is hieut.",
+            "ㅎ is the last consonant letter."
+          ],
+          "casual": [
+            "This is hieut.",
+            "ㅎㅎ means a light laugh online."
+          ],
+          "short": [
+            "ㅎ"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Is ㅎ the same as English 'h'?",
+              "romanization": "",
+              "translation": "ㅎ은 영어의 'h'와 같아요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, almost the same. You make the sound while breathing out.",
+              "romanization": "",
+              "translation": "네, 거의 같아요. 숨을 내쉬면서 소리 내요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[히읗]",
+      "ipa": "[hi.ɯt̚]"
+    }
+  }
+]

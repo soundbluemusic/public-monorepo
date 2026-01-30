@@ -1,0 +1,307 @@
+[
+  {
+    "id": "yo",
+    "korean": "-요",
+    "romanization": "yo",
+    "partOfSpeech": "particle",
+    "categoryId": "honorifics",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["honorifics", "grammar", "politeness"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "-요",
+        "explanation": "해요체의 종결어미로, 존댓말의 가장 기본적인 표현입니다. 동사나 형용사 뒤에 붙여 공손함을 나타냅니다. 일상 대화에서 가장 많이 쓰이는 존댓말 형태입니다.",
+        "examples": {
+          "beginner": "감사해요. (감사하다 + -요)",
+          "intermediate": "이거 맛있어요. (맛있다 + -어요)",
+          "advanced": "해요체는 격식과 비격식의 중간 단계로, 일상에서 가장 많이 쓰입니다.",
+          "master": "해요체는 청자 높임법의 한 형태로, '-습니다'보다 부드럽고 반말보다 공손합니다."
+        },
+        "variations": {
+          "formal": ["-요는 해요체의 종결어미입니다."],
+          "casual": ["-요 붙이면 존댓말이야."],
+          "short": ["-요"]
+        },
+        "dialogue": {
+          "context": "한국어 수업에서",
+          "dialogue": [
+            {"speaker": "A", "text": "\"먹다\"를 존댓말로 어떻게 해요?", "romanization": "\"meokda\"reul jondaenmallo eotteoke haeyo?", "translation": "How do you say '먹다' politely?"},
+            {"speaker": "B", "text": "\"먹어요\"라고 하면 돼요.", "romanization": "\"meogeoyo\"rago hamyeon dwaeyo.", "translation": "You can say '먹어요'."}
+          ]
+        }
+      },
+      "en": {
+        "word": "-yo (polite ending)",
+        "explanation": "The most common polite sentence ending in Korean (해요체 / haeyo-che). Added to verbs and adjectives to show politeness. It's the middle level of formality — more polite than casual speech (반말) but softer than formal speech (-습니다).",
+        "examples": {
+          "beginner": "감사해요 (Thank you — polite).",
+          "intermediate": "이거 맛있어요 (This is delicious — polite).",
+          "advanced": "The 해요체 is the most commonly used politeness level in everyday Korean.",
+          "master": "The 해요체 is a form of addressee honorification, softer than -습니다 but more polite than 반말."
+        },
+        "variations": {
+          "formal": ["-요 is the polite sentence ending of 해요체."],
+          "casual": ["Just add -요 to make it polite."],
+          "short": ["-yo"]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {"speaker": "A", "text": "How do you say '먹다' politely?", "romanization": "", "translation": "\"먹다\"를 존댓말로 어떻게 해요?"},
+            {"speaker": "B", "text": "You can say '먹어요'.", "romanization": "", "translation": "\"먹어요\"라고 하면 돼요."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[요]",
+      "ipa": "[jo]"
+    }
+  },
+  {
+    "id": "seumnida",
+    "korean": "-습니다",
+    "romanization": "seumnida",
+    "partOfSpeech": "particle",
+    "categoryId": "honorifics",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["honorifics", "grammar", "politeness", "formal"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "-습니다 / -ㅂ니다",
+        "explanation": "격식체의 종결어미로, 가장 공손한 존댓말 형태입니다. 뉴스, 발표, 비즈니스 등 공식적인 상황에서 사용합니다. 받침이 있으면 '-습니다', 없으면 '-ㅂ니다'를 씁니다.",
+        "examples": {
+          "beginner": "감사합니다.",
+          "intermediate": "만나서 반갑습니다.",
+          "advanced": "합니다체는 공적인 상황에서 사용하는 최고 존칭의 종결어미입니다.",
+          "master": "뉴스 앵커, 군대, 비즈니스에서 합니다체는 필수입니다."
+        },
+        "variations": {
+          "formal": ["-습니다는 격식체 종결어미입니다."],
+          "casual": ["-습니다는 제일 공손한 말투야."],
+          "short": ["-습니다"]
+        },
+        "dialogue": {
+          "context": "비즈니스 미팅에서",
+          "dialogue": [
+            {"speaker": "A", "text": "처음 뵙겠습니다. 김민수입니다.", "romanization": "cheoeum boepgesseumnida. gimminsuitmnida.", "translation": "Nice to meet you. I'm Kim Minsu."},
+            {"speaker": "B", "text": "반갑습니다. 이영희입니다.", "romanization": "bangapseumnida. iyeonghuitmnida.", "translation": "Nice to meet you. I'm Lee Younghee."}
+          ]
+        }
+      },
+      "en": {
+        "word": "-seumnida (formal ending)",
+        "explanation": "The most formal and polite sentence ending in Korean (합니다체 / hamnida-che). Used in news broadcasts, presentations, business, and official situations. Use '-습니다' after consonants and '-ㅂ니다' after vowels.",
+        "examples": {
+          "beginner": "감사합니다 (Thank you — formal).",
+          "intermediate": "만나서 반갑습니다 (Nice to meet you — formal).",
+          "advanced": "The 합니다체 is the highest formality level in Korean speech.",
+          "master": "The 합니다체 is mandatory in news anchoring, military, and business contexts."
+        },
+        "variations": {
+          "formal": ["-습니다 is the formal sentence ending."],
+          "casual": ["-습니다 is the most polite way to speak."],
+          "short": ["-seumnida"]
+        },
+        "dialogue": {
+          "context": "At a business meeting",
+          "dialogue": [
+            {"speaker": "A", "text": "Nice to meet you. I'm Kim Minsu.", "romanization": "", "translation": "처음 뵙겠습니다. 김민수입니다."},
+            {"speaker": "B", "text": "Nice to meet you. I'm Lee Younghee.", "romanization": "", "translation": "반갑습니다. 이영희입니다."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[슴니다]",
+      "ipa": "[sɯm.ni.da]"
+    }
+  },
+  {
+    "id": "nim",
+    "korean": "님",
+    "romanization": "nim",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["honorifics", "suffix", "politeness"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "님",
+        "explanation": "상대방을 높여 부를 때 이름이나 직함 뒤에 붙이는 존칭 접미사입니다. '선생님', '사장님', '손님' 등에 쓰입니다. 인터넷에서는 닉네임 뒤에도 붙입니다.",
+        "examples": {
+          "beginner": "선생님, 안녕하세요.",
+          "intermediate": "사장님께서 말씀하셨습니다.",
+          "advanced": "인터넷에서는 아이디 뒤에 '님'을 붙여 존칭으로 사용한다.",
+          "master": "님은 본래 '임(임금)'에서 유래한 존칭으로, 고려 가요에서도 사용되었다."
+        },
+        "variations": {
+          "formal": ["님은 존칭 접미사입니다."],
+          "casual": ["님 붙이면 존댓말이야."],
+          "short": ["님"]
+        },
+        "dialogue": {
+          "context": "회사에서",
+          "dialogue": [
+            {"speaker": "A", "text": "김 대리님, 회의 시간이에요.", "romanization": "gim daerinim, hoeui siganieyo.", "translation": "Mr./Ms. Kim, it's time for the meeting."},
+            {"speaker": "B", "text": "네, 바로 가겠습니다.", "romanization": "ne, baro gagetseumnida.", "translation": "Yes, I'll go right away."}
+          ]
+        }
+      },
+      "en": {
+        "word": "-nim (honorific suffix)",
+        "explanation": "An honorific suffix attached after a name or title to show respect. Used in '선생님' (teacher), '사장님' (boss), '손님' (guest/customer). On the internet, it's commonly added after usernames as a sign of respect.",
+        "examples": {
+          "beginner": "선생님, hello. (Teacher, hello.)",
+          "intermediate": "The boss said so. (사장님께서 말씀하셨습니다.)",
+          "advanced": "On the internet, '-님' is added after usernames as a form of respect.",
+          "master": "'-님' originally derived from '임' (king/ruler), and has been used since the Goryeo Dynasty poetry."
+        },
+        "variations": {
+          "formal": ["-님 is an honorific suffix."],
+          "casual": ["Add -님 to be polite."],
+          "short": ["-nim"]
+        },
+        "dialogue": {
+          "context": "At the office",
+          "dialogue": [
+            {"speaker": "A", "text": "Mr./Ms. Kim, it's time for the meeting.", "romanization": "", "translation": "김 대리님, 회의 시간이에요."},
+            {"speaker": "B", "text": "Yes, I'll go right away.", "romanization": "", "translation": "네, 바로 가겠습니다."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[님]",
+      "ipa": "[nim]"
+    }
+  },
+  {
+    "id": "seonsaengnim",
+    "korean": "선생님",
+    "romanization": "seonsaengnim",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["honorifics", "title", "education"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "선생님",
+        "explanation": "교사, 의사, 변호사 등 전문직 종사자나 연장자를 높여 부르는 호칭입니다. '선생'(先生)은 '먼저 태어난 사람'이라는 뜻의 한자어입니다.",
+        "examples": {
+          "beginner": "선생님, 감사합니다.",
+          "intermediate": "우리 선생님은 정말 친절하세요.",
+          "advanced": "한국에서 '선생님'은 교사뿐 아니라 의사, 변호사에게도 사용한다.",
+          "master": "선생님이라는 호칭은 교육자에 대한 사회적 존경을 반영한다."
+        },
+        "variations": {
+          "formal": ["선생님께 인사드립니다.", "선생님의 말씀대로 하겠습니다."],
+          "casual": ["쌤!", "선생님~"],
+          "short": ["선생님"]
+        },
+        "dialogue": {
+          "context": "학교에서",
+          "dialogue": [
+            {"speaker": "A", "text": "선생님, 질문이 있어요.", "romanization": "seonsaengnim, jilmuni isseoyo.", "translation": "Teacher, I have a question."},
+            {"speaker": "B", "text": "네, 말해 보세요.", "romanization": "ne, malhae boseyo.", "translation": "Yes, go ahead."}
+          ]
+        }
+      },
+      "en": {
+        "word": "teacher / sir / ma'am",
+        "explanation": "An honorific title used for teachers, doctors, lawyers, and other respected professionals or elders. '선생' (先生) literally means 'one who was born before,' from Chinese characters. In casual speech, students abbreviate it to '쌤'.",
+        "examples": {
+          "beginner": "Thank you, teacher.",
+          "intermediate": "Our teacher is really kind.",
+          "advanced": "In Korea, '선생님' is used not only for teachers but also for doctors and lawyers.",
+          "master": "The title '선생님' reflects societal respect for educators."
+        },
+        "variations": {
+          "formal": ["I pay my respects to the teacher.", "I will do as you say, teacher."],
+          "casual": ["Ssaem! (slang for teacher)", "Teacher~"],
+          "short": ["teacher"]
+        },
+        "dialogue": {
+          "context": "At school",
+          "dialogue": [
+            {"speaker": "A", "text": "Teacher, I have a question.", "romanization": "", "translation": "선생님, 질문이 있어요."},
+            {"speaker": "B", "text": "Yes, go ahead.", "romanization": "", "translation": "네, 말해 보세요."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[선생님]",
+      "ipa": "[sʌn.sɛŋ.nim]"
+    }
+  },
+  {
+    "id": "jondaenmal",
+    "korean": "존댓말",
+    "romanization": "jondaenmal",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["honorifics", "grammar", "culture"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "존댓말",
+        "explanation": "상대방을 높여 말하는 말투의 총칭입니다. 반대말은 '반말'(casual speech)입니다. 한국어의 존비어 체계는 세계적으로 가장 복잡한 경어법 중 하나입니다.",
+        "examples": {
+          "beginner": "한국어에는 존댓말이 있어요.",
+          "intermediate": "처음 만나는 사람에게는 존댓말을 써요.",
+          "advanced": "한국어의 경어법은 주체 높임, 상대 높임, 객체 높임 세 가지로 나뉜다.",
+          "master": "존댓말과 반말의 전환은 한국 사회의 인간관계를 이해하는 핵심이다."
+        },
+        "variations": {
+          "formal": ["존댓말을 사용합니다.", "경어를 사용합니다."],
+          "casual": ["존댓말 쓰자.", "말 놓을까요?"],
+          "short": ["존댓말"]
+        },
+        "dialogue": {
+          "context": "새로운 사람을 만나서",
+          "dialogue": [
+            {"speaker": "A", "text": "우리 말 놓을까요?", "romanization": "uri mal noeulkkayo?", "translation": "Shall we speak casually to each other?"},
+            {"speaker": "B", "text": "네, 편하게 말해요.", "romanization": "ne, pyeonhage malhaeyo.", "translation": "Sure, let's speak comfortably."}
+          ]
+        }
+      },
+      "en": {
+        "word": "formal/polite speech",
+        "explanation": "The general term for polite or formal speech in Korean. The opposite is '반말' (casual speech). Korean has one of the world's most complex honorific systems, with three types: subject, addressee, and object honorification.",
+        "examples": {
+          "beginner": "Korean has formal speech (존댓말).",
+          "intermediate": "You use 존댓말 when meeting someone for the first time.",
+          "advanced": "Korean honorifics are divided into subject, addressee, and object honorification.",
+          "master": "The switch between 존댓말 and 반말 is key to understanding Korean social relationships."
+        },
+        "variations": {
+          "formal": ["I use formal speech.", "I use honorifics."],
+          "casual": ["Let's speak formally.", "Shall we drop the formalities?"],
+          "short": ["jondaenmal"]
+        },
+        "dialogue": {
+          "context": "Meeting a new person",
+          "dialogue": [
+            {"speaker": "A", "text": "Shall we speak casually to each other?", "romanization": "", "translation": "우리 말 놓을까요?"},
+            {"speaker": "B", "text": "Sure, let's speak comfortably.", "romanization": "", "translation": "네, 편하게 말해요."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[존댄말]",
+      "ipa": "[tɕon.dɛn.mal]"
+    }
+  }
+]

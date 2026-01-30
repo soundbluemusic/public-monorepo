@@ -1,0 +1,307 @@
+[
+  {
+    "id": "ssang-giyeok",
+    "korean": "ㄲ",
+    "romanization": "ssang-giyeok",
+    "partOfSpeech": "noun",
+    "categoryId": "double-consonants",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "consonant", "double"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㄲ (쌍기역)",
+        "explanation": "ㄱ을 두 번 쓴 된소리(경음) 글자입니다. 목을 긴장시키고 세게 발음합니다. '까', '꼬', '꾸' 등에 쓰입니다.",
+        "examples": {
+          "beginner": "\"ㄲ\"은 '쌍기역'이라고 읽어요.",
+          "intermediate": "\"ㄲ\"은 '까치', '꿈', '꽃' 등에 쓰여요.",
+          "advanced": "\"ㄲ\"은 성문을 긴장시킨 상태에서 발음하는 경음 [k͈]입니다.",
+          "master": "된소리(경음)는 한국어 고유의 삼지 대립(평음-경음-격음) 체계의 핵심입니다."
+        },
+        "variations": {
+          "formal": ["이 글자는 쌍기역입니다.", "ㄲ은 ㄱ의 된소리입니다."],
+          "casual": ["이거 쌍기역이야.", "ㄱ 두 개 합친 거야."],
+          "short": ["ㄲ"]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {"speaker": "A", "text": "ㄲ과 ㄱ의 차이가 뭐예요?", "romanization": "ssang-giyeokgwa giyeogui chaiga mwoyeyo?", "translation": "What's the difference between ㄲ and ㄱ?"},
+            {"speaker": "B", "text": "ㄲ은 목에 힘을 주고 세게 발음해요.", "romanization": "ssang-giyeogeun moge himeul jugo sege bareumaheyo.", "translation": "ㄲ is pronounced with throat tension and more force."}
+          ]
+        }
+      },
+      "en": {
+        "word": "ssang-giyeok (ㄲ)",
+        "explanation": "A tense (fortis) consonant, written as double ㄱ. Pronounced with a tight throat and no aspiration. Similar to an unaspirated 'k' in English 'skill'.",
+        "examples": {
+          "beginner": "\"ㄲ\" is called 'ssang-giyeok' (double giyeok).",
+          "intermediate": "\"ㄲ\" appears in '까치' (magpie), '꿈' (dream), '꽃' (flower).",
+          "advanced": "\"ㄲ\" is a tense consonant [k͈], produced with glottal tension.",
+          "master": "Tense consonants are part of Korean's three-way distinction: lax (ㄱ), tense (ㄲ), aspirated (ㅋ)."
+        },
+        "variations": {
+          "formal": ["This letter is ssang-giyeok.", "ㄲ is the tense form of ㄱ."],
+          "casual": ["This is ssang-giyeok.", "It's like ㄱ but stronger."],
+          "short": ["ㄲ"]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {"speaker": "A", "text": "What's the difference between ㄲ and ㄱ?", "romanization": "", "translation": "ㄲ과 ㄱ의 차이가 뭐예요?"},
+            {"speaker": "B", "text": "ㄲ is pronounced with throat tension and more force.", "romanization": "", "translation": "ㄲ은 목에 힘을 주고 세게 발음해요."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[쌍기역]",
+      "ipa": "[k͈]"
+    }
+  },
+  {
+    "id": "ssang-digeut",
+    "korean": "ㄸ",
+    "romanization": "ssang-digeut",
+    "partOfSpeech": "noun",
+    "categoryId": "double-consonants",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "consonant", "double"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㄸ (쌍디귿)",
+        "explanation": "ㄷ을 두 번 쓴 된소리(경음) 글자입니다. '따', '또', '뚜' 등에 쓰입니다.",
+        "examples": {
+          "beginner": "\"ㄸ\"은 '쌍디귿'이라고 읽어요.",
+          "intermediate": "\"ㄸ\"은 '따뜻하다', '또', '뚜껑' 등에 쓰여요.",
+          "advanced": "\"ㄸ\"은 경음 [t͈]로, 성문을 긴장시켜 발음합니다.",
+          "master": "\"ㄸ\"은 ㄷ(평음)과 ㅌ(격음)의 중간이 아니라, 별도의 조음 방식입니다."
+        },
+        "variations": {
+          "formal": ["이 글자는 쌍디귿입니다.", "ㄸ은 ㄷ의 된소리입니다."],
+          "casual": ["이거 쌍디귿이야.", "ㄷ 두 개야."],
+          "short": ["ㄸ"]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {"speaker": "A", "text": "ㄸ은 어떻게 발음해요?", "romanization": "ssang-digeuseun eotteoke bareumaheyo?", "translation": "How do you pronounce ㄸ?"},
+            {"speaker": "B", "text": "목에 힘을 주고 '따' 하고 세게 말해요.", "romanization": "moge himeul jugo 'tta' hago sege malhaeyo.", "translation": "Tense your throat and say 'tta' firmly."}
+          ]
+        }
+      },
+      "en": {
+        "word": "ssang-digeut (ㄸ)",
+        "explanation": "A tense consonant, double ㄷ. Pronounced with throat tension, like an unaspirated 't' in English 'stop'.",
+        "examples": {
+          "beginner": "\"ㄸ\" is called 'ssang-digeut' (double digeut).",
+          "intermediate": "\"ㄸ\" appears in '따뜻하다' (warm), '또' (again), '뚜껑' (lid).",
+          "advanced": "\"ㄸ\" is a tense consonant [t͈], produced with glottal tension.",
+          "master": "\"ㄸ\" is distinct from both ㄷ (lax) and ㅌ (aspirated) in Korean's three-way system."
+        },
+        "variations": {
+          "formal": ["This letter is ssang-digeut.", "ㄸ is the tense form of ㄷ."],
+          "casual": ["This is ssang-digeut.", "It's double ㄷ."],
+          "short": ["ㄸ"]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {"speaker": "A", "text": "How do you pronounce ㄸ?", "romanization": "", "translation": "ㄸ은 어떻게 발음해요?"},
+            {"speaker": "B", "text": "Tense your throat and say 'tta' firmly.", "romanization": "", "translation": "목에 힘을 주고 '따' 하고 세게 말해요."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[쌍디귿]",
+      "ipa": "[t͈]"
+    }
+  },
+  {
+    "id": "ssang-bieup",
+    "korean": "ㅃ",
+    "romanization": "ssang-bieup",
+    "partOfSpeech": "noun",
+    "categoryId": "double-consonants",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "consonant", "double"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㅃ (쌍비읍)",
+        "explanation": "ㅂ을 두 번 쓴 된소리(경음) 글자입니다. '빠', '뽀', '뿌' 등에 쓰입니다.",
+        "examples": {
+          "beginner": "\"ㅃ\"은 '쌍비읍'이라고 읽어요.",
+          "intermediate": "\"ㅃ\"은 '빠르다', '빵', '뿌리' 등에 쓰여요.",
+          "advanced": "\"ㅃ\"은 경음 [p͈]로, 기식 없이 긴장된 양순 파열음입니다.",
+          "master": "\"ㅃ\"은 영어의 'spy'에서 'p'와 비슷하지만, 성문 긴장이 더 강합니다."
+        },
+        "variations": {
+          "formal": ["이 글자는 쌍비읍입니다.", "ㅃ은 ㅂ의 된소리입니다."],
+          "casual": ["이거 쌍비읍이야.", "ㅂ 두 개야."],
+          "short": ["ㅃ"]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {"speaker": "A", "text": "'빠르다'의 'ㅃ'은 'ㅂ'과 뭐가 달라요?", "romanization": "'ppareuda'ui 'pp'eun 'b'gwa mwoga dallayo?", "translation": "How is 'ㅃ' in '빠르다' different from 'ㅂ'?"},
+            {"speaker": "B", "text": "입술에 더 힘을 주고, 숨을 안 내보내요.", "romanization": "ipsure deo himeul jugo, sumeul an naebonaeyo.", "translation": "Use more lip tension and don't release air."}
+          ]
+        }
+      },
+      "en": {
+        "word": "ssang-bieup (ㅃ)",
+        "explanation": "A tense consonant, double ㅂ. Pronounced with tight lips and no aspiration, like 'p' in 'spy'.",
+        "examples": {
+          "beginner": "\"ㅃ\" is called 'ssang-bieup' (double bieup).",
+          "intermediate": "\"ㅃ\" appears in '빠르다' (fast), '빵' (bread), '뿌리' (root).",
+          "advanced": "\"ㅃ\" is a tense bilabial stop [p͈], unaspirated with glottal tension.",
+          "master": "\"ㅃ\" is similar to 'p' in English 'spy' but with stronger glottal tension."
+        },
+        "variations": {
+          "formal": ["This letter is ssang-bieup.", "ㅃ is the tense form of ㅂ."],
+          "casual": ["This is ssang-bieup.", "It's double ㅂ."],
+          "short": ["ㅃ"]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {"speaker": "A", "text": "How is ㅃ in '빠르다' different from ㅂ?", "romanization": "", "translation": "'빠르다'의 'ㅃ'은 'ㅂ'과 뭐가 달라요?"},
+            {"speaker": "B", "text": "Use more lip tension and don't release air.", "romanization": "", "translation": "입술에 더 힘을 주고, 숨을 안 내보내요."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[쌍비읍]",
+      "ipa": "[p͈]"
+    }
+  },
+  {
+    "id": "ssang-siot",
+    "korean": "ㅆ",
+    "romanization": "ssang-siot",
+    "partOfSpeech": "noun",
+    "categoryId": "double-consonants",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "consonant", "double"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㅆ (쌍시옷)",
+        "explanation": "ㅅ을 두 번 쓴 된소리(경음) 글자입니다. '싸', '쏘', '쓰' 등에 쓰이며, 과거형 '-었/았-'에서도 매우 자주 나타납니다.",
+        "examples": {
+          "beginner": "\"ㅆ\"은 '쌍시옷'이라고 읽어요.",
+          "intermediate": "\"ㅆ\"은 '쓰다', '싸다', '썰다' 등에 쓰여요.",
+          "advanced": "\"ㅆ\"은 경음 [s͈]로, 'ㅣ' 앞에서 [ɕ͈]로 변합니다. 받침으로도 자주 씁니다.",
+          "master": "\"ㅆ\"은 과거시제 선어말어미 '-았/었-'의 받침으로 가장 빈번하게 사용됩니다."
+        },
+        "variations": {
+          "formal": ["이 글자는 쌍시옷입니다.", "ㅆ은 ㅅ의 된소리입니다."],
+          "casual": ["이거 쌍시옷이야.", "ㅅ 두 개야."],
+          "short": ["ㅆ"]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {"speaker": "A", "text": "'했다'에서 ㅆ 받침이 왜 있어요?", "romanization": "'haetda'eseo ssang-siot batchimi wae isseoyo?", "translation": "Why does '했다' have ㅆ as a final consonant?"},
+            {"speaker": "B", "text": "과거형을 만드는 '-었-'에 ㅆ이 쓰여요.", "romanization": "gwageohyeongeul mandeuneun '-eoss-'e ssang-siosi sseuyeoyo.", "translation": "ㅆ is used in the past tense marker '-었-'."}
+          ]
+        }
+      },
+      "en": {
+        "word": "ssang-siot (ㅆ)",
+        "explanation": "A tense consonant, double ㅅ. Pronounced like a sharp 'ss'. Very common as a final consonant in past tense verb forms.",
+        "examples": {
+          "beginner": "\"ㅆ\" is called 'ssang-siot' (double siot).",
+          "intermediate": "\"ㅆ\" appears in '쓰다' (write/use), '싸다' (cheap/wrap), '썰다' (slice).",
+          "advanced": "\"ㅆ\" is a tense fricative [s͈], becoming [ɕ͈] before 'i'. Also very common as batchim.",
+          "master": "\"ㅆ\" appears frequently as the final consonant in past tense markers '-았/었-' (했다, 갔다, etc.)."
+        },
+        "variations": {
+          "formal": ["This letter is ssang-siot.", "ㅆ is the tense form of ㅅ."],
+          "casual": ["This is ssang-siot.", "It's double ㅅ."],
+          "short": ["ㅆ"]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {"speaker": "A", "text": "Why does '했다' have ㅆ as a final consonant?", "romanization": "", "translation": "'했다'에서 ㅆ 받침이 왜 있어요?"},
+            {"speaker": "B", "text": "ㅆ is used in the past tense marker '-었-'.", "romanization": "", "translation": "과거형을 만드는 '-었-'에 ㅆ이 쓰여요."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[쌍시옷]",
+      "ipa": "[s͈]"
+    }
+  },
+  {
+    "id": "ssang-jieut",
+    "korean": "ㅉ",
+    "romanization": "ssang-jieut",
+    "partOfSpeech": "noun",
+    "categoryId": "double-consonants",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "consonant", "double"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㅉ (쌍지읒)",
+        "explanation": "ㅈ을 두 번 쓴 된소리(경음) 글자입니다. '짜', '쪼', '쭈' 등에 쓰입니다.",
+        "examples": {
+          "beginner": "\"ㅉ\"은 '쌍지읒'이라고 읽어요.",
+          "intermediate": "\"ㅉ\"은 '짜다', '찌개', '쪽' 등에 쓰여요.",
+          "advanced": "\"ㅉ\"은 경음 파찰음 [t͈ɕ]로, ㅈ(평음)과 ㅊ(격음)과 구별됩니다.",
+          "master": "\"ㅉ\"은 한국어 삼지 대립에서 경음 파찰음으로, 성문 긴장이 핵심 특징입니다."
+        },
+        "variations": {
+          "formal": ["이 글자는 쌍지읒입니다.", "ㅉ은 ㅈ의 된소리입니다."],
+          "casual": ["이거 쌍지읒이야.", "ㅈ 두 개야."],
+          "short": ["ㅉ"]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {"speaker": "A", "text": "ㅉ, ㅈ, ㅊ 세 개가 다 달라요?", "romanization": "ssang-jieut, jieut, chieut se gaega da dallayo?", "translation": "Are ㅉ, ㅈ, ㅊ all different?"},
+            {"speaker": "B", "text": "네. ㅈ은 보통, ㅉ은 세게, ㅊ은 숨을 내뱉으면서요.", "romanization": "ne. jieuseun botong, ssang-jieuseun sege, chieuseun sumeul nabaetteumyeonseyo.", "translation": "Yes. ㅈ is normal, ㅉ is tense, ㅊ is with a puff of air."}
+          ]
+        }
+      },
+      "en": {
+        "word": "ssang-jieut (ㅉ)",
+        "explanation": "A tense consonant, double ㅈ. Pronounced like a tight 'jj' with no aspiration. Completes the three-way distinction: ㅈ (lax), ㅉ (tense), ㅊ (aspirated).",
+        "examples": {
+          "beginner": "\"ㅉ\" is called 'ssang-jieut' (double jieut).",
+          "intermediate": "\"ㅉ\" appears in '짜다' (salty/squeeze), '찌개' (stew), '쪽' (side/kiss).",
+          "advanced": "\"ㅉ\" is a tense affricate [t͈ɕ], distinct from ㅈ (lax) and ㅊ (aspirated).",
+          "master": "\"ㅉ\" represents the tense member of Korean's three-way affricate distinction."
+        },
+        "variations": {
+          "formal": ["This letter is ssang-jieut.", "ㅉ is the tense form of ㅈ."],
+          "casual": ["This is ssang-jieut.", "It's double ㅈ."],
+          "short": ["ㅉ"]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {"speaker": "A", "text": "Are ㅉ, ㅈ, ㅊ all different?", "romanization": "", "translation": "ㅉ, ㅈ, ㅊ 세 개가 다 달라요?"},
+            {"speaker": "B", "text": "Yes. ㅈ is normal, ㅉ is tense, ㅊ is with a puff of air.", "romanization": "", "translation": "네. ㅈ은 보통, ㅉ은 세게, ㅊ은 숨을 내뱉으면서요."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[쌍지읒]",
+      "ipa": "[t͈ɕ]"
+    }
+  }
+]

@@ -1,0 +1,368 @@
+[
+  {
+    "id": "mul",
+    "korean": "물",
+    "romanization": "mul",
+    "partOfSpeech": "noun",
+    "categoryId": "drinks",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["drinks", "daily-life"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "물",
+        "explanation": "마시는 액체의 기본입니다. 한국 식당에서는 물이 무료로 제공됩니다. '물'은 다양한 합성어에 쓰입니다: 물고기, 물가, 물건 등.",
+        "examples": {
+          "beginner": "물 주세요.",
+          "intermediate": "한국 식당에서는 물이 무료예요.",
+          "advanced": "한국에서는 수돗물보다 정수기 물을 마시는 경우가 많다.",
+          "master": "물은 생명의 근원이라는 인식은 동서양 모두 공통이다."
+        },
+        "variations": {
+          "formal": ["물을 드시겠습니까?", "물을 가져다 드리겠습니다."],
+          "casual": ["물 줘.", "물 마실래?"],
+          "short": ["물"]
+        },
+        "dialogue": {
+          "context": "식당에서",
+          "dialogue": [
+            {"speaker": "A", "text": "물 좀 주세요.", "romanization": "mul jom juseyo.", "translation": "Could I have some water, please?"},
+            {"speaker": "B", "text": "네, 바로 가져다 드릴게요.", "romanization": "ne, baro gajyeoda deurilgeyo.", "translation": "Sure, I'll bring it right away."}
+          ]
+        }
+      },
+      "en": {
+        "word": "water",
+        "explanation": "The most basic drink. In Korean restaurants, water is provided for free. '물' is used in many compound words: 물고기 (fish), 물가 (waterside/prices), etc.",
+        "examples": {
+          "beginner": "Water, please.",
+          "intermediate": "Water is free in Korean restaurants.",
+          "advanced": "In Korea, people often drink filtered water rather than tap water.",
+          "master": "The recognition that water is the source of life is universal across cultures."
+        },
+        "variations": {
+          "formal": ["Would you like water?", "I'll bring you water."],
+          "casual": ["Give me water.", "Want some water?"],
+          "short": ["water"]
+        },
+        "dialogue": {
+          "context": "At a restaurant",
+          "dialogue": [
+            {"speaker": "A", "text": "Could I have some water, please?", "romanization": "", "translation": "물 좀 주세요."},
+            {"speaker": "B", "text": "Sure, I'll bring it right away.", "romanization": "", "translation": "네, 바로 가져다 드릴게요."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[물]",
+      "ipa": "[mul]"
+    }
+  },
+  {
+    "id": "keopi",
+    "korean": "커피",
+    "romanization": "keopi",
+    "partOfSpeech": "noun",
+    "categoryId": "drinks",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["drinks", "daily-life", "loanword"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "커피",
+        "explanation": "영어 'coffee'에서 온 외래어입니다. 한국은 세계적인 커피 소비국으로, 서울에만 수만 개의 카페가 있습니다. '커피숍'보다 '카페'라는 표현을 더 많이 씁니다.",
+        "examples": {
+          "beginner": "커피 마셔요.",
+          "intermediate": "한국 사람들은 커피를 정말 많이 마셔요.",
+          "advanced": "한국의 1인당 커피 소비량은 세계 상위권이다.",
+          "master": "카페 문화는 한국 사회에서 소통과 휴식의 공간으로 자리 잡았다."
+        },
+        "variations": {
+          "formal": ["커피 드시겠습니까?", "커피를 준비하겠습니다."],
+          "casual": ["커피 마실래?", "커피 한 잔 할까?"],
+          "short": ["커피"]
+        },
+        "dialogue": {
+          "context": "카페에서",
+          "dialogue": [
+            {"speaker": "A", "text": "뭐 마실래? 내가 살게.", "romanization": "mwo masillae? naega salge.", "translation": "What do you want to drink? My treat."},
+            {"speaker": "B", "text": "아이스 아메리카노 주세요.", "romanization": "aiseu amerikano juseyo.", "translation": "Iced Americano, please."}
+          ]
+        }
+      },
+      "en": {
+        "word": "coffee",
+        "explanation": "A loanword from English. Korea is one of the world's top coffee-consuming countries, with tens of thousands of cafes in Seoul alone. Koreans say '카페' (cafe) more often than '커피숍' (coffee shop).",
+        "examples": {
+          "beginner": "I drink coffee.",
+          "intermediate": "Koreans drink a lot of coffee.",
+          "advanced": "Korea's per capita coffee consumption ranks among the highest in the world.",
+          "master": "Cafe culture has become established as a space for socializing and relaxation in Korean society."
+        },
+        "variations": {
+          "formal": ["Would you like coffee?", "I'll prepare coffee."],
+          "casual": ["Want coffee?", "How about a cup of coffee?"],
+          "short": ["coffee"]
+        },
+        "dialogue": {
+          "context": "At a cafe",
+          "dialogue": [
+            {"speaker": "A", "text": "What do you want to drink? My treat.", "romanization": "", "translation": "뭐 마실래? 내가 살게."},
+            {"speaker": "B", "text": "Iced Americano, please.", "romanization": "", "translation": "아이스 아메리카노 주세요."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[커피]",
+      "ipa": "[kʰʌ.pʰi]"
+    }
+  },
+  {
+    "id": "cha",
+    "korean": "차",
+    "romanization": "cha",
+    "partOfSpeech": "noun",
+    "categoryId": "drinks",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["drinks", "culture"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "차",
+        "explanation": "잎이나 열매를 우린 음료입니다. 동음이의어로 '차(車)'는 '자동차'를 뜻합니다. 한국의 전통 차로는 녹차, 보리차, 유자차, 대추차 등이 있습니다.",
+        "examples": {
+          "beginner": "차를 마셔요.",
+          "intermediate": "한국에서는 보리차를 물처럼 마셔요.",
+          "advanced": "유자차는 겨울에 감기 예방으로 많이 마신다.",
+          "master": "한국의 다도(茶道)는 조선 시대에 선비 문화의 일부였다."
+        },
+        "variations": {
+          "formal": ["차를 드시겠습니까?", "차를 한 잔 대접하겠습니다."],
+          "casual": ["차 마실래?", "차 한 잔 할까?"],
+          "short": ["차"]
+        },
+        "dialogue": {
+          "context": "집에서 손님을 맞으며",
+          "dialogue": [
+            {"speaker": "A", "text": "차 한 잔 드릴까요?", "romanization": "cha han jan deurilkkayo?", "translation": "Shall I offer you a cup of tea?"},
+            {"speaker": "B", "text": "네, 유자차 있으면 좋겠어요.", "romanization": "ne, yujacha isseumyeon jokeseoyo.", "translation": "Yes, I'd love some yuzu tea if you have it."}
+          ]
+        }
+      },
+      "en": {
+        "word": "tea",
+        "explanation": "A drink made by steeping leaves or fruits. '차' is also a homonym meaning 'car' (車). Traditional Korean teas include green tea (녹차), barley tea (보리차), yuzu tea (유자차), and jujube tea (대추차).",
+        "examples": {
+          "beginner": "I drink tea.",
+          "intermediate": "In Korea, barley tea is drunk like water.",
+          "advanced": "Yuzu tea is commonly consumed in winter to prevent colds.",
+          "master": "Korea's tea ceremony (다도) was part of scholarly culture during the Joseon Dynasty."
+        },
+        "variations": {
+          "formal": ["Would you like tea?", "Let me offer you a cup of tea."],
+          "casual": ["Want tea?", "How about a cup of tea?"],
+          "short": ["tea"]
+        },
+        "dialogue": {
+          "context": "Welcoming a guest at home",
+          "dialogue": [
+            {"speaker": "A", "text": "Shall I offer you a cup of tea?", "romanization": "", "translation": "차 한 잔 드릴까요?"},
+            {"speaker": "B", "text": "Yes, I'd love some yuzu tea if you have it.", "romanization": "", "translation": "네, 유자차 있으면 좋겠어요."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[차]",
+      "ipa": "[tɕʰa]"
+    }
+  },
+  {
+    "id": "juseu",
+    "korean": "주스",
+    "romanization": "juseu",
+    "partOfSpeech": "noun",
+    "categoryId": "drinks",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["drinks", "loanword"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "주스",
+        "explanation": "영어 'juice'에서 온 외래어입니다. 과일이나 채소를 짜서 만든 음료입니다.",
+        "examples": {
+          "beginner": "오렌지 주스 주세요.",
+          "intermediate": "아침에 주스를 마시면 건강에 좋아요.",
+          "advanced": "생과일 주스와 농축 주스는 영양 차이가 크다.",
+          "master": "착즙 주스 시장이 건강 트렌드와 함께 급성장했다."
+        },
+        "variations": {
+          "formal": ["주스를 드시겠습니까?", "주스를 준비했습니다."],
+          "casual": ["주스 마실래?", "주스 줘."],
+          "short": ["주스"]
+        },
+        "dialogue": {
+          "context": "편의점에서",
+          "dialogue": [
+            {"speaker": "A", "text": "목이 마른데 뭐 마실까?", "romanization": "mogi mareuunde mwo masilkka?", "translation": "I'm thirsty. What should we drink?"},
+            {"speaker": "B", "text": "오렌지 주스 어때?", "romanization": "orenji juseu eottae?", "translation": "How about orange juice?"}
+          ]
+        }
+      },
+      "en": {
+        "word": "juice",
+        "explanation": "A loanword from English. A drink made by squeezing fruits or vegetables.",
+        "examples": {
+          "beginner": "Orange juice, please.",
+          "intermediate": "Drinking juice in the morning is good for your health.",
+          "advanced": "There's a big nutritional difference between fresh-squeezed and concentrated juice.",
+          "master": "The cold-pressed juice market has grown rapidly along with health trends."
+        },
+        "variations": {
+          "formal": ["Would you like juice?", "I've prepared juice."],
+          "casual": ["Want juice?", "Give me juice."],
+          "short": ["juice"]
+        },
+        "dialogue": {
+          "context": "At a convenience store",
+          "dialogue": [
+            {"speaker": "A", "text": "I'm thirsty. What should we drink?", "romanization": "", "translation": "목이 마른데 뭐 마실까?"},
+            {"speaker": "B", "text": "How about orange juice?", "romanization": "", "translation": "오렌지 주스 어때?"}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[주스]",
+      "ipa": "[tɕu.sɯ]"
+    }
+  },
+  {
+    "id": "soju",
+    "korean": "소주",
+    "romanization": "soju",
+    "partOfSpeech": "noun",
+    "categoryId": "drinks",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["drinks", "culture", "alcohol"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "소주",
+        "explanation": "한국의 대표적인 증류주입니다. 도수는 보통 16~20%이며, 초록색 병에 담겨 있습니다. 한국의 음주 문화에서 빠질 수 없는 술입니다.",
+        "examples": {
+          "beginner": "소주 한 병 주세요.",
+          "intermediate": "한국 사람들은 삼겹살에 소주를 마셔요.",
+          "advanced": "소주는 전 세계에서 가장 많이 팔리는 증류주 브랜드이다.",
+          "master": "소주잔을 돌려서 받거나 두 손으로 따르는 것은 한국 음주 예절이다."
+        },
+        "variations": {
+          "formal": ["소주를 드시겠습니까?", "소주 한 잔 하시겠습니까?"],
+          "casual": ["소주 한 잔 할까?", "소주 마시자."],
+          "short": ["소주"]
+        },
+        "dialogue": {
+          "context": "회식에서",
+          "dialogue": [
+            {"speaker": "A", "text": "소주 한 잔 하실래요?", "romanization": "soju han jan hasillaeyo?", "translation": "Would you like a glass of soju?"},
+            {"speaker": "B", "text": "네, 한 잔만요.", "romanization": "ne, han janmanyo.", "translation": "Yes, just one glass."}
+          ]
+        }
+      },
+      "en": {
+        "word": "soju",
+        "explanation": "Korea's signature distilled liquor, typically 16–20% ABV, sold in iconic green bottles. Soju is one of the best-selling spirits in the world. Drinking etiquette includes pouring with two hands and turning away from elders when drinking.",
+        "examples": {
+          "beginner": "One bottle of soju, please.",
+          "intermediate": "Koreans drink soju with grilled pork belly.",
+          "advanced": "Soju is one of the world's best-selling distilled spirit brands.",
+          "master": "Receiving a glass with two hands or turning away when drinking are Korean drinking customs."
+        },
+        "variations": {
+          "formal": ["Would you like soju?", "May I offer you a glass of soju?"],
+          "casual": ["Want a glass of soju?", "Let's drink soju."],
+          "short": ["soju"]
+        },
+        "dialogue": {
+          "context": "At a company dinner",
+          "dialogue": [
+            {"speaker": "A", "text": "Would you like a glass of soju?", "romanization": "", "translation": "소주 한 잔 하실래요?"},
+            {"speaker": "B", "text": "Yes, just one glass.", "romanization": "", "translation": "네, 한 잔만요."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[소주]",
+      "ipa": "[so.dʑu]"
+    }
+  },
+  {
+    "id": "maekju",
+    "korean": "맥주",
+    "romanization": "maekju",
+    "partOfSpeech": "noun",
+    "categoryId": "drinks",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["drinks", "culture", "alcohol"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "맥주",
+        "explanation": "보리를 발효시켜 만든 술입니다. 한자어 '麥酒'(보리 맥 + 술 주)에서 유래했습니다. 소주와 맥주를 섞은 '소맥'은 한국 특유의 음주 문화입니다.",
+        "examples": {
+          "beginner": "맥주 한 잔 주세요.",
+          "intermediate": "치킨에 맥주는 한국의 국민 조합이에요.",
+          "advanced": "한국의 수제 맥주 시장이 빠르게 성장하고 있다.",
+          "master": "소맥(소주+맥주)은 한국 특유의 혼합주 문화이다."
+        },
+        "variations": {
+          "formal": ["맥주를 드시겠습니까?", "맥주를 주문하겠습니다."],
+          "casual": ["맥주 마시자.", "치맥 하자!"],
+          "short": ["맥주"]
+        },
+        "dialogue": {
+          "context": "치킨집에서",
+          "dialogue": [
+            {"speaker": "A", "text": "치맥 하자!", "romanization": "chimaek haja!", "translation": "Let's have chicken and beer!"},
+            {"speaker": "B", "text": "좋아! 생맥주로 시키자.", "romanization": "joa! saengmaekjuro sikija.", "translation": "Great! Let's order draft beer."}
+          ]
+        }
+      },
+      "en": {
+        "word": "beer",
+        "explanation": "An alcoholic drink made by fermenting barley. The word comes from Chinese characters '麥酒' (barley + alcohol). '소맥' (somaek), a mix of soju and beer, is uniquely Korean. '치맥' (chimaek = chicken + maekju) is Korea's iconic food-drink pairing.",
+        "examples": {
+          "beginner": "A glass of beer, please.",
+          "intermediate": "Chicken and beer is Korea's national food combo.",
+          "advanced": "Korea's craft beer market is growing rapidly.",
+          "master": "Somaek (soju + beer mix) is a uniquely Korean cocktail culture."
+        },
+        "variations": {
+          "formal": ["Would you like beer?", "I'll order beer."],
+          "casual": ["Let's drink beer.", "Chicken and beer!"],
+          "short": ["beer"]
+        },
+        "dialogue": {
+          "context": "At a chicken restaurant",
+          "dialogue": [
+            {"speaker": "A", "text": "Let's have chicken and beer!", "romanization": "", "translation": "치맥 하자!"},
+            {"speaker": "B", "text": "Great! Let's order draft beer.", "romanization": "", "translation": "좋아! 생맥주로 시키자."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[맥쭈]",
+      "ipa": "[mɛk̚.t͈ɕu]"
+    }
+  }
+]

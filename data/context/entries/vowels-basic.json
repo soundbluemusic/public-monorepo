@@ -1,0 +1,972 @@
+[
+  {
+    "id": "a-vowel",
+    "korean": "ㅏ",
+    "romanization": "a",
+    "partOfSpeech": "noun",
+    "categoryId": "vowels-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "vowel"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㅏ (아)",
+        "explanation": "한글 기본 모음 첫 번째 글자. 입을 크게 벌리고 내는 밝은 소리입니다. 양성 모음에 해당합니다.",
+        "examples": {
+          "beginner": "\"ㅏ\"는 '아'라고 읽어요.",
+          "intermediate": "\"ㅏ\"는 '가', '나', '다' 등에 쓰여요.",
+          "advanced": "\"ㅏ\"는 양성 모음으로, 밝고 큰 느낌을 줍니다.",
+          "master": "\"ㅏ\"는 훈민정음에서 하늘(·)과 사람(ㅣ)의 결합으로, 양(陽)을 상징합니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 ㅏ입니다.",
+            "ㅏ는 기본 모음의 첫 번째입니다."
+          ],
+          "casual": [
+            "이거 ㅏ야.",
+            "아~ 하고 소리 내 봐."
+          ],
+          "short": [
+            "아"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㅏ는 어떻게 발음해요?",
+              "romanization": "aneun eotteoke bareumaheyo?",
+              "translation": "How do you pronounce ㅏ?"
+            },
+            {
+              "speaker": "B",
+              "text": "입을 크게 벌리고 '아' 하세요.",
+              "romanization": "ibeul keuge beolligo 'a' haseyo.",
+              "translation": "Open your mouth wide and say 'ah'."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "a (ㅏ)",
+        "explanation": "The first basic vowel of the Korean alphabet. Pronounced like 'a' in 'father'. It is a bright, yang vowel.",
+        "examples": {
+          "beginner": "\"ㅏ\" is pronounced 'a' as in 'father'.",
+          "intermediate": "\"ㅏ\" appears in syllables like '가' (ga), '나' (na), '다' (da).",
+          "advanced": "\"ㅏ\" is a yang (bright) vowel in Korean phonology.",
+          "master": "\"ㅏ\" in Hunminjeongeum represents the union of heaven (·) and person (ㅣ), symbolizing yang."
+        },
+        "variations": {
+          "formal": [
+            "This is the vowel ㅏ.",
+            "ㅏ is the first basic vowel."
+          ],
+          "casual": [
+            "This is ㅏ.",
+            "Say 'ah' with your mouth wide open."
+          ],
+          "short": [
+            "ah"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you pronounce ㅏ?",
+              "romanization": "",
+              "translation": "ㅏ는 어떻게 발음해요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Open your mouth wide and say 'ah'.",
+              "romanization": "",
+              "translation": "입을 크게 벌리고 '아' 하세요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아]",
+      "ipa": "[a]"
+    }
+  },
+  {
+    "id": "ya-vowel",
+    "korean": "ㅑ",
+    "romanization": "ya",
+    "partOfSpeech": "noun",
+    "categoryId": "vowels-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "vowel"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㅑ (야)",
+        "explanation": "한글 기본 모음 두 번째 글자. ㅏ에서 획을 하나 더한 것으로, 'y' 소리가 앞에 붙습니다.",
+        "examples": {
+          "beginner": "\"ㅑ\"는 '야'라고 읽어요.",
+          "intermediate": "\"ㅑ\"는 '야구', '약' 등에 쓰여요.",
+          "advanced": "\"ㅑ\"는 ㅏ의 이중모음 형태로, [ja]로 발음됩니다.",
+          "master": "\"ㅑ\"는 ㅏ에 획을 더해 반모음 [j]를 추가한 것으로, 훈민정음의 가획 원리입니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 ㅑ입니다.",
+            "ㅑ는 ㅏ에 획을 더한 모음입니다."
+          ],
+          "casual": [
+            "이거 ㅑ야.",
+            "야~ 하고 소리 내 봐."
+          ],
+          "short": [
+            "야"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㅑ와 ㅏ의 차이가 뭐예요?",
+              "romanization": "yawa aui chaiga mwoyeyo?",
+              "translation": "What's the difference between ㅑ and ㅏ?"
+            },
+            {
+              "speaker": "B",
+              "text": "ㅑ는 앞에 'y' 소리가 붙어요.",
+              "romanization": "yaneun ape 'y' soriga buteoyo.",
+              "translation": "ㅑ has a 'y' sound before it."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "ya (ㅑ)",
+        "explanation": "The second basic vowel. Pronounced 'ya' as in 'yacht'. It is ㅏ with an added stroke, adding a 'y' glide.",
+        "examples": {
+          "beginner": "\"ㅑ\" is pronounced 'ya' as in 'yacht'.",
+          "intermediate": "\"ㅑ\" appears in words like '야구' (baseball), '약' (medicine).",
+          "advanced": "\"ㅑ\" is the diphthong form of ㅏ, pronounced [ja].",
+          "master": "\"ㅑ\" adds a stroke to ㅏ to indicate the semivowel [j], following Hunminjeongeum's stroke-addition principle."
+        },
+        "variations": {
+          "formal": [
+            "This is the vowel ㅑ.",
+            "ㅑ is ㅏ with an extra stroke."
+          ],
+          "casual": [
+            "This is ㅑ.",
+            "Say 'ya' like calling someone."
+          ],
+          "short": [
+            "ya"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What's the difference between ㅑ and ㅏ?",
+              "romanization": "",
+              "translation": "ㅑ와 ㅏ의 차이가 뭐예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "ㅑ has a 'y' sound added before it.",
+              "romanization": "",
+              "translation": "ㅑ는 앞에 'y' 소리가 붙어요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[야]",
+      "ipa": "[ja]"
+    }
+  },
+  {
+    "id": "eo-vowel",
+    "korean": "ㅓ",
+    "romanization": "eo",
+    "partOfSpeech": "noun",
+    "categoryId": "vowels-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "vowel"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㅓ (어)",
+        "explanation": "한글 기본 모음 세 번째 글자. 입을 조금 벌리고 내는 어두운 소리입니다. 음성 모음에 해당합니다.",
+        "examples": {
+          "beginner": "\"ㅓ\"는 '어'라고 읽어요.",
+          "intermediate": "\"ㅓ\"는 '거', '너', '더' 등에 쓰여요.",
+          "advanced": "\"ㅓ\"는 음성 모음으로, 어둡고 깊은 느낌을 줍니다.",
+          "master": "\"ㅓ\"는 훈민정음에서 음(陰)을 상징하며, 영어의 'uh'와 비슷하지만 입을 더 벌립니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 ㅓ입니다.",
+            "ㅓ는 기본 모음의 세 번째입니다."
+          ],
+          "casual": [
+            "이거 ㅓ야.",
+            "어~ 하고 소리 내 봐."
+          ],
+          "short": [
+            "어"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㅓ는 영어의 어떤 소리예요?",
+              "romanization": "eoneun yeongeoeui eotteon soriyeyo?",
+              "translation": "What English sound is ㅓ?"
+            },
+            {
+              "speaker": "B",
+              "text": "'cup'의 'u'와 비슷해요.",
+              "romanization": "'cup'eui 'u'wa biseutaeyo.",
+              "translation": "It's similar to the 'u' in 'cup'."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "eo (ㅓ)",
+        "explanation": "The third basic vowel. Pronounced like 'u' in 'cup' or 'uh'. It is a dark, yin vowel, the counterpart of ㅏ.",
+        "examples": {
+          "beginner": "\"ㅓ\" is pronounced 'eo' like 'u' in 'cup'.",
+          "intermediate": "\"ㅓ\" appears in syllables like '거' (geo), '너' (neo), '더' (deo).",
+          "advanced": "\"ㅓ\" is a yin (dark) vowel, pronounced [ʌ].",
+          "master": "\"ㅓ\" in Hunminjeongeum symbolizes yin, the counterpart of yang vowel ㅏ."
+        },
+        "variations": {
+          "formal": [
+            "This is the vowel ㅓ.",
+            "ㅓ is the third basic vowel."
+          ],
+          "casual": [
+            "This is ㅓ.",
+            "Say 'uh' like in 'cup'."
+          ],
+          "short": [
+            "uh"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What English sound is ㅓ?",
+              "romanization": "",
+              "translation": "ㅓ는 영어의 어떤 소리예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's similar to the 'u' in 'cup'.",
+              "romanization": "",
+              "translation": "'cup'의 'u'와 비슷해요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[어]",
+      "ipa": "[ʌ]"
+    }
+  },
+  {
+    "id": "yeo-vowel",
+    "korean": "ㅕ",
+    "romanization": "yeo",
+    "partOfSpeech": "noun",
+    "categoryId": "vowels-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "vowel"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㅕ (여)",
+        "explanation": "한글 기본 모음 네 번째 글자. ㅓ에서 획을 하나 더한 것으로, 'y' 소리가 앞에 붙습니다.",
+        "examples": {
+          "beginner": "\"ㅕ\"는 '여'라고 읽어요.",
+          "intermediate": "\"ㅕ\"는 '여자', '여행' 등에 쓰여요.",
+          "advanced": "\"ㅕ\"는 ㅓ의 이중모음 형태로, [jʌ]로 발음됩니다.",
+          "master": "\"ㅕ\"는 ㅓ에 획을 더해 반모음 [j]를 추가한 것입니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 ㅕ입니다.",
+            "ㅕ는 ㅓ에 획을 더한 모음입니다."
+          ],
+          "casual": [
+            "이거 ㅕ야.",
+            "여~ 하고 소리 내 봐."
+          ],
+          "short": [
+            "여"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㅕ는 어떻게 발음해요?",
+              "romanization": "yeoneun eotteoke bareumaheyo?",
+              "translation": "How do you pronounce ㅕ?"
+            },
+            {
+              "speaker": "B",
+              "text": "ㅓ 앞에 'y' 소리를 붙여요.",
+              "romanization": "eo ape 'y' sorireul butyeoyo.",
+              "translation": "Add a 'y' sound before ㅓ."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "yeo (ㅕ)",
+        "explanation": "The fourth basic vowel. Pronounced 'yuh'. It is ㅓ with an added stroke, adding a 'y' glide.",
+        "examples": {
+          "beginner": "\"ㅕ\" is pronounced 'yeo'.",
+          "intermediate": "\"ㅕ\" appears in words like '여자' (woman), '여행' (travel).",
+          "advanced": "\"ㅕ\" is the diphthong form of ㅓ, pronounced [jʌ].",
+          "master": "\"ㅕ\" adds a stroke to ㅓ to indicate the semivowel [j]."
+        },
+        "variations": {
+          "formal": [
+            "This is the vowel ㅕ.",
+            "ㅕ is ㅓ with an extra stroke."
+          ],
+          "casual": [
+            "This is ㅕ.",
+            "Say 'yuh'."
+          ],
+          "short": [
+            "yuh"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you pronounce ㅕ?",
+              "romanization": "",
+              "translation": "ㅕ는 어떻게 발음해요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Add a 'y' sound before ㅓ.",
+              "romanization": "",
+              "translation": "ㅓ 앞에 'y' 소리를 붙여요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[여]",
+      "ipa": "[jʌ]"
+    }
+  },
+  {
+    "id": "o-vowel",
+    "korean": "ㅗ",
+    "romanization": "o",
+    "partOfSpeech": "noun",
+    "categoryId": "vowels-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "vowel"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㅗ (오)",
+        "explanation": "한글 기본 모음 다섯 번째 글자. 입술을 둥글게 오므리고 내는 소리입니다. 양성 모음에 해당합니다.",
+        "examples": {
+          "beginner": "\"ㅗ\"는 '오'라고 읽어요.",
+          "intermediate": "\"ㅗ\"는 '고', '노', '도' 등에 쓰여요.",
+          "advanced": "\"ㅗ\"는 원순 모음으로, 입술을 둥글게 해서 발음합니다.",
+          "master": "\"ㅗ\"는 훈민정음에서 양성 모음으로, 하늘(·)이 땅(ㅡ) 위에 있는 형상입니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 ㅗ입니다.",
+            "ㅗ는 기본 모음의 다섯 번째입니다."
+          ],
+          "casual": [
+            "이거 ㅗ야.",
+            "오~ 하고 소리 내 봐."
+          ],
+          "short": [
+            "오"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㅗ는 어떻게 발음해요?",
+              "romanization": "oneun eotteoke bareumaheyo?",
+              "translation": "How do you pronounce ㅗ?"
+            },
+            {
+              "speaker": "B",
+              "text": "입술을 둥글게 하고 '오' 하세요.",
+              "romanization": "ipsureul dungeulge hago 'o' haseyo.",
+              "translation": "Round your lips and say 'oh'."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "o (ㅗ)",
+        "explanation": "The fifth basic vowel. Pronounced 'oh' as in 'go'. Lips are rounded. It is a yang (bright) vowel.",
+        "examples": {
+          "beginner": "\"ㅗ\" is pronounced 'o' as in 'go'.",
+          "intermediate": "\"ㅗ\" appears in syllables like '고' (go), '노' (no), '도' (do).",
+          "advanced": "\"ㅗ\" is a rounded vowel, pronounced with rounded lips.",
+          "master": "\"ㅗ\" in Hunminjeongeum depicts heaven (·) above earth (ㅡ), symbolizing yang."
+        },
+        "variations": {
+          "formal": [
+            "This is the vowel ㅗ.",
+            "ㅗ is the fifth basic vowel."
+          ],
+          "casual": [
+            "This is ㅗ.",
+            "Say 'oh' with rounded lips."
+          ],
+          "short": [
+            "oh"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How do you pronounce ㅗ?",
+              "romanization": "",
+              "translation": "ㅗ는 어떻게 발음해요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Round your lips and say 'oh'.",
+              "romanization": "",
+              "translation": "입술을 둥글게 하고 '오' 하세요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[오]",
+      "ipa": "[o]"
+    }
+  },
+  {
+    "id": "yo-vowel",
+    "korean": "ㅛ",
+    "romanization": "yo",
+    "partOfSpeech": "noun",
+    "categoryId": "vowels-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "vowel"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㅛ (요)",
+        "explanation": "한글 기본 모음 여섯 번째 글자. ㅗ에서 획을 하나 더한 것으로, 'y' 소리가 앞에 붙습니다.",
+        "examples": {
+          "beginner": "\"ㅛ\"는 '요'라고 읽어요.",
+          "intermediate": "\"ㅛ\"는 '요리', '요일' 등에 쓰여요.",
+          "advanced": "\"ㅛ\"는 ㅗ의 이중모음 형태로, [jo]로 발음됩니다.",
+          "master": "\"ㅛ\"는 ㅗ에 획을 더해 반모음 [j]를 추가한 것입니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 ㅛ입니다.",
+            "ㅛ는 ㅗ에 획을 더한 모음입니다."
+          ],
+          "casual": [
+            "이거 ㅛ야.",
+            "요~ 하고 소리 내 봐."
+          ],
+          "short": [
+            "요"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㅛ는 ㅗ와 뭐가 달라요?",
+              "romanization": "yoneun owa mwoga dallayo?",
+              "translation": "How is ㅛ different from ㅗ?"
+            },
+            {
+              "speaker": "B",
+              "text": "앞에 'y' 소리가 추가돼요.",
+              "romanization": "ape 'y' soriga chugadwaeyo.",
+              "translation": "A 'y' sound is added before it."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "yo (ㅛ)",
+        "explanation": "The sixth basic vowel. Pronounced 'yo' as in 'yoga'. It is ㅗ with an added stroke.",
+        "examples": {
+          "beginner": "\"ㅛ\" is pronounced 'yo' as in 'yoga'.",
+          "intermediate": "\"ㅛ\" appears in words like '요리' (cooking), '요일' (day of the week).",
+          "advanced": "\"ㅛ\" is the diphthong form of ㅗ, pronounced [jo].",
+          "master": "\"ㅛ\" adds a stroke to ㅗ to indicate the semivowel [j]."
+        },
+        "variations": {
+          "formal": [
+            "This is the vowel ㅛ.",
+            "ㅛ is ㅗ with an extra stroke."
+          ],
+          "casual": [
+            "This is ㅛ.",
+            "Say 'yo' like in 'yoga'."
+          ],
+          "short": [
+            "yo"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How is ㅛ different from ㅗ?",
+              "romanization": "",
+              "translation": "ㅛ는 ㅗ와 뭐가 달라요?"
+            },
+            {
+              "speaker": "B",
+              "text": "A 'y' sound is added before it.",
+              "romanization": "",
+              "translation": "앞에 'y' 소리가 추가돼요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[요]",
+      "ipa": "[jo]"
+    }
+  },
+  {
+    "id": "u-vowel",
+    "korean": "ㅜ",
+    "romanization": "u",
+    "partOfSpeech": "noun",
+    "categoryId": "vowels-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "vowel"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㅜ (우)",
+        "explanation": "한글 기본 모음 일곱 번째 글자. 입술을 둥글게 오므리고 앞으로 내밀어 내는 소리입니다. 음성 모음에 해당합니다.",
+        "examples": {
+          "beginner": "\"ㅜ\"는 '우'라고 읽어요.",
+          "intermediate": "\"ㅜ\"는 '구', '누', '두' 등에 쓰여요.",
+          "advanced": "\"ㅜ\"는 원순 모음으로, ㅗ보다 입을 더 오므립니다.",
+          "master": "\"ㅜ\"는 훈민정음에서 음성 모음으로, 하늘(·)이 땅(ㅡ) 아래에 있는 형상입니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 ㅜ입니다.",
+            "ㅜ는 기본 모음의 일곱 번째입니다."
+          ],
+          "casual": [
+            "이거 ㅜ야.",
+            "우~ 하고 소리 내 봐."
+          ],
+          "short": [
+            "우"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㅜ와 ㅗ의 차이가 뭐예요?",
+              "romanization": "uwa oui chaiga mwoyeyo?",
+              "translation": "What's the difference between ㅜ and ㅗ?"
+            },
+            {
+              "speaker": "B",
+              "text": "ㅜ는 ㅗ보다 입을 더 오므려요.",
+              "romanization": "uneun oboda ibeul deo omeuryeoyo.",
+              "translation": "ㅜ has more rounded lips than ㅗ."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "u (ㅜ)",
+        "explanation": "The seventh basic vowel. Pronounced 'oo' as in 'moon'. Lips are rounded and pushed forward. It is a yin (dark) vowel.",
+        "examples": {
+          "beginner": "\"ㅜ\" is pronounced 'oo' as in 'moon'.",
+          "intermediate": "\"ㅜ\" appears in syllables like '구' (gu), '누' (nu), '두' (du).",
+          "advanced": "\"ㅜ\" is a rounded vowel with more lip protrusion than ㅗ.",
+          "master": "\"ㅜ\" in Hunminjeongeum depicts heaven (·) below earth (ㅡ), symbolizing yin."
+        },
+        "variations": {
+          "formal": [
+            "This is the vowel ㅜ.",
+            "ㅜ is the seventh basic vowel."
+          ],
+          "casual": [
+            "This is ㅜ.",
+            "Say 'oo' like in 'moon'."
+          ],
+          "short": [
+            "oo"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What's the difference between ㅜ and ㅗ?",
+              "romanization": "",
+              "translation": "ㅜ와 ㅗ의 차이가 뭐예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "ㅜ has more rounded lips than ㅗ.",
+              "romanization": "",
+              "translation": "ㅜ는 ㅗ보다 입을 더 오므려요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[우]",
+      "ipa": "[u]"
+    }
+  },
+  {
+    "id": "yu-vowel",
+    "korean": "ㅠ",
+    "romanization": "yu",
+    "partOfSpeech": "noun",
+    "categoryId": "vowels-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "vowel"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㅠ (유)",
+        "explanation": "한글 기본 모음 여덟 번째 글자. ㅜ에서 획을 하나 더한 것으로, 'y' 소리가 앞에 붙습니다.",
+        "examples": {
+          "beginner": "\"ㅠ\"는 '유'라고 읽어요.",
+          "intermediate": "\"ㅠ\"는 '유리', '유행' 등에 쓰여요.",
+          "advanced": "\"ㅠ\"는 ㅜ의 이중모음 형태로, [ju]로 발음됩니다.",
+          "master": "\"ㅠ\"는 인터넷에서 'ㅠㅠ'로 눈물/슬픔을 나타내는 이모티콘으로도 쓰입니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 ㅠ입니다.",
+            "ㅠ는 ㅜ에 획을 더한 모음입니다."
+          ],
+          "casual": [
+            "이거 ㅠ야.",
+            "ㅠㅠ는 우는 거야."
+          ],
+          "short": [
+            "유"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㅠㅠ가 무슨 뜻이에요?",
+              "romanization": "yuyuga museun tteusieyo?",
+              "translation": "What does ㅠㅠ mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "눈물을 나타내는 이모티콘이에요. 슬플 때 써요.",
+              "romanization": "nunmureul natananeun imotikonieyo. seulpeul ttae sseoyo.",
+              "translation": "It's an emoticon for tears. Used when sad."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "yu (ㅠ)",
+        "explanation": "The eighth basic vowel. Pronounced 'yoo'. It is ㅜ with an added stroke. Also used as 'ㅠㅠ' emoticon for crying online.",
+        "examples": {
+          "beginner": "\"ㅠ\" is pronounced 'yoo'.",
+          "intermediate": "\"ㅠ\" appears in words like '유리' (glass), '유행' (trend).",
+          "advanced": "\"ㅠ\" is the diphthong form of ㅜ, pronounced [ju].",
+          "master": "\"ㅠ\" is also used as 'ㅠㅠ' emoticon for sadness/crying in Korean digital communication."
+        },
+        "variations": {
+          "formal": [
+            "This is the vowel ㅠ.",
+            "ㅠ is ㅜ with an extra stroke."
+          ],
+          "casual": [
+            "This is ㅠ.",
+            "ㅠㅠ means crying online."
+          ],
+          "short": [
+            "yoo"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does ㅠㅠ mean?",
+              "romanization": "",
+              "translation": "ㅠㅠ가 무슨 뜻이에요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's an emoticon for tears. Used when you're sad.",
+              "romanization": "",
+              "translation": "눈물을 나타내는 이모티콘이에요. 슬플 때 써요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[유]",
+      "ipa": "[ju]"
+    }
+  },
+  {
+    "id": "eu-vowel",
+    "korean": "ㅡ",
+    "romanization": "eu",
+    "partOfSpeech": "noun",
+    "categoryId": "vowels-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "vowel"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㅡ (으)",
+        "explanation": "한글 기본 모음 아홉 번째 글자. 입을 옆으로 벌리고 내는 소리로, 영어에 없는 독특한 한국어 모음입니다.",
+        "examples": {
+          "beginner": "\"ㅡ\"는 '으'라고 읽어요.",
+          "intermediate": "\"ㅡ\"는 '그', '느', '드' 등에 쓰여요.",
+          "advanced": "\"ㅡ\"는 비원순 후설 고모음 [ɯ]로, 영어에 대응하는 소리가 없습니다.",
+          "master": "\"ㅡ\"는 훈민정음에서 땅을 상징하는 기본 획으로, 세 기본 모음(·, ㅡ, ㅣ) 중 하나입니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 ㅡ입니다.",
+            "ㅡ는 기본 모음의 아홉 번째입니다."
+          ],
+          "casual": [
+            "이거 ㅡ야.",
+            "으~ 하고 소리 내 봐."
+          ],
+          "short": [
+            "으"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㅡ 발음이 너무 어려워요.",
+              "romanization": "eu bareumi neomu eoryeowoyo.",
+              "translation": "Pronouncing ㅡ is so hard."
+            },
+            {
+              "speaker": "B",
+              "text": "입을 옆으로 벌리고 소리를 내 보세요.",
+              "romanization": "ibeul yeopeuro beolligo sorireul nae boseyo.",
+              "translation": "Try spreading your lips sideways and making a sound."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "eu (ㅡ)",
+        "explanation": "The ninth basic vowel. This sound doesn't exist in English. Spread your lips wide (like smiling) and say 'oo'. It is a fundamental vowel representing 'earth' in Korean philosophy.",
+        "examples": {
+          "beginner": "\"ㅡ\" has no exact English equivalent. Spread lips and say 'oo'.",
+          "intermediate": "\"ㅡ\" appears in syllables like '그' (geu), '느' (neu), '드' (deu).",
+          "advanced": "\"ㅡ\" is an unrounded back close vowel [ɯ], unique to Korean.",
+          "master": "\"ㅡ\" in Hunminjeongeum represents earth, one of three fundamental vowels (·, ㅡ, ㅣ)."
+        },
+        "variations": {
+          "formal": [
+            "This is the vowel ㅡ.",
+            "ㅡ is the ninth basic vowel."
+          ],
+          "casual": [
+            "This is ㅡ.",
+            "Spread your lips and say 'oo'."
+          ],
+          "short": [
+            "eu"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Pronouncing ㅡ is so hard.",
+              "romanization": "",
+              "translation": "ㅡ 발음이 너무 어려워요."
+            },
+            {
+              "speaker": "B",
+              "text": "Spread your lips sideways and make the sound.",
+              "romanization": "",
+              "translation": "입을 옆으로 벌리고 소리를 내 보세요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[으]",
+      "ipa": "[ɯ]"
+    }
+  },
+  {
+    "id": "i-vowel",
+    "korean": "ㅣ",
+    "romanization": "i",
+    "partOfSpeech": "noun",
+    "categoryId": "vowels-basic",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["alphabet", "vowel"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "ㅣ (이)",
+        "explanation": "한글 기본 모음 열 번째(마지막) 글자. 입을 옆으로 벌리고 내는 밝은 소리입니다. 훈민정음에서 사람을 상징합니다.",
+        "examples": {
+          "beginner": "\"ㅣ\"는 '이'라고 읽어요.",
+          "intermediate": "\"ㅣ\"는 '기', '니', '디' 등에 쓰여요.",
+          "advanced": "\"ㅣ\"는 전설 고모음 [i]로, 모든 모음의 기본 요소입니다.",
+          "master": "\"ㅣ\"는 훈민정음에서 사람을 상징하는 기본 획으로, 세 기본 모음(·, ㅡ, ㅣ) 중 하나입니다."
+        },
+        "variations": {
+          "formal": [
+            "이 글자는 ㅣ입니다.",
+            "ㅣ는 기본 모음의 마지막입니다."
+          ],
+          "casual": [
+            "이거 ㅣ야.",
+            "이~ 하고 소리 내 봐."
+          ],
+          "short": [
+            "이"
+          ]
+        },
+        "dialogue": {
+          "context": "한글 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "ㅣ는 영어의 어떤 소리예요?",
+              "romanization": "ineun yeongeoeui eotteon soriyeyo?",
+              "translation": "What English sound is ㅣ?"
+            },
+            {
+              "speaker": "B",
+              "text": "영어의 'ee' 소리와 같아요.",
+              "romanization": "yeongeoeui 'ee' soriwa gatayo.",
+              "translation": "It's the same as the 'ee' sound in English."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "i (ㅣ)",
+        "explanation": "The tenth and last basic vowel. Pronounced 'ee' as in 'see'. In Hunminjeongeum, it represents 'person', one of three fundamental elements.",
+        "examples": {
+          "beginner": "\"ㅣ\" is pronounced 'ee' as in 'see'.",
+          "intermediate": "\"ㅣ\" appears in syllables like '기' (gi), '니' (ni), '디' (di).",
+          "advanced": "\"ㅣ\" is a front close vowel [i], a building block for all vowels.",
+          "master": "\"ㅣ\" in Hunminjeongeum represents person, one of three fundamental vowels (·, ㅡ, ㅣ)."
+        },
+        "variations": {
+          "formal": [
+            "This is the vowel ㅣ.",
+            "ㅣ is the last basic vowel."
+          ],
+          "casual": [
+            "This is ㅣ.",
+            "Say 'ee' like in 'see'."
+          ],
+          "short": [
+            "ee"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What English sound is ㅣ?",
+              "romanization": "",
+              "translation": "ㅣ는 영어의 어떤 소리예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's the same as the 'ee' sound in English.",
+              "romanization": "",
+              "translation": "영어의 'ee' 소리와 같아요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[이]",
+      "ipa": "[i]"
+    }
+  }
+]

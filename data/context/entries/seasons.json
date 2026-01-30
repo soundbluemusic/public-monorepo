@@ -1,0 +1,368 @@
+[
+  {
+    "id": "bom",
+    "korean": "봄",
+    "romanization": "bom",
+    "partOfSpeech": "noun",
+    "categoryId": "seasons",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["seasons", "nature", "time"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "봄",
+        "explanation": "3월~5월의 계절입니다. 꽃이 피고 날씨가 따뜻해지는 시기입니다. 한국에서는 봄에 벚꽃 축제가 많이 열립니다.",
+        "examples": {
+          "beginner": "봄이 왔어요.",
+          "intermediate": "봄에는 벚꽃이 아름다워요.",
+          "advanced": "봄에는 미세먼지가 심해서 마스크가 필수이다.",
+          "master": "봄은 만물이 소생하는 계절이라 새 학기, 새 출발의 시기이다."
+        },
+        "variations": {
+          "formal": ["봄이 되었습니다.", "봄 날씨입니다."],
+          "casual": ["봄이다!", "봄 왔다."],
+          "short": ["봄"]
+        },
+        "dialogue": {
+          "context": "따뜻한 봄날",
+          "dialogue": [
+            {"speaker": "A", "text": "드디어 봄이다! 꽃구경 가자.", "romanization": "deudieo bomida! kkotgugyeong gaja.", "translation": "Spring is finally here! Let's go see flowers."},
+            {"speaker": "B", "text": "여의도 벚꽃 축제 가자!", "romanization": "yeoido beotkkot chukje gaja!", "translation": "Let's go to the Yeouido cherry blossom festival!"}
+          ]
+        }
+      },
+      "en": {
+        "word": "spring",
+        "explanation": "The season from March to May, when flowers bloom and the weather warms up. Cherry blossom festivals are popular in Korea during spring.",
+        "examples": {
+          "beginner": "Spring has come.",
+          "intermediate": "Cherry blossoms are beautiful in spring.",
+          "advanced": "Fine dust is severe in spring, making masks essential.",
+          "master": "Spring is the season of renewal — the time for new school terms and fresh starts."
+        },
+        "variations": {
+          "formal": ["Spring has arrived.", "It's spring weather."],
+          "casual": ["It's spring!", "Spring's here."],
+          "short": ["spring"]
+        },
+        "dialogue": {
+          "context": "On a warm spring day",
+          "dialogue": [
+            {"speaker": "A", "text": "Spring is finally here! Let's go see flowers.", "romanization": "", "translation": "드디어 봄이다! 꽃구경 가자."},
+            {"speaker": "B", "text": "Let's go to the Yeouido cherry blossom festival!", "romanization": "", "translation": "여의도 벚꽃 축제 가자!"}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[봄]",
+      "ipa": "[pom]"
+    }
+  },
+  {
+    "id": "yeoreum",
+    "korean": "여름",
+    "romanization": "yeoreum",
+    "partOfSpeech": "noun",
+    "categoryId": "seasons",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["seasons", "nature", "time"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "여름",
+        "explanation": "6월~8월의 계절입니다. 무덥고 장마철이 있습니다. 한국에서는 삼복(초복, 중복, 말복)에 보양식을 먹는 문화가 있습니다.",
+        "examples": {
+          "beginner": "여름에 수영해요.",
+          "intermediate": "한국의 여름은 덥고 습해요.",
+          "advanced": "장마철에는 집중호우로 인한 피해가 발생하기도 한다.",
+          "master": "삼복더위에 삼계탕을 먹는 것은 이열치열의 지혜이다."
+        },
+        "variations": {
+          "formal": ["여름이 되었습니다.", "한여름입니다."],
+          "casual": ["여름이다!", "여름 왔다."],
+          "short": ["여름"]
+        },
+        "dialogue": {
+          "context": "여름휴가 계획",
+          "dialogue": [
+            {"speaker": "A", "text": "이번 여름 휴가 어디 갈 거야?", "romanization": "ibeon yeoreum hyuga eodi gal geoya?", "translation": "Where are you going for summer vacation?"},
+            {"speaker": "B", "text": "제주도 가려고. 바다 보고 싶어.", "romanization": "jejudo garyeogo. bada bogo sipeo.", "translation": "I'm planning to go to Jeju. I want to see the ocean."}
+          ]
+        }
+      },
+      "en": {
+        "word": "summer",
+        "explanation": "The season from June to August, characterized by heat and monsoon rains. During the 'sambok' (three hottest days), Koreans traditionally eat nourishing foods like samgyetang (ginseng chicken soup) — fighting heat with heat (이열치열).",
+        "examples": {
+          "beginner": "I swim in summer.",
+          "intermediate": "Korean summers are hot and humid.",
+          "advanced": "Heavy rain during monsoon season can cause significant damage.",
+          "master": "Eating samgyetang during the hottest days embodies the wisdom of 'fighting fire with fire.'"
+        },
+        "variations": {
+          "formal": ["Summer has arrived.", "It's midsummer."],
+          "casual": ["It's summer!", "Summer's here."],
+          "short": ["summer"]
+        },
+        "dialogue": {
+          "context": "Planning summer vacation",
+          "dialogue": [
+            {"speaker": "A", "text": "Where are you going for summer vacation?", "romanization": "", "translation": "이번 여름 휴가 어디 갈 거야?"},
+            {"speaker": "B", "text": "I'm planning to go to Jeju. I want to see the ocean.", "romanization": "", "translation": "제주도 가려고. 바다 보고 싶어."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[여름]",
+      "ipa": "[jʌ.ɾɯm]"
+    }
+  },
+  {
+    "id": "gaeul",
+    "korean": "가을",
+    "romanization": "gaeul",
+    "partOfSpeech": "noun",
+    "categoryId": "seasons",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["seasons", "nature", "time"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "가을",
+        "explanation": "9월~11월의 계절입니다. 단풍이 들고 하늘이 높아지는 시기입니다. '천고마비의 계절'(하늘은 높고 말은 살찌는 계절)이라고 합니다.",
+        "examples": {
+          "beginner": "가을에 단풍이 예뻐요.",
+          "intermediate": "가을은 독서의 계절이에요.",
+          "advanced": "설악산의 가을 단풍은 장관이다.",
+          "master": "천고마비의 계절이라 불리는 가을은 수확과 풍요의 시기이다."
+        },
+        "variations": {
+          "formal": ["가을이 되었습니다.", "가을 날씨입니다."],
+          "casual": ["가을이다!", "가을 왔다."],
+          "short": ["가을"]
+        },
+        "dialogue": {
+          "context": "단풍 구경하면서",
+          "dialogue": [
+            {"speaker": "A", "text": "단풍이 정말 예쁘다.", "romanization": "danpungi jeongmal yeppeuda.", "translation": "The autumn leaves are really beautiful."},
+            {"speaker": "B", "text": "가을이 제일 좋아.", "romanization": "gaeuri jeil joa.", "translation": "I like autumn the most."}
+          ]
+        }
+      },
+      "en": {
+        "word": "autumn / fall",
+        "explanation": "The season from September to November, known for colorful foliage and high, clear skies. Korea calls it '천고마비의 계절' (season of high skies and fat horses), meaning ideal weather and bountiful harvest.",
+        "examples": {
+          "beginner": "The fall foliage is pretty in autumn.",
+          "intermediate": "Autumn is the season for reading.",
+          "advanced": "The autumn foliage at Seoraksan is spectacular.",
+          "master": "Autumn, called the season of high skies and fat horses, is a time of harvest and abundance."
+        },
+        "variations": {
+          "formal": ["Autumn has arrived.", "It's autumn weather."],
+          "casual": ["It's fall!", "Autumn's here."],
+          "short": ["autumn"]
+        },
+        "dialogue": {
+          "context": "Viewing autumn leaves",
+          "dialogue": [
+            {"speaker": "A", "text": "The autumn leaves are really beautiful.", "romanization": "", "translation": "단풍이 정말 예쁘다."},
+            {"speaker": "B", "text": "I like autumn the most.", "romanization": "", "translation": "가을이 제일 좋아."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[가을]",
+      "ipa": "[ka.ɯl]"
+    }
+  },
+  {
+    "id": "gyeoul",
+    "korean": "겨울",
+    "romanization": "gyeoul",
+    "partOfSpeech": "noun",
+    "categoryId": "seasons",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["seasons", "nature", "time"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "겨울",
+        "explanation": "12월~2월의 계절입니다. 춥고 눈이 오는 시기입니다. 한국의 겨울은 시베리아 기단의 영향으로 매우 춥습니다.",
+        "examples": {
+          "beginner": "겨울에 눈이 와요.",
+          "intermediate": "겨울에는 따뜻한 옷을 입어야 해요.",
+          "advanced": "한국의 겨울은 영하 10도 이하로 떨어지기도 한다.",
+          "master": "한국의 온돌 문화는 추운 겨울을 나기 위한 선조들의 지혜이다."
+        },
+        "variations": {
+          "formal": ["겨울이 되었습니다.", "겨울 날씨입니다."],
+          "casual": ["겨울이다!", "겨울 왔다."],
+          "short": ["겨울"]
+        },
+        "dialogue": {
+          "context": "겨울 첫눈이 내릴 때",
+          "dialogue": [
+            {"speaker": "A", "text": "겨울이라 너무 추워.", "romanization": "gyeoura neomu chuwo.", "translation": "It's so cold because it's winter."},
+            {"speaker": "B", "text": "따뜻한 국물 먹으러 가자.", "romanization": "ttatteutan gungmul meogeureo gaja.", "translation": "Let's go eat some hot soup."}
+          ]
+        }
+      },
+      "en": {
+        "word": "winter",
+        "explanation": "The season from December to February. Korean winters are very cold due to Siberian air masses. The traditional ondol (floor heating) system was developed to endure the harsh cold.",
+        "examples": {
+          "beginner": "It snows in winter.",
+          "intermediate": "You need to wear warm clothes in winter.",
+          "advanced": "Korean winters can drop below minus 10°C.",
+          "master": "Korea's ondol culture reflects the wisdom of ancestors in enduring cold winters."
+        },
+        "variations": {
+          "formal": ["Winter has arrived.", "It's winter weather."],
+          "casual": ["It's winter!", "Winter's here."],
+          "short": ["winter"]
+        },
+        "dialogue": {
+          "context": "When the first snow falls in winter",
+          "dialogue": [
+            {"speaker": "A", "text": "It's so cold because it's winter.", "romanization": "", "translation": "겨울이라 너무 추워."},
+            {"speaker": "B", "text": "Let's go eat some hot soup.", "romanization": "", "translation": "따뜻한 국물 먹으러 가자."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[겨울]",
+      "ipa": "[kjʌ.ul]"
+    }
+  },
+  {
+    "id": "seollal",
+    "korean": "설날",
+    "romanization": "seollal",
+    "partOfSpeech": "noun",
+    "categoryId": "seasons",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["seasons", "culture", "holiday"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "설날",
+        "explanation": "음력 1월 1일, 한국의 가장 큰 명절 중 하나입니다. 세배(새해 인사), 떡국 먹기, 세뱃돈 주고받기 등의 전통이 있습니다.",
+        "examples": {
+          "beginner": "설날에 떡국을 먹어요.",
+          "intermediate": "설날에는 온 가족이 모여요.",
+          "advanced": "설날 아침에 세배를 드리고 세뱃돈을 받는 것이 전통이다.",
+          "master": "설날은 음력 기준이라 양력 날짜가 매년 달라진다."
+        },
+        "variations": {
+          "formal": ["설날을 축하합니다.", "새해 복 많이 받으세요."],
+          "casual": ["설날이다!", "새해 복 많이 받아!"],
+          "short": ["설날"]
+        },
+        "dialogue": {
+          "context": "설날 아침",
+          "dialogue": [
+            {"speaker": "A", "text": "할머니, 새해 복 많이 받으세요.", "romanization": "halmeoni, saehae bok mani badeuseyo.", "translation": "Grandma, Happy New Year."},
+            {"speaker": "B", "text": "그래, 너도 복 많이 받아. 세뱃돈 여기 있다.", "romanization": "geurae, neodo bok mani bada. sebaetdon yeogi itda.", "translation": "You too. Here's your New Year's money."}
+          ]
+        }
+      },
+      "en": {
+        "word": "Lunar New Year (Seollal)",
+        "explanation": "January 1st of the lunar calendar, one of Korea's biggest holidays. Traditions include sebae (New Year's bow), eating tteokguk (rice cake soup — aging one year), and giving/receiving sebaedon (New Year's money).",
+        "examples": {
+          "beginner": "We eat tteokguk on Seollal.",
+          "intermediate": "The whole family gathers on Seollal.",
+          "advanced": "On Seollal morning, it's tradition to bow to elders and receive New Year's money.",
+          "master": "Since Seollal follows the lunar calendar, the date in the solar calendar changes every year."
+        },
+        "variations": {
+          "formal": ["Happy Seollal.", "Happy New Year."],
+          "casual": ["It's Seollal!", "Happy New Year!"],
+          "short": ["Seollal"]
+        },
+        "dialogue": {
+          "context": "Seollal morning",
+          "dialogue": [
+            {"speaker": "A", "text": "Grandma, Happy New Year.", "romanization": "", "translation": "할머니, 새해 복 많이 받으세요."},
+            {"speaker": "B", "text": "You too. Here's your New Year's money.", "romanization": "", "translation": "그래, 너도 복 많이 받아. 세뱃돈 여기 있다."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[설랄]",
+      "ipa": "[sʌl.lal]"
+    }
+  },
+  {
+    "id": "chuseok",
+    "korean": "추석",
+    "romanization": "chuseok",
+    "partOfSpeech": "noun",
+    "categoryId": "seasons",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": ["seasons", "culture", "holiday"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "추석",
+        "explanation": "음력 8월 15일, 한국의 추수감사절입니다. 설날과 함께 가장 큰 명절로, 성묘(조상 묘 방문), 송편 만들기, 가족 모임 등의 전통이 있습니다.",
+        "examples": {
+          "beginner": "추석에 송편을 먹어요.",
+          "intermediate": "추석에는 고향에 가서 가족을 만나요.",
+          "advanced": "추석 연휴에는 전국적으로 교통 체증이 심하다.",
+          "master": "추석은 한 해의 수확에 감사하는 한국 고유의 명절이다."
+        },
+        "variations": {
+          "formal": ["즐거운 추석 되세요.", "추석을 축하합니다."],
+          "casual": ["추석이다!", "즐거운 추석!"],
+          "short": ["추석"]
+        },
+        "dialogue": {
+          "context": "추석 연휴 전",
+          "dialogue": [
+            {"speaker": "A", "text": "추석에 고향 가?", "romanization": "chuseoge gohyang ga?", "translation": "Are you going to your hometown for Chuseok?"},
+            {"speaker": "B", "text": "응, 부모님이 기다리고 계셔.", "romanization": "eung, bumonimi gidarigo gyesyeo.", "translation": "Yeah, my parents are waiting."}
+          ]
+        }
+      },
+      "en": {
+        "word": "Chuseok (Korean Thanksgiving)",
+        "explanation": "August 15th of the lunar calendar, Korea's harvest festival. Along with Seollal, it's the biggest holiday. Traditions include visiting ancestral graves (seongmyo), making songpyeon (rice cakes), and family gatherings.",
+        "examples": {
+          "beginner": "We eat songpyeon on Chuseok.",
+          "intermediate": "On Chuseok, people go to their hometown to see family.",
+          "advanced": "Traffic congestion is severe nationwide during the Chuseok holiday.",
+          "master": "Chuseok is a uniquely Korean holiday to give thanks for the year's harvest."
+        },
+        "variations": {
+          "formal": ["Have a happy Chuseok.", "Happy Chuseok."],
+          "casual": ["It's Chuseok!", "Happy Chuseok!"],
+          "short": ["Chuseok"]
+        },
+        "dialogue": {
+          "context": "Before the Chuseok holiday",
+          "dialogue": [
+            {"speaker": "A", "text": "Are you going to your hometown for Chuseok?", "romanization": "", "translation": "추석에 고향 가?"},
+            {"speaker": "B", "text": "Yeah, my parents are waiting.", "romanization": "", "translation": "응, 부모님이 기다리고 계셔."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[추석]",
+      "ipa": "[tɕʰu.sʌk̚]"
+    }
+  }
+]

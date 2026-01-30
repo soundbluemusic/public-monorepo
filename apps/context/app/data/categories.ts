@@ -751,6 +751,188 @@ export const categories: Category[] = [
     color: 'green',
     order: 52,
   },
+  {
+    id: 'consonants',
+    name: {
+      ko: '자음',
+      en: 'Consonants',
+    },
+    description: {
+      ko: '한글 기본 자음 14개 (ㄱ~ㅎ)',
+      en: '14 basic Korean consonants (ㄱ to ㅎ)',
+    },
+    icon: 'ㄱ',
+    color: 'indigo',
+    order: 53,
+  },
+  {
+    id: 'vowels-basic',
+    name: {
+      ko: '기본 모음',
+      en: 'Basic Vowels',
+    },
+    description: {
+      ko: '한글 기본 모음 10개 (ㅏ~ㅣ)',
+      en: '10 basic Korean vowels (ㅏ to ㅣ)',
+    },
+    icon: 'ㅏ',
+    color: 'purple',
+    order: 54,
+  },
+  {
+    id: 'vowels-compound',
+    name: {
+      ko: '복합 모음',
+      en: 'Compound Vowels',
+    },
+    description: {
+      ko: '한글 복합 모음 11개 (ㅐ, ㅒ, ㅔ, ㅖ, ㅘ, ㅙ, ㅚ, ㅝ, ㅞ, ㅟ, ㅢ)',
+      en: '11 compound Korean vowels',
+    },
+    icon: 'ㅐ',
+    color: 'pink',
+    order: 55,
+  },
+  {
+    id: 'double-consonants',
+    name: {
+      ko: '쌍자음',
+      en: 'Double Consonants',
+    },
+    description: {
+      ko: '한글 쌍자음(된소리) 5개 (ㄲ, ㄸ, ㅃ, ㅆ, ㅉ)',
+      en: '5 Korean double (tense) consonants',
+    },
+    icon: 'ㄲ',
+    color: 'red',
+    order: 56,
+  },
+  {
+    id: 'weather',
+    name: {
+      ko: '날씨',
+      en: 'Weather',
+    },
+    description: {
+      ko: '날씨와 기상 관련 단어',
+      en: 'Weather and climate vocabulary',
+    },
+    icon: '☀',
+    color: 'yellow',
+    order: 57,
+  },
+  {
+    id: 'animals',
+    name: {
+      ko: '동물',
+      en: 'Animals',
+    },
+    description: {
+      ko: '동물 관련 단어',
+      en: 'Animal vocabulary',
+    },
+    icon: '🐾',
+    color: 'orange',
+    order: 58,
+  },
+  {
+    id: 'nature',
+    name: {
+      ko: '자연',
+      en: 'Nature',
+    },
+    description: {
+      ko: '자연과 풍경 관련 단어',
+      en: 'Nature and landscape vocabulary',
+    },
+    icon: '🌿',
+    color: 'green',
+    order: 59,
+  },
+  {
+    id: 'clothing',
+    name: {
+      ko: '의류',
+      en: 'Clothing',
+    },
+    description: {
+      ko: '옷과 패션 관련 단어',
+      en: 'Clothing and fashion vocabulary',
+    },
+    icon: '👔',
+    color: 'purple',
+    order: 60,
+  },
+  {
+    id: 'honorifics',
+    name: {
+      ko: '존댓말',
+      en: 'Honorifics',
+    },
+    description: {
+      ko: '한국어 존칭과 경어 표현',
+      en: 'Korean honorific expressions and politeness levels',
+    },
+    icon: '🙇',
+    color: 'indigo',
+    order: 61,
+  },
+  {
+    id: 'seasons',
+    name: {
+      ko: '계절',
+      en: 'Seasons',
+    },
+    description: {
+      ko: '계절과 명절 관련 단어',
+      en: 'Seasons and holidays vocabulary',
+    },
+    icon: '🍂',
+    color: 'teal',
+    order: 62,
+  },
+  {
+    id: 'professions',
+    name: {
+      ko: '직업',
+      en: 'Professions',
+    },
+    description: {
+      ko: '직업과 직종 관련 단어',
+      en: 'Professions and occupations vocabulary',
+    },
+    icon: '💼',
+    color: 'blue',
+    order: 63,
+  },
+  {
+    id: 'drinks',
+    name: {
+      ko: '음료',
+      en: 'Drinks',
+    },
+    description: {
+      ko: '음료와 마실 것 관련 단어',
+      en: 'Beverages and drinks vocabulary',
+    },
+    icon: '☕',
+    color: 'orange',
+    order: 64,
+  },
+  {
+    id: 'conjunctions',
+    name: {
+      ko: '접속사',
+      en: 'Conjunctions',
+    },
+    description: {
+      ko: '문장을 연결하는 접속사와 연결어미',
+      en: 'Conjunctions and connective endings',
+    },
+    icon: '⟷',
+    color: 'pink',
+    order: 65,
+  },
 ];
 
 /**

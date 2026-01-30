@@ -1,0 +1,307 @@
+[
+  {
+    "id": "uisa",
+    "korean": "의사",
+    "romanization": "uisa",
+    "partOfSpeech": "noun",
+    "categoryId": "professions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["professions", "medical"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "의사",
+        "explanation": "병을 치료하는 전문직입니다. 한국에서 의사는 '선생님'이라는 호칭으로 불립니다. 한자어 '醫師'에서 유래했습니다.",
+        "examples": {
+          "beginner": "의사가 되고 싶어요.",
+          "intermediate": "의사 선생님께 진찰을 받았어요.",
+          "advanced": "한국에서 의사는 가장 선호하는 직업 중 하나이다.",
+          "master": "의사의 사회적 지위와 경제적 보상은 한국에서 최상위권이다."
+        },
+        "variations": {
+          "formal": ["의사입니다.", "의사 선생님이십니다."],
+          "casual": ["의사야.", "의사 선생님."],
+          "short": ["의사"]
+        },
+        "dialogue": {
+          "context": "병원에서",
+          "dialogue": [
+            {"speaker": "A", "text": "어디가 아프세요?", "romanization": "eodiga apeuseyo?", "translation": "Where does it hurt?"},
+            {"speaker": "B", "text": "머리가 아프고 열이 나요.", "romanization": "meoriga apeugo yeori nayo.", "translation": "I have a headache and a fever."}
+          ]
+        }
+      },
+      "en": {
+        "word": "doctor",
+        "explanation": "A medical professional who treats illness. In Korea, doctors are addressed as '선생님' (teacher/sir/ma'am) as a sign of respect. The word comes from the Chinese characters '醫師'.",
+        "examples": {
+          "beginner": "I want to become a doctor.",
+          "intermediate": "I was examined by the doctor.",
+          "advanced": "Being a doctor is one of the most preferred professions in Korea.",
+          "master": "Doctors hold top-tier social status and economic compensation in Korea."
+        },
+        "variations": {
+          "formal": ["I am a doctor.", "This is Doctor (name)."],
+          "casual": ["I'm a doctor.", "The doctor."],
+          "short": ["doctor"]
+        },
+        "dialogue": {
+          "context": "At the hospital",
+          "dialogue": [
+            {"speaker": "A", "text": "Where does it hurt?", "romanization": "", "translation": "어디가 아프세요?"},
+            {"speaker": "B", "text": "I have a headache and a fever.", "romanization": "", "translation": "머리가 아프고 열이 나요."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[의사]",
+      "ipa": "[ɰi.sa]"
+    }
+  },
+  {
+    "id": "gyeongchal",
+    "korean": "경찰",
+    "romanization": "gyeongchal",
+    "partOfSpeech": "noun",
+    "categoryId": "professions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["professions", "public-service"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "경찰",
+        "explanation": "법과 질서를 유지하고 시민을 보호하는 공무원입니다. 한국 경찰의 긴급 전화번호는 112입니다.",
+        "examples": {
+          "beginner": "경찰이 왔어요.",
+          "intermediate": "경찰에 신고했어요.",
+          "advanced": "한국에서 경찰 긴급 전화번호는 112이다.",
+          "master": "경찰은 시민의 안전과 사회 질서 유지를 책임진다."
+        },
+        "variations": {
+          "formal": ["경찰관입니다.", "경찰에 연락하겠습니다."],
+          "casual": ["경찰 불러.", "경찰이다."],
+          "short": ["경찰"]
+        },
+        "dialogue": {
+          "context": "길을 잃었을 때",
+          "dialogue": [
+            {"speaker": "A", "text": "저기 경찰관님한테 길 물어보자.", "romanization": "jeogi gyeongchalgwannimhante gil mureo boja.", "translation": "Let's ask that police officer for directions."},
+            {"speaker": "B", "text": "좋은 생각이다.", "romanization": "joeun saenggagida.", "translation": "Good idea."}
+          ]
+        }
+      },
+      "en": {
+        "word": "police",
+        "explanation": "A public servant who maintains law and order and protects citizens. Korea's emergency police number is 112.",
+        "examples": {
+          "beginner": "The police came.",
+          "intermediate": "I reported it to the police.",
+          "advanced": "In Korea, the police emergency number is 112.",
+          "master": "The police are responsible for public safety and maintaining social order."
+        },
+        "variations": {
+          "formal": ["I am a police officer.", "I will contact the police."],
+          "casual": ["Call the police.", "It's the police."],
+          "short": ["police"]
+        },
+        "dialogue": {
+          "context": "When lost",
+          "dialogue": [
+            {"speaker": "A", "text": "Let's ask that police officer for directions.", "romanization": "", "translation": "저기 경찰관님한테 길 물어보자."},
+            {"speaker": "B", "text": "Good idea.", "romanization": "", "translation": "좋은 생각이다."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[경찰]",
+      "ipa": "[kjʌŋ.tɕʰal]"
+    }
+  },
+  {
+    "id": "yorisa",
+    "korean": "요리사",
+    "romanization": "yorisa",
+    "partOfSpeech": "noun",
+    "categoryId": "professions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["professions", "food"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "요리사",
+        "explanation": "음식을 만드는 것이 직업인 사람입니다. '셰프'라는 외래어도 많이 씁니다. 한국에서는 요리 예능 프로그램의 인기로 요리사에 대한 관심이 높아졌습니다.",
+        "examples": {
+          "beginner": "요리사가 되고 싶어요.",
+          "intermediate": "이 식당의 요리사는 유명해요.",
+          "advanced": "한식 요리사의 세계적 위상이 높아지고 있다.",
+          "master": "요리사는 식재료의 특성을 이해하고 창의적으로 조합하는 예술가이다."
+        },
+        "variations": {
+          "formal": ["요리사입니다.", "주방장이십니다."],
+          "casual": ["요리사야.", "셰프야."],
+          "short": ["요리사"]
+        },
+        "dialogue": {
+          "context": "식당에서",
+          "dialogue": [
+            {"speaker": "A", "text": "이 음식 진짜 맛있다. 요리사가 누구야?", "romanization": "i eumsik jinjja masitda. yorisaga nuguya?", "translation": "This food is really delicious. Who's the chef?"},
+            {"speaker": "B", "text": "유명한 한식 셰프래.", "romanization": "yumyeonghan hansik syepeurae.", "translation": "I heard it's a famous Korean cuisine chef."}
+          ]
+        }
+      },
+      "en": {
+        "word": "chef / cook",
+        "explanation": "A professional who cooks food. The loanword '셰프' (chef) is also commonly used. Korean cooking shows have boosted public interest in the culinary profession.",
+        "examples": {
+          "beginner": "I want to become a chef.",
+          "intermediate": "The chef at this restaurant is famous.",
+          "advanced": "The global reputation of Korean cuisine chefs is rising.",
+          "master": "A chef is an artist who understands ingredients and combines them creatively."
+        },
+        "variations": {
+          "formal": ["I am a chef.", "This is the head chef."],
+          "casual": ["I'm a chef.", "The chef."],
+          "short": ["chef"]
+        },
+        "dialogue": {
+          "context": "At a restaurant",
+          "dialogue": [
+            {"speaker": "A", "text": "This food is really delicious. Who's the chef?", "romanization": "", "translation": "이 음식 진짜 맛있다. 요리사가 누구야?"},
+            {"speaker": "B", "text": "I heard it's a famous Korean cuisine chef.", "romanization": "", "translation": "유명한 한식 셰프래."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[요리사]",
+      "ipa": "[jo.ɾi.sa]"
+    }
+  },
+  {
+    "id": "hoesawon",
+    "korean": "회사원",
+    "romanization": "hoesawon",
+    "partOfSpeech": "noun",
+    "categoryId": "professions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["professions", "business"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "회사원",
+        "explanation": "회사에 다니는 직장인입니다. 한국에서 가장 흔한 직업 형태로, '직장인', '샐러리맨'이라고도 합니다.",
+        "examples": {
+          "beginner": "저는 회사원이에요.",
+          "intermediate": "회사원은 보통 9시에 출근해요.",
+          "advanced": "한국 회사원의 평균 근무 시간은 OECD 국가 중 상위권이다.",
+          "master": "워라밸(work-life balance)을 중시하는 직장 문화가 확산되고 있다."
+        },
+        "variations": {
+          "formal": ["회사원입니다.", "직장인입니다."],
+          "casual": ["회사 다녀.", "직장인이야."],
+          "short": ["회사원"]
+        },
+        "dialogue": {
+          "context": "자기소개하면서",
+          "dialogue": [
+            {"speaker": "A", "text": "무슨 일 하세요?", "romanization": "museun il haseyo?", "translation": "What do you do for work?"},
+            {"speaker": "B", "text": "IT 회사에 다니고 있어요.", "romanization": "aithi hoesae danigo isseoyo.", "translation": "I work at an IT company."}
+          ]
+        }
+      },
+      "en": {
+        "word": "office worker",
+        "explanation": "A person who works at a company. It's the most common type of employment in Korea. Also called '직장인' (worker) or colloquially 'salaryman.'",
+        "examples": {
+          "beginner": "I'm an office worker.",
+          "intermediate": "Office workers usually start work at 9 AM.",
+          "advanced": "Korean office workers' average working hours rank among the highest in OECD countries.",
+          "master": "A work culture emphasizing work-life balance (워라밸) is spreading."
+        },
+        "variations": {
+          "formal": ["I am an office worker.", "I am employed."],
+          "casual": ["I work at a company.", "I'm a salaryman."],
+          "short": ["office worker"]
+        },
+        "dialogue": {
+          "context": "Introducing yourself",
+          "dialogue": [
+            {"speaker": "A", "text": "What do you do for work?", "romanization": "", "translation": "무슨 일 하세요?"},
+            {"speaker": "B", "text": "I work at an IT company.", "romanization": "", "translation": "IT 회사에 다니고 있어요."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[회사원]",
+      "ipa": "[hwe.sa.wʌn]"
+    }
+  },
+  {
+    "id": "haksaeng",
+    "korean": "학생",
+    "romanization": "haksaeng",
+    "partOfSpeech": "noun",
+    "categoryId": "professions",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": ["professions", "education"],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "학생",
+        "explanation": "학교에서 공부하는 사람입니다. 한국의 교육 체계는 초등학교(6년), 중학교(3년), 고등학교(3년), 대학교(4년)입니다.",
+        "examples": {
+          "beginner": "저는 학생이에요.",
+          "intermediate": "한국 학생들은 공부를 많이 해요.",
+          "advanced": "한국의 교육열은 세계적으로 유명하다.",
+          "master": "학생 시절은 인생에서 가장 귀중한 배움의 시기이다."
+        },
+        "variations": {
+          "formal": ["학생입니다.", "학생이십니까?"],
+          "casual": ["학생이야.", "학생이야?"],
+          "short": ["학생"]
+        },
+        "dialogue": {
+          "context": "처음 만나서",
+          "dialogue": [
+            {"speaker": "A", "text": "학생이세요?", "romanization": "haksaengiseyo?", "translation": "Are you a student?"},
+            {"speaker": "B", "text": "네, 대학교 2학년이에요.", "romanization": "ne, daehakgyo ihangnyeonieyo.", "translation": "Yes, I'm a second-year university student."}
+          ]
+        }
+      },
+      "en": {
+        "word": "student",
+        "explanation": "A person studying at a school. Korea's education system consists of elementary school (6 years), middle school (3 years), high school (3 years), and university (4 years). Korea is known worldwide for its intense education culture.",
+        "examples": {
+          "beginner": "I'm a student.",
+          "intermediate": "Korean students study a lot.",
+          "advanced": "Korea's passion for education is world-renowned.",
+          "master": "The student years are the most precious period of learning in life."
+        },
+        "variations": {
+          "formal": ["I am a student.", "Are you a student?"],
+          "casual": ["I'm a student.", "Are you a student?"],
+          "short": ["student"]
+        },
+        "dialogue": {
+          "context": "Meeting for the first time",
+          "dialogue": [
+            {"speaker": "A", "text": "Are you a student?", "romanization": "", "translation": "학생이세요?"},
+            {"speaker": "B", "text": "Yes, I'm a second-year university student.", "romanization": "", "translation": "네, 대학교 2학년이에요."}
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[학쌩]",
+      "ipa": "[hak̚.s͈ɛŋ]"
+    }
+  }
+]
