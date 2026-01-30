@@ -7,7 +7,13 @@
     "categoryId": "honorifics",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["honorifics", "grammar", "politeness"],
+    "tags": [
+      "honorifics",
+      "grammar",
+      "polite",
+      "beginner-essential",
+      "daily-life"
+    ],
     "hasDialogue": true,
     "translations": {
       "ko": {
@@ -20,15 +26,31 @@
           "master": "해요체는 청자 높임법의 한 형태로, '-습니다'보다 부드럽고 반말보다 공손합니다."
         },
         "variations": {
-          "formal": ["-요는 해요체의 종결어미입니다."],
-          "casual": ["-요 붙이면 존댓말이야."],
-          "short": ["-요"]
+          "formal": [
+            "-요는 해요체의 종결어미입니다."
+          ],
+          "casual": [
+            "-요 붙이면 존댓말이야."
+          ],
+          "short": [
+            "-요"
+          ]
         },
         "dialogue": {
           "context": "한국어 수업에서",
           "dialogue": [
-            {"speaker": "A", "text": "\"먹다\"를 존댓말로 어떻게 해요?", "romanization": "\"meokda\"reul jondaenmallo eotteoke haeyo?", "translation": "How do you say '먹다' politely?"},
-            {"speaker": "B", "text": "\"먹어요\"라고 하면 돼요.", "romanization": "\"meogeoyo\"rago hamyeon dwaeyo.", "translation": "You can say '먹어요'."}
+            {
+              "speaker": "A",
+              "text": "\"먹다\"를 존댓말로 어떻게 해요?",
+              "romanization": "\"meokda\"reul jondaenmallo eotteoke haeyo?",
+              "translation": "How do you say '먹다' politely?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"먹어요\"라고 하면 돼요.",
+              "romanization": "\"meogeoyo\"rago hamyeon dwaeyo.",
+              "translation": "You can say '먹어요'."
+            }
           ]
         }
       },
@@ -42,15 +64,31 @@
           "master": "The 해요체 is a form of addressee honorification, softer than -습니다 but more polite than 반말."
         },
         "variations": {
-          "formal": ["-요 is the polite sentence ending of 해요체."],
-          "casual": ["Just add -요 to make it polite."],
-          "short": ["-yo"]
+          "formal": [
+            "-요 is the polite sentence ending of 해요체."
+          ],
+          "casual": [
+            "Just add -요 to make it polite."
+          ],
+          "short": [
+            "-yo"
+          ]
         },
         "dialogue": {
           "context": "In a Korean class",
           "dialogue": [
-            {"speaker": "A", "text": "How do you say '먹다' politely?", "romanization": "", "translation": "\"먹다\"를 존댓말로 어떻게 해요?"},
-            {"speaker": "B", "text": "You can say '먹어요'.", "romanization": "", "translation": "\"먹어요\"라고 하면 돼요."}
+            {
+              "speaker": "A",
+              "text": "How do you say '먹다' politely?",
+              "romanization": "",
+              "translation": "\"먹다\"를 존댓말로 어떻게 해요?"
+            },
+            {
+              "speaker": "B",
+              "text": "You can say '먹어요'.",
+              "romanization": "",
+              "translation": "\"먹어요\"라고 하면 돼요."
+            }
           ]
         }
       }
@@ -61,64 +99,101 @@
     }
   },
   {
-    "id": "seumnida",
-    "korean": "-습니다",
-    "romanization": "seumnida",
+    "id": "seyo",
+    "korean": "-세요",
+    "romanization": "seyo",
     "partOfSpeech": "particle",
     "categoryId": "honorifics",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["honorifics", "grammar", "politeness", "formal"],
+    "tags": [
+      "honorifics",
+      "grammar",
+      "polite",
+      "request"
+    ],
     "hasDialogue": true,
     "translations": {
       "ko": {
-        "word": "-습니다 / -ㅂ니다",
-        "explanation": "격식체의 종결어미로, 가장 공손한 존댓말 형태입니다. 뉴스, 발표, 비즈니스 등 공식적인 상황에서 사용합니다. 받침이 있으면 '-습니다', 없으면 '-ㅂ니다'를 씁니다.",
+        "word": "-세요",
+        "explanation": "주체 높임 선어말어미 '-시-'와 해요체 '-어요'가 결합한 형태입니다. 상대방의 행동을 높여 말하거나 공손한 요청을 할 때 사용합니다. '가세요', '드세요', '안녕하세요' 등에 쓰입니다.",
         "examples": {
-          "beginner": "감사합니다.",
-          "intermediate": "만나서 반갑습니다.",
-          "advanced": "합니다체는 공적인 상황에서 사용하는 최고 존칭의 종결어미입니다.",
-          "master": "뉴스 앵커, 군대, 비즈니스에서 합니다체는 필수입니다."
+          "beginner": "안녕하세요.",
+          "intermediate": "어서 오세요. 뭘 드시겠어요?",
+          "advanced": "'-세요'는 '-시-' + '-어요'의 축약형으로, 주체 높임과 상대 높임이 결합된 형태이다.",
+          "master": "'-세요'는 명령문에서 공손한 요청으로, 청유문에서는 권유로 기능한다."
         },
         "variations": {
-          "formal": ["-습니다는 격식체 종결어미입니다."],
-          "casual": ["-습니다는 제일 공손한 말투야."],
-          "short": ["-습니다"]
+          "formal": [
+            "-세요는 주체 높임의 해요체입니다."
+          ],
+          "casual": [
+            "-세요는 공손하게 부탁할 때 써."
+          ],
+          "short": [
+            "-세요"
+          ]
         },
         "dialogue": {
-          "context": "비즈니스 미팅에서",
+          "context": "식당에서",
           "dialogue": [
-            {"speaker": "A", "text": "처음 뵙겠습니다. 김민수입니다.", "romanization": "cheoeum boepgesseumnida. gimminsuitmnida.", "translation": "Nice to meet you. I'm Kim Minsu."},
-            {"speaker": "B", "text": "반갑습니다. 이영희입니다.", "romanization": "bangapseumnida. iyeonghuitmnida.", "translation": "Nice to meet you. I'm Lee Younghee."}
+            {
+              "speaker": "A",
+              "text": "여기 앉으세요.",
+              "romanization": "yeogi anjeuseyo.",
+              "translation": "Please sit here."
+            },
+            {
+              "speaker": "B",
+              "text": "감사합니다. 메뉴 주세요.",
+              "romanization": "gamsahamnida. menyu juseyo.",
+              "translation": "Thank you. Please give me the menu."
+            }
           ]
         }
       },
       "en": {
-        "word": "-seumnida (formal ending)",
-        "explanation": "The most formal and polite sentence ending in Korean (합니다체 / hamnida-che). Used in news broadcasts, presentations, business, and official situations. Use '-습니다' after consonants and '-ㅂ니다' after vowels.",
+        "word": "-seyo (polite honorific ending)",
+        "explanation": "A combination of the subject honorific marker '-시-' and the polite ending '-어요'. Used to elevate the listener's actions or make polite requests. Found in expressions like '가세요' (please go), '드세요' (please eat), and '안녕하세요' (hello).",
         "examples": {
-          "beginner": "감사합니다 (Thank you — formal).",
-          "intermediate": "만나서 반갑습니다 (Nice to meet you — formal).",
-          "advanced": "The 합니다체 is the highest formality level in Korean speech.",
-          "master": "The 합니다체 is mandatory in news anchoring, military, and business contexts."
+          "beginner": "안녕하세요 (Hello — polite honorific).",
+          "intermediate": "어서 오세요 (Welcome — polite honorific).",
+          "advanced": "'-세요' is a contraction of '-시-' + '-어요', combining subject and addressee honorification.",
+          "master": "'-세요' functions as a polite request in imperative sentences and as a suggestion in propositive sentences."
         },
         "variations": {
-          "formal": ["-습니다 is the formal sentence ending."],
-          "casual": ["-습니다 is the most polite way to speak."],
-          "short": ["-seumnida"]
+          "formal": [
+            "-세요 is the 해요체 form with subject honorification."
+          ],
+          "casual": [
+            "Use -세요 when asking politely."
+          ],
+          "short": [
+            "-seyo"
+          ]
         },
         "dialogue": {
-          "context": "At a business meeting",
+          "context": "At a restaurant",
           "dialogue": [
-            {"speaker": "A", "text": "Nice to meet you. I'm Kim Minsu.", "romanization": "", "translation": "처음 뵙겠습니다. 김민수입니다."},
-            {"speaker": "B", "text": "Nice to meet you. I'm Lee Younghee.", "romanization": "", "translation": "반갑습니다. 이영희입니다."}
+            {
+              "speaker": "A",
+              "text": "Please sit here.",
+              "romanization": "",
+              "translation": "여기 앉으세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Thank you. Please give me the menu.",
+              "romanization": "",
+              "translation": "감사합니다. 메뉴 주세요."
+            }
           ]
         }
       }
     },
     "pronunciation": {
-      "korean": "[슴니다]",
-      "ipa": "[sɯm.ni.da]"
+      "korean": "[세요]",
+      "ipa": "[se.jo]"
     }
   },
   {
@@ -129,7 +204,12 @@
     "categoryId": "honorifics",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["honorifics", "suffix", "politeness"],
+    "tags": [
+      "honorifics",
+      "title",
+      "respect",
+      "formal"
+    ],
     "hasDialogue": true,
     "translations": {
       "ko": {
@@ -142,15 +222,31 @@
           "master": "님은 본래 '임(임금)'에서 유래한 존칭으로, 고려 가요에서도 사용되었다."
         },
         "variations": {
-          "formal": ["님은 존칭 접미사입니다."],
-          "casual": ["님 붙이면 존댓말이야."],
-          "short": ["님"]
+          "formal": [
+            "님은 존칭 접미사입니다."
+          ],
+          "casual": [
+            "님 붙이면 존댓말이야."
+          ],
+          "short": [
+            "님"
+          ]
         },
         "dialogue": {
           "context": "회사에서",
           "dialogue": [
-            {"speaker": "A", "text": "김 대리님, 회의 시간이에요.", "romanization": "gim daerinim, hoeui siganieyo.", "translation": "Mr./Ms. Kim, it's time for the meeting."},
-            {"speaker": "B", "text": "네, 바로 가겠습니다.", "romanization": "ne, baro gagetseumnida.", "translation": "Yes, I'll go right away."}
+            {
+              "speaker": "A",
+              "text": "김 대리님, 회의 시간이에요.",
+              "romanization": "gim daerinim, hoeui siganieyo.",
+              "translation": "Mr./Ms. Kim, it's time for the meeting."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 바로 가겠습니다.",
+              "romanization": "ne, baro gagetseumnida.",
+              "translation": "Yes, I'll go right away."
+            }
           ]
         }
       },
@@ -164,15 +260,31 @@
           "master": "'-님' originally derived from '임' (king/ruler), and has been used since the Goryeo Dynasty poetry."
         },
         "variations": {
-          "formal": ["-님 is an honorific suffix."],
-          "casual": ["Add -님 to be polite."],
-          "short": ["-nim"]
+          "formal": [
+            "-님 is an honorific suffix."
+          ],
+          "casual": [
+            "Add -님 to be polite."
+          ],
+          "short": [
+            "-nim"
+          ]
         },
         "dialogue": {
           "context": "At the office",
           "dialogue": [
-            {"speaker": "A", "text": "Mr./Ms. Kim, it's time for the meeting.", "romanization": "", "translation": "김 대리님, 회의 시간이에요."},
-            {"speaker": "B", "text": "Yes, I'll go right away.", "romanization": "", "translation": "네, 바로 가겠습니다."}
+            {
+              "speaker": "A",
+              "text": "Mr./Ms. Kim, it's time for the meeting.",
+              "romanization": "",
+              "translation": "김 대리님, 회의 시간이에요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I'll go right away.",
+              "romanization": "",
+              "translation": "네, 바로 가겠습니다."
+            }
           ]
         }
       }
@@ -183,64 +295,101 @@
     }
   },
   {
-    "id": "seonsaengnim",
-    "korean": "선생님",
-    "romanization": "seonsaengnim",
+    "id": "ssi",
+    "korean": "씨",
+    "romanization": "ssi",
     "partOfSpeech": "noun",
     "categoryId": "honorifics",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["honorifics", "title", "education"],
+    "tags": [
+      "honorifics",
+      "title",
+      "semi-formal",
+      "name"
+    ],
     "hasDialogue": true,
     "translations": {
       "ko": {
-        "word": "선생님",
-        "explanation": "교사, 의사, 변호사 등 전문직 종사자나 연장자를 높여 부르는 호칭입니다. '선생'(先生)은 '먼저 태어난 사람'이라는 뜻의 한자어입니다.",
+        "word": "씨",
+        "explanation": "이름 뒤에 붙여 상대를 보통 수준으로 높이는 호칭입니다. '님'보다 격이 낮고, 주로 성+이름 뒤에 붙입니다. 성만 쓰고 '씨'를 붙이면 무례할 수 있으므로 주의해야 합니다.",
         "examples": {
-          "beginner": "선생님, 감사합니다.",
-          "intermediate": "우리 선생님은 정말 친절하세요.",
-          "advanced": "한국에서 '선생님'은 교사뿐 아니라 의사, 변호사에게도 사용한다.",
-          "master": "선생님이라는 호칭은 교육자에 대한 사회적 존경을 반영한다."
+          "beginner": "김민수 씨, 안녕하세요.",
+          "intermediate": "이 씨라고 부르면 실례가 될 수 있어요.",
+          "advanced": "'씨'는 성+이름 전체 뒤에 붙이는 것이 예의이며, 성만 쓰면 격식이 낮아진다.",
+          "master": "'씨(氏)'는 본래 가문을 뜻하는 한자어로, 현대에는 일반 호칭으로 변화했다."
         },
         "variations": {
-          "formal": ["선생님께 인사드립니다.", "선생님의 말씀대로 하겠습니다."],
-          "casual": ["쌤!", "선생님~"],
-          "short": ["선생님"]
+          "formal": [
+            "씨는 이름 뒤에 붙이는 호칭입니다."
+          ],
+          "casual": [
+            "씨는 이름 뒤에 붙여."
+          ],
+          "short": [
+            "씨"
+          ]
         },
         "dialogue": {
-          "context": "학교에서",
+          "context": "직장 동료와",
           "dialogue": [
-            {"speaker": "A", "text": "선생님, 질문이 있어요.", "romanization": "seonsaengnim, jilmuni isseoyo.", "translation": "Teacher, I have a question."},
-            {"speaker": "B", "text": "네, 말해 보세요.", "romanization": "ne, malhae boseyo.", "translation": "Yes, go ahead."}
+            {
+              "speaker": "A",
+              "text": "박지영 씨, 점심 먹었어요?",
+              "romanization": "bakjiyeong ssi, jeomsim meogeosseoyo?",
+              "translation": "Ms. Park Jiyoung, have you had lunch?"
+            },
+            {
+              "speaker": "B",
+              "text": "아니요, 아직이요. 같이 갈래요?",
+              "romanization": "aniyo, ajigiyo. gachi gallaeyo?",
+              "translation": "No, not yet. Want to go together?"
+            }
           ]
         }
       },
       "en": {
-        "word": "teacher / sir / ma'am",
-        "explanation": "An honorific title used for teachers, doctors, lawyers, and other respected professionals or elders. '선생' (先生) literally means 'one who was born before,' from Chinese characters. In casual speech, students abbreviate it to '쌤'.",
+        "word": "-ssi (Mr./Ms./name suffix)",
+        "explanation": "A moderately polite suffix attached after a person's full name. Less formal than '-님' but polite enough for everyday use. Important: attaching '-씨' after only a surname (e.g., '김 씨') can sound rude; always use the full name (e.g., '김민수 씨').",
         "examples": {
-          "beginner": "Thank you, teacher.",
-          "intermediate": "Our teacher is really kind.",
-          "advanced": "In Korea, '선생님' is used not only for teachers but also for doctors and lawyers.",
-          "master": "The title '선생님' reflects societal respect for educators."
+          "beginner": "김민수 씨, hello. (Mr. Kim Minsu, hello.)",
+          "intermediate": "Calling someone '이 씨' (just surname + 씨) can be rude.",
+          "advanced": "It's proper etiquette to use full name + 씨; using only the surname lowers the formality.",
+          "master": "'씨 (氏)' originally meant 'clan' in Chinese characters and has evolved into a general honorific suffix in modern Korean."
         },
         "variations": {
-          "formal": ["I pay my respects to the teacher.", "I will do as you say, teacher."],
-          "casual": ["Ssaem! (slang for teacher)", "Teacher~"],
-          "short": ["teacher"]
+          "formal": [
+            "-씨 is a name suffix showing moderate respect."
+          ],
+          "casual": [
+            "Add -씨 after someone's full name."
+          ],
+          "short": [
+            "-ssi"
+          ]
         },
         "dialogue": {
-          "context": "At school",
+          "context": "With a coworker",
           "dialogue": [
-            {"speaker": "A", "text": "Teacher, I have a question.", "romanization": "", "translation": "선생님, 질문이 있어요."},
-            {"speaker": "B", "text": "Yes, go ahead.", "romanization": "", "translation": "네, 말해 보세요."}
+            {
+              "speaker": "A",
+              "text": "Ms. Park Jiyoung, have you had lunch?",
+              "romanization": "",
+              "translation": "박지영 씨, 점심 먹었어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "No, not yet. Want to go together?",
+              "romanization": "",
+              "translation": "아니요, 아직이요. 같이 갈래요?"
+            }
           ]
         }
       }
     },
     "pronunciation": {
-      "korean": "[선생님]",
-      "ipa": "[sʌn.sɛŋ.nim]"
+      "korean": "[씨]",
+      "ipa": "[s͈i]"
     }
   },
   {
@@ -251,7 +400,13 @@
     "categoryId": "honorifics",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["honorifics", "grammar", "culture"],
+    "tags": [
+      "honorifics",
+      "concept",
+      "korean-culture",
+      "social",
+      "beginner-essential"
+    ],
     "hasDialogue": true,
     "translations": {
       "ko": {
@@ -264,15 +419,33 @@
           "master": "존댓말과 반말의 전환은 한국 사회의 인간관계를 이해하는 핵심이다."
         },
         "variations": {
-          "formal": ["존댓말을 사용합니다.", "경어를 사용합니다."],
-          "casual": ["존댓말 쓰자.", "말 놓을까요?"],
-          "short": ["존댓말"]
+          "formal": [
+            "존댓말을 사용합니다.",
+            "경어를 사용합니다."
+          ],
+          "casual": [
+            "존댓말 쓰자.",
+            "말 놓을까요?"
+          ],
+          "short": [
+            "존댓말"
+          ]
         },
         "dialogue": {
           "context": "새로운 사람을 만나서",
           "dialogue": [
-            {"speaker": "A", "text": "우리 말 놓을까요?", "romanization": "uri mal noeulkkayo?", "translation": "Shall we speak casually to each other?"},
-            {"speaker": "B", "text": "네, 편하게 말해요.", "romanization": "ne, pyeonhage malhaeyo.", "translation": "Sure, let's speak comfortably."}
+            {
+              "speaker": "A",
+              "text": "우리 말 놓을까요?",
+              "romanization": "uri mal noeulkkayo?",
+              "translation": "Shall we speak casually to each other?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 편하게 말해요.",
+              "romanization": "ne, pyeonhage malhaeyo.",
+              "translation": "Sure, let's speak comfortably."
+            }
           ]
         }
       },
@@ -286,15 +459,33 @@
           "master": "The switch between 존댓말 and 반말 is key to understanding Korean social relationships."
         },
         "variations": {
-          "formal": ["I use formal speech.", "I use honorifics."],
-          "casual": ["Let's speak formally.", "Shall we drop the formalities?"],
-          "short": ["jondaenmal"]
+          "formal": [
+            "I use formal speech.",
+            "I use honorifics."
+          ],
+          "casual": [
+            "Let's speak formally.",
+            "Shall we drop the formalities?"
+          ],
+          "short": [
+            "jondaenmal"
+          ]
         },
         "dialogue": {
           "context": "Meeting a new person",
           "dialogue": [
-            {"speaker": "A", "text": "Shall we speak casually to each other?", "romanization": "", "translation": "우리 말 놓을까요?"},
-            {"speaker": "B", "text": "Sure, let's speak comfortably.", "romanization": "", "translation": "네, 편하게 말해요."}
+            {
+              "speaker": "A",
+              "text": "Shall we speak casually to each other?",
+              "romanization": "",
+              "translation": "우리 말 놓을까요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Sure, let's speak comfortably.",
+              "romanization": "",
+              "translation": "네, 편하게 말해요."
+            }
           ]
         }
       }
@@ -302,6 +493,3247 @@
     "pronunciation": {
       "korean": "[존댄말]",
       "ipa": "[tɕon.dɛn.mal]"
+    }
+  },
+  {
+    "id": "banmal",
+    "korean": "반말",
+    "romanization": "banmal",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "concept",
+      "casual",
+      "korean-culture",
+      "social"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "반말",
+        "explanation": "높임 표현 없이 편하게 말하는 말투입니다. 친구, 동생, 친한 사이에서 사용합니다. 처음 만난 사람이나 윗사람에게 반말을 쓰면 매우 무례합니다. '말을 놓다'는 반말로 전환하겠다는 뜻입니다.",
+        "examples": {
+          "beginner": "친구한테는 반말 써.",
+          "intermediate": "나이 차이가 적으면 반말 해도 돼요.",
+          "advanced": "반말은 친밀감의 표현이지만, 상황에 따라 무례함으로 받아들여질 수 있다.",
+          "master": "반말 사용 여부는 나이, 관계, 상황에 따라 결정되며, 한국 사회의 위계를 반영한다."
+        },
+        "variations": {
+          "formal": [
+            "반말은 높임 표현이 없는 말투입니다."
+          ],
+          "casual": [
+            "반말은 편한 말투야."
+          ],
+          "short": [
+            "반말"
+          ]
+        },
+        "dialogue": {
+          "context": "친구 사이에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "야, 밥 먹었어?",
+              "romanization": "ya, bap meogeosseo?",
+              "translation": "Hey, did you eat?"
+            },
+            {
+              "speaker": "B",
+              "text": "아니, 아직. 같이 먹자!",
+              "romanization": "ani, ajik. gachi meokja!",
+              "translation": "No, not yet. Let's eat together!"
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "casual speech / informal speech",
+        "explanation": "Informal speech without honorific markers, used among friends, younger people, or close relationships. Using 반말 with strangers or elders is considered very rude. The phrase '말을 놓다' means to switch to casual speech.",
+        "examples": {
+          "beginner": "Use 반말 with friends.",
+          "intermediate": "If the age gap is small, it's okay to use 반말.",
+          "advanced": "반말 expresses intimacy but can be perceived as rude depending on the context.",
+          "master": "Whether to use 반말 is determined by age, relationship, and context, reflecting Korean social hierarchy."
+        },
+        "variations": {
+          "formal": [
+            "반말 is speech without honorifics."
+          ],
+          "casual": [
+            "반말 is how you talk to friends."
+          ],
+          "short": [
+            "banmal"
+          ]
+        },
+        "dialogue": {
+          "context": "Between friends",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Hey, did you eat?",
+              "romanization": "",
+              "translation": "야, 밥 먹었어?"
+            },
+            {
+              "speaker": "B",
+              "text": "No, not yet. Let's eat together!",
+              "romanization": "",
+              "translation": "아니, 아직. 같이 먹자!"
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[반말]",
+      "ipa": "[pan.mal]"
+    }
+  },
+  {
+    "id": "nopimmal",
+    "korean": "높임말",
+    "romanization": "nopimmal",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "concept",
+      "formal",
+      "respect"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "높임말",
+        "explanation": "상대방이나 주어를 높여서 말하는 표현의 총칭입니다. 존댓말과 비슷하지만 더 넓은 개념으로, 주체 높임(-시-), 상대 높임(-요, -습니다), 객체 높임(드리다, 여쭙다)을 모두 포함합니다.",
+        "examples": {
+          "beginner": "높임말을 쓰세요.",
+          "intermediate": "어른 앞에서는 높임말을 써야 해요.",
+          "advanced": "높임말에는 주체 높임, 상대 높임, 객체 높임의 세 가지가 있다.",
+          "master": "높임말 체계는 한국어 문법의 핵심이며, 사회 언어학적으로 중요한 연구 대상이다."
+        },
+        "variations": {
+          "formal": [
+            "높임말은 존경을 나타내는 말투입니다."
+          ],
+          "casual": [
+            "높임말은 공손하게 말하는 거야."
+          ],
+          "short": [
+            "높임말"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어 수업에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "높임말이 뭐예요?",
+              "romanization": "nopimmari mwoyeyo?",
+              "translation": "What is honorific speech?"
+            },
+            {
+              "speaker": "B",
+              "text": "상대방을 존경해서 높여 말하는 거예요.",
+              "romanization": "sangdaebang-eul jongyeonghaeseo nopyeo malhaneun geoyeyo.",
+              "translation": "It's speaking in an elevated way to show respect."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "honorific speech / elevated speech",
+        "explanation": "A general term for speech that elevates the subject or addressee. Broader than 존댓말, it encompasses all three types of Korean honorification: subject honorifics (-시-), addressee honorifics (-요, -습니다), and object honorifics (드리다, 여쭙다).",
+        "examples": {
+          "beginner": "Please use honorific speech.",
+          "intermediate": "You should use 높임말 in front of elders.",
+          "advanced": "높임말 includes subject, addressee, and object honorification.",
+          "master": "The 높임말 system is central to Korean grammar and a significant topic in sociolinguistics."
+        },
+        "variations": {
+          "formal": [
+            "높임말 is speech showing respect."
+          ],
+          "casual": [
+            "높임말 means speaking politely."
+          ],
+          "short": [
+            "nopimmal"
+          ]
+        },
+        "dialogue": {
+          "context": "In a Korean class",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What is honorific speech?",
+              "romanization": "",
+              "translation": "높임말이 뭐예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's speaking in an elevated way to show respect.",
+              "romanization": "",
+              "translation": "상대방을 존경해서 높여 말하는 거예요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[노핌말]",
+      "ipa": "[no.pʰim.mal]"
+    }
+  },
+  {
+    "id": "seumnida",
+    "korean": "-습니다",
+    "romanization": "seumnida",
+    "partOfSpeech": "particle",
+    "categoryId": "honorifics",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "grammar",
+      "formal",
+      "business"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "-습니다 / -ㅂ니다",
+        "explanation": "격식체의 종결어미로, 가장 공손한 존댓말 형태입니다. 뉴스, 발표, 비즈니스 등 공식적인 상황에서 사용합니다. 받침이 있으면 '-습니다', 없으면 '-ㅂ니다'를 씁니다.",
+        "examples": {
+          "beginner": "감사합니다.",
+          "intermediate": "만나서 반갑습니다.",
+          "advanced": "합니다체는 공적인 상황에서 사용하는 최고 존칭의 종결어미입니다.",
+          "master": "뉴스 앵커, 군대, 비즈니스에서 합니다체는 필수입니다."
+        },
+        "variations": {
+          "formal": [
+            "-습니다는 격식체 종결어미입니다."
+          ],
+          "casual": [
+            "-습니다는 제일 공손한 말투야."
+          ],
+          "short": [
+            "-습니다"
+          ]
+        },
+        "dialogue": {
+          "context": "비즈니스 미팅에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "처음 뵙겠습니다. 김민수입니다.",
+              "romanization": "cheoeum boepgesseumnida. gimminsuitmnida.",
+              "translation": "Nice to meet you. I'm Kim Minsu."
+            },
+            {
+              "speaker": "B",
+              "text": "반갑습니다. 이영희입니다.",
+              "romanization": "bangapseumnida. iyeonghuitmnida.",
+              "translation": "Nice to meet you. I'm Lee Younghee."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "-seumnida (formal ending)",
+        "explanation": "The most formal and polite sentence ending in Korean (합니다체 / hamnida-che). Used in news broadcasts, presentations, business, and official situations. Use '-습니다' after consonants and '-ㅂ니다' after vowels.",
+        "examples": {
+          "beginner": "감사합니다 (Thank you — formal).",
+          "intermediate": "만나서 반갑습니다 (Nice to meet you — formal).",
+          "advanced": "The 합니다체 is the highest formality level in Korean speech.",
+          "master": "The 합니다체 is mandatory in news anchoring, military, and business contexts."
+        },
+        "variations": {
+          "formal": [
+            "-습니다 is the formal sentence ending."
+          ],
+          "casual": [
+            "-습니다 is the most polite way to speak."
+          ],
+          "short": [
+            "-seumnida"
+          ]
+        },
+        "dialogue": {
+          "context": "At a business meeting",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Nice to meet you. I'm Kim Minsu.",
+              "romanization": "",
+              "translation": "처음 뵙겠습니다. 김민수입니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Nice to meet you. I'm Lee Younghee.",
+              "romanization": "",
+              "translation": "반갑습니다. 이영희입니다."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[슴니다]",
+      "ipa": "[sɯm.ni.da]"
+    }
+  },
+  {
+    "id": "imnida",
+    "korean": "-입니다",
+    "romanization": "imnida",
+    "partOfSpeech": "particle",
+    "categoryId": "honorifics",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "grammar",
+      "formal",
+      "introduction"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "-입니다",
+        "explanation": "'이다'의 격식체 종결형으로, 자기 소개나 사실을 정중하게 말할 때 사용합니다. '저는 학생입니다', '이것은 책입니다'처럼 명사 뒤에 붙습니다. 해요체 형태는 '-이에요/-예요'입니다.",
+        "examples": {
+          "beginner": "저는 학생입니다.",
+          "intermediate": "이것은 한국어 사전입니다.",
+          "advanced": "'-입니다'는 서술격 조사 '이다'의 합니다체로, 명사문의 격식 표현이다.",
+          "master": "'이다'의 활용형은 격식/비격식, 평서/의문에 따라 다양하게 변화한다."
+        },
+        "variations": {
+          "formal": [
+            "-입니다는 '이다'의 격식체입니다."
+          ],
+          "casual": [
+            "-입니다는 '이에요'의 격식 버전이야."
+          ],
+          "short": [
+            "-입니다"
+          ]
+        },
+        "dialogue": {
+          "context": "자기 소개에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "이름이 뭡니까?",
+              "romanization": "ireumi mwomnikka?",
+              "translation": "What is your name?"
+            },
+            {
+              "speaker": "B",
+              "text": "저는 김민수입니다.",
+              "romanization": "jeoneun gimminsuitmnida.",
+              "translation": "I am Kim Minsu."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "-imnida (to be — formal)",
+        "explanation": "The formal declarative ending of '이다' (to be). Used for polite self-introductions and stating facts. Attached after nouns: '학생입니다' (I am a student), '책입니다' (It is a book). The 해요체 equivalent is '-이에요/-예요'.",
+        "examples": {
+          "beginner": "저는 학생입니다 (I am a student — formal).",
+          "intermediate": "이것은 한국어 사전입니다 (This is a Korean dictionary — formal).",
+          "advanced": "'-입니다' is the 합니다체 of the copula '이다', used for formal noun predicates.",
+          "master": "The conjugation of '이다' varies across formality levels and sentence types (declarative, interrogative)."
+        },
+        "variations": {
+          "formal": [
+            "-입니다 is the formal form of '이다' (to be)."
+          ],
+          "casual": [
+            "-입니다 is the formal version of '-이에요'."
+          ],
+          "short": [
+            "-imnida"
+          ]
+        },
+        "dialogue": {
+          "context": "Self-introduction",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What is your name?",
+              "romanization": "",
+              "translation": "이름이 뭡니까?"
+            },
+            {
+              "speaker": "B",
+              "text": "I am Kim Minsu.",
+              "romanization": "",
+              "translation": "저는 김민수입니다."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[임니다]",
+      "ipa": "[im.ni.da]"
+    }
+  },
+  {
+    "id": "deurida",
+    "korean": "드리다",
+    "romanization": "deurida",
+    "partOfSpeech": "verb",
+    "categoryId": "honorifics",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "humble",
+      "verb",
+      "respect"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "드리다",
+        "explanation": "'주다'의 겸양어(겸손 표현)로, 윗사람에게 무엇을 줄 때 사용합니다. 자신을 낮추어 상대를 높이는 객체 높임법의 대표적 표현입니다. '선물을 드리다', '말씀을 드리다' 등으로 씁니다.",
+        "examples": {
+          "beginner": "선생님께 꽃을 드렸어요.",
+          "intermediate": "말씀드릴 것이 있습니다.",
+          "advanced": "'드리다'는 객체 높임법의 겸양 동사로, 화자가 자신을 낮추어 객체를 높인다.",
+          "master": "겸양어 체계(드리다, 여쭙다, 뵙다)는 한국어 높임법의 3축 중 하나이다."
+        },
+        "variations": {
+          "formal": [
+            "드리다는 '주다'의 겸양어입니다."
+          ],
+          "casual": [
+            "드리다는 윗사람한테 줄 때 쓰는 말이야."
+          ],
+          "short": [
+            "드리다"
+          ]
+        },
+        "dialogue": {
+          "context": "사무실에서 상사에게",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "부장님, 보고서 드리겠습니다.",
+              "romanization": "bujangnim, bogoseo deurigesseumnida.",
+              "translation": "Director, I'd like to give you the report."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 고마워요. 여기 놓으세요.",
+              "romanization": "ne, gomawoyo. yeogi noheuseyo.",
+              "translation": "Yes, thank you. Please put it here."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "to give (humble)",
+        "explanation": "The humble form of '주다' (to give), used when giving something to a superior. It's a key example of object honorification where the speaker lowers themselves to elevate the recipient. Used in phrases like '선물을 드리다' (to give a gift) and '말씀을 드리다' (to tell/inform).",
+        "examples": {
+          "beginner": "I gave flowers to the teacher (선생님께 꽃을 드렸어요).",
+          "intermediate": "I have something to tell you (말씀드릴 것이 있습니다).",
+          "advanced": "'드리다' is a humble verb in the object honorification system.",
+          "master": "The humble verb system (드리다, 여쭙다, 뵙다) forms one of the three axes of Korean honorification."
+        },
+        "variations": {
+          "formal": [
+            "드리다 is the humble form of '주다' (to give)."
+          ],
+          "casual": [
+            "Use 드리다 when giving to someone older or higher-ranked."
+          ],
+          "short": [
+            "deurida"
+          ]
+        },
+        "dialogue": {
+          "context": "At the office, to a boss",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Director, I'd like to give you the report.",
+              "romanization": "",
+              "translation": "부장님, 보고서 드리겠습니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, thank you. Please put it here.",
+              "romanization": "",
+              "translation": "네, 고마워요. 여기 놓으세요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[드리다]",
+      "ipa": "[tɯ.ɾi.da]"
+    }
+  },
+  {
+    "id": "jusida",
+    "korean": "주시다",
+    "romanization": "jusida",
+    "partOfSpeech": "verb",
+    "categoryId": "honorifics",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "verb",
+      "respect",
+      "request"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "주시다",
+        "explanation": "'주다'의 주체 높임 표현으로, 윗사람이 아랫사람에게 무엇을 줄 때 사용합니다. '-시-'가 들어가 주어(주는 사람)를 높입니다. '선생님이 주시다', '부모님이 주시다' 등으로 씁니다.",
+        "examples": {
+          "beginner": "선생님이 선물을 주셨어요.",
+          "intermediate": "사장님께서 기회를 주셨습니다.",
+          "advanced": "'주시다'는 주체 높임의 '-시-'가 결합된 형태로, 주어를 높인다.",
+          "master": "'주시다'(주체 높임)와 '드리다'(객체 높임)는 같은 '주다'의 서로 다른 높임 방향이다."
+        },
+        "variations": {
+          "formal": [
+            "주시다는 '주다'의 주체 높임형입니다."
+          ],
+          "casual": [
+            "주시다는 윗사람이 줄 때 쓰는 말이야."
+          ],
+          "short": [
+            "주시다"
+          ]
+        },
+        "dialogue": {
+          "context": "학생이 선생님에 대해 말할 때",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "선생님이 뭐라고 하셨어요?",
+              "romanization": "seonsaengnimi mworago hasyeosseoyo?",
+              "translation": "What did the teacher say?"
+            },
+            {
+              "speaker": "B",
+              "text": "숙제를 내 주셨어요.",
+              "romanization": "sukjereul nae jusyeosseoyo.",
+              "translation": "The teacher gave us homework."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "to give (honorific)",
+        "explanation": "The subject-honorific form of '주다' (to give), used when the giver is someone of higher status. The honorific marker '-시-' elevates the subject (the giver). Compare with '드리다' which humbles the giver instead.",
+        "examples": {
+          "beginner": "The teacher gave me a gift (선생님이 선물을 주셨어요).",
+          "intermediate": "The CEO gave us an opportunity (사장님께서 기회를 주셨습니다).",
+          "advanced": "'주시다' combines '-시-' with '주다' to honor the subject.",
+          "master": "'주시다' (subject honorific) and '드리다' (object honorific) represent opposite directions of honorification for the same verb '주다'."
+        },
+        "variations": {
+          "formal": [
+            "주시다 is the subject-honorific form of '주다'."
+          ],
+          "casual": [
+            "Use 주시다 when an elder or superior gives something."
+          ],
+          "short": [
+            "jusida"
+          ]
+        },
+        "dialogue": {
+          "context": "A student talking about a teacher",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What did the teacher say?",
+              "romanization": "",
+              "translation": "선생님이 뭐라고 하셨어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "The teacher gave us homework.",
+              "romanization": "",
+              "translation": "숙제를 내 주셨어요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[주시다]",
+      "ipa": "[tɕu.ɕi.da]"
+    }
+  },
+  {
+    "id": "malsseum",
+    "korean": "말씀",
+    "romanization": "malsseum",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "noun",
+      "formal",
+      "respect"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "말씀",
+        "explanation": "'말'의 높임말로, 윗사람의 말을 높이거나 자신의 말을 겸손하게 표현할 때 사용합니다. '선생님의 말씀'(높임), '제가 말씀드리다'(겸양) 두 가지 용법이 있습니다.",
+        "examples": {
+          "beginner": "선생님 말씀 잘 들으세요.",
+          "intermediate": "말씀 중에 실례합니다.",
+          "advanced": "'말씀'은 높임과 겸양 두 가지로 쓰이며, 맥락에 따라 의미가 달라진다.",
+          "master": "'말씀하시다'(주체 높임)와 '말씀드리다'(객체 겸양)는 대칭적 높임 구조를 형성한다."
+        },
+        "variations": {
+          "formal": [
+            "말씀은 '말'의 높임말입니다."
+          ],
+          "casual": [
+            "말씀은 높여서 하는 '말'이야."
+          ],
+          "short": [
+            "말씀"
+          ]
+        },
+        "dialogue": {
+          "context": "회의에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "말씀 중에 죄송합니다만, 질문이 있습니다.",
+              "romanization": "malsseum junge joesonghamnidaman, jilmuni itseumnida.",
+              "translation": "Sorry to interrupt, but I have a question."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 말씀하세요.",
+              "romanization": "ne, malsseum haseyo.",
+              "translation": "Yes, please go ahead."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "words / speech (honorific)",
+        "explanation": "The honorific form of '말' (words/speech). Has two uses: to elevate a superior's words ('선생님의 말씀' — the teacher's words) or to humble one's own speech ('말씀드리다' — I'd like to say/tell). Context determines which meaning applies.",
+        "examples": {
+          "beginner": "Listen well to the teacher's words (선생님 말씀 잘 들으세요).",
+          "intermediate": "Excuse me for interrupting (말씀 중에 실례합니다).",
+          "advanced": "'말씀' serves both honorific and humble functions depending on context.",
+          "master": "'말씀하시다' (subject honorific) and '말씀드리다' (object humble) form a symmetrical honorification structure."
+        },
+        "variations": {
+          "formal": [
+            "말씀 is the honorific form of '말' (speech)."
+          ],
+          "casual": [
+            "말씀 is the polite way to say '말'."
+          ],
+          "short": [
+            "malsseum"
+          ]
+        },
+        "dialogue": {
+          "context": "At a meeting",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Sorry to interrupt, but I have a question.",
+              "romanization": "",
+              "translation": "말씀 중에 죄송합니다만, 질문이 있습니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, please go ahead.",
+              "romanization": "",
+              "translation": "네, 말씀하세요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[말씀]",
+      "ipa": "[mal.s͈ɯm]"
+    }
+  },
+  {
+    "id": "daek",
+    "korean": "댁",
+    "romanization": "daek",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "advanced",
+    "frequency": "uncommon",
+    "tags": [
+      "honorifics",
+      "noun",
+      "formal",
+      "traditional"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "댁",
+        "explanation": "'집'의 높임말로, 상대방의 집을 높여 부를 때 사용합니다. 또한 상대방을 간접적으로 높여 부르는 대명사로도 쓰입니다. '댁에서 오셨어요?'(어디서 오셨어요?의 높임). 전통적이고 격식 있는 표현입니다.",
+        "examples": {
+          "beginner": "댁이 어디세요?",
+          "intermediate": "댁에 가족이 몇 분이세요?",
+          "advanced": "'댁(宅)'은 한자어로 '집'의 높임말이며, 2인칭 대명사로도 사용된다.",
+          "master": "'댁'의 대명사적 용법은 '당신'보다 격식 있으며, 노년층에서 주로 사용된다."
+        },
+        "variations": {
+          "formal": [
+            "댁은 '집'의 높임말입니다."
+          ],
+          "casual": [
+            "댁은 '집'을 높여서 말하는 거야."
+          ],
+          "short": [
+            "댁"
+          ]
+        },
+        "dialogue": {
+          "context": "어른에게 인사할 때",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "댁이 어디세요?",
+              "romanization": "daegi eodiseyo?",
+              "translation": "Where is your home?"
+            },
+            {
+              "speaker": "B",
+              "text": "서울에서 왔습니다.",
+              "romanization": "seoureseo watseumnida.",
+              "translation": "I came from Seoul."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "home / residence (honorific)",
+        "explanation": "The honorific form of '집' (house/home). Used to respectfully refer to someone's house or as an indirect second-person pronoun. '댁이 어디세요?' can mean both 'Where is your home?' and 'Where are you from?' A traditional, formal expression mostly used by older generations.",
+        "examples": {
+          "beginner": "Where is your home? (댁이 어디세요?)",
+          "intermediate": "How many family members are in your household? (댁에 가족이 몇 분이세요?)",
+          "advanced": "'댁 (宅)' is a Sino-Korean word for '집' and also functions as a second-person pronoun.",
+          "master": "The pronominal use of '댁' is more formal than '당신' and is mainly used by the elderly."
+        },
+        "variations": {
+          "formal": [
+            "댁 is the honorific form of '집' (house)."
+          ],
+          "casual": [
+            "댁 is the polite way to say someone's house."
+          ],
+          "short": [
+            "daek"
+          ]
+        },
+        "dialogue": {
+          "context": "Greeting an elder",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is your home?",
+              "romanization": "",
+              "translation": "댁이 어디세요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I came from Seoul.",
+              "romanization": "",
+              "translation": "서울에서 왔습니다."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[댁]",
+      "ipa": "[tɛk̚]"
+    }
+  },
+  {
+    "id": "yeonse",
+    "korean": "연세",
+    "romanization": "yeonse",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": [
+      "honorifics",
+      "noun",
+      "formal",
+      "respect",
+      "age"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "연세",
+        "explanation": "'나이'의 높임말로, 어른의 나이를 여쭐 때 사용합니다. '나이'를 직접 사용하면 버릇없게 들릴 수 있으므로, 윗사람에게는 반드시 '연세'를 씁니다. '연세가 어떻게 되세요?'가 올바른 표현입니다.",
+        "examples": {
+          "beginner": "할머니, 연세가 어떻게 되세요?",
+          "intermediate": "연세에 비해 정정하시네요.",
+          "advanced": "'연세(年歲)'는 한자어로, '나이'의 객체 높임 표현이다.",
+          "master": "나이 관련 높임어 체계: 나이(일반) → 연세(높임) → 춘추(최고 높임, 왕족)"
+        },
+        "variations": {
+          "formal": [
+            "연세는 '나이'의 높임말입니다."
+          ],
+          "casual": [
+            "연세는 나이를 높여서 말하는 거야."
+          ],
+          "short": [
+            "연세"
+          ]
+        },
+        "dialogue": {
+          "context": "어르신과 대화할 때",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "실례지만, 연세가 어떻게 되세요?",
+              "romanization": "sillyejiman, yeonsega eotteoke doeseyo?",
+              "translation": "Excuse me, may I ask your age?"
+            },
+            {
+              "speaker": "B",
+              "text": "올해 일흔다섯이에요.",
+              "romanization": "olhae ilheundaseosioeyo.",
+              "translation": "I'm seventy-five this year."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "age (honorific)",
+        "explanation": "The honorific form of '나이' (age). Must be used when asking about an elder's age, as using '나이' directly can sound rude. The standard polite question is '연세가 어떻게 되세요?' (How old are you? — honorific).",
+        "examples": {
+          "beginner": "Grandmother, how old are you? (할머니, 연세가 어떻게 되세요?)",
+          "intermediate": "You look healthy for your age (연세에 비해 정정하시네요).",
+          "advanced": "'연세 (年歲)' is a Sino-Korean honorific for '나이' (age).",
+          "master": "The age honorific hierarchy: 나이 (plain) → 연세 (honorific) → 춘추 (highest, for royalty)."
+        },
+        "variations": {
+          "formal": [
+            "연세 is the honorific form of '나이' (age)."
+          ],
+          "casual": [
+            "연세 is the polite way to ask about someone's age."
+          ],
+          "short": [
+            "yeonse"
+          ]
+        },
+        "dialogue": {
+          "context": "Talking with an elder",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Excuse me, may I ask your age?",
+              "romanization": "",
+              "translation": "실례지만, 연세가 어떻게 되세요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm seventy-five this year.",
+              "romanization": "",
+              "translation": "올해 일흔다섯이에요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[연세]",
+      "ipa": "[jʌn.se]"
+    }
+  },
+  {
+    "id": "jinji",
+    "korean": "진지",
+    "romanization": "jinji",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": [
+      "honorifics",
+      "noun",
+      "formal",
+      "food",
+      "elderly"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "진지",
+        "explanation": "'밥'의 높임말로, 어른의 식사를 높여 말할 때 사용합니다. '진지 드셨어요?'는 어른에게 식사했는지 묻는 공손한 인사입니다. 주로 할머니, 할아버지 등 어른에게 사용합니다.",
+        "examples": {
+          "beginner": "할아버지, 진지 드셨어요?",
+          "intermediate": "진지 잡수세요.",
+          "advanced": "'진지'는 '밥'의 객체 높임어로, 식사를 대접하거나 안부를 물을 때 사용한다.",
+          "master": "식사 관련 높임어: 밥(일반) → 진지(높임) → 수라(왕의 식사)"
+        },
+        "variations": {
+          "formal": [
+            "진지는 '밥'의 높임말입니다."
+          ],
+          "casual": [
+            "진지는 어른한테 밥을 높여서 말하는 거야."
+          ],
+          "short": [
+            "진지"
+          ]
+        },
+        "dialogue": {
+          "context": "할머니 댁 방문",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "할머니, 진지 드셨어요?",
+              "romanization": "halmeoni, jinji deusyeosseoyo?",
+              "translation": "Grandma, have you eaten?"
+            },
+            {
+              "speaker": "B",
+              "text": "그럼, 아까 먹었단다.",
+              "romanization": "geureom, akka meogeotdanda.",
+              "translation": "Yes, I ate earlier."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "meal / rice (honorific)",
+        "explanation": "The honorific form of '밥' (rice/meal). Used when referring to an elder's meal. '진지 드셨어요?' (Have you eaten?) is a polite greeting to elders. Primarily used with grandparents and senior figures.",
+        "examples": {
+          "beginner": "Grandfather, have you eaten? (할아버지, 진지 드셨어요?)",
+          "intermediate": "Please eat (진지 잡수세요).",
+          "advanced": "'진지' is the object-honorific form of '밥', used when offering or asking about meals.",
+          "master": "Meal honorific hierarchy: 밥 (plain) → 진지 (honorific) → 수라 (royal meal)."
+        },
+        "variations": {
+          "formal": [
+            "진지 is the honorific form of '밥' (rice/meal)."
+          ],
+          "casual": [
+            "진지 is the polite word for an elder's meal."
+          ],
+          "short": [
+            "jinji"
+          ]
+        },
+        "dialogue": {
+          "context": "Visiting grandmother's house",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Grandma, have you eaten?",
+              "romanization": "",
+              "translation": "할머니, 진지 드셨어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I ate earlier.",
+              "romanization": "",
+              "translation": "그럼, 아까 먹었단다."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[진지]",
+      "ipa": "[tɕin.dʑi]"
+    }
+  },
+  {
+    "id": "seongham",
+    "korean": "성함",
+    "romanization": "seongham",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "noun",
+      "formal",
+      "introduction"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "성함",
+        "explanation": "'이름'의 높임말로, 상대방의 이름을 정중하게 여쭐 때 사용합니다. '성함이 어떻게 되세요?'가 가장 일반적인 표현입니다. 고객 응대, 공식 상황에서 자주 쓰입니다.",
+        "examples": {
+          "beginner": "성함이 어떻게 되세요?",
+          "intermediate": "여기에 성함을 적어 주세요.",
+          "advanced": "'성함(姓銜)'은 한자어로, '성'(姓)과 '함'(銜, 직함)이 결합한 높임 표현이다.",
+          "master": "이름 관련 높임어: 이름(일반) → 성함(높임) → 휘(왕의 이름, 역사적 표현)"
+        },
+        "variations": {
+          "formal": [
+            "성함은 '이름'의 높임말입니다."
+          ],
+          "casual": [
+            "성함은 이름을 높여서 말하는 거야."
+          ],
+          "short": [
+            "성함"
+          ]
+        },
+        "dialogue": {
+          "context": "호텔 체크인에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "성함이 어떻게 되세요?",
+              "romanization": "seonghami eotteoke doeseyo?",
+              "translation": "May I have your name?"
+            },
+            {
+              "speaker": "B",
+              "text": "김민수입니다.",
+              "romanization": "gimminsuitmnida.",
+              "translation": "It's Kim Minsu."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "name (honorific)",
+        "explanation": "The honorific form of '이름' (name). Used to politely ask someone's name. '성함이 어떻게 되세요?' (May I have your name?) is the standard polite form. Frequently used in customer service and formal situations.",
+        "examples": {
+          "beginner": "May I have your name? (성함이 어떻게 되세요?)",
+          "intermediate": "Please write your name here (여기에 성함을 적어 주세요).",
+          "advanced": "'성함 (姓銜)' combines '성' (surname) and '함' (title) as an honorific for 'name'.",
+          "master": "Name honorific hierarchy: 이름 (plain) → 성함 (honorific) → 휘 (royal name, historical)."
+        },
+        "variations": {
+          "formal": [
+            "성함 is the honorific form of '이름' (name)."
+          ],
+          "casual": [
+            "성함 is the polite way to ask someone's name."
+          ],
+          "short": [
+            "seongham"
+          ]
+        },
+        "dialogue": {
+          "context": "Hotel check-in",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "May I have your name?",
+              "romanization": "",
+              "translation": "성함이 어떻게 되세요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's Kim Minsu.",
+              "romanization": "",
+              "translation": "김민수입니다."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[성함]",
+      "ipa": "[sʌŋ.ham]"
+    }
+  },
+  {
+    "id": "gyesida",
+    "korean": "계시다",
+    "romanization": "gyesida",
+    "partOfSpeech": "verb",
+    "categoryId": "honorifics",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "verb",
+      "formal",
+      "respect"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "계시다",
+        "explanation": "'있다'의 주체 높임말로, 윗사람이 어딘가에 있거나 머물 때 사용합니다. '선생님이 교실에 계세요', '할머니가 집에 계세요' 등으로 씁니다. '있다'를 직접 쓰면 높임이 되지 않습니다.",
+        "examples": {
+          "beginner": "선생님이 교실에 계세요.",
+          "intermediate": "어머니가 집에 계시니까 편히 가세요.",
+          "advanced": "'계시다'는 '있다'의 주체 높임 특수 어휘로, '-시-' 결합이 아닌 별도 단어이다.",
+          "master": "'있다'의 높임 체계: 있다(일반) → 계시다(주체 높임) vs. 있으시다(비표준이나 통용)"
+        },
+        "variations": {
+          "formal": [
+            "계시다는 '있다'의 높임말입니다."
+          ],
+          "casual": [
+            "계시다는 윗사람이 있을 때 쓰는 말이야."
+          ],
+          "short": [
+            "계시다"
+          ]
+        },
+        "dialogue": {
+          "context": "전화 통화에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "사장님 계세요?",
+              "romanization": "sajangnim gyeseyo?",
+              "translation": "Is the boss in?"
+            },
+            {
+              "speaker": "B",
+              "text": "지금 회의 중이셔서 자리에 안 계세요.",
+              "romanization": "jigeum hoeui jungisyeoseo jarie an gyeseyo.",
+              "translation": "He's not at his desk — he's in a meeting."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "to be / to exist (honorific)",
+        "explanation": "The honorific form of '있다' (to be/exist). Used when a person of higher status is present somewhere. Unlike regular honorification with '-시-', '계시다' is a completely separate word. Examples: '선생님이 계세요' (The teacher is here), '할머니가 집에 계세요' (Grandmother is at home).",
+        "examples": {
+          "beginner": "The teacher is in the classroom (선생님이 교실에 계세요).",
+          "intermediate": "Mother is at home, so don't worry (어머니가 집에 계시니까 편히 가세요).",
+          "advanced": "'계시다' is a special honorific replacement for '있다', not simply '있다 + -시-'.",
+          "master": "Honorific system for '있다': 있다 (plain) → 계시다 (subject honorific) vs. 있으시다 (non-standard but widely used)."
+        },
+        "variations": {
+          "formal": [
+            "계시다 is the honorific form of '있다' (to be)."
+          ],
+          "casual": [
+            "Use 계시다 when an elder or superior is somewhere."
+          ],
+          "short": [
+            "gyesida"
+          ]
+        },
+        "dialogue": {
+          "context": "On a phone call",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Is the boss in?",
+              "romanization": "",
+              "translation": "사장님 계세요?"
+            },
+            {
+              "speaker": "B",
+              "text": "He's not at his desk — he's in a meeting.",
+              "romanization": "",
+              "translation": "지금 회의 중이셔서 자리에 안 계세요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[계시다]",
+      "ipa": "[kje.ɕi.da]"
+    }
+  },
+  {
+    "id": "japsusida",
+    "korean": "잡수시다",
+    "romanization": "japsusida",
+    "partOfSpeech": "verb",
+    "categoryId": "honorifics",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "verb",
+      "formal",
+      "food",
+      "elderly"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "잡수시다",
+        "explanation": "'먹다'의 높임말로, 웃어른이 음식을 드실 때 사용하는 존경 표현입니다. '드시다'보다 더 높은 경어로, 주로 조부모님이나 연세가 많은 분께 사용합니다.",
+        "examples": {
+          "beginner": "할머니, 많이 잡수세요.",
+          "intermediate": "어르신께서 식사를 잡수시고 계십니다.",
+          "advanced": "'잡수시다'는 '먹다'의 최고 높임말로, '드시다'보다 한 단계 더 높은 경어입니다.",
+          "master": "현대 한국어에서 '잡수시다'는 주로 노년층에 대한 존경을 표현할 때 사용되며, 일상에서는 '드시다'가 더 보편적입니다."
+        },
+        "variations": {
+          "formal": [
+            "어르신께서 잡수시고 계십니다."
+          ],
+          "casual": [
+            "할머니 많이 잡수셔."
+          ],
+          "short": [
+            "잡수세요"
+          ]
+        },
+        "dialogue": {
+          "context": "명절에 할머니 댁에서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "할머니, 이거 맛있어요. 많이 잡수세요.",
+              "romanization": "halmeoni, igeo masisseoyo. mani japseuseyo.",
+              "translation": "Grandma, this is delicious. Please eat a lot."
+            },
+            {
+              "speaker": "B",
+              "text": "그래, 너도 많이 먹어라.",
+              "romanization": "geurae, neodo mani meogeora.",
+              "translation": "Okay, you eat a lot too."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "japsusida (to eat — highest honorific)",
+        "explanation": "The highest honorific form of 'to eat' (먹다) in Korean. Used when referring to elders eating, especially grandparents or very senior people. It is a step above '드시다' (deusida) in formality.",
+        "examples": {
+          "beginner": "할머니, 많이 잡수세요 (Grandma, please eat a lot).",
+          "intermediate": "어르신께서 식사를 잡수시고 계십니다 (The elder is having a meal).",
+          "advanced": "'잡수시다' is the highest honorific form of '먹다', above '드시다'.",
+          "master": "In modern Korean, '잡수시다' is mainly reserved for elderly people, while '드시다' is more commonly used in everyday honorific speech."
+        },
+        "variations": {
+          "formal": [
+            "The elder is eating (잡수시고 계십니다)."
+          ],
+          "casual": [
+            "Grandma, please eat up."
+          ],
+          "short": [
+            "japseuseyo"
+          ]
+        },
+        "dialogue": {
+          "context": "At grandma's house during a holiday",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Grandma, this is delicious. Please eat a lot.",
+              "romanization": "",
+              "translation": "할머니, 이거 맛있어요. 많이 잡수세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Okay, you eat a lot too.",
+              "romanization": "",
+              "translation": "그래, 너도 많이 먹어라."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[잡수시다]",
+      "ipa": "[t͡ɕap̚.s͈u.ɕi.da]"
+    }
+  },
+  {
+    "id": "jumusida",
+    "korean": "주무시다",
+    "romanization": "jumusida",
+    "partOfSpeech": "verb",
+    "categoryId": "honorifics",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "verb",
+      "formal",
+      "elderly"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "주무시다",
+        "explanation": "'자다'의 높임말로, 웃어른이 잠을 주무실 때 사용하는 존경 표현입니다. 부모님이나 어르신께 '안녕히 주무세요'라고 인사하는 것이 일반적입니다.",
+        "examples": {
+          "beginner": "안녕히 주무세요.",
+          "intermediate": "아버지께서 일찍 주무셨습니다.",
+          "advanced": "'주무시다'는 '자다'의 존경어로, 높임의 대상이 잠자는 행위를 할 때 사용합니다.",
+          "master": "'주무시다'는 주체 높임법에 해당하며, 잠자리에 드는 행위를 높여 표현합니다."
+        },
+        "variations": {
+          "formal": [
+            "어머니께서 주무시고 계십니다."
+          ],
+          "casual": [
+            "아빠 잘 주무셔."
+          ],
+          "short": [
+            "주무세요"
+          ]
+        },
+        "dialogue": {
+          "context": "밤에 부모님께 인사할 때",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "엄마, 저 먼저 잘게요. 안녕히 주무세요.",
+              "romanization": "eomma, jeo meonjeo jalgeyo. annyeonghi jumuseyo.",
+              "translation": "Mom, I'll go to bed first. Good night."
+            },
+            {
+              "speaker": "B",
+              "text": "그래, 잘 자.",
+              "romanization": "geurae, jal ja.",
+              "translation": "Okay, sleep well."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "jumusida (to sleep — honorific)",
+        "explanation": "The honorific form of 'to sleep' (자다) in Korean. Used when referring to elders sleeping. The phrase '안녕히 주무세요' (sleep well) is the standard polite way to say goodnight to elders.",
+        "examples": {
+          "beginner": "안녕히 주무세요 (Good night — honorific).",
+          "intermediate": "아버지께서 일찍 주무셨습니다 (Father went to sleep early).",
+          "advanced": "'주무시다' is the honorific verb replacing '자다' when the subject is an elder.",
+          "master": "'주무시다' falls under subject honorification (주체 높임법), elevating the act of sleeping."
+        },
+        "variations": {
+          "formal": [
+            "Mother is sleeping (주무시고 계십니다)."
+          ],
+          "casual": [
+            "Dad, sleep well."
+          ],
+          "short": [
+            "jumuseyo"
+          ]
+        },
+        "dialogue": {
+          "context": "Saying goodnight to parents",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Mom, I'll go to bed first. Good night.",
+              "romanization": "",
+              "translation": "엄마, 저 먼저 잘게요. 안녕히 주무세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Okay, sleep well.",
+              "romanization": "",
+              "translation": "그래, 잘 자."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[주무시다]",
+      "ipa": "[t͡ɕu.mu.ɕi.da]"
+    }
+  },
+  {
+    "id": "doragasida",
+    "korean": "돌아가시다",
+    "romanization": "doragasida",
+    "partOfSpeech": "verb",
+    "categoryId": "honorifics",
+    "difficulty": "advanced",
+    "frequency": "uncommon",
+    "tags": [
+      "honorifics",
+      "verb",
+      "formal",
+      "death",
+      "sensitive"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "돌아가시다",
+        "explanation": "'죽다'의 높임말로, 존경하는 분이 세상을 떠나셨을 때 사용하는 완곡한 존경 표현입니다. 직접적으로 '죽다'라고 하면 무례하므로, 반드시 높임말을 사용해야 합니다.",
+        "examples": {
+          "beginner": "할아버지께서 돌아가셨습니다.",
+          "intermediate": "작년에 선생님께서 돌아가셨다는 소식을 들었습니다.",
+          "advanced": "'돌아가시다'는 '죽다'의 존경어로, 존경받는 사람의 사망을 높여 표현합니다.",
+          "master": "한국어에서 죽음을 표현하는 높임 단계: 죽다(평서) → 돌아가다(높임) → 돌아가시다(존경) → 별세하시다(격식 존경)."
+        },
+        "variations": {
+          "formal": [
+            "선생님께서 돌아가셨습니다."
+          ],
+          "casual": [
+            "할아버지 돌아가셨어."
+          ],
+          "short": [
+            "돌아가셨어요"
+          ]
+        },
+        "dialogue": {
+          "context": "슬픈 소식을 전할 때",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "어제 이웃집 할아버지께서 돌아가셨대요.",
+              "romanization": "eoje iutjip harabeojikkeseo doragasyeotdaeyo.",
+              "translation": "I heard the neighbor's grandfather passed away yesterday."
+            },
+            {
+              "speaker": "B",
+              "text": "정말요? 삼가 고인의 명복을 빕니다.",
+              "romanization": "jeongmalyo? samga goini myeongbogeul bimnida.",
+              "translation": "Really? May he rest in peace."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "doragasida (to pass away — honorific)",
+        "explanation": "The honorific euphemism for 'to die' (죽다) in Korean. Used when respectfully referring to someone's death. It is considered very rude to use '죽다' for elders or respected people; '돌아가시다' must be used instead.",
+        "examples": {
+          "beginner": "할아버지께서 돌아가셨습니다 (Grandfather passed away).",
+          "intermediate": "작년에 선생님께서 돌아가셨다는 소식을 들었습니다 (I heard the teacher passed away last year).",
+          "advanced": "'돌아가시다' is the honorific form of '죽다', used to respectfully describe death.",
+          "master": "Korean has multiple levels for expressing death: 죽다 (plain) → 돌아가다 (polite) → 돌아가시다 (honorific) → 별세하시다 (formal honorific)."
+        },
+        "variations": {
+          "formal": [
+            "The teacher has passed away (돌아가셨습니다)."
+          ],
+          "casual": [
+            "Grandpa passed away."
+          ],
+          "short": [
+            "doragasyeosseoyo"
+          ]
+        },
+        "dialogue": {
+          "context": "Sharing sad news",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "I heard the neighbor's grandfather passed away yesterday.",
+              "romanization": "",
+              "translation": "어제 이웃집 할아버지께서 돌아가셨대요."
+            },
+            {
+              "speaker": "B",
+              "text": "Really? May he rest in peace.",
+              "romanization": "",
+              "translation": "정말요? 삼가 고인의 명복을 빕니다."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[도라가시다]",
+      "ipa": "[to.ɾa.ɡa.ɕi.da]"
+    }
+  },
+  {
+    "id": "pyeonchaneuisida",
+    "korean": "편찮으시다",
+    "romanization": "pyeonchaneuisida",
+    "partOfSpeech": "adjective",
+    "categoryId": "honorifics",
+    "difficulty": "advanced",
+    "frequency": "uncommon",
+    "tags": [
+      "honorifics",
+      "adjective",
+      "formal",
+      "health"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "편찮으시다",
+        "explanation": "'아프다'의 높임말로, 웃어른의 건강이 좋지 않으실 때 사용하는 존경 표현입니다. '편찮다'에 존경의 '-시-'가 결합된 형태입니다.",
+        "examples": {
+          "beginner": "할머니께서 편찮으세요.",
+          "intermediate": "어머니께서 편찮으셔서 병원에 가셨습니다.",
+          "advanced": "'편찮으시다'는 '아프다'의 존경어로, 높임 대상의 건강 상태를 완곡하게 표현합니다.",
+          "master": "'편찮다'는 '편하지 않다'의 줄임말에서 유래한 완곡 표현으로, 직접적인 '아프다' 대신 사용합니다."
+        },
+        "variations": {
+          "formal": [
+            "교수님께서 편찮으십니다."
+          ],
+          "casual": [
+            "할머니 편찮으셔."
+          ],
+          "short": [
+            "편찮으세요"
+          ]
+        },
+        "dialogue": {
+          "context": "어르신의 건강을 걱정할 때",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "할머니께서 요즘 편찮으시다고 들었어요.",
+              "romanization": "halmeonikkeseo yojeum pyeonchaneuisidago deureosseoyo.",
+              "translation": "I heard grandma hasn't been feeling well lately."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 빨리 나으셨으면 좋겠어요.",
+              "romanization": "ne, ppalli naeusyeosseumyeon jokesseoyo.",
+              "translation": "Yes, I hope she gets better soon."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "pyeonchaneuisida (to be unwell — honorific)",
+        "explanation": "The honorific form of 'to be sick/unwell' (아프다) in Korean. Used when speaking about an elder's poor health. It combines '편찮다' (unwell, euphemism) with the honorific suffix '-시-'.",
+        "examples": {
+          "beginner": "할머니께서 편찮으세요 (Grandma is unwell).",
+          "intermediate": "어머니께서 편찮으셔서 병원에 가셨습니다 (Mother went to the hospital because she was unwell).",
+          "advanced": "'편찮으시다' is the honorific form of '아프다', used as a euphemism for an elder's illness.",
+          "master": "'편찮다' derives from '편하지 않다' (not comfortable), a euphemistic expression used instead of the direct '아프다'."
+        },
+        "variations": {
+          "formal": [
+            "The professor is unwell (편찮으십니다)."
+          ],
+          "casual": [
+            "Grandma is not feeling well."
+          ],
+          "short": [
+            "pyeonchaneuseyo"
+          ]
+        },
+        "dialogue": {
+          "context": "Worrying about an elder's health",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "I heard grandma hasn't been feeling well lately.",
+              "romanization": "",
+              "translation": "할머니께서 요즘 편찮으시다고 들었어요."
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I hope she gets better soon.",
+              "romanization": "",
+              "translation": "네, 빨리 나으셨으면 좋겠어요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[편차느시다]",
+      "ipa": "[pʰjʌn.tɕʰa.nɯ.ɕi.da]"
+    }
+  },
+  {
+    "id": "seonsaengnim",
+    "korean": "선생님",
+    "romanization": "seonsaengnim",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "title",
+      "respect",
+      "education",
+      "daily-life"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "선생님",
+        "explanation": "교사를 부르는 존칭이자, 전문가나 윗사람을 높여 부를 때 사용하는 호칭입니다. 학교에서뿐 아니라 의사, 변호사 등 전문직 종사자에게도 사용합니다.",
+        "examples": {
+          "beginner": "선생님, 안녕하세요!",
+          "intermediate": "선생님께서 숙제를 내주셨습니다.",
+          "advanced": "'선생님'은 교육자뿐 아니라 의사, 변호사, 작가 등 전문가에게도 쓰이는 범용 존칭입니다.",
+          "master": "'선생(先生)'은 원래 '먼저 태어난 사람'이라는 뜻으로, 가르침을 주는 사람에 대한 존경을 담고 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "선생님께서 말씀하셨습니다."
+          ],
+          "casual": [
+            "선생님이 그랬어."
+          ],
+          "short": [
+            "쌤"
+          ]
+        },
+        "dialogue": {
+          "context": "학교에서 선생님께 질문할 때",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "선생님, 이 문제 어떻게 풀어요?",
+              "romanization": "seonsaengnim, i munje eotteoke pureoyo?",
+              "translation": "Teacher, how do I solve this problem?"
+            },
+            {
+              "speaker": "B",
+              "text": "이건 먼저 공식을 적용해 보렴.",
+              "romanization": "igeon meonjeo gongsiceul jeogyonghae boryeom.",
+              "translation": "First try applying the formula."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "seonsaengnim (teacher / sir / ma'am)",
+        "explanation": "An honorific title meaning 'teacher' but used far more broadly in Korean. It is used for teachers, doctors, lawyers, writers, and other professionals. It conveys deep respect and is one of the most common honorific titles.",
+        "examples": {
+          "beginner": "선생님, 안녕하세요! (Hello, teacher!).",
+          "intermediate": "선생님께서 숙제를 내주셨습니다 (The teacher assigned homework).",
+          "advanced": "'선생님' is a general honorific used for educators, doctors, lawyers, and other professionals.",
+          "master": "'선생 (先生)' literally means 'one born before,' reflecting respect for those who provide teachings."
+        },
+        "variations": {
+          "formal": [
+            "The teacher has spoken (선생님께서 말씀하셨습니다)."
+          ],
+          "casual": [
+            "The teacher said so."
+          ],
+          "short": [
+            "ssaem (슬랭)"
+          ]
+        },
+        "dialogue": {
+          "context": "Asking a question at school",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Teacher, how do I solve this problem?",
+              "romanization": "",
+              "translation": "선생님, 이 문제 어떻게 풀어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "First try applying the formula.",
+              "romanization": "",
+              "translation": "이건 먼저 공식을 적용해 보렴."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[선생님]",
+      "ipa": "[sʌn.sɛŋ.nim]"
+    }
+  },
+  {
+    "id": "sajangnim",
+    "korean": "사장님",
+    "romanization": "sajangnim",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "title",
+      "business",
+      "workplace"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "사장님",
+        "explanation": "회사의 최고 경영자를 높여 부르는 호칭입니다. 한국 직장 문화에서 직급에 '님'을 붙여 부르는 것이 기본 예의이며, 식당이나 가게 주인에게도 사용합니다.",
+        "examples": {
+          "beginner": "사장님, 안녕하세요.",
+          "intermediate": "사장님께서 회의를 소집하셨습니다.",
+          "advanced": "'사장님'은 회사 대표뿐 아니라 식당, 가게 주인에게도 관용적으로 사용됩니다.",
+          "master": "한국에서 '사장님'은 실제 직급과 관계없이 사업주에 대한 범용 존칭으로 확대 사용됩니다."
+        },
+        "variations": {
+          "formal": [
+            "사장님께서 결정하셨습니다."
+          ],
+          "casual": [
+            "사장님이 그랬어."
+          ],
+          "short": [
+            "사장님"
+          ]
+        },
+        "dialogue": {
+          "context": "직장에서 상사에게 보고할 때",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "사장님, 이번 프로젝트 보고서 준비됐습니다.",
+              "romanization": "sajangnim, ibeon peurojekteu bogoseo junbidwaetseumnida.",
+              "translation": "Sir, the project report is ready."
+            },
+            {
+              "speaker": "B",
+              "text": "수고했어요. 내일 회의에서 발표해 주세요.",
+              "romanization": "sugohaesseoyo. naeil hoeuieseo balpyohae juseyo.",
+              "translation": "Good work. Please present it at tomorrow's meeting."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "sajangnim (boss / company president)",
+        "explanation": "An honorific title for the head of a company or business owner. In Korean workplace culture, titles are always followed by '님' (-nim) as a sign of respect. Also used colloquially for restaurant or shop owners.",
+        "examples": {
+          "beginner": "사장님, 안녕하세요 (Hello, boss).",
+          "intermediate": "사장님께서 회의를 소집하셨습니다 (The boss called a meeting).",
+          "advanced": "'사장님' is used not only for CEOs but also colloquially for restaurant and shop owners.",
+          "master": "In Korea, '사장님' has expanded beyond its literal meaning to become a general honorific for any business owner."
+        },
+        "variations": {
+          "formal": [
+            "The president has decided (사장님께서 결정하셨습니다)."
+          ],
+          "casual": [
+            "The boss said so."
+          ],
+          "short": [
+            "sajangnim"
+          ]
+        },
+        "dialogue": {
+          "context": "Reporting to the boss at work",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Sir, the project report is ready.",
+              "romanization": "",
+              "translation": "사장님, 이번 프로젝트 보고서 준비됐습니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Good work. Please present it at tomorrow's meeting.",
+              "romanization": "",
+              "translation": "수고했어요. 내일 회의에서 발표해 주세요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[사장님]",
+      "ipa": "[sa.d͡ʑaŋ.nim]"
+    }
+  },
+  {
+    "id": "bujangnim",
+    "korean": "부장님",
+    "romanization": "bujangnim",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "title",
+      "business",
+      "workplace"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "부장님",
+        "explanation": "회사에서 부서의 장을 높여 부르는 호칭입니다. 한국 기업의 직급 체계에서 차장과 이사 사이에 위치하며, 부서를 총괄하는 중간 관리직입니다.",
+        "examples": {
+          "beginner": "부장님, 서류 확인해 주세요.",
+          "intermediate": "부장님께서 오늘 출장을 가셨습니다.",
+          "advanced": "'부장'은 한국 기업의 대표적인 직급으로, 과장-차장-부장-이사 순서로 올라갑니다.",
+          "master": "한국 기업 문화에서 직급 호칭은 단순한 명칭이 아니라 상하관계와 예절의 핵심입니다."
+        },
+        "variations": {
+          "formal": [
+            "부장님께서 승인하셨습니다."
+          ],
+          "casual": [
+            "부장님이 오케이 했어."
+          ],
+          "short": [
+            "부장님"
+          ]
+        },
+        "dialogue": {
+          "context": "회사에서 업무 보고할 때",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "부장님, 거래처에서 연락이 왔습니다.",
+              "romanization": "bujangnim, georaecheeseo yeollagi watseumnida.",
+              "translation": "Department head, we received a call from the client."
+            },
+            {
+              "speaker": "B",
+              "text": "알겠습니다. 제가 직접 전화하겠습니다.",
+              "romanization": "algetseumnida. jega jikjeop jeonhwahagetseumnida.",
+              "translation": "I see. I'll call them myself."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "bujangnim (department head)",
+        "explanation": "An honorific title for a department head in a Korean company. In the Korean corporate hierarchy, '부장' sits between '차장' (deputy manager) and '이사' (director). It is a mid-to-senior management position overseeing an entire department.",
+        "examples": {
+          "beginner": "부장님, 서류 확인해 주세요 (Department head, please check the documents).",
+          "intermediate": "부장님께서 오늘 출장을 가셨습니다 (The department head went on a business trip today).",
+          "advanced": "'부장' is a key title in Korean corporate hierarchy: 과장 → 차장 → 부장 → 이사.",
+          "master": "In Korean corporate culture, title-based address is not just naming — it is fundamental to hierarchy and etiquette."
+        },
+        "variations": {
+          "formal": [
+            "The department head has approved it (부장님께서 승인하셨습니다)."
+          ],
+          "casual": [
+            "The department head okayed it."
+          ],
+          "short": [
+            "bujangnim"
+          ]
+        },
+        "dialogue": {
+          "context": "Reporting at the office",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Department head, we received a call from the client.",
+              "romanization": "",
+              "translation": "부장님, 거래처에서 연락이 왔습니다."
+            },
+            {
+              "speaker": "B",
+              "text": "I see. I'll call them myself.",
+              "romanization": "",
+              "translation": "알겠습니다. 제가 직접 전화하겠습니다."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[부장님]",
+      "ipa": "[pu.d͡ʑaŋ.nim]"
+    }
+  },
+  {
+    "id": "gwajangnim",
+    "korean": "과장님",
+    "romanization": "gwajangnim",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "title",
+      "business",
+      "workplace"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "과장님",
+        "explanation": "회사에서 과(課)의 장을 높여 부르는 호칭입니다. 대리 위, 차장 아래의 직급으로, 실무 관리를 담당하는 중간 관리직입니다.",
+        "examples": {
+          "beginner": "과장님, 회의 시간이 변경됐습니다.",
+          "intermediate": "과장님께서 새 프로젝트를 맡으셨습니다.",
+          "advanced": "'과장'은 대리-과장-차장-부장 직급 체계에서 실무 관리의 시작점입니다.",
+          "master": "한국 드라마에서 '과장님'은 직장 생활의 상징적 직급으로 자주 등장합니다."
+        },
+        "variations": {
+          "formal": [
+            "과장님께서 지시하셨습니다."
+          ],
+          "casual": [
+            "과장님이 시켰어."
+          ],
+          "short": [
+            "과장님"
+          ]
+        },
+        "dialogue": {
+          "context": "직장에서 일정을 확인할 때",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "과장님, 내일 회의 몇 시인가요?",
+              "romanization": "gwajangnim, naeil hoeui myeot siingayo?",
+              "translation": "Section chief, what time is tomorrow's meeting?"
+            },
+            {
+              "speaker": "B",
+              "text": "오후 2시로 변경됐어요.",
+              "romanization": "ohu dusiro byeongyeongdwaesseoyo.",
+              "translation": "It's been changed to 2 PM."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "gwajangnim (section chief)",
+        "explanation": "An honorific title for a section chief in a Korean company. It sits above '대리' (assistant manager) and below '차장' (deputy manager). This is a hands-on management role overseeing a section or team.",
+        "examples": {
+          "beginner": "과장님, 회의 시간이 변경됐습니다 (Section chief, the meeting time has changed).",
+          "intermediate": "과장님께서 새 프로젝트를 맡으셨습니다 (The section chief took on a new project).",
+          "advanced": "'과장' marks the beginning of management in the 대리 → 과장 → 차장 → 부장 hierarchy.",
+          "master": "In Korean dramas, '과장님' is an iconic workplace title that frequently appears as a symbol of office life."
+        },
+        "variations": {
+          "formal": [
+            "The section chief has given instructions (과장님께서 지시하셨습니다)."
+          ],
+          "casual": [
+            "The section chief told us to."
+          ],
+          "short": [
+            "gwajangnim"
+          ]
+        },
+        "dialogue": {
+          "context": "Checking the schedule at work",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Section chief, what time is tomorrow's meeting?",
+              "romanization": "",
+              "translation": "과장님, 내일 회의 몇 시인가요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's been changed to 2 PM.",
+              "romanization": "",
+              "translation": "오후 2시로 변경됐어요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[과장님]",
+      "ipa": "[kwa.d͡ʑaŋ.nim]"
+    }
+  },
+  {
+    "id": "daerinim",
+    "korean": "대리님",
+    "romanization": "daerinim",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "title",
+      "business",
+      "workplace"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "대리님",
+        "explanation": "회사에서 사원 바로 위의 직급을 높여 부르는 호칭입니다. 한국 기업 직급 체계의 첫 번째 승진 단계로, 실무를 수행하면서 후배를 지도하는 역할입니다.",
+        "examples": {
+          "beginner": "대리님, 이 파일 확인해 주세요.",
+          "intermediate": "김대리님께서 보고서를 작성해 주셨습니다.",
+          "advanced": "'대리'는 사원에서 첫 번째로 올라가는 직급으로, 보통 입사 3~4년 차에 달성합니다.",
+          "master": "최근 한국 기업들은 직급 간소화로 '대리'를 폐지하고 '매니저' 등으로 통합하는 추세입니다."
+        },
+        "variations": {
+          "formal": [
+            "대리님께서 처리해 주셨습니다."
+          ],
+          "casual": [
+            "대리님이 해줬어."
+          ],
+          "short": [
+            "대리님"
+          ]
+        },
+        "dialogue": {
+          "context": "신입 사원이 선배에게 도움을 요청할 때",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "대리님, 이 보고서 양식이 맞는지 봐주실 수 있나요?",
+              "romanization": "daerinim, i bogoseo yangsigi manneungi bwajusil su innayo?",
+              "translation": "Assistant manager, could you check if this report format is correct?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 잠깐만요. 같이 봅시다.",
+              "romanization": "ne, jamkkanmanyo. gachi bopsida.",
+              "translation": "Sure, just a moment. Let's look at it together."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "daerinim (assistant manager)",
+        "explanation": "An honorific title for an assistant manager in a Korean company. It is the first promotion level above '사원' (staff), typically achieved 3-4 years after joining. The role involves hands-on work while mentoring junior staff.",
+        "examples": {
+          "beginner": "대리님, 이 파일 확인해 주세요 (Assistant manager, please check this file).",
+          "intermediate": "김대리님께서 보고서를 작성해 주셨습니다 (Assistant Manager Kim wrote the report).",
+          "advanced": "'대리' is the first promotion from '사원', typically after 3-4 years.",
+          "master": "Recently, many Korean companies are simplifying titles, replacing '대리' with unified titles like 'manager'."
+        },
+        "variations": {
+          "formal": [
+            "The assistant manager handled it (대리님께서 처리해 주셨습니다)."
+          ],
+          "casual": [
+            "The assistant manager did it for us."
+          ],
+          "short": [
+            "daerinim"
+          ]
+        },
+        "dialogue": {
+          "context": "A new employee asking a senior for help",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Assistant manager, could you check if this report format is correct?",
+              "romanization": "",
+              "translation": "대리님, 이 보고서 양식이 맞는지 봐주실 수 있나요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Sure, just a moment. Let's look at it together.",
+              "romanization": "",
+              "translation": "네, 잠깐만요. 같이 봅시다."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[대리님]",
+      "ipa": "[tɛ.ɾi.nim]"
+    }
+  },
+  {
+    "id": "hyeong",
+    "korean": "형",
+    "romanization": "hyeong",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "family",
+      "casual",
+      "male",
+      "korean-culture"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "형",
+        "explanation": "남자가 자기보다 나이 많은 남자를 부르는 호칭입니다. 친형제뿐 아니라 친한 선배나 친구 사이에서도 사용합니다. 한국 문화에서 나이와 성별에 따라 호칭이 달라지는 대표적인 예입니다.",
+        "examples": {
+          "beginner": "형, 같이 밥 먹자.",
+          "intermediate": "우리 형은 대학생이에요.",
+          "advanced": "'형'은 혈연관계뿐 아니라 친밀한 남성 선후배 관계에서도 사용됩니다.",
+          "master": "한국 사회에서 '형'이라고 부르는 것은 친밀감과 존경의 표현이며, 나이 서열 문화를 반영합니다."
+        },
+        "variations": {
+          "formal": [
+            "형님께서 오셨습니다."
+          ],
+          "casual": [
+            "형, 뭐 해?"
+          ],
+          "short": [
+            "형"
+          ]
+        },
+        "dialogue": {
+          "context": "남동생이 형에게 말할 때",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "형, 오늘 뭐 해? 같이 축구하자.",
+              "romanization": "hyeong, oneul mwo hae? gachi chukguhaja.",
+              "translation": "Bro, what are you doing today? Let's play soccer."
+            },
+            {
+              "speaker": "B",
+              "text": "좋아, 3시에 공원에서 만나자.",
+              "romanization": "joa, sesie gongwoneseo mannaja.",
+              "translation": "Sure, let's meet at the park at 3."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "hyeong (older brother — used by males)",
+        "explanation": "A term used by males to address an older male, whether a biological brother or a close older friend/senior. It reflects Korea's age-based honorific system where different titles are used depending on the speaker's and listener's gender and age.",
+        "examples": {
+          "beginner": "형, 같이 밥 먹자 (Bro, let's eat together).",
+          "intermediate": "우리 형은 대학생이에요 (My older brother is a college student).",
+          "advanced": "'형' is used for both biological brothers and close older male friends/seniors.",
+          "master": "Calling someone '형' in Korean society expresses both closeness and respect, reflecting Korea's age-based hierarchy."
+        },
+        "variations": {
+          "formal": [
+            "형님 has arrived (형님께서 오셨습니다)."
+          ],
+          "casual": [
+            "Hey bro, what's up?"
+          ],
+          "short": [
+            "hyeong"
+          ]
+        },
+        "dialogue": {
+          "context": "A younger brother talking to his older brother",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Bro, what are you doing today? Let's play soccer.",
+              "romanization": "",
+              "translation": "형, 오늘 뭐 해? 같이 축구하자."
+            },
+            {
+              "speaker": "B",
+              "text": "Sure, let's meet at the park at 3.",
+              "romanization": "",
+              "translation": "좋아, 3시에 공원에서 만나자."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[형]",
+      "ipa": "[hjʌŋ]"
+    }
+  },
+  {
+    "id": "nuna",
+    "korean": "누나",
+    "romanization": "nuna",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "family",
+      "casual",
+      "male",
+      "korean-culture"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "누나",
+        "explanation": "남자가 자기보다 나이 많은 여자를 부르는 호칭입니다. 친누나뿐 아니라 친한 여자 선배에게도 사용합니다. '언니'는 여자가 쓰는 말이므로 혼동하지 않도록 주의해야 합니다.",
+        "examples": {
+          "beginner": "누나, 이거 뭐야?",
+          "intermediate": "우리 누나는 요리를 잘해요.",
+          "advanced": "'누나'는 남성 화자가 나이 많은 여성에게 사용하는 호칭으로, 혈연뿐 아니라 친밀한 관계에서도 씁니다.",
+          "master": "'누나'와 '언니'의 차이는 화자의 성별에 의해 결정됩니다: 남자 → 누나, 여자 → 언니."
+        },
+        "variations": {
+          "formal": [
+            "누님께서 도와주셨습니다."
+          ],
+          "casual": [
+            "누나, 나 좀 도와줘."
+          ],
+          "short": [
+            "누나"
+          ]
+        },
+        "dialogue": {
+          "context": "남동생이 누나에게 부탁할 때",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "누나, 나 숙제 좀 도와줘.",
+              "romanization": "nuna, na sukje jom dowajwo.",
+              "translation": "Sis, help me with my homework."
+            },
+            {
+              "speaker": "B",
+              "text": "뭔데? 어디 보여봐.",
+              "romanization": "mwonde? eodi boyeobwa.",
+              "translation": "What is it? Let me see."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "nuna (older sister — used by males)",
+        "explanation": "A term used by males to address an older female, whether a biological sister or a close older female friend/senior. Note that females use '언니' (eonni) instead. The distinction is based on the speaker's gender.",
+        "examples": {
+          "beginner": "누나, 이거 뭐야? (Sis, what's this?).",
+          "intermediate": "우리 누나는 요리를 잘해요 (My older sister cooks well).",
+          "advanced": "'누나' is used by male speakers for older females, in both family and close social contexts.",
+          "master": "The difference between '누나' and '언니' is determined by the speaker's gender: males → 누나, females → 언니."
+        },
+        "variations": {
+          "formal": [
+            "누님 helped us (누님께서 도와주셨습니다)."
+          ],
+          "casual": [
+            "Sis, help me out."
+          ],
+          "short": [
+            "nuna"
+          ]
+        },
+        "dialogue": {
+          "context": "A younger brother asking his older sister for help",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Sis, help me with my homework.",
+              "romanization": "",
+              "translation": "누나, 나 숙제 좀 도와줘."
+            },
+            {
+              "speaker": "B",
+              "text": "What is it? Let me see.",
+              "romanization": "",
+              "translation": "뭔데? 어디 보여봐."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[누나]",
+      "ipa": "[nu.na]"
+    }
+  },
+  {
+    "id": "oppa",
+    "korean": "오빠",
+    "romanization": "oppa",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "family",
+      "casual",
+      "female",
+      "korean-culture"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "오빠",
+        "explanation": "여자가 자기보다 나이 많은 남자를 부르는 호칭입니다. 친오빠뿐 아니라 친한 남자 선배, 남자친구에게도 사용합니다. K-pop 팬들이 남자 아이돌을 부를 때도 자주 씁니다.",
+        "examples": {
+          "beginner": "오빠, 같이 가자.",
+          "intermediate": "우리 오빠는 군대에 있어요.",
+          "advanced": "'오빠'는 가족 호칭에서 출발했지만, 연인이나 친한 선배에게도 확대 사용됩니다.",
+          "master": "K-pop 문화에서 '오빠'는 팬이 남자 아이돌에게 친밀감을 표현하는 대표적 호칭이 되었습니다."
+        },
+        "variations": {
+          "formal": [
+            "오빠가 먼저 도착하셨어요."
+          ],
+          "casual": [
+            "오빠, 뭐 해?"
+          ],
+          "short": [
+            "오빠"
+          ]
+        },
+        "dialogue": {
+          "context": "여동생이 오빠에게 말할 때",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "오빠, 오늘 엄마 생일인데 선물 같이 사러 가자.",
+              "romanization": "oppa, oneul eomma saengirinde seonmul gachi sareo gaja.",
+              "translation": "Oppa, it's mom's birthday today. Let's go buy a gift together."
+            },
+            {
+              "speaker": "B",
+              "text": "그래, 점심 먹고 나가자.",
+              "romanization": "geurae, jeomsim meokgo nagaja.",
+              "translation": "Sure, let's go after lunch."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "oppa (older brother — used by females)",
+        "explanation": "A term used by females to address an older male, whether a biological brother, close older male friend, or boyfriend. It has become widely known globally through K-pop culture, where female fans use it to address male idols.",
+        "examples": {
+          "beginner": "오빠, 같이 가자 (Oppa, let's go together).",
+          "intermediate": "우리 오빠는 군대에 있어요 (My older brother is in the military).",
+          "advanced": "'오빠' started as a family term but has expanded to include boyfriends and close older males.",
+          "master": "In K-pop culture, '오빠' has become the iconic term fans use to express closeness with male idols."
+        },
+        "variations": {
+          "formal": [
+            "오빠 arrived first."
+          ],
+          "casual": [
+            "Oppa, what are you doing?"
+          ],
+          "short": [
+            "oppa"
+          ]
+        },
+        "dialogue": {
+          "context": "A younger sister talking to her older brother",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Oppa, it's mom's birthday today. Let's go buy a gift together.",
+              "romanization": "",
+              "translation": "오빠, 오늘 엄마 생일인데 선물 같이 사러 가자."
+            },
+            {
+              "speaker": "B",
+              "text": "Sure, let's go after lunch.",
+              "romanization": "",
+              "translation": "그래, 점심 먹고 나가자."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[오빠]",
+      "ipa": "[op̚.p͈a]"
+    }
+  },
+  {
+    "id": "eonni",
+    "korean": "언니",
+    "romanization": "eonni",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "family",
+      "casual",
+      "female",
+      "korean-culture"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "언니",
+        "explanation": "여자가 자기보다 나이 많은 여자를 부르는 호칭입니다. 친언니뿐 아니라 친한 여자 선배에게도 사용합니다. 남자가 나이 많은 여자를 부를 때는 '누나'를 사용합니다.",
+        "examples": {
+          "beginner": "언니, 같이 쇼핑 가자.",
+          "intermediate": "우리 언니는 대학교에 다녀요.",
+          "advanced": "'언니'는 여성 화자가 나이 많은 여성에게 사용하는 호칭으로, 친밀한 관계에서 널리 쓰입니다.",
+          "master": "'언니'는 한국 여성 문화에서 유대감과 친밀감을 나타내는 중요한 호칭입니다."
+        },
+        "variations": {
+          "formal": [
+            "언니께서 먼저 오셨어요."
+          ],
+          "casual": [
+            "언니, 나 좀 도와줘."
+          ],
+          "short": [
+            "언니"
+          ]
+        },
+        "dialogue": {
+          "context": "여동생이 언니에게 말할 때",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "언니, 이 옷 어때? 나한테 어울려?",
+              "romanization": "eonni, i ot eottae? nahante eoullyeo?",
+              "translation": "Sis, how's this outfit? Does it suit me?"
+            },
+            {
+              "speaker": "B",
+              "text": "예쁘다! 그 색깔 잘 어울린다.",
+              "romanization": "yeppeuda! geu saekkal jal eoulrinda.",
+              "translation": "Pretty! That color looks great on you."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "eonni (older sister — used by females)",
+        "explanation": "A term used by females to address an older female, whether a biological sister or a close older female friend/senior. Males use '누나' (nuna) instead. This distinction is one of the key features of Korean's gender-specific honorific system.",
+        "examples": {
+          "beginner": "언니, 같이 쇼핑 가자 (Sis, let's go shopping).",
+          "intermediate": "우리 언니는 대학교에 다녀요 (My older sister goes to university).",
+          "advanced": "'언니' is used by female speakers for older females, widely used in close relationships.",
+          "master": "'언니' is an important term in Korean female culture, expressing bonds and closeness."
+        },
+        "variations": {
+          "formal": [
+            "언니 arrived first."
+          ],
+          "casual": [
+            "Sis, help me out."
+          ],
+          "short": [
+            "eonni"
+          ]
+        },
+        "dialogue": {
+          "context": "A younger sister talking to her older sister",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Sis, how's this outfit? Does it suit me?",
+              "romanization": "",
+              "translation": "언니, 이 옷 어때? 나한테 어울려?"
+            },
+            {
+              "speaker": "B",
+              "text": "Pretty! That color looks great on you.",
+              "romanization": "",
+              "translation": "예쁘다! 그 색깔 잘 어울린다."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[언니]",
+      "ipa": "[ʌn.ni]"
+    }
+  },
+  {
+    "id": "ajeossi",
+    "korean": "아저씨",
+    "romanization": "ajeossi",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "title",
+      "casual",
+      "age",
+      "daily-life"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "아저씨",
+        "explanation": "중년 남성을 부르는 일반적인 호칭입니다. 삼촌이라는 뜻도 있지만, 일상에서는 이름을 모르는 중년 남성에게 널리 사용합니다. 젊은 사람에게 쓰면 실례가 될 수 있습니다.",
+        "examples": {
+          "beginner": "아저씨, 여기 물 한 잔 주세요.",
+          "intermediate": "길에서 아저씨가 길을 알려주셨어요.",
+          "advanced": "'아저씨'는 중년 남성에 대한 일반 호칭이지만, 젊은 남성에게 쓰면 나이 들어 보인다는 뜻으로 실례가 됩니다.",
+          "master": "'아저씨'의 사용 범위는 세대에 따라 달라지며, 30대 남성에게 쓰면 불쾌감을 줄 수 있습니다."
+        },
+        "variations": {
+          "formal": [
+            "아저씨께서 도와주셨습니다."
+          ],
+          "casual": [
+            "아저씨, 이거 얼마예요?"
+          ],
+          "short": [
+            "아저씨"
+          ]
+        },
+        "dialogue": {
+          "context": "시장에서 물건을 살 때",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "아저씨, 이 사과 한 봉지 얼마예요?",
+              "romanization": "ajeossi, i sagwa han bongji eolmayeyo?",
+              "translation": "Mister, how much is a bag of these apples?"
+            },
+            {
+              "speaker": "B",
+              "text": "5천 원이요. 싸게 드릴게요.",
+              "romanization": "ocheon woniyo. ssage deurilgeyo.",
+              "translation": "5,000 won. I'll give you a good price."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "ajeossi (uncle / mister)",
+        "explanation": "A common title for middle-aged men in Korean. While it literally means 'uncle,' it is widely used to address any middle-aged man whose name you don't know. Using it for younger men can be considered rude as it implies they look old.",
+        "examples": {
+          "beginner": "아저씨, 여기 물 한 잔 주세요 (Mister, a glass of water please).",
+          "intermediate": "길에서 아저씨가 길을 알려주셨어요 (A man on the street gave me directions).",
+          "advanced": "'아저씨' is a general title for middle-aged men, but using it for younger men can be offensive.",
+          "master": "The acceptable age range for '아저씨' varies by generation; using it for men in their 30s may cause offense."
+        },
+        "variations": {
+          "formal": [
+            "The gentleman helped us (아저씨께서 도와주셨습니다)."
+          ],
+          "casual": [
+            "Mister, how much is this?"
+          ],
+          "short": [
+            "ajeossi"
+          ]
+        },
+        "dialogue": {
+          "context": "Buying something at a market",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Mister, how much is a bag of these apples?",
+              "romanization": "",
+              "translation": "아저씨, 이 사과 한 봉지 얼마예요?"
+            },
+            {
+              "speaker": "B",
+              "text": "5,000 won. I'll give you a good price.",
+              "romanization": "",
+              "translation": "5천 원이요. 싸게 드릴게요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아저씨]",
+      "ipa": "[a.d͡ʑʌ.s͈i]"
+    }
+  },
+  {
+    "id": "ajumeoni",
+    "korean": "아주머니",
+    "romanization": "ajumeoni",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "title",
+      "casual",
+      "age",
+      "daily-life"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "아주머니",
+        "explanation": "중년 여성을 부르는 일반적인 호칭입니다. '아줌마'보다 정중한 표현이며, 이름을 모르는 중년 여성에게 사용합니다. 젊은 여성에게 사용하면 실례가 될 수 있습니다.",
+        "examples": {
+          "beginner": "아주머니, 감사합니다.",
+          "intermediate": "옆집 아주머니께서 음식을 나눠주셨어요.",
+          "advanced": "'아주머니'는 '아줌마'의 정중한 형태로, 공적인 상황에서는 '아주머니'를 사용하는 것이 좋습니다.",
+          "master": "'아줌마'와 '아주머니'의 어감 차이는 한국어 존비어 체계의 미묘한 예시입니다."
+        },
+        "variations": {
+          "formal": [
+            "아주머니께서 친절히 안내해 주셨습니다."
+          ],
+          "casual": [
+            "아줌마, 이거 주세요."
+          ],
+          "short": [
+            "아주머니"
+          ]
+        },
+        "dialogue": {
+          "context": "식당에서 주문할 때",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "아주머니, 여기 김치찌개 하나 주세요.",
+              "romanization": "ajumeoni, yeogi gimchijjigae hana juseyo.",
+              "translation": "Ma'am, one kimchi stew please."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 잠깐만 기다리세요.",
+              "romanization": "ne, jamkkanman gidariseyo.",
+              "translation": "Sure, please wait a moment."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "ajumeoni (aunt / ma'am)",
+        "explanation": "A polite title for middle-aged women in Korean. It is the more respectful form of '아줌마' (ajumma). Used to address middle-aged women whose name you don't know. Like '아저씨', using it for younger women can be considered rude.",
+        "examples": {
+          "beginner": "아주머니, 감사합니다 (Thank you, ma'am).",
+          "intermediate": "옆집 아주머니께서 음식을 나눠주셨어요 (The neighbor lady shared food with us).",
+          "advanced": "'아주머니' is the polite form of '아줌마'; in formal situations, '아주머니' is preferred.",
+          "master": "The nuance difference between '아줌마' and '아주머니' is a subtle example of Korean's honorific gradation."
+        },
+        "variations": {
+          "formal": [
+            "The lady kindly guided us (아주머니께서 친절히 안내해 주셨습니다)."
+          ],
+          "casual": [
+            "아줌마, give me this please."
+          ],
+          "short": [
+            "ajumeoni"
+          ]
+        },
+        "dialogue": {
+          "context": "Ordering at a restaurant",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Ma'am, one kimchi stew please.",
+              "romanization": "",
+              "translation": "아주머니, 여기 김치찌개 하나 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "Sure, please wait a moment.",
+              "romanization": "",
+              "translation": "네, 잠깐만 기다리세요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[아주머니]",
+      "ipa": "[a.d͡ʑu.mʌ.ni]"
+    }
+  },
+  {
+    "id": "harabeoji",
+    "korean": "할아버지",
+    "romanization": "harabeoji",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "family",
+      "elderly",
+      "respect"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "할아버지",
+        "explanation": "아버지의 아버지, 또는 노년 남성을 부르는 호칭입니다. 친할아버지뿐 아니라 나이 많은 남성 어르신에게도 사용합니다. 한국 문화에서 어른을 공경하는 마음이 담긴 호칭입니다.",
+        "examples": {
+          "beginner": "할아버지, 안녕하세요!",
+          "intermediate": "할아버지께서 옛날이야기를 해주셨어요.",
+          "advanced": "'할아버지'는 친조부뿐 아니라 나이 많은 남성 어르신에 대한 일반 호칭으로도 쓰입니다.",
+          "master": "한국의 유교 전통에서 '할아버지'는 가족의 최고 어른으로서 특별한 존경의 대상입니다."
+        },
+        "variations": {
+          "formal": [
+            "할아버지께서 말씀하셨습니다."
+          ],
+          "casual": [
+            "할아버지, 나 왔어!"
+          ],
+          "short": [
+            "할아버지"
+          ]
+        },
+        "dialogue": {
+          "context": "명절에 할아버지 댁을 방문할 때",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "할아버지, 새해 복 많이 받으세요!",
+              "romanization": "harabeoji, saehae bok mani badeuseyo!",
+              "translation": "Grandpa, Happy New Year!"
+            },
+            {
+              "speaker": "B",
+              "text": "그래, 우리 손주 왔구나. 많이 컸네.",
+              "romanization": "geurae, uri sonju watguna. mani keonne.",
+              "translation": "Oh, our grandchild is here. You've grown so much."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "harabeoji (grandfather)",
+        "explanation": "The Korean word for 'grandfather,' also used as a respectful title for elderly men in general. In Korean culture, it reflects the deep respect for elders rooted in Confucian values.",
+        "examples": {
+          "beginner": "할아버지, 안녕하세요! (Hello, grandpa!).",
+          "intermediate": "할아버지께서 옛날이야기를 해주셨어요 (Grandpa told us old stories).",
+          "advanced": "'할아버지' is used for both one's grandfather and elderly men in general.",
+          "master": "In Korea's Confucian tradition, '할아버지' holds a special place as the most senior family figure deserving utmost respect."
+        },
+        "variations": {
+          "formal": [
+            "Grandfather has spoken (할아버지께서 말씀하셨습니다)."
+          ],
+          "casual": [
+            "Grandpa, I'm here!"
+          ],
+          "short": [
+            "harabeoji"
+          ]
+        },
+        "dialogue": {
+          "context": "Visiting grandpa during a holiday",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Grandpa, Happy New Year!",
+              "romanization": "",
+              "translation": "할아버지, 새해 복 많이 받으세요!"
+            },
+            {
+              "speaker": "B",
+              "text": "Oh, our grandchild is here. You've grown so much.",
+              "romanization": "",
+              "translation": "그래, 우리 손주 왔구나. 많이 컸네."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[하라버지]",
+      "ipa": "[ha.ɾa.bʌ.d͡ʑi]"
+    }
+  },
+  {
+    "id": "halmeoni",
+    "korean": "할머니",
+    "romanization": "halmeoni",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "honorifics",
+      "family",
+      "elderly",
+      "respect"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "할머니",
+        "explanation": "아버지의 어머니, 또는 노년 여성을 부르는 호칭입니다. 친할머니뿐 아니라 나이 많은 여성 어르신에게도 사용합니다. 한국 가정에서 할머니는 따뜻함과 사랑의 상징입니다.",
+        "examples": {
+          "beginner": "할머니, 사랑해요!",
+          "intermediate": "할머니께서 맛있는 음식을 만들어 주셨어요.",
+          "advanced": "'할머니'는 친조모뿐 아니라 나이 많은 여성 어르신에 대한 일반 호칭으로도 쓰입니다.",
+          "master": "한국 문화에서 '할머니'는 가족의 정서적 중심으로, 손주에 대한 무한한 사랑을 상징합니다."
+        },
+        "variations": {
+          "formal": [
+            "할머니께서 건강하시길 바랍니다."
+          ],
+          "casual": [
+            "할머니, 배고파!"
+          ],
+          "short": [
+            "할머니"
+          ]
+        },
+        "dialogue": {
+          "context": "할머니 댁에서 식사할 때",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "할머니, 이 음식 정말 맛있어요!",
+              "romanization": "halmeoni, i eumsik jeongmal masisseoyo!",
+              "translation": "Grandma, this food is really delicious!"
+            },
+            {
+              "speaker": "B",
+              "text": "그래? 더 먹어라, 많이 해놨다.",
+              "romanization": "geurae? deo meogeora, mani haenwatda.",
+              "translation": "Really? Eat more, I made a lot."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "halmeoni (grandmother)",
+        "explanation": "The Korean word for 'grandmother,' also used as a respectful title for elderly women in general. In Korean families, grandmothers symbolize warmth, love, and care, often associated with home-cooked meals and affection for grandchildren.",
+        "examples": {
+          "beginner": "할머니, 사랑해요! (Grandma, I love you!).",
+          "intermediate": "할머니께서 맛있는 음식을 만들어 주셨어요 (Grandma made delicious food for us).",
+          "advanced": "'할머니' is used for both one's grandmother and elderly women in general.",
+          "master": "In Korean culture, '할머니' represents the emotional center of the family, symbolizing boundless love for grandchildren."
+        },
+        "variations": {
+          "formal": [
+            "We wish grandma good health (할머니께서 건강하시길 바랍니다)."
+          ],
+          "casual": [
+            "Grandma, I'm hungry!"
+          ],
+          "short": [
+            "halmeoni"
+          ]
+        },
+        "dialogue": {
+          "context": "Having a meal at grandma's house",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Grandma, this food is really delicious!",
+              "romanization": "",
+              "translation": "할머니, 이 음식 정말 맛있어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "Really? Eat more, I made a lot.",
+              "romanization": "",
+              "translation": "그래? 더 먹어라, 많이 해놨다."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[할머니]",
+      "ipa": "[hal.mʌ.ni]"
+    }
+  },
+  {
+    "id": "honorifics-035",
+    "korean": "어르신",
+    "romanization": "eoreusin",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "intermediate",
+    "frequency": "high",
+    "tags": [
+      "honorifics",
+      "title",
+      "formal",
+      "elderly",
+      "respect"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "나이가 많은 분을 높여 부르는 말",
+      "en": "Elder; senior (respectful term for an elderly person)"
+    },
+    "pronunciation": {
+      "korean": "어르신",
+      "ipa": "ʌ.ɾɯ.ɕin"
+    }
+  },
+  {
+    "id": "honorifics-036",
+    "korean": "귀하",
+    "romanization": "gwiha",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "advanced",
+    "frequency": "medium",
+    "tags": [
+      "honorifics",
+      "title",
+      "very-formal",
+      "letter",
+      "business"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "편지나 공문에서 상대방을 높여 부르는 말",
+      "en": "Esteemed person; Dear Sir/Madam (used in letters and official documents)"
+    },
+    "pronunciation": {
+      "korean": "귀하",
+      "ipa": "kwi.ha"
+    }
+  },
+  {
+    "id": "honorifics-037",
+    "korean": "폐하",
+    "romanization": "pyeha",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "advanced",
+    "frequency": "low",
+    "tags": [
+      "honorifics",
+      "title",
+      "royal",
+      "historical"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "임금을 가장 높여 부르는 말",
+      "en": "Your Majesty (highest royal honorific for a king or emperor)"
+    },
+    "pronunciation": {
+      "korean": "폐하",
+      "ipa": "pʰje.ha"
+    }
+  },
+  {
+    "id": "honorifics-038",
+    "korean": "전하",
+    "romanization": "jeonha",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "advanced",
+    "frequency": "low",
+    "tags": [
+      "honorifics",
+      "title",
+      "royal",
+      "historical"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "왕세자나 왕족을 높여 부르는 말",
+      "en": "Your Highness (royal honorific for a prince or royal family member)"
+    },
+    "pronunciation": {
+      "korean": "전하",
+      "ipa": "tɕʌn.ha"
+    }
+  },
+  {
+    "id": "honorifics-039",
+    "korean": "각하",
+    "romanization": "gakha",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "advanced",
+    "frequency": "low",
+    "tags": [
+      "honorifics",
+      "title",
+      "political",
+      "historical"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "대통령이나 고위 관직자를 높여 부르는 말",
+      "en": "Your Excellency (honorific for a president or high-ranking official)"
+    },
+    "pronunciation": {
+      "korean": "각하",
+      "ipa": "ka.kʰa"
+    }
+  },
+  {
+    "id": "honorifics-040",
+    "korean": "-시-",
+    "romanization": "si",
+    "partOfSpeech": "particle",
+    "categoryId": "honorifics",
+    "difficulty": "beginner",
+    "frequency": "very-high",
+    "tags": [
+      "honorifics",
+      "grammar",
+      "respect",
+      "essential"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "동사나 형용사에 붙어 주어를 높이는 선어말 어미",
+      "en": "Honorific infix added to verbs/adjectives to show respect to the subject"
+    },
+    "pronunciation": {
+      "korean": "시",
+      "ipa": "ɕi"
+    }
+  },
+  {
+    "id": "honorifics-041",
+    "korean": "-께서",
+    "romanization": "kkeseo",
+    "partOfSpeech": "particle",
+    "categoryId": "honorifics",
+    "difficulty": "intermediate",
+    "frequency": "high",
+    "tags": [
+      "honorifics",
+      "grammar",
+      "formal",
+      "subject"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "'이/가'의 높임말로, 주어를 높일 때 쓰는 조사",
+      "en": "Honorific subject marker (respectful equivalent of 이/가)"
+    },
+    "pronunciation": {
+      "korean": "께서",
+      "ipa": "k͈e.sʌ"
+    }
+  },
+  {
+    "id": "honorifics-042",
+    "korean": "-께",
+    "romanization": "kke",
+    "partOfSpeech": "particle",
+    "categoryId": "honorifics",
+    "difficulty": "intermediate",
+    "frequency": "high",
+    "tags": [
+      "honorifics",
+      "grammar",
+      "formal",
+      "dative"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "'에게'의 높임말로, 높여야 할 대상에게 쓰는 조사",
+      "en": "Honorific dative particle meaning 'to/for' (respectful equivalent of 에게)"
+    },
+    "pronunciation": {
+      "korean": "께",
+      "ipa": "k͈e"
+    }
+  },
+  {
+    "id": "honorifics-043",
+    "korean": "저",
+    "romanization": "jeo",
+    "partOfSpeech": "pronoun",
+    "categoryId": "honorifics",
+    "difficulty": "beginner",
+    "frequency": "very-high",
+    "tags": [
+      "honorifics",
+      "pronoun",
+      "humble",
+      "formal"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "'나'의 낮춤말로, 윗사람 앞에서 자신을 가리키는 말",
+      "en": "I/me (humble form, used when speaking to someone of higher status)"
+    },
+    "pronunciation": {
+      "korean": "저",
+      "ipa": "tɕʌ"
+    }
+  },
+  {
+    "id": "honorifics-044",
+    "korean": "저희",
+    "romanization": "jeohui",
+    "partOfSpeech": "pronoun",
+    "categoryId": "honorifics",
+    "difficulty": "beginner",
+    "frequency": "high",
+    "tags": [
+      "honorifics",
+      "pronoun",
+      "humble",
+      "formal"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "'우리'의 낮춤말로, 윗사람 앞에서 자기 쪽을 가리키는 말",
+      "en": "We/our (humble form, used when speaking to someone of higher status)"
+    },
+    "pronunciation": {
+      "korean": "저희",
+      "ipa": "tɕʌ.ɦi"
+    }
+  },
+  {
+    "id": "honorifics-045",
+    "korean": "여쭈다",
+    "romanization": "yeojjuda",
+    "partOfSpeech": "verb",
+    "categoryId": "honorifics",
+    "difficulty": "advanced",
+    "frequency": "medium",
+    "tags": [
+      "honorifics",
+      "verb",
+      "humble",
+      "formal"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "'묻다'의 겸양어로, 윗사람에게 물을 때 쓰는 말",
+      "en": "To ask (humble form, used when asking someone of higher status)"
+    },
+    "pronunciation": {
+      "korean": "여쭈다",
+      "ipa": "jʌ.t͈ɕu.da"
+    }
+  },
+  {
+    "id": "honorifics-046",
+    "korean": "뵙다",
+    "romanization": "boepda",
+    "partOfSpeech": "verb",
+    "categoryId": "honorifics",
+    "difficulty": "intermediate",
+    "frequency": "high",
+    "tags": [
+      "honorifics",
+      "verb",
+      "humble",
+      "formal",
+      "greeting"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "'보다'의 겸양어로, 윗사람을 만날 때 쓰는 말",
+      "en": "To see/meet (humble form, used when meeting someone of higher status)"
+    },
+    "pronunciation": {
+      "korean": "뵙다",
+      "ipa": "pwe̞p.t͈a"
+    }
+  },
+  {
+    "id": "honorifics-047",
+    "korean": "모시다",
+    "romanization": "mosida",
+    "partOfSpeech": "verb",
+    "categoryId": "honorifics",
+    "difficulty": "intermediate",
+    "frequency": "high",
+    "tags": [
+      "honorifics",
+      "verb",
+      "humble",
+      "formal"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "윗사람을 받들어 섬기거나 함께 가다",
+      "en": "To serve, attend to, or accompany (someone of higher status)"
+    },
+    "pronunciation": {
+      "korean": "모시다",
+      "ipa": "mo.ɕi.da"
+    }
+  },
+  {
+    "id": "honorifics-048",
+    "korean": "경어",
+    "romanization": "gyeongeo",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "advanced",
+    "frequency": "medium",
+    "tags": [
+      "honorifics",
+      "concept",
+      "academic",
+      "linguistics"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "상대방을 높여 말하는 언어 표현의 총칭",
+      "en": "Respectful language; honorific speech (general term for polite/formal language)"
+    },
+    "pronunciation": {
+      "korean": "경어",
+      "ipa": "kjʌŋ.ʌ"
+    }
+  },
+  {
+    "id": "honorifics-049",
+    "korean": "겸양어",
+    "romanization": "gyeomyangeo",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "advanced",
+    "frequency": "low",
+    "tags": [
+      "honorifics",
+      "concept",
+      "academic",
+      "humble"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "자신을 낮추어 상대방을 높이는 말",
+      "en": "Humble language; self-deprecating speech used to elevate the listener"
+    },
+    "pronunciation": {
+      "korean": "겸양어",
+      "ipa": "kjʌ.mjaŋ.ʌ"
+    }
+  },
+  {
+    "id": "honorifics-050",
+    "korean": "호칭",
+    "romanization": "hochin",
+    "partOfSpeech": "noun",
+    "categoryId": "honorifics",
+    "difficulty": "intermediate",
+    "frequency": "medium",
+    "tags": [
+      "honorifics",
+      "concept",
+      "social",
+      "korean-culture"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "사람을 부르거나 가리키는 이름이나 칭호",
+      "en": "Form of address; title or name used to call or refer to someone"
+    },
+    "pronunciation": {
+      "korean": "호칭",
+      "ipa": "ho.tɕʰin"
     }
   }
 ]

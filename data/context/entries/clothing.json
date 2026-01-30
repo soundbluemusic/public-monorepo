@@ -7,7 +7,13 @@
     "categoryId": "clothing",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["clothing", "daily-life"],
+    "tags": [
+      "clothing",
+      "daily-life",
+      "shopping",
+      "fashion",
+      "beginner-essential"
+    ],
     "hasDialogue": true,
     "translations": {
       "ko": {
@@ -20,15 +26,33 @@
           "master": "옷이 날개라는 속담은 옷차림의 중요성을 말한다."
         },
         "variations": {
-          "formal": ["옷을 입습니다.", "의복을 갖춥니다."],
-          "casual": ["옷 사자.", "옷 이쁘다."],
-          "short": ["옷"]
+          "formal": [
+            "옷을 입습니다.",
+            "의복을 갖춥니다."
+          ],
+          "casual": [
+            "옷 사자.",
+            "옷 이쁘다."
+          ],
+          "short": [
+            "옷"
+          ]
         },
         "dialogue": {
           "context": "쇼핑하면서",
           "dialogue": [
-            {"speaker": "A", "text": "이 옷 어때?", "romanization": "i ot eottae?", "translation": "How about this outfit?"},
-            {"speaker": "B", "text": "너한테 잘 어울려!", "romanization": "neohante jal eoullyeo!", "translation": "It looks great on you!"}
+            {
+              "speaker": "A",
+              "text": "이 옷 어때?",
+              "romanization": "i ot eottae?",
+              "translation": "How about this outfit?"
+            },
+            {
+              "speaker": "B",
+              "text": "너한테 잘 어울려!",
+              "romanization": "neohante jal eoullyeo!",
+              "translation": "It looks great on you!"
+            }
           ]
         }
       },
@@ -42,15 +66,33 @@
           "master": "The proverb 'clothes are wings' speaks to the importance of how you dress."
         },
         "variations": {
-          "formal": ["I wear clothes.", "I get dressed."],
-          "casual": ["Let's buy clothes.", "Cute outfit."],
-          "short": ["clothes"]
+          "formal": [
+            "I wear clothes.",
+            "I get dressed."
+          ],
+          "casual": [
+            "Let's buy clothes.",
+            "Cute outfit."
+          ],
+          "short": [
+            "clothes"
+          ]
         },
         "dialogue": {
           "context": "While shopping",
           "dialogue": [
-            {"speaker": "A", "text": "How about this outfit?", "romanization": "", "translation": "이 옷 어때?"},
-            {"speaker": "B", "text": "It looks great on you!", "romanization": "", "translation": "너한테 잘 어울려!"}
+            {
+              "speaker": "A",
+              "text": "How about this outfit?",
+              "romanization": "",
+              "translation": "이 옷 어때?"
+            },
+            {
+              "speaker": "B",
+              "text": "It looks great on you!",
+              "romanization": "",
+              "translation": "너한테 잘 어울려!"
+            }
           ]
         }
       }
@@ -61,128 +103,6 @@
     }
   },
   {
-    "id": "sinbal",
-    "korean": "신발",
-    "romanization": "sinbal",
-    "partOfSpeech": "noun",
-    "categoryId": "clothing",
-    "difficulty": "beginner",
-    "frequency": "common",
-    "tags": ["clothing", "daily-life"],
-    "hasDialogue": true,
-    "translations": {
-      "ko": {
-        "word": "신발",
-        "explanation": "발에 신는 것의 총칭입니다. 한국에서는 실내에 들어갈 때 신발을 벗는 것이 문화입니다.",
-        "examples": {
-          "beginner": "신발을 신어요.",
-          "intermediate": "한국에서는 집에 들어갈 때 신발을 벗어요.",
-          "advanced": "현관에서 신발을 벗는 것은 한국 문화의 기본 예절이다.",
-          "master": "손님이 오면 신발이 가지런한지 확인하는 것도 예의이다."
-        },
-        "variations": {
-          "formal": ["신발을 신습니다.", "신발을 벗으세요."],
-          "casual": ["신발 신어.", "신발 벗어."],
-          "short": ["신발"]
-        },
-        "dialogue": {
-          "context": "친구 집에 방문해서",
-          "dialogue": [
-            {"speaker": "A", "text": "어서 와! 신발 벗고 들어와.", "romanization": "eoseo wa! sinbal beotgo deureo wa.", "translation": "Welcome! Take off your shoes and come in."},
-            {"speaker": "B", "text": "응, 실례할게.", "romanization": "eung, sillyehalge.", "translation": "Okay, pardon the intrusion."}
-          ]
-        }
-      },
-      "en": {
-        "word": "shoes",
-        "explanation": "A general term for footwear. In Korean culture, shoes are always removed before entering a home. Keeping shoes neatly arranged at the entrance is considered polite.",
-        "examples": {
-          "beginner": "I put on shoes.",
-          "intermediate": "In Korea, you take off your shoes when entering a house.",
-          "advanced": "Removing shoes at the entrance is a basic etiquette in Korean culture.",
-          "master": "When guests visit, it's also polite to check that shoes are neatly arranged."
-        },
-        "variations": {
-          "formal": ["I put on shoes.", "Please take off your shoes."],
-          "casual": ["Put on your shoes.", "Take off your shoes."],
-          "short": ["shoes"]
-        },
-        "dialogue": {
-          "context": "Visiting a friend's house",
-          "dialogue": [
-            {"speaker": "A", "text": "Welcome! Take off your shoes and come in.", "romanization": "", "translation": "어서 와! 신발 벗고 들어와."},
-            {"speaker": "B", "text": "Okay, pardon the intrusion.", "romanization": "", "translation": "응, 실례할게."}
-          ]
-        }
-      }
-    },
-    "pronunciation": {
-      "korean": "[신발]",
-      "ipa": "[ɕin.bal]"
-    }
-  },
-  {
-    "id": "moja",
-    "korean": "모자",
-    "romanization": "moja",
-    "partOfSpeech": "noun",
-    "categoryId": "clothing",
-    "difficulty": "beginner",
-    "frequency": "common",
-    "tags": ["clothing", "accessories"],
-    "hasDialogue": true,
-    "translations": {
-      "ko": {
-        "word": "모자",
-        "explanation": "머리에 쓰는 것의 총칭입니다. 동음이의어로 '모자(母子)'는 '엄마와 아이'를 뜻하고, '모자(모자라다)'는 '부족하다'를 뜻합니다.",
-        "examples": {
-          "beginner": "모자를 써요.",
-          "intermediate": "햇볕이 강해서 모자를 쓰세요.",
-          "advanced": "갓은 조선 시대 남성들이 쓰던 전통 모자이다.",
-          "master": "모자는 패션 아이템인 동시에 자외선 차단 용도로도 중요하다."
-        },
-        "variations": {
-          "formal": ["모자를 씁니다.", "모자를 착용합니다."],
-          "casual": ["모자 써.", "모자 쓸까?"],
-          "short": ["모자"]
-        },
-        "dialogue": {
-          "context": "외출 준비 중",
-          "dialogue": [
-            {"speaker": "A", "text": "오늘 햇볕 세다. 모자 쓰고 나가.", "romanization": "oneul haetbyeot seda. moja sseugo naga.", "translation": "The sun is strong today. Wear a hat."},
-            {"speaker": "B", "text": "알겠어, 어디 뒀더라.", "romanization": "algeseo, eodi dwotdeora.", "translation": "Okay, where did I put it."}
-          ]
-        }
-      },
-      "en": {
-        "word": "hat / cap",
-        "explanation": "A general term for headwear. '모자' is a homonym: 모자(帽子) means hat, 모자(母子) means mother and child, and 모자(라다) means insufficient. '갓' is the traditional hat worn by men during the Joseon Dynasty.",
-        "examples": {
-          "beginner": "I wear a hat.",
-          "intermediate": "The sun is strong, so please wear a hat.",
-          "advanced": "The 'gat' is a traditional hat worn by men during the Joseon Dynasty.",
-          "master": "Hats serve as both fashion items and important UV protection."
-        },
-        "variations": {
-          "formal": ["I put on a hat.", "I wear a hat."],
-          "casual": ["Wear a hat.", "Should I wear a hat?"],
-          "short": ["hat"]
-        },
-        "dialogue": {
-          "context": "Getting ready to go out",
-          "dialogue": [
-            {"speaker": "A", "text": "The sun is strong today. Wear a hat.", "romanization": "", "translation": "오늘 햇볕 세다. 모자 쓰고 나가."},
-            {"speaker": "B", "text": "Okay, where did I put it.", "romanization": "", "translation": "알겠어, 어디 뒀더라."}
-          ]
-        }
-      }
-    },
-    "pronunciation": {
-      "korean": "[모자]",
-      "ipa": "[mo.dʑa]"
-    }
-  },
-  {
     "id": "baji",
     "korean": "바지",
     "romanization": "baji",
@@ -190,7 +110,12 @@
     "categoryId": "clothing",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["clothing", "daily-life"],
+    "tags": [
+      "clothing",
+      "daily-life",
+      "shopping",
+      "fashion"
+    ],
     "hasDialogue": true,
     "translations": {
       "ko": {
@@ -203,15 +128,33 @@
           "master": "바지의 기장과 핏에 따라 분위기가 완전히 달라진다."
         },
         "variations": {
-          "formal": ["바지를 입습니다.", "하의를 갖춥니다."],
-          "casual": ["바지 입어.", "이 바지 어때?"],
-          "short": ["바지"]
+          "formal": [
+            "바지를 입습니다.",
+            "하의를 갖춥니다."
+          ],
+          "casual": [
+            "바지 입어.",
+            "이 바지 어때?"
+          ],
+          "short": [
+            "바지"
+          ]
         },
         "dialogue": {
           "context": "옷 가게에서",
           "dialogue": [
-            {"speaker": "A", "text": "이 바지 사이즈 있어요?", "romanization": "i baji saijeu isseoyo?", "translation": "Do you have this in my size?"},
-            {"speaker": "B", "text": "네, 입어 보세요.", "romanization": "ne, ibeo boseyo.", "translation": "Yes, please try it on."}
+            {
+              "speaker": "A",
+              "text": "이 바지 사이즈 있어요?",
+              "romanization": "i baji saijeu isseoyo?",
+              "translation": "Do you have this in my size?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 입어 보세요.",
+              "romanization": "ne, ibeo boseyo.",
+              "translation": "Yes, please try it on."
+            }
           ]
         }
       },
@@ -225,15 +168,33 @@
           "master": "The length and fit of pants can completely change the overall look."
         },
         "variations": {
-          "formal": ["I put on trousers.", "I wear pants."],
-          "casual": ["Put on your pants.", "How are these pants?"],
-          "short": ["pants"]
+          "formal": [
+            "I put on trousers.",
+            "I wear pants."
+          ],
+          "casual": [
+            "Put on your pants.",
+            "How are these pants?"
+          ],
+          "short": [
+            "pants"
+          ]
         },
         "dialogue": {
           "context": "At a clothing store",
           "dialogue": [
-            {"speaker": "A", "text": "Do you have this in my size?", "romanization": "", "translation": "이 바지 사이즈 있어요?"},
-            {"speaker": "B", "text": "Yes, please try it on.", "romanization": "", "translation": "네, 입어 보세요."}
+            {
+              "speaker": "A",
+              "text": "Do you have this in my size?",
+              "romanization": "",
+              "translation": "이 바지 사이즈 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, please try it on.",
+              "romanization": "",
+              "translation": "네, 입어 보세요."
+            }
           ]
         }
       }
@@ -251,7 +212,12 @@
     "categoryId": "clothing",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["clothing", "daily-life"],
+    "tags": [
+      "clothing",
+      "fashion",
+      "traditional",
+      "daily-life"
+    ],
     "hasDialogue": true,
     "translations": {
       "ko": {
@@ -264,15 +230,33 @@
           "master": "교복 치마 길이에 대한 논쟁은 학생 인권과 관련된 사회적 이슈이다."
         },
         "variations": {
-          "formal": ["치마를 입습니다.", "스커트를 착용합니다."],
-          "casual": ["치마 입어.", "치마 예쁘다."],
-          "short": ["치마"]
+          "formal": [
+            "치마를 입습니다.",
+            "스커트를 착용합니다."
+          ],
+          "casual": [
+            "치마 입어.",
+            "치마 예쁘다."
+          ],
+          "short": [
+            "치마"
+          ]
         },
         "dialogue": {
           "context": "옷을 고르면서",
           "dialogue": [
-            {"speaker": "A", "text": "오늘 치마 입을까?", "romanization": "oneul chima ibeulkka?", "translation": "Should I wear a skirt today?"},
-            {"speaker": "B", "text": "바람 많이 분대. 바지가 나을 것 같아.", "romanization": "baram mani bundae. bajiga naeul geot gata.", "translation": "It's going to be windy. Pants might be better."}
+            {
+              "speaker": "A",
+              "text": "오늘 치마 입을까?",
+              "romanization": "oneul chima ibeulkka?",
+              "translation": "Should I wear a skirt today?"
+            },
+            {
+              "speaker": "B",
+              "text": "바람 많이 분대. 바지가 나을 것 같아.",
+              "romanization": "baram mani bundae. bajiga naeul geot gata.",
+              "translation": "It's going to be windy. Pants might be better."
+            }
           ]
         }
       },
@@ -286,15 +270,33 @@
           "master": "The debate over school uniform skirt length is a social issue related to student rights."
         },
         "variations": {
-          "formal": ["I wear a skirt.", "I put on a skirt."],
-          "casual": ["Wear a skirt.", "Pretty skirt."],
-          "short": ["skirt"]
+          "formal": [
+            "I wear a skirt.",
+            "I put on a skirt."
+          ],
+          "casual": [
+            "Wear a skirt.",
+            "Pretty skirt."
+          ],
+          "short": [
+            "skirt"
+          ]
         },
         "dialogue": {
           "context": "Choosing what to wear",
           "dialogue": [
-            {"speaker": "A", "text": "Should I wear a skirt today?", "romanization": "", "translation": "오늘 치마 입을까?"},
-            {"speaker": "B", "text": "It's going to be windy. Pants might be better.", "romanization": "", "translation": "바람 많이 분대. 바지가 나을 것 같아."}
+            {
+              "speaker": "A",
+              "text": "Should I wear a skirt today?",
+              "romanization": "",
+              "translation": "오늘 치마 입을까?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's going to be windy. Pants might be better.",
+              "romanization": "",
+              "translation": "바람 많이 분대. 바지가 나을 것 같아."
+            }
           ]
         }
       }
@@ -302,6 +304,2222 @@
     "pronunciation": {
       "korean": "[치마]",
       "ipa": "[tɕʰi.ma]"
+    }
+  },
+  {
+    "id": "sinbal",
+    "korean": "신발",
+    "romanization": "sinbal",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "footwear",
+      "daily-life",
+      "shopping"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "신발",
+        "explanation": "발에 신는 것의 총칭입니다. 한국에서는 실내에 들어갈 때 신발을 벗는 것이 문화입니다.",
+        "examples": {
+          "beginner": "신발을 신어요.",
+          "intermediate": "한국에서는 집에 들어갈 때 신발을 벗어요.",
+          "advanced": "현관에서 신발을 벗는 것은 한국 문화의 기본 예절이다.",
+          "master": "손님이 오면 신발이 가지런한지 확인하는 것도 예의이다."
+        },
+        "variations": {
+          "formal": [
+            "신발을 신습니다.",
+            "신발을 벗으세요."
+          ],
+          "casual": [
+            "신발 신어.",
+            "신발 벗어."
+          ],
+          "short": [
+            "신발"
+          ]
+        },
+        "dialogue": {
+          "context": "친구 집에 방문해서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "어서 와! 신발 벗고 들어와.",
+              "romanization": "eoseo wa! sinbal beotgo deureo wa.",
+              "translation": "Welcome! Take off your shoes and come in."
+            },
+            {
+              "speaker": "B",
+              "text": "응, 실례할게.",
+              "romanization": "eung, sillyehalge.",
+              "translation": "Okay, pardon the intrusion."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "shoes",
+        "explanation": "A general term for footwear. In Korean culture, shoes are always removed before entering a home. Keeping shoes neatly arranged at the entrance is considered polite.",
+        "examples": {
+          "beginner": "I put on shoes.",
+          "intermediate": "In Korea, you take off your shoes when entering a house.",
+          "advanced": "Removing shoes at the entrance is a basic etiquette in Korean culture.",
+          "master": "When guests visit, it's also polite to check that shoes are neatly arranged."
+        },
+        "variations": {
+          "formal": [
+            "I put on shoes.",
+            "Please take off your shoes."
+          ],
+          "casual": [
+            "Put on your shoes.",
+            "Take off your shoes."
+          ],
+          "short": [
+            "shoes"
+          ]
+        },
+        "dialogue": {
+          "context": "Visiting a friend's house",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Welcome! Take off your shoes and come in.",
+              "romanization": "",
+              "translation": "어서 와! 신발 벗고 들어와."
+            },
+            {
+              "speaker": "B",
+              "text": "Okay, pardon the intrusion.",
+              "romanization": "",
+              "translation": "응, 실례할게."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[신발]",
+      "ipa": "[ɕin.bal]"
+    }
+  },
+  {
+    "id": "moja",
+    "korean": "모자",
+    "romanization": "moja",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "accessories",
+      "daily-life",
+      "fashion"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "모자",
+        "explanation": "머리에 쓰는 것의 총칭입니다. 동음이의어로 '모자(母子)'는 '엄마와 아이'를 뜻하고, '모자(모자라다)'는 '부족하다'를 뜻합니다.",
+        "examples": {
+          "beginner": "모자를 써요.",
+          "intermediate": "햇볕이 강해서 모자를 쓰세요.",
+          "advanced": "갓은 조선 시대 남성들이 쓰던 전통 모자이다.",
+          "master": "모자는 패션 아이템인 동시에 자외선 차단 용도로도 중요하다."
+        },
+        "variations": {
+          "formal": [
+            "모자를 씁니다.",
+            "모자를 착용합니다."
+          ],
+          "casual": [
+            "모자 써.",
+            "모자 쓸까?"
+          ],
+          "short": [
+            "모자"
+          ]
+        },
+        "dialogue": {
+          "context": "외출 준비 중",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "오늘 햇볕 세다. 모자 쓰고 나가.",
+              "romanization": "oneul haetbyeot seda. moja sseugo naga.",
+              "translation": "The sun is strong today. Wear a hat."
+            },
+            {
+              "speaker": "B",
+              "text": "알겠어, 어디 뒀더라.",
+              "romanization": "algeseo, eodi dwotdeora.",
+              "translation": "Okay, where did I put it."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "hat / cap",
+        "explanation": "A general term for headwear. '모자' is a homonym: 모자(帽子) means hat, 모자(母子) means mother and child, and 모자(라다) means insufficient. '갓' is the traditional hat worn by men during the Joseon Dynasty.",
+        "examples": {
+          "beginner": "I wear a hat.",
+          "intermediate": "The sun is strong, so please wear a hat.",
+          "advanced": "The 'gat' is a traditional hat worn by men during the Joseon Dynasty.",
+          "master": "Hats serve as both fashion items and important UV protection."
+        },
+        "variations": {
+          "formal": [
+            "I put on a hat.",
+            "I wear a hat."
+          ],
+          "casual": [
+            "Wear a hat.",
+            "Should I wear a hat?"
+          ],
+          "short": [
+            "hat"
+          ]
+        },
+        "dialogue": {
+          "context": "Getting ready to go out",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "The sun is strong today. Wear a hat.",
+              "romanization": "",
+              "translation": "오늘 햇볕 세다. 모자 쓰고 나가."
+            },
+            {
+              "speaker": "B",
+              "text": "Okay, where did I put it.",
+              "romanization": "",
+              "translation": "알겠어, 어디 뒀더라."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[모자]",
+      "ipa": "[mo.dʑa]"
+    }
+  },
+  {
+    "id": "tisyeocheu",
+    "korean": "티셔츠",
+    "romanization": "tisyeocheu",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "casual",
+      "daily-life",
+      "loanword"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "티셔츠",
+        "explanation": "영어 'T-shirt'에서 온 외래어입니다. 줄여서 '티'라고도 합니다. 반팔 티셔츠, 긴팔 티셔츠 등으로 구분합니다.",
+        "examples": {
+          "beginner": "티셔츠를 입어요.",
+          "intermediate": "여름에는 반팔 티셔츠가 시원해요.",
+          "advanced": "흰 티셔츠는 어떤 하의와도 잘 어울리는 기본 아이템이다.",
+          "master": "그래픽 티셔츠는 자기 표현의 수단으로 패션에서 중요한 위치를 차지한다."
+        },
+        "variations": {
+          "formal": [
+            "티셔츠를 입습니다.",
+            "티셔츠를 착용합니다."
+          ],
+          "casual": [
+            "티 입어.",
+            "이 티 괜찮아?"
+          ],
+          "short": [
+            "티"
+          ]
+        },
+        "dialogue": {
+          "context": "옷을 고르면서",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "오늘 뭐 입지? 티셔츠 입을까?",
+              "romanization": "oneul mwo ipji? tisyeocheu ibeulkka?",
+              "translation": "What should I wear today? Should I wear a T-shirt?"
+            },
+            {
+              "speaker": "B",
+              "text": "응, 날씨 더우니까 반팔 티 입어.",
+              "romanization": "eung, nalssi deoeunikka banpal ti ibeo.",
+              "translation": "Yeah, it's hot so wear a short-sleeve tee."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "T-shirt",
+        "explanation": "A loanword from English 'T-shirt.' Often shortened to '티' (ti) in casual speech. Categorized as 반팔 티셔츠 (short-sleeve) and 긴팔 티셔츠 (long-sleeve).",
+        "examples": {
+          "beginner": "I wear a T-shirt.",
+          "intermediate": "Short-sleeve T-shirts are cool in summer.",
+          "advanced": "A white T-shirt is a basic item that goes well with any bottoms.",
+          "master": "Graphic T-shirts hold an important place in fashion as a means of self-expression."
+        },
+        "variations": {
+          "formal": [
+            "I wear a T-shirt.",
+            "I put on a T-shirt."
+          ],
+          "casual": [
+            "Wear a tee.",
+            "Is this tee okay?"
+          ],
+          "short": [
+            "tee"
+          ]
+        },
+        "dialogue": {
+          "context": "Choosing what to wear",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What should I wear today? Should I wear a T-shirt?",
+              "romanization": "",
+              "translation": "오늘 뭐 입지? 티셔츠 입을까?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yeah, it's hot so wear a short-sleeve tee.",
+              "romanization": "",
+              "translation": "응, 날씨 더우니까 반팔 티 입어."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[티셔츠]",
+      "ipa": "[tʰi.ɕʌ.tɕʰɯ]"
+    }
+  },
+  {
+    "id": "syeocheu",
+    "korean": "셔츠",
+    "romanization": "syeocheu",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "formal",
+      "business",
+      "loanword"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "셔츠",
+        "explanation": "영어 'shirt'에서 온 외래어입니다. 보통 칼라와 단추가 있는 정장용 상의를 말합니다. 와이셔츠라고도 합니다.",
+        "examples": {
+          "beginner": "셔츠를 입어요.",
+          "intermediate": "면접에는 깨끗한 셔츠를 입으세요.",
+          "advanced": "와이셔츠는 일본식 영어 'white shirt'에서 온 말이다.",
+          "master": "비즈니스 캐주얼에서 셔츠는 넥타이 없이 착용하는 것이 일반적이다."
+        },
+        "variations": {
+          "formal": [
+            "셔츠를 입습니다.",
+            "와이셔츠를 착용합니다."
+          ],
+          "casual": [
+            "셔츠 입어.",
+            "셔츠 다려야 해."
+          ],
+          "short": [
+            "셔츠"
+          ]
+        },
+        "dialogue": {
+          "context": "출근 준비 중",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "오늘 어떤 셔츠 입을까?",
+              "romanization": "oneul eotteon syeocheu ibeulkka?",
+              "translation": "Which shirt should I wear today?"
+            },
+            {
+              "speaker": "B",
+              "text": "파란색 셔츠가 잘 어울려.",
+              "romanization": "paransaek syeocheuga jal eoullyeo.",
+              "translation": "The blue shirt looks good on you."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "shirt",
+        "explanation": "A loanword from English 'shirt.' Usually refers to a collared, button-down dress shirt. Also called 와이셔츠 (waisyeocheu), from the Japanese-English 'white shirt.'",
+        "examples": {
+          "beginner": "I wear a shirt.",
+          "intermediate": "Please wear a clean shirt for the interview.",
+          "advanced": "'와이셔츠' comes from the Japanese-English term 'white shirt.'",
+          "master": "In business casual, it's common to wear a shirt without a tie."
+        },
+        "variations": {
+          "formal": [
+            "I wear a shirt.",
+            "I put on a dress shirt."
+          ],
+          "casual": [
+            "Wear a shirt.",
+            "I need to iron my shirt."
+          ],
+          "short": [
+            "shirt"
+          ]
+        },
+        "dialogue": {
+          "context": "Getting ready for work",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Which shirt should I wear today?",
+              "romanization": "",
+              "translation": "오늘 어떤 셔츠 입을까?"
+            },
+            {
+              "speaker": "B",
+              "text": "The blue shirt looks good on you.",
+              "romanization": "",
+              "translation": "파란색 셔츠가 잘 어울려."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[셔츠]",
+      "ipa": "[ɕʌ.tɕʰɯ]"
+    }
+  },
+  {
+    "id": "wonpiseu",
+    "korean": "원피스",
+    "romanization": "wonpiseu",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "fashion",
+      "formal",
+      "loanword"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "원피스",
+        "explanation": "영어 'one-piece'에서 온 외래어로, 상의와 하의가 하나로 연결된 여성용 옷입니다. 영어권에서는 'dress'라고 합니다.",
+        "examples": {
+          "beginner": "원피스를 입어요.",
+          "intermediate": "결혼식에 원피스를 입고 갈 거예요.",
+          "advanced": "원피스는 한국식 영어로, 영어에서는 'dress'라고 한다.",
+          "master": "원피스는 한 벌로 완성되는 옷이라 코디네이션이 간편하다는 장점이 있다."
+        },
+        "variations": {
+          "formal": [
+            "원피스를 입습니다.",
+            "드레스를 착용합니다."
+          ],
+          "casual": [
+            "원피스 입어.",
+            "원피스 예쁘다!"
+          ],
+          "short": [
+            "원피스"
+          ]
+        },
+        "dialogue": {
+          "context": "결혼식 참석 준비",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "결혼식에 뭐 입고 갈 거야?",
+              "romanization": "gyeolhonsige mwo ipgo gal geoya?",
+              "translation": "What are you going to wear to the wedding?"
+            },
+            {
+              "speaker": "B",
+              "text": "새로 산 원피스 입으려고.",
+              "romanization": "saero san wonpiseu ibeuryeogo.",
+              "translation": "I'm going to wear the dress I just bought."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "dress",
+        "explanation": "A loanword from English 'one-piece,' referring to a one-piece garment for women. In English-speaking countries, this is simply called a 'dress.' It's a Konglish term unique to Korean.",
+        "examples": {
+          "beginner": "I wear a dress.",
+          "intermediate": "I'm going to wear a dress to the wedding.",
+          "advanced": "'원피스' is Korean-English; in English, it's called a 'dress.'",
+          "master": "A dress has the advantage of being a complete outfit in one piece, making coordination easy."
+        },
+        "variations": {
+          "formal": [
+            "I wear a dress.",
+            "I put on a dress."
+          ],
+          "casual": [
+            "Wear a dress.",
+            "Pretty dress!"
+          ],
+          "short": [
+            "dress"
+          ]
+        },
+        "dialogue": {
+          "context": "Preparing for a wedding",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What are you going to wear to the wedding?",
+              "romanization": "",
+              "translation": "결혼식에 뭐 입고 갈 거야?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm going to wear the dress I just bought.",
+              "romanization": "",
+              "translation": "새로 산 원피스 입으려고."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[원피스]",
+      "ipa": "[wʌn.pʰi.sɯ]"
+    }
+  },
+  {
+    "id": "jaket",
+    "korean": "자켓",
+    "romanization": "jaket",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "outerwear",
+      "fashion",
+      "loanword"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "자켓",
+        "explanation": "영어 'jacket'에서 온 외래어입니다. 정장 상의나 가벼운 겉옷을 말합니다. 재킷이라고도 씁니다.",
+        "examples": {
+          "beginner": "자켓을 입어요.",
+          "intermediate": "가을에는 자켓을 걸치면 좋아요.",
+          "advanced": "비즈니스 미팅에서 자켓은 기본 예의이다.",
+          "master": "자켓의 어깨선이 맞아야 전체 실루엣이 깔끔하게 보인다."
+        },
+        "variations": {
+          "formal": [
+            "자켓을 입습니다.",
+            "재킷을 착용합니다."
+          ],
+          "casual": [
+            "자켓 입어.",
+            "자켓 걸쳐."
+          ],
+          "short": [
+            "자켓"
+          ]
+        },
+        "dialogue": {
+          "context": "외출 전 옷을 고르며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "밖에 좀 쌀쌀해. 자켓 입고 나가.",
+              "romanization": "bakke jom ssalssalhae. jaket ipgo naga.",
+              "translation": "It's a bit chilly outside. Wear a jacket."
+            },
+            {
+              "speaker": "B",
+              "text": "그래, 검은색 자켓 입을게.",
+              "romanization": "geurae, geomeunsaek jaket ibeulge.",
+              "translation": "Okay, I'll wear the black jacket."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "jacket",
+        "explanation": "A loanword from English 'jacket.' Refers to a suit top or light outerwear. Also written as 재킷 in Korean.",
+        "examples": {
+          "beginner": "I wear a jacket.",
+          "intermediate": "It's nice to throw on a jacket in autumn.",
+          "advanced": "Wearing a jacket is basic etiquette at business meetings.",
+          "master": "The shoulder line of a jacket must fit properly for the overall silhouette to look clean."
+        },
+        "variations": {
+          "formal": [
+            "I wear a jacket.",
+            "I put on a jacket."
+          ],
+          "casual": [
+            "Wear a jacket.",
+            "Throw on a jacket."
+          ],
+          "short": [
+            "jacket"
+          ]
+        },
+        "dialogue": {
+          "context": "Before going out",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "It's a bit chilly outside. Wear a jacket.",
+              "romanization": "",
+              "translation": "밖에 좀 쌀쌀해. 자켓 입고 나가."
+            },
+            {
+              "speaker": "B",
+              "text": "Okay, I'll wear the black jacket.",
+              "romanization": "",
+              "translation": "그래, 검은색 자켓 입을게."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[자켇]",
+      "ipa": "[tɕa.kʰet̚]"
+    }
+  },
+  {
+    "id": "koteu",
+    "korean": "코트",
+    "romanization": "koteu",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "outerwear",
+      "winter",
+      "loanword"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "코트",
+        "explanation": "영어 'coat'에서 온 외래어입니다. 겨울에 입는 긴 겉옷을 말합니다. 울코트, 트렌치코트 등 다양한 종류가 있습니다.",
+        "examples": {
+          "beginner": "코트를 입어요.",
+          "intermediate": "겨울에는 두꺼운 코트가 필요해요.",
+          "advanced": "트렌치코트는 봄가을에 입기 좋은 클래식 아이템이다.",
+          "master": "코트의 길이와 소재에 따라 포멀과 캐주얼의 경계가 달라진다."
+        },
+        "variations": {
+          "formal": [
+            "코트를 입습니다.",
+            "외투를 걸칩니다."
+          ],
+          "casual": [
+            "코트 입어.",
+            "코트 안 입어?"
+          ],
+          "short": [
+            "코트"
+          ]
+        },
+        "dialogue": {
+          "context": "추운 날씨에 외출할 때",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "오늘 영하 10도래. 코트 입어야겠다.",
+              "romanization": "oneul yeongha siptorae. koteu ibeoyagetda.",
+              "translation": "It's minus 10 degrees today. I should wear a coat."
+            },
+            {
+              "speaker": "B",
+              "text": "목도리도 하고 나가.",
+              "romanization": "mokdorido hago naga.",
+              "translation": "Wear a scarf too."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "coat",
+        "explanation": "A loanword from English 'coat.' Refers to a long outerwear garment for winter. Types include wool coats, trench coats, and more.",
+        "examples": {
+          "beginner": "I wear a coat.",
+          "intermediate": "You need a thick coat in winter.",
+          "advanced": "A trench coat is a classic item perfect for spring and autumn.",
+          "master": "The length and material of a coat determine the boundary between formal and casual."
+        },
+        "variations": {
+          "formal": [
+            "I wear a coat.",
+            "I put on an overcoat."
+          ],
+          "casual": [
+            "Wear a coat.",
+            "Aren't you wearing a coat?"
+          ],
+          "short": [
+            "coat"
+          ]
+        },
+        "dialogue": {
+          "context": "Going out in cold weather",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "It's minus 10 degrees today. I should wear a coat.",
+              "romanization": "",
+              "translation": "오늘 영하 10도래. 코트 입어야겠다."
+            },
+            {
+              "speaker": "B",
+              "text": "Wear a scarf too.",
+              "romanization": "",
+              "translation": "목도리도 하고 나가."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[코트]",
+      "ipa": "[kʰo.tʰɯ]"
+    }
+  },
+  {
+    "id": "jeompeo",
+    "korean": "점퍼",
+    "romanization": "jeompeo",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "outerwear",
+      "winter",
+      "korean-culture"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "점퍼",
+        "explanation": "영어 'jumper'에서 온 외래어이지만, 한국에서는 주로 두꺼운 겨울용 겉옷(방한복)을 뜻합니다. 영어의 jumper와는 의미가 다릅니다.",
+        "examples": {
+          "beginner": "점퍼를 입어요.",
+          "intermediate": "등산할 때 점퍼를 가져가세요.",
+          "advanced": "점퍼는 한국에서 방한용 겉옷을 통칭하는 말이다.",
+          "master": "군용 점퍼에서 유래한 항공점퍼(봄버재킷)는 스트리트 패션의 아이콘이 되었다."
+        },
+        "variations": {
+          "formal": [
+            "점퍼를 입습니다.",
+            "방한복을 착용합니다."
+          ],
+          "casual": [
+            "점퍼 입어.",
+            "점퍼 챙겨."
+          ],
+          "short": [
+            "점퍼"
+          ]
+        },
+        "dialogue": {
+          "context": "등산 준비 중",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "산 위에 바람 많이 분대. 점퍼 가져가.",
+              "romanization": "san wie baram mani bundae. jeompeo gajyeoga.",
+              "translation": "It's windy on the mountain. Bring a jumper."
+            },
+            {
+              "speaker": "B",
+              "text": "응, 두꺼운 거 챙길게.",
+              "romanization": "eung, dukkeorun geo chaengilge.",
+              "translation": "Okay, I'll pack a thick one."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "jumper / padded jacket",
+        "explanation": "A loanword from English 'jumper,' but in Korean it specifically means a thick winter outerwear jacket. This differs from British English where 'jumper' means a sweater.",
+        "examples": {
+          "beginner": "I wear a jumper.",
+          "intermediate": "Bring a jumper when you go hiking.",
+          "advanced": "'점퍼' is a general Korean term for thick winter outerwear.",
+          "master": "The bomber jacket, derived from military flight jackets, has become a street fashion icon."
+        },
+        "variations": {
+          "formal": [
+            "I wear a jumper.",
+            "I put on a winter jacket."
+          ],
+          "casual": [
+            "Wear a jacket.",
+            "Grab a jacket."
+          ],
+          "short": [
+            "jumper"
+          ]
+        },
+        "dialogue": {
+          "context": "Preparing for a hike",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "It's windy on the mountain. Bring a jumper.",
+              "romanization": "",
+              "translation": "산 위에 바람 많이 분대. 점퍼 가져가."
+            },
+            {
+              "speaker": "B",
+              "text": "Okay, I'll pack a thick one.",
+              "romanization": "",
+              "translation": "응, 두꺼운 거 챙길게."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[점퍼]",
+      "ipa": "[tɕʌm.pʰʌ]"
+    }
+  },
+  {
+    "id": "paeding",
+    "korean": "패딩",
+    "romanization": "paeding",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "outerwear",
+      "winter",
+      "korean-culture",
+      "loanword"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "패딩",
+        "explanation": "영어 'padding'에서 온 외래어로, 오리털이나 솜을 넣어 만든 두꺼운 겨울 점퍼입니다. 한국 겨울 필수 아이템으로, 롱패딩은 한국에서 특히 유행합니다.",
+        "examples": {
+          "beginner": "패딩을 입어요.",
+          "intermediate": "한국 겨울에는 패딩이 필수예요.",
+          "advanced": "롱패딩은 한국에서 '국민 겨울 아이템'으로 불린다.",
+          "master": "패딩의 충전재에 따라 보온력과 가격이 크게 달라지며, 경량 패딩은 간절기에도 활용된다."
+        },
+        "variations": {
+          "formal": [
+            "패딩을 입습니다.",
+            "패딩 점퍼를 착용합니다."
+          ],
+          "casual": [
+            "패딩 입어.",
+            "패딩 안 추워?"
+          ],
+          "short": [
+            "패딩"
+          ]
+        },
+        "dialogue": {
+          "context": "추운 겨울날 아침",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "오늘 진짜 춥다. 롱패딩 입어야겠어.",
+              "romanization": "oneul jinjja chupda. rongpaeding ibeoyagesseo.",
+              "translation": "It's really cold today. I should wear my long puffer."
+            },
+            {
+              "speaker": "B",
+              "text": "나도. 핫팩도 챙기자.",
+              "romanization": "nado. hatpaekdo chaenggija.",
+              "translation": "Me too. Let's bring hand warmers."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "puffer jacket",
+        "explanation": "A loanword from English 'padding,' referring to a thick winter jacket filled with down or synthetic insulation. Long puffer jackets ('롱패딩') are a cultural phenomenon in Korea, considered the must-have winter item.",
+        "examples": {
+          "beginner": "I wear a puffer jacket.",
+          "intermediate": "A puffer jacket is essential in Korean winter.",
+          "advanced": "The long puffer jacket is called 'the national winter item' in Korea.",
+          "master": "The warmth and price of a puffer jacket vary greatly depending on the fill material, and lightweight puffers are used in transitional seasons too."
+        },
+        "variations": {
+          "formal": [
+            "I wear a puffer jacket.",
+            "I put on a padded jacket."
+          ],
+          "casual": [
+            "Wear your puffer.",
+            "Aren't you cold without a puffer?"
+          ],
+          "short": [
+            "puffer"
+          ]
+        },
+        "dialogue": {
+          "context": "A cold winter morning",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "It's really cold today. I should wear my long puffer.",
+              "romanization": "",
+              "translation": "오늘 진짜 춥다. 롱패딩 입어야겠어."
+            },
+            {
+              "speaker": "B",
+              "text": "Me too. Let's bring hand warmers.",
+              "romanization": "",
+              "translation": "나도. 핫팩도 챙기자."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[패딩]",
+      "ipa": "[pʰɛ.diŋ]"
+    }
+  },
+  {
+    "id": "hanbok",
+    "korean": "한복",
+    "romanization": "hanbok",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "traditional",
+      "korean-culture",
+      "festival",
+      "heritage"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "한복",
+        "explanation": "한국의 전통 의복입니다. 여성은 저고리와 치마, 남성은 저고리와 바지를 입습니다. 설날, 추석, 결혼식 등 특별한 날에 주로 입습니다.",
+        "examples": {
+          "beginner": "한복을 입어요.",
+          "intermediate": "설날에 한복을 입고 세배해요.",
+          "advanced": "한복은 직선과 곡선이 조화를 이루는 한국 고유의 의복이다.",
+          "master": "현대에는 생활한복이 등장하여 일상에서도 한복의 아름다움을 즐길 수 있게 되었다."
+        },
+        "variations": {
+          "formal": [
+            "한복을 입습니다.",
+            "한복을 차려입습니다."
+          ],
+          "casual": [
+            "한복 입자.",
+            "한복 입어 본 적 있어?"
+          ],
+          "short": [
+            "한복"
+          ]
+        },
+        "dialogue": {
+          "context": "설날 아침에",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "한복 입고 할머니 댁에 가자.",
+              "romanization": "hanbok ipgo halmeoni daege gaja.",
+              "translation": "Let's put on hanbok and go to grandma's house."
+            },
+            {
+              "speaker": "B",
+              "text": "좋아! 나 한복 너무 좋아해.",
+              "romanization": "joa! na hanbok neomu joahae.",
+              "translation": "Great! I love hanbok so much."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "Korean traditional dress",
+        "explanation": "Korea's traditional clothing. Women wear jeogori (jacket) and chima (skirt), while men wear jeogori and baji (pants). Worn on special occasions like Seollal (Lunar New Year), Chuseok (harvest festival), and weddings.",
+        "examples": {
+          "beginner": "I wear hanbok.",
+          "intermediate": "On New Year's Day, we wear hanbok and bow to elders.",
+          "advanced": "Hanbok is Korea's unique clothing that harmonizes straight and curved lines.",
+          "master": "Modern 'everyday hanbok' has emerged, allowing people to enjoy hanbok's beauty in daily life."
+        },
+        "variations": {
+          "formal": [
+            "I wear hanbok.",
+            "I dress in traditional Korean clothing."
+          ],
+          "casual": [
+            "Let's wear hanbok.",
+            "Have you ever worn hanbok?"
+          ],
+          "short": [
+            "hanbok"
+          ]
+        },
+        "dialogue": {
+          "context": "On New Year's morning",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Let's put on hanbok and go to grandma's house.",
+              "romanization": "",
+              "translation": "한복 입고 할머니 댁에 가자."
+            },
+            {
+              "speaker": "B",
+              "text": "Great! I love hanbok so much.",
+              "romanization": "",
+              "translation": "좋아! 나 한복 너무 좋아해."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[한복]",
+      "ipa": "[han.bok̚]"
+    }
+  },
+  {
+    "id": "gyobok",
+    "korean": "교복",
+    "romanization": "gyobok",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "school",
+      "korean-culture",
+      "youth"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "교복",
+        "explanation": "학교에서 입는 지정된 옷입니다. 한국의 중학교와 고등학교에서는 교복 착용이 일반적입니다. 교복 패션은 한국 청소년 문화의 일부입니다.",
+        "examples": {
+          "beginner": "교복을 입어요.",
+          "intermediate": "한국 학생들은 중학교부터 교복을 입어요.",
+          "advanced": "교복 자율화 논쟁은 학생 인권과 학교 규율 사이의 문제이다.",
+          "master": "졸업 후 교복을 빌려 입고 사진을 찍는 것은 한국의 독특한 문화 현상이다."
+        },
+        "variations": {
+          "formal": [
+            "교복을 입습니다.",
+            "교복을 착용합니다."
+          ],
+          "casual": [
+            "교복 입어.",
+            "교복 줄였어?"
+          ],
+          "short": [
+            "교복"
+          ]
+        },
+        "dialogue": {
+          "context": "학교 앞에서 친구와",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "교복 새로 맞췄어? 잘 어울린다.",
+              "romanization": "gyobok saero matchweosseo? jal eoulinda.",
+              "translation": "Did you get a new uniform? It looks good."
+            },
+            {
+              "speaker": "B",
+              "text": "응, 키가 커서 작년 거는 안 맞아.",
+              "romanization": "eung, kiga keoseo jangnyeon geoneun an maja.",
+              "translation": "Yeah, I grew taller so last year's didn't fit."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "school uniform",
+        "explanation": "Designated clothing worn at school. In Korea, wearing uniforms is standard in middle and high schools. School uniform fashion is part of Korean youth culture. Renting uniforms for photos after graduation is a unique Korean trend.",
+        "examples": {
+          "beginner": "I wear a school uniform.",
+          "intermediate": "Korean students wear uniforms starting from middle school.",
+          "advanced": "The debate over uniform deregulation is a matter between student rights and school discipline.",
+          "master": "Renting school uniforms for photos after graduation is a unique Korean cultural phenomenon."
+        },
+        "variations": {
+          "formal": [
+            "I wear a school uniform.",
+            "Students are required to wear uniforms."
+          ],
+          "casual": [
+            "Wear your uniform.",
+            "Did you alter your uniform?"
+          ],
+          "short": [
+            "uniform"
+          ]
+        },
+        "dialogue": {
+          "context": "In front of school with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Did you get a new uniform? It looks good.",
+              "romanization": "",
+              "translation": "교복 새로 맞췄어? 잘 어울린다."
+            },
+            {
+              "speaker": "B",
+              "text": "Yeah, I grew taller so last year's didn't fit.",
+              "romanization": "",
+              "translation": "응, 키가 커서 작년 거는 안 맞아."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[교복]",
+      "ipa": "[kjo.bok̚]"
+    }
+  },
+  {
+    "id": "yangbok",
+    "korean": "양복",
+    "romanization": "yangbok",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "formal",
+      "business",
+      "western"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "양복",
+        "explanation": "서양식 정장을 뜻합니다. '양(洋)'은 서양, '복(服)'은 옷을 의미합니다. 한복과 대비되는 개념으로, 현대 한국에서는 비즈니스 정장을 가리킵니다.",
+        "examples": {
+          "beginner": "양복을 입어요.",
+          "intermediate": "면접에는 양복을 입고 가세요.",
+          "advanced": "양복은 개화기에 한국에 들어온 서양식 의복이다.",
+          "master": "맞춤 양복은 기성복과 달리 체형에 맞게 제작되어 핏이 월등히 좋다."
+        },
+        "variations": {
+          "formal": [
+            "양복을 입습니다.",
+            "정장을 갖춰 입습니다."
+          ],
+          "casual": [
+            "양복 입어.",
+            "양복 맞추러 가자."
+          ],
+          "short": [
+            "양복"
+          ]
+        },
+        "dialogue": {
+          "context": "면접 준비 중",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "내일 면접인데 양복 입어야 하나?",
+              "romanization": "naeil myeonjeobinde yangbok ibeoya hana?",
+              "translation": "I have an interview tomorrow. Should I wear a suit?"
+            },
+            {
+              "speaker": "B",
+              "text": "당연하지. 첫인상이 중요하잖아.",
+              "romanization": "dangyeonhaji. cheotinsangi jungyohajana.",
+              "translation": "Of course. First impressions matter."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "suit",
+        "explanation": "Refers to a Western-style suit. '양(洋)' means Western and '복(服)' means clothing. It contrasts with hanbok and in modern Korea refers to business suits. The term dates back to the modernization period when Western clothing was introduced.",
+        "examples": {
+          "beginner": "I wear a suit.",
+          "intermediate": "Please wear a suit for the interview.",
+          "advanced": "The suit was introduced to Korea during the modernization period as Western clothing.",
+          "master": "A tailored suit is made to fit the body, offering a far superior fit compared to off-the-rack."
+        },
+        "variations": {
+          "formal": [
+            "I wear a suit.",
+            "I dress in formal attire."
+          ],
+          "casual": [
+            "Wear a suit.",
+            "Let's go get a suit fitted."
+          ],
+          "short": [
+            "suit"
+          ]
+        },
+        "dialogue": {
+          "context": "Preparing for an interview",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "I have an interview tomorrow. Should I wear a suit?",
+              "romanization": "",
+              "translation": "내일 면접인데 양복 입어야 하나?"
+            },
+            {
+              "speaker": "B",
+              "text": "Of course. First impressions matter.",
+              "romanization": "",
+              "translation": "당연하지. 첫인상이 중요하잖아."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[양복]",
+      "ipa": "[jaŋ.bok̚]"
+    }
+  },
+  {
+    "id": "undongbok",
+    "korean": "운동복",
+    "romanization": "undongbok",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "sports",
+      "casual",
+      "exercise"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "운동복",
+        "explanation": "운동할 때 입는 옷입니다. '운동(運動)'은 exercise, '복(服)'은 옷을 뜻합니다. 한국에서는 체육복도 운동복의 일종입니다.",
+        "examples": {
+          "beginner": "운동복을 입어요.",
+          "intermediate": "헬스장에 갈 때 운동복을 챙기세요.",
+          "advanced": "최근에는 운동복을 일상복으로 입는 애슬레저 트렌드가 확산되고 있다.",
+          "master": "기능성 원단의 발전으로 운동복은 땀 흡수, 체온 조절, 근육 지지 등 다양한 기능을 갖추게 되었다."
+        },
+        "variations": {
+          "formal": [
+            "운동복을 입습니다.",
+            "체육복을 착용합니다."
+          ],
+          "casual": [
+            "운동복 입어.",
+            "운동복 갈아입어."
+          ],
+          "short": [
+            "운동복"
+          ]
+        },
+        "dialogue": {
+          "context": "헬스장 가기 전",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "운동복 챙겼어?",
+              "romanization": "undongbok chaenggyeosseo?",
+              "translation": "Did you pack your workout clothes?"
+            },
+            {
+              "speaker": "B",
+              "text": "아, 깜빡했다! 잠깐만.",
+              "romanization": "a, kkamppakhaetda! jamkkanman.",
+              "translation": "Oh, I forgot! Just a moment."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "sportswear / workout clothes",
+        "explanation": "Clothing worn for exercise. '운동' means exercise and '복' means clothing. The athleisure trend of wearing sportswear as everyday clothing has become popular in Korea.",
+        "examples": {
+          "beginner": "I wear sportswear.",
+          "intermediate": "Pack your workout clothes when going to the gym.",
+          "advanced": "The athleisure trend of wearing sportswear as casual clothes has been spreading recently.",
+          "master": "With advances in functional fabrics, sportswear now offers moisture-wicking, temperature regulation, and muscle support."
+        },
+        "variations": {
+          "formal": [
+            "I wear sportswear.",
+            "I change into athletic clothes."
+          ],
+          "casual": [
+            "Wear workout clothes.",
+            "Change into your gym clothes."
+          ],
+          "short": [
+            "gym clothes"
+          ]
+        },
+        "dialogue": {
+          "context": "Before going to the gym",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Did you pack your workout clothes?",
+              "romanization": "",
+              "translation": "운동복 챙겼어?"
+            },
+            {
+              "speaker": "B",
+              "text": "Oh, I forgot! Just a moment.",
+              "romanization": "",
+              "translation": "아, 깜빡했다! 잠깐만."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[운동복]",
+      "ipa": "[un.doŋ.bok̚]"
+    }
+  },
+  {
+    "id": "jamot",
+    "korean": "잠옷",
+    "romanization": "jamot",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "sleep",
+      "home",
+      "comfort"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": {
+        "word": "잠옷",
+        "explanation": "잘 때 입는 옷입니다. '잠'은 sleep, '옷'은 clothes를 뜻합니다. 파자마라고도 합니다. 받침 연음으로 [자몯]이 아니라 [자몯] → [자못]으로 발음됩니다.",
+        "examples": {
+          "beginner": "잠옷을 입어요.",
+          "intermediate": "잠옷으로 갈아입고 자요.",
+          "advanced": "최근에는 잠옷 패션이 유행하여 카페에서도 파자마 파티를 한다.",
+          "master": "수면의 질을 높이려면 통기성이 좋은 소재의 잠옷을 선택하는 것이 중요하다."
+        },
+        "variations": {
+          "formal": [
+            "잠옷을 입습니다.",
+            "잠옷으로 갈아입습니다."
+          ],
+          "casual": [
+            "잠옷 입어.",
+            "잠옷 갈아입어."
+          ],
+          "short": [
+            "잠옷"
+          ]
+        },
+        "dialogue": {
+          "context": "취침 전에",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "빨리 잠옷 갈아입고 자.",
+              "romanization": "ppalli jamot garaiipgo ja.",
+              "translation": "Hurry up, change into pajamas and go to bed."
+            },
+            {
+              "speaker": "B",
+              "text": "네, 이 닦고 갈아입을게요.",
+              "romanization": "ne, i dakkgo garaibieulgeyo.",
+              "translation": "Okay, I'll change after brushing my teeth."
+            }
+          ]
+        }
+      },
+      "en": {
+        "word": "pajamas",
+        "explanation": "Clothing worn for sleeping. '잠' means sleep and '옷' means clothes. Also called 파자마 (pajama) as a loanword. Choosing breathable fabric for pajamas is important for sleep quality.",
+        "examples": {
+          "beginner": "I wear pajamas.",
+          "intermediate": "Change into pajamas before bed.",
+          "advanced": "Recently, pajama fashion has become trendy, with pajama parties even held at cafes.",
+          "master": "Choosing pajamas made of breathable fabric is important for improving sleep quality."
+        },
+        "variations": {
+          "formal": [
+            "I wear pajamas.",
+            "I change into sleepwear."
+          ],
+          "casual": [
+            "Wear your PJs.",
+            "Change into pajamas."
+          ],
+          "short": [
+            "PJs"
+          ]
+        },
+        "dialogue": {
+          "context": "Before bedtime",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Hurry up, change into pajamas and go to bed.",
+              "romanization": "",
+              "translation": "빨리 잠옷 갈아입고 자."
+            },
+            {
+              "speaker": "B",
+              "text": "Okay, I'll change after brushing my teeth.",
+              "romanization": "",
+              "translation": "네, 이 닦고 갈아입을게요."
+            }
+          ]
+        }
+      }
+    },
+    "pronunciation": {
+      "korean": "[자몯]",
+      "ipa": "[tɕa.mot̚]"
+    }
+  },
+  {
+    "id": "sogot",
+    "korean": "속옷",
+    "romanization": "sogot",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "beginner",
+    "frequency": "high",
+    "tags": [
+      "clothing",
+      "daily-life",
+      "essential"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "속옷",
+      "en": "underwear"
+    },
+    "pronunciation": {
+      "korean": "소곧",
+      "ipa": "so.got̚"
+    }
+  },
+  {
+    "id": "yangmal",
+    "korean": "양말",
+    "romanization": "yangmal",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "beginner",
+    "frequency": "high",
+    "tags": [
+      "clothing",
+      "footwear",
+      "daily-life",
+      "essential"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "양말",
+      "en": "socks"
+    },
+    "pronunciation": {
+      "korean": "양말",
+      "ipa": "jaŋ.mal"
+    }
+  },
+  {
+    "id": "seutaking",
+    "korean": "스타킹",
+    "romanization": "seutaking",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "intermediate",
+    "frequency": "medium",
+    "tags": [
+      "clothing",
+      "footwear",
+      "fashion",
+      "loanword"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "스타킹",
+      "en": "stockings"
+    },
+    "pronunciation": {
+      "korean": "스타킹",
+      "ipa": "sɯ.tʰa.kʰiŋ"
+    }
+  },
+  {
+    "id": "nektai",
+    "korean": "넥타이",
+    "romanization": "nektai",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "intermediate",
+    "frequency": "medium",
+    "tags": [
+      "clothing",
+      "formal",
+      "business",
+      "loanword"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "넥타이",
+      "en": "necktie"
+    },
+    "pronunciation": {
+      "korean": "넥타이",
+      "ipa": "nek̚.tʰa.i"
+    }
+  },
+  {
+    "id": "belteu",
+    "korean": "벨트",
+    "romanization": "belteu",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "beginner",
+    "frequency": "high",
+    "tags": [
+      "clothing",
+      "accessories",
+      "fashion",
+      "loanword"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "벨트",
+      "en": "belt"
+    },
+    "pronunciation": {
+      "korean": "벨트",
+      "ipa": "pel.tʰɯ"
+    }
+  },
+  {
+    "id": "janggap",
+    "korean": "장갑",
+    "romanization": "janggap",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "beginner",
+    "frequency": "medium",
+    "tags": [
+      "clothing",
+      "accessories",
+      "winter",
+      "cold"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "장갑",
+      "en": "gloves"
+    },
+    "pronunciation": {
+      "korean": "장갑",
+      "ipa": "tɕaŋ.ɡap̚"
+    }
+  },
+  {
+    "id": "mokdori",
+    "korean": "목도리",
+    "romanization": "mokdori",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "beginner",
+    "frequency": "medium",
+    "tags": [
+      "clothing",
+      "accessories",
+      "winter",
+      "fashion"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "목도리",
+      "en": "scarf"
+    },
+    "pronunciation": {
+      "korean": "목또리",
+      "ipa": "mok̚.t͈o.ɾi"
+    }
+  },
+  {
+    "id": "gwimage",
+    "korean": "귀마개",
+    "romanization": "gwimage",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "intermediate",
+    "frequency": "low",
+    "tags": [
+      "clothing",
+      "accessories",
+      "winter",
+      "cold"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "귀마개",
+      "en": "earmuffs"
+    },
+    "pronunciation": {
+      "korean": "귀마개",
+      "ipa": "kwi.ma.ɡɛ"
+    }
+  },
+  {
+    "id": "ubi",
+    "korean": "우비",
+    "romanization": "ubi",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "intermediate",
+    "frequency": "low",
+    "tags": [
+      "clothing",
+      "outerwear",
+      "rain",
+      "weather"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "우비",
+      "en": "raincoat"
+    },
+    "pronunciation": {
+      "korean": "우비",
+      "ipa": "u.bi"
+    }
+  },
+  {
+    "id": "suyeongbok",
+    "korean": "수영복",
+    "romanization": "suyeongbok",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "intermediate",
+    "frequency": "medium",
+    "tags": [
+      "clothing",
+      "sports",
+      "summer",
+      "swimming"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "수영복",
+      "en": "swimsuit"
+    },
+    "pronunciation": {
+      "korean": "수영복",
+      "ipa": "su.jʌŋ.bok̚"
+    }
+  },
+  {
+    "id": "deungsanbok",
+    "korean": "등산복",
+    "romanization": "deungsanbok",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "intermediate",
+    "frequency": "medium",
+    "tags": [
+      "clothing",
+      "sports",
+      "hiking",
+      "outdoor"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "등산복",
+      "en": "hiking clothes"
+    },
+    "pronunciation": {
+      "korean": "등산복",
+      "ipa": "tɯŋ.san.bok̚"
+    }
+  },
+  {
+    "id": "cheongbaji",
+    "korean": "청바지",
+    "romanization": "cheongbaji",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "beginner",
+    "frequency": "high",
+    "tags": [
+      "clothing",
+      "casual",
+      "fashion",
+      "daily-life"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "청바지",
+      "en": "jeans"
+    },
+    "pronunciation": {
+      "korean": "청바지",
+      "ipa": "tɕʰʌŋ.ba.dʑi"
+    }
+  },
+  {
+    "id": "banbaji",
+    "korean": "반바지",
+    "romanization": "banbaji",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "beginner",
+    "frequency": "high",
+    "tags": [
+      "clothing",
+      "casual",
+      "summer"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "반바지",
+      "en": "shorts"
+    },
+    "pronunciation": {
+      "korean": "반바지",
+      "ipa": "pan.ba.dʑi"
+    }
+  },
+  {
+    "id": "joggi",
+    "korean": "조끼",
+    "romanization": "joggi",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "intermediate",
+    "frequency": "medium",
+    "tags": [
+      "clothing",
+      "layering",
+      "fashion"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "조끼",
+      "en": "vest"
+    },
+    "pronunciation": {
+      "korean": "조끼",
+      "ipa": "tɕo.k͈i"
+    }
+  },
+  {
+    "id": "gadigeon",
+    "korean": "가디건",
+    "romanization": "gadigeon",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "intermediate",
+    "frequency": "medium",
+    "tags": [
+      "clothing",
+      "layering",
+      "casual",
+      "loanword"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "가디건",
+      "en": "cardigan"
+    },
+    "pronunciation": {
+      "korean": "가디건",
+      "ipa": "ka.di.ɡʌn"
+    }
+  },
+  {
+    "id": "hudeutti",
+    "korean": "후드티",
+    "romanization": "hudeutti",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "beginner",
+    "frequency": "high",
+    "tags": [
+      "clothing",
+      "casual",
+      "youth",
+      "loanword"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "후드티",
+      "en": "hoodie"
+    },
+    "pronunciation": {
+      "korean": "후드티",
+      "ipa": "hu.dɯ.tʰi"
+    }
+  },
+  {
+    "id": "beullauseu",
+    "korean": "블라우스",
+    "romanization": "beullauseu",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "intermediate",
+    "frequency": "medium",
+    "tags": [
+      "clothing",
+      "formal",
+      "fashion",
+      "loanword"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "블라우스",
+      "en": "blouse"
+    },
+    "pronunciation": {
+      "korean": "블라우스",
+      "ipa": "pɯl.la.u.sɯ"
+    }
+  },
+  {
+    "id": "reginsseu",
+    "korean": "레깅스",
+    "romanization": "reginsseu",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "casual",
+      "exercise",
+      "loanword"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "레깅스",
+      "en": "leggings"
+    },
+    "pronunciation": {
+      "korean": "레깅스",
+      "ipa": "ɾe.ɡiŋ.sɯ"
+    }
+  },
+  {
+    "id": "teureiningsbok",
+    "korean": "트레이닝복",
+    "romanization": "teureiningsbok",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "sports",
+      "casual"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "트레이닝복",
+      "en": "tracksuit"
+    },
+    "pronunciation": {
+      "korean": "트레이닝복",
+      "ipa": "tʰɯ.ɾe.i.niŋ.bok̚"
+    }
+  },
+  {
+    "id": "gaun",
+    "korean": "가운",
+    "romanization": "gaun",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": [
+      "clothing",
+      "home",
+      "formal",
+      "loanword"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "가운",
+      "en": "gown/robe"
+    },
+    "pronunciation": {
+      "korean": "가운",
+      "ipa": "ka.un"
+    }
+  },
+  {
+    "id": "apchima",
+    "korean": "앞치마",
+    "romanization": "apchima",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "cooking",
+      "work"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "앞치마",
+      "en": "apron"
+    },
+    "pronunciation": {
+      "korean": "앞치마",
+      "ipa": "ap̚.tɕʰi.ma"
+    }
+  },
+  {
+    "id": "jageopbok",
+    "korean": "작업복",
+    "romanization": "jageopbok",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "advanced",
+    "frequency": "uncommon",
+    "tags": [
+      "clothing",
+      "work",
+      "safety"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "작업복",
+      "en": "workwear"
+    },
+    "pronunciation": {
+      "korean": "작업복",
+      "ipa": "tɕa.ɡʌp̚.bok̚"
+    }
+  },
+  {
+    "id": "gunbok",
+    "korean": "군복",
+    "romanization": "gunbok",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "intermediate",
+    "frequency": "uncommon",
+    "tags": [
+      "clothing",
+      "military",
+      "korean-culture"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "군복",
+      "en": "military uniform"
+    },
+    "pronunciation": {
+      "korean": "군복",
+      "ipa": "kun.bok̚"
+    }
+  },
+  {
+    "id": "jeongjang",
+    "korean": "정장",
+    "romanization": "jeongjang",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "formal",
+      "business",
+      "interview"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "정장",
+      "en": "formal attire"
+    },
+    "pronunciation": {
+      "korean": "정장",
+      "ipa": "tɕʌŋ.dʑaŋ"
+    }
+  },
+  {
+    "id": "kaejueol",
+    "korean": "캐주얼",
+    "romanization": "kaejueol",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "casual",
+      "fashion",
+      "loanword"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "캐주얼",
+      "en": "casual wear"
+    },
+    "pronunciation": {
+      "korean": "캐주얼",
+      "ipa": "kʰɛ.dʑu.ʌl"
+    }
+  },
+  {
+    "id": "undonghwa",
+    "korean": "운동화",
+    "romanization": "undonghwa",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "footwear",
+      "casual",
+      "sports"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "운동화",
+      "en": "sneakers"
+    },
+    "pronunciation": {
+      "korean": "운동화",
+      "ipa": "un.doŋ.hwa"
+    }
+  },
+  {
+    "id": "gudu",
+    "korean": "구두",
+    "romanization": "gudu",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "beginner",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "footwear",
+      "formal",
+      "business"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "구두",
+      "en": "dress shoes"
+    },
+    "pronunciation": {
+      "korean": "구두",
+      "ipa": "ku.du"
+    }
+  },
+  {
+    "id": "seullipeo",
+    "korean": "슬리퍼",
+    "romanization": "seullipeo",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "footwear",
+      "home",
+      "loanword"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "슬리퍼",
+      "en": "slippers"
+    },
+    "pronunciation": {
+      "korean": "슬리퍼",
+      "ipa": "sɯl.li.pʰʌ"
+    }
+  },
+  {
+    "id": "bucheu",
+    "korean": "부츠",
+    "romanization": "bucheu",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "footwear",
+      "winter",
+      "fashion",
+      "loanword"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "부츠",
+      "en": "boots"
+    },
+    "pronunciation": {
+      "korean": "부츠",
+      "ipa": "pu.tɕʰɯ"
+    }
+  },
+  {
+    "id": "saendeul",
+    "korean": "샌들",
+    "romanization": "saendeul",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "intermediate",
+    "frequency": "common",
+    "tags": [
+      "clothing",
+      "footwear",
+      "summer",
+      "loanword"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "샌들",
+      "en": "sandals"
+    },
+    "pronunciation": {
+      "korean": "샌들",
+      "ipa": "sɛn.dɯl"
+    }
+  },
+  {
+    "id": "gabang",
+    "korean": "가방",
+    "romanization": "gabang",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "beginner",
+    "frequency": "very-common",
+    "tags": [
+      "clothing",
+      "accessories",
+      "daily-life",
+      "shopping"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "가방",
+      "en": "bag"
+    },
+    "pronunciation": {
+      "korean": "가방",
+      "ipa": "ka.baŋ"
+    }
+  },
+  {
+    "id": "jigap",
+    "korean": "지갑",
+    "romanization": "jigap",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "beginner",
+    "frequency": "very-common",
+    "tags": [
+      "clothing",
+      "accessories",
+      "daily-life",
+      "money"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "지갑",
+      "en": "wallet"
+    },
+    "pronunciation": {
+      "korean": "지갑",
+      "ipa": "tɕi.ɡap̚"
+    }
+  },
+  {
+    "id": "angyeong",
+    "korean": "안경",
+    "romanization": "angyeong",
+    "partOfSpeech": "noun",
+    "categoryId": "clothing",
+    "difficulty": "beginner",
+    "frequency": "very-common",
+    "tags": [
+      "clothing",
+      "accessories",
+      "daily-life",
+      "vision"
+    ],
+    "hasDialogue": true,
+    "translations": {
+      "ko": "안경",
+      "en": "glasses"
+    },
+    "pronunciation": {
+      "korean": "안경",
+      "ipa": "an.ɡjʌŋ"
     }
   }
 ]
