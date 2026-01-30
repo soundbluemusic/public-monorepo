@@ -1,0 +1,49 @@
+name: Lighthouse CI
+
+on:
+  # 매주 월요일 오전 9시 (KST) = 일요일 자정 (UTC)
+  schedule:
+    - cron: '0 0 * * 1'
+
+  # 수동 실행 가능
+  workflow_dispatch:
+
+concurrency:
+  group: lighthouse-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lighthouse:
+    name: Lighthouse CI
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build all apps
+        run: pnpm build
+
+      - name: Install Chrome for Lighthouse
+        uses: browser-actions/setup-chrome@latest
+        with:
+          chrome-version: stable
+        id: setup-chrome
+
+      - name: Set Chrome path
+        run: echo "CHROME_PATH=${{ steps.setup-chrome.outputs.chrome-path }}" >> $GITHUB_ENV
+
+      - name: Run Lighthouse CI
+        run: pnpm lhci autorun
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
