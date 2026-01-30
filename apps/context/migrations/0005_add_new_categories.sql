@@ -5,7 +5,7 @@
 -- 1. Categories (10개)
 -- ============================================================================
 
-INSERT OR REPLACE INTO categories (id, name_ko, name_en, description_ko, description_en, icon, color, "order") VALUES
+INSERT OR REPLACE INTO categories (id, name_ko, name_en, description_ko, description_en, icon, color, sort_order) VALUES
   ('double-consonants', '쌍자음', 'Double Consonants', '한글 쌍자음(된소리) 5개 (ㄲ, ㄸ, ㅃ, ㅆ, ㅉ)', '5 Korean double (tense) consonants', 'ㄲ', 'red', 56),
   ('weather', '날씨', 'Weather', '날씨와 기상 관련 단어', 'Weather and climate vocabulary', '☀', 'yellow', 57),
   ('animals', '동물', 'Animals', '동물 관련 단어', 'Animal vocabulary', '🐾', 'orange', 58),
@@ -133,8 +133,3 @@ INSERT OR REPLACE INTO entries (id, korean, romanization, part_of_speech, catego
   ('go', '-고', 'go', 'particle', 'conjunctions', 'beginner', 'common', '["conjunctions","grammar","connective-ending"]', '{"ko":{"word":"-고","explanation":"동사나 형용사 어간 뒤에 붙어 두 가지 동작이나 상태를 나열하는 연결어미입니다."},"en":{"word":"-go (and / and then)","explanation":"A connective ending attached to verb/adjective stems to list two actions."}}'),
   ('myeon', '-면', 'myeon', 'particle', 'conjunctions', 'beginner', 'common', '["conjunctions","grammar","connective-ending","conditional"]', '{"ko":{"word":"-면 / -으면","explanation":"조건을 나타내는 연결어미입니다."},"en":{"word":"-myeon (if / when)","explanation":"A conditional connective ending meaning if or when."}}');
 
--- ============================================================================
--- Update category entry counts
--- ============================================================================
-
-UPDATE categories SET entry_count = (SELECT COUNT(*) FROM entries WHERE category_id = categories.id);
