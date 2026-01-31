@@ -21,9 +21,9 @@
         "word": "수학",
         "explanation": "수, 양, 구조, 공간 등을 연구하는 학문. 논리와 패턴을 다룬다.",
         "examples": {
-          "beginner": "수학을/를 배워요.",
-          "intermediate": "수학이/가 어려워요.",
-          "advanced": "수학은/는 수학의 기본 개념입니다.",
+          "beginner": "수학을 배워요.",
+          "intermediate": "수학이 어려워요.",
+          "advanced": "수학은 수학의 기본 개념입니다.",
           "master": "수학의 원리를 이해하면 수학적 사고력이 향상됩니다."
         },
         "variations": {
@@ -52,8 +52,8 @@
             },
             {
               "speaker": "B",
-              "text": "수학을/를 공부하고 있어요.",
-              "romanization": "suhakeul/reul gongbuhago iseoyo.",
+              "text": "수학을 공부하고 있어요.",
+              "romanization": "suhakeul gongbuhago iseoyo.",
               "translation": "I'm studying mathematics / math."
             },
             {
@@ -108,7 +108,7 @@
               "speaker": "B",
               "text": "I'm studying mathematics / math.",
               "romanization": "",
-              "translation": "수학을/를 공부하고 있어요."
+              "translation": "수학을 공부하고 있어요."
             },
             {
               "speaker": "A",
@@ -149,9 +149,9 @@
         "word": "수",
         "explanation": "사물의 개수나 양을 나타내는 기호. 1, 2, 3과 같은 숫자.",
         "examples": {
-          "beginner": "수을/를 배워요.",
-          "intermediate": "수이/가 어려워요.",
-          "advanced": "수은/는 수학의 기본 개념입니다.",
+          "beginner": "수를 배워요.",
+          "intermediate": "수가 어려워요.",
+          "advanced": "수는 수학의 기본 개념입니다.",
           "master": "수의 원리를 이해하면 수학적 사고력이 향상됩니다."
         },
         "variations": {
@@ -180,8 +180,8 @@
             },
             {
               "speaker": "B",
-              "text": "수을/를 공부하고 있어요.",
-              "romanization": "sueul/reul gongbuhago iseoyo.",
+              "text": "수를 공부하고 있어요.",
+              "romanization": "sureul gongbuhago iseoyo.",
               "translation": "I'm studying number."
             },
             {
@@ -236,7 +236,7 @@
               "speaker": "B",
               "text": "I'm studying number.",
               "romanization": "",
-              "translation": "수을/를 공부하고 있어요."
+              "translation": "수를 공부하고 있어요."
             },
             {
               "speaker": "A",
@@ -277,9 +277,9 @@
         "word": "덧셈",
         "explanation": "두 수를 더하는 계산. + 기호를 사용한다.",
         "examples": {
-          "beginner": "덧셈을/를 배워요.",
-          "intermediate": "덧셈이/가 어려워요.",
-          "advanced": "덧셈은/는 수학의 기본 개념입니다.",
+          "beginner": "덧셈을 배워요.",
+          "intermediate": "덧셈이 어려워요.",
+          "advanced": "덧셈은 수학의 기본 개념입니다.",
           "master": "덧셈의 원리를 이해하면 수학적 사고력이 향상됩니다."
         },
         "variations": {
@@ -308,8 +308,8 @@
             },
             {
               "speaker": "B",
-              "text": "덧셈을/를 공부하고 있어요.",
-              "romanization": "deossemeul/reul gongbuhago iseoyo.",
+              "text": "덧셈을 공부하고 있어요.",
+              "romanization": "deossemeul gongbuhago iseoyo.",
               "translation": "I'm studying addition."
             },
             {
@@ -364,7 +364,7 @@
               "speaker": "B",
               "text": "I'm studying addition.",
               "romanization": "",
-              "translation": "덧셈을/를 공부하고 있어요."
+              "translation": "덧셈을 공부하고 있어요."
             },
             {
               "speaker": "A",
@@ -405,9 +405,9 @@
         "word": "뺄셈",
         "explanation": "한 수에서 다른 수를 빼는 계산. - 기호를 사용한다.",
         "examples": {
-          "beginner": "뺄셈을/를 배워요.",
-          "intermediate": "뺄셈이/가 어려워요.",
-          "advanced": "뺄셈은/는 수학의 기본 개념입니다.",
+          "beginner": "뺄셈을 배워요.",
+          "intermediate": "뺄셈이 어려워요.",
+          "advanced": "뺄셈은 수학의 기본 개념입니다.",
           "master": "뺄셈의 원리를 이해하면 수학적 사고력이 향상됩니다."
         },
         "variations": {
@@ -436,8 +436,8 @@
             },
             {
               "speaker": "B",
-              "text": "뺄셈을/를 공부하고 있어요.",
-              "romanization": "ppaelsemeul/reul gongbuhago iseoyo.",
+              "text": "뺄셈을 공부하고 있어요.",
+              "romanization": "ppaelsemeul gongbuhago iseoyo.",
               "translation": "I'm studying subtraction."
             },
             {
@@ -492,7 +492,7 @@
               "speaker": "B",
               "text": "I'm studying subtraction.",
               "romanization": "",
-              "translation": "뺄셈을/를 공부하고 있어요."
+              "translation": "뺄셈을 공부하고 있어요."
             },
             {
               "speaker": "A",
@@ -533,9 +533,9 @@
         "word": "곱셈",
         "explanation": "한 수를 다른 수만큼 반복해서 더하는 계산. × 기호를 사용한다.",
         "examples": {
-          "beginner": "곱셈을/를 배워요.",
-          "intermediate": "곱셈이/가 어려워요.",
-          "advanced": "곱셈은/는 수학의 기본 개념입니다.",
+          "beginner": "곱셈을 배워요.",
+          "intermediate": "곱셈이 어려워요.",
+          "advanced": "곱셈은 수학의 기본 개념입니다.",
           "master": "곱셈의 원리를 이해하면 수학적 사고력이 향상됩니다."
         },
         "variations": {
@@ -564,8 +564,8 @@
             },
             {
               "speaker": "B",
-              "text": "곱셈을/를 공부하고 있어요.",
-              "romanization": "gopsemeul/reul gongbuhago iseoyo.",
+              "text": "곱셈을 공부하고 있어요.",
+              "romanization": "gopsemeul gongbuhago iseoyo.",
               "translation": "I'm studying multiplication."
             },
             {
@@ -620,7 +620,7 @@
               "speaker": "B",
               "text": "I'm studying multiplication.",
               "romanization": "",
-              "translation": "곱셈을/를 공부하고 있어요."
+              "translation": "곱셈을 공부하고 있어요."
             },
             {
               "speaker": "A",
@@ -661,9 +661,9 @@
         "word": "나눗셈",
         "explanation": "한 수를 다른 수로 나누는 계산. ÷ 기호를 사용한다.",
         "examples": {
-          "beginner": "나눗셈을/를 배워요.",
-          "intermediate": "나눗셈이/가 어려워요.",
-          "advanced": "나눗셈은/는 수학의 기본 개념입니다.",
+          "beginner": "나눗셈을 배워요.",
+          "intermediate": "나눗셈이 어려워요.",
+          "advanced": "나눗셈은 수학의 기본 개념입니다.",
           "master": "나눗셈의 원리를 이해하면 수학적 사고력이 향상됩니다."
         },
         "variations": {
@@ -692,8 +692,8 @@
             },
             {
               "speaker": "B",
-              "text": "나눗셈을/를 공부하고 있어요.",
-              "romanization": "nanussemeul/reul gongbuhago iseoyo.",
+              "text": "나눗셈을 공부하고 있어요.",
+              "romanization": "nanussemeul gongbuhago iseoyo.",
               "translation": "I'm studying division."
             },
             {
@@ -748,7 +748,7 @@
               "speaker": "B",
               "text": "I'm studying division.",
               "romanization": "",
-              "translation": "나눗셈을/를 공부하고 있어요."
+              "translation": "나눗셈을 공부하고 있어요."
             },
             {
               "speaker": "A",
@@ -789,9 +789,9 @@
         "word": "분수",
         "explanation": "전체를 여러 부분으로 나눈 것 중 일부를 나타내는 수. 1/2, 3/4 같은 형태.",
         "examples": {
-          "beginner": "분수을/를 배워요.",
-          "intermediate": "분수이/가 어려워요.",
-          "advanced": "분수은/는 수학의 기본 개념입니다.",
+          "beginner": "분수를 배워요.",
+          "intermediate": "분수가 어려워요.",
+          "advanced": "분수는 수학의 기본 개념입니다.",
           "master": "분수의 원리를 이해하면 수학적 사고력이 향상됩니다."
         },
         "variations": {
@@ -820,8 +820,8 @@
             },
             {
               "speaker": "B",
-              "text": "분수을/를 공부하고 있어요.",
-              "romanization": "bunsueul/reul gongbuhago iseoyo.",
+              "text": "분수를 공부하고 있어요.",
+              "romanization": "bunsureul gongbuhago iseoyo.",
               "translation": "I'm studying fraction."
             },
             {
@@ -876,7 +876,7 @@
               "speaker": "B",
               "text": "I'm studying fraction.",
               "romanization": "",
-              "translation": "분수을/를 공부하고 있어요."
+              "translation": "분수를 공부하고 있어요."
             },
             {
               "speaker": "A",
@@ -917,9 +917,9 @@
         "word": "도형",
         "explanation": "점, 선, 면으로 이루어진 기하학적 형태. 삼각형, 사각형, 원 등.",
         "examples": {
-          "beginner": "도형을/를 배워요.",
-          "intermediate": "도형이/가 어려워요.",
-          "advanced": "도형은/는 수학의 기본 개념입니다.",
+          "beginner": "도형을 배워요.",
+          "intermediate": "도형이 어려워요.",
+          "advanced": "도형은 수학의 기본 개념입니다.",
           "master": "도형의 원리를 이해하면 수학적 사고력이 향상됩니다."
         },
         "variations": {
@@ -948,8 +948,8 @@
             },
             {
               "speaker": "B",
-              "text": "도형을/를 공부하고 있어요.",
-              "romanization": "dohyeongeul/reul gongbuhago iseoyo.",
+              "text": "도형을 공부하고 있어요.",
+              "romanization": "dohyeongeul gongbuhago iseoyo.",
               "translation": "I'm studying shape / figure / geometric shape."
             },
             {
@@ -1004,7 +1004,7 @@
               "speaker": "B",
               "text": "I'm studying shape / figure / geometric shape.",
               "romanization": "",
-              "translation": "도형을/를 공부하고 있어요."
+              "translation": "도형을 공부하고 있어요."
             },
             {
               "speaker": "A",
@@ -1045,9 +1045,9 @@
         "word": "방정식",
         "explanation": "미지수를 포함한 등식. 'x + 3 = 5'처럼 풀어야 하는 수학 문제.",
         "examples": {
-          "beginner": "방정식을/를 배워요.",
-          "intermediate": "방정식이/가 어려워요.",
-          "advanced": "방정식은/는 수학의 기본 개념입니다.",
+          "beginner": "방정식을 배워요.",
+          "intermediate": "방정식이 어려워요.",
+          "advanced": "방정식은 수학의 기본 개념입니다.",
           "master": "방정식의 원리를 이해하면 수학적 사고력이 향상됩니다."
         },
         "variations": {
@@ -1076,8 +1076,8 @@
             },
             {
               "speaker": "B",
-              "text": "방정식을/를 공부하고 있어요.",
-              "romanization": "bangjeongsikeul/reul gongbuhago iseoyo.",
+              "text": "방정식을 공부하고 있어요.",
+              "romanization": "bangjeongsikeul gongbuhago iseoyo.",
               "translation": "I'm studying equation."
             },
             {
@@ -1132,7 +1132,7 @@
               "speaker": "B",
               "text": "I'm studying equation.",
               "romanization": "",
-              "translation": "방정식을/를 공부하고 있어요."
+              "translation": "방정식을 공부하고 있어요."
             },
             {
               "speaker": "A",
@@ -1173,9 +1173,9 @@
         "word": "확률",
         "explanation": "어떤 사건이 일어날 가능성. 0과 1 사이의 값으로 표현한다.",
         "examples": {
-          "beginner": "확률을/를 배워요.",
-          "intermediate": "확률이/가 어려워요.",
-          "advanced": "확률은/는 수학의 기본 개념입니다.",
+          "beginner": "확률을 배워요.",
+          "intermediate": "확률이 어려워요.",
+          "advanced": "확률은 수학의 기본 개념입니다.",
           "master": "확률의 원리를 이해하면 수학적 사고력이 향상됩니다."
         },
         "variations": {
@@ -1204,8 +1204,8 @@
             },
             {
               "speaker": "B",
-              "text": "확률을/를 공부하고 있어요.",
-              "romanization": "hwakryuleul/reul gongbuhago iseoyo.",
+              "text": "확률을 공부하고 있어요.",
+              "romanization": "hwakryuleul gongbuhago iseoyo.",
               "translation": "I'm studying probability."
             },
             {
@@ -1260,7 +1260,7 @@
               "speaker": "B",
               "text": "I'm studying probability.",
               "romanization": "",
-              "translation": "확률을/를 공부하고 있어요."
+              "translation": "확률을 공부하고 있어요."
             },
             {
               "speaker": "A",

@@ -19,10 +19,10 @@
         "word": "개",
         "explanation": "가정에서 키우는 반려동물입니다. 한국에서 강아지(puppy)라는 표현도 성견에게 자주 씁니다. 십이지 중 열한 번째 동물(戌)이기도 합니다.",
         "examples": {
-          "beginner": "저는 개를 좋아해요.",
-          "intermediate": "우리 집에 개 한 마리가 있어요.",
-          "advanced": "한국에서 반려견 인구가 크게 늘었다.",
-          "master": "동물 보호법 개정으로 반려견 등록이 의무화되었다."
+          "beginner": "개를 좋아해요.",
+          "intermediate": "개가 귀여워요.",
+          "advanced": "개는 한국에서 인기 있는 동물입니다.",
+          "master": "개의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -38,19 +38,31 @@
           ]
         },
         "dialogue": {
-          "context": "공원에서 산책 중",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "저 강아지 진짜 귀엽다!",
-              "romanization": "jeo gangaji jinjja gwiyeopda!",
-              "translation": "That puppy is so cute!"
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "만져 봐도 돼요?",
-              "romanization": "manjyeo bwado dwaeyo?",
-              "translation": "Can I pet it?"
+              "text": "개를 좋아해요.",
+              "romanization": "gaereul jotahaeyo.",
+              "translation": "I like dogs."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -60,9 +72,9 @@
         "explanation": "A domesticated companion animal. In Korea, the word '강아지' (puppy) is commonly used even for adult dogs as a term of endearment. The dog is also the 11th animal in the Korean zodiac.",
         "examples": {
           "beginner": "I like dogs.",
-          "intermediate": "We have one dog at home.",
-          "advanced": "The pet dog population in Korea has grown significantly.",
-          "master": "Due to revised animal protection laws, pet dog registration has become mandatory."
+          "intermediate": "The dog is cute.",
+          "advanced": "dogs are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of dogs deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -78,19 +90,31 @@
           ]
         },
         "dialogue": {
-          "context": "Walking in the park",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "That puppy is so cute!",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "저 강아지 진짜 귀엽다!"
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "Can I pet it?",
+              "text": "I like dogs.",
               "romanization": "",
-              "translation": "만져 봐도 돼요?"
+              "translation": "개를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -121,10 +145,10 @@
         "word": "고양이",
         "explanation": "독립적인 성격으로 알려진 반려동물입니다. '냥이'는 고양이의 귀여운 줄임말이며, 한국에서 '캣맘'(길고양이를 돌보는 사람)이라는 신조어도 있습니다.",
         "examples": {
-          "beginner": "고양이가 자고 있어요.",
-          "intermediate": "우리 고양이는 참치를 좋아해요.",
-          "advanced": "길고양이에게 밥을 주는 사람들이 많다.",
-          "master": "고양이는 독립적이면서도 주인에게 애착을 보이는 동물이다."
+          "beginner": "고양이를 좋아해요.",
+          "intermediate": "고양이가 귀여워요.",
+          "advanced": "고양이는 한국에서 인기 있는 동물입니다.",
+          "master": "고양이의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -140,19 +164,31 @@
           ]
         },
         "dialogue": {
-          "context": "반려동물 이야기를 하면서",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "너 고양이 키워?",
-              "romanization": "neo goyangi kiwo?",
-              "translation": "Do you have a cat?"
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "응, 두 마리 키워. 이름은 나비랑 구름이야.",
-              "romanization": "eung, du mari kiwo. ireumeun nabirang gureumiya.",
-              "translation": "Yeah, I have two. Their names are Nabi and Gureum."
+              "text": "고양이를 좋아해요.",
+              "romanization": "goyangireul jotahaeyo.",
+              "translation": "I like cats."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -161,10 +197,10 @@
         "word": "cat",
         "explanation": "A companion animal known for its independent personality. '냥이' is an affectionate shortened form of 고양이, similar to 'kitty.' In Korea, '캣맘' (cat mom) refers to people who care for stray cats.",
         "examples": {
-          "beginner": "The cat is sleeping.",
-          "intermediate": "My cat likes tuna.",
-          "advanced": "Many people feed stray cats.",
-          "master": "Cats are animals that are independent yet show attachment to their owners."
+          "beginner": "I like cats.",
+          "intermediate": "The cat is cute.",
+          "advanced": "cats are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of cats deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -180,19 +216,31 @@
           ]
         },
         "dialogue": {
-          "context": "Talking about pets",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Do you have a cat?",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "너 고양이 키워?"
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "Yeah, I have two. Their names are Nabi and Gureum.",
+              "text": "I like cats.",
               "romanization": "",
-              "translation": "응, 두 마리 키워. 이름은 나비랑 구름이야."
+              "translation": "고양이를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -223,10 +271,10 @@
         "word": "새",
         "explanation": "날개가 있고 날 수 있는 동물의 총칭입니다. 동음이의어로 '새'는 '새로운(new)'이라는 뜻도 있습니다. 한국에서 까치는 길조, 까마귀는 흉조로 여겨집니다.",
         "examples": {
-          "beginner": "새가 노래해요.",
-          "intermediate": "창밖에 새가 앉아 있어요.",
-          "advanced": "철새들이 가을이면 남쪽으로 날아간다.",
-          "master": "한국에는 약 500종의 조류가 관찰된다."
+          "beginner": "새를 좋아해요.",
+          "intermediate": "새가 귀여워요.",
+          "advanced": "새는 한국에서 인기 있는 동물입니다.",
+          "master": "새의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -242,19 +290,31 @@
           ]
         },
         "dialogue": {
-          "context": "공원 벤치에 앉아서",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "저기 새 소리 들려?",
-              "romanization": "jeogi sae sori deullyeo?",
-              "translation": "Do you hear the birds over there?"
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "응, 참새인 것 같아.",
-              "romanization": "eung, chamsaein geot gata.",
-              "translation": "Yeah, I think it's a sparrow."
+              "text": "새를 좋아해요.",
+              "romanization": "saereul jotahaeyo.",
+              "translation": "I like birds."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -263,10 +323,10 @@
         "word": "bird",
         "explanation": "A general term for feathered, winged animals. '새' is also a homonym meaning 'new' in Korean. In Korean culture, magpies are considered lucky while crows are seen as bad omens.",
         "examples": {
-          "beginner": "The bird is singing.",
-          "intermediate": "A bird is sitting outside the window.",
-          "advanced": "Migratory birds fly south in autumn.",
-          "master": "About 500 species of birds have been observed in Korea."
+          "beginner": "I like birds.",
+          "intermediate": "The bird is cute.",
+          "advanced": "birds are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of birds deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -282,19 +342,31 @@
           ]
         },
         "dialogue": {
-          "context": "Sitting on a park bench",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Do you hear the birds over there?",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "저기 새 소리 들려?"
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "Yeah, I think it's a sparrow.",
+              "text": "I like birds.",
               "romanization": "",
-              "translation": "응, 참새인 것 같아."
+              "translation": "새를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -325,10 +397,10 @@
         "word": "물고기",
         "explanation": "물속에 사는 동물의 총칭입니다. '물'(water) + '고기'(meat/fish)의 합성어입니다. 살아 있을 때는 '물고기', 식용일 때는 '생선'이라고 구분합니다.",
         "examples": {
-          "beginner": "물고기가 헤엄쳐요.",
-          "intermediate": "이 호수에 물고기가 많아요.",
-          "advanced": "열대어는 색이 화려한 물고기이다.",
-          "master": "살아 있을 때는 물고기, 잡아서 먹을 때는 생선이라고 부른다."
+          "beginner": "물고기를 좋아해요.",
+          "intermediate": "물고기가 귀여워요.",
+          "advanced": "물고기는 한국에서 인기 있는 동물입니다.",
+          "master": "물고기의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -344,19 +416,31 @@
           ]
         },
         "dialogue": {
-          "context": "수족관에서",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "이 물고기 이름이 뭐야?",
-              "romanization": "i mulgogi ireumi mwoya?",
-              "translation": "What's the name of this fish?"
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "흰동가리야. 니모 알지?",
-              "romanization": "huindongariya. nimo alji?",
-              "translation": "It's a clownfish. You know Nemo, right?"
+              "text": "물고기를 좋아해요.",
+              "romanization": "mulgogireul jotahaeyo.",
+              "translation": "I like fishs."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -365,10 +449,10 @@
         "word": "fish",
         "explanation": "A general term for aquatic animals. It's a compound of '물' (water) + '고기' (meat). In Korean, living fish are called '물고기' while fish as food is called '생선'.",
         "examples": {
-          "beginner": "The fish is swimming.",
-          "intermediate": "There are many fish in this lake.",
-          "advanced": "Tropical fish are colorful species.",
-          "master": "When alive they are called '물고기'; when caught for eating, they are called '생선'."
+          "beginner": "I like fishs.",
+          "intermediate": "The fish is cute.",
+          "advanced": "fishs are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of fishs deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -384,19 +468,31 @@
           ]
         },
         "dialogue": {
-          "context": "At an aquarium",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What's the name of this fish?",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "이 물고기 이름이 뭐야?"
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "It's a clownfish. You know Nemo, right?",
+              "text": "I like fishs.",
               "romanization": "",
-              "translation": "흰동가리야. 니모 알지?"
+              "translation": "물고기를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -427,10 +523,10 @@
         "word": "토끼",
         "explanation": "긴 귀와 짧은 꼬리가 특징인 동물입니다. 십이지 중 네 번째 동물(卯)이며, 한국 전래동화 '별주부전'에서 토끼는 꾀를 써서 용궁에서 탈출하는 지혜로운 동물로 나옵니다.",
         "examples": {
-          "beginner": "토끼가 귀여워요.",
-          "intermediate": "토끼는 당근을 좋아해요.",
-          "advanced": "별주부전에서 토끼는 용왕을 속이고 탈출한다.",
-          "master": "십이지 중 묘(卯)에 해당하는 토끼는 영리함의 상징이다."
+          "beginner": "토끼를 좋아해요.",
+          "intermediate": "토끼가 귀여워요.",
+          "advanced": "토끼는 한국에서 인기 있는 동물입니다.",
+          "master": "토끼의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -446,19 +542,31 @@
           ]
         },
         "dialogue": {
-          "context": "반려동물 가게에서",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "이 토끼 너무 귀엽다! 키우고 싶다.",
-              "romanization": "i tokki neomu gwiyeopda! kiugo sipda.",
-              "translation": "This rabbit is so cute! I want to keep it."
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "토끼는 생각보다 관리가 필요해.",
-              "romanization": "tokkineun saenggakboda gwanriga piryohae.",
-              "translation": "Rabbits need more care than you'd think."
+              "text": "토끼를 좋아해요.",
+              "romanization": "tokkireul jotahaeyo.",
+              "translation": "I like rabbits."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -467,10 +575,10 @@
         "word": "rabbit",
         "explanation": "An animal with long ears and a short tail. The rabbit is the 4th animal in the Korean zodiac. In the classic Korean folktale 'Byeoljubu-jeon,' the rabbit cleverly escapes the Dragon King's underwater palace, symbolizing wit and resourcefulness.",
         "examples": {
-          "beginner": "The rabbit is cute.",
-          "intermediate": "Rabbits like carrots.",
-          "advanced": "In the tale of Byeoljubu-jeon, the rabbit tricks the Dragon King and escapes.",
-          "master": "The rabbit, corresponding to 'myo' (卯) in the zodiac, is a symbol of cleverness."
+          "beginner": "I like rabbits.",
+          "intermediate": "The rabbit is cute.",
+          "advanced": "rabbits are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of rabbits deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -486,19 +594,31 @@
           ]
         },
         "dialogue": {
-          "context": "At a pet shop",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "This rabbit is so cute! I want to keep it.",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "이 토끼 너무 귀엽다! 키우고 싶다."
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "Rabbits need more care than you'd think.",
+              "text": "I like rabbits.",
               "romanization": "",
-              "translation": "토끼는 생각보다 관리가 필요해."
+              "translation": "토끼를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -530,10 +650,10 @@
         "word": "소",
         "explanation": "농경 사회에서 매우 중요한 동물이었습니다. 십이지 중 두 번째 동물(丑)이며, 한국 전통 문화에서 소는 근면과 성실의 상징입니다. '소잃고 외양간 고친다'라는 속담이 있습니다.",
         "examples": {
-          "beginner": "소가 풀을 먹어요.",
-          "intermediate": "한국에서 소고기는 특별한 음식이에요.",
-          "advanced": "소잃고 외양간 고친다는 속담은 이미 늦었다는 뜻이다.",
-          "master": "전통 농경 사회에서 소는 가족이나 다름없는 존재였다."
+          "beginner": "소를 좋아해요.",
+          "intermediate": "소가 귀여워요.",
+          "advanced": "소는 한국에서 인기 있는 동물입니다.",
+          "master": "소의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -549,19 +669,31 @@
           ]
         },
         "dialogue": {
-          "context": "시골 농장을 방문하며",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "와, 소가 정말 크다!",
-              "romanization": "wa, soga jeongmal keuda!",
-              "translation": "Wow, the cow is really big!"
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "이게 한우야. 한국 소고기 중에 제일 비싸.",
-              "romanization": "ige hanwuya. hanguk sogogi junge jeil bissa.",
-              "translation": "This is Hanwoo. It's the most expensive Korean beef."
+              "text": "소를 좋아해요.",
+              "romanization": "soreul jotahaeyo.",
+              "translation": "I like cows."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -570,10 +702,10 @@
         "word": "cow",
         "explanation": "An animal of great importance in traditional Korean farming. The cow is the 2nd zodiac animal (丑) and symbolizes diligence and honesty. The proverb '소잃고 외양간 고친다' (fixing the barn after losing the cow) means it's too late to act after the damage is done.",
         "examples": {
-          "beginner": "The cow eats grass.",
-          "intermediate": "Beef is a special food in Korea.",
-          "advanced": "The proverb 'fixing the barn after losing the cow' means acting too late.",
-          "master": "In traditional farming society, cows were treated almost like family members."
+          "beginner": "I like cows.",
+          "intermediate": "The cow is cute.",
+          "advanced": "cows are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of cows deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -589,19 +721,31 @@
           ]
         },
         "dialogue": {
-          "context": "Visiting a rural farm",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Wow, the cow is really big!",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "와, 소가 정말 크다!"
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "This is Hanwoo. It's the most expensive Korean beef.",
+              "text": "I like cows.",
               "romanization": "",
-              "translation": "이게 한우야. 한국 소고기 중에 제일 비싸."
+              "translation": "소를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -632,10 +776,10 @@
         "word": "말",
         "explanation": "십이지 중 일곱 번째 동물(午)입니다. 동음이의어로 '말'은 '언어/말씀(speech)'이라는 뜻도 있습니다. 제주도에는 조랑말(제주마)이 유명하며, 전통적으로 이동과 전투에 중요한 동물이었습니다.",
         "examples": {
-          "beginner": "말이 달려요.",
-          "intermediate": "제주도에 조랑말이 유명해요.",
-          "advanced": "말은 예로부터 교통수단으로 사용되었다.",
-          "master": "고구려 벽화에는 말을 탄 무사의 모습이 자주 등장한다."
+          "beginner": "말을 좋아해요.",
+          "intermediate": "말이 귀여워요.",
+          "advanced": "말은 한국에서 인기 있는 동물입니다.",
+          "master": "말의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -651,19 +795,31 @@
           ]
         },
         "dialogue": {
-          "context": "제주도 여행 중",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "제주도에서 말 타 봤어?",
-              "romanization": "jejudo-eseo mal ta bwasseo?",
-              "translation": "Have you ridden a horse in Jeju?"
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "응, 조랑말 체험 했어. 너무 재밌었어!",
-              "romanization": "eung, jorangmal cheheom haesseo. neomu jaemisseosseo!",
-              "translation": "Yeah, I did a pony experience. It was so fun!"
+              "text": "말을 좋아해요.",
+              "romanization": "maleul jotahaeyo.",
+              "translation": "I like horses."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -672,10 +828,10 @@
         "word": "horse",
         "explanation": "The 7th animal in the Korean zodiac (午). The word '말' is also a homonym meaning 'speech/words.' Jeju Island is famous for its native ponies (조랑말). Horses were historically vital for transportation and warfare in Korea.",
         "examples": {
-          "beginner": "The horse is running.",
-          "intermediate": "Jeju Island is famous for its ponies.",
-          "advanced": "Horses have been used as transportation since ancient times.",
-          "master": "Goguryeo tomb murals frequently depict mounted warriors."
+          "beginner": "I like horses.",
+          "intermediate": "The horse is cute.",
+          "advanced": "horses are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of horses deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -691,19 +847,31 @@
           ]
         },
         "dialogue": {
-          "context": "Traveling in Jeju Island",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Have you ridden a horse in Jeju?",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "제주도에서 말 타 봤어?"
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "Yeah, I did a pony experience. It was so fun!",
+              "text": "I like horses.",
               "romanization": "",
-              "translation": "응, 조랑말 체험 했어. 너무 재밌었어!"
+              "translation": "말을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -734,10 +902,10 @@
         "word": "돼지",
         "explanation": "십이지 중 열두 번째(마지막) 동물(亥)입니다. 한국 문화에서 돼지는 복과 재물의 상징입니다. 돼지꿈을 꾸면 좋은 일이 생긴다고 하여 로또를 사는 사람도 있습니다.",
         "examples": {
-          "beginner": "돼지가 귀여워요.",
-          "intermediate": "한국에서 삼겹살은 돼지고기예요.",
-          "advanced": "돼지꿈을 꾸면 복이 온다는 속설이 있다.",
-          "master": "돼지는 십이지의 마지막 동물로, 재물과 풍요의 상징이다."
+          "beginner": "돼지를 좋아해요.",
+          "intermediate": "돼지가 귀여워요.",
+          "advanced": "돼지는 한국에서 인기 있는 동물입니다.",
+          "master": "돼지의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -753,19 +921,31 @@
           ]
         },
         "dialogue": {
-          "context": "음식 이야기를 하면서",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "삼겹살 먹으러 갈래?",
-              "romanization": "samgyeopsal meogeulleo gallae?",
-              "translation": "Want to go eat samgyeopsal?"
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "좋아! 돼지고기가 제일 맛있어.",
-              "romanization": "joa! dwaejigogiga jeil masissseo.",
-              "translation": "Sure! Pork is the most delicious."
+              "text": "돼지를 좋아해요.",
+              "romanization": "dwaejireul jotahaeyo.",
+              "translation": "I like pigs."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -774,10 +954,10 @@
         "word": "pig",
         "explanation": "The 12th and final animal in the Korean zodiac (亥). In Korean culture, pigs symbolize wealth and good fortune. Dreaming of a pig is considered lucky — some people even buy lottery tickets after such a dream.",
         "examples": {
-          "beginner": "The pig is cute.",
-          "intermediate": "Samgyeopsal is pork in Korea.",
-          "advanced": "There's a folk belief that dreaming of a pig brings good fortune.",
-          "master": "The pig, as the last animal of the zodiac, symbolizes wealth and abundance."
+          "beginner": "I like pigs.",
+          "intermediate": "The pig is cute.",
+          "advanced": "pigs are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of pigs deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -793,19 +973,31 @@
           ]
         },
         "dialogue": {
-          "context": "Talking about food",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Want to go eat samgyeopsal?",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "삼겹살 먹으러 갈래?"
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "Sure! Pork is the most delicious.",
+              "text": "I like pigs.",
               "romanization": "",
-              "translation": "좋아! 돼지고기가 제일 맛있어."
+              "translation": "돼지를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -836,10 +1028,10 @@
         "word": "닭",
         "explanation": "십이지 중 열 번째 동물(酉)입니다. 한국 음식 문화에서 매우 중요하며, 치킨은 한국의 대표적인 야식입니다. 삼계탕(닭+인삼 수프)은 여름 보양식으로 유명합니다. 발음 주의: 받침 'ㄺ'은 [ㄱ]으로 발음합니다.",
         "examples": {
-          "beginner": "닭이 울어요.",
-          "intermediate": "한국 치킨은 정말 맛있어요.",
-          "advanced": "삼계탕은 복날에 먹는 한국 전통 보양식이다.",
-          "master": "'닭'의 발음은 [닥]이며, '닭도리탕'은 '닭볶음탕'으로 순화된 표현이다."
+          "beginner": "닭을 좋아해요.",
+          "intermediate": "닭이 귀여워요.",
+          "advanced": "닭은 한국에서 인기 있는 동물입니다.",
+          "master": "닭의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -855,19 +1047,31 @@
           ]
         },
         "dialogue": {
-          "context": "저녁 메뉴를 정하면서",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "오늘 치킨 시킬까?",
-              "romanization": "oneul chikin sikilkka?",
-              "translation": "Should we order chicken today?"
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "좋아! 양념이랑 후라이드 반반으로 하자.",
-              "romanization": "joa! yangnyeomirang huraideu banbanneuro haja.",
-              "translation": "Sure! Let's get half seasoned and half fried."
+              "text": "닭을 좋아해요.",
+              "romanization": "daleul jotahaeyo.",
+              "translation": "I like chickens."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -876,10 +1080,10 @@
         "word": "chicken",
         "explanation": "The 10th animal in the Korean zodiac (酉). Chicken is deeply embedded in Korean food culture — fried chicken is the quintessential late-night snack. Samgyetang (chicken ginseng soup) is a famous summer health food. Pronunciation note: the final consonant cluster 'ㄺ' is pronounced as [k].",
         "examples": {
-          "beginner": "The chicken is crowing.",
-          "intermediate": "Korean fried chicken is really delicious.",
-          "advanced": "Samgyetang is a traditional Korean health food eaten on the hottest days.",
-          "master": "'닭' is pronounced [dak], and '닭도리탕' has been refined to '닭볶음탕' in standard Korean."
+          "beginner": "I like chickens.",
+          "intermediate": "The chicken is cute.",
+          "advanced": "chickens are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of chickens deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -895,19 +1099,31 @@
           ]
         },
         "dialogue": {
-          "context": "Deciding on dinner",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Should we order chicken today?",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "오늘 치킨 시킬까?"
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "Sure! Let's get half seasoned and half fried.",
+              "text": "I like chickens.",
               "romanization": "",
-              "translation": "좋아! 양념이랑 후라이드 반반으로 하자."
+              "translation": "닭을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -937,10 +1153,10 @@
         "word": "양",
         "explanation": "십이지 중 여덟 번째 동물(未)입니다. 동음이의어로 '양'은 '량/양(amount)', '양(Western/foreign)' 등 여러 뜻이 있습니다. 한국에서 양고기는 최근 인기가 높아진 음식입니다.",
         "examples": {
-          "beginner": "양이 풀을 먹어요.",
-          "intermediate": "대관령에 양떼 목장이 있어요.",
-          "advanced": "한국에서 양갈비 전문점이 크게 늘었다.",
-          "master": "'양'은 동음이의어가 많아 문맥에 따라 뜻이 달라진다."
+          "beginner": "양을 좋아해요.",
+          "intermediate": "양이 귀여워요.",
+          "advanced": "양은 한국에서 인기 있는 동물입니다.",
+          "master": "양의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -956,19 +1172,31 @@
           ]
         },
         "dialogue": {
-          "context": "대관령 양떼 목장을 방문하며",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "여기 양이 정말 많다!",
-              "romanization": "yeogi yangi jeongmal manta!",
-              "translation": "There are so many sheep here!"
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "먹이 줄 수 있대. 해 볼래?",
-              "romanization": "meogi jul su itdae. hae bollae?",
-              "translation": "They say we can feed them. Want to try?"
+              "text": "양을 좋아해요.",
+              "romanization": "yangeul jotahaeyo.",
+              "translation": "I like sheeps."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -977,10 +1205,10 @@
         "word": "sheep",
         "explanation": "The 8th animal in the Korean zodiac (未). The word '양' is a homonym with multiple meanings including 'amount' and 'Western/foreign.' Daegwallyeong Sheep Farm is a famous tourist destination in Korea.",
         "examples": {
-          "beginner": "The sheep eats grass.",
-          "intermediate": "There is a sheep ranch at Daegwallyeong.",
-          "advanced": "Lamb specialty restaurants have grown significantly in Korea.",
-          "master": "'양' has many homonyms, and meaning changes depending on context."
+          "beginner": "I like sheeps.",
+          "intermediate": "The sheep is cute.",
+          "advanced": "sheeps are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of sheeps deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -996,19 +1224,31 @@
           ]
         },
         "dialogue": {
-          "context": "Visiting Daegwallyeong Sheep Farm",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "There are so many sheep here!",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "여기 양이 정말 많다!"
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "They say we can feed them. Want to try?",
+              "text": "I like sheeps.",
               "romanization": "",
-              "translation": "먹이 줄 수 있대. 해 볼래?"
+              "translation": "양을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -1040,10 +1280,10 @@
         "word": "호랑이",
         "explanation": "한국을 상징하는 동물이자 십이지 중 세 번째 동물(寅)입니다. '호랑이도 제 말하면 온다'라는 속담이 있으며, 1988 서울 올림픽 마스코트 '호돌이', 2018 평창 올림픽 마스코트 '수호랑'으로도 유명합니다. 단군 신화에서 호랑이와 곰이 등장합니다.",
         "examples": {
-          "beginner": "호랑이는 무서워요.",
-          "intermediate": "호랑이는 한국의 상징 동물이에요.",
-          "advanced": "옛날 이야기에는 호랑이가 자주 등장한다.",
-          "master": "호랑이도 제 말 하면 온다더니, 마침 네가 왔구나."
+          "beginner": "호랑이를 좋아해요.",
+          "intermediate": "호랑이가 귀여워요.",
+          "advanced": "호랑이는 한국에서 인기 있는 동물입니다.",
+          "master": "호랑이의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -1059,19 +1299,31 @@
           ]
         },
         "dialogue": {
-          "context": "동물원에서",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "호랑이 봐! 진짜 크다.",
-              "romanization": "horangi bwa! jinjja keuda.",
-              "translation": "Look at the tiger! It's really big."
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "한국 호랑이는 백두산 호랑이라고 해.",
-              "romanization": "hanguk horangineun baekdusan horangirago hae.",
-              "translation": "Korean tigers are called Baekdu Mountain tigers."
+              "text": "호랑이를 좋아해요.",
+              "romanization": "horangireul jotahaeyo.",
+              "translation": "I like tigers."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -1080,10 +1332,10 @@
         "word": "tiger",
         "explanation": "Korea's national symbol and the 3rd zodiac animal (寅). The proverb '호랑이도 제 말하면 온다' (speak of the tiger and it appears) is like 'speak of the devil.' The tiger was the mascot of the 1988 Seoul Olympics ('Hodori') and 2018 PyeongChang Olympics ('Soohorang'). In the Dangun creation myth, both a tiger and a bear appear.",
         "examples": {
-          "beginner": "Tigers are scary.",
-          "intermediate": "The tiger is Korea's symbolic animal.",
-          "advanced": "Tigers frequently appear in traditional Korean folktales.",
-          "master": "Speak of the tiger and it appears — oh, there you are."
+          "beginner": "I like tigers.",
+          "intermediate": "The tiger is cute.",
+          "advanced": "tigers are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of tigers deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -1099,19 +1351,31 @@
           ]
         },
         "dialogue": {
-          "context": "At the zoo",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Look at the tiger! It's really big.",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "호랑이 봐! 진짜 크다."
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "Korean tigers are called Baekdu Mountain tigers.",
+              "text": "I like tigers.",
               "romanization": "",
-              "translation": "한국 호랑이는 백두산 호랑이라고 해."
+              "translation": "호랑이를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -1142,10 +1406,10 @@
         "word": "용",
         "explanation": "십이지 중 다섯 번째 동물(辰)이며, 유일한 상상 속 동물입니다. 동양 문화에서 용은 왕권과 비, 물을 상징합니다. '개천에서 용 난다'는 속담은 미천한 환경에서 큰 인물이 나온다는 뜻입니다. 용띠 해에는 출산율이 높아지는 경향이 있습니다.",
         "examples": {
-          "beginner": "용은 상상 속 동물이에요.",
-          "intermediate": "용은 하늘을 날 수 있어요.",
-          "advanced": "개천에서 용 난다는 속담이 있다.",
-          "master": "용띠 해에는 한국의 출산율이 일시적으로 높아지는 경향이 있다."
+          "beginner": "용을 좋아해요.",
+          "intermediate": "용이 귀여워요.",
+          "advanced": "용은 한국에서 인기 있는 동물입니다.",
+          "master": "용의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -1161,19 +1425,31 @@
           ]
         },
         "dialogue": {
-          "context": "띠 이야기를 하면서",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "너 무슨 띠야?",
-              "romanization": "neo museun ttiya?",
-              "translation": "What's your zodiac animal?"
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "나 용띠야. 2000년생이거든.",
-              "romanization": "na yongttiya. icheonnyeonsaengigeodeun.",
-              "translation": "I'm a dragon. I was born in 2000."
+              "text": "용을 좋아해요.",
+              "romanization": "yongeul jotahaeyo.",
+              "translation": "I like dragons."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -1182,10 +1458,10 @@
         "word": "dragon",
         "explanation": "The 5th zodiac animal (辰) and the only mythical creature in the zodiac. In East Asian culture, the dragon symbolizes royalty, rain, and water. The proverb '개천에서 용 난다' (a dragon rises from a stream) means a great person can emerge from humble origins. Birth rates tend to rise in dragon years in Korea.",
         "examples": {
-          "beginner": "The dragon is a mythical animal.",
-          "intermediate": "Dragons can fly in the sky.",
-          "advanced": "There is a proverb: 'A dragon rises from a stream.'",
-          "master": "Birth rates in Korea tend to temporarily increase during dragon years."
+          "beginner": "I like dragons.",
+          "intermediate": "The dragon is cute.",
+          "advanced": "dragons are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of dragons deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -1201,19 +1477,31 @@
           ]
         },
         "dialogue": {
-          "context": "Talking about zodiac signs",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What's your zodiac animal?",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "너 무슨 띠야?"
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "I'm a dragon. I was born in 2000.",
+              "text": "I like dragons.",
               "romanization": "",
-              "translation": "나 용띠야. 2000년생이거든."
+              "translation": "용을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -1244,10 +1532,10 @@
         "word": "뱀",
         "explanation": "십이지 중 여섯 번째 동물(巳)입니다. 한국에서 뱀은 두려움의 대상이면서도 집을 지키는 수호신으로 여겨지기도 합니다. '구렁이 담 넘어가듯'이라는 관용구는 슬그머니 넘어가는 것을 뜻합니다.",
         "examples": {
-          "beginner": "뱀이 무서워요.",
-          "intermediate": "뱀은 다리가 없어요.",
-          "advanced": "구렁이 담 넘어가듯 슬쩍 넘어가면 안 된다.",
-          "master": "전통적으로 집에 나타난 뱀(구렁이)은 터주신으로 여겨 해치지 않았다."
+          "beginner": "뱀을 좋아해요.",
+          "intermediate": "뱀이 귀여워요.",
+          "advanced": "뱀은 한국에서 인기 있는 동물입니다.",
+          "master": "뱀의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -1263,19 +1551,31 @@
           ]
         },
         "dialogue": {
-          "context": "등산 중 뱀을 발견하고",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "앗, 저기 뱀이다! 조심해!",
-              "romanization": "at, jeogi baemida! josimhae!",
-              "translation": "Oh, there's a snake! Be careful!"
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "괜찮아, 가만히 있으면 지나가.",
-              "romanization": "gwaenchana, gamanhi isseumyeon jinaga.",
-              "translation": "It's okay, if we stay still it'll pass."
+              "text": "뱀을 좋아해요.",
+              "romanization": "baemeul jotahaeyo.",
+              "translation": "I like snakes."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -1284,10 +1584,10 @@
         "word": "snake",
         "explanation": "The 6th zodiac animal (巳). In Korea, snakes are feared but also traditionally regarded as guardian spirits of the home. The idiom '구렁이 담 넘어가듯' (like a snake going over a wall) means to slyly slip past something.",
         "examples": {
-          "beginner": "Snakes are scary.",
-          "intermediate": "Snakes don't have legs.",
-          "advanced": "You can't just slyly slip past this like a snake over a wall.",
-          "master": "Traditionally, a snake (구렁이) appearing in the home was regarded as a guardian spirit and was not harmed."
+          "beginner": "I like snakes.",
+          "intermediate": "The snake is cute.",
+          "advanced": "snakes are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of snakes deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -1303,19 +1603,31 @@
           ]
         },
         "dialogue": {
-          "context": "Spotting a snake while hiking",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Oh, there's a snake! Be careful!",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "앗, 저기 뱀이다! 조심해!"
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "It's okay, if we stay still it'll pass.",
+              "text": "I like snakes.",
               "romanization": "",
-              "translation": "괜찮아, 가만히 있으면 지나가."
+              "translation": "뱀을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -1346,10 +1658,10 @@
         "word": "원숭이",
         "explanation": "십이지 중 아홉 번째 동물(申)입니다. 한국에는 야생 원숭이가 없지만, 옛 이야기에는 자주 등장합니다. '원숭이도 나무에서 떨어진다'라는 속담은 아무리 능숙한 사람도 실수할 수 있다는 뜻입니다.",
         "examples": {
-          "beginner": "원숭이가 바나나를 먹어요.",
-          "intermediate": "원숭이는 똑똒해요.",
-          "advanced": "원숭이도 나무에서 떨어진다는 속담이 있다.",
-          "master": "한반도에는 야생 원숭이가 서식하지 않지만, 문화적으로는 친숙한 동물이다."
+          "beginner": "원숭이를 좋아해요.",
+          "intermediate": "원숭이가 귀여워요.",
+          "advanced": "원숭이는 한국에서 인기 있는 동물입니다.",
+          "master": "원숭이의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -1365,19 +1677,31 @@
           ]
         },
         "dialogue": {
-          "context": "동물원에서 원숭이를 보며",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "원숭이가 사람이랑 비슷하게 생겼다.",
-              "romanization": "wonsungiga saramirang biseutage saenggyeotda.",
-              "translation": "The monkey looks similar to humans."
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "맞아, 원숭이도 나무에서 떨어진대.",
-              "romanization": "maja, wonsungido namueseo tteoreojindae.",
-              "translation": "Right, even monkeys fall from trees, they say."
+              "text": "원숭이를 좋아해요.",
+              "romanization": "wonsungireul jotahaeyo.",
+              "translation": "I like monkeys."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -1386,10 +1710,10 @@
         "word": "monkey",
         "explanation": "The 9th zodiac animal (申). While there are no wild monkeys in Korea, they appear frequently in folktales. The proverb '원숭이도 나무에서 떨어진다' (even monkeys fall from trees) means that even experts can make mistakes.",
         "examples": {
-          "beginner": "The monkey eats a banana.",
-          "intermediate": "Monkeys are smart.",
-          "advanced": "There is a proverb: 'Even monkeys fall from trees.'",
-          "master": "Although wild monkeys don't inhabit the Korean Peninsula, they are culturally familiar animals."
+          "beginner": "I like monkeys.",
+          "intermediate": "The monkey is cute.",
+          "advanced": "monkeys are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of monkeys deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -1405,19 +1729,31 @@
           ]
         },
         "dialogue": {
-          "context": "Watching monkeys at the zoo",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "The monkey looks similar to humans.",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "원숭이가 사람이랑 비슷하게 생겼다."
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "Right, even monkeys fall from trees, they say.",
+              "text": "I like monkeys.",
               "romanization": "",
-              "translation": "맞아, 원숭이도 나무에서 떨어진대."
+              "translation": "원숭이를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -1447,10 +1783,10 @@
         "word": "쥐",
         "explanation": "십이지 중 첫 번째 동물(子)입니다. 한국 속담에 '쥐구멍에도 볕 들 날 있다'(아무리 어려운 처지에도 좋은 날이 온다)가 있습니다. '쥐도 새도 모르게'는 아무도 모르게 조용히 하는 것을 뜻합니다.",
         "examples": {
-          "beginner": "쥐가 작아요.",
-          "intermediate": "쥐가 치즈를 좋아해요.",
-          "advanced": "쥐구멍에도 볕 들 날이 있다.",
-          "master": "쥐도 새도 모르게 사라진 그 사건은 아직도 미스터리다."
+          "beginner": "쥐를 좋아해요.",
+          "intermediate": "쥐가 귀여워요.",
+          "advanced": "쥐는 한국에서 인기 있는 동물입니다.",
+          "master": "쥐의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -1466,19 +1802,31 @@
           ]
         },
         "dialogue": {
-          "context": "옛이야기를 하면서",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "십이지 중에 쥐가 첫 번째래.",
-              "romanization": "sibiiji junge jwiga cheot beonjjarae.",
-              "translation": "The rat is the first in the zodiac, apparently."
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "맞아, 소 등에 타고 가서 먼저 도착했다는 이야기가 있어.",
-              "romanization": "maja, so deunge tago gaseo meonjeo dochakhaetdaneun iyagiga isseo.",
-              "translation": "Right, there's a story that it rode on the cow's back and arrived first."
+              "text": "쥐를 좋아해요.",
+              "romanization": "jwireul jotahaeyo.",
+              "translation": "I like mouse/rats."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -1487,10 +1835,10 @@
         "word": "mouse/rat",
         "explanation": "The 1st animal in the Korean zodiac (子). The proverb '쥐구멍에도 볕 들 날 있다' (even a mouse hole gets sunshine) means good times will come even in the hardest circumstances. '쥐도 새도 모르게' (without even mice or birds knowing) means doing something in complete secrecy.",
         "examples": {
-          "beginner": "The mouse is small.",
-          "intermediate": "Mice like cheese.",
-          "advanced": "Even a mouse hole gets sunshine someday.",
-          "master": "That case, where someone vanished without even mice or birds knowing, remains a mystery."
+          "beginner": "I like mouse/rats.",
+          "intermediate": "The mouse/rat is cute.",
+          "advanced": "mouse/rats are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of mouse/rats deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -1506,19 +1854,31 @@
           ]
         },
         "dialogue": {
-          "context": "Talking about old stories",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "The rat is the first in the zodiac, apparently.",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "십이지 중에 쥐가 첫 번째래."
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "Right, there's a story that it rode on the cow's back and arrived first.",
+              "text": "I like mouse/rats.",
               "romanization": "",
-              "translation": "맞아, 소 등에 타고 가서 먼저 도착했다는 이야기가 있어."
+              "translation": "쥐를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -1549,10 +1909,10 @@
         "word": "사자",
         "explanation": "백수의 왕으로 불리는 동물입니다. 동음이의어로 '사자'는 '使者(심부름꾼)', '死者(죽은 사람)', '四字(네 글자)' 등 여러 뜻이 있어, 한국어 학습 시 문맥 파악이 중요합니다. 한국 전통 문화에서 사자는 해태(해치)와 함께 수호 동물로 등장합니다.",
         "examples": {
-          "beginner": "사자는 강해요.",
-          "intermediate": "사자는 백수의 왕이에요.",
-          "advanced": "사자성어(四字成語)에서의 '사자'는 '네 글자'라는 뜻이다.",
-          "master": "'사자'는 동음이의어가 많아 문맥 없이는 뜻을 알 수 없다."
+          "beginner": "사자를 좋아해요.",
+          "intermediate": "사자가 귀여워요.",
+          "advanced": "사자는 한국에서 인기 있는 동물입니다.",
+          "master": "사자의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -1568,19 +1928,31 @@
           ]
         },
         "dialogue": {
-          "context": "동물원에서 사자를 보며",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "사자가 자고 있네. 역시 여유롭다.",
-              "romanization": "sajaga jago inne. yeoksi yeoyuropda.",
-              "translation": "The lion is sleeping. So laid back."
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "백수의 왕이니까 여유 있지!",
-              "romanization": "baeksuui wanginikka yeoyou itji!",
-              "translation": "It's the king of beasts, so of course it's relaxed!"
+              "text": "사자를 좋아해요.",
+              "romanization": "sajareul jotahaeyo.",
+              "translation": "I like lions."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -1589,10 +1961,10 @@
         "word": "lion",
         "explanation": "Known as the king of beasts. The word '사자' has many homonyms in Korean: '使者' (messenger), '死者' (deceased person), '四字' (four characters) — context is crucial. In Korean traditional culture, lions appear alongside 해태 (haetae) as guardian animals.",
         "examples": {
-          "beginner": "Lions are strong.",
-          "intermediate": "The lion is the king of beasts.",
-          "advanced": "In '사자성어' (four-character idioms), '사자' means 'four characters.'",
-          "master": "'사자' has so many homonyms that its meaning cannot be determined without context."
+          "beginner": "I like lions.",
+          "intermediate": "The lion is cute.",
+          "advanced": "lions are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of lions deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -1608,19 +1980,31 @@
           ]
         },
         "dialogue": {
-          "context": "Watching a lion at the zoo",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "The lion is sleeping. So laid back.",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "사자가 자고 있네. 역시 여유롭다."
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "It's the king of beasts, so of course it's relaxed!",
+              "text": "I like lions.",
               "romanization": "",
-              "translation": "백수의 왕이니까 여유 있지!"
+              "translation": "사자를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -1651,10 +2035,10 @@
         "word": "코끼리",
         "explanation": "육지 동물 중 가장 큰 동물입니다. '코'(nose) + '끼리'로 이루어진 단어로, 긴 코가 특징입니다. 한국 동요 '코끼리 아저씨는 코가 손이래'는 어린이들에게 매우 친숙한 노래입니다.",
         "examples": {
-          "beginner": "코끼리는 커요.",
-          "intermediate": "코끼리 코는 정말 길어요.",
-          "advanced": "코끼리 아저씨는 코가 손이래는 유명한 동요이다.",
-          "master": "'코끼리'는 '코'와 관련된 어원을 가진 순우리말이다."
+          "beginner": "코끼리를 좋아해요.",
+          "intermediate": "코끼리가 귀여워요.",
+          "advanced": "코끼리는 한국에서 인기 있는 동물입니다.",
+          "master": "코끼리의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -1670,19 +2054,31 @@
           ]
         },
         "dialogue": {
-          "context": "동물원에서 코끼리를 보며",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "코끼리가 물 뿌리고 있어! 귀엽다.",
-              "romanization": "kokkiriga mul ppurigo isseo! gwiyeopda.",
-              "translation": "The elephant is spraying water! So cute."
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "코끼리 아저씨는 코가 손이래~",
-              "romanization": "kokkiri ajeossineun koga sonirae~",
-              "translation": "Mr. Elephant's nose is like a hand~ (children's song)"
+              "text": "코끼리를 좋아해요.",
+              "romanization": "kokkirireul jotahaeyo.",
+              "translation": "I like elephants."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -1691,10 +2087,10 @@
         "word": "elephant",
         "explanation": "The largest land animal. The Korean word '코끼리' is related to '코' (nose), reflecting its long trunk. The children's song '코끼리 아저씨는 코가 손이래' (Mr. Elephant's nose is like a hand) is very popular among Korean children.",
         "examples": {
-          "beginner": "The elephant is big.",
-          "intermediate": "The elephant's trunk is really long.",
-          "advanced": "'Mr. Elephant's nose is like a hand' is a famous children's song.",
-          "master": "'코끼리' is a native Korean word with etymology related to '코' (nose)."
+          "beginner": "I like elephants.",
+          "intermediate": "The elephant is cute.",
+          "advanced": "elephants are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of elephants deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -1710,19 +2106,31 @@
           ]
         },
         "dialogue": {
-          "context": "Watching elephants at the zoo",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "The elephant is spraying water! So cute.",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "코끼리가 물 뿌리고 있어! 귀엽다."
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "Mr. Elephant's nose is like a hand~ (children's song)",
+              "text": "I like elephants.",
               "romanization": "",
-              "translation": "코끼리 아저씨는 코가 손이래~"
+              "translation": "코끼리를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -1753,10 +2161,10 @@
         "word": "곰",
         "explanation": "한국 신화에서 곰은 단군 신화의 웅녀로 등장합니다. 야생에서는 반달가슴곰이 한국의 대표 곰입니다.",
         "examples": {
-          "beginner": "곰은 크고 힘이 세요.",
-          "intermediate": "한국의 반달가슴곰은 멸종 위기 동물이에요.",
-          "advanced": "단군 신화에서 곰이 사람으로 변했다는 이야기가 전해진다.",
-          "master": "지리산 반달가슴곰 복원 사업은 생태계 보전의 성공적인 사례로 평가받고 있다."
+          "beginner": "곰을 좋아해요.",
+          "intermediate": "곰이 귀여워요.",
+          "advanced": "곰은 한국에서 인기 있는 동물입니다.",
+          "master": "곰의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -1772,19 +2180,31 @@
           ]
         },
         "dialogue": {
-          "context": "동물원에서 곰을 보면서",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "와, 저 곰 진짜 크다!",
-              "romanization": "wa, jeo gom jinjja keuda!",
-              "translation": "Wow, that bear is really big!"
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "반달가슴곰이래. 한국 고유종이야.",
-              "romanization": "bandalgaseumgomrae. hanguk goyujongiya.",
-              "translation": "They say it's a moon bear. It's native to Korea."
+              "text": "곰을 좋아해요.",
+              "romanization": "gomeul jotahaeyo.",
+              "translation": "I like bears."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -1793,10 +2213,10 @@
         "word": "bear",
         "explanation": "In Korean mythology, a bear transforms into a woman (Ungnyeo) in the Dangun founding myth. The Asiatic black bear (moon bear) is Korea's representative bear species.",
         "examples": {
-          "beginner": "Bears are big and strong.",
-          "intermediate": "The Asiatic black bear in Korea is an endangered species.",
-          "advanced": "In the Dangun myth, a bear is said to have transformed into a human.",
-          "master": "The Jirisan moon bear restoration project is regarded as a successful case of ecosystem conservation."
+          "beginner": "I like bears.",
+          "intermediate": "The bear is cute.",
+          "advanced": "bears are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of bears deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -1812,19 +2232,31 @@
           ]
         },
         "dialogue": {
-          "context": "Watching bears at the zoo",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Wow, that bear is really big!",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "와, 저 곰 진짜 크다!"
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "They say it's a moon bear. It's native to Korea.",
+              "text": "I like bears.",
               "romanization": "",
-              "translation": "반달가슴곰이래. 한국 고유종이야."
+              "translation": "곰을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -1855,10 +2287,10 @@
         "word": "늑대",
         "explanation": "한국 전래동화에서 자주 등장하는 동물입니다. '양의 탈을 쓴 늑대'처럼 속담에도 등장합니다.",
         "examples": {
-          "beginner": "늑대는 무서운 동물이에요.",
-          "intermediate": "늑대는 무리 지어 사냥해요.",
-          "advanced": "한국 전래동화에서 늑대는 주로 악역으로 등장한다.",
-          "master": "한반도에서 늑대는 일제강점기 이후 사실상 멸종된 것으로 알려져 있다."
+          "beginner": "늑대를 좋아해요.",
+          "intermediate": "늑대가 귀여워요.",
+          "advanced": "늑대는 한국에서 인기 있는 동물입니다.",
+          "master": "늑대의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -1874,19 +2306,31 @@
           ]
         },
         "dialogue": {
-          "context": "전래동화를 읽으며",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "이 이야기에 늑대가 나와?",
-              "romanization": "i iyagie neukdaega nawa?",
-              "translation": "Does a wolf appear in this story?"
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "응, 늑대가 양을 잡으려고 해.",
-              "romanization": "eung, neukdaega yangeul jabeuryeogo hae.",
-              "translation": "Yeah, the wolf tries to catch the sheep."
+              "text": "늑대를 좋아해요.",
+              "romanization": "neukdaereul jotahaeyo.",
+              "translation": "I like wolfs."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -1895,10 +2339,10 @@
         "word": "wolf",
         "explanation": "A wild animal frequently appearing in Korean folktales. It also appears in proverbs like 'a wolf in sheep's clothing.'",
         "examples": {
-          "beginner": "Wolves are scary animals.",
-          "intermediate": "Wolves hunt in packs.",
-          "advanced": "In Korean folktales, wolves typically play the role of villains.",
-          "master": "Wolves on the Korean Peninsula are believed to have gone virtually extinct after the Japanese colonial period."
+          "beginner": "I like wolfs.",
+          "intermediate": "The wolf is cute.",
+          "advanced": "wolfs are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of wolfs deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -1914,19 +2358,31 @@
           ]
         },
         "dialogue": {
-          "context": "Reading a folktale",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Does a wolf appear in this story?",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "이 이야기에 늑대가 나와?"
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "Yeah, the wolf tries to catch the sheep.",
+              "text": "I like wolfs.",
               "romanization": "",
-              "translation": "응, 늑대가 양을 잡으려고 해."
+              "translation": "늑대를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -1957,10 +2413,10 @@
         "word": "여우",
         "explanation": "한국 전설에서 구미호(아홉 꼬리 여우)로 유명합니다. 비유적으로 '여우 같다'는 영리하고 교활하다는 뜻입니다.",
         "examples": {
-          "beginner": "여우는 영리한 동물이에요.",
-          "intermediate": "그 사람은 여우처럼 똑똑해요.",
-          "advanced": "구미호는 한국 전설에서 가장 유명한 요괴 중 하나이다.",
-          "master": "여우의 상징성은 동아시아 문화권에서 공통적으로 영리함과 변신을 의미한다."
+          "beginner": "여우를 좋아해요.",
+          "intermediate": "여우가 귀여워요.",
+          "advanced": "여우는 한국에서 인기 있는 동물입니다.",
+          "master": "여우의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -1976,19 +2432,31 @@
           ]
         },
         "dialogue": {
-          "context": "친구의 성격에 대해 이야기하며",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "그 사람 진짜 여우 같아.",
-              "romanization": "geu saram jinjja yeou gata.",
-              "translation": "That person is really fox-like (sly)."
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "맞아, 항상 머리를 잘 써.",
-              "romanization": "maja, hangsang meorireul jal sseo.",
-              "translation": "Right, they always use their head well."
+              "text": "여우를 좋아해요.",
+              "romanization": "yeoureul jotahaeyo.",
+              "translation": "I like foxs."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -1997,10 +2465,10 @@
         "word": "fox",
         "explanation": "Famous in Korean legend as the gumiho (nine-tailed fox). Figuratively, '여우 같다' means someone is clever and cunning.",
         "examples": {
-          "beginner": "Foxes are clever animals.",
-          "intermediate": "That person is as smart as a fox.",
-          "advanced": "The gumiho is one of the most famous mythical creatures in Korean legend.",
-          "master": "The symbolism of the fox commonly represents cleverness and shapeshifting across East Asian cultures."
+          "beginner": "I like foxs.",
+          "intermediate": "The fox is cute.",
+          "advanced": "foxs are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of foxs deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -2016,19 +2484,31 @@
           ]
         },
         "dialogue": {
-          "context": "Talking about a friend's personality",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "That person is really fox-like (sly).",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "그 사람 진짜 여우 같아."
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "Right, they always use their head well.",
+              "text": "I like foxs.",
               "romanization": "",
-              "translation": "맞아, 항상 머리를 잘 써."
+              "translation": "여우를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -2059,10 +2539,10 @@
         "word": "사슴",
         "explanation": "우아한 모습으로 알려진 야생 동물입니다. '사슴 눈'은 크고 맑은 눈을 뜻합니다.",
         "examples": {
-          "beginner": "사슴이 뛰어가요.",
-          "intermediate": "그 배우는 사슴 같은 눈을 가졌어요.",
-          "advanced": "제주도에는 야생 사슴이 서식하고 있다.",
-          "master": "녹용은 사슴의 뿔로 만든 한약재로 한국에서 전통적으로 사용되어 왔다."
+          "beginner": "사슴을 좋아해요.",
+          "intermediate": "사슴이 귀여워요.",
+          "advanced": "사슴은 한국에서 인기 있는 동물입니다.",
+          "master": "사슴의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -2078,19 +2558,31 @@
           ]
         },
         "dialogue": {
-          "context": "산에서 사슴을 발견하고",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "저기 사슴이다! 조용히 해.",
-              "romanization": "jeogi saseumida! joyonghi hae.",
-              "translation": "There's a deer over there! Be quiet."
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "와, 진짜 예쁘다. 눈이 크네.",
-              "romanization": "wa, jinjja yeppeuda. nuni keune.",
-              "translation": "Wow, it's really pretty. Its eyes are big."
+              "text": "사슴을 좋아해요.",
+              "romanization": "saseumeul jotahaeyo.",
+              "translation": "I like deers."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -2099,10 +2591,10 @@
         "word": "deer",
         "explanation": "A wild animal known for its graceful appearance. '사슴 눈' (deer eyes) refers to big, clear eyes as a compliment.",
         "examples": {
-          "beginner": "The deer is running.",
-          "intermediate": "That actor has eyes like a deer.",
-          "advanced": "Wild deer inhabit Jeju Island.",
-          "master": "Deer antler velvet (noknyong) is a traditional Korean herbal medicine ingredient made from deer antlers."
+          "beginner": "I like deers.",
+          "intermediate": "The deer is cute.",
+          "advanced": "deers are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of deers deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -2118,19 +2610,31 @@
           ]
         },
         "dialogue": {
-          "context": "Spotting a deer in the mountains",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "There's a deer over there! Be quiet.",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "저기 사슴이다! 조용히 해."
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "Wow, it's really pretty. Its eyes are big.",
+              "text": "I like deers.",
               "romanization": "",
-              "translation": "와, 진짜 예쁘다. 눈이 크네."
+              "translation": "사슴을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -2162,10 +2666,10 @@
         "word": "독수리",
         "explanation": "하늘의 왕으로 불리는 대형 맹금류입니다. 힘과 자유의 상징으로 쓰입니다.",
         "examples": {
-          "beginner": "독수리가 하늘을 날아요.",
-          "intermediate": "독수리는 시력이 매우 좋아요.",
-          "advanced": "독수리는 높은 곳에서 먹이를 발견하고 급강하한다.",
-          "master": "한국에서 독수리는 겨울 철새로, 몽골과 시베리아에서 월동하러 찾아온다."
+          "beginner": "독수리를 좋아해요.",
+          "intermediate": "독수리가 귀여워요.",
+          "advanced": "독수리는 한국에서 인기 있는 동물입니다.",
+          "master": "독수리의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -2181,19 +2685,31 @@
           ]
         },
         "dialogue": {
-          "context": "산 정상에서 독수리를 보며",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "저기 독수리가 날고 있어!",
-              "romanization": "jeogi doksuri nalgo isseo!",
-              "translation": "An eagle is flying over there!"
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "날개가 진짜 크다. 멋있다.",
-              "romanization": "nalgaega jinjja keuda. meosittda.",
-              "translation": "Its wings are really big. So cool."
+              "text": "독수리를 좋아해요.",
+              "romanization": "doksurireul jotahaeyo.",
+              "translation": "I like eagles."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -2202,10 +2718,10 @@
         "word": "eagle",
         "explanation": "A large bird of prey known as the king of the sky. It symbolizes power and freedom.",
         "examples": {
-          "beginner": "The eagle flies in the sky.",
-          "intermediate": "Eagles have very good eyesight.",
-          "advanced": "Eagles spot their prey from high up and dive down rapidly.",
-          "master": "In Korea, eagles are winter migratory birds that come from Mongolia and Siberia to overwinter."
+          "beginner": "I like eagles.",
+          "intermediate": "The eagle is cute.",
+          "advanced": "eagles are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of eagles deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -2221,19 +2737,31 @@
           ]
         },
         "dialogue": {
-          "context": "Watching an eagle from a mountain top",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "An eagle is flying over there!",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "저기 독수리가 날고 있어!"
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "Its wings are really big. So cool.",
+              "text": "I like eagles.",
               "romanization": "",
-              "translation": "날개가 진짜 크다. 멋있다."
+              "translation": "독수리를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -2264,10 +2792,10 @@
         "word": "까마귀",
         "explanation": "한국에서 까마귀는 불길한 새로 여겨집니다. '까마귀 날자 배 떨어진다'는 우연의 일치를 뜻하는 속담입니다.",
         "examples": {
-          "beginner": "까마귀는 검은 새예요.",
-          "intermediate": "한국에서 까마귀는 불길하다고 해요.",
-          "advanced": "까마귀 날자 배 떨어진다는 속담이 있다.",
-          "master": "흥미롭게도 일본에서는 까마귀가 신의 사자로 여겨지는 반면, 한국에서는 흉조로 인식된다."
+          "beginner": "까마귀를 좋아해요.",
+          "intermediate": "까마귀가 귀여워요.",
+          "advanced": "까마귀는 한국에서 인기 있는 동물입니다.",
+          "master": "까마귀의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -2283,19 +2811,31 @@
           ]
         },
         "dialogue": {
-          "context": "까마귀 울음소리를 듣고",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "까마귀가 울어. 좀 무섭다.",
-              "romanization": "kkamagwiga ureo. jom museopda.",
-              "translation": "The crow is cawing. It's kind of scary."
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "미신이야. 까마귀도 그냥 새야.",
-              "romanization": "misiniya. kkamagwido geunyang saeya.",
-              "translation": "That's superstition. Crows are just birds."
+              "text": "까마귀를 좋아해요.",
+              "romanization": "kkamagwireul jotahaeyo.",
+              "translation": "I like crows."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -2304,10 +2844,10 @@
         "word": "crow",
         "explanation": "In Korea, crows are considered unlucky birds. The proverb '까마귀 날자 배 떨어진다' (a pear falls just as the crow flies) refers to unfortunate coincidences.",
         "examples": {
-          "beginner": "Crows are black birds.",
-          "intermediate": "In Korea, crows are considered bad luck.",
-          "advanced": "There's a proverb about crows flying and pears falling, meaning unfortunate coincidence.",
-          "master": "Interestingly, while crows are seen as messengers of gods in Japan, they are perceived as bad omens in Korea."
+          "beginner": "I like crows.",
+          "intermediate": "The crow is cute.",
+          "advanced": "crows are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of crows deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -2323,19 +2863,31 @@
           ]
         },
         "dialogue": {
-          "context": "Hearing a crow cawing",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "The crow is cawing. It's kind of scary.",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "까마귀가 울어. 좀 무섭다."
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "That's superstition. Crows are just birds.",
+              "text": "I like crows.",
               "romanization": "",
-              "translation": "미신이야. 까마귀도 그냥 새야."
+              "translation": "까마귀를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -2366,10 +2918,10 @@
         "word": "참새",
         "explanation": "한국에서 가장 흔한 새 중 하나입니다. '참새가 방앗간을 그냥 지나칠까'라는 속담이 유명합니다.",
         "examples": {
-          "beginner": "참새가 지저귀고 있어요.",
-          "intermediate": "참새가 방앗간을 그냥 지나칠까요?",
-          "advanced": "도시화로 참새의 개체 수가 크게 줄었다.",
-          "master": "참새가 방앗간을 그냥 지나칠까라는 속담은 좋아하는 것을 그냥 지나칠 수 없다는 뜻이다."
+          "beginner": "참새를 좋아해요.",
+          "intermediate": "참새가 귀여워요.",
+          "advanced": "참새는 한국에서 인기 있는 동물입니다.",
+          "master": "참새의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -2385,19 +2937,31 @@
           ]
         },
         "dialogue": {
-          "context": "빵집 앞을 지나가면서",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "이 빵집 그냥 지나갈 수 없어.",
-              "romanization": "i ppangjip geunyang jinagal su eopseo.",
-              "translation": "I can't just walk past this bakery."
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "참새가 방앗간을 못 지나치지!",
-              "romanization": "chamsaega bangatkaneul mot jinachiji!",
-              "translation": "A sparrow can't pass a mill! (You can't resist temptation!)"
+              "text": "참새를 좋아해요.",
+              "romanization": "chamsaereul jotahaeyo.",
+              "translation": "I like sparrows."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -2406,10 +2970,10 @@
         "word": "sparrow",
         "explanation": "One of the most common birds in Korea. The proverb 'Can a sparrow pass by a mill?' means one cannot resist temptation.",
         "examples": {
-          "beginner": "A sparrow is chirping.",
-          "intermediate": "Can a sparrow just pass by a mill?",
-          "advanced": "The sparrow population has greatly decreased due to urbanization.",
-          "master": "The proverb about sparrows and mills means that one cannot simply pass by something they love."
+          "beginner": "I like sparrows.",
+          "intermediate": "The sparrow is cute.",
+          "advanced": "sparrows are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of sparrows deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -2425,19 +2989,31 @@
           ]
         },
         "dialogue": {
-          "context": "Walking past a bakery",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "I can't just walk past this bakery.",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "이 빵집 그냥 지나갈 수 없어."
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "A sparrow can't pass a mill! (You can't resist temptation!)",
+              "text": "I like sparrows.",
               "romanization": "",
-              "translation": "참새가 방앗간을 못 지나치지!"
+              "translation": "참새를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -2468,10 +3044,10 @@
         "word": "비둘기",
         "explanation": "도시에서 흔히 볼 수 있는 새입니다. 평화의 상징으로도 알려져 있습니다.",
         "examples": {
-          "beginner": "비둘기가 공원에 있어요.",
-          "intermediate": "비둘기는 평화의 상징이에요.",
-          "advanced": "서울 광화문 광장에는 비둘기가 많이 모여든다.",
-          "master": "도시 비둘기의 과밀 문제는 위생과 문화재 보호 측면에서 사회적 논의 대상이 되고 있다."
+          "beginner": "비둘기를 좋아해요.",
+          "intermediate": "비둘기가 귀여워요.",
+          "advanced": "비둘기는 한국에서 인기 있는 동물입니다.",
+          "master": "비둘기의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -2487,19 +3063,31 @@
           ]
         },
         "dialogue": {
-          "context": "공원에서 비둘기에게 먹이를 주며",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "비둘기한테 빵 줘도 돼?",
-              "romanization": "bidulgihante ppang jwodo dwae?",
-              "translation": "Can I give bread to the pigeons?"
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "안 돼, 빵은 비둘기 건강에 안 좋아.",
-              "romanization": "an dwae, ppangeun bidulgi geongage an joa.",
-              "translation": "No, bread isn't good for pigeons' health."
+              "text": "비둘기를 좋아해요.",
+              "romanization": "bidulgireul jotahaeyo.",
+              "translation": "I like pigeon/doves."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -2508,10 +3096,10 @@
         "word": "pigeon/dove",
         "explanation": "A bird commonly seen in cities. Also known as a symbol of peace.",
         "examples": {
-          "beginner": "There are pigeons in the park.",
-          "intermediate": "Pigeons are a symbol of peace.",
-          "advanced": "Many pigeons gather at Gwanghwamun Square in Seoul.",
-          "master": "The overpopulation of urban pigeons has become a social issue regarding hygiene and cultural heritage protection."
+          "beginner": "I like pigeon/doves.",
+          "intermediate": "The pigeon/dove is cute.",
+          "advanced": "pigeon/doves are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of pigeon/doves deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -2527,19 +3115,31 @@
           ]
         },
         "dialogue": {
-          "context": "Feeding pigeons in the park",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Can I give bread to the pigeons?",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "비둘기한테 빵 줘도 돼?"
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "No, bread isn't good for pigeons' health.",
+              "text": "I like pigeon/doves.",
               "romanization": "",
-              "translation": "안 돼, 빵은 비둘기 건강에 안 좋아."
+              "translation": "비둘기를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -2570,10 +3170,10 @@
         "word": "개구리",
         "explanation": "양서류 동물입니다. '우물 안 개구리'는 시야가 좁은 사람을 뜻하는 유명한 관용구입니다.",
         "examples": {
-          "beginner": "개구리가 뛰어요.",
-          "intermediate": "우물 안 개구리처럼 생각하면 안 돼요.",
-          "advanced": "올챙이 적 생각 못 하는 개구리라는 속담이 있다.",
-          "master": "양서류 감소는 전 세계적인 환경 문제이며, 한국의 맹꽁이도 멸종 위기에 처해 있다."
+          "beginner": "개구리를 좋아해요.",
+          "intermediate": "개구리가 귀여워요.",
+          "advanced": "개구리는 한국에서 인기 있는 동물입니다.",
+          "master": "개구리의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -2589,19 +3189,31 @@
           ]
         },
         "dialogue": {
-          "context": "여행을 권유하면서",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "넌 우물 안 개구리야. 여행 좀 다녀.",
-              "romanization": "neon umul an gaeguriya. yeohaeng jom danyeo.",
-              "translation": "You're a frog in a well. Travel a bit."
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "맞아, 세상을 더 넓게 봐야지.",
-              "romanization": "maja, sesangeul deo neolge bwayaji.",
-              "translation": "You're right, I should see the world more broadly."
+              "text": "개구리를 좋아해요.",
+              "romanization": "gaegurireul jotahaeyo.",
+              "translation": "I like frogs."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -2610,10 +3222,10 @@
         "word": "frog",
         "explanation": "An amphibian animal. 'A frog in a well' is a famous idiom meaning a person with a narrow worldview.",
         "examples": {
-          "beginner": "The frog is jumping.",
-          "intermediate": "You shouldn't think like a frog in a well.",
-          "advanced": "There's a proverb about a frog that forgets its tadpole days, meaning forgetting one's humble origins.",
-          "master": "Amphibian decline is a global environmental issue, and Korea's narrow-mouthed toad is also endangered."
+          "beginner": "I like frogs.",
+          "intermediate": "The frog is cute.",
+          "advanced": "frogs are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of frogs deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -2629,19 +3241,31 @@
           ]
         },
         "dialogue": {
-          "context": "Encouraging someone to travel",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "You're a frog in a well. Travel a bit.",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "넌 우물 안 개구리야. 여행 좀 다녀."
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "You're right, I should see the world more broadly.",
+              "text": "I like frogs.",
               "romanization": "",
-              "translation": "맞아, 세상을 더 넓게 봐야지."
+              "translation": "개구리를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -2672,10 +3296,10 @@
         "word": "거북이",
         "explanation": "장수의 상징입니다. 거북선은 이순신 장군의 유명한 전함이며, 십장생 중 하나입니다.",
         "examples": {
-          "beginner": "거북이는 느려요.",
-          "intermediate": "거북이는 오래 살 수 있는 동물이에요.",
-          "advanced": "거북이는 한국 문화에서 장수와 지혜의 상징이다.",
-          "master": "거북선은 임진왜란에서 활약한 세계 최초의 철갑선으로, 거북이의 등딱지 모양에서 이름을 따왔다."
+          "beginner": "거북이를 좋아해요.",
+          "intermediate": "거북이가 귀여워요.",
+          "advanced": "거북이는 한국에서 인기 있는 동물입니다.",
+          "master": "거북이의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -2691,19 +3315,31 @@
           ]
         },
         "dialogue": {
-          "context": "수족관에서 거북이를 보며",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "거북이 진짜 느리다.",
-              "romanization": "geobuki jinjja neurida.",
-              "translation": "Turtles are really slow."
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "느려도 오래 산다. 100년 넘게 사는 거북이도 있어.",
-              "romanization": "neuryeodo orae sanda. baengnyeon neomge saneun geobukido isseo.",
-              "translation": "Even though they're slow, they live long. Some turtles live over 100 years."
+              "text": "거북이를 좋아해요.",
+              "romanization": "geobukireul jotahaeyo.",
+              "translation": "I like turtles."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -2712,10 +3348,10 @@
         "word": "turtle",
         "explanation": "A symbol of longevity. The Geobukseon (turtle ship) was Admiral Yi Sun-sin's famous warship, and the turtle is one of the ten symbols of longevity in Korean culture.",
         "examples": {
-          "beginner": "Turtles are slow.",
-          "intermediate": "Turtles can live for a very long time.",
-          "advanced": "Turtles symbolize longevity and wisdom in Korean culture.",
-          "master": "The turtle ship, the world's first ironclad warship used in the Imjin War, was named after the turtle's shell shape."
+          "beginner": "I like turtles.",
+          "intermediate": "The turtle is cute.",
+          "advanced": "turtles are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of turtles deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -2731,19 +3367,31 @@
           ]
         },
         "dialogue": {
-          "context": "Watching turtles at the aquarium",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Turtles are really slow.",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "거북이 진짜 느리다."
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "Even though they're slow, they live long. Some turtles live over 100 years.",
+              "text": "I like turtles.",
               "romanization": "",
-              "translation": "느려도 오래 산다. 100년 넘게 사는 거북이도 있어."
+              "translation": "거북이를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -2774,10 +3422,10 @@
         "word": "나비",
         "explanation": "아름다운 날개를 가진 곤충입니다. 한국에서 고양이 이름으로도 많이 쓰이며, 나비의 꿈은 장자의 호접몽을 연상시킵니다.",
         "examples": {
-          "beginner": "나비가 꽃 위에 앉아 있어요.",
-          "intermediate": "봄에 나비가 많이 날아다녀요.",
-          "advanced": "나비 효과라는 개념은 작은 변화가 큰 결과를 만들 수 있다는 뜻이다.",
-          "master": "장자의 호접몽은 나비가 된 꿈을 꾸고 현실과 꿈의 경계를 사유한 철학적 우화이다."
+          "beginner": "나비를 좋아해요.",
+          "intermediate": "나비가 귀여워요.",
+          "advanced": "나비는 한국에서 인기 있는 동물입니다.",
+          "master": "나비의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -2793,19 +3441,31 @@
           ]
         },
         "dialogue": {
-          "context": "봄날 공원에서",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "나비 좀 봐! 날개가 정말 예쁘다.",
-              "romanization": "nabi jom bwa! nalgaega jeongmal yeppeuda.",
-              "translation": "Look at the butterfly! Its wings are really pretty."
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "호랑나비네. 봄이 왔구나.",
-              "romanization": "horangnabine. bomi watguna.",
-              "translation": "It's a swallowtail butterfly. Spring has come."
+              "text": "나비를 좋아해요.",
+              "romanization": "nabireul jotahaeyo.",
+              "translation": "I like butterflys."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -2814,10 +3474,10 @@
         "word": "butterfly",
         "explanation": "An insect with beautiful wings. In Korea, 'Nabi' is also a popular cat name. The butterfly dream evokes Zhuangzi's philosophical parable.",
         "examples": {
-          "beginner": "A butterfly is sitting on a flower.",
-          "intermediate": "Many butterflies fly around in spring.",
-          "advanced": "The butterfly effect concept means small changes can produce large results.",
-          "master": "Zhuangzi's butterfly dream is a philosophical fable contemplating the boundary between reality and dreams."
+          "beginner": "I like butterflys.",
+          "intermediate": "The butterfly is cute.",
+          "advanced": "butterflys are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of butterflys deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -2833,19 +3493,31 @@
           ]
         },
         "dialogue": {
-          "context": "At the park on a spring day",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Look at the butterfly! Its wings are really pretty.",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "나비 좀 봐! 날개가 정말 예쁘다."
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "It's a swallowtail butterfly. Spring has come.",
+              "text": "I like butterflys.",
               "romanization": "",
-              "translation": "호랑나비네. 봄이 왔구나."
+              "translation": "나비를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -2876,10 +3548,10 @@
         "word": "벌",
         "explanation": "꿀을 만드는 곤충입니다. 쏘일 수 있어 주의가 필요합니다. '벌'은 처벌이라는 동음이의어도 있습니다.",
         "examples": {
-          "beginner": "벌이 꽃에 앉았어요.",
-          "intermediate": "벌에 쏘이면 많이 아파요.",
-          "advanced": "꿀벌은 생태계에서 수분 매개체로서 매우 중요한 역할을 한다.",
-          "master": "전 세계적으로 꿀벌 개체 수 감소 현상이 식량 안보에 심각한 위협이 되고 있다."
+          "beginner": "벌을 좋아해요.",
+          "intermediate": "벌이 귀여워요.",
+          "advanced": "벌은 한국에서 인기 있는 동물입니다.",
+          "master": "벌의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -2895,19 +3567,31 @@
           ]
         },
         "dialogue": {
-          "context": "소풍 중 벌을 발견하고",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "벌이다! 움직이지 마!",
-              "romanization": "beorida! umjigiji ma!",
-              "translation": "It's a bee! Don't move!"
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "가만히 있으면 안 쏴. 진정해.",
-              "romanization": "gamanhi isseumyeon an sswa. jinjeong hae.",
-              "translation": "It won't sting if you stay still. Calm down."
+              "text": "벌을 좋아해요.",
+              "romanization": "beoleul jotahaeyo.",
+              "translation": "I like bees."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -2916,10 +3600,10 @@
         "word": "bee",
         "explanation": "An insect that makes honey. Caution is needed as they can sting. Note: '벌' is also a homonym meaning 'punishment' in Korean.",
         "examples": {
-          "beginner": "A bee landed on the flower.",
-          "intermediate": "It hurts a lot if you get stung by a bee.",
-          "advanced": "Honeybees play a crucial role in ecosystems as pollinators.",
-          "master": "The worldwide decline in honeybee populations poses a serious threat to food security."
+          "beginner": "I like bees.",
+          "intermediate": "The bee is cute.",
+          "advanced": "bees are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of bees deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -2935,19 +3619,31 @@
           ]
         },
         "dialogue": {
-          "context": "Spotting a bee during a picnic",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "It's a bee! Don't move!",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "벌이다! 움직이지 마!"
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "It won't sting if you stay still. Calm down.",
+              "text": "I like bees.",
               "romanization": "",
-              "translation": "가만히 있으면 안 쏴. 진정해."
+              "translation": "벌을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -2978,10 +3674,10 @@
         "word": "개미",
         "explanation": "부지런함의 상징인 곤충입니다. '개미처럼 일하다'는 열심히 일한다는 뜻이며, 주식 투자에서 개인 투자자를 '개미'라고 부릅니다.",
         "examples": {
-          "beginner": "개미가 줄지어 걸어가요.",
-          "intermediate": "그는 개미처럼 부지런해요.",
-          "advanced": "주식 시장에서 개미 투자자들의 영향력이 커지고 있다.",
-          "master": "개미의 사회적 구조는 분업과 협력의 관점에서 인간 사회와 비교 연구되고 있다."
+          "beginner": "개미를 좋아해요.",
+          "intermediate": "개미가 귀여워요.",
+          "advanced": "개미는 한국에서 인기 있는 동물입니다.",
+          "master": "개미의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -2997,19 +3693,31 @@
           ]
         },
         "dialogue": {
-          "context": "열심히 일하는 동료에 대해",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "그 사람 진짜 개미처럼 일해.",
-              "romanization": "geu saram jinjja gaemicheoreom ilhae.",
-              "translation": "That person works like an ant."
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "맞아, 쉬는 걸 본 적이 없어.",
-              "romanization": "maja, swineun geol bon jeogi eopseo.",
-              "translation": "Right, I've never seen them take a break."
+              "text": "개미를 좋아해요.",
+              "romanization": "gaemireul jotahaeyo.",
+              "translation": "I like ants."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -3018,10 +3726,10 @@
         "word": "ant",
         "explanation": "An insect symbolizing diligence. 'Working like an ant' means working very hard. In Korean stock markets, individual investors are called 'ants' (개미).",
         "examples": {
-          "beginner": "Ants are walking in a line.",
-          "intermediate": "He is as diligent as an ant.",
-          "advanced": "The influence of individual 'ant' investors in the stock market is growing.",
-          "master": "The social structure of ants is studied comparatively with human society in terms of division of labor and cooperation."
+          "beginner": "I like ants.",
+          "intermediate": "The ant is cute.",
+          "advanced": "ants are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of ants deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -3037,19 +3745,31 @@
           ]
         },
         "dialogue": {
-          "context": "Talking about a hardworking colleague",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "That person works like an ant.",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "그 사람 진짜 개미처럼 일해."
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "Right, I've never seen them take a break.",
+              "text": "I like ants.",
               "romanization": "",
-              "translation": "맞아, 쉬는 걸 본 적이 없어."
+              "translation": "개미를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -3080,10 +3800,10 @@
         "word": "돌고래",
         "explanation": "높은 지능으로 알려진 해양 포유류입니다. 제주도 근해에서 남방큰돌고래를 볼 수 있습니다.",
         "examples": {
-          "beginner": "돌고래가 물 위로 뛰어올라요.",
-          "intermediate": "돌고래는 매우 똑똑한 동물이에요.",
-          "advanced": "제주도 앞바다에는 남방큰돌고래 약 120마리가 서식하고 있다.",
-          "master": "한국에서는 수족관 돌고래를 야생 방류하는 프로젝트가 국제적 주목을 받았다."
+          "beginner": "돌고래를 좋아해요.",
+          "intermediate": "돌고래가 귀여워요.",
+          "advanced": "돌고래는 한국에서 인기 있는 동물입니다.",
+          "master": "돌고래의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -3099,19 +3819,31 @@
           ]
         },
         "dialogue": {
-          "context": "제주도에서 돌고래를 보며",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "저기 돌고래다! 뛰어오르고 있어!",
-              "romanization": "jeogi dolgoraeda! ttwieooreugo isseo!",
-              "translation": "There are dolphins! They're jumping!"
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "제주 바다에 야생 돌고래가 살고 있대.",
-              "romanization": "jeju badae yasaeng dolgoraega salgo ittdae.",
-              "translation": "They say wild dolphins live in the Jeju seas."
+              "text": "돌고래를 좋아해요.",
+              "romanization": "dolgoraereul jotahaeyo.",
+              "translation": "I like dolphins."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -3120,10 +3852,10 @@
         "word": "dolphin",
         "explanation": "A marine mammal known for its high intelligence. Indo-Pacific bottlenose dolphins can be seen near Jeju Island.",
         "examples": {
-          "beginner": "The dolphin jumps out of the water.",
-          "intermediate": "Dolphins are very intelligent animals.",
-          "advanced": "About 120 Indo-Pacific bottlenose dolphins inhabit the waters off Jeju Island.",
-          "master": "Korea's project to release captive dolphins back into the wild gained international attention."
+          "beginner": "I like dolphins.",
+          "intermediate": "The dolphin is cute.",
+          "advanced": "dolphins are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of dolphins deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -3139,19 +3871,31 @@
           ]
         },
         "dialogue": {
-          "context": "Watching dolphins in Jeju",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "There are dolphins! They're jumping!",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "저기 돌고래다! 뛰어오르고 있어!"
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "They say wild dolphins live in the Jeju seas.",
+              "text": "I like dolphins.",
               "romanization": "",
-              "translation": "제주 바다에 야생 돌고래가 살고 있대."
+              "translation": "돌고래를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -3182,10 +3926,10 @@
         "word": "상어",
         "explanation": "바다의 최상위 포식자입니다. '아기 상어' 노래가 전 세계적으로 유명합니다.",
         "examples": {
-          "beginner": "상어는 이빨이 날카로워요.",
-          "intermediate": "아기 상어 뚜루루뚜루 노래 알아요?",
-          "advanced": "상어는 바다 생태계에서 최상위 포식자로서 중요한 역할을 한다.",
-          "master": "상어 지느러미 채취를 위한 핀닝은 국제적으로 금지 움직임이 확산되고 있다."
+          "beginner": "상어를 좋아해요.",
+          "intermediate": "상어가 귀여워요.",
+          "advanced": "상어는 한국에서 인기 있는 동물입니다.",
+          "master": "상어의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -3201,19 +3945,31 @@
           ]
         },
         "dialogue": {
-          "context": "수족관에서 상어를 보며",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "상어 진짜 무섭다. 이빨 좀 봐.",
-              "romanization": "sangeo jinjja museopda. ippal jom bwa.",
-              "translation": "Sharks are really scary. Look at those teeth."
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "근데 상어가 사람을 공격하는 건 드물대.",
-              "romanization": "geunde sangeoga sarameul gonggyeok haneun geon deumuldae.",
-              "translation": "But shark attacks on humans are actually rare."
+              "text": "상어를 좋아해요.",
+              "romanization": "sangeoreul jotahaeyo.",
+              "translation": "I like sharks."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -3222,10 +3978,10 @@
         "word": "shark",
         "explanation": "An apex predator of the ocean. The Korean children's song 'Baby Shark' (아기 상어) became a worldwide viral hit.",
         "examples": {
-          "beginner": "Sharks have sharp teeth.",
-          "intermediate": "Do you know the Baby Shark song?",
-          "advanced": "Sharks play an important role as apex predators in marine ecosystems.",
-          "master": "There is a growing international movement to ban shark finning for fin harvesting."
+          "beginner": "I like sharks.",
+          "intermediate": "The shark is cute.",
+          "advanced": "sharks are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of sharks deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -3241,19 +3997,31 @@
           ]
         },
         "dialogue": {
-          "context": "Watching sharks at the aquarium",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Sharks are really scary. Look at those teeth.",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "상어 진짜 무섭다. 이빨 좀 봐."
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "But shark attacks on humans are actually rare.",
+              "text": "I like sharks.",
               "romanization": "",
-              "translation": "근데 상어가 사람을 공격하는 건 드물대."
+              "translation": "상어를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -3284,10 +4052,10 @@
         "word": "고래",
         "explanation": "지구에서 가장 큰 동물입니다. 울산 반구대 암각화에는 고래 그림이 있어, 한국의 포경 역사를 보여줍니다.",
         "examples": {
-          "beginner": "고래는 바다에서 살아요.",
-          "intermediate": "고래는 지구에서 가장 큰 동물이에요.",
-          "advanced": "울산 반구대 암각화에는 선사시대 고래 사냥 장면이 새겨져 있다.",
-          "master": "고래싸움에 새우 등 터진다는 속담은 강대국 사이에서 약소국이 피해를 입는 상황을 비유한다."
+          "beginner": "고래를 좋아해요.",
+          "intermediate": "고래가 귀여워요.",
+          "advanced": "고래는 한국에서 인기 있는 동물입니다.",
+          "master": "고래의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -3303,19 +4071,31 @@
           ]
         },
         "dialogue": {
-          "context": "고래 관광을 하면서",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "고래가 물을 뿜고 있어!",
-              "romanization": "goraega mureul ppumgo isseo!",
-              "translation": "The whale is spouting water!"
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "대왕고래래! 지구에서 제일 큰 동물이야.",
-              "romanization": "daewanggoraere! jigueseo jeil keun dongmuriya.",
-              "translation": "It's a blue whale! The largest animal on Earth."
+              "text": "고래를 좋아해요.",
+              "romanization": "goraereul jotahaeyo.",
+              "translation": "I like whales."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -3324,10 +4104,10 @@
         "word": "whale",
         "explanation": "The largest animal on Earth. The Bangudae Petroglyphs in Ulsan contain whale carvings, showing Korea's whaling history.",
         "examples": {
-          "beginner": "Whales live in the ocean.",
-          "intermediate": "Whales are the largest animals on Earth.",
-          "advanced": "The Bangudae Petroglyphs in Ulsan contain prehistoric whale hunting scenes.",
-          "master": "The Korean proverb 'When whales fight, the shrimp's back breaks' describes how small nations suffer between great powers."
+          "beginner": "I like whales.",
+          "intermediate": "The whale is cute.",
+          "advanced": "whales are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of whales deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -3343,19 +4123,31 @@
           ]
         },
         "dialogue": {
-          "context": "On a whale watching tour",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "The whale is spouting water!",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "고래가 물을 뿜고 있어!"
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "It's a blue whale! The largest animal on Earth.",
+              "text": "I like whales.",
               "romanization": "",
-              "translation": "대왕고래래! 지구에서 제일 큰 동물이야."
+              "translation": "고래를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }
@@ -3386,10 +4178,10 @@
         "word": "오리",
         "explanation": "농장이나 공원에서 볼 수 있는 새입니다. 한국에서 오리고기는 보양식으로 인기가 있습니다.",
         "examples": {
-          "beginner": "오리가 물 위에 떠 있어요.",
-          "intermediate": "오리 훈제 먹어 본 적 있어요?",
-          "advanced": "한국에서 오리고기는 삼겹살과 함께 인기 있는 고기 요리이다.",
-          "master": "오리농법은 논에 오리를 풀어 해충을 잡게 하는 친환경 농법으로 한국에서 활용되고 있다."
+          "beginner": "오리를 좋아해요.",
+          "intermediate": "오리가 귀여워요.",
+          "advanced": "오리는 한국에서 인기 있는 동물입니다.",
+          "master": "오리의 생태와 습성을 이해하면 자연에 대한 이해가 깊어집니다."
         },
         "variations": {
           "formal": [
@@ -3405,19 +4197,31 @@
           ]
         },
         "dialogue": {
-          "context": "저녁 메뉴를 고르면서",
+          "context": "좋아하는 동물에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "오늘 저녁 오리고기 어때?",
-              "romanization": "oneul jeonyeok origogi eottae?",
-              "translation": "How about duck for dinner tonight?"
+              "text": "어떤 동물 좋아해요?",
+              "romanization": "eotteon dongmul jotahaeyo?",
+              "translation": "What animal do you like?"
             },
             {
               "speaker": "B",
-              "text": "좋아! 오리 훈제 먹으러 가자.",
-              "romanization": "joa! ori hunje meogeureo gaja.",
-              "translation": "Great! Let's go eat smoked duck."
+              "text": "오리를 좋아해요.",
+              "romanization": "orireul jotahaeyo.",
+              "translation": "I like ducks."
+            },
+            {
+              "speaker": "A",
+              "text": "키워 본 적 있어요?",
+              "romanization": "kiwo bon jeok iseoyo?",
+              "translation": "Have you ever had one?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 어렸을 때 키웠어요.",
+              "romanization": "ne, eoryeoseul ttae kiwoseoyo.",
+              "translation": "Yes, I had one when I was young."
             }
           ]
         }
@@ -3426,10 +4230,10 @@
         "word": "duck",
         "explanation": "A bird found on farms and in parks. In Korea, duck meat is popular as a nourishing food.",
         "examples": {
-          "beginner": "The duck is floating on the water.",
-          "intermediate": "Have you ever tried smoked duck?",
-          "advanced": "In Korea, duck meat is a popular dish alongside samgyeopsal (pork belly).",
-          "master": "Duck farming in rice paddies is an eco-friendly agricultural method used in Korea where ducks eat pests."
+          "beginner": "I like ducks.",
+          "intermediate": "The duck is cute.",
+          "advanced": "ducks are popular animals in Korea.",
+          "master": "Understanding the ecology and habits of ducks deepens our understanding of nature."
         },
         "variations": {
           "formal": [
@@ -3445,19 +4249,31 @@
           ]
         },
         "dialogue": {
-          "context": "Choosing dinner",
+          "context": "Talking about favorite animals",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "How about duck for dinner tonight?",
+              "text": "What animal do you like?",
               "romanization": "",
-              "translation": "오늘 저녁 오리고기 어때?"
+              "translation": "어떤 동물 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "Great! Let's go eat smoked duck.",
+              "text": "I like ducks.",
               "romanization": "",
-              "translation": "좋아! 오리 훈제 먹으러 가자."
+              "translation": "오리를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you ever had one?",
+              "romanization": "",
+              "translation": "키워 본 적 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, I had one when I was young.",
+              "romanization": "",
+              "translation": "네, 어렸을 때 키웠어요."
             }
           ]
         }

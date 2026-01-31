@@ -20,10 +20,10 @@
         "word": "물",
         "explanation": "마시는 액체의 기본입니다. 한국 식당에서는 물이 무료로 제공됩니다. '물'은 다양한 합성어에 쓰입니다: 물고기, 물가, 물건 등.",
         "examples": {
-          "beginner": "물 주세요.",
-          "intermediate": "한국 식당에서는 물이 무료예요.",
-          "advanced": "한국에서는 수돗물보다 정수기 물을 마시는 경우가 많다.",
-          "master": "물은 생명의 근원이라는 인식은 동서양 모두 공통이다."
+          "beginner": "물을 마셔요.",
+          "intermediate": "물이 맛있어요.",
+          "advanced": "물은 한국에서 인기 있는 음료입니다.",
+          "master": "물의 다양한 종류와 문화적 의미를 이해하면 한국 음료 문화를 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -39,19 +39,31 @@
           ]
         },
         "dialogue": {
-          "context": "식당에서",
+          "context": "카페에서 주문하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "물 좀 주세요.",
-              "romanization": "mul jom juseyo.",
-              "translation": "Could I have some water, please?"
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
             },
             {
               "speaker": "B",
-              "text": "네, 바로 가져다 드릴게요.",
-              "romanization": "ne, baro gajyeoda deurilgeyo.",
-              "translation": "Sure, I'll bring it right away."
+              "text": "물 주세요.",
+              "romanization": "mul juseyo.",
+              "translation": "water, please."
+            },
+            {
+              "speaker": "A",
+              "text": "뜨거운 거요, 차가운 거요?",
+              "romanization": "tteugeoun geoyo, chagaun geoyo?",
+              "translation": "Hot or cold?"
+            },
+            {
+              "speaker": "B",
+              "text": "차가운 걸로 주세요.",
+              "romanization": "chagaun geolro juseyo.",
+              "translation": "Cold, please."
             }
           ]
         }
@@ -60,10 +72,10 @@
         "word": "water",
         "explanation": "The most basic drink. In Korean restaurants, water is provided for free. '물' is used in many compound words: 물고기 (fish), 물가 (waterside/prices), etc.",
         "examples": {
-          "beginner": "Water, please.",
-          "intermediate": "Water is free in Korean restaurants.",
-          "advanced": "In Korea, people often drink filtered water rather than tap water.",
-          "master": "The recognition that water is the source of life is universal across cultures."
+          "beginner": "I drink water.",
+          "intermediate": "water is delicious.",
+          "advanced": "water is a popular drink in Korea.",
+          "master": "Understanding the varieties and cultural significance of water deepens appreciation of Korean beverage culture."
         },
         "variations": {
           "formal": [
@@ -79,19 +91,31 @@
           ]
         },
         "dialogue": {
-          "context": "At a restaurant",
+          "context": "Ordering at a cafe",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Could I have some water, please?",
+              "text": "What would you like?",
               "romanization": "",
-              "translation": "물 좀 주세요."
+              "translation": "뭐 드시겠어요?"
             },
             {
               "speaker": "B",
-              "text": "Sure, I'll bring it right away.",
+              "text": "water, please.",
               "romanization": "",
-              "translation": "네, 바로 가져다 드릴게요."
+              "translation": "물 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Hot or cold?",
+              "romanization": "",
+              "translation": "뜨거운 거요, 차가운 거요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Cold, please.",
+              "romanization": "",
+              "translation": "차가운 걸로 주세요."
             }
           ]
         }
@@ -123,10 +147,10 @@
         "word": "커피",
         "explanation": "영어 'coffee'에서 온 외래어입니다. 한국은 세계적인 커피 소비국으로, 서울에만 수만 개의 카페가 있습니다. '커피숍'보다 '카페'라는 표현을 더 많이 씁니다.",
         "examples": {
-          "beginner": "커피 마셔요.",
-          "intermediate": "한국 사람들은 커피를 정말 많이 마셔요.",
-          "advanced": "한국의 1인당 커피 소비량은 세계 상위권이다.",
-          "master": "카페 문화는 한국 사회에서 소통과 휴식의 공간으로 자리 잡았다."
+          "beginner": "커피를 마셔요.",
+          "intermediate": "커피가 맛있어요.",
+          "advanced": "커피는 한국에서 인기 있는 음료입니다.",
+          "master": "커피의 다양한 종류와 문화적 의미를 이해하면 한국 음료 문화를 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -142,19 +166,31 @@
           ]
         },
         "dialogue": {
-          "context": "카페에서",
+          "context": "카페에서 주문하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 마실래? 내가 살게.",
-              "romanization": "mwo masillae? naega salge.",
-              "translation": "What do you want to drink? My treat."
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
             },
             {
               "speaker": "B",
-              "text": "아이스 아메리카노 주세요.",
-              "romanization": "aiseu amerikano juseyo.",
-              "translation": "Iced Americano, please."
+              "text": "커피 주세요.",
+              "romanization": "keopi juseyo.",
+              "translation": "coffee, please."
+            },
+            {
+              "speaker": "A",
+              "text": "뜨거운 거요, 차가운 거요?",
+              "romanization": "tteugeoun geoyo, chagaun geoyo?",
+              "translation": "Hot or cold?"
+            },
+            {
+              "speaker": "B",
+              "text": "차가운 걸로 주세요.",
+              "romanization": "chagaun geolro juseyo.",
+              "translation": "Cold, please."
             }
           ]
         }
@@ -164,9 +200,9 @@
         "explanation": "A loanword from English. Korea is one of the world's top coffee-consuming countries, with tens of thousands of cafes in Seoul alone. Koreans say '카페' (cafe) more often than '커피숍' (coffee shop).",
         "examples": {
           "beginner": "I drink coffee.",
-          "intermediate": "Koreans drink a lot of coffee.",
-          "advanced": "Korea's per capita coffee consumption ranks among the highest in the world.",
-          "master": "Cafe culture has become established as a space for socializing and relaxation in Korean society."
+          "intermediate": "coffee is delicious.",
+          "advanced": "coffee is a popular drink in Korea.",
+          "master": "Understanding the varieties and cultural significance of coffee deepens appreciation of Korean beverage culture."
         },
         "variations": {
           "formal": [
@@ -182,19 +218,31 @@
           ]
         },
         "dialogue": {
-          "context": "At a cafe",
+          "context": "Ordering at a cafe",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What do you want to drink? My treat.",
+              "text": "What would you like?",
               "romanization": "",
-              "translation": "뭐 마실래? 내가 살게."
+              "translation": "뭐 드시겠어요?"
             },
             {
               "speaker": "B",
-              "text": "Iced Americano, please.",
+              "text": "coffee, please.",
               "romanization": "",
-              "translation": "아이스 아메리카노 주세요."
+              "translation": "커피 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Hot or cold?",
+              "romanization": "",
+              "translation": "뜨거운 거요, 차가운 거요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Cold, please.",
+              "romanization": "",
+              "translation": "차가운 걸로 주세요."
             }
           ]
         }
@@ -226,9 +274,9 @@
         "explanation": "잎이나 열매를 우린 음료입니다. 동음이의어로 '차(車)'는 '자동차'를 뜻합니다. 한국의 전통 차로는 녹차, 보리차, 유자차, 대추차 등이 있습니다.",
         "examples": {
           "beginner": "차를 마셔요.",
-          "intermediate": "한국에서는 보리차를 물처럼 마셔요.",
-          "advanced": "유자차는 겨울에 감기 예방으로 많이 마신다.",
-          "master": "한국의 다도(茶道)는 조선 시대에 선비 문화의 일부였다."
+          "intermediate": "차가 맛있어요.",
+          "advanced": "차는 한국에서 인기 있는 음료입니다.",
+          "master": "차의 다양한 종류와 문화적 의미를 이해하면 한국 음료 문화를 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -244,19 +292,31 @@
           ]
         },
         "dialogue": {
-          "context": "집에서 손님을 맞으며",
+          "context": "카페에서 주문하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "차 한 잔 드릴까요?",
-              "romanization": "cha han jan deurilkkayo?",
-              "translation": "Shall I offer you a cup of tea?"
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
             },
             {
               "speaker": "B",
-              "text": "네, 유자차 있으면 좋겠어요.",
-              "romanization": "ne, yujacha isseumyeon jokeseoyo.",
-              "translation": "Yes, I'd love some yuzu tea if you have it."
+              "text": "차 주세요.",
+              "romanization": "cha juseyo.",
+              "translation": "tea, please."
+            },
+            {
+              "speaker": "A",
+              "text": "뜨거운 거요, 차가운 거요?",
+              "romanization": "tteugeoun geoyo, chagaun geoyo?",
+              "translation": "Hot or cold?"
+            },
+            {
+              "speaker": "B",
+              "text": "차가운 걸로 주세요.",
+              "romanization": "chagaun geolro juseyo.",
+              "translation": "Cold, please."
             }
           ]
         }
@@ -266,9 +326,9 @@
         "explanation": "A drink made by steeping leaves or fruits. '차' is also a homonym meaning 'car' (車). Traditional Korean teas include green tea (녹차), barley tea (보리차), yuzu tea (유자차), and jujube tea (대추차).",
         "examples": {
           "beginner": "I drink tea.",
-          "intermediate": "In Korea, barley tea is drunk like water.",
-          "advanced": "Yuzu tea is commonly consumed in winter to prevent colds.",
-          "master": "Korea's tea ceremony (다도) was part of scholarly culture during the Joseon Dynasty."
+          "intermediate": "tea is delicious.",
+          "advanced": "tea is a popular drink in Korea.",
+          "master": "Understanding the varieties and cultural significance of tea deepens appreciation of Korean beverage culture."
         },
         "variations": {
           "formal": [
@@ -284,19 +344,31 @@
           ]
         },
         "dialogue": {
-          "context": "Welcoming a guest at home",
+          "context": "Ordering at a cafe",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Shall I offer you a cup of tea?",
+              "text": "What would you like?",
               "romanization": "",
-              "translation": "차 한 잔 드릴까요?"
+              "translation": "뭐 드시겠어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, I'd love some yuzu tea if you have it.",
+              "text": "tea, please.",
               "romanization": "",
-              "translation": "네, 유자차 있으면 좋겠어요."
+              "translation": "차 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Hot or cold?",
+              "romanization": "",
+              "translation": "뜨거운 거요, 차가운 거요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Cold, please.",
+              "romanization": "",
+              "translation": "차가운 걸로 주세요."
             }
           ]
         }
@@ -327,10 +399,10 @@
         "word": "주스",
         "explanation": "영어 'juice'에서 온 외래어입니다. 과일이나 채소를 짜서 만든 음료입니다.",
         "examples": {
-          "beginner": "오렌지 주스 주세요.",
-          "intermediate": "아침에 주스를 마시면 건강에 좋아요.",
-          "advanced": "생과일 주스와 농축 주스는 영양 차이가 크다.",
-          "master": "착즙 주스 시장이 건강 트렌드와 함께 급성장했다."
+          "beginner": "주스를 마셔요.",
+          "intermediate": "주스가 맛있어요.",
+          "advanced": "주스는 한국에서 인기 있는 음료입니다.",
+          "master": "주스의 다양한 종류와 문화적 의미를 이해하면 한국 음료 문화를 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -346,19 +418,31 @@
           ]
         },
         "dialogue": {
-          "context": "편의점에서",
+          "context": "카페에서 주문하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "목이 마른데 뭐 마실까?",
-              "romanization": "mogi mareuunde mwo masilkka?",
-              "translation": "I'm thirsty. What should we drink?"
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
             },
             {
               "speaker": "B",
-              "text": "오렌지 주스 어때?",
-              "romanization": "orenji juseu eottae?",
-              "translation": "How about orange juice?"
+              "text": "주스 주세요.",
+              "romanization": "juseu juseyo.",
+              "translation": "juice, please."
+            },
+            {
+              "speaker": "A",
+              "text": "뜨거운 거요, 차가운 거요?",
+              "romanization": "tteugeoun geoyo, chagaun geoyo?",
+              "translation": "Hot or cold?"
+            },
+            {
+              "speaker": "B",
+              "text": "차가운 걸로 주세요.",
+              "romanization": "chagaun geolro juseyo.",
+              "translation": "Cold, please."
             }
           ]
         }
@@ -367,10 +451,10 @@
         "word": "juice",
         "explanation": "A loanword from English. A drink made by squeezing fruits or vegetables.",
         "examples": {
-          "beginner": "Orange juice, please.",
-          "intermediate": "Drinking juice in the morning is good for your health.",
-          "advanced": "There's a big nutritional difference between fresh-squeezed and concentrated juice.",
-          "master": "The cold-pressed juice market has grown rapidly along with health trends."
+          "beginner": "I drink juice.",
+          "intermediate": "juice is delicious.",
+          "advanced": "juice is a popular drink in Korea.",
+          "master": "Understanding the varieties and cultural significance of juice deepens appreciation of Korean beverage culture."
         },
         "variations": {
           "formal": [
@@ -386,19 +470,31 @@
           ]
         },
         "dialogue": {
-          "context": "At a convenience store",
+          "context": "Ordering at a cafe",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "I'm thirsty. What should we drink?",
+              "text": "What would you like?",
               "romanization": "",
-              "translation": "목이 마른데 뭐 마실까?"
+              "translation": "뭐 드시겠어요?"
             },
             {
               "speaker": "B",
-              "text": "How about orange juice?",
+              "text": "juice, please.",
               "romanization": "",
-              "translation": "오렌지 주스 어때?"
+              "translation": "주스 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Hot or cold?",
+              "romanization": "",
+              "translation": "뜨거운 거요, 차가운 거요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Cold, please.",
+              "romanization": "",
+              "translation": "차가운 걸로 주세요."
             }
           ]
         }
@@ -430,10 +526,10 @@
         "word": "소주",
         "explanation": "한국의 대표적인 증류주입니다. 도수는 보통 16~20%이며, 초록색 병에 담겨 있습니다. 한국의 음주 문화에서 빠질 수 없는 술입니다.",
         "examples": {
-          "beginner": "소주 한 병 주세요.",
-          "intermediate": "한국 사람들은 삼겹살에 소주를 마셔요.",
-          "advanced": "소주는 전 세계에서 가장 많이 팔리는 증류주 브랜드이다.",
-          "master": "소주잔을 돌려서 받거나 두 손으로 따르는 것은 한국 음주 예절이다."
+          "beginner": "소주를 마셔요.",
+          "intermediate": "소주가 맛있어요.",
+          "advanced": "소주는 한국에서 인기 있는 음료입니다.",
+          "master": "소주의 다양한 종류와 문화적 의미를 이해하면 한국 음료 문화를 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -449,19 +545,31 @@
           ]
         },
         "dialogue": {
-          "context": "회식에서",
+          "context": "카페에서 주문하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "소주 한 잔 하실래요?",
-              "romanization": "soju han jan hasillaeyo?",
-              "translation": "Would you like a glass of soju?"
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
             },
             {
               "speaker": "B",
-              "text": "네, 한 잔만요.",
-              "romanization": "ne, han janmanyo.",
-              "translation": "Yes, just one glass."
+              "text": "소주 주세요.",
+              "romanization": "soju juseyo.",
+              "translation": "soju, please."
+            },
+            {
+              "speaker": "A",
+              "text": "뜨거운 거요, 차가운 거요?",
+              "romanization": "tteugeoun geoyo, chagaun geoyo?",
+              "translation": "Hot or cold?"
+            },
+            {
+              "speaker": "B",
+              "text": "차가운 걸로 주세요.",
+              "romanization": "chagaun geolro juseyo.",
+              "translation": "Cold, please."
             }
           ]
         }
@@ -470,10 +578,10 @@
         "word": "soju",
         "explanation": "Korea's signature distilled liquor, typically 16–20% ABV, sold in iconic green bottles. Soju is one of the best-selling spirits in the world. Drinking etiquette includes pouring with two hands and turning away from elders when drinking.",
         "examples": {
-          "beginner": "One bottle of soju, please.",
-          "intermediate": "Koreans drink soju with grilled pork belly.",
-          "advanced": "Soju is one of the world's best-selling distilled spirit brands.",
-          "master": "Receiving a glass with two hands or turning away when drinking are Korean drinking customs."
+          "beginner": "I drink soju.",
+          "intermediate": "soju is delicious.",
+          "advanced": "soju is a popular drink in Korea.",
+          "master": "Understanding the varieties and cultural significance of soju deepens appreciation of Korean beverage culture."
         },
         "variations": {
           "formal": [
@@ -489,19 +597,31 @@
           ]
         },
         "dialogue": {
-          "context": "At a company dinner",
+          "context": "Ordering at a cafe",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Would you like a glass of soju?",
+              "text": "What would you like?",
               "romanization": "",
-              "translation": "소주 한 잔 하실래요?"
+              "translation": "뭐 드시겠어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, just one glass.",
+              "text": "soju, please.",
               "romanization": "",
-              "translation": "네, 한 잔만요."
+              "translation": "소주 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Hot or cold?",
+              "romanization": "",
+              "translation": "뜨거운 거요, 차가운 거요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Cold, please.",
+              "romanization": "",
+              "translation": "차가운 걸로 주세요."
             }
           ]
         }
@@ -532,10 +652,10 @@
         "word": "맥주",
         "explanation": "보리를 발효시켜 만든 술입니다. 한자어 '麥酒'(보리 맥 + 술 주)에서 유래했습니다. 소주와 맥주를 섞은 '소맥'은 한국 특유의 음주 문화입니다.",
         "examples": {
-          "beginner": "맥주 한 잔 주세요.",
-          "intermediate": "치킨에 맥주는 한국의 국민 조합이에요.",
-          "advanced": "한국의 수제 맥주 시장이 빠르게 성장하고 있다.",
-          "master": "소맥(소주+맥주)은 한국 특유의 혼합주 문화이다."
+          "beginner": "맥주를 마셔요.",
+          "intermediate": "맥주가 맛있어요.",
+          "advanced": "맥주는 한국에서 인기 있는 음료입니다.",
+          "master": "맥주의 다양한 종류와 문화적 의미를 이해하면 한국 음료 문화를 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -551,19 +671,31 @@
           ]
         },
         "dialogue": {
-          "context": "치킨집에서",
+          "context": "카페에서 주문하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "치맥 하자!",
-              "romanization": "chimaek haja!",
-              "translation": "Let's have chicken and beer!"
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
             },
             {
               "speaker": "B",
-              "text": "좋아! 생맥주로 시키자.",
-              "romanization": "joa! saengmaekjuro sikija.",
-              "translation": "Great! Let's order draft beer."
+              "text": "맥주 주세요.",
+              "romanization": "maekju juseyo.",
+              "translation": "beer, please."
+            },
+            {
+              "speaker": "A",
+              "text": "뜨거운 거요, 차가운 거요?",
+              "romanization": "tteugeoun geoyo, chagaun geoyo?",
+              "translation": "Hot or cold?"
+            },
+            {
+              "speaker": "B",
+              "text": "차가운 걸로 주세요.",
+              "romanization": "chagaun geolro juseyo.",
+              "translation": "Cold, please."
             }
           ]
         }
@@ -572,10 +704,10 @@
         "word": "beer",
         "explanation": "An alcoholic drink made by fermenting barley. The word comes from Chinese characters '麥酒' (barley + alcohol). '소맥' (somaek), a mix of soju and beer, is uniquely Korean. '치맥' (chimaek = chicken + maekju) is Korea's iconic food-drink pairing.",
         "examples": {
-          "beginner": "A glass of beer, please.",
-          "intermediate": "Chicken and beer is Korea's national food combo.",
-          "advanced": "Korea's craft beer market is growing rapidly.",
-          "master": "Somaek (soju + beer mix) is a uniquely Korean cocktail culture."
+          "beginner": "I drink beer.",
+          "intermediate": "beer is delicious.",
+          "advanced": "beer is a popular drink in Korea.",
+          "master": "Understanding the varieties and cultural significance of beer deepens appreciation of Korean beverage culture."
         },
         "variations": {
           "formal": [
@@ -591,19 +723,31 @@
           ]
         },
         "dialogue": {
-          "context": "At a chicken restaurant",
+          "context": "Ordering at a cafe",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Let's have chicken and beer!",
+              "text": "What would you like?",
               "romanization": "",
-              "translation": "치맥 하자!"
+              "translation": "뭐 드시겠어요?"
             },
             {
               "speaker": "B",
-              "text": "Great! Let's order draft beer.",
+              "text": "beer, please.",
               "romanization": "",
-              "translation": "좋아! 생맥주로 시키자."
+              "translation": "맥주 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Hot or cold?",
+              "romanization": "",
+              "translation": "뜨거운 거요, 차가운 거요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Cold, please.",
+              "romanization": "",
+              "translation": "차가운 걸로 주세요."
             }
           ]
         }
@@ -635,10 +779,10 @@
         "word": "녹차",
         "explanation": "찻잎을 발효시키지 않고 덖어 만든 차입니다. '녹(綠)'은 '초록'이라는 뜻입니다. 한국에서는 보성과 제주도가 녹차 산지로 유명합니다. 녹차 아이스크림, 녹차 라떼 등 다양한 파생 제품이 있습니다.",
         "examples": {
-          "beginner": "녹차 한 잔 주세요.",
-          "intermediate": "녹차는 카페인이 커피보다 적어요.",
-          "advanced": "보성 녹차밭은 한국 최대의 차 재배지이다.",
-          "master": "녹차의 카테킨 성분은 항산화 효과가 뛰어나 건강 음료로 주목받고 있다."
+          "beginner": "녹차를 마셔요.",
+          "intermediate": "녹차가 맛있어요.",
+          "advanced": "녹차는 한국에서 인기 있는 음료입니다.",
+          "master": "녹차의 다양한 종류와 문화적 의미를 이해하면 한국 음료 문화를 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -654,19 +798,31 @@
           ]
         },
         "dialogue": {
-          "context": "카페에서",
+          "context": "카페에서 주문하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "녹차 라떼 한 잔 주세요.",
-              "romanization": "nokcha latte han jan juseyo.",
-              "translation": "One green tea latte, please."
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
             },
             {
               "speaker": "B",
-              "text": "아이스로 드릴까요, 핫으로 드릴까요?",
-              "romanization": "aiseuro deurilkkayo, haseuro deurilkkayo?",
-              "translation": "Would you like it iced or hot?"
+              "text": "녹차 주세요.",
+              "romanization": "nokcha juseyo.",
+              "translation": "green tea, please."
+            },
+            {
+              "speaker": "A",
+              "text": "뜨거운 거요, 차가운 거요?",
+              "romanization": "tteugeoun geoyo, chagaun geoyo?",
+              "translation": "Hot or cold?"
+            },
+            {
+              "speaker": "B",
+              "text": "차가운 걸로 주세요.",
+              "romanization": "chagaun geolro juseyo.",
+              "translation": "Cold, please."
             }
           ]
         }
@@ -675,10 +831,10 @@
         "word": "green tea",
         "explanation": "Tea made from unfermented tea leaves that are pan-fired. '녹(綠)' means 'green.' Boseong and Jeju Island are famous green tea regions in Korea. Many derivative products exist, such as green tea ice cream and green tea lattes.",
         "examples": {
-          "beginner": "One cup of green tea, please.",
-          "intermediate": "Green tea has less caffeine than coffee.",
-          "advanced": "Boseong tea fields are Korea's largest tea cultivation area.",
-          "master": "The catechin compounds in green tea have excellent antioxidant effects, drawing attention as a health beverage."
+          "beginner": "I drink green tea.",
+          "intermediate": "green tea is delicious.",
+          "advanced": "green tea is a popular drink in Korea.",
+          "master": "Understanding the varieties and cultural significance of green tea deepens appreciation of Korean beverage culture."
         },
         "variations": {
           "formal": [
@@ -694,19 +850,31 @@
           ]
         },
         "dialogue": {
-          "context": "At a cafe",
+          "context": "Ordering at a cafe",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "One green tea latte, please.",
+              "text": "What would you like?",
               "romanization": "",
-              "translation": "녹차 라떼 한 잔 주세요."
+              "translation": "뭐 드시겠어요?"
             },
             {
               "speaker": "B",
-              "text": "Would you like it iced or hot?",
+              "text": "green tea, please.",
               "romanization": "",
-              "translation": "아이스로 드릴까요, 핫으로 드릴까요?"
+              "translation": "녹차 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Hot or cold?",
+              "romanization": "",
+              "translation": "뜨거운 거요, 차가운 거요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Cold, please.",
+              "romanization": "",
+              "translation": "차가운 걸로 주세요."
             }
           ]
         }
@@ -737,10 +905,10 @@
         "word": "홍차",
         "explanation": "찻잎을 완전히 발효시켜 만든 차입니다. '홍(紅)'은 '붉다'는 뜻으로, 우린 물의 색이 붉어서 붙은 이름입니다. 영어로는 'black tea'라고 합니다. 밀크티의 베이스로 많이 사용됩니다.",
         "examples": {
-          "beginner": "홍차 한 잔 주세요.",
-          "intermediate": "홍차에 우유를 넣으면 밀크티가 돼요.",
-          "advanced": "홍차는 녹차와 같은 찻잎이지만 발효 과정이 다르다.",
-          "master": "영국의 애프터눈 티 문화가 한국 카페에도 영향을 미쳤다."
+          "beginner": "홍차를 마셔요.",
+          "intermediate": "홍차가 맛있어요.",
+          "advanced": "홍차는 한국에서 인기 있는 음료입니다.",
+          "master": "홍차의 다양한 종류와 문화적 의미를 이해하면 한국 음료 문화를 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -756,19 +924,31 @@
           ]
         },
         "dialogue": {
-          "context": "카페에서",
+          "context": "카페에서 주문하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "따뜻한 홍차 있어요?",
-              "romanization": "ttatteutan hongcha isseoyo?",
-              "translation": "Do you have hot black tea?"
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
             },
             {
               "speaker": "B",
-              "text": "네, 얼그레이랑 잉글리시 블렉퍼스트 있어요.",
-              "romanization": "ne, eolgeureiirang inggeullisi beullekpeoseuteu isseoyo.",
-              "translation": "Yes, we have Earl Grey and English Breakfast."
+              "text": "홍차 주세요.",
+              "romanization": "hongcha juseyo.",
+              "translation": "black tea, please."
+            },
+            {
+              "speaker": "A",
+              "text": "뜨거운 거요, 차가운 거요?",
+              "romanization": "tteugeoun geoyo, chagaun geoyo?",
+              "translation": "Hot or cold?"
+            },
+            {
+              "speaker": "B",
+              "text": "차가운 걸로 주세요.",
+              "romanization": "chagaun geolro juseyo.",
+              "translation": "Cold, please."
             }
           ]
         }
@@ -777,10 +957,10 @@
         "word": "black tea",
         "explanation": "Tea made from fully fermented tea leaves. '홍(紅)' means 'red,' named for the reddish color of the brewed liquid. In English it's called 'black tea,' while in Korean it's literally 'red tea.' It's commonly used as a base for milk tea.",
         "examples": {
-          "beginner": "One cup of black tea, please.",
-          "intermediate": "Adding milk to black tea makes milk tea.",
-          "advanced": "Black tea comes from the same leaves as green tea, but the fermentation process differs.",
-          "master": "British afternoon tea culture has influenced Korean cafe culture as well."
+          "beginner": "I drink black tea.",
+          "intermediate": "black tea is delicious.",
+          "advanced": "black tea is a popular drink in Korea.",
+          "master": "Understanding the varieties and cultural significance of black tea deepens appreciation of Korean beverage culture."
         },
         "variations": {
           "formal": [
@@ -796,19 +976,31 @@
           ]
         },
         "dialogue": {
-          "context": "At a cafe",
+          "context": "Ordering at a cafe",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Do you have hot black tea?",
+              "text": "What would you like?",
               "romanization": "",
-              "translation": "따뜻한 홍차 있어요?"
+              "translation": "뭐 드시겠어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, we have Earl Grey and English Breakfast.",
+              "text": "black tea, please.",
               "romanization": "",
-              "translation": "네, 얼그레이랑 잉글리시 블렉퍼스트 있어요."
+              "translation": "홍차 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Hot or cold?",
+              "romanization": "",
+              "translation": "뜨거운 거요, 차가운 거요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Cold, please.",
+              "romanization": "",
+              "translation": "차가운 걸로 주세요."
             }
           ]
         }
@@ -840,10 +1032,10 @@
         "word": "보리차",
         "explanation": "볶은 보리를 끓여 만든 차입니다. 카페인이 없어 아이부터 어른까지 모두 마실 수 있습니다. 한국 가정에서는 물 대신 보리차를 냉장고에 넣어두고 마시는 경우가 많습니다.",
         "examples": {
-          "beginner": "보리차 마셔요.",
-          "intermediate": "한국 집에서는 보리차를 물처럼 마셔요.",
-          "advanced": "보리차는 카페인이 없어서 아이들도 안심하고 마실 수 있다.",
-          "master": "보리차 문화는 한국과 일본에서 공통적으로 나타나는 동아시아 식문화이다."
+          "beginner": "보리차를 마셔요.",
+          "intermediate": "보리차가 맛있어요.",
+          "advanced": "보리차는 한국에서 인기 있는 음료입니다.",
+          "master": "보리차의 다양한 종류와 문화적 의미를 이해하면 한국 음료 문화를 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -859,19 +1051,31 @@
           ]
         },
         "dialogue": {
-          "context": "한국 친구 집에서",
+          "context": "카페에서 주문하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "목마르면 냉장고에 보리차 있어.",
-              "romanization": "mongmareumyeon naengjanggo-e boricha isseo.",
-              "translation": "If you're thirsty, there's barley tea in the fridge."
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
             },
             {
               "speaker": "B",
-              "text": "고마워! 한국 집에는 보리차가 항상 있구나.",
-              "romanization": "gomawo! hanguk jibeneun borichaga hangsang itguna.",
-              "translation": "Thanks! Korean homes always have barley tea, huh."
+              "text": "보리차 주세요.",
+              "romanization": "boricha juseyo.",
+              "translation": "barley tea, please."
+            },
+            {
+              "speaker": "A",
+              "text": "뜨거운 거요, 차가운 거요?",
+              "romanization": "tteugeoun geoyo, chagaun geoyo?",
+              "translation": "Hot or cold?"
+            },
+            {
+              "speaker": "B",
+              "text": "차가운 걸로 주세요.",
+              "romanization": "chagaun geolro juseyo.",
+              "translation": "Cold, please."
             }
           ]
         }
@@ -881,9 +1085,9 @@
         "explanation": "Tea made from roasted barley. It's caffeine-free, so everyone from children to adults can enjoy it. In many Korean households, barley tea is kept in the fridge and drunk instead of plain water.",
         "examples": {
           "beginner": "I drink barley tea.",
-          "intermediate": "In Korean homes, barley tea is drunk like water.",
-          "advanced": "Barley tea is caffeine-free, making it safe for children to drink.",
-          "master": "Barley tea culture is a shared East Asian food tradition found in both Korea and Japan."
+          "intermediate": "barley tea is delicious.",
+          "advanced": "barley tea is a popular drink in Korea.",
+          "master": "Understanding the varieties and cultural significance of barley tea deepens appreciation of Korean beverage culture."
         },
         "variations": {
           "formal": [
@@ -899,19 +1103,31 @@
           ]
         },
         "dialogue": {
-          "context": "At a Korean friend's home",
+          "context": "Ordering at a cafe",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "If you're thirsty, there's barley tea in the fridge.",
+              "text": "What would you like?",
               "romanization": "",
-              "translation": "목마르면 냉장고에 보리차 있어."
+              "translation": "뭐 드시겠어요?"
             },
             {
               "speaker": "B",
-              "text": "Thanks! Korean homes always have barley tea, huh.",
+              "text": "barley tea, please.",
               "romanization": "",
-              "translation": "고마워! 한국 집에는 보리차가 항상 있구나."
+              "translation": "보리차 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Hot or cold?",
+              "romanization": "",
+              "translation": "뜨거운 거요, 차가운 거요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Cold, please.",
+              "romanization": "",
+              "translation": "차가운 걸로 주세요."
             }
           ]
         }
@@ -942,10 +1158,10 @@
         "word": "옥수수차",
         "explanation": "볶은 옥수수를 끓여 만든 차입니다. 고소한 맛이 특징이며, 보리차와 함께 한국 가정에서 흔히 마시는 차입니다. 카페인이 없어 누구나 부담 없이 마실 수 있습니다.",
         "examples": {
-          "beginner": "옥수수차 주세요.",
-          "intermediate": "옥수수차는 고소해서 맛있어요.",
-          "advanced": "한국에서는 보리차와 옥수수차를 일상적으로 끓여 마신다.",
-          "master": "옥수수차와 보리차는 한국 가정의 수분 섭취 문화를 대표하는 곡물차이다."
+          "beginner": "옥수수차를 마셔요.",
+          "intermediate": "옥수수차가 맛있어요.",
+          "advanced": "옥수수차는 한국에서 인기 있는 음료입니다.",
+          "master": "옥수수차의 다양한 종류와 문화적 의미를 이해하면 한국 음료 문화를 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -961,19 +1177,31 @@
           ]
         },
         "dialogue": {
-          "context": "집에서",
+          "context": "카페에서 주문하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "오늘은 옥수수차 끓였어.",
-              "romanization": "oneureun oksusucha kkeurieosseo.",
-              "translation": "I boiled corn tea today."
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
             },
             {
               "speaker": "B",
-              "text": "좋다! 옥수수차가 고소해서 좋아.",
-              "romanization": "jota! oksusuchaga gosohaeseo joa.",
-              "translation": "Nice! I like corn tea because it's nutty."
+              "text": "옥수수차 주세요.",
+              "romanization": "oksusucha juseyo.",
+              "translation": "corn tea, please."
+            },
+            {
+              "speaker": "A",
+              "text": "뜨거운 거요, 차가운 거요?",
+              "romanization": "tteugeoun geoyo, chagaun geoyo?",
+              "translation": "Hot or cold?"
+            },
+            {
+              "speaker": "B",
+              "text": "차가운 걸로 주세요.",
+              "romanization": "chagaun geolro juseyo.",
+              "translation": "Cold, please."
             }
           ]
         }
@@ -982,10 +1210,10 @@
         "word": "corn tea",
         "explanation": "Tea made from roasted corn kernels. It has a distinctive nutty flavor and is one of the most common household teas in Korea alongside barley tea. It's caffeine-free and enjoyed by all ages.",
         "examples": {
-          "beginner": "Corn tea, please.",
-          "intermediate": "Corn tea tastes good because it's nutty.",
-          "advanced": "In Korea, barley tea and corn tea are routinely boiled and consumed daily.",
-          "master": "Corn tea and barley tea are grain-based teas that represent Korea's everyday hydration culture."
+          "beginner": "I drink corn tea.",
+          "intermediate": "corn tea is delicious.",
+          "advanced": "corn tea is a popular drink in Korea.",
+          "master": "Understanding the varieties and cultural significance of corn tea deepens appreciation of Korean beverage culture."
         },
         "variations": {
           "formal": [
@@ -1001,19 +1229,31 @@
           ]
         },
         "dialogue": {
-          "context": "At home",
+          "context": "Ordering at a cafe",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "I boiled corn tea today.",
+              "text": "What would you like?",
               "romanization": "",
-              "translation": "오늘은 옥수수차 끓였어."
+              "translation": "뭐 드시겠어요?"
             },
             {
               "speaker": "B",
-              "text": "Nice! I like corn tea because it's nutty.",
+              "text": "corn tea, please.",
               "romanization": "",
-              "translation": "좋다! 옥수수차가 고소해서 좋아."
+              "translation": "옥수수차 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Hot or cold?",
+              "romanization": "",
+              "translation": "뜨거운 거요, 차가운 거요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Cold, please.",
+              "romanization": "",
+              "translation": "차가운 걸로 주세요."
             }
           ]
         }
@@ -1045,10 +1285,10 @@
         "word": "유자차",
         "explanation": "유자 과육과 껍질을 설탕이나 꿀에 절여 만든 청을 뜨거운 물에 타서 마시는 차입니다. 비타민 C가 풍부하여 감기 예방에 좋다고 알려져 있습니다. 겨울철 대표 음료입니다.",
         "examples": {
-          "beginner": "유자차 한 잔 주세요.",
-          "intermediate": "감기 걸리면 유자차를 마셔요.",
-          "advanced": "유자차는 비타민 C가 레몬의 세 배나 들어 있다.",
-          "master": "유자청을 담그는 것은 한국 가정의 겨울 준비 문화 중 하나이다."
+          "beginner": "유자차를 마셔요.",
+          "intermediate": "유자차가 맛있어요.",
+          "advanced": "유자차는 한국에서 인기 있는 음료입니다.",
+          "master": "유자차의 다양한 종류와 문화적 의미를 이해하면 한국 음료 문화를 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1064,19 +1304,31 @@
           ]
         },
         "dialogue": {
-          "context": "겨울에 카페에서",
+          "context": "카페에서 주문하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "감기 기운이 있어서 유자차 마시려고.",
-              "romanization": "gamgi giuni isseoseo yujacha masiryeogo.",
-              "translation": "I feel a cold coming on, so I'm going to have yuzu tea."
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
             },
             {
               "speaker": "B",
-              "text": "좋은 생각이야. 유자차가 감기에 좋잖아.",
-              "romanization": "joeun saenggagiya. yujachaga gamgie jojana.",
-              "translation": "Good idea. Yuzu tea is good for colds."
+              "text": "유자차 주세요.",
+              "romanization": "yujacha juseyo.",
+              "translation": "yuzu tea, please."
+            },
+            {
+              "speaker": "A",
+              "text": "뜨거운 거요, 차가운 거요?",
+              "romanization": "tteugeoun geoyo, chagaun geoyo?",
+              "translation": "Hot or cold?"
+            },
+            {
+              "speaker": "B",
+              "text": "차가운 걸로 주세요.",
+              "romanization": "chagaun geolro juseyo.",
+              "translation": "Cold, please."
             }
           ]
         }
@@ -1085,10 +1337,10 @@
         "word": "yuzu tea",
         "explanation": "A tea made by dissolving yuzu marmalade (fruit flesh and peel preserved in sugar or honey) in hot water. Rich in vitamin C, it's known for preventing colds. It's a signature winter beverage in Korea.",
         "examples": {
-          "beginner": "One cup of yuzu tea, please.",
-          "intermediate": "When you have a cold, drink yuzu tea.",
-          "advanced": "Yuzu tea contains three times more vitamin C than lemon.",
-          "master": "Making yuzu preserves (유자청) is one of the Korean household traditions for winter preparation."
+          "beginner": "I drink yuzu tea.",
+          "intermediate": "yuzu tea is delicious.",
+          "advanced": "yuzu tea is a popular drink in Korea.",
+          "master": "Understanding the varieties and cultural significance of yuzu tea deepens appreciation of Korean beverage culture."
         },
         "variations": {
           "formal": [
@@ -1104,19 +1356,31 @@
           ]
         },
         "dialogue": {
-          "context": "At a cafe in winter",
+          "context": "Ordering at a cafe",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "I feel a cold coming on, so I'm going to have yuzu tea.",
+              "text": "What would you like?",
               "romanization": "",
-              "translation": "감기 기운이 있어서 유자차 마시려고."
+              "translation": "뭐 드시겠어요?"
             },
             {
               "speaker": "B",
-              "text": "Good idea. Yuzu tea is good for colds.",
+              "text": "yuzu tea, please.",
               "romanization": "",
-              "translation": "좋은 생각이야. 유자차가 감기에 좋잖아."
+              "translation": "유자차 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Hot or cold?",
+              "romanization": "",
+              "translation": "뜨거운 거요, 차가운 거요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Cold, please.",
+              "romanization": "",
+              "translation": "차가운 걸로 주세요."
             }
           ]
         }
@@ -1148,10 +1412,10 @@
         "word": "생강차",
         "explanation": "생강을 얇게 썰어 꿀이나 설탕과 함께 끓여 만든 차입니다. 몸을 따뜻하게 해주는 효과가 있어 겨울철에 특히 인기가 많습니다. 감기 초기 증상에도 효과적입니다.",
         "examples": {
-          "beginner": "생강차 한 잔 주세요.",
-          "intermediate": "추울 때 생강차를 마시면 몸이 따뜻해져요.",
-          "advanced": "생강은 항염증 효과가 있어 한방에서 약재로 쓰인다.",
-          "master": "생강은 동의보감에서 소화 촉진과 해열 효과가 있는 약재로 기록되어 있다."
+          "beginner": "생강차를 마셔요.",
+          "intermediate": "생강차가 맛있어요.",
+          "advanced": "생강차는 한국에서 인기 있는 음료입니다.",
+          "master": "생강차의 다양한 종류와 문화적 의미를 이해하면 한국 음료 문화를 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1167,19 +1431,31 @@
           ]
         },
         "dialogue": {
-          "context": "추운 겨울날",
+          "context": "카페에서 주문하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "너무 추워. 뭐 따뜻한 거 마시고 싶어.",
-              "romanization": "neomu chuwo. mwo ttatteutan geo masigo sipeo.",
-              "translation": "It's so cold. I want to drink something warm."
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
             },
             {
               "speaker": "B",
-              "text": "생강차 어때? 몸이 따뜻해질 거야.",
-              "romanization": "saenggangcha eottae? momi ttatteuthejil geoya.",
-              "translation": "How about ginger tea? It'll warm you up."
+              "text": "생강차 주세요.",
+              "romanization": "saenggangcha juseyo.",
+              "translation": "ginger tea, please."
+            },
+            {
+              "speaker": "A",
+              "text": "뜨거운 거요, 차가운 거요?",
+              "romanization": "tteugeoun geoyo, chagaun geoyo?",
+              "translation": "Hot or cold?"
+            },
+            {
+              "speaker": "B",
+              "text": "차가운 걸로 주세요.",
+              "romanization": "chagaun geolro juseyo.",
+              "translation": "Cold, please."
             }
           ]
         }
@@ -1188,10 +1464,10 @@
         "word": "ginger tea",
         "explanation": "Tea made by boiling sliced ginger with honey or sugar. It has a warming effect on the body, making it especially popular in winter. It's also effective for early cold symptoms.",
         "examples": {
-          "beginner": "One cup of ginger tea, please.",
-          "intermediate": "Drinking ginger tea when it's cold warms your body up.",
-          "advanced": "Ginger has anti-inflammatory properties and is used as a medicinal ingredient in traditional Korean medicine.",
-          "master": "Ginger is recorded in the Dongui Bogam as an herbal remedy with digestive and fever-reducing properties."
+          "beginner": "I drink ginger tea.",
+          "intermediate": "ginger tea is delicious.",
+          "advanced": "ginger tea is a popular drink in Korea.",
+          "master": "Understanding the varieties and cultural significance of ginger tea deepens appreciation of Korean beverage culture."
         },
         "variations": {
           "formal": [
@@ -1207,19 +1483,31 @@
           ]
         },
         "dialogue": {
-          "context": "On a cold winter day",
+          "context": "Ordering at a cafe",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "It's so cold. I want to drink something warm.",
+              "text": "What would you like?",
               "romanization": "",
-              "translation": "너무 추워. 뭐 따뜻한 거 마시고 싶어."
+              "translation": "뭐 드시겠어요?"
             },
             {
               "speaker": "B",
-              "text": "How about ginger tea? It'll warm you up.",
+              "text": "ginger tea, please.",
               "romanization": "",
-              "translation": "생강차 어때? 몸이 따뜻해질 거야."
+              "translation": "생강차 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Hot or cold?",
+              "romanization": "",
+              "translation": "뜨거운 거요, 차가운 거요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Cold, please.",
+              "romanization": "",
+              "translation": "차가운 걸로 주세요."
             }
           ]
         }
@@ -1250,10 +1538,10 @@
         "word": "대추차",
         "explanation": "말린 대추를 푹 끓여 만든 차입니다. 자연스러운 단맛이 나며, 긴장을 풀어주고 숙면에 도움이 된다고 알려져 있습니다. 한방에서 자주 쓰이는 약재이기도 합니다.",
         "examples": {
-          "beginner": "대추차 한 잔 주세요.",
-          "intermediate": "대추차는 달아서 아이들도 좋아해요.",
-          "advanced": "대추는 한방에서 보혈(補血) 작용을 하는 약재로 쓰인다.",
-          "master": "대추차는 불면증에 효과적이라는 연구 결과가 있다."
+          "beginner": "대추차를 마셔요.",
+          "intermediate": "대추차가 맛있어요.",
+          "advanced": "대추차는 한국에서 인기 있는 음료입니다.",
+          "master": "대추차의 다양한 종류와 문화적 의미를 이해하면 한국 음료 문화를 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1269,19 +1557,31 @@
           ]
         },
         "dialogue": {
-          "context": "전통 찻집에서",
+          "context": "카페에서 주문하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "여기 전통차가 많네요. 뭐가 좋을까요?",
-              "romanization": "yeogi jeontongchaga manneyo. mwoga joeulkkayo?",
-              "translation": "There are many traditional teas here. What's good?"
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
             },
             {
               "speaker": "B",
-              "text": "대추차가 달고 맛있어요. 추천해요.",
-              "romanization": "daechuchaga dalgo masisseoyo. chucheonhaeyo.",
-              "translation": "Jujube tea is sweet and delicious. I recommend it."
+              "text": "대추차 주세요.",
+              "romanization": "daechucha juseyo.",
+              "translation": "jujube tea, please."
+            },
+            {
+              "speaker": "A",
+              "text": "뜨거운 거요, 차가운 거요?",
+              "romanization": "tteugeoun geoyo, chagaun geoyo?",
+              "translation": "Hot or cold?"
+            },
+            {
+              "speaker": "B",
+              "text": "차가운 걸로 주세요.",
+              "romanization": "chagaun geolro juseyo.",
+              "translation": "Cold, please."
             }
           ]
         }
@@ -1290,10 +1590,10 @@
         "word": "jujube tea",
         "explanation": "Tea made by boiling dried jujubes (Korean dates). It has a natural sweetness and is known to help with relaxation and better sleep. Jujubes are also frequently used as a medicinal ingredient in traditional Korean medicine.",
         "examples": {
-          "beginner": "One cup of jujube tea, please.",
-          "intermediate": "Jujube tea is sweet, so even children like it.",
-          "advanced": "Jujubes are used in traditional medicine for their blood-nourishing properties.",
-          "master": "Research has shown that jujube tea can be effective for insomnia."
+          "beginner": "I drink jujube tea.",
+          "intermediate": "jujube tea is delicious.",
+          "advanced": "jujube tea is a popular drink in Korea.",
+          "master": "Understanding the varieties and cultural significance of jujube tea deepens appreciation of Korean beverage culture."
         },
         "variations": {
           "formal": [
@@ -1309,19 +1609,31 @@
           ]
         },
         "dialogue": {
-          "context": "At a traditional tea house",
+          "context": "Ordering at a cafe",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "There are many traditional teas here. What's good?",
+              "text": "What would you like?",
               "romanization": "",
-              "translation": "여기 전통차가 많네요. 뭐가 좋을까요?"
+              "translation": "뭐 드시겠어요?"
             },
             {
               "speaker": "B",
-              "text": "Jujube tea is sweet and delicious. I recommend it.",
+              "text": "jujube tea, please.",
               "romanization": "",
-              "translation": "대추차가 달고 맛있어요. 추천해요."
+              "translation": "대추차 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Hot or cold?",
+              "romanization": "",
+              "translation": "뜨거운 거요, 차가운 거요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Cold, please.",
+              "romanization": "",
+              "translation": "차가운 걸로 주세요."
             }
           ]
         }
@@ -1353,10 +1665,10 @@
         "word": "인삼차",
         "explanation": "인삼을 우려 만든 차입니다. 한국산 인삼(고려인삼)은 세계적으로 유명합니다. 피로 회복과 면역력 강화에 좋다고 알려져 있으며, 한국의 대표적인 건강 음료입니다.",
         "examples": {
-          "beginner": "인삼차 한 잔 주세요.",
-          "intermediate": "한국 인삼은 세계적으로 유명해요.",
-          "advanced": "고려인삼은 사포닌 함량이 높아 건강 식품으로 각광받는다.",
-          "master": "인삼은 동아시아 전통 의학에서 수천 년간 만병통치약으로 여겨져 왔다."
+          "beginner": "인삼차를 마셔요.",
+          "intermediate": "인삼차가 맛있어요.",
+          "advanced": "인삼차는 한국에서 인기 있는 음료입니다.",
+          "master": "인삼차의 다양한 종류와 문화적 의미를 이해하면 한국 음료 문화를 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1372,19 +1684,31 @@
           ]
         },
         "dialogue": {
-          "context": "선물 가게에서",
+          "context": "카페에서 주문하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "한국 선물로 뭐가 좋을까요?",
-              "romanization": "hanguk seonmullo mwoga joeulkkayo?",
-              "translation": "What's a good Korean souvenir?"
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
             },
             {
               "speaker": "B",
-              "text": "인삼차 세트 어때요? 외국인들에게 인기가 많아요.",
-              "romanization": "insamcha seteu eottaeyo? oegugindeulege ingiga manayo.",
-              "translation": "How about a ginseng tea set? It's popular with foreigners."
+              "text": "인삼차 주세요.",
+              "romanization": "insamcha juseyo.",
+              "translation": "ginseng tea, please."
+            },
+            {
+              "speaker": "A",
+              "text": "뜨거운 거요, 차가운 거요?",
+              "romanization": "tteugeoun geoyo, chagaun geoyo?",
+              "translation": "Hot or cold?"
+            },
+            {
+              "speaker": "B",
+              "text": "차가운 걸로 주세요.",
+              "romanization": "chagaun geolro juseyo.",
+              "translation": "Cold, please."
             }
           ]
         }
@@ -1393,10 +1717,10 @@
         "word": "ginseng tea",
         "explanation": "Tea brewed from ginseng root. Korean ginseng (Goryeo ginseng) is world-renowned. Known for fatigue recovery and immune system strengthening, it's one of Korea's signature health beverages.",
         "examples": {
-          "beginner": "One cup of ginseng tea, please.",
-          "intermediate": "Korean ginseng is famous worldwide.",
-          "advanced": "Korean ginseng is prized as a health food due to its high saponin content.",
-          "master": "Ginseng has been regarded as a cure-all in East Asian traditional medicine for thousands of years."
+          "beginner": "I drink ginseng tea.",
+          "intermediate": "ginseng tea is delicious.",
+          "advanced": "ginseng tea is a popular drink in Korea.",
+          "master": "Understanding the varieties and cultural significance of ginseng tea deepens appreciation of Korean beverage culture."
         },
         "variations": {
           "formal": [
@@ -1412,19 +1736,31 @@
           ]
         },
         "dialogue": {
-          "context": "At a gift shop",
+          "context": "Ordering at a cafe",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What's a good Korean souvenir?",
+              "text": "What would you like?",
               "romanization": "",
-              "translation": "한국 선물로 뭐가 좋을까요?"
+              "translation": "뭐 드시겠어요?"
             },
             {
               "speaker": "B",
-              "text": "How about a ginseng tea set? It's popular with foreigners.",
+              "text": "ginseng tea, please.",
               "romanization": "",
-              "translation": "인삼차 세트 어때요? 외국인들에게 인기가 많아요."
+              "translation": "인삼차 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Hot or cold?",
+              "romanization": "",
+              "translation": "뜨거운 거요, 차가운 거요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Cold, please.",
+              "romanization": "",
+              "translation": "차가운 걸로 주세요."
             }
           ]
         }
@@ -1456,10 +1792,10 @@
         "word": "쌍화탕",
         "explanation": "여러 한약재를 달여 만든 전통 보양 음료입니다. 작약, 숙지황, 당귀 등이 들어갑니다. 피로 회복과 체력 보강에 효과적이라고 알려져 있으며, 편의점에서 병에 담긴 제품도 쉽게 구할 수 있습니다.",
         "examples": {
-          "beginner": "쌍화탕 한 잔 주세요.",
-          "intermediate": "피곤할 때 쌍화탕을 마셔요.",
-          "advanced": "쌍화탕은 한의학에서 기혈을 보하는 처방이다.",
-          "master": "쌍화탕(雙和湯)은 '두 가지를 조화롭게 한다'는 의미로, 기와 혈의 균형을 맞추는 처방이다."
+          "beginner": "쌍화탕을 마셔요.",
+          "intermediate": "쌍화탕이 맛있어요.",
+          "advanced": "쌍화탕은 한국에서 인기 있는 음료입니다.",
+          "master": "쌍화탕의 다양한 종류와 문화적 의미를 이해하면 한국 음료 문화를 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1475,19 +1811,31 @@
           ]
         },
         "dialogue": {
-          "context": "편의점에서",
+          "context": "카페에서 주문하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "요즘 너무 피곤해. 뭐 좀 마실까?",
-              "romanization": "yojeum neomu pigonhae. mwo jom masilkka?",
-              "translation": "I'm so tired these days. Should I drink something?"
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
             },
             {
               "speaker": "B",
-              "text": "쌍화탕 마셔봐. 효과 좋아.",
-              "romanization": "ssanghwatang masyeobwa. hyogwa joa.",
-              "translation": "Try ssanghwatang. It works well."
+              "text": "쌍화탕 주세요.",
+              "romanization": "ssanghwatang juseyo.",
+              "translation": "herbal tonic, please."
+            },
+            {
+              "speaker": "A",
+              "text": "뜨거운 거요, 차가운 거요?",
+              "romanization": "tteugeoun geoyo, chagaun geoyo?",
+              "translation": "Hot or cold?"
+            },
+            {
+              "speaker": "B",
+              "text": "차가운 걸로 주세요.",
+              "romanization": "chagaun geolro juseyo.",
+              "translation": "Cold, please."
             }
           ]
         }
@@ -1496,10 +1844,10 @@
         "word": "herbal tonic",
         "explanation": "A traditional Korean herbal tonic drink made by boiling various medicinal herbs including peony root, rehmannia, and angelica. Known for fatigue recovery and stamina enhancement. Bottled versions are readily available at convenience stores.",
         "examples": {
-          "beginner": "One cup of ssanghwatang, please.",
-          "intermediate": "I drink ssanghwatang when I'm tired.",
-          "advanced": "Ssanghwatang is a traditional medicine prescription for replenishing qi and blood.",
-          "master": "Ssanghwatang (雙和湯) means 'harmonizing two elements,' referring to balancing qi and blood."
+          "beginner": "I drink herbal tonic.",
+          "intermediate": "herbal tonic is delicious.",
+          "advanced": "herbal tonic is a popular drink in Korea.",
+          "master": "Understanding the varieties and cultural significance of herbal tonic deepens appreciation of Korean beverage culture."
         },
         "variations": {
           "formal": [
@@ -1515,19 +1863,31 @@
           ]
         },
         "dialogue": {
-          "context": "At a convenience store",
+          "context": "Ordering at a cafe",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "I'm so tired these days. Should I drink something?",
+              "text": "What would you like?",
               "romanization": "",
-              "translation": "요즘 너무 피곤해. 뭐 좀 마실까?"
+              "translation": "뭐 드시겠어요?"
             },
             {
               "speaker": "B",
-              "text": "Try ssanghwatang. It works well.",
+              "text": "herbal tonic, please.",
               "romanization": "",
-              "translation": "쌍화탕 마셔봐. 효과 좋아."
+              "translation": "쌍화탕 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Hot or cold?",
+              "romanization": "",
+              "translation": "뜨거운 거요, 차가운 거요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Cold, please.",
+              "romanization": "",
+              "translation": "차가운 걸로 주세요."
             }
           ]
         }
@@ -1559,10 +1919,10 @@
         "word": "식혜",
         "explanation": "엿기름(맥아)으로 밥을 삭혀 만든 한국 전통 음료입니다. 달콤한 맛과 동동 떠 있는 밥알이 특징입니다. 설날이나 추석 같은 명절에 디저트로 마시며, 소화를 돕는 효과가 있습니다.",
         "examples": {
-          "beginner": "식혜 한 잔 주세요.",
-          "intermediate": "명절에 식혜를 마셔요.",
-          "advanced": "식혜는 엿기름의 아밀레이스 효소가 밥의 전분을 분해해서 만들어진다.",
-          "master": "식혜는 발효 과정을 통해 만들어지는 한국 전통 발효 음료의 대표격이다."
+          "beginner": "식혜를 마셔요.",
+          "intermediate": "식혜가 맛있어요.",
+          "advanced": "식혜는 한국에서 인기 있는 음료입니다.",
+          "master": "식혜의 다양한 종류와 문화적 의미를 이해하면 한국 음료 문화를 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1578,19 +1938,31 @@
           ]
         },
         "dialogue": {
-          "context": "설날 가족 모임에서",
+          "context": "카페에서 주문하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "밥 먹고 식혜 한 잔 하자.",
-              "romanization": "bap meokgo sikhye han jan haja.",
-              "translation": "Let's have a cup of sikhye after the meal."
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
             },
             {
               "speaker": "B",
-              "text": "좋아! 엄마가 만든 식혜 최고야.",
-              "romanization": "joa! eommaga mandeun sikhye choegoya.",
-              "translation": "Great! Mom's homemade sikhye is the best."
+              "text": "식혜 주세요.",
+              "romanization": "sikhye juseyo.",
+              "translation": "sweet rice drink, please."
+            },
+            {
+              "speaker": "A",
+              "text": "뜨거운 거요, 차가운 거요?",
+              "romanization": "tteugeoun geoyo, chagaun geoyo?",
+              "translation": "Hot or cold?"
+            },
+            {
+              "speaker": "B",
+              "text": "차가운 걸로 주세요.",
+              "romanization": "chagaun geolro juseyo.",
+              "translation": "Cold, please."
             }
           ]
         }
@@ -1599,10 +1971,10 @@
         "word": "sweet rice drink",
         "explanation": "A traditional Korean beverage made by fermenting cooked rice with malt water (yeotgireum). It features a sweet taste and floating rice grains. Commonly served as a dessert during holidays like Seollal (Lunar New Year) and Chuseok. It also aids digestion.",
         "examples": {
-          "beginner": "One cup of sikhye, please.",
-          "intermediate": "We drink sikhye during holidays.",
-          "advanced": "Sikhye is made when the amylase enzymes in malt break down the starch in rice.",
-          "master": "Sikhye is a representative example of traditional Korean fermented beverages."
+          "beginner": "I drink sweet rice drink.",
+          "intermediate": "sweet rice drink is delicious.",
+          "advanced": "sweet rice drink is a popular drink in Korea.",
+          "master": "Understanding the varieties and cultural significance of sweet rice drink deepens appreciation of Korean beverage culture."
         },
         "variations": {
           "formal": [
@@ -1618,19 +1990,31 @@
           ]
         },
         "dialogue": {
-          "context": "At a Lunar New Year family gathering",
+          "context": "Ordering at a cafe",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Let's have a cup of sikhye after the meal.",
+              "text": "What would you like?",
               "romanization": "",
-              "translation": "밥 먹고 식혜 한 잔 하자."
+              "translation": "뭐 드시겠어요?"
             },
             {
               "speaker": "B",
-              "text": "Great! Mom's homemade sikhye is the best.",
+              "text": "sweet rice drink, please.",
               "romanization": "",
-              "translation": "좋아! 엄마가 만든 식혜 최고야."
+              "translation": "식혜 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Hot or cold?",
+              "romanization": "",
+              "translation": "뜨거운 거요, 차가운 거요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Cold, please.",
+              "romanization": "",
+              "translation": "차가운 걸로 주세요."
             }
           ]
         }
@@ -1662,10 +2046,10 @@
         "word": "수정과",
         "explanation": "계피와 생강을 끓인 물에 설탕이나 꿀을 넣고 곶감을 띄워 만든 한국 전통 음료입니다. 차갑게 마시며, 식혜와 함께 명절 음료로 유명합니다. '수정과(水正果)'는 '맑은 과일 음료'라는 뜻입니다.",
         "examples": {
-          "beginner": "수정과 한 잔 주세요.",
-          "intermediate": "수정과는 계피 맛이 나요.",
-          "advanced": "수정과와 식혜는 한국 전통 명절 음료의 양대 산맥이다.",
-          "master": "수정과(水正果)는 조선 시대 궁중에서 후식으로 즐기던 전통 음료이다."
+          "beginner": "수정과를 마셔요.",
+          "intermediate": "수정과가 맛있어요.",
+          "advanced": "수정과는 한국에서 인기 있는 음료입니다.",
+          "master": "수정과의 다양한 종류와 문화적 의미를 이해하면 한국 음료 문화를 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1681,19 +2065,31 @@
           ]
         },
         "dialogue": {
-          "context": "전통 한식당에서",
+          "context": "카페에서 주문하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "후식으로 수정과 드시겠어요?",
-              "romanization": "husigero sujeonggwa deusigesseoyo?",
-              "translation": "Would you like sujeonggwa for dessert?"
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
             },
             {
               "speaker": "B",
-              "text": "네, 수정과 좋아요. 계피 향이 좋거든요.",
-              "romanization": "ne, sujeonggwa joayo. gyepi hyangi jokkeodeunyo.",
-              "translation": "Yes, I'd love sujeonggwa. I like the cinnamon aroma."
+              "text": "수정과 주세요.",
+              "romanization": "sujeonggwa juseyo.",
+              "translation": "cinnamon punch, please."
+            },
+            {
+              "speaker": "A",
+              "text": "뜨거운 거요, 차가운 거요?",
+              "romanization": "tteugeoun geoyo, chagaun geoyo?",
+              "translation": "Hot or cold?"
+            },
+            {
+              "speaker": "B",
+              "text": "차가운 걸로 주세요.",
+              "romanization": "chagaun geolro juseyo.",
+              "translation": "Cold, please."
             }
           ]
         }
@@ -1702,10 +2098,10 @@
         "word": "cinnamon punch",
         "explanation": "A traditional Korean cold drink made by boiling cinnamon and ginger, sweetened with sugar or honey, and garnished with dried persimmon. Served chilled, it's famous as a holiday beverage alongside sikhye. '수정과 (水正果)' means 'clear fruit drink.'",
         "examples": {
-          "beginner": "One cup of sujeonggwa, please.",
-          "intermediate": "Sujeonggwa has a cinnamon flavor.",
-          "advanced": "Sujeonggwa and sikhye are the two pillars of Korean traditional holiday beverages.",
-          "master": "Sujeonggwa (水正果) was a dessert drink enjoyed in the Joseon Dynasty royal court."
+          "beginner": "I drink cinnamon punch.",
+          "intermediate": "cinnamon punch is delicious.",
+          "advanced": "cinnamon punch is a popular drink in Korea.",
+          "master": "Understanding the varieties and cultural significance of cinnamon punch deepens appreciation of Korean beverage culture."
         },
         "variations": {
           "formal": [
@@ -1721,19 +2117,31 @@
           ]
         },
         "dialogue": {
-          "context": "At a traditional Korean restaurant",
+          "context": "Ordering at a cafe",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Would you like sujeonggwa for dessert?",
+              "text": "What would you like?",
               "romanization": "",
-              "translation": "후식으로 수정과 드시겠어요?"
+              "translation": "뭐 드시겠어요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, I'd love sujeonggwa. I like the cinnamon aroma.",
+              "text": "cinnamon punch, please.",
               "romanization": "",
-              "translation": "네, 수정과 좋아요. 계피 향이 좋거든요."
+              "translation": "수정과 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Hot or cold?",
+              "romanization": "",
+              "translation": "뜨거운 거요, 차가운 거요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Cold, please.",
+              "romanization": "",
+              "translation": "차가운 걸로 주세요."
             }
           ]
         }
@@ -1765,10 +2173,10 @@
         "word": "매실차",
         "explanation": "매실을 설탕에 절여 만든 매실청을 물에 타서 마시는 차입니다. 새콤달콤한 맛이 특징이며, 소화 촉진과 피로 회복에 효과적입니다. 여름에는 차갑게, 겨울에는 따뜻하게 마십니다.",
         "examples": {
-          "beginner": "매실차 한 잔 주세요.",
-          "intermediate": "소화가 안 될 때 매실차를 마셔요.",
-          "advanced": "매실청 담그기는 한국 가정의 대표적인 여름 준비 문화이다.",
-          "master": "매실의 구연산 성분이 젖산 분해를 촉진하여 피로 회복에 도움을 준다."
+          "beginner": "매실차를 마셔요.",
+          "intermediate": "매실차가 맛있어요.",
+          "advanced": "매실차는 한국에서 인기 있는 음료입니다.",
+          "master": "매실차의 다양한 종류와 문화적 의미를 이해하면 한국 음료 문화를 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1784,19 +2192,31 @@
           ]
         },
         "dialogue": {
-          "context": "식사 후에",
+          "context": "카페에서 주문하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "너무 많이 먹었더니 배가 더부룩해.",
-              "romanization": "neomu mani meogeotdeoni baega deobururkae.",
-              "translation": "I ate too much and my stomach feels bloated."
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
             },
             {
               "speaker": "B",
-              "text": "매실차 마셔. 소화에 좋아.",
-              "romanization": "maesilcha masyeo. sohwa-e joa.",
-              "translation": "Drink plum tea. It's good for digestion."
+              "text": "매실차 주세요.",
+              "romanization": "maesilcha juseyo.",
+              "translation": "plum tea, please."
+            },
+            {
+              "speaker": "A",
+              "text": "뜨거운 거요, 차가운 거요?",
+              "romanization": "tteugeoun geoyo, chagaun geoyo?",
+              "translation": "Hot or cold?"
+            },
+            {
+              "speaker": "B",
+              "text": "차가운 걸로 주세요.",
+              "romanization": "chagaun geolro juseyo.",
+              "translation": "Cold, please."
             }
           ]
         }
@@ -1805,10 +2225,10 @@
         "word": "plum tea",
         "explanation": "A tea made by dissolving plum syrup (green plums preserved in sugar) in water. It has a sweet-and-sour taste and is effective for aiding digestion and recovering from fatigue. Served cold in summer and warm in winter.",
         "examples": {
-          "beginner": "One cup of plum tea, please.",
-          "intermediate": "I drink plum tea when I have indigestion.",
-          "advanced": "Making plum syrup is a quintessential Korean household summer preparation tradition.",
-          "master": "The citric acid in plums promotes lactic acid breakdown, aiding fatigue recovery."
+          "beginner": "I drink plum tea.",
+          "intermediate": "plum tea is delicious.",
+          "advanced": "plum tea is a popular drink in Korea.",
+          "master": "Understanding the varieties and cultural significance of plum tea deepens appreciation of Korean beverage culture."
         },
         "variations": {
           "formal": [
@@ -1824,19 +2244,31 @@
           ]
         },
         "dialogue": {
-          "context": "After a meal",
+          "context": "Ordering at a cafe",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "I ate too much and my stomach feels bloated.",
+              "text": "What would you like?",
               "romanization": "",
-              "translation": "너무 많이 먹었더니 배가 더부룩해."
+              "translation": "뭐 드시겠어요?"
             },
             {
               "speaker": "B",
-              "text": "Drink plum tea. It's good for digestion.",
+              "text": "plum tea, please.",
               "romanization": "",
-              "translation": "매실차 마셔. 소화에 좋아."
+              "translation": "매실차 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Hot or cold?",
+              "romanization": "",
+              "translation": "뜨거운 거요, 차가운 거요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Cold, please.",
+              "romanization": "",
+              "translation": "차가운 걸로 주세요."
             }
           ]
         }
@@ -1868,10 +2300,10 @@
         "word": "아메리카노",
         "explanation": "에스프레소에 물을 넣어 만든 커피입니다. 한국에서 가장 인기 있는 커피 메뉴로, '아아'(아이스 아메리카노)는 계절에 관계없이 사랑받습니다. 줄임말 '아아'(아이스), '뜨아'(뜨거운)는 한국 특유의 표현입니다.",
         "examples": {
-          "beginner": "아메리카노 한 잔 주세요.",
-          "intermediate": "한국 사람들은 겨울에도 아이스 아메리카노를 마셔요.",
-          "advanced": "아이스 아메리카노를 줄여서 '아아'라고 부르는 것은 한국 카페 문화의 특징이다.",
-          "master": "한국의 아메리카노 소비량은 문화적 현상으로, '아아'는 하나의 사회적 코드가 되었다."
+          "beginner": "아메리카노를 마셔요.",
+          "intermediate": "아메리카노가 맛있어요.",
+          "advanced": "아메리카노는 한국에서 인기 있는 음료입니다.",
+          "master": "아메리카노의 다양한 종류와 문화적 의미를 이해하면 한국 음료 문화를 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1888,19 +2320,31 @@
           ]
         },
         "dialogue": {
-          "context": "카페에서 주문할 때",
+          "context": "카페에서 주문하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "아이스 아메리카노 한 잔이요.",
-              "romanization": "aiseu amerikano han janiyo.",
-              "translation": "One iced Americano, please."
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
             },
             {
               "speaker": "B",
-              "text": "사이즈 어떤 걸로 하시겠어요?",
-              "romanization": "saijeu eotteon geollo hasigesseoyo?",
-              "translation": "What size would you like?"
+              "text": "아메리카노 주세요.",
+              "romanization": "amerikano juseyo.",
+              "translation": "Americano, please."
+            },
+            {
+              "speaker": "A",
+              "text": "뜨거운 거요, 차가운 거요?",
+              "romanization": "tteugeoun geoyo, chagaun geoyo?",
+              "translation": "Hot or cold?"
+            },
+            {
+              "speaker": "B",
+              "text": "차가운 걸로 주세요.",
+              "romanization": "chagaun geolro juseyo.",
+              "translation": "Cold, please."
             }
           ]
         }
@@ -1909,10 +2353,10 @@
         "word": "Americano",
         "explanation": "Coffee made by adding water to espresso. It's the most popular coffee menu item in Korea. 'Ah-ah' (아아, iced Americano) is beloved year-round regardless of season. The abbreviations '아아' (iced) and '뜨아' (hot) are uniquely Korean expressions.",
         "examples": {
-          "beginner": "One Americano, please.",
-          "intermediate": "Koreans drink iced Americano even in winter.",
-          "advanced": "Shortening iced Americano to 'ah-ah' is a characteristic of Korean cafe culture.",
-          "master": "Korea's Americano consumption is a cultural phenomenon; 'ah-ah' has become a social code."
+          "beginner": "I drink americano.",
+          "intermediate": "Americano is delicious.",
+          "advanced": "Americano is a popular drink in Korea.",
+          "master": "Understanding the varieties and cultural significance of americano deepens appreciation of Korean beverage culture."
         },
         "variations": {
           "formal": [
@@ -1933,15 +2377,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "One iced Americano, please.",
+              "text": "What would you like?",
               "romanization": "",
-              "translation": "아이스 아메리카노 한 잔이요."
+              "translation": "뭐 드시겠어요?"
             },
             {
               "speaker": "B",
-              "text": "What size would you like?",
+              "text": "Americano, please.",
               "romanization": "",
-              "translation": "사이즈 어떤 걸로 하시겠어요?"
+              "translation": "아메리카노 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Hot or cold?",
+              "romanization": "",
+              "translation": "뜨거운 거요, 차가운 거요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Cold, please.",
+              "romanization": "",
+              "translation": "차가운 걸로 주세요."
             }
           ]
         }
@@ -1972,10 +2428,10 @@
         "word": "라떼",
         "explanation": "에스프레소에 스팀 우유를 넣어 만든 커피입니다. 이탈리아어 'latte(우유)'에서 유래했습니다. 한국에서는 '카페 라떼' 외에도 녹차 라떼, 고구마 라떼 등 다양한 변형이 인기입니다. '라떼는 말이야'는 '나 때는 말이야'의 말장난입니다.",
         "examples": {
-          "beginner": "라떼 한 잔 주세요.",
-          "intermediate": "카페 라떼에 시럽 추가할 수 있어요.",
-          "advanced": "한국에서는 커피 라떼 외에도 녹차, 고구마, 밤 라떼 등 다양한 종류가 있다.",
-          "master": "'라떼는 말이야'라는 유행어는 세대 차이를 풍자하는 한국 특유의 언어 유머이다."
+          "beginner": "라떼를 마셔요.",
+          "intermediate": "라떼가 맛있어요.",
+          "advanced": "라떼는 한국에서 인기 있는 음료입니다.",
+          "master": "라떼의 다양한 종류와 문화적 의미를 이해하면 한국 음료 문화를 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1991,19 +2447,31 @@
           ]
         },
         "dialogue": {
-          "context": "카페에서",
+          "context": "카페에서 주문하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "바닐라 라떼 한 잔 주세요.",
-              "romanization": "banilla latte han jan juseyo.",
-              "translation": "One vanilla latte, please."
+              "text": "뭐 드시겠어요?",
+              "romanization": "mwo deusigeseoyo?",
+              "translation": "What would you like?"
             },
             {
               "speaker": "B",
-              "text": "핫으로 드릴까요, 아이스로 드릴까요?",
-              "romanization": "haseuro deurilkkayo, aiseuro deurilkkayo?",
-              "translation": "Would you like it hot or iced?"
+              "text": "라떼 주세요.",
+              "romanization": "ratte juseyo.",
+              "translation": "latte, please."
+            },
+            {
+              "speaker": "A",
+              "text": "뜨거운 거요, 차가운 거요?",
+              "romanization": "tteugeoun geoyo, chagaun geoyo?",
+              "translation": "Hot or cold?"
+            },
+            {
+              "speaker": "B",
+              "text": "차가운 걸로 주세요.",
+              "romanization": "chagaun geolro juseyo.",
+              "translation": "Cold, please."
             }
           ]
         }
@@ -2012,10 +2480,10 @@
         "word": "latte",
         "explanation": "Coffee made with espresso and steamed milk. From the Italian word 'latte' meaning 'milk.' In Korea, besides cafe lattes, variations like green tea latte, sweet potato latte, and chestnut latte are popular. '라떼는 말이야' is a Korean pun meaning 'back in my day,' playing on 'latte' sounding like '나 때' (my time).",
         "examples": {
-          "beginner": "One latte, please.",
-          "intermediate": "You can add syrup to a cafe latte.",
-          "advanced": "In Korea, besides coffee lattes, there are green tea, sweet potato, and chestnut latte varieties.",
-          "master": "The catchphrase '라떼는 말이야' is a uniquely Korean linguistic humor satirizing generational gaps."
+          "beginner": "I drink latte.",
+          "intermediate": "latte is delicious.",
+          "advanced": "latte is a popular drink in Korea.",
+          "master": "Understanding the varieties and cultural significance of latte deepens appreciation of Korean beverage culture."
         },
         "variations": {
           "formal": [
@@ -2031,19 +2499,31 @@
           ]
         },
         "dialogue": {
-          "context": "At a cafe",
+          "context": "Ordering at a cafe",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "One vanilla latte, please.",
+              "text": "What would you like?",
               "romanization": "",
-              "translation": "바닐라 라떼 한 잔 주세요."
+              "translation": "뭐 드시겠어요?"
             },
             {
               "speaker": "B",
-              "text": "Would you like it hot or iced?",
+              "text": "latte, please.",
               "romanization": "",
-              "translation": "핫으로 드릴까요, 아이스로 드릴까요?"
+              "translation": "라떼 주세요."
+            },
+            {
+              "speaker": "A",
+              "text": "Hot or cold?",
+              "romanization": "",
+              "translation": "뜨거운 거요, 차가운 거요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Cold, please.",
+              "romanization": "",
+              "translation": "차가운 걸로 주세요."
             }
           ]
         }

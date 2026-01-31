@@ -18,10 +18,10 @@
         "word": "Awesome",
         "explanation": "'대박' means 'Awesome' in English.",
         "examples": {
-          "beginner": "We say \"대박\" in Korean.",
-          "intermediate": "In Korea, people often say \"대박\".",
-          "advanced": "\"대박\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"대박\" makes communication more natural."
+          "beginner": "We say \"대박\".",
+          "intermediate": "Friends often use \"대박\".",
+          "advanced": "\"대박\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"대박\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -35,16 +35,45 @@
           "short": [
             "Awesome"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"대박\" mean?",
+              "romanization": "",
+              "translation": "\"대박\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"Awesome\".",
+              "romanization": "",
+              "translation": "\"Awesome\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "대박",
         "explanation": "대박의 뜻은 'Awesome'입니다.",
         "examples": {
-          "beginner": "\"대박\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"대박\"를 자주 써요.",
-          "advanced": "\"대박\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"대박\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"대박\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"대박\"을 자주 써요.",
+          "advanced": "\"대박\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"대박\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -57,6 +86,35 @@
           ],
           "short": [
             "대박"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"대박\"이 무슨 뜻이야?",
+              "romanization": "\"daebak\"i museun tteusiya?",
+              "translation": "What does \"대박\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"Awesome\"라는 뜻이야.",
+              "romanization": "\"awesome\"raneun tteusiya.",
+              "translation": "It means \"Awesome\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -81,10 +139,10 @@
         "word": "OMG",
         "explanation": "'진짜 대박' means 'OMG' in English.",
         "examples": {
-          "beginner": "We say \"진짜 대박\" in Korean.",
-          "intermediate": "In Korea, people often say \"진짜 대박\".",
-          "advanced": "\"진짜 대박\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"진짜 대박\" makes communication more natural."
+          "beginner": "We say \"진짜 대박\".",
+          "intermediate": "Friends often use \"진짜 대박\".",
+          "advanced": "\"진짜 대박\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"진짜 대박\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -98,16 +156,45 @@
           "short": [
             "OMG"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"진짜 대박\" mean?",
+              "romanization": "",
+              "translation": "\"진짜 대박\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"OMG\".",
+              "romanization": "",
+              "translation": "\"OMG\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "진짜 대박",
         "explanation": "진짜 대박의 뜻은 'OMG'입니다.",
         "examples": {
-          "beginner": "\"진짜 대박\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"진짜 대박\"를 자주 써요.",
-          "advanced": "\"진짜 대박\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"진짜 대박\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"진짜 대박\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"진짜 대박\"을 자주 써요.",
+          "advanced": "\"진짜 대박\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"진짜 대박\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -120,6 +207,35 @@
           ],
           "short": [
             "진짜"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"진짜 대박\"이 무슨 뜻이야?",
+              "romanization": "\"jinjja daebak\"i museun tteusiya?",
+              "translation": "What does \"진짜 대박\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"OMG\"라는 뜻이야.",
+              "romanization": "\"omg\"raneun tteusiya.",
+              "translation": "It means \"OMG\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -144,10 +260,10 @@
         "word": "Awesome",
         "explanation": "'짱' means 'Awesome' in English.",
         "examples": {
-          "beginner": "We say \"짱\" in Korean.",
-          "intermediate": "In Korea, people often say \"짱\".",
-          "advanced": "\"짱\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"짱\" makes communication more natural."
+          "beginner": "We say \"짱\".",
+          "intermediate": "Friends often use \"짱\".",
+          "advanced": "\"짱\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"짱\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -161,16 +277,45 @@
           "short": [
             "Awesome"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"짱\" mean?",
+              "romanization": "",
+              "translation": "\"짱\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"Awesome\".",
+              "romanization": "",
+              "translation": "\"Awesome\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "짱",
         "explanation": "짱의 뜻은 'Awesome'입니다.",
         "examples": {
-          "beginner": "\"짱\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"짱\"를 자주 써요.",
-          "advanced": "\"짱\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"짱\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"짱\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"짱\"을 자주 써요.",
+          "advanced": "\"짱\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"짱\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -183,6 +328,35 @@
           ],
           "short": [
             "짱"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"짱\"이 무슨 뜻이야?",
+              "romanization": "\"jjang\"i museun tteusiya?",
+              "translation": "What does \"짱\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"Awesome\"라는 뜻이야.",
+              "romanization": "\"awesome\"raneun tteusiya.",
+              "translation": "It means \"Awesome\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -207,10 +381,10 @@
         "word": "Good",
         "explanation": "'굿' means 'Good' in English.",
         "examples": {
-          "beginner": "We say \"굿\" in Korean.",
-          "intermediate": "In Korea, people often say \"굿\".",
-          "advanced": "\"굿\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"굿\" makes communication more natural."
+          "beginner": "We say \"굿\".",
+          "intermediate": "Friends often use \"굿\".",
+          "advanced": "\"굿\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"굿\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -224,16 +398,45 @@
           "short": [
             "Good"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"굿\" mean?",
+              "romanization": "",
+              "translation": "\"굿\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"Good\".",
+              "romanization": "",
+              "translation": "\"Good\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "굿",
         "explanation": "굿의 뜻은 'Good'입니다.",
         "examples": {
-          "beginner": "\"굿\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"굿\"를 자주 써요.",
-          "advanced": "\"굿\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"굿\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"굿\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"굿\"을 자주 써요.",
+          "advanced": "\"굿\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"굿\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -246,6 +449,35 @@
           ],
           "short": [
             "굿"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"굿\"이 무슨 뜻이야?",
+              "romanization": "\"gus\"i museun tteusiya?",
+              "translation": "What does \"굿\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"Good\"라는 뜻이야.",
+              "romanization": "\"good\"raneun tteusiya.",
+              "translation": "It means \"Good\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -270,10 +502,10 @@
         "word": "That",
         "explanation": "'웃기네' means 'That' in English.",
         "examples": {
-          "beginner": "We say \"웃기네\" in Korean.",
-          "intermediate": "In Korea, people often say \"웃기네\".",
-          "advanced": "\"웃기네\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"웃기네\" makes communication more natural."
+          "beginner": "We say \"웃기네\".",
+          "intermediate": "Friends often use \"웃기네\".",
+          "advanced": "\"웃기네\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"웃기네\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -287,16 +519,45 @@
           "short": [
             "That"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"웃기네\" mean?",
+              "romanization": "",
+              "translation": "\"웃기네\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"That\".",
+              "romanization": "",
+              "translation": "\"That\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "웃기네",
         "explanation": "웃기네의 뜻은 'That'입니다.",
         "examples": {
-          "beginner": "\"웃기네\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"웃기네\"를 자주 써요.",
-          "advanced": "\"웃기네\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"웃기네\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"웃기네\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"웃기네\"을 자주 써요.",
+          "advanced": "\"웃기네\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"웃기네\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -309,6 +570,35 @@
           ],
           "short": [
             "웃기"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"웃기네\"이 무슨 뜻이야?",
+              "romanization": "\"usgine\"i museun tteusiya?",
+              "translation": "What does \"웃기네\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"That\"라는 뜻이야.",
+              "romanization": "\"that\"raneun tteusiya.",
+              "translation": "It means \"That\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -333,10 +623,10 @@
         "word": "Hehehe",
         "explanation": "'크크크' means 'Hehehe' in English.",
         "examples": {
-          "beginner": "We say \"크크크\" in Korean.",
-          "intermediate": "In Korea, people often say \"크크크\".",
-          "advanced": "\"크크크\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"크크크\" makes communication more natural."
+          "beginner": "We say \"크크크\".",
+          "intermediate": "Friends often use \"크크크\".",
+          "advanced": "\"크크크\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"크크크\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -350,16 +640,45 @@
           "short": [
             "Hehehe"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"크크크\" mean?",
+              "romanization": "",
+              "translation": "\"크크크\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"Hehehe\".",
+              "romanization": "",
+              "translation": "\"Hehehe\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "크크크",
         "explanation": "크크크의 뜻은 'Hehehe'입니다.",
         "examples": {
-          "beginner": "\"크크크\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"크크크\"를 자주 써요.",
-          "advanced": "\"크크크\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"크크크\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"크크크\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"크크크\"을 자주 써요.",
+          "advanced": "\"크크크\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"크크크\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -372,6 +691,35 @@
           ],
           "short": [
             "크크"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"크크크\"이 무슨 뜻이야?",
+              "romanization": "\"keukeukeu\"i museun tteusiya?",
+              "translation": "What does \"크크크\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"Hehehe\"라는 뜻이야.",
+              "romanization": "\"hehehe\"raneun tteusiya.",
+              "translation": "It means \"Hehehe\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -396,10 +744,10 @@
         "word": "cringe",
         "explanation": "'오글거리다' means 'cringe' in English.",
         "examples": {
-          "beginner": "We say \"오글거리다\" in Korean.",
-          "intermediate": "In Korea, people often say \"오글거리다\".",
-          "advanced": "\"오글거리다\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"오글거리다\" makes communication more natural."
+          "beginner": "We say \"오글거리다\".",
+          "intermediate": "Friends often use \"오글거리다\".",
+          "advanced": "\"오글거리다\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"오글거리다\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -413,16 +761,45 @@
           "short": [
             "cringe"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"오글거리다\" mean?",
+              "romanization": "",
+              "translation": "\"오글거리다\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"cringe\".",
+              "romanization": "",
+              "translation": "\"cringe\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "오글거리다",
         "explanation": "오글거리다의 뜻은 'cringe'입니다.",
         "examples": {
-          "beginner": "\"오글거리다\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"오글거리다\"를 자주 써요.",
-          "advanced": "\"오글거리다\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"오글거리다\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"오글거리다\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"오글거리다\"을 자주 써요.",
+          "advanced": "\"오글거리다\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"오글거리다\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -435,6 +812,35 @@
           ],
           "short": [
             "오글"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"오글거리다\"이 무슨 뜻이야?",
+              "romanization": "\"ogeulgeorida\"i museun tteusiya?",
+              "translation": "What does \"오글거리다\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"cringe\"라는 뜻이야.",
+              "romanization": "\"cringe\"raneun tteusiya.",
+              "translation": "It means \"cringe\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -459,10 +865,10 @@
         "word": "cringe",
         "explanation": "'오글거려' means 'cringe' in English.",
         "examples": {
-          "beginner": "We say \"오글거려\" in Korean.",
-          "intermediate": "In Korea, people often say \"오글거려\".",
-          "advanced": "\"오글거려\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"오글거려\" makes communication more natural."
+          "beginner": "We say \"오글거려\".",
+          "intermediate": "Friends often use \"오글거려\".",
+          "advanced": "\"오글거려\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"오글거려\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -476,16 +882,45 @@
           "short": [
             "cringe"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"오글거려\" mean?",
+              "romanization": "",
+              "translation": "\"오글거려\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"cringe\".",
+              "romanization": "",
+              "translation": "\"cringe\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "오글거려",
         "explanation": "오글거려의 뜻은 'cringe'입니다.",
         "examples": {
-          "beginner": "\"오글거려\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"오글거려\"를 자주 써요.",
-          "advanced": "\"오글거려\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"오글거려\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"오글거려\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"오글거려\"을 자주 써요.",
+          "advanced": "\"오글거려\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"오글거려\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -498,6 +933,35 @@
           ],
           "short": [
             "오글"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"오글거려\"이 무슨 뜻이야?",
+              "romanization": "\"ogeulgeoryeo\"i museun tteusiya?",
+              "translation": "What does \"오글거려\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"cringe\"라는 뜻이야.",
+              "romanization": "\"cringe\"raneun tteusiya.",
+              "translation": "It means \"cringe\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -522,10 +986,10 @@
         "word": "embarrassing",
         "explanation": "'쪽팔리다' means 'embarrassing' in English.",
         "examples": {
-          "beginner": "We say \"쪽팔리다\" in Korean.",
-          "intermediate": "In Korea, people often say \"쪽팔리다\".",
-          "advanced": "\"쪽팔리다\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"쪽팔리다\" makes communication more natural."
+          "beginner": "We say \"쪽팔리다\".",
+          "intermediate": "Friends often use \"쪽팔리다\".",
+          "advanced": "\"쪽팔리다\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"쪽팔리다\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -539,16 +1003,45 @@
           "short": [
             "embarrassing"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"쪽팔리다\" mean?",
+              "romanization": "",
+              "translation": "\"쪽팔리다\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"embarrassing\".",
+              "romanization": "",
+              "translation": "\"embarrassing\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "쪽팔리다",
         "explanation": "쪽팔리다의 뜻은 'embarrassing'입니다.",
         "examples": {
-          "beginner": "\"쪽팔리다\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"쪽팔리다\"를 자주 써요.",
-          "advanced": "\"쪽팔리다\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"쪽팔리다\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"쪽팔리다\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"쪽팔리다\"을 자주 써요.",
+          "advanced": "\"쪽팔리다\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"쪽팔리다\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -561,6 +1054,35 @@
           ],
           "short": [
             "쪽팔"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"쪽팔리다\"이 무슨 뜻이야?",
+              "romanization": "\"jjokpalrida\"i museun tteusiya?",
+              "translation": "What does \"쪽팔리다\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"embarrassing\"라는 뜻이야.",
+              "romanization": "\"embarrassing\"raneun tteusiya.",
+              "translation": "It means \"embarrassing\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -585,10 +1107,10 @@
         "word": "embarrassed",
         "explanation": "'쪽팔려' means 'embarrassed' in English.",
         "examples": {
-          "beginner": "We say \"쪽팔려\" in Korean.",
-          "intermediate": "In Korea, people often say \"쪽팔려\".",
-          "advanced": "\"쪽팔려\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"쪽팔려\" makes communication more natural."
+          "beginner": "We say \"쪽팔려\".",
+          "intermediate": "Friends often use \"쪽팔려\".",
+          "advanced": "\"쪽팔려\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"쪽팔려\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -602,16 +1124,45 @@
           "short": [
             "embarrassed"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"쪽팔려\" mean?",
+              "romanization": "",
+              "translation": "\"쪽팔려\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"embarrassed\".",
+              "romanization": "",
+              "translation": "\"embarrassed\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "쪽팔려",
         "explanation": "쪽팔려의 뜻은 'embarrassed'입니다.",
         "examples": {
-          "beginner": "\"쪽팔려\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"쪽팔려\"를 자주 써요.",
-          "advanced": "\"쪽팔려\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"쪽팔려\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"쪽팔려\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"쪽팔려\"을 자주 써요.",
+          "advanced": "\"쪽팔려\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"쪽팔려\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -624,6 +1175,35 @@
           ],
           "short": [
             "쪽팔"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"쪽팔려\"이 무슨 뜻이야?",
+              "romanization": "\"jjokpalryeo\"i museun tteusiya?",
+              "translation": "What does \"쪽팔려\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"embarrassed\"라는 뜻이야.",
+              "romanization": "\"embarrassed\"raneun tteusiya.",
+              "translation": "It means \"embarrassed\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -648,10 +1228,10 @@
         "word": "embarrassing",
         "explanation": "'민망하다' means 'embarrassing' in English.",
         "examples": {
-          "beginner": "We say \"민망하다\" in Korean.",
-          "intermediate": "In Korea, people often say \"민망하다\".",
-          "advanced": "\"민망하다\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"민망하다\" makes communication more natural."
+          "beginner": "We say \"민망하다\".",
+          "intermediate": "Friends often use \"민망하다\".",
+          "advanced": "\"민망하다\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"민망하다\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -665,16 +1245,45 @@
           "short": [
             "embarrassing"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"민망하다\" mean?",
+              "romanization": "",
+              "translation": "\"민망하다\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"embarrassing\".",
+              "romanization": "",
+              "translation": "\"embarrassing\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "민망하다",
         "explanation": "민망하다의 뜻은 'embarrassing'입니다.",
         "examples": {
-          "beginner": "\"민망하다\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"민망하다\"를 자주 써요.",
-          "advanced": "\"민망하다\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"민망하다\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"민망하다\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"민망하다\"을 자주 써요.",
+          "advanced": "\"민망하다\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"민망하다\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -687,6 +1296,35 @@
           ],
           "short": [
             "민망"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"민망하다\"이 무슨 뜻이야?",
+              "romanization": "\"minmanghada\"i museun tteusiya?",
+              "translation": "What does \"민망하다\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"embarrassing\"라는 뜻이야.",
+              "romanization": "\"embarrassing\"raneun tteusiya.",
+              "translation": "It means \"embarrassing\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -711,10 +1349,10 @@
         "word": "best life",
         "explanation": "'갓생' means 'best life' in English.",
         "examples": {
-          "beginner": "We say \"갓생\" in Korean.",
-          "intermediate": "In Korea, people often say \"갓생\".",
-          "advanced": "\"갓생\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"갓생\" makes communication more natural."
+          "beginner": "We say \"갓생\".",
+          "intermediate": "Friends often use \"갓생\".",
+          "advanced": "\"갓생\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"갓생\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -728,16 +1366,45 @@
           "short": [
             "best"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"갓생\" mean?",
+              "romanization": "",
+              "translation": "\"갓생\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"best life\".",
+              "romanization": "",
+              "translation": "\"best life\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "갓생",
         "explanation": "갓생의 뜻은 'best life'입니다.",
         "examples": {
-          "beginner": "\"갓생\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"갓생\"를 자주 써요.",
-          "advanced": "\"갓생\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"갓생\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"갓생\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"갓생\"을 자주 써요.",
+          "advanced": "\"갓생\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"갓생\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -750,6 +1417,35 @@
           ],
           "short": [
             "갓생"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"갓생\"이 무슨 뜻이야?",
+              "romanization": "\"gassaeng\"i museun tteusiya?",
+              "translation": "What does \"갓생\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"best life\"라는 뜻이야.",
+              "romanization": "\"best life\"raneun tteusiya.",
+              "translation": "It means \"best life\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -774,10 +1470,10 @@
         "word": "work-life balance",
         "explanation": "'워라밸' means 'work-life balance' in English.",
         "examples": {
-          "beginner": "We say \"워라밸\" in Korean.",
-          "intermediate": "In Korea, people often say \"워라밸\".",
-          "advanced": "\"워라밸\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"워라밸\" makes communication more natural."
+          "beginner": "We say \"워라밸\".",
+          "intermediate": "Friends often use \"워라밸\".",
+          "advanced": "\"워라밸\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"워라밸\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -791,16 +1487,45 @@
           "short": [
             "work-life"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"워라밸\" mean?",
+              "romanization": "",
+              "translation": "\"워라밸\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"work-life balance\".",
+              "romanization": "",
+              "translation": "\"work-life balance\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "워라밸",
         "explanation": "워라밸의 뜻은 'work-life balance'입니다.",
         "examples": {
-          "beginner": "\"워라밸\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"워라밸\"를 자주 써요.",
-          "advanced": "\"워라밸\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"워라밸\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"워라밸\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"워라밸\"을 자주 써요.",
+          "advanced": "\"워라밸\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"워라밸\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -813,6 +1538,35 @@
           ],
           "short": [
             "워라"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"워라밸\"이 무슨 뜻이야?",
+              "romanization": "\"worabael\"i museun tteusiya?",
+              "translation": "What does \"워라밸\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"work-life balance\"라는 뜻이야.",
+              "romanization": "\"work-life balance\"raneun tteusiya.",
+              "translation": "It means \"work-life balance\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -837,10 +1591,10 @@
         "word": "developer",
         "explanation": "'개발자' means 'developer' in English.",
         "examples": {
-          "beginner": "We say \"개발자\" in Korean.",
-          "intermediate": "In Korea, people often say \"개발자\".",
-          "advanced": "\"개발자\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"개발자\" makes communication more natural."
+          "beginner": "We say \"개발자\".",
+          "intermediate": "Friends often use \"개발자\".",
+          "advanced": "\"개발자\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"개발자\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -854,16 +1608,45 @@
           "short": [
             "developer"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"개발자\" mean?",
+              "romanization": "",
+              "translation": "\"개발자\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"developer\".",
+              "romanization": "",
+              "translation": "\"developer\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "개발자",
         "explanation": "개발자의 뜻은 'developer'입니다.",
         "examples": {
-          "beginner": "\"개발자\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"개발자\"를 자주 써요.",
-          "advanced": "\"개발자\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"개발자\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"개발자\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"개발자\"을 자주 써요.",
+          "advanced": "\"개발자\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"개발자\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -876,6 +1659,35 @@
           ],
           "short": [
             "개발"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"개발자\"이 무슨 뜻이야?",
+              "romanization": "\"gaebalja\"i museun tteusiya?",
+              "translation": "What does \"개발자\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"developer\"라는 뜻이야.",
+              "romanization": "\"developer\"raneun tteusiya.",
+              "translation": "It means \"developer\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -900,10 +1712,10 @@
         "word": "stew",
         "explanation": "'찌개' means 'stew' in English.",
         "examples": {
-          "beginner": "We say \"찌개\" in Korean.",
-          "intermediate": "In Korea, people often say \"찌개\".",
-          "advanced": "\"찌개\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"찌개\" makes communication more natural."
+          "beginner": "We say \"찌개\".",
+          "intermediate": "Friends often use \"찌개\".",
+          "advanced": "\"찌개\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"찌개\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -917,16 +1729,45 @@
           "short": [
             "stew"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"찌개\" mean?",
+              "romanization": "",
+              "translation": "\"찌개\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"stew\".",
+              "romanization": "",
+              "translation": "\"stew\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "찌개",
         "explanation": "찌개의 뜻은 'stew'입니다.",
         "examples": {
-          "beginner": "\"찌개\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"찌개\"를 자주 써요.",
-          "advanced": "\"찌개\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"찌개\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"찌개\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"찌개\"을 자주 써요.",
+          "advanced": "\"찌개\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"찌개\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -939,6 +1780,35 @@
           ],
           "short": [
             "찌개"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"찌개\"이 무슨 뜻이야?",
+              "romanization": "\"jjigae\"i museun tteusiya?",
+              "translation": "What does \"찌개\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"stew\"라는 뜻이야.",
+              "romanization": "\"stew\"raneun tteusiya.",
+              "translation": "It means \"stew\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -963,10 +1833,10 @@
         "word": "doenjang jjigae",
         "explanation": "'된장찌개' means 'doenjang jjigae' in English.",
         "examples": {
-          "beginner": "We say \"된장찌개\" in Korean.",
-          "intermediate": "In Korea, people often say \"된장찌개\".",
-          "advanced": "\"된장찌개\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"된장찌개\" makes communication more natural."
+          "beginner": "We say \"된장찌개\".",
+          "intermediate": "Friends often use \"된장찌개\".",
+          "advanced": "\"된장찌개\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"된장찌개\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -980,16 +1850,45 @@
           "short": [
             "doenjang"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"된장찌개\" mean?",
+              "romanization": "",
+              "translation": "\"된장찌개\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"doenjang jjigae\".",
+              "romanization": "",
+              "translation": "\"doenjang jjigae\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "된장찌개",
         "explanation": "된장찌개의 뜻은 'doenjang jjigae'입니다.",
         "examples": {
-          "beginner": "\"된장찌개\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"된장찌개\"를 자주 써요.",
-          "advanced": "\"된장찌개\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"된장찌개\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"된장찌개\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"된장찌개\"을 자주 써요.",
+          "advanced": "\"된장찌개\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"된장찌개\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1002,6 +1901,35 @@
           ],
           "short": [
             "된장"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"된장찌개\"이 무슨 뜻이야?",
+              "romanization": "\"doenjangjjigae\"i museun tteusiya?",
+              "translation": "What does \"된장찌개\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"doenjang jjigae\"라는 뜻이야.",
+              "romanization": "\"doenjang jjigae\"raneun tteusiya.",
+              "translation": "It means \"doenjang jjigae\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -1026,10 +1954,10 @@
         "word": "kimchi jjigae",
         "explanation": "'김치찌개' means 'kimchi jjigae' in English.",
         "examples": {
-          "beginner": "We say \"김치찌개\" in Korean.",
-          "intermediate": "In Korea, people often say \"김치찌개\".",
-          "advanced": "\"김치찌개\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"김치찌개\" makes communication more natural."
+          "beginner": "We say \"김치찌개\".",
+          "intermediate": "Friends often use \"김치찌개\".",
+          "advanced": "\"김치찌개\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"김치찌개\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -1043,16 +1971,45 @@
           "short": [
             "kimchi"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"김치찌개\" mean?",
+              "romanization": "",
+              "translation": "\"김치찌개\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"kimchi jjigae\".",
+              "romanization": "",
+              "translation": "\"kimchi jjigae\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "김치찌개",
         "explanation": "김치찌개의 뜻은 'kimchi jjigae'입니다.",
         "examples": {
-          "beginner": "\"김치찌개\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"김치찌개\"를 자주 써요.",
-          "advanced": "\"김치찌개\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"김치찌개\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"김치찌개\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"김치찌개\"을 자주 써요.",
+          "advanced": "\"김치찌개\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"김치찌개\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1065,6 +2022,35 @@
           ],
           "short": [
             "김치"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"김치찌개\"이 무슨 뜻이야?",
+              "romanization": "\"gimchijjigae\"i museun tteusiya?",
+              "translation": "What does \"김치찌개\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"kimchi jjigae\"라는 뜻이야.",
+              "romanization": "\"kimchi jjigae\"raneun tteusiya.",
+              "translation": "It means \"kimchi jjigae\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -1089,10 +2075,10 @@
         "word": "clam",
         "explanation": "'조개' means 'clam' in English.",
         "examples": {
-          "beginner": "We say \"조개\" in Korean.",
-          "intermediate": "In Korea, people often say \"조개\".",
-          "advanced": "\"조개\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"조개\" makes communication more natural."
+          "beginner": "We say \"조개\".",
+          "intermediate": "Friends often use \"조개\".",
+          "advanced": "\"조개\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"조개\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -1106,16 +2092,45 @@
           "short": [
             "clam"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"조개\" mean?",
+              "romanization": "",
+              "translation": "\"조개\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"clam\".",
+              "romanization": "",
+              "translation": "\"clam\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "조개",
         "explanation": "조개의 뜻은 'clam'입니다.",
         "examples": {
-          "beginner": "\"조개\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"조개\"를 자주 써요.",
-          "advanced": "\"조개\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"조개\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"조개\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"조개\"을 자주 써요.",
+          "advanced": "\"조개\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"조개\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1128,6 +2143,35 @@
           ],
           "short": [
             "조개"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"조개\"이 무슨 뜻이야?",
+              "romanization": "\"jogae\"i museun tteusiya?",
+              "translation": "What does \"조개\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"clam\"라는 뜻이야.",
+              "romanization": "\"clam\"raneun tteusiya.",
+              "translation": "It means \"clam\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -1152,10 +2196,10 @@
         "word": "fog",
         "explanation": "'안개' means 'fog' in English.",
         "examples": {
-          "beginner": "We say \"안개\" in Korean.",
-          "intermediate": "In Korea, people often say \"안개\".",
-          "advanced": "\"안개\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"안개\" makes communication more natural."
+          "beginner": "We say \"안개\".",
+          "intermediate": "Friends often use \"안개\".",
+          "advanced": "\"안개\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"안개\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -1169,16 +2213,45 @@
           "short": [
             "fog"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"안개\" mean?",
+              "romanization": "",
+              "translation": "\"안개\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"fog\".",
+              "romanization": "",
+              "translation": "\"fog\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "안개",
         "explanation": "안개의 뜻은 'fog'입니다.",
         "examples": {
-          "beginner": "\"안개\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"안개\"를 자주 써요.",
-          "advanced": "\"안개\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"안개\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"안개\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"안개\"을 자주 써요.",
+          "advanced": "\"안개\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"안개\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1191,6 +2264,35 @@
           ],
           "short": [
             "안개"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"안개\"이 무슨 뜻이야?",
+              "romanization": "\"angae\"i museun tteusiya?",
+              "translation": "What does \"안개\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"fog\"라는 뜻이야.",
+              "romanization": "\"fog\"raneun tteusiya.",
+              "translation": "It means \"fog\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -1215,10 +2317,10 @@
         "word": "dog",
         "explanation": "'개' means 'dog' in English.",
         "examples": {
-          "beginner": "We say \"개\" in Korean.",
-          "intermediate": "In Korea, people often say \"개\".",
-          "advanced": "\"개\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"개\" makes communication more natural."
+          "beginner": "We say \"개\".",
+          "intermediate": "Friends often use \"개\".",
+          "advanced": "\"개\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"개\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -1232,16 +2334,45 @@
           "short": [
             "dog"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"개\" mean?",
+              "romanization": "",
+              "translation": "\"개\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"dog\".",
+              "romanization": "",
+              "translation": "\"dog\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "개",
         "explanation": "개의 뜻은 'dog'입니다.",
         "examples": {
-          "beginner": "\"개\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"개\"를 자주 써요.",
-          "advanced": "\"개\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"개\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"개\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"개\"을 자주 써요.",
+          "advanced": "\"개\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"개\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1254,6 +2385,35 @@
           ],
           "short": [
             "개"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"개\"이 무슨 뜻이야?",
+              "romanization": "\"gae\"i museun tteusiya?",
+              "translation": "What does \"개\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"dog\"라는 뜻이야.",
+              "romanization": "\"dog\"raneun tteusiya.",
+              "translation": "It means \"dog\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -1278,10 +2438,10 @@
         "word": "frog",
         "explanation": "'개구리' means 'frog' in English.",
         "examples": {
-          "beginner": "We say \"개구리\" in Korean.",
-          "intermediate": "In Korea, people often say \"개구리\".",
-          "advanced": "\"개구리\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"개구리\" makes communication more natural."
+          "beginner": "We say \"개구리\".",
+          "intermediate": "Friends often use \"개구리\".",
+          "advanced": "\"개구리\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"개구리\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -1295,16 +2455,45 @@
           "short": [
             "frog"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"개구리\" mean?",
+              "romanization": "",
+              "translation": "\"개구리\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"frog\".",
+              "romanization": "",
+              "translation": "\"frog\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "개구리",
         "explanation": "개구리의 뜻은 'frog'입니다.",
         "examples": {
-          "beginner": "\"개구리\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"개구리\"를 자주 써요.",
-          "advanced": "\"개구리\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"개구리\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"개구리\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"개구리\"을 자주 써요.",
+          "advanced": "\"개구리\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"개구리\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1317,6 +2506,35 @@
           ],
           "short": [
             "개구"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"개구리\"이 무슨 뜻이야?",
+              "romanization": "\"gaeguri\"i museun tteusiya?",
+              "translation": "What does \"개구리\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"frog\"라는 뜻이야.",
+              "romanization": "\"frog\"raneun tteusiya.",
+              "translation": "It means \"frog\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -1341,10 +2559,10 @@
         "word": "ant",
         "explanation": "'개미' means 'ant' in English.",
         "examples": {
-          "beginner": "We say \"개미\" in Korean.",
-          "intermediate": "In Korea, people often say \"개미\".",
-          "advanced": "\"개미\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"개미\" makes communication more natural."
+          "beginner": "We say \"개미\".",
+          "intermediate": "Friends often use \"개미\".",
+          "advanced": "\"개미\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"개미\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -1358,16 +2576,45 @@
           "short": [
             "ant"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"개미\" mean?",
+              "romanization": "",
+              "translation": "\"개미\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"ant\".",
+              "romanization": "",
+              "translation": "\"ant\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "개미",
         "explanation": "개미의 뜻은 'ant'입니다.",
         "examples": {
-          "beginner": "\"개미\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"개미\"를 자주 써요.",
-          "advanced": "\"개미\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"개미\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"개미\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"개미\"을 자주 써요.",
+          "advanced": "\"개미\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"개미\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1380,6 +2627,35 @@
           ],
           "short": [
             "개미"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"개미\"이 무슨 뜻이야?",
+              "romanization": "\"gaemi\"i museun tteusiya?",
+              "translation": "What does \"개미\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"ant\"라는 뜻이야.",
+              "romanization": "\"ant\"raneun tteusiya.",
+              "translation": "It means \"ant\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -1404,10 +2680,10 @@
         "word": "stockings",
         "explanation": "'스타킹' means 'stockings' in English.",
         "examples": {
-          "beginner": "We say \"스타킹\" in Korean.",
-          "intermediate": "In Korea, people often say \"스타킹\".",
-          "advanced": "\"스타킹\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"스타킹\" makes communication more natural."
+          "beginner": "We say \"스타킹\".",
+          "intermediate": "Friends often use \"스타킹\".",
+          "advanced": "\"스타킹\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"스타킹\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -1421,16 +2697,45 @@
           "short": [
             "stockings"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"스타킹\" mean?",
+              "romanization": "",
+              "translation": "\"스타킹\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"stockings\".",
+              "romanization": "",
+              "translation": "\"stockings\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "스타킹",
         "explanation": "스타킹의 뜻은 'stockings'입니다.",
         "examples": {
-          "beginner": "\"스타킹\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"스타킹\"를 자주 써요.",
-          "advanced": "\"스타킹\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"스타킹\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"스타킹\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"스타킹\"을 자주 써요.",
+          "advanced": "\"스타킹\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"스타킹\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1443,6 +2748,35 @@
           ],
           "short": [
             "스타"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"스타킹\"이 무슨 뜻이야?",
+              "romanization": "\"seutaking\"i museun tteusiya?",
+              "translation": "What does \"스타킹\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"stockings\"라는 뜻이야.",
+              "romanization": "\"stockings\"raneun tteusiya.",
+              "translation": "It means \"stockings\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -1467,10 +2801,10 @@
         "word": "pillow",
         "explanation": "'베개' means 'pillow' in English.",
         "examples": {
-          "beginner": "We say \"베개\" in Korean.",
-          "intermediate": "In Korea, people often say \"베개\".",
-          "advanced": "\"베개\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"베개\" makes communication more natural."
+          "beginner": "We say \"베개\".",
+          "intermediate": "Friends often use \"베개\".",
+          "advanced": "\"베개\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"베개\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -1484,16 +2818,45 @@
           "short": [
             "pillow"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"베개\" mean?",
+              "romanization": "",
+              "translation": "\"베개\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"pillow\".",
+              "romanization": "",
+              "translation": "\"pillow\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "베개",
         "explanation": "베개의 뜻은 'pillow'입니다.",
         "examples": {
-          "beginner": "\"베개\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"베개\"를 자주 써요.",
-          "advanced": "\"베개\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"베개\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"베개\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"베개\"을 자주 써요.",
+          "advanced": "\"베개\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"베개\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1506,6 +2869,35 @@
           ],
           "short": [
             "베개"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"베개\"이 무슨 뜻이야?",
+              "romanization": "\"begae\"i museun tteusiya?",
+              "translation": "What does \"베개\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"pillow\"라는 뜻이야.",
+              "romanization": "\"pillow\"raneun tteusiya.",
+              "translation": "It means \"pillow\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -1530,10 +2922,10 @@
         "word": "cool",
         "explanation": "'멋있' means 'cool' in English.",
         "examples": {
-          "beginner": "We say \"멋있\" in Korean.",
-          "intermediate": "In Korea, people often say \"멋있\".",
-          "advanced": "\"멋있\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"멋있\" makes communication more natural."
+          "beginner": "We say \"멋있\".",
+          "intermediate": "Friends often use \"멋있\".",
+          "advanced": "\"멋있\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"멋있\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -1547,16 +2939,45 @@
           "short": [
             "cool"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"멋있\" mean?",
+              "romanization": "",
+              "translation": "\"멋있\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"cool\".",
+              "romanization": "",
+              "translation": "\"cool\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "멋있",
         "explanation": "'멋있' means 'cool' in English.",
         "examples": {
-          "beginner": "We say \"멋있\" in Korean.",
-          "intermediate": "In Korea, people often say \"멋있\".",
-          "advanced": "\"멋있\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"멋있\" makes communication more natural."
+          "beginner": "\"멋있\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"멋있\"을 자주 써요.",
+          "advanced": "\"멋있\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"멋있\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1569,6 +2990,35 @@
           ],
           "short": [
             "cool"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"멋있\"이 무슨 뜻이야?",
+              "romanization": "\"meosis\"i museun tteusiya?",
+              "translation": "What does \"멋있\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"cool\"라는 뜻이야.",
+              "romanization": "\"cool\"raneun tteusiya.",
+              "translation": "It means \"cool\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -1593,10 +3043,10 @@
         "word": "cool",
         "explanation": "'시원하' means 'cool' in English.",
         "examples": {
-          "beginner": "We say \"시원하\" in Korean.",
-          "intermediate": "In Korea, people often say \"시원하\".",
-          "advanced": "\"시원하\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"시원하\" makes communication more natural."
+          "beginner": "We say \"시원하\".",
+          "intermediate": "Friends often use \"시원하\".",
+          "advanced": "\"시원하\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"시원하\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -1610,16 +3060,45 @@
           "short": [
             "cool"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"시원하\" mean?",
+              "romanization": "",
+              "translation": "\"시원하\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"cool\".",
+              "romanization": "",
+              "translation": "\"cool\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "시원하",
         "explanation": "'시원하' means 'cool' in English.",
         "examples": {
-          "beginner": "We say \"시원하\" in Korean.",
-          "intermediate": "In Korea, people often say \"시원하\".",
-          "advanced": "\"시원하\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"시원하\" makes communication more natural."
+          "beginner": "\"시원하\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"시원하\"을 자주 써요.",
+          "advanced": "\"시원하\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"시원하\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1632,6 +3111,35 @@
           ],
           "short": [
             "cool"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"시원하\"이 무슨 뜻이야?",
+              "romanization": "\"siwonha\"i museun tteusiya?",
+              "translation": "What does \"시원하\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"cool\"라는 뜻이야.",
+              "romanization": "\"cool\"raneun tteusiya.",
+              "translation": "It means \"cool\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -1656,10 +3164,10 @@
         "word": "blind date",
         "explanation": "'소개팅' means 'blind date' in English.",
         "examples": {
-          "beginner": "We say \"소개팅\" in Korean.",
-          "intermediate": "In Korea, people often say \"소개팅\".",
-          "advanced": "\"소개팅\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"소개팅\" makes communication more natural."
+          "beginner": "We say \"소개팅\".",
+          "intermediate": "Friends often use \"소개팅\".",
+          "advanced": "\"소개팅\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"소개팅\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -1673,16 +3181,45 @@
           "short": [
             "blind"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"소개팅\" mean?",
+              "romanization": "",
+              "translation": "\"소개팅\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"blind date\".",
+              "romanization": "",
+              "translation": "\"blind date\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "소개팅",
         "explanation": "소개팅의 뜻은 'blind date'입니다.",
         "examples": {
-          "beginner": "\"소개팅\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"소개팅\"를 자주 써요.",
-          "advanced": "\"소개팅\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"소개팅\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"소개팅\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"소개팅\"을 자주 써요.",
+          "advanced": "\"소개팅\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"소개팅\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1695,6 +3232,35 @@
           ],
           "short": [
             "소개"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"소개팅\"이 무슨 뜻이야?",
+              "romanization": "\"sogaeting\"i museun tteusiya?",
+              "translation": "What does \"소개팅\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"blind date\"라는 뜻이야.",
+              "romanization": "\"blind date\"raneun tteusiya.",
+              "translation": "It means \"blind date\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -1719,10 +3285,10 @@
         "word": "cover letter",
         "explanation": "'자기소개서' means 'cover letter' in English.",
         "examples": {
-          "beginner": "We say \"자기소개서\" in Korean.",
-          "intermediate": "In Korea, people often say \"자기소개서\".",
-          "advanced": "\"자기소개서\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"자기소개서\" makes communication more natural."
+          "beginner": "We say \"자기소개서\".",
+          "intermediate": "Friends often use \"자기소개서\".",
+          "advanced": "\"자기소개서\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"자기소개서\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -1736,16 +3302,45 @@
           "short": [
             "cover"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"자기소개서\" mean?",
+              "romanization": "",
+              "translation": "\"자기소개서\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"cover letter\".",
+              "romanization": "",
+              "translation": "\"cover letter\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "자기소개서",
         "explanation": "자기소개서의 뜻은 'cover letter'입니다.",
         "examples": {
-          "beginner": "\"자기소개서\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"자기소개서\"를 자주 써요.",
-          "advanced": "\"자기소개서\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"자기소개서\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"자기소개서\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"자기소개서\"을 자주 써요.",
+          "advanced": "\"자기소개서\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"자기소개서\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1758,6 +3353,35 @@
           ],
           "short": [
             "자기"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"자기소개서\"이 무슨 뜻이야?",
+              "romanization": "\"jagisogaeseo\"i museun tteusiya?",
+              "translation": "What does \"자기소개서\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"cover letter\"라는 뜻이야.",
+              "romanization": "\"cover letter\"raneun tteusiya.",
+              "translation": "It means \"cover letter\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -1782,10 +3406,10 @@
         "word": "six months",
         "explanation": "'6개월' means 'six months' in English.",
         "examples": {
-          "beginner": "We say \"6개월\" in Korean.",
-          "intermediate": "In Korea, people often say \"6개월\".",
-          "advanced": "\"6개월\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"6개월\" makes communication more natural."
+          "beginner": "We say \"6개월\".",
+          "intermediate": "Friends often use \"6개월\".",
+          "advanced": "\"6개월\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"6개월\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -1799,16 +3423,45 @@
           "short": [
             "six"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"6개월\" mean?",
+              "romanization": "",
+              "translation": "\"6개월\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"six months\".",
+              "romanization": "",
+              "translation": "\"six months\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "6개월",
         "explanation": "6개월의 뜻은 'six months'입니다.",
         "examples": {
-          "beginner": "\"6개월\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"6개월\"를 자주 써요.",
-          "advanced": "\"6개월\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"6개월\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"6개월\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"6개월\"을 자주 써요.",
+          "advanced": "\"6개월\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"6개월\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1821,6 +3474,35 @@
           ],
           "short": [
             "6개"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"6개월\"이 무슨 뜻이야?",
+              "romanization": "\"6gaewol\"i museun tteusiya?",
+              "translation": "What does \"6개월\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"six months\"라는 뜻이야.",
+              "romanization": "\"six months\"raneun tteusiya.",
+              "translation": "It means \"six months\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -1845,10 +3527,10 @@
         "word": "awesome",
         "explanation": "'멋진' means 'awesome' in English.",
         "examples": {
-          "beginner": "We say \"멋진\" in Korean.",
-          "intermediate": "In Korea, people often say \"멋진\".",
-          "advanced": "\"멋진\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"멋진\" makes communication more natural."
+          "beginner": "We say \"멋진\".",
+          "intermediate": "Friends often use \"멋진\".",
+          "advanced": "\"멋진\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"멋진\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -1862,16 +3544,45 @@
           "short": [
             "awesome"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"멋진\" mean?",
+              "romanization": "",
+              "translation": "\"멋진\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"awesome\".",
+              "romanization": "",
+              "translation": "\"awesome\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "멋진",
         "explanation": "'멋진' means 'awesome' in English.",
         "examples": {
-          "beginner": "We say \"멋진\" in Korean.",
-          "intermediate": "In Korea, people often say \"멋진\".",
-          "advanced": "\"멋진\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"멋진\" makes communication more natural."
+          "beginner": "\"멋진\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"멋진\"을 자주 써요.",
+          "advanced": "\"멋진\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"멋진\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1884,6 +3595,35 @@
           ],
           "short": [
             "awesome"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"멋진\"이 무슨 뜻이야?",
+              "romanization": "\"meosjin\"i museun tteusiya?",
+              "translation": "What does \"멋진\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"awesome\"라는 뜻이야.",
+              "romanization": "\"awesome\"raneun tteusiya.",
+              "translation": "It means \"awesome\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -1908,10 +3648,10 @@
         "word": "cool",
         "explanation": "'시원한' means 'cool' in English.",
         "examples": {
-          "beginner": "We say \"시원한\" in Korean.",
-          "intermediate": "In Korea, people often say \"시원한\".",
-          "advanced": "\"시원한\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"시원한\" makes communication more natural."
+          "beginner": "We say \"시원한\".",
+          "intermediate": "Friends often use \"시원한\".",
+          "advanced": "\"시원한\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"시원한\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -1925,16 +3665,45 @@
           "short": [
             "cool"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"시원한\" mean?",
+              "romanization": "",
+              "translation": "\"시원한\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"cool\".",
+              "romanization": "",
+              "translation": "\"cool\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "시원한",
         "explanation": "'시원한' means 'cool' in English.",
         "examples": {
-          "beginner": "We say \"시원한\" in Korean.",
-          "intermediate": "In Korea, people often say \"시원한\".",
-          "advanced": "\"시원한\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"시원한\" makes communication more natural."
+          "beginner": "\"시원한\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"시원한\"을 자주 써요.",
+          "advanced": "\"시원한\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"시원한\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1947,6 +3716,35 @@
           ],
           "short": [
             "cool"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"시원한\"이 무슨 뜻이야?",
+              "romanization": "\"siwonhan\"i museun tteusiya?",
+              "translation": "What does \"시원한\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"cool\"라는 뜻이야.",
+              "romanization": "\"cool\"raneun tteusiya.",
+              "translation": "It means \"cool\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }
@@ -1971,10 +3769,10 @@
         "word": "dozen",
         "explanation": "'12개' means 'dozen' in English.",
         "examples": {
-          "beginner": "We say \"12개\" in Korean.",
-          "intermediate": "In Korea, people often say \"12개\".",
-          "advanced": "\"12개\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"12개\" makes communication more natural."
+          "beginner": "We say \"12개\".",
+          "intermediate": "Friends often use \"12개\".",
+          "advanced": "\"12개\" is an expression popular among the younger generation.",
+          "master": "Understanding the origin and context of \"12개\" reveals Korean pop culture."
         },
         "variations": {
           "formal": [
@@ -1988,16 +3786,45 @@
           "short": [
             "dozen"
           ]
+        },
+        "dialogue": {
+          "context": "Chatting with a friend",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What does \"12개\" mean?",
+              "romanization": "",
+              "translation": "\"12개\"이 무슨 뜻이야?"
+            },
+            {
+              "speaker": "B",
+              "text": "It means \"dozen\".",
+              "romanization": "",
+              "translation": "\"dozen\"라는 뜻이야."
+            },
+            {
+              "speaker": "A",
+              "text": "Oh, I see!",
+              "romanization": "",
+              "translation": "아, 그렇구나!"
+            },
+            {
+              "speaker": "B",
+              "text": "It's a common word these days.",
+              "romanization": "",
+              "translation": "요즘 많이 쓰는 말이야."
+            }
+          ]
         }
       },
       "ko": {
         "word": "12개",
         "explanation": "12개의 뜻은 'dozen'입니다.",
         "examples": {
-          "beginner": "\"12개\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"12개\"를 자주 써요.",
-          "advanced": "\"12개\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"12개\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"12개\"이라고 말해요.",
+          "intermediate": "친구들끼리 \"12개\"을 자주 써요.",
+          "advanced": "\"12개\"은 젊은 세대에서 유행하는 표현입니다.",
+          "master": "\"12개\"의 유래와 사용 맥락을 이해하면 한국의 대중문화를 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -2010,6 +3837,35 @@
           ],
           "short": [
             "12"
+          ]
+        },
+        "dialogue": {
+          "context": "친구와 대화하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"12개\"이 무슨 뜻이야?",
+              "romanization": "\"12gae\"i museun tteusiya?",
+              "translation": "What does \"12개\" mean?"
+            },
+            {
+              "speaker": "B",
+              "text": "\"dozen\"라는 뜻이야.",
+              "romanization": "\"dozen\"raneun tteusiya.",
+              "translation": "It means \"dozen\"."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 그렇구나!",
+              "romanization": "a, geureotguna!",
+              "translation": "Oh, I see!"
+            },
+            {
+              "speaker": "B",
+              "text": "요즘 많이 쓰는 말이야.",
+              "romanization": "yojeum mani sseuneun maliya.",
+              "translation": "It's a common word these days."
+            }
           ]
         }
       }

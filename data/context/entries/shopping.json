@@ -17,9 +17,9 @@
         "word": "물건",
         "explanation": "손으로 만질 수 있는 것. 상품.",
         "examples": {
-          "beginner": "물건을/를 사요.",
-          "intermediate": "물건이/가 세일이에요.",
-          "advanced": "물건을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "물건을 사요.",
+          "intermediate": "물건이 세일이에요.",
+          "advanced": "물건을 구매할 때 품질을 확인해야 합니다.",
           "master": "물건 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -33,8 +33,8 @@
             },
             {
               "speaker": "B",
-              "text": "물건을/를 찾고 있어요.",
-              "romanization": "mulgeoneul/reul chatgo iseoyo.",
+              "text": "물건을 찾고 있어요.",
+              "romanization": "mulgeoneul chatgo iseoyo.",
               "translation": "I'm looking for thing / item / goods."
             },
             {
@@ -74,7 +74,7 @@
               "speaker": "B",
               "text": "I'm looking for thing / item / goods.",
               "romanization": "",
-              "translation": "물건을/를 찾고 있어요."
+              "translation": "물건을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -115,9 +115,9 @@
         "word": "가격",
         "explanation": "물건을 사고팔 때의 돈 액수.",
         "examples": {
-          "beginner": "가격을/를 사요.",
-          "intermediate": "가격이/가 세일이에요.",
-          "advanced": "가격을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "가격을 사요.",
+          "intermediate": "가격이 세일이에요.",
+          "advanced": "가격을 구매할 때 품질을 확인해야 합니다.",
           "master": "가격 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -131,8 +131,8 @@
             },
             {
               "speaker": "B",
-              "text": "가격을/를 찾고 있어요.",
-              "romanization": "gagyeokeul/reul chatgo iseoyo.",
+              "text": "가격을 찾고 있어요.",
+              "romanization": "gagyeokeul chatgo iseoyo.",
               "translation": "I'm looking for price."
             },
             {
@@ -172,7 +172,7 @@
               "speaker": "B",
               "text": "I'm looking for price.",
               "romanization": "",
-              "translation": "가격을/를 찾고 있어요."
+              "translation": "가격을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -213,9 +213,9 @@
         "word": "비싸다",
         "explanation": "가격이 높다.",
         "examples": {
-          "beginner": "비싸다을/를 사요.",
-          "intermediate": "비싸다이/가 세일이에요.",
-          "advanced": "비싸다을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "비싸다를 사요.",
+          "intermediate": "비싸다가 세일이에요.",
+          "advanced": "비싸다를 구매할 때 품질을 확인해야 합니다.",
           "master": "비싸다 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -229,8 +229,8 @@
             },
             {
               "speaker": "B",
-              "text": "비싸다을/를 찾고 있어요.",
-              "romanization": "bissadaeul/reul chatgo iseoyo.",
+              "text": "비싸다를 찾고 있어요.",
+              "romanization": "bissadareul chatgo iseoyo.",
               "translation": "I'm looking for expensive."
             },
             {
@@ -270,7 +270,7 @@
               "speaker": "B",
               "text": "I'm looking for expensive.",
               "romanization": "",
-              "translation": "비싸다을/를 찾고 있어요."
+              "translation": "비싸다를 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -311,9 +311,9 @@
         "word": "싸다",
         "explanation": "가격이 낮다.",
         "examples": {
-          "beginner": "싸다을/를 사요.",
-          "intermediate": "싸다이/가 세일이에요.",
-          "advanced": "싸다을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "싸다를 사요.",
+          "intermediate": "싸다가 세일이에요.",
+          "advanced": "싸다를 구매할 때 품질을 확인해야 합니다.",
           "master": "싸다 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -327,8 +327,8 @@
             },
             {
               "speaker": "B",
-              "text": "싸다을/를 찾고 있어요.",
-              "romanization": "ssadaeul/reul chatgo iseoyo.",
+              "text": "싸다를 찾고 있어요.",
+              "romanization": "ssadareul chatgo iseoyo.",
               "translation": "I'm looking for cheap / inexpensive."
             },
             {
@@ -368,7 +368,7 @@
               "speaker": "B",
               "text": "I'm looking for cheap / inexpensive.",
               "romanization": "",
-              "translation": "싸다을/를 찾고 있어요."
+              "translation": "싸다를 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -409,9 +409,9 @@
         "word": "할인",
         "explanation": "가격을 낮추어 주는 것.",
         "examples": {
-          "beginner": "할인을/를 사요.",
-          "intermediate": "할인이/가 세일이에요.",
-          "advanced": "할인을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "할인을 사요.",
+          "intermediate": "할인이 세일이에요.",
+          "advanced": "할인을 구매할 때 품질을 확인해야 합니다.",
           "master": "할인 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -425,8 +425,8 @@
             },
             {
               "speaker": "B",
-              "text": "할인을/를 찾고 있어요.",
-              "romanization": "halineul/reul chatgo iseoyo.",
+              "text": "할인을 찾고 있어요.",
+              "romanization": "halineul chatgo iseoyo.",
               "translation": "I'm looking for discount."
             },
             {
@@ -466,7 +466,7 @@
               "speaker": "B",
               "text": "I'm looking for discount.",
               "romanization": "",
-              "translation": "할인을/를 찾고 있어요."
+              "translation": "할인을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -507,9 +507,9 @@
         "word": "계산",
         "explanation": "물건 값을 치르는 것. 또는 수를 세는 것.",
         "examples": {
-          "beginner": "계산을/를 사요.",
-          "intermediate": "계산이/가 세일이에요.",
-          "advanced": "계산을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "계산을 사요.",
+          "intermediate": "계산이 세일이에요.",
+          "advanced": "계산을 구매할 때 품질을 확인해야 합니다.",
           "master": "계산 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -523,8 +523,8 @@
             },
             {
               "speaker": "B",
-              "text": "계산을/를 찾고 있어요.",
-              "romanization": "gyesaneul/reul chatgo iseoyo.",
+              "text": "계산을 찾고 있어요.",
+              "romanization": "gyesaneul chatgo iseoyo.",
               "translation": "I'm looking for payment / calculation."
             },
             {
@@ -564,7 +564,7 @@
               "speaker": "B",
               "text": "I'm looking for payment / calculation.",
               "romanization": "",
-              "translation": "계산을/를 찾고 있어요."
+              "translation": "계산을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -605,9 +605,9 @@
         "word": "영수증",
         "explanation": "물건을 산 증거로 받는 종이.",
         "examples": {
-          "beginner": "영수증을/를 사요.",
-          "intermediate": "영수증이/가 세일이에요.",
-          "advanced": "영수증을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "영수증을 사요.",
+          "intermediate": "영수증이 세일이에요.",
+          "advanced": "영수증을 구매할 때 품질을 확인해야 합니다.",
           "master": "영수증 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -621,8 +621,8 @@
             },
             {
               "speaker": "B",
-              "text": "영수증을/를 찾고 있어요.",
-              "romanization": "yeongsujeungeul/reul chatgo iseoyo.",
+              "text": "영수증을 찾고 있어요.",
+              "romanization": "yeongsujeungeul chatgo iseoyo.",
               "translation": "I'm looking for receipt."
             },
             {
@@ -662,7 +662,7 @@
               "speaker": "B",
               "text": "I'm looking for receipt.",
               "romanization": "",
-              "translation": "영수증을/를 찾고 있어요."
+              "translation": "영수증을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -703,9 +703,9 @@
         "word": "현금",
         "explanation": "지폐와 동전. 카드가 아닌 돈.",
         "examples": {
-          "beginner": "현금을/를 사요.",
-          "intermediate": "현금이/가 세일이에요.",
-          "advanced": "현금을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "현금을 사요.",
+          "intermediate": "현금이 세일이에요.",
+          "advanced": "현금을 구매할 때 품질을 확인해야 합니다.",
           "master": "현금 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -719,8 +719,8 @@
             },
             {
               "speaker": "B",
-              "text": "현금을/를 찾고 있어요.",
-              "romanization": "hyeongeumeul/reul chatgo iseoyo.",
+              "text": "현금을 찾고 있어요.",
+              "romanization": "hyeongeumeul chatgo iseoyo.",
               "translation": "I'm looking for cash."
             },
             {
@@ -760,7 +760,7 @@
               "speaker": "B",
               "text": "I'm looking for cash.",
               "romanization": "",
-              "translation": "현금을/를 찾고 있어요."
+              "translation": "현금을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -801,9 +801,9 @@
         "word": "카드",
         "explanation": "신용카드 또는 체크카드.",
         "examples": {
-          "beginner": "카드을/를 사요.",
-          "intermediate": "카드이/가 세일이에요.",
-          "advanced": "카드을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "카드를 사요.",
+          "intermediate": "카드가 세일이에요.",
+          "advanced": "카드를 구매할 때 품질을 확인해야 합니다.",
           "master": "카드 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -817,8 +817,8 @@
             },
             {
               "speaker": "B",
-              "text": "카드을/를 찾고 있어요.",
-              "romanization": "kadeueul/reul chatgo iseoyo.",
+              "text": "카드를 찾고 있어요.",
+              "romanization": "kadeureul chatgo iseoyo.",
               "translation": "I'm looking for card."
             },
             {
@@ -858,7 +858,7 @@
               "speaker": "B",
               "text": "I'm looking for card.",
               "romanization": "",
-              "translation": "카드을/를 찾고 있어요."
+              "translation": "카드를 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -899,9 +899,9 @@
         "word": "거스름돈",
         "explanation": "물건 값을 내고 남는 돈.",
         "examples": {
-          "beginner": "거스름돈을/를 사요.",
-          "intermediate": "거스름돈이/가 세일이에요.",
-          "advanced": "거스름돈을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "거스름돈을 사요.",
+          "intermediate": "거스름돈이 세일이에요.",
+          "advanced": "거스름돈을 구매할 때 품질을 확인해야 합니다.",
           "master": "거스름돈 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -915,8 +915,8 @@
             },
             {
               "speaker": "B",
-              "text": "거스름돈을/를 찾고 있어요.",
-              "romanization": "geoseureumdoneul/reul chatgo iseoyo.",
+              "text": "거스름돈을 찾고 있어요.",
+              "romanization": "geoseureumdoneul chatgo iseoyo.",
               "translation": "I'm looking for change (money)."
             },
             {
@@ -956,7 +956,7 @@
               "speaker": "B",
               "text": "I'm looking for change (money).",
               "romanization": "",
-              "translation": "거스름돈을/를 찾고 있어요."
+              "translation": "거스름돈을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -997,9 +997,9 @@
         "word": "상점",
         "explanation": "물건을 파는 가게.",
         "examples": {
-          "beginner": "상점을/를 사요.",
-          "intermediate": "상점이/가 세일이에요.",
-          "advanced": "상점을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "상점을 사요.",
+          "intermediate": "상점이 세일이에요.",
+          "advanced": "상점을 구매할 때 품질을 확인해야 합니다.",
           "master": "상점 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -1013,8 +1013,8 @@
             },
             {
               "speaker": "B",
-              "text": "상점을/를 찾고 있어요.",
-              "romanization": "sangjeomeul/reul chatgo iseoyo.",
+              "text": "상점을 찾고 있어요.",
+              "romanization": "sangjeomeul chatgo iseoyo.",
               "translation": "I'm looking for store / shop."
             },
             {
@@ -1054,7 +1054,7 @@
               "speaker": "B",
               "text": "I'm looking for store / shop.",
               "romanization": "",
-              "translation": "상점을/를 찾고 있어요."
+              "translation": "상점을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -1095,9 +1095,9 @@
         "word": "마트",
         "explanation": "생활용품과 식품 등을 파는 큰 가게.",
         "examples": {
-          "beginner": "마트을/를 사요.",
-          "intermediate": "마트이/가 세일이에요.",
-          "advanced": "마트을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "마트를 사요.",
+          "intermediate": "마트가 세일이에요.",
+          "advanced": "마트를 구매할 때 품질을 확인해야 합니다.",
           "master": "마트 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -1111,8 +1111,8 @@
             },
             {
               "speaker": "B",
-              "text": "마트을/를 찾고 있어요.",
-              "romanization": "mateueul/reul chatgo iseoyo.",
+              "text": "마트를 찾고 있어요.",
+              "romanization": "mateureul chatgo iseoyo.",
               "translation": "I'm looking for mart / supermarket."
             },
             {
@@ -1152,7 +1152,7 @@
               "speaker": "B",
               "text": "I'm looking for mart / supermarket.",
               "romanization": "",
-              "translation": "마트을/를 찾고 있어요."
+              "translation": "마트를 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -1193,9 +1193,9 @@
         "word": "백화점",
         "explanation": "여러 종류의 물건을 파는 큰 건물.",
         "examples": {
-          "beginner": "백화점을/를 사요.",
-          "intermediate": "백화점이/가 세일이에요.",
-          "advanced": "백화점을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "백화점을 사요.",
+          "intermediate": "백화점이 세일이에요.",
+          "advanced": "백화점을 구매할 때 품질을 확인해야 합니다.",
           "master": "백화점 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -1209,8 +1209,8 @@
             },
             {
               "speaker": "B",
-              "text": "백화점을/를 찾고 있어요.",
-              "romanization": "baekhwajeomeul/reul chatgo iseoyo.",
+              "text": "백화점을 찾고 있어요.",
+              "romanization": "baekhwajeomeul chatgo iseoyo.",
               "translation": "I'm looking for department store."
             },
             {
@@ -1250,7 +1250,7 @@
               "speaker": "B",
               "text": "I'm looking for department store.",
               "romanization": "",
-              "translation": "백화점을/를 찾고 있어요."
+              "translation": "백화점을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -1291,9 +1291,9 @@
         "word": "편의점",
         "explanation": "24시간 운영하는 작은 가게.",
         "examples": {
-          "beginner": "편의점을/를 사요.",
-          "intermediate": "편의점이/가 세일이에요.",
-          "advanced": "편의점을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "편의점을 사요.",
+          "intermediate": "편의점이 세일이에요.",
+          "advanced": "편의점을 구매할 때 품질을 확인해야 합니다.",
           "master": "편의점 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -1307,8 +1307,8 @@
             },
             {
               "speaker": "B",
-              "text": "편의점을/를 찾고 있어요.",
-              "romanization": "pyeonuijeomeul/reul chatgo iseoyo.",
+              "text": "편의점을 찾고 있어요.",
+              "romanization": "pyeonuijeomeul chatgo iseoyo.",
               "translation": "I'm looking for convenience store."
             },
             {
@@ -1348,7 +1348,7 @@
               "speaker": "B",
               "text": "I'm looking for convenience store.",
               "romanization": "",
-              "translation": "편의점을/를 찾고 있어요."
+              "translation": "편의점을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -1389,9 +1389,9 @@
         "word": "시장",
         "explanation": "여러 가게가 모여 물건을 파는 곳.",
         "examples": {
-          "beginner": "시장을/를 사요.",
-          "intermediate": "시장이/가 세일이에요.",
-          "advanced": "시장을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "시장을 사요.",
+          "intermediate": "시장이 세일이에요.",
+          "advanced": "시장을 구매할 때 품질을 확인해야 합니다.",
           "master": "시장 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -1405,8 +1405,8 @@
             },
             {
               "speaker": "B",
-              "text": "시장을/를 찾고 있어요.",
-              "romanization": "sijangeul/reul chatgo iseoyo.",
+              "text": "시장을 찾고 있어요.",
+              "romanization": "sijangeul chatgo iseoyo.",
               "translation": "I'm looking for market."
             },
             {
@@ -1446,7 +1446,7 @@
               "speaker": "B",
               "text": "I'm looking for market.",
               "romanization": "",
-              "translation": "시장을/를 찾고 있어요."
+              "translation": "시장을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -1487,9 +1487,9 @@
         "word": "온라인",
         "explanation": "인터넷을 통한 것.",
         "examples": {
-          "beginner": "온라인을/를 사요.",
-          "intermediate": "온라인이/가 세일이에요.",
-          "advanced": "온라인을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "온라인을 사요.",
+          "intermediate": "온라인이 세일이에요.",
+          "advanced": "온라인을 구매할 때 품질을 확인해야 합니다.",
           "master": "온라인 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -1503,8 +1503,8 @@
             },
             {
               "speaker": "B",
-              "text": "온라인을/를 찾고 있어요.",
-              "romanization": "onraineul/reul chatgo iseoyo.",
+              "text": "온라인을 찾고 있어요.",
+              "romanization": "onraineul chatgo iseoyo.",
               "translation": "I'm looking for online."
             },
             {
@@ -1544,7 +1544,7 @@
               "speaker": "B",
               "text": "I'm looking for online.",
               "romanization": "",
-              "translation": "온라인을/를 찾고 있어요."
+              "translation": "온라인을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -1585,9 +1585,9 @@
         "word": "배달",
         "explanation": "물건이나 음식을 가져다 주는 것.",
         "examples": {
-          "beginner": "배달을/를 사요.",
-          "intermediate": "배달이/가 세일이에요.",
-          "advanced": "배달을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "배달을 사요.",
+          "intermediate": "배달이 세일이에요.",
+          "advanced": "배달을 구매할 때 품질을 확인해야 합니다.",
           "master": "배달 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -1601,8 +1601,8 @@
             },
             {
               "speaker": "B",
-              "text": "배달을/를 찾고 있어요.",
-              "romanization": "baedaleul/reul chatgo iseoyo.",
+              "text": "배달을 찾고 있어요.",
+              "romanization": "baedaleul chatgo iseoyo.",
               "translation": "I'm looking for delivery."
             },
             {
@@ -1642,7 +1642,7 @@
               "speaker": "B",
               "text": "I'm looking for delivery.",
               "romanization": "",
-              "translation": "배달을/를 찾고 있어요."
+              "translation": "배달을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -1683,9 +1683,9 @@
         "word": "주문",
         "explanation": "물건이나 음식을 사겠다고 요청하는 것.",
         "examples": {
-          "beginner": "주문을/를 사요.",
-          "intermediate": "주문이/가 세일이에요.",
-          "advanced": "주문을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "주문을 사요.",
+          "intermediate": "주문이 세일이에요.",
+          "advanced": "주문을 구매할 때 품질을 확인해야 합니다.",
           "master": "주문 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -1699,8 +1699,8 @@
             },
             {
               "speaker": "B",
-              "text": "주문을/를 찾고 있어요.",
-              "romanization": "jumuneul/reul chatgo iseoyo.",
+              "text": "주문을 찾고 있어요.",
+              "romanization": "jumuneul chatgo iseoyo.",
               "translation": "I'm looking for order."
             },
             {
@@ -1740,7 +1740,7 @@
               "speaker": "B",
               "text": "I'm looking for order.",
               "romanization": "",
-              "translation": "주문을/를 찾고 있어요."
+              "translation": "주문을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -1781,9 +1781,9 @@
         "word": "환불",
         "explanation": "산 물건을 돌려주고 돈을 돌려받는 것.",
         "examples": {
-          "beginner": "환불을/를 사요.",
-          "intermediate": "환불이/가 세일이에요.",
-          "advanced": "환불을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "환불을 사요.",
+          "intermediate": "환불이 세일이에요.",
+          "advanced": "환불을 구매할 때 품질을 확인해야 합니다.",
           "master": "환불 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -1797,8 +1797,8 @@
             },
             {
               "speaker": "B",
-              "text": "환불을/를 찾고 있어요.",
-              "romanization": "hwanbuleul/reul chatgo iseoyo.",
+              "text": "환불을 찾고 있어요.",
+              "romanization": "hwanbuleul chatgo iseoyo.",
               "translation": "I'm looking for refund."
             },
             {
@@ -1838,7 +1838,7 @@
               "speaker": "B",
               "text": "I'm looking for refund.",
               "romanization": "",
-              "translation": "환불을/를 찾고 있어요."
+              "translation": "환불을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -1879,9 +1879,9 @@
         "word": "교환",
         "explanation": "산 물건을 다른 것으로 바꾸는 것.",
         "examples": {
-          "beginner": "교환을/를 사요.",
-          "intermediate": "교환이/가 세일이에요.",
-          "advanced": "교환을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "교환을 사요.",
+          "intermediate": "교환이 세일이에요.",
+          "advanced": "교환을 구매할 때 품질을 확인해야 합니다.",
           "master": "교환 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -1895,8 +1895,8 @@
             },
             {
               "speaker": "B",
-              "text": "교환을/를 찾고 있어요.",
-              "romanization": "gyohwaneul/reul chatgo iseoyo.",
+              "text": "교환을 찾고 있어요.",
+              "romanization": "gyohwaneul chatgo iseoyo.",
               "translation": "I'm looking for exchange."
             },
             {
@@ -1936,7 +1936,7 @@
               "speaker": "B",
               "text": "I'm looking for exchange.",
               "romanization": "",
-              "translation": "교환을/를 찾고 있어요."
+              "translation": "교환을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -1977,9 +1977,9 @@
         "word": "사이즈",
         "explanation": "옷이나 신발의 크기.",
         "examples": {
-          "beginner": "사이즈을/를 사요.",
-          "intermediate": "사이즈이/가 세일이에요.",
-          "advanced": "사이즈을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "사이즈를 사요.",
+          "intermediate": "사이즈가 세일이에요.",
+          "advanced": "사이즈를 구매할 때 품질을 확인해야 합니다.",
           "master": "사이즈 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -1993,8 +1993,8 @@
             },
             {
               "speaker": "B",
-              "text": "사이즈을/를 찾고 있어요.",
-              "romanization": "saijeueul/reul chatgo iseoyo.",
+              "text": "사이즈를 찾고 있어요.",
+              "romanization": "saijeureul chatgo iseoyo.",
               "translation": "I'm looking for size."
             },
             {
@@ -2034,7 +2034,7 @@
               "speaker": "B",
               "text": "I'm looking for size.",
               "romanization": "",
-              "translation": "사이즈을/를 찾고 있어요."
+              "translation": "사이즈를 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -2075,9 +2075,9 @@
         "word": "색",
         "explanation": "빨강, 파랑 등의 빛깔.",
         "examples": {
-          "beginner": "색을/를 사요.",
-          "intermediate": "색이/가 세일이에요.",
-          "advanced": "색을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "색을 사요.",
+          "intermediate": "색이 세일이에요.",
+          "advanced": "색을 구매할 때 품질을 확인해야 합니다.",
           "master": "색 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -2091,8 +2091,8 @@
             },
             {
               "speaker": "B",
-              "text": "색을/를 찾고 있어요.",
-              "romanization": "saekeul/reul chatgo iseoyo.",
+              "text": "색을 찾고 있어요.",
+              "romanization": "saekeul chatgo iseoyo.",
               "translation": "I'm looking for color."
             },
             {
@@ -2132,7 +2132,7 @@
               "speaker": "B",
               "text": "I'm looking for color.",
               "romanization": "",
-              "translation": "색을/를 찾고 있어요."
+              "translation": "색을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -2173,9 +2173,9 @@
         "word": "입어 보다",
         "explanation": "옷을 사기 전에 미리 입어서 확인하다.",
         "examples": {
-          "beginner": "입어 보다을/를 사요.",
-          "intermediate": "입어 보다이/가 세일이에요.",
-          "advanced": "입어 보다을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "입어 보다를 사요.",
+          "intermediate": "입어 보다가 세일이에요.",
+          "advanced": "입어 보다를 구매할 때 품질을 확인해야 합니다.",
           "master": "입어 보다 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -2189,8 +2189,8 @@
             },
             {
               "speaker": "B",
-              "text": "입어 보다을/를 찾고 있어요.",
-              "romanization": "ipeo bodaeul/reul chatgo iseoyo.",
+              "text": "입어 보다를 찾고 있어요.",
+              "romanization": "ipeo bodareul chatgo iseoyo.",
               "translation": "I'm looking for to try on."
             },
             {
@@ -2230,7 +2230,7 @@
               "speaker": "B",
               "text": "I'm looking for to try on.",
               "romanization": "",
-              "translation": "입어 보다을/를 찾고 있어요."
+              "translation": "입어 보다를 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -2271,9 +2271,9 @@
         "word": "탈의실",
         "explanation": "옷을 갈아입는 방.",
         "examples": {
-          "beginner": "탈의실을/를 사요.",
-          "intermediate": "탈의실이/가 세일이에요.",
-          "advanced": "탈의실을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "탈의실을 사요.",
+          "intermediate": "탈의실이 세일이에요.",
+          "advanced": "탈의실을 구매할 때 품질을 확인해야 합니다.",
           "master": "탈의실 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -2287,8 +2287,8 @@
             },
             {
               "speaker": "B",
-              "text": "탈의실을/를 찾고 있어요.",
-              "romanization": "taluisileul/reul chatgo iseoyo.",
+              "text": "탈의실을 찾고 있어요.",
+              "romanization": "taluisileul chatgo iseoyo.",
               "translation": "I'm looking for fitting room / changing room."
             },
             {
@@ -2328,7 +2328,7 @@
               "speaker": "B",
               "text": "I'm looking for fitting room / changing room.",
               "romanization": "",
-              "translation": "탈의실을/를 찾고 있어요."
+              "translation": "탈의실을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -2369,9 +2369,9 @@
         "word": "장바구니",
         "explanation": "쇼핑할 때 물건을 담는 바구니. 온라인에서는 구매할 물건 목록.",
         "examples": {
-          "beginner": "장바구니을/를 사요.",
-          "intermediate": "장바구니이/가 세일이에요.",
-          "advanced": "장바구니을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "장바구니를 사요.",
+          "intermediate": "장바구니가 세일이에요.",
+          "advanced": "장바구니를 구매할 때 품질을 확인해야 합니다.",
           "master": "장바구니 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -2385,8 +2385,8 @@
             },
             {
               "speaker": "B",
-              "text": "장바구니을/를 찾고 있어요.",
-              "romanization": "jangbagunieul/reul chatgo iseoyo.",
+              "text": "장바구니를 찾고 있어요.",
+              "romanization": "jangbagunireul chatgo iseoyo.",
               "translation": "I'm looking for shopping cart / basket."
             },
             {
@@ -2426,7 +2426,7 @@
               "speaker": "B",
               "text": "I'm looking for shopping cart / basket.",
               "romanization": "",
-              "translation": "장바구니을/를 찾고 있어요."
+              "translation": "장바구니를 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -2467,9 +2467,9 @@
         "word": "포장",
         "explanation": "물건을 싸거나 꾸미는 것.",
         "examples": {
-          "beginner": "포장을/를 사요.",
-          "intermediate": "포장이/가 세일이에요.",
-          "advanced": "포장을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "포장을 사요.",
+          "intermediate": "포장이 세일이에요.",
+          "advanced": "포장을 구매할 때 품질을 확인해야 합니다.",
           "master": "포장 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -2483,8 +2483,8 @@
             },
             {
               "speaker": "B",
-              "text": "포장을/를 찾고 있어요.",
-              "romanization": "pojangeul/reul chatgo iseoyo.",
+              "text": "포장을 찾고 있어요.",
+              "romanization": "pojangeul chatgo iseoyo.",
               "translation": "I'm looking for wrapping / packaging."
             },
             {
@@ -2524,7 +2524,7 @@
               "speaker": "B",
               "text": "I'm looking for wrapping / packaging.",
               "romanization": "",
-              "translation": "포장을/를 찾고 있어요."
+              "translation": "포장을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -2565,9 +2565,9 @@
         "word": "선물",
         "explanation": "다른 사람에게 주는 물건.",
         "examples": {
-          "beginner": "선물을/를 사요.",
-          "intermediate": "선물이/가 세일이에요.",
-          "advanced": "선물을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "선물을 사요.",
+          "intermediate": "선물이 세일이에요.",
+          "advanced": "선물을 구매할 때 품질을 확인해야 합니다.",
           "master": "선물 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -2581,8 +2581,8 @@
             },
             {
               "speaker": "B",
-              "text": "선물을/를 찾고 있어요.",
-              "romanization": "seonmuleul/reul chatgo iseoyo.",
+              "text": "선물을 찾고 있어요.",
+              "romanization": "seonmuleul chatgo iseoyo.",
               "translation": "I'm looking for gift / present."
             },
             {
@@ -2622,7 +2622,7 @@
               "speaker": "B",
               "text": "I'm looking for gift / present.",
               "romanization": "",
-              "translation": "선물을/를 찾고 있어요."
+              "translation": "선물을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -2663,9 +2663,9 @@
         "word": "상품",
         "explanation": "팔기 위해 만든 물건.",
         "examples": {
-          "beginner": "상품을/를 사요.",
-          "intermediate": "상품이/가 세일이에요.",
-          "advanced": "상품을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "상품을 사요.",
+          "intermediate": "상품이 세일이에요.",
+          "advanced": "상품을 구매할 때 품질을 확인해야 합니다.",
           "master": "상품 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -2679,8 +2679,8 @@
             },
             {
               "speaker": "B",
-              "text": "상품을/를 찾고 있어요.",
-              "romanization": "sangpumeul/reul chatgo iseoyo.",
+              "text": "상품을 찾고 있어요.",
+              "romanization": "sangpumeul chatgo iseoyo.",
               "translation": "I'm looking for product / goods."
             },
             {
@@ -2720,7 +2720,7 @@
               "speaker": "B",
               "text": "I'm looking for product / goods.",
               "romanization": "",
-              "translation": "상품을/를 찾고 있어요."
+              "translation": "상품을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -2761,9 +2761,9 @@
         "word": "품질",
         "explanation": "물건이 얼마나 좋은지의 정도.",
         "examples": {
-          "beginner": "품질을/를 사요.",
-          "intermediate": "품질이/가 세일이에요.",
-          "advanced": "품질을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "품질을 사요.",
+          "intermediate": "품질이 세일이에요.",
+          "advanced": "품질을 구매할 때 품질을 확인해야 합니다.",
           "master": "품질 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -2777,8 +2777,8 @@
             },
             {
               "speaker": "B",
-              "text": "품질을/를 찾고 있어요.",
-              "romanization": "pumjileul/reul chatgo iseoyo.",
+              "text": "품질을 찾고 있어요.",
+              "romanization": "pumjileul chatgo iseoyo.",
               "translation": "I'm looking for quality."
             },
             {
@@ -2818,7 +2818,7 @@
               "speaker": "B",
               "text": "I'm looking for quality.",
               "romanization": "",
-              "translation": "품질을/를 찾고 있어요."
+              "translation": "품질을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -2859,9 +2859,9 @@
         "word": "고객",
         "explanation": "물건을 사는 사람. 손님.",
         "examples": {
-          "beginner": "고객을/를 사요.",
-          "intermediate": "고객이/가 세일이에요.",
-          "advanced": "고객을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "고객을 사요.",
+          "intermediate": "고객이 세일이에요.",
+          "advanced": "고객을 구매할 때 품질을 확인해야 합니다.",
           "master": "고객 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -2875,8 +2875,8 @@
             },
             {
               "speaker": "B",
-              "text": "고객을/를 찾고 있어요.",
-              "romanization": "gogaekeul/reul chatgo iseoyo.",
+              "text": "고객을 찾고 있어요.",
+              "romanization": "gogaekeul chatgo iseoyo.",
               "translation": "I'm looking for customer / client."
             },
             {
@@ -2916,7 +2916,7 @@
               "speaker": "B",
               "text": "I'm looking for customer / client.",
               "romanization": "",
-              "translation": "고객을/를 찾고 있어요."
+              "translation": "고객을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -2957,9 +2957,9 @@
         "word": "점원",
         "explanation": "가게에서 일하는 사람.",
         "examples": {
-          "beginner": "점원을/를 사요.",
-          "intermediate": "점원이/가 세일이에요.",
-          "advanced": "점원을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "점원을 사요.",
+          "intermediate": "점원이 세일이에요.",
+          "advanced": "점원을 구매할 때 품질을 확인해야 합니다.",
           "master": "점원 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -2973,8 +2973,8 @@
             },
             {
               "speaker": "B",
-              "text": "점원을/를 찾고 있어요.",
-              "romanization": "jeomwoneul/reul chatgo iseoyo.",
+              "text": "점원을 찾고 있어요.",
+              "romanization": "jeomwoneul chatgo iseoyo.",
               "translation": "I'm looking for store clerk / salesperson."
             },
             {
@@ -3014,7 +3014,7 @@
               "speaker": "B",
               "text": "I'm looking for store clerk / salesperson.",
               "romanization": "",
-              "translation": "점원을/를 찾고 있어요."
+              "translation": "점원을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -3055,9 +3055,9 @@
         "word": "서비스",
         "explanation": "고객을 위한 도움. 또는 무료로 주는 것.",
         "examples": {
-          "beginner": "서비스을/를 사요.",
-          "intermediate": "서비스이/가 세일이에요.",
-          "advanced": "서비스을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "서비스를 사요.",
+          "intermediate": "서비스가 세일이에요.",
+          "advanced": "서비스를 구매할 때 품질을 확인해야 합니다.",
           "master": "서비스 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -3071,8 +3071,8 @@
             },
             {
               "speaker": "B",
-              "text": "서비스을/를 찾고 있어요.",
-              "romanization": "seobiseueul/reul chatgo iseoyo.",
+              "text": "서비스를 찾고 있어요.",
+              "romanization": "seobiseureul chatgo iseoyo.",
               "translation": "I'm looking for service / free item."
             },
             {
@@ -3112,7 +3112,7 @@
               "speaker": "B",
               "text": "I'm looking for service / free item.",
               "romanization": "",
-              "translation": "서비스을/를 찾고 있어요."
+              "translation": "서비스를 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -3153,9 +3153,9 @@
         "word": "세일",
         "explanation": "물건을 할인해서 파는 것.",
         "examples": {
-          "beginner": "세일을/를 사요.",
-          "intermediate": "세일이/가 세일이에요.",
-          "advanced": "세일을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "세일을 사요.",
+          "intermediate": "세일이 세일이에요.",
+          "advanced": "세일을 구매할 때 품질을 확인해야 합니다.",
           "master": "세일 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -3169,8 +3169,8 @@
             },
             {
               "speaker": "B",
-              "text": "세일을/를 찾고 있어요.",
-              "romanization": "seileul/reul chatgo iseoyo.",
+              "text": "세일을 찾고 있어요.",
+              "romanization": "seileul chatgo iseoyo.",
               "translation": "I'm looking for sale."
             },
             {
@@ -3210,7 +3210,7 @@
               "speaker": "B",
               "text": "I'm looking for sale.",
               "romanization": "",
-              "translation": "세일을/를 찾고 있어요."
+              "translation": "세일을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -3251,9 +3251,9 @@
         "word": "인기",
         "explanation": "많은 사람들이 좋아하고 관심을 갖는 것.",
         "examples": {
-          "beginner": "인기을/를 사요.",
-          "intermediate": "인기이/가 세일이에요.",
-          "advanced": "인기을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "인기를 사요.",
+          "intermediate": "인기가 세일이에요.",
+          "advanced": "인기를 구매할 때 품질을 확인해야 합니다.",
           "master": "인기 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -3267,8 +3267,8 @@
             },
             {
               "speaker": "B",
-              "text": "인기을/를 찾고 있어요.",
-              "romanization": "ingieul/reul chatgo iseoyo.",
+              "text": "인기를 찾고 있어요.",
+              "romanization": "ingireul chatgo iseoyo.",
               "translation": "I'm looking for popularity."
             },
             {
@@ -3308,7 +3308,7 @@
               "speaker": "B",
               "text": "I'm looking for popularity.",
               "romanization": "",
-              "translation": "인기을/를 찾고 있어요."
+              "translation": "인기를 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -3349,9 +3349,9 @@
         "word": "브랜드",
         "explanation": "제품을 만드는 회사의 이름.",
         "examples": {
-          "beginner": "브랜드을/를 사요.",
-          "intermediate": "브랜드이/가 세일이에요.",
-          "advanced": "브랜드을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "브랜드를 사요.",
+          "intermediate": "브랜드가 세일이에요.",
+          "advanced": "브랜드를 구매할 때 품질을 확인해야 합니다.",
           "master": "브랜드 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -3365,8 +3365,8 @@
             },
             {
               "speaker": "B",
-              "text": "브랜드을/를 찾고 있어요.",
-              "romanization": "beuraendeueul/reul chatgo iseoyo.",
+              "text": "브랜드를 찾고 있어요.",
+              "romanization": "beuraendeureul chatgo iseoyo.",
               "translation": "I'm looking for brand."
             },
             {
@@ -3406,7 +3406,7 @@
               "speaker": "B",
               "text": "I'm looking for brand.",
               "romanization": "",
-              "translation": "브랜드을/를 찾고 있어요."
+              "translation": "브랜드를 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -3447,9 +3447,9 @@
         "word": "품절",
         "explanation": "물건이 다 팔려서 없는 것.",
         "examples": {
-          "beginner": "품절을/를 사요.",
-          "intermediate": "품절이/가 세일이에요.",
-          "advanced": "품절을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "품절을 사요.",
+          "intermediate": "품절이 세일이에요.",
+          "advanced": "품절을 구매할 때 품질을 확인해야 합니다.",
           "master": "품절 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -3463,8 +3463,8 @@
             },
             {
               "speaker": "B",
-              "text": "품절을/를 찾고 있어요.",
-              "romanization": "pumjeoleul/reul chatgo iseoyo.",
+              "text": "품절을 찾고 있어요.",
+              "romanization": "pumjeoleul chatgo iseoyo.",
               "translation": "I'm looking for sold out."
             },
             {
@@ -3504,7 +3504,7 @@
               "speaker": "B",
               "text": "I'm looking for sold out.",
               "romanization": "",
-              "translation": "품절을/를 찾고 있어요."
+              "translation": "품절을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -3545,9 +3545,9 @@
         "word": "재고",
         "explanation": "아직 팔리지 않고 남아 있는 물건.",
         "examples": {
-          "beginner": "재고을/를 사요.",
-          "intermediate": "재고이/가 세일이에요.",
-          "advanced": "재고을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "재고를 사요.",
+          "intermediate": "재고가 세일이에요.",
+          "advanced": "재고를 구매할 때 품질을 확인해야 합니다.",
           "master": "재고 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -3561,8 +3561,8 @@
             },
             {
               "speaker": "B",
-              "text": "재고을/를 찾고 있어요.",
-              "romanization": "jaegoeul/reul chatgo iseoyo.",
+              "text": "재고를 찾고 있어요.",
+              "romanization": "jaegoreul chatgo iseoyo.",
               "translation": "I'm looking for stock / inventory."
             },
             {
@@ -3602,7 +3602,7 @@
               "speaker": "B",
               "text": "I'm looking for stock / inventory.",
               "romanization": "",
-              "translation": "재고을/를 찾고 있어요."
+              "translation": "재고를 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -3643,9 +3643,9 @@
         "word": "물가",
         "explanation": "전반적인 물건의 가격 수준.",
         "examples": {
-          "beginner": "물가을/를 사요.",
-          "intermediate": "물가이/가 세일이에요.",
-          "advanced": "물가을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "물가를 사요.",
+          "intermediate": "물가가 세일이에요.",
+          "advanced": "물가를 구매할 때 품질을 확인해야 합니다.",
           "master": "물가 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -3659,8 +3659,8 @@
             },
             {
               "speaker": "B",
-              "text": "물가을/를 찾고 있어요.",
-              "romanization": "mulgaeul/reul chatgo iseoyo.",
+              "text": "물가를 찾고 있어요.",
+              "romanization": "mulgareul chatgo iseoyo.",
               "translation": "I'm looking for prices (general) / cost of living."
             },
             {
@@ -3700,7 +3700,7 @@
               "speaker": "B",
               "text": "I'm looking for prices (general) / cost of living.",
               "romanization": "",
-              "translation": "물가을/를 찾고 있어요."
+              "translation": "물가를 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -3741,9 +3741,9 @@
         "word": "쿠폰",
         "explanation": "할인이나 서비스를 받을 수 있는 종이나 코드.",
         "examples": {
-          "beginner": "쿠폰을/를 사요.",
-          "intermediate": "쿠폰이/가 세일이에요.",
-          "advanced": "쿠폰을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "쿠폰을 사요.",
+          "intermediate": "쿠폰이 세일이에요.",
+          "advanced": "쿠폰을 구매할 때 품질을 확인해야 합니다.",
           "master": "쿠폰 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -3757,8 +3757,8 @@
             },
             {
               "speaker": "B",
-              "text": "쿠폰을/를 찾고 있어요.",
-              "romanization": "kuponeul/reul chatgo iseoyo.",
+              "text": "쿠폰을 찾고 있어요.",
+              "romanization": "kuponeul chatgo iseoyo.",
               "translation": "I'm looking for coupon."
             },
             {
@@ -3798,7 +3798,7 @@
               "speaker": "B",
               "text": "I'm looking for coupon.",
               "romanization": "",
-              "translation": "쿠폰을/를 찾고 있어요."
+              "translation": "쿠폰을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -3839,9 +3839,9 @@
         "word": "포인트",
         "explanation": "구매할 때 쌓이는 점수. 나중에 현금처럼 사용 가능.",
         "examples": {
-          "beginner": "포인트을/를 사요.",
-          "intermediate": "포인트이/가 세일이에요.",
-          "advanced": "포인트을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "포인트를 사요.",
+          "intermediate": "포인트가 세일이에요.",
+          "advanced": "포인트를 구매할 때 품질을 확인해야 합니다.",
           "master": "포인트 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -3855,8 +3855,8 @@
             },
             {
               "speaker": "B",
-              "text": "포인트을/를 찾고 있어요.",
-              "romanization": "pointeueul/reul chatgo iseoyo.",
+              "text": "포인트를 찾고 있어요.",
+              "romanization": "pointeureul chatgo iseoyo.",
               "translation": "I'm looking for points."
             },
             {
@@ -3896,7 +3896,7 @@
               "speaker": "B",
               "text": "I'm looking for points.",
               "romanization": "",
-              "translation": "포인트을/를 찾고 있어요."
+              "translation": "포인트를 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -3937,9 +3937,9 @@
         "word": "멤버십",
         "explanation": "특정 그룹의 회원이 되는 것. 특별 혜택을 받을 수 있음.",
         "examples": {
-          "beginner": "멤버십을/를 사요.",
-          "intermediate": "멤버십이/가 세일이에요.",
-          "advanced": "멤버십을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "멤버십을 사요.",
+          "intermediate": "멤버십이 세일이에요.",
+          "advanced": "멤버십을 구매할 때 품질을 확인해야 합니다.",
           "master": "멤버십 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -3953,8 +3953,8 @@
             },
             {
               "speaker": "B",
-              "text": "멤버십을/를 찾고 있어요.",
-              "romanization": "membeosipeul/reul chatgo iseoyo.",
+              "text": "멤버십을 찾고 있어요.",
+              "romanization": "membeosipeul chatgo iseoyo.",
               "translation": "I'm looking for membership."
             },
             {
@@ -3994,7 +3994,7 @@
               "speaker": "B",
               "text": "I'm looking for membership.",
               "romanization": "",
-              "translation": "멤버십을/를 찾고 있어요."
+              "translation": "멤버십을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -4035,9 +4035,9 @@
         "word": "비교",
         "explanation": "둘 이상의 것을 견주어 보는 것.",
         "examples": {
-          "beginner": "비교을/를 사요.",
-          "intermediate": "비교이/가 세일이에요.",
-          "advanced": "비교을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "비교를 사요.",
+          "intermediate": "비교가 세일이에요.",
+          "advanced": "비교를 구매할 때 품질을 확인해야 합니다.",
           "master": "비교 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -4051,8 +4051,8 @@
             },
             {
               "speaker": "B",
-              "text": "비교을/를 찾고 있어요.",
-              "romanization": "bigyoeul/reul chatgo iseoyo.",
+              "text": "비교를 찾고 있어요.",
+              "romanization": "bigyoreul chatgo iseoyo.",
               "translation": "I'm looking for comparison."
             },
             {
@@ -4092,7 +4092,7 @@
               "speaker": "B",
               "text": "I'm looking for comparison.",
               "romanization": "",
-              "translation": "비교을/를 찾고 있어요."
+              "translation": "비교를 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -4133,9 +4133,9 @@
         "word": "후기",
         "explanation": "제품을 사용한 후의 평가나 의견.",
         "examples": {
-          "beginner": "후기을/를 사요.",
-          "intermediate": "후기이/가 세일이에요.",
-          "advanced": "후기을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "후기를 사요.",
+          "intermediate": "후기가 세일이에요.",
+          "advanced": "후기를 구매할 때 품질을 확인해야 합니다.",
           "master": "후기 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -4149,8 +4149,8 @@
             },
             {
               "speaker": "B",
-              "text": "후기을/를 찾고 있어요.",
-              "romanization": "hugieul/reul chatgo iseoyo.",
+              "text": "후기를 찾고 있어요.",
+              "romanization": "hugireul chatgo iseoyo.",
               "translation": "I'm looking for review."
             },
             {
@@ -4190,7 +4190,7 @@
               "speaker": "B",
               "text": "I'm looking for review.",
               "romanization": "",
-              "translation": "후기을/를 찾고 있어요."
+              "translation": "후기를 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -4231,9 +4231,9 @@
         "word": "별점",
         "explanation": "별 개수로 표시하는 평가 점수.",
         "examples": {
-          "beginner": "별점을/를 사요.",
-          "intermediate": "별점이/가 세일이에요.",
-          "advanced": "별점을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "별점을 사요.",
+          "intermediate": "별점이 세일이에요.",
+          "advanced": "별점을 구매할 때 품질을 확인해야 합니다.",
           "master": "별점 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -4247,8 +4247,8 @@
             },
             {
               "speaker": "B",
-              "text": "별점을/를 찾고 있어요.",
-              "romanization": "byeoljeomeul/reul chatgo iseoyo.",
+              "text": "별점을 찾고 있어요.",
+              "romanization": "byeoljeomeul chatgo iseoyo.",
               "translation": "I'm looking for star rating."
             },
             {
@@ -4288,7 +4288,7 @@
               "speaker": "B",
               "text": "I'm looking for star rating.",
               "romanization": "",
-              "translation": "별점을/를 찾고 있어요."
+              "translation": "별점을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -4329,9 +4329,9 @@
         "word": "충동구매",
         "explanation": "계획 없이 갑자기 사는 것.",
         "examples": {
-          "beginner": "충동구매을/를 사요.",
-          "intermediate": "충동구매이/가 세일이에요.",
-          "advanced": "충동구매을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "충동구매를 사요.",
+          "intermediate": "충동구매가 세일이에요.",
+          "advanced": "충동구매를 구매할 때 품질을 확인해야 합니다.",
           "master": "충동구매 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -4345,8 +4345,8 @@
             },
             {
               "speaker": "B",
-              "text": "충동구매을/를 찾고 있어요.",
-              "romanization": "chungdonggumaeeul/reul chatgo iseoyo.",
+              "text": "충동구매를 찾고 있어요.",
+              "romanization": "chungdonggumaereul chatgo iseoyo.",
               "translation": "I'm looking for impulse buying."
             },
             {
@@ -4386,7 +4386,7 @@
               "speaker": "B",
               "text": "I'm looking for impulse buying.",
               "romanization": "",
-              "translation": "충동구매을/를 찾고 있어요."
+              "translation": "충동구매를 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -4427,9 +4427,9 @@
         "word": "절약",
         "explanation": "돈이나 자원을 아껴 쓰는 것.",
         "examples": {
-          "beginner": "절약을/를 사요.",
-          "intermediate": "절약이/가 세일이에요.",
-          "advanced": "절약을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "절약을 사요.",
+          "intermediate": "절약이 세일이에요.",
+          "advanced": "절약을 구매할 때 품질을 확인해야 합니다.",
           "master": "절약 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -4443,8 +4443,8 @@
             },
             {
               "speaker": "B",
-              "text": "절약을/를 찾고 있어요.",
-              "romanization": "jeolyakeul/reul chatgo iseoyo.",
+              "text": "절약을 찾고 있어요.",
+              "romanization": "jeolyakeul chatgo iseoyo.",
               "translation": "I'm looking for saving / economizing."
             },
             {
@@ -4484,7 +4484,7 @@
               "speaker": "B",
               "text": "I'm looking for saving / economizing.",
               "romanization": "",
-              "translation": "절약을/를 찾고 있어요."
+              "translation": "절약을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -4525,9 +4525,9 @@
         "word": "매장",
         "explanation": "물건을 파는 가게나 상점.",
         "examples": {
-          "beginner": "매장을/를 사요.",
-          "intermediate": "매장이/가 세일이에요.",
-          "advanced": "매장을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "매장을 사요.",
+          "intermediate": "매장이 세일이에요.",
+          "advanced": "매장을 구매할 때 품질을 확인해야 합니다.",
           "master": "매장 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -4541,8 +4541,8 @@
             },
             {
               "speaker": "B",
-              "text": "매장을/를 찾고 있어요.",
-              "romanization": "maejangeul/reul chatgo iseoyo.",
+              "text": "매장을 찾고 있어요.",
+              "romanization": "maejangeul chatgo iseoyo.",
               "translation": "I'm looking for store / shop."
             },
             {
@@ -4582,7 +4582,7 @@
               "speaker": "B",
               "text": "I'm looking for store / shop.",
               "romanization": "",
-              "translation": "매장을/를 찾고 있어요."
+              "translation": "매장을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -4623,9 +4623,9 @@
         "word": "행사품",
         "explanation": "세일이나 이벤트로 할인하는 상품.",
         "examples": {
-          "beginner": "행사품을/를 사요.",
-          "intermediate": "행사품이/가 세일이에요.",
-          "advanced": "행사품을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "행사품을 사요.",
+          "intermediate": "행사품이 세일이에요.",
+          "advanced": "행사품을 구매할 때 품질을 확인해야 합니다.",
           "master": "행사품 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -4639,8 +4639,8 @@
             },
             {
               "speaker": "B",
-              "text": "행사품을/를 찾고 있어요.",
-              "romanization": "haengsapumeul/reul chatgo iseoyo.",
+              "text": "행사품을 찾고 있어요.",
+              "romanization": "haengsapumeul chatgo iseoyo.",
               "translation": "I'm looking for sale item / promotional product."
             },
             {
@@ -4680,7 +4680,7 @@
               "speaker": "B",
               "text": "I'm looking for sale item / promotional product.",
               "romanization": "",
-              "translation": "행사품을/를 찾고 있어요."
+              "translation": "행사품을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -4721,9 +4721,9 @@
         "word": "정가",
         "explanation": "정해진 원래 가격.",
         "examples": {
-          "beginner": "정가을/를 사요.",
-          "intermediate": "정가이/가 세일이에요.",
-          "advanced": "정가을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "정가를 사요.",
+          "intermediate": "정가가 세일이에요.",
+          "advanced": "정가를 구매할 때 품질을 확인해야 합니다.",
           "master": "정가 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -4737,8 +4737,8 @@
             },
             {
               "speaker": "B",
-              "text": "정가을/를 찾고 있어요.",
-              "romanization": "jeonggaeul/reul chatgo iseoyo.",
+              "text": "정가를 찾고 있어요.",
+              "romanization": "jeonggareul chatgo iseoyo.",
               "translation": "I'm looking for regular price / list price."
             },
             {
@@ -4778,7 +4778,7 @@
               "speaker": "B",
               "text": "I'm looking for regular price / list price.",
               "romanization": "",
-              "translation": "정가을/를 찾고 있어요."
+              "translation": "정가를 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -4819,9 +4819,9 @@
         "word": "표시 가격",
         "explanation": "상품에 표시된 가격.",
         "examples": {
-          "beginner": "표시 가격을/를 사요.",
-          "intermediate": "표시 가격이/가 세일이에요.",
-          "advanced": "표시 가격을/를 구매할 때 품질을 확인해야 합니다.",
+          "beginner": "표시 가격을 사요.",
+          "intermediate": "표시 가격이 세일이에요.",
+          "advanced": "표시 가격을 구매할 때 품질을 확인해야 합니다.",
           "master": "표시 가격 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "dialogue": {
@@ -4835,8 +4835,8 @@
             },
             {
               "speaker": "B",
-              "text": "표시 가격을/를 찾고 있어요.",
-              "romanization": "pyosi gagyeokeul/reul chatgo iseoyo.",
+              "text": "표시 가격을 찾고 있어요.",
+              "romanization": "pyosi gagyeokeul chatgo iseoyo.",
               "translation": "I'm looking for displayed price / marked price."
             },
             {
@@ -4876,7 +4876,7 @@
               "speaker": "B",
               "text": "I'm looking for displayed price / marked price.",
               "romanization": "",
-              "translation": "표시 가격을/를 찾고 있어요."
+              "translation": "표시 가격을 찾고 있어요."
             },
             {
               "speaker": "A",
@@ -4913,10 +4913,10 @@
         "word": "쇼핑",
         "explanation": "쇼핑의 뜻은 'shopping'입니다.",
         "examples": {
-          "beginner": "\"쇼핑\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"쇼핑\"를 자주 써요.",
-          "advanced": "\"쇼핑\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"쇼핑\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "쇼핑을 사요.",
+          "intermediate": "쇼핑이 세일이에요.",
+          "advanced": "쇼핑을 구매할 때 품질을 확인해야 합니다.",
+          "master": "쇼핑 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "variations": {
           "formal": [
@@ -4936,15 +4936,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "쇼핑 얼마예요?",
-              "romanization": "syoping eolmayeyo?",
-              "translation": "How much is shopping?"
+              "text": "뭐 찾으세요?",
+              "romanization": "mwo chateuseyo?",
+              "translation": "What are you looking for?"
             },
             {
               "speaker": "B",
-              "text": "쇼핑은/는 만 원이에요.",
-              "romanization": "syopingeun/neun man wonieyo.",
-              "translation": "shopping is 10,000 won."
+              "text": "쇼핑을 찾고 있어요.",
+              "romanization": "syopingeul chatgo iseoyo.",
+              "translation": "I'm looking for shopping."
+            },
+            {
+              "speaker": "A",
+              "text": "여기 있어요.",
+              "romanization": "yeogi iseoyo.",
+              "translation": "Here it is."
+            },
+            {
+              "speaker": "B",
+              "text": "얼마예요?",
+              "romanization": "eolmayeyo?",
+              "translation": "How much is it?"
             }
           ]
         }
@@ -4953,10 +4965,10 @@
         "word": "shopping",
         "explanation": "'쇼핑' means 'shopping' in English.",
         "examples": {
-          "beginner": "We say \"쇼핑\" in Korean.",
-          "intermediate": "In Korea, people often say \"쇼핑\".",
-          "advanced": "\"쇼핑\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"쇼핑\" makes communication more natural."
+          "beginner": "I buy shopping.",
+          "intermediate": "shopping is on sale.",
+          "advanced": "When buying shopping, you should check the quality.",
+          "master": "Understanding shopping market trends enables smart consumption."
         },
         "variations": {
           "formal": [
@@ -4976,15 +4988,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "How much is shopping?",
+              "text": "What are you looking for?",
               "romanization": "",
-              "translation": "쇼핑 얼마예요?"
+              "translation": "뭐 찾으세요?"
             },
             {
               "speaker": "B",
-              "text": "shopping is 10,000 won.",
+              "text": "I'm looking for shopping.",
               "romanization": "",
-              "translation": "쇼핑은/는 만 원이에요."
+              "translation": "쇼핑을 찾고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Here it is.",
+              "romanization": "",
+              "translation": "여기 있어요."
+            },
+            {
+              "speaker": "B",
+              "text": "How much is it?",
+              "romanization": "",
+              "translation": "얼마예요?"
             }
           ]
         }
@@ -5009,10 +5033,10 @@
         "word": "온라인쇼핑",
         "explanation": "온라인쇼핑의 뜻은 'online shopping'입니다.",
         "examples": {
-          "beginner": "\"온라인쇼핑\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"온라인쇼핑\"를 자주 써요.",
-          "advanced": "\"온라인쇼핑\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"온라인쇼핑\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "온라인쇼핑을 사요.",
+          "intermediate": "온라인쇼핑이 세일이에요.",
+          "advanced": "온라인쇼핑을 구매할 때 품질을 확인해야 합니다.",
+          "master": "온라인쇼핑 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "variations": {
           "formal": [
@@ -5032,15 +5056,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "온라인쇼핑 얼마예요?",
-              "romanization": "onlainsyoping eolmayeyo?",
-              "translation": "How much is online shopping?"
+              "text": "뭐 찾으세요?",
+              "romanization": "mwo chateuseyo?",
+              "translation": "What are you looking for?"
             },
             {
               "speaker": "B",
-              "text": "온라인쇼핑은/는 만 원이에요.",
-              "romanization": "onlainsyopingeun/neun man wonieyo.",
-              "translation": "online shopping is 10,000 won."
+              "text": "온라인쇼핑을 찾고 있어요.",
+              "romanization": "onrainsyopingeul chatgo iseoyo.",
+              "translation": "I'm looking for online shopping."
+            },
+            {
+              "speaker": "A",
+              "text": "여기 있어요.",
+              "romanization": "yeogi iseoyo.",
+              "translation": "Here it is."
+            },
+            {
+              "speaker": "B",
+              "text": "얼마예요?",
+              "romanization": "eolmayeyo?",
+              "translation": "How much is it?"
             }
           ]
         }
@@ -5049,10 +5085,10 @@
         "word": "online shopping",
         "explanation": "'온라인쇼핑' means 'online shopping' in English.",
         "examples": {
-          "beginner": "We say \"온라인쇼핑\" in Korean.",
-          "intermediate": "In Korea, people often say \"온라인쇼핑\".",
-          "advanced": "\"온라인쇼핑\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"온라인쇼핑\" makes communication more natural."
+          "beginner": "I buy online shopping.",
+          "intermediate": "online shopping is on sale.",
+          "advanced": "When buying online shopping, you should check the quality.",
+          "master": "Understanding online shopping market trends enables smart consumption."
         },
         "variations": {
           "formal": [
@@ -5072,15 +5108,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "How much is online shopping?",
+              "text": "What are you looking for?",
               "romanization": "",
-              "translation": "온라인쇼핑 얼마예요?"
+              "translation": "뭐 찾으세요?"
             },
             {
               "speaker": "B",
-              "text": "online shopping is 10,000 won.",
+              "text": "I'm looking for online shopping.",
               "romanization": "",
-              "translation": "온라인쇼핑은/는 만 원이에요."
+              "translation": "온라인쇼핑을 찾고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Here it is.",
+              "romanization": "",
+              "translation": "여기 있어요."
+            },
+            {
+              "speaker": "B",
+              "text": "How much is it?",
+              "romanization": "",
+              "translation": "얼마예요?"
             }
           ]
         }
@@ -5105,10 +5153,10 @@
         "word": "오프라인",
         "explanation": "오프라인의 뜻은 'offline'입니다.",
         "examples": {
-          "beginner": "\"오프라인\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"오프라인\"를 자주 써요.",
-          "advanced": "\"오프라인\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"오프라인\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "오프라인을 사요.",
+          "intermediate": "오프라인이 세일이에요.",
+          "advanced": "오프라인을 구매할 때 품질을 확인해야 합니다.",
+          "master": "오프라인 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "variations": {
           "formal": [
@@ -5128,15 +5176,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "오프라인 얼마예요?",
-              "romanization": "opeurain eolmayeyo?",
-              "translation": "How much is offline?"
+              "text": "뭐 찾으세요?",
+              "romanization": "mwo chateuseyo?",
+              "translation": "What are you looking for?"
             },
             {
               "speaker": "B",
-              "text": "오프라인은/는 만 원이에요.",
-              "romanization": "opeuraineun/neun man wonieyo.",
-              "translation": "offline is 10,000 won."
+              "text": "오프라인을 찾고 있어요.",
+              "romanization": "opeuraineul chatgo iseoyo.",
+              "translation": "I'm looking for offline."
+            },
+            {
+              "speaker": "A",
+              "text": "여기 있어요.",
+              "romanization": "yeogi iseoyo.",
+              "translation": "Here it is."
+            },
+            {
+              "speaker": "B",
+              "text": "얼마예요?",
+              "romanization": "eolmayeyo?",
+              "translation": "How much is it?"
             }
           ]
         }
@@ -5145,10 +5205,10 @@
         "word": "offline",
         "explanation": "'오프라인' means 'offline' in English.",
         "examples": {
-          "beginner": "We say \"오프라인\" in Korean.",
-          "intermediate": "In Korea, people often say \"오프라인\".",
-          "advanced": "\"오프라인\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"오프라인\" makes communication more natural."
+          "beginner": "I buy offline.",
+          "intermediate": "offline is on sale.",
+          "advanced": "When buying offline, you should check the quality.",
+          "master": "Understanding offline market trends enables smart consumption."
         },
         "variations": {
           "formal": [
@@ -5168,15 +5228,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "How much is offline?",
+              "text": "What are you looking for?",
               "romanization": "",
-              "translation": "오프라인 얼마예요?"
+              "translation": "뭐 찾으세요?"
             },
             {
               "speaker": "B",
-              "text": "offline is 10,000 won.",
+              "text": "I'm looking for offline.",
               "romanization": "",
-              "translation": "오프라인은/는 만 원이에요."
+              "translation": "오프라인을 찾고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Here it is.",
+              "romanization": "",
+              "translation": "여기 있어요."
+            },
+            {
+              "speaker": "B",
+              "text": "How much is it?",
+              "romanization": "",
+              "translation": "얼마예요?"
             }
           ]
         }
@@ -5201,10 +5273,10 @@
         "word": "결제",
         "explanation": "결제의 뜻은 'payment'입니다.",
         "examples": {
-          "beginner": "\"결제\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"결제\"를 자주 써요.",
-          "advanced": "\"결제\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"결제\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "결제를 사요.",
+          "intermediate": "결제가 세일이에요.",
+          "advanced": "결제를 구매할 때 품질을 확인해야 합니다.",
+          "master": "결제 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "variations": {
           "formal": [
@@ -5224,15 +5296,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "결제 얼마예요?",
-              "romanization": "gyeolje eolmayeyo?",
-              "translation": "How much is payment?"
+              "text": "뭐 찾으세요?",
+              "romanization": "mwo chateuseyo?",
+              "translation": "What are you looking for?"
             },
             {
               "speaker": "B",
-              "text": "결제은/는 만 원이에요.",
-              "romanization": "gyeoljeeun/neun man wonieyo.",
-              "translation": "payment is 10,000 won."
+              "text": "결제를 찾고 있어요.",
+              "romanization": "gyeoljereul chatgo iseoyo.",
+              "translation": "I'm looking for payment."
+            },
+            {
+              "speaker": "A",
+              "text": "여기 있어요.",
+              "romanization": "yeogi iseoyo.",
+              "translation": "Here it is."
+            },
+            {
+              "speaker": "B",
+              "text": "얼마예요?",
+              "romanization": "eolmayeyo?",
+              "translation": "How much is it?"
             }
           ]
         }
@@ -5241,10 +5325,10 @@
         "word": "payment",
         "explanation": "'결제' means 'payment' in English.",
         "examples": {
-          "beginner": "We say \"결제\" in Korean.",
-          "intermediate": "In Korea, people often say \"결제\".",
-          "advanced": "\"결제\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"결제\" makes communication more natural."
+          "beginner": "I buy payment.",
+          "intermediate": "payment is on sale.",
+          "advanced": "When buying payment, you should check the quality.",
+          "master": "Understanding payment market trends enables smart consumption."
         },
         "variations": {
           "formal": [
@@ -5264,15 +5348,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "How much is payment?",
+              "text": "What are you looking for?",
               "romanization": "",
-              "translation": "결제 얼마예요?"
+              "translation": "뭐 찾으세요?"
             },
             {
               "speaker": "B",
-              "text": "payment is 10,000 won.",
+              "text": "I'm looking for payment.",
               "romanization": "",
-              "translation": "결제은/는 만 원이에요."
+              "translation": "결제를 찾고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Here it is.",
+              "romanization": "",
+              "translation": "여기 있어요."
+            },
+            {
+              "speaker": "B",
+              "text": "How much is it?",
+              "romanization": "",
+              "translation": "얼마예요?"
             }
           ]
         }
@@ -5297,10 +5393,10 @@
         "word": "신용카드",
         "explanation": "신용카드의 뜻은 'credit card'입니다.",
         "examples": {
-          "beginner": "\"신용카드\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"신용카드\"를 자주 써요.",
-          "advanced": "\"신용카드\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"신용카드\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "신용카드를 사요.",
+          "intermediate": "신용카드가 세일이에요.",
+          "advanced": "신용카드를 구매할 때 품질을 확인해야 합니다.",
+          "master": "신용카드 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "variations": {
           "formal": [
@@ -5320,15 +5416,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "신용카드 얼마예요?",
-              "romanization": "sinyongkadeu eolmayeyo?",
-              "translation": "How much is credit card?"
+              "text": "뭐 찾으세요?",
+              "romanization": "mwo chateuseyo?",
+              "translation": "What are you looking for?"
             },
             {
               "speaker": "B",
-              "text": "신용카드은/는 만 원이에요.",
-              "romanization": "sinyongkadeueun/neun man wonieyo.",
-              "translation": "credit card is 10,000 won."
+              "text": "신용카드를 찾고 있어요.",
+              "romanization": "sinyongkadeureul chatgo iseoyo.",
+              "translation": "I'm looking for credit card."
+            },
+            {
+              "speaker": "A",
+              "text": "여기 있어요.",
+              "romanization": "yeogi iseoyo.",
+              "translation": "Here it is."
+            },
+            {
+              "speaker": "B",
+              "text": "얼마예요?",
+              "romanization": "eolmayeyo?",
+              "translation": "How much is it?"
             }
           ]
         }
@@ -5337,10 +5445,10 @@
         "word": "credit card",
         "explanation": "'신용카드' means 'credit card' in English.",
         "examples": {
-          "beginner": "We say \"신용카드\" in Korean.",
-          "intermediate": "In Korea, people often say \"신용카드\".",
-          "advanced": "\"신용카드\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"신용카드\" makes communication more natural."
+          "beginner": "I buy credit card.",
+          "intermediate": "credit card is on sale.",
+          "advanced": "When buying credit card, you should check the quality.",
+          "master": "Understanding credit card market trends enables smart consumption."
         },
         "variations": {
           "formal": [
@@ -5360,15 +5468,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "How much is credit card?",
+              "text": "What are you looking for?",
               "romanization": "",
-              "translation": "신용카드 얼마예요?"
+              "translation": "뭐 찾으세요?"
             },
             {
               "speaker": "B",
-              "text": "credit card is 10,000 won.",
+              "text": "I'm looking for credit card.",
               "romanization": "",
-              "translation": "신용카드은/는 만 원이에요."
+              "translation": "신용카드를 찾고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Here it is.",
+              "romanization": "",
+              "translation": "여기 있어요."
+            },
+            {
+              "speaker": "B",
+              "text": "How much is it?",
+              "romanization": "",
+              "translation": "얼마예요?"
             }
           ]
         }
@@ -5393,10 +5513,10 @@
         "word": "체크카드",
         "explanation": "체크카드의 뜻은 'debit card'입니다.",
         "examples": {
-          "beginner": "\"체크카드\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"체크카드\"를 자주 써요.",
-          "advanced": "\"체크카드\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"체크카드\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "체크카드를 사요.",
+          "intermediate": "체크카드가 세일이에요.",
+          "advanced": "체크카드를 구매할 때 품질을 확인해야 합니다.",
+          "master": "체크카드 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "variations": {
           "formal": [
@@ -5416,15 +5536,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "체크카드 얼마예요?",
-              "romanization": "chekeukadeu eolmayeyo?",
-              "translation": "How much is debit card?"
+              "text": "뭐 찾으세요?",
+              "romanization": "mwo chateuseyo?",
+              "translation": "What are you looking for?"
             },
             {
               "speaker": "B",
-              "text": "체크카드은/는 만 원이에요.",
-              "romanization": "chekeukadeueun/neun man wonieyo.",
-              "translation": "debit card is 10,000 won."
+              "text": "체크카드를 찾고 있어요.",
+              "romanization": "chekeukadeureul chatgo iseoyo.",
+              "translation": "I'm looking for debit card."
+            },
+            {
+              "speaker": "A",
+              "text": "여기 있어요.",
+              "romanization": "yeogi iseoyo.",
+              "translation": "Here it is."
+            },
+            {
+              "speaker": "B",
+              "text": "얼마예요?",
+              "romanization": "eolmayeyo?",
+              "translation": "How much is it?"
             }
           ]
         }
@@ -5433,10 +5565,10 @@
         "word": "debit card",
         "explanation": "'체크카드' means 'debit card' in English.",
         "examples": {
-          "beginner": "We say \"체크카드\" in Korean.",
-          "intermediate": "In Korea, people often say \"체크카드\".",
-          "advanced": "\"체크카드\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"체크카드\" makes communication more natural."
+          "beginner": "I buy debit card.",
+          "intermediate": "debit card is on sale.",
+          "advanced": "When buying debit card, you should check the quality.",
+          "master": "Understanding debit card market trends enables smart consumption."
         },
         "variations": {
           "formal": [
@@ -5456,15 +5588,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "How much is debit card?",
+              "text": "What are you looking for?",
               "romanization": "",
-              "translation": "체크카드 얼마예요?"
+              "translation": "뭐 찾으세요?"
             },
             {
               "speaker": "B",
-              "text": "debit card is 10,000 won.",
+              "text": "I'm looking for debit card.",
               "romanization": "",
-              "translation": "체크카드은/는 만 원이에요."
+              "translation": "체크카드를 찾고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Here it is.",
+              "romanization": "",
+              "translation": "여기 있어요."
+            },
+            {
+              "speaker": "B",
+              "text": "How much is it?",
+              "romanization": "",
+              "translation": "얼마예요?"
             }
           ]
         }
@@ -5489,10 +5633,10 @@
         "word": "계좌이체",
         "explanation": "계좌이체의 뜻은 'bank transfer'입니다.",
         "examples": {
-          "beginner": "\"계좌이체\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"계좌이체\"를 자주 써요.",
-          "advanced": "\"계좌이체\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"계좌이체\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "계좌이체를 사요.",
+          "intermediate": "계좌이체가 세일이에요.",
+          "advanced": "계좌이체를 구매할 때 품질을 확인해야 합니다.",
+          "master": "계좌이체 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "variations": {
           "formal": [
@@ -5512,15 +5656,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "계좌이체 얼마예요?",
-              "romanization": "gyejwaiche eolmayeyo?",
-              "translation": "How much is bank transfer?"
+              "text": "뭐 찾으세요?",
+              "romanization": "mwo chateuseyo?",
+              "translation": "What are you looking for?"
             },
             {
               "speaker": "B",
-              "text": "계좌이체은/는 만 원이에요.",
-              "romanization": "gyejwaicheeun/neun man wonieyo.",
-              "translation": "bank transfer is 10,000 won."
+              "text": "계좌이체를 찾고 있어요.",
+              "romanization": "gyejwaichereul chatgo iseoyo.",
+              "translation": "I'm looking for bank transfer."
+            },
+            {
+              "speaker": "A",
+              "text": "여기 있어요.",
+              "romanization": "yeogi iseoyo.",
+              "translation": "Here it is."
+            },
+            {
+              "speaker": "B",
+              "text": "얼마예요?",
+              "romanization": "eolmayeyo?",
+              "translation": "How much is it?"
             }
           ]
         }
@@ -5529,10 +5685,10 @@
         "word": "bank transfer",
         "explanation": "'계좌이체' means 'bank transfer' in English.",
         "examples": {
-          "beginner": "We say \"계좌이체\" in Korean.",
-          "intermediate": "In Korea, people often say \"계좌이체\".",
-          "advanced": "\"계좌이체\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"계좌이체\" makes communication more natural."
+          "beginner": "I buy bank transfer.",
+          "intermediate": "bank transfer is on sale.",
+          "advanced": "When buying bank transfer, you should check the quality.",
+          "master": "Understanding bank transfer market trends enables smart consumption."
         },
         "variations": {
           "formal": [
@@ -5552,15 +5708,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "How much is bank transfer?",
+              "text": "What are you looking for?",
               "romanization": "",
-              "translation": "계좌이체 얼마예요?"
+              "translation": "뭐 찾으세요?"
             },
             {
               "speaker": "B",
-              "text": "bank transfer is 10,000 won.",
+              "text": "I'm looking for bank transfer.",
               "romanization": "",
-              "translation": "계좌이체은/는 만 원이에요."
+              "translation": "계좌이체를 찾고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Here it is.",
+              "romanization": "",
+              "translation": "여기 있어요."
+            },
+            {
+              "speaker": "B",
+              "text": "How much is it?",
+              "romanization": "",
+              "translation": "얼마예요?"
             }
           ]
         }
@@ -5585,10 +5753,10 @@
         "word": "적립",
         "explanation": "적립의 뜻은 'accumulation'입니다.",
         "examples": {
-          "beginner": "\"적립\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"적립\"를 자주 써요.",
-          "advanced": "\"적립\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"적립\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "적립을 사요.",
+          "intermediate": "적립이 세일이에요.",
+          "advanced": "적립을 구매할 때 품질을 확인해야 합니다.",
+          "master": "적립 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "variations": {
           "formal": [
@@ -5608,15 +5776,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "적립 얼마예요?",
-              "romanization": "jeokrip eolmayeyo?",
-              "translation": "How much is accumulation?"
+              "text": "뭐 찾으세요?",
+              "romanization": "mwo chateuseyo?",
+              "translation": "What are you looking for?"
             },
             {
               "speaker": "B",
-              "text": "적립은/는 만 원이에요.",
-              "romanization": "jeokripeun/neun man wonieyo.",
-              "translation": "accumulation is 10,000 won."
+              "text": "적립을 찾고 있어요.",
+              "romanization": "jeokripeul chatgo iseoyo.",
+              "translation": "I'm looking for accumulation."
+            },
+            {
+              "speaker": "A",
+              "text": "여기 있어요.",
+              "romanization": "yeogi iseoyo.",
+              "translation": "Here it is."
+            },
+            {
+              "speaker": "B",
+              "text": "얼마예요?",
+              "romanization": "eolmayeyo?",
+              "translation": "How much is it?"
             }
           ]
         }
@@ -5625,10 +5805,10 @@
         "word": "accumulation",
         "explanation": "'적립' means 'accumulation' in English.",
         "examples": {
-          "beginner": "We say \"적립\" in Korean.",
-          "intermediate": "In Korea, people often say \"적립\".",
-          "advanced": "\"적립\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"적립\" makes communication more natural."
+          "beginner": "I buy accumulation.",
+          "intermediate": "accumulation is on sale.",
+          "advanced": "When buying accumulation, you should check the quality.",
+          "master": "Understanding accumulation market trends enables smart consumption."
         },
         "variations": {
           "formal": [
@@ -5648,15 +5828,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "How much is accumulation?",
+              "text": "What are you looking for?",
               "romanization": "",
-              "translation": "적립 얼마예요?"
+              "translation": "뭐 찾으세요?"
             },
             {
               "speaker": "B",
-              "text": "accumulation is 10,000 won.",
+              "text": "I'm looking for accumulation.",
               "romanization": "",
-              "translation": "적립은/는 만 원이에요."
+              "translation": "적립을 찾고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Here it is.",
+              "romanization": "",
+              "translation": "여기 있어요."
+            },
+            {
+              "speaker": "B",
+              "text": "How much is it?",
+              "romanization": "",
+              "translation": "얼마예요?"
             }
           ]
         }
@@ -5681,10 +5873,10 @@
         "word": "반품",
         "explanation": "반품의 뜻은 'return'입니다.",
         "examples": {
-          "beginner": "\"반품\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"반품\"를 자주 써요.",
-          "advanced": "\"반품\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"반품\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "반품을 사요.",
+          "intermediate": "반품이 세일이에요.",
+          "advanced": "반품을 구매할 때 품질을 확인해야 합니다.",
+          "master": "반품 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "variations": {
           "formal": [
@@ -5704,15 +5896,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "반품 얼마예요?",
-              "romanization": "banpum eolmayeyo?",
-              "translation": "How much is return?"
+              "text": "뭐 찾으세요?",
+              "romanization": "mwo chateuseyo?",
+              "translation": "What are you looking for?"
             },
             {
               "speaker": "B",
-              "text": "반품은/는 만 원이에요.",
-              "romanization": "banpumeun/neun man wonieyo.",
-              "translation": "return is 10,000 won."
+              "text": "반품을 찾고 있어요.",
+              "romanization": "banpumeul chatgo iseoyo.",
+              "translation": "I'm looking for return."
+            },
+            {
+              "speaker": "A",
+              "text": "여기 있어요.",
+              "romanization": "yeogi iseoyo.",
+              "translation": "Here it is."
+            },
+            {
+              "speaker": "B",
+              "text": "얼마예요?",
+              "romanization": "eolmayeyo?",
+              "translation": "How much is it?"
             }
           ]
         }
@@ -5721,10 +5925,10 @@
         "word": "return",
         "explanation": "'반품' means 'return' in English.",
         "examples": {
-          "beginner": "We say \"반품\" in Korean.",
-          "intermediate": "In Korea, people often say \"반품\".",
-          "advanced": "\"반품\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"반품\" makes communication more natural."
+          "beginner": "I buy return.",
+          "intermediate": "return is on sale.",
+          "advanced": "When buying return, you should check the quality.",
+          "master": "Understanding return market trends enables smart consumption."
         },
         "variations": {
           "formal": [
@@ -5744,15 +5948,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "How much is return?",
+              "text": "What are you looking for?",
               "romanization": "",
-              "translation": "반품 얼마예요?"
+              "translation": "뭐 찾으세요?"
             },
             {
               "speaker": "B",
-              "text": "return is 10,000 won.",
+              "text": "I'm looking for return.",
               "romanization": "",
-              "translation": "반품은/는 만 원이에요."
+              "translation": "반품을 찾고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Here it is.",
+              "romanization": "",
+              "translation": "여기 있어요."
+            },
+            {
+              "speaker": "B",
+              "text": "How much is it?",
+              "romanization": "",
+              "translation": "얼마예요?"
             }
           ]
         }
@@ -5777,10 +5993,10 @@
         "word": "배송",
         "explanation": "배송의 뜻은 'delivery'입니다.",
         "examples": {
-          "beginner": "\"배송\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"배송\"를 자주 써요.",
-          "advanced": "\"배송\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"배송\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "배송을 사요.",
+          "intermediate": "배송이 세일이에요.",
+          "advanced": "배송을 구매할 때 품질을 확인해야 합니다.",
+          "master": "배송 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "variations": {
           "formal": [
@@ -5800,15 +6016,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "배송 얼마예요?",
-              "romanization": "baesong eolmayeyo?",
-              "translation": "How much is delivery?"
+              "text": "뭐 찾으세요?",
+              "romanization": "mwo chateuseyo?",
+              "translation": "What are you looking for?"
             },
             {
               "speaker": "B",
-              "text": "배송은/는 만 원이에요.",
-              "romanization": "baesongeun/neun man wonieyo.",
-              "translation": "delivery is 10,000 won."
+              "text": "배송을 찾고 있어요.",
+              "romanization": "baesongeul chatgo iseoyo.",
+              "translation": "I'm looking for delivery."
+            },
+            {
+              "speaker": "A",
+              "text": "여기 있어요.",
+              "romanization": "yeogi iseoyo.",
+              "translation": "Here it is."
+            },
+            {
+              "speaker": "B",
+              "text": "얼마예요?",
+              "romanization": "eolmayeyo?",
+              "translation": "How much is it?"
             }
           ]
         }
@@ -5817,10 +6045,10 @@
         "word": "delivery",
         "explanation": "'배송' means 'delivery' in English.",
         "examples": {
-          "beginner": "We say \"배송\" in Korean.",
-          "intermediate": "In Korea, people often say \"배송\".",
-          "advanced": "\"배송\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"배송\" makes communication more natural."
+          "beginner": "I buy delivery.",
+          "intermediate": "delivery is on sale.",
+          "advanced": "When buying delivery, you should check the quality.",
+          "master": "Understanding delivery market trends enables smart consumption."
         },
         "variations": {
           "formal": [
@@ -5840,15 +6068,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "How much is delivery?",
+              "text": "What are you looking for?",
               "romanization": "",
-              "translation": "배송 얼마예요?"
+              "translation": "뭐 찾으세요?"
             },
             {
               "speaker": "B",
-              "text": "delivery is 10,000 won.",
+              "text": "I'm looking for delivery.",
               "romanization": "",
-              "translation": "배송은/는 만 원이에요."
+              "translation": "배송을 찾고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Here it is.",
+              "romanization": "",
+              "translation": "여기 있어요."
+            },
+            {
+              "speaker": "B",
+              "text": "How much is it?",
+              "romanization": "",
+              "translation": "얼마예요?"
             }
           ]
         }
@@ -5873,10 +6113,10 @@
         "word": "택배",
         "explanation": "택배의 뜻은 'courier'입니다.",
         "examples": {
-          "beginner": "\"택배\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"택배\"를 자주 써요.",
-          "advanced": "\"택배\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"택배\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "택배를 사요.",
+          "intermediate": "택배가 세일이에요.",
+          "advanced": "택배를 구매할 때 품질을 확인해야 합니다.",
+          "master": "택배 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "variations": {
           "formal": [
@@ -5896,15 +6136,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "택배 얼마예요?",
-              "romanization": "taekbae eolmayeyo?",
-              "translation": "How much is courier?"
+              "text": "뭐 찾으세요?",
+              "romanization": "mwo chateuseyo?",
+              "translation": "What are you looking for?"
             },
             {
               "speaker": "B",
-              "text": "택배은/는 만 원이에요.",
-              "romanization": "taekbaeeun/neun man wonieyo.",
-              "translation": "courier is 10,000 won."
+              "text": "택배를 찾고 있어요.",
+              "romanization": "taekbaereul chatgo iseoyo.",
+              "translation": "I'm looking for courier."
+            },
+            {
+              "speaker": "A",
+              "text": "여기 있어요.",
+              "romanization": "yeogi iseoyo.",
+              "translation": "Here it is."
+            },
+            {
+              "speaker": "B",
+              "text": "얼마예요?",
+              "romanization": "eolmayeyo?",
+              "translation": "How much is it?"
             }
           ]
         }
@@ -5913,10 +6165,10 @@
         "word": "courier",
         "explanation": "'택배' means 'courier' in English.",
         "examples": {
-          "beginner": "We say \"택배\" in Korean.",
-          "intermediate": "In Korea, people often say \"택배\".",
-          "advanced": "\"택배\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"택배\" makes communication more natural."
+          "beginner": "I buy courier.",
+          "intermediate": "courier is on sale.",
+          "advanced": "When buying courier, you should check the quality.",
+          "master": "Understanding courier market trends enables smart consumption."
         },
         "variations": {
           "formal": [
@@ -5936,15 +6188,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "How much is courier?",
+              "text": "What are you looking for?",
               "romanization": "",
-              "translation": "택배 얼마예요?"
+              "translation": "뭐 찾으세요?"
             },
             {
               "speaker": "B",
-              "text": "courier is 10,000 won.",
+              "text": "I'm looking for courier.",
               "romanization": "",
-              "translation": "택배은/는 만 원이에요."
+              "translation": "택배를 찾고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Here it is.",
+              "romanization": "",
+              "translation": "여기 있어요."
+            },
+            {
+              "speaker": "B",
+              "text": "How much is it?",
+              "romanization": "",
+              "translation": "얼마예요?"
             }
           ]
         }
@@ -5969,10 +6233,10 @@
         "word": "무료배송",
         "explanation": "무료배송의 뜻은 'free shipping'입니다.",
         "examples": {
-          "beginner": "\"무료배송\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"무료배송\"를 자주 써요.",
-          "advanced": "\"무료배송\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"무료배송\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "무료배송을 사요.",
+          "intermediate": "무료배송이 세일이에요.",
+          "advanced": "무료배송을 구매할 때 품질을 확인해야 합니다.",
+          "master": "무료배송 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "variations": {
           "formal": [
@@ -5992,15 +6256,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "무료배송 얼마예요?",
-              "romanization": "muryobaesong eolmayeyo?",
-              "translation": "How much is free shipping?"
+              "text": "뭐 찾으세요?",
+              "romanization": "mwo chateuseyo?",
+              "translation": "What are you looking for?"
             },
             {
               "speaker": "B",
-              "text": "무료배송은/는 만 원이에요.",
-              "romanization": "muryobaesongeun/neun man wonieyo.",
-              "translation": "free shipping is 10,000 won."
+              "text": "무료배송을 찾고 있어요.",
+              "romanization": "muryobaesongeul chatgo iseoyo.",
+              "translation": "I'm looking for free shipping."
+            },
+            {
+              "speaker": "A",
+              "text": "여기 있어요.",
+              "romanization": "yeogi iseoyo.",
+              "translation": "Here it is."
+            },
+            {
+              "speaker": "B",
+              "text": "얼마예요?",
+              "romanization": "eolmayeyo?",
+              "translation": "How much is it?"
             }
           ]
         }
@@ -6009,10 +6285,10 @@
         "word": "free shipping",
         "explanation": "'무료배송' means 'free shipping' in English.",
         "examples": {
-          "beginner": "We say \"무료배송\" in Korean.",
-          "intermediate": "In Korea, people often say \"무료배송\".",
-          "advanced": "\"무료배송\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"무료배송\" makes communication more natural."
+          "beginner": "I buy free shipping.",
+          "intermediate": "free shipping is on sale.",
+          "advanced": "When buying free shipping, you should check the quality.",
+          "master": "Understanding free shipping market trends enables smart consumption."
         },
         "variations": {
           "formal": [
@@ -6032,15 +6308,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "How much is free shipping?",
+              "text": "What are you looking for?",
               "romanization": "",
-              "translation": "무료배송 얼마예요?"
+              "translation": "뭐 찾으세요?"
             },
             {
               "speaker": "B",
-              "text": "free shipping is 10,000 won.",
+              "text": "I'm looking for free shipping.",
               "romanization": "",
-              "translation": "무료배송은/는 만 원이에요."
+              "translation": "무료배송을 찾고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Here it is.",
+              "romanization": "",
+              "translation": "여기 있어요."
+            },
+            {
+              "speaker": "B",
+              "text": "How much is it?",
+              "romanization": "",
+              "translation": "얼마예요?"
             }
           ]
         }
@@ -6065,10 +6353,10 @@
         "word": "당일배송",
         "explanation": "당일배송의 뜻은 'same-day delivery'입니다.",
         "examples": {
-          "beginner": "\"당일배송\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"당일배송\"를 자주 써요.",
-          "advanced": "\"당일배송\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"당일배송\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "당일배송을 사요.",
+          "intermediate": "당일배송이 세일이에요.",
+          "advanced": "당일배송을 구매할 때 품질을 확인해야 합니다.",
+          "master": "당일배송 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "variations": {
           "formal": [
@@ -6088,15 +6376,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "당일배송 얼마예요?",
-              "romanization": "dangilbaesong eolmayeyo?",
-              "translation": "How much is same-day delivery?"
+              "text": "뭐 찾으세요?",
+              "romanization": "mwo chateuseyo?",
+              "translation": "What are you looking for?"
             },
             {
               "speaker": "B",
-              "text": "당일배송은/는 만 원이에요.",
-              "romanization": "dangilbaesongeun/neun man wonieyo.",
-              "translation": "same-day delivery is 10,000 won."
+              "text": "당일배송을 찾고 있어요.",
+              "romanization": "dangilbaesongeul chatgo iseoyo.",
+              "translation": "I'm looking for same-day delivery."
+            },
+            {
+              "speaker": "A",
+              "text": "여기 있어요.",
+              "romanization": "yeogi iseoyo.",
+              "translation": "Here it is."
+            },
+            {
+              "speaker": "B",
+              "text": "얼마예요?",
+              "romanization": "eolmayeyo?",
+              "translation": "How much is it?"
             }
           ]
         }
@@ -6105,10 +6405,10 @@
         "word": "same-day delivery",
         "explanation": "'당일배송' means 'same-day delivery' in English.",
         "examples": {
-          "beginner": "We say \"당일배송\" in Korean.",
-          "intermediate": "In Korea, people often say \"당일배송\".",
-          "advanced": "\"당일배송\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"당일배송\" makes communication more natural."
+          "beginner": "I buy same-day delivery.",
+          "intermediate": "same-day delivery is on sale.",
+          "advanced": "When buying same-day delivery, you should check the quality.",
+          "master": "Understanding same-day delivery market trends enables smart consumption."
         },
         "variations": {
           "formal": [
@@ -6128,15 +6428,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "How much is same-day delivery?",
+              "text": "What are you looking for?",
               "romanization": "",
-              "translation": "당일배송 얼마예요?"
+              "translation": "뭐 찾으세요?"
             },
             {
               "speaker": "B",
-              "text": "same-day delivery is 10,000 won.",
+              "text": "I'm looking for same-day delivery.",
               "romanization": "",
-              "translation": "당일배송은/는 만 원이에요."
+              "translation": "당일배송을 찾고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Here it is.",
+              "romanization": "",
+              "translation": "여기 있어요."
+            },
+            {
+              "speaker": "B",
+              "text": "How much is it?",
+              "romanization": "",
+              "translation": "얼마예요?"
             }
           ]
         }
@@ -6161,10 +6473,10 @@
         "word": "위시리스트",
         "explanation": "위시리스트의 뜻은 'wishlist'입니다.",
         "examples": {
-          "beginner": "\"위시리스트\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"위시리스트\"를 자주 써요.",
-          "advanced": "\"위시리스트\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"위시리스트\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "위시리스트를 사요.",
+          "intermediate": "위시리스트가 세일이에요.",
+          "advanced": "위시리스트를 구매할 때 품질을 확인해야 합니다.",
+          "master": "위시리스트 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "variations": {
           "formal": [
@@ -6184,15 +6496,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "위시리스트 얼마예요?",
-              "romanization": "wisiriseuteu eolmayeyo?",
-              "translation": "How much is wishlist?"
+              "text": "뭐 찾으세요?",
+              "romanization": "mwo chateuseyo?",
+              "translation": "What are you looking for?"
             },
             {
               "speaker": "B",
-              "text": "위시리스트은/는 만 원이에요.",
-              "romanization": "wisiriseuteueun/neun man wonieyo.",
-              "translation": "wishlist is 10,000 won."
+              "text": "위시리스트를 찾고 있어요.",
+              "romanization": "wisiriseuteureul chatgo iseoyo.",
+              "translation": "I'm looking for wishlist."
+            },
+            {
+              "speaker": "A",
+              "text": "여기 있어요.",
+              "romanization": "yeogi iseoyo.",
+              "translation": "Here it is."
+            },
+            {
+              "speaker": "B",
+              "text": "얼마예요?",
+              "romanization": "eolmayeyo?",
+              "translation": "How much is it?"
             }
           ]
         }
@@ -6201,10 +6525,10 @@
         "word": "wishlist",
         "explanation": "'위시리스트' means 'wishlist' in English.",
         "examples": {
-          "beginner": "We say \"위시리스트\" in Korean.",
-          "intermediate": "In Korea, people often say \"위시리스트\".",
-          "advanced": "\"위시리스트\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"위시리스트\" makes communication more natural."
+          "beginner": "I buy wishlist.",
+          "intermediate": "wishlist is on sale.",
+          "advanced": "When buying wishlist, you should check the quality.",
+          "master": "Understanding wishlist market trends enables smart consumption."
         },
         "variations": {
           "formal": [
@@ -6224,15 +6548,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "How much is wishlist?",
+              "text": "What are you looking for?",
               "romanization": "",
-              "translation": "위시리스트 얼마예요?"
+              "translation": "뭐 찾으세요?"
             },
             {
               "speaker": "B",
-              "text": "wishlist is 10,000 won.",
+              "text": "I'm looking for wishlist.",
               "romanization": "",
-              "translation": "위시리스트은/는 만 원이에요."
+              "translation": "위시리스트를 찾고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Here it is.",
+              "romanization": "",
+              "translation": "여기 있어요."
+            },
+            {
+              "speaker": "B",
+              "text": "How much is it?",
+              "romanization": "",
+              "translation": "얼마예요?"
             }
           ]
         }
@@ -6257,10 +6593,10 @@
         "word": "원가",
         "explanation": "원가의 뜻은 'cost'입니다.",
         "examples": {
-          "beginner": "\"원가\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"원가\"를 자주 써요.",
-          "advanced": "\"원가\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"원가\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "원가를 사요.",
+          "intermediate": "원가가 세일이에요.",
+          "advanced": "원가를 구매할 때 품질을 확인해야 합니다.",
+          "master": "원가 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "variations": {
           "formal": [
@@ -6280,15 +6616,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "원가 얼마예요?",
-              "romanization": "wonga eolmayeyo?",
-              "translation": "How much is cost?"
+              "text": "뭐 찾으세요?",
+              "romanization": "mwo chateuseyo?",
+              "translation": "What are you looking for?"
             },
             {
               "speaker": "B",
-              "text": "원가은/는 만 원이에요.",
-              "romanization": "wongaeun/neun man wonieyo.",
-              "translation": "cost is 10,000 won."
+              "text": "원가를 찾고 있어요.",
+              "romanization": "wongareul chatgo iseoyo.",
+              "translation": "I'm looking for cost."
+            },
+            {
+              "speaker": "A",
+              "text": "여기 있어요.",
+              "romanization": "yeogi iseoyo.",
+              "translation": "Here it is."
+            },
+            {
+              "speaker": "B",
+              "text": "얼마예요?",
+              "romanization": "eolmayeyo?",
+              "translation": "How much is it?"
             }
           ]
         }
@@ -6297,10 +6645,10 @@
         "word": "cost",
         "explanation": "'원가' means 'cost' in English.",
         "examples": {
-          "beginner": "We say \"원가\" in Korean.",
-          "intermediate": "In Korea, people often say \"원가\".",
-          "advanced": "\"원가\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"원가\" makes communication more natural."
+          "beginner": "I buy cost.",
+          "intermediate": "cost is on sale.",
+          "advanced": "When buying cost, you should check the quality.",
+          "master": "Understanding cost market trends enables smart consumption."
         },
         "variations": {
           "formal": [
@@ -6320,15 +6668,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "How much is cost?",
+              "text": "What are you looking for?",
               "romanization": "",
-              "translation": "원가 얼마예요?"
+              "translation": "뭐 찾으세요?"
             },
             {
               "speaker": "B",
-              "text": "cost is 10,000 won.",
+              "text": "I'm looking for cost.",
               "romanization": "",
-              "translation": "원가은/는 만 원이에요."
+              "translation": "원가를 찾고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Here it is.",
+              "romanization": "",
+              "translation": "여기 있어요."
+            },
+            {
+              "speaker": "B",
+              "text": "How much is it?",
+              "romanization": "",
+              "translation": "얼마예요?"
             }
           ]
         }
@@ -6353,10 +6713,10 @@
         "word": "할인가",
         "explanation": "할인가의 뜻은 'sale price'입니다.",
         "examples": {
-          "beginner": "\"할인가\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"할인가\"를 자주 써요.",
-          "advanced": "\"할인가\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"할인가\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "할인가를 사요.",
+          "intermediate": "할인가가 세일이에요.",
+          "advanced": "할인가를 구매할 때 품질을 확인해야 합니다.",
+          "master": "할인가 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "variations": {
           "formal": [
@@ -6376,15 +6736,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "할인가 얼마예요?",
-              "romanization": "halinga eolmayeyo?",
-              "translation": "How much is sale price?"
+              "text": "뭐 찾으세요?",
+              "romanization": "mwo chateuseyo?",
+              "translation": "What are you looking for?"
             },
             {
               "speaker": "B",
-              "text": "할인가은/는 만 원이에요.",
-              "romanization": "halingaeun/neun man wonieyo.",
-              "translation": "sale price is 10,000 won."
+              "text": "할인가를 찾고 있어요.",
+              "romanization": "halingareul chatgo iseoyo.",
+              "translation": "I'm looking for sale price."
+            },
+            {
+              "speaker": "A",
+              "text": "여기 있어요.",
+              "romanization": "yeogi iseoyo.",
+              "translation": "Here it is."
+            },
+            {
+              "speaker": "B",
+              "text": "얼마예요?",
+              "romanization": "eolmayeyo?",
+              "translation": "How much is it?"
             }
           ]
         }
@@ -6393,10 +6765,10 @@
         "word": "sale price",
         "explanation": "'할인가' means 'sale price' in English.",
         "examples": {
-          "beginner": "We say \"할인가\" in Korean.",
-          "intermediate": "In Korea, people often say \"할인가\".",
-          "advanced": "\"할인가\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"할인가\" makes communication more natural."
+          "beginner": "I buy sale price.",
+          "intermediate": "sale price is on sale.",
+          "advanced": "When buying sale price, you should check the quality.",
+          "master": "Understanding sale price market trends enables smart consumption."
         },
         "variations": {
           "formal": [
@@ -6416,15 +6788,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "How much is sale price?",
+              "text": "What are you looking for?",
               "romanization": "",
-              "translation": "할인가 얼마예요?"
+              "translation": "뭐 찾으세요?"
             },
             {
               "speaker": "B",
-              "text": "sale price is 10,000 won.",
+              "text": "I'm looking for sale price.",
               "romanization": "",
-              "translation": "할인가은/는 만 원이에요."
+              "translation": "할인가를 찾고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Here it is.",
+              "romanization": "",
+              "translation": "여기 있어요."
+            },
+            {
+              "speaker": "B",
+              "text": "How much is it?",
+              "romanization": "",
+              "translation": "얼마예요?"
             }
           ]
         }
@@ -6449,10 +6833,10 @@
         "word": "부가세",
         "explanation": "부가세의 뜻은 'VAT'입니다.",
         "examples": {
-          "beginner": "\"부가세\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"부가세\"를 자주 써요.",
-          "advanced": "\"부가세\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"부가세\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "부가세를 사요.",
+          "intermediate": "부가세가 세일이에요.",
+          "advanced": "부가세를 구매할 때 품질을 확인해야 합니다.",
+          "master": "부가세 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "variations": {
           "formal": [
@@ -6472,15 +6856,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "부가세 얼마예요?",
-              "romanization": "bugase eolmayeyo?",
-              "translation": "How much is VAT?"
+              "text": "뭐 찾으세요?",
+              "romanization": "mwo chateuseyo?",
+              "translation": "What are you looking for?"
             },
             {
               "speaker": "B",
-              "text": "부가세은/는 만 원이에요.",
-              "romanization": "bugaseeun/neun man wonieyo.",
-              "translation": "VAT is 10,000 won."
+              "text": "부가세를 찾고 있어요.",
+              "romanization": "bugasereul chatgo iseoyo.",
+              "translation": "I'm looking for vat."
+            },
+            {
+              "speaker": "A",
+              "text": "여기 있어요.",
+              "romanization": "yeogi iseoyo.",
+              "translation": "Here it is."
+            },
+            {
+              "speaker": "B",
+              "text": "얼마예요?",
+              "romanization": "eolmayeyo?",
+              "translation": "How much is it?"
             }
           ]
         }
@@ -6489,10 +6885,10 @@
         "word": "VAT",
         "explanation": "'부가세' means 'VAT' in English.",
         "examples": {
-          "beginner": "We say \"부가세\" in Korean.",
-          "intermediate": "In Korea, people often say \"부가세\".",
-          "advanced": "\"부가세\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"부가세\" makes communication more natural."
+          "beginner": "I buy vat.",
+          "intermediate": "VAT is on sale.",
+          "advanced": "When buying vat, you should check the quality.",
+          "master": "Understanding vat market trends enables smart consumption."
         },
         "variations": {
           "formal": [
@@ -6512,15 +6908,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "How much is VAT?",
+              "text": "What are you looking for?",
               "romanization": "",
-              "translation": "부가세 얼마예요?"
+              "translation": "뭐 찾으세요?"
             },
             {
               "speaker": "B",
-              "text": "VAT is 10,000 won.",
+              "text": "I'm looking for vat.",
               "romanization": "",
-              "translation": "부가세은/는 만 원이에요."
+              "translation": "부가세를 찾고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Here it is.",
+              "romanization": "",
+              "translation": "여기 있어요."
+            },
+            {
+              "speaker": "B",
+              "text": "How much is it?",
+              "romanization": "",
+              "translation": "얼마예요?"
             }
           ]
         }
@@ -6545,10 +6953,10 @@
         "word": "면세",
         "explanation": "면세의 뜻은 'duty-free'입니다.",
         "examples": {
-          "beginner": "\"면세\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"면세\"를 자주 써요.",
-          "advanced": "\"면세\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"면세\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "면세를 사요.",
+          "intermediate": "면세가 세일이에요.",
+          "advanced": "면세를 구매할 때 품질을 확인해야 합니다.",
+          "master": "면세 시장의 트렌드를 이해하면 현명한 소비가 가능합니다."
         },
         "variations": {
           "formal": [
@@ -6568,15 +6976,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "면세 얼마예요?",
-              "romanization": "myeonse eolmayeyo?",
-              "translation": "How much is duty-free?"
+              "text": "뭐 찾으세요?",
+              "romanization": "mwo chateuseyo?",
+              "translation": "What are you looking for?"
             },
             {
               "speaker": "B",
-              "text": "면세은/는 만 원이에요.",
-              "romanization": "myeonseeun/neun man wonieyo.",
-              "translation": "duty-free is 10,000 won."
+              "text": "면세를 찾고 있어요.",
+              "romanization": "myeonsereul chatgo iseoyo.",
+              "translation": "I'm looking for duty-free."
+            },
+            {
+              "speaker": "A",
+              "text": "여기 있어요.",
+              "romanization": "yeogi iseoyo.",
+              "translation": "Here it is."
+            },
+            {
+              "speaker": "B",
+              "text": "얼마예요?",
+              "romanization": "eolmayeyo?",
+              "translation": "How much is it?"
             }
           ]
         }
@@ -6585,10 +7005,10 @@
         "word": "duty-free",
         "explanation": "'면세' means 'duty-free' in English.",
         "examples": {
-          "beginner": "We say \"면세\" in Korean.",
-          "intermediate": "In Korea, people often say \"면세\".",
-          "advanced": "\"면세\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"면세\" makes communication more natural."
+          "beginner": "I buy duty-free.",
+          "intermediate": "duty-free is on sale.",
+          "advanced": "When buying duty-free, you should check the quality.",
+          "master": "Understanding duty-free market trends enables smart consumption."
         },
         "variations": {
           "formal": [
@@ -6608,15 +7028,27 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "How much is duty-free?",
+              "text": "What are you looking for?",
               "romanization": "",
-              "translation": "면세 얼마예요?"
+              "translation": "뭐 찾으세요?"
             },
             {
               "speaker": "B",
-              "text": "duty-free is 10,000 won.",
+              "text": "I'm looking for duty-free.",
               "romanization": "",
-              "translation": "면세은/는 만 원이에요."
+              "translation": "면세를 찾고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Here it is.",
+              "romanization": "",
+              "translation": "여기 있어요."
+            },
+            {
+              "speaker": "B",
+              "text": "How much is it?",
+              "romanization": "",
+              "translation": "얼마예요?"
             }
           ]
         }

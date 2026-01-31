@@ -18,10 +18,10 @@
         "word": "breathe",
         "explanation": "'숨쉬다' means 'breathe' in English.",
         "examples": {
-          "beginner": "We say \"숨쉬다\" in Korean.",
-          "intermediate": "In Korea, people often say \"숨쉬다\".",
-          "advanced": "\"숨쉬다\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"숨쉬다\" makes communication more natural."
+          "beginner": "breathe is important.",
+          "intermediate": "I exercise for breathe.",
+          "advanced": "breathe is the foundation of a healthy life.",
+          "master": "Proper understanding of breathe is the first step in disease prevention."
         },
         "variations": {
           "formal": [
@@ -35,16 +35,45 @@
           "short": [
             "breathe"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about health",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How is your health these days?",
+              "romanization": "",
+              "translation": "요즘 건강은 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm paying attention to breathe.",
+              "romanization": "",
+              "translation": "숨쉬다에 신경 쓰고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "잘하고 있네요."
+            },
+            {
+              "speaker": "B",
+              "text": "Health is the most important thing.",
+              "romanization": "",
+              "translation": "건강이 제일 중요하잖아요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "숨쉬다",
         "explanation": "'숨쉬다' means 'breathe' in English.",
         "examples": {
-          "beginner": "We say \"숨쉬다\" in Korean.",
-          "intermediate": "In Korea, people often say \"숨쉬다\".",
-          "advanced": "\"숨쉬다\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"숨쉬다\" makes communication more natural."
+          "beginner": "숨쉬다가 중요해요.",
+          "intermediate": "숨쉬다을 위해 운동해요.",
+          "advanced": "숨쉬다는 건강한 생활의 기본입니다.",
+          "master": "숨쉬다에 대한 올바른 이해는 질병 예방의 첫걸음입니다."
         },
         "variations": {
           "formal": [
@@ -57,6 +86,35 @@
           ],
           "short": [
             "breathe"
+          ]
+        },
+        "dialogue": {
+          "context": "건강에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "요즘 건강은 어때요?",
+              "romanization": "yojeum geongangeun eottaeyo?",
+              "translation": "How is your health these days?"
+            },
+            {
+              "speaker": "B",
+              "text": "숨쉬다에 신경 쓰고 있어요.",
+              "romanization": "sumswidae singyeong sseugo iseoyo.",
+              "translation": "I'm paying attention to breathe."
+            },
+            {
+              "speaker": "A",
+              "text": "잘하고 있네요.",
+              "romanization": "jalhago isneyo.",
+              "translation": "That's good."
+            },
+            {
+              "speaker": "B",
+              "text": "건강이 제일 중요하잖아요.",
+              "romanization": "geongangi jeil jungyohajanayo.",
+              "translation": "Health is the most important thing."
+            }
           ]
         }
       }
@@ -81,10 +139,10 @@
         "word": "hold breath",
         "explanation": "'숨참다' means 'hold breath' in English.",
         "examples": {
-          "beginner": "We say \"숨참다\" in Korean.",
-          "intermediate": "In Korea, people often say \"숨참다\".",
-          "advanced": "\"숨참다\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"숨참다\" makes communication more natural."
+          "beginner": "hold breath is important.",
+          "intermediate": "I exercise for hold breath.",
+          "advanced": "hold breath is the foundation of a healthy life.",
+          "master": "Proper understanding of hold breath is the first step in disease prevention."
         },
         "variations": {
           "formal": [
@@ -98,16 +156,45 @@
           "short": [
             "hold"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about health",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How is your health these days?",
+              "romanization": "",
+              "translation": "요즘 건강은 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm paying attention to hold breath.",
+              "romanization": "",
+              "translation": "숨참다에 신경 쓰고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "잘하고 있네요."
+            },
+            {
+              "speaker": "B",
+              "text": "Health is the most important thing.",
+              "romanization": "",
+              "translation": "건강이 제일 중요하잖아요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "숨참다",
         "explanation": "'숨참다' means 'hold breath' in English.",
         "examples": {
-          "beginner": "We say \"숨참다\" in Korean.",
-          "intermediate": "In Korea, people often say \"숨참다\".",
-          "advanced": "\"숨참다\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"숨참다\" makes communication more natural."
+          "beginner": "숨참다가 중요해요.",
+          "intermediate": "숨참다을 위해 운동해요.",
+          "advanced": "숨참다는 건강한 생활의 기본입니다.",
+          "master": "숨참다에 대한 올바른 이해는 질병 예방의 첫걸음입니다."
         },
         "variations": {
           "formal": [
@@ -120,6 +207,35 @@
           ],
           "short": [
             "hold"
+          ]
+        },
+        "dialogue": {
+          "context": "건강에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "요즘 건강은 어때요?",
+              "romanization": "yojeum geongangeun eottaeyo?",
+              "translation": "How is your health these days?"
+            },
+            {
+              "speaker": "B",
+              "text": "숨참다에 신경 쓰고 있어요.",
+              "romanization": "sumchamdae singyeong sseugo iseoyo.",
+              "translation": "I'm paying attention to hold breath."
+            },
+            {
+              "speaker": "A",
+              "text": "잘하고 있네요.",
+              "romanization": "jalhago isneyo.",
+              "translation": "That's good."
+            },
+            {
+              "speaker": "B",
+              "text": "건강이 제일 중요하잖아요.",
+              "romanization": "geongangi jeil jungyohajanayo.",
+              "translation": "Health is the most important thing."
+            }
           ]
         }
       }
@@ -144,10 +260,10 @@
         "word": "cough",
         "explanation": "'기침하다' means 'cough' in English.",
         "examples": {
-          "beginner": "We say \"기침하다\" in Korean.",
-          "intermediate": "In Korea, people often say \"기침하다\".",
-          "advanced": "\"기침하다\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"기침하다\" makes communication more natural."
+          "beginner": "cough is important.",
+          "intermediate": "I exercise for cough.",
+          "advanced": "cough is the foundation of a healthy life.",
+          "master": "Proper understanding of cough is the first step in disease prevention."
         },
         "variations": {
           "formal": [
@@ -161,16 +277,45 @@
           "short": [
             "cough"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about health",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How is your health these days?",
+              "romanization": "",
+              "translation": "요즘 건강은 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm paying attention to cough.",
+              "romanization": "",
+              "translation": "기침하다에 신경 쓰고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "잘하고 있네요."
+            },
+            {
+              "speaker": "B",
+              "text": "Health is the most important thing.",
+              "romanization": "",
+              "translation": "건강이 제일 중요하잖아요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "기침하다",
         "explanation": "기침하다의 뜻은 'cough'입니다.",
         "examples": {
-          "beginner": "\"기침하다\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"기침하다\"를 자주 써요.",
-          "advanced": "\"기침하다\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"기침하다\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "기침하다가 중요해요.",
+          "intermediate": "기침하다을 위해 운동해요.",
+          "advanced": "기침하다는 건강한 생활의 기본입니다.",
+          "master": "기침하다에 대한 올바른 이해는 질병 예방의 첫걸음입니다."
         },
         "variations": {
           "formal": [
@@ -183,6 +328,35 @@
           ],
           "short": [
             "기침"
+          ]
+        },
+        "dialogue": {
+          "context": "건강에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "요즘 건강은 어때요?",
+              "romanization": "yojeum geongangeun eottaeyo?",
+              "translation": "How is your health these days?"
+            },
+            {
+              "speaker": "B",
+              "text": "기침하다에 신경 쓰고 있어요.",
+              "romanization": "gichimhadae singyeong sseugo iseoyo.",
+              "translation": "I'm paying attention to cough."
+            },
+            {
+              "speaker": "A",
+              "text": "잘하고 있네요.",
+              "romanization": "jalhago isneyo.",
+              "translation": "That's good."
+            },
+            {
+              "speaker": "B",
+              "text": "건강이 제일 중요하잖아요.",
+              "romanization": "geongangi jeil jungyohajanayo.",
+              "translation": "Health is the most important thing."
+            }
           ]
         }
       }
@@ -207,10 +381,10 @@
         "word": "sweat",
         "explanation": "'땀흘리다' means 'sweat' in English.",
         "examples": {
-          "beginner": "We say \"땀흘리다\" in Korean.",
-          "intermediate": "In Korea, people often say \"땀흘리다\".",
-          "advanced": "\"땀흘리다\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"땀흘리다\" makes communication more natural."
+          "beginner": "sweat is important.",
+          "intermediate": "I exercise for sweat.",
+          "advanced": "sweat is the foundation of a healthy life.",
+          "master": "Proper understanding of sweat is the first step in disease prevention."
         },
         "variations": {
           "formal": [
@@ -224,16 +398,45 @@
           "short": [
             "sweat"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about health",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How is your health these days?",
+              "romanization": "",
+              "translation": "요즘 건강은 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm paying attention to sweat.",
+              "romanization": "",
+              "translation": "땀흘리다에 신경 쓰고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "잘하고 있네요."
+            },
+            {
+              "speaker": "B",
+              "text": "Health is the most important thing.",
+              "romanization": "",
+              "translation": "건강이 제일 중요하잖아요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "땀흘리다",
         "explanation": "땀흘리다의 뜻은 'sweat'입니다.",
         "examples": {
-          "beginner": "\"땀흘리다\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"땀흘리다\"를 자주 써요.",
-          "advanced": "\"땀흘리다\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"땀흘리다\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "땀흘리다가 중요해요.",
+          "intermediate": "땀흘리다을 위해 운동해요.",
+          "advanced": "땀흘리다는 건강한 생활의 기본입니다.",
+          "master": "땀흘리다에 대한 올바른 이해는 질병 예방의 첫걸음입니다."
         },
         "variations": {
           "formal": [
@@ -246,6 +449,35 @@
           ],
           "short": [
             "땀흘"
+          ]
+        },
+        "dialogue": {
+          "context": "건강에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "요즘 건강은 어때요?",
+              "romanization": "yojeum geongangeun eottaeyo?",
+              "translation": "How is your health these days?"
+            },
+            {
+              "speaker": "B",
+              "text": "땀흘리다에 신경 쓰고 있어요.",
+              "romanization": "ttamheulridae singyeong sseugo iseoyo.",
+              "translation": "I'm paying attention to sweat."
+            },
+            {
+              "speaker": "A",
+              "text": "잘하고 있네요.",
+              "romanization": "jalhago isneyo.",
+              "translation": "That's good."
+            },
+            {
+              "speaker": "B",
+              "text": "건강이 제일 중요하잖아요.",
+              "romanization": "geongangi jeil jungyohajanayo.",
+              "translation": "Health is the most important thing."
+            }
           ]
         }
       }
@@ -270,10 +502,10 @@
         "word": "wail",
         "explanation": "'오열하다' means 'wail' in English.",
         "examples": {
-          "beginner": "We say \"오열하다\" in Korean.",
-          "intermediate": "In Korea, people often say \"오열하다\".",
-          "advanced": "\"오열하다\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"오열하다\" makes communication more natural."
+          "beginner": "wail is important.",
+          "intermediate": "I exercise for wail.",
+          "advanced": "wail is the foundation of a healthy life.",
+          "master": "Proper understanding of wail is the first step in disease prevention."
         },
         "variations": {
           "formal": [
@@ -287,16 +519,45 @@
           "short": [
             "wail"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about health",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How is your health these days?",
+              "romanization": "",
+              "translation": "요즘 건강은 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm paying attention to wail.",
+              "romanization": "",
+              "translation": "오열하다에 신경 쓰고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "잘하고 있네요."
+            },
+            {
+              "speaker": "B",
+              "text": "Health is the most important thing.",
+              "romanization": "",
+              "translation": "건강이 제일 중요하잖아요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "오열하다",
         "explanation": "오열하다의 뜻은 'wail'입니다.",
         "examples": {
-          "beginner": "\"오열하다\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"오열하다\"를 자주 써요.",
-          "advanced": "\"오열하다\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"오열하다\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "오열하다가 중요해요.",
+          "intermediate": "오열하다을 위해 운동해요.",
+          "advanced": "오열하다는 건강한 생활의 기본입니다.",
+          "master": "오열하다에 대한 올바른 이해는 질병 예방의 첫걸음입니다."
         },
         "variations": {
           "formal": [
@@ -309,6 +570,35 @@
           ],
           "short": [
             "오열"
+          ]
+        },
+        "dialogue": {
+          "context": "건강에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "요즘 건강은 어때요?",
+              "romanization": "yojeum geongangeun eottaeyo?",
+              "translation": "How is your health these days?"
+            },
+            {
+              "speaker": "B",
+              "text": "오열하다에 신경 쓰고 있어요.",
+              "romanization": "oyeolhadae singyeong sseugo iseoyo.",
+              "translation": "I'm paying attention to wail."
+            },
+            {
+              "speaker": "A",
+              "text": "잘하고 있네요.",
+              "romanization": "jalhago isneyo.",
+              "translation": "That's good."
+            },
+            {
+              "speaker": "B",
+              "text": "건강이 제일 중요하잖아요.",
+              "romanization": "geongangi jeil jungyohajanayo.",
+              "translation": "Health is the most important thing."
+            }
           ]
         }
       }
@@ -333,10 +623,10 @@
         "word": "open door",
         "explanation": "'문열다' means 'open door' in English.",
         "examples": {
-          "beginner": "We say \"문열다\" in Korean.",
-          "intermediate": "In Korea, people often say \"문열다\".",
-          "advanced": "\"문열다\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"문열다\" makes communication more natural."
+          "beginner": "open door is important.",
+          "intermediate": "I exercise for open door.",
+          "advanced": "open door is the foundation of a healthy life.",
+          "master": "Proper understanding of open door is the first step in disease prevention."
         },
         "variations": {
           "formal": [
@@ -350,16 +640,45 @@
           "short": [
             "open"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about health",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How is your health these days?",
+              "romanization": "",
+              "translation": "요즘 건강은 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm paying attention to open door.",
+              "romanization": "",
+              "translation": "문열다에 신경 쓰고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "잘하고 있네요."
+            },
+            {
+              "speaker": "B",
+              "text": "Health is the most important thing.",
+              "romanization": "",
+              "translation": "건강이 제일 중요하잖아요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "문열다",
         "explanation": "문열다의 뜻은 'open door'입니다.",
         "examples": {
-          "beginner": "\"문열다\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"문열다\"를 자주 써요.",
-          "advanced": "\"문열다\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"문열다\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "문열다가 중요해요.",
+          "intermediate": "문열다을 위해 운동해요.",
+          "advanced": "문열다는 건강한 생활의 기본입니다.",
+          "master": "문열다에 대한 올바른 이해는 질병 예방의 첫걸음입니다."
         },
         "variations": {
           "formal": [
@@ -372,6 +691,35 @@
           ],
           "short": [
             "문열"
+          ]
+        },
+        "dialogue": {
+          "context": "건강에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "요즘 건강은 어때요?",
+              "romanization": "yojeum geongangeun eottaeyo?",
+              "translation": "How is your health these days?"
+            },
+            {
+              "speaker": "B",
+              "text": "문열다에 신경 쓰고 있어요.",
+              "romanization": "munyeoldae singyeong sseugo iseoyo.",
+              "translation": "I'm paying attention to open door."
+            },
+            {
+              "speaker": "A",
+              "text": "잘하고 있네요.",
+              "romanization": "jalhago isneyo.",
+              "translation": "That's good."
+            },
+            {
+              "speaker": "B",
+              "text": "건강이 제일 중요하잖아요.",
+              "romanization": "geongangi jeil jungyohajanayo.",
+              "translation": "Health is the most important thing."
+            }
           ]
         }
       }
@@ -396,10 +744,10 @@
         "word": "open",
         "explanation": "'열다' means 'open' in English.",
         "examples": {
-          "beginner": "We say \"열다\" in Korean.",
-          "intermediate": "In Korea, people often say \"열다\".",
-          "advanced": "\"열다\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"열다\" makes communication more natural."
+          "beginner": "open is important.",
+          "intermediate": "I exercise for open.",
+          "advanced": "open is the foundation of a healthy life.",
+          "master": "Proper understanding of open is the first step in disease prevention."
         },
         "variations": {
           "formal": [
@@ -413,16 +761,45 @@
           "short": [
             "open"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about health",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How is your health these days?",
+              "romanization": "",
+              "translation": "요즘 건강은 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm paying attention to open.",
+              "romanization": "",
+              "translation": "열다에 신경 쓰고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "잘하고 있네요."
+            },
+            {
+              "speaker": "B",
+              "text": "Health is the most important thing.",
+              "romanization": "",
+              "translation": "건강이 제일 중요하잖아요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "열다",
         "explanation": "열다의 뜻은 'open'입니다.",
         "examples": {
-          "beginner": "\"열다\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"열다\"를 자주 써요.",
-          "advanced": "\"열다\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"열다\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "열다가 중요해요.",
+          "intermediate": "열다을 위해 운동해요.",
+          "advanced": "열다는 건강한 생활의 기본입니다.",
+          "master": "열다에 대한 올바른 이해는 질병 예방의 첫걸음입니다."
         },
         "variations": {
           "formal": [
@@ -435,6 +812,35 @@
           ],
           "short": [
             "열다"
+          ]
+        },
+        "dialogue": {
+          "context": "건강에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "요즘 건강은 어때요?",
+              "romanization": "yojeum geongangeun eottaeyo?",
+              "translation": "How is your health these days?"
+            },
+            {
+              "speaker": "B",
+              "text": "열다에 신경 쓰고 있어요.",
+              "romanization": "yeoldae singyeong sseugo iseoyo.",
+              "translation": "I'm paying attention to open."
+            },
+            {
+              "speaker": "A",
+              "text": "잘하고 있네요.",
+              "romanization": "jalhago isneyo.",
+              "translation": "That's good."
+            },
+            {
+              "speaker": "B",
+              "text": "건강이 제일 중요하잖아요.",
+              "romanization": "geongangi jeil jungyohajanayo.",
+              "translation": "Health is the most important thing."
+            }
           ]
         }
       }
@@ -459,10 +865,10 @@
         "word": "click open",
         "explanation": "'딸깍열다' means 'click open' in English.",
         "examples": {
-          "beginner": "We say \"딸깍열다\" in Korean.",
-          "intermediate": "In Korea, people often say \"딸깍열다\".",
-          "advanced": "\"딸깍열다\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"딸깍열다\" makes communication more natural."
+          "beginner": "click open is important.",
+          "intermediate": "I exercise for click open.",
+          "advanced": "click open is the foundation of a healthy life.",
+          "master": "Proper understanding of click open is the first step in disease prevention."
         },
         "variations": {
           "formal": [
@@ -476,16 +882,45 @@
           "short": [
             "click"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about health",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How is your health these days?",
+              "romanization": "",
+              "translation": "요즘 건강은 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm paying attention to click open.",
+              "romanization": "",
+              "translation": "딸깍열다에 신경 쓰고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "잘하고 있네요."
+            },
+            {
+              "speaker": "B",
+              "text": "Health is the most important thing.",
+              "romanization": "",
+              "translation": "건강이 제일 중요하잖아요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "딸깍열다",
         "explanation": "딸깍열다의 뜻은 'click open'입니다.",
         "examples": {
-          "beginner": "\"딸깍열다\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"딸깍열다\"를 자주 써요.",
-          "advanced": "\"딸깍열다\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"딸깍열다\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "딸깍열다가 중요해요.",
+          "intermediate": "딸깍열다을 위해 운동해요.",
+          "advanced": "딸깍열다는 건강한 생활의 기본입니다.",
+          "master": "딸깍열다에 대한 올바른 이해는 질병 예방의 첫걸음입니다."
         },
         "variations": {
           "formal": [
@@ -498,6 +933,35 @@
           ],
           "short": [
             "딸깍"
+          ]
+        },
+        "dialogue": {
+          "context": "건강에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "요즘 건강은 어때요?",
+              "romanization": "yojeum geongangeun eottaeyo?",
+              "translation": "How is your health these days?"
+            },
+            {
+              "speaker": "B",
+              "text": "딸깍열다에 신경 쓰고 있어요.",
+              "romanization": "ttalkkakyeoldae singyeong sseugo iseoyo.",
+              "translation": "I'm paying attention to click open."
+            },
+            {
+              "speaker": "A",
+              "text": "잘하고 있네요.",
+              "romanization": "jalhago isneyo.",
+              "translation": "That's good."
+            },
+            {
+              "speaker": "B",
+              "text": "건강이 제일 중요하잖아요.",
+              "romanization": "geongangi jeil jungyohajanayo.",
+              "translation": "Health is the most important thing."
+            }
           ]
         }
       }
@@ -522,10 +986,10 @@
         "word": "nostril",
         "explanation": "'콧구멍' means 'nostril' in English.",
         "examples": {
-          "beginner": "We say \"콧구멍\" in Korean.",
-          "intermediate": "In Korea, people often say \"콧구멍\".",
-          "advanced": "\"콧구멍\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"콧구멍\" makes communication more natural."
+          "beginner": "nostril is important.",
+          "intermediate": "I exercise for nostril.",
+          "advanced": "nostril is the foundation of a healthy life.",
+          "master": "Proper understanding of nostril is the first step in disease prevention."
         },
         "variations": {
           "formal": [
@@ -539,16 +1003,45 @@
           "short": [
             "nostril"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about health",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How is your health these days?",
+              "romanization": "",
+              "translation": "요즘 건강은 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm paying attention to nostril.",
+              "romanization": "",
+              "translation": "콧구멍에 신경 쓰고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "잘하고 있네요."
+            },
+            {
+              "speaker": "B",
+              "text": "Health is the most important thing.",
+              "romanization": "",
+              "translation": "건강이 제일 중요하잖아요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "콧구멍",
         "explanation": "콧구멍의 뜻은 'nostril'입니다.",
         "examples": {
-          "beginner": "\"콧구멍\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"콧구멍\"를 자주 써요.",
-          "advanced": "\"콧구멍\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"콧구멍\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "콧구멍이 중요해요.",
+          "intermediate": "콧구멍을 위해 운동해요.",
+          "advanced": "콧구멍은 건강한 생활의 기본입니다.",
+          "master": "콧구멍에 대한 올바른 이해는 질병 예방의 첫걸음입니다."
         },
         "variations": {
           "formal": [
@@ -561,6 +1054,35 @@
           ],
           "short": [
             "콧구"
+          ]
+        },
+        "dialogue": {
+          "context": "건강에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "요즘 건강은 어때요?",
+              "romanization": "yojeum geongangeun eottaeyo?",
+              "translation": "How is your health these days?"
+            },
+            {
+              "speaker": "B",
+              "text": "콧구멍에 신경 쓰고 있어요.",
+              "romanization": "kosgumeonge singyeong sseugo iseoyo.",
+              "translation": "I'm paying attention to nostril."
+            },
+            {
+              "speaker": "A",
+              "text": "잘하고 있네요.",
+              "romanization": "jalhago isneyo.",
+              "translation": "That's good."
+            },
+            {
+              "speaker": "B",
+              "text": "건강이 제일 중요하잖아요.",
+              "romanization": "geongangi jeil jungyohajanayo.",
+              "translation": "Health is the most important thing."
+            }
           ]
         }
       }
@@ -585,10 +1107,10 @@
         "word": "esophageal hiatus",
         "explanation": "'식도열공' means 'esophageal hiatus' in English.",
         "examples": {
-          "beginner": "We say \"식도열공\" in Korean.",
-          "intermediate": "In Korea, people often say \"식도열공\".",
-          "advanced": "\"식도열공\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"식도열공\" makes communication more natural."
+          "beginner": "esophageal hiatus is important.",
+          "intermediate": "I exercise for esophageal hiatus.",
+          "advanced": "esophageal hiatus is the foundation of a healthy life.",
+          "master": "Proper understanding of esophageal hiatus is the first step in disease prevention."
         },
         "variations": {
           "formal": [
@@ -602,16 +1124,45 @@
           "short": [
             "esophageal"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about health",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How is your health these days?",
+              "romanization": "",
+              "translation": "요즘 건강은 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm paying attention to esophageal hiatus.",
+              "romanization": "",
+              "translation": "식도열공에 신경 쓰고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "잘하고 있네요."
+            },
+            {
+              "speaker": "B",
+              "text": "Health is the most important thing.",
+              "romanization": "",
+              "translation": "건강이 제일 중요하잖아요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "식도열공",
         "explanation": "식도열공의 뜻은 'esophageal hiatus'입니다.",
         "examples": {
-          "beginner": "\"식도열공\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"식도열공\"를 자주 써요.",
-          "advanced": "\"식도열공\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"식도열공\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "식도열공이 중요해요.",
+          "intermediate": "식도열공을 위해 운동해요.",
+          "advanced": "식도열공은 건강한 생활의 기본입니다.",
+          "master": "식도열공에 대한 올바른 이해는 질병 예방의 첫걸음입니다."
         },
         "variations": {
           "formal": [
@@ -624,6 +1175,35 @@
           ],
           "short": [
             "식도"
+          ]
+        },
+        "dialogue": {
+          "context": "건강에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "요즘 건강은 어때요?",
+              "romanization": "yojeum geongangeun eottaeyo?",
+              "translation": "How is your health these days?"
+            },
+            {
+              "speaker": "B",
+              "text": "식도열공에 신경 쓰고 있어요.",
+              "romanization": "sikdoyeolgonge singyeong sseugo iseoyo.",
+              "translation": "I'm paying attention to esophageal hiatus."
+            },
+            {
+              "speaker": "A",
+              "text": "잘하고 있네요.",
+              "romanization": "jalhago isneyo.",
+              "translation": "That's good."
+            },
+            {
+              "speaker": "B",
+              "text": "건강이 제일 중요하잖아요.",
+              "romanization": "geongangi jeil jungyohajanayo.",
+              "translation": "Health is the most important thing."
+            }
           ]
         }
       }
@@ -648,10 +1228,10 @@
         "word": "mustache",
         "explanation": "'콧수염' means 'mustache' in English.",
         "examples": {
-          "beginner": "We say \"콧수염\" in Korean.",
-          "intermediate": "In Korea, people often say \"콧수염\".",
-          "advanced": "\"콧수염\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"콧수염\" makes communication more natural."
+          "beginner": "mustache is important.",
+          "intermediate": "I exercise for mustache.",
+          "advanced": "mustache is the foundation of a healthy life.",
+          "master": "Proper understanding of mustache is the first step in disease prevention."
         },
         "variations": {
           "formal": [
@@ -665,16 +1245,45 @@
           "short": [
             "mustache"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about health",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How is your health these days?",
+              "romanization": "",
+              "translation": "요즘 건강은 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm paying attention to mustache.",
+              "romanization": "",
+              "translation": "콧수염에 신경 쓰고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "잘하고 있네요."
+            },
+            {
+              "speaker": "B",
+              "text": "Health is the most important thing.",
+              "romanization": "",
+              "translation": "건강이 제일 중요하잖아요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "콧수염",
         "explanation": "'콧수염' means 'mustache' in English.",
         "examples": {
-          "beginner": "We say \"콧수염\" in Korean.",
-          "intermediate": "In Korea, people often say \"콧수염\".",
-          "advanced": "\"콧수염\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"콧수염\" makes communication more natural."
+          "beginner": "콧수염이 중요해요.",
+          "intermediate": "콧수염을 위해 운동해요.",
+          "advanced": "콧수염은 건강한 생활의 기본입니다.",
+          "master": "콧수염에 대한 올바른 이해는 질병 예방의 첫걸음입니다."
         },
         "variations": {
           "formal": [
@@ -687,6 +1296,35 @@
           ],
           "short": [
             "mustache"
+          ]
+        },
+        "dialogue": {
+          "context": "건강에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "요즘 건강은 어때요?",
+              "romanization": "yojeum geongangeun eottaeyo?",
+              "translation": "How is your health these days?"
+            },
+            {
+              "speaker": "B",
+              "text": "콧수염에 신경 쓰고 있어요.",
+              "romanization": "kossuyeome singyeong sseugo iseoyo.",
+              "translation": "I'm paying attention to mustache."
+            },
+            {
+              "speaker": "A",
+              "text": "잘하고 있네요.",
+              "romanization": "jalhago isneyo.",
+              "translation": "That's good."
+            },
+            {
+              "speaker": "B",
+              "text": "건강이 제일 중요하잖아요.",
+              "romanization": "geongangi jeil jungyohajanayo.",
+              "translation": "Health is the most important thing."
+            }
           ]
         }
       }
@@ -711,10 +1349,10 @@
         "word": "sweat gland",
         "explanation": "'땀샘' means 'sweat gland' in English.",
         "examples": {
-          "beginner": "We say \"땀샘\" in Korean.",
-          "intermediate": "In Korea, people often say \"땀샘\".",
-          "advanced": "\"땀샘\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"땀샘\" makes communication more natural."
+          "beginner": "sweat gland is important.",
+          "intermediate": "I exercise for sweat gland.",
+          "advanced": "sweat gland is the foundation of a healthy life.",
+          "master": "Proper understanding of sweat gland is the first step in disease prevention."
         },
         "variations": {
           "formal": [
@@ -728,16 +1366,45 @@
           "short": [
             "sweat"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about health",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How is your health these days?",
+              "romanization": "",
+              "translation": "요즘 건강은 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm paying attention to sweat gland.",
+              "romanization": "",
+              "translation": "땀샘에 신경 쓰고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "잘하고 있네요."
+            },
+            {
+              "speaker": "B",
+              "text": "Health is the most important thing.",
+              "romanization": "",
+              "translation": "건강이 제일 중요하잖아요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "땀샘",
         "explanation": "땀샘의 뜻은 'sweat gland'입니다.",
         "examples": {
-          "beginner": "\"땀샘\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"땀샘\"를 자주 써요.",
-          "advanced": "\"땀샘\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"땀샘\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "땀샘이 중요해요.",
+          "intermediate": "땀샘을 위해 운동해요.",
+          "advanced": "땀샘은 건강한 생활의 기본입니다.",
+          "master": "땀샘에 대한 올바른 이해는 질병 예방의 첫걸음입니다."
         },
         "variations": {
           "formal": [
@@ -750,6 +1417,35 @@
           ],
           "short": [
             "땀샘"
+          ]
+        },
+        "dialogue": {
+          "context": "건강에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "요즘 건강은 어때요?",
+              "romanization": "yojeum geongangeun eottaeyo?",
+              "translation": "How is your health these days?"
+            },
+            {
+              "speaker": "B",
+              "text": "땀샘에 신경 쓰고 있어요.",
+              "romanization": "ttamsaeme singyeong sseugo iseoyo.",
+              "translation": "I'm paying attention to sweat gland."
+            },
+            {
+              "speaker": "A",
+              "text": "잘하고 있네요.",
+              "romanization": "jalhago isneyo.",
+              "translation": "That's good."
+            },
+            {
+              "speaker": "B",
+              "text": "건강이 제일 중요하잖아요.",
+              "romanization": "geongangi jeil jungyohajanayo.",
+              "translation": "Health is the most important thing."
+            }
           ]
         }
       }
@@ -774,10 +1470,10 @@
         "word": "eccrine sweat gland",
         "explanation": "'에크린땀샘' means 'eccrine sweat gland' in English.",
         "examples": {
-          "beginner": "We say \"에크린땀샘\" in Korean.",
-          "intermediate": "In Korea, people often say \"에크린땀샘\".",
-          "advanced": "\"에크린땀샘\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"에크린땀샘\" makes communication more natural."
+          "beginner": "eccrine sweat gland is important.",
+          "intermediate": "I exercise for eccrine sweat gland.",
+          "advanced": "eccrine sweat gland is the foundation of a healthy life.",
+          "master": "Proper understanding of eccrine sweat gland is the first step in disease prevention."
         },
         "variations": {
           "formal": [
@@ -791,16 +1487,45 @@
           "short": [
             "eccrine"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about health",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How is your health these days?",
+              "romanization": "",
+              "translation": "요즘 건강은 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm paying attention to eccrine sweat gland.",
+              "romanization": "",
+              "translation": "에크린땀샘에 신경 쓰고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "잘하고 있네요."
+            },
+            {
+              "speaker": "B",
+              "text": "Health is the most important thing.",
+              "romanization": "",
+              "translation": "건강이 제일 중요하잖아요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "에크린땀샘",
         "explanation": "에크린땀샘의 뜻은 'eccrine sweat gland'입니다.",
         "examples": {
-          "beginner": "\"에크린땀샘\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"에크린땀샘\"를 자주 써요.",
-          "advanced": "\"에크린땀샘\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"에크린땀샘\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "에크린땀샘이 중요해요.",
+          "intermediate": "에크린땀샘을 위해 운동해요.",
+          "advanced": "에크린땀샘은 건강한 생활의 기본입니다.",
+          "master": "에크린땀샘에 대한 올바른 이해는 질병 예방의 첫걸음입니다."
         },
         "variations": {
           "formal": [
@@ -813,6 +1538,35 @@
           ],
           "short": [
             "에크"
+          ]
+        },
+        "dialogue": {
+          "context": "건강에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "요즘 건강은 어때요?",
+              "romanization": "yojeum geongangeun eottaeyo?",
+              "translation": "How is your health these days?"
+            },
+            {
+              "speaker": "B",
+              "text": "에크린땀샘에 신경 쓰고 있어요.",
+              "romanization": "ekeurinttamsaeme singyeong sseugo iseoyo.",
+              "translation": "I'm paying attention to eccrine sweat gland."
+            },
+            {
+              "speaker": "A",
+              "text": "잘하고 있네요.",
+              "romanization": "jalhago isneyo.",
+              "translation": "That's good."
+            },
+            {
+              "speaker": "B",
+              "text": "건강이 제일 중요하잖아요.",
+              "romanization": "geongangi jeil jungyohajanayo.",
+              "translation": "Health is the most important thing."
+            }
           ]
         }
       }
@@ -837,10 +1591,10 @@
         "word": "apocrine sweat gland",
         "explanation": "'아포크린땀샘' means 'apocrine sweat gland' in English.",
         "examples": {
-          "beginner": "We say \"아포크린땀샘\" in Korean.",
-          "intermediate": "In Korea, people often say \"아포크린땀샘\".",
-          "advanced": "\"아포크린땀샘\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"아포크린땀샘\" makes communication more natural."
+          "beginner": "apocrine sweat gland is important.",
+          "intermediate": "I exercise for apocrine sweat gland.",
+          "advanced": "apocrine sweat gland is the foundation of a healthy life.",
+          "master": "Proper understanding of apocrine sweat gland is the first step in disease prevention."
         },
         "variations": {
           "formal": [
@@ -854,16 +1608,45 @@
           "short": [
             "apocrine"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about health",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How is your health these days?",
+              "romanization": "",
+              "translation": "요즘 건강은 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm paying attention to apocrine sweat gland.",
+              "romanization": "",
+              "translation": "아포크린땀샘에 신경 쓰고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "잘하고 있네요."
+            },
+            {
+              "speaker": "B",
+              "text": "Health is the most important thing.",
+              "romanization": "",
+              "translation": "건강이 제일 중요하잖아요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "아포크린땀샘",
         "explanation": "아포크린땀샘의 뜻은 'apocrine sweat gland'입니다.",
         "examples": {
-          "beginner": "\"아포크린땀샘\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"아포크린땀샘\"를 자주 써요.",
-          "advanced": "\"아포크린땀샘\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"아포크린땀샘\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "아포크린땀샘이 중요해요.",
+          "intermediate": "아포크린땀샘을 위해 운동해요.",
+          "advanced": "아포크린땀샘은 건강한 생활의 기본입니다.",
+          "master": "아포크린땀샘에 대한 올바른 이해는 질병 예방의 첫걸음입니다."
         },
         "variations": {
           "formal": [
@@ -876,6 +1659,35 @@
           ],
           "short": [
             "아포"
+          ]
+        },
+        "dialogue": {
+          "context": "건강에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "요즘 건강은 어때요?",
+              "romanization": "yojeum geongangeun eottaeyo?",
+              "translation": "How is your health these days?"
+            },
+            {
+              "speaker": "B",
+              "text": "아포크린땀샘에 신경 쓰고 있어요.",
+              "romanization": "apokeurinttamsaeme singyeong sseugo iseoyo.",
+              "translation": "I'm paying attention to apocrine sweat gland."
+            },
+            {
+              "speaker": "A",
+              "text": "잘하고 있네요.",
+              "romanization": "jalhago isneyo.",
+              "translation": "That's good."
+            },
+            {
+              "speaker": "B",
+              "text": "건강이 제일 중요하잖아요.",
+              "romanization": "geongangi jeil jungyohajanayo.",
+              "translation": "Health is the most important thing."
+            }
           ]
         }
       }
@@ -900,10 +1712,10 @@
         "word": "multifidus",
         "explanation": "'다열근' means 'multifidus' in English.",
         "examples": {
-          "beginner": "We say \"다열근\" in Korean.",
-          "intermediate": "In Korea, people often say \"다열근\".",
-          "advanced": "\"다열근\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"다열근\" makes communication more natural."
+          "beginner": "multifidus is important.",
+          "intermediate": "I exercise for multifidus.",
+          "advanced": "multifidus is the foundation of a healthy life.",
+          "master": "Proper understanding of multifidus is the first step in disease prevention."
         },
         "variations": {
           "formal": [
@@ -917,16 +1729,45 @@
           "short": [
             "multifidus"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about health",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How is your health these days?",
+              "romanization": "",
+              "translation": "요즘 건강은 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm paying attention to multifidus.",
+              "romanization": "",
+              "translation": "다열근에 신경 쓰고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "잘하고 있네요."
+            },
+            {
+              "speaker": "B",
+              "text": "Health is the most important thing.",
+              "romanization": "",
+              "translation": "건강이 제일 중요하잖아요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "다열근",
         "explanation": "다열근의 뜻은 'multifidus'입니다.",
         "examples": {
-          "beginner": "\"다열근\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"다열근\"를 자주 써요.",
-          "advanced": "\"다열근\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"다열근\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "다열근이 중요해요.",
+          "intermediate": "다열근을 위해 운동해요.",
+          "advanced": "다열근은 건강한 생활의 기본입니다.",
+          "master": "다열근에 대한 올바른 이해는 질병 예방의 첫걸음입니다."
         },
         "variations": {
           "formal": [
@@ -939,6 +1780,35 @@
           ],
           "short": [
             "다열"
+          ]
+        },
+        "dialogue": {
+          "context": "건강에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "요즘 건강은 어때요?",
+              "romanization": "yojeum geongangeun eottaeyo?",
+              "translation": "How is your health these days?"
+            },
+            {
+              "speaker": "B",
+              "text": "다열근에 신경 쓰고 있어요.",
+              "romanization": "dayeolgeune singyeong sseugo iseoyo.",
+              "translation": "I'm paying attention to multifidus."
+            },
+            {
+              "speaker": "A",
+              "text": "잘하고 있네요.",
+              "romanization": "jalhago isneyo.",
+              "translation": "That's good."
+            },
+            {
+              "speaker": "B",
+              "text": "건강이 제일 중요하잖아요.",
+              "romanization": "geongangi jeil jungyohajanayo.",
+              "translation": "Health is the most important thing."
+            }
           ]
         }
       }
@@ -963,10 +1833,10 @@
         "word": "interlobar fissure",
         "explanation": "'엽간열' means 'interlobar fissure' in English.",
         "examples": {
-          "beginner": "We say \"엽간열\" in Korean.",
-          "intermediate": "In Korea, people often say \"엽간열\".",
-          "advanced": "\"엽간열\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"엽간열\" makes communication more natural."
+          "beginner": "interlobar fissure is important.",
+          "intermediate": "I exercise for interlobar fissure.",
+          "advanced": "interlobar fissure is the foundation of a healthy life.",
+          "master": "Proper understanding of interlobar fissure is the first step in disease prevention."
         },
         "variations": {
           "formal": [
@@ -980,16 +1850,45 @@
           "short": [
             "interlobar"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about health",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How is your health these days?",
+              "romanization": "",
+              "translation": "요즘 건강은 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm paying attention to interlobar fissure.",
+              "romanization": "",
+              "translation": "엽간열에 신경 쓰고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "잘하고 있네요."
+            },
+            {
+              "speaker": "B",
+              "text": "Health is the most important thing.",
+              "romanization": "",
+              "translation": "건강이 제일 중요하잖아요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "엽간열",
         "explanation": "엽간열의 뜻은 'interlobar fissure'입니다.",
         "examples": {
-          "beginner": "\"엽간열\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"엽간열\"를 자주 써요.",
-          "advanced": "\"엽간열\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"엽간열\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "엽간열이 중요해요.",
+          "intermediate": "엽간열을 위해 운동해요.",
+          "advanced": "엽간열은 건강한 생활의 기본입니다.",
+          "master": "엽간열에 대한 올바른 이해는 질병 예방의 첫걸음입니다."
         },
         "variations": {
           "formal": [
@@ -1002,6 +1901,35 @@
           ],
           "short": [
             "엽간"
+          ]
+        },
+        "dialogue": {
+          "context": "건강에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "요즘 건강은 어때요?",
+              "romanization": "yojeum geongangeun eottaeyo?",
+              "translation": "How is your health these days?"
+            },
+            {
+              "speaker": "B",
+              "text": "엽간열에 신경 쓰고 있어요.",
+              "romanization": "yeopganyeole singyeong sseugo iseoyo.",
+              "translation": "I'm paying attention to interlobar fissure."
+            },
+            {
+              "speaker": "A",
+              "text": "잘하고 있네요.",
+              "romanization": "jalhago isneyo.",
+              "translation": "That's good."
+            },
+            {
+              "speaker": "B",
+              "text": "건강이 제일 중요하잖아요.",
+              "romanization": "geongangi jeil jungyohajanayo.",
+              "translation": "Health is the most important thing."
+            }
           ]
         }
       }
@@ -1026,10 +1954,10 @@
         "word": "horizontal fissure",
         "explanation": "'수평열' means 'horizontal fissure' in English.",
         "examples": {
-          "beginner": "We say \"수평열\" in Korean.",
-          "intermediate": "In Korea, people often say \"수평열\".",
-          "advanced": "\"수평열\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"수평열\" makes communication more natural."
+          "beginner": "horizontal fissure is important.",
+          "intermediate": "I exercise for horizontal fissure.",
+          "advanced": "horizontal fissure is the foundation of a healthy life.",
+          "master": "Proper understanding of horizontal fissure is the first step in disease prevention."
         },
         "variations": {
           "formal": [
@@ -1043,16 +1971,45 @@
           "short": [
             "horizontal"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about health",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How is your health these days?",
+              "romanization": "",
+              "translation": "요즘 건강은 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm paying attention to horizontal fissure.",
+              "romanization": "",
+              "translation": "수평열에 신경 쓰고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "잘하고 있네요."
+            },
+            {
+              "speaker": "B",
+              "text": "Health is the most important thing.",
+              "romanization": "",
+              "translation": "건강이 제일 중요하잖아요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "수평열",
         "explanation": "수평열의 뜻은 'horizontal fissure'입니다.",
         "examples": {
-          "beginner": "\"수평열\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"수평열\"를 자주 써요.",
-          "advanced": "\"수평열\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"수평열\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "수평열이 중요해요.",
+          "intermediate": "수평열을 위해 운동해요.",
+          "advanced": "수평열은 건강한 생활의 기본입니다.",
+          "master": "수평열에 대한 올바른 이해는 질병 예방의 첫걸음입니다."
         },
         "variations": {
           "formal": [
@@ -1065,6 +2022,35 @@
           ],
           "short": [
             "수평"
+          ]
+        },
+        "dialogue": {
+          "context": "건강에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "요즘 건강은 어때요?",
+              "romanization": "yojeum geongangeun eottaeyo?",
+              "translation": "How is your health these days?"
+            },
+            {
+              "speaker": "B",
+              "text": "수평열에 신경 쓰고 있어요.",
+              "romanization": "supyeongyeole singyeong sseugo iseoyo.",
+              "translation": "I'm paying attention to horizontal fissure."
+            },
+            {
+              "speaker": "A",
+              "text": "잘하고 있네요.",
+              "romanization": "jalhago isneyo.",
+              "translation": "That's good."
+            },
+            {
+              "speaker": "B",
+              "text": "건강이 제일 중요하잖아요.",
+              "romanization": "geongangi jeil jungyohajanayo.",
+              "translation": "Health is the most important thing."
+            }
           ]
         }
       }
@@ -1089,10 +2075,10 @@
         "word": "oblique fissure",
         "explanation": "'사열' means 'oblique fissure' in English.",
         "examples": {
-          "beginner": "We say \"사열\" in Korean.",
-          "intermediate": "In Korea, people often say \"사열\".",
-          "advanced": "\"사열\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"사열\" makes communication more natural."
+          "beginner": "oblique fissure is important.",
+          "intermediate": "I exercise for oblique fissure.",
+          "advanced": "oblique fissure is the foundation of a healthy life.",
+          "master": "Proper understanding of oblique fissure is the first step in disease prevention."
         },
         "variations": {
           "formal": [
@@ -1106,16 +2092,45 @@
           "short": [
             "oblique"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about health",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How is your health these days?",
+              "romanization": "",
+              "translation": "요즘 건강은 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm paying attention to oblique fissure.",
+              "romanization": "",
+              "translation": "사열에 신경 쓰고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "잘하고 있네요."
+            },
+            {
+              "speaker": "B",
+              "text": "Health is the most important thing.",
+              "romanization": "",
+              "translation": "건강이 제일 중요하잖아요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "사열",
         "explanation": "사열의 뜻은 'oblique fissure'입니다.",
         "examples": {
-          "beginner": "\"사열\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"사열\"를 자주 써요.",
-          "advanced": "\"사열\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"사열\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "사열이 중요해요.",
+          "intermediate": "사열을 위해 운동해요.",
+          "advanced": "사열은 건강한 생활의 기본입니다.",
+          "master": "사열에 대한 올바른 이해는 질병 예방의 첫걸음입니다."
         },
         "variations": {
           "formal": [
@@ -1128,6 +2143,35 @@
           ],
           "short": [
             "사열"
+          ]
+        },
+        "dialogue": {
+          "context": "건강에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "요즘 건강은 어때요?",
+              "romanization": "yojeum geongangeun eottaeyo?",
+              "translation": "How is your health these days?"
+            },
+            {
+              "speaker": "B",
+              "text": "사열에 신경 쓰고 있어요.",
+              "romanization": "sayeole singyeong sseugo iseoyo.",
+              "translation": "I'm paying attention to oblique fissure."
+            },
+            {
+              "speaker": "A",
+              "text": "잘하고 있네요.",
+              "romanization": "jalhago isneyo.",
+              "translation": "That's good."
+            },
+            {
+              "speaker": "B",
+              "text": "건강이 제일 중요하잖아요.",
+              "romanization": "geongangi jeil jungyohajanayo.",
+              "translation": "Health is the most important thing."
+            }
           ]
         }
       }
@@ -1152,10 +2196,10 @@
         "word": "respiratory membrane",
         "explanation": "'호흡막' means 'respiratory membrane' in English.",
         "examples": {
-          "beginner": "We say \"호흡막\" in Korean.",
-          "intermediate": "In Korea, people often say \"호흡막\".",
-          "advanced": "\"호흡막\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"호흡막\" makes communication more natural."
+          "beginner": "respiratory membrane is important.",
+          "intermediate": "I exercise for respiratory membrane.",
+          "advanced": "respiratory membrane is the foundation of a healthy life.",
+          "master": "Proper understanding of respiratory membrane is the first step in disease prevention."
         },
         "variations": {
           "formal": [
@@ -1169,16 +2213,45 @@
           "short": [
             "respiratory"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about health",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How is your health these days?",
+              "romanization": "",
+              "translation": "요즘 건강은 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm paying attention to respiratory membrane.",
+              "romanization": "",
+              "translation": "호흡막에 신경 쓰고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "잘하고 있네요."
+            },
+            {
+              "speaker": "B",
+              "text": "Health is the most important thing.",
+              "romanization": "",
+              "translation": "건강이 제일 중요하잖아요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "호흡막",
         "explanation": "호흡막의 뜻은 'respiratory membrane'입니다.",
         "examples": {
-          "beginner": "\"호흡막\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"호흡막\"를 자주 써요.",
-          "advanced": "\"호흡막\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"호흡막\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "호흡막이 중요해요.",
+          "intermediate": "호흡막을 위해 운동해요.",
+          "advanced": "호흡막은 건강한 생활의 기본입니다.",
+          "master": "호흡막에 대한 올바른 이해는 질병 예방의 첫걸음입니다."
         },
         "variations": {
           "formal": [
@@ -1191,6 +2264,35 @@
           ],
           "short": [
             "호흡"
+          ]
+        },
+        "dialogue": {
+          "context": "건강에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "요즘 건강은 어때요?",
+              "romanization": "yojeum geongangeun eottaeyo?",
+              "translation": "How is your health these days?"
+            },
+            {
+              "speaker": "B",
+              "text": "호흡막에 신경 쓰고 있어요.",
+              "romanization": "hoheupmake singyeong sseugo iseoyo.",
+              "translation": "I'm paying attention to respiratory membrane."
+            },
+            {
+              "speaker": "A",
+              "text": "잘하고 있네요.",
+              "romanization": "jalhago isneyo.",
+              "translation": "That's good."
+            },
+            {
+              "speaker": "B",
+              "text": "건강이 제일 중요하잖아요.",
+              "romanization": "geongangi jeil jungyohajanayo.",
+              "translation": "Health is the most important thing."
+            }
           ]
         }
       }
@@ -1215,10 +2317,10 @@
         "word": "cold receptor",
         "explanation": "'냉점' means 'cold receptor' in English.",
         "examples": {
-          "beginner": "We say \"냉점\" in Korean.",
-          "intermediate": "In Korea, people often say \"냉점\".",
-          "advanced": "\"냉점\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"냉점\" makes communication more natural."
+          "beginner": "cold receptor is important.",
+          "intermediate": "I exercise for cold receptor.",
+          "advanced": "cold receptor is the foundation of a healthy life.",
+          "master": "Proper understanding of cold receptor is the first step in disease prevention."
         },
         "variations": {
           "formal": [
@@ -1232,16 +2334,45 @@
           "short": [
             "cold"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about health",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How is your health these days?",
+              "romanization": "",
+              "translation": "요즘 건강은 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm paying attention to cold receptor.",
+              "romanization": "",
+              "translation": "냉점에 신경 쓰고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "잘하고 있네요."
+            },
+            {
+              "speaker": "B",
+              "text": "Health is the most important thing.",
+              "romanization": "",
+              "translation": "건강이 제일 중요하잖아요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "냉점",
         "explanation": "'냉점' means 'cold receptor' in English.",
         "examples": {
-          "beginner": "We say \"냉점\" in Korean.",
-          "intermediate": "In Korea, people often say \"냉점\".",
-          "advanced": "\"냉점\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"냉점\" makes communication more natural."
+          "beginner": "냉점이 중요해요.",
+          "intermediate": "냉점을 위해 운동해요.",
+          "advanced": "냉점은 건강한 생활의 기본입니다.",
+          "master": "냉점에 대한 올바른 이해는 질병 예방의 첫걸음입니다."
         },
         "variations": {
           "formal": [
@@ -1254,6 +2385,35 @@
           ],
           "short": [
             "cold"
+          ]
+        },
+        "dialogue": {
+          "context": "건강에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "요즘 건강은 어때요?",
+              "romanization": "yojeum geongangeun eottaeyo?",
+              "translation": "How is your health these days?"
+            },
+            {
+              "speaker": "B",
+              "text": "냉점에 신경 쓰고 있어요.",
+              "romanization": "naengjeome singyeong sseugo iseoyo.",
+              "translation": "I'm paying attention to cold receptor."
+            },
+            {
+              "speaker": "A",
+              "text": "잘하고 있네요.",
+              "romanization": "jalhago isneyo.",
+              "translation": "That's good."
+            },
+            {
+              "speaker": "B",
+              "text": "건강이 제일 중요하잖아요.",
+              "romanization": "geongangi jeil jungyohajanayo.",
+              "translation": "Health is the most important thing."
+            }
           ]
         }
       }
@@ -1278,10 +2438,10 @@
         "word": "manubrium",
         "explanation": "'흉골병' means 'manubrium' in English.",
         "examples": {
-          "beginner": "We say \"흉골병\" in Korean.",
-          "intermediate": "In Korea, people often say \"흉골병\".",
-          "advanced": "\"흉골병\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"흉골병\" makes communication more natural."
+          "beginner": "manubrium is important.",
+          "intermediate": "I exercise for manubrium.",
+          "advanced": "manubrium is the foundation of a healthy life.",
+          "master": "Proper understanding of manubrium is the first step in disease prevention."
         },
         "variations": {
           "formal": [
@@ -1295,16 +2455,45 @@
           "short": [
             "manubrium"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about health",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "How is your health these days?",
+              "romanization": "",
+              "translation": "요즘 건강은 어때요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm paying attention to manubrium.",
+              "romanization": "",
+              "translation": "흉골병에 신경 쓰고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "잘하고 있네요."
+            },
+            {
+              "speaker": "B",
+              "text": "Health is the most important thing.",
+              "romanization": "",
+              "translation": "건강이 제일 중요하잖아요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "흉골병",
         "explanation": "흉골병의 뜻은 'manubrium'입니다.",
         "examples": {
-          "beginner": "\"흉골병\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"흉골병\"를 자주 써요.",
-          "advanced": "\"흉골병\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"흉골병\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "흉골병이 중요해요.",
+          "intermediate": "흉골병을 위해 운동해요.",
+          "advanced": "흉골병은 건강한 생활의 기본입니다.",
+          "master": "흉골병에 대한 올바른 이해는 질병 예방의 첫걸음입니다."
         },
         "variations": {
           "formal": [
@@ -1317,6 +2506,35 @@
           ],
           "short": [
             "흉골"
+          ]
+        },
+        "dialogue": {
+          "context": "건강에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "요즘 건강은 어때요?",
+              "romanization": "yojeum geongangeun eottaeyo?",
+              "translation": "How is your health these days?"
+            },
+            {
+              "speaker": "B",
+              "text": "흉골병에 신경 쓰고 있어요.",
+              "romanization": "hyunggolbyeonge singyeong sseugo iseoyo.",
+              "translation": "I'm paying attention to manubrium."
+            },
+            {
+              "speaker": "A",
+              "text": "잘하고 있네요.",
+              "romanization": "jalhago isneyo.",
+              "translation": "That's good."
+            },
+            {
+              "speaker": "B",
+              "text": "건강이 제일 중요하잖아요.",
+              "romanization": "geongangi jeil jungyohajanayo.",
+              "translation": "Health is the most important thing."
+            }
           ]
         }
       }

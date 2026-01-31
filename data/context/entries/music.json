@@ -17,9 +17,9 @@
         "word": "노래",
         "explanation": "목소리로 음악을 표현하는 것. 또는 그렇게 부르는 음악 작품.",
         "examples": {
-          "beginner": "노래을/를 들어요.",
-          "intermediate": "노래이/가 좋아요.",
-          "advanced": "노래은/는 음악에서 중요한 요소입니다.",
+          "beginner": "노래를 들어요.",
+          "intermediate": "노래가 좋아요.",
+          "advanced": "노래는 음악에서 중요한 요소입니다.",
           "master": "노래의 이론적 이해는 음악 감상의 깊이를 더합니다."
         },
         "variations": {
@@ -48,8 +48,8 @@
             },
             {
               "speaker": "B",
-              "text": "노래을/를 좋아해요.",
-              "romanization": "noraeeul/reul jotahaeyo.",
+              "text": "노래를 좋아해요.",
+              "romanization": "noraereul jotahaeyo.",
               "translation": "I like song."
             },
             {
@@ -104,7 +104,7 @@
               "speaker": "B",
               "text": "I like song.",
               "romanization": "",
-              "translation": "노래을/를 좋아해요."
+              "translation": "노래를 좋아해요."
             },
             {
               "speaker": "A",
@@ -149,9 +149,9 @@
         "word": "가수",
         "explanation": "노래를 직업으로 하는 사람. 싱어, 아티스트.",
         "examples": {
-          "beginner": "가수을/를 들어요.",
-          "intermediate": "가수이/가 좋아요.",
-          "advanced": "가수은/는 음악에서 중요한 요소입니다.",
+          "beginner": "가수를 들어요.",
+          "intermediate": "가수가 좋아요.",
+          "advanced": "가수는 음악에서 중요한 요소입니다.",
           "master": "가수의 이론적 이해는 음악 감상의 깊이를 더합니다."
         },
         "variations": {
@@ -180,8 +180,8 @@
             },
             {
               "speaker": "B",
-              "text": "가수을/를 좋아해요.",
-              "romanization": "gasueul/reul jotahaeyo.",
+              "text": "가수를 좋아해요.",
+              "romanization": "gasureul jotahaeyo.",
               "translation": "I like singer / artist."
             },
             {
@@ -236,7 +236,7 @@
               "speaker": "B",
               "text": "I like singer / artist.",
               "romanization": "",
-              "translation": "가수을/를 좋아해요."
+              "translation": "가수를 좋아해요."
             },
             {
               "speaker": "A",
@@ -277,9 +277,9 @@
         "word": "악기",
         "explanation": "음악을 연주하는 도구. 피아노, 기타, 바이올린 등.",
         "examples": {
-          "beginner": "악기을/를 들어요.",
-          "intermediate": "악기이/가 좋아요.",
-          "advanced": "악기은/는 음악에서 중요한 요소입니다.",
+          "beginner": "악기를 들어요.",
+          "intermediate": "악기가 좋아요.",
+          "advanced": "악기는 음악에서 중요한 요소입니다.",
           "master": "악기의 이론적 이해는 음악 감상의 깊이를 더합니다."
         },
         "variations": {
@@ -308,8 +308,8 @@
             },
             {
               "speaker": "B",
-              "text": "악기을/를 좋아해요.",
-              "romanization": "akgieul/reul jotahaeyo.",
+              "text": "악기를 좋아해요.",
+              "romanization": "akgireul jotahaeyo.",
               "translation": "I like musical instrument."
             },
             {
@@ -364,7 +364,7 @@
               "speaker": "B",
               "text": "I like musical instrument.",
               "romanization": "",
-              "translation": "악기을/를 좋아해요."
+              "translation": "악기를 좋아해요."
             },
             {
               "speaker": "A",
@@ -401,9 +401,9 @@
         "word": "피아노",
         "explanation": "건반을 눌러 소리를 내는 악기. 클래식과 대중음악에 널리 쓰인다.",
         "examples": {
-          "beginner": "피아노을/를 들어요.",
-          "intermediate": "피아노이/가 좋아요.",
-          "advanced": "피아노은/는 음악에서 중요한 요소입니다.",
+          "beginner": "피아노를 들어요.",
+          "intermediate": "피아노가 좋아요.",
+          "advanced": "피아노는 음악에서 중요한 요소입니다.",
           "master": "피아노의 이론적 이해는 음악 감상의 깊이를 더합니다."
         },
         "variations": {
@@ -432,8 +432,8 @@
             },
             {
               "speaker": "B",
-              "text": "피아노을/를 좋아해요.",
-              "romanization": "pianoeul/reul jotahaeyo.",
+              "text": "피아노를 좋아해요.",
+              "romanization": "pianoreul jotahaeyo.",
               "translation": "I like piano."
             },
             {
@@ -488,7 +488,7 @@
               "speaker": "B",
               "text": "I like piano.",
               "romanization": "",
-              "translation": "피아노을/를 좋아해요."
+              "translation": "피아노를 좋아해요."
             },
             {
               "speaker": "A",
@@ -529,9 +529,9 @@
         "word": "기타",
         "explanation": "줄을 튕겨 소리를 내는 현악기. 통기타와 전기기타가 있다.",
         "examples": {
-          "beginner": "기타을/를 들어요.",
-          "intermediate": "기타이/가 좋아요.",
-          "advanced": "기타은/는 음악에서 중요한 요소입니다.",
+          "beginner": "기타를 들어요.",
+          "intermediate": "기타가 좋아요.",
+          "advanced": "기타는 음악에서 중요한 요소입니다.",
           "master": "기타의 이론적 이해는 음악 감상의 깊이를 더합니다."
         },
         "variations": {
@@ -560,8 +560,8 @@
             },
             {
               "speaker": "B",
-              "text": "기타을/를 좋아해요.",
-              "romanization": "gitaeul/reul jotahaeyo.",
+              "text": "기타를 좋아해요.",
+              "romanization": "gitareul jotahaeyo.",
               "translation": "I like guitar."
             },
             {
@@ -616,7 +616,7 @@
               "speaker": "B",
               "text": "I like guitar.",
               "romanization": "",
-              "translation": "기타을/를 좋아해요."
+              "translation": "기타를 좋아해요."
             },
             {
               "speaker": "A",
@@ -657,9 +657,9 @@
         "word": "드럼",
         "explanation": "손이나 스틱으로 쳐서 소리를 내는 타악기. 밴드에서 리듬을 담당한다.",
         "examples": {
-          "beginner": "드럼을/를 들어요.",
-          "intermediate": "드럼이/가 좋아요.",
-          "advanced": "드럼은/는 음악에서 중요한 요소입니다.",
+          "beginner": "드럼을 들어요.",
+          "intermediate": "드럼이 좋아요.",
+          "advanced": "드럼은 음악에서 중요한 요소입니다.",
           "master": "드럼의 이론적 이해는 음악 감상의 깊이를 더합니다."
         },
         "variations": {
@@ -688,8 +688,8 @@
             },
             {
               "speaker": "B",
-              "text": "드럼을/를 좋아해요.",
-              "romanization": "deureomeul/reul jotahaeyo.",
+              "text": "드럼을 좋아해요.",
+              "romanization": "deureomeul jotahaeyo.",
               "translation": "I like drums."
             },
             {
@@ -744,7 +744,7 @@
               "speaker": "B",
               "text": "I like drums.",
               "romanization": "",
-              "translation": "드럼을/를 좋아해요."
+              "translation": "드럼을 좋아해요."
             },
             {
               "speaker": "A",
@@ -785,9 +785,9 @@
         "word": "콘서트",
         "explanation": "가수나 밴드가 관객 앞에서 노래를 부르는 공연. 음악회.",
         "examples": {
-          "beginner": "콘서트을/를 들어요.",
-          "intermediate": "콘서트이/가 좋아요.",
-          "advanced": "콘서트은/는 음악에서 중요한 요소입니다.",
+          "beginner": "콘서트를 들어요.",
+          "intermediate": "콘서트가 좋아요.",
+          "advanced": "콘서트는 음악에서 중요한 요소입니다.",
           "master": "콘서트의 이론적 이해는 음악 감상의 깊이를 더합니다."
         },
         "variations": {
@@ -816,8 +816,8 @@
             },
             {
               "speaker": "B",
-              "text": "콘서트을/를 좋아해요.",
-              "romanization": "konseoteueul/reul jotahaeyo.",
+              "text": "콘서트를 좋아해요.",
+              "romanization": "konseoteureul jotahaeyo.",
               "translation": "I like concert."
             },
             {
@@ -872,7 +872,7 @@
               "speaker": "B",
               "text": "I like concert.",
               "romanization": "",
-              "translation": "콘서트을/를 좋아해요."
+              "translation": "콘서트를 좋아해요."
             },
             {
               "speaker": "A",
@@ -913,9 +913,9 @@
         "word": "리듬",
         "explanation": "음악의 박자와 템포. 규칙적으로 반복되는 소리의 패턴.",
         "examples": {
-          "beginner": "리듬을/를 들어요.",
-          "intermediate": "리듬이/가 좋아요.",
-          "advanced": "리듬은/는 음악에서 중요한 요소입니다.",
+          "beginner": "리듬을 들어요.",
+          "intermediate": "리듬이 좋아요.",
+          "advanced": "리듬은 음악에서 중요한 요소입니다.",
           "master": "리듬의 이론적 이해는 음악 감상의 깊이를 더합니다."
         },
         "variations": {
@@ -944,8 +944,8 @@
             },
             {
               "speaker": "B",
-              "text": "리듬을/를 좋아해요.",
-              "romanization": "rideumeul/reul jotahaeyo.",
+              "text": "리듬을 좋아해요.",
+              "romanization": "rideumeul jotahaeyo.",
               "translation": "I like rhythm."
             },
             {
@@ -1000,7 +1000,7 @@
               "speaker": "B",
               "text": "I like rhythm.",
               "romanization": "",
-              "translation": "리듬을/를 좋아해요."
+              "translation": "리듬을 좋아해요."
             },
             {
               "speaker": "A",
@@ -1041,9 +1041,9 @@
         "word": "멜로디",
         "explanation": "노래의 주된 음악적 선율. 흥얼거릴 수 있는 곡의 주제.",
         "examples": {
-          "beginner": "멜로디을/를 들어요.",
-          "intermediate": "멜로디이/가 좋아요.",
-          "advanced": "멜로디은/는 음악에서 중요한 요소입니다.",
+          "beginner": "멜로디를 들어요.",
+          "intermediate": "멜로디가 좋아요.",
+          "advanced": "멜로디는 음악에서 중요한 요소입니다.",
           "master": "멜로디의 이론적 이해는 음악 감상의 깊이를 더합니다."
         },
         "variations": {
@@ -1072,8 +1072,8 @@
             },
             {
               "speaker": "B",
-              "text": "멜로디을/를 좋아해요.",
-              "romanization": "melrodieul/reul jotahaeyo.",
+              "text": "멜로디를 좋아해요.",
+              "romanization": "melrodireul jotahaeyo.",
               "translation": "I like melody."
             },
             {
@@ -1128,7 +1128,7 @@
               "speaker": "B",
               "text": "I like melody.",
               "romanization": "",
-              "translation": "멜로디을/를 좋아해요."
+              "translation": "멜로디를 좋아해요."
             },
             {
               "speaker": "A",
@@ -1169,9 +1169,9 @@
         "word": "케이팝",
         "explanation": "한국 대중음악. K-pop. 전 세계적으로 인기가 많다.",
         "examples": {
-          "beginner": "케이팝을/를 들어요.",
-          "intermediate": "케이팝이/가 좋아요.",
-          "advanced": "케이팝은/는 음악에서 중요한 요소입니다.",
+          "beginner": "케이팝을 들어요.",
+          "intermediate": "케이팝이 좋아요.",
+          "advanced": "케이팝은 음악에서 중요한 요소입니다.",
           "master": "케이팝의 이론적 이해는 음악 감상의 깊이를 더합니다."
         },
         "variations": {
@@ -1200,8 +1200,8 @@
             },
             {
               "speaker": "B",
-              "text": "케이팝을/를 좋아해요.",
-              "romanization": "keipapeul/reul jotahaeyo.",
+              "text": "케이팝을 좋아해요.",
+              "romanization": "keipapeul jotahaeyo.",
               "translation": "I like k-pop."
             },
             {
@@ -1256,7 +1256,7 @@
               "speaker": "B",
               "text": "I like k-pop.",
               "romanization": "",
-              "translation": "케이팝을/를 좋아해요."
+              "translation": "케이팝을 좋아해요."
             },
             {
               "speaker": "A",

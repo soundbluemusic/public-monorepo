@@ -21,7 +21,7 @@
         "word": "우주",
         "explanation": "지구와 모든 천체를 포함하는 무한한 공간. 우리가 사는 모든 것.",
         "examples": {
-          "beginner": "우주이/가 보여요.",
+          "beginner": "우주가 보여요.",
           "intermediate": "우주에 대해 배웠어요.",
           "advanced": "우주의 연구는 우주 과학에서 중요합니다.",
           "master": "우주에 대한 탐구는 인류의 우주 이해를 넓혀왔습니다."
@@ -52,8 +52,8 @@
             },
             {
               "speaker": "B",
-              "text": "우주이/가 정말 신기해요.",
-              "romanization": "ujui/ga jeongmal singihaeyo.",
+              "text": "우주가 정말 신기해요.",
+              "romanization": "ujuga jeongmal singihaeyo.",
               "translation": "Universe / Space / Cosmos is really fascinating."
             },
             {
@@ -108,7 +108,7 @@
               "speaker": "B",
               "text": "Universe / Space / Cosmos is really fascinating.",
               "romanization": "",
-              "translation": "우주이/가 정말 신기해요."
+              "translation": "우주가 정말 신기해요."
             },
             {
               "speaker": "A",
@@ -149,7 +149,7 @@
         "word": "별",
         "explanation": "밤하늘에 빛나는 천체. 스스로 빛을 내는 항성.",
         "examples": {
-          "beginner": "별이/가 보여요.",
+          "beginner": "별이 보여요.",
           "intermediate": "별에 대해 배웠어요.",
           "advanced": "별의 연구는 우주 과학에서 중요합니다.",
           "master": "별에 대한 탐구는 인류의 우주 이해를 넓혀왔습니다."
@@ -180,8 +180,8 @@
             },
             {
               "speaker": "B",
-              "text": "별이/가 정말 신기해요.",
-              "romanization": "byeoli/ga jeongmal singihaeyo.",
+              "text": "별이 정말 신기해요.",
+              "romanization": "byeoli jeongmal singihaeyo.",
               "translation": "Star is really fascinating."
             },
             {
@@ -236,7 +236,7 @@
               "speaker": "B",
               "text": "Star is really fascinating.",
               "romanization": "",
-              "translation": "별이/가 정말 신기해요."
+              "translation": "별이 정말 신기해요."
             },
             {
               "speaker": "A",
@@ -277,7 +277,7 @@
         "word": "지구",
         "explanation": "우리가 사는 행성. 태양계의 세 번째 행성.",
         "examples": {
-          "beginner": "지구이/가 보여요.",
+          "beginner": "지구가 보여요.",
           "intermediate": "지구에 대해 배웠어요.",
           "advanced": "지구의 연구는 우주 과학에서 중요합니다.",
           "master": "지구에 대한 탐구는 인류의 우주 이해를 넓혀왔습니다."
@@ -308,8 +308,8 @@
             },
             {
               "speaker": "B",
-              "text": "지구이/가 정말 신기해요.",
-              "romanization": "jigui/ga jeongmal singihaeyo.",
+              "text": "지구가 정말 신기해요.",
+              "romanization": "jiguga jeongmal singihaeyo.",
               "translation": "Earth is really fascinating."
             },
             {
@@ -364,7 +364,7 @@
               "speaker": "B",
               "text": "Earth is really fascinating.",
               "romanization": "",
-              "translation": "지구이/가 정말 신기해요."
+              "translation": "지구가 정말 신기해요."
             },
             {
               "speaker": "A",
@@ -405,7 +405,7 @@
         "word": "행성",
         "explanation": "별 주위를 도는 천체. 지구, 화성, 목성 등.",
         "examples": {
-          "beginner": "행성이/가 보여요.",
+          "beginner": "행성이 보여요.",
           "intermediate": "행성에 대해 배웠어요.",
           "advanced": "행성의 연구는 우주 과학에서 중요합니다.",
           "master": "행성에 대한 탐구는 인류의 우주 이해를 넓혀왔습니다."
@@ -436,8 +436,8 @@
             },
             {
               "speaker": "B",
-              "text": "행성이/가 정말 신기해요.",
-              "romanization": "haengseongi/ga jeongmal singihaeyo.",
+              "text": "행성이 정말 신기해요.",
+              "romanization": "haengseongi jeongmal singihaeyo.",
               "translation": "Planet is really fascinating."
             },
             {
@@ -492,7 +492,7 @@
               "speaker": "B",
               "text": "Planet is really fascinating.",
               "romanization": "",
-              "translation": "행성이/가 정말 신기해요."
+              "translation": "행성이 정말 신기해요."
             },
             {
               "speaker": "A",
@@ -533,7 +533,7 @@
         "word": "태양",
         "explanation": "태양계의 중심에 있는 별. 지구에 빛과 열을 주는 항성.",
         "examples": {
-          "beginner": "태양이/가 보여요.",
+          "beginner": "태양이 보여요.",
           "intermediate": "태양에 대해 배웠어요.",
           "advanced": "태양의 연구는 우주 과학에서 중요합니다.",
           "master": "태양에 대한 탐구는 인류의 우주 이해를 넓혀왔습니다."
@@ -564,8 +564,8 @@
             },
             {
               "speaker": "B",
-              "text": "태양이/가 정말 신기해요.",
-              "romanization": "taeyangi/ga jeongmal singihaeyo.",
+              "text": "태양이 정말 신기해요.",
+              "romanization": "taeyangi jeongmal singihaeyo.",
               "translation": "Sun is really fascinating."
             },
             {
@@ -620,7 +620,7 @@
               "speaker": "B",
               "text": "Sun is really fascinating.",
               "romanization": "",
-              "translation": "태양이/가 정말 신기해요."
+              "translation": "태양이 정말 신기해요."
             },
             {
               "speaker": "A",
@@ -661,7 +661,7 @@
         "word": "우주선",
         "explanation": "우주를 여행하는 탈것. 로켓, 인공위성 등.",
         "examples": {
-          "beginner": "우주선이/가 보여요.",
+          "beginner": "우주선이 보여요.",
           "intermediate": "우주선에 대해 배웠어요.",
           "advanced": "우주선의 연구는 우주 과학에서 중요합니다.",
           "master": "우주선에 대한 탐구는 인류의 우주 이해를 넓혀왔습니다."
@@ -692,8 +692,8 @@
             },
             {
               "speaker": "B",
-              "text": "우주선이/가 정말 신기해요.",
-              "romanization": "ujuseoni/ga jeongmal singihaeyo.",
+              "text": "우주선이 정말 신기해요.",
+              "romanization": "ujuseoni jeongmal singihaeyo.",
               "translation": "Spacecraft / Spaceship is really fascinating."
             },
             {
@@ -748,7 +748,7 @@
               "speaker": "B",
               "text": "Spacecraft / Spaceship is really fascinating.",
               "romanization": "",
-              "translation": "우주선이/가 정말 신기해요."
+              "translation": "우주선이 정말 신기해요."
             },
             {
               "speaker": "A",
@@ -789,7 +789,7 @@
         "word": "우주인",
         "explanation": "우주를 여행하는 사람. 우주 비행사. 또는 외계인을 가리키기도 한다.",
         "examples": {
-          "beginner": "우주인이/가 보여요.",
+          "beginner": "우주인이 보여요.",
           "intermediate": "우주인에 대해 배웠어요.",
           "advanced": "우주인의 연구는 우주 과학에서 중요합니다.",
           "master": "우주인에 대한 탐구는 인류의 우주 이해를 넓혀왔습니다."
@@ -820,8 +820,8 @@
             },
             {
               "speaker": "B",
-              "text": "우주인이/가 정말 신기해요.",
-              "romanization": "ujuini/ga jeongmal singihaeyo.",
+              "text": "우주인이 정말 신기해요.",
+              "romanization": "ujuini jeongmal singihaeyo.",
               "translation": "Astronaut / Spaceman is really fascinating."
             },
             {
@@ -876,7 +876,7 @@
               "speaker": "B",
               "text": "Astronaut / Spaceman is really fascinating.",
               "romanization": "",
-              "translation": "우주인이/가 정말 신기해요."
+              "translation": "우주인이 정말 신기해요."
             },
             {
               "speaker": "A",
@@ -917,7 +917,7 @@
         "word": "은하",
         "explanation": "수많은 별들이 모여 있는 거대한 천체 시스템. 우리 은하는 '은하수'라고 불린다.",
         "examples": {
-          "beginner": "은하이/가 보여요.",
+          "beginner": "은하가 보여요.",
           "intermediate": "은하에 대해 배웠어요.",
           "advanced": "은하의 연구는 우주 과학에서 중요합니다.",
           "master": "은하에 대한 탐구는 인류의 우주 이해를 넓혀왔습니다."
@@ -948,8 +948,8 @@
             },
             {
               "speaker": "B",
-              "text": "은하이/가 정말 신기해요.",
-              "romanization": "eunhai/ga jeongmal singihaeyo.",
+              "text": "은하가 정말 신기해요.",
+              "romanization": "eunhaga jeongmal singihaeyo.",
               "translation": "Galaxy is really fascinating."
             },
             {
@@ -1004,7 +1004,7 @@
               "speaker": "B",
               "text": "Galaxy is really fascinating.",
               "romanization": "",
-              "translation": "은하이/가 정말 신기해요."
+              "translation": "은하가 정말 신기해요."
             },
             {
               "speaker": "A",
@@ -1041,7 +1041,7 @@
         "word": "블랙홀",
         "explanation": "중력이 너무 강해서 빛조차 빠져나올 수 없는 천체. 암흑 천체.",
         "examples": {
-          "beginner": "블랙홀이/가 보여요.",
+          "beginner": "블랙홀이 보여요.",
           "intermediate": "블랙홀에 대해 배웠어요.",
           "advanced": "블랙홀의 연구는 우주 과학에서 중요합니다.",
           "master": "블랙홀에 대한 탐구는 인류의 우주 이해를 넓혀왔습니다."
@@ -1072,8 +1072,8 @@
             },
             {
               "speaker": "B",
-              "text": "블랙홀이/가 정말 신기해요.",
-              "romanization": "beulraekholi/ga jeongmal singihaeyo.",
+              "text": "블랙홀이 정말 신기해요.",
+              "romanization": "beulraekholi jeongmal singihaeyo.",
               "translation": "Black Hole is really fascinating."
             },
             {
@@ -1128,7 +1128,7 @@
               "speaker": "B",
               "text": "Black Hole is really fascinating.",
               "romanization": "",
-              "translation": "블랙홀이/가 정말 신기해요."
+              "translation": "블랙홀이 정말 신기해요."
             },
             {
               "speaker": "A",
@@ -1173,7 +1173,7 @@
         "word": "망원경",
         "explanation": "먼 곳을 크게 보이게 하는 광학 기구. 별을 관측하는 도구.",
         "examples": {
-          "beginner": "망원경이/가 보여요.",
+          "beginner": "망원경이 보여요.",
           "intermediate": "망원경에 대해 배웠어요.",
           "advanced": "망원경의 연구는 우주 과학에서 중요합니다.",
           "master": "망원경에 대한 탐구는 인류의 우주 이해를 넓혀왔습니다."
@@ -1204,8 +1204,8 @@
             },
             {
               "speaker": "B",
-              "text": "망원경이/가 정말 신기해요.",
-              "romanization": "mangwongyeongi/ga jeongmal singihaeyo.",
+              "text": "망원경이 정말 신기해요.",
+              "romanization": "mangwongyeongi jeongmal singihaeyo.",
               "translation": "Telescope is really fascinating."
             },
             {
@@ -1260,7 +1260,7 @@
               "speaker": "B",
               "text": "Telescope is really fascinating.",
               "romanization": "",
-              "translation": "망원경이/가 정말 신기해요."
+              "translation": "망원경이 정말 신기해요."
             },
             {
               "speaker": "A",

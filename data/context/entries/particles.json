@@ -18,8 +18,8 @@
         "word": "이",
         "explanation": "받침 있는 명사 뒤에 붙어 주어임을 나타내는 조사.",
         "examples": {
-          "beginner": "\"이\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"이\"이/가 필요해요.",
+          "beginner": "이를 사용해요.",
+          "intermediate": "이 문장에서 이가 필요해요.",
           "advanced": "\"이\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"이\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -28,8 +28,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"이\"은/는 언제 써요?",
-              "romanization": "\"i\"eun/neun eonje sseoyo?",
+              "text": "이는 언제 써요?",
+              "romanization": "ineun eonje sseoyo?",
               "translation": "When do you use \"이\"?"
             },
             {
@@ -69,7 +69,7 @@
               "speaker": "A",
               "text": "When do you use \"이\"?",
               "romanization": "",
-              "translation": "\"이\"은/는 언제 써요?"
+              "translation": "이는 언제 써요?"
             },
             {
               "speaker": "B",
@@ -117,8 +117,8 @@
         "word": "가",
         "explanation": "받침 없는 명사 뒤에 붙어 주어임을 나타내는 조사.",
         "examples": {
-          "beginner": "\"가\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"가\"이/가 필요해요.",
+          "beginner": "가를 사용해요.",
+          "intermediate": "이 문장에서 가가 필요해요.",
           "advanced": "\"가\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"가\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -127,8 +127,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"가\"은/는 언제 써요?",
-              "romanization": "\"ga\"eun/neun eonje sseoyo?",
+              "text": "가는 언제 써요?",
+              "romanization": "ganeun eonje sseoyo?",
               "translation": "When do you use \"가\"?"
             },
             {
@@ -168,7 +168,7 @@
               "speaker": "A",
               "text": "When do you use \"가\"?",
               "romanization": "",
-              "translation": "\"가\"은/는 언제 써요?"
+              "translation": "가는 언제 써요?"
             },
             {
               "speaker": "B",
@@ -216,8 +216,8 @@
         "word": "을",
         "explanation": "받침 있는 명사 뒤에 붙어 목적어임을 나타내는 조사.",
         "examples": {
-          "beginner": "\"을\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"을\"이/가 필요해요.",
+          "beginner": "을을 사용해요.",
+          "intermediate": "이 문장에서 을이 필요해요.",
           "advanced": "\"을\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"을\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -226,8 +226,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"을\"은/는 언제 써요?",
-              "romanization": "\"eul\"eun/neun eonje sseoyo?",
+              "text": "을은 언제 써요?",
+              "romanization": "euleun eonje sseoyo?",
               "translation": "When do you use \"을\"?"
             },
             {
@@ -267,7 +267,7 @@
               "speaker": "A",
               "text": "When do you use \"을\"?",
               "romanization": "",
-              "translation": "\"을\"은/는 언제 써요?"
+              "translation": "을은 언제 써요?"
             },
             {
               "speaker": "B",
@@ -315,8 +315,8 @@
         "word": "를",
         "explanation": "받침 없는 명사 뒤에 붙어 목적어임을 나타내는 조사.",
         "examples": {
-          "beginner": "\"를\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"를\"이/가 필요해요.",
+          "beginner": "를을 사용해요.",
+          "intermediate": "이 문장에서 를이 필요해요.",
           "advanced": "\"를\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"를\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -325,8 +325,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"를\"은/는 언제 써요?",
-              "romanization": "\"reul\"eun/neun eonje sseoyo?",
+              "text": "를은 언제 써요?",
+              "romanization": "reuleun eonje sseoyo?",
               "translation": "When do you use \"를\"?"
             },
             {
@@ -366,7 +366,7 @@
               "speaker": "A",
               "text": "When do you use \"를\"?",
               "romanization": "",
-              "translation": "\"를\"은/는 언제 써요?"
+              "translation": "를은 언제 써요?"
             },
             {
               "speaker": "B",
@@ -414,8 +414,8 @@
         "word": "은",
         "explanation": "받침 있는 명사 뒤에 붙어 주제나 대조를 나타내는 조사.",
         "examples": {
-          "beginner": "\"은\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"은\"이/가 필요해요.",
+          "beginner": "은을 사용해요.",
+          "intermediate": "이 문장에서 은이 필요해요.",
           "advanced": "\"은\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"은\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -424,8 +424,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"은\"은/는 언제 써요?",
-              "romanization": "\"eun\"eun/neun eonje sseoyo?",
+              "text": "은은 언제 써요?",
+              "romanization": "euneun eonje sseoyo?",
               "translation": "When do you use \"은\"?"
             },
             {
@@ -465,7 +465,7 @@
               "speaker": "A",
               "text": "When do you use \"은\"?",
               "romanization": "",
-              "translation": "\"은\"은/는 언제 써요?"
+              "translation": "은은 언제 써요?"
             },
             {
               "speaker": "B",
@@ -513,8 +513,8 @@
         "word": "는",
         "explanation": "받침 없는 명사 뒤에 붙어 주제나 대조를 나타내는 조사.",
         "examples": {
-          "beginner": "\"는\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"는\"이/가 필요해요.",
+          "beginner": "는을 사용해요.",
+          "intermediate": "이 문장에서 는이 필요해요.",
           "advanced": "\"는\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"는\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -523,8 +523,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"는\"은/는 언제 써요?",
-              "romanization": "\"neun\"eun/neun eonje sseoyo?",
+              "text": "는은 언제 써요?",
+              "romanization": "neuneun eonje sseoyo?",
               "translation": "When do you use \"는\"?"
             },
             {
@@ -564,7 +564,7 @@
               "speaker": "A",
               "text": "When do you use \"는\"?",
               "romanization": "",
-              "translation": "\"는\"은/는 언제 써요?"
+              "translation": "는은 언제 써요?"
             },
             {
               "speaker": "B",
@@ -613,8 +613,8 @@
         "word": "에",
         "explanation": "장소, 시간, 방향을 나타내는 조사. '~에 가다', '~에 있다' 등과 함께 사용.",
         "examples": {
-          "beginner": "\"에\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"에\"이/가 필요해요.",
+          "beginner": "에를 사용해요.",
+          "intermediate": "이 문장에서 에가 필요해요.",
           "advanced": "\"에\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"에\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -623,8 +623,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"에\"은/는 언제 써요?",
-              "romanization": "\"e\"eun/neun eonje sseoyo?",
+              "text": "에는 언제 써요?",
+              "romanization": "eneun eonje sseoyo?",
               "translation": "When do you use \"에\"?"
             },
             {
@@ -664,7 +664,7 @@
               "speaker": "A",
               "text": "When do you use \"에\"?",
               "romanization": "",
-              "translation": "\"에\"은/는 언제 써요?"
+              "translation": "에는 언제 써요?"
             },
             {
               "speaker": "B",
@@ -713,8 +713,8 @@
         "word": "에서",
         "explanation": "동작이 일어나는 장소를 나타내거나 출발점을 나타내는 조사.",
         "examples": {
-          "beginner": "\"에서\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"에서\"이/가 필요해요.",
+          "beginner": "에서를 사용해요.",
+          "intermediate": "이 문장에서 에서가 필요해요.",
           "advanced": "\"에서\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"에서\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -723,8 +723,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"에서\"은/는 언제 써요?",
-              "romanization": "\"eseo\"eun/neun eonje sseoyo?",
+              "text": "에서는 언제 써요?",
+              "romanization": "eseoneun eonje sseoyo?",
               "translation": "When do you use \"에서\"?"
             },
             {
@@ -764,7 +764,7 @@
               "speaker": "A",
               "text": "When do you use \"에서\"?",
               "romanization": "",
-              "translation": "\"에서\"은/는 언제 써요?"
+              "translation": "에서는 언제 써요?"
             },
             {
               "speaker": "B",
@@ -812,8 +812,8 @@
         "word": "로",
         "explanation": "받침 없거나 'ㄹ' 받침 뒤에 붙어 방향, 수단, 자격을 나타내는 조사.",
         "examples": {
-          "beginner": "\"로\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"로\"이/가 필요해요.",
+          "beginner": "로를 사용해요.",
+          "intermediate": "이 문장에서 로가 필요해요.",
           "advanced": "\"로\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"로\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -822,8 +822,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"로\"은/는 언제 써요?",
-              "romanization": "\"ro\"eun/neun eonje sseoyo?",
+              "text": "로는 언제 써요?",
+              "romanization": "roneun eonje sseoyo?",
               "translation": "When do you use \"로\"?"
             },
             {
@@ -863,7 +863,7 @@
               "speaker": "A",
               "text": "When do you use \"로\"?",
               "romanization": "",
-              "translation": "\"로\"은/는 언제 써요?"
+              "translation": "로는 언제 써요?"
             },
             {
               "speaker": "B",
@@ -911,8 +911,8 @@
         "word": "으로",
         "explanation": "'ㄹ' 제외한 받침 있는 명사 뒤에 붙어 방향, 수단, 자격을 나타내는 조사.",
         "examples": {
-          "beginner": "\"으로\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"으로\"이/가 필요해요.",
+          "beginner": "으로를 사용해요.",
+          "intermediate": "이 문장에서 으로가 필요해요.",
           "advanced": "\"으로\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"으로\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -921,8 +921,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"으로\"은/는 언제 써요?",
-              "romanization": "\"euro\"eun/neun eonje sseoyo?",
+              "text": "으로는 언제 써요?",
+              "romanization": "euroneun eonje sseoyo?",
               "translation": "When do you use \"으로\"?"
             },
             {
@@ -962,7 +962,7 @@
               "speaker": "A",
               "text": "When do you use \"으로\"?",
               "romanization": "",
-              "translation": "\"으로\"은/는 언제 써요?"
+              "translation": "으로는 언제 써요?"
             },
             {
               "speaker": "B",
@@ -1009,8 +1009,8 @@
         "word": "와",
         "explanation": "받침 없는 명사 뒤에 붙어 '~와 함께', '~와 같이'의 의미를 나타내는 조사.",
         "examples": {
-          "beginner": "\"와\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"와\"이/가 필요해요.",
+          "beginner": "와를 사용해요.",
+          "intermediate": "이 문장에서 와가 필요해요.",
           "advanced": "\"와\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"와\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -1019,8 +1019,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"와\"은/는 언제 써요?",
-              "romanization": "\"wa\"eun/neun eonje sseoyo?",
+              "text": "와는 언제 써요?",
+              "romanization": "waneun eonje sseoyo?",
               "translation": "When do you use \"와\"?"
             },
             {
@@ -1060,7 +1060,7 @@
               "speaker": "A",
               "text": "When do you use \"와\"?",
               "romanization": "",
-              "translation": "\"와\"은/는 언제 써요?"
+              "translation": "와는 언제 써요?"
             },
             {
               "speaker": "B",
@@ -1107,8 +1107,8 @@
         "word": "과",
         "explanation": "받침 있는 명사 뒤에 붙어 '~와 함께', '~와 같이'의 의미를 나타내는 조사.",
         "examples": {
-          "beginner": "\"과\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"과\"이/가 필요해요.",
+          "beginner": "과를 사용해요.",
+          "intermediate": "이 문장에서 과가 필요해요.",
           "advanced": "\"과\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"과\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -1117,8 +1117,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"과\"은/는 언제 써요?",
-              "romanization": "\"gwa\"eun/neun eonje sseoyo?",
+              "text": "과는 언제 써요?",
+              "romanization": "gwaneun eonje sseoyo?",
               "translation": "When do you use \"과\"?"
             },
             {
@@ -1158,7 +1158,7 @@
               "speaker": "A",
               "text": "When do you use \"과\"?",
               "romanization": "",
-              "translation": "\"과\"은/는 언제 써요?"
+              "translation": "과는 언제 써요?"
             },
             {
               "speaker": "B",
@@ -1206,8 +1206,8 @@
         "word": "의",
         "explanation": "명사 뒤에 붙어 소유나 관계를 나타내는 조사. 영어의 's, of에 해당.",
         "examples": {
-          "beginner": "\"의\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"의\"이/가 필요해요.",
+          "beginner": "의를 사용해요.",
+          "intermediate": "이 문장에서 의가 필요해요.",
           "advanced": "\"의\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"의\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -1216,8 +1216,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"의\"은/는 언제 써요?",
-              "romanization": "\"ui\"eun/neun eonje sseoyo?",
+              "text": "의는 언제 써요?",
+              "romanization": "uineun eonje sseoyo?",
               "translation": "When do you use \"의\"?"
             },
             {
@@ -1257,7 +1257,7 @@
               "speaker": "A",
               "text": "When do you use \"의\"?",
               "romanization": "",
-              "translation": "\"의\"은/는 언제 써요?"
+              "translation": "의는 언제 써요?"
             },
             {
               "speaker": "B",
@@ -1305,8 +1305,8 @@
         "word": "도",
         "explanation": "명사 뒤에 붙어 '~도', '역시', '또한'의 의미를 나타내는 보조사.",
         "examples": {
-          "beginner": "\"도\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"도\"이/가 필요해요.",
+          "beginner": "도를 사용해요.",
+          "intermediate": "이 문장에서 도가 필요해요.",
           "advanced": "\"도\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"도\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -1315,8 +1315,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"도\"은/는 언제 써요?",
-              "romanization": "\"do\"eun/neun eonje sseoyo?",
+              "text": "도는 언제 써요?",
+              "romanization": "doneun eonje sseoyo?",
               "translation": "When do you use \"도\"?"
             },
             {
@@ -1356,7 +1356,7 @@
               "speaker": "A",
               "text": "When do you use \"도\"?",
               "romanization": "",
-              "translation": "\"도\"은/는 언제 써요?"
+              "translation": "도는 언제 써요?"
             },
             {
               "speaker": "B",
@@ -1403,8 +1403,8 @@
         "word": "만",
         "explanation": "명사 뒤에 붙어 '오직', '단지'의 의미로 제한을 나타내는 보조사.",
         "examples": {
-          "beginner": "\"만\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"만\"이/가 필요해요.",
+          "beginner": "만을 사용해요.",
+          "intermediate": "이 문장에서 만이 필요해요.",
           "advanced": "\"만\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"만\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -1413,8 +1413,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"만\"은/는 언제 써요?",
-              "romanization": "\"man\"eun/neun eonje sseoyo?",
+              "text": "만은 언제 써요?",
+              "romanization": "maneun eonje sseoyo?",
               "translation": "When do you use \"만\"?"
             },
             {
@@ -1454,7 +1454,7 @@
               "speaker": "A",
               "text": "When do you use \"만\"?",
               "romanization": "",
-              "translation": "\"만\"은/는 언제 써요?"
+              "translation": "만은 언제 써요?"
             },
             {
               "speaker": "B",
@@ -1502,8 +1502,8 @@
         "word": "까지",
         "explanation": "명사 뒤에 붙어 끝 지점이나 '~조차'의 의미를 나타내는 보조사.",
         "examples": {
-          "beginner": "\"까지\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"까지\"이/가 필요해요.",
+          "beginner": "까지를 사용해요.",
+          "intermediate": "이 문장에서 까지가 필요해요.",
           "advanced": "\"까지\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"까지\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -1512,8 +1512,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"까지\"은/는 언제 써요?",
-              "romanization": "\"kkaji\"eun/neun eonje sseoyo?",
+              "text": "까지는 언제 써요?",
+              "romanization": "kkajineun eonje sseoyo?",
               "translation": "When do you use \"까지\"?"
             },
             {
@@ -1553,7 +1553,7 @@
               "speaker": "A",
               "text": "When do you use \"까지\"?",
               "romanization": "",
-              "translation": "\"까지\"은/는 언제 써요?"
+              "translation": "까지는 언제 써요?"
             },
             {
               "speaker": "B",
@@ -1601,8 +1601,8 @@
         "word": "부터",
         "explanation": "명사 뒤에 붙어 시작 지점을 나타내는 조사.",
         "examples": {
-          "beginner": "\"부터\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"부터\"이/가 필요해요.",
+          "beginner": "부터를 사용해요.",
+          "intermediate": "이 문장에서 부터가 필요해요.",
           "advanced": "\"부터\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"부터\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -1611,8 +1611,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"부터\"은/는 언제 써요?",
-              "romanization": "\"buteo\"eun/neun eonje sseoyo?",
+              "text": "부터는 언제 써요?",
+              "romanization": "buteoneun eonje sseoyo?",
               "translation": "When do you use \"부터\"?"
             },
             {
@@ -1652,7 +1652,7 @@
               "speaker": "A",
               "text": "When do you use \"부터\"?",
               "romanization": "",
-              "translation": "\"부터\"은/는 언제 써요?"
+              "translation": "부터는 언제 써요?"
             },
             {
               "speaker": "B",
@@ -1699,8 +1699,8 @@
         "word": "보다",
         "explanation": "명사 뒤에 붙어 비교의 기준을 나타내는 조사.",
         "examples": {
-          "beginner": "\"보다\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"보다\"이/가 필요해요.",
+          "beginner": "보다를 사용해요.",
+          "intermediate": "이 문장에서 보다가 필요해요.",
           "advanced": "\"보다\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"보다\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -1709,8 +1709,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"보다\"은/는 언제 써요?",
-              "romanization": "\"boda\"eun/neun eonje sseoyo?",
+              "text": "보다는 언제 써요?",
+              "romanization": "bodaneun eonje sseoyo?",
               "translation": "When do you use \"보다\"?"
             },
             {
@@ -1750,7 +1750,7 @@
               "speaker": "A",
               "text": "When do you use \"보다\"?",
               "romanization": "",
-              "translation": "\"보다\"은/는 언제 써요?"
+              "translation": "보다는 언제 써요?"
             },
             {
               "speaker": "B",
@@ -1799,8 +1799,8 @@
         "word": "한테",
         "explanation": "사람이나 동물 뒤에 붙어 '~에게'의 구어체 표현.",
         "examples": {
-          "beginner": "\"한테\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"한테\"이/가 필요해요.",
+          "beginner": "한테를 사용해요.",
+          "intermediate": "이 문장에서 한테가 필요해요.",
           "advanced": "\"한테\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"한테\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -1809,8 +1809,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"한테\"은/는 언제 써요?",
-              "romanization": "\"hante\"eun/neun eonje sseoyo?",
+              "text": "한테는 언제 써요?",
+              "romanization": "hanteneun eonje sseoyo?",
               "translation": "When do you use \"한테\"?"
             },
             {
@@ -1850,7 +1850,7 @@
               "speaker": "A",
               "text": "When do you use \"한테\"?",
               "romanization": "",
-              "translation": "\"한테\"은/는 언제 써요?"
+              "translation": "한테는 언제 써요?"
             },
             {
               "speaker": "B",
@@ -1899,8 +1899,8 @@
         "word": "에게",
         "explanation": "사람이나 동물 뒤에 붙어 행동의 대상을 나타내는 조사.",
         "examples": {
-          "beginner": "\"에게\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"에게\"이/가 필요해요.",
+          "beginner": "에게를 사용해요.",
+          "intermediate": "이 문장에서 에게가 필요해요.",
           "advanced": "\"에게\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"에게\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -1909,8 +1909,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"에게\"은/는 언제 써요?",
-              "romanization": "\"ege\"eun/neun eonje sseoyo?",
+              "text": "에게는 언제 써요?",
+              "romanization": "egeneun eonje sseoyo?",
               "translation": "When do you use \"에게\"?"
             },
             {
@@ -1950,7 +1950,7 @@
               "speaker": "A",
               "text": "When do you use \"에게\"?",
               "romanization": "",
-              "translation": "\"에게\"은/는 언제 써요?"
+              "translation": "에게는 언제 써요?"
             },
             {
               "speaker": "B",
@@ -1998,8 +1998,8 @@
         "word": "처럼",
         "explanation": "명사 뒤에 붙어 비유나 비슷함을 나타내는 조사.",
         "examples": {
-          "beginner": "\"처럼\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"처럼\"이/가 필요해요.",
+          "beginner": "처럼을 사용해요.",
+          "intermediate": "이 문장에서 처럼이 필요해요.",
           "advanced": "\"처럼\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"처럼\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -2008,8 +2008,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"처럼\"은/는 언제 써요?",
-              "romanization": "\"cheoreom\"eun/neun eonje sseoyo?",
+              "text": "처럼은 언제 써요?",
+              "romanization": "cheoreomeun eonje sseoyo?",
               "translation": "When do you use \"처럼\"?"
             },
             {
@@ -2049,7 +2049,7 @@
               "speaker": "A",
               "text": "When do you use \"처럼\"?",
               "romanization": "",
-              "translation": "\"처럼\"은/는 언제 써요?"
+              "translation": "처럼은 언제 써요?"
             },
             {
               "speaker": "B",
@@ -2097,8 +2097,8 @@
         "word": "같이",
         "explanation": "명사 뒤에 붙어 '~처럼' 또는 '함께'의 의미를 나타내는 조사.",
         "examples": {
-          "beginner": "\"같이\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"같이\"이/가 필요해요.",
+          "beginner": "같이를 사용해요.",
+          "intermediate": "이 문장에서 같이가 필요해요.",
           "advanced": "\"같이\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"같이\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -2107,8 +2107,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"같이\"은/는 언제 써요?",
-              "romanization": "\"gati\"eun/neun eonje sseoyo?",
+              "text": "같이는 언제 써요?",
+              "romanization": "gatineun eonje sseoyo?",
               "translation": "When do you use \"같이\"?"
             },
             {
@@ -2148,7 +2148,7 @@
               "speaker": "A",
               "text": "When do you use \"같이\"?",
               "romanization": "",
-              "translation": "\"같이\"은/는 언제 써요?"
+              "translation": "같이는 언제 써요?"
             },
             {
               "speaker": "B",
@@ -2196,8 +2196,8 @@
         "word": "하고",
         "explanation": "명사 뒤에 붙어 '~와/과'의 구어체 표현. 나열이나 동반을 나타냄.",
         "examples": {
-          "beginner": "\"하고\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"하고\"이/가 필요해요.",
+          "beginner": "하고를 사용해요.",
+          "intermediate": "이 문장에서 하고가 필요해요.",
           "advanced": "\"하고\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"하고\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -2206,8 +2206,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"하고\"은/는 언제 써요?",
-              "romanization": "\"hago\"eun/neun eonje sseoyo?",
+              "text": "하고는 언제 써요?",
+              "romanization": "hagoneun eonje sseoyo?",
               "translation": "When do you use \"하고\"?"
             },
             {
@@ -2247,7 +2247,7 @@
               "speaker": "A",
               "text": "When do you use \"하고\"?",
               "romanization": "",
-              "translation": "\"하고\"은/는 언제 써요?"
+              "translation": "하고는 언제 써요?"
             },
             {
               "speaker": "B",
@@ -2295,8 +2295,8 @@
         "word": "밖에",
         "explanation": "명사 뒤에 붙어 '~만'의 의미를 강조. 반드시 부정문과 함께 사용.",
         "examples": {
-          "beginner": "\"밖에\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"밖에\"이/가 필요해요.",
+          "beginner": "밖에를 사용해요.",
+          "intermediate": "이 문장에서 밖에가 필요해요.",
           "advanced": "\"밖에\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"밖에\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -2305,8 +2305,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"밖에\"은/는 언제 써요?",
-              "romanization": "\"bake\"eun/neun eonje sseoyo?",
+              "text": "밖에는 언제 써요?",
+              "romanization": "bakeneun eonje sseoyo?",
               "translation": "When do you use \"밖에\"?"
             },
             {
@@ -2346,7 +2346,7 @@
               "speaker": "A",
               "text": "When do you use \"밖에\"?",
               "romanization": "",
-              "translation": "\"밖에\"은/는 언제 써요?"
+              "translation": "밖에는 언제 써요?"
             },
             {
               "speaker": "B",
@@ -2394,8 +2394,8 @@
         "word": "마저",
         "explanation": "명사 뒤에 붙어 마지막 남은 것까지 포함함을 나타내는 보조사.",
         "examples": {
-          "beginner": "\"마저\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"마저\"이/가 필요해요.",
+          "beginner": "마저를 사용해요.",
+          "intermediate": "이 문장에서 마저가 필요해요.",
           "advanced": "\"마저\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"마저\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -2404,8 +2404,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"마저\"은/는 언제 써요?",
-              "romanization": "\"majeo\"eun/neun eonje sseoyo?",
+              "text": "마저는 언제 써요?",
+              "romanization": "majeoneun eonje sseoyo?",
               "translation": "When do you use \"마저\"?"
             },
             {
@@ -2445,7 +2445,7 @@
               "speaker": "A",
               "text": "When do you use \"마저\"?",
               "romanization": "",
-              "translation": "\"마저\"은/는 언제 써요?"
+              "translation": "마저는 언제 써요?"
             },
             {
               "speaker": "B",
@@ -2493,8 +2493,8 @@
         "word": "조차",
         "explanation": "명사 뒤에 붙어 예상 밖의 극단적인 경우까지 포함함을 나타내는 보조사.",
         "examples": {
-          "beginner": "\"조차\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"조차\"이/가 필요해요.",
+          "beginner": "조차를 사용해요.",
+          "intermediate": "이 문장에서 조차가 필요해요.",
           "advanced": "\"조차\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"조차\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -2503,8 +2503,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"조차\"은/는 언제 써요?",
-              "romanization": "\"jocha\"eun/neun eonje sseoyo?",
+              "text": "조차는 언제 써요?",
+              "romanization": "jochaneun eonje sseoyo?",
               "translation": "When do you use \"조차\"?"
             },
             {
@@ -2544,7 +2544,7 @@
               "speaker": "A",
               "text": "When do you use \"조차\"?",
               "romanization": "",
-              "translation": "\"조차\"은/는 언제 써요?"
+              "translation": "조차는 언제 써요?"
             },
             {
               "speaker": "B",
@@ -2591,8 +2591,8 @@
         "word": "라고",
         "explanation": "받침 없는 명사 뒤에 붙어 인용이나 호칭을 나타내는 조사.",
         "examples": {
-          "beginner": "\"라고\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"라고\"이/가 필요해요.",
+          "beginner": "라고를 사용해요.",
+          "intermediate": "이 문장에서 라고가 필요해요.",
           "advanced": "\"라고\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"라고\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -2601,8 +2601,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"라고\"은/는 언제 써요?",
-              "romanization": "\"rago\"eun/neun eonje sseoyo?",
+              "text": "라고는 언제 써요?",
+              "romanization": "ragoneun eonje sseoyo?",
               "translation": "When do you use \"라고\"?"
             },
             {
@@ -2642,7 +2642,7 @@
               "speaker": "A",
               "text": "When do you use \"라고\"?",
               "romanization": "",
-              "translation": "\"라고\"은/는 언제 써요?"
+              "translation": "라고는 언제 써요?"
             },
             {
               "speaker": "B",
@@ -2689,8 +2689,8 @@
         "word": "이라고",
         "explanation": "받침 있는 명사 뒤에 붙어 인용이나 호칭을 나타내는 조사.",
         "examples": {
-          "beginner": "\"이라고\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"이라고\"이/가 필요해요.",
+          "beginner": "이라고를 사용해요.",
+          "intermediate": "이 문장에서 이라고가 필요해요.",
           "advanced": "\"이라고\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"이라고\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -2699,8 +2699,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"이라고\"은/는 언제 써요?",
-              "romanization": "\"irago\"eun/neun eonje sseoyo?",
+              "text": "이라고는 언제 써요?",
+              "romanization": "iragoneun eonje sseoyo?",
               "translation": "When do you use \"이라고\"?"
             },
             {
@@ -2740,7 +2740,7 @@
               "speaker": "A",
               "text": "When do you use \"이라고\"?",
               "romanization": "",
-              "translation": "\"이라고\"은/는 언제 써요?"
+              "translation": "이라고는 언제 써요?"
             },
             {
               "speaker": "B",
@@ -2788,8 +2788,8 @@
         "word": "께",
         "explanation": "높임의 대상 뒤에 붙어 '에게'의 존경 표현.",
         "examples": {
-          "beginner": "\"께\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"께\"이/가 필요해요.",
+          "beginner": "께를 사용해요.",
+          "intermediate": "이 문장에서 께가 필요해요.",
           "advanced": "\"께\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"께\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -2798,8 +2798,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"께\"은/는 언제 써요?",
-              "romanization": "\"kke\"eun/neun eonje sseoyo?",
+              "text": "께는 언제 써요?",
+              "romanization": "kkeneun eonje sseoyo?",
               "translation": "When do you use \"께\"?"
             },
             {
@@ -2839,7 +2839,7 @@
               "speaker": "A",
               "text": "When do you use \"께\"?",
               "romanization": "",
-              "translation": "\"께\"은/는 언제 써요?"
+              "translation": "께는 언제 써요?"
             },
             {
               "speaker": "B",
@@ -2887,8 +2887,8 @@
         "word": "서",
         "explanation": "'~어서/아서'의 줄임말로 이유나 순서를 나타내는 연결 조사.",
         "examples": {
-          "beginner": "\"서\"을/를 사용해요.",
-          "intermediate": "이 문장에서 \"서\"이/가 필요해요.",
+          "beginner": "서를 사용해요.",
+          "intermediate": "이 문장에서 서가 필요해요.",
           "advanced": "\"서\"의 올바른 사용은 한국어 문법의 핵심입니다.",
           "master": "\"서\"의 미묘한 차이를 이해하면 자연스러운 한국어 구사가 가능합니다."
         },
@@ -2897,8 +2897,8 @@
           "dialogue": [
             {
               "speaker": "A",
-              "text": "\"서\"은/는 언제 써요?",
-              "romanization": "\"seo\"eun/neun eonje sseoyo?",
+              "text": "서는 언제 써요?",
+              "romanization": "seoneun eonje sseoyo?",
               "translation": "When do you use \"서\"?"
             },
             {
@@ -2938,7 +2938,7 @@
               "speaker": "A",
               "text": "When do you use \"서\"?",
               "romanization": "",
-              "translation": "\"서\"은/는 언제 써요?"
+              "translation": "서는 언제 써요?"
             },
             {
               "speaker": "B",

@@ -21,20 +21,78 @@
         "word": "Phone / Phone call",
         "explanation": "A device for voice communication or the act of calling. Mobile phones are also called '휴대전화'.",
         "examples": {
-          "beginner": "I phone / phone call every day.",
-          "intermediate": "Phone / Phone call is important in daily life.",
-          "advanced": "Through phone / phone call, I maintain a regular lifestyle.",
-          "master": "Making phone / phone call a habit is key to improving quality of life."
+          "beginner": "I need a phone / phone call.",
+          "intermediate": "I'm looking for a phone / phone call.",
+          "advanced": "A phone / phone call is an essential item in life.",
+          "master": "The development of phone / phone call reflects changes in technology and culture."
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the phone / phone call?",
+              "romanization": "",
+              "translation": "전화가 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "전화",
         "explanation": "A device for voice communication or the act of calling. Mobile phones are also called '휴대전화'.",
         "examples": {
-          "beginner": "I phone / phone call every day.",
-          "intermediate": "Phone / Phone call is important in daily life.",
-          "advanced": "Through phone / phone call, I maintain a regular lifestyle.",
-          "master": "Making phone / phone call a habit is key to improving quality of life."
+          "beginner": "전화가 필요해요.",
+          "intermediate": "전화를 찾고 있어요.",
+          "advanced": "전화는 생활에 필수적인 물건입니다.",
+          "master": "전화의 발전 과정은 기술과 문화의 변화를 반영합니다."
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "전화가 어디 있어요?",
+              "romanization": "jeonhwaga eodi iseoyo?",
+              "translation": "Where is the phone / phone call?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
+          ]
         }
       }
     }
@@ -61,20 +119,78 @@
         "word": "Soap",
         "explanation": "A cleansing agent for washing hands or body.",
         "examples": {
-          "beginner": "I soap every day.",
-          "intermediate": "Soap is important in daily life.",
-          "advanced": "Through soap, I maintain a regular lifestyle.",
-          "master": "Making soap a habit is key to improving quality of life."
+          "beginner": "I need a soap.",
+          "intermediate": "I'm looking for a soap.",
+          "advanced": "A soap is an essential item in life.",
+          "master": "The development of soap reflects changes in technology and culture."
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the soap?",
+              "romanization": "",
+              "translation": "비누가 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "비누",
         "explanation": "손이나 몸을 씻을 때 쓰는 세정제.",
         "examples": {
-          "beginner": "매일 비누을/를 해요.",
-          "intermediate": "비누은/는 일상에서 중요해요.",
-          "advanced": "비누을/를 통해 규칙적인 생활을 유지합니다.",
-          "master": "비누의 습관화는 삶의 질을 향상시키는 핵심입니다."
+          "beginner": "비누가 필요해요.",
+          "intermediate": "비누를 찾고 있어요.",
+          "advanced": "비누는 생활에 필수적인 물건입니다.",
+          "master": "비누의 발전 과정은 기술과 문화의 변화를 반영합니다."
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "비누가 어디 있어요?",
+              "romanization": "binuga eodi iseoyo?",
+              "translation": "Where is the soap?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
+          ]
         }
       }
     }
@@ -101,20 +217,78 @@
         "word": "Towel",
         "explanation": "Cloth for drying water.",
         "examples": {
-          "beginner": "I towel every day.",
-          "intermediate": "Towel is important in daily life.",
-          "advanced": "Through towel, I maintain a regular lifestyle.",
-          "master": "Making towel a habit is key to improving quality of life."
+          "beginner": "I need a towel.",
+          "intermediate": "I'm looking for a towel.",
+          "advanced": "A towel is an essential item in life.",
+          "master": "The development of towel reflects changes in technology and culture."
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the towel?",
+              "romanization": "",
+              "translation": "수건이 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "수건",
         "explanation": "물기를 닦는 천.",
         "examples": {
-          "beginner": "매일 수건을/를 해요.",
-          "intermediate": "수건은/는 일상에서 중요해요.",
-          "advanced": "수건을/를 통해 규칙적인 생활을 유지합니다.",
-          "master": "수건의 습관화는 삶의 질을 향상시키는 핵심입니다."
+          "beginner": "수건이 필요해요.",
+          "intermediate": "수건을 찾고 있어요.",
+          "advanced": "수건은 생활에 필수적인 물건입니다.",
+          "master": "수건의 발전 과정은 기술과 문화의 변화를 반영합니다."
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "수건이 어디 있어요?",
+              "romanization": "sugeoni eodi iseoyo?",
+              "translation": "Where is the towel?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
+          ]
         }
       }
     }
@@ -138,10 +312,10 @@
         "word": "latch",
         "explanation": "'빗장' means 'latch' in English.",
         "examples": {
-          "beginner": "We say \"빗장\" in Korean.",
-          "intermediate": "In Korea, people often say \"빗장\".",
-          "advanced": "\"빗장\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"빗장\" makes communication more natural."
+          "beginner": "I need a latch.",
+          "intermediate": "I'm looking for a latch.",
+          "advanced": "A latch is an essential item in life.",
+          "master": "The development of latch reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -155,16 +329,45 @@
           "short": [
             "latch"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the latch?",
+              "romanization": "",
+              "translation": "빗장이 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "빗장",
         "explanation": "빗장의 뜻은 'latch'입니다.",
         "examples": {
-          "beginner": "\"빗장\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"빗장\"를 자주 써요.",
-          "advanced": "\"빗장\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"빗장\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "빗장이 필요해요.",
+          "intermediate": "빗장을 찾고 있어요.",
+          "advanced": "빗장은 생활에 필수적인 물건입니다.",
+          "master": "빗장의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -177,6 +380,35 @@
           ],
           "short": [
             "빗장"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "빗장이 어디 있어요?",
+              "romanization": "bisjangi eodi iseoyo?",
+              "translation": "Where is the latch?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -201,10 +433,10 @@
         "word": "video phone",
         "explanation": "'비디오폰' means 'video phone' in English.",
         "examples": {
-          "beginner": "We say \"비디오폰\" in Korean.",
-          "intermediate": "In Korea, people often say \"비디오폰\".",
-          "advanced": "\"비디오폰\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"비디오폰\" makes communication more natural."
+          "beginner": "I need a video phone.",
+          "intermediate": "I'm looking for a video phone.",
+          "advanced": "A video phone is an essential item in life.",
+          "master": "The development of video phone reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -218,16 +450,45 @@
           "short": [
             "video"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the video phone?",
+              "romanization": "",
+              "translation": "비디오폰이 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "비디오폰",
         "explanation": "'비디오폰' means 'video phone' in English.",
         "examples": {
-          "beginner": "We say \"비디오폰\" in Korean.",
-          "intermediate": "In Korea, people often say \"비디오폰\".",
-          "advanced": "\"비디오폰\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"비디오폰\" makes communication more natural."
+          "beginner": "비디오폰이 필요해요.",
+          "intermediate": "비디오폰을 찾고 있어요.",
+          "advanced": "비디오폰은 생활에 필수적인 물건입니다.",
+          "master": "비디오폰의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -240,6 +501,35 @@
           ],
           "short": [
             "video"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "비디오폰이 어디 있어요?",
+              "romanization": "bidioponi eodi iseoyo?",
+              "translation": "Where is the video phone?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -264,10 +554,10 @@
         "word": "mirror glass",
         "explanation": "'거울유리' means 'mirror glass' in English.",
         "examples": {
-          "beginner": "We say \"거울유리\" in Korean.",
-          "intermediate": "In Korea, people often say \"거울유리\".",
-          "advanced": "\"거울유리\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"거울유리\" makes communication more natural."
+          "beginner": "I need a mirror glass.",
+          "intermediate": "I'm looking for a mirror glass.",
+          "advanced": "A mirror glass is an essential item in life.",
+          "master": "The development of mirror glass reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -281,16 +571,45 @@
           "short": [
             "mirror"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the mirror glass?",
+              "romanization": "",
+              "translation": "거울유리가 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "거울유리",
         "explanation": "거울유리의 뜻은 'mirror glass'입니다.",
         "examples": {
-          "beginner": "\"거울유리\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"거울유리\"를 자주 써요.",
-          "advanced": "\"거울유리\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"거울유리\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "거울유리가 필요해요.",
+          "intermediate": "거울유리를 찾고 있어요.",
+          "advanced": "거울유리는 생활에 필수적인 물건입니다.",
+          "master": "거울유리의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -303,6 +622,35 @@
           ],
           "short": [
             "거울"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "거울유리가 어디 있어요?",
+              "romanization": "geoulyuriga eodi iseoyo?",
+              "translation": "Where is the mirror glass?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -327,10 +675,10 @@
         "word": "mirror",
         "explanation": "'거울' means 'mirror' in English.",
         "examples": {
-          "beginner": "We say \"거울\" in Korean.",
-          "intermediate": "In Korea, people often say \"거울\".",
-          "advanced": "\"거울\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"거울\" makes communication more natural."
+          "beginner": "I need a mirror.",
+          "intermediate": "I'm looking for a mirror.",
+          "advanced": "A mirror is an essential item in life.",
+          "master": "The development of mirror reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -344,16 +692,45 @@
           "short": [
             "mirror"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the mirror?",
+              "romanization": "",
+              "translation": "거울이 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "거울",
         "explanation": "거울의 뜻은 'mirror'입니다.",
         "examples": {
-          "beginner": "\"거울\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"거울\"를 자주 써요.",
-          "advanced": "\"거울\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"거울\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "거울이 필요해요.",
+          "intermediate": "거울을 찾고 있어요.",
+          "advanced": "거울은 생활에 필수적인 물건입니다.",
+          "master": "거울의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -366,6 +743,35 @@
           ],
           "short": [
             "거울"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "거울이 어디 있어요?",
+              "romanization": "geouli eodi iseoyo?",
+              "translation": "Where is the mirror?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -390,10 +796,10 @@
         "word": "umbrella stand",
         "explanation": "'우산꽂이' means 'umbrella stand' in English.",
         "examples": {
-          "beginner": "We say \"우산꽂이\" in Korean.",
-          "intermediate": "In Korea, people often say \"우산꽂이\".",
-          "advanced": "\"우산꽂이\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"우산꽂이\" makes communication more natural."
+          "beginner": "I need a umbrella stand.",
+          "intermediate": "I'm looking for a umbrella stand.",
+          "advanced": "A umbrella stand is an essential item in life.",
+          "master": "The development of umbrella stand reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -407,16 +813,45 @@
           "short": [
             "umbrella"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the umbrella stand?",
+              "romanization": "",
+              "translation": "우산꽂이가 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "우산꽂이",
         "explanation": "우산꽂이의 뜻은 'umbrella stand'입니다.",
         "examples": {
-          "beginner": "\"우산꽂이\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"우산꽂이\"를 자주 써요.",
-          "advanced": "\"우산꽂이\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"우산꽂이\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "우산꽂이가 필요해요.",
+          "intermediate": "우산꽂이를 찾고 있어요.",
+          "advanced": "우산꽂이는 생활에 필수적인 물건입니다.",
+          "master": "우산꽂이의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -429,6 +864,35 @@
           ],
           "short": [
             "우산"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "우산꽂이가 어디 있어요?",
+              "romanization": "usankkotiga eodi iseoyo?",
+              "translation": "Where is the umbrella stand?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -453,10 +917,10 @@
         "word": "full-length mirror",
         "explanation": "'전신거울' means 'full-length mirror' in English.",
         "examples": {
-          "beginner": "We say \"전신거울\" in Korean.",
-          "intermediate": "In Korea, people often say \"전신거울\".",
-          "advanced": "\"전신거울\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"전신거울\" makes communication more natural."
+          "beginner": "I need a full-length mirror.",
+          "intermediate": "I'm looking for a full-length mirror.",
+          "advanced": "A full-length mirror is an essential item in life.",
+          "master": "The development of full-length mirror reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -470,16 +934,45 @@
           "short": [
             "full-length"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the full-length mirror?",
+              "romanization": "",
+              "translation": "전신거울이 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "전신거울",
         "explanation": "전신거울의 뜻은 'full-length mirror'입니다.",
         "examples": {
-          "beginner": "\"전신거울\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"전신거울\"를 자주 써요.",
-          "advanced": "\"전신거울\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"전신거울\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "전신거울이 필요해요.",
+          "intermediate": "전신거울을 찾고 있어요.",
+          "advanced": "전신거울은 생활에 필수적인 물건입니다.",
+          "master": "전신거울의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -492,6 +985,35 @@
           ],
           "short": [
             "전신"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "전신거울이 어디 있어요?",
+              "romanization": "jeonsingeouli eodi iseoyo?",
+              "translation": "Where is the full-length mirror?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -516,10 +1038,10 @@
         "word": "lighted mirror",
         "explanation": "'조명거울' means 'lighted mirror' in English.",
         "examples": {
-          "beginner": "We say \"조명거울\" in Korean.",
-          "intermediate": "In Korea, people often say \"조명거울\".",
-          "advanced": "\"조명거울\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"조명거울\" makes communication more natural."
+          "beginner": "I need a lighted mirror.",
+          "intermediate": "I'm looking for a lighted mirror.",
+          "advanced": "A lighted mirror is an essential item in life.",
+          "master": "The development of lighted mirror reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -533,16 +1055,45 @@
           "short": [
             "lighted"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the lighted mirror?",
+              "romanization": "",
+              "translation": "조명거울이 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "조명거울",
         "explanation": "조명거울의 뜻은 'lighted mirror'입니다.",
         "examples": {
-          "beginner": "\"조명거울\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"조명거울\"를 자주 써요.",
-          "advanced": "\"조명거울\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"조명거울\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "조명거울이 필요해요.",
+          "intermediate": "조명거울을 찾고 있어요.",
+          "advanced": "조명거울은 생활에 필수적인 물건입니다.",
+          "master": "조명거울의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -555,6 +1106,35 @@
           ],
           "short": [
             "조명"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "조명거울이 어디 있어요?",
+              "romanization": "jomyeonggeouli eodi iseoyo?",
+              "translation": "Where is the lighted mirror?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -579,10 +1159,10 @@
         "word": "magnifying mirror",
         "explanation": "'확대거울' means 'magnifying mirror' in English.",
         "examples": {
-          "beginner": "We say \"확대거울\" in Korean.",
-          "intermediate": "In Korea, people often say \"확대거울\".",
-          "advanced": "\"확대거울\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"확대거울\" makes communication more natural."
+          "beginner": "I need a magnifying mirror.",
+          "intermediate": "I'm looking for a magnifying mirror.",
+          "advanced": "A magnifying mirror is an essential item in life.",
+          "master": "The development of magnifying mirror reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -596,16 +1176,45 @@
           "short": [
             "magnifying"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the magnifying mirror?",
+              "romanization": "",
+              "translation": "확대거울이 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "확대거울",
         "explanation": "확대거울의 뜻은 'magnifying mirror'입니다.",
         "examples": {
-          "beginner": "\"확대거울\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"확대거울\"를 자주 써요.",
-          "advanced": "\"확대거울\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"확대거울\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "확대거울이 필요해요.",
+          "intermediate": "확대거울을 찾고 있어요.",
+          "advanced": "확대거울은 생활에 필수적인 물건입니다.",
+          "master": "확대거울의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -618,6 +1227,35 @@
           ],
           "short": [
             "확대"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "확대거울이 어디 있어요?",
+              "romanization": "hwakdaegeouli eodi iseoyo?",
+              "translation": "Where is the magnifying mirror?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -642,10 +1280,10 @@
         "word": "medicine cabinet",
         "explanation": "'거울장' means 'medicine cabinet' in English.",
         "examples": {
-          "beginner": "We say \"거울장\" in Korean.",
-          "intermediate": "In Korea, people often say \"거울장\".",
-          "advanced": "\"거울장\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"거울장\" makes communication more natural."
+          "beginner": "I need a medicine cabinet.",
+          "intermediate": "I'm looking for a medicine cabinet.",
+          "advanced": "A medicine cabinet is an essential item in life.",
+          "master": "The development of medicine cabinet reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -659,16 +1297,45 @@
           "short": [
             "medicine"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the medicine cabinet?",
+              "romanization": "",
+              "translation": "거울장이 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "거울장",
         "explanation": "거울장의 뜻은 'medicine cabinet'입니다.",
         "examples": {
-          "beginner": "\"거울장\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"거울장\"를 자주 써요.",
-          "advanced": "\"거울장\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"거울장\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "거울장이 필요해요.",
+          "intermediate": "거울장을 찾고 있어요.",
+          "advanced": "거울장은 생활에 필수적인 물건입니다.",
+          "master": "거울장의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -681,6 +1348,35 @@
           ],
           "short": [
             "거울"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "거울장이 어디 있어요?",
+              "romanization": "geouljangi eodi iseoyo?",
+              "translation": "Where is the medicine cabinet?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -705,10 +1401,10 @@
         "word": "towel rack",
         "explanation": "'수건걸이' means 'towel rack' in English.",
         "examples": {
-          "beginner": "We say \"수건걸이\" in Korean.",
-          "intermediate": "In Korea, people often say \"수건걸이\".",
-          "advanced": "\"수건걸이\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"수건걸이\" makes communication more natural."
+          "beginner": "I need a towel rack.",
+          "intermediate": "I'm looking for a towel rack.",
+          "advanced": "A towel rack is an essential item in life.",
+          "master": "The development of towel rack reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -722,16 +1418,45 @@
           "short": [
             "towel"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the towel rack?",
+              "romanization": "",
+              "translation": "수건걸이가 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "수건걸이",
         "explanation": "수건걸이의 뜻은 'towel rack'입니다.",
         "examples": {
-          "beginner": "\"수건걸이\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"수건걸이\"를 자주 써요.",
-          "advanced": "\"수건걸이\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"수건걸이\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "수건걸이가 필요해요.",
+          "intermediate": "수건걸이를 찾고 있어요.",
+          "advanced": "수건걸이는 생활에 필수적인 물건입니다.",
+          "master": "수건걸이의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -744,6 +1469,35 @@
           ],
           "short": [
             "수건"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "수건걸이가 어디 있어요?",
+              "romanization": "sugeongeoliga eodi iseoyo?",
+              "translation": "Where is the towel rack?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -768,10 +1522,10 @@
         "word": "towel ring",
         "explanation": "'수건고리' means 'towel ring' in English.",
         "examples": {
-          "beginner": "We say \"수건고리\" in Korean.",
-          "intermediate": "In Korea, people often say \"수건고리\".",
-          "advanced": "\"수건고리\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"수건고리\" makes communication more natural."
+          "beginner": "I need a towel ring.",
+          "intermediate": "I'm looking for a towel ring.",
+          "advanced": "A towel ring is an essential item in life.",
+          "master": "The development of towel ring reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -785,16 +1539,45 @@
           "short": [
             "towel"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the towel ring?",
+              "romanization": "",
+              "translation": "수건고리가 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "수건고리",
         "explanation": "수건고리의 뜻은 'towel ring'입니다.",
         "examples": {
-          "beginner": "\"수건고리\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"수건고리\"를 자주 써요.",
-          "advanced": "\"수건고리\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"수건고리\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "수건고리가 필요해요.",
+          "intermediate": "수건고리를 찾고 있어요.",
+          "advanced": "수건고리는 생활에 필수적인 물건입니다.",
+          "master": "수건고리의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -807,6 +1590,35 @@
           ],
           "short": [
             "수건"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "수건고리가 어디 있어요?",
+              "romanization": "sugeongoriga eodi iseoyo?",
+              "translation": "Where is the towel ring?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -831,10 +1643,10 @@
         "word": "towel bar",
         "explanation": "'타올바' means 'towel bar' in English.",
         "examples": {
-          "beginner": "We say \"타올바\" in Korean.",
-          "intermediate": "In Korea, people often say \"타올바\".",
-          "advanced": "\"타올바\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"타올바\" makes communication more natural."
+          "beginner": "I need a towel bar.",
+          "intermediate": "I'm looking for a towel bar.",
+          "advanced": "A towel bar is an essential item in life.",
+          "master": "The development of towel bar reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -848,16 +1660,45 @@
           "short": [
             "towel"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the towel bar?",
+              "romanization": "",
+              "translation": "타올바가 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "타올바",
         "explanation": "'타올바' means 'towel bar' in English.",
         "examples": {
-          "beginner": "We say \"타올바\" in Korean.",
-          "intermediate": "In Korea, people often say \"타올바\".",
-          "advanced": "\"타올바\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"타올바\" makes communication more natural."
+          "beginner": "타올바가 필요해요.",
+          "intermediate": "타올바를 찾고 있어요.",
+          "advanced": "타올바는 생활에 필수적인 물건입니다.",
+          "master": "타올바의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -870,6 +1711,35 @@
           ],
           "short": [
             "towel"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "타올바가 어디 있어요?",
+              "romanization": "taolbaga eodi iseoyo?",
+              "translation": "Where is the towel bar?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -894,10 +1764,10 @@
         "word": "towel shelf",
         "explanation": "'타올선반' means 'towel shelf' in English.",
         "examples": {
-          "beginner": "We say \"타올선반\" in Korean.",
-          "intermediate": "In Korea, people often say \"타올선반\".",
-          "advanced": "\"타올선반\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"타올선반\" makes communication more natural."
+          "beginner": "I need a towel shelf.",
+          "intermediate": "I'm looking for a towel shelf.",
+          "advanced": "A towel shelf is an essential item in life.",
+          "master": "The development of towel shelf reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -911,16 +1781,45 @@
           "short": [
             "towel"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the towel shelf?",
+              "romanization": "",
+              "translation": "타올선반이 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "타올선반",
         "explanation": "'타올선반' means 'towel shelf' in English.",
         "examples": {
-          "beginner": "We say \"타올선반\" in Korean.",
-          "intermediate": "In Korea, people often say \"타올선반\".",
-          "advanced": "\"타올선반\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"타올선반\" makes communication more natural."
+          "beginner": "타올선반이 필요해요.",
+          "intermediate": "타올선반을 찾고 있어요.",
+          "advanced": "타올선반은 생활에 필수적인 물건입니다.",
+          "master": "타올선반의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -933,6 +1832,35 @@
           ],
           "short": [
             "towel"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "타올선반이 어디 있어요?",
+              "romanization": "taolseonbani eodi iseoyo?",
+              "translation": "Where is the towel shelf?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -957,10 +1885,10 @@
         "word": "soap dish",
         "explanation": "'비누받침' means 'soap dish' in English.",
         "examples": {
-          "beginner": "We say \"비누받침\" in Korean.",
-          "intermediate": "In Korea, people often say \"비누받침\".",
-          "advanced": "\"비누받침\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"비누받침\" makes communication more natural."
+          "beginner": "I need a soap dish.",
+          "intermediate": "I'm looking for a soap dish.",
+          "advanced": "A soap dish is an essential item in life.",
+          "master": "The development of soap dish reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -974,16 +1902,45 @@
           "short": [
             "soap"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the soap dish?",
+              "romanization": "",
+              "translation": "비누받침이 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "비누받침",
         "explanation": "비누받침의 뜻은 'soap dish'입니다.",
         "examples": {
-          "beginner": "\"비누받침\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"비누받침\"를 자주 써요.",
-          "advanced": "\"비누받침\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"비누받침\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "비누받침이 필요해요.",
+          "intermediate": "비누받침을 찾고 있어요.",
+          "advanced": "비누받침은 생활에 필수적인 물건입니다.",
+          "master": "비누받침의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -996,6 +1953,35 @@
           ],
           "short": [
             "비누"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "비누받침이 어디 있어요?",
+              "romanization": "binubatchimi eodi iseoyo?",
+              "translation": "Where is the soap dish?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -1020,10 +2006,10 @@
         "word": "soap dispenser",
         "explanation": "'비누디스펜서' means 'soap dispenser' in English.",
         "examples": {
-          "beginner": "We say \"비누디스펜서\" in Korean.",
-          "intermediate": "In Korea, people often say \"비누디스펜서\".",
-          "advanced": "\"비누디스펜서\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"비누디스펜서\" makes communication more natural."
+          "beginner": "I need a soap dispenser.",
+          "intermediate": "I'm looking for a soap dispenser.",
+          "advanced": "A soap dispenser is an essential item in life.",
+          "master": "The development of soap dispenser reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -1037,16 +2023,45 @@
           "short": [
             "soap"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the soap dispenser?",
+              "romanization": "",
+              "translation": "비누디스펜서가 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "비누디스펜서",
         "explanation": "비누디스펜서의 뜻은 'soap dispenser'입니다.",
         "examples": {
-          "beginner": "\"비누디스펜서\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"비누디스펜서\"를 자주 써요.",
-          "advanced": "\"비누디스펜서\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"비누디스펜서\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "비누디스펜서가 필요해요.",
+          "intermediate": "비누디스펜서를 찾고 있어요.",
+          "advanced": "비누디스펜서는 생활에 필수적인 물건입니다.",
+          "master": "비누디스펜서의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -1059,6 +2074,35 @@
           ],
           "short": [
             "비누"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "비누디스펜서가 어디 있어요?",
+              "romanization": "binudiseupenseoga eodi iseoyo?",
+              "translation": "Where is the soap dispenser?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -1083,10 +2127,10 @@
         "word": "toilet paper holder",
         "explanation": "'휴지걸이' means 'toilet paper holder' in English.",
         "examples": {
-          "beginner": "We say \"휴지걸이\" in Korean.",
-          "intermediate": "In Korea, people often say \"휴지걸이\".",
-          "advanced": "\"휴지걸이\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"휴지걸이\" makes communication more natural."
+          "beginner": "I need a toilet paper holder.",
+          "intermediate": "I'm looking for a toilet paper holder.",
+          "advanced": "A toilet paper holder is an essential item in life.",
+          "master": "The development of toilet paper holder reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -1100,16 +2144,45 @@
           "short": [
             "toilet"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the toilet paper holder?",
+              "romanization": "",
+              "translation": "휴지걸이가 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "휴지걸이",
         "explanation": "휴지걸이의 뜻은 'toilet paper holder'입니다.",
         "examples": {
-          "beginner": "\"휴지걸이\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"휴지걸이\"를 자주 써요.",
-          "advanced": "\"휴지걸이\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"휴지걸이\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "휴지걸이가 필요해요.",
+          "intermediate": "휴지걸이를 찾고 있어요.",
+          "advanced": "휴지걸이는 생활에 필수적인 물건입니다.",
+          "master": "휴지걸이의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -1122,6 +2195,35 @@
           ],
           "short": [
             "휴지"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "휴지걸이가 어디 있어요?",
+              "romanization": "hyujigeoliga eodi iseoyo?",
+              "translation": "Where is the toilet paper holder?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -1146,10 +2248,10 @@
         "word": "trash can",
         "explanation": "'휴지통' means 'trash can' in English.",
         "examples": {
-          "beginner": "We say \"휴지통\" in Korean.",
-          "intermediate": "In Korea, people often say \"휴지통\".",
-          "advanced": "\"휴지통\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"휴지통\" makes communication more natural."
+          "beginner": "I need a trash can.",
+          "intermediate": "I'm looking for a trash can.",
+          "advanced": "A trash can is an essential item in life.",
+          "master": "The development of trash can reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -1163,16 +2265,45 @@
           "short": [
             "trash"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the trash can?",
+              "romanization": "",
+              "translation": "휴지통이 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "휴지통",
         "explanation": "휴지통의 뜻은 'trash can'입니다.",
         "examples": {
-          "beginner": "\"휴지통\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"휴지통\"를 자주 써요.",
-          "advanced": "\"휴지통\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"휴지통\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "휴지통이 필요해요.",
+          "intermediate": "휴지통을 찾고 있어요.",
+          "advanced": "휴지통은 생활에 필수적인 물건입니다.",
+          "master": "휴지통의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -1185,6 +2316,35 @@
           ],
           "short": [
             "휴지"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "휴지통이 어디 있어요?",
+              "romanization": "hyujitongi eodi iseoyo?",
+              "translation": "Where is the trash can?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -1209,10 +2369,10 @@
         "word": "hand towel",
         "explanation": "'손수건' means 'hand towel' in English.",
         "examples": {
-          "beginner": "We say \"손수건\" in Korean.",
-          "intermediate": "In Korea, people often say \"손수건\".",
-          "advanced": "\"손수건\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"손수건\" makes communication more natural."
+          "beginner": "I need a hand towel.",
+          "intermediate": "I'm looking for a hand towel.",
+          "advanced": "A hand towel is an essential item in life.",
+          "master": "The development of hand towel reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -1226,16 +2386,45 @@
           "short": [
             "hand"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the hand towel?",
+              "romanization": "",
+              "translation": "손수건이 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "손수건",
         "explanation": "손수건의 뜻은 'hand towel'입니다.",
         "examples": {
-          "beginner": "\"손수건\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"손수건\"를 자주 써요.",
-          "advanced": "\"손수건\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"손수건\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "손수건이 필요해요.",
+          "intermediate": "손수건을 찾고 있어요.",
+          "advanced": "손수건은 생활에 필수적인 물건입니다.",
+          "master": "손수건의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -1248,6 +2437,35 @@
           ],
           "short": [
             "손수"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "손수건이 어디 있어요?",
+              "romanization": "sonsugeoni eodi iseoyo?",
+              "translation": "Where is the hand towel?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -1272,10 +2490,10 @@
         "word": "face towel",
         "explanation": "'세면수건' means 'face towel' in English.",
         "examples": {
-          "beginner": "We say \"세면수건\" in Korean.",
-          "intermediate": "In Korea, people often say \"세면수건\".",
-          "advanced": "\"세면수건\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"세면수건\" makes communication more natural."
+          "beginner": "I need a face towel.",
+          "intermediate": "I'm looking for a face towel.",
+          "advanced": "A face towel is an essential item in life.",
+          "master": "The development of face towel reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -1289,16 +2507,45 @@
           "short": [
             "face"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the face towel?",
+              "romanization": "",
+              "translation": "세면수건이 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "세면수건",
         "explanation": "세면수건의 뜻은 'face towel'입니다.",
         "examples": {
-          "beginner": "\"세면수건\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"세면수건\"를 자주 써요.",
-          "advanced": "\"세면수건\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"세면수건\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "세면수건이 필요해요.",
+          "intermediate": "세면수건을 찾고 있어요.",
+          "advanced": "세면수건은 생활에 필수적인 물건입니다.",
+          "master": "세면수건의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -1311,6 +2558,35 @@
           ],
           "short": [
             "세면"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "세면수건이 어디 있어요?",
+              "romanization": "semyeonsugeoni eodi iseoyo?",
+              "translation": "Where is the face towel?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -1335,10 +2611,10 @@
         "word": "beach towel",
         "explanation": "'비치타월' means 'beach towel' in English.",
         "examples": {
-          "beginner": "We say \"비치타월\" in Korean.",
-          "intermediate": "In Korea, people often say \"비치타월\".",
-          "advanced": "\"비치타월\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"비치타월\" makes communication more natural."
+          "beginner": "I need a beach towel.",
+          "intermediate": "I'm looking for a beach towel.",
+          "advanced": "A beach towel is an essential item in life.",
+          "master": "The development of beach towel reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -1352,16 +2628,45 @@
           "short": [
             "beach"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the beach towel?",
+              "romanization": "",
+              "translation": "비치타월이 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "비치타월",
         "explanation": "'비치타월' means 'beach towel' in English.",
         "examples": {
-          "beginner": "We say \"비치타월\" in Korean.",
-          "intermediate": "In Korea, people often say \"비치타월\".",
-          "advanced": "\"비치타월\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"비치타월\" makes communication more natural."
+          "beginner": "비치타월이 필요해요.",
+          "intermediate": "비치타월을 찾고 있어요.",
+          "advanced": "비치타월은 생활에 필수적인 물건입니다.",
+          "master": "비치타월의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -1374,6 +2679,35 @@
           ],
           "short": [
             "beach"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "비치타월이 어디 있어요?",
+              "romanization": "bichitawoli eodi iseoyo?",
+              "translation": "Where is the beach towel?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -1398,10 +2732,10 @@
         "word": "towel",
         "explanation": "'타올' means 'towel' in English.",
         "examples": {
-          "beginner": "We say \"타올\" in Korean.",
-          "intermediate": "In Korea, people often say \"타올\".",
-          "advanced": "\"타올\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"타올\" makes communication more natural."
+          "beginner": "I need a towel.",
+          "intermediate": "I'm looking for a towel.",
+          "advanced": "A towel is an essential item in life.",
+          "master": "The development of towel reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -1415,16 +2749,45 @@
           "short": [
             "towel"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the towel?",
+              "romanization": "",
+              "translation": "타올이 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "타올",
         "explanation": "'타올' means 'towel' in English.",
         "examples": {
-          "beginner": "We say \"타올\" in Korean.",
-          "intermediate": "In Korea, people often say \"타올\".",
-          "advanced": "\"타올\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"타올\" makes communication more natural."
+          "beginner": "타올이 필요해요.",
+          "intermediate": "타올을 찾고 있어요.",
+          "advanced": "타올은 생활에 필수적인 물건입니다.",
+          "master": "타올의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -1437,6 +2800,35 @@
           ],
           "short": [
             "towel"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "타올이 어디 있어요?",
+              "romanization": "taoli eodi iseoyo?",
+              "translation": "Where is the towel?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -1461,10 +2853,10 @@
         "word": "scrub towel",
         "explanation": "'때밀이타월' means 'scrub towel' in English.",
         "examples": {
-          "beginner": "We say \"때밀이타월\" in Korean.",
-          "intermediate": "In Korea, people often say \"때밀이타월\".",
-          "advanced": "\"때밀이타월\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"때밀이타월\" makes communication more natural."
+          "beginner": "I need a scrub towel.",
+          "intermediate": "I'm looking for a scrub towel.",
+          "advanced": "A scrub towel is an essential item in life.",
+          "master": "The development of scrub towel reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -1478,16 +2870,45 @@
           "short": [
             "scrub"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the scrub towel?",
+              "romanization": "",
+              "translation": "때밀이타월이 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "때밀이타월",
         "explanation": "'때밀이타월' means 'scrub towel' in English.",
         "examples": {
-          "beginner": "We say \"때밀이타월\" in Korean.",
-          "intermediate": "In Korea, people often say \"때밀이타월\".",
-          "advanced": "\"때밀이타월\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"때밀이타월\" makes communication more natural."
+          "beginner": "때밀이타월이 필요해요.",
+          "intermediate": "때밀이타월을 찾고 있어요.",
+          "advanced": "때밀이타월은 생활에 필수적인 물건입니다.",
+          "master": "때밀이타월의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -1500,6 +2921,35 @@
           ],
           "short": [
             "scrub"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "때밀이타월이 어디 있어요?",
+              "romanization": "ttaemilitawoli eodi iseoyo?",
+              "translation": "Where is the scrub towel?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -1524,10 +2974,10 @@
         "word": "toothpaste",
         "explanation": "'치약' means 'toothpaste' in English.",
         "examples": {
-          "beginner": "We say \"치약\" in Korean.",
-          "intermediate": "In Korea, people often say \"치약\".",
-          "advanced": "\"치약\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"치약\" makes communication more natural."
+          "beginner": "I need a toothpaste.",
+          "intermediate": "I'm looking for a toothpaste.",
+          "advanced": "A toothpaste is an essential item in life.",
+          "master": "The development of toothpaste reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -1541,16 +2991,45 @@
           "short": [
             "toothpaste"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the toothpaste?",
+              "romanization": "",
+              "translation": "치약이 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "치약",
         "explanation": "치약의 뜻은 'toothpaste'입니다.",
         "examples": {
-          "beginner": "\"치약\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"치약\"를 자주 써요.",
-          "advanced": "\"치약\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"치약\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "치약이 필요해요.",
+          "intermediate": "치약을 찾고 있어요.",
+          "advanced": "치약은 생활에 필수적인 물건입니다.",
+          "master": "치약의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -1563,6 +3042,35 @@
           ],
           "short": [
             "치약"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "치약이 어디 있어요?",
+              "romanization": "chiyaki eodi iseoyo?",
+              "translation": "Where is the toothpaste?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -1587,10 +3095,10 @@
         "word": "razor",
         "explanation": "'면도기' means 'razor' in English.",
         "examples": {
-          "beginner": "We say \"면도기\" in Korean.",
-          "intermediate": "In Korea, people often say \"면도기\".",
-          "advanced": "\"면도기\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"면도기\" makes communication more natural."
+          "beginner": "I need a razor.",
+          "intermediate": "I'm looking for a razor.",
+          "advanced": "A razor is an essential item in life.",
+          "master": "The development of razor reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -1604,16 +3112,45 @@
           "short": [
             "razor"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the razor?",
+              "romanization": "",
+              "translation": "면도기가 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "면도기",
         "explanation": "면도기의 뜻은 'razor'입니다.",
         "examples": {
-          "beginner": "\"면도기\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"면도기\"를 자주 써요.",
-          "advanced": "\"면도기\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"면도기\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "면도기가 필요해요.",
+          "intermediate": "면도기를 찾고 있어요.",
+          "advanced": "면도기는 생활에 필수적인 물건입니다.",
+          "master": "면도기의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -1626,6 +3163,35 @@
           ],
           "short": [
             "면도"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "면도기가 어디 있어요?",
+              "romanization": "myeondogiga eodi iseoyo?",
+              "translation": "Where is the razor?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -1650,10 +3216,10 @@
         "word": "electric shaver",
         "explanation": "'전기면도기' means 'electric shaver' in English.",
         "examples": {
-          "beginner": "We say \"전기면도기\" in Korean.",
-          "intermediate": "In Korea, people often say \"전기면도기\".",
-          "advanced": "\"전기면도기\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"전기면도기\" makes communication more natural."
+          "beginner": "I need a electric shaver.",
+          "intermediate": "I'm looking for a electric shaver.",
+          "advanced": "A electric shaver is an essential item in life.",
+          "master": "The development of electric shaver reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -1667,16 +3233,45 @@
           "short": [
             "electric"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the electric shaver?",
+              "romanization": "",
+              "translation": "전기면도기가 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "전기면도기",
         "explanation": "전기면도기의 뜻은 'electric shaver'입니다.",
         "examples": {
-          "beginner": "\"전기면도기\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"전기면도기\"를 자주 써요.",
-          "advanced": "\"전기면도기\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"전기면도기\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "전기면도기가 필요해요.",
+          "intermediate": "전기면도기를 찾고 있어요.",
+          "advanced": "전기면도기는 생활에 필수적인 물건입니다.",
+          "master": "전기면도기의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -1689,6 +3284,35 @@
           ],
           "short": [
             "전기"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "전기면도기가 어디 있어요?",
+              "romanization": "jeongimyeondogiga eodi iseoyo?",
+              "translation": "Where is the electric shaver?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -1713,10 +3337,10 @@
         "word": "comb",
         "explanation": "'빗' means 'comb' in English.",
         "examples": {
-          "beginner": "We say \"빗\" in Korean.",
-          "intermediate": "In Korea, people often say \"빗\".",
-          "advanced": "\"빗\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"빗\" makes communication more natural."
+          "beginner": "I need a comb.",
+          "intermediate": "I'm looking for a comb.",
+          "advanced": "A comb is an essential item in life.",
+          "master": "The development of comb reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -1730,16 +3354,45 @@
           "short": [
             "comb"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the comb?",
+              "romanization": "",
+              "translation": "빗이 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "빗",
         "explanation": "빗의 뜻은 'comb'입니다.",
         "examples": {
-          "beginner": "\"빗\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"빗\"를 자주 써요.",
-          "advanced": "\"빗\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"빗\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "빗이 필요해요.",
+          "intermediate": "빗을 찾고 있어요.",
+          "advanced": "빗은 생활에 필수적인 물건입니다.",
+          "master": "빗의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -1752,6 +3405,35 @@
           ],
           "short": [
             "빗"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "빗이 어디 있어요?",
+              "romanization": "bisi eodi iseoyo?",
+              "translation": "Where is the comb?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -1776,10 +3458,10 @@
         "word": "mirror light",
         "explanation": "'거울등' means 'mirror light' in English.",
         "examples": {
-          "beginner": "We say \"거울등\" in Korean.",
-          "intermediate": "In Korea, people often say \"거울등\".",
-          "advanced": "\"거울등\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"거울등\" makes communication more natural."
+          "beginner": "I need a mirror light.",
+          "intermediate": "I'm looking for a mirror light.",
+          "advanced": "A mirror light is an essential item in life.",
+          "master": "The development of mirror light reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -1793,16 +3475,45 @@
           "short": [
             "mirror"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the mirror light?",
+              "romanization": "",
+              "translation": "거울등이 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "거울등",
         "explanation": "거울등의 뜻은 'mirror light'입니다.",
         "examples": {
-          "beginner": "\"거울등\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"거울등\"를 자주 써요.",
-          "advanced": "\"거울등\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"거울등\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "거울등이 필요해요.",
+          "intermediate": "거울등을 찾고 있어요.",
+          "advanced": "거울등은 생활에 필수적인 물건입니다.",
+          "master": "거울등의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -1815,6 +3526,35 @@
           ],
           "short": [
             "거울"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "거울등이 어디 있어요?",
+              "romanization": "geouldeungi eodi iseoyo?",
+              "translation": "Where is the mirror light?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -1839,10 +3579,10 @@
         "word": "headphones",
         "explanation": "'헤드폰' means 'headphones' in English.",
         "examples": {
-          "beginner": "We say \"헤드폰\" in Korean.",
-          "intermediate": "In Korea, people often say \"헤드폰\".",
-          "advanced": "\"헤드폰\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"헤드폰\" makes communication more natural."
+          "beginner": "I need a headphones.",
+          "intermediate": "I'm looking for a headphones.",
+          "advanced": "A headphones is an essential item in life.",
+          "master": "The development of headphones reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -1856,16 +3596,45 @@
           "short": [
             "headphones"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the headphones?",
+              "romanization": "",
+              "translation": "헤드폰이 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "헤드폰",
         "explanation": "'헤드폰' means 'headphones' in English.",
         "examples": {
-          "beginner": "We say \"헤드폰\" in Korean.",
-          "intermediate": "In Korea, people often say \"헤드폰\".",
-          "advanced": "\"헤드폰\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"헤드폰\" makes communication more natural."
+          "beginner": "헤드폰이 필요해요.",
+          "intermediate": "헤드폰을 찾고 있어요.",
+          "advanced": "헤드폰은 생활에 필수적인 물건입니다.",
+          "master": "헤드폰의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -1878,6 +3647,35 @@
           ],
           "short": [
             "headphones"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "헤드폰이 어디 있어요?",
+              "romanization": "hedeuponi eodi iseoyo?",
+              "translation": "Where is the headphones?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -1902,10 +3700,10 @@
         "word": "earphones",
         "explanation": "'이어폰' means 'earphones' in English.",
         "examples": {
-          "beginner": "We say \"이어폰\" in Korean.",
-          "intermediate": "In Korea, people often say \"이어폰\".",
-          "advanced": "\"이어폰\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"이어폰\" makes communication more natural."
+          "beginner": "I need a earphones.",
+          "intermediate": "I'm looking for a earphones.",
+          "advanced": "A earphones is an essential item in life.",
+          "master": "The development of earphones reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -1919,16 +3717,45 @@
           "short": [
             "earphones"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the earphones?",
+              "romanization": "",
+              "translation": "이어폰이 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "이어폰",
         "explanation": "이어폰의 뜻은 'earphones'입니다.",
         "examples": {
-          "beginner": "\"이어폰\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"이어폰\"를 자주 써요.",
-          "advanced": "\"이어폰\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"이어폰\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "이어폰이 필요해요.",
+          "intermediate": "이어폰을 찾고 있어요.",
+          "advanced": "이어폰은 생활에 필수적인 물건입니다.",
+          "master": "이어폰의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -1941,6 +3768,35 @@
           ],
           "short": [
             "이어"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "이어폰이 어디 있어요?",
+              "romanization": "ieoponi eodi iseoyo?",
+              "translation": "Where is the earphones?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -1965,10 +3821,10 @@
         "word": "wireless earbuds",
         "explanation": "'무선이어폰' means 'wireless earbuds' in English.",
         "examples": {
-          "beginner": "We say \"무선이어폰\" in Korean.",
-          "intermediate": "In Korea, people often say \"무선이어폰\".",
-          "advanced": "\"무선이어폰\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"무선이어폰\" makes communication more natural."
+          "beginner": "I need a wireless earbuds.",
+          "intermediate": "I'm looking for a wireless earbuds.",
+          "advanced": "A wireless earbuds is an essential item in life.",
+          "master": "The development of wireless earbuds reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -1982,16 +3838,45 @@
           "short": [
             "wireless"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the wireless earbuds?",
+              "romanization": "",
+              "translation": "무선이어폰이 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "무선이어폰",
         "explanation": "무선이어폰의 뜻은 'wireless earbuds'입니다.",
         "examples": {
-          "beginner": "\"무선이어폰\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"무선이어폰\"를 자주 써요.",
-          "advanced": "\"무선이어폰\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"무선이어폰\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "무선이어폰이 필요해요.",
+          "intermediate": "무선이어폰을 찾고 있어요.",
+          "advanced": "무선이어폰은 생활에 필수적인 물건입니다.",
+          "master": "무선이어폰의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -2004,6 +3889,35 @@
           ],
           "short": [
             "무선"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "무선이어폰이 어디 있어요?",
+              "romanization": "museonieoponi eodi iseoyo?",
+              "translation": "Where is the wireless earbuds?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -2028,10 +3942,10 @@
         "word": "microphone",
         "explanation": "'마이크' means 'microphone' in English.",
         "examples": {
-          "beginner": "We say \"마이크\" in Korean.",
-          "intermediate": "In Korea, people often say \"마이크\".",
-          "advanced": "\"마이크\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"마이크\" makes communication more natural."
+          "beginner": "I need a microphone.",
+          "intermediate": "I'm looking for a microphone.",
+          "advanced": "A microphone is an essential item in life.",
+          "master": "The development of microphone reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -2045,16 +3959,45 @@
           "short": [
             "microphone"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the microphone?",
+              "romanization": "",
+              "translation": "마이크가 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "마이크",
         "explanation": "'마이크' means 'microphone' in English.",
         "examples": {
-          "beginner": "We say \"마이크\" in Korean.",
-          "intermediate": "In Korea, people often say \"마이크\".",
-          "advanced": "\"마이크\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"마이크\" makes communication more natural."
+          "beginner": "마이크가 필요해요.",
+          "intermediate": "마이크를 찾고 있어요.",
+          "advanced": "마이크는 생활에 필수적인 물건입니다.",
+          "master": "마이크의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -2067,6 +4010,35 @@
           ],
           "short": [
             "microphone"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "마이크가 어디 있어요?",
+              "romanization": "maikeuga eodi iseoyo?",
+              "translation": "Where is the microphone?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -2091,10 +4063,10 @@
         "word": "alarm clock",
         "explanation": "'알람시계' means 'alarm clock' in English.",
         "examples": {
-          "beginner": "We say \"알람시계\" in Korean.",
-          "intermediate": "In Korea, people often say \"알람시계\".",
-          "advanced": "\"알람시계\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"알람시계\" makes communication more natural."
+          "beginner": "I need a alarm clock.",
+          "intermediate": "I'm looking for a alarm clock.",
+          "advanced": "A alarm clock is an essential item in life.",
+          "master": "The development of alarm clock reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -2108,16 +4080,45 @@
           "short": [
             "alarm"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the alarm clock?",
+              "romanization": "",
+              "translation": "알람시계가 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "알람시계",
         "explanation": "알람시계의 뜻은 'alarm clock'입니다.",
         "examples": {
-          "beginner": "\"알람시계\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"알람시계\"를 자주 써요.",
-          "advanced": "\"알람시계\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"알람시계\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "알람시계가 필요해요.",
+          "intermediate": "알람시계를 찾고 있어요.",
+          "advanced": "알람시계는 생활에 필수적인 물건입니다.",
+          "master": "알람시계의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -2130,6 +4131,35 @@
           ],
           "short": [
             "알람"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "알람시계가 어디 있어요?",
+              "romanization": "alramsigyega eodi iseoyo?",
+              "translation": "Where is the alarm clock?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -2154,10 +4184,10 @@
         "word": "charger",
         "explanation": "'충전기' means 'charger' in English.",
         "examples": {
-          "beginner": "We say \"충전기\" in Korean.",
-          "intermediate": "In Korea, people often say \"충전기\".",
-          "advanced": "\"충전기\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"충전기\" makes communication more natural."
+          "beginner": "I need a charger.",
+          "intermediate": "I'm looking for a charger.",
+          "advanced": "A charger is an essential item in life.",
+          "master": "The development of charger reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -2171,16 +4201,45 @@
           "short": [
             "charger"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the charger?",
+              "romanization": "",
+              "translation": "충전기가 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "충전기",
         "explanation": "충전기의 뜻은 'charger'입니다.",
         "examples": {
-          "beginner": "\"충전기\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"충전기\"를 자주 써요.",
-          "advanced": "\"충전기\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"충전기\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "충전기가 필요해요.",
+          "intermediate": "충전기를 찾고 있어요.",
+          "advanced": "충전기는 생활에 필수적인 물건입니다.",
+          "master": "충전기의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -2193,6 +4252,35 @@
           ],
           "short": [
             "충전"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "충전기가 어디 있어요?",
+              "romanization": "chungjeongiga eodi iseoyo?",
+              "translation": "Where is the charger?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -2217,10 +4305,10 @@
         "word": "desk clock",
         "explanation": "'탁상시계' means 'desk clock' in English.",
         "examples": {
-          "beginner": "We say \"탁상시계\" in Korean.",
-          "intermediate": "In Korea, people often say \"탁상시계\".",
-          "advanced": "\"탁상시계\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"탁상시계\" makes communication more natural."
+          "beginner": "I need a desk clock.",
+          "intermediate": "I'm looking for a desk clock.",
+          "advanced": "A desk clock is an essential item in life.",
+          "master": "The development of desk clock reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -2234,16 +4322,45 @@
           "short": [
             "desk"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the desk clock?",
+              "romanization": "",
+              "translation": "탁상시계가 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "탁상시계",
         "explanation": "탁상시계의 뜻은 'desk clock'입니다.",
         "examples": {
-          "beginner": "\"탁상시계\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"탁상시계\"를 자주 써요.",
-          "advanced": "\"탁상시계\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"탁상시계\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "탁상시계가 필요해요.",
+          "intermediate": "탁상시계를 찾고 있어요.",
+          "advanced": "탁상시계는 생활에 필수적인 물건입니다.",
+          "master": "탁상시계의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -2256,6 +4373,35 @@
           ],
           "short": [
             "탁상"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "탁상시계가 어디 있어요?",
+              "romanization": "taksangsigyega eodi iseoyo?",
+              "translation": "Where is the desk clock?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -2280,10 +4426,10 @@
         "word": "grandfather clock",
         "explanation": "'괘종시계' means 'grandfather clock' in English.",
         "examples": {
-          "beginner": "We say \"괘종시계\" in Korean.",
-          "intermediate": "In Korea, people often say \"괘종시계\".",
-          "advanced": "\"괘종시계\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"괘종시계\" makes communication more natural."
+          "beginner": "I need a grandfather clock.",
+          "intermediate": "I'm looking for a grandfather clock.",
+          "advanced": "A grandfather clock is an essential item in life.",
+          "master": "The development of grandfather clock reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -2297,16 +4443,45 @@
           "short": [
             "grandfather"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the grandfather clock?",
+              "romanization": "",
+              "translation": "괘종시계가 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "괘종시계",
         "explanation": "괘종시계의 뜻은 'grandfather clock'입니다.",
         "examples": {
-          "beginner": "\"괘종시계\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"괘종시계\"를 자주 써요.",
-          "advanced": "\"괘종시계\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"괘종시계\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "괘종시계가 필요해요.",
+          "intermediate": "괘종시계를 찾고 있어요.",
+          "advanced": "괘종시계는 생활에 필수적인 물건입니다.",
+          "master": "괘종시계의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -2319,6 +4494,35 @@
           ],
           "short": [
             "괘종"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "괘종시계가 어디 있어요?",
+              "romanization": "gwaejongsigyega eodi iseoyo?",
+              "translation": "Where is the grandfather clock?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -2343,10 +4547,10 @@
         "word": "cuckoo clock",
         "explanation": "'뻐꾸기 시계' means 'cuckoo clock' in English.",
         "examples": {
-          "beginner": "We say \"뻐꾸기 시계\" in Korean.",
-          "intermediate": "In Korea, people often say \"뻐꾸기 시계\".",
-          "advanced": "\"뻐꾸기 시계\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"뻐꾸기 시계\" makes communication more natural."
+          "beginner": "I need a cuckoo clock.",
+          "intermediate": "I'm looking for a cuckoo clock.",
+          "advanced": "A cuckoo clock is an essential item in life.",
+          "master": "The development of cuckoo clock reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -2360,16 +4564,45 @@
           "short": [
             "cuckoo"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the cuckoo clock?",
+              "romanization": "",
+              "translation": "뻐꾸기 시계가 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "뻐꾸기 시계",
         "explanation": "뻐꾸기 시계의 뜻은 'cuckoo clock'입니다.",
         "examples": {
-          "beginner": "\"뻐꾸기 시계\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"뻐꾸기 시계\"를 자주 써요.",
-          "advanced": "\"뻐꾸기 시계\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"뻐꾸기 시계\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "뻐꾸기 시계가 필요해요.",
+          "intermediate": "뻐꾸기 시계를 찾고 있어요.",
+          "advanced": "뻐꾸기 시계는 생활에 필수적인 물건입니다.",
+          "master": "뻐꾸기 시계의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -2382,6 +4615,35 @@
           ],
           "short": [
             "뻐꾸기"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "뻐꾸기 시계가 어디 있어요?",
+              "romanization": "ppeokkugi sigyega eodi iseoyo?",
+              "translation": "Where is the cuckoo clock?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -2406,10 +4668,10 @@
         "word": "hourglass",
         "explanation": "'모래시계' means 'hourglass' in English.",
         "examples": {
-          "beginner": "We say \"모래시계\" in Korean.",
-          "intermediate": "In Korea, people often say \"모래시계\".",
-          "advanced": "\"모래시계\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"모래시계\" makes communication more natural."
+          "beginner": "I need a hourglass.",
+          "intermediate": "I'm looking for a hourglass.",
+          "advanced": "A hourglass is an essential item in life.",
+          "master": "The development of hourglass reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -2423,16 +4685,45 @@
           "short": [
             "hourglass"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the hourglass?",
+              "romanization": "",
+              "translation": "모래시계가 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "모래시계",
         "explanation": "모래시계의 뜻은 'hourglass'입니다.",
         "examples": {
-          "beginner": "\"모래시계\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"모래시계\"를 자주 써요.",
-          "advanced": "\"모래시계\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"모래시계\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "모래시계가 필요해요.",
+          "intermediate": "모래시계를 찾고 있어요.",
+          "advanced": "모래시계는 생활에 필수적인 물건입니다.",
+          "master": "모래시계의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -2445,6 +4736,35 @@
           ],
           "short": [
             "모래"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "모래시계가 어디 있어요?",
+              "romanization": "moraesigyega eodi iseoyo?",
+              "translation": "Where is the hourglass?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -2469,10 +4789,10 @@
         "word": "tissue case",
         "explanation": "'휴지케이스' means 'tissue case' in English.",
         "examples": {
-          "beginner": "We say \"휴지케이스\" in Korean.",
-          "intermediate": "In Korea, people often say \"휴지케이스\".",
-          "advanced": "\"휴지케이스\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"휴지케이스\" makes communication more natural."
+          "beginner": "I need a tissue case.",
+          "intermediate": "I'm looking for a tissue case.",
+          "advanced": "A tissue case is an essential item in life.",
+          "master": "The development of tissue case reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -2486,16 +4806,45 @@
           "short": [
             "tissue"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the tissue case?",
+              "romanization": "",
+              "translation": "휴지케이스가 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "휴지케이스",
         "explanation": "휴지케이스의 뜻은 'tissue case'입니다.",
         "examples": {
-          "beginner": "\"휴지케이스\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"휴지케이스\"를 자주 써요.",
-          "advanced": "\"휴지케이스\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"휴지케이스\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "휴지케이스가 필요해요.",
+          "intermediate": "휴지케이스를 찾고 있어요.",
+          "advanced": "휴지케이스는 생활에 필수적인 물건입니다.",
+          "master": "휴지케이스의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -2508,6 +4857,35 @@
           ],
           "short": [
             "휴지"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "휴지케이스가 어디 있어요?",
+              "romanization": "hyujikeiseuga eodi iseoyo?",
+              "translation": "Where is the tissue case?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }
@@ -2532,10 +4910,10 @@
         "word": "smoke hood",
         "explanation": "'화재대피마스크' means 'smoke hood' in English.",
         "examples": {
-          "beginner": "We say \"화재대피마스크\" in Korean.",
-          "intermediate": "In Korea, people often say \"화재대피마스크\".",
-          "advanced": "\"화재대피마스크\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"화재대피마스크\" makes communication more natural."
+          "beginner": "I need a smoke hood.",
+          "intermediate": "I'm looking for a smoke hood.",
+          "advanced": "A smoke hood is an essential item in life.",
+          "master": "The development of smoke hood reflects changes in technology and culture."
         },
         "variations": {
           "formal": [
@@ -2549,16 +4927,45 @@
           "short": [
             "smoke"
           ]
+        },
+        "dialogue": {
+          "context": "Looking for an item",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "Where is the smoke hood?",
+              "romanization": "",
+              "translation": "화재대피마스크가 어디 있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "It's on the desk.",
+              "romanization": "",
+              "translation": "책상 위에 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I found it!",
+              "romanization": "",
+              "translation": "아, 찾았어요!"
+            },
+            {
+              "speaker": "B",
+              "text": "That's good.",
+              "romanization": "",
+              "translation": "다행이네요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "화재대피마스크",
         "explanation": "화재대피마스크의 뜻은 'smoke hood'입니다.",
         "examples": {
-          "beginner": "\"화재대피마스크\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"화재대피마스크\"를 자주 써요.",
-          "advanced": "\"화재대피마스크\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"화재대피마스크\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "화재대피마스크가 필요해요.",
+          "intermediate": "화재대피마스크를 찾고 있어요.",
+          "advanced": "화재대피마스크는 생활에 필수적인 물건입니다.",
+          "master": "화재대피마스크의 발전 과정은 기술과 문화의 변화를 반영합니다."
         },
         "variations": {
           "formal": [
@@ -2571,6 +4978,35 @@
           ],
           "short": [
             "화재"
+          ]
+        },
+        "dialogue": {
+          "context": "물건을 찾으며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "화재대피마스크가 어디 있어요?",
+              "romanization": "hwajaedaepimaseukeuga eodi iseoyo?",
+              "translation": "Where is the smoke hood?"
+            },
+            {
+              "speaker": "B",
+              "text": "책상 위에 있어요.",
+              "romanization": "chaeksang wie iseoyo.",
+              "translation": "It's on the desk."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 찾았어요!",
+              "romanization": "a, chataseoyo!",
+              "translation": "Ah, I found it!"
+            },
+            {
+              "speaker": "B",
+              "text": "다행이네요.",
+              "romanization": "dahaengineyo.",
+              "translation": "That's good."
+            }
           ]
         }
       }

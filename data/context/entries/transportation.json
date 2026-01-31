@@ -17,9 +17,9 @@
         "word": "교통",
         "explanation": "사람이나 물건이 이동하는 수단이나 시스템.",
         "examples": {
-          "beginner": "교통을/를 타요.",
-          "intermediate": "교통으로/로 출퇴근해요.",
-          "advanced": "교통은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "교통을 타요.",
+          "intermediate": "교통으로 출퇴근해요.",
+          "advanced": "교통은 도시 교통의 중요한 수단입니다.",
           "master": "교통 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -33,8 +33,8 @@
             },
             {
               "speaker": "B",
-              "text": "교통을/를 타요.",
-              "romanization": "gyotongeul/reul tayo.",
+              "text": "교통을 타요.",
+              "romanization": "gyotongeul tayo.",
               "translation": "I take the transportation / traffic."
             },
             {
@@ -74,7 +74,7 @@
               "speaker": "B",
               "text": "I take the transportation / traffic.",
               "romanization": "",
-              "translation": "교통을/를 타요."
+              "translation": "교통을 타요."
             },
             {
               "speaker": "A",
@@ -115,9 +115,9 @@
         "word": "배",
         "explanation": "물 위를 다니는 교통수단.",
         "examples": {
-          "beginner": "배을/를 타요.",
-          "intermediate": "배으로/로 출퇴근해요.",
-          "advanced": "배은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "배를 타요.",
+          "intermediate": "배로 출퇴근해요.",
+          "advanced": "배는 도시 교통의 중요한 수단입니다.",
           "master": "배 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -131,8 +131,8 @@
             },
             {
               "speaker": "B",
-              "text": "배을/를 타요.",
-              "romanization": "baeeul/reul tayo.",
+              "text": "배를 타요.",
+              "romanization": "baereul tayo.",
               "translation": "I take the ship / boat."
             },
             {
@@ -172,7 +172,7 @@
               "speaker": "B",
               "text": "I take the ship / boat.",
               "romanization": "",
-              "translation": "배을/를 타요."
+              "translation": "배를 타요."
             },
             {
               "speaker": "A",
@@ -213,9 +213,9 @@
         "word": "자동차",
         "explanation": "엔진으로 움직이는 네 바퀴 달린 차.",
         "examples": {
-          "beginner": "자동차을/를 타요.",
-          "intermediate": "자동차으로/로 출퇴근해요.",
-          "advanced": "자동차은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "자동차를 타요.",
+          "intermediate": "자동차로 출퇴근해요.",
+          "advanced": "자동차는 도시 교통의 중요한 수단입니다.",
           "master": "자동차 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -229,8 +229,8 @@
             },
             {
               "speaker": "B",
-              "text": "자동차을/를 타요.",
-              "romanization": "jadongchaeul/reul tayo.",
+              "text": "자동차를 타요.",
+              "romanization": "jadongchareul tayo.",
               "translation": "I take the car / automobile."
             },
             {
@@ -270,7 +270,7 @@
               "speaker": "B",
               "text": "I take the car / automobile.",
               "romanization": "",
-              "translation": "자동차을/를 타요."
+              "translation": "자동차를 타요."
             },
             {
               "speaker": "A",
@@ -311,9 +311,9 @@
         "word": "자전거",
         "explanation": "페달을 밟아 바퀴를 굴리는 두 바퀴 탈것.",
         "examples": {
-          "beginner": "자전거을/를 타요.",
-          "intermediate": "자전거으로/로 출퇴근해요.",
-          "advanced": "자전거은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "자전거를 타요.",
+          "intermediate": "자전거로 출퇴근해요.",
+          "advanced": "자전거는 도시 교통의 중요한 수단입니다.",
           "master": "자전거 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -327,8 +327,8 @@
             },
             {
               "speaker": "B",
-              "text": "자전거을/를 타요.",
-              "romanization": "jajeongeoeul/reul tayo.",
+              "text": "자전거를 타요.",
+              "romanization": "jajeongeoreul tayo.",
               "translation": "I take the bicycle / bike."
             },
             {
@@ -368,7 +368,7 @@
               "speaker": "B",
               "text": "I take the bicycle / bike.",
               "romanization": "",
-              "translation": "자전거을/를 타요."
+              "translation": "자전거를 타요."
             },
             {
               "speaker": "A",
@@ -409,9 +409,9 @@
         "word": "오토바이",
         "explanation": "엔진이 달린 두 바퀴 탈것.",
         "examples": {
-          "beginner": "오토바이을/를 타요.",
-          "intermediate": "오토바이으로/로 출퇴근해요.",
-          "advanced": "오토바이은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "오토바이를 타요.",
+          "intermediate": "오토바이로 출퇴근해요.",
+          "advanced": "오토바이는 도시 교통의 중요한 수단입니다.",
           "master": "오토바이 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -425,8 +425,8 @@
             },
             {
               "speaker": "B",
-              "text": "오토바이을/를 타요.",
-              "romanization": "otobaieul/reul tayo.",
+              "text": "오토바이를 타요.",
+              "romanization": "otobaireul tayo.",
               "translation": "I take the motorcycle / motorbike."
             },
             {
@@ -466,7 +466,7 @@
               "speaker": "B",
               "text": "I take the motorcycle / motorbike.",
               "romanization": "",
-              "translation": "오토바이을/를 타요."
+              "translation": "오토바이를 타요."
             },
             {
               "speaker": "A",
@@ -507,9 +507,9 @@
         "word": "정류장",
         "explanation": "버스가 서는 곳.",
         "examples": {
-          "beginner": "정류장을/를 타요.",
-          "intermediate": "정류장으로/로 출퇴근해요.",
-          "advanced": "정류장은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "정류장을 타요.",
+          "intermediate": "정류장으로 출퇴근해요.",
+          "advanced": "정류장은 도시 교통의 중요한 수단입니다.",
           "master": "정류장 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -523,8 +523,8 @@
             },
             {
               "speaker": "B",
-              "text": "정류장을/를 타요.",
-              "romanization": "jeongryujangeul/reul tayo.",
+              "text": "정류장을 타요.",
+              "romanization": "jeongryujangeul tayo.",
               "translation": "I take the bus stop."
             },
             {
@@ -564,7 +564,7 @@
               "speaker": "B",
               "text": "I take the bus stop.",
               "romanization": "",
-              "translation": "정류장을/를 타요."
+              "translation": "정류장을 타요."
             },
             {
               "speaker": "A",
@@ -605,9 +605,9 @@
         "word": "항구",
         "explanation": "배가 드나드는 곳.",
         "examples": {
-          "beginner": "항구을/를 타요.",
-          "intermediate": "항구으로/로 출퇴근해요.",
-          "advanced": "항구은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "항구를 타요.",
+          "intermediate": "항구로 출퇴근해요.",
+          "advanced": "항구는 도시 교통의 중요한 수단입니다.",
           "master": "항구 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -621,8 +621,8 @@
             },
             {
               "speaker": "B",
-              "text": "항구을/를 타요.",
-              "romanization": "hanggueul/reul tayo.",
+              "text": "항구를 타요.",
+              "romanization": "hanggureul tayo.",
               "translation": "I take the port / harbor."
             },
             {
@@ -662,7 +662,7 @@
               "speaker": "B",
               "text": "I take the port / harbor.",
               "romanization": "",
-              "translation": "항구을/를 타요."
+              "translation": "항구를 타요."
             },
             {
               "speaker": "A",
@@ -703,9 +703,9 @@
         "word": "요금",
         "explanation": "교통수단을 이용하는 데 내는 돈.",
         "examples": {
-          "beginner": "요금을/를 타요.",
-          "intermediate": "요금으로/로 출퇴근해요.",
-          "advanced": "요금은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "요금을 타요.",
+          "intermediate": "요금으로 출퇴근해요.",
+          "advanced": "요금은 도시 교통의 중요한 수단입니다.",
           "master": "요금 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -719,8 +719,8 @@
             },
             {
               "speaker": "B",
-              "text": "요금을/를 타요.",
-              "romanization": "yogeumeul/reul tayo.",
+              "text": "요금을 타요.",
+              "romanization": "yogeumeul tayo.",
               "translation": "I take the fare / fee."
             },
             {
@@ -760,7 +760,7 @@
               "speaker": "B",
               "text": "I take the fare / fee.",
               "romanization": "",
-              "translation": "요금을/를 타요."
+              "translation": "요금을 타요."
             },
             {
               "speaker": "A",
@@ -801,9 +801,9 @@
         "word": "교통카드",
         "explanation": "버스나 지하철 요금을 낼 때 쓰는 카드.",
         "examples": {
-          "beginner": "교통카드을/를 타요.",
-          "intermediate": "교통카드으로/로 출퇴근해요.",
-          "advanced": "교통카드은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "교통카드를 타요.",
+          "intermediate": "교통카드로 출퇴근해요.",
+          "advanced": "교통카드는 도시 교통의 중요한 수단입니다.",
           "master": "교통카드 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -817,8 +817,8 @@
             },
             {
               "speaker": "B",
-              "text": "교통카드을/를 타요.",
-              "romanization": "gyotongkadeueul/reul tayo.",
+              "text": "교통카드를 타요.",
+              "romanization": "gyotongkadeureul tayo.",
               "translation": "I take the transit card / transportation card."
             },
             {
@@ -858,7 +858,7 @@
               "speaker": "B",
               "text": "I take the transit card / transportation card.",
               "romanization": "",
-              "translation": "교통카드을/를 타요."
+              "translation": "교통카드를 타요."
             },
             {
               "speaker": "A",
@@ -899,9 +899,9 @@
         "word": "충전",
         "explanation": "교통카드에 돈을 넣는 것.",
         "examples": {
-          "beginner": "충전을/를 타요.",
-          "intermediate": "충전으로/로 출퇴근해요.",
-          "advanced": "충전은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "충전을 타요.",
+          "intermediate": "충전으로 출퇴근해요.",
+          "advanced": "충전은 도시 교통의 중요한 수단입니다.",
           "master": "충전 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -915,8 +915,8 @@
             },
             {
               "speaker": "B",
-              "text": "충전을/를 타요.",
-              "romanization": "chungjeoneul/reul tayo.",
+              "text": "충전을 타요.",
+              "romanization": "chungjeoneul tayo.",
               "translation": "I take the recharge / top-up."
             },
             {
@@ -956,7 +956,7 @@
               "speaker": "B",
               "text": "I take the recharge / top-up.",
               "romanization": "",
-              "translation": "충전을/를 타요."
+              "translation": "충전을 타요."
             },
             {
               "speaker": "A",
@@ -997,9 +997,9 @@
         "word": "환승",
         "explanation": "한 교통수단에서 다른 교통수단으로 갈아타는 것.",
         "examples": {
-          "beginner": "환승을/를 타요.",
-          "intermediate": "환승으로/로 출퇴근해요.",
-          "advanced": "환승은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "환승을 타요.",
+          "intermediate": "환승으로 출퇴근해요.",
+          "advanced": "환승은 도시 교통의 중요한 수단입니다.",
           "master": "환승 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -1013,8 +1013,8 @@
             },
             {
               "speaker": "B",
-              "text": "환승을/를 타요.",
-              "romanization": "hwanseungeul/reul tayo.",
+              "text": "환승을 타요.",
+              "romanization": "hwanseungeul tayo.",
               "translation": "I take the transfer."
             },
             {
@@ -1054,7 +1054,7 @@
               "speaker": "B",
               "text": "I take the transfer.",
               "romanization": "",
-              "translation": "환승을/를 타요."
+              "translation": "환승을 타요."
             },
             {
               "speaker": "A",
@@ -1095,9 +1095,9 @@
         "word": "출발",
         "explanation": "떠나기 시작함.",
         "examples": {
-          "beginner": "출발을/를 타요.",
-          "intermediate": "출발으로/로 출퇴근해요.",
-          "advanced": "출발은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "출발을 타요.",
+          "intermediate": "출발으로 출퇴근해요.",
+          "advanced": "출발은 도시 교통의 중요한 수단입니다.",
           "master": "출발 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -1111,8 +1111,8 @@
             },
             {
               "speaker": "B",
-              "text": "출발을/를 타요.",
-              "romanization": "chulbaleul/reul tayo.",
+              "text": "출발을 타요.",
+              "romanization": "chulbaleul tayo.",
               "translation": "I take the departure."
             },
             {
@@ -1152,7 +1152,7 @@
               "speaker": "B",
               "text": "I take the departure.",
               "romanization": "",
-              "translation": "출발을/를 타요."
+              "translation": "출발을 타요."
             },
             {
               "speaker": "A",
@@ -1193,9 +1193,9 @@
         "word": "도착",
         "explanation": "목적지에 다다름.",
         "examples": {
-          "beginner": "도착을/를 타요.",
-          "intermediate": "도착으로/로 출퇴근해요.",
-          "advanced": "도착은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "도착을 타요.",
+          "intermediate": "도착으로 출퇴근해요.",
+          "advanced": "도착은 도시 교통의 중요한 수단입니다.",
           "master": "도착 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -1209,8 +1209,8 @@
             },
             {
               "speaker": "B",
-              "text": "도착을/를 타요.",
-              "romanization": "dochakeul/reul tayo.",
+              "text": "도착을 타요.",
+              "romanization": "dochakeul tayo.",
               "translation": "I take the arrival."
             },
             {
@@ -1250,7 +1250,7 @@
               "speaker": "B",
               "text": "I take the arrival.",
               "romanization": "",
-              "translation": "도착을/를 타요."
+              "translation": "도착을 타요."
             },
             {
               "speaker": "A",
@@ -1291,9 +1291,9 @@
         "word": "노선",
         "explanation": "버스나 지하철이 다니는 길.",
         "examples": {
-          "beginner": "노선을/를 타요.",
-          "intermediate": "노선으로/로 출퇴근해요.",
-          "advanced": "노선은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "노선을 타요.",
+          "intermediate": "노선으로 출퇴근해요.",
+          "advanced": "노선은 도시 교통의 중요한 수단입니다.",
           "master": "노선 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -1307,8 +1307,8 @@
             },
             {
               "speaker": "B",
-              "text": "노선을/를 타요.",
-              "romanization": "noseoneul/reul tayo.",
+              "text": "노선을 타요.",
+              "romanization": "noseoneul tayo.",
               "translation": "I take the route / line."
             },
             {
@@ -1348,7 +1348,7 @@
               "speaker": "B",
               "text": "I take the route / line.",
               "romanization": "",
-              "translation": "노선을/를 타요."
+              "translation": "노선을 타요."
             },
             {
               "speaker": "A",
@@ -1389,9 +1389,9 @@
         "word": "노선도",
         "explanation": "버스나 지하철의 경로를 보여주는 지도.",
         "examples": {
-          "beginner": "노선도을/를 타요.",
-          "intermediate": "노선도으로/로 출퇴근해요.",
-          "advanced": "노선도은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "노선도를 타요.",
+          "intermediate": "노선도로 출퇴근해요.",
+          "advanced": "노선도는 도시 교통의 중요한 수단입니다.",
           "master": "노선도 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -1405,8 +1405,8 @@
             },
             {
               "speaker": "B",
-              "text": "노선도을/를 타요.",
-              "romanization": "noseondoeul/reul tayo.",
+              "text": "노선도를 타요.",
+              "romanization": "noseondoreul tayo.",
               "translation": "I take the route map."
             },
             {
@@ -1446,7 +1446,7 @@
               "speaker": "B",
               "text": "I take the route map.",
               "romanization": "",
-              "translation": "노선도을/를 타요."
+              "translation": "노선도를 타요."
             },
             {
               "speaker": "A",
@@ -1487,9 +1487,9 @@
         "word": "탑승구",
         "explanation": "비행기에 타는 곳.",
         "examples": {
-          "beginner": "탑승구을/를 타요.",
-          "intermediate": "탑승구으로/로 출퇴근해요.",
-          "advanced": "탑승구은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "탑승구를 타요.",
+          "intermediate": "탑승구로 출퇴근해요.",
+          "advanced": "탑승구는 도시 교통의 중요한 수단입니다.",
           "master": "탑승구 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -1503,8 +1503,8 @@
             },
             {
               "speaker": "B",
-              "text": "탑승구을/를 타요.",
-              "romanization": "tapseunggueul/reul tayo.",
+              "text": "탑승구를 타요.",
+              "romanization": "tapseunggureul tayo.",
               "translation": "I take the boarding gate."
             },
             {
@@ -1544,7 +1544,7 @@
               "speaker": "B",
               "text": "I take the boarding gate.",
               "romanization": "",
-              "translation": "탑승구을/를 타요."
+              "translation": "탑승구를 타요."
             },
             {
               "speaker": "A",
@@ -1585,9 +1585,9 @@
         "word": "수하물",
         "explanation": "여행할 때 들고 다니는 짐.",
         "examples": {
-          "beginner": "수하물을/를 타요.",
-          "intermediate": "수하물으로/로 출퇴근해요.",
-          "advanced": "수하물은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "수하물을 타요.",
+          "intermediate": "수하물으로 출퇴근해요.",
+          "advanced": "수하물은 도시 교통의 중요한 수단입니다.",
           "master": "수하물 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -1601,8 +1601,8 @@
             },
             {
               "speaker": "B",
-              "text": "수하물을/를 타요.",
-              "romanization": "suhamuleul/reul tayo.",
+              "text": "수하물을 타요.",
+              "romanization": "suhamuleul tayo.",
               "translation": "I take the luggage / baggage."
             },
             {
@@ -1642,7 +1642,7 @@
               "speaker": "B",
               "text": "I take the luggage / baggage.",
               "romanization": "",
-              "translation": "수하물을/를 타요."
+              "translation": "수하물을 타요."
             },
             {
               "speaker": "A",
@@ -1683,9 +1683,9 @@
         "word": "기내 짐",
         "explanation": "비행기 안에 가지고 타는 작은 짐.",
         "examples": {
-          "beginner": "기내 짐을/를 타요.",
-          "intermediate": "기내 짐으로/로 출퇴근해요.",
-          "advanced": "기내 짐은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "기내 짐을 타요.",
+          "intermediate": "기내 짐으로 출퇴근해요.",
+          "advanced": "기내 짐은 도시 교통의 중요한 수단입니다.",
           "master": "기내 짐 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -1699,8 +1699,8 @@
             },
             {
               "speaker": "B",
-              "text": "기내 짐을/를 타요.",
-              "romanization": "ginae jimeul/reul tayo.",
+              "text": "기내 짐을 타요.",
+              "romanization": "ginae jimeul tayo.",
               "translation": "I take the carry-on / cabin luggage."
             },
             {
@@ -1740,7 +1740,7 @@
               "speaker": "B",
               "text": "I take the carry-on / cabin luggage.",
               "romanization": "",
-              "translation": "기내 짐을/를 타요."
+              "translation": "기내 짐을 타요."
             },
             {
               "speaker": "A",
@@ -1781,9 +1781,9 @@
         "word": "운행",
         "explanation": "교통수단이 정해진 길을 다니는 것.",
         "examples": {
-          "beginner": "운행을/를 타요.",
-          "intermediate": "운행으로/로 출퇴근해요.",
-          "advanced": "운행은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "운행을 타요.",
+          "intermediate": "운행으로 출퇴근해요.",
+          "advanced": "운행은 도시 교통의 중요한 수단입니다.",
           "master": "운행 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -1797,8 +1797,8 @@
             },
             {
               "speaker": "B",
-              "text": "운행을/를 타요.",
-              "romanization": "unhaengeul/reul tayo.",
+              "text": "운행을 타요.",
+              "romanization": "unhaengeul tayo.",
               "translation": "I take the operation / service."
             },
             {
@@ -1838,7 +1838,7 @@
               "speaker": "B",
               "text": "I take the operation / service.",
               "romanization": "",
-              "translation": "운행을/를 타요."
+              "translation": "운행을 타요."
             },
             {
               "speaker": "A",
@@ -1879,9 +1879,9 @@
         "word": "막차",
         "explanation": "그날 마지막으로 운행하는 버스나 지하철.",
         "examples": {
-          "beginner": "막차을/를 타요.",
-          "intermediate": "막차으로/로 출퇴근해요.",
-          "advanced": "막차은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "막차를 타요.",
+          "intermediate": "막차로 출퇴근해요.",
+          "advanced": "막차는 도시 교통의 중요한 수단입니다.",
           "master": "막차 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -1895,8 +1895,8 @@
             },
             {
               "speaker": "B",
-              "text": "막차을/를 타요.",
-              "romanization": "makchaeul/reul tayo.",
+              "text": "막차를 타요.",
+              "romanization": "makchareul tayo.",
               "translation": "I take the last train / last bus."
             },
             {
@@ -1936,7 +1936,7 @@
               "speaker": "B",
               "text": "I take the last train / last bus.",
               "romanization": "",
-              "translation": "막차을/를 타요."
+              "translation": "막차를 타요."
             },
             {
               "speaker": "A",
@@ -1977,9 +1977,9 @@
         "word": "첫차",
         "explanation": "그날 처음으로 운행하는 버스나 지하철.",
         "examples": {
-          "beginner": "첫차을/를 타요.",
-          "intermediate": "첫차으로/로 출퇴근해요.",
-          "advanced": "첫차은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "첫차를 타요.",
+          "intermediate": "첫차로 출퇴근해요.",
+          "advanced": "첫차는 도시 교통의 중요한 수단입니다.",
           "master": "첫차 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -1993,8 +1993,8 @@
             },
             {
               "speaker": "B",
-              "text": "첫차을/를 타요.",
-              "romanization": "cheoschaeul/reul tayo.",
+              "text": "첫차를 타요.",
+              "romanization": "cheoschareul tayo.",
               "translation": "I take the first train / first bus."
             },
             {
@@ -2034,7 +2034,7 @@
               "speaker": "B",
               "text": "I take the first train / first bus.",
               "romanization": "",
-              "translation": "첫차을/를 타요."
+              "translation": "첫차를 타요."
             },
             {
               "speaker": "A",
@@ -2075,9 +2075,9 @@
         "word": "운전",
         "explanation": "자동차 등을 조종하여 움직이게 하는 것.",
         "examples": {
-          "beginner": "운전을/를 타요.",
-          "intermediate": "운전으로/로 출퇴근해요.",
-          "advanced": "운전은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "운전을 타요.",
+          "intermediate": "운전으로 출퇴근해요.",
+          "advanced": "운전은 도시 교통의 중요한 수단입니다.",
           "master": "운전 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -2091,8 +2091,8 @@
             },
             {
               "speaker": "B",
-              "text": "운전을/를 타요.",
-              "romanization": "unjeoneul/reul tayo.",
+              "text": "운전을 타요.",
+              "romanization": "unjeoneul tayo.",
               "translation": "I take the driving."
             },
             {
@@ -2132,7 +2132,7 @@
               "speaker": "B",
               "text": "I take the driving.",
               "romanization": "",
-              "translation": "운전을/를 타요."
+              "translation": "운전을 타요."
             },
             {
               "speaker": "A",
@@ -2173,9 +2173,9 @@
         "word": "면허증",
         "explanation": "자동차를 운전할 수 있는 자격을 증명하는 증서.",
         "examples": {
-          "beginner": "면허증을/를 타요.",
-          "intermediate": "면허증으로/로 출퇴근해요.",
-          "advanced": "면허증은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "면허증을 타요.",
+          "intermediate": "면허증으로 출퇴근해요.",
+          "advanced": "면허증은 도시 교통의 중요한 수단입니다.",
           "master": "면허증 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -2189,8 +2189,8 @@
             },
             {
               "speaker": "B",
-              "text": "면허증을/를 타요.",
-              "romanization": "myeonheojeungeul/reul tayo.",
+              "text": "면허증을 타요.",
+              "romanization": "myeonheojeungeul tayo.",
               "translation": "I take the driver's license."
             },
             {
@@ -2230,7 +2230,7 @@
               "speaker": "B",
               "text": "I take the driver's license.",
               "romanization": "",
-              "translation": "면허증을/를 타요."
+              "translation": "면허증을 타요."
             },
             {
               "speaker": "A",
@@ -2271,9 +2271,9 @@
         "word": "주차장",
         "explanation": "차를 세워 두는 곳.",
         "examples": {
-          "beginner": "주차장을/를 타요.",
-          "intermediate": "주차장으로/로 출퇴근해요.",
-          "advanced": "주차장은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "주차장을 타요.",
+          "intermediate": "주차장으로 출퇴근해요.",
+          "advanced": "주차장은 도시 교통의 중요한 수단입니다.",
           "master": "주차장 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -2287,8 +2287,8 @@
             },
             {
               "speaker": "B",
-              "text": "주차장을/를 타요.",
-              "romanization": "juchajangeul/reul tayo.",
+              "text": "주차장을 타요.",
+              "romanization": "juchajangeul tayo.",
               "translation": "I take the parking lot."
             },
             {
@@ -2328,7 +2328,7 @@
               "speaker": "B",
               "text": "I take the parking lot.",
               "romanization": "",
-              "translation": "주차장을/를 타요."
+              "translation": "주차장을 타요."
             },
             {
               "speaker": "A",
@@ -2369,9 +2369,9 @@
         "word": "주차",
         "explanation": "차를 한 곳에 세워 두는 것.",
         "examples": {
-          "beginner": "주차을/를 타요.",
-          "intermediate": "주차으로/로 출퇴근해요.",
-          "advanced": "주차은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "주차를 타요.",
+          "intermediate": "주차로 출퇴근해요.",
+          "advanced": "주차는 도시 교통의 중요한 수단입니다.",
           "master": "주차 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -2385,8 +2385,8 @@
             },
             {
               "speaker": "B",
-              "text": "주차을/를 타요.",
-              "romanization": "juchaeul/reul tayo.",
+              "text": "주차를 타요.",
+              "romanization": "juchareul tayo.",
               "translation": "I take the parking."
             },
             {
@@ -2426,7 +2426,7 @@
               "speaker": "B",
               "text": "I take the parking.",
               "romanization": "",
-              "translation": "주차을/를 타요."
+              "translation": "주차를 타요."
             },
             {
               "speaker": "A",
@@ -2467,9 +2467,9 @@
         "word": "신호등",
         "explanation": "교통을 조절하는 빨강, 노랑, 초록 불.",
         "examples": {
-          "beginner": "신호등을/를 타요.",
-          "intermediate": "신호등으로/로 출퇴근해요.",
-          "advanced": "신호등은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "신호등을 타요.",
+          "intermediate": "신호등으로 출퇴근해요.",
+          "advanced": "신호등은 도시 교통의 중요한 수단입니다.",
           "master": "신호등 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -2483,8 +2483,8 @@
             },
             {
               "speaker": "B",
-              "text": "신호등을/를 타요.",
-              "romanization": "sinhodeungeul/reul tayo.",
+              "text": "신호등을 타요.",
+              "romanization": "sinhodeungeul tayo.",
               "translation": "I take the traffic light."
             },
             {
@@ -2524,7 +2524,7 @@
               "speaker": "B",
               "text": "I take the traffic light.",
               "romanization": "",
-              "translation": "신호등을/를 타요."
+              "translation": "신호등을 타요."
             },
             {
               "speaker": "A",
@@ -2565,9 +2565,9 @@
         "word": "횡단보도",
         "explanation": "사람들이 길을 건널 수 있게 표시한 곳.",
         "examples": {
-          "beginner": "횡단보도을/를 타요.",
-          "intermediate": "횡단보도으로/로 출퇴근해요.",
-          "advanced": "횡단보도은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "횡단보도를 타요.",
+          "intermediate": "횡단보도로 출퇴근해요.",
+          "advanced": "횡단보도는 도시 교통의 중요한 수단입니다.",
           "master": "횡단보도 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -2581,8 +2581,8 @@
             },
             {
               "speaker": "B",
-              "text": "횡단보도을/를 타요.",
-              "romanization": "hoengdanbodoeul/reul tayo.",
+              "text": "횡단보도를 타요.",
+              "romanization": "hoengdanbodoreul tayo.",
               "translation": "I take the crosswalk / pedestrian crossing."
             },
             {
@@ -2622,7 +2622,7 @@
               "speaker": "B",
               "text": "I take the crosswalk / pedestrian crossing.",
               "romanization": "",
-              "translation": "횡단보도을/를 타요."
+              "translation": "횡단보도를 타요."
             },
             {
               "speaker": "A",
@@ -2663,9 +2663,9 @@
         "word": "인도",
         "explanation": "사람이 걸어 다니는 길.",
         "examples": {
-          "beginner": "인도을/를 타요.",
-          "intermediate": "인도으로/로 출퇴근해요.",
-          "advanced": "인도은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "인도를 타요.",
+          "intermediate": "인도로 출퇴근해요.",
+          "advanced": "인도는 도시 교통의 중요한 수단입니다.",
           "master": "인도 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -2679,8 +2679,8 @@
             },
             {
               "speaker": "B",
-              "text": "인도을/를 타요.",
-              "romanization": "indoeul/reul tayo.",
+              "text": "인도를 타요.",
+              "romanization": "indoreul tayo.",
               "translation": "I take the sidewalk / pavement."
             },
             {
@@ -2720,7 +2720,7 @@
               "speaker": "B",
               "text": "I take the sidewalk / pavement.",
               "romanization": "",
-              "translation": "인도을/를 타요."
+              "translation": "인도를 타요."
             },
             {
               "speaker": "A",
@@ -2761,9 +2761,9 @@
         "word": "차도",
         "explanation": "자동차가 다니는 길.",
         "examples": {
-          "beginner": "차도을/를 타요.",
-          "intermediate": "차도으로/로 출퇴근해요.",
-          "advanced": "차도은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "차도를 타요.",
+          "intermediate": "차도로 출퇴근해요.",
+          "advanced": "차도는 도시 교통의 중요한 수단입니다.",
           "master": "차도 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -2777,8 +2777,8 @@
             },
             {
               "speaker": "B",
-              "text": "차도을/를 타요.",
-              "romanization": "chadoeul/reul tayo.",
+              "text": "차도를 타요.",
+              "romanization": "chadoreul tayo.",
               "translation": "I take the road / roadway."
             },
             {
@@ -2818,7 +2818,7 @@
               "speaker": "B",
               "text": "I take the road / roadway.",
               "romanization": "",
-              "translation": "차도을/를 타요."
+              "translation": "차도를 타요."
             },
             {
               "speaker": "A",
@@ -2859,9 +2859,9 @@
         "word": "고속도로",
         "explanation": "차가 빠르게 달릴 수 있는 도로.",
         "examples": {
-          "beginner": "고속도로을/를 타요.",
-          "intermediate": "고속도로으로/로 출퇴근해요.",
-          "advanced": "고속도로은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "고속도로를 타요.",
+          "intermediate": "고속도로로 출퇴근해요.",
+          "advanced": "고속도로는 도시 교통의 중요한 수단입니다.",
           "master": "고속도로 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -2875,8 +2875,8 @@
             },
             {
               "speaker": "B",
-              "text": "고속도로을/를 타요.",
-              "romanization": "gosokdoroeul/reul tayo.",
+              "text": "고속도로를 타요.",
+              "romanization": "gosokdororeul tayo.",
               "translation": "I take the highway / expressway."
             },
             {
@@ -2916,7 +2916,7 @@
               "speaker": "B",
               "text": "I take the highway / expressway.",
               "romanization": "",
-              "translation": "고속도로을/를 타요."
+              "translation": "고속도로를 타요."
             },
             {
               "speaker": "A",
@@ -2957,9 +2957,9 @@
         "word": "경유",
         "explanation": "어떤 곳을 거쳐서 가는 것.",
         "examples": {
-          "beginner": "경유을/를 타요.",
-          "intermediate": "경유으로/로 출퇴근해요.",
-          "advanced": "경유은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "경유를 타요.",
+          "intermediate": "경유로 출퇴근해요.",
+          "advanced": "경유는 도시 교통의 중요한 수단입니다.",
           "master": "경유 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -2973,8 +2973,8 @@
             },
             {
               "speaker": "B",
-              "text": "경유을/를 타요.",
-              "romanization": "gyeongyueul/reul tayo.",
+              "text": "경유를 타요.",
+              "romanization": "gyeongyureul tayo.",
               "translation": "I take the via / stopover."
             },
             {
@@ -3014,7 +3014,7 @@
               "speaker": "B",
               "text": "I take the via / stopover.",
               "romanization": "",
-              "translation": "경유을/를 타요."
+              "translation": "경유를 타요."
             },
             {
               "speaker": "A",
@@ -3055,9 +3055,9 @@
         "word": "직항",
         "explanation": "중간에 서지 않고 바로 가는 비행.",
         "examples": {
-          "beginner": "직항을/를 타요.",
-          "intermediate": "직항으로/로 출퇴근해요.",
-          "advanced": "직항은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "직항을 타요.",
+          "intermediate": "직항으로 출퇴근해요.",
+          "advanced": "직항은 도시 교통의 중요한 수단입니다.",
           "master": "직항 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -3071,8 +3071,8 @@
             },
             {
               "speaker": "B",
-              "text": "직항을/를 타요.",
-              "romanization": "jikhangeul/reul tayo.",
+              "text": "직항을 타요.",
+              "romanization": "jikhangeul tayo.",
               "translation": "I take the direct flight."
             },
             {
@@ -3112,7 +3112,7 @@
               "speaker": "B",
               "text": "I take the direct flight.",
               "romanization": "",
-              "translation": "직항을/를 타요."
+              "translation": "직항을 타요."
             },
             {
               "speaker": "A",
@@ -3153,9 +3153,9 @@
         "word": "취소비",
         "explanation": "예약을 취소할 때 내는 비용.",
         "examples": {
-          "beginner": "취소비을/를 타요.",
-          "intermediate": "취소비으로/로 출퇴근해요.",
-          "advanced": "취소비은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "취소비를 타요.",
+          "intermediate": "취소비로 출퇴근해요.",
+          "advanced": "취소비는 도시 교통의 중요한 수단입니다.",
           "master": "취소비 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -3169,8 +3169,8 @@
             },
             {
               "speaker": "B",
-              "text": "취소비을/를 타요.",
-              "romanization": "chwisobieul/reul tayo.",
+              "text": "취소비를 타요.",
+              "romanization": "chwisobireul tayo.",
               "translation": "I take the cancellation fee."
             },
             {
@@ -3210,7 +3210,7 @@
               "speaker": "B",
               "text": "I take the cancellation fee.",
               "romanization": "",
-              "translation": "취소비을/를 타요."
+              "translation": "취소비를 타요."
             },
             {
               "speaker": "A",
@@ -3251,9 +3251,9 @@
         "word": "탑승권",
         "explanation": "비행기에 탈 수 있는 증표.",
         "examples": {
-          "beginner": "탑승권을/를 타요.",
-          "intermediate": "탑승권으로/로 출퇴근해요.",
-          "advanced": "탑승권은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "탑승권을 타요.",
+          "intermediate": "탑승권으로 출퇴근해요.",
+          "advanced": "탑승권은 도시 교통의 중요한 수단입니다.",
           "master": "탑승권 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -3267,8 +3267,8 @@
             },
             {
               "speaker": "B",
-              "text": "탑승권을/를 타요.",
-              "romanization": "tapseunggwoneul/reul tayo.",
+              "text": "탑승권을 타요.",
+              "romanization": "tapseunggwoneul tayo.",
               "translation": "I take the boarding pass."
             },
             {
@@ -3308,7 +3308,7 @@
               "speaker": "B",
               "text": "I take the boarding pass.",
               "romanization": "",
-              "translation": "탑승권을/를 타요."
+              "translation": "탑승권을 타요."
             },
             {
               "speaker": "A",
@@ -3349,9 +3349,9 @@
         "word": "체크인",
         "explanation": "비행기를 타기 전에 수속하는 것.",
         "examples": {
-          "beginner": "체크인을/를 타요.",
-          "intermediate": "체크인으로/로 출퇴근해요.",
-          "advanced": "체크인은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "체크인을 타요.",
+          "intermediate": "체크인으로 출퇴근해요.",
+          "advanced": "체크인은 도시 교통의 중요한 수단입니다.",
           "master": "체크인 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -3365,8 +3365,8 @@
             },
             {
               "speaker": "B",
-              "text": "체크인을/를 타요.",
-              "romanization": "chekeuineul/reul tayo.",
+              "text": "체크인을 타요.",
+              "romanization": "chekeuineul tayo.",
               "translation": "I take the check-in."
             },
             {
@@ -3406,7 +3406,7 @@
               "speaker": "B",
               "text": "I take the check-in.",
               "romanization": "",
-              "translation": "체크인을/를 타요."
+              "translation": "체크인을 타요."
             },
             {
               "speaker": "A",
@@ -3447,9 +3447,9 @@
         "word": "보안 검사",
         "explanation": "공항에서 위험물 소지 여부를 확인하는 것.",
         "examples": {
-          "beginner": "보안 검사을/를 타요.",
-          "intermediate": "보안 검사으로/로 출퇴근해요.",
-          "advanced": "보안 검사은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "보안 검사를 타요.",
+          "intermediate": "보안 검사로 출퇴근해요.",
+          "advanced": "보안 검사는 도시 교통의 중요한 수단입니다.",
           "master": "보안 검사 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -3463,8 +3463,8 @@
             },
             {
               "speaker": "B",
-              "text": "보안 검사을/를 타요.",
-              "romanization": "boan geomsaeul/reul tayo.",
+              "text": "보안 검사를 타요.",
+              "romanization": "boan geomsareul tayo.",
               "translation": "I take the security check / screening."
             },
             {
@@ -3504,7 +3504,7 @@
               "speaker": "B",
               "text": "I take the security check / screening.",
               "romanization": "",
-              "translation": "보안 검사을/를 타요."
+              "translation": "보안 검사를 타요."
             },
             {
               "speaker": "A",
@@ -3545,9 +3545,9 @@
         "word": "입국",
         "explanation": "다른 나라에 들어가는 것.",
         "examples": {
-          "beginner": "입국을/를 타요.",
-          "intermediate": "입국으로/로 출퇴근해요.",
-          "advanced": "입국은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "입국을 타요.",
+          "intermediate": "입국으로 출퇴근해요.",
+          "advanced": "입국은 도시 교통의 중요한 수단입니다.",
           "master": "입국 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -3561,8 +3561,8 @@
             },
             {
               "speaker": "B",
-              "text": "입국을/를 타요.",
-              "romanization": "ipgukeul/reul tayo.",
+              "text": "입국을 타요.",
+              "romanization": "ipgukeul tayo.",
               "translation": "I take the entry / immigration."
             },
             {
@@ -3602,7 +3602,7 @@
               "speaker": "B",
               "text": "I take the entry / immigration.",
               "romanization": "",
-              "translation": "입국을/를 타요."
+              "translation": "입국을 타요."
             },
             {
               "speaker": "A",
@@ -3643,9 +3643,9 @@
         "word": "출국",
         "explanation": "자기 나라를 떠나 다른 나라로 가는 것.",
         "examples": {
-          "beginner": "출국을/를 타요.",
-          "intermediate": "출국으로/로 출퇴근해요.",
-          "advanced": "출국은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "출국을 타요.",
+          "intermediate": "출국으로 출퇴근해요.",
+          "advanced": "출국은 도시 교통의 중요한 수단입니다.",
           "master": "출국 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -3659,8 +3659,8 @@
             },
             {
               "speaker": "B",
-              "text": "출국을/를 타요.",
-              "romanization": "chulgukeul/reul tayo.",
+              "text": "출국을 타요.",
+              "romanization": "chulgukeul tayo.",
               "translation": "I take the departure / exit."
             },
             {
@@ -3700,7 +3700,7 @@
               "speaker": "B",
               "text": "I take the departure / exit.",
               "romanization": "",
-              "translation": "출국을/를 타요."
+              "translation": "출국을 타요."
             },
             {
               "speaker": "A",
@@ -3741,9 +3741,9 @@
         "word": "통행료",
         "explanation": "도로나 다리를 이용할 때 내는 비용.",
         "examples": {
-          "beginner": "통행료을/를 타요.",
-          "intermediate": "통행료으로/로 출퇴근해요.",
-          "advanced": "통행료은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "통행료를 타요.",
+          "intermediate": "통행료로 출퇴근해요.",
+          "advanced": "통행료는 도시 교통의 중요한 수단입니다.",
           "master": "통행료 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -3757,8 +3757,8 @@
             },
             {
               "speaker": "B",
-              "text": "통행료을/를 타요.",
-              "romanization": "tonghaengryoeul/reul tayo.",
+              "text": "통행료를 타요.",
+              "romanization": "tonghaengryoreul tayo.",
               "translation": "I take the toll."
             },
             {
@@ -3798,7 +3798,7 @@
               "speaker": "B",
               "text": "I take the toll.",
               "romanization": "",
-              "translation": "통행료을/를 타요."
+              "translation": "통행료를 타요."
             },
             {
               "speaker": "A",
@@ -3839,9 +3839,9 @@
         "word": "대중교통",
         "explanation": "많은 사람이 함께 이용하는 교통수단.",
         "examples": {
-          "beginner": "대중교통을/를 타요.",
-          "intermediate": "대중교통으로/로 출퇴근해요.",
-          "advanced": "대중교통은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "대중교통을 타요.",
+          "intermediate": "대중교통으로 출퇴근해요.",
+          "advanced": "대중교통은 도시 교통의 중요한 수단입니다.",
           "master": "대중교통 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -3855,8 +3855,8 @@
             },
             {
               "speaker": "B",
-              "text": "대중교통을/를 타요.",
-              "romanization": "daejunggyotongeul/reul tayo.",
+              "text": "대중교통을 타요.",
+              "romanization": "daejunggyotongeul tayo.",
               "translation": "I take the public transportation."
             },
             {
@@ -3896,7 +3896,7 @@
               "speaker": "B",
               "text": "I take the public transportation.",
               "romanization": "",
-              "translation": "대중교통을/를 타요."
+              "translation": "대중교통을 타요."
             },
             {
               "speaker": "A",
@@ -3937,9 +3937,9 @@
         "word": "교통 정체",
         "explanation": "차가 막혀서 움직이지 못하는 상태.",
         "examples": {
-          "beginner": "교통 정체을/를 타요.",
-          "intermediate": "교통 정체으로/로 출퇴근해요.",
-          "advanced": "교통 정체은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "교통 정체를 타요.",
+          "intermediate": "교통 정체로 출퇴근해요.",
+          "advanced": "교통 정체는 도시 교통의 중요한 수단입니다.",
           "master": "교통 정체 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -3953,8 +3953,8 @@
             },
             {
               "speaker": "B",
-              "text": "교통 정체을/를 타요.",
-              "romanization": "gyotong jeongcheeul/reul tayo.",
+              "text": "교통 정체를 타요.",
+              "romanization": "gyotong jeongchereul tayo.",
               "translation": "I take the traffic jam / congestion."
             },
             {
@@ -3994,7 +3994,7 @@
               "speaker": "B",
               "text": "I take the traffic jam / congestion.",
               "romanization": "",
-              "translation": "교통 정체을/를 타요."
+              "translation": "교통 정체를 타요."
             },
             {
               "speaker": "A",
@@ -4035,9 +4035,9 @@
         "word": "렌트",
         "explanation": "차나 물건을 빌리는 것.",
         "examples": {
-          "beginner": "렌트을/를 타요.",
-          "intermediate": "렌트으로/로 출퇴근해요.",
-          "advanced": "렌트은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "렌트를 타요.",
+          "intermediate": "렌트로 출퇴근해요.",
+          "advanced": "렌트는 도시 교통의 중요한 수단입니다.",
           "master": "렌트 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -4051,8 +4051,8 @@
             },
             {
               "speaker": "B",
-              "text": "렌트을/를 타요.",
-              "romanization": "renteueul/reul tayo.",
+              "text": "렌트를 타요.",
+              "romanization": "renteureul tayo.",
               "translation": "I take the rent / rental."
             },
             {
@@ -4092,7 +4092,7 @@
               "speaker": "B",
               "text": "I take the rent / rental.",
               "romanization": "",
-              "translation": "렌트을/를 타요."
+              "translation": "렌트를 타요."
             },
             {
               "speaker": "A",
@@ -4133,9 +4133,9 @@
         "word": "내비게이션",
         "explanation": "목적지까지 길을 안내하는 장치.",
         "examples": {
-          "beginner": "내비게이션을/를 타요.",
-          "intermediate": "내비게이션으로/로 출퇴근해요.",
-          "advanced": "내비게이션은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "내비게이션을 타요.",
+          "intermediate": "내비게이션으로 출퇴근해요.",
+          "advanced": "내비게이션은 도시 교통의 중요한 수단입니다.",
           "master": "내비게이션 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -4149,8 +4149,8 @@
             },
             {
               "speaker": "B",
-              "text": "내비게이션을/를 타요.",
-              "romanization": "naebigeisyeoneul/reul tayo.",
+              "text": "내비게이션을 타요.",
+              "romanization": "naebigeisyeoneul tayo.",
               "translation": "I take the navigation / gps."
             },
             {
@@ -4190,7 +4190,7 @@
               "speaker": "B",
               "text": "I take the navigation / gps.",
               "romanization": "",
-              "translation": "내비게이션을/를 타요."
+              "translation": "내비게이션을 타요."
             },
             {
               "speaker": "A",
@@ -4231,9 +4231,9 @@
         "word": "시내버스",
         "explanation": "도시 안을 다니는 버스.",
         "examples": {
-          "beginner": "시내버스을/를 타요.",
-          "intermediate": "시내버스으로/로 출퇴근해요.",
-          "advanced": "시내버스은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "시내버스를 타요.",
+          "intermediate": "시내버스로 출퇴근해요.",
+          "advanced": "시내버스는 도시 교통의 중요한 수단입니다.",
           "master": "시내버스 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -4247,8 +4247,8 @@
             },
             {
               "speaker": "B",
-              "text": "시내버스을/를 타요.",
-              "romanization": "sinaebeoseueul/reul tayo.",
+              "text": "시내버스를 타요.",
+              "romanization": "sinaebeoseureul tayo.",
               "translation": "I take the city bus / local bus."
             },
             {
@@ -4288,7 +4288,7 @@
               "speaker": "B",
               "text": "I take the city bus / local bus.",
               "romanization": "",
-              "translation": "시내버스을/를 타요."
+              "translation": "시내버스를 타요."
             },
             {
               "speaker": "A",
@@ -4329,9 +4329,9 @@
         "word": "광역버스",
         "explanation": "도시와 도시를 연결하는 버스.",
         "examples": {
-          "beginner": "광역버스을/를 타요.",
-          "intermediate": "광역버스으로/로 출퇴근해요.",
-          "advanced": "광역버스은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "광역버스를 타요.",
+          "intermediate": "광역버스로 출퇴근해요.",
+          "advanced": "광역버스는 도시 교통의 중요한 수단입니다.",
           "master": "광역버스 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -4345,8 +4345,8 @@
             },
             {
               "speaker": "B",
-              "text": "광역버스을/를 타요.",
-              "romanization": "gwangyeokbeoseueul/reul tayo.",
+              "text": "광역버스를 타요.",
+              "romanization": "gwangyeokbeoseureul tayo.",
               "translation": "I take the express bus / intercity bus."
             },
             {
@@ -4386,7 +4386,7 @@
               "speaker": "B",
               "text": "I take the express bus / intercity bus.",
               "romanization": "",
-              "translation": "광역버스을/를 타요."
+              "translation": "광역버스를 타요."
             },
             {
               "speaker": "A",
@@ -4427,9 +4427,9 @@
         "word": "공항버스",
         "explanation": "공항을 오가는 버스.",
         "examples": {
-          "beginner": "공항버스을/를 타요.",
-          "intermediate": "공항버스으로/로 출퇴근해요.",
-          "advanced": "공항버스은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "공항버스를 타요.",
+          "intermediate": "공항버스로 출퇴근해요.",
+          "advanced": "공항버스는 도시 교통의 중요한 수단입니다.",
           "master": "공항버스 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -4443,8 +4443,8 @@
             },
             {
               "speaker": "B",
-              "text": "공항버스을/를 타요.",
-              "romanization": "gonghangbeoseueul/reul tayo.",
+              "text": "공항버스를 타요.",
+              "romanization": "gonghangbeoseureul tayo.",
               "translation": "I take the airport bus / limousine bus."
             },
             {
@@ -4484,7 +4484,7 @@
               "speaker": "B",
               "text": "I take the airport bus / limousine bus.",
               "romanization": "",
-              "translation": "공항버스을/를 타요."
+              "translation": "공항버스를 타요."
             },
             {
               "speaker": "A",
@@ -4525,10 +4525,10 @@
         "word": "케이티엑스",
         "explanation": "한국의 고속 열차.",
         "examples": {
-          "beginner": "KTX을/를 타요.",
-          "intermediate": "KTX으로/로 출퇴근해요.",
-          "advanced": "KTX은/는 도시 교통의 중요한 수단입니다.",
-          "master": "KTX 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
+          "beginner": "케이티엑스를 타요.",
+          "intermediate": "케이티엑스로 출퇴근해요.",
+          "advanced": "케이티엑스는 도시 교통의 중요한 수단입니다.",
+          "master": "케이티엑스 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
           "context": "교통수단에 대해 이야기하며",
@@ -4541,8 +4541,8 @@
             },
             {
               "speaker": "B",
-              "text": "KTX을/를 타요.",
-              "romanization": "ktxeul/reul tayo.",
+              "text": "케이티엑스를 타요.",
+              "romanization": "keitiekseureul tayo.",
               "translation": "I take the ktx (korea train express)."
             },
             {
@@ -4582,7 +4582,7 @@
               "speaker": "B",
               "text": "I take the ktx (korea train express).",
               "romanization": "",
-              "translation": "KTX을/를 타요."
+              "translation": "케이티엑스를 타요."
             },
             {
               "speaker": "A",
@@ -4623,9 +4623,9 @@
         "word": "전철",
         "explanation": "전기로 움직이는 열차.",
         "examples": {
-          "beginner": "전철을/를 타요.",
-          "intermediate": "전철으로/로 출퇴근해요.",
-          "advanced": "전철은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "전철을 타요.",
+          "intermediate": "전철으로 출퇴근해요.",
+          "advanced": "전철은 도시 교통의 중요한 수단입니다.",
           "master": "전철 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -4639,8 +4639,8 @@
             },
             {
               "speaker": "B",
-              "text": "전철을/를 타요.",
-              "romanization": "jeoncheoleul/reul tayo.",
+              "text": "전철을 타요.",
+              "romanization": "jeoncheoleul tayo.",
               "translation": "I take the electric train / metro."
             },
             {
@@ -4680,7 +4680,7 @@
               "speaker": "B",
               "text": "I take the electric train / metro.",
               "romanization": "",
-              "translation": "전철을/를 타요."
+              "translation": "전철을 타요."
             },
             {
               "speaker": "A",
@@ -4721,9 +4721,9 @@
         "word": "하이패스",
         "explanation": "고속도로 통행료를 자동으로 결제하는 시스템.",
         "examples": {
-          "beginner": "하이패스을/를 타요.",
-          "intermediate": "하이패스으로/로 출퇴근해요.",
-          "advanced": "하이패스은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "하이패스를 타요.",
+          "intermediate": "하이패스로 출퇴근해요.",
+          "advanced": "하이패스는 도시 교통의 중요한 수단입니다.",
           "master": "하이패스 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -4737,8 +4737,8 @@
             },
             {
               "speaker": "B",
-              "text": "하이패스을/를 타요.",
-              "romanization": "haipaeseueul/reul tayo.",
+              "text": "하이패스를 타요.",
+              "romanization": "haipaeseureul tayo.",
               "translation": "I take the hi-pass."
             },
             {
@@ -4778,7 +4778,7 @@
               "speaker": "B",
               "text": "I take the hi-pass.",
               "romanization": "",
-              "translation": "하이패스을/를 타요."
+              "translation": "하이패스를 타요."
             },
             {
               "speaker": "A",
@@ -4819,9 +4819,9 @@
         "word": "우버/택시 앱",
         "explanation": "스마트폰으로 택시를 부르는 앱.",
         "examples": {
-          "beginner": "우버/택시 앱을/를 타요.",
-          "intermediate": "우버/택시 앱으로/로 출퇴근해요.",
-          "advanced": "우버/택시 앱은/는 도시 교통의 중요한 수단입니다.",
+          "beginner": "우버/택시 앱을 타요.",
+          "intermediate": "우버/택시 앱으로 출퇴근해요.",
+          "advanced": "우버/택시 앱은 도시 교통의 중요한 수단입니다.",
           "master": "우버/택시 앱 시스템의 발전은 도시 인프라 현대화를 보여줍니다."
         },
         "dialogue": {
@@ -4835,8 +4835,8 @@
             },
             {
               "speaker": "B",
-              "text": "우버/택시 앱을/를 타요.",
-              "romanization": "ubeo/taeksi aepeul/reul tayo.",
+              "text": "우버/택시 앱을 타요.",
+              "romanization": "ubeo/taeksi aepeul tayo.",
               "translation": "I take the ride-hailing app / taxi app."
             },
             {
@@ -4876,7 +4876,7 @@
               "speaker": "B",
               "text": "I take the ride-hailing app / taxi app.",
               "romanization": "",
-              "translation": "우버/택시 앱을/를 타요."
+              "translation": "우버/택시 앱을 타요."
             },
             {
               "speaker": "A",

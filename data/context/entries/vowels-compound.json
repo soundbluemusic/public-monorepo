@@ -7,28 +7,62 @@
     "categoryId": "vowels-compound",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["alphabet", "vowel", "compound"],
+    "tags": [
+      "alphabet",
+      "vowel",
+      "compound"
+    ],
     "hasDialogue": true,
     "translations": {
       "ko": {
         "word": "ㅐ (애)",
         "explanation": "ㅏ와 ㅣ가 합쳐진 복합 모음입니다. 현대 한국어에서는 ㅔ와 거의 같은 소리로 발음됩니다.",
         "examples": {
-          "beginner": "\"ㅐ\"는 '애'라고 읽어요.",
-          "intermediate": "\"ㅐ\"는 '개', '내', '대' 등에 쓰여요.",
-          "advanced": "\"ㅐ\"는 본래 [ɛ]이지만 현대 한국어에서 ㅔ[e]와 합류하고 있습니다.",
-          "master": "\"ㅐ\"와 ㅔ의 구분은 서울 방언에서 거의 소실되었으며, 표기로만 구분합니다."
+          "beginner": "\"ㅐ\" 소리를 내 봐요.",
+          "intermediate": "\"ㅐ\"가 들어가는 단어를 찾아봐요.",
+          "advanced": "\"ㅐ\"의 정확한 발음은 한국어 학습의 기본입니다.",
+          "master": "\"ㅐ\"의 음성학적 특성을 이해하면 발음이 정확해집니다."
         },
         "variations": {
-          "formal": ["이 글자는 ㅐ입니다.", "ㅐ는 ㅏ와 ㅣ의 합성 모음입니다."],
-          "casual": ["이거 ㅐ야.", "애~ 하고 소리 내 봐."],
-          "short": ["애"]
+          "formal": [
+            "이 글자는 ㅐ입니다.",
+            "ㅐ는 ㅏ와 ㅣ의 합성 모음입니다."
+          ],
+          "casual": [
+            "이거 ㅐ야.",
+            "애~ 하고 소리 내 봐."
+          ],
+          "short": [
+            "애"
+          ]
         },
         "dialogue": {
-          "context": "한글 수업에서",
+          "context": "발음을 연습하며",
           "dialogue": [
-            {"speaker": "A", "text": "ㅐ와 ㅔ는 어떻게 달라요?", "romanization": "aewa eneun eotteoke dallayo?", "translation": "How are ㅐ and ㅔ different?"},
-            {"speaker": "B", "text": "요즘은 거의 같게 발음해요.", "romanization": "yojeumeun geoui gatge bareumaheyo.", "translation": "These days they're pronounced almost the same."}
+            {
+              "speaker": "A",
+              "text": "\"ㅐ\" 발음이 어려워요.",
+              "romanization": "\"ㅐ\" baleumi eoryeowoyo.",
+              "translation": "The \"ㅐ\" pronunciation is hard."
+            },
+            {
+              "speaker": "B",
+              "text": "입 모양을 잘 봐요.",
+              "romanization": "ip moyangeul jal bwayo.",
+              "translation": "Watch the mouth shape carefully."
+            },
+            {
+              "speaker": "A",
+              "text": "\"ㅐ\"... 이렇게요?",
+              "romanization": "\"ㅐ\"... ireotgeyo?",
+              "translation": "\"ㅐ\"... like this?"
+            },
+            {
+              "speaker": "B",
+              "text": "맞아요, 잘했어요!",
+              "romanization": "matayo, jalhaeseoyo!",
+              "translation": "That's right, well done!"
+            }
           ]
         }
       },
@@ -36,26 +70,59 @@
         "word": "ae (ㅐ)",
         "explanation": "A compound vowel combining ㅏ and ㅣ. Pronounced like 'e' in 'bed'. In modern Korean, ㅐ and ㅔ sound nearly identical.",
         "examples": {
-          "beginner": "\"ㅐ\" is pronounced like 'e' in 'bed'.",
-          "intermediate": "\"ㅐ\" appears in syllables like '개' (gae), '내' (nae), '대' (dae).",
-          "advanced": "\"ㅐ\" was originally [ɛ] but has merged with ㅔ [e] in modern Seoul Korean.",
-          "master": "The ㅐ/ㅔ distinction has largely disappeared in spoken Korean, preserved only in writing."
+          "beginner": "Try making the \"ㅐ\" sound.",
+          "intermediate": "Find a word that contains \"ㅐ\".",
+          "advanced": "Accurate pronunciation of \"ㅐ\" is fundamental to learning Korean.",
+          "master": "Understanding the phonetic characteristics of \"ㅐ\" improves pronunciation accuracy."
         },
         "variations": {
-          "formal": ["This is the vowel ㅐ.", "ㅐ is a combination of ㅏ and ㅣ."],
-          "casual": ["This is ㅐ.", "It sounds like 'e' in 'bed'."],
-          "short": ["eh"]
+          "formal": [
+            "This is the vowel ㅐ.",
+            "ㅐ is a combination of ㅏ and ㅣ."
+          ],
+          "casual": [
+            "This is ㅐ.",
+            "It sounds like 'e' in 'bed'."
+          ],
+          "short": [
+            "eh"
+          ]
         },
         "dialogue": {
-          "context": "In a Korean class",
+          "context": "Practicing pronunciation",
           "dialogue": [
-            {"speaker": "A", "text": "How are ㅐ and ㅔ different?", "romanization": "", "translation": "ㅐ와 ㅔ는 어떻게 달라요?"},
-            {"speaker": "B", "text": "These days they're pronounced almost the same.", "romanization": "", "translation": "요즘은 거의 같게 발음해요."}
+            {
+              "speaker": "A",
+              "text": "The \"ㅐ\" pronunciation is hard.",
+              "romanization": "",
+              "translation": "\"ㅐ\" 발음이 어려워요."
+            },
+            {
+              "speaker": "B",
+              "text": "Watch the mouth shape carefully.",
+              "romanization": "",
+              "translation": "입 모양을 잘 봐요."
+            },
+            {
+              "speaker": "A",
+              "text": "\"ㅐ\"... like this?",
+              "romanization": "",
+              "translation": "\"ㅐ\"... 이렇게요?"
+            },
+            {
+              "speaker": "B",
+              "text": "That's right, well done!",
+              "romanization": "",
+              "translation": "맞아요, 잘했어요!"
+            }
           ]
         }
       }
     },
-    "pronunciation": {"korean": "[애]", "ipa": "[ɛ]"}
+    "pronunciation": {
+      "korean": "[애]",
+      "ipa": "[ɛ]"
+    }
   },
   {
     "id": "yae-vowel",
@@ -65,28 +132,62 @@
     "categoryId": "vowels-compound",
     "difficulty": "beginner",
     "frequency": "rare",
-    "tags": ["alphabet", "vowel", "compound"],
+    "tags": [
+      "alphabet",
+      "vowel",
+      "compound"
+    ],
     "hasDialogue": true,
     "translations": {
       "ko": {
         "word": "ㅒ (얘)",
         "explanation": "ㅑ와 ㅣ가 합쳐진 복합 모음입니다. 일상에서 자주 쓰이지 않는 모음입니다.",
         "examples": {
-          "beginner": "\"ㅒ\"는 '얘'라고 읽어요.",
-          "intermediate": "\"ㅒ\"는 '얘기'(이야기의 줄임말)에 쓰여요.",
-          "advanced": "\"ㅒ\"는 [jɛ]로 발음되며, 사용 빈도가 낮습니다.",
-          "master": "\"ㅒ\"는 ㅐ에 획을 더한 것으로, 반모음 [j]가 추가됩니다."
+          "beginner": "\"ㅒ\" 소리를 내 봐요.",
+          "intermediate": "\"ㅒ\"가 들어가는 단어를 찾아봐요.",
+          "advanced": "\"ㅒ\"의 정확한 발음은 한국어 학습의 기본입니다.",
+          "master": "\"ㅒ\"의 음성학적 특성을 이해하면 발음이 정확해집니다."
         },
         "variations": {
-          "formal": ["이 글자는 ㅒ입니다.", "ㅒ는 ㅑ와 ㅣ의 합성 모음입니다."],
-          "casual": ["이거 ㅒ야.", "얘~ 하고 소리 내 봐."],
-          "short": ["얘"]
+          "formal": [
+            "이 글자는 ㅒ입니다.",
+            "ㅒ는 ㅑ와 ㅣ의 합성 모음입니다."
+          ],
+          "casual": [
+            "이거 ㅒ야.",
+            "얘~ 하고 소리 내 봐."
+          ],
+          "short": [
+            "얘"
+          ]
         },
         "dialogue": {
-          "context": "한글 수업에서",
+          "context": "발음을 연습하며",
           "dialogue": [
-            {"speaker": "A", "text": "ㅒ는 언제 써요?", "romanization": "yaeneun eonje sseoyo?", "translation": "When do you use ㅒ?"},
-            {"speaker": "B", "text": "'얘기'할 때 써요.", "romanization": "'yaegi'hal ttae sseoyo.", "translation": "You use it in '얘기' (talk/story)."}
+            {
+              "speaker": "A",
+              "text": "\"ㅒ\" 발음이 어려워요.",
+              "romanization": "\"ㅒ\" baleumi eoryeowoyo.",
+              "translation": "The \"ㅒ\" pronunciation is hard."
+            },
+            {
+              "speaker": "B",
+              "text": "입 모양을 잘 봐요.",
+              "romanization": "ip moyangeul jal bwayo.",
+              "translation": "Watch the mouth shape carefully."
+            },
+            {
+              "speaker": "A",
+              "text": "\"ㅒ\"... 이렇게요?",
+              "romanization": "\"ㅒ\"... ireotgeyo?",
+              "translation": "\"ㅒ\"... like this?"
+            },
+            {
+              "speaker": "B",
+              "text": "맞아요, 잘했어요!",
+              "romanization": "matayo, jalhaeseoyo!",
+              "translation": "That's right, well done!"
+            }
           ]
         }
       },
@@ -94,26 +195,59 @@
         "word": "yae (ㅒ)",
         "explanation": "A compound vowel combining ㅑ and ㅣ. Pronounced 'yeh'. Rarely used in modern Korean.",
         "examples": {
-          "beginner": "\"ㅒ\" is pronounced 'yeh'.",
-          "intermediate": "\"ㅒ\" appears in '얘기' (talk, short for 이야기).",
-          "advanced": "\"ㅒ\" is pronounced [jɛ] and has low usage frequency.",
-          "master": "\"ㅒ\" adds a stroke to ㅐ, indicating the semivowel [j]."
+          "beginner": "Try making the \"ㅒ\" sound.",
+          "intermediate": "Find a word that contains \"ㅒ\".",
+          "advanced": "Accurate pronunciation of \"ㅒ\" is fundamental to learning Korean.",
+          "master": "Understanding the phonetic characteristics of \"ㅒ\" improves pronunciation accuracy."
         },
         "variations": {
-          "formal": ["This is the vowel ㅒ.", "ㅒ is a combination of ㅑ and ㅣ."],
-          "casual": ["This is ㅒ.", "It's rarely used."],
-          "short": ["yeh"]
+          "formal": [
+            "This is the vowel ㅒ.",
+            "ㅒ is a combination of ㅑ and ㅣ."
+          ],
+          "casual": [
+            "This is ㅒ.",
+            "It's rarely used."
+          ],
+          "short": [
+            "yeh"
+          ]
         },
         "dialogue": {
-          "context": "In a Korean class",
+          "context": "Practicing pronunciation",
           "dialogue": [
-            {"speaker": "A", "text": "When do you use ㅒ?", "romanization": "", "translation": "ㅒ는 언제 써요?"},
-            {"speaker": "B", "text": "You use it in '얘기' (talk/story).", "romanization": "", "translation": "'얘기'할 때 써요."}
+            {
+              "speaker": "A",
+              "text": "The \"ㅒ\" pronunciation is hard.",
+              "romanization": "",
+              "translation": "\"ㅒ\" 발음이 어려워요."
+            },
+            {
+              "speaker": "B",
+              "text": "Watch the mouth shape carefully.",
+              "romanization": "",
+              "translation": "입 모양을 잘 봐요."
+            },
+            {
+              "speaker": "A",
+              "text": "\"ㅒ\"... like this?",
+              "romanization": "",
+              "translation": "\"ㅒ\"... 이렇게요?"
+            },
+            {
+              "speaker": "B",
+              "text": "That's right, well done!",
+              "romanization": "",
+              "translation": "맞아요, 잘했어요!"
+            }
           ]
         }
       }
     },
-    "pronunciation": {"korean": "[얘]", "ipa": "[jɛ]"}
+    "pronunciation": {
+      "korean": "[얘]",
+      "ipa": "[jɛ]"
+    }
   },
   {
     "id": "e-vowel",
@@ -123,28 +257,62 @@
     "categoryId": "vowels-compound",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["alphabet", "vowel", "compound"],
+    "tags": [
+      "alphabet",
+      "vowel",
+      "compound"
+    ],
     "hasDialogue": true,
     "translations": {
       "ko": {
         "word": "ㅔ (에)",
         "explanation": "ㅓ와 ㅣ가 합쳐진 복합 모음입니다. 현대 한국어에서 ㅐ와 거의 같은 소리입니다.",
         "examples": {
-          "beginner": "\"ㅔ\"는 '에'라고 읽어요.",
-          "intermediate": "\"ㅔ\"는 '게', '네', '데' 등에 쓰여요.",
-          "advanced": "\"ㅔ\"는 [e]로 발음되며, ㅐ [ɛ]와 합류했습니다.",
-          "master": "\"ㅔ\"와 ㅐ의 구분은 현대 서울 방언에서 소실되어, 맞춤법으로만 구분합니다."
+          "beginner": "\"ㅔ\" 소리를 내 봐요.",
+          "intermediate": "\"ㅔ\"가 들어가는 단어를 찾아봐요.",
+          "advanced": "\"ㅔ\"의 정확한 발음은 한국어 학습의 기본입니다.",
+          "master": "\"ㅔ\"의 음성학적 특성을 이해하면 발음이 정확해집니다."
         },
         "variations": {
-          "formal": ["이 글자는 ㅔ입니다.", "ㅔ는 ㅓ와 ㅣ의 합성 모음입니다."],
-          "casual": ["이거 ㅔ야.", "에~ 하고 소리 내 봐."],
-          "short": ["에"]
+          "formal": [
+            "이 글자는 ㅔ입니다.",
+            "ㅔ는 ㅓ와 ㅣ의 합성 모음입니다."
+          ],
+          "casual": [
+            "이거 ㅔ야.",
+            "에~ 하고 소리 내 봐."
+          ],
+          "short": [
+            "에"
+          ]
         },
         "dialogue": {
-          "context": "한글 수업에서",
+          "context": "발음을 연습하며",
           "dialogue": [
-            {"speaker": "A", "text": "ㅔ는 어떻게 발음해요?", "romanization": "eneun eotteoke bareumaheyo?", "translation": "How do you pronounce ㅔ?"},
-            {"speaker": "B", "text": "영어의 'bed'에서 'e'와 같아요.", "romanization": "yeongeoeui 'bed'eseo 'e'wa gatayo.", "translation": "It's like the 'e' in English 'bed'."}
+            {
+              "speaker": "A",
+              "text": "\"ㅔ\" 발음이 어려워요.",
+              "romanization": "\"ㅔ\" baleumi eoryeowoyo.",
+              "translation": "The \"ㅔ\" pronunciation is hard."
+            },
+            {
+              "speaker": "B",
+              "text": "입 모양을 잘 봐요.",
+              "romanization": "ip moyangeul jal bwayo.",
+              "translation": "Watch the mouth shape carefully."
+            },
+            {
+              "speaker": "A",
+              "text": "\"ㅔ\"... 이렇게요?",
+              "romanization": "\"ㅔ\"... ireotgeyo?",
+              "translation": "\"ㅔ\"... like this?"
+            },
+            {
+              "speaker": "B",
+              "text": "맞아요, 잘했어요!",
+              "romanization": "matayo, jalhaeseoyo!",
+              "translation": "That's right, well done!"
+            }
           ]
         }
       },
@@ -152,26 +320,59 @@
         "word": "e (ㅔ)",
         "explanation": "A compound vowel combining ㅓ and ㅣ. Pronounced like 'e' in 'bed'. In modern Korean, ㅔ and ㅐ sound nearly identical.",
         "examples": {
-          "beginner": "\"ㅔ\" is pronounced like 'e' in 'bed'.",
-          "intermediate": "\"ㅔ\" appears in syllables like '게' (ge), '네' (ne), '데' (de).",
-          "advanced": "\"ㅔ\" is pronounced [e], now merged with ㅐ in Seoul dialect.",
-          "master": "The ㅔ/ㅐ merger is a well-documented sound change in Korean linguistics."
+          "beginner": "Try making the \"ㅔ\" sound.",
+          "intermediate": "Find a word that contains \"ㅔ\".",
+          "advanced": "Accurate pronunciation of \"ㅔ\" is fundamental to learning Korean.",
+          "master": "Understanding the phonetic characteristics of \"ㅔ\" improves pronunciation accuracy."
         },
         "variations": {
-          "formal": ["This is the vowel ㅔ.", "ㅔ is a combination of ㅓ and ㅣ."],
-          "casual": ["This is ㅔ.", "It sounds like 'e' in 'bed'."],
-          "short": ["eh"]
+          "formal": [
+            "This is the vowel ㅔ.",
+            "ㅔ is a combination of ㅓ and ㅣ."
+          ],
+          "casual": [
+            "This is ㅔ.",
+            "It sounds like 'e' in 'bed'."
+          ],
+          "short": [
+            "eh"
+          ]
         },
         "dialogue": {
-          "context": "In a Korean class",
+          "context": "Practicing pronunciation",
           "dialogue": [
-            {"speaker": "A", "text": "How do you pronounce ㅔ?", "romanization": "", "translation": "ㅔ는 어떻게 발음해요?"},
-            {"speaker": "B", "text": "It's like the 'e' in English 'bed'.", "romanization": "", "translation": "영어의 'bed'에서 'e'와 같아요."}
+            {
+              "speaker": "A",
+              "text": "The \"ㅔ\" pronunciation is hard.",
+              "romanization": "",
+              "translation": "\"ㅔ\" 발음이 어려워요."
+            },
+            {
+              "speaker": "B",
+              "text": "Watch the mouth shape carefully.",
+              "romanization": "",
+              "translation": "입 모양을 잘 봐요."
+            },
+            {
+              "speaker": "A",
+              "text": "\"ㅔ\"... like this?",
+              "romanization": "",
+              "translation": "\"ㅔ\"... 이렇게요?"
+            },
+            {
+              "speaker": "B",
+              "text": "That's right, well done!",
+              "romanization": "",
+              "translation": "맞아요, 잘했어요!"
+            }
           ]
         }
       }
     },
-    "pronunciation": {"korean": "[에]", "ipa": "[e]"}
+    "pronunciation": {
+      "korean": "[에]",
+      "ipa": "[e]"
+    }
   },
   {
     "id": "ye-vowel",
@@ -181,28 +382,62 @@
     "categoryId": "vowels-compound",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["alphabet", "vowel", "compound"],
+    "tags": [
+      "alphabet",
+      "vowel",
+      "compound"
+    ],
     "hasDialogue": true,
     "translations": {
       "ko": {
         "word": "ㅖ (예)",
         "explanation": "ㅕ와 ㅣ가 합쳐진 복합 모음입니다. '예' (yes)에서 자주 쓰입니다.",
         "examples": {
-          "beginner": "\"ㅖ\"는 '예'라고 읽어요.",
-          "intermediate": "\"ㅖ\"는 '예', '예쁘다' 등에 쓰여요.",
-          "advanced": "\"ㅖ\"는 [je]로 발음됩니다.",
-          "master": "\"ㅖ\"는 ㅔ에 획을 더한 것으로, 반모음 [j]가 추가됩니다."
+          "beginner": "\"ㅖ\" 소리를 내 봐요.",
+          "intermediate": "\"ㅖ\"가 들어가는 단어를 찾아봐요.",
+          "advanced": "\"ㅖ\"의 정확한 발음은 한국어 학습의 기본입니다.",
+          "master": "\"ㅖ\"의 음성학적 특성을 이해하면 발음이 정확해집니다."
         },
         "variations": {
-          "formal": ["이 글자는 ㅖ입니다.", "ㅖ는 ㅕ와 ㅣ의 합성 모음입니다."],
-          "casual": ["이거 ㅖ야.", "예~ 하고 대답해 봐."],
-          "short": ["예"]
+          "formal": [
+            "이 글자는 ㅖ입니다.",
+            "ㅖ는 ㅕ와 ㅣ의 합성 모음입니다."
+          ],
+          "casual": [
+            "이거 ㅖ야.",
+            "예~ 하고 대답해 봐."
+          ],
+          "short": [
+            "예"
+          ]
         },
         "dialogue": {
-          "context": "한글 수업에서",
+          "context": "발음을 연습하며",
           "dialogue": [
-            {"speaker": "A", "text": "ㅖ는 어디에 써요?", "romanization": "yeneun eodie sseoyo?", "translation": "Where do you use ㅖ?"},
-            {"speaker": "B", "text": "'예' (네), '예쁘다' 등에 써요.", "romanization": "'ye' (ne), 'yeppeuda' deunge sseoyo.", "translation": "In '예' (yes), '예쁘다' (pretty), etc."}
+            {
+              "speaker": "A",
+              "text": "\"ㅖ\" 발음이 어려워요.",
+              "romanization": "\"ㅖ\" baleumi eoryeowoyo.",
+              "translation": "The \"ㅖ\" pronunciation is hard."
+            },
+            {
+              "speaker": "B",
+              "text": "입 모양을 잘 봐요.",
+              "romanization": "ip moyangeul jal bwayo.",
+              "translation": "Watch the mouth shape carefully."
+            },
+            {
+              "speaker": "A",
+              "text": "\"ㅖ\"... 이렇게요?",
+              "romanization": "\"ㅖ\"... ireotgeyo?",
+              "translation": "\"ㅖ\"... like this?"
+            },
+            {
+              "speaker": "B",
+              "text": "맞아요, 잘했어요!",
+              "romanization": "matayo, jalhaeseoyo!",
+              "translation": "That's right, well done!"
+            }
           ]
         }
       },
@@ -210,26 +445,59 @@
         "word": "ye (ㅖ)",
         "explanation": "A compound vowel combining ㅕ and ㅣ. Pronounced 'yeh'. Commonly used in '예' (yes) and '예쁘다' (pretty).",
         "examples": {
-          "beginner": "\"ㅖ\" is pronounced 'yeh'.",
-          "intermediate": "\"ㅖ\" appears in '예' (yes), '예쁘다' (pretty).",
-          "advanced": "\"ㅖ\" is pronounced [je].",
-          "master": "\"ㅖ\" adds a stroke to ㅔ, indicating the semivowel [j]."
+          "beginner": "Try making the \"ㅖ\" sound.",
+          "intermediate": "Find a word that contains \"ㅖ\".",
+          "advanced": "Accurate pronunciation of \"ㅖ\" is fundamental to learning Korean.",
+          "master": "Understanding the phonetic characteristics of \"ㅖ\" improves pronunciation accuracy."
         },
         "variations": {
-          "formal": ["This is the vowel ㅖ.", "ㅖ is a combination of ㅕ and ㅣ."],
-          "casual": ["This is ㅖ.", "Say 'yeh' like 'yes' in Korean."],
-          "short": ["yeh"]
+          "formal": [
+            "This is the vowel ㅖ.",
+            "ㅖ is a combination of ㅕ and ㅣ."
+          ],
+          "casual": [
+            "This is ㅖ.",
+            "Say 'yeh' like 'yes' in Korean."
+          ],
+          "short": [
+            "yeh"
+          ]
         },
         "dialogue": {
-          "context": "In a Korean class",
+          "context": "Practicing pronunciation",
           "dialogue": [
-            {"speaker": "A", "text": "Where do you use ㅖ?", "romanization": "", "translation": "ㅖ는 어디에 써요?"},
-            {"speaker": "B", "text": "In '예' (yes) and '예쁘다' (pretty).", "romanization": "", "translation": "'예' (네), '예쁘다' 등에 써요."}
+            {
+              "speaker": "A",
+              "text": "The \"ㅖ\" pronunciation is hard.",
+              "romanization": "",
+              "translation": "\"ㅖ\" 발음이 어려워요."
+            },
+            {
+              "speaker": "B",
+              "text": "Watch the mouth shape carefully.",
+              "romanization": "",
+              "translation": "입 모양을 잘 봐요."
+            },
+            {
+              "speaker": "A",
+              "text": "\"ㅖ\"... like this?",
+              "romanization": "",
+              "translation": "\"ㅖ\"... 이렇게요?"
+            },
+            {
+              "speaker": "B",
+              "text": "That's right, well done!",
+              "romanization": "",
+              "translation": "맞아요, 잘했어요!"
+            }
           ]
         }
       }
     },
-    "pronunciation": {"korean": "[예]", "ipa": "[je]"}
+    "pronunciation": {
+      "korean": "[예]",
+      "ipa": "[je]"
+    }
   },
   {
     "id": "wa-vowel",
@@ -239,28 +507,62 @@
     "categoryId": "vowels-compound",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["alphabet", "vowel", "compound"],
+    "tags": [
+      "alphabet",
+      "vowel",
+      "compound"
+    ],
     "hasDialogue": true,
     "translations": {
       "ko": {
         "word": "ㅘ (와)",
         "explanation": "ㅗ와 ㅏ가 합쳐진 복합 모음입니다. '와!' 감탄사에서도 쓰입니다.",
         "examples": {
-          "beginner": "\"ㅘ\"는 '와'라고 읽어요.",
-          "intermediate": "\"ㅘ\"는 '과', '화', '왜' 등에 쓰여요.",
-          "advanced": "\"ㅘ\"는 [wa]로 발음됩니다.",
-          "master": "\"ㅘ\"는 ㅗ(양성)와 ㅏ(양성)의 결합으로, 양성 모음끼리의 조합입니다."
+          "beginner": "\"ㅘ\" 소리를 내 봐요.",
+          "intermediate": "\"ㅘ\"가 들어가는 단어를 찾아봐요.",
+          "advanced": "\"ㅘ\"의 정확한 발음은 한국어 학습의 기본입니다.",
+          "master": "\"ㅘ\"의 음성학적 특성을 이해하면 발음이 정확해집니다."
         },
         "variations": {
-          "formal": ["이 글자는 ㅘ입니다.", "ㅘ는 ㅗ와 ㅏ의 합성 모음입니다."],
-          "casual": ["이거 ㅘ야.", "와~ 하고 소리 내 봐."],
-          "short": ["와"]
+          "formal": [
+            "이 글자는 ㅘ입니다.",
+            "ㅘ는 ㅗ와 ㅏ의 합성 모음입니다."
+          ],
+          "casual": [
+            "이거 ㅘ야.",
+            "와~ 하고 소리 내 봐."
+          ],
+          "short": [
+            "와"
+          ]
         },
         "dialogue": {
-          "context": "한글 수업에서",
+          "context": "발음을 연습하며",
           "dialogue": [
-            {"speaker": "A", "text": "ㅘ는 어떻게 만들어요?", "romanization": "waneun eotteoke mandeureoyo?", "translation": "How is ㅘ formed?"},
-            {"speaker": "B", "text": "ㅗ와 ㅏ를 합치면 돼요.", "romanization": "owa areul hapchimyeon dwaeyo.", "translation": "Combine ㅗ and ㅏ."}
+            {
+              "speaker": "A",
+              "text": "\"ㅘ\" 발음이 어려워요.",
+              "romanization": "\"ㅘ\" baleumi eoryeowoyo.",
+              "translation": "The \"ㅘ\" pronunciation is hard."
+            },
+            {
+              "speaker": "B",
+              "text": "입 모양을 잘 봐요.",
+              "romanization": "ip moyangeul jal bwayo.",
+              "translation": "Watch the mouth shape carefully."
+            },
+            {
+              "speaker": "A",
+              "text": "\"ㅘ\"... 이렇게요?",
+              "romanization": "\"ㅘ\"... ireotgeyo?",
+              "translation": "\"ㅘ\"... like this?"
+            },
+            {
+              "speaker": "B",
+              "text": "맞아요, 잘했어요!",
+              "romanization": "matayo, jalhaeseoyo!",
+              "translation": "That's right, well done!"
+            }
           ]
         }
       },
@@ -268,26 +570,59 @@
         "word": "wa (ㅘ)",
         "explanation": "A compound vowel combining ㅗ and ㅏ. Pronounced 'wa' as in 'wand'.",
         "examples": {
-          "beginner": "\"ㅘ\" is pronounced 'wa' as in 'wand'.",
-          "intermediate": "\"ㅘ\" appears in '과' (and), '화' (fire/anger), '왕' (king).",
-          "advanced": "\"ㅘ\" is pronounced [wa].",
-          "master": "\"ㅘ\" combines two yang vowels (ㅗ + ㅏ), following vowel harmony rules."
+          "beginner": "Try making the \"ㅘ\" sound.",
+          "intermediate": "Find a word that contains \"ㅘ\".",
+          "advanced": "Accurate pronunciation of \"ㅘ\" is fundamental to learning Korean.",
+          "master": "Understanding the phonetic characteristics of \"ㅘ\" improves pronunciation accuracy."
         },
         "variations": {
-          "formal": ["This is the vowel ㅘ.", "ㅘ combines ㅗ and ㅏ."],
-          "casual": ["This is ㅘ.", "Say 'wa' like 'wow'."],
-          "short": ["wa"]
+          "formal": [
+            "This is the vowel ㅘ.",
+            "ㅘ combines ㅗ and ㅏ."
+          ],
+          "casual": [
+            "This is ㅘ.",
+            "Say 'wa' like 'wow'."
+          ],
+          "short": [
+            "wa"
+          ]
         },
         "dialogue": {
-          "context": "In a Korean class",
+          "context": "Practicing pronunciation",
           "dialogue": [
-            {"speaker": "A", "text": "How is ㅘ formed?", "romanization": "", "translation": "ㅘ는 어떻게 만들어요?"},
-            {"speaker": "B", "text": "Combine ㅗ and ㅏ.", "romanization": "", "translation": "ㅗ와 ㅏ를 합치면 돼요."}
+            {
+              "speaker": "A",
+              "text": "The \"ㅘ\" pronunciation is hard.",
+              "romanization": "",
+              "translation": "\"ㅘ\" 발음이 어려워요."
+            },
+            {
+              "speaker": "B",
+              "text": "Watch the mouth shape carefully.",
+              "romanization": "",
+              "translation": "입 모양을 잘 봐요."
+            },
+            {
+              "speaker": "A",
+              "text": "\"ㅘ\"... like this?",
+              "romanization": "",
+              "translation": "\"ㅘ\"... 이렇게요?"
+            },
+            {
+              "speaker": "B",
+              "text": "That's right, well done!",
+              "romanization": "",
+              "translation": "맞아요, 잘했어요!"
+            }
           ]
         }
       }
     },
-    "pronunciation": {"korean": "[와]", "ipa": "[wa]"}
+    "pronunciation": {
+      "korean": "[와]",
+      "ipa": "[wa]"
+    }
   },
   {
     "id": "wae-vowel",
@@ -297,28 +632,62 @@
     "categoryId": "vowels-compound",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": ["alphabet", "vowel", "compound"],
+    "tags": [
+      "alphabet",
+      "vowel",
+      "compound"
+    ],
     "hasDialogue": true,
     "translations": {
       "ko": {
         "word": "ㅙ (왜)",
         "explanation": "ㅗ와 ㅐ가 합쳐진 복합 모음입니다. '왜' (why)에서 자주 쓰입니다.",
         "examples": {
-          "beginner": "\"ㅙ\"는 '왜'라고 읽어요.",
-          "intermediate": "\"ㅙ\"는 '왜', '쇠' 등에 쓰여요.",
-          "advanced": "\"ㅙ\"는 [wɛ]로 발음되지만, ㅚ, ㅞ와 합류하여 [we]로도 발음됩니다.",
-          "master": "\"ㅙ\"는 ㅗ + ㅐ의 결합으로, 현대 한국어에서 ㅚ·ㅞ와 발음이 합류했습니다."
+          "beginner": "\"ㅙ\" 소리를 내 봐요.",
+          "intermediate": "\"ㅙ\"가 들어가는 단어를 찾아봐요.",
+          "advanced": "\"ㅙ\"의 정확한 발음은 한국어 학습의 기본입니다.",
+          "master": "\"ㅙ\"의 음성학적 특성을 이해하면 발음이 정확해집니다."
         },
         "variations": {
-          "formal": ["이 글자는 ㅙ입니다.", "ㅙ는 ㅗ와 ㅐ의 합성 모음입니다."],
-          "casual": ["이거 ㅙ야.", "왜? 하고 물어봐."],
-          "short": ["왜"]
+          "formal": [
+            "이 글자는 ㅙ입니다.",
+            "ㅙ는 ㅗ와 ㅐ의 합성 모음입니다."
+          ],
+          "casual": [
+            "이거 ㅙ야.",
+            "왜? 하고 물어봐."
+          ],
+          "short": [
+            "왜"
+          ]
         },
         "dialogue": {
-          "context": "한글 수업에서",
+          "context": "발음을 연습하며",
           "dialogue": [
-            {"speaker": "A", "text": "ㅙ는 어디에 쓰여요?", "romanization": "waeneun eodie sseuyeoyo?", "translation": "Where is ㅙ used?"},
-            {"speaker": "B", "text": "'왜'라는 단어에 가장 많이 써요.", "romanization": "'wae'raneun daneo-e gajang mani sseoyo.", "translation": "It's most commonly used in the word '왜' (why)."}
+            {
+              "speaker": "A",
+              "text": "\"ㅙ\" 발음이 어려워요.",
+              "romanization": "\"ㅙ\" baleumi eoryeowoyo.",
+              "translation": "The \"ㅙ\" pronunciation is hard."
+            },
+            {
+              "speaker": "B",
+              "text": "입 모양을 잘 봐요.",
+              "romanization": "ip moyangeul jal bwayo.",
+              "translation": "Watch the mouth shape carefully."
+            },
+            {
+              "speaker": "A",
+              "text": "\"ㅙ\"... 이렇게요?",
+              "romanization": "\"ㅙ\"... ireotgeyo?",
+              "translation": "\"ㅙ\"... like this?"
+            },
+            {
+              "speaker": "B",
+              "text": "맞아요, 잘했어요!",
+              "romanization": "matayo, jalhaeseoyo!",
+              "translation": "That's right, well done!"
+            }
           ]
         }
       },
@@ -326,26 +695,59 @@
         "word": "wae (ㅙ)",
         "explanation": "A compound vowel combining ㅗ and ㅐ. Pronounced 'weh'. Most commonly seen in '왜' (why).",
         "examples": {
-          "beginner": "\"ㅙ\" is pronounced 'weh'.",
-          "intermediate": "\"ㅙ\" appears most commonly in '왜' (why).",
-          "advanced": "\"ㅙ\" is pronounced [wɛ], but has merged with ㅚ and ㅞ as [we].",
-          "master": "\"ㅙ\" (ㅗ+ㅐ), ㅚ (ㅗ+ㅣ), and ㅞ (ㅜ+ㅔ) have merged in modern Seoul Korean."
+          "beginner": "Try making the \"ㅙ\" sound.",
+          "intermediate": "Find a word that contains \"ㅙ\".",
+          "advanced": "Accurate pronunciation of \"ㅙ\" is fundamental to learning Korean.",
+          "master": "Understanding the phonetic characteristics of \"ㅙ\" improves pronunciation accuracy."
         },
         "variations": {
-          "formal": ["This is the vowel ㅙ.", "ㅙ combines ㅗ and ㅐ."],
-          "casual": ["This is ㅙ.", "It's in '왜' (why)."],
-          "short": ["weh"]
+          "formal": [
+            "This is the vowel ㅙ.",
+            "ㅙ combines ㅗ and ㅐ."
+          ],
+          "casual": [
+            "This is ㅙ.",
+            "It's in '왜' (why)."
+          ],
+          "short": [
+            "weh"
+          ]
         },
         "dialogue": {
-          "context": "In a Korean class",
+          "context": "Practicing pronunciation",
           "dialogue": [
-            {"speaker": "A", "text": "Where is ㅙ used?", "romanization": "", "translation": "ㅙ는 어디에 쓰여요?"},
-            {"speaker": "B", "text": "Most commonly in '왜' (why).", "romanization": "", "translation": "'왜'라는 단어에 가장 많이 써요."}
+            {
+              "speaker": "A",
+              "text": "The \"ㅙ\" pronunciation is hard.",
+              "romanization": "",
+              "translation": "\"ㅙ\" 발음이 어려워요."
+            },
+            {
+              "speaker": "B",
+              "text": "Watch the mouth shape carefully.",
+              "romanization": "",
+              "translation": "입 모양을 잘 봐요."
+            },
+            {
+              "speaker": "A",
+              "text": "\"ㅙ\"... like this?",
+              "romanization": "",
+              "translation": "\"ㅙ\"... 이렇게요?"
+            },
+            {
+              "speaker": "B",
+              "text": "That's right, well done!",
+              "romanization": "",
+              "translation": "맞아요, 잘했어요!"
+            }
           ]
         }
       }
     },
-    "pronunciation": {"korean": "[왜]", "ipa": "[wɛ]"}
+    "pronunciation": {
+      "korean": "[왜]",
+      "ipa": "[wɛ]"
+    }
   },
   {
     "id": "oe-vowel",
@@ -355,28 +757,62 @@
     "categoryId": "vowels-compound",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": ["alphabet", "vowel", "compound"],
+    "tags": [
+      "alphabet",
+      "vowel",
+      "compound"
+    ],
     "hasDialogue": true,
     "translations": {
       "ko": {
         "word": "ㅚ (외)",
         "explanation": "ㅗ와 ㅣ가 합쳐진 복합 모음입니다. 현대 한국어에서는 [we]로 발음됩니다.",
         "examples": {
-          "beginner": "\"ㅚ\"는 '외'라고 읽어요.",
-          "intermediate": "\"ㅚ\"는 '외국', '회' 등에 쓰여요.",
-          "advanced": "\"ㅚ\"는 본래 [ø]였으나 현대에는 [we]로 발음됩니다.",
-          "master": "\"ㅚ\"는 독일어의 'ö'와 같은 원순 전설 모음이었으나, 이중모음화되었습니다."
+          "beginner": "\"ㅚ\" 소리를 내 봐요.",
+          "intermediate": "\"ㅚ\"가 들어가는 단어를 찾아봐요.",
+          "advanced": "\"ㅚ\"의 정확한 발음은 한국어 학습의 기본입니다.",
+          "master": "\"ㅚ\"의 음성학적 특성을 이해하면 발음이 정확해집니다."
         },
         "variations": {
-          "formal": ["이 글자는 ㅚ입니다.", "ㅚ는 ㅗ와 ㅣ의 합성 모음입니다."],
-          "casual": ["이거 ㅚ야.", "외~ 하고 소리 내 봐."],
-          "short": ["외"]
+          "formal": [
+            "이 글자는 ㅚ입니다.",
+            "ㅚ는 ㅗ와 ㅣ의 합성 모음입니다."
+          ],
+          "casual": [
+            "이거 ㅚ야.",
+            "외~ 하고 소리 내 봐."
+          ],
+          "short": [
+            "외"
+          ]
         },
         "dialogue": {
-          "context": "한글 수업에서",
+          "context": "발음을 연습하며",
           "dialogue": [
-            {"speaker": "A", "text": "ㅚ는 어떻게 발음해요?", "romanization": "oeneun eotteoke bareumaheyo?", "translation": "How do you pronounce ㅚ?"},
-            {"speaker": "B", "text": "'웨'와 거의 같아요.", "romanization": "'we'wa geoui gatayo.", "translation": "It's almost the same as 'weh'."}
+            {
+              "speaker": "A",
+              "text": "\"ㅚ\" 발음이 어려워요.",
+              "romanization": "\"ㅚ\" baleumi eoryeowoyo.",
+              "translation": "The \"ㅚ\" pronunciation is hard."
+            },
+            {
+              "speaker": "B",
+              "text": "입 모양을 잘 봐요.",
+              "romanization": "ip moyangeul jal bwayo.",
+              "translation": "Watch the mouth shape carefully."
+            },
+            {
+              "speaker": "A",
+              "text": "\"ㅚ\"... 이렇게요?",
+              "romanization": "\"ㅚ\"... ireotgeyo?",
+              "translation": "\"ㅚ\"... like this?"
+            },
+            {
+              "speaker": "B",
+              "text": "맞아요, 잘했어요!",
+              "romanization": "matayo, jalhaeseoyo!",
+              "translation": "That's right, well done!"
+            }
           ]
         }
       },
@@ -384,26 +820,59 @@
         "word": "oe (ㅚ)",
         "explanation": "A compound vowel combining ㅗ and ㅣ. Originally like German 'ö', now pronounced [we] in modern Korean.",
         "examples": {
-          "beginner": "\"ㅚ\" is now pronounced 'weh'.",
-          "intermediate": "\"ㅚ\" appears in '외국' (foreign country), '회' (raw fish/meeting).",
-          "advanced": "\"ㅚ\" was originally [ø] but shifted to [we] in modern Korean.",
-          "master": "\"ㅚ\" underwent monophthong-to-diphthong change, merging with ㅙ and ㅞ."
+          "beginner": "Try making the \"ㅚ\" sound.",
+          "intermediate": "Find a word that contains \"ㅚ\".",
+          "advanced": "Accurate pronunciation of \"ㅚ\" is fundamental to learning Korean.",
+          "master": "Understanding the phonetic characteristics of \"ㅚ\" improves pronunciation accuracy."
         },
         "variations": {
-          "formal": ["This is the vowel ㅚ.", "ㅚ combines ㅗ and ㅣ."],
-          "casual": ["This is ㅚ.", "It sounds like 'weh' now."],
-          "short": ["weh"]
+          "formal": [
+            "This is the vowel ㅚ.",
+            "ㅚ combines ㅗ and ㅣ."
+          ],
+          "casual": [
+            "This is ㅚ.",
+            "It sounds like 'weh' now."
+          ],
+          "short": [
+            "weh"
+          ]
         },
         "dialogue": {
-          "context": "In a Korean class",
+          "context": "Practicing pronunciation",
           "dialogue": [
-            {"speaker": "A", "text": "How do you pronounce ㅚ?", "romanization": "", "translation": "ㅚ는 어떻게 발음해요?"},
-            {"speaker": "B", "text": "It's almost the same as 'weh'.", "romanization": "", "translation": "'웨'와 거의 같아요."}
+            {
+              "speaker": "A",
+              "text": "The \"ㅚ\" pronunciation is hard.",
+              "romanization": "",
+              "translation": "\"ㅚ\" 발음이 어려워요."
+            },
+            {
+              "speaker": "B",
+              "text": "Watch the mouth shape carefully.",
+              "romanization": "",
+              "translation": "입 모양을 잘 봐요."
+            },
+            {
+              "speaker": "A",
+              "text": "\"ㅚ\"... like this?",
+              "romanization": "",
+              "translation": "\"ㅚ\"... 이렇게요?"
+            },
+            {
+              "speaker": "B",
+              "text": "That's right, well done!",
+              "romanization": "",
+              "translation": "맞아요, 잘했어요!"
+            }
           ]
         }
       }
     },
-    "pronunciation": {"korean": "[외]", "ipa": "[we]"}
+    "pronunciation": {
+      "korean": "[외]",
+      "ipa": "[we]"
+    }
   },
   {
     "id": "wo-vowel",
@@ -413,28 +882,62 @@
     "categoryId": "vowels-compound",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["alphabet", "vowel", "compound"],
+    "tags": [
+      "alphabet",
+      "vowel",
+      "compound"
+    ],
     "hasDialogue": true,
     "translations": {
       "ko": {
         "word": "ㅝ (워)",
         "explanation": "ㅜ와 ㅓ가 합쳐진 복합 모음입니다.",
         "examples": {
-          "beginner": "\"ㅝ\"는 '워'라고 읽어요.",
-          "intermediate": "\"ㅝ\"는 '원', '권' 등에 쓰여요.",
-          "advanced": "\"ㅝ\"는 [wʌ]로 발음됩니다.",
-          "master": "\"ㅝ\"는 ㅜ(음성)와 ㅓ(음성)의 결합으로, 음성 모음끼리의 조합입니다."
+          "beginner": "\"ㅝ\" 소리를 내 봐요.",
+          "intermediate": "\"ㅝ\"가 들어가는 단어를 찾아봐요.",
+          "advanced": "\"ㅝ\"의 정확한 발음은 한국어 학습의 기본입니다.",
+          "master": "\"ㅝ\"의 음성학적 특성을 이해하면 발음이 정확해집니다."
         },
         "variations": {
-          "formal": ["이 글자는 ㅝ입니다.", "ㅝ는 ㅜ와 ㅓ의 합성 모음입니다."],
-          "casual": ["이거 ㅝ야.", "워~ 하고 소리 내 봐."],
-          "short": ["워"]
+          "formal": [
+            "이 글자는 ㅝ입니다.",
+            "ㅝ는 ㅜ와 ㅓ의 합성 모음입니다."
+          ],
+          "casual": [
+            "이거 ㅝ야.",
+            "워~ 하고 소리 내 봐."
+          ],
+          "short": [
+            "워"
+          ]
         },
         "dialogue": {
-          "context": "한글 수업에서",
+          "context": "발음을 연습하며",
           "dialogue": [
-            {"speaker": "A", "text": "ㅝ는 어떻게 만들어요?", "romanization": "woneun eotteoke mandeureoyo?", "translation": "How is ㅝ formed?"},
-            {"speaker": "B", "text": "ㅜ와 ㅓ를 합쳐요.", "romanization": "uwa eoreul hapcheoyo.", "translation": "Combine ㅜ and ㅓ."}
+            {
+              "speaker": "A",
+              "text": "\"ㅝ\" 발음이 어려워요.",
+              "romanization": "\"ㅝ\" baleumi eoryeowoyo.",
+              "translation": "The \"ㅝ\" pronunciation is hard."
+            },
+            {
+              "speaker": "B",
+              "text": "입 모양을 잘 봐요.",
+              "romanization": "ip moyangeul jal bwayo.",
+              "translation": "Watch the mouth shape carefully."
+            },
+            {
+              "speaker": "A",
+              "text": "\"ㅝ\"... 이렇게요?",
+              "romanization": "\"ㅝ\"... ireotgeyo?",
+              "translation": "\"ㅝ\"... like this?"
+            },
+            {
+              "speaker": "B",
+              "text": "맞아요, 잘했어요!",
+              "romanization": "matayo, jalhaeseoyo!",
+              "translation": "That's right, well done!"
+            }
           ]
         }
       },
@@ -442,26 +945,59 @@
         "word": "wo (ㅝ)",
         "explanation": "A compound vowel combining ㅜ and ㅓ. Pronounced 'wuh'.",
         "examples": {
-          "beginner": "\"ㅝ\" is pronounced 'wuh'.",
-          "intermediate": "\"ㅝ\" appears in '원' (won/garden), '권' (right/authority).",
-          "advanced": "\"ㅝ\" is pronounced [wʌ].",
-          "master": "\"ㅝ\" combines two yin vowels (ㅜ + ㅓ), following vowel harmony rules."
+          "beginner": "Try making the \"ㅝ\" sound.",
+          "intermediate": "Find a word that contains \"ㅝ\".",
+          "advanced": "Accurate pronunciation of \"ㅝ\" is fundamental to learning Korean.",
+          "master": "Understanding the phonetic characteristics of \"ㅝ\" improves pronunciation accuracy."
         },
         "variations": {
-          "formal": ["This is the vowel ㅝ.", "ㅝ combines ㅜ and ㅓ."],
-          "casual": ["This is ㅝ.", "Say 'wuh'."],
-          "short": ["wuh"]
+          "formal": [
+            "This is the vowel ㅝ.",
+            "ㅝ combines ㅜ and ㅓ."
+          ],
+          "casual": [
+            "This is ㅝ.",
+            "Say 'wuh'."
+          ],
+          "short": [
+            "wuh"
+          ]
         },
         "dialogue": {
-          "context": "In a Korean class",
+          "context": "Practicing pronunciation",
           "dialogue": [
-            {"speaker": "A", "text": "How is ㅝ formed?", "romanization": "", "translation": "ㅝ는 어떻게 만들어요?"},
-            {"speaker": "B", "text": "Combine ㅜ and ㅓ.", "romanization": "", "translation": "ㅜ와 ㅓ를 합쳐요."}
+            {
+              "speaker": "A",
+              "text": "The \"ㅝ\" pronunciation is hard.",
+              "romanization": "",
+              "translation": "\"ㅝ\" 발음이 어려워요."
+            },
+            {
+              "speaker": "B",
+              "text": "Watch the mouth shape carefully.",
+              "romanization": "",
+              "translation": "입 모양을 잘 봐요."
+            },
+            {
+              "speaker": "A",
+              "text": "\"ㅝ\"... like this?",
+              "romanization": "",
+              "translation": "\"ㅝ\"... 이렇게요?"
+            },
+            {
+              "speaker": "B",
+              "text": "That's right, well done!",
+              "romanization": "",
+              "translation": "맞아요, 잘했어요!"
+            }
           ]
         }
       }
     },
-    "pronunciation": {"korean": "[워]", "ipa": "[wʌ]"}
+    "pronunciation": {
+      "korean": "[워]",
+      "ipa": "[wʌ]"
+    }
   },
   {
     "id": "we-vowel",
@@ -471,28 +1007,62 @@
     "categoryId": "vowels-compound",
     "difficulty": "intermediate",
     "frequency": "rare",
-    "tags": ["alphabet", "vowel", "compound"],
+    "tags": [
+      "alphabet",
+      "vowel",
+      "compound"
+    ],
     "hasDialogue": true,
     "translations": {
       "ko": {
         "word": "ㅞ (웨)",
         "explanation": "ㅜ와 ㅔ가 합쳐진 복합 모음입니다. 현대 한국어에서 ㅚ, ㅙ와 거의 같은 소리입니다.",
         "examples": {
-          "beginner": "\"ㅞ\"는 '웨'라고 읽어요.",
-          "intermediate": "\"ㅞ\"는 '웨딩', '스웨터' 등 외래어에 주로 쓰여요.",
-          "advanced": "\"ㅞ\"는 [we]로 발음되며, ㅚ·ㅙ와 합류했습니다.",
-          "master": "\"ㅞ\"는 외래어 표기에 주로 사용되며, 고유어에서는 거의 쓰이지 않습니다."
+          "beginner": "\"ㅞ\" 소리를 내 봐요.",
+          "intermediate": "\"ㅞ\"가 들어가는 단어를 찾아봐요.",
+          "advanced": "\"ㅞ\"의 정확한 발음은 한국어 학습의 기본입니다.",
+          "master": "\"ㅞ\"의 음성학적 특성을 이해하면 발음이 정확해집니다."
         },
         "variations": {
-          "formal": ["이 글자는 ㅞ입니다.", "ㅞ는 ㅜ와 ㅔ의 합성 모음입니다."],
-          "casual": ["이거 ㅞ야.", "웨~ 하고 소리 내 봐."],
-          "short": ["웨"]
+          "formal": [
+            "이 글자는 ㅞ입니다.",
+            "ㅞ는 ㅜ와 ㅔ의 합성 모음입니다."
+          ],
+          "casual": [
+            "이거 ㅞ야.",
+            "웨~ 하고 소리 내 봐."
+          ],
+          "short": [
+            "웨"
+          ]
         },
         "dialogue": {
-          "context": "한글 수업에서",
+          "context": "발음을 연습하며",
           "dialogue": [
-            {"speaker": "A", "text": "ㅞ는 언제 써요?", "romanization": "weneun eonje sseoyo?", "translation": "When do you use ㅞ?"},
-            {"speaker": "B", "text": "주로 외래어에 써요. '웨딩' 같은 말이요.", "romanization": "juro oeraeeo-e sseoyo. 'weding' gateun mariryo.", "translation": "Mostly in loanwords, like '웨딩' (wedding)."}
+            {
+              "speaker": "A",
+              "text": "\"ㅞ\" 발음이 어려워요.",
+              "romanization": "\"ㅞ\" baleumi eoryeowoyo.",
+              "translation": "The \"ㅞ\" pronunciation is hard."
+            },
+            {
+              "speaker": "B",
+              "text": "입 모양을 잘 봐요.",
+              "romanization": "ip moyangeul jal bwayo.",
+              "translation": "Watch the mouth shape carefully."
+            },
+            {
+              "speaker": "A",
+              "text": "\"ㅞ\"... 이렇게요?",
+              "romanization": "\"ㅞ\"... ireotgeyo?",
+              "translation": "\"ㅞ\"... like this?"
+            },
+            {
+              "speaker": "B",
+              "text": "맞아요, 잘했어요!",
+              "romanization": "matayo, jalhaeseoyo!",
+              "translation": "That's right, well done!"
+            }
           ]
         }
       },
@@ -500,26 +1070,59 @@
         "word": "we (ㅞ)",
         "explanation": "A compound vowel combining ㅜ and ㅔ. Pronounced 'weh'. Mainly used in loanwords.",
         "examples": {
-          "beginner": "\"ㅞ\" is pronounced 'weh'.",
-          "intermediate": "\"ㅞ\" appears in loanwords like '웨딩' (wedding), '스웨터' (sweater).",
-          "advanced": "\"ㅞ\" is pronounced [we], merged with ㅚ and ㅙ.",
-          "master": "\"ㅞ\" is primarily used for foreign word transcription, rarely in native Korean words."
+          "beginner": "Try making the \"ㅞ\" sound.",
+          "intermediate": "Find a word that contains \"ㅞ\".",
+          "advanced": "Accurate pronunciation of \"ㅞ\" is fundamental to learning Korean.",
+          "master": "Understanding the phonetic characteristics of \"ㅞ\" improves pronunciation accuracy."
         },
         "variations": {
-          "formal": ["This is the vowel ㅞ.", "ㅞ combines ㅜ and ㅔ."],
-          "casual": ["This is ㅞ.", "Mostly in loanwords."],
-          "short": ["weh"]
+          "formal": [
+            "This is the vowel ㅞ.",
+            "ㅞ combines ㅜ and ㅔ."
+          ],
+          "casual": [
+            "This is ㅞ.",
+            "Mostly in loanwords."
+          ],
+          "short": [
+            "weh"
+          ]
         },
         "dialogue": {
-          "context": "In a Korean class",
+          "context": "Practicing pronunciation",
           "dialogue": [
-            {"speaker": "A", "text": "When do you use ㅞ?", "romanization": "", "translation": "ㅞ는 언제 써요?"},
-            {"speaker": "B", "text": "Mostly in loanwords like '웨딩' (wedding).", "romanization": "", "translation": "주로 외래어에 써요. '웨딩' 같은 말이요."}
+            {
+              "speaker": "A",
+              "text": "The \"ㅞ\" pronunciation is hard.",
+              "romanization": "",
+              "translation": "\"ㅞ\" 발음이 어려워요."
+            },
+            {
+              "speaker": "B",
+              "text": "Watch the mouth shape carefully.",
+              "romanization": "",
+              "translation": "입 모양을 잘 봐요."
+            },
+            {
+              "speaker": "A",
+              "text": "\"ㅞ\"... like this?",
+              "romanization": "",
+              "translation": "\"ㅞ\"... 이렇게요?"
+            },
+            {
+              "speaker": "B",
+              "text": "That's right, well done!",
+              "romanization": "",
+              "translation": "맞아요, 잘했어요!"
+            }
           ]
         }
       }
     },
-    "pronunciation": {"korean": "[웨]", "ipa": "[we]"}
+    "pronunciation": {
+      "korean": "[웨]",
+      "ipa": "[we]"
+    }
   },
   {
     "id": "wi-vowel",
@@ -529,28 +1132,62 @@
     "categoryId": "vowels-compound",
     "difficulty": "beginner",
     "frequency": "common",
-    "tags": ["alphabet", "vowel", "compound"],
+    "tags": [
+      "alphabet",
+      "vowel",
+      "compound"
+    ],
     "hasDialogue": true,
     "translations": {
       "ko": {
         "word": "ㅟ (위)",
         "explanation": "ㅜ와 ㅣ가 합쳐진 복합 모음입니다. '위' (above)에서 자주 쓰입니다.",
         "examples": {
-          "beginner": "\"ㅟ\"는 '위'라고 읽어요.",
-          "intermediate": "\"ㅟ\"는 '위', '귀', '뒤' 등에 쓰여요.",
-          "advanced": "\"ㅟ\"는 본래 [y]였으나 현대에는 [wi]로 발음됩니다.",
-          "master": "\"ㅟ\"는 독일어의 'ü'와 같은 원순 전설 고모음이었으나, 이중모음화되었습니다."
+          "beginner": "\"ㅟ\" 소리를 내 봐요.",
+          "intermediate": "\"ㅟ\"가 들어가는 단어를 찾아봐요.",
+          "advanced": "\"ㅟ\"의 정확한 발음은 한국어 학습의 기본입니다.",
+          "master": "\"ㅟ\"의 음성학적 특성을 이해하면 발음이 정확해집니다."
         },
         "variations": {
-          "formal": ["이 글자는 ㅟ입니다.", "ㅟ는 ㅜ와 ㅣ의 합성 모음입니다."],
-          "casual": ["이거 ㅟ야.", "위~ 하고 소리 내 봐."],
-          "short": ["위"]
+          "formal": [
+            "이 글자는 ㅟ입니다.",
+            "ㅟ는 ㅜ와 ㅣ의 합성 모음입니다."
+          ],
+          "casual": [
+            "이거 ㅟ야.",
+            "위~ 하고 소리 내 봐."
+          ],
+          "short": [
+            "위"
+          ]
         },
         "dialogue": {
-          "context": "한글 수업에서",
+          "context": "발음을 연습하며",
           "dialogue": [
-            {"speaker": "A", "text": "ㅟ는 어떻게 발음해요?", "romanization": "wineun eotteoke bareumaheyo?", "translation": "How do you pronounce ㅟ?"},
-            {"speaker": "B", "text": "영어의 'we'와 비슷해요.", "romanization": "yeongeoeui 'we'wa biseutaeyo.", "translation": "It's similar to English 'we'."}
+            {
+              "speaker": "A",
+              "text": "\"ㅟ\" 발음이 어려워요.",
+              "romanization": "\"ㅟ\" baleumi eoryeowoyo.",
+              "translation": "The \"ㅟ\" pronunciation is hard."
+            },
+            {
+              "speaker": "B",
+              "text": "입 모양을 잘 봐요.",
+              "romanization": "ip moyangeul jal bwayo.",
+              "translation": "Watch the mouth shape carefully."
+            },
+            {
+              "speaker": "A",
+              "text": "\"ㅟ\"... 이렇게요?",
+              "romanization": "\"ㅟ\"... ireotgeyo?",
+              "translation": "\"ㅟ\"... like this?"
+            },
+            {
+              "speaker": "B",
+              "text": "맞아요, 잘했어요!",
+              "romanization": "matayo, jalhaeseoyo!",
+              "translation": "That's right, well done!"
+            }
           ]
         }
       },
@@ -558,26 +1195,59 @@
         "word": "wi (ㅟ)",
         "explanation": "A compound vowel combining ㅜ and ㅣ. Pronounced 'wee'. Originally like German 'ü', now [wi] in modern Korean.",
         "examples": {
-          "beginner": "\"ㅟ\" is pronounced 'wee'.",
-          "intermediate": "\"ㅟ\" appears in '위' (above), '귀' (ear), '뒤' (behind).",
-          "advanced": "\"ㅟ\" was originally [y] but shifted to [wi] in modern Korean.",
-          "master": "\"ㅟ\" underwent the same monophthong-to-diphthong shift as ㅚ."
+          "beginner": "Try making the \"ㅟ\" sound.",
+          "intermediate": "Find a word that contains \"ㅟ\".",
+          "advanced": "Accurate pronunciation of \"ㅟ\" is fundamental to learning Korean.",
+          "master": "Understanding the phonetic characteristics of \"ㅟ\" improves pronunciation accuracy."
         },
         "variations": {
-          "formal": ["This is the vowel ㅟ.", "ㅟ combines ㅜ and ㅣ."],
-          "casual": ["This is ㅟ.", "Say 'wee' like English 'we'."],
-          "short": ["wee"]
+          "formal": [
+            "This is the vowel ㅟ.",
+            "ㅟ combines ㅜ and ㅣ."
+          ],
+          "casual": [
+            "This is ㅟ.",
+            "Say 'wee' like English 'we'."
+          ],
+          "short": [
+            "wee"
+          ]
         },
         "dialogue": {
-          "context": "In a Korean class",
+          "context": "Practicing pronunciation",
           "dialogue": [
-            {"speaker": "A", "text": "How do you pronounce ㅟ?", "romanization": "", "translation": "ㅟ는 어떻게 발음해요?"},
-            {"speaker": "B", "text": "It's similar to English 'we'.", "romanization": "", "translation": "영어의 'we'와 비슷해요."}
+            {
+              "speaker": "A",
+              "text": "The \"ㅟ\" pronunciation is hard.",
+              "romanization": "",
+              "translation": "\"ㅟ\" 발음이 어려워요."
+            },
+            {
+              "speaker": "B",
+              "text": "Watch the mouth shape carefully.",
+              "romanization": "",
+              "translation": "입 모양을 잘 봐요."
+            },
+            {
+              "speaker": "A",
+              "text": "\"ㅟ\"... like this?",
+              "romanization": "",
+              "translation": "\"ㅟ\"... 이렇게요?"
+            },
+            {
+              "speaker": "B",
+              "text": "That's right, well done!",
+              "romanization": "",
+              "translation": "맞아요, 잘했어요!"
+            }
           ]
         }
       }
     },
-    "pronunciation": {"korean": "[위]", "ipa": "[wi]"}
+    "pronunciation": {
+      "korean": "[위]",
+      "ipa": "[wi]"
+    }
   },
   {
     "id": "ui-vowel",
@@ -587,28 +1257,62 @@
     "categoryId": "vowels-compound",
     "difficulty": "intermediate",
     "frequency": "common",
-    "tags": ["alphabet", "vowel", "compound"],
+    "tags": [
+      "alphabet",
+      "vowel",
+      "compound"
+    ],
     "hasDialogue": true,
     "translations": {
       "ko": {
         "word": "ㅢ (의)",
         "explanation": "ㅡ와 ㅣ가 합쳐진 복합 모음입니다. 위치에 따라 발음이 3가지로 변합니다.",
         "examples": {
-          "beginner": "\"ㅢ\"는 '의'라고 읽어요.",
-          "intermediate": "\"ㅢ\"는 '의자', '의사' 등에 쓰여요.",
-          "advanced": "\"ㅢ\"는 어두에서 [ɰi], 조사로 쓰일 때 [e], 그 외에서 [i]로 발음됩니다.",
-          "master": "\"ㅢ\"는 한국어에서 가장 복잡한 발음 규칙을 가진 모음으로, 3가지 발음 변이가 있습니다."
+          "beginner": "\"ㅢ\" 소리를 내 봐요.",
+          "intermediate": "\"ㅢ\"가 들어가는 단어를 찾아봐요.",
+          "advanced": "\"ㅢ\"의 정확한 발음은 한국어 학습의 기본입니다.",
+          "master": "\"ㅢ\"의 음성학적 특성을 이해하면 발음이 정확해집니다."
         },
         "variations": {
-          "formal": ["이 글자는 ㅢ입니다.", "ㅢ는 ㅡ와 ㅣ의 합성 모음입니다."],
-          "casual": ["이거 ㅢ야.", "의~ 하고 소리 내 봐."],
-          "short": ["의"]
+          "formal": [
+            "이 글자는 ㅢ입니다.",
+            "ㅢ는 ㅡ와 ㅣ의 합성 모음입니다."
+          ],
+          "casual": [
+            "이거 ㅢ야.",
+            "의~ 하고 소리 내 봐."
+          ],
+          "short": [
+            "의"
+          ]
         },
         "dialogue": {
-          "context": "한글 수업에서",
+          "context": "발음을 연습하며",
           "dialogue": [
-            {"speaker": "A", "text": "ㅢ는 왜 발음이 여러 가지예요?", "romanization": "uineun wae bareumi yeoreo gajiyeyo?", "translation": "Why does ㅢ have multiple pronunciations?"},
-            {"speaker": "B", "text": "위치에 따라 달라요. '의사'는 [의], '나의'는 [에]로 읽어요.", "romanization": "wichie ttara dallayo. 'uisa'neun [ui], 'naui'neun [e]ro ilgeoyo.", "translation": "It depends on position. '의사' is [ui], '나의' is [e]."}
+            {
+              "speaker": "A",
+              "text": "\"ㅢ\" 발음이 어려워요.",
+              "romanization": "\"ㅢ\" baleumi eoryeowoyo.",
+              "translation": "The \"ㅢ\" pronunciation is hard."
+            },
+            {
+              "speaker": "B",
+              "text": "입 모양을 잘 봐요.",
+              "romanization": "ip moyangeul jal bwayo.",
+              "translation": "Watch the mouth shape carefully."
+            },
+            {
+              "speaker": "A",
+              "text": "\"ㅢ\"... 이렇게요?",
+              "romanization": "\"ㅢ\"... ireotgeyo?",
+              "translation": "\"ㅢ\"... like this?"
+            },
+            {
+              "speaker": "B",
+              "text": "맞아요, 잘했어요!",
+              "romanization": "matayo, jalhaeseoyo!",
+              "translation": "That's right, well done!"
+            }
           ]
         }
       },
@@ -616,25 +1320,58 @@
         "word": "ui (ㅢ)",
         "explanation": "A compound vowel combining ㅡ and ㅣ. Has 3 pronunciations depending on position: [ɰi] initially, [e] as possessive particle, [i] elsewhere.",
         "examples": {
-          "beginner": "\"ㅢ\" is pronounced 'ui' at the start of a word.",
-          "intermediate": "\"ㅢ\" appears in '의자' (chair), '의사' (doctor).",
-          "advanced": "\"ㅢ\" has 3 pronunciations: [ɰi] initially, [e] as particle, [i] elsewhere.",
-          "master": "\"ㅢ\" has the most complex pronunciation rules of any Korean vowel."
+          "beginner": "Try making the \"ㅢ\" sound.",
+          "intermediate": "Find a word that contains \"ㅢ\".",
+          "advanced": "Accurate pronunciation of \"ㅢ\" is fundamental to learning Korean.",
+          "master": "Understanding the phonetic characteristics of \"ㅢ\" improves pronunciation accuracy."
         },
         "variations": {
-          "formal": ["This is the vowel ㅢ.", "ㅢ combines ㅡ and ㅣ."],
-          "casual": ["This is ㅢ.", "It has 3 different sounds!"],
-          "short": ["ui"]
+          "formal": [
+            "This is the vowel ㅢ.",
+            "ㅢ combines ㅡ and ㅣ."
+          ],
+          "casual": [
+            "This is ㅢ.",
+            "It has 3 different sounds!"
+          ],
+          "short": [
+            "ui"
+          ]
         },
         "dialogue": {
-          "context": "In a Korean class",
+          "context": "Practicing pronunciation",
           "dialogue": [
-            {"speaker": "A", "text": "Why does ㅢ have multiple pronunciations?", "romanization": "", "translation": "ㅢ는 왜 발음이 여러 가지예요?"},
-            {"speaker": "B", "text": "It depends on position. '의사' is [ui], '나의' is [e].", "romanization": "", "translation": "위치에 따라 달라요. '의사'는 [의], '나의'는 [에]로 읽어요."}
+            {
+              "speaker": "A",
+              "text": "The \"ㅢ\" pronunciation is hard.",
+              "romanization": "",
+              "translation": "\"ㅢ\" 발음이 어려워요."
+            },
+            {
+              "speaker": "B",
+              "text": "Watch the mouth shape carefully.",
+              "romanization": "",
+              "translation": "입 모양을 잘 봐요."
+            },
+            {
+              "speaker": "A",
+              "text": "\"ㅢ\"... like this?",
+              "romanization": "",
+              "translation": "\"ㅢ\"... 이렇게요?"
+            },
+            {
+              "speaker": "B",
+              "text": "That's right, well done!",
+              "romanization": "",
+              "translation": "맞아요, 잘했어요!"
+            }
           ]
         }
       }
     },
-    "pronunciation": {"korean": "[의]", "ipa": "[ɰi]"}
+    "pronunciation": {
+      "korean": "[의]",
+      "ipa": "[ɰi]"
+    }
   }
 ]

@@ -21,20 +21,78 @@
         "word": "Birthday",
         "explanation": "A day celebrating one's birth.",
         "examples": {
-          "beginner": "I birthday every day.",
-          "intermediate": "Birthday is important in daily life.",
-          "advanced": "Through birthday, I maintain a regular lifestyle.",
-          "master": "Making birthday a habit is key to improving quality of life."
+          "beginner": "I go to the birthday.",
+          "intermediate": "The birthday is coming soon.",
+          "advanced": "Birthday is an important event in Korea.",
+          "master": "Understanding the historical background of birthday deepens knowledge of Korean society."
+        },
+        "dialogue": {
+          "context": "Talking about events",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What are you doing this weekend?",
+              "romanization": "",
+              "translation": "이번 주말에 뭐 해요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm going to the birthday.",
+              "romanization": "",
+              "translation": "생일에 가요."
+            },
+            {
+              "speaker": "A",
+              "text": "Can I come too?",
+              "romanization": "",
+              "translation": "같이 가도 돼요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Of course! Let's go together.",
+              "romanization": "",
+              "translation": "물론이요! 같이 가요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "생일",
         "explanation": "태어난 날을 기념하는 날.",
         "examples": {
-          "beginner": "매일 생일을/를 해요.",
-          "intermediate": "생일은/는 일상에서 중요해요.",
-          "advanced": "생일을/를 통해 규칙적인 생활을 유지합니다.",
-          "master": "생일의 습관화는 삶의 질을 향상시키는 핵심입니다."
+          "beginner": "생일에 가요.",
+          "intermediate": "생일이 곧 있어요.",
+          "advanced": "생일은 한국의 중요한 행사입니다.",
+          "master": "생일의 역사적 배경을 이해하면 한국 사회를 더 깊이 알 수 있습니다."
+        },
+        "dialogue": {
+          "context": "행사에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "이번 주말에 뭐 해요?",
+              "romanization": "ibeon jumale mwo haeyo?",
+              "translation": "What are you doing this weekend?"
+            },
+            {
+              "speaker": "B",
+              "text": "생일에 가요.",
+              "romanization": "saengile gayo.",
+              "translation": "I'm going to the birthday."
+            },
+            {
+              "speaker": "A",
+              "text": "같이 가도 돼요?",
+              "romanization": "gati gado dwaeyo?",
+              "translation": "Can I come too?"
+            },
+            {
+              "speaker": "B",
+              "text": "물론이요! 같이 가요.",
+              "romanization": "mulroniyo! gati gayo.",
+              "translation": "Of course! Let's go together."
+            }
+          ]
         }
       }
     }
@@ -61,20 +119,78 @@
         "word": "Marriage / Wedding",
         "explanation": "Becoming legally married.",
         "examples": {
-          "beginner": "I marriage / wedding every day.",
-          "intermediate": "Marriage / Wedding is important in daily life.",
-          "advanced": "Through marriage / wedding, I maintain a regular lifestyle.",
-          "master": "Making marriage / wedding a habit is key to improving quality of life."
+          "beginner": "I go to the marriage / wedding.",
+          "intermediate": "The marriage / wedding is coming soon.",
+          "advanced": "Marriage / Wedding is an important event in Korea.",
+          "master": "Understanding the historical background of marriage / wedding deepens knowledge of Korean society."
+        },
+        "dialogue": {
+          "context": "Talking about events",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What are you doing this weekend?",
+              "romanization": "",
+              "translation": "이번 주말에 뭐 해요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm going to the marriage / wedding.",
+              "romanization": "",
+              "translation": "결혼에 가요."
+            },
+            {
+              "speaker": "A",
+              "text": "Can I come too?",
+              "romanization": "",
+              "translation": "같이 가도 돼요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Of course! Let's go together.",
+              "romanization": "",
+              "translation": "물론이요! 같이 가요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "결혼",
         "explanation": "법적으로 부부가 되는 것.",
         "examples": {
-          "beginner": "매일 결혼을/를 해요.",
-          "intermediate": "결혼은/는 일상에서 중요해요.",
-          "advanced": "결혼을/를 통해 규칙적인 생활을 유지합니다.",
-          "master": "결혼의 습관화는 삶의 질을 향상시키는 핵심입니다."
+          "beginner": "결혼에 가요.",
+          "intermediate": "결혼이 곧 있어요.",
+          "advanced": "결혼은 한국의 중요한 행사입니다.",
+          "master": "결혼의 역사적 배경을 이해하면 한국 사회를 더 깊이 알 수 있습니다."
+        },
+        "dialogue": {
+          "context": "행사에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "이번 주말에 뭐 해요?",
+              "romanization": "ibeon jumale mwo haeyo?",
+              "translation": "What are you doing this weekend?"
+            },
+            {
+              "speaker": "B",
+              "text": "결혼에 가요.",
+              "romanization": "gyeolhone gayo.",
+              "translation": "I'm going to the marriage / wedding."
+            },
+            {
+              "speaker": "A",
+              "text": "같이 가도 돼요?",
+              "romanization": "gati gado dwaeyo?",
+              "translation": "Can I come too?"
+            },
+            {
+              "speaker": "B",
+              "text": "물론이요! 같이 가요.",
+              "romanization": "mulroniyo! gati gayo.",
+              "translation": "Of course! Let's go together."
+            }
+          ]
         }
       }
     }
@@ -101,20 +217,78 @@
         "word": "Moving (house)",
         "explanation": "Relocating to a new residence.",
         "examples": {
-          "beginner": "I moving (house) every day.",
-          "intermediate": "Moving (house) is important in daily life.",
-          "advanced": "Through moving (house), I maintain a regular lifestyle.",
-          "master": "Making moving (house) a habit is key to improving quality of life."
+          "beginner": "I go to the moving (house).",
+          "intermediate": "The moving (house) is coming soon.",
+          "advanced": "Moving (house) is an important event in Korea.",
+          "master": "Understanding the historical background of moving (house) deepens knowledge of Korean society."
+        },
+        "dialogue": {
+          "context": "Talking about events",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What are you doing this weekend?",
+              "romanization": "",
+              "translation": "이번 주말에 뭐 해요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm going to the moving (house).",
+              "romanization": "",
+              "translation": "이사에 가요."
+            },
+            {
+              "speaker": "A",
+              "text": "Can I come too?",
+              "romanization": "",
+              "translation": "같이 가도 돼요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Of course! Let's go together.",
+              "romanization": "",
+              "translation": "물론이요! 같이 가요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "이사",
         "explanation": "살던 곳을 옮기는 것.",
         "examples": {
-          "beginner": "매일 이사을/를 해요.",
-          "intermediate": "이사은/는 일상에서 중요해요.",
-          "advanced": "이사을/를 통해 규칙적인 생활을 유지합니다.",
-          "master": "이사의 습관화는 삶의 질을 향상시키는 핵심입니다."
+          "beginner": "이사에 가요.",
+          "intermediate": "이사가 곧 있어요.",
+          "advanced": "이사는 한국의 중요한 행사입니다.",
+          "master": "이사의 역사적 배경을 이해하면 한국 사회를 더 깊이 알 수 있습니다."
+        },
+        "dialogue": {
+          "context": "행사에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "이번 주말에 뭐 해요?",
+              "romanization": "ibeon jumale mwo haeyo?",
+              "translation": "What are you doing this weekend?"
+            },
+            {
+              "speaker": "B",
+              "text": "이사에 가요.",
+              "romanization": "isae gayo.",
+              "translation": "I'm going to the moving (house)."
+            },
+            {
+              "speaker": "A",
+              "text": "같이 가도 돼요?",
+              "romanization": "gati gado dwaeyo?",
+              "translation": "Can I come too?"
+            },
+            {
+              "speaker": "B",
+              "text": "물론이요! 같이 가요.",
+              "romanization": "mulroniyo! gati gayo.",
+              "translation": "Of course! Let's go together."
+            }
+          ]
         }
       }
     }
@@ -141,20 +315,78 @@
         "word": "Promise / Appointment",
         "explanation": "Agreeing to do something in the future. Or words promised to be kept.",
         "examples": {
-          "beginner": "I promise / appointment every day.",
-          "intermediate": "Promise / Appointment is important in daily life.",
-          "advanced": "Through promise / appointment, I maintain a regular lifestyle.",
-          "master": "Making promise / appointment a habit is key to improving quality of life."
+          "beginner": "I go to the promise / appointment.",
+          "intermediate": "The promise / appointment is coming soon.",
+          "advanced": "Promise / Appointment is an important event in Korea.",
+          "master": "Understanding the historical background of promise / appointment deepens knowledge of Korean society."
+        },
+        "dialogue": {
+          "context": "Talking about events",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What are you doing this weekend?",
+              "romanization": "",
+              "translation": "이번 주말에 뭐 해요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm going to the promise / appointment.",
+              "romanization": "",
+              "translation": "약속에 가요."
+            },
+            {
+              "speaker": "A",
+              "text": "Can I come too?",
+              "romanization": "",
+              "translation": "같이 가도 돼요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Of course! Let's go together.",
+              "romanization": "",
+              "translation": "물론이요! 같이 가요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "약속",
         "explanation": "미래에 할 일을 정하는 것. 또는 지키기로 한 말.",
         "examples": {
-          "beginner": "매일 약속을/를 해요.",
-          "intermediate": "약속은/는 일상에서 중요해요.",
-          "advanced": "약속을/를 통해 규칙적인 생활을 유지합니다.",
-          "master": "약속의 습관화는 삶의 질을 향상시키는 핵심입니다."
+          "beginner": "약속에 가요.",
+          "intermediate": "약속이 곧 있어요.",
+          "advanced": "약속은 한국의 중요한 행사입니다.",
+          "master": "약속의 역사적 배경을 이해하면 한국 사회를 더 깊이 알 수 있습니다."
+        },
+        "dialogue": {
+          "context": "행사에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "이번 주말에 뭐 해요?",
+              "romanization": "ibeon jumale mwo haeyo?",
+              "translation": "What are you doing this weekend?"
+            },
+            {
+              "speaker": "B",
+              "text": "약속에 가요.",
+              "romanization": "yaksoke gayo.",
+              "translation": "I'm going to the promise / appointment."
+            },
+            {
+              "speaker": "A",
+              "text": "같이 가도 돼요?",
+              "romanization": "gati gado dwaeyo?",
+              "translation": "Can I come too?"
+            },
+            {
+              "speaker": "B",
+              "text": "물론이요! 같이 가요.",
+              "romanization": "mulroniyo! gati gayo.",
+              "translation": "Of course! Let's go together."
+            }
+          ]
         }
       }
     }
@@ -181,20 +413,78 @@
         "word": "Blind date",
         "explanation": "A first meeting set up by an acquaintance.",
         "examples": {
-          "beginner": "I blind date every day.",
-          "intermediate": "Blind date is important in daily life.",
-          "advanced": "Through blind date, I maintain a regular lifestyle.",
-          "master": "Making blind date a habit is key to improving quality of life."
+          "beginner": "I go to the blind date.",
+          "intermediate": "The blind date is coming soon.",
+          "advanced": "Blind date is an important event in Korea.",
+          "master": "Understanding the historical background of blind date deepens knowledge of Korean society."
+        },
+        "dialogue": {
+          "context": "Talking about events",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What are you doing this weekend?",
+              "romanization": "",
+              "translation": "이번 주말에 뭐 해요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm going to the blind date.",
+              "romanization": "",
+              "translation": "소개팅에 가요."
+            },
+            {
+              "speaker": "A",
+              "text": "Can I come too?",
+              "romanization": "",
+              "translation": "같이 가도 돼요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Of course! Let's go together.",
+              "romanization": "",
+              "translation": "물론이요! 같이 가요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "소개팅",
         "explanation": "지인의 소개로 처음 만나는 데이트.",
         "examples": {
-          "beginner": "매일 소개팅을/를 해요.",
-          "intermediate": "소개팅은/는 일상에서 중요해요.",
-          "advanced": "소개팅을/를 통해 규칙적인 생활을 유지합니다.",
-          "master": "소개팅의 습관화는 삶의 질을 향상시키는 핵심입니다."
+          "beginner": "소개팅에 가요.",
+          "intermediate": "소개팅이 곧 있어요.",
+          "advanced": "소개팅은 한국의 중요한 행사입니다.",
+          "master": "소개팅의 역사적 배경을 이해하면 한국 사회를 더 깊이 알 수 있습니다."
+        },
+        "dialogue": {
+          "context": "행사에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "이번 주말에 뭐 해요?",
+              "romanization": "ibeon jumale mwo haeyo?",
+              "translation": "What are you doing this weekend?"
+            },
+            {
+              "speaker": "B",
+              "text": "소개팅에 가요.",
+              "romanization": "sogaetinge gayo.",
+              "translation": "I'm going to the blind date."
+            },
+            {
+              "speaker": "A",
+              "text": "같이 가도 돼요?",
+              "romanization": "gati gado dwaeyo?",
+              "translation": "Can I come too?"
+            },
+            {
+              "speaker": "B",
+              "text": "물론이요! 같이 가요.",
+              "romanization": "mulroniyo! gati gayo.",
+              "translation": "Of course! Let's go together."
+            }
+          ]
         }
       }
     }
@@ -221,20 +511,78 @@
         "word": "Company dinner / Team dinner",
         "explanation": "A meal gathering with coworkers at work.",
         "examples": {
-          "beginner": "I company dinner / team dinner every day.",
-          "intermediate": "Company dinner / Team dinner is important in daily life.",
-          "advanced": "Through company dinner / team dinner, I maintain a regular lifestyle.",
-          "master": "Making company dinner / team dinner a habit is key to improving quality of life."
+          "beginner": "I go to the company dinner / team dinner.",
+          "intermediate": "The company dinner / team dinner is coming soon.",
+          "advanced": "Company dinner / Team dinner is an important event in Korea.",
+          "master": "Understanding the historical background of company dinner / team dinner deepens knowledge of Korean society."
+        },
+        "dialogue": {
+          "context": "Talking about events",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What are you doing this weekend?",
+              "romanization": "",
+              "translation": "이번 주말에 뭐 해요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm going to the company dinner / team dinner.",
+              "romanization": "",
+              "translation": "회식에 가요."
+            },
+            {
+              "speaker": "A",
+              "text": "Can I come too?",
+              "romanization": "",
+              "translation": "같이 가도 돼요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Of course! Let's go together.",
+              "romanization": "",
+              "translation": "물론이요! 같이 가요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "회식",
         "explanation": "직장에서 동료들과 함께 하는 식사 모임.",
         "examples": {
-          "beginner": "매일 회식을/를 해요.",
-          "intermediate": "회식은/는 일상에서 중요해요.",
-          "advanced": "회식을/를 통해 규칙적인 생활을 유지합니다.",
-          "master": "회식의 습관화는 삶의 질을 향상시키는 핵심입니다."
+          "beginner": "회식에 가요.",
+          "intermediate": "회식이 곧 있어요.",
+          "advanced": "회식은 한국의 중요한 행사입니다.",
+          "master": "회식의 역사적 배경을 이해하면 한국 사회를 더 깊이 알 수 있습니다."
+        },
+        "dialogue": {
+          "context": "행사에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "이번 주말에 뭐 해요?",
+              "romanization": "ibeon jumale mwo haeyo?",
+              "translation": "What are you doing this weekend?"
+            },
+            {
+              "speaker": "B",
+              "text": "회식에 가요.",
+              "romanization": "hoesike gayo.",
+              "translation": "I'm going to the company dinner / team dinner."
+            },
+            {
+              "speaker": "A",
+              "text": "같이 가도 돼요?",
+              "romanization": "gati gado dwaeyo?",
+              "translation": "Can I come too?"
+            },
+            {
+              "speaker": "B",
+              "text": "물론이요! 같이 가요.",
+              "romanization": "mulroniyo! gati gayo.",
+              "translation": "Of course! Let's go together."
+            }
+          ]
         }
       }
     }
@@ -258,10 +606,10 @@
         "word": "patio",
         "explanation": "'파티오' means 'patio' in English.",
         "examples": {
-          "beginner": "We say \"파티오\" in Korean.",
-          "intermediate": "In Korea, people often say \"파티오\".",
-          "advanced": "\"파티오\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"파티오\" makes communication more natural."
+          "beginner": "I go to the patio.",
+          "intermediate": "The patio is coming soon.",
+          "advanced": "patio is an important event in Korea.",
+          "master": "Understanding the historical background of patio deepens knowledge of Korean society."
         },
         "variations": {
           "formal": [
@@ -275,16 +623,45 @@
           "short": [
             "patio"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about events",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What are you doing this weekend?",
+              "romanization": "",
+              "translation": "이번 주말에 뭐 해요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm going to the patio.",
+              "romanization": "",
+              "translation": "파티오에 가요."
+            },
+            {
+              "speaker": "A",
+              "text": "Can I come too?",
+              "romanization": "",
+              "translation": "같이 가도 돼요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Of course! Let's go together.",
+              "romanization": "",
+              "translation": "물론이요! 같이 가요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "파티오",
         "explanation": "파티오의 뜻은 'patio'입니다.",
         "examples": {
-          "beginner": "\"파티오\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"파티오\"를 자주 써요.",
-          "advanced": "\"파티오\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"파티오\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "파티오에 가요.",
+          "intermediate": "파티오가 곧 있어요.",
+          "advanced": "파티오는 한국의 중요한 행사입니다.",
+          "master": "파티오의 역사적 배경을 이해하면 한국 사회를 더 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -297,6 +674,35 @@
           ],
           "short": [
             "파티"
+          ]
+        },
+        "dialogue": {
+          "context": "행사에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "이번 주말에 뭐 해요?",
+              "romanization": "ibeon jumale mwo haeyo?",
+              "translation": "What are you doing this weekend?"
+            },
+            {
+              "speaker": "B",
+              "text": "파티오에 가요.",
+              "romanization": "patioe gayo.",
+              "translation": "I'm going to the patio."
+            },
+            {
+              "speaker": "A",
+              "text": "같이 가도 돼요?",
+              "romanization": "gati gado dwaeyo?",
+              "translation": "Can I come too?"
+            },
+            {
+              "speaker": "B",
+              "text": "물론이요! 같이 가요.",
+              "romanization": "mulroniyo! gati gayo.",
+              "translation": "Of course! Let's go together."
+            }
           ]
         }
       }
@@ -321,10 +727,10 @@
         "word": "pyramid roof",
         "explanation": "'모임지붕' means 'pyramid roof' in English.",
         "examples": {
-          "beginner": "We say \"모임지붕\" in Korean.",
-          "intermediate": "In Korea, people often say \"모임지붕\".",
-          "advanced": "\"모임지붕\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"모임지붕\" makes communication more natural."
+          "beginner": "I go to the pyramid roof.",
+          "intermediate": "The pyramid roof is coming soon.",
+          "advanced": "pyramid roof is an important event in Korea.",
+          "master": "Understanding the historical background of pyramid roof deepens knowledge of Korean society."
         },
         "variations": {
           "formal": [
@@ -338,16 +744,45 @@
           "short": [
             "pyramid"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about events",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What are you doing this weekend?",
+              "romanization": "",
+              "translation": "이번 주말에 뭐 해요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm going to the pyramid roof.",
+              "romanization": "",
+              "translation": "모임지붕에 가요."
+            },
+            {
+              "speaker": "A",
+              "text": "Can I come too?",
+              "romanization": "",
+              "translation": "같이 가도 돼요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Of course! Let's go together.",
+              "romanization": "",
+              "translation": "물론이요! 같이 가요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "모임지붕",
         "explanation": "모임지붕의 뜻은 'pyramid roof'입니다.",
         "examples": {
-          "beginner": "\"모임지붕\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"모임지붕\"를 자주 써요.",
-          "advanced": "\"모임지붕\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"모임지붕\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "모임지붕에 가요.",
+          "intermediate": "모임지붕이 곧 있어요.",
+          "advanced": "모임지붕은 한국의 중요한 행사입니다.",
+          "master": "모임지붕의 역사적 배경을 이해하면 한국 사회를 더 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -360,6 +795,35 @@
           ],
           "short": [
             "모임"
+          ]
+        },
+        "dialogue": {
+          "context": "행사에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "이번 주말에 뭐 해요?",
+              "romanization": "ibeon jumale mwo haeyo?",
+              "translation": "What are you doing this weekend?"
+            },
+            {
+              "speaker": "B",
+              "text": "모임지붕에 가요.",
+              "romanization": "moimjibunge gayo.",
+              "translation": "I'm going to the pyramid roof."
+            },
+            {
+              "speaker": "A",
+              "text": "같이 가도 돼요?",
+              "romanization": "gati gado dwaeyo?",
+              "translation": "Can I come too?"
+            },
+            {
+              "speaker": "B",
+              "text": "물론이요! 같이 가요.",
+              "romanization": "mulroniyo! gati gayo.",
+              "translation": "Of course! Let's go together."
+            }
           ]
         }
       }
@@ -384,10 +848,10 @@
         "word": "partition",
         "explanation": "'파티션' means 'partition' in English.",
         "examples": {
-          "beginner": "We say \"파티션\" in Korean.",
-          "intermediate": "In Korea, people often say \"파티션\".",
-          "advanced": "\"파티션\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"파티션\" makes communication more natural."
+          "beginner": "I go to the partition.",
+          "intermediate": "The partition is coming soon.",
+          "advanced": "partition is an important event in Korea.",
+          "master": "Understanding the historical background of partition deepens knowledge of Korean society."
         },
         "variations": {
           "formal": [
@@ -401,16 +865,45 @@
           "short": [
             "partition"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about events",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What are you doing this weekend?",
+              "romanization": "",
+              "translation": "이번 주말에 뭐 해요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm going to the partition.",
+              "romanization": "",
+              "translation": "파티션에 가요."
+            },
+            {
+              "speaker": "A",
+              "text": "Can I come too?",
+              "romanization": "",
+              "translation": "같이 가도 돼요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Of course! Let's go together.",
+              "romanization": "",
+              "translation": "물론이요! 같이 가요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "파티션",
         "explanation": "파티션의 뜻은 'partition'입니다.",
         "examples": {
-          "beginner": "\"파티션\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"파티션\"를 자주 써요.",
-          "advanced": "\"파티션\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"파티션\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "파티션에 가요.",
+          "intermediate": "파티션이 곧 있어요.",
+          "advanced": "파티션은 한국의 중요한 행사입니다.",
+          "master": "파티션의 역사적 배경을 이해하면 한국 사회를 더 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -423,6 +916,35 @@
           ],
           "short": [
             "파티"
+          ]
+        },
+        "dialogue": {
+          "context": "행사에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "이번 주말에 뭐 해요?",
+              "romanization": "ibeon jumale mwo haeyo?",
+              "translation": "What are you doing this weekend?"
+            },
+            {
+              "speaker": "B",
+              "text": "파티션에 가요.",
+              "romanization": "patisyeone gayo.",
+              "translation": "I'm going to the partition."
+            },
+            {
+              "speaker": "A",
+              "text": "같이 가도 돼요?",
+              "romanization": "gati gado dwaeyo?",
+              "translation": "Can I come too?"
+            },
+            {
+              "speaker": "B",
+              "text": "물론이요! 같이 가요.",
+              "romanization": "mulroniyo! gati gayo.",
+              "translation": "Of course! Let's go together."
+            }
           ]
         }
       }
@@ -447,10 +969,10 @@
         "word": "jacquard curtain",
         "explanation": "'자카드커튼' means 'jacquard curtain' in English.",
         "examples": {
-          "beginner": "We say \"자카드커튼\" in Korean.",
-          "intermediate": "In Korea, people often say \"자카드커튼\".",
-          "advanced": "\"자카드커튼\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"자카드커튼\" makes communication more natural."
+          "beginner": "I go to the jacquard curtain.",
+          "intermediate": "The jacquard curtain is coming soon.",
+          "advanced": "jacquard curtain is an important event in Korea.",
+          "master": "Understanding the historical background of jacquard curtain deepens knowledge of Korean society."
         },
         "variations": {
           "formal": [
@@ -464,16 +986,45 @@
           "short": [
             "jacquard"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about events",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What are you doing this weekend?",
+              "romanization": "",
+              "translation": "이번 주말에 뭐 해요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm going to the jacquard curtain.",
+              "romanization": "",
+              "translation": "자카드커튼에 가요."
+            },
+            {
+              "speaker": "A",
+              "text": "Can I come too?",
+              "romanization": "",
+              "translation": "같이 가도 돼요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Of course! Let's go together.",
+              "romanization": "",
+              "translation": "물론이요! 같이 가요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "자카드커튼",
         "explanation": "자카드커튼의 뜻은 'jacquard curtain'입니다.",
         "examples": {
-          "beginner": "\"자카드커튼\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"자카드커튼\"를 자주 써요.",
-          "advanced": "\"자카드커튼\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"자카드커튼\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "자카드커튼에 가요.",
+          "intermediate": "자카드커튼이 곧 있어요.",
+          "advanced": "자카드커튼은 한국의 중요한 행사입니다.",
+          "master": "자카드커튼의 역사적 배경을 이해하면 한국 사회를 더 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -486,6 +1037,35 @@
           ],
           "short": [
             "자카"
+          ]
+        },
+        "dialogue": {
+          "context": "행사에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "이번 주말에 뭐 해요?",
+              "romanization": "ibeon jumale mwo haeyo?",
+              "translation": "What are you doing this weekend?"
+            },
+            {
+              "speaker": "B",
+              "text": "자카드커튼에 가요.",
+              "romanization": "jakadeukeoteune gayo.",
+              "translation": "I'm going to the jacquard curtain."
+            },
+            {
+              "speaker": "A",
+              "text": "같이 가도 돼요?",
+              "romanization": "gati gado dwaeyo?",
+              "translation": "Can I come too?"
+            },
+            {
+              "speaker": "B",
+              "text": "물론이요! 같이 가요.",
+              "romanization": "mulroniyo! gati gayo.",
+              "translation": "Of course! Let's go together."
+            }
           ]
         }
       }
@@ -510,10 +1090,10 @@
         "word": "key card",
         "explanation": "'카드키' means 'key card' in English.",
         "examples": {
-          "beginner": "We say \"카드키\" in Korean.",
-          "intermediate": "In Korea, people often say \"카드키\".",
-          "advanced": "\"카드키\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"카드키\" makes communication more natural."
+          "beginner": "I go to the key card.",
+          "intermediate": "The key card is coming soon.",
+          "advanced": "key card is an important event in Korea.",
+          "master": "Understanding the historical background of key card deepens knowledge of Korean society."
         },
         "variations": {
           "formal": [
@@ -527,16 +1107,45 @@
           "short": [
             "key"
           ]
+        },
+        "dialogue": {
+          "context": "Talking about events",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "What are you doing this weekend?",
+              "romanization": "",
+              "translation": "이번 주말에 뭐 해요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I'm going to the key card.",
+              "romanization": "",
+              "translation": "카드키에 가요."
+            },
+            {
+              "speaker": "A",
+              "text": "Can I come too?",
+              "romanization": "",
+              "translation": "같이 가도 돼요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Of course! Let's go together.",
+              "romanization": "",
+              "translation": "물론이요! 같이 가요."
+            }
+          ]
         }
       },
       "ko": {
         "word": "카드키",
         "explanation": "카드키의 뜻은 'key card'입니다.",
         "examples": {
-          "beginner": "\"카드키\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"카드키\"를 자주 써요.",
-          "advanced": "\"카드키\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"카드키\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "카드키에 가요.",
+          "intermediate": "카드키가 곧 있어요.",
+          "advanced": "카드키는 한국의 중요한 행사입니다.",
+          "master": "카드키의 역사적 배경을 이해하면 한국 사회를 더 깊이 알 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -549,6 +1158,35 @@
           ],
           "short": [
             "카드"
+          ]
+        },
+        "dialogue": {
+          "context": "행사에 대해 이야기하며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "이번 주말에 뭐 해요?",
+              "romanization": "ibeon jumale mwo haeyo?",
+              "translation": "What are you doing this weekend?"
+            },
+            {
+              "speaker": "B",
+              "text": "카드키에 가요.",
+              "romanization": "kadeukie gayo.",
+              "translation": "I'm going to the key card."
+            },
+            {
+              "speaker": "A",
+              "text": "같이 가도 돼요?",
+              "romanization": "gati gado dwaeyo?",
+              "translation": "Can I come too?"
+            },
+            {
+              "speaker": "B",
+              "text": "물론이요! 같이 가요.",
+              "romanization": "mulroniyo! gati gayo.",
+              "translation": "Of course! Let's go together."
+            }
           ]
         }
       }

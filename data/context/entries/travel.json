@@ -23,7 +23,7 @@
         "examples": {
           "beginner": "공항에 가요.",
           "intermediate": "공항에서 여행했어요.",
-          "advanced": "공항은/는 관광지로 유명합니다.",
+          "advanced": "공항은 관광지로 유명합니다.",
           "master": "공항의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "variations": {
@@ -149,7 +149,7 @@
         "examples": {
           "beginner": "역에 가요.",
           "intermediate": "역에서 여행했어요.",
-          "advanced": "역은/는 관광지로 유명합니다.",
+          "advanced": "역은 관광지로 유명합니다.",
           "master": "역의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "variations": {
@@ -271,7 +271,7 @@
         "examples": {
           "beginner": "버스에 가요.",
           "intermediate": "버스에서 여행했어요.",
-          "advanced": "버스은/는 관광지로 유명합니다.",
+          "advanced": "버스는 관광지로 유명합니다.",
           "master": "버스의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "variations": {
@@ -403,7 +403,7 @@
         "examples": {
           "beginner": "지하철에 가요.",
           "intermediate": "지하철에서 여행했어요.",
-          "advanced": "지하철은/는 관광지로 유명합니다.",
+          "advanced": "지하철은 관광지로 유명합니다.",
           "master": "지하철의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "variations": {
@@ -527,7 +527,7 @@
         "examples": {
           "beginner": "택시에 가요.",
           "intermediate": "택시에서 여행했어요.",
-          "advanced": "택시은/는 관광지로 유명합니다.",
+          "advanced": "택시는 관광지로 유명합니다.",
           "master": "택시의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "variations": {
@@ -657,7 +657,7 @@
         "examples": {
           "beginner": "기차에 가요.",
           "intermediate": "기차에서 여행했어요.",
-          "advanced": "기차은/는 관광지로 유명합니다.",
+          "advanced": "기차는 관광지로 유명합니다.",
           "master": "기차의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "variations": {
@@ -785,7 +785,7 @@
         "examples": {
           "beginner": "비행기에 가요.",
           "intermediate": "비행기에서 여행했어요.",
-          "advanced": "비행기은/는 관광지로 유명합니다.",
+          "advanced": "비행기는 관광지로 유명합니다.",
           "master": "비행기의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "variations": {
@@ -907,7 +907,7 @@
         "examples": {
           "beginner": "호텔에 가요.",
           "intermediate": "호텔에서 여행했어요.",
-          "advanced": "호텔은/는 관광지로 유명합니다.",
+          "advanced": "호텔은 관광지로 유명합니다.",
           "master": "호텔의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "variations": {
@@ -1037,7 +1037,7 @@
         "examples": {
           "beginner": "화장실에 가요.",
           "intermediate": "화장실에서 여행했어요.",
-          "advanced": "화장실은/는 관광지로 유명합니다.",
+          "advanced": "화장실은 관광지로 유명합니다.",
           "master": "화장실의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "variations": {
@@ -1165,7 +1165,7 @@
         "examples": {
           "beginner": "출구에 가요.",
           "intermediate": "출구에서 여행했어요.",
-          "advanced": "출구은/는 관광지로 유명합니다.",
+          "advanced": "출구는 관광지로 유명합니다.",
           "master": "출구의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "variations": {
@@ -1291,7 +1291,7 @@
         "examples": {
           "beginner": "입구에 가요.",
           "intermediate": "입구에서 여행했어요.",
-          "advanced": "입구은/는 관광지로 유명합니다.",
+          "advanced": "입구는 관광지로 유명합니다.",
           "master": "입구의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "variations": {
@@ -1415,7 +1415,7 @@
         "examples": {
           "beginner": "어디에 가요.",
           "intermediate": "어디에서 여행했어요.",
-          "advanced": "어디은/는 관광지로 유명합니다.",
+          "advanced": "어디는 관광지로 유명합니다.",
           "master": "어디의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "variations": {
@@ -1543,7 +1543,7 @@
         "examples": {
           "beginner": "얼마에 가요.",
           "intermediate": "얼마에서 여행했어요.",
-          "advanced": "얼마은/는 관광지로 유명합니다.",
+          "advanced": "얼마는 관광지로 유명합니다.",
           "master": "얼마의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "variations": {
@@ -1675,7 +1675,7 @@
         "examples": {
           "beginner": "표에 가요.",
           "intermediate": "표에서 여행했어요.",
-          "advanced": "표은/는 관광지로 유명합니다.",
+          "advanced": "표는 관광지로 유명합니다.",
           "master": "표의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "variations": {
@@ -1803,7 +1803,7 @@
         "examples": {
           "beginner": "예약에 가요.",
           "intermediate": "예약에서 여행했어요.",
-          "advanced": "예약은/는 관광지로 유명합니다.",
+          "advanced": "예약은 관광지로 유명합니다.",
           "master": "예약의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "variations": {
@@ -1926,7 +1926,7 @@
         "examples": {
           "beginner": "여행에 가요.",
           "intermediate": "여행에서 여행했어요.",
-          "advanced": "여행은/는 관광지로 유명합니다.",
+          "advanced": "여행은 관광지로 유명합니다.",
           "master": "여행의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -2023,7 +2023,7 @@
         "examples": {
           "beginner": "관광에 가요.",
           "intermediate": "관광에서 여행했어요.",
-          "advanced": "관광은/는 관광지로 유명합니다.",
+          "advanced": "관광은 관광지로 유명합니다.",
           "master": "관광의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -2120,7 +2120,7 @@
         "examples": {
           "beginner": "지도에 가요.",
           "intermediate": "지도에서 여행했어요.",
-          "advanced": "지도은/는 관광지로 유명합니다.",
+          "advanced": "지도는 관광지로 유명합니다.",
           "master": "지도의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -2217,7 +2217,7 @@
         "examples": {
           "beginner": "여권에 가요.",
           "intermediate": "여권에서 여행했어요.",
-          "advanced": "여권은/는 관광지로 유명합니다.",
+          "advanced": "여권은 관광지로 유명합니다.",
           "master": "여권의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -2314,7 +2314,7 @@
         "examples": {
           "beginner": "비자에 가요.",
           "intermediate": "비자에서 여행했어요.",
-          "advanced": "비자은/는 관광지로 유명합니다.",
+          "advanced": "비자는 관광지로 유명합니다.",
           "master": "비자의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -2411,7 +2411,7 @@
         "examples": {
           "beginner": "짐에 가요.",
           "intermediate": "짐에서 여행했어요.",
-          "advanced": "짐은/는 관광지로 유명합니다.",
+          "advanced": "짐은 관광지로 유명합니다.",
           "master": "짐의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -2508,7 +2508,7 @@
         "examples": {
           "beginner": "캐리어에 가요.",
           "intermediate": "캐리어에서 여행했어요.",
-          "advanced": "캐리어은/는 관광지로 유명합니다.",
+          "advanced": "캐리어는 관광지로 유명합니다.",
           "master": "캐리어의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -2605,7 +2605,7 @@
         "examples": {
           "beginner": "호스텔에 가요.",
           "intermediate": "호스텔에서 여행했어요.",
-          "advanced": "호스텔은/는 관광지로 유명합니다.",
+          "advanced": "호스텔은 관광지로 유명합니다.",
           "master": "호스텔의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -2702,7 +2702,7 @@
         "examples": {
           "beginner": "민박에 가요.",
           "intermediate": "민박에서 여행했어요.",
-          "advanced": "민박은/는 관광지로 유명합니다.",
+          "advanced": "민박은 관광지로 유명합니다.",
           "master": "민박의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -2799,7 +2799,7 @@
         "examples": {
           "beginner": "국내선에 가요.",
           "intermediate": "국내선에서 여행했어요.",
-          "advanced": "국내선은/는 관광지로 유명합니다.",
+          "advanced": "국내선은 관광지로 유명합니다.",
           "master": "국내선의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -2896,7 +2896,7 @@
         "examples": {
           "beginner": "국제선에 가요.",
           "intermediate": "국제선에서 여행했어요.",
-          "advanced": "국제선은/는 관광지로 유명합니다.",
+          "advanced": "국제선은 관광지로 유명합니다.",
           "master": "국제선의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -2993,7 +2993,7 @@
         "examples": {
           "beginner": "탑승에 가요.",
           "intermediate": "탑승에서 여행했어요.",
-          "advanced": "탑승은/는 관광지로 유명합니다.",
+          "advanced": "탑승은 관광지로 유명합니다.",
           "master": "탑승의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -3090,7 +3090,7 @@
         "examples": {
           "beginner": "출발에 가요.",
           "intermediate": "출발에서 여행했어요.",
-          "advanced": "출발은/는 관광지로 유명합니다.",
+          "advanced": "출발은 관광지로 유명합니다.",
           "master": "출발의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -3187,7 +3187,7 @@
         "examples": {
           "beginner": "도착에 가요.",
           "intermediate": "도착에서 여행했어요.",
-          "advanced": "도착은/는 관광지로 유명합니다.",
+          "advanced": "도착은 관광지로 유명합니다.",
           "master": "도착의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -3284,7 +3284,7 @@
         "examples": {
           "beginner": "환승에 가요.",
           "intermediate": "환승에서 여행했어요.",
-          "advanced": "환승은/는 관광지로 유명합니다.",
+          "advanced": "환승은 관광지로 유명합니다.",
           "master": "환승의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -3381,7 +3381,7 @@
         "examples": {
           "beginner": "노선에 가요.",
           "intermediate": "노선에서 여행했어요.",
-          "advanced": "노선은/는 관광지로 유명합니다.",
+          "advanced": "노선은 관광지로 유명합니다.",
           "master": "노선의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -3478,7 +3478,7 @@
         "examples": {
           "beginner": "정류장에 가요.",
           "intermediate": "정류장에서 여행했어요.",
-          "advanced": "정류장은/는 관광지로 유명합니다.",
+          "advanced": "정류장은 관광지로 유명합니다.",
           "master": "정류장의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -3575,7 +3575,7 @@
         "examples": {
           "beginner": "해외여행에 가요.",
           "intermediate": "해외여행에서 여행했어요.",
-          "advanced": "해외여행은/는 관광지로 유명합니다.",
+          "advanced": "해외여행은 관광지로 유명합니다.",
           "master": "해외여행의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -3672,7 +3672,7 @@
         "examples": {
           "beginner": "국내에 가요.",
           "intermediate": "국내에서 여행했어요.",
-          "advanced": "국내은/는 관광지로 유명합니다.",
+          "advanced": "국내는 관광지로 유명합니다.",
           "master": "국내의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -3769,7 +3769,7 @@
         "examples": {
           "beginner": "면세점에 가요.",
           "intermediate": "면세점에서 여행했어요.",
-          "advanced": "면세점은/는 관광지로 유명합니다.",
+          "advanced": "면세점은 관광지로 유명합니다.",
           "master": "면세점의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -3866,7 +3866,7 @@
         "examples": {
           "beginner": "환전에 가요.",
           "intermediate": "환전에서 여행했어요.",
-          "advanced": "환전은/는 관광지로 유명합니다.",
+          "advanced": "환전은 관광지로 유명합니다.",
           "master": "환전의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -3963,7 +3963,7 @@
         "examples": {
           "beginner": "환율에 가요.",
           "intermediate": "환율에서 여행했어요.",
-          "advanced": "환율은/는 관광지로 유명합니다.",
+          "advanced": "환율은 관광지로 유명합니다.",
           "master": "환율의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -4060,7 +4060,7 @@
         "examples": {
           "beginner": "입국에 가요.",
           "intermediate": "입국에서 여행했어요.",
-          "advanced": "입국은/는 관광지로 유명합니다.",
+          "advanced": "입국은 관광지로 유명합니다.",
           "master": "입국의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -4157,7 +4157,7 @@
         "examples": {
           "beginner": "출국에 가요.",
           "intermediate": "출국에서 여행했어요.",
-          "advanced": "출국은/는 관광지로 유명합니다.",
+          "advanced": "출국은 관광지로 유명합니다.",
           "master": "출국의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -4254,7 +4254,7 @@
         "examples": {
           "beginner": "수하물에 가요.",
           "intermediate": "수하물에서 여행했어요.",
-          "advanced": "수하물은/는 관광지로 유명합니다.",
+          "advanced": "수하물은 관광지로 유명합니다.",
           "master": "수하물의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -4351,7 +4351,7 @@
         "examples": {
           "beginner": "기내용에 가요.",
           "intermediate": "기내용에서 여행했어요.",
-          "advanced": "기내용은/는 관광지로 유명합니다.",
+          "advanced": "기내용은 관광지로 유명합니다.",
           "master": "기내용의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -4448,7 +4448,7 @@
         "examples": {
           "beginner": "체크인에 가요.",
           "intermediate": "체크인에서 여행했어요.",
-          "advanced": "체크인은/는 관광지로 유명합니다.",
+          "advanced": "체크인은 관광지로 유명합니다.",
           "master": "체크인의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -4545,7 +4545,7 @@
         "examples": {
           "beginner": "체크아웃에 가요.",
           "intermediate": "체크아웃에서 여행했어요.",
-          "advanced": "체크아웃은/는 관광지로 유명합니다.",
+          "advanced": "체크아웃은 관광지로 유명합니다.",
           "master": "체크아웃의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -4642,7 +4642,7 @@
         "examples": {
           "beginner": "명소에 가요.",
           "intermediate": "명소에서 여행했어요.",
-          "advanced": "명소은/는 관광지로 유명합니다.",
+          "advanced": "명소는 관광지로 유명합니다.",
           "master": "명소의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -4739,7 +4739,7 @@
         "examples": {
           "beginner": "유적지에 가요.",
           "intermediate": "유적지에서 여행했어요.",
-          "advanced": "유적지은/는 관광지로 유명합니다.",
+          "advanced": "유적지는 관광지로 유명합니다.",
           "master": "유적지의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -4836,7 +4836,7 @@
         "examples": {
           "beginner": "박물관에 가요.",
           "intermediate": "박물관에서 여행했어요.",
-          "advanced": "박물관은/는 관광지로 유명합니다.",
+          "advanced": "박물관은 관광지로 유명합니다.",
           "master": "박물관의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -4933,7 +4933,7 @@
         "examples": {
           "beginner": "가이드에 가요.",
           "intermediate": "가이드에서 여행했어요.",
-          "advanced": "가이드은/는 관광지로 유명합니다.",
+          "advanced": "가이드는 관광지로 유명합니다.",
           "master": "가이드의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -5030,7 +5030,7 @@
         "examples": {
           "beginner": "사진에 가요.",
           "intermediate": "사진에서 여행했어요.",
-          "advanced": "사진은/는 관광지로 유명합니다.",
+          "advanced": "사진은 관광지로 유명합니다.",
           "master": "사진의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -5127,7 +5127,7 @@
         "examples": {
           "beginner": "배낭에 가요.",
           "intermediate": "배낭에서 여행했어요.",
-          "advanced": "배낭은/는 관광지로 유명합니다.",
+          "advanced": "배낭은 관광지로 유명합니다.",
           "master": "배낭의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {
@@ -5224,7 +5224,7 @@
         "examples": {
           "beginner": "일정에 가요.",
           "intermediate": "일정에서 여행했어요.",
-          "advanced": "일정은/는 관광지로 유명합니다.",
+          "advanced": "일정은 관광지로 유명합니다.",
           "master": "일정의 문화와 역사를 체험하는 것은 여행의 진정한 가치입니다."
         },
         "dialogue": {

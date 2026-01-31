@@ -20,10 +20,10 @@
         "word": "의사",
         "explanation": "병을 치료하는 전문직입니다. 한국에서 의사는 '선생님'이라는 호칭으로 불립니다. 한자어 '醫師'에서 유래했습니다.",
         "examples": {
-          "beginner": "의사가 되고 싶어요.",
-          "intermediate": "의사 선생님께 진찰을 받았어요.",
-          "advanced": "한국에서 의사는 가장 선호하는 직업 중 하나이다.",
-          "master": "의사의 사회적 지위와 경제적 보상은 한국에서 최상위권이다."
+          "beginner": "저는 의사예요.",
+          "intermediate": "의사가 되고 싶어요.",
+          "advanced": "의사는 사회에서 중요한 역할을 합니다.",
+          "master": "의사의 전문성과 윤리는 직업의 사회적 가치를 결정합니다."
         },
         "variations": {
           "formal": [
@@ -39,19 +39,31 @@
           ]
         },
         "dialogue": {
-          "context": "병원에서",
+          "context": "직업에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "어디가 아프세요?",
-              "romanization": "eodiga apeuseyo?",
-              "translation": "Where does it hurt?"
+              "text": "직업이 뭐예요?",
+              "romanization": "jikeopi mwoyeyo?",
+              "translation": "What do you do for a living?"
             },
             {
               "speaker": "B",
-              "text": "머리가 아프고 열이 나요.",
-              "romanization": "meoriga apeugo yeori nayo.",
-              "translation": "I have a headache and a fever."
+              "text": "저는 의사예요.",
+              "romanization": "jeoneun uisayeyo.",
+              "translation": "I'm a doctor."
+            },
+            {
+              "speaker": "A",
+              "text": "멋있네요!",
+              "romanization": "meosisneyo!",
+              "translation": "That's cool!"
+            },
+            {
+              "speaker": "B",
+              "text": "감사합니다. 보람 있는 일이에요.",
+              "romanization": "gamsahapnida. boram isneun ilieyo.",
+              "translation": "Thank you. It's rewarding work."
             }
           ]
         }
@@ -60,10 +72,10 @@
         "word": "doctor",
         "explanation": "A medical professional who treats illness. In Korea, doctors are addressed as '선생님' (teacher/sir/ma'am) as a sign of respect. The word comes from the Chinese characters '醫師'.",
         "examples": {
-          "beginner": "I want to become a doctor.",
-          "intermediate": "I was examined by the doctor.",
-          "advanced": "Being a doctor is one of the most preferred professions in Korea.",
-          "master": "Doctors hold top-tier social status and economic compensation in Korea."
+          "beginner": "I am a doctor.",
+          "intermediate": "I want to become a doctor.",
+          "advanced": "A doctor plays an important role in society.",
+          "master": "The expertise and ethics of a doctor determine the social value of the profession."
         },
         "variations": {
           "formal": [
@@ -79,19 +91,31 @@
           ]
         },
         "dialogue": {
-          "context": "At the hospital",
+          "context": "Talking about occupations",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Where does it hurt?",
+              "text": "What do you do for a living?",
               "romanization": "",
-              "translation": "어디가 아프세요?"
+              "translation": "직업이 뭐예요?"
             },
             {
               "speaker": "B",
-              "text": "I have a headache and a fever.",
+              "text": "I'm a doctor.",
               "romanization": "",
-              "translation": "머리가 아프고 열이 나요."
+              "translation": "저는 의사예요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's cool!",
+              "romanization": "",
+              "translation": "멋있네요!"
+            },
+            {
+              "speaker": "B",
+              "text": "Thank you. It's rewarding work.",
+              "romanization": "",
+              "translation": "감사합니다. 보람 있는 일이에요."
             }
           ]
         }
@@ -122,10 +146,10 @@
         "word": "경찰",
         "explanation": "법과 질서를 유지하고 시민을 보호하는 공무원입니다. 한국 경찰의 긴급 전화번호는 112입니다.",
         "examples": {
-          "beginner": "경찰이 왔어요.",
-          "intermediate": "경찰에 신고했어요.",
-          "advanced": "한국에서 경찰 긴급 전화번호는 112이다.",
-          "master": "경찰은 시민의 안전과 사회 질서 유지를 책임진다."
+          "beginner": "저는 경찰이에요.",
+          "intermediate": "경찰이 되고 싶어요.",
+          "advanced": "경찰은 사회에서 중요한 역할을 합니다.",
+          "master": "경찰의 전문성과 윤리는 직업의 사회적 가치를 결정합니다."
         },
         "variations": {
           "formal": [
@@ -141,19 +165,31 @@
           ]
         },
         "dialogue": {
-          "context": "길을 잃었을 때",
+          "context": "직업에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "저기 경찰관님한테 길 물어보자.",
-              "romanization": "jeogi gyeongchalgwannimhante gil mureo boja.",
-              "translation": "Let's ask that police officer for directions."
+              "text": "직업이 뭐예요?",
+              "romanization": "jikeopi mwoyeyo?",
+              "translation": "What do you do for a living?"
             },
             {
               "speaker": "B",
-              "text": "좋은 생각이다.",
-              "romanization": "joeun saenggagida.",
-              "translation": "Good idea."
+              "text": "저는 경찰이에요.",
+              "romanization": "jeoneun gyeongchalieyo.",
+              "translation": "I'm a police."
+            },
+            {
+              "speaker": "A",
+              "text": "멋있네요!",
+              "romanization": "meosisneyo!",
+              "translation": "That's cool!"
+            },
+            {
+              "speaker": "B",
+              "text": "감사합니다. 보람 있는 일이에요.",
+              "romanization": "gamsahapnida. boram isneun ilieyo.",
+              "translation": "Thank you. It's rewarding work."
             }
           ]
         }
@@ -162,10 +198,10 @@
         "word": "police",
         "explanation": "A public servant who maintains law and order and protects citizens. Korea's emergency police number is 112.",
         "examples": {
-          "beginner": "The police came.",
-          "intermediate": "I reported it to the police.",
-          "advanced": "In Korea, the police emergency number is 112.",
-          "master": "The police are responsible for public safety and maintaining social order."
+          "beginner": "I am a police.",
+          "intermediate": "I want to become a police.",
+          "advanced": "A police plays an important role in society.",
+          "master": "The expertise and ethics of a police determine the social value of the profession."
         },
         "variations": {
           "formal": [
@@ -181,19 +217,31 @@
           ]
         },
         "dialogue": {
-          "context": "When lost",
+          "context": "Talking about occupations",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Let's ask that police officer for directions.",
+              "text": "What do you do for a living?",
               "romanization": "",
-              "translation": "저기 경찰관님한테 길 물어보자."
+              "translation": "직업이 뭐예요?"
             },
             {
               "speaker": "B",
-              "text": "Good idea.",
+              "text": "I'm a police.",
               "romanization": "",
-              "translation": "좋은 생각이다."
+              "translation": "저는 경찰이에요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's cool!",
+              "romanization": "",
+              "translation": "멋있네요!"
+            },
+            {
+              "speaker": "B",
+              "text": "Thank you. It's rewarding work.",
+              "romanization": "",
+              "translation": "감사합니다. 보람 있는 일이에요."
             }
           ]
         }
@@ -224,10 +272,10 @@
         "word": "요리사",
         "explanation": "음식을 만드는 것이 직업인 사람입니다. '셰프'라는 외래어도 많이 씁니다. 한국에서는 요리 예능 프로그램의 인기로 요리사에 대한 관심이 높아졌습니다.",
         "examples": {
-          "beginner": "요리사가 되고 싶어요.",
-          "intermediate": "이 식당의 요리사는 유명해요.",
-          "advanced": "한식 요리사의 세계적 위상이 높아지고 있다.",
-          "master": "요리사는 식재료의 특성을 이해하고 창의적으로 조합하는 예술가이다."
+          "beginner": "저는 요리사예요.",
+          "intermediate": "요리사가 되고 싶어요.",
+          "advanced": "요리사는 사회에서 중요한 역할을 합니다.",
+          "master": "요리사의 전문성과 윤리는 직업의 사회적 가치를 결정합니다."
         },
         "variations": {
           "formal": [
@@ -243,19 +291,31 @@
           ]
         },
         "dialogue": {
-          "context": "식당에서",
+          "context": "직업에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "이 음식 진짜 맛있다. 요리사가 누구야?",
-              "romanization": "i eumsik jinjja masitda. yorisaga nuguya?",
-              "translation": "This food is really delicious. Who's the chef?"
+              "text": "직업이 뭐예요?",
+              "romanization": "jikeopi mwoyeyo?",
+              "translation": "What do you do for a living?"
             },
             {
               "speaker": "B",
-              "text": "유명한 한식 셰프래.",
-              "romanization": "yumyeonghan hansik syepeurae.",
-              "translation": "I heard it's a famous Korean cuisine chef."
+              "text": "저는 요리사예요.",
+              "romanization": "jeoneun yorisayeyo.",
+              "translation": "I'm a chef / cook."
+            },
+            {
+              "speaker": "A",
+              "text": "멋있네요!",
+              "romanization": "meosisneyo!",
+              "translation": "That's cool!"
+            },
+            {
+              "speaker": "B",
+              "text": "감사합니다. 보람 있는 일이에요.",
+              "romanization": "gamsahapnida. boram isneun ilieyo.",
+              "translation": "Thank you. It's rewarding work."
             }
           ]
         }
@@ -264,10 +324,10 @@
         "word": "chef / cook",
         "explanation": "A professional who cooks food. The loanword '셰프' (chef) is also commonly used. Korean cooking shows have boosted public interest in the culinary profession.",
         "examples": {
-          "beginner": "I want to become a chef.",
-          "intermediate": "The chef at this restaurant is famous.",
-          "advanced": "The global reputation of Korean cuisine chefs is rising.",
-          "master": "A chef is an artist who understands ingredients and combines them creatively."
+          "beginner": "I am a chef / cook.",
+          "intermediate": "I want to become a chef / cook.",
+          "advanced": "A chef / cook plays an important role in society.",
+          "master": "The expertise and ethics of a chef / cook determine the social value of the profession."
         },
         "variations": {
           "formal": [
@@ -283,19 +343,31 @@
           ]
         },
         "dialogue": {
-          "context": "At a restaurant",
+          "context": "Talking about occupations",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "This food is really delicious. Who's the chef?",
+              "text": "What do you do for a living?",
               "romanization": "",
-              "translation": "이 음식 진짜 맛있다. 요리사가 누구야?"
+              "translation": "직업이 뭐예요?"
             },
             {
               "speaker": "B",
-              "text": "I heard it's a famous Korean cuisine chef.",
+              "text": "I'm a chef / cook.",
               "romanization": "",
-              "translation": "유명한 한식 셰프래."
+              "translation": "저는 요리사예요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's cool!",
+              "romanization": "",
+              "translation": "멋있네요!"
+            },
+            {
+              "speaker": "B",
+              "text": "Thank you. It's rewarding work.",
+              "romanization": "",
+              "translation": "감사합니다. 보람 있는 일이에요."
             }
           ]
         }
@@ -327,9 +399,9 @@
         "explanation": "회사에 다니는 직장인입니다. 한국에서 가장 흔한 직업 형태로, '직장인', '샐러리맨'이라고도 합니다.",
         "examples": {
           "beginner": "저는 회사원이에요.",
-          "intermediate": "회사원은 보통 9시에 출근해요.",
-          "advanced": "한국 회사원의 평균 근무 시간은 OECD 국가 중 상위권이다.",
-          "master": "워라밸(work-life balance)을 중시하는 직장 문화가 확산되고 있다."
+          "intermediate": "회사원이 되고 싶어요.",
+          "advanced": "회사원은 사회에서 중요한 역할을 합니다.",
+          "master": "회사원의 전문성과 윤리는 직업의 사회적 가치를 결정합니다."
         },
         "variations": {
           "formal": [
@@ -345,19 +417,31 @@
           ]
         },
         "dialogue": {
-          "context": "자기소개하면서",
+          "context": "직업에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "무슨 일 하세요?",
-              "romanization": "museun il haseyo?",
-              "translation": "What do you do for work?"
+              "text": "직업이 뭐예요?",
+              "romanization": "jikeopi mwoyeyo?",
+              "translation": "What do you do for a living?"
             },
             {
               "speaker": "B",
-              "text": "IT 회사에 다니고 있어요.",
-              "romanization": "aithi hoesae danigo isseoyo.",
-              "translation": "I work at an IT company."
+              "text": "저는 회사원이에요.",
+              "romanization": "jeoneun hoesawonieyo.",
+              "translation": "I'm a office worker."
+            },
+            {
+              "speaker": "A",
+              "text": "멋있네요!",
+              "romanization": "meosisneyo!",
+              "translation": "That's cool!"
+            },
+            {
+              "speaker": "B",
+              "text": "감사합니다. 보람 있는 일이에요.",
+              "romanization": "gamsahapnida. boram isneun ilieyo.",
+              "translation": "Thank you. It's rewarding work."
             }
           ]
         }
@@ -366,10 +450,10 @@
         "word": "office worker",
         "explanation": "A person who works at a company. It's the most common type of employment in Korea. Also called '직장인' (worker) or colloquially 'salaryman.'",
         "examples": {
-          "beginner": "I'm an office worker.",
-          "intermediate": "Office workers usually start work at 9 AM.",
-          "advanced": "Korean office workers' average working hours rank among the highest in OECD countries.",
-          "master": "A work culture emphasizing work-life balance (워라밸) is spreading."
+          "beginner": "I am a office worker.",
+          "intermediate": "I want to become a office worker.",
+          "advanced": "A office worker plays an important role in society.",
+          "master": "The expertise and ethics of a office worker determine the social value of the profession."
         },
         "variations": {
           "formal": [
@@ -385,19 +469,31 @@
           ]
         },
         "dialogue": {
-          "context": "Introducing yourself",
+          "context": "Talking about occupations",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What do you do for work?",
+              "text": "What do you do for a living?",
               "romanization": "",
-              "translation": "무슨 일 하세요?"
+              "translation": "직업이 뭐예요?"
             },
             {
               "speaker": "B",
-              "text": "I work at an IT company.",
+              "text": "I'm a office worker.",
               "romanization": "",
-              "translation": "IT 회사에 다니고 있어요."
+              "translation": "저는 회사원이에요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's cool!",
+              "romanization": "",
+              "translation": "멋있네요!"
+            },
+            {
+              "speaker": "B",
+              "text": "Thank you. It's rewarding work.",
+              "romanization": "",
+              "translation": "감사합니다. 보람 있는 일이에요."
             }
           ]
         }
@@ -430,9 +526,9 @@
         "explanation": "학교에서 공부하는 사람입니다. 한국의 교육 체계는 초등학교(6년), 중학교(3년), 고등학교(3년), 대학교(4년)입니다.",
         "examples": {
           "beginner": "저는 학생이에요.",
-          "intermediate": "한국 학생들은 공부를 많이 해요.",
-          "advanced": "한국의 교육열은 세계적으로 유명하다.",
-          "master": "학생 시절은 인생에서 가장 귀중한 배움의 시기이다."
+          "intermediate": "학생이 되고 싶어요.",
+          "advanced": "학생은 사회에서 중요한 역할을 합니다.",
+          "master": "학생의 전문성과 윤리는 직업의 사회적 가치를 결정합니다."
         },
         "variations": {
           "formal": [
@@ -448,19 +544,31 @@
           ]
         },
         "dialogue": {
-          "context": "처음 만나서",
+          "context": "직업에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "학생이세요?",
-              "romanization": "haksaengiseyo?",
-              "translation": "Are you a student?"
+              "text": "직업이 뭐예요?",
+              "romanization": "jikeopi mwoyeyo?",
+              "translation": "What do you do for a living?"
             },
             {
               "speaker": "B",
-              "text": "네, 대학교 2학년이에요.",
-              "romanization": "ne, daehakgyo ihangnyeonieyo.",
-              "translation": "Yes, I'm a second-year university student."
+              "text": "저는 학생이에요.",
+              "romanization": "jeoneun haksaengieyo.",
+              "translation": "I'm a student."
+            },
+            {
+              "speaker": "A",
+              "text": "멋있네요!",
+              "romanization": "meosisneyo!",
+              "translation": "That's cool!"
+            },
+            {
+              "speaker": "B",
+              "text": "감사합니다. 보람 있는 일이에요.",
+              "romanization": "gamsahapnida. boram isneun ilieyo.",
+              "translation": "Thank you. It's rewarding work."
             }
           ]
         }
@@ -469,10 +577,10 @@
         "word": "student",
         "explanation": "A person studying at a school. Korea's education system consists of elementary school (6 years), middle school (3 years), high school (3 years), and university (4 years). Korea is known worldwide for its intense education culture.",
         "examples": {
-          "beginner": "I'm a student.",
-          "intermediate": "Korean students study a lot.",
-          "advanced": "Korea's passion for education is world-renowned.",
-          "master": "The student years are the most precious period of learning in life."
+          "beginner": "I am a student.",
+          "intermediate": "I want to become a student.",
+          "advanced": "A student plays an important role in society.",
+          "master": "The expertise and ethics of a student determine the social value of the profession."
         },
         "variations": {
           "formal": [
@@ -488,19 +596,31 @@
           ]
         },
         "dialogue": {
-          "context": "Meeting for the first time",
+          "context": "Talking about occupations",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Are you a student?",
+              "text": "What do you do for a living?",
               "romanization": "",
-              "translation": "학생이세요?"
+              "translation": "직업이 뭐예요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, I'm a second-year university student.",
+              "text": "I'm a student.",
               "romanization": "",
-              "translation": "네, 대학교 2학년이에요."
+              "translation": "저는 학생이에요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's cool!",
+              "romanization": "",
+              "translation": "멋있네요!"
+            },
+            {
+              "speaker": "B",
+              "text": "Thank you. It's rewarding work.",
+              "romanization": "",
+              "translation": "감사합니다. 보람 있는 일이에요."
             }
           ]
         }
@@ -531,10 +651,10 @@
         "word": "선생님",
         "explanation": "학교에서 학생을 가르치는 사람입니다. 한국에서 '선생님'은 교사뿐 아니라 의사, 변호사 등 전문직에게도 존경의 의미로 사용하는 호칭입니다.",
         "examples": {
-          "beginner": "선생님, 안녕하세요.",
-          "intermediate": "우리 선생님은 정말 친절하세요.",
-          "advanced": "한국에서 선생님이라는 호칭은 존경의 표현이다.",
-          "master": "선생님은 단순한 직업이 아니라 사회적 존경을 받는 호칭이다."
+          "beginner": "저는 선생님이에요.",
+          "intermediate": "선생님이 되고 싶어요.",
+          "advanced": "선생님은 사회에서 중요한 역할을 합니다.",
+          "master": "선생님의 전문성과 윤리는 직업의 사회적 가치를 결정합니다."
         },
         "variations": {
           "formal": [
@@ -550,19 +670,31 @@
           ]
         },
         "dialogue": {
-          "context": "교실에서",
+          "context": "직업에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "선생님, 질문이 있어요.",
-              "romanization": "seonsaengnim, jilmuni isseoyo.",
-              "translation": "Teacher, I have a question."
+              "text": "직업이 뭐예요?",
+              "romanization": "jikeopi mwoyeyo?",
+              "translation": "What do you do for a living?"
             },
             {
               "speaker": "B",
-              "text": "네, 뭐가 궁금하니?",
-              "romanization": "ne, mwoga gunggeumhani?",
-              "translation": "Yes, what are you curious about?"
+              "text": "저는 선생님이에요.",
+              "romanization": "jeoneun seonsaengnimieyo.",
+              "translation": "I'm a teacher."
+            },
+            {
+              "speaker": "A",
+              "text": "멋있네요!",
+              "romanization": "meosisneyo!",
+              "translation": "That's cool!"
+            },
+            {
+              "speaker": "B",
+              "text": "감사합니다. 보람 있는 일이에요.",
+              "romanization": "gamsahapnida. boram isneun ilieyo.",
+              "translation": "Thank you. It's rewarding work."
             }
           ]
         }
@@ -571,10 +703,10 @@
         "word": "teacher",
         "explanation": "A person who teaches students at school. In Korea, '선생님' is not only used for teachers but also as a respectful title for professionals like doctors and lawyers.",
         "examples": {
-          "beginner": "Hello, teacher.",
-          "intermediate": "Our teacher is really kind.",
-          "advanced": "In Korea, the title '선생님' is an expression of respect.",
-          "master": "'선생님' is not just a profession but a socially respected title."
+          "beginner": "I am a teacher.",
+          "intermediate": "I want to become a teacher.",
+          "advanced": "A teacher plays an important role in society.",
+          "master": "The expertise and ethics of a teacher determine the social value of the profession."
         },
         "variations": {
           "formal": [
@@ -590,19 +722,31 @@
           ]
         },
         "dialogue": {
-          "context": "In the classroom",
+          "context": "Talking about occupations",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Teacher, I have a question.",
+              "text": "What do you do for a living?",
               "romanization": "",
-              "translation": "선생님, 질문이 있어요."
+              "translation": "직업이 뭐예요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, what are you curious about?",
+              "text": "I'm a teacher.",
               "romanization": "",
-              "translation": "네, 뭐가 궁금하니?"
+              "translation": "저는 선생님이에요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's cool!",
+              "romanization": "",
+              "translation": "멋있네요!"
+            },
+            {
+              "speaker": "B",
+              "text": "Thank you. It's rewarding work.",
+              "romanization": "",
+              "translation": "감사합니다. 보람 있는 일이에요."
             }
           ]
         }
@@ -633,10 +777,10 @@
         "word": "교수",
         "explanation": "대학교에서 학문을 연구하고 학생을 가르치는 사람입니다. 한국에서 교수는 높은 사회적 지위를 가지며, '교수님'이라는 존칭으로 불립니다.",
         "examples": {
-          "beginner": "교수님, 안녕하세요.",
-          "intermediate": "그 교수님은 수업을 정말 잘 하세요.",
-          "advanced": "한국 대학에서 교수가 되려면 박사 학위가 필수이다.",
-          "master": "교수의 역할은 연구와 교육을 통해 학문 발전에 기여하는 것이다."
+          "beginner": "저는 교수예요.",
+          "intermediate": "교수가 되고 싶어요.",
+          "advanced": "교수는 사회에서 중요한 역할을 합니다.",
+          "master": "교수의 전문성과 윤리는 직업의 사회적 가치를 결정합니다."
         },
         "variations": {
           "formal": [
@@ -652,19 +796,31 @@
           ]
         },
         "dialogue": {
-          "context": "대학교에서",
+          "context": "직업에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "교수님, 논문 주제를 상담하고 싶어요.",
-              "romanization": "gyosunim, nonmun jujereul sangdamhago sipeoyo.",
-              "translation": "Professor, I'd like to discuss my thesis topic."
+              "text": "직업이 뭐예요?",
+              "romanization": "jikeopi mwoyeyo?",
+              "translation": "What do you do for a living?"
             },
             {
               "speaker": "B",
-              "text": "좋아요, 내일 연구실로 오세요.",
-              "romanization": "joayo, naeil yeongusillo oseyo.",
-              "translation": "Sure, come to my office tomorrow."
+              "text": "저는 교수예요.",
+              "romanization": "jeoneun gyosuyeyo.",
+              "translation": "I'm a professor."
+            },
+            {
+              "speaker": "A",
+              "text": "멋있네요!",
+              "romanization": "meosisneyo!",
+              "translation": "That's cool!"
+            },
+            {
+              "speaker": "B",
+              "text": "감사합니다. 보람 있는 일이에요.",
+              "romanization": "gamsahapnida. boram isneun ilieyo.",
+              "translation": "Thank you. It's rewarding work."
             }
           ]
         }
@@ -673,10 +829,10 @@
         "word": "professor",
         "explanation": "A person who researches and teaches at a university. In Korea, professors hold high social status and are addressed as '교수님' (Professor) with the honorific suffix.",
         "examples": {
-          "beginner": "Hello, Professor.",
-          "intermediate": "That professor teaches really well.",
-          "advanced": "In Korea, a doctoral degree is required to become a professor.",
-          "master": "A professor's role is to contribute to academic advancement through research and education."
+          "beginner": "I am a professor.",
+          "intermediate": "I want to become a professor.",
+          "advanced": "A professor plays an important role in society.",
+          "master": "The expertise and ethics of a professor determine the social value of the profession."
         },
         "variations": {
           "formal": [
@@ -692,19 +848,31 @@
           ]
         },
         "dialogue": {
-          "context": "At the university",
+          "context": "Talking about occupations",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Professor, I'd like to discuss my thesis topic.",
+              "text": "What do you do for a living?",
               "romanization": "",
-              "translation": "교수님, 논문 주제를 상담하고 싶어요."
+              "translation": "직업이 뭐예요?"
             },
             {
               "speaker": "B",
-              "text": "Sure, come to my office tomorrow.",
+              "text": "I'm a professor.",
               "romanization": "",
-              "translation": "좋아요, 내일 연구실로 오세요."
+              "translation": "저는 교수예요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's cool!",
+              "romanization": "",
+              "translation": "멋있네요!"
+            },
+            {
+              "speaker": "B",
+              "text": "Thank you. It's rewarding work.",
+              "romanization": "",
+              "translation": "감사합니다. 보람 있는 일이에요."
             }
           ]
         }
@@ -735,10 +903,10 @@
         "word": "간호사",
         "explanation": "병원에서 환자를 돌보고 의사를 보조하는 의료 전문직입니다. 한국에서 간호사는 국가 면허 시험을 통과해야 합니다.",
         "examples": {
-          "beginner": "간호사가 주사를 놓았어요.",
-          "intermediate": "간호사는 환자를 잘 돌봐요.",
-          "advanced": "한국의 간호사 부족 문제는 심각한 사회 이슈이다.",
-          "master": "간호사는 환자의 회복 과정에서 핵심적인 역할을 담당한다."
+          "beginner": "저는 간호사예요.",
+          "intermediate": "간호사가 되고 싶어요.",
+          "advanced": "간호사는 사회에서 중요한 역할을 합니다.",
+          "master": "간호사의 전문성과 윤리는 직업의 사회적 가치를 결정합니다."
         },
         "variations": {
           "formal": [
@@ -754,19 +922,31 @@
           ]
         },
         "dialogue": {
-          "context": "병원에서",
+          "context": "직업에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "간호사 선생님, 열이 많이 나요.",
-              "romanization": "ganhosa seonsaengnim, yeori mani nayo.",
-              "translation": "Nurse, I have a high fever."
+              "text": "직업이 뭐예요?",
+              "romanization": "jikeopi mwoyeyo?",
+              "translation": "What do you do for a living?"
             },
             {
               "speaker": "B",
-              "text": "체온을 먼저 재볼게요.",
-              "romanization": "cheoneul meonjeo jaevolgeyo.",
-              "translation": "Let me take your temperature first."
+              "text": "저는 간호사예요.",
+              "romanization": "jeoneun ganhosayeyo.",
+              "translation": "I'm a nurse."
+            },
+            {
+              "speaker": "A",
+              "text": "멋있네요!",
+              "romanization": "meosisneyo!",
+              "translation": "That's cool!"
+            },
+            {
+              "speaker": "B",
+              "text": "감사합니다. 보람 있는 일이에요.",
+              "romanization": "gamsahapnida. boram isneun ilieyo.",
+              "translation": "Thank you. It's rewarding work."
             }
           ]
         }
@@ -775,10 +955,10 @@
         "word": "nurse",
         "explanation": "A medical professional who cares for patients and assists doctors at hospitals. In Korea, nurses must pass a national licensing exam.",
         "examples": {
-          "beginner": "The nurse gave me a shot.",
-          "intermediate": "Nurses take good care of patients.",
-          "advanced": "The nursing shortage in Korea is a serious social issue.",
-          "master": "Nurses play a pivotal role in patients' recovery process."
+          "beginner": "I am a nurse.",
+          "intermediate": "I want to become a nurse.",
+          "advanced": "A nurse plays an important role in society.",
+          "master": "The expertise and ethics of a nurse determine the social value of the profession."
         },
         "variations": {
           "formal": [
@@ -794,19 +974,31 @@
           ]
         },
         "dialogue": {
-          "context": "At the hospital",
+          "context": "Talking about occupations",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Nurse, I have a high fever.",
+              "text": "What do you do for a living?",
               "romanization": "",
-              "translation": "간호사 선생님, 열이 많이 나요."
+              "translation": "직업이 뭐예요?"
             },
             {
               "speaker": "B",
-              "text": "Let me take your temperature first.",
+              "text": "I'm a nurse.",
               "romanization": "",
-              "translation": "체온을 먼저 재볼게요."
+              "translation": "저는 간호사예요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's cool!",
+              "romanization": "",
+              "translation": "멋있네요!"
+            },
+            {
+              "speaker": "B",
+              "text": "Thank you. It's rewarding work.",
+              "romanization": "",
+              "translation": "감사합니다. 보람 있는 일이에요."
             }
           ]
         }
@@ -837,10 +1029,10 @@
         "word": "약사",
         "explanation": "약국에서 약을 조제하고 복약 지도를 하는 전문직입니다. 한국에서는 의약분업으로 처방전 없이 살 수 없는 약이 많습니다.",
         "examples": {
-          "beginner": "약사에게 약을 받았어요.",
-          "intermediate": "약사가 복용 방법을 설명해 주셨어요.",
-          "advanced": "한국의 의약분업 제도는 2000년에 시행되었다.",
-          "master": "약사는 환자의 약물 상호작용을 검토하는 중요한 역할을 한다."
+          "beginner": "저는 약사예요.",
+          "intermediate": "약사가 되고 싶어요.",
+          "advanced": "약사는 사회에서 중요한 역할을 합니다.",
+          "master": "약사의 전문성과 윤리는 직업의 사회적 가치를 결정합니다."
         },
         "variations": {
           "formal": [
@@ -856,19 +1048,31 @@
           ]
         },
         "dialogue": {
-          "context": "약국에서",
+          "context": "직업에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "감기약 주세요.",
-              "romanization": "gamgiyak juseyo.",
-              "translation": "Please give me cold medicine."
+              "text": "직업이 뭐예요?",
+              "romanization": "jikeopi mwoyeyo?",
+              "translation": "What do you do for a living?"
             },
             {
               "speaker": "B",
-              "text": "콧물이 나세요, 기침이 나세요?",
-              "romanization": "konmuri naseyo, gichimi naseyo?",
-              "translation": "Do you have a runny nose or a cough?"
+              "text": "저는 약사예요.",
+              "romanization": "jeoneun yaksayeyo.",
+              "translation": "I'm a pharmacist."
+            },
+            {
+              "speaker": "A",
+              "text": "멋있네요!",
+              "romanization": "meosisneyo!",
+              "translation": "That's cool!"
+            },
+            {
+              "speaker": "B",
+              "text": "감사합니다. 보람 있는 일이에요.",
+              "romanization": "gamsahapnida. boram isneun ilieyo.",
+              "translation": "Thank you. It's rewarding work."
             }
           ]
         }
@@ -877,10 +1081,10 @@
         "word": "pharmacist",
         "explanation": "A professional who dispenses medicine and provides medication guidance at a pharmacy. In Korea, due to the separation of prescribing and dispensing, many medicines require a prescription.",
         "examples": {
-          "beginner": "I got medicine from the pharmacist.",
-          "intermediate": "The pharmacist explained how to take the medicine.",
-          "advanced": "Korea's separation of prescribing and dispensing was implemented in 2000.",
-          "master": "Pharmacists play a crucial role in reviewing drug interactions for patients."
+          "beginner": "I am a pharmacist.",
+          "intermediate": "I want to become a pharmacist.",
+          "advanced": "A pharmacist plays an important role in society.",
+          "master": "The expertise and ethics of a pharmacist determine the social value of the profession."
         },
         "variations": {
           "formal": [
@@ -896,19 +1100,31 @@
           ]
         },
         "dialogue": {
-          "context": "At the pharmacy",
+          "context": "Talking about occupations",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Please give me cold medicine.",
+              "text": "What do you do for a living?",
               "romanization": "",
-              "translation": "감기약 주세요."
+              "translation": "직업이 뭐예요?"
             },
             {
               "speaker": "B",
-              "text": "Do you have a runny nose or a cough?",
+              "text": "I'm a pharmacist.",
               "romanization": "",
-              "translation": "콧물이 나세요, 기침이 나세요?"
+              "translation": "저는 약사예요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's cool!",
+              "romanization": "",
+              "translation": "멋있네요!"
+            },
+            {
+              "speaker": "B",
+              "text": "Thank you. It's rewarding work.",
+              "romanization": "",
+              "translation": "감사합니다. 보람 있는 일이에요."
             }
           ]
         }
@@ -939,10 +1155,10 @@
         "word": "치과의사",
         "explanation": "이와 구강 건강을 전문적으로 치료하는 의료 전문직입니다. 한국에서는 보통 '치과'라고만 해도 치과의사를 의미합니다.",
         "examples": {
-          "beginner": "치과의사에게 갔어요.",
-          "intermediate": "치과의사가 충치를 치료해 주셨어요.",
-          "advanced": "한국에서 치과 치료비는 비급여 항목이 많아 비용 부담이 크다.",
-          "master": "치과의사는 구강 건강뿐 아니라 전신 건강과의 연관성도 연구한다."
+          "beginner": "저는 치과의사예요.",
+          "intermediate": "치과의사가 되고 싶어요.",
+          "advanced": "치과의사는 사회에서 중요한 역할을 합니다.",
+          "master": "치과의사의 전문성과 윤리는 직업의 사회적 가치를 결정합니다."
         },
         "variations": {
           "formal": [
@@ -958,19 +1174,31 @@
           ]
         },
         "dialogue": {
-          "context": "치과에서",
+          "context": "직업에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "이가 아파서 왔어요.",
-              "romanization": "iga apaseo wasseoyo.",
-              "translation": "I came because my tooth hurts."
+              "text": "직업이 뭐예요?",
+              "romanization": "jikeopi mwoyeyo?",
+              "translation": "What do you do for a living?"
             },
             {
               "speaker": "B",
-              "text": "어디 한번 볼게요. 입을 크게 벌려 주세요.",
-              "romanization": "eodi hanbeon bolgeyo. ibeul keuge beollyeo juseyo.",
-              "translation": "Let me take a look. Please open your mouth wide."
+              "text": "저는 치과의사예요.",
+              "romanization": "jeoneun chigwauisayeyo.",
+              "translation": "I'm a dentist."
+            },
+            {
+              "speaker": "A",
+              "text": "멋있네요!",
+              "romanization": "meosisneyo!",
+              "translation": "That's cool!"
+            },
+            {
+              "speaker": "B",
+              "text": "감사합니다. 보람 있는 일이에요.",
+              "romanization": "gamsahapnida. boram isneun ilieyo.",
+              "translation": "Thank you. It's rewarding work."
             }
           ]
         }
@@ -979,10 +1207,10 @@
         "word": "dentist",
         "explanation": "A medical professional specializing in treating teeth and oral health. In Korea, people often just say '치과' (dental clinic) to refer to the dentist.",
         "examples": {
-          "beginner": "I went to the dentist.",
-          "intermediate": "The dentist treated my cavity.",
-          "advanced": "In Korea, dental treatment costs can be high due to many non-covered items.",
-          "master": "Dentists study not only oral health but also its connection to overall health."
+          "beginner": "I am a dentist.",
+          "intermediate": "I want to become a dentist.",
+          "advanced": "A dentist plays an important role in society.",
+          "master": "The expertise and ethics of a dentist determine the social value of the profession."
         },
         "variations": {
           "formal": [
@@ -998,19 +1226,31 @@
           ]
         },
         "dialogue": {
-          "context": "At the dental clinic",
+          "context": "Talking about occupations",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "I came because my tooth hurts.",
+              "text": "What do you do for a living?",
               "romanization": "",
-              "translation": "이가 아파서 왔어요."
+              "translation": "직업이 뭐예요?"
             },
             {
               "speaker": "B",
-              "text": "Let me take a look. Please open your mouth wide.",
+              "text": "I'm a dentist.",
               "romanization": "",
-              "translation": "어디 한번 볼게요. 입을 크게 벌려 주세요."
+              "translation": "저는 치과의사예요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's cool!",
+              "romanization": "",
+              "translation": "멋있네요!"
+            },
+            {
+              "speaker": "B",
+              "text": "Thank you. It's rewarding work.",
+              "romanization": "",
+              "translation": "감사합니다. 보람 있는 일이에요."
             }
           ]
         }
@@ -1041,10 +1281,10 @@
         "word": "변호사",
         "explanation": "법률 문제에 대해 조언하고 법정에서 의뢰인을 대리하는 전문직입니다. 한국에서 변호사가 되려면 로스쿨을 졸업하고 변호사 시험에 합격해야 합니다.",
         "examples": {
-          "beginner": "변호사를 만났어요.",
-          "intermediate": "변호사에게 법률 상담을 받았어요.",
-          "advanced": "한국은 2009년부터 로스쿨 제도를 도입했다.",
-          "master": "변호사는 의뢰인의 권리를 보호하고 법적 정의를 실현하는 역할을 한다."
+          "beginner": "저는 변호사예요.",
+          "intermediate": "변호사가 되고 싶어요.",
+          "advanced": "변호사는 사회에서 중요한 역할을 합니다.",
+          "master": "변호사의 전문성과 윤리는 직업의 사회적 가치를 결정합니다."
         },
         "variations": {
           "formal": [
@@ -1060,19 +1300,31 @@
           ]
         },
         "dialogue": {
-          "context": "법률 사무소에서",
+          "context": "직업에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "변호사님, 이 계약서를 검토해 주세요.",
-              "romanization": "byeonhosanim, i gyeyakseoreul geomtohae juseyo.",
-              "translation": "Lawyer, please review this contract."
+              "text": "직업이 뭐예요?",
+              "romanization": "jikeopi mwoyeyo?",
+              "translation": "What do you do for a living?"
             },
             {
               "speaker": "B",
-              "text": "네, 자세히 살펴보겠습니다.",
-              "romanization": "ne, jasehi salpyeobogesseumnida.",
-              "translation": "Yes, I'll look into it carefully."
+              "text": "저는 변호사예요.",
+              "romanization": "jeoneun byeonhosayeyo.",
+              "translation": "I'm a lawyer."
+            },
+            {
+              "speaker": "A",
+              "text": "멋있네요!",
+              "romanization": "meosisneyo!",
+              "translation": "That's cool!"
+            },
+            {
+              "speaker": "B",
+              "text": "감사합니다. 보람 있는 일이에요.",
+              "romanization": "gamsahapnida. boram isneun ilieyo.",
+              "translation": "Thank you. It's rewarding work."
             }
           ]
         }
@@ -1081,10 +1333,10 @@
         "word": "lawyer",
         "explanation": "A professional who advises on legal matters and represents clients in court. In Korea, one must graduate from law school and pass the bar exam to become a lawyer.",
         "examples": {
-          "beginner": "I met a lawyer.",
-          "intermediate": "I received legal consultation from a lawyer.",
-          "advanced": "Korea introduced the law school system in 2009.",
-          "master": "Lawyers serve to protect clients' rights and realize legal justice."
+          "beginner": "I am a lawyer.",
+          "intermediate": "I want to become a lawyer.",
+          "advanced": "A lawyer plays an important role in society.",
+          "master": "The expertise and ethics of a lawyer determine the social value of the profession."
         },
         "variations": {
           "formal": [
@@ -1100,19 +1352,31 @@
           ]
         },
         "dialogue": {
-          "context": "At the law office",
+          "context": "Talking about occupations",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Lawyer, please review this contract.",
+              "text": "What do you do for a living?",
               "romanization": "",
-              "translation": "변호사님, 이 계약서를 검토해 주세요."
+              "translation": "직업이 뭐예요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, I'll look into it carefully.",
+              "text": "I'm a lawyer.",
               "romanization": "",
-              "translation": "네, 자세히 살펴보겠습니다."
+              "translation": "저는 변호사예요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's cool!",
+              "romanization": "",
+              "translation": "멋있네요!"
+            },
+            {
+              "speaker": "B",
+              "text": "Thank you. It's rewarding work.",
+              "romanization": "",
+              "translation": "감사합니다. 보람 있는 일이에요."
             }
           ]
         }
@@ -1143,10 +1407,10 @@
         "word": "판사",
         "explanation": "법정에서 재판을 주재하고 판결을 내리는 법관입니다. 한국에서 판사는 사법 시험 또는 법학전문대학원을 통해 임용됩니다.",
         "examples": {
-          "beginner": "판사가 판결을 내렸어요.",
-          "intermediate": "판사는 법정에서 공정한 판결을 내려요.",
-          "advanced": "한국의 판사 임용 절차는 엄격한 심사를 거친다.",
-          "master": "판사의 독립성은 민주주의 사법 체계의 핵심 요소이다."
+          "beginner": "저는 판사예요.",
+          "intermediate": "판사가 되고 싶어요.",
+          "advanced": "판사는 사회에서 중요한 역할을 합니다.",
+          "master": "판사의 전문성과 윤리는 직업의 사회적 가치를 결정합니다."
         },
         "variations": {
           "formal": [
@@ -1162,19 +1426,31 @@
           ]
         },
         "dialogue": {
-          "context": "법정에서",
+          "context": "직업에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "재판장님, 이의 있습니다.",
-              "romanization": "jaepanjangnim, iui itseumnida.",
-              "translation": "Your Honor, I object."
+              "text": "직업이 뭐예요?",
+              "romanization": "jikeopi mwoyeyo?",
+              "translation": "What do you do for a living?"
             },
             {
               "speaker": "B",
-              "text": "이의를 인정합니다.",
-              "romanization": "iuireul injeonghamnida.",
-              "translation": "Objection sustained."
+              "text": "저는 판사예요.",
+              "romanization": "jeoneun pansayeyo.",
+              "translation": "I'm a judge."
+            },
+            {
+              "speaker": "A",
+              "text": "멋있네요!",
+              "romanization": "meosisneyo!",
+              "translation": "That's cool!"
+            },
+            {
+              "speaker": "B",
+              "text": "감사합니다. 보람 있는 일이에요.",
+              "romanization": "gamsahapnida. boram isneun ilieyo.",
+              "translation": "Thank you. It's rewarding work."
             }
           ]
         }
@@ -1183,10 +1459,10 @@
         "word": "judge",
         "explanation": "A judicial officer who presides over court proceedings and delivers verdicts. In Korea, judges are appointed through the judicial exam or law school system.",
         "examples": {
-          "beginner": "The judge made a ruling.",
-          "intermediate": "Judges deliver fair verdicts in court.",
-          "advanced": "The process for appointing judges in Korea involves rigorous review.",
-          "master": "Judicial independence is a core element of a democratic legal system."
+          "beginner": "I am a judge.",
+          "intermediate": "I want to become a judge.",
+          "advanced": "A judge plays an important role in society.",
+          "master": "The expertise and ethics of a judge determine the social value of the profession."
         },
         "variations": {
           "formal": [
@@ -1202,19 +1478,31 @@
           ]
         },
         "dialogue": {
-          "context": "In the courtroom",
+          "context": "Talking about occupations",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Your Honor, I object.",
+              "text": "What do you do for a living?",
               "romanization": "",
-              "translation": "재판장님, 이의 있습니다."
+              "translation": "직업이 뭐예요?"
             },
             {
               "speaker": "B",
-              "text": "Objection sustained.",
+              "text": "I'm a judge.",
               "romanization": "",
-              "translation": "이의를 인정합니다."
+              "translation": "저는 판사예요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's cool!",
+              "romanization": "",
+              "translation": "멋있네요!"
+            },
+            {
+              "speaker": "B",
+              "text": "Thank you. It's rewarding work.",
+              "romanization": "",
+              "translation": "감사합니다. 보람 있는 일이에요."
             }
           ]
         }
@@ -1245,10 +1533,10 @@
         "word": "검사",
         "explanation": "범죄를 수사하고 법정에서 피고인을 기소하는 법률 전문직입니다. 한국의 검찰은 수사권과 기소권을 모두 가지고 있습니다.",
         "examples": {
-          "beginner": "검사가 수사를 했어요.",
-          "intermediate": "검사는 법정에서 피고인을 기소해요.",
-          "advanced": "한국 검찰의 수사권과 기소권 분리가 논의되고 있다.",
-          "master": "검사는 공익의 대표자로서 법과 정의를 수호하는 역할을 한다."
+          "beginner": "저는 검사예요.",
+          "intermediate": "검사가 되고 싶어요.",
+          "advanced": "검사는 사회에서 중요한 역할을 합니다.",
+          "master": "검사의 전문성과 윤리는 직업의 사회적 가치를 결정합니다."
         },
         "variations": {
           "formal": [
@@ -1264,19 +1552,31 @@
           ]
         },
         "dialogue": {
-          "context": "법정에서",
+          "context": "직업에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "검사님, 증거를 제시해 주세요.",
-              "romanization": "geomsanim, jeungeoreul jesihae juseyo.",
-              "translation": "Prosecutor, please present the evidence."
+              "text": "직업이 뭐예요?",
+              "romanization": "jikeopi mwoyeyo?",
+              "translation": "What do you do for a living?"
             },
             {
               "speaker": "B",
-              "text": "네, 이 증거 자료를 제출합니다.",
-              "romanization": "ne, i jeungeo jaryoreul jechulhamnida.",
-              "translation": "Yes, I submit this evidence."
+              "text": "저는 검사예요.",
+              "romanization": "jeoneun geomsayeyo.",
+              "translation": "I'm a prosecutor."
+            },
+            {
+              "speaker": "A",
+              "text": "멋있네요!",
+              "romanization": "meosisneyo!",
+              "translation": "That's cool!"
+            },
+            {
+              "speaker": "B",
+              "text": "감사합니다. 보람 있는 일이에요.",
+              "romanization": "gamsahapnida. boram isneun ilieyo.",
+              "translation": "Thank you. It's rewarding work."
             }
           ]
         }
@@ -1285,10 +1585,10 @@
         "word": "prosecutor",
         "explanation": "A legal professional who investigates crimes and prosecutes defendants in court. In Korea, prosecutors hold both investigative and prosecutorial powers.",
         "examples": {
-          "beginner": "The prosecutor investigated.",
-          "intermediate": "Prosecutors prosecute defendants in court.",
-          "advanced": "The separation of investigative and prosecutorial powers in Korea is being debated.",
-          "master": "Prosecutors serve as representatives of the public interest, upholding law and justice."
+          "beginner": "I am a prosecutor.",
+          "intermediate": "I want to become a prosecutor.",
+          "advanced": "A prosecutor plays an important role in society.",
+          "master": "The expertise and ethics of a prosecutor determine the social value of the profession."
         },
         "variations": {
           "formal": [
@@ -1304,19 +1604,31 @@
           ]
         },
         "dialogue": {
-          "context": "In the courtroom",
+          "context": "Talking about occupations",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Prosecutor, please present the evidence.",
+              "text": "What do you do for a living?",
               "romanization": "",
-              "translation": "검사님, 증거를 제시해 주세요."
+              "translation": "직업이 뭐예요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, I submit this evidence.",
+              "text": "I'm a prosecutor.",
               "romanization": "",
-              "translation": "네, 이 증거 자료를 제출합니다."
+              "translation": "저는 검사예요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's cool!",
+              "romanization": "",
+              "translation": "멋있네요!"
+            },
+            {
+              "speaker": "B",
+              "text": "Thank you. It's rewarding work.",
+              "romanization": "",
+              "translation": "감사합니다. 보람 있는 일이에요."
             }
           ]
         }
@@ -1347,10 +1659,10 @@
         "word": "군인",
         "explanation": "국가를 방위하는 것이 직업인 사람입니다. 한국은 징병제로 만 18세 이상 남성은 약 18개월간 의무 복무를 해야 합니다.",
         "examples": {
-          "beginner": "오빠가 군인이에요.",
-          "intermediate": "한국 남자는 군대에 가야 해요.",
-          "advanced": "한국의 병역 의무는 헌법에 명시되어 있다.",
-          "master": "군인의 헌신은 국가 안보의 근간을 이루며, 징병제는 한국 사회의 중요한 특징이다."
+          "beginner": "저는 군인이에요.",
+          "intermediate": "군인이 되고 싶어요.",
+          "advanced": "군인은 사회에서 중요한 역할을 합니다.",
+          "master": "군인의 전문성과 윤리는 직업의 사회적 가치를 결정합니다."
         },
         "variations": {
           "formal": [
@@ -1366,19 +1678,31 @@
           ]
         },
         "dialogue": {
-          "context": "군대 이야기를 하면서",
+          "context": "직업에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "군대 다녀왔어요?",
-              "romanization": "gundae danyeowasseoyo?",
-              "translation": "Have you done your military service?"
+              "text": "직업이 뭐예요?",
+              "romanization": "jikeopi mwoyeyo?",
+              "translation": "What do you do for a living?"
             },
             {
               "speaker": "B",
-              "text": "네, 작년에 전역했어요.",
-              "romanization": "ne, jangnyeone jeonyeokhaesseoyo.",
-              "translation": "Yes, I was discharged last year."
+              "text": "저는 군인이에요.",
+              "romanization": "jeoneun guninieyo.",
+              "translation": "I'm a soldier."
+            },
+            {
+              "speaker": "A",
+              "text": "멋있네요!",
+              "romanization": "meosisneyo!",
+              "translation": "That's cool!"
+            },
+            {
+              "speaker": "B",
+              "text": "감사합니다. 보람 있는 일이에요.",
+              "romanization": "gamsahapnida. boram isneun ilieyo.",
+              "translation": "Thank you. It's rewarding work."
             }
           ]
         }
@@ -1387,10 +1711,10 @@
         "word": "soldier",
         "explanation": "A person whose profession is to defend the nation. Korea has mandatory military service, requiring males aged 18 and over to serve approximately 18 months.",
         "examples": {
-          "beginner": "My brother is a soldier.",
-          "intermediate": "Korean men have to go to the military.",
-          "advanced": "Military service obligation in Korea is stipulated in the constitution.",
-          "master": "Soldiers' dedication forms the foundation of national security, and conscription is a key feature of Korean society."
+          "beginner": "I am a soldier.",
+          "intermediate": "I want to become a soldier.",
+          "advanced": "A soldier plays an important role in society.",
+          "master": "The expertise and ethics of a soldier determine the social value of the profession."
         },
         "variations": {
           "formal": [
@@ -1406,19 +1730,31 @@
           ]
         },
         "dialogue": {
-          "context": "Talking about military service",
+          "context": "Talking about occupations",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Have you done your military service?",
+              "text": "What do you do for a living?",
               "romanization": "",
-              "translation": "군대 다녀왔어요?"
+              "translation": "직업이 뭐예요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, I was discharged last year.",
+              "text": "I'm a soldier.",
               "romanization": "",
-              "translation": "네, 작년에 전역했어요."
+              "translation": "저는 군인이에요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's cool!",
+              "romanization": "",
+              "translation": "멋있네요!"
+            },
+            {
+              "speaker": "B",
+              "text": "Thank you. It's rewarding work.",
+              "romanization": "",
+              "translation": "감사합니다. 보람 있는 일이에요."
             }
           ]
         }
@@ -1449,10 +1785,10 @@
         "word": "소방관",
         "explanation": "화재 진압, 인명 구조 등을 담당하는 공무원입니다. 한국 소방의 긴급 전화번호는 119입니다.",
         "examples": {
-          "beginner": "소방관이 불을 껐어요.",
-          "intermediate": "소방관은 위험한 상황에서 사람을 구해요.",
-          "advanced": "한국의 소방관 처우 개선이 사회적 이슈이다.",
-          "master": "소방관은 생명의 위험을 무릅쓰고 시민을 보호하는 공공 영웅이다."
+          "beginner": "저는 소방관이에요.",
+          "intermediate": "소방관이 되고 싶어요.",
+          "advanced": "소방관은 사회에서 중요한 역할을 합니다.",
+          "master": "소방관의 전문성과 윤리는 직업의 사회적 가치를 결정합니다."
         },
         "variations": {
           "formal": [
@@ -1468,19 +1804,31 @@
           ]
         },
         "dialogue": {
-          "context": "화재 현장에서",
+          "context": "직업에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "119에 신고했어요?",
-              "romanization": "baeksibi-gue singohasseoyo?",
-              "translation": "Did you call 119?"
+              "text": "직업이 뭐예요?",
+              "romanization": "jikeopi mwoyeyo?",
+              "translation": "What do you do for a living?"
             },
             {
               "speaker": "B",
-              "text": "네, 소방차가 오고 있어요.",
-              "romanization": "ne, sobangchaga ogo isseoyo.",
-              "translation": "Yes, the fire truck is on its way."
+              "text": "저는 소방관이에요.",
+              "romanization": "jeoneun sobanggwanieyo.",
+              "translation": "I'm a firefighter."
+            },
+            {
+              "speaker": "A",
+              "text": "멋있네요!",
+              "romanization": "meosisneyo!",
+              "translation": "That's cool!"
+            },
+            {
+              "speaker": "B",
+              "text": "감사합니다. 보람 있는 일이에요.",
+              "romanization": "gamsahapnida. boram isneun ilieyo.",
+              "translation": "Thank you. It's rewarding work."
             }
           ]
         }
@@ -1489,10 +1837,10 @@
         "word": "firefighter",
         "explanation": "A public servant responsible for extinguishing fires and rescuing people. Korea's fire emergency number is 119.",
         "examples": {
-          "beginner": "The firefighter put out the fire.",
-          "intermediate": "Firefighters rescue people in dangerous situations.",
-          "advanced": "Improving working conditions for firefighters is a social issue in Korea.",
-          "master": "Firefighters are public heroes who protect citizens at the risk of their own lives."
+          "beginner": "I am a firefighter.",
+          "intermediate": "I want to become a firefighter.",
+          "advanced": "A firefighter plays an important role in society.",
+          "master": "The expertise and ethics of a firefighter determine the social value of the profession."
         },
         "variations": {
           "formal": [
@@ -1508,19 +1856,31 @@
           ]
         },
         "dialogue": {
-          "context": "At a fire scene",
+          "context": "Talking about occupations",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Did you call 119?",
+              "text": "What do you do for a living?",
               "romanization": "",
-              "translation": "119에 신고했어요?"
+              "translation": "직업이 뭐예요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, the fire truck is on its way.",
+              "text": "I'm a firefighter.",
               "romanization": "",
-              "translation": "네, 소방차가 오고 있어요."
+              "translation": "저는 소방관이에요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's cool!",
+              "romanization": "",
+              "translation": "멋있네요!"
+            },
+            {
+              "speaker": "B",
+              "text": "Thank you. It's rewarding work.",
+              "romanization": "",
+              "translation": "감사합니다. 보람 있는 일이에요."
             }
           ]
         }
@@ -1551,10 +1911,10 @@
         "word": "공무원",
         "explanation": "국가나 지방자치단체에서 근무하는 사람입니다. 한국에서 공무원은 안정적인 직업으로 인기가 매우 높으며, 공무원 시험 경쟁률이 매우 치열합니다.",
         "examples": {
-          "beginner": "공무원이 되고 싶어요.",
-          "intermediate": "공무원 시험은 경쟁이 치열해요.",
-          "advanced": "한국에서 공무원은 가장 안정적인 직업으로 꼽힌다.",
-          "master": "공무원의 안정성 선호는 한국 사회의 고용 불안정성을 반영한다."
+          "beginner": "저는 공무원이에요.",
+          "intermediate": "공무원이 되고 싶어요.",
+          "advanced": "공무원은 사회에서 중요한 역할을 합니다.",
+          "master": "공무원의 전문성과 윤리는 직업의 사회적 가치를 결정합니다."
         },
         "variations": {
           "formal": [
@@ -1570,19 +1930,31 @@
           ]
         },
         "dialogue": {
-          "context": "진로 상담에서",
+          "context": "직업에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "졸업 후에 뭐 할 거예요?",
-              "romanization": "joreop hue mwo hal geoyeyo?",
-              "translation": "What are you going to do after graduation?"
+              "text": "직업이 뭐예요?",
+              "romanization": "jikeopi mwoyeyo?",
+              "translation": "What do you do for a living?"
             },
             {
               "speaker": "B",
-              "text": "공무원 시험을 준비하려고요.",
-              "romanization": "gongmuwon siheomeul junbiharyeogoyo.",
-              "translation": "I'm planning to prepare for the civil service exam."
+              "text": "저는 공무원이에요.",
+              "romanization": "jeoneun gongmuwonieyo.",
+              "translation": "I'm a civil servant."
+            },
+            {
+              "speaker": "A",
+              "text": "멋있네요!",
+              "romanization": "meosisneyo!",
+              "translation": "That's cool!"
+            },
+            {
+              "speaker": "B",
+              "text": "감사합니다. 보람 있는 일이에요.",
+              "romanization": "gamsahapnida. boram isneun ilieyo.",
+              "translation": "Thank you. It's rewarding work."
             }
           ]
         }
@@ -1591,10 +1963,10 @@
         "word": "civil servant",
         "explanation": "A person who works for a national or local government. In Korea, civil service is extremely popular as a stable career, and the civil service exam is highly competitive.",
         "examples": {
-          "beginner": "I want to become a civil servant.",
-          "intermediate": "The civil service exam is very competitive.",
-          "advanced": "In Korea, civil service is considered the most stable career.",
-          "master": "The preference for civil service stability reflects employment insecurity in Korean society."
+          "beginner": "I am a civil servant.",
+          "intermediate": "I want to become a civil servant.",
+          "advanced": "A civil servant plays an important role in society.",
+          "master": "The expertise and ethics of a civil servant determine the social value of the profession."
         },
         "variations": {
           "formal": [
@@ -1610,19 +1982,31 @@
           ]
         },
         "dialogue": {
-          "context": "Career counseling",
+          "context": "Talking about occupations",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you going to do after graduation?",
+              "text": "What do you do for a living?",
               "romanization": "",
-              "translation": "졸업 후에 뭐 할 거예요?"
+              "translation": "직업이 뭐예요?"
             },
             {
               "speaker": "B",
-              "text": "I'm planning to prepare for the civil service exam.",
+              "text": "I'm a civil servant.",
               "romanization": "",
-              "translation": "공무원 시험을 준비하려고요."
+              "translation": "저는 공무원이에요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's cool!",
+              "romanization": "",
+              "translation": "멋있네요!"
+            },
+            {
+              "speaker": "B",
+              "text": "Thank you. It's rewarding work.",
+              "romanization": "",
+              "translation": "감사합니다. 보람 있는 일이에요."
             }
           ]
         }
@@ -1653,10 +2037,10 @@
         "word": "기자",
         "explanation": "뉴스를 취재하고 보도하는 언론인입니다. 한국에는 주요 일간지, 방송사, 그리고 온라인 미디어까지 다양한 언론 매체가 있습니다.",
         "examples": {
-          "beginner": "기자가 인터뷰를 했어요.",
-          "intermediate": "기자는 매일 뉴스를 취재해요.",
-          "advanced": "한국의 언론 자유 지수는 세계적으로 주목받고 있다.",
-          "master": "기자는 사회의 감시자로서 권력을 견제하고 진실을 보도하는 역할을 한다."
+          "beginner": "저는 기자예요.",
+          "intermediate": "기자가 되고 싶어요.",
+          "advanced": "기자는 사회에서 중요한 역할을 합니다.",
+          "master": "기자의 전문성과 윤리는 직업의 사회적 가치를 결정합니다."
         },
         "variations": {
           "formal": [
@@ -1672,19 +2056,31 @@
           ]
         },
         "dialogue": {
-          "context": "인터뷰 현장에서",
+          "context": "직업에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "기자님, 한 말씀 부탁드립니다.",
-              "romanization": "gijanim, han malsseum butakdeurimnida.",
-              "translation": "Reporter, could you give us a comment?"
+              "text": "직업이 뭐예요?",
+              "romanization": "jikeopi mwoyeyo?",
+              "translation": "What do you do for a living?"
             },
             {
               "speaker": "B",
-              "text": "네, 이번 사건에 대해 설명드리겠습니다.",
-              "romanization": "ne, ibeon sageone daehae seolmyeongdeurigesseumnida.",
-              "translation": "Yes, let me explain about this incident."
+              "text": "저는 기자예요.",
+              "romanization": "jeoneun gijayeyo.",
+              "translation": "I'm a journalist."
+            },
+            {
+              "speaker": "A",
+              "text": "멋있네요!",
+              "romanization": "meosisneyo!",
+              "translation": "That's cool!"
+            },
+            {
+              "speaker": "B",
+              "text": "감사합니다. 보람 있는 일이에요.",
+              "romanization": "gamsahapnida. boram isneun ilieyo.",
+              "translation": "Thank you. It's rewarding work."
             }
           ]
         }
@@ -1693,10 +2089,10 @@
         "word": "journalist",
         "explanation": "A media professional who covers and reports news. Korea has diverse media outlets including major daily newspapers, broadcasting companies, and online media.",
         "examples": {
-          "beginner": "The journalist did an interview.",
-          "intermediate": "Journalists cover news every day.",
-          "advanced": "Korea's press freedom index is gaining global attention.",
-          "master": "Journalists serve as society's watchdogs, checking power and reporting the truth."
+          "beginner": "I am a journalist.",
+          "intermediate": "I want to become a journalist.",
+          "advanced": "A journalist plays an important role in society.",
+          "master": "The expertise and ethics of a journalist determine the social value of the profession."
         },
         "variations": {
           "formal": [
@@ -1712,19 +2108,31 @@
           ]
         },
         "dialogue": {
-          "context": "At an interview",
+          "context": "Talking about occupations",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Reporter, could you give us a comment?",
+              "text": "What do you do for a living?",
               "romanization": "",
-              "translation": "기자님, 한 말씀 부탁드립니다."
+              "translation": "직업이 뭐예요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, let me explain about this incident.",
+              "text": "I'm a journalist.",
               "romanization": "",
-              "translation": "네, 이번 사건에 대해 설명드리겠습니다."
+              "translation": "저는 기자예요."
+            },
+            {
+              "speaker": "A",
+              "text": "That's cool!",
+              "romanization": "",
+              "translation": "멋있네요!"
+            },
+            {
+              "speaker": "B",
+              "text": "Thank you. It's rewarding work.",
+              "romanization": "",
+              "translation": "감사합니다. 보람 있는 일이에요."
             }
           ]
         }

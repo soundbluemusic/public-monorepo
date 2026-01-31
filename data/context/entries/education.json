@@ -13,10 +13,10 @@
         "word": "교실",
         "explanation": "교실의 뜻은 'classroom'입니다.",
         "examples": {
-          "beginner": "\"교실\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"교실\"를 자주 써요.",
-          "advanced": "\"교실\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"교실\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "교실에서 공부해요.",
+          "intermediate": "교실은 중요한 교육 개념이에요.",
+          "advanced": "교실에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "교실의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -32,19 +32,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "교실이/가 뭐예요?",
-              "romanization": "gyosili/ga mwoyeyo?",
-              "translation": "What is \"교실\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "교실은/는 classroom(이)에요.",
-              "romanization": "gyosileun/neun classroom(i)eyo.",
-              "translation": "\"교실\" means \"classroom\"."
+              "text": "교실에 대해 배우고 있어요.",
+              "romanization": "gyosile daehae baeugo iseoyo.",
+              "translation": "I'm learning about classroom."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -53,10 +65,10 @@
         "word": "classroom",
         "explanation": "'교실' means 'classroom' in English.",
         "examples": {
-          "beginner": "We say \"교실\" in Korean.",
-          "intermediate": "In Korea, people often say \"교실\".",
-          "advanced": "\"교실\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"교실\" makes communication more natural."
+          "beginner": "I study at the classroom.",
+          "intermediate": "classroom is an important educational concept.",
+          "advanced": "Understanding classroom helps improve learning ability.",
+          "master": "The pedagogical value of classroom is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -72,19 +84,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"교실\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "교실이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"교실\" means \"classroom\".",
+              "text": "I'm learning about classroom.",
               "romanization": "",
-              "translation": "교실은/는 classroom(이)에요."
+              "translation": "교실에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -109,10 +133,10 @@
         "word": "강의실",
         "explanation": "강의실의 뜻은 'lecture room'입니다.",
         "examples": {
-          "beginner": "\"강의실\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"강의실\"를 자주 써요.",
-          "advanced": "\"강의실\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"강의실\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "강의실에서 공부해요.",
+          "intermediate": "강의실은 중요한 교육 개념이에요.",
+          "advanced": "강의실에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "강의실의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -128,19 +152,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "강의실이/가 뭐예요?",
-              "romanization": "ganguisili/ga mwoyeyo?",
-              "translation": "What is \"강의실\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "강의실은/는 lecture room(이)에요.",
-              "romanization": "ganguisileun/neun lecture room(i)eyo.",
-              "translation": "\"강의실\" means \"lecture room\"."
+              "text": "강의실에 대해 배우고 있어요.",
+              "romanization": "ganguisile daehae baeugo iseoyo.",
+              "translation": "I'm learning about lecture room."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -149,10 +185,10 @@
         "word": "lecture room",
         "explanation": "'강의실' means 'lecture room' in English.",
         "examples": {
-          "beginner": "We say \"강의실\" in Korean.",
-          "intermediate": "In Korea, people often say \"강의실\".",
-          "advanced": "\"강의실\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"강의실\" makes communication more natural."
+          "beginner": "I study at the lecture room.",
+          "intermediate": "lecture room is an important educational concept.",
+          "advanced": "Understanding lecture room helps improve learning ability.",
+          "master": "The pedagogical value of lecture room is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -168,19 +204,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"강의실\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "강의실이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"강의실\" means \"lecture room\".",
+              "text": "I'm learning about lecture room.",
               "romanization": "",
-              "translation": "강의실은/는 lecture room(이)에요."
+              "translation": "강의실에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -205,10 +253,10 @@
         "word": "칠판",
         "explanation": "칠판의 뜻은 'blackboard'입니다.",
         "examples": {
-          "beginner": "\"칠판\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"칠판\"를 자주 써요.",
-          "advanced": "\"칠판\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"칠판\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "칠판에서 공부해요.",
+          "intermediate": "칠판은 중요한 교육 개념이에요.",
+          "advanced": "칠판에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "칠판의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -224,19 +272,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "칠판이/가 뭐예요?",
-              "romanization": "chilpani/ga mwoyeyo?",
-              "translation": "What is \"칠판\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "칠판은/는 blackboard(이)에요.",
-              "romanization": "chilpaneun/neun blackboard(i)eyo.",
-              "translation": "\"칠판\" means \"blackboard\"."
+              "text": "칠판에 대해 배우고 있어요.",
+              "romanization": "chilpane daehae baeugo iseoyo.",
+              "translation": "I'm learning about blackboard."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -245,10 +305,10 @@
         "word": "blackboard",
         "explanation": "'칠판' means 'blackboard' in English.",
         "examples": {
-          "beginner": "We say \"칠판\" in Korean.",
-          "intermediate": "In Korea, people often say \"칠판\".",
-          "advanced": "\"칠판\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"칠판\" makes communication more natural."
+          "beginner": "I study at the blackboard.",
+          "intermediate": "blackboard is an important educational concept.",
+          "advanced": "Understanding blackboard helps improve learning ability.",
+          "master": "The pedagogical value of blackboard is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -264,19 +324,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"칠판\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "칠판이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"칠판\" means \"blackboard\".",
+              "text": "I'm learning about blackboard.",
               "romanization": "",
-              "translation": "칠판은/는 blackboard(이)에요."
+              "translation": "칠판에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -301,10 +373,10 @@
         "word": "화이트보드",
         "explanation": "화이트보드의 뜻은 'whiteboard'입니다.",
         "examples": {
-          "beginner": "\"화이트보드\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"화이트보드\"를 자주 써요.",
-          "advanced": "\"화이트보드\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"화이트보드\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "화이트보드에서 공부해요.",
+          "intermediate": "화이트보드는 중요한 교육 개념이에요.",
+          "advanced": "화이트보드에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "화이트보드의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -320,19 +392,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "화이트보드이/가 뭐예요?",
-              "romanization": "hwaiteubodeui/ga mwoyeyo?",
-              "translation": "What is \"화이트보드\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "화이트보드은/는 whiteboard(이)에요.",
-              "romanization": "hwaiteubodeueun/neun whiteboard(i)eyo.",
-              "translation": "\"화이트보드\" means \"whiteboard\"."
+              "text": "화이트보드에 대해 배우고 있어요.",
+              "romanization": "hwaiteubodeue daehae baeugo iseoyo.",
+              "translation": "I'm learning about whiteboard."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -341,10 +425,10 @@
         "word": "whiteboard",
         "explanation": "'화이트보드' means 'whiteboard' in English.",
         "examples": {
-          "beginner": "We say \"화이트보드\" in Korean.",
-          "intermediate": "In Korea, people often say \"화이트보드\".",
-          "advanced": "\"화이트보드\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"화이트보드\" makes communication more natural."
+          "beginner": "I study at the whiteboard.",
+          "intermediate": "whiteboard is an important educational concept.",
+          "advanced": "Understanding whiteboard helps improve learning ability.",
+          "master": "The pedagogical value of whiteboard is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -360,19 +444,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"화이트보드\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "화이트보드이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"화이트보드\" means \"whiteboard\".",
+              "text": "I'm learning about whiteboard.",
               "romanization": "",
-              "translation": "화이트보드은/는 whiteboard(이)에요."
+              "translation": "화이트보드에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -397,10 +493,10 @@
         "word": "프로젝터",
         "explanation": "프로젝터의 뜻은 'projector'입니다.",
         "examples": {
-          "beginner": "\"프로젝터\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"프로젝터\"를 자주 써요.",
-          "advanced": "\"프로젝터\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"프로젝터\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "프로젝터에서 공부해요.",
+          "intermediate": "프로젝터는 중요한 교육 개념이에요.",
+          "advanced": "프로젝터에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "프로젝터의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -416,19 +512,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "프로젝터이/가 뭐예요?",
-              "romanization": "peurojekteoi/ga mwoyeyo?",
-              "translation": "What is \"프로젝터\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "프로젝터은/는 projector(이)에요.",
-              "romanization": "peurojekteoeun/neun projector(i)eyo.",
-              "translation": "\"프로젝터\" means \"projector\"."
+              "text": "프로젝터에 대해 배우고 있어요.",
+              "romanization": "peurojekteoe daehae baeugo iseoyo.",
+              "translation": "I'm learning about projector."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -437,10 +545,10 @@
         "word": "projector",
         "explanation": "'프로젝터' means 'projector' in English.",
         "examples": {
-          "beginner": "We say \"프로젝터\" in Korean.",
-          "intermediate": "In Korea, people often say \"프로젝터\".",
-          "advanced": "\"프로젝터\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"프로젝터\" makes communication more natural."
+          "beginner": "I study at the projector.",
+          "intermediate": "projector is an important educational concept.",
+          "advanced": "Understanding projector helps improve learning ability.",
+          "master": "The pedagogical value of projector is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -456,19 +564,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"프로젝터\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "프로젝터이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"프로젝터\" means \"projector\".",
+              "text": "I'm learning about projector.",
               "romanization": "",
-              "translation": "프로젝터은/는 projector(이)에요."
+              "translation": "프로젝터에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -493,10 +613,10 @@
         "word": "교과서",
         "explanation": "교과서의 뜻은 'textbook'입니다.",
         "examples": {
-          "beginner": "\"교과서\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"교과서\"를 자주 써요.",
-          "advanced": "\"교과서\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"교과서\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "교과서에서 공부해요.",
+          "intermediate": "교과서는 중요한 교육 개념이에요.",
+          "advanced": "교과서에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "교과서의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -512,19 +632,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "교과서이/가 뭐예요?",
-              "romanization": "gyogwaseoi/ga mwoyeyo?",
-              "translation": "What is \"교과서\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "교과서은/는 textbook(이)에요.",
-              "romanization": "gyogwaseoeun/neun textbook(i)eyo.",
-              "translation": "\"교과서\" means \"textbook\"."
+              "text": "교과서에 대해 배우고 있어요.",
+              "romanization": "gyogwaseoe daehae baeugo iseoyo.",
+              "translation": "I'm learning about textbook."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -533,10 +665,10 @@
         "word": "textbook",
         "explanation": "'교과서' means 'textbook' in English.",
         "examples": {
-          "beginner": "We say \"교과서\" in Korean.",
-          "intermediate": "In Korea, people often say \"교과서\".",
-          "advanced": "\"교과서\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"교과서\" makes communication more natural."
+          "beginner": "I study at the textbook.",
+          "intermediate": "textbook is an important educational concept.",
+          "advanced": "Understanding textbook helps improve learning ability.",
+          "master": "The pedagogical value of textbook is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -552,19 +684,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"교과서\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "교과서이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"교과서\" means \"textbook\".",
+              "text": "I'm learning about textbook.",
               "romanization": "",
-              "translation": "교과서은/는 textbook(이)에요."
+              "translation": "교과서에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -589,10 +733,10 @@
         "word": "참고서",
         "explanation": "참고서의 뜻은 'reference book'입니다.",
         "examples": {
-          "beginner": "\"참고서\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"참고서\"를 자주 써요.",
-          "advanced": "\"참고서\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"참고서\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "참고서에서 공부해요.",
+          "intermediate": "참고서는 중요한 교육 개념이에요.",
+          "advanced": "참고서에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "참고서의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -608,19 +752,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "참고서이/가 뭐예요?",
-              "romanization": "chamgoseoi/ga mwoyeyo?",
-              "translation": "What is \"참고서\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "참고서은/는 reference book(이)에요.",
-              "romanization": "chamgoseoeun/neun reference book(i)eyo.",
-              "translation": "\"참고서\" means \"reference book\"."
+              "text": "참고서에 대해 배우고 있어요.",
+              "romanization": "chamgoseoe daehae baeugo iseoyo.",
+              "translation": "I'm learning about reference book."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -629,10 +785,10 @@
         "word": "reference book",
         "explanation": "'참고서' means 'reference book' in English.",
         "examples": {
-          "beginner": "We say \"참고서\" in Korean.",
-          "intermediate": "In Korea, people often say \"참고서\".",
-          "advanced": "\"참고서\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"참고서\" makes communication more natural."
+          "beginner": "I study at the reference book.",
+          "intermediate": "reference book is an important educational concept.",
+          "advanced": "Understanding reference book helps improve learning ability.",
+          "master": "The pedagogical value of reference book is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -648,19 +804,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"참고서\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "참고서이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"참고서\" means \"reference book\".",
+              "text": "I'm learning about reference book.",
               "romanization": "",
-              "translation": "참고서은/는 reference book(이)에요."
+              "translation": "참고서에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -685,10 +853,10 @@
         "word": "문제집",
         "explanation": "문제집의 뜻은 'workbook'입니다.",
         "examples": {
-          "beginner": "\"문제집\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"문제집\"를 자주 써요.",
-          "advanced": "\"문제집\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"문제집\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "문제집에서 공부해요.",
+          "intermediate": "문제집은 중요한 교육 개념이에요.",
+          "advanced": "문제집에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "문제집의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -704,19 +872,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "문제집이/가 뭐예요?",
-              "romanization": "munjejipi/ga mwoyeyo?",
-              "translation": "What is \"문제집\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "문제집은/는 workbook(이)에요.",
-              "romanization": "munjejipeun/neun workbook(i)eyo.",
-              "translation": "\"문제집\" means \"workbook\"."
+              "text": "문제집에 대해 배우고 있어요.",
+              "romanization": "munjejipe daehae baeugo iseoyo.",
+              "translation": "I'm learning about workbook."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -725,10 +905,10 @@
         "word": "workbook",
         "explanation": "'문제집' means 'workbook' in English.",
         "examples": {
-          "beginner": "We say \"문제집\" in Korean.",
-          "intermediate": "In Korea, people often say \"문제집\".",
-          "advanced": "\"문제집\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"문제집\" makes communication more natural."
+          "beginner": "I study at the workbook.",
+          "intermediate": "workbook is an important educational concept.",
+          "advanced": "Understanding workbook helps improve learning ability.",
+          "master": "The pedagogical value of workbook is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -744,19 +924,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"문제집\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "문제집이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"문제집\" means \"workbook\".",
+              "text": "I'm learning about workbook.",
               "romanization": "",
-              "translation": "문제집은/는 workbook(이)에요."
+              "translation": "문제집에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -781,10 +973,10 @@
         "word": "시험",
         "explanation": "시험의 뜻은 'exam'입니다.",
         "examples": {
-          "beginner": "\"시험\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"시험\"를 자주 써요.",
-          "advanced": "\"시험\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"시험\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "시험에서 공부해요.",
+          "intermediate": "시험은 중요한 교육 개념이에요.",
+          "advanced": "시험에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "시험의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -800,19 +992,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "시험이/가 뭐예요?",
-              "romanization": "siheomi/ga mwoyeyo?",
-              "translation": "What is \"시험\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "시험은/는 exam(이)에요.",
-              "romanization": "siheomeun/neun exam(i)eyo.",
-              "translation": "\"시험\" means \"exam\"."
+              "text": "시험에 대해 배우고 있어요.",
+              "romanization": "siheome daehae baeugo iseoyo.",
+              "translation": "I'm learning about exam."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -821,10 +1025,10 @@
         "word": "exam",
         "explanation": "'시험' means 'exam' in English.",
         "examples": {
-          "beginner": "We say \"시험\" in Korean.",
-          "intermediate": "In Korea, people often say \"시험\".",
-          "advanced": "\"시험\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"시험\" makes communication more natural."
+          "beginner": "I study at the exam.",
+          "intermediate": "exam is an important educational concept.",
+          "advanced": "Understanding exam helps improve learning ability.",
+          "master": "The pedagogical value of exam is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -840,19 +1044,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"시험\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "시험이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"시험\" means \"exam\".",
+              "text": "I'm learning about exam.",
               "romanization": "",
-              "translation": "시험은/는 exam(이)에요."
+              "translation": "시험에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -877,10 +1093,10 @@
         "word": "퀴즈",
         "explanation": "퀴즈의 뜻은 'quiz'입니다.",
         "examples": {
-          "beginner": "\"퀴즈\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"퀴즈\"를 자주 써요.",
-          "advanced": "\"퀴즈\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"퀴즈\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "퀴즈에서 공부해요.",
+          "intermediate": "퀴즈는 중요한 교육 개념이에요.",
+          "advanced": "퀴즈에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "퀴즈의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -896,19 +1112,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "퀴즈이/가 뭐예요?",
-              "romanization": "kwijeui/ga mwoyeyo?",
-              "translation": "What is \"퀴즈\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "퀴즈은/는 quiz(이)에요.",
-              "romanization": "kwijeueun/neun quiz(i)eyo.",
-              "translation": "\"퀴즈\" means \"quiz\"."
+              "text": "퀴즈에 대해 배우고 있어요.",
+              "romanization": "kwijeue daehae baeugo iseoyo.",
+              "translation": "I'm learning about quiz."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -917,10 +1145,10 @@
         "word": "quiz",
         "explanation": "'퀴즈' means 'quiz' in English.",
         "examples": {
-          "beginner": "We say \"퀴즈\" in Korean.",
-          "intermediate": "In Korea, people often say \"퀴즈\".",
-          "advanced": "\"퀴즈\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"퀴즈\" makes communication more natural."
+          "beginner": "I study at the quiz.",
+          "intermediate": "quiz is an important educational concept.",
+          "advanced": "Understanding quiz helps improve learning ability.",
+          "master": "The pedagogical value of quiz is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -936,19 +1164,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"퀴즈\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "퀴즈이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"퀴즈\" means \"quiz\".",
+              "text": "I'm learning about quiz.",
               "romanization": "",
-              "translation": "퀴즈은/는 quiz(이)에요."
+              "translation": "퀴즈에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -973,10 +1213,10 @@
         "word": "숙제",
         "explanation": "숙제의 뜻은 'homework'입니다.",
         "examples": {
-          "beginner": "\"숙제\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"숙제\"를 자주 써요.",
-          "advanced": "\"숙제\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"숙제\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "숙제에서 공부해요.",
+          "intermediate": "숙제는 중요한 교육 개념이에요.",
+          "advanced": "숙제에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "숙제의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -992,19 +1232,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "숙제이/가 뭐예요?",
-              "romanization": "sukjei/ga mwoyeyo?",
-              "translation": "What is \"숙제\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "숙제은/는 homework(이)에요.",
-              "romanization": "sukjeeun/neun homework(i)eyo.",
-              "translation": "\"숙제\" means \"homework\"."
+              "text": "숙제에 대해 배우고 있어요.",
+              "romanization": "sukjee daehae baeugo iseoyo.",
+              "translation": "I'm learning about homework."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -1013,10 +1265,10 @@
         "word": "homework",
         "explanation": "'숙제' means 'homework' in English.",
         "examples": {
-          "beginner": "We say \"숙제\" in Korean.",
-          "intermediate": "In Korea, people often say \"숙제\".",
-          "advanced": "\"숙제\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"숙제\" makes communication more natural."
+          "beginner": "I study at the homework.",
+          "intermediate": "homework is an important educational concept.",
+          "advanced": "Understanding homework helps improve learning ability.",
+          "master": "The pedagogical value of homework is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -1032,19 +1284,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"숙제\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "숙제이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"숙제\" means \"homework\".",
+              "text": "I'm learning about homework.",
               "romanization": "",
-              "translation": "숙제은/는 homework(이)에요."
+              "translation": "숙제에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -1069,10 +1333,10 @@
         "word": "과제",
         "explanation": "과제의 뜻은 'assignment'입니다.",
         "examples": {
-          "beginner": "\"과제\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"과제\"를 자주 써요.",
-          "advanced": "\"과제\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"과제\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "과제에서 공부해요.",
+          "intermediate": "과제는 중요한 교육 개념이에요.",
+          "advanced": "과제에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "과제의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -1088,19 +1352,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "과제이/가 뭐예요?",
-              "romanization": "gwajei/ga mwoyeyo?",
-              "translation": "What is \"과제\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "과제은/는 assignment(이)에요.",
-              "romanization": "gwajeeun/neun assignment(i)eyo.",
-              "translation": "\"과제\" means \"assignment\"."
+              "text": "과제에 대해 배우고 있어요.",
+              "romanization": "gwajee daehae baeugo iseoyo.",
+              "translation": "I'm learning about assignment."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -1109,10 +1385,10 @@
         "word": "assignment",
         "explanation": "'과제' means 'assignment' in English.",
         "examples": {
-          "beginner": "We say \"과제\" in Korean.",
-          "intermediate": "In Korea, people often say \"과제\".",
-          "advanced": "\"과제\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"과제\" makes communication more natural."
+          "beginner": "I study at the assignment.",
+          "intermediate": "assignment is an important educational concept.",
+          "advanced": "Understanding assignment helps improve learning ability.",
+          "master": "The pedagogical value of assignment is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -1128,19 +1404,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"과제\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "과제이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"과제\" means \"assignment\".",
+              "text": "I'm learning about assignment.",
               "romanization": "",
-              "translation": "과제은/는 assignment(이)에요."
+              "translation": "과제에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -1165,10 +1453,10 @@
         "word": "레포트",
         "explanation": "레포트의 뜻은 'report'입니다.",
         "examples": {
-          "beginner": "\"레포트\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"레포트\"를 자주 써요.",
-          "advanced": "\"레포트\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"레포트\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "레포트에서 공부해요.",
+          "intermediate": "레포트는 중요한 교육 개념이에요.",
+          "advanced": "레포트에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "레포트의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -1184,19 +1472,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "레포트이/가 뭐예요?",
-              "romanization": "repoteui/ga mwoyeyo?",
-              "translation": "What is \"레포트\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "레포트은/는 report(이)에요.",
-              "romanization": "repoteueun/neun report(i)eyo.",
-              "translation": "\"레포트\" means \"report\"."
+              "text": "레포트에 대해 배우고 있어요.",
+              "romanization": "repoteue daehae baeugo iseoyo.",
+              "translation": "I'm learning about report."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -1205,10 +1505,10 @@
         "word": "report",
         "explanation": "'레포트' means 'report' in English.",
         "examples": {
-          "beginner": "We say \"레포트\" in Korean.",
-          "intermediate": "In Korea, people often say \"레포트\".",
-          "advanced": "\"레포트\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"레포트\" makes communication more natural."
+          "beginner": "I study at the report.",
+          "intermediate": "report is an important educational concept.",
+          "advanced": "Understanding report helps improve learning ability.",
+          "master": "The pedagogical value of report is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -1224,19 +1524,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"레포트\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "레포트이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"레포트\" means \"report\".",
+              "text": "I'm learning about report.",
               "romanization": "",
-              "translation": "레포트은/는 report(이)에요."
+              "translation": "레포트에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -1261,10 +1573,10 @@
         "word": "발표",
         "explanation": "발표의 뜻은 'presentation'입니다.",
         "examples": {
-          "beginner": "\"발표\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"발표\"를 자주 써요.",
-          "advanced": "\"발표\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"발표\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "발표에서 공부해요.",
+          "intermediate": "발표는 중요한 교육 개념이에요.",
+          "advanced": "발표에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "발표의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -1280,19 +1592,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "발표이/가 뭐예요?",
-              "romanization": "balpyoi/ga mwoyeyo?",
-              "translation": "What is \"발표\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "발표은/는 presentation(이)에요.",
-              "romanization": "balpyoeun/neun presentation(i)eyo.",
-              "translation": "\"발표\" means \"presentation\"."
+              "text": "발표에 대해 배우고 있어요.",
+              "romanization": "balpyoe daehae baeugo iseoyo.",
+              "translation": "I'm learning about presentation."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -1301,10 +1625,10 @@
         "word": "presentation",
         "explanation": "'발표' means 'presentation' in English.",
         "examples": {
-          "beginner": "We say \"발표\" in Korean.",
-          "intermediate": "In Korea, people often say \"발표\".",
-          "advanced": "\"발표\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"발표\" makes communication more natural."
+          "beginner": "I study at the presentation.",
+          "intermediate": "presentation is an important educational concept.",
+          "advanced": "Understanding presentation helps improve learning ability.",
+          "master": "The pedagogical value of presentation is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -1320,19 +1644,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"발표\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "발표이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"발표\" means \"presentation\".",
+              "text": "I'm learning about presentation.",
               "romanization": "",
-              "translation": "발표은/는 presentation(이)에요."
+              "translation": "발표에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -1357,10 +1693,10 @@
         "word": "토론",
         "explanation": "토론의 뜻은 'debate'입니다.",
         "examples": {
-          "beginner": "\"토론\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"토론\"를 자주 써요.",
-          "advanced": "\"토론\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"토론\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "토론에서 공부해요.",
+          "intermediate": "토론은 중요한 교육 개념이에요.",
+          "advanced": "토론에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "토론의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -1376,19 +1712,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "토론이/가 뭐예요?",
-              "romanization": "toroni/ga mwoyeyo?",
-              "translation": "What is \"토론\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "토론은/는 debate(이)에요.",
-              "romanization": "toroneun/neun debate(i)eyo.",
-              "translation": "\"토론\" means \"debate\"."
+              "text": "토론에 대해 배우고 있어요.",
+              "romanization": "torone daehae baeugo iseoyo.",
+              "translation": "I'm learning about debate."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -1397,10 +1745,10 @@
         "word": "debate",
         "explanation": "'토론' means 'debate' in English.",
         "examples": {
-          "beginner": "We say \"토론\" in Korean.",
-          "intermediate": "In Korea, people often say \"토론\".",
-          "advanced": "\"토론\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"토론\" makes communication more natural."
+          "beginner": "I study at the debate.",
+          "intermediate": "debate is an important educational concept.",
+          "advanced": "Understanding debate helps improve learning ability.",
+          "master": "The pedagogical value of debate is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -1416,19 +1764,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"토론\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "토론이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"토론\" means \"debate\".",
+              "text": "I'm learning about debate.",
               "romanization": "",
-              "translation": "토론은/는 debate(이)에요."
+              "translation": "토론에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -1453,10 +1813,10 @@
         "word": "성적",
         "explanation": "성적의 뜻은 'grade'입니다.",
         "examples": {
-          "beginner": "\"성적\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"성적\"를 자주 써요.",
-          "advanced": "\"성적\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"성적\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "성적에서 공부해요.",
+          "intermediate": "성적은 중요한 교육 개념이에요.",
+          "advanced": "성적에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "성적의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -1472,19 +1832,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "성적이/가 뭐예요?",
-              "romanization": "seongjeoki/ga mwoyeyo?",
-              "translation": "What is \"성적\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "성적은/는 grade(이)에요.",
-              "romanization": "seongjeokeun/neun grade(i)eyo.",
-              "translation": "\"성적\" means \"grade\"."
+              "text": "성적에 대해 배우고 있어요.",
+              "romanization": "seongjeoke daehae baeugo iseoyo.",
+              "translation": "I'm learning about grade."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -1493,10 +1865,10 @@
         "word": "grade",
         "explanation": "'성적' means 'grade' in English.",
         "examples": {
-          "beginner": "We say \"성적\" in Korean.",
-          "intermediate": "In Korea, people often say \"성적\".",
-          "advanced": "\"성적\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"성적\" makes communication more natural."
+          "beginner": "I study at the grade.",
+          "intermediate": "grade is an important educational concept.",
+          "advanced": "Understanding grade helps improve learning ability.",
+          "master": "The pedagogical value of grade is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -1512,19 +1884,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"성적\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "성적이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"성적\" means \"grade\".",
+              "text": "I'm learning about grade.",
               "romanization": "",
-              "translation": "성적은/는 grade(이)에요."
+              "translation": "성적에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -1549,10 +1933,10 @@
         "word": "점수",
         "explanation": "점수의 뜻은 'score'입니다.",
         "examples": {
-          "beginner": "\"점수\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"점수\"를 자주 써요.",
-          "advanced": "\"점수\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"점수\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "점수에서 공부해요.",
+          "intermediate": "점수는 중요한 교육 개념이에요.",
+          "advanced": "점수에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "점수의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -1568,19 +1952,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "점수이/가 뭐예요?",
-              "romanization": "jeomsui/ga mwoyeyo?",
-              "translation": "What is \"점수\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "점수은/는 score(이)에요.",
-              "romanization": "jeomsueun/neun score(i)eyo.",
-              "translation": "\"점수\" means \"score\"."
+              "text": "점수에 대해 배우고 있어요.",
+              "romanization": "jeomsue daehae baeugo iseoyo.",
+              "translation": "I'm learning about score."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -1589,10 +1985,10 @@
         "word": "score",
         "explanation": "'점수' means 'score' in English.",
         "examples": {
-          "beginner": "We say \"점수\" in Korean.",
-          "intermediate": "In Korea, people often say \"점수\".",
-          "advanced": "\"점수\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"점수\" makes communication more natural."
+          "beginner": "I study at the score.",
+          "intermediate": "score is an important educational concept.",
+          "advanced": "Understanding score helps improve learning ability.",
+          "master": "The pedagogical value of score is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -1608,19 +2004,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"점수\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "점수이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"점수\" means \"score\".",
+              "text": "I'm learning about score.",
               "romanization": "",
-              "translation": "점수은/는 score(이)에요."
+              "translation": "점수에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -1645,10 +2053,10 @@
         "word": "학점",
         "explanation": "학점의 뜻은 'credit'입니다.",
         "examples": {
-          "beginner": "\"학점\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"학점\"를 자주 써요.",
-          "advanced": "\"학점\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"학점\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "학점에서 공부해요.",
+          "intermediate": "학점은 중요한 교육 개념이에요.",
+          "advanced": "학점에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "학점의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -1664,19 +2072,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "학점이/가 뭐예요?",
-              "romanization": "hakjeomi/ga mwoyeyo?",
-              "translation": "What is \"학점\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "학점은/는 credit(이)에요.",
-              "romanization": "hakjeomeun/neun credit(i)eyo.",
-              "translation": "\"학점\" means \"credit\"."
+              "text": "학점에 대해 배우고 있어요.",
+              "romanization": "hakjeome daehae baeugo iseoyo.",
+              "translation": "I'm learning about credit."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -1685,10 +2105,10 @@
         "word": "credit",
         "explanation": "'학점' means 'credit' in English.",
         "examples": {
-          "beginner": "We say \"학점\" in Korean.",
-          "intermediate": "In Korea, people often say \"학점\".",
-          "advanced": "\"학점\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"학점\" makes communication more natural."
+          "beginner": "I study at the credit.",
+          "intermediate": "credit is an important educational concept.",
+          "advanced": "Understanding credit helps improve learning ability.",
+          "master": "The pedagogical value of credit is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -1704,19 +2124,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"학점\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "학점이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"학점\" means \"credit\".",
+              "text": "I'm learning about credit.",
               "romanization": "",
-              "translation": "학점은/는 credit(이)에요."
+              "translation": "학점에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -1741,10 +2173,10 @@
         "word": "졸업",
         "explanation": "졸업의 뜻은 'graduation'입니다.",
         "examples": {
-          "beginner": "\"졸업\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"졸업\"를 자주 써요.",
-          "advanced": "\"졸업\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"졸업\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "졸업에서 공부해요.",
+          "intermediate": "졸업은 중요한 교육 개념이에요.",
+          "advanced": "졸업에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "졸업의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -1760,19 +2192,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "졸업이/가 뭐예요?",
-              "romanization": "joleopi/ga mwoyeyo?",
-              "translation": "What is \"졸업\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "졸업은/는 graduation(이)에요.",
-              "romanization": "joleopeun/neun graduation(i)eyo.",
-              "translation": "\"졸업\" means \"graduation\"."
+              "text": "졸업에 대해 배우고 있어요.",
+              "romanization": "joleope daehae baeugo iseoyo.",
+              "translation": "I'm learning about graduation."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -1781,10 +2225,10 @@
         "word": "graduation",
         "explanation": "'졸업' means 'graduation' in English.",
         "examples": {
-          "beginner": "We say \"졸업\" in Korean.",
-          "intermediate": "In Korea, people often say \"졸업\".",
-          "advanced": "\"졸업\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"졸업\" makes communication more natural."
+          "beginner": "I study at the graduation.",
+          "intermediate": "graduation is an important educational concept.",
+          "advanced": "Understanding graduation helps improve learning ability.",
+          "master": "The pedagogical value of graduation is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -1800,19 +2244,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"졸업\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "졸업이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"졸업\" means \"graduation\".",
+              "text": "I'm learning about graduation.",
               "romanization": "",
-              "translation": "졸업은/는 graduation(이)에요."
+              "translation": "졸업에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -1837,10 +2293,10 @@
         "word": "입학",
         "explanation": "입학의 뜻은 'enrollment'입니다.",
         "examples": {
-          "beginner": "\"입학\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"입학\"를 자주 써요.",
-          "advanced": "\"입학\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"입학\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "입학에서 공부해요.",
+          "intermediate": "입학은 중요한 교육 개념이에요.",
+          "advanced": "입학에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "입학의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -1856,19 +2312,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "입학이/가 뭐예요?",
-              "romanization": "iphaki/ga mwoyeyo?",
-              "translation": "What is \"입학\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "입학은/는 enrollment(이)에요.",
-              "romanization": "iphakeun/neun enrollment(i)eyo.",
-              "translation": "\"입학\" means \"enrollment\"."
+              "text": "입학에 대해 배우고 있어요.",
+              "romanization": "iphake daehae baeugo iseoyo.",
+              "translation": "I'm learning about enrollment."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -1877,10 +2345,10 @@
         "word": "enrollment",
         "explanation": "'입학' means 'enrollment' in English.",
         "examples": {
-          "beginner": "We say \"입학\" in Korean.",
-          "intermediate": "In Korea, people often say \"입학\".",
-          "advanced": "\"입학\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"입학\" makes communication more natural."
+          "beginner": "I study at the enrollment.",
+          "intermediate": "enrollment is an important educational concept.",
+          "advanced": "Understanding enrollment helps improve learning ability.",
+          "master": "The pedagogical value of enrollment is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -1896,19 +2364,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"입학\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "입학이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"입학\" means \"enrollment\".",
+              "text": "I'm learning about enrollment.",
               "romanization": "",
-              "translation": "입학은/는 enrollment(이)에요."
+              "translation": "입학에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -1933,10 +2413,10 @@
         "word": "장학금",
         "explanation": "장학금의 뜻은 'scholarship'입니다.",
         "examples": {
-          "beginner": "\"장학금\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"장학금\"를 자주 써요.",
-          "advanced": "\"장학금\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"장학금\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "장학금에서 공부해요.",
+          "intermediate": "장학금은 중요한 교육 개념이에요.",
+          "advanced": "장학금에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "장학금의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -1952,19 +2432,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "장학금이/가 뭐예요?",
-              "romanization": "janghakgeumi/ga mwoyeyo?",
-              "translation": "What is \"장학금\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "장학금은/는 scholarship(이)에요.",
-              "romanization": "janghakgeumeun/neun scholarship(i)eyo.",
-              "translation": "\"장학금\" means \"scholarship\"."
+              "text": "장학금에 대해 배우고 있어요.",
+              "romanization": "janghakgeume daehae baeugo iseoyo.",
+              "translation": "I'm learning about scholarship."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -1973,10 +2465,10 @@
         "word": "scholarship",
         "explanation": "'장학금' means 'scholarship' in English.",
         "examples": {
-          "beginner": "We say \"장학금\" in Korean.",
-          "intermediate": "In Korea, people often say \"장학금\".",
-          "advanced": "\"장학금\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"장학금\" makes communication more natural."
+          "beginner": "I study at the scholarship.",
+          "intermediate": "scholarship is an important educational concept.",
+          "advanced": "Understanding scholarship helps improve learning ability.",
+          "master": "The pedagogical value of scholarship is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -1992,19 +2484,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"장학금\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "장학금이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"장학금\" means \"scholarship\".",
+              "text": "I'm learning about scholarship.",
               "romanization": "",
-              "translation": "장학금은/는 scholarship(이)에요."
+              "translation": "장학금에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -2029,10 +2533,10 @@
         "word": "등록금",
         "explanation": "등록금의 뜻은 'tuition'입니다.",
         "examples": {
-          "beginner": "\"등록금\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"등록금\"를 자주 써요.",
-          "advanced": "\"등록금\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"등록금\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "등록금에서 공부해요.",
+          "intermediate": "등록금은 중요한 교육 개념이에요.",
+          "advanced": "등록금에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "등록금의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -2048,19 +2552,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "등록금이/가 뭐예요?",
-              "romanization": "deungrokgeumi/ga mwoyeyo?",
-              "translation": "What is \"등록금\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "등록금은/는 tuition(이)에요.",
-              "romanization": "deungrokgeumeun/neun tuition(i)eyo.",
-              "translation": "\"등록금\" means \"tuition\"."
+              "text": "등록금에 대해 배우고 있어요.",
+              "romanization": "deungrokgeume daehae baeugo iseoyo.",
+              "translation": "I'm learning about tuition."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -2069,10 +2585,10 @@
         "word": "tuition",
         "explanation": "'등록금' means 'tuition' in English.",
         "examples": {
-          "beginner": "We say \"등록금\" in Korean.",
-          "intermediate": "In Korea, people often say \"등록금\".",
-          "advanced": "\"등록금\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"등록금\" makes communication more natural."
+          "beginner": "I study at the tuition.",
+          "intermediate": "tuition is an important educational concept.",
+          "advanced": "Understanding tuition helps improve learning ability.",
+          "master": "The pedagogical value of tuition is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -2088,19 +2604,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"등록금\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "등록금이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"등록금\" means \"tuition\".",
+              "text": "I'm learning about tuition.",
               "romanization": "",
-              "translation": "등록금은/는 tuition(이)에요."
+              "translation": "등록금에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -2125,10 +2653,10 @@
         "word": "방학",
         "explanation": "방학의 뜻은 'vacation'입니다.",
         "examples": {
-          "beginner": "\"방학\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"방학\"를 자주 써요.",
-          "advanced": "\"방학\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"방학\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "방학에서 공부해요.",
+          "intermediate": "방학은 중요한 교육 개념이에요.",
+          "advanced": "방학에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "방학의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -2144,19 +2672,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "방학이/가 뭐예요?",
-              "romanization": "banghaki/ga mwoyeyo?",
-              "translation": "What is \"방학\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "방학은/는 vacation(이)에요.",
-              "romanization": "banghakeun/neun vacation(i)eyo.",
-              "translation": "\"방학\" means \"vacation\"."
+              "text": "방학에 대해 배우고 있어요.",
+              "romanization": "banghake daehae baeugo iseoyo.",
+              "translation": "I'm learning about vacation."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -2165,10 +2705,10 @@
         "word": "vacation",
         "explanation": "'방학' means 'vacation' in English.",
         "examples": {
-          "beginner": "We say \"방학\" in Korean.",
-          "intermediate": "In Korea, people often say \"방학\".",
-          "advanced": "\"방학\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"방학\" makes communication more natural."
+          "beginner": "I study at the vacation.",
+          "intermediate": "vacation is an important educational concept.",
+          "advanced": "Understanding vacation helps improve learning ability.",
+          "master": "The pedagogical value of vacation is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -2184,19 +2724,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"방학\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "방학이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"방학\" means \"vacation\".",
+              "text": "I'm learning about vacation.",
               "romanization": "",
-              "translation": "방학은/는 vacation(이)에요."
+              "translation": "방학에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -2221,10 +2773,10 @@
         "word": "학기",
         "explanation": "학기의 뜻은 'semester'입니다.",
         "examples": {
-          "beginner": "\"학기\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"학기\"를 자주 써요.",
-          "advanced": "\"학기\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"학기\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "학기에서 공부해요.",
+          "intermediate": "학기는 중요한 교육 개념이에요.",
+          "advanced": "학기에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "학기의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -2240,19 +2792,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "학기이/가 뭐예요?",
-              "romanization": "hakgii/ga mwoyeyo?",
-              "translation": "What is \"학기\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "학기은/는 semester(이)에요.",
-              "romanization": "hakgieun/neun semester(i)eyo.",
-              "translation": "\"학기\" means \"semester\"."
+              "text": "학기에 대해 배우고 있어요.",
+              "romanization": "hakgie daehae baeugo iseoyo.",
+              "translation": "I'm learning about semester."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -2261,10 +2825,10 @@
         "word": "semester",
         "explanation": "'학기' means 'semester' in English.",
         "examples": {
-          "beginner": "We say \"학기\" in Korean.",
-          "intermediate": "In Korea, people often say \"학기\".",
-          "advanced": "\"학기\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"학기\" makes communication more natural."
+          "beginner": "I study at the semester.",
+          "intermediate": "semester is an important educational concept.",
+          "advanced": "Understanding semester helps improve learning ability.",
+          "master": "The pedagogical value of semester is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -2280,19 +2844,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"학기\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "학기이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"학기\" means \"semester\".",
+              "text": "I'm learning about semester.",
               "romanization": "",
-              "translation": "학기은/는 semester(이)에요."
+              "translation": "학기에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -2317,10 +2893,10 @@
         "word": "수업",
         "explanation": "수업의 뜻은 'class'입니다.",
         "examples": {
-          "beginner": "\"수업\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"수업\"를 자주 써요.",
-          "advanced": "\"수업\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"수업\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "수업에서 공부해요.",
+          "intermediate": "수업은 중요한 교육 개념이에요.",
+          "advanced": "수업에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "수업의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -2336,19 +2912,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "수업이/가 뭐예요?",
-              "romanization": "sueopi/ga mwoyeyo?",
-              "translation": "What is \"수업\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "수업은/는 class(이)에요.",
-              "romanization": "sueopeun/neun class(i)eyo.",
-              "translation": "\"수업\" means \"class\"."
+              "text": "수업에 대해 배우고 있어요.",
+              "romanization": "sueope daehae baeugo iseoyo.",
+              "translation": "I'm learning about class."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -2357,10 +2945,10 @@
         "word": "class",
         "explanation": "'수업' means 'class' in English.",
         "examples": {
-          "beginner": "We say \"수업\" in Korean.",
-          "intermediate": "In Korea, people often say \"수업\".",
-          "advanced": "\"수업\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"수업\" makes communication more natural."
+          "beginner": "I study at the class.",
+          "intermediate": "class is an important educational concept.",
+          "advanced": "Understanding class helps improve learning ability.",
+          "master": "The pedagogical value of class is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -2376,19 +2964,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"수업\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "수업이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"수업\" means \"class\".",
+              "text": "I'm learning about class.",
               "romanization": "",
-              "translation": "수업은/는 class(이)에요."
+              "translation": "수업에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -2413,10 +3013,10 @@
         "word": "강의",
         "explanation": "강의의 뜻은 'lecture'입니다.",
         "examples": {
-          "beginner": "\"강의\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"강의\"를 자주 써요.",
-          "advanced": "\"강의\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"강의\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "강의에서 공부해요.",
+          "intermediate": "강의는 중요한 교육 개념이에요.",
+          "advanced": "강의에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "강의의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -2432,19 +3032,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "강의이/가 뭐예요?",
-              "romanization": "ganguii/ga mwoyeyo?",
-              "translation": "What is \"강의\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "강의은/는 lecture(이)에요.",
-              "romanization": "ganguieun/neun lecture(i)eyo.",
-              "translation": "\"강의\" means \"lecture\"."
+              "text": "강의에 대해 배우고 있어요.",
+              "romanization": "ganguie daehae baeugo iseoyo.",
+              "translation": "I'm learning about lecture."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -2453,10 +3065,10 @@
         "word": "lecture",
         "explanation": "'강의' means 'lecture' in English.",
         "examples": {
-          "beginner": "We say \"강의\" in Korean.",
-          "intermediate": "In Korea, people often say \"강의\".",
-          "advanced": "\"강의\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"강의\" makes communication more natural."
+          "beginner": "I study at the lecture.",
+          "intermediate": "lecture is an important educational concept.",
+          "advanced": "Understanding lecture helps improve learning ability.",
+          "master": "The pedagogical value of lecture is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -2472,19 +3084,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"강의\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "강의이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"강의\" means \"lecture\".",
+              "text": "I'm learning about lecture.",
               "romanization": "",
-              "translation": "강의은/는 lecture(이)에요."
+              "translation": "강의에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -2509,10 +3133,10 @@
         "word": "과목",
         "explanation": "과목의 뜻은 'subject'입니다.",
         "examples": {
-          "beginner": "\"과목\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"과목\"를 자주 써요.",
-          "advanced": "\"과목\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"과목\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "과목에서 공부해요.",
+          "intermediate": "과목은 중요한 교육 개념이에요.",
+          "advanced": "과목에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "과목의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -2528,19 +3152,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "과목이/가 뭐예요?",
-              "romanization": "gwamoki/ga mwoyeyo?",
-              "translation": "What is \"과목\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "과목은/는 subject(이)에요.",
-              "romanization": "gwamokeun/neun subject(i)eyo.",
-              "translation": "\"과목\" means \"subject\"."
+              "text": "과목에 대해 배우고 있어요.",
+              "romanization": "gwamoke daehae baeugo iseoyo.",
+              "translation": "I'm learning about subject."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -2549,10 +3185,10 @@
         "word": "subject",
         "explanation": "'과목' means 'subject' in English.",
         "examples": {
-          "beginner": "We say \"과목\" in Korean.",
-          "intermediate": "In Korea, people often say \"과목\".",
-          "advanced": "\"과목\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"과목\" makes communication more natural."
+          "beginner": "I study at the subject.",
+          "intermediate": "subject is an important educational concept.",
+          "advanced": "Understanding subject helps improve learning ability.",
+          "master": "The pedagogical value of subject is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -2568,19 +3204,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"과목\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "과목이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"과목\" means \"subject\".",
+              "text": "I'm learning about subject.",
               "romanization": "",
-              "translation": "과목은/는 subject(이)에요."
+              "translation": "과목에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -2605,10 +3253,10 @@
         "word": "국어",
         "explanation": "국어의 뜻은 'Korean'입니다.",
         "examples": {
-          "beginner": "\"국어\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"국어\"를 자주 써요.",
-          "advanced": "\"국어\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"국어\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "국어에서 공부해요.",
+          "intermediate": "국어는 중요한 교육 개념이에요.",
+          "advanced": "국어에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "국어의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -2624,19 +3272,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "국어이/가 뭐예요?",
-              "romanization": "gukeoi/ga mwoyeyo?",
-              "translation": "What is \"국어\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "국어은/는 Korean(이)에요.",
-              "romanization": "gukeoeun/neun Korean(i)eyo.",
-              "translation": "\"국어\" means \"Korean\"."
+              "text": "국어에 대해 배우고 있어요.",
+              "romanization": "gukeoe daehae baeugo iseoyo.",
+              "translation": "I'm learning about korean."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -2645,10 +3305,10 @@
         "word": "Korean",
         "explanation": "'국어' means 'Korean' in English.",
         "examples": {
-          "beginner": "We say \"국어\" in Korean.",
-          "intermediate": "In Korea, people often say \"국어\".",
-          "advanced": "\"국어\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"국어\" makes communication more natural."
+          "beginner": "I study at the korean.",
+          "intermediate": "Korean is an important educational concept.",
+          "advanced": "Understanding korean helps improve learning ability.",
+          "master": "The pedagogical value of korean is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -2664,19 +3324,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"국어\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "국어이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"국어\" means \"Korean\".",
+              "text": "I'm learning about korean.",
               "romanization": "",
-              "translation": "국어은/는 Korean(이)에요."
+              "translation": "국어에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -2701,10 +3373,10 @@
         "word": "영어",
         "explanation": "영어의 뜻은 'English'입니다.",
         "examples": {
-          "beginner": "\"영어\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"영어\"를 자주 써요.",
-          "advanced": "\"영어\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"영어\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "영어에서 공부해요.",
+          "intermediate": "영어는 중요한 교육 개념이에요.",
+          "advanced": "영어에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "영어의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -2720,19 +3392,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "영어이/가 뭐예요?",
-              "romanization": "yeongeoi/ga mwoyeyo?",
-              "translation": "What is \"영어\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "영어은/는 English(이)에요.",
-              "romanization": "yeongeoeun/neun English(i)eyo.",
-              "translation": "\"영어\" means \"English\"."
+              "text": "영어에 대해 배우고 있어요.",
+              "romanization": "yeongeoe daehae baeugo iseoyo.",
+              "translation": "I'm learning about english."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -2741,10 +3425,10 @@
         "word": "English",
         "explanation": "'영어' means 'English' in English.",
         "examples": {
-          "beginner": "We say \"영어\" in Korean.",
-          "intermediate": "In Korea, people often say \"영어\".",
-          "advanced": "\"영어\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"영어\" makes communication more natural."
+          "beginner": "I study at the english.",
+          "intermediate": "English is an important educational concept.",
+          "advanced": "Understanding english helps improve learning ability.",
+          "master": "The pedagogical value of english is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -2760,19 +3444,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"영어\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "영어이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"영어\" means \"English\".",
+              "text": "I'm learning about english.",
               "romanization": "",
-              "translation": "영어은/는 English(이)에요."
+              "translation": "영어에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -2797,10 +3493,10 @@
         "word": "수학",
         "explanation": "수학의 뜻은 'math'입니다.",
         "examples": {
-          "beginner": "\"수학\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"수학\"를 자주 써요.",
-          "advanced": "\"수학\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"수학\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "수학에서 공부해요.",
+          "intermediate": "수학은 중요한 교육 개념이에요.",
+          "advanced": "수학에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "수학의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -2816,19 +3512,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "수학이/가 뭐예요?",
-              "romanization": "suhaki/ga mwoyeyo?",
-              "translation": "What is \"수학\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "수학은/는 math(이)에요.",
-              "romanization": "suhakeun/neun math(i)eyo.",
-              "translation": "\"수학\" means \"math\"."
+              "text": "수학에 대해 배우고 있어요.",
+              "romanization": "suhake daehae baeugo iseoyo.",
+              "translation": "I'm learning about math."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -2837,10 +3545,10 @@
         "word": "math",
         "explanation": "'수학' means 'math' in English.",
         "examples": {
-          "beginner": "We say \"수학\" in Korean.",
-          "intermediate": "In Korea, people often say \"수학\".",
-          "advanced": "\"수학\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"수학\" makes communication more natural."
+          "beginner": "I study at the math.",
+          "intermediate": "math is an important educational concept.",
+          "advanced": "Understanding math helps improve learning ability.",
+          "master": "The pedagogical value of math is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -2856,19 +3564,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"수학\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "수학이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"수학\" means \"math\".",
+              "text": "I'm learning about math.",
               "romanization": "",
-              "translation": "수학은/는 math(이)에요."
+              "translation": "수학에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -2893,10 +3613,10 @@
         "word": "과학",
         "explanation": "과학의 뜻은 'science'입니다.",
         "examples": {
-          "beginner": "\"과학\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"과학\"를 자주 써요.",
-          "advanced": "\"과학\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"과학\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "과학에서 공부해요.",
+          "intermediate": "과학은 중요한 교육 개념이에요.",
+          "advanced": "과학에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "과학의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -2912,19 +3632,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "과학이/가 뭐예요?",
-              "romanization": "gwahaki/ga mwoyeyo?",
-              "translation": "What is \"과학\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "과학은/는 science(이)에요.",
-              "romanization": "gwahakeun/neun science(i)eyo.",
-              "translation": "\"과학\" means \"science\"."
+              "text": "과학에 대해 배우고 있어요.",
+              "romanization": "gwahake daehae baeugo iseoyo.",
+              "translation": "I'm learning about science."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -2933,10 +3665,10 @@
         "word": "science",
         "explanation": "'과학' means 'science' in English.",
         "examples": {
-          "beginner": "We say \"과학\" in Korean.",
-          "intermediate": "In Korea, people often say \"과학\".",
-          "advanced": "\"과학\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"과학\" makes communication more natural."
+          "beginner": "I study at the science.",
+          "intermediate": "science is an important educational concept.",
+          "advanced": "Understanding science helps improve learning ability.",
+          "master": "The pedagogical value of science is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -2952,19 +3684,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"과학\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "과학이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"과학\" means \"science\".",
+              "text": "I'm learning about science.",
               "romanization": "",
-              "translation": "과학은/는 science(이)에요."
+              "translation": "과학에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -2989,10 +3733,10 @@
         "word": "사회",
         "explanation": "사회의 뜻은 'social studies'입니다.",
         "examples": {
-          "beginner": "\"사회\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"사회\"를 자주 써요.",
-          "advanced": "\"사회\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"사회\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "사회에서 공부해요.",
+          "intermediate": "사회는 중요한 교육 개념이에요.",
+          "advanced": "사회에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "사회의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -3008,19 +3752,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "사회이/가 뭐예요?",
-              "romanization": "sahoei/ga mwoyeyo?",
-              "translation": "What is \"사회\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "사회은/는 social studies(이)에요.",
-              "romanization": "sahoeeun/neun social studies(i)eyo.",
-              "translation": "\"사회\" means \"social studies\"."
+              "text": "사회에 대해 배우고 있어요.",
+              "romanization": "sahoee daehae baeugo iseoyo.",
+              "translation": "I'm learning about social studies."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -3029,10 +3785,10 @@
         "word": "social studies",
         "explanation": "'사회' means 'social studies' in English.",
         "examples": {
-          "beginner": "We say \"사회\" in Korean.",
-          "intermediate": "In Korea, people often say \"사회\".",
-          "advanced": "\"사회\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"사회\" makes communication more natural."
+          "beginner": "I study at the social studies.",
+          "intermediate": "social studies is an important educational concept.",
+          "advanced": "Understanding social studies helps improve learning ability.",
+          "master": "The pedagogical value of social studies is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -3048,19 +3804,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"사회\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "사회이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"사회\" means \"social studies\".",
+              "text": "I'm learning about social studies.",
               "romanization": "",
-              "translation": "사회은/는 social studies(이)에요."
+              "translation": "사회에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -3085,10 +3853,10 @@
         "word": "역사",
         "explanation": "역사의 뜻은 'history'입니다.",
         "examples": {
-          "beginner": "\"역사\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"역사\"를 자주 써요.",
-          "advanced": "\"역사\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"역사\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "역사에서 공부해요.",
+          "intermediate": "역사는 중요한 교육 개념이에요.",
+          "advanced": "역사에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "역사의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -3104,19 +3872,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "역사이/가 뭐예요?",
-              "romanization": "yeoksai/ga mwoyeyo?",
-              "translation": "What is \"역사\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "역사은/는 history(이)에요.",
-              "romanization": "yeoksaeun/neun history(i)eyo.",
-              "translation": "\"역사\" means \"history\"."
+              "text": "역사에 대해 배우고 있어요.",
+              "romanization": "yeoksae daehae baeugo iseoyo.",
+              "translation": "I'm learning about history."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -3125,10 +3905,10 @@
         "word": "history",
         "explanation": "'역사' means 'history' in English.",
         "examples": {
-          "beginner": "We say \"역사\" in Korean.",
-          "intermediate": "In Korea, people often say \"역사\".",
-          "advanced": "\"역사\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"역사\" makes communication more natural."
+          "beginner": "I study at the history.",
+          "intermediate": "history is an important educational concept.",
+          "advanced": "Understanding history helps improve learning ability.",
+          "master": "The pedagogical value of history is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -3144,19 +3924,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"역사\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "역사이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"역사\" means \"history\".",
+              "text": "I'm learning about history.",
               "romanization": "",
-              "translation": "역사은/는 history(이)에요."
+              "translation": "역사에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -3181,10 +3973,10 @@
         "word": "지리",
         "explanation": "지리의 뜻은 'geography'입니다.",
         "examples": {
-          "beginner": "\"지리\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"지리\"를 자주 써요.",
-          "advanced": "\"지리\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"지리\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "지리에서 공부해요.",
+          "intermediate": "지리는 중요한 교육 개념이에요.",
+          "advanced": "지리에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "지리의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -3200,19 +3992,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "지리이/가 뭐예요?",
-              "romanization": "jirii/ga mwoyeyo?",
-              "translation": "What is \"지리\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "지리은/는 geography(이)에요.",
-              "romanization": "jirieun/neun geography(i)eyo.",
-              "translation": "\"지리\" means \"geography\"."
+              "text": "지리에 대해 배우고 있어요.",
+              "romanization": "jirie daehae baeugo iseoyo.",
+              "translation": "I'm learning about geography."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -3221,10 +4025,10 @@
         "word": "geography",
         "explanation": "'지리' means 'geography' in English.",
         "examples": {
-          "beginner": "We say \"지리\" in Korean.",
-          "intermediate": "In Korea, people often say \"지리\".",
-          "advanced": "\"지리\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"지리\" makes communication more natural."
+          "beginner": "I study at the geography.",
+          "intermediate": "geography is an important educational concept.",
+          "advanced": "Understanding geography helps improve learning ability.",
+          "master": "The pedagogical value of geography is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -3240,19 +4044,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"지리\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "지리이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"지리\" means \"geography\".",
+              "text": "I'm learning about geography.",
               "romanization": "",
-              "translation": "지리은/는 geography(이)에요."
+              "translation": "지리에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -3277,10 +4093,10 @@
         "word": "음악수업",
         "explanation": "음악수업의 뜻은 'music class'입니다.",
         "examples": {
-          "beginner": "\"음악수업\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"음악수업\"를 자주 써요.",
-          "advanced": "\"음악수업\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"음악수업\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "음악수업에서 공부해요.",
+          "intermediate": "음악수업은 중요한 교육 개념이에요.",
+          "advanced": "음악수업에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "음악수업의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -3296,19 +4112,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "음악수업이/가 뭐예요?",
-              "romanization": "eumaksueopi/ga mwoyeyo?",
-              "translation": "What is \"음악수업\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "음악수업은/는 music class(이)에요.",
-              "romanization": "eumaksueopeun/neun music class(i)eyo.",
-              "translation": "\"음악수업\" means \"music class\"."
+              "text": "음악수업에 대해 배우고 있어요.",
+              "romanization": "eumaksueope daehae baeugo iseoyo.",
+              "translation": "I'm learning about music class."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -3317,10 +4145,10 @@
         "word": "music class",
         "explanation": "'음악수업' means 'music class' in English.",
         "examples": {
-          "beginner": "We say \"음악수업\" in Korean.",
-          "intermediate": "In Korea, people often say \"음악수업\".",
-          "advanced": "\"음악수업\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"음악수업\" makes communication more natural."
+          "beginner": "I study at the music class.",
+          "intermediate": "music class is an important educational concept.",
+          "advanced": "Understanding music class helps improve learning ability.",
+          "master": "The pedagogical value of music class is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -3336,19 +4164,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"음악수업\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "음악수업이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"음악수업\" means \"music class\".",
+              "text": "I'm learning about music class.",
               "romanization": "",
-              "translation": "음악수업은/는 music class(이)에요."
+              "translation": "음악수업에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -3373,10 +4213,10 @@
         "word": "미술수업",
         "explanation": "미술수업의 뜻은 'art class'입니다.",
         "examples": {
-          "beginner": "\"미술수업\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"미술수업\"를 자주 써요.",
-          "advanced": "\"미술수업\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"미술수업\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "미술수업에서 공부해요.",
+          "intermediate": "미술수업은 중요한 교육 개념이에요.",
+          "advanced": "미술수업에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "미술수업의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -3392,19 +4232,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "미술수업이/가 뭐예요?",
-              "romanization": "misulsueopi/ga mwoyeyo?",
-              "translation": "What is \"미술수업\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "미술수업은/는 art class(이)에요.",
-              "romanization": "misulsueopeun/neun art class(i)eyo.",
-              "translation": "\"미술수업\" means \"art class\"."
+              "text": "미술수업에 대해 배우고 있어요.",
+              "romanization": "misulsueope daehae baeugo iseoyo.",
+              "translation": "I'm learning about art class."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -3413,10 +4265,10 @@
         "word": "art class",
         "explanation": "'미술수업' means 'art class' in English.",
         "examples": {
-          "beginner": "We say \"미술수업\" in Korean.",
-          "intermediate": "In Korea, people often say \"미술수업\".",
-          "advanced": "\"미술수업\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"미술수업\" makes communication more natural."
+          "beginner": "I study at the art class.",
+          "intermediate": "art class is an important educational concept.",
+          "advanced": "Understanding art class helps improve learning ability.",
+          "master": "The pedagogical value of art class is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -3432,19 +4284,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"미술수업\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "미술수업이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"미술수업\" means \"art class\".",
+              "text": "I'm learning about art class.",
               "romanization": "",
-              "translation": "미술수업은/는 art class(이)에요."
+              "translation": "미술수업에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -3469,10 +4333,10 @@
         "word": "체육",
         "explanation": "체육의 뜻은 'physical education'입니다.",
         "examples": {
-          "beginner": "\"체육\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"체육\"를 자주 써요.",
-          "advanced": "\"체육\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"체육\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "체육에서 공부해요.",
+          "intermediate": "체육은 중요한 교육 개념이에요.",
+          "advanced": "체육에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "체육의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -3488,19 +4352,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "체육이/가 뭐예요?",
-              "romanization": "cheyuki/ga mwoyeyo?",
-              "translation": "What is \"체육\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "체육은/는 physical education(이)에요.",
-              "romanization": "cheyukeun/neun physical education(i)eyo.",
-              "translation": "\"체육\" means \"physical education\"."
+              "text": "체육에 대해 배우고 있어요.",
+              "romanization": "cheyuke daehae baeugo iseoyo.",
+              "translation": "I'm learning about physical education."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -3509,10 +4385,10 @@
         "word": "physical education",
         "explanation": "'체육' means 'physical education' in English.",
         "examples": {
-          "beginner": "We say \"체육\" in Korean.",
-          "intermediate": "In Korea, people often say \"체육\".",
-          "advanced": "\"체육\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"체육\" makes communication more natural."
+          "beginner": "I study at the physical education.",
+          "intermediate": "physical education is an important educational concept.",
+          "advanced": "Understanding physical education helps improve learning ability.",
+          "master": "The pedagogical value of physical education is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -3528,19 +4404,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"체육\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "체육이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"체육\" means \"physical education\".",
+              "text": "I'm learning about physical education.",
               "romanization": "",
-              "translation": "체육은/는 physical education(이)에요."
+              "translation": "체육에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -3565,10 +4453,10 @@
         "word": "도덕",
         "explanation": "도덕의 뜻은 'ethics'입니다.",
         "examples": {
-          "beginner": "\"도덕\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"도덕\"를 자주 써요.",
-          "advanced": "\"도덕\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"도덕\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "도덕에서 공부해요.",
+          "intermediate": "도덕은 중요한 교육 개념이에요.",
+          "advanced": "도덕에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "도덕의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -3584,19 +4472,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "도덕이/가 뭐예요?",
-              "romanization": "dodeoki/ga mwoyeyo?",
-              "translation": "What is \"도덕\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "도덕은/는 ethics(이)에요.",
-              "romanization": "dodeokeun/neun ethics(i)eyo.",
-              "translation": "\"도덕\" means \"ethics\"."
+              "text": "도덕에 대해 배우고 있어요.",
+              "romanization": "dodeoke daehae baeugo iseoyo.",
+              "translation": "I'm learning about ethics."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -3605,10 +4505,10 @@
         "word": "ethics",
         "explanation": "'도덕' means 'ethics' in English.",
         "examples": {
-          "beginner": "We say \"도덕\" in Korean.",
-          "intermediate": "In Korea, people often say \"도덕\".",
-          "advanced": "\"도덕\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"도덕\" makes communication more natural."
+          "beginner": "I study at the ethics.",
+          "intermediate": "ethics is an important educational concept.",
+          "advanced": "Understanding ethics helps improve learning ability.",
+          "master": "The pedagogical value of ethics is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -3624,19 +4524,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"도덕\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "도덕이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"도덕\" means \"ethics\".",
+              "text": "I'm learning about ethics.",
               "romanization": "",
-              "translation": "도덕은/는 ethics(이)에요."
+              "translation": "도덕에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -3661,10 +4573,10 @@
         "word": "기술",
         "explanation": "기술의 뜻은 'technology'입니다.",
         "examples": {
-          "beginner": "\"기술\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"기술\"를 자주 써요.",
-          "advanced": "\"기술\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"기술\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "기술에서 공부해요.",
+          "intermediate": "기술은 중요한 교육 개념이에요.",
+          "advanced": "기술에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "기술의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -3680,19 +4592,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "기술이/가 뭐예요?",
-              "romanization": "gisuli/ga mwoyeyo?",
-              "translation": "What is \"기술\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "기술은/는 technology(이)에요.",
-              "romanization": "gisuleun/neun technology(i)eyo.",
-              "translation": "\"기술\" means \"technology\"."
+              "text": "기술에 대해 배우고 있어요.",
+              "romanization": "gisule daehae baeugo iseoyo.",
+              "translation": "I'm learning about technology."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -3701,10 +4625,10 @@
         "word": "technology",
         "explanation": "'기술' means 'technology' in English.",
         "examples": {
-          "beginner": "We say \"기술\" in Korean.",
-          "intermediate": "In Korea, people often say \"기술\".",
-          "advanced": "\"기술\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"기술\" makes communication more natural."
+          "beginner": "I study at the technology.",
+          "intermediate": "technology is an important educational concept.",
+          "advanced": "Understanding technology helps improve learning ability.",
+          "master": "The pedagogical value of technology is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -3720,19 +4644,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"기술\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "기술이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"기술\" means \"technology\".",
+              "text": "I'm learning about technology.",
               "romanization": "",
-              "translation": "기술은/는 technology(이)에요."
+              "translation": "기술에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -3757,10 +4693,10 @@
         "word": "가정",
         "explanation": "가정의 뜻은 'home economics'입니다.",
         "examples": {
-          "beginner": "\"가정\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"가정\"를 자주 써요.",
-          "advanced": "\"가정\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"가정\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "가정에서 공부해요.",
+          "intermediate": "가정은 중요한 교육 개념이에요.",
+          "advanced": "가정에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "가정의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -3776,19 +4712,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "가정이/가 뭐예요?",
-              "romanization": "gajeongi/ga mwoyeyo?",
-              "translation": "What is \"가정\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "가정은/는 home economics(이)에요.",
-              "romanization": "gajeongeun/neun home economics(i)eyo.",
-              "translation": "\"가정\" means \"home economics\"."
+              "text": "가정에 대해 배우고 있어요.",
+              "romanization": "gajeonge daehae baeugo iseoyo.",
+              "translation": "I'm learning about home economics."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -3797,10 +4745,10 @@
         "word": "home economics",
         "explanation": "'가정' means 'home economics' in English.",
         "examples": {
-          "beginner": "We say \"가정\" in Korean.",
-          "intermediate": "In Korea, people often say \"가정\".",
-          "advanced": "\"가정\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"가정\" makes communication more natural."
+          "beginner": "I study at the home economics.",
+          "intermediate": "home economics is an important educational concept.",
+          "advanced": "Understanding home economics helps improve learning ability.",
+          "master": "The pedagogical value of home economics is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -3816,19 +4764,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"가정\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "가정이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"가정\" means \"home economics\".",
+              "text": "I'm learning about home economics.",
               "romanization": "",
-              "translation": "가정은/는 home economics(이)에요."
+              "translation": "가정에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -3853,10 +4813,10 @@
         "word": "프로그래밍수업",
         "explanation": "프로그래밍수업의 뜻은 'programming class'입니다.",
         "examples": {
-          "beginner": "\"프로그래밍수업\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"프로그래밍수업\"를 자주 써요.",
-          "advanced": "\"프로그래밍수업\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"프로그래밍수업\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "프로그래밍수업에서 공부해요.",
+          "intermediate": "프로그래밍수업은 중요한 교육 개념이에요.",
+          "advanced": "프로그래밍수업에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "프로그래밍수업의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -3872,19 +4832,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "프로그래밍수업이/가 뭐예요?",
-              "romanization": "peurogeuraemingsueopi/ga mwoyeyo?",
-              "translation": "What is \"프로그래밍수업\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "프로그래밍수업은/는 programming class(이)에요.",
-              "romanization": "peurogeuraemingsueopeun/neun programming class(i)eyo.",
-              "translation": "\"프로그래밍수업\" means \"programming class\"."
+              "text": "프로그래밍수업에 대해 배우고 있어요.",
+              "romanization": "peurogeuraemingsueope daehae baeugo iseoyo.",
+              "translation": "I'm learning about programming class."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -3893,10 +4865,10 @@
         "word": "programming class",
         "explanation": "'프로그래밍수업' means 'programming class' in English.",
         "examples": {
-          "beginner": "We say \"프로그래밍수업\" in Korean.",
-          "intermediate": "In Korea, people often say \"프로그래밍수업\".",
-          "advanced": "\"프로그래밍수업\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"프로그래밍수업\" makes communication more natural."
+          "beginner": "I study at the programming class.",
+          "intermediate": "programming class is an important educational concept.",
+          "advanced": "Understanding programming class helps improve learning ability.",
+          "master": "The pedagogical value of programming class is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -3912,19 +4884,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"프로그래밍수업\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "프로그래밍수업이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"프로그래밍수업\" means \"programming class\".",
+              "text": "I'm learning about programming class.",
               "romanization": "",
-              "translation": "프로그래밍수업은/는 programming class(이)에요."
+              "translation": "프로그래밍수업에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -3949,10 +4933,10 @@
         "word": "외국어",
         "explanation": "외국어의 뜻은 'foreign language'입니다.",
         "examples": {
-          "beginner": "\"외국어\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"외국어\"를 자주 써요.",
-          "advanced": "\"외국어\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"외국어\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "외국어에서 공부해요.",
+          "intermediate": "외국어는 중요한 교육 개념이에요.",
+          "advanced": "외국어에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "외국어의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -3968,19 +4952,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "외국어이/가 뭐예요?",
-              "romanization": "oegukeoi/ga mwoyeyo?",
-              "translation": "What is \"외국어\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "외국어은/는 foreign language(이)에요.",
-              "romanization": "oegukeoeun/neun foreign language(i)eyo.",
-              "translation": "\"외국어\" means \"foreign language\"."
+              "text": "외국어에 대해 배우고 있어요.",
+              "romanization": "oegukeoe daehae baeugo iseoyo.",
+              "translation": "I'm learning about foreign language."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -3989,10 +4985,10 @@
         "word": "foreign language",
         "explanation": "'외국어' means 'foreign language' in English.",
         "examples": {
-          "beginner": "We say \"외국어\" in Korean.",
-          "intermediate": "In Korea, people often say \"외국어\".",
-          "advanced": "\"외국어\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"외국어\" makes communication more natural."
+          "beginner": "I study at the foreign language.",
+          "intermediate": "foreign language is an important educational concept.",
+          "advanced": "Understanding foreign language helps improve learning ability.",
+          "master": "The pedagogical value of foreign language is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -4008,19 +5004,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"외국어\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "외국어이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"외국어\" means \"foreign language\".",
+              "text": "I'm learning about foreign language.",
               "romanization": "",
-              "translation": "외국어은/는 foreign language(이)에요."
+              "translation": "외국어에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -4045,10 +5053,10 @@
         "word": "동아리",
         "explanation": "동아리의 뜻은 'club'입니다.",
         "examples": {
-          "beginner": "\"동아리\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"동아리\"를 자주 써요.",
-          "advanced": "\"동아리\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"동아리\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "동아리에서 공부해요.",
+          "intermediate": "동아리는 중요한 교육 개념이에요.",
+          "advanced": "동아리에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "동아리의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -4064,19 +5072,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "동아리이/가 뭐예요?",
-              "romanization": "dongarii/ga mwoyeyo?",
-              "translation": "What is \"동아리\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "동아리은/는 club(이)에요.",
-              "romanization": "dongarieun/neun club(i)eyo.",
-              "translation": "\"동아리\" means \"club\"."
+              "text": "동아리에 대해 배우고 있어요.",
+              "romanization": "dongarie daehae baeugo iseoyo.",
+              "translation": "I'm learning about club."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -4085,10 +5105,10 @@
         "word": "club",
         "explanation": "'동아리' means 'club' in English.",
         "examples": {
-          "beginner": "We say \"동아리\" in Korean.",
-          "intermediate": "In Korea, people often say \"동아리\".",
-          "advanced": "\"동아리\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"동아리\" makes communication more natural."
+          "beginner": "I study at the club.",
+          "intermediate": "club is an important educational concept.",
+          "advanced": "Understanding club helps improve learning ability.",
+          "master": "The pedagogical value of club is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -4104,19 +5124,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"동아리\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "동아리이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"동아리\" means \"club\".",
+              "text": "I'm learning about club.",
               "romanization": "",
-              "translation": "동아리은/는 club(이)에요."
+              "translation": "동아리에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -4141,10 +5173,10 @@
         "word": "학생회",
         "explanation": "학생회의 뜻은 'student council'입니다.",
         "examples": {
-          "beginner": "\"학생회\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"학생회\"를 자주 써요.",
-          "advanced": "\"학생회\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"학생회\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "학생회에서 공부해요.",
+          "intermediate": "학생회는 중요한 교육 개념이에요.",
+          "advanced": "학생회에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "학생회의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -4160,19 +5192,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "학생회이/가 뭐예요?",
-              "romanization": "haksaenghoei/ga mwoyeyo?",
-              "translation": "What is \"학생회\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "학생회은/는 student council(이)에요.",
-              "romanization": "haksaenghoeeun/neun student council(i)eyo.",
-              "translation": "\"학생회\" means \"student council\"."
+              "text": "학생회에 대해 배우고 있어요.",
+              "romanization": "haksaenghoee daehae baeugo iseoyo.",
+              "translation": "I'm learning about student council."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -4181,10 +5225,10 @@
         "word": "student council",
         "explanation": "'학생회' means 'student council' in English.",
         "examples": {
-          "beginner": "We say \"학생회\" in Korean.",
-          "intermediate": "In Korea, people often say \"학생회\".",
-          "advanced": "\"학생회\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"학생회\" makes communication more natural."
+          "beginner": "I study at the student council.",
+          "intermediate": "student council is an important educational concept.",
+          "advanced": "Understanding student council helps improve learning ability.",
+          "master": "The pedagogical value of student council is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -4200,19 +5244,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"학생회\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "학생회이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"학생회\" means \"student council\".",
+              "text": "I'm learning about student council.",
               "romanization": "",
-              "translation": "학생회은/는 student council(이)에요."
+              "translation": "학생회에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -4237,10 +5293,10 @@
         "word": "급식",
         "explanation": "급식의 뜻은 'school lunch'입니다.",
         "examples": {
-          "beginner": "\"급식\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"급식\"를 자주 써요.",
-          "advanced": "\"급식\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"급식\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "급식에서 공부해요.",
+          "intermediate": "급식은 중요한 교육 개념이에요.",
+          "advanced": "급식에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "급식의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -4256,19 +5312,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "급식이/가 뭐예요?",
-              "romanization": "geupsiki/ga mwoyeyo?",
-              "translation": "What is \"급식\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "급식은/는 school lunch(이)에요.",
-              "romanization": "geupsikeun/neun school lunch(i)eyo.",
-              "translation": "\"급식\" means \"school lunch\"."
+              "text": "급식에 대해 배우고 있어요.",
+              "romanization": "geupsike daehae baeugo iseoyo.",
+              "translation": "I'm learning about school lunch."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -4277,10 +5345,10 @@
         "word": "school lunch",
         "explanation": "'급식' means 'school lunch' in English.",
         "examples": {
-          "beginner": "We say \"급식\" in Korean.",
-          "intermediate": "In Korea, people often say \"급식\".",
-          "advanced": "\"급식\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"급식\" makes communication more natural."
+          "beginner": "I study at the school lunch.",
+          "intermediate": "school lunch is an important educational concept.",
+          "advanced": "Understanding school lunch helps improve learning ability.",
+          "master": "The pedagogical value of school lunch is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -4296,19 +5364,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"급식\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "급식이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"급식\" means \"school lunch\".",
+              "text": "I'm learning about school lunch.",
               "romanization": "",
-              "translation": "급식은/는 school lunch(이)에요."
+              "translation": "급식에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -4333,10 +5413,10 @@
         "word": "교복",
         "explanation": "교복의 뜻은 'school uniform'입니다.",
         "examples": {
-          "beginner": "\"교복\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"교복\"를 자주 써요.",
-          "advanced": "\"교복\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"교복\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "교복에서 공부해요.",
+          "intermediate": "교복은 중요한 교육 개념이에요.",
+          "advanced": "교복에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "교복의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -4352,19 +5432,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "교복이/가 뭐예요?",
-              "romanization": "gyoboki/ga mwoyeyo?",
-              "translation": "What is \"교복\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "교복은/는 school uniform(이)에요.",
-              "romanization": "gyobokeun/neun school uniform(i)eyo.",
-              "translation": "\"교복\" means \"school uniform\"."
+              "text": "교복에 대해 배우고 있어요.",
+              "romanization": "gyoboke daehae baeugo iseoyo.",
+              "translation": "I'm learning about school uniform."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -4373,10 +5465,10 @@
         "word": "school uniform",
         "explanation": "'교복' means 'school uniform' in English.",
         "examples": {
-          "beginner": "We say \"교복\" in Korean.",
-          "intermediate": "In Korea, people often say \"교복\".",
-          "advanced": "\"교복\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"교복\" makes communication more natural."
+          "beginner": "I study at the school uniform.",
+          "intermediate": "school uniform is an important educational concept.",
+          "advanced": "Understanding school uniform helps improve learning ability.",
+          "master": "The pedagogical value of school uniform is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -4392,19 +5484,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"교복\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "교복이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"교복\" means \"school uniform\".",
+              "text": "I'm learning about school uniform.",
               "romanization": "",
-              "translation": "교복은/는 school uniform(이)에요."
+              "translation": "교복에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }
@@ -4429,10 +5533,10 @@
         "word": "학교버스",
         "explanation": "학교버스의 뜻은 'school bus'입니다.",
         "examples": {
-          "beginner": "\"학교버스\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"학교버스\"를 자주 써요.",
-          "advanced": "\"학교버스\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"학교버스\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "학교버스에서 공부해요.",
+          "intermediate": "학교버스는 중요한 교육 개념이에요.",
+          "advanced": "학교버스에 대한 이해는 학습 능력 향상에 도움이 됩니다.",
+          "master": "학교버스의 교육학적 가치는 현대 학습 이론에서 핵심적입니다."
         },
         "variations": {
           "formal": [
@@ -4448,19 +5552,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "학교에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "학교버스이/가 뭐예요?",
-              "romanization": "hakgyobeoseui/ga mwoyeyo?",
-              "translation": "What is \"학교버스\"?"
+              "text": "요즘 뭐 배워요?",
+              "romanization": "yojeum mwo baewoyo?",
+              "translation": "What are you learning these days?"
             },
             {
               "speaker": "B",
-              "text": "학교버스은/는 school bus(이)에요.",
-              "romanization": "hakgyobeoseueun/neun school bus(i)eyo.",
-              "translation": "\"학교버스\" means \"school bus\"."
+              "text": "학교버스에 대해 배우고 있어요.",
+              "romanization": "hakgyobeoseue daehae baeugo iseoyo.",
+              "translation": "I'm learning about school bus."
+            },
+            {
+              "speaker": "A",
+              "text": "재미있어요?",
+              "romanization": "jaemiiseoyo?",
+              "translation": "Is it interesting?"
+            },
+            {
+              "speaker": "B",
+              "text": "네, 아주 재미있어요.",
+              "romanization": "ne, aju jaemiiseoyo.",
+              "translation": "Yes, very interesting."
             }
           ]
         }
@@ -4469,10 +5585,10 @@
         "word": "school bus",
         "explanation": "'학교버스' means 'school bus' in English.",
         "examples": {
-          "beginner": "We say \"학교버스\" in Korean.",
-          "intermediate": "In Korea, people often say \"학교버스\".",
-          "advanced": "\"학교버스\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"학교버스\" makes communication more natural."
+          "beginner": "I study at the school bus.",
+          "intermediate": "school bus is an important educational concept.",
+          "advanced": "Understanding school bus helps improve learning ability.",
+          "master": "The pedagogical value of school bus is central to modern learning theory."
         },
         "variations": {
           "formal": [
@@ -4488,19 +5604,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about school",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"학교버스\"?",
+              "text": "What are you learning these days?",
               "romanization": "",
-              "translation": "학교버스이/가 뭐예요?"
+              "translation": "요즘 뭐 배워요?"
             },
             {
               "speaker": "B",
-              "text": "\"학교버스\" means \"school bus\".",
+              "text": "I'm learning about school bus.",
               "romanization": "",
-              "translation": "학교버스은/는 school bus(이)에요."
+              "translation": "학교버스에 대해 배우고 있어요."
+            },
+            {
+              "speaker": "A",
+              "text": "Is it interesting?",
+              "romanization": "",
+              "translation": "재미있어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Yes, very interesting.",
+              "romanization": "",
+              "translation": "네, 아주 재미있어요."
             }
           ]
         }

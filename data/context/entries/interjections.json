@@ -13,10 +13,10 @@
         "word": "와",
         "explanation": "와의 뜻은 'Wow'입니다.",
         "examples": {
-          "beginner": "\"와\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"와\"를 자주 써요.",
-          "advanced": "\"와\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"와\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "와! 놀랐어요.",
+          "intermediate": "한국 사람들은 \"와\"을 자주 말해요.",
+          "advanced": "\"와\"은 감정을 즉각적으로 표현하는 감탄사입니다.",
+          "master": "\"와\"의 사용 빈도와 맥락은 한국어 화자의 감정 표현 방식을 보여줍니다."
         },
         "variations": {
           "formal": [
@@ -32,19 +32,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "놀라운 일이 생겼을 때",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "와이/가 뭐예요?",
-              "romanization": "wai/ga mwoyeyo?",
-              "translation": "What is \"와\"?"
+              "text": "와! 이거 봐요!",
+              "romanization": "wa! igeo bwayo!",
+              "translation": "Wow! Look at this!"
             },
             {
               "speaker": "B",
-              "text": "와은/는 Wow(이)에요.",
-              "romanization": "waeun/neun Wow(i)eyo.",
-              "translation": "\"와\" means \"Wow\"."
+              "text": "뭔데요?",
+              "romanization": "mwondeyo?",
+              "translation": "What is it?"
+            },
+            {
+              "speaker": "A",
+              "text": "정말 신기하지 않아요?",
+              "romanization": "jeongmal singihaji anayo?",
+              "translation": "Isn't it amazing?"
+            },
+            {
+              "speaker": "B",
+              "text": "와, 진짜 신기하네요!",
+              "romanization": "wa, jinjja singihaneyo!",
+              "translation": "Wow, that's really amazing!"
             }
           ]
         }
@@ -53,10 +65,10 @@
         "word": "Wow",
         "explanation": "'와' means 'Wow' in English.",
         "examples": {
-          "beginner": "We say \"와\" in Korean.",
-          "intermediate": "In Korea, people often say \"와\".",
-          "advanced": "\"와\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"와\" makes communication more natural."
+          "beginner": "와! I was surprised.",
+          "intermediate": "Korean people often say \"와\".",
+          "advanced": "\"와\" is an interjection that immediately expresses emotion.",
+          "master": "The frequency and context of \"와\" reveals how Korean speakers express emotions."
         },
         "variations": {
           "formal": [
@@ -72,19 +84,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "When something surprising happens",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"와\"?",
+              "text": "Wow! Look at this!",
               "romanization": "",
-              "translation": "와이/가 뭐예요?"
+              "translation": "와! 이거 봐요!"
             },
             {
               "speaker": "B",
-              "text": "\"와\" means \"Wow\".",
+              "text": "What is it?",
               "romanization": "",
-              "translation": "와은/는 Wow(이)에요."
+              "translation": "뭔데요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Isn't it amazing?",
+              "romanization": "",
+              "translation": "정말 신기하지 않아요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Wow, that's really amazing!",
+              "romanization": "",
+              "translation": "와, 진짜 신기하네요!"
             }
           ]
         }
@@ -109,10 +133,10 @@
         "word": "와우",
         "explanation": "와우의 뜻은 'Wow'입니다.",
         "examples": {
-          "beginner": "\"와우\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"와우\"를 자주 써요.",
-          "advanced": "\"와우\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"와우\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "와우! 놀랐어요.",
+          "intermediate": "한국 사람들은 \"와우\"을 자주 말해요.",
+          "advanced": "\"와우\"은 감정을 즉각적으로 표현하는 감탄사입니다.",
+          "master": "\"와우\"의 사용 빈도와 맥락은 한국어 화자의 감정 표현 방식을 보여줍니다."
         },
         "variations": {
           "formal": [
@@ -128,19 +152,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "놀라운 일이 생겼을 때",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "와우이/가 뭐예요?",
-              "romanization": "waui/ga mwoyeyo?",
-              "translation": "What is \"와우\"?"
+              "text": "와우! 이거 봐요!",
+              "romanization": "wau! igeo bwayo!",
+              "translation": "Wow! Look at this!"
             },
             {
               "speaker": "B",
-              "text": "와우은/는 Wow(이)에요.",
-              "romanization": "waueun/neun Wow(i)eyo.",
-              "translation": "\"와우\" means \"Wow\"."
+              "text": "뭔데요?",
+              "romanization": "mwondeyo?",
+              "translation": "What is it?"
+            },
+            {
+              "speaker": "A",
+              "text": "정말 신기하지 않아요?",
+              "romanization": "jeongmal singihaji anayo?",
+              "translation": "Isn't it amazing?"
+            },
+            {
+              "speaker": "B",
+              "text": "와우, 진짜 신기하네요!",
+              "romanization": "wau, jinjja singihaneyo!",
+              "translation": "Wow, that's really amazing!"
             }
           ]
         }
@@ -149,10 +185,10 @@
         "word": "Wow",
         "explanation": "'와우' means 'Wow' in English.",
         "examples": {
-          "beginner": "We say \"와우\" in Korean.",
-          "intermediate": "In Korea, people often say \"와우\".",
-          "advanced": "\"와우\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"와우\" makes communication more natural."
+          "beginner": "와우! I was surprised.",
+          "intermediate": "Korean people often say \"와우\".",
+          "advanced": "\"와우\" is an interjection that immediately expresses emotion.",
+          "master": "The frequency and context of \"와우\" reveals how Korean speakers express emotions."
         },
         "variations": {
           "formal": [
@@ -168,19 +204,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "When something surprising happens",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"와우\"?",
+              "text": "Wow! Look at this!",
               "romanization": "",
-              "translation": "와우이/가 뭐예요?"
+              "translation": "와우! 이거 봐요!"
             },
             {
               "speaker": "B",
-              "text": "\"와우\" means \"Wow\".",
+              "text": "What is it?",
               "romanization": "",
-              "translation": "와우은/는 Wow(이)에요."
+              "translation": "뭔데요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Isn't it amazing?",
+              "romanization": "",
+              "translation": "정말 신기하지 않아요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Wow, that's really amazing!",
+              "romanization": "",
+              "translation": "와우, 진짜 신기하네요!"
             }
           ]
         }
@@ -205,10 +253,10 @@
         "word": "우와",
         "explanation": "우와의 뜻은 'Wow'입니다.",
         "examples": {
-          "beginner": "\"우와\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"우와\"를 자주 써요.",
-          "advanced": "\"우와\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"우와\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "우와! 놀랐어요.",
+          "intermediate": "한국 사람들은 \"우와\"을 자주 말해요.",
+          "advanced": "\"우와\"은 감정을 즉각적으로 표현하는 감탄사입니다.",
+          "master": "\"우와\"의 사용 빈도와 맥락은 한국어 화자의 감정 표현 방식을 보여줍니다."
         },
         "variations": {
           "formal": [
@@ -224,19 +272,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "놀라운 일이 생겼을 때",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "우와이/가 뭐예요?",
-              "romanization": "uwai/ga mwoyeyo?",
-              "translation": "What is \"우와\"?"
+              "text": "우와! 이거 봐요!",
+              "romanization": "uwa! igeo bwayo!",
+              "translation": "Wow! Look at this!"
             },
             {
               "speaker": "B",
-              "text": "우와은/는 Wow(이)에요.",
-              "romanization": "uwaeun/neun Wow(i)eyo.",
-              "translation": "\"우와\" means \"Wow\"."
+              "text": "뭔데요?",
+              "romanization": "mwondeyo?",
+              "translation": "What is it?"
+            },
+            {
+              "speaker": "A",
+              "text": "정말 신기하지 않아요?",
+              "romanization": "jeongmal singihaji anayo?",
+              "translation": "Isn't it amazing?"
+            },
+            {
+              "speaker": "B",
+              "text": "우와, 진짜 신기하네요!",
+              "romanization": "uwa, jinjja singihaneyo!",
+              "translation": "Wow, that's really amazing!"
             }
           ]
         }
@@ -245,10 +305,10 @@
         "word": "Wow",
         "explanation": "'우와' means 'Wow' in English.",
         "examples": {
-          "beginner": "We say \"우와\" in Korean.",
-          "intermediate": "In Korea, people often say \"우와\".",
-          "advanced": "\"우와\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"우와\" makes communication more natural."
+          "beginner": "우와! I was surprised.",
+          "intermediate": "Korean people often say \"우와\".",
+          "advanced": "\"우와\" is an interjection that immediately expresses emotion.",
+          "master": "The frequency and context of \"우와\" reveals how Korean speakers express emotions."
         },
         "variations": {
           "formal": [
@@ -264,19 +324,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "When something surprising happens",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"우와\"?",
+              "text": "Wow! Look at this!",
               "romanization": "",
-              "translation": "우와이/가 뭐예요?"
+              "translation": "우와! 이거 봐요!"
             },
             {
               "speaker": "B",
-              "text": "\"우와\" means \"Wow\".",
+              "text": "What is it?",
               "romanization": "",
-              "translation": "우와은/는 Wow(이)에요."
+              "translation": "뭔데요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Isn't it amazing?",
+              "romanization": "",
+              "translation": "정말 신기하지 않아요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Wow, that's really amazing!",
+              "romanization": "",
+              "translation": "우와, 진짜 신기하네요!"
             }
           ]
         }
@@ -301,10 +373,10 @@
         "word": "음",
         "explanation": "음의 뜻은 'Mmm'입니다.",
         "examples": {
-          "beginner": "\"음\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"음\"를 자주 써요.",
-          "advanced": "\"음\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"음\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "음! 놀랐어요.",
+          "intermediate": "한국 사람들은 \"음\"을 자주 말해요.",
+          "advanced": "\"음\"은 감정을 즉각적으로 표현하는 감탄사입니다.",
+          "master": "\"음\"의 사용 빈도와 맥락은 한국어 화자의 감정 표현 방식을 보여줍니다."
         },
         "variations": {
           "formal": [
@@ -320,19 +392,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "놀라운 일이 생겼을 때",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "음이/가 뭐예요?",
-              "romanization": "eumi/ga mwoyeyo?",
-              "translation": "What is \"음\"?"
+              "text": "음! 이거 봐요!",
+              "romanization": "eum! igeo bwayo!",
+              "translation": "Mmm! Look at this!"
             },
             {
               "speaker": "B",
-              "text": "음은/는 Mmm(이)에요.",
-              "romanization": "eumeun/neun Mmm(i)eyo.",
-              "translation": "\"음\" means \"Mmm\"."
+              "text": "뭔데요?",
+              "romanization": "mwondeyo?",
+              "translation": "What is it?"
+            },
+            {
+              "speaker": "A",
+              "text": "정말 신기하지 않아요?",
+              "romanization": "jeongmal singihaji anayo?",
+              "translation": "Isn't it amazing?"
+            },
+            {
+              "speaker": "B",
+              "text": "음, 진짜 신기하네요!",
+              "romanization": "eum, jinjja singihaneyo!",
+              "translation": "Mmm, that's really amazing!"
             }
           ]
         }
@@ -341,10 +425,10 @@
         "word": "Mmm",
         "explanation": "'음' means 'Mmm' in English.",
         "examples": {
-          "beginner": "We say \"음\" in Korean.",
-          "intermediate": "In Korea, people often say \"음\".",
-          "advanced": "\"음\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"음\" makes communication more natural."
+          "beginner": "음! I was surprised.",
+          "intermediate": "Korean people often say \"음\".",
+          "advanced": "\"음\" is an interjection that immediately expresses emotion.",
+          "master": "The frequency and context of \"음\" reveals how Korean speakers express emotions."
         },
         "variations": {
           "formal": [
@@ -360,19 +444,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "When something surprising happens",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"음\"?",
+              "text": "Mmm! Look at this!",
               "romanization": "",
-              "translation": "음이/가 뭐예요?"
+              "translation": "음! 이거 봐요!"
             },
             {
               "speaker": "B",
-              "text": "\"음\" means \"Mmm\".",
+              "text": "What is it?",
               "romanization": "",
-              "translation": "음은/는 Mmm(이)에요."
+              "translation": "뭔데요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Isn't it amazing?",
+              "romanization": "",
+              "translation": "정말 신기하지 않아요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Mmm, that's really amazing!",
+              "romanization": "",
+              "translation": "음, 진짜 신기하네요!"
             }
           ]
         }
@@ -397,10 +493,10 @@
         "word": "음음",
         "explanation": "음음의 뜻은 'Mmm'입니다.",
         "examples": {
-          "beginner": "\"음음\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"음음\"를 자주 써요.",
-          "advanced": "\"음음\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"음음\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "음음! 놀랐어요.",
+          "intermediate": "한국 사람들은 \"음음\"을 자주 말해요.",
+          "advanced": "\"음음\"은 감정을 즉각적으로 표현하는 감탄사입니다.",
+          "master": "\"음음\"의 사용 빈도와 맥락은 한국어 화자의 감정 표현 방식을 보여줍니다."
         },
         "variations": {
           "formal": [
@@ -416,19 +512,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "놀라운 일이 생겼을 때",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "음음이/가 뭐예요?",
-              "romanization": "eumeumi/ga mwoyeyo?",
-              "translation": "What is \"음음\"?"
+              "text": "음음! 이거 봐요!",
+              "romanization": "eumeum! igeo bwayo!",
+              "translation": "Mmm! Look at this!"
             },
             {
               "speaker": "B",
-              "text": "음음은/는 Mmm(이)에요.",
-              "romanization": "eumeumeun/neun Mmm(i)eyo.",
-              "translation": "\"음음\" means \"Mmm\"."
+              "text": "뭔데요?",
+              "romanization": "mwondeyo?",
+              "translation": "What is it?"
+            },
+            {
+              "speaker": "A",
+              "text": "정말 신기하지 않아요?",
+              "romanization": "jeongmal singihaji anayo?",
+              "translation": "Isn't it amazing?"
+            },
+            {
+              "speaker": "B",
+              "text": "음음, 진짜 신기하네요!",
+              "romanization": "eumeum, jinjja singihaneyo!",
+              "translation": "Mmm, that's really amazing!"
             }
           ]
         }
@@ -437,10 +545,10 @@
         "word": "Mmm",
         "explanation": "'음음' means 'Mmm' in English.",
         "examples": {
-          "beginner": "We say \"음음\" in Korean.",
-          "intermediate": "In Korea, people often say \"음음\".",
-          "advanced": "\"음음\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"음음\" makes communication more natural."
+          "beginner": "음음! I was surprised.",
+          "intermediate": "Korean people often say \"음음\".",
+          "advanced": "\"음음\" is an interjection that immediately expresses emotion.",
+          "master": "The frequency and context of \"음음\" reveals how Korean speakers express emotions."
         },
         "variations": {
           "formal": [
@@ -456,19 +564,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "When something surprising happens",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"음음\"?",
+              "text": "Mmm! Look at this!",
               "romanization": "",
-              "translation": "음음이/가 뭐예요?"
+              "translation": "음음! 이거 봐요!"
             },
             {
               "speaker": "B",
-              "text": "\"음음\" means \"Mmm\".",
+              "text": "What is it?",
               "romanization": "",
-              "translation": "음음은/는 Mmm(이)에요."
+              "translation": "뭔데요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Isn't it amazing?",
+              "romanization": "",
+              "translation": "정말 신기하지 않아요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Mmm, that's really amazing!",
+              "romanization": "",
+              "translation": "음음, 진짜 신기하네요!"
             }
           ]
         }
@@ -493,10 +613,10 @@
         "word": "아",
         "explanation": "아의 뜻은 'Ah'입니다.",
         "examples": {
-          "beginner": "\"아\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"아\"를 자주 써요.",
-          "advanced": "\"아\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"아\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "아! 놀랐어요.",
+          "intermediate": "한국 사람들은 \"아\"을 자주 말해요.",
+          "advanced": "\"아\"은 감정을 즉각적으로 표현하는 감탄사입니다.",
+          "master": "\"아\"의 사용 빈도와 맥락은 한국어 화자의 감정 표현 방식을 보여줍니다."
         },
         "variations": {
           "formal": [
@@ -512,19 +632,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "놀라운 일이 생겼을 때",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "아이/가 뭐예요?",
-              "romanization": "ai/ga mwoyeyo?",
-              "translation": "What is \"아\"?"
+              "text": "아! 이거 봐요!",
+              "romanization": "a! igeo bwayo!",
+              "translation": "Ah! Look at this!"
             },
             {
               "speaker": "B",
-              "text": "아은/는 Ah(이)에요.",
-              "romanization": "aeun/neun Ah(i)eyo.",
-              "translation": "\"아\" means \"Ah\"."
+              "text": "뭔데요?",
+              "romanization": "mwondeyo?",
+              "translation": "What is it?"
+            },
+            {
+              "speaker": "A",
+              "text": "정말 신기하지 않아요?",
+              "romanization": "jeongmal singihaji anayo?",
+              "translation": "Isn't it amazing?"
+            },
+            {
+              "speaker": "B",
+              "text": "아, 진짜 신기하네요!",
+              "romanization": "a, jinjja singihaneyo!",
+              "translation": "Ah, that's really amazing!"
             }
           ]
         }
@@ -533,10 +665,10 @@
         "word": "Ah",
         "explanation": "'아' means 'Ah' in English.",
         "examples": {
-          "beginner": "We say \"아\" in Korean.",
-          "intermediate": "In Korea, people often say \"아\".",
-          "advanced": "\"아\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"아\" makes communication more natural."
+          "beginner": "아! I was surprised.",
+          "intermediate": "Korean people often say \"아\".",
+          "advanced": "\"아\" is an interjection that immediately expresses emotion.",
+          "master": "The frequency and context of \"아\" reveals how Korean speakers express emotions."
         },
         "variations": {
           "formal": [
@@ -552,19 +684,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "When something surprising happens",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"아\"?",
+              "text": "Ah! Look at this!",
               "romanization": "",
-              "translation": "아이/가 뭐예요?"
+              "translation": "아! 이거 봐요!"
             },
             {
               "speaker": "B",
-              "text": "\"아\" means \"Ah\".",
+              "text": "What is it?",
               "romanization": "",
-              "translation": "아은/는 Ah(이)에요."
+              "translation": "뭔데요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Isn't it amazing?",
+              "romanization": "",
+              "translation": "정말 신기하지 않아요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Ah, that's really amazing!",
+              "romanization": "",
+              "translation": "아, 진짜 신기하네요!"
             }
           ]
         }
@@ -589,10 +733,10 @@
         "word": "아아",
         "explanation": "아아의 뜻은 'Ah'입니다.",
         "examples": {
-          "beginner": "\"아아\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"아아\"를 자주 써요.",
-          "advanced": "\"아아\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"아아\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "아아! 놀랐어요.",
+          "intermediate": "한국 사람들은 \"아아\"을 자주 말해요.",
+          "advanced": "\"아아\"은 감정을 즉각적으로 표현하는 감탄사입니다.",
+          "master": "\"아아\"의 사용 빈도와 맥락은 한국어 화자의 감정 표현 방식을 보여줍니다."
         },
         "variations": {
           "formal": [
@@ -608,19 +752,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "놀라운 일이 생겼을 때",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "아아이/가 뭐예요?",
-              "romanization": "aai/ga mwoyeyo?",
-              "translation": "What is \"아아\"?"
+              "text": "아아! 이거 봐요!",
+              "romanization": "aa! igeo bwayo!",
+              "translation": "Ah! Look at this!"
             },
             {
               "speaker": "B",
-              "text": "아아은/는 Ah(이)에요.",
-              "romanization": "aaeun/neun Ah(i)eyo.",
-              "translation": "\"아아\" means \"Ah\"."
+              "text": "뭔데요?",
+              "romanization": "mwondeyo?",
+              "translation": "What is it?"
+            },
+            {
+              "speaker": "A",
+              "text": "정말 신기하지 않아요?",
+              "romanization": "jeongmal singihaji anayo?",
+              "translation": "Isn't it amazing?"
+            },
+            {
+              "speaker": "B",
+              "text": "아아, 진짜 신기하네요!",
+              "romanization": "aa, jinjja singihaneyo!",
+              "translation": "Ah, that's really amazing!"
             }
           ]
         }
@@ -629,10 +785,10 @@
         "word": "Ah",
         "explanation": "'아아' means 'Ah' in English.",
         "examples": {
-          "beginner": "We say \"아아\" in Korean.",
-          "intermediate": "In Korea, people often say \"아아\".",
-          "advanced": "\"아아\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"아아\" makes communication more natural."
+          "beginner": "아아! I was surprised.",
+          "intermediate": "Korean people often say \"아아\".",
+          "advanced": "\"아아\" is an interjection that immediately expresses emotion.",
+          "master": "The frequency and context of \"아아\" reveals how Korean speakers express emotions."
         },
         "variations": {
           "formal": [
@@ -648,19 +804,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "When something surprising happens",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"아아\"?",
+              "text": "Ah! Look at this!",
               "romanization": "",
-              "translation": "아아이/가 뭐예요?"
+              "translation": "아아! 이거 봐요!"
             },
             {
               "speaker": "B",
-              "text": "\"아아\" means \"Ah\".",
+              "text": "What is it?",
               "romanization": "",
-              "translation": "아아은/는 Ah(이)에요."
+              "translation": "뭔데요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Isn't it amazing?",
+              "romanization": "",
+              "translation": "정말 신기하지 않아요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Ah, that's really amazing!",
+              "romanization": "",
+              "translation": "아아, 진짜 신기하네요!"
             }
           ]
         }
@@ -685,10 +853,10 @@
         "word": "오오",
         "explanation": "오오의 뜻은 'Oh'입니다.",
         "examples": {
-          "beginner": "\"오오\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"오오\"를 자주 써요.",
-          "advanced": "\"오오\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"오오\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "오오! 놀랐어요.",
+          "intermediate": "한국 사람들은 \"오오\"을 자주 말해요.",
+          "advanced": "\"오오\"은 감정을 즉각적으로 표현하는 감탄사입니다.",
+          "master": "\"오오\"의 사용 빈도와 맥락은 한국어 화자의 감정 표현 방식을 보여줍니다."
         },
         "variations": {
           "formal": [
@@ -704,19 +872,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "놀라운 일이 생겼을 때",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "오오이/가 뭐예요?",
-              "romanization": "ooi/ga mwoyeyo?",
-              "translation": "What is \"오오\"?"
+              "text": "오오! 이거 봐요!",
+              "romanization": "oo! igeo bwayo!",
+              "translation": "Oh! Look at this!"
             },
             {
               "speaker": "B",
-              "text": "오오은/는 Oh(이)에요.",
-              "romanization": "ooeun/neun Oh(i)eyo.",
-              "translation": "\"오오\" means \"Oh\"."
+              "text": "뭔데요?",
+              "romanization": "mwondeyo?",
+              "translation": "What is it?"
+            },
+            {
+              "speaker": "A",
+              "text": "정말 신기하지 않아요?",
+              "romanization": "jeongmal singihaji anayo?",
+              "translation": "Isn't it amazing?"
+            },
+            {
+              "speaker": "B",
+              "text": "오오, 진짜 신기하네요!",
+              "romanization": "oo, jinjja singihaneyo!",
+              "translation": "Oh, that's really amazing!"
             }
           ]
         }
@@ -725,10 +905,10 @@
         "word": "Oh",
         "explanation": "'오오' means 'Oh' in English.",
         "examples": {
-          "beginner": "We say \"오오\" in Korean.",
-          "intermediate": "In Korea, people often say \"오오\".",
-          "advanced": "\"오오\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"오오\" makes communication more natural."
+          "beginner": "오오! I was surprised.",
+          "intermediate": "Korean people often say \"오오\".",
+          "advanced": "\"오오\" is an interjection that immediately expresses emotion.",
+          "master": "The frequency and context of \"오오\" reveals how Korean speakers express emotions."
         },
         "variations": {
           "formal": [
@@ -744,19 +924,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "When something surprising happens",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"오오\"?",
+              "text": "Oh! Look at this!",
               "romanization": "",
-              "translation": "오오이/가 뭐예요?"
+              "translation": "오오! 이거 봐요!"
             },
             {
               "speaker": "B",
-              "text": "\"오오\" means \"Oh\".",
+              "text": "What is it?",
               "romanization": "",
-              "translation": "오오은/는 Oh(이)에요."
+              "translation": "뭔데요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Isn't it amazing?",
+              "romanization": "",
+              "translation": "정말 신기하지 않아요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Oh, that's really amazing!",
+              "romanization": "",
+              "translation": "오오, 진짜 신기하네요!"
             }
           ]
         }
@@ -781,10 +973,10 @@
         "word": "어",
         "explanation": "어의 뜻은 'Uh'입니다.",
         "examples": {
-          "beginner": "\"어\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"어\"를 자주 써요.",
-          "advanced": "\"어\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"어\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "어! 놀랐어요.",
+          "intermediate": "한국 사람들은 \"어\"을 자주 말해요.",
+          "advanced": "\"어\"은 감정을 즉각적으로 표현하는 감탄사입니다.",
+          "master": "\"어\"의 사용 빈도와 맥락은 한국어 화자의 감정 표현 방식을 보여줍니다."
         },
         "variations": {
           "formal": [
@@ -800,19 +992,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "놀라운 일이 생겼을 때",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "어이/가 뭐예요?",
-              "romanization": "eoi/ga mwoyeyo?",
-              "translation": "What is \"어\"?"
+              "text": "어! 이거 봐요!",
+              "romanization": "eo! igeo bwayo!",
+              "translation": "Uh! Look at this!"
             },
             {
               "speaker": "B",
-              "text": "어은/는 Uh(이)에요.",
-              "romanization": "eoeun/neun Uh(i)eyo.",
-              "translation": "\"어\" means \"Uh\"."
+              "text": "뭔데요?",
+              "romanization": "mwondeyo?",
+              "translation": "What is it?"
+            },
+            {
+              "speaker": "A",
+              "text": "정말 신기하지 않아요?",
+              "romanization": "jeongmal singihaji anayo?",
+              "translation": "Isn't it amazing?"
+            },
+            {
+              "speaker": "B",
+              "text": "어, 진짜 신기하네요!",
+              "romanization": "eo, jinjja singihaneyo!",
+              "translation": "Uh, that's really amazing!"
             }
           ]
         }
@@ -821,10 +1025,10 @@
         "word": "Uh",
         "explanation": "'어' means 'Uh' in English.",
         "examples": {
-          "beginner": "We say \"어\" in Korean.",
-          "intermediate": "In Korea, people often say \"어\".",
-          "advanced": "\"어\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"어\" makes communication more natural."
+          "beginner": "어! I was surprised.",
+          "intermediate": "Korean people often say \"어\".",
+          "advanced": "\"어\" is an interjection that immediately expresses emotion.",
+          "master": "The frequency and context of \"어\" reveals how Korean speakers express emotions."
         },
         "variations": {
           "formal": [
@@ -840,19 +1044,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "When something surprising happens",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"어\"?",
+              "text": "Uh! Look at this!",
               "romanization": "",
-              "translation": "어이/가 뭐예요?"
+              "translation": "어! 이거 봐요!"
             },
             {
               "speaker": "B",
-              "text": "\"어\" means \"Uh\".",
+              "text": "What is it?",
               "romanization": "",
-              "translation": "어은/는 Uh(이)에요."
+              "translation": "뭔데요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Isn't it amazing?",
+              "romanization": "",
+              "translation": "정말 신기하지 않아요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Uh, that's really amazing!",
+              "romanization": "",
+              "translation": "어, 진짜 신기하네요!"
             }
           ]
         }
@@ -877,10 +1093,10 @@
         "word": "어어",
         "explanation": "어어의 뜻은 'Uh'입니다.",
         "examples": {
-          "beginner": "\"어어\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"어어\"를 자주 써요.",
-          "advanced": "\"어어\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"어어\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "어어! 놀랐어요.",
+          "intermediate": "한국 사람들은 \"어어\"을 자주 말해요.",
+          "advanced": "\"어어\"은 감정을 즉각적으로 표현하는 감탄사입니다.",
+          "master": "\"어어\"의 사용 빈도와 맥락은 한국어 화자의 감정 표현 방식을 보여줍니다."
         },
         "variations": {
           "formal": [
@@ -896,19 +1112,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "놀라운 일이 생겼을 때",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "어어이/가 뭐예요?",
-              "romanization": "eoeoi/ga mwoyeyo?",
-              "translation": "What is \"어어\"?"
+              "text": "어어! 이거 봐요!",
+              "romanization": "eoeo! igeo bwayo!",
+              "translation": "Uh! Look at this!"
             },
             {
               "speaker": "B",
-              "text": "어어은/는 Uh(이)에요.",
-              "romanization": "eoeoeun/neun Uh(i)eyo.",
-              "translation": "\"어어\" means \"Uh\"."
+              "text": "뭔데요?",
+              "romanization": "mwondeyo?",
+              "translation": "What is it?"
+            },
+            {
+              "speaker": "A",
+              "text": "정말 신기하지 않아요?",
+              "romanization": "jeongmal singihaji anayo?",
+              "translation": "Isn't it amazing?"
+            },
+            {
+              "speaker": "B",
+              "text": "어어, 진짜 신기하네요!",
+              "romanization": "eoeo, jinjja singihaneyo!",
+              "translation": "Uh, that's really amazing!"
             }
           ]
         }
@@ -917,10 +1145,10 @@
         "word": "Uh",
         "explanation": "'어어' means 'Uh' in English.",
         "examples": {
-          "beginner": "We say \"어어\" in Korean.",
-          "intermediate": "In Korea, people often say \"어어\".",
-          "advanced": "\"어어\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"어어\" makes communication more natural."
+          "beginner": "어어! I was surprised.",
+          "intermediate": "Korean people often say \"어어\".",
+          "advanced": "\"어어\" is an interjection that immediately expresses emotion.",
+          "master": "The frequency and context of \"어어\" reveals how Korean speakers express emotions."
         },
         "variations": {
           "formal": [
@@ -936,19 +1164,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "When something surprising happens",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"어어\"?",
+              "text": "Uh! Look at this!",
               "romanization": "",
-              "translation": "어어이/가 뭐예요?"
+              "translation": "어어! 이거 봐요!"
             },
             {
               "speaker": "B",
-              "text": "\"어어\" means \"Uh\".",
+              "text": "What is it?",
               "romanization": "",
-              "translation": "어어은/는 Uh(이)에요."
+              "translation": "뭔데요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Isn't it amazing?",
+              "romanization": "",
+              "translation": "정말 신기하지 않아요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Uh, that's really amazing!",
+              "romanization": "",
+              "translation": "어어, 진짜 신기하네요!"
             }
           ]
         }
@@ -973,10 +1213,10 @@
         "word": "에",
         "explanation": "에의 뜻은 'Eh'입니다.",
         "examples": {
-          "beginner": "\"에\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"에\"를 자주 써요.",
-          "advanced": "\"에\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"에\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "에! 놀랐어요.",
+          "intermediate": "한국 사람들은 \"에\"을 자주 말해요.",
+          "advanced": "\"에\"은 감정을 즉각적으로 표현하는 감탄사입니다.",
+          "master": "\"에\"의 사용 빈도와 맥락은 한국어 화자의 감정 표현 방식을 보여줍니다."
         },
         "variations": {
           "formal": [
@@ -992,19 +1232,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "놀라운 일이 생겼을 때",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "에이/가 뭐예요?",
-              "romanization": "ei/ga mwoyeyo?",
-              "translation": "What is \"에\"?"
+              "text": "에! 이거 봐요!",
+              "romanization": "e! igeo bwayo!",
+              "translation": "Eh! Look at this!"
             },
             {
               "speaker": "B",
-              "text": "에은/는 Eh(이)에요.",
-              "romanization": "eeun/neun Eh(i)eyo.",
-              "translation": "\"에\" means \"Eh\"."
+              "text": "뭔데요?",
+              "romanization": "mwondeyo?",
+              "translation": "What is it?"
+            },
+            {
+              "speaker": "A",
+              "text": "정말 신기하지 않아요?",
+              "romanization": "jeongmal singihaji anayo?",
+              "translation": "Isn't it amazing?"
+            },
+            {
+              "speaker": "B",
+              "text": "에, 진짜 신기하네요!",
+              "romanization": "e, jinjja singihaneyo!",
+              "translation": "Eh, that's really amazing!"
             }
           ]
         }
@@ -1013,10 +1265,10 @@
         "word": "Eh",
         "explanation": "'에' means 'Eh' in English.",
         "examples": {
-          "beginner": "We say \"에\" in Korean.",
-          "intermediate": "In Korea, people often say \"에\".",
-          "advanced": "\"에\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"에\" makes communication more natural."
+          "beginner": "에! I was surprised.",
+          "intermediate": "Korean people often say \"에\".",
+          "advanced": "\"에\" is an interjection that immediately expresses emotion.",
+          "master": "The frequency and context of \"에\" reveals how Korean speakers express emotions."
         },
         "variations": {
           "formal": [
@@ -1032,19 +1284,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "When something surprising happens",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"에\"?",
+              "text": "Eh! Look at this!",
               "romanization": "",
-              "translation": "에이/가 뭐예요?"
+              "translation": "에! 이거 봐요!"
             },
             {
               "speaker": "B",
-              "text": "\"에\" means \"Eh\".",
+              "text": "What is it?",
               "romanization": "",
-              "translation": "에은/는 Eh(이)에요."
+              "translation": "뭔데요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Isn't it amazing?",
+              "romanization": "",
+              "translation": "정말 신기하지 않아요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Eh, that's really amazing!",
+              "romanization": "",
+              "translation": "에, 진짜 신기하네요!"
             }
           ]
         }
@@ -1069,10 +1333,10 @@
         "word": "아이고",
         "explanation": "아이고의 뜻은 'Oh my'입니다.",
         "examples": {
-          "beginner": "\"아이고\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"아이고\"를 자주 써요.",
-          "advanced": "\"아이고\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"아이고\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "아이고! 놀랐어요.",
+          "intermediate": "한국 사람들은 \"아이고\"을 자주 말해요.",
+          "advanced": "\"아이고\"은 감정을 즉각적으로 표현하는 감탄사입니다.",
+          "master": "\"아이고\"의 사용 빈도와 맥락은 한국어 화자의 감정 표현 방식을 보여줍니다."
         },
         "variations": {
           "formal": [
@@ -1088,19 +1352,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "놀라운 일이 생겼을 때",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "아이고이/가 뭐예요?",
-              "romanization": "aigoi/ga mwoyeyo?",
-              "translation": "What is \"아이고\"?"
+              "text": "아이고! 이거 봐요!",
+              "romanization": "aigo! igeo bwayo!",
+              "translation": "Oh my! Look at this!"
             },
             {
               "speaker": "B",
-              "text": "아이고은/는 Oh my(이)에요.",
-              "romanization": "aigoeun/neun Oh my(i)eyo.",
-              "translation": "\"아이고\" means \"Oh my\"."
+              "text": "뭔데요?",
+              "romanization": "mwondeyo?",
+              "translation": "What is it?"
+            },
+            {
+              "speaker": "A",
+              "text": "정말 신기하지 않아요?",
+              "romanization": "jeongmal singihaji anayo?",
+              "translation": "Isn't it amazing?"
+            },
+            {
+              "speaker": "B",
+              "text": "아이고, 진짜 신기하네요!",
+              "romanization": "aigo, jinjja singihaneyo!",
+              "translation": "Oh my, that's really amazing!"
             }
           ]
         }
@@ -1109,10 +1385,10 @@
         "word": "Oh my",
         "explanation": "'아이고' means 'Oh my' in English.",
         "examples": {
-          "beginner": "We say \"아이고\" in Korean.",
-          "intermediate": "In Korea, people often say \"아이고\".",
-          "advanced": "\"아이고\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"아이고\" makes communication more natural."
+          "beginner": "아이고! I was surprised.",
+          "intermediate": "Korean people often say \"아이고\".",
+          "advanced": "\"아이고\" is an interjection that immediately expresses emotion.",
+          "master": "The frequency and context of \"아이고\" reveals how Korean speakers express emotions."
         },
         "variations": {
           "formal": [
@@ -1128,19 +1404,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "When something surprising happens",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"아이고\"?",
+              "text": "Oh my! Look at this!",
               "romanization": "",
-              "translation": "아이고이/가 뭐예요?"
+              "translation": "아이고! 이거 봐요!"
             },
             {
               "speaker": "B",
-              "text": "\"아이고\" means \"Oh my\".",
+              "text": "What is it?",
               "romanization": "",
-              "translation": "아이고은/는 Oh my(이)에요."
+              "translation": "뭔데요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Isn't it amazing?",
+              "romanization": "",
+              "translation": "정말 신기하지 않아요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Oh my, that's really amazing!",
+              "romanization": "",
+              "translation": "아이고, 진짜 신기하네요!"
             }
           ]
         }
@@ -1165,10 +1453,10 @@
         "word": "세상에",
         "explanation": "세상에의 뜻은 'Oh my'입니다.",
         "examples": {
-          "beginner": "\"세상에\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"세상에\"를 자주 써요.",
-          "advanced": "\"세상에\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"세상에\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "세상에! 놀랐어요.",
+          "intermediate": "한국 사람들은 \"세상에\"을 자주 말해요.",
+          "advanced": "\"세상에\"은 감정을 즉각적으로 표현하는 감탄사입니다.",
+          "master": "\"세상에\"의 사용 빈도와 맥락은 한국어 화자의 감정 표현 방식을 보여줍니다."
         },
         "variations": {
           "formal": [
@@ -1184,19 +1472,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "놀라운 일이 생겼을 때",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "세상에이/가 뭐예요?",
-              "romanization": "sesangei/ga mwoyeyo?",
-              "translation": "What is \"세상에\"?"
+              "text": "세상에! 이거 봐요!",
+              "romanization": "sesange! igeo bwayo!",
+              "translation": "Oh my! Look at this!"
             },
             {
               "speaker": "B",
-              "text": "세상에은/는 Oh my(이)에요.",
-              "romanization": "sesangeeun/neun Oh my(i)eyo.",
-              "translation": "\"세상에\" means \"Oh my\"."
+              "text": "뭔데요?",
+              "romanization": "mwondeyo?",
+              "translation": "What is it?"
+            },
+            {
+              "speaker": "A",
+              "text": "정말 신기하지 않아요?",
+              "romanization": "jeongmal singihaji anayo?",
+              "translation": "Isn't it amazing?"
+            },
+            {
+              "speaker": "B",
+              "text": "세상에, 진짜 신기하네요!",
+              "romanization": "sesange, jinjja singihaneyo!",
+              "translation": "Oh my, that's really amazing!"
             }
           ]
         }
@@ -1205,10 +1505,10 @@
         "word": "Oh my",
         "explanation": "'세상에' means 'Oh my' in English.",
         "examples": {
-          "beginner": "We say \"세상에\" in Korean.",
-          "intermediate": "In Korea, people often say \"세상에\".",
-          "advanced": "\"세상에\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"세상에\" makes communication more natural."
+          "beginner": "세상에! I was surprised.",
+          "intermediate": "Korean people often say \"세상에\".",
+          "advanced": "\"세상에\" is an interjection that immediately expresses emotion.",
+          "master": "The frequency and context of \"세상에\" reveals how Korean speakers express emotions."
         },
         "variations": {
           "formal": [
@@ -1224,19 +1524,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "When something surprising happens",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"세상에\"?",
+              "text": "Oh my! Look at this!",
               "romanization": "",
-              "translation": "세상에이/가 뭐예요?"
+              "translation": "세상에! 이거 봐요!"
             },
             {
               "speaker": "B",
-              "text": "\"세상에\" means \"Oh my\".",
+              "text": "What is it?",
               "romanization": "",
-              "translation": "세상에은/는 Oh my(이)에요."
+              "translation": "뭔데요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Isn't it amazing?",
+              "romanization": "",
+              "translation": "정말 신기하지 않아요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Oh my, that's really amazing!",
+              "romanization": "",
+              "translation": "세상에, 진짜 신기하네요!"
             }
           ]
         }
@@ -1261,10 +1573,10 @@
         "word": "헐",
         "explanation": "헐의 뜻은 'Wow'입니다.",
         "examples": {
-          "beginner": "\"헐\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"헐\"를 자주 써요.",
-          "advanced": "\"헐\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"헐\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "헐! 놀랐어요.",
+          "intermediate": "한국 사람들은 \"헐\"을 자주 말해요.",
+          "advanced": "\"헐\"은 감정을 즉각적으로 표현하는 감탄사입니다.",
+          "master": "\"헐\"의 사용 빈도와 맥락은 한국어 화자의 감정 표현 방식을 보여줍니다."
         },
         "variations": {
           "formal": [
@@ -1280,19 +1592,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "놀라운 일이 생겼을 때",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "헐이/가 뭐예요?",
-              "romanization": "heoli/ga mwoyeyo?",
-              "translation": "What is \"헐\"?"
+              "text": "헐! 이거 봐요!",
+              "romanization": "heol! igeo bwayo!",
+              "translation": "Wow! Look at this!"
             },
             {
               "speaker": "B",
-              "text": "헐은/는 Wow(이)에요.",
-              "romanization": "heoleun/neun Wow(i)eyo.",
-              "translation": "\"헐\" means \"Wow\"."
+              "text": "뭔데요?",
+              "romanization": "mwondeyo?",
+              "translation": "What is it?"
+            },
+            {
+              "speaker": "A",
+              "text": "정말 신기하지 않아요?",
+              "romanization": "jeongmal singihaji anayo?",
+              "translation": "Isn't it amazing?"
+            },
+            {
+              "speaker": "B",
+              "text": "헐, 진짜 신기하네요!",
+              "romanization": "heol, jinjja singihaneyo!",
+              "translation": "Wow, that's really amazing!"
             }
           ]
         }
@@ -1301,10 +1625,10 @@
         "word": "Wow",
         "explanation": "'헐' means 'Wow' in English.",
         "examples": {
-          "beginner": "We say \"헐\" in Korean.",
-          "intermediate": "In Korea, people often say \"헐\".",
-          "advanced": "\"헐\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"헐\" makes communication more natural."
+          "beginner": "헐! I was surprised.",
+          "intermediate": "Korean people often say \"헐\".",
+          "advanced": "\"헐\" is an interjection that immediately expresses emotion.",
+          "master": "The frequency and context of \"헐\" reveals how Korean speakers express emotions."
         },
         "variations": {
           "formal": [
@@ -1320,19 +1644,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "When something surprising happens",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"헐\"?",
+              "text": "Wow! Look at this!",
               "romanization": "",
-              "translation": "헐이/가 뭐예요?"
+              "translation": "헐! 이거 봐요!"
             },
             {
               "speaker": "B",
-              "text": "\"헐\" means \"Wow\".",
+              "text": "What is it?",
               "romanization": "",
-              "translation": "헐은/는 Wow(이)에요."
+              "translation": "뭔데요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Isn't it amazing?",
+              "romanization": "",
+              "translation": "정말 신기하지 않아요?"
+            },
+            {
+              "speaker": "B",
+              "text": "Wow, that's really amazing!",
+              "romanization": "",
+              "translation": "헐, 진짜 신기하네요!"
             }
           ]
         }
@@ -1357,10 +1693,10 @@
         "word": "오",
         "explanation": "오의 뜻은 'come'입니다.",
         "examples": {
-          "beginner": "\"오\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"오\"를 자주 써요.",
-          "advanced": "\"오\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"오\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "오! 놀랐어요.",
+          "intermediate": "한국 사람들은 \"오\"을 자주 말해요.",
+          "advanced": "\"오\"은 감정을 즉각적으로 표현하는 감탄사입니다.",
+          "master": "\"오\"의 사용 빈도와 맥락은 한국어 화자의 감정 표현 방식을 보여줍니다."
         },
         "variations": {
           "formal": [
@@ -1376,19 +1712,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "놀라운 일이 생겼을 때",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "오이/가 뭐예요?",
-              "romanization": "oi/ga mwoyeyo?",
-              "translation": "What is \"오\"?"
+              "text": "오! 이거 봐요!",
+              "romanization": "o! igeo bwayo!",
+              "translation": "come! Look at this!"
             },
             {
               "speaker": "B",
-              "text": "오은/는 come(이)에요.",
-              "romanization": "oeun/neun come(i)eyo.",
-              "translation": "\"오\" means \"come\"."
+              "text": "뭔데요?",
+              "romanization": "mwondeyo?",
+              "translation": "What is it?"
+            },
+            {
+              "speaker": "A",
+              "text": "정말 신기하지 않아요?",
+              "romanization": "jeongmal singihaji anayo?",
+              "translation": "Isn't it amazing?"
+            },
+            {
+              "speaker": "B",
+              "text": "오, 진짜 신기하네요!",
+              "romanization": "o, jinjja singihaneyo!",
+              "translation": "come, that's really amazing!"
             }
           ]
         }
@@ -1397,10 +1745,10 @@
         "word": "come",
         "explanation": "'오' means 'come' in English.",
         "examples": {
-          "beginner": "We say \"오\" in Korean.",
-          "intermediate": "In Korea, people often say \"오\".",
-          "advanced": "\"오\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"오\" makes communication more natural."
+          "beginner": "오! I was surprised.",
+          "intermediate": "Korean people often say \"오\".",
+          "advanced": "\"오\" is an interjection that immediately expresses emotion.",
+          "master": "The frequency and context of \"오\" reveals how Korean speakers express emotions."
         },
         "variations": {
           "formal": [
@@ -1416,19 +1764,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "When something surprising happens",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"오\"?",
+              "text": "come! Look at this!",
               "romanization": "",
-              "translation": "오이/가 뭐예요?"
+              "translation": "오! 이거 봐요!"
             },
             {
               "speaker": "B",
-              "text": "\"오\" means \"come\".",
+              "text": "What is it?",
               "romanization": "",
-              "translation": "오은/는 come(이)에요."
+              "translation": "뭔데요?"
+            },
+            {
+              "speaker": "A",
+              "text": "Isn't it amazing?",
+              "romanization": "",
+              "translation": "정말 신기하지 않아요?"
+            },
+            {
+              "speaker": "B",
+              "text": "come, that's really amazing!",
+              "romanization": "",
+              "translation": "오, 진짜 신기하네요!"
             }
           ]
         }

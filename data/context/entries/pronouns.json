@@ -18,10 +18,10 @@
         "word": "what",
         "explanation": "'뭘' means 'what' in English.",
         "examples": {
-          "beginner": "We say \"뭘\" in Korean.",
-          "intermediate": "In Korea, people often say \"뭘\".",
-          "advanced": "\"뭘\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"뭘\" makes communication more natural."
+          "beginner": "We use \"뭘\".",
+          "intermediate": "\"뭘\" is a frequently used pronoun.",
+          "advanced": "Correct use of \"뭘\" is fundamental to Korean grammar.",
+          "master": "Understanding the context of \"뭘\" helps distinguish formal and informal expressions."
         },
         "variations": {
           "formal": [
@@ -35,16 +35,45 @@
           "short": [
             "what"
           ]
+        },
+        "dialogue": {
+          "context": "Learning Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"뭘\"?",
+              "romanization": "",
+              "translation": "\"뭘\"은 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "뭘의 뜻은 'what'입니다.",
+              "romanization": "",
+              "translation": "뭘의 뜻은 'what'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I understand.",
+              "romanization": "",
+              "translation": "아, 이해했어요."
+            },
+            {
+              "speaker": "B",
+              "text": "You're doing well!",
+              "romanization": "",
+              "translation": "잘하고 있어요!"
+            }
+          ]
         }
       },
       "ko": {
         "word": "뭘",
         "explanation": "뭘의 뜻은 'what'입니다.",
         "examples": {
-          "beginner": "\"뭘\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"뭘\"를 자주 써요.",
-          "advanced": "\"뭘\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"뭘\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"뭘\"을 사용해요.",
+          "intermediate": "\"뭘\"은 자주 쓰는 대명사예요.",
+          "advanced": "\"뭘\"의 올바른 사용은 한국어 문법의 기본입니다.",
+          "master": "\"뭘\"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -57,6 +86,35 @@
           ],
           "short": [
             "뭘"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어를 배우며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"뭘\"은 언제 써요?",
+              "romanization": "\"mwol\"eun eonje sseoyo?",
+              "translation": "When do you use \"뭘\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "뭘의 뜻은 'what'입니다.",
+              "romanization": "mwolui tteuseun 'what'ipnida.",
+              "translation": "뭘의 뜻은 'what'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 이해했어요.",
+              "romanization": "a, ihaehaeseoyo.",
+              "translation": "Ah, I understand."
+            },
+            {
+              "speaker": "B",
+              "text": "잘하고 있어요!",
+              "romanization": "jalhago iseoyo!",
+              "translation": "You're doing well!"
+            }
           ]
         }
       }
@@ -81,10 +139,10 @@
         "word": "that person",
         "explanation": "'쟤' means 'that person' in English.",
         "examples": {
-          "beginner": "We say \"쟤\" in Korean.",
-          "intermediate": "In Korea, people often say \"쟤\".",
-          "advanced": "\"쟤\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"쟤\" makes communication more natural."
+          "beginner": "We use \"쟤\".",
+          "intermediate": "\"쟤\" is a frequently used pronoun.",
+          "advanced": "Correct use of \"쟤\" is fundamental to Korean grammar.",
+          "master": "Understanding the context of \"쟤\" helps distinguish formal and informal expressions."
         },
         "variations": {
           "formal": [
@@ -98,16 +156,45 @@
           "short": [
             "that"
           ]
+        },
+        "dialogue": {
+          "context": "Learning Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"쟤\"?",
+              "romanization": "",
+              "translation": "\"쟤\"은 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "쟤의 뜻은 'that person'입니다.",
+              "romanization": "",
+              "translation": "쟤의 뜻은 'that person'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I understand.",
+              "romanization": "",
+              "translation": "아, 이해했어요."
+            },
+            {
+              "speaker": "B",
+              "text": "You're doing well!",
+              "romanization": "",
+              "translation": "잘하고 있어요!"
+            }
+          ]
         }
       },
       "ko": {
         "word": "쟤",
         "explanation": "쟤의 뜻은 'that person'입니다.",
         "examples": {
-          "beginner": "\"쟤\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"쟤\"를 자주 써요.",
-          "advanced": "\"쟤\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"쟤\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"쟤\"을 사용해요.",
+          "intermediate": "\"쟤\"은 자주 쓰는 대명사예요.",
+          "advanced": "\"쟤\"의 올바른 사용은 한국어 문법의 기본입니다.",
+          "master": "\"쟤\"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -120,6 +207,35 @@
           ],
           "short": [
             "쟤"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어를 배우며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"쟤\"은 언제 써요?",
+              "romanization": "\"jyae\"eun eonje sseoyo?",
+              "translation": "When do you use \"쟤\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "쟤의 뜻은 'that person'입니다.",
+              "romanization": "jyaeui tteuseun 'that person'ipnida.",
+              "translation": "쟤의 뜻은 'that person'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 이해했어요.",
+              "romanization": "a, ihaehaeseoyo.",
+              "translation": "Ah, I understand."
+            },
+            {
+              "speaker": "B",
+              "text": "잘하고 있어요!",
+              "romanization": "jalhago iseoyo!",
+              "translation": "You're doing well!"
+            }
           ]
         }
       }
@@ -144,10 +260,10 @@
         "word": "that person",
         "explanation": "'걔' means 'that person' in English.",
         "examples": {
-          "beginner": "We say \"걔\" in Korean.",
-          "intermediate": "In Korea, people often say \"걔\".",
-          "advanced": "\"걔\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"걔\" makes communication more natural."
+          "beginner": "We use \"걔\".",
+          "intermediate": "\"걔\" is a frequently used pronoun.",
+          "advanced": "Correct use of \"걔\" is fundamental to Korean grammar.",
+          "master": "Understanding the context of \"걔\" helps distinguish formal and informal expressions."
         },
         "variations": {
           "formal": [
@@ -161,16 +277,45 @@
           "short": [
             "that"
           ]
+        },
+        "dialogue": {
+          "context": "Learning Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"걔\"?",
+              "romanization": "",
+              "translation": "\"걔\"은 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "걔의 뜻은 'that person'입니다.",
+              "romanization": "",
+              "translation": "걔의 뜻은 'that person'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I understand.",
+              "romanization": "",
+              "translation": "아, 이해했어요."
+            },
+            {
+              "speaker": "B",
+              "text": "You're doing well!",
+              "romanization": "",
+              "translation": "잘하고 있어요!"
+            }
+          ]
         }
       },
       "ko": {
         "word": "걔",
         "explanation": "걔의 뜻은 'that person'입니다.",
         "examples": {
-          "beginner": "\"걔\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"걔\"를 자주 써요.",
-          "advanced": "\"걔\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"걔\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"걔\"을 사용해요.",
+          "intermediate": "\"걔\"은 자주 쓰는 대명사예요.",
+          "advanced": "\"걔\"의 올바른 사용은 한국어 문법의 기본입니다.",
+          "master": "\"걔\"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -183,6 +328,35 @@
           ],
           "short": [
             "걔"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어를 배우며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"걔\"은 언제 써요?",
+              "romanization": "\"gyae\"eun eonje sseoyo?",
+              "translation": "When do you use \"걔\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "걔의 뜻은 'that person'입니다.",
+              "romanization": "gyaeui tteuseun 'that person'ipnida.",
+              "translation": "걔의 뜻은 'that person'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 이해했어요.",
+              "romanization": "a, ihaehaeseoyo.",
+              "translation": "Ah, I understand."
+            },
+            {
+              "speaker": "B",
+              "text": "잘하고 있어요!",
+              "romanization": "jalhago iseoyo!",
+              "translation": "You're doing well!"
+            }
           ]
         }
       }
@@ -207,10 +381,10 @@
         "word": "I",
         "explanation": "'나' means 'I' in English.",
         "examples": {
-          "beginner": "We say \"나\" in Korean.",
-          "intermediate": "In Korea, people often say \"나\".",
-          "advanced": "\"나\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"나\" makes communication more natural."
+          "beginner": "We use \"나\".",
+          "intermediate": "\"나\" is a frequently used pronoun.",
+          "advanced": "Correct use of \"나\" is fundamental to Korean grammar.",
+          "master": "Understanding the context of \"나\" helps distinguish formal and informal expressions."
         },
         "variations": {
           "formal": [
@@ -224,16 +398,45 @@
           "short": [
             "I"
           ]
+        },
+        "dialogue": {
+          "context": "Learning Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"나\"?",
+              "romanization": "",
+              "translation": "\"나\"은 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "나의 뜻은 'I'입니다.",
+              "romanization": "",
+              "translation": "나의 뜻은 'I'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I understand.",
+              "romanization": "",
+              "translation": "아, 이해했어요."
+            },
+            {
+              "speaker": "B",
+              "text": "You're doing well!",
+              "romanization": "",
+              "translation": "잘하고 있어요!"
+            }
+          ]
         }
       },
       "ko": {
         "word": "나",
         "explanation": "나의 뜻은 'I'입니다.",
         "examples": {
-          "beginner": "\"나\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"나\"를 자주 써요.",
-          "advanced": "\"나\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"나\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"나\"을 사용해요.",
+          "intermediate": "\"나\"은 자주 쓰는 대명사예요.",
+          "advanced": "\"나\"의 올바른 사용은 한국어 문법의 기본입니다.",
+          "master": "\"나\"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -246,6 +449,35 @@
           ],
           "short": [
             "나"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어를 배우며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"나\"은 언제 써요?",
+              "romanization": "\"na\"eun eonje sseoyo?",
+              "translation": "When do you use \"나\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "나의 뜻은 'I'입니다.",
+              "romanization": "naui tteuseun 'i'ipnida.",
+              "translation": "나의 뜻은 'I'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 이해했어요.",
+              "romanization": "a, ihaehaeseoyo.",
+              "translation": "Ah, I understand."
+            },
+            {
+              "speaker": "B",
+              "text": "잘하고 있어요!",
+              "romanization": "jalhago iseoyo!",
+              "translation": "You're doing well!"
+            }
           ]
         }
       }
@@ -270,10 +502,10 @@
         "word": "I",
         "explanation": "'저' means 'I' in English.",
         "examples": {
-          "beginner": "We say \"저\" in Korean.",
-          "intermediate": "In Korea, people often say \"저\".",
-          "advanced": "\"저\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"저\" makes communication more natural."
+          "beginner": "We use \"저\".",
+          "intermediate": "\"저\" is a frequently used pronoun.",
+          "advanced": "Correct use of \"저\" is fundamental to Korean grammar.",
+          "master": "Understanding the context of \"저\" helps distinguish formal and informal expressions."
         },
         "variations": {
           "formal": [
@@ -287,16 +519,45 @@
           "short": [
             "I"
           ]
+        },
+        "dialogue": {
+          "context": "Learning Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"저\"?",
+              "romanization": "",
+              "translation": "\"저\"은 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "저의 뜻은 'I'입니다.",
+              "romanization": "",
+              "translation": "저의 뜻은 'I'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I understand.",
+              "romanization": "",
+              "translation": "아, 이해했어요."
+            },
+            {
+              "speaker": "B",
+              "text": "You're doing well!",
+              "romanization": "",
+              "translation": "잘하고 있어요!"
+            }
+          ]
         }
       },
       "ko": {
         "word": "저",
         "explanation": "저의 뜻은 'I'입니다.",
         "examples": {
-          "beginner": "\"저\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"저\"를 자주 써요.",
-          "advanced": "\"저\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"저\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"저\"을 사용해요.",
+          "intermediate": "\"저\"은 자주 쓰는 대명사예요.",
+          "advanced": "\"저\"의 올바른 사용은 한국어 문법의 기본입니다.",
+          "master": "\"저\"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -309,6 +570,35 @@
           ],
           "short": [
             "저"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어를 배우며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"저\"은 언제 써요?",
+              "romanization": "\"jeo\"eun eonje sseoyo?",
+              "translation": "When do you use \"저\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "저의 뜻은 'I'입니다.",
+              "romanization": "jeoui tteuseun 'i'ipnida.",
+              "translation": "저의 뜻은 'I'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 이해했어요.",
+              "romanization": "a, ihaehaeseoyo.",
+              "translation": "Ah, I understand."
+            },
+            {
+              "speaker": "B",
+              "text": "잘하고 있어요!",
+              "romanization": "jalhago iseoyo!",
+              "translation": "You're doing well!"
+            }
           ]
         }
       }
@@ -333,10 +623,10 @@
         "word": "you",
         "explanation": "'너' means 'you' in English.",
         "examples": {
-          "beginner": "We say \"너\" in Korean.",
-          "intermediate": "In Korea, people often say \"너\".",
-          "advanced": "\"너\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"너\" makes communication more natural."
+          "beginner": "We use \"너\".",
+          "intermediate": "\"너\" is a frequently used pronoun.",
+          "advanced": "Correct use of \"너\" is fundamental to Korean grammar.",
+          "master": "Understanding the context of \"너\" helps distinguish formal and informal expressions."
         },
         "variations": {
           "formal": [
@@ -350,16 +640,45 @@
           "short": [
             "you"
           ]
+        },
+        "dialogue": {
+          "context": "Learning Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"너\"?",
+              "romanization": "",
+              "translation": "\"너\"은 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "너의 뜻은 'you'입니다.",
+              "romanization": "",
+              "translation": "너의 뜻은 'you'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I understand.",
+              "romanization": "",
+              "translation": "아, 이해했어요."
+            },
+            {
+              "speaker": "B",
+              "text": "You're doing well!",
+              "romanization": "",
+              "translation": "잘하고 있어요!"
+            }
+          ]
         }
       },
       "ko": {
         "word": "너",
         "explanation": "너의 뜻은 'you'입니다.",
         "examples": {
-          "beginner": "\"너\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"너\"를 자주 써요.",
-          "advanced": "\"너\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"너\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"너\"을 사용해요.",
+          "intermediate": "\"너\"은 자주 쓰는 대명사예요.",
+          "advanced": "\"너\"의 올바른 사용은 한국어 문법의 기본입니다.",
+          "master": "\"너\"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -372,6 +691,35 @@
           ],
           "short": [
             "너"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어를 배우며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"너\"은 언제 써요?",
+              "romanization": "\"neo\"eun eonje sseoyo?",
+              "translation": "When do you use \"너\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "너의 뜻은 'you'입니다.",
+              "romanization": "neoui tteuseun 'you'ipnida.",
+              "translation": "너의 뜻은 'you'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 이해했어요.",
+              "romanization": "a, ihaehaeseoyo.",
+              "translation": "Ah, I understand."
+            },
+            {
+              "speaker": "B",
+              "text": "잘하고 있어요!",
+              "romanization": "jalhago iseoyo!",
+              "translation": "You're doing well!"
+            }
           ]
         }
       }
@@ -396,10 +744,10 @@
         "word": "we",
         "explanation": "'우리' means 'we' in English.",
         "examples": {
-          "beginner": "We say \"우리\" in Korean.",
-          "intermediate": "In Korea, people often say \"우리\".",
-          "advanced": "\"우리\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"우리\" makes communication more natural."
+          "beginner": "We use \"우리\".",
+          "intermediate": "\"우리\" is a frequently used pronoun.",
+          "advanced": "Correct use of \"우리\" is fundamental to Korean grammar.",
+          "master": "Understanding the context of \"우리\" helps distinguish formal and informal expressions."
         },
         "variations": {
           "formal": [
@@ -413,16 +761,45 @@
           "short": [
             "we"
           ]
+        },
+        "dialogue": {
+          "context": "Learning Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"우리\"?",
+              "romanization": "",
+              "translation": "\"우리\"은 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "우리의 뜻은 'we'입니다.",
+              "romanization": "",
+              "translation": "우리의 뜻은 'we'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I understand.",
+              "romanization": "",
+              "translation": "아, 이해했어요."
+            },
+            {
+              "speaker": "B",
+              "text": "You're doing well!",
+              "romanization": "",
+              "translation": "잘하고 있어요!"
+            }
+          ]
         }
       },
       "ko": {
         "word": "우리",
         "explanation": "우리의 뜻은 'we'입니다.",
         "examples": {
-          "beginner": "\"우리\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"우리\"를 자주 써요.",
-          "advanced": "\"우리\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"우리\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"우리\"을 사용해요.",
+          "intermediate": "\"우리\"은 자주 쓰는 대명사예요.",
+          "advanced": "\"우리\"의 올바른 사용은 한국어 문법의 기본입니다.",
+          "master": "\"우리\"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -435,6 +812,35 @@
           ],
           "short": [
             "우리"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어를 배우며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"우리\"은 언제 써요?",
+              "romanization": "\"uri\"eun eonje sseoyo?",
+              "translation": "When do you use \"우리\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "우리의 뜻은 'we'입니다.",
+              "romanization": "uriui tteuseun 'we'ipnida.",
+              "translation": "우리의 뜻은 'we'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 이해했어요.",
+              "romanization": "a, ihaehaeseoyo.",
+              "translation": "Ah, I understand."
+            },
+            {
+              "speaker": "B",
+              "text": "잘하고 있어요!",
+              "romanization": "jalhago iseoyo!",
+              "translation": "You're doing well!"
+            }
           ]
         }
       }
@@ -459,10 +865,10 @@
         "word": "he",
         "explanation": "'그' means 'he' in English.",
         "examples": {
-          "beginner": "We say \"그\" in Korean.",
-          "intermediate": "In Korea, people often say \"그\".",
-          "advanced": "\"그\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"그\" makes communication more natural."
+          "beginner": "We use \"그\".",
+          "intermediate": "\"그\" is a frequently used pronoun.",
+          "advanced": "Correct use of \"그\" is fundamental to Korean grammar.",
+          "master": "Understanding the context of \"그\" helps distinguish formal and informal expressions."
         },
         "variations": {
           "formal": [
@@ -476,16 +882,45 @@
           "short": [
             "he"
           ]
+        },
+        "dialogue": {
+          "context": "Learning Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"그\"?",
+              "romanization": "",
+              "translation": "\"그\"은 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "그의 뜻은 'he'입니다.",
+              "romanization": "",
+              "translation": "그의 뜻은 'he'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I understand.",
+              "romanization": "",
+              "translation": "아, 이해했어요."
+            },
+            {
+              "speaker": "B",
+              "text": "You're doing well!",
+              "romanization": "",
+              "translation": "잘하고 있어요!"
+            }
+          ]
         }
       },
       "ko": {
         "word": "그",
         "explanation": "그의 뜻은 'he'입니다.",
         "examples": {
-          "beginner": "\"그\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"그\"를 자주 써요.",
-          "advanced": "\"그\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"그\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"그\"을 사용해요.",
+          "intermediate": "\"그\"은 자주 쓰는 대명사예요.",
+          "advanced": "\"그\"의 올바른 사용은 한국어 문법의 기본입니다.",
+          "master": "\"그\"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -498,6 +933,35 @@
           ],
           "short": [
             "그"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어를 배우며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"그\"은 언제 써요?",
+              "romanization": "\"geu\"eun eonje sseoyo?",
+              "translation": "When do you use \"그\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "그의 뜻은 'he'입니다.",
+              "romanization": "geuui tteuseun 'he'ipnida.",
+              "translation": "그의 뜻은 'he'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 이해했어요.",
+              "romanization": "a, ihaehaeseoyo.",
+              "translation": "Ah, I understand."
+            },
+            {
+              "speaker": "B",
+              "text": "잘하고 있어요!",
+              "romanization": "jalhago iseoyo!",
+              "translation": "You're doing well!"
+            }
           ]
         }
       }
@@ -522,10 +986,10 @@
         "word": "she",
         "explanation": "'그녀' means 'she' in English.",
         "examples": {
-          "beginner": "We say \"그녀\" in Korean.",
-          "intermediate": "In Korea, people often say \"그녀\".",
-          "advanced": "\"그녀\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"그녀\" makes communication more natural."
+          "beginner": "We use \"그녀\".",
+          "intermediate": "\"그녀\" is a frequently used pronoun.",
+          "advanced": "Correct use of \"그녀\" is fundamental to Korean grammar.",
+          "master": "Understanding the context of \"그녀\" helps distinguish formal and informal expressions."
         },
         "variations": {
           "formal": [
@@ -539,16 +1003,45 @@
           "short": [
             "she"
           ]
+        },
+        "dialogue": {
+          "context": "Learning Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"그녀\"?",
+              "romanization": "",
+              "translation": "\"그녀\"은 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "그녀의 뜻은 'she'입니다.",
+              "romanization": "",
+              "translation": "그녀의 뜻은 'she'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I understand.",
+              "romanization": "",
+              "translation": "아, 이해했어요."
+            },
+            {
+              "speaker": "B",
+              "text": "You're doing well!",
+              "romanization": "",
+              "translation": "잘하고 있어요!"
+            }
+          ]
         }
       },
       "ko": {
         "word": "그녀",
         "explanation": "그녀의 뜻은 'she'입니다.",
         "examples": {
-          "beginner": "\"그녀\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"그녀\"를 자주 써요.",
-          "advanced": "\"그녀\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"그녀\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"그녀\"을 사용해요.",
+          "intermediate": "\"그녀\"은 자주 쓰는 대명사예요.",
+          "advanced": "\"그녀\"의 올바른 사용은 한국어 문법의 기본입니다.",
+          "master": "\"그녀\"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -561,6 +1054,35 @@
           ],
           "short": [
             "그녀"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어를 배우며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"그녀\"은 언제 써요?",
+              "romanization": "\"geunyeo\"eun eonje sseoyo?",
+              "translation": "When do you use \"그녀\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "그녀의 뜻은 'she'입니다.",
+              "romanization": "geunyeoui tteuseun 'she'ipnida.",
+              "translation": "그녀의 뜻은 'she'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 이해했어요.",
+              "romanization": "a, ihaehaeseoyo.",
+              "translation": "Ah, I understand."
+            },
+            {
+              "speaker": "B",
+              "text": "잘하고 있어요!",
+              "romanization": "jalhago iseoyo!",
+              "translation": "You're doing well!"
+            }
           ]
         }
       }
@@ -585,10 +1107,10 @@
         "word": "this",
         "explanation": "'이것' means 'this' in English.",
         "examples": {
-          "beginner": "We say \"이것\" in Korean.",
-          "intermediate": "In Korea, people often say \"이것\".",
-          "advanced": "\"이것\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"이것\" makes communication more natural."
+          "beginner": "We use \"이것\".",
+          "intermediate": "\"이것\" is a frequently used pronoun.",
+          "advanced": "Correct use of \"이것\" is fundamental to Korean grammar.",
+          "master": "Understanding the context of \"이것\" helps distinguish formal and informal expressions."
         },
         "variations": {
           "formal": [
@@ -602,16 +1124,45 @@
           "short": [
             "this"
           ]
+        },
+        "dialogue": {
+          "context": "Learning Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"이것\"?",
+              "romanization": "",
+              "translation": "\"이것\"은 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "이것의 뜻은 'this'입니다.",
+              "romanization": "",
+              "translation": "이것의 뜻은 'this'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I understand.",
+              "romanization": "",
+              "translation": "아, 이해했어요."
+            },
+            {
+              "speaker": "B",
+              "text": "You're doing well!",
+              "romanization": "",
+              "translation": "잘하고 있어요!"
+            }
+          ]
         }
       },
       "ko": {
         "word": "이것",
         "explanation": "이것의 뜻은 'this'입니다.",
         "examples": {
-          "beginner": "\"이것\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"이것\"를 자주 써요.",
-          "advanced": "\"이것\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"이것\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"이것\"을 사용해요.",
+          "intermediate": "\"이것\"은 자주 쓰는 대명사예요.",
+          "advanced": "\"이것\"의 올바른 사용은 한국어 문법의 기본입니다.",
+          "master": "\"이것\"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -624,6 +1175,35 @@
           ],
           "short": [
             "이것"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어를 배우며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"이것\"은 언제 써요?",
+              "romanization": "\"igeos\"eun eonje sseoyo?",
+              "translation": "When do you use \"이것\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "이것의 뜻은 'this'입니다.",
+              "romanization": "igeosui tteuseun 'this'ipnida.",
+              "translation": "이것의 뜻은 'this'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 이해했어요.",
+              "romanization": "a, ihaehaeseoyo.",
+              "translation": "Ah, I understand."
+            },
+            {
+              "speaker": "B",
+              "text": "잘하고 있어요!",
+              "romanization": "jalhago iseoyo!",
+              "translation": "You're doing well!"
+            }
           ]
         }
       }
@@ -648,10 +1228,10 @@
         "word": "that",
         "explanation": "'저것' means 'that' in English.",
         "examples": {
-          "beginner": "We say \"저것\" in Korean.",
-          "intermediate": "In Korea, people often say \"저것\".",
-          "advanced": "\"저것\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"저것\" makes communication more natural."
+          "beginner": "We use \"저것\".",
+          "intermediate": "\"저것\" is a frequently used pronoun.",
+          "advanced": "Correct use of \"저것\" is fundamental to Korean grammar.",
+          "master": "Understanding the context of \"저것\" helps distinguish formal and informal expressions."
         },
         "variations": {
           "formal": [
@@ -665,16 +1245,45 @@
           "short": [
             "that"
           ]
+        },
+        "dialogue": {
+          "context": "Learning Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"저것\"?",
+              "romanization": "",
+              "translation": "\"저것\"은 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "저것의 뜻은 'that'입니다.",
+              "romanization": "",
+              "translation": "저것의 뜻은 'that'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I understand.",
+              "romanization": "",
+              "translation": "아, 이해했어요."
+            },
+            {
+              "speaker": "B",
+              "text": "You're doing well!",
+              "romanization": "",
+              "translation": "잘하고 있어요!"
+            }
+          ]
         }
       },
       "ko": {
         "word": "저것",
         "explanation": "저것의 뜻은 'that'입니다.",
         "examples": {
-          "beginner": "\"저것\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"저것\"를 자주 써요.",
-          "advanced": "\"저것\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"저것\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"저것\"을 사용해요.",
+          "intermediate": "\"저것\"은 자주 쓰는 대명사예요.",
+          "advanced": "\"저것\"의 올바른 사용은 한국어 문법의 기본입니다.",
+          "master": "\"저것\"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -687,6 +1296,35 @@
           ],
           "short": [
             "저것"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어를 배우며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"저것\"은 언제 써요?",
+              "romanization": "\"jeogeos\"eun eonje sseoyo?",
+              "translation": "When do you use \"저것\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "저것의 뜻은 'that'입니다.",
+              "romanization": "jeogeosui tteuseun 'that'ipnida.",
+              "translation": "저것의 뜻은 'that'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 이해했어요.",
+              "romanization": "a, ihaehaeseoyo.",
+              "translation": "Ah, I understand."
+            },
+            {
+              "speaker": "B",
+              "text": "잘하고 있어요!",
+              "romanization": "jalhago iseoyo!",
+              "translation": "You're doing well!"
+            }
           ]
         }
       }
@@ -711,10 +1349,10 @@
         "word": "it",
         "explanation": "'그것' means 'it' in English.",
         "examples": {
-          "beginner": "We say \"그것\" in Korean.",
-          "intermediate": "In Korea, people often say \"그것\".",
-          "advanced": "\"그것\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"그것\" makes communication more natural."
+          "beginner": "We use \"그것\".",
+          "intermediate": "\"그것\" is a frequently used pronoun.",
+          "advanced": "Correct use of \"그것\" is fundamental to Korean grammar.",
+          "master": "Understanding the context of \"그것\" helps distinguish formal and informal expressions."
         },
         "variations": {
           "formal": [
@@ -728,16 +1366,45 @@
           "short": [
             "it"
           ]
+        },
+        "dialogue": {
+          "context": "Learning Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"그것\"?",
+              "romanization": "",
+              "translation": "\"그것\"은 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "그것의 뜻은 'it'입니다.",
+              "romanization": "",
+              "translation": "그것의 뜻은 'it'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I understand.",
+              "romanization": "",
+              "translation": "아, 이해했어요."
+            },
+            {
+              "speaker": "B",
+              "text": "You're doing well!",
+              "romanization": "",
+              "translation": "잘하고 있어요!"
+            }
+          ]
         }
       },
       "ko": {
         "word": "그것",
         "explanation": "그것의 뜻은 'it'입니다.",
         "examples": {
-          "beginner": "\"그것\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"그것\"를 자주 써요.",
-          "advanced": "\"그것\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"그것\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"그것\"을 사용해요.",
+          "intermediate": "\"그것\"은 자주 쓰는 대명사예요.",
+          "advanced": "\"그것\"의 올바른 사용은 한국어 문법의 기본입니다.",
+          "master": "\"그것\"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -750,6 +1417,35 @@
           ],
           "short": [
             "그것"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어를 배우며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"그것\"은 언제 써요?",
+              "romanization": "\"geugeos\"eun eonje sseoyo?",
+              "translation": "When do you use \"그것\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "그것의 뜻은 'it'입니다.",
+              "romanization": "geugeosui tteuseun 'it'ipnida.",
+              "translation": "그것의 뜻은 'it'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 이해했어요.",
+              "romanization": "a, ihaehaeseoyo.",
+              "translation": "Ah, I understand."
+            },
+            {
+              "speaker": "B",
+              "text": "잘하고 있어요!",
+              "romanization": "jalhago iseoyo!",
+              "translation": "You're doing well!"
+            }
           ]
         }
       }
@@ -774,10 +1470,10 @@
         "word": "here",
         "explanation": "'여기' means 'here' in English.",
         "examples": {
-          "beginner": "We say \"여기\" in Korean.",
-          "intermediate": "In Korea, people often say \"여기\".",
-          "advanced": "\"여기\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"여기\" makes communication more natural."
+          "beginner": "We use \"여기\".",
+          "intermediate": "\"여기\" is a frequently used pronoun.",
+          "advanced": "Correct use of \"여기\" is fundamental to Korean grammar.",
+          "master": "Understanding the context of \"여기\" helps distinguish formal and informal expressions."
         },
         "variations": {
           "formal": [
@@ -791,16 +1487,45 @@
           "short": [
             "here"
           ]
+        },
+        "dialogue": {
+          "context": "Learning Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"여기\"?",
+              "romanization": "",
+              "translation": "\"여기\"은 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "여기의 뜻은 'here'입니다.",
+              "romanization": "",
+              "translation": "여기의 뜻은 'here'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I understand.",
+              "romanization": "",
+              "translation": "아, 이해했어요."
+            },
+            {
+              "speaker": "B",
+              "text": "You're doing well!",
+              "romanization": "",
+              "translation": "잘하고 있어요!"
+            }
+          ]
         }
       },
       "ko": {
         "word": "여기",
         "explanation": "여기의 뜻은 'here'입니다.",
         "examples": {
-          "beginner": "\"여기\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"여기\"를 자주 써요.",
-          "advanced": "\"여기\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"여기\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"여기\"을 사용해요.",
+          "intermediate": "\"여기\"은 자주 쓰는 대명사예요.",
+          "advanced": "\"여기\"의 올바른 사용은 한국어 문법의 기본입니다.",
+          "master": "\"여기\"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -813,6 +1538,35 @@
           ],
           "short": [
             "여기"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어를 배우며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"여기\"은 언제 써요?",
+              "romanization": "\"yeogi\"eun eonje sseoyo?",
+              "translation": "When do you use \"여기\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "여기의 뜻은 'here'입니다.",
+              "romanization": "yeogiui tteuseun 'here'ipnida.",
+              "translation": "여기의 뜻은 'here'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 이해했어요.",
+              "romanization": "a, ihaehaeseoyo.",
+              "translation": "Ah, I understand."
+            },
+            {
+              "speaker": "B",
+              "text": "잘하고 있어요!",
+              "romanization": "jalhago iseoyo!",
+              "translation": "You're doing well!"
+            }
           ]
         }
       }
@@ -837,10 +1591,10 @@
         "word": "there",
         "explanation": "'거기' means 'there' in English.",
         "examples": {
-          "beginner": "We say \"거기\" in Korean.",
-          "intermediate": "In Korea, people often say \"거기\".",
-          "advanced": "\"거기\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"거기\" makes communication more natural."
+          "beginner": "We use \"거기\".",
+          "intermediate": "\"거기\" is a frequently used pronoun.",
+          "advanced": "Correct use of \"거기\" is fundamental to Korean grammar.",
+          "master": "Understanding the context of \"거기\" helps distinguish formal and informal expressions."
         },
         "variations": {
           "formal": [
@@ -854,16 +1608,45 @@
           "short": [
             "there"
           ]
+        },
+        "dialogue": {
+          "context": "Learning Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"거기\"?",
+              "romanization": "",
+              "translation": "\"거기\"은 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "거기의 뜻은 'there'입니다.",
+              "romanization": "",
+              "translation": "거기의 뜻은 'there'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I understand.",
+              "romanization": "",
+              "translation": "아, 이해했어요."
+            },
+            {
+              "speaker": "B",
+              "text": "You're doing well!",
+              "romanization": "",
+              "translation": "잘하고 있어요!"
+            }
+          ]
         }
       },
       "ko": {
         "word": "거기",
         "explanation": "거기의 뜻은 'there'입니다.",
         "examples": {
-          "beginner": "\"거기\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"거기\"를 자주 써요.",
-          "advanced": "\"거기\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"거기\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"거기\"을 사용해요.",
+          "intermediate": "\"거기\"은 자주 쓰는 대명사예요.",
+          "advanced": "\"거기\"의 올바른 사용은 한국어 문법의 기본입니다.",
+          "master": "\"거기\"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -876,6 +1659,35 @@
           ],
           "short": [
             "거기"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어를 배우며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"거기\"은 언제 써요?",
+              "romanization": "\"geogi\"eun eonje sseoyo?",
+              "translation": "When do you use \"거기\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "거기의 뜻은 'there'입니다.",
+              "romanization": "geogiui tteuseun 'there'ipnida.",
+              "translation": "거기의 뜻은 'there'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 이해했어요.",
+              "romanization": "a, ihaehaeseoyo.",
+              "translation": "Ah, I understand."
+            },
+            {
+              "speaker": "B",
+              "text": "잘하고 있어요!",
+              "romanization": "jalhago iseoyo!",
+              "translation": "You're doing well!"
+            }
           ]
         }
       }
@@ -900,10 +1712,10 @@
         "word": "where",
         "explanation": "'어디' means 'where' in English.",
         "examples": {
-          "beginner": "We say \"어디\" in Korean.",
-          "intermediate": "In Korea, people often say \"어디\".",
-          "advanced": "\"어디\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"어디\" makes communication more natural."
+          "beginner": "We use \"어디\".",
+          "intermediate": "\"어디\" is a frequently used pronoun.",
+          "advanced": "Correct use of \"어디\" is fundamental to Korean grammar.",
+          "master": "Understanding the context of \"어디\" helps distinguish formal and informal expressions."
         },
         "variations": {
           "formal": [
@@ -917,16 +1729,45 @@
           "short": [
             "where"
           ]
+        },
+        "dialogue": {
+          "context": "Learning Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"어디\"?",
+              "romanization": "",
+              "translation": "\"어디\"은 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "어디의 뜻은 'where'입니다.",
+              "romanization": "",
+              "translation": "어디의 뜻은 'where'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I understand.",
+              "romanization": "",
+              "translation": "아, 이해했어요."
+            },
+            {
+              "speaker": "B",
+              "text": "You're doing well!",
+              "romanization": "",
+              "translation": "잘하고 있어요!"
+            }
+          ]
         }
       },
       "ko": {
         "word": "어디",
         "explanation": "어디의 뜻은 'where'입니다.",
         "examples": {
-          "beginner": "\"어디\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"어디\"를 자주 써요.",
-          "advanced": "\"어디\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"어디\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"어디\"을 사용해요.",
+          "intermediate": "\"어디\"은 자주 쓰는 대명사예요.",
+          "advanced": "\"어디\"의 올바른 사용은 한국어 문법의 기본입니다.",
+          "master": "\"어디\"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -939,6 +1780,35 @@
           ],
           "short": [
             "어디"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어를 배우며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"어디\"은 언제 써요?",
+              "romanization": "\"eodi\"eun eonje sseoyo?",
+              "translation": "When do you use \"어디\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "어디의 뜻은 'where'입니다.",
+              "romanization": "eodiui tteuseun 'where'ipnida.",
+              "translation": "어디의 뜻은 'where'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 이해했어요.",
+              "romanization": "a, ihaehaeseoyo.",
+              "translation": "Ah, I understand."
+            },
+            {
+              "speaker": "B",
+              "text": "잘하고 있어요!",
+              "romanization": "jalhago iseoyo!",
+              "translation": "You're doing well!"
+            }
           ]
         }
       }
@@ -963,10 +1833,10 @@
         "word": "who",
         "explanation": "'누구' means 'who' in English.",
         "examples": {
-          "beginner": "We say \"누구\" in Korean.",
-          "intermediate": "In Korea, people often say \"누구\".",
-          "advanced": "\"누구\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"누구\" makes communication more natural."
+          "beginner": "We use \"누구\".",
+          "intermediate": "\"누구\" is a frequently used pronoun.",
+          "advanced": "Correct use of \"누구\" is fundamental to Korean grammar.",
+          "master": "Understanding the context of \"누구\" helps distinguish formal and informal expressions."
         },
         "variations": {
           "formal": [
@@ -980,16 +1850,45 @@
           "short": [
             "who"
           ]
+        },
+        "dialogue": {
+          "context": "Learning Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"누구\"?",
+              "romanization": "",
+              "translation": "\"누구\"은 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "누구의 뜻은 'who'입니다.",
+              "romanization": "",
+              "translation": "누구의 뜻은 'who'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I understand.",
+              "romanization": "",
+              "translation": "아, 이해했어요."
+            },
+            {
+              "speaker": "B",
+              "text": "You're doing well!",
+              "romanization": "",
+              "translation": "잘하고 있어요!"
+            }
+          ]
         }
       },
       "ko": {
         "word": "누구",
         "explanation": "누구의 뜻은 'who'입니다.",
         "examples": {
-          "beginner": "\"누구\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"누구\"를 자주 써요.",
-          "advanced": "\"누구\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"누구\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"누구\"을 사용해요.",
+          "intermediate": "\"누구\"은 자주 쓰는 대명사예요.",
+          "advanced": "\"누구\"의 올바른 사용은 한국어 문법의 기본입니다.",
+          "master": "\"누구\"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1002,6 +1901,35 @@
           ],
           "short": [
             "누구"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어를 배우며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"누구\"은 언제 써요?",
+              "romanization": "\"nugu\"eun eonje sseoyo?",
+              "translation": "When do you use \"누구\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "누구의 뜻은 'who'입니다.",
+              "romanization": "nuguui tteuseun 'who'ipnida.",
+              "translation": "누구의 뜻은 'who'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 이해했어요.",
+              "romanization": "a, ihaehaeseoyo.",
+              "translation": "Ah, I understand."
+            },
+            {
+              "speaker": "B",
+              "text": "잘하고 있어요!",
+              "romanization": "jalhago iseoyo!",
+              "translation": "You're doing well!"
+            }
           ]
         }
       }
@@ -1026,10 +1954,10 @@
         "word": "what",
         "explanation": "'무엇' means 'what' in English.",
         "examples": {
-          "beginner": "We say \"무엇\" in Korean.",
-          "intermediate": "In Korea, people often say \"무엇\".",
-          "advanced": "\"무엇\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"무엇\" makes communication more natural."
+          "beginner": "We use \"무엇\".",
+          "intermediate": "\"무엇\" is a frequently used pronoun.",
+          "advanced": "Correct use of \"무엇\" is fundamental to Korean grammar.",
+          "master": "Understanding the context of \"무엇\" helps distinguish formal and informal expressions."
         },
         "variations": {
           "formal": [
@@ -1043,16 +1971,45 @@
           "short": [
             "what"
           ]
+        },
+        "dialogue": {
+          "context": "Learning Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"무엇\"?",
+              "romanization": "",
+              "translation": "\"무엇\"은 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "무엇의 뜻은 'what'입니다.",
+              "romanization": "",
+              "translation": "무엇의 뜻은 'what'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I understand.",
+              "romanization": "",
+              "translation": "아, 이해했어요."
+            },
+            {
+              "speaker": "B",
+              "text": "You're doing well!",
+              "romanization": "",
+              "translation": "잘하고 있어요!"
+            }
+          ]
         }
       },
       "ko": {
         "word": "무엇",
         "explanation": "무엇의 뜻은 'what'입니다.",
         "examples": {
-          "beginner": "\"무엇\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"무엇\"를 자주 써요.",
-          "advanced": "\"무엇\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"무엇\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"무엇\"을 사용해요.",
+          "intermediate": "\"무엇\"은 자주 쓰는 대명사예요.",
+          "advanced": "\"무엇\"의 올바른 사용은 한국어 문법의 기본입니다.",
+          "master": "\"무엇\"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1065,6 +2022,35 @@
           ],
           "short": [
             "무엇"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어를 배우며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"무엇\"은 언제 써요?",
+              "romanization": "\"mueos\"eun eonje sseoyo?",
+              "translation": "When do you use \"무엇\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "무엇의 뜻은 'what'입니다.",
+              "romanization": "mueosui tteuseun 'what'ipnida.",
+              "translation": "무엇의 뜻은 'what'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 이해했어요.",
+              "romanization": "a, ihaehaeseoyo.",
+              "translation": "Ah, I understand."
+            },
+            {
+              "speaker": "B",
+              "text": "잘하고 있어요!",
+              "romanization": "jalhago iseoyo!",
+              "translation": "You're doing well!"
+            }
           ]
         }
       }
@@ -1089,10 +2075,10 @@
         "word": "what",
         "explanation": "'뭐' means 'what' in English.",
         "examples": {
-          "beginner": "We say \"뭐\" in Korean.",
-          "intermediate": "In Korea, people often say \"뭐\".",
-          "advanced": "\"뭐\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"뭐\" makes communication more natural."
+          "beginner": "We use \"뭐\".",
+          "intermediate": "\"뭐\" is a frequently used pronoun.",
+          "advanced": "Correct use of \"뭐\" is fundamental to Korean grammar.",
+          "master": "Understanding the context of \"뭐\" helps distinguish formal and informal expressions."
         },
         "variations": {
           "formal": [
@@ -1106,16 +2092,45 @@
           "short": [
             "what"
           ]
+        },
+        "dialogue": {
+          "context": "Learning Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"뭐\"?",
+              "romanization": "",
+              "translation": "\"뭐\"은 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "뭐의 뜻은 'what'입니다.",
+              "romanization": "",
+              "translation": "뭐의 뜻은 'what'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I understand.",
+              "romanization": "",
+              "translation": "아, 이해했어요."
+            },
+            {
+              "speaker": "B",
+              "text": "You're doing well!",
+              "romanization": "",
+              "translation": "잘하고 있어요!"
+            }
+          ]
         }
       },
       "ko": {
         "word": "뭐",
         "explanation": "뭐의 뜻은 'what'입니다.",
         "examples": {
-          "beginner": "\"뭐\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"뭐\"를 자주 써요.",
-          "advanced": "\"뭐\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"뭐\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"뭐\"을 사용해요.",
+          "intermediate": "\"뭐\"은 자주 쓰는 대명사예요.",
+          "advanced": "\"뭐\"의 올바른 사용은 한국어 문법의 기본입니다.",
+          "master": "\"뭐\"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1128,6 +2143,35 @@
           ],
           "short": [
             "뭐"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어를 배우며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"뭐\"은 언제 써요?",
+              "romanization": "\"mwo\"eun eonje sseoyo?",
+              "translation": "When do you use \"뭐\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "뭐의 뜻은 'what'입니다.",
+              "romanization": "mwoui tteuseun 'what'ipnida.",
+              "translation": "뭐의 뜻은 'what'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 이해했어요.",
+              "romanization": "a, ihaehaeseoyo.",
+              "translation": "Ah, I understand."
+            },
+            {
+              "speaker": "B",
+              "text": "잘하고 있어요!",
+              "romanization": "jalhago iseoyo!",
+              "translation": "You're doing well!"
+            }
           ]
         }
       }
@@ -1152,10 +2196,10 @@
         "word": "when",
         "explanation": "'언제' means 'when' in English.",
         "examples": {
-          "beginner": "We say \"언제\" in Korean.",
-          "intermediate": "In Korea, people often say \"언제\".",
-          "advanced": "\"언제\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"언제\" makes communication more natural."
+          "beginner": "We use \"언제\".",
+          "intermediate": "\"언제\" is a frequently used pronoun.",
+          "advanced": "Correct use of \"언제\" is fundamental to Korean grammar.",
+          "master": "Understanding the context of \"언제\" helps distinguish formal and informal expressions."
         },
         "variations": {
           "formal": [
@@ -1169,16 +2213,45 @@
           "short": [
             "when"
           ]
+        },
+        "dialogue": {
+          "context": "Learning Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"언제\"?",
+              "romanization": "",
+              "translation": "\"언제\"은 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "언제의 뜻은 'when'입니다.",
+              "romanization": "",
+              "translation": "언제의 뜻은 'when'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I understand.",
+              "romanization": "",
+              "translation": "아, 이해했어요."
+            },
+            {
+              "speaker": "B",
+              "text": "You're doing well!",
+              "romanization": "",
+              "translation": "잘하고 있어요!"
+            }
+          ]
         }
       },
       "ko": {
         "word": "언제",
         "explanation": "언제의 뜻은 'when'입니다.",
         "examples": {
-          "beginner": "\"언제\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"언제\"를 자주 써요.",
-          "advanced": "\"언제\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"언제\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"언제\"을 사용해요.",
+          "intermediate": "\"언제\"은 자주 쓰는 대명사예요.",
+          "advanced": "\"언제\"의 올바른 사용은 한국어 문법의 기본입니다.",
+          "master": "\"언제\"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1191,6 +2264,35 @@
           ],
           "short": [
             "언제"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어를 배우며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"언제\"은 언제 써요?",
+              "romanization": "\"eonje\"eun eonje sseoyo?",
+              "translation": "When do you use \"언제\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "언제의 뜻은 'when'입니다.",
+              "romanization": "eonjeui tteuseun 'when'ipnida.",
+              "translation": "언제의 뜻은 'when'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 이해했어요.",
+              "romanization": "a, ihaehaeseoyo.",
+              "translation": "Ah, I understand."
+            },
+            {
+              "speaker": "B",
+              "text": "잘하고 있어요!",
+              "romanization": "jalhago iseoyo!",
+              "translation": "You're doing well!"
+            }
           ]
         }
       }
@@ -1215,10 +2317,10 @@
         "word": "why",
         "explanation": "'왜' means 'why' in English.",
         "examples": {
-          "beginner": "We say \"왜\" in Korean.",
-          "intermediate": "In Korea, people often say \"왜\".",
-          "advanced": "\"왜\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"왜\" makes communication more natural."
+          "beginner": "We use \"왜\".",
+          "intermediate": "\"왜\" is a frequently used pronoun.",
+          "advanced": "Correct use of \"왜\" is fundamental to Korean grammar.",
+          "master": "Understanding the context of \"왜\" helps distinguish formal and informal expressions."
         },
         "variations": {
           "formal": [
@@ -1232,16 +2334,45 @@
           "short": [
             "why"
           ]
+        },
+        "dialogue": {
+          "context": "Learning Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"왜\"?",
+              "romanization": "",
+              "translation": "\"왜\"은 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "왜의 뜻은 'why'입니다.",
+              "romanization": "",
+              "translation": "왜의 뜻은 'why'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I understand.",
+              "romanization": "",
+              "translation": "아, 이해했어요."
+            },
+            {
+              "speaker": "B",
+              "text": "You're doing well!",
+              "romanization": "",
+              "translation": "잘하고 있어요!"
+            }
+          ]
         }
       },
       "ko": {
         "word": "왜",
         "explanation": "왜의 뜻은 'why'입니다.",
         "examples": {
-          "beginner": "\"왜\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"왜\"를 자주 써요.",
-          "advanced": "\"왜\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"왜\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"왜\"을 사용해요.",
+          "intermediate": "\"왜\"은 자주 쓰는 대명사예요.",
+          "advanced": "\"왜\"의 올바른 사용은 한국어 문법의 기본입니다.",
+          "master": "\"왜\"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1254,6 +2385,35 @@
           ],
           "short": [
             "왜"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어를 배우며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"왜\"은 언제 써요?",
+              "romanization": "\"wae\"eun eonje sseoyo?",
+              "translation": "When do you use \"왜\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "왜의 뜻은 'why'입니다.",
+              "romanization": "waeui tteuseun 'why'ipnida.",
+              "translation": "왜의 뜻은 'why'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 이해했어요.",
+              "romanization": "a, ihaehaeseoyo.",
+              "translation": "Ah, I understand."
+            },
+            {
+              "speaker": "B",
+              "text": "잘하고 있어요!",
+              "romanization": "jalhago iseoyo!",
+              "translation": "You're doing well!"
+            }
           ]
         }
       }
@@ -1278,10 +2438,10 @@
         "word": "how",
         "explanation": "'어떻게' means 'how' in English.",
         "examples": {
-          "beginner": "We say \"어떻게\" in Korean.",
-          "intermediate": "In Korea, people often say \"어떻게\".",
-          "advanced": "\"어떻게\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"어떻게\" makes communication more natural."
+          "beginner": "We use \"어떻게\".",
+          "intermediate": "\"어떻게\" is a frequently used pronoun.",
+          "advanced": "Correct use of \"어떻게\" is fundamental to Korean grammar.",
+          "master": "Understanding the context of \"어떻게\" helps distinguish formal and informal expressions."
         },
         "variations": {
           "formal": [
@@ -1295,16 +2455,45 @@
           "short": [
             "how"
           ]
+        },
+        "dialogue": {
+          "context": "Learning Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"어떻게\"?",
+              "romanization": "",
+              "translation": "\"어떻게\"은 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "어떻게의 뜻은 'how'입니다.",
+              "romanization": "",
+              "translation": "어떻게의 뜻은 'how'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I understand.",
+              "romanization": "",
+              "translation": "아, 이해했어요."
+            },
+            {
+              "speaker": "B",
+              "text": "You're doing well!",
+              "romanization": "",
+              "translation": "잘하고 있어요!"
+            }
+          ]
         }
       },
       "ko": {
         "word": "어떻게",
         "explanation": "어떻게의 뜻은 'how'입니다.",
         "examples": {
-          "beginner": "\"어떻게\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"어떻게\"를 자주 써요.",
-          "advanced": "\"어떻게\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"어떻게\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"어떻게\"을 사용해요.",
+          "intermediate": "\"어떻게\"은 자주 쓰는 대명사예요.",
+          "advanced": "\"어떻게\"의 올바른 사용은 한국어 문법의 기본입니다.",
+          "master": "\"어떻게\"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1317,6 +2506,35 @@
           ],
           "short": [
             "어떻"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어를 배우며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"어떻게\"은 언제 써요?",
+              "romanization": "\"eotteotge\"eun eonje sseoyo?",
+              "translation": "When do you use \"어떻게\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "어떻게의 뜻은 'how'입니다.",
+              "romanization": "eotteotgeui tteuseun 'how'ipnida.",
+              "translation": "어떻게의 뜻은 'how'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 이해했어요.",
+              "romanization": "a, ihaehaeseoyo.",
+              "translation": "Ah, I understand."
+            },
+            {
+              "speaker": "B",
+              "text": "잘하고 있어요!",
+              "romanization": "jalhago iseoyo!",
+              "translation": "You're doing well!"
+            }
           ]
         }
       }
@@ -1341,10 +2559,10 @@
         "word": "there",
         "explanation": "'저기' means 'there' in English.",
         "examples": {
-          "beginner": "We say \"저기\" in Korean.",
-          "intermediate": "In Korea, people often say \"저기\".",
-          "advanced": "\"저기\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"저기\" makes communication more natural."
+          "beginner": "We use \"저기\".",
+          "intermediate": "\"저기\" is a frequently used pronoun.",
+          "advanced": "Correct use of \"저기\" is fundamental to Korean grammar.",
+          "master": "Understanding the context of \"저기\" helps distinguish formal and informal expressions."
         },
         "variations": {
           "formal": [
@@ -1358,16 +2576,45 @@
           "short": [
             "there"
           ]
+        },
+        "dialogue": {
+          "context": "Learning Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"저기\"?",
+              "romanization": "",
+              "translation": "\"저기\"은 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "저기의 뜻은 'there'입니다.",
+              "romanization": "",
+              "translation": "저기의 뜻은 'there'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I understand.",
+              "romanization": "",
+              "translation": "아, 이해했어요."
+            },
+            {
+              "speaker": "B",
+              "text": "You're doing well!",
+              "romanization": "",
+              "translation": "잘하고 있어요!"
+            }
+          ]
         }
       },
       "ko": {
         "word": "저기",
         "explanation": "저기의 뜻은 'there'입니다.",
         "examples": {
-          "beginner": "\"저기\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"저기\"를 자주 써요.",
-          "advanced": "\"저기\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"저기\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"저기\"을 사용해요.",
+          "intermediate": "\"저기\"은 자주 쓰는 대명사예요.",
+          "advanced": "\"저기\"의 올바른 사용은 한국어 문법의 기본입니다.",
+          "master": "\"저기\"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1380,6 +2627,35 @@
           ],
           "short": [
             "저기"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어를 배우며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"저기\"은 언제 써요?",
+              "romanization": "\"jeogi\"eun eonje sseoyo?",
+              "translation": "When do you use \"저기\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "저기의 뜻은 'there'입니다.",
+              "romanization": "jeogiui tteuseun 'there'ipnida.",
+              "translation": "저기의 뜻은 'there'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 이해했어요.",
+              "romanization": "a, ihaehaeseoyo.",
+              "translation": "Ah, I understand."
+            },
+            {
+              "speaker": "B",
+              "text": "잘하고 있어요!",
+              "romanization": "jalhago iseoyo!",
+              "translation": "You're doing well!"
+            }
           ]
         }
       }
@@ -1404,10 +2680,10 @@
         "word": "because",
         "explanation": "'왜냐하면' means 'because' in English.",
         "examples": {
-          "beginner": "We say \"왜냐하면\" in Korean.",
-          "intermediate": "In Korea, people often say \"왜냐하면\".",
-          "advanced": "\"왜냐하면\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"왜냐하면\" makes communication more natural."
+          "beginner": "We use \"왜냐하면\".",
+          "intermediate": "\"왜냐하면\" is a frequently used pronoun.",
+          "advanced": "Correct use of \"왜냐하면\" is fundamental to Korean grammar.",
+          "master": "Understanding the context of \"왜냐하면\" helps distinguish formal and informal expressions."
         },
         "variations": {
           "formal": [
@@ -1421,16 +2697,45 @@
           "short": [
             "because"
           ]
+        },
+        "dialogue": {
+          "context": "Learning Korean",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "When do you use \"왜냐하면\"?",
+              "romanization": "",
+              "translation": "\"왜냐하면\"은 언제 써요?"
+            },
+            {
+              "speaker": "B",
+              "text": "왜냐하면의 뜻은 'because'입니다.",
+              "romanization": "",
+              "translation": "왜냐하면의 뜻은 'because'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Ah, I understand.",
+              "romanization": "",
+              "translation": "아, 이해했어요."
+            },
+            {
+              "speaker": "B",
+              "text": "You're doing well!",
+              "romanization": "",
+              "translation": "잘하고 있어요!"
+            }
+          ]
         }
       },
       "ko": {
         "word": "왜냐하면",
         "explanation": "왜냐하면의 뜻은 'because'입니다.",
         "examples": {
-          "beginner": "\"왜냐하면\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"왜냐하면\"를 자주 써요.",
-          "advanced": "\"왜냐하면\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"왜냐하면\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "\"왜냐하면\"을 사용해요.",
+          "intermediate": "\"왜냐하면\"은 자주 쓰는 대명사예요.",
+          "advanced": "\"왜냐하면\"의 올바른 사용은 한국어 문법의 기본입니다.",
+          "master": "\"왜냐하면\"의 사용 맥락을 이해하면 격식과 비격식 표현을 구분할 수 있습니다."
         },
         "variations": {
           "formal": [
@@ -1443,6 +2748,35 @@
           ],
           "short": [
             "왜냐"
+          ]
+        },
+        "dialogue": {
+          "context": "한국어를 배우며",
+          "dialogue": [
+            {
+              "speaker": "A",
+              "text": "\"왜냐하면\"은 언제 써요?",
+              "romanization": "\"waenyahamyeon\"eun eonje sseoyo?",
+              "translation": "When do you use \"왜냐하면\"?"
+            },
+            {
+              "speaker": "B",
+              "text": "왜냐하면의 뜻은 'because'입니다.",
+              "romanization": "waenyahamyeonui tteuseun 'because'ipnida.",
+              "translation": "왜냐하면의 뜻은 'because'입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "아, 이해했어요.",
+              "romanization": "a, ihaehaeseoyo.",
+              "translation": "Ah, I understand."
+            },
+            {
+              "speaker": "B",
+              "text": "잘하고 있어요!",
+              "romanization": "jalhago iseoyo!",
+              "translation": "You're doing well!"
+            }
           ]
         }
       }

@@ -20,10 +20,10 @@
         "word": "그리고",
         "explanation": "앞의 내용에 뒤의 내용을 더할 때 쓰는 접속사입니다. 문장과 문장을 연결하거나 나열할 때 사용합니다.",
         "examples": {
-          "beginner": "사과 그리고 바나나를 샀어요.",
-          "intermediate": "공부를 했어요. 그리고 운동도 했어요.",
-          "advanced": "그리고는 병렬 접속사로, 대등한 내용을 연결한다.",
-          "master": "구어체에서는 '그리고'를 '그리구'로 발음하는 경우도 있다."
+          "beginner": "\"그리고\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"그리고\"의 역할이 중요해요.",
+          "advanced": "\"그리고\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"그리고\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -38,19 +38,31 @@
           ]
         },
         "dialogue": {
-          "context": "쇼핑 목록을 말하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 사야 해?",
-              "romanization": "mwo saya hae?",
-              "translation": "What do we need to buy?"
+              "text": "\"그리고\"은 언제 써요?",
+              "romanization": "\"geurigo\"eun eonje sseoyo?",
+              "translation": "When do you use \"그리고\"?"
             },
             {
               "speaker": "B",
-              "text": "우유, 빵, 그리고 계란.",
-              "romanization": "uyu, ppang, geurigo gyeran.",
-              "translation": "Milk, bread, and eggs."
+              "text": "앞의 내용에 뒤의 내용을 더할 때 쓰는 접속사입니다. 문장과 문장을 연결하거나 나열할 때 사용합니다.",
+              "romanization": "apui naeyonge dwiui naeyongeul deohal ttae sseuneun jeopsoksaipnida. munjanggwa munjangeul yeongyeolhageona nayeolhal ttae sayonghapnida.",
+              "translation": "앞의 내용에 뒤의 내용을 더할 때 쓰는 접속사입니다. 문장과 문장을 연결하거나 나열할 때 사용합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -59,10 +71,10 @@
         "word": "and / and then",
         "explanation": "A conjunction used to add or list items. It connects sentences or items of equal importance. Equivalent to 'and' or 'and then' in English.",
         "examples": {
-          "beginner": "I bought apples and bananas.",
-          "intermediate": "I studied. And I also exercised.",
-          "advanced": "'그리고' is a parallel conjunction that connects equal content.",
-          "master": "In casual speech, '그리고' is sometimes pronounced as '그리구'."
+          "beginner": "Make a sentence using \"그리고\".",
+          "intermediate": "The role of \"그리고\" is important in this sentence.",
+          "advanced": "Correct use of \"그리고\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"그리고\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -77,19 +89,31 @@
           ]
         },
         "dialogue": {
-          "context": "Going over a shopping list",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What do we need to buy?",
+              "text": "When do you use \"그리고\"?",
               "romanization": "",
-              "translation": "뭐 사야 해?"
+              "translation": "\"그리고\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "Milk, bread, and eggs.",
+              "text": "앞의 내용에 뒤의 내용을 더할 때 쓰는 접속사입니다. 문장과 문장을 연결하거나 나열할 때 사용합니다.",
               "romanization": "",
-              "translation": "우유, 빵, 그리고 계란."
+              "translation": "앞의 내용에 뒤의 내용을 더할 때 쓰는 접속사입니다. 문장과 문장을 연결하거나 나열할 때 사용합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -121,10 +145,10 @@
         "word": "하지만",
         "explanation": "앞의 내용과 반대되거나 대조되는 내용을 연결하는 접속사입니다. '그렇지만', '그러나'와 같은 뜻입니다.",
         "examples": {
-          "beginner": "비싸요. 하지만 맛있어요.",
-          "intermediate": "피곤해요. 하지만 공부해야 해요.",
-          "advanced": "하지만은 역접 접속사로, 앞 내용과 대조되는 내용을 이끈다.",
-          "master": "하지만과 그러나의 차이는 구어/문어 차이가 크다."
+          "beginner": "\"하지만\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"하지만\"의 역할이 중요해요.",
+          "advanced": "\"하지만\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"하지만\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -140,19 +164,31 @@
           ]
         },
         "dialogue": {
-          "context": "식당 추천하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "이 식당 맛있어. 하지만 좀 비싸.",
-              "romanization": "i sikdang masisseo. hajiman jom bissa.",
-              "translation": "This restaurant is good. But it's a bit expensive."
+              "text": "\"하지만\"은 언제 써요?",
+              "romanization": "\"hajiman\"eun eonje sseoyo?",
+              "translation": "When do you use \"하지만\"?"
             },
             {
               "speaker": "B",
-              "text": "괜찮아, 오늘은 특별한 날이니까.",
-              "romanization": "gwaenchana, oneureun teukbyeolhan narnikka.",
-              "translation": "That's okay, it's a special day."
+              "text": "앞의 내용과 반대되거나 대조되는 내용을 연결하는 접속사입니다. '그렇지만', '그러나'와 같은 뜻입니다.",
+              "romanization": "apui naeyonggwa bandaedoegeona daejodoeneun naeyongeul yeongyeolhaneun jeopsoksaipnida. 'geureotjiman', 'geureona'wa gateun tteusipnida.",
+              "translation": "앞의 내용과 반대되거나 대조되는 내용을 연결하는 접속사입니다. '그렇지만', '그러나'와 같은 뜻입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -161,10 +197,10 @@
         "word": "but / however",
         "explanation": "A conjunction that introduces a contrasting or opposing idea. Equivalent to 'but' or 'however.' Similar expressions include '그렇지만' and '그러나' (more formal/literary).",
         "examples": {
-          "beginner": "It's expensive. But it's delicious.",
-          "intermediate": "I'm tired. But I have to study.",
-          "advanced": "'하지만' is an adversative conjunction introducing contrasting content.",
-          "master": "The difference between '하지만' and '그러나' largely lies in spoken vs. written register."
+          "beginner": "Make a sentence using \"하지만\".",
+          "intermediate": "The role of \"하지만\" is important in this sentence.",
+          "advanced": "Correct use of \"하지만\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"하지만\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -180,19 +216,31 @@
           ]
         },
         "dialogue": {
-          "context": "Recommending a restaurant",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "This restaurant is good. But it's a bit expensive.",
+              "text": "When do you use \"하지만\"?",
               "romanization": "",
-              "translation": "이 식당 맛있어. 하지만 좀 비싸."
+              "translation": "\"하지만\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "That's okay, it's a special day.",
+              "text": "앞의 내용과 반대되거나 대조되는 내용을 연결하는 접속사입니다. '그렇지만', '그러나'와 같은 뜻입니다.",
               "romanization": "",
-              "translation": "괜찮아, 오늘은 특별한 날이니까."
+              "translation": "앞의 내용과 반대되거나 대조되는 내용을 연결하는 접속사입니다. '그렇지만', '그러나'와 같은 뜻입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -223,10 +271,10 @@
         "word": "그래서",
         "explanation": "앞 문장의 원인이나 이유에 대한 결과를 나타내는 접속사입니다. '그러므로', '따라서'보다 구어적인 표현입니다.",
         "examples": {
-          "beginner": "비가 와요. 그래서 우산을 가져갔어요.",
-          "intermediate": "시험이 있어요. 그래서 열심히 공부해요.",
-          "advanced": "그래서는 인과 접속사로, 원인과 결과를 연결한다.",
-          "master": "그래서와 그러니까의 차이는 결과 서술과 이유 강조의 차이이다."
+          "beginner": "\"그래서\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"그래서\"의 역할이 중요해요.",
+          "advanced": "\"그래서\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"그래서\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -242,19 +290,31 @@
           ]
         },
         "dialogue": {
-          "context": "이야기하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "어제 늦게 잤어.",
-              "romanization": "eoje neutge jasseo.",
-              "translation": "I went to bed late yesterday."
+              "text": "\"그래서\"은 언제 써요?",
+              "romanization": "\"geuraeseo\"eun eonje sseoyo?",
+              "translation": "When do you use \"그래서\"?"
             },
             {
               "speaker": "B",
-              "text": "그래서 피곤해 보이는구나.",
-              "romanization": "geuraeseo pigonhae boineguna.",
-              "translation": "So that's why you look tired."
+              "text": "앞 문장의 원인이나 이유에 대한 결과를 나타내는 접속사입니다. '그러므로', '따라서'보다 구어적인 표현입니다.",
+              "romanization": "ap munjangui woninina iyue daehan gyeolgwareul natanaeneun jeopsoksaipnida. 'geureomeuro', 'ttaraseo'boda gueojeokin pyohyeonipnida.",
+              "translation": "앞 문장의 원인이나 이유에 대한 결과를 나타내는 접속사입니다. '그러므로', '따라서'보다 구어적인 표현입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -263,10 +323,10 @@
         "word": "so / therefore",
         "explanation": "A conjunction that shows the result or consequence of a preceding cause. More conversational than '그러므로' or '따라서' (therefore — more formal/written).",
         "examples": {
-          "beginner": "It's raining. So I brought an umbrella.",
-          "intermediate": "There's an exam. So I'm studying hard.",
-          "advanced": "'그래서' is a causal conjunction connecting cause and effect.",
-          "master": "The difference between '그래서' and '그러니까' is stating a result vs. emphasizing a reason."
+          "beginner": "Make a sentence using \"그래서\".",
+          "intermediate": "The role of \"그래서\" is important in this sentence.",
+          "advanced": "Correct use of \"그래서\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"그래서\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -282,19 +342,31 @@
           ]
         },
         "dialogue": {
-          "context": "Chatting",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "I went to bed late yesterday.",
+              "text": "When do you use \"그래서\"?",
               "romanization": "",
-              "translation": "어제 늦게 잤어."
+              "translation": "\"그래서\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "So that's why you look tired.",
+              "text": "앞 문장의 원인이나 이유에 대한 결과를 나타내는 접속사입니다. '그러므로', '따라서'보다 구어적인 표현입니다.",
               "romanization": "",
-              "translation": "그래서 피곤해 보이는구나."
+              "translation": "앞 문장의 원인이나 이유에 대한 결과를 나타내는 접속사입니다. '그러므로', '따라서'보다 구어적인 표현입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -325,10 +397,10 @@
         "word": "-고",
         "explanation": "동사나 형용사 어간 뒤에 붙어 두 가지 동작이나 상태를 나열하는 연결어미입니다. 시간 순서(~하고 나서) 또는 동시 동작(~하면서)을 나타냅니다.",
         "examples": {
-          "beginner": "밥을 먹고 학교에 갔어요.",
-          "intermediate": "노래를 듣고 춤을 춰요.",
-          "advanced": "-고는 대등적 연결어미로, 나열, 순서, 대조를 나타낸다.",
-          "master": "-고의 시제는 뒤 절의 시제에 의존하며, 앞 절에는 시제 표시를 하지 않는다."
+          "beginner": "\"-고\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"-고\"의 역할이 중요해요.",
+          "advanced": "\"-고\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"-고\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -343,19 +415,31 @@
           ]
         },
         "dialogue": {
-          "context": "하루 일과를 말하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "오늘 뭐 했어?",
-              "romanization": "oneul mwo haesseo?",
-              "translation": "What did you do today?"
+              "text": "\"-고\"은 언제 써요?",
+              "romanization": "\"-go\"eun eonje sseoyo?",
+              "translation": "When do you use \"-고\"?"
             },
             {
               "speaker": "B",
-              "text": "운동하고 친구 만났어.",
-              "romanization": "undonghago chingu mannasseo.",
-              "translation": "I exercised and met a friend."
+              "text": "동사나 형용사 어간 뒤에 붙어 두 가지 동작이나 상태를 나열하는 연결어미입니다. 시간 순서(~하고 나서) 또는 동시 동작(~하면서)을 나타냅니다.",
+              "romanization": "dongsana hyeongyongsa eogan dwie buteo du gaji dongjakina sangtaereul nayeolhaneun yeongyeoleomiipnida. sigan sunseo(~hago naseo) ttoneun dongsi dongjak(~hamyeonseo)eul natanaepnida.",
+              "translation": "동사나 형용사 어간 뒤에 붙어 두 가지 동작이나 상태를 나열하는 연결어미입니다. 시간 순서(~하고 나서) 또는 동시 동작(~하면서)을 나타냅니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -364,10 +448,10 @@
         "word": "-go (and / and then)",
         "explanation": "A connective ending attached to verb/adjective stems to list two actions or states. Can indicate sequential actions (did X and then Y) or simultaneous actions. The tense is determined by the final verb.",
         "examples": {
-          "beginner": "I ate and went to school.",
-          "intermediate": "I listen to music and dance.",
-          "advanced": "'-고' is a coordinating connective ending for listing, sequencing, or contrasting.",
-          "master": "The tense of '-고' depends on the final clause; the preceding clause doesn't carry its own tense marker."
+          "beginner": "Make a sentence using \"-고\".",
+          "intermediate": "The role of \"-고\" is important in this sentence.",
+          "advanced": "Correct use of \"-고\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"-고\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -382,19 +466,31 @@
           ]
         },
         "dialogue": {
-          "context": "Talking about the day",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What did you do today?",
+              "text": "When do you use \"-고\"?",
               "romanization": "",
-              "translation": "오늘 뭐 했어?"
+              "translation": "\"-고\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "I exercised and met a friend.",
+              "text": "동사나 형용사 어간 뒤에 붙어 두 가지 동작이나 상태를 나열하는 연결어미입니다. 시간 순서(~하고 나서) 또는 동시 동작(~하면서)을 나타냅니다.",
               "romanization": "",
-              "translation": "운동하고 친구 만났어."
+              "translation": "동사나 형용사 어간 뒤에 붙어 두 가지 동작이나 상태를 나열하는 연결어미입니다. 시간 순서(~하고 나서) 또는 동시 동작(~하면서)을 나타냅니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -425,10 +521,10 @@
         "word": "-면 / -으면",
         "explanation": "조건을 나타내는 연결어미입니다. '~한다면', '~할 경우'의 뜻입니다. 받침이 있으면 '-으면', 없으면 '-면'을 씁니다.",
         "examples": {
-          "beginner": "시간이 있으면 같이 가요.",
-          "intermediate": "비가 오면 집에 있을 거예요.",
-          "advanced": "-면은 가정, 조건, 전제를 나타내는 연결어미이다.",
-          "master": "-면의 쓰임은 조건문뿐 아니라 소망(-면 좋겠다), 습관(-면 ~하다) 등에도 확장된다."
+          "beginner": "\"-면\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"-면\"의 역할이 중요해요.",
+          "advanced": "\"-면\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"-면\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -443,19 +539,31 @@
           ]
         },
         "dialogue": {
-          "context": "약속을 정하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "내일 시간 되면 만날까?",
-              "romanization": "naeil sigan doemyeon mannalkka?",
-              "translation": "Shall we meet tomorrow if you're free?"
+              "text": "\"-면\"은 언제 써요?",
+              "romanization": "\"-myeon\"eun eonje sseoyo?",
+              "translation": "When do you use \"-면\"?"
             },
             {
               "speaker": "B",
-              "text": "좋아, 오후면 괜찮아.",
-              "romanization": "joa, ohumyeon gwaenchana.",
-              "translation": "Sure, afternoon works for me."
+              "text": "조건을 나타내는 연결어미입니다. '~한다면', '~할 경우'의 뜻입니다. 받침이 있으면 '-으면', 없으면 '-면'을 씁니다.",
+              "romanization": "jogeoneul natanaeneun yeongyeoleomiipnida. '~handamyeon', '~hal gyeongu'ui tteusipnida. batchimi iseumyeon '-eumyeon', eopeumyeon '-myeon'eul sseupnida.",
+              "translation": "조건을 나타내는 연결어미입니다. '~한다면', '~할 경우'의 뜻입니다. 받침이 있으면 '-으면', 없으면 '-면'을 씁니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -464,10 +572,10 @@
         "word": "-myeon (if / when)",
         "explanation": "A conditional connective ending meaning 'if' or 'when.' Use '-으면' after consonants and '-면' after vowels. Beyond simple conditionals, it extends to wishes (-면 좋겠다 = 'I wish') and habitual actions.",
         "examples": {
-          "beginner": "If you have time, let's go together.",
-          "intermediate": "If it rains, I'll stay home.",
-          "advanced": "'-면' is a connective ending expressing conditions, assumptions, and premises.",
-          "master": "'-면' extends beyond conditionals to express wishes (-면 좋겠다) and habitual actions."
+          "beginner": "Make a sentence using \"-면\".",
+          "intermediate": "The role of \"-면\" is important in this sentence.",
+          "advanced": "Correct use of \"-면\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"-면\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -482,19 +590,31 @@
           ]
         },
         "dialogue": {
-          "context": "Making plans",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Shall we meet tomorrow if you're free?",
+              "text": "When do you use \"-면\"?",
               "romanization": "",
-              "translation": "내일 시간 되면 만날까?"
+              "translation": "\"-면\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "Sure, afternoon works for me.",
+              "text": "조건을 나타내는 연결어미입니다. '~한다면', '~할 경우'의 뜻입니다. 받침이 있으면 '-으면', 없으면 '-면'을 씁니다.",
               "romanization": "",
-              "translation": "좋아, 오후면 괜찮아."
+              "translation": "조건을 나타내는 연결어미입니다. '~한다면', '~할 경우'의 뜻입니다. 받침이 있으면 '-으면', 없으면 '-면'을 씁니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -526,10 +646,10 @@
         "word": "그런데",
         "explanation": "앞의 내용과 대조되는 내용을 이어가거나, 화제를 전환할 때 사용하는 접속사입니다. 구어에서 '근데'로 줄여 쓰기도 합니다.",
         "examples": {
-          "beginner": "맛있어요. 그런데 너무 매워요.",
-          "intermediate": "열심히 공부했어요. 그런데 시험을 못 봤어요.",
-          "advanced": "그런데는 역접과 화제 전환을 모두 나타내는 다기능 접속사이다.",
-          "master": "'그런데'의 축약형 '근데'는 구어에서 가장 빈번히 사용되는 접속사 중 하나이다."
+          "beginner": "\"그런데\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"그런데\"의 역할이 중요해요.",
+          "advanced": "\"그런데\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"그런데\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -544,19 +664,31 @@
           ]
         },
         "dialogue": {
-          "context": "친구와 대화하면서 화제를 바꿀 때",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "오늘 날씨 좋다. 그런데 내일 비 온대.",
-              "romanization": "oneul nalssi jota. geureonde naeil bi ondae.",
-              "translation": "The weather is nice today. But I heard it'll rain tomorrow."
+              "text": "\"그런데\"은 언제 써요?",
+              "romanization": "\"geureonde\"eun eonje sseoyo?",
+              "translation": "When do you use \"그런데\"?"
             },
             {
               "speaker": "B",
-              "text": "정말? 그럼 우산 가져가야겠다.",
-              "romanization": "jeongmal? geureom usan gajyeogayagetda.",
-              "translation": "Really? Then I should bring an umbrella."
+              "text": "앞의 내용과 대조되는 내용을 이어가거나, 화제를 전환할 때 사용하는 접속사입니다. 구어에서 '근데'로 줄여 쓰기도 합니다.",
+              "romanization": "apui naeyonggwa daejodoeneun naeyongeul ieogageona, hwajereul jeonhwanhal ttae sayonghaneun jeopsoksaipnida. gueoeseo 'geunde'ro julyeo sseugido hapnida.",
+              "translation": "앞의 내용과 대조되는 내용을 이어가거나, 화제를 전환할 때 사용하는 접속사입니다. 구어에서 '근데'로 줄여 쓰기도 합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -565,10 +697,10 @@
         "word": "but / by the way",
         "explanation": "A conjunction used to introduce contrasting information or to change the topic. Often shortened to '근데' in casual speech. Functions both as 'but' (contrast) and 'by the way' (topic shift).",
         "examples": {
-          "beginner": "It's delicious. But it's too spicy.",
-          "intermediate": "I studied hard. But I didn't do well on the exam.",
-          "advanced": "'그런데' is a multifunctional conjunction for both contrast and topic change.",
-          "master": "The shortened form '근데' is one of the most frequently used conjunctions in spoken Korean."
+          "beginner": "Make a sentence using \"그런데\".",
+          "intermediate": "The role of \"그런데\" is important in this sentence.",
+          "advanced": "Correct use of \"그런데\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"그런데\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -583,19 +715,31 @@
           ]
         },
         "dialogue": {
-          "context": "Changing the topic during a conversation",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "The weather is nice today. But I heard it'll rain tomorrow.",
+              "text": "When do you use \"그런데\"?",
               "romanization": "",
-              "translation": "오늘 날씨 좋다. 그런데 내일 비 온대."
+              "translation": "\"그런데\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "Really? Then I should bring an umbrella.",
+              "text": "앞의 내용과 대조되는 내용을 이어가거나, 화제를 전환할 때 사용하는 접속사입니다. 구어에서 '근데'로 줄여 쓰기도 합니다.",
               "romanization": "",
-              "translation": "정말? 그럼 우산 가져가야겠다."
+              "translation": "앞의 내용과 대조되는 내용을 이어가거나, 화제를 전환할 때 사용하는 접속사입니다. 구어에서 '근데'로 줄여 쓰기도 합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -627,10 +771,10 @@
         "word": "그러나",
         "explanation": "앞의 내용과 반대되는 내용을 연결하는 접속사입니다. '하지만'보다 격식적이며 주로 문어체에서 사용합니다.",
         "examples": {
-          "beginner": "노력했다. 그러나 실패했다.",
-          "intermediate": "경제가 성장했다. 그러나 빈부 격차도 커졌다.",
-          "advanced": "그러나는 문어체 역접 접속사로, 논설문이나 학술 글에서 주로 사용된다.",
-          "master": "그러나와 하지만의 차이는 레지스터(격식도)의 차이이며, 의미상 차이는 거의 없다."
+          "beginner": "\"그러나\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"그러나\"의 역할이 중요해요.",
+          "advanced": "\"그러나\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"그러나\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -645,19 +789,31 @@
           ]
         },
         "dialogue": {
-          "context": "발표에서 반론을 제시할 때",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "이 방법이 효율적입니다. 그러나 비용이 많이 듭니다.",
-              "romanization": "i bangbeopi hyoyuljeogimnida. geureona biyongi mani deumnida.",
-              "translation": "This method is efficient. However, it costs a lot."
+              "text": "\"그러나\"은 언제 써요?",
+              "romanization": "\"geureona\"eun eonje sseoyo?",
+              "translation": "When do you use \"그러나\"?"
             },
             {
               "speaker": "B",
-              "text": "그렇군요. 대안이 있을까요?",
-              "romanization": "geureokgunyo. daeani isseulkkayo?",
-              "translation": "I see. Are there alternatives?"
+              "text": "앞의 내용과 반대되는 내용을 연결하는 접속사입니다. '하지만'보다 격식적이며 주로 문어체에서 사용합니다.",
+              "romanization": "apui naeyonggwa bandaedoeneun naeyongeul yeongyeolhaneun jeopsoksaipnida. 'hajiman'boda gyeoksikjeokimyeo juro muneocheeseo sayonghapnida.",
+              "translation": "앞의 내용과 반대되는 내용을 연결하는 접속사입니다. '하지만'보다 격식적이며 주로 문어체에서 사용합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -666,10 +822,10 @@
         "word": "however / but (formal)",
         "explanation": "A formal conjunction introducing a contrasting idea. More literary than '하지만' and primarily used in written Korean, essays, and formal speeches.",
         "examples": {
-          "beginner": "I tried. However, I failed.",
-          "intermediate": "The economy grew. However, the wealth gap also widened.",
-          "advanced": "'그러나' is a written-register adversative conjunction used in essays and academic writing.",
-          "master": "The difference between '그러나' and '하지만' is register (formality), not meaning."
+          "beginner": "Make a sentence using \"그러나\".",
+          "intermediate": "The role of \"그러나\" is important in this sentence.",
+          "advanced": "Correct use of \"그러나\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"그러나\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -684,19 +840,31 @@
           ]
         },
         "dialogue": {
-          "context": "Presenting a counterpoint in a presentation",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "This method is efficient. However, it costs a lot.",
+              "text": "When do you use \"그러나\"?",
               "romanization": "",
-              "translation": "이 방법이 효율적입니다. 그러나 비용이 많이 듭니다."
+              "translation": "\"그러나\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "I see. Are there alternatives?",
+              "text": "앞의 내용과 반대되는 내용을 연결하는 접속사입니다. '하지만'보다 격식적이며 주로 문어체에서 사용합니다.",
               "romanization": "",
-              "translation": "그렇군요. 대안이 있을까요?"
+              "translation": "앞의 내용과 반대되는 내용을 연결하는 접속사입니다. '하지만'보다 격식적이며 주로 문어체에서 사용합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -727,10 +895,10 @@
         "word": "그렇지만",
         "explanation": "앞의 내용을 인정하면서 반대되는 내용을 이어가는 접속사입니다. '하지만'과 비슷하지만 좀 더 격식적인 느낌을 줍니다.",
         "examples": {
-          "beginner": "어려워요. 그렇지만 재미있어요.",
-          "intermediate": "시간이 부족해요. 그렇지만 끝까지 해볼게요.",
-          "advanced": "그렇지만은 '그렇다+지만'의 결합으로 양보의 의미가 강하다.",
-          "master": "그렇지만은 하지만과 그러나의 중간 격식도를 가지며, 구어와 문어 모두에서 사용된다."
+          "beginner": "\"그렇지만\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"그렇지만\"의 역할이 중요해요.",
+          "advanced": "\"그렇지만\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"그렇지만\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -745,19 +913,31 @@
           ]
         },
         "dialogue": {
-          "context": "힘든 상황에서 격려할 때",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "이 일이 정말 힘들어요.",
-              "romanization": "i iri jeongmal himdeureoyo.",
-              "translation": "This work is really hard."
+              "text": "\"그렇지만\"은 언제 써요?",
+              "romanization": "\"geureotjiman\"eun eonje sseoyo?",
+              "translation": "When do you use \"그렇지만\"?"
             },
             {
               "speaker": "B",
-              "text": "그렇지만 포기하면 안 돼요.",
-              "romanization": "geureochiman pogihamyeon an dwaeyo.",
-              "translation": "Nevertheless, you shouldn't give up."
+              "text": "앞의 내용을 인정하면서 반대되는 내용을 이어가는 접속사입니다. '하지만'과 비슷하지만 좀 더 격식적인 느낌을 줍니다.",
+              "romanization": "apui naeyongeul injeonghamyeonseo bandaedoeneun naeyongeul ieoganeun jeopsoksaipnida. 'hajiman'gwa biseushajiman jom deo gyeoksikjeokin neukkimeul jupnida.",
+              "translation": "앞의 내용을 인정하면서 반대되는 내용을 이어가는 접속사입니다. '하지만'과 비슷하지만 좀 더 격식적인 느낌을 줍니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -766,10 +946,10 @@
         "word": "nevertheless / but still",
         "explanation": "A conjunction that acknowledges the preceding statement while introducing a contrasting point. Slightly more formal than '하지만' but less literary than '그러나.' Used in both spoken and written Korean.",
         "examples": {
-          "beginner": "It's difficult. Nevertheless, it's fun.",
-          "intermediate": "There isn't enough time. But still, I'll try my best.",
-          "advanced": "'그렇지만' combines '그렇다' + '지만,' carrying a concessive nuance.",
-          "master": "'그렇지만' occupies a middle register between '하지만' (casual) and '그러나' (formal)."
+          "beginner": "Make a sentence using \"그렇지만\".",
+          "intermediate": "The role of \"그렇지만\" is important in this sentence.",
+          "advanced": "Correct use of \"그렇지만\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"그렇지만\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -784,19 +964,31 @@
           ]
         },
         "dialogue": {
-          "context": "Encouraging someone in a tough situation",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "This work is really hard.",
+              "text": "When do you use \"그렇지만\"?",
               "romanization": "",
-              "translation": "이 일이 정말 힘들어요."
+              "translation": "\"그렇지만\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "Nevertheless, you shouldn't give up.",
+              "text": "앞의 내용을 인정하면서 반대되는 내용을 이어가는 접속사입니다. '하지만'과 비슷하지만 좀 더 격식적인 느낌을 줍니다.",
               "romanization": "",
-              "translation": "그렇지만 포기하면 안 돼요."
+              "translation": "앞의 내용을 인정하면서 반대되는 내용을 이어가는 접속사입니다. '하지만'과 비슷하지만 좀 더 격식적인 느낌을 줍니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -828,10 +1020,10 @@
         "word": "그러므로",
         "explanation": "앞의 내용에 대한 논리적 결론을 이끄는 접속사입니다. '그래서'보다 격식적이며 논설문, 학술 글에서 주로 사용합니다.",
         "examples": {
-          "beginner": "늦었다. 그러므로 서둘러야 한다.",
-          "intermediate": "증거가 충분하다. 그러므로 결론을 내릴 수 있다.",
-          "advanced": "그러므로는 논리적 인과를 나타내는 문어체 접속사이다.",
-          "master": "그러므로와 따라서는 유사하나, 그러므로가 논리적 필연성을 더 강하게 나타낸다."
+          "beginner": "\"그러므로\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"그러므로\"의 역할이 중요해요.",
+          "advanced": "\"그러므로\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"그러므로\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -846,19 +1038,31 @@
           ]
         },
         "dialogue": {
-          "context": "논문 발표에서 결론을 말할 때",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "실험 결과가 가설을 지지합니다. 그러므로 이 이론은 유효합니다.",
-              "romanization": "silheom gyeolgwaga gaseoreul jijihamnida. geureomeuro i ironeun yuhyohamnida.",
-              "translation": "The experimental results support the hypothesis. Therefore, this theory is valid."
+              "text": "\"그러므로\"은 언제 써요?",
+              "romanization": "\"geureomeuro\"eun eonje sseoyo?",
+              "translation": "When do you use \"그러므로\"?"
             },
             {
               "speaker": "B",
-              "text": "설득력 있는 결론이네요.",
-              "romanization": "seoldeungnyeok inneun gyeollonieneyo.",
-              "translation": "That's a convincing conclusion."
+              "text": "앞의 내용에 대한 논리적 결론을 이끄는 접속사입니다. '그래서'보다 격식적이며 논설문, 학술 글에서 주로 사용합니다.",
+              "romanization": "apui naeyonge daehan nonrijeok gyeolroneul ikkeuneun jeopsoksaipnida. 'geuraeseo'boda gyeoksikjeokimyeo nonseolmun, haksul geuleseo juro sayonghapnida.",
+              "translation": "앞의 내용에 대한 논리적 결론을 이끄는 접속사입니다. '그래서'보다 격식적이며 논설문, 학술 글에서 주로 사용합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -867,10 +1071,10 @@
         "word": "therefore / thus",
         "explanation": "A formal conjunction introducing a logical conclusion. More formal than '그래서' and primarily used in academic writing, essays, and formal speeches. Emphasizes logical necessity.",
         "examples": {
-          "beginner": "It's late. Therefore, we must hurry.",
-          "intermediate": "The evidence is sufficient. Therefore, we can draw a conclusion.",
-          "advanced": "'그러므로' is a written-register causal conjunction indicating logical consequence.",
-          "master": "'그러므로' and '따라서' are similar, but '그러므로' implies stronger logical necessity."
+          "beginner": "Make a sentence using \"그러므로\".",
+          "intermediate": "The role of \"그러므로\" is important in this sentence.",
+          "advanced": "Correct use of \"그러므로\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"그러므로\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -885,19 +1089,31 @@
           ]
         },
         "dialogue": {
-          "context": "Presenting a conclusion in an academic paper",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "The experimental results support the hypothesis. Therefore, this theory is valid.",
+              "text": "When do you use \"그러므로\"?",
               "romanization": "",
-              "translation": "실험 결과가 가설을 지지합니다. 그러므로 이 이론은 유효합니다."
+              "translation": "\"그러므로\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "That's a convincing conclusion.",
+              "text": "앞의 내용에 대한 논리적 결론을 이끄는 접속사입니다. '그래서'보다 격식적이며 논설문, 학술 글에서 주로 사용합니다.",
               "romanization": "",
-              "translation": "설득력 있는 결론이네요."
+              "translation": "앞의 내용에 대한 논리적 결론을 이끄는 접속사입니다. '그래서'보다 격식적이며 논설문, 학술 글에서 주로 사용합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -929,10 +1145,10 @@
         "word": "따라서",
         "explanation": "앞의 내용을 근거로 결론이나 결과를 이끄는 접속사입니다. '그러므로'와 비슷하며 학술적, 공식적 맥락에서 자주 사용합니다.",
         "examples": {
-          "beginner": "비가 온다. 따라서 우산이 필요하다.",
-          "intermediate": "수요가 증가했다. 따라서 가격도 올랐다.",
-          "advanced": "따라서는 논리적 귀결을 나타내는 문어체 접속사로, 보고서나 논문에서 빈번히 사용된다.",
-          "master": "따라서는 '따르다+아서'에서 문법화된 것으로, 원래 '~에 따라'의 의미에서 접속사로 발전했다."
+          "beginner": "\"따라서\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"따라서\"의 역할이 중요해요.",
+          "advanced": "\"따라서\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"따라서\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -947,19 +1163,31 @@
           ]
         },
         "dialogue": {
-          "context": "회의에서 분석 결과를 보고할 때",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "매출이 20% 증가했습니다. 따라서 목표를 달성했습니다.",
-              "romanization": "maechuri isip peoseonteu jeunggahaetsseumnida. ttaraseo mokpyoreul dalseonghaetsseumnida.",
-              "translation": "Sales increased by 20%. Accordingly, we achieved our target."
+              "text": "\"따라서\"은 언제 써요?",
+              "romanization": "\"ttaraseo\"eun eonje sseoyo?",
+              "translation": "When do you use \"따라서\"?"
             },
             {
               "speaker": "B",
-              "text": "좋은 소식이네요.",
-              "romanization": "joeun sosigineyo.",
-              "translation": "That's good news."
+              "text": "앞의 내용을 근거로 결론이나 결과를 이끄는 접속사입니다. '그러므로'와 비슷하며 학술적, 공식적 맥락에서 자주 사용합니다.",
+              "romanization": "apui naeyongeul geungeoro gyeolronina gyeolgwareul ikkeuneun jeopsoksaipnida. 'geureomeuro'wa biseushamyeo haksuljeok, gongsikjeok maekrakeseo jaju sayonghapnida.",
+              "translation": "앞의 내용을 근거로 결론이나 결과를 이끄는 접속사입니다. '그러므로'와 비슷하며 학술적, 공식적 맥락에서 자주 사용합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -968,10 +1196,10 @@
         "word": "accordingly / therefore",
         "explanation": "A formal conjunction drawing a conclusion based on prior information. Similar to '그러므로' and frequently used in academic, business, and official contexts such as reports and papers.",
         "examples": {
-          "beginner": "It's raining. Accordingly, an umbrella is needed.",
-          "intermediate": "Demand increased. Accordingly, prices rose.",
-          "advanced": "'따라서' is a written-register conjunction for logical conclusions, common in reports and papers.",
-          "master": "'따라서' grammaticalized from '따르다+아서,' evolving from 'according to' into a conjunction."
+          "beginner": "Make a sentence using \"따라서\".",
+          "intermediate": "The role of \"따라서\" is important in this sentence.",
+          "advanced": "Correct use of \"따라서\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"따라서\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -986,19 +1214,31 @@
           ]
         },
         "dialogue": {
-          "context": "Reporting analysis results at a meeting",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Sales increased by 20%. Accordingly, we achieved our target.",
+              "text": "When do you use \"따라서\"?",
               "romanization": "",
-              "translation": "매출이 20% 증가했습니다. 따라서 목표를 달성했습니다."
+              "translation": "\"따라서\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "That's good news.",
+              "text": "앞의 내용을 근거로 결론이나 결과를 이끄는 접속사입니다. '그러므로'와 비슷하며 학술적, 공식적 맥락에서 자주 사용합니다.",
               "romanization": "",
-              "translation": "좋은 소식이네요."
+              "translation": "앞의 내용을 근거로 결론이나 결과를 이끄는 접속사입니다. '그러므로'와 비슷하며 학술적, 공식적 맥락에서 자주 사용합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -1029,10 +1269,10 @@
         "word": "그래도",
         "explanation": "앞의 상황을 인정하면서도 그것과 관계없이 뒤의 내용을 이어가는 접속사입니다. '그럼에도 불구하고'의 구어적 표현입니다.",
         "examples": {
-          "beginner": "힘들어요. 그래도 해야 해요.",
-          "intermediate": "실패했어요. 그래도 다시 도전할 거예요.",
-          "advanced": "그래도는 양보의 접속사로, 앞 상황에도 불구하고 뒤 내용이 유효함을 나타낸다.",
-          "master": "그래도는 감정적 뉘앙스를 동반하며, 화자의 의지나 기대를 내포하는 경우가 많다."
+          "beginner": "\"그래도\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"그래도\"의 역할이 중요해요.",
+          "advanced": "\"그래도\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"그래도\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -1047,19 +1287,31 @@
           ]
         },
         "dialogue": {
-          "context": "위로하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "시험을 못 봤어.",
-              "romanization": "siheomeul mot bwasseo.",
-              "translation": "I did badly on the exam."
+              "text": "\"그래도\"은 언제 써요?",
+              "romanization": "\"geuraedo\"eun eonje sseoyo?",
+              "translation": "When do you use \"그래도\"?"
             },
             {
               "speaker": "B",
-              "text": "그래도 열심히 했잖아. 다음에 잘하면 돼.",
-              "romanization": "geuraedo yeolsimhi haetjana. daeume jalhamyeon dwae.",
-              "translation": "Still, you worked hard. You can do better next time."
+              "text": "앞의 상황을 인정하면서도 그것과 관계없이 뒤의 내용을 이어가는 접속사입니다. '그럼에도 불구하고'의 구어적 표현입니다.",
+              "romanization": "apui sanghwangeul injeonghamyeonseodo geugeosgwa gwangyeeopi dwiui naeyongeul ieoganeun jeopsoksaipnida. 'geureomedo bulguhago'ui gueojeok pyohyeonipnida.",
+              "translation": "앞의 상황을 인정하면서도 그것과 관계없이 뒤의 내용을 이어가는 접속사입니다. '그럼에도 불구하고'의 구어적 표현입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -1068,10 +1320,10 @@
         "word": "still / even so",
         "explanation": "A conjunction acknowledging a situation while asserting that the following statement remains valid regardless. The conversational equivalent of '그럼에도 불구하고' (nevertheless). Often carries emotional nuance expressing the speaker's determination or expectation.",
         "examples": {
-          "beginner": "It's hard. Still, I have to do it.",
-          "intermediate": "I failed. Even so, I'll try again.",
-          "advanced": "'그래도' is a concessive conjunction indicating the latter content holds despite the former.",
-          "master": "'그래도' often carries emotional nuance, implying the speaker's willpower or expectation."
+          "beginner": "Make a sentence using \"그래도\".",
+          "intermediate": "The role of \"그래도\" is important in this sentence.",
+          "advanced": "Correct use of \"그래도\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"그래도\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -1086,19 +1338,31 @@
           ]
         },
         "dialogue": {
-          "context": "Consoling someone",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "I did badly on the exam.",
+              "text": "When do you use \"그래도\"?",
               "romanization": "",
-              "translation": "시험을 못 봤어."
+              "translation": "\"그래도\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "Still, you worked hard. You can do better next time.",
+              "text": "앞의 상황을 인정하면서도 그것과 관계없이 뒤의 내용을 이어가는 접속사입니다. '그럼에도 불구하고'의 구어적 표현입니다.",
               "romanization": "",
-              "translation": "그래도 열심히 했잖아. 다음에 잘하면 돼."
+              "translation": "앞의 상황을 인정하면서도 그것과 관계없이 뒤의 내용을 이어가는 접속사입니다. '그럼에도 불구하고'의 구어적 표현입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -1129,10 +1393,10 @@
         "word": "게다가",
         "explanation": "앞의 내용에 더해 추가적인 정보를 강조하며 덧붙이는 접속사입니다. '더군다나', '더구나'와 비슷합니다.",
         "examples": {
-          "beginner": "비가 와요. 게다가 바람도 불어요.",
-          "intermediate": "음식이 맛있어요. 게다가 가격도 싸요.",
-          "advanced": "게다가는 첨가 접속사로, 앞 내용을 강화하는 추가 정보를 제시한다.",
-          "master": "게다가는 긍정적·부정적 내용 모두에 사용되며, 감정의 누적 효과를 만든다."
+          "beginner": "\"게다가\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"게다가\"의 역할이 중요해요.",
+          "advanced": "\"게다가\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"게다가\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -1147,19 +1411,31 @@
           ]
         },
         "dialogue": {
-          "context": "불평하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "오늘 정말 힘들었어. 게다가 비까지 왔어.",
-              "romanization": "oneul jeongmal himdeureosseo. gedaga bikkaji wasseo.",
-              "translation": "Today was really tough. On top of that, it even rained."
+              "text": "\"게다가\"은 언제 써요?",
+              "romanization": "\"gedaga\"eun eonje sseoyo?",
+              "translation": "When do you use \"게다가\"?"
             },
             {
               "speaker": "B",
-              "text": "정말 안 좋은 날이었네.",
-              "romanization": "jeongmal an joeun narieonne.",
-              "translation": "That was really a bad day."
+              "text": "앞의 내용에 더해 추가적인 정보를 강조하며 덧붙이는 접속사입니다. '더군다나', '더구나'와 비슷합니다.",
+              "romanization": "apui naeyonge deohae chugajeokin jeongboreul gangjohamyeo deosbutineun jeopsoksaipnida. 'deogundana', 'deoguna'wa biseushapnida.",
+              "translation": "앞의 내용에 더해 추가적인 정보를 강조하며 덧붙이는 접속사입니다. '더군다나', '더구나'와 비슷합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -1168,10 +1444,10 @@
         "word": "moreover / on top of that",
         "explanation": "A conjunction adding and emphasizing additional information on top of what was already stated. Similar to '더구나' and '더군다나.' Works with both positive and negative contexts, creating a cumulative effect.",
         "examples": {
-          "beginner": "It's raining. On top of that, it's windy.",
-          "intermediate": "The food is delicious. Moreover, the price is low.",
-          "advanced": "'게다가' is an additive conjunction presenting reinforcing additional information.",
-          "master": "'게다가' works in both positive and negative contexts, creating a cumulative emotional effect."
+          "beginner": "Make a sentence using \"게다가\".",
+          "intermediate": "The role of \"게다가\" is important in this sentence.",
+          "advanced": "Correct use of \"게다가\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"게다가\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -1186,19 +1462,31 @@
           ]
         },
         "dialogue": {
-          "context": "Complaining about a bad day",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Today was really tough. On top of that, it even rained.",
+              "text": "When do you use \"게다가\"?",
               "romanization": "",
-              "translation": "오늘 정말 힘들었어. 게다가 비까지 왔어."
+              "translation": "\"게다가\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "That was really a bad day.",
+              "text": "앞의 내용에 더해 추가적인 정보를 강조하며 덧붙이는 접속사입니다. '더군다나', '더구나'와 비슷합니다.",
               "romanization": "",
-              "translation": "정말 안 좋은 날이었네."
+              "translation": "앞의 내용에 더해 추가적인 정보를 강조하며 덧붙이는 접속사입니다. '더군다나', '더구나'와 비슷합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -1230,10 +1518,10 @@
         "word": "더구나",
         "explanation": "앞의 내용에 더하여 정도가 더 심한 사실을 덧붙이는 접속사입니다. '게다가'보다 격식적이며 강조의 의미가 더 강합니다.",
         "examples": {
-          "beginner": "추워요. 더구나 눈까지 와요.",
-          "intermediate": "일이 많아요. 더구나 마감도 내일이에요.",
-          "advanced": "더구나는 점층적 첨가를 나타내며, 앞 내용보다 더 심한 상황을 강조한다.",
-          "master": "더구나와 하물며의 차이는 단순 첨가(더구나)와 논리적 유추(하물며)의 차이이다."
+          "beginner": "\"더구나\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"더구나\"의 역할이 중요해요.",
+          "advanced": "\"더구나\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"더구나\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -1248,19 +1536,31 @@
           ]
         },
         "dialogue": {
-          "context": "어려운 상황을 설명할 때",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "프로젝트가 지연되고 있습니다. 더구나 예산도 부족합니다.",
-              "romanization": "peurojekteuga jiyeondoego itsseumnida. deoguna yesando bujokamnida.",
-              "translation": "The project is delayed. Furthermore, the budget is insufficient."
+              "text": "\"더구나\"은 언제 써요?",
+              "romanization": "\"deoguna\"eun eonje sseoyo?",
+              "translation": "When do you use \"더구나\"?"
             },
             {
               "speaker": "B",
-              "text": "대책을 세워야겠군요.",
-              "romanization": "daechaekeul sewoyagetgunyo.",
-              "translation": "We need to come up with a plan."
+              "text": "앞의 내용에 더하여 정도가 더 심한 사실을 덧붙이는 접속사입니다. '게다가'보다 격식적이며 강조의 의미가 더 강합니다.",
+              "romanization": "apui naeyonge deohayeo jeongdoga deo simhan sasileul deosbutineun jeopsoksaipnida. 'gedaga'boda gyeoksikjeokimyeo gangjoui uimiga deo ganghapnida.",
+              "translation": "앞의 내용에 더하여 정도가 더 심한 사실을 덧붙이는 접속사입니다. '게다가'보다 격식적이며 강조의 의미가 더 강합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -1269,10 +1569,10 @@
         "word": "furthermore / what's more",
         "explanation": "A formal conjunction adding a more extreme or significant fact to what was already stated. More formal and emphatic than '게다가.' Indicates an escalating situation.",
         "examples": {
-          "beginner": "It's cold. What's more, it's snowing.",
-          "intermediate": "There's a lot of work. Furthermore, the deadline is tomorrow.",
-          "advanced": "'더구나' indicates progressive addition, emphasizing a more severe situation.",
-          "master": "The difference between '더구나' and '하물며' is simple addition vs. logical inference."
+          "beginner": "Make a sentence using \"더구나\".",
+          "intermediate": "The role of \"더구나\" is important in this sentence.",
+          "advanced": "Correct use of \"더구나\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"더구나\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -1287,19 +1587,31 @@
           ]
         },
         "dialogue": {
-          "context": "Explaining a difficult situation",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "The project is delayed. Furthermore, the budget is insufficient.",
+              "text": "When do you use \"더구나\"?",
               "romanization": "",
-              "translation": "프로젝트가 지연되고 있습니다. 더구나 예산도 부족합니다."
+              "translation": "\"더구나\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "We need to come up with a plan.",
+              "text": "앞의 내용에 더하여 정도가 더 심한 사실을 덧붙이는 접속사입니다. '게다가'보다 격식적이며 강조의 의미가 더 강합니다.",
               "romanization": "",
-              "translation": "대책을 세워야겠군요."
+              "translation": "앞의 내용에 더하여 정도가 더 심한 사실을 덧붙이는 접속사입니다. '게다가'보다 격식적이며 강조의 의미가 더 강합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -1331,10 +1643,10 @@
         "word": "뿐만 아니라",
         "explanation": "앞의 내용에 그치지 않고 추가적인 내용이 있음을 나타내는 접속 표현입니다. '~할 뿐만 아니라 ~도'의 형태로 자주 사용합니다.",
         "examples": {
-          "beginner": "맛있을 뿐만 아니라 건강에도 좋아요.",
-          "intermediate": "한국어뿐만 아니라 일본어도 할 수 있어요.",
-          "advanced": "뿐만 아니라는 첨가·확장의 접속 표현으로, 범위를 넓히는 기능을 한다.",
-          "master": "'뿐만 아니라'는 '뿐+만+아니다+라'의 결합으로, 부정 형식이지만 긍정적 첨가를 나타낸다."
+          "beginner": "\"뿐만 아니라\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"뿐만 아니라\"의 역할이 중요해요.",
+          "advanced": "\"뿐만 아니라\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"뿐만 아니라\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -1349,19 +1661,31 @@
           ]
         },
         "dialogue": {
-          "context": "제품을 추천하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "이 식당은 음식이 맛있을 뿐만 아니라 분위기도 좋아요.",
-              "romanization": "i sikdangeun eumsigi masissul ppunman anira bunwigido joayo.",
-              "translation": "This restaurant is not only delicious but also has a great atmosphere."
+              "text": "\"뿐만 아니라\"은 언제 써요?",
+              "romanization": "\"ppunman anira\"eun eonje sseoyo?",
+              "translation": "When do you use \"뿐만 아니라\"?"
             },
             {
               "speaker": "B",
-              "text": "그래요? 한번 가 봐야겠네요.",
-              "romanization": "geuraeyo? hanbeon ga bwayagenneyo.",
-              "translation": "Really? I should try it sometime."
+              "text": "앞의 내용에 그치지 않고 추가적인 내용이 있음을 나타내는 접속 표현입니다. '~할 뿐만 아니라 ~도'의 형태로 자주 사용합니다.",
+              "romanization": "apui naeyonge geuchiji ango chugajeokin naeyongi iseumeul natanaeneun jeopsok pyohyeonipnida. '~hal ppunman anira ~do'ui hyeongtaero jaju sayonghapnida.",
+              "translation": "앞의 내용에 그치지 않고 추가적인 내용이 있음을 나타내는 접속 표현입니다. '~할 뿐만 아니라 ~도'의 형태로 자주 사용합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -1370,10 +1694,10 @@
         "word": "not only... but also",
         "explanation": "A conjunctive expression indicating that something goes beyond what was mentioned, adding more. Often used in the pattern 'A뿐만 아니라 B도' (not only A but also B). Common in formal and written Korean.",
         "examples": {
-          "beginner": "It's not only delicious but also healthy.",
-          "intermediate": "I can speak not only Korean but also Japanese.",
-          "advanced": "'뿐만 아니라' is an additive expression that expands the scope of the statement.",
-          "master": "'뿐만 아니라' combines '뿐+만+아니다+라' — a negative form expressing positive addition."
+          "beginner": "Make a sentence using \"뿐만 아니라\".",
+          "intermediate": "The role of \"뿐만 아니라\" is important in this sentence.",
+          "advanced": "Correct use of \"뿐만 아니라\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"뿐만 아니라\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -1388,19 +1712,31 @@
           ]
         },
         "dialogue": {
-          "context": "Recommending a place",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "This restaurant is not only delicious but also has a great atmosphere.",
+              "text": "When do you use \"뿐만 아니라\"?",
               "romanization": "",
-              "translation": "이 식당은 음식이 맛있을 뿐만 아니라 분위기도 좋아요."
+              "translation": "\"뿐만 아니라\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "Really? I should try it sometime.",
+              "text": "앞의 내용에 그치지 않고 추가적인 내용이 있음을 나타내는 접속 표현입니다. '~할 뿐만 아니라 ~도'의 형태로 자주 사용합니다.",
               "romanization": "",
-              "translation": "그래요? 한번 가 봐야겠네요."
+              "translation": "앞의 내용에 그치지 않고 추가적인 내용이 있음을 나타내는 접속 표현입니다. '~할 뿐만 아니라 ~도'의 형태로 자주 사용합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -1432,10 +1768,10 @@
         "word": "또한",
         "explanation": "앞의 내용에 추가적인 사항을 더할 때 사용하는 접속사입니다. '또', '그리고'보다 격식적인 표현입니다.",
         "examples": {
-          "beginner": "영어를 잘해요. 또한 중국어도 해요.",
-          "intermediate": "건강에 좋습니다. 또한 맛도 훌륭합니다.",
-          "advanced": "또한은 문어체 첨가 접속사로, 격식적인 글이나 발표에서 주로 사용된다.",
-          "master": "또한과 아울러의 차이는 단순 첨가(또한)와 동시적 병행(아울러)의 뉘앙스 차이이다."
+          "beginner": "\"또한\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"또한\"의 역할이 중요해요.",
+          "advanced": "\"또한\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"또한\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -1450,19 +1786,31 @@
           ]
         },
         "dialogue": {
-          "context": "보고서를 발표하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "매출이 증가했습니다. 또한 고객 만족도도 높아졌습니다.",
-              "romanization": "maechuri jeunggahaetsseumnida. ttohan gogaek manjokdodo nopajyeotsseumnida.",
-              "translation": "Sales have increased. Also, customer satisfaction has improved."
+              "text": "\"또한\"은 언제 써요?",
+              "romanization": "\"ttohan\"eun eonje sseoyo?",
+              "translation": "When do you use \"또한\"?"
             },
             {
               "speaker": "B",
-              "text": "훌륭한 성과네요.",
-              "romanization": "hullyunghan seonggwaneyo.",
-              "translation": "Those are excellent results."
+              "text": "앞의 내용에 추가적인 사항을 더할 때 사용하는 접속사입니다. '또', '그리고'보다 격식적인 표현입니다.",
+              "romanization": "apui naeyonge chugajeokin sahangeul deohal ttae sayonghaneun jeopsoksaipnida. 'tto', 'geurigo'boda gyeoksikjeokin pyohyeonipnida.",
+              "translation": "앞의 내용에 추가적인 사항을 더할 때 사용하는 접속사입니다. '또', '그리고'보다 격식적인 표현입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -1471,10 +1819,10 @@
         "word": "also / in addition",
         "explanation": "A formal conjunction used to add supplementary information. More formal than '또' or '그리고.' Primarily used in written Korean, presentations, and formal speech.",
         "examples": {
-          "beginner": "I speak English well. I also speak Chinese.",
-          "intermediate": "It's healthy. In addition, it tastes great.",
-          "advanced": "'또한' is a written-register additive conjunction for formal writing and presentations.",
-          "master": "The difference between '또한' and '아울러' is simple addition vs. simultaneous parallel action."
+          "beginner": "Make a sentence using \"또한\".",
+          "intermediate": "The role of \"또한\" is important in this sentence.",
+          "advanced": "Correct use of \"또한\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"또한\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -1489,19 +1837,31 @@
           ]
         },
         "dialogue": {
-          "context": "Delivering a report",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Sales have increased. Also, customer satisfaction has improved.",
+              "text": "When do you use \"또한\"?",
               "romanization": "",
-              "translation": "매출이 증가했습니다. 또한 고객 만족도도 높아졌습니다."
+              "translation": "\"또한\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "Those are excellent results.",
+              "text": "앞의 내용에 추가적인 사항을 더할 때 사용하는 접속사입니다. '또', '그리고'보다 격식적인 표현입니다.",
               "romanization": "",
-              "translation": "훌륭한 성과네요."
+              "translation": "앞의 내용에 추가적인 사항을 더할 때 사용하는 접속사입니다. '또', '그리고'보다 격식적인 표현입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -1533,10 +1893,10 @@
         "word": "즉",
         "explanation": "앞의 내용을 다른 말로 바꾸어 설명하거나 부연할 때 사용하는 접속사입니다. '다시 말해서', '바꿔 말하면'과 같은 뜻입니다.",
         "examples": {
-          "beginner": "일요일, 즉 내일 만나요.",
-          "intermediate": "그는 의사, 즉 병원에서 일하는 사람이에요.",
-          "advanced": "즉은 환언(換言)의 접속사로, 앞 내용을 재진술하거나 명확히 하는 기능을 한다.",
-          "master": "즉과 곧의 차이는 문어체(즉)와 구어/문어 겸용(곧)의 차이이다."
+          "beginner": "\"즉\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"즉\"의 역할이 중요해요.",
+          "advanced": "\"즉\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"즉\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -1551,19 +1911,31 @@
           ]
         },
         "dialogue": {
-          "context": "수업에서 개념을 설명할 때",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "광합성, 즉 식물이 빛으로 에너지를 만드는 과정입니다.",
-              "romanization": "gwanghapseong, jeuk singmuri bicheuro eneojireu mandeuneu gwajeongimnida.",
-              "translation": "Photosynthesis, in other words, the process by which plants make energy from light."
+              "text": "\"즉\"은 언제 써요?",
+              "romanization": "\"jeuk\"eun eonje sseoyo?",
+              "translation": "When do you use \"즉\"?"
             },
             {
               "speaker": "B",
-              "text": "아, 그렇게 이해하면 되는군요.",
-              "romanization": "a, geureoke ihaehamyeon doengunyo.",
-              "translation": "Ah, I see, that's how to understand it."
+              "text": "앞의 내용을 다른 말로 바꾸어 설명하거나 부연할 때 사용하는 접속사입니다. '다시 말해서', '바꿔 말하면'과 같은 뜻입니다.",
+              "romanization": "apui naeyongeul dareun malro bakkueo seolmyeonghageona buyeonhal ttae sayonghaneun jeopsoksaipnida. 'dasi malhaeseo', 'bakkwo malhamyeon'gwa gateun tteusipnida.",
+              "translation": "앞의 내용을 다른 말로 바꾸어 설명하거나 부연할 때 사용하는 접속사입니다. '다시 말해서', '바꿔 말하면'과 같은 뜻입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -1572,10 +1944,10 @@
         "word": "in other words / that is",
         "explanation": "A conjunction used to rephrase or clarify the preceding statement. Equivalent to 'in other words,' 'that is,' or 'i.e.' Commonly used in academic and formal writing.",
         "examples": {
-          "beginner": "Sunday, that is, tomorrow, let's meet.",
-          "intermediate": "He's a doctor, that is, a person who works at a hospital.",
-          "advanced": "'즉' is a paraphrasing conjunction that restates or clarifies preceding content.",
-          "master": "The difference between '즉' and '곧' is that '즉' is written-only while '곧' is used in both registers."
+          "beginner": "Make a sentence using \"즉\".",
+          "intermediate": "The role of \"즉\" is important in this sentence.",
+          "advanced": "Correct use of \"즉\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"즉\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -1590,19 +1962,31 @@
           ]
         },
         "dialogue": {
-          "context": "Explaining a concept in class",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Photosynthesis, in other words, the process by which plants make energy from light.",
+              "text": "When do you use \"즉\"?",
               "romanization": "",
-              "translation": "광합성, 즉 식물이 빛으로 에너지를 만드는 과정입니다."
+              "translation": "\"즉\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "Ah, I see, that's how to understand it.",
+              "text": "앞의 내용을 다른 말로 바꾸어 설명하거나 부연할 때 사용하는 접속사입니다. '다시 말해서', '바꿔 말하면'과 같은 뜻입니다.",
               "romanization": "",
-              "translation": "아, 그렇게 이해하면 되는군요."
+              "translation": "앞의 내용을 다른 말로 바꾸어 설명하거나 부연할 때 사용하는 접속사입니다. '다시 말해서', '바꿔 말하면'과 같은 뜻입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -1633,10 +2017,10 @@
         "word": "예를 들어",
         "explanation": "앞의 내용에 대한 구체적인 예시를 제시할 때 사용하는 접속 표현입니다. '예컨대', '가령'과 같은 뜻입니다.",
         "examples": {
-          "beginner": "과일을 좋아해요. 예를 들어 사과, 바나나를 좋아해요.",
-          "intermediate": "운동에는 여러 종류가 있어요. 예를 들어 수영, 달리기, 요가 등이 있어요.",
-          "advanced": "예를 들어는 예시 제시의 접속 표현으로, 추상적 내용을 구체화하는 기능을 한다.",
-          "master": "예를 들어, 예컨대, 가령은 모두 예시 접속어이나, 격식도와 사용 빈도에서 차이가 있다."
+          "beginner": "\"예를 들어\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"예를 들어\"의 역할이 중요해요.",
+          "advanced": "\"예를 들어\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"예를 들어\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -1651,19 +2035,31 @@
           ]
         },
         "dialogue": {
-          "context": "취미에 대해 이야기하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "한국 음식을 좋아해요?",
-              "romanization": "hanguk eumsigeul joahaeyo?",
-              "translation": "Do you like Korean food?"
+              "text": "\"예를 들어\"은 언제 써요?",
+              "romanization": "\"yereul deuleo\"eun eonje sseoyo?",
+              "translation": "When do you use \"예를 들어\"?"
             },
             {
               "speaker": "B",
-              "text": "네, 좋아해요. 예를 들어 비빔밥이나 불고기를 자주 먹어요.",
-              "romanization": "ne, joahaeyo. yereul deureo bibimbabina bulgogireul jaju meogeoyo.",
-              "translation": "Yes, I do. For example, I often eat bibimbap or bulgogi."
+              "text": "앞의 내용에 대한 구체적인 예시를 제시할 때 사용하는 접속 표현입니다. '예컨대', '가령'과 같은 뜻입니다.",
+              "romanization": "apui naeyonge daehan guchejeokin yesireul jesihal ttae sayonghaneun jeopsok pyohyeonipnida. 'yekeondae', 'garyeong'gwa gateun tteusipnida.",
+              "translation": "앞의 내용에 대한 구체적인 예시를 제시할 때 사용하는 접속 표현입니다. '예컨대', '가령'과 같은 뜻입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -1672,10 +2068,10 @@
         "word": "for example / for instance",
         "explanation": "A conjunctive expression used to introduce specific examples. Equivalent to '예컨대' and '가령.' Used to make abstract statements more concrete with illustrations.",
         "examples": {
-          "beginner": "I like fruits. For example, I like apples and bananas.",
-          "intermediate": "There are many types of exercise. For example, swimming, running, yoga, etc.",
-          "advanced": "'예를 들어' is an example-introducing expression that concretizes abstract content.",
-          "master": "'예를 들어,' '예컨대,' and '가령' all introduce examples but differ in formality and frequency."
+          "beginner": "Make a sentence using \"예를 들어\".",
+          "intermediate": "The role of \"예를 들어\" is important in this sentence.",
+          "advanced": "Correct use of \"예를 들어\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"예를 들어\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -1690,19 +2086,31 @@
           ]
         },
         "dialogue": {
-          "context": "Talking about hobbies",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Do you like Korean food?",
+              "text": "When do you use \"예를 들어\"?",
               "romanization": "",
-              "translation": "한국 음식을 좋아해요?"
+              "translation": "\"예를 들어\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "Yes, I do. For example, I often eat bibimbap or bulgogi.",
+              "text": "앞의 내용에 대한 구체적인 예시를 제시할 때 사용하는 접속 표현입니다. '예컨대', '가령'과 같은 뜻입니다.",
               "romanization": "",
-              "translation": "네, 좋아해요. 예를 들어 비빔밥이나 불고기를 자주 먹어요."
+              "translation": "앞의 내용에 대한 구체적인 예시를 제시할 때 사용하는 접속 표현입니다. '예컨대', '가령'과 같은 뜻입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -1734,10 +2142,10 @@
         "word": "왜냐하면",
         "explanation": "앞에서 말한 내용의 이유를 설명할 때 쓰는 접속사입니다. 주로 뒤에 '-기 때문이다'와 함께 사용됩니다.",
         "examples": {
-          "beginner": "왜냐하면 배가 고프니까요.",
-          "intermediate": "못 갔어요. 왜냐하면 비가 왔기 때문이에요.",
-          "advanced": "왜냐하면은 구어체에서 이유를 강조할 때 주로 사용된다.",
-          "master": "격식체에서는 '왜냐하면' 대신 '그 이유는'을 쓰는 것이 더 자연스럽다."
+          "beginner": "\"왜냐하면\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"왜냐하면\"의 역할이 중요해요.",
+          "advanced": "\"왜냐하면\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"왜냐하면\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -1752,19 +2160,31 @@
           ]
         },
         "dialogue": {
-          "context": "약속에 늦은 이유를 설명하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "왜 늦었어?",
-              "romanization": "wae neujeosseo?",
-              "translation": "Why are you late?"
+              "text": "\"왜냐하면\"은 언제 써요?",
+              "romanization": "\"waenyahamyeon\"eun eonje sseoyo?",
+              "translation": "When do you use \"왜냐하면\"?"
             },
             {
               "speaker": "B",
-              "text": "왜냐하면 버스를 놓쳤거든.",
-              "romanization": "waenyahamyeon beoseureul nochyeotgeodeun.",
-              "translation": "Because I missed the bus."
+              "text": "앞에서 말한 내용의 이유를 설명할 때 쓰는 접속사입니다. 주로 뒤에 '-기 때문이다'와 함께 사용됩니다.",
+              "romanization": "apeseo malhan naeyongui iyureul seolmyeonghal ttae sseuneun jeopsoksaipnida. juro dwie '-gi ttaemunida'wa hamkke sayongdoepnida.",
+              "translation": "앞에서 말한 내용의 이유를 설명할 때 쓰는 접속사입니다. 주로 뒤에 '-기 때문이다'와 함께 사용됩니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -1773,10 +2193,10 @@
         "word": "because",
         "explanation": "A conjunction used to explain the reason for a previously stated fact. Often paired with '-기 때문이다' at the end of the clause. Commonly used in spoken Korean.",
         "examples": {
-          "beginner": "Because I'm hungry.",
-          "intermediate": "I couldn't go. Because it rained.",
-          "advanced": "'왜냐하면' is mainly used in spoken Korean to emphasize the reason.",
-          "master": "In formal writing, '그 이유는' is preferred over '왜냐하면'."
+          "beginner": "Make a sentence using \"왜냐하면\".",
+          "intermediate": "The role of \"왜냐하면\" is important in this sentence.",
+          "advanced": "Correct use of \"왜냐하면\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"왜냐하면\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -1791,19 +2211,31 @@
           ]
         },
         "dialogue": {
-          "context": "Explaining why one is late to a meeting",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Why are you late?",
+              "text": "When do you use \"왜냐하면\"?",
               "romanization": "",
-              "translation": "왜 늦었어?"
+              "translation": "\"왜냐하면\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "Because I missed the bus.",
+              "text": "앞에서 말한 내용의 이유를 설명할 때 쓰는 접속사입니다. 주로 뒤에 '-기 때문이다'와 함께 사용됩니다.",
               "romanization": "",
-              "translation": "왜냐하면 버스를 놓쳤거든."
+              "translation": "앞에서 말한 내용의 이유를 설명할 때 쓰는 접속사입니다. 주로 뒤에 '-기 때문이다'와 함께 사용됩니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -1834,10 +2266,10 @@
         "word": "만약",
         "explanation": "어떤 일이 일어날 가능성을 가정하여 말할 때 쓰는 부사입니다. 뒤에 '-면', '-다면' 등의 조건 표현과 함께 씁니다.",
         "examples": {
-          "beginner": "만약 비가 오면 집에 있을 거예요.",
-          "intermediate": "만약 시간이 있다면 같이 갈까요?",
-          "advanced": "만약은 가정법에서 조건절을 이끄는 부사로, '-면'과 호응한다.",
-          "master": "구어체에서는 '만약'을 생략하고 '-면'만으로 조건을 표현하기도 한다."
+          "beginner": "\"만약\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"만약\"의 역할이 중요해요.",
+          "advanced": "\"만약\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"만약\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -1852,19 +2284,31 @@
           ]
         },
         "dialogue": {
-          "context": "주말 계획을 이야기하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "주말에 뭐 할 거야?",
-              "romanization": "jumale mwo hal geoya?",
-              "translation": "What are you going to do on the weekend?"
+              "text": "\"만약\"은 언제 써요?",
+              "romanization": "\"manyak\"eun eonje sseoyo?",
+              "translation": "When do you use \"만약\"?"
             },
             {
               "speaker": "B",
-              "text": "만약 날씨가 좋으면 등산 갈 거야.",
-              "romanization": "manyak nalssiga joeumyeon deungsan gal geoya.",
-              "translation": "If the weather is nice, I'll go hiking."
+              "text": "어떤 일이 일어날 가능성을 가정하여 말할 때 쓰는 부사입니다. 뒤에 '-면', '-다면' 등의 조건 표현과 함께 씁니다.",
+              "romanization": "eotteon ili ileonal ganeungseongeul gajeonghayeo malhal ttae sseuneun busaipnida. dwie '-myeon', '-damyeon' deungui jogeon pyohyeongwa hamkke sseupnida.",
+              "translation": "어떤 일이 일어날 가능성을 가정하여 말할 때 쓰는 부사입니다. 뒤에 '-면', '-다면' 등의 조건 표현과 함께 씁니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -1873,10 +2317,10 @@
         "word": "if / in case",
         "explanation": "An adverb used to introduce a hypothetical condition. It is paired with conditional endings like '-면' or '-다면'. Equivalent to 'if' or 'in case' in English.",
         "examples": {
-          "beginner": "If it rains, I will stay home.",
-          "intermediate": "If you have time, shall we go together?",
-          "advanced": "'만약' is an adverb that introduces conditional clauses, paired with '-면'.",
-          "master": "In casual speech, '만약' is often omitted, with only '-면' used for the condition."
+          "beginner": "Make a sentence using \"만약\".",
+          "intermediate": "The role of \"만약\" is important in this sentence.",
+          "advanced": "Correct use of \"만약\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"만약\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -1891,19 +2335,31 @@
           ]
         },
         "dialogue": {
-          "context": "Discussing weekend plans",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What are you doing this weekend?",
+              "text": "When do you use \"만약\"?",
               "romanization": "",
-              "translation": "주말에 뭐 할 거야?"
+              "translation": "\"만약\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "If the weather is nice, I'll go hiking.",
+              "text": "어떤 일이 일어날 가능성을 가정하여 말할 때 쓰는 부사입니다. 뒤에 '-면', '-다면' 등의 조건 표현과 함께 씁니다.",
               "romanization": "",
-              "translation": "만약 날씨가 좋으면 등산 갈 거야."
+              "translation": "어떤 일이 일어날 가능성을 가정하여 말할 때 쓰는 부사입니다. 뒤에 '-면', '-다면' 등의 조건 표현과 함께 씁니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -1935,10 +2391,10 @@
         "word": "비록",
         "explanation": "어떤 사실을 인정하면서도 그에 반하는 내용을 말할 때 쓰는 부사입니다. '-지만', '-더라도' 등과 함께 사용합니다.",
         "examples": {
-          "beginner": "비록 어렵지만 포기하지 않겠어요.",
-          "intermediate": "비록 실패했지만 좋은 경험이었다.",
-          "advanced": "비록은 양보의 뜻을 나타내며 '-지만', '-더라도'와 호응한다.",
-          "master": "비록과 '비록...일지라도' 구문은 문어체에서 빈번하게 사용된다."
+          "beginner": "\"비록\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"비록\"의 역할이 중요해요.",
+          "advanced": "\"비록\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"비록\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -1953,19 +2409,31 @@
           ]
         },
         "dialogue": {
-          "context": "시험 결과에 대해 이야기하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "시험 결과가 안 좋았다며?",
-              "romanization": "siheom gyeolgwaga an joatdamyeo?",
-              "translation": "I heard your test results weren't good?"
+              "text": "\"비록\"은 언제 써요?",
+              "romanization": "\"birok\"eun eonje sseoyo?",
+              "translation": "When do you use \"비록\"?"
             },
             {
               "speaker": "B",
-              "text": "비록 떨어졌지만 많이 배웠어.",
-              "romanization": "birok tteoreojyeotjiman mani baewosseo.",
-              "translation": "Although I failed, I learned a lot."
+              "text": "어떤 사실을 인정하면서도 그에 반하는 내용을 말할 때 쓰는 부사입니다. '-지만', '-더라도' 등과 함께 사용합니다.",
+              "romanization": "eotteon sasileul injeonghamyeonseodo geue banhaneun naeyongeul malhal ttae sseuneun busaipnida. '-jiman', '-deorado' deunggwa hamkke sayonghapnida.",
+              "translation": "어떤 사실을 인정하면서도 그에 반하는 내용을 말할 때 쓰는 부사입니다. '-지만', '-더라도' 등과 함께 사용합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -1974,10 +2442,10 @@
         "word": "although / even though",
         "explanation": "An adverb used to acknowledge a fact while introducing a contrasting result. Paired with endings like '-지만' or '-더라도'. More common in writing and formal speech.",
         "examples": {
-          "beginner": "Although it's difficult, I won't give up.",
-          "intermediate": "Although I failed, it was a good experience.",
-          "advanced": "'비록' expresses concession and is paired with '-지만' or '-더라도'.",
-          "master": "The '비록...일지라도' construction is frequently used in literary Korean."
+          "beginner": "Make a sentence using \"비록\".",
+          "intermediate": "The role of \"비록\" is important in this sentence.",
+          "advanced": "Correct use of \"비록\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"비록\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -1992,19 +2460,31 @@
           ]
         },
         "dialogue": {
-          "context": "Talking about test results",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "I heard your test results weren't good?",
+              "text": "When do you use \"비록\"?",
               "romanization": "",
-              "translation": "시험 결과가 안 좋았다며?"
+              "translation": "\"비록\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "Although I failed, I learned a lot.",
+              "text": "어떤 사실을 인정하면서도 그에 반하는 내용을 말할 때 쓰는 부사입니다. '-지만', '-더라도' 등과 함께 사용합니다.",
               "romanization": "",
-              "translation": "비록 떨어졌지만 많이 배웠어."
+              "translation": "어떤 사실을 인정하면서도 그에 반하는 내용을 말할 때 쓰는 부사입니다. '-지만', '-더라도' 등과 함께 사용합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -2036,10 +2516,10 @@
         "word": "설령",
         "explanation": "극단적인 가정을 할 때 쓰는 부사입니다. '설사'와 비슷하며 '-더라도', '-다 해도' 등과 함께 씁니다. 문어체에서 주로 사용됩니다.",
         "examples": {
-          "beginner": "설령 실패해도 괜찮아요.",
-          "intermediate": "설령 그가 거짓말을 했더라도 용서해 줘야 한다.",
-          "advanced": "설령은 극단적 양보를 나타내며 '-더라도'와 호응하는 문어체 부사이다.",
-          "master": "설령과 설사는 유의어이나, 설령이 더 강한 가정의 뉘앙스를 갖는다."
+          "beginner": "\"설령\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"설령\"의 역할이 중요해요.",
+          "advanced": "\"설령\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"설령\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -2054,19 +2534,31 @@
           ]
         },
         "dialogue": {
-          "context": "결심을 밝히면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "정말 그 일을 시작할 거야?",
-              "romanization": "jeongmal geu ireul sijakal geoya?",
-              "translation": "Are you really going to start that?"
+              "text": "\"설령\"은 언제 써요?",
+              "romanization": "\"seolryeong\"eun eonje sseoyo?",
+              "translation": "When do you use \"설령\"?"
             },
             {
               "speaker": "B",
-              "text": "설령 어려움이 있더라도 해볼 거야.",
-              "romanization": "seollyeong eoryeoumi itdeorado haebol geoya.",
-              "translation": "Even if there are difficulties, I'll give it a try."
+              "text": "극단적인 가정을 할 때 쓰는 부사입니다. '설사'와 비슷하며 '-더라도', '-다 해도' 등과 함께 씁니다. 문어체에서 주로 사용됩니다.",
+              "romanization": "geukdanjeokin gajeongeul hal ttae sseuneun busaipnida. 'seolsa'wa biseushamyeo '-deorado', '-da haedo' deunggwa hamkke sseupnida. muneocheeseo juro sayongdoepnida.",
+              "translation": "극단적인 가정을 할 때 쓰는 부사입니다. '설사'와 비슷하며 '-더라도', '-다 해도' 등과 함께 씁니다. 문어체에서 주로 사용됩니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -2075,10 +2567,10 @@
         "word": "even if",
         "explanation": "An adverb used to introduce an extreme hypothetical concession. Similar to '설사'. Paired with '-더라도' or '-다 해도'. Predominantly used in formal writing and literary contexts.",
         "examples": {
-          "beginner": "Even if I fail, it's okay.",
-          "intermediate": "Even if he lied, we should forgive him.",
-          "advanced": "'설령' is a literary adverb expressing extreme concession, paired with '-더라도'.",
-          "master": "'설령' and '설사' are synonymous, but '설령' carries a stronger hypothetical nuance."
+          "beginner": "Make a sentence using \"설령\".",
+          "intermediate": "The role of \"설령\" is important in this sentence.",
+          "advanced": "Correct use of \"설령\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"설령\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -2093,19 +2585,31 @@
           ]
         },
         "dialogue": {
-          "context": "Expressing determination",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Are you really going to start that?",
+              "text": "When do you use \"설령\"?",
               "romanization": "",
-              "translation": "정말 그 일을 시작할 거야?"
+              "translation": "\"설령\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "Even if there are difficulties, I'll give it a try.",
+              "text": "극단적인 가정을 할 때 쓰는 부사입니다. '설사'와 비슷하며 '-더라도', '-다 해도' 등과 함께 씁니다. 문어체에서 주로 사용됩니다.",
               "romanization": "",
-              "translation": "설령 어려움이 있더라도 해볼 거야."
+              "translation": "극단적인 가정을 할 때 쓰는 부사입니다. '설사'와 비슷하며 '-더라도', '-다 해도' 등과 함께 씁니다. 문어체에서 주로 사용됩니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -2136,10 +2640,10 @@
         "word": "-지만",
         "explanation": "앞 절의 내용과 반대되거나 대조되는 내용을 이어줄 때 쓰는 연결 어미입니다. 동사, 형용사 어간 뒤에 붙습니다.",
         "examples": {
-          "beginner": "맛있지만 비싸요.",
-          "intermediate": "알고 있지만 실천하기 어렵다.",
-          "advanced": "-지만은 역접의 연결 어미로, 서술어 어간에 직접 결합한다.",
-          "master": "-지만과 -지마는 혼동하기 쉬우나, -지마는 금지 표현이므로 구별해야 한다."
+          "beginner": "\"-지만\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"-지만\"의 역할이 중요해요.",
+          "advanced": "\"-지만\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"-지만\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -2154,19 +2658,31 @@
           ]
         },
         "dialogue": {
-          "context": "음식 평가를 하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "이 식당 어때?",
-              "romanization": "i sikdang eottae?",
-              "translation": "How's this restaurant?"
+              "text": "\"-지만\"은 언제 써요?",
+              "romanization": "\"-jiman\"eun eonje sseoyo?",
+              "translation": "When do you use \"-지만\"?"
             },
             {
               "speaker": "B",
-              "text": "음식은 맛있지만 좀 비싸.",
-              "romanization": "eumsigeun masitjiman jom bissa.",
-              "translation": "The food is delicious, but a bit expensive."
+              "text": "앞 절의 내용과 반대되거나 대조되는 내용을 이어줄 때 쓰는 연결 어미입니다. 동사, 형용사 어간 뒤에 붙습니다.",
+              "romanization": "ap jeolui naeyonggwa bandaedoegeona daejodoeneun naeyongeul ieojul ttae sseuneun yeongyeol eomiipnida. dongsa, hyeongyongsa eogan dwie butseupnida.",
+              "translation": "앞 절의 내용과 반대되거나 대조되는 내용을 이어줄 때 쓰는 연결 어미입니다. 동사, 형용사 어간 뒤에 붙습니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -2175,10 +2691,10 @@
         "word": "but / although",
         "explanation": "A connective ending attached to verb or adjective stems to introduce a contrasting clause. It is one of the most frequently used conjunctive endings in Korean.",
         "examples": {
-          "beginner": "It's delicious but expensive.",
-          "intermediate": "I know, but it's hard to put into practice.",
-          "advanced": "'-지만' is a contrastive connective ending that attaches directly to predicate stems.",
-          "master": "'-지만' and '-지마' are easily confused; '-지마' is a prohibitive expression."
+          "beginner": "Make a sentence using \"-지만\".",
+          "intermediate": "The role of \"-지만\" is important in this sentence.",
+          "advanced": "Correct use of \"-지만\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"-지만\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -2193,19 +2709,31 @@
           ]
         },
         "dialogue": {
-          "context": "Reviewing a restaurant",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "How's this restaurant?",
+              "text": "When do you use \"-지만\"?",
               "romanization": "",
-              "translation": "이 식당 어때?"
+              "translation": "\"-지만\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "The food is delicious, but a bit expensive.",
+              "text": "앞 절의 내용과 반대되거나 대조되는 내용을 이어줄 때 쓰는 연결 어미입니다. 동사, 형용사 어간 뒤에 붙습니다.",
               "romanization": "",
-              "translation": "음식은 맛있지만 좀 비싸."
+              "translation": "앞 절의 내용과 반대되거나 대조되는 내용을 이어줄 때 쓰는 연결 어미입니다. 동사, 형용사 어간 뒤에 붙습니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -2237,10 +2765,10 @@
         "word": "-는데",
         "explanation": "배경 상황을 설명하거나 대조, 전환을 나타내는 연결 어미입니다. 구어체에서 매우 자주 사용되며 다양한 뜻을 가집니다.",
         "examples": {
-          "beginner": "지금 밥 먹는데 나중에 전화할게.",
-          "intermediate": "비가 오는데 우산이 없어요.",
-          "advanced": "-는데는 배경, 대조, 전환 등 다기능 연결 어미로, 문맥에 따라 의미가 달라진다.",
-          "master": "동사에는 '-는데', 형용사에는 '-ㄴ데', 과거에는 '-았/었는데'가 결합한다."
+          "beginner": "\"-는데\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"-는데\"의 역할이 중요해요.",
+          "advanced": "\"-는데\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"-는데\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -2255,19 +2783,31 @@
           ]
         },
         "dialogue": {
-          "context": "부탁을 하려고 할 때",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "지금 바빠?",
-              "romanization": "jigeum bappa?",
-              "translation": "Are you busy now?"
+              "text": "\"-는데\"은 언제 써요?",
+              "romanization": "\"-neunde\"eun eonje sseoyo?",
+              "translation": "When do you use \"-는데\"?"
             },
             {
               "speaker": "B",
-              "text": "좀 바쁜데, 왜?",
-              "romanization": "jom bappeunde, wae?",
-              "translation": "I'm a bit busy, why?"
+              "text": "배경 상황을 설명하거나 대조, 전환을 나타내는 연결 어미입니다. 구어체에서 매우 자주 사용되며 다양한 뜻을 가집니다.",
+              "romanization": "baegyeong sanghwangeul seolmyeonghageona daejo, jeonhwaneul natanaeneun yeongyeol eomiipnida. gueocheeseo maeu jaju sayongdoemyeo dayanghan tteuseul gajipnida.",
+              "translation": "배경 상황을 설명하거나 대조, 전환을 나타내는 연결 어미입니다. 구어체에서 매우 자주 사용되며 다양한 뜻을 가집니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -2276,10 +2816,10 @@
         "word": "but / and / context",
         "explanation": "A multi-functional connective ending used to provide background, contrast, or transition. Extremely common in spoken Korean. Its meaning changes based on context.",
         "examples": {
-          "beginner": "I'm eating right now, so I'll call you later.",
-          "intermediate": "It's raining, but I don't have an umbrella.",
-          "advanced": "'-는데' is a multi-functional connective ending for background, contrast, and transition.",
-          "master": "Verbs take '-는데', adjectives take '-ㄴ데', and past tense uses '-았/었는데'."
+          "beginner": "Make a sentence using \"-는데\".",
+          "intermediate": "The role of \"-는데\" is important in this sentence.",
+          "advanced": "Correct use of \"-는데\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"-는데\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -2294,19 +2834,31 @@
           ]
         },
         "dialogue": {
-          "context": "About to ask a favor",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Are you busy now?",
+              "text": "When do you use \"-는데\"?",
               "romanization": "",
-              "translation": "지금 바빠?"
+              "translation": "\"-는데\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "I'm a bit busy, why?",
+              "text": "배경 상황을 설명하거나 대조, 전환을 나타내는 연결 어미입니다. 구어체에서 매우 자주 사용되며 다양한 뜻을 가집니다.",
               "romanization": "",
-              "translation": "좀 바쁜데, 왜?"
+              "translation": "배경 상황을 설명하거나 대조, 전환을 나타내는 연결 어미입니다. 구어체에서 매우 자주 사용되며 다양한 뜻을 가집니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -2337,10 +2889,10 @@
         "word": "-아서/-어서",
         "explanation": "원인이나 이유를 나타내거나 순서를 표현하는 연결 어미입니다. 양성 모음 뒤에는 '-아서', 음성 모음 뒤에는 '-어서'가 붙습니다.",
         "examples": {
-          "beginner": "배가 아파서 못 갔어요.",
-          "intermediate": "늦어서 죄송합니다.",
-          "advanced": "-아서/-어서는 원인·이유와 시간 순서를 모두 표현하는 연결 어미이다.",
-          "master": "-아서/-어서는 명령문이나 청유문에 쓸 수 없고, 이 경우 -니까를 사용한다."
+          "beginner": "\"-아서/-어서\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"-아서/-어서\"의 역할이 중요해요.",
+          "advanced": "\"-아서/-어서\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"-아서/-어서\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -2355,19 +2907,31 @@
           ]
         },
         "dialogue": {
-          "context": "결석 이유를 설명하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "어제 왜 안 왔어?",
-              "romanization": "eoje wae an wasseo?",
-              "translation": "Why didn't you come yesterday?"
+              "text": "\"-아서/-어서\"은 언제 써요?",
+              "romanization": "\"-aseo/-eoseo\"eun eonje sseoyo?",
+              "translation": "When do you use \"-아서/-어서\"?"
             },
             {
               "speaker": "B",
-              "text": "감기에 걸려서 못 왔어.",
-              "romanization": "gamgie geollyeoseo mot wasseo.",
-              "translation": "I caught a cold, so I couldn't come."
+              "text": "원인이나 이유를 나타내거나 순서를 표현하는 연결 어미입니다. 양성 모음 뒤에는 '-아서', 음성 모음 뒤에는 '-어서'가 붙습니다.",
+              "romanization": "woninina iyureul natanaegeona sunseoreul pyohyeonhaneun yeongyeol eomiipnida. yangseong moeum dwieneun '-aseo', eumseong moeum dwieneun '-eoseo'ga butseupnida.",
+              "translation": "원인이나 이유를 나타내거나 순서를 표현하는 연결 어미입니다. 양성 모음 뒤에는 '-아서', 음성 모음 뒤에는 '-어서'가 붙습니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -2376,10 +2940,10 @@
         "word": "because / so",
         "explanation": "A connective ending expressing cause/reason or sequential order. '-아서' follows bright vowels (ㅏ, ㅗ) and '-어서' follows dark vowels. Cannot be used with imperative or suggestive sentences.",
         "examples": {
-          "beginner": "I had a stomachache, so I couldn't go.",
-          "intermediate": "I'm sorry for being late.",
-          "advanced": "'-아서/-어서' expresses both cause/reason and sequential order.",
-          "master": "'-아서/-어서' cannot be used with commands or suggestions; use '-니까' instead."
+          "beginner": "Make a sentence using \"-아서/-어서\".",
+          "intermediate": "The role of \"-아서/-어서\" is important in this sentence.",
+          "advanced": "Correct use of \"-아서/-어서\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"-아서/-어서\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -2394,19 +2958,31 @@
           ]
         },
         "dialogue": {
-          "context": "Explaining an absence",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Why didn't you come yesterday?",
+              "text": "When do you use \"-아서/-어서\"?",
               "romanization": "",
-              "translation": "어제 왜 안 왔어?"
+              "translation": "\"-아서/-어서\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "I caught a cold, so I couldn't come.",
+              "text": "원인이나 이유를 나타내거나 순서를 표현하는 연결 어미입니다. 양성 모음 뒤에는 '-아서', 음성 모음 뒤에는 '-어서'가 붙습니다.",
               "romanization": "",
-              "translation": "감기에 걸려서 못 왔어."
+              "translation": "원인이나 이유를 나타내거나 순서를 표현하는 연결 어미입니다. 양성 모음 뒤에는 '-아서', 음성 모음 뒤에는 '-어서'가 붙습니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -2438,10 +3014,10 @@
         "word": "-니까",
         "explanation": "원인이나 이유를 나타내는 연결 어미입니다. '-아서/-어서'와 달리 명령문, 청유문에도 사용할 수 있습니다. 구어체에서 자주 씁니다.",
         "examples": {
-          "beginner": "추우니까 옷을 입으세요.",
-          "intermediate": "시간이 없으니까 빨리 가자.",
-          "advanced": "-니까는 이유의 연결 어미로, 명령·청유문에 사용 가능하다는 점에서 -아서와 다르다.",
-          "master": "과거형에는 '-았/었으니까'가 결합하며, 구어체에서 '-니까'는 '-니깐'으로 발음되기도 한다."
+          "beginner": "\"-니까\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"-니까\"의 역할이 중요해요.",
+          "advanced": "\"-니까\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"-니까\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -2456,19 +3032,31 @@
           ]
         },
         "dialogue": {
-          "context": "날씨에 대해 조언하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "밖에 나갈 건데 뭐 입을까?",
-              "romanization": "bakke nagal geonde mwo ireulkka?",
-              "translation": "I'm going out, what should I wear?"
+              "text": "\"-니까\"은 언제 써요?",
+              "romanization": "\"-nikka\"eun eonje sseoyo?",
+              "translation": "When do you use \"-니까\"?"
             },
             {
               "speaker": "B",
-              "text": "오늘 추우니까 따뜻하게 입어.",
-              "romanization": "oneul chuunikka ttatteuthage ibeo.",
-              "translation": "It's cold today, so dress warmly."
+              "text": "원인이나 이유를 나타내는 연결 어미입니다. '-아서/-어서'와 달리 명령문, 청유문에도 사용할 수 있습니다. 구어체에서 자주 씁니다.",
+              "romanization": "woninina iyureul natanaeneun yeongyeol eomiipnida. '-aseo/-eoseo'wa dalri myeongryeongmun, cheongyumunedo sayonghal su isseupnida. gueocheeseo jaju sseupnida.",
+              "translation": "원인이나 이유를 나타내는 연결 어미입니다. '-아서/-어서'와 달리 명령문, 청유문에도 사용할 수 있습니다. 구어체에서 자주 씁니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -2477,10 +3065,10 @@
         "word": "because / since",
         "explanation": "A connective ending expressing cause or reason. Unlike '-아서/-어서', it can be used with imperative and suggestive sentences. Very common in spoken Korean.",
         "examples": {
-          "beginner": "It's cold, so put on your clothes.",
-          "intermediate": "We don't have time, so let's hurry.",
-          "advanced": "'-니까' differs from '-아서' in that it can be used with commands and suggestions.",
-          "master": "Past tense takes '-았/었으니까'. In speech, '-니까' is sometimes pronounced '-니깐'."
+          "beginner": "Make a sentence using \"-니까\".",
+          "intermediate": "The role of \"-니까\" is important in this sentence.",
+          "advanced": "Correct use of \"-니까\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"-니까\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -2495,19 +3083,31 @@
           ]
         },
         "dialogue": {
-          "context": "Giving advice about the weather",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "I'm going out, what should I wear?",
+              "text": "When do you use \"-니까\"?",
               "romanization": "",
-              "translation": "밖에 나갈 건데 뭐 입을까?"
+              "translation": "\"-니까\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "It's cold today, so dress warmly.",
+              "text": "원인이나 이유를 나타내는 연결 어미입니다. '-아서/-어서'와 달리 명령문, 청유문에도 사용할 수 있습니다. 구어체에서 자주 씁니다.",
               "romanization": "",
-              "translation": "오늘 추우니까 따뜻하게 입어."
+              "translation": "원인이나 이유를 나타내는 연결 어미입니다. '-아서/-어서'와 달리 명령문, 청유문에도 사용할 수 있습니다. 구어체에서 자주 씁니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -2538,10 +3138,10 @@
         "word": "-려고",
         "explanation": "어떤 행동의 목적이나 의도를 나타내는 연결 어미입니다. '-으려고'는 받침이 있는 동사 뒤에 사용됩니다.",
         "examples": {
-          "beginner": "한국어를 배우려고 한국에 왔어요.",
-          "intermediate": "건강해지려고 운동을 시작했어요.",
-          "advanced": "-려고는 의도·목적을 나타내며, 주어가 같은 절만 연결할 수 있다.",
-          "master": "-려고와 -러는 유의 표현이나, -러는 이동 동사와만 결합한다."
+          "beginner": "\"-려고\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"-려고\"의 역할이 중요해요.",
+          "advanced": "\"-려고\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"-려고\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -2556,19 +3156,31 @@
           ]
         },
         "dialogue": {
-          "context": "한국에 온 이유를 묻는 상황",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "한국에 왜 왔어요?",
-              "romanization": "hanguge wae wasseoyo?",
-              "translation": "Why did you come to Korea?"
+              "text": "\"-려고\"은 언제 써요?",
+              "romanization": "\"-ryeogo\"eun eonje sseoyo?",
+              "translation": "When do you use \"-려고\"?"
             },
             {
               "speaker": "B",
-              "text": "한국어를 배우려고 왔어요.",
-              "romanization": "hangugeoreul baeuryeogo wasseoyo.",
-              "translation": "I came to learn Korean."
+              "text": "어떤 행동의 목적이나 의도를 나타내는 연결 어미입니다. '-으려고'는 받침이 있는 동사 뒤에 사용됩니다.",
+              "romanization": "eotteon haengdongui mokjeokina uidoreul natanaeneun yeongyeol eomiipnida. '-euryeogo'neun batchimi isneun dongsa dwie sayongdoepnida.",
+              "translation": "어떤 행동의 목적이나 의도를 나타내는 연결 어미입니다. '-으려고'는 받침이 있는 동사 뒤에 사용됩니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -2577,10 +3189,10 @@
         "word": "in order to",
         "explanation": "A connective ending expressing the purpose or intention of an action. '-으려고' is used after stems ending in a consonant. The subjects of both clauses must be the same.",
         "examples": {
-          "beginner": "I came to Korea to learn Korean.",
-          "intermediate": "I started exercising to get healthy.",
-          "advanced": "'-려고' expresses intention/purpose and requires the same subject in both clauses.",
-          "master": "'-려고' and '-러' are similar, but '-러' only combines with verbs of movement."
+          "beginner": "Make a sentence using \"-려고\".",
+          "intermediate": "The role of \"-려고\" is important in this sentence.",
+          "advanced": "Correct use of \"-려고\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"-려고\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -2595,19 +3207,31 @@
           ]
         },
         "dialogue": {
-          "context": "Asking why someone came to Korea",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Why did you come to Korea?",
+              "text": "When do you use \"-려고\"?",
               "romanization": "",
-              "translation": "한국에 왜 왔어요?"
+              "translation": "\"-려고\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "I came to learn Korean.",
+              "text": "어떤 행동의 목적이나 의도를 나타내는 연결 어미입니다. '-으려고'는 받침이 있는 동사 뒤에 사용됩니다.",
               "romanization": "",
-              "translation": "한국어를 배우려고 왔어요."
+              "translation": "어떤 행동의 목적이나 의도를 나타내는 연결 어미입니다. '-으려고'는 받침이 있는 동사 뒤에 사용됩니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -2639,10 +3263,10 @@
         "word": "-도록",
         "explanation": "목적이나 정도, 기한을 나타내는 연결 어미입니다. '~하게끔', '~할 때까지'의 뜻으로 사용됩니다.",
         "examples": {
-          "beginner": "늦지 않도록 일찍 출발하세요.",
-          "intermediate": "밤새도록 공부했어요.",
-          "advanced": "-도록은 목적, 정도, 기한의 세 가지 의미를 가지는 연결 어미이다.",
-          "master": "-도록과 -게의 차이: -도록은 목적성이 강하고, -게는 결과 상태를 강조한다."
+          "beginner": "\"-도록\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"-도록\"의 역할이 중요해요.",
+          "advanced": "\"-도록\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"-도록\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -2657,19 +3281,31 @@
           ]
         },
         "dialogue": {
-          "context": "시험 준비 조언을 하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "시험 준비 어떻게 해야 해?",
-              "romanization": "siheom junbi eotteoke haeya hae?",
-              "translation": "How should I prepare for the exam?"
+              "text": "\"-도록\"은 언제 써요?",
+              "romanization": "\"-dorok\"eun eonje sseoyo?",
+              "translation": "When do you use \"-도록\"?"
             },
             {
               "speaker": "B",
-              "text": "실수하지 않도록 꼼꼼히 공부해.",
-              "romanization": "silsuhaji antorok kkomkkomhi gongbuhae.",
-              "translation": "Study carefully so you don't make mistakes."
+              "text": "목적이나 정도, 기한을 나타내는 연결 어미입니다. '~하게끔', '~할 때까지'의 뜻으로 사용됩니다.",
+              "romanization": "mokjeokina jeongdo, gihaneul natanaeneun yeongyeol eomiipnida. '~hagekkeum', '~hal ttaekkaji'ui tteuseuro sayongdoepnida.",
+              "translation": "목적이나 정도, 기한을 나타내는 연결 어미입니다. '~하게끔', '~할 때까지'의 뜻으로 사용됩니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -2678,10 +3314,10 @@
         "word": "so that / until",
         "explanation": "A connective ending expressing purpose, degree, or time limit. It can mean 'so that', 'to the extent that', or 'until'. More commonly used in formal contexts.",
         "examples": {
-          "beginner": "Leave early so that you're not late.",
-          "intermediate": "I studied all night long.",
-          "advanced": "'-도록' has three meanings: purpose, degree, and time limit.",
-          "master": "'-도록' emphasizes purpose while '-게' emphasizes the resulting state."
+          "beginner": "Make a sentence using \"-도록\".",
+          "intermediate": "The role of \"-도록\" is important in this sentence.",
+          "advanced": "Correct use of \"-도록\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"-도록\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -2696,19 +3332,31 @@
           ]
         },
         "dialogue": {
-          "context": "Giving advice on exam preparation",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "How should I prepare for the exam?",
+              "text": "When do you use \"-도록\"?",
               "romanization": "",
-              "translation": "시험 준비 어떻게 해야 해?"
+              "translation": "\"-도록\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "Study carefully so you don't make mistakes.",
+              "text": "목적이나 정도, 기한을 나타내는 연결 어미입니다. '~하게끔', '~할 때까지'의 뜻으로 사용됩니다.",
               "romanization": "",
-              "translation": "실수하지 않도록 꼼꼼히 공부해."
+              "translation": "목적이나 정도, 기한을 나타내는 연결 어미입니다. '~하게끔', '~할 때까지'의 뜻으로 사용됩니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -2739,10 +3387,10 @@
         "word": "-ㄹ수록",
         "explanation": "어떤 상태가 심해질수록 다른 결과도 함께 변하는 것을 나타내는 연결 어미입니다. '~하면 할수록'의 형태로도 씁니다.",
         "examples": {
-          "beginner": "갈수록 어려워요.",
-          "intermediate": "한국어는 배우면 배울수록 재미있어요.",
-          "advanced": "-ㄹ수록은 비례 관계를 나타내며 '~면 ~ㄹ수록' 구문으로 강조할 수 있다.",
-          "master": "'-ㄹ수록'의 앞에 같은 동사를 반복하면('하면 할수록') 비례를 더 강조한다."
+          "beginner": "\"-ㄹ수록\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"-ㄹ수록\"의 역할이 중요해요.",
+          "advanced": "\"-ㄹ수록\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"-ㄹ수록\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -2757,19 +3405,31 @@
           ]
         },
         "dialogue": {
-          "context": "한국어 학습에 대해 이야기하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "한국어 공부 어때?",
-              "romanization": "hangugeo gongbu eottae?",
-              "translation": "How's studying Korean?"
+              "text": "\"-ㄹ수록\"은 언제 써요?",
+              "romanization": "\"-ㄹsurok\"eun eonje sseoyo?",
+              "translation": "When do you use \"-ㄹ수록\"?"
             },
             {
               "speaker": "B",
-              "text": "배우면 배울수록 재미있어.",
-              "romanization": "baeumyeon baeulsurok jaemiisseo.",
-              "translation": "The more I learn, the more interesting it gets."
+              "text": "어떤 상태가 심해질수록 다른 결과도 함께 변하는 것을 나타내는 연결 어미입니다. '~하면 할수록'의 형태로도 씁니다.",
+              "romanization": "eotteon sangtaega simhaejilsurok dareun gyeolgwado hamkke byeonhaneun geoseul natanaeneun yeongyeol eomiipnida. '~hamyeon halsurok'ui hyeongtaerodo sseupnida.",
+              "translation": "어떤 상태가 심해질수록 다른 결과도 함께 변하는 것을 나타내는 연결 어미입니다. '~하면 할수록'의 형태로도 씁니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -2778,10 +3438,10 @@
         "word": "the more...the more",
         "explanation": "A connective ending expressing a proportional relationship. It indicates that as one state intensifies, another changes accordingly. Can be emphasized with the pattern '~면 ~ㄹ수록'.",
         "examples": {
-          "beginner": "It gets harder as time goes on.",
-          "intermediate": "The more I study Korean, the more interesting it is.",
-          "advanced": "'-ㄹ수록' expresses proportional relationships and can be emphasized with '~면 ~ㄹ수록'.",
-          "master": "Repeating the same verb before '-ㄹ수록' (as in '하면 할수록') strengthens the proportional emphasis."
+          "beginner": "Make a sentence using \"-ㄹ수록\".",
+          "intermediate": "The role of \"-ㄹ수록\" is important in this sentence.",
+          "advanced": "Correct use of \"-ㄹ수록\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"-ㄹ수록\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -2796,19 +3456,31 @@
           ]
         },
         "dialogue": {
-          "context": "Talking about studying Korean",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "How's studying Korean?",
+              "text": "When do you use \"-ㄹ수록\"?",
               "romanization": "",
-              "translation": "한국어 공부 어때?"
+              "translation": "\"-ㄹ수록\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "The more I learn, the more interesting it gets.",
+              "text": "어떤 상태가 심해질수록 다른 결과도 함께 변하는 것을 나타내는 연결 어미입니다. '~하면 할수록'의 형태로도 씁니다.",
               "romanization": "",
-              "translation": "배우면 배울수록 재미있어."
+              "translation": "어떤 상태가 심해질수록 다른 결과도 함께 변하는 것을 나타내는 연결 어미입니다. '~하면 할수록'의 형태로도 씁니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -2840,10 +3512,10 @@
         "word": "-자마자",
         "explanation": "앞의 동작이 끝나는 즉시 뒤의 동작이 이어짐을 나타내는 연결 어미입니다. 시간적 간격이 거의 없음을 강조합니다.",
         "examples": {
-          "beginner": "집에 오자마자 잠들었어요.",
-          "intermediate": "소식을 듣자마자 달려왔어요.",
-          "advanced": "-자마자는 두 행위의 즉각적 연속을 나타내며, 동사 어간에만 결합한다.",
-          "master": "-자마자와 '-는 대로'는 유사하나, -자마자가 더 즉각적인 뉘앙스를 갖는다."
+          "beginner": "\"-자마자\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"-자마자\"의 역할이 중요해요.",
+          "advanced": "\"-자마자\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"-자마자\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -2858,19 +3530,31 @@
           ]
         },
         "dialogue": {
-          "context": "퇴근 후 일과를 이야기하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "어제 퇴근하고 뭐 했어?",
-              "romanization": "eoje toegeonhago mwo haesseo?",
-              "translation": "What did you do after work yesterday?"
+              "text": "\"-자마자\"은 언제 써요?",
+              "romanization": "\"-jamaja\"eun eonje sseoyo?",
+              "translation": "When do you use \"-자마자\"?"
             },
             {
               "speaker": "B",
-              "text": "집에 오자마자 바로 잤어.",
-              "romanization": "jibe ojamaja baro jasseo.",
-              "translation": "I fell asleep as soon as I got home."
+              "text": "앞의 동작이 끝나는 즉시 뒤의 동작이 이어짐을 나타내는 연결 어미입니다. 시간적 간격이 거의 없음을 강조합니다.",
+              "romanization": "apui dongjaki kkeutnaneun jeuksi dwiui dongjaki ieojimeul natanaeneun yeongyeol eomiipnida. siganjeok gangyeoki geoui eopeumeul gangjohapnida.",
+              "translation": "앞의 동작이 끝나는 즉시 뒤의 동작이 이어짐을 나타내는 연결 어미입니다. 시간적 간격이 거의 없음을 강조합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -2879,10 +3563,10 @@
         "word": "as soon as",
         "explanation": "A connective ending indicating that the second action occurs immediately after the first one finishes. Emphasizes there is almost no time gap. Only attaches to verb stems.",
         "examples": {
-          "beginner": "I fell asleep as soon as I got home.",
-          "intermediate": "I rushed over as soon as I heard the news.",
-          "advanced": "'-자마자' indicates immediate succession and only combines with verb stems.",
-          "master": "'-자마자' and '-는 대로' are similar, but '-자마자' has a more immediate nuance."
+          "beginner": "Make a sentence using \"-자마자\".",
+          "intermediate": "The role of \"-자마자\" is important in this sentence.",
+          "advanced": "Correct use of \"-자마자\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"-자마자\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -2897,19 +3581,31 @@
           ]
         },
         "dialogue": {
-          "context": "Talking about after-work routine",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What did you do after work yesterday?",
+              "text": "When do you use \"-자마자\"?",
               "romanization": "",
-              "translation": "어제 퇴근하고 뭐 했어?"
+              "translation": "\"-자마자\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "I fell asleep as soon as I got home.",
+              "text": "앞의 동작이 끝나는 즉시 뒤의 동작이 이어짐을 나타내는 연결 어미입니다. 시간적 간격이 거의 없음을 강조합니다.",
               "romanization": "",
-              "translation": "집에 오자마자 바로 잤어."
+              "translation": "앞의 동작이 끝나는 즉시 뒤의 동작이 이어짐을 나타내는 연결 어미입니다. 시간적 간격이 거의 없음을 강조합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -2941,10 +3637,10 @@
         "word": "-다가",
         "explanation": "진행 중인 동작이 중단되고 다른 동작으로 바뀌는 것을 나타내는 연결 어미입니다. 동작의 전환이나 변화를 표현합니다.",
         "examples": {
-          "beginner": "공부하다가 잠들었어요.",
-          "intermediate": "걷다가 넘어졌어요.",
-          "advanced": "-다가는 행위의 중단·전환을 나타내며, 주어가 같아야 한다.",
-          "master": "-다가를 반복하면('-다가 -다가 하다') 교체적 반복 행위를 표현할 수 있다."
+          "beginner": "\"-다가\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"-다가\"의 역할이 중요해요.",
+          "advanced": "\"-다가\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"-다가\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -2959,19 +3655,31 @@
           ]
         },
         "dialogue": {
-          "context": "오늘 있었던 일을 이야기하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "무릎에 왜 반창고 붙였어?",
-              "romanization": "mureuppe wae banchanggo buchyeosseo?",
-              "translation": "Why do you have a bandage on your knee?"
+              "text": "\"-다가\"은 언제 써요?",
+              "romanization": "\"-daga\"eun eonje sseoyo?",
+              "translation": "When do you use \"-다가\"?"
             },
             {
               "speaker": "B",
-              "text": "뛰다가 넘어졌어.",
-              "romanization": "ttwi-daga neomeojyeosseo.",
-              "translation": "I fell while running."
+              "text": "진행 중인 동작이 중단되고 다른 동작으로 바뀌는 것을 나타내는 연결 어미입니다. 동작의 전환이나 변화를 표현합니다.",
+              "romanization": "jinhaeng jungin dongjaki jungdandoego dareun dongjakeuro bakkwineun geoseul natanaeneun yeongyeol eomiipnida. dongjakui jeonhwanina byeonhwareul pyohyeonhapnida.",
+              "translation": "진행 중인 동작이 중단되고 다른 동작으로 바뀌는 것을 나타내는 연결 어미입니다. 동작의 전환이나 변화를 표현합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -2980,10 +3688,10 @@
         "word": "while / and then",
         "explanation": "A connective ending indicating that an action in progress is interrupted and switches to another action. Expresses transition or change in activity. The subject must be the same in both clauses.",
         "examples": {
-          "beginner": "I fell asleep while studying.",
-          "intermediate": "I tripped while walking.",
-          "advanced": "'-다가' indicates interruption or transition, requiring the same subject in both clauses.",
-          "master": "Repeating '-다가' ('-다가 -다가 하다') expresses alternating repeated actions."
+          "beginner": "Make a sentence using \"-다가\".",
+          "intermediate": "The role of \"-다가\" is important in this sentence.",
+          "advanced": "Correct use of \"-다가\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"-다가\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -2998,19 +3706,31 @@
           ]
         },
         "dialogue": {
-          "context": "Talking about something that happened today",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Why do you have a bandage on your knee?",
+              "text": "When do you use \"-다가\"?",
               "romanization": "",
-              "translation": "무릎에 왜 반창고 붙였어?"
+              "translation": "\"-다가\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "I fell while running.",
+              "text": "진행 중인 동작이 중단되고 다른 동작으로 바뀌는 것을 나타내는 연결 어미입니다. 동작의 전환이나 변화를 표현합니다.",
               "romanization": "",
-              "translation": "뛰다가 넘어졌어."
+              "translation": "진행 중인 동작이 중단되고 다른 동작으로 바뀌는 것을 나타내는 연결 어미입니다. 동작의 전환이나 변화를 표현합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -3041,10 +3761,10 @@
         "word": "-든지",
         "explanation": "여러 가지 중 어느 것이든 상관없음을 나타내는 연결 어미입니다. 선택이나 무관함을 표현합니다.",
         "examples": {
-          "beginner": "뭐든지 다 좋아해요.",
-          "intermediate": "어디든지 갈 수 있어요.",
-          "advanced": "-든지는 선택의 무관함을 나타내며, 의문사와 결합하면 '아무~나'의 뜻이 된다.",
-          "master": "-든지와 -던지를 혼동하지 않도록 주의해야 한다. -던지는 회상을 나타낸다."
+          "beginner": "\"-든지\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"-든지\"의 역할이 중요해요.",
+          "advanced": "\"-든지\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"-든지\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -3059,19 +3779,31 @@
           ]
         },
         "dialogue": {
-          "context": "점심 메뉴를 정하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뭐 먹을래?",
-              "romanization": "mwo meogeullae?",
-              "translation": "What do you want to eat?"
+              "text": "\"-든지\"은 언제 써요?",
+              "romanization": "\"-deunji\"eun eonje sseoyo?",
+              "translation": "When do you use \"-든지\"?"
             },
             {
               "speaker": "B",
-              "text": "나는 뭐든지 괜찮아.",
-              "romanization": "naneun mwodeunji gwaenchana.",
-              "translation": "Anything is fine with me."
+              "text": "여러 가지 중 어느 것이든 상관없음을 나타내는 연결 어미입니다. 선택이나 무관함을 표현합니다.",
+              "romanization": "yeoreo gaji jung eoneu geosideun sanggwaneopeumeul natanaeneun yeongyeol eomiipnida. seontaekina mugwanhameul pyohyeonhapnida.",
+              "translation": "여러 가지 중 어느 것이든 상관없음을 나타내는 연결 어미입니다. 선택이나 무관함을 표현합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -3080,10 +3812,10 @@
         "word": "whether / or",
         "explanation": "A connective ending indicating that it doesn't matter which option is chosen. Expresses indifference to the choice. When combined with question words, it means 'any(thing/where/time)'.",
         "examples": {
-          "beginner": "I like everything.",
-          "intermediate": "I can go anywhere.",
-          "advanced": "'-든지' expresses indifference to choice. With question words, it means 'any-'.",
-          "master": "Be careful not to confuse '-든지' with '-던지', which expresses recollection."
+          "beginner": "Make a sentence using \"-든지\".",
+          "intermediate": "The role of \"-든지\" is important in this sentence.",
+          "advanced": "Correct use of \"-든지\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"-든지\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -3098,19 +3830,31 @@
           ]
         },
         "dialogue": {
-          "context": "Deciding on lunch",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What do you want to eat?",
+              "text": "When do you use \"-든지\"?",
               "romanization": "",
-              "translation": "뭐 먹을래?"
+              "translation": "\"-든지\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "Anything is fine with me.",
+              "text": "여러 가지 중 어느 것이든 상관없음을 나타내는 연결 어미입니다. 선택이나 무관함을 표현합니다.",
               "romanization": "",
-              "translation": "나는 뭐든지 괜찮아."
+              "translation": "여러 가지 중 어느 것이든 상관없음을 나타내는 연결 어미입니다. 선택이나 무관함을 표현합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -3142,10 +3886,10 @@
         "word": "-거나",
         "explanation": "둘 이상의 행동이나 상태 중 하나를 선택하는 것을 나타내는 연결 어미입니다. '또는'과 비슷한 뜻입니다.",
         "examples": {
-          "beginner": "주말에 영화를 보거나 쇼핑해요.",
-          "intermediate": "궁금한 게 있으면 전화하거나 메일 보내세요.",
-          "advanced": "-거나는 선택적 나열의 연결 어미로, 두 개 이상의 행위를 병렬한다.",
-          "master": "-거나와 '-든지'는 모두 선택을 나타내지만, -거나는 구체적 대안을, -든지는 무관함을 강조한다."
+          "beginner": "\"-거나\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"-거나\"의 역할이 중요해요.",
+          "advanced": "\"-거나\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"-거나\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -3160,19 +3904,31 @@
           ]
         },
         "dialogue": {
-          "context": "주말 계획을 이야기하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "주말에 보통 뭐 해?",
-              "romanization": "jumare botong mwo hae?",
-              "translation": "What do you usually do on weekends?"
+              "text": "\"-거나\"은 언제 써요?",
+              "romanization": "\"-geona\"eun eonje sseoyo?",
+              "translation": "When do you use \"-거나\"?"
             },
             {
               "speaker": "B",
-              "text": "운동하거나 친구 만나요.",
-              "romanization": "undongha-geona chingu mannayo.",
-              "translation": "I exercise or meet friends."
+              "text": "둘 이상의 행동이나 상태 중 하나를 선택하는 것을 나타내는 연결 어미입니다. '또는'과 비슷한 뜻입니다.",
+              "romanization": "dul isangui haengdongina sangtae jung hanareul seontaekhaneun geoseul natanaeneun yeongyeol eomiipnida. 'ttoneun'gwa biseushan tteusipnida.",
+              "translation": "둘 이상의 행동이나 상태 중 하나를 선택하는 것을 나타내는 연결 어미입니다. '또는'과 비슷한 뜻입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -3181,10 +3937,10 @@
         "word": "or",
         "explanation": "A connective ending used to present alternatives or choices between two or more actions or states. Similar to 'or' in English. Attaches to verb and adjective stems.",
         "examples": {
-          "beginner": "On weekends, I watch movies or go shopping.",
-          "intermediate": "If you have questions, call or send an email.",
-          "advanced": "'-거나' is an alternative-listing connective ending that parallels two or more actions.",
-          "master": "'-거나' and '-든지' both indicate choice, but '-거나' lists specific alternatives while '-든지' emphasizes indifference."
+          "beginner": "Make a sentence using \"-거나\".",
+          "intermediate": "The role of \"-거나\" is important in this sentence.",
+          "advanced": "Correct use of \"-거나\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"-거나\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -3199,19 +3955,31 @@
           ]
         },
         "dialogue": {
-          "context": "Talking about weekend plans",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What do you usually do on weekends?",
+              "text": "When do you use \"-거나\"?",
               "romanization": "",
-              "translation": "주말에 보통 뭐 해?"
+              "translation": "\"-거나\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "I exercise or meet friends.",
+              "text": "둘 이상의 행동이나 상태 중 하나를 선택하는 것을 나타내는 연결 어미입니다. '또는'과 비슷한 뜻입니다.",
               "romanization": "",
-              "translation": "운동하거나 친구 만나요."
+              "translation": "둘 이상의 행동이나 상태 중 하나를 선택하는 것을 나타내는 연결 어미입니다. '또는'과 비슷한 뜻입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -3242,10 +4010,10 @@
         "word": "-ㄴ데도",
         "explanation": "앞의 상황에도 불구하고 뒤의 결과가 예상과 다를 때 쓰는 연결 어미입니다. '-는데도 불구하고'의 줄임 형태입니다.",
         "examples": {
-          "beginner": "많이 먹었는데도 배가 고파요.",
-          "intermediate": "열심히 공부했는데도 시험에 떨어졌어요.",
-          "advanced": "-ㄴ데도는 양보의 연결 어미로, 기대와 반대되는 결과를 이끈다.",
-          "master": "동사는 '-는데도', 형용사는 '-ㄴ데도', 과거는 '-았/었는데도'로 결합한다."
+          "beginner": "\"-ㄴ데도\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"-ㄴ데도\"의 역할이 중요해요.",
+          "advanced": "\"-ㄴ데도\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"-ㄴ데도\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -3260,19 +4028,31 @@
           ]
         },
         "dialogue": {
-          "context": "다이어트에 대해 이야기하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "다이어트 잘 되고 있어?",
-              "romanization": "daieoteu jal doego isseo?",
-              "translation": "Is your diet going well?"
+              "text": "\"-ㄴ데도\"은 언제 써요?",
+              "romanization": "\"-ㄴdedo\"eun eonje sseoyo?",
+              "translation": "When do you use \"-ㄴ데도\"?"
             },
             {
               "speaker": "B",
-              "text": "운동을 매일 하는데도 살이 안 빠져.",
-              "romanization": "undongeul maeil haneundedo sari an ppajyeo.",
-              "translation": "I exercise every day, but I'm not losing weight."
+              "text": "앞의 상황에도 불구하고 뒤의 결과가 예상과 다를 때 쓰는 연결 어미입니다. '-는데도 불구하고'의 줄임 형태입니다.",
+              "romanization": "apui sanghwangedo bulguhago dwiui gyeolgwaga yesanggwa dareul ttae sseuneun yeongyeol eomiipnida. '-neundedo bulguhago'ui julim hyeongtaeipnida.",
+              "translation": "앞의 상황에도 불구하고 뒤의 결과가 예상과 다를 때 쓰는 연결 어미입니다. '-는데도 불구하고'의 줄임 형태입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -3281,10 +4061,10 @@
         "word": "despite / even though",
         "explanation": "A connective ending expressing that the result is contrary to what is expected given the preceding situation. A shorter form of '-는데도 불구하고'. Indicates concession.",
         "examples": {
-          "beginner": "Even though I ate a lot, I'm still hungry.",
-          "intermediate": "Despite studying hard, I failed the exam.",
-          "advanced": "'-ㄴ데도' is a concessive connective ending that introduces a result contrary to expectation.",
-          "master": "Verbs take '-는데도', adjectives take '-ㄴ데도', and past tense uses '-았/었는데도'."
+          "beginner": "Make a sentence using \"-ㄴ데도\".",
+          "intermediate": "The role of \"-ㄴ데도\" is important in this sentence.",
+          "advanced": "Correct use of \"-ㄴ데도\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"-ㄴ데도\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -3299,19 +4079,31 @@
           ]
         },
         "dialogue": {
-          "context": "Talking about dieting",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "Is your diet going well?",
+              "text": "When do you use \"-ㄴ데도\"?",
               "romanization": "",
-              "translation": "다이어트 잘 되고 있어?"
+              "translation": "\"-ㄴ데도\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "I exercise every day, but I'm not losing weight.",
+              "text": "앞의 상황에도 불구하고 뒤의 결과가 예상과 다를 때 쓰는 연결 어미입니다. '-는데도 불구하고'의 줄임 형태입니다.",
               "romanization": "",
-              "translation": "운동을 매일 하는데도 살이 안 빠져."
+              "translation": "앞의 상황에도 불구하고 뒤의 결과가 예상과 다를 때 쓰는 연결 어미입니다. '-는데도 불구하고'의 줄임 형태입니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }
@@ -3343,10 +4135,10 @@
         "word": "-더라도",
         "explanation": "가정적인 상황을 인정하면서도 그와 관계없이 뒤의 내용이 성립함을 나타내는 연결 어미입니다. '-아도/-어도'보다 더 강한 양보를 표현합니다.",
         "examples": {
-          "beginner": "힘들더라도 포기하지 마세요.",
-          "intermediate": "비가 오더라도 축구를 할 거예요.",
-          "advanced": "-더라도는 가정적 양보를 나타내며, -아도/-어도보다 강한 뉘앙스를 갖는다.",
-          "master": "-더라도는 미실현 상황의 양보에 주로 쓰이며, -았/었더라도는 과거 반사실적 가정을 나타낸다."
+          "beginner": "\"-더라도\" 을 사용해서 문장을 만들어요.",
+          "intermediate": "이 문장에서 \"-더라도\"의 역할이 중요해요.",
+          "advanced": "\"-더라도\"의 올바른 사용은 문장 연결의 핵심입니다.",
+          "master": "\"-더라도\"의 미묘한 차이를 이해하면 논리적인 한국어 표현이 가능합니다."
         },
         "variations": {
           "formal": [
@@ -3361,19 +4153,31 @@
           ]
         },
         "dialogue": {
-          "context": "힘든 상황에서 격려하면서",
+          "context": "한국어 문법을 공부하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "너무 힘들어서 그만두고 싶어.",
-              "romanization": "neomu himdeureo-seo geumandugo sipeo.",
-              "translation": "It's so hard, I want to quit."
+              "text": "\"-더라도\"은 언제 써요?",
+              "romanization": "\"-deorado\"eun eonje sseoyo?",
+              "translation": "When do you use \"-더라도\"?"
             },
             {
               "speaker": "B",
-              "text": "힘들더라도 조금만 더 버텨 봐.",
-              "romanization": "himdeuldeorado jogeumman deo beottyeo bwa.",
-              "translation": "Even if it's hard, hang in there a little more."
+              "text": "가정적인 상황을 인정하면서도 그와 관계없이 뒤의 내용이 성립함을 나타내는 연결 어미입니다. '-아도/-어도'보다 더 강한 양보를 표현합니다.",
+              "romanization": "gajeongjeokin sanghwangeul injeonghamyeonseodo geuwa gwangyeeopi dwiui naeyongi seongriphameul natanaeneun yeongyeol eomiipnida. '-ado/-eodo'boda deo ganghan yangboreul pyohyeonhapnida.",
+              "translation": "가정적인 상황을 인정하면서도 그와 관계없이 뒤의 내용이 성립함을 나타내는 연결 어미입니다. '-아도/-어도'보다 더 강한 양보를 표현합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "예문 하나 만들어 주세요.",
+              "romanization": "yemun hana mandeuleo juseyo.",
+              "translation": "Please make an example sentence."
+            },
+            {
+              "speaker": "B",
+              "text": "비가 와요. 그래서 우산을 가져가요.",
+              "romanization": "biga wayo. geuraeseo usaneul gajyeogayo.",
+              "translation": "It's raining. So I'll bring an umbrella."
             }
           ]
         }
@@ -3382,10 +4186,10 @@
         "word": "even if",
         "explanation": "A connective ending indicating that the following clause holds true regardless of the hypothetical situation. Expresses stronger concession than '-아도/-어도'. Often used for unrealized situations.",
         "examples": {
-          "beginner": "Even if it's hard, don't give up.",
-          "intermediate": "Even if it rains, I will play soccer.",
-          "advanced": "'-더라도' expresses hypothetical concession, stronger than '-아도/-어도'.",
-          "master": "'-더라도' is mainly for unrealized situations; '-았/었더라도' expresses counterfactual past assumptions."
+          "beginner": "Make a sentence using \"-더라도\".",
+          "intermediate": "The role of \"-더라도\" is important in this sentence.",
+          "advanced": "Correct use of \"-더라도\" is key to connecting sentences.",
+          "master": "Understanding the subtle differences of \"-더라도\" enables logical Korean expression."
         },
         "variations": {
           "formal": [
@@ -3400,19 +4204,31 @@
           ]
         },
         "dialogue": {
-          "context": "Encouraging someone in a difficult situation",
+          "context": "Studying Korean grammar",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "It's so hard, I want to quit.",
+              "text": "When do you use \"-더라도\"?",
               "romanization": "",
-              "translation": "너무 힘들어서 그만두고 싶어."
+              "translation": "\"-더라도\"은 언제 써요?"
             },
             {
               "speaker": "B",
-              "text": "Even if it's hard, hang in there a little more.",
+              "text": "가정적인 상황을 인정하면서도 그와 관계없이 뒤의 내용이 성립함을 나타내는 연결 어미입니다. '-아도/-어도'보다 더 강한 양보를 표현합니다.",
               "romanization": "",
-              "translation": "힘들더라도 조금만 더 버텨 봐."
+              "translation": "가정적인 상황을 인정하면서도 그와 관계없이 뒤의 내용이 성립함을 나타내는 연결 어미입니다. '-아도/-어도'보다 더 강한 양보를 표현합니다."
+            },
+            {
+              "speaker": "A",
+              "text": "Please make an example sentence.",
+              "romanization": "",
+              "translation": "예문 하나 만들어 주세요."
+            },
+            {
+              "speaker": "B",
+              "text": "It's raining. So I'll bring an umbrella.",
+              "romanization": "",
+              "translation": "비가 와요. 그래서 우산을 가져가요."
             }
           ]
         }

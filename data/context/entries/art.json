@@ -21,9 +21,9 @@
         "word": "미술",
         "explanation": "시각적으로 아름다움을 표현하는 예술. 그림, 조각, 디자인 등을 포함한다.",
         "examples": {
-          "beginner": "미술을/를 봐요.",
-          "intermediate": "미술이/가 아름다워요.",
-          "advanced": "미술은/는 예술의 중요한 형식입니다.",
+          "beginner": "미술을 봐요.",
+          "intermediate": "미술이 아름다워요.",
+          "advanced": "미술은 예술의 중요한 형식입니다.",
           "master": "미술의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
@@ -52,8 +52,8 @@
             },
             {
               "speaker": "B",
-              "text": "네, 특히 미술을/를 좋아해요.",
-              "romanization": "ne, teukhi misuleul/reul jotahaeyo.",
+              "text": "네, 특히 미술을 좋아해요.",
+              "romanization": "ne, teukhi misuleul jotahaeyo.",
               "translation": "Yes, especially art / fine arts."
             },
             {
@@ -108,7 +108,7 @@
               "speaker": "B",
               "text": "Yes, especially art / fine arts.",
               "romanization": "",
-              "translation": "네, 특히 미술을/를 좋아해요."
+              "translation": "네, 특히 미술을 좋아해요."
             },
             {
               "speaker": "A",
@@ -145,9 +145,9 @@
         "word": "그림",
         "explanation": "종이나 캔버스에 그려진 이미지. 회화 작품.",
         "examples": {
-          "beginner": "그림을/를 봐요.",
-          "intermediate": "그림이/가 아름다워요.",
-          "advanced": "그림은/는 예술의 중요한 형식입니다.",
+          "beginner": "그림을 봐요.",
+          "intermediate": "그림이 아름다워요.",
+          "advanced": "그림은 예술의 중요한 형식입니다.",
           "master": "그림의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
@@ -176,8 +176,8 @@
             },
             {
               "speaker": "B",
-              "text": "네, 특히 그림을/를 좋아해요.",
-              "romanization": "ne, teukhi geurimeul/reul jotahaeyo.",
+              "text": "네, 특히 그림을 좋아해요.",
+              "romanization": "ne, teukhi geurimeul jotahaeyo.",
               "translation": "Yes, especially picture / painting / drawing."
             },
             {
@@ -232,7 +232,7 @@
               "speaker": "B",
               "text": "Yes, especially picture / painting / drawing.",
               "romanization": "",
-              "translation": "네, 특히 그림을/를 좋아해요."
+              "translation": "네, 특히 그림을 좋아해요."
             },
             {
               "speaker": "A",
@@ -277,9 +277,9 @@
         "word": "조각",
         "explanation": "돌, 나무, 금속 등을 깎거나 빚어 만든 입체 예술 작품.",
         "examples": {
-          "beginner": "조각을/를 봐요.",
-          "intermediate": "조각이/가 아름다워요.",
-          "advanced": "조각은/는 예술의 중요한 형식입니다.",
+          "beginner": "조각을 봐요.",
+          "intermediate": "조각이 아름다워요.",
+          "advanced": "조각은 예술의 중요한 형식입니다.",
           "master": "조각의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
@@ -308,8 +308,8 @@
             },
             {
               "speaker": "B",
-              "text": "네, 특히 조각을/를 좋아해요.",
-              "romanization": "ne, teukhi jogakeul/reul jotahaeyo.",
+              "text": "네, 특히 조각을 좋아해요.",
+              "romanization": "ne, teukhi jogakeul jotahaeyo.",
               "translation": "Yes, especially sculpture."
             },
             {
@@ -364,7 +364,7 @@
               "speaker": "B",
               "text": "Yes, especially sculpture.",
               "romanization": "",
-              "translation": "네, 특히 조각을/를 좋아해요."
+              "translation": "네, 특히 조각을 좋아해요."
             },
             {
               "speaker": "A",
@@ -405,9 +405,9 @@
         "word": "미술관",
         "explanation": "미술 작품을 전시하는 공간. 그림, 조각 등을 감상할 수 있다.",
         "examples": {
-          "beginner": "미술관을/를 봐요.",
-          "intermediate": "미술관이/가 아름다워요.",
-          "advanced": "미술관은/는 예술의 중요한 형식입니다.",
+          "beginner": "미술관을 봐요.",
+          "intermediate": "미술관이 아름다워요.",
+          "advanced": "미술관은 예술의 중요한 형식입니다.",
           "master": "미술관의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
@@ -436,8 +436,8 @@
             },
             {
               "speaker": "B",
-              "text": "네, 특히 미술관을/를 좋아해요.",
-              "romanization": "ne, teukhi misulgwaneul/reul jotahaeyo.",
+              "text": "네, 특히 미술관을 좋아해요.",
+              "romanization": "ne, teukhi misulgwaneul jotahaeyo.",
               "translation": "Yes, especially art museum / gallery."
             },
             {
@@ -492,7 +492,7 @@
               "speaker": "B",
               "text": "Yes, especially art museum / gallery.",
               "romanization": "",
-              "translation": "네, 특히 미술관을/를 좋아해요."
+              "translation": "네, 특히 미술관을 좋아해요."
             },
             {
               "speaker": "A",
@@ -533,9 +533,9 @@
         "word": "색",
         "explanation": "빛의 파장에 따라 눈에 보이는 성질. 빨강, 파랑, 노랑 등.",
         "examples": {
-          "beginner": "색을/를 봐요.",
-          "intermediate": "색이/가 아름다워요.",
-          "advanced": "색은/는 예술의 중요한 형식입니다.",
+          "beginner": "색을 봐요.",
+          "intermediate": "색이 아름다워요.",
+          "advanced": "색은 예술의 중요한 형식입니다.",
           "master": "색의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
@@ -564,8 +564,8 @@
             },
             {
               "speaker": "B",
-              "text": "네, 특히 색을/를 좋아해요.",
-              "romanization": "ne, teukhi saekeul/reul jotahaeyo.",
+              "text": "네, 특히 색을 좋아해요.",
+              "romanization": "ne, teukhi saekeul jotahaeyo.",
               "translation": "Yes, especially color."
             },
             {
@@ -620,7 +620,7 @@
               "speaker": "B",
               "text": "Yes, especially color.",
               "romanization": "",
-              "translation": "네, 특히 색을/를 좋아해요."
+              "translation": "네, 특히 색을 좋아해요."
             },
             {
               "speaker": "A",
@@ -657,9 +657,9 @@
         "word": "디자인",
         "explanation": "제품이나 작품의 형태와 기능을 계획하는 일. 시각적 설계.",
         "examples": {
-          "beginner": "디자인을/를 봐요.",
-          "intermediate": "디자인이/가 아름다워요.",
-          "advanced": "디자인은/는 예술의 중요한 형식입니다.",
+          "beginner": "디자인을 봐요.",
+          "intermediate": "디자인이 아름다워요.",
+          "advanced": "디자인은 예술의 중요한 형식입니다.",
           "master": "디자인의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
@@ -688,8 +688,8 @@
             },
             {
               "speaker": "B",
-              "text": "네, 특히 디자인을/를 좋아해요.",
-              "romanization": "ne, teukhi dijaineul/reul jotahaeyo.",
+              "text": "네, 특히 디자인을 좋아해요.",
+              "romanization": "ne, teukhi dijaineul jotahaeyo.",
               "translation": "Yes, especially design."
             },
             {
@@ -744,7 +744,7 @@
               "speaker": "B",
               "text": "Yes, especially design.",
               "romanization": "",
-              "translation": "네, 특히 디자인을/를 좋아해요."
+              "translation": "네, 특히 디자인을 좋아해요."
             },
             {
               "speaker": "A",
@@ -789,9 +789,9 @@
         "word": "작가",
         "explanation": "예술 작품을 창작하는 사람. 화가, 조각가, 소설가 등을 포함한다.",
         "examples": {
-          "beginner": "작가을/를 봐요.",
-          "intermediate": "작가이/가 아름다워요.",
-          "advanced": "작가은/는 예술의 중요한 형식입니다.",
+          "beginner": "작가를 봐요.",
+          "intermediate": "작가가 아름다워요.",
+          "advanced": "작가는 예술의 중요한 형식입니다.",
           "master": "작가의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
@@ -820,8 +820,8 @@
             },
             {
               "speaker": "B",
-              "text": "네, 특히 작가을/를 좋아해요.",
-              "romanization": "ne, teukhi jakgaeul/reul jotahaeyo.",
+              "text": "네, 특히 작가를 좋아해요.",
+              "romanization": "ne, teukhi jakgareul jotahaeyo.",
               "translation": "Yes, especially artist / creator."
             },
             {
@@ -876,7 +876,7 @@
               "speaker": "B",
               "text": "Yes, especially artist / creator.",
               "romanization": "",
-              "translation": "네, 특히 작가을/를 좋아해요."
+              "translation": "네, 특히 작가를 좋아해요."
             },
             {
               "speaker": "A",
@@ -917,9 +917,9 @@
         "word": "전시",
         "explanation": "작품을 공개적으로 보여주는 행사. 미술관이나 갤러리에서 열린다.",
         "examples": {
-          "beginner": "전시을/를 봐요.",
-          "intermediate": "전시이/가 아름다워요.",
-          "advanced": "전시은/는 예술의 중요한 형식입니다.",
+          "beginner": "전시를 봐요.",
+          "intermediate": "전시가 아름다워요.",
+          "advanced": "전시는 예술의 중요한 형식입니다.",
           "master": "전시의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
@@ -948,8 +948,8 @@
             },
             {
               "speaker": "B",
-              "text": "네, 특히 전시을/를 좋아해요.",
-              "romanization": "ne, teukhi jeonsieul/reul jotahaeyo.",
+              "text": "네, 특히 전시를 좋아해요.",
+              "romanization": "ne, teukhi jeonsireul jotahaeyo.",
               "translation": "Yes, especially exhibition / exhibit."
             },
             {
@@ -1004,7 +1004,7 @@
               "speaker": "B",
               "text": "Yes, especially exhibition / exhibit.",
               "romanization": "",
-              "translation": "네, 특히 전시을/를 좋아해요."
+              "translation": "네, 특히 전시를 좋아해요."
             },
             {
               "speaker": "A",
@@ -1041,9 +1041,9 @@
         "word": "캔버스",
         "explanation": "그림을 그리는 천이나 판. 유화나 아크릴화에 사용한다.",
         "examples": {
-          "beginner": "캔버스을/를 봐요.",
-          "intermediate": "캔버스이/가 아름다워요.",
-          "advanced": "캔버스은/는 예술의 중요한 형식입니다.",
+          "beginner": "캔버스를 봐요.",
+          "intermediate": "캔버스가 아름다워요.",
+          "advanced": "캔버스는 예술의 중요한 형식입니다.",
           "master": "캔버스의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
@@ -1072,8 +1072,8 @@
             },
             {
               "speaker": "B",
-              "text": "네, 특히 캔버스을/를 좋아해요.",
-              "romanization": "ne, teukhi kaenbeoseueul/reul jotahaeyo.",
+              "text": "네, 특히 캔버스를 좋아해요.",
+              "romanization": "ne, teukhi kaenbeoseureul jotahaeyo.",
               "translation": "Yes, especially canvas."
             },
             {
@@ -1128,7 +1128,7 @@
               "speaker": "B",
               "text": "Yes, especially canvas.",
               "romanization": "",
-              "translation": "네, 특히 캔버스을/를 좋아해요."
+              "translation": "네, 특히 캔버스를 좋아해요."
             },
             {
               "speaker": "A",
@@ -1173,9 +1173,9 @@
         "word": "붓",
         "explanation": "그림을 그리거나 글씨를 쓰는 도구. 털이나 섬유로 만들어진다.",
         "examples": {
-          "beginner": "붓을/를 봐요.",
-          "intermediate": "붓이/가 아름다워요.",
-          "advanced": "붓은/는 예술의 중요한 형식입니다.",
+          "beginner": "붓을 봐요.",
+          "intermediate": "붓이 아름다워요.",
+          "advanced": "붓은 예술의 중요한 형식입니다.",
           "master": "붓의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
@@ -1204,8 +1204,8 @@
             },
             {
               "speaker": "B",
-              "text": "네, 특히 붓을/를 좋아해요.",
-              "romanization": "ne, teukhi buseul/reul jotahaeyo.",
+              "text": "네, 특히 붓을 좋아해요.",
+              "romanization": "ne, teukhi buseul jotahaeyo.",
               "translation": "Yes, especially brush."
             },
             {
@@ -1260,7 +1260,7 @@
               "speaker": "B",
               "text": "Yes, especially brush.",
               "romanization": "",
-              "translation": "네, 특히 붓을/를 좋아해요."
+              "translation": "네, 특히 붓을 좋아해요."
             },
             {
               "speaker": "A",
@@ -1293,10 +1293,10 @@
         "word": "예술",
         "explanation": "예술의 뜻은 'art'입니다.",
         "examples": {
-          "beginner": "\"예술\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"예술\"를 자주 써요.",
-          "advanced": "\"예술\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"예술\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "예술을 봐요.",
+          "intermediate": "예술이 아름다워요.",
+          "advanced": "예술은 예술의 중요한 형식입니다.",
+          "master": "예술의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -1312,19 +1312,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "예술이/가 뭐예요?",
-              "romanization": "yesuli/ga mwoyeyo?",
-              "translation": "What is \"예술\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "예술은/는 art(이)에요.",
-              "romanization": "yesuleun/neun art(i)eyo.",
-              "translation": "\"예술\" means \"art\"."
+              "text": "네, 특히 예술을 좋아해요.",
+              "romanization": "ne, teukhi yesuleul jotahaeyo.",
+              "translation": "Yes, especially art."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -1333,10 +1345,10 @@
         "word": "art",
         "explanation": "'예술' means 'art' in English.",
         "examples": {
-          "beginner": "We say \"예술\" in Korean.",
-          "intermediate": "In Korea, people often say \"예술\".",
-          "advanced": "\"예술\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"예술\" makes communication more natural."
+          "beginner": "I see art.",
+          "intermediate": "art is beautiful.",
+          "advanced": "art is an important form of art.",
+          "master": "Understanding the aesthetic value of art enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -1352,19 +1364,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"예술\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "예술이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"예술\" means \"art\".",
+              "text": "Yes, especially art.",
               "romanization": "",
-              "translation": "예술은/는 art(이)에요."
+              "translation": "네, 특히 예술을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -1389,10 +1413,10 @@
         "word": "파인아트",
         "explanation": "파인아트의 뜻은 'fine art'입니다.",
         "examples": {
-          "beginner": "\"파인아트\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"파인아트\"를 자주 써요.",
-          "advanced": "\"파인아트\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"파인아트\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "파인아트를 봐요.",
+          "intermediate": "파인아트가 아름다워요.",
+          "advanced": "파인아트는 예술의 중요한 형식입니다.",
+          "master": "파인아트의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -1408,19 +1432,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "파인아트이/가 뭐예요?",
-              "romanization": "painateui/ga mwoyeyo?",
-              "translation": "What is \"파인아트\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "파인아트은/는 fine art(이)에요.",
-              "romanization": "painateueun/neun fine art(i)eyo.",
-              "translation": "\"파인아트\" means \"fine art\"."
+              "text": "네, 특히 파인아트를 좋아해요.",
+              "romanization": "ne, teukhi painateureul jotahaeyo.",
+              "translation": "Yes, especially fine art."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -1429,10 +1465,10 @@
         "word": "fine art",
         "explanation": "'파인아트' means 'fine art' in English.",
         "examples": {
-          "beginner": "We say \"파인아트\" in Korean.",
-          "intermediate": "In Korea, people often say \"파인아트\".",
-          "advanced": "\"파인아트\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"파인아트\" makes communication more natural."
+          "beginner": "I see fine art.",
+          "intermediate": "fine art is beautiful.",
+          "advanced": "fine art is an important form of art.",
+          "master": "Understanding the aesthetic value of fine art enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -1448,19 +1484,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"파인아트\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "파인아트이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"파인아트\" means \"fine art\".",
+              "text": "Yes, especially fine art.",
               "romanization": "",
-              "translation": "파인아트은/는 fine art(이)에요."
+              "translation": "네, 특히 파인아트를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -1485,10 +1533,10 @@
         "word": "작품",
         "explanation": "작품의 뜻은 'artwork'입니다.",
         "examples": {
-          "beginner": "\"작품\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"작품\"를 자주 써요.",
-          "advanced": "\"작품\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"작품\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "작품을 봐요.",
+          "intermediate": "작품이 아름다워요.",
+          "advanced": "작품은 예술의 중요한 형식입니다.",
+          "master": "작품의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -1504,19 +1552,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "작품이/가 뭐예요?",
-              "romanization": "jakpumi/ga mwoyeyo?",
-              "translation": "What is \"작품\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "작품은/는 artwork(이)에요.",
-              "romanization": "jakpumeun/neun artwork(i)eyo.",
-              "translation": "\"작품\" means \"artwork\"."
+              "text": "네, 특히 작품을 좋아해요.",
+              "romanization": "ne, teukhi jakpumeul jotahaeyo.",
+              "translation": "Yes, especially artwork."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -1525,10 +1585,10 @@
         "word": "artwork",
         "explanation": "'작품' means 'artwork' in English.",
         "examples": {
-          "beginner": "We say \"작품\" in Korean.",
-          "intermediate": "In Korea, people often say \"작품\".",
-          "advanced": "\"작품\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"작품\" makes communication more natural."
+          "beginner": "I see artwork.",
+          "intermediate": "artwork is beautiful.",
+          "advanced": "artwork is an important form of art.",
+          "master": "Understanding the aesthetic value of artwork enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -1544,19 +1604,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"작품\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "작품이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"작품\" means \"artwork\".",
+              "text": "Yes, especially artwork.",
               "romanization": "",
-              "translation": "작품은/는 artwork(이)에요."
+              "translation": "네, 특히 작품을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -1581,10 +1653,10 @@
         "word": "걸작",
         "explanation": "걸작의 뜻은 'masterpiece'입니다.",
         "examples": {
-          "beginner": "\"걸작\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"걸작\"를 자주 써요.",
-          "advanced": "\"걸작\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"걸작\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "걸작을 봐요.",
+          "intermediate": "걸작이 아름다워요.",
+          "advanced": "걸작은 예술의 중요한 형식입니다.",
+          "master": "걸작의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -1600,19 +1672,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "걸작이/가 뭐예요?",
-              "romanization": "geoljaki/ga mwoyeyo?",
-              "translation": "What is \"걸작\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "걸작은/는 masterpiece(이)에요.",
-              "romanization": "geoljakeun/neun masterpiece(i)eyo.",
-              "translation": "\"걸작\" means \"masterpiece\"."
+              "text": "네, 특히 걸작을 좋아해요.",
+              "romanization": "ne, teukhi geoljakeul jotahaeyo.",
+              "translation": "Yes, especially masterpiece."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -1621,10 +1705,10 @@
         "word": "masterpiece",
         "explanation": "'걸작' means 'masterpiece' in English.",
         "examples": {
-          "beginner": "We say \"걸작\" in Korean.",
-          "intermediate": "In Korea, people often say \"걸작\".",
-          "advanced": "\"걸작\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"걸작\" makes communication more natural."
+          "beginner": "I see masterpiece.",
+          "intermediate": "masterpiece is beautiful.",
+          "advanced": "masterpiece is an important form of art.",
+          "master": "Understanding the aesthetic value of masterpiece enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -1640,19 +1724,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"걸작\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "걸작이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"걸작\" means \"masterpiece\".",
+              "text": "Yes, especially masterpiece.",
               "romanization": "",
-              "translation": "걸작은/는 masterpiece(이)에요."
+              "translation": "네, 특히 걸작을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -1677,10 +1773,10 @@
         "word": "회화",
         "explanation": "회화의 뜻은 'painting'입니다.",
         "examples": {
-          "beginner": "\"회화\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"회화\"를 자주 써요.",
-          "advanced": "\"회화\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"회화\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "회화를 봐요.",
+          "intermediate": "회화가 아름다워요.",
+          "advanced": "회화는 예술의 중요한 형식입니다.",
+          "master": "회화의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -1696,19 +1792,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "회화이/가 뭐예요?",
-              "romanization": "hoehwai/ga mwoyeyo?",
-              "translation": "What is \"회화\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "회화은/는 painting(이)에요.",
-              "romanization": "hoehwaeun/neun painting(i)eyo.",
-              "translation": "\"회화\" means \"painting\"."
+              "text": "네, 특히 회화를 좋아해요.",
+              "romanization": "ne, teukhi hoehwareul jotahaeyo.",
+              "translation": "Yes, especially painting."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -1717,10 +1825,10 @@
         "word": "painting",
         "explanation": "'회화' means 'painting' in English.",
         "examples": {
-          "beginner": "We say \"회화\" in Korean.",
-          "intermediate": "In Korea, people often say \"회화\".",
-          "advanced": "\"회화\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"회화\" makes communication more natural."
+          "beginner": "I see painting.",
+          "intermediate": "painting is beautiful.",
+          "advanced": "painting is an important form of art.",
+          "master": "Understanding the aesthetic value of painting enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -1736,19 +1844,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"회화\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "회화이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"회화\" means \"painting\".",
+              "text": "Yes, especially painting.",
               "romanization": "",
-              "translation": "회화은/는 painting(이)에요."
+              "translation": "네, 특히 회화를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -1773,10 +1893,10 @@
         "word": "판화",
         "explanation": "판화의 뜻은 'print'입니다.",
         "examples": {
-          "beginner": "\"판화\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"판화\"를 자주 써요.",
-          "advanced": "\"판화\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"판화\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "판화를 봐요.",
+          "intermediate": "판화가 아름다워요.",
+          "advanced": "판화는 예술의 중요한 형식입니다.",
+          "master": "판화의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -1792,19 +1912,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "판화이/가 뭐예요?",
-              "romanization": "panhwai/ga mwoyeyo?",
-              "translation": "What is \"판화\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "판화은/는 print(이)에요.",
-              "romanization": "panhwaeun/neun print(i)eyo.",
-              "translation": "\"판화\" means \"print\"."
+              "text": "네, 특히 판화를 좋아해요.",
+              "romanization": "ne, teukhi panhwareul jotahaeyo.",
+              "translation": "Yes, especially print."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -1813,10 +1945,10 @@
         "word": "print",
         "explanation": "'판화' means 'print' in English.",
         "examples": {
-          "beginner": "We say \"판화\" in Korean.",
-          "intermediate": "In Korea, people often say \"판화\".",
-          "advanced": "\"판화\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"판화\" makes communication more natural."
+          "beginner": "I see print.",
+          "intermediate": "print is beautiful.",
+          "advanced": "print is an important form of art.",
+          "master": "Understanding the aesthetic value of print enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -1832,19 +1964,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"판화\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "판화이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"판화\" means \"print\".",
+              "text": "Yes, especially print.",
               "romanization": "",
-              "translation": "판화은/는 print(이)에요."
+              "translation": "네, 특히 판화를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -1869,10 +2013,10 @@
         "word": "드로잉",
         "explanation": "드로잉의 뜻은 'drawing'입니다.",
         "examples": {
-          "beginner": "\"드로잉\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"드로잉\"를 자주 써요.",
-          "advanced": "\"드로잉\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"드로잉\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "드로잉을 봐요.",
+          "intermediate": "드로잉이 아름다워요.",
+          "advanced": "드로잉은 예술의 중요한 형식입니다.",
+          "master": "드로잉의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -1888,19 +2032,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "드로잉이/가 뭐예요?",
-              "romanization": "deuroingi/ga mwoyeyo?",
-              "translation": "What is \"드로잉\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "드로잉은/는 drawing(이)에요.",
-              "romanization": "deuroingeun/neun drawing(i)eyo.",
-              "translation": "\"드로잉\" means \"drawing\"."
+              "text": "네, 특히 드로잉을 좋아해요.",
+              "romanization": "ne, teukhi deuroingeul jotahaeyo.",
+              "translation": "Yes, especially drawing."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -1909,10 +2065,10 @@
         "word": "drawing",
         "explanation": "'드로잉' means 'drawing' in English.",
         "examples": {
-          "beginner": "We say \"드로잉\" in Korean.",
-          "intermediate": "In Korea, people often say \"드로잉\".",
-          "advanced": "\"드로잉\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"드로잉\" makes communication more natural."
+          "beginner": "I see drawing.",
+          "intermediate": "drawing is beautiful.",
+          "advanced": "drawing is an important form of art.",
+          "master": "Understanding the aesthetic value of drawing enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -1928,19 +2084,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"드로잉\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "드로잉이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"드로잉\" means \"drawing\".",
+              "text": "Yes, especially drawing.",
               "romanization": "",
-              "translation": "드로잉은/는 drawing(이)에요."
+              "translation": "네, 특히 드로잉을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -1965,10 +2133,10 @@
         "word": "일러스트",
         "explanation": "일러스트의 뜻은 'illustration'입니다.",
         "examples": {
-          "beginner": "\"일러스트\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"일러스트\"를 자주 써요.",
-          "advanced": "\"일러스트\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"일러스트\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "일러스트를 봐요.",
+          "intermediate": "일러스트가 아름다워요.",
+          "advanced": "일러스트는 예술의 중요한 형식입니다.",
+          "master": "일러스트의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -1984,19 +2152,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "일러스트이/가 뭐예요?",
-              "romanization": "illeoseuteui/ga mwoyeyo?",
-              "translation": "What is \"일러스트\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "일러스트은/는 illustration(이)에요.",
-              "romanization": "illeoseuteueun/neun illustration(i)eyo.",
-              "translation": "\"일러스트\" means \"illustration\"."
+              "text": "네, 특히 일러스트를 좋아해요.",
+              "romanization": "ne, teukhi ilreoseuteureul jotahaeyo.",
+              "translation": "Yes, especially illustration."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -2005,10 +2185,10 @@
         "word": "illustration",
         "explanation": "'일러스트' means 'illustration' in English.",
         "examples": {
-          "beginner": "We say \"일러스트\" in Korean.",
-          "intermediate": "In Korea, people often say \"일러스트\".",
-          "advanced": "\"일러스트\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"일러스트\" makes communication more natural."
+          "beginner": "I see illustration.",
+          "intermediate": "illustration is beautiful.",
+          "advanced": "illustration is an important form of art.",
+          "master": "Understanding the aesthetic value of illustration enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -2024,19 +2204,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"일러스트\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "일러스트이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"일러스트\" means \"illustration\".",
+              "text": "Yes, especially illustration.",
               "romanization": "",
-              "translation": "일러스트은/는 illustration(이)에요."
+              "translation": "네, 특히 일러스트를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -2061,10 +2253,10 @@
         "word": "캘리그라피",
         "explanation": "캘리그라피의 뜻은 'calligraphy'입니다.",
         "examples": {
-          "beginner": "\"캘리그라피\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"캘리그라피\"를 자주 써요.",
-          "advanced": "\"캘리그라피\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"캘리그라피\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "캘리그라피를 봐요.",
+          "intermediate": "캘리그라피가 아름다워요.",
+          "advanced": "캘리그라피는 예술의 중요한 형식입니다.",
+          "master": "캘리그라피의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -2080,19 +2272,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "캘리그라피이/가 뭐예요?",
-              "romanization": "kaelligeurapii/ga mwoyeyo?",
-              "translation": "What is \"캘리그라피\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "캘리그라피은/는 calligraphy(이)에요.",
-              "romanization": "kaelligeurapieun/neun calligraphy(i)eyo.",
-              "translation": "\"캘리그라피\" means \"calligraphy\"."
+              "text": "네, 특히 캘리그라피를 좋아해요.",
+              "romanization": "ne, teukhi kaelrigeurapireul jotahaeyo.",
+              "translation": "Yes, especially calligraphy."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -2101,10 +2305,10 @@
         "word": "calligraphy",
         "explanation": "'캘리그라피' means 'calligraphy' in English.",
         "examples": {
-          "beginner": "We say \"캘리그라피\" in Korean.",
-          "intermediate": "In Korea, people often say \"캘리그라피\".",
-          "advanced": "\"캘리그라피\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"캘리그라피\" makes communication more natural."
+          "beginner": "I see calligraphy.",
+          "intermediate": "calligraphy is beautiful.",
+          "advanced": "calligraphy is an important form of art.",
+          "master": "Understanding the aesthetic value of calligraphy enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -2120,19 +2324,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"캘리그라피\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "캘리그라피이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"캘리그라피\" means \"calligraphy\".",
+              "text": "Yes, especially calligraphy.",
               "romanization": "",
-              "translation": "캘리그라피은/는 calligraphy(이)에요."
+              "translation": "네, 특히 캘리그라피를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -2157,10 +2373,10 @@
         "word": "사진촬영",
         "explanation": "사진촬영의 뜻은 'photography'입니다.",
         "examples": {
-          "beginner": "\"사진촬영\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"사진촬영\"를 자주 써요.",
-          "advanced": "\"사진촬영\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"사진촬영\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "사진촬영을 봐요.",
+          "intermediate": "사진촬영이 아름다워요.",
+          "advanced": "사진촬영은 예술의 중요한 형식입니다.",
+          "master": "사진촬영의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -2176,19 +2392,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "사진촬영이/가 뭐예요?",
-              "romanization": "sajinchwalyeongi/ga mwoyeyo?",
-              "translation": "What is \"사진촬영\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "사진촬영은/는 photography(이)에요.",
-              "romanization": "sajinchwalyeongeun/neun photography(i)eyo.",
-              "translation": "\"사진촬영\" means \"photography\"."
+              "text": "네, 특히 사진촬영을 좋아해요.",
+              "romanization": "ne, teukhi sajinchwalyeongeul jotahaeyo.",
+              "translation": "Yes, especially photography."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -2197,10 +2425,10 @@
         "word": "photography",
         "explanation": "'사진촬영' means 'photography' in English.",
         "examples": {
-          "beginner": "We say \"사진촬영\" in Korean.",
-          "intermediate": "In Korea, people often say \"사진촬영\".",
-          "advanced": "\"사진촬영\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"사진촬영\" makes communication more natural."
+          "beginner": "I see photography.",
+          "intermediate": "photography is beautiful.",
+          "advanced": "photography is an important form of art.",
+          "master": "Understanding the aesthetic value of photography enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -2216,19 +2444,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"사진촬영\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "사진촬영이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"사진촬영\" means \"photography\".",
+              "text": "Yes, especially photography.",
               "romanization": "",
-              "translation": "사진촬영은/는 photography(이)에요."
+              "translation": "네, 특히 사진촬영을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -2253,10 +2493,10 @@
         "word": "연극",
         "explanation": "연극의 뜻은 'theater'입니다.",
         "examples": {
-          "beginner": "\"연극\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"연극\"를 자주 써요.",
-          "advanced": "\"연극\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"연극\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "연극을 봐요.",
+          "intermediate": "연극이 아름다워요.",
+          "advanced": "연극은 예술의 중요한 형식입니다.",
+          "master": "연극의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -2272,19 +2512,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "연극이/가 뭐예요?",
-              "romanization": "yeongeuki/ga mwoyeyo?",
-              "translation": "What is \"연극\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "연극은/는 theater(이)에요.",
-              "romanization": "yeongeukeun/neun theater(i)eyo.",
-              "translation": "\"연극\" means \"theater\"."
+              "text": "네, 특히 연극을 좋아해요.",
+              "romanization": "ne, teukhi yeongeukeul jotahaeyo.",
+              "translation": "Yes, especially theater."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -2293,10 +2545,10 @@
         "word": "theater",
         "explanation": "'연극' means 'theater' in English.",
         "examples": {
-          "beginner": "We say \"연극\" in Korean.",
-          "intermediate": "In Korea, people often say \"연극\".",
-          "advanced": "\"연극\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"연극\" makes communication more natural."
+          "beginner": "I see theater.",
+          "intermediate": "theater is beautiful.",
+          "advanced": "theater is an important form of art.",
+          "master": "Understanding the aesthetic value of theater enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -2312,19 +2564,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"연극\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "연극이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"연극\" means \"theater\".",
+              "text": "Yes, especially theater.",
               "romanization": "",
-              "translation": "연극은/는 theater(이)에요."
+              "translation": "네, 특히 연극을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -2349,10 +2613,10 @@
         "word": "뮤지컬",
         "explanation": "뮤지컬의 뜻은 'musical'입니다.",
         "examples": {
-          "beginner": "\"뮤지컬\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"뮤지컬\"를 자주 써요.",
-          "advanced": "\"뮤지컬\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"뮤지컬\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "뮤지컬을 봐요.",
+          "intermediate": "뮤지컬이 아름다워요.",
+          "advanced": "뮤지컬은 예술의 중요한 형식입니다.",
+          "master": "뮤지컬의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -2368,19 +2632,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "뮤지컬이/가 뭐예요?",
-              "romanization": "myujikeoli/ga mwoyeyo?",
-              "translation": "What is \"뮤지컬\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "뮤지컬은/는 musical(이)에요.",
-              "romanization": "myujikeoleun/neun musical(i)eyo.",
-              "translation": "\"뮤지컬\" means \"musical\"."
+              "text": "네, 특히 뮤지컬을 좋아해요.",
+              "romanization": "ne, teukhi myujikeoleul jotahaeyo.",
+              "translation": "Yes, especially musical."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -2389,10 +2665,10 @@
         "word": "musical",
         "explanation": "'뮤지컬' means 'musical' in English.",
         "examples": {
-          "beginner": "We say \"뮤지컬\" in Korean.",
-          "intermediate": "In Korea, people often say \"뮤지컬\".",
-          "advanced": "\"뮤지컬\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"뮤지컬\" makes communication more natural."
+          "beginner": "I see musical.",
+          "intermediate": "musical is beautiful.",
+          "advanced": "musical is an important form of art.",
+          "master": "Understanding the aesthetic value of musical enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -2408,19 +2684,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"뮤지컬\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "뮤지컬이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"뮤지컬\" means \"musical\".",
+              "text": "Yes, especially musical.",
               "romanization": "",
-              "translation": "뮤지컬은/는 musical(이)에요."
+              "translation": "네, 특히 뮤지컬을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -2445,10 +2733,10 @@
         "word": "오페라",
         "explanation": "오페라의 뜻은 'opera'입니다.",
         "examples": {
-          "beginner": "\"오페라\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"오페라\"를 자주 써요.",
-          "advanced": "\"오페라\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"오페라\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "오페라를 봐요.",
+          "intermediate": "오페라가 아름다워요.",
+          "advanced": "오페라는 예술의 중요한 형식입니다.",
+          "master": "오페라의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -2464,19 +2752,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "오페라이/가 뭐예요?",
-              "romanization": "operai/ga mwoyeyo?",
-              "translation": "What is \"오페라\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "오페라은/는 opera(이)에요.",
-              "romanization": "operaeun/neun opera(i)eyo.",
-              "translation": "\"오페라\" means \"opera\"."
+              "text": "네, 특히 오페라를 좋아해요.",
+              "romanization": "ne, teukhi operareul jotahaeyo.",
+              "translation": "Yes, especially opera."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -2485,10 +2785,10 @@
         "word": "opera",
         "explanation": "'오페라' means 'opera' in English.",
         "examples": {
-          "beginner": "We say \"오페라\" in Korean.",
-          "intermediate": "In Korea, people often say \"오페라\".",
-          "advanced": "\"오페라\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"오페라\" makes communication more natural."
+          "beginner": "I see opera.",
+          "intermediate": "opera is beautiful.",
+          "advanced": "opera is an important form of art.",
+          "master": "Understanding the aesthetic value of opera enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -2504,19 +2804,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"오페라\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "오페라이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"오페라\" means \"opera\".",
+              "text": "Yes, especially opera.",
               "romanization": "",
-              "translation": "오페라은/는 opera(이)에요."
+              "translation": "네, 특히 오페라를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -2541,10 +2853,10 @@
         "word": "발레",
         "explanation": "발레의 뜻은 'ballet'입니다.",
         "examples": {
-          "beginner": "\"발레\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"발레\"를 자주 써요.",
-          "advanced": "\"발레\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"발레\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "발레를 봐요.",
+          "intermediate": "발레가 아름다워요.",
+          "advanced": "발레는 예술의 중요한 형식입니다.",
+          "master": "발레의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -2560,19 +2872,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "발레이/가 뭐예요?",
-              "romanization": "ballei/ga mwoyeyo?",
-              "translation": "What is \"발레\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "발레은/는 ballet(이)에요.",
-              "romanization": "balleeun/neun ballet(i)eyo.",
-              "translation": "\"발레\" means \"ballet\"."
+              "text": "네, 특히 발레를 좋아해요.",
+              "romanization": "ne, teukhi balrereul jotahaeyo.",
+              "translation": "Yes, especially ballet."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -2581,10 +2905,10 @@
         "word": "ballet",
         "explanation": "'발레' means 'ballet' in English.",
         "examples": {
-          "beginner": "We say \"발레\" in Korean.",
-          "intermediate": "In Korea, people often say \"발레\".",
-          "advanced": "\"발레\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"발레\" makes communication more natural."
+          "beginner": "I see ballet.",
+          "intermediate": "ballet is beautiful.",
+          "advanced": "ballet is an important form of art.",
+          "master": "Understanding the aesthetic value of ballet enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -2600,19 +2924,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"발레\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "발레이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"발레\" means \"ballet\".",
+              "text": "Yes, especially ballet.",
               "romanization": "",
-              "translation": "발레은/는 ballet(이)에요."
+              "translation": "네, 특히 발레를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -2637,10 +2973,10 @@
         "word": "현대무용",
         "explanation": "현대무용의 뜻은 'modern dance'입니다.",
         "examples": {
-          "beginner": "\"현대무용\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"현대무용\"를 자주 써요.",
-          "advanced": "\"현대무용\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"현대무용\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "현대무용을 봐요.",
+          "intermediate": "현대무용이 아름다워요.",
+          "advanced": "현대무용은 예술의 중요한 형식입니다.",
+          "master": "현대무용의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -2656,19 +2992,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "현대무용이/가 뭐예요?",
-              "romanization": "hyeondaemuyongi/ga mwoyeyo?",
-              "translation": "What is \"현대무용\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "현대무용은/는 modern dance(이)에요.",
-              "romanization": "hyeondaemuyongeun/neun modern dance(i)eyo.",
-              "translation": "\"현대무용\" means \"modern dance\"."
+              "text": "네, 특히 현대무용을 좋아해요.",
+              "romanization": "ne, teukhi hyeondaemuyongeul jotahaeyo.",
+              "translation": "Yes, especially modern dance."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -2677,10 +3025,10 @@
         "word": "modern dance",
         "explanation": "'현대무용' means 'modern dance' in English.",
         "examples": {
-          "beginner": "We say \"현대무용\" in Korean.",
-          "intermediate": "In Korea, people often say \"현대무용\".",
-          "advanced": "\"현대무용\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"현대무용\" makes communication more natural."
+          "beginner": "I see modern dance.",
+          "intermediate": "modern dance is beautiful.",
+          "advanced": "modern dance is an important form of art.",
+          "master": "Understanding the aesthetic value of modern dance enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -2696,19 +3044,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"현대무용\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "현대무용이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"현대무용\" means \"modern dance\".",
+              "text": "Yes, especially modern dance.",
               "romanization": "",
-              "translation": "현대무용은/는 modern dance(이)에요."
+              "translation": "네, 특히 현대무용을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -2733,10 +3093,10 @@
         "word": "콘서트",
         "explanation": "콘서트의 뜻은 'concert'입니다.",
         "examples": {
-          "beginner": "\"콘서트\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"콘서트\"를 자주 써요.",
-          "advanced": "\"콘서트\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"콘서트\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "콘서트를 봐요.",
+          "intermediate": "콘서트가 아름다워요.",
+          "advanced": "콘서트는 예술의 중요한 형식입니다.",
+          "master": "콘서트의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -2752,19 +3112,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "콘서트이/가 뭐예요?",
-              "romanization": "konseoteui/ga mwoyeyo?",
-              "translation": "What is \"콘서트\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "콘서트은/는 concert(이)에요.",
-              "romanization": "konseoteueun/neun concert(i)eyo.",
-              "translation": "\"콘서트\" means \"concert\"."
+              "text": "네, 특히 콘서트를 좋아해요.",
+              "romanization": "ne, teukhi konseoteureul jotahaeyo.",
+              "translation": "Yes, especially concert."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -2773,10 +3145,10 @@
         "word": "concert",
         "explanation": "'콘서트' means 'concert' in English.",
         "examples": {
-          "beginner": "We say \"콘서트\" in Korean.",
-          "intermediate": "In Korea, people often say \"콘서트\".",
-          "advanced": "\"콘서트\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"콘서트\" makes communication more natural."
+          "beginner": "I see concert.",
+          "intermediate": "concert is beautiful.",
+          "advanced": "concert is an important form of art.",
+          "master": "Understanding the aesthetic value of concert enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -2792,19 +3164,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"콘서트\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "콘서트이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"콘서트\" means \"concert\".",
+              "text": "Yes, especially concert.",
               "romanization": "",
-              "translation": "콘서트은/는 concert(이)에요."
+              "translation": "네, 특히 콘서트를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -2829,10 +3213,10 @@
         "word": "공연",
         "explanation": "공연의 뜻은 'performance'입니다.",
         "examples": {
-          "beginner": "\"공연\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"공연\"를 자주 써요.",
-          "advanced": "\"공연\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"공연\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "공연을 봐요.",
+          "intermediate": "공연이 아름다워요.",
+          "advanced": "공연은 예술의 중요한 형식입니다.",
+          "master": "공연의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -2848,19 +3232,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "공연이/가 뭐예요?",
-              "romanization": "gongyeoni/ga mwoyeyo?",
-              "translation": "What is \"공연\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "공연은/는 performance(이)에요.",
-              "romanization": "gongyeoneun/neun performance(i)eyo.",
-              "translation": "\"공연\" means \"performance\"."
+              "text": "네, 특히 공연을 좋아해요.",
+              "romanization": "ne, teukhi gongyeoneul jotahaeyo.",
+              "translation": "Yes, especially performance."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -2869,10 +3265,10 @@
         "word": "performance",
         "explanation": "'공연' means 'performance' in English.",
         "examples": {
-          "beginner": "We say \"공연\" in Korean.",
-          "intermediate": "In Korea, people often say \"공연\".",
-          "advanced": "\"공연\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"공연\" makes communication more natural."
+          "beginner": "I see performance.",
+          "intermediate": "performance is beautiful.",
+          "advanced": "performance is an important form of art.",
+          "master": "Understanding the aesthetic value of performance enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -2888,19 +3284,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"공연\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "공연이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"공연\" means \"performance\".",
+              "text": "Yes, especially performance.",
               "romanization": "",
-              "translation": "공연은/는 performance(이)에요."
+              "translation": "네, 특히 공연을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -2925,10 +3333,10 @@
         "word": "전시회",
         "explanation": "전시회의 뜻은 'exhibition'입니다.",
         "examples": {
-          "beginner": "\"전시회\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"전시회\"를 자주 써요.",
-          "advanced": "\"전시회\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"전시회\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "전시회를 봐요.",
+          "intermediate": "전시회가 아름다워요.",
+          "advanced": "전시회는 예술의 중요한 형식입니다.",
+          "master": "전시회의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -2944,19 +3352,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "전시회이/가 뭐예요?",
-              "romanization": "jeonsihoei/ga mwoyeyo?",
-              "translation": "What is \"전시회\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "전시회은/는 exhibition(이)에요.",
-              "romanization": "jeonsihoeeun/neun exhibition(i)eyo.",
-              "translation": "\"전시회\" means \"exhibition\"."
+              "text": "네, 특히 전시회를 좋아해요.",
+              "romanization": "ne, teukhi jeonsihoereul jotahaeyo.",
+              "translation": "Yes, especially exhibition."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -2965,10 +3385,10 @@
         "word": "exhibition",
         "explanation": "'전시회' means 'exhibition' in English.",
         "examples": {
-          "beginner": "We say \"전시회\" in Korean.",
-          "intermediate": "In Korea, people often say \"전시회\".",
-          "advanced": "\"전시회\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"전시회\" makes communication more natural."
+          "beginner": "I see exhibition.",
+          "intermediate": "exhibition is beautiful.",
+          "advanced": "exhibition is an important form of art.",
+          "master": "Understanding the aesthetic value of exhibition enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -2984,19 +3404,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"전시회\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "전시회이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"전시회\" means \"exhibition\".",
+              "text": "Yes, especially exhibition.",
               "romanization": "",
-              "translation": "전시회은/는 exhibition(이)에요."
+              "translation": "네, 특히 전시회를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -3021,10 +3453,10 @@
         "word": "영상제작",
         "explanation": "영상제작의 뜻은 'video production'입니다.",
         "examples": {
-          "beginner": "\"영상제작\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"영상제작\"를 자주 써요.",
-          "advanced": "\"영상제작\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"영상제작\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "영상제작을 봐요.",
+          "intermediate": "영상제작이 아름다워요.",
+          "advanced": "영상제작은 예술의 중요한 형식입니다.",
+          "master": "영상제작의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -3040,19 +3472,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "영상제작이/가 뭐예요?",
-              "romanization": "yeongsangjejaki/ga mwoyeyo?",
-              "translation": "What is \"영상제작\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "영상제작은/는 video production(이)에요.",
-              "romanization": "yeongsangjejakeun/neun video production(i)eyo.",
-              "translation": "\"영상제작\" means \"video production\"."
+              "text": "네, 특히 영상제작을 좋아해요.",
+              "romanization": "ne, teukhi yeongsangjejakeul jotahaeyo.",
+              "translation": "Yes, especially video production."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -3061,10 +3505,10 @@
         "word": "video production",
         "explanation": "'영상제작' means 'video production' in English.",
         "examples": {
-          "beginner": "We say \"영상제작\" in Korean.",
-          "intermediate": "In Korea, people often say \"영상제작\".",
-          "advanced": "\"영상제작\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"영상제작\" makes communication more natural."
+          "beginner": "I see video production.",
+          "intermediate": "video production is beautiful.",
+          "advanced": "video production is an important form of art.",
+          "master": "Understanding the aesthetic value of video production enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -3080,19 +3524,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"영상제작\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "영상제작이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"영상제작\" means \"video production\".",
+              "text": "Yes, especially video production.",
               "romanization": "",
-              "translation": "영상제작은/는 video production(이)에요."
+              "translation": "네, 특히 영상제작을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -3117,10 +3573,10 @@
         "word": "필름",
         "explanation": "필름의 뜻은 'film'입니다.",
         "examples": {
-          "beginner": "\"필름\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"필름\"를 자주 써요.",
-          "advanced": "\"필름\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"필름\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "필름을 봐요.",
+          "intermediate": "필름이 아름다워요.",
+          "advanced": "필름은 예술의 중요한 형식입니다.",
+          "master": "필름의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -3136,19 +3592,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "필름이/가 뭐예요?",
-              "romanization": "pilleumi/ga mwoyeyo?",
-              "translation": "What is \"필름\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "필름은/는 film(이)에요.",
-              "romanization": "pilleumeun/neun film(i)eyo.",
-              "translation": "\"필름\" means \"film\"."
+              "text": "네, 특히 필름을 좋아해요.",
+              "romanization": "ne, teukhi pilreumeul jotahaeyo.",
+              "translation": "Yes, especially film."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -3157,10 +3625,10 @@
         "word": "film",
         "explanation": "'필름' means 'film' in English.",
         "examples": {
-          "beginner": "We say \"필름\" in Korean.",
-          "intermediate": "In Korea, people often say \"필름\".",
-          "advanced": "\"필름\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"필름\" makes communication more natural."
+          "beginner": "I see film.",
+          "intermediate": "film is beautiful.",
+          "advanced": "film is an important form of art.",
+          "master": "Understanding the aesthetic value of film enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -3176,19 +3644,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"필름\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "필름이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"필름\" means \"film\".",
+              "text": "Yes, especially film.",
               "romanization": "",
-              "translation": "필름은/는 film(이)에요."
+              "translation": "네, 특히 필름을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -3213,10 +3693,10 @@
         "word": "다큐멘터리",
         "explanation": "다큐멘터리의 뜻은 'documentary'입니다.",
         "examples": {
-          "beginner": "\"다큐멘터리\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"다큐멘터리\"를 자주 써요.",
-          "advanced": "\"다큐멘터리\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"다큐멘터리\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "다큐멘터리를 봐요.",
+          "intermediate": "다큐멘터리가 아름다워요.",
+          "advanced": "다큐멘터리는 예술의 중요한 형식입니다.",
+          "master": "다큐멘터리의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -3232,19 +3712,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "다큐멘터리이/가 뭐예요?",
-              "romanization": "dakyumenteorii/ga mwoyeyo?",
-              "translation": "What is \"다큐멘터리\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "다큐멘터리은/는 documentary(이)에요.",
-              "romanization": "dakyumenteorieun/neun documentary(i)eyo.",
-              "translation": "\"다큐멘터리\" means \"documentary\"."
+              "text": "네, 특히 다큐멘터리를 좋아해요.",
+              "romanization": "ne, teukhi dakyumenteorireul jotahaeyo.",
+              "translation": "Yes, especially documentary."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -3253,10 +3745,10 @@
         "word": "documentary",
         "explanation": "'다큐멘터리' means 'documentary' in English.",
         "examples": {
-          "beginner": "We say \"다큐멘터리\" in Korean.",
-          "intermediate": "In Korea, people often say \"다큐멘터리\".",
-          "advanced": "\"다큐멘터리\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"다큐멘터리\" makes communication more natural."
+          "beginner": "I see documentary.",
+          "intermediate": "documentary is beautiful.",
+          "advanced": "documentary is an important form of art.",
+          "master": "Understanding the aesthetic value of documentary enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -3272,19 +3764,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"다큐멘터리\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "다큐멘터리이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"다큐멘터리\" means \"documentary\".",
+              "text": "Yes, especially documentary.",
               "romanization": "",
-              "translation": "다큐멘터리은/는 documentary(이)에요."
+              "translation": "네, 특히 다큐멘터리를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -3309,10 +3813,10 @@
         "word": "애니메이션",
         "explanation": "애니메이션의 뜻은 'animation'입니다.",
         "examples": {
-          "beginner": "\"애니메이션\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"애니메이션\"를 자주 써요.",
-          "advanced": "\"애니메이션\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"애니메이션\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "애니메이션을 봐요.",
+          "intermediate": "애니메이션이 아름다워요.",
+          "advanced": "애니메이션은 예술의 중요한 형식입니다.",
+          "master": "애니메이션의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -3328,19 +3832,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "애니메이션이/가 뭐예요?",
-              "romanization": "aenimeisyeoni/ga mwoyeyo?",
-              "translation": "What is \"애니메이션\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "애니메이션은/는 animation(이)에요.",
-              "romanization": "aenimeisyeoneun/neun animation(i)eyo.",
-              "translation": "\"애니메이션\" means \"animation\"."
+              "text": "네, 특히 애니메이션을 좋아해요.",
+              "romanization": "ne, teukhi aenimeisyeoneul jotahaeyo.",
+              "translation": "Yes, especially animation."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -3349,10 +3865,10 @@
         "word": "animation",
         "explanation": "'애니메이션' means 'animation' in English.",
         "examples": {
-          "beginner": "We say \"애니메이션\" in Korean.",
-          "intermediate": "In Korea, people often say \"애니메이션\".",
-          "advanced": "\"애니메이션\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"애니메이션\" makes communication more natural."
+          "beginner": "I see animation.",
+          "intermediate": "animation is beautiful.",
+          "advanced": "animation is an important form of art.",
+          "master": "Understanding the aesthetic value of animation enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -3368,19 +3884,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"애니메이션\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "애니메이션이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"애니메이션\" means \"animation\".",
+              "text": "Yes, especially animation.",
               "romanization": "",
-              "translation": "애니메이션은/는 animation(이)에요."
+              "translation": "네, 특히 애니메이션을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -3405,10 +3933,10 @@
         "word": "만화",
         "explanation": "만화의 뜻은 'comic'입니다.",
         "examples": {
-          "beginner": "\"만화\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"만화\"를 자주 써요.",
-          "advanced": "\"만화\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"만화\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "만화를 봐요.",
+          "intermediate": "만화가 아름다워요.",
+          "advanced": "만화는 예술의 중요한 형식입니다.",
+          "master": "만화의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -3424,19 +3952,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "만화이/가 뭐예요?",
-              "romanization": "manhwai/ga mwoyeyo?",
-              "translation": "What is \"만화\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "만화은/는 comic(이)에요.",
-              "romanization": "manhwaeun/neun comic(i)eyo.",
-              "translation": "\"만화\" means \"comic\"."
+              "text": "네, 특히 만화를 좋아해요.",
+              "romanization": "ne, teukhi manhwareul jotahaeyo.",
+              "translation": "Yes, especially comic."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -3445,10 +3985,10 @@
         "word": "comic",
         "explanation": "'만화' means 'comic' in English.",
         "examples": {
-          "beginner": "We say \"만화\" in Korean.",
-          "intermediate": "In Korea, people often say \"만화\".",
-          "advanced": "\"만화\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"만화\" makes communication more natural."
+          "beginner": "I see comic.",
+          "intermediate": "comic is beautiful.",
+          "advanced": "comic is an important form of art.",
+          "master": "Understanding the aesthetic value of comic enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -3464,19 +4004,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"만화\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "만화이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"만화\" means \"comic\".",
+              "text": "Yes, especially comic.",
               "romanization": "",
-              "translation": "만화은/는 comic(이)에요."
+              "translation": "네, 특히 만화를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -3501,10 +4053,10 @@
         "word": "웹툰",
         "explanation": "웹툰의 뜻은 'webtoon'입니다.",
         "examples": {
-          "beginner": "\"웹툰\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"웹툰\"를 자주 써요.",
-          "advanced": "\"웹툰\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"웹툰\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "웹툰을 봐요.",
+          "intermediate": "웹툰이 아름다워요.",
+          "advanced": "웹툰은 예술의 중요한 형식입니다.",
+          "master": "웹툰의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -3520,19 +4072,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "웹툰이/가 뭐예요?",
-              "romanization": "weptuni/ga mwoyeyo?",
-              "translation": "What is \"웹툰\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "웹툰은/는 webtoon(이)에요.",
-              "romanization": "weptuneun/neun webtoon(i)eyo.",
-              "translation": "\"웹툰\" means \"webtoon\"."
+              "text": "네, 특히 웹툰을 좋아해요.",
+              "romanization": "ne, teukhi weptuneul jotahaeyo.",
+              "translation": "Yes, especially webtoon."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -3541,10 +4105,10 @@
         "word": "webtoon",
         "explanation": "'웹툰' means 'webtoon' in English.",
         "examples": {
-          "beginner": "We say \"웹툰\" in Korean.",
-          "intermediate": "In Korea, people often say \"웹툰\".",
-          "advanced": "\"웹툰\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"웹툰\" makes communication more natural."
+          "beginner": "I see webtoon.",
+          "intermediate": "webtoon is beautiful.",
+          "advanced": "webtoon is an important form of art.",
+          "master": "Understanding the aesthetic value of webtoon enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -3560,19 +4124,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"웹툰\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "웹툰이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"웹툰\" means \"webtoon\".",
+              "text": "Yes, especially webtoon.",
               "romanization": "",
-              "translation": "웹툰은/는 webtoon(이)에요."
+              "translation": "네, 특히 웹툰을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -3597,10 +4173,10 @@
         "word": "소설",
         "explanation": "소설의 뜻은 'novel'입니다.",
         "examples": {
-          "beginner": "\"소설\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"소설\"를 자주 써요.",
-          "advanced": "\"소설\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"소설\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "소설을 봐요.",
+          "intermediate": "소설이 아름다워요.",
+          "advanced": "소설은 예술의 중요한 형식입니다.",
+          "master": "소설의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -3616,19 +4192,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "소설이/가 뭐예요?",
-              "romanization": "soseoli/ga mwoyeyo?",
-              "translation": "What is \"소설\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "소설은/는 novel(이)에요.",
-              "romanization": "soseoleun/neun novel(i)eyo.",
-              "translation": "\"소설\" means \"novel\"."
+              "text": "네, 특히 소설을 좋아해요.",
+              "romanization": "ne, teukhi soseoleul jotahaeyo.",
+              "translation": "Yes, especially novel."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -3637,10 +4225,10 @@
         "word": "novel",
         "explanation": "'소설' means 'novel' in English.",
         "examples": {
-          "beginner": "We say \"소설\" in Korean.",
-          "intermediate": "In Korea, people often say \"소설\".",
-          "advanced": "\"소설\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"소설\" makes communication more natural."
+          "beginner": "I see novel.",
+          "intermediate": "novel is beautiful.",
+          "advanced": "novel is an important form of art.",
+          "master": "Understanding the aesthetic value of novel enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -3656,19 +4244,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"소설\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "소설이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"소설\" means \"novel\".",
+              "text": "Yes, especially novel.",
               "romanization": "",
-              "translation": "소설은/는 novel(이)에요."
+              "translation": "네, 특히 소설을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -3693,10 +4293,10 @@
         "word": "시문학",
         "explanation": "시문학의 뜻은 'poetry'입니다.",
         "examples": {
-          "beginner": "\"시문학\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"시문학\"를 자주 써요.",
-          "advanced": "\"시문학\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"시문학\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "시문학을 봐요.",
+          "intermediate": "시문학이 아름다워요.",
+          "advanced": "시문학은 예술의 중요한 형식입니다.",
+          "master": "시문학의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -3712,19 +4312,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "시문학이/가 뭐예요?",
-              "romanization": "simunhaki/ga mwoyeyo?",
-              "translation": "What is \"시문학\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "시문학은/는 poetry(이)에요.",
-              "romanization": "simunhakeun/neun poetry(i)eyo.",
-              "translation": "\"시문학\" means \"poetry\"."
+              "text": "네, 특히 시문학을 좋아해요.",
+              "romanization": "ne, teukhi simunhakeul jotahaeyo.",
+              "translation": "Yes, especially poetry."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -3733,10 +4345,10 @@
         "word": "poetry",
         "explanation": "'시문학' means 'poetry' in English.",
         "examples": {
-          "beginner": "We say \"시문학\" in Korean.",
-          "intermediate": "In Korea, people often say \"시문학\".",
-          "advanced": "\"시문학\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"시문학\" makes communication more natural."
+          "beginner": "I see poetry.",
+          "intermediate": "poetry is beautiful.",
+          "advanced": "poetry is an important form of art.",
+          "master": "Understanding the aesthetic value of poetry enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -3752,19 +4364,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"시문학\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "시문학이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"시문학\" means \"poetry\".",
+              "text": "Yes, especially poetry.",
               "romanization": "",
-              "translation": "시문학은/는 poetry(이)에요."
+              "translation": "네, 특히 시문학을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -3789,10 +4413,10 @@
         "word": "에세이",
         "explanation": "에세이의 뜻은 'essay'입니다.",
         "examples": {
-          "beginner": "\"에세이\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"에세이\"를 자주 써요.",
-          "advanced": "\"에세이\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"에세이\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "에세이를 봐요.",
+          "intermediate": "에세이가 아름다워요.",
+          "advanced": "에세이는 예술의 중요한 형식입니다.",
+          "master": "에세이의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -3808,19 +4432,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "에세이이/가 뭐예요?",
-              "romanization": "eseii/ga mwoyeyo?",
-              "translation": "What is \"에세이\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "에세이은/는 essay(이)에요.",
-              "romanization": "eseieun/neun essay(i)eyo.",
-              "translation": "\"에세이\" means \"essay\"."
+              "text": "네, 특히 에세이를 좋아해요.",
+              "romanization": "ne, teukhi eseireul jotahaeyo.",
+              "translation": "Yes, especially essay."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -3829,10 +4465,10 @@
         "word": "essay",
         "explanation": "'에세이' means 'essay' in English.",
         "examples": {
-          "beginner": "We say \"에세이\" in Korean.",
-          "intermediate": "In Korea, people often say \"에세이\".",
-          "advanced": "\"에세이\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"에세이\" makes communication more natural."
+          "beginner": "I see essay.",
+          "intermediate": "essay is beautiful.",
+          "advanced": "essay is an important form of art.",
+          "master": "Understanding the aesthetic value of essay enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -3848,19 +4484,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"에세이\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "에세이이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"에세이\" means \"essay\".",
+              "text": "Yes, especially essay.",
               "romanization": "",
-              "translation": "에세이은/는 essay(이)에요."
+              "translation": "네, 특히 에세이를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -3885,10 +4533,10 @@
         "word": "자서전",
         "explanation": "자서전의 뜻은 'autobiography'입니다.",
         "examples": {
-          "beginner": "\"자서전\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"자서전\"를 자주 써요.",
-          "advanced": "\"자서전\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"자서전\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "자서전을 봐요.",
+          "intermediate": "자서전이 아름다워요.",
+          "advanced": "자서전은 예술의 중요한 형식입니다.",
+          "master": "자서전의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -3904,19 +4552,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "자서전이/가 뭐예요?",
-              "romanization": "jaseojeoni/ga mwoyeyo?",
-              "translation": "What is \"자서전\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "자서전은/는 autobiography(이)에요.",
-              "romanization": "jaseojeoneun/neun autobiography(i)eyo.",
-              "translation": "\"자서전\" means \"autobiography\"."
+              "text": "네, 특히 자서전을 좋아해요.",
+              "romanization": "ne, teukhi jaseojeoneul jotahaeyo.",
+              "translation": "Yes, especially autobiography."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -3925,10 +4585,10 @@
         "word": "autobiography",
         "explanation": "'자서전' means 'autobiography' in English.",
         "examples": {
-          "beginner": "We say \"자서전\" in Korean.",
-          "intermediate": "In Korea, people often say \"자서전\".",
-          "advanced": "\"자서전\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"자서전\" makes communication more natural."
+          "beginner": "I see autobiography.",
+          "intermediate": "autobiography is beautiful.",
+          "advanced": "autobiography is an important form of art.",
+          "master": "Understanding the aesthetic value of autobiography enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -3944,19 +4604,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"자서전\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "자서전이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"자서전\" means \"autobiography\".",
+              "text": "Yes, especially autobiography.",
               "romanization": "",
-              "translation": "자서전은/는 autobiography(이)에요."
+              "translation": "네, 특히 자서전을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -3981,10 +4653,10 @@
         "word": "클래식음악",
         "explanation": "클래식음악의 뜻은 'classical music'입니다.",
         "examples": {
-          "beginner": "\"클래식음악\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"클래식음악\"를 자주 써요.",
-          "advanced": "\"클래식음악\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"클래식음악\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "클래식음악을 봐요.",
+          "intermediate": "클래식음악이 아름다워요.",
+          "advanced": "클래식음악은 예술의 중요한 형식입니다.",
+          "master": "클래식음악의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -4000,19 +4672,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "클래식음악이/가 뭐예요?",
-              "romanization": "keullaesikeumaki/ga mwoyeyo?",
-              "translation": "What is \"클래식음악\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "클래식음악은/는 classical music(이)에요.",
-              "romanization": "keullaesikeumakeun/neun classical music(i)eyo.",
-              "translation": "\"클래식음악\" means \"classical music\"."
+              "text": "네, 특히 클래식음악을 좋아해요.",
+              "romanization": "ne, teukhi keulraesikeumakeul jotahaeyo.",
+              "translation": "Yes, especially classical music."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -4021,10 +4705,10 @@
         "word": "classical music",
         "explanation": "'클래식음악' means 'classical music' in English.",
         "examples": {
-          "beginner": "We say \"클래식음악\" in Korean.",
-          "intermediate": "In Korea, people often say \"클래식음악\".",
-          "advanced": "\"클래식음악\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"클래식음악\" makes communication more natural."
+          "beginner": "I see classical music.",
+          "intermediate": "classical music is beautiful.",
+          "advanced": "classical music is an important form of art.",
+          "master": "Understanding the aesthetic value of classical music enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -4040,19 +4724,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"클래식음악\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "클래식음악이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"클래식음악\" means \"classical music\".",
+              "text": "Yes, especially classical music.",
               "romanization": "",
-              "translation": "클래식음악은/는 classical music(이)에요."
+              "translation": "네, 특히 클래식음악을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -4077,10 +4773,10 @@
         "word": "클래식",
         "explanation": "클래식의 뜻은 'classical music'입니다.",
         "examples": {
-          "beginner": "\"클래식\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"클래식\"를 자주 써요.",
-          "advanced": "\"클래식\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"클래식\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "클래식을 봐요.",
+          "intermediate": "클래식이 아름다워요.",
+          "advanced": "클래식은 예술의 중요한 형식입니다.",
+          "master": "클래식의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -4096,19 +4792,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "클래식이/가 뭐예요?",
-              "romanization": "keullaesiki/ga mwoyeyo?",
-              "translation": "What is \"클래식\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "클래식은/는 classical music(이)에요.",
-              "romanization": "keullaesikeun/neun classical music(i)eyo.",
-              "translation": "\"클래식\" means \"classical music\"."
+              "text": "네, 특히 클래식을 좋아해요.",
+              "romanization": "ne, teukhi keulraesikeul jotahaeyo.",
+              "translation": "Yes, especially classical music."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -4117,10 +4825,10 @@
         "word": "classical music",
         "explanation": "'클래식' means 'classical music' in English.",
         "examples": {
-          "beginner": "We say \"클래식\" in Korean.",
-          "intermediate": "In Korea, people often say \"클래식\".",
-          "advanced": "\"클래식\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"클래식\" makes communication more natural."
+          "beginner": "I see classical music.",
+          "intermediate": "classical music is beautiful.",
+          "advanced": "classical music is an important form of art.",
+          "master": "Understanding the aesthetic value of classical music enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -4136,19 +4844,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"클래식\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "클래식이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"클래식\" means \"classical music\".",
+              "text": "Yes, especially classical music.",
               "romanization": "",
-              "translation": "클래식은/는 classical music(이)에요."
+              "translation": "네, 특히 클래식을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -4173,10 +4893,10 @@
         "word": "재즈",
         "explanation": "재즈의 뜻은 'jazz'입니다.",
         "examples": {
-          "beginner": "\"재즈\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"재즈\"를 자주 써요.",
-          "advanced": "\"재즈\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"재즈\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "재즈를 봐요.",
+          "intermediate": "재즈가 아름다워요.",
+          "advanced": "재즈는 예술의 중요한 형식입니다.",
+          "master": "재즈의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -4192,19 +4912,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "재즈이/가 뭐예요?",
-              "romanization": "jaejeui/ga mwoyeyo?",
-              "translation": "What is \"재즈\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "재즈은/는 jazz(이)에요.",
-              "romanization": "jaejeueun/neun jazz(i)eyo.",
-              "translation": "\"재즈\" means \"jazz\"."
+              "text": "네, 특히 재즈를 좋아해요.",
+              "romanization": "ne, teukhi jaejeureul jotahaeyo.",
+              "translation": "Yes, especially jazz."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -4213,10 +4945,10 @@
         "word": "jazz",
         "explanation": "'재즈' means 'jazz' in English.",
         "examples": {
-          "beginner": "We say \"재즈\" in Korean.",
-          "intermediate": "In Korea, people often say \"재즈\".",
-          "advanced": "\"재즈\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"재즈\" makes communication more natural."
+          "beginner": "I see jazz.",
+          "intermediate": "jazz is beautiful.",
+          "advanced": "jazz is an important form of art.",
+          "master": "Understanding the aesthetic value of jazz enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -4232,19 +4964,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"재즈\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "재즈이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"재즈\" means \"jazz\".",
+              "text": "Yes, especially jazz.",
               "romanization": "",
-              "translation": "재즈은/는 jazz(이)에요."
+              "translation": "네, 특히 재즈를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -4269,10 +5013,10 @@
         "word": "팝",
         "explanation": "팝의 뜻은 'pop'입니다.",
         "examples": {
-          "beginner": "\"팝\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"팝\"를 자주 써요.",
-          "advanced": "\"팝\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"팝\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "팝을 봐요.",
+          "intermediate": "팝이 아름다워요.",
+          "advanced": "팝은 예술의 중요한 형식입니다.",
+          "master": "팝의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -4288,19 +5032,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "팝이/가 뭐예요?",
-              "romanization": "papi/ga mwoyeyo?",
-              "translation": "What is \"팝\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "팝은/는 pop(이)에요.",
-              "romanization": "papeun/neun pop(i)eyo.",
-              "translation": "\"팝\" means \"pop\"."
+              "text": "네, 특히 팝을 좋아해요.",
+              "romanization": "ne, teukhi papeul jotahaeyo.",
+              "translation": "Yes, especially pop."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -4309,10 +5065,10 @@
         "word": "pop",
         "explanation": "'팝' means 'pop' in English.",
         "examples": {
-          "beginner": "We say \"팝\" in Korean.",
-          "intermediate": "In Korea, people often say \"팝\".",
-          "advanced": "\"팝\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"팝\" makes communication more natural."
+          "beginner": "I see pop.",
+          "intermediate": "pop is beautiful.",
+          "advanced": "pop is an important form of art.",
+          "master": "Understanding the aesthetic value of pop enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -4328,19 +5084,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"팝\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "팝이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"팝\" means \"pop\".",
+              "text": "Yes, especially pop.",
               "romanization": "",
-              "translation": "팝은/는 pop(이)에요."
+              "translation": "네, 특히 팝을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -4365,10 +5133,10 @@
         "word": "록",
         "explanation": "록의 뜻은 'rock'입니다.",
         "examples": {
-          "beginner": "\"록\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"록\"를 자주 써요.",
-          "advanced": "\"록\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"록\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "록을 봐요.",
+          "intermediate": "록이 아름다워요.",
+          "advanced": "록은 예술의 중요한 형식입니다.",
+          "master": "록의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -4384,19 +5152,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "록이/가 뭐예요?",
-              "romanization": "roki/ga mwoyeyo?",
-              "translation": "What is \"록\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "록은/는 rock(이)에요.",
-              "romanization": "rokeun/neun rock(i)eyo.",
-              "translation": "\"록\" means \"rock\"."
+              "text": "네, 특히 록을 좋아해요.",
+              "romanization": "ne, teukhi rokeul jotahaeyo.",
+              "translation": "Yes, especially rock."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -4405,10 +5185,10 @@
         "word": "rock",
         "explanation": "'록' means 'rock' in English.",
         "examples": {
-          "beginner": "We say \"록\" in Korean.",
-          "intermediate": "In Korea, people often say \"록\".",
-          "advanced": "\"록\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"록\" makes communication more natural."
+          "beginner": "I see rock.",
+          "intermediate": "rock is beautiful.",
+          "advanced": "rock is an important form of art.",
+          "master": "Understanding the aesthetic value of rock enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -4424,19 +5204,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"록\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "록이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"록\" means \"rock\".",
+              "text": "Yes, especially rock.",
               "romanization": "",
-              "translation": "록은/는 rock(이)에요."
+              "translation": "네, 특히 록을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -4461,10 +5253,10 @@
         "word": "힙합",
         "explanation": "힙합의 뜻은 'hip hop'입니다.",
         "examples": {
-          "beginner": "\"힙합\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"힙합\"를 자주 써요.",
-          "advanced": "\"힙합\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"힙합\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "힙합을 봐요.",
+          "intermediate": "힙합이 아름다워요.",
+          "advanced": "힙합은 예술의 중요한 형식입니다.",
+          "master": "힙합의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -4480,19 +5272,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "힙합이/가 뭐예요?",
-              "romanization": "hiphapi/ga mwoyeyo?",
-              "translation": "What is \"힙합\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "힙합은/는 hip hop(이)에요.",
-              "romanization": "hiphapeun/neun hip hop(i)eyo.",
-              "translation": "\"힙합\" means \"hip hop\"."
+              "text": "네, 특히 힙합을 좋아해요.",
+              "romanization": "ne, teukhi hiphapeul jotahaeyo.",
+              "translation": "Yes, especially hip hop."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -4501,10 +5305,10 @@
         "word": "hip hop",
         "explanation": "'힙합' means 'hip hop' in English.",
         "examples": {
-          "beginner": "We say \"힙합\" in Korean.",
-          "intermediate": "In Korea, people often say \"힙합\".",
-          "advanced": "\"힙합\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"힙합\" makes communication more natural."
+          "beginner": "I see hip hop.",
+          "intermediate": "hip hop is beautiful.",
+          "advanced": "hip hop is an important form of art.",
+          "master": "Understanding the aesthetic value of hip hop enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -4520,19 +5324,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"힙합\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "힙합이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"힙합\" means \"hip hop\".",
+              "text": "Yes, especially hip hop.",
               "romanization": "",
-              "translation": "힙합은/는 hip hop(이)에요."
+              "translation": "네, 특히 힙합을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -4557,10 +5373,10 @@
         "word": "랩",
         "explanation": "랩의 뜻은 'rap'입니다.",
         "examples": {
-          "beginner": "\"랩\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"랩\"를 자주 써요.",
-          "advanced": "\"랩\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"랩\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "랩을 봐요.",
+          "intermediate": "랩이 아름다워요.",
+          "advanced": "랩은 예술의 중요한 형식입니다.",
+          "master": "랩의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -4576,19 +5392,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "랩이/가 뭐예요?",
-              "romanization": "raepi/ga mwoyeyo?",
-              "translation": "What is \"랩\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "랩은/는 rap(이)에요.",
-              "romanization": "raepeun/neun rap(i)eyo.",
-              "translation": "\"랩\" means \"rap\"."
+              "text": "네, 특히 랩을 좋아해요.",
+              "romanization": "ne, teukhi raepeul jotahaeyo.",
+              "translation": "Yes, especially rap."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -4597,10 +5425,10 @@
         "word": "rap",
         "explanation": "'랩' means 'rap' in English.",
         "examples": {
-          "beginner": "We say \"랩\" in Korean.",
-          "intermediate": "In Korea, people often say \"랩\".",
-          "advanced": "\"랩\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"랩\" makes communication more natural."
+          "beginner": "I see rap.",
+          "intermediate": "rap is beautiful.",
+          "advanced": "rap is an important form of art.",
+          "master": "Understanding the aesthetic value of rap enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -4616,19 +5444,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"랩\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "랩이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"랩\" means \"rap\".",
+              "text": "Yes, especially rap.",
               "romanization": "",
-              "translation": "랩은/는 rap(이)에요."
+              "translation": "네, 특히 랩을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -4653,10 +5493,10 @@
         "word": "발라드",
         "explanation": "발라드의 뜻은 'ballad'입니다.",
         "examples": {
-          "beginner": "\"발라드\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"발라드\"를 자주 써요.",
-          "advanced": "\"발라드\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"발라드\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "발라드를 봐요.",
+          "intermediate": "발라드가 아름다워요.",
+          "advanced": "발라드는 예술의 중요한 형식입니다.",
+          "master": "발라드의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -4672,19 +5512,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "발라드이/가 뭐예요?",
-              "romanization": "balladeui/ga mwoyeyo?",
-              "translation": "What is \"발라드\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "발라드은/는 ballad(이)에요.",
-              "romanization": "balladeueun/neun ballad(i)eyo.",
-              "translation": "\"발라드\" means \"ballad\"."
+              "text": "네, 특히 발라드를 좋아해요.",
+              "romanization": "ne, teukhi balradeureul jotahaeyo.",
+              "translation": "Yes, especially ballad."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -4693,10 +5545,10 @@
         "word": "ballad",
         "explanation": "'발라드' means 'ballad' in English.",
         "examples": {
-          "beginner": "We say \"발라드\" in Korean.",
-          "intermediate": "In Korea, people often say \"발라드\".",
-          "advanced": "\"발라드\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"발라드\" makes communication more natural."
+          "beginner": "I see ballad.",
+          "intermediate": "ballad is beautiful.",
+          "advanced": "ballad is an important form of art.",
+          "master": "Understanding the aesthetic value of ballad enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -4712,19 +5564,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"발라드\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "발라드이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"발라드\" means \"ballad\".",
+              "text": "Yes, especially ballad.",
               "romanization": "",
-              "translation": "발라드은/는 ballad(이)에요."
+              "translation": "네, 특히 발라드를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -4749,10 +5613,10 @@
         "word": "이디엠",
         "explanation": "EDM의 뜻은 'EDM'입니다.",
         "examples": {
-          "beginner": "\"EDM\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"EDM\"를 자주 써요.",
-          "advanced": "\"EDM\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"EDM\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "이디엠을 봐요.",
+          "intermediate": "이디엠이 아름다워요.",
+          "advanced": "이디엠은 예술의 중요한 형식입니다.",
+          "master": "이디엠의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -4768,19 +5632,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "EDM이/가 뭐예요?",
-              "romanization": "EDMi/ga mwoyeyo?",
-              "translation": "What is \"EDM\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "EDM은/는 EDM(이)에요.",
-              "romanization": "EDMeun/neun EDM(i)eyo.",
-              "translation": "\"EDM\" means \"EDM\"."
+              "text": "네, 특히 이디엠을 좋아해요.",
+              "romanization": "ne, teukhi idiemeul jotahaeyo.",
+              "translation": "Yes, especially edm."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -4789,10 +5665,10 @@
         "word": "EDM",
         "explanation": "'EDM' means 'EDM' in English.",
         "examples": {
-          "beginner": "We say \"EDM\" in Korean.",
-          "intermediate": "In Korea, people often say \"EDM\".",
-          "advanced": "\"EDM\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"EDM\" makes communication more natural."
+          "beginner": "I see edm.",
+          "intermediate": "EDM is beautiful.",
+          "advanced": "EDM is an important form of art.",
+          "master": "Understanding the aesthetic value of edm enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -4808,19 +5684,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"EDM\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "EDM이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"EDM\" means \"EDM\".",
+              "text": "Yes, especially edm.",
               "romanization": "",
-              "translation": "EDM은/는 EDM(이)에요."
+              "translation": "네, 특히 이디엠을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -4845,10 +5733,10 @@
         "word": "케이팝",
         "explanation": "케이팝의 뜻은 'K-pop'입니다.",
         "examples": {
-          "beginner": "\"케이팝\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"케이팝\"를 자주 써요.",
-          "advanced": "\"케이팝\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"케이팝\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "케이팝을 봐요.",
+          "intermediate": "케이팝이 아름다워요.",
+          "advanced": "케이팝은 예술의 중요한 형식입니다.",
+          "master": "케이팝의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -4864,19 +5752,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "케이팝이/가 뭐예요?",
-              "romanization": "keipapi/ga mwoyeyo?",
-              "translation": "What is \"케이팝\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "케이팝은/는 K-pop(이)에요.",
-              "romanization": "keipapeun/neun K-pop(i)eyo.",
-              "translation": "\"케이팝\" means \"K-pop\"."
+              "text": "네, 특히 케이팝을 좋아해요.",
+              "romanization": "ne, teukhi keipapeul jotahaeyo.",
+              "translation": "Yes, especially k-pop."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -4885,10 +5785,10 @@
         "word": "K-pop",
         "explanation": "'케이팝' means 'K-pop' in English.",
         "examples": {
-          "beginner": "We say \"케이팝\" in Korean.",
-          "intermediate": "In Korea, people often say \"케이팝\".",
-          "advanced": "\"케이팝\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"케이팝\" makes communication more natural."
+          "beginner": "I see k-pop.",
+          "intermediate": "K-pop is beautiful.",
+          "advanced": "K-pop is an important form of art.",
+          "master": "Understanding the aesthetic value of k-pop enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -4904,19 +5804,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"케이팝\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "케이팝이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"케이팝\" means \"K-pop\".",
+              "text": "Yes, especially k-pop.",
               "romanization": "",
-              "translation": "케이팝은/는 K-pop(이)에요."
+              "translation": "네, 특히 케이팝을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -4941,10 +5853,10 @@
         "word": "트로트",
         "explanation": "트로트의 뜻은 'trot'입니다.",
         "examples": {
-          "beginner": "\"트로트\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"트로트\"를 자주 써요.",
-          "advanced": "\"트로트\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"트로트\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "트로트를 봐요.",
+          "intermediate": "트로트가 아름다워요.",
+          "advanced": "트로트는 예술의 중요한 형식입니다.",
+          "master": "트로트의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -4960,19 +5872,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "트로트이/가 뭐예요?",
-              "romanization": "teuroteui/ga mwoyeyo?",
-              "translation": "What is \"트로트\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "트로트은/는 trot(이)에요.",
-              "romanization": "teuroteueun/neun trot(i)eyo.",
-              "translation": "\"트로트\" means \"trot\"."
+              "text": "네, 특히 트로트를 좋아해요.",
+              "romanization": "ne, teukhi teuroteureul jotahaeyo.",
+              "translation": "Yes, especially trot."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -4981,10 +5905,10 @@
         "word": "trot",
         "explanation": "'트로트' means 'trot' in English.",
         "examples": {
-          "beginner": "We say \"트로트\" in Korean.",
-          "intermediate": "In Korea, people often say \"트로트\".",
-          "advanced": "\"트로트\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"트로트\" makes communication more natural."
+          "beginner": "I see trot.",
+          "intermediate": "trot is beautiful.",
+          "advanced": "trot is an important form of art.",
+          "master": "Understanding the aesthetic value of trot enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -5000,19 +5924,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"트로트\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "트로트이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"트로트\" means \"trot\".",
+              "text": "Yes, especially trot.",
               "romanization": "",
-              "translation": "트로트은/는 trot(이)에요."
+              "translation": "네, 특히 트로트를 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }
@@ -5037,10 +5973,10 @@
         "word": "국악",
         "explanation": "국악의 뜻은 'Korean traditional music'입니다.",
         "examples": {
-          "beginner": "\"국악\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"국악\"를 자주 써요.",
-          "advanced": "\"국악\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"국악\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "국악을 봐요.",
+          "intermediate": "국악이 아름다워요.",
+          "advanced": "국악은 예술의 중요한 형식입니다.",
+          "master": "국악의 미학적 가치를 이해하면 예술 감상이 풍요로워집니다."
         },
         "variations": {
           "formal": [
@@ -5056,19 +5992,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "예술에 대해 이야기하며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "국악이/가 뭐예요?",
-              "romanization": "gukaki/ga mwoyeyo?",
-              "translation": "What is \"국악\"?"
+              "text": "예술 좋아해요?",
+              "romanization": "yesul jotahaeyo?",
+              "translation": "Do you like art?"
             },
             {
               "speaker": "B",
-              "text": "국악은/는 Korean traditional music(이)에요.",
-              "romanization": "gukakeun/neun Korean traditional music(i)eyo.",
-              "translation": "\"국악\" means \"Korean traditional music\"."
+              "text": "네, 특히 국악을 좋아해요.",
+              "romanization": "ne, teukhi gukakeul jotahaeyo.",
+              "translation": "Yes, especially korean traditional music."
+            },
+            {
+              "speaker": "A",
+              "text": "직접 해봤어요?",
+              "romanization": "jikjeop haebwaseoyo?",
+              "translation": "Have you tried it yourself?"
+            },
+            {
+              "speaker": "B",
+              "text": "조금 해봤어요.",
+              "romanization": "jogeum haebwaseoyo.",
+              "translation": "I've tried a bit."
             }
           ]
         }
@@ -5077,10 +6025,10 @@
         "word": "Korean traditional music",
         "explanation": "'국악' means 'Korean traditional music' in English.",
         "examples": {
-          "beginner": "We say \"국악\" in Korean.",
-          "intermediate": "In Korea, people often say \"국악\".",
-          "advanced": "\"국악\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"국악\" makes communication more natural."
+          "beginner": "I see korean traditional music.",
+          "intermediate": "Korean traditional music is beautiful.",
+          "advanced": "Korean traditional music is an important form of art.",
+          "master": "Understanding the aesthetic value of korean traditional music enriches art appreciation."
         },
         "variations": {
           "formal": [
@@ -5096,19 +6044,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Talking about art",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"국악\"?",
+              "text": "Do you like art?",
               "romanization": "",
-              "translation": "국악이/가 뭐예요?"
+              "translation": "예술 좋아해요?"
             },
             {
               "speaker": "B",
-              "text": "\"국악\" means \"Korean traditional music\".",
+              "text": "Yes, especially korean traditional music.",
               "romanization": "",
-              "translation": "국악은/는 Korean traditional music(이)에요."
+              "translation": "네, 특히 국악을 좋아해요."
+            },
+            {
+              "speaker": "A",
+              "text": "Have you tried it yourself?",
+              "romanization": "",
+              "translation": "직접 해봤어요?"
+            },
+            {
+              "speaker": "B",
+              "text": "I've tried a bit.",
+              "romanization": "",
+              "translation": "조금 해봤어요."
             }
           ]
         }

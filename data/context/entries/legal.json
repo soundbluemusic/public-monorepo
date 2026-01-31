@@ -13,10 +13,10 @@
         "word": "피고인",
         "explanation": "피고인의 뜻은 'defendant'입니다.",
         "examples": {
-          "beginner": "\"피고인\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"피고인\"를 자주 써요.",
-          "advanced": "\"피고인\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"피고인\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "피고인이 뭐예요?",
+          "intermediate": "피고인은 법에서 중요해요.",
+          "advanced": "피고인의 개념을 이해하면 법적 권리를 보호할 수 있습니다.",
+          "master": "피고인에 대한 정확한 이해는 법률 문해력의 핵심입니다."
         },
         "variations": {
           "formal": [
@@ -32,19 +32,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "법률 상담을 받으며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "피고인이/가 뭐예요?",
-              "romanization": "pigoini/ga mwoyeyo?",
-              "translation": "What is \"피고인\"?"
+              "text": "피고인이 뭔지 모르겠어요.",
+              "romanization": "pigoini mwonji moreugeseoyo.",
+              "translation": "I don't understand defendant."
             },
             {
               "speaker": "B",
-              "text": "피고인은/는 defendant(이)에요.",
-              "romanization": "pigoineun/neun defendant(i)eyo.",
-              "translation": "\"피고인\" means \"defendant\"."
+              "text": "쉽게 설명해 드릴게요.",
+              "romanization": "swipge seolmyeonghae deurilgeyo.",
+              "translation": "I'll explain it simply."
+            },
+            {
+              "speaker": "A",
+              "text": "감사합니다.",
+              "romanization": "gamsahapnida.",
+              "translation": "Thank you."
+            },
+            {
+              "speaker": "B",
+              "text": "궁금한 점 있으면 물어보세요.",
+              "romanization": "gunggeumhan jeom iseumyeon muleoboseyo.",
+              "translation": "Ask if you have any questions."
             }
           ]
         }
@@ -53,10 +65,10 @@
         "word": "defendant",
         "explanation": "'피고인' means 'defendant' in English.",
         "examples": {
-          "beginner": "We say \"피고인\" in Korean.",
-          "intermediate": "In Korea, people often say \"피고인\".",
-          "advanced": "\"피고인\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"피고인\" makes communication more natural."
+          "beginner": "What is defendant?",
+          "intermediate": "defendant is important in law.",
+          "advanced": "Understanding defendant helps protect legal rights.",
+          "master": "Accurate understanding of defendant is central to legal literacy."
         },
         "variations": {
           "formal": [
@@ -72,19 +84,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Getting legal consultation",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"피고인\"?",
+              "text": "I don't understand defendant.",
               "romanization": "",
-              "translation": "피고인이/가 뭐예요?"
+              "translation": "피고인이 뭔지 모르겠어요."
             },
             {
               "speaker": "B",
-              "text": "\"피고인\" means \"defendant\".",
+              "text": "I'll explain it simply.",
               "romanization": "",
-              "translation": "피고인은/는 defendant(이)에요."
+              "translation": "쉽게 설명해 드릴게요."
+            },
+            {
+              "speaker": "A",
+              "text": "Thank you.",
+              "romanization": "",
+              "translation": "감사합니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Ask if you have any questions.",
+              "romanization": "",
+              "translation": "궁금한 점 있으면 물어보세요."
             }
           ]
         }
@@ -109,10 +133,10 @@
         "word": "원고",
         "explanation": "원고의 뜻은 'plaintiff'입니다.",
         "examples": {
-          "beginner": "\"원고\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"원고\"를 자주 써요.",
-          "advanced": "\"원고\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"원고\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "원고가 뭐예요?",
+          "intermediate": "원고는 법에서 중요해요.",
+          "advanced": "원고의 개념을 이해하면 법적 권리를 보호할 수 있습니다.",
+          "master": "원고에 대한 정확한 이해는 법률 문해력의 핵심입니다."
         },
         "variations": {
           "formal": [
@@ -128,19 +152,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "법률 상담을 받으며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "원고이/가 뭐예요?",
-              "romanization": "wongoi/ga mwoyeyo?",
-              "translation": "What is \"원고\"?"
+              "text": "원고가 뭔지 모르겠어요.",
+              "romanization": "wongoga mwonji moreugeseoyo.",
+              "translation": "I don't understand plaintiff."
             },
             {
               "speaker": "B",
-              "text": "원고은/는 plaintiff(이)에요.",
-              "romanization": "wongoeun/neun plaintiff(i)eyo.",
-              "translation": "\"원고\" means \"plaintiff\"."
+              "text": "쉽게 설명해 드릴게요.",
+              "romanization": "swipge seolmyeonghae deurilgeyo.",
+              "translation": "I'll explain it simply."
+            },
+            {
+              "speaker": "A",
+              "text": "감사합니다.",
+              "romanization": "gamsahapnida.",
+              "translation": "Thank you."
+            },
+            {
+              "speaker": "B",
+              "text": "궁금한 점 있으면 물어보세요.",
+              "romanization": "gunggeumhan jeom iseumyeon muleoboseyo.",
+              "translation": "Ask if you have any questions."
             }
           ]
         }
@@ -149,10 +185,10 @@
         "word": "plaintiff",
         "explanation": "'원고' means 'plaintiff' in English.",
         "examples": {
-          "beginner": "We say \"원고\" in Korean.",
-          "intermediate": "In Korea, people often say \"원고\".",
-          "advanced": "\"원고\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"원고\" makes communication more natural."
+          "beginner": "What is plaintiff?",
+          "intermediate": "plaintiff is important in law.",
+          "advanced": "Understanding plaintiff helps protect legal rights.",
+          "master": "Accurate understanding of plaintiff is central to legal literacy."
         },
         "variations": {
           "formal": [
@@ -168,19 +204,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Getting legal consultation",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"원고\"?",
+              "text": "I don't understand plaintiff.",
               "romanization": "",
-              "translation": "원고이/가 뭐예요?"
+              "translation": "원고가 뭔지 모르겠어요."
             },
             {
               "speaker": "B",
-              "text": "\"원고\" means \"plaintiff\".",
+              "text": "I'll explain it simply.",
               "romanization": "",
-              "translation": "원고은/는 plaintiff(이)에요."
+              "translation": "쉽게 설명해 드릴게요."
+            },
+            {
+              "speaker": "A",
+              "text": "Thank you.",
+              "romanization": "",
+              "translation": "감사합니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Ask if you have any questions.",
+              "romanization": "",
+              "translation": "궁금한 점 있으면 물어보세요."
             }
           ]
         }
@@ -205,10 +253,10 @@
         "word": "증인",
         "explanation": "증인의 뜻은 'witness'입니다.",
         "examples": {
-          "beginner": "\"증인\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"증인\"를 자주 써요.",
-          "advanced": "\"증인\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"증인\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "증인이 뭐예요?",
+          "intermediate": "증인은 법에서 중요해요.",
+          "advanced": "증인의 개념을 이해하면 법적 권리를 보호할 수 있습니다.",
+          "master": "증인에 대한 정확한 이해는 법률 문해력의 핵심입니다."
         },
         "variations": {
           "formal": [
@@ -224,19 +272,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "법률 상담을 받으며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "증인이/가 뭐예요?",
-              "romanization": "jeungini/ga mwoyeyo?",
-              "translation": "What is \"증인\"?"
+              "text": "증인이 뭔지 모르겠어요.",
+              "romanization": "jeungini mwonji moreugeseoyo.",
+              "translation": "I don't understand witness."
             },
             {
               "speaker": "B",
-              "text": "증인은/는 witness(이)에요.",
-              "romanization": "jeungineun/neun witness(i)eyo.",
-              "translation": "\"증인\" means \"witness\"."
+              "text": "쉽게 설명해 드릴게요.",
+              "romanization": "swipge seolmyeonghae deurilgeyo.",
+              "translation": "I'll explain it simply."
+            },
+            {
+              "speaker": "A",
+              "text": "감사합니다.",
+              "romanization": "gamsahapnida.",
+              "translation": "Thank you."
+            },
+            {
+              "speaker": "B",
+              "text": "궁금한 점 있으면 물어보세요.",
+              "romanization": "gunggeumhan jeom iseumyeon muleoboseyo.",
+              "translation": "Ask if you have any questions."
             }
           ]
         }
@@ -245,10 +305,10 @@
         "word": "witness",
         "explanation": "'증인' means 'witness' in English.",
         "examples": {
-          "beginner": "We say \"증인\" in Korean.",
-          "intermediate": "In Korea, people often say \"증인\".",
-          "advanced": "\"증인\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"증인\" makes communication more natural."
+          "beginner": "What is witness?",
+          "intermediate": "witness is important in law.",
+          "advanced": "Understanding witness helps protect legal rights.",
+          "master": "Accurate understanding of witness is central to legal literacy."
         },
         "variations": {
           "formal": [
@@ -264,19 +324,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Getting legal consultation",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"증인\"?",
+              "text": "I don't understand witness.",
               "romanization": "",
-              "translation": "증인이/가 뭐예요?"
+              "translation": "증인이 뭔지 모르겠어요."
             },
             {
               "speaker": "B",
-              "text": "\"증인\" means \"witness\".",
+              "text": "I'll explain it simply.",
               "romanization": "",
-              "translation": "증인은/는 witness(이)에요."
+              "translation": "쉽게 설명해 드릴게요."
+            },
+            {
+              "speaker": "A",
+              "text": "Thank you.",
+              "romanization": "",
+              "translation": "감사합니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Ask if you have any questions.",
+              "romanization": "",
+              "translation": "궁금한 점 있으면 물어보세요."
             }
           ]
         }
@@ -301,10 +373,10 @@
         "word": "무죄",
         "explanation": "무죄의 뜻은 'not guilty'입니다.",
         "examples": {
-          "beginner": "\"무죄\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"무죄\"를 자주 써요.",
-          "advanced": "\"무죄\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"무죄\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "무죄가 뭐예요?",
+          "intermediate": "무죄는 법에서 중요해요.",
+          "advanced": "무죄의 개념을 이해하면 법적 권리를 보호할 수 있습니다.",
+          "master": "무죄에 대한 정확한 이해는 법률 문해력의 핵심입니다."
         },
         "variations": {
           "formal": [
@@ -320,19 +392,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "법률 상담을 받으며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "무죄이/가 뭐예요?",
-              "romanization": "mujoei/ga mwoyeyo?",
-              "translation": "What is \"무죄\"?"
+              "text": "무죄가 뭔지 모르겠어요.",
+              "romanization": "mujoega mwonji moreugeseoyo.",
+              "translation": "I don't understand not guilty."
             },
             {
               "speaker": "B",
-              "text": "무죄은/는 not guilty(이)에요.",
-              "romanization": "mujoeeun/neun not guilty(i)eyo.",
-              "translation": "\"무죄\" means \"not guilty\"."
+              "text": "쉽게 설명해 드릴게요.",
+              "romanization": "swipge seolmyeonghae deurilgeyo.",
+              "translation": "I'll explain it simply."
+            },
+            {
+              "speaker": "A",
+              "text": "감사합니다.",
+              "romanization": "gamsahapnida.",
+              "translation": "Thank you."
+            },
+            {
+              "speaker": "B",
+              "text": "궁금한 점 있으면 물어보세요.",
+              "romanization": "gunggeumhan jeom iseumyeon muleoboseyo.",
+              "translation": "Ask if you have any questions."
             }
           ]
         }
@@ -341,10 +425,10 @@
         "word": "not guilty",
         "explanation": "'무죄' means 'not guilty' in English.",
         "examples": {
-          "beginner": "We say \"무죄\" in Korean.",
-          "intermediate": "In Korea, people often say \"무죄\".",
-          "advanced": "\"무죄\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"무죄\" makes communication more natural."
+          "beginner": "What is not guilty?",
+          "intermediate": "not guilty is important in law.",
+          "advanced": "Understanding not guilty helps protect legal rights.",
+          "master": "Accurate understanding of not guilty is central to legal literacy."
         },
         "variations": {
           "formal": [
@@ -360,19 +444,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Getting legal consultation",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"무죄\"?",
+              "text": "I don't understand not guilty.",
               "romanization": "",
-              "translation": "무죄이/가 뭐예요?"
+              "translation": "무죄가 뭔지 모르겠어요."
             },
             {
               "speaker": "B",
-              "text": "\"무죄\" means \"not guilty\".",
+              "text": "I'll explain it simply.",
               "romanization": "",
-              "translation": "무죄은/는 not guilty(이)에요."
+              "translation": "쉽게 설명해 드릴게요."
+            },
+            {
+              "speaker": "A",
+              "text": "Thank you.",
+              "romanization": "",
+              "translation": "감사합니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Ask if you have any questions.",
+              "romanization": "",
+              "translation": "궁금한 점 있으면 물어보세요."
             }
           ]
         }
@@ -397,10 +493,10 @@
         "word": "유죄",
         "explanation": "유죄의 뜻은 'guilty'입니다.",
         "examples": {
-          "beginner": "\"유죄\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"유죄\"를 자주 써요.",
-          "advanced": "\"유죄\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"유죄\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "유죄가 뭐예요?",
+          "intermediate": "유죄는 법에서 중요해요.",
+          "advanced": "유죄의 개념을 이해하면 법적 권리를 보호할 수 있습니다.",
+          "master": "유죄에 대한 정확한 이해는 법률 문해력의 핵심입니다."
         },
         "variations": {
           "formal": [
@@ -416,19 +512,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "법률 상담을 받으며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "유죄이/가 뭐예요?",
-              "romanization": "yujoei/ga mwoyeyo?",
-              "translation": "What is \"유죄\"?"
+              "text": "유죄가 뭔지 모르겠어요.",
+              "romanization": "yujoega mwonji moreugeseoyo.",
+              "translation": "I don't understand guilty."
             },
             {
               "speaker": "B",
-              "text": "유죄은/는 guilty(이)에요.",
-              "romanization": "yujoeeun/neun guilty(i)eyo.",
-              "translation": "\"유죄\" means \"guilty\"."
+              "text": "쉽게 설명해 드릴게요.",
+              "romanization": "swipge seolmyeonghae deurilgeyo.",
+              "translation": "I'll explain it simply."
+            },
+            {
+              "speaker": "A",
+              "text": "감사합니다.",
+              "romanization": "gamsahapnida.",
+              "translation": "Thank you."
+            },
+            {
+              "speaker": "B",
+              "text": "궁금한 점 있으면 물어보세요.",
+              "romanization": "gunggeumhan jeom iseumyeon muleoboseyo.",
+              "translation": "Ask if you have any questions."
             }
           ]
         }
@@ -437,10 +545,10 @@
         "word": "guilty",
         "explanation": "'유죄' means 'guilty' in English.",
         "examples": {
-          "beginner": "We say \"유죄\" in Korean.",
-          "intermediate": "In Korea, people often say \"유죄\".",
-          "advanced": "\"유죄\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"유죄\" makes communication more natural."
+          "beginner": "What is guilty?",
+          "intermediate": "guilty is important in law.",
+          "advanced": "Understanding guilty helps protect legal rights.",
+          "master": "Accurate understanding of guilty is central to legal literacy."
         },
         "variations": {
           "formal": [
@@ -456,19 +564,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Getting legal consultation",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"유죄\"?",
+              "text": "I don't understand guilty.",
               "romanization": "",
-              "translation": "유죄이/가 뭐예요?"
+              "translation": "유죄가 뭔지 모르겠어요."
             },
             {
               "speaker": "B",
-              "text": "\"유죄\" means \"guilty\".",
+              "text": "I'll explain it simply.",
               "romanization": "",
-              "translation": "유죄은/는 guilty(이)에요."
+              "translation": "쉽게 설명해 드릴게요."
+            },
+            {
+              "speaker": "A",
+              "text": "Thank you.",
+              "romanization": "",
+              "translation": "감사합니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Ask if you have any questions.",
+              "romanization": "",
+              "translation": "궁금한 점 있으면 물어보세요."
             }
           ]
         }
@@ -493,10 +613,10 @@
         "word": "판결",
         "explanation": "판결의 뜻은 'verdict'입니다.",
         "examples": {
-          "beginner": "\"판결\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"판결\"를 자주 써요.",
-          "advanced": "\"판결\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"판결\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "판결이 뭐예요?",
+          "intermediate": "판결은 법에서 중요해요.",
+          "advanced": "판결의 개념을 이해하면 법적 권리를 보호할 수 있습니다.",
+          "master": "판결에 대한 정확한 이해는 법률 문해력의 핵심입니다."
         },
         "variations": {
           "formal": [
@@ -512,19 +632,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "법률 상담을 받으며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "판결이/가 뭐예요?",
-              "romanization": "pangyeoli/ga mwoyeyo?",
-              "translation": "What is \"판결\"?"
+              "text": "판결이 뭔지 모르겠어요.",
+              "romanization": "pangyeoli mwonji moreugeseoyo.",
+              "translation": "I don't understand verdict."
             },
             {
               "speaker": "B",
-              "text": "판결은/는 verdict(이)에요.",
-              "romanization": "pangyeoleun/neun verdict(i)eyo.",
-              "translation": "\"판결\" means \"verdict\"."
+              "text": "쉽게 설명해 드릴게요.",
+              "romanization": "swipge seolmyeonghae deurilgeyo.",
+              "translation": "I'll explain it simply."
+            },
+            {
+              "speaker": "A",
+              "text": "감사합니다.",
+              "romanization": "gamsahapnida.",
+              "translation": "Thank you."
+            },
+            {
+              "speaker": "B",
+              "text": "궁금한 점 있으면 물어보세요.",
+              "romanization": "gunggeumhan jeom iseumyeon muleoboseyo.",
+              "translation": "Ask if you have any questions."
             }
           ]
         }
@@ -533,10 +665,10 @@
         "word": "verdict",
         "explanation": "'판결' means 'verdict' in English.",
         "examples": {
-          "beginner": "We say \"판결\" in Korean.",
-          "intermediate": "In Korea, people often say \"판결\".",
-          "advanced": "\"판결\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"판결\" makes communication more natural."
+          "beginner": "What is verdict?",
+          "intermediate": "verdict is important in law.",
+          "advanced": "Understanding verdict helps protect legal rights.",
+          "master": "Accurate understanding of verdict is central to legal literacy."
         },
         "variations": {
           "formal": [
@@ -552,19 +684,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Getting legal consultation",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"판결\"?",
+              "text": "I don't understand verdict.",
               "romanization": "",
-              "translation": "판결이/가 뭐예요?"
+              "translation": "판결이 뭔지 모르겠어요."
             },
             {
               "speaker": "B",
-              "text": "\"판결\" means \"verdict\".",
+              "text": "I'll explain it simply.",
               "romanization": "",
-              "translation": "판결은/는 verdict(이)에요."
+              "translation": "쉽게 설명해 드릴게요."
+            },
+            {
+              "speaker": "A",
+              "text": "Thank you.",
+              "romanization": "",
+              "translation": "감사합니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Ask if you have any questions.",
+              "romanization": "",
+              "translation": "궁금한 점 있으면 물어보세요."
             }
           ]
         }
@@ -589,10 +733,10 @@
         "word": "손해배상",
         "explanation": "손해배상의 뜻은 'damages'입니다.",
         "examples": {
-          "beginner": "\"손해배상\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"손해배상\"를 자주 써요.",
-          "advanced": "\"손해배상\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"손해배상\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "손해배상이 뭐예요?",
+          "intermediate": "손해배상은 법에서 중요해요.",
+          "advanced": "손해배상의 개념을 이해하면 법적 권리를 보호할 수 있습니다.",
+          "master": "손해배상에 대한 정확한 이해는 법률 문해력의 핵심입니다."
         },
         "variations": {
           "formal": [
@@ -608,19 +752,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "법률 상담을 받으며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "손해배상이/가 뭐예요?",
-              "romanization": "sonhaebaesangi/ga mwoyeyo?",
-              "translation": "What is \"손해배상\"?"
+              "text": "손해배상이 뭔지 모르겠어요.",
+              "romanization": "sonhaebaesangi mwonji moreugeseoyo.",
+              "translation": "I don't understand damages."
             },
             {
               "speaker": "B",
-              "text": "손해배상은/는 damages(이)에요.",
-              "romanization": "sonhaebaesangeun/neun damages(i)eyo.",
-              "translation": "\"손해배상\" means \"damages\"."
+              "text": "쉽게 설명해 드릴게요.",
+              "romanization": "swipge seolmyeonghae deurilgeyo.",
+              "translation": "I'll explain it simply."
+            },
+            {
+              "speaker": "A",
+              "text": "감사합니다.",
+              "romanization": "gamsahapnida.",
+              "translation": "Thank you."
+            },
+            {
+              "speaker": "B",
+              "text": "궁금한 점 있으면 물어보세요.",
+              "romanization": "gunggeumhan jeom iseumyeon muleoboseyo.",
+              "translation": "Ask if you have any questions."
             }
           ]
         }
@@ -629,10 +785,10 @@
         "word": "damages",
         "explanation": "'손해배상' means 'damages' in English.",
         "examples": {
-          "beginner": "We say \"손해배상\" in Korean.",
-          "intermediate": "In Korea, people often say \"손해배상\".",
-          "advanced": "\"손해배상\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"손해배상\" makes communication more natural."
+          "beginner": "What is damages?",
+          "intermediate": "damages is important in law.",
+          "advanced": "Understanding damages helps protect legal rights.",
+          "master": "Accurate understanding of damages is central to legal literacy."
         },
         "variations": {
           "formal": [
@@ -648,19 +804,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Getting legal consultation",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"손해배상\"?",
+              "text": "I don't understand damages.",
               "romanization": "",
-              "translation": "손해배상이/가 뭐예요?"
+              "translation": "손해배상이 뭔지 모르겠어요."
             },
             {
               "speaker": "B",
-              "text": "\"손해배상\" means \"damages\".",
+              "text": "I'll explain it simply.",
               "romanization": "",
-              "translation": "손해배상은/는 damages(이)에요."
+              "translation": "쉽게 설명해 드릴게요."
+            },
+            {
+              "speaker": "A",
+              "text": "Thank you.",
+              "romanization": "",
+              "translation": "감사합니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Ask if you have any questions.",
+              "romanization": "",
+              "translation": "궁금한 점 있으면 물어보세요."
             }
           ]
         }
@@ -685,10 +853,10 @@
         "word": "배상",
         "explanation": "배상의 뜻은 'compensation'입니다.",
         "examples": {
-          "beginner": "\"배상\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"배상\"를 자주 써요.",
-          "advanced": "\"배상\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"배상\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "배상이 뭐예요?",
+          "intermediate": "배상은 법에서 중요해요.",
+          "advanced": "배상의 개념을 이해하면 법적 권리를 보호할 수 있습니다.",
+          "master": "배상에 대한 정확한 이해는 법률 문해력의 핵심입니다."
         },
         "variations": {
           "formal": [
@@ -704,19 +872,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "법률 상담을 받으며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "배상이/가 뭐예요?",
-              "romanization": "baesangi/ga mwoyeyo?",
-              "translation": "What is \"배상\"?"
+              "text": "배상이 뭔지 모르겠어요.",
+              "romanization": "baesangi mwonji moreugeseoyo.",
+              "translation": "I don't understand compensation."
             },
             {
               "speaker": "B",
-              "text": "배상은/는 compensation(이)에요.",
-              "romanization": "baesangeun/neun compensation(i)eyo.",
-              "translation": "\"배상\" means \"compensation\"."
+              "text": "쉽게 설명해 드릴게요.",
+              "romanization": "swipge seolmyeonghae deurilgeyo.",
+              "translation": "I'll explain it simply."
+            },
+            {
+              "speaker": "A",
+              "text": "감사합니다.",
+              "romanization": "gamsahapnida.",
+              "translation": "Thank you."
+            },
+            {
+              "speaker": "B",
+              "text": "궁금한 점 있으면 물어보세요.",
+              "romanization": "gunggeumhan jeom iseumyeon muleoboseyo.",
+              "translation": "Ask if you have any questions."
             }
           ]
         }
@@ -725,10 +905,10 @@
         "word": "compensation",
         "explanation": "'배상' means 'compensation' in English.",
         "examples": {
-          "beginner": "We say \"배상\" in Korean.",
-          "intermediate": "In Korea, people often say \"배상\".",
-          "advanced": "\"배상\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"배상\" makes communication more natural."
+          "beginner": "What is compensation?",
+          "intermediate": "compensation is important in law.",
+          "advanced": "Understanding compensation helps protect legal rights.",
+          "master": "Accurate understanding of compensation is central to legal literacy."
         },
         "variations": {
           "formal": [
@@ -744,19 +924,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Getting legal consultation",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"배상\"?",
+              "text": "I don't understand compensation.",
               "romanization": "",
-              "translation": "배상이/가 뭐예요?"
+              "translation": "배상이 뭔지 모르겠어요."
             },
             {
               "speaker": "B",
-              "text": "\"배상\" means \"compensation\".",
+              "text": "I'll explain it simply.",
               "romanization": "",
-              "translation": "배상은/는 compensation(이)에요."
+              "translation": "쉽게 설명해 드릴게요."
+            },
+            {
+              "speaker": "A",
+              "text": "Thank you.",
+              "romanization": "",
+              "translation": "감사합니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Ask if you have any questions.",
+              "romanization": "",
+              "translation": "궁금한 점 있으면 물어보세요."
             }
           ]
         }
@@ -781,10 +973,10 @@
         "word": "변론",
         "explanation": "변론의 뜻은 'plea'입니다.",
         "examples": {
-          "beginner": "\"변론\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"변론\"를 자주 써요.",
-          "advanced": "\"변론\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"변론\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "변론이 뭐예요?",
+          "intermediate": "변론은 법에서 중요해요.",
+          "advanced": "변론의 개념을 이해하면 법적 권리를 보호할 수 있습니다.",
+          "master": "변론에 대한 정확한 이해는 법률 문해력의 핵심입니다."
         },
         "variations": {
           "formal": [
@@ -800,19 +992,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "법률 상담을 받으며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "변론이/가 뭐예요?",
-              "romanization": "byeonloni/ga mwoyeyo?",
-              "translation": "What is \"변론\"?"
+              "text": "변론이 뭔지 모르겠어요.",
+              "romanization": "byeonroni mwonji moreugeseoyo.",
+              "translation": "I don't understand plea."
             },
             {
               "speaker": "B",
-              "text": "변론은/는 plea(이)에요.",
-              "romanization": "byeonloneun/neun plea(i)eyo.",
-              "translation": "\"변론\" means \"plea\"."
+              "text": "쉽게 설명해 드릴게요.",
+              "romanization": "swipge seolmyeonghae deurilgeyo.",
+              "translation": "I'll explain it simply."
+            },
+            {
+              "speaker": "A",
+              "text": "감사합니다.",
+              "romanization": "gamsahapnida.",
+              "translation": "Thank you."
+            },
+            {
+              "speaker": "B",
+              "text": "궁금한 점 있으면 물어보세요.",
+              "romanization": "gunggeumhan jeom iseumyeon muleoboseyo.",
+              "translation": "Ask if you have any questions."
             }
           ]
         }
@@ -821,10 +1025,10 @@
         "word": "plea",
         "explanation": "'변론' means 'plea' in English.",
         "examples": {
-          "beginner": "We say \"변론\" in Korean.",
-          "intermediate": "In Korea, people often say \"변론\".",
-          "advanced": "\"변론\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"변론\" makes communication more natural."
+          "beginner": "What is plea?",
+          "intermediate": "plea is important in law.",
+          "advanced": "Understanding plea helps protect legal rights.",
+          "master": "Accurate understanding of plea is central to legal literacy."
         },
         "variations": {
           "formal": [
@@ -840,19 +1044,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Getting legal consultation",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"변론\"?",
+              "text": "I don't understand plea.",
               "romanization": "",
-              "translation": "변론이/가 뭐예요?"
+              "translation": "변론이 뭔지 모르겠어요."
             },
             {
               "speaker": "B",
-              "text": "\"변론\" means \"plea\".",
+              "text": "I'll explain it simply.",
               "romanization": "",
-              "translation": "변론은/는 plea(이)에요."
+              "translation": "쉽게 설명해 드릴게요."
+            },
+            {
+              "speaker": "A",
+              "text": "Thank you.",
+              "romanization": "",
+              "translation": "감사합니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Ask if you have any questions.",
+              "romanization": "",
+              "translation": "궁금한 점 있으면 물어보세요."
             }
           ]
         }
@@ -877,10 +1093,10 @@
         "word": "재판",
         "explanation": "재판의 뜻은 'trial'입니다.",
         "examples": {
-          "beginner": "\"재판\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"재판\"를 자주 써요.",
-          "advanced": "\"재판\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"재판\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "재판이 뭐예요?",
+          "intermediate": "재판은 법에서 중요해요.",
+          "advanced": "재판의 개념을 이해하면 법적 권리를 보호할 수 있습니다.",
+          "master": "재판에 대한 정확한 이해는 법률 문해력의 핵심입니다."
         },
         "variations": {
           "formal": [
@@ -896,19 +1112,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "법률 상담을 받으며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "재판이/가 뭐예요?",
-              "romanization": "jaepani/ga mwoyeyo?",
-              "translation": "What is \"재판\"?"
+              "text": "재판이 뭔지 모르겠어요.",
+              "romanization": "jaepani mwonji moreugeseoyo.",
+              "translation": "I don't understand trial."
             },
             {
               "speaker": "B",
-              "text": "재판은/는 trial(이)에요.",
-              "romanization": "jaepaneun/neun trial(i)eyo.",
-              "translation": "\"재판\" means \"trial\"."
+              "text": "쉽게 설명해 드릴게요.",
+              "romanization": "swipge seolmyeonghae deurilgeyo.",
+              "translation": "I'll explain it simply."
+            },
+            {
+              "speaker": "A",
+              "text": "감사합니다.",
+              "romanization": "gamsahapnida.",
+              "translation": "Thank you."
+            },
+            {
+              "speaker": "B",
+              "text": "궁금한 점 있으면 물어보세요.",
+              "romanization": "gunggeumhan jeom iseumyeon muleoboseyo.",
+              "translation": "Ask if you have any questions."
             }
           ]
         }
@@ -917,10 +1145,10 @@
         "word": "trial",
         "explanation": "'재판' means 'trial' in English.",
         "examples": {
-          "beginner": "We say \"재판\" in Korean.",
-          "intermediate": "In Korea, people often say \"재판\".",
-          "advanced": "\"재판\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"재판\" makes communication more natural."
+          "beginner": "What is trial?",
+          "intermediate": "trial is important in law.",
+          "advanced": "Understanding trial helps protect legal rights.",
+          "master": "Accurate understanding of trial is central to legal literacy."
         },
         "variations": {
           "formal": [
@@ -936,19 +1164,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Getting legal consultation",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"재판\"?",
+              "text": "I don't understand trial.",
               "romanization": "",
-              "translation": "재판이/가 뭐예요?"
+              "translation": "재판이 뭔지 모르겠어요."
             },
             {
               "speaker": "B",
-              "text": "\"재판\" means \"trial\".",
+              "text": "I'll explain it simply.",
               "romanization": "",
-              "translation": "재판은/는 trial(이)에요."
+              "translation": "쉽게 설명해 드릴게요."
+            },
+            {
+              "speaker": "A",
+              "text": "Thank you.",
+              "romanization": "",
+              "translation": "감사합니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Ask if you have any questions.",
+              "romanization": "",
+              "translation": "궁금한 점 있으면 물어보세요."
             }
           ]
         }
@@ -973,10 +1213,10 @@
         "word": "항소",
         "explanation": "항소의 뜻은 'appeal'입니다.",
         "examples": {
-          "beginner": "\"항소\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"항소\"를 자주 써요.",
-          "advanced": "\"항소\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"항소\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "항소가 뭐예요?",
+          "intermediate": "항소는 법에서 중요해요.",
+          "advanced": "항소의 개념을 이해하면 법적 권리를 보호할 수 있습니다.",
+          "master": "항소에 대한 정확한 이해는 법률 문해력의 핵심입니다."
         },
         "variations": {
           "formal": [
@@ -992,19 +1232,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "법률 상담을 받으며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "항소이/가 뭐예요?",
-              "romanization": "hangsoi/ga mwoyeyo?",
-              "translation": "What is \"항소\"?"
+              "text": "항소가 뭔지 모르겠어요.",
+              "romanization": "hangsoga mwonji moreugeseoyo.",
+              "translation": "I don't understand appeal."
             },
             {
               "speaker": "B",
-              "text": "항소은/는 appeal(이)에요.",
-              "romanization": "hangsoeun/neun appeal(i)eyo.",
-              "translation": "\"항소\" means \"appeal\"."
+              "text": "쉽게 설명해 드릴게요.",
+              "romanization": "swipge seolmyeonghae deurilgeyo.",
+              "translation": "I'll explain it simply."
+            },
+            {
+              "speaker": "A",
+              "text": "감사합니다.",
+              "romanization": "gamsahapnida.",
+              "translation": "Thank you."
+            },
+            {
+              "speaker": "B",
+              "text": "궁금한 점 있으면 물어보세요.",
+              "romanization": "gunggeumhan jeom iseumyeon muleoboseyo.",
+              "translation": "Ask if you have any questions."
             }
           ]
         }
@@ -1013,10 +1265,10 @@
         "word": "appeal",
         "explanation": "'항소' means 'appeal' in English.",
         "examples": {
-          "beginner": "We say \"항소\" in Korean.",
-          "intermediate": "In Korea, people often say \"항소\".",
-          "advanced": "\"항소\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"항소\" makes communication more natural."
+          "beginner": "What is appeal?",
+          "intermediate": "appeal is important in law.",
+          "advanced": "Understanding appeal helps protect legal rights.",
+          "master": "Accurate understanding of appeal is central to legal literacy."
         },
         "variations": {
           "formal": [
@@ -1032,19 +1284,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Getting legal consultation",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"항소\"?",
+              "text": "I don't understand appeal.",
               "romanization": "",
-              "translation": "항소이/가 뭐예요?"
+              "translation": "항소가 뭔지 모르겠어요."
             },
             {
               "speaker": "B",
-              "text": "\"항소\" means \"appeal\".",
+              "text": "I'll explain it simply.",
               "romanization": "",
-              "translation": "항소은/는 appeal(이)에요."
+              "translation": "쉽게 설명해 드릴게요."
+            },
+            {
+              "speaker": "A",
+              "text": "Thank you.",
+              "romanization": "",
+              "translation": "감사합니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Ask if you have any questions.",
+              "romanization": "",
+              "translation": "궁금한 점 있으면 물어보세요."
             }
           ]
         }
@@ -1069,10 +1333,10 @@
         "word": "소송",
         "explanation": "소송의 뜻은 'lawsuit'입니다.",
         "examples": {
-          "beginner": "\"소송\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"소송\"를 자주 써요.",
-          "advanced": "\"소송\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"소송\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "소송이 뭐예요?",
+          "intermediate": "소송은 법에서 중요해요.",
+          "advanced": "소송의 개념을 이해하면 법적 권리를 보호할 수 있습니다.",
+          "master": "소송에 대한 정확한 이해는 법률 문해력의 핵심입니다."
         },
         "variations": {
           "formal": [
@@ -1088,19 +1352,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "법률 상담을 받으며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "소송이/가 뭐예요?",
-              "romanization": "sosongi/ga mwoyeyo?",
-              "translation": "What is \"소송\"?"
+              "text": "소송이 뭔지 모르겠어요.",
+              "romanization": "sosongi mwonji moreugeseoyo.",
+              "translation": "I don't understand lawsuit."
             },
             {
               "speaker": "B",
-              "text": "소송은/는 lawsuit(이)에요.",
-              "romanization": "sosongeun/neun lawsuit(i)eyo.",
-              "translation": "\"소송\" means \"lawsuit\"."
+              "text": "쉽게 설명해 드릴게요.",
+              "romanization": "swipge seolmyeonghae deurilgeyo.",
+              "translation": "I'll explain it simply."
+            },
+            {
+              "speaker": "A",
+              "text": "감사합니다.",
+              "romanization": "gamsahapnida.",
+              "translation": "Thank you."
+            },
+            {
+              "speaker": "B",
+              "text": "궁금한 점 있으면 물어보세요.",
+              "romanization": "gunggeumhan jeom iseumyeon muleoboseyo.",
+              "translation": "Ask if you have any questions."
             }
           ]
         }
@@ -1109,10 +1385,10 @@
         "word": "lawsuit",
         "explanation": "'소송' means 'lawsuit' in English.",
         "examples": {
-          "beginner": "We say \"소송\" in Korean.",
-          "intermediate": "In Korea, people often say \"소송\".",
-          "advanced": "\"소송\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"소송\" makes communication more natural."
+          "beginner": "What is lawsuit?",
+          "intermediate": "lawsuit is important in law.",
+          "advanced": "Understanding lawsuit helps protect legal rights.",
+          "master": "Accurate understanding of lawsuit is central to legal literacy."
         },
         "variations": {
           "formal": [
@@ -1128,19 +1404,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Getting legal consultation",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"소송\"?",
+              "text": "I don't understand lawsuit.",
               "romanization": "",
-              "translation": "소송이/가 뭐예요?"
+              "translation": "소송이 뭔지 모르겠어요."
             },
             {
               "speaker": "B",
-              "text": "\"소송\" means \"lawsuit\".",
+              "text": "I'll explain it simply.",
               "romanization": "",
-              "translation": "소송은/는 lawsuit(이)에요."
+              "translation": "쉽게 설명해 드릴게요."
+            },
+            {
+              "speaker": "A",
+              "text": "Thank you.",
+              "romanization": "",
+              "translation": "감사합니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Ask if you have any questions.",
+              "romanization": "",
+              "translation": "궁금한 점 있으면 물어보세요."
             }
           ]
         }
@@ -1165,10 +1453,10 @@
         "word": "합의",
         "explanation": "합의의 뜻은 'settlement'입니다.",
         "examples": {
-          "beginner": "\"합의\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"합의\"를 자주 써요.",
-          "advanced": "\"합의\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"합의\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "합의가 뭐예요?",
+          "intermediate": "합의는 법에서 중요해요.",
+          "advanced": "합의의 개념을 이해하면 법적 권리를 보호할 수 있습니다.",
+          "master": "합의에 대한 정확한 이해는 법률 문해력의 핵심입니다."
         },
         "variations": {
           "formal": [
@@ -1184,19 +1472,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "법률 상담을 받으며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "합의이/가 뭐예요?",
-              "romanization": "hapuii/ga mwoyeyo?",
-              "translation": "What is \"합의\"?"
+              "text": "합의가 뭔지 모르겠어요.",
+              "romanization": "hapuiga mwonji moreugeseoyo.",
+              "translation": "I don't understand settlement."
             },
             {
               "speaker": "B",
-              "text": "합의은/는 settlement(이)에요.",
-              "romanization": "hapuieun/neun settlement(i)eyo.",
-              "translation": "\"합의\" means \"settlement\"."
+              "text": "쉽게 설명해 드릴게요.",
+              "romanization": "swipge seolmyeonghae deurilgeyo.",
+              "translation": "I'll explain it simply."
+            },
+            {
+              "speaker": "A",
+              "text": "감사합니다.",
+              "romanization": "gamsahapnida.",
+              "translation": "Thank you."
+            },
+            {
+              "speaker": "B",
+              "text": "궁금한 점 있으면 물어보세요.",
+              "romanization": "gunggeumhan jeom iseumyeon muleoboseyo.",
+              "translation": "Ask if you have any questions."
             }
           ]
         }
@@ -1205,10 +1505,10 @@
         "word": "settlement",
         "explanation": "'합의' means 'settlement' in English.",
         "examples": {
-          "beginner": "We say \"합의\" in Korean.",
-          "intermediate": "In Korea, people often say \"합의\".",
-          "advanced": "\"합의\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"합의\" makes communication more natural."
+          "beginner": "What is settlement?",
+          "intermediate": "settlement is important in law.",
+          "advanced": "Understanding settlement helps protect legal rights.",
+          "master": "Accurate understanding of settlement is central to legal literacy."
         },
         "variations": {
           "formal": [
@@ -1224,19 +1524,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Getting legal consultation",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"합의\"?",
+              "text": "I don't understand settlement.",
               "romanization": "",
-              "translation": "합의이/가 뭐예요?"
+              "translation": "합의가 뭔지 모르겠어요."
             },
             {
               "speaker": "B",
-              "text": "\"합의\" means \"settlement\".",
+              "text": "I'll explain it simply.",
               "romanization": "",
-              "translation": "합의은/는 settlement(이)에요."
+              "translation": "쉽게 설명해 드릴게요."
+            },
+            {
+              "speaker": "A",
+              "text": "Thank you.",
+              "romanization": "",
+              "translation": "감사합니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Ask if you have any questions.",
+              "romanization": "",
+              "translation": "궁금한 점 있으면 물어보세요."
             }
           ]
         }
@@ -1261,10 +1573,10 @@
         "word": "증거",
         "explanation": "증거의 뜻은 'evidence'입니다.",
         "examples": {
-          "beginner": "\"증거\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"증거\"를 자주 써요.",
-          "advanced": "\"증거\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"증거\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "증거가 뭐예요?",
+          "intermediate": "증거는 법에서 중요해요.",
+          "advanced": "증거의 개념을 이해하면 법적 권리를 보호할 수 있습니다.",
+          "master": "증거에 대한 정확한 이해는 법률 문해력의 핵심입니다."
         },
         "variations": {
           "formal": [
@@ -1280,19 +1592,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "법률 상담을 받으며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "증거이/가 뭐예요?",
-              "romanization": "jeunggeoi/ga mwoyeyo?",
-              "translation": "What is \"증거\"?"
+              "text": "증거가 뭔지 모르겠어요.",
+              "romanization": "jeunggeoga mwonji moreugeseoyo.",
+              "translation": "I don't understand evidence."
             },
             {
               "speaker": "B",
-              "text": "증거은/는 evidence(이)에요.",
-              "romanization": "jeunggeoeun/neun evidence(i)eyo.",
-              "translation": "\"증거\" means \"evidence\"."
+              "text": "쉽게 설명해 드릴게요.",
+              "romanization": "swipge seolmyeonghae deurilgeyo.",
+              "translation": "I'll explain it simply."
+            },
+            {
+              "speaker": "A",
+              "text": "감사합니다.",
+              "romanization": "gamsahapnida.",
+              "translation": "Thank you."
+            },
+            {
+              "speaker": "B",
+              "text": "궁금한 점 있으면 물어보세요.",
+              "romanization": "gunggeumhan jeom iseumyeon muleoboseyo.",
+              "translation": "Ask if you have any questions."
             }
           ]
         }
@@ -1301,10 +1625,10 @@
         "word": "evidence",
         "explanation": "'증거' means 'evidence' in English.",
         "examples": {
-          "beginner": "We say \"증거\" in Korean.",
-          "intermediate": "In Korea, people often say \"증거\".",
-          "advanced": "\"증거\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"증거\" makes communication more natural."
+          "beginner": "What is evidence?",
+          "intermediate": "evidence is important in law.",
+          "advanced": "Understanding evidence helps protect legal rights.",
+          "master": "Accurate understanding of evidence is central to legal literacy."
         },
         "variations": {
           "formal": [
@@ -1320,19 +1644,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Getting legal consultation",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"증거\"?",
+              "text": "I don't understand evidence.",
               "romanization": "",
-              "translation": "증거이/가 뭐예요?"
+              "translation": "증거가 뭔지 모르겠어요."
             },
             {
               "speaker": "B",
-              "text": "\"증거\" means \"evidence\".",
+              "text": "I'll explain it simply.",
               "romanization": "",
-              "translation": "증거은/는 evidence(이)에요."
+              "translation": "쉽게 설명해 드릴게요."
+            },
+            {
+              "speaker": "A",
+              "text": "Thank you.",
+              "romanization": "",
+              "translation": "감사합니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Ask if you have any questions.",
+              "romanization": "",
+              "translation": "궁금한 점 있으면 물어보세요."
             }
           ]
         }
@@ -1357,10 +1693,10 @@
         "word": "진술",
         "explanation": "진술의 뜻은 'statement'입니다.",
         "examples": {
-          "beginner": "\"진술\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"진술\"를 자주 써요.",
-          "advanced": "\"진술\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"진술\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "진술이 뭐예요?",
+          "intermediate": "진술은 법에서 중요해요.",
+          "advanced": "진술의 개념을 이해하면 법적 권리를 보호할 수 있습니다.",
+          "master": "진술에 대한 정확한 이해는 법률 문해력의 핵심입니다."
         },
         "variations": {
           "formal": [
@@ -1376,19 +1712,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "법률 상담을 받으며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "진술이/가 뭐예요?",
-              "romanization": "jinsuli/ga mwoyeyo?",
-              "translation": "What is \"진술\"?"
+              "text": "진술이 뭔지 모르겠어요.",
+              "romanization": "jinsuli mwonji moreugeseoyo.",
+              "translation": "I don't understand statement."
             },
             {
               "speaker": "B",
-              "text": "진술은/는 statement(이)에요.",
-              "romanization": "jinsuleun/neun statement(i)eyo.",
-              "translation": "\"진술\" means \"statement\"."
+              "text": "쉽게 설명해 드릴게요.",
+              "romanization": "swipge seolmyeonghae deurilgeyo.",
+              "translation": "I'll explain it simply."
+            },
+            {
+              "speaker": "A",
+              "text": "감사합니다.",
+              "romanization": "gamsahapnida.",
+              "translation": "Thank you."
+            },
+            {
+              "speaker": "B",
+              "text": "궁금한 점 있으면 물어보세요.",
+              "romanization": "gunggeumhan jeom iseumyeon muleoboseyo.",
+              "translation": "Ask if you have any questions."
             }
           ]
         }
@@ -1397,10 +1745,10 @@
         "word": "statement",
         "explanation": "'진술' means 'statement' in English.",
         "examples": {
-          "beginner": "We say \"진술\" in Korean.",
-          "intermediate": "In Korea, people often say \"진술\".",
-          "advanced": "\"진술\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"진술\" makes communication more natural."
+          "beginner": "What is statement?",
+          "intermediate": "statement is important in law.",
+          "advanced": "Understanding statement helps protect legal rights.",
+          "master": "Accurate understanding of statement is central to legal literacy."
         },
         "variations": {
           "formal": [
@@ -1416,19 +1764,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Getting legal consultation",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"진술\"?",
+              "text": "I don't understand statement.",
               "romanization": "",
-              "translation": "진술이/가 뭐예요?"
+              "translation": "진술이 뭔지 모르겠어요."
             },
             {
               "speaker": "B",
-              "text": "\"진술\" means \"statement\".",
+              "text": "I'll explain it simply.",
               "romanization": "",
-              "translation": "진술은/는 statement(이)에요."
+              "translation": "쉽게 설명해 드릴게요."
+            },
+            {
+              "speaker": "A",
+              "text": "Thank you.",
+              "romanization": "",
+              "translation": "감사합니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Ask if you have any questions.",
+              "romanization": "",
+              "translation": "궁금한 점 있으면 물어보세요."
             }
           ]
         }
@@ -1453,10 +1813,10 @@
         "word": "계약",
         "explanation": "계약의 뜻은 'contract'입니다.",
         "examples": {
-          "beginner": "\"계약\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"계약\"를 자주 써요.",
-          "advanced": "\"계약\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"계약\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "계약이 뭐예요?",
+          "intermediate": "계약은 법에서 중요해요.",
+          "advanced": "계약의 개념을 이해하면 법적 권리를 보호할 수 있습니다.",
+          "master": "계약에 대한 정확한 이해는 법률 문해력의 핵심입니다."
         },
         "variations": {
           "formal": [
@@ -1472,19 +1832,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "법률 상담을 받으며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "계약이/가 뭐예요?",
-              "romanization": "gyeyaki/ga mwoyeyo?",
-              "translation": "What is \"계약\"?"
+              "text": "계약이 뭔지 모르겠어요.",
+              "romanization": "gyeyaki mwonji moreugeseoyo.",
+              "translation": "I don't understand contract."
             },
             {
               "speaker": "B",
-              "text": "계약은/는 contract(이)에요.",
-              "romanization": "gyeyakeun/neun contract(i)eyo.",
-              "translation": "\"계약\" means \"contract\"."
+              "text": "쉽게 설명해 드릴게요.",
+              "romanization": "swipge seolmyeonghae deurilgeyo.",
+              "translation": "I'll explain it simply."
+            },
+            {
+              "speaker": "A",
+              "text": "감사합니다.",
+              "romanization": "gamsahapnida.",
+              "translation": "Thank you."
+            },
+            {
+              "speaker": "B",
+              "text": "궁금한 점 있으면 물어보세요.",
+              "romanization": "gunggeumhan jeom iseumyeon muleoboseyo.",
+              "translation": "Ask if you have any questions."
             }
           ]
         }
@@ -1493,10 +1865,10 @@
         "word": "contract",
         "explanation": "'계약' means 'contract' in English.",
         "examples": {
-          "beginner": "We say \"계약\" in Korean.",
-          "intermediate": "In Korea, people often say \"계약\".",
-          "advanced": "\"계약\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"계약\" makes communication more natural."
+          "beginner": "What is contract?",
+          "intermediate": "contract is important in law.",
+          "advanced": "Understanding contract helps protect legal rights.",
+          "master": "Accurate understanding of contract is central to legal literacy."
         },
         "variations": {
           "formal": [
@@ -1512,19 +1884,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Getting legal consultation",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"계약\"?",
+              "text": "I don't understand contract.",
               "romanization": "",
-              "translation": "계약이/가 뭐예요?"
+              "translation": "계약이 뭔지 모르겠어요."
             },
             {
               "speaker": "B",
-              "text": "\"계약\" means \"contract\".",
+              "text": "I'll explain it simply.",
               "romanization": "",
-              "translation": "계약은/는 contract(이)에요."
+              "translation": "쉽게 설명해 드릴게요."
+            },
+            {
+              "speaker": "A",
+              "text": "Thank you.",
+              "romanization": "",
+              "translation": "감사합니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Ask if you have any questions.",
+              "romanization": "",
+              "translation": "궁금한 점 있으면 물어보세요."
             }
           ]
         }
@@ -1549,10 +1933,10 @@
         "word": "권리",
         "explanation": "권리의 뜻은 'right'입니다.",
         "examples": {
-          "beginner": "\"권리\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"권리\"를 자주 써요.",
-          "advanced": "\"권리\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"권리\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "권리가 뭐예요?",
+          "intermediate": "권리는 법에서 중요해요.",
+          "advanced": "권리의 개념을 이해하면 법적 권리를 보호할 수 있습니다.",
+          "master": "권리에 대한 정확한 이해는 법률 문해력의 핵심입니다."
         },
         "variations": {
           "formal": [
@@ -1568,19 +1952,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "법률 상담을 받으며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "권리이/가 뭐예요?",
-              "romanization": "gwonlii/ga mwoyeyo?",
-              "translation": "What is \"권리\"?"
+              "text": "권리가 뭔지 모르겠어요.",
+              "romanization": "gwonriga mwonji moreugeseoyo.",
+              "translation": "I don't understand right."
             },
             {
               "speaker": "B",
-              "text": "권리은/는 right(이)에요.",
-              "romanization": "gwonlieun/neun right(i)eyo.",
-              "translation": "\"권리\" means \"right\"."
+              "text": "쉽게 설명해 드릴게요.",
+              "romanization": "swipge seolmyeonghae deurilgeyo.",
+              "translation": "I'll explain it simply."
+            },
+            {
+              "speaker": "A",
+              "text": "감사합니다.",
+              "romanization": "gamsahapnida.",
+              "translation": "Thank you."
+            },
+            {
+              "speaker": "B",
+              "text": "궁금한 점 있으면 물어보세요.",
+              "romanization": "gunggeumhan jeom iseumyeon muleoboseyo.",
+              "translation": "Ask if you have any questions."
             }
           ]
         }
@@ -1589,10 +1985,10 @@
         "word": "right",
         "explanation": "'권리' means 'right' in English.",
         "examples": {
-          "beginner": "We say \"권리\" in Korean.",
-          "intermediate": "In Korea, people often say \"권리\".",
-          "advanced": "\"권리\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"권리\" makes communication more natural."
+          "beginner": "What is right?",
+          "intermediate": "right is important in law.",
+          "advanced": "Understanding right helps protect legal rights.",
+          "master": "Accurate understanding of right is central to legal literacy."
         },
         "variations": {
           "formal": [
@@ -1608,19 +2004,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Getting legal consultation",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"권리\"?",
+              "text": "I don't understand right.",
               "romanization": "",
-              "translation": "권리이/가 뭐예요?"
+              "translation": "권리가 뭔지 모르겠어요."
             },
             {
               "speaker": "B",
-              "text": "\"권리\" means \"right\".",
+              "text": "I'll explain it simply.",
               "romanization": "",
-              "translation": "권리은/는 right(이)에요."
+              "translation": "쉽게 설명해 드릴게요."
+            },
+            {
+              "speaker": "A",
+              "text": "Thank you.",
+              "romanization": "",
+              "translation": "감사합니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Ask if you have any questions.",
+              "romanization": "",
+              "translation": "궁금한 점 있으면 물어보세요."
             }
           ]
         }
@@ -1645,10 +2053,10 @@
         "word": "의무",
         "explanation": "의무의 뜻은 'obligation'입니다.",
         "examples": {
-          "beginner": "\"의무\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"의무\"를 자주 써요.",
-          "advanced": "\"의무\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"의무\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "의무가 뭐예요?",
+          "intermediate": "의무는 법에서 중요해요.",
+          "advanced": "의무의 개념을 이해하면 법적 권리를 보호할 수 있습니다.",
+          "master": "의무에 대한 정확한 이해는 법률 문해력의 핵심입니다."
         },
         "variations": {
           "formal": [
@@ -1664,19 +2072,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "법률 상담을 받으며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "의무이/가 뭐예요?",
-              "romanization": "uimui/ga mwoyeyo?",
-              "translation": "What is \"의무\"?"
+              "text": "의무가 뭔지 모르겠어요.",
+              "romanization": "uimuga mwonji moreugeseoyo.",
+              "translation": "I don't understand obligation."
             },
             {
               "speaker": "B",
-              "text": "의무은/는 obligation(이)에요.",
-              "romanization": "uimueun/neun obligation(i)eyo.",
-              "translation": "\"의무\" means \"obligation\"."
+              "text": "쉽게 설명해 드릴게요.",
+              "romanization": "swipge seolmyeonghae deurilgeyo.",
+              "translation": "I'll explain it simply."
+            },
+            {
+              "speaker": "A",
+              "text": "감사합니다.",
+              "romanization": "gamsahapnida.",
+              "translation": "Thank you."
+            },
+            {
+              "speaker": "B",
+              "text": "궁금한 점 있으면 물어보세요.",
+              "romanization": "gunggeumhan jeom iseumyeon muleoboseyo.",
+              "translation": "Ask if you have any questions."
             }
           ]
         }
@@ -1685,10 +2105,10 @@
         "word": "obligation",
         "explanation": "'의무' means 'obligation' in English.",
         "examples": {
-          "beginner": "We say \"의무\" in Korean.",
-          "intermediate": "In Korea, people often say \"의무\".",
-          "advanced": "\"의무\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"의무\" makes communication more natural."
+          "beginner": "What is obligation?",
+          "intermediate": "obligation is important in law.",
+          "advanced": "Understanding obligation helps protect legal rights.",
+          "master": "Accurate understanding of obligation is central to legal literacy."
         },
         "variations": {
           "formal": [
@@ -1704,19 +2124,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Getting legal consultation",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"의무\"?",
+              "text": "I don't understand obligation.",
               "romanization": "",
-              "translation": "의무이/가 뭐예요?"
+              "translation": "의무가 뭔지 모르겠어요."
             },
             {
               "speaker": "B",
-              "text": "\"의무\" means \"obligation\".",
+              "text": "I'll explain it simply.",
               "romanization": "",
-              "translation": "의무은/는 obligation(이)에요."
+              "translation": "쉽게 설명해 드릴게요."
+            },
+            {
+              "speaker": "A",
+              "text": "Thank you.",
+              "romanization": "",
+              "translation": "감사합니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Ask if you have any questions.",
+              "romanization": "",
+              "translation": "궁금한 점 있으면 물어보세요."
             }
           ]
         }
@@ -1741,10 +2173,10 @@
         "word": "위반",
         "explanation": "위반의 뜻은 'violation'입니다.",
         "examples": {
-          "beginner": "\"위반\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"위반\"를 자주 써요.",
-          "advanced": "\"위반\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"위반\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "위반이 뭐예요?",
+          "intermediate": "위반은 법에서 중요해요.",
+          "advanced": "위반의 개념을 이해하면 법적 권리를 보호할 수 있습니다.",
+          "master": "위반에 대한 정확한 이해는 법률 문해력의 핵심입니다."
         },
         "variations": {
           "formal": [
@@ -1760,19 +2192,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "법률 상담을 받으며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "위반이/가 뭐예요?",
-              "romanization": "wibani/ga mwoyeyo?",
-              "translation": "What is \"위반\"?"
+              "text": "위반이 뭔지 모르겠어요.",
+              "romanization": "wibani mwonji moreugeseoyo.",
+              "translation": "I don't understand violation."
             },
             {
               "speaker": "B",
-              "text": "위반은/는 violation(이)에요.",
-              "romanization": "wibaneun/neun violation(i)eyo.",
-              "translation": "\"위반\" means \"violation\"."
+              "text": "쉽게 설명해 드릴게요.",
+              "romanization": "swipge seolmyeonghae deurilgeyo.",
+              "translation": "I'll explain it simply."
+            },
+            {
+              "speaker": "A",
+              "text": "감사합니다.",
+              "romanization": "gamsahapnida.",
+              "translation": "Thank you."
+            },
+            {
+              "speaker": "B",
+              "text": "궁금한 점 있으면 물어보세요.",
+              "romanization": "gunggeumhan jeom iseumyeon muleoboseyo.",
+              "translation": "Ask if you have any questions."
             }
           ]
         }
@@ -1781,10 +2225,10 @@
         "word": "violation",
         "explanation": "'위반' means 'violation' in English.",
         "examples": {
-          "beginner": "We say \"위반\" in Korean.",
-          "intermediate": "In Korea, people often say \"위반\".",
-          "advanced": "\"위반\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"위반\" makes communication more natural."
+          "beginner": "What is violation?",
+          "intermediate": "violation is important in law.",
+          "advanced": "Understanding violation helps protect legal rights.",
+          "master": "Accurate understanding of violation is central to legal literacy."
         },
         "variations": {
           "formal": [
@@ -1800,19 +2244,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Getting legal consultation",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"위반\"?",
+              "text": "I don't understand violation.",
               "romanization": "",
-              "translation": "위반이/가 뭐예요?"
+              "translation": "위반이 뭔지 모르겠어요."
             },
             {
               "speaker": "B",
-              "text": "\"위반\" means \"violation\".",
+              "text": "I'll explain it simply.",
               "romanization": "",
-              "translation": "위반은/는 violation(이)에요."
+              "translation": "쉽게 설명해 드릴게요."
+            },
+            {
+              "speaker": "A",
+              "text": "Thank you.",
+              "romanization": "",
+              "translation": "감사합니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Ask if you have any questions.",
+              "romanization": "",
+              "translation": "궁금한 점 있으면 물어보세요."
             }
           ]
         }
@@ -1837,10 +2293,10 @@
         "word": "법률",
         "explanation": "법률의 뜻은 'law'입니다.",
         "examples": {
-          "beginner": "\"법률\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"법률\"를 자주 써요.",
-          "advanced": "\"법률\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"법률\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "법률이 뭐예요?",
+          "intermediate": "법률은 법에서 중요해요.",
+          "advanced": "법률의 개념을 이해하면 법적 권리를 보호할 수 있습니다.",
+          "master": "법률에 대한 정확한 이해는 법률 문해력의 핵심입니다."
         },
         "variations": {
           "formal": [
@@ -1856,19 +2312,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "법률 상담을 받으며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "법률이/가 뭐예요?",
-              "romanization": "beopryuli/ga mwoyeyo?",
-              "translation": "What is \"법률\"?"
+              "text": "법률이 뭔지 모르겠어요.",
+              "romanization": "beopryuli mwonji moreugeseoyo.",
+              "translation": "I don't understand law."
             },
             {
               "speaker": "B",
-              "text": "법률은/는 law(이)에요.",
-              "romanization": "beopryuleun/neun law(i)eyo.",
-              "translation": "\"법률\" means \"law\"."
+              "text": "쉽게 설명해 드릴게요.",
+              "romanization": "swipge seolmyeonghae deurilgeyo.",
+              "translation": "I'll explain it simply."
+            },
+            {
+              "speaker": "A",
+              "text": "감사합니다.",
+              "romanization": "gamsahapnida.",
+              "translation": "Thank you."
+            },
+            {
+              "speaker": "B",
+              "text": "궁금한 점 있으면 물어보세요.",
+              "romanization": "gunggeumhan jeom iseumyeon muleoboseyo.",
+              "translation": "Ask if you have any questions."
             }
           ]
         }
@@ -1877,10 +2345,10 @@
         "word": "law",
         "explanation": "'법률' means 'law' in English.",
         "examples": {
-          "beginner": "We say \"법률\" in Korean.",
-          "intermediate": "In Korea, people often say \"법률\".",
-          "advanced": "\"법률\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"법률\" makes communication more natural."
+          "beginner": "What is law?",
+          "intermediate": "law is important in law.",
+          "advanced": "Understanding law helps protect legal rights.",
+          "master": "Accurate understanding of law is central to legal literacy."
         },
         "variations": {
           "formal": [
@@ -1896,19 +2364,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Getting legal consultation",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"법률\"?",
+              "text": "I don't understand law.",
               "romanization": "",
-              "translation": "법률이/가 뭐예요?"
+              "translation": "법률이 뭔지 모르겠어요."
             },
             {
               "speaker": "B",
-              "text": "\"법률\" means \"law\".",
+              "text": "I'll explain it simply.",
               "romanization": "",
-              "translation": "법률은/는 law(이)에요."
+              "translation": "쉽게 설명해 드릴게요."
+            },
+            {
+              "speaker": "A",
+              "text": "Thank you.",
+              "romanization": "",
+              "translation": "감사합니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Ask if you have any questions.",
+              "romanization": "",
+              "translation": "궁금한 점 있으면 물어보세요."
             }
           ]
         }
@@ -1933,10 +2413,10 @@
         "word": "조항",
         "explanation": "조항의 뜻은 'clause'입니다.",
         "examples": {
-          "beginner": "\"조항\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"조항\"를 자주 써요.",
-          "advanced": "\"조항\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"조항\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "조항이 뭐예요?",
+          "intermediate": "조항은 법에서 중요해요.",
+          "advanced": "조항의 개념을 이해하면 법적 권리를 보호할 수 있습니다.",
+          "master": "조항에 대한 정확한 이해는 법률 문해력의 핵심입니다."
         },
         "variations": {
           "formal": [
@@ -1952,19 +2432,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "법률 상담을 받으며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "조항이/가 뭐예요?",
-              "romanization": "johangi/ga mwoyeyo?",
-              "translation": "What is \"조항\"?"
+              "text": "조항이 뭔지 모르겠어요.",
+              "romanization": "johangi mwonji moreugeseoyo.",
+              "translation": "I don't understand clause."
             },
             {
               "speaker": "B",
-              "text": "조항은/는 clause(이)에요.",
-              "romanization": "johangeun/neun clause(i)eyo.",
-              "translation": "\"조항\" means \"clause\"."
+              "text": "쉽게 설명해 드릴게요.",
+              "romanization": "swipge seolmyeonghae deurilgeyo.",
+              "translation": "I'll explain it simply."
+            },
+            {
+              "speaker": "A",
+              "text": "감사합니다.",
+              "romanization": "gamsahapnida.",
+              "translation": "Thank you."
+            },
+            {
+              "speaker": "B",
+              "text": "궁금한 점 있으면 물어보세요.",
+              "romanization": "gunggeumhan jeom iseumyeon muleoboseyo.",
+              "translation": "Ask if you have any questions."
             }
           ]
         }
@@ -1973,10 +2465,10 @@
         "word": "clause",
         "explanation": "'조항' means 'clause' in English.",
         "examples": {
-          "beginner": "We say \"조항\" in Korean.",
-          "intermediate": "In Korea, people often say \"조항\".",
-          "advanced": "\"조항\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"조항\" makes communication more natural."
+          "beginner": "What is clause?",
+          "intermediate": "clause is important in law.",
+          "advanced": "Understanding clause helps protect legal rights.",
+          "master": "Accurate understanding of clause is central to legal literacy."
         },
         "variations": {
           "formal": [
@@ -1992,19 +2484,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Getting legal consultation",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"조항\"?",
+              "text": "I don't understand clause.",
               "romanization": "",
-              "translation": "조항이/가 뭐예요?"
+              "translation": "조항이 뭔지 모르겠어요."
             },
             {
               "speaker": "B",
-              "text": "\"조항\" means \"clause\".",
+              "text": "I'll explain it simply.",
               "romanization": "",
-              "translation": "조항은/는 clause(이)에요."
+              "translation": "쉽게 설명해 드릴게요."
+            },
+            {
+              "speaker": "A",
+              "text": "Thank you.",
+              "romanization": "",
+              "translation": "감사합니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Ask if you have any questions.",
+              "romanization": "",
+              "translation": "궁금한 점 있으면 물어보세요."
             }
           ]
         }
@@ -2029,10 +2533,10 @@
         "word": "규정",
         "explanation": "규정의 뜻은 'regulation'입니다.",
         "examples": {
-          "beginner": "\"규정\"는 한국어로 말해요.",
-          "intermediate": "한국에서는 \"규정\"를 자주 써요.",
-          "advanced": "\"규정\"는 한국어에서 중요한 표현입니다.",
-          "master": "\"규정\"의 문화적 맥락을 이해하면 더 자연스럽게 소통할 수 있습니다."
+          "beginner": "규정이 뭐예요?",
+          "intermediate": "규정은 법에서 중요해요.",
+          "advanced": "규정의 개념을 이해하면 법적 권리를 보호할 수 있습니다.",
+          "master": "규정에 대한 정확한 이해는 법률 문해력의 핵심입니다."
         },
         "variations": {
           "formal": [
@@ -2048,19 +2552,31 @@
           ]
         },
         "dialogue": {
-          "context": "일상 대화에서",
+          "context": "법률 상담을 받으며",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "규정이/가 뭐예요?",
-              "romanization": "gyujeongi/ga mwoyeyo?",
-              "translation": "What is \"규정\"?"
+              "text": "규정이 뭔지 모르겠어요.",
+              "romanization": "gyujeongi mwonji moreugeseoyo.",
+              "translation": "I don't understand regulation."
             },
             {
               "speaker": "B",
-              "text": "규정은/는 regulation(이)에요.",
-              "romanization": "gyujeongeun/neun regulation(i)eyo.",
-              "translation": "\"규정\" means \"regulation\"."
+              "text": "쉽게 설명해 드릴게요.",
+              "romanization": "swipge seolmyeonghae deurilgeyo.",
+              "translation": "I'll explain it simply."
+            },
+            {
+              "speaker": "A",
+              "text": "감사합니다.",
+              "romanization": "gamsahapnida.",
+              "translation": "Thank you."
+            },
+            {
+              "speaker": "B",
+              "text": "궁금한 점 있으면 물어보세요.",
+              "romanization": "gunggeumhan jeom iseumyeon muleoboseyo.",
+              "translation": "Ask if you have any questions."
             }
           ]
         }
@@ -2069,10 +2585,10 @@
         "word": "regulation",
         "explanation": "'규정' means 'regulation' in English.",
         "examples": {
-          "beginner": "We say \"규정\" in Korean.",
-          "intermediate": "In Korea, people often say \"규정\".",
-          "advanced": "\"규정\" is an important expression in Korean.",
-          "master": "Understanding the cultural context of \"규정\" makes communication more natural."
+          "beginner": "What is regulation?",
+          "intermediate": "regulation is important in law.",
+          "advanced": "Understanding regulation helps protect legal rights.",
+          "master": "Accurate understanding of regulation is central to legal literacy."
         },
         "variations": {
           "formal": [
@@ -2088,19 +2604,31 @@
           ]
         },
         "dialogue": {
-          "context": "In daily conversation",
+          "context": "Getting legal consultation",
           "dialogue": [
             {
               "speaker": "A",
-              "text": "What is \"규정\"?",
+              "text": "I don't understand regulation.",
               "romanization": "",
-              "translation": "규정이/가 뭐예요?"
+              "translation": "규정이 뭔지 모르겠어요."
             },
             {
               "speaker": "B",
-              "text": "\"규정\" means \"regulation\".",
+              "text": "I'll explain it simply.",
               "romanization": "",
-              "translation": "규정은/는 regulation(이)에요."
+              "translation": "쉽게 설명해 드릴게요."
+            },
+            {
+              "speaker": "A",
+              "text": "Thank you.",
+              "romanization": "",
+              "translation": "감사합니다."
+            },
+            {
+              "speaker": "B",
+              "text": "Ask if you have any questions.",
+              "romanization": "",
+              "translation": "궁금한 점 있으면 물어보세요."
             }
           ]
         }
