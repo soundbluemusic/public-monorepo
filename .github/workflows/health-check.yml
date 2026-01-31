@@ -91,7 +91,7 @@ jobs:
           fi
 
           # Concept page
-          HTTP_CODE=$(curl -sL -o /dev/null -w "%{http_code}" "https://roots.soundbluemusic.com/concept/addition")
+          HTTP_CODE=$(curl -sL -o /dev/null -w "%{http_code}" "https://roots.soundbluemusic.com/concept/natural-numbers")
           if [ "$HTTP_CODE" != "200" ]; then
             echo "❌ Roots concept page returned HTTP $HTTP_CODE"
             FAILED=1
