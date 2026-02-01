@@ -786,37 +786,98 @@ const categoryTemplates: CategoryTemplates = {
   // ============================================
   // 스포츠 (sports)
   // ============================================
-  sports: (korean, english, _explanation, _partOfSpeech) => ({
-    sentences: {
-      ko: {
-        beginner: `${josa(korean, '을/를')} 좋아해요.`,
-        intermediate: `주말마다 친구들과 ${josa(korean, '을/를')} 해요.`,
-        advanced: `${josa(korean, '은/는')} 한국에서 인기 있는 운동 중 하나입니다.`,
-        master: `${korean}의 규칙과 전략을 이해하면 경기를 더 재미있게 볼 수 있습니다.`,
-      },
-      en: {
-        beginner: `I like ${english.toLowerCase()}.`,
-        intermediate: `I play ${english.toLowerCase()} with friends every weekend.`,
-        advanced: `${english} is one of the most popular sports in Korea.`,
-        master: `Understanding the rules and strategies of ${english.toLowerCase()} makes watching games more enjoyable.`,
-      },
-    },
-    dialogues: [
-      {
-        context: { ko: '취미로 운동에 대해 이야기하며', en: 'Talking about sports as hobby' },
-        lines: [
-          { speaker: 'A', ko: '운동 좋아해요?', en: 'Do you like sports?' },
-          {
-            speaker: 'B',
-            ko: `네, ${josa(korean, '을/를')} 좋아해요.`,
-            en: `Yes, I like ${english.toLowerCase()}.`,
-          },
-          { speaker: 'A', ko: '자주 해요?', en: 'Do you play often?' },
-          { speaker: 'B', ko: '주말마다 해요.', en: 'I play every weekend.' },
-        ],
-      },
-    ],
-  }),
+  sports: (korean, english, _explanation, _partOfSpeech) => {
+    // 종목 유형 판별 (korean 기반)
+    const getSportContext = (k: string): { ko: string; en: string } => {
+      if (/자유형|배영|접영|평영|혼영|수영|다이빙|수구|싱크로|오픈워터/.test(k))
+        return { ko: '수영', en: 'swimming' };
+      if (/미터|달리기|허들|릴레이|경보|단거리|중거리|장거리/.test(k))
+        return { ko: '달리기', en: 'running' };
+      if (/마라톤/.test(k)) return { ko: '달리기', en: 'running' };
+      if (/킬로그램|급|역도|인상|용상|리프팅/.test(k))
+        return { ko: '체급 경기', en: 'weight class competition' };
+      if (/던지기|뛰기|넘기|포환|원반|창|해머|멀리|높이|세단|장대/.test(k))
+        return { ko: '경기', en: 'competition' };
+      if (/사이클|독주|경륜/.test(k)) return { ko: '사이클', en: 'cycling' };
+      if (/유도|태권도|복싱|레슬링|펜싱|가라테/.test(k)) return { ko: '경기', en: 'match' };
+      if (/테니스|배드민턴|탁구/.test(k)) return { ko: '경기', en: 'match' };
+      if (/사격|권총|소총|클레이/.test(k)) return { ko: '사격', en: 'shooting' };
+      if (/양궁|활/.test(k)) return { ko: '양궁', en: 'archery' };
+      if (/축구|농구|야구|배구|핸드볼|하키|럭비/.test(k)) return { ko: '경기', en: 'game' };
+      return { ko: '경기', en: 'sport' };
+    };
+
+    const sport = getSportContext(korean);
+    const isWeightClass = /킬로그램|급/.test(korean);
+    const isDistance = /미터|킬로미터/.test(korean) && !isWeightClass;
+
+    // 체급: "60킬로그램급은 가벼운 체급이에요"
+    // 거리 종목: "100미터 달리기를 해요"
+    // 일반: "축구를 좋아해요"
+    const koSentences = isWeightClass
+      ? {
+          beginner: `${josa(korean, '은/는')} ${sport.ko} 체급이에요.`,
+          intermediate: `${korean}에서 한국 선수가 출전해요.`,
+          advanced: `올림픽 ${korean} 경기에서 한국이 메달을 땄습니다.`,
+          master: `${korean}은 체급별로 공정한 경기를 위해 나뉘어져 있습니다.`,
+        }
+      : isDistance
+        ? {
+            beginner: `${korean} ${sport.ko}를 좋아해요.`,
+            intermediate: `${korean} ${sport.ko} 연습을 해요.`,
+            advanced: `${korean} ${josa(sport.ko, '은/는')} 올림픽 정식 종목입니다.`,
+            master: `${korean} ${sport.ko}에서 세계 기록을 세우는 것은 대단한 성취입니다.`,
+          }
+        : {
+            beginner: `${josa(korean, '을/를')} 좋아해요.`,
+            intermediate: `주말마다 친구들과 ${josa(korean, '을/를')} 해요.`,
+            advanced: `${josa(korean, '은/는')} 한국에서 인기 있는 운동입니다.`,
+            master: `${korean}의 규칙과 전략을 이해하면 경기를 더 재미있게 볼 수 있습니다.`,
+          };
+
+    const enLower = english.toLowerCase();
+    const enSentences = isWeightClass
+      ? {
+          beginner: `${english} is a ${sport.en} weight class.`,
+          intermediate: `A Korean athlete competes in the ${enLower} category.`,
+          advanced: `Korea won a medal in the Olympic ${enLower} event.`,
+          master: `Weight classes like ${enLower} ensure fair competition among athletes.`,
+        }
+      : isDistance
+        ? {
+            beginner: `I like the ${enLower} ${sport.en}.`,
+            intermediate: `I practice ${enLower} ${sport.en}.`,
+            advanced: `The ${enLower} ${sport.en} is an official Olympic event.`,
+            master: `Setting a world record in the ${enLower} ${sport.en} is a remarkable achievement.`,
+          }
+        : {
+            beginner: `I like ${enLower}.`,
+            intermediate: `I play ${enLower} with friends every weekend.`,
+            advanced: `${english} is a popular sport in Korea.`,
+            master: `Understanding the rules and strategies of ${enLower} makes watching games more enjoyable.`,
+          };
+
+    return {
+      sentences: { ko: koSentences, en: enSentences },
+      dialogues: [
+        {
+          context: { ko: '취미로 운동에 대해 이야기하며', en: 'Talking about sports as hobby' },
+          lines: [
+            { speaker: 'A', ko: '운동 좋아해요?', en: 'Do you like sports?' },
+            {
+              speaker: 'B',
+              ko: isDistance
+                ? `네, ${korean} ${josa(sport.ko, '을/를')} 좋아해요.`
+                : `네, ${josa(korean, '을/를')} 좋아해요.`,
+              en: `Yes, I like ${enLower}.`,
+            },
+            { speaker: 'A', ko: '자주 해요?', en: 'Do you play often?' },
+            { speaker: 'B', ko: '주말마다 해요.', en: 'I play every weekend.' },
+          ],
+        },
+      ],
+    };
+  },
 
   // ============================================
   // 우주 (space)
